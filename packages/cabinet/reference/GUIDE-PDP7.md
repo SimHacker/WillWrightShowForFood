@@ -58,6 +58,42 @@ marked extension. What the extra banks are for: headers and source maps (a heade
 bank 0, names and line tables above, as metacompiled Forths do), ring storage for PIXIE's
 structures, and big tables.
 
+## The PDP-7 next to an Apple ][
+
+Twelve years apart, about the same speed, about 1/35 of the price. PDP-7 figures from Supnik's
+*Architectural Evolution in DEC's 18b Computers*; Apple ][ figures are the commonly cited ones,
+to check against the Apple ][ Reference Manual (1978).
+
+| | PDP-7 (1965) | Apple ][ (1977) |
+|---|---|---|
+| **Price** | about $45,000 base, roughly $450K today; the 340 and light pen extra | $1,298 with 4K, $2,638 with 48K; roughly $6.5K–$13K today |
+| **Built** | about 120 | millions, counting the family |
+| **Size** | several cabinets, kilowatts, a machine room | a keyboard case and a TV |
+| **Logic** | thousands of discrete transistors on Flip Chip cards | the 6502 (about 3,500 transistors on one chip) and about 60 other chips |
+| **Word** | 18 bits | 8 bits |
+| **Addresses** | 13 bits per instruction (8K), 32K with extension | 16 bits (64K) |
+| **Memory** | core, 1.75 µs cycle, 4K–32K words (9–72 KB) | DRAM, 4–48 KB |
+| **Timing** | 1–2 memory cycles per instruction (`LAC` 3.5 µs) | 1.023 MHz, 2–7 cycles per instruction |
+| **Instructions per second** | about 300,000 | about 250,000–400,000 |
+| **Instruction set** | 16 opcodes on an index card, plus OPR bits and IOTs | 56 instructions, 151 opcodes, 13 addressing modes |
+| **Arithmetic** | 18-bit add in one instruction; the EAE multiplies and divides | 18 bits takes several instructions; no multiply |
+| **Display** | Type 340: a vector display processor, 1024², light pen | memory-mapped raster, 280×192, 6 colours, drawn by the CPU |
+| **I/O** | IOT: each device adds its own instructions | memory-mapped soft switches, 8 slots |
+| **Software** | paper-tape assembler; PIXIE; UNIX (1969) | BASIC in ROM, Applesoft, VisiCalc, games |
+
+Speed is a draw: the PDP-7 wins on wide arithmetic, the 6502 on bytes and addressing modes.
+Graphics is not close: the 340 refreshes vector pictures by itself, while the Apple's CPU draws
+every pixel. Cost is the story: the same computing fell from a department's capital budget to a
+family's in twelve years. Both run near 0.3 MIPS, so one browser tab can run both side by side
+with three orders of magnitude to spare ([WEB-BENCH.md](../WEB-BENCH.md) on borrowing an Apple ][).
+
+**And a raster for the PDP-7** (could). Give the PDP-7 the Apple's kind of screen, as a marked
+extension: a framebuffer device that reads any memory directly, like the 340, and paints it on
+a canvas, 6 bits each of red, green and blue per word. 64×64 fits in Forth's free memory today;
+256×256 packed three 6-bit pixels a word fits in banks 1–3 of 32K. Point it at the dictionary,
+the stack or PIXIE's rings and memory becomes colour; point it at two buffers in turn and a
+cellular automaton never tears. In Forth, `fb ( addr fmt -- )`, `pixel!`, `pixel@`.
+
 ## Status
 
 - **Done:** the CPU, ported from SIMH's `pdp18b_cpu.c` and checked against it: memory

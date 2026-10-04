@@ -47,6 +47,11 @@ to 32K.
 
 ## Could
 
+- **A raster for the PDP-7**: a framebuffer device, 6-bit RGB per field, pointed at any memory,
+  with Forth `fb`, `pixel!`, `pixel@` and a Life cartridge; 64×64 first, packed 256×256 after
+  `far@` ([GUIDE-PDP7](reference/GUIDE-PDP7.md#the-pdp-7-next-to-an-apple-)).
+- **Check the Apple ][ column** of that comparison against the 1978 Apple ][ Reference Manual.
+
 - **Attention overlays** per memory word: last read, write and execute by the PDP-7, the 340
   and Forth's IP (010), with counts ([DRAWING-CONSTRAINTS.md §4](DRAWING-CONSTRAINTS.md#4-attention-overlays-could)).
 - **Use the 32K.** The CPU has it; Forth needs `far@`, `far!` and bank moves, and CONFIG a

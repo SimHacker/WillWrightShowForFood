@@ -39,7 +39,7 @@ an invitation. Pick one, say so in a commit, and ask Don.
 
 | Guide | What it covers |
 |---|---|
-| [GUIDE-PDP7](GUIDE-PDP7.md) | The PDP-7: 18-bit words, 13-bit addresses, the index-card instruction set, and IOT, the door every device walks through to add its own instructions. Memory extension to 32K |
+| [GUIDE-PDP7](GUIDE-PDP7.md) | The PDP-7: 18-bit words, 13-bit addresses, the index-card instruction set, and IOT, the door every device walks through to add its own instructions. Memory extension to 32K. Side by side with an Apple ][: the same speed twelve years later, at 1/35 of the price |
 | [GUIDE-340](GUIDE-340.md) | The Type 340 display: it fetches its own instructions from core, so it is a second computer. Myer & Sutherland's wheel of reincarnation |
 | [GUIDE-LIGHTPEN](GUIDE-LIGHTPEN.md) | The Type 370 light pen: what it sees (strokes, not objects), how a program learns what was hit (`DDS`), interrupts or polling, several pens |
 | [GUIDE-TITAN](GUIDE-TITAN.md) | Titan, Cambridge's Atlas 2, across Wiseman's link: extracodes, the first commercial time-sharing, and the blocklet protocol PIXIE spoke |
