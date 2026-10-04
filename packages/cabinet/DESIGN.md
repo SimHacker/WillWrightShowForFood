@@ -1246,9 +1246,11 @@ needs no beam: the device reports which display, the pixel, and the byte pointer
 bits under it, so a program knows exactly which cell it touched, through the same pen IOTs and
 `IDPN`. Eight people, eight pens, eight screens, one PDP-7.
 
-**Tile renderer.** The cell renderer's other mode: each cell state picks a *tile*, a small
-picture (say 8×8) from a tile table in core, instead of one colour, so cells tessellate into a
-pattern: a fluffy, textured colour map. Tiles are framebuffer descriptors too, so a tile can be
+**Tile renderer.** Each cell state picks a *tile*, a small picture from a tile table in core, so
+cells tessellate into a pattern: a fluffy, textured colour map. A colour map is the special case
+of 1×1 tiles, so there is one renderer, not two: cells × tile size = image. 16² cells of 16²
+tiles make a 256² image; 256² cells of 1×1 tiles are the same image as a colour-mapped screen;
+anything between trades cell resolution for texture. Tiles are framebuffer descriptors too, so a tile can be
 indexed through its own colour map, and animating either the tiles or the map restyles a running
 automaton without touching a cell. The raster twin of the 340's tiles-as-subroutines below, and
 of CAM6.js's tile views. Tile selection can also use the neighbours (a cell's state plus which
