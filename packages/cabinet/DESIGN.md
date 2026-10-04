@@ -400,6 +400,73 @@ stop and speed, under one master. Rules, so this stays sane:
 - **One recording.** Sessions are stamped with backplane cycles, so a recording made with the
   parts at different speeds replays the same.
 
+### A universal 340 editor
+
+Independent of PIXIE and Forth: it knows only the 340, and everything about it. Read any display
+program into an ideal form, edit that, and compile it back into the best words the 340 has,
+within core and the instruction set, showing every limit on the tube instead of hiding it.
+
+**What the instruction set really allows** (measured on SYMELEC's own file, 3 Oct):
+
+- *Scale multiplies.* A vector word holds 7 bits each way, but the PARAM word before it sets a
+  scale of 1, 2, 4 or 8. SYMELEC's frame is drawn at scale 8: `277400` is dy 127, which is 1016
+  units, the whole screen. That is why the frame's corners drag so far and the turtle's barely
+  do. Every word is the same size; scale is what makes lines long.
+- *Absolute is always available.* A POINT word sets x or y to any of 0–1023. A run of vectors can
+  be broken anywhere by escaping to PARAM and placing the beam, at the cost of three words (PARAM,
+  Y, X) instead of one. This is the way out of any relative constraint.
+- *Characters are relative to each other.* The character generator advances the beam after each
+  letter, so each character's place is the previous one's plus a fixed step. That is why dragging
+  one menu letter takes the rest with it. Moving one alone needs absolute positioning: end the
+  string, POINT to the new place, start a new string, and if the letters after it should stay,
+  POINT again before them. Characters have no per-letter delta field to adjust, so unlike
+  vectors, "move one and keep the rest" always costs words.
+- *The pen sees strokes, not objects.* A pen hit is the dot or stroke being drawn when the
+  photocell fired, so points, vectors and each letter's strokes can all be hit. The program learns
+  only where the beam was and what word was being drawn; a letter or a subroutine is one thing
+  to the pen only because the program groups them, as SYMELEC does with a DDS block per
+  lightbutton. Turning the pen off (the PARAM pen bit) makes a whole run unhittable.
+- *Subroutines are shared.* A `DJS` target drawn from several call sites is one set of words, so
+  editing inside it edits every instance; editing one instance means copying it first.
+
+**The ideal form** is a display graph, not words: nodes are absolute points (x, y, bright,
+intensity, pen) in strokes; text runs (position, characters, size); subpicture definitions and
+their instances (position); and the PARAM state each needs. It is what the 340 draws, with the
+encoding thrown away, so an edit is plain geometry: move, insert, delete, rotate, scale.
+
+**Reading** runs the file through the shadow 340 (`preview340`), records every word with its
+mode, the beam before and after, scale, intensity, the enclosing block and subroutine, and builds
+the graph. Each node remembers the words it came from.
+
+**Compiling** walks the graph and picks the cheapest encoding for each step:
+
+| Need | Encoding | Words |
+|---|---|---|
+| a step within 127 × scale | one vector | 1 |
+| a longer step, same direction | raise the scale for the run, or chain vectors | 1–2, or n |
+| a jump anywhere | escape, PARAM, Y, X | 3–4 |
+| a repeated shape | one subroutine and `DJS` per instance | 1 per instance |
+| a short wiggle | increment mode | 1 per 4 steps |
+
+It chooses the scale per run that minimises words without losing a point that isn't on that
+scale's grid, splits a step that won't fit, and merges dark moves that cancel.
+
+**Where the result goes** depends on what kind of words were edited, which the editor knows from
+the source map and the cartridge:
+
+- *Assembled into the program:* the same number of words, rewritten in place, if the edit fits;
+  otherwise a `DJP` to a patch area the cartridge names and back, with the original words left
+  where they were. Nothing in the program moves.
+- *A generated buffer the cartridge declares* (start, end pointer, capacity): rewritten whole,
+  with the end pointer moved, and every `DJS`/`DJP` target and saved pointer into it relocated.
+- *A buffer the program regenerates from its own data* (PIXIE's rings): the edit is shown and
+  kept until the next regeneration, and the editor says so.
+
+**Showing the limits.** While dragging: the box a step can reach in its current word, shaded; a
+second, larger outline where it can reach after the compiler re-encodes it; the word count of the
+compiled result against the space available; and, when a move changes encoding (a vector becomes
+an absolute jump, a string splits), a note saying so. Nothing is refused silently.
+
 **Then the dragging goes into the program, not the emulator.** Two ways to give a program
 the pointer, both cabinet extensions on free device codes, neither touching stock software:
 
