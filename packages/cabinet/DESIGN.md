@@ -462,6 +462,23 @@ the source map and the cartridge:
 - *A buffer the program regenerates from its own data* (PIXIE's rings): the edit is shown and
   kept until the next regeneration, and the editor says so.
 
+**When to write.** The 340 runs on its own, fetching a word at a time, so a push can land
+mid-frame. In the emulator a push is atomic between instruction steps, but a frame can still be
+half old and half new, and if words moved, the display PC can be left pointing into the middle of
+something else. Three ways, cheapest last:
+
+- *Double buffer.* Compile into a second buffer while the 340 draws from the first, then switch by
+  rewriting one word: the `DJP` at the entry the program starts the 340 at, or the address the
+  program hands `IDLA`. One word is atomic; the 340 has either fetched the old jump or will fetch
+  the new one, so the switch takes effect at the start of the next frame and no frame is torn. A
+  patch-area edit is already double-buffered this way: the patch is written first and the one
+  `DJP` into it last. The cost is a second buffer: for the turtle, another 1,024 words of the
+  4,455 free.
+- *Terminator first.* For a buffer rewritten in place: write a stop at the start, rewrite the rest,
+  then replace the stop. The turtle's own trick. One frame may be blank.
+- *Between frames, or stopped.* Push when the 340 is stopped or the program is waiting for
+  it. Simple, but it only works when the program leaves such a gap.
+
 **Showing the limits.** While dragging: the box a step can reach in its current word, shaded; a
 second, larger outline where it can reach after the compiler re-encodes it; the word count of the
 compiled result against the space available; and, when a move changes encoding (a vector becomes
