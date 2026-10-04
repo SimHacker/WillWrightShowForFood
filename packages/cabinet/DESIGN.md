@@ -474,6 +474,15 @@ something else. Three ways, cheapest last:
   patch-area edit is already double-buffered this way: the patch is written first and the one
   `DJP` into it last. The cost is a second buffer: for the turtle, another 1,024 words of the
   4,455 free.
+- *Extended memory for the display.* Core is tight (the turtle has 4,455 words free), but the
+  cabinet is 8K and the 340 addresses only 8K: the display address register is 13 bits (`ADDR`
+  in `type340.ts`), and so is a `DJS`/`DJP` target (bits 5–17). A PDP-7 could have up to 32K
+  with memory extension, but the CPU model leaves out extend mode, and whether a real 340 reached
+  past the first 8K is still to be checked in the 340 and PDP-7 manuals. If it didn't, a
+  display bank would be a cabinet extension like `IDPN` (device 11): an IOT that sets the bank
+  the 340 fetches from, and Forth words to write words into it. It would hold display lists and
+  both double buffers, and a switch would be one IOT. Mark it as an extension in the UI, like
+  the mouse pen.
 - *Terminator first.* For a buffer rewritten in place: write a stop at the start, rewrite the rest,
   then replace the stop. The turtle's own trick. One frame may be blank.
 - *Between frames, or stopped.* Push when the 340 is stopped or the program is waiting for
