@@ -46,6 +46,39 @@ this free.
 
 **v86, jslinux** — WASM/asm.js x86. Wrong lineage for us; skipped.
 
+**Apple ][ in TypeScript, two of them, both MIT** (checked 4 Oct 2026):
+
+- **[apple2js](https://github.com/whscullin/apple2js)** (Will Scullin, since 2013): Apple ][,
+  ][+ and //e, mostly TypeScript now, React UI. Its 6502 core and its Apple ][ colour shader are
+  git submodules (`cpu6502`, `apple2shader`), so the CPU is already a separate package.
+- **[Apple2TS](https://github.com/ct6502/apple2ts)** (Chris Torrence and contributors): //e
+  in TypeScript, Vite, slot cards (Mockingboard, mouse card, Z-80 SoftCard, Disk II, SmartPort),
+  a debugger with a memory heat map, save states, Internet Archive and DemoZoo loaders, and an
+  AI agent that reads registers, the screen and memory and sets breakpoints. Closest in spirit
+  to the cabinet.
+
+**Decision: borrow, don't write.** The cabinet's backplane wants a CPU plugin and devices on a
+bus; a 6502 is a CPU plugin. Take `cpu6502` from apple2js as the Apple's CPU behind our `Cpu`
+interface, and read Apple2TS for the Apple's soft switches, video and game port. Then the Apple
+][ joins the cabinet's machines with our panels (memory, trace, source maps, the pointer as an
+input device), and ROADMAP §13's mash-ups (the keyset and the glove as Apple paddles) have a
+machine to run on. Credit both in the UI and in the source headers. ROMs are Apple's: load them
+from the user, as both projects do, never commit them.
+
+**Phosphor, borrowed:**
+
+- **Lars Brinkhoff's [crt-simulation](https://github.com/larsbrinkhoff/crt-simulation)**: GLSL
+  shaders (`phosphor.glsl`, `point.glsl` with a generalized Gaussian spot, `line.glsl`,
+  `render.glsl`), a WebGL version (`crt.js`), and photos of a real Type 340 in `pics/`. Written
+  for exactly our tubes: the Type 30, Type 340, GT40, Imlac. No licence file yet: ask Lars, who
+  is already on the show ([correspondence](../../characters/lars-brinkhoff/correspondence.md)),
+  to add one, then port the shaders to WebGPU (or run them in WebGL2 first) fed by our segments.
+- **masswerk's Spacewar** (Norbert Landsteiner, building on Barry and Brian Silverman's and Vadim
+  Gerasimov's emulator): the best-looking P7 on canvas 2D, sub-pixel spots, seven intensities as
+  spot sizes, with Steve Russell's account of the dual phosphor. Copyright Landsteiner, no open
+  licence: learn from it and ask before copying any code. He also wrote "Inside Spacewar!", the
+  model for how to walk a 1962 program in prose.
+
 ## Decisions for the cabinet's browser bench
 
 1. **Main loop:** fixed-timestep accumulator under `requestAnimationFrame`;

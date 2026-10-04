@@ -40,6 +40,11 @@ to 32K.
 - **Instruction editor:** grab POINT words and whole strings; skip dark vectors when picking.
 - **Forth `random`, `atan2`, shapes** (ROADMAP §5); **gamepads** (ROADMAP §14).
 
+- **Ask Lars** to add a licence to [crt-simulation](https://github.com/larsbrinkhoff/crt-simulation),
+  then port its phosphor shaders to the cabinet ([WEB-BENCH.md](WEB-BENCH.md#the-field)).
+- **An Apple ][ in the cabinet**, borrowing apple2js's MIT `cpu6502` as a CPU plugin and reading
+  Apple2TS for the rest; ROMs from the user. Gives ROADMAP §13's mash-ups a machine.
+
 ## Could
 
 - **Attention overlays** per memory word: last read, write and execute by the PDP-7, the 340
