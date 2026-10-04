@@ -1239,6 +1239,13 @@ by three descriptors at once. Layouts that fit a 32K machine are in
 [GUIDE-PDP7](reference/GUIDE-PDP7.md#the-pdp-7-next-to-an-apple-): RGB planes one per bank, or a
 256² monochrome screen in bank 0.
 
+**Eight displays, eight pens.** The device holds eight descriptors, each its own canvas, so one
+machine can show eight views at once: the same cells as monochrome, indexed and RGB, a zoomed
+window, a mirror, a colour plane alone. Any pen can point at any display. On a raster, a pen hit
+needs no beam: the device reports which display, the pixel, and the byte pointer of the word and
+bits under it, so a program knows exactly which cell it touched, through the same pen IOTs and
+`IDPN`. Eight people, eight pens, eight screens, one PDP-7.
+
 **Tile renderer.** The cell renderer's other mode: each cell state picks a *tile*, a small
 picture (say 8×8) from a tile table in core, instead of one colour, so cells tessellate into a
 pattern: a fluffy, textured colour map. Tiles are framebuffer descriptors too, so a tile can be
