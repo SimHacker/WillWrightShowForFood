@@ -412,6 +412,16 @@ within core and the instruction set, showing every limit on the tube instead of 
   scale of 1, 2, 4 or 8. SYMELEC's frame is drawn at scale 8: `277400` is dy 127, which is 1016
   units, the whole screen. That is why the frame's corners drag so far and the turtle's barely
   do. Every word is the same size; scale is what makes lines long.
+- *PIXIE doesn't use scale to draw lines.* The frame (`WAREA`) is a hand-written display file at
+  `SC3`. Drawn lines go through `VECGN`, P. Cross's straight-line generator (1967): it divides a
+  line by 127 (`IDIV 177`) and chains scale-1 vector words, so every endpoint is exact to the
+  unit. The 16-unit grid is not scale either: `POSCR` ANDs the cross position with `GRID` (1760
+  on, 1777 off) on the CPU. The staircase is HV mode, where `SEGX` and `SEGY` emit an x leg then a
+  y leg. Scale in PIXIE is a per-item attribute: `SCAMO` cycles an item's SC field, magnifying a
+  whole picture or instance.
+- *Scale is a shift, so the compiler can mix.* Long runs at scale 8, and a scale-1 word at the end
+  to land on the exact unit. Changing scale costs an escape and a PARAM word, so it pays only on
+  long lines.
 - *Absolute is always available.* A POINT word sets x or y to any of 0–1023. A run of vectors can
   be broken anywhere by escaping to PARAM and placing the beam, at the cost of three words (PARAM,
   Y, X) instead of one. This is the way out of any relative constraint.
