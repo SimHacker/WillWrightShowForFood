@@ -89,8 +89,18 @@ with three orders of magnitude to spare ([WEB-BENCH.md](../WEB-BENCH.md) on borr
 
 **And a raster for the PDP-7** (could). Give the PDP-7 the Apple's kind of screen, as a marked
 extension: a framebuffer device that reads any memory directly, like the 340, and paints it on
-a canvas, 6 bits each of red, green and blue per word. 64×64 fits in Forth's free memory today;
-256×256 packed three 6-bit pixels a word fits in banks 1–3 of 32K. Point it at the dictionary,
+a canvas. Layouts that fit:
+
+| Layout | Words | Where |
+|---|---|---|
+| 256², 2 bits a pixel per colour plane: red in bank 1, green in bank 2, blue in bank 3 | 7,282 per bank | 32K, one plane a bank, 910 words spare in each |
+| 256², three 6-bit pixels a word, packed | 21,846 | banks 1–3, across the boundaries |
+| 256² monochrome, 18 pixels a word, dense | 3,641 | bank 0, in Forth's 4,455 free words |
+| 256² monochrome, 16 pixels a word, a row is 16 words | 4,096 | bank 0, 359 words spare; addressing is shifts, not division |
+
+Planes are the elegant one: each bank holds a whole picture in one colour, 64 colours together,
+and a program can draw in red alone by writing one bank. The monochrome plane in bank 0 can be a
+fourth plane over them, or the whole screen on an 8K machine. Point it at the dictionary,
 the stack or PIXIE's rings and memory becomes colour; point it at two buffers in turn and a
 cellular automaton never tears. In Forth, `fb ( addr fmt -- )`, `pixel!`, `pixel@`.
 
