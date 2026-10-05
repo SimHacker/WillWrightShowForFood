@@ -350,11 +350,12 @@
 		ctx.setTransform(1, 0, 0, 1, 0, 0);
 		ctx.fillStyle = '#0a0f0a';
 		ctx.fillRect(0, 0, 1024, 1024);
-		// Edit mode, and the steady display below 1x, draw core as it is now through a shadow 340,
-		// so the picture holds still however slowly the CPU runs.
-		const steady = editOn || steadyScreen;
-		const edited = steady ? editPicture() : null;
-		const frames = edited ? [{ segments: edited }] : batch.length ? batch : [{ segments: t340.lastFrame?.segments ?? t340.segments }];
+		// The steady display draws core as it is now through a shadow 340, so the picture holds still
+		// however slowly the CPU runs. The editor only takes its handles from it: drawing one snapshot
+		// would flicker whatever the program changes between refreshes (blink, SYMELEC's tracking net,
+		// lists rebuilt every frame), which the integrated refreshes smooth as glass did.
+		const edited = editOn || steadyScreen ? editPicture() : null;
+		const frames = steadyScreen ? [{ segments: edited }] : batch.length ? batch : [{ segments: t340.lastFrame?.segments ?? t340.segments }];
 		const seen = integrate(frames);
 		drawSegments(ctx, seen, frames.length);
 		batch = [];
