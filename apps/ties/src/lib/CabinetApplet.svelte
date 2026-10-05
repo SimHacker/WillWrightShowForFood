@@ -1058,6 +1058,8 @@
 	}
 	// Display words the shadow 340 fetched, and the mode each was read in; refreshed with the view.
 	let displayModes = $state.raw(new Map());
+	// Every address the program has started the 340 at: SYMELEC alternates its menu and its picture.
+	let displayStarts = new Set();
 	function says(at, w) {
 		const mode = displayModes.get(at);
 		return mode === undefined ? explain(w, symbolic) : `340: ${explainDisplay(w, mode, symbolic)}`;
@@ -1121,8 +1123,10 @@
 			return;
 		}
 		if (memView === 'code' && explainOn && t340?.startAddr >= 0) {
+			// Insertion order stays fixed, so a word reached from two starts always gets the same reading.
+			if (displayStarts.size < 8) displayStarts.add(t340.startAddr);
 			const modes = new Map();
-			preview340((a) => cpu.read(a), t340.startAddr, 20_000, modes);
+			for (const start of displayStarts) preview340((a) => cpu.read(a), start, 20_000, modes);
 			displayModes = modes;
 		}
 		const next = Array.from({ length: MEM_PAGE }, (_, i) => cpu.read((memBase + i) % CORE));
@@ -2098,6 +2102,7 @@
 	/** A fresh PDP-7 with the chosen program booted to its first picture. Throws if the picture never comes. */
 	function bootMachine() {
 		cpu = new Pdp7({ coreWords: program.coreWords ?? 8192 });
+		displayStarts = new Set();
 		cpu.trace = trace = new Trace();
 		traceBack = 0;
 		pen = new LightPen({ aperture: 12, name: 'pointer', index: tool === 'edit' ? 0 : tool, enabled: false });
