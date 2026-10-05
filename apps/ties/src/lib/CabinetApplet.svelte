@@ -997,8 +997,10 @@
 	let sourceFor = null;
 	let sourceStatus = $state('');
 	let srcTop = $state(0);
-	const MEM_MIN_LINES = 8;
-	let MEM_LINES = $state(MEM_MIN_LINES);
+	// The memory panel's own height in lines, set by its grip; spare figure height adds to it.
+	const MEM_LINES_KEY = 'cabinet-mem-lines';
+	let MEM_MIN_LINES = $state(untrack(() => Math.max(4, Math.min(200, Number(globalThis.localStorage?.getItem(MEM_LINES_KEY)) || 8))));
+	let MEM_LINES = $state(untrack(() => MEM_MIN_LINES));
 	const MEM_PAGE = $derived(MEM_COLS * MEM_LINES);
 	const CORE = 8192;
 	let memBase = $state(0o5640);
@@ -1698,6 +1700,44 @@
 		grip.addEventListener('pointerup', up);
 		grip.addEventListener('pointercancel', up);
 	}
+	/** A bottom grip: drag or arrow keys change a size; `get` and `set` work in pixels. */
+	function gripDrag(e, get, set) {
+		e.preventDefault();
+		const start = e.clientY;
+		const from = get();
+		const grip = e.currentTarget;
+		grip.setPointerCapture(e.pointerId);
+		const move = (m) => set(from + m.clientY - start);
+		const up = () => {
+			grip.removeEventListener('pointermove', move);
+			grip.removeEventListener('pointerup', up);
+			grip.removeEventListener('pointercancel', up);
+		};
+		grip.addEventListener('pointermove', move);
+		grip.addEventListener('pointerup', up);
+		grip.addEventListener('pointercancel', up);
+	}
+	function gripKey(e, get, set, step) {
+		if (e.key === 'ArrowUp') set(get() - step);
+		else if (e.key === 'ArrowDown') set(get() + step);
+		else return;
+		e.preventDefault();
+	}
+	const memLinePx = () => memEl?.querySelector('.mem-line')?.offsetHeight || 16;
+	const memGet = () => MEM_MIN_LINES * memLinePx();
+	function memSet(px) {
+		const n = Math.max(4, Math.min(200, Math.round(px / memLinePx())));
+		if (n === MEM_MIN_LINES) return;
+		MEM_MIN_LINES = n;
+		store(MEM_LINES_KEY, n);
+		fitGrow();
+	}
+	const RINGS_HEIGHT_KEY = 'cabinet-rings-height';
+	let ringsHeight = $state(untrack(() => Math.max(120, Math.min(2000, Number(globalThis.localStorage?.getItem(RINGS_HEIGHT_KEY)) || 260))));
+	function ringsSet(px) {
+		ringsHeight = Math.round(Math.max(120, Math.min(2000, px)));
+		store(RINGS_HEIGHT_KEY, ringsHeight);
+	}
 	function onTtyGripKey(e) {
 		const h = (ttyEl?.getBoundingClientRect().height ?? 0) - ttyExtra;
 		if (e.key === 'ArrowUp') setTtyHeight(h - ttyLinePx());
@@ -1824,7 +1864,7 @@
 		}
 	}
 	$effect(() => {
-		void [figHeight, memOpen, memEl, MEM_COLS, growId];
+		void [figHeight, memOpen, memEl, MEM_COLS, growId, MEM_MIN_LINES];
 		untrack(fitGrow);
 		tick().then(() => untrack(fitGrow));
 	});
@@ -3101,11 +3141,27 @@
 				{/each}
 				{/if}
 			</div>
+			<button
+				type="button"
+				class="tty-grip"
+				aria-label="Memory height: drag, or arrow keys a line at a time"
+				title="Drag to make the memory panel taller or shorter"
+				onpointerdown={(e) => gripDrag(e, memGet, memSet)}
+				onkeydown={(e) => gripKey(e, memGet, memSet, memLinePx())}
+			></button>
 		</div>
 		{/if}
 		{#if ringsOpen && hasRings}
 			<div class="row app">
-				<RingView capture={captureRings} name={symbolic} height={260 + ringsExtra} onOpen={(a) => openMemAt(a)} />
+				<RingView capture={captureRings} name={symbolic} height={ringsHeight + ringsExtra} onOpen={(a) => openMemAt(a)} />
+				<button
+					type="button"
+					class="tty-grip"
+					aria-label="Rings height: drag, or arrow keys"
+					title="Drag to make the rings panel taller or shorter"
+					onpointerdown={(e) => gripDrag(e, () => ringsHeight, ringsSet)}
+					onkeydown={(e) => gripKey(e, () => ringsHeight, ringsSet, 20)}
+				></button>
 			</div>
 		{/if}
 		{#if configOpen}
