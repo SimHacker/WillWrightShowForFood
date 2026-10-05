@@ -7,13 +7,20 @@ import { type Segment, Type340 } from "./plugins/type340.js";
  * return to `start`, or `maxWords`, whichever comes first. A display file that loops back on
  * itself without stopping (the turtle's, PIXIE's) still yields one picture.
  */
-export function preview340(read: (addr: number) => number, start: number, maxWords = 20_000): Segment[] {
+export function preview340(
+	read: (addr: number) => number,
+	start: number,
+	maxWords = 20_000,
+	/** Filled with every display word fetched and the mode it was read in. */
+	modes?: Map<number, number>,
+): Segment[] {
 	let fetched = 0;
 	let wrapped = false;
-	const t = new Type340({
+	const t: Type340 = new Type340({
 		fetch: (a) => {
 			fetched += 1;
 			if (fetched > 1 && a === start) wrapped = true;
+			if (modes && !modes.has(a)) modes.set(a, t.mode);
 			return read(a);
 		},
 		store: () => {},

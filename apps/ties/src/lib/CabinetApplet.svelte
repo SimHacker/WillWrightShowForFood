@@ -19,6 +19,8 @@
 		isSession,
 		printScreen,
 		disassemble,
+		explain,
+		explainDisplay,
 		Trace,
 		Monitor,
 		hoverAt,
@@ -411,6 +413,21 @@
 	let editGrab = null;
 	let editAt = null;
 	let editNote = $state('Drag the end of a line.');
+	// Off unless asked for: the memory panel follows the words being edited.
+	const EDIT_SHOW_KEY = 'cabinet-edit-show-memory';
+	let editShow = $state(untrack(() => globalThis.localStorage?.getItem(EDIT_SHOW_KEY) === 'on'));
+	let editWords = $state([]);
+	function toggleEditShow() {
+		editShow = !editShow;
+		store(EDIT_SHOW_KEY, editShow ? 'on' : '');
+		if (editShow) showEditWords();
+	}
+	function showEditWords() {
+		if (!editShow || !editWords.length) return;
+		const first = Math.min(...editWords);
+		// Code view shows each word disassembled beside its source line, which is what a poke changes.
+		openMemAt(first, memView === 'octal' || memView === 'trace' ? 'code' : undefined);
+	}
 	// Generous, so the nearest corner is picked without precise pointing.
 	const EDIT_RADIUS = 40;
 
@@ -474,6 +491,8 @@
 		editGrab = { corner, box, x: corner.x, y: corner.y, refused: false, pinned: false };
 		editDragging = true;
 		const words = [corner.place?.xAt, corner.place?.yAt, corner.into?.addr, corner.outOf?.addr].filter((a) => a !== undefined);
+		editWords = words;
+		showEditWords();
 		editNote = `${corner.place ? 'Placed by POINT words' : 'Corner'} ${corner.x},${corner.y}: words ${words.map((a) => oct(a, 5)).join(', ')}`;
 		try {
 			canvasEl.setPointerCapture(event.pointerId);
@@ -496,6 +515,7 @@
 			editGrab.refused = !pokes;
 			if (pokes) {
 				for (const [a, w] of pokes) monitor.poke(a, w);
+				if (editShow && memOpen) refreshMem();
 				const dx = to.x - c.x;
 				const dy = to.y - c.y;
 				editGrab.corner = {
@@ -1025,6 +1045,21 @@
 		return upperCase ? text.toUpperCase() : text;
 	}
 
+	// On unless turned off: a plain-English line beside each word in the code view.
+	const EXPLAIN_KEY = 'cabinet-explain';
+	let explainOn = $state(untrack(() => globalThis.localStorage?.getItem(EXPLAIN_KEY) !== 'off'));
+	function toggleExplain() {
+		explainOn = !explainOn;
+		store(EXPLAIN_KEY, explainOn ? '' : 'off');
+		refreshMem();
+	}
+	// Display words the shadow 340 fetched, and the mode each was read in; refreshed with the view.
+	let displayModes = $state.raw(new Map());
+	function says(at, w) {
+		const mode = displayModes.get(at);
+		return mode === undefined ? explain(w, symbolic) : `340: ${explainDisplay(w, mode, symbolic)}`;
+	}
+
 	/** The source line for an address, or the next one that has an address. */
 	function srcLineFor(addr) {
 		const exact = sourceMap?.line.get(addr);
@@ -1081,6 +1116,11 @@
 			traceRows = trace?.window(MEM_LINES, traceBack) ?? [];
 			traceNote = trace ? `${traceBack ? `${traceBack.toLocaleString()} back; ` : ''}${trace.held.toLocaleString()} held of ${trace.count.toLocaleString()} executed` : '';
 			return;
+		}
+		if (memView === 'code' && explainOn && t340?.startAddr >= 0) {
+			const modes = new Map();
+			preview340((a) => cpu.read(a), t340.startAddr, 20_000, modes);
+			displayModes = modes;
 		}
 		const next = Array.from({ length: MEM_PAGE }, (_, i) => cpu.read((memBase + i) % CORE));
 		memChanged = memShownBase === memBase && memWords.length === next.length ? next.map((w, i) => w !== memWords[i]) : [];
@@ -2567,7 +2607,17 @@
 	<!-- Fixed order: key help, the strip of tabs, then compartments in tab order. -->
 	<figcaption bind:this={captionEl}>
 		{#if editOn}
-			<p class="row app keys" aria-live="polite">↖ {editNote}</p>
+			<div class="row app keys edit-row">
+				<p aria-live="polite">↖ {editNote}</p>
+				<button
+					type="button"
+					class="mem-view"
+					class:on={editShow}
+					aria-pressed={editShow}
+					title="Show the words you grab in the memory panel, disassembled beside their source, and watch them change as you drag"
+					onclick={toggleEditShow}>show in memory</button
+				>
+			</div>
 		{:else if program?.keyHelp}
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
 		{/if}
@@ -2940,6 +2990,16 @@
 							refreshMem();
 						}}>{memView === 'trace' ? 'live' : 'follow\u00a0PC'}</button
 					>
+					{#if memView === 'code'}
+						<button
+							type="button"
+							class="mem-view"
+							class:on={explainOn}
+							aria-pressed={explainOn}
+							title="Say what each word does in plain English; display words are read as the 340 reads them"
+							onclick={toggleExplain}>explain</button
+						>
+					{/if}
 					{#if pcNow >= 0}
 						<button type="button" class="mem-view mem-pc-go" title="Show the PC" onclick={showPc}>👉 PC {oct(pcNow, 5)} {symbolic(pcNow)}</button>
 					{/if}
@@ -2973,7 +3033,7 @@
 						{@const si = sourceMap?.line.get(at)}
 						{@const src = si === undefined ? null : sourceMap.lines[si]}
 						{@const differs = src?.word != null && src.word !== w}
-						<div class="mem-line code" class:pc={at === pcNow} class:focus={at === memFocus}>
+						<div class="mem-line code" class:pc={at === pcNow} class:focus={at === memFocus} class:edited={editOn && editWords.includes(at)}>
 							<span class="mem-pc" aria-label={at === pcNow ? 'PC' : undefined}>{at === pcNow ? '👉' : ''}</span>
 							<span class="mem-at">{oct(at, 5)}</span>
 							<span class="mem-label">{byAddr.get(at)?.[0] ?? ''}</span>
@@ -2985,7 +3045,7 @@
 								onclick={() => memGo(w & 0o17777, true)}>{dis(w)}</button
 							>
 							<span class="mem-src" class:differs title={differs ? `Core differs from the source, which assembled ${oct(src.word, 6)}: ${src.text}` : src?.text}
-								>{differs ? '≠ ' : ''}{src?.text.trim() ?? ''}</span
+								>{differs ? '≠ ' : ''}{src?.text.trim() ?? ''}{#if explainOn}<span class="mem-says">{src?.text.trim() ? ' / ' : '/ '}{says(at, w)}</span>{/if}</span
 							>
 						</div>
 					{/each}
@@ -3029,6 +3089,7 @@
 								type="button"
 								class="mem-word"
 								class:changed={memChanged[i]}
+								class:edited={editOn && editWords.includes((at + col) % CORE)}
 								class:focus={(at + col) % CORE === memFocus}
 								class:pc={(at + col) % CORE === pcNow}
 								class:sym={byAddr.has((at + col) % CORE)}
@@ -3681,6 +3742,36 @@
 	.keys {
 		font-size: 0.68rem;
 		opacity: 0.8;
+	}
+	.edit-row {
+		display: flex;
+		align-items: center;
+		gap: 0.6em;
+	}
+	.edit-row p {
+		margin: 0;
+		flex: 1;
+	}
+	.edit-row .mem-view {
+		font: inherit;
+		background: #000;
+		color: inherit;
+		border: 1px solid #555;
+		padding: 0 0.4em;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+	.edit-row .mem-view.on {
+		background: #ffd27a;
+		color: #000;
+	}
+	.mem-says {
+		opacity: 0.65;
+		font-style: italic;
+	}
+	.mem-line.edited,
+	.mem-word.edited {
+		box-shadow: inset 3px 0 0 #ffd27a;
 	}
 	.tube:focus,
 	.tube:focus-visible {

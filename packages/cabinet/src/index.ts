@@ -43,7 +43,7 @@ export { bootDuel, duelResult, DUEL_HIT, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES
 export { assemble, loadAsm, formatListing, printListing, PDP7, PDP7_SYMBOLS, DEC_1964, CAMBRIDGE_1972 } from "./asm.js";
 export { assembleAs7, formatA7out, formatAs7Labels } from "./asm/as7.js";
 export type { AsmTape, AsmLine, AsmResult, AsmOpts, Dialect, ListingOpts, Machine } from "./asm.js";
-export { disassemble } from "./disasm.js";
+export { disassemble, explain, explainDisplay } from "./disasm.js";
 export { Trace } from "./trace.js";
 export { sourceFromAsm, sourceFromListing } from "./source.js";
 export type { SourceLine, SourceMap } from "./source.js";

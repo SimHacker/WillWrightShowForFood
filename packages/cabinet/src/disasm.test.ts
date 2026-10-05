@@ -1,7 +1,24 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { assemble } from "./asm.js";
-import { disassemble } from "./disasm.js";
+import { disassemble, explain, explainDisplay } from "./disasm.js";
+
+test("disasm: explain says each word in English", () => {
+	assert.equal(explain(0o200123), "load AC from 123");
+	assert.equal(explain(0o220123, (a) => (a === 0o123 ? "tab" : "")), "load AC from the address held in tab");
+	assert.equal(explain(0o540050), "skip if AC differs from 50");
+	assert.equal(explain(0o741200), "skip if AC is not 0");
+	assert.equal(explain(0o754000), "clear AC, clear the link");
+	assert.equal(explain(0o700606), "start the display at the address in AC");
+	assert.equal(explain(0o760005), "load AC with 5");
+});
+
+test("disasm: explainDisplay reads a display word in its mode", () => {
+	assert.equal(explainDisplay(0o277400, 4), "draw 0, 127");
+	assert.equal(explainDisplay(0o600170, 4), "draw 120, 0, then back to parameter mode");
+	assert.equal(explainDisplay(0o030175, 0), "set light pen off, scale 8, intensity 5, then point mode");
+	assert.equal(explainDisplay(0o220000, 1), "beam y to 0, then point mode");
+});
 
 test("disasm: the usual words read the way the listings write them", () => {
 	const cases: Array<[number, string]> = [
