@@ -1,0 +1,41 @@
+character:
+  id: phil-budne
+  name: "Philip L. Budne"
+  type: invitation
+  signifier: "🖥️"
+  status: living
+  field: "Unix systems programming, computer emulation, languages, and networking"
+  home: characters/phil-budne/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/phil-budne/
+
+bio:
+  summary: "Unix systems programmer, consultant, and software preservation contributor. He wrote SIMH's simulator-independent Type 340 display processor and XY display model, and contributed to the PDP-7 UNIX resurrection."
+
+sources:
+  wikipedia: null
+  web:
+    - http://www.ultimate.com/phil/resume.html
+    - http://www.ultimate.com/phil/reschron.html
+    - https://github.com/philbudne
+    - https://github.com/philbudne/pdp7-unix
+    - https://github.com/philbudne/csnobol4
+    - https://github.com/open-simh/simh/blob/master/display/type340.c
+    - https://github.com/open-simh/simh/blob/master/display/display.c
+    - https://github.com/open-simh/simh/blob/master/PDP18B/pdp18b_dpy.c
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Compact public-work capability card" }
+  - { path: invitation.md, why: "Draft Repo Show invitation" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Guest portrayal standards and subject rights" }

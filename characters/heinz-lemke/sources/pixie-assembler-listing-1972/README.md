@@ -58,6 +58,22 @@ tainted pages in progress; then the assembler round-trip: assemble `*.asm` under
 diff against `*.oct` — the 1972 assembler as referee. Full process, cost, and quality
 analysis: [`TRANSCRIPTION-REPORT.md`](TRANSCRIPTION-REPORT.md).
 
+## Next: geometric source map
+
+The next scan-pipeline product is not a second transcription. It is a map from each corrected
+listing line to the rectangle(s) containing that line on the original page, so selecting source
+can highlight paper and selecting paper can reveal source. The per-page PNGs and OCR outputs
+already exist. The Apple Vision witness script currently uses OCR positions to approximate
+columns but does not preserve full token rectangles. A low-cost OCR pass can retain each token's
+normalized bounding box; fuzzy alignment then matches its imperfect text to the authoritative
+listing, using page order, sequence numbers, addresses, and octal words as anchors. Keep the
+original image geometry and record any manual correction. OCR supplies coordinates, not truth:
+it must never silently replace or “correct” the transcription. This is a contained student
+project with a useful first milestone: one page, round-trip line-to-box and box-to-line.
+
+Cabinet's corresponding TODO is the
+[skewmorphic lineprinter viewer](../../../../packages/cabinet/TODO.md).
+
 ## Show use
 
 Walk the interrupt handler on air; settle the **target-area vs direction** radial-menu question

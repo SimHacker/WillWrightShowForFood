@@ -12,7 +12,7 @@ with dates and receipts.
 | Cambridge tickets | #43348 (film search, 2019) · #91692 (film thread, 2020) · #94718 (Flight of the PIXIE final, 2020) |
 | Principals | Don Hopkins · **David Chapman** (Reference Dept, Cambridge University Library) · the Computer Laboratory Librarian · a Rainbow group member · Heinz Lemke |
 | Films | Published July 2019: [cl.cam.ac.uk/library/archives.html](https://www.cl.cam.ac.uk/library/archives.html) |
-| Result | [*Flight of the PIXIE*](https://www.youtube.com/watch?v=jDrqR9XssJI) (Mar 2020) · Heinz's *Back to the Roots* history series · this whole character room |
+| Result | [Original films digitized by Cambridge](https://www.cl.cam.ac.uk/library/archives.html) (Jul 2019) · [*Flight of the PIXIE*](https://www.youtube.com/watch?v=jDrqR9XssJI) (Don's scored edit, Mar 2020) · [B&W](https://youtu.be/j9R63T2xGCA) and [color](https://youtu.be/lCrl5QmQ9aA) original-film mirrors (Don, Oct 2026) · Heinz's *Back to the Roots* history series · this whole character room |
 
 ## The timeline
 
@@ -128,6 +128,13 @@ with PIXIE — or rather PIXIE with her."*
 **17 Mar 2020 — Final cut.** Don incorporates Heinz's feedback and syncs the performance
 to the footage in After Effects: [*Flight of the PIXIE*](https://www.youtube.com/watch?v=jDrqR9XssJI),
 dedicated to Wiseman, Lemke, Hiles — and Chapman.
+
+**6 Oct 2026 — Original-film mirrors.** After Dave Fleck reports both Cambridge SMS embeds
+unreachable (`3009795` and `3009841`), Don publishes the two original telecine presentations
+as separately attributed YouTube mirrors: [B&W demo](https://youtu.be/j9R63T2xGCA) and
+[color demo](https://youtu.be/lCrl5QmQ9aA). These preserve access to the source films; they are
+not the *Flight of the PIXIE* music edit. The local preservation copies are `PixieBW.mp4` and
+`PixieColor.mp4` in `/Users/a2deh/GroundUp/pixie/`.
 
 **24 Mar 2020 — "Wow!"** Chapman, back from holiday into the UK's first COVID lockdown,
 the library physically closed: *"The music and the cinematic effects you've used really

@@ -1,0 +1,41 @@
+character:
+  id: bob-supnik
+  name: "Robert M. Supnik"
+  type: invitation
+  signifier: "🖥️"
+  status: living
+  field: "Computer architecture, historic-system emulation, and software preservation"
+  home: characters/bob-supnik/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/bob-supnik/
+
+bio:
+  summary: "Computer architect and software engineer who created SIMH, a portable framework and family of historic-system simulators. His PDP-4/7/9/15 CPU model is the reference source for the PDP-7 core in WWSFF's Cabinet emulator."
+
+sources:
+  wikipedia: null
+  web:
+    - https://www.computerhistory.org/collections/catalog/102738264/search/collection:oral-histories--keyword:vax/
+    - https://simh.trailing-edge.com/
+    - https://simh.trailing-edge.com/papers.html
+    - https://github.com/PDP-10/MIMIC
+    - https://github.com/open-simh/simh
+    - https://raw.githubusercontent.com/open-simh/simh/master/PDP18B/pdp18b_cpu.c
+  papers:
+    - https://simh.trailing-edge.com/docs/simh.pdf
+    - https://simh.trailing-edge.com/docs/architecture18b.pdf
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Compact public-work capability card" }
+  - { path: invitation.md, why: "Draft Repo Show invitation" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Guest portrayal standards and subject rights" }

@@ -47,6 +47,13 @@ to 32K.
 
 ## Could
 
+- **Skewmorphic lineprinter viewer (student project).** Link each authoritative line in the
+  1972 transcription to one or more rectangles on its original A3 scan, then make the listing
+  and page view navigate each other. Keep OCR's job geometric, not editorial: retain cheap OCR
+  token boxes, fuzzy-match their noisy text to the corrected transcription using page, sequence,
+  address and octal anchors, and store normalized rectangles. The transcription stays the source
+  of truth; low OCR confidence must not rewrite it. Pipeline notes and assets:
+  [listing scan archive](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md).
 - **Raster, in order** ([DESIGN.md, Raster](DESIGN.md#raster-a-vanilla-virtual-video-display-and-a-cell-renderer)):
   1. the framebuffer device: descriptor with byte-pointer base, width, height, colbytes,
      rowbytes, flips, monochrome / indexed / RGB, colour map in core; a canvas beside the tube;

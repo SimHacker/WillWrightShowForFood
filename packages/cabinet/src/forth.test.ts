@@ -12,7 +12,7 @@ const tape = (f: string) => readFileSync(new URL(`../tapes/pdp7forth/${f}`, impo
 const tapes = {
 	a7out: tape("kernel.a7out"),
 	listing: tape("kernel.lst"),
-	sources: [tape("prelude.fs"), tape("turtle.fs")],
+	sources: [tape("prelude.fs"), tape("turtle.fs"), tape("scheme.fs")],
 };
 const image = compileForth(tapes);
 
@@ -72,6 +72,16 @@ test("forth: boots to its banner and does arithmetic at the prompt", () => {
 	assert.match(m.paper(), /PDP-7 FORTH/);
 	assert.match(m.line("2 3 + ."), /2 3 \+ \. 5\s+ok/);
 	assert.match(m.line(": SQ DUP * ; 7 SQ ."), / 49\s+ok/);
+});
+
+test("forth: evaluates nested S-expressions and passes results to a CPS token", () => {
+	const m = machine();
+	m.box.run(300_000);
+	assert.match(m.line(`S" 2" ' . EVALCPS`), /2\s+ok/);
+	assert.match(m.line(`S" (+ 2 3)" ' . EVALCPS`), /5\s+ok/);
+	assert.match(m.line(`S" (+ 2 3)" ' KEND EVALCPS`), /5\s+ok/);
+	assert.match(m.line(`S" (+ 2 (* 3 4))" ' . EVALCPS`), /14\s+ok/);
+	assert.match(m.line(`S" (+ 2 (* 3 4))" ' KPLUS1 EVALCPS`), /15\s+ok/);
 });
 
 test("forth: the turtle draws a flower of eight squares on the 340", () => {

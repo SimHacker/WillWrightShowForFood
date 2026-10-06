@@ -13,7 +13,7 @@ code. Every one of them already does one of the things below by hand:
 | Today | Does | Becomes |
 |---|---|---|
 | DUEL | binary tape, a loader tape, a five-word patch overlay | `tape` resources, a `load` step, a `patch` resource |
-| SYMELEC | `.oct` image, symbols TSV, the 1972 listing for the source view | `image`, `symbols`, `listing` |
+| SYMELEC | `.oct` image, symbols TSV, the 1972 listing, and its address-to-source map | `image`, `symbols`, `listing`, `source-map` |
 | LP370 | three sources assembled together, DEC dialect | `source` × 3, an `assemble` step |
 | HILO, LANDER | a program plus a shared library, `tapes/lib/readln.s` | `source` plus a `library` |
 | FORTH | `sop.s kernel.s end.s` by `as7`, then two Forth files compiled on the machine | `assemble` with concatenation, then `tape-compile` |
@@ -29,11 +29,19 @@ tapes/forth-flowers/
 ```
 
 `cartridge.yml` lists **resources** and **build steps**, and refers to everything else by path.
+The design target is broader: the cartridge also declares the machine configuration—CPU,
+memory, devices, ports, mappings, timing, interrupts, and host-facing adapters. Today the
+cartridges are still JavaScript objects in `cabinet-programs.js`; the YAML below is a sketch of
+the file format, not a claim that every machine field is parsed and wired already.
 
 ```yaml
 id: forth-flowers
 label: FLOWERS (2026)
 extends: forth                       # everything of forth's, then these changes
+machine:
+  cpu: pdp7
+  memory: { core_words: 8192 }
+  devices: [teletype, clock, papertape, type340]
 listing: { user: A2DEH }
 resources:
   - { path: flowers.fs, kind: source, lang: forth }
@@ -42,6 +50,34 @@ build:
 demo: flowers
 help: README.md
 ```
+
+The parent `forth` cartridge can supply the machine wiring, so this child only needs to declare
+the program-specific additions. A machine declaration is a **wiring plan**, not a claim that all
+CPUs share one bus:
+
+- **CPU and memory** identify the instruction-set plugin, word/address dimensions, memory banks,
+  and regions or devices visible in the address space.
+- **Devices** declare their abstract interface: methods, properties, status flags, events, and
+  optional memory regions. The cartridge binds those interfaces to the selected CPU's actual
+  mechanisms: PDP-7 IOT device/pulse/AC conventions; Apple II soft switches and game-port registers;
+  PDP-10 channels, byte pointers, or interrupts.
+- **Instruction contributions** are optional. A device may describe operations that can be exposed
+  as guest instructions, but the CPU plugin must explicitly bind them to valid encodings and define
+  their architectural effects. Fixed or incompatible ISAs use their native I/O mechanism instead.
+- **Interrupts, flags, and timing** are mapped by the cartridge to the CPU's interrupt lines and
+  scheduling rules. A device's abstract event does not assume every CPU has the same flag or
+  interrupt model.
+- **Adapters** translate between device interfaces and machine-specific protocols. A cartridge
+  may select a built-in adapter or, where permitted, a trusted JavaScript module. Arbitrary
+  JavaScript from URL-loaded cartridges is not evaluated: today's cartridge scripts use a
+  constrained declarative vocabulary, and adapter code needs an explicit trust/capability boundary.
+
+This separation lets one device travel across unlike machines. For example, a mouse/keyset
+instrument can become a PDP-7 light pen plus teletype input, or Apple II paddle values, pushbuttons,
+and keyboard events. Only the cartridge's adapter changes; neither machine needs to pretend its
+I/O architecture is the other's. The configuration itself is inspectable and testable, so wiring
+errors—overlapping addresses, unclaimed ports, invalid opcode bindings, or an interrupt with no
+CPU route—can fail before a program starts.
 
 **Resource kinds** are open-ended, and each one names who reads it:
 
@@ -54,7 +90,10 @@ help: README.md
 | `image` | a core image (`.oct`, `a7out`, a saved core) | `boot` |
 | `platter` | the UNIX RB09 image | the disk device |
 | `patch` | DUEL's five words | applied after load, never folded into source |
-| `symbols`, `listing` | `symelec-symbols.tsv`, the 1972 listing | the memory panel, the source view |
+| `symbols` | `symelec-symbols.tsv` | disassembler, memory panel, source view |
+| `listing` | the 1972 assembler listing | listing/source view; parsed to build an address-to-source map |
+| `source-map` | core address → listing line and expected word | memory panel, execution trace, source view; highlights source and detects divergence |
+| `scan-map` *(planned)* | authoritative listing line → page and normalized rectangle(s) in the original scan, aligned through OCR tokens | synchronized scan/listing viewer; OCR text is a fuzzy-match witness, never replacement source |
 | `table` | a cellular automaton lookup table | a device, or a deposit at a label |
 | `session`, `demo` | recorded input ([session.ts](src/session.ts)) | the transport ([ROADMAP §11](ROADMAP.md#11-one-transport-and-a-demo-library)) |
 | `save` | a Forth Animal tree, a SYMELEC ring file, a UNIX file | the program, by typing or the tape reader |

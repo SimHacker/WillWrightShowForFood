@@ -13,8 +13,11 @@ so NEXT is three instructions.
   so the page can assemble `kernel.s` itself: [DESIGN.md](../../DESIGN.md#cartridges-and-live-coding).
 - `prelude.fs` and `turtle.fs`: Mitch's Forth source, unchanged. `turtle.fs` is turtle graphics on
   the Type 340.
+- `scheme.fs`: a local CPS arithmetic S-expression experiment, compiled after the upstream sources
+  in the Cabinet tests. Nested `+` and `*` over single-digit integers pass intermediate values
+  through explicit Forth continuation tokens; it is not complete Scheme or first-class `call/cc`.
 
 Mitch's build compiles the prelude into the image by running the kernel under SIMH, feeding it the
 source on paper tape. The cabinet does the same thing itself (`src/forth.ts`). It loads the
-kernel, mounts `prelude.fs` and `turtle.fs` on the reader, types `TAPE`, and keeps the core that
-results. Nothing in this folder is changed from Mitch's.
+kernel, mounts the Forth sources on the reader, types `TAPE`, and keeps the core that results. The
+upstream kernel, prelude, and turtle remain unchanged; `scheme.fs` is a separate local experiment.

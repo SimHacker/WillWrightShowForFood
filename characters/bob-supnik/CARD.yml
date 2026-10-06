@@ -1,0 +1,44 @@
+# CARD — bob-supnik (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: bob-supnik
+  name: "Robert M. Supnik"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Robert M. Supnik"
+  title: "Historic systems emulation architect"
+  rarity: uncommon
+  signifier: "🖥️"
+  flavor: "Make the old machine runnable, then let its software speak."
+
+abilities:
+  - id: PRESERVE-BY-EMULATION
+    name: "Preserve by Emulation"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: preserveByEmulation
+      signature: "PDP-7 instruction semantics → runnable PIXIE-era software"
+      score_when:
+        - trigger: audience_sees_how_machine_models_enable_software_preservation
+          weight: 0.9
+    effect: "Trace SIMH's PDP-7 model into Cabinet and separate the CPU emulator from the Type 340 display implementation."
+    verifiable: "SIMH PDP18B/pdp18b_cpu.c; WWSFF packages/cabinet/src/plugins/pdp7.ts and SIMH-MAP.md"
+    combos_with: [phil-budne, lars-brinkhoff]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Canonical bio and source record" }
+  - { path: README.md, why: "Profile and technical lineage" }
+  - { path: invitation.md, why: "Public invitation draft" }

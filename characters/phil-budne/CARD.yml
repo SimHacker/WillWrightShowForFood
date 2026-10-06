@@ -1,0 +1,44 @@
+# CARD — phil-budne (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: phil-budne
+  name: "Philip L. Budne"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Philip L. Budne"
+  title: "Display processor and systems-software builder"
+  rarity: uncommon
+  signifier: "🖥️"
+  flavor: "One display model, many machines; keep the boundary clean."
+
+abilities:
+  - id: MODEL-THE-DISPLAY
+    name: "Model the Display"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: modelTheDisplay
+      signature: "Type 340 instructions + XY phosphor model → portable display emulation"
+      score_when:
+        - trigger: audience_sees_the_display_as_a_separate_machine
+          weight: 0.9
+    effect: "Separate a display processor's behavior from the host CPU and the platform-specific I/O glue."
+    verifiable: "Open SIMH display/type340.c and display/display.c; PDP-7 interface in PDP18B/pdp18b_dpy.c"
+    combos_with: [bob-supnik, lars-brinkhoff, heinz-lemke]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Canonical bio and source record" }
+  - { path: README.md, why: "Profile and technical lineage" }
+  - { path: invitation.md, why: "Public invitation draft" }
