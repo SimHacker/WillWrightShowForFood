@@ -88,6 +88,16 @@ behavior in TypeScript and adds browser-facing tools around it. It does not
 embed the SIMH runtime, and it does not claim that one person built the whole
 machine. The full source-to-port ledger is in [SIMH-MAP.md](SIMH-MAP.md).
 
+Validation is separate from source lineage. DEC's light-pen diagnostic,
+Cambridge's DUEL, Mitch Bradley's PDP-7 Forth and turtle, and HILO and LANDER
+exercise complementary CPU and device paths: pen IOTs and tracking, tape loading
+and console switches, EAE arithmetic and 340 display lists, and KSR-33 input and
+output. The spoken-number, smart-TTY path normalizes dictated numbers before
+feeding them as ordinary keystrokes. The acceptance tests cover the [light-pen
+diagnostic](src/lp370.test.ts), [DUEL](src/cabinet.test.ts),
+[Forth and turtle](src/forth.test.ts), [HILO](src/hilo.test.ts),
+[LANDER](src/lander.test.ts), and [spoken TTY input](src/spoken.test.ts).
+
 This is also where the cabinet metaphor earns its keep. DEC's cabinet held a
 processor and its devices; a plug-in added IOT behavior to the backplane.
 Cabinet keeps that tangible idea as software, while the cartridge says which
@@ -115,6 +125,10 @@ remains the general-purpose host. Cabinet preserves that boundary rather than
 turning the 340 into an all-purpose UI computer. The browser does provide the
 outer application, but the guest machine still sees its own CPU, IOTs, display
 words, and light-pen behavior.
+
+Forth's turtle makes that boundary tangible: Forth computes in the PDP-7,
+builds vector words in the Type 340 display list, and leaves the 340 to execute
+and refresh that display program.
 
 The same placement question reappears in later systems, without a simple
 descent from one to the next. NeWS moved executable PostScript and window
