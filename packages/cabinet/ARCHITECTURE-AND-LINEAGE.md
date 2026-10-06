@@ -323,14 +323,19 @@ pens form another display path. These are designs in
 features. The CAM6 device, general framebuffer, tile renderer, and sprites
 remain future work; the Apple II and PDP-10 processors are not implemented.
 
-over its tape, not an ordinary peripheral. It could, however, drive a display
-device through an explicit adapter, or run beside the PDP-7 under a shared
-it does not magically provide a keyboard, framebuffer, or I/O protocol. Those
+Forth and turtle graphics show this split in a working machine: the PDP-7
+executes Forth and writes Type 340 display words; the 340 executes that drawing
+program. The Turing-machine proposal asks a different question: where should
+computation itself live?
+
 ### A Turing-machine cabinet inside another computer
 
-A Turing machine is naturally a CPU plugin if it is the computer being
-emulated: one `step()` performs one transition over its tape. But it can also
-be a **device** in another von Neumann machine. In that configuration, the
+A Turing machine's transition table and tape are the machine's computation,
+not an ordinary peripheral protocol; by themselves they provide no keyboard,
+framebuffer, or other I/O. It is naturally a CPU plugin when the Turing machine
+is the computer being emulated: one `step()` performs one transition over its
+tape. But a Turing engine can also be a **device** in another von Neumann
+machine. In that configuration, the
 host CPU keeps running its own ISA while a Turing engine reads a transition
 table and tape from shared memory, updates the tape/head/state, and reports
 status or interrupts through an attached control port. The same transition
