@@ -363,6 +363,15 @@ master clock, so a host read cannot observe a half-written transition. A
 later design could allow independent rates, but it still needs explicit
 ordering and memory-consistency rules.
 
+**A bounded window can present an unbounded tape.** Keep a finite tape window
+resident in shared memory, with guard bounds around the head. When a completed
+transition moves the head across a guard, raise an interrupt before the next
+step. The host can advance the window, initialize newly exposed cells as blank,
+and page older nonblank regions to disk-backed storage. A separate viewer can
+scroll its viewport to keep the head visible. The Turing machine sees a tape
+that extends as needed; physical memory and backing storage remain finite. This
+interrupt-and-paging scheme is a design option, not a current Cabinet feature.
+
 Because the tape and transition table are data in core, the host can provide
 the visualization without requiring special display hardware. A software
 panel can show state, scanned symbol, tape cells, and head position; a raster
