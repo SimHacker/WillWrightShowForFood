@@ -60,3 +60,6 @@ __pycache__/
 # running a real deploy locally leaves build output here.
 .releases/
 .moollm-tmp/
+
+# scanmap.py OCR cache
+characters/heinz-lemke/sources/pixie-assembler-listing-1972/.build/

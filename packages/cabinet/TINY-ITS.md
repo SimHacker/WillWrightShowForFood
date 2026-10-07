@@ -2,8 +2,9 @@
 
 tiny-its is a command-line navigator and editor for ring structures. What you edit is a
 graph, and you walk it like a MUD. Around that it is the editor, debugger, controller,
-assembler, disassembler, memory mapper, lock and device manager and remote job manager for a
-room full of emulated machines ([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do) has what it
+memory mapper, lock and device manager and remote job manager for a
+room full of emulated machines. It has no assembler of its own: assembling, disassembling and
+building are tiny-titan's `build` service, which tiny-its calls ([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do) has what it
 manages). This page designs the language you type at it: ergonomic, two-way,
 self-documenting and discoverable. Three kinds of user type at it: people, an LLM, and
 PDP-7 programs. It needs only a serial teletype line.
@@ -140,7 +141,9 @@ tiny-its> EDIT (SOURCE OF) PIXIE FLST
 the way `EXAMINE` does) for anyone whose fingers know it. Numbers are octal unless marked,
 addresses are expressions over the VM's symbols (`FLST+3`, `OP 6`), and `ASSEMBLE` takes
 assembly source line by line, echoing each as a listing line, until a line holding only `.`
-(the `ed` convention).
+(the `ed` convention). tiny-its only collects the lines: tiny-titan's `build` service assembles
+them in the target machine's dialect and returns the words and listing, which tiny-its deposits
+([TINY-TITAN.md](TINY-TITAN.md)).
 
 ## Editing is the IDE's job
 

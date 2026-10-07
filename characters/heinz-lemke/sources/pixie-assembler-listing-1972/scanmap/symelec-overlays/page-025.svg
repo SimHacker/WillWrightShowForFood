@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-025.png" width="3307" height="2338"/>
+<rect x="1228" y="175" width="1788" height="1262" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="618.5" cy="50.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.0" cy="150.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.5" cy="250.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.0" cy="348.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.5" cy="448.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="549.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.5" cy="747.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.5" cy="846.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="946.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1044.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1145.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1243.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1345.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1445.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="651.0" cy="1502.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="1543.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1645.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="1744.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="1842.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.0" cy="1944.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="607.0" cy="2038.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="607.0" cy="2143.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1396.0" y="198.0" width="150.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1315: LAC HDR1</title></rect>
+<rect x="1715.0" y="231.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1316: RTL</title></rect>
+<rect x="1396.0" y="263.0" width="131.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1317: LAC SAV</title></rect>
+<rect x="1396.0" y="294.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1318: SZL</title></rect>
+<rect x="1875.0" y="296.0" width="695.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1318: / read/write according as OFLO= 1/0</title></rect>
+<rect x="1395.0" y="329.0" width="91.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1319: LRB18</title></rect>
+<rect x="1395.0" y="365.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1320: LLB18!LLAM</title></rect>
+<rect x="1395.0" y="396.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1321: DAC SAV</title></rect>
+<rect x="1713.0" y="433.0" width="134.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1322: TAD CKS</title></rect>
+<rect x="2034.0" y="467.0" width="134.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1323: DAC CKS</title></rect>
+<rect x="2355.0" y="501.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1324: LAC SAV</title></rect>
+<rect x="2675.0" y="502.0" width="332.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1324: / update checksum</title></rect>
+<rect x="1393.0" y="526.0" width="1554.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1325: JMP I RW</title></rect>
+<rect x="1233.0" y="628.0" width="128.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1328: WAITLK,</title></rect>
+<rect x="1552.0" y="631.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1328: HLT</title></rect>
+<rect x="1233.0" y="663.0" width="68.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1329: RW1,</title></rect>
+<rect x="1393.0" y="663.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1329: KSF</title></rect>
+<rect x="1873.0" y="667.0" width="413.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1329: / teletype interrupt?</title></rect>
+<rect x="1393.0" y="696.0" width="131.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1330: JMP RW2</title></rect>
+<rect x="1392.0" y="731.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1331: KRB</title></rect>
+<rect x="1392.0" y="763.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1332: SAD CR</title></rect>
+<rect x="1711.0" y="765.0" width="534.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1332: / abandon transfer if CTL X</title></rect>
+<rect x="1391.0" y="797.0" width="191.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1333: JMP BERTP1</title></rect>
+<rect x="1231.0" y="866.0" width="68.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1335: RW2,</title></rect>
+<rect x="1391.0" y="865.0" width="70.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1335: IDSI</title></rect>
+<rect x="1293.0" y="891.0" width="229.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1336: JMP . 6</title></rect>
+<rect x="1390.0" y="924.0" width="172.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1337: LAC I DFB</title></rect>
+<rect x="1709.0" y="969.0" width="54.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1338: SNA</title></rect>
+<rect x="1869.0" y="1002.0" width="133.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1339: JMP . 3</title></rect>
+<rect x="1389.0" y="1024.0" width="568.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1340: LAC DFB</title></rect>
+<rect x="1391.0" y="1063.0" width="70.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1341: IDLA</title></rect>
+<rect x="1869.0" y="1065.0" width="234.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1341: /restart PDF</title></rect>
+<rect x="2150.0" y="1067.0" width="213.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1341: if stopcode</title></rect>
+<rect x="1389.0" y="1129.0" width="52.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1343: LSF</title></rect>
+<rect x="1389.0" y="1163.0" width="130.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1344: JMP RW1</title></rect>
+<rect x="1869.0" y="1166.0" width="434.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1344: / loop until link flag</title></rect>
+<rect x="1389.0" y="1190.0" width="910.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1345: NOP</title></rect>
+<rect x="1387.0" y="1231.0" width="54.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1346: LCF</title></rect>
+<rect x="1387.0" y="1265.0" width="233.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1347: JMP I WAITLK</title></rect>
+<rect x="1228.0" y="1357.0" width="331.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1350: PAUSE</title></rect>
+</svg>

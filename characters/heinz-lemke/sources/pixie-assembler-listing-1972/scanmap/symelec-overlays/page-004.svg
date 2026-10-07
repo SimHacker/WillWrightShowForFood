@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-004.png" width="3307" height="2338"/>
+<rect x="694" y="296" width="1688" height="1991" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<rect x="860.0" y="314.0" width="192.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 125: LAC CLBL</title></rect>
+<rect x="1180.0" y="314.0" width="33.0" height="9.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 125: /L</title></rect>
+<rect x="861.0" y="347.0" width="252.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 126: DAC LBD 42</title></rect>
+<rect x="861.0" y="380.0" width="252.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 127: LAC (JMP CFOU</title></rect>
+<rect x="862.0" y="414.0" width="353.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 128: DAC LBD 47</title></rect>
+<rect x="863.0" y="447.0" width="187.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 129: LAC CLBS</title></rect>
+<rect x="1183.0" y="447.0" width="31.0" height="6.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 129: /S</title></rect>
+<rect x="863.0" y="480.0" width="351.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 130: DAC LBD 51</title></rect>
+<rect x="863.0" y="513.0" width="212.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 131: LAC (013700</title></rect>
+<rect x="1184.0" y="513.0" width="33.0" height="5.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 131: /A</title></rect>
+<rect x="865.0" y="546.0" width="191.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 132: DAC LBD 15</title></rect>
+<rect x="865.0" y="580.0" width="192.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 133: LAM</title></rect>
+<rect x="865.0" y="613.0" width="193.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 134: DAC SWITCH</title></rect>
+<rect x="866.0" y="646.0" width="173.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 135: JMS SETCL</title></rect>
+<rect x="867.0" y="679.0" width="150.0" height="12.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 136: JMP PEN1</title></rect>
+<rect x="707.0" y="746.0" width="128.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 138: FSTCLB,</title></rect>
+<rect x="1027.0" y="746.0" width="132.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 138: RES0 -3</title></rect>
+<rect x="707.0" y="779.0" width="128.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 139: SNDCLB,</title></rect>
+<rect x="1027.0" y="779.0" width="133.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 139: CAP0 -3</title></rect>
+<rect x="711.0" y="812.0" width="125.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 140: TRDCLB,</title></rect>
+<rect x="1029.0" y="812.0" width="132.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 140: IND0 -3</title></rect>
+<rect x="709.0" y="845.0" width="128.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 141: FOUCLB,</title></rect>
+<rect x="1028.0" y="845.0" width="133.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 141: SWI0 -3</title></rect>
+<rect x="710.0" y="878.0" width="127.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 142: FIFCLB,</title></rect>
+<rect x="1030.0" y="878.0" width="133.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 142: VOL0 -3</title></rect>
+<rect x="710.0" y="912.0" width="128.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 143: SIXCLB,</title></rect>
+<rect x="1030.0" y="912.0" width="133.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 143: CUR0 -3</title></rect>
+<rect x="711.0" y="945.0" width="128.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 144: SEVCLB,</title></rect>
+<rect x="1031.0" y="945.0" width="132.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 144: NUL0 -3</title></rect>
+<rect x="712.0" y="978.0" width="127.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 145: EIGCLB,</title></rect>
+<rect x="1031.0" y="978.0" width="133.0" height="9.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 145: NOR0 -3</title></rect>
+<rect x="714.0" y="1078.0" width="87.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 148: CLBR,</title></rect>
+<rect x="874.0" y="1078.0" width="112.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 148: 223700</title></rect>
+<rect x="713.0" y="1111.0" width="88.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 149: CLBC,</title></rect>
+<rect x="874.0" y="1111.0" width="112.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 149: 033700</title></rect>
+<rect x="714.0" y="1144.0" width="88.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 150: CLBL,</title></rect>
+<rect x="875.0" y="1144.0" width="112.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 150: 143700</title></rect>
+<rect x="715.0" y="1177.0" width="88.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 151: CLBS,</title></rect>
+<rect x="875.0" y="1177.0" width="112.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 151: 233700</title></rect>
+<rect x="716.0" y="1277.0" width="89.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 154: CLBV,</title></rect>
+<rect x="877.0" y="1277.0" width="112.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 154: 263700</title></rect>
+<rect x="716.0" y="1310.0" width="89.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 155: CLBI,</title></rect>
+<rect x="879.0" y="1310.0" width="110.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 155: 113700</title></rect>
+<rect x="718.0" y="1343.0" width="87.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 156: CLBU,</title></rect>
+<rect x="878.0" y="1343.0" width="113.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 156: 253700</title></rect>
+<rect x="718.0" y="1376.0" width="89.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 157: CLBO,</title></rect>
+<rect x="879.0" y="1376.0" width="112.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 157: 173700</title></rect>
+<rect x="721.0" y="1476.0" width="332.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 160: /ECTRONIC SYMBOLS</title></rect>
+<rect x="883.0" y="1576.0" width="231.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 163: 14</title></rect>
+<rect x="883.0" y="1609.0" width="148.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 164: 14</title></rect>
+<rect x="722.0" y="1642.0" width="89.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 165: RES0,</title></rect>
+<rect x="883.0" y="1642.0" width="211.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 165: DDS VE 4</title></rect>
+<rect x="884.0" y="1675.0" width="213.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 166: VEC ON 10 0</title></rect>
+<rect x="885.0" y="1708.0" width="248.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 167: VEC ON 4 10</title></rect>
+<rect x="885.0" y="1742.0" width="252.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 168: VEC ON 10 -20</title></rect>
+<rect x="886.0" y="1775.0" width="249.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 169: VEC ON 10 20</title></rect>
+<rect x="887.0" y="1808.0" width="252.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 170: VEC ON 10 -20</title></rect>
+<rect x="886.0" y="1841.0" width="233.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 171: VEC ON 10 20</title></rect>
+<rect x="887.0" y="1874.0" width="253.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 172: VEC ON 10 -20</title></rect>
+<rect x="888.0" y="1908.0" width="212.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 173: VEC ON 4 10</title></rect>
+<rect x="889.0" y="1941.0" width="272.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 174: VEC ES ON 10 0</title></rect>
+<rect x="889.0" y="1975.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 175: PAR SB</title></rect>
+<rect x="889.0" y="2007.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 176: DJP SB 4</title></rect>
+<rect x="892.0" y="2109.0" width="31.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 179: 12</title></rect>
+<rect x="892.0" y="2143.0" width="32.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 180: 24</title></rect>
+<rect x="731.0" y="2179.0" width="90.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 181: CAP0,</title></rect>
+<rect x="893.0" y="2174.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 181: DDS VE 4</title></rect>
+<rect x="893.0" y="2206.0" width="212.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 182: VEC ON 30 0</title></rect>
+</svg>

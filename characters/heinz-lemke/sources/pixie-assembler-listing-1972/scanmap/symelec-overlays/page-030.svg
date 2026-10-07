@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-030.png" width="3307" height="2338"/>
+<rect x="661" y="320" width="1799" height="1996" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="64.5" cy="193.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="293.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="393.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="493.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="594.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="693.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="793.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="892.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="991.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1091.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1191.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1290.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1390.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1488.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1588.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="102.0" cy="1643.0" r="30.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1688.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1787.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1888.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="76.5" cy="1987.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="2087.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="2187.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="2288.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="839.0" y="341.0" width="134.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1593: JMS ERR</title></rect>
+<rect x="839.0" y="376.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1594: LAC OP+3</title></rect>
+<rect x="840.0" y="409.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1595: DAC I LOP</title></rect>
+<rect x="840.0" y="442.0" width="272.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1596: JMP I STAK-JMS</title></rect>
+<rect x="679.0" y="539.0" width="333.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1599: UNSTAK-JMS, 0</title></rect>
+<rect x="1158.0" y="538.0" width="374.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1599: /OPERAND FROM STACK</title></rect>
+<rect x="839.0" y="575.0" width="594.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1600: LAC I LOP</title></rect>
+<rect x="839.0" y="607.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1601: DAC OP+3</title></rect>
+<rect x="839.0" y="641.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1602: LAC LOP</title></rect>
+<rect x="839.0" y="676.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1603: SAD LPBEG</title></rect>
+<rect x="841.0" y="709.0" width="131.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1604: JMS ERR</title></rect>
+<rect x="839.0" y="741.0" width="211.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1605: TAD (777777</title></rect>
+<rect x="838.0" y="775.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1606: DAC LOP</title></rect>
+<rect x="838.0" y="809.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1607: LAC OP+3</title></rect>
+<rect x="837.0" y="843.0" width="314.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1608: JMP I UNSTAK-JMS</title></rect>
+<rect x="679.0" y="908.0" width="248.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1610: ENTER = JMS .</title></rect>
+<rect x="839.0" y="944.0" width="12.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1611: 0</title></rect>
+<rect x="1158.0" y="939.0" width="575.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1611: /ENTER SUBROUTINE (NAME ENTER</title></rect>
+<rect x="839.0" y="975.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1612: DAC OP+3</title></rect>
+<rect x="1158.0" y="974.0" width="334.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1612: /SAVE ENTRY POINT</title></rect>
+<rect x="839.0" y="1008.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1613: ISZ LINK</title></rect>
+<rect x="838.0" y="1041.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1614: LAC LINK</title></rect>
+<rect x="838.0" y="1074.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1615: SAD LKEND</title></rect>
+<rect x="839.0" y="1107.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1616: JMS ERR</title></rect>
+<rect x="838.0" y="1139.0" width="252.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1617: LAC ENTER-JMS</title></rect>
+<rect x="839.0" y="1175.0" width="190.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1618: AND (17777</title></rect>
+<rect x="838.0" y="1209.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1619: DAC I LINK</title></rect>
+<rect x="1157.0" y="1209.0" width="194.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1619: /SAVE LINK</title></rect>
+<rect x="838.0" y="1243.0" width="191.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1620: JMP I OP+3</title></rect>
+<rect x="1157.0" y="1242.0" width="334.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1620: /ENTER SUBROUTINE</title></rect>
+<rect x="677.0" y="1310.0" width="230.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1622: EXIT = JMP .</title></rect>
+<rect x="836.0" y="1343.0" width="194.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1623: LAC I LINK</title></rect>
+<rect x="1157.0" y="1342.0" width="313.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1623: /EXIT SUBROUTINE</title></rect>
+<rect x="837.0" y="1376.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1624: SAD (100000</title></rect>
+<rect x="837.0" y="1408.0" width="134.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1625: JMS ERR</title></rect>
+<rect x="1157.0" y="1407.0" width="214.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1625: /ERROR EXIT</title></rect>
+<rect x="837.0" y="1441.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1626: DAC OP+3</title></rect>
+<rect x="1157.0" y="1440.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1626: /PLANT LINK</title></rect>
+<rect x="837.0" y="1474.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1627: LAC LINK</title></rect>
+<rect x="837.0" y="1508.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1628: SAD LKBEG</title></rect>
+<rect x="837.0" y="1542.0" width="134.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1629: JMS ERR</title></rect>
+<rect x="838.0" y="1575.0" width="211.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1630: TAD (777777</title></rect>
+<rect x="837.0" y="1609.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1631: DAC LINK</title></rect>
+<rect x="836.0" y="1641.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1632: JMP I OP+3</title></rect>
+<rect x="1156.0" y="1640.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1632: /EXIT</title></rect>
+<rect x="677.0" y="1741.0" width="852.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1635: /GARBAGE COLLECTOR - COMBINED PHASE 1 AND 2</title></rect>
+<rect x="675.0" y="1779.0" width="213.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1636: GIND = OP+7</title></rect>
+<rect x="996.0" y="1776.0" width="233.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1636: /INDEX NAMES</title></rect>
+<rect x="677.0" y="1812.0" width="232.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1637: GBUG = OP+10</title></rect>
+<rect x="676.0" y="1844.0" width="251.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1638: GSTKP = OP+11</title></rect>
+<rect x="996.0" y="1843.0" width="413.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1638: /BRANCH STACK POINTER</title></rect>
+<rect x="677.0" y="1879.0" width="251.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1639: GTEMP = OP+12</title></rect>
+<rect x="677.0" y="1909.0" width="773.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1640: /NOTE THAT THE BRANCH STACK STORES GBUG</title></rect>
+<rect x="676.0" y="1977.0" width="68.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1642: LIM,</title></rect>
+<rect x="837.0" y="1979.0" width="12.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1642: 0</title></rect>
+<rect x="1155.0" y="1975.0" width="495.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1642: /HERE IF FREELIST EXPIRED</title></rect>
+<rect x="738.0" y="2002.0" width="269.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1643: LAC TOP 1</title></rect>
+<rect x="837.0" y="2045.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1644: DAC GSTKP</title></rect>
+<rect x="836.0" y="2079.0" width="133.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1645: LAC BOT</title></rect>
+<rect x="836.0" y="2111.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1646: DAC GIND</title></rect>
+<rect x="836.0" y="2144.0" width="150.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1647: JMP LIM1</title></rect>
+<rect x="676.0" y="2209.0" width="493.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1649: /LOOP INSPECTING P. NAMES</title></rect>
+<rect x="675.0" y="2243.0" width="88.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1650: LIM2,</title></rect>
+<rect x="837.0" y="2235.0" width="206.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1650: ISZ GIND</title></rect>
+<rect x="1155.0" y="2243.0" width="314.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1650: / NEXT PERM NAME</title></rect>
+</svg>

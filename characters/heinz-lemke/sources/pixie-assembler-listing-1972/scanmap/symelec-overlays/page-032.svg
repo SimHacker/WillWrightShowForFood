@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-032.png" width="3307" height="2338"/>
+<rect x="662" y="316" width="1797" height="1997" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="64.5" cy="191.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="289.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="389.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="489.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="89.5" cy="591.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="688.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="790.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="890.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="990.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1089.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1188.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1287.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1386.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1486.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="57.0" cy="1585.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="97.5" cy="1636.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="57.5" cy="1686.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="1786.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="56.5" cy="1884.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="56.0" cy="1984.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.5" cy="2083.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="55.0" cy="2183.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="55.0" cy="2281.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="839.0" y="338.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1713: ISZ GBUG</title></rect>
+<rect x="838.0" y="373.0" width="153.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1714: LAC GBUG</title></rect>
+<rect x="838.0" y="405.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1715: SAD END</title></rect>
+<rect x="837.0" y="439.0" width="1014.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1716: JMP GBRTN</title></rect>
+<rect x="837.0" y="471.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1717: LAC I GBUG</title></rect>
+<rect x="838.0" y="505.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1718: SAD (100000</title></rect>
+<rect x="839.0" y="539.0" width="211.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1719: TAD (200000</title></rect>
+<rect x="1157.0" y="539.0" width="254.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1719: /MARK SND NIL</title></rect>
+<rect x="838.0" y="573.0" width="594.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1720: DAC I GBUG</title></rect>
+<rect x="677.0" y="640.0" width="454.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1722: /EXIT RECURSIVE ROUTINE</title></rect>
+<rect x="677.0" y="674.0" width="108.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1723: GBRTN,</title></rect>
+<rect x="837.0" y="675.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1723: LAC GSTKP</title></rect>
+<rect x="837.0" y="708.0" width="170.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1724: SAD TOP 1</title></rect>
+<rect x="837.0" y="739.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1725: JMP LIM2</title></rect>
+<rect x="1156.0" y="740.0" width="215.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1725: /FINAL EXIT</title></rect>
+<rect x="837.0" y="774.0" width="211.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1726: TAD (777777</title></rect>
+<rect x="1156.0" y="773.0" width="51.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1726: /-1</title></rect>
+<rect x="837.0" y="805.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1727: DAC GSTKP</title></rect>
+<rect x="837.0" y="840.0" width="212.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1728: LAC I GSTKP</title></rect>
+<rect x="1155.0" y="841.0" width="254.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1728: /RECOVER GBUG</title></rect>
+<rect x="837.0" y="867.0" width="559.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1729: DAC GBUG</title></rect>
+<rect x="837.0" y="906.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1730: JMP GBCDR</title></rect>
+<rect x="1155.0" y="907.0" width="174.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1730: /CARRY ON</title></rect>
+<rect x="675.0" y="1004.0" width="594.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1733: /GARBAGE COLLECTOR PHASE THREE</title></rect>
+<rect x="675.0" y="1071.0" width="1114.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1735: GARB,</title></rect>
+<rect x="835.0" y="1107.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1736: LAC BEG</title></rect>
+<rect x="835.0" y="1139.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1737: DAC OP+7</title></rect>
+<rect x="1154.0" y="1139.0" width="274.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1737: /START ADDRESS</title></rect>
+<rect x="835.0" y="1173.0" width="170.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1738: DZM OP+11</title></rect>
+<rect x="1155.0" y="1173.0" width="534.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1738: /CONSECUTIVE INDICATOR ZERO</title></rect>
+<rect x="835.0" y="1206.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1739: LAC I OP+7</title></rect>
+<rect x="835.0" y="1239.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1740: AND (220000</title></rect>
+<rect x="1153.0" y="1239.0" width="474.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1740: /TO ALLOW FOR BLOCK DATA</title></rect>
+<rect x="835.0" y="1271.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1741: SAD (220000</title></rect>
+<rect x="835.0" y="1303.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1742: JMS GBD</title></rect>
+<rect x="834.0" y="1336.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1743: SAD (020000</title></rect>
+<rect x="1153.0" y="1337.0" width="573.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1743: /TO ALLOW FOR DEAD BLOCK DATA</title></rect>
+<rect x="833.0" y="1371.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1744: JMS GBD1</title></rect>
+<rect x="835.0" y="1405.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1745: RAL</title></rect>
+<rect x="834.0" y="1437.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1746: SMA</title></rect>
+<rect x="833.0" y="1471.0" width="151.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1747: JMP .+11</title></rect>
+<rect x="1153.0" y="1471.0" width="474.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1747: /JUMP FIRST GARBAGE ITEM</title></rect>
+<rect x="833.0" y="1504.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1748: LAC I OP+7</title></rect>
+<rect x="833.0" y="1537.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1749: AND (577777</title></rect>
+<rect x="833.0" y="1571.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1750: DAC I OP+7</title></rect>
+<rect x="1152.0" y="1571.0" width="355.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1750: /RESTORE LIST ITEM</title></rect>
+<rect x="834.0" y="1605.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1751: ISZ OP+7</title></rect>
+<rect x="832.0" y="1639.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1752: LAC OP+7</title></rect>
+<rect x="1151.0" y="1641.0" width="314.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1752: /ADVANCE ADDRESS</title></rect>
+<rect x="833.0" y="1672.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1753: SAD END</title></rect>
+<rect x="832.0" y="1706.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1754: JMS ERRGB</title></rect>
+<rect x="1152.0" y="1707.0" width="534.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1754: /EXIT NO GARBAGE TO COLLECT</title></rect>
+<rect x="672.0" y="1741.0" width="108.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1755: GARB1,</title></rect>
+<rect x="833.0" y="1741.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1755: JMP .-20</title></rect>
+<rect x="1151.0" y="1743.0" width="94.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1755: /LOOP</title></rect>
+<rect x="831.0" y="1767.0" width="152.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1756: LAC OP+7</title></rect>
+<rect x="832.0" y="1806.0" width="153.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1757: DAC FREE</title></rect>
+<rect x="1151.0" y="1807.0" width="394.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1757: /START NEW FREE LIST</title></rect>
+<rect x="832.0" y="1841.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1758: DAC OP+10</title></rect>
+<rect x="831.0" y="1873.0" width="134.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1759: LAC END</title></rect>
+<rect x="832.0" y="1903.0" width="213.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1760: TAD (400000</title></rect>
+<rect x="832.0" y="1932.0" width="191.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1761: DAC I OP+7</title></rect>
+<rect x="1152.0" y="1943.0" width="413.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1761: /ATTACH TERMINAL WORD</title></rect>
+<rect x="832.0" y="1975.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1762: ISZ OP+7</title></rect>
+<rect x="831.0" y="2009.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1763: LAC OP+7</title></rect>
+<rect x="1151.0" y="2010.0" width="312.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1763: /ADVANCE ADDRESS</title></rect>
+<rect x="831.0" y="2042.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1764: SAD END</title></rect>
+<rect x="831.0" y="2075.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1765: JMP .+25</title></rect>
+<rect x="1150.0" y="2075.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1765: /EXIT</title></rect>
+<rect x="831.0" y="2098.0" width="192.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1766: LAC I OP+7</title></rect>
+<rect x="831.0" y="2143.0" width="211.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1767: AND (220000</title></rect>
+<rect x="1151.0" y="2144.0" width="470.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1767: /TO ALLOW FOR BLOCK DATA</title></rect>
+<rect x="831.0" y="2165.0" width="784.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1768: SAD (220000</title></rect>
+<rect x="829.0" y="2198.0" width="188.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1769: JMS GBD</title></rect>
+<rect x="831.0" y="2245.0" width="192.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1770: SAD (020000</title></rect>
+<rect x="1152.0" y="2245.0" width="569.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1770: /TO ALLOW FOR DEAD BLOCK DATA</title></rect>
+</svg>

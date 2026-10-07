@@ -58,18 +58,34 @@ tainted pages in progress; then the assembler round-trip: assemble `*.asm` under
 diff against `*.oct` — the 1972 assembler as referee. Full process, cost, and quality
 analysis: [`TRANSCRIPTION-REPORT.md`](TRANSCRIPTION-REPORT.md).
 
-## Next: geometric source map
+## Geometric source map (scanmap/)
 
-The next scan-pipeline product is not a second transcription. It is a map from each corrected
-listing line to the rectangle(s) containing that line on the original page, so selecting source
-can highlight paper and selecting paper can reveal source. The per-page PNGs and OCR outputs
-already exist. The Apple Vision witness script currently uses OCR positions to approximate
-columns but does not preserve full token rectangles. A low-cost OCR pass can retain each token's
-normalized bounding box; fuzzy alignment then matches its imperfect text to the authoritative
-listing, using page order, sequence numbers, addresses, and octal words as anchors. Keep the
-original image geometry and record any manual correction. OCR supplies coordinates, not truth:
-it must never silently replace or “correct” the transcription. This is a contained student
-project with a useful first milestone: one page, round-trip line-to-box and box-to-line.
+Every corrected listing line is linked to the rectangles of its label, statement and comment on
+the original page, so selecting source can highlight paper. OCR supplies coordinates, never text:
+the transcription stays the truth.
+
+    python3 scripts/scanmap.py symelec-listing.txt --offset 1 --out scanmap/symelec
+    python3 scripts/scanmap.py rsppix-listing.txt --offset 112 --out scanmap/rsppix
+
+- [`scripts/vision_boxes.swift`](scripts/vision_boxes.swift): Apple Vision OCR with a box per
+  word, whole page or a crop at a scale. Cached in `.build/` (ignored).
+- [`scripts/scanmap.py`](scripts/scanmap.py): anchors are OCR address tokens and sequence numbers
+  that read exactly as a listing line's; a robust pairwise line fit drops misreads (an octal word
+  read as an address). The lineprinter's fixed pitch then places every line, and each line band's
+  ink is cut into runs, merged until they match the transcription's segments. A rectangle is
+  `ink` (measured) or `predicted` (from the pitch, where ink and segments didn't line up). It also
+  records the paper edge and sprocket holes.
+- Output: `scanmap/<name>.json` (everything, normalized coordinates), `<name>-lines.json` (compact:
+  file line to pixel rectangles, what the cabinet loads), `<name>-overlays/page-NNN.svg` (green
+  measured, red predicted; open one next to `pages/`) and `<name>-REPORT.md`.
+- Coverage (7 Oct): SYMELEC 6,263 segments measured, 94 predicted (98.5%); RSPPIX 941 and 7
+  (99.3%). Not mapped: SYMELEC listing pages 7 and 73 (next to blank), 86 (two anchors) and the
+  symbol table, 108–110; RSPPIX page 15, its symbol table.
+
+The cabinet's SYMELEC source maps carry the rectangles: the listing's lines by file line, the
+Cambridge and as7 lines through the address they share (`attachScan` in
+[`source.ts`](../../../../packages/cabinet/src/source.ts)). The memory panel's source view shows
+the PC's or focused line outlined on its page.
 
 Cabinet's corresponding TODO is the
 [skewmorphic lineprinter viewer](../../../../packages/cabinet/TODO.md).

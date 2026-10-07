@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-005.png" width="3307" height="2338"/>
+<rect x="1221" y="216" width="1681" height="1999" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="643.5" cy="9.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="488.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="790.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.5" cy="889.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.5" cy="988.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="1090.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="1189.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.5" cy="1287.5" r="16.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.0" cy="1386.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.0" cy="1584.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1687.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="1781.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1383.0" y="234.0" width="230.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 185: VEC 0 17</title></rect>
+<rect x="1384.0" y="267.0" width="231.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 186: VEC ON 0 -36</title></rect>
+<rect x="1384.0" y="300.0" width="210.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 187: VEC 20 0</title></rect>
+<rect x="1385.0" y="333.0" width="210.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 188: VEC ON 0 36</title></rect>
+<rect x="1385.0" y="366.0" width="270.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 189: VEC 0 -17</title></rect>
+<rect x="1385.0" y="398.0" width="272.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 190: VEC ES ON 30 0</title></rect>
+<rect x="1385.0" y="431.0" width="150.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 191: PAR SB</title></rect>
+<rect x="1386.0" y="464.0" width="151.0" height="15.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 192: DJP SB 4</title></rect>
+<rect x="1387.0" y="562.0" width="32.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 195: 34</title></rect>
+<rect x="1388.0" y="595.0" width="110.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 196: 34</title></rect>
+<rect x="1229.0" y="628.0" width="311.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 197: IND0,</title></rect>
+<rect x="2669.0" y="653.0" width="1.0" height="2.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 197: DDS VE 4</title></rect>
+<rect x="1389.0" y="661.0" width="212.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 198: VEC ON 10 0</title></rect>
+<rect x="1389.0" y="693.0" width="212.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 199: VEC ON 4 14</title></rect>
+<rect x="1389.0" y="726.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 200: VEC ON 4 4</title></rect>
+<rect x="1390.0" y="759.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 201: VEC ON 6 0</title></rect>
+<rect x="1390.0" y="792.0" width="212.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 202: VEC ON 4 -4</title></rect>
+<rect x="1391.0" y="825.0" width="232.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 203: VEC ON 4 -14</title></rect>
+<rect x="1391.0" y="857.0" width="626.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 204: VEC ON -2 -12</title></rect>
+<rect x="1391.0" y="890.0" width="1512.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 205: VEC ON -4 0</title></rect>
+<rect x="1392.0" y="923.0" width="231.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 206: VEC ON -4 12</title></rect>
+<rect x="1392.0" y="957.0" width="233.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 207: VEC ON 10 20</title></rect>
+<rect x="1393.0" y="989.0" width="211.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 208: VEC ON 10 0</title></rect>
+<rect x="1393.0" y="1021.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 209: VEC ON 4 -4</title></rect>
+<rect x="1393.0" y="1055.0" width="232.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 210: VEC ON 4 -14</title></rect>
+<rect x="1394.0" y="1087.0" width="252.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 211: VEC ON -2 -12</title></rect>
+<rect x="1395.0" y="1121.0" width="212.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 212: VEC ON -4 0</title></rect>
+<rect x="1395.0" y="1155.0" width="232.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 213: VEC ON -4 12</title></rect>
+<rect x="1395.0" y="1189.0" width="234.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 214: VEC ON 10 20</title></rect>
+<rect x="1396.0" y="1223.0" width="213.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 215: VEC ON 10 0</title></rect>
+<rect x="1397.0" y="1257.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 216: VEC ON 4 -4</title></rect>
+<rect x="1397.0" y="1289.0" width="232.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 217: VEC ON 4 -14</title></rect>
+<rect x="1397.0" y="1321.0" width="252.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 218: VEC ON -2 -12</title></rect>
+<rect x="1397.0" y="1353.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 219: VEC ON -4 0</title></rect>
+<rect x="1399.0" y="1387.0" width="210.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 220: VEC ON -2 6</title></rect>
+<rect x="1399.0" y="1420.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 221: VEC ON 2 4</title></rect>
+<rect x="1399.0" y="1453.0" width="273.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 222: VEC ES ON 14 0</title></rect>
+<rect x="1399.0" y="1487.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 223: PAR SB</title></rect>
+<rect x="979.0" y="1513.0" width="573.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 224: {handwritten: solid black ink mark in left margin beside rows 213-214}</title></rect>
+<rect x="1121.0" y="1546.0" width="45.0" height="3.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 225: DJP SB 4</title></rect>
+<rect x="1401.0" y="1644.0" width="32.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 228: 7</title></rect>
+<rect x="1242.0" y="1677.0" width="312.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 229: 64</title></rect>
+<rect x="1242.0" y="1710.0" width="88.0" height="8.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 230: SWI0,</title></rect>
+<rect x="1403.0" y="1710.0" width="212.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 230: DDS VE 4</title></rect>
+<rect x="1403.0" y="1743.0" width="1182.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 231: VEC ON 22 0</title></rect>
+<rect x="1403.0" y="1775.0" width="209.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 232: VEC ON 34 15</title></rect>
+<rect x="1404.0" y="1808.0" width="273.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 233: VEC 0 -15</title></rect>
+<rect x="1404.0" y="1841.0" width="267.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 234: VEC ES ON 22 0</title></rect>
+<rect x="1404.0" y="1874.0" width="152.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 235: PAR SB</title></rect>
+<rect x="1409.0" y="1907.0" width="1295.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 236: DJP SB 4</title></rect>
+<rect x="1407.0" y="2070.0" width="30.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 241: 23</title></rect>
+<rect x="1247.0" y="2103.0" width="310.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 242: 44</title></rect>
+<rect x="1249.0" y="2136.0" width="86.0" height="16.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 243: VOL0,</title></rect>
+<rect x="1407.0" y="2136.0" width="152.0" height="8.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 243: DDS VE 4</title></rect>
+</svg>

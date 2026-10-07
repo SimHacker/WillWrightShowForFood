@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-038.png" width="3307" height="2338"/>
+<rect x="674" y="312" width="1800" height="1994" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="52.5" cy="397.0" r="27.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="433.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.5" cy="488.0" r="23.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="728.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.0" cy="783.5" r="39.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="19.5" cy="951.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="19.0" cy="1130.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.5" cy="1187.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="19.0" cy="1235.5" r="19.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.0" cy="1301.0" r="25.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1384.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="18.5" cy="1433.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.0" cy="1490.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="78.0" cy="1620.5" r="44.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.0" cy="1687.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.5" cy="1787.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.5" cy="1888.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.5" cy="1986.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.0" cy="2085.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.5" cy="2185.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.0" cy="2286.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="854.0" y="332.0" width="133.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2074: JMP GR2</title></rect>
+<rect x="695.0" y="399.0" width="128.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2076: LKTEST,</title></rect>
+<rect x="1015.0" y="400.0" width="163.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2076: 0</title></rect>
+<rect x="1335.0" y="398.0" width="534.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2076: /TEST IF ROOM ON LINK STACK</title></rect>
+<rect x="855.0" y="433.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2077: ISZ LINK</title></rect>
+<rect x="855.0" y="467.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2078: LAC LINK</title></rect>
+<rect x="855.0" y="500.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2079: SAD LKEND</title></rect>
+<rect x="857.0" y="533.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2080: JMS ERR</title></rect>
+<rect x="695.0" y="565.0" width="108.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2081: LKERR,</title></rect>
+<rect x="856.0" y="564.0" width="232.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2081: JMP I LKTEST</title></rect>
+<rect x="695.0" y="733.0" width="792.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2086: /RSP ROUTINES FOR USE WITHOUT QUALIFIERS</title></rect>
+<rect x="695.0" y="835.0" width="228.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2089: ADDW = JMS .</title></rect>
+<rect x="853.0" y="871.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2090: 0</title></rect>
+<rect x="1173.0" y="867.0" width="375.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2090: /ADDWORD IN ELEMENT</title></rect>
+<rect x="854.0" y="901.0" width="151.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2091: DAC OP+2</title></rect>
+<rect x="854.0" y="933.0" width="92.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2092: FINDN</title></rect>
+<rect x="853.0" y="967.0" width="54.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2093: CDR</title></rect>
+<rect x="853.0" y="1002.0" width="149.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2094: LAC OP+1</title></rect>
+<rect x="1173.0" y="1001.0" width="255.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2094: /HEAD POINTER</title></rect>
+<rect x="853.0" y="1035.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2095: DAC OP+3</title></rect>
+<rect x="1173.0" y="1033.0" width="94.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2095: /HEAD</title></rect>
+<rect x="853.0" y="1066.0" width="114.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2096: LAW EL</title></rect>
+<rect x="853.0" y="1099.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2097: GETSP</title></rect>
+<rect x="1173.0" y="1099.0" width="354.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2097: /FOR NEW RING ITEM</title></rect>
+<rect x="853.0" y="1133.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2098: LAC I OP 3</title></rect>
+<rect x="853.0" y="1166.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2099: XOR (500000</title></rect>
+<rect x="853.0" y="1201.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2100: DAC I OP 6</title></rect>
+<rect x="1173.0" y="1201.0" width="413.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2100: /CHAIN TO TOP OF HEAD</title></rect>
+<rect x="853.0" y="1235.0" width="150.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2101: LAC OP 1</title></rect>
+<rect x="853.0" y="1268.0" width="191.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2102: DAC I OP 3</title></rect>
+<rect x="1172.0" y="1267.0" width="374.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2102: /RESET HEAD POINTER</title></rect>
+<rect x="853.0" y="1302.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2103: DAC I OP 2</title></rect>
+<rect x="1172.0" y="1301.0" width="333.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2103: /NAME ON NEW WORD</title></rect>
+<rect x="853.0" y="1334.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2104: TAD (DAC</title></rect>
+<rect x="853.0" y="1368.0" width="153.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2105: DAC I EL</title></rect>
+<rect x="1173.0" y="1367.0" width="292.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2105: /FORM NULL RING</title></rect>
+<rect x="853.0" y="1399.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2106: LAC OP+2</title></rect>
+<rect x="852.0" y="1433.0" width="273.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2107: JMP I ADDW-JMS</title></rect>
+<rect x="692.0" y="1600.0" width="1778.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2112: DSON = JMS .</title></rect>
+<rect x="851.0" y="1636.0" width="12.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2113: 0</title></rect>
+<rect x="1170.0" y="1633.0" width="354.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2113: /DELETE A SON RING</title></rect>
+<rect x="851.0" y="1665.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2114: DAC OP+4</title></rect>
+<rect x="851.0" y="1699.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2115: FINDS</title></rect>
+<rect x="1171.0" y="1699.0" width="454.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2115: /IN CASE OF WRONG ENTRY</title></rect>
+<rect x="851.0" y="1733.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2116: LAW GRRB</title></rect>
+<rect x="851.0" y="1769.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2117: ENTER</title></rect>
+<rect x="851.0" y="1801.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2118: LAC OP 4</title></rect>
+<rect x="851.0" y="1836.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2119: LAW . 3</title></rect>
+<rect x="851.0" y="1859.0" width="93.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2120: ENTER</title></rect>
+<rect x="1171.0" y="1868.0" width="454.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2120: /DO ALSO FOR RING-START</title></rect>
+<rect x="851.0" y="1903.0" width="192.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2121: AND I DSON</title></rect>
+<rect x="851.0" y="1935.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2122: LAC OP+4</title></rect>
+<rect x="850.0" y="1970.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2123: POP</title></rect>
+<rect x="850.0" y="2002.0" width="73.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2124: EXIT</title></rect>
+<rect x="690.0" y="2103.0" width="229.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2127: DELB = JMS .</title></rect>
+<rect x="849.0" y="2125.0" width="70.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2128: 0</title></rect>
+<rect x="1171.0" y="2137.0" width="653.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2128: /DELETE ELEMENT FROM BROTHER RING</title></rect>
+<rect x="851.0" y="2158.0" width="151.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2129: JMS OP-5</title></rect>
+<rect x="850.0" y="2203.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2130: DAC OP+3</title></rect>
+<rect x="849.0" y="2225.0" width="268.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2131: LAC I OP+1</title></rect>
+</svg>

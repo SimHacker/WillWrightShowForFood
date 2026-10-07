@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-016.png" width="3307" height="2338"/>
+<rect x="672" y="315" width="1787" height="1998" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="66.0" cy="194.0" r="17.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="291.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="390.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="491.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="591.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="689.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="790.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="67.0" cy="891.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="991.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="1090.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1190.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1289.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="1388.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="68.0" cy="1488.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="1587.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="74.0" cy="1637.0" r="30.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="1687.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="1787.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1887.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1986.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="2086.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="2187.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="2287.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="841.0" y="339.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 775: DAC I 10</title></rect>
+<rect x="841.0" y="371.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 776: LAC 10</title></rect>
+<rect x="842.0" y="403.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 777: DAC ELAD</title></rect>
+<rect x="1161.0" y="400.0" width="494.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 777: /START ADDRESS OF ELEMENT</title></rect>
+<rect x="841.0" y="436.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 778: LAC CON</title></rect>
+<rect x="841.0" y="468.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 779: CMA</title></rect>
+<rect x="841.0" y="501.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 780: TAD (1</title></rect>
+<rect x="842.0" y="535.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 781: DAC COUNT</title></rect>
+<rect x="843.0" y="569.0" width="589.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 782: JMS TURNVE</title></rect>
+<rect x="842.0" y="601.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 783: LAC 10</title></rect>
+<rect x="843.0" y="636.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 784: DAC SCRPAD</title></rect>
+<rect x="843.0" y="670.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 785: JMP INEL</title></rect>
+<rect x="682.0" y="734.0" width="128.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 787: SHRINK,</title></rect>
+<rect x="1002.0" y="737.0" width="41.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 787: 0</title></rect>
+<rect x="842.0" y="768.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 788: LAC TEMP</title></rect>
+<rect x="843.0" y="801.0" width="191.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 789: AND (77577</title></rect>
+<rect x="1161.0" y="800.0" width="414.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 789: /ELIMINATE MINUS BITS</title></rect>
+<rect x="843.0" y="836.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 790: TAD (401</title></rect>
+<rect x="1162.0" y="833.0" width="554.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 790: /COMPENSATE FOR LOOSING BITS</title></rect>
+<rect x="843.0" y="870.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 791: RAR</title></rect>
+<rect x="843.0" y="902.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 792: AND (77577</title></rect>
+<rect x="1163.0" y="900.0" width="574.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 792: /ELIMINATE SHIFTED MINUS BITS</title></rect>
+<rect x="843.0" y="933.0" width="170.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 793: DAC TEMP1</title></rect>
+<rect x="843.0" y="967.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 794: LAC TEMP</title></rect>
+<rect x="843.0" y="1001.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 795: AND (700200</title></rect>
+<rect x="1162.0" y="1000.0" width="415.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 795: /PICK UP SIGN OF WORD</title></rect>
+<rect x="843.0" y="1035.0" width="170.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 796: TAD TEMP1</title></rect>
+<rect x="843.0" y="1069.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 797: DAC TEMP</title></rect>
+<rect x="843.0" y="1103.0" width="233.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 798: JMP I SHRINK</title></rect>
+<rect x="683.0" y="1169.0" width="128.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 800: TURNVE,</title></rect>
+<rect x="1003.0" y="1171.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 800: 0</title></rect>
+<rect x="1323.0" y="1166.0" width="474.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 800: /TURN 90, 180 OR 270 DEG</title></rect>
+<rect x="844.0" y="1205.0" width="131.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 801: JMP . + 4</title></rect>
+<rect x="1323.0" y="1201.0" width="314.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 801: /START OF NEW DF</title></rect>
+<rect x="843.0" y="1237.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 802: LAC ELAD</title></rect>
+<rect x="843.0" y="1268.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 803: DAC 10</title></rect>
+<rect x="843.0" y="1303.0" width="110.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 804: DAC 11</title></rect>
+<rect x="843.0" y="1370.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 806: LAC I 11</title></rect>
+<rect x="844.0" y="1403.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 807: DAC WORD</title></rect>
+<rect x="843.0" y="1437.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 808: SAD (PAR SB</title></rect>
+<rect x="843.0" y="1469.0" width="151.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 809: JMP . 21</title></rect>
+<rect x="845.0" y="1501.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 810: AND (600000</title></rect>
+<rect x="1164.0" y="1500.0" width="373.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 810: /SAVE ES BIT AND IN</title></rect>
+<rect x="844.0" y="1535.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 811: DAC TEMP</title></rect>
+<rect x="843.0" y="1568.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 812: LAC WORD</title></rect>
+<rect x="843.0" y="1603.0" width="154.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 813: XOR (200</title></rect>
+<rect x="1163.0" y="1600.0" width="233.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 813: /CHANGE SIGN</title></rect>
+<rect x="843.0" y="1638.0" width="575.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 814: CLL</title></rect>
+<rect x="844.0" y="1669.0" width="113.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 815: ALS 10</title></rect>
+<rect x="844.0" y="1705.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 816: AND (177400</title></rect>
+<rect x="1163.0" y="1703.0" width="314.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 816: /+-X BECOMES -+Y</title></rect>
+<rect x="845.0" y="1739.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 817: TAD TEMP</title></rect>
+<rect x="844.0" y="1771.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 818: DAC TEMP</title></rect>
+<rect x="845.0" y="1803.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 819: LAC WORD</title></rect>
+<rect x="845.0" y="1837.0" width="112.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 820: LRS 10</title></rect>
+<rect x="845.0" y="1869.0" width="151.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 821: AND (377</title></rect>
+<rect x="1164.0" y="1867.0" width="233.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 821: /Y BECOMES X</title></rect>
+<rect x="846.0" y="1905.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 822: TAD TEMP</title></rect>
+<rect x="845.0" y="1939.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 823: DAC I 10</title></rect>
+<rect x="845.0" y="1971.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 824: JMS CALDEF</title></rect>
+<rect x="1165.0" y="1967.0" width="533.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 824: /RESULT ONLY USED IN RROTAT</title></rect>
+<rect x="846.0" y="2003.0" width="231.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 825: JMP TURNVE 5</title></rect>
+<rect x="1165.0" y="2000.0" width="308.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 825: /TAKE NEXT WORD</title></rect>
+<rect x="845.0" y="2071.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 827: LAC (160000</title></rect>
+<rect x="845.0" y="2105.0" width="153.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 828: DAC I 10</title></rect>
+<rect x="844.0" y="2138.0" width="253.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 829: LAC (DJP SB 4</title></rect>
+<rect x="845.0" y="2173.0" width="154.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 830: DAC I 10</title></rect>
+<rect x="846.0" y="2239.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 832: ISZ COUNT</title></rect>
+<rect x="1165.0" y="2237.0" width="494.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 832: /IF COUNT=777776 TURN 180</title></rect>
+</svg>

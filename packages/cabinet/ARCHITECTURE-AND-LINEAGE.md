@@ -209,7 +209,16 @@ So a TypeScript program can fill it and *be* the processor. It drives the cabine
 directly through their native APIs (pulses to the 340, characters to the teletype, words into core
 for the display to fetch) with no guest code and no instruction decoding between the intent and
 the device. This is what emulators call high-level emulation (HLE), done on purpose: UltraHLE
-and console BIOS HLE replace guest code with native host routines. Uses:
+and console BIOS HLE replace guest code with native host routines.
+
+**The cabinet already has one: [tiny-titan](TINY-TITAN.md).** Titan, the Atlas 2 at the other end
+of Wiseman's link, is not emulated at all. There are no 48-bit words, no extracodes, no
+supervisor. It's one TypeScript file that answers the PDP-7's link IOTs and plays the Titan side
+of the `/LTPIX` session (`BlockletHost`), so SYMELEC's unmodified `LTPX` runs against it.
+"Emulate the conversation, not the computer" is the native CPU rule, and tiny-titan is a whole
+mainframe done that way. Today it is wired as a `Device`; under [CPUs are devices](#cpus-are-devices)
+it is a processor whose program is TypeScript, and if an Atlas 2 emulator ever exists it docks
+behind `TitanPort` without the PDP-7 noticing. Uses:
 
 - **Bespoke CPUs**: a special-purpose machine that never existed, built for one job. The Turing
   machine row above is one; a cellular-automaton stepper is another.
@@ -266,7 +275,11 @@ calls its `step()` first and that it masters the IOT bus.
 So the general rule is the one the 340 already follows:
 
 - **A unit** is anything with state that advances on the clock: `tick(cycles)`, `reset()`, and
-  optionally `irq()`.
+  optionally `irq()`. **Every unit has a power switch** (`power: boolean`, settable by the user, by
+  a script, or by the unit itself). Off, the backplane skips its `tick`, ignores its `irq`, and
+  routes no requests to it; switching it on calls `reset()`. Minsky's Ultimate Machine, a unit
+  whose only act is to switch itself off, is the minimal test
+  ([PORTRAIT.md](PORTRAIT.md#minskys-ultimate-machine)).
 - **A processor** is a unit with a program: a PC, an instruction stream it fetches from some
   memory, a disassembler, and source maps. The PDP-7, the 340, a Turing machine and a MIX are
   processors. So is a native CPU, whose "program" is TypeScript.

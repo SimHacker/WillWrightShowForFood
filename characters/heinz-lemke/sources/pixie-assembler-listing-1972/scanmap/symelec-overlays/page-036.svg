@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-036.png" width="3307" height="2338"/>
+<rect x="668" y="316" width="1796" height="1996" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="49.0" cy="190.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="292.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="388.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="489.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="590.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="691.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="789.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="890.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="987.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="1090.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="1188.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.5" cy="1288.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="1387.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.5" cy="1486.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1587.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="107.0" cy="1635.0" r="30.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1687.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="1786.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1887.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="1987.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="2085.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="2186.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="2284.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="844.0" y="336.0" width="131.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1954: JMP . 3</title></rect>
+<rect x="1163.0" y="337.0" width="414.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1954: /POINTER ON RINGSTART</title></rect>
+<rect x="843.0" y="371.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1955: LAC I OP+1</title></rect>
+<rect x="844.0" y="404.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1956: JMP OP-2</title></rect>
+<rect x="1163.0" y="405.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1956: /LOOP</title></rect>
+<rect x="843.0" y="437.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1957: LAC OP</title></rect>
+<rect x="843.0" y="469.0" width="293.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1958: JMP I FINDS-JMS</title></rect>
+<rect x="1483.0" y="469.0" width="94.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1958: /EXIT</title></rect>
+<rect x="683.0" y="604.0" width="249.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1962: FINDN = JMS .</title></rect>
+<rect x="843.0" y="640.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1963: 0</title></rect>
+<rect x="1162.0" y="637.0" width="415.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1963: /FIND NAME OF ELEMENT</title></rect>
+<rect x="844.0" y="671.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1964: JMS OP-5</title></rect>
+<rect x="843.0" y="704.0" width="191.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1965: LAC I OP+1</title></rect>
+<rect x="843.0" y="736.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1966: AND (500000</title></rect>
+<rect x="1163.0" y="735.0" width="252.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1966: /TEST IF ATOM</title></rect>
+<rect x="843.0" y="771.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1967: SNA</title></rect>
+<rect x="842.0" y="805.0" width="133.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1968: JMP . 4</title></rect>
+<rect x="843.0" y="839.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1969: LAC OP</title></rect>
+<rect x="842.0" y="871.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1970: CDR</title></rect>
+<rect x="1162.0" y="871.0" width="95.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1970: /NEXT</title></rect>
+<rect x="843.0" y="905.0" width="132.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1971: JMP .-6</title></rect>
+<rect x="1163.0" y="905.0" width="94.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1971: /LOOP</title></rect>
+<rect x="843.0" y="939.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1972: LAC OP</title></rect>
+<rect x="842.0" y="971.0" width="294.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1973: JMP I FINDN-JMS</title></rect>
+<rect x="1482.0" y="971.0" width="95.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1973: /EXIT</title></rect>
+<rect x="682.0" y="1169.0" width="333.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1979: FINDP=JMS, 0</title></rect>
+<rect x="1161.0" y="1168.0" width="676.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1979: / MOVE TO TOP OF HEAD IF ON ATNAME</title></rect>
+<rect x="841.0" y="1203.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1980: JMS OP-5</title></rect>
+<rect x="841.0" y="1237.0" width="214.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1981: LAC (100000</title></rect>
+<rect x="842.0" y="1269.0" width="190.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1982: AND I OP+1</title></rect>
+<rect x="842.0" y="1303.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1983: SNA</title></rect>
+<rect x="842.0" y="1336.0" width="131.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1984: JMP .+3</title></rect>
+<rect x="1161.0" y="1336.0" width="214.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1984: / IF ATNAME</title></rect>
+<rect x="841.0" y="1371.0" width="114.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1985: LAC OP</title></rect>
+<rect x="843.0" y="1403.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1986: AND I FINDP</title></rect>
+<rect x="842.0" y="1438.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1987: LAC OP</title></rect>
+<rect x="842.0" y="1469.0" width="1377.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1988: CDR</title></rect>
+<rect x="842.0" y="1504.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1989: CAR</title></rect>
+<rect x="842.0" y="1535.0" width="213.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1990: AND I FINDP</title></rect>
+<rect x="681.0" y="1635.0" width="1211.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1993: / GO ROUND HEAD FINDING NEXT ADDRESS AFTER APPLYING FUNCTION.</title></rect>
+<rect x="681.0" y="1669.0" width="1371.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1994: / MOVE X TO NEXT ITEM IN HEAD AND IF RS EXECUTE F1, IF RP EXECUTE F2.</title></rect>
+<rect x="681.0" y="1702.0" width="952.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1995: / CALL BY LAW GRHA; ENTER; LAW X; LAW F1; LAW F2</title></rect>
+<rect x="681.0" y="1771.0" width="88.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1997: GRHA,</title></rect>
+<rect x="842.0" y="1770.0" width="292.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1997: XCT I ENTER-JMS</title></rect>
+<rect x="1321.0" y="1768.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1997: / PICK UP X</title></rect>
+<rect x="840.0" y="1804.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1998: JMS OP-5</title></rect>
+<rect x="841.0" y="1838.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1999: DAC OP+3</title></rect>
+<rect x="1160.0" y="1835.0" width="374.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1999: / GET CONTENTS OF X</title></rect>
+<rect x="841.0" y="1873.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2000: LAC I OP+3</title></rect>
+<rect x="842.0" y="1908.0" width="211.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2001: AND (100000</title></rect>
+<rect x="841.0" y="1941.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2002: SNA</title></rect>
+<rect x="841.0" y="1975.0" width="131.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2003: JMP .+6</title></rect>
+<rect x="1161.0" y="1975.0" width="273.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2003: / IF ON ATNAME</title></rect>
+<rect x="841.0" y="1998.0" width="112.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2004: LAC OP</title></rect>
+<rect x="679.0" y="2042.0" width="69.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2005: GR1,</title></rect>
+<rect x="840.0" y="2041.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2005: CDR</title></rect>
+<rect x="742.0" y="2065.0" width="249.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2006: LAC OP+1</title></rect>
+<rect x="840.0" y="2107.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2007: SAD OP+3</title></rect>
+<rect x="841.0" y="2139.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2008: EXIT</title></rect>
+<rect x="1159.0" y="2138.0" width="535.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2008: / IF BACK TO STARTING-POINT</title></rect>
+<rect x="840.0" y="2174.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2009: LAC OP</title></rect>
+<rect x="841.0" y="2208.0" width="92.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2010: FINDP</title></rect>
+<rect x="840.0" y="2241.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2011: LAC OP+1</title></rect>
+</svg>

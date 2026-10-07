@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-029.png" width="3307" height="2338"/>
+<rect x="1222" y="187" width="1785" height="1993" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="612.5" cy="63.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="162.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="261.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="361.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="461.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="562.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="661.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="761.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="859.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="959.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1057.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1157.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1258.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1356.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1456.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="653.0" cy="1512.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1556.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1657.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1756.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1856.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1956.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="2056.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="2158.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1387.0" y="208.0" width="311.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1533: CAR 7</title></rect>
+<rect x="1387.0" y="241.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1534: DAC I OP</title></rect>
+<rect x="1707.0" y="241.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1534: /MOVE NAME</title></rect>
+<rect x="1387.0" y="273.0" width="384.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1535: LAC OP</title></rect>
+<rect x="1388.0" y="306.0" width="251.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1536: JMP I CAR-JMS</title></rect>
+<rect x="1387.0" y="375.0" width="12.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1538: 0</title></rect>
+<rect x="1707.0" y="371.0" width="994.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1538: /SET OP+1 WITH ADDRESS FROM AC AND MS 5 BITS 00100</title></rect>
+<rect x="1389.0" y="407.0" width="190.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1539: AND (17777</title></rect>
+<rect x="1867.0" y="405.0" width="834.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1539: / AND MOVE TO NEXT ITEM IF NONITEM</title></rect>
+<rect x="1387.0" y="439.0" width="153.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1540: TAD (JMS</title></rect>
+<rect x="1387.0" y="473.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1541: DAC OP+1</title></rect>
+<rect x="1387.0" y="505.0" width="190.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1542: LAC I OP+1</title></rect>
+<rect x="1387.0" y="539.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1543: SPA</title></rect>
+<rect x="1387.0" y="571.0" width="132.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1544: JMP .-5</title></rect>
+<rect x="1614.0" y="571.0" width="548.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1544: /DO AGAIN IF ON NONITEM</title></rect>
+<rect x="1387.0" y="606.0" width="150.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1545: LAC OP+1</title></rect>
+<rect x="1707.0" y="605.0" width="234.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1545: /PRESERVE AC</title></rect>
+<rect x="1388.0" y="639.0" width="211.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1546: AND I CAR 7</title></rect>
+<rect x="1227.0" y="742.0" width="229.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1549: PUSH = JMS .</title></rect>
+<rect x="1387.0" y="777.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1550: 0</title></rect>
+<rect x="1707.0" y="771.0" width="394.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1550: /PUSH DOWN (LISTNAME</title></rect>
+<rect x="1388.0" y="806.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1551: JMS OP-5</title></rect>
+<rect x="1387.0" y="840.0" width="1254.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1552: TAD (1</title></rect>
+<rect x="1388.0" y="871.0" width="130.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1553: DAC EL1</title></rect>
+<rect x="1707.0" y="870.0" width="974.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1553: /PREVENT TAIL BEING SWEPT UP IF GARBAGE COLLECTED</title></rect>
+<rect x="1387.0" y="907.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1554: LAC I OP+1</title></rect>
+<rect x="1388.0" y="941.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1555: DAC OP+2</title></rect>
+<rect x="1707.0" y="939.0" width="193.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1555: /SAVE ITEM</title></rect>
+<rect x="1388.0" y="973.0" width="73.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1556: FLST</title></rect>
+<rect x="1707.0" y="970.0" width="474.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1556: /MAKE SPACE FOR NEW ITEM</title></rect>
+<rect x="1387.0" y="1006.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1557: LAC OP+2</title></rect>
+<rect x="1388.0" y="1039.0" width="190.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1558: DAC I OP+1</title></rect>
+<rect x="1387.0" y="1072.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1559: LAC OP+1</title></rect>
+<rect x="1388.0" y="1105.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1560: DAC I OP</title></rect>
+<rect x="1389.0" y="1139.0" width="149.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1561: ISZ OP+1</title></rect>
+<rect x="1389.0" y="1174.0" width="72.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1562: FLST</title></rect>
+<rect x="1708.0" y="1171.0" width="313.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1562: /MAKE MORE SPACE</title></rect>
+<rect x="1388.0" y="1207.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1563: LAC OP+2</title></rect>
+<rect x="1388.0" y="1240.0" width="190.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1564: DAC I OP+1</title></rect>
+<rect x="1708.0" y="1238.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1564: /COPY ITEM</title></rect>
+<rect x="1388.0" y="1275.0" width="130.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1565: LAC EL1</title></rect>
+<rect x="1388.0" y="1307.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1566: XOR (500000</title></rect>
+<rect x="1387.0" y="1338.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1567: DAC I OP+6</title></rect>
+<rect x="1707.0" y="1337.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1567: /JOIN UP</title></rect>
+<rect x="1388.0" y="1373.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1568: LAC OP</title></rect>
+<rect x="1387.0" y="1405.0" width="274.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1569: JMP I PUSH-JMS</title></rect>
+<rect x="1228.0" y="1508.0" width="209.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1572: POP = JMS .</title></rect>
+<rect x="1388.0" y="1542.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1573: 0</title></rect>
+<rect x="1708.0" y="1535.0" width="353.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1573: /POP UP (LIST NAME</title></rect>
+<rect x="1389.0" y="1571.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1574: DAC OP</title></rect>
+<rect x="1387.0" y="1603.0" width="154.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1575: LAC I OP</title></rect>
+<rect x="1388.0" y="1637.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1576: DAC OP+2</title></rect>
+<rect x="1707.0" y="1635.0" width="194.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1576: /SAVE NAME</title></rect>
+<rect x="1388.0" y="1673.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1577: LAC OP</title></rect>
+<rect x="1387.0" y="1706.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1578: CDR</title></rect>
+<rect x="1388.0" y="1739.0" width="150.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1579: LAC OP+1</title></rect>
+<rect x="1388.0" y="1773.0" width="213.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1580: XOR (500000</title></rect>
+<rect x="1388.0" y="1801.0" width="191.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1581: DAC I OP+2</title></rect>
+<rect x="1707.0" y="1805.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1581: /JOIN UP</title></rect>
+<rect x="1388.0" y="1839.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1582: LAC OP</title></rect>
+<rect x="1389.0" y="1871.0" width="252.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1583: JMP I POP-JMS</title></rect>
+<rect x="1228.0" y="1939.0" width="168.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1585: STAK-JMS, 0</title></rect>
+<rect x="1547.0" y="1939.0" width="494.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1585: /OPERAND TO STACK</title></rect>
+<rect x="1389.0" y="1975.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1586: AND (17777</title></rect>
+<rect x="1389.0" y="2009.0" width="150.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1587: DAC OP+3</title></rect>
+<rect x="1389.0" y="2041.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1588: ISZ LOP</title></rect>
+<rect x="1388.0" y="2074.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1589: LAC LOP</title></rect>
+<rect x="1389.0" y="2105.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1590: SAD LKBEG</title></rect>
+</svg>

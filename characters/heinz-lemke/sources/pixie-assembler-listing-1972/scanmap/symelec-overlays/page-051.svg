@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-051.png" width="3307" height="2338"/>
+<rect x="1233" y="173" width="1760" height="2039" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="633.0" cy="1495.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="594.0" cy="2146.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1233.0" y="331.0" width="108.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2826: SAVINS,</title></rect>
+<rect x="1532.0" y="333.0" width="13.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2826: 0</title></rect>
+<rect x="1233.0" y="363.0" width="108.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2827: SAVSUB,</title></rect>
+<rect x="1532.0" y="365.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2827: 0</title></rect>
+<rect x="1233.0" y="396.0" width="87.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2828: CCOM1,</title></rect>
+<rect x="1372.0" y="397.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2828: 777777</title></rect>
+<rect x="1233.0" y="428.0" width="106.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2829: PRINT1,</title></rect>
+<rect x="1531.0" y="429.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2829: 260</title></rect>
+<rect x="1691.0" y="428.0" width="434.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2829: /FOR PRINTNAME OF INST</title></rect>
+<rect x="1233.0" y="462.0" width="107.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2830: PRINT2,</title></rect>
+<rect x="1531.0" y="465.0" width="54.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2830: 260</title></rect>
+<rect x="1371.0" y="497.0" width="52.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2831: 215</title></rect>
+<rect x="1371.0" y="562.0" width="108.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2833: COLON,</title></rect>
+<rect x="1531.0" y="564.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2833: 272</title></rect>
+<rect x="1233.0" y="595.0" width="26.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2834: CR,</title></rect>
+<rect x="1371.0" y="595.0" width="52.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2834: 215</title></rect>
+<rect x="1233.0" y="727.0" width="851.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2838: /MERGE WORKSPACE IN DOWNCOMPILER WITH STSTAK</title></rect>
+<rect x="1233.0" y="797.0" width="230.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2840: DEMP = STSTAK</title></rect>
+<rect x="1233.0" y="832.0" width="226.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2841: U2 = STSTAK 1</title></rect>
+<rect x="1233.0" y="865.0" width="229.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2842: V1 = STSTAK 2</title></rect>
+<rect x="1233.0" y="897.0" width="229.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2843: R1 = STSTAK 4</title></rect>
+<rect x="1233.0" y="929.0" width="248.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2844: YY1 = STSTAK 5</title></rect>
+<rect x="1233.0" y="963.0" width="248.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2845: YY2 = STSTAK 6</title></rect>
+<rect x="1233.0" y="996.0" width="228.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2846: DX = STSTAK 7</title></rect>
+<rect x="1233.0" y="1031.0" width="288.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2847: COUN = STSTAK 10</title></rect>
+<rect x="1233.0" y="1063.0" width="287.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2848: MRKY = STSTAK 11</title></rect>
+<rect x="1233.0" y="1096.0" width="308.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2849: GAMMA = STSTAK 12</title></rect>
+<rect x="1248.0" y="1128.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2850: U = STSTAK 13</title></rect>
+<rect x="1233.0" y="1163.0" width="288.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2851: BETA = STSTAK 14</title></rect>
+<rect x="1233.0" y="1195.0" width="268.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2852: TEM = STSTAK 15</title></rect>
+<rect x="1233.0" y="1229.0" width="308.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2853: XBEAM = STSTAK 16</title></rect>
+<rect x="1247.0" y="1263.0" width="214.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2854: X = STSTAK 20</title></rect>
+<rect x="1233.0" y="1299.0" width="244.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2855: T2 = STSTAK 21</title></rect>
+<rect x="1233.0" y="1331.0" width="247.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2856: V2 = STSTAK 22</title></rect>
+<rect x="1247.0" y="1363.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2857: L = STSTAK 23</title></rect>
+<rect x="1233.0" y="1397.0" width="307.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2858: STEST = STSTAK 25</title></rect>
+<rect x="1233.0" y="1430.0" width="266.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2859: EX1 = STSTAK 26</title></rect>
+<rect x="1233.0" y="1462.0" width="266.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2860: EX2 = STSTAK 27</title></rect>
+<rect x="1207.0" y="1496.0" width="292.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2861: {handwritten: solid black rectangular mark in left margin beside SEQ 677-678}</title></rect>
+<rect x="1233.0" y="1530.0" width="284.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2862: FIG = STSTAK 30</title></rect>
+<rect x="1233.0" y="1563.0" width="286.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2863: YBMC = STSTAK 31</title></rect>
+<rect x="1233.0" y="1597.0" width="286.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2864: MRKX = STSTAK 32</title></rect>
+<rect x="1233.0" y="1631.0" width="306.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2865: MKER = STSTAK 33</title></rect>
+<rect x="1233.0" y="1663.0" width="245.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2866: ALPHA = STSTAK 34</title></rect>
+<rect x="1233.0" y="1696.0" width="286.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2867: DF = STSTAK 36</title></rect>
+<rect x="1233.0" y="1729.0" width="642.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2868: LOPX = STSTAK 37</title></rect>
+<rect x="1233.0" y="1763.0" width="244.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2869: T3 = STSTAK 40</title></rect>
+<rect x="1245.0" y="1796.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2870: U1 = STSTAK 41</title></rect>
+<rect x="1233.0" y="1831.0" width="244.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2871: R = STSTAK 42</title></rect>
+<rect x="1233.0" y="1866.0" width="286.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2872: S1 = STSTAK 43</title></rect>
+<rect x="1233.0" y="1901.0" width="244.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2873: SUMB = STSTAK 44</title></rect>
+<rect x="1233.0" y="1934.0" width="284.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2874: DY = STSTAK 45</title></rect>
+<rect x="1233.0" y="1967.0" width="284.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2875: PONT = STSTAK 46</title></rect>
+<rect x="1244.0" y="1997.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2876: XBMC = STSTAK 47</title></rect>
+<rect x="1243.0" y="2031.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2877: Y = STSTAK 50</title></rect>
+<rect x="1233.0" y="2066.0" width="304.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2878: V = STSTAK 51</title></rect>
+<rect x="1233.0" y="2099.0" width="304.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2879: TEMP2 = STSTAK 52</title></rect>
+<rect x="1498.7" y="2131.5" width="449.4" height="29.3" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 2880: YBEAM = STSTAK 53</title></rect>
+</svg>

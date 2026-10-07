@@ -44,6 +44,24 @@ test("source: SYMELEC's listing, Cambridge and as7 maps agree on every assembled
 	assert.match(cam.meta.scanUrl?.(at[1]?.line?.page ?? 0) ?? "", /page-\d{3}\.png$/);
 });
 
+test("source: the scan map puts SYMELEC's lines on the scanned pages, in all three maps", () => {
+	const read = (f: string) => readFileSync(new URL(f, dir), "utf8");
+	const scanDir = new URL("../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/scanmap/", import.meta.url);
+	const scan = JSON.parse(readFileSync(new URL("symelec-lines.json", scanDir), "utf8"));
+	const maps = symelecSources({ listing: read("symelec-listing.txt"), cambridge: read("symelec.asm"), as7: read("symelec.s"), scan });
+	const [listing, cam, as7] = maps as [SourceMap, SourceMap, SourceMap];
+	const placed = [...listing.line.values()].filter((i) => listing.lines[i]?.scan).length;
+	assert.ok(placed > 4000, `${placed} assembled listing lines have rectangles`);
+	const at = linesAt(maps, 0o2627).map((x) => x.line?.scan);
+	assert.ok(at[0], "LAC BEG is on the scan");
+	assert.equal(at[1], at[0], "the Cambridge line reaches the same place through its address");
+	assert.equal(at[2], at[0], "and so does the as7 line");
+	const page = listing.lines[listing.line.get(0o2627) ?? -1]?.page ?? 0;
+	assert.match(at[0]?.url ?? "", new RegExp(`page-${String(page + 1).padStart(3, "0")}\\.png$`));
+	for (const r of at[0]?.rects ?? []) assert.ok(r.x > 0 && r.y > 0 && r.x + r.w <= (at[0]?.width ?? 0) && r.y + r.h <= (at[0]?.height ?? 0));
+	assert.ok(cam.lines.some((l) => l.scan) && as7.lines.some((l) => l.scan));
+});
+
 test("trace: the ring keeps the newest fetches, oldest first", () => {
 	const cpu = new Pdp7();
 	cpu.trace = new Trace(4);

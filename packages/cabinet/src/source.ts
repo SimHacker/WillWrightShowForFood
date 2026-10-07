@@ -36,7 +36,36 @@ export type SourceLine = {
 	line?: number;
 	/** Page of the original scan the line was printed on. */
 	page?: number;
+	/** Where on the scan, from a scan map (scripts/scanmap.py): the page image and the line's rectangles on it. */
+	scan?: ScanPlace;
 };
+
+/** A line's place on a scanned page, in the image's pixels, top-left origin. `ink`: measured, not predicted. */
+export type ScanRect = { x: number; y: number; w: number; h: number; ink: boolean };
+export type ScanPlace = { url: string; width: number; height: number; rects: ScanRect[] };
+
+/** scanmap.py's `<name>-lines.json`: listing file line -> rectangles `[x, y, w, h, ink]`. */
+export type ScanLines = { page_offset: number; pages: Record<string, [number, number]>; lines: Record<string, number[][]> };
+
+/**
+ * Put a scan map's rectangles on a listing map's lines (by file line), then on every other map's
+ * lines through the address they share: the source and the translation reach the scan through core.
+ */
+export function attachScan(listing: SourceMap, others: readonly SourceMap[], scan: ScanLines, url: (scanPage: number) => string): void {
+	for (const l of listing.lines) {
+		const rects = l.line === undefined ? undefined : scan.lines[String(l.line)];
+		const size = l.page === undefined ? undefined : scan.pages[String(l.page)];
+		if (!rects?.length || !size || l.page === undefined) continue;
+		l.scan = { url: url(l.page + scan.page_offset), width: size[0], height: size[1], rects: rects.map(([x = 0, y = 0, w = 0, h = 0, ink = 0]) => ({ x, y, w, h, ink: ink === 1 })) };
+	}
+	for (const m of others)
+		for (const l of m.lines) {
+			if (l.addr === null || l.scan) continue;
+			const i = listing.line.get(l.addr);
+			const place = i === undefined ? undefined : listing.lines[i]?.scan;
+			if (place) l.scan = place;
+		}
+}
 export type SourceMap = { meta: SourceMeta; lines: SourceLine[]; line: Map<number, number>; word: Map<number, number> };
 
 const DEFAULT_META: SourceMeta = { id: "source", label: "source", kind: "source" };

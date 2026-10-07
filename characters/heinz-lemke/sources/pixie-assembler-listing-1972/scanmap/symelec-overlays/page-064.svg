@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-064.png" width="3307" height="2338"/>
+<rect x="570" y="317" width="1889" height="1993" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="63.5" cy="191.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="290.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="388.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="489.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="590.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="690.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="790.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="889.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="989.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1088.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1187.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1287.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1387.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1488.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1588.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="102.0" cy="1635.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1686.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1787.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1888.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1988.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.0" cy="2088.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="2188.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="2288.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="577.0" y="341.0" width="454.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3569: DZM CERRGB</title></rect>
+<rect x="576.0" y="374.0" width="435.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3570: DZM CBUSY</title></rect>
+<rect x="577.0" y="407.0" width="454.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3571: DZM SAVGSU</title></rect>
+<rect x="577.0" y="439.0" width="1493.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3572: DZM RREDUC</title></rect>
+<rect x="575.0" y="472.0" width="416.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3573: DZM CCAT</title></rect>
+<rect x="576.0" y="505.0" width="455.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3574: DZM RATTMO</title></rect>
+<rect x="577.0" y="540.0" width="454.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3575: DZM RROTAT</title></rect>
+<rect x="577.0" y="574.0" width="452.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3576: DZM RTFIRI</title></rect>
+<rect x="575.0" y="606.0" width="454.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3577: DZM RTSNDI</title></rect>
+<rect x="577.0" y="641.0" width="434.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3578: DZM NODRA</title></rect>
+<rect x="576.0" y="673.0" width="435.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3579: DZM CSAVE</title></rect>
+<rect x="580.0" y="706.0" width="431.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3580: DZM RMODE</title></rect>
+<rect x="575.0" y="738.0" width="456.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3581: DZM RUPCOM</title></rect>
+<rect x="575.0" y="771.0" width="456.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3582: DZM CUPCOM</title></rect>
+<rect x="576.0" y="805.0" width="456.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3583: DZM RDOCOM</title></rect>
+<rect x="576.0" y="839.0" width="455.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3584: DZM CDOCOM</title></rect>
+<rect x="579.0" y="872.0" width="432.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3585: DZM I DFB</title></rect>
+<rect x="579.0" y="905.0" width="453.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3586: DZM DRAWMO</title></rect>
+<rect x="579.0" y="937.0" width="452.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3587: DZM CONSTD</title></rect>
+<rect x="575.0" y="970.0" width="456.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3588: DZM RLABEL</title></rect>
+<rect x="579.0" y="1002.0" width="452.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3589: DZM MBLINK</title></rect>
+<rect x="580.0" y="1036.0" width="431.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3590: DZM CMODE</title></rect>
+<rect x="575.0" y="1071.0" width="456.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3591: DZM RERASE</title></rect>
+<rect x="578.0" y="1105.0" width="453.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3592: DZM SAVINS</title></rect>
+<rect x="579.0" y="1138.0" width="412.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3593: LAC (400</title></rect>
+<rect x="576.0" y="1171.0" width="454.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3594: DAC ELCOUN</title></rect>
+<rect x="579.0" y="1205.0" width="452.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3595: LAC ENDNOR</title></rect>
+<rect x="578.0" y="1238.0" width="392.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3596: DAC END</title></rect>
+<rect x="577.0" y="1269.0" width="454.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3597: LAC DFENOR</title></rect>
+<rect x="578.0" y="1303.0" width="392.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3598: DAC DFE</title></rect>
+<rect x="578.0" y="1339.0" width="49.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3599: LAC (233700</title></rect>
+<rect x="837.0" y="1337.0" width="353.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3599: /S</title></rect>
+<rect x="574.0" y="1371.0" width="435.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3600: DAC LBD 6</title></rect>
+<rect x="579.0" y="1405.0" width="411.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3601: LAC (LBD</title></rect>
+<rect x="575.0" y="1437.0" width="474.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3602: TAD (400000</title></rect>
+<rect x="575.0" y="1470.0" width="494.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3603: DAC SRAST 15</title></rect>
+<rect x="573.0" y="1537.0" width="376.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3605: DAC 10</title></rect>
+<rect x="577.0" y="1570.0" width="412.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3606: LAC (260</title></rect>
+<rect x="577.0" y="1605.0" width="450.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3607: DAC PRINT1</title></rect>
+<rect x="577.0" y="1638.0" width="452.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3608: DAC PRINT2</title></rect>
+<rect x="575.0" y="1708.0" width="454.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3610: JMS INSRTN</title></rect>
+<rect x="575.0" y="1740.0" width="454.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3611: JMS DELLEV</title></rect>
+<rect x="577.0" y="1773.0" width="491.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3612: JMP I ENDDRA</title></rect>
+<rect x="578.0" y="1839.0" width="206.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3614: POIMO,</title></rect>
+<rect x="836.0" y="1838.0" width="194.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3614: LAC DRAWMO</title></rect>
+<rect x="575.0" y="1873.0" width="312.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3615: SZA</title></rect>
+<rect x="575.0" y="1909.0" width="52.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3616: JMP PEN1</title></rect>
+<rect x="835.0" y="1904.0" width="734.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3616: /DRAWING NOT FINISHED</title></rect>
+<rect x="577.0" y="1940.0" width="452.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3617: DZM CONSTD</title></rect>
+<rect x="574.0" y="1975.0" width="371.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3618: LAC (1</title></rect>
+<rect x="578.0" y="1997.0" width="431.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3619: DAC RMODE</title></rect>
+<rect x="577.0" y="2041.0" width="426.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3620: LAC (LBD1</title></rect>
+<rect x="574.0" y="2063.0" width="475.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3621: TAD (400000</title></rect>
+<rect x="574.0" y="2096.0" width="493.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3622: DAC SRAST 15</title></rect>
+<rect x="575.0" y="2141.0" width="452.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3623: JMP BLIROU</title></rect>
+<rect x="575.0" y="2207.0" width="208.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3625: ATTMO,</title></rect>
+<rect x="835.0" y="2207.0" width="193.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3625: LAC MBLINK</title></rect>
+<rect x="1155.0" y="2207.0" width="555.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3625: /ATT POINTS OF BLINKING INST</title></rect>
+<rect x="574.0" y="2229.0" width="752.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3626: SNA</title></rect>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-120.png" width="3307" height="2338"/>
+<rect x="662" y="291" width="1696" height="1993" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="96.5" cy="1636.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="843.0" y="311.0" width="1520.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 423: JMS GBD1</title></rect>
+<rect x="842.0" y="348.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 424: RAL</title></rect>
+<rect x="841.0" y="384.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 425: SMA</title></rect>
+<rect x="843.0" y="415.0" width="130.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 426: JMP ,+4</title></rect>
+<rect x="1161.0" y="416.0" width="433.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 426: /JUMP GOT MORE GARBAGE</title></rect>
+<rect x="842.0" y="442.0" width="191.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 427: LAC I OP+7</title></rect>
+<rect x="842.0" y="483.0" width="211.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 428: AND (577777</title></rect>
+<rect x="841.0" y="515.0" width="152.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 429: JMP ,-20</title></rect>
+<rect x="1161.0" y="516.0" width="533.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 429: /RESTORE LIST ITEM AND LOOP</title></rect>
+<rect x="841.0" y="548.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 430: LAC OP+7</title></rect>
+<rect x="841.0" y="580.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 431: TAD (400000</title></rect>
+<rect x="841.0" y="614.0" width="211.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 432: DAC I OP+10</title></rect>
+<rect x="1159.0" y="616.0" width="294.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 432: /COLLECT A WORD</title></rect>
+<rect x="840.0" y="646.0" width="191.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 433: AND (17777</title></rect>
+<rect x="841.0" y="679.0" width="171.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 434: ISZ OP+10</title></rect>
+<rect x="840.0" y="713.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 435: SAD OP+10</title></rect>
+<rect x="840.0" y="744.0" width="913.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 436: ISZ OP+11</title></rect>
+<rect x="840.0" y="781.0" width="151.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 437: JMP ,-33</title></rect>
+<rect x="1160.0" y="783.0" width="91.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 437: /LOOP</title></rect>
+<rect x="839.0" y="808.0" width="171.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 438: LAC OP+11</title></rect>
+<rect x="839.0" y="849.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 439: SNA</title></rect>
+<rect x="840.0" y="879.0" width="171.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 440: JMS ERRGB</title></rect>
+<rect x="1159.0" y="881.0" width="614.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 440: /ERROR EXIT IF NONE CONSECUTIVE</title></rect>
+<rect x="679.0" y="916.0" width="108.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 441: GARB2,</title></rect>
+<rect x="839.0" y="916.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 441: LAC FREE</title></rect>
+<rect x="841.0" y="948.0" width="170.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 442: JMP I LIM</title></rect>
+<rect x="1159.0" y="949.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 442: /OK EXIT</title></rect>
+<rect x="679.0" y="981.0" width="67.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 443: GBD,</title></rect>
+<rect x="839.0" y="983.0" width="11.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 443: 0</title></rect>
+<rect x="1159.0" y="983.0" width="291.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 443: /FOR BLOCK DATA</title></rect>
+<rect x="838.0" y="1015.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 444: LAC I OP+7</title></rect>
+<rect x="839.0" y="1046.0" width="210.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 445: AND (577777</title></rect>
+<rect x="839.0" y="1080.0" width="190.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 446: DAC I OP+7</title></rect>
+<rect x="838.0" y="1113.0" width="191.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 447: AND (17777</title></rect>
+<rect x="838.0" y="1145.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 448: DAC OP+7</title></rect>
+<rect x="1157.0" y="1147.0" width="614.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 448: /MOVE OP+7 TO END OF BLOCK DATA</title></rect>
+<rect x="837.0" y="1179.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 449: SAD END</title></rect>
+<rect x="838.0" y="1211.0" width="210.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 450: JMP GARB2-3</title></rect>
+<rect x="837.0" y="1247.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 451: LAC GBD</title></rect>
+<rect x="837.0" y="1280.0" width="130.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 452: ADD (-4</title></rect>
+<rect x="1316.0" y="1282.0" width="413.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 452: /RESTART THIS SECTION</title></rect>
+<rect x="837.0" y="1315.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 453: DAC GBD</title></rect>
+<rect x="838.0" y="1347.0" width="170.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 454: JMP I GBD</title></rect>
+<rect x="676.0" y="1381.0" width="87.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 455: GBD1,</title></rect>
+<rect x="835.0" y="1385.0" width="12.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 455: 0</title></rect>
+<rect x="1155.0" y="1382.0" width="572.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 455: /TO ELIMINATE DEAD BLOCK DATA</title></rect>
+<rect x="835.0" y="1447.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 457: LAC OP 7</title></rect>
+<rect x="835.0" y="1479.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 458: TAD (20000</title></rect>
+<rect x="836.0" y="1513.0" width="108.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 459: TAD (1</title></rect>
+<rect x="835.0" y="1548.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 460: SAD I OP+7</title></rect>
+<rect x="835.0" y="1580.0" width="190.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 461: JMP I GBD1</title></rect>
+<rect x="835.0" y="1613.0" width="171.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 462: DAC OP+12</title></rect>
+<rect x="834.0" y="1645.0" width="211.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 463: DZM I OP+12</title></rect>
+<rect x="835.0" y="1673.0" width="130.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 464: JMP ,-5</title></rect>
+<rect x="1314.0" y="1681.0" width="452.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 464: /LOOP FOR FURTHER ITEMS</title></rect>
+<rect x="673.0" y="1744.0" width="392.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 466: /BLOCK DATA PRODUCER</title></rect>
+<rect x="674.0" y="1780.0" width="168.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 467: BDN=JMS ,</title></rect>
+<rect x="833.0" y="1804.0" width="12.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 468: 0</title></rect>
+<rect x="833.0" y="1847.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 469: DZM I END</title></rect>
+<rect x="833.0" y="1879.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 470: DZM #GDM</title></rect>
+<rect x="1153.0" y="1881.0" width="613.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 470: /ZERO GARBAGE COLLECTION MARKER</title></rect>
+<rect x="833.0" y="1914.0" width="110.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 471: TAD (1</title></rect>
+<rect x="833.0" y="1937.0" width="151.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 472: DAC OP+2</title></rect>
+<rect x="1152.0" y="1947.0" width="614.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 472: /NO OF CONSECUTIVE WORDS NEEDED</title></rect>
+<rect x="834.0" y="1981.0" width="251.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 473: XCT I BDN-JMS</title></rect>
+<rect x="833.0" y="2015.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 474: DAC OP+4</title></rect>
+<rect x="833.0" y="2047.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 475: LAC I OP+4</title></rect>
+<rect x="833.0" y="2081.0" width="151.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 476: DAC OP+4</title></rect>
+<rect x="833.0" y="2114.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 477: LAC FREE</title></rect>
+<rect x="673.0" y="2147.0" width="67.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 478: BDC,</title></rect>
+<rect x="833.0" y="2146.0" width="150.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 478: DAC OP+3</title></rect>
+<rect x="734.0" y="2170.0" width="250.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 479: DZM #BCC</title></rect>
+<rect x="1152.0" y="2182.0" width="212.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 479: /ZERO COUNT</title></rect>
+<rect x="831.0" y="2216.0" width="52.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 480: SMA</title></rect>
+</svg>

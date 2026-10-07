@@ -1076,6 +1076,23 @@
 		return mode === undefined ? explain(w, symbolic) : `340: ${explainDisplay(w, mode, symbolic)}`;
 	}
 
+	// The focused (else the PC's) line's place on its scanned page, when the program has a scan map.
+	const scanAt = $derived.by(() => {
+		const addr = memFocus >= 0 ? memFocus : pcNow;
+		const i = sourceMap?.line.get(addr);
+		const place = i === undefined ? null : sourceMap.lines[i]?.scan;
+		if (!place?.rects.length) return null;
+		const x0 = Math.min(...place.rects.map((r) => r.x));
+		const y0 = Math.min(...place.rects.map((r) => r.y));
+		const y1 = Math.max(...place.rects.map((r) => r.y + r.h));
+		const h = y1 - y0;
+		// The text column and the address and word left of it, with two lines above and below.
+		const left = Math.max(0, x0 - 750);
+		const top = Math.max(0, y0 - 4 * h);
+		const bottom = Math.min(place.height, y1 + 4 * h);
+		return { addr, place, view: `${left} ${top} ${Math.min(place.width - left, 1700)} ${bottom - top}` };
+	});
+
 	/** The source line for an address, or the next one that has an address. */
 	function srcLineFor(addr) {
 		const exact = sourceMap?.line.get(addr);
@@ -3139,6 +3156,16 @@
 					{:else}
 						<p class="mem-hint">{sourceStatus}</p>
 					{/if}
+					{#if scanAt}
+						<a class="mem-scanstrip" href={scanAt.place.url} target="_blank" rel="noopener" title="{oct(scanAt.addr, 5)} on the scanned page; green boxes measured from the ink, red ones predicted. Click for the whole page.">
+							<svg viewBox={scanAt.view} preserveAspectRatio="xMinYMid meet" role="img" aria-label="The line on the scanned listing page">
+								<image href={scanAt.place.url} width={scanAt.place.width} height={scanAt.place.height} />
+								{#each scanAt.place.rects as r, i (i)}
+									<rect x={r.x - 6} y={r.y - 6} width={r.w + 12} height={r.h + 12} class:ink={r.ink} />
+								{/each}
+							</svg>
+						</a>
+					{/if}
 				{:else if memView === 'trace'}
 					{#each traceRows as e (e.n)}
 						<div class="mem-line trace" class:focus={e.pc === memFocus}>
@@ -4187,6 +4214,25 @@
 		margin-left: 0.5em;
 		font-size: 0.85em;
 		white-space: nowrap;
+	}
+	.mem-scanstrip {
+		display: block;
+		margin-top: 0.3em;
+		background: #fff;
+	}
+	.mem-scanstrip svg {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	.mem-scanstrip rect {
+		fill: rgb(230 0 0 / 0.1);
+		stroke: #e00;
+		stroke-width: 4;
+	}
+	.mem-scanstrip rect.ink {
+		fill: rgb(0 170 0 / 0.12);
+		stroke: #0a0;
 	}
 	.mem-symbols {
 		font: inherit;

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-055.png" width="3307" height="2338"/>
+<rect x="1204" y="171" width="1707" height="2006" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="614.5" cy="148.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="250.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="349.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="451.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="550.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="650.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="748.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="849.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="948.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1048.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1146.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1247.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="1346.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1447.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="649.5" cy="1499.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.5" cy="1547.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1647.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1746.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1846.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1945.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="2046.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.0" cy="2148.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1387.0" y="194.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3024: POH SB 1730</title></rect>
+<rect x="1388.0" y="229.0" width="191.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3025: DJS SB , 2</title></rect>
+<rect x="1387.0" y="262.0" width="194.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3026: JMP ENDCOM</title></rect>
+<rect x="1387.0" y="295.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3027: DDS CH 3</title></rect>
+<rect x="1387.0" y="330.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3028: 051637</title></rect>
+<rect x="1707.0" y="328.0" width="53.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3028: /EN</title></rect>
+<rect x="1227.0" y="363.0" width="69.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3029: LB4,</title></rect>
+<rect x="1387.0" y="362.0" width="114.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3029: PAR PO</title></rect>
+<rect x="1387.0" y="394.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3030: POV PO 20</title></rect>
+<rect x="1387.0" y="428.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3031: POH SB 20</title></rect>
+<rect x="1387.0" y="463.0" width="192.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3032: DJS SB , 2</title></rect>
+<rect x="1387.0" y="498.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3033: JMP PIXEX</title></rect>
+<rect x="1387.0" y="530.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3034: DDS CH 3</title></rect>
+<rect x="1420.9" y="565.2" width="125.8" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3035: 201130</title></rect>
+<rect x="1987.2" y="565.2" width="83.9" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3035: /PIX</title></rect>
+<rect x="896.0" y="598.0" width="1334.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3036: {handwritten: pencil circle around printed 201128 on SEQ 70; handwritten note to right: circled mark, "12.7.72", large tick, "x 30" (the 0 slashed, as the printer slashes its zeros)}</title></rect>
+<rect x="1459.0" y="655.0" width="73.0" height="8.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3037: 110537</title></rect>
+<rect x="1717.0" y="632.0" width="702.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3037: /IE</title></rect>
+<rect x="1231.4" y="735.2" width="125.8" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3040: WAREA,</title></rect>
+<rect x="1420.2" y="735.2" width="356.6" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3040: PAR PO PF SC3 IN5</title></rect>
+<rect x="1986.5" y="735.2" width="272.7" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3040: /WORKING AREA</title></rect>
+<rect x="1234.0" y="795.0" width="881.0" height="5.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3041: POV PO 0</title></rect>
+<rect x="1227.0" y="802.0" width="892.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3042: POH VE 0</title></rect>
+<rect x="1386.0" y="836.0" width="152.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3043: VEC ON 0 177</title></rect>
+<rect x="1386.0" y="870.0" width="232.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3044: VEC ON 170 0</title></rect>
+<rect x="1386.0" y="904.0" width="231.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3045: VEC ON 0 -177</title></rect>
+<rect x="1386.0" y="938.0" width="252.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3046: VEC ON -170</title></rect>
+<rect x="1385.0" y="972.0" width="250.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3047: VEC 0 10</title></rect>
+<rect x="1386.0" y="1006.0" width="211.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3048: VEC ES ON 170 0</title></rect>
+<rect x="1386.0" y="1040.0" width="291.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3049: PAR SB</title></rect>
+<rect x="1229.9" y="1109.2" width="146.8" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3051: TOTEMP,</title></rect>
+<rect x="1418.7" y="1109.2" width="209.7" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3051: DJP TEMPDF</title></rect>
+<rect x="1985.0" y="1109.2" width="545.3" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3051: /TO TEMPORARY DISPLAY FILE</title></rect>
+<rect x="1226.0" y="1161.0" width="1314.0" height="13.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3052: PAR SB</title></rect>
+<rect x="1229.0" y="1176.0" width="1311.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3053: DJS SB , 2</title></rect>
+<rect x="1385.0" y="1210.0" width="192.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3054: JMP STRCR</title></rect>
+<rect x="1385.0" y="1244.0" width="192.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3055: DDS SB 3</title></rect>
+<rect x="1418.0" y="1279.2" width="188.8" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3056: DJP TRACK</title></rect>
+<rect x="1984.3" y="1279.2" width="377.5" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3056: /TO TRACKING CROSS</title></rect>
+<rect x="1385.0" y="1346.0" width="40.0" height="5.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3058: PSD,</title></rect>
+<rect x="1467.0" y="1346.0" width="90.0" height="5.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3058: VEC ES -34 14</title></rect>
+<rect x="1865.0" y="1346.0" width="348.0" height="7.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3058: /POS LB'S OF CROSS</title></rect>
+<rect x="1225.0" y="1387.0" width="412.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3059: PAD,</title></rect>
+<rect x="1866.0" y="1395.0" width="352.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3059: VEC ES 10 13</title></rect>
+<rect x="1224.0" y="1414.0" width="411.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3060: PRD,</title></rect>
+<rect x="1864.0" y="1414.0" width="352.0" height="5.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3060: VEC ES 20 0</title></rect>
+<rect x="943.0" y="1448.0" width="665.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3061: {handwritten: solid black rectangular mark in left margin beside SEQ 94-95}</title></rect>
+<rect x="1224.0" y="1482.0" width="68.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3062: PCD,</title></rect>
+<rect x="1385.0" y="1482.0" width="251.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3062: VEC ES 10 -13</title></rect>
+<rect x="1224.0" y="1516.0" width="68.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3063: PLD,</title></rect>
+<rect x="1384.0" y="1516.0" width="252.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3063: VEC ES -6 -36</title></rect>
+<rect x="1224.0" y="1550.0" width="67.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3064: PXD,</title></rect>
+<rect x="1385.0" y="1550.0" width="267.0" height="32.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3064: VEC ES -24 -11</title></rect>
+<rect x="1224.0" y="1728.0" width="67.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3069: INT,</title></rect>
+<rect x="1383.0" y="1728.0" width="151.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3069: DAC INT1</title></rect>
+<rect x="1703.0" y="1729.0" width="354.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3069: /INTERRUPT ROUTINE</title></rect>
+<rect x="1384.0" y="1796.0" width="71.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3071: IDSP</title></rect>
+<rect x="1383.0" y="1830.0" width="164.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3072: SKP</title></rect>
+<rect x="1383.0" y="1865.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3073: JMS PEN</title></rect>
+<rect x="1385.0" y="1898.0" width="68.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3074: IDSI</title></rect>
+<rect x="1383.0" y="1930.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3075: SKP</title></rect>
+<rect x="1383.0" y="1965.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3076: JMS STPCD</title></rect>
+<rect x="1383.0" y="1997.0" width="73.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3077: IDVE</title></rect>
+<rect x="1383.0" y="2030.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3078: SKP</title></rect>
+<rect x="1384.0" y="2064.0" width="171.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3079: JMS EDGEV</title></rect>
+<rect x="1383.0" y="2099.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3080: IDHE</title></rect>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-002.png" width="3307" height="2338"/>
+<rect x="593" y="299" width="1765" height="2034" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="61.0" cy="181.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="134.5" cy="274.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="378.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="479.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="579.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="678.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="778.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="878.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="978.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="1077.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1177.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1277.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.5" cy="1376.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.5" cy="1477.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="67.0" cy="1575.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="73.0" cy="1625.0" r="29.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.0" cy="1674.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="1775.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1874.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1975.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="2074.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="2176.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="2277.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="677.0" y="323.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3: /SYMELEC</title></rect>
+<rect x="837.0" y="421.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 6: DISP</title></rect>
+<rect x="597.0" y="491.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 8: 21/</title></rect>
+<rect x="838.0" y="488.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 8: HLT</title></rect>
+<rect x="597.0" y="521.0" width="132.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 9: 22/</title></rect>
+<rect x="837.0" y="517.0" width="194.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 9: JMP BEGRTP</title></rect>
+<rect x="597.0" y="555.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 10: 23/</title></rect>
+<rect x="839.0" y="551.0" width="190.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 10: JMP BERTP1</title></rect>
+<rect x="597.0" y="619.0" width="209.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 12: BEGRTP,</title></rect>
+<rect x="998.0" y="618.0" width="234.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 12: LAC (JMP INT</title></rect>
+<rect x="1478.0" y="618.0" width="311.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 12: /INTERRUPT ENTRY</title></rect>
+<rect x="597.0" y="651.0" width="332.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 13: DAC 1</title></rect>
+<rect x="597.0" y="684.0" width="294.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 14: CAF</title></rect>
+<rect x="599.0" y="718.0" width="432.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 15: JMS ENDDRA</title></rect>
+<rect x="598.0" y="752.0" width="209.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 16: BERTP1,</title></rect>
+<rect x="999.0" y="751.0" width="193.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 16: LAC SAVINS</title></rect>
+<rect x="597.0" y="784.0" width="294.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 17: SZA</title></rect>
+<rect x="598.0" y="818.0" width="435.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 18: ISZ CDOCOM</title></rect>
+<rect x="597.0" y="851.0" width="416.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 19: DZM I DFB</title></rect>
+<rect x="599.0" y="884.0" width="434.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 20: DZM RCATAL</title></rect>
+<rect x="599.0" y="918.0" width="414.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 21: DZM RCOPY</title></rect>
+<rect x="599.0" y="951.0" width="434.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 22: DZM RGROUP</title></rect>
+<rect x="599.0" y="984.0" width="435.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 23: DZM RATTPO</title></rect>
+<rect x="599.0" y="1018.0" width="432.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 24: DZM RTFIRI</title></rect>
+<rect x="599.0" y="1051.0" width="415.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 25: JMS SETCL</title></rect>
+<rect x="599.0" y="1118.0" width="354.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 27: LAW LB</title></rect>
+<rect x="599.0" y="1186.0" width="314.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 29: IDLA</title></rect>
+<rect x="600.0" y="1220.0" width="292.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 30: ION</title></rect>
+<rect x="599.0" y="1254.0" width="315.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 31: WAIT</title></rect>
+<rect x="600.0" y="1286.0" width="372.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 32: JMP .-1</title></rect>
+<rect x="601.0" y="1553.0" width="149.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 40: LBD,</title></rect>
+<rect x="842.0" y="1551.0" width="272.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 40: PAR SB SC1 IN7</title></rect>
+<rect x="1322.0" y="1551.0" width="273.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 40: /LB'S AT CROSS</title></rect>
+<rect x="602.0" y="1585.0" width="433.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 41: DJS VE PSD</title></rect>
+<rect x="440.0" y="1619.0" width="515.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 42: {handwritten: solid black ink mark in left margin beside rows 39-40}</title></rect>
+<rect x="593.0" y="1652.0" width="442.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 43: PAR SB</title></rect>
+<rect x="593.0" y="1685.0" width="362.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 44: DJS SB , 2</title></rect>
+<rect x="856.9" y="1719.4" width="134.6" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 45: JMP SD</title></rect>
+<rect x="593.0" y="1785.0" width="603.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 47: DDS CH 3</title></rect>
+<rect x="593.0" y="1823.0" width="42.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 48: 233700</title></rect>
+<rect x="843.0" y="1819.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 48: /S</title></rect>
+<rect x="593.0" y="1853.0" width="443.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 49: PAR SB</title></rect>
+<rect x="593.0" y="1888.0" width="762.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 50: DJS VE PAD</title></rect>
+<rect x="593.0" y="1920.0" width="443.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 51: PAR SB</title></rect>
+<rect x="603.0" y="1954.0" width="354.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 52: DJS SB , 2</title></rect>
+<rect x="593.0" y="1989.0" width="403.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 53: JMP AD</title></rect>
+<rect x="593.0" y="2021.0" width="604.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 54: DDS CH 3</title></rect>
+<rect x="593.0" y="2059.0" width="44.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 55: 013700</title></rect>
+<rect x="845.0" y="2056.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 55: /A</title></rect>
+<rect x="593.0" y="2090.0" width="444.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 56: PAR SB</title></rect>
+<rect x="593.0" y="2123.0" width="364.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 57: DJS VE PRD</title></rect>
+<rect x="593.0" y="2156.0" width="444.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 58: PAR SB</title></rect>
+<rect x="593.0" y="2187.0" width="405.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 59: DJS SB , 2</title></rect>
+<rect x="593.0" y="2222.0" width="404.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 60: JMP CFST</title></rect>
+<rect x="820.1" y="2253.0" width="179.4" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 61: DDS CH 5</title></rect>
+</svg>

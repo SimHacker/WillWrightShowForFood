@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-093.png" width="3307" height="2338"/>
+<rect x="1222" y="174" width="1790" height="1998" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="617.5" cy="49.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.0" cy="148.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.5" cy="249.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.5" cy="350.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="450.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="550.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="651.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="752.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="852.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="950.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="1050.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="1150.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="1249.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="1349.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1449.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="638.0" cy="1521.0" r="41.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1648.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1747.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1847.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1947.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="2050.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="2150.0" r="17.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1390.0" y="194.0" width="73.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5155: GETD</title></rect>
+<rect x="1391.0" y="228.0" width="111.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5156: SAD (2</title></rect>
+<rect x="1391.0" y="293.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5158: JMP RINST</title></rect>
+<rect x="1391.0" y="328.0" width="111.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5159: SAD (3</title></rect>
+<rect x="1389.0" y="361.0" width="767.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5160: JMP RLINE</title></rect>
+<rect x="1229.0" y="395.0" width="109.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5161: COMP4,</title></rect>
+<rect x="1390.0" y="394.0" width="73.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5161: EXIT</title></rect>
+<rect x="1229.0" y="427.0" width="109.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5162: RINST,</title></rect>
+<rect x="1390.0" y="427.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5162: UNSTAK</title></rect>
+<rect x="1391.0" y="460.0" width="92.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5163: STAKX</title></rect>
+<rect x="1710.0" y="459.0" width="313.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5163: /STACK INSTANCES</title></rect>
+<rect x="1391.0" y="493.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5164: ISZ MRKX</title></rect>
+<rect x="1390.0" y="527.0" width="73.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5165: EXIT</title></rect>
+<rect x="1230.0" y="561.0" width="108.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5166: RLINE,</title></rect>
+<rect x="1390.0" y="560.0" width="170.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5166: LAC GETD1</title></rect>
+<rect x="1390.0" y="595.0" width="93.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5167: STAKY</title></rect>
+<rect x="1709.0" y="595.0" width="234.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5167: /STACK LINES</title></rect>
+<rect x="1391.0" y="630.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5168: ISZ MRKY</title></rect>
+<rect x="1391.0" y="663.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5169: EXIT</title></rect>
+<rect x="1229.0" y="731.0" width="129.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5171: COMP11,</title></rect>
+<rect x="1549.0" y="733.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5171: 0</title></rect>
+<rect x="1391.0" y="765.0" width="211.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5172: LAC I FLEA3</title></rect>
+<rect x="1390.0" y="797.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5173: SAD (100000</title></rect>
+<rect x="1390.0" y="831.0" width="607.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5174: JMP .+12</title></rect>
+<rect x="1391.0" y="864.0" width="131.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5175: AND (77</title></rect>
+<rect x="1710.0" y="862.0" width="393.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5175: /FORM CHAR GEN ENTRY</title></rect>
+<rect x="1390.0" y="898.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5176: DAC TEMP</title></rect>
+<rect x="1389.0" y="932.0" width="173.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5177: LAC XBEAM</title></rect>
+<rect x="1390.0" y="966.0" width="132.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5178: TAD (14</title></rect>
+<rect x="1389.0" y="997.0" width="174.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5179: DAC XBEAM</title></rect>
+<rect x="1389.0" y="1031.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5180: LAW FLEA3</title></rect>
+<rect x="1390.0" y="1065.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5181: CDR</title></rect>
+<rect x="1389.0" y="1097.0" width="154.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5182: LAC TEMP</title></rect>
+<rect x="1389.0" y="1131.0" width="132.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5183: JMP .+3</title></rect>
+<rect x="1391.0" y="1158.0" width="152.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5184: ISZ MKER</title></rect>
+<rect x="1389.0" y="1200.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5185: LAC (37</title></rect>
+<rect x="1389.0" y="1234.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5186: DAC FIG</title></rect>
+<rect x="1389.0" y="1266.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5187: LAC TEM</title></rect>
+<rect x="1389.0" y="1299.0" width="111.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5188: ALSS 6</title></rect>
+<rect x="1389.0" y="1331.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5189: TAD FIG</title></rect>
+<rect x="1389.0" y="1365.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5190: DAC TEM</title></rect>
+<rect x="1389.0" y="1397.0" width="231.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5191: JMP I COMP11</title></rect>
+<rect x="1229.0" y="1465.0" width="128.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5193: COMP12,</title></rect>
+<rect x="1549.0" y="1468.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5193: 0</title></rect>
+<rect x="1389.0" y="1497.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5194: LAW 2</title></rect>
+<rect x="1389.0" y="1530.0" width="112.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5195: TAD DF</title></rect>
+<rect x="1389.0" y="1563.0" width="72.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5196: WRDF</title></rect>
+<rect x="1708.0" y="1565.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5196: /DJS .+2</title></rect>
+<rect x="1389.0" y="1597.0" width="131.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5197: LAC I X</title></rect>
+<rect x="1388.0" y="1630.0" width="73.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5198: WRDF</title></rect>
+<rect x="1708.0" y="1630.0" width="133.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5198: /ATNAME</title></rect>
+<rect x="1388.0" y="1665.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5199: LAC SVAD</title></rect>
+<rect x="1388.0" y="1698.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5200: TAD (200000</title></rect>
+<rect x="1389.0" y="1730.0" width="72.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5201: WRDF</title></rect>
+<rect x="1707.0" y="1729.0" width="174.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5201: /DDS SVAD</title></rect>
+<rect x="1389.0" y="1765.0" width="231.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5202: JMP I COMP12</title></rect>
+<rect x="1227.0" y="1832.0" width="129.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5204: COMP13,</title></rect>
+<rect x="1548.0" y="1836.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5204: 0</title></rect>
+<rect x="1868.0" y="1829.0" width="413.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5204: /FLEA ONTO BLINK WORD</title></rect>
+<rect x="1350.0" y="1858.0" width="131.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5205: LAC X</title></rect>
+<rect x="1388.0" y="1899.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5206: DAC FLEA3</title></rect>
+<rect x="1388.0" y="1933.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5207: LAW FLEA3</title></rect>
+<rect x="1388.0" y="1966.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5208: CDR</title></rect>
+<rect x="1389.0" y="1999.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5209: CDR</title></rect>
+<rect x="1388.0" y="2031.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5210: CDR</title></rect>
+<rect x="1389.0" y="2061.0" width="211.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5211: LAC I FLEA3</title></rect>
+<rect x="1708.0" y="2059.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5211: /BLINK WORD</title></rect>
+<rect x="1389.0" y="2096.0" width="230.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5212: JMP I COMP13</title></rect>
+</svg>

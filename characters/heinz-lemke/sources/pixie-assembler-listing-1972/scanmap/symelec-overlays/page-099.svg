@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-099.png" width="3307" height="2338"/>
+<rect x="1424" y="179" width="1487" height="1994" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="616.0" cy="51.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.5" cy="151.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="251.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="452.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="553.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="653.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="753.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="852.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="952.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="1052.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1152.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="1251.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1351.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1450.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="655.0" cy="1501.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="1550.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="1650.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1749.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="1849.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1946.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="2048.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="2148.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1429.0" y="198.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5515: LAC VECGN 116</title></rect>
+<rect x="1429.0" y="232.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5516: DAC VECGN 46</title></rect>
+<rect x="1431.0" y="265.0" width="31.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5517: IDIV</title></rect>
+<rect x="1429.0" y="302.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5518: 177</title></rect>
+<rect x="1429.0" y="334.0" width="214.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5519: DAC VECGN 120</title></rect>
+<rect x="1429.0" y="367.0" width="34.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5520: LACQ</title></rect>
+<rect x="1429.0" y="399.0" width="94.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5521: CMA1CLL</title></rect>
+<rect x="1429.0" y="433.0" width="212.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5522: DAC VECGN 125</title></rect>
+<rect x="1429.0" y="466.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5523: LAC VECGN 117</title></rect>
+<rect x="1429.0" y="499.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5524: FRDIV</title></rect>
+<rect x="1446.6" y="530.8" width="43.7" height="29.3" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 5525: XX</title></rect>
+<rect x="1429.0" y="567.0" width="94.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5526: SZL1CLL</title></rect>
+<rect x="1429.0" y="597.0" width="356.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5527: JMP VECGN 62</title></rect>
+<rect x="1429.0" y="633.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5528: MUL-12000</title></rect>
+<rect x="1429.0" y="669.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5529: 177</title></rect>
+<rect x="1429.0" y="699.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5530: DAC VECGN 46</title></rect>
+<rect x="1429.0" y="735.0" width="33.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5531: LACQ</title></rect>
+<rect x="1429.0" y="767.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5532: DAC VECGN 123</title></rect>
+<rect x="1429.0" y="801.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5533: DZM VECGN 124</title></rect>
+<rect x="1428.0" y="835.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5534: LAC VECGN 37</title></rect>
+<rect x="1429.0" y="869.0" width="212.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5535: DAC VECGN 116</title></rect>
+<rect x="1429.0" y="901.0" width="211.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5536: JMP VECGN 101</title></rect>
+<rect x="1428.0" y="968.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5538: LAC VECGN 37</title></rect>
+<rect x="1429.0" y="1000.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5539: DAC VECGN 46</title></rect>
+<rect x="1429.0" y="1034.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5540: DZM VECGN 123</title></rect>
+<rect x="1429.0" y="1068.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5541: JMP VECGN 56</title></rect>
+<rect x="1429.0" y="1133.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5543: LAC VECGN 124</title></rect>
+<rect x="1429.0" y="1165.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5544: TAD VECGN 123</title></rect>
+<rect x="1429.0" y="1198.0" width="250.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5545: DAC VECGN 124</title></rect>
+<rect x="1429.0" y="1233.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5546: GLK</title></rect>
+<rect x="1429.0" y="1266.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5547: TAD VECGN 46</title></rect>
+<rect x="1428.0" y="1300.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5548: DAC VECGN 115</title></rect>
+<rect x="1429.0" y="1336.0" width="11.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5549: CMA</title></rect>
+<rect x="1428.0" y="1367.0" width="72.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5550: TAD (1</title></rect>
+<rect x="1429.0" y="1401.0" width="212.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5551: TAD VECGN 117</title></rect>
+<rect x="1428.0" y="1433.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5552: DAC VECGN 117</title></rect>
+<rect x="1428.0" y="1464.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5553: JMS VECGN 126</title></rect>
+<rect x="1428.0" y="1498.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5554: ISZ VECGN 125</title></rect>
+<rect x="1428.0" y="1531.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5555: JMP VECGN 66</title></rect>
+<rect x="1428.0" y="1563.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5556: LAC VECGN 117</title></rect>
+<rect x="1428.0" y="1599.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5557: DAC VECGN 115</title></rect>
+<rect x="1428.0" y="1633.0" width="357.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5558: ADD VECGN 120</title></rect>
+<rect x="1429.0" y="1666.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5559: SNA</title></rect>
+<rect x="1428.0" y="1698.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5560: JMP VECGN 113</title></rect>
+<rect x="1428.0" y="1731.0" width="214.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5561: LAC VECGN 120</title></rect>
+<rect x="1428.0" y="1765.0" width="213.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5562: DAC VECGN 116</title></rect>
+<rect x="1428.0" y="1800.0" width="213.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5563: JMS VECGN 126</title></rect>
+<rect x="1428.0" y="1834.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5564: ISZ VECGN</title></rect>
+<rect x="1429.0" y="1869.0" width="172.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5565: JMP I VECGN</title></rect>
+<rect x="1389.0" y="1940.0" width="12.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5567: 0</title></rect>
+<rect x="1389.0" y="1974.0" width="12.0" height="16.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5568: 0</title></rect>
+<rect x="1389.0" y="2004.0" width="18.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5569: 0</title></rect>
+<rect x="1389.0" y="2037.0" width="12.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5570: 0</title></rect>
+<rect x="1389.0" y="2070.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5571: 0</title></rect>
+<rect x="1389.0" y="2102.0" width="12.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5572: 0</title></rect>
+</svg>

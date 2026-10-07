@@ -46,8 +46,8 @@ export type { AsmTape, AsmLine, AsmResult, AsmOpts, Dialect, ListingOpts, Machin
 export { disassemble, explain, explainDisplay } from "./disasm.js";
 export type { DisasmDialect } from "./disasm.js";
 export { Trace } from "./trace.js";
-export { linesAt, sourceFromAsm, sourceFromListing } from "./source.js";
-export type { SourceKind, SourceLine, SourceMap, SourceMeta } from "./source.js";
+export { attachScan, linesAt, sourceFromAsm, sourceFromListing } from "./source.js";
+export type { ScanLines, ScanPlace, ScanRect, SourceKind, SourceLine, SourceMap, SourceMeta } from "./source.js";
 export { symelecSources } from "./symelec-sources.js";
 export type { TraceEntry } from "./trace.js";
 export { SessionRecorder, replaySession, isSession } from "./session.js";

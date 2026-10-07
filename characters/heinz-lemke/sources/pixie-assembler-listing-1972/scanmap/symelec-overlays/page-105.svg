@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-105.png" width="3307" height="2338"/>
+<rect x="1252" y="188" width="1745" height="1994" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="732.5" cy="8.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="628.0" cy="68.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="740.5" cy="163.5" r="16.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.0" cy="269.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="369.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="468.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.5" cy="570.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.5" cy="668.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.0" cy="769.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.5" cy="868.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="969.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="1068.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.5" cy="1168.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1266.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="1365.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1466.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="651.0" cy="1513.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1564.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1665.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1762.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1864.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1961.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="2058.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="2160.5" r="18.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1257.0" y="207.0" width="74.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5876: BSBWOR</title></rect>
+<rect x="1257.0" y="240.0" width="74.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5877: RREDUC</title></rect>
+<rect x="1257.0" y="273.0" width="75.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5878: RROTAT</title></rect>
+<rect x="1260.0" y="307.0" width="70.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5879: BLINK1</title></rect>
+<rect x="1258.0" y="340.0" width="75.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5880: JMPADR</title></rect>
+<rect x="1259.0" y="373.0" width="73.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5881: SCRPAD</title></rect>
+<rect x="1258.0" y="408.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5882: TEMP1</title></rect>
+<rect x="1252.0" y="441.0" width="40.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5883: WORD</title></rect>
+<rect x="1252.0" y="473.0" width="81.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5884: ELCOUN</title></rect>
+<rect x="1259.0" y="506.0" width="73.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5885: SAVGSU</title></rect>
+<rect x="1252.0" y="539.0" width="60.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5886: NODRA</title></rect>
+<rect x="1252.0" y="573.0" width="41.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5887: PBDM</title></rect>
+<rect x="1252.0" y="607.0" width="41.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5888: XBML</title></rect>
+<rect x="1252.0" y="640.0" width="41.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5889: YBML</title></rect>
+<rect x="1252.0" y="674.0" width="23.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5890: XBM</title></rect>
+<rect x="1252.0" y="707.0" width="61.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5891: ENOEX</title></rect>
+<rect x="1252.0" y="741.0" width="41.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5892: PNTX</title></rect>
+<rect x="1252.0" y="775.0" width="23.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5893: YBM</title></rect>
+<rect x="1252.0" y="807.0" width="63.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5894: ENOEY</title></rect>
+<rect x="1260.0" y="841.0" width="34.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5895: PNTY</title></rect>
+<rect x="1252.0" y="874.0" width="82.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5896: CERRGB</title></rect>
+<rect x="1252.0" y="910.0" width="42.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5897: FREE</title></rect>
+<rect x="1252.0" y="943.0" width="23.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5898: LOP</title></rect>
+<rect x="1262.0" y="976.0" width="32.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5899: LINK</title></rect>
+<rect x="1252.0" y="1021.0" width="3.0" height="8.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5900: EL</title></rect>
+<rect x="1253.0" y="1043.0" width="20.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5901: EL1</title></rect>
+<rect x="1252.0" y="1075.0" width="63.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5902: POINT</title></rect>
+<rect x="1252.0" y="1108.0" width="44.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5903: LINE</title></rect>
+<rect x="1252.0" y="1142.0" width="25.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5904: GDM</title></rect>
+<rect x="1252.0" y="1174.0" width="25.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5905: BCC</title></rect>
+<rect x="1252.0" y="1208.0" width="84.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5906: RERROR</title></rect>
+<rect x="1252.0" y="1239.0" width="84.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5907: RTRACK</title></rect>
+<rect x="1252.0" y="1272.0" width="81.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5908: RTSNDI</title></rect>
+<rect x="1252.0" y="1306.0" width="85.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5909: CUPCOM</title></rect>
+<rect x="1252.0" y="1339.0" width="83.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5910: SAVGIN</title></rect>
+<rect x="1252.0" y="1372.0" width="85.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5911: RERASE</title></rect>
+<rect x="1252.0" y="1406.0" width="85.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5912: RUPCOM</title></rect>
+<rect x="1252.0" y="1441.0" width="85.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5913: RDOCOM</title></rect>
+<rect x="1252.0" y="1473.0" width="85.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5914: CISRTN</title></rect>
+<rect x="1252.0" y="1506.0" width="85.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5915: RBLINK</title></rect>
+<rect x="1252.0" y="1542.0" width="45.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5916: GRID</title></rect>
+<rect x="1252.0" y="1573.0" width="86.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5917: RLABEL</title></rect>
+<rect x="1252.0" y="1605.0" width="86.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5918: CERRDF</title></rect>
+<rect x="1252.0" y="1641.0" width="43.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5919: INT1</title></rect>
+<rect x="1252.0" y="1672.0" width="85.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5920: CTEMPX</title></rect>
+<rect x="1252.0" y="1705.0" width="87.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5921: CTEMPY</title></rect>
+<rect x="1252.0" y="1742.0" width="66.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5922: CBUSY</title></rect>
+<rect x="1252.0" y="1775.0" width="66.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5923: BPNTX</title></rect>
+<rect x="1252.0" y="1807.0" width="67.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5924: BPNTY</title></rect>
+<rect x="1252.0" y="1842.0" width="27.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5925: POS</title></rect>
+<rect x="1252.0" y="1875.0" width="45.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5926: BCON</title></rect>
+<rect x="1252.0" y="1909.0" width="65.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5927: BCON1</title></rect>
+<rect x="1252.0" y="1942.0" width="87.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5928: FIRSTA</title></rect>
+<rect x="1252.0" y="1975.0" width="87.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5929: SNDSTA</title></rect>
+<rect x="1252.0" y="2009.0" width="47.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5930: SAVE</title></rect>
+<rect x="1252.0" y="2040.0" width="88.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5931: RATTMO</title></rect>
+<rect x="1252.0" y="2075.0" width="68.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5932: CSAVE</title></rect>
+<rect x="1252.0" y="2107.0" width="8.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5933: XB</title></rect>
+</svg>

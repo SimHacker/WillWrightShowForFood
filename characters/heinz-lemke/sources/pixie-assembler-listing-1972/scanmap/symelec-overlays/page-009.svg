@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-009.png" width="3307" height="2338"/>
+<rect x="1212" y="217" width="1675" height="2027" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="598.5" cy="894.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="598.5" cy="993.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="1093.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="1193.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.0" cy="1293.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.5" cy="1393.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="1490.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="633.5" cy="1552.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="2090.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="2197.0" r="17.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1212.0" y="235.0" width="229.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 351: /LTPIX/RELOC</title></rect>
+<rect x="1212.0" y="337.0" width="68.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 354: 451/</title></rect>
+<rect x="1212.0" y="502.0" width="331.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 359: SERSWI,</title></rect>
+<rect x="1781.0" y="528.0" width="260.0" height="4.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 359: 0</title></rect>
+<rect x="1370.0" y="535.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 360: LAC SWITCH</title></rect>
+<rect x="1690.0" y="535.0" width="354.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 360: /SERVES LB A AND B</title></rect>
+<rect x="1371.0" y="568.0" width="52.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 361: SMA</title></rect>
+<rect x="1372.0" y="601.0" width="133.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 362: JMP . 4</title></rect>
+<rect x="1371.0" y="634.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 363: LAC (JMP AD</title></rect>
+<rect x="1372.0" y="669.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 364: DAC LBD 13</title></rect>
+<rect x="1373.0" y="701.0" width="131.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 365: JMP . 3</title></rect>
+<rect x="1372.0" y="734.0" width="213.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 366: LAC (JMP BD</title></rect>
+<rect x="1373.0" y="767.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 367: DAC LBD 13</title></rect>
+<rect x="1374.0" y="801.0" width="230.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 368: JMP I SERSWI</title></rect>
+<rect x="1214.0" y="1005.0" width="109.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 374: FOBBL,</title></rect>
+<rect x="1376.0" y="1002.0" width="211.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 374: TAD (777776</title></rect>
+<rect x="1695.0" y="1000.0" width="353.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 374: /FORM BRANCH BLOCK</title></rect>
+<rect x="1375.0" y="1035.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 375: DAC ELAD</title></rect>
+<rect x="1695.0" y="1033.0" width="393.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 375: /(ELEMENT ADDRESS)-2</title></rect>
+<rect x="1375.0" y="1069.0" width="193.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 376: LAC I ELAD</title></rect>
+<rect x="1376.0" y="1100.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 377: DAC LENGTH</title></rect>
+<rect x="1377.0" y="1134.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 378: ISZ ELAD</title></rect>
+<rect x="1376.0" y="1167.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 379: LAC I ELAD</title></rect>
+<rect x="1377.0" y="1201.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 380: DAC ETYPE</title></rect>
+<rect x="1377.0" y="1266.0" width="152.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 382: LAC SYMB</title></rect>
+<rect x="1697.0" y="1266.0" width="592.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 382: /SEARCH LIST FOR TYPES OF SBPI</title></rect>
+<rect x="1377.0" y="1299.0" width="614.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 383: DAC Y</title></rect>
+<rect x="1377.0" y="1333.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 384: LAC I Y</title></rect>
+<rect x="1697.0" y="1333.0" width="294.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 384: /ADDR OF ATNAME</title></rect>
+<rect x="1377.0" y="1366.0" width="613.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 385: SAD (100000</title></rect>
+<rect x="1379.0" y="1399.0" width="151.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 386: JMP . 16</title></rect>
+<rect x="1698.0" y="1399.0" width="293.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 386: /NO MATCH FOUND</title></rect>
+<rect x="1379.0" y="1432.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 387: DAC TEMP</title></rect>
+<rect x="1379.0" y="1466.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 388: LAW TEMP</title></rect>
+<rect x="1379.0" y="1499.0" width="810.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 389: CDR</title></rect>
+<rect x="1379.0" y="1533.0" width="54.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 390: CDR</title></rect>
+<rect x="1699.0" y="1532.0" width="494.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 390: /POINTS TO TYPE E.G. 1024</title></rect>
+<rect x="1379.0" y="1565.0" width="775.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 391: LAC I TEMP</title></rect>
+<rect x="1380.0" y="1598.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 392: SAD ETYPE</title></rect>
+<rect x="1700.0" y="1598.0" width="675.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 392: /TEST WHETHER SAME TYPE</title></rect>
+<rect x="1381.0" y="1632.0" width="130.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 393: JMP . 4</title></rect>
+<rect x="1861.0" y="1632.0" width="513.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 393: /FOUND SBPI WITH SAME TYPE</title></rect>
+<rect x="1380.0" y="1665.0" width="93.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 394: LAW Y</title></rect>
+<rect x="1381.0" y="1698.0" width="1234.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 395: CDR</title></rect>
+<rect x="1381.0" y="1733.0" width="152.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 396: JMP .-14</title></rect>
+<rect x="1382.0" y="1765.0" width="169.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 397: ISZ FSBPI</title></rect>
+<rect x="1381.0" y="1799.0" width="134.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 398: LAC I Y</title></rect>
+<rect x="1382.0" y="1831.0" width="171.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 399: DAC TEMP2</title></rect>
+<rect x="1384.0" y="1899.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 401: JMS FONBL</title></rect>
+<rect x="1385.0" y="1931.0" width="191.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 402: JMS ATTPDA</title></rect>
+<rect x="1385.0" y="1967.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 403: JMS UPDAXY</title></rect>
+<rect x="1384.0" y="2002.0" width="170.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 404: LAC FSBPI</title></rect>
+<rect x="1384.0" y="2037.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 405: SNA</title></rect>
+<rect x="1384.0" y="2069.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 406: JMP FOCBL</title></rect>
+<rect x="910.7" y="2164.4" width="1536.2" height="29.3" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 409: {handwritten: solid black ink mark in left margin beside rows 40-41}</title></rect>
+</svg>

@@ -250,6 +250,33 @@ smaller tape inside the window: the machine being simulated, encoded on the big
 tape, with the decoded state shown on its own little drum. Two levels of machine,
 both visible. A brass plate on it: *7 states, 4 symbols, 1962*.
 
+### Minsky's Ultimate Machine
+
+Marvin Minsky's 1952 design, which Claude Shannon built at Bell Labs: a plain wooden box with one
+switch on the lid. Flip it on, the lid opens, a hand comes out, switches it off, and goes back in.
+Arthur C. Clarke called it unspeakably sinister.
+
+As a cabinet device it does exactly that and nothing else: its power switch is its only input, and
+its only output is turning its own power switch off. Its one parameter is the **power-cycle delay**:
+how long, in cabinet cycles, it waits after being switched on before it acts. That interval
+drives the animation, in three phases timed against it:
+
+1. **Lid and reach.** The lid lifts and the hand comes out toward the switch.
+2. **Press.** The finger reaches the toggle and pushes it, and at that moment the device's
+   `power` goes false. The animation follows the device state, never the reverse.
+3. **Return.** The arm is spring-loaded: it snaps back into the box and the lid drops shut.
+
+Run the cabinet slower and the hand moves slower, since the delay counts cycles. Set the delay
+to zero and the hand flicks out the instant the switch closes.
+
+**With the mouse.** Click the switch on and the hand starts out at once and switches it off. Click
+it off yourself before the hand gets there and the hand gives up: it retracts straight back into
+the box from wherever it was, and the lid closes. Either way the machine ends where it began, off. It's the smallest complete device the cabinet
+can have, so it's also the test of the power-switch contract below, and of the scene's hands (the
+animation is a device event like any other). It belongs beside the repo's
+[Ultimate Machine bot](../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/CHARACTER.yml),
+the gong that switches off the stream.
+
 ### Movable Feast Machine: tiles, not a cabinet
 
 Ackley's machine is tiles and grows by adding them, so instead of a box it's blinking-light
@@ -292,6 +319,14 @@ with a station clock above it showing the generation count. The panel has:
 - **The description tape** read-out, scrolling, the copy's blueprint.
 - When the copy completes, a second, identical cabinet model appears beside the
   first.
+
+### Power switches
+
+Every device has one: a real toggle or rocker in its own cabinet's style, with a pilot lamp, bound
+to the device's power state. Off means the device does nothing on the clock, raises no
+interrupts and answers no requests, and its displays go dark the way their phosphor or lamps
+would. Turning a device on resets it. A whole cabinet has a master switch that powers its devices
+up in order.
 
 ### Shared devices
 

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-050.png" width="3307" height="2338"/>
+<rect x="625" y="325" width="1834" height="1985" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="65.0" cy="192.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="291.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="390.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="491.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="592.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="691.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="791.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="890.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="990.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1089.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1188.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1288.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1388.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1487.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1588.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="103.5" cy="1638.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="101.0" cy="1688.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1788.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1888.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1988.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="2089.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="2189.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="2290.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="839.0" y="440.0" width="114.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2764: /CONST</title></rect>
+<rect x="625.0" y="506.0" width="182.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2766: TEMPDF,</title></rect>
+<rect x="999.0" y="510.0" width="14.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2766: 0</title></rect>
+<rect x="679.0" y="540.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2767: TEMPDF 300/</title></rect>
+<rect x="625.0" y="640.0" width="163.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2770: POSDF,</title></rect>
+<rect x="841.0" y="639.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2770: TEMPDF 2</title></rect>
+<rect x="1161.0" y="639.0" width="332.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2770: /TEMPDF CONSTANTS</title></rect>
+<rect x="625.0" y="672.0" width="182.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2771: POSDFL,</title></rect>
+<rect x="999.0" y="672.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2771: TEMPDF 2</title></rect>
+<rect x="625.0" y="706.0" width="182.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2772: POSDFB,</title></rect>
+<rect x="999.0" y="706.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2772: TEMPDF 2</title></rect>
+<rect x="625.0" y="734.0" width="182.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2773: TEMPEN,</title></rect>
+<rect x="999.0" y="740.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2773: TEMPDF 75</title></rect>
+<rect x="625.0" y="807.0" width="162.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2775: TEMPX,</title></rect>
+<rect x="839.0" y="808.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2775: 400</title></rect>
+<rect x="1159.0" y="806.0" width="373.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2775: /START POS OF CROSS</title></rect>
+<rect x="625.0" y="831.0" width="162.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2776: TEMPY,</title></rect>
+<rect x="840.0" y="841.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2776: 400</title></rect>
+<rect x="625.0" y="905.0" width="182.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2778: STSTAK,</title></rect>
+<rect x="999.0" y="908.0" width="14.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2778: 0</title></rect>
+<rect x="680.0" y="928.0" width="210.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2779: STSTAK 140/</title></rect>
+<rect x="625.0" y="1005.0" width="182.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2781: STPNTX,</title></rect>
+<rect x="999.0" y="1006.0" width="154.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2781: STSTAK 0</title></rect>
+<rect x="1321.0" y="1006.0" width="232.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2781: /FOR VECTORS</title></rect>
+<rect x="625.0" y="1026.0" width="181.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2782: STPNTY,</title></rect>
+<rect x="999.0" y="1026.0" width="174.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2782: STSTAK 20</title></rect>
+<rect x="1321.0" y="1026.0" width="129.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2782: / "</title></rect>
+<rect x="625.0" y="1059.0" width="402.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2783: STCON,</title></rect>
+<rect x="1080.0" y="1059.0" width="91.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2783: STSTAK 40</title></rect>
+<rect x="1281.0" y="1059.0" width="42.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2783: / "</title></rect>
+<rect x="625.0" y="1091.0" width="387.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2784: STPOS,</title></rect>
+<rect x="1159.0" y="1091.0" width="3.0" height="5.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2784: STSTAK 60</title></rect>
+<rect x="625.0" y="1124.0" width="162.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2785: STCON1,</title></rect>
+<rect x="841.0" y="1124.0" width="352.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2785: STSTAK 100</title></rect>
+<rect x="625.0" y="1203.0" width="167.0" height="16.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2787: BFIRST,</title></rect>
+<rect x="999.0" y="1205.0" width="194.0" height="14.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2787: STSTAK 120</title></rect>
+<rect x="1323.0" y="1203.0" width="431.0" height="16.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2787: /STACKS FOR PERMDF INT</title></rect>
+<rect x="625.0" y="1221.0" width="182.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2788: BSNDST,</title></rect>
+<rect x="999.0" y="1221.0" width="747.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2788: STSTAK 130</title></rect>
+<rect x="625.0" y="1254.0" width="5.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2789: LEVEL,</title></rect>
+<rect x="678.0" y="1254.0" width="511.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2789: STSTAK 120</title></rect>
+<rect x="625.0" y="1286.0" width="5.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2790: BLEVEL,</title></rect>
+<rect x="679.0" y="1286.0" width="513.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2790: STSTAK 120</title></rect>
+<rect x="625.0" y="1371.0" width="146.0" height="11.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2792: COUNT,</title></rect>
+<rect x="839.0" y="1373.0" width="12.0" height="9.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2792: 0</title></rect>
+<rect x="1163.0" y="1369.0" width="350.0" height="13.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2792: /LONG VECTOR COUNT</title></rect>
+<rect x="625.0" y="1384.0" width="162.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2793: CON,</title></rect>
+<rect x="839.0" y="1384.0" width="112.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2793: 777777</title></rect>
+<rect x="1159.0" y="1384.0" width="714.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2793: /-1 NEW START POINT, 0 FOR +Y, 1 FOR</title></rect>
+<rect x="625.0" y="1417.0" width="1249.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2794: /+X, ETC , 4 FOR RUBER LINE</title></rect>
+<rect x="625.0" y="1471.0" width="120.0" height="8.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2795: CON1,</title></rect>
+<rect x="839.0" y="1475.0" width="10.0" height="4.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2795: 0</title></rect>
+<rect x="1159.0" y="1449.0" width="774.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2795: /0 NO ELEM, -1 X-DIR ELEM, 1 Y-DIR ELEM</title></rect>
+<rect x="625.0" y="1482.0" width="225.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2796: DRAWMO,</title></rect>
+<rect x="1000.0" y="1508.0" width="9.0" height="4.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2796: 0</title></rect>
+<rect x="1159.0" y="1482.0" width="774.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2796: /NOT 0 DRAWMODE, 0 NOT DRAWING</title></rect>
+<rect x="625.0" y="1514.0" width="181.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2797: SWITCH,</title></rect>
+<rect x="998.0" y="1514.0" width="113.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2797: 777777</title></rect>
+<rect x="1319.0" y="1514.0" width="594.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2797: /-1 SET 'A', 0 SET 'B'</title></rect>
+<rect x="680.0" y="1606.0" width="111.0" height="4.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2799: CONSTX,</title></rect>
+<rect x="1002.0" y="1607.0" width="22.0" height="3.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2799: 30</title></rect>
+<rect x="1327.0" y="1604.0" width="204.0" height="6.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2799: /+HANDSHAKE</title></rect>
+<rect x="396.0" y="1612.0" width="1136.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2800: {handwritten: solid black rectangular mark in left margin beside SEQ 619}</title></rect>
+<rect x="625.0" y="1644.0" width="181.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2801: CONSTB,</title></rect>
+<rect x="998.0" y="1644.0" width="113.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2801: 777750</title></rect>
+<rect x="1318.0" y="1644.0" width="73.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2801: /-HS</title></rect>
+<rect x="625.0" y="1709.0" width="866.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2803: CONSTC,</title></rect>
+<rect x="1969.0" y="1737.0" width="32.0" height="3.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2803: 0</title></rect>
+<rect x="625.0" y="1742.0" width="180.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2804: CONSTD,</title></rect>
+<rect x="997.0" y="1742.0" width="14.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2804: 0</title></rect>
+<rect x="1317.0" y="1742.0" width="695.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2804: /0 FOR STRAIGHT, 2 FOR RUB, 1 SAVED</title></rect>
+<rect x="625.0" y="1775.0" width="180.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2805: CONSND,</title></rect>
+<rect x="997.0" y="1775.0" width="113.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2805: 777777</title></rect>
+<rect x="1317.0" y="1775.0" width="535.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2805: /-1 IF NO 2ND INT, 0 IF YES</title></rect>
+<rect x="625.0" y="1809.0" width="161.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2806: RMODE,</title></rect>
+<rect x="838.0" y="1812.0" width="12.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2806: 0</title></rect>
+<rect x="1158.0" y="1807.0" width="293.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2806: /REQUESTED MODE</title></rect>
+<rect x="625.0" y="1841.0" width="161.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2807: CMODE,</title></rect>
+<rect x="839.0" y="1844.0" width="10.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2807: 0</title></rect>
+<rect x="1157.0" y="1840.0" width="354.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2807: /1 POIM, -1 TRACKM</title></rect>
+<rect x="625.0" y="1873.0" width="181.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2808: MBLINK,</title></rect>
+<rect x="998.0" y="1877.0" width="13.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2808: 0</title></rect>
+<rect x="625.0" y="1908.0" width="161.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2809: BLINK,</title></rect>
+<rect x="839.0" y="1908.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2809: SCRABL</title></rect>
+<rect x="625.0" y="1939.0" width="181.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2810: SCRABL,</title></rect>
+<rect x="997.0" y="1943.0" width="14.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2810: 0</title></rect>
+<rect x="1318.0" y="1938.0" width="494.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2810: /FREE REG FOR DAC I BLINK</title></rect>
+<rect x="625.0" y="1975.0" width="120.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2811: MIN,</title></rect>
+<rect x="838.0" y="1977.0" width="12.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2811: 0</title></rect>
+<rect x="625.0" y="2009.0" width="141.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2812: MOUT,</title></rect>
+<rect x="839.0" y="2012.0" width="11.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2812: 0</title></rect>
+<rect x="625.0" y="2043.0" width="120.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2813: IMC,</title></rect>
+<rect x="838.0" y="2046.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2813: 0</title></rect>
+<rect x="1157.0" y="2041.0" width="454.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2813: /INPUT MESSAGE COMPLETE</title></rect>
+<rect x="626.0" y="2144.0" width="119.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2816: WX1,</title></rect>
+<rect x="839.0" y="2147.0" width="5.0" height="16.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2816: 1</title></rect>
+<rect x="1158.0" y="2143.0" width="492.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2816: /LEFT HAND SIDE OF WINDOW</title></rect>
+<rect x="625.0" y="2165.0" width="120.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2817: WX2,</title></rect>
+<rect x="838.0" y="2165.0" width="71.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2817: 1700</title></rect>
+<rect x="1157.0" y="2165.0" width="113.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2817: /RIGHT</title></rect>
+<rect x="626.0" y="2198.0" width="119.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2818: WY1,</title></rect>
+<rect x="838.0" y="2198.0" width="8.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2818: 1</title></rect>
+<rect x="1157.0" y="2198.0" width="133.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2818: /BOTTOM</title></rect>
+<rect x="625.0" y="2230.0" width="119.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2819: WY2,</title></rect>
+<rect x="838.0" y="2230.0" width="71.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2819: 1777</title></rect>
+<rect x="1159.0" y="2243.0" width="71.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2819: /TOP</title></rect>
+</svg>

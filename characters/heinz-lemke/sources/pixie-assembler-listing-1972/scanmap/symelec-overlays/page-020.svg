@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-020.png" width="3307" height="2338"/>
+<rect x="681" y="307" width="1701" height="1997" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="22.0" cy="242.0" r="17.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.5" cy="286.5" r="20.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="22.0" cy="320.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="21.5" cy="353.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.0" cy="380.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="22.0" cy="417.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="55.0" cy="487.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="21.0" cy="519.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="55.0" cy="713.0" r="42.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.0" cy="786.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.5" cy="873.0" r="38.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="21.5" cy="942.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.0" cy="977.5" r="20.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="21.0" cy="1011.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.0" cy="1081.0" r="24.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="21.0" cy="1145.0" r="21.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.5" cy="1186.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.5" cy="1241.0" r="21.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.5" cy="1297.5" r="20.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.5" cy="1391.0" r="31.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.0" cy="1488.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.5" cy="1584.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="79.5" cy="1629.0" r="30.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.5" cy="1688.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.0" cy="1785.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.5" cy="1885.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.0" cy="1985.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.5" cy="2086.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.5" cy="2187.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.5" cy="2285.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="863.0" y="332.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1015: CMA</title></rect>
+<rect x="1182.0" y="333.0" width="414.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1015: /OLD > NEW ERASE ELEM</title></rect>
+<rect x="863.0" y="367.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1016: TAD XBM</title></rect>
+<rect x="862.0" y="401.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1017: SMA</title></rect>
+<rect x="863.0" y="433.0" width="130.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1018: JMP . 3</title></rect>
+<rect x="862.0" y="464.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1019: DZM CON1</title></rect>
+<rect x="861.0" y="497.0" width="154.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1020: JMP SEGX</title></rect>
+<rect x="1341.0" y="499.0" width="254.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1020: /ERASE SYMBOL</title></rect>
+<rect x="862.0" y="529.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1021: LAC XBMO</title></rect>
+<rect x="861.0" y="564.0" width="153.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1022: TAD (100</title></rect>
+<rect x="862.0" y="592.0" width="571.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1023: DAC ENOEX</title></rect>
+<rect x="862.0" y="631.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1024: TAD (4</title></rect>
+<rect x="1021.0" y="631.0" width="353.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1024: /PREVENT ZERO LINE</title></rect>
+<rect x="860.0" y="665.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1025: CMA</title></rect>
+<rect x="862.0" y="697.0" width="109.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1026: TAD (1</title></rect>
+<rect x="861.0" y="729.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1027: TAD XBM</title></rect>
+<rect x="860.0" y="764.0" width="51.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1028: SPA</title></rect>
+<rect x="859.0" y="797.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1029: JMP PEN1</title></rect>
+<rect x="1339.0" y="799.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1029: /NO ACTION</title></rect>
+<rect x="860.0" y="832.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1030: JMS SAVTEM</title></rect>
+<rect x="1179.0" y="833.0" width="494.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1030: /SAVE SYMBOL AND ADD LINE</title></rect>
+<rect x="859.0" y="865.0" width="172.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1031: LAW 17776</title></rect>
+<rect x="859.0" y="899.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1032: TAD CON</title></rect>
+<rect x="859.0" y="933.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1033: SMA</title></rect>
+<rect x="860.0" y="965.0" width="131.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1034: JMP . 4</title></rect>
+<rect x="859.0" y="1031.0" width="172.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1036: LAC ENOEX</title></rect>
+<rect x="859.0" y="1064.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1037: TAD PNTX</title></rect>
+<rect x="859.0" y="1098.0" width="132.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1038: JMP . 5</title></rect>
+<rect x="858.0" y="1125.0" width="172.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1039: LAC ENOEX</title></rect>
+<rect x="857.0" y="1166.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1040: CMA</title></rect>
+<rect x="858.0" y="1199.0" width="110.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1041: TAD (1</title></rect>
+<rect x="857.0" y="1232.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1042: TAD PNTX</title></rect>
+<rect x="857.0" y="1297.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1044: DAC PNTX</title></rect>
+<rect x="857.0" y="1333.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1045: JMS SXY</title></rect>
+<rect x="857.0" y="1366.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1046: JMP SEGX</title></rect>
+<rect x="696.0" y="1431.0" width="108.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1048: SEGEY,</title></rect>
+<rect x="857.0" y="1432.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1048: JMS SXY</title></rect>
+<rect x="1337.0" y="1433.0" width="493.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1048: /TAKE OLD AND NEW YBM, IF</title></rect>
+<rect x="856.0" y="1458.0" width="733.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1049: LAC YBMO</title></rect>
+<rect x="1760.0" y="1458.0" width="3.0" height="4.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1049: /OLD > NEW ERASE ELEM</title></rect>
+<rect x="856.0" y="1500.0" width="178.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1050: CMA</title></rect>
+<rect x="855.0" y="1531.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1051: TAD YBM</title></rect>
+<rect x="855.0" y="1566.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1052: SMA</title></rect>
+<rect x="855.0" y="1599.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1053: JMP . 3</title></rect>
+<rect x="855.0" y="1625.0" width="150.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1054: DZM CON1</title></rect>
+<rect x="856.0" y="1666.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1055: JMP SEGY</title></rect>
+<rect x="854.0" y="1699.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1056: LAC YBMO</title></rect>
+<rect x="853.0" y="1732.0" width="154.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1057: TAD (100</title></rect>
+<rect x="854.0" y="1765.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1058: DAC ENOEY</title></rect>
+<rect x="854.0" y="1799.0" width="112.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1059: TAD (4</title></rect>
+<rect x="853.0" y="1833.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1060: CMA</title></rect>
+<rect x="854.0" y="1867.0" width="110.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1061: TAD (1</title></rect>
+<rect x="854.0" y="1903.0" width="132.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1062: TAD YBM</title></rect>
+<rect x="853.0" y="1936.0" width="998.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1063: SPA</title></rect>
+<rect x="855.0" y="1964.0" width="584.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1064: JMP PEN1</title></rect>
+<rect x="854.0" y="1991.0" width="191.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1065: JMS SAVTEM</title></rect>
+<rect x="853.0" y="2024.0" width="131.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1066: LAC CON</title></rect>
+<rect x="852.0" y="2068.0" width="110.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1067: SAD (1</title></rect>
+<rect x="851.0" y="2090.0" width="134.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1068: JMP . 4</title></rect>
+<rect x="1173.0" y="2103.0" width="352.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1068: /PREVENT ZERO LINE</title></rect>
+<rect x="851.0" y="2124.0" width="173.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1069: LAC ENOEY</title></rect>
+<rect x="853.0" y="2157.0" width="152.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1070: TAD PNTY</title></rect>
+<rect x="854.0" y="2203.0" width="129.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1071: JMP . 5</title></rect>
+<rect x="851.0" y="2224.0" width="173.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1072: LAC ENOEY</title></rect>
+</svg>

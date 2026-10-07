@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-115.png" width="3307" height="2338"/>
+<rect x="1217" y="166" width="1680" height="1993" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="646.5" cy="1512.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1217.0" y="285.0" width="1532.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 126: GETSP=JMS, 0</title></rect>
+<rect x="1375.0" y="318.0" width="112.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 127: DAC OP</title></rect>
+<rect x="1375.0" y="351.0" width="1113.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 128: LAC EL1</title></rect>
+<rect x="1375.0" y="384.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 129: DAC I OP</title></rect>
+<rect x="1695.0" y="384.0" width="792.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 129: /IN CASE OF IMMEDIATE GARBAGE COLLECTION</title></rect>
+<rect x="1375.0" y="417.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 130: LAC FREE</title></rect>
+<rect x="1375.0" y="452.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 131: SAD END</title></rect>
+<rect x="1377.0" y="485.0" width="131.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 132: JMS LIM</title></rect>
+<rect x="1695.0" y="484.0" width="314.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 132: /GARBAGE COLLECT</title></rect>
+<rect x="1376.0" y="519.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 133: TAD (JMS</title></rect>
+<rect x="1377.0" y="551.0" width="149.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 134: DAC OP 1</title></rect>
+<rect x="1377.0" y="586.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 135: DAC I OP</title></rect>
+<rect x="1377.0" y="617.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 136: LAC I FREE</title></rect>
+<rect x="1377.0" y="651.0" width="191.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 137: AND (17777</title></rect>
+<rect x="1377.0" y="686.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 138: DAC FREE</title></rect>
+<rect x="1377.0" y="719.0" width="581.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 139: LAC (JMS</title></rect>
+<rect x="1377.0" y="751.0" width="189.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 140: DAC I OP 1</title></rect>
+<rect x="1697.0" y="750.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 140: /SET NIL</title></rect>
+<rect x="1377.0" y="783.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 141: FLST</title></rect>
+<rect x="1697.0" y="783.0" width="252.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 141: /FREE AN ITEM</title></rect>
+<rect x="1377.0" y="817.0" width="149.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 142: LAC OP+1</title></rect>
+<rect x="1378.0" y="850.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 143: DAC I OP</title></rect>
+<rect x="1698.0" y="849.0" width="233.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 143: /ATTACH NAME</title></rect>
+<rect x="1379.0" y="883.0" width="210.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 144: AND I GETSP</title></rect>
+<rect x="1219.0" y="950.0" width="330.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 146: INIT=JMS, 0</title></rect>
+<rect x="1379.0" y="983.0" width="91.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 147: GETSP</title></rect>
+<rect x="1378.0" y="1018.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 148: LAC OP</title></rect>
+<rect x="1379.0" y="1051.0" width="208.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 149: DAC I TOP 1</title></rect>
+<rect x="1380.0" y="1082.0" width="167.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 150: ISZ TOP 1</title></rect>
+<rect x="1378.0" y="1117.0" width="133.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 151: LAC TOP</title></rect>
+<rect x="1379.0" y="1150.0" width="169.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 152: SAD TOP 1</title></rect>
+<rect x="1379.0" y="1183.0" width="133.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 153: JMS ERR</title></rect>
+<rect x="1859.0" y="1182.0" width="453.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 153: /NO ROOM FOR MORE NAMES</title></rect>
+<rect x="1379.0" y="1219.0" width="150.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 154: LAC OP+1</title></rect>
+<rect x="1380.0" y="1251.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 155: AND I INIT</title></rect>
+<rect x="1219.0" y="1351.0" width="210.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 158: CDR = JMS .</title></rect>
+<rect x="1380.0" y="1387.0" width="11.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 159: 0</title></rect>
+<rect x="1380.0" y="1415.0" width="151.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 160: JMS OP-5</title></rect>
+<rect x="1699.0" y="1414.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 160: /SAVE NAME</title></rect>
+<rect x="1380.0" y="1451.0" width="110.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 161: TAD (1</title></rect>
+<rect x="1379.0" y="1483.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 162: DAC OP 6</title></rect>
+<rect x="1699.0" y="1481.0" width="312.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 162: /IN CASE NONITEM</title></rect>
+<rect x="1380.0" y="1515.0" width="91.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 163: CAR 7</title></rect>
+<rect x="1699.0" y="1514.0" width="394.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 163: /TRUE ADDRESS OF CDR</title></rect>
+<rect x="1380.0" y="1549.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 164: LAC (JMS</title></rect>
+<rect x="1381.0" y="1584.0" width="190.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 165: SAD I OP 1</title></rect>
+<rect x="1381.0" y="1614.0" width="51.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 166: SKP</title></rect>
+<rect x="1701.0" y="1614.0" width="312.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 166: /HERE IF CDR NIL</title></rect>
+<rect x="1383.0" y="1650.0" width="129.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 167: JMP . 4</title></rect>
+<rect x="1381.0" y="1683.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 168: LAC OP 6</title></rect>
+<rect x="1381.0" y="1717.0" width="149.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 169: DAC OP 1</title></rect>
+<rect x="1381.0" y="1751.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 170: FLST</title></rect>
+<rect x="1381.0" y="1783.0" width="149.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 171: LAC OP 1</title></rect>
+<rect x="1381.0" y="1814.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 172: DAC I OP</title></rect>
+<rect x="1701.0" y="1813.0" width="233.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 172: /ATTACH NAME</title></rect>
+<rect x="1381.0" y="1850.0" width="112.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 173: LAC OP</title></rect>
+<rect x="1382.0" y="1882.0" width="1326.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 174: JMP I CDR=JMS</title></rect>
+<rect x="1221.0" y="1985.0" width="209.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 177: CAR = JMS .</title></rect>
+<rect x="1382.0" y="2018.0" width="11.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 178: 0</title></rect>
+<rect x="1383.0" y="2049.0" width="150.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 179: JMS OP-5</title></rect>
+<rect x="1382.0" y="2083.0" width="189.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 180: LAC I OP+1</title></rect>
+</svg>

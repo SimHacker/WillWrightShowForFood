@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-090.png" width="3307" height="2338"/>
+<rect x="655" y="306" width="1799" height="1995" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="59.5" cy="187.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="485.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="586.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="679.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="779.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="881.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="983.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1082.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1189.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1487.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1587.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="88.0" cy="1644.5" r="32.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1687.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1786.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1885.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1984.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="2084.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="2186.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="2287.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="837.0" y="325.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4975: CDR</title></rect>
+<rect x="836.0" y="359.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4976: CDR</title></rect>
+<rect x="836.0" y="393.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4977: LAC I SUBP</title></rect>
+<rect x="837.0" y="428.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4978: AND (370</title></rect>
+<rect x="1156.0" y="425.0" width="273.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4978: /TEST IF BASIC</title></rect>
+<rect x="835.0" y="461.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4979: SNA</title></rect>
+<rect x="837.0" y="495.0" width="130.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4980: JMP .+6</title></rect>
+<rect x="836.0" y="527.0" width="93.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4981: LAC X</title></rect>
+<rect x="995.0" y="525.0" width="414.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4981: /ATNAME OF BASIC SUBP</title></rect>
+<rect x="837.0" y="560.0" width="982.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4982: AND (17777</title></rect>
+<rect x="837.0" y="591.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4983: DAC I SYM</title></rect>
+<rect x="1157.0" y="591.0" width="275.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4983: /TO SYM</title></rect>
+<rect x="836.0" y="626.0" width="134.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4984: LAW SYM</title></rect>
+<rect x="837.0" y="659.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4985: CDR</title></rect>
+<rect x="837.0" y="693.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4986: LAW SUBP</title></rect>
+<rect x="836.0" y="727.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4987: CDR</title></rect>
+<rect x="1156.0" y="725.0" width="293.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4987: /FLEA INTO DATA</title></rect>
+<rect x="836.0" y="759.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4988: LAC I SUBP</title></rect>
+<rect x="837.0" y="793.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4989: SAD (10000</title></rect>
+<rect x="836.0" y="827.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4990: SKP</title></rect>
+<rect x="1156.0" y="824.0" width="313.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4990: /SKIP CATALOGUED</title></rect>
+<rect x="836.0" y="859.0" width="171.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4991: JMP COMP1</title></rect>
+<rect x="837.0" y="893.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4992: LAC TEMP2</title></rect>
+<rect x="837.0" y="928.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4993: SNA</title></rect>
+<rect x="997.0" y="924.0" width="634.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4993: /REMOVE INST IF STARTS OFFSCREEN</title></rect>
+<rect x="838.0" y="961.0" width="131.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4994: JMP .+7</title></rect>
+<rect x="677.0" y="995.0" width="128.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4995: COMP14,</title></rect>
+<rect x="997.0" y="993.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4995: LAC ALPHA</title></rect>
+<rect x="1317.0" y="990.0" width="634.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4995: /REMOVE INST IF STARTS OFFSCREEN</title></rect>
+<rect x="837.0" y="1028.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4996: DAC DF</title></rect>
+<rect x="838.0" y="1061.0" width="209.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4997: TAD (360001</title></rect>
+<rect x="838.0" y="1095.0" width="72.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4998: WRDF</title></rect>
+<rect x="997.0" y="1091.0" width="534.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4998: /DDS .*1 FOR NULL INSTANCE</title></rect>
+<rect x="838.0" y="1127.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4999: ISZ DF</title></rect>
+<rect x="837.0" y="1159.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5000: EXIT</title></rect>
+<rect x="837.0" y="1193.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5001: LAW SUBP</title></rect>
+<rect x="837.0" y="1226.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5002: CDR</title></rect>
+<rect x="837.0" y="1293.0" width="210.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5004: LAC (660001</title></rect>
+<rect x="1157.0" y="1289.0" width="434.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5004: /ADDRESS IN BLOCK DATA</title></rect>
+<rect x="837.0" y="1324.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5005: TAD I SUBP</title></rect>
+<rect x="838.0" y="1357.0" width="191.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5006: DAC I BETA</title></rect>
+<rect x="1157.0" y="1356.0" width="353.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5006: /DJS ALPHA IN BETA</title></rect>
+<rect x="837.0" y="1424.0" width="153.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5008: LAW SUBP</title></rect>
+<rect x="837.0" y="1457.0" width="53.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5009: CDR</title></rect>
+<rect x="837.0" y="1492.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5010: LAC I SUBP</title></rect>
+<rect x="838.0" y="1525.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5011: JMS NEG</title></rect>
+<rect x="838.0" y="1559.0" width="173.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5012: FAD XBEAM</title></rect>
+<rect x="838.0" y="1593.0" width="91.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5013: DAC U</title></rect>
+<rect x="837.0" y="1625.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5014: LAW SUBP</title></rect>
+<rect x="837.0" y="1658.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5015: CDR</title></rect>
+<rect x="837.0" y="1691.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5016: LAC I SUBP</title></rect>
+<rect x="838.0" y="1725.0" width="131.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5017: JMS NEG</title></rect>
+<rect x="838.0" y="1758.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5018: FAD YBEAM</title></rect>
+<rect x="838.0" y="1793.0" width="91.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5019: DAC V</title></rect>
+<rect x="837.0" y="1823.0" width="538.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5020: LOCATE</title></rect>
+<rect x="837.0" y="1860.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5021: SZA</title></rect>
+<rect x="839.0" y="1892.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5022: JMP COMP14</title></rect>
+<rect x="1158.0" y="1888.0" width="594.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5022: /REMOVE INST IF GOES OFFSCREEN</title></rect>
+<rect x="837.0" y="1927.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5023: LAC U</title></rect>
+<rect x="838.0" y="1961.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5024: DAC XBEAM</title></rect>
+<rect x="838.0" y="1996.0" width="92.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5025: LAC V</title></rect>
+<rect x="838.0" y="2029.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5026: DAC YBEAM</title></rect>
+<rect x="839.0" y="2096.0" width="72.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5028: EXIT</title></rect>
+<rect x="678.0" y="2128.0" width="108.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5029: COMP1,</title></rect>
+<rect x="838.0" y="2127.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5029: LAW GRHA</title></rect>
+<rect x="839.0" y="2160.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5030: ENTER</title></rect>
+<rect x="839.0" y="2195.0" width="92.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5031: LAW X</title></rect>
+<rect x="838.0" y="2228.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5032: LAW COMP2</title></rect>
+</svg>

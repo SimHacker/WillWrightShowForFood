@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-108.png" width="3307" height="2338"/>
+<rect x="1065" y="272" width="1409" height="598" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="57.5" cy="150.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="193.5" cy="246.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.0" cy="348.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="448.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="548.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="647.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="747.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="847.5" r="16.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="947.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1047.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="170.5" cy="1147.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1248.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1348.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1447.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="1547.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="105.0" cy="1600.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="1647.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1748.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1849.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="563.5" y="756.9" width="1516.1" height="29.3" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 6070: {handwritten: 12257 octal to binary: 12257 == -> 1010010101111}</title></rect>
+<rect x="563.7" y="790.1" width="1756.8" height="29.3" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 6071: {handwritten: bit arrows to decimal: 4096, 1024, 128, 32, 15; sum = 5295}</title></rect>
+</svg>

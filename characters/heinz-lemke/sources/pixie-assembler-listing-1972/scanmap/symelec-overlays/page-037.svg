@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-037.png" width="3307" height="2338"/>
+<rect x="1220" y="181" width="1797" height="1993" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="601.5" cy="51.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.5" cy="151.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="598.0" cy="251.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="352.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="618.5" cy="451.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.5" cy="552.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.0" cy="651.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.5" cy="752.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.0" cy="850.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="626.5" cy="949.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="1049.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1149.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1248.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1349.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1449.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="653.0" cy="1498.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1547.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1649.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1747.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1849.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1951.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="2049.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="2151.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1393.0" y="203.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2014: SAD OP+3</title></rect>
+<rect x="1394.0" y="237.0" width="73.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2015: EXIT</title></rect>
+<rect x="1395.0" y="267.0" width="251.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2016: ISZ ENTER-JMS</title></rect>
+<rect x="1713.0" y="269.0" width="232.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2016: / MOVE TO F1</title></rect>
+<rect x="1393.0" y="303.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2017: LAW</title></rect>
+<rect x="1394.0" y="335.0" width="190.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2018: AND I OP+1</title></rect>
+<rect x="1393.0" y="369.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2019: SAD (JMS</title></rect>
+<rect x="1394.0" y="402.0" width="251.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2020: ISZ ENTER-JMS</title></rect>
+<rect x="1713.0" y="403.0" width="534.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2020: / MOVE TO F2 IF RINGPOINTER</title></rect>
+<rect x="1392.0" y="435.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2021: JMS LKTEST</title></rect>
+<rect x="1393.0" y="469.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2022: LAC OP+3</title></rect>
+<rect x="1393.0" y="501.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2023: DAC I LINK</title></rect>
+<rect x="1712.0" y="502.0" width="415.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2023: / KEEP STARTING-POINT</title></rect>
+<rect x="1393.0" y="533.0" width="292.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2024: XCT I ENTER-JMS</title></rect>
+<rect x="1873.0" y="535.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2024: / PICK UP</title></rect>
+<rect x="1393.0" y="567.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2025: ENTER</title></rect>
+<rect x="1712.0" y="569.0" width="13.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2025: /</title></rect>
+<rect x="1812.0" y="568.0" width="393.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2025: AND EXECUTE FUNCTION</title></rect>
+<rect x="1392.0" y="602.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2026: LAC I LINK</title></rect>
+<rect x="1392.0" y="635.0" width="151.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2027: DAC OP+3</title></rect>
+<rect x="1711.0" y="637.0" width="474.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2027: / PICK UP STARTING-POINT</title></rect>
+<rect x="1392.0" y="669.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2028: CLC</title></rect>
+<rect x="1391.0" y="704.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2029: TAD LINK</title></rect>
+<rect x="1392.0" y="737.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2030: DAC LINK</title></rect>
+<rect x="1391.0" y="769.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2031: LAC I LINK</title></rect>
+<rect x="1391.0" y="801.0" width="252.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2032: DAC ENTER-JMS</title></rect>
+<rect x="1391.0" y="835.0" width="292.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2033: XCT I ENTER-JMS</title></rect>
+<rect x="1970.0" y="835.0" width="114.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2033: /AND X</title></rect>
+<rect x="1390.0" y="867.0" width="131.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2034: JMP GR1</title></rect>
+<rect x="1229.0" y="999.0" width="1232.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2038: / GO ROUND RING FINDING NEXT ADDRESS BEFORE APPLYING FUNCTION.</title></rect>
+<rect x="1229.0" y="1032.0" width="1152.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2039: / STORE CAR(X), EXECUTE F, AND THEN SET X TO STORED VALUE.</title></rect>
+<rect x="1229.0" y="1067.0" width="370.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2040: / CALL AS FOR GRRA.</title></rect>
+<rect x="1229.0" y="1135.0" width="89.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2042: GRRB,</title></rect>
+<rect x="1390.0" y="1135.0" width="293.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2042: XCT I ENTER-JMS</title></rect>
+<rect x="1869.0" y="1136.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2042: / X</title></rect>
+<rect x="1389.0" y="1169.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2043: CAR</title></rect>
+<rect x="1709.0" y="1170.0" width="293.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2043: / MISS THIS ONE</title></rect>
+<rect x="1389.0" y="1203.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2044: LAC OP+1</title></rect>
+<rect x="1389.0" y="1236.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2045: DAC OP+3</title></rect>
+<rect x="1709.0" y="1236.0" width="292.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2045: / CONTENTS OF X</title></rect>
+<rect x="1228.0" y="1269.0" width="69.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2046: GR2,</title></rect>
+<rect x="1389.0" y="1269.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2046: LAW</title></rect>
+<rect x="1389.0" y="1302.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2047: AND I OP+3</title></rect>
+<rect x="1388.0" y="1334.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2048: SAD (DZM</title></rect>
+<rect x="1389.0" y="1368.0" width="72.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2049: EXIT</title></rect>
+<rect x="1388.0" y="1400.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2050: LAW OP+3</title></rect>
+<rect x="1387.0" y="1435.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2051: CAR</title></rect>
+<rect x="1388.0" y="1469.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2052: JMS LKTEST</title></rect>
+<rect x="1387.0" y="1501.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2053: LAC OP+3</title></rect>
+<rect x="1387.0" y="1535.0" width="192.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2054: DAC I LINK</title></rect>
+<rect x="1388.0" y="1567.0" width="252.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2055: ISZ ENTER-JMS</title></rect>
+<rect x="1387.0" y="1599.0" width="292.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2056: XCT I ENTER-JMS</title></rect>
+<rect x="1387.0" y="1633.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2057: ENTER</title></rect>
+<rect x="1386.0" y="1663.0" width="1648.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2058: LAC I LINK</title></rect>
+<rect x="1386.0" y="1702.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2059: DAC OP+3</title></rect>
+<rect x="1385.0" y="1735.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2060: CLC</title></rect>
+<rect x="1386.0" y="1769.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2061: TAD LINK</title></rect>
+<rect x="1385.0" y="1803.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2062: DAC LINK</title></rect>
+<rect x="1385.0" y="1835.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2063: LAC I OP+3</title></rect>
+<rect x="1385.0" y="1869.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2064: SPA</title></rect>
+<rect x="1385.0" y="1901.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2065: EXIT</title></rect>
+<rect x="1705.0" y="1902.0" width="414.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2065: / IF HAS BEEN DELETED</title></rect>
+<rect x="1384.0" y="1935.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2066: LAC I LINK</title></rect>
+<rect x="1385.0" y="1970.0" width="252.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2067: DAC ENTER-JMS</title></rect>
+<rect x="1385.0" y="2005.0" width="292.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2068: XCT I ENTER-JMS</title></rect>
+<rect x="1384.0" y="2035.0" width="968.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2069: DAC OP</title></rect>
+<rect x="1383.0" y="2069.0" width="1034.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2070: LAC OP+3</title></rect>
+<rect x="1384.0" y="2103.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2071: DAC I OP</title></rect>
+</svg>

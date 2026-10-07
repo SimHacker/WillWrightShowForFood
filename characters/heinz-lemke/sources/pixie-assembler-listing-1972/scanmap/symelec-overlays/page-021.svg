@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-021.png" width="3307" height="2338"/>
+<rect x="1161" y="189" width="2101" height="1992" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="609.5" cy="62.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="681.0" cy="159.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="681.0" cy="263.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="363.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="462.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="564.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="762.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="862.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="962.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1060.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1161.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1261.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1359.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="1458.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="697.5" cy="1508.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1558.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1658.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="686.0" cy="1757.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="686.5" cy="1856.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="684.0" cy="1958.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="684.0" cy="2056.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.5" cy="2159.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1165.0" y="207.0" width="2075.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1075: CMA</title></rect>
+<rect x="1164.0" y="240.0" width="2091.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1076: TAD (1</title></rect>
+<rect x="1163.0" y="273.0" width="375.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1077: TAD PNTY</title></rect>
+<rect x="1163.0" y="306.0" width="2080.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1078: DAC PNTY</title></rect>
+<rect x="1163.0" y="340.0" width="2092.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1079: JMS SXY</title></rect>
+<rect x="1163.0" y="373.0" width="375.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1080: JMP SEGY</title></rect>
+<rect x="1165.0" y="573.0" width="148.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1086: CSEV,</title></rect>
+<rect x="1385.0" y="572.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1086: LAC SEVCLB</title></rect>
+<rect x="1164.0" y="606.0" width="374.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1087: JMP CELE</title></rect>
+<rect x="1164.0" y="675.0" width="150.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1089: CEIG,</title></rect>
+<rect x="1385.0" y="673.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1089: LAC EIGCLB</title></rect>
+<rect x="1164.0" y="707.0" width="374.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1090: JMP CELE</title></rect>
+<rect x="1165.0" y="740.0" width="413.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1091: CFST,</title></rect>
+<rect x="3227.0" y="738.0" width="29.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1091: LAC FSTCLB</title></rect>
+<rect x="1165.0" y="773.0" width="374.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1092: JMP CELE</title></rect>
+<rect x="1164.0" y="838.0" width="414.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1094: CSND,</title></rect>
+<rect x="3227.0" y="838.0" width="30.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1094: LAC SNDCLB</title></rect>
+<rect x="1164.0" y="871.0" width="375.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1095: JMP CELE</title></rect>
+<rect x="1164.0" y="939.0" width="414.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1097: CTRD,</title></rect>
+<rect x="3228.0" y="937.0" width="29.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1097: LAC TRDCLB</title></rect>
+<rect x="1165.0" y="970.0" width="374.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1098: JMP CELE</title></rect>
+<rect x="1165.0" y="1037.0" width="414.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1100: CFIF,</title></rect>
+<rect x="3229.0" y="1037.0" width="26.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1100: LAC FIFCLB</title></rect>
+<rect x="1165.0" y="1070.0" width="374.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1101: JMP CELE</title></rect>
+<rect x="1165.0" y="1138.0" width="414.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1103: CSIX,</title></rect>
+<rect x="3229.0" y="1136.0" width="28.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1103: LAC SIXCLB</title></rect>
+<rect x="1165.0" y="1173.0" width="374.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1104: JMP CELE</title></rect>
+<rect x="1166.0" y="1239.0" width="413.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1106: CFOU,</title></rect>
+<rect x="3230.0" y="1236.0" width="27.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1106: LAC FOUCLB</title></rect>
+<rect x="1165.0" y="1273.0" width="374.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1107: JMP CELE</title></rect>
+<rect x="1165.0" y="1337.0" width="535.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1109: STXBMO,</title></rect>
+<rect x="2026.0" y="1336.0" width="756.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1109: STSPST 0</title></rect>
+<rect x="3231.0" y="1336.0" width="26.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1109: /BOTTOM OF STACK FOR OLD XBM OF SYMBOL</title></rect>
+<rect x="1166.0" y="1371.0" width="189.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1110: STYBMO,</title></rect>
+<rect x="1547.0" y="1370.0" width="174.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1110: STSPST 20</title></rect>
+<rect x="1867.0" y="1369.0" width="51.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1110: / "</title></rect>
+<rect x="1165.0" y="1403.0" width="190.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1111: STSPST,</title></rect>
+<rect x="1547.0" y="1405.0" width="13.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1111: 0</title></rect>
+<rect x="1867.0" y="1402.0" width="273.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1111: /SPECIAL STACK</title></rect>
+<rect x="1226.0" y="1435.0" width="2031.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1112: /WATCH THE END OF THIS STACK</title></rect>
+<rect x="1227.0" y="1505.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1114: NODISP</title></rect>
+<rect x="1228.0" y="1572.0" width="90.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1116: 1701/</title></rect>
+<rect x="1227.0" y="1671.0" width="233.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1119: /LTPIX/RELOC</title></rect>
+<rect x="1388.0" y="1767.0" width="908.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1122: / LINK TRANSFER ROUTINE FOR PIXIE (PDP7-TITAN)</title></rect>
+<rect x="1166.0" y="1839.0" width="275.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1124: LTPX,</title></rect>
+<rect x="3234.0" y="1834.0" width="23.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1124: HLT</title></rect>
+<rect x="1167.0" y="1869.0" width="334.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1125: DZM SW</title></rect>
+<rect x="2028.0" y="1867.0" width="415.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1125: / note first blocklet</title></rect>
+<rect x="1167.0" y="1905.0" width="274.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1126: IOF</title></rect>
+<rect x="1167.0" y="1933.0" width="2092.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1127: LCF</title></rect>
+<rect x="1167.0" y="1975.0" width="109.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1128: TX,</title></rect>
+<rect x="1388.0" y="1973.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1128: LAW 4</title></rect>
+<rect x="1228.0" y="2033.0" width="2031.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1130: / READ 4 BLOCKLET HEADERS FROM TITAN</title></rect>
+<rect x="1167.0" y="2104.0" width="373.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1132: TH,</title></rect>
+<rect x="2218.0" y="2120.0" width="2.0" height="3.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1132: LKE!LLB6</title></rect>
+</svg>

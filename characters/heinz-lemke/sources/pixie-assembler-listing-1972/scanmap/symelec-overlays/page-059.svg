@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-059.png" width="3307" height="2338"/>
+<rect x="1225" y="192" width="1787" height="1980" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="618.5" cy="50.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="151.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="251.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="351.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="451.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="551.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="651.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="751.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="851.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="950.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1050.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1149.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1248.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1349.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1448.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="651.5" cy="1511.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1649.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1954.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.5" cy="2055.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.5" cy="2155.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1391.0" y="210.0" width="593.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3266: LAC (34117</title></rect>
+<rect x="1392.0" y="242.0" width="172.0" height="15.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3267: DAC I DFB</title></rect>
+<rect x="1711.0" y="242.0" width="274.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3267: /ENABLE PERMDF</title></rect>
+<rect x="1391.0" y="307.0" width="173.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3269: DAC TRACK</title></rect>
+<rect x="1711.0" y="307.0" width="394.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3269: /ENABLE CONTROL LB'S</title></rect>
+<rect x="1391.0" y="340.0" width="194.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3270: LAC DRAWMO</title></rect>
+<rect x="1711.0" y="340.0" width="353.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3270: /SERVES LB F AND S</title></rect>
+<rect x="1391.0" y="373.0" width="52.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3271: SNA</title></rect>
+<rect x="1390.0" y="405.0" width="133.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3272: JMP , 5</title></rect>
+<rect x="1391.0" y="437.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3273: LAC (JMP FD</title></rect>
+<rect x="1391.0" y="470.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3274: DAC LBD 4</title></rect>
+<rect x="1391.0" y="503.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3275: DAC LBSF</title></rect>
+<rect x="1390.0" y="537.0" width="133.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3276: JMP , 4</title></rect>
+<rect x="1390.0" y="570.0" width="213.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3277: LAC (JMP SD</title></rect>
+<rect x="1391.0" y="603.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3278: DAC LBD 4</title></rect>
+<rect x="1390.0" y="637.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3279: DAC LBSF</title></rect>
+<rect x="1390.0" y="703.0" width="132.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3281: LAC LBD</title></rect>
+<rect x="1389.0" y="737.0" width="174.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3282: SAD ERAST</title></rect>
+<rect x="1709.0" y="737.0" width="374.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3282: /NOT EXTENDED PIXIE</title></rect>
+<rect x="1389.0" y="771.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3283: SKP</title></rect>
+<rect x="1391.0" y="805.0" width="188.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3284: JMS SERSWI</title></rect>
+<rect x="1391.0" y="872.0" width="172.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3286: JMS SETCL</title></rect>
+<rect x="1391.0" y="937.0" width="210.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3288: JMP I CLOCK</title></rect>
+<rect x="1229.0" y="1037.0" width="91.0" height="15.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3291: EDGEV,</title></rect>
+<rect x="1389.0" y="1040.0" width="11.0" height="12.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3291: 0</title></rect>
+<rect x="1711.0" y="1037.0" width="470.0" height="15.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3291: /VERTICAL EDGE VIOLATION</title></rect>
+<rect x="1235.0" y="1054.0" width="945.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3292: LAC 3</title></rect>
+<rect x="1389.0" y="1087.0" width="90.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3293: SNA</title></rect>
+<rect x="1388.0" y="1119.0" width="132.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3294: JMP , 6</title></rect>
+<rect x="1712.0" y="1135.0" width="591.0" height="14.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3294: /START TEMPDF IF PDF HITS EDGE</title></rect>
+<rect x="1389.0" y="1152.0" width="912.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3295: LAC TEMPY</title></rect>
+<rect x="1452.1" y="1184.5" width="66.9" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3296: SZA</title></rect>
+<rect x="2053.8" y="1184.5" width="624.0" height="29.1" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3296: /IF ZERO THEN SET HIGH VALUE</title></rect>
+<rect x="1388.0" y="1216.0" width="203.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3297: LAW 16250</title></rect>
+<rect x="1629.0" y="1216.0" width="473.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3297: /ELSE SET LOW VALUE</title></rect>
+<rect x="1388.0" y="1249.0" width="694.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3298: TAD (221640</title></rect>
+<rect x="1388.0" y="1281.0" width="213.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3299: DAC YCROSS</title></rect>
+<rect x="1388.0" y="1314.0" width="193.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3300: LAW LB</title></rect>
+<rect x="1388.0" y="1346.0" width="112.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3301: IDLA</title></rect>
+<rect x="1389.0" y="1379.0" width="211.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3302: JMP I EDGEV</title></rect>
+<rect x="1227.0" y="1467.0" width="92.0" height="7.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3304: EDGEH,</title></rect>
+<rect x="1388.0" y="1470.0" width="9.0" height="4.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3304: 0</title></rect>
+<rect x="1715.0" y="1465.0" width="506.0" height="9.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3304: /HORIZONTOL EDGE VIOLATION</title></rect>
+<rect x="945.0" y="1476.0" width="1274.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3305: {handwritten: solid black rectangular mark in left margin beside SEQ 326-327}</title></rect>
+<rect x="1387.0" y="1509.0" width="92.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3306: LAC 3</title></rect>
+<rect x="1387.0" y="1541.0" width="51.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3307: SNA</title></rect>
+<rect x="1387.0" y="1574.0" width="132.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3308: JMP , 6</title></rect>
+<rect x="1387.0" y="1606.0" width="172.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3309: LAC TEMPX</title></rect>
+<rect x="1387.0" y="1639.0" width="52.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3310: SZA</title></rect>
+<rect x="1386.0" y="1671.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3311: LAW 16250</title></rect>
+<rect x="1387.0" y="1703.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3312: TAD (101640</title></rect>
+<rect x="1386.0" y="1736.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3313: DAC XCROSS</title></rect>
+<rect x="1386.0" y="1769.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3314: LAW LB</title></rect>
+<rect x="1386.0" y="1803.0" width="71.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3315: IDLA</title></rect>
+<rect x="1387.0" y="1837.0" width="211.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3316: JMP I EDGEH</title></rect>
+<rect x="1225.0" y="1941.0" width="108.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3319: POSCR,</title></rect>
+<rect x="1385.0" y="1943.0" width="12.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3319: 0</title></rect>
+<rect x="1327.0" y="1963.0" width="231.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3320: LAC TEMPY</title></rect>
+<rect x="1385.0" y="2004.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3321: AND (1777</title></rect>
+<rect x="1385.0" y="2028.0" width="212.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3322: TAD (220000</title></rect>
+<rect x="1385.0" y="2071.0" width="192.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3323: DAC YCROSS</title></rect>
+<rect x="1385.0" y="2103.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3324: AND GRID</title></rect>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-018.png" width="3307" height="2338"/>
+<rect x="697" y="313" width="1695" height="1996" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<rect x="873.0" y="333.0" width="190.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 895: JMP WAIT91</title></rect>
+<rect x="711.0" y="436.0" width="128.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 898: FOCBL1,</title></rect>
+<rect x="1031.0" y="439.0" width="14.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 898: 0</title></rect>
+<rect x="871.0" y="469.0" width="150.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 899: LAW SBPI</title></rect>
+<rect x="871.0" y="501.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 900: FINDN</title></rect>
+<rect x="871.0" y="535.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 901: LAC SBPI</title></rect>
+<rect x="1191.0" y="535.0" width="534.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 901: /PUT NEW BASIC SBPI ON LIST</title></rect>
+<rect x="872.0" y="569.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 902: DAC I SYM</title></rect>
+<rect x="871.0" y="601.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 903: LAW OP 1</title></rect>
+<rect x="871.0" y="635.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 904: CDR</title></rect>
+<rect x="871.0" y="668.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 905: CDR</title></rect>
+<rect x="871.0" y="703.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 906: LAC ETYPE</title></rect>
+<rect x="871.0" y="736.0" width="190.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 907: DAC I OP 1</title></rect>
+<rect x="1190.0" y="737.0" width="394.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 907: /TYPE , DIR AND SUBP</title></rect>
+<rect x="871.0" y="769.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 908: LAW OP 1</title></rect>
+<rect x="870.0" y="801.0" width="506.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 909: CDR</title></rect>
+<rect x="870.0" y="835.0" width="194.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 910: LAC (10000</title></rect>
+<rect x="871.0" y="868.0" width="190.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 911: DAC I OP 1</title></rect>
+<rect x="872.0" y="902.0" width="229.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 912: JMP I FOCBL1</title></rect>
+<rect x="710.0" y="971.0" width="128.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 914: FOCBL3,</title></rect>
+<rect x="1030.0" y="973.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 914: 0</title></rect>
+<rect x="870.0" y="1003.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 915: LAC LENGTH</title></rect>
+<rect x="1189.0" y="1003.0" width="475.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 915: /LENGTH OF BASIC ELEMENT</title></rect>
+<rect x="871.0" y="1037.0" width="50.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 916: BDN</title></rect>
+<rect x="870.0" y="1071.0" width="153.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 917: LAW PBDM</title></rect>
+<rect x="870.0" y="1104.0" width="150.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 918: LAW OP 1</title></rect>
+<rect x="870.0" y="1135.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 919: CDR</title></rect>
+<rect x="869.0" y="1169.0" width="194.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 920: LAC I PBDM</title></rect>
+<rect x="869.0" y="1202.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 921: DAC I OP 1</title></rect>
+<rect x="1189.0" y="1202.0" width="353.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 921: /CEP POINTS TO BDM</title></rect>
+<rect x="869.0" y="1236.0" width="232.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 922: JMP I FOCBL3</title></rect>
+<rect x="709.0" y="1302.0" width="128.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 924: FOCBL4,</title></rect>
+<rect x="1029.0" y="1303.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 924: 0</title></rect>
+<rect x="870.0" y="1333.0" width="191.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 925: AND (17777</title></rect>
+<rect x="869.0" y="1368.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 926: DAC TEMP</title></rect>
+<rect x="870.0" y="1400.0" width="110.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 927: DAC 11</title></rect>
+<rect x="1189.0" y="1399.0" width="393.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 927: /START OF BLOCK DATA</title></rect>
+<rect x="869.0" y="1433.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 928: LAC ELAD</title></rect>
+<rect x="869.0" y="1467.0" width="113.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 929: DAC 10</title></rect>
+<rect x="1189.0" y="1467.0" width="454.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 929: /START OF BASIC ELEMENT</title></rect>
+<rect x="869.0" y="1502.0" width="52.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 930: LAM</title></rect>
+<rect x="868.0" y="1535.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 931: TAD I TEMP</title></rect>
+<rect x="869.0" y="1569.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 932: AND (17777</title></rect>
+<rect x="868.0" y="1602.0" width="111.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 933: SAD 11</title></rect>
+<rect x="868.0" y="1635.0" width="233.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 934: JMP I FOCBL4</title></rect>
+<rect x="1189.0" y="1633.0" width="412.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 934: /TEMPDF IN BLOCK DATA</title></rect>
+<rect x="868.0" y="1667.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 935: LAC I 10</title></rect>
+<rect x="868.0" y="1700.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 936: DAC I 11</title></rect>
+<rect x="867.0" y="1735.0" width="133.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 937: JMP .-7</title></rect>
+<rect x="708.0" y="1803.0" width="127.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 939: FOCBL2,</title></rect>
+<rect x="1027.0" y="1804.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 939: 0</title></rect>
+<rect x="1347.0" y="1801.0" width="374.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 939: /DEFLECTION OF BEAM</title></rect>
+<rect x="868.0" y="1836.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 940: LAW OP 1</title></rect>
+<rect x="867.0" y="1869.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 941: CDR</title></rect>
+<rect x="868.0" y="1903.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 942: LAC XTOT</title></rect>
+<rect x="867.0" y="1935.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 943: AND (17777</title></rect>
+<rect x="868.0" y="1969.0" width="190.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 944: DAC I OP 1</title></rect>
+<rect x="868.0" y="2004.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 945: LAW OP 1</title></rect>
+<rect x="867.0" y="2039.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 946: CDR</title></rect>
+<rect x="867.0" y="2071.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 947: LAC YTOT</title></rect>
+<rect x="867.0" y="2106.0" width="192.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 948: AND (17777</title></rect>
+<rect x="867.0" y="2140.0" width="190.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 949: DAC I OP 1</title></rect>
+<rect x="867.0" y="2162.0" width="232.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 950: JMP I FOCBL2</title></rect>
+</svg>

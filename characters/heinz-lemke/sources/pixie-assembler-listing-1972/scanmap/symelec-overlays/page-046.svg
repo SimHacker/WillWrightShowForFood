@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-046.png" width="3307" height="2338"/>
+<rect x="669" y="316" width="1795" height="1995" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="47.5" cy="189.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="289.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="67.0" cy="389.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="67.5" cy="490.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="590.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="691.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="790.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="890.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.5" cy="991.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.5" cy="1090.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="1189.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="1288.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1389.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="1488.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="1588.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="104.5" cy="1642.0" r="29.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="1688.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1788.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1888.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1989.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="2089.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="2187.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="2289.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="844.0" y="337.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2520: ISZ TEMP</title></rect>
+<rect x="843.0" y="369.0" width="230.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2521: JMP I MESIN1</title></rect>
+<rect x="683.0" y="403.0" width="128.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2522: MESIN2,</title></rect>
+<rect x="1003.0" y="403.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2522: LAW MESSAG</title></rect>
+<rect x="1323.0" y="404.0" width="354.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2522: /JUMP TABLE STARTS</title></rect>
+<rect x="843.0" y="437.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2523: TAD TEMP</title></rect>
+<rect x="1163.0" y="436.0" width="254.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2523: /DISPLACEMENT</title></rect>
+<rect x="843.0" y="471.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2524: DAC TEMP</title></rect>
+<rect x="843.0" y="505.0" width="172.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2525: LAC (1777</title></rect>
+<rect x="1324.0" y="505.0" width="353.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2525: /FOR GRID CONSTANT</title></rect>
+<rect x="844.0" y="537.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2526: XCT I TEMP</title></rect>
+<rect x="1163.0" y="537.0" width="273.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2526: /ENTER COMMAND</title></rect>
+<rect x="843.0" y="570.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2527: DAC GRID</title></rect>
+<rect x="1163.0" y="569.0" width="174.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2527: /SET GRID</title></rect>
+<rect x="841.0" y="602.0" width="176.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2528: JMS POSCR</title></rect>
+<rect x="1163.0" y="602.0" width="354.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2528: /PUT ON GRID POINT</title></rect>
+<rect x="843.0" y="636.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2529: LAC SAVINS</title></rect>
+<rect x="843.0" y="671.0" width="51.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2530: SZA</title></rect>
+<rect x="843.0" y="705.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2531: ISZ CDOCOM</title></rect>
+<rect x="842.0" y="737.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2532: AND I WAIT</title></rect>
+<rect x="842.0" y="771.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2533: LAW MESIN4</title></rect>
+<rect x="1162.0" y="771.0" width="453.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2533: /?CRLF IF WRONG COMMAND</title></rect>
+<rect x="842.0" y="806.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2534: MESOUT</title></rect>
+<rect x="843.0" y="838.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2535: AND I WAIT</title></rect>
+<rect x="681.0" y="870.0" width="129.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2536: MESIN3,</title></rect>
+<rect x="1001.0" y="869.0" width="94.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2536: LAW X</title></rect>
+<rect x="1323.0" y="869.0" width="331.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2536: /MESSAGE STARTS /</title></rect>
+<rect x="843.0" y="904.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2537: CDR</title></rect>
+<rect x="842.0" y="936.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2538: LAC I X</title></rect>
+<rect x="842.0" y="971.0" width="213.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2539: SAD (100000</title></rect>
+<rect x="841.0" y="1003.0" width="133.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2540: JMP . 3</title></rect>
+<rect x="1323.0" y="1003.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2540: /ON NIL</title></rect>
+<rect x="842.0" y="1037.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2541: LAW X</title></rect>
+<rect x="843.0" y="1069.0" width="130.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2542: JMP .-5</title></rect>
+<rect x="1321.0" y="1068.0" width="434.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2542: /LOOP TILL END OF DATA</title></rect>
+<rect x="842.0" y="1103.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2543: LAW NM</title></rect>
+<rect x="708.0" y="1136.0" width="226.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2544: GETSP</title></rect>
+<rect x="841.0" y="1169.0" width="114.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2545: LAC NM</title></rect>
+<rect x="842.0" y="1203.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2546: DAC I X</title></rect>
+<rect x="1322.0" y="1203.0" width="273.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2546: /START SUBLIST</title></rect>
+<rect x="841.0" y="1238.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2547: LAC MSIN</title></rect>
+<rect x="841.0" y="1271.0" width="113.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2548: DAC MS</title></rect>
+<rect x="1161.0" y="1270.0" width="254.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2548: /CHAR POINTER</title></rect>
+<rect x="842.0" y="1304.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2549: ISZ MS</title></rect>
+<rect x="1161.0" y="1305.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2549: /MISS /</title></rect>
+<rect x="841.0" y="1339.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2550: LAC I MS</title></rect>
+<rect x="841.0" y="1370.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2551: SAD CR</title></rect>
+<rect x="841.0" y="1402.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2552: AND I WAIT</title></rect>
+<rect x="1161.0" y="1402.0" width="274.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2552: /EXIT ALL DONE</title></rect>
+<rect x="841.0" y="1436.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2553: DAC I NM</title></rect>
+<rect x="841.0" y="1469.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2554: LAW NM</title></rect>
+<rect x="839.0" y="1503.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2555: CDR</title></rect>
+<rect x="840.0" y="1537.0" width="132.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2556: JMP .-7</title></rect>
+<rect x="1320.0" y="1536.0" width="474.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2556: /LOOP TILL COPY COMPLETE</title></rect>
+<rect x="680.0" y="1571.0" width="127.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2557: MESIN4,</title></rect>
+<rect x="999.0" y="1571.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2557: 277</title></rect>
+<rect x="1320.0" y="1569.0" width="33.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2557: /?</title></rect>
+<rect x="840.0" y="1604.0" width="51.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2558: 615</title></rect>
+<rect x="1159.0" y="1605.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2558: /CR</title></rect>
+<rect x="839.0" y="1638.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2559: 212</title></rect>
+<rect x="1159.0" y="1637.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2559: /LF</title></rect>
+<rect x="839.0" y="1670.0" width="52.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2560: 215</title></rect>
+<rect x="1159.0" y="1669.0" width="292.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2560: /CR TERMINATION</title></rect>
+<rect x="679.0" y="1737.0" width="88.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2562: MESL,</title></rect>
+<rect x="840.0" y="1739.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2562: 170402</title></rect>
+<rect x="1159.0" y="1739.0" width="114.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2562: /LABEL</title></rect>
+<rect x="839.0" y="1774.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2563: 302114</title></rect>
+<rect x="1159.0" y="1773.0" width="154.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2563: /UNLABEL</title></rect>
+<rect x="840.0" y="1807.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2564: 271424</title></rect>
+<rect x="1159.0" y="1807.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2564: /TITAN</title></rect>
+<rect x="840.0" y="1840.0" width="110.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2565: 122511</title></rect>
+<rect x="1159.0" y="1840.0" width="94.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2565: /GRID</title></rect>
+<rect x="840.0" y="1864.0" width="110.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2566: 262701</title></rect>
+<rect x="1159.0" y="1875.0" width="114.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2566: /START</title></rect>
+<rect x="839.0" y="1911.0" width="13.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2567: 0</title></rect>
+<rect x="1159.0" y="1907.0" width="233.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2567: /TERMINATION</title></rect>
+<rect x="679.0" y="1937.0" width="128.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2568: MESSAG,</title></rect>
+<rect x="1000.0" y="1938.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2568: ISZ RLABEL</title></rect>
+<rect x="1319.0" y="1938.0" width="114.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2568: /LABEL</title></rect>
+<rect x="801.0" y="1964.0" width="231.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2569: DZM RLABEL</title></rect>
+<rect x="1158.0" y="1975.0" width="155.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2569: /UNLABEL</title></rect>
+<rect x="840.0" y="2007.0" width="191.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2570: JMP MESIN5</title></rect>
+<rect x="1159.0" y="2009.0" width="113.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2570: /TITAN</title></rect>
+<rect x="839.0" y="2041.0" width="173.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2571: LAC (1760</title></rect>
+<rect x="1159.0" y="2030.0" width="233.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2571: /SET GRID ON</title></rect>
+<rect x="837.0" y="2064.0" width="194.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2572: JMP BEGRTP</title></rect>
+<rect x="1158.0" y="2065.0" width="214.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2572: /INITIALIZE</title></rect>
+<rect x="679.0" y="2138.0" width="127.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2574: MESIN5,</title></rect>
+<rect x="998.0" y="2140.0" width="194.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2574: LAW SAVINS</title></rect>
+<rect x="1318.0" y="2138.0" width="554.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2574: /HERE IF TITAN COMMUNICATION</title></rect>
+<rect x="839.0" y="2173.0" width="91.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2575: FINDN</title></rect>
+<rect x="1159.0" y="2173.0" width="493.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2575: /IN CASE WRITING TO TITAN</title></rect>
+<rect x="839.0" y="2206.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2576: JMS LTPX</title></rect>
+<rect x="837.0" y="2240.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2577: JMP ERR3</title></rect>
+<rect x="1159.0" y="2240.0" width="273.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2577: /CHECKSUM FAIL</title></rect>
+</svg>

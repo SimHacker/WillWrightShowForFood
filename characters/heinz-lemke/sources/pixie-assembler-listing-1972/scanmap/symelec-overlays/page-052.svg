@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-052.png" width="3307" height="2338"/>
+<rect x="654" y="328" width="1805" height="1980" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="65.5" cy="189.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="289.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="388.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="490.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="589.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="689.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="789.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="890.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="988.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="1088.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1187.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1287.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="1387.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1486.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1586.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="103.5" cy="1639.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1686.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1786.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1886.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1986.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="2089.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="2189.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="2289.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="681.0" y="346.0" width="312.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2883: SVAD = STSTAK 54</title></rect>
+<rect x="681.0" y="378.0" width="312.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2884: LOPY = STSTAK 55</title></rect>
+<rect x="681.0" y="508.0" width="513.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2888: /MERGE WORKSPACE WITH EXEC</title></rect>
+<rect x="680.0" y="605.0" width="293.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2891: SAV = STSTAK 60</title></rect>
+<rect x="681.0" y="639.0" width="310.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2892: HDR1 = STSTAK 61</title></rect>
+<rect x="681.0" y="672.0" width="271.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2893: DS = STSTAK 62</title></rect>
+<rect x="681.0" y="704.0" width="291.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2894: ADR = STSTAK 63</title></rect>
+<rect x="680.0" y="737.0" width="273.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2895: SW = STSTAK 64</title></rect>
+<rect x="679.0" y="770.0" width="292.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2896: CKS = STSTAK 65</title></rect>
+<rect x="679.0" y="804.0" width="1088.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2897: RELCON = STSTAK 66</title></rect>
+<rect x="680.0" y="840.0" width="312.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2898: ADR1 = STSTAK 67</title></rect>
+<rect x="680.0" y="873.0" width="293.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2899: BSZ = STSTAK 70</title></rect>
+<rect x="679.0" y="1004.0" width="1235.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2903: /MERGE WORKSPACE WIYH MBWAIT, RTP, TRCR, SYM, UPCOMP AND AMEND</title></rect>
+<rect x="680.0" y="1105.0" width="287.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2906: YP = STSTAK 101</title></rect>
+<rect x="679.0" y="1125.0" width="292.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2907: XP = STSTAK 102</title></rect>
+<rect x="680.0" y="1158.0" width="351.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2908: TRAKX = STSTAK 103</title></rect>
+<rect x="681.0" y="1190.0" width="349.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2909: TRAKY = STSTAK 104</title></rect>
+<rect x="679.0" y="1222.0" width="351.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2910: XTOT = STSTAK 105</title></rect>
+<rect x="679.0" y="1255.0" width="332.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2911: YTOT = STSTAK 106</title></rect>
+<rect x="679.0" y="1287.0" width="332.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2912: XINS = STSTAK 107</title></rect>
+<rect x="680.0" y="1320.0" width="332.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2913: YINS = STSTAK 110</title></rect>
+<rect x="679.0" y="1352.0" width="367.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2914: XTOTIN = STSTAK 111</title></rect>
+<rect x="679.0" y="1385.0" width="372.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2915: YTOTIN = STSTAK 112</title></rect>
+<rect x="679.0" y="1417.0" width="372.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2916: SBPI = STSTAK 115</title></rect>
+<rect x="679.0" y="1450.0" width="332.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2917: CCAT = STSTAK 116</title></rect>
+<rect x="679.0" y="1482.0" width="332.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2918: NM = STSTAK 117</title></rect>
+<rect x="679.0" y="1515.0" width="306.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2919: SUMB = STSTAK 71</title></rect>
+<rect x="677.0" y="1547.0" width="312.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2920: MODE = STSTAK 72</title></rect>
+<rect x="678.0" y="1580.0" width="313.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2921: DACO = STSTAK 73</title></rect>
+<rect x="679.0" y="1612.0" width="312.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2922: {handwritten: solid black rectangular mark in left margin beside SEQ 735-736}</title></rect>
+<rect x="679.0" y="1645.0" width="292.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2923: ASR = STSTAK 74</title></rect>
+<rect x="677.0" y="1677.0" width="353.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2924: COMPOS = STSTAK 75</title></rect>
+<rect x="679.0" y="1710.0" width="351.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2925: VEPART = STSTAK 76</title></rect>
+<rect x="679.0" y="1742.0" width="331.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2926: XINS1 = STSTAK 77</title></rect>
+<rect x="677.0" y="1775.0" width="333.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2927: YINS1 =STSTAK 113</title></rect>
+<rect x="678.0" y="1807.0" width="373.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2928: COMPOI = STSTAK 114</title></rect>
+<rect x="677.0" y="1840.0" width="333.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2929: SBPI1 = STSTAK 17</title></rect>
+<rect x="677.0" y="1977.0" width="68.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2933: DFB,</title></rect>
+<rect x="838.0" y="1978.0" width="90.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2933: 12301</title></rect>
+<rect x="1157.0" y="1977.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2933: /12301</title></rect>
+<rect x="678.0" y="2002.0" width="68.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2934: DFE,</title></rect>
+<rect x="839.0" y="2012.0" width="91.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2934: 12400</title></rect>
+<rect x="1157.0" y="2011.0" width="114.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2934: /13300</title></rect>
+<rect x="678.0" y="2034.0" width="127.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2935: DFERES,</title></rect>
+<rect x="998.0" y="2045.0" width="93.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2935: 12440</title></rect>
+<rect x="1157.0" y="2043.0" width="114.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2935: /13400</title></rect>
+<rect x="677.0" y="2067.0" width="128.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2936: DFENOR,</title></rect>
+<rect x="999.0" y="2076.0" width="92.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2936: 12400</title></rect>
+<rect x="1157.0" y="2075.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2936: /13300</title></rect>
+<rect x="678.0" y="2141.0" width="67.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2938: BEG,</title></rect>
+<rect x="839.0" y="2143.0" width="89.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2938: 12441</title></rect>
+<rect x="1157.0" y="2141.0" width="111.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2938: /13401</title></rect>
+<rect x="678.0" y="2164.0" width="67.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2939: END,</title></rect>
+<rect x="839.0" y="2164.0" width="90.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2939: 13000</title></rect>
+<rect x="1159.0" y="2175.0" width="112.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2939: /17200</title></rect>
+<rect x="678.0" y="2197.0" width="127.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2940: ENDRES,</title></rect>
+<rect x="999.0" y="2210.0" width="92.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2940: 13100</title></rect>
+<rect x="1158.0" y="2197.0" width="113.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2940: /17300</title></rect>
+<rect x="677.0" y="2229.0" width="128.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2941: ENDNOR,</title></rect>
+<rect x="999.0" y="2229.0" width="91.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2941: 13000</title></rect>
+<rect x="1158.0" y="2229.0" width="113.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2941: /17200</title></rect>
+</svg>

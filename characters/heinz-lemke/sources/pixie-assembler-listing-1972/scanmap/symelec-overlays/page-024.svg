@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-024.png" width="3307" height="2338"/>
+<rect x="631" y="312" width="1847" height="1997" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="53.0" cy="1300.5" r="26.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="19.0" cy="1339.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.0" cy="1409.0" r="39.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.0" cy="1479.0" r="23.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="19.0" cy="1525.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="19.0" cy="1566.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.5" cy="1791.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="19.0" cy="1835.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.0" cy="1890.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.5" cy="1990.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="18.5" cy="2055.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.0" cy="2089.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.5" cy="2190.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.0" cy="2289.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="696.0" y="335.0" width="1068.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1255: / RELOCATE DATA IF NECESSARY (Titan to PDP only)</title></rect>
+<rect x="633.0" y="401.0" width="414.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1257: LAC RELCON</title></rect>
+<rect x="634.0" y="436.0" width="594.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1258: SNA</title></rect>
+<rect x="634.0" y="469.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1259: JMP RLCEND</title></rect>
+<rect x="1495.0" y="465.0" width="855.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1259: / any relocation necessary?</title></rect>
+<rect x="634.0" y="503.0" width="13.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1260: RELOC1,</title></rect>
+<rect x="695.0" y="500.0" width="311.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1260: ISZ ADR1</title></rect>
+<rect x="633.0" y="537.0" width="14.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1261: RELOC4,</title></rect>
+<rect x="695.0" y="535.0" width="294.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1261: LAC ADR</title></rect>
+<rect x="635.0" y="569.0" width="593.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1262: CMA</title></rect>
+<rect x="634.0" y="602.0" width="1012.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1263: TAD ADR1</title></rect>
+<rect x="633.0" y="637.0" width="274.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1264: SMA</title></rect>
+<rect x="633.0" y="671.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1265: JMP RLCEND</title></rect>
+<rect x="1174.0" y="666.0" width="1015.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1265: / end of data area?</title></rect>
+<rect x="633.0" y="701.0" width="413.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1266: LAC I ADR1</title></rect>
+<rect x="635.0" y="734.0" width="693.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1267: SAD (JMS</title></rect>
+<rect x="634.0" y="769.0" width="11.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1268: JMP RELOC1</title></rect>
+<rect x="1493.0" y="766.0" width="535.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1268: / NIL item?</title></rect>
+<rect x="634.0" y="799.0" width="433.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1269: AND (760000</title></rect>
+<rect x="633.0" y="835.0" width="594.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1270: SNA</title></rect>
+<rect x="633.0" y="871.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1271: JMP RELOC1</title></rect>
+<rect x="1493.0" y="867.0" width="455.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1271: / atom?</title></rect>
+<rect x="633.0" y="933.0" width="412.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1273: LAC I ADR1</title></rect>
+<rect x="633.0" y="967.0" width="1042.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1274: TAD RELCON</title></rect>
+<rect x="634.0" y="1000.0" width="12.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1275: DAC I ADR1</title></rect>
+<rect x="1494.0" y="997.0" width="797.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1275: / ... else relocate item</title></rect>
+<rect x="634.0" y="1033.0" width="433.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1276: AND (760000</title></rect>
+<rect x="633.0" y="1070.0" width="13.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1277: SAD (20000</title></rect>
+<rect x="1174.0" y="1065.0" width="934.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1277: / block header?</title></rect>
+<rect x="632.0" y="1103.0" width="275.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1278: SKP</title></rect>
+<rect x="633.0" y="1135.0" width="732.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1279: JMP RELOC1</title></rect>
+<rect x="632.0" y="1169.0" width="412.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1280: LAC I ADR1</title></rect>
+<rect x="632.0" y="1203.0" width="735.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1281: AND (17777</title></rect>
+<rect x="632.0" y="1236.0" width="12.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1282: DAC ADR1</title></rect>
+<rect x="1493.0" y="1234.0" width="835.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1282: / yes, skip over blockdata</title></rect>
+<rect x="632.0" y="1267.0" width="413.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1283: JMP RELOC4</title></rect>
+<rect x="693.0" y="1335.0" width="128.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1285: RLCEND,</title></rect>
+<rect x="633.0" y="1367.0" width="168.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1286: PXER1,</title></rect>
+<rect x="855.0" y="1367.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1286: ISZ LTPX</title></rect>
+<rect x="1333.0" y="1366.0" width="890.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1286: / incoming file too large (Titan to PDP only)</title></rect>
+<rect x="633.0" y="1402.0" width="168.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1287: PXER3,</title></rect>
+<rect x="855.0" y="1402.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1287: ISZ LTPX</title></rect>
+<rect x="1334.0" y="1401.0" width="708.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1287: / not PIXIE data (Titan to PDP only)</title></rect>
+<rect x="633.0" y="1435.0" width="168.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1288: PXER2,</title></rect>
+<rect x="853.0" y="1435.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1288: LSA</title></rect>
+<rect x="1334.0" y="1433.0" width="593.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1288: / checksum failure on transfer</title></rect>
+<rect x="632.0" y="1468.0" width="352.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1289: JMP .-1</title></rect>
+<rect x="632.0" y="1501.0" width="273.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1290: LKD</title></rect>
+<rect x="633.0" y="1533.0" width="393.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1291: DZM I END</title></rect>
+<rect x="631.0" y="1567.0" width="394.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1292: LAC I DFB</title></rect>
+<rect x="631.0" y="1603.0" width="274.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1293: SNA</title></rect>
+<rect x="632.0" y="1636.0" width="413.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1294: JMP I LTPX</title></rect>
+<rect x="633.0" y="1670.0" width="288.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1295: IDSI</title></rect>
+<rect x="631.0" y="1704.0" width="352.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1296: JMP .-1</title></rect>
+<rect x="633.0" y="1729.0" width="411.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1297: JMP I LTPX</title></rect>
+<rect x="631.0" y="1905.0" width="149.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1302: PXID,</title></rect>
+<rect x="852.0" y="1906.0" width="111.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1302: 767676</title></rect>
+<rect x="853.0" y="2005.0" width="108.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1305: / S.R.</title></rect>
+<rect x="1031.0" y="2004.0" width="595.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1305: AWAIT INTERRUPT AND READ/WRITE</title></rect>
+<rect x="631.0" y="2105.0" width="108.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1308: RW,</title></rect>
+<rect x="852.0" y="2105.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1308: HLT</title></rect>
+<rect x="631.0" y="2128.0" width="353.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1309: DAC SAV</title></rect>
+<rect x="1331.0" y="2139.0" width="469.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1309: / save word (if writing)</title></rect>
+<rect x="631.0" y="2207.0" width="413.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1311: JMS WAITLK</title></rect>
+</svg>

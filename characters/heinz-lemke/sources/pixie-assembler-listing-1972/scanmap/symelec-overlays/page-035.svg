@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-035.png" width="3307" height="2338"/>
+<rect x="1427" y="186" width="1835" height="1994" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="613.5" cy="55.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="154.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="253.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="355.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="454.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="555.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="654.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="754.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="854.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="954.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1053.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1153.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1252.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1353.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1452.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="651.0" cy="1506.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1552.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1653.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1752.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="1954.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="2056.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="2161.0" r="18.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1707.0" y="239.0" width="432.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1895: 0</title></rect>
+<rect x="3230.0" y="239.0" width="27.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1895: /FORM ELEMENT LENGTH N</title></rect>
+<rect x="1427.0" y="275.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1896: CMA</title></rect>
+<rect x="1427.0" y="309.0" width="111.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1897: DAC OP+2</title></rect>
+<rect x="1707.0" y="307.0" width="333.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1897: /SET HEAD COUNTER</title></rect>
+<rect x="1427.0" y="340.0" width="553.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1898: LAW NM</title></rect>
+<rect x="3229.0" y="339.0" width="28.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1898: /FOR PRINTNAME</title></rect>
+<rect x="1427.0" y="375.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1899: GETSP</title></rect>
+<rect x="1427.0" y="407.0" width="72.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1900: LAW EL</title></rect>
+<rect x="1706.0" y="406.0" width="234.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1900: /FOR ELEMENT</title></rect>
+<rect x="1427.0" y="440.0" width="1830.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1901: GETSP</title></rect>
+<rect x="1427.0" y="473.0" width="90.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1902: DAC EL1</title></rect>
+<rect x="1867.0" y="471.0" width="353.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1902: /SAVE HEAD ADDRESS</title></rect>
+<rect x="1427.0" y="506.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1903: LAW EL</title></rect>
+<rect x="1427.0" y="541.0" width="1830.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1904: NULLR</title></rect>
+<rect x="1427.0" y="575.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1905: CDR</title></rect>
+<rect x="1427.0" y="606.0" width="111.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1906: ISZ OP 2</title></rect>
+<rect x="1427.0" y="638.0" width="673.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1907: JMP .-3</title></rect>
+<rect x="3231.0" y="642.0" width="26.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1907: /FORM HEADER</title></rect>
+<rect x="1427.0" y="673.0" width="72.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1908: LAC NM</title></rect>
+<rect x="1427.0" y="706.0" width="172.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1909: XOR (140000</title></rect>
+<rect x="1427.0" y="739.0" width="412.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1910: DAC I EL</title></rect>
+<rect x="3230.0" y="743.0" width="26.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1910: /ATNAME</title></rect>
+<rect x="1427.0" y="775.0" width="72.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1911: LAC EL</title></rect>
+<rect x="1427.0" y="808.0" width="111.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1912: DAC I NM</title></rect>
+<rect x="1706.0" y="807.0" width="253.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1912: /BACK POINTER</title></rect>
+<rect x="1427.0" y="842.0" width="1830.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1913: LAW EL</title></rect>
+<rect x="1427.0" y="876.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1914: CDR</title></rect>
+<rect x="1427.0" y="908.0" width="89.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1915: LAC EL1</title></rect>
+<rect x="1427.0" y="939.0" width="1829.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1916: DAC I EL</title></rect>
+<rect x="1427.0" y="973.0" width="232.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1917: JMP I FELN-JMS</title></rect>
+<rect x="1427.0" y="1041.0" width="1829.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1919: NULLR = JMS .</title></rect>
+<rect x="1386.0" y="1110.0" width="11.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1921: 0</title></rect>
+<rect x="1706.0" y="1105.0" width="293.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1921: /FORM NULL RING</title></rect>
+<rect x="1427.0" y="1140.0" width="1829.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1922: JMS OP-5</title></rect>
+<rect x="1427.0" y="1172.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1923: TAD (40000</title></rect>
+<rect x="1706.0" y="1171.0" width="273.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1923: /SET RINGSTART</title></rect>
+<rect x="1427.0" y="1205.0" width="1640.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1924: DAC I OP+1</title></rect>
+<rect x="1427.0" y="1239.0" width="1828.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1925: LAC OP</title></rect>
+<rect x="1427.0" y="1273.0" width="252.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1926: JMP I NULLR-JMS</title></rect>
+<rect x="1427.0" y="1377.0" width="48.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1929: INSRT = JMS .</title></rect>
+<rect x="1386.0" y="1411.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1930: 0</title></rect>
+<rect x="1706.0" y="1406.0" width="373.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1930: /INSERT Q IN RING P</title></rect>
+<rect x="1427.0" y="1440.0" width="392.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1931: JMS OP-5</title></rect>
+<rect x="3229.0" y="1441.0" width="27.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1931: /GET Q</title></rect>
+<rect x="1427.0" y="1472.0" width="1585.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1932: DAC OP 2</title></rect>
+<rect x="1427.0" y="1505.0" width="251.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1933: XCT I INSRT-JMS</title></rect>
+<rect x="1427.0" y="1538.0" width="391.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1934: JMS OP-5</title></rect>
+<rect x="3228.0" y="1541.0" width="27.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1934: /GET P</title></rect>
+<rect x="1427.0" y="1571.0" width="148.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1935: LAC I OP+1</title></rect>
+<rect x="1427.0" y="1606.0" width="170.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1936: AND (117777</title></rect>
+<rect x="1705.0" y="1603.0" width="334.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1936: /MAY BE RINGSTART</title></rect>
+<rect x="1427.0" y="1639.0" width="1829.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1937: DAC I OP+2</title></rect>
+<rect x="1427.0" y="1671.0" width="148.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1938: LAC I OP+1</title></rect>
+<rect x="1427.0" y="1703.0" width="150.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1939: AND (40000</title></rect>
+<rect x="1705.0" y="1701.0" width="434.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1939: /PRESERVE IF RINGSTART</title></rect>
+<rect x="1427.0" y="1737.0" width="1829.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1940: TAD OP+2</title></rect>
+<rect x="1427.0" y="1770.0" width="149.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1941: DAC I OP+1</title></rect>
+<rect x="1705.0" y="1768.0" width="154.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1941: /JOIN UP</title></rect>
+<rect x="1427.0" y="1804.0" width="251.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1942: JMP I INSRT-JMS</title></rect>
+<rect x="1427.0" y="1909.0" width="47.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1945: FINDS = JMS .</title></rect>
+<rect x="1705.0" y="1940.0" width="293.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1946: 0</title></rect>
+<rect x="3227.0" y="1941.0" width="28.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1946: /FIND RINGSTART</title></rect>
+<rect x="1427.0" y="1974.0" width="110.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1947: JMS OP-5</title></rect>
+<rect x="1427.0" y="2007.0" width="110.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1948: DAC I OP</title></rect>
+<rect x="1864.0" y="2005.0" width="195.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1948: /MOVE NAME</title></rect>
+<rect x="1427.0" y="2037.0" width="1828.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1949: LAC I OP+1</title></rect>
+<rect x="1427.0" y="2073.0" width="497.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1950: AND (40000</title></rect>
+<rect x="1427.0" y="2107.0" width="10.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1951: SZA</title></rect>
+</svg>

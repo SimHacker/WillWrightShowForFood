@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-053.png" width="3307" height="2338"/>
+<rect x="1275" y="182" width="1727" height="634" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="610.5" cy="151.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="351.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.5" cy="449.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="550.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.5" cy="650.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="749.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="850.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.0" cy="949.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="1049.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="1247.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.0" cy="1347.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="607.5" cy="1447.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="646.5" cy="1505.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="1548.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.5" cy="1749.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="2053.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.5" cy="2158.0" r="19.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1282.0" y="254.0" width="7.0" height="10.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2945: BOT,</title></rect>
+<rect x="1381.0" y="237.0" width="90.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2945: 13101</title></rect>
+<rect x="1699.0" y="235.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2945: /17301</title></rect>
+<rect x="1282.0" y="285.0" width="6.0" height="12.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2946: TOP,</title></rect>
+<rect x="1381.0" y="268.0" width="91.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2946: 13200</title></rect>
+<rect x="1699.0" y="267.0" width="114.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2946: /17440</title></rect>
+<rect x="1380.0" y="304.0" width="12.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2947: 0</title></rect>
+<rect x="1279.0" y="369.0" width="50.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2949: LPBEG,</title></rect>
+<rect x="1381.0" y="369.0" width="90.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2949: 13201</title></rect>
+<rect x="1701.0" y="368.0" width="110.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2949: /17461</title></rect>
+<rect x="1279.0" y="403.0" width="49.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2950: LKBEG,</title></rect>
+<rect x="1381.0" y="403.0" width="91.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2950: 13240</title></rect>
+<rect x="1700.0" y="402.0" width="114.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2950: /17560</title></rect>
+<rect x="1279.0" y="436.0" width="49.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2951: LKEND,</title></rect>
+<rect x="1381.0" y="437.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2951: 13300</title></rect>
+<rect x="1700.0" y="435.0" width="114.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2951: /17620</title></rect>
+<rect x="1279.0" y="501.0" width="69.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2953: XSTBEG,</title></rect>
+<rect x="1540.0" y="501.0" width="271.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2953: 13301</title></rect>
+<rect x="2020.0" y="501.0" width="253.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2953: /17621 /FOR DOWNCOMP</title></rect>
+<rect x="1279.0" y="534.0" width="69.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2954: YSTBEG,</title></rect>
+<rect x="1541.0" y="535.0" width="92.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2954: 13340</title></rect>
+<rect x="1700.0" y="534.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2954: /17710</title></rect>
+<rect x="1279.0" y="568.0" width="69.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2955: YSTEND,</title></rect>
+<rect x="1541.0" y="569.0" width="92.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2955: 13400</title></rect>
+<rect x="1700.0" y="568.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2955: /17750</title></rect>
+<rect x="1279.0" y="601.0" width="69.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2956: STSAVE,</title></rect>
+<rect x="1541.0" y="603.0" width="90.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2956: 13401</title></rect>
+<rect x="1700.0" y="602.0" width="111.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2956: /17751</title></rect>
+<rect x="1279.0" y="671.0" width="34.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2958: PAUSE</title></rect>
+<rect x="905.8" y="733.3" width="2300.0" height="33.6" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 2960: {handwritten: solid black rectangular mark in left margin, mid-page below printed text}</title></rect>
+</svg>

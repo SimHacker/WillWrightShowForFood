@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-118.png" width="3307" height="2338"/>
+<rect x="652" y="299" width="1701" height="1992" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="99.0" cy="1647.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="837.0" y="321.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 303: LAC GIND</title></rect>
+<rect x="837.0" y="353.0" width="170.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 304: SAD TOP+1</title></rect>
+<rect x="839.0" y="386.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 305: JMP GARB</title></rect>
+<rect x="1157.0" y="385.0" width="693.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 305: / TO LAST PHASE IF DONE ALL P NAMES</title></rect>
+<rect x="677.0" y="421.0" width="87.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 306: LIM1,</title></rect>
+<rect x="837.0" y="421.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 306: LAC I GIND</title></rect>
+<rect x="1157.0" y="419.0" width="312.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 306: / PICK UP P NAME</title></rect>
+<rect x="837.0" y="454.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 307: DAC GBUG</title></rect>
+<rect x="837.0" y="485.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 308: JMP GNTR</title></rect>
+<rect x="677.0" y="555.0" width="452.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 310: /MAIN RECURSIVE ROUTINE</title></rect>
+<rect x="686.2" y="583.7" width="154.8" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 311: GBRNCH,</title></rect>
+<rect x="885.3" y="583.7" width="199.0" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 311: LAC GSTKP</title></rect>
+<rect x="836.0" y="620.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 312: SAD TOP</title></rect>
+<rect x="836.0" y="651.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 313: JMS ERR</title></rect>
+<rect x="1155.0" y="651.0" width="414.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 313: /BRANCH STACK EXPIRED</title></rect>
+<rect x="675.0" y="687.0" width="68.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 314: MK1,</title></rect>
+<rect x="836.0" y="685.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 314: LAC GBUG</title></rect>
+<rect x="836.0" y="719.0" width="212.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 315: DAC I GSTKP</title></rect>
+<rect x="837.0" y="751.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 316: ISZ GSTKP</title></rect>
+<rect x="676.0" y="786.0" width="87.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 317: GNTR,</title></rect>
+<rect x="835.0" y="785.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 317: DAC GTEMP</title></rect>
+<rect x="1157.0" y="785.0" width="271.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 317: /INITIAL ENTRY</title></rect>
+<rect x="836.0" y="818.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 318: LAC I GBUG</title></rect>
+<rect x="1155.0" y="819.0" width="111.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 318: /"CAR"</title></rect>
+<rect x="836.0" y="853.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 319: DAC GBUG</title></rect>
+<rect x="677.0" y="886.0" width="66.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 320: GB2,</title></rect>
+<rect x="836.0" y="884.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 320: LAC I GBUG</title></rect>
+<rect x="1157.0" y="884.0" width="332.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 320: /AND MOVE TO ITEM</title></rect>
+<rect x="836.0" y="921.0" width="51.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 321: SMA</title></rect>
+<rect x="837.0" y="953.0" width="171.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 322: JMP GITEM</title></rect>
+<rect x="1155.0" y="953.0" width="252.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 322: /JUMP IF ITEM</title></rect>
+<rect x="837.0" y="985.0" width="1490.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 323: AND (017777</title></rect>
+<rect x="836.0" y="1019.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 324: DAC GBUG</title></rect>
+<rect x="835.0" y="1054.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 325: LAC I GBUG</title></rect>
+<rect x="835.0" y="1087.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 326: SPA</title></rect>
+<rect x="839.0" y="1120.0" width="129.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 327: JMP ,-4</title></rect>
+<rect x="1155.0" y="1119.0" width="414.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 327: /REPEAT WHILE NONITEM</title></rect>
+<rect x="836.0" y="1185.0" width="212.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 329: LAC I GTEMP</title></rect>
+<rect x="837.0" y="1219.0" width="211.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 330: AND (760000</title></rect>
+<rect x="1155.0" y="1219.0" width="174.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 330: /RSP BITS</title></rect>
+<rect x="836.0" y="1252.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 331: SPA</title></rect>
+<rect x="1155.0" y="1251.0" width="253.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 331: /JUMP IF ITEM</title></rect>
+<rect x="837.0" y="1285.0" width="210.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 332: TAD (200000</title></rect>
+<rect x="1155.0" y="1284.0" width="313.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 332: /MARK IF NONITEM</title></rect>
+<rect x="837.0" y="1350.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 334: TAD GBUG</title></rect>
+<rect x="1155.0" y="1350.0" width="534.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 334: /NB GBUG MUST BE CLEAN HERE</title></rect>
+<rect x="835.0" y="1385.0" width="213.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 335: DAC I GTEMP</title></rect>
+<rect x="1155.0" y="1384.0" width="533.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 335: /SO SKIP REDUNDANT NONITEMS</title></rect>
+<rect x="675.0" y="1451.0" width="107.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 337: GITEM,</title></rect>
+<rect x="835.0" y="1451.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 337: LAC I GBUG</title></rect>
+<rect x="835.0" y="1485.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 338: AND (577777</title></rect>
+<rect x="835.0" y="1517.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 339: SAD (100000</title></rect>
+<rect x="836.0" y="1548.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 340: JMP GNIL,</title></rect>
+<rect x="1155.0" y="1549.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 340: /JMP IF NIL</title></rect>
+<rect x="835.0" y="1584.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 341: LAC I GBUG</title></rect>
+<rect x="835.0" y="1617.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 342: RTL</title></rect>
+<rect x="835.0" y="1651.0" width="133.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 343: SZL!CML</title></rect>
+<rect x="1156.0" y="1649.0" width="354.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 343: /PREPARE TO MARK</title></rect>
+<rect x="836.0" y="1685.0" width="171.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 344: JMP GBRTN</title></rect>
+<rect x="1156.0" y="1685.0" width="453.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 344: /EXIT IF MARKED ALREADY</title></rect>
+<rect x="835.0" y="1717.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 345: RTR</title></rect>
+<rect x="1155.0" y="1717.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 345: /NOW MARK</title></rect>
+<rect x="835.0" y="1750.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 346: DAC I GBUG</title></rect>
+<rect x="835.0" y="1783.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 347: AND (560000</title></rect>
+<rect x="835.0" y="1816.0" width="212.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 348: SAD (020000</title></rect>
+<rect x="833.0" y="1849.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 349: JMP GBRTN</title></rect>
+<rect x="1154.0" y="1850.0" width="373.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 349: /EXIT IF BLOCK DATA</title></rect>
+<rect x="834.0" y="1884.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 350: SZA</title></rect>
+<rect x="1154.0" y="1885.0" width="253.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 350: /JUMP IF ATOM</title></rect>
+<rect x="835.0" y="1918.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 351: JMP GBRNCH</title></rect>
+<rect x="1155.0" y="1917.0" width="472.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 351: /RECURSE IF LIST POINTER</title></rect>
+<rect x="675.0" y="1987.0" width="107.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 353: GBCDR,</title></rect>
+<rect x="835.0" y="1985.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 353: ISZ GBUG</title></rect>
+<rect x="1155.0" y="1987.0" width="110.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 353: /"CDR"</title></rect>
+<rect x="835.0" y="2020.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 354: LAC GBUG</title></rect>
+<rect x="835.0" y="2053.0" width="172.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 355: DAC GTEMP</title></rect>
+<rect x="837.0" y="2083.0" width="129.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 356: JMP GB2</title></rect>
+<rect x="1155.0" y="2085.0" width="133.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 356: /REPEAT</title></rect>
+<rect x="675.0" y="2152.0" width="272.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 358: /FOUND 1ST NIL</title></rect>
+<rect x="675.0" y="2187.0" width="86.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 359: GNIL,</title></rect>
+<rect x="835.0" y="2186.0" width="211.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 359: TAD (200000</title></rect>
+<rect x="757.0" y="2210.0" width="270.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 360: DAC I GBUG</title></rect>
+<rect x="1154.0" y="2221.0" width="153.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 360: /MARK IT</title></rect>
+</svg>

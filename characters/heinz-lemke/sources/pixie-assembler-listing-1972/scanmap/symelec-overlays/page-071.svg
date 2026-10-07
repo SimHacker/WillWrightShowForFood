@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-071.png" width="3307" height="2338"/>
+<rect x="1194" y="180" width="1712" height="1993" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="655.5" cy="14.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="70.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="670.5" cy="166.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="261.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="359.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="457.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="557.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="656.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="755.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="855.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="956.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="1054.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1154.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1253.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.5" cy="1353.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1452.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="650.0" cy="1498.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.5" cy="1552.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="670.0" cy="1651.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="669.5" cy="1750.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="670.0" cy="1851.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="670.0" cy="1951.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="669.0" cy="2051.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="2151.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1385.0" y="200.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3963: JMP SEGCNY</title></rect>
+<rect x="1384.0" y="234.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3964: LAC CON</title></rect>
+<rect x="1384.0" y="268.0" width="112.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3965: SAD (3</title></rect>
+<rect x="1384.0" y="302.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3966: JMP SEGY</title></rect>
+<rect x="1384.0" y="334.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3967: JMS SAVEX</title></rect>
+<rect x="1384.0" y="368.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3968: LAC (3</title></rect>
+<rect x="1385.0" y="399.0" width="130.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3969: DAC CON</title></rect>
+<rect x="1384.0" y="433.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3970: JMP SEGY</title></rect>
+<rect x="1223.0" y="468.0" width="129.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3971: SEGCY1,</title></rect>
+<rect x="1543.0" y="466.0" width="114.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3971: LAC YB</title></rect>
+<rect x="1384.0" y="501.0" width="1044.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3972: TAD CONSTB</title></rect>
+<rect x="1383.0" y="535.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3973: SPA</title></rect>
+<rect x="1384.0" y="569.0" width="132.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3974: JMP . 5</title></rect>
+<rect x="1384.0" y="601.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3975: JMS SAVEX</title></rect>
+<rect x="1384.0" y="635.0" width="111.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3976: LAC (3</title></rect>
+<rect x="1384.0" y="667.0" width="131.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3977: DAC CON</title></rect>
+<rect x="1384.0" y="701.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3978: JMP SEGY</title></rect>
+<rect x="1383.0" y="734.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3979: LAC YB</title></rect>
+<rect x="1385.0" y="767.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3980: TAD CONSTX</title></rect>
+<rect x="1384.0" y="803.0" width="52.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3981: SMA</title></rect>
+<rect x="1383.0" y="835.0" width="154.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3982: JMP SEGX</title></rect>
+<rect x="1703.0" y="832.0" width="354.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3982: /CARRY ON IN X DIR</title></rect>
+<rect x="1383.0" y="867.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3983: JMS SAVEX</title></rect>
+<rect x="1383.0" y="902.0" width="110.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3984: LAC (1</title></rect>
+<rect x="1383.0" y="934.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3985: DAC CON</title></rect>
+<rect x="1383.0" y="967.0" width="154.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3986: JMP SEGY</title></rect>
+<rect x="1223.0" y="1035.0" width="128.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3988: SEGCNY,</title></rect>
+<rect x="1543.0" y="1034.0" width="114.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3988: LAC YB</title></rect>
+<rect x="1384.0" y="1066.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3989: TAD CONSTX</title></rect>
+<rect x="1384.0" y="1103.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3990: SMA</title></rect>
+<rect x="1384.0" y="1135.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3991: JMP ERASE</title></rect>
+<rect x="1385.0" y="1167.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3992: LAC CON</title></rect>
+<rect x="1384.0" y="1199.0" width="111.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3993: SAD (1</title></rect>
+<rect x="1383.0" y="1234.0" width="154.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3994: JMP SEGY</title></rect>
+<rect x="1384.0" y="1265.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3995: JMS SAVEX</title></rect>
+<rect x="1383.0" y="1299.0" width="111.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3996: LAC (1</title></rect>
+<rect x="1384.0" y="1333.0" width="131.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3997: DAC CON</title></rect>
+<rect x="1384.0" y="1367.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3998: JMP SEGY</title></rect>
+<rect x="1224.0" y="1533.0" width="108.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4003: ERASE,</title></rect>
+<rect x="1384.0" y="1531.0" width="131.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4003: LAC CON</title></rect>
+<rect x="1864.0" y="1529.0" width="353.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4003: /ERASE LAST VECTOR</title></rect>
+<rect x="1384.0" y="1566.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4004: SPA</title></rect>
+<rect x="1384.0" y="1598.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4005: JMP PEN1</title></rect>
+<rect x="1384.0" y="1633.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4006: JMS TAKE</title></rect>
+<rect x="1384.0" y="1665.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4007: LAC CON</title></rect>
+<rect x="1384.0" y="1699.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4008: SNA</title></rect>
+<rect x="1385.0" y="1730.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4009: JMP SEGX</title></rect>
+<rect x="1384.0" y="1765.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4010: SPA</title></rect>
+<rect x="1385.0" y="1797.0" width="130.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4011: JMP SD1</title></rect>
+<rect x="1865.0" y="1794.0" width="313.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4011: /TEMPDF IS EMPTY</title></rect>
+<rect x="1384.0" y="1831.0" width="212.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4012: TAD (777776</title></rect>
+<rect x="1385.0" y="1866.0" width="51.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4013: SZA</title></rect>
+<rect x="1386.0" y="1899.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4014: JMP SEGY</title></rect>
+<rect x="1385.0" y="1934.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4015: JMP SEGX</title></rect>
+<rect x="1224.0" y="2033.0" width="108.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4018: SAVEX,</title></rect>
+<rect x="1384.0" y="2035.0" width="12.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4018: 0</title></rect>
+<rect x="1704.0" y="2029.0" width="334.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4018: /SAVE LAST VECTOR</title></rect>
+<rect x="1385.0" y="2067.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4019: JMS SAVTEM</title></rect>
+<rect x="1384.0" y="2100.0" width="131.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4020: LAC CON</title></rect>
+</svg>

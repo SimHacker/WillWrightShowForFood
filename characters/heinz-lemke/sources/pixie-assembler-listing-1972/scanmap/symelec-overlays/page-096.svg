@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-096.png" width="3307" height="2338"/>
+<rect x="595" y="322" width="1859" height="1995" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="58.5" cy="196.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="496.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="597.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="695.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="796.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="892.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="991.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1092.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1192.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="101.0" cy="1643.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="2194.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="613.0" y="476.0" width="394.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5339: DRLTO-JMS, 0</title></rect>
+<rect x="1153.0" y="473.0" width="275.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5339: /POSITION BEAM</title></rect>
+<rect x="595.0" y="510.0" width="432.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5340: LAC I LOPX</title></rect>
+<rect x="595.0" y="543.0" width="372.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5341: CMAICLL</title></rect>
+<rect x="595.0" y="577.0" width="412.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5342: ADD XBEAM</title></rect>
+<rect x="595.0" y="611.0" width="292.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5343: SZA</title></rect>
+<rect x="595.0" y="644.0" width="291.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5344: CMA</title></rect>
+<rect x="595.0" y="679.0" width="30.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5345: DAC DX</title></rect>
+<rect x="834.0" y="676.0" width="473.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5345: /DELTA X</title></rect>
+<rect x="595.0" y="708.0" width="433.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5346: LAC I LOPY</title></rect>
+<rect x="595.0" y="741.0" width="373.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5347: CMAICLL</title></rect>
+<rect x="595.0" y="774.0" width="413.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5348: ADD YBEAM</title></rect>
+<rect x="595.0" y="807.0" width="292.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5349: SZA</title></rect>
+<rect x="595.0" y="841.0" width="292.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5350: CMA</title></rect>
+<rect x="595.0" y="878.0" width="31.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5351: DAC DY</title></rect>
+<rect x="835.0" y="873.0" width="474.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5351: /DELTA Y</title></rect>
+<rect x="595.0" y="907.0" width="292.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5352: SZA</title></rect>
+<rect x="595.0" y="940.0" width="372.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5353: JMP .+3</title></rect>
+<rect x="595.0" y="973.0" width="353.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5354: SAD DX</title></rect>
+<rect x="595.0" y="1008.0" width="32.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5355: JMP I DRLTO-JMS</title></rect>
+<rect x="833.0" y="1005.0" width="776.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5355: /JUMP BOTH ZERO</title></rect>
+<rect x="595.0" y="1040.0" width="453.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5356: LAC (100100</title></rect>
+<rect x="595.0" y="1074.0" width="312.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5357: WRDF</title></rect>
+<rect x="595.0" y="1111.0" width="31.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5358: XCT I DRLTO-JMS</title></rect>
+<rect x="836.0" y="1105.0" width="753.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5358: /SET VIS/INVIS</title></rect>
+<rect x="595.0" y="1141.0" width="353.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5359: LAC DY</title></rect>
+<rect x="595.0" y="1178.0" width="31.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5360: JMS VECGN</title></rect>
+<rect x="834.0" y="1174.0" width="515.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5360: /DRAW LINE</title></rect>
+<rect x="595.0" y="1209.0" width="352.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5361: LAC DX</title></rect>
+<rect x="595.0" y="1241.0" width="312.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5362: WRDF</title></rect>
+<rect x="595.0" y="1274.0" width="293.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5363: LAM</title></rect>
+<rect x="595.0" y="1307.0" width="801.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5364: TAD DF</title></rect>
+<rect x="595.0" y="1341.0" width="393.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5365: DAC TEMP</title></rect>
+<rect x="595.0" y="1373.0" width="433.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5366: LAC I TEMP</title></rect>
+<rect x="596.0" y="1408.0" width="453.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5367: XOR (400000</title></rect>
+<rect x="595.0" y="1443.0" width="33.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5368: DAC I TEMP</title></rect>
+<rect x="836.0" y="1439.0" width="533.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5368: /ESCAPE BIT</title></rect>
+<rect x="595.0" y="1473.0" width="433.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5369: LAC I LOPX</title></rect>
+<rect x="595.0" y="1506.0" width="415.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5370: DAC XBEAM</title></rect>
+<rect x="595.0" y="1538.0" width="434.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5371: LAC I LOPY</title></rect>
+<rect x="595.0" y="1571.0" width="414.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5372: DAC YBEAM</title></rect>
+<rect x="595.0" y="1605.0" width="534.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5373: JMP I DRLTO-JMS</title></rect>
+<rect x="614.0" y="1707.0" width="395.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5376: WRLTO-JMS, 0</title></rect>
+<rect x="1155.0" y="1706.0" width="274.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5376: /POSITION BEAM</title></rect>
+<rect x="595.0" y="1740.0" width="433.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5377: LAC I LOPX</title></rect>
+<rect x="595.0" y="1775.0" width="374.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5378: JMS NEG</title></rect>
+<rect x="595.0" y="1807.0" width="374.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5379: DAC EX2</title></rect>
+<rect x="1316.0" y="1804.0" width="615.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5379: /USED TO POSITION TO 1ST POINTS</title></rect>
+<rect x="595.0" y="1840.0" width="333.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5380: DAC U</title></rect>
+<rect x="1156.0" y="1837.0" width="694.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5380: /OF INSTANCES AND FOR REPOSITIONING</title></rect>
+<rect x="595.0" y="1877.0" width="33.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5381: LAC I LOPY</title></rect>
+<rect x="837.0" y="1872.0" width="632.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5381: /AFTER LABELLING</title></rect>
+<rect x="596.0" y="1909.0" width="373.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5382: JMS NEG</title></rect>
+<rect x="595.0" y="1941.0" width="373.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5383: DAC YY2</title></rect>
+<rect x="595.0" y="1977.0" width="334.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5384: DAC V</title></rect>
+<rect x="595.0" y="2008.0" width="395.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5385: DZM TEST</title></rect>
+<rect x="596.0" y="2040.0" width="353.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5386: LOCATE</title></rect>
+<rect x="595.0" y="2077.0" width="32.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5387: DAC TEMP2</title></rect>
+<rect x="837.0" y="2071.0" width="973.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5387: /OMIT INSTANCE IF STARTS OFFSCREEN</title></rect>
+<rect x="595.0" y="2108.0" width="294.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5388: SZA</title></rect>
+<rect x="595.0" y="2143.0" width="33.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5389: JMP COMP9</title></rect>
+<rect x="838.0" y="2141.0" width="613.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5389: /OMIT LABEL TOO</title></rect>
+<rect x="596.0" y="2175.0" width="414.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5390: LAC XBEAM</title></rect>
+<rect x="596.0" y="2209.0" width="371.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5391: DAC EX1</title></rect>
+<rect x="596.0" y="2241.0" width="415.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5392: LAC YBEAM</title></rect>
+</svg>

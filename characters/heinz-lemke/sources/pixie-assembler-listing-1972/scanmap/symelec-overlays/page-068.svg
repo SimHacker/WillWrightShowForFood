@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-068.png" width="3307" height="2338"/>
+<rect x="660" y="316" width="1795" height="1095" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="63.0" cy="192.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="291.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="391.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="491.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="592.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="691.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="790.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="891.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="991.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1092.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1191.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1289.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1389.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1489.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1590.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="101.5" cy="1633.0" r="30.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1690.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1790.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1890.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1989.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="2089.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="2189.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="2289.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="837.0" y="336.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3810: DAC COUNT</title></rect>
+<rect x="837.0" y="372.0" width="192.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3811: LAC BSNDST</title></rect>
+<rect x="837.0" y="404.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3812: DAC SNDSTA</title></rect>
+<rect x="836.0" y="468.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3814: LAC I SAVE</title></rect>
+<rect x="837.0" y="502.0" width="232.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3815: DAC I SNDSTA</title></rect>
+<rect x="837.0" y="534.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3816: ISZ SAVE</title></rect>
+<rect x="837.0" y="567.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3817: ISZ SNDSTA</title></rect>
+<rect x="837.0" y="602.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3818: ISZ COUNT</title></rect>
+<rect x="837.0" y="636.0" width="131.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3819: JMP .-5</title></rect>
+<rect x="837.0" y="667.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3820: LAC STSAVE</title></rect>
+<rect x="837.0" y="703.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3821: DAC SAVE</title></rect>
+<rect x="837.0" y="735.0" width="232.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3822: JMP I COPSND</title></rect>
+<rect x="677.0" y="837.0" width="127.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3825: DELLEV,</title></rect>
+<rect x="996.0" y="835.0" width="533.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3825: 0</title></rect>
+<rect x="2171.0" y="840.0" width="1.0" height="3.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3825: /DELETE LEVEL STACK</title></rect>
+<rect x="837.0" y="870.0" width="170.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3826: LAW 17771</title></rect>
+<rect x="837.0" y="904.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3827: DAC COUNT</title></rect>
+<rect x="837.0" y="937.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3828: DZM I SAVE</title></rect>
+<rect x="837.0" y="969.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3829: ISZ SAVE</title></rect>
+<rect x="837.0" y="1001.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3830: ISZ COUNT</title></rect>
+<rect x="837.0" y="1036.0" width="131.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3831: JMP .-3</title></rect>
+<rect x="837.0" y="1068.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3832: LAC STSAVE</title></rect>
+<rect x="837.0" y="1103.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3833: DAC SAVE</title></rect>
+<rect x="837.0" y="1135.0" width="232.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3834: JMP I DELLEV</title></rect>
+<rect x="837.0" y="1201.0" width="112.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3836: NODISP</title></rect>
+<rect x="676.0" y="1235.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3837: PAUSE</title></rect>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-043.png" width="3307" height="2338"/>
+<rect x="1220" y="179" width="1788" height="1995" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="619.5" cy="58.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="154.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="255.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="355.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="456.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="554.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="653.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="753.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="853.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="953.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1051.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1151.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1250.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1350.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1449.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="634.5" cy="1524.5" r="38.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1652.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1750.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1852.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1948.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="2050.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="651.0" cy="2150.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1228.0" y="235.0" width="127.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2341: WAIT10,</title></rect>
+<rect x="1547.0" y="234.0" width="174.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2341: LAC RMODE</title></rect>
+<rect x="1867.0" y="234.0" width="294.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2341: /REQUESTED MODE</title></rect>
+<rect x="1388.0" y="267.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2342: SAD CMODE</title></rect>
+<rect x="1707.0" y="267.0" width="254.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2342: /CURRENT MODE</title></rect>
+<rect x="1387.0" y="300.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2343: JMP WAIT4</title></rect>
+<rect x="1707.0" y="300.0" width="294.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2343: /NO MODE CHANGE</title></rect>
+<rect x="1388.0" y="334.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2344: DAC CMODE</title></rect>
+<rect x="1707.0" y="333.0" width="254.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2344: /SET NEW MODE</title></rect>
+<rect x="1388.0" y="368.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2345: SMA</title></rect>
+<rect x="1707.0" y="367.0" width="454.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2345: /ENTERING TRACKING MODE</title></rect>
+<rect x="1389.0" y="399.0" width="168.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2346: JMP WAIT1</title></rect>
+<rect x="1707.0" y="398.0" width="234.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2346: /SERVICE TTY</title></rect>
+<rect x="1388.0" y="431.0" width="833.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2347: JMS WAIT5</title></rect>
+<rect x="2427.0" y="452.0" width="2.0" height="6.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2347: /ATNAME FROM SNAPSHOT LIST</title></rect>
+<rect x="1388.0" y="466.0" width="92.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2348: FLEAS</title></rect>
+<rect x="1707.0" y="464.0" width="434.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2348: /FLEA ON POINT ELEMENT</title></rect>
+<rect x="1387.0" y="500.0" width="150.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2349: LAC PNT1</title></rect>
+<rect x="1387.0" y="535.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2350: DAC YP</title></rect>
+<rect x="1707.0" y="533.0" width="354.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2350: /SAVE FOR TRACKING</title></rect>
+<rect x="1387.0" y="567.0" width="191.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2351: LAC I PNT1</title></rect>
+<rect x="1387.0" y="601.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2352: CMA</title></rect>
+<rect x="1387.0" y="633.0" width="110.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2353: TAD (1</title></rect>
+<rect x="1387.0" y="665.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2354: TAD TEMPY</title></rect>
+<rect x="1707.0" y="665.0" width="273.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2354: /ADD PEN COORD</title></rect>
+<rect x="1387.0" y="699.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2355: DAC TRAKY</title></rect>
+<rect x="1387.0" y="734.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2356: LAW PNT1</title></rect>
+<rect x="1387.0" y="763.0" width="176.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2357: CDR</title></rect>
+<rect x="1387.0" y="802.0" width="149.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2358: LAC PNT1</title></rect>
+<rect x="1387.0" y="836.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2359: DAC XP</title></rect>
+<rect x="1707.0" y="835.0" width="352.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2359: /SAVE FOR TRACKING</title></rect>
+<rect x="1387.0" y="869.0" width="190.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2360: LAC I PNT1</title></rect>
+<rect x="1386.0" y="903.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2361: CMA</title></rect>
+<rect x="1387.0" y="934.0" width="110.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2362: TAD (1</title></rect>
+<rect x="1387.0" y="967.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2363: TAD TEMPX</title></rect>
+<rect x="1706.0" y="967.0" width="273.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2363: /ADD PEN COORD</title></rect>
+<rect x="1387.0" y="1001.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2364: DAC TRAKX</title></rect>
+<rect x="1226.0" y="1035.0" width="109.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2365: WAIT1,</title></rect>
+<rect x="1386.0" y="1034.0" width="53.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2365: LAM</title></rect>
+<rect x="1707.0" y="1033.0" width="333.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2365: /HERE SERVICE TTY</title></rect>
+<rect x="1387.0" y="1069.0" width="131.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2366: SAD MIN</title></rect>
+<rect x="1387.0" y="1101.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2367: WAIT-5</title></rect>
+<rect x="1706.0" y="1101.0" width="415.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2367: /FINISH INPUT WITH LF</title></rect>
+<rect x="1386.0" y="1135.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2368: LAC IMC</title></rect>
+<rect x="1387.0" y="1166.0" width="1596.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2369: SNA</title></rect>
+<rect x="1387.0" y="1200.0" width="413.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2370: AND I WAIT</title></rect>
+<rect x="2858.0" y="1211.0" width="1.0" height="2.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2370: /EXIT</title></rect>
+<rect x="1386.0" y="1234.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2371: DZM IMC</title></rect>
+<rect x="1386.0" y="1269.0" width="52.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2372: LAM</title></rect>
+<rect x="1385.0" y="1303.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2373: DAC MIN</title></rect>
+<rect x="1387.0" y="1335.0" width="170.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2374: JMP MESIN</title></rect>
+<rect x="1706.0" y="1333.0" width="273.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2374: /MESSAGE READY</title></rect>
+<rect x="1226.0" y="1435.0" width="108.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2377: WAIT4,</title></rect>
+<rect x="1385.0" y="1435.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2377: SNA</title></rect>
+<rect x="1705.0" y="1432.0" width="394.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2377: /HERE NO MODE CHANGE</title></rect>
+<rect x="1386.0" y="1467.0" width="170.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2378: JMP WAIT1</title></rect>
+<rect x="1705.0" y="1465.0" width="395.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2378: /DRAW MODE, TEST TTY</title></rect>
+<rect x="1385.0" y="1501.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2379: SMA</title></rect>
+<rect x="1385.0" y="1533.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2380: JMP WAIT6</title></rect>
+<rect x="1706.0" y="1531.0" width="273.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2380: /POINTING MODE</title></rect>
+<rect x="1386.0" y="1567.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2381: LAC RTRACK</title></rect>
+<rect x="1706.0" y="1565.0" width="413.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2381: /TRACK MODE, REQUEST?</title></rect>
+<rect x="1385.0" y="1603.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2382: SNA</title></rect>
+<rect x="1385.0" y="1633.0" width="170.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2383: JMP WAIT1</title></rect>
+<rect x="1705.0" y="1632.0" width="254.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2383: /NO, TEST TTY</title></rect>
+<rect x="1385.0" y="1667.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2384: DZM RTRACK</title></rect>
+<rect x="1385.0" y="1699.0" width="174.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2385: LAC TRAKY</title></rect>
+<rect x="1385.0" y="1735.0" width="52.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2386: CMA</title></rect>
+<rect x="1385.0" y="1768.0" width="111.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2387: TAD (1</title></rect>
+<rect x="1385.0" y="1802.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2388: TAD TEMPY</title></rect>
+<rect x="1385.0" y="1835.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2389: AND (17777</title></rect>
+<rect x="1385.0" y="1869.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2390: DAC I YP</title></rect>
+<rect x="1705.0" y="1867.0" width="274.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2390: /UPDATE YPOINT</title></rect>
+<rect x="1386.0" y="1903.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2391: LAC TRAKX</title></rect>
+<rect x="1385.0" y="1939.0" width="1139.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2392: CMA</title></rect>
+<rect x="1386.0" y="1970.0" width="110.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2393: TAD (1</title></rect>
+<rect x="1385.0" y="2002.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2394: TAD TEMPX</title></rect>
+<rect x="1385.0" y="2035.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2395: AND (17777</title></rect>
+<rect x="1385.0" y="2068.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2396: DAC I XP</title></rect>
+<rect x="1704.0" y="2067.0" width="275.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2396: /UPDATE XPOINT</title></rect>
+<rect x="1385.0" y="2102.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2397: ISZ CDOCOM</title></rect>
+</svg>

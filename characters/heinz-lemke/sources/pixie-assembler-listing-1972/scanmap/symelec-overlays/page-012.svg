@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-012.png" width="3307" height="2338"/>
+<rect x="660" y="330" width="1698" height="1977" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="62.5" cy="195.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="292.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="394.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="494.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="594.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="695.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="793.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="893.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="992.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1091.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1190.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1290.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1389.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1489.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="1588.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="99.5" cy="1640.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.0" cy="1686.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.0" cy="1785.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="57.5" cy="1885.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="1987.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="56.5" cy="2083.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="2184.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="2285.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="838.0" y="348.0" width="212.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 534: POH SB 1730</title></rect>
+<rect x="838.0" y="380.0" width="192.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 535: DJS SB , 2</title></rect>
+<rect x="837.0" y="413.0" width="174.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 536: JMP REDUC</title></rect>
+<rect x="838.0" y="445.0" width="151.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 537: DDS CH 3</title></rect>
+<rect x="838.0" y="478.0" width="111.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 538: 220537</title></rect>
+<rect x="1158.0" y="478.0" width="53.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 538: /RE</title></rect>
+<rect x="838.0" y="510.0" width="113.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 539: PAR PO</title></rect>
+<rect x="837.0" y="542.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 540: POV PO 400</title></rect>
+<rect x="837.0" y="576.0" width="213.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 541: POH SB 1730</title></rect>
+<rect x="837.0" y="609.0" width="192.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 542: DJS SB , 2</title></rect>
+<rect x="836.0" y="643.0" width="175.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 543: JMP ROTMO</title></rect>
+<rect x="837.0" y="675.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 544: DDS CH 3</title></rect>
+<rect x="837.0" y="709.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 545: 221737</title></rect>
+<rect x="1157.0" y="709.0" width="54.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 545: /RO</title></rect>
+<rect x="837.0" y="741.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 546: PAR SB</title></rect>
+<rect x="837.0" y="775.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 547: DJP PO LB3</title></rect>
+<rect x="677.0" y="876.0" width="108.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 550: INTMO,</title></rect>
+<rect x="837.0" y="875.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 550: LAC MBLINK</title></rect>
+<rect x="1157.0" y="875.0" width="333.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 550: /CHANGE INTENSITY</title></rect>
+<rect x="778.0" y="899.0" width="110.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 551: SNA</title></rect>
+<rect x="839.0" y="931.0" width="145.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 552: JMP PEN1</title></rect>
+<rect x="837.0" y="964.0" width="212.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 553: LAC (160113</title></rect>
+<rect x="1159.0" y="975.0" width="852.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 553: /SET BRIGHTNESS LOW UNTIL NEXT POINT ACTION</title></rect>
+<rect x="824.0" y="996.0" width="435.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 554: DAC I BLINK</title></rect>
+<rect x="839.0" y="1042.0" width="144.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 555: JMP PEN1</title></rect>
+<rect x="836.0" y="1061.0" width="1132.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 556: LAW 17760</title></rect>
+<rect x="836.0" y="1093.0" width="233.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 557: AND I BSBWOR</title></rect>
+<rect x="836.0" y="1126.0" width="220.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 558: DAC TEMP</title></rect>
+<rect x="835.0" y="1158.0" width="233.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 559: LAC I BSBWOR</title></rect>
+<rect x="836.0" y="1191.0" width="493.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 560: AND (7</title></rect>
+<rect x="835.0" y="1223.0" width="108.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 561: SNA</title></rect>
+<rect x="835.0" y="1256.0" width="132.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 562: JMP . 7</title></rect>
+<rect x="1161.0" y="1273.0" width="408.0" height="13.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 562: /ZERO DEFAULT SETTING</title></rect>
+<rect x="835.0" y="1288.0" width="733.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 563: TAD (777777</title></rect>
+<rect x="835.0" y="1320.0" width="210.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 564: SNA</title></rect>
+<rect x="835.0" y="1353.0" width="112.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 565: LAC (7</title></rect>
+<rect x="1163.0" y="1375.0" width="506.0" height="8.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 565: /PREVENT INVISIBLE PICTURE</title></rect>
+<rect x="836.0" y="1385.0" width="833.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 566: TAD (10</title></rect>
+<rect x="835.0" y="1418.0" width="152.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 567: TAD TEMP</title></rect>
+<rect x="836.0" y="1450.0" width="231.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 568: DAC I BSBWOR</title></rect>
+<rect x="836.0" y="1482.0" width="233.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 569: JMP BLIROU</title></rect>
+<rect x="835.0" y="1515.0" width="192.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 570: LAC (16</title></rect>
+<rect x="1164.0" y="1537.0" width="784.0" height="8.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 570: /DECREASE ONE LEVEL FROM DEFAULT SETTING</title></rect>
+<rect x="835.0" y="1547.0" width="1114.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 571: JMP .-4</title></rect>
+<rect x="1165.0" y="1640.0" width="1.0" height="2.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 573: SCAMO,</title></rect>
+<rect x="1339.0" y="1640.0" width="8.0" height="2.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 573: LAC MBLINK</title></rect>
+<rect x="1406.0" y="1640.0" width="1.0" height="2.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 573: /CHANGE SCALE</title></rect>
+<rect x="413.0" y="1645.0" width="994.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 574: {handwritten: solid black ink mark in left margin beside rows 214-215}</title></rect>
+<rect x="834.0" y="1677.0" width="53.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 575: SNA</title></rect>
+<rect x="835.0" y="1711.0" width="762.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 576: JMP PEN1</title></rect>
+<rect x="833.0" y="1742.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 577: LAC (160117</title></rect>
+<rect x="1154.0" y="1742.0" width="773.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 577: /SET TO SCALE 2 UNTIL NEXT POINT ACTION</title></rect>
+<rect x="834.0" y="1775.0" width="213.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 578: DAC I BLINK</title></rect>
+<rect x="836.0" y="1808.0" width="149.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 579: JMP PEN1</title></rect>
+<rect x="834.0" y="1841.0" width="172.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 580: LAW 17617</title></rect>
+<rect x="835.0" y="1876.0" width="232.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 581: AND I BSBWOR</title></rect>
+<rect x="834.0" y="1911.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 582: DAC TEMP</title></rect>
+<rect x="834.0" y="1943.0" width="233.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 583: LAC I BSBWOR</title></rect>
+<rect x="835.0" y="1979.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 584: AND (60</title></rect>
+<rect x="834.0" y="2001.0" width="133.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 585: SAD (60</title></rect>
+<rect x="833.0" y="2034.0" width="133.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 586: JMP . 5</title></rect>
+<rect x="1154.0" y="2042.0" width="472.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 586: /GO BACK TO SC0 FROM SC3</title></rect>
+<rect x="834.0" y="2066.0" width="152.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 587: TAD (120</title></rect>
+<rect x="835.0" y="2098.0" width="151.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 588: TAD TEMP</title></rect>
+<rect x="834.0" y="2141.0" width="233.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 589: DAC I BSBWOR</title></rect>
+<rect x="837.0" y="2175.0" width="189.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 590: JMP BLIROU</title></rect>
+<rect x="834.0" y="2209.0" width="152.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 591: LAC (100</title></rect>
+<rect x="836.0" y="2228.0" width="146.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 592: JMP .-4</title></rect>
+</svg>

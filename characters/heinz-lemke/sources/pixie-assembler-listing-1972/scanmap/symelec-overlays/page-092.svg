@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-092.png" width="3307" height="2338"/>
+<rect x="568" y="317" width="1887" height="1991" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="59.5" cy="191.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.0" cy="291.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="393.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="494.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="595.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="695.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="794.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="893.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="993.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1091.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1190.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1289.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1389.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1489.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1588.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="86.5" cy="1657.5" r="39.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1788.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="2188.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="2288.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="573.0" y="337.0" width="472.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5095: DAC I FLEA3</title></rect>
+<rect x="572.0" y="372.0" width="375.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5096: LAC DF</title></rect>
+<rect x="577.0" y="405.0" width="430.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5097: DAC BLINK</title></rect>
+<rect x="575.0" y="439.0" width="332.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5098: WRLB</title></rect>
+<rect x="571.0" y="468.0" width="1266.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5099: LAC DF</title></rect>
+<rect x="573.0" y="503.0" width="452.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5100: DAC BLINK1</title></rect>
+<rect x="573.0" y="537.0" width="314.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5101: SKP</title></rect>
+<rect x="576.0" y="571.0" width="331.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5102: WRLB</title></rect>
+<rect x="573.0" y="603.0" width="315.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5103: LAM</title></rect>
+<rect x="574.0" y="636.0" width="414.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5104: TAD MRKY</title></rect>
+<rect x="573.0" y="667.0" width="415.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5105: DAC MRKY</title></rect>
+<rect x="573.0" y="701.0" width="414.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5106: JMP .-27</title></rect>
+<rect x="574.0" y="734.0" width="975.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5107: LAC (160000</title></rect>
+<rect x="574.0" y="767.0" width="335.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5108: WRDF</title></rect>
+<rect x="1156.0" y="767.0" width="393.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5108: /SET SUBROUTINE MODE</title></rect>
+<rect x="574.0" y="800.0" width="335.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5109: WRDF</title></rect>
+<rect x="1155.0" y="800.0" width="434.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5109: /WRITE JUNK TO STEP DF</title></rect>
+<rect x="574.0" y="835.0" width="474.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5110: TAD (200000</title></rect>
+<rect x="574.0" y="871.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5111: DAC I GAMMA</title></rect>
+<rect x="836.0" y="867.0" width="693.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5111: /DDS DELTA TO GAMMA</title></rect>
+<rect x="573.0" y="903.0" width="315.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5112: LAW</title></rect>
+<rect x="575.0" y="935.0" width="433.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5113: TAD GAMMA</title></rect>
+<rect x="575.0" y="971.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5114: DAC I BETA</title></rect>
+<rect x="837.0" y="966.0" width="672.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5114: /DJS GAMMA TO BETA</title></rect>
+<rect x="575.0" y="999.0" width="334.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5115: EXIT</title></rect>
+<rect x="575.0" y="1034.0" width="209.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5116: COMP3,</title></rect>
+<rect x="837.0" y="1033.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5116: LAW X</title></rect>
+<rect x="1156.0" y="1032.0" width="294.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5116: /FIRST GO ROUND</title></rect>
+<rect x="575.0" y="1066.0" width="334.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5117: GETD</title></rect>
+<rect x="578.0" y="1101.0" width="370.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5118: SAD (2</title></rect>
+<rect x="573.0" y="1135.0" width="316.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5119: SKP</title></rect>
+<rect x="574.0" y="1169.0" width="209.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5120: COMP2,</title></rect>
+<rect x="837.0" y="1168.0" width="72.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5120: EXIT</title></rect>
+<rect x="573.0" y="1203.0" width="55.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5121: LAC DF</title></rect>
+<rect x="837.0" y="1198.0" width="653.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5121: /HERE IF INSTANCE</title></rect>
+<rect x="575.0" y="1234.0" width="334.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5122: STAK</title></rect>
+<rect x="575.0" y="1266.0" width="414.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5123: LAC SUBP</title></rect>
+<rect x="575.0" y="1299.0" width="334.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5124: STAK</title></rect>
+<rect x="568.0" y="1334.0" width="361.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5125: LAC X</title></rect>
+<rect x="576.0" y="1367.0" width="333.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5126: STAK</title></rect>
+<rect x="1157.0" y="1364.0" width="414.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5126: /STAK MOUSE AND FLEAS</title></rect>
+<rect x="568.0" y="1401.0" width="440.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5127: LAC GETD1</title></rect>
+<rect x="568.0" y="1435.0" width="361.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5128: DAC X</title></rect>
+<rect x="576.0" y="1468.0" width="333.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5129: STAK</title></rect>
+<rect x="568.0" y="1501.0" width="362.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5130: FLEAS</title></rect>
+<rect x="1157.0" y="1499.0" width="194.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5130: /NEW FLEAS</title></rect>
+<rect x="568.0" y="1533.0" width="420.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5131: LAC PNT1</title></rect>
+<rect x="575.0" y="1565.0" width="415.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5132: DAC TEMP</title></rect>
+<rect x="576.0" y="1603.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5133: JMS WRLB3</title></rect>
+<rect x="837.0" y="1598.0" width="554.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5133: /STACK POINT</title></rect>
+<rect x="577.0" y="1633.0" width="372.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5134: UNSTAK</title></rect>
+<rect x="576.0" y="1667.0" width="353.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5135: DAC X</title></rect>
+<rect x="568.0" y="1701.0" width="421.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5136: LAC BETA</title></rect>
+<rect x="568.0" y="1733.0" width="341.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5137: STAK</title></rect>
+<rect x="1157.0" y="1731.0" width="194.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5137: /STAK BETA</title></rect>
+<rect x="568.0" y="1768.0" width="423.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5138: LAW COMP</title></rect>
+<rect x="568.0" y="1800.0" width="363.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5139: ENTER</title></rect>
+<rect x="1157.0" y="1799.0" width="154.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5139: /RECURSE</title></rect>
+<rect x="568.0" y="1834.0" width="383.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5140: UNSTAK</title></rect>
+<rect x="568.0" y="1872.0" width="62.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5141: DAC BETA</title></rect>
+<rect x="839.0" y="1865.0" width="552.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5141: /UNSTAK BETA</title></rect>
+<rect x="568.0" y="1903.0" width="383.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5142: UNSTKX</title></rect>
+<rect x="568.0" y="1939.0" width="62.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5143: UNSTKY</title></rect>
+<rect x="839.0" y="1932.0" width="713.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5143: /UNSTAK CO-ORDINATES</title></rect>
+<rect x="568.0" y="1971.0" width="383.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5144: UNSTAK</title></rect>
+<rect x="568.0" y="2005.0" width="363.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5145: DAC X</title></rect>
+<rect x="1158.0" y="2001.0" width="254.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5145: /UNSTAK MOUSE</title></rect>
+<rect x="568.0" y="2037.0" width="383.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5146: UNSTAK</title></rect>
+<rect x="568.0" y="2070.0" width="62.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5147: DAC SUBP</title></rect>
+<rect x="839.0" y="2065.0" width="774.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5147: /UNSTAK SUBPICTURE FLEA</title></rect>
+<rect x="568.0" y="2097.0" width="1628.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5148: LAM</title></rect>
+<rect x="568.0" y="2135.0" width="423.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5149: TAD SVAD</title></rect>
+<rect x="568.0" y="2169.0" width="62.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5150: DAC SVAD</title></rect>
+<rect x="839.0" y="2166.0" width="652.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5150: /DAC SAVE ADDRESS</title></rect>
+<rect x="568.0" y="2202.0" width="344.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5151: EXIT</title></rect>
+<rect x="568.0" y="2233.0" width="219.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5152: COMP5,</title></rect>
+<rect x="839.0" y="2234.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5152: LAW Y</title></rect>
+<rect x="1158.0" y="2232.0" width="294.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5152: /SECOND GOROUND</title></rect>
+</svg>

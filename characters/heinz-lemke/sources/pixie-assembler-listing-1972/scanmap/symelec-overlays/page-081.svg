@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-081.png" width="3307" height="2338"/>
+<rect x="1222" y="182" width="1794" height="1992" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="600.0" cy="47.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="148.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="599.5" cy="248.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="348.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="618.0" cy="449.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="618.0" cy="548.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.5" cy="650.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.5" cy="750.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="848.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.5" cy="950.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="1048.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="1150.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="1248.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1348.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1449.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="654.0" cy="1500.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1548.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1649.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1749.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1849.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1948.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="2048.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="2147.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1233.0" y="235.0" width="128.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4481: CATDAT,</title></rect>
+<rect x="1554.0" y="235.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4481: ISZ CCAT</title></rect>
+<rect x="1393.0" y="267.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4482: LAC RCOPY</title></rect>
+<rect x="1393.0" y="302.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4483: TAD RGROUP</title></rect>
+<rect x="1392.0" y="337.0" width="194.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4484: TAD RCATAL</title></rect>
+<rect x="1393.0" y="369.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4485: SZA</title></rect>
+<rect x="1392.0" y="403.0" width="232.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4486: JMP I AMEND3</title></rect>
+<rect x="1713.0" y="403.0" width="512.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4486: /CATALOGUED SUBP IN FIRSTA</title></rect>
+<rect x="1394.0" y="471.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4488: JMS CATDA0</title></rect>
+<rect x="1392.0" y="503.0" width="232.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4489: JMP I AMEND3</title></rect>
+<rect x="1231.0" y="569.0" width="129.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4491: CATDA0,</title></rect>
+<rect x="1551.0" y="571.0" width="14.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4491: 0</title></rect>
+<rect x="1711.0" y="568.0" width="494.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4491: /DETERMINE ATTP FOR CROSS</title></rect>
+<rect x="1393.0" y="603.0" width="170.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4492: ISZ NODRA</title></rect>
+<rect x="1711.0" y="602.0" width="715.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4492: /PROHIBIT DRAWING IN CASE TEST FAILS</title></rect>
+<rect x="1391.0" y="637.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4493: LAW GRHA</title></rect>
+<rect x="1391.0" y="671.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4494: ENTER</title></rect>
+<rect x="1391.0" y="703.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4495: LAW SBPI</title></rect>
+<rect x="1391.0" y="735.0" width="191.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4496: LAW CATDA1</title></rect>
+<rect x="1391.0" y="770.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4497: LAW CATDA2</title></rect>
+<rect x="1392.0" y="802.0" width="232.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4498: JMP I CATDA0</title></rect>
+<rect x="1711.0" y="803.0" width="414.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4498: /CROSS NOT NEAR ATTPO</title></rect>
+<rect x="1231.0" y="871.0" width="128.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4500: CATDA1,</title></rect>
+<rect x="1550.0" y="871.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4500: LAC SBPI</title></rect>
+<rect x="1871.0" y="871.0" width="454.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4500: /POINTS TO INST OR ATTP</title></rect>
+<rect x="1391.0" y="904.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4501: DAC Y</title></rect>
+<rect x="1391.0" y="938.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4502: LAW Y</title></rect>
+<rect x="1390.0" y="972.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4503: CAR</title></rect>
+<rect x="1391.0" y="1003.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4504: FINDN</title></rect>
+<rect x="1390.0" y="1037.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4505: LAW OP 1</title></rect>
+<rect x="1389.0" y="1070.0" width="54.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4506: CDR</title></rect>
+<rect x="1390.0" y="1103.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4507: CDR</title></rect>
+<rect x="1390.0" y="1136.0" width="191.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4508: LAC I OP 1</title></rect>
+<rect x="1390.0" y="1169.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4509: SAD (1</title></rect>
+<rect x="1390.0" y="1203.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4510: SKP</title></rect>
+<rect x="1710.0" y="1203.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4510: /IS ATTP</title></rect>
+<rect x="1390.0" y="1235.0" width="73.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4511: EXIT</title></rect>
+<rect x="1709.0" y="1236.0" width="154.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4511: /IS INST</title></rect>
+<rect x="1389.0" y="1267.0" width="174.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4512: JMS POSIT</title></rect>
+<rect x="1389.0" y="1301.0" width="94.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4513: LAC Y</title></rect>
+<rect x="1389.0" y="1334.0" width="190.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4514: JMS ENDPOI</title></rect>
+<rect x="1389.0" y="1367.0" width="72.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4515: EXIT</title></rect>
+<rect x="1229.0" y="1434.0" width="128.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4517: CATDA2,</title></rect>
+<rect x="1549.0" y="1435.0" width="194.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4517: LAC RCATAL</title></rect>
+<rect x="1869.0" y="1434.0" width="254.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4517: /LINE OR INST</title></rect>
+<rect x="1389.0" y="1469.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4518: SNA</title></rect>
+<rect x="1389.0" y="1503.0" width="72.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4519: EXIT</title></rect>
+<rect x="1389.0" y="1537.0" width="150.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4520: LAC SBPI</title></rect>
+<rect x="1389.0" y="1569.0" width="92.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4521: DAC Y</title></rect>
+<rect x="1388.0" y="1601.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4522: LAW Y</title></rect>
+<rect x="1388.0" y="1634.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4523: NULLR</title></rect>
+<rect x="1389.0" y="1668.0" width="72.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4524: EXIT</title></rect>
+<rect x="1228.0" y="1734.0" width="128.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4526: ENDPOI,</title></rect>
+<rect x="1547.0" y="1737.0" width="14.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4526: 0</title></rect>
+<rect x="1868.0" y="1734.0" width="594.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4526: /PUT CROSS ON ENDPOINT OF LINE</title></rect>
+<rect x="1351.0" y="1761.0" width="130.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4527: DAC Y</title></rect>
+<rect x="1387.0" y="1801.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4528: LAC I Y</title></rect>
+<rect x="1388.0" y="1835.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4529: TAD YINS</title></rect>
+<rect x="1387.0" y="1870.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4530: AND (17777</title></rect>
+<rect x="1387.0" y="1902.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4531: DAC YTOTIN</title></rect>
+<rect x="1707.0" y="1902.0" width="594.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4531: /ABS POS OF ATTP OR LINE POINT</title></rect>
+<rect x="1387.0" y="1938.0" width="93.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4532: LAW Y</title></rect>
+<rect x="1387.0" y="1973.0" width="52.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4533: CDR</title></rect>
+<rect x="1387.0" y="2005.0" width="133.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4534: LAC I Y</title></rect>
+<rect x="1386.0" y="2027.0" width="153.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4535: TAD XINS</title></rect>
+<rect x="1387.0" y="2072.0" width="1365.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4536: AND (17777</title></rect>
+<rect x="1386.0" y="2093.0" width="192.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4537: DAC XTOTIN</title></rect>
+</svg>

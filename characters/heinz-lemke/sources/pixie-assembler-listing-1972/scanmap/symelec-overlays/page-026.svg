@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-026.png" width="3307" height="2338"/>
+<rect x="666" y="314" width="1803" height="1997" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="16.0" cy="136.5" r="18.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="190.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.5" cy="292.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.5" cy="392.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="490.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="592.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="691.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="791.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="891.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="991.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="1091.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="1190.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="1289.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="1387.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="1488.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1588.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="105.5" cy="1646.0" r="29.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.5" cy="1688.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1788.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="1887.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1986.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="2088.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="2188.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="2286.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="687.0" y="335.0" width="131.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1353: /RSPPIX</title></rect>
+<rect x="684.0" y="437.0" width="210.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1356: SETUP=JMS .</title></rect>
+<rect x="845.0" y="472.0" width="12.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1357: 0</title></rect>
+<rect x="1165.0" y="471.0" width="274.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1357: /SETUP PACKAGE</title></rect>
+<rect x="845.0" y="504.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1358: LAC BEG</title></rect>
+<rect x="845.0" y="538.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1359: DAC FREE</title></rect>
+<rect x="845.0" y="571.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1360: DAC OP</title></rect>
+<rect x="1165.0" y="572.0" width="274.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1360: /FORM FREELIST</title></rect>
+<rect x="845.0" y="603.0" width="210.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1361: TAD (400001</title></rect>
+<rect x="845.0" y="636.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1362: DAC I OP</title></rect>
+<rect x="845.0" y="668.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1363: AND (17777</title></rect>
+<rect x="845.0" y="703.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1364: SAD ENDRES</title></rect>
+<rect x="845.0" y="737.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1365: SKP</title></rect>
+<rect x="844.0" y="770.0" width="132.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1366: JMP .-6</title></rect>
+<rect x="1323.0" y="771.0" width="94.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1366: /LOOP</title></rect>
+<rect x="844.0" y="801.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1367: LAC BOT</title></rect>
+<rect x="844.0" y="835.0" width="170.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1368: DAC TOP 1</title></rect>
+<rect x="1163.0" y="837.0" width="314.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1368: /CLEAR NAME LIST</title></rect>
+<rect x="844.0" y="868.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1369: LAW SAVINS</title></rect>
+<rect x="845.0" y="901.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1370: INIT</title></rect>
+<rect x="844.0" y="936.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1371: SETUP1</title></rect>
+<rect x="845.0" y="971.0" width="292.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1372: JMP I SETUP-JMS</title></rect>
+<rect x="683.0" y="1038.0" width="230.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1374: SETUP1=JMS .</title></rect>
+<rect x="844.0" y="1075.0" width="11.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1375: 0</title></rect>
+<rect x="843.0" y="1104.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1376: LAC LPBEG</title></rect>
+<rect x="1163.0" y="1104.0" width="534.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1376: /INITIAL LOP AND LINK STAKS</title></rect>
+<rect x="843.0" y="1136.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1377: DAC LOP</title></rect>
+<rect x="843.0" y="1169.0" width="172.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1378: LAC LKBEG</title></rect>
+<rect x="843.0" y="1198.0" width="152.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1379: DAC LINK</title></rect>
+<rect x="842.0" y="1237.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1380: LAW EL</title></rect>
+<rect x="843.0" y="1271.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1381: INIT</title></rect>
+<rect x="843.0" y="1304.0" width="130.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1382: LAW EL1</title></rect>
+<rect x="843.0" y="1336.0" width="72.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1383: INIT</title></rect>
+<rect x="843.0" y="1369.0" width="112.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1384: LAW NM</title></rect>
+<rect x="843.0" y="1402.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1385: INIT</title></rect>
+<rect x="842.0" y="1470.0" width="193.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1387: LAW SAVSUB</title></rect>
+<rect x="843.0" y="1504.0" width="72.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1388: INIT</title></rect>
+<rect x="841.0" y="1537.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1389: LAW POINT</title></rect>
+<rect x="842.0" y="1571.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1390: INIT</title></rect>
+<rect x="841.0" y="1605.0" width="154.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1391: LAW LINE</title></rect>
+<rect x="841.0" y="1637.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1392: INIT</title></rect>
+<rect x="841.0" y="1669.0" width="275.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1393: LAW SBPI</title></rect>
+<rect x="842.0" y="1703.0" width="71.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1394: INIT</title></rect>
+<rect x="841.0" y="1736.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1395: LAW INST</title></rect>
+<rect x="841.0" y="1770.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1396: INIT</title></rect>
+<rect x="841.0" y="1805.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1397: LAW PBDM</title></rect>
+<rect x="841.0" y="1837.0" width="72.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1398: INIT</title></rect>
+<rect x="841.0" y="1871.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1399: LAW SYMB</title></rect>
+<rect x="842.0" y="1904.0" width="71.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1400: INIT</title></rect>
+<rect x="841.0" y="1935.0" width="312.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1401: JMP I SETUP1-JMS</title></rect>
+<rect x="680.0" y="2073.0" width="68.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1405: ERR,</title></rect>
+<rect x="840.0" y="2076.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1405: 0</title></rect>
+<rect x="743.0" y="2097.0" width="150.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1406: HLT</title></rect>
+<rect x="999.0" y="2107.0" width="414.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1406: /STACKS TO SHORT OR ?</title></rect>
+<rect x="840.0" y="2141.0" width="191.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1407: DAC NOTE 5</title></rect>
+<rect x="839.0" y="2173.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1408: JMP ERRMEB</title></rect>
+<rect x="840.0" y="2209.0" width="12.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1409: 0</title></rect>
+<rect x="1160.0" y="2206.0" width="390.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1409: /RTN TO SET OP, OP 1</title></rect>
+<rect x="839.0" y="2230.0" width="605.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1410: DAC OP</title></rect>
+</svg>

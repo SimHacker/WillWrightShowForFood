@@ -254,6 +254,20 @@ Give the host a few services, each a named endpoint:
 - `lock`, `unlock`, `barrier`: the host handles one request at a time, so
   it is a lock manager for free.
 - `clock`: the cycle count, for runs kept in step.
+- `build`: the cabinet's toolchain, run on the host for any machine on the bus. Assemble in any
+  dialect (`as7`, DEC, Cambridge), translate Cambridge to as7, disassemble, link several files
+  into one image with one symbol table, compile Forth on a scratch machine, and return the image,
+  symbols, listing and source maps. The 1972 PDP-7 never assembled anything itself either: Titan
+  cross-assembled SYMELEC (the listing says `ASSEMBLED ... BY HL1470` on Titan). tiny-titan keeps
+  that division of labour.
+- `type`: deliver a file to a machine by typing it into its teletype, as fast as the machine
+  will read. Forth needs no file system and no new words for this: it already reads source a
+  line at a time from the keyboard, so a Forth file typed in is compiled exactly as if someone
+  typed it. The teletype's speed is a cabinet setting, not a law, so tiny-titan types at
+  thousands of characters a second instead of ten, waiting for each line's ` ok` before the next,
+  as Mitch's `prelude.py` does with the tape reader. Errors come back as the line Forth didn't
+  accept. Any program that reads its keyboard can be fed this way: HILO's talk tapes, UNIX at
+  its shell.
 
 Call that service layer **tiny-its**, after MIT's Incompatible
 Timesharing System: named as a joke on CTSS the way tiny-titan is one on
@@ -283,8 +297,9 @@ every VM that treatment, all over tiny-titan messages:
   address, reset, kill;
 - memory: examine and deposit (`addr/` opens a word, as in any DDT),
   symbolic, from each program's symbol table;
-- disassemble and assemble in place, with the cabinet's own
-  disassembler and `asm.ts` (DEC and Cambridge dialects, `as7` to come);
+- disassemble and assemble in place, by calling tiny-titan's `build`
+  service (the cabinet's `asm.ts` and as7, every dialect) rather than an
+  assembler of its own;
 - dump and load: copy a range, a segment or a whole core in or out as
   a filestore file, a paper tape or a ring file, and from one VM into
   another;

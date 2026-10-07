@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-049.png" width="3307" height="2338"/>
+<rect x="1219" y="182" width="1788" height="1991" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="657.5" cy="151.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="251.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="352.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="452.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="551.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="651.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="750.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="851.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="950.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1049.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1150.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1249.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1349.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1449.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="651.0" cy="1501.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1550.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1650.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1750.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1850.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1949.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="2050.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="2151.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1387.0" y="201.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2701: CAR</title></rect>
+<rect x="1707.0" y="201.0" width="234.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2701: / INTO LIST</title></rect>
+<rect x="1387.0" y="234.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2702: LAC MESS</title></rect>
+<rect x="1707.0" y="234.0" width="494.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2702: /MESSAGE TO START IN MESS</title></rect>
+<rect x="1387.0" y="267.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2703: DAC OP+2</title></rect>
+<rect x="1387.0" y="301.0" width="191.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2704: LAC I OP 1</title></rect>
+<rect x="1387.0" y="335.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2705: SAD (JMS</title></rect>
+<rect x="1707.0" y="335.0" width="313.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2705: /SKIP UNLESS NIL</title></rect>
+<rect x="1387.0" y="370.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2706: LAC CR</title></rect>
+<rect x="1547.0" y="370.0" width="274.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2706: /CR TERMINATOR</title></rect>
+<rect x="1387.0" y="402.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2707: DAC I OP 2</title></rect>
+<rect x="1387.0" y="436.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2708: SAD CR</title></rect>
+<rect x="1387.0" y="469.0" width="233.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2709: AND I COPOUT</title></rect>
+<rect x="1707.0" y="469.0" width="233.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2709: /EXIT IF END</title></rect>
+<rect x="1387.0" y="502.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2710: AND (JMS</title></rect>
+<rect x="1387.0" y="534.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2711: SNA</title></rect>
+<rect x="1707.0" y="533.0" width="434.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2711: /SKIP IF ADDRESS STYLE</title></rect>
+<rect x="1387.0" y="567.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2712: ISZ OP 2</title></rect>
+<rect x="1707.0" y="566.0" width="614.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2712: /OTHERWISE ADVANCE CHAR POINTER</title></rect>
+<rect x="1387.0" y="601.0" width="1398.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2713: LAW OP 1</title></rect>
+<rect x="1386.0" y="635.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2714: CDR</title></rect>
+<rect x="1706.0" y="635.0" width="253.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2714: /NEXT IN LIST</title></rect>
+<rect x="1387.0" y="670.0" width="151.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2715: JMP ,-13</title></rect>
+<rect x="1707.0" y="670.0" width="93.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2715: /LOOP</title></rect>
+<rect x="1225.0" y="769.0" width="333.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2718: COPIN-JMS, 0</title></rect>
+<rect x="1706.0" y="767.0" width="474.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2718: / COPY MSIN TO PRINTNAME</title></rect>
+<rect x="1387.0" y="801.0" width="151.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2719: JMS OP-5</title></rect>
+<rect x="1707.0" y="801.0" width="212.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2719: / SAVE NAME</title></rect>
+<rect x="1386.0" y="834.0" width="151.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2720: LAW OP+1</title></rect>
+<rect x="1386.0" y="869.0" width="92.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2721: FINDN</title></rect>
+<rect x="1385.0" y="903.0" width="54.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2722: CAR</title></rect>
+<rect x="1705.0" y="902.0" width="294.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2722: /INTO PRINTNAME</title></rect>
+<rect x="1386.0" y="937.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2723: CDR</title></rect>
+<rect x="1386.0" y="971.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2724: LAC MSIN</title></rect>
+<rect x="1387.0" y="1005.0" width="112.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2725: DAC MS</title></rect>
+<rect x="1387.0" y="1037.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2726: LAC I MS</title></rect>
+<rect x="1386.0" y="1068.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2727: SAD COLON</title></rect>
+<rect x="1387.0" y="1102.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2728: ISZ MS</title></rect>
+<rect x="1387.0" y="1135.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2729: LAC I MS</title></rect>
+<rect x="1387.0" y="1169.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2730: SAD (215</title></rect>
+<rect x="1386.0" y="1203.0" width="153.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2731: LAC (JMS</title></rect>
+<rect x="1387.0" y="1235.0" width="190.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2732: DAC I OP 1</title></rect>
+<rect x="1387.0" y="1267.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2733: SAD (JMS</title></rect>
+<rect x="1387.0" y="1301.0" width="211.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2734: AND I COPIN</title></rect>
+<rect x="1385.0" y="1333.0" width="151.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2735: LAW OP 1</title></rect>
+<rect x="1386.0" y="1367.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2736: CDR</title></rect>
+<rect x="1387.0" y="1400.0" width="150.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2737: JMP ,-11</title></rect>
+<rect x="1226.0" y="1467.0" width="88.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2739: NOTE,</title></rect>
+<rect x="1387.0" y="1469.0" width="50.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2739: 316</title></rect>
+<rect x="1387.0" y="1503.0" width="50.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2740: 317</title></rect>
+<rect x="1387.0" y="1537.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2741: 324</title></rect>
+<rect x="1387.0" y="1568.0" width="50.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2742: 305</title></rect>
+<rect x="1386.0" y="1602.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2743: 240</title></rect>
+<rect x="1385.0" y="1637.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2744: 0</title></rect>
+<rect x="1386.0" y="1667.0" width="51.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2745: 615</title></rect>
+<rect x="1545.0" y="1664.0" width="374.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2745: /FOOL OUT TO GET CR</title></rect>
+<rect x="1385.0" y="1704.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2746: 212</title></rect>
+<rect x="1385.0" y="1737.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2747: 215</title></rect>
+<rect x="1545.0" y="1735.0" width="94.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2747: /STOP</title></rect>
+<rect x="1225.0" y="1902.0" width="89.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2752: MESS,</title></rect>
+<rect x="1386.0" y="1902.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2752: MSIN 1</title></rect>
+<rect x="1225.0" y="1926.0" width="84.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2753: MS,</title></rect>
+<rect x="1386.0" y="1937.0" width="107.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2753: MSIN 1</title></rect>
+<rect x="1226.0" y="1960.0" width="108.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2754: MSOUT,</title></rect>
+<rect x="1386.0" y="1971.0" width="107.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2754: MSIN 1</title></rect>
+<rect x="1225.0" y="1993.0" width="106.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2755: MSIN,</title></rect>
+<rect x="1386.0" y="1993.0" width="110.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2755: MSIN 1</title></rect>
+<rect x="1307.0" y="2026.0" width="130.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2756: 215</title></rect>
+<rect x="1225.0" y="2104.0" width="151.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2758: MSIN 50/</title></rect>
+</svg>

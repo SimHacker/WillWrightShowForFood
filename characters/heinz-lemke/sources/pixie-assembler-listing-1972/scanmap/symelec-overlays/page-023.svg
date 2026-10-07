@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-023.png" width="3307" height="2338"/>
+<rect x="1214" y="209" width="1779" height="1989" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="638.0" cy="10.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="596.5" cy="88.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="598.5" cy="186.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="599.0" cy="287.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="386.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.5" cy="487.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="885.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="983.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.0" cy="1082.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="607.0" cy="1182.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1282.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1381.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1481.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="649.5" cy="1533.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1581.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="1680.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1784.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="618.0" cy="1878.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="618.5" cy="1978.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.5" cy="2079.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="2182.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1373.0" y="228.0" width="169.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1195: JMP PXER1</title></rect>
+<rect x="1692.0" y="228.0" width="213.0" height="15.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1195: /DS TO LONG</title></rect>
+<rect x="1373.0" y="261.0" width="172.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1196: JMS ERRGB</title></rect>
+<rect x="1373.0" y="294.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1197: LAC END</title></rect>
+<rect x="1214.0" y="360.0" width="127.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1199: FRSTCH,</title></rect>
+<rect x="1533.0" y="360.0" width="192.0" height="16.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1199: TAD RELCON</title></rect>
+<rect x="1853.0" y="360.0" width="354.0" height="13.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1199: /TEST LENGTH OF DS</title></rect>
+<rect x="1374.0" y="393.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1200: CMA</title></rect>
+<rect x="1375.0" y="427.0" width="112.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1201: DAC DS</title></rect>
+<rect x="1374.0" y="460.0" width="111.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1202: TAD (1</title></rect>
+<rect x="1375.0" y="493.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1203: TAD END</title></rect>
+<rect x="1375.0" y="526.0" width="1254.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1204: SPA</title></rect>
+<rect x="1375.0" y="559.0" width="171.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1205: JMP PXER1</title></rect>
+<rect x="1695.0" y="559.0" width="914.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1205: /JMP SNDCH FOR ENDRES, JMP PXER1 WITHOUT ENDRES</title></rect>
+<rect x="1375.0" y="592.0" width="453.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1206: LAC DS</title></rect>
+<rect x="1695.0" y="626.0" width="1236.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1207: TAD BEG</title></rect>
+<rect x="2016.0" y="659.0" width="113.0" height="12.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1208: DAC DS</title></rect>
+<rect x="2337.0" y="659.0" width="592.0" height="9.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1208: / size of DS area for transfer</title></rect>
+<rect x="1377.0" y="725.0" width="424.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1210: LAC SAVINS</title></rect>
+<rect x="1697.0" y="758.0" width="112.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1211: JMS RW</title></rect>
+<rect x="1377.0" y="791.0" width="1415.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1212: TAD RELCON</title></rect>
+<rect x="1697.0" y="824.0" width="194.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1213: DAC SAVINS</title></rect>
+<rect x="2338.0" y="824.0" width="451.0" height="13.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1213: / relocate D.S. pointer</title></rect>
+<rect x="1378.0" y="891.0" width="53.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1215: LAM</title></rect>
+<rect x="1538.0" y="924.0" width="453.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1216: TAD BEG</title></rect>
+<rect x="1859.0" y="957.0" width="468.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1217: DAC ADR</title></rect>
+<rect x="2179.0" y="990.0" width="152.0" height="11.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1218: DAC ADR1</title></rect>
+<rect x="1380.0" y="1023.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1219: LAC BSZ</title></rect>
+<rect x="1699.0" y="1057.0" width="114.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1220: TAD (4</title></rect>
+<rect x="1381.0" y="1090.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1221: DAC BSZ</title></rect>
+<rect x="1222.0" y="1189.0" width="513.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1224: / TRANSFER DATA AREA</title></rect>
+<rect x="1222.0" y="1258.0" width="49.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1226: TZ,</title></rect>
+<rect x="1383.0" y="1256.0" width="112.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1226: LAC DS</title></rect>
+<rect x="2022.0" y="1256.0" width="651.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1226: / if data structure exhausted ...</title></rect>
+<rect x="1383.0" y="1289.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1227: SNA!CLA</title></rect>
+<rect x="2023.0" y="1289.0" width="394.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1227: / ... transfer zeros</title></rect>
+<rect x="1383.0" y="1322.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1228: JMP TV</title></rect>
+<rect x="1385.0" y="1388.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1230: ISZ ADR</title></rect>
+<rect x="1385.0" y="1421.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1231: ISZ DS</title></rect>
+<rect x="1384.0" y="1488.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1233: LAC I ADR</title></rect>
+<rect x="1224.0" y="1523.0" width="49.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1234: TV,</title></rect>
+<rect x="1384.0" y="1521.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1234: JMS RW</title></rect>
+<rect x="1385.0" y="1555.0" width="172.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1235: DAC I ADR</title></rect>
+<rect x="1387.0" y="1622.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1237: ISZ BSZ</title></rect>
+<rect x="2025.0" y="1620.0" width="390.0" height="16.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1237: / end of data block?</title></rect>
+<rect x="1386.0" y="1655.0" width="113.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1238: JMP TZ</title></rect>
+<rect x="1388.0" y="1723.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1240: ISZ SW</title></rect>
+<rect x="2026.0" y="1720.0" width="861.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1240: / count blocklets</title></rect>
+<rect x="1388.0" y="1754.0" width="1051.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1241: JMS WAITLK</title></rect>
+<rect x="1289.0" y="1799.0" width="1.0" height="2.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1242: LRB18!LLAM</title></rect>
+<rect x="1707.0" y="1786.0" width="734.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1242: / read TITAN checksum</title></rect>
+<rect x="1387.0" y="1821.0" width="133.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1243: SAD CKS</title></rect>
+<rect x="1387.0" y="1855.0" width="113.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1244: JMP TX</title></rect>
+<rect x="1388.0" y="1922.0" width="133.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1246: LLB6 10</title></rect>
+<rect x="2029.0" y="1919.0" width="354.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1246: / transfer failure</title></rect>
+<rect x="1389.0" y="1956.0" width="171.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1247: JMP PXER2</title></rect>
+<rect x="1229.0" y="2093.0" width="88.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1251: PXOK,</title></rect>
+<rect x="1391.0" y="2091.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1251: ISZ LTPX</title></rect>
+<rect x="1869.0" y="2085.0" width="174.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1251: / OK EXIT</title></rect>
+</svg>

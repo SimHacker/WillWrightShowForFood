@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-011.png" width="3307" height="2338"/>
+<rect x="1225" y="191" width="1686" height="1984" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="614.0" cy="250.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="351.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="453.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="553.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="652.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="751.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="850.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="949.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1049.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1148.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1247.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1347.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="661.5" cy="1447.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="653.0" cy="1504.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1547.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1647.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1747.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1846.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1945.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="2046.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="2146.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1249.2" y="210.0" width="154.8" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 473: SAVTE1,</title></rect>
+<rect x="1448.2" y="210.0" width="199.0" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 473: LAC POSDF</title></rect>
+<rect x="2045.1" y="210.0" width="464.3" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 473: /SAVE SYMBOL ON STACK</title></rect>
+<rect x="1389.0" y="242.0" width="193.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 474: DAC POSDFB</title></rect>
+<rect x="1390.0" y="274.0" width="193.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 475: ISZ POSDFL</title></rect>
+<rect x="1389.0" y="307.0" width="213.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 476: LAC (100000</title></rect>
+<rect x="1389.0" y="339.0" width="233.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 477: DAC I POSDFL</title></rect>
+<rect x="1389.0" y="372.0" width="154.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 478: LAC XBMO</title></rect>
+<rect x="1390.0" y="404.0" width="213.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 479: DAC I BXBMO</title></rect>
+<rect x="1391.0" y="437.0" width="172.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 480: ISZ BXBMO</title></rect>
+<rect x="1389.0" y="470.0" width="154.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 481: LAC YBMO</title></rect>
+<rect x="1389.0" y="502.0" width="214.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 482: DAC I BYBMO</title></rect>
+<rect x="1390.0" y="535.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 483: ISZ BYBMO</title></rect>
+<rect x="1389.0" y="567.0" width="655.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 484: DZM CON1</title></rect>
+<rect x="1389.0" y="600.0" width="234.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 485: JMP I SAVTEM</title></rect>
+<rect x="1228.0" y="699.0" width="109.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 488: TAKE1,</title></rect>
+<rect x="1389.0" y="699.0" width="172.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 488: LAW 17774</title></rect>
+<rect x="1708.0" y="697.0" width="454.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 488: /TAKE SYMBOL FROM STACK</title></rect>
+<rect x="1389.0" y="733.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 489: TAD POSDF</title></rect>
+<rect x="1389.0" y="767.0" width="172.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 490: DAC POSDF</title></rect>
+<rect x="1389.0" y="799.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 491: JMS INSRET</title></rect>
+<rect x="1388.0" y="835.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 492: CLC</title></rect>
+<rect x="1389.0" y="867.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 493: TAD BXBMO</title></rect>
+<rect x="1388.0" y="901.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 494: DAC BXBMO</title></rect>
+<rect x="1387.0" y="932.0" width="214.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 495: LAC I BXBMO</title></rect>
+<rect x="1389.0" y="965.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 496: DAC XBMO</title></rect>
+<rect x="1388.0" y="999.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 497: CLC</title></rect>
+<rect x="1389.0" y="1033.0" width="172.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 498: TAD BYBMO</title></rect>
+<rect x="1388.0" y="1066.0" width="173.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 499: DAC BYBMO</title></rect>
+<rect x="1388.0" y="1100.0" width="213.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 500: LAC I BYBMO</title></rect>
+<rect x="1388.0" y="1120.0" width="153.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 501: DAC YBMO</title></rect>
+<rect x="1388.0" y="1165.0" width="172.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 502: LAW 17776</title></rect>
+<rect x="1388.0" y="1185.0" width="173.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 503: TAD POSDF</title></rect>
+<rect x="1388.0" y="1218.0" width="193.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 504: DAC POSDFL</title></rect>
+<rect x="1390.0" y="1250.0" width="190.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 505: JMP SEGEX</title></rect>
+<rect x="1228.0" y="1399.0" width="51.0" height="11.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 509: LB2,</title></rect>
+<rect x="1387.0" y="1400.0" width="213.0" height="10.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 509: POV PO 1000</title></rect>
+<rect x="1228.0" y="1413.0" width="370.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 510: POH SB 1730</title></rect>
+<rect x="1387.0" y="1445.0" width="212.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 511: DJS SB , 2</title></rect>
+<rect x="966.0" y="1478.0" width="613.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 512: {handwritten: solid black ink mark in left margin beside rows 156-157}</title></rect>
+<rect x="1387.0" y="1510.0" width="173.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 513: JMP INTMO</title></rect>
+<rect x="1387.0" y="1543.0" width="372.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 514: DDS CH 3</title></rect>
+<rect x="1387.0" y="1575.0" width="112.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 515: 111637</title></rect>
+<rect x="1707.0" y="1575.0" width="52.0" height="11.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 515: /IN</title></rect>
+<rect x="1387.0" y="1608.0" width="189.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 516: PAR PO</title></rect>
+<rect x="1387.0" y="1640.0" width="210.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 517: POV PO 700</title></rect>
+<rect x="1387.0" y="1673.0" width="212.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 518: POH SB 1730</title></rect>
+<rect x="1387.0" y="1705.0" width="192.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 519: DJS SB , 2</title></rect>
+<rect x="1388.0" y="1738.0" width="172.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 520: JMP SCAMO</title></rect>
+<rect x="1387.0" y="1771.0" width="373.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 521: DDS CH 3</title></rect>
+<rect x="1387.0" y="1803.0" width="112.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 522: 230337</title></rect>
+<rect x="1707.0" y="1803.0" width="52.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 522: /SC</title></rect>
+<rect x="1387.0" y="1836.0" width="113.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 523: PAR PO</title></rect>
+<rect x="1387.0" y="1868.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 524: POV PO 600</title></rect>
+<rect x="1387.0" y="1903.0" width="213.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 525: POH SB 1730</title></rect>
+<rect x="1387.0" y="1935.0" width="192.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 526: DJS SB , 2</title></rect>
+<rect x="1388.0" y="1970.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 527: JMP CATMO</title></rect>
+<rect x="1387.0" y="2001.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 528: DDS CH 3</title></rect>
+<rect x="1387.0" y="2034.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 529: 030137</title></rect>
+<rect x="1707.0" y="2033.0" width="52.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 529: /CA</title></rect>
+<rect x="1387.0" y="2066.0" width="113.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 530: PAR PO</title></rect>
+<rect x="1387.0" y="2101.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 531: POV PO 500</title></rect>
+</svg>

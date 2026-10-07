@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-104.png" width="3307" height="2338"/>
+<rect x="446" y="309" width="2004" height="1992" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="56.0" cy="185.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="56.0" cy="288.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="55.5" cy="387.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="56.0" cy="483.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="55.0" cy="582.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.5" cy="681.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.5" cy="781.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.0" cy="881.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.0" cy="981.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="54.5" cy="1082.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.0" cy="1182.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="53.0" cy="1284.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.0" cy="1384.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="52.0" cy="1482.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.5" cy="1582.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="92.5" cy="1629.0" r="30.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="51.0" cy="1681.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="450.0" y="331.0" width="493.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5816: DAC T2</title></rect>
+<rect x="449.0" y="365.0" width="493.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5817: LAC V2</title></rect>
+<rect x="449.0" y="397.0" width="434.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5818: CMA</title></rect>
+<rect x="449.0" y="431.0" width="491.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5819: ADD V1</title></rect>
+<rect x="448.0" y="463.0" width="435.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5820: GSM</title></rect>
+<rect x="447.0" y="496.0" width="515.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5821: DAC . 3</title></rect>
+<rect x="449.0" y="530.0" width="493.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5822: LAC T2</title></rect>
+<rect x="449.0" y="563.0" width="454.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5823: MULS</title></rect>
+<rect x="449.0" y="597.0" width="393.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5824: 0</title></rect>
+<rect x="449.0" y="631.0" width="534.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5825: DAC DEMP</title></rect>
+<rect x="448.0" y="665.0" width="493.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5826: LAC T3</title></rect>
+<rect x="448.0" y="697.0" width="435.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5827: GSM</title></rect>
+<rect x="447.0" y="729.0" width="514.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5828: DAC . 3</title></rect>
+<rect x="447.0" y="763.0" width="535.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5829: LAC DEMP</title></rect>
+<rect x="449.0" y="797.0" width="452.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5830: DIVS</title></rect>
+<rect x="447.0" y="831.0" width="394.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5831: 0</title></rect>
+<rect x="448.0" y="865.0" width="493.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5832: LLS 22</title></rect>
+<rect x="448.0" y="897.0" width="491.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5833: ADD V1</title></rect>
+<rect x="447.0" y="929.0" width="475.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5834: DAC R</title></rect>
+<rect x="447.0" y="963.0" width="595.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5835: AND I SOLVE</title></rect>
+<rect x="447.0" y="1129.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5840: ESCAPE,</title></rect>
+<rect x="669.0" y="1129.0" width="128.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5840: LAC DF</title></rect>
+<rect x="989.0" y="1129.0" width="794.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5840: /REMOVES ATNAMES OF HIDDEN LINES</title></rect>
+<rect x="446.0" y="1164.0" width="595.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5841: TAD (777774</title></rect>
+<rect x="449.0" y="1197.0" width="493.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5842: DAC DF</title></rect>
+<rect x="447.0" y="1230.0" width="574.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5843: AND I WRLB</title></rect>
+<rect x="447.0" y="1293.0" width="32.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5845: NEG,</title></rect>
+<rect x="607.0" y="1293.0" width="234.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5845: 0</title></rect>
+<rect x="1148.0" y="1293.0" width="495.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5845: /CONVERT 13 BIT TO 16 BIT</title></rect>
+<rect x="447.0" y="1327.0" width="534.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5846: DAC TEMP</title></rect>
+<rect x="447.0" y="1361.0" width="574.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5847: AND (10000</title></rect>
+<rect x="447.0" y="1395.0" width="434.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5848: SZA</title></rect>
+<rect x="446.0" y="1429.0" width="435.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5849: LAW</title></rect>
+<rect x="1148.0" y="1429.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5849: /NEGATIVE</title></rect>
+<rect x="446.0" y="1461.0" width="535.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5850: XOR TEMP</title></rect>
+<rect x="448.0" y="1494.0" width="553.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5851: JMP I NEG</title></rect>
+<rect x="667.0" y="1597.0" width="93.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5854: PAUSE</title></rect>
+<rect x="446.0" y="1662.0" width="333.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5856: CDOCOM</title></rect>
+<rect x="446.0" y="1697.0" width="333.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5857: RCATAL</title></rect>
+<rect x="446.0" y="1731.0" width="313.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5858: RCOPY</title></rect>
+<rect x="446.0" y="1755.0" width="333.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5859: RGROUP</title></rect>
+<rect x="446.0" y="1795.0" width="333.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5860: RATTPO</title></rect>
+<rect x="446.0" y="1829.0" width="331.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5861: RTFIRI</title></rect>
+<rect x="446.0" y="1863.0" width="293.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5862: ELAD</title></rect>
+<rect x="446.0" y="1896.0" width="333.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5863: LENGTH</title></rect>
+<rect x="446.0" y="1931.0" width="313.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5864: ETYPE</title></rect>
+<rect x="446.0" y="1965.0" width="293.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5865: SYMB</title></rect>
+<rect x="446.0" y="1996.0" width="293.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5866: TEMP</title></rect>
+<rect x="446.0" y="2029.0" width="310.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5867: FSBPI</title></rect>
+<rect x="446.0" y="2061.0" width="292.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5868: INST</title></rect>
+<rect x="446.0" y="2095.0" width="273.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5869: SYM</title></rect>
+<rect x="446.0" y="2121.0" width="1447.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5870: XBMO</title></rect>
+<rect x="446.0" y="2163.0" width="313.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5871: BXBMO</title></rect>
+<rect x="446.0" y="2195.0" width="293.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5872: YBMO</title></rect>
+<rect x="446.0" y="2230.0" width="313.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5873: BYBMO</title></rect>
+</svg>

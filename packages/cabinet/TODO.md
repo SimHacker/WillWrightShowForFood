@@ -103,6 +103,14 @@ to 32K.
   and Minsky's UTM, the MFM's snap-together T2-style tiles, von Neumann's 29 states on a
   split-flap station board (a tile-engine specialisation with photographic flap tiles). Every control is
   bound to real state ([PORTRAIT.md](PORTRAIT.md#cabinets-for-machines-that-never-had-one)).
+- **tiny-titan's `type` service**: deliver a Forth (or any) file by typing it into the teletype at
+  a fast, configurable rate, waiting for ` ok` per line, errors returned. The live-coding path into
+  a running Forth without rebuilding the image ([TINY-TITAN.md](TINY-TITAN.md)).
+- **Power switches on every device**, and **Minsky's Ultimate Machine** as the first device that
+  uses one: switch it on and it switches itself off. `power` on `Device`; the `Cabinet` skips
+  unpowered devices' ticks, interrupts and IOTs; power-on resets
+  ([ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md#cpus-are-devices),
+  [PORTRAIT.md](PORTRAIT.md#minskys-ultimate-machine)).
 - **Several processors per cabinet.** CPUs are devices: the 340 already is a processor running
   off shared core. Add a `Processor` interface shared by the PDP-7 and the 340, and a list of
   processors the `Cabinet` ticks beside its devices, so CAM-6, a Turing engine, raster layers and
@@ -146,7 +154,11 @@ to 32K.
   carry `meta` (id, label, kind, dialect, origin, scanUrl) and lines carry file, line and scan
   page; a program's `sources()` returns several, and the memory panel picks one at a time. SYMELEC
   offers the 1972 listing, the Cambridge source and the as7 translation, with a link from the PC or
-  focused line to its scan page; the code view disassembles as7 when the as7 map is shown. Next:
+  focused line to its scan page; the code view disassembles as7 when the as7 map is shown. The
+  scan map is done too: every line knows its rectangles on the page, and the source view shows the
+  line outlined on a strip of the scan
+  ([pixie listing README](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md#geometric-source-map-scanmap)).
+  Next: the other direction (click the paper, find the line), RSPPIX as a program, then
   several at once, and the span/link model below. The model is
   [DESIGN.md, Source maps as transclusion](DESIGN.md#source-maps-as-transclusion-layers-spans-links).
   One image can have several

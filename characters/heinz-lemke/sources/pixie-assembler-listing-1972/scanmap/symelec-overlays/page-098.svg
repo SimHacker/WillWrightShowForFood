@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-098.png" width="3307" height="2338"/>
+<rect x="659" y="314" width="1800" height="1996" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="64.5" cy="188.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="287.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="388.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="487.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.0" cy="588.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="689.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="788.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="888.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="989.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1089.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1188.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1287.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1386.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1486.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1587.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="103.0" cy="1633.0" r="30.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1690.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="839.0" y="333.0" width="131.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5455: LAC YY1</title></rect>
+<rect x="839.0" y="367.0" width="93.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5456: STAKY</title></rect>
+<rect x="839.0" y="403.0" width="93.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5457: DRLTO</title></rect>
+<rect x="839.0" y="437.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5458: CLL</title></rect>
+<rect x="839.0" y="469.0" width="112.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5459: UNSTKX</title></rect>
+<rect x="839.0" y="504.0" width="113.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5460: UNSTKY</title></rect>
+<rect x="839.0" y="538.0" width="132.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5461: LAC EX2</title></rect>
+<rect x="839.0" y="571.0" width="92.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5462: STAKX</title></rect>
+<rect x="839.0" y="603.0" width="1507.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5463: LAC YY2</title></rect>
+<rect x="839.0" y="636.0" width="92.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5464: STAKY</title></rect>
+<rect x="837.0" y="669.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5465: JMP WRLB2</title></rect>
+<rect x="678.0" y="704.0" width="108.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5466: WRLB3,</title></rect>
+<rect x="839.0" y="707.0" width="11.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5466: 0</title></rect>
+<rect x="1158.0" y="701.0" width="434.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5466: /PICK UP & STACK POINT</title></rect>
+<rect x="838.0" y="735.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5467: LAC I TEMP</title></rect>
+<rect x="839.0" y="769.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5468: TAD I LOPY</title></rect>
+<rect x="839.0" y="802.0" width="92.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5469: STAKY</title></rect>
+<rect x="1158.0" y="801.0" width="274.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5469: /STACK Y COORD</title></rect>
+<rect x="837.0" y="835.0" width="154.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5470: LAW TEMP</title></rect>
+<rect x="838.0" y="868.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5471: CDR</title></rect>
+<rect x="838.0" y="902.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5472: LAC I TEMP</title></rect>
+<rect x="839.0" y="936.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5473: TAD I LOPX</title></rect>
+<rect x="838.0" y="971.0" width="93.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5474: STAKX</title></rect>
+<rect x="1157.0" y="970.0" width="275.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5474: /STACK Y COORD</title></rect>
+<rect x="839.0" y="1003.0" width="211.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5475: JMP I WRLB3</title></rect>
+<rect x="678.0" y="1167.0" width="613.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5480: /STRAIGHT LINE VECTOR GENERATOR</title></rect>
+<rect x="677.0" y="1235.0" width="172.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5482: /P. CROSS</title></rect>
+<rect x="897.0" y="1236.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5482: 24 4 67</title></rect>
+<rect x="677.0" y="1269.0" width="594.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5483: /LINK=1 ON ENTRY FOR INTENSIFY</title></rect>
+<rect x="678.0" y="1335.0" width="107.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5485: VECGN,</title></rect>
+<rect x="838.0" y="1335.0" width="32.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5485: XX</title></rect>
+<rect x="837.0" y="1368.0" width="54.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5486: GSM</title></rect>
+<rect x="838.0" y="1400.0" width="252.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5487: DAC VECGN 116</title></rect>
+<rect x="838.0" y="1433.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5488: LAC VECGN</title></rect>
+<rect x="838.0" y="1467.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5489: SPA1CLA</title></rect>
+<rect x="838.0" y="1501.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5490: LAC (LAC</title></rect>
+<rect x="837.0" y="1535.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5491: SZL</title></rect>
+<rect x="837.0" y="1568.0" width="154.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5492: XOR (JMS</title></rect>
+<rect x="838.0" y="1600.0" width="250.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5493: DAC VECGN 121</title></rect>
+<rect x="838.0" y="1634.0" width="211.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5494: XCT I VECGN</title></rect>
+<rect x="839.0" y="1665.0" width="170.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5495: ISZ VECGN</title></rect>
+<rect x="837.0" y="1699.0" width="53.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5496: GSM</title></rect>
+<rect x="837.0" y="1731.0" width="252.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5497: DAC VECGN 115</title></rect>
+<rect x="837.0" y="1765.0" width="133.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5498: SZL1CLA</title></rect>
+<rect x="837.0" y="1798.0" width="153.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5499: LAC (200</title></rect>
+<rect x="838.0" y="1831.0" width="247.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5500: XOR VECGN 121</title></rect>
+<rect x="838.0" y="1864.0" width="250.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5501: DAC VECGN 121</title></rect>
+<rect x="838.0" y="1898.0" width="272.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5502: LAC VECGN 115</title></rect>
+<rect x="837.0" y="1932.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5503: CMA</title></rect>
+<rect x="839.0" y="1965.0" width="251.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5504: ADD VECGN 116</title></rect>
+<rect x="839.0" y="1999.0" width="252.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5505: DAC VECGN 122</title></rect>
+<rect x="838.0" y="2035.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5506: RAL</title></rect>
+<rect x="838.0" y="2067.0" width="251.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5507: LAC VECGN 115</title></rect>
+<rect x="838.0" y="2103.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5508: SZL</title></rect>
+<rect x="838.0" y="2135.0" width="251.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5509: LAC VECGN 116</title></rect>
+<rect x="838.0" y="2168.0" width="251.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5510: DAC VECGN 117</title></rect>
+<rect x="837.0" y="2201.0" width="252.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5511: LAC VECGN 115</title></rect>
+<rect x="837.0" y="2235.0" width="134.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5512: SNL1CLL</title></rect>
+</svg>

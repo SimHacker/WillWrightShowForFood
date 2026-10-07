@@ -125,14 +125,16 @@ export const PROGRAMS = [
 		// RINGS panel: the cells holding the structure's bounds, and the cells holding its roots.
 		rings: { beg: 'BEG', end: 'END', roots: 'SAVINS' },
 		hint: symelecHint,
-		// The listing, its Cambridge source and the as7 translation, ~800 KB together; fetched only when a view needs them.
+		// The listing, its Cambridge source, the as7 translation and the scan map (each line's rectangles
+		// on the scanned pages), ~1 MB together; fetched only when a view needs them.
 		async sources() {
-			const [listing, cambridge, as7] = await Promise.all([
+			const [listing, cambridge, as7, scan] = await Promise.all([
 				import('../../../../packages/cabinet/tapes/symelec/symelec-listing.txt?raw'),
 				import('../../../../packages/cabinet/tapes/symelec/symelec.asm?raw'),
-				import('../../../../packages/cabinet/tapes/symelec/symelec.s?raw')
+				import('../../../../packages/cabinet/tapes/symelec/symelec.s?raw'),
+				import('../../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/scanmap/symelec-lines.json')
 			]);
-			return symelecSources({ listing: listing.default, cambridge: cambridge.default, as7: as7.default });
+			return symelecSources({ listing: listing.default, cambridge: cambridge.default, as7: as7.default, scan: scan.default });
 		},
 		boot({ cpu, patches }) {
 			loadSymelec(cpu, patches);

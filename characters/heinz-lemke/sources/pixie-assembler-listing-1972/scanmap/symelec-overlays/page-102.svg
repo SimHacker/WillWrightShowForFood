@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-102.png" width="3307" height="2338"/>
+<rect x="659" y="318" width="1795" height="1988" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="60.5" cy="190.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="292.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="393.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="492.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="589.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="692.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="791.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="890.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="990.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1090.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1189.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1289.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="1389.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1488.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="1588.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="99.0" cy="1633.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1689.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.0" cy="1788.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="836.0" y="337.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5695: CMA</title></rect>
+<rect x="837.0" y="371.0" width="108.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5696: TAD (1</title></rect>
+<rect x="835.0" y="404.0" width="92.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5697: TAD U</title></rect>
+<rect x="835.0" y="439.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5698: SMA</title></rect>
+<rect x="836.0" y="472.0" width="132.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5699: JMP . 4</title></rect>
+<rect x="835.0" y="504.0" width="153.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5700: LAC TEST</title></rect>
+<rect x="835.0" y="538.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5701: XOR (2</title></rect>
+<rect x="1155.0" y="535.0" width="234.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5701: /SET 2ND BIT</title></rect>
+<rect x="835.0" y="571.0" width="154.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5702: DAC TEST</title></rect>
+<rect x="835.0" y="604.0" width="92.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5703: LAC U</title></rect>
+<rect x="835.0" y="639.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5704: CMA</title></rect>
+<rect x="834.0" y="672.0" width="111.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5705: TAD (1</title></rect>
+<rect x="835.0" y="707.0" width="132.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5706: TAD WX2</title></rect>
+<rect x="835.0" y="741.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5707: SMA</title></rect>
+<rect x="835.0" y="774.0" width="131.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5708: JMP . 4</title></rect>
+<rect x="835.0" y="807.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5709: LAC TEST</title></rect>
+<rect x="835.0" y="839.0" width="110.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5710: XOR (1</title></rect>
+<rect x="1154.0" y="837.0" width="234.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5710: /SET 1ST BIT</title></rect>
+<rect x="835.0" y="872.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5711: DAC TEST</title></rect>
+<rect x="835.0" y="905.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5712: LAC TEST</title></rect>
+<rect x="835.0" y="937.0" width="233.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5713: AND I LOCATE</title></rect>
+<rect x="675.0" y="1037.0" width="332.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5716: INTERG=JMS, 0</title></rect>
+<rect x="1154.0" y="1036.0" width="354.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5716: /FINDS EDGE POINTS</title></rect>
+<rect x="835.0" y="1069.0" width="110.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5717: AND (1</title></rect>
+<rect x="835.0" y="1103.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5718: SNA</title></rect>
+<rect x="833.0" y="1135.0" width="133.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5719: JMP . 6</title></rect>
+<rect x="833.0" y="1169.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5720: JMS SET2</title></rect>
+<rect x="834.0" y="1203.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5721: LAC WX2</title></rect>
+<rect x="834.0" y="1237.0" width="113.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5722: SOLVCD</title></rect>
+<rect x="834.0" y="1271.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5723: SNA</title></rect>
+<rect x="834.0" y="1301.0" width="313.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5724: JMS I INTERG=JMS</title></rect>
+<rect x="834.0" y="1336.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5725: LAC STEST</title></rect>
+<rect x="835.0" y="1369.0" width="111.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5726: AND (2</title></rect>
+<rect x="835.0" y="1401.0" width="51.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5727: SNA</title></rect>
+<rect x="835.0" y="1435.0" width="130.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5728: JMP . 6</title></rect>
+<rect x="834.0" y="1467.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5729: JMS SET2</title></rect>
+<rect x="835.0" y="1501.0" width="130.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5730: LAC WX1</title></rect>
+<rect x="835.0" y="1535.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5731: SOLVCD</title></rect>
+<rect x="833.0" y="1569.0" width="53.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5732: SNA</title></rect>
+<rect x="835.0" y="1599.0" width="312.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5733: JMS I INTERG=JMS</title></rect>
+<rect x="833.0" y="1633.0" width="174.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5734: LAC STEST</title></rect>
+<rect x="835.0" y="1668.0" width="111.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5735: AND (4</title></rect>
+<rect x="834.0" y="1701.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5736: SNA</title></rect>
+<rect x="834.0" y="1736.0" width="131.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5737: JMP . 6</title></rect>
+<rect x="835.0" y="1762.0" width="149.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5738: JMS SET1</title></rect>
+<rect x="834.0" y="1803.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5739: LAC WY2</title></rect>
+<rect x="834.0" y="1837.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5740: SOLVAB</title></rect>
+<rect x="834.0" y="1871.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5741: SNA</title></rect>
+<rect x="835.0" y="1900.0" width="312.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5742: JMS I INTERG=JMS</title></rect>
+<rect x="834.0" y="1935.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5743: LAC STEST</title></rect>
+<rect x="835.0" y="1969.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5744: AND (10</title></rect>
+<rect x="835.0" y="2002.0" width="51.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5745: SNA</title></rect>
+<rect x="835.0" y="2035.0" width="131.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5746: JMP . 6</title></rect>
+<rect x="833.0" y="2060.0" width="149.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5747: JMS SET1</title></rect>
+<rect x="834.0" y="2103.0" width="131.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5748: LAC WY1</title></rect>
+<rect x="835.0" y="2167.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5750: SOLVAB</title></rect>
+<rect x="834.0" y="2200.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5751: SNA</title></rect>
+<rect x="833.0" y="2233.0" width="313.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5752: JMS I INTERG=JMS</title></rect>
+</svg>

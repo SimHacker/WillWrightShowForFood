@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-065.png" width="3307" height="2338"/>
+<rect x="1225" y="186" width="2032" height="2027" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="613.0" cy="57.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="158.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="257.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="358.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="458.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="558.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="658.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="758.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="859.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="958.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1057.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1158.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="1255.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1356.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1455.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="652.0" cy="1507.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1555.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1654.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1858.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1958.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="2058.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="2160.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1387.0" y="206.0" width="1689.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3629: JMP PEN1</title></rect>
+<rect x="1388.0" y="239.0" width="1870.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3630: ISZ RATTPO</title></rect>
+<rect x="1389.0" y="271.0" width="190.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3631: JMP BLIROU</title></rect>
+<rect x="1227.0" y="407.0" width="88.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3635: MORE,</title></rect>
+<rect x="1387.0" y="405.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3635: LAC (30117</title></rect>
+<rect x="1707.0" y="404.0" width="595.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3635: /INCREASE LEVEL MARKER OF INST</title></rect>
+<rect x="1387.0" y="441.0" width="1871.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3636: DAC TRACK</title></rect>
+<rect x="1387.0" y="473.0" width="174.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3637: JMS SETCL</title></rect>
+<rect x="1387.0" y="507.0" width="174.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3638: LAC LEVEL</title></rect>
+<rect x="1387.0" y="537.0" width="1870.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3639: SAD BLEVEL</title></rect>
+<rect x="1388.0" y="571.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3640: JMP BLIROU</title></rect>
+<rect x="1388.0" y="605.0" width="211.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3641: TAD (777777</title></rect>
+<rect x="1387.0" y="639.0" width="1870.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3642: DAC LEVEL</title></rect>
+<rect x="1387.0" y="673.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3643: JMP BLIROU</title></rect>
+<rect x="1227.0" y="740.0" width="352.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3645: LESS,</title></rect>
+<rect x="1707.0" y="738.0" width="594.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3645: LAC (30117</title></rect>
+<rect x="3232.0" y="744.0" width="25.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3645: /DECREASE LEVEL MARKER OF INST</title></rect>
+<rect x="1387.0" y="773.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3646: DAC TRACK</title></rect>
+<rect x="1387.0" y="806.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3647: JMS SETCL</title></rect>
+<rect x="1387.0" y="839.0" width="1871.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3648: ISZ LEVEL</title></rect>
+<rect x="1387.0" y="874.0" width="213.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3649: LAC I LEVEL</title></rect>
+<rect x="1707.0" y="872.0" width="414.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3649: /FIND 0 IN INST STACK</title></rect>
+<rect x="1387.0" y="909.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3650: SZA</title></rect>
+<rect x="1387.0" y="941.0" width="1870.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3651: JMP BLIROU</title></rect>
+<rect x="1387.0" y="976.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3652: LAM</title></rect>
+<rect x="1387.0" y="1009.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3653: TAD LEVEL</title></rect>
+<rect x="1387.0" y="1042.0" width="1870.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3654: DAC LEVEL</title></rect>
+<rect x="1388.0" y="1074.0" width="191.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3655: JMP BLIROU</title></rect>
+<rect x="1227.0" y="1175.0" width="108.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3658: STRCR,</title></rect>
+<rect x="1387.0" y="1175.0" width="154.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3658: JMS TRCR</title></rect>
+<rect x="1707.0" y="1173.0" width="514.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3658: /IF IN TRACKMODE OR DRAWMO</title></rect>
+<rect x="1387.0" y="1208.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3659: LAC CMODE</title></rect>
+<rect x="1387.0" y="1242.0" width="1870.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3660: SMA</title></rect>
+<rect x="1387.0" y="1269.0" width="132.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3661: JMP . 3</title></rect>
+<rect x="1387.0" y="1308.0" width="1330.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3662: ISZ RTRACK</title></rect>
+<rect x="1387.0" y="1341.0" width="1870.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3663: ISZ CBUSY</title></rect>
+<rect x="1387.0" y="1408.0" width="193.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3665: LAC DRAWMO</title></rect>
+<rect x="1387.0" y="1442.0" width="1870.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3666: SZA</title></rect>
+<rect x="1387.0" y="1475.0" width="131.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3667: JMP . 3</title></rect>
+<rect x="945.0" y="1501.0" width="614.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3668: {handwritten: solid black rectangular mark in left margin beside SEQ 674-676}</title></rect>
+<rect x="1388.0" y="1542.0" width="1869.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3669: DZM NODRA</title></rect>
+<rect x="1296.0" y="1575.0" width="263.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3670: JMP PEN1</title></rect>
+<rect x="1387.0" y="1607.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3671: LAC NODRA</title></rect>
+<rect x="1387.0" y="1641.0" width="1870.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3672: SZA</title></rect>
+<rect x="1386.0" y="1673.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3673: JMP PEN1</title></rect>
+<rect x="1449.0" y="1701.3" width="200.6" height="29.0" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3674: JMP SEGEX</title></rect>
+<rect x="1248.3" y="1767.8" width="156.0" height="29.0" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3676: TESLEV,</title></rect>
+<rect x="1448.9" y="1767.8" width="22.3" height="29.0" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3676: 0</title></rect>
+<rect x="2050.6" y="1767.8" width="624.0" height="29.0" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3676: /TEST BLINKING AND TOP LEVEL</title></rect>
+<rect x="1386.0" y="1810.0" width="52.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3677: LAC MBLINK</title></rect>
+<rect x="1386.0" y="1842.0" width="1870.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3678: SNA</title></rect>
+<rect x="1387.0" y="1875.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3679: JMP PEN1</title></rect>
+<rect x="1387.0" y="1909.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3680: LAC LEVEL</title></rect>
+<rect x="1386.0" y="1941.0" width="1870.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3681: SAD BLEVEL</title></rect>
+<rect x="1388.0" y="1977.0" width="231.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3682: SKP</title></rect>
+<rect x="1386.0" y="2009.0" width="833.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3683: JMP I TESLEV</title></rect>
+<rect x="1386.0" y="2045.0" width="192.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3684: LAW 267</title></rect>
+<rect x="3229.0" y="2041.0" width="28.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3684: /NO OPERATION ON MAIN INST</title></rect>
+<rect x="1387.0" y="2077.0" width="1472.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3685: DAC NOTE 5</title></rect>
+<rect x="1386.0" y="2099.0" width="193.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3686: ISZ RERROR</title></rect>
+<rect x="2319.0" y="2141.0" width="938.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3687: JMP BLIROU</title></rect>
+</svg>

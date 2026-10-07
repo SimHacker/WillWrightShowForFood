@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-062.png" width="3307" height="2338"/>
+<rect x="667" y="314" width="1793" height="2032" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="64.0" cy="188.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="288.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="387.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="487.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="589.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="689.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="788.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="888.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="988.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="1086.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.5" cy="1185.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1286.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1385.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1484.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1585.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="103.0" cy="1637.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1684.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1786.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1886.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1987.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="2086.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="2187.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="2287.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="681.0" y="334.0" width="68.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3448: SD1,</title></rect>
+<rect x="841.0" y="333.0" width="150.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3448: DZM CON1</title></rect>
+<rect x="841.0" y="367.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3449: DZM CCAT</title></rect>
+<rect x="841.0" y="399.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3450: LAC STPNTX</title></rect>
+<rect x="841.0" y="435.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3451: DAC BPNTX</title></rect>
+<rect x="840.0" y="469.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3452: LAC STPNTY</title></rect>
+<rect x="841.0" y="501.0" width="173.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3453: DAC BPNTY</title></rect>
+<rect x="841.0" y="537.0" width="172.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3454: LAC STPOS</title></rect>
+<rect x="840.0" y="571.0" width="133.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3455: DAC POS</title></rect>
+<rect x="841.0" y="603.0" width="232.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3456: LAW TEMPDF 2</title></rect>
+<rect x="840.0" y="637.0" width="173.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3457: DAC POSDF</title></rect>
+<rect x="839.0" y="670.0" width="194.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3458: DAC POSDFL</title></rect>
+<rect x="841.0" y="705.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3459: DAC POSDFB</title></rect>
+<rect x="840.0" y="737.0" width="171.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3460: LAC STCON</title></rect>
+<rect x="840.0" y="773.0" width="150.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3461: DAC BCON</title></rect>
+<rect x="840.0" y="805.0" width="190.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3462: LAC STCON1</title></rect>
+<rect x="839.0" y="838.0" width="171.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3463: DAC BCON1</title></rect>
+<rect x="839.0" y="869.0" width="194.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3464: LAC STXBMO</title></rect>
+<rect x="840.0" y="903.0" width="173.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3465: DAC BXBMO</title></rect>
+<rect x="839.0" y="936.0" width="194.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3466: LAC STYBMO</title></rect>
+<rect x="839.0" y="970.0" width="174.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3467: DAC BYBMO</title></rect>
+<rect x="840.0" y="1005.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3468: LAC BFIRST</title></rect>
+<rect x="839.0" y="1037.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3469: DAC FIRSTA</title></rect>
+<rect x="839.0" y="1071.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3470: LAC BSNDST</title></rect>
+<rect x="839.0" y="1103.0" width="1260.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3471: DAC SNDSTA</title></rect>
+<rect x="839.0" y="1137.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3472: LAM</title></rect>
+<rect x="839.0" y="1170.0" width="132.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3473: DAC CON</title></rect>
+<rect x="838.0" y="1204.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3474: JMS INSRTN</title></rect>
+<rect x="839.0" y="1237.0" width="211.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3475: LAC (063700</title></rect>
+<rect x="1158.0" y="1238.0" width="34.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3475: /F</title></rect>
+<rect x="800.0" y="1270.0" width="210.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3476: DAC LBD 6</title></rect>
+<rect x="839.0" y="1305.0" width="293.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3477: LAC (TEMPDF 100</title></rect>
+<rect x="839.0" y="1338.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3478: DAC SCRPAD</title></rect>
+<rect x="839.0" y="1371.0" width="172.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3479: JMS SETCL</title></rect>
+<rect x="837.0" y="1403.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3480: JMP PEN1</title></rect>
+<rect x="678.0" y="1469.0" width="48.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3482: FD,</title></rect>
+<rect x="837.0" y="1469.0" width="214.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3482: LAC (233700</title></rect>
+<rect x="1158.0" y="1471.0" width="34.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3482: /S</title></rect>
+<rect x="839.0" y="1503.0" width="171.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3483: DAC LBD 6</title></rect>
+<rect x="836.0" y="1536.0" width="175.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3484: JMS SETCL</title></rect>
+<rect x="837.0" y="1569.0" width="194.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3485: LAC DRAWMO</title></rect>
+<rect x="1157.0" y="1567.0" width="354.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3485: /PREVENT 2ND ENTRY</title></rect>
+<rect x="837.0" y="1603.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3486: SNA</title></rect>
+<rect x="395.0" y="1636.0" width="592.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3487: {handwritten: solid black rectangular mark in left margin beside SEQ 500}</title></rect>
+<rect x="891.2" y="1666.0" width="178.3" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3488: JMP PEN1</title></rect>
+<rect x="836.0" y="1737.0" width="132.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3490: DZM DRAWMO</title></rect>
+<rect x="837.0" y="1772.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3491: LAC CON</title></rect>
+<rect x="839.0" y="1805.0" width="148.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3492: SPA</title></rect>
+<rect x="837.0" y="1839.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3493: JMP PEN1</title></rect>
+<rect x="837.0" y="1871.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3494: JMS TESTIN</title></rect>
+<rect x="836.0" y="1906.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3495: ISZ CUPCOM</title></rect>
+<rect x="891.5" y="1932.6" width="178.3" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3496: JMP PEN1</title></rect>
+<rect x="691.0" y="2032.6" width="66.9" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3499: CD,</title></rect>
+<rect x="891.5" y="2032.6" width="222.9" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3499: JMS TESLEV</title></rect>
+<rect x="1493.2" y="2032.6" width="490.3" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3499: /COPY BLINKING ELEMENT</title></rect>
+<rect x="837.0" y="2073.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3500: ISZ RCOPY</title></rect>
+<rect x="891.6" y="2099.2" width="222.9" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3501: JMP BLIROU</title></rect>
+<rect x="691.1" y="2165.9" width="66.9" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3503: ED,</title></rect>
+<rect x="891.7" y="2165.9" width="222.9" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3503: LAC MBLINK</title></rect>
+<rect x="1493.4" y="2165.9" width="133.7" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3503: /ERASE</title></rect>
+<rect x="837.0" y="2206.0" width="149.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3504: SNA</title></rect>
+<rect x="836.0" y="2240.0" width="173.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3505: JMP PEN1</title></rect>
+<rect x="891.7" y="2265.8" width="200.6" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 3506: LAC LEVEL</title></rect>
+</svg>

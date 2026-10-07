@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-039.png" width="3307" height="2338"/>
+<rect x="1422" y="184" width="1585" height="867" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="614.0" cy="56.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="616.0" cy="156.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="256.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="356.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="456.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="555.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="655.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="755.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="855.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="954.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.0" cy="1054.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1153.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="615.5" cy="1352.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="652.5" cy="1506.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="1854.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="2055.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="2157.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1427.0" y="202.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2134: AND (40000</title></rect>
+<rect x="1707.0" y="202.0" width="354.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2134: /TEST IF RINGSTART</title></rect>
+<rect x="1427.0" y="238.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2135: SZA</title></rect>
+<rect x="1427.0" y="270.0" width="234.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2136: JMP I DELB-JMS</title></rect>
+<rect x="1708.0" y="270.0" width="313.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2136: /EXIT IF ILLEGAL</title></rect>
+<rect x="1427.0" y="305.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2137: LAC I OP+1</title></rect>
+<rect x="1427.0" y="336.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2138: CAR 7</title></rect>
+<rect x="1427.0" y="371.0" width="112.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2139: DAC OP 2</title></rect>
+<rect x="1707.0" y="369.0" width="414.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2139: /MOVE TO NEXT IN RING</title></rect>
+<rect x="1427.0" y="404.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2140: LAC I OP 1</title></rect>
+<rect x="1427.0" y="437.0" width="52.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2141: CAR 7</title></rect>
+<rect x="1427.0" y="470.0" width="112.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2142: SAD OP+3</title></rect>
+<rect x="1707.0" y="469.0" width="895.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2142: /DOES THIS POINT BACK TO THE ORIGINAL ELEMENT</title></rect>
+<rect x="1427.0" y="505.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2143: SKP</title></rect>
+<rect x="1427.0" y="537.0" width="92.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2144: JMP .-5</title></rect>
+<rect x="1427.0" y="573.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2145: LAC I OP+2</title></rect>
+<rect x="1427.0" y="606.0" width="153.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2146: AND (40000</title></rect>
+<rect x="1707.0" y="603.0" width="454.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2146: /PRESERVE IF RING START</title></rect>
+<rect x="1427.0" y="639.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2147: TAD I OP+3</title></rect>
+<rect x="1427.0" y="671.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2148: DAC I OP+2</title></rect>
+<rect x="1707.0" y="669.0" width="294.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2148: /DELETE POINTER</title></rect>
+<rect x="1426.0" y="705.0" width="74.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2149: LAC OP</title></rect>
+<rect x="1427.0" y="740.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2150: POP</title></rect>
+<rect x="1427.0" y="772.0" width="234.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2151: JMP I DELB-JMS</title></rect>
+<rect x="1444.6" y="903.8" width="109.2" height="29.0" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 2155: PAUSE</title></rect>
+</svg>

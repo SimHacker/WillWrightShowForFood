@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-084.png" width="3307" height="2338"/>
+<rect x="632" y="322" width="1822" height="1977" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="59.5" cy="190.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="293.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="393.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="495.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="693.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="794.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="893.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="991.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1091.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1190.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1290.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1390.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1489.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="85.5" cy="1618.5" r="40.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1688.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1788.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1888.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1988.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="2087.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="2189.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="2288.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="835.0" y="340.0" width="92.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4662: FINDP</title></rect>
+<rect x="835.0" y="372.0" width="934.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4663: DSON</title></rect>
+<rect x="835.0" y="405.0" width="191.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4664: JMS DISCON</title></rect>
+<rect x="1155.0" y="405.0" width="610.0" height="16.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4664: /DISCONNECT LINES FROM 2ND INST</title></rect>
+<rect x="836.0" y="437.0" width="189.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4665: JMP UPCOM1</title></rect>
+<rect x="675.0" y="567.0" width="128.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4669: AMEND3,</title></rect>
+<rect x="995.0" y="567.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4669: 0</title></rect>
+<rect x="1155.0" y="567.0" width="434.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4669: /FIND P BL OF ALL INST</title></rect>
+<rect x="835.0" y="600.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4670: DZM XINS</title></rect>
+<rect x="835.0" y="633.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4671: DZM YINS</title></rect>
+<rect x="835.0" y="665.0" width="193.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4672: LAC BFIRST</title></rect>
+<rect x="836.0" y="699.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4673: DAC FIRSTA</title></rect>
+<rect x="836.0" y="733.0" width="131.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4674: JMP . 3</title></rect>
+<rect x="836.0" y="765.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4675: JMS VAIN</title></rect>
+<rect x="836.0" y="799.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4676: ISZ FIRSTA</title></rect>
+<rect x="835.0" y="835.0" width="232.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4677: LAC I FIRSTA</title></rect>
+<rect x="835.0" y="867.0" width="52.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4678: SZA</title></rect>
+<rect x="836.0" y="903.0" width="132.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4679: JMP .-4</title></rect>
+<rect x="835.0" y="924.0" width="232.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4680: JMP I AMEND3</title></rect>
+<rect x="676.0" y="1032.0" width="127.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4683: AMEND4,</title></rect>
+<rect x="995.0" y="1033.0" width="13.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4683: 0</title></rect>
+<rect x="1155.0" y="1029.0" width="674.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4683: /SAME AS AMEND3 , ONLY PHOTO STACK</title></rect>
+<rect x="693.0" y="1053.0" width="864.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4684: LAC BFIRST</title></rect>
+<rect x="835.0" y="1086.0" width="153.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4685: DAC TEMP</title></rect>
+<rect x="835.0" y="1118.0" width="193.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4686: LAC BSNDST</title></rect>
+<rect x="835.0" y="1151.0" width="193.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4687: DAC BFIRST</title></rect>
+<rect x="836.0" y="1183.0" width="191.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4688: JMS AMEND3</title></rect>
+<rect x="835.0" y="1215.0" width="191.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4689: LAC TEMP</title></rect>
+<rect x="835.0" y="1248.0" width="193.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4690: DAC BFIRST</title></rect>
+<rect x="835.0" y="1280.0" width="230.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4691: JMP I AMEND4</title></rect>
+<rect x="677.0" y="1399.0" width="110.0" height="9.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4694: AMEND5,</title></rect>
+<rect x="996.0" y="1401.0" width="13.0" height="7.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4694: 0</title></rect>
+<rect x="1320.0" y="1394.0" width="770.0" height="14.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4694: /FIND DELTA OF INSTANCE AND START POINT</title></rect>
+<rect x="676.0" y="1410.0" width="1411.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4695: LAC XINS</title></rect>
+<rect x="835.0" y="1442.0" width="153.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4696: CMA</title></rect>
+<rect x="836.0" y="1475.0" width="107.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4697: TAD (1</title></rect>
+<rect x="837.0" y="1507.0" width="152.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4698: TAD XTOT</title></rect>
+<rect x="836.0" y="1540.0" width="191.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4699: AND (17777</title></rect>
+<rect x="836.0" y="1572.0" width="190.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4700: DAC XTOT</title></rect>
+<rect x="1163.0" y="1595.0" width="526.0" height="7.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4700: /DX OF INST AND START POINT</title></rect>
+<rect x="375.0" y="1604.0" width="1310.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4701: {handwritten: solid black rectangular mark in left margin beside SEQ 562}</title></rect>
+<rect x="835.0" y="1637.0" width="153.0" height="16.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4702: LAC YINS</title></rect>
+<rect x="835.0" y="1669.0" width="52.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4703: CMA</title></rect>
+<rect x="836.0" y="1702.0" width="110.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4704: TAD (1</title></rect>
+<rect x="835.0" y="1734.0" width="153.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4705: TAD YTOT</title></rect>
+<rect x="836.0" y="1767.0" width="191.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4706: AND (17777</title></rect>
+<rect x="836.0" y="1799.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4707: DAC YTOT</title></rect>
+<rect x="836.0" y="1831.0" width="231.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4708: JMP I AMEND5</title></rect>
+<rect x="677.0" y="1901.0" width="127.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4710: TESTJN,</title></rect>
+<rect x="995.0" y="1902.0" width="14.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4710: 0</title></rect>
+<rect x="1316.0" y="1896.0" width="594.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4710: /TEST WHETHER ELEMENTS IN LINE</title></rect>
+<rect x="836.0" y="1933.0" width="193.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4711: LAC COMPOS</title></rect>
+<rect x="836.0" y="1967.0" width="191.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4712: DAC COMPOI</title></rect>
+<rect x="837.0" y="1999.0" width="190.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4713: ISZ COMPOI</title></rect>
+<rect x="836.0" y="2032.0" width="231.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4714: LAC I COMPOI</title></rect>
+<rect x="835.0" y="2065.0" width="233.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4715: TAD (-157777</title></rect>
+<rect x="836.0" y="2100.0" width="51.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4716: SZA</title></rect>
+<rect x="837.0" y="2132.0" width="131.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4717: JMP .-4</title></rect>
+<rect x="837.0" y="2156.0" width="190.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4718: ISZ COMPOI</title></rect>
+<rect x="836.0" y="2199.0" width="231.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4719: LAC I COMPOI</title></rect>
+<rect x="837.0" y="2231.0" width="230.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 4720: TAD (-757777</title></rect>
+</svg>

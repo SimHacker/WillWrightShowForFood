@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
+<image href="../pages/page-095.png" width="3307" height="2338"/>
+<rect x="1225" y="181" width="1787" height="1995" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="614.0" cy="47.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="147.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="248.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="349.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="449.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="548.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="649.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="748.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="849.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="948.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1049.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1149.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1248.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1348.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1447.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="652.0" cy="1506.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1546.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1647.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1746.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1847.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="2045.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="2147.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<rect x="1389.0" y="199.0" width="112.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5275: ISZ DF</title></rect>
+<rect x="1389.0" y="234.0" width="272.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5276: JMP I WRDF-JMS</title></rect>
+<rect x="1228.0" y="401.0" width="332.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5281: STAKX-JMS, 0</title></rect>
+<rect x="1707.0" y="400.0" width="193.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5281: /X TO STAK</title></rect>
+<rect x="1388.0" y="469.0" width="191.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5283: AND (17777</title></rect>
+<rect x="1387.0" y="503.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5284: DAC OP+3</title></rect>
+<rect x="1388.0" y="535.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5285: ISZ LOPX</title></rect>
+<rect x="1388.0" y="570.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5286: LAC LOPX</title></rect>
+<rect x="1388.0" y="602.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5287: SAD YSTBEG</title></rect>
+<rect x="1387.0" y="637.0" width="134.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5288: JMS ERR</title></rect>
+<rect x="1387.0" y="669.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5289: LAC OP+3</title></rect>
+<rect x="1387.0" y="702.0" width="193.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5290: DAC I LOPX</title></rect>
+<rect x="1387.0" y="735.0" width="294.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5291: JMP I STAKX-JMS</title></rect>
+<rect x="1227.0" y="837.0" width="334.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5294: STAKY-JMS, 0</title></rect>
+<rect x="1707.0" y="836.0" width="193.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5294: /Y TO STAK</title></rect>
+<rect x="1388.0" y="869.0" width="191.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5295: AND (17777</title></rect>
+<rect x="1387.0" y="902.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5296: DAC OP+3</title></rect>
+<rect x="1388.0" y="935.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5297: ISZ LOPY</title></rect>
+<rect x="1387.0" y="969.0" width="154.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5298: LAC LOPY</title></rect>
+<rect x="1387.0" y="1001.0" width="193.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5299: SAD YSTEND</title></rect>
+<rect x="1389.0" y="1037.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5300: JMS ERR</title></rect>
+<rect x="1387.0" y="1069.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5301: LAC OP+3</title></rect>
+<rect x="1387.0" y="1104.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5302: DAC I LOPY</title></rect>
+<rect x="1387.0" y="1137.0" width="294.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5303: JMP I STAKY-JMS</title></rect>
+<rect x="1227.0" y="1335.0" width="332.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5309: UNSTKX-JMS, 0</title></rect>
+<rect x="1867.0" y="1333.0" width="173.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5309: /UNSTAK X</title></rect>
+<rect x="1387.0" y="1368.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5310: LAC I LOPX</title></rect>
+<rect x="1387.0" y="1400.0" width="152.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5311: DAC OP+3</title></rect>
+<rect x="1387.0" y="1435.0" width="152.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5312: LAC LOPX</title></rect>
+<rect x="1387.0" y="1467.0" width="192.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5313: SAD XSTBEG</title></rect>
+<rect x="1386.0" y="1501.0" width="133.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5314: JMS ERR</title></rect>
+<rect x="1387.0" y="1534.0" width="212.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5315: TAD (777777</title></rect>
+<rect x="1387.0" y="1569.0" width="152.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5316: DAC LOPX</title></rect>
+<rect x="1387.0" y="1602.0" width="151.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5317: LAC OP+3</title></rect>
+<rect x="1387.0" y="1635.0" width="313.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5318: JMP I UNSTKX-JMS</title></rect>
+<rect x="1227.0" y="1734.0" width="332.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5321: UNSTKY-JMS, 0</title></rect>
+<rect x="1707.0" y="1733.0" width="174.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5321: /UNSTAK Y</title></rect>
+<rect x="1387.0" y="1769.0" width="192.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5322: LAC I LOPY</title></rect>
+<rect x="1387.0" y="1802.0" width="150.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5323: DAC OP+3</title></rect>
+<rect x="1387.0" y="1835.0" width="153.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5324: LAC LOPY</title></rect>
+<rect x="1387.0" y="1870.0" width="192.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5325: SAD YSTBEG</title></rect>
+<rect x="1386.0" y="1904.0" width="134.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5326: JMS ERR</title></rect>
+<rect x="1387.0" y="1937.0" width="211.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5327: TAD (777777</title></rect>
+<rect x="1387.0" y="1970.0" width="153.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5328: DAC LOPY</title></rect>
+<rect x="1386.0" y="2002.0" width="151.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5329: LAC OP+3</title></rect>
+<rect x="1387.0" y="2033.0" width="312.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5330: JMP I UNSTKY-JMS</title></rect>
+</svg>
