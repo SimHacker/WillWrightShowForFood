@@ -49,4 +49,21 @@
 	:global(body:has(main.bare)) {
 		background: #000;
 	}
+	:global(html:has(main.bare)) {
+		color-scheme: dark;
+		scrollbar-color: #2f5a30 #000;
+	}
+	:global(html:has(main.bare) ::-webkit-scrollbar) {
+		width: 12px;
+		height: 12px;
+		background: #000;
+	}
+	:global(html:has(main.bare) ::-webkit-scrollbar-thumb) {
+		background: #2f5a30;
+		border: 3px solid #000;
+		border-radius: 6px;
+	}
+	:global(html:has(main.bare) ::-webkit-scrollbar-thumb:hover) {
+		background: #9fe8a0;
+	}
 </style>
