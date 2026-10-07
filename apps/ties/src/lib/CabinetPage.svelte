@@ -45,4 +45,8 @@
 	:global(html) {
 		scrollbar-gutter: stable;
 	}
+	:global(html:has(main.bare)),
+	:global(body:has(main.bare)) {
+		background: #000;
+	}
 </style>

@@ -79,7 +79,9 @@
 	// The figure's height once the bottom edge has been dragged: a floor, so content taller
 	// than it still shows, and height past the content goes to the growing panel.
 	const HEIGHT_KEY = 'cabinet-height';
-	let figHeight = $state(untrack(() => Number(globalThis.localStorage?.getItem(HEIGHT_KEY)) || null));
+	// Every panel has its own grip now; the figure is as tall as its panels, so it ends in one grip.
+	let figHeight = $state(null);
+	store(HEIGHT_KEY, null);
 
 	// The tube stays square and, with the console, menu and demo rows, fits the scrolling
 	// pane it sits in. The reserve is fixed, not measured, so switching programs or starting
@@ -1718,30 +1720,23 @@
 		store(TTY_HEIGHT_KEY, ttyHeight);
 	}
 	function onTtyGrip(e) {
-		e.preventDefault();
-		const start = e.clientY;
-		const from = (ttyEl?.getBoundingClientRect().height ?? 0) - ttyExtra;
-		const grip = e.currentTarget;
-		grip.setPointerCapture(e.pointerId);
-		const move = (m) => setTtyHeight(from + m.clientY - start);
-		const up = () => {
-			grip.removeEventListener('pointermove', move);
-			grip.removeEventListener('pointerup', up);
-			grip.removeEventListener('pointercancel', up);
-		};
-		grip.addEventListener('pointermove', move);
-		grip.addEventListener('pointerup', up);
-		grip.addEventListener('pointercancel', up);
+		gripDrag(e, () => (ttyEl?.getBoundingClientRect().height ?? 0) - ttyExtra, setTtyHeight);
 	}
-	/** A bottom grip: drag or arrow keys change a size; `get` and `set` work in pixels. */
+	/**
+	 * A bottom grip: drag or arrow keys change a size; `get` and `set` work in pixels. The grip
+	 * follows the pointer by where the grip is now, not where the drag began, so the page
+	 * scrolling or reflowing under it can't make it jump; the page keeps its height while dragging.
+	 */
 	function gripDrag(e, get, set) {
 		e.preventDefault();
-		const start = e.clientY;
-		const from = get();
 		const grip = e.currentTarget;
+		const hold = e.clientY - grip.getBoundingClientRect().top;
+		const root = document.documentElement;
+		root.style.minHeight = `${root.scrollHeight}px`;
 		grip.setPointerCapture(e.pointerId);
-		const move = (m) => set(from + m.clientY - start);
+		const move = (m) => set(get() + m.clientY - grip.getBoundingClientRect().top - hold);
 		const up = () => {
+			root.style.minHeight = '';
 			grip.removeEventListener('pointermove', move);
 			grip.removeEventListener('pointerup', up);
 			grip.removeEventListener('pointercancel', up);
@@ -2698,7 +2693,6 @@
 			{@render edgeGrip(edge)}
 		{/each}
 	</div>
-	{@render edgeGrip('bottom')}
 	<!-- Fixed order: key help, the strip of tabs, then compartments in tab order. -->
 	<figcaption bind:this={captionEl}>
 		{#if editOn}
@@ -2937,6 +2931,16 @@
 		{#if regsOpen}
 			{@render frontPanel()}
 		{/if}
+		{#snippet memGrip()}
+			<button
+				type="button"
+				class="tty-grip"
+				aria-label="Memory height: drag, or arrow keys a line at a time"
+				title="Drag to show more or fewer lines"
+				onpointerdown={(e) => gripDrag(e, memGet, memSet)}
+				onkeydown={(e) => gripKey(e, memGet, memSet, memLinePx())}
+			></button>
+		{/snippet}
 		{#snippet grip(id, label)}
 			<button
 				type="button"
@@ -3189,6 +3193,7 @@
 						<p class="mem-hint">{sourceStatus}</p>
 					{/if}
 					{#if hasScans}
+						{@render memGrip()}
 						<div class="mem-scanbox" style:height="{panelH.scan}px">
 							{#if scanAt}
 								<a class="mem-scanstrip" href={scanAt.place.url} target="_blank" rel="noopener" title="{oct(scanAt.addr, 5)} on the scanned page; green boxes measured from the ink, red ones predicted. Click for the whole page.">
@@ -3242,14 +3247,9 @@
 				{/each}
 				{/if}
 			</div>
-			<button
-				type="button"
-				class="tty-grip"
-				aria-label="Memory height: drag, or arrow keys a line at a time"
-				title="Drag to make the memory panel taller or shorter"
-				onpointerdown={(e) => gripDrag(e, memGet, memSet)}
-				onkeydown={(e) => gripKey(e, memGet, memSet, memLinePx())}
-			></button>
+			{#if !(memView === 'source' && sourceMap && hasScans)}
+				{@render memGrip()}
+			{/if}
 		</div>
 		{/if}
 		{#if ringsOpen && hasRings}
