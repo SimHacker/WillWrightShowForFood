@@ -65,6 +65,10 @@ Will's lifelong stance: simulations as **toys and microworlds** without a single
 Repo Show lens: a microworld as a *medium*, not a contest.
 
 ### 5. Generative systems & emergence
+
+A small footnote with a long reach: Don credits Will with the CA **gutter** trick, a one-cell
+border the wrapping edges are copied into, so the inner loop never tests an edge. It's in CAM6.js
+and in SimCity's own CA loop ([engine techniques](../don-hopkins/sources/cam6-simulator-wiki/engine-techniques.md#the-inner-loop)).
 The **[2006 Long Now *Playing with Time* talk with Brian Eno](../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md)**
 ([video](https://www.youtube.com/watch?v=Dfc-DQorohc)): simple rules → complex behavior; cellular
 automata scored live; full Spore demo. Don was **in the audience**. Natural bridge to **Scott Draves**

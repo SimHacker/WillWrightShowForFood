@@ -226,16 +226,14 @@ next word, `110537`, is `I E` and the stop code 37; the `EN` button is
 `051637`. So the 340 codes the letters A to Z as octal 01 to 32, and
 `P I X` is `20 11 30`: the intended word is `201130`.
 
-**Fix.** The `.oct` file keeps the 0: it is what the listing says, and
-the node tests run the image as printed. The browser loader applies a
-named patch on top, `pix` in
-[symelec-boot.js](../../apps/ties/src/lib/symelec-boot.js), which
-writes `201130` to 5270 only if the word there is still the printed 0.
-The circle, the date and the tick say Heinz found it and dealt with
-it in July 1972. The pencil note beside it says "x 30": first read as
-"x 38", but its 0 is slashed like the printer's, and X is 30. The note
-is the fix itself. A cabinet block with `patches: []` shows the tube as
-the listing left it.
+**Fix.** `201130` in `symelec.asm`, `symelec.oct` and the listing
+text, which keeps the handwritten note. Heinz's pencil states his
+intent, so it is read like any other correction to the printout, not
+loaded as a patch. The circle, the date and the tick say he found it
+and dealt with it in July 1972. The pencil note beside it says "x 30":
+first read as "x 38", but its 0 is slashed like the printer's, and X is
+30. (Until October 2026 this was a named patch, `pix`, over a 0 in the
+image.)
 
 ![Scan page 055, line 70: 201128 circled in pencil, /PIX, and 12.7.72, a tick, x 30](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/page-055-pix-pencil-circle.png)
 
@@ -513,6 +511,123 @@ has an answer. What the first run found:
   transcription's.
 - `201128`: Heinz's pencil circle, above. **Kind:** 1972's.
 
+## Rung 8: SYMELEC reassembles, word for word
+
+The goal: `symelec.asm` through the Cambridge assembler gives
+`symelec.oct` and its literal pool exactly, and every line of the
+listing and every row of the printed symbol table agrees with that
+assembly. The rule, learned the hard way: where source, listing and
+image disagree, one of them is a misread, and the scan says which.
+Nothing is kept as a historical exception until the scan has been read
+at a size where a 5 and a 6 cannot be confused.
+
+It holds now. `scripts/compare-symelec.mjs` prints `EXACT: word for
+word`; `scripts/audit-cambridge.mjs` reports 0 disagreements for
+SYMELEC and RSPPIX; `src/audit.test.ts` keeps it that way, and checks
+the cabinet's copies against the master copies in Heinz's folder.
+
+### Titan's assembler, four rules it had and we didn't
+
+- **A name assigned twice.** `SUMB = STSTAK 44`, later `SUMB = STSTAK
+  71`. The four uses at 4015–4054 come before both and assemble to
+  5013, the first value; the two at 11137 and 11165 come after and get
+  5040. Forward references take the first value.
+- **Literals naming what isn't defined yet.** Three `(TEMPDF 10` before
+  `TEMPDF` is defined get three pool words, 12167, 12173 and 12174, all
+  4451. After it is defined, two `(TEMPDF 3` share one. The pool is per
+  use until the value is known, then by value. 122 of 122 words now.
+- **`VEC ON n`, one coordinate.** `VEC ON 2` is 201000 (dy) and `VEC ON
+  -170` is 200370 (dx): under 100 octal it moves vertically.
+- **`LAW -30` is 777747.** The operand keeps to the 13-bit address
+  field; we had sign-extended it across the whole word.
+
+**Kind:** ours.
+
+### The image had misreads too
+
+The `.oct` was read off the same scans and trusted as the referee. It
+was wrong in places, each now corrected against the page:
+
+- **3753 and 3761: `764767 LAW X`**, transcribed `777777 LAW`. The
+  image the cabinet had been booting ran different code in the
+  copy-printname path from what Heinz printed.
+- **3742: `552205 SAD (3`**, transcribed `552235 SAD 13`; and **3745:
+  `SAD (257`**, the test for `/` (257 is `/` with its parity bit),
+  transcribed `SAD 13`. That `(257` was the "orphan" pool word at 12143.
+- **12074: `360001`**, transcribed `350001`, matching `TAD (360001` on
+  the code page.
+- **7633: `772016 LAW POINT`**, transcribed `772015`. Its 6 has a
+  speckled top; compared glyph by glyph with the 6s in `103266` above
+  it, it is a 6, and `POINT` is 12016. Zoomed in
+  [exhibits/zoom-7633-772016.png](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/zoom-7633-772016.png).
+  This one was first written off as "1972's" from a crop too small to
+  tell. It was the transcription's.
+- **5270: `201130`**, Heinz's pencilled PIX. His pencil states his
+  intent, so it is read like any other correction; the `pix` patch is
+  gone.
+
+**Kind:** the transcription's.
+
+### The source, line by line
+
+`symelec.asm` had misreads the old assembler could not see, because one
+early error moved every address after it:
+
+- Names: `WRLTD`/`DRLTD` for `WRLTO`/`DRLTO` (letter O; the scan reads
+  `WRLTO-JMS,`), `ERASE` for `ERAST`, `MESIN6` for `MESIN8`, `STAKY` for
+  `STAKX`, `GRNA` for `GRHA`, `GETDI` for `GETD1`, `3D` for `GD`,
+  `BXBM0` for `BXBMO`, `DP 1` for `OP 1`, `EDR` for `CDR`, and more.
+- Offsets: `JMS OP+5` for `OP-5`, `DAC OP+3` for `OP+2`.
+- `LAM` read as `LAW` five times, `LAW X` read as bare `LAW` twice.
+- `AND (177777` for `(17777`, twice: an extra 7.
+- The variable block after the last `PAUSE`, 84 names from `CDOCOM`
+  to `TEST`, restored as Titan printed it.
+- Titan's own error line `*DECIMAL DIGIT IN OCTAL NUMBER` had been
+  transcribed as source.
+
+The listing's source column had the same misreads in 34 lines, and the
+variable block 8 more (`LDP` for `LOP`, `3DM` for `GDM`, `RAYTNO` for
+`RATTMO`, ...). All corrected.
+
+**Kind:** the transcription's.
+
+### The symbol table, row by row
+
+Titan printed the table in strict order, letters before digits, and
+the corrected source now prints it identically, all 146 rows. Read
+against listing pages 108–110: 20 names were wrong (`BD0`, `CLB1`,
+`CLB0`, `CHODE`, `COP FIR`, `TDDIS`, `WAITLX`, `VECON`, `ADDN`,
+`ATTMU`, ...), the stretch from `DEMP` to `GRID` was transcribed out
+of order, five values were wrong (`COMP10` is 10306, `BPNTX`,
+`MESIN2`, `UNSTAK`, `WRLB`), `UNSTKY =*111023` had lost a digit, and 21
+stars were missing. The star marks a value bigger than an address; we
+had read it as "defined twice". `SUMB` really is printed twice: it is
+assigned twice.
+
+The table also corrected us. `ENOEX`, `ENOEY`, `WAIT2` and `WAIT5`
+looked like misreads of `ENDEX` and friends, and we "fixed" them. The
+table and the code pages say Heinz spelled them that way. Restored.
+
+**Kind:** the transcription's, and once ours.
+
+### Our wrong turns
+
+On the way we invented four labels (`DPSIM1`, `PAMODE1`, `TURNVE2`,
+`TURNVE5`) where Heinz wrote `DPSIM 1`; defined `WRLTO` and `DRLTO` by
+hand instead of reading their labels; treated the PIX pencil as a
+patch; and twice called a misread "1972's" from a crop too small to
+read. Each is undone. **Kind:** ours.
+
+### as7, from the same source
+
+[src/asm/cambridge-as7.ts](src/asm/cambridge-as7.ts) translates
+Cambridge source to Ken Thompson's `as7` dialect using the Cambridge
+assembler's own parser, values and pool, so the two cannot disagree
+about a line. `tapes/symelec/symelec.s` and `tapes/pdp7forth/rsppix.s`
+are its output; they assemble to the same words as the Cambridge
+sources, and the tests check that and that the files are current.
+Three views of one program, one set of words.
+
 ## Not the machine
 
 The dev server listened only on IPv6 `::1`, so a browser that took
@@ -528,9 +643,10 @@ Every bug so far had its answer on paper before anyone went looking:
 the literal pool on pages 105–106, the `ISZ` at 1734, the `1776`
 masks, the `-2` in the source column, the 7 on page 029, Heinz's
 pencil circle, his 8K layout in the comments, the 7 in `STL` on page
-096, and a
+096, the 6 at 7633, the symbol table's own order, and a
 2026 design document nobody reread. The
 emulator's job is to run the listing until it disagrees with itself,
-and then to show where.
+and then to show where. Since rung 8 the listing no longer disagrees
+with itself: source, listing, symbol table and image are one program.
 
 ↑ [README](README.md) · [OFF-BY-ONE](OFF-BY-ONE.md) · [TRACKING](TRACKING.md) · [DESIGN](DESIGN.md)

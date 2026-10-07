@@ -1,0 +1,1489 @@
+<html>
+
+<head>
+<title>The JC Program</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+
+<h1>The JC Program</h1>
+
+<h2><a name="t1">How It Books</a></h2>
+
+JC shows cellular automata in medium-resolution graphics
+(320×200 pixels).  JC will work on any PC which has a graphics
+card.  If your graphics card is a CGA or EGA, you'll see 4 colors, and
+if your card is VGA or a PS/2 card with VGA monitor, you can see as
+many as 256 colors.
+
+<p>
+
+If you haven't watched <b>JCdemo</b>
+yet, please do so before
+reading any further (see <a href="chap1.html#1-INTRO-cademo"><cite>Demo of JC</cite></a>).  Watching
+<b>JCdemo</b> is like watching a series of selected short subjects
+at the movies, but what you see are <em>not</em> movies.  In computer
+graphics terminology, a "movie" is a sequence of pictures which have
+been saved one by one in the computer memory, and then displayed in
+rapid succession--like a slideshow.  But when you watch
+<b>JCdemo</b> you see a festival of one-act computer "plays,"
+where a "play" is something that is happening right now in realtime
+inside your machine.  Live action that you can reach into and alter.
+
+<p>
+
+Even to call our little vignettes "plays" is a bit misleading.
+Traditionally, a play has a script which specifies everything that
+will happen. But when you invent a cellular automaton rule you do not
+know, in any very detailed sense, what is going to happen at all. The
+demos may be plays, but they do not have scripts. No, the way we
+specify a demo is simply by describing i) Cast, ii) Scenery, and iii)
+Lighting.
+
+<h3><a name="t2">Cast: Rule Selection.</a></h3>
+
+The cast of a JC play really has but one character.  You might call
+him/her EveryCell.  EveryCell's personality this time around is
+specified by a ruleprogram which is used to describe in a general way
+how EveryCell will behave.  The ruleprogram is written in BASIC,
+Pascal, or C, and when this program is run (only once, normally) it
+creates a permanent ruletable with the extension <b>.JC</b>.
+The ruletable is a lookup table which specifies in exhaustive detail
+how EveryCell will react to every possible specific situation.
+
+<p>
+
+How many situations can EveryCell distinguish?  EveryCell has 8 bits
+of personal state (memories, predilections, outside noise), and
+EveryCell can see one bit of each of his/her eight neighbors.  So an
+EveryCell situation consists of 16 bits: 8 bits of personal state and
+8 bits of neighborhood information.
+Each bit can be either 0 or 1, so
+this means that there are 2<sup>16</sup> = (2<sup>6</sup>) × (2<sup>10</sup>}) =
+64K
+situations.  (Never forget that 2<sup>10</sup> is around a thousand--1024
+exactly, but close enough to a thousand to be called "K" for
+"kilo".)
+
+<p>
+
+So I can specify EveryCell's personality in wrackingly omniscient
+detail by listing a long table which gives the value of a variable we
+call "<tt>JCRule</tt>" as a function of EveryCell's personal eight-bit
+"<tt>OldState</tt>" and of the eight neighborhood bits--one bit from each
+neighbor--which EveryCell can see. Why can't EveryCell see all eight
+bits of each neighbor? Hey, dude, get real. How much do <em>you</em> know about
+<em>your</em> neighbors?
+<a href="footnote.html#F3_1"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+So a <b>.JC</b> lookup table can be thought of as having 64K lines
+something like the following:
+
+<p>
+
+<center>
+<table border=0>
+<tr>
+<th><tt>OldState</tt> <th>NW  <th>N <th>NE <th>E <th>SE <th>S <th>SW <th>W <th><tt>JCRule</tt> 
+</tr>
+<tr><td colspan=10><hr></tr>
+<tr>
+<td align=center>00000000  <td align=center>   0  <td align=center>   0  
+<td align=center>  0  <td align=center>  0  <td align=center> 0  
+<td align=center> 0  <td align=center>  0  <td align=center>  0 <td align=center>   00000000
+</tr>
+<tr><td colspan=10 align=center>. . .</tr>
+<tr>
+<td align=center>00000000  <td align=center>   0  <td align=center>   0  
+<td align=center>  0  <td align=center>  0  <td align=center> 0  
+<td align=center> 1  <td align=center>  1  <td align=center>  1 <td align=center>   00000001
+</tr>
+<tr><td colspan=10 align=center>. . .</tr>
+<tr>
+<td align=center>10000010  <td align=center>   1  <td align=center>   0  
+<td align=center>  0  <td align=center>  1  <td align=center> 0  
+<td align=center> 1  <td align=center>  0  <td align=center>  1 <td align=center>   10000111
+</tr>
+<tr><td colspan=10 align=center>. . .</tr>
+<tr>
+<td align=center>11111111  <td align=center>   1  <td align=center>   1  
+<td align=center>  1  <td align=center>  1  <td align=center> 1  
+<td align=center> 1  <td align=center>  1  <td align=center>  1 <td align=center>   00001111
+</tr>
+</table>
+</center>
+
+<p>
+
+As the index lines are always the same, all that the <b>.JC</b>
+table really needs to store are the <tt>JCRule</tt>
+values; so a <b>.JC</b> ruletable file codes up 64K bytes.
+In practice, JC uses a compression scheme, so that most of the
+<b>.JC</b> tables are
+substantially smaller than 64K.  A simple rule like Brain has a
+table that compresses down to 648 bytes; a rule like FredMem which
+keeps track of EveryCell's last seven states takes 33,792 bytes.
+
+<p>
+
+If you press the <b>L</b> key and then press <b>Enter</b> you will see a list
+of the available <b>.JC</b> ruletables in the current directory. If you want
+to find out how many bytes the various <b>.JC</b> ruletables occupy
+press <b>Q</b> twice to exit JC, and then
+enter "<tt>dir *.jc</tt>" at the DOS prompt.
+
+<h3><a name="t3">Scenery: Pattern Selection.</a></h3>
+
+Some of the rules are capable of self-organizing an interesting
+configuration from a random start. They build their own scenery.
+VoteDNA, Brain, and Hodge are rules like this. Other rules
+will only look interesting if their starting pattern is something
+simple, like a square or a line drawing. They need a prop to work
+with. FredMem, TimeTun and HeatWave are mildly demanding rules like
+this. Still other rules are primadonnas that need very special scenery
+to work right. The Perfume rules and the Den... rules are examples of
+this; in these rules, the starting scene has random particles to act
+like gas molecules, and fixed shapes to act like walls or objects. An
+invisible aspect of the starting Perfume pattern is that a
+checkerboard pattern is loaded into bits #4 and #5.
+
+<p>
+<center>
+<img src="figures/fig10.gif" width=648 height=446 alt="">
+<br>
+<i>The JC BigAnt pattern.</i>
+</center>
+<p>
+
+JC comes with a diverse selection of start patterns that you can load
+directly.  You can also create your own customized start patterns by
+a) drawing them with the JC screen editor, b) letting them evolve, or
+c) importing them from AutoCAD or AutoSketch® .  Pressing the <b>E</b>
+key from the main menu gets you into the screen editor; we'll say more
+about its functions below.  Option (b), of simply saving an attractive
+screen as a start pattern, is used to show off the JC Rug rule in
+<tt>JCdemo</tt>.  Once you have a pattern you want on screen, you save it by
+pressing <b><a href="chap3.html#Ctrl-F4">Ctrl-F4</a></b>.  When you do this, a pattern file is created
+with extension <b>.JCP</b> (For JC Pattern).  The technique of
+importing detailed drawings from AutoCAD or AutoSketch is discussed
+<a href="patterns.html#3-CA-patdes">below</a>.
+
+<p>
+
+The JC screen consists of 320×200 pixels, with one byte (eight
+bits) of state information per pixel, so a <b>.JCP</b> file codes
+up 64,000 bytes of information (about the same amount as a 64K
+<b>.JC</b> ruletable).  JC uses data compression to reduce the
+size of the files where possible; <b>FaderEgg.JCP</b> needs only
+23 bytes and <b>Tim.JCP</b> takes 23,457.
+
+<p>
+
+If you press the <b>P</b> key and then press <b>Enter</b>, you will see
+a list of the available <b> .JCP</b> files
+in your current directory.  To find out how big the files
+are, leave JC by pressing <b>Q</b> twice, and then enter
+"<b>dir&nbsp;*.jcp</b>" at the DOS prompt.
+
+<p>
+
+Aside from the pattern part of the "scenery," JC also lets you set
+the topology.  In particular, you can turn screenwrap
+on and off.  In wrap mode, a pattern which moves off the screen's
+right will come back on the screen's left.  The JC menus refer to wrap
+mode as "torus screen" because a torus is a doughnut shape, and if
+you were to actually paste the screen's left side to its right side
+and its top side to its bottom side you would get an inner-tube torus
+shape.  The JC menus call the nowrap mode "open" or "plane" screen
+because when there is no wrap and the edges are set to zero, it is as
+if the screen is a patch in an endless surrounding plane of blank
+cells.  There are also some one dimensional topologies, where the
+"torus" and "plane"
+become the "ring" and the "line."
+
+<h3><a name="t4">Lighting: Colorpalette Selection.</a></h3>
+
+Each pixel's color corresponds to the current state of the cell it
+stands for. Watching the patterns go by, you are comprehending the
+behavior of a system with 64,000 independent elements. Although
+cellular automata do not absolutely need to be presented as graphics
+displays, this method takes advantage of human vision's excellent
+pattern-recognition abilities. Choosing the right lighting, or
+colorpalette, can bring out different structures and details of a
+rule. The process is akin to staining a slide to be looked at through
+a microscope.
+
+<p>
+
+EveryCell can have any state value from 0 to 255, and you can select
+any color you like for each of the 256 states.  On CGA and EGA
+machines, of course, there are only four colors to choose from, but on
+VGA machines you can select from some quarter
+million different colors for your colorpalette.
+<a href="footnote.html#F3_2"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+JC has colorpalette files with extension <b>.JCC</b>
+(for JC
+Color).  You can create a colorpalette by using <b>Alt-F9</b> to change
+individual state colors, and then using <b>Ctrl-F5</b> to save the
+colorpalette.  More commonly, you use a word processor to look into
+and edit a <b>.JCC</b> file.  Typically you copy an existing ASCII
+<b>.JCC</b> file onto your own <b>New.JCC</b>, edit
+<b>New.JCC</b>, and save <b>New.JCC</b>.
+
+<p>
+
+Colorpalette files are saved in a 7K readable ASCII format or in an
+incomprehensible compressed binary 700 byte format.  To save space on
+the distribution disks, all our <b>.JCC</b> files are compressed
+binary.  To reconstitute one of them, use <b>Ctrl-F5</b> to save one in
+the default (uncompressed ASCII) format.  Answer "Yes" when JC asks
+if you want to overwrite the old one.  Then go in there with your word
+processor and work out.
+
+<p>
+
+The default colorpalette <b>Default.JCC</b>, which is used if nothing
+different is requested, looks like this:
+
+<p>
+
+<pre>
+3;R    G    B   CGA
+  0    0    0    0    ;   0
+  0   63    0    2    ;   1
+  0    0   63    3    ;   2
+ 63    0    0    1    ;   3
+ 63   63    0    2    ;   4
+  0   63   63    3    ;   5
+ 63    0   63    1    ;   6
+ 63   63   63    2    ;   7
+  .    .    .    .        .
+ 63    0    4    2    ; 253
+ 63    0    3    2    ; 254
+ 63    0    1    2    ; 255
+</pre>
+
+<p>
+
+Each row of a <b>.JCC</b> file represents the color for one state.
+The first three columns show the intensity of Red, Green, and Blue to
+use in VGA mode, and the fourth column shows the color value to use in
+CGA and EGA modes.  Anything to the right of a semicolon is a comment,
+which JC ignores.  The initial "<tt>3</tt>" of <b>Default.JCC</b>
+means that this file has colorpalette information for both the VGA and
+CGA.
+
+<p>
+
+One of the key uses of colorpalette files is to make a particular
+rule's "bookkeeping" bits invisible. For instance, in a rule which
+uses some of the bits to keep track of which cycle it is in, you want
+to make sure that the alternation of the cycle bits is "invisible."
+If, for example, your bit #7 alternates between 0 and 1 to tell
+EveryCell which cycle it is in, then you want to have a colorpalette
+whose top half (states 128-255) is a copy of its bottom half (states
+0-127), so that a cell's color is unaffected by whether or not its bit
+#7 is 0 or 1.
+
+<p>
+
+More creative uses of colorpalettes are also possible, particularly in
+connection with rules such as Faders or Rug,
+which cycle through many states.
+
+<p>
+
+It is possible to look at the spectrum of a given
+colorpalette by pressing the following keys in JC:
+
+<p>
+
+<blockquote>
+<b>Alt-F5<br>
+0<br>
+8<br>
+F1</b>
+</blockquote>
+
+<h2><a name="3-CA-controls">Controls</a></h2>
+
+You start up JC by entering <b>jc</b>:
+
+<p>
+
+<blockquote>
+<b>ca <em>Enter</em></b>
+</blockquote>
+
+<p>
+
+You interact with JC by pressing keys and by entering names of rules,
+patterns, and colorpalettes.  Unlike RC, JC is not case-sensitive.  We
+sometimes use capital letters for the names of the keys, but in
+practice you will use the corresponding lowercase keys.  JC shows menu
+screens that summarize the commands.
+
+<p>
+
+JC comes up with its main menu screen showing.  At the upper right of
+the screen is the rulebox, which shows the name of
+the current rule along with the number of generations
+that have been run since a rule or pattern file was last
+loaded or since the screen was last randomized.
+
+<p>
+
+When you first start JC, the rulebox will say:
+
+<p>
+
+<pre>
+Rule: Identity
+Generation: 0
+</pre>
+
+"Identity" is a do-nothing JC rule that always sets a
+cell's new state equal to its old state.  A status line below the
+rulebox gives some further information.  When you start up JC, the
+status line may read:
+
+<p>
+
+<pre>
+World: Torus      Screen: CGA      Texture: None
+</pre>
+
+<p>
+
+The World entry indicates whether the world on
+the JC screen is being treated as a 2D "torus"
+world with wrap, as a 2D "plane" world with no
+wrap, as a 1D "ring" world with wrap or as a 1D
+"line" world with no wrap.
+
+<p>
+
+The Screen entry tells whether JC is ready to run in four-color
+CGA mode or in the 256 color VGA mode. If your computer
+is not equipped with VGA or MCGA®, your only option is CGA.
+
+<p>
+
+The Texture entry tells if the current rule does anything special to
+any of the eight bitplanes. If not, the texture entry reads "None,"
+otherwise the texture entry will have eight symbols, one for each of
+the planes 7 down through 0, where
+
+<p>
+
+<blockquote>
+<dl compact>
+<dt><tt>.</tt><dd>means no texture
+<dt><tt>H</tt><dd>means horizontal texture
+<dt><tt>V</tt><dd>means vertical texture
+<dt><tt>C</tt><dd>means checkerboard (horizontal and vertical) texture
+<dt><tt>R</tt><dd>means plane is randomized each generation
+<dt><tt>I</tt><dd>means plane is randomized at first generation
+</dl>
+</blockquote>
+
+<p>
+
+Below the rulebox and the status line is the menu screen.  The rulebox
+and the status line show with each menu. There are four menu screens
+in all: the Main menu, the Ctrl menu, the Alt menu, and the Edit menu.
+We print them at the end of this subsection, and we describe their
+individual keys in the four subsections to follow. Keep in mind that
+the rulebox and the status line will show unchanged on every menu
+screen.
+
+<p>
+
+JC is controlled by entering the single-keystroke commands listed on
+the menu screens. Lowercase and uppercase keys do the same things.
+Note that it is not always actually necessary to see a menu screen in
+order to enter a command. Experienced users frequently enter many
+commands in sequence, and it is distracting when the screen flips to a
+menu and you are required to manually flip back. For this reason, many
+of the single-key commands do not flip back to the menu screen, even
+when they request further input (such as a plane number). Major
+commands, such as those that load rules and patterns, do flip to the
+text screen automatically.
+
+<p>
+
+When you get stranded on the text screen, remember that <b>F1</b> will
+always flip screens back to graphics for you.  Conversely, if you get
+lost when entering commands blind, you can flip to the text screen at
+any time by pressing <b>F1</b> to check the currently pending prompt.
+The four menu screens are as follows:
+
+<p>
+
+<ul>
+<li>The MAIN menu screen, which is what you see when JC starts;
+<li>The CTRL menu screen, which you see if you hold down the <b>Ctrl</b>
+key;
+<li>The ALT menu screen, which you see if you hold down the <b>Alt</b> key;
+and
+<li>The EDIT menu screen, which you see if you press <b>E</b>.
+</ul>
+
+<h3><a name="t5">The Main Menu</a></h3>
+
+<center>
+<table border=1 cellpadding=5>
+<tr><td bgcolor="#0000C0"><font color="#FFFFFF"><b><pre>
+Enter  Free run               Arrows   Scroll screen
+Space  Stop/single step       End      Toggle 1 bit scroll
+Q      Quit
+
+L      Load rule              ?        Random rule
+P      Load pattern           R        Random pattern
+C      Load color palette
+
+B      Buffer save/restore    F1       Flip screen
+I      Initialize planes      F2       Toggle silent running
+O      Logical operations     F3       Toggle open/closed
+E      Edit pattern           F4       Replay movie
+</pre>
+</b>
+</font>
+</table>
+</center>
+
+<dl compact>
+<dt><b>Enter</b> <dd><em>Free run</em>.
+JC applies the
+current rule over and over, displaying successive generations on the
+graphics screen.
+
+<p>
+
+If <b>Enter</b> is pressed on the menu screen (except at the end of an
+answer to a prompt for the name of a rule, pattern, or colorpalette),
+JC will flip to the graphics screen and enter a free run.  So when you
+are answering dialogues about things like the buffer or logical
+operations, don't be too fast to press <b>Enter</b> if you don't want
+to flip back out of the menu.  It takes JC a second to "eat" inputs
+about the buffers and operations, so just wait instead of pressing
+<b>Enter</b>, or you'll lose the menu before you're ready.  Of course
+<b>F1</b> will always get the menu back.
+
+<p>
+
+<dt><b>Space</b> <dd><em>Single step or stop.</em>
+If a rule is
+running, pressing spacebar stops the run.  If JC is not running, each
+press of the spacebar updates the screen by one generation.
+
+<p>
+
+<dt><b>Arrow Keys</b> <dd><em>Scroll.</em>
+The arrow keys scroll
+in the indicated direction. If an arrow key is pressed while on the
+text screen, the display flips to the graphics screen. These keys
+behave differently in toroidal and plane worlds. In toroidal mode, the
+screen wraps around as you scroll; in plane mode, the material
+scrolled off the edge of the screen disappears and zeroes scroll in
+from the other side of the screen.
+
+<p>
+
+<dt><b>End</b> <dd><em>Scroll speed.</em>
+The arrow keys initially scroll
+the bitmap ten cells at a time.  The <b>End</b> key toggles a mode in
+which the keys scroll only a single cell at a time.  Press <b>End</b>
+to precision scroll the screen, then press it again to restore the
+original fast scrolling.
+
+<p>
+
+<dt><b>B</b> <dd><em>Buffer operations.</em>
+JC provides eight
+buffers, each able to store the contents of one entire bit plane. You
+can store, recall, and exchange data between the simulator's bitplanes
+(representing the state of the cells in the automaton) and these
+buffers. Pressing <b>B</b> elicits the query:
+
+<p>
+
+<pre>
+Operation (S = Store, R = Recall, X = Exchange):
+</pre>
+
+<p>
+
+Select the desired operation. Store places the contents of the cell
+state bit planes into buffer bit planes, destroying the previous
+contents of the buffer. Recall copies the buffer bit planes into the
+cell bit planes, destroying the bit plane's previous contents.
+Exchange interchanges the contents of the buffer planes and the cell
+planes (handy to see what's in a buffer without losing any
+information). After you've selected the operation, you get the
+question
+
+<p>
+
+<pre>
+Plane number (0 to 7), All or Mask:
+</pre>
+
+<p>
+
+If you choose Mask,
+then you must specify a hexadecimal number
+between
+<b><tt>00</tt></b> and <b><tt>FF</tt></b> to say which planes you want to operate on.  The
+idea behind a mask is that if you write it out as an eight digit
+binary number, the positions with 1s (instead of 0s) are the positions
+of the planes you want to operate on.  If you aren't familiar with
+hexadecimal, it's helpful to know that <b><tt>a</tt></b>, <b><tt>b</tt></b>, <b><tt>c</tt></b>,
+<b><tt>d</tt></b>, <b><tt>e</tt></b>, and <b><tt>f</tt></b> stand for the numbers 10, 11, 12, 13,
+14, and 15.  Thus <b><tt>f0</tt></b> would stand for the binary number <b><tt>11110000</tt></b>,
+meaning planes #4-#7.
+
+<p>
+
+If you enter a plane number (0 to 7) rather than All or a Mask, you're
+asked:
+
+<p>
+
+<pre>
+Buffer Number (0 to 7):
+</pre>
+
+<p>
+
+In single plane buffer operation you can move data between any plane
+and buffer.  For All and Mask, data always move between like-numbered
+planes and buffers.
+
+<p>
+
+<dt><b>C</b> <dd><em>Load colorpalette.</em>
+The <b>C</b> command asks for
+the name of a colorpalette to be loaded. Type the name of the
+colorpalette file, then press <b>Enter</b>. If you decide you don't want
+a color palette after all, press "<b>.</b>" and hit <b>Enter</b>. To list all
+colorpalette files in the current directory just press <b>Enter</b>. If
+you want a colorpalette
+that's in another directory, you must prefix
+the colorpalette name with the path name of the directory.
+
+<p>
+
+<dt><b>E</b> <dd><em>Edit pattern.</em>
+This calls up the Pattern
+Editor menu, which is described in later in this section.
+
+<p>
+
+<dt><b>I</b> <dd><em>Initialize planes.</em>
+The <b>I</b> command provides
+several ways of initializing the eight bit planes. You're asked:
+
+<p>
+
+<pre>
+Plane (0 to 7, A=All, M=Mask,
+       D to set random density):
+</pre>
+
+<p>
+
+Specifying a number <b>0</b> through <b>7</b> selects an individual
+plane to be initialized.  Specifying <b>A</b> selects all planes, and
+selecting <b>M</b> allows you to choose a mask specified by giving the
+hexadecimal name of the eight-digit binary number which has 1s in the
+spots corresponding the planes you want to hit on.  You are then
+presented with the choices:
+
+<p>
+
+<pre>
+Action (0=clear, 1=set, I=Invert, R=Randomize):
+</pre>
+
+<p>
+
+Enter the form of initialization you want, and the action will occur.
+Invert means convert all zero bits into ones and vice versa. Randomize
+fills the selected plane(s) with bits from the random number
+generator, using the most recently selected random density.
+
+<p>
+
+If you answer <b>D</b> to the original prompt, you get the response:
+
+<p>
+
+<pre>
+Random map density (1 to 7, was old):
+</pre>
+
+<p>
+
+Your reply chooses the density of one bits produced by the random
+number generator. This affects the bits generated for random
+initialization by the <b>I</b> command. The sparsest density, about 12%
+ones, is chosen by entering <b>1</b>; the most dense, about 50% ones, by
+entering <b>7</b>.
+
+<p>
+
+<dt><b>L</b> <dd><em>Load rule.</em>
+When you press <b>L</b>, JC asks for
+the name of the rule you want to load. Simply type the name of the
+rule file, then press <b>Enter</b>. If you press <b>Enter</b> without typing
+anything, JC will list the names of the rules in the current
+directory. If you decide not to load a new rule after all, press "<b>.</b>"
+and hit <b>Enter</b>.
+
+<p>
+
+You can list all rule files in some other directory by typing the name
+of the directory followed by a question mark.  For example, to display
+the names of all rule files in the directory 
+<b>c:\cellab\newrules</b>,
+you'd answer the prompt with
+<b>c:\cellab\newrules?</b>.
+Just typing a
+question mark or pressing <b>Enter</b> lists the rule files in the
+current directory.  To load a rule from another directory, you must
+prefix the rule name with the directory path name.  Thus to load a
+rule called <b>cadelic</b> from 
+<b>c:\cellab\newrules</b>,
+you would request the rule <b>c:\cellab\newrules\cadelic</b>.
+
+<p>
+
+It is also possible to load certain special rules with standardized
+names in certain stereotyped ways, as follows.
+
+<p>
+
+You can load one-bit totalistic
+rules by specifying their rule number,
+as in the RC Vote rulestyle.  Simply enter <tt>t(<em>number</em>)</tt>,
+where <em>number</em> can range from 0 up to 1023.  If you enter
+<b>th(</b><em>number</em><b>)</b>, the totalistic rule with the same number will be
+entered and run in plane 0, and the rule's "echo" will be saved in
+plane 1.
+<b>h</b> thus has the effect of the <b>e</b> key in RC's Vote.
+
+<p>
+
+You can also load rules by specifying their "NLUKY"
+number, as in the RC Brain rulestyle. Simply enter
+<tt>n(<em>NVal LVal UVal KVal YVal</em>)</tt>.
+Don't put spaces between the numbers.
+NVal can range from 0 to 127, and the other numbers can range from 0
+to 9. In general LVal should be
+<img src="figures/leq.gif" width=11 height=13 alt="<="> UVal
+and KVal <img src="figures/leq.gif" width=11 height=13 alt="<="> YVal.
+
+<p>
+
+You can load random semitotalistic 4 bit rules
+as in the RC
+Random rulestyle by entering <tt>r(<em>sparseness</em>)</tt> where
+sparseness is between 0 and 100. Sparseness
+specifies
+the percent of entries in the rule's little 16×9 lookup table that
+ought to be zero on the average.
+
+<p>
+
+Finally, you can load <a href="ruledef-own.html">own code evaluators</a> by entering <b>*</b>
+followed by the <b>.JCO</b>
+file's name.  Thus if you request
+<b>*laplace</b>, you will get the
+<a href="ruledef-own.html#3-CA-Laplace">Laplace averaging rule</a>
+included as an example of own code.
+To find out what
+<b>.JCO</b> evaluators are available, enter "<b>*?</b>".
+
+<p>
+
+<dt><b>O</b> <dd><em>Operate on planes.</em>
+The <b>O</b> command performs
+various logical operations on pairs of bit planes. You're asked:
+
+<p>
+
+<pre>
+Destination plane (0 to 7), or S to swap 0 and 1:
+</pre>
+
+<p>
+
+If you respond with <b>S</b>, the contents of the low two bit planes are
+interchanged (whatever was in Plane 0 becomes the contents of Plane 1
+and vice versa). This is handy for reversing a rule like
+TimeTun
+which has one active bit and one bit of memory. If you specify a plane
+number, you're asked for a source plane number between 0 and 7:
+
+<p>
+
+<pre>
+Source plane (0 to 7):
+</pre>
+
+<p>
+
+and then you are asked for an:
+
+<p>
+
+<pre>
+Operator (= Copy, &amp; And, | Or, ^ Xor, S Swap):
+</pre>
+
+<p>
+
+Enter the operation <em>OP</em> you want performed, and the destination
+plane will be replaced by Dest <em>OP</em> Source.  Thus, if I pick
+destination 2, source 4, and operation <tt>|</tt>, then each cell's
+Bit #2 is replaced by (Bit #2 OR Bit #4).  This command, in
+conjunction with the eight buffers available through the <b>B</b>
+command, provides a "bitmap desk calculator" which allows you to
+compose patterns from various pieces.
+
+<p>
+
+<dt><b>P</b> <dd><em>Load pattern.</em>
+The <b>P</b> command asks for the
+name of a pattern file to be loaded. Type the name of the pattern file
+(which can include drive and directory specifications), then press
+<b>Enter</b>. If you decide you don't want a new pattern after all, press
+"<b>.</b>" and hit <b>Enter</b>. To list all pattern files in the current
+directory just press <b>Enter</b> when it asks which one. To list all
+pattern files in a directory, type the name of the directory followed
+by a question mark. For example, to display the names of all pattern
+files in the directory <b>\brainsim\pats</b>, you'd answer the prompt with
+<b>\brainsim\pats?</b>. You don't have to load a pattern before running a
+rule. If you do not load a pattern, a standard initial random pattern
+is used.
+This standard pattern consists of 50% ones in plane #0 and
+all zeroes in planes #1 through #7. Loading a pattern always sets all
+eight planes, but you can combine planes from different patterns by
+saving individual planes in buffers with the <b>B</b> command, then
+restoring them as you wish.
+
+<p>
+
+<dt><b>Q</b> <dd><em>Quit to DOS.</em>
+The <b>Q</b> command (or <b>Esc</b>), asks
+you to confirm that you really want to leave the simulator.  If you
+confirm by typing <b>Q</b>, <b>Y</b>, or <b>Esc</b>, the simulator exits
+to the DOS command prompt.
+
+<p>
+
+<dt><b>R</b> <dd><em>Randomize Pattern.</em>
+This is a single-keystroke command
+which randomizes all eight bitplanes.  Each plane is set to 50% ones.
+See the <b>I</b> command for a larger set of options for initializing
+planes.
+
+<p>
+
+<dt><b>?</b> <dd><em>Randomize Rule</em>. This is a single-keystroke
+command which loads a new randomly selected four-bit semitotalistic
+rule into the current lookup table.  These
+are exactly the same class of rules that you see in RC's
+Random rulestyle when you repeatedly press <b>n</b>.  Most
+of the rules you get this way look bad, though a few of them are
+interesting.  Generally a random rule will look better on a simple
+start pattern, like Square, tending then to generate radical
+mandalas.  If you want to search through a lot of these
+random rules, it's a good idea to store something like the square in
+the first four planes of your buffers and keep pressing the three-key
+sequence <b>B</b>, <b>R</b>, <b>A</b> for Buffer-Restore-All.
+
+<p>
+
+Random rules usually look better if they have a pretty high
+"sparseness,"
+meaning proportion of zero-valued entries.  In RC, we
+set the sparseness by pressing the <b>v</b> key or by going to the
+control panel.  But in JC, we set the sparseness by pressing <b>L</b>
+for load rule, and then requesting the rule <tt>r(<em>n</em>)</tt>, where n
+is a desired percentage (from 0% to 100%) of zero entries.  Once you
+set the sparseness by requesting an <tt>r(<em>n</em>)</tt> rule, each
+further press of <b>?</b> will produce a new random rule of the same
+sparseness.  JC starts up with the sparseness set to 68 (68% of table
+entries are forced to 0).
+
+<p>
+
+<dt><b>F1</b> <dd><em>Flip screen.</em>
+The display is flipped
+between the text and graphics screens. If the simulator is running
+with updates being shown on the graphics screen, <b>F1</b> stops the
+simulator as well as flipping to the text screen.
+
+<p>
+
+<dt><b>F2</b> <dd><em>Silent running.</em>
+Normally each time a new generation is calculated, it is shown on the
+graphics screen, flipping from the text screen if required.  <b>F2</b>
+toggles "silent running." While silent running is in effect, if you
+single step the automaton with the space bar or let it free run by
+pressing <b>Enter</b>, the bit planes are updated, but the graphics
+screen is not.  The text screen remains active, and only the
+incrementing generation counter in the upper right corner of the
+screen indicates progress.  The screen type in the status line is
+shown as "<tt>Silent</tt>" to indicate silent running in effect.  You
+may restore the normal display of updates by pressing <b>F2</b> again.
+Updating the screen for each generation takes time, so if you want to
+run a large number of generations, you can use silent running to speed
+things up.  The speed increase depends upon how fast your computer is
+and what kind of graphics hardware you have: the gain is rarely
+dramatic.
+
+<p>
+
+<dt><b><a name="F3">F3</a></b> <dd><em>Toggle Open/Closed.</em>
+This key toggles the
+world between open no-wrap planar and closed wraparound toroidal. The
+worldtype name on the text screen status line is updated.
+
+<p>
+
+<dt><b>F4</b> <dd><em>Replay movie.</em>
+<b>F4</b> replays movie files made
+with <b>Ctrl-F6</b>. These movies store a record of all the screen updates in
+a given pattern run. They gobble up humongous amounts of disk space
+(you can hit several meg in a matter of minutes), but for special
+productions they have a strong high speed impact. When a movie is
+playing back, it accesses the hard disk for every screen. This makes a
+somewhat frightening noise inside your computer, but it is in fact not
+particularly bad for your hard disk.  The sound you hear is the motion
+of the magnetic solenoid which moves the disk's read-head back and
+forth.  These repeated reads do not turn the disk on and off, nor do
+they cause the head to touch the disk; all that is happening is that
+the read head is moving horizontally back and forth.  Despite how it
+sounds, your disk is not being chewed up.  Movies made in CGA mode can
+be projected in either CGA or VGA
+mode, but movies made in VGA mode cannot be projected on a CGA.
+Although VGA movies are not CGA-viewable, if you have a VGA, you will
+want to make VGA movies, as they show more color and run faster than
+CGA movies.  Press <b>Enter</b> to see what, if any, movies are
+available in the current directory.
+
+<p>
+
+You can list all movie files in a different directory by typing the
+name of the directory followed by a question mark.  For example, to
+display the names of all movie files in the directory
+<b>c:\cellab\bonkers</b>, you'd answer the prompt with
+<b>c:\cellab\bonkers?</b> To request a movie called, say, <tt>tintoy</tt> from
+the bonkers directory you would call for
+<b>c:\cellab\bonkers\tintoy</b>.
+
+</dl>
+
+<h3><a name="t6">File Output: The Ctrl Menu</a></h3>
+
+<center>
+<table border=1 cellpadding=5>
+<tr><td bgcolor="#0000C0"><font color="#FFFFFF"><b><pre>
+                        File Output                        &nbsp;
+F1  Flip screen
+F2  Save rule
+F3  Save experiment
+F4  Save pattern
+F5  Save colorpalette
+F6  Make / end movie
+</pre>
+</b>
+</font>
+</table>
+</center>
+
+<p>
+
+When you hold down the <b>Ctrl</b> key, the Ctrl menu appears.
+<b>Ctrl</b> plus any of the "function" keys <b>F1</b>-<b>F6</b>
+creates various kinds of JC output.
+
+<p>
+
+<dl compact>
+<dt><b>Ctrl-F1</b> <dd><em>Flip screen.</em>
+Same as usual. You might
+use this combination if you know you need a <b>Ctrl</b> "output" key but
+don't remember which one; hold down <b>Ctrl</b> and press <b>F1</b>.
+
+<p>
+
+<dt><b><a name="Ctrl-F2">Ctrl-F2</a></b> <dd><em>Save rule.</em>
+This is useful if you happen
+to accidentally find an interesting rule by using the <b>?</b> control or
+one of the rule-number entry possibilities for <b>L</b>.
+
+<p>
+
+<dt><b><a name="Ctrl-F3">Ctrl-F3</a></b> <dd><em>Save experiment.</em>
+This saves the current rule, pattern, and colorpalette.  If you've
+been hacking like mad, chaining together rules and patterns and screen
+edits, and you suddenly see something great start happening onscreen,
+this is the command to use.  If you can't remember a rarely used
+command like this, it's always safe to use <b>F1</b> to get out to the
+menu screens and then press <b>Ctrl</b> and <b>Alt</b> until you see the
+command you want.  The pattern and rule will wait for you on the
+graphics screen.  A save experiment command has the effect of creating
+a rulefile with a built in <tt>PalReq</tt> and <tt>PatReq</tt>.  If your
+current pattern happens to be intricate, the <b>.JC</b> file's
+size can approach 64K.
+
+<p>
+
+<dt><b><a name="Ctrl-F4">Ctrl-F4</a></b> <dd><em>Save Pattern.</em>
+This saves the current pattern.  This is useful for instance if you
+have used the screen editor to create a useful starting pattern.
+Alternatively this can be useful with a rule such as Zhabo, which
+takes quite a few generations to start looking really good.  You can
+run the rule till it settles into its groove, save the pattern, and
+then use this pattern as a PatReq of the rule.
+<a href="footnote.html#F3_3"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+A lot of effort went into making our demo <b>.JCP</b>s as small as
+possible so we could include a lot of them with <i>CelLab</i>.
+One thing we learned is that if a rule has texture settings,
+you can make the size of your saved pattern smaller by turning off the
+textures before you do the save, letting the rule call up the textures
+on its own.  If texture is on, even the compressed pattern will be
+about 64K.  If your pattern requires some random bits at the start,
+you can reduce the size of your startup pattern file by writing your
+rule program so as to use the <b>RSeedB</b>
+and <b>RSeedN</b>
+commands to start certain planes with random bits in them.  In order
+that DenTea, for instance, looks good, we need the rule to start up
+with random "gas bits" in plane 0.  But to save a start pattern
+consisting of the teapot plus the random gas bits would make a
+<b>.JCP</b> file that is 40 or 50K.  So instead,
+<b>TEAPOT.JCP</b> is just a teapot, and the
+<b>Dendrite.PAS</b> program that uses it includes the statements
+<b>RSeedB:=0</b> and <b>RSeedN:=1</b>, meaning "at startup,
+randomize one bitplane, starting at bitplane #0."
+
+<p>
+
+<dt><b>Ctrl-F5</b> <dd><em>Save Colorpalette.</em>
+This saves the
+current colorpalette.  This is useful if you have been using the
+<b>Alt-F9</b> key to set specific colorpalette colors or disable
+certain planes.  <b>Ctrl-F5</b> is also good for getting a palette into
+uncompressed ASCII form.  JC's default format for colorpalette save is
+ASCII.  In this format, a colorpalette can be opened and edited with a
+word processor.  An ASCII-saved colorpalette occupies about 7K of disk
+space.  If you have no intention of reediting a colorpalette, you can
+save it in compressed binary form by prefixing the colorpalette name
+with a "<b>*</b>".  A binary-saved color palette takes only
+about 700 bytes of memory.  In the event that you ever do want to edit
+a binary-saved colorpalette, you can get it back into ASCII format by
+loading it in to JC and then using <b>Ctrl-F5</b> to resave it in ASCII
+form.
+
+<p>
+
+<dt><b>Ctrl-F6</b> <dd><em>Make/End Movie.</em>
+If you'd like to see your
+rule run much faster than the generation time your computer delivers,
+you can record a "movie" consisting of consecutive frames calculated
+at normal speed, then replay the movie at high speed.  <b>Ctrl-F6</b>
+asks you to name a file into which the movie will be written.  After
+you specify the file (which is given a file type of
+"<b>.JCT</b>"), record mode is activated.  The movie file being
+written is shown in the status line on the text screen.  Every time
+the graphics screen is updated, its contents are compressed and
+written to the movie file.  Pressing <b>Ctrl-F6</b> again concludes
+recording of the movie.
+
+<p>
+
+Note that you can change rules, patterns, and colorpalettes in the
+course of recording a movie, creating quite dramatic effects.  While a
+movie is recording, the program runs more slowly because it has to
+keep pausing to write each screen to disk.  Movies recorded while in
+CGA display mode are far more compact that those
+made while the VGA display is active, and can be
+replayed on both the CGA and the VGA.  Movies made in VGA mode
+replay faster on the VGA, but cannot be shown on a CGA screen.
+</dl>
+
+<h3><a name="t7">Configurations: The Alt Menu Screen</a></h3>
+<p>
+
+<center>
+<table border=1 cellpadding=5>
+<tr><td bgcolor="#0000C0"><font color="#FFFFFF"><b><pre>
+                       Configuration                       &nbsp;
+        Screen                              World
+F1  Flip Screen               F8        Open/Closed
+F2  Select CGA/VGA            0         Two dimensional
+F3  Alternate CGA colors      1         1D, 8 neighbors
+                              2         1D, 4 neighbors
+    Pseudo-Neighbors          3         1D, 2 neighbors
+F4  Off
+F5  Horizontal texture                 Color Palette
+F6  Vertical texture          F9   Set color palette entry
+F7  Random input              F10  Load color palette file
+</pre>
+</b>
+</font>
+</table>
+</center>
+
+<p>
+
+If you hold down the <b>Alt</b> key, the Alt menu appears.  <b>Alt</b>
+plus a number 0 to 3 or a function key <b>F1</b> to <b>F10</b> changes
+JC's present configuration.
+
+<p>
+
+<dl compact>
+<dt><b>Alt-F1</b> <dd><em>Flip screen.</em>
+If you know you want an
+<b>Alt</b> key press <b>Alt</b> and <b>F1</b> to get the Alt menu.  Once
+you see the command you want, keep the <b>Alt</b> key pressed down and
+use <b>F1</b> to go back to the graphics screen.  Then, with <b>Alt</b>
+still down, press the function key you wanted.  Thus, for example, you
+can find and use <b>Alt-F3</b> to toggle the CGA color.
+
+<p>
+
+<dt><b>Alt-F2</b> <dd><em>Select CGA/VGA.</em>
+The simulator supports both
+the CGA display board and the VGA analogue display board. A PS/2 is
+the archetypal VGA, though now many clones are equipped with VGA as
+well. The EGA is supported as a CGA--using EGA mode for JC
+would have no benefits and be slower. When started, the simulator
+inquires what hardware is available and, if a VGA is found, assumes
+that VGA operation is desired. The current screen type is shown in the
+status line (unless silent running is underway). If you have a VGA and
+you'd like to switch to CGA before recording a movie file
+using
+<b>Ctrl-F6</b> in the more compact CGA mode, or to fix up an experiment for a
+friend who has no VGA, or maybe just to gloat, pressing <b>Alt-F2</b> flips
+the screen to CGA mode.  You can do this even while running a
+simulation.  Pressing the key a second time flips back to the VGA.  If
+you have only a CGA, pressing <b>Alt-F2</b> will cover the graphics screen
+with a blown-up copy of one of the menus; it's ugly and you won't want
+to do it often.  We don't disable <b>Alt-F2</b> if the system says there's no
+VGA because there is no completely reliable and documented way to
+determine what hardware is present.  We use a sneaky trick to test for
+the VGA, which may not work on all computers.  So, if you have a VGA
+but we don't think you do, you can still activate it by pressing
+<b>Alt-F2</b>.
+
+<p>
+
+<dt><b>Alt-F3</b> <dd><em>Alternate CGA Colors.</em>
+This key toggles
+between the two CGA colorpalettes, green-red-brown and
+cyan-magenta-white.  The difference between them is that the colors in
+the second palette all have blue added.  "Cyan and magenta" are
+printers' gobbledygook for "aqua and purple." JC defaults to the
+second palette because it is brighter.  If you use the first palette,
+turn up the brightness on your monitor and it will look better.  On
+some machines, <b>Alt-F3</b> can also show a third CGA colorpalette:
+green-red-yellow, a brighter version of the first palette.
+
+<p>
+
+<dt><b>Alt-F4</b>, <b>Alt-F5</b>, <b>Alt-F6</b>, <b>Alt-F7</b>
+<dd><em>Plane assignments.</em> The bitplanes can be assigned special
+functions which provide the rule external information.  Normally any
+special assignment of planes will be made by the rule definition, but
+you can override the rule's specification with <b>Alt-F4</b>,
+<b>Alt-F5</b>, <b>Alt-F6</b>, and <b>Alt-F7</b>.  The keys for setting
+textures are as follows:
+
+<p>
+
+<center>
+<table border=4 cellpadding=4>
+<tr><td>   <b>Alt-F4</b> <td> No texture
+<tr><td>   <b>Alt-F5</b> <td> Horizontal texture
+<tr><td>   <b>Alt-F6</b> <td> Vertical texture
+<tr><td>   <b>Alt-F7</b> <td> Random texture.
+</table>
+</center>
+
+<p>
+
+You can keep track of the texture setting by watching the status bar
+at the top of the menu.  <b>Alt-F4</b> simply turns off all textures
+and requires no further inputs.  The keys <b>Alt-F5</b>, <b>Alt-F6</b>,
+and <b>Alt-F7</b> give the prompt:
+
+<p>
+
+<pre>
+Starting plane (0 - 7) or N to disable:
+</pre>
+
+<p>
+
+If you press <b>N</b>, all texture of the chosen type is removed, and no
+further answers are necessary. If you press a plane number, then you
+get the prompt something like:
+
+<p>
+
+<pre>
+How many planes of horizontal phase (1 to 8):
+</pre>
+
+<p>
+
+If I select one plane of horizontal phase, that means that the plane
+is going to have alternating vertical stripes of 0s and 1s.  But if I
+select, say, 3 planes of horizontal phase at plane 2, that means that
+for all the cells, bit #2, bit #3, bit #4 are going to hold a
+pattern that cycles through the combinations <b><tt>000</tt></b>, <b><tt>001</tt></b>,
+<b><tt>010</tt></b>, <b><tt>011</tt></b>, <b><tt>100</tt></b>, <b><tt>101</tt></b>, <b><tt>110</tt></b>, <b><tt>111</tt></b> from left
+to right.  One thing this is useful for is viewing your colorpalette.
+If I select <b>Alt-F5</b>, press <b>0</b>, press <b>8</b>, and then press
+<b>F1</b> to flip to the graphics screen, I will see vertical stripes
+holding state values that, from left to right, go from 0 up through
+255, back to 0, and back up through 64.  Pressing the <b>C</b> key and
+selecting different colorpalettes will show you what they look like.
+In CGA this exercise is not particularly interesting because there are
+so few possible colors, but on a VGA it can show you a lot.  It's fun
+to feed one of these "shower-curtain" patterns to a rule.  RugLap
+with plane worldtype is good here, as is Hodge.
+Seed Hodge by using
+<b>E</b> followed by <b>Ins</b> and <b>E</b> to alter one pixel.
+
+<p>
+
+Vertical texture works the same as horizontal texture, except it
+makes horizontal lines. Both vertical and horizontal texture bits will
+be erased and swept away if the rule being run does something to the
+bits where these texture bits live. These bits are most commonly used
+to provide persistent domains where differing variants of a cell rule
+can apply. XTC and the Perfumes are examples of this.
+
+<p>
+
+Random texture is different; random texture means that the plane
+with that texture is randomized at each and every generation. This
+randomization takes precedence over anything a rule can do. Sublime is
+a rule which uses random texture.
+
+<p>
+
+<dt><b><a name="Alt-F8">Alt-F8</a></b> <dd><em>Open/closed.</em>
+This toggles between plane
+and torus worldtypes just like <b>F3</b> on the main menu.
+
+<p>
+
+<dt><b>Alt-F9</b> <dd><em>Set colorpalette entry.</em>
+This allows you to
+set the color of a specific state number. In CGA, the colors
+are given simply by specifying an index from 0 to 3 (0 is black, 1 is
+green or aqua, 2 is red or purple, and 3 is brown or white).  In VGA
+you can use a rather wide range of color names,
+<a href="footnote.html#F3_4"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+or you can specify the
+intensity values wanted for the Red, Green and Blue components of the
+color being "mixed." For extensively doctoring a colorpalette, it is
+best to go out into DOS, copy an uncompressed ASCII colorpalette to a new
+colorpalette file with the <b>.JCC</b> extension, and then use a
+word processor to go into the colorpalette and change the numbers.
+
+<p>
+
+<dt><b>Alt-F10</b> <dd><em>Load Colorpalette File.</em>
+Does the same
+thing as <b>C</b> on the main menu.
+
+<p>
+
+<dt><b>Alt-0</b>, <b>Alt-1</b>, <b>Alt-2</b>, <b>Alt-3</b> <dd><em>Change
+WorldType.</em>
+These allow you to choose between a 2D world or various
+sorts of 1D worlds.  In a 1D rule, only the top line of the screen is
+updated, and the history of that line is scrolled down the screen.
+Aurora
+is an example of a rule like this.  As JC's rule tables are
+designed to work with 8 bits of cell state plus 8 bits of neighborhood
+state, a 1D rule has the option of looking at 2 neighbors <tt>L</tt> and
+<tt>R</tt> and four bits of each (<b>Alt-1</b>), at 4 neighbors <tt>LL</tt>,
+<tt>L</tt>, <tt>R</tt>, and <tt>RR</tt> and two bits of each (<b>Alt-2</b>), or
+at 8 neighbors <tt>LLLL</tt>, <tt>LLL</tt>, <tt>LL</tt>, <tt>L</tt>, <tt>R</tt>,
+<tt>RR</tt>, <tt>RRR</tt>, and <tt>RRRR</tt> and one bit of each (<b>Alt-3</b>).
+It's interesting (but usually disappointing) to take a rule that runs
+in one worldtype and try running it in another simply by pressing
+<b>Alt</b> and a number from <b>0</b> to <b>3</b>.  Three combinations
+that work are Dendrite
+plus <b>Alt-1</b>, Life
+with <b>Alt-2</b>, and
+Faders with <b>Alt-3</b>.  <b>Alt-0</b> puts you back to 2D.
+</dl>
+
+<h3><a name="3-CA-PatternEditor">Pattern Editor Menu</a></h3>
+
+<center>
+<table border=1 cellpadding=5>
+<tr><td bgcolor="#0000C0"><font color="#FFFFFF"><b><pre>
+                       Pattern Editor                      &nbsp;
+Arrows   Move Cursor        End     Toggle 1 bit move
+B        Box                X + CR  Make mark
+C        Close polygon      INS     Draw point
+D        Disc               DEL     Erase point
+E        End editing        R       Ring
+F        Filled polygon     S       Set color
+                            U       Undo last mark
+0-9      Set state 0-9      W       Wipe all marks
+G        Get state here     P       Paint region
+F1       Flip screen
+            Drawing State: <em>dec</em> (0x<em>hex</em>)
+</pre>
+</b>
+</font>
+</table>
+</center>
+
+<p>
+
+When you tap <b>E</b> to call up the pattern editor, the running of the
+cellular automaton rule stops and a cursor appears on screen. Don't
+hold the <b>E</b> key down, or JC will flip rapidly in and out of edit
+mode. You can select the state you are going to edit into the pattern
+by pressing <b>S</b>. Keep in mind that putting a 1 in plane #0 corresponds
+to State 1, while putting a 1 in plane #1 corresponds to State 2.
+Putting 1s in both plane #0 and plane #1 means using state 3, and so
+on. The state is the number whose binary expansion has ones exactly in
+the plane numbers you are writing in.
+
+<p>
+
+When you are done editing the pattern, you must tap <b>E</b> to exit the
+editmode before pressing <b>Enter</b> to restart the rule.
+
+<p>
+
+<dl compact>
+
+<dt><b>Arrow Keys</b> and <b>End</b> <dd><em>Move cursor.</em>
+The arrow keys move
+the cursor around.  The cursor will not move offscreen, which comes in
+handy when you want to get it out to the edge.  To start with, the
+cursor jumps ten pixels per keypress.  When you want to fine-tune the
+cursor position, press <b>End</b> and the cursor will start moving
+only one pixel at a time.  Pressing <b>End</b> again toggles back to big
+steps.
+
+<p>
+
+<dt><b>Ins</b> and <b>Del</b> <dd><em>Draw point.</em>
+<b>Ins</b> draws a
+point where the cursor is; <b>Del</b> deletes a point there.
+
+<p>
+
+<dt><b>B</b> <dd><em>Box.</em>
+<b>B</b> draws a hollow box, or rectangle, with
+corners at two marks you have made.  If you have made more than two
+marks, <b>B</b> won't do anything.  If you have made only one mark,
+<b>B</b> will assume that you mean your second mark to be at the
+present cursor location.
+
+<p>
+
+<dt><b>C</b> <dd><em>Closed polygon.</em>
+<b>C</b> draws a closed polygonal line
+through all the marks made so far, and connects the last mark to the
+first mark.  If you have made only two marks, then <b>C</b> will draw a
+line connecting them.
+
+<p>
+
+<dt><b>D</b> <dd><em>Disc.</em>
+<b>D</b> draws a filled ellipse which fits inside
+the box defined by two marks onscreen.  If there are more than two
+marks, <b>D</b> uses only the first two to define the ellipse.  If
+there is but one mark, <b>D</b> assumes the cursor position is the
+second Mark.
+
+<p>
+
+<dt><b>E</b> <dd><em>End Editing.</em>
+Terminates editmode and enables you to save
+the pattern you've made or to run the rule on it.
+
+<p>
+
+<dt><b>F</b> <dd><em>Filled Polygon.</em>
+Acts like <b>C</b>, but fills in the
+polygon.  If only two marks have been made, a filled rectangle with
+the two marks as corners is drawn.  If only one mark is present,
+<b>F</b> assumes you want a second mark at the present cursor location.
+
+<p>
+
+<dt><b>G</b> <dd><em>Get color.</em>
+<b>G</b> sets the drawing state to the state
+value of the cell at the cursor's cross-hairs.  This is useful if you
+don't know the state value of a color.  (This can easily happen if you
+don't know the details of the rule and of the colorpalette being
+used.)
+
+<p>
+
+<dt><b>O</b> <dd><em>Open Polygon.</em>
+<b>O</b> draws a polygonal line through
+all the marks made so far.  If you have made only two marks, then
+<b>O</b> will draw a line connecting them.
+
+<p>
+
+<dt><b>P</b> <dd><em>Paint.</em>
+Does a floodfill.
+
+<p>
+
+<dt><b>R</b> <dd><em>Ring.</em>
+<b>R</b> acts just like Disc, except it draws a
+hollow ellipse that fits in the box made by two marks.
+
+<p>
+
+<dt><b>S</b> <dd><em>Set Color.</em>
+<b>S</b> toggles you to the editor menu
+screen and asks the number of the state you want to color.  You can
+set the state to a decimal value just by typing the number, to a
+hexadecimal value by preceding it with "<tt>0x</tt>," or to a binary
+value by preceding it with "<tt>0b</tt>." The specifications
+<tt>163</tt>," "<tt>0xA3</tt>," and "<tt>0b10100011</tt>" are equivalent.  Once
+<b>S</b> is set, the cross-shaped cursor is the color of <b>S</b>.
+For a state between 0 and 9, you can set that color state without
+leaving the graphics screen simply by pushing the appropriate number
+key.  Another way of setting the state without going to the menu is to
+use the <b>G</b> key.
+
+<p>
+
+<dt><b>U</b> <dd><em>Undo last mark.</em>
+Erases the last mark made.
+
+<p>
+
+<dt><b>W</b> <dd><em>Wipe all marks.</em>
+Removes all marks.
+
+<p>
+
+<dt><b>X</b> <dd><em>Make mark.</em>
+Pressing <b>X</b> makes a temporary mark where the cursor
+is.  These temporary marks are used by the <b>B</b>, <b>C</b>, <b>D</b>,
+<b>F</b>, <b>O</b>, and <b>R</b> commands.  The editor draws temporary
+lines connecting the successive marks.  The editor is configured to
+remember as many as twenty marks at a time.  If you should need a
+pattern with more than twenty marks you can draw it in several pieces.
+
+<p>
+
+<dt>Number keys <b>0</b>-<b>9</b> <dd><em>Cursor State.</em>
+This is a way
+of changing the cursor color-state without leaving the graphics
+screen.  If you need a state with value higher than 9 you have to use
+<b>S</b> and enter the number on the edit menu screen.
+</dl>
+
+<h3><a name="t8">Command Line Arguments</a></h3>
+
+JC is usually invoked just by typing its name. For special
+applications, arguments can be supplied on the command line that
+invokes the simulator. The general form of the simulator command line
+is:
+
+<p>
+
+<tt> JC </tt>[<em>rulefile</em> [<em>patternfile</em> [<em>colorpalettefile</em>]]]
+ <em>options</em>
+
+<p>
+
+where options are chosen from the following table.
+
+<p>
+
+<center>
+<table border>
+<tr><th>Argument <th>Function</tr>
+<tr><td><tt>-B</tt><td>Batch (non-interactive) mode.  Go directly to graphics
+           screen and run. </tr>
+<tr><td><tt>-C</tt><td>Use CGA screen regardless of hardware available. </tr>
+<tr><td><tt>-D<em>n</em></tt><td>Deterministic random seed <em>n</em>. </tr>
+<tr><td><tt>-G<em>n</em></tt><td>Stop after <em>n</em> generations. </tr>
+<tr><td><tt>-M</tt><td>Use monochrome characters on text screen. </tr>
+<tr><td><tt>-P<em>c</em></tt><td>CGA only.  Set background color to <em>c</em>, 0-15. </tr>
+<tr><td><tt>-P<em>r,g,b</em></tt><td>VGA only.  Set background color to <em>r,g,b</em>:
+                      0-255. </tr>
+<tr><td><tt>-R<em>file</em></tt><td>Dump regression test to <em>file</em>. </tr>
+<tr><td><tt>-T<em>n</em></tt><td>Stop after <em>n</em> seconds. </tr>
+<tr><td><tt>-U</tt><td>Print help message. </tr>
+<tr><td><tt>-V</tt><td>Use VGA screen regardless of hardware available.</tr>
+</table>
+</center>
+
+<p>
+
+You may name an initial rule, pattern, and colorpalette by specifying
+the <em>rulefile</em>, <em>patternfile</em>, and <em>colorpalettefile</em>
+arguments.  You must specify a rule in order to specify a pattern
+file.  In some cases, just a rule is enough, as in <tt>ca bob -b</tt>.
+
+<p>
+
+To run the rule TimeTun on pattern BillBord for 200 generations
+without user interaction, you'd specify:
+
+<p>
+
+<pre>
+ca  timetun billbord -g200  -b
+</pre>
+
+<p>
+
+You can also specify colorpalettes, as in:
+
+<p>
+
+<pre>
+ca faders faderegg autocad -b
+</pre>
+
+<h3><a name="bottom" href="ruledef.html">Defining Rules</a></h3>
+
+<h3><a href="patterns.html">Pattern Design</a></h3>
+
+<h3><a href="rules.html">The JC Rules</a></h3>
+
+<p>
+<hr>
+<a href="ruledef.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="chap2.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

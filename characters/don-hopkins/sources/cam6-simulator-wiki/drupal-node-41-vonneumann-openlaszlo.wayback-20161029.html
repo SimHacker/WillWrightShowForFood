@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <title>John von Neumann&#039;s 29 state Cellular Automata Implemented in OpenLaszlo | Don Hopkins</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="/drupal/node/40" />
+
+<link rel="up" href="/drupal/laszlo" />
+
+<link rel="next" href="/drupal/node/42" />
+
+<link rel="shortcut icon" href="/drupal/misc/favicon.ico" type="image/x-icon" />
+  <style type="text/css" media="all">@import "/drupal/modules/aggregator/aggregator.css";</style>
+<style type="text/css" media="all">@import "/drupal/modules/book/book.css";</style>
+<style type="text/css" media="all">@import "/drupal/modules/forum/forum.css";</style>
+<style type="text/css" media="all">@import "/drupal/modules/node/node.css";</style>
+<style type="text/css" media="all">@import "/drupal/modules/system/defaults.css";</style>
+<style type="text/css" media="all">@import "/drupal/modules/system/system.css";</style>
+<style type="text/css" media="all">@import "/drupal/modules/user/user.css";</style>
+<style type="text/css" media="all">@import "/drupal/modules/comment/comment.css";</style>
+<style type="text/css" media="all">@import "/drupal/themes/bluemarine/style.css";</style>
+    <script type="text/javascript"> </script>
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" id="header">
+  <tr>
+    <td id="logo">
+            <h1 class='site-name'><a href="/drupal/" title="Home">Don Hopkins</a></h1>      <div class='site-slogan'>Don Hopkins' Web Site</div>    </td>
+    <td id="menu">
+            <ul class="links" id="navlist"><li class="first menu-1-1-1-active"><a href="/drupal/taxonomy_menu/4" class="menu-1-1-1-active">topics</a></li>
+<li class="menu-1-2-1"><a href="/drupal/blog" title="Blogs on this site." class="menu-1-2-1">blogs</a></li>
+<li class="menu-1-3-1"><a href="/drupal/tracker" class="menu-1-3-1">Recent posts</a></li>
+<li class="last menu-1-4-1"><a href="/drupal/opml_taxonomy.opml" title="OPML Site Map" class="menu-1-4-1">opml</a></li>
+</ul>      <form action="/drupal/search/node"  method="post" id="search-theme-form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search_theme_form_keys" id="edit-search-theme-form-keys"  size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form"  />
+</div>
+</div></form>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><div></div></td>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" id="content">
+  <tr>
+    <td id="sidebar-left">
+        <div class="block block-book" id="block-book-0">
+    <h2 class="title">OpenLaszlo Stuff</h2>
+    <div class="content"><ul class="menu"><li class="leaf"><a href="/drupal/node/50">OpenLaszlo Discussion Forum</a></li><li class="leaf"><a href="/drupal/node/39">Laszlo Mail</a></li><li class="leaf"><a href="/drupal/node/40">Laszlo Pie Menus</a></li><li class="leaf"><a href="/drupal/node/41" class="active">John von Neumann&#039;s 29 state Cellular Automata Implemented in OpenLaszlo</a></li><li class="leaf"><a href="/drupal/node/42">Laszlo Koosh Ball Generator</a></li><li class="leaf"><a href="/drupal/node/43">Sims Content Catalog in Laszlo and Python</a></li><li class="leaf"><a href="/drupal/node/44">Laszlo Database Interface</a></li><li class="leaf"><a href="/drupal/node/45">Laszlo OPML Viewer/Editor</a></li><li class="leaf"><a href="/drupal/node/46">NutritionQuest Personalized Surveys in Laszlo</a></li><li class="leaf"><a href="/drupal/node/47">Pandora Music Discovery Laszlo Application</a></li><li class="leaf"><a href="/drupal/node/48">BlogBlox Free Laszlo Applications for Personal Blogs</a></li><li class="leaf"><a href="/drupal/node/69">Constraints and Prototypes in Garnet and Laszlo</a></li><li class="leaf"><a href="/drupal/node/64">AJAX is old NeWS, Laszlo is non-toxic AJAX</a></li><li class="leaf"><a href="/drupal/node/65">Flex is an Expensive Knock-Off of Laszlo, but OpenLaszlo is Free</a></li><li class="leaf"><a href="/drupal/node/63">OpenLaszlo is more Portable and Prettier than AJAX</a></li><li class="leaf"><a href="/drupal/node/67">OpenLaszlo Makes Full Blown AJAX Apps on Flash</a></li><li class="leaf"><a href="/drupal/node/66">AJAX Special Hazard Precautions</a></li></ul></div>
+ </div>
+  <div class="block block-user" id="block-user-1">
+    <h2 class="title">Navigation</h2>
+    <div class="content">
+<ul class="menu">
+<li class="expanded"><a href="/drupal/taxonomy_menu/4">topics</a>
+<ul class="menu">
+<li class="expanded"><a href="/drupal/taxonomy_menu/4/49">Software</a>
+<ul class="menu">
+<li class="collapsed"><a href="/drupal/taxonomy_menu/4/49/14">Pie Menus</a></li>
+<li class="collapsed"><a href="/drupal/taxonomy_menu/4/49/3">The Sims</a></li>
+<li class="expanded"><a href="/drupal/taxonomy_menu/4/49/25">Languages</a>
+<ul class="menu">
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/41">C</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/36">C++</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/29">Forth</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/40">Java</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/38">JavaScript</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/26">Lisp</a></li>
+<li class="collapsed"><a href="/drupal/taxonomy_menu/4/49/25/32">Markup</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/42">MaxScript</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/31">MockLisp</a></li>
+<li class="collapsed"><a href="/drupal/taxonomy_menu/4/49/25/15">OpenLaszlo</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/51">PHP</a></li>
+<li class="collapsed"><a href="/drupal/taxonomy_menu/4/49/25/30">PostScript</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/27">Python</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/33">ScriptX</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/45">TCL</a></li>
+<li class="expanded"><a href="/drupal/taxonomy_menu/4/49/25/37">Visual</a>
+<ul class="menu">
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/37/34">Bounce</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/37/39">Cellular Automata</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/37/46">Cycling74 Max</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/37/35">SimAntics</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/25/37/44">UserTalk</a></li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/57">Music</a></li>
+<li class="collapsed"><a href="/drupal/taxonomy_menu/4/49/63">OLPC</a></li>
+<li class="collapsed"><a href="/drupal/taxonomy_menu/4/49/58">Servers</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/66">SimCity</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/54">Speech</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/48">Live Demos</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/49/50">Downloadable Software</a></li>
+
+</ul>
+</li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/47">Politics</a></li>
+<li class="leaf"><a href="/drupal/taxonomy_menu/4/24">Funny</a></li>
+
+</ul>
+</li>
+<li class="leaf"><a href="/drupal/blog" title="Blogs on this site.">blogs</a></li>
+<li class="leaf"><a href="/drupal/tracker">Recent posts</a></li>
+<li class="leaf"><a href="/drupal/opml_taxonomy.opml" title="OPML Site Map">opml</a></li>
+
+</ul>
+</div>
+ </div>
+  <div class="block block-node" id="block-node-0">
+    <h2 class="title">Syndicate</h2>
+    <div class="content"><a href="/drupal/node/feed" class="feed-icon"><img src="/drupal/misc/feed.png" alt="Syndicate content" title="Syndicate content" width="16" height="16" /></a></div>
+ </div>
+  <div class="block block-user" id="block-user-0">
+    <h2 class="title">User login</h2>
+    <div class="content"><form action="/drupal/node/41?destination=node%2F41"  method="post" id="user-login-form">
+<div><div class="form-item">
+ <label for="edit-name">Username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name"  size="15" value="" class="form-text required" />
+</div>
+<div class="form-item">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass"  maxlength="60"  size="15"  class="form-text required" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Log in"  class="form-submit" />
+<div class="item-list"><ul><li><a href="/drupal/user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div><input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block"  />
+
+</div></form>
+</div>
+ </div>
+  <div class="block block-block" id="block-block-6">
+    <h2 class="title">ITS.Svensson.org</h2>
+    <div class="content"><pre style="font-size: 9pt; background-color:#000000; color:#00ff00; link-color:#00ff00">SV ITS.1648. PWORD.2660.
+TTY 11
+1. Lusers, Fair Share = 1%
+*<blink><a href="/drupal/telnet:its.svensson.org">_</a></blink></pre></div>
+ </div>
+  <div class="block block-block" id="block-block-1">
+    <h2 class="title">Bongo</h2>
+    <div class="content"><pre style="background-color:#000000; color:#00ff00; font-size:16pt"> (\
+  \\
+   \\___
+    )   )
+   (  <span onmouseover="this.innerHTML = '-'" onmouseout="this.innerHTML='@'">@</span> <span onmouseover="this.innerHTML = '-'" onmouseout="this.innerHTML='@'">@</span>
+   /  ___)
+  /   /UU</pre></div>
+ </div>
+  <div class="block block-block" id="block-block-4">
+    <h2 class="title">Technorati</h2>
+    <div class="content"><div style="width:170px">
+<b><a href="http://www.DonHopkins.com">www.DonHopkins.com</a>:</b><br/>
+<script type="text/javascript" src="http://technorati.com/embed/aqhcfnqsyj.js"> </script>
+<hr/>
+<b><a href="http://www.DonHopkins.com/drupal">www.DonHopkins.com/drupal</a>:</b><br/>
+<script type="text/javascript" src="http://embed.technorati.com/embed/vmy9e8ykq.js"></script>
+</div>
+
+
+</div>
+ </div>
+    </td>    <td valign="top">
+            <div id="main">
+        <div class="breadcrumb"><a href="/drupal/">Home</a> » <a href="/drupal/taxonomy_menu/4">topics</a> » <a href="/drupal/taxonomy_menu/4/49">Software</a> » <a href="/drupal/taxonomy_menu/4/49/25">Languages</a> » <a href="/drupal/taxonomy_menu/4/49/25/37">Visual</a> » <a href="/drupal/taxonomy_menu/4/49/25/37/39">Cellular Automata</a></div>        <h1 class="title">John von Neumann&#039;s 29 state Cellular Automata Implemented in OpenLaszlo</h1>
+        <div class="tabs"></div>
+                          <div class="node">
+            <span class="submitted">Submitted by dhopkins on Sun, 2005-09-18 04:12.</span>
+    <span class="taxonomy"><ul class="links inline"><li class="first taxonomy_term_39"><a href="/drupal/taxonomy/term/39" rel="tag" title="" class="taxonomy_term_39">Cellular Automata</a></li>
+<li class="last taxonomy_term_48"><a href="/drupal/taxonomy/term/48" rel="tag" title="Live demonstrations of software, that you can run online. " class="taxonomy_term_48">Live Demos</a></li>
+</ul></span>
+    <div class="content"><p><a href="http://www.donhopkins.com/lzxnet/my-apps/vonNeumann/vonNeumann.lzx" target="_new"><img src="http://www.DonHopkins.com/home/images/vonNeumann_real_time_crossing.jpg" border="0" width="470" height="522" align="right"/></a>For fun, and to learn OpenLaszlo, I implemented the classic 29 state self reproducing cellular automata, invented by John von Neumann.</p>
+<p>The JavaScript and XML code is written with no thought to efficiency, just conceptual clarity and convenience of implementation. It can't run a lot of cells at once, but at least it's slow enough to watch it compute. Don't worry: there's not space for it to reproduce!</p>
+<p>I've configured it with several interesting initial conditions, including several different approaches to signal crossing, and an exclusive-or gate.</p>
+<p>It uses pie menus for editing the grid of cells.</p>
+<p><a href="http://www.donhopkins.com/openlaszlo/my-apps/vonNeumann/vonNeumann.lzx" target="_new">Laszlo von Neumann Cellular Automata Demo</a></p>
+<p><a href="http://www.donhopkins.com/openlaszlo/my-apps/vonNeumann/vonNeumann.lzx?lzt=source" target="_new">Laszlo von Neumann Cellular Automata Source Code in Laszlo</a></p><br clear="both"/>
+
+<div class="book-navigation"><div class="page-links clear-block"><a href="/drupal/node/40" class="page-previous" title="Go to previous page">‹ Laszlo Pie Menus</a><a href="/drupal/laszlo" class="page-up" title="Go to parent page">up</a><a href="/drupal/node/42" class="page-next" title="Go to next page">Laszlo Koosh Ball Generator ›</a></div></div></div>
+    <div class="links">&raquo; <ul class="links inline"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="/drupal/user/login?destination=comment/reply/41%2523comment_form">Login</a> to post comments</span></li>
+</ul></div>  </div>
+<div id="comments"></div>              </div>
+    </td>
+      </tr>
+</table>
+
+<div id="footer">
+  Copyright (C) 2005 by Don Hopkins.
+</div>
+</body>
+</html>

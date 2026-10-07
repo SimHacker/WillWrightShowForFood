@@ -49,9 +49,12 @@ sources:
     - { title: "rudyrucker.com (blog / home)", url: "https://www.rudyrucker.com/" }
     - { title: "Wikipedia — Rudy Rucker", url: "https://en.wikipedia.org/wiki/Rudy_Rucker" }
     - { title: "CelLab (free, fourmilab)", url: "https://www.fourmilab.ch/cellab/" }
+    - { title: "CelLab manual, Web edition 1997 (rudyrucker.com), mirrored and indexed", url: "https://www.rudyrucker.com/oldhomepage/celdoc/cellab.html", cached: sources/cellab-celdoc/README.md }
     - { title: "Rucker biography (his own)", url: "https://rudyrucker.com/oldhomepage/biography.htm" }
   media:
     - { title: "CA Lab demo (Belousov–Zhabotinsky on 3D texture; 1-800 plug at end)", url: "https://www.youtube.com/watch?v=lyZUzakG3bE" }
+  papers:
+    - { title: "Rudy Rucker, 'Symbiotic Programming: Crossbreeding Cellular Automaton Rules on the CAM-6', Complex Systems 3 (1989) 79–90", url: "https://content.wolfram.com/sites/13/2018/02/03-1-6.pdf", cached: sources/wolfram-03-1-6.pdf }
   books: ["Software (1982)", "Wetware (1988)", "Freeware (1997)", "Realware (2000)", "Infinity and the Mind", "The Fourth Dimension", "Mind Tools", "The Hacker and the Ants"]
   provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/rudy-rucker.yml
 

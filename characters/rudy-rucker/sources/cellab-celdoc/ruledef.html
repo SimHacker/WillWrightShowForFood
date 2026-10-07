@@ -1,0 +1,245 @@
+<html>
+
+<head>
+<title>Defining JC Rules</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+
+<h1><a name="3-CA-ruledef">Defining JC Rules</a></h1>
+
+Each cell in the automaton has eight bits of "state" information.
+The eight state bits
+are combined to get a number between 0 and 255.
+It is important to thoroughly understand the "binary" or "base
+two" system by which this is done.  The eight bits in a binary number
+like <b><tt>11010010</tt></b> are named and weighted from right to left as
+follows:
+
+<p>
+
+<center>
+<table border>
+<tr><th align=left>Bit number<td align=center> 7 <td align=center> 6 
+<td align=center> 5 <td align=center> 4 <td align=center> 3 
+<td align=center> 2 <td align=center> 1 <td align=center> 0 </tr>
+<tr><th align=left>Value<td align=center> 1 <td align=center> 1 
+<td align=center> 0 <td align=center> 1 <td align=center> 0 
+<td align=center> 0 <td align=center> 1 <td align=center> 0</tr>
+<tr><th align=left rowspan=2>Weight<br>=
+ <td align=center rowspan=2> 2<sup>7</sup><br>128
+ <td align=center rowspan=2> 2<sup>6</sup><br>64
+ <td align=center rowspan=2> 2<sup>5</sup><br>32
+ <td align=center rowspan=2> 2<sup>4</sup><br>16
+ <td align=center rowspan=2> 2<sup>3</sup><br>8
+ <td align=center rowspan=2> 2<sup>2</sup><br>4
+ <td align=center rowspan=2> 2<sup>1</sup><br>2
+ <td align=center rowspan=2> 2<sup>0</sup><br>1
+</tr>
+</table>
+</center>
+
+<p>
+
+So <b><tt>11010010</tt></b> can be viewed as the number 128+64+16+2=210. Another way
+of characterizing this number would be to say that it has Bits #1, #4,
+#6, and #7 turned ON, but it has Bits #0, #2, #3, and #5 turned OFF.
+We often think of the cellular automaton as having eight planes laid
+over each other, and a cell's state bits as specifying the cell's
+one-bit states in each of the eight planes.  The zero, bottom, or low
+plane is the plane that holds Bit #0.  Note that Bit #0 counts as
+one in forming the number value of an eight bit state pattern, that
+Bit #1 counts as two, Bit #3 counts as four, and so on.  This is
+sometimes a cause of confusion.
+
+<p>
+
+So each cell has a state between binary <b><tt>00000000</tt></b> and
+<b><tt>11111111</tt></b> (decimal 0 and 255).  For a fully general cellular
+automaton, we might expect that at each update each cell can see all
+eight bits of each of its eight nearest neighbors.  (Rug, for
+instance, is a rule of this nature.) But if we were to implement such
+generality for every rule, JC would run too slowly.  Instead, most of
+the rule definitions in JC require only that each cell be able to see
+the low bit #0 of its nearest eight neighbors.  At each generation,
+each JC cell has, in other words, sixteen bits of information to base
+its new state on: it has the eight bits of its own present state, and
+it has 8 bits of information about its neighbors, one bit (the low #0
+bit) from each.
+
+<p>
+
+In talking about a cell's neighbors,
+we think of a general cell,
+designated by <b>*</b>, as being surrounded by eight adjacent cells, named
+by the points of the compass.
+
+<p>
+
+<center>
+<table border cellpadding=4>
+<tr><td width="33%" align=center><tt>NW</tt><td width="33%" align=center><tt>N</tt><td width="33%" align=center><tt>NE</tt>
+<tr><td align=center><tt>W</tt><td align=center><b>*</b><td align=center><tt>E</tt>
+<tr><td align=center><tt>SW</tt><td align=center><tt>S</tt><td align=center><tt>SE</tt>
+</table>
+</center>
+
+<p>
+
+The eight bits of a cell's own state are called <i>OldState</i>, and the
+eight individual bits of the cell's neighbors are called <i>NW</i>, <i>N</i>, <i>NE</i>, <i>E</i>,
+<i>SE</i>, <i>S</i>, <i>SW</i>, and <i>W</i> respectively. The cell's new state is called <i>JCRule</i>.
+Defining a cellular automaton in JC involves specifying some program,
+function, or lookup table <i>f</i> for computing the output value for all 64K
+possible sixteen-bit inputs to the equation:
+
+<p>
+
+<center>
+<i>JCRule</i> = <i>f</i>(<i>OldState, NW, N, NE, E, SE, S, SW, W</i>)
+</center>
+
+<p>
+
+A cell's extra bits of individual state act like an individual memory.
+Keep in mind that a cell can see its own memory bits, but it can't see
+the memory bits of the neighbors. All it can see of its neighbors is
+their lowest bits.
+
+<p>
+
+The collection of all the bits representing the primary state of
+cells, those bits visible to the neighbors, is referred to as Plane 0,
+or the main bit plane.
+The collection of bits which hold the local
+cell state information are referred to as Planes 1, 2, 3, 4, 5, 6, and
+7. These auxiliary bit planes can be configured to provide other
+information to rules, including random bits for rules which include
+randomness, spatial textures for position-dependent rules, and
+temporal phase for time-dependent rules. These uses for Planes 1-7
+compensate for many of the limitations that would normally be imposed
+by restricting communication between cells to a single bit of state.
+
+<p>
+
+Although most of our rules conform to the description just given, it
+is actually possible to create and run other sorts of rules with
+<i>CelLab</i>.  The three other general classes of rules which we allow are
+as follows:
+
+<p>
+
+<ol>
+<li>It is possible to define <em>one-dimensional rules</em>, where only the
+cells on the top line of the screen are updated. These one-dimensional
+modes are invoked by setting a global variable called <tt>WorldType</tt> to one
+of the values 2, 3, 4, 5, 8, or 9.
+
+<p>
+
+<li>It is possible to define <em>averaging rules</em> where the new state
+depends on the low five bits of <i>OldState</i> and on the full sum of the
+states of EveryCell's Neighbor. In <tt>WorldType</tt> 10, one gets the 11 bit
+sum of the eight 8-bit neighbors; and in <tt>WorldType</tt> 11, one looks at
+the 10 bit sum of four 8-bit neighbors.  The RC rulestyle HeatWave is
+an example of an averaging rule which can be realized in JC by using
+<tt>WorldType</tt> 10.
+
+<p>
+
+<li>You can create <em>own code rules</em> by writing any desired function
+which returns a sixteen bit number for each cell.  Own code rules are
+created by writing a <b>.COM</b> format assembly language
+procedure which is used inside JC's inner loop.  These procedures are
+stored as <b>.JCO</b> files.  One uses a <b>.JCO</b> file by
+calling it from within a program which has its <tt>WorldType</tt> set to
+12 or 13.  The JC version of the rule Langton
+is an example of such a
+rule.  The <b>.JCO</b> code of Langton looks at three bits each of
+EveryCell and its North, South, East, and West neighbors.
+</ol>
+
+<p>
+
+A rule of any kind is defined by a function, written in either Pascal,
+C, or BASIC, which, when called with arguments representing the state
+of the cell and its neighbors, calculates and returns the new state of
+the cell.  Rule functions are not, however, used directly while
+simulating the cellular automaton--calling a function for each cell
+on every step would run hundreds to thousands of times more slowly
+than the simulator operates.  The functional definition of the rule
+is, instead, used to define a ruletable which maps the state of the
+cell and its neighbors into the cell's new state.  This ruletable is
+written into a <b>.JC</b>
+file which can be loaded into JC to run
+the automaton it defines.  In order to avoid
+having to tell the JC what directory to find your
+<b>.JC</b> rule files in, you should move all the files for your
+language into the JC directory, as mentioned in §
+\ref{INTRO-install}, and create your new <b>.JC</b> files in
+there.
+
+<p>
+
+You can define rules by writing functions in Pascal, C, or BASIC.
+Let's use the most famous cellular automaton of them all, John Horton
+Conway's original game of Life. William
+Poundstone,
+in <em>The Recursive Universe</em>, gives the rules as follows:
+
+<p>
+
+<blockquote>
+Each square cell has eight neighboring cells. It adjoins four
+cells on its edges and touches four more at the corners. During each
+moment of time, the player or computer counts the number of
+neighboring cells that are on for each and every cell.
+
+<p>
+
+If, for a given cell, the number of on neighbors is exactly
+two, the cell maintains its status quo into the next generation. If
+the cell is on, it stays on; if it is off, it stays off.
+
+<p>
+
+If the number of neighbors is exactly three, the cell will be
+on in the next generation. This is so regardless of the cell's present
+state.
+
+<p>
+
+If the number of on neighbors is zero, one, four, five, six,
+seven, or eight, the cell will be off in the next generation.
+
+There are no other rules.
+</blockquote>
+
+Let's see how to turn that into code. The following subsections
+explain how to define rules in Pascal, C, and
+BASIC.  Because most users are likely to use only one
+language, information is duplicated in these three subsections so that
+each may serve as a self-contained guide to rule definition in its
+respective language. The Pascal subsection is, however, a bit more
+extensive, so even C or BASIC users may wish to skim
+through it. After the individual language subsections, we have a
+subsection on how to create assembly language <b>.JCO</b> files.
+
+<h3><a name="bottom" href="ruledef-pas.html">Defining Rules in Turbo Pascal</a></h3>
+
+<h3><a href="ruledef-c.html">Defining Rules in C</a></h3>
+
+<h3><a href="ruledef-bas.html">Defining Rules in BASIC</a></h3>
+
+<h3><a href="ruledef-own.html">Defining Own Code Evaluators in Assembly Language</a></h3>
+
+<h3><a href="chap3.html#bottom">Back to <cite>The JC Program</cite></a></h3>
+
+<p>
+<hr>
+<a href="ruledef-pas.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="chap3.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

@@ -199,14 +199,99 @@ display model, and I/O architecture:
 | PDP-7 | 18-bit words, accumulator CPU, IOT devices, optional Type 340 vector display | Implemented for the PIXIE corpus; acceptance is old programs behaving from their recovered listings. |
 | Apple ][ | 6502 and 8-bit memory, memory-mapped soft switches, raster video, game-port paddles and buttons | A planned CPU plugin; ROMs come from the user. It is not a PDP-7 variant and should not inherit the PDP-7's IOT assumptions. |
 | PDP-10 / KA10 | 36-bit words, byte pointers, ITS and its own device/channel conventions | A later plugin for ITS; word arithmetic, memory and I/O all need their own contracts. |
+| PDP-1 | 18-bit ones'-complement words, the 18-bit family's ancestor (Supnik: the PDP-4 cut its instruction set in half); Type 30 point-plotting display with light pen, no display processor; sequence break instead of interrupts; FIODEC tape and typewriter | A planned plugin from SIMH's `PDP1/`, which is the oracle and already includes Spacewar! (`PDP1/spacewar1/`). It shares the 18-bit memory representation, but not the PDP-7's IOT set or its 340. Its showcase is L Peter Deutsch's PDP-1 Lisp, with source maps to his own scanned listings and documentation. |
+| Knuth's MIX | A sign and five bytes per word, where a byte may be binary (at least 64 values) or decimal (100); field specs `(L:R)`; registers A, X, I1–I6 and J; 4000 words; block I/O to tapes, disks, card reader and punch, line printer, typewriter and paper tape; timing in units *u* | A planned plugin whose acceptance is TAOCP's own programs giving the results and timings Knuth prints, with GNU MDK (GPL) as oracle only. A correct MIX program must not care what size a byte is, so the plugin runs both byte sizes and the tests run everything twice. Its I/O units are blocks on unit numbers, not IOTs: the line printer goes to the lineprinter viewer, the typewriter to the teletype. |
 | Turing machine | A transition table and a tape, rather than a conventional instruction set | The Turing-machine toolkit already exists separately. It could be a one-transition CPU plugin, or a shared-memory transition engine attached as a device to a von Neumann host; the latter is the cabinet-composition experiment described below. |
 
-These are not four skins over one processor. Their differences are exactly
+**A native CPU: the app is the processor.** A CPU plugin doesn't have to simulate an
+instruction set. The contract is small: `step()`, `read`/`write` of core, a PC, an interrupt line.
+So a TypeScript program can fill it and *be* the processor. It drives the cabinet's devices
+directly through their native APIs (pulses to the 340, characters to the teletype, words into core
+for the display to fetch) with no guest code and no instruction decoding between the intent and
+the device. This is what emulators call high-level emulation (HLE), done on purpose: UltraHLE
+and console BIOS HLE replace guest code with native host routines. Uses:
+
+- **Bespoke CPUs**: a special-purpose machine that never existed, built for one job. The Turing
+  machine row above is one; a cellular-automaton stepper is another.
+- **Prototyping devices** before any guest driver exists: the device's API is exercised by the app
+  directly, and the guest binding comes later.
+- **Reference implementations**: the JavaScript leg of the CAM-off
+  ([DESIGN.md](DESIGN.md#cam-on-the-pdp-7-a-cam-off)) runs as a native CPU beside the PDP-7
+  assembly and the Forth, on the same devices.
+- **Apps that just want the devices**: a 340 drawing tool, or a teletype game, written straight to
+  the device APIs, which still gets the cabinet's run, stop, trace, recording and panels.
+
+**Wrapping engines that already exist.** A native CPU or a device can be a thin wrapper around a
+TypeScript or JavaScript library that was never written for the cabinet. The wrapper supplies
+`step()`, exposes the engine's state as memory or as device properties, and turns its events into
+device events. The engine keeps its own code and tests. In return it gets the cabinet's run, stop,
+single-step, trace, recording, panels and source maps, and it can sit on the same bus beside a
+PDP-7. Candidates, each its own project already:
+
+| Engine | Where it is | As a cabinet |
+|---|---|---|
+| CAM-6 | Don's simulator, `CAM6/javascript/CAM6.js`, rules compiled to lookup tables | a device a PDP-7 drives by IOT, or a native CPU stepping the planes |
+| Micropolis | MicropolisCore, C++ in WASM behind `MicropolisReactive` (`poke`, `peek`, callbacks, `getSnapshot()`) | a native CPU whose core is the city map, with tools and budget as device calls |
+| Turing machine | [`packages/turing`](../turing/SCHEMA.yml), with Minsky's universal machine (AI Memo 33's 7-state, 4-symbol UTM; the [TECO UTM](../tiny-teco/README.md)) | a CPU, or a device on a von Neumann host (below) |
+| Movable Feast Machine | Dave Ackley's robust-first, asynchronous cellular computing ([characters/dave-ackley](../../characters/dave-ackley/)); Andrew Walpole's native TypeScript [MFM-JS](https://github.com/walpolea/MFM-JS) ([mfm.rocks](https://mfm.rocks/)) is the engine to wrap | a native CPU with no global clock: events at random sites, which the cabinet's stepping has to respect rather than force into lockstep |
+| von Neumann's 29-state CA | the universal constructor, ([three kinds of universal constructors](../../characters/john-von-neumann/sources/three-kinds-of-universal-constructors.md)) | a native CPU stepping the 29-state grid, watched building a copy of itself |
+
+The display side is shared. A grid engine draws through the raster framebuffer and cell renderer
+([DESIGN.md](DESIGN.md#raster-a-vanilla-virtual-video-display-and-a-cell-renderer)), so CAM-6, the
+MFM and the 29-state CA all get the same views, recordings and inspector. A wrapper is also what
+Snap! sees: one block library per engine, with commands, reporters and hat blocks over the same
+wrapper ([snap-logo-brian-jens](../../repo-shows/snap-logo-brian-jens/README.md)).
+
+A native CPU still has core when its devices need it, since the 340 fetches its display list
+from memory, and it steps in cycles so device timing stays honest. It has no instruction words,
+so the disassembler has nothing to show. Its source map is the TypeScript itself: from the step
+or device call that wrote a word, to the line of TypeScript that made it.
+
+These are not six skins over one processor. Their differences are exactly
 why the CPU contract stays small: a plugin owns its stepping, word/memory
 semantics, and machine-specific I/O boundary. Shared cabinet services—run,
 stop, inspection, recording, debugger, and host presentation—sit outside that
 boundary. A PDP-10 should not pretend its channels are PDP-7 IOTs; an Apple
-II should not pretend its soft switches are IOT pulses.
+II should not pretend its soft switches are IOT pulses, nor MIX its `IN`/`OUT` blocks.
+
+## CPUs are devices
+
+The cabinet already runs two processors. The Type 340 is a display *processor*: it has its own
+program counter (`dac`), fetches its own instruction stream from core, executes it, branches,
+calls subroutines (`DJS`), and raises interrupts. In the code it is a `Device` with a `tick()`
+and a pair of `fetch`/`store` closures onto core ([type340.ts](src/plugins/type340.ts)). The
+PDP-7 is the other processor. The only things that make it special are that the `Cabinet`
+calls its `step()` first and that it masters the IOT bus.
+
+So the general rule is the one the 340 already follows:
+
+- **A unit** is anything with state that advances on the clock: `tick(cycles)`, `reset()`, and
+  optionally `irq()`.
+- **A processor** is a unit with a program: a PC, an instruction stream it fetches from some
+  memory, a disassembler, and source maps. The PDP-7, the 340, a Turing machine and a MIX are
+  processors. So is a native CPU, whose "program" is TypeScript.
+- **A bus master** is a processor that issues requests to other units: the PDP-7's IOTs, the
+  340's core fetches and pen interrupts, a Snap! script's device blocks.
+- **Memory** is a unit too, shared by whoever is wired to it: the 340 and the PDP-7 share core
+  today.
+
+**Several processors in one cabinet** then follows naturally: a list of units, each ticked at
+its own rate on one clock, wired by memory ports and request ports. The PDP-7, the 340, a CAM-6
+stepping its planes, a raster display with layers and a tile and sprite engine, and a Turing
+engine reading a transition table out of shared memory (§ below) can all sit on one backplane.
+Each one shows up in the debugger with its own PC, trace, disassembler and source maps, which
+the memory panel already does for the 340's display words.
+
+**What changes in the code** is small and can come when the second bus master needs it:
+`Cabinet` keeps `cpu` as the processor that masters the IOT bus, for compatibility, and gains a
+list of processors that `step()` ticks alongside the devices. A `Processor` interface
+(`pc`, `step()`, `read`, `write`, a disassembler) is shared by the PDP-7 and the 340, so the
+panels stop special-casing the 340.
+
+**Snap!, then, can be either.** As a bus master it is a native CPU whose program is blocks,
+driving the 340 and the teletype through their device calls. As a unit controlled by another
+processor it is a device: the PDP-7 sends it requests and Snap! answers them. Same wrapper, two
+wirings, and the cartridge picks which.
 
 ## Devices can travel farther than CPUs
 
@@ -279,7 +364,7 @@ Firmware's discoverable Forth command environment and ITS DDT. It is intended
 to inspect, configure, and operate a room of unlike machines and devices from
 a teletype-like command surface. That control language is above the guest
 instruction sets: commands can be added to the tool without pretending the
-PDP-7, Apple II, PDP-10, or Turing machine share opcodes.
+PDP-7, Apple II, PDP-10, MIX, or Turing machine share opcodes.
 
 The Engelbart mouse and chorded keyset make this tangible. On the PDP-7, a
 mouse can be adapted as a Type 340 light pen, while keyset chords become
@@ -321,7 +406,7 @@ segments, while framebuffer descriptors, cell renderers, tiles, sprites, and
 pens form another display path. These are designs in
 [`DESIGN.md`](DESIGN.md) and [`TODO.md`](TODO.md), not all shipped Cabinet
 features. The CAM6 device, general framebuffer, tile renderer, and sprites
-remain future work; the Apple II and PDP-10 processors are not implemented.
+remain future work; the Apple II, PDP-10 and MIX processors are not implemented.
 
 Forth and turtle graphics show this split in a working machine: the PDP-7
 executes Forth and writes Type 340 display words; the 340 executes that drawing
@@ -347,7 +432,7 @@ Conceptually, the wiring might be:
 
 ```text
 host CPU ───────┐                 ┌── software tape viewer / debugger
-			 ├── shared RAM ───┤
+                ├── shared RAM ───┤
 TM engine ──────┘                 └── framebuffer or vector display
 	│
 	└── start / stop / step / status / interrupt adapter

@@ -1,0 +1,288 @@
+<html>
+
+<head>
+<title>JC Pattern Design</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+
+<h2><a name="3-CA-patdes">JC Pattern Design</a></h2>
+
+A good source of patterns is <i>CelLab</i>'s library of predefined patterns,
+which we list in the first subsection. These patterns can be doctored
+by using the JC screen editor, along with the buffers and the logical
+operations. It is also quite easy to create patterns from scratch by
+using the JC <a href="chap3.html#3-CA-PatternEditor">Pattern Editor Menu</a>.
+
+<p>
+
+The remaining subsections outline a technique by which <i>CelLab</i> can be
+used as a tool for professional graphic design. We provide you with
+two special utilities so that <i>CelLab</i> image processing can be inserted
+as an intermediate step between the creating of an image in
+AutoCAD or AutoSketch and the printing out of the image on
+a PostScript® printer. The subsections tell how to feed an
+AutoCAD or AutoSketch image to <i>CelLab</i>, and how to turn the
+resulting <i>CelLab</i> image into PostScript. Please write us
+as soon as you are able to sell a client an image created in this way;
+we'd like to have a record of such an historic first.
+
+<h3><a name="t1">Predefined Patterns</a></h3>
+
+A number of predefined patterns are supplied with <i>CelLab</i>.  All are in
+compressed format.  To see the list, type <b>P</b> <b>Enter</b> in JC or type
+<tt>dir *.jcp</tt> in DOS.
+
+<p>
+
+You can use these patterns "right out of the box," and you can also
+compose other patterns by loading them, storing them in the
+simulator's buffers, and then using the operations on bitmaps to
+perform logical operations to combine the patterns. Note that the
+arrow keys actually scroll the bitmap, not just the screen, so you can
+load a pattern, scroll it to where you want it on the screen, save it
+in a buffer, then load another pattern and combine it with the shifted
+pattern by performing a logical OR between the bit plane containing
+the second pattern and the buffer holding the shifted version of the
+first.
+
+<p>
+
+Since the scroll keys truncate material scrolling off the screen when
+used in open mode, you can crop patterns by flipping to open world
+mode with <b><a href="chap3.html#F3">F3</a></b> (or with <b><a href="chap3.html#Alt-F8">Alt-F8</a></b>), scroll to delete unwanted material,
+then flip back to torus mode if that's the mode you'll be using for
+the simulation.
+
+<h3><a name="t2">Converting AutoCAD Images to CelLab Patterns</a></h3>
+
+AutoCAD provides a large collection of facilities for editing
+graphical images.  <i>CelLab</i> users with access to AutoCAD may take
+patterns out of AutoCAD and feed them to <i>CelLab</i>.  CAD/CAM indeed!  By
+far the easiest way to get patterns from AutoCAD into the <i>CelLab</i> is
+printer plotting the AutoCAD image, then converting the plot into a
+<i>CelLab</i> pattern with a utility program called <b>PRPJCP</b>
+furnished with <i>CelLab</i>.  This technique was used to create the
+<b>BILLBORD</b>, <b>BIGLOGO</b>, <b>GRID</b>,
+<b>STARTREK</b>, and <b>TEAPOT</b> patterns supplied with
+<i>CelLab</i>.  Converting a printer plot into a pattern faithfully
+transmits the image but does not allow precise positioning of
+individual cells.  Before we can make a printer plot into a pattern we
+need a suitable printer plot.  Configure AutoCAD to use the Autodesk
+Device Interface<sup>tm</sup> Printer Plotter driver, and answer the configuration
+prompts as follows (prompts not listed may be answered as you like):
+
+<p>
+
+<pre>
+Specify plot size in millimeters? &lt;N&gt; N
+Maximum horizontal (X) plot size in inches &lt;&gt;: 320
+Printer dots per inches in the
+   horizontal (X) direction &lt;&gt;: 1
+Maximum vertical (Y) plot size in inches &lt;&gt;: 200
+Printer dots per inches in the
+   vertical (Y) direction &lt;&gt;: 1
+
+Output format, 0 to 2 &lt;&gt;: 0
+Does the printer plotter support color? &lt;&gt; Y
+
+ ...calibration...see below
+
+Enter the Size or Width,Height in Inches) &lt;&gt;: 320,200
+</pre>
+
+<p>
+
+If you use the default "calibration" for aspect ratio, squares in
+the AutoCAD drawing will be converted to rectangles taller than they
+are wide when mapped to the VGA or CGA bitmap (the distortion is
+usually more extreme on the CGA, depending on how the monitor is
+adjusted).  You can calibrate the printer plotter driver to compensate
+for this.  First use the default calibration and plot a square that
+just about fills the screen.  Use <b>PRPJCP</b> to make a pattern
+from the plot and load it.  Measure the pattern on the screen and
+enter the actual sizes.  Use the actual height for both the vertical
+and horizontal desired heights.  When you calibrate the driver, you'll
+need to re-enter the response to the:
+
+<p>
+
+<pre>
+Enter the Size or Width,Height in Inches) &lt;&gt;: 320,200
+</pre>
+
+<p>
+
+prompt as indicated. After you've calibrated the driver you will see
+some odd-looking numbers for the sizes if you later reconfigure. Don't
+worry, AutoJCD knows what it's doing.
+
+<p>
+
+Patterns are prepared as AutoCAD drawings. You may specify bitplane
+assignments by setting the AutoCAD color number to the binary value
+you wish to assign to the lower 4 bit planes.
+
+<p>
+
+Since AutoCAD printer plot files output only 4 bits of color
+information, only states 0 through 15 may be set using this program.
+
+<p>
+
+<center>
+<table>
+<pre>
+AutoCAD       Plane Bits
+ Color        3   2   1   0
+
+0 Black       0   0   0   0
+1 Red         0   0   0   1
+2 Yellow      0   0   1   0
+3 Green       0   0   1   1
+4 Cyan        0   1   0   0
+5 Blue        0   1   0   1
+6 Magenta     0   1   1   0
+7 White       0   1   1   1
+8             1   0   0   0
+9             1   0   0   1
+10            1   0   1   0
+11            1   0   1   1
+12            1   1   0   0
+13            1   1   0   1
+14            1   1   1   0
+15            1   1   1   1
+</pre>
+</table>
+</center>
+
+<p>
+
+All other colors are taken modulo 16, with zeroes changed to 7s (not
+terribly useful, but that's how AutoCAD does it). You can also convert
+monochrome printer plot files, but such files may only be used to set
+bits in plane 0.
+
+<p>
+
+Use the <tt>PRPLOT</tt> command to generate a printer plot (.prp) file,
+then convert it to a <i>CelLab</i> pattern file with the command:
+<b>PRPJCP</b> <em>plotname</em> where <em>plotname</em> is the name of the
+AutoCAD-generated printer plot file, with no file type specified.
+<b>PRPJCP</b> reads the printer plot file and emits a <i>CelLab</i>
+pattern named <b>plotname.jcp</b>.  The pattern files generated by
+<b>PRPJCP</b> are in uncompressed format.  If you want to create a
+compressed pattern file from a printer plot, make an uncompressed file
+with <b>PRPJCP</b>, load that file into JC, then save it as a
+compressed file by pressing <b><a href="chap3.html#Ctrl-F4">Ctrl-F4</a></b>.  The default
+pattern-save-mode of JC is compressed.
+
+<h3><a name="t3">Converting AutoSketch Images to CelLab Patterns</a></h3>
+
+AutoSketch printer plots can be converted to <b>.JCP</b> files
+using the same <b>PRPJCP</b> utility that converts AutoCAD images.
+You'll need AutoSketch 2.0--earlier releases don't include the
+ADI®
+printer plotter driver that writes the files <b>PRPJCP</b> reads.
+Configure AutoSketch for the pointing device and display you normally
+use, but use the following dialogue to configure the plotter:
+
+<p>
+
+<pre>
+Select plotter:
+     ...
+3. Autodesk Device Interface Printer
+     ...
+Plotter selection: 3
+Select output format:
+1. Binary file
+     ...
+Output format 1 or 2 &lt;2&gt;: 1
+Specify plot size in millimeters? &lt;N&gt;: N
+Maximum horizontal (X) plot size in inches &lt;11.0&gt;: 3.2
+Printer dots per inch in horizontal (X)
+    direction &lt;100.00&gt;: 100
+Maximum vertical (Y) plot size in inches &lt;8.50&gt;: 2
+Printer dots per inch in vertical (Y)
+    direction &lt;100.0&gt;: 100
+Does the printer support color? &lt;N&gt;: Y
+</pre>
+
+<p>
+
+Use AutoSketch to create the pattern, then make a plot of it by
+selecting Plot Area and entering 3.2 in the "X Plot Size" box and 2
+in the "Y Plot Size" box.  Select "OK", then move and scale the
+resulting plot box to enclose the material you want plotted.  The size
+and shape of the plot box accurately reflects what you'll see on the
+screen in <i>CelLab</i>.  You can assign <i>CelLab</i> state codes 1 through 7 to
+the standard AutoSketch colors by selecting "Pen Info" and assigning
+pen numbers equal to the desired state codes to the colors in your
+drawing.  Finally, make a plot.  This will write a <b>.PRP</b>
+file, on which you run <b>PRPJCP</b>.  The resulting
+<b>.JCP</b> file may be loaded directly into <i>CelLab</i>.
+
+<h3><a name="t4">Converting CelLab Patterns to PostScript</a></h3>
+
+If your computer has a screen dump utility, it is usually possible to
+print a <i>CelLab</i> pattern by pressing <b>Print Screen</b> or
+<b>Shift-Print Screen</b>.  But the results of screen dumps are
+unpredictable and can be difficult to repeat.  For commercial image
+generation it is much better to use <b>Ctrl-F4</b> to save a
+satisfactory pattern to a <b>.JCP</b> file and to then convert the
+<b>.JCP</b> file to PostScript.
+
+<p>
+
+If you have a PostScript printer, you can print patterns by converting
+them to PostScript with the <b>JCPPS</b> utility supplied with
+<i>CelLab</i>.  PostScript files produced by <b>JCPPS</b> may also be
+included in many publishing systems, allowing inclusion of
+illustrations of <i>CelLab</i> screens in documents.  To generate a
+PostScript representation of a pattern, first save the pattern into a
+<b>.JCP</b> file with <b>Ctrl-F4</b>.  You can save the pattern in either
+compressed or uncompressed form.  Exit <i>CelLab</i> to return to DOS, then
+enter the command:
+
+<p>
+
+<tt>jcpps [<em>options</em>] <em>patfile</em></tt>
+
+<p>
+
+where <em>patfile</em> is the name of the pattern file you saved.
+<b>JCPPS.EXE</b> and your <b>.JCP</b> pattern file must be in
+the same directory.  Don't specify the <b>.JCP</b> file type--it
+is added automatically by <b>JCPPS</b>, which places the
+PostScript output in a file with the same name but with file type
+<b>.PS</b>.  You may send the PostScript to your printer or use
+it in other ways as with any PostScript file.  <b>JCPPS</b>
+normally produces a PostScript image that prints in "landscape"
+mode: the horizontal edge of the screen is aligned with the long
+direction of the paper.  This fills the page and provides higher
+resolution, but if you're including the image in a publishing system
+it results in the image standing on its end.  To prevent this, specify
+the "<tt>-P</tt>" option to select "portrait" orientation; the image
+will appear at the bottom of the page with the bottom of the screen
+drawn along the short direction of the paper.
+
+<p>
+
+The output from <b>JCPPS</b> is by default a complete PostScript
+file including a header and <tt>showpage</tt> command to print the image.
+If you set the "<tt>-R</tt>" option <b>JCPPS</b> writes, instead, a
+"raw" PostScript file consisting only of the <tt>image</tt> operator
+that defines the pattern bit map.
+
+<h3><a href="chap3.html#bottom">Back to <cite>The JC Program</cite></a></h3>
+<h3><a href="rules.html">Onward to <cite>The JC Rules</cite></a></h3>
+
+<p>
+<hr>
+<a href="rules.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="ruledef-own.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

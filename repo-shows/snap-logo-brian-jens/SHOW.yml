@@ -44,6 +44,41 @@ episodes:
     what: "The director's cut, delivered whole — Brian gives the 44-minute Karlstrom talk (or longer; no time limit, no editors). Everything ACM's People of ACM interview cut — Chinese food runs, California summers — stays in. Jens introduces again if he likes."
   - id: micropolis-in-snap
     what: "Drive Micropolis + CAM6 cellular automata from Snap! blocks — a city sim and CA rules you reprogram live (from Don's 2018 thread)."
+    design: https://github.com/SimHacker/moollm/blob/main/designs/snap/snap-visual-engines-fundable-goals.md
+  - id: snap-as-front-end
+    what: |
+      Snap! as the visual front end for three engines, each one a block palette with the same
+      shape: commands that poke the engine, reporters that peek at it, hat blocks on its events.
+      Jens on where the extension points are; Brian on what makes each one teachable.
+    threads:
+      micropolis: |
+        The 2018 idea, now buildable. MicropolisCore's `MicropolisReactive` bridge already has
+        `poke` (tools, tax, tiles), `peek`, event callbacks and `getSnapshot()` JSON, which map
+        onto Snap! commands, reporters and hats. Zone a city from blocks, write a tax policy as a
+        script, and open the simulator up as a glass box: kids read and change the rules, not just
+        play them. Design: https://github.com/SimHacker/moollm/blob/main/designs/snap/micropolis-svelte-snap-constraint-bridge.md
+      cam6: |
+        CAM6 rules as blocks. A Toffoli–Margolus rule is a function of a cell's neighbourhood
+        that the rule compiler turns into a lookup table. In Snap! that function is a ring (a
+        first-class procedure), so "compile this rule" is a higher-order block that maps it over
+        every neighbourhood into the table. Forth, then C, then JavaScript, then blocks, and the
+        table stays identical, so it can be checked. Norman Margolus would be a natural visitor
+        for this beat.
+      cabinet: |
+        The emulator cabinet (PDP-7 + Type 340, Mitch Bradley's Forth, Heinz Lemke's PIXIE) as
+        a Snap! library. Blocks to load a cartridge, step and run, read and write core, type at
+        the teletype, and plot what the 340 drew back onto the stage. Turtle graphics run twice:
+        Snap!'s turtle and the PDP-7 Forth turtle on the 340, drawing the same square. The
+        cabinet's "native CPU" plugin points the other way: a Snap! script can be the CPU,
+        driving the 340 and teletype directly through their device blocks with no instruction
+        set in between. Source maps carry over as well, so a block can show the listing line,
+        the scan and the docs for the instruction the PDP-7 just ran.
+      engines_as_cabinets: |
+        Cabinet CPUs and devices can wrap existing TypeScript libraries, so the same palette shape
+        covers CAM-6, Micropolis, the Turing machine with Minsky's universal machine, the Movable
+        Feast Machine (Dave Ackley), and von Neumann's 29-state CA with its universal constructor.
+        Each wrapper brings the cabinet's run, step, trace and recording to Snap!.
+    cabinet_plan: ../../packages/cabinet/TODO.md
   - id: rings-macros-metaprogramming
     what: "Gray rings as visible quote; split/join/define AST; Lisp-family macros (honest partial scorecard); Palm audience Q&A — Brian pedagogy, Jens ship status."
   - id: morphic-heritage

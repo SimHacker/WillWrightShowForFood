@@ -1,0 +1,45 @@
+# SHOW — Rudy Rucker (cellular automata, CelLab, gnarl)
+
+show:
+  id: rudy-rucker
+  title: "A Repo Show with Rudy Rucker — Cellular Automata, CelLab, and Gnarl"
+  type: solo
+  host: Don Hopkins
+  guests: ["Rudy Rucker"]
+  character: characters/rudy-rucker/
+  topic: "A co-designed MOOLLM CA skill from the CelLab catalogue; his CAM-6 rules live; a new CA infomercial; why not 3D; peer review of Palm's Running on Wetware"
+  status: seed
+  format: async_first
+
+why_him:
+  cellab: "Wrote CelLab (RC, and the manual and rule catalogue) with John Walker at Autodesk."
+  cam6: "Bought a CAM-6 for San José State in 1987, learned Forth to run it, and found Brainlife, Votelife and Ranch (Complex Systems 3, 1989)."
+  fiction: "The Ware Tetralogy: boppers, flickercladding, souls as portable code."
+  don_thread: "Long CA correspondence with Don; caught a scan-order-drift bug on the CAM6 wiki."
+
+threads:
+  ca_skill:
+    flagship: true
+    what: "Co-design a MOOLLM cellular-automata skill seeded from the CelLab catalogue: rules by name, Rudy's narration, the CAM book cross-references."
+    seed: ../../characters/rudy-rucker/sources/cellab-celdoc/README.md
+  cam6_rules_live: "Brainlife, Votelife and Ranch from the 1989 paper, on Don's CAM6 and the cabinet's CAM device."
+  infomercial: "A new 'order your cellular automata now' plug, retro treatment."
+  why_not_3d: "Ackley's question; Rudy next to Margolus and Draves; CAM-8 did 3D in 1993."
+  wetware_review: "Rudy peer-reviews Palm's Running on Wetware."
+  gnarl: "Gnarl, between order and chaos, as the theme of a CA-art jam."
+
+format:
+  async_first: true
+  live: optional
+  homeplay: "Pick a CelLab rule, run it, and write one paragraph about what it does, CelLab-style."
+
+ties_to:
+  - ../../characters/rudy-rucker/invitation.md
+  - ../../characters/rudy-rucker/ideas.md
+  - ../../characters/rudy-rucker/sources/README.md
+  - ../../characters/norman-margolus/
+  - ../../characters/dave-ackley/ca-correspondence-story.md
+  - ../../repo-shows/norman-margolus/
+  - ../../packages/cabinet/TODO.md
+
+consent: not_yet_asked

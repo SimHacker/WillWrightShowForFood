@@ -1,0 +1,1123 @@
+<html>
+<head>
+<title>Getting Started</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+<h1>Getting Started</h1>
+
+<h2><a name="t1">What Are Cellular Automata?</a></h2>
+
+Cellular automata are self-generating computer graphics movies.  The
+most important near-term application of cellular automata will be to
+commercial computer graphics; in five years you won't be able to watch
+television for an hour without seeing some kind of CA.  Three other
+key applications of cellular automata will be to simulation of
+biological systems (artificial life), to simulation
+of physical phenomena (heat-flow and turbulence), and to the design of
+massively parallel computers.
+
+<p>
+
+Most of the programs in the Rudy Rucker Cellular Automata Lab are
+two-dimensional cellular automata.  In these programs the computer
+screen is divided up into "cells" which are colored rectangles or
+dots.  Each cell is repeatedly "updated" by changing its old color
+to a new color.  The net effect of the individual updates is that you
+see an ever-evolving sequence of screens.  A graphics program of this
+nature is specifically called a cellular automaton when it is 1)
+parallel, 2) local, and 3) homogeneous.
+
+<p>
+
+(1) <em>Parallelism</em> means that the individual cell updates are
+performed independently of each other.  That is, we think of all of
+the updates being done at once.  (Strictly speaking, your computer
+only updates one cell at a time, but we use a buffer to store the new
+cell values until a whole screen's worth has been computed to refresh
+the display.)
+
+<p>
+
+(2) <em>Locality</em> means that when a cell is updated, its new
+color value is based solely on the old color values of the cell and of
+its nearest neighbors.
+
+<p>
+
+(3) <em>Homogeneity</em> means that each cell is updated according
+to the same rules.  Typically the color values of the cell and of its
+nearest eight neighbors are combined according to some
+logico-algebraic formula, or are used to locate an entry in a preset
+lookup table.
+
+<p>
+
+Cellular automata can act as good models for physical, biological and
+sociological phenomena.  The reason for this is that each person, or
+cell, or small region of space "updates" itself independently
+(parallelism), basing its new state on the appearance of its immediate
+surroundings (locality) and on some generally shared laws of change
+(homogeneity).
+
+<p>
+
+As a simple example of a physical CA, imagine sitting at the edge of a
+swimming pool, stirring the water with your feet.  How quickly the
+pool's surface is updated!  The "computation" is so fast because it is
+parallel: all the water molecules are computing at once.  And how does
+a molecule compute? It reacts to forces from its neighbors (locality),
+in accordance with the laws of physics (homogeneity).
+
+<p>
+<center>
+<img src="figures/fig1.gif" width=480 height=375 alt="">
+<br>
+</center>
+<blockquote>
+<i>The RC Rug rule in Bleachmode.
+Pattern was evolved from blank screen in Nowrap mode, with full
+symmetry broken by a short burst of Jogmode.</i>
+</blockquote>
+<p>
+
+<h2><a name="t2">Overview of the Programs</a></h2>
+
+The package you have purchased consists primarily of two programs for
+displaying cellular automata.  These programs are called RC and JC.
+RC stands for <em>Rudy's Cellular Automata</em>, and JC stands for
+<em>John's Cellular Automata</em>.  RC is by Rudy Rucker, and JC is by John
+Walker.
+
+<p>
+
+RC is an interactive low-resolution CA driver, and JC is a
+programmable high-resolution CA driver.  Loosely speaking, RC is a
+right-brain hands-on program, and JC is a left-brain analytic program.
+Moving back and forth between RC and JC enables you to gain intimate
+knowledge of cellular automata and to begin using them in
+applications.
+
+<p>
+
+RC shows patterns made up of colored text characters, primarily the
+solid block, checkered block, and the half block (whose ASCII codes
+are respectively 219, 176, and 220).  Since this is a textmode
+simulation of pixel-based graphics, RC works on machines which do not
+have graphics cards-indeed, it even runs on generic monochrome
+clones.  When running on more powerful machines, RC adapts to show
+more cells.  Depending on the machine, RC shows anywhere between
+80×25 and 80×100 cells.  On an AT, the speed is about
+6 screen updates a second.  On a 386 the speed approaches or exceeds
+the 30 updates per second of commercial animation.  A broad range of
+realtime keyboard interactions with the RC programs is possible.  With
+a little practice, you can effectively "play" them like a color
+organ.
+
+<p>
+
+Within a limited range, entirely new programs can be defined by you as
+well.  We give you RC in two versions: <b>RC.EXE</b> and
+<b>RCC.COM</b>.  <b>RC.EXE</b> includes a control panel display written in
+C by Joseph Cusick, a recent graduate of San Jose State University.
+<b>RCC.COM</b> is the assembly language core of <b>RC.EXE</b>.
+<b>RCC.COM</b> behaves the same as <b>RC.EXE</b>, except that it does not
+include the control panel display.  The point of having <b>RCC.COM</b>
+is that it is so small (12K) that you can squeeze it onto other disks
+you work with.
+
+<p>
+
+<b>JC.EXE</b> shows cellular automata in 320×200 pixel
+graphics-mode, with eight bits of color per pixel.  These programs
+require a machine with true graphics capability-CGA or EGA will do,
+VGA is better.  The fact that JC uses eight bits of color means that
+when you run it on a VGA monitor you see self-generating computer
+graphics movies in 256 colors (as opposed to the four colors you see
+in CGA).  As JC shows about eight times as many "dots" or cells as
+does RC, it runs a bit more slowly, though not nearly as slowly as one
+might expect.  On an AT, an update rate of 1 screen per second is
+typical.  We include a utility for making RAM movies of JC program
+runs and playing them back at animation speeds.  The most innovative
+feature of JC is that it is programmable in BASIC, Pascal, and
+C.  If you can write a half-page program in any of these languages,
+you can program JC to display any cellular automaton rule you can
+think of.
+
+<p>
+
+The <i>CelLab</i> package includes a variety of files and
+programs to support RC and JC programs, plus two standalone cellular
+automata programs that don't fit the rule formats of RC and JC.  As a
+final bonus, the package includes two three-dimensional cellular
+automaton movies by John Walker.
+
+<p>
+
+<a href="http://www.rudyrucker.com/oldhomepage/">Rudy Rucker</a>,
+the author of thirteen books of
+science-fiction and popular mathematics, is
+Professor of
+<a href="http://www.cs.sjsu.edu/">Mathematics and Computer Science</a> at
+<a href="http://www.sjsu.edu/">San Jose State
+University</a>.  <a href="http://www.fourmilab.ch/">John Walker</a>
+is founder and former
+president of <a href="http://www.autodesk.com/">Autodesk, Inc.</a>
+Autodesk's best-known product is a
+computer-aided design (CAD/CAM) graphics program called AutoCAD.
+
+<h2><a name="1-INTRO-install">Installing and Running</a></h2>
+
+The <i>CelLab</i> software is distributed over the Internet and on various
+bulletin board systems and commercial information utilities in a
+self-extracting archive file named <b>CELLAB.EXE</b>.  The archive
+file is approximately 400K bytes in length; extracted, <i>CelLab</i>
+occupies about one megabyte on your hard drive.  Once you've obtained a
+copy of <b>CELLAB.EXE</b>, you can install the <i>CelLab</i> software in a
+new <b>CELLAB</b> directory in the root directory of a hard disk by
+following the procedures below.
+
+<p>
+
+Let us suppose for purposes of discussion that the hard drive is
+<b>C:</b>.  If you are using a shell or window program, you should
+exit the program and get into DOS. You know you are in DOS when you
+see a prompt that looks something like this:
+
+<p>
+
+<b>C:</b>
+
+<p>
+
+Create a new directory for <i>CelLab</i> with the command:
+
+<p>
+
+<b>mkdir cellab</b>
+
+<p>
+
+and make that the current directory with the command:
+
+<p>
+
+<b>cd cellab</b>
+
+<p>
+
+Now simply execute the archive file as a command.  Here we'll assume
+the downloaded archive file <b>CELLAB.EXE</b> is in a directory called
+<b>DOWNLOAD</b> on drive <b>C:</b>.
+
+<p>
+
+<b>\download\cellab</b>
+
+<p>
+
+Extracting the archive creates three subdirectories: <b>3D</b>,
+<b>JC</b>, and <b>RC</b>.  The <b>JC</b> directory has three subdirectories
+holding rule definitions in Pascal, C, and BASIC, plus assembly
+language evaluators in <b>OWNCODE</b>.  After a typical installation,
+the directory structure will look like this:
+
+<p>
+
+<center>
+<img src="figures/eq-1-2.gif" width=367 height=306 alt="">
+</center>
+
+It is a good idea to copy the subdirectory corresponding to any of the
+computer languages you plan to use into the main <b>JC</b> directory.
+Thus, if you program in Pascal, after installation you should enter
+the command shown below.  C and BASIC users should do the same
+for their languages.
+
+<p>
+
+<b>copy c:\cellab\jc\pascal\*.*  c:\cellab\jc</b>
+
+<p>
+
+Finally, once you're done installing <i>CelLab</i>, you can delete the
+<b>CELLAB.EXE</b> distribution archive.
+
+<p>
+<center>
+<img src="figures/fig2.gif" width=482 height=376 alt="">
+<br>
+<i>The RC Rug rule.  The trail was created by moving the ZeroBlock.</i>
+</center>
+<p>
+
+<h2><a name="t3">Demo of RC</a></h2>
+
+For those new to the world of hacking, a "demo" is a computer
+demonstration of some new hardware or software.  When I first moved to
+Silicon Valley, I used to pronounce it "deemo," and hackers would
+laugh at me.  It's demo with a short "e," just like the beginning of
+"demonstration".
+
+<p>
+
+Boot up your computer and transfer control to the RC directory.  If
+you installed according to the procedure above, you might do this by
+entering <b>cd c:\cellab\rc</b>.  Then execute the RC
+program with the command:
+
+<p>
+
+<b>rc</b>
+
+<p>
+
+RC should now show you the multistate rule called Rug.
+
+<p>
+
+Once RC (or RCC) is running, the keyboard acts as an interactive
+control panel.  <a href="chap2.html#2-RC-key">Pressing various keys</a>
+will affect the screen in
+various ways.  The
+help bar at the bottom of the screen summarizes some information about
+the keys.  The program is case-sensitive, so if your <b>Shift-Lock</b>
+or <b>Caps-Lock</b> is on, most of your keypresses will be
+misinterpreted.  So before going any further,
+
+<p>
+
+MAKE SURE YOUR CAPS-LOCK IS NOT ON!
+
+<p>
+
+If the display looks snowy or fragmented, try pressing <b>m</b> for "mode"
+a few times to cycle through the display options (there are four
+options), as it may be that our program has autodetected the wrong
+choice of display mode for your particular system's combination of
+card and monitor.  An important key to know is <b>q</b> for quit.  See if
+you can quit and restart the program.
+
+<p>
+
+<b>q<br>
+rc</b>
+
+<p>
+
+This should put you back into Rug.  Try giving Rug some random info to
+chew on.  How?  Press the <b>r</b> key to randomize the screen.
+
+<p>
+
+<b>r</b>
+
+<p>
+
+See the black square?  You can take hold of it and drag it around,
+leaving a sort of wake.  How?  Press <b>Shift-0</b> to tell the machine you
+want to move the black "zero" block.  (Use the zero at the top of the
+keyboard, not the numeric pad.)  Then press any arrow key to move the
+square.  The arrow keys may not work if your Num Lock key is on, so
+
+<p>
+
+MAKE SURE YOUR NUM-LOCK IS NOT ON!
+
+<p>
+
+There are actually four little "mask" blocks on the screen: the blank
+BlackBlock, toggled on and off by <b>0</b>; the bright WhiteBlock toggled
+on and off by <b>1</b>; the strobing FlickerBlock toggled on and off by
+<b>2</b>; and the spewing RandomBlock toggled on and off by <b>3</b>.
+Next you might try growing a symmetrical ruglike mandala.  Turn off
+the blocks by pressing <b>0</b>, <b>1</b>, and <b>3</b>.  To get the biggest possible
+image, turn off the help bar by pressing <b>h</b>.  Then turn off the
+screen wrap by pressing <b>w</b>, and then reset the screen to Zero by
+pressing <b>z</b>.
+
+<p>
+
+<b>0<br>
+1<br>
+3<br>
+h<br>
+w<br>
+z</b>
+
+<p>
+
+Watch the mandala grow for awhile.  If you have a CGA monitor, the
+pattern will begin to freeze up.  Press the <b>v</b> key twice to goose it.
+If you'd like to slow the rule down for a bit, press the comma key to
+slow it down.  Pressing the period key speeds it back up.
+
+<p>
+
+<b>v<br>
+v<br>
+,,,<br>
+...</b>
+
+<p>
+
+That should do it.  If you have a color monitor, now try bleaching the
+image black and white by pressing <b>b</b>. To get color back press <b>b</b>
+again.  If you are beginning to lose track of what the keypresses
+stand for, press <b>h</b> to call up a little help bar at the bottom of the
+screen.  If you're really confused, press <b>a</b> to toggle into our
+virtual control panel where the various keypress settings are
+displayed.  Another <b>a</b> press takes you out of the control panel and
+back into the cellular automaton.
+
+<p>
+
+<b>b<br>
+b<br>
+h<br>
+a<br>
+a</b>
+
+<p>
+
+Now try a different style of rule.  Every time you press <b>g</b>, RC
+will Get a new RuleStyle.  RC has five RuleStyles: Rug, Brain, Random,
+Vote, and ASCII.  If you press <b>g</b> in Rug you will get the rule
+Brain.  It may be that your Rug didn't leave enough food on the screen
+to keep Brain going, so you better turn the RandomBlock back on by
+pressing <b>3</b>.
+
+<p>
+
+<b>g<br>
+3</b>
+
+<p>
+
+Brain is a really neat rule closely related to the best known CA rule
+of all, Life.  After you've watched Brain for awhile, you can
+switch to Life by pressing <b>v</b>. Life will come up with a colored echo;
+if you would rather see pure Life, press <b>e</b> to turn the Echo off.
+And now try doubling the number of lines on the screen by pressing
+<b>d</b>. If you tire of Life, you can get back to Brain by pressing
+<b>Shift-V</b>.
+
+<p>
+
+<b>v<br>
+e<br>
+d<br>
+Shift-V</b>
+
+<p>
+
+Now press <b>g</b> to get to the next rule in RC, a rule called
+Random.  What characterizes Random is that every
+time you press <b>n</b> in Random, you will see a new, randomly selected
+rule.  Press <b>n</b> till you find one you really like, and then save that
+rule by pressing <b>a</b> to get into the control panel, pressing <b>r</b> to
+pull down the Rule commands, pressing <b>s</b> for Save, and then typing in
+a name, say <b>FIRST</b>.
+
+<p>
+
+<b>g<br>
+n n n n n n n n n n n n n n n n<br>
+a<br>
+r<br>
+s<br>
+FIRST</b>
+
+<p>
+
+Next you might like to try loading some of the rule tables stored in
+Random.  Press <b>r</b> and then <b>l</b> to see the list of rules you can load.
+Move the highlight to one of them-<b>Rainzha</b>,
+<b>Faders</b>, and <b>Balloons</b> are nice-and press
+<b>Enter</b> to select the rule.  Then press <b>a</b> to see the CA in action.
+
+<p>
+
+<b>r<br>
+l </b><em>Enter<br>
+Use arrow keys to move highlight, then press Enter</em><br>
+<b>a</b>
+
+<p>
+
+If you press <b>g</b> again you'll get into Vote.  Hit
+<b>r</b> a few times until Vote manages to stretch a band across the
+screen.  Now try <b>n</b> to see some cheap mandalas.  Then hit <b>g</b> again
+to get into ASCII.  Randomize ASCII a few times
+and watch how it eats stuff.  Press <b>v</b> a few times to make ASCII cook
+harder.  And then hit <b>g</b> one last time to get back to Rug, and
+remember that <b>q</b> will get you out whenever you're ready.
+
+<p>
+
+<b>r r r r r r<br>
+n n n n n n n n n n n n<br>
+g<br>
+r r r r r r r r r<br>
+v v v<br>
+g</b>
+
+<p>
+
+Welcome to cellular automata!
+
+<p>
+
+By the way, we've also included a completely automatic three-minute
+demo of RC.  To view it, get to the DOS prompt and enter
+
+<p>
+
+<b>rcdemo</b>
+
+<h2><a name="1-INTRO-cademo">Demo of JC</a></h2>
+
+<p>
+<center>
+<img src="figures/fig3.gif" width=640 height=400 alt="">
+<br>
+<i>The TimeTun rule after 195 generations.</i>
+</center>
+<p>
+
+<h2><a name="t4">Why Cellular Automata?  Rudy's Answer</a></h2>
+
+The remarkable thing about CAs is their ability to produce interesting
+and logically deep patterns on the basis of very simply stated
+preconditions.  Just as the Mandelbrot set arises
+from the repeated iteration of the simple equation <i>Z</i> = <i>Z</i>² + <i>C</i>,
+iterating the steps of a CA computation can produce fabulously rich
+output.  A good CA is like an acorn which grows an oaktree, or more
+accurately, a good CA is like the DNA inside the acorn, busily
+orchestrating the protein nanotechnology that builds the tree.
+
+<p>
+
+I feel that science's greatest task in the late twentieth century is
+to build living machines: <em>intelligent artificial
+life</em>, known as <em>a-life</em>
+for short.  In Cambridge, Los Alamos, Silicon Valley and
+beyond, this is the computer scientist's Great Work as surely as the
+building of the Nôtre Dame cathedral on the Ile de France was the
+Great Work of the medieval artisan.
+
+<p>
+
+There are two approaches to the problem of creating <em>a-life</em>: the
+top/down approach, and the bottom/up approach.
+
+<p>
+
+The top/down approach is associated with AI (artificial intelligence),
+the bottom/up with CA (the study of cellular automata).  Both
+approaches are needed for intelligent artificial life, and I predict
+that someday soon chaos theory, neural nets and fractal mathematics
+will provide a bridge between the two.  What a day that will be when
+our machines begin to live and speak and breed-a day like May 10,
+1869, when the final golden spike completed the U.S.
+transcontinental railroad! The study of CAs brings us ever closer to
+the forging of that last golden link in the great chain between bottom
+and beyond.  If all goes well, many of us will see live robot boppers
+on the Moon.
+
+<p>
+
+A heckler might say, "Sure that's fine, but why are CAs needed? Why
+have a bottom/up approach at all? What do mindless colored dots have
+to do with intelligent artificial life?"
+
+<p>
+
+For all humanity's spiritual pretensions, we need matter to live on.
+And CAs can act as the "matter" on which intelligent life can evolve.
+CAs provide a lively, chaotic substrate capable of supporting the most
+diverse emergent behaviors.  Indeed, it is at least possible that
+human life itself is quite literally based on CAs.
+
+<p>
+
+How so?  View a person as wetware: as a protein factory.  The proteins
+flip about like John Holland's genetic programs
+or like A. K. Dewdney's flibs; generating
+hormones, storing memories.  Looking deeper, observe that the
+proteins' nanotech churning is a pattern made up of flows and
+undulations in the potential surfaces of quantum chemistry.  These
+surfaces "smell out" minimal energy configurations by using the fine
+fuzz of physical vacuum noise-far from being like smooth rubber
+sheets, they are like pocked ocean swells in a rainstorm.  The quantum
+noise obeys local rules that are quite mathematical; and these rules
+are in fact very well simulated by CAs.
+
+<p>
+
+Why is it that CAs are so good at simulating physics? Because, just as
+in physics, cellular automaton computations are i) parallel, ii)
+local, and iii) homogeneous.  In both physics and in CAs, i) the world
+is happening in many different places at once, ii) there is no action
+at a distance,
+<a href="footnote.html#F1_1"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+and iii) the laws of nature are the same everywhere.
+
+<p>
+
+Whether or not the physical world really is a cellular automaton, the
+point is that CAs are rich enough that a "biological" world could live
+on them.  We human hackers live on language games on biology on
+chemistry on physics on mathematics on-something very like the
+iterated parallel computations of a CA.  Life needs something to live
+on, intelligence needs something to think on, and it is this seething
+information matrix which CAs can provide.  If AI is the surfer, CA is
+the sea.
+
+<p>
+
+That's why I think cellular automata are interesting: A-life! CAs will
+lead to intelligent artificial life!
+
+<p>
+
+Rudimentary CA a-life already exists in the form of Brain's
+haulers, Vote's oscillators, and such classic Life patterns
+as Gosper's glider gun.
+
+<p>
+
+In the 1970s, Berlenkamp, Conway, and Guy
+proved that putting a lot of these objects together can make a
+universal serial computer, such as a PC.  Any serial computation can
+be done by a CA, and any CA computation can in turn be done by a
+serial computer-in support of this last point, note that all the
+programs on this disk are serial programs written in C, Pascal, BASIC,
+and/or 8086 assembly language.
+
+<p>
+
+Many computations can be done much more rapidly and efficiently by a
+succession of massively parallel CA steps.  And one does best to use
+the CA intrinsically, rather than simply using it as a simulation of
+the old serial mode-emulating an Intel chip by using a galaxy-sized
+array of blocks and glider guns is not the way to go.  No, when we use
+CAs best, we do not use them as limpware animations of circuit
+diagrams.  While behaviors can be found in top/down expert-system
+style by harnessing particular patterns to particular purposes, I
+think by far the more fruitful course is to use the bottom/up
+freestyle surfing CA style summed up in the slogan:
+
+<p>
+
+<center>
+<b>Seek Ye The Gnarl!</b>
+</center>
+
+<p>
+
+New dimensional CA hacks are possible, new and marketable techniques
+of parallel programming are lying around waiting to be found, both in
+the form of individual CA structures and in the form of wholly
+different rules.
+
+<p>
+
+CA structures are labile and breedable in three senses: one can
+collide and interface different local patterns within the framework of
+a fixed CA rule, one can combine globally different CA rules (or ideas
+about them) to produce wholly new ecologies, or one can "gene-splice"
+the logic of successful rules.  Then, like Alexander von Humboldt in
+the Americas, one botanizes and zoologizes and mineralizes, looking
+for whatever artificially alive information structures can be found in
+the new worlds.  As always both top/down and bottom/up approaches are
+viable.  We use bottom/up to find new ecologies and their flora and
+fauna.  We use top/down to seed a given instance of a particular
+ecology with the sort of gene-tailored computer agents we want to
+breed.
+
+<p>
+
+In my own bottom/up searches I begin simply by hoping that my programs
+will display interesting output for a long time.  Then I begin to hope
+that my programs will be robust under varying initial conditions, and
+that they will be reactive in anthropomorphizable ways.  Once the
+program is, at this very rudimentary level, artificially alive, I may
+cast about for applications in some practical domain.
+
+<p>
+
+I think the most productive near-term applications of CAs are to image
+generation and image processing.  A cycle or two of
+Vote, for instance, can be used for easy image
+cleanup, munching down all stray "turd bits".  This technique, known
+as "convolution" in the literature, is used every day by
+NASA's
+massively parallel computer in Beltsville, Maryland, to process
+terabyte arrays of satellite photo data.  Present-day designers of the
+newest commercial paint and graphics packages for the VGA will
+be putting CA rules into their image processor toolboxes.  (Look, for
+instance, at what Border does to Dr. Tim's face.)
+
+<p>
+
+In the area of original image generation, I predict that one of the
+next big commercial computer graphics fads will be CAs.  How about a
+logo that instead of being chrome is matte and luminous, with a smooth
+curved surface made of tiny moving mosaics of light, lightbits that
+form the crawling dirty haulers of Brain or the psychedelic shudder of
+Rug? These are what the expressive "flickercladding" skins of the
+robots look like in my two a-life science fiction novels,
+<em>Software</em>
+and <em>Wetware</em>.
+
+<p>
+
+Many simulation applications exist as well.  The idea is to find a CA
+rule that looks like something you want to model.  If you are lucky
+there will be some common underlying mathematics between the two.  The
+Rug rules, for instance, are difference method
+solutions of the same differential equation, the Laplacian heat
+equation:
+
+<p>
+
+<center>
+<img src="figures/eq-1-1.gif" alt="(d²Q/dx² + d²Q/dy²) = 0" width=168 height=59>
+</center>
+
+<p>
+
+This means, e.g., that a fine-grained Rug rule inside a fixed circular
+boundary set may serve as a viable model of a vibrating drumhead!
+
+<p>
+
+A last current application of CAs is to encryption.
+Either a CA can
+serve as a cheap source of "essentially random" encryption bits, or
+the whole message can be fed to a reversible CA.
+Stephen Wolfram claims actually to have patented the one-dimensional
+rule with Wolfram code #30 as part of an encryption
+scheme.
+<a href="footnote.html#F1_2"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+But to recapitulate, <em>the real reason for studying CAs is to
+promote artificial life</em>.  The most important
+use for cellular automata will be as "universes" or "arenas" in
+which to evolve better fractals, flibs, core-warriors, neural nets and
+expert agents, using gene-splicing, mutation, and our own "divine
+interventions" to achieve a rapid and dramatic evolution in these
+parallel processes.  CA workers need your help in accomplishing the
+manifest destiny of mankind: to pass the torch of life and
+intelligence on to the computer.  There are no more than a few hundred
+active workers in the CA field today
+<a href="footnote.html#F1_3"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+<em>twenty-first century technology will need thousands more!</em>
+
+<h2><a name="t5">Why Cellular Automata?  John's Answer (by John Walker)</a></h2>
+
+Physics is local.  The two great pillars of Twentieth Century science,
+general relativity and quantum mechanics, can be viewed as supplanting
+the mysticism of "action at a distance"
+and "force fields," by such
+mundane, self-evident, and intuitive mechanisms as the Riemann
+curvature tensor, virtual gluons, and the Higgs field.  Both of these
+theories describing the universe in the large and the very small
+(albeit in mathematically incompatible ways), tell us that all the
+complex fabric of events we observe are consequences of individual
+particles locally responding to conditions directly affecting them,
+whether moving along geodesics in curved spacetime or undergoing
+interactions through particle exchange.  Both theories have withstood
+all experimental tests to date, including many thought impossible when
+they were originally propounded.
+
+<p>
+
+A cellular automaton (CA) is a mechanism for modeling systems with
+local interactions.  A cellular automaton is a regular lattice of
+cells with local state, which interact with their neighbors subject to
+a uniform rule which governs all cells.  The neighborhood (the set of
+cells whose state can affect a given cell at one instant) can be
+classified by the dimensionality of the automaton (most
+experimentation is done with one- or two-dimensional automata), and by
+the geometric fashion in which cells are interconnected.
+
+<p>
+
+The rule is the "program" that governs the behavior of the system.
+All cells apply the rule, over and over, and it is the recursive
+application of the rule that leads to the remarkable behavior
+exhibited by many cellular automata.  When experimenting with cellular
+automata, one is primarily engaged in defining new rules which lead to
+interesting or useful behavior.  The programs in <i>CelLab</i>
+are tools for the person engaged in such
+experiments.  Our programs allow you to create a rich set of rules and
+experiment with their behavior without requiring the purchase of
+expensive special-purpose hardware.
+
+<p>
+
+Cellular automata appear to be abstract and devoid of practical
+applications, much as was said of computer graphics
+not long ago.  If you want to model a universe which seems
+to be made up of particles which interact locally, there are two basic
+ways to go about it.  The first is to create a huge array of numbers
+that represents the interacting items, then find the biggest number
+cruncher you can lay your hands on and set it gnawing away at the
+problem.  The supercomputer boom, fueled by applications of this
+approach to weather prediction, computational fluid
+dynamics in the transonic and hypersonic
+regimes, plasma dynamics, and an almost endless list of other
+applications testifies to the effectiveness of this approach.
+
+<p>
+
+But maybe there's another way.  Until recently, cellular automata were
+primarily a theoretical tool.  The price of a cellular
+automaton with uniform edge size increases as the <em>n</em>th power of its
+size, where <em>n</em> is the dimensionality of the cellular automaton.  This
+gets out of hand rapidly, even if you're only working with two
+dimensional cellular automata.  Therefore, although they may be the
+way the universe is really assembled and therefore worthy of study, no
+one would consider building one!
+
+<p>
+
+Hardware realizations of cellular automata,
+such as the CAM-6
+board, have been built.  The CAM-6 is not a true cellular system; it
+emulates one by using a fast RAM array and a look-up table, but it
+permits exploration of a rich set of cellular automata with
+performance adequate to study their behavior in detail.  The CAM-6 is
+a highly effective tool, but it is, at $1,500, an expensive one.  It's
+priced out of the reach of many creative people who should be
+exploring cellular automata.  It was the desire to make cellular
+automata experimentation available at a low price to a large number of
+people that spurred the development of this product.
+
+<p>
+
+For cellular automata need only to find a concrete, compelling
+application to a real-world problem to burst into silicon and totally
+change the way we think about computing.  Consider this: inside the
+computer you're using now are ranks and ranks of RAM chips.  A
+256K×1 static RAM chip has a memory cell consisting of four to
+six transistors, connected in rows and columns to circuitry on the
+periphery of the chip.  Even when the computer is running flat-out,
+you're using precisely one cell at a time.  This is the classic
+bottleneck in the von Neumann computer architecture (John von Neumann
+was very aware of this problem; in fact, he and Stanislaw Ulam
+<em>invented</em> cellular automata precisely as a tool for modeling complex
+systems), which has led to proposals such as Backus' functional
+programming, neural systems, and many other architectural proposals,
+such as SIMD machines, which seem to be more effective in generating
+Ph.D.s than numbers.
+
+<p>
+
+If a two-dimensional cellular automaton with 256K cells were realized
+in silicon, it could compute 262,144 times faster than a serial
+processor accessing data bit-by-bit from a memory array.  Yet,
+engineered for volume production, made in comparable volumes, and
+given time to slide down the learning curve, it need cost no more than
+a RAM chip.  This is the potential of cellular automata.  The beauty
+of two-dimensional cellular automata is that they map perfectly into
+our semiconductor manufacturing technology: they need the things it
+does best as opposed to, say, neural systems where the number of
+connections exceeds the capability of two layers of metal.
+
+<p>
+
+If there is merit in Edward Fredkin's suggestion
+that the fine-grain structure of the universe is really a cellular
+automaton, then cellular automata machines will play the role of
+particle accelerators in exploring this level of reality.
+
+<p>
+
+Some of the brightest minds of our century have been involved with
+cellular automata because they comprehended what cellular automata can
+do.  John von Neumann, Stanislaw Ulam, John Horton Conway,
+Stephen Wolfram, and Edward Fredkin do not
+spend their time on nonsense.  With the Rudy Rucker <i>CelLab</i>,
+you can begin to explore the potential that attracted those
+men to create and research this new way to compute.  And perhaps you
+will discover something that will add your name to the list.
+
+<p>
+
+There's plenty to discover.  Rudy's semitotalistic 16-state RC program
+permits you to create 16<sup>16×9</sup> different rules for cellular
+automata.  This is a number slightly larger than 10<sup>176</sup>.  My more
+general 256-state JC program lets you program 256<sup>2<sup>16</sup></sup> distinct CA
+rules, which is a number larger than 10<sup>157,826</sup>.  These numbers are
+"effectively infinite".  Roughly 10<sup>17</sup> seconds are thought to have
+elapsed since the big bang ushered in the universe.  If you had been
+around since then, creating, testing, and evaluating one rule per
+second, you still wouldn't have made a dent in this number, anymore
+than a buck makes a dent in a trillion dollars.  Take away one dollar
+and you still have about a trillion.  Even with enough time, you'd
+have a lot of trouble writing down the results of your exhaustive
+search for rules, as the universe is believed only to have on the
+order of 10<sup>80</sup> particles in it, so you'd run out of places to make
+notes even if you turned the entire universe into a cosmic
+all-encompassing Post-it® note.  If the still-unconfirmed Grand Unified
+Theories are correct, by the time 10<sup>40</sup> seconds have passed, more than
+half of the protons will have evaporated into little poofs of energy
+and leptons, taking with them the fruits of your labors, and leaving
+what's left of you with 10<sup>157,826</sup> bottles of beer still on the wall.
+
+<p>
+
+So get started, people!  The human mind works a lot better than blind
+search (one imagines a middle manager reporting, "Nothing much 
+yet-we need more monkeys, more typewriters.").  <i>CelLab</i> unleashes your
+creativity in a virtually infinite domain, where your discoveries may
+be not only interesting or rewarding, but may create a whole new
+world.  The challenges in cellular automata are clear: how to realize
+them in hardware, how to apply them to useful tasks, and how to make
+money doing it.  You now possess a tool for exploring all three.
+
+<h2><a name="t6">A Sampler of CA Applications</a></h2>
+
+The main applications of cellular automata are to:
+
+<p>
+
+<ul>
+<li>  <a href="#t7">image processing and image generation</a>,
+<li>  <a href="#t8">simulations of biology</a>,
+<li>  <a href="#t9">simulations of chemistry</a>,
+<li>  <a href="#t10">simulations of physics</a>, and
+<li>  <a href="#t11">design of new computing hardware and algorithms</a>.
+</ul>
+
+<p>
+
+To give a flavor of some of the recent work,
+this section lists a few references in addition to the ones which
+appear in our main bibliography at the end of the book.
+
+<h3><a name="t7">Image Processing and Image Generation</a></h3>
+
+<blockquote>
+
+A.  Appel and A.  J.  Stein, "Cellular Automata for Mixing Colors",
+<cite>IBM Tech. Disc. Bull.</cite> 24, 1981, p. 2032.
+
+<p>
+
+M.  Meriaux, "A Cellular Architecture for Image Synthesis",
+<cite>Microprocessors and Microprogramming</cite> 13, 1984, p. 179.
+
+<p>
+
+K. Preston, "Basics of Cellular Logic with Some Applications in
+Medical Image Processing", <cite>Proc. IEEE</cite> 67, 1979, p.  826.
+
+<p>
+
+A.  Rosenfeld, "Parallel Image Processing Using Cellular Arrays",
+<cite>Computer</cite> 16, 1983, p. 14.
+
+</blockquote>
+
+<h3><a name="t8">Biology</a></h3>
+
+<blockquote>
+
+G.  Cocho, G.  Perez-Pascual, J.  Ruis, &amp; F. Soto, "Discrete Systems,
+Cell-Cell Interactions, and the Color Patterns of Animals", <cite>J.  Theor.
+Biol.</cite>  125, 1987, p.  437.
+
+<p>
+
+I.  Dayan, D.  Stauffer, &amp; S.  Havlin, "Cellular Automata
+Generalization of the Weisbuch-Atlan Model for Immune Response", <cite>J.
+Phys.  A, Math.  Gen.  (UC)</cite> Vol.  21, No.  10, May 1988, p.  2473.
+
+<p>
+
+W.  Duchting and T. Vogelsaenger, "Aspects of Modelling and Simulating
+Tumor Growth and Treatment", <cite>J.  Cancer Res.  Clin.  Oncology</cite> 105,
+1983, p.  1.
+
+<p>
+
+T.  Kitagawa, "Cell Space Approaches in Biomathematics", <cite>Math.
+Biosciences</cite> 19, 1974, p.  27.
+
+<p>
+
+M.  Kumura &amp; G.  Weiss, "The Stepping Stone Model of Population
+Structure and the Decrease of Genetic Correlation with Distance",
+<cite>Genetics</cite> 49, 1964, p.  561.
+
+<p>
+
+M. Mainster, "Cellular Automata: Retinal Cells, Circulation, and
+Patterns", <cite>Eye</cite> 6, 1992, p. 420.
+
+<p>
+
+L.  Sander, "Fractal Growth Processes", <cite>Nature</cite> 322, 1986, p.  789.
+
+<p>
+
+J.  Vincent, "Cellular Automata: A Model for the Formation of Color
+Patterns in Molluscs", <cite>J.  Molluscan Stud.</cite>  52, 1986, p.  97.
+
+<p>
+
+D. Young, "A Local Activator-Inhibitor Model of Vertebrate Skin
+Patterns", <cite>Math.  Biosciences</cite> 72, 1984, p.  51. ¹
+
+</blockquote>
+
+<h3><a name="t9">Chemistry</a></h3>
+
+<blockquote>
+
+C. Burks &amp; D.  Farmer, "Towards modelling DNA sequences as automata",
+<cite>Physica D</cite>, V.  10, No.  1-2, 1984, p.  157.
+
+<p>
+
+J.  Greenberg and S.  Hastings, "Spatial Patterns for Discrete Models
+of Diffusion in Excitable Media", <cite>SIAM J.  Appl. Math.</cite> 34,
+1978, p. 515.
+
+<p>
+
+Y. Oono &amp; M Kohmoto, "A Discrete Model of Chemical Turbulence", <cite>Phys.
+Rev.  Lett.</cite>  55, 1985, p.  2927. ¹
+
+</blockquote>
+
+<h3><a name="t10">Physics</a></h3>
+
+<blockquote>
+
+B.  Chopard, and M.  Droz, "Cellular Automata Model for Heat
+Conduction in a Fluid", <cite>Phys. Lett. A (Netherlands)</cite> V.  126, No.
+8-9, January 1988, p.  476.
+
+<p>
+
+M.  Colvin, D.  Frenkel, &amp; A.  Ladd, "Application of Lattice-Gas
+Cellular Automata to the Brownian Motion of Solids in Suspension",
+<cite>Phys.  Rev.  Lett.</cite>  V.  60, No.  11, 1988, p.  975.
+
+<p>
+
+M.  Creutz, "Deterministic Ising Dynamics", <cite>Ann. Phys.</cite> 67
+(1986), p. 62.  ¹
+
+<p>
+
+G. Doolen &amp; D.  Montgomery, "Magnetohydrodynamic Cellular Automata",
+<cite>Phys.  Lett.  A</cite>, V.  120, No.  5, 1987, p.  229.
+
+<p>
+
+U.  Frish, B.  Hasslacher and Y.  Pomeau, "Lattice Gas Automata for
+the Navier-Stokes Equation", <cite>Phys. Rev. Lett.</cite> 56, 1986, p.
+1505.  ¹
+
+<p>
+
+H.  Gerola &amp; P.  Seiden, "Stochastic Star Formation and Spiral
+Structure of Galaxies", <cite>Astrophys.  J.</cite>  223, 1978, p.  129.
+
+<p>
+
+U. Frisch, D.  d'Humieres, B.  Hasslacher, P.  Lallemand, P.  Pomeau,
+&amp; J.  Rivet, "Lattice gas hydrodynamics in two and three dimensions",
+<cite>Complex Systems</cite>, 1987, p. 649.
+
+<p>
+
+N.  Packard, "Lattice models for solidification and aggregation",
+<cite>Proc.  First International Symposium for Science on Form</cite>, Tsukuba,
+Japan, 1986. ¹
+
+<p>
+
+J. Park, K. Steiglitz and W.  Thruston, "Soliton-like Behavior in
+Automata", <cite>Physica D</cite> 19, 1986. ¹
+
+<p>
+
+G.  Vichniac, "Simulating physics with cellular automata",
+<cite>Physica D</cite> 10, 1984, p. 96.
+
+</blockquote>
+
+<h3><a name="t11">Computer Science</a></h3>
+
+<blockquote>
+
+P.  Guan, "Cellular automaton public-key cryptosystem", <cite>Complex
+Systems</cite> 1, 1987, p. 51.
+
+<p>
+
+D.  Hillis, "The Connection Machine: A Computer Architecture Based on
+Cellular Automata", <cite>Physica D</cite> 10, 1984, p.  213.
+
+<p>
+
+T.  Hogg &amp; B.  Huberman, "Parallel Computing Structures Capable of
+Flexible Associations and Recognition of Fuzzy Inputs", <cite>J.  Stat.
+Phys.</cite>, 1986.
+
+<p>
+
+S.  Kirkpatrick, C.  Gelatt, &amp; M.  Vecchi, "Optimization by Simulated
+Annealing", <cite>Science</cite> 220, 1983, p.  671.
+
+<p>
+
+R.  Minnick, "A Survey of Microcellular Research", <cite>J.  ACM</cite> 14, 1967,
+p.  203.
+
+<p>
+
+J.  Taboury, J.  Wang, P.  Chavel, F.  Devos, &amp; P.  Garda, "Optical
+Cellular Processor Architecture", <cite>Appl. Opt. Vol.</cite> 27, No.
+9, May 1988, p. 1643.
+
+</blockquote>
+
+<p>
+
+
+<dl compact>
+<dt>¹
+<dd>Marked references are all reprinted in <cite>The Theory
+and Applications of Cellular Automata</cite>, edited by Stephen
+Wolfram.
+This valuable collection can be ordered direct from the publishers:
+World Scientific Publishing Co., P.O. Box 128, Farrer Road,
+SINGAPORE 9128.
+</dl>
+
+<p>
+
+Researchers should also be aware of the bimonthly journal <cite>Complex
+Systems</cite>,
+which carries many articles
+about cellular automata.  The address of <cite>Complex Systems</cite> is P.O.
+Box 6149, Champaign, IL 61821-8149, USA.
+
+<p>
+<hr>
+<a href="chap2.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="cellab.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

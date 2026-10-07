@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
+import { assemble } from "./asm.js";
 import type { AsmLine, AsmResult } from "./asm/core.js";
 import { printListing } from "./asm/listing.js";
 import { PDP7 } from "./asm/pdp7.js";
@@ -35,22 +36,21 @@ test("listing: page 1 of SYMELEC prints as Heinz's 1972 listing did, header and 
 	assert.deepEqual(out.slice(0, 60), page1.map((l) => l.trimEnd()));
 });
 
-test("listing: the symbol table sorts letters before digits and stars values bigger than an address", () => {
-	const { result, table } = fromHeinz();
-	const out = printListing({ ...result, listing: [] }, { user: "HL1470", date: DATE, pageLines: 0 });
-	// Cell by cell: the transcription has short rows and one name twice (SUMB), so rows don't line up.
+test("listing: the symbol table SYMELEC's source prints is Heinz's printed table", () => {
+	const { table } = fromHeinz();
+	const source = readFileSync(new URL("../tapes/symelec/symelec.asm", import.meta.url), "utf8");
+	const r = assemble([{ name: "SYMELEC", text: source }], { dialect: "cambridge", origin: 0o22 });
+	const out = printListing({ ...r, listing: [] }, { user: "HL1470", date: DATE, pageLines: 0 });
 	const cells = (text: string): string[] => [...text.matchAll(/[A-Z][A-Z0-9]* *=[ *] *[0-7]+/g)].map((m) => m[0]);
-	const want = [...new Set(cells(table.join("\n")))];
 	const got = cells(out);
-	// Every symbol prints exactly as transcribed. The transcription's own order has misreadings
-	// (BD0 for BDO, CLB1 for CLBI, CHODE for CMODE) and a D-G stretch out of order: ASSEMBLERS.md.
-	const printed = new Set(got);
-	const same = want.filter((c) => printed.has(c));
-	assert.ok(same.length / want.length > 0.99, `${same.length} of ${want.length} symbols print as transcribed`);
+	// Titan printed a name assigned twice once per value: SUMB 5013 and 5040.
+	const sumb = r.assignments.filter((a) => a.name === "sumb").map((a) => `SUMB   =  ${a.value.toString(8).padStart(4)}`);
+	got.splice(got.findIndex((c) => c.startsWith("SUMB")), 1, ...sumb);
+	assert.deepEqual(got, cells(table.join("\n")));
 	const at = (c: string): number => got.indexOf(c);
-	assert.ok(at("UNSTAK =*102400") >= 0, "a value bigger than an address is starred");
+	assert.ok(at("UNSTAK =*102460") >= 0, "a value bigger than an address is starred");
 	assert.ok(at("TZ     =  2016") < at("T2     =  4770"), "letters sort before digits");
-	assert.ok(at("U      =  4762") < at("UNSTAK =*102400") && at("UPDAXY =  7440") < at("U1     =  5010"), "a name before its extensions");
+	assert.ok(at("U      =  4762") < at("UNSTAK =*102460") && at("UPDAXY =  7440") < at("U1     =  5010"), "a name before its extensions");
 });
 
 test("listing: a user list, no pages, and each tape numbered from 1", () => {

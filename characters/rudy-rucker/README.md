@@ -15,6 +15,29 @@ mathematical logic; professor of computer science at **San José State Universit
 literary style **transrealism**, wrote *Infinity and the Mind* and *The Fourth
 Dimension*, and is — genuinely — four generations removed from **Hegel**.
 
+## Symbiotic programming on the CAM-6 (1989)
+
+Rudy's paper in *Complex Systems* 3 (1989), 79–90, "Symbiotic Programming: Crossbreeding
+Cellular Automaton Rules on the CAM-6"
+([cached](sources/README.md), [original](https://content.wolfram.com/sites/13/2018/02/03-1-6.pdf)),
+written on the board from the styrofoam peanuts below. Rather than splice half of one rule into
+half of another, he runs whole rules side by side in different CAM-6 bitplanes and lets them
+interact through the planes they can see. Conway's Life, Vichniac's Vote and Brian Silverman's
+Brain become **Brainlife**, **Votelife** and **Ranch**. In Brainlife, Brain keeps Life from dying
+out and Life damps Brain's chaos. The rules are written in "pidgin Forth", the CAM-6's own
+language, which is what Don's CAM6 simulator still runs.
+
+**ECO, the rule in SimCity.** Rudy demoed this family of rules to Don at a Hackers conference,
+and Don put one in every SimCity he worked on: SimCity for NeWS, for X11, for the OLPC, and
+Micropolis. Don calls it **eco** and credits it to Rudy. It's Rudy's two ideas combined: a
+twisted-majority vote (Anneal) splits the space into two domains, as Vote does in Ranch, and the
+two domains run **Brian's Brain** and **AntiLife**, the two halves of EcoLiBra. In the code:
+
+- `n_eco` in `micropolis-activity/src/sim/g_cam.c`, rule 17 of SimCity's CAM rule table, beside
+  `n_ranch` and the Anneal rules;
+- the `ECO` heat rule (`heatRule` 1) in MicropolisCore's `micropolis.cpp`, which runs it over the
+  city map.
+
 ## The CAM-6 in the box of styrofoam peanuts (1987)
 
 His own account, in the [CelLab manual, ch. 5](https://www.fourmilab.ch/cellab/manual/chap5.html):
@@ -52,7 +75,8 @@ masterpiece — beautiful Belousov–Zhabotinsky scrolls, capped with a straight
 ## Don & Rudy — the CA thread
 
 Don and Rudy have a long, playful email friendship about cellular automata (there's
-even a documented exchange on [Don's CAM6 wiki](https://donhopkins.com/mediawiki/index.php/CAM6_Simulator)
+even a documented exchange on Don's CAM6 wiki, [backed up here](../don-hopkins/sources/cam6-simulator-wiki/README.md)
+([Wayback](https://web.archive.org/web/20180909074032/http://donhopkins.com/mediawiki/index.php/CAM6_Simulator)),
 where Rudy caught a scan-order-drift bug years ago). The best of it is a **May 2020
 thread** that started innocently as "History of Logo!" and mutated into Don dragging
 Rudy into **Dave Ackley's Movable Feast Machine**. Rudy's response is a whole comedy

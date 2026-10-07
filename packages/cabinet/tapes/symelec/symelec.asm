@@ -505,7 +505,7 @@ REDUC,   JMS TESLEV
 ROTMO,   JMS TESLEV                 /TOTATE BLINKING ITEM
          ISZ RROTAT
          JMP CATMO1
-PIXEX,   LAC ERASE                  /EXTENDED PIXE
+PIXEX,   LAC ERAST                  /EXTENDED PIXE
          DAC LBD
          LAC I DFB
          SZA
@@ -547,7 +547,7 @@ DFCON,   0                          /DISPLAY FILE CONVERTER
          DAC I 10
          LAC (DJP SB 4
          DAC I 10
-         JMP I DPCON
+         JMP I DFCON
 DPSIM,   0                          /DISPLAY SIMULATOR
          LAC DACO
          SAD BLINK1                 /TEST FIN
@@ -568,7 +568,7 @@ PAMODE,  ISZ DACO
          LAC TEMP                   /GET NEW MODE
          AND (160000
          DAC MODE
-         JMP DPSIM1
+         JMP DPSIM 1
 SBMODE,  LAC TEMP
          AND (17777
          DAC JMPADR                 /ESTABLISH JMP ADDR
@@ -580,7 +580,7 @@ SBMODE,  LAC TEMP
          JMP . 10                   /IS DDS
          LAC JMPADR                 /IS DJP
          DAC DACO
-         JMP PAMODE1
+         JMP PAMODE 1
          ISZ DACO
          LAC DACO
          DAC ASR                    /SAVE RETURN ADDR
@@ -601,7 +601,7 @@ VEMODE,  LAC RREDUC
          LAC TEMP                   /TEST ES BIT
          SPA
          DZM MODE                   /PAMODE
-         JMP DPSIM1
+         JMP DPSIM 1
 CHMODE,  ISZ DACO
          LAC TEMP                   /SHOULD BE CH WORD
          AND (37
@@ -611,7 +611,7 @@ CHMODE,  ISZ DACO
          DAC TEMP                   /NEW CH WORD
          JMP . - 7
          DZM MODE                   /SET PARAMETER MODE
-         JMP DPSIM1
+         JMP DPSIM 1
 CALDEF,  0
          LAC 10                     /CALCULATE DEFLECTION
          DAC COMPOS
@@ -690,14 +690,14 @@ TURNVE,  0                          /TURN 90, 180 OR 270 DEG
          TAD TEMP
          DAC I 10
          JMS CALDEF                 /RESULT ONLY USED IN RROTAT
-         JMP TURNVE5                /TAKE NEXT WORD
+         JMP TURNVE 5                /TAKE NEXT WORD
          LAC (160000
          DAC I 10
          LAC (DJP SB 4
          DAC I 10
          ISZ COUNT                  /IF COUNT=777776 TURN 180
 / ---- scan page 017 ----
-         JMP TURNVE2                /ANOTHER TURN OF ELEN
+         JMP TURNVE 2                /ANOTHER TURN OF ELEN
          JMP I TURNVE
 WAIT92,  JMS ADJLEV
          JMS AMEND3
@@ -728,7 +728,7 @@ WAIT91,  LAC ELCOUN                 /START WITH 400
          JMS FOCBL3
          JMS FOCBL4
          JMS FOCBL2                 /DEFLECTION
-         JMS CATDAO                 /DISCONNECT LINES , IF ANY
+         JMS CATDA0                 /DISCONNECT LINES , IF ANY
          ISZ CDOCOM
          DZM RCATAL
          DZM RREDUC
@@ -1295,7 +1295,7 @@ INIT=JMS, 0
          TAD (1
          DAC EL1                    /PREVENT TAIL BEING SWEPT UP IF GARBAGE COLLECTED
          LAC I OP+1
-         DAC OP+3                   /SAVE ITEM
+         DAC OP+2                   /SAVE ITEM
          FLST                       /MAKE SPACE FOR NEW ITEM
          LAC OP+2
          DAC I OP+1
@@ -1396,7 +1396,7 @@ MK1,     LAC GBUG
 GNTR,    DAC GTEMP                  / INITIAL ENTRY
          LAC I GBUG                 / "CAR"
          DAC GBUG
-GR2,     LAC I GBUG                 / AND MOVE TO ITEM
+GB2,     LAC I GBUG                 / AND MOVE TO ITEM
          SMA
          JMP GITEM                  / JUMP IF ITEM
          AND (017777
@@ -1428,7 +1428,7 @@ GITEM,   LAC I GBUG
 GBCDR,   ISZ GBUG                   / "CDR"
          LAC GBUG
          DAC GTEMP
-         JMP GR2                    / REPEAT
+         JMP GB2                    / REPEAT
                                     / FOUND 1ST NIL
 GNIL,    TAD (200000
          DAC I GBUG                 / MARK IT
@@ -1903,7 +1903,7 @@ WAIT3,   LAC RATTPO                 /REQUEST FOR ATTPOINT
          LAC XINS
          CMA                        /GET DATA FOR ATTPO
          TAD (1
-         TAD TEMPY
+         TAD TEMPX
          DAC XTOT
          LAC YINS
          CMA
@@ -1912,13 +1912,13 @@ WAIT3,   LAC RATTPO                 /REQUEST FOR ATTPOINT
          DAC YTOT
          JMS ATTPEL
          DZM RATTPO
-         DZM SAVESU
+         DZM SAVGSU
 WAIT7,   LAC RGROUP                 /REQUEST TO GROUP
          SNA
-         JMP WAITZ
+         JMP WAIT2
          JMS ADJLEV
          JMS AMEND3
-         LAC SAVESU
+         LAC SAVGSU
          SZA
          JMP . 12
          DZM XTOTIN
@@ -1931,7 +1931,7 @@ WAIT7,   LAC RGROUP                 /REQUEST TO GROUP
          DAC SAVGIN                 /SAVE GROUP INST
          LAC SBPI
          DAC SAVGSU                 /SAVE GROUP SBPI
-         JMS WAITS                  /TAKE BLINKING INST
+         JMS WAIT5                  /TAKE BLINKING INST
          LAC X
          SAD SAVGIN
          JMP . 15                   /TRIES TO GROUP GROUP INST
@@ -1947,13 +1947,13 @@ WAIT7,   LAC RGROUP                 /REQUEST TO GROUP
          JMS DELLEV
          ISZ CDOCOM
          DZM RGROUP
-WAITZ,   LAC RERASE                 /ERASE REQUEST
+WAIT2,   LAC RERASE                 /ERASE REQUEST
          SNA
          JMP WAIT8
          DZM RERASE
          ISZ CDOCOM
          DZM MBLINK
-         JMS WAITS
+         JMS WAIT5
          LAW X
          FINDP                      /MUST BE RINGSTART POINTING TO UPPER SUBP
          DSON
@@ -1973,7 +1973,7 @@ WAIT8,   LAC RUPCOM
          ISZ CDOCOM
          LAC RDOCOM
          SNA
-         JMP WAITIA
+         JMP WAIT10
          DZM RDOCOM
          LAW SAVINS
          COMPIL
@@ -1985,7 +1985,7 @@ WAIT10,  LAC RMODE                  /REQUESTED MODE
          DAC CMODE                  /SET NEW MODE
          SMA                        /ENTERING TRACKING MODE
          JMP WAIT1                  /SERVICE TTY
-         JMS WAITS                  /ATNAME FROM SNAPSHOT LIST
+         JMS WAIT5                  /ATNAME FROM SNAPSHOT LIST
          FLEAS                      /FLEA ON POINT ELEMENT
          LAC PNT1
          DAC YP                     /SAVE FOR TRACKING
@@ -1995,7 +1995,7 @@ WAIT10,  LAC RMODE                  /REQUESTED MODE
          TAD TEMPY                  /ADD PEN COORD
          DAC TRAKY
          LAW PNT1
-         EDR
+         CDR
          LAC PNT1
          DAC XP                     /SAVE FOR TRACKING
          LAC I PNT1
@@ -2003,14 +2003,14 @@ WAIT10,  LAC RMODE                  /REQUESTED MODE
          TAD (1
          TAD TEMPX                  /ADD PEN COORD
          DAC TRAKX
-WAIT1,   LAW                        /HERE SERVICE TTY
+WAIT1,   LAM                        /HERE SERVICE TTY
          SAD MIN
          WAIT-5                     /FINISH INPUT WITH LF
          LAC IMC
          SNA
          AND I WAIT                 /EXIT
          DZM IMC
-         LAW
+         LAM
          DAC MIN
          JMP MESIN                  /MESSAGE READY
 WAIT4,   SNA                        /HERE NO MODE CHANGE
@@ -2036,18 +2036,18 @@ WAIT4,   SNA                        /HERE NO MODE CHANGE
          ISZ CDOCOM
 / ---- scan page 044 ----
          JMP WAIT1                  /TEST TTY
-WAITS,   0                          /GET ATNAME FROM SNAPSHOT LIST
+WAIT5,   0                          /GET ATNAME FROM SNAPSHOT LIST
          LAC I LEVEL                /INST OR LINE
          DAC X
          LAW X
          CAR
          CAR                        /PUT & ON ATNAME
-         JMP I WAITS
+         JMP I WAIT5
 WAIT6,   LAC RBLINK                 /POINTING MODE, REQUEST?
          SNA
          JMP WAIT1                  /NO, TEST TTY
          DZM RBLINK
-         JMS WAITS
+         JMS WAIT5
          CDR
          CDR
          CDR                        /X ON DATA WORD
@@ -2056,7 +2056,7 @@ WAIT6,   LAC RBLINK                 /POINTING MODE, REQUEST?
          XOR (4000
          DAC I X                    /SET UP BLINK MARK
          LAC X
-         DAC BSWOR                  /BLINK, SCALE AND INTENSITY WORD IN INST OR LINE
+         DAC BSBWOR                 /BLINK, SCALE AND INTENSITY WORD IN INST OR LINE
          LAW SAVINS
          COMPIL                     /COMPILE NEW PICTURE
          LAC (160117                /TO GET SCALE AND BRIGHTNESS RESTORED
@@ -2067,27 +2067,27 @@ WAIT6,   LAC RBLINK                 /POINTING MODE, REQUEST?
 MESIN,   LAC MBLINK
          SNA
          JMP MESIN7                 /EXPORTING COMMAND
-         JMS WAITS                  /X ON ATNAME
-         LAW DP 1                   /CHECK WHETHER LINE
+         JMS WAIT5                  /X ON ATNAME
+         LAW OP 1                   /CHECK WHETHER LINE
          CDR
          CDR
          LAC I OP 1
-         SAD 13
+         SAD (3
          JMP ERR6                   /FOUND LINE, NOTE 6
          LAC I MSIN
-         SAD 13
+         SAD (257
          JMP MESIN3                 /GOT A /
          SAD COLON
-         JMP MESIN6                 /GOT A:
+         JMP MESIN8                 /GOT A:
          SAD CR
          JMP . + 4                  /GOT A CR
-         LAW
+         LAW X
          COPIN                      /COPY PRINTNAME
          AND I WAIT                 /EXIT
          LAC X
          DAC Y                      /SAVE FOR USE WHEN MESSAGES DONE
          JMS MESIN6                 /PRINT PRINTNAME
-         LAW
+         LAW X
          CDR
          CDR
 / ---- scan page 045 ----
@@ -2570,8 +2570,7 @@ LB4,     PAR PO
          DJS SB , 2
          JMP PIXEX
          DDS CH 3
-*DECIMAL DIGIT IN OCTAL NUMBER
-         201128                     /PIX
+         201130                     /PIX
          110537                     /IE
 WAREA,   PAR PO PF SC3 IN5          /WORKING AREA
          POV PO 0
@@ -2915,15 +2914,15 @@ SD1,     DZM CON1
          DAC BCON
          LAC STCON1
          DAC BCON1
-         LAC STXBM0
-         DAC BXBM0
-         LAC STYBM0
-         DAC BYBM0
+         LAC STXBMO
+         DAC BXBMO
+         LAC STYBMO
+         DAC BYBMO
          LAC BFIRST
          DAC FIRSTA
          LAC BSNDST
          DAC SNDSTA
-         LAW
+         LAM
          DAC CON
          JMS INSRTN
          LAC (063700                /F
@@ -2965,7 +2964,7 @@ TD,      LAC MBLINK                 /TRACK
          LAM
          DAC RMODE
          JMP BLIROU
-3D,      JMS TESLEV                 /GROUPING
+GD,      JMS TESLEV                 /GROUPING
          ISZ RGROUP
          JMP BLIROU
 DRAMO,   DZM RMODE
@@ -3077,7 +3076,7 @@ LESS,    LAC (30117                 /DECREASE LEVEL MARKER OF INST
          LAC I LEVEL                /FIND 0 IN INST STACK
          SZA
          JMP BLIROU
-         LAW
+         LAM
          TAD LEVEL
          DAC LEVEL
          JMP BLIROU
@@ -3098,7 +3097,7 @@ STRCR,   JMS TRCR                   /IF IN TRACKMODE OR DRAWMO
          JMP SEGEX
 TESLEV,  0                          /TEST BLINKING AND TOP LEVEL
          LAC MBLINK
-         SMA
+         SNA
          JMP PEN1
          LAC LEVEL
          SAD BLEVEL
@@ -3188,9 +3187,9 @@ TESTIN,  0                          /TEST WHETHER INT NEAR END OF LINE
          LAC CON
          SPA
          JMP . 3                    /NEAR LINE WHEN POINT AT SD
-         ISZ RTSND1                 /NEAR LINE WHEN POINTING AT FD
+         ISZ RTSNDI                 /NEAR LINE WHEN POINTING AT FD
          JMP SEGEX
-         ISZ RTFIR1                 /TEST WHETHER ON CAT SUBP
+         ISZ RTFIRI                 /TEST WHETHER ON CAT SUBP
          DZM CCOM1                  /START ON NODE
          JMP I TESTIN
 COPFIR,  0                          /COPY SAVE INTO FIRST STACK
@@ -3786,7 +3785,7 @@ CATDAT,  ISZ CCAT
          JMP I AMEND3
 CATDA0,  0                          /DETERMINE ATTP FOR CROSS
          ISZ NODRA                  /PROHIBIT DRAWING IN CASE TEST FAILS
-         LAW GRNA
+         LAW GRHA
          ENTER
          LAW SBPI
          LAW CATDA1
@@ -4165,7 +4164,7 @@ COMP,    LAC DF
          LAC MKER
          SNA
          JMP .-7
-COMP10,  WRLTD
+COMP10,  WRLTO
 COMP9,   ISZ SVAD
          JMS COMP13
          AND (3777                  /REMOVE BLINK BIT
@@ -4243,7 +4242,7 @@ COMP14,  LAC ALPHA                  /REMOVE INST IF STARTS OFFSCREEN
          LAC V
          DAC YBEAM
          EXIT
-COMP1,   LAW GRNA
+COMP1,   LAW GRHA
          ENTER
          LAW X
          LAW COMP2
@@ -4260,7 +4259,7 @@ COMP1,   LAW GRNA
          DAC XBMC
          LAC YBEAM
          DAC YBMC
-         LAW GRNA                   /GOROUND TO FIND INSTANCES AND LINES
+         LAW GRHA                   /GOROUND TO FIND INSTANCES AND LINES
          ENTER
          LAW Y
          LAW COMP4
@@ -4339,7 +4338,7 @@ COMP2,   EXIT
          STAK
          LAC X
          STAK                       /STAK MOUSE AND FLEAS
-         LAC GETDI
+         LAC GETD1
          DAC X
          STAK
          FLEAS                      /NEW FLEAS
@@ -4376,7 +4375,7 @@ RINST,   UNSTAK
          STAKX                      /STACK INSTANCES
          ISZ MRKX
          EXIT
-RLINE,   LAC GETDI
+RLINE,   LAC GETD1
          STAKY                      /STACK LINES
          ISZ MRKY
          EXIT
@@ -4422,7 +4421,7 @@ COMP13,  0                          /FLEA ONTO BLINK WORD
          JMP I COMP13
 / ---- scan page 094 ----
 GETD-JMS, 0                          /GET DATA FROM DAD
-         JMS OP+5                   /SET OP+1 SO ENTRY NAME STAYS PUT
+         JMS OP-5                   /SET OP+1 SO ENTRY NAME STAYS PUT
          LAW OP+1
          FINDS                      /GO TO DADD
          FINDN
@@ -4475,7 +4474,7 @@ WRDF-JMS, 0                          /WRITE A WORD TO DF
          ISZ DF
          JMP I WRDF-JMS
 STAKX-JMS, 0                          /X TO STAK
-         AND (177777
+         AND (17777
          DAC OP+3
          ISZ LOPX
          LAC LOPX
@@ -4485,7 +4484,7 @@ STAKX-JMS, 0                          /X TO STAK
          DAC I LOPX
          JMP I STAKX-JMS
 STAKY-JMS, 0                          /Y TO STAK
-         AND (177777
+         AND (17777
          DAC OP+3
          ISZ LOPY
          LAC LOPY
@@ -4515,7 +4514,7 @@ UNSTKY-JMS, 0                          /UNSTAK Y
          LAC OP+3
          JMP I UNSTKY-JMS
 / ---- scan page 096 ----
-DRLTD-JMS, 0                          /POSITION BEAM
+DRLTO-JMS, 0                          /POSITION BEAM
          LAC I LOPX
          CMAICLL
          ADD XBEAM
@@ -4531,15 +4530,15 @@ DRLTD-JMS, 0                          /POSITION BEAM
          SZA
          JMP .+3
          SAD DX
-         JMP I DRLTD-JMS            /JUMP BOTH ZERO
+         JMP I DRLTO-JMS            /JUMP BOTH ZERO
          LAC (100100
          WRDF
-         XCT I DRLTD-JMS            /SET VIS/INVIS
+         XCT I DRLTO-JMS            /SET VIS/INVIS
          LAC DY
          JMS VECGN                  /DRAW LINE
          LAC DX
          WRDF
-         LAW
+         LAM
          TAD DF
          DAC TEMP
          LAC I TEMP
@@ -4549,8 +4548,8 @@ DRLTD-JMS, 0                          /POSITION BEAM
          DAC XBEAM
          LAC I LOPY
          DAC YBEAM
-         JMP I DRLTD-JMS
-WRLTD-JMS, 0                          /POSITION BEAM
+         JMP I DRLTO-JMS
+WRLTO-JMS, 0                          /POSITION BEAM
          LAC I LOPX
          JMS NEG
          DAC EX2                    /USED TO POSITION TO 1ST POINTS
@@ -4624,7 +4623,7 @@ WRLB2,   DRLTO                      /DRAW LINE
          UNSTKY
          JMP I WRLB-JMS
 WRLB1,   LAC EX1
-         STAKY
+         STAKX
 / ---- scan page 098 ----
          LAC YY1
          STAKY
@@ -4981,92 +4980,92 @@ NEG,     0                          /CONVERT 13 BIT TO 16 BIT
          XOR TEMP
          JMP I NEG
          PAUSE
-/11742/      0  CDOCON
-/11743/      0  RCATAL
-/11744/      0  RCOPY
-/11745/      0  RGROUP
-/11746/      0  RATTPD
-/11747/      0  RTFIRI
-/11750/      0  ELAD
-/11751/      0  LENGTH
-/11752/      0  ETYPE
-/11753/      0  SYMB
-/11754/      0  TEMP
-/11755/      0  FSBPI
-/11756/      0  INST
-/11757/      0  SYM
-/11760/      0  XBMO
-/11761/      0  BXBMO
-/11762/      0  YBMO
-/11763/      0  BYBMO
+CDOCOM
+RCATAL
+RCOPY
+RGROUP
+RATTPO
+RTFIRI
+ELAD
+LENGTH
+ETYPE
+SYMB
+TEMP
+FSBPI
+INST
+SYM
+XBMO
+BXBMO
+YBMO
+BYBMO
 / ---- scan page 105 ----
-/11764/      0  RSBWOR
-/11765/      0  RREDUC
-/11766/      0  RROTAT
-/11767/      0  BLINK1
-/11770/      0  JMPADR
-/11771/      0  SCRPAD
-/11772/      0  TEMP1
-/11773/      0  WORD
-/11774/      0  ELCOUN
-/11775/      0  SAVGSU
-/11776/      0  NODRA
-/11777/      0  PBDM
-/12000/      0  XBML
-/12001/      0  YBML
-/12002/      0  XBM
-/12003/      0  ENDEX
-/12004/      0  PNTX
-/12005/      0  YBM
-/12006/      0  ENDEY
-/12007/      0  PNTY
-/12010/      0  CERRGB
-/12011/      0  FREE
-/12012/      0  LDP
-/12013/      0  LINK
-/12014/      0  EL
-/12015/      0  EL1
-/12016/      0  POINT
-/12017/      0  LINE
-/12020/      0  3DM
-/12021/      0  BCC
-/12022/      0  RERROR
-/12023/      0  RTRACK
-/12024/      0  RTSNDI
-/12025/      0  CUPCOM
-/12026/      0  SAVGIN
-/12027/      0  RERASE
-/12030/      0  RUPCOM
-/12031/      0  RDOCON
-/12032/      0  CISRTN
-/12033/      0  RBLINK
-/12034/      0  3RID
-/12035/      0  RLABEL
-/12036/      0  CERRDF
-/12037/      0  INT1
-/12040/      0  CTEMPX
-/12041/      0  CTEMPY
-/12042/      0  CBUSY
-/12043/      0  BPNTX
-/12044/      0  BPNTY
-/12045/      0  POS
-/12046/      0  BCON
-/12047/      0  BCON1
-/12050/      0  FIRSTA
-/12051/      0  SNDSTA
-/12052/      0  SAVE
-/12053/      0  RAYTNO
-/12054/      0  CSAVE
-/12055/      0  XB
+BSBWOR
+RREDUC
+RROTAT
+BLINK1
+JMPADR
+SCRPAD
+TEMP1
+WORD
+ELCOUN
+SAVGSU
+NODRA
+PBDM
+XBML
+YBML
+XBM
+ENOEX
+PNTX
+YBM
+ENOEY
+PNTY
+CERRGB
+FREE
+LOP
+LINK
+EL
+EL1
+POINT
+LINE
+GDM
+BCC
+RERROR
+RTRACK
+RTSNDI
+CUPCOM
+SAVGIN
+RERASE
+RUPCOM
+RDOCOM
+CISRTN
+RBLINK
+GRID
+RLABEL
+CERRDF
+INT1
+CTEMPX
+CTEMPY
+CBUSY
+BPNTX
+BPNTY
+POS
+BCON
+BCON1
+FIRSTA
+SNDSTA
+SAVE
+RATTMO
+CSAVE
+XB
 / ---- scan page 106 ----
-/12056/      0  YB
-/12057/      0  TEMPXL
-/12060/      0  TEMPYL
-/12061/      0  SAVVE
-/12062/      0  XTOTUP
-/12063/      0  YTOTUP
-/12064/      0  VAIN1
-/12065/      0  TEST
+YB
+TEMPXL
+TEMPYL
+SAVVE
+XTOTUP
+YTOTUP
+VAIN1
+TEST
 /12066/ 777774
 /12067/ 11456
 /12070/ 360
@@ -5192,17 +5191,17 @@ NEG,     0                          /CONVERT 13 BIT TO 16 BIT
 /12256/ 601632
 /12257/ 605320
 / ---- scan page 109 ----
-/ABSXY  =  7205        AD     =   123        ADDN   =*103266        ADJLEV =  7504
+/ABSXY  =  7205        AD     =   123        ADDW   =*103266       ADJLEV =  7504
 /ADR    =  5032        ADR1   =  5036        ALPHA  =  5003        AMEND  =  7640
 /AMEND0 =  7653        AMEND1 =  7657        AMEND2 =  7673        AMEND3 =  7750
-/AMEND4 =  7764        AMEND5 =  7775        AMEND6 =  7777        AMEND7 =  7714
-/AMEND9 =  7662        ASR    =  5043        ATTMU  =  6221        ATTPDA =   556
+/AMEND4 =  7764        AMEND5 =  7775        AMEND6 =  7677        AMEND7 =  7714
+/AMEND9 =  7662        ASR    =  5043        ATTMO  =  6221        ATTPDA =   556
 /ATTPEL =  7625        BCC    = 12021        BCON   = 12046        BCON1  = 12047
-/BD     =   150        BDC    =  2755        BDD    =  3001        BDN    =*102743
-/BD0    =  3010        BDR    =  3024        BEG    =  5162        BEGRTP =    24
+/BD     =   150        BDC    =  2755        BDE    =  3001        BDN    =*102743
+/BDO    =  3010        BDR    =  3024        BEG    =  5162        BEGRTP =    24
 /BERTP1 =    30        BETA   =  4763        BFIRST =  5114        BLEVEL =  5117
 /BLINK  =  5135        BLINK1 = 11767        BLIROU =  6305        BOT    =  5166
-/BPNTX  = 12063        BPNTY  = 12044        BSBWOR = 11764        BSNDST =  5115
+/BPNTX  = 12043        BPNTY  = 12044        BSBWOR = 11764        BSNDST =  5115
 /BSZ    =  5037        BXBMO  = 11761        BYBMO  = 11763        CALDEF =  1145
 /CAP0   =   236        CAR    =*102367       CATDAT =  7512        CATDA0 =  7522
 /CATDA1 =  7532        CATDA2 =  7552        CATMO  =   760        CATMO1 =   761
@@ -5210,77 +5209,77 @@ NEG,     0                          /CONVERT 13 BIT TO 16 BIT
 /CDOCOM = 11742        CDR    =*102347       CEIG   =  1622        CELE   =  1155
 /CERRDF = 12036        CERRGB = 12010        CFIF   =  1632        CFOU   =  1636
 /CFST   =  1624        CHMODE =  1133        CISRTN = 12032        CKS    =  5034
-/CLBC   =   207        CLB1   =   213        CLBL   =   210        CLB0   =   215
+/CLBC   =   207        CLBI   =   213        CLBL   =   210        CLBO   =   215
 /CLBR   =   206        CLBS   =   211        CLBU   =   214        CLBV   =   212
-/CLOCK  =  5534        CHODE  =  5133        COLON  =  5154        COMP   = 10241
+/CLOCK  =  5534        CMODE  =  5133        COLON  =  5154        COMP   = 10241
 /COMPIL =*110170       COMPOI =  5063        COMPOS =  5044        COMP1  = 10423
-/COMP10 = 10366        COMP11 = 10631        COMP12 = 10656        COMP13 = 10670
+/COMP10 = 10306        COMP11 = 10631        COMP12 = 10656        COMP13 = 10670
 /COMP14 = 10364        COMP2  = 10552        COMP3  = 10546        COMP4  = 10620
 /COMP5  = 10612        COMP9  = 10307        CON    =  5121        CONELE =  1517
 /CONSND =  5131        CONSTB =  5126        CONSTC =  5127        CONSTD =  5130
-/CONSTX =  5125        CON1   =  5122        COP FIR=  6430        COPIN  =*104331
+/CONSTX =  5125        CON1   =  5122        COPFIR =  6430        COPIN  =*104331
 /COPOUT =*104307       COPSND =  6446        COUN   =  4757        COUNT  =  5120
 /CR     =  5155        CSAVE  = 12054        CSEV   =  1620        CSIX   =  1634
-/CSMD   =  1626        CTEMPX = 12040        CTEMPY = 12041        CTRD   =  1630
-/CUPCOM = 12025        CUR0   =   346        DEMP   =  4747        DELB   =*103324
-/DELLEV =  6464        DFE    =  5157        DFENOR =  5161        DFB    =  5156
-/DFCON  =  1027        DISCO1 = 10125        DISCO2 = 10143        DISCO3 = 10144
-/DISCON = 10116        DRAMD  =  6073        DRAWHG =  5123        DRLTD  =*111035
-/DPSIM  =  1046        DSON   =*103310       DX     =  4756        DY     =  5014
-/DS     =  5031        EDGEN  =  5605        EDGEV  =  5571        EIGCLB =   205
-/ED     =  6050        ELAD   = 11750        EL1    = 12015        ENDEY  = 12006
-/EL     = 12014        ELCOUN = 11774        ENDEX  = 12003        ERR    =  2221
-/END    =  5163        ENDCON =  6113        ENDDRA =  6115        ENDNOR =  5165
-/ENDPOI =  7562        ENDRES =  5164        ERASE  =  6705        ERRMEB =  4171
-/ENTER  =*102472       ERAST  =  5750        ERRMEA =  4166        ERR6   =  4201
-/ERRDF  =  4206        ERRGB  =  4221        ERR5   =  4176        EX1    =  4775
-/ERR3   =  4174        ERR4   =  4203        EXIT   =*602504       FEL    =*103035
-/ESCAPE = 11727        ETYPE  = 11752        FINDN  =*103126       FINDP  =*103141
-/EX2    =  4776        FD     =  6030        FLEAS  =*110717       FLEA1  = 10734
-/FSTCLB =   202        FIG    =  4777        FLST   =*102253       FELN   =*103041
-/FINDS  =*103113       FIRSTA = 12050        FOCBL1 =  1354        FOBBL  =   463
-/FLEA2  = 10744        FLEA3  = 10752        FOHBL  =  7105        FOCBL2 =  1422
-/FOBBL1 =   542        FOCBL  =   531        FOUCLB =   201        FOLBL  =  7215
-/FOCBL3 =  1373        FOCBL4 =  1404        FSTCLB =   176        FREE   = 12011
-/FOHBL  =  7171        FOPBL  =  7274        GARR2  =  2714        GAMMA  =  4761
-/FRSTCH =  1771        FSBPI  = 11755        GD     =  6070        GBCDR  =  2601
-/GARR   =  2627        GARR1  =  2652        GETSP  =*102312       GBRTN  =  2617
-/GBD    =  2716        GBD1   =  2732        GNTR   =  2541        GIND   =  2241
-/GBUG   =  2242        GB2    =  2544        GR1    =  3165        GDM    = 12020
-/GETD   =*110701       GETD1  = 10716        GBRNCH =  2533        GRHA   =  3155
-/GITEM  =  2562        GNIL   =  2605        GR1    =  3165        GR2    =  3225
-/GRID   = 12034        GRRB   =  3221
+/CSND   =  1626        CTEMPX = 12040        CTEMPY = 12041        CTRD   =  1630
+/CUPCOM = 12025        CUR0   =   346        DACO   =  5042        DELB   =*103324
+/DELLEV =  6464        DEMP   =  4747        DF     =  5005        DFB    =  5156
+/DFCON  =  1027        DFE    =  5157        DFENOR =  5161        DFERES =  5160
+/DISCON = 10116        DISCO1 = 10125        DISCO2 = 10143        DISCO3 = 10144
+/DPSIM  =  1046        DRAMO  =  6073        DRAWMO =  5123        DRLTO  =*111035
+/DS     =  5031        DSON   =*103310       DX     =  4756        DY     =  5014
+/ED     =  6050        EDGEH  =  5605        EDGEV  =  5571        EIGCLB =   205
+/EL     = 12014        ELAD   = 11750        ELCOUN = 11774        EL1    = 12015
+/END    =  5163        ENDCOM =  6113        ENDDRA =  6115        ENDNOR =  5165
+/ENDPOI =  7562        ENDRES =  5164        ENOEX  = 12003        ENOEY  = 12006
+/ENTER  =*102472       ERASE  =  6705        ERAST  =  5750        ERR    =  2221
+/ERRDF  =  4206        ERRGB  =  4221        ERRMEA =  4166        ERRMEB =  4171
+/ERR3   =  4174        ERR4   =  4203        ERR5   =  4176        ERR6   =  4201
+/ESCAPE = 11727        ETYPE  = 11752        EXIT   =*602504       EX1    =  4775
+/EX2    =  4776        FD     =  6030        FEL    =*103035       FELN   =*103041
+/FIFCLB =   202        FIG    =  4777        FINDN  =*103126       FINDP  =*103141
+/FINDS  =*103113       FIRSTA = 12050        FLEAS  =*110717       FLEA1  = 10734
+/FLEA2  = 10744        FLEA3  = 10752        FLST   =*102253       FOBBL  =   463
+/FOBBL1 =   542        FOCBL  =   531        FOCBL1 =  1354        FOCBL2 =  1422
+/FOCBL3 =  1373        FOCBL4 =  1404        FOHBL  =  7105        FOLBL  =  7215
+/FONBL  =  7171        FOPBL  =  7274        FOUCLB =   201        FREE   = 12011
+/FRSTCH =  1771        FSBPI  = 11755        FSTCLB =   176        GAMMA  =  4761
+/GARB   =  2627        GARB1  =  2652        GARB2  =  2714        GBCDR  =  2601
+/GBD    =  2716        GBD1   =  2732        GBRNCH =  2533        GBRTN  =  2617
+/GBUG   =  2242        GB2    =  2544        GD     =  6070        GDM    = 12020
+/GETD   =*110701       GETD1  = 10716        GETSP  =*102312       GIND   =  2241
+/GITEM  =  2562        GNIL   =  2605        GNTR   =  2541        GRHA   =  3155
+/GRID   = 12034        GRRB   =  3221        GR1    =  3165        GR2    =  3225
 / ---- scan page 110 ----
 /GSTKP  =  2243        GTEMP  =  2244        HDR1   =  5030        IMC    =  5141
-/IND0   =   252        INEL   =  1436        INIT   =102335        INP    =104260
-/INSRET =  6554        INSRT  =103076        INSRTN =  6343        INST   = 11756
-/INT    =  5320        INTERG =111557        INTMO  =   707        INT1   = 12037
+/IND0   =   252        INEL   =  1436        INIT   =*102335       INP    =*104260
+/INSRET =  6554        INSRT  =*103076       INSRTN =  6343        INST   = 11756
+/INT    =  5320        INTERG =*111557       INTMO  =   707        INT1   = 12037
 /JMPADR = 11770        L      =  4772        LB     =  5200        LBD    =    47
 /LBD1   =  5674        LBSF   =  5231        LB1    =  5253        LB2    =   643
 /LB3    =  5254        LB4    =  5262        LENGTH = 11751        LESS   =  6237
 /LEVEL  =  5116        LIM    =  2516        LIM1   =  2530        LIM2   =  2524
 /LINDAT =  7466        LINE   = 12017        LINK   = 12013        LKBEG  =  5172
-/LKEND  =  5173        LKERR  =  3265        LKTEST =  3260        LOCATE =111510
+/LKEND  =  5173        LKERR  =  3265        LKTEST =  3260        LOCATE =*111510
 /LOP    = 12012        LOPX   =  5006        LOPY   =  5024        LPBEG  =  5171
 /LTPX   =  1701        MASKX  =  7312        MASKY  =  7343        MASKY1 =  7402
-/MBLINK =  5134        MESIN  =  3732        MESIN1 =  4050        MESIN2 =  4657
+/MBLINK =  5134        MESIN  =  3732        MESIN1 =  4050        MESIN2 =  4057
 /MESIN3 =  4075        MESIN4 =  4122        MESIN5 =  4141        MESIN6 =  4005
 /MESIN7 =  4015        MESIN8 =  4036        MESIN9 =  4041        MESL   =  4126
-/MESOUT =103352        MESS   =  4366        MESSAG =  4134        MIN    =  5137
+/MESOUT =*103352       MESS   =  4366        MESSAG =  4134        MIN    =  5137
 /MKER   =  5002        MK1    =  2536        MOD    =  6335        MODE   =  5041
 /MORE   =  6226        MOUT   =  5140        MOVCR  =  1454        MRKX   =  5001
 /MRKY   =  4760        MS     =  4367        MSIN   =  4371        MSOUT  =  4370
 /NEG    = 11733        NM     =  5066        NODRA  = 11776        NOR0   =   427
-/NOTE   =  4355        NULLR  =103070        NUL0   =   405        ONEIN  = 11470
-/OP     =  2232        OUT    =104237        PAD    =  5313        PAMODE =  1066
+/NOTE   =  4355        NULLR  =*103070       NUL0   =   405        ONEIN  = 11470
+/OP     =  2232        OUT    =*104237       PAD    =  5313        PAMODE =  1066
 /PBDM   = 11777        PCD    =  5315        PEN    =  5353        PEN1   =  5403
 /PEN2   =  5413        PEN3   =  5445        PEN4   =  5431        PEN5   =  5437
 /PIXEX  =   774        PLD    =  5316        PNTX   = 12004        PNTY   = 12007
 /PNT1   = 10754        PNT2   = 10755        PODAT1 =  7426        POIDAT =  7407
-/POIMO  =  6207        POINT  = 12016        PONT   =  5015        POP    =102433
+/POIMO  =  6207        POINT  = 12016        PONT   =  5015        POP    =*102433
 /POS    = 12045        POSCR  =  5621        POSDF  =  4741        POSDFB =  4743
 /POSDFL =  4742        POSIT  = 10160        PRD    =  5314        PRINT1 =  5151
-/PRINT2 =  5152        PSD    =  5312        PUSH   =102407        PXD    =  5317
+/PRINT2 =  5152        PSD    =  5312        PUSH   =*102407       PXD    =  5317
 /PXER1  =  2072        PXER2  =  2074        PXER3  =  2073        PXID   =  2106
 /PXOK   =  2037        R      =  5011        RATTMO = 12053        RATTPO = 11746
 /RBLINK = 12033        RCATAL = 11743        RCOPY  = 11744        RDOCOM = 12031
@@ -5298,11 +5297,11 @@ NEG,     0                          /CONVERT 13 BIT TO 16 BIT
 /SEGCNX =  6624        SEGCNY =  6672        SEGCX  =  6606        SEGCY  =  6637
 /SEGCY1 =  6652        SEGEX  =  7035        SEGEY  =  1561        SEGRXY =  6565
 /SEGX   =  6476        SEGXY  =  6521        SEGY   =  6510        SERSWI =   451
-/SETCL  =  6364        SETUP  =102147        SETUP1 =102167        SET1   = 11635
+/SETCL  =  6364        SETUP  =*102147       SETUP1 =*102167       SET1   = 11635
 /SET2   = 11660        SEVCLB =   204        SHRINK =  1216        SIXCLB =   203
-/SNDCH  =  1764        SNDCLB =   177        SNDSTA = 12051        SOLVAB =111624
-/SOLVCD =111647        SOLVE  =111672        SRAST  =  5656        STAK   =102446
-/STAKX  =110765        STAKY  =110777        STCON  =  5111        STCON1 =  5113
+/SNDCH  =  1764        SNDCLB =   177        SNDSTA = 12051        SOLVAB =*111624
+/SOLVCD =*111647       SOLVE  =*111672       SRAST  =  5656        STAK   =*102446
+/STAKX  =*110765       STAKY  =*110777       STCON  =  5111        STCON1 =  5113
 /STEST  =  4774        STPCD  =  5504        STPNTX =  5107        STPNTY =  5110
 /STPOS  =  5112        STRAIG =  6100        STRCR  =  6252        STSAVE =  5177
 /STSPST =  1642        STSTAK =  4747        STXBMO =  1640        STYBMO =  1641
@@ -5314,23 +5313,23 @@ NEG,     0                          /CONVERT 13 BIT TO 16 BIT
 /TEMPDF =  4441        TEMPEN =  4744        TEMPX  =  4745        TEMPXL = 12057
 /TEMPY  =  4746        TEMPYL = 12060        TEMP1  = 11772        TEMP2  =  5021
 /TESLEV =  6271        TEST   = 12065        TESTIN =  6371        TESTJN = 10013
-/TH     =  1706        TDDIS  =  6542        TOP    =  5167        TOTEMP =  5304
+/TH     =  1706        TODIS  =  6542        TOP    =  5167        TOTEMP =  5304
 /TRACK  =  5637        TRAKX  =  5052        TRAKY  =  5053        TRCR   =  5466
 /TRDCLB =   200        TS     =  1741        TURNVE =  1232        TV     =  2024
 /TWOIN  = 11500        TX     =  1705        TZ     =  2016        T2     =  4770
-/T3     =  5007        U      =  4762        UNSTAK =*102400       UNSTKX =*111011
-/UNSTKY =*11023        UPCOMP =  7041        UPCOM1 =  7077        UPCOM2 =  7075
+/T3     =  5007        U      =  4762        UNSTAK =*102460       UNSTKX =*111011
+/UNSTKY =*111023       UPCOMP =  7041        UPCOM1 =  7077        UPCOM2 =  7075
 /UPDAIN =  7452        UPDAXY =  7440        U1     =  5010        U2     =  4750
 /V      =  5020        VAIN   = 10051        VAIN1  = 12064        VAIN2  = 10101
-/VECON  = 11237        VEMODE =  1117        VEPART =  5045        VOL0   =   321
-/V1     =  4751        V2     =  4771        WAIT   =*103375       WAITLX =  2125
+/VECGN  = 11237        VEMODE =  1117        VEPART =  5045        VOL0   =   321
+/V1     =  4751        V2     =  4771        WAIT   =*103375       WAITLK =  2125
 /WAIT1  =  3636        WAIT10 =  3606        WAIT11 =  3404        WAIT12 =  3422
 /WAIT13 =  3437        WAIT15 =  1337        WAIT2  =  3547        WAIT3  =  3464
 /WAIT4  =  3650        WAIT5  =  3676        WAIT6  =  3705        WAIT7  =  3506
 /WAIT8  =  3571        WAIT9  =  3460        WAIT91 =  1316        WAIT92 =  1272
 /WAREA  =  5272        WINDOW =*111403       WORD   = 11773        WRDF   =*110756
-/WRLB   =*110134       WRLB1  = 11210        WRLB2  = 11203        WRLB3  = 11225
-/WRLTO  =*110100       WX1    =  5142        WX2    =  5143        WY1    =  5144
+/WRLB   =*111134       WRLB1  = 11210        WRLB2  = 11203        WRLB3  = 11225
+/WRLTO  =*111100       WX1    =  5142        WX2    =  5143        WY1    =  5144
 /WY2    =  5145        X      =  4767        XB     = 12055        XBEAM  =  4765
 /XBM    = 12002        XBMC   =  5016        XBML   = 12000        XBMO   = 11760
 /XCROSS =  5641        XINS   =  5056        XINS1  =  5046        XP     =  5051

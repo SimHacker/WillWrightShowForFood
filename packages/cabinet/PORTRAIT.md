@@ -1,12 +1,9 @@
 # The portrait: a 3D cabinet with live lights, a hot tube, and hands
 
-As long as it runs in the browser, might as well. That flippancy is
-load-bearing: every hard problem here was already solved by a seam the
-cabinet committed to for other reasons. The portrait is a *consumer* —
-it adds **no emulator features**, and nothing in the emulator ever
-learns the portrait exists.
+A 3D view of the machine, driven by the emulator's existing outputs. It adds no emulator
+features; the emulator doesn't know it's there.
 
-| Portrait element | Existing seam it consumes |
+| Portrait element | What drives it |
 |---|---|
 | console lamps | declared registers (AC, PC, MB, MQ, IR, run/defer flags) |
 | CRT picture | the segment log — the one stream ([DESIGN](DESIGN.md), Media) |
@@ -45,6 +42,16 @@ cabinet with a round tube; model it beside the processor, as on
 Heinz's floor. Pen hits compute in screen space of the *texture*, so
 the 3D projection cannot introduce aim error — the glass is chrome,
 the hit-test is the plugin's.
+
+**The reflection shot.** A preset camera over Heinz's shoulder, framed on the
+tube, with his face reflected in the glass over the picture. Lighting is arranged for the
+shot: a soft key on his face from the side away from the tube, so it shows in the
+reflection without washing out the phosphor, and a rim light behind him for a halo
+edge. One parameter, `reflection` from 0 to 1, fades his face in and out. At 0 the glass
+reflection is off and the picture is at full sharpness and contrast; at 1 his face sits
+in the glass over the vectors, as in the photographs of operators at their tubes. The
+camera and the fade can be keyframed, so a demo can hold on the drawing, fade up to
+his face as he works, and fade back to the graphics.
 
 ## Slow mode — watch the beam work
 
@@ -183,6 +190,119 @@ Lemke operating his own program, made with his participation — he sent
 the 128-page listing this whole machine exists to run. His character
 dir is the source of grounding; anything beyond "operator demonstrating
 PIXIE" needs his say.
+
+## Cabinets for machines that never had one
+
+The PDP-7 has a face from photographs. Every other engine the cabinet wraps
+([ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md)) gets one designed
+for it, in the same rule as the PDP-7's: **every lamp, dial and switch is bound to
+real state**, through the same seams (declared registers, device properties,
+events). Nothing on a panel is decoration that lies. They share a design kit so they
+sit together in one room, and each stays recognizably its own machine.
+
+**The shared kit.** A 19-inch rack frame in brushed aluminium with a coloured front,
+the DEC way. Bezels, lamp rows, toggle switches and paddle handles come from one
+parts library, in each machine's own colour. Lamps use the duty-cycle physics above,
+so a busy register glows instead of strobing. Each machine has a nameplate with its
+inventor's name and year, set in a typeface of its period. Each cabinet is a glTF
+`model` in a library cartridge ([CARTRIDGES.md §6a](CARTRIDGES.md#6a-scenes-the-machine-the-room-and-the-people-at-it)),
+and its panel bindings live in the `scene`.
+
+### CAM-6: the cellular automaton machine
+
+The real board was a bare card in a PC slot. Low and wide, in black anodised aluminium, like late-80s lab gear. A square raster
+monitor on top shows the planes. The front panel is the machine's structure:
+
+- **Four plane lamps**, 0–3, each a 16×16 window onto its plane, live.
+- **The neighbourhood selector**, a rotary switch with engraved positions: Moore, von
+  Neumann, Margolus. In Margolus the panel's grid lamps show the 2×2 block
+  partition flipping phase each step.
+- **The lookup table** as a lamp matrix, lit by entry as the rule is used: you watch
+  which entries a rule actually touches.
+- **RUN, STEP, BACK.** BACK is lit only for reversible rules (Critters), and steps
+  backward.
+- A steps-per-second dial, needle and all, and a generation counter on Nixies.
+
+### Micropolis: the city computer
+
+A slanted light table in walnut and
+cream enamel carries the city map, top-down. Around it, a panel row of dials:
+
+- **Tax rate, funding levels** for roads, police and fire, as knobs. Turning one is
+  the `poke`; the needle follows when the simulation changes it back.
+- **R C I** as three tall analogue meters, the demand bars as needles.
+- **The date** on a split-flap display; **funds** on a mechanical counter that
+  clicks.
+- **Disaster switches** under hinged, red, guarded covers, each a toggle that
+  needs the cover lifted first.
+- An evaluation printer that prints the yearly newspaper on a paper roll.
+
+### Turing machine, and Minsky's universal machine
+
+A long glass-fronted case with the tape running past a
+read/write head on rollers, cells as flip tiles that turn to show their symbol. The
+head carriage moves; the tape doesn't jump. Above the head, a **state drum** turns to
+the current state's name. Beside it, the **transition table** as a pegboard: one peg
+lights per step, the rule being applied.
+
+Minsky's universal machine gets the same case in a second colour, and a second,
+smaller tape inside the window: the machine being simulated, encoded on the big
+tape, with the decoded state shown on its own little drum. Two levels of machine,
+both visible. A brass plate on it: *7 states, 4 symbols, 1962*.
+
+### Movable Feast Machine: tiles, not a cabinet
+
+Ackley's machine is tiles and grows by adding them, so instead of a box it's blinking-light
+Borg Lego: square tiles that snap together edge to edge into whatever shape you build, modelled
+on his real [T2 tiles](https://t2tile.com/). Each tile has its own small screen of sites and its
+own LEDs, pulsing at its own rate, out of step with the others. Drag a tile in to grow the
+machine, pull one out and the computation routes around the hole. No master switch; each tile has
+its own small rocker. The engine is Andrew Walpole's
+[MFM-JS](https://github.com/walpolea/MFM-JS) ([mfm.rocks](https://mfm.rocks/)), wrapped as a
+cabinet, with one model tile per simulated tile.
+
+### von Neumann's 29-state CA: the universal constructor
+
+The display is a railway station departures board. Each cell is a split-flap unit, the kind
+Solari of Udine made for stations and airports, whose flaps carry the 29 states as icons
+instead of letters:
+
+- ground (blank);
+- the sensitised and transitional states;
+- ordinary and special transmission arrows in four directions, single and double-headed;
+- confluent cells;
+- each of those both quiescent and excited.
+
+When a cell changes state its flaps clatter round to the new icon, so the constructor's
+arm extends across the board with that sound, and you can hear construction happening.
+
+This is a specialisation of the tile engine
+([DESIGN.md](DESIGN.md#tiles-are-subroutines-drawn-by-the-forth-turtle)): a tile per state, as
+high-resolution photographic renders of real flaps (painted enamel, a little wear, the hinge
+line), and a transition that is the flap animation, not a cut. A state change that skips several
+flaps cycles through the ones in between, as the mechanism would.
+
+The board sits in a tall 1950s frame of grey crackle paint and chrome, IAS-machine style,
+with a station clock above it showing the generation count. The panel has:
+
+- **A state legend** of 29 coloured lamps: ground, sensitised, confluent,
+  ordinary and special transmission in four directions. Each lamp lights in proportion to how
+  many cells are in that state.
+- **The construction arm's position** on an X/Y pair of meters.
+- **The description tape** read-out, scrolling, the copy's blueprint.
+- When the copy completes, a second, identical cabinet model appears beside the
+  first.
+
+### Shared devices
+
+Light pens, mice, joysticks, keyboards, buttons and paddles, round vector tubes and
+raster monitors are one model each, in the kit's materials, re-coloured per machine.
+The input devices are the virtual ones the emulated machine sees. A real mouse, a
+touch or a demo session moves them, and the scene shows the device moving.
+
+**Milestone for each:** every control on the panel is bound to real state and
+moves when the engine does, checked by driving the engine headless and comparing the
+panel's readings with its state.
 
 ## Falsifiable milestones, in the pretty-pass lane
 

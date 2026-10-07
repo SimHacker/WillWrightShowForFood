@@ -726,7 +726,7 @@ test("acceptance: two lines — restart as printed, both drawn with core8k", () 
 // bigpic the display file runs out before the flag.
 test("acceptance: the house demo draws its picture with the 1972 program", () => {
 	const cpu = new Pdp7({ coreWords: 8192 });
-	loadSymelec(cpu, ["pix", "core8k", "bigpic"]);
+	loadSymelec(cpu, ["core8k", "bigpic"]);
 	const pen = new LightPen({ aperture: 12, name: "demo", enabled: false });
 	const t340 = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), pens: [pen] });
 	const box = new Cabinet({ cpu, devices: [t340, new Teletype({ printCycles: 200 }), new Clock({ cpu }), new TinyTitan()] });

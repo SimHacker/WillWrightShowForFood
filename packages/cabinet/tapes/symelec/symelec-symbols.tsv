@@ -18,11 +18,9 @@ CLBC	00207	code+table
 CLBL	00210	code+table	
 CLBS	00211	code+table	
 CLBV	00212	code+table	
-CLB1	00213	table	
-CLBI	00213	code	
+CLBI	00213	code+table	
 CLBU	00214	code+table	
-CLB0	00215	table	
-CLBO	00215	code	
+CLBO	00215	code+table	
 RES0	00220	code+table	
 CAP0	00236	code+table	
 IND0	00252	code+table	
@@ -70,8 +68,7 @@ SEGEY	01561	code+table
 CSEV	01620	code+table	
 CEIG	01622	code+table	
 CFST	01624	code+table	
-CSMD	01626	table	
-CSND	01626	code	
+CSND	01626	code+table	
 CTRD	01630	code+table	
 CFIF	01632	code+table	
 CSIX	01634	code+table	
@@ -96,8 +93,7 @@ PXER3	02073	code+table
 PXER2	02074	code+table	
 PXID	02106	code+table	
 RW	02107	code+table	
-WAITLK	02125	code	
-WAITLX	02125	table	
+WAITLK	02125	code+table	
 RW1	02126	code+table	
 RW2	02133	code+table	
 SETUP	02147	table	jms
@@ -108,17 +104,17 @@ GIND	02241	table
 GBUG	02242	table	
 GSTKP	02243	table	
 GTEMP	02244	table	
-FLST	02253	table	multiply-defined,jms
-GETSP	02312	code+table	multiply-defined,jms
+FLST	02253	table	jms
+GETSP	02312	code+table	jms
 INIT	02335	code+table	jms
-CDR	02347	table	multiply-defined,jms
-CAR	02367	table	multiply-defined,jms
-UNSTAK	02400	table	multiply-defined,jms
+CDR	02347	table	jms
+CAR	02367	table	jms
 PUSH	02407	table	jms
 POP	02433	table	jms
 STAK	02446	table	jms
-ENTER	02472	table	multiply-defined,jms
-EXIT	02504	table	multiply-defined,jmp
+UNSTAK	02460	table	jms
+ENTER	02472	table	jms
+EXIT	02504	table	jmp
 LIM	02516	code+table	
 LIM2	02524	code+table	
 LIM1	02530	code+table	
@@ -135,45 +131,41 @@ GARB1	02652	code+table
 GARB2	02714	code+table	
 GBD	02716	code+table	
 GBD1	02732	code+table	
-BDN	02743	table	multiply-defined,jms
+BDN	02743	table	jms
 BDC	02755	code+table	
-BDD	03001	table	
-BDE	03001	code	
-BD0	03010	table	
-BDO	03010	code	
+BDE	03001	code+table	
+BDO	03010	code+table	
 BDR	03024	code+table	
-FEL	03035	table	multiply-defined,jms
-FELN	03041	table	multiply-defined,jms
+FEL	03035	table	jms
+FELN	03041	table	jms
 NULLR	03070	table	jms
 INSRT	03076	table	jms
-FINDS	03113	table	multiply-defined,jms
-FINDN	03126	table	multiply-defined,jms
-FINDP	03141	code+table	multiply-defined,jms
+FINDS	03113	table	jms
+FINDN	03126	table	jms
+FINDP	03141	code+table	jms
 GRHA	03155	code+table	
 GR1	03165	code+table	
 GRRB	03221	code+table	
 GR2	03225	code+table	
 LKTEST	03260	code+table	
 LKERR	03265	code+table	
-ADDN	03266	table	multiply-defined,jms
-DSON	03310	table	multiply-defined,jms
-DELB	03324	table	multiply-defined,jms
+ADDW	03266	table	jms
+DSON	03310	table	jms
+DELB	03324	table	jms
 MESOUT	03352	code+table	jms
-WAIT	03375	code+table	multiply-defined,jms
+WAIT	03375	code+table	jms
 WAIT11	03404	code+table	
 WAIT12	03422	code+table	
 WAIT13	03437	code+table	
 WAIT9	03460	code+table	
 WAIT3	03464	code+table	
 WAIT7	03506	code+table	
-WAIT2	03547	table	
-WAITZ	03547	code	
+WAIT2	03547	code+table	
 WAIT8	03571	code+table	
 WAIT10	03606	code+table	
 WAIT1	03636	code+table	
 WAIT4	03650	code+table	
-WAIT5	03676	table	
-WAITS	03676	code	
+WAIT5	03676	code+table	
 WAIT6	03705	code+table	
 MESIN	03732	code+table	
 MESIN6	04005	code+table	
@@ -181,7 +173,7 @@ MESIN7	04015	code+table
 MESIN8	04036	code+table	
 MESIN9	04041	code+table	
 MESIN1	04050	code+table	
-MESIN2	04057	code	
+MESIN2	04057	code+table	
 MESIN3	04075	code+table	
 MESIN4	04122	code+table	
 MESL	04126	code+table	
@@ -197,7 +189,8 @@ ERRDF	04206	code+table
 ERRGB	04221	code+table	
 OUT	04237	table	jms
 INP	04260	table	jms
-COPOUT	04307	table	multiply-defined,jms
+COPOUT	04307	table	jms
+COPIN	04331	table	jms
 NOTE	04355	code+table	
 MESS	04366	code+table	
 MS	04367	code+table	
@@ -238,6 +231,7 @@ YBMC	05000	table
 MRKX	05001	table	
 MKER	05002	table	
 ALPHA	05003	table	
+DF	05005	table	
 LOPX	05006	table	
 T3	05007	table	
 U1	05010	table	
@@ -264,6 +258,7 @@ ADR1	05036	table
 BSZ	05037	table	
 SUMB	05040	table	
 MODE	05041	table	
+DACO	05042	table	
 ASR	05043	table	
 COMPOS	05044	table	
 VEPART	05045	table	
@@ -294,18 +289,16 @@ LEVEL	05116	code+table
 BLEVEL	05117	code+table	
 COUNT	05120	code+table	
 CON	05121	code+table	
-CON1	05122	code	
-DRAWHG	05123	table	
-DRAWMO	05123	code	
+CON1	05122	code+table	
+DRAWMO	05123	code+table	
 SWITCH	05124	code+table	
-CONSTX	05125	code	
+CONSTX	05125	code+table	
 CONSTB	05126	code+table	
 CONSTC	05127	code+table	
 CONSTD	05130	code+table	
 CONSND	05131	code+table	
 RMODE	05132	code+table	
-CHODE	05133	table	
-CMODE	05133	code	
+CMODE	05133	code+table	
 MBLINK	05134	code+table	
 BLINK	05135	code+table	
 SCRABL	05136	code+table	
@@ -325,7 +318,7 @@ COLON	05154	code+table
 CR	05155	code+table	
 DFB	05156	code+table	
 DFE	05157	code+table	
-DFERES	05160	code	
+DFERES	05160	code+table	
 DFENOR	05161	code+table	
 BEG	05162	code+table	
 END	05163	code+table	
@@ -364,8 +357,7 @@ TRCR	05466	code+table
 STPCD	05504	code+table	
 CLOCK	05534	code+table	
 EDGEV	05571	code+table	
-EDGEH	05605	code	
-EDGEN	05605	table	
+EDGEH	05605	code+table	
 POSCR	05621	code+table	
 TRACK	05637	code+table	
 YCROSS	05640	code+table	
@@ -379,17 +371,14 @@ FD	06030	code+table
 CD	06045	code+table	
 ED	06050	code+table	
 TD	06062	code+table	
-GD	06070	table	
-DRAMD	06073	table	
-DRAMO	06073	code	
+GD	06070	code+table	
+DRAMO	06073	code+table	
 STRAIG	06100	code+table	
 RUBBER	06105	code+table	
-ENDCOM	06113	code	
-ENDCON	06113	table	
+ENDCOM	06113	code+table	
 ENDDRA	06115	code+table	
 POIMO	06207	code+table	
-ATTMO	06221	code	
-ATTMU	06221	table	
+ATTMO	06221	code+table	
 MORE	06226	code+table	
 LESS	06237	code+table	
 STRCR	06252	code+table	
@@ -400,14 +389,13 @@ MOD	06335	code+table
 INSRTN	06343	code+table	
 SETCL	06364	code+table	
 TESTIN	06371	code+table	
-COPFIR	06430	code	
+COPFIR	06430	code+table	
 COPSND	06446	code+table	
 DELLEV	06464	code+table	
 SEGX	06476	code+table	
 SEGY	06510	code+table	
 SEGXY	06521	code+table	
-TDDIS	06542	table	
-TODIS	06542	code	
+TODIS	06542	code+table	
 INSRET	06554	code+table	
 SEGRXY	06565	code+table	
 SEGCX	06606	code+table	
@@ -456,17 +444,15 @@ AMEND4	07764	code+table
 AMEND5	07775	code+table	
 TESTJN	10013	code+table	
 VAIN	10051	code+table	
-WRLTO	10100	table	multiply-defined,jms
 VAIN2	10101	code+table	
 DISCON	10116	code+table	
 DISCO1	10125	code+table	
-WRLB	10134	table	multiply-defined,jms
 DISCO2	10143	code+table	
 DISCO3	10144	code+table	
 POSIT	10160	code+table	
-COMPIL	10170	code+table	multiply-defined,jms
+COMPIL	10170	code+table	jms
 COMP	10241	code+table	
-COMP10	10306	code	
+COMP10	10306	code+table	
 COMP9	10307	code+table	
 COMP14	10364	code+table	
 COMP1	10423	code+table	
@@ -479,27 +465,28 @@ RLINE	10625	code+table
 COMP11	10631	code+table	
 COMP12	10656	code+table	
 COMP13	10670	code+table	
-GETD	10701	table	multiply-defined,jms
+GETD	10701	table	jms
 GETD1	10716	code+table	
-FLEAS	10717	table	multiply-defined,jms
+FLEAS	10717	table	jms
 FLEA1	10734	code+table	
 FLEA2	10744	code+table	
 FLEA3	10752	code+table	
 SUBP	10753	code+table	
 PNT1	10754	code+table	
 PNT2	10755	code+table	
-WRDF	10756	table	multiply-defined,jms
+WRDF	10756	table	jms
 STAKX	10765	table	jms
 STAKY	10777	table	jms
-UNSTKX	11011	table	multiply-defined,jms
-UNSTKY	11023	table	multiply-defined
-DRLTD	11035	table	multiply-defined,jms
+UNSTKX	11011	table	jms
+UNSTKY	11023	table	jms
+DRLTO	11035	table	jms
+WRLTO	11100	table	jms
+WRLB	11134	table	jms
 WRLB2	11203	code+table	
 WRLB1	11210	code+table	
 WRLB3	11225	code+table	
-VECGN	11237	code	
-VECON	11237	table	
-WINDOW	11403	code+table	multiply-defined,jms
+VECGN	11237	code+table	
+WINDOW	11403	code+table	jms
 ONEIN	11470	code+table	
 TWOIN	11500	code+table	
 LOCATE	11510	code+table	jms
@@ -544,10 +531,10 @@ PBDM	11777	table
 XBML	12000	table	
 YBML	12001	table	
 XBM	12002	table	
-ENDEX	12003	table	
+ENOEX	12003	table	
 PNTX	12004	table	
 YBM	12005	table	
-ENDEY	12006	table	
+ENOEY	12006	table	
 PNTY	12007	table	
 CERRGB	12010	table	
 FREE	12011	table	
@@ -576,6 +563,7 @@ INT1	12037	table
 CTEMPX	12040	table	
 CTEMPY	12041	table	
 CBUSY	12042	table	
+BPNTX	12043	table	
 BPNTY	12044	table	
 POS	12045	table	
 BCON	12046	table	
@@ -591,7 +579,6 @@ TEMPXL	12057	table
 TEMPYL	12060	table	
 SAVVE	12061	table	
 XTOTUP	12062	table	
-BPNTX	12063	table	
 YTOTUP	12063	table	
 VAIN1	12064	table	
 TEST	12065	table	

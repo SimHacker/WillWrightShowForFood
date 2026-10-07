@@ -1,0 +1,2779 @@
+<html>
+
+<head>
+<title>The JC Rules</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+
+<h1><a name="3-CA-rules">The JC Rules</a></h1>
+
+A collection of sample rules are provided with <i>CelLab</i>.  These are the
+rules which are displayed by <b>JCdemo</b>.  Each of these rules
+is on the disk as a <em>Rule</em><tt>.JC</tt> file.  For each rule there is
+also a <em>Rule</em><tt>.PAS</tt> file giving the Pascal source code for the
+ruleprogram which was compiled and run to generate <em>Rule</em>
+<tt>.JC</tt>.  For many of the programs we provide C source code <em>
+Rule</em><tt>.C</tt> as well, and for a few we also give the BASIC program
+<em>Rule</em><tt>.BAS</tt>.
+
+<p>
+
+Many of our rules are copies or variations of rules to be found in
+the 1987 book, <em>Cellular Automata Machines</em>, by Tommaso Toffoli
+and Norman Margolus.
+For each of our rules, the table below gives the
+most closely related rules from <a href="refs.html#[Margolus&amp;Toffoli87]">[Margolus&amp;Toffoli87]</a>, with page
+number.  Where our rule is identical to the one from Margolus &amp;
+Toffoli, we put an equals sign.
+
+<p>
+
+<center>
+<table border>
+<tr>
+<th valign=bottom>JC Name
+<th valign=bottom>Same?
+<th valign=bottom> Margolus &amp; Toffoli<br>Related Rules
+<th valign=bottom>Page
+<tr><td><a href="#Aurora">Aurora</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp;
+<tr><td><a href="#Axons">Axons</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>     
+<tr><td><a href="#Balloons">Balloons</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td> 
+<tr><td><a href="#Bob">Bob</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>         
+<tr><td><a href="#Border">Border</a> <td align=center> = <td align=center> Border/Hollow <td align=center> 113 
+<tr><td><a href="#BraiLife">BraiLife</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>     
+<tr><td><a href="#Brain">Brain</a> <td align=center> = <td align=center> Brian's Brain <td align=center> 47 
+<tr><td><a href="#Dendrite">Dendrite, DenTim</a> <td align=center>&nbsp;<td align=center> &nbsp;Naive-Diffusion, Dendrite&nbsp; <td align=center> 84, 168 
+<tr><td><a href="#EcoLiBra">EcoLiBra</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>  
+<tr><td><a href="#Faders">Faders</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>  
+<tr><td><a href="#Flick">Flick</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>  
+<tr><td><a href="#Fractal">Fractal</a> <td align=center> = <td align=center> Me-Neither <td align=center> 132 
+<tr><td><a href="#FredMem">FredMem</a> <td>&nbsp;<td align=center> Parity (w/7 bit Echo) <td align=center> 31 
+<tr><td><a href="#Gyre">Gyre</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td> 
+<tr><td><a href="#Heat">Heat, HeatWave</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>     
+<tr><td><a href="#HGlass">HGlass</a> <td align=center> = <td align=center> Hglass <td> 29 
+<tr><td><a href="#Hodge">Hodge</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td> 
+<tr><td><a href="#Langton">Langton</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>        
+<tr><td><a href="#Life">Life</a> <td align=center> = <td align=center> Life with Echo <td align=center> 23 
+<tr><td><a href="#Parks">Parks</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td> 
+<tr><td><a href="#PerfumeT">PerfumeT</a> <td align=center> = <td align=center> TM-Gas/Walls <td align=center> 160 
+<tr><td><a href="#PerfumeT">PerfumeX</a> <td align=center>&nbsp;<td align=center> HPP-Gas (w/Wall) <td align=center> 123 
+<tr><td><a href="#Pond">Pond</a> <td align=center>&nbsp;<td align=center> TM Gas, Circular wave <td align=center> 131, 172 
+<tr><td><a href="#RainZha">RainZha</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>  
+<tr><td><a href="#Ranch">Ranch</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>  
+<tr><td><a href="#RevEcoli">RevEcoli</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>    
+<tr><td><a href="#Rug">Rug, RugF, RugLap</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>         
+<tr><td><a href="#ShortPi">ShortPi</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>      
+<tr><td><a href="#Soot">Soot</a> <td align=center>&nbsp;<td align=center> TM-Gas, Dendrite <td align=center> 131, 168 
+<tr><td><a href="#SoundCa">SoundCa</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>        
+<tr><td><a href="#Sublime">Sublime</a> <td align=center> = <td align=center> 2D-Brownian <td align=center> 156 
+<tr><td><a href="#TimeTun">TimeTun</a> <td align=center> = <td align=center> Time-Tunnel <td align=center> 52 
+<tr><td><a href="#Venus">Venus</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td>          
+<tr><td><a href="#Vote">Vote</a> <td align=center>&nbsp;<td align=center> Anneal (w/1 bit Echo) <td align=center> 41 
+<tr><td><a href="#3-CA-votedna">VoteDNA</a> <td align=center>&nbsp;<td>&nbsp;<td>&nbsp; <td> 
+<tr><td><a href="#XTC">XTC</a> <td align=center>&nbsp;<td align=center> HPP-Gas &amp; TM-Gas <td align=center> 123, 131 
+<tr><td><a href="#Zhabo">Zhabo, Zhabof,<br>Zhaboff</a> <td align=center> = <td align=center> Tube-Worms <td align=center> 83 
+</table>
+</center>
+
+<p>
+
+Now I'm going to say a little about each of these rules, taking them
+in alphabetical order.
+
+<h3><a name="Aurora">AURORA</a></h3>
+
+<img src="figures/aurora.gif" alt="" align=left hspace=15 width=320 height=200>
+The worldtype used here is that of a 1D two-neighbor ring.
+That means that EveryCell can see the low four bits of its left (west)
+neighbor and the low four bits of its right (east) neighbor. We call
+these two fourbit quantities <i>L</i> and <i>R</i> respectively, and call the low
+four bits of EveryCell's own state <i>C</i>. Thus we are looking at a rule
+where cells effectively have sixteen states: binary <b><tt>0000</tt></b> through
+binary <b><tt>1111</tt></b> or decimal 0 through decimal 15.
+
+<p>
+
+The rule for Aurora is a one-dimensional version of the RC Rug rule:
+EveryCell's new state is taken to be one greater than the neighborhood
+average of <i>L</i>, <i>C</i>, and <i>R</i>. That is, we have
+
+<p>
+<center>
+JCRule = ((<i>L</i> + <i>C</i> + <i>R</i>) / 3) + 1
+</center>
+<p>
+
+When a color value reaches 16, it is rounded back down to 0.  The
+effect produced is like globby paint running down the screen, though
+really you are seeing "one-dimensional gliders" moving back and
+forth and interacting.  Programs defining the Aurora rule
+are available in the
+<a href="ruledef-pas.html#Aurora-pas">Pascal</a>,
+<a href="ruledef-c.html#Aurora-c">C</a>, and
+<a href="ruledef-bas.html#Aurora-bas">BASIC</a> languages.
+
+<p>
+
+I called the rule Aurora because when I visited Norman Packard's
+office at the Institute for Advanced Study in 1985, he showed me a
+smoother (eight visible neighbor bits and 255 colors) version of this
+rule and remarked that it looked like the northern lights.
+<br clear=left>
+
+<p>
+
+Aurora is one of five predefined 1D rules we include with JC, the
+other being <a href="#Axons">Axons</a>, <a href="#Parks">Parks</a>, <a href="#ShortPi">ShortPi</a>, and <a href="#SoundCa">SoundCa</a>.
+<a href="footnote.html#F3_6"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<h3><a name="Axons">AXONS</a></h3>
+
+<img src="figures/axons.gif" alt="" align=left hspace=15 width=320 height=200>
+The very simplest cellular automaton rules are one-dimensional rules
+which have only
+two states, and where a cell's new state is determined wholly by the
+<i>L</i>+<i>C</i>+<i>R</i> sum of the cell and its two nearest neighbors. There are only 16
+distinct rules of this type. The sixteen rules are gotten by the
+sixteen different ways of filling four zeroes and ones into the four
+spaces in the second line of a teensy lookup table:
+<br clear=left>
+
+<p>
+
+<center>
+<table border>
+<tr><td align=center><i>L</i>+<i>C</i>+<i>R</i> <td> 3 <td>  2 <td>  1 <td>  0
+<tr><th>NewState  <td> 0 <td>  0 <td>  1 <td>  0
+</table>
+</center>
+
+<p>
+
+These rules are spoken of as having a "totalistic Wolfram Code"
+which
+is the integer gotten by regarding the four bits put into the table as
+the four bits of a binary integer. The table as illustrated holds the
+bits <b>0010</b>, which is of course binary for the number 2. So the
+illustrated rule has totalistic Wolfram code number 2. (See
+<a href="refs.html#[Wolfram86]">[Wolfram86]</a> for details.)
+
+<p>
+
+The next level of generality is to look at one-dimensional CA rules of
+only two states whose new state is determined by the LCR contents of
+the cell and its two neighbors. At this next level of generality, we
+pay attention to the positions of the bits. There are 256 distinct
+rules of this type.  The 256 rules are gotten by the 256 different
+ways of filling eight bits into the eight spaces in the second line of
+a tiny lookup table:
+
+<p>
+
+<center>
+<table border>
+<tr><td><tt>LCR</tt> <td> <tt>111</tt> <td> <tt> 110</tt> <td> <tt>101</tt> <td> <tt>100</tt> <td>
+        <tt>011</tt> <td> <tt>010</tt> <td>  <tt>001</tt> <td> <tt>000</tt>
+<tr><th>NewState <td align=center>  0  <td align=center>  0 <td align=center>  0 <td align=center>   1  <td align=center>  0 <td align=center>   1  <td align=center>  1 <td align=center>   0
+</table>
+</center>
+
+<p>
+
+These rules have a "Wolfram Code" which is the integer gotten by
+regarding the eight bits put into the table as an eight bit binary
+integer.  The table illustrated holds the bits <b><tt>00010110</tt></b> which is
+binary for 22.  So the rule has Wolfram code number 22.
+
+<p>
+
+As it turns out, rule 22 is the same as totalistic rule 2: in each
+case a cell's new state is 1 if and only if there is exactly one
+firing bit among <tt>L</tt>, <tt>C</tt>, and <tt>R</tt>.  But of course many
+rules are not equivalent to totalistic rules.
+
+<p>
+
+The rule Axons which we show is this same rule #22 (or totalistic
+rule #2)... with one extra feature.  Axons is the <em>reversible</em>
+version of rule 22.
+
+<p>
+
+The trick for making Axons "reversible" is given in detail in my
+discussion of the Fractal rule below.  For now, suffice it to note
+that, once Axons is running, you can press the letters <b>O</b> and
+<b>S</b> to see the rule start running "backwards."
+
+<p>
+
+I named this rule Axons after the long nerve fibers known as axons.
+These are up to several feet long, and are coated in a fatty sheath
+that pinches in every now and then. The Axons rule grows long fibers
+that are swathed in pinchy sausage casing, just like the cells. The
+fibers are continuous precisely because this rule is reversible. The
+existence of a firing cell, or of a hole in the cells, can't be
+forgotten (unless you bump into a mask cell). So the fibers bounce and
+tangle, but they never just stop.
+
+<p>
+
+In order that some complexity accumulates, a reversible rule needs
+some input, so I provide for mask cells which periodically pulse cells
+on. The existence of these periodic masks can of course interfere with
+perfect reversibility. In the case of Axons, the mask cells get
+covered over rather soon.
+
+<p>
+
+For the sake of elegance, I could have written Axons as a totalistic
+rule with code 2.  "Wow, that's pretty!  What's the program?"
+"Binary <b><tt>10</tt></b>.  The number two.  I wonder if I can patent it."
+Actually I wrote Axons as a general <tt>LCR</tt> Wolfram rule so that you
+can try putting different <tt>WolfCode</tt>s in, recompiling the rule, and
+running the variants.
+
+<p>
+
+If you use <tt>WolfCode</tt> 178 you get a really neat rule which I call
+Bamboo.
+
+<p>
+
+<pre>
+PROGRAM Axons;
+{A one dimensional rule that only looks at one bit of two
+neighbors.  We run it as WorldType 3, which gets one bit
+from each of 8 neighbors.  The rule is totalistic, meaning
+that it only looks at the sum of its neighborhood.  The rule
+is also reversible, meaning that it saves its past state and
+XORs its calculated new state with the past state.  A final
+touch to make this rule look good is that I use my extra six
+bits of state as a five bit clock and as a mask indicator.
+Whenever the clock counts up to 31, I turn on the bits where
+mask is on.  The start pattern for this consists of two dots
+with bit #0 turned on, all the times set to 0, and a pair
+of dots with mask set to 1.  You can vary the constant
+WolfCode to get other pictures.}
+USES JCMake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(OldState,LLLL,LLL,LL,L,Self,
+                         R,RR,RRR,RRRR:integer):integer;
+{This world type has variables for a cell and its eight
+nearest neighbors.  This rule actually only uses L,C, and R,
+but we write it for the other variables so that this program
+can be used as a template for WorldType 2 &amp; 3 programs that
+do use eight one-bit neighbors.}
+CONST
+     WolfCode=22;
+VAR
+     Sum,PastSelf,NewSelf,NewState,Time,Mask:integer;
+BEGIN
+     Sum:=(4*L+2*Self+R);
+     PastSelf:=(OldState SHR 1) AND 1;
+     NewSelf:=(WolfCode SHR Sum) AND 1;
+     NewState:=(Self SHL 1) OR (NewSelf XOR PastSelf);
+     Time:=(OldState SHR 2) AND 31;
+     Mask:=(OldState SHR 7) AND 1;
+     IF Time=31 THEN JCRule:=(Mask SHL 7) OR (NewState)
+                                          OR Mask
+     ELSE JCRule:=(Mask SHL 7) OR ((Time+1)SHL 2)
+                               OR (NewState)
+END;
+
+BEGIN {Main}
+     WorldType := 3;     {World type: 8 neighbor ring}
+     PalReq:= 'Mask3';   {Only show low two bits}
+     PatReq:= 'Axons';
+     GenRule(JCRule);
+END.
+</pre>
+
+<h3><a name="Balloons">BALLOONS</a></h3>
+
+<img src="figures/balloons.gif" alt="" align=left hspace=15 width=320 height=200>
+Balloons was discovered by Brian Silverman using his "Phantom
+Fishtank" program (<a href="refs.html#[Silverman87]">[Silverman87]</a>). The ruletable technique of
+describing programs in the RC rulestyle Random was inspired by
+Silverman's program. Balloons is written so it can be used as a
+template for making a high-res JC version of any interesting ruletable
+you might find or create in RC.
+
+<p>
+
+Balloons is driven by Silverman's Brain rule.  If enough firing Brain
+cells are together, they turn on a permanent firing cell.  These
+permanent firing cells serve as seeds around which more turned-on
+cells agglutinate.  If a turned on cell is entirely surrounded, it
+changes state, so that one soon gets the effect of cells with
+membranes.  As a final fillip, if there is too much excitement at a
+cell's membrane, the membrane bursts and the cell goes over to a
+"dead" state which can slowly be nibbled away by the ever active
+Brain rule.
+<br clear=left>
+
+<p>
+
+In order to make the JC version of Balloons look as much as possible
+like a zoomed-back version of the RC rule, the program uses a
+colorpalette <b>RC.JCC</b> which, when used on a
+VGA monitor, imitates the sixteen textmode colors of RC.
+
+<p>
+
+<pre>
+PROGRAM Balloons;
+{This realizes one of the RC ruletables.  Any other RC
+ruletable can be implemented by making a copy of this
+program and changing the entries in the table below.  }
+USES JCmake;
+{$F+}
+FUNCTION
+JCRule(Oldstate,NW,N,NE,W,Self,E,SW,S,SE:integer):integer;
+CONST
+     RuleTable: ARRAY[0..143] OF integer=    (
+                      {EightSum}
+        {0    1    2   3    4     5    6    7    8}
+{State}
+  {0}    0,   0,  15,  0,   0,    0,   5,   0,   0,
+  {1}    0,   0,   0,  0,   0,    0,   0,   0,   0,
+  {2}    0,   0,   0,  0,   0,    0,   0,   0,   0,
+  {3}    0,   0,   0,  0,   0,    0,   0,   0,   0,
+  {4}    4,   4,   8,  4,   4,    4,   4,   4,   4,
+  {5}    5,   5,   5,  5,   5,    7,   7,   9,  11,
+  {6}    2,   2,   2,  2,   2,    2,   2,   2,   2,
+  {7}    5,   5,   5,  5,   5,   13,  13,   9,  11,
+  {8}    8,   8,  10,  8,   8,    8,   8,   8,   8,
+  {9}    2,   2,   2,  2,   2,    9,  13,   9,  11,
+  {10}  10,  10,   0, 10,  10,   10,  10,  10,  10,
+  {11}  14,  14,  14, 14,  14,   14,  14,  14,  11,
+  {12}  12,  12,   4, 12,  12,   12,  12,  12,  12,
+  {13}   6,   6,   6,  6,  13,   13,  13,   9,  11,
+  {14}  14,  14,  14, 12,  14,   14,  14,  14,  14,
+  {15}   2,   2,   2,  2,   2,    2,   2,   2,   2 );
+
+VAR
+     EightSum,Index:integer;
+BEGIN  {Function}
+     OldState:=OldState AND 15;
+     EightSum:=NW+N+NE+E+SE+S+SW+W;
+     Index:=9*OldState + EightSum;
+     JCRule:=RuleTable[Index]
+END;  {Function}
+BEGIN {Main}
+{The RC palette reproduces the textmode state colors of RC}
+     PalReq:='RC';
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="Bob">BOB</a></h3>
+
+<img src="figures/bob.gif" alt="" align=left hspace=15 width=320 height=200>
+The Bob rule was inspired by the Hodge
+rule described below; see that
+rule's description for more information.  In the Bob rule, I use the
+standard default WorldType 0 where I only see one bit of each of my
+neighbors, so I must replace the averaging "Laplacian spread"
+component of Hodge by some other trick.  I add the the number of
+nonzero neighbors to a nonzero cell's state.  The patterns aren't that
+close to the patterns of Hodge, but they are interesting, and if you
+wait awhile you will see some Zhabotinsky action in the form of small
+paired spirals.
+
+<p>
+
+The Bob rule's standard startup is with the Bob pattern, using the
+subtle grayscale Bob palette that incorporates touches of yellow and
+red.  The Bob pattern is a picture of "Bob®", the chief religious
+icon of the radical mockery scorn religion called
+<a href="http://sunsite.unc.edu/subgenius/">The Church of the
+SubGenius</a>.
+"Bob" looks like the typical 1950s cartoon Dad.  As the
+Bob rule dissolves and reforms "Bob"'s visage, he goes through a
+remarkable series of image transformations, demonstrating the terrific
+power of cellular automata for creative image processing.
+<br clear=left>
+
+<p>
+
+It's also fun, by the way, to feed the "Bob" pattern to a straight
+averaging rule by loading <b>*Laplace</b>.
+Laplace turns "Bob"
+into a urine-stained tabloid newspaper photo of a "face on Mars."
+
+<p>
+
+If you start the Bob rule from a random screen, it will take three or
+four hundred generations until you start seeing circular centers of
+activity, like bacterial cultures in a petri dish. After a thousand
+generations these centers have taken over. If you then cut out a black
+hole with the screen editor, the plaguey culture will flicker around
+the hole like flames. The flame illusion is enhanced if you use the
+<b>Default</b> colorpalette.
+
+<p>
+
+<pre>
+PROGRAM Bob;
+{This is modeled on the Hodgepodge rule of Gerhardt and
+ Schuster, and can produce mild Zhabotinsky reactions.  The
+ start pattern used is the Shroud of Turing visage of "Bob".
+ "Bob" is the High Epopt of the Church of the SubGenius.
+ For more information about "Bob" and the Church, send $1
+ and a long stamped self-addressed envelope to:
+
+          The SubGenius Foundation
+          Box 140306
+          Dallas, TX 75214
+
+ The image of "Bob" is a registered trademark of the Church
+ of the Subgenius and is used by special arrangement with
+ Douglas St. Claire Smith, a.k.a. Ivan Stang.  Inquiries
+ about further usage of "Bob"'s image should be directed to
+ Mr. Smith c/o The SubGenius Foundation.}
+
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+{The odd states are thought of as infected states.  A cell
+ in state zero enters an infected state if it has any
+ infected neighbors.  An infected cell becomes more infected
+ until its state exceeds 129, at which time it drops back to
+ 0.}
+VAR
+     EightSum,Sickness,NewState:integer;
+
+BEGIN  {Function}
+     EightSum:=NW+N+NE+E+SE+S+SW+W;
+     IF OldState=0
+          THEN IF EightSum=0 THEN NewState:=0
+                    ELSE NewState:=EightSum OR 1
+               ELSE
+          BEGIN
+          Sickness:=OldState SHR 1;
+               IF Sickness=64
+               THEN NewState:=0
+          ELSE
+          BEGIN
+               Sickness:=Sickness+EightSum+3;
+               IF Sickness&gt;64 THEN Sickness:=64;
+               NewState:=(Sickness SHL 1) OR 1
+          END
+          END;
+     JCRule:=NewState
+END;  {Function}
+BEGIN {Main}
+     PatReq:='Bob';
+     PalReq:='Bob';
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="Border">BORDER</a></h3>
+
+<img src="figures/border.gif" alt="" align=left hspace=15 width=320 height=200>
+Border is a rule which uses two bits. One of the bits is a
+background "cycle" bit, and the other bit is a visible on/off
+firing/dead bit. The Cycle bit toggles Border between two modes: Flood
+mode and Hollow mode. In Flood mode, Border turns on any cell which is
+touching a firing cell. In Hollow mode, Border turns off any cell
+which is at the center of an all-firing nine-cell neighborhood.
+
+<p>
+
+The effect of Border is that lines keep getting thick, splitting into
+two, having the new pieces get thick and split to make four, and so
+on. Many of the Border patterns are reminiscent of the mathematical
+objects called "Cantor sets."
+
+<p>
+
+Border starts from the pattern Square, but it could equally well start
+from a single dot. The rule begins to get exciting when the expanding
+square wave from the center wraps around the screen edges and begins
+to interfere with itself. First the pattern wraps top and bottom, and
+then it wraps right and left; unlike CAM-6's
+256×256 screen, our
+screen is a rectangle.
+<br clear=left>
+
+<p>
+
+A good way to watch the interference patterns evolve is to use the
+arrow keys to pan the screen until the interference region is in
+screen center. This means that one fourth of the original square
+pattern is at each screen corner.
+
+<p>
+
+It is interesting to note that no matter how intricate the pattern
+gets, it is still the deterministic outcome of the simple Border rule
+starting on a single Square or Dot.
+
+<p>
+
+The <b>Border.PAS</b> file looks like this:
+
+<p>
+
+<pre>
+PROGRAM Border;
+{This rule alternates between two cycles: In cycle 0, every
+ cell touching a firing cell is turned on.  In cycle 1, any
+ cell which is the center of a block of 9 firing cells is
+ turned off.  Bit #0 is the firing bit and bit #7 is the
+ cycle bit.}
+USES JCmake;
+{$F+}
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,E,SW,S,SE:
+                integer):integer;
+     VAR
+          NineSum,Cycle,NewCycle,NewSelf:integer;
+     BEGIN
+          NineSum:=NW+N+NE+W+Self+E+SW+S+SE;
+          Cycle:=OldState SHR 7; {Shift down the high bit}
+          NewCycle:=Cycle XOR 1; {Change 0 to 1 and 1 to 0}
+          CASE Cycle OF
+               0: IF NineSum&gt;0 THEN NewSelf:=1 ELSE
+                    NewSelf:=0;         {Flood}
+               1: IF NineSum=9 THEN NewSelf:=0 ELSE
+                    NewSelf:=Self;      {Hollow}
+          END;
+          JCRule:=(NewCycle SHL 7) OR NewSelf;
+     END;
+BEGIN
+     PalReq:='Mask1'; {This colorpalette only looks at bit #0}
+     PatReq:='Square';
+     GenRule(JCRule);
+END.
+</pre>
+
+
+<h3><a name="BraiLife">BRAILIFE</a></h3>
+
+<center>
+<img src="figures/fig13.gif" width=641 height=360 alt="">
+</center>
+<br>
+<blockquote>
+<i>The JC BraiLife rule after 213 generations.
+A hauler is about to hit a butterfly just above and to the right of
+the center of the diamond shape.</i>
+</blockquote>
+<p>
+
+When I first started hacking cellular automata on the CAM-6
+in 1987,
+I couldn't quite see how to think of a completely new rule.  So I
+decided a good way to start might be to try combining some of the old
+rules, particularly the rules <a href="#Life">Life</a> and <a href="#Brain">Brain</a>.
+
+<p>
+
+Life is very interesting, but it tends to die out. Brain, on the other
+hand, is extremely hard to kill off; if anything, Brain is too
+persistent. So I thought I might try running Life and Brain in
+parallel, using Brain to stimulate Life, and using Life to dampen
+Brain.
+
+<p>
+
+At first I had every firing Brain cell turn on a Life cell, and had
+every firing Life cell turn off a Brain cell, but, run fullscreen,
+this reaction quickly wipes Brain out. You can see the fullscreen
+reaction by loading BraiLife, clearing all the screens, setting plane
+4 to 1, and randomizing plane 2. The keystrokes are as follows. Note
+that you do <em>not</em> press <b>Enter</b> after answering the "Initialize
+planes" prompts called up by pressing <b>I</b>:
+
+<p>
+
+<b>
+l<br>
+brailife<br>
+i<br>
+a<br>
+0<br>
+i<br>
+4<br>
+1<br>
+i<br>
+2<br>
+r<br>
+F1<br>
+Enter<br>
+</b>
+
+<p>
+
+Instead of letting Brain and Life interact across the whole screen, I
+set up the BraiLife start pattern as a disk-shaped mask in
+plane #4 and two firing Brain bits in plane #2. This is what you see
+if you load BraiLife and let it run unaltered.
+
+<p>
+
+Note how Brain grows an oriental-carpet-patterned diamond from a start
+of two adjacent firing blocks. Where this diamond sweeps across the
+limb of the central disk, Life cells are turned on within the
+disk. Some of the life manages to boil out into the black region
+outside the disk.
+
+<p>
+
+Graphically, the development of BraiLife makes me think of a UFO that
+hovers near the atmosphere of a fallow planet (these are the starting
+Brain dots). The UFO sets off an energy blast, and the shock wave of
+the blast sweeps across the planet like the EMP-spike from an H-bomb.
+But instead of being destructive, the UFO energy turns on living cells
+in the planetary sea. Some of these cells manage to crawl out and flap
+around in the planetary atmosphere. The UFO energy pulse breaks into
+spacecruising creatures who are usually poisoned if they try to return
+to the planet they seeded.
+
+<p>
+
+All this from a disk, two dots, and a few lines of code!
+
+<p>
+
+The way in which BraiLife runs two parallel rules is to cycle between
+doing one and the other. Only the bit in plane #0 is visible to
+neighbors, so each cell alternates between showing its firing Life bit
+in #0 and showing its firing Brain bit in #0.
+
+<p>
+
+Here is <b>BraiLife.PAS</b>:
+
+<p>
+
+<pre>
+PROGRAM BraiLife;
+{This rule runs Life and Brain in parallel and lets them
+ interact only within a certain masked region.  In this
+ region, firing Brain cells turn on Life cells, and firing
+ Life cells keep Brain cells from turning on.}
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,E,SW,S,SE:
+                                   integer):integer;
+{We use the eight bits of state as follows:
+ Bit #0 is used to show either the Brain
+        or the Life bit to neighbors;
+ Bit #1 is the Life bit,
+ Bit #2 is the firing Brain bit,
+ Bit #3 is the refractory Brain bit,
+ Bit #4 is the mask bit,and
+ Bit #7 is the cycle bit.}
+VAR
+     L,NewL,B,NewB,BR,NewBR,Mask,Cycle,NewCycle,
+          EightSum: integer;
+BEGIN
+     Cycle:=(OldState SHR 7) AND 1; { We AND with 1
+                                      because we only}
+     Mask:= (OldState SHR 4) AND 1; { want to extract one
+                                      bit of info.}
+     BR:=(OldState SHR 3) AND 1;
+     B:=(OldState SHR 2) AND 1;
+     L:=(OldState SHR 1) AND 1;
+     EightSum:=NW+N+NE+E+SE+S+SW+W;
+     IF Cycle=0 THEN     {This is the update Life cycle}
+          BEGIN
+               {The Life rule}
+               IF (EightSum=3)OR((EightSum=2)AND(L=1))
+                    THEN NewL:=1 ELSE NewL:=0;
+     {Turned on by firing Brain cells within region of mask}
+               IF (Mask=1)AND(B=1) THEN NewL:=1;
+               NewCycle:=1;
+               JCRule:=(NewCycle SHL 7) OR (Mask SHL 4) OR
+                    (BR SHL 3) OR
+                         (B SHL 2) OR (NewL SHL 1) OR B
+          END;
+     IF Cycle=1 THEN     {This is the update Brain cycle}
+          BEGIN
+               {The Brain rule}
+               IF ((BR=0)AND(B=0))AND(EightSum=2)THEN
+                         NewB:=1 ELSE NewB:=0;
+     {Turned off by firing Life cells within region of mask}
+               IF (L=1)AND(Mask=1) THEN NewB:=0;
+               NewBR:=B;
+               NewCycle:=0;
+               JCRule:=(NewCycle SHL 7) OR (Mask SHL 4) OR
+                              (NewBR SHL 3) OR
+                         (NewB SHL 2) OR (L SHL 1) OR L
+          END
+END;
+
+BEGIN           {Main program}
+     {The BraiLife.JCC colorpalette looks at bits 4,3,2, &amp;
+     1.  I got my colorpalette by disabling planes 0,5,6,7
+     of the Default.JCC and saving it as BraiLife.JCC}
+          PalReq:='BraiLife';
+     {The starting BraiLife pattern has all bit 7s set to 0
+     (for synchronized cycles), has two adjacent cells of
+     plane #2 turned on to start Brain, and has a big disk
+     mask in plane #4.}
+     PatReq:='BraiLife';
+     GenRule(JCRule);
+END.
+</pre>
+
+<h3><a name="Brain">BRAIN</a></h3>
+
+<img src="figures/brain.gif" alt="" align=left hspace=15 width=320 height=200>
+The one and only.  There's lots of material on Brain in
+the <a href="ruledef.html"><cite>Rule Definition</cite></a>
+chapter, explaining how to program it in
+<a href="ruledef-pas.html#Brain-pas">Pascal</a>,
+<a href="ruledef-c.html#Brain-c">C</a>,
+and <a href="ruledef-bas.html#Brain-bas">BASIC</a>.
+
+<p>
+
+To see the Butterfly Gun, get the pattern <b>BFLYGUN.JCP</b>.
+My Butterfly Gun starts out with an extra east-moving hauler whose
+purpose is to knock out a west-moving hauler which the Gun spits out
+before getting into its standard operation.  I once saw a much smaller
+butterfly gun while playing with RC; I think it only used three
+outriggers.  If you find a small butterfly gun, let me know and we'll
+put it in the next edition of the manual, if there is one.
+<br clear=left>
+
+<h3><a name="Dendrite">DENDRITE and DENTIM</a></h3>
+
+<center>
+<img src="figures/fig14.gif" width=637 height=398 alt="">
+</center>
+<br>
+<blockquote>
+<i>The JC Dendrite rule.
+The white "gas" particles "freeze" to the red teapot shape, forming
+dendrites.</i>
+</blockquote>
+<p>
+
+These rules both consist of a drifting "gas" pattern and a "frozen"
+seed pattern. The gas alternates between cycles of a) diffusing, and
+b) freezing if it is touching a frozen cell. The freezing process
+produces branching little dendrites of frozen cells. This phenomenon
+is a rough model for the physico-chemical process by which so-called
+<em>accretion fractals</em> are formed.
+
+<p>
+
+Dendrite shows a random gas and a frozen teapot; and DenTim shows a
+Tim-shaped gas and a frozen Autodesk logo.
+
+<p>
+
+The programs for the rules are the same except that Dendrite requests
+an random initial gas and DenTim requests a Tim-shaped initial gas.
+The programs store the gas bit in plane #7 and the frozen-cell bits
+in plane #6.  The cycle bit is in plane #5.  If the cycle bit is 0,
+we update the gas diffusion; and if the cycle bit is 1, we update the
+freezing.  The visible bit is always the bit in plane #0; as we
+change cycles we alternate between showing the gas bit or the freeze
+bit.  Depending whether we are updating Diffuse or Freeze, bit #0 is
+showing the gas bit or the freeze bit.  The rule starts up in cycle 0,
+so we start it up with some visible gas bits in plane #0.  The
+<b>Dendrite.JCC</b>
+colorpalette we use simply ignores all bits
+except #6 and #7.
+
+<p>
+
+The two rules use a cheap, imperfect method of mimicking gas
+diffusion.
+The trick is that at each gas update, each cell copies the
+gas value of one of its eight neighbors, the exact neighbor to be
+chosen at random. This is imperfect because it may happen that an
+individual firing gas particle may be copied by <em>two or more</em> of its
+neighbors (in which case one particle is splitting into several) or,
+just as bad, it may happen that an individual firing gas particle is
+copied by <em>none</em> of its neighbors (in which case a particle disappears).
+For a really good gas model, we would expect to have conservation of
+particles.
+
+<p>
+
+A gas with particle conservation can in fact be constructed (see the
+rules Sublime, PerfumeX, and
+PerfumeT), and we can indeed use these gases to grow
+dendrites as well (see Soot).
+
+<p>
+
+Why do the frozen cells of the Den... rules form those branching
+dendrites?  The reason is so simple as nearly to evade comprehension:
+it is much easier for a randomly jostling gas particle to bump into
+one of the dendrite's tips or "capes" than it is for the gas
+particle to find its way up into one of the indentations or
+"estuaries."
+
+<h3><a name="EcoLiBra">ECOLIBRA</a></h3>
+
+<p>
+<center>
+<img src="figures/fig15.gif" width=639 height=399 alt="">
+<br>
+<i>The JC EcoLiBra rule, a cross between Life and
+Brain.</i>
+</center>
+<p>
+
+This rule is a cross between <a href="#Life">Life</a> and <a href="#Brain">Brain</a>.  The basic idea is that
+the cells are divided between dark "sea" cells and light "land"
+cells.  We run Brain in the sea, and on land we run not Life but
+AntiLife.
+All the land cells are normally firing cells, and the
+presence of an active AntiLife cell is signaled by having a land cell
+which is <em>not</em> firing.  Full details on EcoLiBra are in §
+
+<p>
+
+The name EcoLiBra suggests 1) an ecology of Life and Brain, 2) a
+balanced situation (equilibrium), and 3) the human intestinal bacteria
+<i>Escherichia coli</i>, known as <i>E. coli</i> for short. The third connection is
+perhaps a bit unsavory, but remember that <i>E. coli</i> cells are in fact
+the favorite "guinea pigs" for present day genesplicing experiments.
+As one of the goals of <i>CelLab</i> is to promote the development of
+artificial life, the designer gene connection is entirely appropriate.
+I've given EcoLiBra a nice, symmetric start pattern, but
+it also does fine if you press <b>R</b> to randomize the screen. You can
+make a randomized screen a little more interesting by using the screen
+editor to drill a big black hole in the center. This can be done by
+using the following keystrokes
+
+<p>
+
+<blockquote>
+<b>
+l<br>
+EcoLiBra <em>Enter<br>
+Enter</em><br>
+r<br>
+e<br>
+0 </b><em>(the numeral zero)</em><br>
+<b>x</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Seven presses of the <b>Right Arrow</b> key</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Seven presses of the <b>Up Arrow</b> key</em><br>
+<b>d<br>
+e<br>
+<em>Enter</em></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Three presses of the <b>Left Arrow</b> key</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Three presses of the <b>Down Arrow</b> key</em>
+</blockquote>
+
+<p>
+
+The last arrow key presses are simply to pan the screen so that the
+hole is in the center. The hole will grow.
+
+<p>
+
+Here is the Pascal code for <b>EcoLiBra.PAS</b>:
+
+<p>
+
+<pre>
+PROGRAM EcoLiBra;
+{This rule runs Brain in the sea and AntiLife on land.  Six
+ or seven firing Brain cells turn a sea cell into land.
+ Seven "antifiring" Antilife cells turn a land cell into
+ sea.}
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,E,SW,S,SE:
+                                   integer):integer;
+{Here rather than thinking of bits, we think of state numbers.
+     State 0 is dead sea
+     State 1 is firing brain in sea
+     State 2 is refractory brain in sea
+     State 3 is dead land
+     State 4 is firing life on land}
+VAR
+     EightSum,NewState:integer;
+BEGIN     {Function}
+     EightSum:=NW+N+NE+E+SE+S+SW+W;
+     IF odd(OldState) THEN NewState:=3 ELSE NewState:=0;
+     IF OldState=0 THEN
+          CASE EightSum OF
+               2: NewState:=1;
+               6,7: NewState:=3;
+               ELSE NewState:=0;
+          END;
+     IF OldState=1 THEN NewState:=2;
+     IF OldState=2 THEN NewState:=0;
+     IF OldState=3 THEN
+          CASE EightSum OF
+               5: NewState:=4;
+               1: NewState:=0;
+               ELSE NewState:=3;
+          END;
+     IF OldState=4 THEN
+          CASE EightSum OF
+               5,6: NewState:=4;
+               ELSE NewState:=3
+          END;
+     JCRule:=NewState
+END;  {Function}
+
+BEGIN {Main}
+     PalReq:='Default';
+     PatReq:='EcoLiBra';
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="Faders">FADERS</a></h3>
+
+<img src="figures/faders.gif" alt="" align=left hspace=15 width=320 height=200>
+Faders is my pride and joy. I found Faders by playing with the rule
+editor in RC, while thinking about the similarities and differences
+between <a href="#Life">Life</a> and <a href="#Brain">Brain</a>.
+What Life and Brain have in common is the
+<em>threshold</em> property: in each rule a dead (state 0) cell requires a
+certain number of firing neighbors to get turned on. Life requires
+exactly 3 firing neighbors, Brain requires exactly 2. The singular
+thing about Life is <em>persistence</em>: a firing Life cell keeps firing if it
+has either 2 or 3 firing neighbors, (otherwise it dies and goes back
+to state 0). The singular thing about Brain is <em>memory</em>: a firing Brain
+cell goes to a refractory state which "remembers" that it used to be
+firing, and only later does the cell transform to state 0, which can
+be restimulated to fire.
+
+<p>
+
+In Faders I perform a "genetic" cross between Life and Brain by
+describing a rule which has threshold, persistence, <em>and</em> memory. A dead
+Faders cell requires exactly 2 firing neighbors to get turned on. A
+firing Faders cell keeps firing if it has exactly 2 firing neighbors.
+And when a Faders cell leaves the firing state it goes into a sequence
+of refractory states. Instead of having just 1 refractory state (like
+Brain), the JC Faders has 127 refractory states.
+<br clear=left>
+
+<p>
+
+Note that the version of Faders implemented in RC has only 7
+refractory states.  Faders with any desired number n of refractory
+states can be seen by entering the name <tt>N(<em>n</em>2222)</tt> when JC
+asks for the name of a rule to load.  This works because Faders is an
+"NLUKY rule"
+as <a href="chap4.html#4-TH-semit">described in the Theory chapter</a>.  JC is designed to
+automatically generate and load NLUKY ruletables.  For any positive
+integers n,l,u,k,y with l,u,k,y less than 10, entering <tt>N(</tt><em>
+nluky</em><tt>)</tt> with the integer names run together will cause JC to show the
+appropriate "<a href="chap4.html#4-TH-semit">NLUKY rule</a>".
+
+<p>
+
+JC faders looks really great in VGA, but is also pretty interesting in
+CGA. The white cells are the firing cells. When Faders has a
+clear screen, it grows rapidly, leaving slowly dissolving trails
+behind. What keeps it coming back is that it can lay down "eggs" or
+"seeds" of activity. These eggs take the form of three adjacent firing
+cells configured into a small right-angle <b>L</b>-shape. You might call
+them fader eggs. Each cell in one of these threecell fader eggs has
+exactly two firing neighbors, so they persist until the refractory
+color veils dissolve and they can start turning on dead neighbors.
+
+<p>
+
+Faders looks good if you start it on our Billbord ad pattern. You can
+start it on any other pattern; even on a random screen. If you do
+start Faders on a random screen, it will look like nothing is
+happening for awhile. But just wait. When you randomize, you fill most
+of the screen with refractory states, but usually there will be some
+of those angle-iron eggs lurking in the haze, and as soon as it clears
+away they'll start spreading order.
+
+<p>
+
+Actually one of the best ways to start Faders is from a simple three
+block L or angle-iron of state 1 blocks. This pattern is stored as
+<b>Faderegg.JCP</b>.
+For a little practice with the editor, you can create this
+pattern with the screen editor and run Faders on it by using the
+following keystrokes.
+
+<p>
+
+<blockquote>
+<b>
+l<br>
+faders <em>Enter<br>
+F1</em><br>
+i a 0<br>
+e<br>
+1<br>
+<em>Ins<br>
+End<br>
+UpArrow<br>
+Ins<br>
+LeftArrow<br>
+Ins</em><br>
+e<br>
+<em>Enter</em></b>
+</blockquote>
+
+<p>
+
+The pattern seems to run endlessly and evolves in interestingly
+different ways according to whether you have JC in the plane nowrap
+mode or in the torus wrap mode.  If you want to run it in nowrap mode,
+press <b>F3</b> before starting.  The edges of the refractory faders
+patterns have an interesting fractal quality.  The rule keeps laying
+down fader eggs that reseed the center.  If you ran Faders from a
+single three-cell egg in an endless plane, I wonder how soon the
+pattern within some bounded N×N central region would repeat.
+For that matter, I wonder how soon it repeats on our screen?  If you
+find out, please write.
+
+<p>
+
+We have Faders set to run with a special Faders colorpalette, but
+other colorpalettes can give good results. The colorpalette called
+<b>AutoCAD.JCC</b> looks particularly good.
+
+<p>
+
+Here is a program for Faders. The program is actually designed to
+generate the lookup table for any NLUKY rule,
+according to how the
+<tt>CONST</tt> variables are set.
+
+<p>
+
+<pre>
+PROGRAM Faders;
+{NLUKY 127 2 2 2 2}
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+
+FUNCTION JCRule(Oldstate,NW,N,NE,W,
+                    Self,E,SW,S,SE:integer):integer;
+CONST
+     RN=127; L=2; U=2; K=2; Y=2;
+VAR
+     EightSum,NewState:integer;
+BEGIN  {Function}
+     EightSum:=NW+N+NE+E+SE+S+SW+W;
+     NewState:=0;
+     IF (OldState=0) AND (L&lt;=EightSum) AND
+        (EightSum&lt;=U) THEN NewState:=1;
+     IF (OldState=1) THEN
+        IF (K&lt;=EightSum) AND (EightSum&lt;=Y) THEN
+           NewState:=1
+        ELSE
+           NewState:=2;
+     IF NOT(odd(OldState)) AND 
+        (0&lt;OldState)AND(OldState&lt;2*RN) THEN
+        NewState:=OldState+2;
+     JCRule:=NewState
+END;  {Function}
+
+BEGIN {Main}
+{The Faders colorpalette shows state 0 as black, state 1 as
+ white, and steps the refractory states through the
+ spectrum.}
+     PalReq:='Faders';
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="Flick">FLICK</a></h3>
+
+<img src="figures/flick.gif" alt="" align=left hspace=15 width=320 height=200>
+Flick is named after "flickercladding," the CA skin which
+covers the robots in my books <cite><a href="refs.html#[Rucker82]">Software</a></cite>
+and
+<cite><a href="refs.html#[Rucker88]">Wetware</a></cite>.
+In Flick, we see an AutoShade®d office whose rug
+is made of flickercladding that runs the JC rule <a href="#TimeTun">TimeTun</a>.
+You can tell which parts of the picture are "rug" because
+these cells have their bit #7 set to 1.  This really only
+looks good on a VGA.
+<br clear=left>
+
+<p>
+
+<pre>
+PROGRAM Flick;
+{    Flickercladding Interior Decoration
+     Conceived by Rudy Rucker
+     Drawn by Gary Wells
+     Modeled with AutoCAD
+     Rendered by AutoShade
+     Perpetrated by Kelvin R. Throop.
+
+     In this rule, we only change the cells whose high bits
+     are on.  These cells are updated according to the
+     TimeTun rule.}
+
+USES JCMake; {$F+}
+FUNCTION JCRule(OldState,NW,N,NE,W,Self
+                         E,SW,S,SE:integer):integer;
+VAR
+     Interest, OldSelf,NewSelf,FiveSum: integer;
+     Fixed: Boolean;
+BEGIN
+     {Cell is Fixed if high bit is off}
+     Fixed := ((OldState SHR7)=0);
+     If Fixed THEN JCRule:=OldState ELSE
+          BEGIN
+               OldSelf:=(OldState SHR 1) AND 1;
+               FiveSum:=N+E+Self+S+W;
+               IF (FiveSum=0) OR (FiveSum=5) THEN
+                    Interest:=0 ELSE Interest :=1;
+               NewSelf:=Interest XOR OldSelf;
+               JCRule:=128 OR (Self SHL 1) OR NewSelf;
+          END
+END;
+BEGIN {Main}
+     PalReq:='OpenPlan';
+     PatReq:='OpenPlan';
+     GenRule(JCRule);
+END.
+</pre>
+
+<h3><a name="Fractal">FRACTAL</a></h3>
+
+<img src="figures/fractal.gif" alt="" align=left hspace=15 width=320 height=200>
+Fractal is a simple program which produces nice fractal patterns from
+a square. Each cell holds two bits: the present firing bit in plane #0
+and a memory bit in plane #1. The rule says to look at five bits: the
+firing bits of your four diagonal neighbors and your own memory bit.
+If an odd number of these five bits are on, you turn on, and otherwise
+you turn off. Before writing down your new firing bit value, you store
+your present firing bit value in your memory bit.
+
+<p>
+
+Fractal is a "<em>reversible</em>" rule which means that if
+at any time you press <b>O</b> and then <b>S</b> to swap the
+contents of plane #0 with plane #1, Fractal will run
+backwards, returning to its start pattern and proceeding
+onward into negative time.
+
+<p>
+
+Fractal is reversible because the rule for Fractal can be written this
+way:
+<br clear=left>
+
+<p>
+
+<center>
+<i>NewSelf</i> = (<i>Parity</i>(<i>Neighborhood</i>)-<i>OldSelf</i>) mod 2
+</center>
+
+<p>
+
+where <i>Parity</i> is 1 if <i>NE</i>+<i>NW</i>+<i>SE</i>+<i>SW</i> is odd and 0 if
+<i>NE</i>+<i>NW</i>+<i>SE</i>+<i>SW</i> is even.  The key thing about the equation
+just given is that, using the rules of algebra, we are
+allowed to swap <i>NewSelf</i> and <i>OldSelf</i> and get the equally
+valid equation:
+<a href="footnote.html#F3_7"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+<center>
+<i>OldSelf</i> = (<i>Parity</i>(<i>Neighborhood</i>)-<i>NewSelf</i>) mod 2
+</center>
+
+<p>
+
+This means that the rule for passing from new to old is the
+<em>same</em> as the rule for passing from old to new.  Let's
+see why this means that pressing <b>O</b> and <b>S</b> makes
+Fractal run backwards.
+
+<p>
+
+If it is now time <i>T</i>, and plane #1 holds my screen at
+time <i>T</i>-1, then applying Fractal will: i) compute the
+screen for time <i>T</i>+1 and put this in plane #0, ii)
+meanwhile moving the old time <i>T</i> info from plane #0 into
+plane #1, and then iii) showing planes #0 and #1 on the
+screen.
+
+<p>
+
+Suppose that I now press <b>O</b> and <b>S</b> and swap the
+info in planes #0 and #1.  Now the time <i>T</i> info is in
+plane #0 and the time <i>T</i>+1 info is in plane #1.  The
+fractal rule computes the parity of each time <i>T</i> cell's
+neighborhood and subtracts off plane #1 value.  But because
+we pressed <b>O</b> and <b>S</b>, the plane #1 value is the
+cell value for time <i>T</i>+1.  Therefore the equation
+
+<p>
+
+<center>
+<i>OldSelf</i> = (<i>Parity</i>(<i>Neighborhood</i>)-<i>NewSelf</i>) mod 2
+</center>
+
+<p>
+
+applies, and the value we compute is indeed <i>OldSelf</i>, the
+value at time <i>T</i>-1!  So now time <i>T</i>-1 values are put in
+plane #0 and time <i>T</i> values are saved in plane #1.  The
+next application of the Fractal rule calculates the values
+for time <i>T</i>-2, and so on.
+
+<p>
+
+<pre>
+PROGRAM Fractal;
+{Based on Me-Neither rule, <a href="refs.html#[Margolus&amp;Toffoli87]">[Margolus&amp;Toffoli87]</a>,p.132}
+USES JCmake;
+{$F+}  { Required for function argument to genrule. }
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,E,
+                         SW,S,SE:integer):integer;
+VAR
+     Bit1,FourSum,Parity, NewSelf : integer;
+BEGIN  {Function}
+     Bit1:=(OldState SHR 1) AND 1;
+           {Get the memory bit from plane #1}
+     FourSum:=NE+NW+SE+SW;
+     {Sum up the low bits of your 4 present neighbors}
+     IF odd(FourSum) THEN Parity:=1 ELSE
+           Parity:=0; {Set Parity from FourSum}
+     NewSelf:= Parity XOR Bit1;
+     {A XOR Bit1 is same as (A-Bit1) MOD 2}
+     {Store present self in plane #1}
+     JCRule:=(Self SHL 1) OR NewSelf;
+END;  {Function}
+BEGIN {Main}
+     PatReq:='Square';
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="FredMem">FREDMEM</a></h3>
+
+<img src="figures/fredmem.gif" alt="" align=left hspace=15 width=320 height=200>
+Edward Fredkin invented the "parity rule" as a very simple example of
+"self-reproduction" in cellular automata.  In the parity rule, a cell
+takes the sum of its neighbors and goes to 1 if the sum is odd, or to
+0 if the sum is even.  Thus a cell takes on the "parity" (oddness) of
+its neighborhood.  If the shape of the neighborhood you are using
+includes <em>k</em> cells, then when you feed any small plane #0 starting
+pattern to the parity rule, you will soon have <em>k</em> copies of the
+pattern, and then you'll get <em>k</em><sup>2</sup> copies, and so on.
+
+<p>
+
+To make this rule a little more dramatic to look at, we use the extra
+seven planes as memory planes, so that plane #1 remembers plane #0's
+last pattern, plane #2 remembers the pattern before that, and so on.
+
+<p>
+
+It's fun to use the editor to draw some simple pattern in plane #0 and
+watch what Fredmem does with it.
+
+<p>
+
+We've written the rule for a nine-cell neighborhood.  It works equally
+well for a five-cell (N+E+W+S+Self) neighborhood, or even for a
+three-cell (say N+Self+E) neighborhood.  The threecell version with
+only one bit of echo looks neat if you start with a square in one of
+the screen's corners; you get things that look like hypercubes.
+<br clear=left>
+
+<p>
+
+<pre>
+PROGRAM FredMem;
+{The Fredkin parity rule with the seven extra bits used as
+ memory}
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+VAR
+     NineSum,NewSelf,NewState:integer;
+BEGIN  {Function}
+     NineSum:=NW+N+NE+E+SE+S+SW+W+Self;
+     IF odd(NineSum) THEN NewSelf:=1 ELSE NewSelf:=0;
+     NewState:=(OldState SHL 1); {Shift memory bits to left}
+     NewState:=NewState OR NewSelf;
+     JCRule:=NewState
+END;  {Function}
+BEGIN {Main}
+     PatReq:='Square';
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="Gyre">GYRE</a></h3>
+
+<img src="figures/gyre.gif" alt="" align=left hspace=15 width=320 height=200>
+While working on <i>CelLab</i>, I've enjoyed a number of conversations with
+William Gosper,
+who lives not too far away. Gosper
+achieved CA immortality by discovering the Life glidergun in 1971. He
+still takes a sporadically active interest in CAs, and he urged me to
+realize a rule which he thought of. This rule is Gosper's Gyre.
+
+<p>
+
+The idea behind Gyre is that we load an initial pattern into
+the plane so that cells can tell which of the four quadrants they are
+in. In each quadrant, the cells pass their plane #0 bits around
+according to a scheme which produces a circling motion around the
+origin. The interest of the pattern arises because if I start out with
+a block of firing cells in one quadrant, the block will "refract" as
+it passes through the quadrant boundaries. Cells which are closer to
+the origin get to the boundary before the more distant cells do, and
+they pull increasingly ahead, drawing the original start pattern into
+a spiral or "gyre."
+<br clear=left>
+
+<p>
+
+<pre>
+PROGRAM Gyre;
+{Rule suggested by William Gosper.  We lay down a mask
+marking the cartesian plane's four quadrants (Qs for short)
+by the numbers 0-3 in the arrangement   2    0
+                                        3    1
+And we tell Q0 cells to copy SE, Q1 copy SW, Q2 copy NE,
+Q3 copy NW.  A block of cell stuff will refract.}
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(OldState,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+{Bit #3         is the Barrier bit (for screen edge)
+ Bits #2 and #1 are the Quadrant bits (00,01,10,or 11)
+ Bit #0         is the firing "matter" bit.}
+VAR
+     Barrier,Quadrant,NewSelf:integer;
+BEGIN  {Function}
+     Barrier:=(OldState SHR 3) AND 1;
+     Quadrant:=(OldState SHR 1) AND 3;
+     {Barrier cells stay barrier cells}
+     IF Barrier=1 THEN JCRule:=8 ELSE
+     BEGIN
+          CASE Quadrant OF
+               0: NewSelf:=SE;
+               1: NewSelf:=SW;
+               2: NewSelf:=NE;
+               3: NewSelf:=NW;
+          END;
+     JCRule:=(Quadrant SHL 1) OR NewSelf;
+     END;
+END; {Function}
+BEGIN {Main}
+     WorldType:=0;            {No wrap}
+     PalReq:='Gyre';       {Colorful}
+     {The pattern has Qs marked in bits 1,2 and a rectangle
+     of food cells in Q0.  Pattern also has a frame of
+     Barrier cells around the screen edge.}
+     PatReq:='Gyre';
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="Heat">HEAT and HEATWAVE</a></h3>
+
+<img src="figures/heat.gif" alt="" align=left hspace=15 width=320 height=200>
+The JC Heat rules and the JC Rug rules are all variations on the RC
+Rug rule where a cell's new state is based on the average of the
+states around it.  In both Heat and Heatwave, we use the toroidal
+WorldType 10, whose inner loop returns five bits of the cell's old
+state as well as the eleven bit sum of the cell's eight eight-bit
+neighbors.  And in both rules we divide this full eightsum by eight.
+The difference between Heat and HeatWave is that HeatWave adds two to
+the average.
+
+<p>
+
+The special feature of Heat and Heatwave is that some of the cells are
+kept at fixed values. In particular, if a cell's low bit is on, the
+cell is not updated, the cell is simply kept at a fixed value.
+Specifying the cell's fixed value is a bit tricky because WorldType 10
+only gives you five bits of the cell's state. As my purpose in writing
+Heat was to simulate heatflow between two objects of different
+temperatures, what I do is to suppose that the odd states with low
+five bits 1-15 are fixed at the low values 1 to 15; and that the odd
+states with low five bits 17-31 are fixed at the high values 128+17 to
+128+31. Relative to a continuous modular ring of 256 eight-bit values,
+128 is as far as you can get from zero.
+
+<p>
+
+The Heat pattern includes a large assemblage drawn in state 128+31, as
+well as a leaning block in state 1. The "hot" assemblage sends out
+waves of high state, but the "cool" block seems to do nothing. In
+order to see both blocks in action, energize the background by putting
+in some random mid-temperature gas. These keystrokes will work:
+<br clear=left>
+
+<p>
+
+<blockquote>
+l<br>
+heat <b>Enter</b><br>
+p<br>
+heat <b>Enter</b><br>
+i 6 r<br>
+<b>Enter</b>
+</blockquote>
+
+<p>
+
+If anything, Heat works too well, converging very quickly to a boring
+equilibrium state.  In HeatWave we keep cycling the colors of the
+non-fixed cells.  Ultimately this leads to turbulent
+chaos
+in the nonfixed regions.  HeatWave looks really gorgeous when run with
+the pattern <b>StarTrek.JCP</b>,
+which is an AutoCAD line drawing of the starship
+Enterprise.
+
+<p>
+
+<a href="ruledef-pas.html#Heat-pas">Pascal code</a> defining
+the Heat rule is presented in the <cite>Rule Definition</cite> chapter.
+
+<h3><a name="HGlass">HGLASS</a></h3>
+
+<img src="figures/hglass.gif" alt="" align=left hspace=15 width=320 height=200>
+This is a five-neighbor two-state two-dimensional cellular automaton
+found at random by Margolus and Toffoli. It organizes a nice sliding
+flow on a random screen, and it disassembles solid starting patterns
+in an interesting way.
+<br clear=left>
+
+<p>
+
+<pre>
+PROGRAM HGlass;
+{A rule from Margolus and Toffoli.}
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+VAR
+     EWSNC:integer;
+BEGIN  {Function}
+     EWSNC:=16*E+8*W+4*S+2*N+Self;
+     JCRule:=0;
+     CASE EWSNC OF
+          1,2,3,11,21,25,29,30,31: JCRule:=1;
+     END;
+END;  {Function}
+BEGIN {Main}
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="Hodge">HODGE</a></h3>
+
+<img src="figures/hodge.gif" alt="" align=left hspace=15 width=320 height=200>
+Hodge is inspired by a cellular automaton rule called "the Hodgepodge
+machine,"
+(see <a href="refs.html#[DewdneyColumn88a]">[DewdneyColumn88a]</a>).
+The Hodgepodge rule was invented
+by Martin Gerhardt and Heike Schuster of the University of Bielefeld
+in West Germany. For whatever reason, Gerhardt and Schuster chose to
+describe their rule in terms of the spread of a disease. A cell in
+state 0 is thought of as "healthy" and a cell in state 128 is thought
+of as truly "ill". Cells in states 1-127 are thought of as being
+"sick" in varying degrees. The Hodgepodge rule eventually begins
+producing spirals like the Zhabotinsky reaction.
+
+<p>
+
+The Hodgepodge rule is formulated in terms of two constants <em>g</em> and <em>n</em>:
+<br clear=left>
+
+<p>
+
+<ol>
+<li><em>Healthy.</em> A cell in state 0 becomes nonzero if it has several
+nonzero neighbors. The details of how this is done are unimportant.
+
+<p>
+<li><em>Sick.</em> For a cell with state between 0 and <em>n</em> begin by
+calculating the average of the nine states in the cell's neighborhood
+and then add the fixed constant <em>g</em>.  If the number you get is less
+than or equal to <em>n</em>, then that is the cell's new state,
+
+<p>
+<li><em>Ill.</em> But if the number you get is greater than <em>n</em>, then
+you round it down to <em>n</em>.  And if a cell is in presently in state <em>n</em>,
+then its next state is automatically 0.
+</ol>
+
+<p>
+
+These three conditions are 1) ragged start, 2) Laplacian spread, 3)
+synchronizing cutoff.
+
+<p>
+
+Below is the Pascal code for Hodge.  The JC WorldType 10 is tailormade
+for averaging neighbors.  In this WorldType we are only allowed to see
+five bits of EveryCell's OldState, so the cutoff value <em>n</em> has to be
+the largest number expressible in five bits: 31.  An increment <em>g</em>
+value of 5 seems to work best here.
+
+<p>
+
+Hodge is a lovely rule which converges very rapidly. It looks nice
+with the colorpalettes Default, AutoCAD, and Ranch. Particularly with
+AutoCAD color, the patterns look extremely organic, suggesting
+successive microtomed cross-sections of a human brain.
+
+<p>
+
+Suppose you push the microtome concept and begin thinking of Hodge as
+generating a three dimensional stack of planes--just as a one
+dimensional rule generates a two dimensional spacetime sheet of
+stacked lines. When you look at Hodge (or at other Zhabotinsky
+reactions) you are seeing very striking three dimensional structures;
+things like paired vortex sheets in the surface of a river below a dam,
+the scroll pair stretching all the way down to the river bottom...to a
+fortuitous inhomogeneity in Hodge's random start.
+
+<p>
+
+Another thought: In three dimensions, a Zhabotinsky reaction would be
+like two paired nautilus shells, facing each other with their lips
+blending. The successive layers of such a growing pattern would build
+up a shape very like...a fetus!
+
+<p>
+
+Hodge is also interesting if you give it a bilaterally symmetric
+start; this leads to patterns that remind me of fanciful chinese lions
+with popeyes and twinscroll nostrils.  A good bilaterally symmetric
+start can be gotten by loading the <b>Rug.JCP</b>
+pattern in
+nowrap mode and scrolling part of the pattern off the top of the
+screen.  This leaves the left/right symmetry but breaks the up/down
+symmetry.  This must be done before loading Hodge, because WorldType
+10 rules like Hodge do not admit a nowrap mode.  Once the pattern is
+set, feed it to Hodge.  As the pattern settles in, try fooling with
+different colorpalette selections.  Eventually you will get a living
+pattern so neat you want to save it.  This is a good time to use the
+"save experiment" control: just press <b>Ctrl-F3</b> and then enter
+the name you want to give it, say "lion."
+
+<p>
+
+<blockquote>
+<b>ca<br>
+<em>F3</em><br>
+p<br>
+rug <em>Enter<br>
+Enter<br>
+UpArrow UpArrow UpArrow UpArrow</em><br>
+l<br>
+hodge <em>Enter<br>
+Enter</em></b><br>
+<em>...(time passes and you try colorpalettes)...</em><br>
+<b><em>Ctrl-F3</em><br>
+lion</b>
+</blockquote>
+
+<p>
+
+<pre>
+PROGRAM Hodge;
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(FiveBits,Sum,
+                a,b,c,d,e,f,g,h:integer):integer;
+VAR
+     Temp:integer;
+BEGIN  {Function}
+     IF (FiveBits=0) THEN
+          IF Sum&lt;5 THEN Temp:=0 ELSE
+          IF Sum&lt;100 THEN Temp:=2 ELSE
+          Temp:=3;
+     IF (FiveBits&gt;0) AND (FiveBits&lt;31) THEN
+      Temp:=((Sum SHR 3)+5)AND 255;
+     IF Temp&gt;=31 THEN Temp:=31;
+     IF FiveBits=31 THEN Temp:=0;
+     JCRule:=Temp
+END;  {Function}
+BEGIN {Main}
+     WorldType:=10;
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="Langton">LANGTON</a></h3>
+
+<img src="figures/langton.gif" alt="" align=left hspace=15 width=320 height=200>
+This is the JC version of the <a href="chap2.html#2-RC-langton">standalone
+Langton rule</a>.
+The <a href="chap5.html#5-HIST-class">inspiration of the Langton rule</a>
+is discussed in the <cite>History</cite> chapter;
+the <a href="ruledef-own.html">own code evaluator</a>
+page describes how the JC version of
+Langton was written.
+<br clear=left>
+
+<h3><a name="Life">LIFE</a></h3>
+
+<img src="figures/life.gif" alt="" align=left hspace=15 width=320 height=200>
+The version of Life we show here echoes plane #0 into plane #1. This
+means that cells will be differentially shaded according to whether
+they have the low two bits:
+
+<p>
+
+<center>
+<table>
+<tr><td><b><tt>00</tt></b> <td>  Was off and is off    <td>   Blank
+<tr><td><b><tt>01</tt></b> <td>  Was off and is now on <td>   Newborn
+<tr><td><b><tt>10</tt></b> <td>  Was on and is now off <td>   Newly dead
+<tr><td><b><tt>11</tt></b> <td>  Was on and is now on  <td>   Established
+</table>
+</center>
+
+<p>
+
+This particular shading enables the eye to easily pick out the regions
+of greatest activity.  If you would prefer to see vanilla, untinted
+Life, load the colorpalette <b>Mask1</b>, which colors all odd
+states white and all even states black.
+<br clear=left>
+
+<p>
+
+Two Life patterns interesting to load are <b>RPent</b> and
+<b>GlidrGun</b>.  See the <a href="chap4.html"><cite>Theory</cite></a>
+chapter for <a href="chap4.html#4-TH-life">much info about Life</a>.
+
+<h3><a name="Parks">PARKS</a></h3>
+
+<img src="figures/parks.gif" alt="" align=left hspace=15 width=320 height=200>
+It is possible to model and carry out any possible computation as a
+two dimensional cellular automaton. It is known that Life, in
+particular, can be used to build a "universal
+computer."
+Streams of
+gliders act like signals and other kinds of patterns act as memory
+blocks and as logic gates.
+
+<p>
+
+Can one dimensional cellular automata carry out universal computation?
+Yes, if we allow the cells to have many (about a hundred) different
+states.  But can it be done with only <em>two</em> states, as in Life?
+Parks is a totalistic one-dimensional, two-state, six-neighbor CA rule
+that is thought to be promising.  As reported in <a href="refs.html#[Dewdney88]">[Dewdney88]</a>, p. 143,
+James K. Park found a bidirectional "glider" gun for this rule
+which shoots moving patterns out to the right and to the left.
+<br clear=left>
+
+<p>
+
+<pre>
+PROGRAM Parks;
+{A totalistic one dimensional rule that sums one bit of
+three neighbors on either side plus a bit of self.  Sum
+ranges from 0 to 7.}
+USES JCMake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(OldState,LLLL,LLL,LL,L,Self,
+                         R,RR,RRR,RRRR:integer):integer;
+CONST
+     WolfCode=88; {Codes 0 through 127 are meaningful here}
+VAR
+Sum,PastSelf,NewSelf,NewState,Time,Mask:integer;
+BEGIN
+     Sum:=(LLL+LL+L+Self+R+RR+RRR);
+     JCRule:=(WolfCode SHR Sum) AND 1;
+END;
+BEGIN {Main}
+     WorldType := 3;     {  World type:  8 neighbor ring }
+     PalReq:= 'Mask1';
+     {The Parks pattern is 1111111111011. 
+      Pattern spews gliders left &amp; right.}
+     PatReq:= 'Parks';
+     GenRule(JCRule);
+END.
+</pre>
+
+<h3><a name="PerfumeT">PERFUMET and PERFUMEX</a></h3>
+
+<img src="figures/perfume.gif" alt="" align=left hspace=15 width=320 height=200>
+These two rules show "lattice gasses."
+A lattice gas is a simulation
+of a physical gas that represents gas particles by zeroes and ones in
+a lattice or grid. JC is pretty good at showing lattice gas, though
+other ways of simulating lattice gasses are possible.
+
+<p>
+
+Our JC demos show four kinds of lattice gas in all.  There is the
+"naive diffusion" lattice gas of
+<a href="#Dendrite">Dendrite and DenTim</a>.  There is the
+"Brownian" lattice gas of <a href="#Sublime">Sublime</a>.  And there are the
+two Margolus and Toffoli gasses I call Xgas and
+Tgas.  PerfumeX shows Xgas.  PerfumeT, Pond, and
+Soot all show Tgas.  The rule <a href="#XTC">XTC</a> shows Xgas and
+Tgas at the same time.
+
+<p>
+
+The main difference between Xgas and Tgas is that Xgas particles move
+along the screen's diagonals and Tgas particle move horizontally or
+vertically along the screen's main axes. In both gasses, the particles
+bounce off each other and off of the barrier cells we call "walls".
+Tgas bounces cleanly off the walls; Xgas does an odd little loop
+inside a wall when it bounces.
+
+<p>
+
+In both Perfume rules we start with two AutoCAD-drawn
+perfume bottles, one open and one loosely stoppered.  Each bottle
+holds a cloud of gas.  At startup, the gasses simply try to move along
+the four directions that are natural to them.  But then they run into
+the perfume-bottles' walls, bounce off, and begin bouncing off each
+other.  Sooner or later the particles find their way out of the
+bottles and into the "room."
+<br clear=left>
+
+<p>
+
+An important feature to note about the Perfume rules is that no
+external randomization is being used. The gas particles disperse in
+clouds, but these clouds are strictly a deterministic result of the
+bouncings induced by the irregular shapes of the perfume bottles'
+walls. The gasses are, if you will, self-randomizing.
+
+<p>
+
+The particular trick by which the gas motions are achieved was
+developed by Norman Margolus, and
+<a href="chap4.html#4-TH-lattice">is explained</a> in
+the <a href="chap4.html"><cite>Theory</cite></a> chapter.
+As these rule programs are somewhat lengthy, I won't print them here.
+Instead I'll just list how the bits are used by the rules:
+
+<p>
+
+<center>
+<table>
+<tr><td>Bit  #0        <td>  is the machine visible bit for update
+<tr><td>Bit  #1        <td>  is used for the gas
+<tr><td>Bit  #2        <td>  is the wall
+<tr><td>Bit  #3        <td>  is the touch wall in my neighborhood bit
+<tr><td>Bits #4 &amp; #5 <td>  hold a position number between 0 and 3
+<tr><td>Bit  #6        <td>  controls the check wall/do gas cycle
+<tr><td>Bit  #7        <td>  controls the A/B lattice cycle
+</table>
+</center>
+
+<p>
+
+The best way to create a pattern for these rules is to first blank
+everything with the <b>I</b>, <b>A</b>, <b>0</b> sequence.  Then use the
+screen editor to draw the gas you want in the color state 2 (plane #1
+on), and draw the walls you want in the color for state 4 (plane #2)
+on.  JC will put the texture bits back in before restarting.
+
+<p>
+
+<blockquote>
+<b>
+l<br>
+perfumet </b><em>(or </em><b>perfumex</b><em>)</em> <b><em>Enter</em></b> <br>
+<b>i a 0<br>
+e<br>
+<em>F1</em><br>
+2</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(Draw some gas)</em><br>
+<b>4</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(Draw some walls)</em><br>
+<b>e<br>
+<em>Enter</em>
+</b>
+</blockquote>
+
+<h3><a name="Pond">POND</a></h3>
+
+<img src="figures/pond.gif" alt="" align=left hspace=15 width=320 height=200>
+Pond is two copies of Tgas.
+To improve the contrast, we only
+show the cells which hold two particles of gas. Pond's startup has a
+white square of particles immersed in a sea of random particles. The
+particles of the white square spread out, bouncing off the other
+particles and creating a circular pressure wave.
+The fact that the
+square block produces a circular wave is rather striking, suggesting
+that this simulation really is somewhat like a physical system.
+<br clear=left>
+
+<h3><a name="RainZha">RAINZHA</a></h3>
+
+<img src="figures/rainzha.gif" alt="" align=left hspace=15 width=320 height=200>
+RainZha is the simplest "Zhabotinsky"
+style cellular automaton I have
+found. I call a rule a Zhabotinsky-style rule
+when it spontaneously generates spirals from an initial random soup.
+For reasons I don't yet fully understand, Zhabotinsky-style rules are
+fairly common in the world of cellular automata--perhaps as common as
+are Sierpinski gaskets
+in the world of fractals.
+<a href="footnote.html#F3_8"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+The program for RainZha is the exactly the same as the Faders program
+listed under the Faders rule, with RN=8, L=2, U=3, K=2, and Y=2.  See
+the <a href="chap4.html#4-TH-semit">discussion of "NLUKY" rules</a>
+in the <a href="chap4.html"><cite>Theory</cite></a> chapter
+for details.
+There is an
+NLUKY 72322
+version of RainZha available in RC.  The consequences of
+larger choices of RN can be rapidly explored in JC by pressing <b>L</b>
+for "load" and then entering <b>n(</b><em>RN</em><b>2322)</b>,
+where <em>RN</em> is any number between 0 and 127.  You don't put spaces between the
+numbers because JC already knows that the LUKY numbers will be single
+digit, and that the other digits will be part of <em>RN</em>.  For
+larger values of <em>RN</em> it may take the rule too long to Zhabotinsky
+down.  You can ease up to a larger <em>RN</em> by repeatedly changing the
+rule, increasing the <em>RN</em> value by, say, 10 each time.  If this is
+done, then the old spirals help seed the new ones.
+<br clear=left>
+
+<h3><a name="Ranch">RANCH</a></h3>
+
+<img src="figures/ranch.gif" alt="" align=left hspace=15 width=320 height=200>
+I designed Ranch using a CAM-6 board in the fall of 1987.
+The idea behind the rule is to run Life and
+Brain in an environment that is partitioned in two by
+Vote.  Full <a href="chap4.html#4-TH-ranch">details and program listing</a>
+for Ranch are in the <a href="chap4.html"><cite>Theory</cite></a> chapter
+and in <a href="refs.html#[Rucker89]">[Rucker89]</a>.
+
+<p>
+
+Ranch is set to randomize planes #0 and #1 at startup.  This makes
+Ranch work as a part of <b>JCdemo</b>, but has the bad effect of
+destroying the low two planes of any pattern you feed ranch.  You
+might want to delete the "<tt>Rseed</tt>" lines from
+<b>Ranch.PAS</b> and rebuild <b>Ranch.JC</b> so that you can
+feed, say, <b>Tim</b> to it.
+
+<p>
+
+Ranch runs in two alternating cycles: updating the Vote boundaries and
+updating the firing of Brain and Life.  The cycle is controlled by bit
+#7.  If you randomize Ranch by pressing <b>R</b>, then bit #7 is
+randomized as well.  This puts the cells out of synch with each other,
+and the rule dies wretchedly.  To avoid this you can randomize the
+following way: Press spacebar to halt the activity.  Press <b>R</b> to
+randomize.  Press <b>i</b>, <b>7</b>, <b>0</b> to reset all the cycle
+bits.  Press <b>Enter</b> to restart.  In keystrokes:
+<br clear=left>
+
+<p>
+
+<blockquote>
+<b>
+<em>Spacebar</em><br>
+r<br>
+i<br>
+7<br>
+0<br>
+<em>Enter</em>
+</b>
+</blockquote>
+
+<p>
+
+The Ranch colorpalette <b>Ranch.JCC</b>
+happens to look good with
+many other rules, such as Hodge.
+
+<h3><a name="RevEcoli">REVECOLI</a></h3>
+
+<img src="figures/revecoli.gif" alt="" align=left hspace=15 width=320 height=200>
+This rule was created simply to show that we can define reversible
+four-bit rules just as well as reversible 1-bit rules like <a href="#Fractal">Fractal</a> and
+<a href="#TimeTun">TimeTun</a>.
+
+<p>
+
+RevEcoli is based on the rule <a href="#EcoLiBra">EcoLiBra</a>,
+which calculates a new
+four-bit state on the basis of the present neighborhood.  To make our
+rule reversible, we use the high four bits of OldState to store the
+prior four-bit state PastState, and we compute the NewState by the
+equation:
+<br clear=left>
+
+<p>
+
+<center>
+<i>NewState</i> = (16 + <i>EcoLiBra</i>(<i>PresentNeighborhood</i>) - <i>PastState</i>) mod 16
+</center>
+
+<p>
+
+(We add in the 16 to make sure that the <b>mod</b> operation never gives
+us a negative number.) As was explained in our discussion of the
+Fractal rule above, we can exchange <i>NewState</i> and <i>PastState</i> in this
+equation, and this guarantees reversibility.  To see RevEcoli run
+backwards, start it up, let it run for awhile, and then swap planes
+#0-#3 with planes #4-#7.  In keystrokes:
+
+<p>
+
+<blockquote>
+<b>
+l<br>
+ReveEcoli <em>Enter<br>
+Enter</em></b><br>
+<em>(Let it run for about 30 generations)</em><br>
+<b><em>Spacebar<br>
+F1</em> <br>
+o 0 4 s<br>
+o 1 5 s<br>
+o 2 6 s<br>
+o 3 7 s<br>
+<em>F1<br>
+Enter</em>
+</b>
+</blockquote>
+
+<p>
+
+RevEcoli very quickly turns an ordered start into
+<a href="chap4.html#barf">seething dog barf</a>,
+so it is a bit of a surprise to see the original four bit pattern
+re-emerge.  This is even more striking if you create the original
+start pattern yourself, pressing e to enter the edit mode and then
+drawing in designs with various states 0-15.  If you have a VGA and
+use the <b>Default.JCC</b> colorpalette, the picture will look
+more interesting.  RevEcoli can turn 16-color images into secret
+static that can be decoded, as long as you know the process is based
+on EcoLiBra!
+
+<p>
+
+Note that the same process can be carried out for any other rule. I
+used EcoLiBra because it was handy, and because EcoLiBra does not use
+the high four bits of <tt>OldState</tt>. Since these bits were conveniently
+vacant, I use them to store the cell's fourbit PastState.
+
+<p>
+
+This suggests a fairly simple encryption
+scheme which can be carried
+out with our CA.  First you and your partner need to agree on i) a
+number <i>B</i> (<img src="figures/leq.gif" width=11 height=13 alt="<="> 4) of bits for your rule to use, ii) a rule <i>F</i>
+which takes <i>B</i> bits of <i>OldState</i> and eight bits of neighbor state
+and gives a <i>B</i>-bit state we call <i>F</i>(<i>PresentNeighborhood</i>), iii) the
+number <i>T</i> of steps to run.
+
+<p>
+
+Now you and your partner create a rule RevF defined by
+
+<p>
+
+<center>
+<i>NewState</i> = (2<sup><i>B</i></sup> + <i>F</i>(<i>PresentNeighborhood</i>) - <i>PastState</i>) mod 2<sup><i>B</i></sup>
+</center>
+
+<p>
+
+Knowing which <i>F</i> you plan to use is the "secret key" part of the
+transmission.  There are an effectively infinite number of these
+keys.
+<a href="footnote.html#F3_9"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+Once you have RevF, you can send a message by coding your info up into
+a <i>B</i>-bit graphics screen, and running RevF on this screen for <i>T</i>
+steps.  Suppose that, to make things easier for your partner, you also
+go ahead and use the <b>O</b> key to exchange the low <i>B</i> bits of the
+screen pattern with the next higher <i>B</i> bits of the screen pattern.
+Then you use <b>Ctrl-F4</b> to save the pattern, as
+<b>Message.JCP</b>, and then you send <b>Message</b> to your
+partner by email or on a floppy disk.  Your partner has the
+<b>RevF.JC</b> ruletable all set, and can immediately feed
+<b>Message.JCP</b> to RevF.  After <i>T</i> cycles, your original
+pattern will be there on your partner's screen.  Recall that the cycle
+number always appears on the main menu screen; although in practice it
+is usually pretty evident when the original message pattern has been
+reconstructed: all the encryption barf disappears!
+
+<h3><a name="Rug">RUG, RUGF, and RUGLAP</a></h3>
+
+<img src="figures/rug.gif" alt="" align=left hspace=15 width=320 height=200>
+These are JC versions of the RC Rug rule. The JC Rug rules are
+averaging rules using the full range of 256 possible states. For each
+cell a neighborhood average is computed and the new state is the
+average plus one.
+
+<p>
+
+In general the Rug rules will look better when the wrap is turned off.
+The existence of a fixed zero boundary gives the rule some information
+input to react to. (Recall that in the Heat rules we can fix selected
+cells by setting their low bits to one).
+
+<p>
+
+If you start a JC Rug rule on a blank screen in open nowrap mode, a
+chaotic carpet will slowly grow inward, eventually filling the whole
+screen. Rug averages the neighboring eight cells, but RugF averages
+only the neighboring four cells. RugF runs faster, though its patterns
+are prone to developing checkerboards. RugLap is a bit slower than Rug
+because RugLap uses the mathematically correct averaging technique for
+best approximating a solution to Laplace's equation:
+<br clear=left>
+
+<p>
+
+<center>
+<i>LaplaceAverage</i> = (4 × (<i>N</i> + <i>E</i> + <i>S</i> + <i>W</i>) + (<i>NW</i> + <i>NE</i> + <i>SE</i> + <i>SW</i>)) / 20
+</center>
+
+<p>
+
+Although RugLap cycles slower, it converges to a solution in many
+fewer steps than do Rug and RugF.
+
+<p>
+
+JC comes with a saved Rug pattern, the fruit of three hours
+computation of Rug on a blank, nowrap screen. If you press the up
+arrow key a few times you can break the fourway symmetry down to a
+bilateral symmetry. Or you can press the left arrow key a few times to
+mimic a touch of the RC jog-mode.  Rotate your monitor 90 degrees and
+there's a high-res Maxine Headroom!
+
+<p>
+
+Many colorpalettes look good with Rug.
+<b>AutoCAD</b> gives it a
+sinister, seething, Giger-like quality.  <b>Stripe</b>,
+<b>Ranch</b>, and <b>Bob</b> are also good colorpalettes for
+Rug, but best of all is <b>Bleach</b>, a colorpalette based on the
+sixteen cycle palette of RC's bleach mode.
+
+<p>
+
+An interesting bilaterally symmetric start for Rug can be gotten by
+calling eight bits of vertical texture as follows:
+
+<p>
+
+<blockquote>
+<b>
+l<br>
+rug <em>Enter<br>
+Alt-F6</em><br>
+0<br>
+8<br>
+<em>Enter</em>
+</b>
+</blockquote>
+
+<p>
+
+Another good demo is:
+
+<p>
+
+<blockquote>
+<b>
+l<br>
+ruglap <em>Enter</em><br>
+c<br>
+bleach <em>Enter<br>
+F3<br>
+F1</em><br>
+r<br>
+e<br>
+0</b><em>(zero)</em><br>
+<b>x</b><br>
+<em>10 <b>Left arrow</b> key presses</em><br>
+<em>10 <b>Down arrow</b> key presses</em><br>
+<b>d<br>
+e<br>
+<em>Enter</em></b>
+</blockquote>
+
+<p>
+
+The <a href="ruledef-pas.html#Rug-pas">Pascal code for the Rug rule</a> is
+given in the <a href="ruledef.html"><cite>Rule Definition</cite></a>
+chapter.
+<b>RugF</b> and <b>RugLap</b> are the same,
+except that they call, respectively, <b>Semi4.JCO</b> and
+<b>LapInc.JCO</b> instead of <b>Semi8.JCO</b>.
+
+<h3><a name="ShortPi">SHORTPI</a></h3>
+
+<img src="figures/shortpi.gif" alt="" align=left hspace=15 width=320 height=200>
+This one dimensional rule is the first rule I could truly call my own.
+I found it while playing with Charles Platt's
+one-dimensional Cell
+Systems simulator in 1987.
+<a href="footnote.html#F3_10"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+It uses two bits each from one neighbor on
+each side.  I run it as WorldType 5 (two bits each from two neighbors
+on each side), although it could be implemented equally well as a
+WorldType 9 rule (four bits each from one neighbor on each side).  The
+rule produces a lively world of many interacting gliders.
+
+<p>
+
+If you have worked with other one dimensional simulators, you will
+initially be confused by the fact that JC shows one dimensional rules
+"upside down." That is, most simulators work by updating successive
+lines down the screen and then scrolling new lines on from the bottom.
+JC does one dimensional rules differently: JC always updates the top
+line of the screen and then slides all the screen lines down one to
+make room (scrolling the screen one line is itself a cellular
+automaton operation). So the new lines come into a one dimensional JC
+simulation from the top. Thus, where conventional one dimensional
+simulators grow downward, JC grows upward.
+
+<p>
+
+Here is the code.
+<br clear=left>
+
+<p>
+
+<pre>
+PROGRAM ShortPi;
+{A one dimensional rule that only looks at two bits of two
+ neighbors.  The rule is totalistic, meaning that it only
+ looks at the SUM of its neighborhood.  The first four
+ digits of the totalistic lookup table are the first four
+ digits of pi, taken MOD 4.  The next six digits were found
+ by trial and error to make a rule that looks good.}
+USES JCMake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(OldState,LL1,LL0,L1,L0,Self,
+                         R1,R0,RR1,RR0:integer):integer;
+{We will define two-bit variables LL, L, C, R, and RR
+ covering a cell and its four nearest neighbors.  This rule
+ actually only uses L, C, and R, but we develop LL and RR so
+ this program can be used as a template for WorldType 5
+ programs that do use four two-bit neighbors}
+VAR
+LL,L,C,R,RR,Sum:integer;
+BEGIN
+{ Develop 2 bit values of neighbors.}
+     LL:= 2*LL1 + LL0;
+     L := 2*L1  + L0;
+     C := OldState AND 3;
+     R := 2*R1  + R0;
+     RR:= 2*RR1 + RR0;
+     Sum:=(L+C+R);
+     CASE Sum OF
+          0:  JCRule:=3;
+          1:  JCRule:=1;
+          2:  JCRule:=0;
+          3:  JCRule:=1;
+          4:  JCRule:=0;
+          5:  JCRule:=3;
+          6:  JCRule:=2;
+          7:  JCRule:=0;
+          8:  JCRule:=0;
+          9:  JCRule:=0;
+     END;
+END;
+BEGIN {Main}
+     WorldType := 5; {  World type: four neighbor ring }
+     GenRule(JCRule);
+END.
+</pre>
+
+<h3><a name="Soot">SOOT</a></h3>
+
+<img src="figures/soot.gif" alt="" align=left hspace=15 width=320 height=200>
+This program was inspired by <a href="refs.html#[DewdneyColumn88b]">[DewdneyColumn88b]</a>, where
+Dewdney
+discusses a rule which he calls SloGro.
+The idea behind
+SloGro is to have three states: blank cells, frozen cells, and gas
+cells. If a gas cell touches a frozen cell it becomes a frozen cell.
+If a gas cell is not touching a frozen cell it moves to one of its
+neighboring cells.
+
+<p>
+
+Dewdney's SloGro is formulated in terms of a gas which moves randomly,
+and which is released into the system only one particle at a time. The
+gas we use in Soot is a many particle self-randomizing
+Tgas.
+Tgas
+particles move along the grid's main axes, and make ninety degree
+turns when they encounter another particle. The idea of having frozen
+cells along the boundary instead of just at the center is from a
+follow-up column to <a href="refs.html#[DewdneyColumn88a]">[DewdneyColumn88a]</a>, which is where I found the name
+"Soot."
+
+<p>
+
+The meaning of the bits in our implementation of Soot are as
+follows.
+<br clear=left>
+
+<p>
+
+<center>
+<table>
+<tr><td>Bit  #0        <td>  is the machine visible bit for update
+<tr><td>Bit  #1        <td>  is used for the gas
+<tr><td>Bit  #2        <td>  is the wall
+<tr><td>Bit  #3        <td>  is unused
+<tr><td>Bits #4 &amp; #5 <td>  hold a position number between 0 and 3
+<tr><td valign=top>Bits #6 &amp; #7 <td>  control the check wall/do gas cycle<br>
+                If 0 do wall, if 1 do lattice A,
+                if 2 do lattice B.
+</table>
+</center>
+
+<p>
+
+You can put in your own gas and wall shapes by loading <b>Soot</b> and
+clearing out all the planes, putting in some random gas, using the
+editor to draw two disks of gas and some walls, and then turning off
+the editor:
+
+<p>
+
+<blockquote>
+<b>
+l<br>
+soot <em>Enter<br>
+F1</em><br>
+i a 0<br>
+i d 3<br>
+i 1 r<br>
+e<br>
+2<br>
+x  <em>(arrow keys)</em> d <em>(arrow keys)</em> x <em>(arrow keys)</em> d<br>
+4<br>
+x <em>(arrow keys)</em>  x <em>(arrow keys)</em> x <em>(arrow keys)</em> ... o<br>
+e<br>
+<em>F1<br>
+Enter</em>
+</b>
+</blockquote>
+
+<h3><a name="SoundCa">SOUNDCA</a></h3>
+
+<img src="figures/soundca.gif" alt="" align=left hspace=15 width=320 height=200>
+This is an instance of the <a href="chap2.html#t9">standalone SoundCa program</a> for showing
+semitotalistic three-cell four-state 1D rules. You can use this program
+as a template for running any of the SoundCA rules inside JC; simply
+change the fourteen numbers of the RuleTable to match the fourteen
+numbers you get from the screen.
+
+<p>
+
+This particular rule shows an interesting kind of behavior: 1D
+oscillatory gliderlike patterns living on a uniform background.  The
+rule shows up particularly clearly if you use the colorpalette
+<b>Mask1</b>.
+<br clear=left>
+
+<p>
+
+<pre>
+PROGRAM SoundCa;
+{This is a JC implementation of one of the rules from the
+ standalone SoundCa program from the RC disk.  You can
+ change this rule and key in any SoundCa rule that interests
+ you.}
+USES JCMake;
+{$F+}
+FUNCTION JCRule(OldState,LL1,LL0,L1,L0,Self,
+                         R1,R0,RR1,RR0:integer):integer;
+     {We define two-bit variables L, C, and R.}
+CONST
+     RuleTable: ARRAY[0..13] OF integer=(
+{For an L+R Sum of:      6   5   4   3   2   1   0}
+{States 0 and 3 use:}    3,  2,  1,  3,  1,  2,  0,
+{States 1 and 2 use:}    0,  1,  0,  3,  3,  1,  0);
+VAR
+     L,C,R,Sum,Index:integer;
+BEGIN
+     L := 2*L1 + L0;
+     C := OldState AND 3;
+     R := 2*R1 + R0;
+     Sum:=(L+R);
+     CASE C OF
+          0,3: Index:=6-Sum;
+          1,2: Index:=13-Sum;
+     END;
+     JCRule:=RuleTable[Index]
+END;
+BEGIN {Main}
+          WorldType := 5;     {World type: 4 neighbor ring }
+          GenRule(JCRule);
+END.
+</pre>
+
+<h3><a name="Sublime">SUBLIME</a></h3>
+
+<img src="figures/sublime.gif" alt="" align=left hspace=15 width=320 height=200>
+Sublime models the process by which a solid can evanesce into gas.
+Passing from solid to liquid is of course "melting," and the technical
+word for passing from solid to gas is "sublimation." Naphtha mothballs
+sublimate without melting into liquid at all. Ice mostly melts, but it
+sublimates too, especially under low atmospheric pressure; that is why
+the wash dries on the clothesline when it's below freezing.
+
+<p>
+
+Our program starts up, by default, with the image of a cyberspace
+ant.  Watch how John Walker's program devours the ant and
+scatters its remains to the wind.
+<a href="http://www.fourmilab.ch/documents/hackants13.html">Turnabout's fair play!</a>
+If you'd like to feed something else to this rule, take the following
+steps:
+
+<p>
+
+<blockquote>
+<b>l<br>
+sublime <em>Enter<br>
+F1</em><br>
+i 1 0<br>
+e<br>
+2<br>
+x <em>(arrow keys)</em> x <em>(arrow keys)</em> ... f<br>
+e<br>
+<em>Enter</em>
+</b>
+</blockquote>
+
+<p>
+
+In order for the new gas to be interpreted in the right way, it is
+best for the rule cycle to be 0.  If the rule has already been running
+for awhile, you can make sure it is in cycle 0 by stopping it with the
+spacebar and then pressing "<tt>i 6 0</tt>" and "<tt>i 7 0</tt>" to zero
+out the two cycle bits in #6 and #7.
+
+<p>
+
+A <a href="ruledef-pas.html#Sublime-pas">Pascal program
+defining the Sublime rule</a> appears in the
+<a href="ruledef.html"><cite>Rule Definition</cite></a> section.
+<br clear=left>
+
+<h3><a name="TimeTun">TIMETUN</a></h3>
+
+<center>
+<img src="figures/fig16.gif" width=640 height=399 alt="">
+<br>
+<i>The JC TimeTun rule after several hundred generations.</i>
+</center>
+<p>
+
+This is a reversible rule like <a href="#Fractal">Fractal</a> and like <a href="#RevEcoli">RevEcoli</a>.
+TimeTun is a two bit rule which arises as the reversible
+version of a one-bit rule called Interest.
+
+<p>
+
+Suppose that EveryCell only looks at N, S, E, W, and Self, and suppose
+that EveryCell sets Interest to 0 if all these five bits are the same
+(<em>zero Interest</em> means <em>boring</em>), and sets Interest to 1 if any of the
+five neighboring plane #0 bits are different.
+
+<p>
+
+Now our reversible TimeTun rule is:
+
+<p>
+
+<center>
+<i>NewSelf</i> = <i>Interest</i>(<i>Present Neighborhood</i>) <img src="figures/oplus.gif" width=12 height=12 alt="^"> <i>PastSelf</i>
+</center>
+
+<p>
+
+where <img src="figures/oplus.gif" width=12 height=12 alt="^"> is the Exclusive Or (XOR) operator, which is 1 if its
+two operands differ and 0 if they are the same.
+
+<p>
+
+TimeTun is a particularly interesting rule to watch. If you
+want to start it on your own pattern, simply load it, blank the
+screens, and use edit mode to draw something in state #1. In
+keypresses:
+
+<p>
+
+<blockquote>
+<b>
+l<br>
+timetun <em>Enter<br>
+F1</em><br>
+i a 0<br>
+e<br>
+1<br>
+</b>
+<em>(Draw something using <b>X</b> to make marks,
+arrow keys to move cursor, and <b>D</b> for disc,
+ <b>R</b> for ring, <b>B</b> for box, <b>O</b> for open polygon,
+ <b>C</b> for closed polygon, <b>F</b> for filled polygon, etc.)</em><br>
+<b>
+e<br>
+<em>Enter</em></b><br>
+<em>(Let it run for awhile and then bring it back)</em><br>
+<b>o s</b>
+</blockquote>
+
+<h3><a name="Venus">VENUS</a></h3>
+
+<img src="figures/venus.gif" alt="" align=left hspace=15 width=320 height=200>
+Venus is a purely combinatoric CA rule which I found simply
+by playing with various symmetrically arranged rule definitions. We
+hope that the wide distribution of <i>CelLab</i> will lead to the discovery
+of many more such unexpectedly interesting rules.
+
+<p>
+
+I call it Venus because it produces a pattern that looks like what you
+might see peering out through hanging mosses at floating mats of
+vegetation in a swampy sea.  When I was a child this is what
+science-fiction writers thought the surface of the planet Venus would
+be like.
+
+<p>
+
+Here is a listing of the Venus rule.  When you start it,
+it's a good idea to energize it by pressing <b>R</b>.
+<br clear=left>
+
+<p>
+
+<pre>
+PROGRAM Venus;
+{Start this rule on a random pattern}
+USES JCmake;
+{$F+}
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+BEGIN
+OldState:=OldState AND 3;
+     CASE OldState OF
+          0 : JCRule:=2*(NW XOR SW) + W;
+          1 : JCRule:=2*(NW XOR NE) + N;
+          2 : JCRule:=2*(NE XOR SE) + E;
+          3 : JCRule:=2*(SE XOR SW) + S;
+     END;
+END;
+BEGIN
+     WorldType := 1;
+     GenRule(JCRule);
+END.
+</pre>
+
+<h3><a name="Vote">VOTE</a></h3>
+
+<center>
+<a name="3-CA-Fvote">
+<img src="figures/fig17.gif" width=639 height=399 alt="">
+</a>
+<br>
+<i>The JC Vote rule, a few generations after a random start.</i>
+</center>
+<p>
+
+Vote is a one-bit rule where each cell calculates
+the NineSum of itself and its eight neighbors, and then determines its
+new state on the basis of the NineSum. We can regard this as EveryCell
+conducting a little election between 0 and 1 among the nine cells in
+its neighborhood. If either 0 or 1 wins by a clear majority of 6 votes
+or more out of the nine votes, then that is the state which EveryCell
+will take on. But if either 0 or 1 wins by a scant, sneaky majority of
+5 votes out of the nine, then the election is overturned, and
+EveryCell takes on the color of the "losing" state.  Vote
+<a href="chap4.html#4-TH-vote">is discussed
+in more detail</a> in the <a href="chap4.html"><cite>Theory</cite></a>
+chapter.
+
+<p>
+
+The version of Vote shown here uses bit #1 as an
+"echo" of bit #0. This means that cells will take on different colors
+if they have changed state in the last generation. You can keep
+rerandomizing Vote by pressing <b>R</b>. It's a bit startling to see what
+organic-looking shapes can arise from such a simple rule acting on a
+rectangular grid.
+
+<p>
+
+<pre>
+PROGRAM Vote;
+{The Vichniac voting rule on bit #0 with bit #1
+ used as memory}
+USES JCmake;
+{$F+}  { Required for function argument to genrule. }
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+VAR
+     NineSum,NewSelf,NewState:integer;
+BEGIN  {Function}
+     NineSum:=NW+N+NE+E+SE+S+SW+W+Self;
+     CASE NineSum OF
+          0,1,2,3,5: NewSelf:=0;
+          4,6,7,8,9: NewSelf:=1;
+     END;
+     JCRule:=(Self SHL 1) OR NewSelf
+END;  {Function}
+BEGIN {Main}
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="3-CA-votedna">VOTEDNA</a></h3>
+
+In this rule I wanted to enhance the effect of the different-colored
+boundaries in Vote; also I wanted to take advantage of all eight bits
+of state. My first idea was to let the Vote rule govern bit #0, and to
+store the last 7 generations in the high 7 bits. As it turns out, this
+course does not make for a rule very much different in appearance from
+Vote with a single bit of memory. So I put in an additional twist: to
+make the high bits more lively than simple memory bits, I keep adding
+the present NineSum to the OldState before shifting it left to put the
+bits out of plane #0 and into memory. Note by the way that numbers
+larger than 255 are taken modulo 256.
+
+<p>
+
+If you look at VoteDNA with the <b>Default</b> colorpalette
+loaded, you will see something like Vote with thick fuzzy boundaries.
+To make the rule look neater, I decided to set the color for the
+"inland" state equal to black. But what is the inland state? It is a
+state X which is a fixed point for the transformation:
+
+<p>
+
+<center>
+<i>NewX</i> = ((<i>OldX</i> + 9) × 2) - 256) + 1
+</center>
+
+<p>
+
+Replacing <i>NewX</i> and <i>OldX</i> by <i>X</i> and solving for <i>X</i>, I
+got <i>X</i>=237. The <b>VoteDNA.JCC</b>
+colorpalette was gotten by taking a
+colorpalette and setting the color for state 237 to black. If you want
+to see the color get filled back in, you can press <b>Alt-F9</b> followed by
+237 to be able to set the color.
+
+<p>
+<center>
+<img src="figures/fig18.gif" width=639 height=400 alt="">
+</center>
+<br>
+<blockquote>
+<i>The JC VoteDNA rule, started from the
+pattern shown <a href="#3-CA-Fvote">above</a>.  Pattern has been shifted slightly upward.</i>
+</blockquote>
+<p>
+
+VoteDNA makes nice thick strings out of random starts. The color
+patterns that move along the strings have no clear interpretation,
+although they do make me think of electron microscope pictures of
+DNA.
+
+<p>
+
+<pre>
+PROGRAM VoteDNA;
+{The Vichniac voting rule with the seven extra bits used as
+ memory. The additional twist here is that we increment the
+ memory bits by the NineSum each time.}
+
+USES JCmake;
+{$F+}    { Required for function argument to genrule. }
+
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+VAR
+     NineSum,NewSelf,NewState:integer;
+BEGIN  {Function}
+     NineSum:=NW+N+NE+E+SE+S+SW+W+Self;
+     CASE NineSum OF
+          0,1,2,3,5: NewSelf:=0;
+          4,6,7,8,9: NewSelf:=1;   {The usual Vote rule.}
+     END;
+     NewState:=OldState+NineSum;   {To gnash in more info.}
+     {Now put the mem info in the 7 high bits.  Do a MOD 256
+      by an AND $FE.}
+     NewState:=(NewState SHL 1) AND $FE;
+     JCRule :=NewState OR NewSelf; {Load the Vote result}
+END;  {Function}
+
+BEGIN {Main}
+     PalReq:='VoteDNA';
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<h3><a name="XTC">XTC</a></h3>
+
+<img src="figures/xtc.gif" alt="" align=left hspace=15 width=320 height=200>
+XTC is a rule for comparing two kinds of cellular automaton gas: Xgas
+and Tgas. The starting X is made of Xgas, the starting T is made of
+Tgas, and the starting C (for compare) is an overlay of Xgas and Tgas.
+The gasses run in separate planes and do not interact with each other;
+each gas only interacts with itself. Xgas moves diagonally (like the
+strokes of an <b>X</b>), and Tgas moves vertically and horizontally (like
+the strokes of a <b>T</b>). In <a href="refs.html#[Margolus&amp;Toffoli87]">[Margolus&amp;Toffoli87]</a>, these gasses are called
+HPP-Gas and TM-Gas, respectively.
+
+<p>
+
+The Tgas lives in plane #1 and the Xgas in plane #2. At any time, one
+of the gasses is copied into plane #0 to be visible to the other
+cells. The rule has four cycles, coded by bits #6 and #7. In cycles 0
+and 1 you are updating Tgas; in cycles 2 and 3 you update Xgas. If
+you want to set some gas shapes of your own, use the following
+keypresses once XTC is running.
+<br clear=left>
+
+<p>
+
+<blockquote>
+<b>
+<em>Spacebar</em><br>
+i a 0<br>
+e<br>
+3<br>
+</b>
+<em>(Draw something in Tgas, shown in planes #0 and #1)</em><br>
+<b>
+4<br>
+</b>
+<em>(Draw something in Xgas, shown in plane #2)</em><br>
+<b>
+e<br>
+<em>Enter</em>
+</b>
+</blockquote>
+
+<h3><a name="Zhabo">ZHABO, ZHABOF, and ZHABOFF</a></h3>
+
+<img src="figures/zhabo.gif" alt="" align=left hspace=15 width=320 height=200>
+A picture of Zhabo appears on the cover of <a href="refs.html#[Margolus&amp;Toffoli87]">[Margolus&amp;Toffoli87]</a>.
+
+<p>
+
+Margolus and Toffoli make a
+interesting simile between the Zhabotinsky
+reaction and a reef of tubeworms.
+When a tubeworm feels safe, it
+sticks a plume out of its shell to seine the water for food. If a
+feeding tubeworm senses any disturbance nearby (e.g. the presence of
+several other feeding tubeworms), it retracts its plume and waits for
+a few cycles before feeding again.
+
+<p>
+
+In this specific rule, we suppose that each cell has four bits.
+
+<p>
+
+<center>
+<table border=4 cellpadding=4>
+<tr><td>Bit #0 <td> is the feeding bit.
+<tr><td>Bits #1 and #2 <td> are the Time bits.
+<tr><td>Bit #3 <td> is the alarm bit.
+</table>
+</center>
+
+<p>
+
+Margolus and Toffoli explain that variations on this rule can be
+gotten by changing the conditions for the Alarm to be set to 1.  The
+condition "<code>(EightSum=2)OR(EightSum&gt;3)</code>" in the program listed below
+makes the best patterns, but takes a really long time (two thousand
+generations) to develop spirals from a random start.  If you instead
+use the condition "<code>(EightSum&gt;1)</code>," you get tight, squarish spirals
+that converge rapidly.  This fast fast Zhabotinsky rule is the rule
+ZHABOFF.  The merely fast Zhabotinsky rule ZHABOF uses the condition
+"<code>EightSum&gt;2</code>." ZHABOF progresses not very much faster than ZHABO,
+forming hardedged patterns.  All three of these rules enjoy starting
+out on the pattern <b>RAT</b>.  In order to really show Zhabo
+off, you can start it on a full random screen, let it run for an hour,
+and then save the pattern as <b>Zhabo.JCP</b>.  From then on,
+you can start Zhabo up on <b>Zhabo.JCP</b>.
+<br clear=left>
+
+<p>
+
+It might be interesting to write a rule which selects among these
+three conditions on the basis of the values of bits #7 and #6, and to
+initialize the pattern with three vertical stripes that hold the
+combos 10, 01, and 00 in bits #7 and #6.
+
+<p>
+
+<pre>
+PROGRAM Zhabo;
+{The Zhabotinsky reaction of Margolus &amp; Toffoli}
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(Oldstate,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+VAR
+     EightSum,Alarm,Time,NewSelf,NewState:integer;
+     AlarmSet:Boolean;
+BEGIN
+     Alarm:=(OldState SHR 3) AND 1;
+     Time:=(OldState SHR 1) AND 3;
+     EightSum:=NW+N+NE+E+SE+S+SW+W;
+     IF Time=0 THEN NewSelf:=1 ELSE NewSelf:=0;
+     IF Time&gt;0 THEN Time:=Time-1;
+     IF (Self=1) AND (Alarm=1) THEN Time:=3;
+     IF (EightSum=2)OR(EightSum&gt;3) THEN Alarm:=1
+          ELSE Alarm:=0;
+     NewState:=(Alarm SHL 3) OR (Time SHL 1) OR NewSelf;
+     JCRule:=NewState
+END;
+{  Main program. }
+
+BEGIN
+     PalReq:='Zhabo';
+     GenRule(JCRule);
+End.
+</pre>
+
+<h3><a href="chap3.html#bottom">Back to <cite>The JC Program</cite></a></h3>
+<h3><a href="chap4.html">Onward to <cite>Cellular Automata Theory</cite></a></h3>
+
+<p>
+<hr>
+<a href="chap4.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="patterns.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

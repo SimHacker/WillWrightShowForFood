@@ -205,6 +205,10 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
     `PDP11/pdp11_vt_lunar_rom.h`, and `display/vt11.c`.
   - A PDP-10 that runs ITS: the 36-bit KA10, from `PDP10/ka10_*.c`.
   - A PDP-8, from `PDP8/`.
+  - A PDP-1, from `PDP1/`, with the Type 30 display. It runs Spacewar! and L Peter
+    Deutsch's PDP-1 Lisp, and those programs get source maps all the way down: to the
+    scans of Deutsch's listings and his documentation, and to the walkthroughs and
+    explanations others have written since.
   - An Apple ][, the first machine that isn't DEC's. It has no SIMH counterpart, so
     the spec is another emulator (MAME's `apple2` driver, or apple2js in JavaScript;
     check licenses before lifting anything). It joins tiny-its as one more job, with
@@ -212,6 +216,12 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
     since it has 8-bit bytes, not 18-bit words, and its screen is raster memory, so
     its frames are screen memory instead of 340 segments. Apple Logo brings its own
     turtle.
+  - Knuth's MIX, a machine that only ever existed on paper, so the spec is TAOCP itself and
+    the oracle is GNU MDK (GPL, run beside it, not lifted). Words are a sign and five bytes
+    of either size, and MIXAL is one more assembler front end, so TAOCP's programs get
+    symbols and source maps. The acceptance tests are the book's programs giving the results
+    and timings Knuth prints, in both byte sizes. Its line printer drives the lineprinter
+    viewer.
 
 ### Where the bugs are written down
 

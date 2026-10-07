@@ -1441,6 +1441,80 @@ Each front end also keeps its own tool's native format for comparison: `as7 -f l
 `Labels:`. The house style is what the cabinet shows and prints. The LIVE CODING panel's build
 output is this listing, and a listing can be saved as a text file or printed on paper.
 
+## Source maps as transclusion: layers, spans, links
+
+A built program is an address space that code and documentation are transcluded into. The model
+is Ted Nelson's Xanadu and gwern.net's include-links (Said Achmiz, `js/transclude.js`), applied
+to core.
+
+- **Layer**: one immutable artifact, `{ hash, kind, media, units }`. Kinds are core, source in
+  some dialect (Cambridge, as7, Forth), intermediate code, a listing, a scan, a PDF, a Markdown
+  doc. `units` says what an index counts: words, lines, rectangles, sections. A rebuild makes a
+  new layer with a new hash and never edits an old one. That is Xanadu's I-space: positions can't
+  move because content is never changed in place.
+- **Span**: `{ layer, ranges }`, half-open ranges by position, as in gwern's `#from:to`. Several
+  ranges cover a line broken across a page, a routine split over pages 113 and 114, or a doc
+  section in two places.
+- **Arrangement**: an ordered list of spans, Xanadu's V-space edit decision list. The core image is
+  an arrangement whose positions are addresses; a listing, a woven literate document and a page of
+  notes are others.
+- **Link**: `{ type, from: Span, to: Span }`, stored once in an edge table, with the reverse
+  index built on load, so every link can be followed from either end, the way gwern's backlinks
+  can. Types include `assembled-from`, `translated-from`, `compiled-from`, `printed-at`,
+  `explained-by` and `tested-by`. Presentation hints come from gwern: inline or popup, unwrap,
+  with context.
+
+**Addressing is by position inside a build, and by hash across builds.** The tools number
+everything at build time, and nothing is inserted or deleted afterwards. That is what DWARF, JS
+source maps and LLVM metadata do. A reference into another layer carries that layer's hash, so a
+stale reference reports itself as stale instead of binding to whatever now sits at index 412.
+Only links into hand-edited text (Markdown) anchor symbolically, by heading slug plus a short
+quote, Web Annotation style, and those resolve to positions when the bundle is built, or fail
+loudly. Scans and PDFs never change, so page plus rectangle is permanent (IIIF's `#xywh=`). To
+keep the cursor and selection across rebuilds, the UI uses `tape:line` or a symbol, which is never
+stored in the maps.
+
+**Vertical relationships are just spans and links.** One-to-many (a Cambridge line split into
+several as7 lines, a Forth word into many cells), many-to-one (a label line and the line below
+it, an expression continued over several lines), interleaved spans, broken spans, and generated
+words with no source (literal pools, variables, alias labels) need no special cases. A cell whose
+word in core no longer matches its link's word (a patch, self-modification, a variable, a JMS
+return address) is Xanadu's "differs from the original"; `source.ts` already tracks it.
+
+**Inherited mappings.** Not every link is written by hand. A doc section that covers a file,
+directory or tape covers everything inside it. A comment block covers the routine under it. A
+cartridge's README covers the cartridge. Mappings inherit along lexical and file-system
+containment, and a nearer, more specific link overrides an inherited one. One doc section may
+map to many places in the code, and one routine may be explained by many docs.
+
+**Reading and writing docs are live coding too.** The same environment that edits and assembles
+code is where you:
+
+- read a paper or a scan and lay rectangles on it;
+- select text and transclude it into documentation;
+- map that documentation onto the code it explains.
+
+Every one of those acts makes layers and links in the same bundle the assembler writes.
+
+**What the network then drives:**
+
+- **Validation**: a link whose ends disagree (the scan's octal against the transcription, against
+  the assembled word) is a finding. That is how the SYMELEC misreads were caught, by hand; the
+  network makes it mechanical.
+- **Testing**: `tested-by` links say which tests cover which words, and which words no test
+  touches.
+- **Generation**: a layer generated from another (as7 from Cambridge, glue from a Forth word list)
+  carries its `translated-from` links for free.
+- **Refactoring**: renaming or moving follows every link, across dialects and into the docs.
+- **Debugging**: the trace, the memory panel and the debugger follow links from the PC up through
+  the dialects to the scan and the design doc.
+- **Reverse over-engineering**: start from an image and a scan and grow the layers upward
+  (labels, symbols, structure, prose), with every claim linked to the evidence it rests on.
+
+Today `source.ts` has one map per image, one line per address. The plan is in
+[TODO.md](TODO.md#could): several maps per image, chosen in the dev tools, then this model under
+them.
+
 ## Order of work — each step falsifiable
 
 1. CPU completion + interrupts + `.oct` loader + console + clock.

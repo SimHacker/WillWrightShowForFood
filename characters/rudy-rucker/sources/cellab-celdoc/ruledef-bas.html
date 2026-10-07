@@ -1,0 +1,587 @@
+<html>
+
+<head>
+<title>Defining JC Rules in BASIC</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+
+<h1>Defining Rules in BASIC</h1>
+
+The file <b>JCRULE.BAS</b>
+contains a BASIC program which defines
+the rule for the game of Life and forms the starting point for
+defining your own rules in BASIC.  It may be run under IBM
+BASICA®, GW-BASIC®, or other compatible dialects of BASIC;
+tricky features have been avoided in an attempt to render the program
+as portable as possible.  Note that these BASICs are all
+"interpreted" languages, meaning that they must reconvert each
+program statement to machine code each time it is executed.  This
+means that the generation of a 64K <b>.JC</b> ruletable will take
+a modicum of time.  A faster way to use BASIC is to treat it as a
+compiled language like Pascal or C.  One BASIC compiler which works
+with our programs is Microsoft® QuickBASIC®.
+If you write a
+BASIC program, compile it with QuickBASIC and then run it, you will
+achieve much faster creation of ruletables.  When you run the program,
+it prompts:
+
+<p>
+
+<pre>
+Rule file name:
+</pre>
+
+<p>
+
+You should respond with the name of the rule definition file to be
+generated (don't specify the "<b>.JC</b>" file type; the program adds it
+automatically). Enter the rule file name; the program will write the
+rule file and then stop. You may then leave BASIC and execute JC to
+try out the rule. One point to note is that, unlike Pascal and C,
+BASIC does not generate the <b>.JC</b> file in compressed format. To put a
+BASIC-created <b>.JC</b> file into the more space-saving compressed format,
+go into JC, load the uncompressed rule, and then use
+<b><a href="chap3.html#Ctrl-F2">Ctrl-F2</a></b> to make
+JC resave the rule. JC will save the rule in compressed format.  
+
+<p>
+
+The rule-defining function begins at line <tt>10000</tt>, and a comment
+describing it appears immediately before that line in the program.
+The rule-defining function is called with a <tt>GOSUB&nbsp;10000</tt> with the
+neighborhood stored in variables as follows.
+
+<p>
+
+Variables <tt>N1</tt> through <tt>N9</tt> are set to the neighborhood of the
+cell.  Each is 0 if the cell is off and 1 if it is on.  The
+neighborhood is represented as follows:
+
+<p>
+
+<center>
+<table border cellpadding=4>
+<tr><td width="33%" align=center><tt>N1</tt><td width="33%" align=center><tt>N2</tt><td width="33%" align=center><tt>N3</tt>
+<tr><td align=center><tt>N4</tt><td align=center><tt>N5</tt><td align=center><tt>N6</tt>
+<tr><td align=center><tt>N7</tt><td align=center><tt>N8</tt><td align=center><tt>N9</tt>
+</table>
+</center>
+
+<p>
+
+Note that <tt>N5</tt> is the cell itself. Access to the local cell state bits
+is provided by the variable <tt>O</tt>, which is set to the cell's old state,
+ranging from 0 to 255. The function must compute the cell's new state,
+again in the range from 0 to 255, store it into variable <tt>R</tt>, then
+return.
+
+<p>
+
+The following function defines the game of Life,
+proceeding directly from Poundstone's
+description.
+
+<p>
+
+<pre>
+10000 rem Each square cell has eight neighboring cells.  It
+10010 rem adjoins four cells on its edges and touches four
+10020 rem more at the corners.  During each moment of time,
+10030 rem the player or computer counts the number of
+10040 rem neighboring cells that are on for each and every
+10050 rem cell.
+10060 rem
+10070 C=N1+N2+N3+N4+N6+N7+N8+N9
+10080 rem
+10090 rem If, for a given cell, the number of on neighbors
+10100 rem is exactly two, the cell maintains its status quo
+10110 rem into the next generation.  If the cell is on, it
+10120 rem stays on; if it is off, it stays off.
+10130 rem
+10140 IF C = 2 THEN R=N5 : RETURN
+10150 rem
+10160 rem If the number of neighbors is exactly three, the
+10170 rem cell will be on in the next generation.  This is
+10180 rem so regardless of the cell's present state.
+10190 rem
+10200 IF C = 3 THEN R=1 : RETURN
+10210 rem
+10220 rem If the number of on neighbors is zero, one, four,
+10230 rem five, six, seven, or eight, the cell will be off
+10240 rem in the next generation.
+10250 rem
+10260 R=0
+10270 rem There are no other rules.
+10280 RETURN
+</pre>
+
+<p>
+
+<a name="Brain-bas">Since the rule</a> for the game of Life only uses plane #0, the rule
+contains no reference to the other state bits stored in <tt>O</tt>.
+Rules which use Planes 1-8 may be specified straightforwardly in
+BASIC rule definition functions.  For example, here is the definition
+of Brian's Brain, a rule developed by Brian
+Silverman
+and described in
+<a href="refs.html#[Margolus&amp;Toffoli87]">[Margolus&amp;Toffoli87]</a>, § 6.1, Page 47, as:
+
+<p>
+
+<blockquote>
+The rule involves cells having three states, 0 ("ready") 1
+("firing") and 2 ("refractory").  A ready cell will fire when
+exactly two of its eight neighbors are firing; after firing it will go
+into a refractory state, where it is insensitive to stimuli, and
+finally it will go back to the ready state.
+</blockquote>
+
+<p>
+
+This translates directly into BASIC as follows:
+
+<p>
+
+<pre>
+10000 rem
+10010 rem Brian's Brain
+10020 rem
+10030 C=N1+N2+N3+N4+N5+N6+N7+N8+N9
+10040 rem
+10050 rem If previously in the refractory state, go to the
+10060 rem ready state.
+10070 rem
+10080 IF O = 2 THEN R=0 : RETURN
+10090 rem
+10100 rem If firing, go to refractory state.
+10110 rem
+10120 IF O = 1 THEN R=2 : RETURN
+10130 rem
+10140 rem Otherwise, fire if exactly two neighbors are
+10150 rem firing.
+10160 rem
+10170 IF C=2 THEN R=1 ELSE R=0
+10180 RETURN
+</pre>
+
+<p>
+
+A rule definition function in BASIC may configure certain modes for
+the simulator by setting certain variables to values defined as
+follows.  The variables and their default values are set at the top of
+<b>JCRULE.BAS</b>.
+Edit them as required in your rule
+definition program that was initially a copy of <b>JCRULE.BAS</b>.
+
+<p>
+
+You can specify the dimensionality of the cellular automaton and
+whether the world is open or closed (wrap or no wrap).  For
+one-dimensional automata you specify the tradeoff between the number
+of visible neighbors and the number of bits of state visible from
+each, by setting the variable <tt>W8</tt>.
+The settings are as follows:
+
+<p>
+
+<center>
+<table border>
+<tr><th><tt>W8</tt><th>Dimensionality<th>Wrap?<th>Neighbors<th>Bits</tr>
+<tr><td align=center>0      <td align=center>2D    <td align=center> NoWrap<td align=center> 8    <td align=center>  1        </tr>
+<tr><td align=center>1      <td align=center>2D    <td align=center> Wrap  <td align=center> 8    <td align=center>  1        </tr>
+<tr><td align=center>2      <td align=center>1D    <td align=center> NoWrap<td align=center> 8    <td align=center>  1        </tr>
+<tr><td align=center>3      <td align=center>1D    <td align=center> Wrap  <td align=center> 8    <td align=center>  1        </tr>
+<tr><td align=center>4      <td align=center>1D    <td align=center> NoWrap<td align=center> 4    <td align=center>  2        </tr>
+<tr><td align=center>5      <td align=center>1D    <td align=center> Wrap  <td align=center> 4    <td align=center>  2        </tr>
+<tr><td align=center>8      <td align=center>1D    <td align=center> NoWrap<td align=center> 2    <td align=center>  4        </tr>
+<tr><td align=center>9      <td align=center>1D    <td align=center> Wrap  <td align=center> 2    <td align=center>  4        </tr>
+<tr><td align=center>10     <td align=center>2D    <td align=center> Wrap  <td align=center> 8    <td align=center>  Sum of 8 </tr>
+<tr><td align=center>11     <td align=center>2D    <td align=center> Wrap  <td align=center> 4    <td align=center>  Sum of 4 </tr>
+<tr><td align=center>12     <td align=center>User  <td align=center> NoWrap<td align=center> User <td align=center>  User     </tr>
+<tr><td align=center>13     <td align=center>User  <td align=center> Wrap  <td align=center> User <td align=center>  User     </tr>
+</table>
+</center>
+
+<p>
+
+The 1D rules work by a) updating the top line of the screen, and b)
+copying each line to the line below it. This produces a spacetime
+trail of the 1D rule, with earlier times appearing lower on the screen
+like geological strata.
+
+<p>
+
+If a one-dimensional neighborhood is selected (by setting <tt>W8</tt>
+from 2 to 9), the neighbor cells <tt>N1</tt>-<tt>N9</tt> have different
+meanings.  In every case, consider the neighborhood of the center
+cell, <tt>O</tt>, as:
+
+<p>
+
+<center><tt>N1  N2  N3  N4  O  N6  N7  N8  N9</tt></center>
+
+<p>
+
+The exact meaning of <tt>N1</tt> through <tt>N9</tt> depends upon the
+tradeoff between the number of neighbors and the number of bits of
+state visible from each neighbor chosen by the setting of <tt>W8</tt>.
+Regardless, 8 bits of state are available for the cell itself, and
+thus the value in <tt>O</tt> will range from 0 to 255.  <tt>N1</tt> through
+<tt>N9</tt> will always have values of one or zero.  If 8 neighbors with
+one bit of visible state are selected, (<tt>W8</tt>=2 or 3) these values
+represent the least significant bit of the state of the 8 cells that
+are closest to the cell being updated, laid out along the line as
+shown above.
+
+<p>
+
+If 4 neighbors with 2 bits of visible state are selected by setting
+<tt>W8</tt> to 4 or 5, the neighborhood of the center cell <tt>O</tt> may be
+considered as:
+
+<p>
+
+<center><tt>L2  L1  O  R1  R2</tt></center>
+
+<p>
+
+where the two bit state of the four adjoining cells are obtained from
+<tt>N1</tt> through <tt>N9</tt> through the expressions:
+
+<p>
+
+<pre>
+           L2 = (N1 * 2) + N2
+           L1 = (N3 * 2) + N4
+           R1 = (N6 * 2) + N7
+           R2 = (N8 * 2) + N9
+</pre>
+
+<p>
+
+The values <tt>L1</tt>, <tt>L2</tt>, <tt>R1</tt>, and <tt>R2</tt> are not
+automatically precalculated for your rule; you may cause them to be
+calculated by executing a <tt>GOSUB 3000</tt>.
+
+<p>
+
+If 2 neighbors with 4 bits of visible state are selected, by setting
+<tt>W8</tt> to 8 or 9, the neighborhood of the center cell <tt>O</tt> may be
+considered as:
+
+<p>
+
+<center><tt>L1  O  R1</tt></center>
+
+<p>
+
+where the four bit state of the two adjoining cells are obtained from
+N1 through N9 through the expressions:
+
+<p>
+
+<pre>
+           L1 = (N1 * 8) + (N2 * 4) + (N3 * 2) + N4
+           R1 = (N6 * 8) + (N7 * 4) + (N8 * 2) + N9
+</pre>
+
+<p>
+
+The values of <tt>L1</tt> and <tt>L2</tt> are not automatically
+precalculated for your rule; you may cause them to be calculated by
+executing a <tt>GOSUB3100</tt>.
+
+<p>
+
+Thus you simply use <tt>N1</tt> through <tt>N9</tt> for 8 neighbors, do a
+<tt>GOSUB 3000</tt> and use <tt>L2</tt>, <tt>L1</tt>, <tt>R1</tt>, <tt>R2</tt> for 4
+neighbors; or do a <tt>GOSUB&nbsp;3100</tt> and use <tt>L1</tt> and <tt>R1</tt> for
+2 neighbors.
+
+<p>
+
+<a name="Aurora-bas">Here are the relevant lines</a> from a BASIC definition of the
+one-dimensional Aurora rule:
+
+<p>
+
+<pre>
+1165      W8 = 9
+1295      F6 = 15
+1350      Q2$ = "aurora"
+1540      T7 = 0
+1545      T8 = 4
+1550      T9 = 255
+10000 gosub 3100
+10010 r = int(((l1 + (o and 15) + r1)) / 3) + 1
+10020 return
+</pre>
+
+<p>
+
+The <tt>int()</tt> is required because division in BASIC returns a floating
+point value.
+
+<p>
+
+Choosing WorldType (<tt>W8</tt>) 10 or 11 causes JC to evaluate <em>averaging
+rules</em>.
+These rules were devised to allow generalizations of the Rug
+rule of RC. In both of these rules the screen is wrapped. WorldType 10
+computes the sum of EveryCell's eight nearest neighbors, and WorldType
+11 gets the sum of EveryCell's four nearest neighbors. Since WorldType
+11 has less work to do it runs faster than WorldType 10, although both
+types run slower than do our standard two-dimensional rules.
+
+<p>
+
+In these rules, variable <tt>O</tt> holds the low five bits of the
+EveryCell's old eightbit state, and the variable N1 holds the sum of
+the EveryCell's eight (<tt>W8</tt>=10) or four (<tt>W8</tt>=11) eightbit
+neighbors.  This sum can take as many as eleven bits to write out,
+which is why we are only allowed to see five bits of EveryCell's old
+state.  The limitation is that our rules use lookup tables whose
+entries are indexed by sixteen bit "situation" codes.
+
+<p>
+
+In WorldTypes 10 and 11, the variables other than <tt>O</tt> and <tt>N1</tt>
+are not used.
+
+<p>
+
+WorldTypes 12 and 13 are for "own code rules."
+Type 12 has wrap
+turned off, with zero on the boundary; and Type 13 is the torus wrap
+mode.  To run a rule of WorldType 12 or 13, one must have a predefined
+inner loop function.  These inner loop functions have extension
+<b>.JCO</b>.  They are discussed more fully later in this
+section.
+
+<p>
+
+For own code rules (WorldType = 12 or 13), the raw index into the
+lookup table is passed in the double precision variable <tt>O1#</tt>
+(make sure to use <tt>INT()</tt> if you use division to extract bits from
+this value).  In addition, <tt>I9</tt> contains the most significant 8
+bits of the lookup table index and <tt>J9</tt> contains the least
+significant bits.  None of the other neighbor variables are
+initialized.
+
+<p>
+
+You can select random input to any contiguous span of bits of every
+cell.  On every generation these bits will be set to a new random
+value.  The random bits are uniformly distributed; on average half the
+bits are zeroes and half are ones.  To select random input set
+variable <tt>T5</tt> to the least significant bit of the desired random
+bit field and <tt>T6</tt> to the number of random bits desired; by
+default no random bits are supplied.  Selecting random bits slows the
+execution of the simulator somewhat.
+
+<p>
+
+To create position sensitive rules, you can specify that a vertical or
+horizontal texture be placed in the state map so that the rule can
+examine it.  Horizontal texture identifies the individual cells along
+rows in the state map.  To enable horizontal texture, set <tt>T1</tt> to
+the least significant bit of the field to contain the horizontal
+texture and <tt>T2</tt> to the number of horizontal texture bits desired.
+You can provide vertical texture information to the rule in a similar
+manner by setting <tt>T3</tt> and <tt>T4</tt>; vertical texture supplies
+values that increment on successive lines.  If you select one bit of
+texture (the most common case), you'll get a bit that toggles between
+zero and one for each column (horizontal texture) or row (vertical
+texture).  If you select more than one bit of texture, the value
+increments within the field size you specify.  For example, if you set
+<tt>T1</tt> to 5 and <tt>T2</tt> to 2, the two bit field (bits 5 and 6) will
+cycle among binary values <b><tt>00</tt></b>, <b><tt>01</tt></b>, <b><tt>10</tt></b>, <b><tt>11</tt></b>,
+<b><tt>00</tt></b>, <b><tt>01</tt></b>, <b><tt>10</tt></b>, <b><tt>11</tt></b>, and so on for successive
+columns in the state map.  If you set <tt>T1</tt> and <tt>T3</tt> to the
+same bit and <tt>T2</tt> and <tt>T4</tt> to 1, a checkerboard pattern will
+be generated.  The texture specification simply places an initial
+texture in the state map when a rule or pattern is loaded; the texture
+is not replaced on every generation.  It's up to the rule to preserve
+the texture from generation to generation by returning the texture
+bits in <tt>R</tt> as they were passed in the variable <tt>O</tt>.
+
+<p>
+
+You can request a specific pattern file be loaded when the rule file
+is loaded by setting the <tt>Q1$</tt> variable to the pattern file name. For
+example, if your rule should be run with the pattern in file
+<b>TRICORN.JCP</b>, use the statement:
+
+<p>
+
+<pre>
+Q1$ = "tricorn"
+</pre>
+
+<p>
+
+in your rule definition. Similarly, a rule definition can request a
+colorpalette file to be loaded by setting the variable <tt>Q2$</tt>. To load a
+colorpalette file called <b>VIVID.JCC</b>, use the statement:
+
+<p>
+
+<pre>
+Q2$ = "vivid"
+</pre>
+
+<p>
+
+in your rule definition program own code request.  Your rule can
+request an own code evaluator to be loaded by setting the variable
+<tt>Q3$</tt> to the file name.  To load an own code evaluator named
+<b>LAPLACE.JCO</b>, use
+
+<p>
+
+<pre>
+Q3$ = "laplace"
+</pre>
+
+<p>
+
+Many rules require a random seed pattern in one or more bitplanes.
+While you can specify these bits by saving them in a pattern file,
+pattern files with random bits occupy large amounts of disk space.  To
+save space your rule can request one or more bit planes to be
+randomized programmatically.  To specify an initial random seed, set
+the variable <tt>T7</tt> to the least significant bit of the initial
+random seed field and <tt>T8</tt> to the number of bits of initial random
+seed desired.  Random bits generated by the initial random seed
+mechanism normally are uniformly distributed: half zeroes and half
+ones.  You can specify the density of the bits generated by setting
+the variable <tt>T9</tt>: the default value of 255 generates half ones
+and half zeroes.  Values less than 255 select lower densities of ones.
+If you set <tt>T9</tt> to 128 only 25% of the bit fields will be
+nonzero.  Since the density specification works by setting the
+specified percentage of bit fields to zero, the <tt>T9</tt> specification
+makes sense only when <tt>T8</tt> is set to 1.
+
+<p>
+
+Because interpreted versions of BASIC execute very slowly, a rule
+definition program may specify which state bits are relevant to the
+rule; the fewer bits the rule depends upon, the faster it is
+generated.  Variable <tt>F6</tt> selects the state bits a rule examines;
+the default value of 255 describes a rule dependent upon all 8 bits of
+local cell state.  If your rule examines only the two least
+significant bits of state (as does Brian's Brain, see
+<b>Brain.BAS</b>), you may set <tt>F6</tt> to 3, which will generate
+the rule definition 64 times faster.
+
+<p>
+
+The speed at which the simulator runs does not depend at all upon the
+complexity of the rule or the pattern; it is completely constant.
+There is no reason to make the function that defines the rule
+efficient--it is executed only to create the rule definition file,
+then never used again.
+
+<p>
+
+For executable examples of BASIC rule definitions, look at the
+definition of Life in <b>JCRULE.BAS</b>,
+and also at
+<b>BRAIN.BAS</b>,
+the BASIC language definition of Brian's Brain,
+as given above.  A good way to start writing your own rules is to copy
+<b>JCRULE.BAS</b> to a new file <b>FIRST.BAS</b>.  Then you
+can change a few things in <b>FIRST.BAS</b> and try running the
+rule to get your own <b>FIRST.JC</b>.
+
+<p>
+
+The <b>JCRULE.BAS</b> file contains a built-in
+definition of Life.  All the separate rule sample definitions simply
+contain lines that replace that built-in definition with the rule
+they're defining.  For example, here is the listing of
+<b>VONPAR.BAS</b>, which defines a 3 bit von
+Neumann neighborhood parity rule that works in conjunction with the
+<b>VONN3</b> own code evaluator.
+
+<p>
+
+<pre>
+1 rem
+2 rem  Three bit parity rule in von Neumann neighborhood, 
+3 rem  using the VONN3 own code file.
+4 rem
+5 rem  MERGE this file after loading JCRULE.BAS first.
+6 rem
+1165 W8 = 13
+1295 F6 = 127       : rem Top bit of local state not used
+1375 Q3$ = "vonn3"
+10000 rem Three bit parity rule in the von Neumann
+10010 rem neighborhood implemented using the VONN3
+10020 rem own code file. Note how the neighbor cell values
+10030 rem are extracted from the lookup table index passed
+10040 rem in O1# (and I9 and J9), according to the encoding
+10050 rem used by VONN3.
+10060 rem
+10070 N8 = (j9 MOD 8)                : rem South
+10080 N6 = (int(o1# / 8) MOD 8)      : rem East
+10090 N4 = (int(o1# / 64) MOD 8)     : rem West
+10110 N2 = (int(o1# / 512) MOD 8   ) : rem North
+10120 N5 = (int(o1# / 4096) MOD 8)   : rem Self
+10120 r = n2 xor n8 xor n4 xor n6
+10130 RETURN
+</pre>
+
+<p>
+
+The lines number 1165, 1295, and 1375 replace lines so numbered in
+<b>JCRULE.BAS</b> to set worldtype, the generation optimization
+mask, and the own code load request.  The rule is defined by the code
+that starts at line <tt>10000</tt>, as before.  Note that rule definition
+code must be careful to delete the lines which define Life in
+<b>JCRULE.BAS</b>, numbered <tt>10000</tt> through <tt>10100</tt> in
+increments of 10.
+
+<p>
+
+To generate this rule using BASICA or GW-BASIC, load BASIC, then enter
+the commands:
+
+<p>
+
+<blockquote>
+<b>
+LOAD "jcrule"<br>
+MERGE "vonpar"<br>
+RUN
+</b>
+</blockquote>
+
+<p>
+
+The <tt>MERGE</tt>
+command loads <b>VONPAR.BAS</b>, replacing lines
+with the same numbers in <b>JCRULE.BAS</b>.  If you don't
+want to go through this <tt>MERGE</tt> every time, simply <tt>SAVE</tt>
+the composite file after the <tt>MERGE</tt>.  Microsoft QuickBASIC does
+not provide a line number-oriented <tt>MERGE</tt> facility.  If you want
+to use QuickBASIC and have access to BASICA or GW-BASIC, the easiest
+approach is to perform the <tt>MERGE</tt> using one of those products,
+then <tt>SAVE "</tt><em>file</em><tt>",A</tt>, to save an ASCII merged file
+which may be loaded and run directly from QuickBASIC.  If you lack a
+suitable BASIC interpreter, QuickBASIC's editor may be used to insert
+the rule definition lines into a loaded copy of <b>JCRULE.BAS</b>
+using the cut and paste features.
+
+<h3><a href="ruledef.html#bottom">Back to <cite>Defining Rules</cite></a></h3>
+<h3><a href="ruledef-own.html">Onward to <cite>Defining Own Code Evaluators in Assembly Language</cite></a></h3>
+
+<p>
+<hr>
+<a href="ruledef-own.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="ruledef-c.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

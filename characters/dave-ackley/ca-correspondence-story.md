@@ -333,7 +333,7 @@ Everything above, categorized for grabbing.
 | [CAM6 live](https://donhopkins.com/home/CAM6/) · [CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) | Run it / read it    |
 | [CAM book (PDF)](https://donhopkins.com/home/cam-book.pdf)                                                                   | Toffoli & Margolus  |
 | [Demo reel](https://www.youtube.com/watch?v=eCVJ08gK2o8) · [Margolus demo](https://www.youtube.com/watch?v=LyLMHxRNuck)      | Video feedback + CA |
-| [CAM6 wiki](https://donhopkins.com/mediawiki/index.php/CAM6_Simulator)                                                       | Notes               |
+| [CAM6 wiki (backup)](../don-hopkins/sources/cam6-simulator-wiki/README.md)                                                       | Notes               |
 
 
 ### "Emacs for Cytoplasm" — Timothy Davidson / LifeBrush

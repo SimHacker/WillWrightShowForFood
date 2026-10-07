@@ -1,0 +1,527 @@
+<html>
+
+<head>
+<title>Defining JC Own Code Evaluators in Assembly Language</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+
+<h1>Defining Own Code Evaluators in Assembly Language</h1>
+
+This section contains quite advanced material and should not be
+tackled until you a) have a thorough familiarity with <i>CelLab</i> and b)
+know assembly language.
+
+<p>
+
+The section arose because Rudy kept asking me to add new modes to the
+basic JC program. First he wanted a one-dimensional mode. Then he
+wanted a mode that can see more than one bit of neighbor state so JC
+could do the Rug rule in VGA mode. Each of these changes involved
+adding new code to the main JC program, which meant I had to keep
+remaking all the rulemakers. And each addition only stimulated more
+requests. What a drag....
+
+<p>
+
+In order to get out of the business of adding custom evaluator after
+custom evaluator to JC, and to completely open the architecture of the
+program, rendering it extensible almost without bound, I implemented
+"user own code evaluators". These allow any user to write his own
+custom inner loop for any kind of automaton he wishes and have it
+executed as the update rule by JC, retaining all of the facilities of
+JC including the lookup table. This facility is intended for
+experienced assembly language programmers only, but the way in which
+it is integrated with <i>CelLab</i> allows "aftermarket evaluators" to be
+coded and run with existing copies of <i>CelLab</i>. Thus <i>CelLab</i> can get
+smarter after it's shipped without the need for a new release.
+
+<p>
+
+We have used this facility already to implement several interesting
+new evaluators. One performs the optimal solution of Laplace's
+equation in the plane. A second implements a general-purpose von
+Neumann neighborhood where each cell can see 3 bits of state from each
+of its neighbors and four bits of local state. A third implements
+Langton's self-reproducing creature.
+
+<p>
+
+The rules for creating own code evaluators are detailed and highly
+rigid, but once you understand them the actual job of coding an
+evaluator is not all that difficult. First, let's examine it from a
+rule definition standpoint. Consider the following Pascal rule
+definition:
+
+<p>
+
+<pre>
+PROGRAM Vonpar;
+{3 bit parity rule for von Neumann neighborhood implemented
+ with the VONN3 own-code evaluator.  }
+USES JCmake;
+{$F+}     { Required for function argument to genrule. }
+FUNCTION JCRule(OldState,nw,n,ne,w,self,
+                         e,sw,s,se:integer): integer;
+BEGIN
+          s := oldstate AND 7;
+          e := (oldstate SHR 3) AND 7;
+          w := (oldstate SHR 6) AND 7;
+          n := (oldstate SHR 9) AND 7;
+          self := (oldstate SHR 12) AND 15;
+          JCRule := n XOR s XOR w XOR e
+END;
+BEGIN
+          WorldType := 13;    { Own code torus }
+          patreq := 'square';
+          OCodeReq := 'vonn3';
+          genrule(JCRule)
+END.
+</pre>
+
+<p>
+
+This is a parity rule that works on 3 bits of state in the von Neumann
+neighborhood.  Since this is a neighborhood option not built into
+<i>CelLab</i>, the rule definition invokes an own code routine called
+"<b>vonn3</b>" which implements that custom neighborhood.  It sets
+<tt>WorldType</tt> to 13 to select a toroidal world (it would be 12 if open),
+and a generic look-up table in which the meaning of the entries is
+totally up to the own code implementation.  The <b>VONN3</b> own
+code routine, implemented in the file <b>VONN3.ASM</b>
+and
+supplied in ready to use form as <b>VONN3.JCO</b>
+(the extension
+stands for "JC Own code"), is requested by setting "<tt>OCodeReq</tt>"
+to
+its file name.  Own code evaluators defined with world types 12 and 13
+work with rule definition functions called directly with the raw
+lookup table index in <tt>OldState</tt>;
+the rest of the rule definition
+function arguments are unused and are always zero.  The meaning of the
+16 bits of <tt>OldState</tt> is defined by the own code routine itself.  For
+<b>VONN3</b> the assignments are as follows:
+
+<p>
+
+<center>
+<table border>
+<tr><th>OldState bits<th>Meaning</tr>
+<tr><td align=center> 2 - 0 <td align=center> South</tr>
+<tr><td align=center> 5 - 3 <td align=center> East</tr>
+<tr><td align=center> 8 - 6 <td align=center> West</tr>
+<tr><td align=center> 11 - 9 <td align=center> North</tr>
+<tr><td align=center> 15 - 12 <td align=center> Self</tr>
+</table>
+</center>
+
+<p>
+
+Thus, as advertised, 3 bits from each neighbor and four local bits are
+visible (the local bits aren't used in this rule definition).  Since
+only <tt>OldState</tt> is passed, the <tt>JCRule</tt> function extracts the
+neighbors itself from <tt>OldState</tt>.  It calculates the new value and
+returns it in the conventional manner.
+
+<p>
+
+When this rule definition is loaded into JC, it searches for the file
+<b>VONN3.JCO</b> and loads it as an own code evaluator.  To
+signify that an own code evaluator is in use, the name in the rulebox at the
+upper right of the status screen is shown with a suffix of <tt>+</tt>".
+If you save a rule or experiment within <i>CelLab</i> with
+<b><a href="chap3.html#Ctrl-F2">Ctrl-F2</a></b> or <b><a href="chap3.html#Ctrl-F3">Ctrl-F3</a></b>, the own code is embedded within the
+saved rule so it can be automatically loaded when the rule is
+reloaded.  Thus, once you get everything working just right, you can
+save the rule from within JC as a <b>.JC</b> file, then send it to
+your friend without his needing a copy of the <b>.JCO</b> file.
+Similarly, saved experiments are completely self-contained even when
+own code is involved in them.
+
+<p>
+
+So what are these mysterious own code routines, and how do I go about
+writing one?  Listen up, sharpen your coding stick, and get ready to
+be initiated into the gory details of the innards of <i>CelLab</i>.  First
+of all, an own code routine is mechanically an MS-DOS <b>.COM</b>
+file (we give it the extension of <b>.JCO</b> so it won't be
+accidentally executed as a program, which would certainly crash the
+machine).  Own code files are created by writing them in assembly
+language, assembling them, linking them, and creating a
+<b>.COM</b> file named <b>.JCO</b> either using
+<b>EXE2BIN</b> or directly from your linker, if it offers that
+feature (as does Turbo Assembler's® linker).  The own code program is,
+in essence, the "inner loop" that updates the state of a line of
+cells in the state map.  We have the own code process an entire line
+rather than just one cell because this reduces the number of times it
+must be called from 64,000 to 200, which drastically cuts the overhead
+and increases execution speed.  There is no measurable speed penalty
+when using own code rather than a built-in evaluator of the same
+complexity.  Own code evaluators are called with a precise set of
+values in registers and a known execution environment.  An evaluator
+must exactly adhere to the coding guidelines below or disaster will
+ensue, generally manifested as a machine that hangs the first time you
+try to run the rule.
+
+<p>
+
+Let's examine the definition for the <b>VONN3</b> own code
+evaluator.  In assembly code it's as follows:
+
+<p>
+
+<pre>
+;       Own code evaluator for von Neumann neighborhood
+;       with 3 bits of state visible from each neighbor and
+;       4 bits of local state.
+
+codes   segment byte
+        assume  cs:codes
+
+        org     100h
+
+NWEST   equ     [bp-323]
+NORTH   equ     [bp-322]
+NEAST   equ     [bp-321]
+WEST    equ     [bp-1]
+SELF    equ     [bp]
+EAST    equ     [bp+1]
+SWEST   equ     [bp+321]
+SOUTH   equ     [bp+322]
+SEAST   equ     [bp+323]
+
+vonn3   proc    far
+
+        mov     dx,320   ; load row length counter
+        mov     cl,3     ; load shift count
+
+ocbyte: mov     al,SOUTH
+        rol     al,1     ; adjust map state
+        ror     ax,cl
+        mov     al,EAST
+        rol     al,1     ; adjust map state
+        ror     ax,cl
+        mov     al,WEST
+        rol     al,1     ; adjust map state
+        ror     ax,1
+        ror     ax,1
+        mov     bl,ah
+        ror     ax,1
+        mov     al,NORTH
+        rol     al,1     ; adjust map state
+        ror     ax,cl
+        mov     al,SELF
+        rol     al,1     ; adjust map state
+        ror     ax,cl
+        ror     ax,1
+        mov     bh,ah
+
+        mov     al,[bx]  ; load new value from lookup table
+        inc     bp       ; advance along row
+        stosb            ; store into new state table
+
+        dec     dx       ; more to update ?
+
+        jnz     ocbyte   ; yes.  keep on going
+
+        ret
+vonn3   endp
+
+codes   ends
+        end     vonn3
+</pre>
+
+<p>
+
+This code appears puzzling until we explain some things about register
+contents and the handling of the state map.  An own code evaluator is
+called with a far (intersegment) call, hence the declaration of
+<b>VONN3</b> as a <tt>FAR</tt> procedure.  The own code routine must
+start at address <b><tt>100h</tt></b>, the very first byte in the file (as is
+standard for all <b>.COM</b> files).  If you have data or other
+material in the file, it must follow the evaluator procedure.  When
+the procedure receives control, the registers are loaded as follows:
+
+<p>
+
+<center>
+<table>
+<tr><td>Decrement flag <td> Cleared
+<tr><td><tt>SS:BP </tt> <td> Old state table
+<tr><td><tt>SP    </tt> <td> At end of 64K containing old state table
+<tr><td><tt>DS    </tt> <td> Lookup table
+<tr><td><tt>CS    </tt> <td> User code segment
+<tr><td><tt>ES:DI </tt> <td> New state table
+<tr><td><tt>AX    </tt> <td> Scratch
+<tr><td><tt>BX    </tt> <td> Scratch, normally used to index lookup table
+<tr><td><tt>CX    </tt> <td> Scratch, aux value passed in <tt>CL</tt>
+<tr><td><tt>DX    </tt> <td> Scratch
+<tr><td><tt>SI    </tt> <td> Line counter (200 on first, 1 on last)
+</table>
+</center>
+
+<p>
+
+The job of each call on the own code function is to update 320
+consecutive cells starting at <tt>SS:BP</tt>, storing their new values in
+the 320 bytes starting at <tt>ES:DI</tt>.  In the process of performing
+this update, <tt>BP</tt> and <tt>DI</tt> should both be incremented by 320
+bytes.  The lookup table, if used by the rule, may be found starting
+at offset zero based on <tt>DS</tt>, and hence a full 64K of lookup table
+may be addressed by an index in the <tt>BX</tt> register.  The own code
+function may use registers <tt>AX</tt>, <tt>BX</tt>, <tt>CX</tt>, and <tt>DX</tt>
+as it wishes.  Other than incrementing <tt>BP</tt> and <tt>DI</tt>, all
+other registers must be left unchanged by the own code.  Own code may
+assume the decrement flag is cleared when it is called, and it must
+leave the decrement flag cleared when it returns.  Register <tt>SI</tt>
+informs the own code which line it is processing--most rules do not
+need this information, but it's there if you need it (and it must be
+preserved by the own code).  Incredibly sneaky own code can even
+change <tt>SI</tt> to update a subset of the state map, but I'll leave
+that to seriously weird people to figure out (hint: make sure you
+diddle <tt>BP</tt> and <tt>DI</tt> to compensate!).
+
+<p>
+
+When <tt>SS:BP</tt> is pointing to a given cell, its
+neighbors
+may be found by
+the following expressions:
+
+<p>
+
+<center>
+<table border cellpadding=4>
+<tr><td width="33%" align=center><tt>NW</tt><td width="33%" align=center><tt>N</tt><td width="33%" align=center><tt>NE</tt>
+<tr><td align=center><tt>W</tt><td align=center><tt>C</tt><td align=center><tt>E</tt>
+<tr><td align=center><tt>SW</tt><td align=center><tt>S</tt><td align=center><tt>SE</tt>
+</table>
+</center>
+
+<p>
+
+<center>
+<table>
+<tr><th>Neighbor  <th>Address expression
+<tr><td align=center><tt>NW</tt> <td><tt>&nbsp;&nbsp;&nbsp;[bp-323]</tt>
+<tr><td align=center><tt>N</tt>  <td><tt>&nbsp;&nbsp;&nbsp;[bp-322]</tt>
+<tr><td align=center><tt>NE</tt> <td><tt>&nbsp;&nbsp;&nbsp;[bp-321]</tt>
+<tr><td align=center><tt>W</tt>  <td><tt>&nbsp;&nbsp;&nbsp;[bp-1]</tt>
+<tr><td align=center><tt>C</tt>  <td><tt>&nbsp;&nbsp;&nbsp;[bp]</tt>
+<tr><td align=center><tt>E</tt>  <td><tt>&nbsp;&nbsp;&nbsp;[bp+1]</tt>
+<tr><td align=center><tt>SW</tt> <td><tt>&nbsp;&nbsp;&nbsp;[bp+321]</tt>
+<tr><td align=center><tt>S</tt>  <td><tt>&nbsp;&nbsp;&nbsp;[bp+322]</tt>
+<tr><td align=center><tt>SE</tt> <td><tt>&nbsp;&nbsp;&nbsp;[bp+323]</tt>
+</table>
+</center>
+
+<p>
+
+Symbolic equates for these definitions are given at the top of
+<b>VONN3.ASM</b>.  Now the code in <tt>VONN3</tt> should begin to
+make a little more sense, but what are all those "<tt>rol&nbsp;xx,1</tt>"
+instructions with comments that say "adjust map state?" In order to
+make the updating of built-in neighborhoods run as fast as possible,
+the internal state map is kept circularly shifted with respect to the
+normal nomenclature of states--Plane 0 (the public bit for normal
+rules) is stored as the 2<sup>7</sup> bit in the internal state map, with
+planes 1 through 7 stored in the least significant 7 bits of the state
+map.  JC carefully shields the user from knowledge of this, but since
+own code works directly on the internal state map, it must be
+cognizant of this fact.  Since it takes some time to adjust the state
+map cells, crafty programming tricks that eliminate this are worth
+looking for when you design own code routines.  (If you only need 7
+bits or fewer of state, the simplest expedient is just to ignore Plane
+0 and use Planes 1 through 7 for your state.  You can extract them
+simply by loading bytes directly from the state map with no shifting
+required.  The Langton rule uses this trick to run faster
+than the pure <b>VONN3</b> definition.) If you want to supply
+modal information to the rule, you can encode 8 bits of information in
+the "<tt>auxplane</tt>" variable in the rule definition function.  For
+own code rules this cell does not cause any special treatment of plane
+1, but instead is simply passed to the own code function in register
+<tt>CL</tt> each time the function is called.  The interpretation of this
+value is totally up to the own code rule function.
+
+<p>
+
+The built-in logic that calls your own code takes care of toroidal
+wrap around and supplying zero neighbors for open worlds.  As long as
+your own code addresses the neighbors with the expressions given
+above, it doesn't have to worry about wraparound or world type.  When
+used with own code, the lookup table has no predefined meaning--it's
+simply 64K of data to which the own code assigns its own
+interpretation.  Consequently, Pascal or C rule definitions which use
+own code evaluators must be coded with an understanding of what the
+own code expects to find in the lookup table.  (Note that if you
+really want to go off the deep end, there isn't any reason own code
+can't <em>change</em> the lookup table as it's running.  If you want your
+own code to do something special at the start of every generation,
+just test <tt>SI</tt> equal to 200.) Some own code functions don't even
+need the lookup table at all.  <a name="3-CA-Laplace">For example, here's own code for
+<b>LAPLACE.ASM</b> which solves the Laplace equation
+in the plane using the formula:</a>
+
+<p>
+
+<center>
+<i>New</i> = ((<i>N</i> + <i>S</i> + <i>E</i> + <i>W</i>) × 4 + (<i>NW</i> + <i>NE</i> + <i>SW</i> + <i>SE</i>)) / 20
+</center>
+
+<p>
+
+<pre>
+;       Own code evaluator for optimal solution to Laplace
+;       equation in the plane.  The rule is embodied totally
+;       in the code--no lookup table is used.
+
+codes   segment byte
+        assume  cs:codes
+
+        org     100h
+
+NWEST   equ     [bp-323]
+NORTH   equ     [bp-322]
+NEAST   equ     [bp-321]
+WEST    equ     [bp-1]
+SELF    equ     [bp]
+EAST    equ     [bp+1]
+SWEST   equ     [bp+321]
+SOUTH   equ     [bp+322]
+SEAST   equ     [bp+323]
+
+laplace proc    far
+
+        mov     dx,320          ; load row length counter
+        mov     cl,20           ; load divisor
+
+lbyte:  xor     ah,ah
+        mov     bl,WEST
+        rol     bl,1
+        xor     bh,bh
+        mov     al,EAST
+        rol     al,1
+        add     bx,ax
+        mov     al,NORTH
+        rol     al,1
+        add     bx,ax
+        mov     al,SOUTH
+        rol     al,1
+        add     bx,ax
+        add     bx,bx           ; * 2
+        add     bx,bx           ; * 4
+
+        mov     al,NWEST
+        rol     al,1
+        add     bx,ax
+        mov     al,NEAST
+        rol     al,1
+        add     bx,ax
+        mov     al,SEAST
+        rol     al,1
+        add     bx,ax
+        mov     al,SWEST
+        rol     al,1
+
+        add     ax,bx           ; complete weighted sum
+        add     ax,10           ; round up in divide
+        div     cl              ; divide to normalize result
+        ror     al,1            ; shift into state map order
+
+        inc     bp              ; advance along row
+        stosb                   ; store into new state table
+
+        dec     dx              ; more to update ?
+        jnz     lbyte           ; yes.  keep on going
+
+        ret
+laplace endp
+
+codes   ends
+        end     laplace
+</pre>
+
+<p>
+
+Since this code computes the new value arithmetically from the
+neighbor cells, it doesn't bother with the lookup table. A C or Pascal
+rule definition that called it would just always return zero from the
+rule definition function.
+
+<p>
+
+Own code evaluators should be short, sweet, and simple. Evaluators of
+the complexity shown here run at speeds comparable to the built in
+rule evaluators of <i>CelLab</i> (<b>LAPLACE</b>, with all of its shifting and
+division, runs about half the speed of the standard evaluator). If you
+need to do lots of computation, try to find a way to reduce it to
+table lookup or else you're likely to be disappointed at how fast your
+rule executes.
+
+<p>
+
+For an example of what can be done with own code, please refer to the
+most complicated example to date, the definition of Langton's
+self-reproducing machine.  The own code for this rule (essentially
+identical to the <b>VONN3</b> example given above, but using
+doubled state codes to run faster) is defined in
+<b>Langton.ASM</b>.
+The rule definition which generates the
+complicated lookup table used by the own code is defined in the Pascal
+file <b>Langton.PAS</b>.
+
+<p>
+
+It's worth noting in passing that the place at which user own code is
+interposed in JC's evaluation loop is precisely the point where one
+could access a hardware JC evaluation accelerator
+peripheral, should
+some crafty hardware maven see fit to build one. Such a device,
+supplied with a tiny own code driver, would make JC run many times
+faster.
+
+<p>
+
+If you have a lookup table that you'd like to run with several
+different own code evaluators, you can explicitly load an own code
+routine by using the <b>L</b> key as for load rule, but entering a file
+name prefixed with an asterisk.  You can see a list of <b>.JCO</b>
+files in a given directory by entering "*<em>dirname</em>?" to the
+<b>L</b> command.
+
+<p>
+
+As you come to master the craft of own code evaluator design, your
+horizons will suddenly broaden as you come to realize the extent that
+JC places you in control. Appropriate own code, written with a
+thorough understanding of the internal environment seen by the own
+code, can implement such things as:
+
+<p>
+
+<ul>
+<li>Optimized evaluation, skipping inactive regions at high      
+        speed.
+<li>Position-sensitive evaluation, for example preserving
+        a constant frame on the screen.
+<li>Non-state inputs (random numbers, etc.).
+<li>Non-local neighbors.
+<li>Temporal phase (for example, alternating block rules).
+</ul>
+
+<p>
+
+Your imagination and assembly language coding skills are truly the
+only limits to what you can accomplish with own code.
+
+<h3><a href="ruledef.html#bottom">Back to <cite>Defining Rules</cite></a></h3>
+<h3><a href="patterns.html">Onward to <cite>JC Pattern Design</cite></a></h3>
+
+<p>
+<hr>
+<a href="patterns.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="ruledef-bas.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

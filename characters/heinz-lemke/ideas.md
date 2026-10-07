@@ -94,6 +94,28 @@ chairs, confirmed in his own figures.** The interview question upgrades from "di
 to "walk us through the walk": how far apart were the consoles, who else was in the room,
 what did you do while LADAN chewed?
 
+### 4b3. How did PDP-7 code travel? Tapes, papers, films, visits
+**Interview questions (Don, 7 Oct 2026):**
+
+- **Tapes in the post.** Did people mail PDP-7 paper tapes to each other to share code? If
+  someone sent you a tape, could you load it and run it, or did it take a lot of explaining:
+  which assembler, what core size, which devices, where to start, which switches to set?
+- **What travelled with the code.** What went along with a program, or instead of one:
+  papers, internal reports, listings, films, handwritten notes, photographs? On the 1969 US
+  trip and other visits, what did you show people in person, and what did you send to people
+  far away?
+- **Configuring the machine.** How much of a program's meaning lived in the room? How was
+  your PDP-7 physically configured: core size, the 340 and its options, the light pen, the
+  Titan link, the teletype and tape reader and punch, switches and cabling, the cabinets
+  themselves? Could a tape written for one PDP-7 run on another without knowing all of
+  that, and how was a configuration written down for someone else?
+
+**Why we ask:** this is what the cabinet's [PDP-7 cartridges](../../packages/cabinet/CARTRIDGES.md)
+are for. A cartridge carries the tape, but also the configuration, the documentation, the
+papers and the source maps from each word back to its listing and scan. In other words, it
+carries everything a 1970 recipient would have needed someone to explain. Heinz's answer tells
+us what a cartridge has to contain to stand in for that explanation.
+
 ### 4d. Alan Kay — light pen vs RAND tablet
 Alan Kay (2020): not surprised by PDP-7, surprised by light pen ("fatigued tingling hand… twitch
 the primary button"). Heinz has the actual PDP-7 light-pen driver source. Segment: author vs

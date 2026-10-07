@@ -14,6 +14,7 @@ That folder is the master. Fix things there, then copy the changed file here.
 | `symelec-literals.oct` | the literal pool, from the listing's literal table (`scripts/extract-literals.mjs`) |
 | `symelec-symbols.tsv` | the symbol table (`scripts/extract-symbols.mjs`) |
 | `rsppix-listing.txt`, `rsppix.asm`, `rsppix.oct` | the ring structure processor, the same three forms |
+| `symelec.s`, `../pdp7forth/rsppix.s` | both sources in `as7`, from `scripts/translate-cambridge.mjs`; same words |
 
 The two extract scripts in `packages/cabinet/scripts/` write into Heinz's folder; copy the results
 here after running them.

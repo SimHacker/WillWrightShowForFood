@@ -1,0 +1,942 @@
+<html>
+
+<head>
+<title>Defining JC Rules in Turbo Pascal</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+
+<h1>Defining Rules in Turbo Pascal</h1>
+
+To define a rule in Turbo Pascal®, you write a rulefunction called
+<b>JCRule</b>
+which, when called with arguments containing the state of a
+cell and its neighbors, returns the new state for the cell as an
+integer from 0 to 255 (the low bit #0 is the state of Plane 0, bit
+#1 is the state of Plane 1 and so on).  You embed this rulefunction
+in a <b>.PAS</b> file of the form shown below to get a <em>ruleprogram</em>.  When you compile and run the
+ruleprogram,
+a <b>.JC</b> ruletable is generated.  You can compile and run the
+ruleprogram either from inside Pascal (by pressing <b>Alt-R</b> in
+Turbo) or from the command line (by entering <tt>TPC</tt> <em>filename</em>).  When you run the ruleprogram, you will see the first
+prompt:
+
+<p>
+
+<pre>
+Rule file name:
+</pre>
+
+<p>
+
+Enter the name of the rule file (the extension of "<b>.JC</b>"
+is supplied automatically; you need not specify it).  If there is a
+problem with your rulefunction you will get some error messages.
+Otherwise, after a brief delay you will see the second prompt:
+
+<p>
+
+<pre>
+Rule file filename.jc generated.
+Press Enter to continue:
+</pre>
+
+<p>
+
+When you press <b>Enter</b> the program will end.  If you ran your
+program with <b>Alt-R</b> from inside Turbo, you must then use
+<b>Alt-X</b> to get out of Turbo.  Answer <b>y</b> when Turbo asks you
+if you want to save your <b>.PAS</b> file.
+
+<p>
+
+<center>
+<img src="figures/fig11.gif" width=637 height=399 alt="">
+<br>
+<i>The JC Sublime rule after about 25 generations.</i>
+</center>
+
+<p>
+
+Recapitulating, you might use the Turbo editor to write a program
+called <b>MyLife.PAS</b>.  Then you might leave the editor and
+compile <b>MyLife.PAS</b> to a file called <b>MyLife.EXE</b>,
+which you run; alternately you might compile and run
+<b>MyLife.PAS</b> from within Turbo.  When your
+"<b>MyLife</b>" program runs, it creates a permanent lookup
+table for <b>MyLife</b> called <b>MyLife.JC</b>.  If you
+created and saved a <b>MyLife.EXE</b> file, you might as well
+erase it, because all <b>MyLife.EXE</b> does is generate the
+<b>MyLife.JC</b> file.
+
+<p>
+
+And what is a <b>.JC</b>
+file good for?  It is what our JC
+simulator uses in order to run cellular automata at a good rapid
+speed.  The <b>.JC</b> file codes up a <i>JCRule</i> entry for each of
+the 64K possible combinations of <i>OldState</i> and <i>EightNeighborhood</i>
+that a cell might have.  A <b>.JC</b> file will not however
+normally take up 64K bytes of memory because a compression technique
+is used.
+<a href="footnote.html#F3_5"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+The code supplied was developed with Turbo Pascal release 5.0.
+Unfortunately the Turbo format for units was changed between release
+4.0 and release 5.0, so if you try to use our <b>CaMake.TPU</b>
+unit in Turbo Pascal release 4.0,
+it will not work.  We have included
+the source code <b>CaMake.PAS</b>
+which we used to create
+<b>CaMake.TPU</b>.
+With a certain amount of hacking, it should
+be possible to convert <b>CaMake</b> into a usable unit or include
+file for other versions of Pascal.
+
+<p>
+
+To understand how to write a <tt>JCRule</tt> function, first we must consider
+the neighborhood
+of a cell, as seen by the function through its
+arguments. If the function is defined as:
+
+<p>
+
+<pre>
+FUNCTION JCRule(OldState,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+BEGIN
+               ...
+END;
+</pre>
+
+<p>
+
+then the arguments represent the neighborhood as follows:
+
+<p>
+
+<center>
+<table border cellpadding=4>
+<tr><td width="33%" align=center><tt>NW</tt><td width="33%" align=center><tt>N</tt><td width="33%" align=center><tt>NE</tt>
+<tr><td align=center><tt>W</tt><td align=center><tt>Self</tt><td align=center><tt>E</tt>
+<tr><td align=center><tt>SW</tt><td align=center><tt>S</tt><td align=center><tt>SE</tt>
+</table>
+</center>
+
+<p>
+
+Each of these arguments will be 1 if the low-order bit of the
+corresponding cell in the neighborhood is on, and 0 if it is off. In
+addition, the rule function may examine the argument <tt>OldState</tt>, which
+contains the full state of the center cell (eight bit planes). Thus,
+<tt>OldState</tt> ranges from 0 to 255, with the presence of low bit (also
+supplied in variable <tt>Self</tt>) signifying the state of Plane 0.  The
+function defining the rule must examine these input variables,
+calculate the resulting state for the cell (from 0 to 255), and return
+that value. The following sample code, including the required
+declarations and main program, defines the game of Life,
+proceeding directly from Poundstone's description.
+
+<p>
+
+<pre>
+PROGRAM MyLife;
+USES JCMake;
+{$F+} { Needed so that function can be treated as an object. }
+FUNCTION JCRule(OldState,NW,N,NE,W,Self,
+                         E,SW,S,SE:integer):integer;
+
+{We sum up the number of firing neighbor cells.  If this
+ EightSum is anything other than 2 or 3, the cell gets
+ turned off.  If the EightSum is 2, the cell stays in its
+ present state.  If the Eightsum is 3, the cell gets turned
+ on.}
+
+VAR
+     EightSum:integer;
+BEGIN
+     EightSum := NW+N+NE+E+SE+S+SW+W;
+     CASE EightSum OF
+          0,1,4,5,6,7,8: JCRule:=0;
+          2: JCRule:=Self;
+          3: JCRule:=1;
+     END
+END;
+
+BEGIN {Main program}
+     GenRule(JCRule);
+END.
+</pre>
+
+<p>
+
+If you have Turbo Pascal 5.0 handy, you should try creating and
+running the <b>MyLife.JC</b> rule right now.  Where do you get a
+file to start work on?  One way is simply to type the text of
+<b>MyLife.PAS</b> in, using the Turbo editor or a word processor.
+An easier way is to copy one of our <b>.PAS</b> ruleprograms to a
+file called <b>MyLife.PAS</b> and then make a few changes to
+"<b>MyLife.PAS</b>" until it looks like the program above.
+
+<p>
+
+As it turns out, the <b>Life.PAS</b>
+program provided with <i>CelLab</i>
+is similar but not quite the same as <b>MyLife</b>.  Our Life is
+actually the rule "LifeMem," which colors the cells differentially
+depending on their state in
+the last generation.  But our <b>Life.PAS</b> is quite similar to
+what you want for <b>MyLife.PAS</b>, so you should copy
+<b>Life.PAS</b> onto <b>MyLife.Pas</b> and use that as the
+starting point for your program.
+
+<p>
+
+So the steps for running MyLife are as follows: Use the DOS <tt>copy</tt>
+command to copy the existing <b>Life.PAS</b> file to a new
+<b>MyLife.PAS</b> file.  Then use the Turbo editor to work on
+MyLife.  Once you have MyLife in shape, compile and run it from within
+Turbo.  If all goes well, MyLife creates <b>MyLife.JC</b>.  You
+leave Turbo, enter JC, and run MyLife.
+
+<p>
+
+Starting from the DOS prompt, the keystrokes are:
+
+<p>
+
+<blockquote>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Copy life.pas and enter turbo)</em><br>
+<b>copy life.pas mylife.pas <em>Enter</em><br>
+turbo mylife <em>Enter</em></b><br>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Edit the file and then press)</em><br>
+<b>Alt-R <em>Enter</em></b> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(Answer the first prompt)</em> <br>
+<b>mylife <em>Enter</em></b> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(Answer the second prompt)</em> <br>
+<b><em>Enter <br>
+Alt-X</em></b> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(Answer the save? prompt)</em> <br>
+<b>y</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(Try the new rule)</em> <br>
+<b>ca <em>Enter</em><br>
+l<br>
+mylife <em>Enter<br>
+F1 <br>
+Enter</em></b>
+</blockquote>
+
+<p>
+
+<a name="Brain-pas">Since the rule</a> for the game of Life doesn't use the bit-planes
+#1 through #7 at all, the MyLife ruleprogram contains no reference to
+<tt>OldState</tt>.  Rules which use the higher bit-planes may also be specified
+straightforwardly by Pascal rule definition functions. For
+example, here is the definition of Brian's Brain, a
+rule developed by Brian Silverman and described in
+<a href="refs.html#[Margolus&amp;Toffoli87]">[Margolus&amp;Toffoli87]</a>, p. 47, as:
+
+<p>
+
+<blockquote>
+The rule involves cells having three states, 0 ("ready") 1
+("firing") and 2 ("refractory"). A ready cell will fire when exactly
+two of its eight neighbors are firing; after firing it will go into a
+refractory state, where it is insensitive to stimuli, and finally it
+will go back to the ready state.
+</blockquote>
+
+<p>
+
+This translates directly into a Pascal program as follows:
+
+<p>
+
+<pre>
+PROGRAM Brain;
+USES JCMake;
+{$F+}
+FUNCTION JCRule(OldState, NW,N,NE,W,Self,
+                          E,SW,S,SE:integer):integer;
+
+{We use three states 0,1,and 2.  1 always goes to 2 and 2
+ always goes to 0.  0 goes to 1 iff there are 2 firing
+ neighbors.}
+
+VAR
+     EightSum,NewState:integer;
+BEGIN
+     {First get rid of any extraneous high state bits:
+      "3" decimal is "00000011" binary}
+     OldState:=OldState AND 3;
+     EightSum:=NW+N+NE+E+SE+S+SW+W;
+     IF OldState=0 THEN
+          IF EightSum=2 THEN NewState:=1 ELSE NewState:=0;
+     IF OldState=1 THEN JCRule:=2;
+     IF OldState=2 THEN JCRule:=0;
+     JCRule:=NewState;
+END;
+
+BEGIN {Main program}
+     GenRule(JCRule)
+END.
+</pre>
+
+<p>
+
+<a name="Sublime-pas">It is possible</a> to define much more complicated rules by using the high
+bits for various bookkeeping memory purposes.  Here is an example of a
+JC that simulates thermally driven random diffusion.
+The theory of <a href="chap4.html#4-TH-lattice">why the program works</a> is explained in
+the <a href="chap4.html"><cite>Theory</cite></a> chapter.
+
+<p>
+
+<pre>
+PROGRAM Sublime;
+{This rule implements the Margolus rule for simulating a gas
+of cells diffusing.  Particle number is conserved.  We set
+up a permanent lattice of position values that looks like
+this:
+            0    1    0    1 ..
+            2    3    2    3 ..
+            0    1    0    1 ..
+            2    3    2    3 ..
+            :    :    :    :
+   This lattice is alternately chunked into
+   A blocks: 0    1   and B blocks: 3    2
+             2    3                 1    0
+and the blocks are Noisily rotated one notch CW or one notch
+CCW (short for ClockWise and CounterClockWise)}
+
+USES JCmake;
+
+{$F+}{ Required for function argument to genrule. }
+
+FUNCTION JCRule(Oldstate, NW, N, NE, W, Self, E,
+                              SW, S, SE:integer):integer;
+{We use the eight bits of state as follows:
+   Bit #0 is used to show info to neighbors
+   Bit #1 is the gas bit
+   Bit #2 is fed by the system Noiseizer
+   Bit #3 stores the 4-cell consensus on direction;
+          0 is CCW, 1 is CW
+   Bits #4 &amp; #5 hold a position number between 0 and 3
+   Bits #6 &amp; #7 control the cycle}
+VAR
+   Cycle,NewCycle,Position,Direction,NewDirection,Noise,Gas,
+      NewGas : integer;
+BEGIN
+     Cycle:=(OldState SHR 6) AND 3;
+     Position:=(OldState SHR 4) AND 3;
+     Direction:=(OldState SHR 3) AND 1;
+     Noise:=(OldState SHR 2) AND 1;
+     Gas:=(OldState SHR 1)AND 1;
+     NewCycle:=(Cycle+1)MOD 4;
+     IF (Cycle=0)OR(Cycle=2) THEN
+        BEGIN
+          IF Cycle=0 THEN
+            {In A block mode set direction to NW's}
+             CASE Position OF
+                0: NewDirection:=Self;
+                1: NewDirection:=W;
+                2: NewDirection:=N;
+                3: NewDirection:=NW;
+             END;
+        IF Cycle=2 THEN
+           {In B block mode set direction to NW's}
+           CASE Position OF
+              0: NewDirection:=NW;
+              1: NewDirection:=N;
+              2: NewDirection:=W;
+              3: NewDirection:=Self;
+           END;
+           JCRule:=(NewCycle SHL 6)OR(Position SHL 4)OR
+                   (NewDirection SHL 3)OR(Gas SHL 1)OR Gas
+        END
+     ELSE
+     BEGIN
+        IF (Cycle=1) AND (Direction=0) THEN
+           {CCW rotation of an A block}
+           CASE Position OF
+              0: NewGas:=E;
+              1: NewGas:=S;
+              2: NewGas:=N;
+              3: NewGas:=W;
+           END;
+        IF (Cycle=1) AND (Direction=1) THEN
+           {CW rotation of an A block}
+           CASE Position OF
+              0: NewGas:=S;
+              1: NewGas:=W;
+              2: NewGas:=E;
+              3: NewGas:=N;
+           END;
+        IF (Cycle=3) AND (Direction=0) THEN
+           {CCW rotation of a B block}
+           CASE Position OF
+              0: NewGas:=W;
+              1: NewGas:=N;
+              2: NewGas:=S;
+              3: NewGas:=E;
+           END;
+        IF (Cycle=3) AND (Direction=1) THEN
+           {CW rotation of an A block}
+           CASE Position OF
+              0: NewGas:=N;
+              1: NewGas:=E;
+              2: NewGas:=W;
+              3: NewGas:=S;
+           END;
+        JCRule:=(NewCycle SHL 6)OR(Position SHL 4)OR
+                (Direction SHL 3)OR(NewGas SHL 1)OR Noise
+     END;
+END;
+
+BEGIN     {Main program}
+     {Make sure wrap is on}
+     WorldType:=1;
+     {We set bit #2 to be Noiseized each update}
+     RandB:=2;
+     RandN:=1;
+     {We set a vertical pattern of alternate 0s and 1s in
+     bit 4 and a vertical pattern of alternate 0s and 1s in
+     bit 5.  This produces a pattern that goes
+                   0    1    0    1 ..
+                   2    3    2    3 ..
+                   0    1    0    1 ..
+                   2    3    2    3 ..
+                   :    :    :    :    }
+     TextHB:=4;
+     TextHN:=1;
+     TextVB:=5;
+     TextVN:=1;
+     {The Sublime.JCC colorpalette only shows bit 1}
+     PalReq:='Sublime';
+     {The starting Sublime pattern is some geometric objects}
+     PatReq:='Sublime';
+     GenRule(JCRule);
+END.
+</pre>
+
+<p>
+
+For now don't worry about the intricacy of Sublime's
+definition of the <tt>JCRule</tt> procedure.  Instead let's
+focus on the special commands in the Main part of the
+Sublime program, the part at the end.  There are thirteen
+system-defined global variables that can be set here.  To
+organize the discussion, I put these system variables into
+three groups: i) <tt>PalReq</tt>, <tt>PatReq</tt>, and
+<tt>OCodeReq</tt>, ii) <tt>RandB</tt>, <tt>RandN</tt>, <tt>TextHB</tt>,
+<tt>TextHN</tt>, <tt>TextVB</tt>, <tt>TextVN</tt>, <tt>RSeedB</tt>,
+<tt>RSeedN</tt>, <tt>RSeedP</tt>, and iii) <tt>WorldType</tt>.
+
+<p>
+
+In brief these global system variables serve the following functions:
+
+<p>
+
+<dl compact>
+
+<dt><b>i)</b><dd><em>StartUp</em>: Setting <tt>PalReq</tt>, <tt>PatReq</tt>,
+and <tt>OCodeReq</tt> allows you to have your rule start by
+loading a specific <b>.JCC</b> colorpalette, a specific
+<b>.JCP</b> start pattern, and a specific
+<b>.JCO</b> own code evaluator.
+
+<p>
+
+<dt><b>ii)</b><dd><em>Background.</em> The values of the <tt>Rand</tt>,
+<tt>Text</tt>, and <tt>RSeed</tt> variables control what we call
+textures of bits that your rule can automatically load into
+selected planes.  These texture bits are often left
+invisible.
+
+<p>
+
+<dt><b>iii)</b><dd><em>Topology</em>: <tt>WorldType</tt> specifies
+whether the screenwrap is to be on, and whether you want to
+consider your rule to be two-dimensional or one-dimensional.
+</dl>
+
+<h4><a name="t1">StartUp</a></h4>
+
+<tt>PalReq</tt> and <tt>PatReq</tt>
+are particularly useful for
+creating rules to be shown by self-running demos such as our
+<b>JCDEMO.BAT</b>.
+If <tt>PalReq</tt> and <tt>PatReq</tt>
+are not explicitly set to any values, then the pattern and
+the colorpalette left over from the last rule are used.  If
+you have just entered JC, then the <b>Default.JCC</b>
+colorpalette is loaded, and the starting pattern will
+consist of all zeroes in planes #1 through #7, with random
+bits of plane #0 turned on.  This start will be modified by
+the texture settings, if any.
+
+<p>
+
+If a rule requests a <b>.JCC</b>, <b>.JCP</b>, or
+<b>.JCO</b> file which is not in the current directory,
+then JC will show a warning message such as:
+
+<p>
+
+<pre>
+Cannot open pattern definition file Soot.jcp
+Press any key to continue:
+</pre>
+
+<p>
+
+After you press a key, JC will continue, leaving the previous
+colorpalette, pattern, or no own code evaluator in effect.
+
+<h4><a name="t2">Background</a></h4>
+
+Using the <tt>Rand</tt> global variables, we can have random
+bits fed into any span of bits that we like.  Specifying
+<tt>RandB</tt> tells JC which bit to start randomizing at, and
+<tt>RandN</tt> tells it how many bits to randomize at each
+update.  Thus if <tt>RandB</tt> is 2 and <tt>RandN</tt> is 3, then
+at each update, JC will put random bits in planes #2, #3,
+and #4.  The density of these random bits will always be
+50%, meaning that approximately half of each randomized
+plane's cells will be set to 0 and half to 1.  If you
+require a randomness of, say, 25% ones, you can simulate it
+by filling two planes with random bits and looking for the
+cells that have both bits set to 1.  The <tt>Text</tt> global
+variables feed in horizontal or vertical texture.  
+<tt>TextHB</tt> tells what bit to start putting horizontal texture
+in at, and <tt>TextHN</tt> tells how many bits.  If I have one
+bit of texture, that means that the texture bit will cycle
+between 0 and 1.  If I were to take <tt>TextHB</tt> to be 5 and
+<tt>TextHN</tt> to be 2, however, I would get two bits of
+texture, meaning that the fifth and six bits would cycle
+through <b><tt>00</tt></b>, <b><tt>01</tt></b>, <b><tt>10</tt></b>, <b><tt>11</tt></b>, <b><tt>00</tt></b>,
+<b><tt>01</tt></b>, <b><tt>10</tt></b>, <b><tt>11</tt></b>, and so on across the screen.
+Vertical texture works the same way, and the combination of
+horizontal and vertical can produce a more complicated
+pattern as in Sublime.
+
+<p>
+
+The <tt>RSeed</tt> variables allow you to start up a rule with random seed bits
+in some planes. If we only want some random bits for the startup, but
+don't want them to keep coming in later, we use the <tt>RSeed</tt> variables
+instead of the <tt>Rand</tt> variables.
+
+<p>
+
+<tt>RSeedB</tt> tells the system what plane to begin random seeding at, and
+<tt>RSeedN</tt> tells it how many planes to seed. In addition, the
+<tt>RSeedP</tt>
+variable allows you to specify the percentage of ones you want.  (This
+is <em>not</em> possible for the <tt>Rand</tt> variables, which always seed
+at 50%.) <tt>RSeedP</tt> can be set to any value between 0 and 255.
+These settings correspond to a percentage of ones which goes from 0%
+to 50%.  Thus a setting of 255 means 50% ones and 50% zeroes; while
+a setting of 128 means 25% ones and 75% zeroes.  <tt>RSeedP</tt> works
+only if <tt>RSeedN</tt> is 1.
+
+<p>
+
+Thus if I set <tt>RSeedB</tt> to 2, <tt>RSeedN</tt> to 1, and <tt>RSeedP</tt>
+to 128, then plane #2 will be randomized at the start of my program
+by a pattern that is 25% ones, but it will not be randomized again.
+
+<p>
+
+The primary purpose of the Seed option is to make it possible to
+request a start pattern with randomness in some special planes without
+having to store the random information as part of the start pattern.
+Look at Soot or Dendrite for examples of this.  The reason you don't
+want to have to store a <b>.JCP</b>
+files}
+file which has random bits in
+one of its planes is that then the file will be about 64K bytes in
+size, and will take up more disk space than you really want to give
+it.  Because the Soot pattern gets its "random gas" from the
+<tt>RSeed</tt> variables, its <b>.JCP</b> file is only some 2K bytes
+instead of 64K.
+
+<p>
+
+When a rule is running, you can see what kinds of texture the rule
+requested by looking at the status line.
+
+<p>
+
+A special feature of the <tt>TextH</tt> and <tt>TextV</tt> textures is that you can't
+get rid of them through editing or changing patterns. The idea is that
+if your rule calls for these textures,
+then it needs them, so they are
+put back in every time you leave the editor or load a new pattern.
+The RSeed planes are rerandomized whenever you load a new pattern, but
+not when you leave the editor.
+
+<h4><a name="t3">Topology</a></h4>
+
+<tt>WorldType</tt>
+specifies three things: a) Whether your screens wrap around
+the edges, b) Whether a rule is two-dimensional or one-dimensional
+rule, and c) How big a neighborhood you want to look at, and how many
+bits of each neighbor you want to see.
+
+<p>
+
+The most commonly used <tt>WorldType</tt> is 1, which means a two dimensional
+world with wrap turned on. It was actually unnecessary to set
+<tt>WorldType</tt> to 1 in the Sublime rule, because in the absence of any
+other request, <tt>WorldType</tt> always defaults to 1. To get a two
+dimensional world with the wrap turned off, you set <tt>WorldType</tt> to 0.
+
+<p>
+
+If you set <tt>WorldType</tt> to one of the values 3, 4, 5, 6, 8, or 9, your
+rule will act on a one-dimensional (1D) world. The one-dimensional
+rules run quite a bit faster than the two-dimensional rules.
+
+<p>
+
+The 1D rules work by first copying each line of the screen onto the
+line below it, and by then filling in the top line with a new line
+calculated according to <b>JCRule</b>.  This produces a spacetime
+trail of the 1D rule, with earlier times appearing lower on the screen
+like geological strata.
+
+<p>
+
+Our simulator is built to suck in eight bits of neighborhood
+information.  We allow it to get neighborhood information in
+several different ways.  These ways correspond to possible
+values of <tt>WorldType</tt> as listed below:
+
+<p>
+
+<center>
+<table border>
+<tr><th><tt>WorldType</tt><th>Dimensionality<th>Wrap?<th>Neighbors<th>Bits</tr>
+<tr><td align=center>0      <td align=center>2D    <td align=center> NoWrap<td align=center> 8    <td align=center>  1        </tr>
+<tr><td align=center>1      <td align=center>2D    <td align=center> Wrap  <td align=center> 8    <td align=center>  1        </tr>
+<tr><td align=center>2      <td align=center>1D    <td align=center> NoWrap<td align=center> 8    <td align=center>  1        </tr>
+<tr><td align=center>3      <td align=center>1D    <td align=center> Wrap  <td align=center> 8    <td align=center>  1        </tr>
+<tr><td align=center>4      <td align=center>1D    <td align=center> NoWrap<td align=center> 4    <td align=center>  2        </tr>
+<tr><td align=center>5      <td align=center>1D    <td align=center> Wrap  <td align=center> 4    <td align=center>  2        </tr>
+<tr><td align=center>8      <td align=center>1D    <td align=center> NoWrap<td align=center> 2    <td align=center>  4        </tr>
+<tr><td align=center>9      <td align=center>1D    <td align=center> Wrap  <td align=center> 2    <td align=center>  4        </tr>
+<tr><td align=center>10     <td align=center>2D    <td align=center> Wrap  <td align=center> 8    <td align=center>  Sum of 8 </tr>
+<tr><td align=center>11     <td align=center>2D    <td align=center> Wrap  <td align=center> 4    <td align=center>  Sum of 4 </tr>
+<tr><td align=center>12     <td align=center>User  <td align=center> NoWrap<td align=center> User <td align=center>  User     </tr>
+<tr><td align=center>13     <td align=center>User  <td align=center> Wrap  <td align=center> User <td align=center>  User     </tr>
+</table>
+</center>
+
+<p>
+
+The order in which we feed variables to the procedure <tt>JCRule</tt> is
+very important.  The actual <em>names</em> of the variables in the
+<tt>JCRule</tt> procedure don't really matter, as these names are local
+"dummy" variables.  When we are in 2D mode, we stick to one set of
+names that are in fact meaningful.  We write:
+
+<p>
+
+<pre>
+JCRule(OldState, NW, N, NE, W, Self, E, SW, S, SE)
+</pre>
+
+<p>
+
+When we are in one of the three 1D modes it is appropriate to call the
+neighbor variables something else. Different names are appropriate for
+the three different cases:
+
+<p>
+
+In <tt>WorldType</tt> 2 &amp; 3 (eight one-bit neighbors) use:
+
+<p>
+
+<pre>
+JCRule(OldState, LLLL,LLL,LL,L, Self, R,RR,RRR,RRRR)
+</pre>
+
+<p>
+
+In <tt>WorldType</tt> 4 &amp; 5 (four two-bit neighbors) use:
+
+<p>
+
+<pre>
+JCRule(OldState, LL1,LL0,L1,L0, Self, R1,R0,RR1,RR0)
+</pre>
+
+<p>
+
+In <tt>WorldType</tt> 8 &amp; 9 (two four-bit neighbors) use:
+
+<p>
+
+<pre>
+JCRule(OldState, L3, L2, L1, L0, Self, R3, R2, R1, R0)
+</pre>
+
+<p>
+
+Each <tt>L</tt> and <tt>R</tt> variable is to be thought of as holding one bit, as
+diagrammed below.
+
+<p>
+
+<center>
+<table border cellpadding=5>
+<tr><th colspan=10>Eight Neighbors</tr>
+<tr><th>Bit 0<td>LLLL<td>LLL<td> LL<td>  L<td> Self<td> R <td> RR<td>RRR<td> RRRR</tr>
+</table>
+</center>
+
+<p>
+
+<center>
+<table border cellpadding=5>
+<tr><th colspan=6>Four Neighbors</tr>
+<tr><th>Bit 1<td>LL1<td>L1<td> &nbsp;<td>  R1<td> RR1</tr>
+<tr><th>Bit 0<td>LL0<td>L0<td> Self<td> R0<td> RR0</tr>
+</table>
+</center>
+
+<p>
+
+<center>
+<table border cellpadding=5>
+<tr><th colspan=4>Two Neighbors</tr>
+<tr><th>Bit 3<td>L3<td>&nbsp;<td>R3</tr>
+<tr><th>Bit 2<td>L2<td>&nbsp;<td>R2</tr>
+<tr><th>Bit 1<td>L1<td>&nbsp;<td>R1</tr>
+<tr><th>Bit 0<td>L0<td>Self<td>R0</tr>
+</table>
+</center>
+
+<p>
+
+<a name="Aurora-pas">To give an example</a> of a one-dimensional rule, I give the code for the
+rule <b>Aurora.PAS</b> below.  Aurora
+uses two four-bit neighbors,
+so its <tt>JCRule</tt> definition takes the form
+
+<p>
+
+<pre>
+JCRule(OldState, L3, L2, L1, L0, Self, R3, R2, R1, R0)
+</pre>
+
+<p>
+
+Within the context of this rule there is no specific "<tt>L</tt>"
+variable, so we use the name "<tt>L</tt>" to stand for the four-bit
+combination of <tt>L3</tt>, <tt>L2</tt>, <tt>L1</tt>, and <tt>L0</tt>.  That is,
+we set <tt>L</tt> to <tt>8*L3 + 4*L2 + 2*L1 + L0</tt> in order to stack the
+four binary bits <tt>L3</tt>, <tt>L2</tt>, <tt>L1</tt>, and <tt>L0</tt> on top of
+each other to get a four-bit number.  And we do the same thing for
+<tt>R</tt>.  We also get a four-bit variable <tt>C</tt> for the cell's own
+state by ANDing <tt>OldState</tt> with 15.  This gets the low four bits
+out of <tt>OldState</tt> because 15 in binary is <b><tt>00001111</tt></b>, and
+ANDing any of the eight bits <em>B</em> in <tt>OldState</tt> with a 0
+produces 0, while ANDing a bit <em>B</em> with a 1 produces <em>B</em>.
+
+<p>
+
+<pre>
+PROGRAM Aurora;
+
+{A one dimensional rug rule with two neighbors, and 4 bits
+of each neighbor visible.  This is run as a sixteen state
+rule, where:
+     NewC = (L + OldC + R) / 3  + 1. }
+
+USES JCMake;
+{$F+}  { Required for function argument to genrule. }
+FUNCTION JCRule(OldState,L3,L2,L1,L0,Self,
+                         R3,R2,R1,R0:integer):integer;
+VAR
+     L,C,R,Average:integer;
+BEGIN
+     { Develop 4 bit values of neighbors. }
+     L := 8*L3 + 4*L2 + 2*L1 + L0;
+     C := OldState AND 15;
+     R := 8*R3 + 4*R2 + 2*R1 + R0;
+     Average:=(L+C+R)DIV 3;
+     JCRule:=Average+1;
+END;
+BEGIN {Main}
+    WorldType := 9;  {  World type:  2 neighbor ring }
+    PalReq:='Aurora';
+    RSeedB:=0;       { Randomize all four bits at start }
+    RSeedN:=4;
+    GenRule(JCRule);
+END.
+</pre>
+
+<p>
+
+In the rule descriptions at the end of this chapter I give
+an example of a <tt>WorldType</tt> 5 rule (<a href="rules.html#ShortPi">ShortPi</a>) and an
+example of a <tt>WorldType</tt> 2 rule (<a href="rules.html#Axons">Axons</a>).
+
+<p>
+
+Choosing <tt>WorldType</tt> 10 or 11 causes JC to evaluate <em>
+averaging rules</em>.  These rules were devised to allow
+generalizations of the Rug rule of RC.  In both of these
+rules the screen is wrapped.  <tt>WorldType</tt> 10 computes
+the sum of EveryCell's eight nearest neighbors, and
+<tt>WorldType</tt> 11 gets the sum of EveryCell's four nearest
+neighbors.  Since <tt>WorldType</tt> 11 has less work to do it
+runs faster than <tt>WorldType</tt> 10, although both types run
+slower than do our standard two-dimensional rules.
+
+<p>
+
+In the averaging rules,
+the first argument passed to
+<tt>JCRule</tt> holds the low five bits of the EveryCell's old
+eightbit state, and the second argument passed to
+<tt>JCRule</tt> holds the sum of the EveryCell's neighbors.  (Eight
+neighbors in <tt>WorldType</tt> 10, and 4 neighbors in
+<tt>WorldType</tt> 11.) This sum can take as many as eleven bits to
+write out, which is why we are only allowed to see five bits
+of EveryCell's old state.  The limitation is that our rules
+use lookup tables whose entries are indexed by sixteen bit
+"situation" codes.
+
+<p>
+
+In <tt>WorldTypes</tt> 10 and 11, the variables other than the first one are
+simply placeholders, and have no functionality whatsoever. We simply
+label them with the letters <tt>a</tt> through <tt>h</tt>.
+
+<p>
+
+<a name="Heat-pas">As an example</a> of <tt>WorldType</tt> 10, here is a program called Heat. A Heat
+cell takes a straight average of its neighbor cells, except that if a
+cell has its low bit on, the cell's value is kept fixed. The idea is
+that this rule is to simulate the heat flow in a metal plate certain
+of whose locations are kept fixed at certain temperature values.
+
+<p>
+
+<pre>
+PROGRAM Heat;
+{This is an eightcell averaging rule with zero increment.
+Odd states are frozen states and even states generate even
+states.  One can reanimate the vacuum by pressing i 6 r 
+or i 5 r.  }
+USES JCmake;
+{$F+}
+FUNCTION JCRule(FiveBits,Sum,
+                a,b,c,d,e,f,g,h:integer):integer;
+BEGIN {Function}
+     JCRule:=(Sum SHR 3) AND 254;
+     IF odd(FiveBits)THEN
+          IF FiveBits&lt;16
+               THEN JCRule:=FiveBits
+               ELSE JCRule:=128+FiveBits;
+END;  {Function}
+BEGIN {Main}
+     WorldType:=10;
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<p>
+
+<tt>WorldType</tt>s 12 and 13 are for "own code
+rules."
+Type 12 has wrap turned off, with zero on the boundary; and Type
+13 is the torus wrap mode.  To run a rule of <tt>WorldType</tt>
+12 or 13, one must have a predefined inner loop function.
+These inner loop functions have extension <b>.JCO</b>.
+They are discussed more fully later in this section.
+
+<p>
+
+<a name="Rug-pas">The Rug rule</a> below is an example of a rule of this type.  I
+could have written a similar Rug rule using <tt>WorldType</tt>
+10, but I wanted to have the wrap off.  The JC Rug rule
+calls a function called <b>Semi8.JCO</b> which returns
+the eleven bit sum of the eight nearest neighbors, so we can
+use this function to define a rug rule.
+
+<p>
+
+<pre>
+PROGRAM Rug;
+{This program runs an eightcell averaging rule of eight bits
+per cell.  We program it as a nowrap owncode WorldType 12
+calling Semi8.JCO.}
+USES JCmake;
+{$F+}
+FUNCTION JCRule(OCValue,
+                a,b,c,d,e,f,g,h,i:integer):integer;
+BEGIN {Function}
+     JCRule:=((OCValue SHR 3)+1) AND 255;
+END;  {Function}
+BEGIN {Main}
+     WorldType:=12;
+     OCodeReq:='Semi8';
+     GenRule(JCRule)
+END.  {Main}
+</pre>
+
+<p>
+
+The speed at which the simulator runs depends only on the
+<tt>WorldType</tt> you have chosen.  It does not depend at all
+on the complexity of the Pascal rule you write or on the
+start pattern you select; it is completely constant.  Thus,
+there is no special necessity to make the function that
+defines the rule efficient--it is executed only to create
+the rule definition file, then never used again.  The
+paramount consideration in writing a rule is that it be
+clearly expressed so that you can come back to it later and
+still be able to tell what you were trying to do.
+
+<p>
+
+<b>.PAS</b> rule programs are provided for all the JC
+demos.  A good way to start writing rules of your own is to
+copy one of our rules onto your own file
+<b>FIRST.PAS</b>.  Then you can use Turbo to edit
+<b>FIRST.PAS</b> to your own purposes and use
+<b>Alt-R</b> to run it and generate your <b>FIRST.JC</b>
+file.  If it happens that your rule either 1) fails to
+define a value of <tt>JCRule</tt> for some inputs or 2) defines
+a value of <tt>JCRule</tt> outside the range 0-255, then you
+will get an error message when the program tries to generate
+<b>FIRST.JC</b>.  If this happens, change something in
+your program and try again.
+
+<p>
+<center>
+<img src="figures/fig12.gif" width=638 height=399 alt="">
+<br>
+<i>The JC Sublime rule after about 140 generations.</i>
+</center>
+
+<h3><a href="ruledef.html#bottom">Back to <cite>Defining Rules</cite></a></h3>
+<h3><a href="ruledef-c.html">Onward to <cite>Defining Rules in C</cite></a></h3>
+
+<p>
+<hr>
+<a href="ruledef-c.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="ruledef.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

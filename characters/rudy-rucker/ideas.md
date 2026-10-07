@@ -51,6 +51,7 @@
 
 ## To pull in
 
-- CelLab rule catalog (structured) for the skill draft.
+- ~~CelLab rule catalog (structured) for the skill draft.~~ Done: the whole manual is mirrored
+  and indexed in [`sources/cellab-celdoc/`](sources/cellab-celdoc/README.md).
 - Best public Rudy CA talk/reading clips.
 - Confirm which CAM6-wiki exchange documents the scan-order-drift bug he caught.

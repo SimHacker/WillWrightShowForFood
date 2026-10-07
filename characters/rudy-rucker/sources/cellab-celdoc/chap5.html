@@ -1,0 +1,787 @@
+<html>
+<head>
+<title>Origins of CelLab</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+<h1>Origins of CelLab</h1>
+
+<h2><a name="5-HIST-class">Classical Era: Von Neumann to Gosper</a></h2>
+
+Cellular automata were invented in the late 1940s by Stanislaw Ulam
+(1909-1984) and John von Neumann (1903-1957).  One can say that the
+"cellular" part comes from Ulam, and the "automata" part from von
+Neumann.
+
+<p>
+
+Ulam was primarily a mathematician.  He invented the Monte Carlo
+simulation technique, the highly infinite "measurable cardinals" of
+set theory, and made contributions to analysis and number theory.
+With Edward Teller, Ulam was the coinventor of the hydrogen bomb.  Von
+Neumann was a still more wide-ranging mathematician.  He did work in
+set theory, in the foundations of quantum mechanics, in economics, and
+in game theory.  With Herman Goldstine, von Neumann designed the
+logical architecture of the first electronic computers.
+
+<p>
+
+In 1948 von Neumann read a paper called "The General and Logical
+Theory of Automata" to a symposium in Pasadena, California, and in
+1949 he delivered a related series of lectures called "Theory and
+Organization of Complicated Automata," at the University of Illinois.
+One of the questions he was concerned with in these talks was whether
+or not it would ever be possible for a machine, or "automaton," to
+reproduce itself.
+
+<p>
+
+Usually a machine makes something much simpler than itself--consider
+a huge milling machine turning out bolts. Could a machine possibly
+fabricate machines as complicated as itself? Or is there some
+extramechanical magic to self-reproduction?
+To simplify the problem, von Neumann suggested that we suppose that
+our robots or automata are made up of a small number of standardized
+parts:
+
+<p>
+
+<blockquote>
+I will introduce as elementary units neurons, a "muscle," entities
+which make and cut fixed contacts, and entities which supply energy,
+all defined with about that degree of superficiality with which [the
+theory of neural networks] describes an actual neuron. If you describe
+muscles, connective tissues, "disconnecting tissues," and means of
+providing metabolic energy...you probably wind up with something like
+10 or 12 or 15 elementary parts.
+<a href="footnote.html#F5_1"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+</blockquote>
+
+<p>
+
+Using the idea of machines made up of multiple copies of a small
+number of standardized elements, von Neumann
+posed his question about robot self-reproduction as follows.
+
+<p>
+
+<blockquote>
+Can one build an aggregate out of such elements in such a manner that
+if it is put into a reservoir, in which there float all these elements
+in large numbers, it will then begin to construct other aggregates,
+each of which will at the end turn out to be another automaton exactly
+like the original one?
+<a href="footnote.html#F5_2"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+</blockquote>
+
+<p>
+
+Using techniques of mathematical logic, von Neumann was then able to
+deduce that such self-reproduction should in fact be possible. His
+proof hinged on the idea that an automaton could have a blueprint for
+building itself, and that in self reproduction, two steps would be
+necessary: 1) make an exact copy of the blueprint, and 2) use the
+blueprint as instructions for making a copy of the automaton. The role
+of the blueprint is entirely analogous to the way DNA is used in
+biological self-reproduction, for here the DNA is both copied and used
+as instructions for building new proteins.
+
+<p>
+
+The complexity of a reservoir full of floating machine parts hindered
+von Neumann from making his proof convincing.  The next step came from
+Stanislaw Ulam, who was working with von Neumann at Los Alamos during
+those years.  Ulam's suggestion was that instead of talking about
+machine parts in a reservoir, von Neumann should think in terms of an
+idealized space of cells that could hold finite state-numbers
+representing different sorts of parts.
+
+<p>
+
+Ulam's first published reference to this idea reads as follows:
+
+<p>
+
+<blockquote>
+An interesting field of application for models consisting of
+an infinite number of interacting elements may exist in the recent
+theories of automata. A general model, considered by von Neumann and
+the author, would be of the following sort:
+
+<p>
+
+Given is an infinite lattice or graph of points, each with a
+finite number of connections to certain of its "neighbors".  Each point
+is capable of a finite number of "states". The states of neighbors at
+time tn induce, in a specified manner, the state of the point at time
+<em>t<sub>n+1</sub></em>.
+
+<p>
+
+One aim of the theory is to establish the existence of
+subsystems which are able to multiply, i.e., create in time other
+systems identical ("congruent") to themselves.
+<a href="footnote.html#F5_3"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+</blockquote>
+
+<p>
+
+By 1952, von Neumann had completed a description of such a
+self-reproducing "cellular automaton" which uses 29
+states.  <i>CelLab</i> includes a modern, improved version of this rule
+under the name <a href="chap2.html#2-RC-langton">Langton</a>.  Von
+Neumann's CA work was not published during his lifetime; it seems that
+once he saw the solution, he became distracted and moved on to other
+things.  Ulam continued working on a number of simpler cellular
+automata, publishing several papers on them during the early
+1960s.
+<a href="footnote.html#F5_4"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+The next big event in CA history occurred in 1970. In the October,
+1970, issue of <a href="http://www.sciam.com/"><cite>Scientific American</cite></a>, the popular mathematics writer
+Martin Gardner's
+"Mathematical Games" column bore the subtitle: "The
+fantastic combinations of John Conway's new solitaire game `life',".
+John Conway,
+a mathematician at the University of Cambridge, had sent
+Martin Gardner a new mathematical game--the game of Life.
+Conway had
+selected Life's rules by a process of trial and error; his vague
+initial goal was to find a cellular automaton rule in which simple
+patterns could grow to large size, but in which it was not clear
+whether any patterns could grow forever. Gardner reported that:
+
+<p>
+
+<blockquote>
+Conway conjectures that no pattern can grow without limit.
+Put another way, any configuration with a finite number of counters
+cannot grow beyond a finite upper limit to the number of counters on
+the field. This is probably the deepest and most difficult question
+posed by the game. Conway has offered a prize of $50 to the first
+person who can prove or disprove the conjecture before the end of the
+year. One way to disprove it would be to discover patterns that keep
+adding counters to the field: a "gun" (a configuration that
+repeatedly shoots out moving objects such as the "glider"), or a
+"puffer train" (a configuration that moves about leaves behind a trail
+of "smoke").
+</blockquote>
+
+<p>
+
+The prize was won a month later by William Gosper
+and five fellow
+hackers at MIT; they sent Martin Gardner a telegram with the
+coordinates of the cells to turn on to make a
+glider gun.
+<a href="footnote.html#F5_5"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+You can see Gosper's glider gun by loading Life in JC and selecting
+the pattern GlidrGun.
+
+<p>
+
+One must remember that 1970 was still the Dark Ages of computing;
+Conway himself ran his Life simulations by marking the cells with
+checkers or flat Othello counters. For Gosper and his team to get Life
+to run on a monitor at all was a nontrivial feat of hacking--it was a
+new thing to do with a computer. After Gardner's second column on
+Life, the game became something of a mania among computer users. By
+1974, an article about Life in <cite>Time</cite> (<a href="refs.html#[Time74]">[Time74]</a>) could complain that
+"millions of dollars in valuable computer time may have already been
+wasted by the game's growing horde of fanatics".
+
+<p>
+
+More and more intricate Life patterns were found all through the 70s,
+and by 1980, Conway had enough Life machinery at hand to publish a
+detailed proof that Life can be used to simulate any digital
+computation whatsoever.
+<a href="footnote.html#F5_6"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+A number of people at MIT began studying cellular automata other than
+Life during the 1970s. Probably the most influential figure there was
+Edward Fredkin.
+He had the idea for the two-state "Parity"
+rule under
+which EveryCell counts up the number of its firing neighbors and goes
+to 1 if the number is odd and to 0 if the number is even. The
+dimensionality of the space and the shape of the neighborhood are not
+crucial--in almost every situation, the Parity rule will make copy
+after copy of whatever starting pattern you give it. The copies are
+grouped into fractalized clusters.
+<a href="footnote.html#F5_7"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+Although he himself holds no
+higher degrees, Fredkin was made a professor associated with the MIT
+Laboratory for Computer Science, and he directed a number of
+dissertations on Cellular Automata.
+
+<p>
+
+Around 1980, Fredkin formed the Information Mechanics Group at MIT
+along with Tommaso Toffoli, Norman Margolus and Gérard Vichniac.
+Soon
+after that he left MIT to live on Mosquito Island, a Caribbean island
+he owns as a result of some highly remunerative work he did on
+information processing in the 1960s. Fredkin has not published
+anything since then, though I have seen a draft of some notes he wrote
+for a Digital Information Mechanics workshop he held at Mosquito
+Island in 1982.
+
+<p>
+
+Fredkin envisions a new science where we represent all physical
+quantities as packets of information. The substrate on which these
+packets move is to be a cellular automaton. Not to put too fine a
+point on it, Fredkin argues that, at some deep level, the world we
+live in is a huge cellular automaton. Although Conway had already
+expressed opinions to the effect that in a cosmically large Life
+simulation one might see the evolution of persistent patterns which
+are as intelligent as us, Fredkin was the first to suggest that the
+world we live in really <em>is</em> a CA.
+<a href="footnote.html#F5_8"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+By 1984, Toffoli and Margolus had nearly perfected the
+CAM-6
+cellular
+automaton machine and were generating some publicity about it. In
+addition, Stephen Wolfram
+was publishing numerous articles about CAs.
+I was first hooked on modern cellular automata by <a href="refs.html#[Wolfram84]">[Wolfram84]</a>. In this
+article, Wolfram suggested that many physical processes that seem
+random are in fact the deterministic outcome of computations that are
+simply so convoluted that they cannot be compressed into shorter form
+and predicted in advance. He spoke of these computations as
+"incompressible," and cited cellular automata as good examples. His
+article included some intriguing color photographs of one-dimensional
+CAs.
+
+<p>
+
+The magazine <cite>Science 85</cite> had hired me to do a number of articles
+for them in the past, so in April of 1985, I arranged with them to
+travel to <a href="http://www.princeton.edu/">Princeton</a> and Cambridge to interview the new cellular
+automatists.  The next section is adapted from the article I wrote,
+which eventually appeared as <a href="refs.html#[Rucker87a]">[Rucker87a]</a>.  As it turned out, an editor
+at <cite>Science 85</cite> found cellular automata too esoteric, so in the
+end I sold the article to... a science fiction magazine.
+
+<h3><a name="t1">Cellular Automata, 1985</a></h3>
+
+We've been talking all afternoon and Stephen Wolfram
+is tired.  On the
+computer screen in front of us, patterns are forming.  We are watching
+the time-evolutions of various one-dimensional cellular automata.
+Some of the patterns are predictable as wallpaper, some are
+confusingly random, but just now there is one that strikes a pleasing
+balance between order and chaos.  It's shaped like a pyramid, with red
+and blue down the sides, and with a symmetrical yellow pattern in the
+middle--a pattern vaguely like an Indian goddess.
+
+<p>
+
+"What's the number on that one?" asks Wolfram.
+
+<p>
+
+"398312," answers Norman Packard,
+Wolfram's associate at the Institute
+for Advanced Study in Princeton.
+
+<p>
+
+"This is the way to do scientific research," I remark. "Sit and watch
+patterns, and write down the numbers of the ones you like".
+
+<p>
+
+"Oh, this isn't for science," says Wolfram. "This is for art. Usually
+I just talk to scientists and businessmen, and now I'm trying to meet
+some artists. Wouldn't that last one make a good poster?"
+
+<p>
+
+A few days later and I'm with Charles Bennett,
+an <a href="http://www.ibm.com/">IBM</a>
+information-theorist visiting <a href="http://www.bu.edu/">Boston University</a>.  Bennett has a TV
+coupled to a computer and two naked boards full of circuits and chips.
+One of the boards has two tiny green lights sticking up like eyes.
+The board with the lights, explains Bennett, serves as a source of
+random zeroes and ones.
+
+<p>
+
+"Watch this," says Bennett. "The Game of Life starting from a
+primordial soup of bits. It's a rudimentary model of evolution."
+
+<p>
+
+He fiddles with his machine and the TV screen lights up with a color
+flea-circus: this is the "soup". And then, as the game of Life's
+transformation rules take over, the dots begin racing around, clumping
+into things like worms. The worms crawl around the screen, colliding
+and eating each other, casting off bits of stable debris.
+
+<p>
+
+"That's a glider gun," says Bennett, pointing to a twinkling little
+dot-creature. A steady stream of smaller dot-patterns is pulsing out
+from the glider gun.  "We've got sixty-five thousand pixels on this
+screen with sixty updates per second."
+
+<p>
+
+Bennett shows me another pattern, one that looks like boiling red
+cottage cheese, and then he takes me across the Charles River to the
+MIT Laboratory of Computer Science.  In the basement is an exuberant
+French scientist named Gérard Vichniac.
+He and an associate are watching a
+small rectangular dot-pattern in the center of their terminal's
+screen.  The pattern is mostly white, with a small amount of red in
+it.  The edges keep folding in on each other as the pattern evolves
+according to some simple rule which Vichniac made up.  He calls it an
+"Ising Model," but it looks like an electronic kaleidoscope.  "This
+pattern started as a red square," Vichniac tells me.  "The rule is
+reversible, so we know that eventually the red square must come back.
+We've been watching it for eighty thousand steps now".
+
+<p>
+
+Upstairs from Vichniac are two equally cheerful cellular automata
+specialists, Norman Margolus and Tommaso Toffoli.
+There's another
+journalist there, a guy from <cite><a href="http://www.rollingstone.com/">Rolling Stone</a></cite>.
+<a href="footnote.html#F5_9"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+Cellular automata are hot.  I introduce myself and sit down to watch
+the demonstration.  Right now there's a central cloud of dots, with
+square little patterns flying out of it.  On the sides of each of the
+square patterns are individual pixels that pump up and down.
+
+<p>
+
+"Look at the critters, Tom," says Margolus. "They look like rowers,
+don't they?"
+<a href="footnote.html#F5_10"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+
+<p>
+
+"Show him the square rock," says Toffoli.
+
+<p>
+
+Margolus clears the screen and keys a big red square into the center.
+The square expands out to the edges of the screen and bounces back. As
+the bouncing continues, the patterns interfere and form complex
+checkerboard patterns, enough patterns in thirty seconds to have made
+a respectable one-man Op-Art show in the 1960s.
+
+<p>
+
+Toffoli pries Margolus away from the controls and takes over. "Now we
+do the square rock in the toroidal pond again, but this time we add a
+heat-bath, a cloud of random gas in the background."
+
+<p>
+
+The background fills with darting dots, and Toffoli keys another big
+red square into the center. This time the waves are smooth and roughly
+circular, much like real waves in a real pond. We try it with two
+squares and get interference patterns. Toffoli is pleased. He says
+that this shows how simple physics really is.
+
+<p>
+
+What is going on?
+
+<p>
+
+For the past fifty years, scientists thought of computers in terms of
+a <em>series</em> of computations, to be carried out successively. The
+idealized model for such computers was the Turing machine: a device
+which moves back and forth along a long strip of paper making marks.
+Turing's model led John von Neumann to the key insight that got the
+computer revolution off the ground: <em>a computer program should contain
+computing instructions as well as data</em>.
+
+<p>
+
+One of the main changes expected from coming generations of computers
+is that computers are going to begin doing computations in <em>parallel</em>. A
+few such parallel computers exist, such as NASA's
+seven million dollar
+Massively Parallel Processor at the
+<a href="http://pao.gsfc.nasa.gov/">Goddard Space Flight
+Center</a>.
+<a href="footnote.html#F5_11"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+But these computers have yet to realize their full potential.  The
+problem is that there is still no simple model of parallel
+computation; and there is still no good theory of how to program a
+parallel computer.
+
+<p>
+
+Cellular automata may provide the necessary new mind tool for thinking
+about parallel computation. A striking feature of CAs is that their
+eventual output is so hard to predict. In practice, the best way to
+predict what pattern a CA will show in, say, a hundred steps, is
+simply to run the CA rule itself for one hundred steps. This suggests
+that the best way to "program" a parallel computer may be empirical:
+try out several million randomly chosen cell-programs, and select the
+one that accomplishes your goal the best.
+
+<p>
+
+Probably the best-known CA worker is Stephen Wolfram,
+aged
+twenty-four.  Wolfram was born in Oxford, and is said to have left
+home at the age of twelve.  As a teenager, he published a number of
+papers on particle physics.  He obtained his Ph.D. in physics from
+Cal Tech in 1980, won the MacArthur prize in 1981, and joined the
+Institute for Advanced Study in Princeton in 1982.  And then, in the
+process of trying to find a model for the way in which galaxies form
+out of the universe's initially chaotic state, Wolfram became
+interested in cellular automata.
+
+<p>
+
+Stocky, tousled, and seeming a bit older than his years, Wolfram
+speaks with the directness of a man who knows what he is doing.
+"Computer scientists had done some fairly worthless clean-up work on
+Ulam and von Neumann's work. There were maybe a hundred papers. What I
+found outrageous was that none of the papers had any pictures."
+
+<p>
+
+Wolfram's papers all have pictures, lots of pictures, usually pictures
+of one-dimensional cellular automata evolving in time.
+<a href="footnote.html#F5_12"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+He recalls his initial investigations into one-dimensional CAs as
+"botanical." He watched thousands and thousands of them on his
+computer until he got a feeling for what kinds of possibilities there
+were.  He now feels that a number of very simple CAs can serve as
+universal computers.  In Wolfram's words, "It is possible to make
+things of great complexity out of things that are very simple.  There
+is no conservation of simplicity."
+
+<p>
+
+One application of CAs is to the little-understood phenomenon of
+turbulence. "If we had a better understanding of how complex systems
+work, we could use them in engineering applications," remarks Wolfram,
+and goes on to tell a story about the design of the DC-10 airplane.
+"The wing of a DC-10 is held on by a single steel bar. Two or three
+steel bars would probably be better, but for more than one bar the
+mathematics becomes too complicated for a simulation to be carried
+out. The weakness of our mathematics forces us to adopt the simplest
+possible design."
+
+<p>
+
+I ask him what engineers think of his method of modeling turbulence
+with CAs. "Some say it's wrong, and some say it's trivial. If you can
+get people to say both those things, you're in quite good shape."
+
+<p>
+
+Up at <a href="http://www.bu.edu/">Boston University</a>, Charles Bennett
+and the Hungarian computer
+scientist Peter Gacs
+are using two-dimensional cellular automata to
+model biological notions. Unlike a solid-state computer, a human brain
+is filled with random noise. How is it that we manage to remember
+things, and to think logically, when all of our mental patterns are
+constantly being bombarded by extraneous stimuli? Bennett and Gacs
+tell me they have found a CA model for the process, and they show me
+the screenful of boiling red cottage cheese. Despite the boiling, the
+cheese stays mostly red: <em>this</em> is the persistence of memory. Gacs says
+something very interesting about the device that produces the display.
+
+<p>
+
+"With the cellular automaton simulator, we can see many very alien
+scenes. We have a new world to look at, and it may tell us a lot about
+our world. It is like looking first into a microscope."
+
+<p>
+
+Computer science is still so new that many of the people at the
+cutting edge have come from other fields. Though Toffoli holds degrees
+in physics and computer science, Bennett's Ph.D. is in physical
+chemistry. And twenty-nine year old Margolus is still a graduate
+student in physics, his dissertation delayed by the work of inventing,
+with Toffoli, the CAM-6 Cellular Automaton Machine.
+
+<p>
+
+After watching the CAM in operation at Margolus's office, I am sure
+the thing will be a hit. Just as the Moog synthesizer changed the
+sound of music, cellular automata will change the look of video.
+
+<p>
+
+I tell this to Toffoli and Margolus,
+and they look unconcerned. What
+they care most deeply about is science, about Edward
+Fredkin's
+vision
+of explaining the world in terms of cellular automata and information
+mechanics. Margolus talks about computer hackers, and how a successful
+program is called "a good hack." As the unbelievably bizarre cellular
+automata images flash by on his screen, Margolus leans back in his
+chair and smiles slyly. And then he tells me his conception of the
+world we live in.
+
+<p>
+
+"The universe is a good hack."
+
+<h3><a name="t2">CelLab</a></h3>
+
+During the years 1982-1986 I was living as a freelance writer in
+Lynchburg, Virginia.
+<a href="footnote.html#F5_13"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+Eventually living in Lynchburg became unfeasible.  I was broke and
+getting deeper in debt, while our children were needing braces and
+college.  Even if it was peaceful and cozy in Lynchburg, the bandwidth
+always seemed way too low--where the "bandwidth" of some
+information source means the number of bits per second that it
+delivers.
+
+<p>
+
+What was really chafing on me the most was my strong sense that I was
+missing out on a great intellectual revolution: the dawn of
+computer-aided experimental mathematics.  Fractals, chaos, cellular
+automata--it was everywhere.  I clicked over the final switchpoint
+when I did the interviews to write my article on cellular automata.
+Those guys were having so much fun, looking at such neat things, and
+making up such great theories about what they saw!  I decided to
+become one of them.
+
+<p>
+
+If you're already a mathematician, becoming a computer scientist is
+not so much a matter of new knowledge as a matter of new attitude.
+Born again. Willing to commit to the machine. By way of preparation, I
+wrote <cite><a href="refs.html#[Rucker87a]">Mind Tools</a></cite>,
+a book which surveys mathematics from the standpoint
+that everything is information. So when I got a chance to interview
+for a job in the Mathematics and Computer Science Department at San
+Jose State University, I had thought enough about computers to give a
+good talk on information theory. They called to offer me the job on
+March 22, 1986, my fortieth birthday.
+
+<p>
+
+In <cite>The Unbearable Lightness of Being</cite>, Milan Kundera talks about
+"the frenzy of a forty-year-old man starting a new life." That's how
+it was to move from Virginia to California with my wife and three kids
+and to start teaching computer courses.  The very first semester, they
+gave me a course in Assembly Language to teach.  I didn't know
+anything at all about assembly language; if the truth be told, I
+didn't even know what DOS was.
+
+<p>
+
+Fortunately there was another mathematician-turned-computer-scientist
+at SJSU who was teaching Assembly Language the period before me.  His
+name is William Giles
+and he's a great teacher.  I went to his classes
+and wrote down everything he said, and then I would teach that to my
+class.  During the second semester I began to understand something
+about what I was doing, and I wrote my very first cellular automaton
+program, an assembly language textmode graphics display of a
+one-dimensional CA.
+
+<p>
+
+Margolus and Toffoli's CAM-6
+board was finally coming into production
+around then, and I got the Department to order one. The company making
+the boards was Systems Concepts of San Francisco; I think they cost
+$1500. We put our order in, and I started phoning Systems Concepts up
+and asking them when I was going to get my board. By then I'd gotten a
+copy of Margolus and Toffoli's book, <cite>Cellular Automata Machines</cite>, and
+I was itching to start playing with the board. And still it didn't
+come. Finally I told System Concepts that SJSU was going to have to
+cancel the purchase order. The next week they sent the board. By now
+it was August, 1987.
+
+<p>
+
+The packaging of the board was kind of incredible. It came naked, all
+by itself, in a plastic bag in a small box of styrofoam peanuts. No
+cables, no software, no documentation. Just a three inch by twelve
+inch rectangle of plastic--actually two rectangles one on top of the
+other--completely covered with computer chips. There were two sockets
+at one end. I called Systems Concepts
+again, and they sent me a few
+pages of documentation. You were supposed to put a cable running your
+graphics card's output into the CAM-6 board, and then plug your
+monitor cable into the CAM-6's other socket. No, Systems Concepts
+didn't have any cables, they were waiting for a special kind of cable
+from Asia. So Steve Ware, one of the SJSU Math&amp;CS Department techs,
+made me a cable. All I needed then was the software to drive the
+board, and as soon as I phoned Toffoli he sent me a copy.
+
+<p>
+
+Starting to write programs for the CAM-6 took a little bit of time
+because the language it uses is Forth.  This is an offbeat computer
+language that uses reverse Polish notation. Once you get used to it,
+Forth is very clean and nice, but it makes you worry about things you
+shouldn't really have to worry about. But, hey, if I needed to know
+Forth to see cellular automata, then by God I'd know Forth. I picked
+it up fast and spent the next four or five months hacking the CAM-6.
+
+<p>
+
+The big turning point came in October, when I was invited to Hackers
+3.0, the 1987 edition of the great annual Hackers' conference
+held at a camp near Saratoga, CA.  I got
+invited thanks to James Blinn, a graphics wizard
+who also happens to be a fan of my science fiction books.  As a
+relative novice to computing, I felt a little diffident showing up at
+Hackers, but everyone there was really nice.  It was like, "Come on
+in!  The more the merrier!  We're having fun, yeeeeee-haw!"
+
+<p>
+
+I brought my AT along with the CAM-6 in it, and did demos all night
+long. People were blown away by the images, though not too many of
+them sounded like they were ready to a) cough up $1500, b) beg Systems
+Concepts for delivery, and c) learn Forth in order to use a CAM-6
+themselves. A bunch of the hackers made me take the board out of my
+computer and let them look at it. Not knowing too much about hardware,
+I'd imagined all along that the CAM-6 had some special processors on
+it. But the hackers informed me that all it really had was a few
+latches and a lot of fast RAM memory chips.
+
+<p>
+
+I met <a href="http://www.fourmilab.ch/">John Walker</a> at Hackers 3.0.  He told me a
+little about <a href="http://www.fourmilab.ch/autofile/www/autofile.html">Autodesk</a>
+and we talked in fairly general terms about my
+possibly doing some work with them.  A month or two later, John showed
+up at my house with Eric Lyons, the head of the
+Autodesk Technology Division.  They were toting a 386 and a five
+megabyte Mandelbrot set movie they'd made.  I
+showed them all my new CA stuff, and they more or less offered me a
+fulltime job.  It was so sudden I wasn't really ready to think about
+it.
+
+<p>
+
+Spring of 1988 I taught Assembly Language again, and this time just
+about all we did was write CA programs. The big revelation I had about
+getting the programs to run faster was to have no rigid preconceptions
+about what I wanted the program to do. Instead I began to listen to
+what the machine and the assembly language were telling me about what
+<em>they</em> wanted to do. And what they wanted to do was to run the ASCII
+rule. Given the structure of the textmode memory, it's the simplest
+possible 2D cellular automaton that an 80<em>x</em>86 can do.
+
+<p>
+
+That same spring, I was teaching a special course on Cellular
+Automata, and a custom chip designer called John
+Wharton
+had signed up
+for it.  I'd met him at the Artificial Life Conference at Los Alamos
+in September, 1987, and he'd been at Hackers 3.0 as well.  Wharton
+showed me how to use a stored lookup table for rapidly updating a
+one-dimensional cellular automaton four cells at a time.  (I use this
+trick in <b>SoundCA</b>.) Wharton and I talked a lot about how to make an
+inexpensive version of the
+CAM-6...whether by cloning the hardware or
+by reinventing the whole thing in software.  The other students in my
+Cellular Automata class were a big help as well.  Mary Ammirato and
+Brent Stewart in particular were very good at finding and naming new
+patterns in Vote and Brain.
+
+<p>
+
+The semester ended, and the nice rental house my family and I had
+initially lucked into got sold out from under us for $450,000. Looking
+for a new place to house us on a professor's salary, I realized that
+here in Silicon Valley I was really poor. I consoled myself by writing
+a lot more cellular automaton programs, a whole disk's worth of them,
+including a lot of 2D CGA ones.
+<a href="footnote.html#F5_14"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+In June I heard that Eric Lyons
+was giving a talk on cellular automata
+at Autodesk.  I went up, and after the talk I showed Eric my programs
+and asked if he and John had really meant it about offering me a job.
+
+<p>
+
+In July, John Walker
+mailed me a copy of his first version of the JC
+driver. This was a two-bit CGA-only version, but it ran Brian's Brain
+maybe 30% faster than my best hack at the same thing. <em>And it was
+externally programmable.</em>
+
+<p>
+
+I began pushing really hard for the job.  We went back and forth for a
+few weeks, and August 15 I started a three-month contract as a
+consultant at Autodesk.  The main thing I did was to test out Stephen
+Wolfram's new mathematics program
+<cite><a href="http://www.wri.com/">Mathematica</a></cite><sup>tm</sup> on a Mac
+II that Autodesk lent me.  The idea was to figure out what a PC 386
+interface for <cite>Mathematica</cite>} ought to look like, and to use
+<cite>Mathematica</cite> to find some some interesting new graphics
+algorithms.  I found all kinds of things, but that's another story.
+
+<p>
+
+When my consulting contract ran out in November 1988, Autodesk still
+wasn't quite sure about whether to really hire me fulltime. That's
+when I firmed up the idea that John Walker and I should pool all our
+CA knowledge and create a unified <i>CelLab</i>. That would be a specific
+thing I could do during my first year at Autodesk, to put together the
+<i>CelLab</i>. The deal was okayed, and to make my joy complete, John
+magnanimously agreed to put my name on the package cover.
+
+<p>
+
+As I write this, it's April 10, 1989, and we're planning to ship the
+product next month. The code seems to be all done, and when I finish
+this section the manual will be done too, modulo one more frantic
+round of corrections.
+
+<p>
+
+So, OK, Rudy, finish it.
+
+<p>
+
+When I look at how completely cellular automata have transformed my
+life in the last four years I can hardly believe it. The most exciting
+thing for me to think about is how <i>CelLab</i> is going to transform the
+lives of some of you who use it; and how you in turn will change the
+lives of others around you.
+
+<p>
+
+A revolutionary new idea is like an infection that's actually good for
+the people who get it. I caught cellular automata in 1985, and I've
+put them on <i>CelLab</i> so you can catch them too.
+
+<p>
+
+What happens next? It's up to you.
+
+<p>
+<hr>
+<a href="refs.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="chap4.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

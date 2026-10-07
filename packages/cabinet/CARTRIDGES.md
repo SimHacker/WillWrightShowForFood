@@ -99,6 +99,10 @@ CPU route—can fail before a program starts.
 | `save` | a Forth Animal tree, a SYMELEC ring file, a UNIX file | the program, by typing or the tape reader |
 | `scripts` | pen and key handlers | the cabinet ([DESIGN.md](DESIGN.md#pen-events-and-cartridge-scripts)) |
 | `doc` | a HyperTIES article, a picture | the reader |
+| `model` *(planned)* | a glTF of a cabinet, the 340's round tube, a Teletype, a desk, a chair, a light pen | the scene (§6a); shared models live in a library cartridge |
+| `character` *(planned)* | a Sims 1 person: skeleton, skin, suit, in VitaMoo's formats | the scene; Heinz, Mitch, Ken, dmr, Don, the robot |
+| `animation` *(planned)* | a VitaMoo animation: sit, type at the Teletype, point the light pen, thread a tape | a character, driven by events (§6a) |
+| `scene` *(planned)* | where models and characters stand, which device is bound to which model, and what each animation listens for | the scene view |
 
 An unknown kind is carried and ignored, the way an older page plays a session with new event
 kinds. A cartridge from tomorrow still loads today; it just can't do the new thing.
@@ -209,6 +213,51 @@ build:
   so loading one is instant and rebuilding it proves it.
 - The CAM-off's plain-assembly side is the same rule as a `template` expanded into PDP-7
   assembly: one card, two implementations, both from cartridges.
+
+## 6a. Scenes: the machine, the room, and the people at it
+
+A cartridge can carry a scene: 3D models of the computer, its racks, the desk, the input devices,
+and the people operating it, animated by what the machine is actually doing. The look is in
+[MANIFESTO.md](MANIFESTO.md) (abstract people, real machines) and [PORTRAIT.md](PORTRAIT.md)
+(the tube on curved glass). This is how a cartridge carries it.
+
+**Like a Sims object.** A Sims 1 object came with its own models, animations and code (its
+behaviour trees), and dropped into any house. A cartridge is the same kind of thing: tape, sources
+and docs, and also the models and characters that show it being used.
+
+- **PIXIE** carries a Sims 1 Heinz Lemke at the PDP-7, working the light pen and the Teletype,
+  in the Eames shell chair.
+- **UNIX v0** carries Ken Thompson and Dennis Ritchie, with their own animations.
+- **FORTH** carries Mitch Bradley.
+
+The characters are retro Sims 1 people animated by [VitaMoo](https://vitamoo.space), Don's open
+source TypeScript reimplementation of The Sims 1 character animation system.
+
+**Shared models, by `extends` and `library`.** The machine itself, its optional devices, round
+vector displays (the 340, the Type 30), large raster framebuffers, keyboards, mice, light pens,
+joysticks, buttons and paddles are models in a shared library cartridge. A program's cartridge
+picks the ones its machine configuration has. A PDP-7 without a 340 has no round tube in the room.
+The scene follows the configuration, so it can never show a device the machine doesn't have.
+
+**The model is bound to the device.** Each model in the scene is bound to a cabinet device or a
+device event:
+
+- the 340 model's tube face is the phosphor texture of the 340 device;
+- the Teletype's platen is the teletype panel's paper;
+- the console lamps are the CPU's registers;
+- the light pen model goes where the pen device is pointing.
+
+A character's animations listen for the same events: a keystroke plays a typing gesture, a pen hit
+plays a point-and-press, a tape mount plays threading the reader. Animation is decoration driven
+by the machine, never the other way round. It can't change what the program does.
+
+**Virtual devices, driven by real ones or by demos.** The scene models the *virtual* input devices,
+the ones the emulated machine sees. A real person moves them with real devices: a mouse or a touch
+as the light pen, a keyboard as the Teletype, a gamepad as the console switches. A recorded
+`session` or `demo` moves them the same way. So a demo plays back as Heinz at the machine, pointing
+and typing exactly what the session recorded, and a live user's own input appears as the
+character's hands. The binding from a real device to a virtual one is the cartridge's, as it is
+today for keys and switches.
 
 ## 6. Live coding, saving, and laying eggs
 

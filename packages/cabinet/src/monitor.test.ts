@@ -54,7 +54,7 @@ test("char codes spell text", () => {
 
 test("hover: SYMELEC's display list names its own lightbuttons", () => {
 	const cpu = new Pdp7({ coreWords: 8192 });
-	loadSymelec(cpu, ["pix", "core8k"]);
+	loadSymelec(cpu, ["core8k"]);
 	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const box = new Cabinet({ cpu, devices: [t, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TinyTitan()] });
 	t.clock = () => box.cycles;

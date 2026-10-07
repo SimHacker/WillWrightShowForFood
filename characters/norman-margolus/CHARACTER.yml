@@ -71,6 +71,7 @@ sources:
     - "Margolus, N. (1984). 'Physics-like models of computation.' Physica D 10:81–95."
     - "Margolus, N. & Levitin, L.B. (1998). 'The maximum speed of dynamical evolution.' Physica D 120:188–195."
     - "Margolus, N. (1987). *Physics and Computation* (MIT PhD thesis)."
+    - "Margolus, N. (1993). 'CAM-8: a computer architecture based on cellular automata.' MIT LCS. https://people.csail.mit.edu/nhm/cam8.pdf (cached: sources/cam8.pdf)"
 
 see_also:
   - { path: the-cam6-demo-for-norman.md, why: "'What I made with your magic' — the demo explained TO Norman: Forth-vs-JS code, floppy/Sun-Forth heritage, iteration layers, emulator-vs-simulator question, TS/Sandspiel future" }

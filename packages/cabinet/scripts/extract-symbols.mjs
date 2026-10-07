@@ -11,8 +11,7 @@
 //
 // A table value under 20000 is an address. 1xxxxx and 6xxxxx are labels
 // written `NAME=JMS,` and `NAME=JMP,`, whose address is the low 13 bits. Anything else (display
-// codes, masks) is a constant and is left out. `=*` marks a name the 1972
-// assembler saw defined more than once.
+// codes, masks) is a constant and is left out. `=*` marks a value bigger than an address.
 import { readFileSync, writeFileSync } from "node:fs";
 
 const dir = "../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/";
@@ -60,7 +59,6 @@ for (const [i, line] of lines.entries()) {
 		const v = Number.parseInt(digits, 8);
 		let addr = null;
 		const flags = [];
-		if (star) flags.push("multiply-defined");
 		if (v < 0o20000) addr = v;
 		else if ((v & 0o760000) === 0o100000 || (v & 0o760000) === 0o600000) {
 			addr = v & 0o17777;
@@ -71,7 +69,7 @@ for (const [i, line] of lines.entries()) {
 			continue;
 		}
 		const code = (symbols.get(name) ?? []).filter((s) => s.source.includes("code"));
-		if (code.length && !code.some((s) => s.addr === addr) && !star) {
+		if (code.length && !code.some((s) => s.addr === addr)) {
 			disagree.push(`${name}: table ${o(addr)} (listing line ${i + 1}), code ${code.map((s) => o(s.addr)).join(" ")}`);
 			continue;
 		}

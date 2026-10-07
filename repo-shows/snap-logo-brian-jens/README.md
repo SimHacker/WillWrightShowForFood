@@ -26,6 +26,29 @@ only.
 
 **2018 thread:** Don's Micropolis × Snap! correspondence ([digest](../../characters/brian-harvey/sources/micropolis-snap-2018.yml)) — still an open demo beat.
 
+**Snap! as the front end** for three engines, each one a block palette (commands poke, reporters
+peek, hats fire on events):
+
+- **Micropolis**: MicropolisCore's `MicropolisReactive` bridge (`poke`, `peek`, callbacks,
+  `getSnapshot()`) already has the right shape for this. Zone a city and write tax policy from blocks;
+  the simulator as a glass box.
+- **CAM6**: a rule is a ring, and compiling it is a higher-order block that fills the lookup
+  table. The table stays the same from Forth to C to JavaScript to blocks, so each step checks
+  the last.
+- **The emulator cabinet**: blocks to load a cartridge, step, peek and poke core, type at the
+  teletype, and draw the 340's picture on the stage. Snap!'s turtle and the PDP-7 Forth turtle
+  draw the same square. A Snap! script can even be the cabinet's
+  [native CPU](../../packages/cabinet/ARCHITECTURE-AND-LINEAGE.md) and drive the devices directly.
+
+The cabinet is also how the other engines arrive. Its CPUs and devices can wrap existing
+TypeScript libraries: CAM-6, Micropolis, the Turing machine with Minsky's universal machine, Dave
+Ackley's Movable Feast Machine, and von Neumann's 29-state CA with its universal constructor. Each
+wrapper gets run, step, trace and recording from the cabinet, and a block palette in Snap!.
+
+Designs: [Snap! as visual front end](https://github.com/SimHacker/moollm/blob/main/designs/snap/snap-visual-engines-fundable-goals.md) ·
+[Micropolis constraint bridge](https://github.com/SimHacker/moollm/blob/main/designs/snap/micropolis-svelte-snap-constraint-bridge.md) ·
+[cabinet TODO](../../packages/cabinet/TODO.md)
+
 **Snap!Con 2025:** Brian's [Karlstrom evening address](https://www.youtube.com/watch?v=pDK2PE_pkqQ) — introduced by Jens — is the pair show's emotional spine: CCUS and no grades vs curriculum hoops; lambda in Snap!; "computing is your birthright." Digests: [Brian](../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md) · [Jens hosts](../../characters/jens-monig/sources/snapcon-2025-karlstrom-intro.md).
 
 **Metaprogramming / macros:** [technical digest](../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml) — rings as quote, AST since v8, Lisp-family macros (partial). [Palm audience questions (readable)](audience/palm/questions.md) · [YAML SSOT](audience/palm/questions.yml) for the pair interview.

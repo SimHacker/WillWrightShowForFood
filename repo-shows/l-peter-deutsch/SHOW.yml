@@ -1,0 +1,46 @@
+# SHOW — L Peter Deutsch (Basic PDP-1 LISP, live, with its listing)
+
+show:
+  id: l-peter-deutsch
+  title: "A Repo Show with L Peter Deutsch — Basic PDP-1 LISP, Live, Down to the Scan"
+  type: solo
+  host: Don Hopkins
+  guests: ["L Peter Deutsch"]
+  character: characters/l-peter-deutsch/
+  topic: "Basic PDP-1 LISP running in the cabinet, each instruction linked to the 1964 listing, its scan and its explanation; then PS and dynamic translation, Ghostscript and NeWS, the Deutsch limit"
+  status: seed
+  format: remote_or_in_person
+
+why_him:
+  pdp1_lisp: "Wrote Basic PDP-1 LISP, one of the first REPLs, finished in 1963 at 17; the 1964 Deutsch & Berkeley document has the listing."
+  vm_lineage: "PS at PARC translated Smalltalk-80 bytecodes to native code as it ran: the ancestor of JIT VMs."
+  postscript: "Ghostscript; Don wrote PostScript in NeWS and HyperLook at Sun."
+  distributed: "The Eight Fallacies of Distributed Computing, at Sun."
+
+threads:
+  lisp_down_to_the_scan:
+    flagship: true
+    what: "Run the REPL; stop on any instruction; follow it up through disassembly, listing line, scan rectangle, document paragraph, commentary."
+    needs: ["cabinet PDP-1 + Type 30", "PDP-1 assembler front end", "scan source maps"]
+    plan: ../../packages/cabinet/TODO.md
+  pdp1_to_ps: "From a 4K-word interpreter to dynamic translation; with David Ungar if he'd like."
+  postscript_both_sides: "Ghostscript's internals against NeWS's PostScript as a window system."
+  deutsch_limit: "Visual programming's 50-primitive limit against today's block and node languages."
+  music: "Peter's choice."
+
+format:
+  live: true
+  audience_qa: true
+  homeplay: "Type a Lisp expression at the PDP-1 REPL; pick one instruction and annotate it in the listing."
+
+ties_to:
+  - ../../characters/l-peter-deutsch/invitation.md
+  - ../../characters/l-peter-deutsch/ideas.md
+  - ../../characters/butler-lampson/
+  - ../../characters/dan-ingalls/
+  - ../../characters/david-ungar/
+  - ../../characters/lars-brinkhoff/
+  - ../../packages/cabinet/TODO.md
+  - http://s3data.computerhistory.org/pdp-1/DEC.pdp_1.1964.102650371.pdf
+
+consent: not_yet_asked

@@ -74,6 +74,7 @@ own room [here](../../jim-mackraz/README.md).
 > Article:
 >
 > [http://www.donhopkins.com/drupal/node/41](http://www.donhopkins.com/drupal/node/41)
+> *(dead link; backed up in [cam6-simulator-wiki/](cam6-simulator-wiki/README.md))*
 >
 > Demo (requires Flash player):
 >

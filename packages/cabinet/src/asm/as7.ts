@@ -27,14 +27,14 @@ const M = 0o777777;
 type Value = { v: number; rel: boolean };
 
 /** Built in, before any tape: the relocation base and UNIX's system call numbers. */
-const SYSCALLS: Record<string, number> = {
+export const SYSCALLS: Record<string, number> = {
 	save: 1, getuid: 2, open: 3, read: 4, write: 5, creat: 6, seek: 7, tell: 8, close: 9, link: 10,
 	unlink: 11, setuid: 12, rename: 13, exit: 14, time: 15, intrp: 16, chdir: 17, chmod: 18,
 	chown: 19, sysloc: 21, capt: 23, rele: 24, status: 25, smes: 27, rmes: 28, fork: 29,
 };
 
 /** The instructions `as7` knows without `sop.s`: memory reference, EAE, operate. */
-const BUILTIN_OPS: Record<string, number> = {
+export const BUILTIN_OPS: Record<string, number> = {
 	sys: 0o020000, i: 0o020000,
 	dac: 0o040000, jms: 0o100000, dzm: 0o140000, lac: 0o200000, xor: 0o240000, add: 0o300000,
 	tad: 0o340000, xct: 0o400000, isz: 0o440000, and: 0o500000, sad: 0o540000, jmp: 0o600000,

@@ -155,16 +155,19 @@ type Parsed = {
 const NAME = "[a-z][a-z0-9]*";
 
 /** Split a source line into labels, an optional origin, and one statement, dropping the comment. */
-type Line = { labels: Label[]; origin: string | null; originAfterLabels: boolean; stmt: Stmt };
+/** `commentAt` is the index in `raw` of the slash that starts the comment. */
+type Line = { labels: Label[]; origin: string | null; originAfterLabels: boolean; stmt: Stmt; commentAt: number | null };
 
-function parseLine(raw: string, dialect: Dialect): Line {
-	const { labels, origin, stmt } = splitLine(raw, dialect);
+export function parseLine(raw: string, dialect: Dialect): Line {
+	const { labels, origin, stmt, commentAt } = splitLine(raw, dialect);
 	const leading = /^\s*([0-7]+|[a-z][a-z0-9]*(?:[+-][0-7]+)?)\/(?=\s|$)/.test(raw);
-	return { labels, origin, originAfterLabels: origin !== null && !leading, stmt };
+	return { labels, origin, originAfterLabels: origin !== null && !leading, stmt, commentAt };
 }
 
-function splitLine(raw: string, dialect: Dialect): { labels: Label[]; origin: string | null; stmt: Stmt } {
-	let rest = raw.replace(/\s+$/, "");
+function splitLine(raw: string, dialect: Dialect): { labels: Label[]; origin: string | null; stmt: Stmt; commentAt: number | null } {
+	const trimmed = raw.replace(/\s+$/, "");
+	let rest = trimmed;
+	let commentAt: number | null = null;
 	const labels: Label[] = [];
 	let origin: string | null = null;
 	const om = rest.match(/^\s*([0-7]+|[a-z][a-z0-9]*(?:[+-][0-7]+)?)\/(?=\s|$)/);
@@ -186,8 +189,9 @@ function splitLine(raw: string, dialect: Dialect): { labels: Label[]; origin: st
 	const tm = dialect.text ? rest.match(/^\s*text\s+"([^"]*)"/) : null;
 	if (tm) {
 		const chars = [...(tm[1] as string).toUpperCase()].map((c) => (c.charCodeAt(0) & 0o177) | 0o200);
-		return { labels, origin, stmt: { kind: "text", chars } };
+		return { labels, origin, stmt: { kind: "text", chars }, commentAt };
 	}
+	const offset = trimmed.length - rest.length;
 	let body = "";
 	for (let k = 0; k < rest.length; k += 1) {
 		const c = rest[k] as string;
@@ -198,24 +202,25 @@ function splitLine(raw: string, dialect: Dialect): { labels: Label[]; origin: st
 				body = "";
 				continue;
 			}
+			commentAt = offset + k;
 			break;
 		}
 		body += c;
 	}
 	body = body.trim();
-	if (body === "") return { labels, origin, stmt: { kind: "none" } };
+	if (body === "") return { labels, origin, stmt: { kind: "none" }, commentAt };
 	const assign = body.match(new RegExp(`^(${NAME})\\s*=\\s*(.*)$`));
-	if (assign) return { labels, origin, stmt: { kind: "assign", name: assign[1] as string, expr: assign[2] as string } };
+	if (assign) return { labels, origin, stmt: { kind: "assign", name: assign[1] as string, expr: assign[2] as string }, commentAt };
 	if (dialect.start) {
 		const start = body.match(/^start\b\s*(.*)$/);
-		if (start) return { labels, origin, stmt: { kind: "start", expr: start[1] as string } };
+		if (start) return { labels, origin, stmt: { kind: "start", expr: start[1] as string }, commentAt };
 	}
-	return { labels, origin, stmt: { kind: "word", expr: body } };
+	return { labels, origin, stmt: { kind: "word", expr: body }, commentAt };
 }
 
-type Term = { sign: 1 | -1; op: "add" | "or"; kind: "num" | "sym" | "dot" | "lit"; text: string };
+export type Term = { sign: 1 | -1; op: "add" | "or"; kind: "num" | "sym" | "dot" | "lit"; text: string };
 
-function tokenize(expr: string, dialect: Dialect): Term[] {
+export function tokenize(expr: string, dialect: Dialect): Term[] {
 	const terms: Term[] = [];
 	let k = 0;
 	let sign: 1 | -1 = 1;
@@ -278,7 +283,18 @@ function vectorWord(mods: number, dx: number, dy: number): number {
 }
 
 /** Assemble one or more tapes into one program. Never throws: problems go to `errors`. */
-export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResult {
+export type Assignment = { tape: string; line: number; name: string; value: number };
+/** One `(literal` operand: where it was used and the pool word it got. */
+export type LiteralUse = { where: string; text: string; addr: number };
+
+export function assemble(
+	tapes: readonly AsmTape[],
+	opts: AsmOpts = {},
+): AsmResult & {
+	assignments: Assignment[];
+	literalUses: LiteralUse[];
+	literalSites: Map<number, { loc: number; disp: boolean }>;
+} {
 	const dialect: Dialect = typeof opts.dialect === "object" ? opts.dialect : DIALECTS[opts.dialect ?? "dec"] ?? DEC_1964;
 	const origin0 = opts.origin ?? DEFAULT_ORIGIN;
 	const errors: string[] = [];
@@ -291,8 +307,10 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 		if (!referenced.has(name)) referenced.set(name, referenced.size);
 	};
 	// "." in a literal is the referring word's location (OUTNOX: lac (jmp .+4), so those are per site.
-	const litKey = (text: string, loc: number): string => (/[.,]/.test(text) ? `${text}@${loc}` : text);
-	const literalSites = new Map<string, { text: string; loc: number; disp: boolean }>();
+	const literalKeys = new Map<string, string>();
+	const litKey = (text: string, loc: number): string => literalKeys.get(`${text}@${loc}`) ?? (/[.,]/.test(text) ? `${text}@${loc}` : text);
+	const literalSites = new Map<string, { text: string; loc: number; disp: boolean; unresolved: boolean }>();
+	const literalUses: LiteralUse[] = [];
 	const parsed: Parsed[] = [];
 
 	let disp = false;
@@ -356,13 +374,19 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 		}
 		if (t.kind === "dot") return loc;
 		if (t.kind === "lit") {
-			const key = litKey(t.text, loc);
 			if (pass === 1) {
-				if (!literalSites.has(key)) literalSites.set(key, { text: t.text, loc, disp: inDisp });
-				for (const s of tokenize(t.text, dialect)) if (s.kind === "sym") refer(s.text);
+				const symbols = tokenize(t.text, dialect).filter((term) => term.kind === "sym");
+				const unresolved = symbols.some((symbol) => lookup(symbol.text, inDisp) === undefined);
+				const key = dialect.literalsByValue && unresolved ? `${t.text}@${loc}` : litKey(t.text, loc);
+				literalKeys.set(`${t.text}@${loc}`, key);
+				if (!literalSites.has(key)) literalSites.set(key, { text: t.text, loc, disp: inDisp, unresolved });
+				for (const symbol of symbols) refer(symbol.text);
 				return 0;
 			}
-			return litAddr ? litAddr(key) : 0;
+			if (!litAddr) return 0;
+			const addr = litAddr(litKey(t.text, loc));
+			literalUses.push({ where, text: t.text, addr });
+			return addr;
 		}
 		refer(t.text);
 		const s = lookup(t.text, inDisp);
@@ -388,8 +412,26 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 				return t.sign === 1 ? x : -x;
 			};
 			let mods = 0;
-			for (const t of terms.slice(1, -2)) mods = ocAdd(mods, termValue(t, loc, where, pass, inDisp, litAddr));
-			return vectorWord(mods, signed(terms[terms.length - 2] as Term), signed(terms[terms.length - 1] as Term));
+			const coordinates = terms.slice(1);
+			while (coordinates[0]?.kind === "sym" && display.has(coordinates[0].text)) {
+				mods = ocAdd(mods, termValue(coordinates.shift() as Term, loc, where, pass, inDisp, litAddr));
+			}
+			if (coordinates.length === 1) {
+				const displacement = signed(coordinates[0] as Term);
+				// The 1972 shorthand uses short magnitudes for dy and larger ones for dx.
+				return Math.abs(displacement) < 0o100 ? vectorWord(mods, 0, displacement) : vectorWord(mods, displacement, 0);
+			}
+			return vectorWord(mods, signed(coordinates[coordinates.length - 2] as Term), signed(coordinates[coordinates.length - 1] as Term));
+		}
+		if (terms[0]?.kind === "sym" && terms[0].text === "law" && terms.length > 1) {
+			const opcode = termValue(terms[0], loc, where, pass, inDisp, litAddr);
+			let operand = 0;
+			for (const term of terms.slice(1)) {
+				const value = termValue(term, loc, where, pass, inDisp, litAddr);
+				if (term.op === "or") operand |= term.sign === 1 ? value : ocNeg(value);
+				else operand = ocAdd(operand, term.sign === 1 ? value : ocNeg(value));
+			}
+			return ocAdd(opcode, operand & 0o17777);
 		}
 		let v = 0;
 		for (const t of terms) {
@@ -403,6 +445,7 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 	const setOrigin = (p: Parsed, loc: number, pass: 1 | 2, litAddr?: (key: string) => number): number =>
 		p.origin === null ? loc : evaluate(p.origin, loc, `${p.tape}:${p.line}`, pass, p.disp, litAddr) & 0o17777;
 
+	const firstAssigned = new Map<string, number>();
 	let loc = origin0;
 	for (const p of parsed) {
 		const where = `${p.tape}:${p.line}`;
@@ -415,8 +458,11 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 			}
 			if (p.originAfterLabels) loc = setOrigin(p, loc, 1);
 			const s = p.stmt;
-			if (s.kind === "assign") user.set(s.name, evaluate(s.expr, loc, where, 1, p.disp));
-			else if (s.kind === "word") evaluate(s.expr, loc, where, 1, p.disp);
+			if (s.kind === "assign") {
+				const v = evaluate(s.expr, loc, where, 1, p.disp);
+				if (!firstAssigned.has(s.name)) firstAssigned.set(s.name, v);
+				user.set(s.name, v);
+			} else if (s.kind === "word") evaluate(s.expr, loc, where, 1, p.disp);
 			else if (s.kind === "start" && s.expr) evaluate(s.expr, loc, where, 1, p.disp);
 		} catch (e) {
 			errors.push(`${where}: ${(e as Error).message}`);
@@ -432,7 +478,7 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 		const groups = new Map<string, { keys: string[]; site: { text: string; loc: number; disp: boolean } }>();
 		for (const [key, site] of literalSites) {
 			let group = key;
-			if (dialect.literalsByValue) {
+			if (dialect.literalsByValue && !site.unresolved) {
 				try {
 					group = `=${evaluate(site.text, site.loc, "literal", 2, site.disp, () => 0)}`;
 				} catch {
@@ -479,11 +525,14 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 	// Pass 2: re-run assignments in order so forward references settle, then emit.
 	const words = new Map<number, number>();
 	const listing: AsmLine[] = [];
+	const assignments: Assignment[] = [];
 	let start: number | null = null;
 	const put = (addr: number, word: number, where: string): void => {
 		if (words.has(addr)) errors.push(`${where}: location ${addr.toString(8)} written twice`);
 		words.set(addr, word);
 	};
+	// Titan resolved a forward reference to a reassigned name with its first value (SYMELEC's SUMB).
+	for (const [name, v] of firstAssigned) user.set(name, v);
 	loc = origin0;
 	for (const p of parsed) {
 		const where = `${p.tape}:${p.line}`;
@@ -493,8 +542,11 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 		let emitted: number[] = [];
 		try {
 			loc = setOrigin(p, loc, 2, litAddr);
-			if (s.kind === "assign") user.set(s.name, evaluate(s.expr, loc, where, 2, p.disp, litAddr));
-			else if (s.kind === "start" && s.expr) start = evaluate(s.expr, loc, where, 2, p.disp, litAddr) & 0o17777;
+			if (s.kind === "assign") {
+				const value = evaluate(s.expr, loc, where, 2, p.disp, litAddr);
+				user.set(s.name, value);
+				assignments.push({ tape: p.tape, line: p.line, name: s.name, value });
+			} else if (s.kind === "start" && s.expr) start = evaluate(s.expr, loc, where, 2, p.disp, litAddr) & 0o17777;
 			else if (s.kind === "word") {
 				addr = loc;
 				word = evaluate(s.expr, loc, where, 2, p.disp, litAddr);
@@ -540,5 +592,8 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 		listing,
 		errors,
 		start,
+		assignments,
+		literalUses,
+		literalSites: litSite,
 	};
 }

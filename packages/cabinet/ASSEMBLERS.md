@@ -112,31 +112,21 @@ HILO, assembled here, in the same style:
 
 **Tested against the original** (`src/listing.test.ts`): page 1 of the SYMELEC listing is read
 back into an `AsmResult` and printed again. All 60 lines come out identical to Heinz's, header
-included. In the symbol table, 563 of the 566 symbols print exactly as transcribed, and the
-ordering rules hold. The other three are transcription problems, listed below.
+included. The symbol table the corrected source prints is the transcribed table, row for row.
 
 ## What the symbol table told us about the transcription
 
-Titan printed the symbol table in strict order, so a name that sits out of order was misread. The
-digit readings below break the order, but the letter readings fit it exactly, and the source file
-agrees:
+Titan printed the symbol table in strict order, letters before digits, so a name out of order was
+misread. Read against the scans (listing pages 108-110), the table had 20 wrong names (`BD0` for
+`BDO`, `CLB1` for `CLBI`, `CHODE` for `CMODE`, `COP FIR`, `TDDIS` for `TODIS`, `WAITLX` for
+`WAITLK`, ...), a stretch from `DEMP` to `GRID` transcribed in the wrong order, five wrong values
+(`COMP10`, `BPNTX`, `MESIN2`, `UNSTAK`, `WRLB`), a lost digit (`UNSTKY =*111023`), and stars
+dropped on 21 values. The star marks a value bigger than an address. `SUMB` really is printed
+twice, 5013 and 5040: it is assigned twice. The table also settled names in the code: `ENOEX` and
+`WAIT2` are how Heinz spelled them. `scripts/audit-cambridge.mjs` checks every listing line
+(address, word, source) and every table row against the assembly; it reports nothing.
 
-| Transcribed | Almost certainly | Uses in `symelec.asm` (transcribed / letter) |
-|---|---|---|
-| `BD0` | `BDO` | 1 / 2 |
-| `CLB1` | `CLBI` | 1 / 2 |
-| `CLB0` | `CLBO` | 1 / 2 |
-| `CHODE` | `CMODE` | 1 / 7 |
-
-This is also why `CLB1` and `CLB0` come out undefined when the cabinet assembles SYMELEC. A stretch
-of the table from `DEMP` to `GRID` is out of order too, as if its rows were transcribed in a
-different order. `SUMB` appears twice (5013 and 5040), and `COP FIR` looks like a misread
-`COPFIR`. `UNSTKY =*11023` has a star on a five-digit value, the only one of 29; its neighbour is
-`UNSTKX =*111011`, so a digit was probably lost. (`scripts/extract-symbols.mjs` read the star as
-"multiply defined", another guess; the rows disagree with that less clearly.) None of these are
-corrected yet: each needs a look at the scan page first.
-
-## RSPPIX reassembles; SYMELEC does not yet
+## RSPPIX and SYMELEC reassemble
 
 `rsppix.asm`, unchanged, assembles at origin 22 to `rsppix.oct` word for word
 (`src/rsppix.test.ts`). `CAMBRIDGE_1972` learned its 1972 spellings to get there:
@@ -149,21 +139,39 @@ corrected yet: each needs a look at the scan page first.
 - The bare names after the last PAUSE (BEG … BCC) are Titan's printout of the variable block. They
   are checked against the allocation, not assembled.
 
-Assembling `symelec.asm` now gives 5 errors, down from 21. They are a label defined twice (`GR2`),
-and Titan's own error printout around line 2573 (`*DECIMAL DIGIT IN OCTAL NUMBER`, then `201128`)
-transcribed as source. One
-early error moves every address after it, so most of the 4,717 words differ from `symelec.oct`,
-which is what the cabinet boots. Making the assembler reproduce `symelec.oct` word for word is the
-test the Cambridge dialect still has to pass.
+`symelec.asm` assembles to `symelec.oct` and its literal pool word for word
+(`src/cambridge-as7.test.ts`). SYMELEC taught the dialect four more things:
+
+- A forward reference to a name assigned twice (`SUMB = STSTAK 44`, then `STSTAK 71`) gets the
+  first value.
+- A literal naming a symbol not yet defined gets its own pool word at each use; once defined,
+  literals share by value. Three `(TEMPDF 10` before `TEMPDF` is defined are three words.
+- `VEC ON n` with one coordinate: under 100 octal it is dy, otherwise dx.
+- `LAW -30` keeps the operand to the 13-bit address field: `777747`.
+
+The rest was the transcription, corrected in place against the scans in `symelec.asm`, the
+listing text and `symelec.oct` together: names (`WRLTO`, not `WRLTD`; `ERAST`; `MESIN8`),
+`OP-5` for `OP+5`, `LAM` read as `LAW`, `SAD (257` read as `SAD 13`, `772016` read as `772015`
+at 7633 (the scan's 6 has a speckled top), the variable block after the
+last PAUSE, and Heinz's pencilled `201130` for PIX, which Titan had rejected as `201128`.
+`scripts/compare-symelec.mjs` lists any word where source and image part.
+
+## Cambridge to as7
+
+`src/asm/cambridge-as7.ts` translates Cambridge source to `as7` source using the Cambridge
+assembler's own parser, tokenizer, assignments and literal pool, so the two cannot disagree about
+what a line means. Each name gets a prefix (`s` for SYMELEC, `r` for RSPPIX) to stay apart from
+the Forth kernel and `sop.s`. Ones' complement arithmetic and as7's OR-by-space are reconciled
+term by term against the Cambridge value; `FINDP=JMS,` becomes a label and `FINDP` in an operand
+`jms rfindp`. Literals become labelled words after the variables, in the same places.
+`scripts/translate-cambridge.mjs` writes `tapes/symelec/symelec.s` and `tapes/pdp7forth/rsppix.s`
+only if as7 assembles them to the Cambridge words exactly; tests check that again, and that the
+checked-in files are what the translator makes today.
 
 ## Next
 
-1. **The `as7` front end**, for Ken Thompson's `as` as pdp7-unix and Mitch Bradley's Forth use it:
-   `name:` labels, `"` comments, `;` between statements, `1f`/`1b` relative labels, `<c`
-   character syllables, a space that ORs, and numbers that are decimal unless they start with 0.
-   It is written here, not ported: pdp7-unix's `as7` is GPL, so it is the oracle, not the source.
-   **Accept:** Mitch's `kernel.s` assembles to his `kernel.a7out` word for word, with the same
-   `Labels:`.
+1. **Forth with RSPPIX, built in the page**: `kernel.s` and `rsppix.s` in one as7 run, one symbol
+   table and one source map, with Forth words over RSPPIX's routines. The prebuilt Forth stays.
 2. **Forth built in the page** from `kernel.s`, `prelude.fs` and `turtle.fs`, with the source map
    and symbol table from the build. It sits on the menu beside the prebuilt Forth until the two
    agree word for word.

@@ -1,0 +1,1708 @@
+<html>
+<head>
+<title>The RC Program</title>
+</head>
+<body>
+<h1><a href="cellab.html#contents"><img src="figures/icon.gif" alt=""
+align=left width=32 height=32></a> Cellular Automata Laboratory</h1><hr>
+<h1>The RC Program</h1>
+
+<h2><a name="t1">Mode Selection</a></h2>
+
+RC shows a variety of cellular automata in textmode graphics. The RC
+programs are designed to work on any PC whatsoever, from the oldest
+mono clone to the newest super-VGA graphics machine. The program adjusts
+itself to take best advantage of the graphics capabilities of each
+machine. Specifically, we have five categories of machines in mind:
+Mono,
+Clunker,
+Clone,
+EGA,
+and VGA.
+Only
+machines with <em>monochrome cards</em> or with Hercules® cards fall into the
+category of Mono. Whether or not they have color monitors, most other
+machines fall into the category of "Clunker" or "Clone".
+
+<p>
+
+Our programs work by directly accessing the textmode
+refresh buffer,
+which is located on the screen controller card. In order to get an
+idea of which modes work best on your machine, start up RC. If your
+machine is a Mono, then the program will detect this and will stick to
+this single mode, ignoring any requests to change to one of the color
+modes. If your machine is not a Mono, you can cycle among the modes
+Clunker, Clone, EGA, and VGA by pressing <b>m</b> repeatedly. If you are
+confused about what mode you are in, use <b>a</b> to toggle in and out of
+the control panel. "Clunker" is politely called "CGA1"
+on the control
+panel, and "Clone" is called "CGA2".
+
+<p>
+
+"Mono" machines have a card called the MDA
+(Monochrome Display
+Adapter) which stores the screen information at the hexadecimal
+address <tt><b>B000</b></tt>, as opposed to the address <tt><b>B800</b></tt> which all
+color machines use.  Machines with the Hercules graphics adapter card
+still have their text screen information at <tt><b>B000</b></tt>, so they behave
+essentially like Monos.
+
+<p>
+
+A "Clunker" is a machine which does have
+screen memory at <tt><b>B800</b></tt>, but which uses an older kind of screen
+controller.  The original IBM® PCs have this card.  When possible,
+our programs read and write directly to the screen's memory.  On the
+older Clunkers, doing this produces snow (random flashes of colored
+static) on the screen as well as the desired image.  This is because
+the cathode ray tube controller on a Clunker is "unable to walk and
+chew gum at the same time".
+
+<p>
+
+To be more accurate, I need to explain how pictures get on your
+screen. The screen memory holds a copy of what to put on the screen,
+and the electron gun scans across the cathode ray tube line by line,
+painting on the desired image. It sweeps down the screen from top to
+bottom, and then jumps back to the top of the screen and does it
+again. The instant when it is jumping back is called the "vertical
+retrace interval".  On a Clunker, if I read or write anything to the
+screen memory while the gun is sweeping across the screen, the gun
+"stumbles" over the memory activity and emits a spazzy burst of snow.
+To avoid snow, one has to repeatedly check the status of the electron
+gun, waiting for the retrace interval. During this brief period of
+relative inactivity, one can dart in and change a byte of the screen
+memory without producing snow. It's a little like crossing a train
+track that has a train on it by crawling across really fast right
+after one set of wheels has passed, and getting through before the
+next set of wheels comes. So if you have snow, press <b>m</b> till it goes
+away, or press <b>a</b> to see the control panel. Once you see the control
+panel, you can use your arrow keys to put the highlight on the "Video
+Mode" cell, and once you are there, pressing <b>Enter</b> will cycle
+through the possible modes. CGA1 is the mode which prevents snow.
+
+<p>
+
+Because of all the waiting around to put individual pieces of
+information into the screen memory, the Clunker CGA1 mode
+runs slower than the other modes, so you shouldn't use it unless you
+have to. If you simply want to slow the program down, you can always
+do that by pressing the <b>,</b> (lowercase <b>&lt;</b>) key. Another unattractive
+feature of CGA1 mode is that you will see the screen being "painted"
+cell by cell from top to bottom. In the higher modes, a whole new
+screen's worth of information is displayed at once, so that all the
+cells seem to be updated simultaneously without much flicker at all.
+
+<p>
+
+The Clone (CGA2) mode is the mode you will be
+using if you have a fairly recent color machine that lacks the
+higher-end EGA or VGA capability.  (If you have a recent monochrome
+machine it is probably Mono, although it is possible that you have a
+color card driving a monochrome monitor, in which case your machine
+will behave like a Clunker or a Clone.) What characterizes the Clone
+cards is that they have enough screen memory to store four text
+screens at once.  These virtual screens are called "pages".  Our
+programs use two pages.  At any given time, one page is being
+displayed, and the next screen is being gotten ready on the other
+page.  When the new page is ready, a single command tells the screen
+controller to show the new page.  Next the original page is used to
+store the update of the new page, and when it's all set we put the
+original page back on screen.  This technique of rapid computer
+animation is called "paging".
+
+<p>
+
+The image on your computer screen is made up of horizontal "scan
+lines". EGA and VGA monitors have their scanlines more
+tightly packed together, so there are more of them than on the older
+mono and CGA monitors. While a normal text character is 8
+scanlines high on a CGA monitor, it holds 13 scanlines on EGA and VGA
+monitors. This is why EGA and VGA are more desirable for intensive
+word processing: the characters have more detail and are easier to
+look at.
+
+<p>
+
+Normally one thinks only in terms of a computer's hardware and
+software, the hardware being the machine, and the software being the
+disks.  There is also something called "firmware".  Firmware is
+software which is printed on a small ROM (read-only memory) chip
+inside your computer.  The Apple® Macintosh® has a large amount of
+firmware; IBM clones have a bit less.  Whereas the Apple firmware is
+kept rather secret, most IBM firmware is pretty well known in the
+industry, and many companies make it.  One of the best known firmware
+companies is Phoenix.  Most IBM clones have a firmware "BIOS chip"
+from Phoenix.  This chip has a number of small programs on it, and it
+also has specifications for what text characters look like, viewed as
+scanline patterns of pixels.  In particular, the BIOS chip has two
+"character sets"' one set consisting of 8-line-high characters, for
+use on CGA monitors, and another set consisting of more detailed
+13-line-high characters for use on EGA and VGA monitors.  Even if you
+are in EGA or VGA mode, it is possible to ask the machine to use the
+old 8-line-high character set.  The result of doing this is that the
+characters look smaller than before (8/13ths as high).
+
+<p>
+
+When my RC programs run in CGA modes, they have 25 rows of cells.
+When I am in EGA or VGA
+mode, I download the 8-line-high character set, which has the effect
+of making my textlines narrower.  On an EGA monitor there is room for
+43 lines of these narrower cells, and on a VGA monitor there is room
+for 50 lines, for a VGA monitor is in fact a bit taller and more
+squarish than an EGA monitor.  If you run EGA mode on a VGA system you
+will see an unused black space at the bottom of the screen.  If you
+run VGA mode on an EGA system you will actually be computing the
+colors of 7 lines of cells which do not show, and your program will
+run a bit more slowly due to this "wasted" computation.  On an EGA
+or VGA system you can also select the modes CGA1 and CGA2.  There is
+no real reason to use CGA1 unless you have to; CGA1 is slow and it
+flickers.  But if you crave insanely rapid program execution, a good
+way to get it is to run CGA2 mode on an EGA or VGA.  This mode runs
+faster simply because fewer cells are being used, so less computation
+is taking place.
+
+<h2><a name="t2">Character Selection</a></h2>
+
+In their wisdom, the original designers equipped their computers with
+256 different text characters.  Why 256?  Because 256 is two to the
+eighth power.  The standard unit of information in IBMs and clones is
+the byte, which consists of eight bits, each of which can be zero or
+one.  If I am writing down a byte, I have to make 8 choices between 0
+and 1, which means that there are 
+2×2×2×2×2×2×2×2 or 2<sup>8</sup>
+ways I can do it.  The correspondence between individual characters
+and the 256 numbers from 0 to 255 is determined by something called
+"ASCII code," where ASCII stands for "American
+Standard Code for Information Interchange," not that anyone ever
+thinks about that.  Instead you just say "askey".
+
+<p>
+
+To see most of the ASCII characters, try running the rule ASCII.  You
+can get to this rule by typing RC at the DOS prompt, and then pressing
+<b>g</b> four times, or <b>G</b> once.  If you run ASCII enough times on
+a color machine, you will eventually see each of the possible 65,536
+(64K) combinations of ASCII character, foreground color and background
+color which textmode graphics can emit.
+
+<p>
+
+For most of our rules, we stick with one single ASCII character for
+each cell.  In a rule like Rug or Brain, you can in fact vary the
+standard ASCII character being used by repeatedly pressing the <b>c</b>
+key.  To get back to the "standard" starting character, you press
+<b>Shift-C</b>.  Alternatively you can go to the control panel, move
+the highlight to the "Current Display Character,"
+and press <b>Enter</b> to cycle through the possible
+characters.
+
+<p>
+<center>
+<img src="figures/fig4.gif" width=492 height=431 alt="">
+<br>
+<i>The RC Rug rule with character</i> "<b>R</b>".
+</center>
+<p>
+
+If you hold <b>c</b> down for a long time, the selected display character
+will scan down past our pre-stored lookup values and into the assembly
+language code of the program RC. This doesn't hurt anything--all
+you're doing is using successive bytes of the code as your standard
+character number. In a sense holding down <b>c</b> enables you to read
+code! Just remember that when you want to get back to the standard
+characters you press <b>Shift-C</b>.
+
+<p>
+
+When the computer shows an individual letter or character on the
+screen, it actually uses two bytes (sixteen bits) of information. One
+byte, the "ASCII byte" tells which character is being used. The other
+byte, the "attribute byte,"
+tells what color to make the character.
+Although this fact is not too well known, any CGA machine can
+in fact display 256 different "colors" of text. Look, for instance, at
+Rug, which is the rule initially shown by RC. If you press <b>v</b> a few
+times while Rug is running, you will see different colors predominate.
+
+<p>
+
+How do we get so many colors? When you put a character in a small
+rectangle of screen area, you divide the rectangle into foreground
+(inside the character) and background (outside the character). In
+normal printed text, the foreground is black and the background is
+white; on computer screens one usually has the foreground white and
+the background black. Fancy word processors often have the foregrounds
+white and the backgrounds blue. But any combination of foreground and
+background color is in fact possible, within the limits of which
+individual colors are displayable at all.
+
+<p>
+
+How many individual colors are there? Sixteen on CGA machines.
+An individual color is gotten by combining four on/off choices
+regarding Intensity, Red, Green, and Blue. Intensity + Red is Light
+Red; Red + Green is Yellow; Red + Green + Blue is Gray, and so on.
+Choosing one of sixteen colors for foreground and one of sixteen
+colors for background makes 256 color combinations, which is what one
+would after all expect, given that the text-color "attribute" is
+controlled by an eight-bit byte, for recall that 2<sup>8</sup> is 256.
+
+<p>
+
+Rug looks the most colorful when we use the
+character with ASCII code 176 (<tt><b>B0</b></tt> in hexadecimal). This character is
+actually a "checkerboard" of alternating foreground and background, so
+that the 256 different choices of attribute seem to produce a smooth
+palette of colors when this character is used.
+
+<p>
+
+If we aren't concerned with background color--as in Brain, for
+instance, where only a few color states are used--we usually use the
+ASCII character 219 (<tt><b>DB</b></tt> in hex), which is simply a solid block
+of foreground.
+
+<p>
+<center>
+<img src="figures/fig5.gif" width=469 height=360 alt="">
+<br>
+<i>The RC Rug rule run with character hex <tt><b>DC</b></tt>.</i>
+</center>
+<p>
+
+Another trick involving ASCII and attribute bytes involves using the
+ASCII character with code 220 (hex <tt><b>DC</b></tt>).  This is a half-block.
+The lower half of this character is all foreground, and the upper half
+is all background.  If you press the <b>d</b> key when in color mode,
+the RC rules (other than ASCII) will toggle back and forth between
+using a full size character and the "half-size" character with code
+220.  I have adjusted my programs so that pressing <b>d</b> changes not
+only the character being used, but also the details of the screen
+updating procedure.
+
+<p>
+
+In effect, the <b>d</b> key toggles between "double"
+and "single" modes.  A rule like Brain or Life will seem
+to have twice as many rows of cells when in double mode.  Using the
+<b>d</b> key allows you to further adjust the mode control which is
+accomplished with the <b>m</b> key.  In particular, as the patterns
+tend to look nicer when the individual cells are roughly square, you
+may want to usually use double mode when you are in CGA video mode,
+and usually use single mode when you are in EGA or VGA video mode.  Of
+course using double mode in VGA mode is also interesting, as it puts
+so much information (100 rows of cells!) on the screen.
+
+<p>
+
+Note however that the rule Rug will actually behave
+differently in double mode--this is because in single mode, this
+rule's cells cycle through 256 states (eight bits worth), and in
+double mode the cells only have 16 states (four bits worth). As
+mentioned, the ASCII rule actually uses 64K states
+(sixteen bits worth), and here the <b>d</b> key is disabled.
+
+<p>
+
+If you go into double mode
+and then use <b>c</b> to change the character
+away from the half-block, you will get images which are a bit hard to
+decipher. This is because a cell moving North goes from foreground to
+background before moving up into the next square.
+
+<p>
+
+The RC rules can also run in what I call <em>bleach
+mode</em>.
+Pressing
+<b>b</b> toggles in and out of bleach mode without destroying the
+current image.  A Mono will automatically start up in bleach mode.  In
+color modes we usually use the same ASCII character for each cell and
+show the different cell states by using different colors.  In bleach
+modes, we use the same color for each cell (bright) and show the
+different cell states by using different ASCII characters.
+
+<p>
+
+Which character do I use for which color?  There are various ways to
+do it.  In Brain I use a solid <tt><b>DB</b></tt> for the firing state, a checkered
+<tt><b>B0</b></tt> for the refractory state, and a blank for the zero state.  To
+represent Rug's 256 states I use a sixteenfold repeated wave of
+characters ranging from dark to light to dark.
+
+<p>
+
+When you are in bleach mode, pressing <b>c</b> will select different
+bleachtables.
+About 7 of them are prestored; and after you run
+through them you will be using the bytes of successive sections of the
+RC code as your bleachtable.  Some of these look neat.  Press
+<b>Shift-C</b> to go back to your starting bleachtable, and if it's
+not the right one press <b>c</b> once again.
+
+<p>
+
+You can toggle in and out of bleach mode on a Mono, but when using any
+rules but ASCII, the non-bleach mode looks terrible.
+
+<p>
+
+If you want to print
+one of your screens on a printer, you will want
+to first get the screen into bleach mode. Be aware that
+the standard bleaching of Rug, although of maximal visual
+attractiveness, includes a character which printers will show as an
+asterisk. You can press <b>c</b> for different bleachtables. The very
+simplest ones tend to be the ones that look best in print.
+
+<p>
+
+I might mention here that one of my favorite alternate bleach modes is
+based on four characters whose ASCII names are <tt><b>DD</b></tt>, <tt><b>DC</b></tt>,
+<tt><b>DE</b></tt>, and <tt><b>DF</b></tt>.  They are, respectively, a left half cell, a
+lower half cell, a right half cell and an upper half cell.  In a
+symmetric Rug pattern these characters give the effect of Tibetan
+spirals coming out of the center.  I think of <tt><b>DD</b></tt>, <tt><b>DC</b></tt>,
+<tt><b>DE</b></tt>, and <tt><b>DF</b></tt> as four cool black guys, hiphop rappers like
+Run-DMC.
+
+<h2><a name="2-RC-key">The Keyboard Controls</a></h2>
+
+<blockquote>
+TO START, ENTER "<tt>rc</tt>"
+<p>
+TO QUIT PRESS <b>q</b>
+<p>
+IF IT LOOKS BAD, PRESS <b>m</b> UNTIL IT LOOKS BETTER!
+</blockquote>
+
+<p>
+
+While an RC cellular automaton is running, the keyboard acts as a
+control panel. The screen will not echo the characters that you press,
+but it will react to many of them. Not every key does something.
+Pressing a non-functional key will not "hurt" or affect the program in
+any way. You can hold a key down to execute many repetitions of an
+action.
+
+<p>
+
+Be aware that the program is case-sensitive, and that most functional
+keys are lower-case.  If your <b>Caps Lock</b> or <b>Shift Lock</b> key
+happens to be on, most keypresses will be ignored.  If your <b>Num
+Lock</b> key is on, then your arrow keys will not work--unless you have
+an extended keyboard with a separate arrow keypad.
+
+<p>
+<blockquote>
+MAKE SURE THAT YOUR <b>Caps Lock</b> IS NOT ON!
+<p>
+MAKE SURE THAT YOUR <b>Num Lock</b> IS NOT ON EITHER!
+</blockquote>
+
+<p>
+
+Here is an alphabetical list of the control keys.
+
+<p>
+
+The controls described as "Toggle" turn some feature on and off. The
+second press of a Toggle key "undoes" the first press. Controls
+described as "Cycle" repeatedly cycle through some small range of
+possibilities.
+
+<p>
+
+<dl compact>
+
+<dt><b>a</b> <dd><em>ControlPanel</em>
+(Toggle). ControlPanel
+replaces the cellular automaton display by a control
+panel
+on which
+you can see the relevant switch settings. The control panel also
+implements some special functions such as loading, editing, and saving
+rule tables. Please refer to the
+<a href="#2-RC-control">detailed description</a> of the control panel
+for more information.
+
+<p>
+
+<dt><b>b</b><dd><em>Bleach</em>
+(Toggle). Bleach
+replaces the colored cells with monochrome characters drawn from a
+predefined "palette" called a bleachtable.
+When you are in bleach
+mode,
+pressing <b>c</b> will change the bleachtable. Bleach works for every
+rule, including ASCII. In ASCII the bleach value is calculated from
+the cell's color alone.
+
+<p>
+
+<dt><b>c</b><dd><em>Character Change</em>.
+In color mode, pressing
+<b>c</b> changes the standard "fill character"
+which the rule colors
+in.  Pressing <b>c</b> repeatedly selects from among some fourteen
+different fill characters, then moves on through the alphabet, and
+then goes into random-seeming characters (which are actually
+successive bytes of our machine code).  Shift-C brings the fill
+character back to the starting one.  Pressing <b>c</b> in color double
+mode works, but produces somewhat confusing results, because the
+double display is based on the assumption that the character is
+hexadecimal <b>DC</b>.  Pressing <b>c</b> in ASCII mode (where both
+color and ASCII character vary from cell to cell) sets each cell's
+ASCII byte to the same value, but this uniformity quickly fades away.
+In Bleach mode, <b>c</b> selects different "monochrome palettes"
+which are called bleachtables.  Some seven standard bleachtables are
+stored, but eventually you will be getting ones that are random in
+appearance.  (What happens is that the address where the program looks
+for the bleachtable characters moves down in our machine code.  As
+these bytes are simply read and not written to by the bleaching
+process, this does not harm the code, and may even look interesting.)
+Pressing <b>Shift-C</b> will take you back to the standard Rug bleachtable,
+pressing <b>c</b> once more will return you to the standard Brain,
+Random, and Vote bleachtable.  Bleaching is nondestructive and does
+not hurt the screen pattern.
+
+<p>
+
+<dt><b>d</b><dd><em>Double</em> (Toggle). 
+This splits
+the cells in two, showing twice as many lines.
+The Double key is
+disabled while in bleach mode.  Double is most effective in Brain,
+Random, and Vote. In Rug, Double has the effect of limiting the cells
+to 16 states instead of 256 states, which makes a rule that acts
+differently in interesting ways. We distinguish between the rule
+SingleRug and the rule DoubleRug.
+In the rule ASCII, Double
+temporarily resets all the characters to hex <tt><b>DC</b></tt>, but does not really
+double the number of lines.
+
+<p>
+
+<dt><b>e</b><dd><em>Echo</em> (Toggle).
+This key takes
+effect only on two-state rules. Our two-state rules are Life, all the
+Vote rules, and the Rainbow NLUKY rules that have N=0.
+These two-state rules are made more colorful by Echo,
+which uses four
+colors so as to code each cell's past state as well as its present
+state. In Echo, a cell which just turned on is white, a cell which
+just turned off is red, a cell which has been on for more than one
+generation is purple, and a cell which has been off for more than one
+generation is black. In bleached Echo, these colors are represented
+by, respectively, a solid cell, a checkered cell, a small cell, and a
+blank cell.
+
+<p>
+
+<dt><b>f</b><dd><em>Frame</em> (Cycle).
+This affects the
+screen edges. There are three frame modes:
+Eat, Zero, and On. When the
+frame is in Eat mode, it is transparent to the CA. If Wrap is
+on, then the CA flows through the frame. If Wrap is off and frame is
+in Eat, the frame simply holds the last active cell values in screen
+and buffer. When frame is in Zero mode it is black and Wrap is
+disabled. When frame is in On mode it is white and the Wrap is
+disabled. Pressing <b>f</b> repeatedly cycles through the three options.
+Entering Eat mode turns on Wrap so that the On cells can be cleared
+away by the rule's action. To freeze the frame in a random state, make
+sure your frame is in Eat, and that the Wrap is on, and then turn off
+the Wrap. If this is done right, you can carry a colorful frame from,
+say, Rug into the running of Brain or of Random.
+
+<p>
+
+<dt><b>g</b><dd><em>Go to New Style</em> (Cycle).
+RC runs five
+different styles of rules: 0) Rug, 1) Brain,
+2)Random, 3)Vote, and 4) ASCII.  Pressing <b>g</b> cycles through the
+rules in ascending order.  Pressing <b>Shift-G</b>
+cycles through the
+rules in descending order.  The changes are nondestructive, and what
+one screen made is fed to the next screen (with the exception of
+Brain, where we randomize the screen on entry).  See
+<a href="#2-RC-rules"><cite>RC Rulestyles</cite></a> for
+brief descriptions of the rules, and
+the <a href="chap4.html"><cite>Theory</cite></a> chapter for longer
+descriptions.  In general, it is better to change them with the
+<b>g</b> key rather than changing rulestyles with the control panel.
+
+<p> 
+
+<dt><b>h</b><dd><em>Help Bar</em> (Toggle).
+Displays a
+help bar.
+When Help is turned off, the space where it was is eaten
+into by the rule. A rule runs slightly faster when the Help bar is on
+because then there are fewer cells to update. Once you are used to the
+controls, you may want to leave Help off for purer pictures.
+
+<p>
+
+<dt><b>j</b><dd><em>Jog</em> (Toggle).
+In Jog mode,
+the
+screen info is pulled one cell to the left with each update. This is
+good for tracking right-moving haulers in Brain, tracking shock fronts
+in Random, creating a wake in Life, and for simulating turbulent flow
+in Rug and ASCII.
+
+<p>
+
+<dt><b>k</b><dd><em>NLUKY parameter</em>.
+The Brain
+rulestyle is actually a whole family of the rules I call NLUKY in
+Chapter 4.  In Brain, the <b>n</b>, <b>l</b>, <b>u</b>, <b>k</b>, and
+<b>y</b> keys control parameters called N, L, U, K, and Y.  Brain is
+actually NLUKY 12232, Life is NLUKY 03323, and the interesting new
+rule Faders is NLUKY 72222.  <b>n</b>, <b>l</b>, <b>u</b>, <b>k</b>, and
+<b>y</b> start out at the Brain settings of 1, 2, 2, 3, and 2
+respectively.  Pressing <b>n</b>, <b>u</b>, or <b>y</b> increments the
+corresponding value.  Pressing <b>l</b> or <b>k</b> decrements the
+corresponding value.  <b>n</b> wraps around at 7, <b>u</b> and <b>y</b>
+wrap around at 8, <b>l</b> and <b>k</b> wrap around at 0.
+<b>Shift-N</b>, <b>Shift-L</b>, <b>Shift-U</b>, <b>Shift-K</b>, and
+<b>Shift-Y</b> restore these parameters to their starting Brain values.
+The current values of these parameters can also be set directly on the
+control panel.
+
+<p>
+
+<dt><b>l</b><dd><em>NLUKY parameter</em> for Brain Rulestyle. See
+key <b>k</b>.
+
+<p>
+
+Laplace (Toggle) for Rug and ASCII rulestyles. In Rug and ASCII
+rulestyles, <b>l</b> toggles between two sorts of cell neighborhoods. When
+Rug comes up, the rule is that each cell takes on the average color
+value of its eight nearest neighbors. If you press <b>l</b> and go to
+"Laplace" mode, then each cell takes on the average color of its four
+nearest neighbors. In Laplace mode
+Rug runs faster, but will produce
+patterns that are not as smooth. The ASCII rule-style starts up in
+Laplace mode (four neighbors instead of eight). Because it has more
+states than Rug, ASCII tends to look smooth even in Laplace mode.
+
+<p>
+
+<dt><b>m</b><dd><em>Mode</em> (Cycle).
+The program has four
+modes:
+Clunker,
+Clone,
+EGA,
+and VGA. 
+Pressing <b>m</b> repeatedly cycles through the four modes. A
+detect routine tries to automatically set the program to the
+appropriate mode. But if you have a lower grade monitor than your
+graphics card can support (CGA monitor plus EGA card or EGA monitor
+plus VGA card, for instance), then the detect routine will set the
+wrong mode. If your machine shows snow, you should use Clunker mode.
+Mode selection is not possible on Mono machines with monochrome card.
+If you are unsure what mode you are in, check the control panel. Keep
+in mind that Clunker is CGA1
+and Clone is CGA2.
+Don't be afraid to try
+cycling through the modes now and then just to see how the rule looks
+in other sizes. If you have the help bar on, and you enter EGA mode on
+a CGA machine, or VGA mode on a non-VGA machine, you will see a
+messed-up help bar in the wrong place.
+
+<p>
+
+<dt><b>n</b><dd><em>New rule</em>
+This key does
+different things in different rulestyles.  In Rug and in ASCII,
+<b>n</b> changes the Increment, increasing or decreasing it by one for
+each keypress, depending on whether IncrementDirection is set to plus
+or minus.  Pressing <b>Shift-N</b>
+restores Increment to 1 and reverses
+the value of IncrementDirection.  Increment always starts out in 1 in
+Rug, so if I press, say, <b>n n n N n n n N n</b>, the successive
+presses will set Increment to 2 3 4 1 0 -1 -2 1 2.  Increment starts
+out as 0 in ASCII.  Increment can also be set in the control panel.
+For the meaning of "Increment" see the description of the rules in
+2.5.  In Brain, <b>n</b> acts as an NLUKY parameter, increasing the
+number of visible states.  <b>Shift-N</b> resets <b>n</b> to 1.  In
+Random, <b>n</b> loads a new random semitotalistic rule.  <b>Shift-N</b>
+does nothing.  In Vote, <b>n</b> loads a new random totalistic rule.
+<b>Shift-N</b> does nothing.
+
+<p>
+
+<dt><b>o</b><dd><em>NoFlicker</em> (Toggle).
+In Vote
+and in Random, pressing <b>o</b> changes the RuleTable to make sure that
+any state 0 cell with EightSum 0 stays in state 0. This has the effect
+of killing flicker, though of course it alters the rule and may make
+it less interesting.
+
+<p>
+
+<dt><b>p</b><dd><em>Pose</em>.
+This exits the program
+without erasing the screen. You can use this to freeze an image and
+let the processor rest, or you can try to do a screen dump of a posed
+screen. Note however that in order for the screen to
+print
+meaningfully, you must be in bleach mode, and you must have selected a
+bleachtable all of whose characters can be printed by your printer.
+Bleachtables with only a few characters work best. It is usually
+easier to print a screen by using the Image selection on the control
+panel.
+
+<p>
+
+<dt><b>q</b><dd><em>Quit</em>.
+This exits the program and
+resets the screen to ordinary textmode.
+
+<p>
+
+<dt><b>r</b><dd><em>Randomize</em>.
+This throws random
+cells on the screen. <b>Shift-R</b> toggles the ScreenEatZeroRandomize switch
+so that whenever the mode or rule is changed the screen is
+automatically rerandomized. This switch is normally in 0 (Eat) so that
+screens are conserved from change to change.
+
+<p>
+
+<dt><b>s</b><dd><em>Stop</em> (Toggle).
+This makes
+the rule pause its running. Some keypresses will have visible effect
+in Stop mode, but most won't. To start the rule running again, press
+<b>s</b> or press <b>Enter</b>.
+
+<p>
+
+<dt><b>u</b><dd>Sets a parameter in
+Brain. See key <b>k</b>.
+
+<p>
+
+<dt><b>v</b><dd><em>VaryRule</em> (Cycle).
+In Rug, each
+press of <b>v</b> halves the number of color states that the cells can be
+in. If I keep pressing <b>v</b>, the number of states wraps back up to 256
+after 0. <b>Shift-V</b> restores the state number to 256. The <b>v</b> key works
+by changing the value of a number called the RugMask. Each
+cell's color is ANDed with the RugMask. If you are in Clunker or Clone
+mode (CGA), then SingleRug will be considerably livelier if you press
+<b>v</b> two times to work with 64 instead of 256 states.
+
+<p>
+
+<b>v</b> plays a similar function in the ASCII rule.  The cells of
+the ASCII rule have 64K possible states.  Each press of the <b>v</b>
+key halves the number of states until the value of 256 is reached, at
+which time the number of states is wrapped back up to 64K.  As in Rug,
+the <b>v</b> key works by changing the value of the RugMask which is
+ANDed with the cell's states each update.  In Brain, pressing <b>v</b>
+loads the Life rule, and pressing <b>Shift-V</b>
+loads the Brain rule.
+
+<p>
+
+In Random, pressing <b>v</b> increases the
+Sparseness parameter by increments of
+20, wrapping to 0 at 240.  Pressing Shift-V restores the sparseness
+parameter to its initial value of 80.
+
+<p>
+
+In Vote, <b>v</b> does nothing.
+
+<p>
+
+<dt><b>w</b><dd><em>Wrap</em> (Toggle).
+In Wrap mode the
+cells act as if the screen's left edge touches its right, and its top
+touches its bottom. When you turn on Wrap, the frame is set to passive
+Eat mode.
+When you turn off Wrap, whatever cell values were present at
+the screen boundaries remain frozen there. Many of these frozen cells
+will flicker between two values; this is because our program really
+switches between two screens, and when you freeze the cells by turning
+off Wrap, you actually freeze two successive values.
+
+<p>
+
+<dt><b>x</b><dd><em>XMark</em>.
+In Insert mode, pressing
+<b>x</b> marks the spot where the cursor is. Pressing
+<b>Shift-X</b> puts the
+cursor in PenDown mode so that it leaves a trail.
+
+<p>
+
+<dt><b>y</b><dd>Sets a parameter in Brain. See key <b>k</b>.
+
+<p>
+
+<dt><b>z</b><dd><em>ZeroScreen</em>.
+Blanks the
+screen. <b>Shift-Z</b>
+is a toggle that sets the ScreenEatZeroRandomize
+switch to zero-out the screen with every change of rule or mode.
+
+<p>
+
+<dt><b>Space</b><dd><em>SingleStep</em>.
+When you
+press the space bar, the updating stops. Each successive press of the
+spacebar updates the program one step. This is useful for watching a
+process in detail. Pressing <b>Enter</b> or <b>s</b> puts the rule back into
+continuous run mode.
+
+<p>
+
+<dt><b>Insert</b><dd><em>Draw</em> (Toggle).
+Stops the
+program and turns on a cursor for screen drawing. In Insert mode,
+pressing 0 sets cursor to black, 1 sets it to white, 2 sets it to red.
+
+<p>
+
+<dt><b>0</b><dd><em>ZeroBlock</em> (Toggle).
+ZeroBlock sets a block of cells to permanent blank (zero) color. In
+Brain, Random, and
+Vote, these count as "dead" cells. In
+Rug and ASCII, they count as
+state 0. Not all bleachtables will show these cells as blank.
+
+<p>
+
+<dt><b>1</b><dd><em>OneBlock</em> (Toggle).
+OneBlock sets a block of cells to permanent solid bright color. In
+Brain, Random, and Vote, these
+cells count as "firing" cells (instead of 1 they actually have value
+15). In Rug they count as state 255, in ASCII as state <tt><b>FFDB</b></tt>. Not all
+the bleachtables will show these cells as solid.
+
+<p>
+
+<dt><b>2</b><dd><em>FlickerBlock</em>
+(Toggle). FlickerBlock sets a block of cells to flickering between
+being a ZeroBlock and a OneBlock. FlickerBlock is irritating to look
+at, but it does interesting things in some rules.
+
+<p>
+
+<dt><b>3</b><dd><em>RandomBlock</em>
+(Toggle). RandomBlock fills a block of cells with new random colors at
+each update. The colors used in the RandomBlock depend on the rule.
+Rug and Random use randomly colored cells, Brain and Vote use the
+solid color 15, and ASCII uses random colors and random letters.
+
+<p>
+
+<dt><b>Arrows, Home, PgUp, End, PgDn</b><dd><em>MoveCursor</em>.
+These eight keys move the cursor around on the screen.  In Insert mode
+there is a visible cursor, and in EditBlocks mode, the cursor is
+invisibly attached to a corner of the block being moved or resized.
+
+<p>
+
+<dt><b>Shift-0, Shift-1, Shift-2, Shift-3</b><dd><em>EditBlock</em>.
+Note that for these commands you must use the number keys that are the
+main "typewriter" part of the keyboard.  The number keys on the
+separate number keypad will not work with these commands.
+Pressing shift plus a number key puts you into an EditBlock mode in
+which you can move and resize the block whose number you chose.
+Editing a block can have two phases: MoveBlock and
+ReSizeBlock.
+
+<p>
+
+As soon as you press Shift plus the number key, you are in the
+MoveBlock mode. An invisible cursor moves to the upper lefthand corner
+of the block in question, and the block is "stapled" to the cursor.
+Moving the cursor with the arrow keys moves the whole block with it.
+Going off the left or right edge will wrap you to the screen's other
+side. If you try to go off the top or the bottom of the screen, the
+block will "boing" and bounce back. You end the MoveBlock phase by
+pressing <b>Enter</b>.
+
+<p>
+
+Then you are in ReSizeBlock mode. The block's upper
+left corner position has now been fixed by the MoveBlock
+mode. The cursor jumps to the block's lower righthand corner. The
+block's lower right corner is effectively "stapled" to the cursor.
+Moving the cursor around will change the block's size. It is not
+possible to drag the block's lower right corner to a position to the
+left or above the position of the fixed upper left corner. Nothing bad
+happens if you try, it's just that the "staple" comes temporarily
+undone. When you're through resizing the block, press <b>Enter</b> again
+to terminate the ReSizeBlock mode. Note that the smallest size you can
+make a block is 1 cell. If you don't want to see the block at all, use
+the simple block toggle.
+
+<p>
+
+<dt><b>Comma</b><dd><em>Slower</em>.
+Pressing the comma key
+slows the program execution down. A range of nine speeds is possible.
+<b>Shift-comma</b> is "&lt;" which means less, as in less fast.  Pressing
+<b>Shift-comma</b> sets execution to the slowest speed.
+
+<p>
+
+<dt><b>Period</b><dd><em>Faster</em>.
+Pressing the period key
+speeds program execution up. A range of nine speeds is possible.
+<b>Shift-period</b> is "&gt;" which means more, as in more rapid. Pressing
+<b>Shift-period</b> sets execution to the fastest speed.
+
+<p>
+
+<dt><b>Dash and Underscore</b><dd>The <b>-</b> and <b>_</b> keys
+cause RC to wait, respectively, one or ten seconds before interpreting
+the next keypress.  These keys are for use in creating demos for RC by
+redirecting input from a text file.  See <b>rcdemo.doc</b> and
+<b>rcdemo.bat</b>.  A demo file must end with <b>q</b>.
+
+</dl>
+
+<h2><a name="2-RC-control">The Control Panel</a></h2>
+
+The name "Control Panel" is a bit misleading.  Control Panel is
+actually a feature that was added onto RC to function as: a) an
+Indicator Panel to show the current keyboard settings, and b) a
+Ruletable Editor to edit, save, and load ruletables.  If you use the
+control panel to set keyboard parameters, you will sometimes find that
+these changes do not "take" until you have left and re-entered the
+control panel.  In general, you will do better to change keyboard
+parameters while watching the display.
+
+<p>
+
+If you press <b>a</b> you will see the control panel. To get back to the RC
+display press <b>a</b> or <b>ESC</b>.
+
+<h3>The Switchboxes</h3>
+
+You will notice that the control panel has various little blue switch
+boxes and one yellow switchbox. The yellow box is the active
+switchbox. Pressing the arrow keys will move the yellow highlight
+around. When the highlight is at a switchbox that you want to change,
+hit <b>Enter</b>. If the box controls a toggle or a cycle of only a few
+possible settings, pressing <b>Enter</b> repeatedly will cycle through
+the possible values. If the box controls a numerical value, pressing
+<b>Enter</b> will call up a box in which you can enter the new value that
+you want. If you decide not to change the value, the <b>Esc</b> key will get
+you out of any Control Panel dialogue which you wish to exit.
+
+<h3>The Menu Bar</h3>
+
+The menu bar at the top of the Control Panel lists four functions:
+Configuration, Ruletable,
+Image, and Path. Pressing <b>c</b>, <b>r</b>, <b>i</b>, and <b>p</b> will
+pull down a menu relating to the respective function. Once one of the
+pulldown menus appears, a choice from it can be made by pressing the
+first letter of the choice desired, or by moving the highlight to the
+choice with the arrow keys and pressing <b>Enter</b>.
+
+<h3>The Configuration Menu</h3>
+
+A "configuration" of RC consists of the whole pattern of switch
+settings: the rulestyle, the video mode, the display character, the
+block settings, etc.  The Configuration menu allows you to set a new
+starting configuration.  It is saved as a small file called
+<b>RC.CFG</b>.  If you get stuck with a starting configuration
+you
+don't like, delete <b>RC.CFG</b>, and the program will revert to
+its original Rugstyle startup.  To set a new starting configuration,
+go to the control panel and press <b>c</b> to bring down the
+Configuration menu, and then press <b>N</b> for New Standard.
+
+<h3>The Ruletable Menu</h3>
+
+ The "Ruletable" selection is valid in the three rulestyles Brain,
+Random, and Vote. In each of these rules, the cells can have any state
+between 0 and 15. The odd states are called "firing" states. A cell's
+new state is determined on the basis of the cell's present state and
+on the sum of the cell's firing neighbors. This means that the cell
+rule is specified by a lookup table with sixteen rows (one row for
+each cellstate between 0 and 15) and nine columns (one column for each
+firing sum between 0 and 8). A Ruletable consists, then, of 
+16×9=144 four-bit numbers between 0 and 15, which is 576 bits of
+information.  For ease of computation, the Ruletables are actually
+stored as 256 bytes of information.  A stored
+Ruletable appears in your directory as a file
+with the <b>.RUL</b> extension.
+
+<p>
+
+The Ruletable menu offers the options of Load, Save, ReMake, Zero, and
+Edit.
+
+<p>
+
+The Load
+option shows a list of the available <b>.RUL</b> files in the
+current Path directory. To choose one, use the arrow keys to move the
+highlight to the rule you want and press <b>Enter</b>. Then you can
+either press <b>a</b> to see the rule running, or you can select the Edit
+option of the Ruletable menu to look at the rule.
+
+<p>
+
+The Save
+option creates a <b>.RUL</b> file storing the lookup
+table which is currently running.  You may create new Ruletables at
+random, by pressing <b>n</b> till you find an interesting CA, or you
+can create them by thinking about a rule and editing the ruletable to
+realize your idea.
+
+<p>
+
+The ReMake
+option is mainly for resetting to Brain if you happen to be
+in Brainstyle. Generally you would do better to go to the picture
+screen and press <b>g</b> and then <b>G</b> to simply go in and out of the
+rulestyle and initialize it that way. ReMake will also rerandomize the
+table in Random rulestyle and reset to Vote if in the Vote rulestyle.
+
+<p>
+
+The Zero
+option blanks out the Ruletable. This is convenient if you
+plan to create a new rule from scratch.
+
+<p>
+
+The Edit
+option shows the current Ruletable. Entries in the Ruletable
+are changed by using the arrow keys to move the cursor to the entry
+you wish to change, and then typing in the state number you wish to
+enter there. The Ruletable controls a semitotalistic cellular
+automaton as follows: a) each cell uses the row of the ruletable
+corresponding to its present state, b) each cell counts up the number
+of its neighbors that are in an odd numbered ("firing") state to
+arrive at an Eightsum,
+and c) the value of the Eightsum is used to
+pick the column of its row from which to draw the new state number.
+
+<p>
+
+Whenever you go back to the picture screen, whatever changes you made
+in the Ruletable will be operative. In designing a new
+rule you may want to go back and forth several times before finding
+the version you like. Once you have the version you like, use the
+Ruletable Save option to record it.
+
+<h3>The Image Menu</h3>
+
+The Image Menu has two options: send the present graphics screen to
+the printer,
+or store the present screen in an ASCII file. The program
+will terminate with a DOS error message if you try sending a screen to
+the printer when the printer is not turned on.
+
+<h3>The Path Menu</h3>
+
+The Path menu has two options: Drive change and Path change.  You
+might want to use this if you are creating a great many
+<b>.RUL</b> files or <b>.CFG</b> files, and want to store
+these files in a separate drive or directory.
+
+<h2><a name="2-RC-rules">RC Rulestyles</a></h2>
+
+Here are brief descriptions of the rulestyles of RC. More detailed
+discussions of these rules can be found in Chapter 4. Let's describe
+each of the rules in terms of what happens to a general cell called
+EveryCell.
+
+<h3><a name="t3">RUG</a></h3>
+
+Rug is actually two rules, SingleRug
+and DoubleRug, depending on
+whether Double mode is selected.  In SingleRug, EveryCell can have any
+state value between 0 and 255.  In DoubleRug, EveryCell can have any
+state value between 0 and 15.
+
+<p>
+
+To update itself in a Rug rule, EveryCell takes four steps: 1)
+EveryCell calculates the of its eight nearest neighbors'
+states (the FullEightSum will range between 0 and 8×255=2040 in
+SingleRug and between 0 and 120 in
+DoubleRug); 2) EveryCell calculates the
+AverageNeighborState by dividing the FullEightSum by eight and
+throwing out any remainder (this is done by shifting the binary
+expansion of FullEightSum three places to the right); 3) EveryCell
+computes its NewState by adding an Increment (usually the
+increment is 1) to the AverageNeighborState; 4) as a final step,
+EveryCell is masked by ANDing it with the RugMask bits.
+
+<p>
+
+If the <b>l</b> key has been pressed to go into "Laplace mode,"
+the
+EveryCells of Rug only look at four neighbors instead of eight
+neighbors, and the sum is divided by four instead of by eight.
+
+<p>
+
+SingleRug has beautiful colors. If you twiddle your
+monitor's brightness and contrast controls you can make the colors
+nicer. In color it's especially interesting to move the
+ZeroBlock
+around and watch the trails that it leaves. But
+SingleRug also looks very nice in the bleach mode.
+You notice different
+aspects of the pattern in bleach mode.
+
+<p>
+
+If you turn off all the blocks, turn off the Wrap, and zero the
+screen, then SingleRug will produce a pleasing
+mandala pattern on your screen.  On 25-line
+CGA monitors, this pattern will freeze up, but on bigger
+monitors the pattern will start churning.  In order to see it churn on
+CGA monitors, you can reduce the number of available states by
+pressing the <b>v</b> key twice.  Each press of the <b>v</b> key halves
+the number of states which SingleRug uses, so two <b>v</b> presses put
+it down to sixty-four states.  Put in terms of the RugMask, the
+RugMask is initially the binary number <tt><b>11111111</b></tt>, and every time
+you press <b>v</b>, one of the leading ones is changed to a zero.  If
+you tweak Rug patiently by turning the frame and Wrap on and off, you
+can also get CGA SingleRug to churn with the full 256 states.  Even on
+VGA, pressing <b>v</b> is sometimes nice because it changes the colors
+and makes the rule livelier.
+
+<p>
+
+Once you are able to have Rug generating a small
+active mandala in the center, you can grow the mandala a bit by
+tapping <b>w</b> on and off. When you turn Wrap on, the mandala egg grows
+towards the screen edges, and then when you turn Wrap off it stops
+growing. You can tease it out to near full-screen size. If you turn
+Wrap on for good, a small mandala will shrink away, but a big one can
+sometimes manage to keep going. But usually it's nicer to leave the
+Wrap off and let the mandala have a few layers of what you might call
+rind. The rind layers show very clearly in bleach mode.
+Some of the
+later bleachtables look really cool with the mandalas--check out de
+brothers <tt><b>DD</b></tt>, <tt><b>DC</b></tt>, <tt><b>DE</b></tt>, and <tt><b>DF</b></tt>.
+
+<p>
+
+Once you can grow a fullscreen mandala there are a couple of
+interesting things you can do with it. One is to ruin its symmetry by
+flicking one of the blocks on and off. No matter how small the block
+or which type, the merest touch of it in the mandala's interior will
+cause the symmetry to break into fullblown chaos. I call a mandala
+like this a <em>chaos egg</em>.
+So far as I can determine, once
+you've got a chaos egg running, it'll run forever without ever dying
+down. It's also possible to get fullscreen (Wrap on) chaos going,
+though unless you have a block on, it's likely to die down. Keep in
+mind that if you want things to seethe faster, you just need to touch
+<b>v</b> once or twice or use the control panel to put in an alternate
+RugMask.
+
+<p>
+
+Another fun thing to do with a mandala is to break its fourfold
+symmetry without introducing full chaos. The way to do this is to give
+it a taste of jog mode.
+Hit <b>j</b> and then hit it again to turn it off.
+Now let SingleRug settle back down and
+you'll see a bilaterally symmetric mandala,
+a semimandala. Once again,
+it's easier to see what's happening if you're in bleach
+mode.
+Turn on
+Wrap to grow the semimandala out towards the screen edges, getting rid
+of the rind layers. It doesn't grow all that fast. When the outermost
+rind of the semimandala hits the screen edge, stop the Wrap. Now (are
+you with me, folks?) a cool thing to do is to pick up your computer
+monitor and put it on its side. Make sure you're in bleach mode. What
+you see will be a weirdly evolving oval pattern with bilateral
+symmetry--a totally radical cyberpunk face! Maxine
+Headroom!
+
+<p>
+<center>
+<img src="figures/fig6.gif" width=375 height=477 alt="">
+<br>
+<i>Maxine Headroom by RC Rug.</i>
+</center>
+<p>
+
+Stare at
+her for awhile, and if you can get hold of an Electrohome® or a Barco
+computer-image projector, hie thee to a rockclub and put on a digital
+lightshow! <em>Yes!</em> When you get tired of the flowing cyber face, flick on
+one of the blocks for just a second. The symmetry will go and now that
+the monitor is on its side, you'll have one of the things I've been
+trying to build all along--A DIGITAL LAVA LAMP!!!
+But please be
+careful putting that monitor on its side, and don't leave it there too
+long.
+
+<p>
+
+DoubleRug tends to look too messy unless you start it
+from a noWrap screen that has been zeroed. But from a simple start it
+grows great carpet patterns. Note that it takes several minutes and
+thousands of program steps until the DoubleRug grows all the way in
+from a non-wrapping frame. Once it fills the screen, you can toy with
+it by pressing <b>f</b>, or by pressing <b>n</b> a few times, and then pressing
+Shift-N to get back to normal. You can grow its central area with a
+taste of Wrap, and you can cut its symmetry to twofold from fourfold
+with <b>j</b>. Imagine a department store that has RC running, with the
+machine hooked to a rug factory somewhere. When you find the pattern
+you like, you press the <b>p</b> key and the factory weaves you just
+that rug!  It could happen.  Why not?  After all, the first use of
+computer-like punchcards was actually in the tapestry-weaving Jacquard
+loom! Rug to computer, computer to rug: now it can
+come full circle.
+
+<p>
+
+To vary DoubleRug, you can press <b>n</b> to
+increase the increment. As an increment of 16 is effectively the same
+as an increment of 0 for a 16-state rule, you can see all the options
+pretty quickly. Each time the <b>n</b> key is pressed, the increment is
+increased by one. The oddest patterns happen if you press <b>n</b> 7 times,
+putting the increment up to 8. The screen segregates into dark regions
+that oscillate between color 0 (black) and color 8 (gray). The
+boundaries between the regions are twisting multicolored worms.
+
+<p>
+<center>
+<img src="figures/fig7.gif" width=475 height=362 alt="">
+<br>
+<i>Rugworms.</i>
+</center>
+<p>
+
+Remember that pressing Shift-N will restore the increment to 1, and
+that you can directly control the increment from the control panel. If
+you race up to increment 8 real fast you won't see the worms; you kind
+of have to ease up there.
+
+<h3><a name="t4">BRAIN (And LIFE)</a></h3>
+
+Brain is a three state rule: 0, 1, and 2. If you
+are in state 1 you go to state 2. If you are in state 2 you go to
+state 0. If you are in state 0 you count how many of your eight
+nearest neighbors are on. If exactly two of them are on, you turn on.
+
+<p>
+
+The Life rule has two states, 0 and 1. Count how many of your
+nearest eight neighbors are on. If three are on, then you turn on. If
+two are on, then you stay in your same state. If fewer than two or
+more than three neighbors are on, you turn off.
+
+<p>
+
+When you are running the RuleStyle Brain, you can switch to Life by
+pressing <b>v</b>.  In Life you can toggle a color "echo" on and off
+with the <b>e</b> key.  Pressing <b>Shift-V</b> gets you back to Brain.
+In Brain you can add extra echo states by pressing <b>n</b>.  Both
+rules look nice in Double mode;
+press <b>d</b> to try it.
+
+<p>
+
+Brain looks interesting in jog mode.
+Press <b>j</b>.  If and when
+things die, press <b>r</b> to reseed.  Eventually you will be tracking
+an east-moving hauler.
+Once you have a hauler it is fun to reach in
+and doctor it.  This is done by pressing the Insert key and then
+touching an arrow key.  You will see a white cursor.  Move it up to
+touch the tail of one of the gliders and press <b>x</b> to insert a
+white (firing) cell.  When you press Insert again, the program starts
+up again, and you will see the effect of the cell you put in.  If you
+go back to Insert mode and press Shift-X, then you will be in "pen
+down" mode and your cursor will leave a trail of cells.  If you press
+<b>0</b> the cursor will go to black, and if you press <b>2</b> it will
+go to red.
+
+<p>
+
+The Rulestyle Brain is actually a whole spectrum of
+<a href="chap4.html#4-TH-semit">"NLUKY"
+rules</a>.  Two of
+the more interesting rules are RainZha which has NLUKY values of 72322
+and Faders which has NLUKY values of 72222.  You can set these NLUKY
+values on the control panel or you can doctor them interactively by
+pressing the keys <b>n</b>, <b>l</b>, <b>u</b>, <b>k</b> and <b>y</b>.
+When the rule is running Brain, the NLUKY values
+are set at 12232, so six presses of the <b>n</b> key and one press of
+the <b>k</b> key will turn it into Faders.  If you
+follow that with a press of the <b>u</b> key you get
+RainZha.
+
+<p>
+<center>
+<img src="figures/fig8.gif" width=480 height=376 alt="">
+<br>
+</center>
+<blockquote>
+<i>The RC Faders rule being run with
+wrap off and frame on.  This rule is NLUKY 72222.  In Brain you can
+get it by using the NLUKY keys; or by pressing <b>a</b>, <b>r</b>,
+<b>l</b>, and selecting Faders.</i>
+</blockquote>
+<p>
+
+<h3><a name="t5">RANDOM</a></h3>
+
+A CA rule is called semitotalistic if a cell's new value depends only
+on a) the cell's present state (up to 4 bits of state allowed here)
+and b) the count of how many of the eight nearest neighbors have their
+low bit turned on.  Life and Brain are special examples of
+semitotalistic rules.
+The Random rulestyle shows various
+semitotalistic rules that are specified by filling in a lookup table.
+Every time you press <b>n</b>, a new lookup table is chosen.  It turns
+out that rules with plenty of zeroes in their lookup tables look
+better.  The percent of zeroes is determined by a
+Sparseness
+parameter
+that varies from 0 to 255.  If Sparseness is 0, then no entries are
+forced to be zero.  If Sparseness is 128 then about half the lookup
+table values are forced to be zero.  Sparseness can be set directly on
+the control panel or indirectly by pressing the <b>v</b> key.
+Sparseness starts at 80, and each press of <b>v</b> increments it by
+20.  If you press <b>V</b> (<b>Shift-V</b>) the Sparseness is reset to 0.
+
+<h3><a name="t6">VOTE</a></h3>
+
+Vote is a two state rule. Look at your nine nearest
+neighbors (including yourself). Count how many are on. If 0, 1, 2, 3,
+or 5 neighbors are on then you go off. If 4, 6, 7, 8, or 9 neighbors
+are on then you go on. Thus the election lookup table is 0 0 0 0 1 0 1
+1 1 1. If you press <b>e</b>, then this rule is colored so that cells that
+just changed their values get a different color. This is the same as
+Life's Echo mode.
+
+<p>
+
+Since Vote's "lookup table" is only ten binary digits, rules similar
+to Vote can be defined by other choices of ten digits. Pressing <b>n</b>
+will choose random rules, or you can go to the control panel and input
+a rule number. Try the rule number 682; this rule is known as
+Fredkin's parity rule.
+
+<h3><a name="t7">ASCII</a></h3>
+
+ASCII is based on the same idea as Rug, except
+that in ASCII, each cell has a state value which ranges from 0 to
+65,536 (64K). Because it has more statebits to worry about, ASCII
+should run slower than Rug, but I made it seem as fast as Rug by
+having ASCII look at four instead of eight neighbors. To update itself
+in ASCII, a general EveryCell takes three steps. 1) Form the
+FullFourSum of your four neighbors (the full sum can be as high as 256
+K so ASCII has to store the sum as a double precision integer); 2) Get
+the AverageNeighborState by dividing the FullFourSum by 4; 3) Get your
+NewState by adding Increment to the AverageNeighborState.
+ASCII initially starts with an increment of 0. Each time you press <b>n</b>
+the increment is increased or decreased by 1. Initially, the <b>n</b>
+keypresses increase the increment. Everytime you press <b>N</b>, the
+direction of the n increments is reversed. Thus when you start ASCII,
+pressing <b>N</b> and then <b>n</b> will set the increment to -1 = +65,535.
+This is confusing, so it's a good idea to look at the control panel.
+
+<p>
+
+The <b>l</b> key (lowercase L) toggles the ASCII rule in and out of
+"Laplace mode".  In Laplace mode (which is
+the mode the rule starts up in), you only sum four of your neighbors
+(North, East, South and West) and divide the sum by four.  If you
+toggle the rule out of Laplace mode, it sums its eight nearest
+neighbors and divides by eight--just like Rug's default mode.  This is
+slower, but prettier.
+
+<p>
+
+Pressing the <b>v</b> key in SingleRug teaches us that when
+one of these averaging rules has fewer states it oscillates more
+chaotically. So it is not surprising that ASCII
+tends to settle down to pretty stable states unless you have some
+blocks on. As with Rug, you can reduce the number of states which
+ASCII uses by pressing v to halve the number of states. I'm not sure
+I've ever seen an ASCII chaos egg.
+
+<p>
+
+ASCII looks nice in bleach mode.
+The bleach mode version of ASCII simply
+interprets the high (color) byte of each cell's 16 bits. The high byte
+is dominant, as you can see by pressing <b>c</b> in color mode and setting
+all the character bytes to the same value.
+
+<p>
+
+The most interesting thing to do with ASCII is to use it to solve the
+two dimensional partial differential heat equation.
+Think of the
+screen as a metal plate. Turn the wrap on, randomize with an <b>r</b>, then
+turn the wrap off. Now the border cells are frozen at various values.
+You can think of these values as temperatures around the edge of the
+metal plate--say there's a piece of ice here, a heating coil there,
+and so on. After a few minutes the ASCII rule will "relax to an
+equilibrium" where there is a more or less fixed pattern of colored
+lines curving across the screen. This is analogous to solving a heat
+equation, since what each region of a metal plate actually does is try
+to take on the average temperatures of its neighbors...just like
+ASCII. The color lines are like isothermal lines
+of constant
+temperature. If you rerandomize with a new <b>r</b> you will (usually) get
+the same "solution." It's also fun to put in a "cold"
+ZeroBlock and watch how it perturbs the solution. You can
+also press <b>Ins</b> to get into Insert mode and set the borders to
+selected values.  See the <a href="chap4.html#4-TH-rug">discussion
+of the Rug rule</a> in the <a href="chap4.html"><cite>Theory</cite></a>
+chapter for more on this.
+
+<p>
+
+Another good thing to do with ASCII is to simulate
+turbulent flow.
+Since it has so many states, it does a better job of
+this than Rug does. Pentagon-paid researchers use Cray® supercomputers
+to simulate turbulent flow--but with the <i>CelLab</i> you can do it on your
+home PC.
+
+<p>
+
+To see turbulence, put ASCII into jog mode
+and turn on some blocks.
+Move the blocks over to the right of the screen.  With nothing but
+zeroes or ones being jogged in from the right, the rule doesn't seem
+to do too much.  To cure this, give the rule an increment of something
+like FFF0 by pressing <b>N</b> once to get into negative increment
+mode, and then pressing <b>n</b> sixteen times or so to go "below
+zero".  Remember that for a sixteen-bit computer, -1 is the same as
+<tt><b>FFFF</b></tt>, and <tt><b>FFF0</b></tt> is -16.  A big increment like <tt><b>FFF0</b></tt>
+makes periodic puffs of color waft across the screen in jogmode.
+
+
+
+<p>
+<center>
+<img src="figures/fig9.gif" width=476 height=370 alt="">
+<br>
+<i>The RC ASCII rule using jogmode to simulate a windtunnel.</i>
+</center>
+<p>
+
+<h2><a name="t8">The 3D Disk and Other Extras</a></h2>
+
+We have a few programs that didn't fit into either the format of RC or
+of JC. These consist of two "movies" of three dimensional
+CAs,
+and two
+standalone programs called Langton and SoundCa. The movies are in the
+3D directory, and Langton and SoundCa are in the RC directory.
+
+<p>
+
+The 3D directory holds two movies called <b>Life3D</b>
+and <b>Parity</b>, plus
+<b>AFEGAP</b>, which is a "projector" program for showing the
+movies.  "<b>AFEGAP</b>" stands for "AutoFlix<sup>tm</sup>
+Enhanced Graphics Adapter Project-Only Version".  The
+<b>Life3D</b> and <b>Parity</b> files are movies in the sense
+that they are stored sequences of EGA graphics mode screens.  To view
+these movies you must have an EGA, VGA, or PS/2® card and monitor.
+
+<p>
+
+To see both the movies on the 3D disk, enter:
+
+<p>
+
+<b>3ddemo</b>
+
+<p>
+
+To see just one of the movies, enter either
+
+<p>
+
+<b>afegap life3d</b><br>
+or<br>
+<b>afegap parity</b>
+
+<p>
+
+The AutoFlix EGA projector has a few interactive controls:
+
+<p>
+
+<dl compact>
+<dt><b>Spacebar</b><dd>Toggles between free run and pause.
+<dt><b>+</b><dd>Run faster.
+<dt><b>-</b><dd>Run slower.
+<dt>--&gt;<dd>Single step one frame forward.
+<dt>--&lt;<dd>Single step one frame backward.
+<dt><b>R</b><dd>Return to free run.
+<dt><b>Q</b><dd>Quit.
+</dl>
+
+<h3><a name="2-RC-life3d">LIFE3D</a></h3>
+
+Life3D is based on a rule that considers a general cell as the center
+of a 3×3×3 cube of 27 cells.  Other than itself, the
+cell has 26 neighbors.  This is in analogy to 2D life, where a cell is
+the center of a 3×3 square of 9 cells, with the outer 8 cells
+regarded as the central cell's neighbors.
+
+<p>
+
+In two-dimensional Life, a dead cell is turned on if it has exactly 3
+living neighbors, and a living cell stays on if it has either two or
+three living neighbors. According to the researcher Carter
+Bays,
+a
+good 3D analogue of Life is found if we turn on a dead cell when it
+has exactly five living neighbors, and if we keep a living cell on
+when it has either four or five living neighbors.
+<a href="footnote.html#F2_1"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+The Life3D movie
+shows three patterns: a moving "glider" and two oscillating patterns
+called the Rotor and the Bucking Bronco. To make the pictures easier
+to "read," the living cells change color as they age.
+
+<h3><a name="2-RC-parity">PARITY</a></h3>
+
+The Parity movie rule is based on a rule that only looks at eight of a
+general cell's neighbors. Here, a cubical cell's neighbors are those
+cubes which share a whole face with the central cell. The Parity rule
+is a 3D generalization of Fredkin's rule: if you have an odd number of
+firing neighbors you turn on, and if you have an even number of firing
+neighbors you turn off.
+
+<p>
+
+The two extra standalone programs Langton and SoundCA are to be found
+in the RC directory.
+
+<h3><a name="2-RC-langton">LANGTON</a></h3>
+
+Langton is started by entering <b>langton</b> at the DOS prompt.
+
+<p>
+
+<b>langton</b>
+
+<p>
+
+<b>Langton</b> is a textmode graphics program that has most of the
+same keyboard controls as RC.  It is not integrated into RC because
+its memory demands are incompatible with the demands of RC.  Langton
+displays a simplified version of <a href="chap5.html#5-HIST-class">von Neumann's self-reproducing
+automaton</a>.  The rule in Langton only needs eight
+states per cell (three bits of info).  Each cell updates itself by
+looking at its own state and at the states of its four nearest
+neighbors.  The rule was discovered by Christopher
+Langton
+as part of
+his doctoral thesis work and is described in <a href="refs.html#[Langton84]">[Langton84]</a>.
+
+<p>
+
+The "creature" of the Langton rule is shaped like a Q: a loop with a
+tail.  The outlines of the Q are covered by a "membrane" which holds
+a circulating loop of "DNA."  Each time a particle of
+the DNA strikes the corner where the tail branches off, the DNA
+particle splits in two, "transcribing" or replicating itself.  Each
+time one of the transcribed particles hits the end of the tail, it is
+"translated" into a certain action.  The white dots tell the tail to
+grow ahead, and the red dots tell the tail to make a left turn.  When
+the growing tail cuts back in on itself, the organism's cells pinch
+off the "daughter" organism from the "mother" organism and
+establish two new tails.  Since the is central to the
+rule, each time you press <b>z</b> to blank the screen, the Q-creature
+is redrawn as well.
+
+<p>
+
+Since each cell's "situation" is given by fifteen bits of information,
+(five 3-bit neighbors), I implemented the Langton rule as a 32K byte
+lookup table. Once that machinery was in place, I arranged it so that
+if you press <b>n</b>, new random entries are placed in the lookup table.
+If you press <b>N</b>, the lookup table is randomized in a symmetrical way,
+so that N, E, S, and W are treated equally.
+
+<p>
+
+As with the Random rulestyle of RC, we can set the
+Sparseness
+of the
+random lookup tables by pressing the <b>v</b> key. In Langton the
+Sparseness is best thought of as having an integer setting somewhere
+between 0 and 12. When you start the rule, the Sparseness is set at 4.
+Each time you press <b>v</b> the Sparseness is incremented by 1. After 12,
+the Sparseness wraps back to 0. If you press <b>Shift-V</b>, the Sparseness
+is set directly to 0. In trying out the various random Langton rules,
+it is a good idea to set the FlickerBlock to on by pressing 3. It also
+helps to press <b>r</b> each time a new rule is loaded.
+
+<p>
+
+Langton writes about the Sparseness spectrum of these random rules in
+<a href="refs.html#[Langton86]">[Langton86]</a>. He divides the spectrum of possible five-cell three-bit
+rules into three main bands: the chaotic rules, the balanced rules,
+and the quiescent rules. These bands correspond roughly to the ranges:
+
+<p>
+
+<center>
+<table border>
+<tr><th>Sparseness<th>Behavior</tr>
+<tr><td align=center>0-7<td align=center>Chaotic</tr>
+<tr><td align=center>8-10<td align=center>Balanced</tr>
+<tr><td align=center>11-12<td align=center>Quiescent
+<a href="footnote.html#F2_2"><img align=middle src="figures/foot_motif.gif" height=15 width = 15 ALT="¹"></a>
+</tr>
+</table>
+</center>
+
+At the very last minute before release, John wrote a JC version of the
+Langton rule which runs in 320×200 pixel mode. The genesis of this
+rule is described in the final subsection of
+<a href="ruledef-own.html"><cite>Own Code Evaluators</cite></a>.
+
+<h3><a name="t9">SOUNDCA</a></h3>
+
+This rule is run simply by entering <b>soundca</b> at the DOS prompt.
+
+<p>
+
+<b>soundca</b>
+
+<p>
+
+This CGA program shows a series of randomly selected
+<em>one-dimensional four-state three-cell semitotalistic rules</em>.
+
+<p>
+
+In these one-dimensional
+CA rules, each successive line reading down
+the screen is calculated from the line immediately above it.
+
+<p>
+
+The rules shown here all use four different cell-states, so the cells
+can be thought of as having values 0, 1, 2, or 3. These are
+represented by the colors black, green, red, and yellow or by the
+colors black, cyan, magenta, and white. The choice of palettes
+alternates back and forth from rule to rule.
+
+<p>
+
+These are three-cell rules because each cell looks only at itself and
+its left and right neighbor. We can speak of the neighborhood as being
+L, C, and R.
+
+<p>
+
+These rules are called semitotalistic because each cell's new state
+depends on a) the value of C, and b) the sum L+R of C's neighbors. As
+L and R can range from 0 to 3, their sum can range from 0 to 6. As it
+happens, SoundCa shows semitotalistic rules in which cells with C
+value 0 and 3 behave the same, and cells with C value 1 and 2 act the
+same. A lengthy process of trial and error led to the decision to
+define the rules this way.
+
+<p>
+
+The rule definition at the bottom of each screen is to be interpreted
+by reading the two little lookup tables from right to left. Suppose it
+says, for instance,
+
+<p>
+
+<pre>
+Semitotalistic 4 state 3-cell rule:
+States 0 and 3 use:  3 2 1 3 1 2 0
+States 1 and 2 use:  0 1 0 3 3 1 0
+</pre>
+
+This means that if a cell is in state 0 and the sum of its left and
+right neighbors is 2, then the cell's new value is to be 2. Why? Since
+the cell's state is 0, we look at the first lookup table. In the first
+line we see, reading right to left,
+
+<p>
+
+<center>
+<table border>
+<tr><th>Neighborhood Sum<td align=center> 6<td align=center>5<td align=center>4<td align=center>3<td align=center>2<td align=center>1<td align=center>0</tr>
+<tr><th>New Cell Value<td align=center> 3<td align=center>2<td align=center>1<td align=center>3<td align=center>1<td align=center>2<td align=center>0</tr>
+</table>
+</center>
+
+<p>
+
+SoundCa is a good source of interesting one-dimensional rules to
+program into JC format.  To make this easy for you, I have already
+implemented the rule just described in the JC ruleprogram file
+<b>SoundCA.PAS</b>.  To put a different SoundCa rule into JC,
+simply make a copy of <b>SoundCA.PAS</b>, edit in the new fourteen
+table numbers, and run the new program to generate a new
+<b>.JC</b> file.  In comparing the standalone SoundCa to its JC
+simulation, note that the standalone SoundCa rules grown downward, but
+the JC one-dimensional simulations grow upward.  If this bothers you a
+lot, you can turn your monitor over, although you shouldn't leave it
+that way for too long as it might overheat.
+
+<p>
+
+The unique feature of SoundCa is that it makes noise. The tone of
+SoundCa is recomputed after every tenth row. The computation of the
+tone involves going to the center of the current row and computing an
+average of the pixels in a 12 wide by 3 high region found there.
+
+<p>
+
+In general you will find that the more interesting looking rules make
+more interesting sounding noises. Not that any of the noises you hear
+are going to be terribly interesting, mind you. In fact you will often
+want to press <b>s</b> to turn the sound off. The real purpose of SoundCa
+is simply to demonstrate that it is in fact possible to use CAs to
+generate sound. If there is sufficient interest in this issue, it may
+be that future releases of <i>CelLab</i> can include a fully developed sound
+interface.
+
+<p>
+
+SoundCa has two keyboard controls:
+
+<p>
+
+<dl compact>
+<dt><b>m</b><dd>Shows 100 more screens of the current rule.
+<dt><b>s</b><dd>Toggles the sound on and off.
+<dt><dd>Press any other key twice to exit SoundCa.
+</dl>
+
+<p>
+<hr>
+<a href="chap3.html"><img align=middle src="figures/next_motif.gif" alt="Next" width=37 height=24></a>
+<a href="chap1.html"><img align=middle src="figures/previous_motif.gif" alt="Previous" width=63 height=24></a>
+<a href="cellab.html#contents"> <img align=middle src="figures/contents_motif.gif" width=64 height=24 alt="Contents"></a>
+</body>
+</html>

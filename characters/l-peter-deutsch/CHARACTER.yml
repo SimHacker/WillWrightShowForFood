@@ -1,47 +1,102 @@
-# L. Peter Deutsch — invitation / public-figure portrayal. NOT Peter Deutsch.
-# Seeded from Yoot People.md. Standards: ../../schemas/portrayal-standards.md
+# L Peter Deutsch — invitation / public-figure portrayal. NOT L Peter Deutsch.
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: l-peter-deutsch
-  name: "L. Peter Deutsch"
-  full_name: "L. Peter Deutsch"
-  also_known_as: ["Peter Deutsch"]
+  name: "L Peter Deutsch"
+  full_name: "L Peter Deutsch"
+  also_known_as: ["L. Peter Deutsch", "Peter Deutsch"]
+  name_note: "His legal first name has been the letter L, without a dot, since 2007; earlier publications print 'L. Peter Deutsch'."
   type: invitation
   signifier: "⚙️"
   status: living
-  field: "Virtual machines — Smalltalk bytecode/VM (PS, HPS); Ghostscript; Berkeley → PARC"
+  field: "Lisp, virtual machines, PostScript; composer"
   home: characters/l-peter-deutsch/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
-  note: "Stub seeded from Yoot People.md — deepen before invite."
+  note: "Public-source portrayal. Every claim has a public source below; nothing is quoted from him."
+  subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: draft
   consent: not_yet_asked
-  document: null
-  note: "Natural co-guest with Kay / Lampson / Ingalls on VMs; not yet asked."
+  document: ../../characters/l-peter-deutsch/invitation.md
+  show_seed: repo-shows/l-peter-deutsch/
 
 bio:
   summary: |
-    **L. Peter Deutsch** — UC Berkeley → Xerox PARC (1971–1986) with the Lampson/Thacker cohort.
-    On Smalltalk: redesigned bytecode instruction set, rewrote the compiler, created ChangeList;
-    principal designer of **PS** (PortableSmalltalk) — first modern on-the-fly-compiling VM — and
-    **HPS** successor. Later **Ghostscript**. Yoot People.md is the interview companion blurb.
+    **L Peter Deutsch** (b. 1946, Boston) wrote **Basic PDP-1 LISP**, a Lisp 1.5 for the PDP-1 and
+    one of the first interactive read-eval-print loops, finishing it in 1963 at 17. The March 1964
+    document he wrote with Edmund C. Berkeley, *The LISP Implementation for the PDP-1 Computer*,
+    carries the listing. On the PDP-1 he also wrote the first implementation of Calvin Mooers's
+    **TRAC** (1964). At Berkeley (1964–67) he worked with **Butler Lampson** and **Chuck Thacker**
+    on the **Berkeley Timesharing System** for the SDS 940, which went on to run Tymshare,
+    Engelbart's NLS and Community Memory. His 1973 Berkeley PhD was the PIVOT program verifier.
+
+    At **Xerox PARC** (1971–86) he worked on Interlisp and Smalltalk. He redesigned the Smalltalk
+    bytecode set, rewrote the compiler, created the ChangeList, and was the principal designer of
+    **PS**, the Smalltalk-80 implementation that translated bytecodes to native code on the fly,
+    and its successor HPS (Yoot People.md). Gosling has credited that work as the inspiration for
+    Java's JIT technology about fifteen years later. At **Sun** he set down the **Eight Fallacies
+    of Distributed Computing**. He founded **Aladdin Enterprises**, wrote **Ghostscript**, the
+    free PostScript and PDF interpreter, and wrote the zlib, DEFLATE and gzip RFCs (1950–1952).
+    He coined the **Deutsch limit** on visual programming. ACM Fellow, 1994. Since 2009 he has
+    studied and written music (M.A., CSU East Bay, 2011) and describes himself as a composer.
+  known_for:
+    - "Basic PDP-1 LISP (1963, age 17); the 1964 Deutsch & Berkeley document"
+    - "TRAC's first implementation, on the PDP-1 (1964), with Calvin Mooers"
+    - "Berkeley Timesharing System on the SDS 940, with Lampson and Thacker"
+    - "Smalltalk bytecodes; PS and HPS, the dynamically translating Smalltalk-80 VMs"
+    - "Interlisp; the Deutsch limit"
+    - "The Eight Fallacies of Distributed Computing"
+    - "Ghostscript and Aladdin Enterprises; RFCs 1950–1952"
+    - "Composer"
+
+connections:
+  pdp1_lisp_in_the_cabinet: |
+    The cabinet plans a PDP-1, with SIMH's `PDP1/` as oracle, whose showcase is Basic PDP-1 LISP.
+    Each word in core gets source maps to its line in the 1964 listing, to rectangles on the scans
+    of it, to the document's explanations, and to walkthroughs written since
+    (packages/cabinet/TODO.md, "A PDP-1"; DESIGN.md, "Source maps as transclusion").
+  postscript: |
+    Don wrote PostScript for a living in NeWS, Sun's PostScript window system, and in HyperLook;
+    Ghostscript is the other great PostScript interpreter of those years, and the free one.
+  sun: "Both were at Sun in the NeWS years."
+  vm_lineage: "PS's dynamic translation leads to Self, HotSpot and V8, the line David Ungar's Self carried on (../david-ungar/)."
+  berkeley_parc_cohort: "Lampson, Thacker and Deutsch went from Berkeley Computer Corporation to PARC in January 1971."
 
 sources:
-  wikipedia: "https://en.wikipedia.org/wiki/L._Peter_Deutsch"
-  web:
-    - { title: "Yoot People.md — L. Peter Deutsch", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  wikipedia: "https://en.wikipedia.org/wiki/L_Peter_Deutsch"
+  pdp1_lisp_1964:
+    title: "L. Peter Deutsch and Edmund C. Berkeley, The LISP Implementation for the PDP-1 Computer (March 1964)"
+    url: "http://s3data.computerhistory.org/pdp-1/DEC.pdp_1.1964.102650371.pdf"
+    archive: "https://web.archive.org/web/20160418144710/http://s3data.computerhistory.org/pdp-1/DEC.pdp_1.1964.102650371.pdf"
+  trac_1965: { title: "C. N. Mooers and L. P. Deutsch, TRAC, A Text-Handling Language, ACM '65", doi: "10.1145/800197.806048" }
+  pivot_thesis: "http://www.softwarepreservation.org/projects/LISP/interlisp_family/#Deutsch_PIVOT_"
+  gosling_jit: "https://queue.acm.org/detail.cfm?id=1017013"
+  coders_at_work: "Peter Seibel, Coders at Work (Apress, 2009): interview chapter"
+  hackers: "Steven Levy, Hackers: Heroes of the Computer Revolution (1984)"
+  rfcs: [190, 446, 550, 567, 606, 1950, 1951, 1952]
+  music: "http://www.major2nd.com/users/lpd/music/"
   yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  to_check:
+    - "Provenance and licence of the PDP-1 LISP scans and any transcriptions, before the cabinet uses them"
+    - "Which PDP-1 emulators already run Basic PDP-1 LISP"
 
 see_also:
   - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: invitation.md, why: "Draft invitation" }
   - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
+  - { path: ../../repo-shows/l-peter-deutsch/, why: "Show seed" }
   - { path: ../alan-kay/, why: "Smalltalk VM culture" }
   - { path: ../butler-lampson/, why: "Berkeley → PARC cohort" }
-  - { path: ../chuck-thacker/, why: "Alto / MAXC hardware" }
+  - { path: ../chuck-thacker/, why: "Berkeley → PARC cohort" }
   - { path: ../dan-ingalls/, why: "Smalltalk implementers" }
+  - { path: ../david-ungar/, why: "Self, the JIT line after PS" }
+  - { path: ../lars-brinkhoff/, why: "PDP-1 and PDP-10 preservation, SIMH" }
+  - { path: ../../packages/cabinet/TODO.md, why: "The PDP-1 and Basic PDP-1 LISP plan" }
   - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

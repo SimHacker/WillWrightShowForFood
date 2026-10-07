@@ -31,7 +31,7 @@ linked:
   - { people_md: "Larry Tesler", slug: larry-tesler, status: memorial_stub }
   - { people_md: "John Warnock", slug: john-warnock, status: memorial_stub }
   - { people_md: "Dave Evans", slug: dave-evans, status: memorial_stub }
-  - { people_md: "L. Peter Deutsch", slug: l-peter-deutsch, status: stub }
+  - { people_md: "L. Peter Deutsch", slug: l-peter-deutsch, status: invitation_draft }
   # 2026-07-29e
   - { people_md: "Trygve Reenskaug", slug: trygve-reenskaug, status: stub }
   - { people_md: "Stewart Brand", slug: stewart-brand, status: stub }

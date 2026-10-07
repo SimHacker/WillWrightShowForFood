@@ -44,6 +44,10 @@ visually programmable [Sandspiel Studio](https://studio.sandspiel.club/) — mee
 [Dave Ackley](../dave-ackley/ca-correspondence-story.md)'s Movable Feast. Same **simple rules**
 aesthetic; live CA jam.
 
+He has been in this loop before: on Don's CAM6 wiki he asked for GLSL rules for huge canvases and
+for each rule's JavaScript shown on the page, and painted a bit of jvn29 to see if a universal
+constructor would come out ([his notes, backed up](../don-hopkins/sources/cam6-simulator-wiki/correspondents.md#chaim-gingold)).
+
 Chaim's seat here is earned by the survey, not by authorship: his HARC **Gadget Background Survey**
 maps exactly this lineage of interactive explanatory toys, and Don brought it into the Sandspiel
 Studio Discord himself ([HN](https://news.ycombinator.com/item?id=34561910)). The historian of the

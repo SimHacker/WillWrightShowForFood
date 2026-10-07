@@ -32,7 +32,10 @@ export const PDP7_SYMBOLS: Readonly<Record<string, number>> = {
 	divs: 0o644323, idiv: 0o653323, idivs: 0o657323, frdiv: 0o650323,
 	frdivs: 0o654323, norm: 0o640444, norms: 0o660444, lrs: 0o640500,
 	lrss: 0o660500, lls: 0o640600, llss: 0o660600, als: 0o640700,
-	alss: 0o660700,
+	alss: 0o660700, xx: 0o740040,
+	// Composite operate/EAE spellings used by the Cambridge listing.
+	fad: 0o340000, cmaicll: 0o744001, spa1cla: 0o751100, szl1cla: 0o751400,
+	snl1cll: 0o744400, cma1cll: 0o744001, szl1cll: 0o745400, clq1lls: 0o650600,
 };
 
 /**
@@ -55,9 +58,9 @@ export const CAMBRIDGE_SYMBOLS: Readonly<Record<string, number>> = {
  * PN/PF light pen on/off, SCn scale n, INn intensity n, ES escape.
  */
 export const DISPLAY_SYMBOLS: Readonly<Record<string, number>> = {
-	par: 0o000000, poh: 0o000000, pov: 0o200000, dds: 0o200000,
+	par: 0o000000, poh: 0o000000, pov: 0o200000, dds: 0o200000, on: 0o200000,
 	djp: 0o400000, djs: 0o600000, vec: 0o000000,
-	pa: 0o000000, po: 0o020000, ve: 0o100000, ch: 0o060000, sb: 0o160000,
+	pa: 0o000000, pd: 0o020000, po: 0o020000, ve: 0o100000, ch: 0o060000, sb: 0o160000,
 	pn: 0o014000, pf: 0o010000, es: 0o400000,
 	sc0: 0o100, sc1: 0o120, sc2: 0o140, sc3: 0o160,
 	in0: 0o10, in1: 0o11, in2: 0o12, in3: 0o13, in4: 0o14, in5: 0o15, in6: 0o16, in7: 0o17,
