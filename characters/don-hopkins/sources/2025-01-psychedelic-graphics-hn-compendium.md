@@ -55,7 +55,7 @@ Inspired by **Toffoli & Margolus**, *Cellular Automata Machines* + Rudy/Josh lin
 
 Don's thesis: decades of work so you can trip on **pauseable, closable-tab** generative art — *"you don't need the harder stuff."*
 
-**Chaim Gingold:** [SimCity Reverse Diagrams](https://smalltalkzoo.thechm.org/users/Dan/uploads/SimCityReverseDiagrams.pdf)
+**Chaim Gingold:** [SimCity Reverse Diagrams](https://github.com/SimHacker/MicropolisCore/tree/main/images/diagrams) ([CHM PDF](https://smalltalkzoo.computerhistory.org/users/Dan/uploads/SimCityReverseDiagrams.pdf))
 
 **Fuzz-testing SimCity:** CA-scrambled tiles exposed bugs Don fixed — rings of zones, smeared heat diffusion, Godzilla ash trails.
 

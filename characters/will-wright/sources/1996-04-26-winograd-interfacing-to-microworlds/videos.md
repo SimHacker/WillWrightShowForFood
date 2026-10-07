@@ -10,7 +10,8 @@ Embedded YouTube videos (and the Google-Drive PDF embed) extracted from the arti
 3. **SimCity 30 Years Later: A Retrospective** (LGR)
    <https://www.youtube.com/watch?v=TrScy1icWjI>
 4. **Chaim Gingold's SimCity Reverse Diagrams** (PDF embed, not video)
-   <https://lively-web.org/users/Dan/uploads/SimCityReverseDiagrams.pdf>
+   <https://github.com/SimHacker/MicropolisCore/tree/main/images/diagrams> (our copy) ·
+   <https://smalltalkzoo.computerhistory.org/users/Dan/uploads/SimCityReverseDiagrams.pdf> (the PDF the article embedded; lively-web.org is gone)
 5. **OLPC SimCity Demo**
    <https://www.youtube.com/watch?v=EpKhh10K-j0>
 6. **Micropolis Online (SimCity) Web Demo**

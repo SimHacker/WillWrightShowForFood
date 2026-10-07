@@ -73,7 +73,7 @@ design as microworld design — straight line to construction-set lineage (Bill 
 ## Sources (public)
 
 - Book: [Building SimCity (MIT Press)](https://mitpress.mit.edu/9780262547482/building-simcity/)
-- Reverse diagrams: https://smalltalkzoo.thechm.org/users/Dan/uploads/SimCityReverseDiagrams.pdf
+- Reverse diagrams: [our copy](https://github.com/SimHacker/MicropolisCore/tree/main/images/diagrams) · [CHM PDF](https://smalltalkzoo.computerhistory.org/users/Dan/uploads/SimCityReverseDiagrams.pdf) · Don's article [Designing User Interfaces to Simulation Games](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d)
 - ROMchip stream: [`sources/romchip-will-wright-2024.md`](sources/romchip-will-wright-2024.md)
 - Show seed: [`repo-shows/chaim-gingold/`](../../repo-shows/chaim-gingold/README.md)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) · [`invitation.md`](invitation.md)

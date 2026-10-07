@@ -41,7 +41,7 @@ sources:
   wikipedia: null
   web:
     - { title: "Building SimCity: How to Put the World in a Machine (MIT Press, 2024)", url: https://mitpress.mit.edu/9780262547482/building-simcity/ }
-    - { title: "SimCity Reverse Diagrams", url: https://smalltalkzoo.thechm.org/users/Dan/uploads/SimCityReverseDiagrams.pdf }
+    - { title: "SimCity Reverse Diagrams", url: https://github.com/SimHacker/MicropolisCore/tree/main/images/diagrams, pdf: https://smalltalkzoo.computerhistory.org/users/Dan/uploads/SimCityReverseDiagrams.pdf }
     - { title: "chaim.io", url: https://chaim.io }
     - { title: "ROMchip: Will Wright interviews Chaim Gingold (2024-07-19)", url: https://www.youtube.com/@ROMchipJournal, local: sources/romchip-will-wright-2024.md }
   papers:
