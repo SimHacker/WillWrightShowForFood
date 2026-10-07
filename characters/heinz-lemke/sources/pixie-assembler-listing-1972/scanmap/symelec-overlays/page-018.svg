@@ -1,6 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-018.png" width="3307" height="2338"/>
 <rect x="697" y="313" width="1695" height="1996" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="83.9" cy="89.1" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="84.0" cy="189.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="83.5" cy="288.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="83.5" cy="387.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="83.5" cy="488.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="83.5" cy="587.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="83.5" cy="687.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="83.0" cy="786.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="82.5" cy="887.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="82.5" cy="987.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="82.5" cy="1085.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="82.5" cy="1186.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="82.5" cy="1285.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="82.0" cy="1387.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="82.0" cy="1485.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="82.0" cy="1586.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="82.0" cy="1686.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="81.5" cy="1786.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="81.5" cy="1885.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="81.5" cy="1986.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="81.5" cy="2085.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="81.5" cy="2186.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="81.5" cy="2286.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
 <rect x="873.0" y="333.0" width="190.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 895: JMP WAIT91</title></rect>
 <rect x="711.0" y="436.0" width="128.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 898: FOCBL1,</title></rect>
 <rect x="1031.0" y="439.0" width="14.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 898: 0</title></rect>

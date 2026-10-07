@@ -1,16 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-009.png" width="3307" height="2338"/>
 <rect x="1212" y="217" width="1675" height="2027" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="598.5" cy="894.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="598.5" cy="993.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="600.0" cy="1093.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="601.0" cy="1193.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="602.0" cy="1293.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="602.5" cy="1393.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="603.5" cy="1490.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="633.5" cy="1552.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="609.0" cy="2090.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="610.5" cy="2197.0" r="17.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="92.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="189.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="596.5" cy="292.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="596.5" cy="392.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="596.0" cy="492.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.0" cy="593.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="596.5" cy="692.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.5" cy="793.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="598.5" cy="893.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="598.5" cy="993.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="1094.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="1193.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.0" cy="1292.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.5" cy="1393.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="1492.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="1589.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="1690.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="607.0" cy="1799.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="607.0" cy="1898.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="607.5" cy="1998.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="607.5" cy="2090.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.0" cy="2196.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.8" cy="2288.9" r="23.8" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1212.0" y="235.0" width="229.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 351: /LTPIX/RELOC</title></rect>
 <rect x="1212.0" y="337.0" width="68.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 354: 451/</title></rect>
 <rect x="1212.0" y="502.0" width="331.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 359: SERSWI,</title></rect>

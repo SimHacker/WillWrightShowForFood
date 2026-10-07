@@ -1,17 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-057.png" width="3307" height="2338"/>
 <rect x="1221" y="187" width="1781" height="2033" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="610.5" cy="59.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.0" cy="159.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="610.5" cy="259.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.0" cy="360.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="610.5" cy="458.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="597.0" cy="560.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="659.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.5" cy="1158.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="651.0" cy="1514.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.5" cy="1659.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="2167.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="59.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="159.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="259.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="359.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="459.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="561.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="659.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="761.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="864.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="962.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1063.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1161.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1262.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1361.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="1460.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1561.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1659.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1766.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1867.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="1966.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="2064.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="2167.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.2" cy="2259.6" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1383.0" y="207.0" width="91.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3144: LAC 3</title></rect>
 <rect x="1542.0" y="206.0" width="234.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3144: /CONTROL INT</title></rect>
 <rect x="1223.0" y="273.0" width="88.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 3146: PEN2,</title></rect>

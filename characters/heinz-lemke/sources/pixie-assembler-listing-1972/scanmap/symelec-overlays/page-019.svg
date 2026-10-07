@@ -1,26 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-019.png" width="3307" height="2338"/>
 <rect x="1206" y="193" width="1777" height="1988" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="634.5" cy="14.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="587.5" cy="70.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="587.5" cy="170.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="588.5" cy="269.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="589.5" cy="369.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="591.0" cy="569.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="594.0" cy="966.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="595.0" cy="1066.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="593.0" cy="1164.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="593.5" cy="1266.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="597.5" cy="1364.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="594.5" cy="1464.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="634.0" cy="1514.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="596.0" cy="1564.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="595.0" cy="1663.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="595.0" cy="1762.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="595.5" cy="1862.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="596.0" cy="1959.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="596.5" cy="2065.0" r="16.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="597.0" cy="2166.0" r="17.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="582.0" cy="64.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="582.0" cy="165.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="583.0" cy="270.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="583.0" cy="364.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="584.0" cy="469.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="584.0" cy="566.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="584.0" cy="664.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="585.0" cy="767.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="586.0" cy="866.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="586.5" cy="964.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="587.0" cy="1064.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="584.5" cy="1164.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="585.0" cy="1266.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="589.0" cy="1364.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="585.5" cy="1469.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="586.5" cy="1569.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="585.5" cy="1668.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="585.0" cy="1770.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="585.5" cy="1867.0" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="585.5" cy="1965.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="586.0" cy="2064.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="586.0" cy="2166.5" r="20.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="587.0" cy="2253.6" r="20.0" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1206.0" y="280.0" width="85.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 957: INEL,</title></rect>
 <rect x="1362.0" y="278.0" width="191.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 957: LAC TEMPEN</title></rect>
 <rect x="1362.0" y="311.0" width="52.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 958: CMA</title></rect>

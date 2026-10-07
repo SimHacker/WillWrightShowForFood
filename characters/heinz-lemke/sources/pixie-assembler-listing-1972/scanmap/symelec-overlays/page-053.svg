@@ -1,23 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-053.png" width="3307" height="2338"/>
 <rect x="1275" y="182" width="1727" height="634" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="610.5" cy="151.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="610.0" cy="351.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="609.5" cy="449.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="605.5" cy="550.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="609.5" cy="650.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="609.0" cy="749.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="606.0" cy="850.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="608.0" cy="949.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="609.0" cy="1049.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="609.0" cy="1247.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="608.0" cy="1347.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="607.5" cy="1447.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="646.5" cy="1505.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="606.0" cy="1548.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="606.5" cy="1749.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="606.0" cy="2053.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="606.5" cy="2158.0" r="19.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.0" cy="47.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.0" cy="147.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.5" cy="246.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.5" cy="346.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="447.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.0" cy="547.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="646.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="747.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.0" cy="847.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="599.0" cy="947.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="1048.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.0" cy="1150.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.0" cy="1244.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="599.0" cy="1345.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="599.0" cy="1445.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.0" cy="1552.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.5" cy="1652.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.0" cy="1753.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.0" cy="1855.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.5" cy="1956.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.0" cy="2053.0" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="597.0" cy="2157.5" r="12.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="596.3" cy="2251.0" r="12.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1282.0" y="254.0" width="7.0" height="10.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2945: BOT,</title></rect>
 <rect x="1381.0" y="237.0" width="90.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2945: 13101</title></rect>
 <rect x="1699.0" y="235.0" width="112.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2945: /17301</title></rect>

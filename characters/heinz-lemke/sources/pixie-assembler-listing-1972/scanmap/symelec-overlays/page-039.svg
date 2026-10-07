@@ -1,23 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-039.png" width="3307" height="2338"/>
 <rect x="1422" y="184" width="1585" height="867" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="614.0" cy="56.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="616.0" cy="156.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="256.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="356.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="456.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.0" cy="555.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="655.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="755.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="855.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.5" cy="954.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.0" cy="1054.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="1153.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.5" cy="1352.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="652.5" cy="1506.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="1854.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="2055.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="2157.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="54.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.5" cy="153.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.0" cy="253.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="354.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.0" cy="454.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="553.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="653.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="753.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.0" cy="853.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="951.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="1051.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1152.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="1251.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="1351.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="1450.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="1552.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1652.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="1754.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="1854.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1951.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="2052.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="2157.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.6" cy="2256.4" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1427.0" y="202.0" width="152.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2134: AND (40000</title></rect>
 <rect x="1707.0" y="202.0" width="354.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2134: /TEST IF RINGSTART</title></rect>
 <rect x="1427.0" y="238.0" width="13.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2135: SZA</title></rect>

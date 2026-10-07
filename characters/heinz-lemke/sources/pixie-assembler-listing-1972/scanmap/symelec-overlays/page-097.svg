@@ -1,27 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-097.png" width="3307" height="2338"/>
 <rect x="1225" y="178" width="1787" height="1995" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="614.5" cy="45.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="145.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="246.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="346.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="448.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="547.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="649.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="748.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="847.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="947.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="1047.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="1147.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.5" cy="1245.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.0" cy="1345.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="610.5" cy="1445.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="651.0" cy="1499.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.5" cy="1545.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="610.5" cy="1645.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.5" cy="1843.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="609.5" cy="2042.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="609.0" cy="2142.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="43.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="144.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="245.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="345.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="445.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="545.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.0" cy="645.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="745.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="846.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="945.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1046.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1146.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1245.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1345.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1444.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1544.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1645.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1747.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1844.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="1950.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="2049.5" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="2146.0" r="18.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.0" cy="2249.8" r="18.2" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1389.0" y="196.0" width="130.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5395: DAC YY1</title></rect>
 <rect x="1389.0" y="230.0" width="112.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5396: WINDOW</title></rect>
 <rect x="1709.0" y="230.0" width="134.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5396: /WINDOW</title></rect>

@@ -1,28 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-043.png" width="3307" height="2338"/>
 <rect x="1220" y="179" width="1788" height="1995" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="619.5" cy="58.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.0" cy="154.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.0" cy="255.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="355.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.0" cy="456.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="554.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="653.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="753.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="853.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="953.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.5" cy="1051.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.5" cy="1151.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.5" cy="1250.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="1350.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.0" cy="1449.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="634.5" cy="1524.5" r="38.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="1652.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.0" cy="1750.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.0" cy="1852.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.5" cy="1948.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="2050.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="651.0" cy="2150.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="619.0" cy="55.5" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="153.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="254.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="353.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="454.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="554.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="655.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="754.5" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="613.5" cy="853.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="954.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1053.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1153.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.5" cy="1254.5" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1353.5" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1453.5" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1553.5" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="1654.5" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1755.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1853.5" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.5" cy="1954.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.0" cy="2052.5" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="2153.0" r="24.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.1" cy="2250.8" r="24.2" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1228.0" y="235.0" width="127.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2341: WAIT10,</title></rect>
 <rect x="1547.0" y="234.0" width="174.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2341: LAC RMODE</title></rect>
 <rect x="1867.0" y="234.0" width="294.0" height="25.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2341: /REQUESTED MODE</title></rect>

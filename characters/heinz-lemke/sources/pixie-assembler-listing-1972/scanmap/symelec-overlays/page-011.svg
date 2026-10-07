@@ -1,27 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-011.png" width="3307" height="2338"/>
 <rect x="1225" y="191" width="1686" height="1984" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="614.0" cy="250.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.0" cy="351.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="453.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="553.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="652.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.0" cy="751.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="850.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="949.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="1049.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="1148.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="1247.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="1347.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="661.5" cy="1447.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="653.0" cy="1504.5" r="28.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.5" cy="1547.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="1647.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="1747.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="1846.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="1945.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.5" cy="2046.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="2146.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.5" cy="52.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.5" cy="152.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="250.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.5" cy="351.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.5" cy="451.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="551.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="652.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.5" cy="750.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="849.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="948.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="1048.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="1148.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="601.0" cy="1247.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.5" cy="1347.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.5" cy="1447.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="600.7" cy="1530.7" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="600.6" cy="1628.3" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="600.5" cy="1725.8" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="600.5" cy="1823.4" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="600.4" cy="1921.0" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="600.4" cy="2018.6" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="600.3" cy="2116.1" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="600.2" cy="2213.7" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="600.2" cy="2311.3" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1249.2" y="210.0" width="154.8" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 473: SAVTE1,</title></rect>
 <rect x="1448.2" y="210.0" width="199.0" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 473: LAC POSDF</title></rect>
 <rect x="2045.1" y="210.0" width="464.3" height="28.8" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 473: /SAVE SYMBOL ON STACK</title></rect>

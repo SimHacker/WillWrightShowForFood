@@ -1,29 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-050.png" width="3307" height="2338"/>
 <rect x="625" y="325" width="1834" height="1985" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="65.0" cy="192.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="64.0" cy="291.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="64.0" cy="390.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="64.0" cy="491.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="63.5" cy="592.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="63.5" cy="691.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="63.5" cy="791.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.5" cy="890.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="63.0" cy="990.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="63.0" cy="1089.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="63.0" cy="1188.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.5" cy="1288.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.5" cy="1388.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.5" cy="1487.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.5" cy="1588.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="103.5" cy="1638.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="101.0" cy="1688.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="61.0" cy="1788.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.5" cy="1888.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.0" cy="1988.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="61.0" cy="2089.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.0" cy="2189.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="61.5" cy="2290.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="33.2" cy="20.8" r="14.7" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="12.0" cy="132.5" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="35.4" cy="216.0" r="14.7" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="36.5" cy="313.7" r="14.7" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="37.6" cy="411.3" r="14.7" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="38.7" cy="508.9" r="14.7" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="39.8" cy="606.6" r="14.7" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="50.0" cy="691.5" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="791.0" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.5" cy="890.5" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="990.5" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="1092.0" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="1189.5" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.5" cy="1290.0" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.5" cy="1388.5" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1488.5" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.5" cy="1589.0" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.5" cy="1687.0" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1789.0" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1889.0" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1988.0" r="14.7" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="56.1" cy="2071.1" r="14.7" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="57.2" cy="2168.7" r="14.7" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="58.3" cy="2266.3" r="14.7" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="839.0" y="440.0" width="114.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2764: /CONST</title></rect>
 <rect x="625.0" y="506.0" width="182.0" height="29.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2766: TEMPDF,</title></rect>
 <rect x="999.0" y="510.0" width="14.0" height="18.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2766: 0</title></rect>

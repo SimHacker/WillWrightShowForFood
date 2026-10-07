@@ -1,29 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-022.png" width="3307" height="2338"/>
 <rect x="623" y="325" width="1697" height="1988" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="26.0" cy="208.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="26.5" cy="305.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="27.0" cy="405.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="27.5" cy="505.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="27.5" cy="605.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="28.5" cy="704.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="28.5" cy="803.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="28.5" cy="903.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="29.0" cy="1002.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="29.5" cy="1101.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="29.5" cy="1201.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="29.5" cy="1300.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="30.5" cy="1399.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="30.5" cy="1497.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="31.5" cy="1597.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="72.5" cy="1641.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="32.5" cy="1696.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="32.5" cy="1795.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="34.0" cy="1895.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="34.0" cy="1993.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="35.0" cy="2093.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="36.0" cy="2192.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="36.5" cy="2292.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="18.7" cy="104.1" r="24.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="19.0" cy="203.5" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="19.5" cy="297.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="402.5" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="509.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.1" cy="601.1" r="24.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="20.0" cy="698.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="799.5" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="894.5" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="25.0" cy="1000.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="1098.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="1198.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="1298.5" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="23.5" cy="1396.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="27.0" cy="1497.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="23.0" cy="1595.1" r="24.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="23.5" cy="1691.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="1795.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="1894.5" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="23.5" cy="1991.5" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="29.5" cy="2093.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="30.0" cy="2192.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="20.0" cy="2293.0" r="24.9" fill="none" stroke="#f80" stroke-width="3"/>
 <rect x="800.0" y="343.0" width="513.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1135: JMS WAITLK</title></rect>
 <rect x="923.0" y="376.0" width="391.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1136: LRB18!LLAM</title></rect>
 <rect x="800.0" y="410.0" width="151.0" height="17.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1137: DAC HDR1</title></rect>

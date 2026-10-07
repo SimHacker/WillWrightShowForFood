@@ -1,41 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-006.png" width="3307" height="2338"/>
 <rect x="461" y="314" width="1902" height="1997" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="65.5" cy="194.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="290.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="352.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="390.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="418.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="452.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="490.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="518.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="550.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="588.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="615.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="649.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="688.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="717.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="749.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="789.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="816.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="849.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="899.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="948.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="987.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1017.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1048.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1097.5" r="27.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1148.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1198.5" r="27.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1252.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1286.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1334.5" r="27.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1386.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="128.5" cy="1419.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="132.5" cy="1449.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="129.0" cy="1494.0" r="31.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="129.0" cy="1549.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="57.0" cy="2307.5" r="30.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="220.6" cy="40.6" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="216.0" cy="140.5" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="222.4" cy="240.4" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="226.0" cy="350.0" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="226.5" cy="451.0" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="227.0" cy="549.0" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="227.5" cy="649.0" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="228.0" cy="748.5" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="228.0" cy="849.0" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="229.0" cy="947.0" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="229.5" cy="1041.0" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="230.0" cy="1147.0" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="230.5" cy="1250.5" r="17.9" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="232.6" cy="1338.9" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="233.5" cy="1438.8" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="234.5" cy="1538.7" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="235.4" cy="1638.5" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="236.3" cy="1738.4" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="237.2" cy="1838.3" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="238.2" cy="1938.1" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="239.1" cy="2038.0" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="240.0" cy="2137.9" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="240.9" cy="2237.7" r="17.9" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="461.0" y="332.0" width="595.0" height="28.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 246: VEC ON 20 0</title></rect>
 <rect x="461.0" y="365.0" width="575.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 247: VEC -14 10</title></rect>
 <rect x="462.0" y="399.0" width="595.0" height="27.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 248: VEC ON 12 0</title></rect>

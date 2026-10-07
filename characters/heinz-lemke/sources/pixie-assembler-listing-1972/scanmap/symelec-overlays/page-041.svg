@@ -1,24 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-041.png" width="3307" height="2338"/>
 <rect x="1220" y="182" width="1696" height="1997" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="610.0" cy="60.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="618.0" cy="155.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="616.0" cy="254.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="617.0" cy="354.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="454.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.5" cy="554.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="616.5" cy="653.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="616.5" cy="754.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.5" cy="853.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="659.0" cy="953.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="615.0" cy="1052.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="1151.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.0" cy="1350.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="1451.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="652.5" cy="1508.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.5" cy="1851.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="2051.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.5" cy="2154.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="588.5" cy="61.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="151.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="252.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="354.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.0" cy="454.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="552.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="654.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.5" cy="752.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="852.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="952.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.0" cy="1051.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1151.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="1250.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1351.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="1455.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1549.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="1655.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1751.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="1856.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.0" cy="1956.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="2050.5" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.0" cy="2157.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.7" cy="2258.0" r="14.0" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1391.0" y="205.0" width="192.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2220: JMP WAIT13</title></rect>
 <rect x="1391.0" y="238.0" width="170.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2221: LAC CCOM1</title></rect>
 <rect x="1657.0" y="236.0" width="388.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2221: /FINISHED ON NODE</title></rect>

@@ -42,10 +42,11 @@ export type SourceLine = {
 
 /** A line's place on a scanned page, in the image's pixels, top-left origin. `ink`: measured, not predicted. */
 export type ScanRect = { x: number; y: number; w: number; h: number; ink: boolean };
-export type ScanPlace = { url: string; width: number; height: number; rects: ScanRect[] };
+/** `printLeft`: where the printed lines start; left of it are only the margin and the sprocket holes. */
+export type ScanPlace = { url: string; width: number; height: number; printLeft: number; rects: ScanRect[] };
 
-/** scanmap.py's `<name>-lines.json`: listing file line -> rectangles `[x, y, w, h, ink]`. */
-export type ScanLines = { page_offset: number; pages: Record<string, [number, number]>; lines: Record<string, number[][]> };
+/** scanmap.py's `<name>-lines.json`: pages `[width, height, printLeft]`, file line -> rectangles `[x, y, w, h, ink]`. */
+export type ScanLines = { page_offset: number; pages: Record<string, number[]>; lines: Record<string, number[][]> };
 
 /**
  * Put a scan map's rectangles on a listing map's lines (by file line), then on every other map's
@@ -56,7 +57,7 @@ export function attachScan(listing: SourceMap, others: readonly SourceMap[], sca
 		const rects = l.line === undefined ? undefined : scan.lines[String(l.line)];
 		const size = l.page === undefined ? undefined : scan.pages[String(l.page)];
 		if (!rects?.length || !size || l.page === undefined) continue;
-		l.scan = { url: url(l.page + scan.page_offset), width: size[0], height: size[1], rects: rects.map(([x = 0, y = 0, w = 0, h = 0, ink = 0]) => ({ x, y, w, h, ink: ink === 1 })) };
+		l.scan = { url: url(l.page + scan.page_offset), width: size[0] ?? 0, height: size[1] ?? 0, printLeft: size[2] ?? 0, rects: rects.map(([x = 0, y = 0, w = 0, h = 0, ink = 0]) => ({ x, y, w, h, ink: ink === 1 })) };
 	}
 	for (const m of others)
 		for (const l of m.lines) {

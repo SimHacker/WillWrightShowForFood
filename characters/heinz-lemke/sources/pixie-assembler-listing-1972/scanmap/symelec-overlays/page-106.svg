@@ -1,26 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-106.png" width="3307" height="2338"/>
 <rect x="599" y="323" width="1856" height="1992" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="120.0" cy="198.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="194.5" cy="295.0" r="18.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.0" cy="400.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.5" cy="501.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="61.0" cy="601.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.0" cy="700.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.5" cy="800.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="63.5" cy="900.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="64.0" cy="999.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="65.0" cy="1098.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="65.5" cy="1198.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="66.5" cy="1297.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="48.0" cy="1397.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="48.0" cy="1495.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="49.0" cy="1595.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="74.0" cy="1646.0" r="30.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="49.0" cy="1695.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="49.5" cy="1796.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="50.0" cy="1899.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="49.5" cy="2098.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="55.8" cy="96.9" r="25.2" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="56.5" cy="196.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="56.5" cy="298.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="57.0" cy="397.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="57.0" cy="499.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="57.5" cy="598.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.0" cy="697.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.0" cy="797.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="898.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="998.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1098.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1197.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.0" cy="1297.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="1396.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1495.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.0" cy="1594.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1695.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1797.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="62.0" cy="1896.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1996.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="2095.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="2197.5" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="2295.0" r="25.2" fill="none" stroke="#f80" stroke-width="3"/>
 <rect x="613.0" y="341.0" width="94.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5936: YB</title></rect>
 <rect x="614.0" y="374.0" width="174.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5937: TEMPXL</title></rect>
 <rect x="614.0" y="408.0" width="174.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5938: TEMPYL</title></rect>

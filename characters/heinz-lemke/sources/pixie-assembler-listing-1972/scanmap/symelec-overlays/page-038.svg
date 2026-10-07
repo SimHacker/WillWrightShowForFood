@@ -1,27 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-038.png" width="3307" height="2338"/>
 <rect x="674" y="312" width="1800" height="1994" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="52.5" cy="397.0" r="27.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="20.0" cy="433.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="53.5" cy="488.0" r="23.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="20.0" cy="728.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="53.0" cy="783.5" r="39.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="19.5" cy="951.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="19.0" cy="1130.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="52.5" cy="1187.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="19.0" cy="1235.5" r="19.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="52.0" cy="1301.0" r="25.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="63.0" cy="1384.5" r="14.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="18.5" cy="1433.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="52.0" cy="1490.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="78.0" cy="1620.5" r="44.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="52.0" cy="1687.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="51.5" cy="1787.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="51.5" cy="1888.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="51.5" cy="1986.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="51.0" cy="2085.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="51.5" cy="2185.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="51.0" cy="2286.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.4" cy="87.3" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="67.5" cy="187.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="67.0" cy="286.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="67.0" cy="386.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="67.0" cy="486.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.5" cy="586.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="690.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="786.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="887.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="985.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="66.0" cy="1084.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.5" cy="1185.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.5" cy="1283.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1385.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1485.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1585.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1685.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="65.0" cy="1785.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="1885.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="1986.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="2084.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="2185.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="64.5" cy="2291.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
 <rect x="854.0" y="332.0" width="133.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2074: JMP GR2</title></rect>
 <rect x="695.0" y="399.0" width="128.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2076: LKTEST,</title></rect>
 <rect x="1015.0" y="400.0" width="163.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 2076: 0</title></rect>

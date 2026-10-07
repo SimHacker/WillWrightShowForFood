@@ -1,28 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-095.png" width="3307" height="2338"/>
 <rect x="1225" y="181" width="1787" height="1995" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="614.0" cy="47.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="147.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="248.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="349.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="449.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="614.5" cy="548.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="649.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.5" cy="748.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.5" cy="849.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="948.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="1049.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="1149.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="612.0" cy="1248.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.5" cy="1348.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.0" cy="1447.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="652.0" cy="1506.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.0" cy="1546.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="613.0" cy="1647.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="610.5" cy="1746.5" r="8.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="610.5" cy="1847.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.5" cy="2045.0" r="8.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="611.0" cy="2147.0" r="12.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.0" cy="46.0" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="146.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="247.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="347.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="448.0" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="606.0" cy="548.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.5" cy="648.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="749.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="849.0" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="948.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1048.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1149.0" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1247.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="1348.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="1447.0" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="1546.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="604.0" cy="1647.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.0" cy="1746.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.0" cy="1846.0" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="1953.0" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.0" cy="2045.0" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.0" cy="2150.5" r="16.1" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="602.9" cy="2241.3" r="16.1" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1389.0" y="199.0" width="112.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5275: ISZ DF</title></rect>
 <rect x="1389.0" y="234.0" width="272.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5276: JMP I WRDF-JMS</title></rect>
 <rect x="1228.0" y="401.0" width="332.0" height="26.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 5281: STAKX-JMS, 0</title></rect>

@@ -97,25 +97,59 @@ def ink(page: Path) -> np.ndarray:
     return np.array(Image.open(page).convert("L")) < 128
 
 
-def paper(im: np.ndarray, text_left: float) -> dict:
-    """The paper's left edge and the sprocket holes in the margin between it and the text."""
+def paper(im: np.ndarray, text_left: float, line_pitch: float) -> dict:
+    """The paper's left edge and the sprocket holes in the margin between it and the text.
+
+    Holes are every half inch, three print lines. Some scans show a hole only as a faint arc, or
+    not at all under a scanner shadow, so the holes that do show fix a grid and the rest are
+    predicted from it: each hole is [x, y, r, 1 if seen else 0].
+    """
     H, W = im.shape
     col = im[:, : W // 25].mean(axis=0)
     edge = int(np.argmax(col > 0.3)) if (col > 0.3).any() else 0
-    x0, x1 = edge + 12, max(edge + 40, int(text_left * W) - 12)
-    band = im[:, x0:x1]
-    rows = band.sum(axis=1)
-    holes, y = [], 0
-    while y < H:
-        if rows[y] > 4:
-            y0 = y
-            while y < H and rows[y] > 1:
-                y += 1
-            if 15 < y - y0 < 90:
-                xs = np.nonzero(band[y0:y].any(axis=0))[0]
-                cx = x0 + (xs.min() + xs.max()) / 2
-                holes.append([round(cx / W, 5), round((y0 + y) / 2 / H, 5), round((y - y0) / 2 / W, 5)])
-        y += 1
+    xr = max(60, int(text_left * W) - 30)
+    band = im[:, :xr].copy()
+    # Vertical rules (the paper edge, shadows) are ink down most of the page; holes never are.
+    band[:, band.mean(axis=0) > 0.15] = False
+    period = 3 * line_pitch * H
+    best: list[tuple[float, float, float]] = []
+    for cx in range(20, xr - 20, 6):
+        # Smeared down a few pixels, so a faint arc's specks join into one blob.
+        rows = np.convolve(band[:, cx - 20 : cx + 20].sum(axis=1), np.ones(7), "same")
+        blobs, y = [], 0
+        while y < H:
+            if rows[y]:
+                y0 = y
+                while y < H and rows[y]:
+                    y += 1
+                if 4 < y - y0 < 0.6 * period and band[y0:y, cx - 20 : cx + 20].sum() >= 5:
+                    xs = np.nonzero(band[y0:y, cx - 20 : cx + 20].any(axis=0))[0]
+                    blobs.append((cx - 20 + (xs.min() + xs.max()) / 2, (y0 + y) / 2, (y - y0) / 2))
+            y += 1
+        if len(blobs) > len(best):
+            best = blobs
+    if len(best) < 3:
+        return {"edge_left": round(edge / W, 5), "holes": []}
+    # The grid's phase: the blob position, mod the period, that the most blobs agree with.
+    phases = [b[1] % period for b in best]
+    dist = lambda a, b: min(abs(a - b), period - abs(a - b))
+    phase = max(phases, key=lambda p: sum(dist(p, q) < 0.15 * period for q in phases))
+    seen = [b for b in best if dist(b[1] % period, phase) < 0.15 * period]
+    if len(seen) < 3:
+        return {"edge_left": round(edge / W, 5), "holes": []}
+    ys, xs = [b[1] for b in seen], [b[0] for b in seen]
+    xb, xa = np.polyfit(ys, xs, 1) if len(seen) >= 5 else (0.0, statistics.median(xs))
+    r = statistics.median(b[2] for b in seen)
+    holes = []
+    for k in range(int(-phase // period), int((H - phase) // period) + 1):
+        y = phase + k * period
+        if not r <= y <= H - r:
+            continue
+        hit = min(seen, key=lambda b: abs(b[1] - y))
+        if abs(hit[1] - y) < 0.15 * period:
+            holes.append([round(hit[0] / W, 5), round(hit[1] / H, 5), round(r / W, 5), 1])
+        else:
+            holes.append([round((xa + xb * y) / W, 5), round(y / H, 5), round(r / W, 5), 0])
     return {"edge_left": round(edge / W, 5), "holes": holes}
 
 
@@ -273,7 +307,7 @@ def map_page(lines: list[dict], page: Path, cache: Path) -> dict:
         "image": page.name,
         "width": W,
         "height": H,
-        "paper": paper(im, xpos(0, 0)),
+        "paper": paper(im, xpos(0, 0), pitch),
         "pitch": {"line": round(pitch, 6), "char": round(char, 6), "glyph": round(glyph, 6), "y0": round(y0, 6), "x0": round(x0, 6), "skew_dx_per_line": round(dx, 8), "anchors": len(anchors)},
         "text_crop": {"pixels": list(crop), "scale": scale, "to_page": "x_page = (crop_x + x_crop * crop_w) / width; y likewise, top-left origin"},
         "stats": {"segments_ink": found, "segments_predicted": predicted},
@@ -287,8 +321,9 @@ def overlay(page_doc: dict, scan_href: str) -> str:
              f'<image href="{scan_href}" width="{W}" height="{H}"/>']
     x, y, w, h = page_doc["text_crop"]["pixels"]
     parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>')
-    for cx, cy, r in page_doc["paper"]["holes"]:
-        parts.append(f'<circle cx="{cx * W:.1f}" cy="{cy * H:.1f}" r="{r * W:.1f}" fill="none" stroke="#f80" stroke-width="3"/>')
+    for cx, cy, r, hole_seen in page_doc["paper"]["holes"]:
+        dash = "" if hole_seen else ' stroke-dasharray="6 5"'
+        parts.append(f'<circle cx="{cx * W:.1f}" cy="{cy * H:.1f}" r="{r * W * 1.4:.1f}" fill="none" stroke="#f80" stroke-width="3"{dash}/>')
     for ln in page_doc["lines"]:
         for r in ln["rects"]:
             bx, by, bw, bh = r["box"]
@@ -350,7 +385,8 @@ def main() -> int:
         if "error" in d:
             continue
         W, H = d["width"], d["height"]
-        compact["pages"][p] = [W, H]
+        # Third: where the printed lines start (column 0 less a character), left of it only margin and holes.
+        compact["pages"][p] = [W, H, max(0, round((d["pitch"]["x0"] - d["pitch"]["char"]) * W))]
         for ln in d["lines"]:
             compact["lines"][str(ln["line"])] = [[round(r["box"][0] * W), round(r["box"][1] * H), round(r["box"][2] * W), round(r["box"][3] * H), int(r["from"] == "ink")] for r in ln["rects"]]
     (out.parent / f"{out.name}-lines.json").write_text(json.dumps(compact, separators=(",", ":")))

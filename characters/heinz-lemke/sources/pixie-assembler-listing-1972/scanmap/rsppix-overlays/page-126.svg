@@ -1,7 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-126.png" width="3307" height="2338"/>
 <rect x="850" y="299" width="1605" height="1993" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="101.0" cy="1643.5" r="27.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="94.9" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="49.0" cy="194.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="296.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="397.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.5" cy="495.0" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.2" cy="593.1" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="49.1" cy="692.8" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="48.9" cy="792.4" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="48.7" cy="892.1" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="48.6" cy="991.7" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="48.4" cy="1091.4" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="48.3" cy="1191.0" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="48.1" cy="1290.7" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="48.0" cy="1390.4" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="47.8" cy="1490.0" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="47.7" cy="1589.7" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="47.5" cy="1689.3" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="47.4" cy="1789.0" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="47.2" cy="1888.6" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="47.1" cy="1988.3" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="46.9" cy="2088.0" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="46.7" cy="2187.6" r="13.3" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="46.5" cy="2291.5" r="13.3" fill="none" stroke="#f80" stroke-width="3"/>
 <rect x="855.0" y="321.0" width="174.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 783: AND (40000</title></rect>
 <rect x="1156.0" y="321.0" width="353.0" height="24.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 783: /TEST IF RINGSTART</title></rect>
 <rect x="854.0" y="354.0" width="34.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 784: SZA</title></rect>

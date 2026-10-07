@@ -1,7 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-118.png" width="3307" height="2338"/>
 <rect x="652" y="299" width="1701" height="1992" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="99.0" cy="1647.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.8" cy="93.5" r="17.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="62.5" cy="188.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="286.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="392.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="494.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="591.8" r="17.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="60.0" cy="693.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.5" cy="791.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.5" cy="894.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="995.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="60.1" cy="1090.0" r="17.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="59.0" cy="1193.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1295.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1394.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.0" cy="1495.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="1597.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="55.0" cy="1695.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="63.0" cy="1798.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="61.5" cy="1898.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="58.5" cy="1995.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="2096.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="2193.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="59.5" cy="2292.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
 <rect x="837.0" y="321.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 303: LAC GIND</title></rect>
 <rect x="837.0" y="353.0" width="170.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 304: SAD TOP+1</title></rect>
 <rect x="839.0" y="386.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 305: JMP GARB</title></rect>

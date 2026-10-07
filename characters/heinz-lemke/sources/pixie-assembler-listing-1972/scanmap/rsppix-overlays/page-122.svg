@@ -1,7 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-122.png" width="3307" height="2338"/>
 <rect x="859" y="305" width="1495" height="1990" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="95.0" cy="1645.0" r="28.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="5.2" cy="107.2" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="4.8" cy="206.8" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="4.3" cy="306.3" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="3.9" cy="405.9" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="4.0" cy="493.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="4.0" cy="605.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="1.0" cy="706.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="2.1" cy="804.1" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="1.0" cy="908.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="1.0" cy="1000.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="1.0" cy="1109.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="1.0" cy="1188.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="-0.1" cy="1301.8" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-0.6" cy="1401.4" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-1.0" cy="1500.9" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-1.5" cy="1600.5" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-1.9" cy="1700.0" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-2.3" cy="1799.6" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-2.8" cy="1899.1" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-3.2" cy="1998.7" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-3.7" cy="2098.2" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-4.1" cy="2197.8" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="-4.6" cy="2297.3" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="832.0" y="362.0" width="11.0" height="19.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 544: 0</title></rect>
 <rect x="1152.0" y="359.0" width="433.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 544: /FORM ELEMENT LENGTH N</title></rect>
 <rect x="859.0" y="393.0" width="944.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 545: CMA</title></rect>

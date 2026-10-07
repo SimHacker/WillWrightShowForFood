@@ -1,8 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-033.png" width="3307" height="2338"/>
 <rect x="1214" y="201" width="1784" height="1994" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="647.0" cy="1524.0" r="29.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="608.5" cy="2176.0" r="17.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="70.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.0" cy="166.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.0" cy="267.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="605.5" cy="363.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="603.5" cy="465.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.5" cy="565.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.0" cy="669.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="614.5" cy="774.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.5" cy="871.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="617.0" cy="969.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.5" cy="1067.8" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="605.5" cy="1170.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="619.0" cy="1273.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="610.9" cy="1367.0" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="611.0" cy="1466.7" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="611.2" cy="1566.4" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="611.3" cy="1666.2" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="614.0" cy="1767.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="611.0" cy="1865.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="609.5" cy="1976.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="607.5" cy="2074.0" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="608.5" cy="2176.5" r="15.4" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="612.1" cy="2264.5" r="15.4" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1379.0" y="220.0" width="149.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1773: JMS GBD1</title></rect>
 <rect x="1377.0" y="255.0" width="54.0" height="20.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1774: RAL</title></rect>
 <rect x="1378.0" y="287.0" width="753.0" height="30.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 1775: SMA</title></rect>

@@ -1,25 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-108.png" width="3307" height="2338"/>
 <rect x="1065" y="272" width="1409" height="598" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="57.5" cy="150.5" r="12.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="193.5" cy="246.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="58.0" cy="348.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="58.5" cy="448.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.0" cy="548.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.0" cy="647.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.5" cy="747.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.5" cy="847.5" r="16.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.5" cy="947.5" r="15.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.0" cy="1047.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="170.5" cy="1147.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.5" cy="1248.0" r="13.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="62.5" cy="1348.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="63.0" cy="1447.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="64.0" cy="1547.0" r="14.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="105.0" cy="1600.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="64.5" cy="1647.5" r="13.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="65.0" cy="1748.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="65.0" cy="1849.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.7" cy="47.8" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="47.0" cy="147.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.0" cy="249.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.0" cy="347.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.0" cy="448.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.0" cy="548.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="646.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.5" cy="747.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="847.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="947.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1048.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1146.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1247.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="1345.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.5" cy="1448.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="1546.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.0" cy="1647.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="50.5" cy="1745.5" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="43.6" cy="1842.8" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="31.5" cy="1942.0" r="19.6" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="42.8" cy="2042.3" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="42.4" cy="2142.0" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="42.0" cy="2241.7" r="19.6" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="563.5" y="756.9" width="1516.1" height="29.3" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 6070: {handwritten: 12257 octal to binary: 12257 == -> 1010010101111}</title></rect>
 <rect x="563.7" y="790.1" width="1756.8" height="29.3" fill="#e00" fill-opacity="0.12" stroke="#e00" stroke-width="2"><title>line 6071: {handwritten: bit arrows to decimal: 4096, 1024, 128, 32, 15; sum = 5295}</title></rect>
 </svg>

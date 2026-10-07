@@ -1,29 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-010.png" width="3307" height="2338"/>
 <rect x="662" y="326" width="1696" height="2003" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="61.0" cy="193.0" r="15.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="61.5" cy="292.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="61.5" cy="392.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.5" cy="492.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.5" cy="592.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.5" cy="692.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="76.5" cy="791.0" r="11.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.5" cy="890.5" r="11.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.5" cy="991.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.0" cy="1089.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="60.0" cy="1190.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.5" cy="1290.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.0" cy="1389.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.5" cy="1489.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.5" cy="1588.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="101.0" cy="1645.5" r="29.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="58.0" cy="1688.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="58.5" cy="1786.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="58.0" cy="1886.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="57.5" cy="1986.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="57.0" cy="2087.5" r="9.5" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="57.5" cy="2189.0" r="10.0" fill="none" stroke="#f80" stroke-width="3"/>
-<circle cx="59.0" cy="2288.0" r="9.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.6" cy="108.3" r="17.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="48.5" cy="194.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="293.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="392.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="49.0" cy="492.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="592.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="692.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="791.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="891.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="990.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="1090.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="1190.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.5" cy="1289.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1389.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1491.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1589.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1689.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1789.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1888.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="1989.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="2089.5" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="48.0" cy="2191.0" r="17.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="47.8" cy="2275.6" r="17.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="837.0" y="344.0" width="171.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 412: LAW TEMP2</title></rect>
 <rect x="1156.0" y="344.0" width="553.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 412: /ELEMENT ALREADY CATALOGUED</title></rect>
 <rect x="837.0" y="377.0" width="152.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 413: ADDW</title></rect>

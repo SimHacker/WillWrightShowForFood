@@ -1,6 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-004.png" width="3307" height="2338"/>
 <rect x="694" y="296" width="1688" height="1991" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
+<circle cx="84.6" cy="74.4" r="23.8" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="82.0" cy="174.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="83.5" cy="273.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="85.0" cy="371.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="87.0" cy="472.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="88.5" cy="573.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="90.0" cy="671.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="91.0" cy="771.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="92.0" cy="872.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="92.5" cy="972.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="93.5" cy="1072.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="94.0" cy="1171.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="95.0" cy="1272.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="96.0" cy="1371.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="96.5" cy="1471.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="97.5" cy="1571.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="99.0" cy="1670.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="99.5" cy="1769.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="100.5" cy="1870.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="101.5" cy="1970.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="102.0" cy="2071.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="103.0" cy="2170.5" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="85.5" cy="2264.0" r="23.8" fill="none" stroke="#f80" stroke-width="3"/>
 <rect x="860.0" y="314.0" width="192.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 125: LAC CLBL</title></rect>
 <rect x="1180.0" y="314.0" width="33.0" height="9.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 125: /L</title></rect>
 <rect x="861.0" y="347.0" width="252.0" height="31.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 126: DAC LBD 42</title></rect>

@@ -1,7 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3307 2338" width="1102" height="779">
 <image href="../pages/page-119.png" width="3307" height="2338"/>
 <rect x="1226" y="154" width="1690" height="1991" fill="none" stroke="#08f" stroke-dasharray="12 8" stroke-width="3"/>
-<circle cx="653.5" cy="1500.0" r="29.0" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="619.5" cy="37.0" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="621.5" cy="136.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="618.0" cy="241.5" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="621.0" cy="336.0" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="619.3" cy="435.3" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="617.5" cy="534.0" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="618.9" cy="634.5" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="619.5" cy="736.0" r="10.5" fill="none" stroke="#f80" stroke-width="3"/>
+<circle cx="618.5" cy="833.6" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="618.3" cy="933.2" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="618.1" cy="1032.8" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="617.9" cy="1132.3" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="617.8" cy="1231.9" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="617.6" cy="1331.5" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="617.4" cy="1431.1" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="617.2" cy="1530.6" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="617.0" cy="1630.2" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="616.8" cy="1729.8" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="616.6" cy="1829.4" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="616.4" cy="1928.9" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="616.2" cy="2028.5" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="616.0" cy="2128.1" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="615.8" cy="2227.7" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="615.6" cy="2327.2" r="10.5" fill="none" stroke="#f80" stroke-width="3" stroke-dasharray="6 5"/>
 <rect x="1395.0" y="174.0" width="150.0" height="23.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 363: ISZ GBUG</title></rect>
 <rect x="1393.0" y="209.0" width="152.0" height="22.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 364: LAC GBUG</title></rect>
 <rect x="1393.0" y="243.0" width="132.0" height="21.0" fill="#0a0" fill-opacity="0.12" stroke="#0a0" stroke-width="2"><title>line 365: SAD END</title></rect>

@@ -1086,8 +1086,8 @@
 		const y0 = Math.min(...place.rects.map((r) => r.y));
 		const y1 = Math.max(...place.rects.map((r) => r.y + r.h));
 		const h = y1 - y0;
-		// The text column and the address and word left of it, with two lines above and below.
-		const left = Math.max(0, x0 - 750);
+		// The whole printed line, sequence number on, without the margin and its sprocket holes.
+		const left = Math.max(place.printLeft, x0 - 750);
 		const top = Math.max(0, y0 - 4 * h);
 		const bottom = Math.min(place.height, y1 + 4 * h);
 		return { addr, place, view: `${left} ${top} ${Math.min(place.width - left, 1700)} ${bottom - top}` };
