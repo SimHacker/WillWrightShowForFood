@@ -39,6 +39,9 @@
 		margin: 0;
 		padding: 0;
 	}
+	.bare > :global(.cabinet-applet) {
+		margin: 0;
+	}
 	:global(html) {
 		scrollbar-gutter: stable;
 	}
