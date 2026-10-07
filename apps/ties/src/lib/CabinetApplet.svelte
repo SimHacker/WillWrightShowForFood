@@ -1085,13 +1085,11 @@
 		const x0 = Math.min(...place.rects.map((r) => r.x));
 		const y0 = Math.min(...place.rects.map((r) => r.y));
 		const y1 = Math.max(...place.rects.map((r) => r.y + r.h));
-		const h = y1 - y0;
-		// The whole printed line, sequence number on, without the margin and its sprocket holes.
+		// Always the same window on the paper, centred on the line, so nothing moves but the paper.
 		const left = Math.max(place.printLeft, x0 - 750);
-		const top = Math.max(0, y0 - 4 * h);
-		const bottom = Math.min(place.height, y1 + 4 * h);
-		return { addr, place, view: `${left} ${top} ${Math.min(place.width - left, 1700)} ${bottom - top}` };
+		return { addr, place, view: `${left} ${Math.round((y0 + y1) / 2 - 120)} 1700 240` };
 	});
+	const hasScans = $derived(!!sourceMap?.lines.some((l) => l.scan));
 
 	/** The source line for an address, or the next one that has an address. */
 	function srcLineFor(addr) {
@@ -1766,6 +1764,27 @@
 		MEM_MIN_LINES = n;
 		store(MEM_LINES_KEY, n);
 		fitGrow();
+	}
+	// Panels without a size of their own get one from their grip; unset, they fit their content.
+	const PANEL_H_KEY = (id) => `cabinet-panel-h-${id}`;
+	const PANEL_DEFAULT_H = { scan: 200 };
+	let panelH = $state(
+		untrack(() =>
+			Object.fromEntries(
+				['regs', 'front', 'play', 'config', 'scan'].map((id) => [id, Number(globalThis.localStorage?.getItem(PANEL_H_KEY(id))) || PANEL_DEFAULT_H[id] || 0])
+			)
+		)
+	);
+	function setPanelH(id, px) {
+		panelH = { ...panelH, [id]: Math.round(Math.max(40, Math.min(3000, px))) };
+		store(PANEL_H_KEY(id), panelH[id]);
+	}
+	const panelGet = (e, id) => panelH[id] || e.currentTarget.previousElementSibling?.offsetHeight || 40;
+	function panelGrip(e, id) {
+		gripDrag(e, () => panelGet(e, id), (px) => setPanelH(id, px));
+	}
+	function panelGripKey(e, id) {
+		gripKey(e, () => panelGet(e, id), (px) => setPanelH(id, px), 16);
 	}
 	const RINGS_HEIGHT_KEY = 'cabinet-rings-height';
 	let ringsHeight = $state(untrack(() => Math.max(120, Math.min(2000, Number(globalThis.localStorage?.getItem(RINGS_HEIGHT_KEY)) || 260))));
@@ -2698,7 +2717,7 @@
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
 		{/if}
 		{#snippet frontPanel()}
-		<div class="row panel" role="group" aria-label="PDP-7 console: AC switches, bit 0 on the left">
+		<div class="row panel sized" role="group" aria-label="PDP-7 console: AC switches, bit 0 on the left" style:height={panelH.front ? `${panelH.front}px` : null}>
 			{#each { length: 6 } as _, g (g)}
 				<span class="sw-group">
 					{#each SWITCH_BITS.slice(g * 3, g * 3 + 3) as bit, j (j)}
@@ -2720,9 +2739,10 @@
 			{/each}
 			<span class="octal" title="AC switches, octal">{switches.toString(8).padStart(6, '0')}</span>
 		</div>
+		{@render grip('front', 'console')}
 		{/snippet}
 		{#snippet playRow()}
-		<div class="row app demo-row" role="group" aria-label="Play">
+		<div class="row app demo-row sized" role="group" aria-label="Play" style:height={panelH.play ? `${panelH.play}px` : null}>
 			{#if program?.demo}
 				<button
 					type="button"
@@ -2763,6 +2783,7 @@
 				<span class="demo-caption" aria-live="polite">{demoOn ? demoCaption : 'Recording. ⏺ again to stop.'}</span>
 			{/if}
 		</div>
+		{@render grip('play', 'play')}
 		{/snippet}
 		<div class="row ctl">
 				<span class="chips" role="group" aria-label="Panels. Shift-click shows one alone.">
@@ -2916,8 +2937,18 @@
 		{#if regsOpen}
 			{@render frontPanel()}
 		{/if}
+		{#snippet grip(id, label)}
+			<button
+				type="button"
+				class="tty-grip"
+				aria-label="{label} height: drag, or arrow keys"
+				title="Drag to make the {label} panel taller or shorter"
+				onpointerdown={(e) => panelGrip(e, id)}
+				onkeydown={(e) => panelGripKey(e, id)}
+			></button>
+		{/snippet}
 		{#if regsOpen && regs}
-			<div class="row app regs" role="group" aria-label="Registers">
+			<div class="row app regs sized" role="group" aria-label="Registers" style:height={panelH.regs ? `${panelH.regs}px` : null}>
 				<div class="reg-line">
 					<span class="reg-dev">CPU</span>
 					<button type="button" class="reg" title="Program counter. Show it in memory." onclick={() => openMemAt(regs.pc)}
@@ -2957,6 +2988,7 @@
 					<span class="lamp" class:on={regs.clkFlag} title="Clock tick waiting">FLAG</span>
 				</div>
 			</div>
+			{@render grip('regs', 'registers')}
 		{/if}
 		{#snippet ttyRow()}
 			{@const last = ttyPaper[ttyPaper.length - 1] ?? ''}
@@ -3156,15 +3188,22 @@
 					{:else}
 						<p class="mem-hint">{sourceStatus}</p>
 					{/if}
-					{#if scanAt}
-						<a class="mem-scanstrip" href={scanAt.place.url} target="_blank" rel="noopener" title="{oct(scanAt.addr, 5)} on the scanned page; green boxes measured from the ink, red ones predicted. Click for the whole page.">
-							<svg viewBox={scanAt.view} preserveAspectRatio="xMinYMid meet" role="img" aria-label="The line on the scanned listing page">
-								<image href={scanAt.place.url} width={scanAt.place.width} height={scanAt.place.height} />
-								{#each scanAt.place.rects as r, i (i)}
-									<rect x={r.x - 6} y={r.y - 6} width={r.w + 12} height={r.h + 12} class:ink={r.ink} />
-								{/each}
-							</svg>
-						</a>
+					{#if hasScans}
+						<div class="mem-scanbox" style:height="{panelH.scan}px">
+							{#if scanAt}
+								<a class="mem-scanstrip" href={scanAt.place.url} target="_blank" rel="noopener" title="{oct(scanAt.addr, 5)} on the scanned page; green boxes measured from the ink, red ones predicted. Click for the whole page.">
+									<svg viewBox={scanAt.view} preserveAspectRatio="xMinYMid meet" role="img" aria-label="The line on the scanned listing page">
+										<image href={scanAt.place.url} width={scanAt.place.width} height={scanAt.place.height} />
+										{#each scanAt.place.rects as r, i (i)}
+											<rect x={r.x - 6} y={r.y - 6} width={r.w + 12} height={r.h + 12} class:ink={r.ink} />
+										{/each}
+									</svg>
+								</a>
+							{:else}
+								<p class="mem-hint">No scanned line for {oct(memFocus >= 0 ? memFocus : pcNow, 5)}.</p>
+							{/if}
+						</div>
+						{@render grip('scan', 'scan')}
 					{/if}
 				{:else if memView === 'trace'}
 					{#each traceRows as e (e.n)}
@@ -3227,7 +3266,7 @@
 			</div>
 		{/if}
 		{#if configOpen}
-			<div class="row app config" role="group" aria-label="Configuration">
+			<div class="row app config sized" role="group" aria-label="Configuration" style:height={panelH.config ? `${panelH.config}px` : null}>
 				<h4 class="config-head">Display</h4>
 				<label class="mem-hint" title="Hover or hold the pen still over something on the tube to see what drew it"
 					><input type="checkbox" checked={tipsOn} onchange={(e) => setTips(e.currentTarget.checked)} /> Tooltips on the tube</label
@@ -3283,6 +3322,7 @@
 					{/each}
 				</div>
 			</div>
+			{@render grip('config', 'configuration')}
 		{/if}
 	</figcaption>
 </figure>
@@ -4215,15 +4255,27 @@
 		font-size: 0.85em;
 		white-space: nowrap;
 	}
-	.mem-scanstrip {
-		display: block;
+	.sized {
+		overflow: auto;
+		box-sizing: border-box;
+	}
+	.mem-scanbox {
 		margin-top: 0.3em;
 		background: #fff;
+		overflow: hidden;
+	}
+	.mem-scanbox .mem-hint {
+		color: #555;
+		padding: 0.5em;
+	}
+	.mem-scanstrip {
+		display: block;
+		height: 100%;
 	}
 	.mem-scanstrip svg {
 		display: block;
 		width: 100%;
-		height: auto;
+		height: 100%;
 	}
 	.mem-scanstrip rect {
 		fill: rgb(230 0 0 / 0.1);
