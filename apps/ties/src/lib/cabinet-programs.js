@@ -22,7 +22,7 @@ import {
 	houseDemo,
 	LP370_SWITCHES,
 	sourceFromAsm,
-	sourceFromListing,
+	symelecSources,
 	Rb09,
 	parseRbImage,
 	readInAndGo,
@@ -98,7 +98,9 @@ function parseSymbolTsv(text) {
  * false boots without waiting for a picture on the tube.
  * demo(host) returns a scripted demo, run from a fresh boot; null if none.
  * symbols() lists { name, addr } for the Memory drawer, after boot.
- * source() resolves to a SourceMap (source.ts) for the code and source views.
+ * source() resolves to a SourceMap (source.ts) for the code and source views;
+ * sources() instead resolves to several, each with meta { id, label, kind,
+ * dialect }, and the memory panel offers a choice between them.
  * hint(hover, segments) names what the pointer rests on, { title, text } or
  * null; the applet shows the machine's own view of the stroke either way.
  * halt says what a HLT means without touching the program: restart is where
@@ -123,12 +125,14 @@ export const PROGRAMS = [
 		// RINGS panel: the cells holding the structure's bounds, and the cells holding its roots.
 		rings: { beg: 'BEG', end: 'END', roots: 'SAVINS' },
 		hint: symelecHint,
-		// The 1972 listing is 268 KB; fetched only when a view needs it.
-		async source() {
-			const { default: text } = await import(
-				'../../../../packages/cabinet/tapes/symelec/symelec-listing.txt?raw'
-			);
-			return sourceFromListing(text);
+		// The listing, its Cambridge source and the as7 translation, ~800 KB together; fetched only when a view needs them.
+		async sources() {
+			const [listing, cambridge, as7] = await Promise.all([
+				import('../../../../packages/cabinet/tapes/symelec/symelec-listing.txt?raw'),
+				import('../../../../packages/cabinet/tapes/symelec/symelec.asm?raw'),
+				import('../../../../packages/cabinet/tapes/symelec/symelec.s?raw')
+			]);
+			return symelecSources({ listing: listing.default, cambridge: cambridge.default, as7: as7.default });
 		},
 		boot({ cpu, patches }) {
 			loadSymelec(cpu, patches);
@@ -305,7 +309,7 @@ export const PROGRAMS = [
 		ttyConfig: { duplex: 'full', input: 'line' },
 		onTtyResize: ({ cpu, cols }) => forthImage && setForthColumns(cpu, forthImage, cols),
 		symbols: () => [...(forthImage?.labels ?? [])].map(([name, addr]) => ({ name, addr })),
-		source: async () => (forthKernel ? sourceFromAsm(forthKernel) : null),
+		source: async () => (forthKernel ? sourceFromAsm(forthKernel, { id: 'as7', label: 'kernel.s', kind: 'source', dialect: 'as7' }) : null),
 		async load() {
 			if (forthImage) return;
 			const [sop, kernel, end, prelude, turtle] = await Promise.all([

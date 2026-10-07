@@ -44,9 +44,11 @@ export { assemble, loadAsm, formatListing, printListing, PDP7, PDP7_SYMBOLS, DEC
 export { assembleAs7, formatA7out, formatAs7Labels } from "./asm/as7.js";
 export type { AsmTape, AsmLine, AsmResult, AsmOpts, Dialect, ListingOpts, Machine } from "./asm.js";
 export { disassemble, explain, explainDisplay } from "./disasm.js";
+export type { DisasmDialect } from "./disasm.js";
 export { Trace } from "./trace.js";
-export { sourceFromAsm, sourceFromListing } from "./source.js";
-export type { SourceLine, SourceMap } from "./source.js";
+export { linesAt, sourceFromAsm, sourceFromListing } from "./source.js";
+export type { SourceKind, SourceLine, SourceMap, SourceMeta } from "./source.js";
+export { symelecSources } from "./symelec-sources.js";
 export type { TraceEntry } from "./trace.js";
 export { SessionRecorder, replaySession, isSession } from "./session.js";
 export type { Session, SessionEvent, SessionHandlers } from "./session.js";

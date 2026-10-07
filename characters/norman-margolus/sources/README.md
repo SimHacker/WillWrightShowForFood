@@ -56,8 +56,9 @@ and the direct ancestor of the cabinet's CAM device design.
   JavaScript rewrite: [CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)
 - Related: Rudy Rucker & John Walker's [CelLab](https://www.fourmilab.ch/cellab/) and its
   [rule fieldbook](https://www.fourmilab.ch/cellab/manual/rules.html), which credits the book's
-  rules page by page — including EcoLiBra, the Life/Brain/Anneal composite Don used for
-  SimCity's DRM
+  rules page by page — including EcoLiBra and Ranch, parents of Don's **eco** (Anneal splitting
+  Brain and AntiLife), which with a heat-diffusion rule melted the city map in unregistered copies
+  of SimCity for Unix ([details](../../rudy-rucker/README.md#symbiotic-programming-on-the-cam-6-1989))
 - See [`../the-cam6-demo-for-norman.md`](../the-cam6-demo-for-norman.md)
 - Don's CAM6 wiki page, backed up with its 1988 CAM-6 price list and 1991 CAM-PC release:
   [cam6-simulator-wiki](../../don-hopkins/sources/cam6-simulator-wiki/README.md) ·

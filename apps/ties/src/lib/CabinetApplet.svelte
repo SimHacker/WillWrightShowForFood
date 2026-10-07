@@ -826,7 +826,7 @@
 		['source', 'source', 'The program’s source, commented'],
 		['trace', 'trace', 'Instructions as executed, newest last']
 	];
-	const memViewFor = (p) => (p?.source ? 'source' : 'code');
+	const memViewFor = (p) => (p?.source || p?.sources ? 'source' : 'code');
 	let memView = $state(untrack(() => memViewFor(programById(programId))));
 	const MEM_COLS = $derived(memView === 'octal' ? (figW >= 420 ? 8 : 4) : 1);
 	// Panels under the controls, toggled by the chips: any set of them open at once, stacked
@@ -994,7 +994,17 @@
 	let traceNote = $state('');
 	let traceBack = $state(0);
 	let traceRows = $state.raw([]);
-	let sourceMap = $state.raw(null);
+	// Every source map the program offers, and the one shown, chosen per program and remembered.
+	let sourceMaps = $state.raw([]);
+	let sourceId = $state('');
+	const SOURCE_KEY = (id) => `cabinet-source-${id}`;
+	const sourceMap = $derived(sourceMaps.find((m) => m.meta?.id === sourceId) ?? sourceMaps[0] ?? null);
+	function pickSource(id) {
+		sourceId = id;
+		store(SOURCE_KEY(programId), id);
+		if (memView === 'source') srcTop = Math.max(0, srcLineFor(memFocus >= 0 ? memFocus : pcNow) - 2);
+		refreshMem();
+	}
 	let sourceFor = null;
 	let sourceStatus = $state('');
 	let srcTop = $state(0);
@@ -1044,6 +1054,7 @@
 	// Symbols in the program's own case: SYMELEC's are upper case, the light pen test's lower.
 	const upperCase = $derived(symbols.length > 0 && symbols[0].name === symbols[0].name.toUpperCase());
 	function dis(word) {
+		if (sourceMap?.meta?.dialect === 'as7') return disassemble(word, symbolic, 'as7');
 		const text = disassemble(word, symbolic);
 		return upperCase ? text.toUpperCase() : text;
 	}
@@ -1082,17 +1093,19 @@
 		const id = programId;
 		if (sourceFor === id) return;
 		sourceFor = id;
-		sourceMap = null;
-		if (!program?.source) {
+		sourceMaps = [];
+		if (!program?.source && !program?.sources) {
 			sourceStatus = 'No source for this program.';
 			return;
 		}
 		sourceStatus = 'Loading the source…';
-		Promise.resolve(program.source())
-			.then((s) => {
+		Promise.resolve(program.sources ? program.sources() : program.source().then((s) => (s ? [s] : [])))
+			.then((maps) => {
 				if (sourceFor !== id) return;
-				sourceMap = s ?? null;
-				sourceStatus = s ? '' : 'No source for this program.';
+				sourceMaps = maps ?? [];
+				const saved = globalThis.localStorage?.getItem(SOURCE_KEY(id));
+				sourceId = sourceMaps.some((m) => m.meta?.id === saved) ? saved : (sourceMaps[0]?.meta?.id ?? '');
+				sourceStatus = sourceMaps.length ? '' : 'No source for this program.';
 				srcTop = Math.max(0, srcLineFor(memBase) - 2);
 			})
 			.catch((e) => {
@@ -2143,7 +2156,7 @@
 		canvasEl.cabinet = { cpu, t340, pen, box, monitor, program: programId };
 		switches = cpu.switches;
 		// An assembled program has no source until its first boot has assembled it.
-		if (sourceFor === programId && !sourceMap) {
+		if (sourceFor === programId && !sourceMaps.length) {
 			sourceFor = null;
 			if (memOpen && (memView === 'code' || memView === 'source')) loadSource();
 		}
@@ -3046,6 +3059,19 @@
 							onclick={toggleExplain}>explain</button
 						>
 					{/if}
+					{#if sourceMaps.length > 1 && (memView === 'code' || memView === 'source')}
+						<select
+							class="mem-symbols mem-source-pick"
+							aria-label="Which source to show"
+							title={sourceMap?.meta?.origin ?? 'Which source to show'}
+							value={sourceMap?.meta?.id}
+							onchange={(e) => pickSource(e.currentTarget.value)}
+						>
+							{#each sourceMaps as m (m.meta.id)}
+								<option value={m.meta.id}>{m.meta.label}</option>
+							{/each}
+						</select>
+					{/if}
 					{#if pcNow >= 0}
 						<button type="button" class="mem-view mem-pc-go" title="Show the PC" onclick={showPc}>👉 PC {oct(pcNow, 5)} {symbolic(pcNow)}</button>
 					{/if}
@@ -3105,6 +3131,9 @@
 								<span class="mem-pc" aria-label={isPc ? 'PC' : undefined}>{isPc ? '👉' : ''}</span>
 								<span class="mem-at">{l?.addr != null ? oct(l.addr, 5) : ''}</span>
 								<span class="mem-src" title={l?.text}>{l?.text ?? ''}</span>
+								{#if l?.page != null && sourceMap.meta?.scanUrl && l.addr != null && (l.addr === memFocus || l.addr === pcNow)}
+									<a class="mem-scan" href={sourceMap.meta.scanUrl(l.page)} target="_blank" rel="noopener" title="The scanned page this line was printed on ({sourceMap.meta.kind === 'listing' ? 'listing page' : 'scan page'} {l.page})">scan</a>
+								{/if}
 							</div>
 						{/each}
 					{:else}
@@ -4153,6 +4182,11 @@
 	.mem-word.sym {
 		text-decoration: underline dotted;
 		text-underline-offset: 2px;
+	}
+	.mem-scan {
+		margin-left: 0.5em;
+		font-size: 0.85em;
+		white-space: nowrap;
 	}
 	.mem-symbols {
 		font: inherit;

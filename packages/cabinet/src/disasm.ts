@@ -1,3 +1,4 @@
+import { BUILTIN_OPS } from "./asm/as7.js";
 import { CAMBRIDGE_SYMBOLS, PDP7_SYMBOLS } from "./asm/pdp7.js";
 
 /**
@@ -25,7 +26,19 @@ for (const table of [PDP7_SYMBOLS, CAMBRIDGE_SYMBOLS]) {
 	}
 }
 
+// as7 knows these without sop.s; IOTs and unnamed EAE words come out as octal numbers.
+const EXACT_AS7 = new Map<number, string>();
+for (const [name, value] of Object.entries(BUILTIN_OPS)) {
+	if (["opr", "law", "i", "sys"].includes(name)) continue;
+	if (value >= 0o640000 && !EXACT_AS7.has(value)) EXACT_AS7.set(value, name);
+}
+
 const o = (n: number): string => n.toString(8);
+/** as7 reads a number without a leading 0 as decimal. */
+const o7 = (n: number): string => (n === 0 ? "0" : `0${n.toString(8)}`);
+
+/** Which assembler the text is for: DEC and Cambridge (asm/dec.ts), or Ken Thompson's as7. */
+export type DisasmDialect = "dec" | "as7";
 
 /** OPR microinstructions, in the order the DEC listings combine them. */
 function opr(w: number): string {
@@ -51,8 +64,29 @@ function opr(w: number): string {
 	return parts.length ? parts.join("!") : "nop";
 }
 
-export function disassemble(word: number, symbolic: (addr: number) => string = o): string {
+/** One word as as7 source, which assembles back to the word with `as7` alone (no sop.s). */
+function disassembleAs7(w: number, symbolic: (addr: number) => string): string {
+	const exact = EXACT_AS7.get(w);
+	if (exact) return exact;
+	const op = w >>> 14;
+	const indirect = (w & 0o20000) !== 0;
+	const addr = w & 0o17777;
+	const operand = (a: number): string => {
+		const s = symbolic(a);
+		if (!s) return o7(a);
+		const m = s.match(/^(.*)\+([0-7]+)$/);
+		return m ? `${m[1]}+${o7(Number.parseInt(m[2] as string, 8))}` : s;
+	};
+	if (op === 0) return indirect ? `sys ${o7(addr)}` : o7(addr);
+	if (op <= 0o14) return `${MEMREF[op]}${indirect ? " i" : ""} ${operand(addr)}`;
+	if (op === 0o15 || op === 0o16) return o7(w);
+	if (indirect) return `law ${o7(addr)}`;
+	return opr(w).replace("opr!2000", "opr 02000").split("!").join(" ");
+}
+
+export function disassemble(word: number, symbolic: (addr: number) => string = o, dialect: DisasmDialect = "dec"): string {
 	const w = word & 0o777777;
+	if (dialect === "as7") return disassembleAs7(w, symbolic === o ? () => "" : symbolic);
 	const exact = EXACT.get(w);
 	if (exact) return exact;
 	const op = w >>> 14;

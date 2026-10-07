@@ -38,6 +38,13 @@ two domains run **Brian's Brain** and **AntiLife**, the two halves of EcoLiBra. 
 - the `ECO` heat rule (`heatRule` 1) in MicropolisCore's `micropolis.cpp`, which runs it over the
   city map.
 
+**It was the copy protection.** In Don's SimCity for Unix, if you hadn't entered an unlock key, a
+few minutes into play the game picked either eco or a heat-diffusion rule at random and ran it
+over the city map, melting the city. The key was bought with a credit card over the phone; this
+was before HTTPS. The same rules are still reachable in `w_keys.c` by typed cheat codes: `donh`
+runs eco (`heat_rule = 1`), while `bobo`, `boss`, `mack`, `patb` and `lucb` run heat diffusion
+with different flows, and `stop` ends it.
+
 ## The CAM-6 in the box of styrofoam peanuts (1987)
 
 His own account, in the [CelLab manual, ch. 5](https://www.fourmilab.ch/cellab/manual/chap5.html):

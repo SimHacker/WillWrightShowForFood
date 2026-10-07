@@ -142,7 +142,12 @@ to 32K.
 - **A native CPU**: a TypeScript app as the CPU plugin, driving devices through their own APIs
   with no instruction set ([ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md)). The first
   one could be the CAM-off's JavaScript leg, or a 340 drawing app.
-- **Zero or more source maps per image, picked in the dev tools.** The model is
+- **Zero or more source maps per image, picked in the dev tools.** *Step one done (7 Oct):* maps
+  carry `meta` (id, label, kind, dialect, origin, scanUrl) and lines carry file, line and scan
+  page; a program's `sources()` returns several, and the memory panel picks one at a time. SYMELEC
+  offers the 1972 listing, the Cambridge source and the as7 translation, with a link from the PC or
+  focused line to its scan page; the code view disassembles as7 when the as7 map is shown. Next:
+  several at once, and the span/link model below. The model is
   [DESIGN.md, Source maps as transclusion](DESIGN.md#source-maps-as-transclusion-layers-spans-links).
   One image can have several
   maps over the same words. SYMELEC and RSPPIX already have two each, the 1972 Cambridge source
