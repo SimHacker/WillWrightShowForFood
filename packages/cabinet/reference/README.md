@@ -52,6 +52,21 @@ full index: [bitsavers /pdf/dec/pdp7/](https://bitsavers.org/pdf/dec/pdp7/) · [
 | [`cambridge-supervisor/pd10-titan-pdp7-link.md`](cambridge-supervisor/pd10-titan-pdp7-link.md) (+ [`.htm` mirror](cambridge-supervisor/pd10-titan-pdp7-link.htm)) | [CUCPS PD10](https://cucps.soc.srcf.net/titan/supplan/pd10.htm) | **C.A. Lang, 2 Dec 1965** — system software plan for the Titan/PDP-7 link: core-to-core extracodes (18→48-bit packing), Attentions (light-pen / display events), Titan disk access, second Multiplexer teletype. The contract under PIXIE's application blocklets. Index: [`cambridge-supervisor/`](cambridge-supervisor/README.md) |
 | [`TITAN-LINK-PROTOCOL.md`](TITAN-LINK-PROTOCOL.md) | (decoded from the listing) | What PIXIE actually sent on the wire (`/LTPIX` blocklets, `PXID`, relocation) and the TypeScript Titan-service sketch |
 
+## The family: every PDP, by Mark Crispin
+
+[`its-humor/pdp-list.txt`](its-humor/pdp-list.txt) is Mark Crispin's 1986 tour of DEC's PDPs, 1 through 16, mailed to the
+TOPS-20 list and kept on ITS as `AI:HUMOR;PDP-* LST`
+([its-vault](https://github.com/PDP-10/its-vault/blob/master/files/humor/pdp-*.list)). It's opinionated and funny, and
+it's the shortest map there is of where the PDP-7 sits:
+
+- **The 18-bit line:** PDP-1 (one's complement, its own instruction set), then PDP-4 → **PDP-7** → PDP-9 → PDP-15, all
+  sharing the PDP-4's instruction set. SIMH's `PDP18B/` emulates exactly that line (4, 7, 9, 15); the PDP-1 is a separate
+  machine, and the cabinet's planned one.
+- **The PDP-7 in one line:** "a major price/performance win over the PDP-4 and the first DEC computer to use
+  wire-wrapping."
+- **Two slips in the original:** the PDP-8 is called "the sucessor to the PDP-8" (it followed the PDP-5), and the PDP-12
+  "the sucessor to the PDP-8" (it was the LINC-8 again, a LINC and a PDP-8 in one box, as the same paragraph says).
+
 ## Local working clones and toolchains
 
 Cloned next to the other repos (add them to the Cursor workspace to read source instead of guessing):
