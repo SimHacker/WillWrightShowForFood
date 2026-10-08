@@ -26,7 +26,7 @@ cursor.textContent = "\u00a0";
 outEl.append(textNode, cursor);
 
 let queue = [];
-let baud = Number(localStorage.getItem("ftp-baud") ?? 2400);
+let baud = Number(localStorage.getItem("ftp-baud") ?? 9600);
 baudEl.value = String(baud);
 let lastTick = 0;
 let credit = 0;
