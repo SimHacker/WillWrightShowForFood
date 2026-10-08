@@ -1,0 +1,909 @@
+SK in Boston
+)(]dE&j%K@IW#2A5	
+O	Xn{eDC).Ri
+H1js\JrlU]:TCJ@X$<e
+&
+:ax7*y}Ht[
+Fw	&AZ}\Vf	WR
++*U*PU*U%(U)+
+Job Suspended
+LISP pure pages flushed, and job Suspended
+LOSE!!  Cannot find file with pure pages for the LISP which this job was dumped from (version 4132).
+
+/~D ~~D/~D*INITIALIZTIME:PRINT-CURRENT-TIME
+TIME:PRINT-TIMETIME:GET-TIME-LIST
+EPSILDecemON
+~A to FTP.ber
+Novemug inort be repPleas~A~% er
+Octobror: ~&?ErALPHA
+Septe#-SYMBOLIC-CHARACTERIT-MCt
+AugusKMP@MS-TABLE
+*BUG-ADDREJuly
+"Wrong numbJune
+er args for macro
+'DOLIST MACRO
+-MACRSHARPMarchNTAX-ng
+loadi autoed byary
+Februdefinally ctiont funas nory
+Janua;~S w:UNDETIME:MONTHS
+FINED-FUNCTION
+ missS, is ~2G~Sature ford filtoloaS, au;~1G~Frida:WRONG-TYPE-ARGMACROLIST
+Thurs*:AR2*:ARN
+WedneMACROMACROEXPANDED-grindmay
+Tuesdacro|DEFSHGLOBAMACROEXPANy
+MondaDED MACRO
+SQUIDSI:INVALIDATED
+STANDARD-OUTPUTLIZE
+non-simple-x|
+T-FEATURE-IME 4ing T;LoadGRIND-MACROEXPANDED
+forgetfulness-max|
+FIND-COMPLETING-READER-PACKAGELIBDOC;COMRD KMP1_4
+*COMPLETING-READ-LINE1-AUX
+COMPLETING-READ-LINE-EXIT*COMPLETING-READ-LINE1
+MACRO-DEFICOMPLETING-READ-LINE MACRO
+COMPLETING-READ-LINE*COMPLETING-READ-PROCESS-OPTIONS
+*COMPLETING-READ-CASE-CONVERT
+LIBDOC;COMRD KMP1_3
+*COMPLETING-READ-OBJECT?
+NITIO#COMPLETION
+COMPLETING-READER-OBJECT-HEADER
+*COMPLETING-READ-MATCH-ALL
+*COMPLETING-READ-SHOW-COMPLETION
+*COMPLETING-READ-AMBIGUITY-ERROR
+*COMPLETING-READ-NULL-ERROR
+*COMPLETING-READ-OPTIONS
+*COMPLETING-READ-CHARS-READ
+*COMPLETING-READ-PROMPT
+*COMPLETING-READ-LAST-CASE
+FILEM*COMPLETING-READ-POP-COMPLETION
+*COMPLETING-READ-RESET-COMPLETION
+*COMPLETING-READ-OVERRUBOUT-RETURN
+*COMPLETING-READ-RETURN
+*COMPLETING-READ-RETURN-CHARS
+*COMPLETING-READ-ATTEMPT-COMPLETION*COMPLETING-READ-COMPLETION-CHARS
+*COMPLETING-READ-DISPLAY-OPTIONS
+$*COMPLETING-READ-REDISPLAY-LINE
+*COMPLETING-READ-INSTREAM*COMPLETING-READ-CASE-FUNCTION*COMPLETING-READ-UPPERCASIFY
+*COMPLETING-READ-LOWERCASIFY
+*COMPLETING-READ-SOFT-TYI*COMPLETING-READ-OUTSTREAM
+COMPLETING-READSET
+*COMPLETING-READ-TYITTYSET
+COMPLETING-READ-EXIT*COMPLETING-READ-PUSH-COMPLETION
+*COMPLETING-READ-OBJECT
+*COMPLETING-READ
+*COMPLETING-READ1
+SI:FEDEFMAX-COUNTER-VARIABLES
+OMRD ing C;Load
+TP 12ing F;LoadNOLDMSG
+(ADDRESS	"Comm Ave near PSK in Boston")
+  (PRETTY-HOURS	"daily noon-1am")
+  (HOURS	((T 0. 1. 12. 24.)))
+  (COST		(~ 3))
+  (PHONE	"(617) 267-0606")
+  (LAST-UPDATE	"1-Jan-80"))
+
+(define-site KABUKI
+  (TYPE		(JAPANESE))
+  (LOCATION	(UNITED-STATES MASSACHUSETTS GREATER-BOSTON CAMBRIDGE
+		  CENTRAL-SQUARE))
+  (SUBWAY	(CENTRAL))
+  (CLOSED	(SUNDAY MONDAY))
+  (PHONE	"491-4929")
+  (LAST-UPDATE	"21-May-83"))
+
+
+
+;;; Local Modes:;
+;;; Mode:LISP;
+;;; Lisp UNITED-STATES Indent:-1;
+;;; End:;
+
+ONES
+  (TYPE		(PIZZA))
+  (LOCATION	(UNITED-STATES MASSACHUSETTS GREATER-BOSTON BOSTON BACK-BAY))
+  (SUBWAY	(AUDITORIUM KENMORE))
+  
+,o3g#~o3w&	o4
+o47"xo4G'}o4W*
+o4g*'o4w&ro5
+o57*;o5G)-o5W)7o5g)Bo5w+qo6
+o6G)co6W2go6g3
+o7'-3o770Eo7G0Po7W0jo7g3Zo7w;
+(617) 267-0606
+daily noon-1am
+Comm Ave near PSK in Boston
+AL-CAPONES13-Oct-83
+(617) 262-7371
+405 Beacon St (just off of Mass Ave) in CROSSROADS5-Sep-82
+(617) 247-8181
+On Comm Ave, near Kenmore Square in BostMISSISSIPPIS
+(617) 247-9712
+On Comm Ave, near Kenmore Square in BostDELI-HAUS
+(617) 266-5576
+daily noon-3am, Fri-Sat noon-4am
+Boylston Street, just west of Mass Ave.
+BBHOP5-Aug-77
+(617) 876-4897
+quare74 Winthrop St at Boylston St, Harvard SPINOCCHIO
+(617) 523-8546
+Seems to be open until 3 AM.
+Experimental entry, haven't been there
+Just across SaltPepper Bridge
+CHARLES-STREET
+YELLOW-SUBMARINE
+Obnoxiously loud, bad music on weekend eFunny menus
+Very interesting sandwiches
+Little River Turnpike, Annandale, VirginANNANDALE
+FRITZBEES-FLYING-FOOD-FACTORY
+Obnoxiously loud, bad music on weekend eFunny menus
+Very interesting sandwiches
+Fairfax Circle, Fairfax, Virginia
+FRITZBEES-EMPORIUM
+Across from the Key Theatre
+near corner of M street
+GEORGETOWNWASHINGTON-DC
+AMERICAN-CAFE-WASHINGTON
+Fabulous service
+Gloucester St, Boston
+L'ESPALIER19-Jul-82
+in downtown Boston between Park St and GPARK-STREET
+PARKER-HOUSE
+e, near Colleen's
+798 Main St, between Tech Sq and Mass AvPANACHE
+Cook at table
+at 777 Memorial Drive
+Dress codeGorgeous view of the bay
+ear Quincy Market)
+at the top of 60 State Street, Boston (nCLASSY
+BAY-TOWER-ROOM
+accepts Validine cards
+, second floor
+in MIT's Walker Dining Facility, Bldg 50PRITCHETT
+accepts Validine cards
+(617) 253-2715
+in MIT's Walker Dining Facility, Bldg 50EAST-CAMPUS-MITWALKER
+accepts Validine cards
+in the MIT Student Center, Bldg W20, thiTWENTY-CHIMNEYS
+omnp>omvp>om~p?on
+pKon&pKon.pLon0
+pIvS^pMr(VpNvT
+&pPvQ6pPr(^pQvU
+oo6qQoo>qQooFqRooNqRooVqSoo^qSoofqToonqO
+oovq_oo~q`op
+@&qcvQ~qdnbfqdvQ6qer)
+qfnd.qfvU.qgndH
+ohVroh^rohfr
+oiFr oiNr oiVr!oi^r
+r-vS^r0r'Nr0vT
+Sfr2n.~r2vY^r3r'Vr3vQ~r4n/vr4vQ6r5r'^r5vQ&r6n1
+r7n1~r7vU.r8n2
+ol6s/ol>s/ol@
+olNs6olVs6olX
+s7vS^s8r(&s9vT
+@&s:vQ6s:r(.s;vQ&s;n>Vs<vU
+spom&sqom.sqom6srom>sm
+omFs~omNs~omP
+orft	ornt	orvt
+orx
+os.tTos6tUos>tUosFtVosNtVosVtWosX
+osftaosntbosvtbos~tcot
+t`vS^tdr)~tevQfter*
+thnTNtivU.tinTh
+u*vQfu+r*&u+vQ&u,n\vu,vQ6u-r*.u-vU
+ukou&ukou.ulou6ulou8
+ouFupouNupouP
+uxvS^u{r*Nu{vT
+^u}vQ6u~r*Vu~vQ&u
+@&v+vQ~v,nlNv,vQ6v-r)&v-vQ&v.nm6v.vU
+v/nmvv/vU.v0nn
+oq6vhoq>vhoqFvioqH
+vrvS^vur)6vuvT
+vwvQ~vxnv~vxvQ6vyr)>vyvQ&vznw~vzvU
+v{nx>v{vU.v|nxX
+oqvw;oq~w;or
+or.wHor6wHor>wIor@
+wFvS^wJr)NwKvT
+@.wLvQ~wLn@VwMvQ6wMr)VwNvQ&wNnAFwOvU
+ov6xEov>xFovFxFovH
+xDvS^xHr*fxHvQ
+ox.y)ox6y)ox>y*oxFy*oxNy+oxVy+ox^y,oxfy(
+oxny/oxvy0oxx
+y4vS^y9r+&y:vQ
+@&y=vQfy=r+Fy>vQ~y>oCVy?vQ6y?r+Ny@vQ&y@oDvyAvU
+yAoEnyBvU.yBoF
+oyV|	oy^|	oy`
+|"o{&|"o{.|#o{6|#o{>|$o{F|$o{N|%o{V| 
+r+W"oo{^|(o{`
+o{n|,o{v|,o{x
+|1vS^|5r+n|6vQ
+|7p%n|8vY^|8r,
+|<vQ~|<oV&|=vQ6|=r,
+|>vQ&|>oWN|?vU
+o}^}!o}f}"o}n}"o}v}#o}~}#o~
+o~6}5o~>}6o~F}6o~H
+o~V}7o~^}8o~f}8o~n}9o~v}9o~~}:o
+}Vq &}Vq .}Wq 0
+q V}^q ^}^q f}_q n}_q v}`q ~}`q!
+}dq!&}dq!.}eq!6}eq!>}fq!F}fq!H
+q!f}mq!n}mq!v}nq!~}nq"
+q"&}rq".}sq"6}sq">}tq"F}tq"N}uq"V}uq"X
+q"f}xq"n}xq"v}yq"~}yq#
+accepts Validine cards
+(617) 253-6495
+in the MIT Student Center, Bldg W20, secCAMPUS
+24 hours a day
+in the MIT Student Center, Bldg W20, secWEST-CAMPUS-MITSNACK24-HOUR-COFFEE-HOUSE
+~bCOPLEY-SQUARE
+KENS-AT-COPLEY
+on Boylston in Boston, near the PrudentiKENS-PUB-BOSTON19-Jul-82
+on Mass Ave at Central Square
+KENS-PUB-CENTRAL
+781 Boylston Street, Boston
+in the Prudential Center shopping mall, GROUND-ROUND-BOSTON
+orter Square
+on Mass Ave between Harvard Square and PGROUND-ROUND-CAMBRIDGE
+near Harvard Square
+on Mass Ave near Central Square
+GEORGE-AND-NICKS
+at Quincy Market, Boston
+beyond Harvard Square on Mass Ave
+CHARLIES-BEEF-AND-BEER
+(617) 876-7000
+700 Mass Ave at Central SquareHUNAN21-May-83
+(617) 547-5820
+304 Main St, in Kendall SquareKENDALL-SQUARE
+in the Harvard Square area
+BUDDYS-SIRLOIN-PIT
+n't join a seated group
+Won't seat partial groups; latecomers caRequires payment in advance
+(617) 277-7300
+43 Boylston St - Route 9, Chestnut Hill,CHESTNUT-HILL
+LEGAL-SEAFOOD-CHESTNUT-HILL
+n't join a seated group
+Won't seat partial groups; latecomers caRequires payment in advance
+(617) 426-4444
+in the Boston Park Plaza Hotel, Park SquARLINGTON
+LEGAL-SEAFOOD-BOSTON9-Nov-82
+n't join a seated group
+Won't seat partial groups; latecomers caRequires payment in advance
+11am-10pm daily, except Sundays 4pm-10pm(617) 864-3400
+ street from MIT
+in Kendall Square, Cambridge, across theLEGAL-SEAFOOD-KENDALL
+ 2.00-2.50    $22.50 1.50-2.00    $18.95 1.25
+Sg	,qp/	,vY_	-m
+	0qrW	0vU/	1qrp
+q=/	Sq=7	Tq=8
+q=W	Yq=_	Yq=g	Zq=o	Zq=w	[q=
+q>/	aq>7	bq>?	bq>G	cq>O	cq>W	dq>_	dq>g	`r2o	^
+	kq?'	lq?/	lq?7	mq??	hr2
+q?W	pq?_	qq?g	qq?o	rq?w	rq?
+r@/	yr@7	yr@?	zr@G	zr@O	{r@W	{r@_	|r@g	wr3
+-1.50    $15.95 1.00-1.25    $11.95Lobsters
+ Soft Shell Crabs             $10.50
+ Scrod                        $ 6.95
+ Fresh Scallop Kabob          $ 8.95
+ Fresh Swordfish Kabob        $10.95
+ Fresh Norwegian Salmon Filet $11.95
+ Fresh Swordfish              $12.95
+ Fresh Tuna                   $10.95
+ Fresh Scrod                  $ 6.95
+ Broiled Sirloin Steak        $ 8.95
+ Potato Skins   $1.75
+ Onion Strings  $1.50
+ Fish Chowder   $1.50
+ Fish and Chips $3.50
+ 6 Oysters      $3.50
+Appetizers and Small Meals
+LEGAL-SEAFOOD-MENU
+(617) 423-1000
+248 Northern Ave (on the waterfront in BJIMMY'S-HARBORSIDE
+No fancy atmosphere, just good foodPotentially long wait outside
+(617) 338-7539
+15.5 Fish Pier, Boston
+NO-NAME-RESTAURANT
+(617) 262-0909
+kline border
+914a Beacon St, Boston, near Boston/BrooBROOKLINE
+SOL-AZTECA19-Jul-82
+Sells T-shirts
+(617) 720-1190
+area near Haymarket
+20 Clinton St, Boston, in Quincy Market GUADALAHARRY'S
+Big portions
+(617) 491-2040
+i-Sat 11am-1am
+Sun-Wed 11am-10pm, Thu 11am-Midnight, Frrvard Sq)
+1001 Mass Ave (between Central Sq and HaCHI-CHIS
+(617) 536-4341 or 247-7451
+30 Gloucester St, Boston (in a public alCASA-ROMERO
+(617) 720-0610
+y Market, Boston
+upstairs of the middle building in QuincSTATEGOVERNMENT-CENTER
+QUINCY-MARKET
+FROGG-LANE19-Jul-82
+Lunch buffet M-F, $3.25
+(617) 876-6299
+on Mass Ave between Main St and Central CANTONESE
+WU-FU19-Jul-82
+(617) 491-6725
+on Mass Ave between Main St and Central PEKING-DUCK
+Good ravs, moo shu
+Pork with Bean Paste                       $4.75
+Kung Pao Chicken                           $4.95
+Beef in Orange Flavor                   
+Moo Shu Pork                               $4.50
+Moo Shu Chicken                            $4.75
+Moo Shu Beef                            
+Wonton Soup                                $1.10
+Hot & Sour Soup                         
+Peking Ravioli(6)                          $2.10
+Egg Rolls(2)                            (617) 864-6265
+Beacon St., Somerville, next to Star MarCHANG-FENG19-Jul-82
+Yu Shiang Green Bean with Pork          
+Shredded Pork with Peking Sweet Bean Pas
+Kung Pao Beef Steak                         $6.50
+Orange Flavor Beef            
+o9&rro96r{o9Fs
+o:Vsgo:fslo:vs8o;
+o;VpMo;fqGo;vqNo<
+o<6qao<Fv_o<Vvfo<fv)o<vw1o=
+o=FwJo=VtLo=ftSo=vt
+o>6tdo>Fu_o>Vuco>fuio>p
+u)o?&x0o?6x7o?Fuzo?Vy
+o?fy
+qB&} qB6}-qBF}4qBV|5qBf}JqBv}MqC
+}TqC&}XqC6}ZqCF}\qCV}bqCf}gqCv}iqD
+}qqD&}vqD6}|qDF}~qDW
+	NqO'	RqO7	VqOG	]qOW	_qOg	eqOw	gqP
+	tqP'	vqP7	}qPG	
+2qYG#WqYW#[qYg#^qYw#cqZ
+"bqZ''9qZ7'GqZG'JqZW'aqZ`
+q[g(?q[w(Oq\
+q\G,!q\W,&q\`
+2-q]'2Aq]72Hq]@
+q^W0oq^g0{q^w1
+q_71Sq_G1^q_W12q_g1jq_p
+Kung Pao Chi Ding                       
+Moo Shi Beef                                $4.95
+Moo Shi Chicken                             $4.75
+Moo Shi Pork                                $4.75
+Moo Shi Vegetables                      
+Wonton Soup                                 $2.00
+Hot & Sour Wonton Soup                      $1.10
+Hot & Sour Soup                             $2.00
+Suan La Chow Show                       
+Peking Ravioli(6)                           $1.95
+HARPMing S;Load
+8m, Sun noon-12:30am
+Mon-Wed 11am-12:30am, Thu-Sat 11am-1:30a(617) 497-1530
+22 JFK St (in Harvard Square)
+UNOS-CAMBRIDGE
+Delicatessen Pizza   11.95
+Steak N Cheese Pizza 12.95
+``The Uno''          12.95
+Deep Dish Specialties
+Extra Tomatoes        1.45
+Black Olives          1.45
+Anchovies             1.45
+Fresh Garlic          1.00
+Fresh Onions          1.00
+Fresh Green Peppers   1.00
+Fresh Mushrooms       1.45
+Fresh Sausage         1.75
+Pepperoni             1.45
+Additional Ingredients
+Double Cheese         8.95
+Cheese                7.95
+Deep Dish Pizza
+Large Size, serves 3-4
+UNOS-LARGE-MENUDelicatessen Pizza    6.50
+Steak N Cheese Pizza  6.95
+The ``Veggie''        4.95
+Mexican Pizza         6.50
+Pizza Bianco          6.95
+Sea Delico            8.95
+``The Uno''           6.95
+Deep Dish Specialties
+Extra Tomatoes         .80
+Black Olives           .80
+Anchovies              .80
+Fresh Garlic           .60
+Fresh Onions           .60
+Fresh Green Peppers    .60
+Fresh Mushrooms        .80
+Fresh Sausage          .90
+Pepperoni              .80
+Additional Ingredients
+Double Cheese         4.95
+Cheese                3.95
+Deep Dish Pizza
+Regular (Medium) Size, serves 2
+UNOS-MEDIUM-MENU
+The ``Veggie''        2.95
+Mexican Pizza         3.75
+Pizza Bianco          3.95
+Sea Delico            4.95
+``The Uno''           3.95
+Deep Dish Specialties
+Extra Tomatoes         .40
+Black Olives           .40
+Anchovies              .40
+Fresh Garlic           .30
+Fresh Onions           .30
+Fresh Green Peppers    .30
+Fresh Mushrooms        .40
+Fresh Sausage          .50
+Pepperoni              .40
+Additional Ingredients
+Double Cheese         2.95
+Cheese                2.45
+Deep Dish Pizza
+Individual (Small) Size, serves 1
+UNOS-SMALL-MENUrJ
+mro""mrw""mr
+Sg".t07"/vY_"/vO
+"3vQ7"3vO'"4vQ'"4t3o"5vU
+ms/"9ms7"9ms8
+msG"<msO"<msW"=ms_"?
+uq?"QuqG"Quq_"Ruqg"Ruqo"Suqw"Suq
+"`vS_"cr7_"cvQ
+"itbo"ivQ'"jtc
+mtO"vmtW"wmt_"wmt`
+tMW#	tM_#
+tMg#
+tMo#
+tO'#$tO/#$tO0
+vOFy5tOO#+tOP
+tOg#/tOo#0tOp
+#.vS_#1vO_#2vQ
+#2t<G#3vQg#3vOo#4vQ7#4vOw#5vU
+#5t?G#6vU/#6t`
+#gtP'#gtP/#htP7#htP8
+tPG#ltPO#ltPP
+usg#muso#nus
+tP_#ptPg#ptPh
+tQ7#{tQ?#{tQ@
+tQO#}tQW#~tQX
+(617) 247-7494
+near Kenmore Square
+KENMORE-SQUARE
+Central Square
+PAPA-GINOS19-Jul-82
+Moves around campus
+JOES-PIZZA-TRUCK
+Not recommendeddaily noon-3am, Fri-Sat noon-4am
+(617) 354-9673
+on Mass Ave near Central Square, toward HIFI-PIZZA19-Jul-82
+(617) 491-5599
+near Harvard Square
+(617) 547-2208
+on Mass Ave between Central Sq and MIT
+CAMPUS-HOUSE-OF-PIZZA
+Egg Rolls(2)                            (617) 864-1991
+Square by McDonalds
+ONE-POTATO-TWO-POTATO
+Not really conveniently located for subw(617) 491-9488
+243 Hampshire St, Cambridge, near Inman KENDALL
+INMAN-SQUARE
+(617) 354-0636
+at 33 Dunster Street, very near Harvard HARVARD
+HARVARD-SQUARE
+SALAD33-DUNSTER-STREET
+(617) 547-6120
+on Mass Ave, between Central Sq and HarvPIZZABEL-CANTO
+(617) 547-6300
+rom Central Sq
+569 Mass Ave, about a block twoard MIT fCENTRAL
+every day 24 hours -except- 4am-7am Sund(617) 267-1605
+ Market by Fenway Pk200 Brookline Ave, Boston, opposite StarFENWAY-PARK
+CENTRAL-SQUARE
+Live entertainment, $1 cover charge(617) 876-9180
+1920 Mass Ave
+PORTER-SQUARE
+GREATER-BOSTON
+MASSACHUSETTS
+UNITED-STATES
+CHRISTOPHER'S
+humor;ts ftp
+@Xe between Main St and Cenund: le foit fiNo intral MARY-CHUNGS
+19-Jut filg inioadin in lErrorl-82
+on Mass Ave bet:KILLFLUSHBMT1;FTP 127_3.ween MIT and Main Street
+MANDARIN-Rn.
+ of ttatusibes DescrESTAURANT
+(617)   ~}%    A.~^~: ~{~NotesNOTES 491-7823
+783 Main St.
+p~P ~y stosubwaNear SUBWAY
+STEFANI-HOUSE-OF-PIZZA-2
+ed ~ALocatADDRESS
+(617) 547-4588
+rver'is seee th to sNU cohe MEUse t272 Brookline St, Cambridwn.
+STEFANI-HOUSE-OF-PIZhone . ~]Pivery~*Del~]~@[out. Take-~@[~*DELIVERY
+(617) 354-wn
+4 Brookline St, CambA.~]
+st: ~ed cotimat~@[Ess. ~] star~@[~DCOST
+ridgeMIDDLE-EAST-RESTAURA ~}.
+~P ~{ modeNT
+(617) 492-A~]~}@[~%~.~@{~Bite  ~A. en toon opnecti~&Con7272
+on Mass Ave between tion.pen c no ore is~&TheMIT and MaSTATUS COMMAND
+JOYCE-CHENS-SMALL-EATING-ze ~Ate sior bi~A, fPLACE19-Jul-82
+(617) 547-less 2299
+on Mallars~D dothan more ss Ave between Main Strees
+ollar ~D dabout~
+t and CentHSING-HSINvP 
+&%vPO&3vS_&)r8
+&2vQ7&2r8'&3vPW&[vQ'&4t}g&4vU
+'&5vU/&9tSg&6tS_&7tSW&7tSO&8tSG&8vtp
+$W&GtiG&GvPg&Hti7&Hti
+mu/&Ymu7&Zmu?&ZmuG&[muH
+tTG&btTO&ctTP
+mug&gmuo&gmup
+_&ztU7&stU/&tuw_&ttU'&utU
+&vuho&wuhg&wtU
+&|u$W&}vQ7&}m
+'(tWw')tWo')tWg'*u`g'*tWX
+'<tY/'=tY''>tY
+uu7'Iuu_'Iuu`
+uuo'Luuw'Muu
+'VtZw'XtZo'XtZg'YtZ_'YtZW'ZtZO'ZtZG'[tZ8
+uvO'duvw'ivn/'eum
+'ft[?'ft[7'gvwo'gt[(
+'kuw''kuw/'c
+t\/'qt\''qt\
+'svqO'tvqG'tt[
+v}?( v}7( ujg(!uj?(!uj7("uwg("w]x
+(*ulg(,ul_(,ulW(-ulO(-ulG(.ul?(.ul7(/ul/(/ul'(0ul
+(:vsg(;um'(<um
+(Dumg(Fum_(Fv}'(GumW(G
+(Zu|o(Zu|w([u}'([u}/(\u}W(\u}_(W
+uwo(auwg(busG(bvaW(cuo'(cuo
+(funw(fup7(gunh
+vTW(ivTO(jvTG(jvT?(kvT7(kvT/(lvT 
+) uwo)!uwg)"usG)"vaW)#vaO)#vaG)$uqW)$uqH
+ur')3ur/)4ur7)4ur?)5ur@
+mx?)CmxG)DmxO)DmxP
+mx_)Emxg)Fmxo)GvU
+)Cuwo)Juwg)JusG)KvaW)Kus?)Lus7)Lus/)Mus')Mvtp
+)puwo)ruwg)ruu')suu
+uu?){uuG)|uuO)|uuP
+mvW*)mv_*)mvg*-t_
+*3t_W*5t_O*5t_G*6t_8
+*>u9G*>vQ7*?m
+v\O*BvR_*xu:
+*Cu<7*DvU/*Du<X
+*Rum'*Ru`w*Su`o*Su`g*Tu`X
+*^uag*_ua_*`uaW*`uaO*auaG*aua?*bua7*bua/*cvmx
+*kub/*lub'*mub
+*yubo*wubg*wubX
+uxG*zuxO*zuxP
+udg+#udo+$udp
++"vS_+)r8o+*v\
++0u	_+1vQg+1r8w+2vQ7+2r8
++4vS'+@vU/+5u
++6ueg+7ue_+8ueW+8ueO+9ue@
+9uf?+HufG+IufH
+37+Kv\O+MvS?(H
+mw/+Qmw7+Rmw?+RmwG+SmwO+T
+mwW+Umw_+Umwg+P
+mwo+YvS?+fmww+Zmwx
++[vn/+\ug/+]ug'+]u
++lv}7+lul'+mugw+mugo+nugg+nug_+ovy
++yuhw+yuho+zuhg+zuh_+{vd/+{uhW+|uhO+|uh@
+u~o,"u~w,#u~x
+uwo,-uwg,.uw_,.uwW,/uwO,/vd/,0uw@
+v`G,@v`_,Av``
+,?vS_,Cr9?,Cv\
+(Kuxg,Guxo,Huxw,Huxx
+vV7,Iv\w,\v\
+,MvY_,Mr9G,NvT
+,Rv'o,SvQg,Sr9O,TvQ7,Tr9W,UvQ',Uv+g,VvU
+-7v,w,WvU/,Xv-(
+,Zvi?,[uyO,[uyG,\uy8
+uyg,`uyo,auyw,auyx
+(tuz',muz/,muz7,nuz?,nuzG,ouzH
+uzg,vuzo,vuzw,wuz
+tu}7-)u}?-)u}G-*u}H
+-@u~7-:vgW-;vgO-;vgG-<u~/-<u~'-=u~
+-Av7O-AvU/-Bv8X
+u~O-Cu~W-Du~_-Du~`
+-GvX/-HvVg-^
+G-[vd?-\vd7-\u
+-cv`'-cv`/-dv`0
+-wvag-yva_-yvaW-zvaO-zvaG-{va?-{va7-|va/-|va'-}va
+ doll~D-~D19-Jul-82
+(617) 661-1660
+s mensite'cted Listson Main Street between Te menusee ae to a sitt to onnecust cYou mch Square and MMANDARIN
+ailabnu avNo meCOLLEEN'S
+&~A~%~&~{~ 536-1577
+MENU COMMAND
+47A Mass AMENU
+ve, BostonDESPINA'S-PLACE17-Jan-85
+progr the ExitsSells t-shirts
+A...~sing ~&Clodimsum
+QUIT COMMAND
+ 10:30pm Fri-Sat
+11:30am daily. Closes at ime
+ent t currs thePrint9:30pm Sun-Thu,(617) 547- ~A.
+s now~&It'6565
+r SquTIME COMMAND
+1720 Mass Ave (between Harvard and Portesite.o a gcts tSZECHUAN
+CHANGn.~%~d dowedule  sch to ~e dueunavaHost -SHO
+Tech Sq ant.
+ed our timn to ectio conn openpt toAttemd Mass Avejust off Main S...
+ryingill tg. Stondin respt not~&HosLAST-UPDATE
+treet on Windsor between GripeBugs/ ~A~]~@[ -ood s~A, F   ~%this)ange an chand c comm(BITE
+			de. ~er moransf ~A tl use~&WilGROCERY
+NEWTOWNE-VARIETtime. any sh aty cra   Ma     				 . ~
+uggedg deb bein Sitening:~&WarY
+.h to: ctionconne
+.jBOSTON-SANDWICHed tody coAlrea17-Jan-85
+CONNECT COMMANDGood desseCONNECT
+143 Main Street, Camty.
+fied peicis a sood a as gleasts at STARSWORSEAWFULbridg
+e (in Kendall SPAPRIELLE-ty: 
+qualiKENDALL
+QUALITY NETWORK-FILTER
+Good desserts
+next to Toea
+en arscanini's on Main Street,ion: locat nearPAPRILOCATION NETWORK-FILTER
+19-JuLOCATION
+Sells t-shirts
+Open until midnd typcifiea spes of all site.
+Very novel ice creamtype: flavors
+TYPE NETWORK-FILTER
+on Main StTYPE
+reet, near Mass Ave
+TOSCANINIS19-Jurver me seof soment omplethe cl-82
+SellsNOT NETWORK-FILTER
+Just opened in spring, 1982
+ statrversof sempty the eion
+in BoNONE NETWORK-FILTER
+ston, acroNONE
+ss from Auditorium subwayBACK-BAY
+ all et ofthe ss to ReferSTEVES-BOSALL NETWORK-FILTER
+Sells t-shirts
+Long COMPLEMENT-SITES
+walk, but worth it
+near Porter Squ 
+LTER:RK-FIare
+ICE-CHELP NETWORK-FILTER
+STEVES-SOMERVILDEFINE-NETWORK-FILTER MACRO
+11-MaDEFINE-NETWORK-FILTER
+(617) 739-0034
+*NETWORK-FILTERS*
+NETWORK-FILTER-DOCUMENTATION MACRO
+on the corNETWORK-FILTER-DOCUMENTATION
+NETWORK-FILTER
+ner of HarNETWORK-FILTER-FN MACRO
+vard St anNETWORK-FILTER-FN
+d CommonweALLSTON
+UNOS-ALLSTON
+ied cpecifo a sork tSets 11-Mar-84
+SET NETWORK-COMMAND
+(617) 620-1817
+in Marshal Shopping Center on rk
+netwo to tclassiven n a gers i serv onlyKeeps
+0(vpO0)vpG0*vp?0*vq_0+vp70+vp(
+0?vqg0@vq_0AvqW0AvqO0Bvq@
+vr/0Mvr70Nvr8
+vf_0^vfg0_vY/0hvfh
+m|'0nm|/0nm|0
+m|O0wm|W0wm|_0xm|g0xm|o0ym|w0m
+viO1!vYo1*vip
+1/vw'10vw/10vw0
+1Hvww1:vwo1:vw`
+)avx71Cvx?1Dvx@
+evxO1FvxW1GvxX
+1Lw8w1LvQ71MvZ/1Wm
+O1NvQ'1Nw;w1OvU
+vZ?1ivlg1avm
+1svnw1wvzg1uvzX
+vnW1wvnO1xvnG1xvn?1}vZW2
+vzo1zvzp
+vc72"vc?2"vc@
+21vb?22vbG22vbW23vb_24vW72@vbg2/
+25vdO27vdG27vd?28vd728vd/29vd'29vd
+vbo2Bvbw2Cvbx
+vc'2Jvc/2JvcO2KvWG2hvcW2Lvcg2Lvco2Mvcw2Mvc
+2Ovew2Oveo2Pveg2Pve_2QveW2QveO2Rve@
+2Vvf'2Wvf/2Wvf0
+v\O2\vW_2|vd
+vN'2ivNO2jmz 
+vg_2lvgW2lvgO2mvgG2mvg?2nvg72nvg/2ovg'2ovg
+ve/2tve72uve8
+mzg3(mzo3.vX
+3*vj'3+vj/3+vj73,vj8
+vjW33vj_33vjg34vjo34vjp
+m{/35m{736m{?3(
+3@vk'3@vk/3Avk0
+vkO3HvkW3Ivk_3Ivkg3Jvko3Jvkw3Kvkx
+m{W3Om{_3Pm{`
+3Rvl'3Svl/3Svl73Tvl8
+vlG3XvlO3YvlP
+3ZvX?3_vS_3[m
+vlo3]vlw3^vl
+evm'3fvm/3fvm73gvm8
+3vvn/3wvn'3xvn
+w	G,$w	W,0w	g,
+,Qw
+',Pw
+7,ew
+G,iw
+P
+2Ew'2:w72'wG2cwW2rwg2qww2\w
+FRAMIREMOVE NETWORK-COMMAND
+NGHAMUNOS-REMOVE
+FRAMINGHAM11-Mar-84
+ noon-11pmMon-Ttworkve ne actio theass ten cla givs in erverany sAdds GET-FILTERED-LIST
+hu 11am-11ADD NETWORK-COMMAND
+pm, Fri-SaADD
+t 11am-1am, Sun(617) 267-8554
+e actay th731 BoylstSITES COMMAND
+on (near tSITEShe Prudential CenterAUDITORIUMPRUDEwork.r netservetive he acays tDisplNTIALCOPLEY
+PRUDENTIALes.
+e sitactiv~&No -CENTER
+>~^,~; ~A~% ~1:~{~<~are: ites ive s~&Act11-Mar-84
+SHOW NETWORK-COMMAND
+64GRINDPREDICT
+READMACROINVERSd.
+idere consto bevers f serork o netwctivethe aEdit E-PREDICT
+6?mmandrk coNetwo#-MACRO-X
+NETWORK COMMAND
+MMANDRK-CONETWO
+6I#-MACHELP NETWORK-COMMANDRO-N
+6O#-MACDEFINE-NETWORK-COMMAND MACRO
+SHARPDEFINE-NETWORK-COMMAND
+CONDITIONALS
+6P*NETWORK-COMMANDS*
+6Y#-MACNETWORK-COMMAND-DOCUMENTATION MACRORO--
+6[NETWORK-COMMAND-DOCUMENTATION
+NETWORK-COMMAND
+6`#-MACNETWORK-COMMAND-FN MACRO
+SI:#+NETWORK-COMMAND-FN
+ siterrenthe curom tcts fConne#\
+e to c nammboliwn syse.
+o cloNo coUnknoLISPMQ
+6x~&CUL#-MACRO-\
+DISCONNECT COMMAND
+size.bite-e cures thChang.
+ize tite-sSet b%
+is ~Asize bite rent ~&Cur#-MACRO-/
+BITE COMMAND
+FORMAT-HOURS
+    ~^;~% ~{~A~#-MACRO-B
+e forc basup
+ilablt avafo nome in ~AtiExact
+ comm of #~]
+, ~}.{~A~^sed ~~%Clo~A~@[PRETTY-HOURS
+BMT1;FTP 127_2. readithinEOF w
+other#-MACRO-*
+77#-MAC~A ~AFORMAT-HOURS-SET
+~A~^,~{~A-STRING-CAPITALIZE
+CHAR-DOWNCASE
+#-FLUSH-CHARS-NOT-SET
+nctio #-fu someed byght
+MidniPROBABLY
+xpectken eic toNumer
+d.~;?borteand a?Comm~&~:[TOPLEVEL
+#-CNTRL-META-IFY
+this r at Bad argument to a # functed.
+ closbeingo ~A ion tnnect   Co	    ~
+		een. ket sr pac erroectedUnexpion
+#+--TEST-FOR-FEATURE$$ 
+Bad features list for #+ $ 
+or #-FEATURES
+COMMAND-ABORT
+omman of c listfor a "?"  Typeol) -
+v{g:v{_:v{P
+w$O:7v}o:!v}g:!v}_:"v|O:"v|G:#v|8
+v}o:,v}g:-v}_:-v}W:.v}O:.v}G:/v}?:/v}7:0v}/:0v}':1v}
+:Xw@/:Yw@':Zw@
+w@W:hw@_:iw@g:iw@h
+v[OAYwA?:|wAG:}wAO:}wAP
+wBo;!wBw;!wBx
+;'m}';'m}/;(r<
+;*v[o-awC';,wC/;,wC7;-wC8
+vvG;.vv?;.vv7;/vuO;/vuG;0vu8
+m}G;5m}O;6m}P
+;6v[w-gwCg;8wCo;9wCp
+wEG;IwEO;JwEP
+;Ym~';Zm~/;P
+wO_;awOg;awOx
+wP7;mwPO;mwPW;nwP`
+r<7;dvxw;rvx
+rotocfer PTransFood .~A (~&FTPINITIALIZEMACROin #-DEFINE-SITE MACRO
+rmat ge foDEFINE-SITE
+GarbaUnknown dispatc*POSSIBLE-LOCATIONS*h character after #
+*POSSIBLE-TYPES*
+CONTROL-META
+*READ-TOKE*ACTIVE-SITES*
+SI:#-MACRO-1
+*CONNECTED-SITE*
+EFMAXing D;Load
+SMALLMEDIUDOLIST
+LARGEARACTTIME:PARSE-LISTTIME:NORMALIZE-DATE-INTERNAL
+ - CH*BITE-SIZES*
+acter spec timeor inx errSyntaAN
+THIRDTHREEFOURTH
+EIGHTNINTHNINE
+THIRTEENTHTHIRTEEN
+FOURTEENTHFOURTEEN
+EIGHTEENTHEIGHTEEN
+NINETEENTHNINETEEN
+FORTYFIFTIETH
+FIFTYEARLYMORNING
+NIGHTEVENING
+AFTERHENCEYESTERDAY
+TIME:PARSE-NUMBER-INTERNAL
+TIME:PARSE-WORD-INTERNAL
+CHARS charNot aDEC
+PEEK-SPLICDECEMBER
+COMMANOVEMBER
+HELP COMMAOCTOBER
+DEFSHDEFINSEPTEMBER
+E-COMMAND AUG
+MACROARP MAUGUST
+*COMMANDS*MAY
+COMMAND-DOAPRILCUMENTATIOMAR
+MARCHSI:#-TEST
+COMMAND-DOFEBRUARY
+CUMENTATIOJAN
+COMMAMONTH-VALUE
+ND-FN MACRSAT
+mand n comWEDNESDAY
+ give on aTUE
+ helpGivesTUESDAY
+TERMINATE-MON
+TARGET-FEAPST
+Help &BODYEST
+TIMEZONE-OFFSETGMT
+xnumsbe fimust WEEK Y-OF-ME:DAto TIArgs -DOCUMENTATION
+$ll fa~D wiDEF-COMMAND-TYPE MACRO
+t a ~A, no ~3G~ is aTodaySP
+SPACEDEF-COMMAND-TYP.
+, not a ~All on~D fe ~A, :R ofThe ~TIME:ON-WHAT-DAY-OF-THE-WEEK?
+BACK-TIME:DAY-OF-THE-WEEK-STRING
+GET-ITIME:MONTH-STRING
+ABORT-COMMAND
+'0D ~~2,'0; ~D:A, ~D of ~e ~:R~A thTIME:VERIFY-DATE
+TIME:PRINT-CURRENT-DATE
+TIME:PRINT-DATEDATA
+LINEF*INIT-FILE*
+2,'0D'0D:~D:~2,
+> wEw>!wEo>!wE`
+Qw(PwGw>=wGx
+RO1,wI/>NwI0
+S',FwJW>^wJX
+S?A=wJw>awJx
+Tw1ywLO>zwLP
+V?BlwO7?-wO8
+?/wR/?0wR7?2
+VNq^wOo?5wOp
+r<WCFv\O:RwRw?@wR
+Vw>uwPw?JwPx
+v{7?`v{/?av{'?av{
+vzW?dvzO?}v\`
+@)wN_@+v^/@EwNW@,wE_@-
+Zg@6wE?@-wDo@.wD0
+$o@;r=_@<r=W@<r=H
+v^7@qr=O3FwNo@FwNw@GwO
+m~oAMm~wAMm~
+X'#uwU7B#wU8
+X73?wUoB,wUp
+XG>rwV'B4wV(
+BDwUgBEwU_BEwUH
+>	wV7BIwV?BIwVOBL
+jwXOBcwXWBcwXX
+BtwYOBowYGBowY?BpwY7BpwY/BqwY'BqwY
+w[GB|w[?B}w[7B}wZ
+wZ_C
+wZWC
+wZOC
+C$w\'C$w\/C%w\0
+Yg#.w\OC+w\WC,w\_C,w\`
+v~'C/v~/C/v~7C5v]o3\w\GC3
+v~?C5v~GC6v~P
+w^?CMw^7CMw^/CNw^'CNw^
+Bww^GCRw^OCRw^WCSw^X
+v&wA'C_wA/C_wA7C`wA_C`wAgCawAoCc
+wB_CjwBgCjwC
+, Thu-Sat 11am-1:30a

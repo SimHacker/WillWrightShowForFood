@@ -1,0 +1,1015 @@
+074323 zTIME:GET-TIME-LIST
+074533 zTIME:PARSE-WORD-INTERNAL
+074535 zTIME:PARSE-NUMBER-INTERNAL
+077032 GRIND-MACROEXPANDED
+077036 ;Loading TIME 4
+077046 forgetfulness-max|
+077053 FIND-MACRO-DEFINITION
+077064 BACK-NEXT
+077073 DEFMAX-COUNTER-VARIABLES
+077075 COMPLETING-READER-PACKAGE
+077116 LIBDOC;COMRD KMP1_4
+077125 *COMPLETING-READ-LINE1-AUX
+077134 COMPLETING-READ-LINE-EXIT
+077144 *COMPLETING-READ-LINE1
+077160 COMPLETING-READ-LINE MACRO
+077167 COMPLETING-READ-LINE
+077206 *COMPLETING-READ-PROCESS-OPTIONS
+077230 *COMPLETING-READ-CASE-CONVERT
+077263 LIBDOC;COMRD KMP1_3
+077272 *COMPLETING-READ-OBJECT?
+077277 #COMPLETION
+077305 ALTMODE
+077314 NEWLINE
+077321 FORMFEED
+077345 COMPLETING-READER-OBJECT-HEADER
+077363 *COMPLETING-READ-MATCH-ALL
+077376 *COMPLETING-READ-SHOW-COMPLETION
+077406 *COMPLETING-READ-AMBIGUITY-ERROR
+077416 *COMPLETING-READ-NULL-ERROR
+077425 *COMPLETING-READ-OPTIONS
+077435 *COMPLETING-READ-CHARS-READ
+077444 *COMPLETING-READ-PROMPT
+077461 *COMPLETING-READ-LAST-CASE
+077470 OVER-RUBOUT
+077476 *COMPLETING-READ-POP-COMPLETION
+077506 LINE-RUBOUT
+077512 *COMPLETING-READ-RESET-COMPLETION
+077522 WORD-RUBOUT
+077526 *COMPLETING-READ-OVERRUBOUT-RETURN
+077536 *COMPLETING-READ-RETURN
+077544 *COMPLETING-READ-RETURN-CHARS
+077553 *COMPLETING-READ-ATTEMPT-COMPLETION
+077563 *COMPLETING-READ-COMPLETION-CHARS
+077573 *COMPLETING-READ-DISPLAY-OPTIONS
+077603 *COMPLETING-READ-REDISPLAY-LINE
+077615 *COMPLETING-READ-INSTREAM
+077625 *COMPLETING-READ-CASE-FUNCTION
+077634 *COMPLETING-READ-UPPERCASIFY
+077643 *COMPLETING-READ-LOWERCASIFY
+077654 *COMPLETING-READ-SOFT-TYI
+077662 *COMPLETING-READ-OUTSTREAM
+077700 COMPLETING-READ
+077713 LINEFEED
+077733 *COMPLETING-READ-TYI
+077740 TTYSET
+077743 TOPS-20
+077746 TTYGET
+077751 FEATURE
+077754 COMPLETING-READ-EXIT
+077761 *COMPLETING-READ-PUSH-COMPLETION
+077771 *COMPLETING-READ-OBJECT
+115367 *COMPLETING-READ
+115374 *COMPLETING-READ1
+115411 BACKSPACE
+115416 EPSILON
+115432 TWENTY-CHIMNEYS
+115435 #-SYMBOLIC-CHARACTERS-TABLE
+115447 w0r' 
+115463 wPvMVr#
+115536 SETSYNTAX-SHARP-MACRO
+115540 ;Loading COMRD 
+115567 DEFSHARP
+115573 LIBLSP
+115600 t	0t
+115601 GLOBALIZE
+115604 SI:GET-FEATURE-SET
+115617 SI:FEATUREP?
+115625 *LEXPR
+115720 ;Loading FTP 127
+115725 NOLDMSG
+115730 NOFEATURE
+115755 bmt1;ftp
+670007 wPvNp
+670155 19-Jul-82
+670173 on Mass Ave at Central Square
+670225 KENS-PUB-CENTRAL
+670373 19-Jul-82
+670412 781 Boylston Street, Boston
+670437 JC-HILLARYS
+670621 19-Jul-82
+670641 in the Prudential Center shopping mall, Boston
+670656 q]Pq]`q]@
+670676 GROUND-ROUND-BOSTON
+671021 19-Jul-82
+671031 accepts Validine cards
+671043 (617) 253-6495
+671073 in the MIT Student Center, Bldg W20, second floor
+671126 CAMPUS
+671134 LOBDELL
+671347 19-Jul-82
+671370 24 hours a day
+671406 in the MIT Student Center, Bldg W20, second floor
+671430 WEST-CAMPUS-MIT
+671451 24-HOUR-COFFEE-HOUSE
+671535 COPLEY-SQUARE
+671553 KENS-AT-COPLEY
+671721 19-Jul-82
+671735 on Boylston in Boston, near the Prudential Center
+671752 q]Pq]`q]@
+671773 KENS-PUB-BOSTON
+672002 19-Jul-82
+672020 at Quincy Market, Boston
+672050 DURGIN-PARK
+672062 wpo=ftSwP
+672232 19-Jul-82
+672250 beyond Harvard Square on Mass Ave
+672302 CHARLIES-BEEF-AND-BEER
+672316 wPvNp
+672451 21-May-83
+672460 (617) 876-7000
+672470 700 Mass Ave at Central Square
+672526 o>VucwPvMPwpo>fui
+672701 21-May-83
+672710 (617) 547-5820
+672724 304 Main St, in Kendall Square
+672737 KENDALL-SQUARE
+672756 GREASE
+673044 19-Jul-82
+673065 on Mass Ave between Harvard Square and Porter Square
+673115 GROUND-ROUND-CAMBRIDGE
+673301 19-Jul-82
+673317 near Harvard Square
+673346 GRENDELS
+673363 wPvNp
+673544 19-Jul-82
+673565 on Mass Ave near Central Square
+673617 GEORGE-AND-NICKS
+673634 wPvNp
+674143 19-Jul-82
+674161 in the Harvard Square area
+674212 BUDDYS-SIRLOIN-PIT
+674233 wpq@&y'
+674427 9-Nov-82
+674444 Won't seat partial groups; latecomers can't join a seated group
+674457 Requires payment in advance
+674470 Long wait
+674510 (617) 277-7300
+674521 43 Boylston St - Route 9, Chestnut Hill, MA
+674536 CHESTNUT-HILL
+674553 LEGAL-SEAFOOD-CHESTNUT-HILL
+674600 wPr+P
+674606 qAVy9qBV|5
+676007 9-Nov-82
+676024 Won't seat partial groups; latecomers can't join a seated group
+676037 Requires payment in advance
+676050 Long wait
+676063 (617) 426-4444
+676103 in the Boston Park Plaza Hotel, Park Square, Boston
+676117 qA0o3@
+676120 ARLINGTON
+676127 PARK-SQUARE
+676145 LEGAL-SEAFOOD-BOSTON
+676172 wpqBF}4wPvMP
+676431 9-Nov-82
+676446 Won't seat partial groups; latecomers can't join a seated group
+676461 Requires payment in advance
+676472 Long wait
+676502 11am-10pm daily, except Sundays 4pm-10pm
+676523 !0!6
+676535 (617) 864-3400
+676556 in Kendall Square, Cambridge, across the street from MIT
+676610 qBV|5qA@
+676611 LEGAL-SEAFOOD-KENDALL
+676626  2.00-2.50    $22.50
+676635  1.50-2.00    $18.95
+676644  1.25-1.50    $15.95
+676653  1.00-1.25    $11.95
+676662 Lobsters
+676673  Soft Shell Crabs             $10.50
+676706  Scrod                        $ 6.95
+676731  Fresh Scallop Kabob          $ 8.95
+676744  Fresh Swordfish Kabob        $10.95
+676757  Fresh Norwegian Salmon Filet $11.95
+676772 Grilled
+700101 17-Jan-85
+700117 (617) 262-0909
+700132 914a Beacon St, Boston, near Boston/Brookline border
+700147 BROOKLINE
+700164 SOL-AZTECA
+700203 wPr00
+700377 19-Jul-82
+700407 Sells T-shirts
+700426 (617) 720-1190
+700442 20 Clinton St, Boston, in Quincy Market area near Haymarket
+700475 GUADALAHARRY'S
+700521 wPvNp
+700743 9-Sep-83
+700753 Big portions
+700761 Long wait
+700770 (617) 491-2040
+701003  Fresh Swordfish              $12.95
+701016  Fresh Tuna                   $10.95
+701031  Fresh Scrod                  $ 6.95
+701044  Broiled Sirloin Steak        $ 8.95
+701057 Broiled
+701070  Potato Skins   $1.75
+701100  Onion Strings  $1.50
+701110  Fish Chowder   $1.50
+701120  Fish and Chips $3.50
+701130  6 Oysters      $3.50
+701140 Appetizers and Small Meals
+701151 LEGAL-SEAFOOD-MENU
+701334 19-Jul-82
+701346 (617) 423-1000
+701365 248 Northern Ave (on the waterfront in Boston)
+701413 JIMMY'S-HARBORSIDE
+701431 r.@wp
+701613 19-Jul-82
+701623 No fancy atmosphere, just good food
+701635 Potentially long wait outside
+701660 (617) 338-7539
+701670 15.5 Fish Pier, Boston
+701711 SEAFOOD
+701716 NO-NAME-RESTAURANT
+702156 19-Jul-82
+702166 Lunch buffet M-F, $3.25
+702206 (617) 876-6299
+702224 on Mass Ave between Main St and Central Square
+702255 CANTONESE
+702303 wPvNp
+702512 19-Jul-82
+702527 (617) 491-6725
+702551 on Mass Ave between Main St and Central Square
+702601 qW0qU`
+702605 PEKING-DUCK
+702613 w0r18
+703036 Sun-Wed 11am-10pm, Thu 11am-Midnight, Fri-Sat 11am-1am
+703064 1001 Mass Ave (between Central Sq and Harvard Sq)
+703120 CHI-CHIS
+703316 11-Mar-84
+703335 (617) 536-4341 or 247-7451
+703351 30 Gloucester St, Boston (in a public alley)
+703366 q]`q]Pq]@
+703373 q]pqZ`
+703407 CASA-ROMERO
+703606 19-Jul-82
+703624 (617) 720-0610
+703640 upstairs of the middle building in Quincy Market, Boston
+703660 GOVERNMENT-CENTER
+703664 qJpqJ`qJP
+703666 HAYMARKET
+703675 QUINCY-MARKET
+703714 DRINKS
+703716 qK0qK 
+703720 MEXICAN
+703726 FROGG-LANE
+703733 w0r0h
+703747 wPvNp
+704004 wPvNp
+704036 27-Dec-83
+704046 Good ravs, moo shu
+704062 Pork with Bean Paste                       $4.50
+704077 Kung Pao Chicken                           $4.75
+704114 Beef in Orange Flavor                      $4.95
+704135 Moo Shu Pork                               $4.50
+704152 Moo Shu Chicken                            $4.50
+704167 Moo Shu Beef                               $4.75
+704210 Wonton Soup                                $1.25
+704225 Hot & Sour Soup                            $1.10
+704246 Peking Ravioli(6)                          $2.50
+704263 Egg Rolls(2)                               $2.10
+704306 (617) 864-6265
+704323 Beacon St., Somerville, next to Star Market
+704350 qW0qW 
+704354 CHANG-FENG
+704361 w0r2H
+704401 wPvNp
+704455 21-May-83
+704464 491-4929
+704516 KABUKI
+704636 19-Jul-82
+704646 Good dimsum
+704661 Yu Shiang Green Bean with Pork              $4.50
+704675 qOW	_qOG	]
+704702 Shredded Pork with Peking Sweet Bean Paste  $5.50
+704723 Kung Pao Beef Steak                         $8.50
+704740 Orange Flavor Beef                          $6.50
+704761 Kung Pao Chi Ding                           $5.50
+707002 Moo Shi Beef                                $4.95
+707017 Moo Shi Chicken                             $4.95
+707034 Moo Shi Pork                                $4.75
+707051 Moo Shi Vegetables                          $4.75
+707072 Wonton Soup                                 $2.00
+707107 Hot & Sour Wonton Soup                      $2.00
+707124 Hot & Sour Soup                             $1.10
+707141 Suan La Chow Show                           $2.00
+707162 Peking Ravioli(6)                           $2.95
+707177 Egg Rolls(2)                                $1.95
+707222 (617) 864-1991
+707246 on Mass Ave between Main St and Central Square by McDonalds
+707277 qW0qW qU`
+707303 MARY-CHUNGS
+707323 wPvNp
+707363 1-Jan-80
+707372 (617) 267-0606
+707420 daily noon-1am
+707430 Comm Ave near PSK in Boston
+707462 AL-CAPONES
+707475 wPr9X
+707517 19-Jul-82
+707534 (617) 497-1544
+707550 on Mass Ave between MIT and Main Street
+707601 qW0qW qU`
+707605 MANDARIN-RESTAURANT
+707720 13-Oct-83
+707727 (617) 262-7371
+707736 11-Mar-84
+707745 (617) 491-7823
+707752 405 Beacon St (just off of Mass Ave) in Boston
+707755 783 Main St.
+710000 STEFANI-HOUSE-OF-PIZZA-2
+710043 CROSSROADS
+710056 wPvK(
+710115 11-Mar-84
+710124 (617) 547-4588
+710134 272 Brookline St, Cambridge
+710154 STEFANI-HOUSE-OF-PIZZA
+710271 11-Mar-84
+710274 5-Sep-82
+710300 (617) 354-8238
+710310 4 Brookline St, Cambridge
+710317 (617) 247-8181
+710327 MIDDLE-EAST-RESTAURANT
+710355 wPvNp
+710374 On Comm Ave, near Kenmore Square in Boston
+710427 MISSISSIPPIS
+710443 wPvK(
+710513 ;Loading SHARPM 82
+710630 Mon-Wed 11am-12:30am, Thu-Sat 11am-1:30am, Sun noon-12:30am
+710657 (617) 497-1530
+710667 22 JFK St (in Harvard Square)
+710722 UNOS-CAMBRIDGE
+710735 Delicatessen Pizza   11.95
+710746 Steak N Cheese Pizza 12.95
+710757 ``The Uno''          12.95
+710774 Deep Dish Specialties
+713010 Extra Tomatoes        1.45
+713021 Black Olives          1.45
+713032 Anchovies             1.45
+713043 Fresh Garlic          1.00
+713054 Fresh Onions          1.00
+713065 Fresh Green Peppers   1.00
+713076 Fresh Mushrooms       1.45
+713107 Fresh Sausage         1.75
+713120 Pepperoni             1.45
+713135 Additional Ingredients
+713151 Double Cheese         8.95
+713162 Cheese                7.95
+713177 Deep Dish Pizza
+713211 Large Size, serves 3-4
+713221 UNOS-LARGE-MENU
+713234 Delicatessen Pizza    6.50
+713245 Steak N Cheese Pizza  6.95
+713256 The ``Veggie''        4.95
+713267 Mexican Pizza         6.50
+713300 Pizza Bianco          6.95
+713311 Sea Delico            8.95
+713322 ``The Uno''           6.95
+713337 Deep Dish Specialties
+713353 Extra Tomatoes         .80
+713364 Black Olives           .80
+713375 Anchovies              .80
+713406 Fresh Garlic           .60
+713417 Fresh Onions           .60
+713430 Fresh Green Peppers    .60
+713441 Fresh Mushrooms        .80
+713452 Fresh Sausage          .90
+713463 Pepperoni              .80
+713500 Additional Ingredients
+713514 Double Cheese         4.95
+713525 Cheese                3.95
+713542 Deep Dish Pizza
+713554 Regular (Medium) Size, serves 2
+713566 UNOS-MEDIUM-MENU
+713602 The ``Veggie''        2.95
+713613 Mexican Pizza         3.75
+713624 Pizza Bianco          3.95
+713635 Sea Delico            4.95
+713646 ``The Uno''           3.95
+713663 Deep Dish Specialties
+713677 Extra Tomatoes         .40
+713710 Black Olives           .40
+713721 Anchovies              .40
+713732 Fresh Garlic           .30
+713743 Fresh Onions           .30
+713754 Fresh Green Peppers    .30
+713765 Fresh Mushrooms        .40
+713776 Fresh Sausage          .50
+714044 daily noon-3am, Fri-Sat noon-4am
+714064 Boylston Street, just west of Mass Ave.
+714076 19-Jul-82
+714106 Moves around campus
+714117 -none-
+714162 JOES-PIZZA-TRUCK
+714207 wPvNp
+714262 19-Jul-82
+714277 (617) 661-1660
+714315 on Main Street between Tech Square and Mass Ave
+714347 MANDARIN
+714352 qW0qW qU`
+714356 COLLEEN'S
+714431 19-Jul-82
+714441 Not recommended
+714476 daily noon-3am, Fri-Sat noon-4am
+714512 (617) 354-9673
+714532 on Mass Ave near Central Square, toward MIT
+714565 HIFI-PIZZA
+714611 21-May-83
+714620 (617) 536-1577
+714624 5-Aug-77
+714630 47A Mass Ave, Boston
+714647 DESPINA'S-PLACE
+714705 (617) 876-4897
+714740 74 Winthrop St at Boylston St, Harvard Square
+714763 19-Jul-82
+714772 (617) 491-5599
+715007 Pepperoni              .40
+715024 Additional Ingredients
+715040 Double Cheese         2.95
+715051 Cheese                2.45
+715066 Deep Dish Pizza
+715100 Individual (Small) Size, serves 1
+715112 UNOS-SMALL-MENU
+715115 5-Sep-82
+715132 wPvK(
+715147 (617) 247-9712
+715163 On Comm Ave, near Kenmore Square in Boston
+715206 19-Jul-82
+715223 (617) 492-7272
+715227 DELI-HAUS
+715262 on Mass Ave between MIT and Main Street
+715277 wPr9Xwp
+715312 qW0qW 
+715316 JOYCE-CHENS-SMALL-EATING-PLACE
+715326 19-Jul-82
+715340 (617) 247-7494
+715352 wPvNp
+715356 near Kenmore Square
+715367 KENMORE
+715376 KENMORE-SQUARE
+715414 SGT-PEPPERS
+715432 wPvNp
+715613 19-Jul-82
+715623 19-Jul-82
+715634 Central Square
+715644 (617) 547-2299
+715663 PAPA-GINOS
+715670 w0vK`
+715715 1-Aug-77
+715723 on Mass Ave between Main Street and Central Square.
+715747 (617) 266-5576
+715753 qW0qW 
+715757 HSING-HSING
+716004 KENDALL
+716015 INMAN-SQUARE
+716031 DESSERT
+716036 ROSIE'S
+716100 BOSTON-SANDWICH
+716107 w0r7 
+716123 wPvMP
+716234 7-Oct-82
+716236 19-Jul-82
+716246 (617) 354-0636
+716257 Obnoxiously loud, bad music on weekend evenings
+716265 at 33 Dunster Street, very near Harvard Square
+716302 HARVARD
+716311 HARVARD-SQUARE
+716333 Funny menus
+716336 33-DUNSTER-STREET
+716361 wPvNp
+716373 Very interesting sandwiches
+716427 Little River Turnpike, Annandale, Virginia
+716440 17-Jan-85
+716450 Good desserts
+716456 ANNANDALE
+716463 o4 o3@o2@
+716475 143 Main Street, Cambridge (in Kendall Square)
+716512 FRITZBEES-FLYING-FOOD-FACTORY
+716537 PAPRIELLE-KENDALL
+716546 w0r7@
+716564 wPvNp
+716570 7-Oct-82
+716616 t)g"Jwp
+716621 (617) 547-6120
+716641 on Mass Ave, between Central Sq and Harvard
+716676 BEL-CANTO
+716707 wPvNp
+717000 PINOCCHIO
+717011 near Harvard Square
+717040 FLOURCHILDS
+717062 wPvNp
+717175 17-Jan-85
+717205 Sells t-shirts
+717213 Excellent dimsum
+717230 11:30am daily. Closes at 9:30pm Sun-Thu, 10:30pm Fri-Sat
+717271 19-Jul-82
+717306 (617) 547-6565
+717312 (617) 547-2208
+717326 1720 Mass Ave (between Harvard and Porter Square)
+717331 on Mass Ave between Central Sq and MIT
+717352 MIT-AREA
+717372 CAMPUS-HOUSE-OF-PIZZA
+717411 SZECHUAN
+717413 qW0qW 
+717415 CHINESE
+717422 CHANG-SHO
+717472 19-Jul-82
+717500 ONE-POTATO-TWO-POTATO
+717515 w0vM8
+717535 (617) 523-8546
+717546 Seems to be open until 3 AM.
+717557 Experimental entry, haven't been there
+717577 Just across SaltPepper Bridge
+717612 CHARLES
+717621 CHARLES-STREET
+717634 19-Jul-82
+717641 SANWICH
+717646 YELLOW-SUBMARINE
+717661 just off Main Street on Windsor between Tech Sq and Mass Ave
+717706 GROCERY
+717714 NEWTOWNE-VARIETY
+717720 7-Oct-82
+717740 Not really conveniently located for subway
+717755 (617) 491-9488
+717767 243 Hampshire St, Cambridge, near Inman Square
+720005 z#-\-PARSE
+721037 19-Jul-82
+721042 21-May-83
+721051 (617) 547-6300
+721064 569 Mass Ave, about a block twoard MIT from Central Sq
+721101 CENTRAL
+721103 Obnoxiously loud, bad music on weekend evenings
+721120 SPANISH
+721125 CANTARES
+721150 wPvO(
+721161 Funny menus
+721167 Very interesting sandwiches
+721175 17-Jan-85
+721205 Good desserts
+721241 next to Toscanini's on Main Street, near Mass Ave
+721257 Fairfax Circle, Fairfax, Virginia
+721302 PAPRIELLE
+721306 qYG#Ww0
+721323 wPvNp
+721334 FAIRFAX
+721340 VIRGINIA
+721342 o4 o3@o30
+721354 FRITZBEES-EMPORIUM
+721372 30-Apr-83
+721374 tiW&:wp
+721422 every day 24 hours -except- 4am-7am Sunday
+721446 (617) 267-1605
+721462 200 Brookline Ave, Boston, opposite Star Market by Fenway Pk
+721477 FENWAY-PARK
+721507 CENTRAL-SQUARE
+721514 BOSTON
+721526 GENERAL
+721536 EMPIRE-DELI
+721544 w0vO`
+721660 19-Jul-82
+721670 Sells t-shirts
+721673 qYg#^qYW#[
+721676 Open until midnite.
+721703 13-Oct-83
+721713 Live entertainment, $1 cover charge
+721723 Very novel ice cream flavors
+721727 (617) 876-9180
+721737 1920 Mass Ave
+721747 PORTER-SQUARE
+721754 CAMBRIDGE
+721760 GREATER-BOSTON
+721765 MASSACHUSETTS
+721772 UNITED-STATES
+723002 SANDWICH
+723007 CHRISTOPHER'S
+723015 19-Jul-82
+723027 FTPDAT
+723040 humor;ts ftp
+723044 on Main Street, near Mass Ave
+723052 Across from the Key Theatre
+723115 TOSCANINIS
+723126 No init file found: ~A
+723147 wPr9X
+723154 Error in loading init file.
+723262 near corner of M street
+723275 :KILL 
+723304 BMT1;FTP 127_3.
+723311 GEORGETOWN
+723315 WASHINGTON-DC
+723335 AMERICAN-CAFE-WASHINGTON
+723346 Describes the status of the current connection.
+723401 o4w&ro57*;
+723403 Notes: ~{~A.~^~%       ~}
+723433 Near subway stop~P ~{~A~^, ~}.
+723442 SUBWAY
+723465 Located ~A.
+723470 wpq]p
+723471 ADDRESS
+723514 Use the MENU command to see this server's menu.
+723547 unknown.
+723566 19-Jul-82
+723572 ~@[~*Take-out. ~]~@[~*Delivery. ~]Phone ~A
+723604 DELIVERY
+723607 TAKE-OUT
+723621 Sells t-shirts
+723630 Just opened in spring, 1982
+723634 unknown
+723657 ~@[~D stars. ~]~@[Estimated cost: ~A.~]
+723710 in Boston, across from Auditorium subway station
+723712 Connection mode~P ~{~A~^, ~}.
+723741 ~&Connection open to ~A. Bite size is ~A.~@{~@[~%~A~]~}
+723757 BACK-BAY
+723775 ~&There is no open connection.
+724013 ~&Host not responding. Still trying...
+724024 LAST-UPDATE
+724050 ~&Will use ~A transfer mode. ~
+			          (BITE command can change this)~
+			       ~%~A, Food server~@[ - ~A~]~
+			       ~%Bugs/Gripes to ~A
+724127 ~&Warning: Site being debugged. ~
+				         May crash at any time.
+724166 Open connection to: 
+724200 11-Mar-84
+724213 Already connected to ~A
+724241 CONNECT
+724246 (617) 739-0034
+724260 on the corner of Harvard St and Commonwealth Ave
+724300 ALLSTON
+724302 Refers to all servers at least as good as a speicified quality.
+724371 EXCELLENT
+724412 UNOS-ALLSTON
+724414 quality: 
+724441 QUALITY
+724455 q\G,!wpq\W,&
+724502 Refers to all servers in a given area
+724535 location: 
+724541 19-Jul-82
+724560 Good food
+724562 LOCATION
+724612 798 Main St, between Tech Sq and Mass Ave, near Colleen's
+724623 Refers to all servers of a specified type.
+724657 type: 
+724700 PANACHE
+724743 Refers to the complement of some server class.
+725005 STEVES-BOSTON
+725026 FORMAT-COST
+725052 ~A, for bite size ~A
+725060 18-Aug-82
+725070 Fabulous service
+725077 less than ~D dollars
+725121 Gloucester St, Boston
+725124 more than ~D dollars
+725151 about ~D dollars
+725163 L'ESPALIER
+725200 ~D-~D dollars
+725242 Lists the connected site's menu
+725276 You must connect to a site to see a menu.
+725330 No menu available.
+725345 19-Jul-82
+725355 ~&~{~&~A~%~}
+725363 Sells t-shirts
+725376 Long walk, but worth it
+725440 near Porter Square
+725441 Exits the program.
+725470 ~&Closing connection to ~A...~%
+725501 ICE-CREAM
+725513 STEVES-SOMERVILLE
+725553 q\'+)q\w)	
+725556 Prints the current time
+725605 19-Jul-82
+725606 ~&It's now ~A.
+725642 in downtown Boston between Park St and Govt Ctr
+725661 PARK-STREET
+725670 Connects to a given site.
+725720 PARKER-HOUSE
+725722 Host unavailable due to ~
+				           scheduled down.~%~A
+725754 wpo5g)BwP
+725760 Attempt to open connection to server timed out.
+726033 11-Mar-84
+726037 Refers to the empty of servers.
+726104 (617) 620-1817
+726116 in Marshal Shopping Center on Rt 9
+726132 Refers to the set of all servers.
+726146 FRAMINGHAM
+726200 UNOS-FRAMINGHAM
+726211 class: 
+726216 COMPLEMENT-SITES
+726247 q]'2Awpq]72HwPr9o2Z
+726263 Help with NETWORK-FILTER: 
+726316 vV8v:h
+726331 DEFINE-NETWORK-FILTER MACRO
+726353 DEFINE-NETWORK-FILTER
+726366 19-Jul-82
+726376 Cook at table
+726405 *NETWORK-FILTERS*
+726426 NETWORK-FILTER-DOCUMENTATION MACRO
+726447 at 777 Memorial Drive
+726451 NETWORK-FILTER-DOCUMENTATION
+726466 NETWORK-FILTER
+726500 NETWORK-FILTER-FN MACRO
+726521 NETWORK-FILTER-FN
+726534 JAPANESE
+726542 BISUTEKI
+726562 wPr0/38
+726564 Sets the active network to a specified class
+726657 Keeps only servers in a given class to the active network
+726720 REMOVE
+726761 Adds any servers in a given class to the active network
+730010 No connection to close.
+730061 DISCONNECT
+730122 Changes the current bite-size.
+730141 11-Mar-84
+730153 Set bite-size to: 
+730162 q^ q^0
+730200 ~&Current bite size is ~A
+730221 19-Jul-82
+730232 FORMAT-HOURS
+730243 accepts Validine cards
+730256 Open ~{~A~^;~%     ~}.
+730274 GRINDPREDICT
+730301 READMACROINVERSE-PREDICT
+730304 Open ~A.
+730327 Open ~A.
+730336 in MIT's Walker Dining Facility, Bldg 50, second floor
+730342 #-MACRO-X
+730372 #-MACRO-O
+730416 Exact ~Atime info not available.
+730432 #-MACRO-Q
+730446 ~A~@[~%Closed ~{~A~^, ~}.~]
+730455 PRETTY-HOURS
+730463 BMT1;FTP 127_2.
+730473 PRITCHETT
+730500 #-MACRO-N
+730507 otherwise
+730531 #-MACRO-M
+730536 FORMAT-HOURS-SET
+730560 SHARPCONDITIONALS
+730563 ~{~A-~A~^, ~}
+730571 STRING-CAPITALIZE
+730600 CHAR-UPCASE
+730606 CHAR-DOWNCASE
+730614 FORMAT-TIME
+730634 wPvMP
+730640 ~D:~2,'0D~A
+730651 #-MACRO--
+730701 #-MACRO-+
+730704 SI:#+OR-READ
+730751 Unknown symbolic name to #\
+730752 Midnight
+730763 PROBABLY
+730766 CLOSED
+730771 SITE-UP?
+731032 11-Mar-84
+731065 Display the active sites
+731140 Mon-Thu 11am-11pm, Fri-Sat 11am-1am, Sun noon-11pm
+731155 Displays the active server network.
+731204 (617) 267-8554
+731207 ~&No active sites.
+731223 731 Boylston (near the Prudential Center)
+731234 ~&Active sites are: ~{~<~% ~1:; ~A~>~^,~}.~%
+731262 AUDITORIUM
+731266 w72'qH
+731272 PRUDENTIAL
+731274 q]`q]Pq]@
+731276 COPLEY
+731305 PRUDENTIAL-CENTER
+731321 wG2cwW2r
+731322 19-Jul-82
+731327 Edit the active network of servers to be considered.
+731350 UNOS-BOSTON
+731365 Network command: 
+731412 NETWORK
+731442 Dress code
+731450 Gorgeous view of the bay
+731455 Help with NETWORK-COMMAND: 
+731523 DEFINE-NETWORK-COMMAND MACRO
+731537 at the top of 60 State Street, Boston (near Quincy Market)
+731545 DEFINE-NETWORK-COMMAND
+731561 qJ`qJP
+731577 *NETWORK-COMMANDS*
+731605 v88x$P
+731615 CLASSY
+731620 NETWORK-COMMAND-DOCUMENTATION MACRO
+731636 BAY-TOWER-ROOM
+731643 NETWORK-COMMAND-DOCUMENTATION
+731660 NETWORK-COMMAND
+731666 o770Ew0
+731672 NETWORK-COMMAND-FN MACRO
+731711 wPvMP
+731713 NETWORK-COMMAND-FN
+731756 Connects from the current site.
+734051 zSTATUS COMMAND
+734101 zMENU COMMAND
+734111 zQUIT COMMAND
+734117 zTIME COMMAND
+734143 zCONNECT COMMAND
+734173 zQUALITY NETWORK-FILTER
+734203 zLOCATION NETWORK-FILTER
+734213 zTYPE NETWORK-FILTER
+734221 zNOT NETWORK-FILTER
+734225 zNONE NETWORK-FILTER
+734233 zALL NETWORK-FILTER
+734245 zHELP NETWORK-FILTER
+734271 zSET NETWORK-COMMAND
+734275 zREMOVE NETWORK-COMMAND
+734303 zGET-FILTERED-LIST
+734305 zADD NETWORK-COMMAND
+734313 zSITES COMMAND
+734325 zSHOW NETWORK-COMMAND
+734335 zNETWORK COMMAND
+734343 zHELP NETWORK-COMMAND
+734373 zDISCONNECT COMMAND
+734405 zBITE COMMAND
+734477 zTOPLEVEL
+734517 zINITIALIZE
+734553 zHELP COMMAND
+734601 zTERMINATE-COMMAND
+734753 zTIME:NORMALIZE-DATE-INTERNAL
+735026 ~&~:[?Command aborted.~;?~A~]
+735040 #-MACRO-\
+735070 t0q_71S
+735076 #-MACRO-,
+735101 Unexpected error at this end.
+735130 Unexpected error packet seen. ~
+			       Connection to ~A being closed.
+735155 #-MACRO-.
+735207 #-MACRO-%
+735236 COMMAND-ABORT
+735245 #-MACRO-/
+735262 ~&FTP.~A (Food Transfer Protocol) - Type "?" for a list of commands.
+735320 DEFINE-SITE MACRO
+735333 #-MACRO-'
+735340 DEFINE-SITE
+735362 #-MACRO-B
+735370 *POSSIBLE-LOCATIONS*
+735414 #-MACRO-R
+735421 *POSSIBLE-TYPES*
+735444 Bad numeric base for #nR
+735452 *SITES*
+735470 19-Jul-82
+735477 #-MACRO-|
+735501 *ACTIVE-SITES*
+735515 accepts Validine cards
+735527 *CONNECTED-SITE*
+735533 EOF within read of # comment
+735552 (617) 253-2715
+735560 *BITE-SIZE*
+735566 #-MACRO-*
+735605 MEDIUM
+735622 *BITE-SIZES*
+735631 #-MACRO-^
+735650 in MIT's Walker Dining Facility, Bldg 50, 1st floor
+735666 Help with COMMAND: 
+735711 EAST-CAMPUS-MIT
+735727 #-BS-READER
+735731 DEFINE-COMMAND MACRO
+735744 #-#B-READER
+735746 ;Loading DEFMAX 98
+735773 DEFINE-COMMAND
+737006 DOLIST
+737021 #-MACRO-:
+737024 #-FLUSH-CHARS-NOT-SET
+737044 TIME:PARSE-LIST
+737077 Syntax error in time spec
+737113 SECOND
+737124 FOURTH
+737141 SEVENTH
+737146 EIGHTH
+737163 ELEVENTH
+737166 ELEVEN
+737171 TWELFTH
+737174 TWELVE
+737177 THIRTEENTH
+737202 THIRTEEN
+737205 FOURTEENTH
+737210 FOURTEEN
+737213 FIFTEENTH
+737216 FIFTEEN
+737221 SIXTEENTH
+737224 SIXTEEN
+737227 SEVENTEENTH
+737233 SEVENTEEN
+737236 EIGHTEENTH
+737241 EIGHTEEN
+737244 NINETEENTH
+737247 NINETEEN
+737252 TWENTIETH
+737255 TWENTY
+737260 THIRTIETH
+737263 THIRTY
+737266 FORTIETH
+737273 FIFTIETH
+737302 MORNING
+737311 EVENING
+737314 AFTERNOON
+737351 BEFORE
+737364 YESTERDAY
+737367 TOMORROW
+737474 *COMMANDS*
+737510 DECEMBER
+737525 WALKER
+737531 NOVEMBER
+737535 COMMAND-DOCUMENTATION MACRO
+737552 OCTOBER
+737600 COMMAND-DOCUMENTATION
+737603 SEPTEMBER
+737624 AUGUST
+737632 COMMAND
+737653 COMMAND-FN MACRO
+737700 Numeric token expected by some #-function
+737713 COMMAND-FN
+737755 FEBRUARY
+737776 MONTH-VALUE
+740000 DAYTIME
+740010 *INIT-FILE*
+740071 December
+740075 *INITIALIZED*
+740103 MENTION-BUG
+740114 November
+740125 Not a character - CHARACTER
+740135 ~&?Error: ~A~% Please report bug in FTP.~A to ~A
+740137 October
+740162 September
+740205 August
+740214 PEEK-SPLICING
+740220 KMP@MIT-MC
+740223 PEEK-MACRO
+740237 *BUG-ADDRESS*
+740250 DEFSHARP MACRO
+740264 Wrong number args for macro
+740305 DOLIST MACRO
+740351 ;~S was not functionally defined by autoloading
+740362 February
+740371 :UNDEFINED-FUNCTION
+740403 SI:#-TEST
+740405 January
+740420 TIME:MONTHS
+740425 ;~1G~S, autoload file for ~2G~S, is missing
+740457 :WRONG-TYPE-ARG
+740472 MACROLIST
+740476 Sunday
+740520 GRINDMACRO
+740521 Saturday
+740527 MACROEXPANDED-grindmacro|
+740544 Friday
+740552 MACROEXPANDED MACRO
+740567 Thursday
+740574 SI:INVALIDATED
+740610 19-Jul-82
+740612 Wednesday
+740631 accepts Validine cards
+740635 Tuesday
+740647 non-simple-x|
+740660 Monday
+740663 TARGET-FEATURES
+740673 TIME:DAYS
+740704 in the MIT Student Center, Bldg W20, third floor
+740720 STANDARD-OUTPUT
+740725 #-C-M-bits
+741002 JANUARY
+741023 SUNDAY
+741044 SATURDAY
+741065 FRIDAY
+741106 THURSDAY
+741127 WEDNESDAY
+741150 TUESDAY
+741171 DAY-VALUE
+741174 MONDAY
+741201 Gives help on a given command type.
+741305 TIMEZONE-OFFSET
+741322 #-MACRO-T
+741331 #-CNTRL-META-IFY
+741333 Help with ~A: 
+741335 Args to TIME:DAY-OF-WEEK must be fixnums
+741355 COMPILE
+741370 The ~:R of ~A, ~D will fall on a ~A, not a ~A.
+741405 DEFINE-
+741412 -DOCUMENTATION
+741423 Today is a ~3G~A, not a ~A.
+741433 Bad argument to a # function
+741435 DEF-COMMAND-TYPE MACRO
+741452 The ~:R of ~A, ~D fell on a ~A, not a ~A.
+741464 TIME:ON-WHAT-DAY-OF-THE-WEEK?
+741477 DEF-COMMAND-TYPE
+741505 TIME:DAY-OF-THE-WEEK-STRING
+741517 #+--TEST-FOR-FEATURE
+741526 TIME:MONTH-STRING
+741535 Bad features list for #+ or #-
+741541 GET-INPUT-LINE
+741556 FEATURES
+741577 ABORT-COMMAND
+741625 Garbage format in #-MACRO-DATALIST
+741631 ~A the ~:R of ~A, ~D; ~D:~2,'0D:~2,'0D ~A
+741643 TIME:VERIFY-DATE
+741662 TIME:PRINT-CURRENT-DATE
+741670 TIME:PRINT-DATE
+741675 Unknown dispatch character after #
+741711 CONTROL-META
+741717 CONTROL
+741723 *READ-TOKEN
+741726 ~D/~D/~D ~D:~2,'0D:~2,'0D
+741740 SI:#-MACRO-1
+741746 TIME:PRINT-CURRENT-TIME
+741754 TIME:PRINT-TIME
