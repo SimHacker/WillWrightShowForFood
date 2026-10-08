@@ -213,8 +213,13 @@ against the `MESL` table and `XCT`s the matching entry:
 | `GRID` | `122511` | coarsen the snap grid to 16 units |
 | `START` | `262701` | reinitialize |
 
-Anything else prints `?`. A line starting `/` is a label text; `:`
-moves the working pointer to a subpicture. `TITAN`'s four-way skip
+Anything else prints `?`. Those commands work only when nothing is
+blinking. When something is blinking, the line describes it instead
+(`MESIN`): `/text` adds a line of data to the blinking instance;
+`:text` steps from the instance to its subpicture (`MESIN9`) and makes
+the text that subpicture's type; Return alone lists the instance's
+name, its data lines and `:type`; any other text renames the instance.
+A blinking line is refused with Note 6. `TITAN`'s four-way skip
 return maps to typed error notes — checksum fail, not PIXIE data,
 data won't fit — and on success SYMELEC rebuilds its name list and
 puts the received picture on the tube.
