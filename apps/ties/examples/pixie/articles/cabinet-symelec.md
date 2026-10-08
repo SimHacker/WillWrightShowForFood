@@ -6,7 +6,7 @@ synonyms:
 definition: "How to draw with Heinz Lemke's 1972 SYMELEC on the emulated PDP-7: tap S, pick a line type, drag the cross, tap F."
 ---
 
-Everything on the tube is drawn by SYMELEC, ~Heinz Lemke~'s 1972 PIXIE program, run from his listing. Your mouse is the light pen.
+Everything on the tube is drawn by SYMELEC, ~Heinz Lemke~'s 1972 PIXIE program, run from his listing. Your mouse is the light pen. The whole tour, step by step, is the ~PIXIE tutorial~.
 
 - **The + in the middle** is the tracking cross. It follows the pen. How it does that is ~Tracking~.
 - **The letters around it** are a radial menu, the earliest known one.
