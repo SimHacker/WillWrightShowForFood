@@ -37,6 +37,8 @@ restaurants near MIT.
 
 ## How the text was recovered
 
+What is missing and where to ask for it: [`ANALYSIS-AND-ARCHIVE-REQUEST.md`](ANALYSIS-AND-ARCHIVE-REQUEST.md).
+
 Running `strings` on the file finds nothing, because each 36-bit word holds five 7-bit characters. Even read
 that way, the program's text comes out interleaved: MacLisp keeps a symbol's print name as a list of words, each
 cons cell pointing (CAR) at five characters and (CDR) at the next cell. `pnames.txt` follows those chains, which
