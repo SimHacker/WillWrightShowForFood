@@ -87,19 +87,19 @@ function parseSymbolTsv(text) {
 		});
 }
 
-/** Mitch's Forth, or a copy of its kernel (tapes/pdp7forth/VARIANTS.yml); each builds once per page. */
+/** Forth kernels by file (tapes/pdp7forth/VARIANTS.yml): the menu runs the full-names copy; Mitch's kernel.s stays for tests. */
 const FORTH_KERNELS = {
 	'kernel.s': () => import('../../../../packages/cabinet/tapes/pdp7forth/kernel.s?raw'),
 	'kernel-names-full.s': () => import('../../../../packages/cabinet/tapes/pdp7forth/kernel-names-full.s?raw')
 };
 
-function forthProgram({ id, label, kernelFile, note = '' }) {
+function forthProgram({ id, label, kernelFile }) {
 	const built = { kernel: null, image: null };
 	return {
 		id,
 		label,
 		listing: { user: 'wmb,claude' },
-		title: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP" + note,
+		title: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP",
 		help: {
 			text: 'Type a line and press Return: 2 3 + .  Draw: CS 4 0 DO 200 FD 90 RT LOOP.  WORDS lists every word. DEMO shows more.',
 			links: [
@@ -340,13 +340,7 @@ export const PROGRAMS = [
 			return `alt ${v('h2') / 2} vel ${v('v')} fuel ${v('fuel')}`;
 		}
 	},
-	forthProgram({ id: 'forth', label: 'FORTH + TURTLE (2026)', kernelFile: 'kernel.s' }),
-	forthProgram({
-		id: 'forth-names',
-		label: 'FORTH, FULL NAMES (2026)',
-		kernelFile: 'kernel-names-full.s',
-		note: ' This copy keeps every character of a name: SQUARE and SQUID are two words.'
-	}),
+	forthProgram({ id: 'forth', label: 'FORTH + TURTLE (2026)', kernelFile: 'kernel-names-full.s' }),
 	{
 		id: 'unix',
 		label: 'UNIX v0 (1969)',

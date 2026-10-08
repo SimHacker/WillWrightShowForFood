@@ -35,7 +35,7 @@ to 32K.
 - **Forth pen words** `pen?`, `pen@`, `resume`, `tag@`, and Forth interrupt handlers
   ([ROADMAP §14](ROADMAP.md#14-small-items)).
 - **RGB pen colours**, watch the beam, Prefab-style controls for PIXIE (ROADMAP §14).
-- **Full-names Forth kernel**: built and on the menu (FORTH, FULL NAMES); next, Mitch's SIMH tests and the PRs ([VARIANTS.yml](tapes/pdp7forth/VARIANTS.yml)).
+- **Full-names Forth**: the cabinet's Forth now; next, the PRs to Mitch and the Open Firmware name words ([VARIANTS.yml](tapes/pdp7forth/VARIANTS.yml)).
 - **DUEL game panel**: ship records at 1471 and 1514, torpedoes 1537–1544.
 - **Instruction editor:** grab POINT words and whole strings; skip dark vectors when picking.
 - **Forth `random`, `atan2`, shapes** (ROADMAP §5); **gamepads** (ROADMAP §14).

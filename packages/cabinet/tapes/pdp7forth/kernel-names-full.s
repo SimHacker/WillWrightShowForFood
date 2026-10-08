@@ -1,9 +1,10 @@
 " PDP-7 Forth -- kernel, full names
 "
 " A copy of kernel.s (VARIANTS.yml) that keeps every character of a name.
-" Name word 1 stays at xt+1; words 2..n lie below the header, word k at
-" xt-(k-1), so the threading, mkcell and the body at xt+2 are as before.
-" parse, find, mkhdr, abort and WORDS differ; the rest matches kernel.s.
+" A word is [name] [header] [body]: the name, three SIXBIT characters a
+" word, space-padded, lies just before the header, as in Open Firmware.
+" The xt is still the header's address; the body is at xt+1, not xt+2.
+" parse, find, mkcell, mkhdr, abort and WORDS differ from kernel.s.
 "
 " A working interactive Forth: the inner interpreter (NEXT and the CAL
 " trap handler "nest"), dictionary search, the primitive set, console
@@ -214,7 +215,6 @@ putc:	0
 find:	0
 	lac latest
 1:	dac p
-	dac 013
 	lac i p
 	and cmask	" count field only
 	sad tcnt	" skip if count differs
@@ -226,30 +226,42 @@ find:	0
 	cma		" -(dist-1)-1 = -dist
 	tad p
 	jmp 1b
-2:	lac i 013	" name word at p+1
+2:	lac tcnt	" the name is ceil(length/3) words before p
+	cll
+	lrs 13
+	dac fk
+	dzm fn
+6:	isz fn
+	lac fk
+	tad m3
+	dac fk
+	sma sza
+	jmp 6b
+	lac fn
+	cma
+	tad d1
+	tad p
+	dac fq		" p - fn: the name's first word
+	lac i fq
 	sad tname
 	skp
 	jmp 3b
-	lac tnw		" words 2..n, at p-1, p-2, ...
-	tad m2
-	spa		" one word or none: matched
+	lac fn		" then words 2..fn against tnbuf
+	cma
+	tad d2
+	sna
 	jmp 5f
-	cma		" -(tnw-1)
 	dac fk
-	lac p
-	dac fq
 	lac tnbp
 	dac fr
-6:	isz fr
-	lac fq
-	tad m1
-	dac fq
+7:	isz fq
+	isz fr
 	lac i fq
 	sad i fr
 	skp
 	jmp 3b
 	isz fk
-	jmp 6b
+	jmp 7b
 	jmp 5f
 4:	lac m1		" not found
 	jmp i find
@@ -258,8 +270,8 @@ find:	0
 
 p:	0
 tcnt:	0		" count field of the name being sought
-tname:	0		" packed SIXBIT name word being sought, tnbuf's first
-tnw:	0		" words in tnbuf
+tname:	0		" first packed SIXBIT word of the name sought
+fn:	0
 fk:	0
 fq:	0
 fr:	0
@@ -309,10 +321,10 @@ accept:	0
 	jmp 3b
 
 " --- parse: take the next blank-delimited token from inp ---
-" Returns AC = wlen (0 at end of line). Sets wptr and wlen, plus tcnt and
-" tname (count field and case-folded SIXBIT of the first 3 characters,
-" space-padded) ready for find. The count field keeps only the low 5
-" bits of the length.
+" Returns AC = wlen (0 at end of line). Sets wptr and wlen, plus tcnt,
+" tnbuf and tnw (count field, and the token in case-folded SIXBIT three
+" to a word, space-padded, in tnw words) and tname (tnbuf's first word),
+" ready for find. The count field keeps only the low 5 bits of the length.
 parse:	0
 	dzm wlen
 1:	lac inp		" skip blanks
@@ -380,6 +392,7 @@ parse:	0
 
 pw:	0
 pq:	0
+tnw:	0		" words in tnbuf
 
 " fold: upper-case AC if it is in 0140-0177.
 fold:	0
@@ -472,7 +485,7 @@ number:	0
 
 " --- xts and compilation ---
 " An xt is a header address (DESIGN.md, Threading). mkcell turns one
-" into the thread cell that calls it: optab[tag] | (xt + 2).
+" into the thread cell that calls it: optab[tag] | (xt + 1).
 mkcell:	0
 	dac t5
 	lac i t5
@@ -482,7 +495,7 @@ mkcell:	0
 	tad optabp
 	dac t6
 	lac t5
-	tad d2		" body
+	tad d1		" body
 	tad i t6
 	jmp i mkcell
 
@@ -534,9 +547,8 @@ lit:	0
 	jms comp
 	jmp i lit
 
-" mkhdr: parse a name and lay down a header at dp with tag AC. If the
-" name (its length and first three characters) is already defined, say
-" "<name> redefined" first.
+" mkhdr: parse a name and lay down the name, then a header, at dp with
+" tag AC. If the name is already defined, say "<name> redefined" first.
 " Returns AC = the header address; the caller decides when to link it.
 mkhdr:	0
 	dac htag
@@ -556,21 +568,16 @@ mkhdr:	0
 	dac hbase
 	lac tnw
 	cma
-	tad d2		" 1 - tnw: minus the words below the header
-	sna
-	jmp 3f
-	dac fk
-	lac tnw
-	tad tnbm
-	dac hq		" tnbuf + tnw - 1, the last word
-2:	lac i hq
-	jms comp
-	lac hq
-	tad m1
+	tad d1
+	dac fk		" -tnw
+	lac tnbm
 	dac hq
+2:	isz hq
+	lac i hq
+	jms comp
 	isz fk
 	jmp 2b
-3:	lac dp
+	lac dp
 	dac hadr
 	lac latest
 	cma
@@ -578,20 +585,18 @@ mkhdr:	0
 	dac t5
 	and lhigh	" must fit in 9 bits (DESIGN.md, Dictionary/headers)
 	sza
-	jmp 4f
+	jmp 3f
 	lac t5
 	tad tcnt
 	tad htag
 	jms comp
-	lac tname
-	jms comp
 	lac hadr
 	jmp i mkhdr
-4:	lac hbase
+3:	lac hbase	" give the name back
 	dac dp
 	jmp far
 
-hbase:	0		" dp before the name words
+hbase:	0		" dp before the name
 hq:	0
 
 " --- interpretive control structures ---
@@ -809,7 +814,6 @@ wcnt:	0
 wr:	0
 wk:	0
 wcol:	0
-wpn:	0		" WORDS: the name word last read below the header
 rsgn:	0
 dp:	end		" next free dictionary word
 pool:	020000		" lowest literal-pool entry; the pool grows down
@@ -899,9 +903,9 @@ sbuf:	.=.+0120
 " cell holding (target - 1), which goes straight into IP.
 
 " EXIT ( -- ) ( R: ip -- )  EXIT is an ordinary primitive, not a spare tag.
+	0457051	" EXI
 	0640000	" T
 h.ex:	0100000+tag.prim	" EXIT
-	0457051
 ex.body:
 	jms pop.rp	" AC := the caller's CAL-cell address, pushed by nest
 	dac 010		" IP := that address directly -- no "tad m1" here,
@@ -910,18 +914,18 @@ ex.body:
 	jmp next
 
 " BRANCH ( -- )  IP := inline cell (target - 1).
+	0426241	" BRA
 	0564350	" NCH
 h.bran:	0140000+tag.prim+h.bran-h.ex-1	" BRANCH
-	0426241
 bran:	lac i 010
 	dac 010
 	jmp next
 
 " ?BRANCH ( flag -- )  branch if zero, else step over the inline cell.
-	0500000	" H
+	0374262	" ?BR
 	0415643	" ANC
+	0500000	" H
 h.qbran:	0160000+tag.prim+h.qbran-h.bran-1	" ?BRANCH
-	0374262
 qbran:	lac 012		" inline pop
 	dac t2
 	tad m1
@@ -934,9 +938,9 @@ qbran:	lac 012		" inline pop
 
 " (DO) ( limit index -- ) ( R: -- limit index-limit )
 " The top return-stack cell is a counter that (LOOP) ISZes up to 0.
+	0104457	" (DO
 	0110000	" )
 h.xdo:	0100000+tag.prim+h.xdo-h.qbran-1	" (DO)
-	0104457
 xdo:	jms pop.sp	" index
 	dac t4
 	jms pop.sp	" limit
@@ -950,9 +954,9 @@ xdo:	jms pop.sp	" index
 " (LOOP) ( -- ) ( R: limit counter -- | limit counter+1 )
 " Bump the counter in place; branch back until it reaches 0, then drop
 " both return-stack cells and step over the inline cell.
+	0105457	" (LO
 	0576011	" OP)
 h.xloop:	0140000+tag.prim+h.xloop-h.xdo-1	" (LOOP)
-	0105457
 xloop:	lac 011
 	dac t2
 	isz i t2	" counter++; skips when it reaches 0
@@ -964,8 +968,8 @@ xloop:	lac 011
 	jmp next
 
 " I ( -- index )  limit + counter.
+	0510000	" I
 h.xi:	0020000+tag.prim+h.xi-h.xloop-1	" I
-	0510000
 xi:	lac 011		" RP -> counter
 	dac t2
 	tad m1
@@ -976,25 +980,25 @@ xi:	lac 011		" RP -> counter
 	jmp next
 
 " DUP ( x -- x x )
+	0446560	" DUP
 h.dup:	0060000+tag.prim+h.dup-h.xi-1	" DUP
-	0446560
 dup:	jms un
 	dac i 012
 	jmp next
 
 " DROP ( x -- )
+	0446257	" DRO
 	0600000	" P
 h.drop:	0100000+tag.prim+h.drop-h.dup-1	" DROP
-	0446257
 drop:	lac 012
 	tad m1
 	dac 012
 	jmp next
 
 " SWAP ( a b -- b a )
+	0636741	" SWA
 	0600000	" P
 h.swap:	0100000+tag.prim+h.swap-h.drop-1	" SWAP
-	0636741
 swap:	jms bin
 	dac t4		" b
 	lac i t3	" a
@@ -1005,9 +1009,9 @@ swap:	jms bin
 	jmp next
 
 " OVER ( a b -- a b a )
+	0576645	" OVE
 	0620000	" R
 h.over:	0100000+tag.prim+h.over-h.swap-1	" OVER
-	0576645
 over:	lac 012
 	tad m1
 	dac t3
@@ -1016,22 +1020,22 @@ over:	lac 012
 	jmp next
 
 " >R ( x -- ) ( R: -- x )
+	0366200	" >R
 h.tor:	0040000+tag.prim+h.tor-h.over-1	" >R
-	0366200
 tor:	jms pop.sp
 	dac i 011
 	jmp next
 
 " R> ( -- x ) ( R: x -- )
+	0623600	" R>
 h.rfrom:	0040000+tag.prim+h.rfrom-h.tor-1	" R>
-	0623600
 rfrom:	jms pop.rp
 	dac i 012
 	jmp next
 
 " R@ ( -- x ) ( R: x -- x )
+	0624000	" R@
 h.rat:	0040000+tag.prim+h.rat-h.rfrom-1	" R@
-	0624000
 rat:	lac 011
 	dac t3
 	lac i t3
@@ -1040,8 +1044,8 @@ rat:	lac 011
 
 " @ ( addr -- x )  indirection uses only the low 13 bits, so LAW-form
 " (negative) addresses from variables work unchanged.
+	0400000	" @
 h.fetch:	0020000+tag.prim+h.fetch-h.rat-1	" @
-	0400000
 fetch:	jms un
 	dac t4
 	lac i t4
@@ -1049,8 +1053,8 @@ fetch:	jms un
 	jmp next
 
 " ! ( x addr -- )
+	0010000	" !
 h.store:	0020000+tag.prim+h.store-h.fetch-1	" !
-	0010000
 store:	jms bin
 	dac t4		" addr
 	lac i t3	" x
@@ -1061,16 +1065,16 @@ store:	jms bin
 	jmp next
 
 " + ( a b -- a+b )
+	0130000	" +
 h.plus:	0020000+tag.prim+h.plus-h.store-1	" +
-	0130000
 plus:	jms bin
 	tad i t3
 	dac i t3
 	jmp next
 
 " - ( a b -- a-b )
+	0150000	" -
 h.minus:	0020000+tag.prim+h.minus-h.plus-1	" -
-	0150000
 minus:	jms bin
 	cma		" -b-1
 	tad i t3
@@ -1079,16 +1083,16 @@ minus:	jms bin
 	jmp next
 
 " AND ( a b -- a&b )
+	0415644	" AND
 h.and:	0060000+tag.prim+h.and-h.minus-1	" AND
-	0415644
 and.b:	jms bin
 	and i t3
 	dac i t3
 	jmp next
 
 " OR ( a b -- a|b )  no OR instruction: (a^b) ^ (a&b).
+	0576200	" OR
 h.or:	0040000+tag.prim+h.or-h.and-1	" OR
-	0576200
 or.b:	jms bin
 	and i t3
 	dac t4
@@ -1099,26 +1103,26 @@ or.b:	jms bin
 	jmp next
 
 " XOR ( a b -- a^b )
+	0705762	" XOR
 h.xor:	0060000+tag.prim+h.xor-h.or-1	" XOR
-	0705762
 xor.b:	jms bin
 	xor i t3
 	dac i t3
 	jmp next
 
 " INVERT ( x -- ~x )
+	0515666	" INV
 	0456264	" ERT
 h.inv:	0140000+tag.prim+h.inv-h.xor-1	" INVERT
-	0515666
 invert:	jms un
 	cma
 	dac i t3
 	jmp next
 
 " NEGATE ( x -- -x )
+	0564547	" NEG
 	0416445	" ATE
 h.neg:	0140000+tag.prim+h.neg-h.inv-1	" NEGATE
-	0564547
 negate:	jms un
 	cma
 	tad d1
@@ -1126,16 +1130,16 @@ negate:	jms un
 	jmp next
 
 " = ( a b -- flag )
+	0350000	" =
 h.eq:	0020000+tag.prim+h.eq-h.neg-1	" =
-	0350000
 equal:	jms bin
 	sad i t3	" skip if different
 	jmp true
 	jmp false
 
 " U< ( a b -- flag )  b + ~a carries into the link iff b > a.
+	0653400	" U<
 h.ult:	0040000+tag.prim+h.ult-h.eq-1	" U<
-	0653400
 ult:	jms bin
 ultc:	lac i t3
 	cma
@@ -1146,8 +1150,8 @@ ultc:	lac i t3
 	jmp true
 
 " < ( a b -- flag )  flip both sign bits, then compare unsigned.
+	0340000	" <
 h.lt:	0020000+tag.prim+h.lt-h.ult-1	" <
-	0340000
 less:	jms bin
 	xor o400k
 	dac i t2
@@ -1157,16 +1161,16 @@ less:	jms bin
 	jmp ultc
 
 " 0= ( x -- flag )
+	0203500	" 0=
 h.zeq:	0040000+tag.prim+h.zeq-h.lt-1	" 0=
-	0203500
 zeq:	jms un
 	sza
 	jmp false
 	jmp true
 
 " 0< ( x -- flag )
+	0203400	" 0<
 h.zlt:	0040000+tag.prim+h.zlt-h.zeq-1	" 0<
-	0203400
 zlt:	jms un
 	sma
 	jmp false
@@ -1174,8 +1178,8 @@ zlt:	jms un
 
 " * ( a b -- a*b )  EAE signed multiply; the operand is the word
 " after the instruction, so b is stored there first.
+	0120000	" *
 h.star:	0020000+tag.prim+h.star-h.zlt-1	" *
-	0120000
 star:	jms bin
 	dac 1f
 	lac i t3
@@ -1187,63 +1191,63 @@ star:	jms bin
 	jmp next
 
 " / ( a b -- a/b )  EAE signed divide, quotient in MQ.
+	0170000	" /
 h.slash:	0020000+tag.prim+h.slash-h.star-1	" /
-	0170000
 slash:	jms sdiv
 	lacq
 	dac i t3
 	jmp next
 
 " MOD ( a b -- a%b )  remainder in AC.
+	0555744	" MOD
 h.mod:	0060000+tag.prim+h.mod-h.slash-1	" MOD
-	0555744
 mod:	jms sdiv
 	dac i t3
 	jmp next
 
 " EMIT ( c -- )
+	0455551	" EMI
 	0640000	" T
 h.emit:	0100000+tag.prim+h.emit-h.mod-1	" EMIT
-	0455551
 emit:	jms pop.sp
 	jms putc
 	jmp next
 
 " KEY ( -- c )  7-bit ASCII: a real Model 33 sends bit 8 set.
+	0534571	" KEY
 h.key:	0060000+tag.prim+h.key-h.emit-1	" KEY
-	0534571
 key:	jms getc
 	dac i 012
 	jmp next
 
 " BASE ( -- addr )
+	0424163	" BAS
 	0450000	" E
 h.base:	0100000+tag.var+h.base-h.key-1	" BASE
-	0424163
 base:	10
 
 " (QUERY) ( -- )  read a line into the TIB.
-	0110000	" )
+	0106165	" (QU
 	0456271	" ERY
+	0110000	" )
 h.xqry:	0160000+tag.prim+h.xqry-h.base-1	" (QUERY)
-	0106165
 xquery:	jms accept
 	jmp next
 
 " (PARSE) ( -- len )  next token; 0 at end of line.
-	0110000	" )
+	0106041	" (PA
 	0626345	" RSE
+	0110000	" )
 h.xpar:	0160000+tag.prim+h.xpar-h.xqry-1	" (PARSE)
-	0106041
 xparse:	jms parse
 	dac i 012
 	jmp next
 
 " (FIND) ( -- xt 1 | xt -1 | 0 )  look up the last parsed token;
 " 1 if immediate, -1 if not.
+	0104651	" (FI
 	0564411	" ND)
 h.xfnd:	0140000+tag.prim+h.xfnd-h.xpar-1	" (FIND)
-	0104651
 xfind:	jms find
 	sad m1
 	jmp 2f
@@ -1264,10 +1268,10 @@ xfind:	jms find
 	jmp next
 
 " (NUMBER) ( -- n -1 | 0 )  convert the last parsed token.
-	0621100	" R)
+	0105665	" (NU
 	0554245	" MBE
+	0621100	" R)
 h.xnum:	0200000+tag.prim+h.xnum-h.xfnd-1	" (NUMBER)
-	0105665
 xnumber:	jms number
 	jmp 1f
 	dac i 012
@@ -1279,9 +1283,9 @@ xnumber:	jms number
 	jmp next
 
 " (OK) ( -- )  end of line: check stack depth, then say ok.
+	0105753	" (OK
 	0110000	" )
 h.xok:	0100000+tag.prim+h.xok-h.xnum-1	" (OK)
-	0105753
 xok:	lac 012
 	cma
 	tad ds0		" ds0 - SP - 1 >= 0: underflow
@@ -1300,17 +1304,17 @@ sterr:	lac m.stack
 	jmp error
 
 " (ERR) ( -- )  the last token is neither a word nor a number.
+	0104562	" (ER
 	0621100	" R)
 h.xerr:	0120000+tag.prim+h.xerr-h.xok-1	" (ERR)
-	0104562
 xerr:	jmp undef
 
 " EXECUTE ( xt -- )  DESIGN.md, Threading: run the xt's cell from a scratch
 " slot followed by an EXIT cell, with IP pushed. Works for every tag.
-	0450000	" E
+	0457045	" EXE
 	0436564	" CUT
+	0450000	" E
 h.exec:	0160000+tag.prim+h.exec-h.xerr-1	" EXECUTE
-	0457045
 execute:	jms pop.sp
 	jms mkcell
 xrun:	dac xcell	" (also entered from lvend with a cell to run)
@@ -1324,43 +1328,43 @@ xcell:	0
 xcellp:	xcell-1
 
 " COMPILE, ( xt -- )
-	0451400	" E,
+	0435755	" COM
 	0605154	" PIL
+	0451400	" E,
 h.compc:	0200000+tag.prim+h.compc-h.exec-1	" COMPILE,
-	0435755
 compc:	jms pop.sp
 	jms mkcell
 	jms comp
 	jmp next
 
 " LITERAL ( x -- )  compile x as a pooled literal.
-	0540000	" L
+	0545164	" LIT
 	0456241	" ERA
+	0540000	" L
 h.lit:	0170000+tag.prim+h.lit-h.compc-1	" LITERAL
-	0545164
 literal:	jms pop.sp
 	jms lit
 	jmp next
 
 " , ( x -- )
+	0140000	" ,
 h.comma:	0020000+tag.prim+h.comma-h.lit-1	" ,
-	0140000
 comma:	jms pop.sp
 	jms comp
 	jmp next
 
 " HERE ( -- addr )
+	0504562	" HER
 	0450000	" E
 h.here:	0100000+tag.prim+h.here-h.comma-1	" HERE
-	0504562
 here:	lac dp
 	dac i 012
 	jmp next
 
 " ALLOT ( n -- )
+	0415454	" ALL
 	0576400	" OT
 h.allot:	0120000+tag.prim+h.allot-h.here-1	" ALLOT
-	0415454
 allot:	jms pop.sp
 	tad dp
 	dac t5
@@ -1373,27 +1377,27 @@ allot:	jms pop.sp
 	jmp next
 
 " STATE ( -- addr )  0 interpreting, -1 compiling.
+	0636441	" STA
 	0644500	" TE
 h.state:	0120000+tag.var+h.state-h.allot-1	" STATE
-	0636441
 state:	0
 
 " [ ( -- )
+	0730000	" [
 h.lbrac:	0030000+tag.prim+h.lbrac-h.state-1	" [
-	0730000
 lbrac:	dzm state
 	jmp next
 
 " ] ( -- )
+	0750000	" ]
 h.rbrac:	0020000+tag.prim+h.rbrac-h.lbrac-1	" ]
-	0750000
 rbrac:	lac m1
 	dac state
 	jmp next
 
 " ' ( "name" -- xt )
+	0070000	" '
 h.tick:	0020000+tag.prim+h.tick-h.rbrac-1	" '
-	0070000
 tick:	jms parse
 	sna
 	jmp noname
@@ -1404,8 +1408,8 @@ tick:	jms parse
 	jmp next
 
 " : ( "name" -- )  the header isn't linked until ; (no smudge bit).
+	0320000	" :
 h.colon:	0020000+tag.prim+h.colon-h.tick-1	" :
-	0320000
 colon:	cla		" tag.colon
 	jms mkhdr
 	dac cdp
@@ -1414,8 +1418,8 @@ colon:	cla		" tag.colon
 	jmp next
 
 " ; ( -- )
+	0330000	" ;
 h.semi:	0030000+tag.prim+h.semi-h.colon-1	" ;
-	0330000
 semi:	lac cdp
 	sna
 	jmp undef	" not compiling a definition
@@ -1428,10 +1432,10 @@ semi:	lac cdp
 	jmp next
 
 " IMMEDIATE ( -- )  mark the latest word immediate.
-	0416445	" ATE
+	0515555	" IMM
 	0454451	" EDI
+	0416445	" ATE
 h.immed:	0220000+tag.prim+h.immed-h.semi-1	" IMMEDIATE
-	0515555
 immed:	lac latest
 	dac t5
 	lac i t5
@@ -1441,10 +1445,10 @@ immed:	lac latest
 	jmp next
 
 " CONSTANT ( x "name" -- )
-	0566400	" NT
+	0435756	" CON
 	0636441	" STA
+	0566400	" NT
 h.const:	0200000+tag.prim+h.const-h.immed-1	" CONSTANT
-	0435756
 const:	lac o2000	" tag.const
 	jms mkhdr
 	dac latest
@@ -1453,10 +1457,10 @@ const:	lac o2000	" tag.const
 	jmp next
 
 " VARIABLE ( "name" -- )
-	0544500	" LE
+	0664162	" VAR
 	0514142	" IAB
+	0544500	" LE
 h.var:	0200000+tag.prim+h.var-h.const-1	" VARIABLE
-	0664162
 var:	lac o3000	" tag.var
 	jms mkhdr
 	dac latest
@@ -1465,17 +1469,17 @@ var:	lac o3000	" tag.var
 	jmp next
 
 " CREATE ( "name" -- )  a variable-tag word with no body yet.
+	0436245	" CRE
 	0416445	" ATE
 h.create:	0140000+tag.prim+h.create-h.var-1	" CREATE
-	0436245
 create:	lac o3000	" tag.var
 	jms mkhdr
 	dac latest
 	jmp next
 
 " IF ( -- orig )
+	0514600	" IF
 h.if:	0050000+tag.prim+h.if-h.create-1	" IF
-	0514600
 if:	jms lvst
 	lac c.qbran
 	jms comp
@@ -1486,9 +1490,9 @@ if:	jms lvst
 	jmp next
 
 " THEN ( orig -- )
+	0645045	" THE
 	0560000	" N
 h.then:	0110000+tag.prim+h.then-h.if-1	" THEN
-	0645045
 then:	jms pop.sp
 	dac t5
 	lac dp
@@ -1497,9 +1501,9 @@ then:	jms pop.sp
 	jmp lvend
 
 " ELSE ( orig1 -- orig2 )
+	0455463	" ELS
 	0450000	" E
 h.else:	0110000+tag.prim+h.else-h.then-1	" ELSE
-	0455463
 else:	lac c.bran
 	jms comp
 	lac dp
@@ -1516,25 +1520,25 @@ else:	lac c.bran
 	jmp next
 
 " BEGIN ( -- dest )
+	0424547	" BEG
 	0515600	" IN
 h.begin:	0130000+tag.prim+h.begin-h.else-1	" BEGIN
-	0424547
 begin:	jms lvst
 	lac dp
 	dac i 012
 	jmp next
 
 " UNTIL ( dest -- )
+	0655664	" UNT
 	0515400	" IL
 h.until:	0130000+tag.prim+h.until-h.begin-1	" UNTIL
-	0655664
 until:	lac c.qbran
 	jmp cbr
 
 " AGAIN ( dest -- )
+	0414741	" AGA
 	0515600	" IN
 h.again:	0130000+tag.prim+h.again-h.until-1	" AGAIN
-	0414741
 again:	lac c.bran
 cbr:	jms comp	" compile the branch cell, then (dest - 1)
 	jms pop.sp
@@ -1543,9 +1547,9 @@ cbr:	jms comp	" compile the branch cell, then (dest - 1)
 	jmp lvend
 
 " WHILE ( dest -- orig dest )
+	0675051	" WHI
 	0544500	" LE
 h.while:	0130000+tag.prim+h.while-h.again-1	" WHILE
-	0675051
 while:	lac c.qbran
 	jms comp
 	jms pop.sp
@@ -1559,9 +1563,9 @@ while:	lac c.qbran
 	jmp next
 
 " REPEAT ( orig dest -- )
+	0624560	" REP
 	0454164	" EAT
 h.repeat:	0150000+tag.prim+h.repeat-h.while-1	" REPEAT
-	0624560
 repeat:	lac c.bran
 	jms comp
 	jms pop.sp
@@ -1570,8 +1574,8 @@ repeat:	lac c.bran
 	jmp then
 
 " DO ( -- dest )
+	0445700	" DO
 h.do:	0050000+tag.prim+h.do-h.repeat-1	" DO
-	0445700
 do:	jms lvst
 	lac c.xdo
 	jms comp
@@ -1580,15 +1584,15 @@ do:	jms lvst
 	jmp next
 
 " LOOP ( dest -- )
+	0545757	" LOO
 	0600000	" P
 h.loop:	0110000+tag.prim+h.loop-h.do-1	" LOOP
-	0545757
 loop:	lac c.xloop
 	jmp cbr
 
 " . ( n -- )  signed, in BASE, followed by a space.
+	0160000	" .
 h.dot:	0020000+tag.prim+h.dot-h.loop-1	" .
-	0160000
 dot:	jms pop.sp
 	sma
 	jmp 1f
@@ -1630,14 +1634,14 @@ dot:	jms pop.sp
 	jmp next
 
 " CR ( -- )
+	0436200	" CR
 h.cr:	0040000+tag.prim+h.cr-h.dot-1	" CR
-	0436200
 cr:	jms crlf
 	jmp next
 
 " ( ( -- )  comment to the next ')' on the line.
+	0100000	" (
 h.paren:	0030000+tag.prim+h.paren-h.cr-1	" (
-	0100000
 paren:	lac inp
 	sad tend
 	jmp next
@@ -1649,28 +1653,28 @@ paren:	lac inp
 	jmp paren
 
 " \ ( -- )  comment to the end of the line.
+	0740000	" \
 h.bslash:	0030000+tag.prim+h.bslash-h.paren-1	" \
-	0740000
 bslash:	lac tend
 	dac inp
 	jmp next
 
 " QUIT ( -- ) ( R: i*x -- )  back to the interpreter.
+	0616551	" QUI
 	0640000	" T
 h.quit:	0100000+tag.prim+h.quit-h.bslash-1	" QUIT
-	0616551
 xquit:	jmp quit
 
 " BYE ( -- )  halt; CONTINUE resumes.
+	0427145	" BYE
 h.bye:	0060000+tag.prim+h.bye-h.quit-1	" BYE
-	0427145
 bye:	hlt
 	jmp next
 
 " J ( -- index )  the enclosing loop's index: R: ... limit counter
 " [inner limit] [inner counter].
+	0520000	" J
 h.xj:	0020000+tag.prim+h.xj-h.bye-1	" J
-	0520000
 xj:	lac 011
 	tad m2
 	dac t2		" -> outer counter
@@ -1683,9 +1687,9 @@ xj:	lac 011
 
 " (.") ( -- )  print the packed string that follows inline (two 9-bit
 " characters per word, ended by a zero word), and resume after it.
+	0101602	" (."
 	0110000	" )
 h.xdotq:	0100000+tag.prim+h.xdotq-h.xj-1	" (.")
-	0101602
 xdotq:	lac 010
 	tad d1
 	jms puts	" leaves pstr at the terminating zero word
@@ -1694,8 +1698,8 @@ xdotq:	lac 010
 	jmp next
 
 " ." ( -- )  compile (.") and the string up to the next '"'.
+	0160200	" ."
 h.dotq:	0050000+tag.prim+h.dotq-h.xdotq-1	" ."
-	0160200
 dotq:	lac c.xdotq
 	jms comp
 1:	jms sch
@@ -1716,9 +1720,9 @@ dotq:	lac c.xdotq
 
 " WORDS ( -- )  list the dictionary, newest first, every name in full.
 " Breaks lines at about 60 columns: a Model 33 doesn't wrap.
+	0675762	" WOR
 	0446300	" DS
 h.words:	0120000+tag.prim+h.words-h.dotq-1	" WORDS
-	0675762
 words:	jms crlf
 	dzm wcol
 	lac latest
@@ -1730,14 +1734,23 @@ words:	jms crlf
 	cma
 	tad d1
 	dac wr		" -(characters left to print)
-	lac m3
-	dac wk		" stored characters left
+	lac wcnt
+	dac wk
 	lac wp
-	dac wpn
-	tad d1
 	dac t6
-	lac i t6	" name word 1 at wp+1
+4:	lac t6		" back one word for every three characters
+	tad m1
+	dac t6
+	lac wk
+	tad m3
+	dac wk
+	sma sza
+	jmp 4b
+6:	lac m3
+	dac wk		" characters left in this word
+	lac i t6	" packed name word
 	lmq
+	isz t6
 2:	cla
 	cll
 	lls 6		" next SIXBIT character
@@ -1748,14 +1761,7 @@ words:	jms crlf
 	jmp 3f		" whole name printed
 	isz wk
 	jmp 2b
-	lac m3		" next word, below the header: wp-1, wp-2, ...
-	dac wk
-	lac wpn
-	tad m1
-	dac wpn
-	lac i wpn
-	lmq
-	jmp 2b
+	jmp 6b
 3:	lac o40
 	jms putc
 	lac wcnt
@@ -1776,17 +1782,17 @@ words:	jms crlf
 	jmp 1b
 
 " TAPE ( -- )  take input lines from the paper-tape reader until ^D.
+	0644160	" TAP
 	0450000	" E
 h.tape:	0100000+tag.prim+h.tape-h.words-1	" TAPE
-	0644160
 tape:	lac m1
 	dac tapein
 	jmp next
 
 " EOT ( -- )  end tape input, like ^D: back to the keyboard, and the rest
 " of this line is ignored. A visible alternative to ^D in source files.
+	0455764	" EOT
 h.eot:	0060000+tag.prim+h.eot-h.tape-1	" EOT
-	0455764
 eot:	dzm tapein
 	lac tend
 	dac inp
@@ -1794,8 +1800,8 @@ eot:	dzm tapein
 
 " */ ( a b c -- a*b/c )  the product is 36 bits (EAE MUL into AC:MQ), so
 " it can't overflow before the divide (EAE DIV). Truncates toward zero.
+	0121700	" */
 h.stsl:	0040000+tag.prim+h.stsl-h.eot-1	" */
-	0121700
 stsl:	jms pop.sp	" c
 	dac sdc
 	jms bin		" AC = b, t3 -> a
@@ -1834,22 +1840,22 @@ stsl:	jms pop.sp	" c
 
 " DLIST ( -- addr )  the 1024-word Type 340 display list (below 4K, as the
 " 340's 12-bit address counter requires). The 340 runs it from the top.
+	0445451	" DLI
 	0636400	" ST
 h.dlist:	0120000+tag.const+h.dlist-h.stsl-1	" DLIST
-	0445451
 	dlbuf
 
 " DISPLAY ( -- addr )  nonzero: keep the 340 refreshing DLIST.
-	0710000	" Y
+	0445163	" DIS
 	0605441	" PLA
+	0710000	" Y
 h.dsply:	0160000+tag.var+h.dsply-h.dlist-1	" DISPLAY
-	0445163
 display:	0
 
 " (S") ( -- c-addr u )  the string that follows inline: a count, then one
 " character per word. Resume after it.
+	0106302	" (S"
 h.xsq:	0060000+tag.prim+h.xsq-h.dsply-1	" (S"
-	0106302
 xsq:	lac 010
 	tad d1
 	dac t5		" -> count
@@ -1864,8 +1870,8 @@ xsq:	lac 010
 " S" ( "ccc<quote>" -- c-addr u )  compiling (a definition or an
 " interpretive control structure): compile (S") and the string inline.
 " Interpreting: copy it to sbuf, which the next interpreted S" reuses.
+	0630200	" S"
 h.sq:	0050000+tag.prim+h.sq-h.xsq-1	" S"
-	0630200
 sq:	lac state
 	sna
 	jmp 3f
@@ -1899,9 +1905,9 @@ sq:	lac state
 	jmp next
 
 " CHAR ( "name" -- char )  the first character of the next token.
+	0435041	" CHA
 	0620000	" R
 h.char:	0100000+tag.prim+h.char-h.sq-1	" CHAR
-	0435041
 char:	jms parse
 	sna
 	jmp noname
@@ -1911,8 +1917,8 @@ char:	jms parse
 
 " .( ( "ccc<paren>" -- )  print up to the next ')' on the line, at once,
 " compiling or not.
+	0161000	" .(
 h.dotp:	0050000+tag.prim+h.dotp-h.char-1	" .(
-	0161000
 dotp:	lac inp
 	sad tend
 	jmp next
