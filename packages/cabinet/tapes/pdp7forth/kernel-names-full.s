@@ -231,20 +231,21 @@ find:	0
 	skp
 	jmp 3b
 	lac tnw		" words 2..n, at p-1, p-2, ...
-	cma
-	tad d2		" 1 - tnw
-	sna
+	tad m2
+	spa		" one word or none: matched
 	jmp 5f
+	cma		" -(tnw-1)
 	dac fk
 	lac p
 	dac fq
 	lac tnbp
-	dac 017
-6:	lac fq
+	dac fr
+6:	isz fr
+	lac fq
 	tad m1
 	dac fq
 	lac i fq
-	sad i 017
+	sad i fr
 	skp
 	jmp 3b
 	isz fk
@@ -261,6 +262,7 @@ tname:	0		" packed SIXBIT name word being sought, tnbuf's first
 tnw:	0		" words in tnbuf
 fk:	0
 fq:	0
+fr:	0
 
 " --- accept: read a line into tib, echoing ---
 " CR ends the line; it isn't stored, and echoes as a space. So does ^D
@@ -342,7 +344,7 @@ parse:	0
 	lac wlen
 	dac t4		" characters left to pack
 	lac tnbm
-	dac 015
+	dac pq
 	dzm tnw
 8:	lac m3
 	dac t5		" 3 slots
@@ -364,8 +366,9 @@ parse:	0
 	dac pw
 7:	isz t5
 	jmp 6b
+	isz pq
 	lac pw
-	dac i 015
+	dac i pq
 	isz tnw
 	lac t4
 	sza
@@ -376,6 +379,7 @@ parse:	0
 	jmp i parse
 
 pw:	0
+pq:	0
 
 " fold: upper-case AC if it is in 0140-0177.
 fold:	0

@@ -35,7 +35,8 @@ files:
     as_built: |
       Words 2..n are stored last first, so word k sits at xt-(k-1) and find and WORDS walk
       down from the header. parse packs the whole token into tnbuf (tname is its first word,
-      tnw the count) using auto-index 015; find compares through 017. mkhdr lays the name
+      tnw the count) through a plain pointer, and find compares the same way, so auto-index
+      015-017 stay free as in kernel.s (Mitch's test harness uses 015). mkhdr lays the name
       words, then the header, and remembers hbase, where they began, so abort and a link too
       far give the name words back. The 31-character limit is the 5-bit count field's, as before.
     planned_adopt: |
@@ -44,7 +45,11 @@ files:
       to both copies, with bodies that differ, so code above them doesn't care.
     differs_in: [the name words before 30 of the 84 kernel headers, parse, find, mkhdr, abort, WORDS]
     must_match_parent: everything else, line for line
+    simh_tests: |
+      Mitch's test/run_tests.py under SIMH, with this file as src/kernel.s: all pass but four,
+      each expecting three-character names (cellx redefining cell+, and the session WORDS
+      checks for EXI_-style truncation). Those tests need full-name versions in the PR.
     next: |
-      Mitch's own test suite under SIMH, then the PRs: a KERNEL parameter for his Makefile,
+      The PRs: a KERNEL parameter for his Makefile,
       test/run_tests.py and check_names, then src/kernel-names-full.s and a full-names hdr.py.
       The Open Firmware words above.
