@@ -67,6 +67,11 @@ it's the shortest map there is of where the PDP-7 sits:
 - **Two slips in the original:** the PDP-8 is called "the sucessor to the PDP-8" (it followed the PDP-5), and the PDP-12
   "the sucessor to the PDP-8" (it was the LINC-8 again, a LINC and a PDP-8 in one box, as the same paragraph says).
 
+Two more from the same directory, also verbatim:
+[`dec-wars.txt`](its-humor/dec-wars.txt) (`dec.wars`, the USENET *DEC WARS* anthology: Luke Vaxhacker, PDP-1 Kenobi, Dec
+Vadic, the Milliamp Falcon) and [`dec-mail.txt`](its-humor/dec-mail.txt) (`dec.mail`, Ken Olsen's memo of 18 Nov 1980 on
+the 11/23, RX02s and letter-quality printer delivered to his home: "Who designed these units?").
+
 ## Local working clones and toolchains
 
 Cloned next to the other repos (add them to the Cursor workspace to read source instead of guessing):

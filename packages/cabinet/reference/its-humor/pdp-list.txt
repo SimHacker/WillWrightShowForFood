@@ -1,11 +1,12 @@
-From AI:HUMOR;PDP-* LST (ITS), as preserved in PDP-10/its-vault:
+AI:HUMOR; as preserved in PDP-10/its-vault, mirrored verbatim:
 https://github.com/PDP-10/its-vault/blob/master/files/humor/pdp-*.list
-Mirrored verbatim except the mail headers: addresses, postal address and phone left out.
 
 Date: Wednesday, 20 August 1986  03:42-EDT
-From: Mark Crispin
-To:   the TOPS-20 mailing list
+From: Mark Crispin <MRC%PANDA@SUMEX-AIM.ARPA>
+To:   TOPS-20@SU-SCORE.ARPA, Boken@RED.RUTGERS.EDU
 Re:   DEC's PDP's
+Postal-Address: 1802 Hackett Ave.; Mountain View, CA  94043-4431
+Phone: +1 (415) 968-1052
 
      A number of people have requested my list of all the DEC PDP's,
 so I thought I'd bore you all with it.
