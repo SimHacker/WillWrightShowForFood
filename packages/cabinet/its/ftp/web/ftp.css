@@ -1,0 +1,112 @@
+:root {
+	--phosphor: #33ff66;
+	--dim: #1a8c3a;
+	--glass: #020a04;
+	color-scheme: dark;
+}
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	height: 100%;
+	background: #000;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font: 16px/1.25 "IBM Plex Mono", "DEC Terminal", "Courier New", ui-monospace, monospace;
+}
+.bezel {
+	width: min(100vw, 1100px);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding: 12px;
+	gap: 8px;
+}
+.screen {
+	position: relative;
+	flex: 1;
+	overflow-y: auto;
+	padding: 18px 22px;
+	background: radial-gradient(ellipse at center, #062010 0%, var(--glass) 75%);
+	border-radius: 18px;
+	box-shadow: inset 0 0 60px #000, 0 0 0 3px #111, 0 0 0 7px #222;
+	outline: none;
+	cursor: text;
+	scrollbar-color: var(--dim) transparent;
+}
+.screen.crt::after {
+	content: "";
+	position: sticky;
+	display: block;
+	top: 0;
+	height: 100%;
+	margin-top: -100%;
+	pointer-events: none;
+	background: repeating-linear-gradient(0deg, rgb(0 0 0 / 0.28) 0 1px, transparent 1px 3px);
+	animation: flicker 0.15s infinite alternate;
+}
+@keyframes flicker {
+	from {
+		opacity: 0.85;
+	}
+	to {
+		opacity: 1;
+	}
+}
+#out {
+	margin: 0;
+	white-space: pre-wrap;
+	word-break: break-word;
+	color: var(--phosphor);
+	text-shadow: 0 0 2px var(--phosphor), 0 0 8px rgb(51 255 102 / 0.5);
+}
+.cursor {
+	display: inline-block;
+	width: 0.6em;
+	background: var(--phosphor);
+	box-shadow: 0 0 8px var(--phosphor);
+	animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+.panel {
+	display: flex;
+	gap: 18px;
+	align-items: center;
+	color: var(--dim);
+	font-size: 13px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	padding: 0 8px;
+}
+.panel .label {
+	color: var(--phosphor);
+	opacity: 0.7;
+}
+.panel a {
+	color: var(--dim);
+	margin-left: auto;
+	text-transform: none;
+}
+.panel select {
+	background: #000;
+	color: var(--phosphor);
+	border: 1px solid var(--dim);
+	font: inherit;
+}
+#kbd {
+	position: fixed;
+	left: -1000px;
+	top: 0;
+	width: 10px;
+	height: 10px;
+	opacity: 0;
+}

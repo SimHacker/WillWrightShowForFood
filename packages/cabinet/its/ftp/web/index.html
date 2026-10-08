@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FTP.127 — Food Transfer Protocol (MIT-MC, 1982–85)</title>
+<link rel="stylesheet" href="ftp.css">
+</head>
+<body>
+<div class="bezel">
+  <div class="screen" id="screen" tabindex="0" aria-label="Terminal. Click and type." role="textbox" aria-multiline="true">
+    <pre id="out" aria-live="polite"></pre>
+  </div>
+  <div class="panel">
+    <span class="label">MIT-MC TTY</span>
+    <label>baud
+      <select id="baud" aria-label="Baud rate">
+        <option value="110">110</option>
+        <option value="300">300</option>
+        <option value="1200">1200</option>
+        <option value="2400" selected>2400</option>
+        <option value="4800">4800</option>
+        <option value="9600">9600</option>
+        <option value="0">∞</option>
+      </select>
+    </label>
+    <label><input type="checkbox" id="crt" checked> CRT</label>
+    <a href="https://github.com/PDP-10/its-vault/blob/master/files/humor/ts.ftp" target="_blank" rel="noopener">AI:HUMOR;TS FTP</a>
+  </div>
+</div>
+<textarea id="kbd" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" aria-hidden="true"></textarea>
+<script src="ftpdat.js"></script>
+<script src="ftp.js"></script>
+</body>
+</html>
