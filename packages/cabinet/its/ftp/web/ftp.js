@@ -15,7 +15,6 @@ const outEl = document.getElementById("out");
 const screenEl = document.getElementById("screen");
 const kbd = document.getElementById("kbd");
 const baudEl = document.getElementById("baud");
-const crtEl = document.getElementById("crt");
 
 // ---- The terminal: everything printed goes through one queue drained at the line's baud rate.
 
@@ -77,8 +76,6 @@ baudEl.addEventListener("change", () => {
 	localStorage.setItem("ftp-baud", String(baud));
 	screenEl.focus();
 });
-crtEl.addEventListener("change", () => screenEl.classList.toggle("crt", crtEl.checked));
-screenEl.classList.toggle("crt", crtEl.checked);
 screenEl.addEventListener("click", () => kbd.focus());
 kbd.focus();
 
