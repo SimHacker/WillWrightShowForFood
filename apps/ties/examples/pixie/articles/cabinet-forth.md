@@ -18,3 +18,5 @@ A small Forth for the PDP-7 by Mitch Bradley, 2026. See ~PDP-7 Forth~ for where 
 The turtle words: `FD` `BK` (pixels), `RT` `LT` (degrees, clockwise is right), `PU` `PD` pen up and down, `CS` clear the screen, `HOME`, `HT` `ST` hide and show the turtle. `WORDS` lists the whole dictionary.
 
 **Demo** reboots and types the pdp7forth README's turtle session: a square, a flower, a star.
+
+**Full names.** Mitch's kernel keeps a name's length and its first three letters, so `SQUARE` and `SQUID` are the same word and `WORDS` prints `EXI_`. **FORTH, FULL NAMES** on the program menu runs a copy of the kernel, `kernel-names-full.s`, that keeps every letter, up to 31. The extra letters sit just below each header, so threading and the body address are unchanged. It costs 221 words of the 8K. The copy lives beside Mitch's in `packages/cabinet/tapes/pdp7forth/`, with `VARIANTS.yml` saying what differs. The next step is a pull request back to him.

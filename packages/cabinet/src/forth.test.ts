@@ -16,7 +16,7 @@ const tapes = {
 };
 const image = compileForth(tapes);
 
-function machine() {
+function machine(img = image) {
 	const cpu = new Pdp7({ coreWords: 8192 });
 	let paper = "";
 	let lit = 0;
@@ -29,7 +29,7 @@ function machine() {
 	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
 	const box = new Cabinet({ cpu, devices: [t340, tty, new Clock({ cpu })] });
 	t340.clock = () => box.cycles;
-	bootForth(cpu, image);
+	bootForth(cpu, img);
 	const type = (text: string) => {
 		for (const ch of text) tty.type((ch === "\n" ? 0o15 : ch.toUpperCase().charCodeAt(0)) | 0o200);
 	};
@@ -105,6 +105,55 @@ test("forth: tell it the terminal is 40 columns and WORDS breaks its lines to fi
 	setForthColumns(m.cpu, image, 100);
 	const wide = m.line("WORDS").split("\r\n").filter((l) => l.trim() !== "");
 	assert.ok(wide.length < lines.length, "wider paper, fewer lines");
+});
+
+const full = compileForth({
+	kernel: assembleForthKernel({
+		sop: readFileSync(new URL("../tapes/pdp7unix/sop.s", import.meta.url), "utf8"),
+		kernel: tape("kernel-names-full.s"),
+		end: tape("end.s"),
+		kernelName: "kernel-names-full.s",
+	}),
+	sources: tapes.sources,
+});
+
+test("forth, full names: SQUARE and SQUID are two words, and WORDS spells every name out", () => {
+	const m = machine(full);
+	m.box.run(300_000);
+	m.line(": SQUARE DUP * ;");
+	assert.doesNotMatch(m.line(": SQUID 1 ;"), /redefined/);
+	assert.match(m.line("7 SQUARE . SQUID ."), / 49 1\s+ok/);
+	assert.match(m.line("SQUAREX"), /SQUAREX \?/);
+	assert.match(m.line(": SQUARE DUP DUP * * ;"), /SQUARE redefined/);
+	const from = m.paper().length;
+	m.line("WORDS");
+	m.box.run(3_000_000); // line() stops at ONSCREEN?'s question mark
+	const words = m.paper().slice(from);
+	for (const w of ["SQUID", "SQUARE", "CLEARSCREEN", "EVALCPS", "IMMEDIATE", "(NUMBER)", "EXIT"]) assert.ok(words.split(/\s+/).includes(w), w);
+	assert.doesNotMatch(words, /_/);
+});
+
+test("forth, full names: 31 characters is the longest name, and an abandoned definition gives its name back", () => {
+	const m = machine(full);
+	m.box.run(300_000);
+	const n31 = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDE";
+	m.line(`: ${n31} 42 ;`);
+	assert.match(m.line(`${n31} .`), / 42\s+ok/);
+	assert.match(m.line(`${n31.slice(0, -1)}F`), /\?/);
+	assert.match(m.line(`: ${n31}F 1 ;`), /name\?/);
+	const here = m.line("HERE .").match(/ (\d+)\s+ok/)?.[1];
+	m.line(": AVERYLONGBROKENNAME 1 NOSUCHWORD ;");
+	assert.equal(m.line("HERE .").match(/ (\d+)\s+ok/)?.[1], here);
+});
+
+test("forth, full names: the turtle and the S-expressions run as on Mitch's kernel", () => {
+	const m = machine(full);
+	m.box.run(300_000);
+	m.line(": SQ 4 0 DO 200 FD 90 RT LOOP ;");
+	m.line(": FLOWER 8 0 DO SQ 45 RT LOOP ;");
+	assert.match(m.line("CS FLOWER"), /ok/);
+	assert.equal(m.lit(), 67);
+	assert.match(m.line(`S" (+ 2 (* 3 4))" ' KPLUS1 EVALCPS`), /15\s+ok/);
 });
 
 test("forth: the scripted demo runs to the end and Forth accepts every line", () => {

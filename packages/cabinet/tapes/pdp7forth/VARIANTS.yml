@@ -16,10 +16,14 @@ files:
     built_by_as7_as: [sop.s from pdp7-unix, kernel.s, end.s]
     assembled: [kernel.a7out, kernel.lst]
 
-planned:
   kernel-names-full.s:
     parent: kernel.s
-    what: Every character of a name kept, so WORDS prints EXIT, not EXI_.
+    role: variant, built and tested in the cabinet (src/forth.test.ts, "full names")
+    what: Every character of a name kept, so WORDS prints EXIT, not EXI_, and SQUARE and SQUID are two words.
+    cost: 221 more dictionary words with the prelude, turtle and scheme loaded (dp 10010, not 7453).
+    generated: |
+      The 54 extra name words of the 84 kernel headers were generated from each header's
+      comment, which names the word in full; the rest of the diff is by hand.
     layout: |
       The threading is untouched. A thread cell holds the body address (mkcell:
       optab[tag] | (xt + 2)), and only mkcell and find go from header to body. So the extra
@@ -28,10 +32,19 @@ planned:
       [body]. The xt stays the link word and the body stays at xt + 2; find compares the first
       word as now, then the words before it when the count is over 3. Links still run link word
       to link word, so the 512-word gap limit counts the name words too.
-    adopt: |
+    as_built: |
+      Words 2..n are stored last first, so word k sits at xt-(k-1) and find and WORDS walk
+      down from the header. parse packs the whole token into tnbuf (tname is its first word,
+      tnw the count) using auto-index 015; find compares through 017. mkhdr lays the name
+      words, then the header, and remembers hbase, where they began, so abort and a link too
+      far give the name words back. The 31-character limit is the 5-bit count field's, as before.
+    planned_adopt: |
       Open Firmware's layout-independent words (forth/kernel/kernel.fth): >link, >name,
       n>link, l>name, >flags, name>string, and >body. The PDP-7 Forth has none today; add them
       to both copies, with bodies that differ, so code above them doesn't care.
-    differs_in: [the 84 two-word headers (tools/hdr.py), find, the parser's tcnt/tname packing,
-                 colon, const, var, create, WORDS]
-    must_match_parent: everything else, word for word
+    differs_in: [the name words before 30 of the 84 kernel headers, parse, find, mkhdr, abort, WORDS]
+    must_match_parent: everything else, line for line
+    next: |
+      Mitch's own test suite under SIMH, then the PRs: a KERNEL parameter for his Makefile,
+      test/run_tests.py and check_names, then src/kernel-names-full.s and a full-names hdr.py.
+      The Open Firmware words above.

@@ -65,8 +65,6 @@ async function gunzip(data) {
 // One platter per page: files written in UNIX survive a reboot, until the page reloads.
 let unixPlatter = null;
 let unixBootTape = null;
-let forthImage = null;
-let forthKernel = null;
 
 const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 
@@ -87,6 +85,61 @@ function parseSymbolTsv(text) {
 			const [name, addr] = l.split('\t');
 			return { name, addr: parseInt(addr, 8) };
 		});
+}
+
+/** Mitch's Forth, or a copy of its kernel (tapes/pdp7forth/VARIANTS.yml); each builds once per page. */
+const FORTH_KERNELS = {
+	'kernel.s': () => import('../../../../packages/cabinet/tapes/pdp7forth/kernel.s?raw'),
+	'kernel-names-full.s': () => import('../../../../packages/cabinet/tapes/pdp7forth/kernel-names-full.s?raw')
+};
+
+function forthProgram({ id, label, kernelFile, note = '' }) {
+	const built = { kernel: null, image: null };
+	return {
+		id,
+		label,
+		listing: { user: 'wmb,claude' },
+		title: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP" + note,
+		help: {
+			text: 'Type a line and press Return: 2 3 + .  Draw: CS 4 0 DO 200 FD 90 RT LOOP.  WORDS lists every word. DEMO shows more.',
+			links: [
+				{ label: "Mitch's README", href: 'https://github.com/MitchBradley/pdp7forth#readme' },
+				{ label: 'turtle words', href: 'https://github.com/MitchBradley/pdp7forth#the-turtle-words' }
+			]
+		},
+		pen: false,
+		tty: true,
+		// 8K is all of core the PDP-7 addresses without the memory extension, which the cabinet lacks.
+		coreWords: 8192,
+		demo: (h) => forthDemo(h),
+		demoTitle: 'Reboot and type the pdp7forth README: arithmetic, a square, a flower, a star',
+		switches: 0,
+		switchLabels: null,
+		// Forth echoes what it reads, and reads a line at a time; the width goes into WORDS.
+		ttyConfig: { duplex: 'full', input: 'line' },
+		onTtyResize: ({ cpu, cols }) => built.image && setForthColumns(cpu, built.image, cols),
+		symbols: () => [...(built.image?.labels ?? [])].map(([name, addr]) => ({ name, addr })),
+		source: async () => (built.kernel ? sourceFromAsm(built.kernel, { id: 'as7', label: kernelFile, kind: 'source', dialect: 'as7' }) : null),
+		async load() {
+			if (built.image) return;
+			const [sop, kernel, end, prelude, turtle] = await Promise.all([
+				import('../../../../packages/cabinet/tapes/pdp7unix/sop.s?raw'),
+				FORTH_KERNELS[kernelFile](),
+				import('../../../../packages/cabinet/tapes/pdp7forth/end.s?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/prelude.fs?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/turtle.fs?raw')
+			]);
+			// Mitch's build, in the page: as7 sop.s kernel.s end.s, then the prelude compiled on the machine.
+			built.kernel = assembleForthKernel({ sop: sop.default, kernel: kernel.default, end: end.default, kernelName: kernelFile });
+			built.image = compileForth({ kernel: built.kernel, sources: [prelude.default, turtle.default] });
+		},
+		boot({ cpu }) {
+			bootForth(cpu, built.image);
+		},
+		status() {
+			return '';
+		}
+	};
 }
 
 /**
@@ -287,51 +340,13 @@ export const PROGRAMS = [
 			return `alt ${v('h2') / 2} vel ${v('v')} fuel ${v('fuel')}`;
 		}
 	},
-	{
-		id: 'forth',
-		label: 'FORTH + TURTLE (2026)',
-		listing: { user: 'wmb,claude' },
-		title: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP",
-		help: {
-			text: 'Type a line and press Return: 2 3 + .  Draw: CS 4 0 DO 200 FD 90 RT LOOP.  WORDS lists every word. DEMO shows more.',
-			links: [
-				{ label: "Mitch's README", href: 'https://github.com/MitchBradley/pdp7forth#readme' },
-				{ label: 'turtle words', href: 'https://github.com/MitchBradley/pdp7forth#the-turtle-words' }
-			]
-		},
-		pen: false,
-		tty: true,
-		// 8K is all of core the PDP-7 addresses without the memory extension, which the cabinet lacks.
-		coreWords: 8192,
-		demo: (h) => forthDemo(h),
-		demoTitle: 'Reboot and type the pdp7forth README: arithmetic, a square, a flower, a star',
-		switches: 0,
-		switchLabels: null,
-		// Forth echoes what it reads, and reads a line at a time; the width goes into WORDS.
-		ttyConfig: { duplex: 'full', input: 'line' },
-		onTtyResize: ({ cpu, cols }) => forthImage && setForthColumns(cpu, forthImage, cols),
-		symbols: () => [...(forthImage?.labels ?? [])].map(([name, addr]) => ({ name, addr })),
-		source: async () => (forthKernel ? sourceFromAsm(forthKernel, { id: 'as7', label: 'kernel.s', kind: 'source', dialect: 'as7' }) : null),
-		async load() {
-			if (forthImage) return;
-			const [sop, kernel, end, prelude, turtle] = await Promise.all([
-				import('../../../../packages/cabinet/tapes/pdp7unix/sop.s?raw'),
-				import('../../../../packages/cabinet/tapes/pdp7forth/kernel.s?raw'),
-				import('../../../../packages/cabinet/tapes/pdp7forth/end.s?raw'),
-				import('../../../../packages/cabinet/tapes/pdp7forth/prelude.fs?raw'),
-				import('../../../../packages/cabinet/tapes/pdp7forth/turtle.fs?raw')
-			]);
-			// Mitch's build, in the page: as7 sop.s kernel.s end.s, then the prelude compiled on the machine.
-			forthKernel = assembleForthKernel({ sop: sop.default, kernel: kernel.default, end: end.default });
-			forthImage = compileForth({ kernel: forthKernel, sources: [prelude.default, turtle.default] });
-		},
-		boot({ cpu }) {
-			bootForth(cpu, forthImage);
-		},
-		status() {
-			return '';
-		}
-	},
+	forthProgram({ id: 'forth', label: 'FORTH + TURTLE (2026)', kernelFile: 'kernel.s' }),
+	forthProgram({
+		id: 'forth-names',
+		label: 'FORTH, FULL NAMES (2026)',
+		kernelFile: 'kernel-names-full.s',
+		note: ' This copy keeps every character of a name: SQUARE and SQUID are two words.'
+	}),
 	{
 		id: 'unix',
 		label: 'UNIX v0 (1969)',
