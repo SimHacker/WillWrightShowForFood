@@ -313,6 +313,8 @@
 		min-height: 0;
 		overflow: auto;
 		padding: 0.5rem 0.75rem 0.75rem;
+		/* Lets an embed size itself to the pane (PageEmbed's height: fill). */
+		container-type: size;
 	}
 	.controls {
 		flex-shrink: 0;

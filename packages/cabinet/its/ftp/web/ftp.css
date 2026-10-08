@@ -20,7 +20,7 @@ body {
 	font: 16px/1.25 "IBM Plex Mono", "DEC Terminal", "Courier New", ui-monospace, monospace;
 }
 .bezel {
-	width: min(100vw, 1100px);
+	width: 100vw;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;

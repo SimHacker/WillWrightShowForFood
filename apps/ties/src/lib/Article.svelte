@@ -15,6 +15,7 @@
 	import TargetApplet from './TargetApplet.svelte';
 	import CabinetApplet from './CabinetApplet.svelte';
 	import YouTubeEmbed from './YouTubeEmbed.svelte';
+	import PageEmbed from './PageEmbed.svelte';
 	import RepoDoc from './RepoDoc.svelte';
 	import FollowSlot from './FollowSlot.svelte';
 
@@ -110,6 +111,8 @@
 				<CabinetApplet spec={segment.spec} embedded />
 			{:else if segment.kind === 'youtube'}
 				<YouTubeEmbed spec={segment.spec} />
+			{:else if segment.kind === 'page'}
+				<PageEmbed spec={segment.spec} />
 			{:else if segment.kind === 'follow'}
 				<FollowSlot {segment} {reveal} {browser} {onpreview} {onnavigate} />
 			{:else}

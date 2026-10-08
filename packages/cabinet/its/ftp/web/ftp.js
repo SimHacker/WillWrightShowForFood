@@ -71,6 +71,19 @@ function say(s) {
 	emit(fresh() + s + "\n");
 }
 
+const fontEl = document.getElementById("font");
+function setFont(px) {
+	fontEl.value = String(px);
+	screenEl.style.fontSize = `${px}px`;
+	localStorage.setItem("ftp-font", String(px));
+}
+setFont(Number(localStorage.getItem("ftp-font")) || 16);
+fontEl.addEventListener("change", () => {
+	setFont(Number(fontEl.value));
+	screenEl.scrollTop = screenEl.scrollHeight;
+	kbd.focus();
+});
+
 baudEl.addEventListener("change", () => {
 	baud = Number(baudEl.value);
 	localStorage.setItem("ftp-baud", String(baud));
