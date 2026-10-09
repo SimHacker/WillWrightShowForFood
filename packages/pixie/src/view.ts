@@ -14,6 +14,8 @@ export type Camera = {
 	distance: number;
 	/** Point looked at, in scene units. */
 	target?: Vec3;
+	/** The picture slid across the screen, in pixels, after projection. */
+	pan?: [number, number];
 };
 
 export const DEFAULT_CAMERA: Camera = { yaw: -0.6, pitch: 0.5, distance: 2.4 };
@@ -43,6 +45,7 @@ export function project(scene: Scene, cam: Camera, width: number, height: number
 	const sp = Math.sin(cam.pitch);
 	const dist = cam.distance * scene.radius;
 	const focal = Math.min(width, height) * 0.9;
+	const [ox, oy] = cam.pan ?? [0, 0];
 	return ([px, py, pz]) => {
 		const x0 = px - tx;
 		const y0 = py - ty;
@@ -53,7 +56,7 @@ export function project(scene: Scene, cam: Camera, width: number, height: number
 		const z2 = sp * y0 + cp * z1 + dist;
 		if (z2 <= 0.1) return null;
 		const s = focal / z2;
-		return { x: width / 2 + x1 * s, y: height / 2 - y2 * s, z: z2, s };
+		return { x: width / 2 + ox + x1 * s, y: height / 2 + oy - y2 * s, z: z2, s };
 	};
 }
 

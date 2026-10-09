@@ -42,6 +42,9 @@
 			if (!scene || hot.size || roots !== lastRoots || img.beg !== last?.beg || img.words.length !== last?.words.length) {
 				lastRoots = roots;
 				scene = ringToScene(img, shot.roots);
+				// Turn about the root's ring, the structure's front door.
+				const root = scene.chains.find((c) => c.cells.includes(scene.root));
+				cam.target = root ? [...root.center] : [0, 0, 0];
 				if (noteHold <= 0) note = `${scene.nodes.length} cells in ${scene.chains.length} chains, ${(img.end - img.beg).toString(8)} words at ${img.beg.toString(8)}`;
 			}
 			last = img;
@@ -80,23 +83,13 @@
 
 	let dragging = false;
 	let panning = false;
-	// Shift-drag: slide the point looked at along the screen, so the structure follows the
-	// pointer. Spin and drag-turn then turn about the new point.
+	// Shift-drag: slide the picture across the screen, pixel for pixel. Turning is unchanged.
 	function pan(dx, dy) {
-		if (!scene) return;
-		const per = (cam.distance * scene.radius) / (Math.min(width, height) * 0.9);
-		const cy = Math.cos(cam.yaw);
-		const sy = Math.sin(cam.yaw);
-		const cp = Math.cos(cam.pitch);
-		const sp = Math.sin(cam.pitch);
-		// The screen's right and up, in scene coordinates (the inverse of project's turn).
-		const right = [cy, 0, sy];
-		const up = [sy * sp, cp, -cy * sp];
-		const t = cam.target ?? [0, 0, 0];
-		cam.target = [0, 1, 2].map((k) => t[k] - (dx * right[k] - dy * up[k]) * per);
+		const [x, y] = cam.pan ?? [0, 0];
+		cam.pan = [x + dx, y + dy];
 	}
 	function home() {
-		Object.assign(cam, DEFAULT_CAMERA, { target: [0, 0, 0] });
+		Object.assign(cam, DEFAULT_CAMERA, { pan: [0, 0] });
 	}
 	let moved = false;
 	let px = 0;
