@@ -79,6 +79,25 @@
 	});
 
 	let dragging = false;
+	let panning = false;
+	// Shift-drag: slide the point looked at along the screen, so the structure follows the
+	// pointer. Spin and drag-turn then turn about the new point.
+	function pan(dx, dy) {
+		if (!scene) return;
+		const per = (cam.distance * scene.radius) / (Math.min(width, height) * 0.9);
+		const cy = Math.cos(cam.yaw);
+		const sy = Math.sin(cam.yaw);
+		const cp = Math.cos(cam.pitch);
+		const sp = Math.sin(cam.pitch);
+		// The screen's right and up, in scene coordinates (the inverse of project's turn).
+		const right = [cy, 0, sy];
+		const up = [sy * sp, cp, -cy * sp];
+		const t = cam.target ?? [0, 0, 0];
+		cam.target = [0, 1, 2].map((k) => t[k] - (dx * right[k] - dy * up[k]) * per);
+	}
+	function home() {
+		Object.assign(cam, DEFAULT_CAMERA, { target: [0, 0, 0] });
+	}
 	let moved = false;
 	let px = 0;
 	let py = 0;
@@ -86,6 +105,7 @@
 		// Shift-press otherwise extends the text selection and scrolls the page.
 		e.preventDefault();
 		dragging = true;
+		panning = e.shiftKey;
 		moved = false;
 		px = e.clientX;
 		py = e.clientY;
@@ -97,8 +117,11 @@
 			const dx = e.clientX - px;
 			const dy = e.clientY - py;
 			if (Math.abs(dx) + Math.abs(dy) > 2) moved = true;
-			cam.yaw += dx * 0.01;
-			cam.pitch = Math.max(-1.5, Math.min(1.5, cam.pitch + dy * 0.01));
+			if (panning) pan(dx, dy);
+			else {
+				cam.yaw += dx * 0.01;
+				cam.pitch = Math.max(-1.5, Math.min(1.5, cam.pitch + dy * 0.01));
+			}
 			px = e.clientX;
 			py = e.clientY;
 		}
@@ -199,12 +222,13 @@
 	<canvas
 		bind:this={canvas}
 		style:height="{height}px"
-		aria-label="Ring structure in 3D. Drag to turn, wheel to zoom, click a cell to open it in memory."
+		aria-label="Ring structure in 3D. Drag to turn, shift-drag to pan, wheel to zoom, double-click to recentre, click a cell to open it in memory."
 		onpointerdown={down}
 		onpointermove={move}
 		onpointerup={up}
 		onpointerleave={() => (hover = null)}
 		onwheel={wheel}
+		ondblclick={home}
 	></canvas>
 </div>
 

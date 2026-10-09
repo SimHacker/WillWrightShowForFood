@@ -153,11 +153,20 @@ export function paint(pen: Pen, marks: Mark[], far: number): void {
 			pen.stroke();
 			continue;
 		}
-		pen.fillStyle = m.hot ? PALETTE.hot : m.kind === "forward" ? PALETTE.forward : PALETTE[m.kind];
+		// Stroked, not filled, so what's behind a cell and the letters stay in view; a changed
+		// cell fills, so changes still flash.
+		const colour = m.hot ? PALETTE.hot : m.kind === "forward" ? PALETTE.forward : PALETTE[m.kind];
 		pen.beginPath();
 		if (m.kind === "block") pen.rect(m.x - m.r * 1.6, m.y - m.r * 0.7, m.r * 3.2, m.r * 1.4);
 		else pen.arc(m.x, m.y, m.r, 0, Math.PI * 2);
-		pen.fill();
+		if (m.hot) {
+			pen.fillStyle = colour;
+			pen.fill();
+		} else {
+			pen.strokeStyle = colour;
+			pen.lineWidth = Math.max(1, Math.min(2.5, m.r / 4));
+			pen.stroke();
+		}
 		if (m.root) {
 			pen.strokeStyle = PALETTE.root;
 			pen.lineWidth = 2;
