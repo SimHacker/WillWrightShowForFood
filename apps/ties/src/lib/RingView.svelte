@@ -129,11 +129,11 @@
 
 <div class="rings" bind:clientWidth={width}>
 	<div class="mem-bar">
-		<button type="button" class="chip" class:on={source === 'live'} aria-pressed={source === 'live'} title="The ring structure in the running machine's core, as CONFIG names it" onclick={() => ((source = 'live'), (scene = null), (last = null))}>live</button>
-		<label class="chip" title="A ring image or graph as YAML or JSON, or a binary transfer stream (3 bytes a word)"
-			>file<input type="file" accept=".yml,.yaml,.json,.pix,.bin" onchange={choose} hidden /></label
+		<button type="button" class="chip" class:on={source === 'live'} aria-pressed={source === 'live'} title="Live: the ring structure in the running machine's core, as CONFIG names it, redrawn as it changes. Off: a file" onclick={() => ((source = 'live'), (scene = null), (last = null))}>LIVE</button>
+		<label class="chip" class:on={source !== 'live'} title="A ring image or graph as YAML or JSON, or a binary transfer stream (3 bytes a word)"
+			>FILE<input type="file" accept=".yml,.yaml,.json,.pix,.bin" onchange={choose} hidden /></label
 		>
-		<button type="button" class="chip" class:on={spin} aria-pressed={spin} title="Turn slowly" onclick={() => (spin = !spin)}>spin</button>
+		<button type="button" class="chip" class:on={spin} aria-pressed={spin} title="Spin: turn the structure slowly" onclick={() => (spin = !spin)}>SPIN</button>
 		<span class="mem-hint">{#if hover}{o(hover.addr)}{name(hover.addr) ? ` ${name(hover.addr)}` : ''} {hover.kind} {o(hover.word)}{#if hover.cdrWord !== undefined} . {o(hover.cdrWord)}{/if}{hover.label ? ` ${hover.label}` : ''}{:else}{note}{/if}</span>
 	</div>
 	<canvas
@@ -161,6 +161,25 @@
 		gap: 0.3em;
 		align-items: center;
 		flex-wrap: wrap;
+	}
+	/* The applet's panel chips, which a child component's scoped CSS doesn't reach. */
+	.chip {
+		font: inherit;
+		font-size: 0.62rem;
+		height: 1.4rem;
+		padding: 0 0.4em;
+		white-space: nowrap;
+		display: inline-flex;
+		align-items: center;
+		border: 1px solid #555;
+		background: transparent;
+		color: inherit;
+		cursor: pointer;
+	}
+	.chip.on {
+		background: #9fe8a0;
+		color: #000;
+		border-color: #9fe8a0;
 	}
 	.mem-hint {
 		font-family: ui-monospace, monospace;
