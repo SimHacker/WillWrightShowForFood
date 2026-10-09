@@ -19,4 +19,13 @@ The turtle words: `FD` `BK` (pixels), `RT` `LT` (degrees, clockwise is right), `
 
 **Demo** reboots and types the pdp7forth README's turtle session: a square, a flower, a star.
 
-**Full names.** Mitch's kernel keeps a name's length and its first three letters, so `SQUARE` and `SQUID` are one word to it and `WORDS` prints `EXI_`. The cabinet runs a copy, `kernel-names-full.s`, that keeps every letter, up to 31. Each word is laid out the way Open Firmware lays one out: the name, then the header, then the body. Tiny ITS, the turtle and the PIXIE rings are built on this Forth. Mitch's kernel stays beside it in `packages/cabinet/tapes/pdp7forth/`, as the reference the tests compare against, and `VARIANTS.yml` says what differs.
+**Names.** A name keeps every letter, up to 31, in SIXBIT, three letters to a word. Each word is laid out the way Open Firmware lays one out: the name, then the header, then the body. The cabinet's Forth is `kernel-names-full.s`, made from Mitch's `kernel.s`, which stays beside it in `packages/cabinet/tapes/pdp7forth/` as the reference the tests compare against; `VARIANTS.yml` says what differs.
+
+**PIXIE rings.** RSPPIX, the 1969 ring structure processor that ~PIXIE~'s SYMELEC is built on, runs inside this Forth, its 1972 code unchanged. Each of its routines is a Forth word (`RSETUP` `RFEL` `RINSRT` `RCAR` `RCDR` `RADDW` `RDELB` and the rest), and `pixie.fs` builds on them. Open RINGS to watch the structure in 3D as you type:
+
+    RSAVINS S" SQUARE" NAMED
+    RSAVINS S" TRIANGLE" NAMED
+    RSAVINS .RING
+    RSAVINS RCOUNT .
+
+`RINGS` starts again with an empty ring at `RSAVINS`, the front door the panel looks through. When the ring area fills, RSPPIX's own garbage collector takes back what nothing reaches; when nothing can be taken back, Forth says `rings full?`.

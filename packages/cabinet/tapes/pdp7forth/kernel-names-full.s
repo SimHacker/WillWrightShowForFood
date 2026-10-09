@@ -160,11 +160,12 @@ absv:	0
 " keyboard it can't overrun. On tape, blank (NUL) leader/trailer and CR
 " frames are skipped and LF becomes CR, so host text files work as
 " tapes. ^D (EOT) ends the tape, switching back to the keyboard, and is
-" returned so accept can end a partial line. The PDP-7 has no reader-empty status, so a tape without ^D
-" leaves the kernel waiting for more tape. While waiting for a key, getc
-" restarts the Type 340 display on DLIST whenever DISPLAY is set and the
-" 340 has stopped (DESIGN.md, Graphics). ^D typed at the keyboard halts,
-" like BYE; CONTINUE resumes, and accept then treats it as ^D from tape.
+" returned so accept can end a partial line. The PDP-7 has no reader-empty 
+" status, so a tape without ^D leaves the kernel waiting for more tape. 
+" While waiting for a key, getc restarts the Type 340 display on DLIST 
+" whenever DISPLAY is set and the 340 has stopped (DESIGN.md, Graphics). 
+" ^D typed at the keyboard halts, like BYE; CONTINUE resumes, and accept 
+" then treats it as ^D from tape.
 getc:	0
 	lac tapein
 	sza

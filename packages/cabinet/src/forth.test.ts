@@ -124,6 +124,7 @@ test("forth, full names: SQUARE and SQUID are two words, and WORDS spells every 
 	assert.doesNotMatch(m.line(": SQUID 1 ;"), /redefined/);
 	assert.match(m.line("7 SQUARE . SQUID ."), / 49 1\s+ok/);
 	assert.match(m.line("SQUAREX"), /SQUAREX \?/);
+	assert.match(m.line("5 CELL+ . 5 CELLS . 5 CHAR+ . 5 CHARS ."), / 6 5 6 5\s+ok/);
 	assert.match(m.line(": SQUARE DUP DUP * * ;"), /SQUARE redefined/);
 	const from = m.paper().length;
 	m.line("WORDS");
@@ -154,6 +155,64 @@ test("forth, full names: the turtle and the S-expressions run as on Mitch's kern
 	assert.match(m.line("CS FLOWER"), /ok/);
 	assert.equal(m.lit(), 67);
 	assert.match(m.line(`S" (+ 2 (* 3 4))" ' KPLUS1 EVALCPS`), /15\s+ok/);
+});
+
+const ringsKernel = assembleForthKernel({
+	sop: readFileSync(new URL("../tapes/pdp7unix/sop.s", import.meta.url), "utf8"),
+	kernel: tape("kernel-names-full.s"),
+	end: tape("end.s"),
+	kernelName: "kernel-names-full.s",
+	pixie: { glue: tape("pixie.s"), rsppix: tape("rsppix.s") },
+});
+const rings = compileForth({
+	kernel: ringsKernel,
+	sources: [tape("prelude.fs"), tape("turtle.fs"), tape("pixie.fs")],
+});
+
+test("forth, PIXIE rings: RSPPIX, moved up to 14022, is the 1972 code word for word", () => {
+	const rsppix = assembleForthKernel({ sop: "", kernel: tape("rsppix.s"), end: "" });
+	const at = rings.labels.get("rsetup") as number;
+	assert.equal(at, 0o14022);
+	const placed = new Map(ringsKernel.words);
+	for (const [a, w] of rsppix.words) {
+		if (a >= (rsppix.symbols.get("rbeg") as number) && a < (rsppix.symbols.get("rlit000") as number)) continue; // its variables are pixie.s's
+		// Only operands of RSPPIX's own code and literals move; its variables are named, not placed.
+		const moved = placed.get(a - 0o22 + at) as number;
+		const operand = w & 0o17777;
+		const isVar = operand >= (rsppix.symbols.get("rbeg") as number) && operand < (rsppix.symbols.get("rlit000") as number);
+		if (isVar) continue;
+		assert.ok(moved === w || moved === ((w + 0o14000) & 0o777777), `${a.toString(8)}: ${w.toString(8)} became ${moved.toString(8)}`);
+	}
+});
+
+test("forth, PIXIE rings: elements named in Forth go round RSAVINS, and RSPPIX finds their names", () => {
+	const m = machine(rings);
+	m.box.run(300_000);
+	assert.match(m.line("RSAVINS RCOUNT ."), / 0\s+ok/);
+	for (const name of ["SQUARE", "TRIANGLE", "HEX"]) assert.match(m.line(`RSAVINS S" ${name}" NAMED`), /ok/);
+	assert.match(m.line("RSAVINS RCOUNT ."), / 3\s+ok/);
+	assert.match(m.line("RSAVINS .RING"), /HEX TRIANGLE SQUARE\s+ok/);
+	assert.match(m.line("2 3 + ."), / 5\s+ok/);
+});
+
+test("forth, PIXIE rings: the 1972 garbage collector takes back deleted elements, and a full area says so", () => {
+	const m = machine(rings);
+	m.box.run(300_000);
+	m.line(`: MANY 0 DO RSAVINS S" AB" NAMED LOOP ;`);
+	m.line(": DROPALL 0 DO RSAVINS RFIRST RX RCAR RX RDELB LOOP ;");
+	for (let k = 0; k < 4; k += 1) assert.match(m.line("50 MANY 50 DROPALL RSAVINS RCOUNT ."), / 0\s+ok/);
+	assert.match(m.line("RINGS 60 MANY RINGS 60 MANY RSAVINS RCOUNT ."), / 60\s+ok/);
+	assert.match(m.line("400 MANY"), /MANY rings full\?/);
+	assert.ok(!m.cpu.halted);
+	assert.match(m.line("RINGS 2 3 + ."), / 5\s+ok/);
+});
+
+test("forth, PIXIE rings: the turtle still draws with the rings loaded", () => {
+	const m = machine(rings);
+	m.box.run(300_000);
+	m.line(": SQ 4 0 DO 200 FD 90 RT LOOP ;");
+	assert.match(m.line("CS SQ"), /ok/);
+	assert.equal(m.lit(), 11);
 });
 
 test("forth: the scripted demo runs to the end and Forth accepts every line", () => {

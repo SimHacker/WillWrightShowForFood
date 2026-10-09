@@ -14,17 +14,50 @@ export type ForthTapes = (
 	| { a7out: string; listing: string }
 	| { kernel: AsmResult }
 ) & {
-	/** Forth source compiled into the image before it starts, in order: prelude.fs, then turtle.fs. */
+	/** Forth source compiled into the image before it starts, in order: prelude.fs, turtle.fs, then pixie.fs. */
 	sources: readonly string[];
 };
 
-/** Mitch's `make`: `as7 sop.s kernel.s end.s`, with our as7 front end. */
-export function assembleForthKernel(tapes: { sop: string; kernel: string; end: string; kernelName?: string }): AsmResult {
+/**
+ * Mitch's `make`: `as7 sop.s kernel.s end.s`, with our as7 front end. With `pixie`, PIXIE rings
+ * go in before end.s: pixie.s, the Forth words and SYMELEC's variables, then RSPPIX itself.
+ */
+export function assembleForthKernel(tapes: {
+	sop: string;
+	kernel: string;
+	end: string;
+	kernelName?: string;
+	pixie?: { glue: string; rsppix: string };
+}): AsmResult {
 	return assembleAs7([
 		{ name: "sop.s", text: tapes.sop },
 		{ name: tapes.kernelName ?? "kernel.s", text: tapes.kernel },
+		...(tapes.pixie
+			? [
+					{ name: "pixie.s", text: tapes.pixie.glue },
+					{ name: "rsppix.s", text: rsppixForForth(tapes.pixie.rsppix) },
+				]
+			: []),
 		{ name: "end.s", text: tapes.end },
 	]);
+}
+
+/**
+ * rsppix.s as the Forth links it, the generated file left alone on disk: moved from 022 to
+ * px.org (pixie.s), its placeholder variables left as space, since pixie.s defines them where
+ * SYMELEC has them, and `.` given back to the dictionary after it.
+ */
+export function rsppixForForth(text: string): string {
+	const lines = text.replace(/\r\n?/g, "\n").split("\n");
+	const org = lines.indexOf(".=022");
+	const vars = lines.indexOf('" variables, in order of first use');
+	const lits = lines.indexOf('" literals');
+	if (org < 0 || vars < 0 || lits < vars) throw new Error("rsppix.s is not laid out as translate-cambridge.mjs writes it");
+	lines[org] = ".=px.org";
+	// Their space stays, so every word, literals too, is just 014000 further up.
+	const count = lines.slice(vars + 1, lits).filter((l) => /^r\w+: 0$/.test(l)).length;
+	lines.splice(vars, lits - vars, `.=.+${count}`);
+	return `${lines.join("\n")}\n.=px.at\n`;
 }
 
 export type ForthImage = {

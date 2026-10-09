@@ -36,7 +36,7 @@ export { Rb09, parseRbImage, rbImageBytes, RB_SIZE } from "./plugins/rb09.js";
 export type { Rb09Opts } from "./plugins/rb09.js";
 export { bootUnixV0, unixKey, unixEcho, unixDemo, UNIXV0_BOOT_ORIGIN } from "./unixv0.js";
 export type { UnixV0Opts, UnixHost } from "./unixv0.js";
-export { compileForth, bootForth, forthDemo, parseA7out, parseAs7Labels, setForthColumns, assembleForthKernel } from "./forth.js";
+export { compileForth, bootForth, forthDemo, parseA7out, parseAs7Labels, setForthColumns, assembleForthKernel, rsppixForForth } from "./forth.js";
 export type { ForthTapes, ForthImage, ForthHost } from "./forth.js";
 export { spokenNumbers } from "./spoken.js";
 export { bootDuel, duelResult, DUEL_HIT, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES, type DuelResult } from "./duel.js";

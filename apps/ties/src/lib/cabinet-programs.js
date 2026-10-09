@@ -101,7 +101,7 @@ function forthProgram({ id, label, kernelFile }) {
 		listing: { user: 'wmb,claude' },
 		title: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP",
 		help: {
-			text: 'Type a line and press Return: 2 3 + .  Draw: CS 4 0 DO 200 FD 90 RT LOOP.  WORDS lists every word. DEMO shows more.',
+			text: 'Type a line and press Return: 2 3 + .  Draw: CS 4 0 DO 200 FD 90 RT LOOP.  Rings: RSAVINS S" SQUARE" NAMED, then RSAVINS .RING, and open RINGS.  WORDS lists every word. DEMO shows more.',
 			links: [
 				{ label: "Mitch's README", href: 'https://github.com/MitchBradley/pdp7forth#readme' },
 				{ label: 'turtle words', href: 'https://github.com/MitchBradley/pdp7forth#the-turtle-words' }
@@ -109,6 +109,8 @@ function forthProgram({ id, label, kernelFile }) {
 		},
 		pen: false,
 		tty: true,
+		// RINGS panel: RSPPIX's bounds and front door, as for SYMELEC (pixie.s).
+		rings: { beg: 'RBEG', end: 'REND', roots: 'RSAVINS' },
 		// 8K is all of core the PDP-7 addresses without the memory extension, which the cabinet lacks.
 		coreWords: 8192,
 		demo: (h) => forthDemo(h),
@@ -122,16 +124,21 @@ function forthProgram({ id, label, kernelFile }) {
 		source: async () => (built.kernel ? sourceFromAsm(built.kernel, { id: 'as7', label: kernelFile, kind: 'source', dialect: 'as7' }) : null),
 		async load() {
 			if (built.image) return;
-			const [sop, kernel, end, prelude, turtle] = await Promise.all([
+			const [sop, kernel, end, prelude, turtle, glue, rsppix, pixie] = await Promise.all([
 				import('../../../../packages/cabinet/tapes/pdp7unix/sop.s?raw'),
 				FORTH_KERNELS[kernelFile](),
 				import('../../../../packages/cabinet/tapes/pdp7forth/end.s?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/prelude.fs?raw'),
-				import('../../../../packages/cabinet/tapes/pdp7forth/turtle.fs?raw')
+				import('../../../../packages/cabinet/tapes/pdp7forth/turtle.fs?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/pixie.s?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/rsppix.s?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/pixie.fs?raw')
 			]);
-			// Mitch's build, in the page: as7 sop.s kernel.s end.s, then the prelude compiled on the machine.
-			built.kernel = assembleForthKernel({ sop: sop.default, kernel: kernel.default, end: end.default, kernelName: kernelFile });
-			built.image = compileForth({ kernel: built.kernel, sources: [prelude.default, turtle.default] });
+			// Mitch's build, in the page: as7 sop.s kernel.s end.s, with PIXIE rings (pixie.s, rsppix.s)
+			// before end.s, then the prelude, the turtle and the rings compiled on the machine.
+			const rings = { glue: glue.default, rsppix: rsppix.default };
+			built.kernel = assembleForthKernel({ sop: sop.default, kernel: kernel.default, end: end.default, kernelName: kernelFile, pixie: rings });
+			built.image = compileForth({ kernel: built.kernel, sources: [prelude.default, turtle.default, pixie.default] });
 		},
 		boot({ cpu }) {
 			bootForth(cpu, built.image);

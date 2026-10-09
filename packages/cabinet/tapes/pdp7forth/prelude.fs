@@ -5,9 +5,7 @@
 -1 constant true   0 constant false   32 constant bl
 : decimal 10 base ! ;   : hex 16 base ! ;   : octal 8 base ! ;
 
-: 1+ 1 + ;   : 1- 1 - ;   : cell+ 1+ ;
-\ No CELLS: a cell is one word, and CELLS would collide with CELL+ (same
-\ length, same first three characters).
+: 1+ 1 + ;   : 1- 1 - ;   : cell+ 1+ ;   : cells ;
 : ?dup dup if dup then ;
 : nip swap drop ;   : tuck swap over ;
 : rot >r swap r> swap ;   : -rot rot rot ;
@@ -24,8 +22,8 @@
 : ['] ' [ ' literal compile, ] ; immediate
 
 \ Strings: one character per word, so a character address is a cell
-\ address. No CHARS: it would collide with CHAR+ (and it's a no-op).
-: c@ @ ;   : c! ! ;   : c, , ;   : char+ 1+ ;
+\ address.
+: c@ @ ;   : c! ! ;   : c, , ;   : char+ 1+ ;   : chars ;
 : count dup 1+ swap c@ ;
 : type begin dup 0> while over c@ emit 1- swap 1+ swap repeat 2drop ;
 : [char] char [ ' literal compile, ] ; immediate
