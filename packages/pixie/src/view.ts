@@ -165,12 +165,13 @@ export function paint(pen: Pen, marks: Mark[], far: number): void {
 			pen.arc(m.x, m.y, m.r + 3, 0, Math.PI * 2);
 			pen.stroke();
 		}
-		if (m.label && m.r >= 5) {
+		// Labels stay until a node is a speck; the font keeps a readable floor.
+		if (m.label && m.r >= 1.5) {
 			pen.fillStyle = PALETTE.text;
-			pen.font = `${Math.round(Math.min(14, m.r * 1.3))}px ui-monospace, monospace`;
+			pen.font = `${Math.round(Math.max(9, Math.min(14, m.r * 1.3)))}px ui-monospace, monospace`;
 			pen.textAlign = "center";
 			pen.textBaseline = "middle";
-			pen.fillText(m.kind === "block" ? m.label.slice(0, 12) : m.label, m.x, m.kind === "block" ? m.y : m.y - m.r - 6);
+			pen.fillText(m.kind === "block" ? m.label.slice(0, 12) : m.label, m.x, m.kind === "block" ? m.y : m.y - m.r - Math.max(4, Math.min(6, m.r)));
 		}
 	}
 	pen.globalAlpha = 1;
