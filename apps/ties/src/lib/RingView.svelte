@@ -22,7 +22,13 @@
 	let noteHold = 0;
 	let hover = $state.raw(null);
 	let spin = $state(true);
-	const cam = { ...DEFAULT_CAMERA };
+	// A steady picture: a fixed scale, so adding to the structure doesn't zoom it, and the
+	// root's ring pinned near the top of the panel, centred, with what hangs below it growing
+	// down. The layout recentres itself as the structure grows; the target follows the root,
+	// so the root stays put on screen.
+	const SCALE = 4;
+	const ROOT_UP = 0.3;
+	const cam = { ...DEFAULT_CAMERA, scale: SCALE, pan: [0, 0] };
 	let scene = null;
 	let last = null;
 	let marks = [];
@@ -65,8 +71,10 @@
 		pen.fillStyle = '#000';
 		pen.fillRect(0, 0, width, h);
 		if (!scene) return;
-		marks = drawList(scene, cam, width, h, hot);
-		paint(pen, marks, cam.distance * scene.radius * 2);
+		const [px0, py0] = cam.pan ?? [0, 0];
+		const view = { ...cam, pan: [px0, py0 - h * ROOT_UP] };
+		marks = drawList(scene, view, width, h, hot);
+		paint(pen, marks, cam.distance * SCALE * 2 + scene.radius);
 	}
 
 	onMount(() => {
@@ -89,7 +97,7 @@
 		cam.pan = [x + dx, y + dy];
 	}
 	function home() {
-		Object.assign(cam, DEFAULT_CAMERA, { pan: [0, 0] });
+		Object.assign(cam, DEFAULT_CAMERA, { scale: SCALE, pan: [0, 0] });
 	}
 	let moved = false;
 	let px = 0;
@@ -215,7 +223,7 @@
 	<canvas
 		bind:this={canvas}
 		style:height="{height}px"
-		aria-label="Ring structure in 3D. Drag to turn, shift-drag to pan, wheel to zoom, double-click to recentre, click a cell to open it in memory."
+		aria-label="Ring structure in 3D. Drag to turn about the root, shift-drag to pan, wheel to zoom, double-click to go back to the start, click a cell to open it in memory."
 		onpointerdown={down}
 		onpointermove={move}
 		onpointerup={up}

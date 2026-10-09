@@ -10,8 +10,11 @@ import type { EdgeKind, NodeKind, Scene, Vec3 } from "./scene.js";
 export type Camera = {
 	yaw: number;
 	pitch: number;
-	/** Distance in scene radii. */
+	/** Distance in scene radii, or in units of `scale` when it is set. */
 	distance: number;
+	/** A fixed size in scene units for distance to multiply, so the picture keeps its scale
+	 * as the structure grows. Unset: the scene's own radius, which zooms to fit. */
+	scale?: number;
 	/** Point looked at, in scene units. */
 	target?: Vec3;
 	/** The picture slid across the screen, in pixels, after projection. */
@@ -43,7 +46,7 @@ export function project(scene: Scene, cam: Camera, width: number, height: number
 	const sy = Math.sin(cam.yaw);
 	const cp = Math.cos(cam.pitch);
 	const sp = Math.sin(cam.pitch);
-	const dist = cam.distance * scene.radius;
+	const dist = cam.distance * (cam.scale ?? scene.radius);
 	const focal = Math.min(width, height) * 0.9;
 	const [ox, oy] = cam.pan ?? [0, 0];
 	return ([px, py, pz]) => {
