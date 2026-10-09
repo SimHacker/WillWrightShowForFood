@@ -17,7 +17,7 @@ import { loadSymelec } from "@wwsff/cabinet/fixtures";
 
 import { car, cdr, pointersResolve, RingBuilder, toArray } from "./cells.js";
 import { fern, normalize, potLeaf, toDisplayFile } from "./graftal.js";
-import { decodeTransfer, encodeTransfer, relocate } from "./image.js";
+import { decodeTransfer, encodeTransfer, implant, packWords, photograph, relocate } from "./image.js";
 import { blockHeader, classify, NIL, PXID, pointer } from "./words.js";
 
 test("words: the relocation pass's four kinds", () => {
@@ -163,7 +163,7 @@ test("acceptance: decode the transfer 1972 SYMELEC actually sends", () => {
 	assert.deepEqual(encodeTransfer(image), host.received);
 });
 
-test("Forth's PIXIE rings: elements built at the teletype show in the RINGS scene from RSAVINS", async () => {
+async function forthRings() {
 	const { assembleForthKernel, compileForth, bootForth } = await import("@wwsff/cabinet");
 	const { ringToScene } = await import("./scene.js");
 	const tape = (f: string) => readFileSync(new URL(`../../cabinet/tapes/${f}`, import.meta.url), "utf8");
@@ -181,12 +181,19 @@ test("Forth's PIXIE rings: elements built at the teletype show in the RINGS scen
 	const box = new Cabinet({ cpu, devices: [tty] });
 	bootForth(cpu, image);
 	box.run(300_000);
-	for (const name of ["SQUARE", "TRIANGLE", "HEX"]) {
+	const line = (text: string): string => {
 		paper = "";
-		for (const ch of `RSAVINS S" ${name}" NAMED\r`) tty.type(ch.charCodeAt(0) | 0o200);
-		for (let n = 0; n < 40 && !paper.endsWith("ok\r\n"); n += 1) box.run(50_000);
-		assert.match(paper, new RegExp(`${name}" NAMED\\s+ok\\r\\n$`));
-	}
+		for (const ch of `${text}\r`) tty.type(ch.charCodeAt(0) | 0o200);
+		for (let n = 0; n < 40 && !/ok\r\n$|\?\r\n$/.test(paper); n += 1) box.run(50_000);
+		return paper;
+	};
+	return { cpu, image, line };
+}
+
+test("Forth's PIXIE rings: elements built at the teletype show in the RINGS scene from RSAVINS", async () => {
+	const { ringToScene } = await import("./scene.js");
+	const { cpu, image, line } = await forthRings();
+	for (const name of ["SQUARE", "TRIANGLE", "HEX"]) assert.match(line(`RSAVINS S" ${name}" NAMED`), /NAMED\s+ok\r\n$/);
 	// The applet's capture: the cells RBEG, REND and RSAVINS name.
 	const at = (n: string) => cpu.read(image.labels.get(n) as number);
 	const beg = at("rbeg") & 0o17777;
@@ -203,4 +210,24 @@ test("Forth's PIXIE rings: elements built at the teletype show in the RINGS scen
 	const names = scene.chains.map((c) => c.text).filter((t): t is string => t !== undefined);
 	assert.deepEqual(names.sort(), ["HEX", "SQUARE", "TRIANGLE"]);
 	assert.ok(scene.chains.length >= 7, `${scene.chains.length} chains`);
+});
+
+test("Forth's PIXIE rings: save to a file, wipe, load it back into core, and Forth walks and extends it", async () => {
+	const { readRings } = await import("./scene.js");
+	const { cpu, image, line } = await forthRings();
+	for (const name of ["SQUARE", "TRIANGLE"]) line(`RSAVINS S" ${name}" NAMED`);
+	const at = (n: string) => image.labels.get(n) as number;
+	const cells = { beg: at("rbeg"), end: at("rend"), savins: at("rsavins"), free: at("rfree"), endres: at("rendres"), bot: at("rbot"), top: at("rtop") };
+	const read = (a: number) => cpu.read(a);
+	const photo = photograph(read, cells);
+	// What SAVE writes: the binary transfer stream, which readRings takes back.
+	const file = readRings(packWords(encodeTransfer(photo)));
+	assert.deepEqual(file, photo);
+	assert.match(line("RINGS RSAVINS RCOUNT ."), / 0\s+ok/);
+	// Into core somewhere else: relocation makes it true at RBEG.
+	implant(relocate(file, 0o2000), read, (a, w) => cpu.write(a, w), cells);
+	assert.match(line("RSAVINS RCOUNT ."), / 2\s+ok/);
+	assert.match(line("RSAVINS .RING"), /TRIANGLE SQUARE\s+ok/);
+	assert.match(line(`RSAVINS S" HEX" NAMED RSAVINS .RING`), /HEX TRIANGLE SQUARE\s+ok/);
+	assert.match(line(": MANY 0 DO RSAVINS S\" AB\" NAMED LOOP ; 40 MANY RSAVINS RCOUNT ."), / 43\s+ok/);
 });

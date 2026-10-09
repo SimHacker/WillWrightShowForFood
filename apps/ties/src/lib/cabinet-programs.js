@@ -110,7 +110,8 @@ function forthProgram({ id, label, kernelFile }) {
 		pen: false,
 		tty: true,
 		// RINGS panel: RSPPIX's bounds and front door, as for SYMELEC (pixie.s).
-		rings: { beg: 'RBEG', end: 'REND', roots: 'RSAVINS' },
+		// LOAD puts a ring file in RSPPIX's area: its free list, reserve and permanent names.
+		rings: { beg: 'RBEG', end: 'REND', roots: 'RSAVINS', implant: { free: 'RFREE', endres: 'RENDRES', bot: 'RBOT', top: 'RTOP' } },
 		// 8K is all of core the PDP-7 addresses without the memory extension, which the cabinet lacks.
 		coreWords: 8192,
 		demo: (h) => forthDemo(h),

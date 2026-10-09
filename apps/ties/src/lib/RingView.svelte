@@ -1,21 +1,25 @@
 <script>
 	// The PIXIE ring structure in 3D: live from the running PDP-7's core, or loaded from a
-	// file (YAML, JSON, or the binary transfer stream). Drag to turn, wheel to zoom, point at
+	// file (YAML, JSON, or the binary transfer stream). SAVE writes what's shown; LOAD puts a
+	// file into the machine's core when the program can take one, else shows it. Drag to turn, wheel to zoom, point at
 	// a cell to read it, click to open it in the memory panel.
 	import { onMount } from 'svelte';
-	import { DEFAULT_CAMERA, changedCells, drawList, paint, pick, readRings, ringToScene } from '@wwsff/pixie';
+	import { DEFAULT_CAMERA, changedCells, drawList, encodeTransfer, packWords, paint, pick, readRings, ringToScene } from '@wwsff/pixie';
 
 	/**
-	 * capture() photographs core: { image, roots } or { error }. name(addr) gives a symbol.
-	 * @type {{ capture: (() => any) | null, name?: (addr: number) => string, onOpen?: (addr: number) => void, height?: number }}
+	 * capture() photographs core: { image, roots } or { error }. implant(image) puts a ring
+	 * image into core, or is null if the program can't take one. name(addr) gives a symbol.
+	 * @type {{ capture: (() => any) | null, implant?: ((image: any) => any) | null, name?: (addr: number) => string, onOpen?: (addr: number) => void, height?: number }}
 	 */
-	let { capture, name = () => '', onOpen, height = 260 } = $props();
+	let { capture, implant = null, name = () => '', onOpen, height = 260 } = $props();
 
 	let canvas = $state(null);
 	let width = $state(400);
 	let source = $state('live');
 	let loaded = $state.raw(null);
+	let loadedName = $state('');
 	let note = $state('');
+	let noteHold = 0;
 	let hover = $state.raw(null);
 	let spin = $state(true);
 	const cam = { ...DEFAULT_CAMERA };
@@ -38,10 +42,11 @@
 			if (!scene || hot.size || roots !== lastRoots || img.beg !== last?.beg || img.words.length !== last?.words.length) {
 				lastRoots = roots;
 				scene = ringToScene(img, shot.roots);
-				note = `${scene.nodes.length} cells in ${scene.chains.length} chains, ${(img.end - img.beg).toString(8)} words at ${img.beg.toString(8)}`;
+				if (noteHold <= 0) note = `${scene.nodes.length} cells in ${scene.chains.length} chains, ${(img.end - img.beg).toString(8)} words at ${img.beg.toString(8)}`;
 			}
 			last = img;
 		}
+		if (noteHold > 0) noteHold -= dt;
 		if (spin && !dragging) cam.yaw += dt * 0.25;
 		draw();
 	}
@@ -109,31 +114,77 @@
 		cam.distance = Math.max(0.3, Math.min(8, cam.distance * Math.exp(e.deltaY * 0.001)));
 	}
 
+	// LOAD: a ring file (YAML, JSON, or the binary transfer stream) into the running
+	// machine's ring area, then watch it there. A program that can't take one shows the file.
 	async function choose(e) {
 		const file = e.currentTarget.files?.[0];
+		e.currentTarget.value = '';
 		if (!file) return;
 		try {
-			const bytes = new Uint8Array(await file.arrayBuffer());
-			loaded = readRings(bytes);
-			source = 'file';
+			const image = readRings(new Uint8Array(await file.arrayBuffer()));
+			const base = file.name.replace(/\.[^.]*$/, '');
+			if (implant) {
+				const placed = implant(image);
+				loaded = null;
+				source = 'live';
+				note = `loaded ${base}: ${placed.words.length.toString(8)} words at ${placed.beg.toString(8)}`;
+				noteHold = 2;
+			} else {
+				loaded = image;
+				loadedName = base;
+				source = 'file';
+			}
 			scene = null;
 			last = null;
 			hot = new Set();
 		} catch (err) {
 			note = `${file.name}: ${err.message}`;
+			noteHold = 4;
 		}
 	}
 
 	const o = (w) => (w ?? 0).toString(8).padStart(6, '0');
+
+	// SAVE: what's shown, the live structure or the file, as the binary transfer stream
+	// (PXID, BEG, END, SAVINS, the words: what goes over the Titan link). Shift-click: YAML.
+	function save(e) {
+		const shot = source === 'live' ? capture?.() : loaded && { image: loaded };
+		const img = shot?.image;
+		if (!img) {
+			note = shot?.error ?? 'Nothing to save.';
+			return;
+		}
+		const base = source === 'live' ? `rings-${img.beg.toString(8)}` : loadedName || 'rings';
+		const blob = e.shiftKey
+			? new Blob([yamlOf(img)], { type: 'text/yaml' })
+			: new Blob([packWords(encodeTransfer(img))], { type: 'application/octet-stream' });
+		const a = document.createElement('a');
+		a.href = URL.createObjectURL(blob);
+		a.download = `${base}.${e.shiftKey ? 'yml' : 'pix'}`;
+		a.click();
+		setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+		note = `saved ${a.download}`;
+	}
+	const yamlOf = (img) =>
+		[
+			`beg: '${img.beg.toString(8)}'`,
+			`end: '${img.end.toString(8)}'`,
+			`savins: '${img.savins.toString(8)}'`,
+			'words:',
+			...img.words.map((w, i) => `  - '${o(w)}'  # ${(img.beg + i).toString(8)}`),
+			''
+		].join('\n');
+
 </script>
 
 <div class="rings" bind:clientWidth={width}>
 	<div class="mem-bar">
-		<button type="button" class="chip" class:on={source === 'live'} aria-pressed={source === 'live'} title="Live: the ring structure in the running machine's core, as CONFIG names it, redrawn as it changes. Off: a file" onclick={() => ((source = 'live'), (scene = null), (last = null))}>LIVE</button>
 		<button type="button" class="chip" class:on={spin} aria-pressed={spin} title="Spin: turn the structure slowly" onclick={() => (spin = !spin)}>SPIN</button>
-		<label class="chip" class:on={source !== 'live'} title="A ring image or graph as YAML or JSON, or a binary transfer stream (3 bytes a word)"
-			>FILE<input type="file" accept=".yml,.yaml,.json,.pix,.bin" onchange={choose} hidden /></label
+		<button type="button" class="chip" title="Save what's shown as a ring transfer stream (.pix, what the Titan link carries). Shift-click: YAML" onclick={save}>SAVE</button>
+		<label class="chip" title={implant ? "Load a ring file (.pix, YAML or JSON) into the running machine's ring area" : 'Show a ring file (.pix, YAML or JSON); this program can\'t take one into core yet'}
+			>LOAD<input type="file" accept=".yml,.yaml,.json,.pix,.bin" onchange={choose} hidden /></label
 		>
+		{#if source !== 'live'}<button type="button" class="chip" title="Back to the running machine's rings" onclick={() => ((source = 'live'), (scene = null), (last = null))}>LIVE</button>{/if}
 		<span class="mem-hint">{#if hover}{o(hover.addr)}{name(hover.addr) ? ` ${name(hover.addr)}` : ''} {hover.kind} {o(hover.word)}{#if hover.cdrWord !== undefined} . {o(hover.cdrWord)}{/if}{hover.label ? ` ${hover.label}` : ''}{:else}{note}{/if}</span>
 	</div>
 	<canvas
@@ -173,6 +224,10 @@
 		background: transparent;
 		color: inherit;
 		cursor: pointer;
+	}
+	.chip:disabled {
+		opacity: 0.4;
+		cursor: default;
 	}
 	.chip.on {
 		background: #9fe8a0;

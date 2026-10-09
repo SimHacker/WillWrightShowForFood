@@ -3,6 +3,9 @@ import {
 	blockLen,
 	classify,
 	isBlockHeader,
+	JMS,
+	NIL,
+	NONITEM,
 	PXID,
 	WMASK,
 } from "./words.js";
@@ -127,4 +130,64 @@ export function relocate(image: RingImage, newBeg: number): RingImage {
 		savins: (image.savins + relcon) & WMASK,
 		words,
 	};
+}
+
+/**
+ * The cells a running machine keeps its ring area in: as CoreVars, plus RSPPIX's free list
+ * (FREE), the end of the reserve it runs on into (ENDRES), and the permanent name list
+ * (BOT up to the word TOP+1 names).
+ */
+export type RingCells = CoreVars & { free?: number; endres?: number; bot?: number; top?: number };
+
+/**
+ * Put a ring image into a running machine, as the 1972 receiver did: relocate it to the
+ * machine's own BEG, write it there (less any free list it ends in), and point the root
+ * cell (SAVINS) at its entry. Every
+ * other permanent name gets a fresh NIL item, as RINIT gives one, so nothing still names the
+ * old structure. The rest of the area becomes the free list, laid as RSETUP lays it: each
+ * word a nonitem naming the next, on past END to ENDRES. Returns the image as placed.
+ */
+export function implant(
+	image: RingImage,
+	read: (addr: number) => number,
+	write: (addr: number, word: number) => void,
+	cells: RingCells,
+): RingImage {
+	const beg = read(cells.beg) & AMASK;
+	const end = read(cells.end) & AMASK;
+	const endres = cells.endres === undefined ? end : read(cells.endres) & AMASK;
+	const names: number[] = [];
+	if (cells.bot !== undefined && cells.top !== undefined) {
+		const last = read(cells.top + 1) & AMASK;
+		for (let a = read(cells.bot) & AMASK; a < last; a += 1) {
+			const cell = read(a) & AMASK;
+			if (cell !== cells.savins) names.push(cell);
+		}
+	}
+	// A photograph of a whole area ends in its free list: nonitems each naming the next word,
+	// the last naming END. Leave that off; the free list is laid afresh here.
+	let used = image.words.length;
+	while (used > 0) {
+		const w = image.words[used - 1]! & WMASK;
+		const next = image.beg + used;
+		if (!(w & NONITEM) || ((w & AMASK) !== next && (w & AMASK) !== image.end)) break;
+		used -= 1;
+	}
+	const kept = { ...image, words: image.words.slice(0, used), end: image.beg + used };
+	if (used + 2 * names.length > end - beg) {
+		throw new Error(`${used.toString(8)} words won't fit in ${beg.toString(8)}-${end.toString(8)}`);
+	}
+	const moved = relocate(kept, beg);
+	moved.words.forEach((w, i) => write(beg + i, w & WMASK));
+	let free = beg + moved.words.length;
+	for (const cell of names) {
+		write(free, NIL);
+		write(free + 1, NIL);
+		write(cell, JMS | free);
+		free += 2;
+	}
+	for (let a = free; a < endres; a += 1) write(a, (NONITEM | (a + 1)) & WMASK);
+	if (cells.free !== undefined) write(cells.free, free);
+	write(cells.savins, moved.savins & WMASK);
+	return { ...moved, end: beg + moved.words.length };
 }

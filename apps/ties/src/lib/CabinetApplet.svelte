@@ -37,6 +37,7 @@
 		ST340_HEDGE,
 		ST340_VEDGE
 	} from '@wwsff/cabinet';
+	import { implant } from '@wwsff/pixie';
 	import { PROGRAMS, DEFAULT_PROGRAM, programById } from './cabinet-programs.js';
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
@@ -1278,7 +1279,8 @@
 	// RINGS: labels or octal addresses of the cells holding the bounds and the root names.
 	let ringsCfg = $state(untrack(() => ringsConfigFor(programById(programId))));
 	function ringsConfigFor(p) {
-		return { beg: '', end: '', roots: '', ...(p?.rings ?? {}) };
+		const { implant: _, ...cells } = p?.rings ?? {};
+		return { beg: '', end: '', roots: '', ...cells };
 	}
 	function ringAddr(text) {
 		const t = text.trim();
@@ -1302,6 +1304,22 @@
 			roots.push(cpu.read(at) & 0o777777);
 		}
 		return { image: { beg, end, savins: roots[0] ?? 0o100000, words }, roots };
+	}
+	// Put a ring image (a file) into the running machine's ring area: the program names its
+	// free list and permanent name list in rings.implant, as RSPPIX keeps them.
+	const canImplant = $derived(!!program?.rings?.implant);
+	function implantRings(image) {
+		if (!cpu) throw new Error('No machine.');
+		const at = (t) => {
+			const a = ringAddr(t ?? '');
+			if (a === null) throw new Error(`Name the ${t || 'ring'} cell in CONFIG.`);
+			return a;
+		};
+		const more = program?.rings?.implant ?? {};
+		const root = ringsCfg.roots.split(/[\s,]+/).filter(Boolean)[0];
+		const cells = { beg: at(ringsCfg.beg), end: at(ringsCfg.end), savins: at(root) };
+		for (const k of ['free', 'endres', 'bot', 'top']) if (more[k]) cells[k] = at(more[k]);
+		return implant(image, (a) => cpu.read(a), (a, w) => cpu.write(a, w), cells);
 	}
 
 	function ttyConfigFor(p) {
@@ -3254,7 +3272,7 @@
 		{/if}
 		{#if ringsOpen && hasRings}
 			<div class="row app">
-				<RingView capture={captureRings} name={symbolic} height={ringsHeight + ringsExtra} onOpen={(a) => openMemAt(a)} />
+				<RingView capture={captureRings} implant={canImplant ? implantRings : null} name={symbolic} height={ringsHeight + ringsExtra} onOpen={(a) => openMemAt(a)} />
 				<button
 					type="button"
 					class="tty-grip"

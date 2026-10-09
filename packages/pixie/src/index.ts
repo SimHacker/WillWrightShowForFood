@@ -18,6 +18,7 @@ export type { WordKind } from "./words.js";
 export {
 	decodeTransfer,
 	encodeTransfer,
+	implant,
 	packWords,
 	photograph,
 	PXID_BYTES,
@@ -31,7 +32,7 @@ export { DEFAULT_CAMERA, drawList, paint, PALETTE, pick, project } from "./view.
 export type { Camera, Mark, Pen } from "./view.js";
 export { ringsPlugin, WORLD_FEEDBACK } from "./holodeck.js";
 export type { RingSource, RingsPlugin } from "./holodeck.js";
-export type { CoreVars, RingImage } from "./image.js";
+export type { CoreVars, RingCells, RingImage } from "./image.js";
 export { blockWords, car, cdr, pointersResolve, RingBuilder, toArray } from "./cells.js";
 export { fromData, fromJson, fromYaml, saveInto, toData, toDocument, toJson, toYaml } from "./graph.js";
 export type { Graph, GraphNode, Key, Link, Props, Value } from "./graph.js";

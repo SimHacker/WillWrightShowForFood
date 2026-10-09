@@ -100,6 +100,14 @@ which language built the rings. A test types elements in at the Forth teletype, 
 ring area the way the panel does, and checks that the scene reaches every element from
 `RSAVINS` and nothing outside the ring area.
 
+**SAVE** writes what the panel shows as a `.pix` file: the transfer stream the Titan link
+carries (`PXID`, BEG, END, SAVINS, the words, three bytes a word); shift-click for YAML.
+**LOAD** reads a `.pix`, YAML or JSON ring file into Forth's ring area, as the 1972 receiver
+did: it relocates every pointer to Forth's BEG, points `RSAVINS` at the entry, gives the
+other permanent names fresh items, and lays the rest out as RSPPIX's free list. Forth can
+walk and extend what it loaded straight away (`implant` in
+[`image.ts`](../pixie/src/image.ts), tested by a save, `RINGS`, load and walk round trip).
+
 RSPPIX keeps a printname as a run of consecutive words, the way `CDR` steps through a list,
 not as two-word cells. The scene builder reads the run, so the panel spells `TRIANGLE`.
 
@@ -147,7 +155,8 @@ connected to one Tiny Titan, handing drawings back and forth:
 
 What each step needs:
 
-- **A filestore in Tiny Titan.** Named slots for ring images: OPFS or `localStorage` in the
+- **A filestore in Tiny Titan.** SAVE and LOAD already move ring files between core and
+  disk; Tiny Titan's filestore does the same over the link. Named slots for ring images: OPFS or `localStorage` in the
   browser, files on node. `BlockletHost` records uploads today. Serving them back is the
   rung that was prototyped and lost (see [TINY-TITAN.md](TINY-TITAN.md#what-it-could-do)),
   with two known fixes to make when it is rebuilt.
