@@ -87,6 +87,11 @@ When nothing can be reclaimed, you get `rings full?` and the prompt, not a halt.
 | `RFIRST`, `RNEXT` | walk a ring |
 | `RCOUNT` | count a ring's elements |
 | `.PNAME`, `.RING` | print names back |
+| `APPEND`, `SAY`, `SAYS` | add at the end, so a ring reads in the order written; `SAYS` makes an element per word |
+| `HELLO` | start again with `HELLO WORLD FROM PDP-7 FORTH`, which is what it boots with |
+
+The panel is a 3D teletype: Forth appends to it, resets it and rewrites it. `S" AND PIXIE
+RINGS" SAYS` adds three words to the ring you're watching.
 
 ## 3. Seeing it
 

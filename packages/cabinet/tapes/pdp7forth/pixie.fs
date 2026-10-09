@@ -33,4 +33,23 @@ variable rx   variable ry   variable rn
 : .ring ( ring -- )
   dup rfirst  begin dup rnext while rx .pname space repeat drop ;
 
-rings
+\ Appending, so a ring reads in the order it was written: the RINGS panel as
+\ a 3D teletype. RLAST leaves RY naming the ring's last item (its start when
+\ empty); APPEND puts a new element after it.
+: rlast ( ring -- )
+  dup rfirst  rx @ ry !  begin dup rnext while rx @ ry ! repeat drop ;
+: append ( ring -- ) rlast  rfel  rel1 @ rx !  rx raddw  rx ry rinsrt ;
+: say ( c-addr u -- ) rsavins append pname ;
+variable wl
+: wordlen ( c-addr u -- n ) \ up to the next blank
+  0 wl !  begin dup 0> while
+    over c@ bl = if 2drop wl @ exit then  1 wl +!  1- swap 1+ swap
+  repeat 2drop wl @ ;
+: says ( c-addr u -- ) \ an element for each word
+  begin dup 0> while
+    over c@ bl = if 1- swap 1+ swap else
+      2dup wordlen >r  over r@ say  r@ - swap r> + swap then
+  repeat 2drop ;
+: hello ( -- ) rings  s" HELLO WORLD FROM PDP-7 FORTH" says ;
+
+hello

@@ -193,6 +193,7 @@ async function forthRings() {
 test("Forth's PIXIE rings: elements built at the teletype show in the RINGS scene from RSAVINS", async () => {
 	const { ringToScene } = await import("./scene.js");
 	const { cpu, image, line } = await forthRings();
+	line("RINGS");
 	for (const name of ["SQUARE", "TRIANGLE", "HEX"]) assert.match(line(`RSAVINS S" ${name}" NAMED`), /NAMED\s+ok\r\n$/);
 	// The applet's capture: the cells RBEG, REND and RSAVINS name.
 	const at = (n: string) => cpu.read(image.labels.get(n) as number);
@@ -215,6 +216,7 @@ test("Forth's PIXIE rings: elements built at the teletype show in the RINGS scen
 test("Forth's PIXIE rings: save to a file, wipe, load it back into core, and Forth walks and extends it", async () => {
 	const { readRings } = await import("./scene.js");
 	const { cpu, image, line } = await forthRings();
+	line("RINGS");
 	for (const name of ["SQUARE", "TRIANGLE"]) line(`RSAVINS S" ${name}" NAMED`);
 	const at = (n: string) => image.labels.get(n) as number;
 	const cells = { beg: at("rbeg"), end: at("rend"), savins: at("rsavins"), free: at("rfree"), endres: at("rendres"), bot: at("rbot"), top: at("rtop") };
@@ -230,4 +232,18 @@ test("Forth's PIXIE rings: save to a file, wipe, load it back into core, and For
 	assert.match(line("RSAVINS .RING"), /TRIANGLE SQUARE\s+ok/);
 	assert.match(line(`RSAVINS S" HEX" NAMED RSAVINS .RING`), /HEX TRIANGLE SQUARE\s+ok/);
 	assert.match(line(": MANY 0 DO RSAVINS S\" AB\" NAMED LOOP ; 40 MANY RSAVINS RCOUNT ."), / 43\s+ok/);
+});
+
+test("Forth's PIXIE rings: it boots saying HELLO WORLD FROM PDP-7 FORTH, one ring element a word, in the RINGS scene", async () => {
+	const { ringToScene } = await import("./scene.js");
+	const { cpu, image } = await forthRings();
+	const at = (n: string) => cpu.read(image.labels.get(n) as number);
+	const beg = at("rbeg") & 0o17777;
+	const end = at("rend") & 0o17777;
+	const savins = at("rsavins") & 0o777777;
+	const words: number[] = [];
+	for (let a = beg; a < end; a += 1) words.push(cpu.read(a) & 0o777777);
+	const scene = ringToScene({ beg, end, savins, words }, [savins]);
+	const texts = scene.chains.map((c) => c.text).filter((t): t is string => t !== undefined);
+	assert.deepEqual(texts.sort(), ["FORTH", "FROM", "HELLO", "PDP-7", "WORLD"]);
 });

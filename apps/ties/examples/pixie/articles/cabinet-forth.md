@@ -28,4 +28,4 @@ The turtle words: `FD` `BK` (pixels), `RT` `LT` (degrees, clockwise is right), `
     RSAVINS .RING
     RSAVINS RCOUNT .
 
-`RINGS` starts again with an empty ring at `RSAVINS`, the front door the panel looks through. When the ring area fills, RSPPIX's own garbage collector takes back what nothing reaches; when nothing can be taken back, Forth says `rings full?`.
+It boots saying `HELLO WORLD FROM PDP-7 FORTH` in the ring, one element a word. `S" AND PIXIE RINGS" SAYS` appends, and `HELLO` starts it again. `RINGS` starts again with an empty ring at `RSAVINS`, the front door the panel looks through. When the ring area fills, RSPPIX's own garbage collector takes back what nothing reaches; when nothing can be taken back, Forth says `rings full?`.

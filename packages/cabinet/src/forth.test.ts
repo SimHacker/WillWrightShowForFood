@@ -188,7 +188,11 @@ test("forth, PIXIE rings: RSPPIX, moved up to 14022, is the 1972 code word for w
 test("forth, PIXIE rings: elements named in Forth go round RSAVINS, and RSPPIX finds their names", () => {
 	const m = machine(rings);
 	m.box.run(300_000);
-	assert.match(m.line("RSAVINS RCOUNT ."), / 0\s+ok/);
+	// It boots saying hello in the ring: the RINGS panel as a 3D teletype.
+	assert.match(m.line("RSAVINS .RING"), /HELLO WORLD FROM PDP-7 FORTH\s+ok/);
+	assert.match(m.line(`S" AND PIXIE RINGS" SAYS RSAVINS .RING`), /HELLO WORLD FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
+	assert.match(m.line("HELLO RSAVINS RCOUNT ."), / 5\s+ok/);
+	assert.match(m.line("RINGS RSAVINS RCOUNT ."), / 0\s+ok/);
 	for (const name of ["SQUARE", "TRIANGLE", "HEX"]) assert.match(m.line(`RSAVINS S" ${name}" NAMED`), /ok/);
 	assert.match(m.line("RSAVINS RCOUNT ."), / 3\s+ok/);
 	assert.match(m.line("RSAVINS .RING"), /HEX TRIANGLE SQUARE\s+ok/);
@@ -198,6 +202,7 @@ test("forth, PIXIE rings: elements named in Forth go round RSAVINS, and RSPPIX f
 test("forth, PIXIE rings: the 1972 garbage collector takes back deleted elements, and a full area says so", () => {
 	const m = machine(rings);
 	m.box.run(300_000);
+	m.line("RINGS");
 	m.line(`: MANY 0 DO RSAVINS S" AB" NAMED LOOP ;`);
 	m.line(": DROPALL 0 DO RSAVINS RFIRST RX RCAR RX RDELB LOOP ;");
 	for (let k = 0; k < 4; k += 1) assert.match(m.line("50 MANY 50 DROPALL RSAVINS RCOUNT ."), / 0\s+ok/);
