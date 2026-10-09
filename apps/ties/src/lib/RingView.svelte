@@ -1,6 +1,6 @@
 <script>
 	// The PIXIE ring structure in 3D: live from the running PDP-7's core, or loaded from a
-	// file (YAML, JSON, or the binary transfer stream). RAW, YAML and JSON save what's shown;
+	// file (YAML, JSON, or the binary transfer stream). PIX, YAML and JSON save what's shown;
 	// LOAD puts a file into the machine's core when the program can take one, else shows it. Drag to turn, wheel to zoom, point at
 	// a cell to read it, click to open it in the memory panel.
 	import { onMount } from 'svelte';
@@ -145,7 +145,7 @@
 
 	const o = (w) => (w ?? 0).toString(8).padStart(6, '0');
 
-	// RAW, YAML, JSON: save what's shown in that format. RAW is the binary transfer stream
+	// >PIX, >YAML, >JSON: save what's shown in that format. PIX is the binary transfer stream
 	// (PXID, BEG, END, SAVINS, the words, three bytes a word: what the Titan link carries).
 	// YAML and JSON are the ring image with octal words. LOAD reads any of the three back.
 	function save(kind) {
@@ -187,12 +187,12 @@
 <div class="rings" bind:clientWidth={width}>
 	<div class="mem-bar">
 		<button type="button" class="chip" class:on={spin} aria-pressed={spin} title="Spin: turn the structure slowly" onclick={() => (spin = !spin)}>SPIN</button>
-		<label class="chip" title={implant ? "Load a ring file, raw, YAML or JSON, into the running machine's ring area" : "Show a ring file, raw, YAML or JSON; this program can't take one into core yet"}
-			>LOAD<input type="file" accept=".pix,.bin,.yml,.yaml,.json" onchange={choose} hidden /></label
+		<label class="chip" title={implant ? "Load a ring file, PIX, YAML or JSON, into the running machine's ring area" : "Show a ring file, PIX, YAML or JSON; this program can't take one into core yet"}
+			>&lt;LOAD<input type="file" accept=".pix,.bin,.yml,.yaml,.json" onchange={choose} hidden /></label
 		>
-		<button type="button" class="chip" title="Save what's shown as the raw transfer stream (.pix), what the Titan link carries" onclick={() => save('raw')}>RAW</button>
-		<button type="button" class="chip" title="Save what's shown as YAML (.yml), one octal word a line with its address" onclick={() => save('yaml')}>YAML</button>
-		<button type="button" class="chip" title="Save what's shown as JSON (.json), words in octal" onclick={() => save('json')}>JSON</button>
+		<button type="button" class="chip" title="Save what's shown as the PIX transfer stream (.pix), what the Titan link carries" onclick={() => save('pix')}>&gt;PIX</button>
+		<button type="button" class="chip" title="Save what's shown as YAML (.yml), one octal word a line with its address" onclick={() => save('yaml')}>&gt;YAML</button>
+		<button type="button" class="chip" title="Save what's shown as JSON (.json), words in octal" onclick={() => save('json')}>&gt;JSON</button>
 		{#if source !== 'live'}<button type="button" class="chip" title="Back to the running machine's rings" onclick={() => ((source = 'live'), (scene = null), (last = null))}>LIVE</button>{/if}
 		<span class="mem-hint">{#if hover}{o(hover.addr)}{name(hover.addr) ? ` ${name(hover.addr)}` : ''} {hover.kind} {o(hover.word)}{#if hover.cdrWord !== undefined} . {o(hover.cdrWord)}{/if}{hover.label ? ` ${hover.label}` : ''}{:else}{note}{/if}</span>
 	</div>

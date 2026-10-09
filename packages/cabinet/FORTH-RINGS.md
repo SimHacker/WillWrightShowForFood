@@ -105,10 +105,10 @@ which language built the rings. A test types elements in at the Forth teletype, 
 ring area the way the panel does, and checks that the scene reaches every element from
 `RSAVINS` and nothing outside the ring area.
 
-**RAW**, **YAML** and **JSON** save what the panel shows. RAW is the transfer stream the
+**>PIX**, **>YAML** and **>JSON** save what the panel shows. PIX is the transfer stream the
 Titan link carries (`PXID`, BEG, END, SAVINS, the words, three bytes a word), as `.pix`;
 YAML and JSON are the ring image with its words in octal.
-**LOAD** reads any of the three into Forth's ring area, as the 1972 receiver
+**<LOAD** reads any of the three into Forth's ring area, as the 1972 receiver
 did: it relocates every pointer to Forth's BEG, points `RSAVINS` at the entry, gives the
 other permanent names fresh items, and lays the rest out as RSPPIX's free list. Forth can
 walk and extend what it loaded straight away (`implant` in
