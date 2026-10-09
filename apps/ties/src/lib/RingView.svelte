@@ -130,10 +130,10 @@
 <div class="rings" bind:clientWidth={width}>
 	<div class="mem-bar">
 		<button type="button" class="chip" class:on={source === 'live'} aria-pressed={source === 'live'} title="Live: the ring structure in the running machine's core, as CONFIG names it, redrawn as it changes. Off: a file" onclick={() => ((source = 'live'), (scene = null), (last = null))}>LIVE</button>
+		<button type="button" class="chip" class:on={spin} aria-pressed={spin} title="Spin: turn the structure slowly" onclick={() => (spin = !spin)}>SPIN</button>
 		<label class="chip" class:on={source !== 'live'} title="A ring image or graph as YAML or JSON, or a binary transfer stream (3 bytes a word)"
 			>FILE<input type="file" accept=".yml,.yaml,.json,.pix,.bin" onchange={choose} hidden /></label
 		>
-		<button type="button" class="chip" class:on={spin} aria-pressed={spin} title="Spin: turn the structure slowly" onclick={() => (spin = !spin)}>SPIN</button>
 		<span class="mem-hint">{#if hover}{o(hover.addr)}{name(hover.addr) ? ` ${name(hover.addr)}` : ''} {hover.kind} {o(hover.word)}{#if hover.cdrWord !== undefined} . {o(hover.cdrWord)}{/if}{hover.label ? ` ${hover.label}` : ''}{:else}{note}{/if}</span>
 	</div>
 	<canvas
