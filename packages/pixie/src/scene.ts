@@ -159,6 +159,25 @@ export function ringToScene(image: RingImage, roots: number[] = [image.savins]):
 			members.add(a);
 			add(c, { addr: a, kind: "cell", word: car, cdrWord: cdr, label: cellLabel(car) });
 			if (classify(car) === "pointer") pending.push({ addr: addrOf(car), from: a, parent: c.id, kind: "car" });
+			// RSPPIX's CDR is the next word, past nonitems, so a printname from COPIN or Forth's
+			// PNAME is a run of character words, not a chain of cells. Read the run to its end.
+			if (charOf(car) !== null && charOf(cdr) !== null) {
+				let b = a + 1;
+				for (let guard = 0; guard < 8192 && inImage(b) && !nodes.has(b); guard += 1) {
+					const wb = w(b);
+					if (wb & NONITEM) {
+						b = wb & AMASK;
+						continue;
+					}
+					if (charOf(wb) === null) break;
+					members.add(b);
+					add(c, { addr: b, kind: "cell", word: wb, cdrWord: inImage(b + 1) ? w(b + 1) : NIL, label: cellLabel(wb) });
+					edges.push({ from: a, to: b, kind: "cdr" });
+					a = b;
+					b += 1;
+				}
+				break;
+			}
 			if (isNil(cdr) || classify(cdr) !== "pointer") break;
 			const t = addrOf(cdr);
 			if (members.has(t)) {
@@ -166,7 +185,9 @@ export function ringToScene(image: RingImage, roots: number[] = [image.savins]):
 				edges.push({ from: a, to: t, kind: "close" });
 				break;
 			}
-			if (nodes.has(t) || !cellAt(t)) {
+			// A printname run after the head's own words gets a chain of its own, so it reads as a name.
+			const nameRun = charOf(w(t)) !== null && charOf(car) === null;
+			if (nodes.has(t) || !cellAt(t) || nameRun) {
 				pending.push({ addr: t, from: a, parent: c.id, kind: "cdr" });
 				break;
 			}

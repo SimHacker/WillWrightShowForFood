@@ -166,7 +166,7 @@ const ringsKernel = assembleForthKernel({
 });
 const rings = compileForth({
 	kernel: ringsKernel,
-	sources: [tape("prelude.fs"), tape("turtle.fs"), tape("pixie.fs")],
+	sources: [tape("prelude.fs"), tape("does.fs"), tape("turtle.fs"), tape("pixie.fs")],
 });
 
 test("forth, PIXIE rings: RSPPIX, moved up to 14022, is the 1972 code word for word", () => {
@@ -205,6 +205,19 @@ test("forth, PIXIE rings: the 1972 garbage collector takes back deleted elements
 	assert.match(m.line("400 MANY"), /MANY rings full\?/);
 	assert.ok(!m.cpu.halted);
 	assert.match(m.line("RINGS 2 3 + ."), / 5\s+ok/);
+});
+
+test("forth, CREATE DOES>: defining words, as Open Firmware and CForth spell them", () => {
+	const m = machine(rings);
+	m.box.run(300_000);
+	m.line(": KONST CREATE , DOES> @ ;");
+	m.line("42 KONST ANSWER");
+	assert.match(m.line("ANSWER ."), / 42\s+ok/);
+	m.line(": ARRAY CREATE ALLOT DOES> + ;");
+	m.line("10 ARRAY A");
+	assert.match(m.line("7 3 A ! 3 A @ . 0 A ' A >BODY = ."), / 7 -1\s+ok/);
+	assert.match(m.line("CREATE PLAIN 5 , PLAIN @ ."), / 5\s+ok/);
+	assert.match(m.line("' ANSWER >BODY @ ."), / 42\s+ok/);
 });
 
 test("forth, PIXIE rings: the turtle still draws with the rings loaded", () => {

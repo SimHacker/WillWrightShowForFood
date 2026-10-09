@@ -100,9 +100,8 @@ which language built the rings. A test types elements in at the Forth teletype, 
 ring area the way the panel does, and checks that the scene reaches every element from
 `RSAVINS` and nothing outside the ring area.
 
-There is one gap. RSPPIX stores a printname list as consecutive words, while the scene builder
-reads two-word cells, so for now each name shows only its first letter. The next change to
-`ringToScene` is to read the whole run.
+RSPPIX keeps a printname as a run of consecutive words, the way `CDR` steps through a list,
+not as two-word cells. The scene builder reads the run, so the panel spells `TRIANGLE`.
 
 ## Why it's worth having
 
@@ -168,7 +167,8 @@ What each step needs:
   and the catalogue. This is the research step. Its oracle is easy, though: draw something
   in SYMELEC, photograph the structure with the RINGS panel, and make Forth build the same
   structure.
-- **Whole printnames in the scene,** so the panel shows `TRIANGLE`, not `T`.
+- **`CREATE DOES>`** is in ([`does.fs`](tapes/pdp7forth/does.fs)), so ring types can be
+  defining words: `: LINE-TYPE CREATE ... DOES> ... ;`.
 
 The order that gets there soonest: serve-back and the filestore first. A round trip of
 SYMELEC to Titan and back to SYMELEC is the referee for everything after it. Then Forth

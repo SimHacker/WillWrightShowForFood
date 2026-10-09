@@ -138,9 +138,9 @@ RP and SP live in auto-index locations 10, 11 and 12; both stacks grow up, pushe
 in AC, because `XCT` loads AC before the old top could be saved. Literals compile as
 `LAC pool-entry`, sharing a pool that grows down from the top of memory.
 
-**Headers are two words:** the name's length, an immediate bit, a 3-bit type tag and a 9-bit
-relative link in one; the first three characters in SIXBIT in the other. `EXIT` lists as
-`EXI_`, and names alike in length and first three letters are the same word.
+**Headers are two words** in Mitch's kernel: the name's length, an immediate bit, a 3-bit
+type tag and a 9-bit relative link in one; the first three characters in SIXBIT in the other.
+The cabinet runs a copy that keeps the whole name ([below](#in-the-cabinet-full-names-create-does-and-pixie-rings)).
 
 **Arithmetic:** the EAE's signed multiply and divide assume ones'-complement signs, so `*`
 uses unsigned `MUL` and `/` fixes signs in software; `*/` keeps the EAE's 36-bit product.
@@ -292,22 +292,110 @@ CS PU 200 BK 90 LT 200 FD 90 RT PD STAR
   4K of an 8K machine, and our emulator needs 13 bits to run it. Either Cambridge's 340 had a
   wider counter or SYMELEC depends on something we haven't found. The H-340 manual should say.
 
-## Next, in this repo
+## In the cabinet: full names, CREATE DOES>, and PIXIE rings
 
-1. **Run it on the cabinet,** our browser PDP-7 ([README](../README.md)).
-   It already has what the kernel appears to use: `CAL`, `XCT`, auto-index, EAE `MUL`/`IDIV`,
-   the paper tape reader's `RSA`/`RSF`/`RRB`, the 340's load-and-go and stop skip. The missing
-   piece is a loader: `make run` deposits the `a7out` dump through a SIMH script, because
-   `as7`'s tape formats only cover memory above 4096. Then the turtle draws in the page, and
-   `TAPE` can read a file dropped on the reader.
-2. **A light pen vocabulary.** The turtle writes the display list; nothing reads the pen yet.
-   The 340 and 370 IOTs are in the cabinet and in SYMELEC's listing.
-3. **A 340 assembler vocabulary.** `vword` and `dl,` in `turtle.fs` are its first two words;
-   the rest (parameter, point, character, subroutine words) is laid out in
-   [FORTH-TURTLE-340.md §5](FORTH-TURTLE-340.md#5-the-spectrum-from-assembler-to-interpreter).
-4. **Rings.** Teach this Forth PIXIE's ring structures
-   ([FORTH-TURTLE-340.md §9](FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type)), and let the
-   turtle's display list be ring data SYMELEC could load.
+Mitch's Forth runs in the browser on the cabinet's emulated PDP-7, as **FORTH + TURTLE** on
+the program menu ([hyperties.org/cabinet/forth/](https://hyperties.org/cabinet/forth/)). The
+page assembles the kernel itself with an `as7` front end, then does what his `prelude.py`
+does under SIMH: it mounts the Forth sources on the paper tape reader, types `TAPE`, and keeps
+the core. His files are in [`tapes/pdp7forth/`](../tapes/pdp7forth/) unchanged, and the
+first test checks that the page's build of `kernel.s` matches his `as7` output word for word.
+The cabinet's additions are copies and files beside his, never edits to them.
+[VARIANTS.yml](../tapes/pdp7forth/VARIANTS.yml) records what each copy is, what it differs
+in, and what it must keep identical.
+
+**Full names.** [`kernel-names-full.s`](../tapes/pdp7forth/kernel-names-full.s) keeps every
+character of a name, up to 31, three SIXBIT characters to a word. A word is laid out as Open
+Firmware lays one out: the name, then the header, then the body. The xt is still the
+header's address, links still run header to header, and the body is at xt+1. `parse`
+packs the whole token, `find` compares the count and then every name word, and `WORDS`
+prints names whole. Only `mkcell` knows where the body is.
+[`make-forth-names-full.py`](../scripts/make-forth-names-full.py) generates the copy from
+`kernel.s`, so changes to `kernel.s` carry over when the script is run again. Mitch's own
+SIMH suite passes with the copy as `src/kernel.s`, except for eight tests that check the
+upstream encoding: four expect `EXI_` and `CELLX` redefining `CELL+`, and four deposit only
+the first name word for `find`. With full names, the prelude can define `CELLS` and `CHARS`.
+
+**CREATE DOES>, named as in Open Firmware and CForth.** [`does.fs`](../tapes/pdp7forth/does.fs)
+is fifteen lines of Forth, with no kernel change:
+
+```
+: konst  create ,  does> @ ;      42 konst answer   answer .  42
+: array  create allot  does> + ;  10 array a        7 3 a !   3 a @ .  7
+' answer >body @ .  42
+```
+
+`CREATE` makes a colon word whose body is a call to `(CREATE)`, then a slot for the `DOES>`
+code, then the data. `(CREATE)` pushes the data address and, if the slot is set, runs the
+code it holds. `(DOES>)` fills in the slot of the latest `CREATE`d word, which it finds
+through `LASTACF`. `>BODY` is `xt+3`. This is the same arrangement as CForth's `(does)`,
+which also needs no machine code in the defining word: OFW's `place-does` is a no-op there
+for the same reason. `;CODE` is `DOES>` with machine code after it, and it waits for an
+assembler (below).
+
+**PIXIE rings, on the 1972 code.** RSPPIX, the ring structure processor SYMELEC is built on,
+is linked into the Forth. It is translated from the 1972 Cambridge listing and must assemble
+to it word for word. To use it from Forth, it is moved up 014000, so that the offsets the
+Cambridge assembler ORs into addresses still add. [`pixie.s`](../tapes/pdp7forth/pixie.s)
+provides what SYMELEC provided:
+- its variables, in SYMELEC's order;
+- its two error exits, which print `ring?` or `rings full?` and return to the prompt;
+- a Forth primitive for each routine: `RSETUP RINIT RGETSP RCAR RCDR RPUSH RPOP RNULLR RINSRT
+  RFINDS RFINDN RFINDP RFEL RFELN RADDW RDELB`.
+
+A Forth `VARIABLE` leaves the same address as RSPPIX's `LAW X` calling convention, so most
+of these primitives are three instructions. [`pixie.fs`](../tapes/pdp7forth/pixie.fs) builds
+on them:
+
+```
+RSAVINS S" SQUARE" NAMED   RSAVINS S" TRIANGLE" NAMED
+RSAVINS .RING     TRIANGLE SQUARE  ok
+```
+
+The RINGS panel reads `RBEG`, `REND` and `RSAVINS`, the same three cells it reads in a running
+SYMELEC, and draws the live structure in 3D with printnames spelled out. Running out of space
+runs the 1972 garbage collector. The turtle draws as before with all of this loaded. The
+whole story is in [FORTH-RINGS.md](../FORTH-RINGS.md).
+
+## Next
+
+**Aligning with Open Firmware.** The intent is to make this Forth a small Open Firmware, not a
+separate dialect, and to build [tiny-its](../TINY-ITS.md), the cabinet's command line and
+debugger, by Open Firmware's practices:
+- Name things as OFW and CForth do (`>BODY`, `(DOES>)`, `LASTACF`).
+- Adopt its layout-independent header words (`>LINK`, `>NAME`, `N>LINK`, `L>NAME`, `>FLAGS`,
+  `NAME>STRING`), so code above them doesn't care where a name lives.
+- Add `DEFER`, then `SEE`, then wordlists, or rings standing in for them.
+- Port the line editor (`editcmd.fth`) and TENEX completion (`cmdcpl.fth`).
+- Pair each command with a `$` version that takes its argument as a string, for programs.
+- Give tiny-its a device tree you walk with `dev` and `ls`.
+
+Mitch is the person to ask how he would cut it down to 8K.
+
+**A PDP-7 assembler in Forth.** This is the assembler `;CODE` and `CODE` need. It should
+assemble Type 340 display instructions as well: parameter, point, vector, increment and
+character words, and subroutine jumps. Then display lists are written by name, not as raw
+octal. The turtle's `vword` and `dl,` are its first two words. The PIXIE-to-340 renderer
+would use it to compile ring structures into display code.
+
+**Tiny Titan: sending and receiving rings.** [Tiny Titan](../TINY-TITAN.md) is the far end of
+Neil Wiseman's PDP-7 to Titan link, and 1972 SYMELEC already uploads its drawings to it.
+The plan is two cabinets side by side, Forth in one and SYMELEC in the other, sharing one
+Tiny Titan:
+1. The turtle draws, and records the drawing as PIXIE rings.
+2. Forth sends the rings over the link, the way `/LTPIX` does.
+3. SYMELEC loads the drawing, relocates it and edits it with the light pen.
+4. SYMELEC sends it back, and Forth walks it, edits it and redraws it.
+
+The steps are a filestore and serving back in Tiny Titan, Forth words for the link IOTs, the
+relocation pass in Forth, block data from Forth (RSPPIX's `RBDN`), and SYMELEC's drawing
+schema. [FORTH-RINGS.md](../FORTH-RINGS.md#next-two-pdp-7s-one-titan) has the order.
+
+**Upstream.** If Mitch wants them, the full-names copy, a `KERNEL` parameter for his
+Makefile, and the test harness changes would go to him as pull requests.
+
+**Smaller.** A light pen vocabulary: the turtle writes the display list, but nothing reads
+the pen yet.
 
 ## Credits
 

@@ -124,21 +124,22 @@ function forthProgram({ id, label, kernelFile }) {
 		source: async () => (built.kernel ? sourceFromAsm(built.kernel, { id: 'as7', label: kernelFile, kind: 'source', dialect: 'as7' }) : null),
 		async load() {
 			if (built.image) return;
-			const [sop, kernel, end, prelude, turtle, glue, rsppix, pixie] = await Promise.all([
+			const [sop, kernel, end, prelude, does, turtle, glue, rsppix, pixie] = await Promise.all([
 				import('../../../../packages/cabinet/tapes/pdp7unix/sop.s?raw'),
 				FORTH_KERNELS[kernelFile](),
 				import('../../../../packages/cabinet/tapes/pdp7forth/end.s?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/prelude.fs?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/does.fs?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/turtle.fs?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/pixie.s?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/rsppix.s?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/pixie.fs?raw')
 			]);
 			// Mitch's build, in the page: as7 sop.s kernel.s end.s, with PIXIE rings (pixie.s, rsppix.s)
-			// before end.s, then the prelude, the turtle and the rings compiled on the machine.
+			// before end.s, then the prelude, CREATE DOES>, the turtle and the rings compiled on the machine.
 			const rings = { glue: glue.default, rsppix: rsppix.default };
 			built.kernel = assembleForthKernel({ sop: sop.default, kernel: kernel.default, end: end.default, kernelName: kernelFile, pixie: rings });
-			built.image = compileForth({ kernel: built.kernel, sources: [prelude.default, turtle.default, pixie.default] });
+			built.image = compileForth({ kernel: built.kernel, sources: [prelude.default, does.default, turtle.default, pixie.default] });
 		},
 		boot({ cpu }) {
 			bootForth(cpu, built.image);

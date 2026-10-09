@@ -285,7 +285,7 @@ same parts and runs on a PDP-7 VM with a teletype.
   backspace; tiny-its's also catches `?`, ESC, ^W, ^U and ^R and asks the command table
   what fits.
 - **Full names and help live in RSP rings.** Mitch's headers keep a length and the first
-  three characters, which can't tell `EXAMINE` from `EXAMPLE`. So the ring command table
+  three characters, which can't tell `EXAMINE` from `EXAMPLE` (the cabinet's copy keeps whole names). So the ring command table
   holds full names, help, guide words and the word to run: Forth runs, rings describe.
 - **Forth underneath, for hacking.** Anything that isn't a tiny-its command falls through
   to Forth. Newcomers and LLMs stay in the commands; hackers drop a level.
@@ -369,8 +369,10 @@ kind of field came next and completed from that. So:
 - **Help per field:** `?` prints each candidate with its line of help, not just its name.
 - **Guide words, defaults, and confirmation** for destructive commands.
 
-**For the PDP-7.** Mitch's PDP-7 Forth is much smaller: no `defer`, no vocabularies, and
-headers that keep three characters of each name. `defer` is a few lines. Instead of
+**For the PDP-7.** Mitch's PDP-7 Forth is much smaller: no `defer` and no vocabularies.
+The cabinet's copy keeps names whole and has `CREATE DOES>` with OFW's names
+([PDP7-FORTH.md](reference/PDP7-FORTH.md#in-the-cabinet-full-names-create-does-and-pixie-rings)),
+so `defer` is a few lines. Instead of
 vocabularies, keymaps and command contexts can be RSP rings of full names, help and the
 word to run, which is the ring command table above: the same design, with rings where
 Open Firmware has wordlists. Porting `editcmd.fth` and `cmdcpl.fth` is the first step,

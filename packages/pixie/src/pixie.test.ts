@@ -174,7 +174,7 @@ test("Forth's PIXIE rings: elements built at the teletype show in the RINGS scen
 		kernelName: "kernel-names-full.s",
 		pixie: { glue: tape("pdp7forth/pixie.s"), rsppix: tape("pdp7forth/rsppix.s") },
 	});
-	const image = compileForth({ kernel, sources: ["prelude.fs", "turtle.fs", "pixie.fs"].map((f) => tape(`pdp7forth/${f}`)) });
+	const image = compileForth({ kernel, sources: ["prelude.fs", "does.fs", "turtle.fs", "pixie.fs"].map((f) => tape(`pdp7forth/${f}`)) });
 	const cpu = new Pdp7({ coreWords: 8192 });
 	let paper = "";
 	const tty = new Teletype({ printCycles: 100, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
@@ -199,11 +199,8 @@ test("Forth's PIXIE rings: elements built at the teletype show in the RINGS scen
 	// The ring item at RSAVINS, and for each element its head, its atname and its printname.
 	assert.equal(scene.chains[0]?.cells[0], savins & 0o17777);
 	assert.ok(!scene.chains.some((c) => c.kind === "outside"), "nothing the scene reaches lies outside RBEG..REND");
-	// Each element's printname list is reached from RSAVINS. RSPPIX keeps a list as a run of
-	// words, so SQUARE is six character words in a row; the scene reads two-word cells, and so
-	// far labels each printname by its first character.
-	const label = new Map(scene.nodes.map((n) => [n.addr, n.label]));
-	const firsts = scene.chains.flatMap((c) => c.cells.map((a) => label.get(a) ?? "")).filter((l) => /^[A-Z]$/.test(l));
-	assert.deepEqual(firsts.sort(), ["H", "S", "T"]);
+	// Each element's printname, a run of character words as RSPPIX keeps a list, reads whole.
+	const names = scene.chains.map((c) => c.text).filter((t): t is string => t !== undefined);
+	assert.deepEqual(names.sort(), ["HEX", "SQUARE", "TRIANGLE"]);
 	assert.ok(scene.chains.length >= 7, `${scene.chains.length} chains`);
 });

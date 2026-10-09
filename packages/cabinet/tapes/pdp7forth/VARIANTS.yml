@@ -78,6 +78,12 @@ files:
       forth.ts, rsppixForForth, moves it to px.org and leaves its placeholder variables as
       space, since pixie.s defines them. Every other word is the listing's, 014000 up.
 
+  does.fs:
+    role: CREATE DOES> for the full-names kernel, in Forth, loaded after prelude.fs. Open
+      Firmware's and CForth's names - (DOES>), >BODY, LASTACF - and CForth's way, no code
+      in the defining word. A CREATEd word is a colon word - [call (CREATE)] [DOES> slot]
+      [data] - so >BODY is xt+3. ;CODE waits for a PDP-7 assembler in Forth.
+
   pixie.fs:
-    role: Forth over pixie.s, loaded after prelude.fs and turtle.fs. RINGS, ELEMENT, NAMED,
+    role: Forth over pixie.s, loaded after prelude.fs, does.fs and turtle.fs. RINGS, ELEMENT, NAMED,
       PNAME, RFIRST, RNEXT, RCOUNT, .PNAME, .RING.
