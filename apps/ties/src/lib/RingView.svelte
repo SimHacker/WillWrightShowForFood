@@ -188,7 +188,7 @@
 	<div class="mem-bar">
 		<button type="button" class="chip" class:on={spin} aria-pressed={spin} title="Spin: turn the structure slowly" onclick={() => (spin = !spin)}>SPIN</button>
 		<label class="chip" title={implant ? "Load a ring file, PIX, YAML or JSON, into the running machine's ring area" : "Show a ring file, PIX, YAML or JSON; this program can't take one into core yet"}
-			>&lt;LOAD<input type="file" accept=".pix,.bin,.yml,.yaml,.json" onchange={choose} hidden /></label
+			>&lt;LOAD<input type="file" onchange={choose} hidden /></label
 		>
 		<button type="button" class="chip" title="Save what's shown as the PIX transfer stream (.pix), what the Titan link carries" onclick={() => save('pix')}>&gt;PIX</button>
 		<button type="button" class="chip" title="Save what's shown as YAML (.yml), one octal word a line with its address" onclick={() => save('yaml')}>&gt;YAML</button>
