@@ -26,7 +26,7 @@
 	// root's ring pinned near the top of the panel, centred, with what hangs below it growing
 	// down. The layout recentres itself as the structure grows; the target follows the root,
 	// so the root stays put on screen.
-	const SCALE = 7.5;
+	const SCALE = 9;
 	const ROOT_UP = 0.45;
 	const cam = { ...DEFAULT_CAMERA, scale: SCALE, pan: [0, 0] };
 	let scene = null;
