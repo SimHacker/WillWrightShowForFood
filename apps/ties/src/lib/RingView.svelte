@@ -1,7 +1,7 @@
 <script>
 	// The PIXIE ring structure in 3D: live from the running PDP-7's core, or loaded from a
-	// file (YAML, JSON, or the binary transfer stream). SAVE writes what's shown; LOAD puts a
-	// file into the machine's core when the program can take one, else shows it. Drag to turn, wheel to zoom, point at
+	// file (YAML, JSON, or the binary transfer stream). RAW, YAML and JSON save what's shown;
+	// LOAD puts a file into the machine's core when the program can take one, else shows it. Drag to turn, wheel to zoom, point at
 	// a cell to read it, click to open it in the memory panel.
 	import { onMount } from 'svelte';
 	import { DEFAULT_CAMERA, changedCells, drawList, encodeTransfer, packWords, paint, pick, readRings, ringToScene } from '@wwsff/pixie';
@@ -145,9 +145,10 @@
 
 	const o = (w) => (w ?? 0).toString(8).padStart(6, '0');
 
-	// SAVE: what's shown, the live structure or the file, as the binary transfer stream
-	// (PXID, BEG, END, SAVINS, the words: what goes over the Titan link). Shift-click: YAML.
-	function save(e) {
+	// RAW, YAML, JSON: save what's shown in that format. RAW is the binary transfer stream
+	// (PXID, BEG, END, SAVINS, the words, three bytes a word: what the Titan link carries).
+	// YAML and JSON are the ring image with octal words. LOAD reads any of the three back.
+	function save(kind) {
 		const shot = source === 'live' ? capture?.() : loaded && { image: loaded };
 		const img = shot?.image;
 		if (!img) {
@@ -155,16 +156,22 @@
 			return;
 		}
 		const base = source === 'live' ? `rings-${img.beg.toString(8)}` : loadedName || 'rings';
-		const blob = e.shiftKey
-			? new Blob([yamlOf(img)], { type: 'text/yaml' })
-			: new Blob([packWords(encodeTransfer(img))], { type: 'application/octet-stream' });
+		const [data, type, ext] =
+			kind === 'yaml'
+				? [yamlOf(img), 'text/yaml', 'yml']
+				: kind === 'json'
+					? [jsonOf(img), 'application/json', 'json']
+					: [packWords(encodeTransfer(img)), 'application/octet-stream', 'pix'];
 		const a = document.createElement('a');
-		a.href = URL.createObjectURL(blob);
-		a.download = `${base}.${e.shiftKey ? 'yml' : 'pix'}`;
+		a.href = URL.createObjectURL(new Blob([data], { type }));
+		a.download = `${base}.${ext}`;
 		a.click();
 		setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 		note = `saved ${a.download}`;
+		noteHold = 2;
 	}
+	const jsonOf = (img) =>
+		`${JSON.stringify({ beg: img.beg.toString(8), end: img.end.toString(8), savins: img.savins.toString(8), words: img.words.map((w) => o(w)) })}\n`;
 	const yamlOf = (img) =>
 		[
 			`beg: '${img.beg.toString(8)}'`,
@@ -180,10 +187,12 @@
 <div class="rings" bind:clientWidth={width}>
 	<div class="mem-bar">
 		<button type="button" class="chip" class:on={spin} aria-pressed={spin} title="Spin: turn the structure slowly" onclick={() => (spin = !spin)}>SPIN</button>
-		<button type="button" class="chip" title="Save what's shown as a ring transfer stream (.pix, what the Titan link carries). Shift-click: YAML" onclick={save}>SAVE</button>
-		<label class="chip" title={implant ? "Load a ring file (.pix, YAML or JSON) into the running machine's ring area" : 'Show a ring file (.pix, YAML or JSON); this program can\'t take one into core yet'}
-			>LOAD<input type="file" accept=".yml,.yaml,.json,.pix,.bin" onchange={choose} hidden /></label
+		<label class="chip" title={implant ? "Load a ring file, raw, YAML or JSON, into the running machine's ring area" : "Show a ring file, raw, YAML or JSON; this program can't take one into core yet"}
+			>LOAD<input type="file" accept=".pix,.bin,.yml,.yaml,.json" onchange={choose} hidden /></label
 		>
+		<button type="button" class="chip" title="Save what's shown as the raw transfer stream (.pix), what the Titan link carries" onclick={() => save('raw')}>RAW</button>
+		<button type="button" class="chip" title="Save what's shown as YAML (.yml), one octal word a line with its address" onclick={() => save('yaml')}>YAML</button>
+		<button type="button" class="chip" title="Save what's shown as JSON (.json), words in octal" onclick={() => save('json')}>JSON</button>
 		{#if source !== 'live'}<button type="button" class="chip" title="Back to the running machine's rings" onclick={() => ((source = 'live'), (scene = null), (last = null))}>LIVE</button>{/if}
 		<span class="mem-hint">{#if hover}{o(hover.addr)}{name(hover.addr) ? ` ${name(hover.addr)}` : ''} {hover.kind} {o(hover.word)}{#if hover.cdrWord !== undefined} . {o(hover.cdrWord)}{/if}{hover.label ? ` ${hover.label}` : ''}{:else}{note}{/if}</span>
 	</div>
