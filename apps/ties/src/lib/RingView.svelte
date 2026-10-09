@@ -162,16 +162,14 @@
 		align-items: center;
 		flex-wrap: wrap;
 	}
-	/* The applet's panel chips, which a child component's scoped CSS doesn't reach. */
+	/* Toggles drawn like the applet's lamps (KBD, ION): tight, monospace, lit when on. */
 	.chip {
 		font: inherit;
-		font-size: 0.62rem;
-		height: 1.4rem;
-		padding: 0 0.4em;
-		white-space: nowrap;
-		display: inline-flex;
-		align-items: center;
-		border: 1px solid #555;
+		font-family: ui-monospace, monospace;
+		font-size: 0.66rem;
+		line-height: 1.5;
+		padding: 0 0.35ch;
+		border: 1px solid #3a5a3a;
 		background: transparent;
 		color: inherit;
 		cursor: pointer;
