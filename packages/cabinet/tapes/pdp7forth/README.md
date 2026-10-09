@@ -5,6 +5,19 @@ A small Forth for the PDP-7, from [MitchBradley/pdp7forth](https://github.com/Mi
 explain it. Among the ideas: each cell of a colon definition is a PDP-7 instruction run by `xct`,
 so NEXT is three instructions.
 
+How the threading works, and what to call it:
+
+- [How it works](../../reference/PDP7-FORTH.md#how-it-works): the four kinds of thread cell (a
+  colon word is a bare address, which executes as `CAL`; a primitive is `JMP`; a constant `LAC`;
+  a variable `LAW`), NEXT in three instructions, and the stacks in auto-index registers.
+- [XCT: the instruction that executes another instruction](../../reference/PDP7-FORTH.md#xct-the-instruction-that-executes-another-instruction):
+  why `xct` makes this possible, where it sits among direct, indirect, subroutine and token
+  threading, and [what to call it](../../reference/PDP7-FORTH.md#what-to-call-it).
+- [The course sketch, §3](../../reference/FORTH-TURTLE-340.md#3-a-pdp-7-forth-kernel): the kernel
+  as an exercise, written before Mitch's existed, and how his answers it.
+- [The cabinet's side](../../reference/PDP7-FORTH.md#in-the-cabinet-full-names-create-does-and-pixie-rings):
+  full names (the body at xt+1), `CREATE DOES>` and PIXIE rings, none of which changes the threading.
+
 - `kernel.s` and `end.s`: the kernel's source. `as7` assembles pdp7-unix's `src/sys/sop.s` (the
   opcode names), then these two.
 - `kernel.a7out` and `kernel.lst`: that assembled with pdp7-unix's `as7` (`make
