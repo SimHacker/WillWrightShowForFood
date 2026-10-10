@@ -332,7 +332,8 @@ The transcription cost about $122 to $132 in model time for 128 pages and 7,084 
 against $150 to $160 projected for the strongest model alone
 ([costs](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md#cost-and-time)).
 The emulator, assemblers, source maps, test programs and the debugging in the bug journal cost
-far more, in model time and mine.
+far more, in model time and mine: a single working morning in October 2026 came to over $330 in
+model charges, and the monthly bills run into the thousands of dollars.
 
 ## Open questions
 
