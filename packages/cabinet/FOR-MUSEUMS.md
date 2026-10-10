@@ -17,7 +17,7 @@ TypeScript and checked against Open SIMH, which it ports device by device
 - **PDP-7 UNIX v0**, from the pdp7-unix restoration: log in as ken.
 - **Mitch Bradley's PDP-7 Forth,** with turtle graphics on the 340 and PIXIE's ring structures.
 
-Around it: assemblers for the DEC, Cambridge and UNIX dialects, source maps from every word in core
+Around it: assemblers for the DEC, Cambridge, and UNIX dialects, source maps from every word in core
 to its source line and its scanned page, a front panel and register view, an editable display
 list, recording and replay of demos, eight light pens, and a 3D view of data structures in live
 core ([MANIFESTO.md](MANIFESTO.md) explains the attitude).
@@ -36,18 +36,18 @@ exercised the 340 and the light pen are the rarest and the most wanted.
 **Photographs and recordings of your machines,** to build photorealistic models of them, in 3D
 and as 2D web pages, which are yours to use as well:
 
-- Straight-on views of each cabinet, the console, the display and the Teletype, from the front at
+- Straight-on views of each cabinet, the console, the display, and the Teletype, from the front at
   the height of their middles, with a ruler or tape measure in the shot.
 - The console panel close up, square to the lens and sharp enough to read, once dark and once
   running, so every lamp and switch can be cut out.
 - An orbit for photogrammetry: 50 to 100 overlapping shots around the whole machine at knee,
   chest and overhead height, fixed exposure, soft even light, no flash.
-- Details: keyboard, tape reader, light pen and cable, the display's screen and bezel.
+- Details: keyboard, tape reader, light pen and cable, and the display's screen and bezel.
 - **Sound:** the machine powering up, the fans, the Teletype printing and reading tape, the tape
   reader, relays, anything that clicks. **Video** of the display running, slow enough to see the
   beam.
 
-**Run our software on your hardware.** Mitch Bradley's Forth, DUEL and the rest can be punched to
+**Run our software on your hardware.** Mitch Bradley's Forth, DUEL, and the rest can be punched to
 tape. If they run on your PDP-7, or misbehave, we'd love to know: the real machine is the final
 test of the emulator.
 
@@ -57,7 +57,7 @@ The cabinet is free to use and will stay that way. Building it is not free: it r
 tokens that I have been paying for myself, with monthly bills in the thousands of dollars
 ([what it cost](PIXIE-RESTORATION.md#what-it-cost)).
 
-If you, or your museum, university, company or lab, would like to support it, there are
+If you, or your museum, university, company, or lab, would like to support it, there are
 institutional tiers on [Patreon](https://www.patreon.com/c/DonHopkins). Support from anyone pays
 for the work that museums, Heinz, Roy Eagleson's students and everyone else then use for free. If
 you want a customized version for your own exhibit, that can be arranged, and it is support, not
