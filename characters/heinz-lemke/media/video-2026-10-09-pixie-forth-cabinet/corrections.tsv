@@ -1,0 +1,49 @@
+# Speech-to-text corrections for the YouTube captions, applied in order by build.py.
+# One per line: what YouTube heard <TAB> what was said. Plain text, not regex; whole words only.
+# Add a line, run build.py, upload transcript.vtt to YouTube. The raw captions are never edited.
+Schneiderman	Shneiderman
+stairst step	stair-step
+light pins	light pens
+light pin	light pen
+PDP7	PDP-7
+PTB7	PDP-7
+PDP10	PDP-10
+PDP P74	PDP-7 Forth
+type 340	Type 340
+hind scanned	hand scanned
+skeworphic	skeuomorphic
+AS7	as7
+movegative	move negative
+peaks and pokes	peeks and pokes
+Deck published	DEC published
+this is Dex	this is DEC's
+Loris Bringhoff	Lars Brinkhoff
+web GPU or GL	WebGPU or WebGL
+I was added there's	I added, there's
+duel	DUEL
+high low game	HILO game
+lunar lander. Lander	LANDER. Lander
+needs a fourth	needs a Forth
+the fourth actor that he is	the Forth hacker that he is
+instruction set for fourth	instruction set for Forth
+fourth	Forth
+Fourth	Forth
+23 + 5	2 3 + .
+40 do 200 FD90 RT loop	4 0 DO 200 FD 90 RT LOOP
+SQ40 do 200 flower 8 do SQL FL	: SQ 4 0 DO 200 FD 90 RT LOOP ; : FLOWER 8 0 DO SQ 45 RT LOOP ;
+star 50 do 400 C	: STAR 5 0 DO 400 FD 144 RT LOOP ;
+CS flower poo 400	CS FLOWER PU 450 BK
+Login is Ken. Login. Ken. Password. Ken at	Login is ken. Login: ken. Password: ken. At
+LS. LS.	ls. ls.
+# A correction can't cross a cue boundary; split it at the cue, one rule each.
+DD Maxis Soo S1 SS2 SS3 SS4 SS5	dd, s1.s s2.s s3.s s4.s s5.s
+SS6 SS7 SS8 S LS system system	s6.s s7.s s8.s, ls system
+APR as BCA cat	ar as bc cat
+S1S	s1.s
+Pixie	PIXIE
+pixie	PIXIE
+lisp conses	Lisp conses
+It has a con, a car,	It has a cons, a car,
+and a cutter	and a cdr
+18bit	18-bit
+[ __ ]	[expletive]

@@ -1,0 +1,22 @@
+# Provenance: YouTube captions for the PIXIE and FORTH cabinet demo
+
+video:
+  id: lo8kdY-5i6c
+  url: https://www.youtube.com/watch?v=lo8kdY-5i6c
+  title: "PIXIE and FORTH on PDP-7 Cabinet Emulator with Type 340 Vector Graphics Display"
+  by: Don Hopkins
+  uploaded: 2026-10-09
+  length: "23:15"
+
+canonical:
+  text: ../transcript.md
+  upload: ../transcript.vtt
+  method: "YouTube's en-US track, corrected by ../corrections.tsv through ../build.py. Spoken phrasing kept; misheard names, terms and typed commands fixed."
+
+reference_cache:
+  downloaded: 2026-10-10
+  tool: yt-dlp
+  files:
+    youtube-uploaded-en-US.vtt: "The en-US track: YouTube's speech recognition, phrase-timed, 173 cues. build.py reads this one."
+    youtube-auto-en.vtt: "The en auto-generated track: word-timed, for finer alignment later."
+  rule: "Never edit these. Corrections go in ../corrections.tsv."

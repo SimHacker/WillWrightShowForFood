@@ -1,0 +1,692 @@
+WEBVTT
+Kind: captions
+Language: en-US
+
+00:00:01.040 --> 00:00:10.960
+This is Heinz Lemke at his PDP-7 with a Teletype&nbsp;
+and a Type 340 vector graphics display and a light&nbsp;pen
+
+00:00:10.960 --> 00:00:16.880
+showing PIXIE that he developed at Cambridge&nbsp;
+University that has one of the first known&nbsp;&nbsp;
+
+00:00:17.760 --> 00:00:25.520
+radial menus operated by a light pen. So you, that&nbsp;
+cursor in the center is what you can draw with&nbsp;&nbsp;
+
+00:00:25.520 --> 00:00:31.680
+and the menu items are around the cursor. Also,&nbsp;
+there's menu items along the right edge of the&nbsp;&nbsp;
+
+00:00:31.680 --> 00:00:40.240
+screen to set the different modes for drawing.&nbsp;
+And if you just touch this with the light pen,&nbsp;&nbsp;
+
+00:00:40.240 --> 00:00:48.000
+that runs the command. And then it tracks by&nbsp;
+putting these dots on the screen. Now, see how&nbsp;&nbsp;
+
+00:00:48.000 --> 00:00:56.080
+you can move it around by dragging the middle. And&nbsp;
+then you can pop up the menu to select different&nbsp;&nbsp;
+
+00:00:56.080 --> 00:01:03.680
+components and the menu travels along with you.&nbsp;
+And the neat thing is you can draw a line and then&nbsp;&nbsp;
+
+00:01:04.640 --> 00:01:12.800
+undo it by moving back along the line or just do&nbsp;
+diagonal lines and attach things. So this is a&nbsp;&nbsp;
+
+00:01:12.800 --> 00:01:19.840
+general purpose drawing editor and it's a vector&nbsp;
+graphics display with beautiful green phosphor.&nbsp;&nbsp;
+
+00:01:21.200 --> 00:01:33.280
+Heinz Lemke here scanned 128 pages of PDP-7&nbsp;
+assembly language and we have OCR'ed it and&nbsp;&nbsp;
+
+00:01:33.280 --> 00:01:44.880
+brought it back to life here. Let's see. This is&nbsp;
+a PDP-7 emulator with a type 340 graphics display.&nbsp;&nbsp;
+
+00:01:45.760 --> 00:01:51.680
+Now there's a little bit that we can do since&nbsp;
+we're running in the web browser. We can do&nbsp;&nbsp;
+
+00:01:51.680 --> 00:01:58.640
+this vector graphics display is actually&nbsp;
+another CPU that's sharing the memory with&nbsp;&nbsp;
+
+00:01:58.640 --> 00:02:08.560
+the PDP-7 and it draws characters and lines and&nbsp;
+the user interface can look at those things and&nbsp;&nbsp;
+
+00:02:08.560 --> 00:02:15.840
+know what they are and like what code drew them&nbsp;
+and how it gets touched by the light pen. So,&nbsp;&nbsp;
+
+00:02:16.720 --> 00:02:23.120
+see this little spiral here, see, I can zoom&nbsp;
+in here. This if when you press down and you&nbsp;&nbsp;
+
+00:02:23.120 --> 00:02:27.280
+start moving, it starts moving along with you.&nbsp;
+I haven't done anything yet. It's just a track&nbsp;&nbsp;
+
+00:02:27.280 --> 00:02:33.360
+and cross. But if you move too fast, it gets away&nbsp;
+from you. So, it pops the menu back up. So, uh,&nbsp;&nbsp;
+
+00:02:33.360 --> 00:02:40.400
+now we can do these commands. S is to start. Now,&nbsp;
+that's changed to F. So, for finish. Now, what I&nbsp;&nbsp;
+
+00:02:40.400 --> 00:02:47.360
+can do now is draw a line. And this is for stairst&nbsp;
+step lines that you'd use for electrical diagrams.&nbsp;&nbsp;
+
+00:02:47.360 --> 00:02:52.720
+And then oh, if you don't like that, you can go&nbsp;
+back. Whoop. So this see this is what Schneiderman&nbsp;&nbsp;
+
+00:02:52.720 --> 00:02:59.760
+says about uh direct manipulation with continuous&nbsp;
+reversible actions. So and then you you draw and&nbsp;&nbsp;
+
+00:02:59.760 --> 00:03:04.880
+then you say, "Oh, I want a capacitor." Boop.&nbsp;
+And then you can draw some more and bring it&nbsp;&nbsp;
+
+00:03:04.880 --> 00:03:12.080
+down here. And look how the the resistor goes&nbsp;
+in the direction that you're going. Resistor&nbsp;&nbsp;
+
+00:03:12.080 --> 00:03:20.640
+And then like that. And then uh there's you can&nbsp;
+finish it. Now that becomes your your uh circuit&nbsp;&nbsp;
+
+00:03:20.640 --> 00:03:30.160
+there. Maybe we can go over here and start another&nbsp;
+one. Uh so see how the menu goes away when you're&nbsp;&nbsp;
+
+00:03:30.160 --> 00:03:38.720
+moving and then comes back. And uh you know these&nbsp;
+[laughter] here, let me go back to normal size.&nbsp;&nbsp;
+
+00:03:38.720 --> 00:03:44.240
+Uh you know there's like a rubber band. I could&nbsp;
+finish this boop and then go into rubber band&nbsp;&nbsp;
+
+00:03:44.240 --> 00:03:52.000
+mode and I'll bring him over here and I'll start&nbsp;
+one and then ah now we're doing a rubber band. So&nbsp;&nbsp;
+
+00:03:52.000 --> 00:03:58.880
+um like that finish. Okay. Ah there's some&nbsp;
+neat things you can do since we're running&nbsp;&nbsp;
+
+00:03:58.880 --> 00:04:05.120
+this emulator. Um I'll scroll down a little bit.&nbsp;
+So these are uh panels we can configure. We can&nbsp;&nbsp;
+
+00:04:05.120 --> 00:04:10.960
+pause the CPU or make it run, you know, maximum&nbsp;
+10 times fast or really slow. Oh, the cool thing&nbsp;&nbsp;
+
+00:04:10.960 --> 00:04:16.720
+is like Oh, look at that. Oh my god. What in&nbsp;
+the world is that? Um, that's interesting. So,&nbsp;&nbsp;
+
+00:04:16.720 --> 00:04:23.120
+uh, so we're running it really slow. It's supposed&nbsp;
+to be updating its screen really fast, but this&nbsp;&nbsp;
+
+00:04:23.120 --> 00:04:30.080
+is kind of neat. I'll have to figure out why it's&nbsp;
+doing this. Um, but I've been debugging this code&nbsp;&nbsp;
+
+00:04:30.080 --> 00:04:38.480
+by running it and finding OCR errors, so you never&nbsp;
+know. Um, so let's see. Now, a neat thing that you&nbsp;&nbsp;
+
+00:04:38.480 --> 00:04:45.840
+can do is play. Gives you a little demo button and&nbsp;
+it's just going to play back some Oh, it's really&nbsp;&nbsp;
+
+00:04:45.840 --> 00:04:53.760
+fast. I'm at max. Okay, that was not realistic.&nbsp;
+Let's just only do it at 10 times. So, this is&nbsp;&nbsp;
+
+00:04:53.760 --> 00:05:01.680
+driving [clears throat] it through the light&nbsp;
+pen. Okay, so um just do normal one time. So,&nbsp;&nbsp;
+
+00:05:01.680 --> 00:05:06.640
+see how you can draw and then you draw some more&nbsp;
+and then you move up. kind of have to steer around&nbsp;&nbsp;
+
+00:05:06.640 --> 00:05:13.840
+the stuff that's drawn because it confuses the&nbsp;
+tracking. You kind of trip over it. Um, so yeah,&nbsp;&nbsp;
+
+00:05:13.840 --> 00:05:21.440
+it's I mean it's very dependent on the way the&nbsp;
+input device works. So, uh, anyway, this is sort&nbsp;&nbsp;
+
+00:05:21.440 --> 00:05:26.640
+of like something you your child would draw and&nbsp;
+you hang on the refrigerator. This was actually&nbsp;&nbsp;
+
+00:05:26.640 --> 00:05:34.720
+Claude that just came up with these childlike&nbsp;
+uh, diagram, but that was exactly what I wanted.&nbsp;&nbsp;
+
+00:05:34.720 --> 00:05:40.560
+So, um, let's see. But there are weird things&nbsp;
+that you can do since this is a, um, so there's&nbsp;&nbsp;
+
+00:05:40.560 --> 00:05:54.080
+a TTY. Every good PDP7 should have a TTY. Hello.&nbsp;
+Hello. Oh, this one has speech recognition. Um,
+
+00:05:54.080 --> 00:06:02.240
+Help! It doesn't have any help. Oh, no. [laughter]
+
+00:06:02.240 --> 00:06:10.400
+There are other programs. Um anyway, uh let me&nbsp;
+turn off the speech recognition. Uh so anyway,&nbsp;&nbsp;
+
+00:06:10.400 --> 00:06:19.120
+PDP10 or you know TTY can't do that, but we can.&nbsp;
+So uh and it scrolls. So uh let's see where was I?&nbsp;&nbsp;
+
+00:06:19.120 --> 00:06:25.680
+Oh, right. Every good computer has registers. So&nbsp;
+and this is the front panel. We're going to make&nbsp;&nbsp;
+
+00:06:25.680 --> 00:06:32.640
+a more skeworphic thing right now, but we're just&nbsp;
+kind of going for green screen. Um, so the uh Oh,&nbsp;&nbsp;
+
+00:06:32.640 --> 00:06:38.160
+now registers are nice, but what about memory?&nbsp;
+Okay, what? Oh my god, look at this. Okay, this&nbsp;&nbsp;
+
+00:06:38.160 --> 00:06:48.960
+is insane. Okay, I'm gonna have to pause here. Um,&nbsp;
+what we did is we hind scanned all this code on&nbsp;&nbsp;
+
+00:06:48.960 --> 00:06:56.640
+paper that we can now single step through. So this&nbsp;
+is the original code. This is like a source map,&nbsp;&nbsp;
+
+00:06:56.640 --> 00:07:04.800
+but it goes two levels. It goes from memory&nbsp;
+into lines from source code and we can even&nbsp;&nbsp;
+
+00:07:04.800 --> 00:07:11.600
+choose the AS7 translation of source code which is&nbsp;
+a different dialect of PTB7. So there's multiple&nbsp;&nbsp;
+
+00:07:11.600 --> 00:07:20.240
+source maps and source maps that go to the scan&nbsp;
+and we can uh let's see okay yes there go nice&nbsp;&nbsp;
+
+00:07:20.240 --> 00:07:28.400
+speed here. So, so it's it's executing the code&nbsp;
+and um we can uh we could just like do a trace&nbsp;&nbsp;
+
+00:07:28.400 --> 00:07:38.000
+or something like that. But uh anyway, what is&nbsp;
+interesting about this? Um well, first of all,&nbsp;&nbsp;
+
+00:07:38.000 --> 00:07:48.480
+memory has the display list. So, these here are&nbsp;
+actually instructions to draw. And there's this&nbsp;&nbsp;
+
+00:07:48.480 --> 00:07:52.720
+neat little thing I can do. There's I added&nbsp;
+like normally you have one light pin but&nbsp;&nbsp;
+
+00:07:52.720 --> 00:07:57.920
+wow I was added there's eight light pins. We'll&nbsp;
+have like multi-user stuff for you soon. So you&nbsp;&nbsp;
+
+00:07:57.920 --> 00:08:05.200
+can edit 340 instructions. So what these are are&nbsp;
+little drawing commands and they have relative uh&nbsp;&nbsp;
+
+00:08:05.200 --> 00:08:10.240
+they you know they only have so many bits of how&nbsp;
+far they can move. So when you draw a long line,&nbsp;&nbsp;
+
+00:08:10.240 --> 00:08:18.800
+see this line is broken up into smaller lines.&nbsp;
+And each of these is only allowed see he's he's&nbsp;&nbsp;
+
+00:08:18.800 --> 00:08:27.920
+like at the end of the leash. So uh but what I'm&nbsp;
+doing is I'm editing the display instructions in&nbsp;&nbsp;
+
+00:08:27.920 --> 00:08:37.120
+memory. So look at that. Okay. So see these this&nbsp;
+memory has PDP7 code in it but it also has 340&nbsp;&nbsp;
+
+00:08:37.120 --> 00:08:46.640
+display instructions which is movegative -1227 or&nbsp;
+so so I'm editing the move instruction and if I go&nbsp;&nbsp;
+
+00:08:46.640 --> 00:08:54.160
+here it'll go up there and you know it's trying to&nbsp;
+disassemble it but um so the the the idea is this&nbsp;&nbsp;
+
+00:08:54.160 --> 00:09:00.640
+display is a vector graphics display and I can&nbsp;
+make a user interface that just reaches down and&nbsp;&nbsp;
+
+00:09:00.640 --> 00:09:07.600
+peaks and pokes into memory. Um, and uh, so why&nbsp;
+would you want to do that? I don't know. But um,&nbsp;&nbsp;
+
+00:09:07.600 --> 00:09:14.080
+it it's interesting to debug your programs.&nbsp;
+And uh, let's see. Speaking of which, oh,&nbsp;&nbsp;
+
+00:09:14.080 --> 00:09:24.080
+so we scanned all this code and the problem was&nbsp;
+there were some OCR errors and then it was like,&nbsp;&nbsp;
+
+00:09:24.080 --> 00:09:32.400
+how do we make the light pin work? Okay. So,&nbsp;
+in 1964, Deck published a light pen test. Bless&nbsp;&nbsp;
+
+00:09:32.400 --> 00:09:39.200
+their furry little hearts. So, what we can do Oh,&nbsp;
+yeah. See, that's all it does. It's very This is&nbsp;&nbsp;
+
+00:09:39.200 --> 00:09:45.440
+so brutalistic. Okay, we do have a I mean, and&nbsp;
+this is Dex. There was actually a page missing&nbsp;&nbsp;
+
+00:09:45.440 --> 00:09:53.040
+from the code. Um, so we we we got to recreate&nbsp;
+that because it was not too hard to figure out.&nbsp;&nbsp;
+
+00:09:53.040 --> 00:09:58.320
+But the the thing is oh look see we're we're&nbsp;
+slowing it down and you can see it's scanning&nbsp;&nbsp;
+
+00:09:58.320 --> 00:10:07.760
+out. Um this is just uh it's either SVG or PNG but&nbsp;
+the plan is and Loris Bringhoff has already done&nbsp;&nbsp;
+
+00:10:07.760 --> 00:10:15.440
+this. [clears throat] We just need to integrate&nbsp;
+his code is to have a full uh web GPU or GL&nbsp;&nbsp;
+
+00:10:15.440 --> 00:10:23.120
+uh phosphor simulator so you'll have the beautiful&nbsp;
+fading effect. Um, and that that's but right now.&nbsp;&nbsp;
+
+00:10:23.120 --> 00:10:29.280
+And what I want to do is make it slow enough that&nbsp;
+you can see the beam scanning out. That's the goal&nbsp;&nbsp;
+
+00:10:29.280 --> 00:10:35.360
+here. So, but anyway. So, so now the light pin&nbsp;
+test normally, you know, it's just flickering like&nbsp;&nbsp;
+
+00:10:35.360 --> 00:10:41.840
+this. And I'm going to get out of uh the thing&nbsp;
+is, see, this is procedural. So, there's only&nbsp;&nbsp;
+
+00:10:41.840 --> 00:10:47.840
+really one line. It's just doing in a loop. Oh my&nbsp;
+god. Have I have I screwed it up? Show in memory.&nbsp;&nbsp;
+
+00:10:47.840 --> 00:10:53.600
+Oh, you see? Um, so, oh, let me show you the&nbsp;
+reset button. You You don't want to do that,&nbsp;&nbsp;
+
+00:10:53.600 --> 00:11:02.240
+but you have to pull it down like that. Anyway, so&nbsp;
+we're back. The uh there's a play demo for this.&nbsp;&nbsp;
+
+00:11:02.240 --> 00:11:06.480
+And the demos are neat because they tell you what&nbsp;
+they're doing. Um, so it's going to it's going to&nbsp;&nbsp;
+
+00:11:06.480 --> 00:11:16.080
+move the light pin around and uh test out all&nbsp;
+the light pin. I actually found bugs this way,&nbsp;&nbsp;
+
+00:11:16.080 --> 00:11:22.720
+you know. So, [laughter] the light pen&nbsp;
+test was pretty useful. So, um anyway,&nbsp;&nbsp;
+
+00:11:22.720 --> 00:11:32.160
+not too exciting. Uh more exciting, more to the&nbsp;
+point. Let's stop the play. Um okay. Oh no, we're&nbsp;&nbsp;
+
+00:11:32.160 --> 00:11:40.720
+stuck in the demo here. Oh, no. Play. Stop. Okay.&nbsp;
+Not the world's greatest user interface. So, duel,&nbsp;&nbsp;
+
+00:11:40.720 --> 00:11:52.240
+of course, from 1968. Oh, see see I'm already&nbsp;
+I'm in like I'm in um see see duel drew the two&nbsp;&nbsp;
+
+00:11:52.240 --> 00:11:59.520
+um spaceships and I'm not running or well it's&nbsp;
+running but nobody's going anywhere yet. So So let&nbsp;&nbsp;
+
+00:11:59.520 --> 00:12:11.280
+me go uh WD. So So see it's redrawing the little&nbsp;
+thing there but you know you you keep your same um
+
+00:12:13.920 --> 00:12:21.760
+Uh oh. And then bam, bam, bam, bam, bam. Oh&nbsp;
+[&nbsp;__&nbsp;] I'm not that good at this. Oh, okay. Ah,&nbsp;&nbsp;
+
+00:12:21.760 --> 00:12:28.400
+so what the cool thing is when duel ends, it&nbsp;
+hit a halt instruction. So the emulator knows&nbsp;&nbsp;
+
+00:12:28.400 --> 00:12:34.880
+it's running duel and it halts and it can look&nbsp;
+in the memory and see like who won and keep a&nbsp;&nbsp;
+
+00:12:34.880 --> 00:12:43.280
+tally like. So you got this whole outside state in&nbsp;
+the emulator that can look in and do anything. So&nbsp;&nbsp;
+
+00:12:43.280 --> 00:12:49.760
+um that that's how we got a nice you know&nbsp;
+otherwise it just halted. See there's the&nbsp;&nbsp;
+
+00:12:49.760 --> 00:13:01.920
+halt. There's a halt somewhere trace. Yeah. Halt.&nbsp;
+So that's uh but anyway so that's the duel. Um oh&nbsp;&nbsp;
+
+00:13:01.920 --> 00:13:08.000
+okay. So I needed to test the TTY. Hello. For&nbsp;
+the PDP7 teletype, I think of a number from 0&nbsp;&nbsp;
+
+00:13:08.000 --> 00:13:27.440
+to 99. You guess it. Press return to start. Um uh&nbsp;
+return. I am thinking of a number. Your guess 50
+
+00:13:27.440 --> 00:13:30.880
+your guess.
+
+00:13:30.880 --> 00:13:34.800
+20
+
+00:13:34.800 --> 00:13:43.200
+20. Well, we got a little 20 your guess. We got a&nbsp;
+little bounce on the thing here. But at any rate,&nbsp;&nbsp;
+
+00:13:43.200 --> 00:13:48.320
+high low game, you know that. And then of&nbsp;
+course there's lunar lander. Lander for the&nbsp;&nbsp;
+
+00:13:48.320 --> 00:13:55.840
+PDP7 teletype. You are 500 ft up. Falling at 50 ft&nbsp;
+a second. You have 60 units of fuel each second.&nbsp;&nbsp;
+
+00:13:55.840 --> 00:14:03.520
+Burn from 0 to 30. Time is zero. Altitude is 500.&nbsp;
+Speed 1. 0 time is 1, altitude is 410 time is 2,&nbsp;&nbsp;
+
+00:14:03.520 --> 00:14:14.640
+time is time is 4, altitude is 380, speed is -&nbsp;
+30, altitude is 34, 7.5, speed is - 6, altitude is&nbsp;&nbsp;
+
+00:14:14.640 --> 00:14:25.040
+310, speed is -4, your burn time is 7, altitude is&nbsp;
+267, 5, speed is -5, your burn time is 8, altitude&nbsp;&nbsp;
+
+00:14:25.040 --> 00:14:33.440
+is 220, speed is 50, fuel is, your burn time is&nbsp;
+9, PDP P74. Okay, Mitch Bradley. I told Mitch,&nbsp;&nbsp;
+
+00:14:33.440 --> 00:14:40.880
+"Hey, I have this PDP7 emulator. It really needs&nbsp;
+a fourth." And he whipped one out in one day and&nbsp;&nbsp;
+
+00:14:40.880 --> 00:14:49.280
+it's great. And it turns out the PDP7 has this&nbsp;
+really perfect instruction set for fourth. Um,&nbsp;&nbsp;
+
+00:14:49.280 --> 00:14:58.560
+so let's see where are we going here.&nbsp;
+If we slow this down. Um, okay. So, oh,&nbsp;&nbsp;
+
+00:14:58.560 --> 00:15:08.160
+and see Mitch being like the fourth actor that he&nbsp;
+is, uh, made a turtle graphics he made a turtle&nbsp;&nbsp;
+
+00:15:08.160 --> 00:15:14.720
+graphics system. Oh, we're going really slow here.&nbsp;
+The demo is not designed to be that slow. 23 + 5.&nbsp;&nbsp;
+
+00:15:14.720 --> 00:15:27.680
+Okay. 40 do 200 FD90 RT loop. Okay. SQ40 do 200&nbsp;
+flower 8 do SQL FL. Okay. So anyway, you got&nbsp;&nbsp;
+
+00:15:27.680 --> 00:15:38.480
+star 50 do 400 C. Okay, so the cool thing is CS&nbsp;
+flower poo 400. Okay, it's fourth and it's turtle&nbsp;&nbsp;
+
+00:15:38.480 --> 00:15:44.720
+graphics and it's vector graphics and fourth&nbsp;
+is like assembling uh you know vector graphics&nbsp;&nbsp;
+
+00:15:44.720 --> 00:15:50.480
+processor code and then it just makes all these&nbsp;
+neat little uh programs to draw on the screen&nbsp;&nbsp;
+
+00:15:50.480 --> 00:15:58.320
+that you can then edit like this. So, um, oh, but&nbsp;
+there's another thing going on. Pixie. Oh, wait.&nbsp;&nbsp;
+
+00:15:58.320 --> 00:16:16.320
+We'll do Unix first. Okay. Hello. Login is Ken.&nbsp;
+Login. Ken. Password. Ken at Oh, there. LS. LS.
+
+00:16:16.320 --> 00:16:23.280
+Here. We'll make it a little faster. Like&nbsp;
+we'll have DD Maxis Soo S1 SS2 SS3 SS4 SS5&nbsp;&nbsp;
+
+00:16:23.280 --> 00:16:36.320
+SS6 SS7 SS8 S LS system system okay a you&nbsp;
+got all that great stuff APR as BCA cat mod
+
+00:16:36.320 --> 00:16:47.520
+uh oh S1S so there's an assembler there's a BCPL&nbsp;
+compiler everything you ever needed I better oh&nbsp;&nbsp;
+
+00:16:47.520 --> 00:16:54.160
+config here. I'm going to turn for your sanity&nbsp;
+we can turn off. Yes. Return lac in one in get&nbsp;&nbsp;
+
+00:16:54.160 --> 00:17:01.760
+a number of interrupt one source nar zero jmp&nbsp;
+one off. Okay there that's a little better. So&nbsp;&nbsp;
+
+00:17:01.760 --> 00:17:11.600
+we have options. So anyway the thing it does is it&nbsp;
+run this is the first version of Unix on a PDP7.&nbsp;&nbsp;
+
+00:17:11.600 --> 00:17:20.080
+Um so let's go back to Pixie. So [clears throat&nbsp;
+and cough] when uh what it does, this is hard&nbsp;&nbsp;
+
+00:17:20.080 --> 00:17:30.400
+to explain. Okay, you know like XML, JSON, YAML,&nbsp;
+all that stuff. Pixie had a more general kind of&nbsp;&nbsp;
+
+00:17:30.400 --> 00:17:42.080
+uh way to represent data that uh it's called rings&nbsp;
+uh pixie rings so to speak. And um what happens&nbsp;&nbsp;
+
+00:17:42.080 --> 00:17:49.200
+is that's different. There's a different layer&nbsp;
+than the drawing instructions. So when I Oops,&nbsp;&nbsp;
+
+00:17:49.200 --> 00:17:57.520
+I better turn off the drawing editor. [laughter]&nbsp;
+Go back to light pin mode. Okay. So in and turn&nbsp;&nbsp;
+
+00:17:57.520 --> 00:18:07.120
+off the memory. We just have rings shown. So&nbsp;
+when I drag this No. No. Okay. And I start&nbsp;&nbsp;
+
+00:18:07.120 --> 00:18:13.120
+and I draw. This is kind of in a in a buffer.&nbsp;
+It's just not committed yet. But I finish. Ah,&nbsp;&nbsp;
+
+00:18:13.120 --> 00:18:20.800
+so what this is is a pixie ring, so to speak.&nbsp;
+It's it's like lisp conses. It has a con, a car,&nbsp;&nbsp;
+
+00:18:20.800 --> 00:18:33.760
+and a cutter and and it has characters and&nbsp;
+data. And uh when I do things like zigzag,&nbsp;&nbsp;
+
+00:18:33.760 --> 00:18:42.080
+then maybe maybe a capacitor and uh let's finish&nbsp;
+that. Okay. See, so I got some more stuff.&nbsp;&nbsp;
+
+00:18:42.080 --> 00:18:51.760
+This view is just reading it right out of core&nbsp;
+memory 18bit core memory live. So, you know,&nbsp;&nbsp;
+
+00:18:51.760 --> 00:18:56.640
+you can see there's this double buffering going&nbsp;
+on because you you don't see what it's drawing&nbsp;&nbsp;
+
+00:18:56.640 --> 00:19:07.120
+yet. But then if you commit it, boop. But then,&nbsp;
+oh, here we can go play demo. And now you can&nbsp;&nbsp;
+
+00:19:07.120 --> 00:19:17.440
+see it is drawing the whole thing. That's the&nbsp;
+drawing. So, so but anyway, so it seemed to be&nbsp;&nbsp;
+
+00:19:17.440 --> 00:19:24.160
+this is a nice little PDP7 library to do this&nbsp;
+that's separate from Pixie. So I thought, well,&nbsp;&nbsp;
+
+00:19:24.160 --> 00:19:32.960
+why don't we make these things from Fourth and I&nbsp;
+linked it in like this. So there's the TTY. Ah,&nbsp;&nbsp;
+
+00:19:32.960 --> 00:19:38.960
+okay. So see, Fourth starts out&nbsp;
+with this little thing that says,
+
+00:19:38.960 --> 00:19:53.440
+HELLO WORLD FROM PDP-7 FORTH. There we go. So, let&nbsp;
+me spin it again. So, Forth can make these too and&nbsp;&nbsp;
+
+00:19:53.440 --> 00:19:58.640
+uh the it's going to be able to send these&nbsp;
+back and forth to Pixie and you can run several&nbsp;&nbsp;
+
+00:19:58.640 --> 00:20:06.800
+emulators at once and stuff like that. But, um&nbsp;
+so, you know, the the turtle graphics of fourth&nbsp;&nbsp;
+
+00:20:06.800 --> 00:20:15.440
+doesn't really know about Pixie's drawings. See,&nbsp;
+the same way that SVG is an application of XML,&nbsp;&nbsp;
+
+00:20:15.440 --> 00:20:20.240
+Pixie drawings are an application of these&nbsp;
+Pixie rings and that you could use them to&nbsp;&nbsp;
+
+00:20:20.240 --> 00:20:28.640
+store whatever you wanted, like a hello world&nbsp;
+message. So, the turtle graphics is going to make&nbsp;&nbsp;
+
+00:20:28.640 --> 00:20:36.480
+Pixie graphics that you could send over to Pixie&nbsp;
+and edit in Pixie and then it'll render that into&nbsp;&nbsp;
+
+00:20:36.480 --> 00:20:46.080
+uh into drawings. So, so but anyway, there's&nbsp;
+um all sorts of ideas here. Um turtle words and&nbsp;&nbsp;
+
+00:20:46.080 --> 00:20:53.040
+uh let's see. So, there is this cabinet manifesto.&nbsp;
+We control the horizontal. We control the&nbsp;&nbsp;
+
+00:20:53.040 --> 00:20:59.520
+vertical. The machine in the page is ours. All of&nbsp;
+it at once. Every register, every word of core,&nbsp;&nbsp;
+
+00:20:59.520 --> 00:21:03.760
+every device, the host around them. Nothing here&nbsp;
+is a black box we have to squint at through a&nbsp;&nbsp;
+
+00:21:03.760 --> 00:21:08.800
+keyhole. So, when something would be better, we&nbsp;
+make it better for whichever side is closest. This&nbsp;&nbsp;
+
+00:21:08.800 --> 00:21:17.760
+1960s machine stays honest. Everything around&nbsp;
+it is ours to invent. So basically tribute,&nbsp;&nbsp;
+
+00:21:17.760 --> 00:21:23.840
+accessibility, and fun beat realism. Okay. So&nbsp;
+we, you know, we want to list who made this,&nbsp;&nbsp;
+
+00:21:23.840 --> 00:21:28.800
+where did it come from, and then we want to make&nbsp;
+it accessible for like blind people to use or&nbsp;&nbsp;
+
+00:21:28.800 --> 00:21:36.320
+speech recognition. So, and then the um anyway,&nbsp;
+we're going to we have some more ambitious plans&nbsp;&nbsp;
+
+00:21:36.320 --> 00:21:47.360
+to model photorealistically the hardware and&nbsp;
+even the people operating it. So, let's see.&nbsp;&nbsp;
+
+00:21:47.360 --> 00:21:59.200
+And there's like a little tutorial on Pixie here.&nbsp;
+And there is a uh tutorial here on fourth how&nbsp;&nbsp;
+
+00:21:59.200 --> 00:22:06.400
+to use the pixie rings and how to do turtle&nbsp;
+graphics. See there's these words to to make&nbsp;&nbsp;
+
+00:22:06.400 --> 00:22:16.960
+things like here. Let's just do this. Copy this&nbsp;
+and then go boop like that. And then we get ah oh&nbsp;&nbsp;
+
+00:22:16.960 --> 00:22:30.480
+look it it added them. Triangle square hello.&nbsp;
+So, so he said oops okay is not a thing here
+
+00:22:30.480 --> 00:22:39.120
+like that. So basically the whole idea is&nbsp;
+this is a live coding platform with data&nbsp;&nbsp;
+
+00:22:39.120 --> 00:22:48.800
+visualization and stuff. So square square&nbsp;
+you could even do Star Wars credits. Um,&nbsp;&nbsp;
+
+00:22:48.800 --> 00:23:01.840
+but anyway, uh, let's see. I think that's&nbsp;
+enough for now. So, I'm going to go
+
+00:23:01.840 --> 00:23:12.480
+Oh, wait. There was Did somebody&nbsp;
+I think somebody deleted.
+
+00:23:12.480 --> 00:23:15.360
+Anyway, well, have fun.
+
