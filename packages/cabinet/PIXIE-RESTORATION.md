@@ -35,10 +35,28 @@ theoretic models (these had to fit in the remaining 3000 words on the PDP 7) …
 sent to the Titan computer for simulation." 5000 words of interaction code and a 3000 word live
 model, in 8K.
 
-Heinz is the person in the 1969 films running the code, and he is still very active: he founded
-the CARS congress (Computer Assisted Radiology and Surgery), runs and organizes it, and reviews
-and writes papers. The restoration's first user is the program's author
-([Users](#users)).
+PIXIE began with a lecture. Maurice Wilkes encouraged Heinz to give a talk at Cambridge in March
+1967, and on 29 June 1967 Heinz gave his first lecture at the Mathematical Laboratory; a second,
+on PIXIE and the Rainbow project, followed in 1970. Wilkes attended both. Heinz met Joseph
+Weizenbaum at MIT in 1969 while presenting PIXIE on a tour of American labs.
+
+Heinz is the person in the 1969 films running the code, and he is still very active. He is
+Editor-in-Chief of the *International Journal of Computer Assisted Radiology and Surgery*, which
+receives about 1800 full manuscripts a year, and he founded and runs the CARS congress (Computer
+Assisted Radiology and Surgery), whose 40th anniversary congress was in Nagoya in July 2026. The
+restoration's first user is the program's author ([Users](#users)).
+
+PIXIE leads to CARS directly. On a 1978 sabbatical at the Cambridge Mathematical Laboratory, Heinz
+took up chapter 9 of his PIXIE thesis, "Appraisal and future possibilities", whose Fig. 9.4 shows
+display workstations communicating over a shared bus. With the Cambridge Ring, that became his
+1979 Technical University of Berlin report *A Network of Medical Work Stations for Integrated Word
+and Picture Communication in Clinical Medicine*, an early specification of what is now called
+PACS, and the starting document of the CAR(S) congresses
+([pacshistory.org](https://www.pacshistory.org/documents/index.html)). Its IEEE paper (Lemke,
+Stiehl, Scharnweber, Jackel, 1979) was republished in 2003 as the anniversary first article on
+PACS in the *Journal of Digital Imaging*
+([doi:10.1007/s10278-002-6030-9](https://doi.org/10.1007/s10278-002-6030-9)). Neil Wiseman
+followed the medical workstation work closely.
 
 ## Is this reverse engineering?
 
@@ -67,7 +85,8 @@ come up:
 
 ## What survived
 
-- **The listing.** 128 A3 lineprinter pages, printed 12 February 1972 ("ASSEMBLED 12 2 72 AT
+- **The listing.** 128 A3 lineprinter pages (about 110 of SYMELEC at 40 to 50 instructions a page,
+  and 15 of the RSP package), printed 12 February 1972 ("ASSEMBLED 12 2 72 AT
   12,44,57 BY HL1470"), scanned by Heinz in 2026: `/SYMELEC`, the main program, and `/RSPPIX`,
   the ring structure processor, a separate library. Every line has the address, the octal word,
   and the source in the Cambridge assembler's dialect, and some have Heinz's pencil corrections
@@ -83,6 +102,13 @@ come up:
   from the Cambridge University Computer Preservation Society's Titan archive
   ([mirror](reference/cambridge-supervisor/README.md),
   [original](https://cucps.soc.srcf.net/titan/supplan/pd10.htm)).
+- **An *Electronics* article,** "Electronics International", 28 April 1969, on PIXIE, found by
+  John Gilmore; the original issue has not been located online.
+- **Bill Buxton's 2008 notes.** On a visit to Cambridge, Buxton transcribed the relevant pages of
+  the paper, found Wiseman's notes on the radial menus in the university's manuscript room with
+  William Newman's help, learned from them that a PIXIE film had been made, and contacted Heinz.
+  Dave Fleck passed the notes on to me, which is how I knew the film existed.
+- **Heinz's thesis,** whose Appendix 4 is the PIXIE User Manual.
 - **No binary, no tape, no Titan code,** and no documentation of the link's IOTs beyond what
   PIXIE's own code does with them.
 
@@ -201,6 +227,18 @@ is the result, checked against the running program and recordable as a demo.
 The 340 now shows light pen tooltips naming each command button. Heinz remembers a remarkable
 amount; the tooltips are for everyone else exploring the program.
 
+Heinz's first review of the browser version, 1 October 2026, is the current list of open
+usability work:
+
+- Pointing with a mouse is much slower than the light pen was; "drag slowly or the cross is left
+  behind" was not a problem in 1969.
+- Contrast is low, so the light buttons and the drawing take concentration to read.
+- The browser window is about 15 cm square, against the 340's 10 inches (25 cm).
+- He asked what the 17 switches below the screen do, how to get a line printer copy of a
+  drawing, and how to get the RSP data structure of a model he draws.
+- On the cross catching on lit lines it passes over: "With hindsight, I should have programmed
+  this differently."
+
 ## The Titan link: the part that is reverse engineering
 
 PIXIE stored and retrieved its drawings on Titan over Neil Wiseman's link, which was Cambridge
@@ -246,9 +284,14 @@ one Tiny Titan, a drawing made by Forth's turtle edited in PIXIE and walked agai
   ([character](../../characters/neil-wiseman/)).
 - **David Chapman,** Cambridge University Library, found and digitized the films.
 - **Bob Supnik, Philip Budne, Douglas Gwyn and Lars Brinkhoff** wrote the SIMH code the emulator
-  is checked against ([credit](SIMH-MAP.md#credit)).
-- **Mitch Bradley** wrote the PDP-7 Forth. I was his intern at Sun in 1987, and we worked
-  together again on OLPC.
+  is checked against ([credit](SIMH-MAP.md#credit)). When Lars's PDP-7 Type 340 support was
+  merged in 2020 there was no PDP-7 software for the 340 to run on it; he had done it hoping to
+  resurrect Space Travel ([simh #752](https://github.com/simh/simh/pull/752)).
+- **Mitch Bradley** wrote the PDP-7 Forth, in a morning with Claude, after seeding it with his
+  header and thread format. I was his summer intern at Sun in 1987, extending CADroid, a printed
+  circuit design program from Lucasfilm that Sun used internally, with his C Forth, and we
+  worked together again on OLPC in 2007.
+- **Bill Buxton** found the evidence for the film in 2008, and **Dave Fleck** passed it on.
 - **The Internet Old Farts Club.** One page of the listing, posted cold as "Who can guess what
   this is?", drew 161 reactions and 173 comments in three days; PDP-1 and PDP-7 veterans had it
   as a 1972 Cambridge CAD program called PIXIE in about 40 minutes, and Ric Werme found Planning
@@ -258,10 +301,17 @@ one Tiny Titan, a drawing made by Forth's turtle edited in PIXIE and walked agai
 
 ## Users
 
-- **Heinz,** drawing illustrations with PIXIE for the CARS 2027 HCI session in Berlin, 29 June
-  2027 ([character](../../characters/heinz-lemke/README.md)).
-- **Roy Eagleson's** HCI students at Western University, who are re-implementing PIXIE as an
-  exercise in rediscovering its data structures, with the same CARS 2027 session as a target
+- **Heinz.** He plans to use PIXIE, instead of PowerPoint, to build Bayesian network models of
+  health care situations, and has invited the IFCARS Think Tank and their students to do the
+  same. CARS 2027 in Berlin will have a session on "HCI and Modelling: where we come from and may
+  be going to", chaired by Leo Joskowicz and Roy Eagleson, with PIXIE in the "where we come from"
+  part; 29 June 2027 is the 60th anniversary of Heinz's first Cambridge lecture
+  ([character](../../characters/heinz-lemke/README.md)).
+- **Roy Eagleson** at Western University ran SYMELEC step by step under SIMH, tracing registers
+  to its main loop waiting on light pen interrupts, and began a JavaScript reimplementation of
+  parts of it, before the browser emulator ran it. He wants speed and accuracy measurements of
+  PIXIE's radial menus. His HCI students are re-implementing PIXIE as an exercise in
+  rediscovering its data structures, with the CARS 2027 session as a target
   ([Roy](../../characters/roy-eagleson/README.md),
   [Sketchpad to PIXIE](../../characters/roy-eagleson/sketchpad-to-pixie-lineage.md)).
 - **Anyone,** in a browser: [the live emulator](https://hyperties.org/cabinet/symelec/), the
@@ -278,6 +328,8 @@ far more, in model time and mine.
 
 ## Open questions
 
+- **Heinz's open requests:** RSP export of a model he draws, a line printer copy of the screen,
+  and light pen speed ([his review](#running-it-against-the-films)).
 - **The 340's address counter.** SIMH has it 12 bits; SYMELEC starts the display at 12301, in the
   upper 4K. Either Cambridge's 340 was wider or SYMELEC depends on something not yet found.
 - **What the Titan sent back.** Serving drawings to SYMELEC needs the read path, and SYMELEC's
