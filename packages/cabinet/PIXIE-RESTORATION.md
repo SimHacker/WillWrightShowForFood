@@ -63,8 +63,10 @@ transcription, the emulator, the debugging and this documentation run on AI mode
 have paid for myself ([what it cost](#what-it-cost)), as I did for the
 [Yoot Saito interview with Alan Kay](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/Yoot_Saito_Alan_Kay_Interview.md)
 and the [complete *Early History of Smalltalk*](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/EarlyHistoryOfSmalltalk-Complete.md)
-with its appendices and indexes. If it is useful to you, support on
-[Patreon](https://www.patreon.com/c/DonHopkins) pays for the next one.
+with its appendices and indexes. Museums, schools and anyone else are welcome to use all of it
+for free ([the open letter to museums](FOR-MUSEUMS.md)). If it is useful to you, support on
+[Patreon](https://www.patreon.com/c/DonHopkins) pays for the next one, and for the free software
+the museums and Heinz use.
 
 ## Is this reverse engineering?
 

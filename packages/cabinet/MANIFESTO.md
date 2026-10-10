@@ -149,6 +149,7 @@ bus, with people's hands in among them.
 Everything here is free software, in git, and built to be taken apart. If you have a machine, we
 would like the cabinet to be its twin: the same programs, the same disks, the same lamps and
 sounds, for visitors while the iron rests or is restored, and for checking a tape before it goes
-near the iron. [UNIX-V0.md](UNIX-V0.md) has our letter to the Interim Computer Museum.
+near the iron. [FOR-MUSEUMS.md](FOR-MUSEUMS.md) is our open letter to museums and enthusiasts,
+and [UNIX-V0.md](UNIX-V0.md) has our letter to the Interim Computer Museum.
 
 ↑ [README](README.md) · [DESIGN](DESIGN.md) · [tiny-titan](TINY-TITAN.md) · [tiny-its](TINY-ITS.md) · [AM radio](AM-RADIO.md)
