@@ -6,7 +6,7 @@
 <style>
 :root{color-scheme:light dark;font:17px/1.6 system-ui}body{max-width:1100px;margin:auto;padding:1.5rem}h1,h2{line-height:1.2}header{border-bottom:2px solid #888;margin-bottom:1.5rem}nav{display:flex;gap:.7rem;flex-wrap:wrap}button,input,select{font:inherit;padding:.4rem}main{display:grid;grid-template-columns:260px 1fr;gap:2rem}aside{max-height:75vh;overflow:auto}aside button{display:block;width:100%;text-align:left;margin:.3rem 0}article{min-width:0}.body{white-space:pre-wrap;overflow-wrap:normal;word-break:normal;font-family:Menlo,Consolas,"DejaVu Sans Mono","Liberation Mono",ui-monospace,monospace;line-height:1.25}a{color:light-dark(#0757a6,#99ceff)}.note{padding:.8rem;background:light-dark(#f1eadb,#342f25);border-left:4px solid #b48a40}.missing{color:light-dark(#8b392c,#ffa899);text-decoration:underline dotted}.preview{border:1px solid #888;padding:.8rem}.metadata{font-size:.85rem;overflow-wrap:anywhere}details{margin:1rem 0}#error{color:#b22}@media(max-width:700px){main{display:block}aside{max-height:220px}}
 body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3.6rem);margin:.3rem 0}button{cursor:pointer;border:1px solid #87929c;border-radius:6px;background:light-dark(#fff,#26313c);color:inherit}button:hover{background:light-dark(#eaf2f8,#35495d)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ca8b24;outline-offset:3px}.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:light-dark(#65523a,#d6bc94)}.welcome{padding:1.2rem 1.5rem;border:1px solid #a7adb1;border-radius:10px;margin:1.2rem 0}.welcome p{max-width:75ch}.tour{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;padding:.8rem 0}#tour-note{margin:.5rem 0;color:light-dark(#465868,#bbcbd9)}article{overflow-x:auto}#body{font-size:15px;width:80ch;max-width:100%;box-sizing:border-box;overflow-x:auto;padding:1rem;border:1px solid #8997a3;border-radius:8px;min-height:180px}#raw{overflow-x:auto}.metadata{max-width:100%}#preview{margin:1rem 0;border-left:4px solid #b48a40;position:sticky;bottom:0;z-index:1;background:light-dark(#fffdf6,#202831);max-width:80ch}#preview p{margin:.4rem 0;white-space:pre-wrap}a.selected{background:light-dark(#0757a6,#99ceff);color:light-dark(#fff,#111);text-decoration:none}#title:focus{outline:none}[hidden]{display:none!important}
-.reader-toolbar{gap:.35rem;align-items:center;font-size:.85rem}.reader-toolbar button{font-size:inherit;padding:.2rem .45rem}.reader-toolbar label{display:inline-flex;gap:.2rem;align-items:center;white-space:nowrap}.reader-toolbar input{margin:0}#speech-status:empty{display:none}
+.reader-toolbar{gap:.35rem;align-items:center;font-size:.85rem}.reader-toolbar button{font-size:inherit;padding:.2rem .45rem}.reader-toolbar label{display:inline-flex;gap:.2rem;align-items:center;white-space:nowrap}.reader-toolbar input{margin:0}#read-article{width:6rem;flex:0 0 6rem;white-space:nowrap}#speech-status:empty{display:none}
 </style>
 <header>
 <p class="eyebrow">A living history • Preview for Ben • October 2026</p>
@@ -46,7 +46,7 @@ body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1
 <button id="previous-article" disabled><span aria-hidden="true">‹</span> Previous</button>
 <button id="next-article" disabled><span aria-hidden="true">›</span> Next</button>
 <button id="index"><span aria-hidden="true">☰</span> Index</button>
-<button id="read-article" aria-describedby="speech-status"><span aria-hidden="true">▶</span> Read</button>
+<button id="read-article" aria-describedby="speech-status"><span aria-hidden="true">▶</span> Speak</button>
 <label title="Read link definitions on single click"><input id="speak-definitions" type="checkbox" aria-describedby="speech-status"> Definitions</label>
 <label title="Automatically read each article once per visit"><input id="speak-articles" type="checkbox" aria-describedby="speech-status"> Articles</label>
 </nav>
@@ -440,7 +440,7 @@ const speechAvailable='speechSynthesis' in window&&'SpeechSynthesisUtterance' in
 let activeSpeech=null,activeSpeechKind=null,articleRead=false;
 const speechNotice=element('speech-status').textContent;
 function updateReadButton(){
- element('read-article').innerHTML=activeSpeech?'<span aria-hidden="true">■</span> Stop':'<span aria-hidden="true">▶</span> Read';
+ element('read-article').innerHTML=activeSpeech?'<span aria-hidden="true">■</span> Stop':'<span aria-hidden="true">▶</span> Speak';
 }
 function stopDefinitionSpeech(){
  if(activeSpeech){activeSpeech=null;activeSpeechKind=null;window.speechSynthesis.cancel();}
