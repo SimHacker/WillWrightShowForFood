@@ -5,7 +5,7 @@
 <title>HyperTIES historical reading room</title>
 <style>
 :root{color-scheme:light dark;font:17px/1.6 system-ui}body{max-width:1100px;margin:auto;padding:1.5rem}h1,h2{line-height:1.2}header{border-bottom:2px solid #888;margin-bottom:1.5rem}nav{display:flex;gap:.7rem;flex-wrap:wrap}button,input,select{font:inherit;padding:.4rem}main{display:grid;grid-template-columns:260px 1fr;gap:2rem}aside{max-height:75vh;overflow:auto}aside button{display:block;width:100%;text-align:left;margin:.3rem 0}article{min-width:0}.body{white-space:pre-wrap;overflow-wrap:normal;word-break:normal;font-family:Menlo,Consolas,"DejaVu Sans Mono","Liberation Mono",ui-monospace,monospace;line-height:1.25}a{color:light-dark(#0757a6,#99ceff)}.note{padding:.8rem;background:light-dark(#f1eadb,#342f25);border-left:4px solid #b48a40}.missing{color:light-dark(#8b392c,#ffa899);text-decoration:underline dotted}.preview{border:1px solid #888;padding:.8rem}.metadata{font-size:.85rem;overflow-wrap:anywhere}details{margin:1rem 0}#error{color:#b22}@media(max-width:700px){main{display:block}aside{max-height:220px}}
-body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3.6rem);margin:.3rem 0}button{cursor:pointer;border:1px solid #87929c;border-radius:6px;background:light-dark(#fff,#26313c);color:inherit}button:hover{background:light-dark(#eaf2f8,#35495d)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ca8b24;outline-offset:3px}.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:light-dark(#65523a,#d6bc94)}.welcome{padding:1.2rem 1.5rem;border:1px solid #a7adb1;border-radius:10px;margin:1.2rem 0}.welcome p{max-width:75ch}.tour{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;padding:.8rem 0}#tour-note{margin:.5rem 0;color:light-dark(#465868,#bbcbd9)}article{overflow-x:auto}#body{font-size:15px;width:80ch;padding:1rem;border:1px solid #8997a3;border-radius:8px;min-height:180px}#raw{overflow-x:auto}.metadata{max-width:100%}#preview{margin:1rem 0;border-left:4px solid #b48a40}#title:focus{outline:none}[hidden]{display:none!important}
+body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3.6rem);margin:.3rem 0}button{cursor:pointer;border:1px solid #87929c;border-radius:6px;background:light-dark(#fff,#26313c);color:inherit}button:hover{background:light-dark(#eaf2f8,#35495d)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ca8b24;outline-offset:3px}.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:light-dark(#65523a,#d6bc94)}.welcome{padding:1.2rem 1.5rem;border:1px solid #a7adb1;border-radius:10px;margin:1.2rem 0}.welcome p{max-width:75ch}.tour{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;padding:.8rem 0}#tour-note{margin:.5rem 0;color:light-dark(#465868,#bbcbd9)}article{overflow-x:auto}#body{font-size:15px;width:80ch;max-width:100%;box-sizing:border-box;overflow-x:auto;padding:1rem;border:1px solid #8997a3;border-radius:8px;min-height:180px}#raw{overflow-x:auto}.metadata{max-width:100%}#preview{margin:1rem 0;border-left:4px solid #b48a40;position:sticky;bottom:0;z-index:1;background:light-dark(#fffdf6,#202831);max-width:80ch}#preview p{margin:.4rem 0;white-space:pre-wrap}a.selected{background:light-dark(#0757a6,#99ceff);color:light-dark(#fff,#111);text-decoration:none}#title:focus{outline:none}[hidden]{display:none!important}
 </style>
 <header>
 <p class="eyebrow">A living history • Preview for Ben • October 2026</p>
@@ -18,7 +18,7 @@ body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1
 <div class="tour"><button id="start-tour">Take the five-stop tour</button><button id="previous-stop" hidden>Previous stop</button><button id="next-stop" hidden>Next stop</button><button id="end-tour" hidden>Leave tour</button><span id="tour-progress" role="status"></span></div>
 <p id="tour-note"></p>
 <details><summary>How to explore and what to look for</summary>
-<p>Choose an article or follow a highlighted link. Hover over a link or focus it with the keyboard to preview its destination before opening it. Browser Back retraces your path. Search includes original aliases. Dotted labels indicate destinations we have not resolved.</p>
+<p>As in HyperTIES: <strong>click</strong> a highlighted link to see its short description; <strong>double-click</strong> it (or press Follow link) to go there. With the keyboard, Tab to a link and press Enter once to see its description, twice to follow. Browser Back retraces your path. Search includes original aliases. Dotted labels indicate destinations we have not resolved.</p>
 <p>Original prose is not rewritten. The reading view can hide command tokens for readability; the original byte-view text and source checksums remain below each article. Graphics, fonts, exact page layouts and the remaining codec are still research work. This is not the original DOS interface.</p>
 <p>We would especially value your memories of the joke's authorship and first demonstration, the book's exact edition, and how the museum's thematic, chronological and map navigation worked.</p>
 </details>
@@ -28,7 +28,7 @@ body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1
 <button id="museum">Jewish Heritage &amp; Holocaust</button>
 <button id="joke">Explore the hyper-joke</button>
 </nav>
-<details><summary>Recovery status and interpretation</summary><p class="note">Research prototype, not an emulation of the original interface. Classic text is displayed using an explicit CP437 access profile; historical encoding is still under investigation. Graphics, fonts and commands are not executed. Missing records and uncertain links remain visible. The separate personal genealogy database is not included, and this file contains no Dropbox access link or credentials.</p></details>
+<details><summary>Recovery status and interpretation</summary><p class="note">Research prototype, not an emulation of the original interface. Classic text is displayed using an explicit CP437 access profile; historical encoding is still under investigation. Graphics, fonts and commands are not executed. Missing records and uncertain links remain visible. The separate personal genealogy database is not included in this reading room, and this file contains no Dropbox access link or credentials.</p></details>
 </header>
 <p id="error" role="alert"></p>
 <main>
@@ -41,8 +41,8 @@ body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1
 <h2 id="title" tabindex="-1"></h2>
 <p id="collection-label" class="eyebrow"></p>
 <label><input id="show-commands" type="checkbox"> Show unimplemented historical commands in reading view</label>
-<div id="preview" class="preview" hidden></div>
 <div id="body" class="body"></div>
+<div id="preview" class="preview" hidden></div>
 <details><summary>Original markup, source and recovery metadata</summary><p id="provenance" class="metadata"></p><pre id="raw" class="body"></pre></details>
 </article>
 </main>
@@ -364,8 +364,11 @@ for(const link of a.links){
  appendText(a.body.slice(cursor,start));
  const target=link.candidates.length===1?byId.get(a.collection+':'+link.candidates[0]):null;
  if(target){const anchor=document.createElement('a');anchor.href='#'+encodeURIComponent(a.collection+':'+target.id);anchor.textContent=accessText(link.label);
- anchor.onclick=e=>{e.preventDefault();location.hash=encodeURIComponent(a.collection+':'+target.id);};
- anchor.onfocus=anchor.onmouseenter=()=>{element('preview').hidden=false;element('preview').textContent=accessText(target.description||target.title)+(target.body===null?' — record not recovered':'');};
+ // HyperTIES interaction: click shows the target's short description; double-click follows.
+ const follow=()=>{location.hash=encodeURIComponent(a.collection+':'+target.id);};
+ anchor.onclick=e=>{e.preventDefault();define(anchor,target,follow);};
+ anchor.ondblclick=e=>{e.preventDefault();follow();};
+ anchor.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();e.repeat||anchor.classList.contains('selected')?follow():define(anchor,target,follow);}};
  element('body').append(anchor);
  }else{const span=document.createElement('span');span.className='missing';span.textContent=accessText(link.label);span.title='Unresolved or ambiguous: '+link.target;element('body').append(span);}
  cursor=start+rawLength;
@@ -377,6 +380,15 @@ function appendText(s){
  element('body').append(document.createTextNode(accessText(clean)));
 }
 }
+function define(anchor,target,follow){
+ for(const s of element('body').querySelectorAll('a.selected'))s.classList.remove('selected');
+ anchor.classList.add('selected');
+ const p=element('preview');p.hidden=false;p.replaceChildren();
+ const heading=document.createElement('strong');heading.textContent=accessText(target.title);
+ const text=document.createElement('p');text.textContent=target.body===null?'This record has not been recovered yet.':accessText(target.description||'(No short description in the original record.)');
+ const go=document.createElement('button');go.textContent='Follow link';go.onclick=follow;go.disabled=false;
+ p.append(heading,text,go);
+}
 function select(c,id){collection=c;element('search').value='';location.hash=encodeURIComponent(c+':'+id);route();}
 element('book').onclick=()=>select('book','INTRODUCT');
 element('museum').onclick=()=>select('museum','INTRODUC');
@@ -384,7 +396,7 @@ element('joke').onclick=()=>select('book','EXAMPLFP');
 element('search').oninput=catalog;
 element('show-commands').onchange=()=>{if(currentArticle)openArticle(currentArticle);};
 const tour=[
- {collection:'book',id:'EXAMPLFP',note:'1. A joke made of choices. Focus a highlighted phrase to preview, then choose a response. The stored reference list preserves the original destinations—even where an index alias suggests another target.'},
+ {collection:'book',id:'EXAMPLFP',note:'1. A joke made of choices. Click a highlighted phrase to see its description, then double-click to choose that response. The stored reference list preserves the original destinations—even where an index alias suggests another target.'},
  {collection:'book',id:'HOTDOGJP',note:'2. The response becomes another path. Follow relish, franks or wieners. These are recovered links, not newly invented branches.'},
  {collection:'museum',id:'INTRODUC',note:'3. The museum offers several ways in: themes, cross section, chronology and questions. Follow any route, then use Next stop to continue the tour.'},
  {collection:'museum',id:'FOURMAJO',note:'4. Thematic structure is historical content too. We are preserving outlines and link relationships, not flattening the encyclopedia into a pile of paragraphs.'},
