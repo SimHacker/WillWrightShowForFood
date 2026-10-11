@@ -578,7 +578,7 @@ function define(anchor,target,follow){
  anchor.classList.add('selected');
  const p=element('preview');p.hidden=false;p.replaceChildren();
  const heading=document.createElement('strong');heading.textContent=accessText(target.title);
- const text=document.createElement('p');text.textContent=target.body===null?'This record has not been recovered yet.':accessText(target.description||'(No short description in the original record.)');
+ const text=document.createElement('p');text.textContent=target.body===null?'This record has not been recovered yet.':accessText(target.description||'No description.');
  const go=document.createElement('button');go.textContent='Follow link';go.onclick=follow;go.disabled=false;
  p.append(heading,text,go);
  speakDefinition(text.textContent);
