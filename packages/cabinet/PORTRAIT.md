@@ -267,6 +267,18 @@ original paper's claim about this player. The lesson includes their warning:
 declare responsibilities and boundaries rather than accidentally growing a
 second opaque application inside the first.
 
+The connection is an analogy grounded in those distinct subjects: Myer and
+Sutherland describe a display channel becoming a computer; Marusek explores
+a recording experienced as a world from within. Here, a preserved view becomes
+an editable, executable perspective with state, a timeline and tools. That
+does not make an avatar conscious, nor make the novella a hardware-design theory.
+
+**Another rung of the wheel need not mean starting preservation over.**
+Open representations, explicit dependencies, provenance and reusable execution
+tools should let authored perspectives survive platform changes. The technical
+history guides our architecture; the fiction reminds us that control over a
+representation does not settle our responsibilities toward the people portrayed.
+
 Offer a **first-person view from the character's eyes**, with the screen,
 hands and occluding finger or pen where the operator would actually see them.
 Like switching to first person in GTA, the viewpoint changes how the same
