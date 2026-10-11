@@ -475,6 +475,16 @@ for(const link of a.links){
  const rawLength=link.syntax==='tilde'?link.label.length+2:('<L>'+link.label+'<\\L='+link.target+'>').length;
  if(start<cursor||start+rawLength>a.body.length){element('error').textContent='Invalid source link span in '+a.id;return;}
  appendText(a.body.slice(cursor,start));
+ const lineStart=a.body.lastIndexOf('\n',start)+1;
+ const nextNewline=a.body.indexOf('\n',start);
+ const sourceLine=a.body.slice(lineStart,nextNewline<0?a.body.length:nextNewline);
+ const previousLineStart=a.body.lastIndexOf('\n',lineStart-2)+1;
+ const previousLine=accessText(a.body.slice(previousLineStart,lineStart-1));
+ const displayedLine=accessText(sourceLine.replace(/~([^~\n]+)~/g,'$1'));
+ // Preserve the enclosing box width after hiding link delimiters.
+ const boxPadding=link.syntax==='tilde'&&/[\u2500-\u257f]/.test(previousLine)&&
+  /[\u2502\u2551]/.test(displayedLine)&&sourceLine.indexOf('~',start-lineStart+rawLength)<0
+  ? Math.max(0,previousLine.length-displayedLine.length):0;
  const target=link.candidates.length===1?byId.get(a.collection+':'+link.candidates[0]):null;
  if(target){const anchor=document.createElement('a');anchor.href='#'+encodeURIComponent(a.collection+':'+target.id);anchor.textContent=accessText(link.label);
  // HyperTIES interaction: click shows the target's short description; double-click follows.
@@ -484,6 +494,7 @@ for(const link of a.links){
  anchor.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();e.repeat||anchor.classList.contains('selected')?follow():define(anchor,target,follow);}};
  element('body').append(anchor);
  }else{const span=document.createElement('span');span.className='missing';span.textContent=accessText(link.label);span.title='Unresolved or ambiguous: '+link.target;element('body').append(span);}
+ if(boxPadding)appendText(' '.repeat(boxPadding));
  cursor=start+rawLength;
 }
 appendText(a.body.slice(cursor));
