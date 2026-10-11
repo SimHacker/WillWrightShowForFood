@@ -6,6 +6,7 @@
 <style>
 :root{color-scheme:light dark;font:17px/1.6 system-ui}body{max-width:1100px;margin:auto;padding:1.5rem}h1,h2{line-height:1.2}header{border-bottom:2px solid #888;margin-bottom:1.5rem}nav{display:flex;gap:.7rem;flex-wrap:wrap}button,input,select{font:inherit;padding:.4rem}main{display:grid;grid-template-columns:260px 1fr;gap:2rem}aside{max-height:75vh;overflow:auto}aside button{display:block;width:100%;text-align:left;margin:.3rem 0}article{min-width:0}.body{white-space:pre-wrap;overflow-wrap:normal;word-break:normal;font-family:Menlo,Consolas,"DejaVu Sans Mono","Liberation Mono",ui-monospace,monospace;line-height:1.25}a{color:light-dark(#0757a6,#99ceff)}.note{padding:.8rem;background:light-dark(#f1eadb,#342f25);border-left:4px solid #b48a40}.missing{color:light-dark(#8b392c,#ffa899);text-decoration:underline dotted}.preview{border:1px solid #888;padding:.8rem}.metadata{font-size:.85rem;overflow-wrap:anywhere}details{margin:1rem 0}#error{color:#b22}@media(max-width:700px){main{display:block}aside{max-height:220px}}
 body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3.6rem);margin:.3rem 0}button{cursor:pointer;border:1px solid #87929c;border-radius:6px;background:light-dark(#fff,#26313c);color:inherit}button:hover{background:light-dark(#eaf2f8,#35495d)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ca8b24;outline-offset:3px}.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:light-dark(#65523a,#d6bc94)}.welcome{padding:1.2rem 1.5rem;border:1px solid #a7adb1;border-radius:10px;margin:1.2rem 0}.welcome p{max-width:75ch}.tour{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;padding:.8rem 0}#tour-note{margin:.5rem 0;color:light-dark(#465868,#bbcbd9)}article{overflow-x:auto}#body{font-size:15px;width:80ch;max-width:100%;box-sizing:border-box;overflow-x:auto;padding:1rem;border:1px solid #8997a3;border-radius:8px;min-height:180px}#raw{overflow-x:auto}.metadata{max-width:100%}#preview{margin:1rem 0;border-left:4px solid #b48a40;position:sticky;bottom:0;z-index:1;background:light-dark(#fffdf6,#202831);max-width:80ch}#preview p{margin:.4rem 0;white-space:pre-wrap}a.selected{background:light-dark(#0757a6,#99ceff);color:light-dark(#fff,#111);text-decoration:none}#title:focus{outline:none}[hidden]{display:none!important}
+.reader-toolbar{gap:.35rem;align-items:center;font-size:.85rem}.reader-toolbar button{font-size:inherit;padding:.2rem .45rem}.reader-toolbar label{display:inline-flex;gap:.2rem;align-items:center;white-space:nowrap}.reader-toolbar input{margin:0}#speech-status:empty{display:none}
 </style>
 <header>
 <p class="eyebrow">A living history • Preview for Ben • October 2026</p>
@@ -19,7 +20,7 @@ body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1
 <p id="tour-note"></p>
 <details><summary>How to explore and what to look for</summary>
 <p>As in HyperTIES: <strong>click</strong> a highlighted link to see its short description; <strong>double-click</strong> it (or press Follow link) to go there. With the keyboard, Tab to a link and press Enter once to see its description, twice to follow. Browser Back retraces your path. Search includes original aliases. Dotted labels indicate destinations we have not resolved.</p>
-<p>Original prose is not rewritten. The reading view can hide command tokens for readability; the original byte-view text and source checksums remain below each article. Both book codecs are recovered. Graphics, fonts and exact page layouts are still research work. This is not the original DOS interface.</p>
+<p>Original prose is not rewritten. The reading view hides unimplemented command tokens; the original byte-view text and source checksums remain below each article. Both book codecs are recovered. Graphics, fonts and exact page layouts are still research work. This is not the original DOS interface.</p>
 <p>Back and Forward retrace this reader's browsing history. Previous/Next article browse the original collection index order (available records, including labeled book recovery gaps). Index focuses the searchable catalog. Museum articles absent from the original index are labeled and appended alphabetically.</p>
 <p>We would especially value your memories of the joke's authorship and first demonstration, the book's exact edition, and how the museum's thematic, chronological and map navigation worked.</p>
 </details>
@@ -39,23 +40,20 @@ body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1
 <p id="count"></p><div id="list"></div>
 </aside>
 <article aria-live="polite">
-<nav aria-label="Reader navigation">
-<button id="back" disabled>Back</button>
-<button id="forward" disabled>Forward</button>
-<button id="previous-article" disabled>Previous article</button>
-<button id="next-article" disabled>Next article</button>
-<button id="index">Index</button>
+<nav class="reader-toolbar" aria-label="Reader navigation and audio">
+<button id="back" disabled><span aria-hidden="true">←</span> Back</button>
+<button id="forward" disabled><span aria-hidden="true">→</span> Forward</button>
+<button id="previous-article" disabled><span aria-hidden="true">‹</span> Previous</button>
+<button id="next-article" disabled><span aria-hidden="true">›</span> Next</button>
+<button id="index"><span aria-hidden="true">☰</span> Index</button>
+<button id="read-article" aria-describedby="speech-status"><span aria-hidden="true">▶</span> Read</button>
+<label title="Read link definitions on single click"><input id="speak-definitions" type="checkbox" aria-describedby="speech-status"> Definitions</label>
+<label title="Automatically read each article once per visit"><input id="speak-articles" type="checkbox" aria-describedby="speech-status"> Articles</label>
 </nav>
+<p id="speech-status" class="metadata" role="status"></p>
 <p id="article-position" class="metadata"></p>
 <h2 id="title" tabindex="-1"></h2>
-<nav aria-label="Article audio">
-<button id="read-article" aria-describedby="speech-status">Read article aloud</button>
-<button id="stop-reading" disabled>Stop reading</button>
-</nav>
 <p id="collection-label" class="eyebrow"></p>
-<label><input id="show-commands" type="checkbox"> Show unimplemented historical commands in reading view</label>
-<p><label><input id="speak-definitions" type="checkbox" aria-describedby="speech-status"> Read link definitions aloud on single click</label>
-<span id="speech-status" class="metadata" role="status">Off by default. Uses your browser's speech service; voice processing may depend on your browser and operating system. No microphone access.</span></p>
 <div id="body" class="body"></div>
 <div id="preview" class="preview" hidden></div>
 <details><summary>Original markup, source and recovery metadata</summary><p id="provenance" class="metadata"></p><pre id="raw" class="body"></pre></details>
@@ -439,29 +437,34 @@ const element=id=>document.getElementById(id);
 const byId=new Map(data.articles.map(a=>[a.collection+':'+a.id,a]));
 const accessText=HypertiesFormats.displayCP437;
 const speechAvailable='speechSynthesis' in window&&'SpeechSynthesisUtterance' in window;
-let activeSpeech=null;
+let activeSpeech=null,activeSpeechKind=null,articleRead=false;
 const speechNotice=element('speech-status').textContent;
+function updateReadButton(){
+ element('read-article').innerHTML=activeSpeech?'<span aria-hidden="true">■</span> Stop':'<span aria-hidden="true">▶</span> Read';
+}
 function stopDefinitionSpeech(){
- if(activeSpeech){activeSpeech=null;window.speechSynthesis.cancel();}
- element('stop-reading').disabled=true;
+ if(activeSpeech){activeSpeech=null;activeSpeechKind=null;window.speechSynthesis.cancel();}
+ updateReadButton();
 }
 function speakDefinition(text){
  stopDefinitionSpeech();
  if(!speechAvailable||!element('speak-definitions').checked)return;
  speakText(text);
 }
-function speakText(text){
+function speakText(text,kind='definition'){
  stopDefinitionSpeech();
  if(!speechAvailable)return;
  const utterance=new SpeechSynthesisUtterance(text);
  utterance.lang='en';
  activeSpeech=utterance;
- element('stop-reading').disabled=false;
- utterance.onend=()=>{if(activeSpeech===utterance){activeSpeech=null;element('stop-reading').disabled=true;}};
+ activeSpeechKind=kind;
+ updateReadButton();
+ utterance.onend=()=>{if(activeSpeech===utterance){activeSpeech=null;activeSpeechKind=null;updateReadButton();}};
  utterance.onerror=event=>{
   if(activeSpeech!==utterance)return;
   activeSpeech=null;
-  element('stop-reading').disabled=true;
+  activeSpeechKind=null;
+  updateReadButton();
   element('speech-status').textContent='Could not read aloud: '+event.error+'. The text remains available below.';
  };
  element('speech-status').textContent=speechNotice;
@@ -469,22 +472,31 @@ function speakText(text){
 }
 if(!speechAvailable){
  element('speak-definitions').disabled=true;
+ element('speak-articles').disabled=true;
  element('read-article').disabled=true;
  element('speech-status').textContent='Reading aloud is not supported in this browser. Articles and definitions remain available as text.';
 }
-element('read-article').onclick=()=>{
+function readArticle(){
  if(!currentArticle||currentArticle.body===null)return;
  const text=currentArticle.body.trim()?element('body').textContent:accessText(currentArticle.description||'');
  if(!text.trim()){element('speech-status').textContent='This original record has no body text or short description to read.';return;}
- speakText(accessText(currentArticle.title)+'.\n'+text);
-};
-element('stop-reading').onclick=stopDefinitionSpeech;
+ if(!speechAvailable)return;
+ speakText(accessText(currentArticle.title)+'.\n'+text,'article');
+ articleRead=true;
+}
+function autoReadArticle(){
+ if(element('speak-articles').checked&&!articleRead)readArticle();
+}
+element('read-article').onclick=()=>{if(activeSpeech)stopDefinitionSpeech();else readArticle();};
 element('speak-definitions').onchange=()=>{
- stopDefinitionSpeech();
- element('speech-status').textContent=speechNotice;
+ if(activeSpeechKind==='definition')stopDefinitionSpeech();
+};
+element('speak-articles').onchange=()=>{
+ if(element('speak-articles').checked)autoReadArticle();
+ else if(activeSpeechKind==='article')stopDefinitionSpeech();
 };
 addEventListener('pagehide',stopDefinitionSpeech);
-let historyPosition=0,historyEnd=0;
+let historyPosition=0,historyEnd=0,currentVisitPosition=null;
 history.replaceState({...history.state,readingRoomPosition:0},'');
 function navigation(){
  element('back').disabled=historyPosition===0;
@@ -504,7 +516,9 @@ element('list').replaceChildren();
 for(const a of articles){const b=document.createElement('button');b.textContent=accessText(a.title)+(a.body===null?' [not recovered]':'');b.onclick=()=>select(a.collection,a.id);element('list').append(b);}
 }
 function openArticle(a){
+if(currentArticle===a&&currentVisitPosition===historyPosition){navigation();return;}
 stopDefinitionSpeech();
+articleRead=false;currentVisitPosition=historyPosition;
 element('read-article').disabled=!speechAvailable||a.body===null;
 currentArticle=a;
 collection=a.collection;catalog();element('title').textContent=accessText(a.title);
@@ -520,7 +534,7 @@ if(!a.body.trim()){
  if(a.description){const heading=document.createElement('strong');heading.textContent='Original short description';
  const description=document.createElement('p');description.textContent=accessText(a.description);
  element('body').append(heading,description);}
- return;
+ autoReadArticle();return;
 }
 let cursor=0;
 const base=a.bodyOffset;
@@ -552,9 +566,10 @@ for(const link of a.links){
  cursor=start+rawLength;
 }
 appendText(a.body.slice(cursor));
+autoReadArticle();
 function appendText(s){
  // Reading-view filtering never changes the preserved source or link positions.
- const clean=s.replace(/@([A-Za-z]+)(?:=(?:"[^"]*"|[^\s@]+)|[+-]?\d+)?/g,m=>element('show-commands').checked?'⟦'+m+'⟧':'');
+ const clean=s.replace(/@([A-Za-z]+)(?:=(?:"[^"]*"|[^\s@]+)|[+-]?\d+)?/g,'');
  element('body').append(document.createTextNode(accessText(clean)));
 }
 }
@@ -594,7 +609,6 @@ element('book').onclick=()=>select('book','INTRODUCT');
 element('museum').onclick=()=>select('museum','INTRODUC');
 element('joke').onclick=()=>select('book','EXAMPLFP');
 element('search').oninput=catalog;
-element('show-commands').onchange=()=>{if(currentArticle)openArticle(currentArticle);};
 const tour=[
  {collection:'book',id:'EXAMPLFP',note:'1. A joke made of choices. Click a highlighted phrase to see its description, then double-click to choose that response. The stored reference list preserves the original destinations—even where an index alias suggests another target.'},
  {collection:'book',id:'HOTDOGJP',note:'2. The response becomes another path. Follow relish, franks or wieners. These are recovered links, not newly invented branches.'},
