@@ -224,6 +224,24 @@ speech pitch, or sonify events. It must not silently imply normal-time sound.
 
 ### A camera you can inhabit, steer and record
 
+**Thesis: user-editable views and perspectives are first-class, persistent,
+shareable content.** They are precious authored material, not disposable UI
+state or a director's private settings. What someone chooses to show, from
+where, at which scale, in what order and at what speed can carry an explanation
+as surely as prose does.
+
+Give a perspective its own identity, title, author, provenance and revision
+history. Save, reopen, duplicate, edit, compare, annotate, link and share it.
+An article can embed a view or tour; another author can build a different
+interpretation of the same scene without copying the machine or overwriting
+the first author's work. Preserve dependencies on the scene and event history,
+and report missing or incompatible versions explicitly.
+
+This extends the preservation mission to the learner's contribution: the
+historical artifact is one kind of content, and a carefully composed way of
+understanding it is another. A URL should be able to address that authored
+perspective, not merely launch the default camera.
+
 Offer a **first-person view from the character's eyes**, with the screen,
 hands and occluding finger or pen where the operator would actually see them.
 Like switching to first person in GTA, the viewpoint changes how the same
