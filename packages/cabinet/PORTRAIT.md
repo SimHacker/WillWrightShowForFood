@@ -222,6 +222,52 @@ An intentionally decoupled explanatory view may be useful, but label it.
 Audio needs its own stated policy under time dilation: mute, slow, preserve
 speech pitch, or sonify events. It must not silently imply normal-time sound.
 
+### A camera you can inhabit, steer and record
+
+Offer a **first-person view from the character's eyes**, with the screen,
+hands and occluding finger or pen where the operator would actually see them.
+Like switching to first person in GTA, the viewpoint changes how the same
+scene is understood; it does not replace the scene or restart the machine.
+Let the learner switch or glide to over-the-shoulder, collaborator, room,
+screen-side, detector close-up and other useful, playful or revealing views.
+
+The camera is a directly manipulable **six-degree-of-freedom pose**: three
+translation axes and three rotation axes, with field of view and focus as
+additional parameters. Model a navigable, constrained parameter space, not
+just a list of fixed shots. Constraints can keep a view outside solid cabinets,
+within the room, aimed at a selected feature, or attached to an operator's
+head. An explicitly labeled cutaway mode may cross surfaces to inspect a
+mechanism; ordinary navigation should not silently put the camera inside it.
+
+Allow orbit, pan, dolly and free flight, with inspectable anchors and
+constraints. Smooth transitions should follow a collision-aware path and
+interpolate orientation without abrupt flips; instant cuts and reduced-motion
+alternatives remain available. Eye attachment is not eye tracking, and the
+camera's look direction is not evidence of the historical person's gaze.
+Head motion can be stabilized for comfortable viewing without changing the
+recorded body performance.
+
+**Record your own way through the explanation.** A view track stores camera
+poses, anchors, constraints and lens settings against simulation timestamps.
+A tour also selects time segments, playback scales, loops, annotations and
+view transitions. Someone can record a room overview, glide into the operator's
+eyes, slow the pen contact, follow an event into the source listing, then
+return to the room at normal speed. These are editable, reusable perspectives,
+not flattened videos.
+
+Keep the camera/tour track separate from the machine and performance tracks.
+Two people can explore different views and time scales of the same recorded
+history without altering it. Store units, coordinate frames, stable object
+identifiers and scene/recording versions so a saved view can resolve its
+anchors or report that they are missing, rather than silently point somewhere
+else. Simulation time and presentation time have an explicit mapping, including
+paused intervals and speed changes; a saved tour must reproduce that mapping.
+
+This is another interface to agency: take over a preset tour, directly steer
+the camera, change the time scale, record the result and share the explanation
+you found. The player should expose those operations to people, not reserve
+them for an automated director.
+
 ### Gesture tells a story
 
 Body language includes posture, gaze, pointing, emphasis and turn-taking.
