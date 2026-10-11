@@ -12,3 +12,5 @@ files here are build outputs copied for publication.
 The current copy includes all 248 book records (218 LZW and 30 adaptive
 arithmetic) and 402 museum articles. Definition-only records retain their
 original short descriptions and explicitly identify their empty body sections.
+An opt-in browser speech control reads the displayed definition on single click;
+double-click still follows. Speech is off by default and uses no microphone.

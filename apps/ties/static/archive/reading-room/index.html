@@ -50,6 +50,8 @@ body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1
 <h2 id="title" tabindex="-1"></h2>
 <p id="collection-label" class="eyebrow"></p>
 <label><input id="show-commands" type="checkbox"> Show unimplemented historical commands in reading view</label>
+<p><label><input id="speak-definitions" type="checkbox" aria-describedby="speech-status"> Read link definitions aloud on single click</label>
+<span id="speech-status" class="metadata" role="status">Off by default. Uses your browser's speech service; voice processing may depend on your browser and operating system. No microphone access.</span></p>
 <div id="body" class="body"></div>
 <div id="preview" class="preview" hidden></div>
 <details><summary>Original markup, source and recovery metadata</summary><p id="provenance" class="metadata"></p><pre id="raw" class="body"></pre></details>
@@ -432,6 +434,36 @@ let currentArticle=null,tourStop=-1;
 const element=id=>document.getElementById(id);
 const byId=new Map(data.articles.map(a=>[a.collection+':'+a.id,a]));
 const accessText=HypertiesFormats.displayCP437;
+const speechAvailable='speechSynthesis' in window&&'SpeechSynthesisUtterance' in window;
+let activeSpeech=null;
+const speechNotice=element('speech-status').textContent;
+function stopDefinitionSpeech(){
+ if(activeSpeech){activeSpeech=null;window.speechSynthesis.cancel();}
+}
+function speakDefinition(text){
+ stopDefinitionSpeech();
+ if(!speechAvailable||!element('speak-definitions').checked)return;
+ const utterance=new SpeechSynthesisUtterance(text);
+ utterance.lang='en';
+ activeSpeech=utterance;
+ utterance.onend=()=>{if(activeSpeech===utterance)activeSpeech=null;};
+ utterance.onerror=event=>{
+  if(activeSpeech!==utterance)return;
+  activeSpeech=null;
+  element('speech-status').textContent='Could not read the definition aloud: '+event.error+'. The definition remains available below.';
+ };
+ element('speech-status').textContent=speechNotice;
+ window.speechSynthesis.speak(utterance);
+}
+if(!speechAvailable){
+ element('speak-definitions').disabled=true;
+ element('speech-status').textContent='Reading definitions aloud is not supported in this browser. Definitions remain available as text.';
+}
+element('speak-definitions').onchange=()=>{
+ stopDefinitionSpeech();
+ element('speech-status').textContent=speechNotice;
+};
+addEventListener('pagehide',stopDefinitionSpeech);
 let historyPosition=0,historyEnd=0;
 history.replaceState({...history.state,readingRoomPosition:0},'');
 function navigation(){
@@ -452,6 +484,7 @@ element('list').replaceChildren();
 for(const a of articles){const b=document.createElement('button');b.textContent=accessText(a.title)+(a.body===null?' [not recovered]':'');b.onclick=()=>select(a.collection,a.id);element('list').append(b);}
 }
 function openArticle(a){
+stopDefinitionSpeech();
 currentArticle=a;
 collection=a.collection;catalog();element('title').textContent=accessText(a.title);
 element('collection-label').textContent=a.collection==='book'?'1988 book collection':'Historical museum collection';
@@ -512,6 +545,7 @@ function define(anchor,target,follow){
  const text=document.createElement('p');text.textContent=target.body===null?'This record has not been recovered yet.':accessText(target.description||'(No short description in the original record.)');
  const go=document.createElement('button');go.textContent='Follow link';go.onclick=follow;go.disabled=false;
  p.append(heading,text,go);
+ speakDefinition(text.textContent);
 }
 function select(c,id){
  const key=c+':'+id;
