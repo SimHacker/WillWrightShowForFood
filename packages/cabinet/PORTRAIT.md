@@ -191,6 +191,164 @@ the 128-page listing this whole machine exists to run. His character
 dir is the source of grounding; anything beyond "operator demonstrating
 PIXIE" needs his say.
 
+## Scene player: bodies, devices and connected time scales
+
+This is a proposed extension of the portrait, not implemented playback functionality.
+The scene player is a **causal microscope** as well as a performance player:
+how, when, where, what and who belong in one explanation. It should let someone
+follow a physical action into a detector, through the machine, and back into
+visible or audible feedback.
+
+### One history, several views
+
+Record timestamped input, device and execution events, with initial state and
+the configuration needed to reproduce them. Declare the clock domains and
+their relationships: human movement, PDP-7 cycles, Type 340 operations and
+physical rendering. Camera movement does not advance or modify the machine.
+
+| Playback control | What it reveals |
+|---|---|
+| Normal speed | The operator's explanation and the working interaction |
+| Slow motion and event stepping | Contact, detection, feedback and instruction timing |
+| Fast-forward | The rhythm and emphasis of the same gesture sequence |
+| Scrub, loop and bookmarks | Revisit a motion, selection or interrupt |
+| Camera presets and continuous zoom | Move between the room, shared work surface, hand, detector and source |
+
+Scrubbing requires checkpoints and deterministic replay, not merely seeking
+an animation clip. Replay must include the input events that change the guest.
+Physical models must advance from the declared simulation time: slowing the
+processor while leaving phosphor decay on wall-clock time changes the behavior.
+An intentionally decoupled explanatory view may be useful, but label it.
+Audio needs its own stated policy under time dilation: mute, slow, preserve
+speech pitch, or sonify events. It must not silently imply normal-time sound.
+
+### Gesture tells a story
+
+Body language includes posture, gaze, pointing, emphasis and turn-taking.
+A teacher's hands can describe a surface, compare distances or distinguish
+contact from release even when the speech is inaudible. Signed languages are
+languages, not generic gestures: any signed explanation needs fluent authors
+or reviewers, its own linguistic timing, and a camera that keeps hands, face
+and relevant body movement visible. Do not generate purported translations
+by assigning arbitrary gestures to words.
+
+Don remembers watching a VHS lecture by Ben Shneiderman about touchscreens
+and lift-off selection decades ago. Fast-forward made Ben's vigorous,
+expressive gestures delightfully funny while their spatial explanation remained
+legible without words. That suggests a player feature, not a fabricated
+performance: accelerate the actual motion and let the humor emerge. Other
+characters can reveal the same effect. Do not script exaggerated flailing or
+present a reconstruction as documentary footage. This anecdote belongs here,
+not in the direct welcome note to Ben.
+
+Existing lecture videos, including material on YouTube or in an author's
+collection, could guide video-derived pose recovery with appropriate permission
+and provenance. Occluded fingers and depth are uncertain; recovered motion
+needs review, and reconstructed segments must be identified. A device-input
+trajectory alone cannot recover a speaker's expressive body language: retain
+a separate, synchronized performance track without letting it bypass the
+physical input chain.
+
+### From pen contact to executing source
+
+Follow one interaction across scales, with cameras able to pause at each seam:
+
+1. Establish the operator, stance, screen size and tilt, and the shared workspace.
+2. Zoom to the pen tip against the glass. Show the Type 340 beam reaching the
+   location, and the modeled emission, spread, color, intensity and persistence
+   of the phosphor. Separate measured properties from artistic approximations.
+3. Expose the pen's sensing region and the light that crosses its detection
+   threshold. The human-visible afterglow and the detector's response need not
+   be the same; use the documented spectral and temporal model.
+4. Trace the detected event through the pen cable to the interface. Signal-flow
+   highlights are explanatory overlays, not literal light traveling down a wire.
+   Only simulate propagation delays for which we have evidence or a labeled model.
+5. Show device status, any interrupt request, and the boundary at which the PDP-7
+   recognizes it, according to the actual device, enable and CPU rules. Do not
+   assume every pen event directly interrupts the CPU or is serviced on the next cycle.
+6. Follow the executed instructions through core addresses, disassembly,
+   recovered assembly and the scanned lineprinter listing. Highlight the source
+   already printed on that historical paper; it is not live printer output.
+7. Trace the program's response into subsequent display operations and back to
+   the operator's perception and next movement.
+
+The close-up and the room view explain the same event history. A detector
+cross-section, bus trace and source highlight expose different aspects of it;
+none should invent a second execution for the sake of a nicer shot.
+
+### Touchscreens: the finger is part of the interface
+
+Show the real occlusion: from the user's viewpoint a fingertip blocks the
+screen behind it. A side view exposes glass thickness, viewing angle and
+parallax; a transparent explanatory overlay can reveal the hidden target
+without pretending the user could see it.
+
+Reconstruct HCIL's above-finger or "pop-up" cursor and lift-off strategy:
+touch establishes feedback, sliding refines the cursor position, the target
+highlights, and release commits the selection. Compare with first-contact
+selection and show why selecting small characters is possible when the cursor,
+rather than the area covered by the finger, determines the target.
+The [HCIL touchscreen history](https://www.cs.umd.edu/hcil/touchscreens/)
+documents the 1988 work and its later high-precision studies. These demonstrations
+predate iOS and Android touch text-selection interfaces; that chronology does
+not by itself prove direct derivation or identity of techniques.
+Use the original papers and videos to distinguish selecting a character from
+selecting a text range, and to reconstruct the exact cursor behavior.
+
+A proposed scene could feature identified portrayals of Ben Shneiderman,
+Catherine Plaisant and Rich Potter at a touchscreen IBM PC, with their guidance
+on the hardware, individual contributions and demonstration. Keep full-hand,
+over-the-shoulder and fingertip views available. Accessible text explanations
+and alternative controls must remain usable without watching the animation.
+
+### Detectors, actuators and the shape of an action
+
+Bill Buxton's *Lexical and Pragmatic Considerations of Input Structures*
+([author's publications](https://www.billbuxton.com/papers.html)) is a useful
+conceptual reference: study the physical structure of input and its use in
+context, not just the abstract command eventually delivered.
+
+| Object | Physical behavior to expose | Connection to the interface |
+|---|---|---|
+| Light pen | Grip, reach, sensing aperture, contact and cable | Detection and tracking feedback |
+| Finger and touchscreen | Occlusion, sliding, release and reach | Cursor refinement and selection |
+| Key or button | Travel, contact threshold and return | Press/release events; modeled debounce only where appropriate |
+| Rotary knob | Angle, resistance, detents and end stops | Absolute setting versus relative change |
+| Switch or pedal | Latching versus momentary action, force and posture | Persistent state versus transient input |
+| Actuator or indicator | Motion, light, vibration or sound and its delay | Feedback the operator can actually perceive |
+
+Declare what is sensed and what is driven, the units, thresholds and timing.
+Do not give an old device modern haptic feedback and call it historical.
+Virtual cabinets may deliberately improve controls, but identify departures
+and preserve a documented historical mode.
+
+### Engelbart: the whole workstation, not just the mouse
+
+Another scene should reconstruct Douglas Engelbart's working arrangement:
+**chord keyset, mouse, full keyboard, display, microphone, desk and chair**,
+plus the cables, supporting equipment and collaborative context established
+by the source material. Photograph and film evidence should determine dimensions,
+placement, posture and which configuration or demonstration we are portraying.
+Do not assemble every famous device into an invented timeless workstation.
+
+Show the hands coordinating: one forms a chord while the other points with
+the mouse, shifts to the keyboard, or rests. Expose the keyset's combination
+of switch states, mouse motion and buttons, and the resulting interface action.
+Show how seating, elbow support, screen position and the available desk area
+make that coordination possible. The microphone and display connect speaking,
+seeing and remote collaboration to the physical workstation rather than treating
+them as unrelated app features.
+
+Use wide shots to understand the arrangement, operator-view shots to understand
+attention, and close-ups to inspect key travel and simultaneous inputs.
+An exploded or transparent mechanism is an explicitly explanatory view.
+NLS behavior needs its own recovered implementation or clearly identified
+demonstration model; a portrait of the desk alone does not mean NLS is emulated.
+
+The point is not a parade of gadgets. It is preserving the relationship between
+people, physical objects, interaction techniques and computation, and letting
+the learner inspect it at the scale and perspective where it becomes intelligible.
+
 ## Cabinets for machines that never had one
 
 The PDP-7 has a face from photographs. Every other engine the cabinet wraps
