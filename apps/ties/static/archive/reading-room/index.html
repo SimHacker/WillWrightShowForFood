@@ -48,6 +48,10 @@ body{background:light-dark(#faf8f2,#181d23);color:light-dark(#263544,#e5e9ee)}h1
 </nav>
 <p id="article-position" class="metadata"></p>
 <h2 id="title" tabindex="-1"></h2>
+<nav aria-label="Article audio">
+<button id="read-article" aria-describedby="speech-status">Read article aloud</button>
+<button id="stop-reading" disabled>Stop reading</button>
+</nav>
 <p id="collection-label" class="eyebrow"></p>
 <label><input id="show-commands" type="checkbox"> Show unimplemented historical commands in reading view</label>
 <p><label><input id="speak-definitions" type="checkbox" aria-describedby="speech-status"> Read link definitions aloud on single click</label>
@@ -439,26 +443,42 @@ let activeSpeech=null;
 const speechNotice=element('speech-status').textContent;
 function stopDefinitionSpeech(){
  if(activeSpeech){activeSpeech=null;window.speechSynthesis.cancel();}
+ element('stop-reading').disabled=true;
 }
 function speakDefinition(text){
  stopDefinitionSpeech();
  if(!speechAvailable||!element('speak-definitions').checked)return;
+ speakText(text);
+}
+function speakText(text){
+ stopDefinitionSpeech();
+ if(!speechAvailable)return;
  const utterance=new SpeechSynthesisUtterance(text);
  utterance.lang='en';
  activeSpeech=utterance;
- utterance.onend=()=>{if(activeSpeech===utterance)activeSpeech=null;};
+ element('stop-reading').disabled=false;
+ utterance.onend=()=>{if(activeSpeech===utterance){activeSpeech=null;element('stop-reading').disabled=true;}};
  utterance.onerror=event=>{
   if(activeSpeech!==utterance)return;
   activeSpeech=null;
-  element('speech-status').textContent='Could not read the definition aloud: '+event.error+'. The definition remains available below.';
+  element('stop-reading').disabled=true;
+  element('speech-status').textContent='Could not read aloud: '+event.error+'. The text remains available below.';
  };
  element('speech-status').textContent=speechNotice;
  window.speechSynthesis.speak(utterance);
 }
 if(!speechAvailable){
  element('speak-definitions').disabled=true;
- element('speech-status').textContent='Reading definitions aloud is not supported in this browser. Definitions remain available as text.';
+ element('read-article').disabled=true;
+ element('speech-status').textContent='Reading aloud is not supported in this browser. Articles and definitions remain available as text.';
 }
+element('read-article').onclick=()=>{
+ if(!currentArticle||currentArticle.body===null)return;
+ const text=currentArticle.body.trim()?element('body').textContent:accessText(currentArticle.description||'');
+ if(!text.trim()){element('speech-status').textContent='This original record has no body text or short description to read.';return;}
+ speakText(accessText(currentArticle.title)+'.\n'+text);
+};
+element('stop-reading').onclick=stopDefinitionSpeech;
 element('speak-definitions').onchange=()=>{
  stopDefinitionSpeech();
  element('speech-status').textContent=speechNotice;
@@ -485,6 +505,7 @@ for(const a of articles){const b=document.createElement('button');b.textContent=
 }
 function openArticle(a){
 stopDefinitionSpeech();
+element('read-article').disabled=!speechAvailable||a.body===null;
 currentArticle=a;
 collection=a.collection;catalog();element('title').textContent=accessText(a.title);
 element('collection-label').textContent=a.collection==='book'?'1988 book collection':'Historical museum collection';

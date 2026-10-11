@@ -14,3 +14,5 @@ arithmetic) and 402 museum articles. Definition-only records retain their
 original short descriptions and explicitly identify their empty body sections.
 An opt-in browser speech control reads the displayed definition on single click;
 double-click still follows. Speech is off by default and uses no microphone.
+Read article aloud and Stop reading buttons beside the article title offer
+explicit playback of the article, or its description for definition-only records.
