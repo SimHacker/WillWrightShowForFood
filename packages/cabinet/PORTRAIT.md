@@ -242,6 +242,31 @@ historical artifact is one kind of content, and a carefully composed way of
 understanding it is another. A URL should be able to address that authored
 perspective, not merely launch the default camera.
 
+**Literary touchstone: David Marusek's *The Wedding Album* (1999).**
+Its preserved simulations invite us to think about recordings as more than
+passive keepsakes: what persists, who controls it, and what happens when its
+format, context or owner changes. The
+[discussion of the story and digital portrayals](../../characters/david-marusek/the-wedding-album-and-digital-souls.md)
+connects that fiction to this project's concerns about consent, attribution
+and the treatment of representations of people. It is an inspiration and an
+ethical provocation, not evidence that our recorded views or avatars are
+conscious people. Keeping a perspective must not erase the rights of the
+people portrayed within it.
+
+**Architectural touchstone: Myer and Sutherland's wheel of reincarnation.**
+T. H. Myer and Ivan Sutherland's
+[*On the Design of Display Processors* (CACM, 1968)](https://doi.org/10.1145/363347.363368)
+describes how added capabilities turn a display channel into another computer,
+which can acquire its own subsidiary processor. Our Type 340 already gives
+that history a concrete footing; see the
+[paper's source notes and PIXIE mapping](../../characters/ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md).
+Don's framing is that we are building another rung of that wheel: a view
+begins as output, then gains persistent state, editable programs and timelines,
+interaction and tools of its own. That is an architectural analogy, not the
+original paper's claim about this player. The lesson includes their warning:
+declare responsibilities and boundaries rather than accidentally growing a
+second opaque application inside the first.
+
 Offer a **first-person view from the character's eyes**, with the screen,
 hands and occluding finger or pen where the operator would actually see them.
 Like switching to first person in GTA, the viewpoint changes how the same
