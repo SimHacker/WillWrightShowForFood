@@ -114,6 +114,198 @@ reads 80 columns, and so the generator keeps its lines short. The Ultimate Machi
 speed is a question of how many frames Forth draws while the hand moves. Each limit is a lesson
 in representation, and students hit them for real, not in an exercise.
 
+## Anatomy: every layer, and the file it lives in
+
+A cartridge is a stack of languages, each one compiling or interpreting the next. Here is the
+whole stack of the TURING MACHINE cartridge. The other Forth cartridges differ only in which
+sources they compile in and which devices they plug in.
+
+```text
+ the page        hyperties.org/cabinet/turing/          CabinetPage.svelte, CabinetApplet.svelte
+   │
+ cartridge       forthProgram({ id: 'turing', ... })    cabinet-programs.js  (JavaScript)
+   │  picks: kernel, Forth sources, devices, typeAhead, demo script, help
+   │
+ backplane       Cabinet: one CPU, devices on the IOT bus, one clock     cabinet.ts  (TypeScript)
+   ├── PDP-7 CPU        Pdp7                                              pdp7.ts
+   ├── Type 340         Type340: a display processor fetching from core   type340.ts
+   ├── teletype, paper tape reader, clock                                 teletype.ts papertape.ts
+   └── device 54        TuringDevice: a TM processor fetching from core   turing.ts
+   │
+ 8K words of 18-bit core, shared by all three processors
+   │
+ PDP-7 assembly  sop.s + kernel-names-full.s [+ pixie.s + rsppix.s] + end.s
+   │             assembled in the page by as7.ts (Ken Thompson's assembler, reimplemented)
+   │
+ Forth           prelude.fs does.fs turtle.fs code.fs interrupt.fs tags.fs turing.fs pcomp-tm.fs
+   │             compiled ON the emulated PDP-7, read from the paper tape reader
+   │
+ co-processor    340 display list: vectors, 342 text, DJS subroutines, DTG tags
+ programs        TM control block, transition table, tape window
+                 (both written into core by Forth, run by their own processors)
+   ▲
+ host compilers  TM-Forth (tmforth.ts) → records (tm340.ts) → pcomp-tm.fs
+                 from pcomp.tmf, Minsky's rows and Cherniak's disk
+```
+
+### The layers, file by file
+
+**The page and the cartridge** (JavaScript, Svelte):
+
+| File | What it is |
+|---|---|
+| [cabinet-programs.js](../../apps/ties/src/lib/cabinet-programs.js) | every cartridge on the menu, as an object: what to load, how to build it, what devices to plug in |
+| [`FORTH_EXTRAS`](../../apps/ties/src/lib/cabinet-programs.js#L106) | the Forth sources a cartridge can add, by name |
+| [`forthProgram`](../../apps/ties/src/lib/cabinet-programs.js#L115) | the Forth cartridge factory: assembles the kernel, compiles the Forth, boots it |
+| [ULTIMATE](../../apps/ties/src/lib/cabinet-programs.js#L382), [TURING](../../apps/ties/src/lib/cabinet-programs.js#L404), [SYMELEC](../../apps/ties/src/lib/cabinet-programs.js#L204) | three cartridges: extras, `peripherals`, `typeAhead`, demo, help |
+| [CabinetApplet.svelte](../../apps/ties/src/lib/CabinetApplet.svelte) | the tube, panels, teletype, pen and DEMO button around any cartridge |
+| [CARTRIDGES.md](CARTRIDGES.md) | where cartridges are going: a directory of resources and build steps, not code |
+
+**The backplane and the device emulators** (TypeScript, [src/plugins/](src/plugins/)):
+
+| File | Unit | IOT device |
+|---|---|---|
+| [cabinet.ts](src/cabinet.ts) | the backplane: steps the CPU, ticks every device, routes IOTs | |
+| [bus.ts](src/bus.ts) | what a CPU puts on the I/O bus; devices never see the ISA | |
+| [pdp7.ts](src/plugins/pdp7.ts) | [`Pdp7`](src/plugins/pdp7.ts#L49), the CPU, ported from Open SIMH | |
+| [type340.ts](src/plugins/type340.ts) | [`Type340`](src/plugins/type340.ts#L151): the display processor. [`tick`](src/plugins/type340.ts#L224) fetches and runs a display word, [`iot`](src/plugins/type340.ts#L260) answers the PDP-7, [DJS](src/plugins/type340.ts#L464) calls a display subroutine | 05, 06, 07 |
+| [turing.ts](src/plugins/turing.ts) | [`TuringEngine`](src/plugins/turing.ts#L186), the shape-independent core; [`TuringDevice`](src/plugins/turing.ts#L439), its PDP-7 face ([`iot`](src/plugins/turing.ts#L456), [`tick`](src/plugins/turing.ts#L493)); [`RleTape`](src/plugins/turing.ts#L96), the paged-out tape; [`TuringCpu`](src/plugins/turing.ts#L528), the same engine as a CPU of its own | 54 |
+| [ultimate.ts](src/plugins/ultimate.ts) | [`UltimateMachine`](src/plugins/ultimate.ts#L86): lever, lid, arm, phases, power switch | 56 |
+| [teletype.ts](src/plugins/teletype.ts), [papertape.ts](src/plugins/papertape.ts), [clock.ts](src/plugins/clock.ts), [rb09.ts](src/plugins/rb09.ts) | keyboard and printer, the reader Forth compiles from, the line clock, UNIX's disk | 03/04, 01, 00, 71 |
+| [lightpen.ts](src/plugins/lightpen.ts) | the pen as host input; the 340 decides what it sees | |
+| [tiny-titan.ts](src/plugins/tiny-titan.ts) | the far end of PIXIE's link to Cambridge's Titan | |
+
+**The toolchain** (TypeScript): [as7.ts](src/asm/as7.ts) is Ken Thompson's PDP-7 UNIX assembler,
+which Mitch builds his Forth with. [cambridge-as7.ts](src/asm/cambridge-as7.ts) reads Cambridge's
+1972 dialect. [disasm.ts](src/disasm.ts) disassembles PDP-7 words and 340 display words for the
+memory panel. [forth.ts](src/forth.ts) does Mitch's `make`:
+[`assembleForthKernel`](src/forth.ts#L25) concatenates and assembles the kernel, and
+[`compileForth`](src/forth.ts#L101) boots it, mounts the `.fs` files on the paper tape reader,
+types `TAPE`, and keeps the core when the machine is done reading.
+
+**PDP-7 assembly** ([tapes/pdp7forth/](tapes/pdp7forth/)):
+
+| File | Layer |
+|---|---|
+| [sop.s](tapes/pdp7unix/sop.s) | the opcode symbols, from the PDP-7 UNIX sources |
+| [kernel-names-full.s](tapes/pdp7forth/kernel-names-full.s) | Mitch's Forth kernel, with whole names: [`next`](tapes/pdp7forth/kernel-names-full.s#L66) is the inner interpreter, [`cold`](tapes/pdp7forth/kernel-names-full.s#L679) the boot |
+| [kernel.s](tapes/pdp7forth/kernel.s) | Mitch's kernel as he wrote it |
+| [pixie.s](tapes/pdp7forth/pixie.s) | **the Forth glue** for PIXIE's rings (below) |
+| [rsppix.s](tapes/pdp7forth/rsppix.s) | **the shared ring library**, RSPPIX, Cambridge 1972 (below) |
+| [end.s](tapes/pdp7forth/end.s) | marks where the dictionary starts |
+| [utm-driver.s](tapes/turing/utm-driver.s) | a Turing engine driver in plain PDP-7 assembly: [`int,`](tapes/turing/utm-driver.s#L50) slides the tape window on a fault |
+
+**Forth** ([tapes/pdp7forth/](tapes/pdp7forth/)), compiled on the machine in this order:
+
+| File | Layer |
+|---|---|
+| [prelude.fs](tapes/pdp7forth/prelude.fs), [does.fs](tapes/pdp7forth/does.fs) | the language: `SPACE`, `[']`, `CREATE … DOES>` |
+| [turtle.fs](tapes/pdp7forth/turtle.fs) | the 340 library: [`dl,`](tapes/pdp7forth/turtle.fs#L37) appends a display word, [`vec`](tapes/pdp7forth/turtle.fs#L73) compiles a vector, [`fd`](tapes/pdp7forth/turtle.fs#L108) and friends are the turtle |
+| [pixie.fs](tapes/pdp7forth/pixie.fs) | **the Forth wrapper** for rings: `RINGS`, `NAMED`, `.RING`, `RCOUNT` |
+| [code.fs](tapes/pdp7forth/code.fs) | PDP-7 code words, written in Forth: [`iot-pulse` `iot-read` `iot-skip` `iot-write`](tapes/pdp7forth/code.fs#L84) turn a device's IOTs into words |
+| [interrupt.fs](tapes/pdp7forth/interrupt.fs) | interrupts in Forth: the [ISR](tapes/pdp7forth/interrupt.fs#L59) plants a jump in NEXT, and [`interrupts-on`](tapes/pdp7forth/interrupt.fs#L69) wires location 1 |
+| [tags.fs](tapes/pdp7forth/tags.fs) | [`tag"`](tapes/pdp7forth/tags.fs#L30): DTG words that name what is drawn |
+| [ultimate.fs](tapes/pdp7forth/ultimate.fs) | **device code**: device 56's IOTs as words, the box drawn from its registers, the [`plate`](tapes/pdp7forth/ultimate.fs#L123) the pen can see, [`pen-check`](tapes/pdp7forth/ultimate.fs#L242), [`ultimate`](tapes/pdp7forth/ultimate.fs#L250) |
+| [turing.fs](tapes/pdp7forth/turing.fs) | **device code**: device 54's IOTs as words, [`tm-load`](tapes/pdp7forth/turing.fs#L57), the [`tape`](tapes/pdp7forth/turing.fs#L157) drawn from the window, [`run`](tapes/pdp7forth/turing.fs#L246), [`demo`](tapes/pdp7forth/turing.fs#L253) |
+| [pcomp-tm.fs](tapes/pdp7forth/pcomp-tm.fs) | **data**, generated on the host: one record and one loading word per machine |
+| [scheme.fs](tapes/pdp7forth/scheme.fs) | a tiny S-expression evaluator, a sketch |
+
+**Host-side compilers for the co-processors** (TypeScript):
+[tmforth.ts](src/tmforth.ts)'s [`compileTmForth`](src/tmforth.ts#L941) compiles TM-Forth.
+[tm.ts](src/tm.ts) is the table format and a reference [`runTm`](src/tm.ts#L364). [tm340.ts](src/tm340.ts)'s
+[`tm340Record`](src/tm340.ts#L89) and [`pdp7TmDeck`](src/tm340.ts#L123) write the Forth records.
+The machines themselves are in [pcomp.tmf](tapes/turing/pcomp.tmf) and
+[minsky-7x4.tmf](tapes/turing/minsky-7x4.tmf).
+
+### Follow one machine down through every layer: BUSY2
+
+1. **TM-Forth source**, [pcomp.tmf](tapes/turing/pcomp.tmf#L27), as Cherniak's disk has it:
+
+   ```forth
+   tm: pcomp-busy2
+   note" BUSY2.TM: a 2-state Busy-Beaver takes 6 steps to print 4 ones."
+   symbols: 0 1 ;
+   tm*-table
+     1 0   1 R  2
+     1 1   1 L  2
+     2 0   1 L  1
+     2 1   1 L  0
+   end-table
+   ```
+
+2. **The host compiles it.** `compileTmForth` builds the table. `pdp7TmDeck` runs it (6 steps),
+   picks a speed, and writes a record of numbers into
+   [pcomp-tm.fs](tapes/pdp7forth/pcomp-tm.fs): a header, the alphabet as 342 codes, the table
+   in the engine's format (`69634` is *write 1, move right, go to 2*), the tape, and the names
+   packed three characters to a word. Then it adds one word:
+
+   ```forth
+   : busy2 ( -- ) tm-busy2 (load) ;
+   ```
+
+3. **The PDP-7 compiles that.** At boot, `compileForth` feeds the file through the paper tape
+   reader, and Mitch's kernel lays the record into the dictionary in core.
+4. **You type `BUSY2`.** [`tm-load`](tapes/pdp7forth/turing.fs#L57) copies the tape into the
+   window and fills the control block with addresses in core. It then issues TMLA through a word
+   that [`iot-write`](tapes/pdp7forth/code.fs#L87) made: `705404 iot-write tm-go-at`.
+5. **The IOT crosses the bus.** [`Pdp7.iot`](src/plugins/pdp7.ts#L420) puts device 54 on the
+   bus. [`TuringDevice.iot`](src/plugins/turing.ts#L456) reads the TCB out of core, and from then
+   on [`tick`](src/plugins/turing.ts#L493) runs transitions: it fetches table entries and
+   rewrites tape cells in the same 18-bit core the PDP-7 uses.
+6. **Forth draws it.** Each frame, [`tape`](tapes/pdp7forth/turing.fs#L157) copies 13 window
+   words into the 340's display list unchanged, because the cells are already 342 codes. It then
+   calls the divider subroutine with DJS, and labels the state with packed strings.
+7. **The 340 runs that.** [`Type340.tick`](src/plugins/type340.ts#L224) fetches the display list
+   from core, draws the tape in character mode, follows DJS, and carries DTG tags. The page turns
+   its segments into phosphor on the canvas, and hovering the tape says "The tape".
+
+### The PIXIE ring stack: a 1972 library, shared by two languages
+
+The same ring code serves Heinz's SYMELEC and Mitch's Forth, unchanged:
+
+```text
+rsppix.asm         Cambridge 1972, Heinz's listing           tapes/symelec/
+   │  scripts/translate-cambridge.mjs  (Cambridge dialect → as7, do not edit the output)
+rsppix.s           the shared library: RSETUP RINIT RCAR RINSRT ... the garbage collector
+   │  rsppixForForth (forth.ts): moved up to px.org, its variables left to pixie.s
+pixie.s            the glue, in assembly: SYMELEC's variables and error exits where RSPPIX
+   │               expects them, and a Forth header per routine (jms rsetup; jmp next)
+pixie.fs           the wrapper, in Forth: RINGS NAMED .RING RCOUNT RFIRST RNEXT
+   │
+RINGS panel        draws the rings in 3D as they grow, from RSAVINS
+```
+
+- **The library:** [rsppix.asm](tapes/symelec/rsppix.asm), from the
+  [listing](tapes/symelec/rsppix-listing.txt), translated by
+  [translate-cambridge.mjs](scripts/translate-cambridge.mjs) into [rsppix.s](tapes/pdp7forth/rsppix.s)
+  ([`rsetup`](tapes/pdp7forth/rsppix.s#L5), [`rinsrt`](tapes/pdp7forth/rsppix.s#L512)).
+  SYMELEC itself ([symelec.s](tapes/symelec/symelec.s)) is built on the same code.
+- **The glue:** [pixie.s](tapes/pdp7forth/pixie.s) lays out the memory (`px.org`, the ring area,
+  the stacks) and wraps each routine as a Forth primitive. It does exactly the job SYMELEC's
+  own code does for RSPPIX.
+- **The wrapper:** [pixie.fs](tapes/pdp7forth/pixie.fs) gives Forth names and loops to it.
+- **The build:** [`assembleForthKernel`](src/forth.ts#L25) puts pixie.s and rsppix.s between the
+  kernel and end.s. [FORTH-RINGS.md](FORTH-RINGS.md) tells the whole story.
+
+The rings and the Turing view don't both fit in 8K, so the TURING and ULTIMATE cartridges set
+`pixie: false`. The cartridge decides which libraries a machine gets, just as the person
+building a real PDP-7 decided what went on its tape.
+
+### Follow one pen tap: the Ultimate Machine's switch
+
+[`plate`](tapes/pdp7forth/ultimate.fs#L123) draws the switch with the 340's light pen enabled,
+and nothing else on the screen is pen-sensitive. A click becomes a pen hit in
+[type340.ts](src/plugins/type340.ts), which freezes the display and raises an interrupt. The
+[ISR](tapes/pdp7forth/interrupt.fs#L59) plants a jump in NEXT, so Forth runs
+[`on-interrupt`](tapes/pdp7forth/ultimate.fs#L219) at the next word boundary: it counts the hit
+and resumes the 340 with IDRS. Once a frame, [`pen-check`](tapes/pdp7forth/ultimate.fs#L242)
+takes the count (a CODE word, so the handler can't slip in between the read and the clear) and
+flips the lever with UMON or UMOF,
+and device 56 ([`UltimateMachine.iot`](src/plugins/ultimate.ts#L203),
+[`tick`](src/plugins/ultimate.ts#L192)) opens the lid and sends the hand out. Forth reads the
+phase, lid and arm registers each frame and redraws them. The scripted demo makes the same
+touch at [`ULTIMATE_SWITCH`](src/forth.ts#L180).
+
 ## Minsky's machines, as lessons
 
 - **The Ultimate Machine**: a unit whose function is to turn itself off. It raises lifecycle,
