@@ -44,6 +44,11 @@ How the threading works, and what to call it:
   related constants give the range of each register. Every part is tagged, the lamps are captioned
   with their phases in 342 text, and ON or OFF is written under the switch. `ULTIMATE` runs the
   view until you press a key.
+- `turing.fs`: a Type 340 view of device 54, the Turing engine. The tape is drawn with the 342
+  character generator straight from the window in core, with the head in the middle. Load a
+  machine by its name, then `RUN`, `STEP` or `n SPEED`; `DEMO` runs them all.
+- `pcomp-tm.fs`: the machines for `turing.fs`, generated from `../turing/pcomp.tmf` by
+  `pdp7TmDeck` (src/tm340.ts).
 - `VARIANTS.yml`: what each copy differs in, and what it must keep identical.
 - `scheme.fs`: a local CPS arithmetic S-expression experiment, compiled after the upstream sources
   in the Cabinet tests. Nested `+` and `*` over single-digit integers pass intermediate values

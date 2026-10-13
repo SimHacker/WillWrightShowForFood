@@ -38,7 +38,7 @@ export { Rb09, parseRbImage, rbImageBytes, RB_SIZE } from "./plugins/rb09.js";
 export type { Rb09Opts } from "./plugins/rb09.js";
 export { bootUnixV0, unixKey, unixEcho, unixDemo, UNIXV0_BOOT_ORIGIN } from "./unixv0.js";
 export type { UnixV0Opts, UnixHost } from "./unixv0.js";
-export { compileForth, bootForth, forthDemo, ultimateDemo, ULTIMATE_SWITCH, parseA7out, parseAs7Labels, setForthColumns, assembleForthKernel, rsppixForForth } from "./forth.js";
+export { compileForth, bootForth, forthDemo, ultimateDemo, turingDemo, ULTIMATE_SWITCH, parseA7out, parseAs7Labels, setForthColumns, assembleForthKernel, rsppixForForth } from "./forth.js";
 export type { ForthTapes, ForthImage, ForthHost } from "./forth.js";
 export { spokenNumbers } from "./spoken.js";
 export { bootDuel, duelResult, DUEL_HIT, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES, type DuelResult } from "./duel.js";
@@ -119,3 +119,5 @@ export {
 export type { TmLayout, TmLayoutOpts, TmMove, TmProgram, TmRunOpts, TmRunResult, TmStarFile, TmTape, TmTransition } from "./tm.js";
 export { compileTm, compileTmForth, tmStarSource, TmForthError } from "./tmforth.js";
 export type { TmForthOpts } from "./tmforth.js";
+export { char342, pdp7TmDeck, tm340Record, PCOMP_TM_HEADER, TM340_HOME, TM340_WINDOW_WORDS } from "./tm340.js";
+export type { Pdp7TmDeckOpts } from "./tm340.js";

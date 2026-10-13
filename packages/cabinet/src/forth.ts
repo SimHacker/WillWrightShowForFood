@@ -205,3 +205,23 @@ export function* ultimateDemo(h: ForthHost & DemoHost): DemoScript {
 	yield "Your turn: click the switch. Type any key at the teletype to stop ULTIMATE";
 	yield* wait(1_000_000);
 }
+
+/** TURING MACHINE: load machines by name, step one, run them, let one run free, stop it with a key. */
+export function* turingDemo(h: ForthHost): DemoScript {
+	const say = function* (caption: string, line: string, cycles: number): DemoScript {
+		yield caption;
+		h.type(`${line}\n`);
+		yield* wait(cycles);
+	};
+	yield "Forth prints its banner and waits at the teletype";
+	yield* wait(600_000);
+	yield* say("MACHINES lists the Turing machines compiled from pcomp.tmf", "MACHINES", 1_000_000);
+	yield* say("BUSY2 loads the 2-state busy beaver into device 54: the tape, the head, its rule", "BUSY2", 1_500_000);
+	yield* say("STEP makes one transition", "STEP", 1_000_000);
+	yield* say("RUN runs it to HALT: four ones in six steps", "RUN", 3_000_000);
+	yield* say("UTM: Minsky's universal machine, running a machine written on its own tape", "UTM RUN", 12_000_000);
+	yield* say("BCOUNT counts in binary forever; 0 SPEED lets the engine run free while Forth draws", "BCOUNT 0 SPEED RUN", 6_000_000);
+	yield* say("Any key stops it", " ", 1_000_000);
+	yield "Your turn: DEMO runs them all, a key stops it. Load one by name, then RUN or STEP";
+	yield* wait(1_000_000);
+}
