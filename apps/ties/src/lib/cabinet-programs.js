@@ -389,8 +389,9 @@ export const PROGRAMS = [
 		pen: true,
 		demo: (h) => ultimateDemo(h),
 		demoTitle: 'Reboot, type ULTIMATE, and touch the switch with the light pen',
-		// Twice the device's own timing: about 3.6 seconds a round at 1x, a dozen frames for the reach.
-		peripherals: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 2])))]
+		// Four times the device's own timing: about 7 seconds a round at 1x. The Forth loop draws
+		// flat out, a frame per 100,000 cycles or so, so that is about 40 frames a round.
+		peripherals: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 4])))]
 	}),
 	{
 		id: 'unix',

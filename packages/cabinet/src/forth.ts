@@ -198,10 +198,10 @@ export function* ultimateDemo(h: ForthHost & DemoHost): DemoScript {
 	yield "Touch the switch with the light pen";
 	yield* touch();
 	yield "The lid opens, the hand comes out, and it switches itself off";
-	yield* wait(4_000_000);
+	yield* wait(5_000_000);
 	yield "Again";
 	yield* touch();
-	yield* wait(4_000_000);
+	yield* wait(5_000_000);
 	yield "Your turn: click the switch. Type any key at the teletype to stop ULTIMATE";
 	yield* wait(1_000_000);
 }

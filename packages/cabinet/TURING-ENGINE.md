@@ -345,7 +345,11 @@ The cabinet applet's menu has **ULTIMATE MACHINE (2026)**; it also has a page of
 `/cabinet/ultimate/`. This is Mitch Bradley's Forth, without PIXIE's rings (8K holds those or
 this, not both), with four more sources compiled into it, the same build
 [ultimate.test.ts](src/ultimate.test.ts) runs, and
-device 56 plugged into the backplane at twice its default timing:
+device 56 plugged into the backplane at four times its default timing (about 7 seconds a round
+at 1x). The Forth frame loop never waits: it redraws as fast as it can, about a frame per
+100,000 cycles, so a round gets about 40 frames. A slower box gets more frames; `UM-TIME!` sets it.
+
+The four sources:
 
 - [code.fs](tapes/pdp7forth/code.fs) is a PDP-7 assembler in Forth. IOT words are laid down
   with `,`.

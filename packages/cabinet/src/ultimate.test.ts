@@ -337,11 +337,11 @@ test("forth: ULTIMATE draws the box from its registers, and the light pen on the
 });
 
 test("forth: the menu's demo, at the menu's timing, touches the switch twice and the hand wins twice", () => {
-	const twice = Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 2]));
-	const m = forthMachine(twice);
+	const menu = Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 4]));
+	const m = forthMachine(menu);
 	for (const step of ultimateDemo({ cpu: m.cpu, pen: m.pen, type: m.type })) if (typeof step === "number") m.box.run(step);
 	assert.equal(m.u.ons, 2);
-	assert.ok(m.until(() => m.u.presses === 2, 4_000_000));
+	assert.ok(m.until(() => m.u.presses === 2, 8_000_000));
 });
 
 test("forth: every part is tagged with its name, the lamps are captioned, and ON/OFF follows the lever", () => {
