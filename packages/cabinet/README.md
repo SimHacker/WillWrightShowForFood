@@ -6,8 +6,10 @@ for PIXIE — Type 340 on a canvas, light pen as a hit-test.
 
 Run it: [hyperties.org/cabinet/unix/](https://hyperties.org/cabinet/unix/),
 [forth](https://hyperties.org/cabinet/forth/), [symelec](https://hyperties.org/cabinet/symelec/),
-[duel](https://hyperties.org/cabinet/duel/). The attitude: [MANIFESTO.md](MANIFESTO.md).
+[duel](https://hyperties.org/cabinet/duel/), [ultimate](https://hyperties.org/cabinet/ultimate/),
+[turing](https://hyperties.org/cabinet/turing/). The attitude: [MANIFESTO.md](MANIFESTO.md).
 The historical and philosophical architecture: [ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md).
+Forth, the 340 and co-processors from a teaching angle, and where CAM-6 fits: [TEACHING.md](TEACHING.md).
 
 ```ts
 import { Cabinet, Pdp7, Type340, LightPen } from "@wwsff/cabinet";
