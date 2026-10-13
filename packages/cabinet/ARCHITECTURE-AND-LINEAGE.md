@@ -277,9 +277,11 @@ So the general rule is the one the 340 already follows:
 - **A unit** is anything with state that advances on the clock: `tick(cycles)`, `reset()`, and
   optionally `irq()`. **Every unit has a power switch** (`power: boolean`, settable by the user, by
   a script, or by the unit itself). Off, the backplane skips its `tick`, ignores its `irq`, and
-  routes no requests to it; switching it on calls `reset()`. Minsky's Ultimate Machine, a unit
+  routes no requests to it, except what is wired to the switch rather than behind it (`offIot`);
+  switching it on calls `reset()`. Minsky's Ultimate Machine, a unit
   whose only act is to switch itself off, is the minimal test
-  ([PORTRAIT.md](PORTRAIT.md#minskys-ultimate-machine)).
+  ([PORTRAIT.md](PORTRAIT.md#minskys-ultimate-machine),
+  [TURING-ENGINE.md](TURING-ENGINE.md#the-ultimate-machine)).
 - **A processor** is a unit with a program: a PC, an instruction stream it fetches from some
   memory, a disassembler, and source maps. The PDP-7, the 340, a Turing machine and a MIX are
   processors. So is a native CPU, whose "program" is TypeScript.
@@ -467,8 +469,12 @@ transition moves the head across a guard, raise an interrupt before the next
 step. The host can advance the window, initialize newly exposed cells as blank,
 and page older nonblank regions to disk-backed storage. A separate viewer can
 scroll its viewport to keep the head visible. The Turing machine sees a tape
-that extends as needed; physical memory and backing storage remain finite. This
-interrupt-and-paging scheme is a design option, not a current Cabinet feature.
+that extends as needed; physical memory and backing storage remain finite.
+This is now built: device 54 in [turing.ts](src/plugins/turing.ts) either pages
+for itself into a run-length-encoded spill, or faults to the host, and
+[utm-driver.s](tapes/turing/utm-driver.s) is a PDP-7 interrupt handler that
+pages by sliding the window pointer. Guard bands and spilling to disk are next
+([TURING-ENGINE.md](TURING-ENGINE.md#paging-an-unbounded-tape)).
 
 Because the tape and transition table are data in core, the host can provide
 the visualization without requiring special display hardware. A software

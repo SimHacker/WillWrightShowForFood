@@ -35,6 +35,9 @@ import {
 	bootForth,
 	setForthColumns,
 	forthDemo,
+	ultimateDemo,
+	UltimateMachine,
+	UM_DEFAULT_TIMING,
 	spokenNumbers
 } from '@wwsff/cabinet';
 import { loadSymelec } from './symelec-boot.js';
@@ -93,9 +96,21 @@ const FORTH_KERNELS = {
 	'kernel-names-full.s': () => import('../../../../packages/cabinet/tapes/pdp7forth/kernel-names-full.s?raw')
 };
 
-function forthProgram({ id, label, kernelFile }) {
+/**
+ * Forth sources a menu entry can add after the rings, compiled in this order.
+ * pixie: false leaves PIXIE's rings out (pixie.s, rsppix.s, pixie.fs, the
+ * RINGS panel): 8K holds the rings or a big extra like ultimate.fs, not both.
+ */
+const FORTH_EXTRAS = {
+	'code.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/code.fs?raw'),
+	'interrupt.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/interrupt.fs?raw'),
+	'tags.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/tags.fs?raw'),
+	'ultimate.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/ultimate.fs?raw')
+};
+
+function forthProgram({ id, label, kernelFile, extras = [], pixie: withRings = true, ...more }) {
 	const built = { kernel: null, image: null };
-	return {
+	const program = {
 		id,
 		label,
 		listing: { user: 'wmb,claude' },
@@ -111,7 +126,9 @@ function forthProgram({ id, label, kernelFile }) {
 		tty: true,
 		// RINGS panel: RSPPIX's bounds and front door, as for SYMELEC (pixie.s).
 		// LOAD puts a ring file in RSPPIX's area: its free list, reserve and permanent names.
-		rings: { beg: 'RBEG', end: 'REND', roots: 'RSAVINS', implant: { free: 'RFREE', endres: 'RENDRES', bot: 'RBOT', top: 'RTOP' } },
+		rings: withRings
+			? { beg: 'RBEG', end: 'REND', roots: 'RSAVINS', implant: { free: 'RFREE', endres: 'RENDRES', bot: 'RBOT', top: 'RTOP' } }
+			: null,
 		// 8K is all of core the PDP-7 addresses without the memory extension, which the cabinet lacks.
 		coreWords: 8192,
 		demo: (h) => forthDemo(h),
@@ -125,22 +142,24 @@ function forthProgram({ id, label, kernelFile }) {
 		source: async () => (built.kernel ? sourceFromAsm(built.kernel, { id: 'as7', label: kernelFile, kind: 'source', dialect: 'as7' }) : null),
 		async load() {
 			if (built.image) return;
-			const [sop, kernel, end, prelude, does, turtle, glue, rsppix, pixie] = await Promise.all([
+			const [sop, kernel, end, prelude, does, turtle, glue, rsppix, pixie, ...added] = await Promise.all([
 				import('../../../../packages/cabinet/tapes/pdp7unix/sop.s?raw'),
 				FORTH_KERNELS[kernelFile](),
 				import('../../../../packages/cabinet/tapes/pdp7forth/end.s?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/prelude.fs?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/does.fs?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/turtle.fs?raw'),
-				import('../../../../packages/cabinet/tapes/pdp7forth/pixie.s?raw'),
-				import('../../../../packages/cabinet/tapes/pdp7forth/rsppix.s?raw'),
-				import('../../../../packages/cabinet/tapes/pdp7forth/pixie.fs?raw')
+				withRings ? import('../../../../packages/cabinet/tapes/pdp7forth/pixie.s?raw') : null,
+				withRings ? import('../../../../packages/cabinet/tapes/pdp7forth/rsppix.s?raw') : null,
+				withRings ? import('../../../../packages/cabinet/tapes/pdp7forth/pixie.fs?raw') : null,
+				...extras.map((f) => FORTH_EXTRAS[f]())
 			]);
 			// Mitch's build, in the page: as7 sop.s kernel.s end.s, with PIXIE rings (pixie.s, rsppix.s)
 			// before end.s, then the prelude, CREATE DOES>, the turtle and the rings compiled on the machine.
-			const rings = { glue: glue.default, rsppix: rsppix.default };
+			const rings = withRings ? { glue: glue.default, rsppix: rsppix.default } : undefined;
 			built.kernel = assembleForthKernel({ sop: sop.default, kernel: kernel.default, end: end.default, kernelName: kernelFile, pixie: rings });
-			built.image = compileForth({ kernel: built.kernel, sources: [prelude.default, does.default, turtle.default, pixie.default] });
+			const ringWords = withRings ? [pixie.default] : [];
+			built.image = compileForth({ kernel: built.kernel, sources: [prelude.default, does.default, turtle.default, ...ringWords, ...added.map((m) => m.default)] });
 		},
 		boot({ cpu }) {
 			bootForth(cpu, built.image);
@@ -149,6 +168,7 @@ function forthProgram({ id, label, kernelFile }) {
 			return '';
 		}
 	};
+	return Object.assign(program, more);
 }
 
 /**
@@ -165,6 +185,8 @@ function forthProgram({ id, label, kernelFile }) {
  * dialect }, and the memory panel offers a choice between them.
  * hint(hover, segments) names what the pointer rests on, { title, text } or
  * null; the applet shows the machine's own view of the stroke either way.
+ * A stroke the program tagged with DTG (TAGS-AND-PIES.md) is captioned with
+ * its tag's title first, with no hint needed.
  * halt says what a HLT means without touching the program: restart is where
  * play-again starts, explain(cpu) reads core into { title, text, score },
  * score a key of scores, the tally kept per program. Any other program gets
@@ -350,6 +372,26 @@ export const PROGRAMS = [
 		}
 	},
 	forthProgram({ id: 'forth', label: 'FORTH + TURTLE (2026)', kernelFile: 'kernel-names-full.s' }),
+	forthProgram({
+		id: 'ultimate',
+		label: 'ULTIMATE MACHINE (2026)',
+		kernelFile: 'kernel-names-full.s',
+		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'ultimate.fs'],
+		pixie: false,
+		title: "Minsky's Ultimate Machine, the box whose only function is to switch itself off: device 56, drawn on the 340 by Forth. Type ULTIMATE, then click the switch.",
+		help: {
+			text: 'Type ULTIMATE and press Return, then click the switch: the lid opens and the hand switches it off. Any key stops ULTIMATE. Slow the reach: 8000 PH-REACH UM-TIME! (units of 64 cycles). UM-PRESSES . counts its wins.',
+			links: [
+				{ label: 'ultimate.fs', href: `${CABINET}/tapes/pdp7forth/ultimate.fs` },
+				{ label: 'the device', href: `${CABINET}/TURING-ENGINE.md#running-it-ultimate-machine-on-the-menu` }
+			]
+		},
+		pen: true,
+		demo: (h) => ultimateDemo(h),
+		demoTitle: 'Reboot, type ULTIMATE, and touch the switch with the light pen',
+		// Twice the device's own timing: about 3.6 seconds a round at 1x, a dozen frames for the reach.
+		peripherals: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 2])))]
+	}),
 	{
 		id: 'unix',
 		label: 'UNIX v0 (1969)',

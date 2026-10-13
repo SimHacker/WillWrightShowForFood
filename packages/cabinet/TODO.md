@@ -107,10 +107,17 @@ to 32K.
   a fast, configurable rate, waiting for ` ok` per line, errors returned. The live-coding path into
   a running Forth without rebuilding the image ([TINY-TITAN.md](TINY-TITAN.md)).
 - **Power switches on every device**, and **Minsky's Ultimate Machine** as the first device that
-  uses one: switch it on and it switches itself off. `power` on `Device`; the `Cabinet` skips
-  unpowered devices' ticks, interrupts and IOTs; power-on resets
-  ([ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md#cpus-are-devices),
-  [PORTRAIT.md](PORTRAIT.md#minskys-ultimate-machine)).
+  uses one: switch it on and it switches itself off. **Done:** `power` and `offIot` on `Device`;
+  the `Cabinet` skips unpowered devices' ticks, interrupts and IOTs; `setPower` resets on the way
+  on; [ultimate.ts](src/plugins/ultimate.ts), device 56
+  ([TURING-ENGINE.md](TURING-ENGINE.md#the-ultimate-machine),
+  [PORTRAIT.md](PORTRAIT.md#minskys-ultimate-machine)). Still to do: the front panel.
+- **The Turing engine.** **Done:** a co-processor in shared core, device 54, with host or engine
+  paging of an unbounded tape; `TuringCpu` as a stand-alone cabinet; TM-Forth; Minsky's UTM and
+  all of Cherniak's PCOMP machines; a PDP-7 paging driver
+  ([TURING-ENGINE.md](TURING-ENGINE.md)). Still to do: spill the tape to RB09, DECtape and paper
+  tape from the driver; guard bands; the TM vocabulary in the PDP-7 Forth; the glass-case panel
+  ([PORTRAIT.md](PORTRAIT.md#turing-machine-and-minskys-universal-machine)).
 - **Several processors per cabinet.** CPUs are devices: the 340 already is a processor running
   off shared core. Add a `Processor` interface shared by the PDP-7 and the 340, and a list of
   processors the `Cabinet` ticks beside its devices, so CAM-6, a Turing engine, raster layers and

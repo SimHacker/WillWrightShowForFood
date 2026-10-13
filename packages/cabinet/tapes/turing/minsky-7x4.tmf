@@ -1,0 +1,96 @@
+\ Minsky's 7-state, 4-symbol universal Turing machine (AIM-33, 1962), in TM-Forth.
+\ characters/marvin-minsky/sources/teco-utm/README.md has the TECO original and the analysis;
+\ TURING-ENGINE.md has the language.
+\
+\ The same machine twice: as Minsky's TECO rows, and as Forth rules. The tests check that the
+\ two tables are identical, and that it halts after 1870 transitions with this tape.
+\
+\ Alphabet: Minsky's 0 1 y A (the paper's 0 1 X B). The blank must come first, and here it is 0.
+\ Codes are Type 342 characters, so the PDP-7 tape window is a 340 CHAR-mode display list:
+\ 0 and 1 draw as themselves, y as Y (a six-bit cell has no lowercase), A as A.
+
+tm: minsky-7x4
+note" Minsky's 7-state 4-symbol UTM, AIM-33. TECO rows, as recovered."
+symbols: 0 1 y A ;
+octal codes: 60 61 31 1 ; decimal
+\       y      0      1      A
+row: 1  y0L1   00L1   11L2   A1L1
+row: 2  y0L1   0yR2   1AR2   AyR6
+row: 3  yyL3   00L0   1AL3   A1L4
+row: 4  yyL4   0yR5   11L7   A1L4
+row: 5  yyR5   0yL3   1AR5   A1R5
+row: 6  yyR6   0AL3   1AR6   A1R6
+row: 7  y0R7   0yR6   11R7   A0R2
+q1 start
+\ The rules tape: Minsky's example, the head on the first y.
+tape: 110101110000010011011^yyAyyAyy
+end-tm
+
+tm: minsky-7x4-rules
+note" The same machine as Forth rules: ( sym -- ) bodies, defaults keep the cell, stay, same state."
+symbols: 0 1 y A ;
+octal codes: 60 61 31 1 ; decimal
+states: q1 q2 q3 q4 q5 q6 q7 ;
+state: q1 case
+	y of 0 write left endof
+	1 of left q2 goto endof
+	A of 1 write left endof
+	left endcase ;
+state: q2 case
+	y of 0 write left q1 goto endof
+	1 of A write right endof
+	A of y write right q6 goto endof
+	y write right endcase ;
+state: q3 case
+	0 of left halt goto endof
+	1 of A write left endof
+	A of 1 write left q4 goto endof
+	left endcase ;
+state: q4 case
+	0 of y write right q5 goto endof
+	1 of left q7 goto endof
+	A of 1 write left endof
+	left endcase ;
+state: q5 case
+	0 of y write left q3 goto endof
+	1 of A write right endof
+	A of 1 write right endof
+	right endcase ;
+state: q6 case
+	0 of A write left q3 goto endof
+	1 of A write right endof
+	A of 1 write right endof
+	right endcase ;
+state: q7 case
+	y of 0 write right endof
+	0 of y write right q6 goto endof
+	A of 0 write right q2 goto endof
+	right endcase ;
+q1 start
+tape: 110101110000010011011^yyAyyAyy
+end-tm
+
+\ Turing's m-functions: a state with arguments. `seek` moves right until it scans `target`, then
+\ goes to `q`. Each distinct ( target q ) is its own state, made the first time it is asked for.
+
+: seek ( target q sym -- )  rot = if goto else drop right then ;
+
+tm: add-m
+note" Unary add with an m-function: seek the separator, fill it, seek the end, clip one 1."
+symbols: 0 1 ;
+states: fill end clip ;
+state: fill ( sym -- )  drop 1 write right  0 end 2 ['] seek m-state goto ;
+state: end  drop left clip goto ;
+state: clip  drop 0 write halt goto ;
+0 fill 2 ' seek m-state start
+tape: ^1110111
+end-tm
+
+\ The 2-state busy beaver, written as rules.
+tm: bb2
+symbols: 0 1 ;
+states: a b ;
+state: a  0 = if 1 write right else left then b goto ;
+state: b  1 write left 0 = if a else halt then goto ;
+a start
+end-tm

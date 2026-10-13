@@ -15,9 +15,9 @@ export type Hover = {
 	group: Segment[];
 	/** What the group's characters spell, in drawing order; "" if none. */
 	text: string;
-	/** subr if the hit was inside a subroutine or DDS block, otherwise the block entry. */
+	/** The hit's DTG tag record if it has one, else subr inside a subroutine or DDS block, else the block entry. */
 	key: number;
-	keyKind: "subr" | "block";
+	keyKind: "tag" | "subr" | "block";
 	/** Group bounds, 340 grid. */
 	box: { x0: number; y0: number; x1: number; y1: number };
 };
@@ -52,9 +52,14 @@ export function strokeText(segments: readonly Segment[]): string {
 export function hoverAt(segments: readonly Segment[], x: number, y: number, radius = 12): Hover | null {
 	const hit = strokeAt(segments, x, y, radius);
 	if (!hit) return null;
-	const bySubr = hit.subr >= 0;
-	const key = bySubr ? hit.subr : hit.block;
-	const group = segments.filter((s) => s.intensify && (bySubr ? s.subr === key : s.subr < 0 && s.block === key));
+	/* A tag is the program saying what it drew, so it beats the guess from structure. */
+	const keyKind = hit.tag ? "tag" : hit.subr >= 0 ? "subr" : "block";
+	const key = keyKind === "tag" ? hit.tag : keyKind === "subr" ? hit.subr : hit.block;
+	const group = segments.filter(
+		(s) =>
+			s.intensify &&
+			(keyKind === "tag" ? s.tag === key : keyKind === "subr" ? s.subr === key : s.subr < 0 && s.block === key),
+	);
 	const box = { x0: 1023, y0: 1023, x1: 0, y1: 0 };
 	for (const s of group) {
 		box.x0 = Math.min(box.x0, s.x0, s.x1);
@@ -62,5 +67,5 @@ export function hoverAt(segments: readonly Segment[], x: number, y: number, radi
 		box.x1 = Math.max(box.x1, s.x0, s.x1);
 		box.y1 = Math.max(box.y1, s.y0, s.y1);
 	}
-	return { hit, group, text: strokeText(group), key, keyKind: bySubr ? "subr" : "block", box };
+	return { hit, group, text: strokeText(group), key, keyKind, box };
 }

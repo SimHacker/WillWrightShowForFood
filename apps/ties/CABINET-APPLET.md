@@ -16,7 +16,7 @@ app already owns: the fenced YAML applet block.
 ````markdown
 ```yaml cabinet
 machine: pdp7                  # cabinet plugin set
-program: symelec               # first program on the menu: symelec | lp370 | duel | hilo | lander | forth | unix
+program: symelec               # first program on the menu: symelec | lp370 | duel | hilo | lander | forth | ultimate | unix
 boot: idla                     # run until the display starts, then settle
 pens: [pointer]                # reader's pointer joins the quiver
 mode: honest                   # honest | assist (DESIGN.md pen modes)

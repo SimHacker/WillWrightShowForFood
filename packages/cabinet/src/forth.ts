@@ -4,7 +4,7 @@ import { Cabinet } from "./cabinet.js";
 import { PaperTape } from "./plugins/papertape.js";
 import { Pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
-import { type DemoScript, wait } from "./symelec-demo.js";
+import { type DemoHost, type DemoScript, glide, wait } from "./symelec-demo.js";
 
 /**
  * Mitch Bradley's PDP-7 Forth: its kernel, either as `as7` left it (the `addr: word` image and
@@ -173,5 +173,35 @@ export function* forthDemo(h: ForthHost): DemoScript {
 	yield* say("Pen up, step aside, pen down, and draw the star", "CS PU 200 BK 90 LT 200 FD 90 RT PD STAR", 2_500_000);
 	yield* say("Both together, and hide the turtle", "CS FLOWER PU 450 BK PD STAR HT", 4_000_000);
 	yield "Your turn: click the paper and type. WORDS lists every word; FD BK RT LT PU PD CS HOME draw";
+	yield* wait(1_000_000);
+}
+
+/** Where ultimate.fs draws the switch's plate, the one thing on the tube the pen can see. */
+export const ULTIMATE_SWITCH: readonly [number, number] = [400, 420];
+
+/**
+ * ULTIMATE on the 340: start it, touch the switch with the pen, and watch the hand come out.
+ * A touch is held for a few frames, because the plate has to be drawn while the pen looks.
+ */
+export function* ultimateDemo(h: ForthHost & DemoHost): DemoScript {
+	const touch = function* (): DemoScript {
+		yield* glide(h, ULTIMATE_SWITCH[0], ULTIMATE_SWITCH[1]);
+		h.pen.enabled = true;
+		yield 150_000;
+		h.pen.enabled = false;
+	};
+	yield "Forth prints its banner and waits at the teletype";
+	yield* wait(600_000);
+	yield "ULTIMATE draws Minsky's box from device 56's registers";
+	h.type("ULTIMATE\n");
+	yield* wait(1_500_000);
+	yield "Touch the switch with the light pen";
+	yield* touch();
+	yield "The lid opens, the hand comes out, and it switches itself off";
+	yield* wait(4_000_000);
+	yield "Again";
+	yield* touch();
+	yield* wait(4_000_000);
+	yield "Your turn: click the switch. Type any key at the teletype to stop ULTIMATE";
 	yield* wait(1_000_000);
 }

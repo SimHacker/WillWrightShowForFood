@@ -24,6 +24,7 @@
 		Trace,
 		Monitor,
 		hoverAt,
+		readTag,
 		cornerAt,
 		placesIn,
 		cornerLimits,
@@ -730,7 +731,9 @@
 	function machineLines(h) {
 		const s = h.hit;
 		const inside =
-			h.keyKind === 'block'
+			h.keyKind === 'tag'
+				? `tagged by the record at ${where(h.key)} (DTG)`
+				: h.keyKind === 'block'
 				? `in the block entered at ${where(h.key)}`
 				: s.ret >= 0
 					? `in subroutine ${where(h.key)}, returning to ${where(s.ret)}`
@@ -763,7 +766,10 @@
 		}
 		let hint = null;
 		try {
-			hint = program?.hint?.(h, segs) ?? null;
+			/* A DTG tag is the program naming what it drew; it speaks first. */
+			const tag = h.keyKind === 'tag' && cpu ? readTag((a) => cpu.read(a), h.key) : null;
+			if (tag?.title || tag?.url) hint = { title: tag.title || tag.url, text: tag.title ? (tag.url ?? '') : '' };
+			hint ??= program?.hint?.(h, segs) ?? null;
 		} catch (e) {
 			console.error('cabinet hint', e);
 		}

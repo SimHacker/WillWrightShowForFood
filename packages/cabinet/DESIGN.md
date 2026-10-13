@@ -43,6 +43,8 @@ a word is a JS number.
 | 12 | MSF · MRB · MRC · MRS (planned) | **cabinet extension, not 1972**: the pointer as events, x, y and buttons, for programs that drag ([pointer devices](#the-application-layer--packagespixie-separate-module)). |
 | 22–23 | LSF 702201 · LCF 702222 · LRB18 702252 · LLB18!LLAM 702264 · LRB18!LLAM 702276 · LSA 702301 · LKD 702322 · LLB6 702344 · LKE!LLB6 702364 | Titan link |
 | 33 | CAF 703302 | clear all flags |
+| 54 | TMSF 705401 · TMRS 705412 · TMLA 705404 · TMSR 705421 · TMRQ 705432 · TMGO 705424 · TMSS 705441 · TMLM 705442 · TMST 705444 | **cabinet extension, not 1972**: the Turing engine, a co-processor in shared core like the 340 ([TURING-ENGINE.md](TURING-ENGINE.md#iots)). |
+| 56 | UMSF 705601 · UMRC 705612 · UMON 705604 | **cabinet extension, not 1972**: Minsky's Ultimate Machine; answers while off ([TURING-ENGINE.md](TURING-ENGINE.md#the-ultimate-machine)). |
 
 Everything else: no-op (already the backplane default).
 

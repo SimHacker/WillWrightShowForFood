@@ -1,6 +1,10 @@
 # Tags, focus and pies: making the 340's pictures into things you can act on
 
-Status: design, nothing built. Worked out in conversation with Don on 2 October 2026.
+Status: §1 is built (12 October 2026). The 340 has DTG, segments carry a `tag`, hovering a
+tagged stroke captions it with the tag's title (`src/tags.ts`, `readTag`), and
+[tags.fs](tapes/pdp7forth/tags.fs) has `TAG"` and `NOTAG`; `ultimate.fs` tags everything it
+draws. The latch, IDPN pulse 4, focus and the pies (§2 onward) are still design. Worked out
+in conversation with Don on 2 October 2026.
 The gesture details are guesses. This note picks the parts that can be decided now and
 builds the rest as a playground with knobs, so we can find out what feels right by
 trying it rather than by arguing in our heads.
@@ -69,7 +73,26 @@ The 340 never interprets it.
 **URL safety:** only `http:`, `https:` and relative links are followed. `javascript:`,
 `data:` and anything else is refused.
 
+**Built, and a second shape (12 October 2026).** If the first word at the tag address is
+below 128, it is a Forth counted string: the count, then one ASCII character per word,
+which is exactly what `S"` compiles into a definition. So a tag can point straight at a
+string that is already in core and costs nothing more. A record's title pointer is never
+that low: it would be in the PDP-7's own low locations.
+
 ### In Forth
+
+**Built** in [tags.fs](tapes/pdp7forth/tags.fs), not `turtle.fs`, which stays Mitch's:
+
+```forth
+: door  TAG" Front door"  ( draw the door... )  NOTAG ;
+```
+
+`TAG" ccc"` compiles the string inline and, when run, lays down the DTG (an escape from
+vector mode, a PARAM word for SUBR mode, then the DTG back to vectors) pointing at its
+count. `TAGGED ( c-addr u -- )` does the same for a string from anywhere that stays put,
+`TAG-AT ( addr -- )` for any address such as a full record, and `NOTAG` is `0 TAG-AT`.
+
+The words below, for full records with links and ids, are not built yet.
 
 Forth cells are 18 bits, so an id is two numbers on the stack, low then high. These are
 new words in `turtle.fs`, so no existing program changes:
@@ -274,7 +297,7 @@ The pieces stay separate so each can be swapped while trying things:
 | what | where |
 |---|---|
 | DTG, tag records, latch, IDPN pulse 4, tags in frames | `packages/cabinet/src/plugins/type340.ts`, tests in `src/cabinet.test.ts` |
-| Forth `title"`, `id"`, `tag`, `untag`, `hit` | `packages/cabinet/tapes/pdp7forth/turtle.fs` |
+| Forth `TAG"`, `TAGGED`, `TAG-AT`, `NOTAG` (built); `title"`, `id"`, `hit` (not yet) | `packages/cabinet/tapes/pdp7forth/tags.fs` |
 | gesture recogniser, advertiser registry | `packages/cabinet`, framework-free |
 | focus, tooltip, announcer, playground panel, first pie | `apps/ties/src/lib/CabinetApplet.svelte` and new components beside it |
 | the real pie, cursor layer, tabs, windows, pushpins | MicropolisCore, then shared |

@@ -35,7 +35,9 @@ export const MODE = {
 } as const;
 export type Mode = (typeof MODE)[keyof typeof MODE];
 
-/* Type 347 jump types (bits 0-1 of a SUBR-mode word). */
+/* Type 347 jump types (bits 0-1 of a SUBR-mode word). 00 was never defined
+   by DEC; the cabinet makes it DTG, display tag (TAGS-AND-PIES.md). */
+const DTG = 0;
 const DJP = 2;
 const DJS = 3;
 const DDS = 1;
@@ -83,6 +85,8 @@ export type Segment = {
 	/** The POINT words that last set the beam's x and y absolutely, -1 if none since IDLA: what places this stroke. */
 	xAt: number;
 	yAt: number;
+	/** The DTG tag in force when this was drawn: a record address, 0 if untagged. See readTag. */
+	tag: number;
 };
 
 type PendingVector = {
@@ -164,6 +168,10 @@ export class Type340 implements Device {
 	/* Type 347 */
 	asr = 0;
 	saveFF = false;
+	/** DTG: the tag record address everything drawn now carries, 0 = none. */
+	tag = 0;
+	/** The caller's tag, saved by DJS and restored by its return. */
+	private savedTag = 0;
 
 	/** No cycling until the program says IDLA. SIMH gets this from sim_activate. */
 	enabled = false;
@@ -245,6 +253,8 @@ export class Type340 implements Device {
 		this.subr = -1;
 		this.ddsBlock = false;
 		this.pending = null;
+		this.tag = 0;
+		this.savedTag = 0;
 	}
 
 	iot(req: Iot): IotReply {
@@ -270,6 +280,7 @@ export class Type340 implements Device {
 					   STOPPED|STOP_INT and would wedge after a pen hit or edge
 					   violation; the listing (5406, 5602, 5616) says clear all. */
 					if ((req.pulse & 0o10) === 0) this.setDac(ac & ADDR);
+					this.tag = 0;
 					this.startAddr = this.dac;
 					this.pending = null;
 					this.status = 0;
@@ -444,8 +455,15 @@ export class Type340 implements Device {
 				this.mode = GETFIELD(inst, 2, 4) as Mode;
 				const target = GETFIELD(inst, 5, 17);
 				switch (GETFIELD(inst, 0, 1)) {
+					case DTG:
+						/* Jump type 00, never defined by DEC: tag what follows with
+						   the record at target (0 = untagged). The 340 never reads
+						   the record; the UI does (readTag). TAGS-AND-PIES.md §1. */
+						this.tag = target;
+						break;
 					case DJS:
 						this.asr = this.dac;
+						this.savedTag = this.tag;
 						this.saveFF = true;
 						this.subr = target;
 						this.dac = target & ADDR;
@@ -481,6 +499,7 @@ export class Type340 implements Device {
 			this.mode = MODE.PARAM;
 			if (this.saveFF) {
 				this.dac = this.asr;
+				this.tag = this.savedTag;
 				this.saveFF = false;
 				this.subr = -1;
 			} else if (this.ddsBlock && inChars) {
@@ -686,6 +705,7 @@ export class Type340 implements Device {
 			scale: this.scale,
 			xAt: this.xAt,
 			yAt: this.yAt,
+			tag: this.tag,
 		};
 		this.segments.push(seg);
 		this.onSegment?.(seg);

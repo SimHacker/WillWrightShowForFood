@@ -1,0 +1,252 @@
+\ Christopher Cherniak's PCOMP course disk (UMD Philosophy, TM*, v2.0 1990), in TM-Forth.
+\ The disk, verbatim: characters/christopher-cherniak/sources/pcomp/disk/*.TM, *.INP
+\ The YAML conversion and the verified numbers: packages/turing/PCOMP.md
+\
+\ Two ways in. Most machines are rewritten as Forth rules, state numbers in Cherniak's order so
+\ the tests can compare each one, door for door, with the table compiled from his own file. The
+\ busy beavers stay data: TM* rows pasted verbatim between tm*-table and end-table.
+\
+\ TM*'s `?` maps onto Forth directly. As input, "any symbol not listed in this state" is the
+\ default branch of `case`; as output, "leave the cell" is what a rule does when it does not
+\ `write`. A symbol with no row is `undefined`: TM* says ERROR, the engine stops with UNDEF.
+\
+\ Comments quoted from the disk are Cherniak's.
+
+\ ---------------------------------------------------------------- ADD.TM
+tm: pcomp-add
+note" ADD.TM: add two positive unary numbers separated by a 0, on an otherwise all zero tape."
+symbols: 0 1 ;
+states: find-1 find-0 ;
+state: find-1  0 = if right else 0 write right find-0 goto then ;      \ clear the leftmost 1
+state: find-0  0 = if 1 write left halt goto else right then ;         \ fill the separating 0
+find-1 start
+tape: ^011101110        \ UTM.HLP's adding example: ...000^011101110
+end-tm
+
+\ ---------------------------------------------------------------- BUSY2.TM
+tm: pcomp-busy2
+note" BUSY2.TM: a 2-state Busy-Beaver takes 6 steps to print 4 ones."
+symbols: 0 1 ;
+tm*-table
+  1 0   1 R  2
+  1 1   1 L  2
+  2 0   1 L  1
+  2 1   1 L  0
+end-table
+q1 start
+end-tm
+
+\ ---------------------------------------------------------------- BUSY5.TM
+tm: pcomp-busy5
+note" BUSY5.TM: It will take 2,133,492 steps to print 1915 ones."
+symbols: 0 1 ;
+tm*-table
+  1 0   1 R  2
+  1 1   1 L  3
+  2 0   0 L  1
+  2 1   0 L  4
+  3 0   1 L  1
+  3 1   1 L  0
+  4 0   1 L  2
+  4 1   1 R  5
+  5 0   0 R  4
+  5 1   0 R  2
+end-table
+q1 start
+end-tm
+
+\ ---------------------------------------------------------------- BB5.TM
+tm: pcomp-bb5
+note" BB5.TM: Marxen's machine, via Brady and Dewdney: 11,798,826 steps to print out 4,098 ones."
+note" Started on TM*'s 10,000 square tape at around -2,000; from 0 it runs off the right end."
+symbols: 0 1 ;
+tm*-table
+  1 0   1 L  2 -   This is a contender for the title of 5-state
+  1 1   1 L  1 -   Busy-Beaver, as of August 1989.
+  2 0   1 R  3
+  2 1   1 R  2
+  3 0   1 L  1
+  3 1   1 R  4
+  4 0   1 L  1
+  4 1   1 R  5
+  5 0   1 R  0
+  5 1   0 R  3
+end-table
+q1 start
+end-tm
+
+\ ---------------------------------------------------------------- BCOUNT.TM
+tm: pcomp-bcount
+note" BCOUNT.TM: a binary counter. Counts forever."
+symbols: 0 1 ;
+states: find-end carry ;
+state: find-end  0 = if right else left carry goto then ;   \ keep the end-marker, count
+state: carry  0 = if 1 write right find-end goto else 0 write left then ;
+find-end start
+tape: 000^010000000000000000000000000000000000000000000000000000000000000000000000000   \ BINARY.INP
+end-tm
+
+\ ---------------------------------------------------------------- EQUALS.TM
+\ Halts on a 0 if two unary numbers are equal, on a 1 if not. Head starts on the separator.
+tm: pcomp-equals
+note" EQUALS.TM (Program: COMPARE.TM): halts on a 0 when equal, on a 1 when not."
+symbols: 0 1 ;
+states: scan-left erased-left scan-right erased-right back-left out-right out-left ;
+state: scan-left     0 = if left  else 0 write left  erased-left goto then ;
+state: erased-left   0 = if right out-right goto else right scan-right goto then ;
+state: scan-right    0 = if right else 0 write right erased-right goto then ;
+state: erased-right  0 = if left  out-left goto else left back-left goto then ;
+state: back-left     0 = if left  scan-left goto else stay then ;    \ (ignore this)
+state: out-right     0 = if right else 0 write right halt goto then ;
+state: out-left      0 = if left  else 0 write left  halt goto then ; \ the bug: steps off the 1
+scan-left start
+tape: 111^0111
+end-tm
+
+tm: pcomp-equals-patched
+note" EQUALS.TM with state 7 patched to halt on the extra 1: 7 1 -> 1 N 0."
+symbols: 0 1 ;
+states: scan-left erased-left scan-right erased-right back-left out-right out-left ;
+state: scan-left     0 = if left  else 0 write left  erased-left goto then ;
+state: erased-left   0 = if right out-right goto else right scan-right goto then ;
+state: scan-right    0 = if right else 0 write right erased-right goto then ;
+state: erased-right  0 = if left  out-left goto else left back-left goto then ;
+state: back-left     0 = if left  scan-left goto else stay then ;
+state: out-right     0 = if right else 0 write right halt goto then ;
+state: out-left      0 = if left  else stay halt goto then ;
+scan-left start
+tape: 111^011
+end-tm
+
+\ ---------------------------------------------------------------- SQUARE.TM
+tm: pcomp-square
+note" SQUARE.TM: N contiguous 1's in, N-square contiguous 1's out. ...000^111000... -> 9 ones."
+symbols: 0 1 S X Y A C ;
+states: setup mark to-end back append next-round restore clean skip-zeros ones ;
+\ INITIAL SETUP: an S left of the ones, the first count marked X.
+state: setup    1 = if left else S write right mark goto then ;
+state: mark     1 = if X write right to-end goto else undefined then ;
+state: to-end   1 = if right else left back goto then ;
+\ Append a copy of the original N ones to the right, as A's.
+state: back case
+	1 of C write right append goto endof
+	X of Y write right append goto endof
+	S of right next-round goto endof
+	0 of undefined endof
+	left endcase ;                       \ Y A C: keep going left
+state: append case
+	A of right endof
+	Y of right endof
+	C of right endof
+	A write left back goto endcase ;
+\ Do the above copy N number of times.
+state: next-round case
+	Y of X write right endof
+	C of X write right restore goto endof
+	A of left clean goto endof
+	undefined endcase ;
+state: restore case
+	C of 1 write right endof
+	A of left back goto endof
+	undefined endcase ;
+\ Clean up so that only the N-square number of ones remain on the tape.
+state: clean case
+	Y of 0 write left endof
+	X of 0 write left endof
+	S of 0 write right skip-zeros goto endof
+	undefined endcase ;
+state: skip-zeros case
+	0 of right endof
+	A of 1 write right ones goto endof
+	undefined endcase ;
+state: ones  A = if 1 write right else stay halt goto then ;
+setup start
+tape: ^111
+end-tm
+
+\ ---------------------------------------------------------------- UTM.TM
+\ Cherniak's universal machine: the pseudo-TM's quintuples sit between Y's as X-separated
+\ CST INP NST OUT MOV fields in binary; M marks the pseudo-head. Each state is mostly "carry on
+\ in this direction over anything else", which is the default branch.
+tm: pcomp-utm
+note" UTM.TM: runs a pseudo-TM described on its own tape (UTMADD, UTMBUSY, UTMBIN.INP)."
+symbols: 0 1 Y X M A B S ;
+states: q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 q13 q14 q15 q16 q17 q18 q19 q20 q21 q22 q23 ;
+state: q1 case
+	Y of right q2 goto endof
+	0 of A write left endof
+	1 of B write left endof
+	left endcase ;
+state: q2 case
+	X of right q7 goto endof
+	A of 0 write right q3 goto endof
+	B of 1 write right q4 goto endof
+	right endcase ;
+state: q3 case
+	0 of A write left q5 goto endof
+	1 of B write right q6 goto endof
+	right endcase ;
+state: q4 case
+	0 of A write right q6 goto endof
+	1 of B write left q5 goto endof
+	right endcase ;
+state: q5   Y = if right q2 goto else left then ;
+state: q6 case
+	X of left q1 goto endof
+	Y of right halt goto endof
+	right endcase ;
+state: q7 case
+	0 of A write left q8 goto endof
+	1 of B write left q9 goto endof
+	right endcase ;
+state: q8   Y = if right q11 goto else left then ;
+state: q9   Y = if right q10 goto else left then ;
+state: q10 case
+	0 of B write right q12 goto endof
+	1 of B write right q12 goto endof
+	X of left q13 goto endof
+	right endcase ;
+state: q11 case
+	0 of A write right q12 goto endof
+	1 of A write right q12 goto endof
+	X of left q14 goto endof
+	right endcase ;
+state: q12  X = if right q7 goto else right then ;
+state: q13  M = if B write right q15 goto else left then ;
+state: q14  M = if A write right q15 goto else left then ;
+state: q15 case
+	A of 0 write right endof
+	B of 1 write right endof
+	X of right q16 goto endof
+	right endcase ;
+state: q16 case
+	0 of left q17 goto endof
+	1 of left q17 goto endof
+	right endcase ;
+state: q17 case
+	A of 0 write left endof
+	B of 1 write left endof
+	0 of S write left q18 goto endof
+	1 of S write left q19 goto endof
+	left endcase ;
+state: q18 case
+	A of 0 write left q21 goto endof
+	B of 0 write right q20 goto endof
+	left endcase ;
+state: q19 case
+	A of 1 write left q21 goto endof
+	B of 1 write right q20 goto endof
+	left endcase ;
+state: q20 case
+	0 of M write right q22 goto endof
+	1 of M write right q23 goto endof
+	right endcase ;
+state: q21 case
+	0 of M write right q22 goto endof
+	1 of M write right q23 goto endof
+	left endcase ;
+state: q22  S = if A write left q1 goto else right then ;
+state: q23  S = if B write left q1 goto else right then ;
+q1 start
+tape: 0000M000Y000^X0000111X0010110X0100010X0111010X1000000Y0   \ UTMBUSY.INP: BUSY2 as a pseudo-TM
+end-tm

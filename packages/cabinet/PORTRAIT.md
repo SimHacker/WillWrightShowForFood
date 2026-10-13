@@ -509,6 +509,12 @@ smaller tape inside the window: the machine being simulated, encoded on the big
 tape, with the decoded state shown on its own little drum. Two levels of machine,
 both visible. A brass plate on it: *7 states, 4 symbols, 1962*.
 
+The machine behind the glass is the Turing engine
+([TURING-ENGINE.md](TURING-ENGINE.md)): `TuringCpu` when the case is the whole
+cabinet, device 54 when it sits beside a PDP-7. The panel binds to its control block in core:
+the drum to STATE, the head carriage to HEAD and ORIGIN, the pegboard to the table entry at
+`TABLE + state × NSYM + symbol`.
+
 ### Minsky's Ultimate Machine
 
 Marvin Minsky's 1952 design, which Claude Shannon built at Bell Labs: a plain wooden box with one
@@ -534,7 +540,9 @@ the box from wherever it was, and the lid closes. Either way the machine ends wh
 can have, so it's also the test of the power-switch contract below, and of the scene's hands (the
 animation is a device event like any other). It belongs beside the repo's
 [Ultimate Machine bot](../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/CHARACTER.yml),
-the gong that switches off the stream.
+the gong that switches off the stream. The device is
+[ultimate.ts](src/plugins/ultimate.ts); `pose()` drives this panel
+([TURING-ENGINE.md](TURING-ENGINE.md#the-ultimate-machine)).
 
 ### Movable Feast Machine: tiles, not a cabinet
 

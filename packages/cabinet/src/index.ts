@@ -8,6 +8,8 @@ export { Monitor } from "./monitor.js";
 export type { Memory, MonitorOpts, SymbolEntry, Where } from "./monitor.js";
 export { hoverAt, strokeAt, strokeText } from "./hover.js";
 export type { Hover } from "./hover.js";
+export { readTag, safeTagUrl } from "./tags.js";
+export type { TagInfo } from "./tags.js";
 export {
 	Type340,
 	charText,
@@ -36,7 +38,7 @@ export { Rb09, parseRbImage, rbImageBytes, RB_SIZE } from "./plugins/rb09.js";
 export type { Rb09Opts } from "./plugins/rb09.js";
 export { bootUnixV0, unixKey, unixEcho, unixDemo, UNIXV0_BOOT_ORIGIN } from "./unixv0.js";
 export type { UnixV0Opts, UnixHost } from "./unixv0.js";
-export { compileForth, bootForth, forthDemo, parseA7out, parseAs7Labels, setForthColumns, assembleForthKernel, rsppixForForth } from "./forth.js";
+export { compileForth, bootForth, forthDemo, ultimateDemo, ULTIMATE_SWITCH, parseA7out, parseAs7Labels, setForthColumns, assembleForthKernel, rsppixForForth } from "./forth.js";
 export type { ForthTapes, ForthImage, ForthHost } from "./forth.js";
 export { spokenNumbers } from "./spoken.js";
 export { bootDuel, duelResult, DUEL_HIT, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES, type DuelResult } from "./duel.js";
@@ -75,3 +77,45 @@ export { Clock } from "./plugins/clock.js";
 export type { ClockOpts } from "./plugins/clock.js";
 export { TinyTitan, EchoPort, BlockletHost } from "./plugins/tiny-titan.js";
 export type { TitanPort, TinyTitanOpts } from "./plugins/tiny-titan.js";
+export { UltimateMachine, UM_MAX, UM_TICK, UM_PHASE, UM_PHASES, UM_DEFAULT_TIMING } from "./plugins/ultimate.js";
+export type { UltimateOpts, UltimatePhase, UltimatePose, UltimateTiming } from "./plugins/ultimate.js";
+export {
+	MOVE,
+	PDP7_TM_SHAPE,
+	RleTape,
+	TCB,
+	TM_FAULT,
+	TM_FLAGS,
+	TM_HALT,
+	TM_LEFT,
+	TM_MODE_FORGET,
+	TM_MODE_HOST,
+	TM_RUN,
+	TM_STEP,
+	TM_UNDEF,
+	TuringCpu,
+	TuringDevice,
+	TuringEngine,
+} from "./plugins/turing.js";
+export type { MemoryPort, StopReason, TmShape, TuringCpuOpts, TuringDeviceOpts, TuringEngineOpts } from "./plugins/turing.js";
+export {
+	decodeEntry,
+	disasmForth,
+	disasmTeco,
+	disasmTmStar,
+	encodeEntry,
+	layoutTm,
+	packCells,
+	parseTapeText,
+	parseTmStarFile,
+	parseTmStarTape,
+	qbits,
+	runTm,
+	tapeText,
+	tmDiff,
+	transitions,
+	unpackCells,
+} from "./tm.js";
+export type { TmLayout, TmLayoutOpts, TmMove, TmProgram, TmRunOpts, TmRunResult, TmStarFile, TmTape, TmTransition } from "./tm.js";
+export { compileTm, compileTmForth, tmStarSource, TmForthError } from "./tmforth.js";
+export type { TmForthOpts } from "./tmforth.js";

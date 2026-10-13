@@ -32,6 +32,18 @@ How the threading works, and what to call it:
 - `pixie.s`, `rsppix.s`, `pixie.fs`: PIXIE rings. `rsppix.s` is RSPPIX from the 1972 listing,
   generated and not edited; `pixie.s` gives it SYMELEC's variables and a Forth word per routine;
   `pixie.fs` is the layer you type at. See [FORTH-RINGS.md](../../FORTH-RINGS.md).
+- `code.fs`: a small PDP-7 assembler in Forth (`lac,` `dac,` `jmp,` `ind` …), `CODE`/`END-CODE`,
+  and `iot:`, which defines device IOTs as Forth words.
+- `interrupt.fs`: interrupt handlers written in Forth. The ISR at location 1 patches NEXT, so the
+  handler runs at the next word boundary, and `(rti)` turns interrupts back on.
+- `tags.fs`: `TAG" name"` and `NOTAG`. Everything drawn between them carries a DTG tag that
+  points at the name, and hovering it in the cabinet shows the name. See
+  [TAGS-AND-PIES.md](../../TAGS-AND-PIES.md).
+- `ultimate.fs`: a Type 340 view of Minsky's Ultimate Machine, drawn from the device's registers.
+  You turn the switch on with the light pen, and the hand comes out and turns it off. `PH-MAX` and
+  related constants give the range of each register. Every part is tagged, the lamps are captioned
+  with their phases in 342 text, and ON or OFF is written under the switch. `ULTIMATE` runs the
+  view until you press a key.
 - `VARIANTS.yml`: what each copy differs in, and what it must keep identical.
 - `scheme.fs`: a local CPS arithmetic S-expression experiment, compiled after the upstream sources
   in the Cabinet tests. Nested `+` and `*` over single-digit integers pass intermediate values
