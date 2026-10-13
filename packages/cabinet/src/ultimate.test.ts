@@ -357,7 +357,7 @@ test("forth: every part is tagged with its name, the lamps are captioned, and ON
 	assert.equal(spelled("RETURN"), "RETURN", "the RETURN lamp's caption is drawn in 342 text, under its tag");
 	assert.equal(spelled("The switch: tap it with the pen"), "OFF");
 	const returnLamp = m.frame().filter((s) => readTag(read, s.tag)?.title === "RETURN" && s.ch < 0);
-	assert.ok(returnLamp.some((s) => near(s, 5 * 64 + 312, 200)), "the lamp square carries the tag too");
+	assert.ok(returnLamp.some((s) => near(s, 5 * 88 + 192, 200)), "the lamp square carries the tag too");
 	const untagged = m.frame().filter((s) => s.tag === 0);
 	assert.equal(untagged.length, 0, "nothing on the tube is anonymous");
 

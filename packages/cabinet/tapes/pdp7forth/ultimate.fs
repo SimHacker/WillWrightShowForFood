@@ -95,10 +95,10 @@ variable tw   variable tn
 : lp-off ( -- ) 131072 dl,  36864 dl, ;
 
 \ What the registers say, read once a frame.
-variable ph   variable arm   variable fx   variable fy
+variable ph   variable arm   variable fx   variable fy   variable on
 : of-arm ( n -- n*arm/um-max ) arm @ um-max */ ;
 : read-box ( -- )
-  um-phase ph !  um-arm arm !
+  um-phase ph !  um-arm arm !  um-on? on !
   \ the fingertip: from 575,380 inside the box, up and over in an arc,
   \ to 370,512, where the lever's tip is when it is off
   575 205 of-arm - fx !
@@ -119,7 +119,7 @@ variable ph   variable arm   variable fx   variable fy
 \ The lever leans right, at 430, when on, and left, at 370, when off. On
 \ its way the finger pushes it over: its tip stays left of the finger.
 \ The plate under it is where the pen turns it on and off.
-: tip ( -- x ) um-on? if fx @ 430 min 370 max else 370 then ;
+: tip ( -- x ) on @ if fx @ 430 min 370 max else 370 then ;
 : plate ( -- )
   lp-on  tag" The switch: tap it with the pen"
   380 460 beam  385 470 line  415 470 line  420 460 line   \ the boss
@@ -138,19 +138,19 @@ variable ph   variable arm   variable fx   variable fy
   fx @ 25 + fy @ beam  fx @ fy @ line ;
 
 \ A square per phase, OFF to REST, each tagged and captioned with its
-\ name, above and below by turns so the long ones fit; the current one
-\ crossed out.
+\ name above it; the current one crossed out. 88 apart, centred on the
+\ tube, leaves room for RETURN, 72 wide at 12 a letter.
 : name ( p -- c-addr u )
   dup 0 = if drop s" OFF" exit then   dup 1 = if drop s" WAIT" exit then
   dup 2 = if drop s" OPEN" exit then  dup 3 = if drop s" REACH" exit then
   dup 4 = if drop s" PRESS" exit then
   dup 5 = if drop s" RETURN" exit then
   dup 6 = if drop s" CLOSE" exit then  drop s" REST" ;
-: lamp-x ( p -- x ) 64 * 312 + ;
+: lamp-x ( p -- x ) 88 * 192 + ;
 : lamps ( -- )
   ph-max 1+ 0 do
     i name tagged  i lamp-x 200 24 square
-    i name  i lamp-x 12 +  i 1 and if 180 else 232 then  centred
+    i name  i lamp-x 12 +  232 centred
   loop ;
 : lamp ( -- )
   ph @ name tagged  ph @ lamp-x x0 !
@@ -187,7 +187,7 @@ variable still   variable still-x   variable still-y
 \ ON or OFF under the plate, as the lever says.
 : caption ( -- )
   tag" The switch: tap it with the pen"
-  um-on? if s" ON" else s" OFF" then  400 376 centred ;
+  on @ if s" ON" else s" OFF" then  400 376 centred ;
 : frame ( -- )
   read-box  rewind
   lid lever caption hand lamp
