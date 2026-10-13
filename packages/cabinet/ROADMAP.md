@@ -716,6 +716,15 @@ unchanged, drive an Apple ][ paddle program once the 6502 runs.
   from the CPU registers, and the switches, tape reader and typewriter as hit targets that open
   their panels. It is not in the repo yet. Download the glTF (a Sketchfab login is needed),
   then check it in with its credit beside it before it is used.
+- **The Spacewar! trophy.** [Intergalactic Spacewar Olympics 45th Trophy](https://sketchfab.com/3d-models/intergalactic-spacewar-olympics-45th-trophy-6bf8e590522e49659d40c4d2a52b41ca)
+  by [Hunter Irving](https://sketchfab.com/hunterirving), [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/),
+  credited as "Intergalactic Spacewar Olympics 45th Trophy by Hunter Irving, CC BY 4.0". It is a
+  Type 30 scope on a fluted column, made for 3D printing and given to the winner of the
+  Spacewar! 45th anniversary tournament at Living Computers: Museum + Labs in October 2017. The
+  model has 6.5k triangles. Its round face is the place to show phosphor: the winner's last
+  frame, or a live Spacewar! once the PDP-1 runs. It could also be the prize for a DUEL or
+  Spacewar! tournament in the cabinet (two pads, §14, and the party, §7). It is not in the repo
+  yet. Download it as the PDP-1 above, and check in its credit with it.
 - **Interrupts in Forth.** An assembly thunk at location 1 saves AC, link, MQ and the Forth
   registers (IP at 010, the stack pointers at 011 and 012), points IP at a handler word's body
   and enters `next`; the handler is ordinary Forth ending in a word that restores the registers,
