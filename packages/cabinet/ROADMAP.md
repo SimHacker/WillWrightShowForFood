@@ -704,6 +704,18 @@ unchanged, drive an Apple ][ paddle program once the 6502 runs.
   panel, pokes and the teletype, so every level stays open. After Morgan Dixon and James
   Fogarty's Prefab (2010), which reverse engineered GUIs from their pixels to add behaviour
   without the source; here the program's own buttons are the API.
+- **A 3D PDP-1 for the PDP-1 cabinet.** [PDP-1 Computer](https://sketchfab.com/3d-models/pdp-1-computer-2bf2f166747643eea4a82030b33e461e)
+  by [eastcoastinteractive](https://sketchfab.com/eastcoastinteractive), made for the intro to
+  their Spacewar! mobile game. It has 70k triangles and is licensed
+  [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/), so credit it wherever it is shown,
+  e.g. "PDP-1 Computer by eastcoastinteractive, CC BY 4.0". The model shows the console's lights
+  and switches, the paper tape reader, the Type 30's round scope on the desk, and the
+  typewriter: the units the PDP-1 plugin
+  ([ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md)) would emulate. Use it as the
+  cabinet's front: the live phosphor as the scope face's texture, the console lamps driven
+  from the CPU registers, and the switches, tape reader and typewriter as hit targets that open
+  their panels. It is not in the repo yet. Download the glTF (a Sketchfab login is needed),
+  then check it in with its credit beside it before it is used.
 - **Interrupts in Forth.** An assembly thunk at location 1 saves AC, link, MQ and the Forth
   registers (IP at 010, the stack pointers at 011 and 012), points IP at a handler word's body
   and enters `next`; the handler is ordinary Forth ending in a word that restores the registers,
