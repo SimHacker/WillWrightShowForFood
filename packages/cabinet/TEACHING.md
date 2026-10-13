@@ -130,9 +130,10 @@ sources they compile in and which devices they plug in.
    ├── PDP-7 CPU        Pdp7                                              pdp7.ts
    ├── Type 340         Type340: a display processor fetching from core   type340.ts
    ├── teletype, paper tape reader, clock                                 teletype.ts papertape.ts
-   └── device 54        TuringDevice: a TM processor fetching from core   turing.ts
-   │
- 8K words of 18-bit core, shared by all three processors
+   ├── device 54        TuringDevice: a TM processor fetching from core   turing.ts
+   └── device 56        UltimateMachine: registers and IOTs, no core      ultimate.ts
+   │                    (the ULTIMATE cartridge plugs this one in instead of 54)
+ 8K words of 18-bit core, shared by the PDP-7, the 340 and the Turing engine
    │
  PDP-7 assembly  sop.s + kernel-names-full.s [+ pixie.s + rsppix.s] + end.s
    │             assembled in the page by as7.ts (Ken Thompson's assembler, reimplemented)
@@ -216,6 +217,58 @@ types `TAPE`, and keeps the core when the machine is done reading.
 [`tm340Record`](src/tm340.ts#L89) and [`pdp7TmDeck`](src/tm340.ts#L123) write the Forth records.
 The machines themselves are in [pcomp.tmf](tapes/turing/pcomp.tmf) and
 [minsky-7x4.tmf](tapes/turing/minsky-7x4.tmf).
+
+### The simplest device: device 56, registers and IOTs
+
+The Ultimate Machine is a device with no instruction format, no memory and nothing to fetch
+from core. It has a state machine, a few registers, and IOTs that read them, and it is the
+template for any simple peripheral. The Turing engine adds a program in core to the same
+contract, and the 340 adds a whole display processor.
+
+```text
+ UltimateMachine (ultimate.ts)                 Forth names (ultimate.fs)
+ ─────────────────────────────                 ─────────────────────────
+ lever     on / off   the switch               um-on?  um-on  um-off
+ phase     0..7       OFF WAIT OPEN REACH      um-phase   ph-off .. ph-rest, ph-max
+                      PRESS RETURN CLOSE REST
+ lid       0..1000    shut .. open             um-lid     0..um-max
+ arm       0..1000    inside .. on the switch  um-arm     0..um-max
+ presses   count      times the hand won       um-presses
+ flag, ie             phase changed; interrupt um-changed?  um-ack  um-ie!
+ timing    per phase  how long each one lasts  um-timing!  um-time! ( n phase -- )
+```
+
+One IOT per row, with the bit-060 groups used the same way as the 340's: bit 1 skips, bit 2
+reads into AC, and bit 4 acts.
+
+```text
+ 705601 UMSF  skip if lever on       705612 UMRC  read presses     705604 UMON  lever on
+ 705621 UMSB  skip if busy           705632 UMRP  read phase       705624 UMOF  lever off
+ 705641 UMSI  skip on phase change   705652 UMRL  read lid         705644 UMCF  clear flag
+ 705661 UMLT  load a timing          705672 UMRA  read arm         705664 UMIE  interrupt enable
+```
+
+Every layer of it fits on one screen:
+
+- **The device** is [`UltimateMachine`](src/plugins/ultimate.ts#L86). Its [header
+  comment](src/plugins/ultimate.ts#L3) is the data sheet. [`tick`](src/plugins/ultimate.ts#L192)
+  steps the phases, and [`iot`](src/plugins/ultimate.ts#L203) is a four-way switch on those bit
+  groups. Its [default timing](src/plugins/ultimate.ts#L56) is in backplane steps.
+- **The Forth device driver** is [a dozen `iot-…` lines](tapes/pdp7forth/ultimate.fs#L22),
+  plus [constants for the register ranges](tapes/pdp7forth/ultimate.fs#L47) (`um-max`,
+  `ph-max`), so the drawing code scales positions instead of hard-coding them.
+- **The view** reads `um-lid`, `um-arm` and `um-phase` each frame and draws the lid, the arm and
+  the lamps from them. The device never knows it is drawn.
+- **The interrupt handler** [`on-interrupt`](tapes/pdp7forth/ultimate.fs#L219) is a skip chain,
+  as on a real PDP-7: pen hit? box changed? teletype done?
+- **The cartridge** [ULTIMATE](../../apps/ties/src/lib/cabinet-programs.js#L382) plugs it in
+  with `peripherals: new UltimateMachine(…)` at four times the default timing, about 40 frames
+  a round. From the teletype, `8000 ph-reach um-time!` slows the reach down further.
+
+Power is the lever OR the mechanism away from home, as on the real box. The device keeps
+ticking until the hand is back inside and the lid is shut. The lever can also be bound to some
+other switch in the cabinet ([`SwitchBinding`](src/bus.ts#L13), selected with the IOTs on
+device 55), so the hand can reach out and turn off something else.
 
 ### Follow one machine down through every layer: BUSY2
 
