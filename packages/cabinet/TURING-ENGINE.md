@@ -362,13 +362,15 @@ The four sources:
 
 To run it:
 
-1. Type `ULTIMATE` and press Return. The box is drawn once; after that, each frame redraws only
+1. The cabinet types `ULTIMATE` and Return at boot (the program's `typeAhead`), so it is
+   already running. The box is drawn once; after that, each frame redraws only
    the lid, the lever, the hand and the meters, from UMRP, UMRL and UMRA.
 2. Click the switch. Its plate is the only thing drawn with the light pen enabled. The pen's
    hit raises an interrupt, and the frame loop flips the lever once per touch.
 3. Watch the lid open and the hand switch it off. Each phase change also raises an interrupt.
    OFF does not, because a box that is off is unpowered.
-4. Type any key to stop `ULTIMATE`. The box carries on without the program.
+4. Type any key to stop `ULTIMATE` and get the Forth prompt. The box carries on without the
+   program. Change it (`8000 PH-REACH UM-TIME!`), then type `ULTIMATE` to run it again.
 
 **Demo** reboots and does all of this by itself.
 

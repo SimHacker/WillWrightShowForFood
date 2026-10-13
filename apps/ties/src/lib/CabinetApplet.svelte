@@ -2167,8 +2167,11 @@
 		URL.revokeObjectURL(url);
 	}
 
-	/** A fresh PDP-7 with the chosen program booted to its first picture. Throws if the picture never comes. */
-	function bootMachine() {
+	/**
+	 * A fresh PDP-7 with the chosen program booted to its first picture. Throws if the picture never comes.
+	 * The program's typeAhead is typed at the teletype first, unless a scripted demo will do its own typing.
+	 */
+	function bootMachine({ typeAhead = true } = {}) {
 		cpu = new Pdp7({ coreWords: program.coreWords ?? 8192 });
 		displayStarts = new Set();
 		cpu.trace = trace = new Trace();
@@ -2200,6 +2203,7 @@
 		batch = [];
 		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined });
 		if (ttyCols) program.onTtyResize?.({ cpu, cols: ttyCols });
+		if (typeAhead && program.typeAhead) demoType(program.typeAhead);
 		symbols = program.symbols?.() ?? [];
 		monitor = new Monitor({
 			memory: cpu,
@@ -2229,7 +2233,7 @@
 	function startDemo(replay = false) {
 		pressedId = null;
 		stopRecording();
-		bootMachine();
+		bootMachine({ typeAhead: replay });
 		const script = replay
 			? session && replaySession(replayHandlers(), session, 'Replaying the recording')
 			: program.demo?.({ cpu, pen, type: demoType });

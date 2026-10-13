@@ -152,10 +152,25 @@ variable ph   variable arm   variable fx   variable fy   variable on
     i name tagged  i lamp-x 200 24 square
     i name  i lamp-x 12 +  232 centred
   loop ;
+\ The lit lamp is a star, a + and an X, the + reaching past the square
+\ like a glint, drawn four times 2 apart to make it bold. That is 32
+\ vectors, too dear to draw in Forth every frame, so BACKDROP builds it
+\ once as a 340 subroutine of relative vectors that ends where it began,
+\ and LAMP moves the beam and calls it with DJS. The escape at its end
+\ returns to the caller in parameter mode, with the caller's tag.
+create star-sub 72 allot
+variable cx   variable cy
+: through ( dx dy -- )   \ a line through cx,cy from -dx,-dy to dx,dy
+  over cx @ swap -  over cy @ swap -  beam
+  cy @ +  swap cx @ +  swap line ;
+: star ( -- ) 16 0 through  0 16 through  9 9 through  9 -9 through ;
+: build-star ( -- )
+  star-sub dl> !  0 bx !  0 by !  0 cx !  0 cy !
+  star  2 cx +! star  2 cy +! star  -2 cx +! star
+  0 0 beam  131072 dl, ;
 : lamp ( -- )
-  ph @ name tagged  ph @ lamp-x x0 !
-  x0 @ 200 beam  x0 @ 24 + 224 line
-  x0 @ 224 beam  x0 @ 24 + 200 line ;
+  ph @ name tagged  ph @ lamp-x 12 + 212 beam
+  131072 dl,  57344 dl,  star-sub 8191 and 229376 + dl,  36928 dl, ;
 
 \ The lid and the arm as bars 0 .. 400 long for 0 .. UM-MAX, between
 \ end stops, and a tally of the times the hand has won.
@@ -163,9 +178,12 @@ variable ph   variable arm   variable fx   variable fy   variable on
   >r  312 r@ 6 - beam  312 r@ 6 + line
   712 r@ 6 - beam  712 r> 6 + line ;
 : meter ( n y -- ) >r  312 r@ beam  400 um-max */ 312 + r> line ;
+\ Each ends at 300, a little left of the end stops.
+: legend ( c-addr u y -- ) >r  300 over 6 * -  r> centred ;
 : labels ( -- )
-  tag" How far the lid is open"  s" LID" 280 153 centred
-  tag" How far the arm is out"  s" ARM" 280 123 centred ;
+  tag" How far the lid is open"  s" LID" 153 legend
+  tag" How far the arm is out"  s" ARM" 123 legend
+  tag" Times the hand has won"  s" CYCLES" 85 legend ;
 : tally ( -- )
   tag" Times the hand has won"  um-presses 40 min ?dup if
     0 do i 10 * 312 + 80 beam  i 10 * 312 + 104 line loop
@@ -179,7 +197,7 @@ variable ph   variable arm   variable fx   variable fy   variable on
 \ so the terminator goes back down first, and DL, keeps one ahead.
 variable still   variable still-x   variable still-y
 : backdrop ( -- )
-  new-frame  body plate lamps  160 stops  130 stops  labels  notag
+  build-star  new-frame  body plate lamps  160 stops  130 stops  labels  notag
   dl> @ still !  bx @ still-x !  by @ still-y ! ;
 : rewind ( -- )
   131072 still @ !  1024 still @ 1+ !

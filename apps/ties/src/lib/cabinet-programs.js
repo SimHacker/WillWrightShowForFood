@@ -179,6 +179,8 @@ function forthProgram({ id, label, kernelFile, extras = [], pixie: withRings = t
  * tty: true opens the teletype panel when the program is chosen; display:
  * false boots without waiting for a picture on the tube.
  * demo(host) returns a scripted demo, run from a fresh boot; null if none.
+ * typeAhead is typed at the teletype as each boot starts, as if from the
+ * keyboard ("\n" is Return); the scripted demo boots without it.
  * symbols() lists { name, addr } for the Memory drawer, after boot.
  * source() resolves to a SourceMap (source.ts) for the code and source views;
  * sources() instead resolves to several, each with meta { id, label, kind,
@@ -378,15 +380,16 @@ export const PROGRAMS = [
 		kernelFile: 'kernel-names-full.s',
 		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'ultimate.fs'],
 		pixie: false,
-		title: "Minsky's Ultimate Machine, the box whose only function is to switch itself off: device 56, drawn on the 340 by Forth. Type ULTIMATE, then click the switch.",
+		title: "Minsky's Ultimate Machine, the box whose only function is to switch itself off: device 56, drawn on the 340 by Forth. Click the switch with the light pen.",
 		help: {
-			text: 'Type ULTIMATE and press Return, then click the switch: the lid opens and the hand switches it off. Any key stops ULTIMATE. Slow the reach: 8000 PH-REACH UM-TIME! (units of 64 cycles). UM-PRESSES . counts its wins.',
+			text: 'ULTIMATE is already running: the cabinet types it for you at boot. Click the switch: the lid opens and the hand switches it off. Press any key at the teletype to stop it and play with Forth: 8000 PH-REACH UM-TIME! slows the reach (units of 64 cycles), UM-PRESSES . counts its wins. Type ULTIMATE and press Return to run it again.',
 			links: [
 				{ label: 'ultimate.fs', href: `${CABINET}/tapes/pdp7forth/ultimate.fs` },
 				{ label: 'the device', href: `${CABINET}/TURING-ENGINE.md#running-it-ultimate-machine-on-the-menu` }
 			]
 		},
 		pen: true,
+		typeAhead: 'ULTIMATE\n',
 		demo: (h) => ultimateDemo(h),
 		demoTitle: 'Reboot, type ULTIMATE, and touch the switch with the light pen',
 		// Four times the device's own timing: about 7 seconds a round at 1x. The Forth loop draws
