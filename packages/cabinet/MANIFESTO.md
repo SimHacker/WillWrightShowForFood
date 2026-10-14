@@ -63,7 +63,8 @@ Two PDP-7s, an Apple ][ and a PDP-10 can run side by side on the
 [tiny-titan](TINY-TITAN.md) bus:
 
 - **messages** between them, and **interrupts on arrival**, after ITS's core links;
-- **shared memory**, with locks tiny-titan manages;
+- **shared memory**, with locks tiny-titan manages, as MIT-AI did in hardware when a PDP-10 job
+  could map a PDP-11's memory into its own address space ([MAPPING.md](MAPPING.md));
 - **tiny-titan as the switchboard**, the file server and cloud storage, and the gateway to the
   real internet.
 

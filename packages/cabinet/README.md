@@ -205,7 +205,9 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
     `PDP11/lunar11/` (source `gtlem.mac` and notes; the README says the
     source does not match the binaries), the binary as
     `PDP11/pdp11_vt_lunar_rom.h`, and `display/vt11.c`.
-  - A PDP-10 that runs ITS: the 36-bit KA10, from `PDP10/ka10_*.c`.
+  - A PDP-10 that runs ITS: the 36-bit KA10, from `PDP10/ka10_*.c`
+    ([PDP10.md](PDP10.md)), with MIT-AI's memory mapping between machines
+    ([MAPPING.md](MAPPING.md)).
   - A PDP-8, from `PDP8/`.
   - A PDP-1, from `PDP1/`, with the Type 30 display. It runs Spacewar! and L Peter
     Deutsch's PDP-1 Lisp, and those programs get source maps all the way down: to the

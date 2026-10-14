@@ -333,7 +333,9 @@ form. Commands cover:
 
 - segments: create, resize, delete, snapshot, copy;
 - maps: map and unmap a segment into a VM at an address, read-write or
-  read-only, and list who maps what;
+  read-only, and list who maps what. A map entry is modelled on MIT-AI's
+  10/11 map word: valid, write, machine, base, limit, and a packing rule
+  between word sizes ([MAPPING.md](MAPPING.md#what-the-cabinet-takes-from-this));
 - locks: define one over symbol ranges (held inside or free inside), list
   holders and waiters, watch stray writes to a window, and break a
   deadlock by hand.

@@ -544,6 +544,82 @@ the gong that switches off the stream. The device is
 [ultimate.ts](src/plugins/ultimate.ts); `pose()` drives this panel
 ([TURING-ENGINE.md](TURING-ENGINE.md#the-ultimate-machine)).
 
+### Who's in the box?
+
+The portrait's Ultimate Machine is a mechanical Turk. The little box with
+the switch sits on top of a big floor cabinet, and someone is hiding inside.
+When the machine wants to switch itself off, the occupant reaches up into
+the little box, pushes a hand out through the lid like a sockless sock
+puppet, flips the switch off and pulls back in. Lights inside the cabinet
+show the occupant the device's phase, so it knows when to reach. A door on
+the side of the cabinet opens to show who is in there.
+
+The game is to guess who is inside, only by working the switch and
+watching the performance: the timing, the hand, the sounds. It is a Turing
+test for puppet hands. Minsky thought of the machine and Shannon built
+it, so each has a fair claim to the job. But the occupant is a hidden
+variable, and the box can be **empty**. "Nobody" is a perfectly good
+answer, and the hardest one to prove.
+
+**An occupant is a character profile:** how quickly it answers the
+switch, how much its timing varies, how its hand moves, what it mutters,
+how it reacts when you keep cancelling it, and what you see when the door
+opens.
+
+| Occupant | Tell | When you keep cancelling | Behind the door |
+|---|---|---|---|
+| **Claude Shannon** | Quick, consistent, a little flourish on the flip | Turns it into a game, as his early-1950s mind-reading (outguessing) machine did: learns your on/off rhythm and beats you to the switch. Whistles and chuckles rather than curses. | Juggling; a unicycle in the corner |
+| **Marvin Minsky** | Hesitant: reaches halfway, retreats, tries again, as if agents in his *Society of Mind* were arguing | Mumbles that one agent wanted to stop and another kept going, and why you shouldn't confuse a box with a mind; gets less predictable, not more | Notes, turtle doodles, a tiny robot arm |
+| **Nobody** | The same delay every time; no learning, no sounds | Nothing changes, ever | An empty cabinet, perhaps a dusty timer relay |
+| **Homunculus robot** | Jerky, overprecise | Opens a smaller door inside and sends in a smaller robot | Robots all the way down, ending in a mirror or another empty box |
+| **Trurl** | Overengineered; every switch-off is a bigger production | Builds a machine to switch the machine off | Workshop clutter, a half-built rival machine |
+| **Klapaucius** | Dry, economical, skeptical pauses | Switches it off before you finish reaching, to make a point | Arms folded, critiquing Trurl's wiring |
+| **The Sims robot maid** | Tidies first: straightens the box, dusts the switch, then flips it | Fussier every cycle, one more cleaning step each time | A tidy little closet and a mop |
+
+Trurl and Klapaucius can share the cabinet and take turns, so the style
+changes between cycles without warning. The roster is open: anyone can take
+a turn behind the switch.
+
+**Two rules keep it a game of deduction, not luck.**
+
+- **The evidence is readable.** The phase lights and timing registers
+  are the device's own registers (`UMRP`, `UMRL`, `UMRA`, the `UMLT`
+  timings), so a player can measure instead of guess.
+- **Impersonation gives itself away eventually.** Anyone can imitate
+  anyone else, but not perfectly: a robot doing Shannon gets the speed
+  right and never improvises the flourish.
+
+**Rules of play.** You start with points and pay a little for each flip
+of the switch. Opening the side door ends the round with the answer, at a
+large penalty. After a guess, the round's history replays beside the
+lights and registers, so you can compare what you saw with what the
+occupant actually did.
+
+**An occupant is a driver, and so is a program.** Behind the door, an
+occupant does what any program can do to device 56: it watches the phase
+and the lever, and sets each phase's timing with `UMLT` before the hand
+moves. So the occupant can be a character profile in TypeScript, a Forth
+program on the PDP-7 next to [ultimate.fs](tapes/pdp7forth/ultimate.fs),
+a PDP-10 job with the device mapped into its address space
+([MAPPING.md](MAPPING.md#device-registers-are-memory-too)), or a person.
+The device needs two more registers for that: a **cancel count**, of
+switch-offs that beat the hand, and the **cycle time of the last switch-on**,
+so an occupant can learn the player's rhythm the way Shannon's machine
+did.
+
+**A person's hand.** In-browser hand tracking (MediaPipe's Hand
+Landmarker gives 21 points per hand from a webcam) can let a player
+*be* the occupant: the tracked hand drives the arm and finger as IK
+targets, so it hesitates, flutters, points, flourishes and finally
+presses. The causality runs through the hand, as with Heinz above: the
+lever flips when the puppet finger actually reaches it, by the same
+`UMOF` a program would use, and the device registers record it like any
+other press. The tracker belongs in a planned glove device, a VPL
+DataGlove driver with finger flex and hand position as registers. Like
+every cabinet device, it could sit on
+a PDP-7's IOTs, a PDP-10's `DATAI`, an Apple ]['s game port or a Lisp
+Machine, each through its own bus adapter.
+
 ### Movable Feast Machine: tiles, not a cabinet
 
 Ackley's machine is tiles and grows by adding them, so instead of a box it's blinking-light
