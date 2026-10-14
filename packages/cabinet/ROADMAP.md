@@ -667,6 +667,15 @@ the PDP-7, or on an Apple ][ as PDL(0), PDL(1) and three buttons.
 through the pen adapter; a webcam pinch draws in SYMELEC; and the same instruments,
 unchanged, drive an Apple ][ paddle program once the 6502 runs.
 
+**Done: the DataGlove on the PDP-7** ([HAND-TRACKING.md](HAND-TRACKING.md)). Device 57
+reports a webcam hand (MediaPipe, in the browser) as a palm frame and twenty 3D-turtle
+bones, in pixels, degrees and 16384ths. [turtle3d.fs](tapes/pdp7forth/turtle3d.fs) and
+[glove.fs](tapes/pdp7forth/glove.fs) draw it on the 340, as DATAGLOVE on the menu. Still
+to do: the pinch as a light pen, the Apple ][ port, and RB2's two-person world. For RB2,
+either more CPU types, or a tiny-Isaac renderer that emulates the conversation rather
+than the computer, as tiny-titan does
+([HAND-TRACKING.md](HAND-TRACKING.md#to-do)).
+
 ## 14. Small items
 
 - TRACKING.md: a note on `SRAST`'s diagonal step 6.

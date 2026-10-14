@@ -79,6 +79,10 @@ export { TinyTitan, EchoPort, BlockletHost } from "./plugins/tiny-titan.js";
 export type { TitanPort, TinyTitanOpts } from "./plugins/tiny-titan.js";
 export { UltimateMachine, UM_MAX, UM_TICK, UM_PHASE, UM_PHASES, UM_DEFAULT_TIMING } from "./plugins/ultimate.js";
 export type { UltimateOpts, UltimatePhase, UltimatePose, UltimateTiming } from "./plugins/ultimate.js";
+export { ONE as HAND_ONE, FINGERS, FINGER_CHAINS, JOINT_MAX, HAND_CHAINS, bends, flexes, headingOf, syntheticHand, GESTURES, wavingHand } from "./plugins/hand.js";
+export type { HandPoint, HandFrame } from "./plugins/hand.js";
+export { DataGlove, GLOVE_DEVICE, GLOVE_REG, GLOVE_BONES, toScreen, gloveRegisters } from "./plugins/glove.js";
+export type { GloveOpts } from "./plugins/glove.js";
 export {
 	MOVE,
 	PDP7_TM_SHAPE,

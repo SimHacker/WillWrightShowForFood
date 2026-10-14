@@ -39,6 +39,8 @@ import {
 	turingDemo,
 	TuringDevice,
 	UltimateMachine,
+	DataGlove,
+	wavingHand,
 	UM_DEFAULT_TIMING,
 	spokenNumbers
 } from '@wwsff/cabinet';
@@ -76,6 +78,10 @@ const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 const REPO = 'https://github.com/SimHacker/WillWrightShowForFood/blob/main';
 const CABINET = `${REPO}/packages/cabinet`;
 
+/** The DATAGLOVE entry's device, and its webcam while 🖐️ is on. */
+let glove = null;
+let handCamera = null;
+
 const LP = LP370_SWITCHES;
 let lp370Program = null;
 let hiloProgram = null;
@@ -108,6 +114,8 @@ const FORTH_EXTRAS = {
 	'interrupt.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/interrupt.fs?raw'),
 	'tags.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/tags.fs?raw'),
 	'ultimate.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/ultimate.fs?raw'),
+	'turtle3d.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/turtle3d.fs?raw'),
+	'glove.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/glove.fs?raw'),
 	'turing.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/turing.fs?raw'),
 	'pcomp-tm.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/pcomp-tm.fs?raw')
 };
@@ -399,6 +407,50 @@ export const PROGRAMS = [
 		// Four times the device's own timing: about 7 seconds a round at 1x. The Forth loop draws
 		// flat out, a frame per 100,000 cycles or so, so that is about 40 frames a round.
 		peripherals: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 4])))]
+	}),
+	forthProgram({
+		id: 'glove',
+		label: 'DATAGLOVE (2026)',
+		kernelFile: 'kernel-names-full.s',
+		extras: ['code.fs', 'tags.fs', 'turtle3d.fs', 'glove.fs'],
+		pixie: false,
+		title: 'A hand tracker as PDP-7 device 57: each bone a 3D turtle move (yaw, pitch, length), drawn by Forth on the 340. 🖐️ tracks your own hand.',
+		help: {
+			text: 'GLOVE is already running, with a demo hand waving through gestures. Press 🖐️ in PLAY to track your own hand with the webcam (MediaPipe, about 20 MB the first time; video stays in your browser). Press any key at the teletype to stop it and play with Forth: 60 VIEW GLOVE turns the picture 60 degrees about the hand; 3 SPINNING ! GLOVE turns it 3 degrees a frame; 0 SPINNING ! 0 VIEW GLOVE faces it again. 4 SPOT . . prints where the thumb tip was drawn, y then x.',
+			links: [
+				{ label: 'HAND-TRACKING.md', href: `${CABINET}/HAND-TRACKING.md` },
+				{ label: 'glove.fs', href: `${CABINET}/tapes/pdp7forth/glove.fs` },
+				{ label: 'turtle3d.fs', href: `${CABINET}/tapes/pdp7forth/turtle3d.fs` }
+			]
+		},
+		pen: false,
+		typeAhead: 'GLOVE\n',
+		// The waving hand is the demo; the Forth README demo would only stop it.
+		demo: null,
+		// A reset makes a new glove; a running camera feeds whichever glove is current.
+		peripherals: () => {
+			glove = new DataGlove({ source: handCamera ? null : wavingHand });
+			return [glove];
+		},
+		toggles: [
+			{
+				id: 'camera',
+				label: '🖐️',
+				title: 'Track your hand with the webcam (MediaPipe, about 20 MB the first time). Off: the demo hand.',
+				async set(on) {
+					if (on && !handCamera) {
+						const { startHandCamera } = await import('./hand-camera.js');
+						handCamera = await startHandCamera((f) => glove?.feed(f));
+						if (glove) glove.source = null;
+					} else if (!on && handCamera) {
+						handCamera.stop();
+						handCamera = null;
+						if (glove) glove.source = wavingHand;
+					}
+					return !!handCamera;
+				}
+			}
+		]
 	}),
 	forthProgram({
 		id: 'turing',

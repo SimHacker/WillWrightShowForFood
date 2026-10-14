@@ -113,6 +113,45 @@ character and its author.
   built for a real guest.
 - **Yourself**, always. That is the "Make one" round.
 
+### Gestures and the law
+
+The game is gestural impersonation, so the first question is who owns a
+gesture. Mostly nobody does: a movement your body can make is not property.
+The limits sit around it.
+
+- **Copyright protects choreography, not steps.** The US Copyright Office
+  will not register social dances, simple routines or individual moves
+  (*Compendium (Third)* §805). It refused Alfonso Ribeiro's Carlton dance
+  in 2019 as a simple routine. But *Hanagami v. Epic Games* (9th Cir. 2023)
+  held that a short routine can still be protected choreography, because the
+  selection and arrangement of steps is what's owned, as notes make a song.
+  A tell is a step. Copying a whole signature routine move for move is the
+  risk.
+- **Trademark rarely reaches a gesture.** Gene Simmons applied to register
+  the "devil horns" hand sign in 2017 and abandoned the application within
+  weeks. A gesture is a mark only if it identifies who sells something,
+  and an impersonation sells nothing.
+- **Patents cover devices, not moves.** Michael Jackson's anti-gravity lean
+  is US Patent 5,255,452 (1993): the shoes and the stage pegs that made it
+  possible. Anyone may lean; only the mechanism was owned, and only for
+  the patent's term.
+- **A pose is not a photograph.** *Rentmeester v. Nike* (9th Cir. 2018) found
+  that Jordan's leap belonged to nobody. A photo's own choices of angle, light
+  and arrangement were the protected part, and Nike's photo didn't copy them.
+- **The person is protected, not the gesture.** The right of publicity is
+  the real limit for living people. *White v. Samsung* (9th Cir. 1992)
+  found that a wigged robot turning letters evoked Vanna White enough to
+  count. That is why living people are in the box only as themselves or with
+  consent: a recognisable impersonation can be an appropriation of identity,
+  even when every move in it is free.
+- **Some gestures are crimes.** Germany's StGB §86a bans the Hitler salute
+  along with other symbols of unconstitutional organisations, and other
+  countries have similar laws. Whatever the law where you are, hate
+  salutes are out of the game, and a card that uses one is removed.
+
+So a tell is fair game, and a whole routine needs its author's permission.
+A living person needs their consent, and a hate symbol is never allowed.
+
 ## Making occupants
 
 Everything a player makes is content for the show:
@@ -128,8 +167,9 @@ Everything a player makes is content for the show:
    Landmarker, 21 points per hand, in the browser) drives the puppet hand
    as IK targets. Your hand hesitates, flutters, points, flourishes and
    presses, and the switch flips only when the puppet finger reaches it.
-   The tracking driver is the planned glove device, the cabinet's VPL
-   DataGlove, so it can work any machine's box through that machine's bus.
+   The tracking driver is the cabinet's DataGlove, device 57 on the PDP-7
+   ([HAND-TRACKING.md](../../packages/cabinet/HAND-TRACKING.md)), so it can
+   work any machine's box through that machine's bus.
 4. **Record it.** A performance is the box's register writes plus the
    hand track, timestamped on the cabinet's recording timeline. A card can
    carry several recordings and mix them, so a recorded occupant doesn't
@@ -144,11 +184,11 @@ The robot maid in particular is already a Sims character.
 | Step | Done when |
 |---|---|
 | The Ultimate Machine device | Done: [ultimate.ts](../../packages/cabinet/src/plugins/ultimate.ts), device 56, on the cabinet menu |
-| Cancel count and last cycle time registers | An occupant can learn a player's rhythm |
+| IOTs to read the cancel count (`aborts`, already counted) and the last switch-on time | An occupant can learn a player's rhythm |
 | Occupant interface and the Nobody card | A TypeScript occupant drives device 56 on the cabinet's clock |
 | Cards for the pilot roster | Each one's tell is visible in its register trace |
 | The floor cabinet, door and inside lights, in 3D | The door reveal and phase lights render in the portrait |
-| Hand tracking into the arm | A webcam hand presses the switch through `UMOF` |
+| Hand tracking into the arm | A webcam hand presses the switch through `UMOF`. The tracker is done: [DATAGLOVE](../../packages/cabinet/HAND-TRACKING.md) on the menu |
 | Recording and replay | A round replays beside its registers after the guess |
 | Rounds and scoring | Solo and Nobody playable on hyperties.org |
 | A second box | The format works without the Ultimate Machine |

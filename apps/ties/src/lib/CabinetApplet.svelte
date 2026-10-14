@@ -276,6 +276,9 @@
 	let player = null;
 	let demoCaption = $state('');
 	let demoOn = $state(false);
+	// The program's own switches (program.toggles: the glove's camera): which are on, and the last complaint.
+	let toggleOn = $state({});
+	let toggleNote = $state('');
 
 	// The 340 refreshes hundreds of times per browser frame. Showing only the last one
 	// aliases: anything the program draws on some refreshes and not others (the ring
@@ -2361,10 +2364,29 @@
 		status = 'live';
 	}
 
+	async function onToggle(t) {
+		toggleNote = '';
+		const want = !toggleOn[t.id];
+		toggleOn = { ...toggleOn, [t.id]: want };
+		try {
+			toggleOn = { ...toggleOn, [t.id]: !!(await t.set(want)) };
+		} catch (e) {
+			toggleOn = { ...toggleOn, [t.id]: false };
+			toggleNote = `${t.label} ${e?.message ?? e}`;
+		}
+	}
+
+	function stopToggles() {
+		for (const t of program?.toggles ?? []) if (toggleOn[t.id]) t.set(false).catch(() => {});
+		toggleOn = {};
+		toggleNote = '';
+	}
+
 	async function onProgram(event) {
 		const next = programById(event.currentTarget.value);
 		if (!next) return;
 		stopRecording();
+		stopToggles();
 		programId = next.id;
 		ttyCfg = ttyConfigFor(next);
 		ringsCfg = ringsConfigFor(next);
@@ -2377,6 +2399,7 @@
 		haltAuto = localStorage.getItem(`cabinet-halt-auto-${next.id}`) === 'on';
 		displayOpen = next.display !== false;
 		if (next.tty && !ttyOpen) togglePanel('tty', {});
+		if (next.toggles && !playOpen) togglePanel('play', {});
 		await onReset();
 	}
 
@@ -2496,6 +2519,7 @@
 
 		return () => {
 			ro.disconnect();
+			stopToggles();
 			cancelled = true;
 			running = false;
 			if (raf) cancelAnimationFrame(raf);
@@ -2801,8 +2825,21 @@
 				disabled={!session || recording}
 				onclick={onDownloadSession}>⬇️</button
 			>
+			{#each program?.toggles ?? [] as t (t.id)}
+				<button
+					type="button"
+					class="icon"
+					class:on={toggleOn[t.id]}
+					aria-pressed={!!toggleOn[t.id]}
+					title={t.title}
+					disabled={status !== 'live'}
+					onclick={() => onToggle(t)}>{t.label}</button
+				>
+			{/each}
 			{#if demoOn || recording}
 				<span class="demo-caption" aria-live="polite">{demoOn ? demoCaption : 'Recording. ⏺ again to stop.'}</span>
+			{:else if toggleNote}
+				<span class="demo-caption" aria-live="polite">{toggleNote}</span>
 			{/if}
 		</div>
 		{@render grip('play', 'play')}

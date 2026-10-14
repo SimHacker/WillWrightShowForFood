@@ -611,10 +611,10 @@ moves. So the occupant can be a character profile in TypeScript, a Forth
 program on the PDP-7 next to [ultimate.fs](tapes/pdp7forth/ultimate.fs),
 a PDP-10 job with the device mapped into its address space
 ([MAPPING.md](MAPPING.md#device-registers-are-memory-too)), or a person.
-The device needs two more registers for that: a **cancel count**, of
-switch-offs that beat the hand, and the **cycle time of the last switch-on**,
-so an occupant can learn the player's rhythm the way Shannon's machine
-did.
+The device already counts the switch-offs that beat the hand (`aborts` in
+[ultimate.ts](src/plugins/ultimate.ts)), but no IOT reads that count yet.
+It needs that read, plus the **cycle time of the last switch-on**, so an
+occupant can learn the player's rhythm the way Shannon's machine did.
 
 **A person's hand.** In-browser hand tracking (MediaPipe's Hand
 Landmarker gives 21 points per hand from a webcam) can let a player
