@@ -414,28 +414,6 @@ export const PROGRAMS = [
 	},
 	forthProgram({ id: 'forth', label: 'FORTH + TURTLE (2026)', kernelFile: 'kernel-names-full.s' }),
 	forthProgram({
-		id: 'ultimate',
-		label: 'ULTIMATE MACHINE (2026)',
-		kernelFile: 'kernel-names-full.s',
-		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'ultimate.fs'],
-		pixie: false,
-		title: "Minsky's Ultimate Machine, the box whose only function is to switch itself off: device 56, drawn on the 340 by Forth. Click the switch with the light pen.",
-		help: {
-			text: 'ULTIMATE is already running: the cabinet types it for you at boot. Click the switch: the lid opens and the hand switches it off. Press any key at the teletype to stop it and play with Forth: 8000 PH-REACH UM-TIME! slows the reach (units of 64 cycles), UM-PRESSES . counts its wins. Type ULTIMATE and press Return to run it again.',
-			links: [
-				{ label: 'ultimate.fs', href: `${CABINET}/tapes/pdp7forth/ultimate.fs` },
-				{ label: 'the device', href: `${CABINET}/TURING-ENGINE.md#running-it-ultimate-machine-on-the-menu` }
-			]
-		},
-		pen: true,
-		typeAhead: 'ULTIMATE\n',
-		demo: (h) => ultimateDemo(h),
-		demoTitle: 'Reboot, type ULTIMATE, and touch the switch with the light pen',
-		// Four times the device's own timing: about 7 seconds a round at 1x. The Forth loop draws
-		// flat out, a frame per 100,000 cycles or so, so that is about 40 frames a round.
-		peripherals: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 4])))]
-	}),
-	forthProgram({
 		id: 'glove',
 		label: 'DATAGLOVE (2026)',
 		kernelFile: 'kernel-names-full.s',
@@ -503,6 +481,28 @@ export const PROGRAMS = [
 				}
 			}
 		]
+	}),
+	forthProgram({
+		id: 'ultimate',
+		label: 'ULTIMATE MACHINE (2026)',
+		kernelFile: 'kernel-names-full.s',
+		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'ultimate.fs'],
+		pixie: false,
+		title: "Minsky's Ultimate Machine, the box whose only function is to switch itself off: device 56, drawn on the 340 by Forth. Click the switch with the light pen.",
+		help: {
+			text: 'ULTIMATE is already running: the cabinet types it for you at boot. Click the switch: the lid opens and the hand switches it off. Press any key at the teletype to stop it and play with Forth: 8000 PH-REACH UM-TIME! slows the reach (units of 64 cycles), UM-PRESSES . counts its wins. Type ULTIMATE and press Return to run it again.',
+			links: [
+				{ label: 'ultimate.fs', href: `${CABINET}/tapes/pdp7forth/ultimate.fs` },
+				{ label: 'the device', href: `${CABINET}/TURING-ENGINE.md#running-it-ultimate-machine-on-the-menu` }
+			]
+		},
+		pen: true,
+		typeAhead: 'ULTIMATE\n',
+		demo: (h) => ultimateDemo(h),
+		demoTitle: 'Reboot, type ULTIMATE, and touch the switch with the light pen',
+		// Four times the device's own timing: about 7 seconds a round at 1x. The Forth loop draws
+		// flat out, a frame per 100,000 cycles or so, so that is about 40 frames a round.
+		peripherals: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 4])))]
 	}),
 	forthProgram({
 		id: 'turing',
