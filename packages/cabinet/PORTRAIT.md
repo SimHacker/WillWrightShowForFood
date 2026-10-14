@@ -562,23 +562,32 @@ variable, and the box can be **empty**. "Nobody" is a perfectly good
 answer, and the hardest one to prove.
 
 **An occupant is a character profile:** how quickly it answers the
-switch, how much its timing varies, how its hand moves, what it mutters,
+switch, how much its timing varies, how its hand moves, what you hear from inside,
 how it reacts when you keep cancelling it, and what you see when the door
 opens.
 
 | Occupant | Tell | When you keep cancelling | Behind the door |
 |---|---|---|---|
-| **Claude Shannon** | Quick, consistent, a little flourish on the flip | Turns it into a game, as his early-1950s mind-reading (outguessing) machine did: learns your on/off rhythm and beats you to the switch. Whistles and chuckles rather than curses. | Juggling; a unicycle in the corner |
-| **Marvin Minsky** | Hesitant: reaches halfway, retreats, tries again, as if agents in his *Society of Mind* were arguing | Mumbles that one agent wanted to stop and another kept going, and why you shouldn't confuse a box with a mind; gets less predictable, not more | Notes, turtle doodles, a tiny robot arm |
+| **Claude Shannon** | Quick, consistent, a little flourish on the flip | Turns it into a game, as his early-1950s mind-reading (outguessing) machine did: learns your on/off rhythm and beats you to the switch. Silent: a tribute, not a voice. | Juggling; a unicycle in the corner |
+| **Marvin Minsky** | Hesitant: reaches halfway, retreats, tries again, as if agents in his *Society of Mind* were arguing | Gets less predictable, not more: the hand's indecision is the only commentary. Silent, like Shannon. | Notes, turtle doodles, a tiny robot arm |
 | **Nobody** | The same delay every time; no learning, no sounds | Nothing changes, ever | An empty cabinet, perhaps a dusty timer relay |
 | **Homunculus robot** | Jerky, overprecise | Opens a smaller door inside and sends in a smaller robot | Robots all the way down, ending in a mirror or another empty box |
 | **Trurl** | Overengineered; every switch-off is a bigger production | Builds a machine to switch the machine off | Workshop clutter, a half-built rival machine |
 | **Klapaucius** | Dry, economical, skeptical pauses | Switches it off before you finish reaching, to make a point | Arms folded, critiquing Trurl's wiring |
 | **The Sims robot maid** | Tidies first: straightens the box, dusts the switch, then flips it | Fussier every cycle, one more cleaning step each time | A tidy little closet and a mop |
 
+Shannon and Minsky are silent tributes, as the repo's
+[portrayal standards](../../schemas/portrayal-standards.yml) require for
+people who have died. Their tells come from documented work (Shannon's
+juggling, unicycle and mind-reading machine; Minsky's arm, turtles and
+*Society of Mind*), with no voice and no words put in their mouths. The
+fictional occupants may talk.
+
 Trurl and Klapaucius can share the cabinet and take turns, so the style
 changes between cycles without warning. The roster is open: anyone can take
-a turn behind the switch.
+a turn behind the switch. This booth is the pilot of a game for any box,
+with rounds, scoring and player-made occupants:
+[Who's In The Box?](../../designs/whos-in-the-box/README.md).
 
 **Two rules keep it a game of deduction, not luck.**
 

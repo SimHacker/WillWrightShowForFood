@@ -1,0 +1,14 @@
+# 📦 designs/whos-in-the-box — GLANCE
+# A character guessing game: someone is in the box, or nobody is.
+
+what: |
+  Work a box (the pilot is Minsky's Ultimate Machine) and guess who is hiding inside
+  from timing and gesture alone. Occupants are user-made: character cards, programs,
+  or improvised hand performances by webcam. "Nobody" is a fair answer.
+
+status: design          # the device exists; the game does not
+human_readable: README.md
+pilot: ../../packages/cabinet/PORTRAIT.md#whos-in-the-box
+device: ../../packages/cabinet/src/plugins/ultimate.ts
+portrayal: ../../schemas/portrayal-standards.yml   # fictional: labeled; deceased: silent tributes; living: self or consent
+k_line: WHO'S IN THE BOX · NOBODY IS AN ANSWER · THE TELL ALWAYS LEAKS
