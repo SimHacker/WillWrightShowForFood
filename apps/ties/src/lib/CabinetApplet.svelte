@@ -200,7 +200,7 @@
 	const MAX_DT_MS = 250;
 	const MAX_CYCLES_PER_FRAME = 100_000;
 	const SPEEDS = [0.001, 0.01, 0.1, 1, 10, Infinity];
-	let speed = $state(1);
+	let speed = $state(untrack(() => programById(programId)?.speed ?? 1));
 	// An instruction is one cycle (operate, IOT) or two (memory reference), three when
 	// indirect: 1× is 190,000 to 570,000 instructions a second, and even .001× is a blur.
 	// Trace paces by instructions instead, this many ms apart, with the views following.
@@ -279,6 +279,20 @@
 	// The program's own switches (program.toggles: the glove's camera): which are on, and the last complaint.
 	let toggleOn = $state({});
 	let toggleNote = $state('');
+	// Bumped when a slider moves, so the program's own get() is read again.
+	let sliderTick = $state(0);
+	const sliderValue = (s) => (sliderTick, s.get());
+	/** Toggles that know their own state (on()) can change each other: read them all again. */
+	function syncToggles() {
+		const next = { ...toggleOn };
+		for (const t of program?.toggles ?? []) if (t.on) next[t.id] = !!t.on();
+		toggleOn = next;
+	}
+	function onSlider(s, event) {
+		s.set(Number(event.currentTarget.value));
+		sliderTick += 1;
+		syncToggles();
+	}
 
 	// The 340 refreshes hundreds of times per browser frame. Showing only the last one
 	// aliases: anything the program draws on some refreshes and not others (the ring
@@ -2365,11 +2379,13 @@
 	}
 
 	async function onToggle(t) {
-		toggleNote = '';
 		const want = !toggleOn[t.id];
+		toggleNote = want && t.starting ? t.starting : '';
 		toggleOn = { ...toggleOn, [t.id]: want };
 		try {
 			toggleOn = { ...toggleOn, [t.id]: !!(await t.set(want)) };
+			toggleNote = '';
+			syncToggles();
 		} catch (e) {
 			toggleOn = { ...toggleOn, [t.id]: false };
 			toggleNote = `${t.label} ${e?.message ?? e}`;
@@ -2377,7 +2393,7 @@
 	}
 
 	function stopToggles() {
-		for (const t of program?.toggles ?? []) if (toggleOn[t.id]) t.set(false).catch(() => {});
+		for (const t of program?.toggles ?? []) if (toggleOn[t.id] && !t.on) t.set(false).catch(() => {});
 		toggleOn = {};
 		toggleNote = '';
 	}
@@ -2400,6 +2416,8 @@
 		displayOpen = next.display !== false;
 		if (next.tty && !ttyOpen) togglePanel('tty', {});
 		if (next.toggles && !playOpen) togglePanel('play', {});
+		if (next.speed) setSpeed(next.speed);
+		queueMicrotask(syncToggles);
 		await onReset();
 	}
 
@@ -2498,6 +2516,7 @@
 				session = loadSession(programId);
 				await boot();
 				if (cancelled) return;
+				syncToggles();
 
 				if (spec.demo && canDemo) startDemo();
 				running = true;
@@ -2834,6 +2853,18 @@
 					title={t.title}
 					disabled={status !== 'live'}
 					onclick={() => onToggle(t)}>{t.label}</button
+				>
+			{/each}
+			{#each program?.sliders ?? [] as s (s.id)}
+				<label class="pslider" title={s.title}
+					>{s.label}<input
+						type="range"
+						min={s.min}
+						max={s.max}
+						value={sliderValue(s)}
+						aria-label={s.title}
+						oninput={(e) => onSlider(s, e)}
+					/></label
 				>
 			{/each}
 			{#if demoOn || recording}
@@ -3756,6 +3787,16 @@
 	}
 	.icon.rec {
 		background: #a22;
+	}
+	.pslider {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.15rem;
+		font-size: 0.7rem;
+		font-family: monospace;
+	}
+	.pslider input {
+		width: 3.2rem;
 	}
 	.icon.on {
 		background: #6b5420;
