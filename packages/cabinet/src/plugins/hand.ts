@@ -175,19 +175,21 @@ export const GESTURES: readonly { name: string; curls: readonly number[] }[] = [
 ];
 
 /**
- * The demo hand at `t` seconds: it waves, and every two seconds eases into the next gesture.
+ * The demo hand at `t` seconds: it waves slowly, holds each gesture, and eases into the next
+ * every six seconds.
  * Deterministic, so a recording or a test sees the same hand.
  */
 export function wavingHand(t: number): HandFrame {
-	const hold = 2;
+	const hold = 6;
 	const n = Math.floor(t / hold);
 	const from = GESTURES[n % GESTURES.length]!.curls;
 	const to = GESTURES[(n + 1) % GESTURES.length]!.curls;
-	const s = Math.min(1, Math.max(0, (t - n * hold - hold / 2) / (hold / 2)));
+	// Hold two thirds of the time, then ease over the last third.
+	const s = Math.min(1, Math.max(0, (t - n * hold - (2 * hold) / 3) / (hold / 3)));
 	const e = s * s * (3 - 2 * s);
 	return syntheticHand({
 		curls: from.map((c, i) => c + (to[i]! - c) * e),
-		heading: 20 * Math.sin(t * Math.PI * 0.8),
+		heading: 15 * Math.sin(t * Math.PI * 0.25),
 		x: 0.5,
 		y: 0.82,
 		size: 0.32,

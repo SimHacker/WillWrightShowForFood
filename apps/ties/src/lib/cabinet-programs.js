@@ -89,7 +89,10 @@ let handMode = 'demo';
 /** The sliders' hand: curl per finger 0..1, thumb first, and a turn in degrees. */
 const sliderHand = { curls: [0, 0, 0, 0, 0], heading: 0 };
 const manualHand = () => syntheticHand({ curls: sliderHand.curls, heading: sliderHand.heading, x: 0.5, y: 0.82, size: 0.32 });
-const handSource = () => (handMode === 'camera' ? null : handMode === 'manual' ? manualHand : wavingHand);
+// The demo waves in wall-clock seconds, so it keeps its pace at any machine speed.
+const t0 = typeof performance === 'undefined' ? 0 : performance.now();
+const demoHand = () => wavingHand((performance.now() - t0) / 1000);
+const handSource = () => (handMode === 'camera' ? null : handMode === 'manual' ? manualHand : demoHand);
 function setHandMode(mode) {
 	if (mode !== 'camera' && handCamera) {
 		handCamera.stop();
@@ -116,7 +119,9 @@ function drawGlovePanel(canvas) {
 	// Mirror the picture, as people expect of a webcam; the points are in the unmirrored image.
 	ctx.setTransform(-1, 0, 0, 1, W, 0);
 	if (handMode === 'camera' && video?.readyState >= 2) ctx.drawImage(video, 0, 0, W, H);
-	const f = glove?.last ?? null;
+	// Over the camera, only what the tracker sees in this video frame; otherwise the hand the glove was fed.
+	const pts = handMode === 'camera' ? st?.result?.landmarks?.[0] : null;
+	const f = handMode === 'camera' ? (pts ? { points: pts, handedness: glove?.last?.handedness } : null) : (glove?.last ?? null);
 	if (f) {
 		const P = f.points.map((p) => [p.x * W, p.y * H]);
 		ctx.lineWidth = 3;

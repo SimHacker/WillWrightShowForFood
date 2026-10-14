@@ -47,7 +47,7 @@ function walk(r: readonly number[]): [number, number, number][] {
 }
 
 test("glove: the bones, walked by a 3D turtle, reach every landmark", () => {
-	for (let t = 0; t < 12; t += 0.7) {
+	for (let t = 0; t < 42; t += 1.3) {
 		const f = wavingHand(t);
 		const r = gloveRegisters(f);
 		const want = f.points.map((p) => toScreen(p));
