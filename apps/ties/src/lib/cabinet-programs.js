@@ -42,6 +42,8 @@ import {
 	DataGlove,
 	wavingHand,
 	syntheticHand,
+	HAND_CHAINS,
+	GLOVE_REG,
 	UM_DEFAULT_TIMING,
 	spokenNumbers
 } from '@wwsff/cabinet';
@@ -96,6 +98,74 @@ function setHandMode(mode) {
 	handMode = mode;
 	if (glove) glove.source = handSource();
 }
+/**
+ * The GLOVE panel's picture, every animation frame: the camera mirrored with the
+ * tracker's 21 points over it, or the demo or slider hand on black. Returns the
+ * text beside it: where the hand comes from, the tracker's state, and the
+ * device's registers as the PDP-7 last latched them.
+ */
+function drawGlovePanel(canvas) {
+	const ctx = canvas.getContext('2d');
+	const W = canvas.width;
+	const H = canvas.height;
+	ctx.setTransform(1, 0, 0, 1, 0, 0);
+	ctx.fillStyle = '#000';
+	ctx.fillRect(0, 0, W, H);
+	const st = handCamera?.stats;
+	const video = handCamera?.video;
+	// Mirror the picture, as people expect of a webcam; the points are in the unmirrored image.
+	ctx.setTransform(-1, 0, 0, 1, W, 0);
+	if (handMode === 'camera' && video?.readyState >= 2) ctx.drawImage(video, 0, 0, W, H);
+	const f = glove?.last ?? null;
+	if (f) {
+		const P = f.points.map((p) => [p.x * W, p.y * H]);
+		ctx.lineWidth = 3;
+		ctx.strokeStyle = '#3f3';
+		for (const chain of HAND_CHAINS) {
+			ctx.beginPath();
+			chain.forEach((i, k) => (k ? ctx.lineTo(...P[i]) : ctx.moveTo(...P[i])));
+			ctx.stroke();
+		}
+		f.points.forEach((p, i) => {
+			// Nearer the camera is bigger: z is negative toward it, relative to the wrist.
+			const r = Math.max(2, 5 - p.z * 40);
+			ctx.fillStyle = [4, 8, 12, 16, 20].includes(i) ? '#ff4' : i === 0 ? '#f4f' : '#f44';
+			ctx.beginPath();
+			ctx.arc(P[i][0], P[i][1], r, 0, 2 * Math.PI);
+			ctx.fill();
+		});
+	}
+	ctx.setTransform(1, 0, 0, 1, 0, 0);
+	ctx.font = '20px monospace';
+	ctx.fillStyle = f ? '#3f3' : '#f66';
+	ctx.fillText(f ? `${f.handedness?.toUpperCase() ?? ''} HAND` : 'NO HAND', 10, 26);
+	if (handMode === 'camera' && !(video?.readyState >= 2)) {
+		ctx.fillStyle = '#ccc';
+		ctx.fillText('waiting for the camera…', 10, H / 2);
+	}
+	const r = glove?.registers() ?? [];
+	const flex = r.slice(GLOVE_REG.flex, GLOVE_REG.flex + 5).map((v) => String(Math.round((v * 100) / 16384)).padStart(3));
+	const lines = [
+		`source   ${handMode}`,
+		...(st
+			? [
+					`camera   ${(st.camera || '?').slice(0, 32)}`,
+					`video    ${video?.videoWidth ?? 0}x${video?.videoHeight ?? 0}`,
+					`tracker  ${st.delegate || '?'}  ${st.fps.toFixed(1)} fps  ${st.detectMs.toFixed(1)} ms`,
+					`frames   ${st.frames}, a hand in ${st.hands}`,
+					`seen     ${st.side ? `${st.side} (as if mirrored) ${(st.score * 100).toFixed(0)}%` : 'nothing'}`,
+					...(st.error ? [`error    ${st.error}`] : [])
+				]
+			: []),
+		`device   fed ${glove?.frames ?? 0}, latched ${glove?.latches ?? 0}`,
+		`status   ${r[GLOVE_REG.status] ?? 0}${r[GLOVE_REG.status] & 1 ? (r[GLOVE_REG.status] & 2 ? ' right' : ' left') : ' no hand'}`,
+		`wrist    ${r.slice(GLOVE_REG.wrist, GLOVE_REG.wrist + 3).join(' ')}`,
+		`flex %   T${flex[0]} I${flex[1]} M${flex[2]} R${flex[3]} P${flex[4]}`,
+		`pinch    ${r[GLOVE_REG.pinch] ?? 0} px`
+	];
+	return lines.join('\n');
+}
+
 const FINGER_SLIDERS = ['THUMB', 'INDEX', 'MIDDLE', 'RING', 'PINKY'].map((name, i) => ({
 	id: `curl${i}`,
 	label: name[0],
@@ -421,7 +491,7 @@ export const PROGRAMS = [
 		pixie: false,
 		title: 'A hand tracker as PDP-7 device 57: each bone a 3D turtle move (yaw, pitch, length), drawn by Forth on the 340. 🖐️ tracks your own hand.',
 		help: {
-			text: 'GLOVE is already running, with a demo hand (👋) waving through gestures. Drag the finger sliders in PLAY (T I M R P, and ↻ to turn) to work the hand yourself. Press 🖐️ to track your own hand with the webcam (MediaPipe, about 20 MB the first time; video stays in your browser). Press any key at the teletype to stop it and play with Forth: 60 VIEW GLOVE turns the picture 60 degrees about the hand; 3 SPINNING ! GLOVE turns it 3 degrees a frame; 0 SPINNING ! 0 VIEW GLOVE faces it again. 4 SPOT . . prints where the thumb tip was drawn, y then x. BIRD? . tells you whether you are being given the bird.',
+			text: 'GLOVE is already running, with a demo hand (👋) waving through gestures. Drag the finger sliders in the GLOVE panel (T I M R P, and ↻ to turn) to work the hand yourself. Press 🖐️ to track your own hand with the webcam (MediaPipe, about 20 MB the first time; video stays in your browser). The GLOVE panel shows the camera mirrored, the points the tracker found, and the registers the PDP-7 latched. Press any key at the teletype to stop it and play with Forth: 60 VIEW GLOVE turns the picture 60 degrees about the hand; 3 SPINNING ! GLOVE turns it 3 degrees a frame; 0 SPINNING ! 0 VIEW GLOVE faces it again. 4 SPOT . . prints where the thumb tip was drawn, y then x. BIRD? . tells you whether you are being given the bird.',
 			links: [
 				{ label: 'HAND-TRACKING.md', href: `${CABINET}/HAND-TRACKING.md` },
 				{ label: 'glove.fs', href: `${CABINET}/tapes/pdp7forth/glove.fs` },
@@ -466,6 +536,12 @@ export const PROGRAMS = [
 				}
 			}
 		],
+		panel: {
+			label: 'GLOVE',
+			title: 'The DataGlove: where the hand comes from, and what the tracker sees.',
+			canvasLabel: 'The camera, mirrored, with the hand the tracker found drawn over it',
+			draw: drawGlovePanel
+		},
 		sliders: [
 			...FINGER_SLIDERS,
 			{

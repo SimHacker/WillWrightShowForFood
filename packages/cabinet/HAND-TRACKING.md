@@ -4,12 +4,19 @@ A webcam hand tracker running in the browser, plugged into the emulated PDP-7
 as **device 57**. Forth programs read the hand, then draw it on the Type 340
 in 3D. On the cabinet menu it is **DATAGLOVE (2026)**, which runs
 [glove.fs](tapes/pdp7forth/glove.fs) at 10× a real PDP-7. The hand in the
-PLAY panel comes from one of three places:
+GLOVE panel comes from one of three places:
 
 - **👋 Demo**: a hand waving through gestures.
 - **Sliders**: T I M R P curl each finger, ↻ turns the hand. Touching one
   takes the hand over and holds it still.
 - **🖐️ Camera**: your own hand, through MediaPipe on the webcam.
+
+Below the buttons, the panel shows the pipeline for debugging: the camera,
+mirrored, with the tracker's 21 points and bones drawn over it (fingertips
+yellow, wrist magenta, nearer points bigger). Beside it are the tracker's
+state (GPU or CPU, frames a second, milliseconds a frame, frames with a hand,
+the side MediaPipe saw and how sure it was) and the device's latched registers
+(status, wrist, flex per finger, pinch).
 
 This is the DataGlove row of [ROADMAP §13](ROADMAP.md#13-emulation-mash-ups),
 split the way that section splits every device:

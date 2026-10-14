@@ -133,6 +133,8 @@ export class DataGlove implements Device {
 	mirror: boolean;
 	/** Frames fed, and frames the program latched. */
 	frames = 0;
+	/** The newest hand fed, as the tracker gave it: for a debugging view. */
+	last: HandFrame | null = null;
 	latches = 0;
 	private pending: number[] = gloveRegisters(null);
 	private latched: number[] = gloveRegisters(null);
@@ -160,6 +162,7 @@ export class DataGlove implements Device {
 
 	/** The newest hand (null: none in view). Raises the flag. */
 	feed(f: HandFrame | null): void {
+		this.last = f;
 		this.pending = gloveRegisters(f, this.mirror);
 		this.frames += 1;
 		this.flag = true;

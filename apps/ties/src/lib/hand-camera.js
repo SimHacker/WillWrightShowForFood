@@ -5,8 +5,10 @@
  *
  * startHandCamera(onFrame) asks for the camera and calls onFrame(frame) for
  * every video frame: a HandFrame ({ points, handedness, aspect }, 21 points in
- * image coordinates) or null with no hand in view. stop() lets the camera go.
+ * image coordinates) or null with no hand in view. It returns { video, stats,
+ * stop() }: the video and what the tracker last saw, for the GLOVE panel.
  */
+
 // Keep in step with @mediapipe/tasks-vision in package.json: the wasm must match the JS.
 const MP_VERSION = '1.1.0';
 const WASM = `https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@${MP_VERSION}/wasm`;
@@ -14,18 +16,22 @@ const MODEL =
 	'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task';
 
 let landmarker = null;
+let delegate = '';
 
 /** The landmarker, loaded once: also a way to fetch the model ahead of the camera. */
 export async function getLandmarker() {
 	if (landmarker) return landmarker;
 	const { FilesetResolver, HandLandmarker } = await import('@mediapipe/tasks-vision');
 	const files = await FilesetResolver.forVisionTasks(WASM);
-	const make = (delegate) =>
+	const make = (d) =>
 		HandLandmarker.createFromOptions(files, {
-			baseOptions: { modelAssetPath: MODEL, delegate },
+			baseOptions: { modelAssetPath: MODEL, delegate: d },
 			runningMode: 'VIDEO',
-			numHands: 1
-		});
+			numHands: 1,
+			minHandDetectionConfidence: 0.3,
+			minHandPresenceConfidence: 0.3,
+			minTrackingConfidence: 0.3
+		}).then((h) => ((delegate = d), h));
 	landmarker = await make('GPU').catch(() => make('CPU'));
 	return landmarker;
 }
@@ -40,22 +46,60 @@ export async function startHandCamera(onFrame) {
 	video.playsInline = true;
 	video.srcObject = stream;
 	await video.play();
+	const track = stream.getVideoTracks()[0];
+	/** What the tracker is doing, for the GLOVE panel. */
+	const stats = {
+		camera: track?.label ?? '',
+		delegate,
+		frames: 0,
+		hands: 0,
+		fps: 0,
+		detectMs: 0,
+		side: '',
+		score: 0,
+		result: null,
+		error: ''
+	};
 	let live = true;
 	let lastTime = -1;
+	let ts = 0;
+	let fpsFrames = 0;
+	let fpsAt = performance.now();
 	const step = () => {
 		if (!live) return;
 		if (video.readyState >= 2 && video.currentTime !== lastTime) {
 			lastTime = video.currentTime;
-			const r = hands.detectForVideo(video, performance.now());
-			const points = r.landmarks?.[0];
+			// Timestamps must only go up, even when two frames land in one millisecond.
+			ts = Math.max(ts + 1, performance.now());
+			const t0 = performance.now();
+			let r = null;
+			try {
+				r = hands.detectForVideo(video, ts);
+				stats.error = '';
+			} catch (e) {
+				stats.error = String(e?.message ?? e);
+			}
+			stats.detectMs = performance.now() - t0;
+			stats.result = r;
+			stats.frames += 1;
+			fpsFrames += 1;
+			if (t0 - fpsAt >= 1000) {
+				stats.fps = (fpsFrames * 1000) / (t0 - fpsAt);
+				fpsFrames = 0;
+				fpsAt = t0;
+			}
+			const points = r?.landmarks?.[0];
+			const cat = r?.handedness?.[0]?.[0];
+			stats.side = cat?.categoryName ?? '';
+			stats.score = cat?.score ?? 0;
+			if (points) stats.hands += 1;
 			// MediaPipe names hands as if the picture were mirrored; this video is not,
 			// so its "Left" is the person's own right hand.
-			const side = r.handedness?.[0]?.[0]?.categoryName;
 			onFrame(
 				points
 					? {
 							points: points.map(({ x, y, z }) => ({ x, y, z })),
-							handedness: side === 'Left' ? 'right' : 'left',
+							handedness: stats.side === 'Left' ? 'right' : 'left',
 							aspect: video.videoWidth / video.videoHeight || 4 / 3
 						}
 					: null
@@ -65,6 +109,8 @@ export async function startHandCamera(onFrame) {
 	};
 	requestAnimationFrame(step);
 	return {
+		video,
+		stats,
 		stop() {
 			live = false;
 			stream.getTracks().forEach((t) => t.stop());

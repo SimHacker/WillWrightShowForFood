@@ -867,8 +867,13 @@
 	let ttyOpen = $state(panelsStored.includes('tty') || !!untrack(() => programById(programId)?.tty));
 	let configOpen = $state(panelsStored.includes('config'));
 	let ringsOpen = $state(panelsStored.includes('rings'));
+	// A program's own panel (program.panel: the glove's), with its buttons, sliders and a canvas it draws.
+	let progOpen = $state(panelsStored.includes('prog') || !!untrack(() => programById(programId)?.panel));
+	let progCanvas = $state(null);
+	let progInfo = $state('');
+	const hasProgPanel = $derived(!!program?.panel);
 	function storePanels() {
-		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen };
+		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen };
 		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
 	}
 	// The last opened of these takes the figure's spare height; the others keep their size.
@@ -886,7 +891,7 @@
 		if (HUNGRY.includes(id)) panelOrder = [...panelOrder.filter((k) => k !== id), id];
 	}
 	function togglePanel(id, e) {
-		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen };
+		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen };
 		if (e.shiftKey) for (const k in open) open[k] = k === id;
 		else open[id] = !open[id];
 		if (open[id]) opened(id);
@@ -896,6 +901,7 @@
 		memOpen = open.mem;
 		ringsOpen = open.rings;
 		configOpen = open.config;
+		progOpen = open.prog;
 		storePanels();
 		refreshRegs();
 	}
@@ -1807,7 +1813,7 @@
 	let panelH = $state(
 		untrack(() =>
 			Object.fromEntries(
-				['regs', 'front', 'play', 'config', 'scan'].map((id) => [id, Number(globalThis.localStorage?.getItem(PANEL_H_KEY(id))) || PANEL_DEFAULT_H[id] || 0])
+				['regs', 'front', 'play', 'config', 'scan', 'prog'].map((id) => [id, Number(globalThis.localStorage?.getItem(PANEL_H_KEY(id))) || PANEL_DEFAULT_H[id] || 0])
 			)
 		)
 	);
@@ -2045,6 +2051,13 @@
 		if (document.hidden) {
 			lastNow = null;
 			return;
+		}
+		if (progOpen && progCanvas && program?.panel?.draw) {
+			try {
+				progInfo = program.panel.draw(progCanvas) ?? '';
+			} catch (e) {
+				progInfo = String(e?.message ?? e);
+			}
 		}
 		const dt = lastNow === null || paused ? 0 : Math.min(now - lastNow, MAX_DT_MS);
 		lastNow = now;
@@ -2415,7 +2428,7 @@
 		haltAuto = localStorage.getItem(`cabinet-halt-auto-${next.id}`) === 'on';
 		displayOpen = next.display !== false;
 		if (next.tty && !ttyOpen) togglePanel('tty', {});
-		if (next.toggles && !playOpen) togglePanel('play', {});
+		if (next.panel && !progOpen) togglePanel('prog', {});
 		if (next.speed) setSpeed(next.speed);
 		queueMicrotask(syncToggles);
 		await onReset();
@@ -2844,36 +2857,46 @@
 				disabled={!session || recording}
 				onclick={onDownloadSession}>⬇️</button
 			>
-			{#each program?.toggles ?? [] as t (t.id)}
-				<button
-					type="button"
-					class="icon"
-					class:on={toggleOn[t.id]}
-					aria-pressed={!!toggleOn[t.id]}
-					title={t.title}
-					disabled={status !== 'live'}
-					onclick={() => onToggle(t)}>{t.label}</button
-				>
-			{/each}
-			{#each program?.sliders ?? [] as s (s.id)}
-				<label class="pslider" title={s.title}
-					>{s.label}<input
-						type="range"
-						min={s.min}
-						max={s.max}
-						value={sliderValue(s)}
-						aria-label={s.title}
-						oninput={(e) => onSlider(s, e)}
-					/></label
-				>
-			{/each}
 			{#if demoOn || recording}
 				<span class="demo-caption" aria-live="polite">{demoOn ? demoCaption : 'Recording. ⏺ again to stop.'}</span>
-			{:else if toggleNote}
-				<span class="demo-caption" aria-live="polite">{toggleNote}</span>
 			{/if}
 		</div>
 		{@render grip('play', 'play')}
+		{/snippet}
+		{#snippet progRow()}
+		<div class="row app prog-row sized" role="group" aria-label={program.panel.label} style:height={panelH.prog ? `${panelH.prog}px` : null}>
+			<div class="prog-controls">
+				{#each program?.toggles ?? [] as t (t.id)}
+					<button
+						type="button"
+						class="icon"
+						class:on={toggleOn[t.id]}
+						aria-pressed={!!toggleOn[t.id]}
+						title={t.title}
+						disabled={status !== 'live'}
+						onclick={() => onToggle(t)}>{t.label}</button
+					>
+				{/each}
+				{#each program?.sliders ?? [] as s (s.id)}
+					<label class="pslider" title={s.title}
+						>{s.label}<input
+							type="range"
+							min={s.min}
+							max={s.max}
+							value={sliderValue(s)}
+							aria-label={s.title}
+							oninput={(e) => onSlider(s, e)}
+						/></label
+					>
+				{/each}
+				{#if toggleNote}<span class="demo-caption" aria-live="polite">{toggleNote}</span>{/if}
+			</div>
+			<div class="prog-view">
+				<canvas bind:this={progCanvas} class="prog-canvas" width="640" height="480" aria-label={program.panel.canvasLabel ?? program.panel.label}></canvas>
+				<pre class="prog-info">{progInfo}</pre>
+			</div>
+		</div>
+		{@render grip('prog', program.panel.label)}
 		{/snippet}
 		<div class="row ctl">
 				<span class="chips" role="group" aria-label="Panels. Shift-click shows one alone.">
@@ -2918,6 +2941,16 @@
 						aria-pressed={ringsOpen}
 						title="PIXIE rings in 3D: the live ring structure in core, or a file. Shift-click: this panel alone."
 						onclick={(e) => togglePanel('rings', e)}>RINGS</button
+					>
+					{/if}
+					{#if hasProgPanel}
+					<button
+						type="button"
+						class="chip"
+						class:on={progOpen}
+						aria-pressed={progOpen}
+						title="{program.panel.title} Shift-click: this panel alone."
+						onclick={(e) => togglePanel('prog', e)}>{program.panel.label}</button
 					>
 					{/if}
 					<button
@@ -3020,6 +3053,9 @@
 		</div>
 		{#if playOpen}
 			{@render playRow()}
+		{/if}
+		{#if progOpen && hasProgPanel}
+			{@render progRow()}
 		{/if}
 		{#if ttyOpen}
 			{@render ttyRow()}
@@ -3787,6 +3823,38 @@
 	}
 	.icon.rec {
 		background: #a22;
+	}
+	.prog-row {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0.3rem;
+		overflow: auto;
+	}
+	.prog-controls {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.3rem;
+	}
+	.prog-view {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		align-items: flex-start;
+		min-height: 0;
+	}
+	.prog-canvas {
+		width: min(100%, 320px);
+		aspect-ratio: 4 / 3;
+		background: #000;
+		border: 1px solid #333;
+	}
+	.prog-info {
+		margin: 0;
+		font-size: 0.7rem;
+		line-height: 1.25;
+		color: #9f9;
+		white-space: pre;
 	}
 	.pslider {
 		display: inline-flex;
