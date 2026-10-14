@@ -148,7 +148,9 @@ and the finger names), then loops until a key:
 - Walk the skeleton: the knuckle line, then each finger from the wrist, with a
   small box at each fingertip.
 - Fill each meter to its finger's flex.
-- Caption RIGHT or LEFT, and PINCH when thumb and index touch.
+- Caption RIGHT or LEFT, PINCH when thumb and index touch, and THE BIRD when
+  the middle finger stands alone (`BIRD?`, from the flex registers). The demo
+  hand gives it too: no gesture vocabulary is complete without it.
 
 At the teletype, after a key stops it:
 

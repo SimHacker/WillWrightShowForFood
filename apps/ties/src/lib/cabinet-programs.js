@@ -416,7 +416,7 @@ export const PROGRAMS = [
 		pixie: false,
 		title: 'A hand tracker as PDP-7 device 57: each bone a 3D turtle move (yaw, pitch, length), drawn by Forth on the 340. 🖐️ tracks your own hand.',
 		help: {
-			text: 'GLOVE is already running, with a demo hand waving through gestures. Press 🖐️ in PLAY to track your own hand with the webcam (MediaPipe, about 20 MB the first time; video stays in your browser). Press any key at the teletype to stop it and play with Forth: 60 VIEW GLOVE turns the picture 60 degrees about the hand; 3 SPINNING ! GLOVE turns it 3 degrees a frame; 0 SPINNING ! 0 VIEW GLOVE faces it again. 4 SPOT . . prints where the thumb tip was drawn, y then x.',
+			text: 'GLOVE is already running, with a demo hand waving through gestures. Press 🖐️ in PLAY to track your own hand with the webcam (MediaPipe, about 20 MB the first time; video stays in your browser). Press any key at the teletype to stop it and play with Forth: 60 VIEW GLOVE turns the picture 60 degrees about the hand; 3 SPINNING ! GLOVE turns it 3 degrees a frame; 0 SPINNING ! 0 VIEW GLOVE faces it again. 4 SPOT . . prints where the thumb tip was drawn, y then x. BIRD? . tells you whether you are being given the bird.',
 			links: [
 				{ label: 'HAND-TRACKING.md', href: `${CABINET}/HAND-TRACKING.md` },
 				{ label: 'glove.fs', href: `${CABINET}/tapes/pdp7forth/glove.fs` },

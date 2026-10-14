@@ -168,6 +168,7 @@ export const GESTURES: readonly { name: string; curls: readonly number[] }[] = [
 	{ name: "open", curls: [0, 0, 0, 0, 0] },
 	{ name: "fist", curls: [1, 1, 1, 1, 1] },
 	{ name: "point", curls: [1, 0, 1, 1, 1] },
+	{ name: "bird", curls: [1, 1, 0, 1, 1] },
 	{ name: "victory", curls: [1, 0, 0, 1, 1] },
 	{ name: "i love you", curls: [0, 0, 1, 1, 0] },
 	{ name: "three", curls: [1, 0, 0, 0, 1] },

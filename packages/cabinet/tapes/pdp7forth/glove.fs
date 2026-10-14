@@ -92,9 +92,16 @@ variable still   variable still-x   variable still-y
   still @ dl> !  still-x @ bx !  still-y @ by ! ;
 
 variable spinning
+: flex ( finger -- n ) g-flex + reg ;
+\ BIRD? ( -- flag )  the middle finger up, the other three down.
+\ The thumb can do as it likes.
+: bird? ( -- flag )
+  2 flex 4096 <  1 flex 12288 > and
+  3 flex 12288 > and  4 flex 12288 > and ;
 : captions ( -- )
   0 reg 2 and if s" RIGHT" else s" LEFT" then 512 990 centred
-  g-pinch reg 40 < if s" PINCH" 512 960 centred then ;
+  g-pinch reg 40 < if s" PINCH" 512 960 centred then
+  bird? if s" THE BIRD" 512 930 centred then ;
 : frame ( -- )
   rewind  spinning @ spin +!
   glove-hand? if hand captions else s" NO HAND" 512 600 centred then

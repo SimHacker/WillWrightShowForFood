@@ -164,6 +164,18 @@ test("forth: GLOVE's turtle lands every finger where the camera saw it", () => {
 	}
 });
 
+test("forth: BIRD? knows the bird, and only the bird", () => {
+	const glove = new DataGlove();
+	const m = forthMachine(glove);
+	for (const g of GESTURES) {
+		glove.feed(syntheticHand({ curls: g.curls }));
+		const out = m.line("GLOVE-LATCH BIRD? .");
+		const [flag = NaN] = nums(out.slice(out.indexOf("BIRD? .") + 7));
+		assert.equal(flag !== 0, g.name === "bird", `${g.name}: ${flag}`);
+	}
+	assert.ok(GESTURES.some((g) => g.name === "bird"), "the demo hand gives it");
+});
+
 test("forth: GLOVE draws the waving hand and its flex meters until a key", () => {
 	const glove = new DataGlove({ source: wavingHand, framePeriod: 200_000 });
 	const m = forthMachine(glove);
