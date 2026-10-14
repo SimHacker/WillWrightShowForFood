@@ -91,6 +91,22 @@ variable still   variable still-x   variable still-y
   131072 still @ !  1024 still @ 1+ !
   still @ dl> !  still-x @ bx !  still-y @ by ! ;
 
+\ FIT ( -- )  scale and centre the hand between the meters and the
+\ captions, whatever its size in the camera, from the box around its
+\ 21 points. Turns go about the hand's centre. A small hand is
+\ enlarged at most 8 to 5.
+79 constant g-points
+variable lox   variable hix   variable loy   variable hiy
+: widen ( v lo hi -- ) >r over over @ min swap !  r@ @ max r> ! ;
+: fit ( -- )
+  32767 lox !  -32767 hix !  32767 loy !  -32767 hiy !
+  g-points glove-index!
+  21 0 do glove@+ lox hix widen  glove@+ loy hiy widen  glove@+ drop
+  loop
+  hix @ lox @ -  hiy @ loy @ -  max  400 max  vden !  640 vnum !
+  lox @ hix @ + 2 /  dup 16 * pivx !  vnum @ vden @ */ 512 swap - vox !
+  loy @ hiy @ + 2 /  vnum @ vden @ */ 570 swap - voy !  0 pivz ! ;
+
 variable spinning
 : flex ( finger -- n ) g-flex + reg ;
 \ BIRD? ( -- flag )  the middle finger up, the other three down.
@@ -104,7 +120,7 @@ variable spinning
   bird? if s" THE BIRD" 512 930 centred then ;
 : frame ( -- )
   rewind  spinning @ spin +!
-  glove-hand? if hand captions else s" NO HAND" 512 600 centred then
+  glove-hand? if fit hand captions else s" NO HAND" 512 600 centred then
   tag" Flex" 5 0 do i level loop  notag ;
 : show ( -- ) dsp-stopped? if dlist dsp-start then ;
 

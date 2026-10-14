@@ -157,6 +157,9 @@ Positions are kept in 1/16 pixel, so a long walk doesn't drift.
 and the finger names), then loops until a key:
 
 - Latch a new frame.
+- Fit the hand to the screen (`FIT`): scale and centre it from the box
+  around its 21 points, so a hand close to the camera, or half out of the
+  picture, still fills the space between the meters and the captions.
 - Walk the skeleton: the knuckle line, then each finger from the wrist, with a
   small box at each fingertip.
 - Fill each meter to its finger's flex.

@@ -176,6 +176,23 @@ test("forth: BIRD? knows the bird, and only the bird", () => {
 	assert.ok(GESTURES.some((g) => g.name === "bird"), "the demo hand gives it");
 });
 
+test("forth: FIT keeps a hand on the screen, however big or off the edge the camera has it", () => {
+	const glove = new DataGlove();
+	const m = forthMachine(glove);
+	for (const o of [{ size: 0.9, x: 0.3, y: 0.95 }, { size: 0.15, x: 0.8, y: 0.5 }, { size: 0.6, x: -0.05, y: 1.0 }]) {
+		glove.feed({ ...syntheticHand({ curls: [0, 0, 0, 0, 0], ...o }), aspect: 4 / 3 });
+		m.line("GLOVE-LATCH 0 SPIN ! NEW-FRAME FIT HAND");
+		const at = [0, 4, 8, 12, 16, 20].map((i) => {
+			const out = m.line(`${i} SPOT . .`);
+			const [y = NaN, x = NaN] = nums(out.slice(out.indexOf(". .") + 3));
+			return [x, y] as const;
+		});
+		for (const [x, y] of at) assert.ok(x > 100 && x < 924 && y > 220 && y < 920, `${JSON.stringify(o)}: ${x},${y}`);
+		const ys = at.map((p) => p[1]!);
+		assert.ok(Math.max(...ys) - Math.min(...ys) > 250, `${JSON.stringify(o)}: big enough to see`);
+	}
+});
+
 test("forth: GLOVE draws the waving hand and its flex meters until a key", () => {
 	const glove = new DataGlove({ source: wavingHand, framePeriod: 200_000 });
 	const m = forthMachine(glove);
