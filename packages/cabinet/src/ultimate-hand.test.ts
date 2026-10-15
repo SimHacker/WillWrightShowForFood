@@ -78,10 +78,14 @@ test("ultimate hand: one appearance is one round; the press waits for a fingerti
 	assert.equal(m.um.arm, UM_MAX);
 	run(m, yours(fist), 2_000_000);
 	assert.equal(phase(m), UM_PHASE.reach, "a fist stops short, and the box waits for as long as you like");
+	run(m, null, 1_000_000);
+	run(m, demo(), 2_000_000);
+	assert.equal(phase(m), UM_PHASE.reach, "your hand lost: the box still waits, and the demo hand can't press");
+	assert.equal(m.um.presses, 0);
 	assert.equal(m.um.presses, 0);
 	assert.equal(m.t340.status & 0o5000, 0, "nothing ran off the glass");
-	run(m, yours([1, 1, 0, 1, 1]), 1_000_000);
-	assert.equal(m.um.presses, 1, "the middle finger up touches the switch: the press");
+	run(m, yours([1, 1, 0, 1, 1]), 3_000_000);
+	assert.equal(m.um.presses, 1, "back again, the middle finger up touches the switch: the press");
 	run(m, yours(fist), 4_000_000);
 	assert.equal(phase(m), UM_PHASE.off, "home and rested");
 	run(m, yours(fist), 2_000_000);

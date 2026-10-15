@@ -89,12 +89,10 @@ variable armed   -1 armed !
   then
   um-phase ph-reach = um-arm 1000 = and if
     real? if touching? if um-off then then
-  then
-  \ Your hand gone on the way out: the box gives up and goes home. The
-  \ demo hand never opens it, or carries it on.
-  um-phase dup 0> swap 4 < and  um-arm 1000 < and if
-    real? 0= if um-off then
   then ;
+\ Only your hand opens the box or touches the switch. Lose it on the way
+\ out and the box goes on, and waits at the switch for you to come back;
+\ the demo hand only keeps it company meanwhile.
 
 : prompt ( -- )
   um-phase ph-off = if
@@ -105,10 +103,13 @@ variable armed   -1 armed !
     s" TOUCH THE SWITCH" 512 30 centred
   then ;
 
+variable was
 : uframe ( -- )
   new-frame  s" THE ULTIMATE MACHINE DATA HAND" 512 975 centred
   box  switch
-  um-phase ph-off = if hand-seen? if null then then
+  \ Sized afresh whenever the hand changes hands: yours, or the demo's.
+  0 reg 4 and was @ <> um-phase ph-off = or if hand-seen? if null then then
+  0 reg 4 and was !
   hand-seen? if place-hand hand notag then
   arm notag
   lid notag  prompt ;
