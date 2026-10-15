@@ -39,11 +39,14 @@
 		ST340_VEDGE
 	} from '@wwsff/cabinet';
 	import { implant } from '@wwsff/pixie';
-	import { PROGRAMS, DEFAULT_PROGRAM, programById } from './cabinet-programs.js';
+	import { PROGRAMS, DEFAULT_PROGRAM } from './cabinet-programs.js';
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
 
 	let { spec, embedded = false } = $props();
+
+	const programs = PROGRAMS.map((p) => p.createInstance?.() ?? p);
+	const programById = (id) => programs.find((p) => p.id === id) ?? null;
 
 	// The spec picks the first program; after that the menu owns it.
 	let programId = $state(untrack(() => spec.program ?? DEFAULT_PROGRAM));
@@ -2054,7 +2057,7 @@
 		}
 		if (progOpen && progCanvas && program?.panel?.draw) {
 			try {
-				progInfo = program.panel.draw(progCanvas) ?? '';
+				progInfo = program.panel.draw(progCanvas, { box, t340 }) ?? '';
 			} catch (e) {
 				progInfo = String(e?.message ?? e);
 			}
@@ -2392,21 +2395,28 @@
 	}
 
 	async function onToggle(t) {
+		const owner = program;
 		const want = !toggleOn[t.id];
 		toggleNote = want && t.starting ? t.starting : '';
 		toggleOn = { ...toggleOn, [t.id]: want };
 		try {
-			toggleOn = { ...toggleOn, [t.id]: !!(await t.set(want)) };
+			const pending = t.set(want);
+			syncToggles();
+			const on = await pending;
+			if (program !== owner) return;
+			toggleOn = { ...toggleOn, [t.id]: !!on };
 			toggleNote = '';
 			syncToggles();
 		} catch (e) {
+			if (program !== owner) return;
 			toggleOn = { ...toggleOn, [t.id]: false };
 			toggleNote = `${t.label} ${e?.message ?? e}`;
 		}
 	}
 
 	function stopToggles() {
-		for (const t of program?.toggles ?? []) if (toggleOn[t.id] && !t.on) t.set(false).catch(() => {});
+		program?.dispose?.();
+		for (const t of program?.toggles ?? []) if (toggleOn[t.id] && !t.on) t.set(false).catch((e) => console.error('cabinet toggle cleanup', e));
 		toggleOn = {};
 		toggleNote = '';
 	}

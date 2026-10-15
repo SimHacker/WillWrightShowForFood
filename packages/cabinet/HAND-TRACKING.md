@@ -11,12 +11,20 @@ GLOVE panel comes from one of three places:
   takes the hand over and holds it still.
 - **🖐️ Camera**: your own hand, through MediaPipe on the webcam.
 
+These inputs are exclusive. Selecting the camera stops the demo immediately,
+including while the camera is loading. Each cabinet owns its own
+[glove controller](../../apps/ties/src/lib/glove-controller.js); camera callbacks
+feed that cabinet's current device, including after a reset. Switching to
+manual or demo input, leaving the program, or removing the applet stops the
+camera and invalidates late callbacks.
+
 Below the buttons, the panel shows the pipeline for debugging: the camera,
 mirrored, with the tracker's 21 points and bones drawn over it (fingertips
 yellow, wrist magenta, nearer points bigger). Beside it are the tracker's
 state (GPU or CPU, frames a second, milliseconds a frame, frames with a hand,
 the side MediaPipe saw and how sure it was) and the device's latched registers
-(status, wrist, flex per finger, pinch).
+(status, wrist, flex per finger, pinch). The `340` line reports display frames
+and the hardware status in octal, separately from the device's latch count.
 
 This is the DataGlove row of [ROADMAP §13](ROADMAP.md#13-emulation-mash-ups),
 split the way that section splits every device:
@@ -213,6 +221,12 @@ input stage. The turtle walk is the skeleton. `VIEW` at ±3 degrees on two
   6502 runs.
 
 ## Tests
+
+The app-side [routing tests](../../apps/ties/src/lib/glove-controller.test.js)
+run with `node --test src/lib/glove-controller.test.js` from `apps/ties`
+(after building `packages/cabinet`). They check independent cabinets, camera
+startup cancellation, reset routing, and actual 340 meter strokes produced
+by Forth for camera-fed fist, open-hand and bird poses.
 
 [glove.test.ts](src/glove.test.ts) checks that:
 

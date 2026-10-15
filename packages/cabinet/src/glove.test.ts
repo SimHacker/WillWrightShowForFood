@@ -131,7 +131,7 @@ function forthMachine(glove: DataGlove) {
 		for (let n = 0; n < 400 && !/ok\r\n$/.test(paper.slice(from)); n += 1) box.run(50_000);
 		return paper.slice(from);
 	};
-	return { box, line, type, frame: () => last, paper: () => paper };
+	return { box, cpu, t340, line, type, frame: () => last, paper: () => paper };
 }
 
 const nums = (s: string) => (s.match(/-?\d+/g) ?? []).map(Number);
@@ -190,6 +190,35 @@ test("forth: FIT keeps a hand on the screen, however big or off the edge the cam
 		for (const [x, y] of at) assert.ok(x > 100 && x < 924 && y > 220 && y < 920, `${JSON.stringify(o)}: ${x},${y}`);
 		const ys = at.map((p) => p[1]!);
 		assert.ok(Math.max(...ys) - Math.min(...ys) > 250, `${JSON.stringify(o)}: big enough to see`);
+	}
+});
+
+test("forth: GLOVE refreshes the display after changing hand and handedness", () => {
+	const glove = new DataGlove();
+	const m = forthMachine(glove);
+	m.type("GLOVE\n");
+	let seed = 7;
+	const random = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+	for (let i = 0; i < 100; i += 1) {
+		const f = syntheticHand({
+			curls: Array.from({ length: 5 }, random),
+			handedness: i % 2 ? "left" : "right",
+			size: 0.15 + random() * 0.7,
+			x: random(),
+			y: 0.5 + random() * 0.5,
+			heading: random() * 120 - 60,
+		});
+		for (let j = 0; j < 12; j += 1) {
+			glove.feed(f);
+			m.box.run(100_000);
+		}
+		const before = m.t340.frame;
+		for (let j = 0; j < 12; j += 1) {
+			glove.feed(f);
+			m.box.run(100_000);
+		}
+		assert.ok(m.t340.frame > before, `hand ${i}: display status ${m.t340.status.toString(8)}`);
+		assert.equal(glove.registers()[0], i % 2 ? 1 : 3);
 	}
 });
 

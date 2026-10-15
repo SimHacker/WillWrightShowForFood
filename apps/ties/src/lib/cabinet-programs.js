@@ -39,15 +39,13 @@ import {
 	turingDemo,
 	TuringDevice,
 	UltimateMachine,
-	DataGlove,
-	wavingHand,
-	syntheticHand,
 	HAND_CHAINS,
 	GLOVE_REG,
 	UM_DEFAULT_TIMING,
 	spokenNumbers
 } from '@wwsff/cabinet';
 import { loadSymelec } from './symelec-boot.js';
+import { createGloveController } from './glove-controller.js';
 import { symelecHint } from './symelec-hints.js';
 import page6 from '../../../../packages/cabinet/tapes/lp370/page6.s?raw';
 import lp370 from '../../../../packages/cabinet/tapes/lp370/lp370.s?raw';
@@ -81,33 +79,14 @@ const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 const REPO = 'https://github.com/SimHacker/WillWrightShowForFood/blob/main';
 const CABINET = `${REPO}/packages/cabinet`;
 
-/** The DATAGLOVE entry's device, and its webcam while 🖐️ is on. */
-let glove = null;
-let handCamera = null;
-/** Where the glove's hand comes from: 'demo' (waving), 'manual' (the sliders) or 'camera'. */
-let handMode = 'demo';
-/** The sliders' hand: curl per finger 0..1, thumb first, and a turn in degrees. */
-const sliderHand = { curls: [0, 0, 0, 0, 0], heading: 0 };
-const manualHand = () => syntheticHand({ curls: sliderHand.curls, heading: sliderHand.heading, x: 0.5, y: 0.82, size: 0.32 });
-// The demo waves in wall-clock seconds, so it keeps its pace at any machine speed.
-const t0 = typeof performance === 'undefined' ? 0 : performance.now();
-const demoHand = () => wavingHand((performance.now() - t0) / 1000);
-const handSource = () => (handMode === 'camera' ? null : handMode === 'manual' ? manualHand : demoHand);
-function setHandMode(mode) {
-	if (mode !== 'camera' && handCamera) {
-		handCamera.stop();
-		handCamera = null;
-	}
-	handMode = mode;
-	if (glove) glove.source = handSource();
-}
 /**
  * The GLOVE panel's picture, every animation frame: the camera mirrored with the
  * tracker's 21 points over it, or the demo or slider hand on black. Returns the
  * text beside it: where the hand comes from, the tracker's state, and the
  * device's registers as the PDP-7 last latched them.
  */
-function drawGlovePanel(canvas) {
+function drawGlovePanel(canvas, { glove, handCamera, handMode }, { box, t340 }) {
+	if (!box.devices.includes(glove)) throw new Error('GLOVE controls are not connected to this cabinet');
 	const ctx = canvas.getContext('2d');
 	const W = canvas.width;
 	const H = canvas.height;
@@ -163,6 +142,7 @@ function drawGlovePanel(canvas) {
 				]
 			: []),
 		`device   fed ${glove?.frames ?? 0}, latched ${glove?.latches ?? 0}`,
+		`340      frames ${t340.frame}, status ${t340.status.toString(8)}`,
 		`status   ${r[GLOVE_REG.status] ?? 0}${r[GLOVE_REG.status] & 1 ? (r[GLOVE_REG.status] & 2 ? ' right' : ' left') : ' no hand'}`,
 		`wrist    ${r.slice(GLOVE_REG.wrist, GLOVE_REG.wrist + 3).join(' ')}`,
 		`flex %   T${flex[0]} I${flex[1]} M${flex[2]} R${flex[3]} P${flex[4]}`,
@@ -171,18 +151,24 @@ function drawGlovePanel(canvas) {
 	return lines.join('\n');
 }
 
-const FINGER_SLIDERS = ['THUMB', 'INDEX', 'MIDDLE', 'RING', 'PINKY'].map((name, i) => ({
-	id: `curl${i}`,
-	label: name[0],
-	title: `${name}: drag to curl it (0 straight, 100 curled). Takes the hand from the demo or the camera.`,
-	min: 0,
-	max: 100,
-	get: () => Math.round(sliderHand.curls[i] * 100),
-	set(v) {
-		sliderHand.curls[i] = v / 100;
-		if (handMode !== 'manual') setHandMode('manual');
-	}
-}));
+function gloveControls() {
+	const controller = createGloveController();
+	return {
+		peripherals: controller.peripherals,
+		toggles: controller.toggles,
+		sliders: controller.sliders,
+		dispose: controller.dispose,
+		panel: {
+			label: 'GLOVE',
+			title: 'The DataGlove: where the hand comes from, and what the tracker sees.',
+			canvasLabel: 'The camera, mirrored, with the hand the tracker found drawn over it',
+			draw: (canvas, cabinet) => drawGlovePanel(canvas, controller.snapshot(), cabinet)
+		},
+		createInstance() {
+			return { ...this, ...gloveControls() };
+		}
+	};
+}
 
 const LP = LP370_SWITCHES;
 let lp370Program = null;
@@ -509,59 +495,7 @@ export const PROGRAMS = [
 		speed: 10,
 		// The waving hand is the demo; the Forth README demo would only stop it.
 		demo: null,
-		// A reset makes a new glove; a running camera feeds whichever glove is current.
-		peripherals: () => {
-			glove = new DataGlove({ source: handSource() });
-			return [glove];
-		},
-		toggles: [
-			{
-				id: 'demo',
-				label: '👋',
-				title: 'The demo hand, waving through gestures. Off: the sliders hold the hand still.',
-				on: () => handMode === 'demo',
-				async set(on) {
-					setHandMode(on ? 'demo' : 'manual');
-					return handMode === 'demo';
-				}
-			},
-			{
-				id: 'camera',
-				label: '🖐️',
-				title: 'Track your hand with the webcam (MediaPipe, about 20 MB the first time). Off: the sliders.',
-				starting: '🖐️ Loading the hand tracker (about 20 MB the first time), then asking for the camera…',
-				on: () => handMode === 'camera',
-				async set(on) {
-					if (on && !handCamera) {
-						const { startHandCamera } = await import('./hand-camera.js');
-						handCamera = await startHandCamera((f) => glove?.feed(f));
-						setHandMode('camera');
-					} else if (!on && handCamera) setHandMode('manual');
-					return handMode === 'camera';
-				}
-			}
-		],
-		panel: {
-			label: 'GLOVE',
-			title: 'The DataGlove: where the hand comes from, and what the tracker sees.',
-			canvasLabel: 'The camera, mirrored, with the hand the tracker found drawn over it',
-			draw: drawGlovePanel
-		},
-		sliders: [
-			...FINGER_SLIDERS,
-			{
-				id: 'turn',
-				label: '↻',
-				title: 'Turn the hand, degrees: left negative, right positive.',
-				min: -60,
-				max: 60,
-				get: () => sliderHand.heading,
-				set(v) {
-					sliderHand.heading = v;
-					if (handMode !== 'manual') setHandMode('manual');
-				}
-			}
-		]
+		...gloveControls()
 	}),
 	forthProgram({
 		id: 'ultimate',
