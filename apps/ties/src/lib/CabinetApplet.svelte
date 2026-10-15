@@ -2886,6 +2886,7 @@
 					<button
 						type="button"
 						class="icon"
+						class:wide={t.label.length > 2}
 						class:on={toggleOn[t.id]}
 						aria-pressed={!!toggleOn[t.id]}
 						title={t.title}
@@ -3845,6 +3846,12 @@
 	}
 	.icon.rec {
 		background: #a22;
+	}
+	.icon.wide {
+		width: auto;
+		padding: 0.15rem 0.5rem;
+		white-space: nowrap;
+		gap: 0.3rem;
 	}
 	.prog-row {
 		flex-direction: column;
