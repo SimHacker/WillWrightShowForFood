@@ -107,6 +107,12 @@ variable lox   variable hix   variable loy   variable hiy
   lox @ hix @ + 2 /  dup 16 * pivx !  vnum @ vden @ */ 512 swap - vox !
   loy @ hiy @ + 2 /  vnum @ vden @ */ 570 swap - voy !  0 pivz ! ;
 
+\ FITTING off: the hand where the camera has it, the screen a mirror of
+\ the picture; what is past the edge is clipped (turtle3d.fs's LINE), so
+\ a hand can walk on from the side of the stage, fingers first.
+variable fitting   -1 fitting !
+: as-seen ( -- ) 1 vnum !  1 vden !  0 vox !  0 voy !  8192 pivx !  0 pivz ! ;
+
 variable spinning
 : flex ( finger -- n ) g-flex + reg ;
 \ BIRD? ( -- flag )  the middle finger up, the other three down.
@@ -118,9 +124,10 @@ variable spinning
   0 reg 2 and if s" RIGHT" else s" LEFT" then 512 990 centred
   g-pinch reg 40 < if s" PINCH" 512 960 centred then
   bird? if s" THE BIRD" 512 930 centred then ;
+: placed ( -- ) fitting @ if fit else as-seen then ;
 : frame ( -- )
   rewind  spinning @ spin +!
-  glove-hand? if fit hand captions else s" NO HAND" 512 600 centred then
+  glove-hand? if placed hand captions else s" NO HAND" 512 600 centred then
   tag" Flex" 5 0 do i level loop  notag ;
 : show ( -- ) dsp-stopped? if dlist dsp-start then ;
 

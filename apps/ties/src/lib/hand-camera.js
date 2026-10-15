@@ -36,16 +36,36 @@ export async function getLandmarker() {
 	return landmarker;
 }
 
-export async function startHandCamera(onFrame) {
-	const [hands, stream] = await Promise.all([
-		getLandmarker(),
-		navigator.mediaDevices.getUserMedia({ video: { width: 640, height: 480, facingMode: 'user' }, audio: false })
-	]);
-	const video = document.createElement('video');
-	video.muted = true;
-	video.playsInline = true;
-	video.srcObject = stream;
-	await video.play();
+export async function startHandCamera(onFrame, { signal } = {}) {
+	signal?.throwIfAborted();
+	const stream = await navigator.mediaDevices.getUserMedia({
+		video: { width: 640, height: 480, facingMode: 'user' }, audio: false
+	});
+	let video = null;
+	let live = true;
+	const stop = () => {
+		live = false;
+		stream.getTracks().forEach((t) => t.stop());
+		if (video) video.srcObject = null;
+		signal?.removeEventListener('abort', stop);
+	};
+	signal?.addEventListener('abort', stop, { once: true });
+	let hands;
+	try {
+		// A permission prompt cannot be cancelled; release a late grant before loading anything.
+		signal?.throwIfAborted();
+		hands = await getLandmarker();
+		signal?.throwIfAborted();
+		video = document.createElement('video');
+		video.muted = true;
+		video.playsInline = true;
+		video.srcObject = stream;
+		await video.play();
+		signal?.throwIfAborted();
+	} catch (error) {
+		stop();
+		throw error;
+	}
 	const track = stream.getVideoTracks()[0];
 	/** What the tracker is doing, for the GLOVE panel. */
 	const stats = {
@@ -60,7 +80,6 @@ export async function startHandCamera(onFrame) {
 		result: null,
 		error: ''
 	};
-	let live = true;
 	let lastTime = -1;
 	let ts = 0;
 	let fpsFrames = 0;
@@ -111,10 +130,6 @@ export async function startHandCamera(onFrame) {
 	return {
 		video,
 		stats,
-		stop() {
-			live = false;
-			stream.getTracks().forEach((t) => t.stop());
-			video.srcObject = null;
-		}
+		stop
 	};
 }

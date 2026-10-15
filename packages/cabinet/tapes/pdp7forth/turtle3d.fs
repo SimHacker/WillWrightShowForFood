@@ -4,7 +4,7 @@
 \ already use, 16384 to 1. YAW turns right about U, PITCH noses up about
 \ L, ROLL rolls right about H; FWD moves along H. Each turn is the same
 \ two-vector rotation, so there is no gimbal lock and nothing to invert.
-\ Needs turtle.fs (SIN, COS, VEC, DLIST).
+\ Needs turtle.fs (SIN, COS, VEC, DLIST) and clip.fs (CLIP, IN?).
 \
 \ Space is the screen's pixels, x right, y up, z toward the viewer; the
 \ position is kept in 1/16 pixel so rounding doesn't add up. The picture
@@ -34,20 +34,23 @@ variable t-cos   variable t-sin   variable t-a   variable t-b   variable t-a'
 \ The view.
 variable spin   variable pivx   variable pivz
 variable vnum   variable vden   variable vox   variable voy
-\ Vectors off the edge upset the 340.
-: edge ( pixel -- pixel ) 16 max 1007 min ;
+\ Places may be off the glass: LINE clips what it draws to it.
 : place ( x y z -- sx sy ) \ 1/16 pixels in space to pixels on the screen
   pivz @ -  rot pivx @ -  spin @ cos 16384 */  swap spin @ sin 16384 */ +
-  pivx @ +  vnum @ vden @ */ 16 /  vox @ +  edge
-  swap vnum @ vden @ */ 16 /  voy @ +  edge ;
+  pivx @ +  vnum @ vden @ */ 16 /  vox @ +
+  swap vnum @ vden @ */ 16 /  voy @ + ;
 : at3 ( -- sx sy ) t3 @  t3 1+ @  t3 2 + @  place ;
 
-\ Drawing on the screen: the beam's place is kept here, and VEC lays
-\ down the vectors to the next one, bright or not as its PEN says.
-variable bx   variable by
+\ Drawing on the screen. BX, BY is the beam, always on the glass (text
+\ moves it too); GX, GY is where the pen is, which may be off it. LINE
+\ draws only the part of its line on the glass (clip.fs), so a
+\ hand can walk on from the edge, and BEAM goes nowhere until it's back.
+variable bx   variable by   variable gx   variable gy
 : (go) ( x y bright -- ) pen !  2dup by @ - swap bx @ - swap vec  by ! bx ! ;
-: beam ( x y -- ) 0 (go) ;
-: line ( x y -- ) -1 (go) ;
+: beam ( x y -- ) 2dup gy ! gx !
+  over in? over in? and if 0 (go) else 2drop then ;
+: line ( x y -- ) gx @ xa !  gy @ ya !  2dup yb ! xb !  gy ! gx !
+  clip if  xa @ ya @ 0 (go)  xb @ yb @ -1 (go)  then ;
 
 variable pen3
 : step ( n -- ) 3 0 do dup hv i + @ 1024 */  t3 i + +! loop drop ;

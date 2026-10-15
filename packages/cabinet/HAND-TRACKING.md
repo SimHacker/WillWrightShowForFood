@@ -4,19 +4,35 @@ A webcam hand tracker running in the browser, plugged into the emulated PDP-7
 as **device 57**. Forth programs read the hand, then draw it on the Type 340
 in 3D. On the cabinet menu it is **DATAGLOVE (2026)**, which runs
 [glove.fs](tapes/pdp7forth/glove.fs) at 10× a real PDP-7. The hand in the
-GLOVE panel comes from one of three places:
+GLOVE panel starts automatically when DATAGLOVE is selected (and **only** then).
+There is nothing to click in the app: allow the browser's camera prompt and
+hold up your hand.
 
-- **👋 Demo**: a hand waving through gestures.
+- **Auto / camera** (default): your hand takes over immediately when detected.
+  After **one second** without a detected hand, a clearly labeled synthetic
+  hand returns, waving and changing gestures to invite you back. Brief tracking
+  dropouts hold your last pose rather than flickering into the demo.
+- **Synthetic attract mode**: runs while permission is pending, the tracker is
+  loading, the camera is unavailable, or no hand is visible. The panel says
+  **PLEASE ENABLE THE CAMERA** before startup completes, then **SHOW YOUR HAND**
+  once the tracker is ready. It invites imitation of open, fist, point, bird,
+  victory, I-love-you and three gestures. These are procedural; recorded
+  beckoning and other performances can be added later.
+- **👋 Demo**: optional synthetic-only mode, with the camera turned off.
 - **Sliders**: T I M R P curl each finger, ↻ turns the hand. Touching one
   takes the hand over and holds it still.
-- **🖐️ Camera**: your own hand, through MediaPipe on the webcam.
 
-These inputs are exclusive. Selecting the camera stops the demo immediately,
-including while the camera is loading. Each cabinet owns its own
+Live and synthetic poses never drive the device at the same time. In auto
+mode the tracker keeps looking even during attract mode; no second click is
+needed to take over. Camera denial or startup failure leaves the show running
+with an explicit error and permission/retry instructions, not a blank display.
+**RETRY CAMERA** retries after changing browser permissions. Auto / camera
+can also be toggled off for privacy. Each cabinet owns its own
 [glove controller](../../apps/ties/src/lib/glove-controller.js); camera callbacks
 feed that cabinet's current device, including after a reset. Switching to
 manual or demo input, leaving the program, or removing the applet stops the
-camera and invalidates late callbacks.
+camera and invalidates late callbacks. A late permission grant after leaving
+releases its stream without starting the tracker.
 
 Below the buttons, the panel shows the pipeline for debugging: the camera,
 mirrored, with the tracker's 21 points and bones drawn over it (fingertips
@@ -25,6 +41,14 @@ state (GPU or CPU, frames a second, milliseconds a frame, frames with a hand,
 the side MediaPipe saw and how sure it was) and the device's latched registers
 (status, wrist, flex per finger, pinch). The `340` line reports display frames
 and the hardware status in octal, separately from the device's latch count.
+
+GLOVE normally scales and centres the hand (`FIT`). `0 FITTING !` draws it
+where the camera has it instead, so a hand can walk on from the side of the
+stage, fingers first. Either way, lines that leave the glass are clipped
+(Cohen–Sutherland, [clip.fs](tapes/pdp7forth/clip.fs)) by turtle3d.fs's
+`LINE`, never sent to the 340, whose edge flag would stop the picture. Only
+DATAGLOVE loads clip.fs: the 2D turtle still refuses off-screen moves, since
+cartridges such as the Turing machines have little dictionary to spare.
 
 This is the DataGlove row of [ROADMAP §13](ROADMAP.md#13-emulation-mash-ups),
 split the way that section splits every device:
@@ -63,7 +87,7 @@ A survey of what runs in a browser, as of October 2026, with versions from npm:
 MediaPipe wins on accuracy, speed, size and licence, and it gives 3D points
 with a stable numbering that everything else (kalidokit, fingerpose, WebXR
 mappings) already speaks. The applet imports it lazily, so nobody downloads
-it until they press 🖐️.
+it until they select DATAGLOVE.
 
 One trap: MediaPipe names hands *as if the picture were mirrored*. A webcam's
 raw video is not mirrored, so its "Left" is the person's own right hand.

@@ -85,7 +85,7 @@ const CABINET = `${REPO}/packages/cabinet`;
  * text beside it: where the hand comes from, the tracker's state, and the
  * device's registers as the PDP-7 last latched them.
  */
-function drawGlovePanel(canvas, { glove, handCamera, handMode }, { box, t340 }) {
+function drawGlovePanel(canvas, { glove, handCamera, handMode, instructions }, { box, t340 }) {
 	if (!box.devices.includes(glove)) throw new Error('GLOVE controls are not connected to this cabinet');
 	const ctx = canvas.getContext('2d');
 	const W = canvas.width;
@@ -97,7 +97,11 @@ function drawGlovePanel(canvas, { glove, handCamera, handMode }, { box, t340 }) 
 	const video = handCamera?.video;
 	// Mirror the picture, as people expect of a webcam; the points are in the unmirrored image.
 	ctx.setTransform(-1, 0, 0, 1, W, 0);
-	if (handMode === 'camera' && video?.readyState >= 2) ctx.drawImage(video, 0, 0, W, H);
+	if (video?.readyState >= 2) {
+		ctx.globalAlpha = handMode === 'camera' ? 1 : 0.3;
+		ctx.drawImage(video, 0, 0, W, H);
+		ctx.globalAlpha = 1;
+	}
 	// Over the camera, only what the tracker sees in this video frame; otherwise the hand the glove was fed.
 	const pts = handMode === 'camera' ? st?.result?.landmarks?.[0] : null;
 	const f = handMode === 'camera' ? (pts ? { points: pts, handedness: glove?.last?.handedness } : null) : (glove?.last ?? null);
@@ -121,15 +125,12 @@ function drawGlovePanel(canvas, { glove, handCamera, handMode }, { box, t340 }) 
 	}
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
 	ctx.font = '20px monospace';
-	ctx.fillStyle = f ? '#3f3' : '#f66';
-	ctx.fillText(f ? `${f.handedness?.toUpperCase() ?? ''} HAND` : 'NO HAND', 10, 26);
-	if (handMode === 'camera' && !(video?.readyState >= 2)) {
-		ctx.fillStyle = '#ccc';
-		ctx.fillText('waiting for the camera…', 10, H / 2);
-	}
+	ctx.fillStyle = handMode === 'camera' ? '#3f3' : '#ff4';
+	ctx.fillText(handMode === 'camera' ? `LIVE — ${f?.handedness?.toUpperCase() ?? ''} HAND` : handMode === 'manual' ? 'MANUAL HAND' : 'SYNTHETIC DEMO — NOT YOUR HAND', 10, 26);
 	const r = glove?.registers() ?? [];
 	const flex = r.slice(GLOVE_REG.flex, GLOVE_REG.flex + 5).map((v) => String(Math.round((v * 100) / 16384)).padStart(3));
 	const lines = [
+		instructions.title,
 		`source   ${handMode}`,
 		...(st
 			? [
@@ -158,10 +159,12 @@ function gloveControls() {
 		toggles: controller.toggles,
 		sliders: controller.sliders,
 		dispose: controller.dispose,
+		activate: controller.activate,
 		panel: {
 			label: 'GLOVE',
 			title: 'The DataGlove: where the hand comes from, and what the tracker sees.',
 			canvasLabel: 'The camera, mirrored, with the hand the tracker found drawn over it',
+			instructions: () => controller.snapshot().instructions,
 			draw: (canvas, cabinet) => drawGlovePanel(canvas, controller.snapshot(), cabinet)
 		},
 		createInstance() {
@@ -202,6 +205,7 @@ const FORTH_EXTRAS = {
 	'interrupt.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/interrupt.fs?raw'),
 	'tags.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/tags.fs?raw'),
 	'ultimate.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/ultimate.fs?raw'),
+	'clip.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/clip.fs?raw'),
 	'turtle3d.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/turtle3d.fs?raw'),
 	'glove.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/glove.fs?raw'),
 	'turing.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/turing.fs?raw'),
@@ -478,14 +482,15 @@ export const PROGRAMS = [
 		id: 'glove',
 		label: 'DATAGLOVE (2026)',
 		kernelFile: 'kernel-names-full.s',
-		extras: ['code.fs', 'tags.fs', 'turtle3d.fs', 'glove.fs'],
+		extras: ['code.fs', 'tags.fs', 'clip.fs', 'turtle3d.fs', 'glove.fs'],
 		pixie: false,
-		title: 'A hand tracker as PDP-7 device 57: each bone a 3D turtle move (yaw, pitch, length), drawn by Forth on the 340. 🖐️ tracks your own hand.',
+		title: 'A hand tracker as PDP-7 device 57: each bone a 3D turtle move (yaw, pitch, length), drawn by Forth on the 340. Allow the camera and hold up your hand.',
 		help: {
-			text: 'GLOVE is already running, with a demo hand (👋) waving through gestures. Drag the finger sliders in the GLOVE panel (T I M R P, and ↻ to turn) to work the hand yourself. Press 🖐️ to track your own hand with the webcam (MediaPipe, about 20 MB the first time; video stays in your browser). The GLOVE panel shows the camera mirrored, the points the tracker found, and the registers the PDP-7 latched. Press any key at the teletype to stop it and play with Forth: 60 VIEW GLOVE turns the picture 60 degrees about the hand; 3 SPINNING ! GLOVE turns it 3 degrees a frame; 0 SPINNING ! 0 VIEW GLOVE faces it again. 4 SPOT . . prints where the thumb tip was drawn, y then x. BIRD? . tells you whether you are being given the bird.',
+			text: 'Allow the camera and hold up your hand: it takes over the PDP-7 at once. Until it sees you, a labelled synthetic hand waves and gestures, inviting you to copy it (MediaPipe, about 20 MB the first time; video stays in your browser). 👋 DEMO turns the camera off; the finger sliders (T I M R P, ↻ to turn) work the hand by hand. The GLOVE panel shows the camera mirrored, the points the tracker found, and the registers the PDP-7 latched. Press any key at the teletype to stop it and play with Forth: 60 VIEW GLOVE turns the picture 60 degrees about the hand; 3 SPINNING ! GLOVE turns it 3 degrees a frame; 0 SPINNING ! 0 VIEW GLOVE faces it again. 4 SPOT . . prints where the thumb tip was drawn, y then x. BIRD? . tells you whether you are being given the bird. 0 FITTING ! GLOVE draws the hand where the camera has it, clipped at the edge of the glass, so it can walk on from the side; -1 FITTING ! scales it to fit again.',
 			links: [
 				{ label: 'HAND-TRACKING.md', href: `${CABINET}/HAND-TRACKING.md` },
 				{ label: 'glove.fs', href: `${CABINET}/tapes/pdp7forth/glove.fs` },
+				{ label: 'clip.fs', href: `${CABINET}/tapes/pdp7forth/clip.fs` },
 				{ label: 'turtle3d.fs', href: `${CABINET}/tapes/pdp7forth/turtle3d.fs` }
 			]
 		},

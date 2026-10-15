@@ -874,6 +874,8 @@
 	let progOpen = $state(panelsStored.includes('prog') || !!untrack(() => programById(programId)?.panel));
 	let progCanvas = $state(null);
 	let progInfo = $state('');
+	let progPrompt = $state('');
+	let progHint = $state('');
 	const hasProgPanel = $derived(!!program?.panel);
 	function storePanels() {
 		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen };
@@ -2057,6 +2059,9 @@
 		}
 		if (progOpen && progCanvas && program?.panel?.draw) {
 			try {
+				const instructions = program.panel.instructions?.();
+				progPrompt = instructions?.title ?? '';
+				progHint = instructions?.detail ?? '';
 				progInfo = program.panel.draw(progCanvas, { box, t340 }) ?? '';
 			} catch (e) {
 				progInfo = String(e?.message ?? e);
@@ -2246,6 +2251,7 @@
 		});
 		// Inspector handle: $0.cabinet in devtools reaches the live machine; .monitor.poke('fuel', 777).
 		canvasEl.cabinet = { cpu, t340, pen, box, monitor, program: programId };
+		program.activate?.();
 		switches = cpu.switches;
 		// An assembled program has no source until its first boot has assembled it.
 		if (sourceFor === programId && !sourceMaps.length) {
@@ -2901,6 +2907,12 @@
 				{/each}
 				{#if toggleNote}<span class="demo-caption" aria-live="polite">{toggleNote}</span>{/if}
 			</div>
+			{#if progPrompt}
+				<div class="glove-instructions" role="status">
+					<strong>{progPrompt}</strong>
+					<div>{progHint}</div>
+				</div>
+			{/if}
 			<div class="prog-view">
 				<canvas bind:this={progCanvas} class="prog-canvas" width="640" height="480" aria-label={program.panel.canvasLabel ?? program.panel.label}></canvas>
 				<pre class="prog-info">{progInfo}</pre>
@@ -3845,6 +3857,14 @@
 		flex-wrap: wrap;
 		align-items: center;
 		gap: 0.3rem;
+	}
+	.glove-instructions {
+		border-left: 3px solid #ffd27a;
+		padding: 0.4rem 0.6rem;
+		background: #262416;
+		color: #fff0b3;
+		font-size: 0.85rem;
+		line-height: 1.4;
 	}
 	.prog-view {
 		display: flex;

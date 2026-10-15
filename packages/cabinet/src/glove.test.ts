@@ -100,7 +100,7 @@ function gloveImage(): ForthImage {
 			end: tape("end.s"),
 			kernelName: "kernel-names-full.s",
 		}),
-		sources: ["prelude.fs", "does.fs", "turtle.fs", "code.fs", "tags.fs", "turtle3d.fs", "glove.fs"].map(tape),
+		sources: ["prelude.fs", "does.fs", "turtle.fs", "code.fs", "tags.fs", "clip.fs", "turtle3d.fs", "glove.fs"].map(tape),
 	});
 	return image;
 }
@@ -191,6 +191,28 @@ test("forth: FIT keeps a hand on the screen, however big or off the edge the cam
 		const ys = at.map((p) => p[1]!);
 		assert.ok(Math.max(...ys) - Math.min(...ys) > 250, `${JSON.stringify(o)}: big enough to see`);
 	}
+});
+
+test("forth: with FITTING off, a hand walks on from the side of the stage, clipped, never stopping the 340", () => {
+	const glove = new DataGlove();
+	const m = forthMachine(glove);
+	m.line("0 FITTING !");
+	m.type("GLOVE\n");
+	const seen: number[] = [];
+	// The wrist comes from far off the right of the stage to the middle, fingers reaching ahead.
+	for (const x of [1.9, 1.6, 1.4, 1.2, 0.9, 0.6]) {
+		glove.feed({ ...syntheticHand({ curls: [0, 0, 0, 0, 0], x, y: 0.7, size: 0.4, heading: -60 }), aspect: 1 });
+		const before = m.t340.frame;
+		m.box.run(3_000_000);
+		assert.ok(m.t340.frame > before, `x ${x}: the display goes on`);
+		assert.equal(m.t340.status & 0o5000, 0, `x ${x}: no edge violation`);
+		const hand = m.frame().filter((s) => Math.max(s.y0, s.y1) > 220 && Math.max(s.y0, s.y1) < 900);
+		for (const s of hand) for (const v of [s.x0, s.x1]) assert.ok(v >= 0 && v <= 1023);
+		seen.push(Math.round(hand.reduce((sum, s) => sum + Math.hypot(s.x1 - s.x0, s.y1 - s.y0), 0)));
+	}
+	assert.equal(seen[0], 0, "all off stage: nothing drawn but the captions");
+	assert.ok(seen[2]! > 0 && seen[2]! < seen[5]!, `fingers first, then the hand: ${seen}`);
+	assert.ok(seen.slice(0, 5).every((n, i) => i === 0 || n > seen[i - 1]!), `more of it as it comes on: ${seen}`);
 });
 
 test("forth: GLOVE refreshes the display after changing hand and handedness", () => {
