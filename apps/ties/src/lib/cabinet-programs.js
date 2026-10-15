@@ -192,7 +192,8 @@ function parseSymbolTsv(text) {
 /** Forth kernels by file (tapes/pdp7forth/VARIANTS.yml): the menu runs the full-names copy; Mitch's kernel.s stays for tests. */
 const FORTH_KERNELS = {
 	'kernel.s': () => import('../../../../packages/cabinet/tapes/pdp7forth/kernel.s?raw'),
-	'kernel-names-full.s': () => import('../../../../packages/cabinet/tapes/pdp7forth/kernel-names-full.s?raw')
+	'kernel-names-full.s': () => import('../../../../packages/cabinet/tapes/pdp7forth/kernel-names-full.s?raw'),
+	'kernel-names-full-extended.s': () => import('../../../../packages/cabinet/tapes/pdp7forth/kernel-names-full-extended.s?raw')
 };
 
 /**
@@ -204,6 +205,8 @@ const FORTH_EXTRAS = {
 	'code.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/code.fs?raw'),
 	'interrupt.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/interrupt.fs?raw'),
 	'xmem.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/xmem.fs?raw'),
+	'xmem-extended.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/xmem-extended.fs?raw'),
+	'files.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/files.fs?raw'),
 	'tags.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/tags.fs?raw'),
 	'ultimate.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/ultimate.fs?raw'),
 	'clip.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/clip.fs?raw'),

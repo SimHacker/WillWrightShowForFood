@@ -79,6 +79,26 @@ interrupts handled in Forth, coming out whole, with extend mode off at the end.
   in high memory, as many as fit.
 - **Tables** too big for bank 0: sine tables, fonts, Turing tapes, ring files.
 
+## The extended kernel, built
+
+[kernel-names-full-extended.s](tapes/pdp7forth/kernel-names-full-extended.s) is
+kernel-names-full.s with `XMEM?`, `X@`, `X!` and `XMOVE` as kernel primitives, made by
+[make-forth-extended.py](scripts/make-forth-extended.py): the parent copied, with replacements
+that must each match once, so a change to the parent is carried over by rerunning it. The
+`-extended` suffix names every parallel implementation that knows about memory past 8K
+([VARIANTS.yml](tapes/pdp7forth/VARIANTS.yml)). With it, load
+[xmem-extended.fs](tapes/pdp7forth/xmem-extended.fs) for `XHERE` and friends; with the plain
+kernel, [xmem.fs](tapes/pdp7forth/xmem.fs) gives everything as CODE words. The same tests run
+on both.
+
+## Files: save and restore by name
+
+High memory meets storage through tiny-titan's file service, device 24
+([TINY-TITAN.md](TINY-TITAN.md)): read and write words by path, offset and length, straight to
+and from any bank, with `/tmp`, `/browser` (kept across reloads), `/proc` (made on demand) and,
+planned, `/user` and `/net`. A `.gz` name is stored compressed. Hand-pose streams recorded into
+high memory can then be kept: `S" /browser/beckon.gz" 8192 n 0 WRITE-WORDS`.
+
 ## Step 2: the names in bank 1
 
 Today each word's name is packed three characters a word just before its header, in bank 0 (the

@@ -77,6 +77,8 @@ export { Clock } from "./plugins/clock.js";
 export type { ClockOpts } from "./plugins/clock.js";
 export { TinyTitan, EchoPort, BlockletHost } from "./plugins/tiny-titan.js";
 export type { TitanPort, TinyTitanOpts } from "./plugins/tiny-titan.js";
+export { TitanFiles, FILES_DEVICE, FILE_OP, FILE_ERR, MemoryMount, ProcMount, StorageMount, textWords, wordsText, wordsToBytes, bytesToWords, gzip, gunzip } from "./plugins/titan-files.js";
+export type { FileMount, ByteStore, CoreAccess, TitanFilesOpts } from "./plugins/titan-files.js";
 export { UltimateMachine, UM_MAX, UM_TICK, UM_PHASE, UM_PHASES, UM_DEFAULT_TIMING } from "./plugins/ultimate.js";
 export type { UltimateOpts, UltimatePhase, UltimatePose, UltimateTiming } from "./plugins/ultimate.js";
 export { ONE as HAND_ONE, FINGERS, FINGER_CHAINS, JOINT_MAX, HAND_CHAINS, bends, flexes, headingOf, syntheticHand, GESTURES, wavingHand } from "./plugins/hand.js";

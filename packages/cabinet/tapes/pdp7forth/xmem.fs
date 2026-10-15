@@ -14,6 +14,10 @@
 \ with EMIR, which puts it back as it was, so a copy interrupted half
 \ way goes on in extend mode. Any other handler must do the same.
 \
+\ kernel-names-full-extended.s has XMEM?, X@, X! and XMOVE as kernel
+\ primitives: with that kernel, load xmem-extended.fs instead, which has
+\ only the words below that aren't in it.
+\
 \ An extended address is an ordinary number, 0 to 32767: the bank in the
 \ top two bits, 8192 words a bank. 24576 X@ reads bank 3's first word.
 \ A VARIABLE pushes its address as "law addr", 76xxxx, negative: these

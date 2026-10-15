@@ -53,6 +53,25 @@ files:
       The PRs: a KERNEL parameter for his Makefile, test/run_tests.py and check_names, then
       src/kernel-names-full.s, a full-names hdr.py and the harness changes above.
 
+  kernel-names-full-extended.s:
+    parent: kernel-names-full.s
+    role: the full-names kernel with the Type 148 memory extension (FORTH-HIGH-MEMORY.md). The
+      -extended suffix names every parallel implementation that knows about memory past 8K.
+    what: XMEM?, X@, X! and XMOVE as kernel primitives, chained after .( so LATEST names XMOVE.
+      Auto-index 015 and 016 are XMOVE's. The kernel still runs in bank 0 with extend mode off;
+      the new primitives turn it on only for their own references.
+    generated: |
+      scripts/make-forth-extended.py makes this file from kernel-names-full.s, with replacements
+      that must each match once, so a change to the parent is carried over by rerunning it. Edit
+      the parent or the script, never this file.
+    companion: xmem-extended.fs, the high-memory words not in the kernel (XHERE, XALLOT, X,,
+      XROOM). With kernel-names-full.s, xmem.fs gives all of it as CODE words instead.
+    differs_in: [the 015 and 016 comments, the four new primitives and their helpers, latest]
+    must_match_parent: everything else, line for line
+    tested: src/xmem.test.ts runs the same tests on both builds, xmem.fs's CODE words and this
+      kernel's primitives.
+    next: names in bank 1 (FORTH-HIGH-MEMORY.md, step 2).
+
   pixie.s:
     parent: kernel-names-full.s
     role: PIXIE rings in the cabinet's Forth. Assembled after kernel-names-full.s, then rsppix.s,

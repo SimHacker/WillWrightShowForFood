@@ -126,6 +126,56 @@ Titan remembered. Save a drawing by typing `TITAN`, reload the page,
 type `TITAN` again, and the drawing comes back through the same
 handshake it used in 1972.
 
+**Files, built: device 24, by name, any bank.** Titan's job at
+Cambridge was remembering what PIXIE drew. [titan-files.ts](src/plugins/titan-files.ts)
+gives every PDP-7 program that, by path, without the blocklet handshake,
+on device 24, a cabinet extension beside the 1972 link on 22 and 23:
+
+| IOT | Name | Does |
+|---|---|---|
+| 702401 | FSF | skip if the last request has finished |
+| 702412 | FRS | read the last result |
+| 702404 | FGO | start the request whose block is at AC (15 bits) |
+| 702444 | FCF | clear the flag |
+
+The program fills a seven-word request block (operation, path address,
+offset, length, data address, result, path length) and hands it over;
+the host moves the words by DMA, as a disc controller would, and raises
+the flag. Operations: READ, WRITE, SIZE, DELETE, LIST. A file is 18-bit
+words; offsets and lengths count words. Data addresses are 15 bits, so a
+file goes straight to and from any bank of a 32K machine
+([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md)). The PDP-7 waits with
+FSF, which suits a host that answers asynchronously.
+
+Paths are folded to lower case (the teletype has none) and mounted by
+prefix, longest first; `..` is refused:
+
+| Mount | What | Kind |
+|---|---|---|
+| `/tmp` | memory, gone on reload | `MemoryMount` |
+| `/browser` | the browser's localStorage, three bytes a word, base64 | `StorageMount` |
+| `/proc` | made on demand from the cabinet's state, read-only | `ProcMount` |
+| `/user` | planned: the person's own files, a folder picked with the File System Access API, or a synced store | |
+| `/net` | planned: a TitanPort over WebSocket, tiny-titan as a real server | |
+
+A name ending `.gz` is stored gzipped and unzipped on read, transparently
+(CompressionStream). Other suffixes could pick other codecs the same way.
+
+From Forth, [files.fs](tapes/pdp7forth/files.fs) after code.fs:
+
+    S" /browser/pose" POSE 63 0 WRITE-WORDS   ( -- n )
+    S" /browser/pose" POSE 63 0 READ-WORDS    ( -- n )
+    S" /browser/pose" FILE-SIZE               ( -- n )
+    S" /browser/pose" DELETE-FILE             ( -- r )
+    S" /browser" BUF 200 LIST-FILES BUF SWAP TYPE-WORDS
+
+A result is the words moved, or -1 no file, -2 bad path, -3 bad
+operation, -4 read-only, -6 failed. Tested in
+[titan-files.test.ts](src/titan-files.test.ts). Still to do: mounting
+it in the applet (the device is in the package, not yet on the menu's
+machines), `/user`, `/net`, and SAVE and LOAD of a whole core image as
+files, which gives every program save and restore.
+
 **A real server.** The `TitanPort` seam behind a WebSocket makes
 tiny-titan an actual remote machine again — one host process serving
 many emulated PDP-7s, which is more than Cambridge ever gave it. Two
