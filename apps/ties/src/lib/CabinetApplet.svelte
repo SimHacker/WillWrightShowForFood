@@ -3620,7 +3620,8 @@
 	/* Fixed, so a tip past the page's edge never adds a scrollbar that resizes the tube. */
 	.tip {
 		position: fixed;
-		z-index: 3;
+		/* Over every control, the reset pull and the tool menu included. */
+		z-index: 10;
 		width: max-content;
 		max-width: 380px;
 		padding: 0.35rem 0.5rem;
