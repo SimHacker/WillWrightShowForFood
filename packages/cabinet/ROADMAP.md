@@ -229,8 +229,9 @@ display list is a fixed 1,024 words at 1260. Budget for sprites:
 - Dynamic rotation, scale and intensity keep one copy (n ideal points, 2n words) and one live
   slot per sprite, so twenty sprites cost less than one pre-rotated ship.
 - More than 8K means the Type 148 memory extension: extend mode, 15-bit addresses, banks of 8K.
-  The cabinet doesn't emulate it, Mitch's kernel doesn't use it, and SYMELEC needs it off. Add it
-  only if a game proves 8K too small; the 340's own display addresses would need it too.
+  The CPU emulates it now, and [xmem.fs](tapes/pdp7forth/xmem.fs) gives Forth `X@`, `X!` and
+  block copies into the high banks; the kernel itself stays in bank 0, and so do display lists,
+  since the 340 addresses 13 bits ([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md)).
 
 **Order: pre-rotated first, then live transforms.** Start with the 24 precomputed rotations,
 which only rewrite a `DJS` target per turn. Then dynamic, about the sprite's centre: one rotate

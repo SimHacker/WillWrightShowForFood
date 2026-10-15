@@ -203,6 +203,7 @@ const FORTH_KERNELS = {
 const FORTH_EXTRAS = {
 	'code.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/code.fs?raw'),
 	'interrupt.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/interrupt.fs?raw'),
+	'xmem.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/xmem.fs?raw'),
 	'tags.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/tags.fs?raw'),
 	'ultimate.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/ultimate.fs?raw'),
 	'clip.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/clip.fs?raw'),

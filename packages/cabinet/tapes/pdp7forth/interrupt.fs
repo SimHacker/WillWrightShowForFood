@@ -10,6 +10,7 @@
 \              lac hook          "jmp dispatch"
 \              dac next          NEXT's first word, for one time round
 \              lac int-ac
+\              emir              extend mode as the interrupted code had it
 \              jmp i 0           back, interrupts still off
 \
 \ and the next time the interrupted thread reaches NEXT, where nothing is
@@ -58,7 +59,7 @@ dispatch 600000 or hook !   \ "jmp dispatch", for ISR to plant in NEXT
 
 create isr
   int-ac dac,  hook lac,  next-addr dac,  int-ac lac,
-  0 ind jmp,
+  707742 ,  0 ind jmp,   \ EMIR: JMP I restores extend mode from bit 16
 
 \ INTERRUPTS-OFF ( -- )  the default handler too: an interrupt nobody
 \ has claimed turns them off rather than coming back for ever.
