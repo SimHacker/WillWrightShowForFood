@@ -105,6 +105,7 @@ test("ultimate hand: the demo hand rides the arm inside the box, under the title
 	const xs = inHole.flatMap((s) => [s.x0, s.x1]);
 	assert.ok(Math.max(...xs) - Math.min(...xs) < 560, "small enough to fit in the hole");
 	assert.ok(m.lit().some((s) => s.y0 > 950), "the title is up top");
+	assert.ok(inHole.every((s) => s.intensity < 7 || (s.x0 > 470 && s.x0 < 554)), "the demo hand is dimmer phosphor than the box");
 });
 
 test("ultimate hand: hands coming and going at random never corrupt the PDP-7", () => {

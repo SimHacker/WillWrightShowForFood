@@ -103,6 +103,9 @@ variable armed   -1 armed !
     s" TOUCH THE SWITCH" 512 30 centred
   then ;
 
+\ Brightness: from vector mode, escape to a parameter word (mode 1,
+\ vectors next; bit 14 sets the intensity to 0..7), then go on.
+: bright! ( 0..7 -- ) 131072 dl,  8 + 32768 + dl, ;
 variable was
 : uframe ( -- )
   new-frame  s" THE ULTIMATE MACHINE DATA HAND" 512 975 centred
@@ -110,7 +113,8 @@ variable was
   \ Sized afresh whenever the hand changes hands: yours, or the demo's.
   0 reg 4 and was @ <> um-phase ph-off = or if hand-seen? if null then then
   0 reg 4 and was !
-  hand-seen? if place-hand hand notag then
+  \ The demo hand is a ghost of yours: dimmer phosphor.
+  hand-seen? if real? 0= if 3 bright! then place-hand hand notag 7 bright! then
   arm notag
   lid notag  prompt ;
 
