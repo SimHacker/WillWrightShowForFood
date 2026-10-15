@@ -480,6 +480,49 @@ export const PROGRAMS = [
 	},
 	forthProgram({ id: 'forth', label: 'FORTH + TURTLE (2026)', kernelFile: 'kernel-names-full.s' }),
 	forthProgram({
+		id: 'turing',
+		label: 'TURING MACHINE (2026)',
+		kernelFile: 'kernel-names-full.s',
+		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'turing.fs', 'pcomp-tm.fs'],
+		pixie: false,
+		title: 'Turing machines on device 54, the tape drawn by the 342 character generator: busy beavers, a binary counter, and Minsky\'s universal machine, compiled from TM-Forth.',
+		help: {
+			text: 'DEMO is already running: the cabinet types it for you at boot, and any key stops it. Then load a machine by name (MACHINES lists them: BUSY2, UTM, BCOUNT...) and type RUN, or STEP for one transition. 5 SPEED RUN makes five a frame; 0 SPEED RUN lets the engine run free. DEMO starts the parade again.',
+			links: [
+				{ label: 'turing.fs', href: `${CABINET}/tapes/pdp7forth/turing.fs` },
+				{ label: 'the machines', href: `${CABINET}/tapes/turing/pcomp.tmf` },
+				{ label: 'the engine', href: `${CABINET}/TURING-ENGINE.md#running-it-turing-machine-on-the-menu` }
+			]
+		},
+		typeAhead: 'DEMO\n',
+		demo: (h) => turingDemo(h),
+		demoTitle: 'Reboot, list the machines, step and run BUSY2, run the UTM, let BCOUNT run free',
+		// A transition every three cycles when it runs free; Forth draws a frame every 100,000 or so.
+		peripherals: ({ cpu }) => [new TuringDevice({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), rate: 1 / 3 })]
+	}),
+	forthProgram({
+		id: 'ultimate',
+		label: 'ULTIMATE MACHINE (2026)',
+		kernelFile: 'kernel-names-full.s',
+		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'ultimate.fs'],
+		pixie: false,
+		title: "Minsky's Ultimate Machine, the box whose only function is to switch itself off: device 56, drawn on the 340 by Forth. Click the switch with the light pen.",
+		help: {
+			text: 'ULTIMATE is already running: the cabinet types it for you at boot. Click the switch: the lid opens and the hand switches it off. Press any key at the teletype to stop it and play with Forth: 8000 PH-REACH UM-TIME! slows the reach (units of 64 cycles), UM-PRESSES . counts its wins. Type ULTIMATE and press Return to run it again.',
+			links: [
+				{ label: 'ultimate.fs', href: `${CABINET}/tapes/pdp7forth/ultimate.fs` },
+				{ label: 'the device', href: `${CABINET}/TURING-ENGINE.md#running-it-ultimate-machine-on-the-menu` }
+			]
+		},
+		pen: true,
+		typeAhead: 'ULTIMATE\n',
+		demo: (h) => ultimateDemo(h),
+		demoTitle: 'Reboot, type ULTIMATE, and touch the switch with the light pen',
+		// Four times the device's own timing: about 7 seconds a round at 1x. The Forth loop draws
+		// flat out, a frame per 100,000 cycles or so, so that is about 40 frames a round.
+		peripherals: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 4])))]
+	}),
+	forthProgram({
 		id: 'hand',
 		label: 'DATAHAND (2026)',
 		kernelFile: 'kernel-names-full.s',
@@ -526,49 +569,6 @@ export const PROGRAMS = [
 			// reach, 2 s back, and a second's rest before your hand can start the next round.
 			extra: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 50])))]
 		})
-	}),
-	forthProgram({
-		id: 'ultimate',
-		label: 'ULTIMATE MACHINE (2026)',
-		kernelFile: 'kernel-names-full.s',
-		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'ultimate.fs'],
-		pixie: false,
-		title: "Minsky's Ultimate Machine, the box whose only function is to switch itself off: device 56, drawn on the 340 by Forth. Click the switch with the light pen.",
-		help: {
-			text: 'ULTIMATE is already running: the cabinet types it for you at boot. Click the switch: the lid opens and the hand switches it off. Press any key at the teletype to stop it and play with Forth: 8000 PH-REACH UM-TIME! slows the reach (units of 64 cycles), UM-PRESSES . counts its wins. Type ULTIMATE and press Return to run it again.',
-			links: [
-				{ label: 'ultimate.fs', href: `${CABINET}/tapes/pdp7forth/ultimate.fs` },
-				{ label: 'the device', href: `${CABINET}/TURING-ENGINE.md#running-it-ultimate-machine-on-the-menu` }
-			]
-		},
-		pen: true,
-		typeAhead: 'ULTIMATE\n',
-		demo: (h) => ultimateDemo(h),
-		demoTitle: 'Reboot, type ULTIMATE, and touch the switch with the light pen',
-		// Four times the device's own timing: about 7 seconds a round at 1x. The Forth loop draws
-		// flat out, a frame per 100,000 cycles or so, so that is about 40 frames a round.
-		peripherals: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 4])))]
-	}),
-	forthProgram({
-		id: 'turing',
-		label: 'TURING MACHINE (2026)',
-		kernelFile: 'kernel-names-full.s',
-		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'turing.fs', 'pcomp-tm.fs'],
-		pixie: false,
-		title: 'Turing machines on device 54, the tape drawn by the 342 character generator: busy beavers, a binary counter, and Minsky\'s universal machine, compiled from TM-Forth.',
-		help: {
-			text: 'DEMO is already running: the cabinet types it for you at boot, and any key stops it. Then load a machine by name (MACHINES lists them: BUSY2, UTM, BCOUNT...) and type RUN, or STEP for one transition. 5 SPEED RUN makes five a frame; 0 SPEED RUN lets the engine run free. DEMO starts the parade again.',
-			links: [
-				{ label: 'turing.fs', href: `${CABINET}/tapes/pdp7forth/turing.fs` },
-				{ label: 'the machines', href: `${CABINET}/tapes/turing/pcomp.tmf` },
-				{ label: 'the engine', href: `${CABINET}/TURING-ENGINE.md#running-it-turing-machine-on-the-menu` }
-			]
-		},
-		typeAhead: 'DEMO\n',
-		demo: (h) => turingDemo(h),
-		demoTitle: 'Reboot, list the machines, step and run BUSY2, run the UTM, let BCOUNT run free',
-		// A transition every three cycles when it runs free; Forth draws a frame every 100,000 or so.
-		peripherals: ({ cpu }) => [new TuringDevice({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), rate: 1 / 3 })]
 	}),
 	{
 		id: 'unix',
