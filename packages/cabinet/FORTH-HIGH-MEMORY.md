@@ -30,7 +30,7 @@ So the kernel stays exactly as it is, and only a few primitives know about high 
 turns extend mode on for its own indirect references and off again before the next thread cell.
 Bank 0 code, stacks, dictionary and display list are untouched.
 
-## Step 1, built: X@, X!, and block copies
+## Step 1, built: X@, X!, and XMOVE
 
 [xmem.fs](tapes/pdp7forth/xmem.fs), after code.fs:
 
@@ -39,18 +39,24 @@ Bank 0 code, stacks, dictionary and display list are untouched.
 | `XMEM?` | `( -- flag )` | the extension is present (more than 8K of core) |
 | `X@` | `( xaddr -- w )` | fetch from any 15-bit address |
 | `X!` | `( w xaddr -- )` | store to any 15-bit address |
-| `>XMOVE` | `( addr xaddr n -- )` | copy n words up from bank 0 |
-| `XMOVE>` | `( xaddr addr n -- )` | copy n words down into bank 0 |
+| `XMOVE` | `( from to n -- )` | copy n words, any bank to any bank, overlapping or not, as `MOVE` does |
 | `XHERE` | `( -- addr )` | variable: the next free high word, from 8192 |
 | `XALLOT` | `( n -- )` | reserve n high words |
 | `X,` | `( w -- )` | store at `XHERE` and step it |
 | `XROOM` | `( -- n )` | high words left (0 on an 8K machine) |
 
 - An extended address is a plain number, 0 to 32767: the bank is its top two bits. `24576 X@`
-  reads bank 3's first word. No bank-and-offset pairs.
-- The copies use auto-index 015 and 016 (free in the kernel): `LAC I 015`, `DAC I 016`, `ISZ`,
-  `JMP`, about seven cycles a word. A 63-word hand pose is about 450 cycles; a whole bank about
-  60,000.
+  reads bank 3's first word. No bank-and-offset pairs. A `VARIABLE` pushes its address in LAW
+  form, negative; every word here takes a negative address as that, in bank 0.
+- **One copy word.** With extend mode on, both of the copy's pointers are 15 bits, so it copies
+  between any two banks directly, bank 0 being just one of them: there is no up-copy or
+  down-copy. A source may run across a bank boundary.
+- **Overlap.** Up the addresses unless the destination starts inside the source; then down,
+  so nothing is overwritten before it is read.
+- **Speed.** Up the addresses uses auto-index 015 and 016 (free in the kernel): `LAC I 015`,
+  `DAC I 016`, `ISZ`, `JMP`, about seven cycles a word. A 63-word hand pose is about 450
+  cycles; a whole bank about 60,000. Down the addresses steps two pointers by hand, about twice
+  as slow, and only overlapping copies need it.
 - **Interrupts.** An interrupt turns extend mode off. [interrupt.fs](tapes/pdp7forth/interrupt.fs)'s
   handler now returns with `EMIR`, `JMP I 0`, so an interrupted copy goes on in extend mode.
   Without it, the rest of the copy writes into bank 0. The test proves both. Any other handler
@@ -59,14 +65,15 @@ Bank 0 code, stacks, dictionary and display list are untouched.
 - Cost: about 120 dictionary words.
 
 Tested in [xmem.test.ts](src/xmem.test.ts): every bank fetched and stored, poses copied up and
-back, an 8K machine reporting no room, and a 4,000-word copy running through 60 Hz-style clock
+back, bank to bank, overlapping both ways and across a bank boundary, an 8K machine reporting
+no room, and a 4,000-word copy running through 60 Hz-style clock
 interrupts handled in Forth, coming out whole, with extend mode off at the end.
 
 ### What step 1 makes possible
 
-- **Hand-pose streams.** Each frame, capture a pose (about 63 words) and `>XMOVE` it to
+- **Hand-pose streams.** Each frame, capture a pose (about 63 words) and `XMOVE` it to
   `XHERE`. At ten frames a second, a bank holds about 13 seconds, banks 1 to 3 about 40. Play
-  back with `XMOVE>` into the current-hand buffer and draw it. Recorded gestures (beckoning,
+  back with `XMOVE` into the current-hand buffer and draw it. Recorded gestures (beckoning,
   come hither) for the attract mode, made on the PDP-7 itself.
 - **The hands-of-hands tree** ([HAND-TRACKING.md](HAND-TRACKING.md#to-do)): every frozen pose
   in high memory, as many as fit.
@@ -96,7 +103,7 @@ interrupts and the 512-word link limit all get harder. Not worth it.
 
 Overlays instead: keep the kernel, the prelude and the turtle in bank 0, and keep each cartridge
 (turing.fs, ultimate.fs, datahand.fs, ultimate-hand.fs) compiled for a fixed overlay area of
-bank 0, stored in a high bank. Choosing a program copies its overlay down with `XMOVE>` and
+bank 0, stored in a high bank. Choosing a program copies its overlay down with `XMOVE` and
 patches the dictionary link to it. Every cartridge on one machine, with no recompiling.
 
 ## Tapes
@@ -107,7 +114,7 @@ names, or reload one overlay.
 
 ## Order of work
 
-1. ~~`X@`, `X!`, `>XMOVE`, `XMOVE>`, `XHERE`; the handler's `EMIR`.~~ Done.
+1. ~~`X@`, `X!`, `XMOVE`, `XHERE`; the handler's `EMIR`.~~ Done.
 2. Programs on 32K machines: `coreWords: 32768` for the hand programs, and pose streams
    (capture, record, play back) in datahand.fs.
 3. Names in bank 1, in the full-names kernel.
