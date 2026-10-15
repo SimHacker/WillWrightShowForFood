@@ -373,6 +373,11 @@ In code, the switch *is* the unit's power switch (`Device.power`):
   is `offIot`, for the lever and counter.
 - **Interrupted.** Switching it off before the hand arrives counts as an abort, and the arm
   retracts from wherever it was.
+- **Manual press.** Off by default. UMLT with phase 0 sets the mode: AC bit 17 on means the arm
+  reaches the lever and waits there without moving it. When the program switches the lever off
+  (UMOF), that counts as the hand's press, and `press`, `return`, `close` and `rest` follow as
+  usual. The PDP-7 then drives that one transition (say, when a tracked finger touches the
+  switch) and the machine drives the rest. The ULTIMATE MACHINE demo leaves it automatic.
 
 `pose()` gives the panel the phase, and how far the lid and the arm have come; the animation
 follows the device, never the reverse.

@@ -30,8 +30,15 @@ import type { Device, Iot, IotReply, SwitchBinding } from "../bus.js";
  *   705624 UMOF  lever off
  *   705641 UMSI  skip on the phase-change flag  705652 UMRL  read the lid
  *   705644 UMCF  clear the phase-change flag
- *   705661 UMLT  load a timing: AC<0:2> phase, AC<3:17> its length in UM_TICK steps
+ *   705661 UMLT  load a timing: AC<0:2> phase, AC<3:17> its length in UM_TICK steps;
+ *                AC<0:2> 0 (no phase) sets the mode instead: AC<17> manual press
  *   705672 UMRA  read the arm                   705664 UMIE  interrupt on phase change iff AC<17>
+ *
+ * Manual press (off unless a program sets it): the arm reaches the lever and holds there, in
+ * REACH at full travel, without moving it. Whoever switches the lever off then (the program,
+ * seeing a finger on the switch) makes it the hand's press: PRESS, RETURN, CLOSE and REST follow
+ * as usual. Switched off before the arm is all the way out, it is still an abort. So the program
+ * drives that one transition and the machine every other.
  *
  * The lever, the counters and the registers are mechanical: they answer with the power off.
  * A PDP-7 program that switches it on, waits, and switches it on again is the two machines
@@ -119,6 +126,8 @@ export class UltimateMachine implements Device {
 	aborts = 0;
 	/** Times it has been switched on, by anyone. */
 	ons = 0;
+	/** The arm waits at the lever for someone else to switch it off (UMLT with phase 0). */
+	manualPress = false;
 	/** Raised on every phase change; interrupts when `ie`. */
 	flag = false;
 	ie = false;
@@ -174,7 +183,10 @@ export class UltimateMachine implements Device {
 			else if (this.phase === RETURN) this.enter(REACH);
 			else if (this.phase === CLOSE) this.enter(OPEN);
 		} else {
-			if (this.phase === WAIT || this.phase === OPEN || this.phase === REACH) {
+			if (this.manualPress && this.phase === REACH && this.arm >= UM_MAX) {
+				this.presses += 1;
+				this.enter(PRESS);
+			} else if (this.phase === WAIT || this.phase === OPEN || this.phase === REACH) {
 				this.aborts += 1;
 				this.enter(this.arm > 0 ? RETURN : CLOSE);
 			}
@@ -243,10 +255,14 @@ export class UltimateMachine implements Device {
 		return this.iot(req);
 	}
 
-	/** UMLT: AC<0:2> the phase (WAIT..CLOSE), AC<3:17> its length in UM_TICK steps. */
+	/** UMLT: AC<0:2> the phase (WAIT..REST), AC<3:17> its length in UM_TICK steps; phase 0, the mode. */
 	private loadTiming(ac: number): void {
 		const name = UM_PHASES[(ac >> 15) & 0o7];
-		if (!name || name === "off") return;
+		if (name === "off") {
+			this.manualPress = (ac & 1) !== 0;
+			return;
+		}
+		if (!name) return;
 		this.timing[name] = (ac & 0o77777) * UM_TICK;
 	}
 
@@ -281,6 +297,7 @@ export class UltimateMachine implements Device {
 				case REACH:
 					this.arm = move(this.arm, 1);
 					if (this.arm < UM_MAX) return;
+					if (this.manualPress) return;
 					this.lever = false;
 					this.observedLever = false;
 					this.presses += 1;

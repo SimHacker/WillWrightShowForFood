@@ -139,8 +139,50 @@ test("the IOTs: lever, phase, lid, arm, the phase-change flag and its interrupt,
 	// UMLT: phase in AC<0:2>, length in UM_TICK steps.
 	io(iot(0o61, (UM_PHASE.reach << 15) | 3));
 	assert.equal(u.timing.reach, 3 * UM_TICK);
-	io(iot(0o61, 5));
+	io(iot(0o61, 4));
 	assert.equal(u.timing.wait, 10, "phase 0 is OFF, which has no length");
+	assert.equal(u.manualPress, false, "and AC<17> clear leaves the press automatic");
+	io(iot(0o61, 1));
+	assert.equal(u.manualPress, true, "phase 0 with AC<17>: manual press");
+});
+
+test("manual press: the arm waits at the lever until the program switches it off, then goes home as usual", () => {
+	const u = new UltimateMachine(QUICK);
+	const box = new Cabinet({ cpu: new Pdp7({ coreWords: 64 }), devices: [u] });
+	const io = (r: Iot): IotReply => (box as unknown as { dispatch(i: Iot): IotReply }).dispatch(r);
+	io(iot(0o61, 1));
+	io(UMON);
+	ticks(u, 30);
+	assert.equal(u.phase, UM_PHASE.reach);
+	assert.equal(u.arm, UM_MAX, "all the way out");
+	ticks(u, 500);
+	assert.equal(u.phase, UM_PHASE.reach, "and waiting there, however long");
+	assert.equal(u.lever, true, "without touching the lever");
+	assert.equal(u.presses, 0);
+	io(UMOF);
+	assert.equal(u.phase, UM_PHASE.press, "the program's touch is the hand's press");
+	assert.equal(u.presses, 1);
+	assert.equal(u.aborts, 0);
+	assert.equal(io(UMON).skip, false);
+	assert.equal(u.lever, false, "the finger holds it down");
+	ticks(u, 40);
+	assert.equal(u.phase, UM_PHASE.off);
+	// Switched off before the arm is all the way out, it is still an abort.
+	io(UMON);
+	ticks(u, 25);
+	assert.equal(u.phase, UM_PHASE.reach);
+	assert.ok(u.arm < UM_MAX);
+	io(UMOF);
+	assert.equal(u.phase, UM_PHASE.return);
+	assert.equal(u.aborts, 1);
+	assert.equal(u.presses, 1);
+	ticks(u, 40);
+	// Back to automatic: the machine presses it again by itself.
+	io(iot(0o61, 0));
+	io(UMON);
+	ticks(u, 30);
+	assert.equal(u.phase, UM_PHASE.press);
+	assert.equal(u.presses, 2);
 });
 
 test("Cabinet.setPower works the lever, and the cabinet ticks it until it is home", () => {
