@@ -1523,6 +1523,81 @@ Today `source.ts` has one map per image, one line per address. The plan is in
 [TODO.md](TODO.md#could): several maps per image, chosen in the dev tools, then this model under
 them.
 
+## Typed memory: core as typed blocks
+
+A source map says where a word came from. A **type map** says what a word *is*: an instruction
+in some instruction set, a 340 display word in some mode, a PIXIE ring element, a hand pose, a
+CAM-6 rule table, a Forth header. Core is a run of typed blocks, the way a Markdown document is
+a run of typed blocks, each fenced code block naming its language and a renderer per language
+showing it. Not built yet; this is the design the instruction-set tables, the disassembler, the
+MEMORY panel and the MACRO-9 front end ([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md)) build on.
+
+**A region** is a start, a length, a type and a name, with parameters the type takes (the 340's
+starting mode, a TM's shape). Regions may leave gaps (untyped words) and may nest (a ring element
+inside the ring area, a subroutine's display list inside DLIST):
+
+```yaml
+- { at: 0o1260,  length: 1024, type: 340/display, mode: parameter, name: DLIST }
+- { at: 0o15500, length: 0o1300, type: pixie/ring, name: ring area }
+- { at: 0o20000, length: 63,   type: hand/pose,   name: frozen pose 3 }
+- { at: 0o30000, length: 8192, type: cam6/table }
+```
+
+**A type** is one declaration, the single source of truth for everything that reads or writes
+words of that kind:
+
+| Part | Does | Instruction set | Data |
+|---|---|---|---|
+| decode | words to a value | `lac 1234` | a ring element: link, name, value |
+| encode | a value to words | assembling `lac tab` | writing a pose back |
+| says | a value to one English line | "load AC from tab" | "ring element SQUARE, 3 children" |
+| view | how the MEMORY panel draws it | a line a word | a tree, a hand, a grid |
+| size | words per item | 1 | 2 for a 340 point, 63 for a pose |
+| next | the type of what follows | the 340's next mode | the next element by its link |
+| converts | to other types | | a CAM-6 table as a PIXIE ring |
+
+Two kinds of type, one interface. **Instruction sets** (PDP-7, 340 and 342 per mode, the Turing
+engine's entries, the Cambridge link, any cabinet device's IOTs) are tables: mnemonic, opcode,
+fields as bit ranges with encodings (plain, two's complement, sign-magnitude for the 340,
+enumerations, addresses, SIXBIT), and a `says` template per entry, `{field}` filled in through
+the symbol table. OPR and EAE microinstructions are entries that combine, each with its phrase
+and its order. Whole-word names beat field decoding. **Data types** are record layouts, tables
+too where they can be, with code where they can't: decode, encode and a view.
+
+Everything reads the declaration: every assembler (as7, DEC and Cambridge, MACRO-9's `.ISA`),
+the disassembler, the English lines in the MEMORY panel, the Forth vocabularies (`code.fs`'s
+opcodes, `turtle.fs`'s `vword`, TM-Forth's entries, generated, not written by hand), and the
+panel's editors. One test runs every declared instruction through encode, decode and encode
+again, and requires a `says` for every entry, so no tool can drift from another.
+
+**Where the map comes from:** layers, merged with the most specific winning, beside the source
+maps over the same addresses (previous section):
+
+1. The assembler: `.ISA` and `.TYPE` start typed regions as it assembles.
+2. The Forth compiler: each body's kind (colon word, variable, constant, `DOES>` data), and the
+   headers themselves as `forth/header`.
+3. The running machine: the shadow 340 knows which words it fetched in which mode; devices know
+   their own buffers (the Turing engine's tape and table, the DataHand's registers).
+4. The program declaring itself: `TYPE-REGION ( addr n type -- )`, through a cabinet device, so a
+   running program says "this is a hand pose". The live coding hook.
+5. The person: select words in the MEMORY panel and name their type; kept with the session.
+
+It lives in the thicker layers above: a parallel array of region ids, indexed like core, and a
+region table. Files keep a region's type beside its words (TINY-TITAN.md, "Files"), so loading a
+saved pose back restores what it is.
+
+**What it gives the panel:** code as code, display lists as display words with a preview, rings as
+a tree, poses as a hand, CAM-6 tables as a grid; each edited through its own encode (drag a
+vertex, the vector word changes); and a declared conversion makes any type viewable as, or
+convertible into, another, from the panel or a Forth word.
+
+**Order.** 1: the declaration format, with the PDP-7 instruction set as its first type, and
+`disassemble` and `explain` reading it, every existing test unchanged. 2: the 340 and 342 per
+mode, with `next`. 3: the type map as a layer, fed by the assembler and the shadow 340, drawn by
+the MEMORY panel. 4: data types (`pixie/ring`, `hand/pose`, `tm/tape`, `forth/header`,
+`cam6/table`) and conversions. 5: `TYPE-REGION` and typing by hand. 6: the MACRO-9 front end
+with `.ISA` and `.TYPE`.
+
 ## Order of work — each step falsifiable
 
 1. CPU completion + interrupts + `.oct` loader + console + clock.
