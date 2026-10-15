@@ -210,6 +210,302 @@ It's slow, honestly: about 600,000 steps a frame, so about one frame a second
 at the real PDP-7's speed. The cost is the software multiply and divide in
 `*/`, done for every vector component the turtle turns or moves. Turn the speed up and it keeps up with the camera.
 
+## Hands, tools, and human agency
+
+Bret Victor's [A Brief Rant on the Future of Interaction
+Design](https://worrydream.com/ABriefRantOnTheFutureOfInteractionDesign/)
+([responses and follow-up](https://worrydream.com/ABriefRantOnTheFutureOfInteractionDesign/responses.html))
+is a useful challenge for this project. Hands are not merely things to
+recognize or pictures to display. They feel and manipulate: grip, pressure,
+weight, resistance, articulation, and coordinated movement are part of how
+people think and work with tools. His criticism of "Pictures Under Glass"
+asks us to design for those capabilities, rather than reduce a hand to a
+single finger sliding on a surface.
+
+The ULTIMATE HAND demo offers a small example of discovering an interaction
+by doing it. Moving a hand toward the camera makes its displayed counterpart
+bigger, letting the fingers reach the switch. The arm supplies gross
+positioning; the fingers supply the expressive finish. A person can poke,
+flourish, hesitate, or withdraw. Withdrawing the real hand cancels the cycle
+and retracts the mechanism. Movement has consequences; it is not just an
+animation decorating a command.
+
+But **camera tracking restores some manipulation, not touch**. The person
+does not feel the switch's resistance or snap, the box, or the weight of the
+virtual mechanism. A beautifully tracked skeleton does not replace those
+sensations. DATAHAND is an experiment in embodied visual interaction, not a
+solution to Victor's whole critique. Visual feedback and the person's own
+sense of their moving body help, but they are not force feedback.
+
+This connects to **interfaces to agency, not agents instead of interfaces**.
+The design question is whether computation gives a person's capabilities
+more reach, or substitutes an opaque actor for the person exercising them.
+The point is not to prohibit automation, but to make its relationship to
+human intention legible and steerable. The synthetic attract hand invites
+participation; when a real hand appears, it yields control. It waves you in,
+then gets out of your way.
+
+### Directions to explore
+
+These are project directions, not claims of implemented features:
+
+- **Two hands with different jobs.** One holds or positions something while
+  the other operates on it, as when opening a jar. Explore coordinated roles
+  rather than treating two hands as interchangeable cursors.
+- **Physical props with digital meaning.** Track hands manipulating a real
+  object, retaining its weight, grip, and resistance while adding
+  computational behavior. The physical object supplies feedback that a
+  camera and display alone cannot.
+- **Hands as composable material.** In the recursive hand-tree student
+  project below, a pose becomes something to capture, place, transform, and
+  compose. The hand is not just issuing commands: its movement and shape
+  become material in an expressive medium.
+- **Hand-driven Spacewar.** Explore continuous, simultaneous control rather
+  than a gesture-password system in which making a prescribed sign merely
+  replaces pressing a key.
+- **Beyond the hands.** Arms, shoulders, posture, and whole-body movement
+  offer further expressive possibilities. Any extension should have a
+  purpose and alternatives for people with different ranges of movement;
+  requiring more movement is not automatically a better interface.
+
+The future interface is a design choice, not an inevitable sequence of
+devices. The useful test is not how futuristic the tracking looks, but what
+it enables a person to feel, understand, express, and do.
+
+## Design: Hand Turtle, then Hand-Driven Spacewar
+
+**Design only. Start with HAND TURTLE: one person, one hand, one turtle.**
+Use gestures to drive the familiar `PU`, `PD`, `RT`, `LT`, `FD`, and `BK`
+words before introducing ships, inertia, weapons, or another player. The
+turtle's trail makes the mapping visible and leaves a record of what the
+person did. Keep keyboard controls available for comparison and as an
+alternative.
+
+### The simplest base: HAND TURTLE
+
+The hand controls the turtle; this is different from DATAHAND, where the
+turtle draws the hand's skeleton. Start with the existing 2D turtle and
+its ordinary movement words. No new game engine is needed.
+
+Candidate mappings to try, not a prescribed gesture vocabulary:
+
+| Turtle word | Gesture experiment | Behavior to compare |
+|---|---|---|
+| `PU` / `PD` | Open hand lifts the pen; a deliberate pinch lowers it. | Hold-to-draw, with release lifting the pen, versus separate latched pen-up and pen-down gestures. |
+| `RT` / `LT` | Lean or point right/left from a comfortable upright neutral pose. | A small fixed turn on entering the gesture versus continuous turn rate proportional to lean. |
+| `FD` / `BK` | Point up/down in the camera plane. | A fixed step on entering the gesture versus continuous forward/backward speed while held. |
+
+Pointing up is only a candidate: in the simple directional mapping above
+it means `FD`; in a lean-to-turn mapping it can instead mean straight ahead,
+with no turn. Label profiles explicitly rather than assigning two meanings
+to the same pose in the same context. Also try splitting the channels:
+hand orientation turns, finger curl controls forward motion, and pinch
+controls the pen. Backward motion needs a distinguishable gesture or an
+explicit reverse mode in that profile. Test whether these actions can be
+combined comfortably without one gesture corrupting another.
+
+Compare **discrete commands** (one `FD` step or `RT` turn per gesture entry,
+release to rearm) with **continuous control** (small moves and turns at a
+fixed update rate while held). Movement must depend on elapsed time, not
+the camera's changing frame rate. Compare both with **direct heading**:
+pointing requests an absolute turtle heading, translated into bounded
+`RT`/`LT` corrections, rather than a turn rate. Keep these profiles
+switchable; none is declared the winner in advance.
+
+**Pull yourself along with your pointing finger.** Extend to reach, then
+retract to pull the turtle forward: repeated finger strokes, rather than
+holding a pose to run a motor. Try mapping the amount of retraction to
+`FD` distance, with extension as the recovery stroke. A held finger does
+not keep moving the turtle. Accumulate only deliberate retraction beyond
+a small noise threshold, and rearm after sufficient extension so tracking
+jitter cannot become a stream of tiny forward steps. Calibrate the useful
+range without requiring a fully straight finger or a tightly curled one.
+
+Compare finger flex with fingertip travel relative to the palm: moving
+the whole hand must not accidentally count as retracting the finger.
+If the index finger also supplies direction, curling it can make that
+direction unstable. Try taking the heading at the start of each pull,
+or steering with the palm while the index finger supplies the stroke.
+Show reach, pull, and recovery visibly. Start with forward pulls only;
+experiment separately with an explicit reverse modifier for `BK`, rather
+than making the recovery stroke undo the distance just travelled.
+
+This adds a third movement feel alongside discrete steps and held-rate
+control: **movement by accumulated strokes**. Compare how precisely a
+person can approach a target, draw a short line, and stop. Keep pen control
+independent where possible; if pinch interferes with the pulling finger,
+try latched pen state or another finger instead. A lost and reacquired
+hand must establish a fresh stroke baseline, never produce a large jump.
+
+**Continuous fly mode: a hand-operated WASD.** Hold a gesture to keep
+moving, return to neutral to stop issuing motion. Use the same logical
+controls from either the hand or the keyboard:
+
+| Control | Turtle action while held | Hand experiment |
+|---|---|---|
+| `W` | Forward (`FD`), distance proportional to elapsed time | Forward finger/hand deflection from neutral |
+| `S` | Backward (`BK`) | Opposite deflection |
+| `A` | Turn left (`LT`), angle proportional to elapsed time | Lean left |
+| `D` | Turn right (`RT`) | Lean right |
+
+Allow forward/backward and turning simultaneously, just as `W+A` makes
+a moving left turn. Opposing controls cancel on their axis. Compare
+simple on/off gestures with proportional deflection for speed and turn
+rate, with a neutral dead zone. Here A/D turn, not strafe; lateral motion
+can be a separately labelled experiment later. Keep `PU`/`PD` available
+independently so flying can draw curves or reposition without drawing.
+
+Make **stroke mode** and **fly mode** explicit selectable profiles. In
+stroke mode, retracting the pointing finger accumulates a finite pull;
+in fly mode, holding a deflection sustains motion. Show the active profile
+and require neutral when switching so the same held pose cannot suddenly
+launch the turtle. Test WASD alone, gestures alone, and keyboard fallback;
+define input ownership explicitly rather than letting stale hand commands
+remain active after keyboard takeover.
+
+For the first turtle fly profile, neutral stops movement immediately.
+That is a navigation control, not yet spaceship physics. A later ship
+profile maps forward/backward to acceleration under the game's rules:
+releasing thrust leaves the ship coasting. Do not silently change between
+these behaviors under the same mode label.
+
+Show the recognized command, pen state, requested motion, and a visible
+turtle even with the pen up. Begin stopped with the pen up. Missing or
+unusable tracking stops commanded movement and lifts the pen; reacquisition
+requires neutral/release before movement or drawing resumes. Do not let an
+attract hand draw on the person's canvas. Clearing the drawing, homing,
+and changing profiles can remain explicit panel actions at first, rather
+than overloading more gestures.
+
+First tasks: draw a line, leave a gap with `PU`, draw a corner, back up,
+and make a square. Compare accidental marks, unwanted turns, latency, and
+comfort. Only then add more words or a 3D profile for yaw, pitch, and roll.
+
+### From turtle to ship
+
+Once HAND TURTLE feels good, try **one player, one hand, one ship** in an
+empty arena with targets. Reuse the gesture/control experiments, not the
+turtle's movement physics: a ship accelerates and coasts, while `FD` moves
+a turtle a specified distance. Turning can carry over; pen engagement can
+suggest a thrust or firing gesture, but the game profile must name its
+meaning explicitly. Make turning, thrust, and firing enjoyable before
+adding another hand or a second player.
+
+This is an experiment with mappings, not a settled gesture vocabulary.
+Try both direct and indirect controls, let the player switch between them,
+and show which mapping is active. Do not require a theatrical pose when a
+small, comfortable movement will do.
+
+### One hand: turn, thrust, fire
+
+| Action | First experiment | Alternatives to compare |
+|---|---|---|
+| Turn | Point up for straight: an upright hand is neutral; leaning left or right requests a turn in that direction. | Direct heading from the wrist-to-middle-knuckle axis or pointing finger; palm tilt as a turn-rate control; displacement from a calibrated neutral position as a joystick. |
+| Thrust | Curl the middle, ring, and little fingers to engage thrust, leaving thumb and index available to fire. | Proportional curl for throttle; palm tilt; movement toward the camera if a reliable depth signal can be established. |
+| Fire | Close thumb and index into a pinch: one shot on closing, release to rearm. | An index-finger flick; deliberate held pinch for rate-limited repeated fire, as a separate mode. |
+
+**What does "point up for straight" mean?** In indirect mode it means zero
+turn rate: retain the ship's current heading, not point the ship toward
+the top of the screen. Lean farther to turn faster, within a cap. In direct
+mode, pointing up means the desired ship heading is screen-up; pointing
+left requests screen-left. The ship turns toward that heading at a bounded
+rate. Neither mode directly moves the ship to the hand's position:
+thrust changes velocity, and the ship keeps drifting without thrust.
+
+Try the palm's wrist-to-knuckle axis and the index finger separately as
+direction signals. A curled or foreshortened finger may give a poor heading;
+holding an index finger upright continuously may also be tiring. Learn
+which signal remains usable while thrusting and pinching, not just while
+demonstrating steering on its own.
+
+Keep firing discrete and steering/throttle continuous where useful. A pinch
+can disturb the apparent pointing direction, and curling fingers can change
+the palm estimate. Show these interactions and test combinations rather
+than assuming three individually recognizable gestures are independent.
+Do not add hyperspace or other gesture commands until the basic flight
+controls are comfortable.
+
+### Feedback, calibration, and loss of tracking
+
+- Show the ship's current heading and requested heading or turn rate,
+  thrust level, and fire/rearm state. A small hand overlay and neutral guide
+  should be optional, so players can see why the ship is responding.
+- Calibrate a comfortable neutral pose and range, for either hand. Use a
+  steering dead zone, bounded smoothing, and different engage/release
+  thresholds for pinch and thrust to prevent chatter. Tune these in play;
+  do not bake untested thresholds into the design.
+- Normalize pinch distance by palm size rather than fixed screen pixels,
+  so moving closer does not silently change the trigger. Camera-relative
+  landmark z is not a reliable absolute wrist-depth measurement; a
+  toward-camera throttle needs separate validation.
+- On missing or unusable tracking, release thrust and fire and request no
+  further turn; the ship continues under the game's physics. Show the
+  tracking loss. Reacquisition must not generate a shot: require release
+  before rearming the trigger. Consider an explicit pause option for solo
+  practice.
+- Synthetic attract hands may teach controls in a clearly separate demo,
+  but must never silently take over a player's live ship. Preserve the
+  existing DATAHAND demo's behavior outside this proposed game.
+
+### Later: two hands, two arrangements
+
+**Two players, one hand each.** Each person claims a ship with a hand in a
+visible entry zone. Both use the one-hand mapping, with independent
+calibration and trigger state. Initial left/right screen position can
+assign ships, but crossing hands must not swap them. Tracker result order
+and left/right handedness are not player identities: two people may both
+use their right hand. Association needs continuity, ambiguity detection,
+and explicit reclaim when identity is lost. Test occlusion and limited
+camera space before treating this as a reliable multiplayer mode.
+
+**One player, two hands.** Give the hands complementary jobs: one steers,
+the other supplies thrust and fire. Compare a proportional throttle hand
+with a simpler curl-to-thrust hand, and allow roles to be swapped. This
+removes the need to steer, curl, and pinch with the same hand. It should
+feel like coordinated manipulation, not two redundant cursors.
+
+The camera currently requests one hand and passes only its first result;
+device 57 exposes one hand's register file. Two-hand modes therefore need
+camera, controller, and device work, not merely a different game loop.
+Preserve the existing single-hand interface while designing an explicitly
+selected, consistently latched multi-hand view. Both ships must read the
+same capture, rather than mixing hands from different video frames.
+
+### Connecting the controls to a game
+
+Keep three concerns separate: tracked hand measurements, the selected
+control mapping, and the game's input interface. A control sample should
+distinguish presence, desired heading versus signed turn rate, thrust, and
+a fire event. Keep per-player gesture state outside the raw pose data.
+
+- **Historical DUEL, unchanged.** Adapt the controls to its active-low
+  console switches. Indirect steering naturally produces left/right
+  switches; proportional input needs an explicit conversion to on/off
+  commands. Direct heading control additionally needs the ship's heading
+  and a feedback controller; do not claim it follows from setting switches
+  alone. Clear hand-owned switches on tracking loss or leaving the mode,
+  without overwriting unrelated console input.
+- **A future Forth Spacewar.** Read hand measurements through device 57
+  and experiment with continuous flight controls in Forth. Keep the
+  existing [datahand.fs](tapes/pdp7forth/datahand.fs) as the hand drawing
+  demo, rather than turning it into the game. Drawing a faint controlling
+  hand near a ship is an optional aid, not a prerequisite for play.
+
+Neither route is selected here. Start with HAND TURTLE, then compare the
+control mappings in a small flight experiment; the historical adapter and
+a new Forth game have different constraints.
+
+### How to judge the experiment
+
+Use the same short tasks for each mapping: fly straight, turn to a target,
+accelerate then coast, and fire while turning and thrusting. Record time
+on target, accidental shots, response latency, tracking losses, and
+comfort after a few minutes. Check either hand, different distances from
+the camera, and restricted movement ranges. Then repeat with crossing and
+occlusion for two players, and independent steering/throttle for two-hand
+solo play. Choose mappings from those observations, not from how impressive
+the gesture looks in a demonstration.
+
 ## History: RB2 and the DataGlove
 
 VPL Research's DataGlove (Zimmerman and Lanier, 1987) measured finger flex

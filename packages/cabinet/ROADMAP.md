@@ -677,23 +677,22 @@ draw it on the 340, as DATAHAND on the menu.
 Machine's: ULTIMATE HAND, where the box's arm carries your hand out and your fingertip
 switches it off.
 
-**To do: hand-driven Spacewar.** Fly DUEL's ships, or the Forth Spacewar above, with your
-hands. The DataHand already reports everything a ship needs, a hand per player:
-
-- **Steering**: the hand's heading, as the palm frame's H vector gives it. Turn your hand
-  and the ship turns to match, rather than holding a turn key down.
-- **Thrust**: how far the hand leans toward the camera (wrist z, or the palm's tilt), or
-  curling the fingers into a fist.
-- **Fire**: a pinch (register 78), or flicking out the index finger, as a gun: one shot per
-  flick, so the gesture is the trigger.
-- **Hyperspace**: the open hand, or the bird.
-- **Two players, two hands**: MediaPipe tracks two hands at once (`numHands: 2`), each
-  labelled left or right. The device needs a second frame, a second register file or a
-  hand-select IOT, so each ship gets the hand on its own side of the camera.
-- **For DUEL, untouched**: the cabinet sets DUEL's console switches from the hands
-  (`DUEL_SWITCHES`), so the 1968 tape flies by hand without a byte changed. For the Forth
-  Spacewar, the game reads device 57 directly, and can draw the controlling hand faintly
-  behind each ship, as ULTIMATE HAND draws the demo hand.
+**To do: HAND TURTLE, then hand-driven Spacewar.** [Design and experiments in
+HAND-TRACKING.md](HAND-TRACKING.md#design-hand-turtle-then-hand-driven-spacewar),
+not implemented. Start with one person, one hand, one turtle: gestures for
+`PU`, `PD`, `RT`, `LT`, `FD`, and `BK`. Compare discrete commands, continuous
+movement, and direct heading; the trail makes the controls visible. Then
+try one player, one ship: gestures for turning, thrust, and fire.
+Compare direct heading with indirect turn-rate control: "point up for straight"
+means screen-up in the former, zero turn in the latter. Try finger curl for
+thrust and pinch or flick for firing, checking that they work together.
+Then explore two players with one hand each, and one player with two hands
+in complementary steering and throttle/fire roles. Two-hand tracking needs
+camera/controller/device extensions and stable player association, not
+handedness alone. Either adapt controls to unchanged DUEL's console switches
+or build continuous controls into a future Forth Spacewar; direct heading
+control for DUEL would also need ship-state feedback. Select mappings through
+flight experiments, with visible feedback and explicit tracking-loss behavior.
 
 Still to do, beside it: the pinch as a light pen, the Apple ][ port, and RB2's two-person world. For RB2,
 either more CPU types, or a tiny-Isaac renderer that emulates the conversation rather
