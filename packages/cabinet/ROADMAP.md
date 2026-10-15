@@ -667,11 +667,34 @@ the PDP-7, or on an Apple ][ as PDL(0), PDL(1) and three buttons.
 through the pen adapter; a webcam pinch draws in SYMELEC; and the same instruments,
 unchanged, drive an Apple ][ paddle program once the 6502 runs.
 
-**Done: the DataGlove on the PDP-7** ([HAND-TRACKING.md](HAND-TRACKING.md)). Device 57
-reports a webcam hand (MediaPipe, in the browser) as a palm frame and twenty 3D-turtle
-bones, in pixels, degrees and 16384ths. [turtle3d.fs](tapes/pdp7forth/turtle3d.fs) and
-[glove.fs](tapes/pdp7forth/glove.fs) draw it on the 340, as DATAGLOVE on the menu. Still
-to do: the pinch as a light pen, the Apple ][ port, and RB2's two-person world. For RB2,
+**Done: the DataHand on the PDP-7** ([HAND-TRACKING.md](HAND-TRACKING.md)), after VPL's
+DataGlove. Device 57 reports a webcam hand (MediaPipe, in the browser) as a palm frame and
+twenty 3D-turtle bones, in pixels, degrees and 16384ths.
+[turtle3d.fs](tapes/pdp7forth/turtle3d.fs) and [datahand.fs](tapes/pdp7forth/datahand.fs)
+draw it on the 340, as DATAHAND on the menu.
+[ultimate-hand.fs](tapes/pdp7forth/ultimate-hand.fs) makes your hand the Ultimate
+Machine's: ULTIMATE HAND, where the box's arm carries your hand out and your fingertip
+switches it off.
+
+**To do: hand-driven Spacewar.** Fly DUEL's ships, or the Forth Spacewar above, with your
+hands. The DataHand already reports everything a ship needs, a hand per player:
+
+- **Steering**: the hand's heading, as the palm frame's H vector gives it. Turn your hand
+  and the ship turns to match, rather than holding a turn key down.
+- **Thrust**: how far the hand leans toward the camera (wrist z, or the palm's tilt), or
+  curling the fingers into a fist.
+- **Fire**: a pinch (register 78), or flicking out the index finger, as a gun: one shot per
+  flick, so the gesture is the trigger.
+- **Hyperspace**: the open hand, or the bird.
+- **Two players, two hands**: MediaPipe tracks two hands at once (`numHands: 2`), each
+  labelled left or right. The device needs a second frame, a second register file or a
+  hand-select IOT, so each ship gets the hand on its own side of the camera.
+- **For DUEL, untouched**: the cabinet sets DUEL's console switches from the hands
+  (`DUEL_SWITCHES`), so the 1968 tape flies by hand without a byte changed. For the Forth
+  Spacewar, the game reads device 57 directly, and can draw the controlling hand faintly
+  behind each ship, as ULTIMATE HAND draws the demo hand.
+
+Still to do, beside it: the pinch as a light pen, the Apple ][ port, and RB2's two-person world. For RB2,
 either more CPU types, or a tiny-Isaac renderer that emulates the conversation rather
 than the computer, as tiny-titan does
 ([HAND-TRACKING.md](HAND-TRACKING.md#to-do)).
