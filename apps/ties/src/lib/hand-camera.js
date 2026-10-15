@@ -1,12 +1,12 @@
 /**
- * The DataGlove's webcam: MediaPipe's hand landmarker, loaded on first use.
+ * The DataHand's webcam: MediaPipe's hand landmarker, loaded on first use.
  * About 21 MB the first time (wasm from jsDelivr, the model from Google's
  * storage), then the browser's cache. Video stays in the browser.
  *
  * startHandCamera(onFrame) asks for the camera and calls onFrame(frame) for
  * every video frame: a HandFrame ({ points, handedness, aspect }, 21 points in
  * image coordinates) or null with no hand in view. It returns { video, stats,
- * stop() }: the video and what the tracker last saw, for the GLOVE panel.
+ * stop() }: the video and what the tracker last saw, for the DATAHAND panel.
  */
 
 // Keep in step with @mediapipe/tasks-vision in package.json: the wasm must match the JS.
@@ -67,7 +67,7 @@ export async function startHandCamera(onFrame, { signal } = {}) {
 		throw error;
 	}
 	const track = stream.getVideoTracks()[0];
-	/** What the tracker is doing, for the GLOVE panel. */
+	/** What the tracker is doing, for the DATAHAND panel. */
 	const stats = {
 		camera: track?.label ?? '',
 		delegate,

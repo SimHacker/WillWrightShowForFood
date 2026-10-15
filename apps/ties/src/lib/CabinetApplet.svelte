@@ -279,7 +279,7 @@
 	let player = null;
 	let demoCaption = $state('');
 	let demoOn = $state(false);
-	// The program's own switches (program.toggles: the glove's camera): which are on, and the last complaint.
+	// The program's own switches (program.toggles: the DataHand's camera): which are on, and the last complaint.
 	let toggleOn = $state({});
 	let toggleNote = $state('');
 	// Bumped when a slider moves, so the program's own get() is read again.
@@ -870,7 +870,7 @@
 	let ttyOpen = $state(panelsStored.includes('tty') || !!untrack(() => programById(programId)?.tty));
 	let configOpen = $state(panelsStored.includes('config'));
 	let ringsOpen = $state(panelsStored.includes('rings'));
-	// A program's own panel (program.panel: the glove's), with its buttons, sliders and a canvas it draws.
+	// A program's own panel (program.panel: the DataHand's), with its buttons, sliders and a canvas it draws.
 	let progOpen = $state(panelsStored.includes('prog') || !!untrack(() => programById(programId)?.panel));
 	let progCanvas = $state(null);
 	let progInfo = $state('');
@@ -2909,7 +2909,7 @@
 				{#if toggleNote}<span class="demo-caption" aria-live="polite">{toggleNote}</span>{/if}
 			</div>
 			{#if progPrompt}
-				<div class="glove-instructions" role="status">
+				<div class="hand-instructions" role="status">
 					<strong>{progPrompt}</strong>
 					<div>{progHint}</div>
 				</div>
@@ -3865,7 +3865,7 @@
 		align-items: center;
 		gap: 0.3rem;
 	}
-	.glove-instructions {
+	.hand-instructions {
 		border-left: 3px solid #ffd27a;
 		padding: 0.4rem 0.6rem;
 		background: #262416;

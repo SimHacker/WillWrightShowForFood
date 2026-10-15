@@ -1,5 +1,5 @@
 \ CLIP: line clipping for the Type 340, for drawings that may run off
-\ the glass. Needs only the prelude. Loaded by DATAGLOVE ahead of
+\ the glass. Needs only the prelude. Loaded by DATAHAND ahead of
 \ turtle3d.fs; turtle.fs leaves it out, as 8K is tight for cartridges
 \ like the Turing machines that load the 2D turtle.
 decimal

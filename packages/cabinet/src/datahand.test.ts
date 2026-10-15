@@ -4,7 +4,7 @@ import { test } from "node:test";
 import type { Iot } from "./bus.js";
 import { Cabinet } from "./cabinet.js";
 import { assembleForthKernel, bootForth, compileForth, type ForthImage } from "./forth.js";
-import { DataGlove, GLOVE_BONES, GLOVE_REG, gloveRegisters, toScreen } from "./plugins/glove.js";
+import { DataHand, HAND_BONES, HAND_REG, handRegisters, toScreen } from "./plugins/datahand.js";
 import { flexes, GESTURES, ONE, syntheticHand, wavingHand } from "./plugins/hand.js";
 import { Pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
@@ -29,15 +29,15 @@ function walk(r: readonly number[]): [number, number, number][] {
 		const s = Math.sin(rad(d));
 		return [a.map((v, i) => v * c - b[i]! * s), b.map((v, i) => v * c + a[i]! * s)];
 	};
-	const wrist = r.slice(GLOVE_REG.wrist, GLOVE_REG.wrist + 3);
-	const frame = [0, 1, 2].map((k) => r.slice(GLOVE_REG.frame + 3 * k, GLOVE_REG.frame + 3 * k + 3).map((v) => v / ONE));
+	const wrist = r.slice(HAND_REG.wrist, HAND_REG.wrist + 3);
+	const frame = [0, 1, 2].map((k) => r.slice(HAND_REG.frame + 3 * k, HAND_REG.frame + 3 * k + 3).map((v) => v / ONE));
 	const out: [number, number, number][] = new Array(21);
 	out[0] = wrist as [number, number, number];
 	let [h, l, u] = frame as [number[], number[], number[]];
 	let at = wrist;
-	GLOVE_BONES.forEach(([from, to], b) => {
+	HAND_BONES.forEach(([from, to], b) => {
 		if (from === 0) [h, l, u, at] = [...(frame as [number[], number[], number[]]), wrist];
-		const [yaw, pitch, len] = r.slice(GLOVE_REG.bones + 3 * b, GLOVE_REG.bones + 3 * b + 3) as [number, number, number];
+		const [yaw, pitch, len] = r.slice(HAND_REG.bones + 3 * b, HAND_REG.bones + 3 * b + 3) as [number, number, number];
 		[h, l] = turn(h, l, yaw);
 		[u, h] = turn(u, h, pitch);
 		at = at.map((v, i) => v + h[i]! * len);
@@ -46,28 +46,28 @@ function walk(r: readonly number[]): [number, number, number][] {
 	return out;
 }
 
-test("glove: the bones, walked by a 3D turtle, reach every landmark", () => {
+test("datahand: the bones, walked by a 3D turtle, reach every landmark", () => {
 	for (let t = 0; t < 42; t += 1.3) {
 		const f = wavingHand(t);
-		const r = gloveRegisters(f);
+		const r = handRegisters(f);
 		const want = f.points.map((p) => toScreen(p));
 		walk(r).forEach((p, i) => {
 			const w = want[i]!;
 			assert.ok(Math.hypot(p[0] - w[0], p[1] - w[1], p[2] - w[2]) < 2.5, `t ${t} landmark ${i}: ${p} vs ${w}`);
 		},
 		);
-		assert.equal(r[GLOVE_REG.status], 3, "a right hand");
+		assert.equal(r[HAND_REG.status], 3, "a right hand");
 	}
-	const open = gloveRegisters(syntheticHand({ curls: [0, 0, 0, 0, 0] }));
-	const fist = gloveRegisters(syntheticHand({ curls: [1, 1, 1, 1, 1] }));
-	assert.deepEqual(open.slice(GLOVE_REG.flex, GLOVE_REG.flex + 5), [0, 0, 0, 0, 0]);
-	assert.deepEqual(fist.slice(GLOVE_REG.flex, GLOVE_REG.flex + 5), [ONE, ONE, ONE, ONE, ONE]);
-	assert.ok(fist[GLOVE_REG.pinch]! < open[GLOVE_REG.pinch]!);
-	assert.ok(gloveRegisters(null).every((v) => v === 0), "no hand, all zero");
+	const open = handRegisters(syntheticHand({ curls: [0, 0, 0, 0, 0] }));
+	const fist = handRegisters(syntheticHand({ curls: [1, 1, 1, 1, 1] }));
+	assert.deepEqual(open.slice(HAND_REG.flex, HAND_REG.flex + 5), [0, 0, 0, 0, 0]);
+	assert.deepEqual(fist.slice(HAND_REG.flex, HAND_REG.flex + 5), [ONE, ONE, ONE, ONE, ONE]);
+	assert.ok(fist[HAND_REG.pinch]! < open[HAND_REG.pinch]!);
+	assert.ok(handRegisters(null).every((v) => v === 0), "no hand, all zero");
 });
 
-test("glove: IOTs latch a frame and read it a register at a time", () => {
-	const g = new DataGlove();
+test("datahand: IOTs latch a frame and read it a register at a time", () => {
+	const g = new DataHand();
 	assert.deepEqual(g.iot(iot(0o01)), { ac: 0, skip: false }, "GSF: nothing yet");
 	g.feed(syntheticHand({ curls: [0, 0, 0, 0, 0], heading: 40 }));
 	assert.equal(g.iot(iot(0o01)).skip, true, "GSF: a frame waits");
@@ -77,9 +77,9 @@ test("glove: IOTs latch a frame and read it a register at a time", () => {
 	assert.equal(g.iot(iot(0o21)).skip, true);
 	assert.equal(g.iot(iot(0o02)).ac, 3, "GRS: a right hand");
 	const r = g.registers();
-	g.iot(iot(0o24, GLOVE_REG.bones));
-	for (let i = 0; i < 6; i += 1) assert.equal(g.iot(iot(0o22)).ac, r[GLOVE_REG.bones + i]! & 0o777777, "GRD steps the index");
-	assert.ok(r.slice(GLOVE_REG.bones).some((v) => v < 0), "something negative, read as 18-bit two's complement");
+	g.iot(iot(0o24, HAND_REG.bones));
+	for (let i = 0; i < 6; i += 1) assert.equal(g.iot(iot(0o22)).ac, r[HAND_REG.bones + i]! & 0o777777, "GRD steps the index");
+	assert.ok(r.slice(HAND_REG.bones).some((v) => v < 0), "something negative, read as 18-bit two's complement");
 	g.iot(iot(0o64, 1));
 	assert.equal(g.irq(), false);
 	g.feed(null);
@@ -88,11 +88,11 @@ test("glove: IOTs latch a frame and read it a register at a time", () => {
 	assert.equal(g.irq(), false, "GCF");
 });
 
-// --- The Forth side: turtle3d.fs and glove.fs on Mitch's kernel ---
+// --- The Forth side: turtle3d.fs and datahand.fs on Mitch's kernel ---
 
 const tape = (f: string) => readFileSync(new URL(`../tapes/pdp7forth/${f}`, import.meta.url), "utf8");
 let image: ForthImage | null = null;
-function gloveImage(): ForthImage {
+function handImage(): ForthImage {
 	image ??= compileForth({
 		kernel: assembleForthKernel({
 			sop: readFileSync(new URL("../tapes/pdp7unix/sop.s", import.meta.url), "utf8"),
@@ -100,12 +100,12 @@ function gloveImage(): ForthImage {
 			end: tape("end.s"),
 			kernelName: "kernel-names-full.s",
 		}),
-		sources: ["prelude.fs", "does.fs", "turtle.fs", "code.fs", "tags.fs", "clip.fs", "turtle3d.fs", "glove.fs"].map(tape),
+		sources: ["prelude.fs", "does.fs", "turtle.fs", "code.fs", "tags.fs", "clip.fs", "turtle3d.fs", "datahand.fs"].map(tape),
 	});
 	return image;
 }
 
-function forthMachine(glove: DataGlove) {
+function forthMachine(datahand: DataHand) {
 	const cpu = new Pdp7({ coreWords: 8192 });
 	let paper = "";
 	let last: Segment[] = [];
@@ -118,9 +118,9 @@ function forthMachine(glove: DataGlove) {
 		},
 	});
 	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
-	const box = new Cabinet({ cpu, devices: [t340, tty, glove] });
+	const box = new Cabinet({ cpu, devices: [t340, tty, datahand] });
 	t340.clock = () => box.cycles;
-	bootForth(cpu, gloveImage());
+	bootForth(cpu, handImage());
 	box.run(300_000);
 	const type = (text: string) => {
 		for (const ch of text) tty.type((ch === "\n" ? 0o15 : ch.toUpperCase().charCodeAt(0)) | 0o200);
@@ -137,7 +137,7 @@ function forthMachine(glove: DataGlove) {
 const nums = (s: string) => (s.match(/-?\d+/g) ?? []).map(Number);
 
 test("forth: the 3D turtle turns about its own axes", () => {
-	const m = forthMachine(new DataGlove());
+	const m = forthMachine(new DataHand());
 	assert.match(m.line("HOME3 AT3 . ."), / 512 512\s+ok/);
 	assert.match(m.line("100 FWD AT3 . ."), / 612 512\s+ok/, "heading up");
 	assert.match(m.line("90 YAW 100 FWD AT3 . ."), / 612 612\s+ok/, "yaw right");
@@ -147,14 +147,14 @@ test("forth: the 3D turtle turns about its own axes", () => {
 	assert.match(m.line("HOME3 90 ROLL 90 PITCH 100 FWD AT3 . ."), / 512 612\s+ok/, "rolled right, pitched up: to the right");
 });
 
-test("forth: GLOVE's turtle lands every finger where the camera saw it", () => {
-	const glove = new DataGlove();
-	const m = forthMachine(glove);
+test("forth: DATAHAND's turtle lands every finger where the camera saw it", () => {
+	const datahand = new DataHand();
+	const m = forthMachine(datahand);
 	for (const [k, g] of [GESTURES[0]!, GESTURES[2]!, GESTURES[4]!].entries()) {
 		const f = syntheticHand({ curls: g.curls, heading: -15 + 15 * k, size: 0.28, y: 0.8 });
-		glove.feed(f);
+		datahand.feed(f);
 		const want = f.points.map((p) => toScreen(p));
-		m.line("GLOVE-LATCH 1 VNUM ! 1 VDEN ! 0 VOX ! 0 VOY ! 0 SPIN ! NEW-FRAME HAND");
+		m.line("HAND-LATCH 1 VNUM ! 1 VDEN ! 0 VOX ! 0 VOY ! 0 SPIN ! NEW-FRAME HAND");
 		for (const i of [0, 4, 8, 12, 16, 20]) {
 			const out = m.line(`${i} SPOT . .`);
 			const [y = NaN, x = NaN] = nums(out.slice(out.indexOf(". .") + 3));
@@ -165,11 +165,11 @@ test("forth: GLOVE's turtle lands every finger where the camera saw it", () => {
 });
 
 test("forth: BIRD? knows the bird, and only the bird", () => {
-	const glove = new DataGlove();
-	const m = forthMachine(glove);
+	const datahand = new DataHand();
+	const m = forthMachine(datahand);
 	for (const g of GESTURES) {
-		glove.feed(syntheticHand({ curls: g.curls }));
-		const out = m.line("GLOVE-LATCH BIRD? .");
+		datahand.feed(syntheticHand({ curls: g.curls }));
+		const out = m.line("HAND-LATCH BIRD? .");
 		const [flag = NaN] = nums(out.slice(out.indexOf("BIRD? .") + 7));
 		assert.equal(flag !== 0, g.name === "bird", `${g.name}: ${flag}`);
 	}
@@ -177,11 +177,11 @@ test("forth: BIRD? knows the bird, and only the bird", () => {
 });
 
 test("forth: FIT keeps a hand on the screen, however big or off the edge the camera has it", () => {
-	const glove = new DataGlove();
-	const m = forthMachine(glove);
+	const datahand = new DataHand();
+	const m = forthMachine(datahand);
 	for (const o of [{ size: 0.9, x: 0.3, y: 0.95 }, { size: 0.15, x: 0.8, y: 0.5 }, { size: 0.6, x: -0.05, y: 1.0 }]) {
-		glove.feed({ ...syntheticHand({ curls: [0, 0, 0, 0, 0], ...o }), aspect: 4 / 3 });
-		m.line("GLOVE-LATCH 0 SPIN ! NEW-FRAME FIT HAND");
+		datahand.feed({ ...syntheticHand({ curls: [0, 0, 0, 0, 0], ...o }), aspect: 4 / 3 });
+		m.line("HAND-LATCH 0 SPIN ! NEW-FRAME FIT HAND");
 		const at = [0, 4, 8, 12, 16, 20].map((i) => {
 			const out = m.line(`${i} SPOT . .`);
 			const [y = NaN, x = NaN] = nums(out.slice(out.indexOf(". .") + 3));
@@ -194,14 +194,14 @@ test("forth: FIT keeps a hand on the screen, however big or off the edge the cam
 });
 
 test("forth: with FITTING off, a hand walks on from the side of the stage, clipped, never stopping the 340", () => {
-	const glove = new DataGlove();
-	const m = forthMachine(glove);
+	const datahand = new DataHand();
+	const m = forthMachine(datahand);
 	m.line("0 FITTING !");
-	m.type("GLOVE\n");
+	m.type("DATAHAND\n");
 	const seen: number[] = [];
 	// The wrist comes from far off the right of the stage to the middle, fingers reaching ahead.
 	for (const x of [1.9, 1.6, 1.4, 1.2, 0.9, 0.6]) {
-		glove.feed({ ...syntheticHand({ curls: [0, 0, 0, 0, 0], x, y: 0.7, size: 0.4, heading: -60 }), aspect: 1 });
+		datahand.feed({ ...syntheticHand({ curls: [0, 0, 0, 0, 0], x, y: 0.7, size: 0.4, heading: -60 }), aspect: 1 });
 		const before = m.t340.frame;
 		m.box.run(3_000_000);
 		assert.ok(m.t340.frame > before, `x ${x}: the display goes on`);
@@ -215,10 +215,10 @@ test("forth: with FITTING off, a hand walks on from the side of the stage, clipp
 	assert.ok(seen.slice(0, 5).every((n, i) => i === 0 || n > seen[i - 1]!), `more of it as it comes on: ${seen}`);
 });
 
-test("forth: GLOVE refreshes the display after changing hand and handedness", () => {
-	const glove = new DataGlove();
-	const m = forthMachine(glove);
-	m.type("GLOVE\n");
+test("forth: DATAHAND refreshes the display after changing hand and handedness", () => {
+	const datahand = new DataHand();
+	const m = forthMachine(datahand);
+	m.type("DATAHAND\n");
 	let seed = 7;
 	const random = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
 	for (let i = 0; i < 100; i += 1) {
@@ -231,26 +231,26 @@ test("forth: GLOVE refreshes the display after changing hand and handedness", ()
 			heading: random() * 120 - 60,
 		});
 		for (let j = 0; j < 12; j += 1) {
-			glove.feed(f);
+			datahand.feed(f);
 			m.box.run(100_000);
 		}
 		const before = m.t340.frame;
 		for (let j = 0; j < 12; j += 1) {
-			glove.feed(f);
+			datahand.feed(f);
 			m.box.run(100_000);
 		}
 		assert.ok(m.t340.frame > before, `hand ${i}: display status ${m.t340.status.toString(8)}`);
-		assert.equal(glove.registers()[0], i % 2 ? 1 : 3);
+		assert.equal(datahand.registers()[0], i % 2 ? 1 : 3);
 	}
 });
 
-test("forth: GLOVE draws the waving hand and its flex meters until a key", () => {
-	const glove = new DataGlove({ source: wavingHand, framePeriod: 200_000 });
-	const m = forthMachine(glove);
-	m.type("GLOVE\n");
+test("forth: DATAHAND draws the waving hand and its flex meters until a key", () => {
+	const datahand = new DataHand({ source: wavingHand, framePeriod: 200_000 });
+	const m = forthMachine(datahand);
+	m.type("DATAHAND\n");
 	m.box.run(6_000_000);
 	const segs = m.frame();
-	assert.ok(glove.latches >= 2, `frames latched: ${glove.latches}`);
+	assert.ok(datahand.latches >= 2, `frames latched: ${datahand.latches}`);
 	assert.ok(segs.length > 30, `segments: ${segs.length}`);
 	assert.ok(segs.some((s) => s.y0 > 300 && s.y1 > 300), "a hand above the meters");
 	assert.ok(segs.some((s) => s.y0 < 210 && s.x0 === s.x1), "meter levels");

@@ -10,7 +10,7 @@
  *   0 wrist · thumb 1 CMC 2 MCP 3 IP 4 tip · index 5 6 7 8 · middle 9 10 11 12
  *   ring 13 14 15 16 · pinky 17 18 19 20 (MCP, PIP, DIP, tip)
  *
- * The glove's measurements are in the units a PDP-7 can use with turtle.fs's trig: a fraction is
+ * The datahand's measurements are in the units a PDP-7 can use with turtle.fs's trig: a fraction is
  * an integer scaled by ONE (16384, what SIN returns for 90 degrees), an angle is whole degrees,
  * and a heading is the turtle's: 0 up, clockwise.
  */
@@ -23,9 +23,11 @@ export type HandFrame = {
 	handedness?: "left" | "right";
 	/** Image width / height, so angles and the picture aren't stretched. 1 if not given. */
 	aspect?: number;
+	/** Made up (a demo or sliders), not tracked: so a program can tell it isn't the person's. */
+	synthetic?: boolean;
 };
 
-/** 1.0 in the glove's fixed point: sin 90 in turtle.fs. */
+/** 1.0 in the datahand's fixed point: sin 90 in turtle.fs. */
 export const ONE = 16384;
 
 export const FINGERS = ["thumb", "index", "middle", "ring", "pinky"] as const;
@@ -102,12 +104,16 @@ export function headingOf(dx: number, dy: number): number {
  * A synthetic hand, for demos and tests: palm toward the viewer, fingers curled by `curls`
  * (0..1, thumb first), so that `flexes` gives the curls back. `heading` turns it about the wrist
  * as the viewer sees it, turtle style; `x`, `y` place the wrist in the image (0..1, y down) and
- * `size` is the wrist to middle knuckle, in widths. `mirror` (default true, as the glove shows a
+ * `size` is the wrist to middle knuckle, in widths. `yaw` turns the palm to face left or right
+ * (degrees, about the hand's own up) and `tilt` tips the fingers toward or away from the viewer
+ * (about its left-right axis), before `heading`. `mirror` (default true, as the datahand shows a
  * webcam) lays the image out so that, mirrored, the picture is what was asked for.
  */
 export function syntheticHand(o: {
 	curls: readonly number[];
 	heading?: number;
+	yaw?: number;
+	tilt?: number;
 	x?: number;
 	y?: number;
 	size?: number;
@@ -154,7 +160,15 @@ export function syntheticHand(o: {
 			local[base + 1 + k] = at;
 		}
 	}
-	const points = local.map(([u, v, w]) => {
+	const yw = ((o.yaw ?? 0) * Math.PI) / 180;
+	const tl = ((o.tilt ?? 0) * Math.PI) / 180;
+	const points = local.map(([u0, v0, w0]) => {
+		// Yaw about v, then tilt about u, then heading in the picture.
+		const u1 = u0 * Math.cos(yw) + w0 * Math.sin(yw);
+		const w1 = -u0 * Math.sin(yw) + w0 * Math.cos(yw);
+		const v = v0 * Math.cos(tl) - w1 * Math.sin(tl);
+		const w = v0 * Math.sin(tl) + w1 * Math.cos(tl);
+		const u = u1;
 		const sx = u * Math.cos(th) + v * Math.sin(th);
 		const sy = -u * Math.sin(th) + v * Math.cos(th);
 		const x = cx + sx * L;
@@ -176,7 +190,9 @@ export const GESTURES: readonly { name: string; curls: readonly number[] }[] = [
 
 /**
  * The demo hand at `t` seconds: it waves slowly, holds each gesture, and eases into the next
- * every six seconds.
+ * every six seconds. It also turns a little side to side and tips a little toward you, each at
+ * its own rate (periods of 8, 11 and 17 seconds), so they beat: the hand is seen from ever
+ * different angles, the fingers don't sit in a line, and which way it faces is plain.
  * Deterministic, so a recording or a test sees the same hand.
  */
 export function wavingHand(t: number): HandFrame {
@@ -189,7 +205,9 @@ export function wavingHand(t: number): HandFrame {
 	const e = s * s * (3 - 2 * s);
 	return syntheticHand({
 		curls: from.map((c, i) => c + (to[i]! - c) * e),
-		heading: 15 * Math.sin(t * Math.PI * 0.25),
+		heading: 15 * Math.sin((t * 2 * Math.PI) / 8),
+		yaw: 22 * Math.sin((t * 2 * Math.PI) / 11),
+		tilt: 12 * Math.sin((t * 2 * Math.PI) / 17 + 1),
 		x: 0.5,
 		y: 0.82,
 		size: 0.32,

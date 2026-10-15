@@ -81,8 +81,8 @@ export { UltimateMachine, UM_MAX, UM_TICK, UM_PHASE, UM_PHASES, UM_DEFAULT_TIMIN
 export type { UltimateOpts, UltimatePhase, UltimatePose, UltimateTiming } from "./plugins/ultimate.js";
 export { ONE as HAND_ONE, FINGERS, FINGER_CHAINS, JOINT_MAX, HAND_CHAINS, bends, flexes, headingOf, syntheticHand, GESTURES, wavingHand } from "./plugins/hand.js";
 export type { HandPoint, HandFrame } from "./plugins/hand.js";
-export { DataGlove, GLOVE_DEVICE, GLOVE_REG, GLOVE_BONES, toScreen, gloveRegisters } from "./plugins/glove.js";
-export type { GloveOpts } from "./plugins/glove.js";
+export { DataHand, HAND_DEVICE, HAND_REG, HAND_BONES, toScreen, handRegisters } from "./plugins/datahand.js";
+export type { DataHandOpts } from "./plugins/datahand.js";
 export {
 	MOVE,
 	PDP7_TM_SHAPE,

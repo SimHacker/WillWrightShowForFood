@@ -5,7 +5,7 @@ import {
 	Cabinet, Pdp7, Type340, Teletype, syntheticHand,
 	assembleForthKernel, compileForth, bootForth
 } from '@wwsff/cabinet';
-import { createGloveController } from './glove-controller.js';
+import { createHandController } from './hand-controller.js';
 
 function cameraHarness() {
 	let feed;
@@ -15,7 +15,7 @@ function cameraHarness() {
 	let starts = 0;
 	let signal;
 	let stopped = 0;
-	const controller = createGloveController({
+	const controller = createHandController({
 		now: () => time,
 		startCamera(onFrame, options) {
 			starts += 1;
@@ -80,7 +80,7 @@ test('activation starts only this cabinet camera, keeps the show running, and pr
 
 test('changing input while permission is pending cannot reactivate the camera', async () => {
 	const h = cameraHarness();
-	const [glove] = h.controller.peripherals();
+	const [datahand] = h.controller.peripherals();
 	const starting = h.controller.toggles[1].set(true);
 	await h.controller.toggles[0].set(true);
 	assert.equal(h.signal().aborted, true);
@@ -90,13 +90,13 @@ test('changing input while permission is pending cannot reactivate the camera', 
 	assert.equal(h.controller.snapshot().handMode, 'demo');
 	assert.equal(h.controller.snapshot().handCamera, null);
 	assert.equal(h.stopped(), 1);
-	assert.notEqual(glove.source, null);
+	assert.notEqual(datahand.source, null);
 	h.controller.dispose();
 });
 
 test('auto mode takes a real hand immediately, holds dropouts for exactly one second, and waves it back in', async () => {
 	const h = cameraHarness();
-	const [glove] = h.controller.peripherals();
+	const [datahand] = h.controller.peripherals();
 	h.controller.activate();
 	const starting = h.controller.toggles[1].set(true);
 	h.ready();
@@ -104,33 +104,33 @@ test('auto mode takes a real hand immediately, holds dropouts for exactly one se
 	assert.match(h.controller.snapshot().instructions.title, /SHOW YOUR HAND/);
 	const hand = syntheticHand({ handedness: 'left', curls: [1, 1, 0, 1, 1] });
 	h.feed(hand);
-	assert.equal(glove.last, hand, 'no delay before real input reaches the port');
+	assert.equal(datahand.last, hand, 'no delay before real input reaches the port');
 	assert.equal(h.controller.snapshot().handMode, 'camera');
 	assert.match(h.controller.snapshot().instructions.title, /YOUR HAND IS DRIVING/);
 	h.feed(null);
 	h.advance(999);
-	glove.tick(20_000);
-	assert.equal(glove.last, hand, 'brief dropouts hold the real pose');
+	datahand.tick(20_000);
+	assert.equal(datahand.last, hand, 'brief dropouts hold the real pose');
 	h.advance(1);
-	glove.tick(20_000);
+	datahand.tick(20_000);
 	assert.equal(h.controller.snapshot().handMode, 'demo');
-	assert.notEqual(glove.last, hand, 'one second really returns synthetic poses to the device');
+	assert.notEqual(datahand.last, hand, 'one second really returns synthetic poses to the device');
 	assert.match(h.controller.snapshot().instructions.title, /SYNTHETIC ATTRACT MODE/);
-	const wave = glove.last;
+	const wave = datahand.last;
 	h.advance(2000);
-	glove.tick(20_000);
-	assert.notDeepEqual(glove.last.points, wave.points, 'the attract hand actually animates');
+	datahand.tick(20_000);
+	assert.notDeepEqual(datahand.last.points, wave.points, 'the attract hand actually animates');
 	h.advance(16_000);
 	assert.match(h.controller.snapshot().instructions.detail, /bird/);
 	h.feed(hand);
-	assert.equal(glove.last, hand, 'returning hand instantly interrupts even the bird');
+	assert.equal(datahand.last, hand, 'returning hand instantly interrupts even the bird');
 	assert.equal(h.starts(), 1, 'attract mode keeps the camera running, not a fresh permission prompt');
 	h.controller.dispose();
 });
 
 test('camera failure is explicit while animation continues; retry, privacy off and reactivation work', async () => {
 	const h = cameraHarness();
-	const [glove] = h.controller.peripherals();
+	const [datahand] = h.controller.peripherals();
 	h.controller.activate();
 	const starting = h.controller.toggles[1].set(true);
 	h.fail(new DOMException('Permission denied', 'NotAllowedError'));
@@ -138,7 +138,7 @@ test('camera failure is explicit while animation continues; retry, privacy off a
 	assert.match(h.controller.snapshot().instructions.detail, /NotAllowedError: Permission denied/);
 	assert.match(h.controller.snapshot().instructions.detail, /RETRY CAMERA/);
 	h.advance(2000);
-	assert.ok(glove.source());
+	assert.ok(datahand.source());
 	const retry = h.controller.toggles[2].set(true);
 	h.ready();
 	await retry;
@@ -169,11 +169,11 @@ test('camera poses reach Forth and change the actual 340 flex strokes, not just 
 			end: tape('pdp7forth/end.s'),
 			kernelName: 'kernel-names-full.s'
 		}),
-		sources: ['prelude.fs', 'does.fs', 'turtle.fs', 'code.fs', 'tags.fs', 'clip.fs', 'turtle3d.fs', 'glove.fs']
+		sources: ['prelude.fs', 'does.fs', 'turtle.fs', 'code.fs', 'tags.fs', 'clip.fs', 'turtle3d.fs', 'datahand.fs']
 			.map((f) => tape(`pdp7forth/${f}`))
 	});
 	const h = cameraHarness();
-	const [glove] = h.controller.peripherals();
+	const [datahand] = h.controller.peripherals();
 	const cpu = new Pdp7({ coreWords: 8192 });
 	let rendered = [];
 	const t340 = new Type340({
@@ -182,10 +182,10 @@ test('camera poses reach Forth and change the actual 340 flex strokes, not just 
 		onFrame: (frame) => { if (frame.segments.length > 100) rendered = frame.segments; }
 	});
 	const tty = new Teletype({ printCycles: 1000 });
-	const box = new Cabinet({ cpu, devices: [t340, tty, glove] });
+	const box = new Cabinet({ cpu, devices: [t340, tty, datahand] });
 	bootForth(cpu, image);
 	box.run(300_000);
-	for (const ch of 'GLOVE\r') tty.type(ch.charCodeAt(0) | 0o200);
+	for (const ch of 'DATAHAND\r') tty.type(ch.charCodeAt(0) | 0o200);
 	box.run(2_000_000);
 	h.controller.activate();
 	const starting = h.controller.toggles[1].set(true);
@@ -194,7 +194,7 @@ test('camera poses reach Forth and change the actual 340 flex strokes, not just 
 	for (const curls of [[1, 1, 1, 1, 1], [0, 0, 0, 0, 0], [1, 1, 0, 1, 1]]) {
 		h.feed(syntheticHand({ curls, handedness: 'left' }));
 		box.run(2_000_000);
-		assert.equal(glove.registers()[0], 1, 'Forth latched the camera left hand, not the demo right hand');
+		assert.equal(datahand.registers()[0], 1, 'Forth latched the camera left hand, not the demo right hand');
 		for (let finger = 0; finger < 5; finger += 1) {
 			const x = 112 + 170 * finger + 12;
 			const y = 60 + 140 * curls[finger];
@@ -206,9 +206,9 @@ test('camera poses reach Forth and change the actual 340 flex strokes, not just 
 	h.feed(null);
 	h.advance(1000);
 	box.run(2_000_000);
-	assert.equal(glove.registers()[0], 3, 'the actual Forth display returns to the synthetic right hand');
+	assert.equal(datahand.registers()[0], 7, 'the actual Forth display returns to the synthetic right hand, marked synthetic');
 	h.feed(syntheticHand({ curls: [0, 0, 0, 0, 0], handedness: 'left' }));
 	box.run(2_000_000);
-	assert.equal(glove.registers()[0], 1, 'the camera takes back the actual display without a click');
+	assert.equal(datahand.registers()[0], 1, 'the camera takes back the actual display without a click');
 	h.controller.dispose();
 });

@@ -1,4 +1,4 @@
-import { DataGlove, GESTURES, syntheticHand, wavingHand } from '@wwsff/cabinet';
+import { DataHand, GESTURES, syntheticHand, wavingHand } from '@wwsff/cabinet';
 
 const openCamera = async (feed, options) => {
 	const { startHandCamera } = await import('./hand-camera.js');
@@ -8,8 +8,8 @@ const openCamera = async (feed, options) => {
 const HAND_TIMEOUT = 1000;
 
 /** One controller per cabinet, never shared between applets or machine resets. */
-export function createGloveController({ startCamera = openCamera, now = () => performance.now() } = {}) {
-	let glove = null;
+export function createHandController({ startCamera = openCamera, now = () => performance.now() } = {}) {
+	let datahand = null;
 	let camera = null;
 	let mode = 'demo';
 	let generation = 0;
@@ -22,9 +22,9 @@ export function createGloveController({ startCamera = openCamera, now = () => pe
 	let lastHand = null;
 	let lastSeen = -Infinity;
 	const sliders = { curls: [0, 0, 0, 0, 0], heading: 0 };
-	const manual = () => syntheticHand({ ...sliders, x: 0.5, y: 0.82, size: 0.32 });
+	const manual = () => ({ ...syntheticHand({ ...sliders, x: 0.5, y: 0.82, size: 0.32 }), synthetic: true });
 	const demoSeconds = () => Math.max(0, now() - Math.max(started, lastSeen + HAND_TIMEOUT)) / 1000;
-	const demo = () => wavingHand(demoSeconds());
+	const demo = () => ({ ...wavingHand(demoSeconds()), synthetic: true });
 	const handMode = () => mode === 'auto' ? (lastHand && now() - lastSeen < HAND_TIMEOUT ? 'camera' : 'demo') : mode;
 	const sample = () => handMode() === 'camera' ? lastHand : mode === 'manual' ? manual() : demo();
 
@@ -41,9 +41,9 @@ export function createGloveController({ startCamera = openCamera, now = () => pe
 		lastSeen = -Infinity;
 		started = now();
 		mode = next;
-		if (glove) {
-			glove.source = sample;
-			glove.feed(sample());
+		if (datahand) {
+			datahand.source = sample;
+			datahand.feed(sample());
 		}
 	}
 
@@ -64,7 +64,7 @@ export function createGloveController({ startCamera = openCamera, now = () => pe
 					if (generation !== request || mode !== 'auto' || !frame) return;
 					lastHand = frame;
 					lastSeen = now();
-					glove?.feed(frame);
+					datahand?.feed(frame);
 				}, { signal: abort.signal });
 				if (generation !== request) {
 					session.stop();
@@ -113,7 +113,7 @@ export function createGloveController({ startCamera = openCamera, now = () => pe
 	}
 
 	return {
-		snapshot: () => ({ glove, handCamera: camera, handMode: handMode(), instructions: instructions() }),
+		snapshot: () => ({ datahand, handCamera: camera, handMode: handMode(), instructions: instructions() }),
 		activate() {
 			if (active) return;
 			active = true;
@@ -121,14 +121,14 @@ export function createGloveController({ startCamera = openCamera, now = () => pe
 		},
 		peripherals() {
 			// Keep the selected input on reset, but route it to the replacement device.
-			glove = new DataGlove({ source: sample });
-			glove.feed(sample());
-			return [glove];
+			datahand = new DataHand({ source: sample });
+			datahand.feed(sample());
+			return [datahand];
 		},
 		dispose() {
 			active = false;
 			setMode('demo');
-			glove = null;
+			datahand = null;
 		},
 		toggles: [
 			{

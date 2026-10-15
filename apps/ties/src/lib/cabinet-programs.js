@@ -40,12 +40,12 @@ import {
 	TuringDevice,
 	UltimateMachine,
 	HAND_CHAINS,
-	GLOVE_REG,
+	HAND_REG,
 	UM_DEFAULT_TIMING,
 	spokenNumbers
 } from '@wwsff/cabinet';
 import { loadSymelec } from './symelec-boot.js';
-import { createGloveController } from './glove-controller.js';
+import { createHandController } from './hand-controller.js';
 import { symelecHint } from './symelec-hints.js';
 import page6 from '../../../../packages/cabinet/tapes/lp370/page6.s?raw';
 import lp370 from '../../../../packages/cabinet/tapes/lp370/lp370.s?raw';
@@ -80,13 +80,13 @@ const REPO = 'https://github.com/SimHacker/WillWrightShowForFood/blob/main';
 const CABINET = `${REPO}/packages/cabinet`;
 
 /**
- * The GLOVE panel's picture, every animation frame: the camera mirrored with the
+ * The DATAHAND panel's picture, every animation frame: the camera mirrored with the
  * tracker's 21 points over it, or the demo or slider hand on black. Returns the
  * text beside it: where the hand comes from, the tracker's state, and the
  * device's registers as the PDP-7 last latched them.
  */
-function drawGlovePanel(canvas, { glove, handCamera, handMode, instructions }, { box, t340 }) {
-	if (!box.devices.includes(glove)) throw new Error('GLOVE controls are not connected to this cabinet');
+function drawHandPanel(canvas, { datahand, handCamera, handMode, instructions }, { box, t340 }) {
+	if (!box.devices.includes(datahand)) throw new Error('DATAHAND controls are not connected to this cabinet');
 	const ctx = canvas.getContext('2d');
 	const W = canvas.width;
 	const H = canvas.height;
@@ -102,9 +102,9 @@ function drawGlovePanel(canvas, { glove, handCamera, handMode, instructions }, {
 		ctx.drawImage(video, 0, 0, W, H);
 		ctx.globalAlpha = 1;
 	}
-	// Over the camera, only what the tracker sees in this video frame; otherwise the hand the glove was fed.
+	// Over the camera, only what the tracker sees in this video frame; otherwise the hand the DataHand was fed.
 	const pts = handMode === 'camera' ? st?.result?.landmarks?.[0] : null;
-	const f = handMode === 'camera' ? (pts ? { points: pts, handedness: glove?.last?.handedness } : null) : (glove?.last ?? null);
+	const f = handMode === 'camera' ? (pts ? { points: pts, handedness: datahand?.last?.handedness } : null) : (datahand?.last ?? null);
 	if (f) {
 		const P = f.points.map((p) => [p.x * W, p.y * H]);
 		ctx.lineWidth = 3;
@@ -127,8 +127,8 @@ function drawGlovePanel(canvas, { glove, handCamera, handMode, instructions }, {
 	ctx.font = '20px monospace';
 	ctx.fillStyle = handMode === 'camera' ? '#3f3' : '#ff4';
 	ctx.fillText(handMode === 'camera' ? `LIVE — ${f?.handedness?.toUpperCase() ?? ''} HAND` : handMode === 'manual' ? 'MANUAL HAND' : 'SYNTHETIC DEMO — NOT YOUR HAND', 10, 26);
-	const r = glove?.registers() ?? [];
-	const flex = r.slice(GLOVE_REG.flex, GLOVE_REG.flex + 5).map((v) => String(Math.round((v * 100) / 16384)).padStart(3));
+	const r = datahand?.registers() ?? [];
+	const flex = r.slice(HAND_REG.flex, HAND_REG.flex + 5).map((v) => String(Math.round((v * 100) / 16384)).padStart(3));
 	const lines = [
 		instructions.title,
 		`source   ${handMode}`,
@@ -142,33 +142,33 @@ function drawGlovePanel(canvas, { glove, handCamera, handMode, instructions }, {
 					...(st.error ? [`error    ${st.error}`] : [])
 				]
 			: []),
-		`device   fed ${glove?.frames ?? 0}, latched ${glove?.latches ?? 0}`,
+		`device   fed ${datahand?.frames ?? 0}, latched ${datahand?.latches ?? 0}`,
 		`340      frames ${t340.frame}, status ${t340.status.toString(8)}`,
-		`status   ${r[GLOVE_REG.status] ?? 0}${r[GLOVE_REG.status] & 1 ? (r[GLOVE_REG.status] & 2 ? ' right' : ' left') : ' no hand'}`,
-		`wrist    ${r.slice(GLOVE_REG.wrist, GLOVE_REG.wrist + 3).join(' ')}`,
+		`status   ${r[HAND_REG.status] ?? 0}${r[HAND_REG.status] & 1 ? (r[HAND_REG.status] & 2 ? ' right' : ' left') : ' no hand'}`,
+		`wrist    ${r.slice(HAND_REG.wrist, HAND_REG.wrist + 3).join(' ')}`,
 		`flex %   T${flex[0]} I${flex[1]} M${flex[2]} R${flex[3]} P${flex[4]}`,
-		`pinch    ${r[GLOVE_REG.pinch] ?? 0} px`
+		`pinch    ${r[HAND_REG.pinch] ?? 0} px`
 	];
 	return lines.join('\n');
 }
 
-function gloveControls() {
-	const controller = createGloveController();
+function handControls({ extra = () => [] } = {}) {
+	const controller = createHandController();
 	return {
-		peripherals: controller.peripherals,
+		peripherals: (ctx) => [...controller.peripherals(), ...extra(ctx)],
 		toggles: controller.toggles,
 		sliders: controller.sliders,
 		dispose: controller.dispose,
 		activate: controller.activate,
 		panel: {
-			label: 'GLOVE',
-			title: 'The DataGlove: where the hand comes from, and what the tracker sees.',
+			label: 'DATAHAND',
+			title: 'The DataHand: where the hand comes from, and what the tracker sees.',
 			canvasLabel: 'The camera, mirrored, with the hand the tracker found drawn over it',
 			instructions: () => controller.snapshot().instructions,
-			draw: (canvas, cabinet) => drawGlovePanel(canvas, controller.snapshot(), cabinet)
+			draw: (canvas, cabinet) => drawHandPanel(canvas, controller.snapshot(), cabinet)
 		},
 		createInstance() {
-			return { ...this, ...gloveControls() };
+			return { ...this, ...handControls({ extra }) };
 		}
 	};
 }
@@ -207,7 +207,8 @@ const FORTH_EXTRAS = {
 	'ultimate.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/ultimate.fs?raw'),
 	'clip.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/clip.fs?raw'),
 	'turtle3d.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/turtle3d.fs?raw'),
-	'glove.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/glove.fs?raw'),
+	'datahand.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/datahand.fs?raw'),
+	'ultimate-hand.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/ultimate-hand.fs?raw'),
 	'turing.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/turing.fs?raw'),
 	'pcomp-tm.fs': () => import('../../../../packages/cabinet/tapes/pdp7forth/pcomp-tm.fs?raw')
 };
@@ -479,28 +480,52 @@ export const PROGRAMS = [
 	},
 	forthProgram({ id: 'forth', label: 'FORTH + TURTLE (2026)', kernelFile: 'kernel-names-full.s' }),
 	forthProgram({
-		id: 'glove',
-		label: 'DATAGLOVE (2026)',
+		id: 'hand',
+		label: 'DATAHAND (2026)',
 		kernelFile: 'kernel-names-full.s',
-		extras: ['code.fs', 'tags.fs', 'clip.fs', 'turtle3d.fs', 'glove.fs'],
+		extras: ['code.fs', 'tags.fs', 'clip.fs', 'turtle3d.fs', 'datahand.fs'],
 		pixie: false,
 		title: 'A hand tracker as PDP-7 device 57: each bone a 3D turtle move (yaw, pitch, length), drawn by Forth on the 340. Allow the camera and hold up your hand.',
 		help: {
-			text: 'Allow the camera and hold up your hand: it takes over the PDP-7 at once. Until it sees you, a labelled synthetic hand waves and gestures, inviting you to copy it (MediaPipe, about 20 MB the first time; video stays in your browser). 👋 DEMO turns the camera off; the finger sliders (T I M R P, ↻ to turn) work the hand by hand. The GLOVE panel shows the camera mirrored, the points the tracker found, and the registers the PDP-7 latched. Press any key at the teletype to stop it and play with Forth: 60 VIEW GLOVE turns the picture 60 degrees about the hand; 3 SPINNING ! GLOVE turns it 3 degrees a frame; 0 SPINNING ! 0 VIEW GLOVE faces it again. 4 SPOT . . prints where the thumb tip was drawn, y then x. BIRD? . tells you whether you are being given the bird. 0 FITTING ! GLOVE draws the hand where the camera has it, clipped at the edge of the glass, so it can walk on from the side; -1 FITTING ! scales it to fit again.',
+			text: 'Allow the camera and hold up your hand: it takes over the PDP-7 at once. Until it sees you, a labelled synthetic hand waves and gestures, inviting you to copy it (MediaPipe, about 20 MB the first time; video stays in your browser). 👋 DEMO turns the camera off; the finger sliders (T I M R P, ↻ to turn) work the hand by hand. The DATAHAND panel shows the camera mirrored, the points the tracker found, and the registers the PDP-7 latched. Press any key at the teletype to stop it and play with Forth: 60 VIEW DATAHAND turns the picture 60 degrees about the hand; 3 SPINNING ! DATAHAND turns it 3 degrees a frame; 0 SPINNING ! 0 VIEW DATAHAND faces it again. 4 SPOT . . prints where the thumb tip was drawn, y then x. BIRD? . tells you whether you are being given the bird. 0 FITTING ! DATAHAND draws the hand where the camera has it, clipped at the edge of the glass, so it can walk on from the side; -1 FITTING ! scales it to fit again.',
 			links: [
 				{ label: 'HAND-TRACKING.md', href: `${CABINET}/HAND-TRACKING.md` },
-				{ label: 'glove.fs', href: `${CABINET}/tapes/pdp7forth/glove.fs` },
+				{ label: 'datahand.fs', href: `${CABINET}/tapes/pdp7forth/datahand.fs` },
 				{ label: 'clip.fs', href: `${CABINET}/tapes/pdp7forth/clip.fs` },
 				{ label: 'turtle3d.fs', href: `${CABINET}/tapes/pdp7forth/turtle3d.fs` }
 			]
 		},
 		pen: false,
-		typeAhead: 'GLOVE\n',
-		// GLOVE takes about 600,000 cycles a frame: a second each at 1x, ten a second at 10x.
+		typeAhead: 'DATAHAND\n',
+		// DATAHAND takes about 600,000 cycles a frame: a second each at 1x, ten a second at 10x.
 		speed: 10,
 		// The waving hand is the demo; the Forth README demo would only stop it.
 		demo: null,
-		...gloveControls()
+		...handControls()
+	}),
+	forthProgram({
+		id: 'ultimate-hand',
+		label: 'ULTIMATE HAND (2026)',
+		kernelFile: 'kernel-names-full.s',
+		extras: ['code.fs', 'tags.fs', 'clip.fs', 'turtle3d.fs', 'datahand.fs', 'ultimate-hand.fs'],
+		pixie: false,
+		title: "Minsky's Ultimate Machine, and you are its hand. Show the camera your hand, then touch the switch.",
+		help: {
+			text: 'Allow the camera, then hold up your hand, palm away, fingers up. The box switches itself on, opens, and its arm carries your hand out under the switch. Touch the switch with any fingertip, whenever you like: the hand goes home. Take your hand away until the box has rested, then show it again for another round. The arm places the hand; only its shape is yours.',
+			links: [
+				{ label: 'ultimate-hand.fs', href: `${CABINET}/tapes/pdp7forth/ultimate-hand.fs` },
+				{ label: 'HAND-TRACKING.md', href: `${CABINET}/HAND-TRACKING.md` }
+			]
+		},
+		pen: false,
+		typeAhead: 'ULTIMATE-HAND\n',
+		speed: 10,
+		demo: null,
+		...handControls({
+			// At 10x (5.7M cycles a second), 50 times the device's timing: about 1.5 s to open, 2.5 s to
+			// reach, 2 s back, and a second's rest before your hand can start the next round.
+			extra: () => [new UltimateMachine(Object.fromEntries(Object.entries(UM_DEFAULT_TIMING).map(([k, v]) => [k, v * 50])))]
+		})
 	}),
 	forthProgram({
 		id: 'ultimate',
