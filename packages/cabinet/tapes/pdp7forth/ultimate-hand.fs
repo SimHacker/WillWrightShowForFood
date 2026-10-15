@@ -89,10 +89,11 @@ variable armed   -1 armed !
   then
   um-phase ph-reach = um-arm 1000 = and if
     real? if touching? if um-off then then
-  then ;
-\ Only your hand opens the box or touches the switch. Lose it on the way
-\ out and the box goes on, and waits at the switch for you to come back;
-\ the demo hand only keeps it company meanwhile.
+  then
+  \ Only your hand opens the box or touches the switch. Take it away any
+  \ time before the press and the box gives up at once: RETRACT (UMLT
+  \ mode word, 2) sends the arm and lid home from wherever they are.
+  um-phase dup 0> swap 4 < and if real? 0= if 3 um-timing! then then ;
 
 : prompt ( -- )
   um-phase ph-off = if
@@ -106,15 +107,14 @@ variable armed   -1 armed !
 \ Brightness: from vector mode, escape to a parameter word (mode 1,
 \ vectors next; bit 14 sets the intensity to 0..7), then go on.
 : bright! ( 0..7 -- ) 131072 dl,  8 + 32768 + dl, ;
-variable was
 : uframe ( -- )
-  new-frame  s" THE ULTIMATE MACHINE DATA HAND" 512 975 centred
+  new-frame  5 bright!  s" THE ULTIMATE MACHINE DATA HAND" 512 975 centred
   box  switch
-  \ Sized afresh whenever the hand changes hands: yours, or the demo's.
-  0 reg 4 and was @ <> um-phase ph-off = or if hand-seen? if null then then
-  0 reg 4 and was !
-  \ The demo hand is a ghost of yours: dimmer phosphor.
-  hand-seen? if real? 0= if 3 bright! then place-hand hand notag 7 bright! then
+  \ Yours is sized when the round starts; the demo's always by itself.
+  um-phase ph-off = real? 0= or if hand-seen? if null then then
+  \ Your hand brightest, over the box; the demo's a dim ghost.
+  hand-seen? if real? if 7 else 1 then bright!
+    place-hand hand notag  5 bright! then
   arm notag
   lid notag  prompt ;
 

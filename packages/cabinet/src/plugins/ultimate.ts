@@ -31,14 +31,16 @@ import type { Device, Iot, IotReply, SwitchBinding } from "../bus.js";
  *   705641 UMSI  skip on the phase-change flag  705652 UMRL  read the lid
  *   705644 UMCF  clear the phase-change flag
  *   705661 UMLT  load a timing: AC<0:2> phase, AC<3:17> its length in UM_TICK steps;
- *                AC<0:2> 0 (no phase) sets the mode instead: AC<17> manual press
+ *                AC<0:2> 0 (no phase) sets the mode instead: AC<17> manual press,
+ *                and AC<16> retract: give up now, the arm and lid going home from where they are
  *   705672 UMRA  read the arm                   705664 UMIE  interrupt on phase change iff AC<17>
  *
  * Manual press (off unless a program sets it): the arm reaches the lever and holds there, in
  * REACH at full travel, without moving it. Whoever switches the lever off then (the program,
  * seeing a finger on the switch) makes it the hand's press: PRESS, RETURN, CLOSE and REST follow
  * as usual. Switched off before the arm is all the way out, it is still an abort. So the program
- * drives that one transition and the machine every other.
+ * drives that one transition and the machine every other. Retract (UMLT phase 0, AC<16>) gives
+ * up at any point before the press, even with the finger at the lever: an abort, lever off.
  *
  * The lever, the counters and the registers are mechanical: they answer with the power off.
  * A PDP-7 program that switches it on, waits, and switches it on again is the two machines
@@ -260,10 +262,20 @@ export class UltimateMachine implements Device {
 		const name = UM_PHASES[(ac >> 15) & 0o7];
 		if (name === "off") {
 			this.manualPress = (ac & 1) !== 0;
+			if (ac & 2) this.retract();
 			return;
 		}
 		if (!name) return;
 		this.timing[name] = (ac & 0o77777) * UM_TICK;
+	}
+
+	/** Give up before the press: lever off, and home from wherever the arm and lid are. */
+	private retract(): void {
+		if (this.phase !== WAIT && this.phase !== OPEN && this.phase !== REACH) return;
+		this.lever = false;
+		this.observedLever = false;
+		this.aborts += 1;
+		this.enter(this.arm > 0 ? RETURN : CLOSE);
 	}
 
 	private enter(phase: number): void {

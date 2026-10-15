@@ -78,10 +78,14 @@ test("ultimate hand: one appearance is one round; the press waits for a fingerti
 	assert.equal(m.um.arm, UM_MAX);
 	run(m, yours(fist), 2_000_000);
 	assert.equal(phase(m), UM_PHASE.reach, "a fist stops short, and the box waits for as long as you like");
-	run(m, null, 1_000_000);
+	run(m, null, 600_000);
+	assert.ok(phase(m) >= UM_PHASE.return || phase(m) === UM_PHASE.off, `your hand gone: the arm goes home at once (phase ${phase(m)})`);
+	assert.equal(m.um.presses, 0, "without a press");
+	assert.equal(m.um.aborts, 1);
 	run(m, demo(), 2_000_000);
-	assert.equal(phase(m), UM_PHASE.reach, "your hand lost: the box still waits, and the demo hand can't press");
-	assert.equal(m.um.presses, 0);
+	assert.equal(phase(m), UM_PHASE.off, "the demo hand doesn't start it again");
+	run(m, yours(fist), 1_500_000);
+	assert.equal(phase(m), UM_PHASE.reach, "your hand back: a new round");
 	assert.equal(m.um.presses, 0);
 	assert.equal(m.t340.status & 0o5000, 0, "nothing ran off the glass");
 	run(m, yours([1, 1, 0, 1, 1]), 3_000_000);
@@ -105,7 +109,8 @@ test("ultimate hand: the demo hand rides the arm inside the box, under the title
 	const xs = inHole.flatMap((s) => [s.x0, s.x1]);
 	assert.ok(Math.max(...xs) - Math.min(...xs) < 560, "small enough to fit in the hole");
 	assert.ok(m.lit().some((s) => s.y0 > 950), "the title is up top");
-	assert.ok(inHole.every((s) => s.intensity < 7 || (s.x0 > 470 && s.x0 < 554)), "the demo hand is dimmer phosphor than the box");
+	assert.ok(inHole.filter((s) => s.intensity === 1).length > 20, "the demo hand is a dim ghost");
+	assert.ok(m.lit().filter((s) => s.y0 < 80).every((s) => s.intensity === 5), "the box is a little dimmer than your hand will be");
 });
 
 test("ultimate hand: hands coming and going at random never corrupt the PDP-7", () => {

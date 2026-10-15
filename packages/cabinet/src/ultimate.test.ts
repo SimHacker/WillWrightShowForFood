@@ -177,6 +177,18 @@ test("manual press: the arm waits at the lever until the program switches it off
 	assert.equal(u.aborts, 1);
 	assert.equal(u.presses, 1);
 	ticks(u, 40);
+	// Retract: at the lever, waiting, it gives up and goes home without a press.
+	io(UMON);
+	ticks(u, 30);
+	assert.equal(u.arm, UM_MAX);
+	io(iot(0o61, 3));
+	assert.equal(u.phase, UM_PHASE.return, "retract: home from the lever");
+	assert.equal(u.lever, false);
+	assert.equal(u.presses, 1, "no press");
+	assert.equal(u.aborts, 2);
+	assert.equal(u.manualPress, true, "and still manual");
+	ticks(u, 40);
+	assert.equal(u.phase, UM_PHASE.off);
 	// Back to automatic: the machine presses it again by itself.
 	io(iot(0o61, 0));
 	io(UMON);
