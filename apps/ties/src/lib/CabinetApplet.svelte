@@ -327,7 +327,8 @@
 	// Display knobs, burned in for now. They are the uniforms the WebGPU phosphor shader
 	// will take later. floor and gamma lift the 340's low intensities (SRAST draws at 0)
 	// so they read on a modern screen; contrast scales, brightness offsets.
-	const PHOSPHOR = { brightness: 0.04, contrast: 1.0, gamma: 1.3, floor: 0.22 };
+	// Linear in intensity above the floor, so each of the 340's eight levels is an even step.
+	const PHOSPHOR = { brightness: 0.04, contrast: 1.0, gamma: 1.0, floor: 0.35 };
 
 	// 340 intensity (0..7) and coverage (fraction of integrated refreshes that drew it) to alpha.
 	function phosphor(intensity, coverage) {
@@ -356,7 +357,7 @@
 			} else {
 				ctx.globalAlpha = alpha;
 				// A brighter beam makes a bigger spot on the glass.
-				ctx.lineWidth = 0.5 + 1.6 * (Math.min(Math.max(s.intensity ?? 7, 0), 7) / 7) ** 2;
+				ctx.lineWidth = 0.9 + 0.9 * (Math.min(Math.max(s.intensity ?? 7, 0), 7) / 7);
 				ctx.beginPath();
 				ctx.moveTo(s.x0, y0);
 				ctx.lineTo(s.x1, y1);

@@ -113,7 +113,7 @@ variable armed   -1 armed !
   \ Yours is sized when the round starts; the demo's always by itself.
   um-phase ph-off = real? 0= or if hand-seen? if null then then
   \ Your hand brightest, over the box; the demo's a dim ghost.
-  hand-seen? if real? if 7 else 1 then bright!
+  hand-seen? if real? if 7 else 3 then bright!
     place-hand hand notag  5 bright! then
   arm notag
   lid notag  prompt ;

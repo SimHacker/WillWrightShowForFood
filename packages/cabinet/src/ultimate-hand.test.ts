@@ -109,7 +109,7 @@ test("ultimate hand: the demo hand rides the arm inside the box, under the title
 	const xs = inHole.flatMap((s) => [s.x0, s.x1]);
 	assert.ok(Math.max(...xs) - Math.min(...xs) < 560, "small enough to fit in the hole");
 	assert.ok(m.lit().some((s) => s.y0 > 950), "the title is up top");
-	assert.ok(inHole.filter((s) => s.intensity === 1).length > 20, "the demo hand is a dim ghost");
+	assert.ok(inHole.filter((s) => s.intensity === 3).length > 20, "the demo hand is a dim ghost");
 	assert.ok(m.lit().filter((s) => s.y0 < 80).every((s) => s.intensity === 5), "the box is a little dimmer than your hand will be");
 });
 
