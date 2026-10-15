@@ -426,6 +426,10 @@ CAM-6 is designed but not built yet. Everything above it on this page runs today
 5. Give the Ultimate Machine a second switch. Who wins now?
 6. Read [reference/FORTH-TURTLE-340.md](reference/FORTH-TURTLE-340.md)'s exercises and compare
    your answers with SYMELEC's.
+7. A project: hands of hands. Capture poses from the DataHand into buffers, draw any pose in the
+   3D turtle's own frame, and grow a recursive tree of hands, a sub-hand at every fingertip,
+   posed by your own hand one finger at a time
+   ([HAND-TRACKING.md](HAND-TRACKING.md#to-do) has the outline).
 
 ## Reading map
 

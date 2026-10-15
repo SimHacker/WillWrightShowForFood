@@ -243,6 +243,38 @@ input stage. The turtle walk is the skeleton. `VIEW` at ±3 degrees on two
   ([Who's in the box?](../../designs/whos-in-the-box/README.md)).
 - **An Apple ][ port**: the same instrument as paddles and buttons, once the
   6502 runs.
+- **A student project: hands of hands, a recursive tree.** Today `HAND` in
+  [datahand.fs](tapes/pdp7forth/datahand.fs) draws whatever frame the device
+  latched last, from the wrist the device reports. Separate the pose from the
+  drawing, and a hand becomes a shape you can store, copy, and draw anywhere:
+  - **Pose buffers.** A pose is the 63 registers that describe a hand's shape:
+    the palm frame and the 20 bones (registers 4 to 72, yaw, pitch and length),
+    plus the flex if wanted. `POSE ( "name" -- )` makes a buffer; `CAPTURE
+    ( pose -- )` copies the latched hand into it; `>CURRENT ( pose -- )` copies
+    a pose into the current-hand buffer that drawing reads.
+  - **`DRAW-HAND ( -- )` in the turtle's own frame.** It draws the current pose
+    starting where the 3D turtle stands, facing where it faces, at the current
+    scale and brightness, not at the camera's wrist and not in the camera's
+    frame. Then a hand is drawn the way a square is: move, turn, scale,
+    `DRAW-HAND`.
+  - **The tree.** At each fingertip, push the turtle, step out of the tip,
+    shrink, and draw a sub-hand; pop and go on to the next finger. Five
+    children per hand, so a few levels make hundreds of hands.
+  - **Playing it.** Every second the hand you control freezes (`CAPTURE`), and
+    control moves on to the next fingertip's sub-hand: you pose the thumb's
+    child, then the index finger's, then theirs, and so on, building the tree
+    pose by pose. Or nothing freezes, and every node draws the live hand, so
+    the whole tree moves with you, all the way down.
+  - **What the turtle needs.** `REMEMBER` and `RECALL` in
+    [turtle3d.fs](tapes/pdp7forth/turtle3d.fs) keep one saved turtle, enough
+    for the five fingers of one hand. A tree needs a stack of them, PostScript's
+    `gsave`/`grestore`, one level per generation, with the scale and brightness
+    saved along with the position and the H, L and U vectors.
+  - **What to watch.** The 1024-word display list (a hand is about 90 words:
+    count the levels you can afford, or redraw a level a frame), the cycles
+    per frame, and the 8K core: each pose buffer is 63 words, so capture only
+    what you will draw. Clip at the glass ([clip.fs](tapes/pdp7forth/clip.fs))
+    lets the tree spill off the screen.
 
 ## Tests
 
