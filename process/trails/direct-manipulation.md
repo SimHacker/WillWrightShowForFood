@@ -21,6 +21,7 @@ Direct manipulation, programming by demonstration, media for thought — the lin
 | [**Jef Raskin**](../../characters/jef-raskin/README.md) 🕯️ | *The Humane Interface* — locus of attention; Repo Show README overlay echo (memorial) |
 | [**Don CARD.yml**](../../characters/don-hopkins/CARD.yml) | Pie menus + PostScript UI — direct manipulation in practice |
 | [**ECG at Interval**](../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md) | Tom Ngo simplicial complexes — Mouther; drag features, solve blend weights |
+| [**`@wwsff/ecg`**](../../packages/ecg/README.md) | ECG reimplemented as courseware — learn the math by dragging |
 | [**Breakfast simplex**](../../characters/don-hopkins/breakfast-simplex-barycentric-direct-manipulation.md) | Barycentric breakfast space × pie menus — HN essay |
 | [**Visual programming (patch-cord)**](visual-programming-patch-cord.md) | Hookup → Bounce → live performance UIs — sibling trail |
 

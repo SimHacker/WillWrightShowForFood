@@ -59,6 +59,7 @@ lineage:
       apply ECG to **morph-target 3D facial animation** (ARKit blend shapes, Blender FaceIt) —
       drag the face, solve the weights. Dream pair segment: Tom (engine) + Golan (artist), live.
     spec: ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
+    engine: ../../packages/ecg/README.md
     rooms:
       - ../../characters/tom-ngo/
       - ../../characters/golan-levin/

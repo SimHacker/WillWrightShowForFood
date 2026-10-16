@@ -1,0 +1,18 @@
+{
+	"name": "@wwsff/ecg",
+	"version": "0.0.0",
+	"private": true,
+	"description": "Embedded Constraint Graphics as courseware: drag the drawing, solve the blend weights. Design stage.",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"test": "tsc -p tsconfig.json && node -e \"console.log('@wwsff/ecg: design stage, no tests yet')\""
+	},
+	"devDependencies": {
+		"@types/node": "^20.17.0",
+		"typescript": "^5.8.0"
+	}
+}

@@ -29,6 +29,9 @@ Audience README: [`README.md`](README.md) · Pair show: [`tom-and-golan-ecg-mout
 
 ### Reimplement paths (whiteboard only)
 
+Design in progress: [`packages/ecg/`](../../packages/ecg/README.md) — the [lesson ladder](../../packages/ecg/COURSE.md), [design](../../packages/ecg/DESIGN.md), and a [reading of the patent](../../packages/ecg/PATENT-NOTES.md) that lists what it leaves open (feel, damping, hysteresis, authoring workflow). Those are the questions to bring to Tom.
+
+
 | Path | Attractive when… | Tradeoffs |
 |------|------------------|-----------|
 | **SVG** | Teaching, DOM inspectability, CSS | Performance on dense meshes |

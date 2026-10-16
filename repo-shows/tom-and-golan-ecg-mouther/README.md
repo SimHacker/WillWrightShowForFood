@@ -27,5 +27,6 @@ Nobody has to implement on air. Designs go in the repo. Others play later (*home
 | [Tom’s room](../../characters/tom-ngo/) | Bio + invite |
 | [Golan’s room](../../characters/golan-levin/) | Bio + invite |
 | [ECG essay](../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md) | Mechanism + HN + WigFabrik |
+| [`@wwsff/ecg`](../../packages/ecg/README.md) | Reimplementation as courseware — design docs, [open questions for Tom and Golan](../../packages/ecg/DESIGN.md#open-questions) |
 
 Consent **not yet asked**.

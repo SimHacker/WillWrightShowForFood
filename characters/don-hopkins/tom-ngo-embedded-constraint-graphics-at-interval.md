@@ -52,7 +52,7 @@ You do not twiddle abstract sliders for blend weights. You manipulate **concrete
 
 Patent abstract (condensed): examples grouped into subsets that interpolate; animations as sequences of blended states; **clip motion**, **clip character**, **clip art** as composable components; automatic registration so frames do not drift unnaturally as the animation proceeds.
 
-**Patent:** [US5933150 — System for image manipulation and animation using embedded constraint graphics](https://patents.google.com/patent/US5933150)
+**Patent:** [US5933150 — System for image manipulation and animation using embedded constraint graphics](https://patents.google.com/patent/US5933150). Inventors J. Thomas Ngo and Bruce Randall Donald; granted 3 August 1999; expired 6 August 2016.
 
 **Simplicial complex:** [Wikipedia](https://en.wikipedia.org/wiki/Simplicial_complex) · **Barycentric coordinates:** [Wikipedia](https://en.wikipedia.org/wiki/Barycentric_coordinate_system)
 
@@ -129,7 +129,7 @@ thrilled to discuss it on a Repo Show — funny product, serious prior art, pate
   scrub-puppets and the pie-menu-as-simplex UI — direct manipulation, no AI required (AI's a bonus
   for *authoring* targets; ECG still *solves* the weights).
 
-*Status: design target in MicropolisCore portal + Soul City craft-shop specs — not prototyped yet.*
+*Status: design target in MicropolisCore portal + Soul City craft-shop specs. The engine is being designed as courseware in [`packages/ecg/`](../../packages/ecg/README.md): lessons, design, patent reading, references.*
 
 ## 2013 — ECG conscience at Syntertainment
 
@@ -161,6 +161,7 @@ Full thread receipts: private archive, `DonHopkins` repo, correspondence.
 
 | Link | Why |
 |------|-----|
+| [`@wwsff/ecg`](../../packages/ecg/README.md) | The reimplementation: [course](../../packages/ecg/COURSE.md), [design](../../packages/ecg/DESIGN.md), [patent notes](../../packages/ecg/PATENT-NOTES.md), [references](../../packages/ecg/REFERENCES.md) |
 | [Interval Research — Camelot](interval-research-pluggers-and-mediaflow.md) | Era context — Director plugins, Bounce, MediaFlow, visiting speakers |
 | [Breakfast simplex & barycentric UI](breakfast-simplex-barycentric-direct-manipulation.md) | Don's 2025 HN essay — ECG applied to egg/milk/flour space |
 | [Pie menus CHI'88](pie-menus-chi-88-and-beyond.md) | Direct manipulation in practice — radial menus as simplex UI |

@@ -1,0 +1,18 @@
+# 🔺 @wwsff/ecg — Embedded Constraint Graphics, as courseware
+what: |
+  Free reimplementation of Ngo & Donald's ECG (Interval Research, US5933150,
+  expired 2016-08-06). Examples at simplex vertices; drag the drawing, solve
+  the barycentric weights. Built to be learned from: lessons, readable source,
+  live playground, worked-example tests.
+package: "@wwsff/ecg"
+status: design only — src/index.ts is a stub
+not: a black-box library; a linear algebra dependency; tied to one renderer
+docs:
+  readme: README.md
+  course: COURSE.md          # lesson ladder 0–11
+  design: DESIGN.md          # solver, walls, complex, feel, layout, open questions
+  patent: PATENT-NOTES.md    # what Tom specified vs left open
+  references: REFERENCES.md  # checked citations
+render_order: [svg, canvas2d, webgpu]
+applications: [breakfast, colour, glyphs, wigfabrik, faceball, pie-menus]
+k_line: DRIVE · TUG · HIT THE WALL · GLUE THE ZONES · FEEL
