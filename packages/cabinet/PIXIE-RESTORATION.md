@@ -14,6 +14,7 @@ with. The sources for every claim are linked inline; the corpus is indexed at th
 [The Titan link](#the-titan-link-the-part-that-is-reverse-engineering) ·
 [Rings, and Forth](#rings-and-forth) · [The people](#the-people) · [Users](#users) ·
 [What it cost](#what-it-cost) · [Open questions](#open-questions) ·
+[Cambridge sources and contact leads](#cambridge-sources-and-contact-leads) ·
 [Where everything is](#where-everything-is)
 
 ## What PIXIE is
@@ -347,6 +348,275 @@ model charges, and the monthly bills run into the thousands of dollars.
   name list rebuild halts on an empty SAVINS, so a test drawing has to be well formed.
 - **Two faint symbol table entries,** `COMP10` and `MESIN2`, where the table and the code lines
   disagree and the scan is too faint to read.
+
+## Cambridge sources and contact leads
+
+Research notes added 16 October 2026 from sources supplied by Don. These
+distinguish catalogue descriptions, published accounts, personal recollections,
+and questions still to be answered. No new archive material has yet been
+obtained through the requests proposed below.
+
+### Neil Wiseman papers: specific folders to request
+
+The catalogue of the N. E. Wiseman papers, **NCUACS 154/4/07**, identifies
+two groups of PIXIE material in its University Mathematical Laboratory,
+Cambridge section:
+
+https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/WISEMAN_NEIL_ERNEST_v2.pdf
+
+| Catalogue references | Folder title and dates | Described contents relevant to restoration |
+|---|---|---|
+| B.214–B.216 | “Pixie I,” 1967–1968 | Computer printouts; manuscript and typescript notes and drafts, including “Display File Compiler,” “Ring Structure Entertainer,” and “Notes on RSP [Ring Structure Processor] Data Structures”; requests for offprints of Wiseman's papers. |
+| B.217–B.223 | “Pixie II,” 1968–1971 | Computer printouts; correspondence; Rainbow memos; an offprint of “A ring structure processor for a small computer”; a proof of “A note on compiling display file from a data structure”; drafts including “Rainbow CAD [Computer Aided Design] Project,” M. Etherton's notes on representing pictorial and topological information, and a summary of the computer-aided electronics design group's work. |
+
+“Computer printouts” does not establish that these are source listings,
+complete programs, or versions compatible with the surviving 1972 listing.
+Those are questions for inspection. Likewise, “Pixie II” is the catalogue's
+historical folder title, not the later medical-modelling project of that name.
+
+There is an existing reason to start with **B.218**: Bill Buxton identifies
+it as the source of his 2008 report on Wiseman's radial-menu notes,
+including a hand-drawn menu figure and evidence of the demonstration film.
+His report is already archived with a transcription:
+
+[Wiseman's Notes on Radial Menus in PIXIE](../../characters/heinz-lemke/sources/buxton-2008-wiseman-notes/wiseman-notes-on-radial-menus-in-pixie.md).
+
+### Follow up with David Chapman at Cambridge University Library
+
+David Chapman previously traced the two PIXIE films and coordinated their
+digitization through the library. The
+[film-recovery history](../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)
+records that work and the earlier reference enquiries. Don proposes asking
+him for help locating and obtaining more documents; this is a proposed
+follow-up, not a request recorded as sent.
+
+Give the library the collection identifier and folder references above,
+and ask:
+
+- Can they confirm the current shelfmarks, access arrangements, and
+  reproduction permissions for B.214–B.223?
+- Can they provide an item-level description or sample images of the
+  computer printouts, especially titles, dates, first pages, and symbol
+  tables, to determine what programs and versions they contain?
+- Can they supply the complete “Display File Compiler,” “Ring Structure
+  Entertainer,” and RSP data-structure notes, including diagrams, handwritten
+  corrections, and any continuation pages?
+- Can they scan the original radial-menu drawing in B.218 and surrounding
+  notes, so Buxton's transcription can be checked against the originals?
+- Is there material on the Titan/PDP-7 link: circuit diagrams, IOT
+  definitions, supervisor routines, transfer formats, or source listings
+  from either machine? Lang's 1965 Planning Document 10 is already available;
+  implementation documents would answer different questions.
+- Do the Rainbow records or related accessions contain PIXIE tapes,
+  assemblers, loaders, circuit-analysis programs, additional films, or
+  photographs showing the controls and equipment labels?
+- What citation and permission wording should accompany scans, transcriptions,
+  and any recovered executable software?
+
+Prioritize identifying the printouts and compiler/RSP documents before
+requesting an undifferentiated scan of the whole collection. Ask about
+costs and available digitization options rather than assuming the material
+can be supplied immediately.
+
+### Cambridge hardware records
+
+The Computer Laboratory Relics Project has two relevant objects, photographs,
+and interview notes:
+
+https://www.cl.cam.ac.uk/relics/database/?uid=&class=&name=pdp&machine=Titan
+
+- **CL-16/97, PDP7 joystick.** The interview describes a lab-built pointer
+  control with rotational movement, tentatively credits Norman Unwin, and
+  says the PDP-7 was connected to Titan but mainly used independently.
+  The number and function of its axes, electrical interface, and use by
+  particular programs still need documentation.
+  [Photograph](https://www.cl.cam.ac.uk/relics/jpegs/CL.16-97.jpg).
+- **CL-54/97, Experimental graphical input for PDP7.** The notes describe
+  a ferrite pickup and crossed wires for detecting pointer position.
+  The speaker, labelled “DW,” credits Maurice Wilkes and himself with the
+  concept, Norman Unwin with some detailed design, and another technician
+  with the electronics.
+  [Photograph](https://www.cl.cam.ac.uk/relics/jpegs/CL.54-97.jpg).
+
+The second entry's tentative “late 50's or early 60's” date predates the
+PDP-7's 1964 introduction. Ask whether this refers to earlier development
+or is a recollection/cataloguing error. Do not assign a precise date or
+expand the speaker's initials without checking the interview provenance.
+Neither object record establishes that PIXIE used that device.
+
+### Cambridge CAD/CAM account
+
+*The Design of Mechanical Components and the Development of DUCT:
+17 Years of CAD/CAM in Cambridge University*, an April 1983 Erlangen
+report, provides context for the wider Cambridge graphics work:
+
+https://www-g.eng.cam.ac.uk/125/achievements/erlangenFP/index.htm
+
+Its abstract dates acquisition of the PDP-7 to **1965** and formation of a
+joint Computer Laboratory–Engineering team to the end of that year.
+It describes the work leading to POLYSURF, ROMULUS, and DUCT. These are
+related Cambridge CAD developments, not interchangeable names for PIXIE.
+
+The account also discusses GINO and R. B. Morris's smaller graphics package
+for an IBM 1130 with 8K core. This is a lead for related graphics software
+and personnel, not evidence that the IBM package ran on the PDP-7.
+
+### A secondary description of PIXIE's data paths
+
+A thesis hosted by Missouri S&T includes a section headed “C. PIXIE”
+and Figure 5, “PIXIE System Data Paths”:
+
+https://scholarsmine.mst.edu/cgi/viewcontent.cgi?article=4562&context=masters_theses
+
+Don supplied the excerpt and figure. The PDF endpoint returned HTTP 403
+when fetched during this research; author, title, date, page numbers, and
+the section's references still need to be established from the full thesis.
+
+The excerpt describes a temporary display file built while drawing, an
+up-compiler that translates it into the data structure, and a down-compiler
+that produces the permanent display file. It says both compilation steps
+run on the satellite PDP-7, with Titan used for analysis, storage, hardcopy,
+and remote batch jobs. The figure places the application above a Titan/PDP-7
+boundary and the data-structure box across that boundary. It should not
+be interpreted as a precise core-memory layout.
+
+The text also says temporary input can be corrected by retracing, while
+the permanent file is changed through erase mode, and that a partial
+network can be compiled before drawing continues. Compare those descriptions
+with the 1969 paper, films, and surviving code before treating them as
+instructions for the 1972 SYMELEC version. “Permanent display file” alone
+does not imply a file stored on Titan.
+
+### Mike Kemp: recollection and outreach
+
+In a public Facebook comment, Mike Kemp recalls using Cambridge's PDP-7
+and graphics display with a friend at night around **1972**. He describes
+loading a “space war” paper tape, controlling two ships from opposite ends
+of the keyboard, and flying around a displayed planet. He also recalls
+extending a mainframe-hosted PDP-7 assembler assignment so that the assembler
+could assemble itself on the PDP-7, and briefly starting a PhD under Neil
+Wiseman before leaving to build a recording studio.
+
+Public threads:
+
+https://www.facebook.com/groups/779220482206901/posts/5226709490791289/
+
+https://www.facebook.com/groups/779220482206901/posts/6297725037023057/
+
+The Discogs profile for **Spaceward Studios** identifies Mike Kemp and
+Gary Lucas as its founders in Cambridge in **1972**, running it until
+1988. This is consistent with Mike's recollection of leaving to build a
+recording studio and provides a biographical lead to check with him.
+Discogs is a community-maintained source; it does not independently
+establish his Cambridge academic dates or which PDP-7 programs he used.
+Ask whether Spaceward was the studio he meant and how its founding
+overlapped with his studies.
+
+https://www.discogs.com/label/274826-Spaceward-Studios
+
+Don also supplied an archived Spaceward homepage, captured 16 April 2013.
+It directs readers to a separate studio archive and discography, identifies
+Mike Kemp with Sintefex and Dynamic Convolution Technology, and mentions
+Spaceward Microsystems, video and graphics systems, and the Supernova,
+Matisse, Rodin, and Satori products. It does not explain the relationship
+of each product to Kemp or to his Cambridge work.
+
+https://web.archive.org/web/20130416095503/http://www.spaceward.co.uk/
+
+Studio archive linked from that page:
+
+https://web.archive.org/web/20130114003814/http://www.spacewardstudios.ukf.net/
+
+Punk77 publishes an interview with Kemp about Spaceward's recording work.
+He explicitly identifies Gary Lucas as his co-founder and describes their
+shared recording sessions. This is a first-person source about the studio,
+not just a discography entry. It does not establish the PDP-7 chronology.
+
+https://punk77.co.uk/mike-kemp-spaceward-studios/
+
+Andrew N. Jackson's preservation notes collect further sources, including
+a Sintefex biography and Cambridge's company history. The quoted biography
+describes Kemp's mathematics and computer science education at Emmanuel
+College, his move from Cambridge research to recording, and subsequent
+technical roles at Spaceward Microsystems and Studio Audio and Video
+(SADiE). Its wording about turning down a research post differs from his
+Facebook account of starting and leaving a PhD; ask Mike for the sequence
+rather than treating either short account as a complete chronology.
+
+https://anjackson.net/codex/formats/spaceward/index.html
+
+Jackson quotes Cambridge's Hall of Fame as listing Spaceward Studios
+(1972) and Spaceward Microsystems (1983), with Kemp as a founder:
+
+https://www.cst.cam.ac.uk/ring/halloffame
+
+These sources expand the interview questions beyond the recording studio:
+did his PDP-7 graphics and assembler experience influence his later graphics,
+video, or audio engineering? What software, hardware designs, manuals, or
+personal records survive from those transitions? No technical lineage from
+PIXIE to Spaceward's products is established by the sources collected here.
+
+**Outreach status, 16 October 2026:** Don reports sending Mike a direct
+message introducing the PIXIE restoration with Heinz, linking the
+[running emulator](https://hyperties.org/cabinet/symelec/), asking to talk
+and record and share his recollections, and asking whether he knew David
+S. H. Rosenthal. No reply or permission to record or publish an interview
+is recorded here. The private message-thread URL is not needed as a public
+source.
+
+Questions for a conversation:
+
+- Who was the friend, and who else used or maintained the machine?
+- What were the approximate dates, room, display, keyboard, and controls?
+- Does he recognize the restored DUEL program, or remember a tape label,
+  author, title screen, or instructions? The recollection is not yet an
+  identification of DUEL or any other particular Spacewar version.
+- What was the assembler called, what syntax did it accept, and do source,
+  tapes, listings, coursework, or notes survive? Was it related to the
+  Cambridge assembler used for the PIXIE listing?
+- Did he use PIXIE, RSP, GINO, or the Titan link, and what does he remember
+  of Wiseman's group?
+- How did his Cambridge work relate, if at all, to Spaceward Microsystems'
+  graphics systems and his later audio engineering? Can he clarify the
+  dates of his studies, research, and studio work?
+- Does he know other users who might have records or be willing to talk?
+
+Ask separately for permission to record, quote, identify participants, and
+publish any contributed material. Do not treat a public anecdote or Don's
+invitation as consent to publish later correspondence.
+
+### Other people and records to follow up
+
+- **Heinz Lemke:** ask which catalogue titles and program names he
+  recognizes, how versions changed between the films and the 1972 listing,
+  and who might know about the analysis programs or Titan software.
+- **David S. H. Rosenthal:** already recalled working on the PDP-7/340 and
+  Titan from about 1970 and meeting Wiseman. Ask about Mike, the game,
+  assembler, controls, and other users. His earlier account is in the
+  [Cambridge film notes](../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md#david-rosenthal--same-cambridge-pdp-7titan).
+- **Bill Buxton and Dave Fleck:** ask whether additional archive photographs,
+  notes, or correspondence survive beyond the 2008 report already held.
+- **Charles Lang and the Cambridge University Computer Preservation Society:**
+  seek context for PD10 and surviving supervisor/link or assembler material.
+  Existing archive: https://cucps.soc.srcf.net/titan/supplan/pd10.htm
+- **Cambridge Computer Laboratory library/archive staff:** ask about the
+  relics interviews, Norman Unwin's hardware documentation, Rainbow records,
+  and relevant former staff or students. These are enquiries to route
+  through the archive, not claims that any named person is available.
+- **Andrew N. Jackson:** his Spaceward preservation notes document an
+  earlier attempt to reach Kemp, research into Spaceward image formats,
+  and conversion experiments. He may have useful references or questions
+  for Mike. His notes link to Alvy Ray Smith's history of digital paint
+  systems and accounts of Spaceward equipment used for *Knightmare*.
+  Treat those as separate graphics-preservation leads, not as evidence
+  about PIXIE's implementation. Do not assume he has established contact
+  with Mike or recovered format specifications.
+
+The Facebook captions are discovery leads, not substitutes for the paper,
+code, or archive records. In particular, the claimed influence of the
+IBM 2250 Model 4 needs a historical citation. Meta-generated titles and
+summaries, including the page mixing Sketchpad with SketchUp and Sketchbook,
+should not be used as historical evidence.
 
 ## Where everything is
 
