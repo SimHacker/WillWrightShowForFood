@@ -9,6 +9,18 @@ meta:
   one_line: "Index every object id and Magic Cookie registration, document overlaps, remap ids so any objects coexist — creator attribution preserved."
   playful_name: "Sims File Cop on shrooms"
 
+generated_content:
+  status: design
+  source_mapping: "Persist page/route revisions and recipe identity with every allocated GUID"
+  first_build: "Allocate collision-checked IDs; retain every ID for multi-object templates"
+  rebuild: "Reuse existing IDs, including after adding recordings or slides"
+  fork: "Explicit new identity; allocate new IDs"
+  retry: "Resume recorded allocation rather than minting duplicates"
+  placement: "Separate save/instance references from object definition GUIDs"
+  remap: "Update affected references and retain old-to-new mappings"
+  migration: "Preview and validate affected saves; back up originals; report failures"
+  related: object-shops.yml
+
 guid_anatomy:   # why suffix-only renumbering preserves credit
   bits: 32
   high_16: "Magic Cookie — the producer (person or org), honor-system registered at thesimstransmogrifier.com"

@@ -17,7 +17,7 @@ corpus:
     control-panel: "1 article. the browser's own chrome, whose targets are !Option verbs rather than links"
 
 archive:
-  source: ~/GroundUp/Leela/git/lloooomm-imports/ties/
+  source: ~/GroundUp/git/lloooomm-imports/ties/
   storyboards: "*.st0 — four fields: title, synonyms, definition, contents"
   shapes: "*.tn0 — normalized 0..1 PostScript geometry"
   pictures: "*.pn0 — named rasters"

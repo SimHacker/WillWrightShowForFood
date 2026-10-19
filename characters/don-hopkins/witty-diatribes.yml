@@ -40,8 +40,8 @@ repertoire:
       - "Will Roll testimonial when Don won't stop"
     cross_links:
       moollm:
-        - ../../../../Leela/git/moollm/designs/eval/CHURCH-OF-THE-EVAL-GENIUS.md
-        - ../../../../Leela/git/moollm/designs/eval/SHORT-DURATION-PERSONAL-EVALUATORS.md
+        - ../../../../git/moollm/designs/eval/CHURCH-OF-THE-EVAL-GENIUS.md
+        - ../../../../git/moollm/designs/eval/SHORT-DURATION-PERSONAL-EVALUATORS.md
       wwsff:
         - ../../process/guest-participation-ladder.md#no-reflexive-submissions
         - ../../schemas/portrayal-standards.md#subject-rights

@@ -28,6 +28,9 @@ Self doesn't run on everybody's phone — **in spirit it does**.
 
 ## Key public notes
 
+- [Self: The Movie (1995)](sources/1995-self-the-movie.md) — video, supplied
+  transcript, and notes on slots, inheritance, and changing live objects.
+
 - [Self and MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/object-system/SELF-AND-MOOLLM.md) · [Latent-Space Inheritance](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md)
 - [K-line inheritance — Self's simplicity for LLMs](sources/moollm-kline-inheritance.md) — paper + patent + mixin skills
 - [HN — Self 1989 JIT + SelfishScript (Nov 2025)](sources/hn-self-1989-selfishscript-45706924.md) — Don + Ungar reply

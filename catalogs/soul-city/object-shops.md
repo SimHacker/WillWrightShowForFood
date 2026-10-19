@@ -14,6 +14,28 @@ infinite objects -- trivial, whimsical, and **intensely personal**.
 
 ## The shops
 
+### Shared media inputs and repeatable updates
+
+Planned generators should accept reusable media pages and selected routes
+through a page graph, not require a particular source game. Imported album
+metadata is retained when available; user-authored pages are equally valid
+inputs. Common metadata uses Dublin Core, with separate target/build settings.
+
+An album route can supply slides to a projector, pages to a book, or recordings
+to a jukebox. Preserve the resolved source IDs/revisions, template and recipe
+version, and each allocated object GUID. Editing the collection rebuilds the
+same object; an intentional fork creates a new identity.
+
+Keep placement separate: users may place multiple instances in house saves.
+Track those instances and any required migrations rather than assuming that
+replacing an object file updates their saved state. Validate and back up saves,
+check rights, and report unsupported updates explicitly.
+
+This is a design requirement, not an implemented media-to-object service.
+See [the full page/route model](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUVENIRS.md),
+[StoryMaker](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/family-album-as-storymaker.md),
+and [GUID allocation](guid-registry.md).
+
 Each shop is one template plus a generator plus a storefront in the
 [sims1 district](sims1-soul-bridge.md). All of them are
 [TMog modules](portals-and-modules.md) and all of them obey

@@ -8,7 +8,7 @@ meta:
   promoted_to_skill:
     what: "Now a first-class MOOLLM skill — The Engine of Creation."
     skill: https://github.com/SimHacker/moollm/tree/main/skills/artifactory
-    local_repo: ../../../../Leela/git/moollm/skills/artifactory/   # sibling workspace repo
+    local_repo: ../../../git/moollm/skills/artifactory/   # sibling workspace repo
     note: |
       This file is the concept/definition (the literary + CS lineage). The SKILL operationalizes
       it: read/write/edit/destroy/persist artifacts across filesystem + git, with a governor. Other

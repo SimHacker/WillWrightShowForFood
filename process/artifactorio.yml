@@ -50,4 +50,4 @@ see_also:
   - { path: ../characters/mark-weiser/pkd-lem-ai-sf.md, why: "calm vs Autofac danger axis; author-god" }
   - { path: code-that-spec.yml, why: "audience chant that feeds the belts" }
   - { path: crazy-idea-jam.yml, why: "stupid-fun-forward idea reactor" }
-  - { path: ../../../../Leela/git/moollm/skills/artifactory/SKILL.md, why: "the engine (sibling workspace repo)" }
+  - { path: ../../../git/moollm/skills/artifactory/SKILL.md, why: "the engine (sibling workspace repo)" }

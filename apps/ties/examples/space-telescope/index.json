@@ -1,6 +1,6 @@
 {
  "database": "space-telescope",
- "converted_from": "/Users/a2deh/GroundUp/Leela/git/lloooomm-imports/ties/newdb",
+ "converted_from": "/Users/a2deh/GroundUp/git/lloooomm-imports/ties/newdb",
  "falls_back_to": [
   "news-hyperties-docs"
  ],

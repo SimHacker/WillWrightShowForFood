@@ -18,7 +18,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 APP = HERE.parent
-DEFAULT_ARCHIVE = Path.home() / "GroundUp/Leela/git/lloooomm-imports/ties"
+DEFAULT_ARCHIVE = Path.home() / "GroundUp/git/lloooomm-imports/ties"
 
 # source subdir, output name, recurse into subdirectories
 DATABASES = [

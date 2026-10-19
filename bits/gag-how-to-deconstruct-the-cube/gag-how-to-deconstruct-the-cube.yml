@@ -16,8 +16,8 @@ lineage:
     method: "Working engineer attends postmodern conference; builds parody from real jargon; learns the field is epistemologically challenged but not empty"
   ashford_homage:
     title: "How to Incarnate Almost Anything"
-    moollm: "../../../../Leela/git/moollm/designs/postmodern-deconstruction.md"
-    persona: "../../../../Leela/git/moollm/examples/adventure-4/personas/captain-ashford.yml"
+    moollm: "../../../../git/moollm/designs/postmodern-deconstruction.md"
+    persona: "../../../../git/moollm/examples/adventure-4/personas/captain-ashford.yml"
     note: "Captain Kira Ashford — Belter captain, Expanse aesthetic — still wearable in adventure-4 coatroom"
   reincarnation: |
     Ashford lives in git: adventure-4 personas, Palm Nook study, attic Sims1 screenshot,

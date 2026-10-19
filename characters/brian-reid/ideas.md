@@ -41,5 +41,5 @@ Brothers on opposite sides of the same stack: **history & philosophy** (Brian) v
 ## Cross-links
 
 - [`../glenn-reid/`](../glenn-reid/)
-- MOOLLM primary source: `Leela/git/moollm/designs/postscript/BRIAN-REID-POSTSCRIPT-HISTORY.md`
+- MOOLLM primary source: `git/moollm/designs/postscript/BRIAN-REID-POSTSCRIPT-HISTORY.md`
 - [`../../repo-shows/postscript-distillery-to-pdf/`](../../repo-shows/postscript-distillery-to-pdf/)

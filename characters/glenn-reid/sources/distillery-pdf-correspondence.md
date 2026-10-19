@@ -85,8 +85,8 @@ Based on Glenn's idea; uses NeWS `setbindoverride`.
 | 1989 paper (Distillery + NeWS) | http://www.donhopkins.com/drupal/node/97 |
 | HN Weaponizing PostScript | https://news.ycombinator.com/item?id=13198492 |
 | HN comments mirror | http://neilmagee.com/project/hn/comments.php?id=13701897 |
-| MOOLLM Brian Reid history | `Leela/git/moollm/designs/postscript/BRIAN-REID-POSTSCRIPT-HISTORY.md` |
-| MOOLLM linguistic motherboard | `Leela/git/moollm/designs/postscript/LINGUISTIC-MOTHERBOARD.md` |
+| MOOLLM Brian Reid history | `git/moollm/designs/postscript/BRIAN-REID-POSTSCRIPT-HISTORY.md` |
+| MOOLLM linguistic motherboard | `git/moollm/designs/postscript/LINGUISTIC-MOTHERBOARD.md` |
 
 ---
 

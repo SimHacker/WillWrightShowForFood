@@ -14,6 +14,22 @@ of entry) are its districts.*
 
 ## What it is
 
+### Media pages as reusable authoring inputs
+
+**Design, not a shipped workflow.** Pages can be imported from a game's album,
+captured without a save parser where permitted, or created by the user.
+They use [Dublin Core metadata](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/)
+plus game-specific extensions. Pages form a graph; a linear album, slideshow,
+or book is a bounded route through it.
+
+The planned object generators take pages and routes as input, with templates
+and build settings. Retain source revisions and allocated object GUIDs so a
+user can add recordings to a jukebox or slides to a projector and update the
+same object. Track house-save placements separately from object definitions.
+See the [shared model](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUVENIRS.md),
+[StoryMaker plan](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/family-album-as-storymaker.md),
+[object shops](object-shops.md), and [GUID registry](guid-registry.md).
+
 Soul City rebuilds the Sims 1 content-creation stack as a **web-native platform**:
 
 | Layer | Examples |

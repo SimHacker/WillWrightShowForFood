@@ -10,6 +10,18 @@ meta:
   clusters_around: sims1-soul-bridge.yml   # the shops-and-residencies district
   governed_by: rendering-and-rights.yml
 
+media_inputs:
+  status: design
+  model: https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUVENIRS.md
+  sources: [imported_game_album, sparse_capture, user_authored_media]
+  metadata: "Dublin Core terms plus documented game/build extensions"
+  graph: "Reusable pages with typed links; linear outputs select bounded routes"
+  edition: "Resolved page IDs/revisions, start, length units, branch choices, timing and layout"
+  recipe: "Target template/version, input revisions, conversions, interactions"
+  update_identity: "Retain all allocated GUIDs on rebuild; intentional forks allocate new IDs"
+  placement: "Track each house-save instance separately; definition updates do not imply instance migration"
+  checks: [collision_detection, rights_review, save_backup, compatibility_validation, safe_retries, explicit_partial_failures]
+
 shops:   # each = one template + a generator + a storefront; open list by construction
   jukebox:
     container: "Music player"

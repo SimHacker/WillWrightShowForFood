@@ -2,6 +2,7 @@
 
 | Artifact | What |
 |---|---|
+| [1995-self-the-movie.md](1995-self-the-movie.md) | Self: The Movie; supplied transcript, opening demonstration timestamps, live object inspection and editing |
 | [2006-08-21-don-to-tom-lord-ungar-at-laszlo.md](2006-08-21-don-to-tom-lord-ungar-at-laszlo.md) | **Receipt** — Don ran into Ungar interviewing at Laszlo (email to Tom Lord); Self demo + JS compilability; full letter in tom-lord/sources/ |
 | [2015-11-03-call-with-david-ungar-hernan-wilkinson.md](2015-11-03-call-with-david-ungar-hernan-wilkinson.md) | Hangout with Hernán Wilkinson's Buenos Aires class — Self origin, live objects, JS, Korz, Klein, HotSpot, foveation; HN thread 23800625 as posted |
 | [2025-10-26-korz-email-hn-rollup.md](2025-10-26-korz-email-hn-rollup.md) | Ungar's Korz pointer ("the natural extension of Self to multidimensional context \| subjectivity"); interleaved comments on Don's SelfishScript rollup; the pessimization receipt |

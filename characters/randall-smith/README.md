@@ -34,6 +34,13 @@ literalism/magic line through forty years of live worlds.**
 
 ## Links
 
+[Self: The Movie (1995): source notes and supplied transcript](../david-ungar/sources/1995-self-the-movie.md).
+Randy's opening explains directness, uniformity, and continuous operation;
+the demonstrations show slots, parent lookup, and changing a point's
+coordinate from a constant to a method.
+
+https://www.youtube.com/watch?v=Ox5P7QyL774
+
 | What | Where |
 |---|---|
 | The Power of Simplicity | [bibliography.selflanguage.org](https://bibliography.selflanguage.org/self-power.html) |

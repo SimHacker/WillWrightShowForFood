@@ -333,7 +333,7 @@ action, and carries a deadline. A license is a bill you *want*.
 #### An object cannot create an object in another household
 
 Checked against Don's own IFF parsers in
-[`SimObliterator_Suite`](../../../Leela/git/SimObliterator_Suite/src/formats/iff/chunks/),
+[`SimObliterator_Suite`](../../../../git/SimObliterator_Suite/src/formats/iff/chunks/),
 1 Sep 2026. **There is no cross-lot addressing in the VM.** Every position mode
 `Create Object Instance` accepts is relative to *me* or to the *stack object* —
 `UNDERNEATH_ME`, `ON_TOP_OF_ME`, `IN_FRONT_OF_ME`, `IN_MY_HAND`,

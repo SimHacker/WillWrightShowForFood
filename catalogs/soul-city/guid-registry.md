@@ -12,6 +12,21 @@ whole library can be read in a browser.
 
 ## The anatomy that makes this work
 
+### Generated content must retain its identity
+
+For the planned [album-to-object workflow](object-shops.md#shared-media-inputs-and-repeatable-updates),
+allocate collision-checked GUIDs once, then retain the mapping from source
+pages/routes and build recipe to generated objects. Adding records to a
+jukebox or slides to a projector updates that definition using its existing
+IDs. Multi-object templates retain all their IDs. A deliberate fork requests
+new IDs; a build retry must not allocate another set.
+
+GUIDs identify definitions, not each placement in a house. Track save and
+instance references separately and plan any instance-state migration.
+Remapping an ID requires updating affected references and recording the
+mapping; it is not equivalent to an ordinary content rebuild. These are
+design requirements, not claims of implemented allocation or migration.
+
 A Sims object id is 32 bits, and Transmogrifier split it in two:
 
 | Bits | Field | Meaning |

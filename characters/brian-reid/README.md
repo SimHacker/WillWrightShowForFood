@@ -6,6 +6,6 @@
 - [`ideas.md`](ideas.md)
 - [`invitation.md`](invitation.md) — send-ready (contact TBD)
 
-MOOLLM primary source: `Leela/git/moollm/designs/postscript/BRIAN-REID-POSTSCRIPT-HISTORY.md`
+MOOLLM primary source: `git/moollm/designs/postscript/BRIAN-REID-POSTSCRIPT-HISTORY.md`
 
 Show: [`../../repo-shows/postscript-distillery-to-pdf/`](../../repo-shows/postscript-distillery-to-pdf/) (pair w/ Glenn Reid)
