@@ -17,7 +17,39 @@ TypeScript and checked against Open SIMH, which it ports device by device
 - **PDP-7 UNIX v0**, from the pdp7-unix restoration: log in as ken.
 - **Mitch Bradley's PDP-7 Forth,** with turtle graphics on the 340 and PIXIE's ring structures.
 
-Around it: assemblers for the DEC, Cambridge, and UNIX dialects, source maps from every word in core
+Try them at [hyperties.org/cabinet](https://hyperties.org/cabinet/); UNIX is at
+[hyperties.org/cabinet/unix](https://hyperties.org/cabinet/unix/).
+
+It also runs devices that no PDP-7 ever had. They sit on free device codes, are marked as cabinet
+extensions in [DESIGN.md](DESIGN.md), and stock software never touches them:
+
+- **A Turing machine engine** (device 54, [turing.ts](src/plugins/turing.ts)): a co-processor that
+  runs transition tables out of the PDP-7's core, the way the 340 runs display files.
+  It runs Marvin Minsky's 7-state, 4-symbol universal machine from AIM-33, recovered from his TECO
+  program, with PDP-7 code paging its tape through core. [turing.fs](tapes/pdp7forth/turing.fs)
+  draws the tape on the 340 and runs the machines from Christopher Cherniak's PCOMP TM\*
+  simulator, including the busy beavers. TM-Forth compiles Turing machines into the engine's
+  tables ([TURING-ENGINE.md](TURING-ENGINE.md)).
+- **Minsky's Ultimate Machine** (device 56, [ultimate.ts](src/plugins/ultimate.ts)), the box that
+  Claude Shannon built at Bell Labs: switch it on and a hand comes out and switches it off.
+  [ultimate.fs](tapes/pdp7forth/ultimate.fs) draws it on the 340, with the light pen on its switch.
+- **A DataHand** (device 57, [datahand.ts](src/plugins/datahand.ts)), after VPL's DataGlove: a
+  webcam and a hand tracker in the browser report your hand as a palm frame and twenty bones. Only
+  the numbers reach the PDP-7, never the video. [datahand.fs](tapes/pdp7forth/datahand.fs) draws
+  the hand with a 3D turtle ([HAND-TRACKING.md](HAND-TRACKING.md)).
+- **ULTIMATE HAND**, written in Forth ([ultimate-hand.fs](tapes/pdp7forth/ultimate-hand.fs)): you
+  are the Ultimate Machine's hand. Show the camera your hand and the box switches itself on, its arm
+  carries your hand out to the switch, and you switch it off with a fingertip.
+
+Next on the list ([ROADMAP.md](ROADMAP.md)): HAND TURTLE, turtle graphics steered by hand
+gestures, and then Spacewar flown by hand. After that, a CAM-6 cellular automata device.
+Norman Margolus has given me permission to turn chapters of *Cellular Automata Machines*
+(Tommaso Toffoli and Norman Margolus, MIT Press, 1987) into interactive courseware on it: the
+book's explanations next to rules you can run, change and paint into, in the spirit of KidPix
+as much as a lab manual. My earlier CAM-6 simulator is at
+[github.com/SimHacker/CAM6](https://github.com/SimHacker/CAM6).
+
+Around the emulator: assemblers for the DEC, Cambridge, and UNIX dialects, source maps from every word in core
 to its source line and its scanned page, a front panel and register view, an editable display
 list, recording and replay of demos, eight light pens, and a 3D view of data structures in live
 core ([MANIFESTO.md](MANIFESTO.md) explains the attitude).
@@ -26,6 +58,16 @@ All of it is free software, in public git, built to be taken apart and changed. 
 use.** Put it on your own web site; make it a web twin of a machine you have, so visitors can use
 it while the real one rests or is being restored; use it to check a tape or a disk image before it
 goes near the iron; teach with it. You don't have to ask, and you don't have to pay.
+
+## For UNIX historians
+
+PDP-7 UNIX v0 from the [pdp7-unix](https://github.com/DoctorWkt/pdp7-unix) restoration boots on
+the cabinet from an emulated RB09 disk: log in as ken, then ls, cp and date. The RB09 is a port of
+Open SIMH's, and the boot follows Phil Budne's bootstrap ([UNIX-V0.md](UNIX-V0.md)). This may be of
+interest to The Unix Heritage Society and the pdp7-unix list (Warren Toomey, Phil Budne and the
+others who did the restoration): a browser twin that anyone can log in to, and a way to check
+images before they go near a real machine. Corrections and test cases from people who know this
+code are very welcome.
 
 ## What would help
 
