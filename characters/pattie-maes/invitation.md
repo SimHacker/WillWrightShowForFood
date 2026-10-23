@@ -54,7 +54,7 @@ Would you be up for a conversation?
 
 **The argument**
 
-- [An interface to agency, not agents instead of an interface](https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md), in six parts:
+- [An interface to agency](https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md), in six parts:
   [The Sims](https://github.com/SimHacker/moollm/blob/main/designs/interface-to-agency/the-sims.md) ·
   [DreamScape, 1995](https://github.com/SimHacker/moollm/blob/main/designs/interface-to-agency/dreamscape.md) ·
   [the errand](https://github.com/SimHacker/moollm/blob/main/designs/interface-to-agency/the-errand.md) ·
@@ -65,7 +65,7 @@ Would you be up for a conversation?
 
 **The 1997 debate**
 
-- [The 1997 agents debate: what was argued, who made it possible, and the two answers in reach](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md) — from the *interactions* transcript
+- [The 1997 agents debate](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md) — from the *interactions* transcript
 - [Ben Shneiderman](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md)
 - [Ted Selker](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ted-selker/README.md) — COACH
 

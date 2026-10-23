@@ -2,7 +2,7 @@
 
 This essay now lives in MOOLLM, where anyone can read and cite it:
 
-**[The 1997 agents debate: what was argued, who made it possible, and the two answers in reach](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md)**
+**[The 1997 agents debate](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md)**
 
 It covers Ben Shneiderman's and Pattie Maes's positions from the *interactions* transcript
 ([doi:10.1145/267505.267514](https://doi.org/10.1145/267505.267514)), the people who shaped the
