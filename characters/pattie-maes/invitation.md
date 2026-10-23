@@ -65,7 +65,7 @@ Would you be up for a conversation?
 
 **The 1997 debate**
 
-- [The 1997 agents debate: what was actually argued, and the two answers nobody named](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/agents-debate-1997.md) — from the *interactions* transcript
+- [The 1997 agents debate: what was argued, who made it possible, and the two answers in reach](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md) — from the *interactions* transcript
 - [Ben Shneiderman](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md)
 - [Ted Selker](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ted-selker/README.md) — COACH, the other synthesis
 

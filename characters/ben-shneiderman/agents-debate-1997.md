@@ -1,4 +1,4 @@
-# The 1997 agents debate: what was actually argued, and the two answers nobody named
+# The 1997 agents debate: what was argued, who made it possible, and the two answers in reach
 
 Portrayal material **about** Ben Shneiderman and Pattie Maes — **not** them, and no words are put in
 anyone's mouth. Every quotation below is from the published transcript, marked and in context.

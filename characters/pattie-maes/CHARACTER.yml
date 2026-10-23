@@ -71,5 +71,5 @@ sources:
 
 see_also:
   - { path: agent-ui-solutions.md, why: "Written for her: her 1997 slide against interface to agency" }
-  - { path: ../ben-shneiderman/agents-debate-1997.md, why: "The debate, from the transcript" }
+  - { path: https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md, why: "The debate, from the transcript" }
   - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }

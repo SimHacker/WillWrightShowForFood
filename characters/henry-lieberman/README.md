@@ -11,7 +11,7 @@
 At the IUI 97 debate between Ben Shneiderman and Pattie Maes, Pattie pointed to Henry in the
 audience and cited his teach-by-demonstration work, while Ben asked from the stage for graphical
 macro tools. Programming by demonstration was the synthesis both were asking for, and nobody named
-it: [`agents-debate-1997.md`](../ben-shneiderman/agents-debate-1997.md). In October 2026 Henry and
+it: [`AGENTS-DEBATE-1997.md`](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md). In October 2026 Henry and
 Pattie were at the same event, where she showed her Jan 97 "Agent UI solutions" slide again:
 [`../pattie-maes/agent-ui-solutions.md`](../pattie-maes/agent-ui-solutions.md).
 
@@ -32,7 +32,7 @@ seven years of tapes; Henry was there at the beginning.
 | | |
 |---|---|
 | **Pattie Maes** | [`../pattie-maes/`](../pattie-maes/README.md) |
-| **1997 agents debate** | [`agents-debate-1997.md`](../ben-shneiderman/agents-debate-1997.md) |
+| **1997 agents debate** | [`AGENTS-DEBATE-1997.md`](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md) |
 | **Tinker** | [web.media.mit.edu/~lieber/.../Tinker.html](https://web.media.mit.edu/~lieber/Lieberary/Tinker/Tinker.html) |
 | **Visual programming lineage (MOOLLM)** | [designs/VISUAL-PROGRAMMING-LINEAGE.md](https://github.com/SimHacker/moollm/blob/main/designs/VISUAL-PROGRAMMING-LINEAGE.md) |
 | **Will Wright on Tinker** | [OLPC visual programming article](../will-wright/sources/2007-11-16-olpc-visual-programming-psiber/article.md) |

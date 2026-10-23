@@ -21,7 +21,7 @@ audience and cited your teach-by-demonstration work, Ben asked from the stage fo
 tools," and nobody named programming by demonstration as the synthesis both of them were asking for.
 I wrote that up, and a piece for Pattie on her slide:
 
-### → [Your slide 13 — for Pattie](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/pattie-maes/agent-ui-solutions.md) · [The 1997 debate, from the transcript](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/agents-debate-1997.md)
+### → [Your slide 13 — for Pattie](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/pattie-maes/agent-ui-solutions.md) · [The 1997 debate, from the transcript](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md)
 
 **The ask:** join me for a **Repo Show**, a friendly recorded conversation whose stage is a public
 GitHub repo, following through to working code anyone can browse without an account. Or just
@@ -63,7 +63,7 @@ email or a call. **Show, don't tell.**
 **Tonight's thread**
 
 - [Your slide 13](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/pattie-maes/agent-ui-solutions.md) — Pattie's Jan 97 slide, bullet by bullet
-- [The 1997 agents debate: what was actually argued, and the two answers nobody named](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/agents-debate-1997.md) — including you in the audience
+- [The 1997 agents debate: what was argued, who made it possible, and the two answers in reach](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md) — including you in the audience
 - [Pattie Maes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/pattie-maes/README.md) · [Ben Shneiderman](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md) · [Ted Selker](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ted-selker/README.md) (COACH, the other synthesis)
 
 **The argument**

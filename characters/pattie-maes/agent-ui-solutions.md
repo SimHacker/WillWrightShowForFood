@@ -52,7 +52,7 @@ design choice: the agent and the person share the same visible controls.
 
 I wrote up the published transcript ("Direct Manipulation vs. Interface Agents," *interactions*
 4(6), 1997) here:
-[agents-debate-1997.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/agents-debate-1997.md).
+[AGENTS-DEBATE-1997.md](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md).
 In short:
 
 - **It ended in agreement.** Ben: "I like the new Pattie. I am ready to be partners and collaborate
@@ -104,7 +104,7 @@ Shows below. Cyrus can connect us.
   [Ebike Safari](https://github.com/SimHacker/moollm/blob/main/designs/interface-to-agency/ebike-safari.md) ·
   [the state is a file](https://github.com/SimHacker/moollm/blob/main/designs/interface-to-agency/the-state-is-a-file.md)
 - **Why the dichotomy outlived its answer:** [Axes, not camps](https://github.com/SimHacker/moollm/blob/main/designs/AXES-NOT-CAMPS.md)
-- **The 1997 debate, from the transcript:** [agents-debate-1997.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/agents-debate-1997.md)
+- **The 1997 debate, from the transcript:** [AGENTS-DEBATE-1997.md](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md)
 - **The people in this story:**
   [Ben Shneiderman](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md) ·
   [Henry Lieberman](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/henry-lieberman/README.md) ·

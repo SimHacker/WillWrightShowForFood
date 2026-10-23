@@ -60,7 +60,7 @@ only half-born."
 
 **Show hook:** the tagline as the through-line — Engelbart's question, Temkin's answer, Nelson's
 amplification — and *Mesa* and *Declare* as attempts at the missing half. Related:
-[`../../ben-shneiderman/agents-debate-1997.md`](../../ben-shneiderman/agents-debate-1997.md), where
+[`AGENTS-DEBATE-1997.md`](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md), where
 the same argument gets a stage and two moderators in 1997.
 
 **Show hook:** Repo Show as the *git* answer to enshittification; In Formation as the *print* answer; Declare as the *UI language* answer. Paper punk ↔ constructionist education.

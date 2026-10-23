@@ -122,7 +122,7 @@ is Engelbart's question answered in the past tense, and **Ted Nelson tweeted it*
 2018. The chain and the counter-replies:
 [`../../david-temkin/sources/mesa-and-in-formation.md`](../../david-temkin/sources/mesa-and-in-formation.md).
 The same argument gets a stage and two moderators in 1997:
-[`../../ben-shneiderman/agents-debate-1997.md`](../../ben-shneiderman/agents-debate-1997.md).
+[`AGENTS-DEBATE-1997.md`](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md).
 
 ## 9. Close
 

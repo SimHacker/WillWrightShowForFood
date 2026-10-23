@@ -12,7 +12,7 @@ and the debate record.
 |---|---|
 | **For Pattie** | [`agent-ui-solutions.md`](agent-ui-solutions.md) |
 | **Invitation** | [`invitation.md`](invitation.md) |
-| **1997 agents debate** | [`../ben-shneiderman/agents-debate-1997.md`](../ben-shneiderman/agents-debate-1997.md) |
+| **1997 agents debate** | [`AGENTS-DEBATE-1997.md`](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md) |
 | **The argument** | [An interface to agency](https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md) (MOOLLM) |
 | **CS547, 1994** | "Learning Interface Agents," 14 Jan 1994: [`cs547-ARCHIVE.md`](../terry-winograd/media/cs547-ARCHIVE.md) |
 | **Sources** | [`CHARACTER.yml`](CHARACTER.yml) |
