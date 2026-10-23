@@ -16,9 +16,10 @@ format: remote_or_in_person
 
 Jason —
 
-David Rosenthal introduced us, and I owe you a reply from March 2025, when you told me the
-Internet Archive runs MAME's Apple II emulation compiled to WASM so that MAME can concentrate on
-accuracy. A lot has happened since then, and this page puts it in one place.
+David Rosenthal introduced us, and I owe you a reply and some thanks. In March 2025 you told me
+the Internet Archive runs MAME's Apple II emulation compiled to WASM, so that MAME can concentrate
+on accuracy. That answer started me on browser-based emulation: a lot of research, thought,
+design and code followed from it, and this page puts the results in one place.
 
 I'm Don Hopkins. At the University of Maryland I worked with Ben Shneiderman and Mark Weiser on
 pie menus; our CHI '88 paper compared them with linear menus. At Sun I worked on NeWS, where David
