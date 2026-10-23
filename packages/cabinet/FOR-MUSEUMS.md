@@ -1,4 +1,4 @@
-# To computer museums and retro computing enthusiasts
+# To computer museums, libraries, archives, and retro computing enthusiasts
 
 Don Hopkins, October 2026. An open letter: an offer, and some requests. For the Interim Computer
 Museum specifically, and the PDP-7 that is the machine we emulate, see the
@@ -68,6 +68,25 @@ interest to The Unix Heritage Society and the pdp7-unix list (Warren Toomey, Phi
 others who did the restoration): a browser twin that anyone can log in to, and a way to check
 images before they go near a real machine. Corrections and test cases from people who know this
 code are very welcome.
+
+## For libraries and archives
+
+The cabinet keeps a program and its documents together: every word in core maps to its source
+line and to the scanned page of the listing it came from, so a reader can go from the running
+machine to the paper and back. Two examples of why this matters:
+
+- **Cambridge.** The two 1969 PIXIE films were found and digitized in 2019 and 2020 through David
+  Chapman at Cambridge University Library ([the story](../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)).
+  By October 2026 the library's embedded copies had become unreachable, and the attributed copies
+  I put online are, for now, on YouTube. Films, listings and the program that runs them belong
+  together somewhere that will last.
+- **Stanford.** Stanford Libraries hold the recordings of Terry Winograd's CS547 seminar, with a
+  finding aid and some scans online. I have catalogued 339 of the talks
+  ([cs547-ARCHIVE.md](../../characters/terry-winograd/media/cs547-ARCHIVE.md)).
+
+If you hold software, listings, films or recordings like these, the cabinet can give them a
+running context, and I would be glad to work with you on how they are hosted, credited and
+linked.
 
 ## What would help
 

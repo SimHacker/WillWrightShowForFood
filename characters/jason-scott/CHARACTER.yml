@@ -7,44 +7,70 @@ character:
   type: invitation
   signifier: "🕯💾"
   status: living
-  field: "Computer history / archivist; textfiles.com; GET LAMP; Internet Archive"
+  field: "Archivist and documentary filmmaker; textfiles.com; Archive Team; Free-Range Archivist and Software Curator, Internet Archive"
   home: characters/jason-scott/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: stub
+  status: draft
   consent: not_yet_asked
   document: invitation.md
-  note: "Room seeded for GET LAMP. Natural Brewster / Archive neighbor. Outreach not drafted."
+  first_contact: "2025-03 email (Apple II emulation at the Internet Archive); introduced by David Rosenthal 2026-10-23"
 
 bio:
-  summary: >
-    **Jason Scott** — computer historian and archivist (textfiles.com); director of *GET LAMP*
-    (2010), the definitive oral-history documentary of text adventures / interactive fiction.
-    Also known for Archive Team / Internet Archive work. Shot ~80 IF interviews 2006–2008;
-    physical DVDs sold out — free ISO distribution with his blessing.
+  summary: |
+    Started textfiles.com (1998). Directed BBS: The Documentary (2005), GET LAMP (2010) and
+    DEFCON: The Documentary (2013). Co-founded Archive Team (2009). At the Internet Archive since
+    2011 as Free-Range Archivist and Software Curator: proposed JSMESS (2011); in-browser software
+    from its October 2013 launch to more than 250,000 programs by 2023. Podcast: Jason Scott
+    Talks His Way Out of It.
+  known_for:
+    - "textfiles.com (1998)"
+    - "BBS: The Documentary (2005), GET LAMP (2010), DEFCON: The Documentary (2013)"
+    - "Archive Team (2009), GeoCities rescue"
+    - "Internet Archive software collections: Console Living Room, Internet Arcade, MS-DOS, Windows 3.x, HyperCard, Apple II (4am), Malware Museum, Flash via Ruffle"
+    - "JSMESS, proposed and organized (2011), later folded into MAME's own JavaScript build"
 
-show_suggestions:
-  - "GET LAMP as the IF feelie — Bedquilt cave + Infocom disc + Frontalot anthem"
-  - "Archive instinct: sold-out DVD → free IA ISOs (pair with Brewster)"
-  - "Interview ethics / living makers while they can still talk"
+credit_others:
+  note: "The emulators were built by many people. Credit them by name where it matters."
+  jsmess: "Justin Kerk (DopefishJustin) first to join; MAME developer Micko for per-driver JavaScript builds; many others named in Scott's 2015 post"
+  emularity: "Daniel Brooks (db48x) with Jason Scott; John Vilk (BrowserFS)"
+  em_dosbox: "Dreamlayers"
+  ruffle: "The Ruffle Team (started by Mike Welsh); Archive integration first drafted by Guy Sowden"
+  ten_year_retrospective: "Justin Kerk, Daniel Brooks, Vitorio Miliano, James Baicoianu, John Vilk, Tracey Jaquith, Jim Nelson, Hank Bromley"
+  malware_museum: "Mikko Hypponen (F-Secure) with Jason Scott"
 
 sources:
+  wikipedia:
+    - "https://en.wikipedia.org/wiki/Jason_Scott"
+    - "https://en.wikipedia.org/wiki/Textfiles.com"
+    - "https://en.wikipedia.org/wiki/Archive_Team"
+    - "https://en.wikipedia.org/wiki/Get_Lamp"
   web:
-    - { title: "GET LAMP", url: "http://getlamp.com/" }
-    - { title: "textfiles.com", url: "http://textfiles.com/" }
-    - { title: "Wikipedia — Get Lamp", url: "https://en.wikipedia.org/wiki/Get_Lamp" }
+    - { title: "textfiles.com", url: "http://www.textfiles.com/" }
+    - { title: "ASCII by Jason Scott (blog)", url: "https://ascii.textfiles.com/" }
+    - { title: "GET LAMP", url: "http://www.getlamp.com/" }
+    - { title: "BBS: The Documentary", url: "http://www.bbsdocumentary.com/" }
+    - { title: "Long Now talk bio: Free-Range Archivist & Software Curator since 2011", url: "https://longnow.org/talks/02015-scott/" }
+    - { title: "JSMESS proposal (2011)", url: "https://ascii.textfiles.com/archives/3375" }
+    - { title: "JSMESS folded into MAME (2015)", url: "https://ascii.textfiles.com/archives/4864" }
+    - { title: "10 years of emulation at the Internet Archive (2023)", url: "https://blog.archive.org/2023/09/20/a-quarter-in-a-quarter-million-out-10-years-of-emulation-at-internet-archive/" }
+    - { title: "Flash via Ruffle; 'Access Drives Preservation' (2020)", url: "https://blog.archive.org/2020/11/19/flash-animations-live-forever-at-the-internet-archive/" }
+    - { title: "Internet Arcade launch (2014); vector games a hard case", url: "https://techcrunch.com/2014/11/01/the-internet-archive-now-lets-you-play-900-classic-arcade-games-in-your-browser/" }
+    - { title: "4am Apple II collection", url: "https://archive.org/details/apple_ii_library_4am" }
+    - { title: "Podcast: Jason Scott Talks His Way Out of It", url: "https://archive.org/details/jasonscotttalks" }
   local:
-    - { path: sources/get-lamp.md, why: "Documentary framing" }
+    - { path: sources/get-lamp.md, why: "GET LAMP framing" }
 
 see_also:
-  - { path: sources/get-lamp.md, why: "Primary framing" }
-  - { path: ../mc-frontalot/sources/it-is-pitch-dark.md, why: "Get Lamp music video" }
-  - { path: ../brewster-kahle/README.md, why: "Archive neighbor" }
-  - { path: ../nick-montfort/README.md, why: "IF literary map" }
-  - { path: ../scott-adams/README.md, why: "Commercial IF" }
-  - { path: ../jimmy-maher/README.md, why: "IF / digital history lane" }
+  - { path: invitation.md, why: "The invitation: the cabinet, PIXIE, the Cambridge films, and the Archive" }
+  - { path: ../../packages/cabinet/FOR-MUSEUMS.md, why: "Open letter to museums, libraries, archives and retro computing enthusiasts" }
+  - { path: ../../packages/cabinet/WEB-BENCH.md, why: "Credits the Internet Archive's emulation work" }
+  - { path: ../david-rosenthal/README.md, why: "Introduced Don, October 2026" }
+  - { path: ../brewster-kahle/README.md, why: "Internet Archive" }
+  - { path: ../mc-frontalot/sources/it-is-pitch-dark.md, why: "GET LAMP song" }
