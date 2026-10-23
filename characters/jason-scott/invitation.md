@@ -112,6 +112,28 @@ Will Wright Show For Food, the repo this page is in, is built the same way: each
 and [Richard Bartle](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/richard-bartle/README.md)
 has one too.
 
+Thank you for putting Infocom's sources on GitHub in 2019. I played Zork on MIT's DM machine and
+spent years looking for its source. Playing it, I found that GIVE TROLL TO TROLL makes the troll eat
+himself, but the passage he guarded stays blocked, as if he were still there, and I suspected a
+flag that never got cleared. Decades later the MDL source showed `TROLL-FLAG!-FLAG`, set when the
+troll dies in combat and never cleared when he eats himself, and your release let me check the
+same bug in the Infocom version most people played
+([the story](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md)).
+
+I think the bug says something about modelling characters: the troll's fate lived in a global flag
+instead of in the troll. In MOOLLM the characters carry their own state, and their games come with
+them. [Two-Toll](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll) is one troll with a Zork mind and a Colossal Cave mind, guarding
+passages in both games. [Snorax the Wumpus](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax) carries Hunt the Wumpus inside him,
+with Gregory Yob's 1973 BASIC and the Version 7 and BSD C versions packed as his luggage, and
+[the grue](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue) brings Don't Go In The Dark into the same maze. They share state through your
+lamp: while it burns you are hunting the wumpus, and when it runs out the grue's game starts in the
+same rooms ([Mixing Up Adventures](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/mixing-up-adventures/README.md)).
+
+Donald Knuth recast Crowther and Woods's Adventure as a literate program,
+[`advent.w`](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent), and that is the
+care I think Zork's source deserves too. Snorax's
+[`wumpus.w.md`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax/wumpus.w.md) is a first try at the same treatment for Wumpus.
+
 ## Things I'd like to talk about
 
 1. Whether cabinet tapes, listings and disk images would make sense as Archive items, with the
@@ -122,7 +144,7 @@ has one too.
 4. Your own work, on a **Repo Show**: a recorded conversation whose stage is a public GitHub repo.
    textfiles.com and the BBS era, *GET LAMP*, Archive Team, and emulation at library scale.
 5. Adventures, MUDs and LLMs: what *GET LAMP*'s interviews say about play that MOOLLM should learn
-   from, and the Infocom sources you put on GitHub in 2019.
+   from, and reading Zork's source with the care Knuth gave Adventure.
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
@@ -172,6 +194,12 @@ are up to.
   [what MOOLLM learns from MOO and LambdaMOO](https://github.com/SimHacker/moollm/blob/main/designs/MOO-HERITAGE.md) ·
   [a maze, all alike](https://github.com/SimHacker/moollm/tree/main/examples/all-alike-maze)
 - [Richard Bartle](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/richard-bartle/README.md)
+- [The troll flag](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md) ·
+  [Two-Toll the troll](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll) · [Snorax the Wumpus](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax) · [the grue](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue) ·
+  [Mixing Up Adventures](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/mixing-up-adventures/README.md)
+- [Knuth's `advent.w`](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent) ·
+  [`wumpus.w.md`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax/wumpus.w.md) ·
+  [Donald Knuth](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/donald-knuth/README.md)
 
 **Pie menus and window systems**
 
