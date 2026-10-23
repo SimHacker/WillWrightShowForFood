@@ -121,8 +121,15 @@ same bug in the Infocom version most people played
 ([the story](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md)).
 
 I think the bug says something about modelling characters: the troll's fate lived in a global flag
-instead of in the troll. In MOOLLM the characters carry their own state, and their games come with
-them. [Two-Toll](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll) is one troll with a Zork mind and a Colossal Cave mind, guarding
+instead of in the troll. In MOOLLM the characters carry their own state, and they bring their own
+games and [playing pieces](https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md) with them, the way Sims objects come in ensembles.
+They plug together in the simulation and broadcast
+[advertisements](https://github.com/SimHacker/moollm/blob/main/designs/ADVERTISEMENT-AUCTION.md) for what can be done with them, on a
+[Self-ish object system](https://github.com/SimHacker/moollm/blob/main/designs/object-system/README.md) with multiple inheritance, where the LLM
+fills in whatever a prototype leaves unsaid
+([latent-space inheritance](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md)).
+
+[Two-Toll](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll) is one troll with a Zork mind and a Colossal Cave mind, guarding
 passages in both games. [Snorax the Wumpus](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax) carries Hunt the Wumpus inside him,
 with Gregory Yob's 1973 BASIC and the Version 7 and BSD C versions packed as his luggage, and
 [the grue](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue) brings Don't Go In The Dark into the same maze. They share state through your
