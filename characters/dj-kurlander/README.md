@@ -10,8 +10,7 @@ Salesin, and "reverse-engineered Jim Woodring" into an expert system for poses, 
 panels. He later worked on the Mobile Internet Toolkit and was GM of Microsoft Surface incubation.
 He is retired and lives in Seattle. [kurlander.net](https://kurlander.net/DJ/).
 
-**Will Wright is in** — signed on for the
-[premiere](../../repo-shows/will-wright-premiere/README.md) and more.
+**Will Wright is in — he's signed on to do the [premiere](../../repo-shows/will-wright-premiere/README.md) and more.**
 
 ---
 

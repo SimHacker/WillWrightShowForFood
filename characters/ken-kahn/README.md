@@ -9,7 +9,7 @@ still teaching AI to children, fifty-three years later.
 | | |
 |---|---|
 | 1973–79 | Taught AI to elementary schoolers, MIT AI Lab Logo Group, with Papert |
-| 1979 | PhD thesis *Creation of Computer Animation from Story Descriptions*; advisor Carl Hewitt, with Minsky and Papert as readers; generated animated films from loosely specified stories |
+| 1979 | PhD thesis *Creation of Computer Animation from Story Descriptions*; advisor Carl Hewitt, with Minsky and Papert on his thesis committee; generated animated films from loosely specified stories |
 | 1990–91 | Pictorial Janus, a visual form of a distributed concurrent constraint language |
 | 1993 | NPUC, IBM Almaden: *Sketches and Animations as Programs*, as Animated Programs, Inc. |
 | 1995– | ToonTalk: programming as a video-game city, with robots trained by demonstration and messages carried by birds to nests |
