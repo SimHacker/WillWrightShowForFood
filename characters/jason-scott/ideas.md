@@ -14,6 +14,14 @@
   unreachable on Cambridge's site by October 2026.
 - HyperCard stacks at the Archive (2017) and their contemporaries HyperTIES and HyperLook.
 
+## Adventures, MUDs and MOOLLM
+
+- MOOLLM treats a repo as a text adventure: directories as rooms, files as objects, characters
+  playable by people or LLMs. Its adventure skill follows Colossal Cave, Zork, MUD and LambdaMOO.
+- The Infocom source repositories he put on GitHub in 2019, and what they teach about parsers and
+  world models.
+- *GET LAMP*'s interviews as design advice for LLM-driven play.
+
 ## His own work
 
 - textfiles.com and the BBS era; *BBS: The Documentary*

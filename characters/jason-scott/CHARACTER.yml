@@ -63,6 +63,7 @@ sources:
     - { title: "Flash via Ruffle; 'Access Drives Preservation' (2020)", url: "https://blog.archive.org/2020/11/19/flash-animations-live-forever-at-the-internet-archive/" }
     - { title: "Internet Arcade launch (2014); vector games a hard case", url: "https://techcrunch.com/2014/11/01/the-internet-archive-now-lets-you-play-900-classic-arcade-games-in-your-browser/" }
     - { title: "4am Apple II collection", url: "https://archive.org/details/apple_ii_library_4am" }
+    - { title: "Infocom source code on GitHub (historicalsource, 2019)", url: "https://boingboing.net/2019/04/19/eaten-by-a-grue.html" }
     - { title: "Podcast: Jason Scott Talks His Way Out of It", url: "https://archive.org/details/jasonscotttalks" }
   local:
     - { path: sources/get-lamp.md, why: "GET LAMP framing" }

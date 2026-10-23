@@ -74,6 +74,18 @@ I wrote an [open letter to computer museums, libraries, archives and retro compu
 about what the cabinet offers them and what would help. It was written with people like you and
 David in mind.
 
+## Adventures and MUDs
+
+The other thing I've been building should feel familiar to you. [MOOLLM](https://github.com/SimHacker/moollm)
+treats a git repository as a text adventure for people and LLMs together: directories are rooms,
+files are the objects in them, and characters are files that a person or a model can play. Its
+[adventure skill](https://github.com/SimHacker/moollm/blob/main/skills/adventure/SKILL.md) follows
+Colossal Cave, Zork, MUD and LambdaMOO, down to Infocom's BRIEF and VERBOSE, and there is a
+[maze of twisty little passages, all alike](https://github.com/SimHacker/moollm/tree/main/examples/all-alike-maze).
+Will Wright Show For Food, the repo this page is in, is built the same way: each guest has a room,
+and [Richard Bartle](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/richard-bartle/README.md)
+has one too.
+
 ## Things I'd like to talk about
 
 1. Whether cabinet tapes, listings and disk images would make sense as Archive items, with the
@@ -83,6 +95,8 @@ David in mind.
    the DataHand) are designed to plug into an Apple ][ as well, once it has a 6502.
 4. Your own work, on a **Repo Show**: a recorded conversation whose stage is a public GitHub repo.
    textfiles.com and the BBS era, *GET LAMP*, Archive Team, and emulation at library scale.
+5. Adventures, MUDs and LLMs: what *GET LAMP*'s interviews say about play that MOOLLM should learn
+   from, and the Infocom sources you put on GitHub in 2019.
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
@@ -122,6 +136,14 @@ are up to.
   courseware Norman Margolus has given me permission to build from his and Tommaso Toffoli's book:
   [Norman Margolus](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/norman-margolus/README.md)
 - [Micropolis](https://micropolisweb.com/), SimCity as free software
+
+**Adventures and MUDs**
+
+- [MOOLLM](https://github.com/SimHacker/moollm) ·
+  [the adventure skill](https://github.com/SimHacker/moollm/blob/main/skills/adventure/SKILL.md) ·
+  [what MOOLLM learns from MOO and LambdaMOO](https://github.com/SimHacker/moollm/blob/main/designs/MOO-HERITAGE.md) ·
+  [a maze, all alike](https://github.com/SimHacker/moollm/tree/main/examples/all-alike-maze)
+- [Richard Bartle](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/richard-bartle/README.md)
 
 **Pie menus and window systems**
 
