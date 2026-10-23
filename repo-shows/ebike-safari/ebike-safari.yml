@@ -219,7 +219,8 @@ steering-pie-ride-game:
     what: "VoyStick — pitch=Y, vowel=X homomorphic vocal joystick; primary bike nav for linked card overlay"
     primary_use: "Hop down pie arcs and between POIs/cards — MediaGraph-style cannon flick, hands on bars"
     homomorphic: "Computer synthesizes same gesture — sing along, harmonic blend confirms"
-    don_verdict: "Really fun and smooth — best gestural UI I've ever done"
+    status: designed
+    model_verdict: "MediaGraph's flick navigation, per Don: Really fun and smooth — best gestural UI I've ever done"
     pie_navigation_lineage:
       zeroth: "../../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md — REPL-as-parser, hidden graph"
       first: "../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md — rooms kiss, 1995 WWDC"

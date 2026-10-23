@@ -306,8 +306,8 @@ ideas:
       menus**), **iLoci**, **MediaGraph** (song+road graph with Mario-cannon flick navigation),
       **Urban Safari** cards at POIs. **eBike Safari** completes it: outdoor = wide sloppy fast
       warbles without social cost; continuous pitch+vowel trace steers **singing while biking** —
-      Voystick warbles along wedge arcs, hop POI→card, hands on bars. Don: "really fun and smooth —
-      best gestural UI I've ever done."
+      Voystick warbles along wedge arcs, hop POI→card, hands on bars (designed). Don, on MediaGraph's
+      flick navigation: "really fun and smooth — best gestural UI I've ever done."
     field_hardware: [Koga, Enviolo, Bosch, any camera]
     voystick: crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
     ties:
@@ -361,7 +361,8 @@ ideas:
         Mario World cannon aim-and-fire. iLoci → MediaGraph → Urban Safari card graph — same navigation
         problem, now outdoors on a bike. (Interval **MediaFlow** = Lisp+QuickTime streams — parallel
         hypermedia thread, not pie flick.)
-      don_verdict: "Really fun and smooth — best gestural UI I've ever done"
+      model_verdict: "MediaGraph's flick navigation, per Don: Really fun and smooth — best gestural UI I've ever done"
+      status: designed
     dual_channel_voice:
       natural_language: |
         SpeechAnalyzer (words): "What's near me?", "Tell me about that canal", "Set destination",

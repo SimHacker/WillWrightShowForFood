@@ -147,7 +147,7 @@ Each POI = hub; wedges = nearby cards + topical links; approach opens menu. Biki
 
 **Incremental revelation:** Pedal toward POIs → LOD glance → look → examine (adventure `pickDescription` pattern). Bearing + proximity widens/narrows what loads from hidden graph. Simulator effect: imply depth; reveal on approach.
 
-**VoyStick:** pitch=Y, vowel=X homomorphic vocal joystick — hop pie arcs and between POIs/cards MediaGraph-style, hands on bars. Computer synthesizes same gesture; sing along, harmonic blend confirms. *"Really fun and smooth — best gestural UI I've ever done."*
+**VoyStick:** pitch=Y, vowel=X homomorphic vocal joystick — hop pie arcs and between POIs/cards MediaGraph-style, hands on bars. Computer synthesizes same gesture; sing along, harmonic blend confirms. VoyStick is designed, not built; its model is MediaGraph's flick navigation, which Don calls *"really fun and smooth — best gestural UI I've ever done."*
 
 **Code switching:** NL selects tools/destinations; gestural executes spatial hops. Expert path: mostly warble + occasional NL punctuation. Both streams parallel; LLM fuses intent.
 

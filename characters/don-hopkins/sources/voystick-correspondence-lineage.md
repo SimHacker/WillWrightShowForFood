@@ -141,7 +141,7 @@ hands on Koga handlebars. SpeechAnalyzer for words; parallel gesture stream for 
 
 Lineage: Logo Adventure (zeroth) → DreamScape (first) → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph → Urban Safari cards.
 
-Don (2026): *really fun and smooth — best gestural UI I've ever done.*
+Don (2026), on MediaGraph's flick navigation: *really fun and smooth — best gestural UI I've ever done.*
 
 See [urban-safari-steering-voystick-pie-network.md](urban-safari-steering-voystick-pie-network.md) ·
 [Crazy Idea Jam Voystick](../../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick).

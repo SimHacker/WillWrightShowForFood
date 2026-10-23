@@ -50,14 +50,14 @@ parallel hypermedia thread, not the flick-navigation UI.
 on **roads**; drag nodes, edit labels. Per-song **pie menu**: radius + **biome** (CA — Life, ice,
 moon surface; same merge, different compete). **Kiss-toggle roads:** drop on another → link; drop
 again → unlink. **Flick-on-song** (not empty map) travels down the road in drag direction — Mario
-World cannon; pan = left-drag elsewhere. LOD flat polygons far, 3D terrain close (~85 fps, 1–4 live).
+World cannon; pan = left-drag elsewhere. Don: *really fun and smooth — best gestural UI I've ever done.* LOD flat polygons far, 3D terrain close (~85 fps, 1–4 live).
 ([jam](../../../process/crazy-idea-jam.yml#mediagraph)).
 
 **Urban Safari** — cards at POIs; invisible graph overlay.
 
 On the bike (**eBike Safari**): continuous pitch+vowel trace steers **singing while biking** —
 Voystick warbles along wedge **arcs** to hop POI→POI, card→card; NL + gestural **code-switch**; hands
-on handlebars. Don: *really fun and smooth — best gestural UI I've ever done.*
+on handlebars. VoyStick is designed, not built.
 
 MOOLLM: [exit](https://github.com/SimHacker/moollm/blob/main/skills/exit/CARD.yml) edges + [adventure](https://github.com/SimHacker/moollm/blob/main/skills/adventure/SKILL.md) verbs + [memory-palace](https://github.com/SimHacker/moollm/blob/main/skills/memory-palace/GLANCE.yml).
 

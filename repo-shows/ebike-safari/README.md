@@ -89,7 +89,7 @@ Continuous two-player game — **never pauses:**
 
 Each POI is a **pie-menu hub**. Wedges are nearby cards and topical links. You navigate the network by **biking** — handlebar steering and pie wedges share the same Fitts steering law. Pedaling past places reveals detail: glance → look → examine (adventure LOD).
 
-**VoyStick:** homomorphic vocal joystick — pitch + vowel warble hops wedges hands-free. Best gestural UI Don ever built. [Deep dive](../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) · [MOOLLM ride-game example](https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml)
+**VoyStick:** homomorphic vocal joystick — pitch + vowel warble hops wedges hands-free (designed). [Deep dive](../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) · [MOOLLM ride-game example](https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml)
 
 ---
 
@@ -115,7 +115,7 @@ Field-tested on real safaris around Amsterdam — not aspirational spec.
 | 1995 | [DreamScape @ WWDC](https://www.youtube.com/watch?v=5NytloOy7WM) — rooms kiss-to-connect; ScriptX web objects |
 | 2008–11 | [Amsterdam Coffeeshops map/Layar](https://www.youtube.com/watch?v=nG90XG3STz8) → Bongo Bingo → iLoci → StoryMaker → Urban Safari — all seeded during TomTom; the trilogy gets Don invited to SFC |
 | 2011 | [StoryMaker demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ) — branching geo stories; [Facebook album round-trip on camera](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) |
-| 2011–14 | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) — songs on maps connected by roads; pie flick navigation |
+| 2011–14 | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) — songs on maps connected by roads; pie flick navigation, which Don calls the best gestural UI he's ever done |
 | 2026+ | **eBike Safari** — voice + camera + LLM + open FIT/map stack; git audience cards |
 
 **Pivotal moment:** Will saw iLoci + Coffeeshops + Bongo Bingo. He'd just left EA himself — "want to work together again, remotely?" Don left TomTom and joined Stupid Fun Club from Amsterdam. [The receipt](../../characters/don-hopkins/career/stupid-fun-club.yml).
