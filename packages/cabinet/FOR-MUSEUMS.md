@@ -95,7 +95,9 @@ them, and we will keep each one separate, credited, and published only as you sa
 exercised the 340 and the light pen are the rarest and the most wanted.
 
 **Photographs and recordings of your machines,** to build photorealistic models of them, in 3D
-and as 2D web pages, which are yours to use as well:
+and as 2D web pages, which are yours to use as well. The 3D models will be drawn by
+[VitaMoo](https://vitamoo.space), the open source renderer behind The Sims 1 character demo
+([PORTRAIT.md](PORTRAIT.md)):
 
 - Straight-on views of each cabinet, the console, the display, and the Teletype, from the front at
   the height of their middles, with a ruler or tape measure in the shot.

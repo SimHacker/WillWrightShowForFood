@@ -1,5 +1,30 @@
 # The portrait: a 3D cabinet with live lights, a hot tube, and hands
 
+**Try this first: [vitamoo.space](https://vitamoo.space).** It is VitaMoo, character animation from
+The Sims 1 running in the browser. It reads the original game's skeleton, mesh and animation
+formats (CMX, SKN and CFP), drives the skeletons, deforms the meshes on the GPU, and draws them
+with a WebGPU renderer. Click a Sim to select it, and drag to spin it.
+
+The renderer was written for more than characters. Its object picking already tells characters
+apart from objects, walls, floors and terrain, and the rest of the stack (display lists, a camera,
+per-object picking, GPU mesh caches) is not specific to Sims. It is open source, GPL-3.0, in
+[MicropolisCore](https://github.com/SimHacker/MicropolisCore/tree/main/packages/vitamoo), as three
+packages: vitamoo (parsers, skeletons, mesh deformation), mooshow (the WebGPU stage) and
+vitamoospace (the demo).
+
+So the portrait below is mostly an art production task rather than a programming one. The PDP-7
+cabinet, the Type 340, the ASR-33 and Heinz at the console are models and textures for a renderer
+that already runs, made from photographs and measurements of real machines, which the
+[open letter](FOR-MUSEUMS.md) asks museums for. Some of the simulation exists already: Lars
+Brinkhoff's GLSL [crt-simulation](https://github.com/larsbrinkhoff/crt-simulation) models the P7
+phosphor. The [AM radio](AM-RADIO.md) is next: a virtual transistor radio set on the cabinet that
+picks up the machine as it runs, as hackers' radios did on real PDP-7s, mixed with music made on
+purpose, as on MIT's PDP-6 with its speakers and stereo amplifier, through a speaker bit that
+Forth can play. The sections below were first sketched around Three.js; VitaMoo's renderer can
+host the same views.
+
+## What drives it
+
 A 3D view of the machine, driven by the emulator's existing outputs. It adds no emulator
 features; the emulator doesn't know it's there.
 

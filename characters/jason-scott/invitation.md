@@ -55,6 +55,11 @@ SIMH and checked against it. It runs in a web page. Today it runs:
 Every word in core maps to its source line and to the scanned page of the listing it came from,
 so you can go from the running machine to the paper and back.
 
+One more thing to play with: [vitamoo.space](https://vitamoo.space), character animation from
+The Sims 1 running in the browser, open source. The same WebGPU renderer will draw the PDP-7, the
+340, the Teletype and Heinz at the console in 3D, which makes modelling the machines mostly an
+art task ([the portrait](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PORTRAIT.md)).
+
 ## Why I think you'd find it interesting
 
 You and the Archive made click-to-play emulation normal at library scale, and the cabinet's design
