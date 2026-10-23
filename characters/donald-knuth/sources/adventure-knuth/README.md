@@ -12,6 +12,7 @@ portrayal + snail-mail invite draft: [`../../`](../../).
 | File | What |
 |------|------|
 | [`advent.w`](advent.w) · [`advent.w.gz`](advent.w.gz) | **The real gold.** Crowther/Woods Adventure Version 1.0 recast in CWEB by Donald E. Knuth (with Don Woods). Downloaded from [Knuth Programs — ADVENT](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent) (source note: version of **05 June 2026**). |
+| [`advent-2022-01-21.w`](advent-2022-01-21.w) · [`advent-2022-01-21.w.gz`](advent-2022-01-21.w.gz) | The earlier version of 21 January 2022, unmodified, from the [Wayback Machine's April 2025 capture](https://web.archive.org/web/20250412223932/https://www-cs-faculty.stanford.edu/~knuth/programs/advent.w.gz). The current `advent.w` above is newer: it has `int main()`, a `>=` bounds check on the remarks table, `&&` for `&` in the pirate's treasure test, and two small wording changes. |
 | [`adventure.pdf`](adventure.pdf) | What [literateprogramming.com/adventure.pdf](http://literateprogramming.com/adventure.pdf) currently serves — the WillAdams HN pointer. **Only two PDF pages** (≈434 KB); treat as a site artifact / entry card, not the full woven book. For the full program, read `advent.w` (or weave it with CWEB + TeX). |
 | [`ANALYSIS.md`](ANALYSIS.md) | MOOLLM / Will Wright Show For Food perspective — what this is, what it means to the mission |
 | [`CREAM.md`](CREAM.md) | Distilled cream: schemas, algorithms, show hooks |

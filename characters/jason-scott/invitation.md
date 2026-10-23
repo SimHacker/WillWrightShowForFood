@@ -137,7 +137,8 @@ lamp: while it burns you are hunting the wumpus, and when it runs out the grue's
 same rooms ([Mixing Up Adventures](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/mixing-up-adventures/README.md)).
 
 Donald Knuth recast Crowther and Woods's Adventure as a literate program,
-[`advent.w`](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent), and that is the
+[`advent.w`](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent)
+([a copy here](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/sources/adventure-knuth)), and that is the
 care I think Zork's source deserves too. Snorax's
 [`wumpus.w.md`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax/wumpus.w.md) is a first try at the same treatment for Wumpus.
 
@@ -204,7 +205,7 @@ are up to.
 - [The troll flag](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md) ·
   [Two-Toll the troll](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll) · [Snorax the Wumpus](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax) · [the grue](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue) ·
   [Mixing Up Adventures](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/mixing-up-adventures/README.md)
-- [Knuth's `advent.w`](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent) ·
+- [Knuth's `advent.w`](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent) ([copy](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/sources/adventure-knuth)) ·
   [`wumpus.w.md`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax/wumpus.w.md) ·
   [Donald Knuth](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/donald-knuth/README.md)
 

@@ -14,6 +14,17 @@ artifacts:
     note: "Upstream version note on Knuth page: 05 June 2026; published as Chapter 27 (Knuth Programs blurb)"
     copyright: "1998 Donald R. Woods and Donald E. Knuth — study copy; do not modify/redistribute as original"
 
+  - id: knuth-advent-w-2022
+    kind: source
+    title: "ADVENT, version of 21 January 2022 (earlier upstream)"
+    file: advent-2022-01-21.w
+    archive: advent-2022-01-21.w.gz
+    url: https://web.archive.org/web/20250412223932/https://www-cs-faculty.stanford.edu/~knuth/programs/advent.w.gz
+    index_capture: https://web.archive.org/web/20250309110012/https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent
+    md5: de0b93094687089b1431412384caaa39
+    note: "gzip mtime 2022-01-22. Differs from advent.w (md5 72733757ca4b166362df2e0f02e1de85) in 5 places; advent.w is the newer upstream."
+    copyright: "1998 Donald R. Woods and Donald E. Knuth — unmodified study copy"
+
   - id: literateprogramming-adventure-pdf
     kind: pdf
     title: "literateprogramming.com adventure.pdf (site artifact)"
