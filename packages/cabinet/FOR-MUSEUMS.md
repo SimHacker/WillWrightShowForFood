@@ -41,6 +41,8 @@ extensions in [DESIGN.md](DESIGN.md), and stock software never touches them:
   are the Ultimate Machine's hand. Show the camera your hand and the box switches itself on, its arm
   carries your hand out to the switch, and you switch it off with a fingertip.
   [Try the live demo](https://hyperties.org/cabinet/ultimate-hand/) with your webcam.
+  [ultimate-hand.fs](tapes/pdp7forth/ultimate-hand.fs) is the top-level Forth file that ties it
+  together: the Ultimate Machine, the DataHand, a 3D turtle and the Type 340.
 
 Next on the list ([ROADMAP.md](ROADMAP.md)): HAND TURTLE, turtle graphics steered by hand
 gestures, and then Spacewar flown by hand. After that, a CAM-6 cellular automata device.

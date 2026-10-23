@@ -51,6 +51,8 @@ SIMH and checked against it. It runs in a web page. Today it runs:
   Ultimate Machine ([live](https://hyperties.org/cabinet/ultimate/)), and a DataHand that reports
   your webcam hand to the PDP-7. In ULTIMATE HAND, written in Forth, you are the Ultimate Machine's
   hand: [try the live demo](https://hyperties.org/cabinet/ultimate-hand/) with your webcam.
+  [ultimate-hand.fs](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/tapes/pdp7forth/ultimate-hand.fs) is the top-level Forth file that ties it together: the Ultimate
+  Machine, the DataHand, a 3D turtle and the Type 340.
 
 [Everything in the cabinet](https://hyperties.org/cabinet/) ·
 [source](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet)
