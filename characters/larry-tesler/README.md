@@ -1,9 +1,9 @@
 # Larry Tesler
 
-🕯️ Memorial room — modeless editing, cut/copy/paste, 1979 Smalltalk demo to Apple.
+🕯️ Memorial room for Larry Tesler: modeless editing, cut/copy/paste, the 1979 Smalltalk demo to Apple.
 
-- [`CHARACTER.yml`](CHARACTER.yml) — girder
-- [`memorial.md`](memorial.md) — tribute
-- [`from-alan-kay.yml`](from-alan-kay.yml) — Yoot / Kay apparatus
+- [`CHARACTER.yml`](CHARACTER.yml): memorial record (dates, field, sources)
+- [`memorial.md`](memorial.md): tribute
+- [`from-alan-kay.yml`](from-alan-kay.yml): what Alan Kay and the Yoot interview materials say about him, from public sources
 
 See also: [Alan Kay](../alan-kay/) · [Yoot People.md map](../../process/yoot-people-wwsff-map.yml)

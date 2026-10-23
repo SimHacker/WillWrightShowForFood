@@ -4,7 +4,7 @@ Invitation portrayal — **not** Pattie Maes. [Standards](../../schemas/portraya
 
 **Field:** MIT Media Lab — software agents; Fluid Interfaces; human–AI interaction
 
-**Start here:** [**Your slide 13**](agent-ui-solutions.md). Her January 1997 "Agent UI solutions"
+**Start here:** [Your slide 13](agent-ui-solutions.md). Her January 1997 "Agent UI solutions"
 slide, which she showed again in a talk this week, read against the interface-to-agency argument
 and the debate record.
 
@@ -34,9 +34,9 @@ field's standard citation for a dichotomy, though it ends with the two of them a
 
 Her own list of agent UI requirements from that debate (make the user model available, continuous
 feedback, variable autonomy that the user decides, user programming of the agent, the language of
-the application) is the program of [interface to agency](https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md),
-and its "user programming" bullet is programming by demonstration, the synthesis the debate never
-named. Her lab neighbours in this repo: [Henry Lieberman](../henry-lieberman/README.md) (cited by
+the application) matches the program of [interface to agency](https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md),
+and this repo reads its "user programming" bullet as programming by demonstration, a synthesis the
+debate asked for without naming. Her lab neighbours in this repo: [Henry Lieberman](../henry-lieberman/README.md) (cited by
 her from the IUI 97 stage), [Marvin Minsky](../marvin-minsky/README.md), [Tod Machover](../tod-machover/README.md),
 and [Cyrus Shaoul](../cyrus-shaoul/README.md), who was at her talk.
 

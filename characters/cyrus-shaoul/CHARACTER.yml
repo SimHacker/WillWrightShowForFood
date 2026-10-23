@@ -128,3 +128,14 @@ see_also:
   - { path: ../steve-kommrusch/, why: "Leela Sr AI Scientist; grid-world paper lead author" }
   - { path: ../gary-drescher/, why: "Leela adviser — schema learning lineage Cyrus carries to customers" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }
+
+tonight_2026_10:
+  what: |
+    At Pattie Maes's October 2026 talk; photographed her Jan '97 "Agent UI solutions" slide,
+    relayed her closing point that most AI tools today don't take the human into account, and
+    connected Don with Pattie and Henry Lieberman, who was at the same event.
+  led_to:
+    - ../pattie-maes/invitation.md
+    - ../pattie-maes/agent-ui-solutions.md
+    - ../henry-lieberman/invitation.md
+    - https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md

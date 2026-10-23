@@ -4,11 +4,11 @@ Invitation portrayal — **not** DJ Kurlander. [Standards](../../schemas/portray
 
 *Sniff:* [`GLANCE.md`](GLANCE.md) · **Invite:** [`invitation.md`](invitation.md) · **Hooks:** [`ideas.md`](ideas.md)
 
-**David Joshua "DJ" Kurlander** — conceived **Comic Chat** at Microsoft Research (1995), shipped it
+David Joshua "DJ" Kurlander conceived Comic Chat at Microsoft Research (1995), shipped it
 with IE3 / Windows 98 (24 languages), published the SIGGRAPH '96 paper with Tim Skelly and David
 Salesin, and "reverse-engineered Jim Woodring" into an expert system for poses, balloons, and
-panels. Later: Mobile Internet Toolkit; GM of Microsoft Surface incubation. Retired; Seattle;
-[kurlander.net](https://kurlander.net/DJ/).
+panels. He later worked on the Mobile Internet Toolkit and was GM of Microsoft Surface incubation.
+He is retired and lives in Seattle. [kurlander.net](https://kurlander.net/DJ/).
 
 **Will Wright is in** — signed on for the
 [premiere](../../repo-shows/will-wright-premiere/README.md) and more.
@@ -19,18 +19,18 @@ panels. Later: Mobile Internet Toolkit; GM of Microsoft Surface incubation. Reti
 
 Comic Chat is open source ([microsoft/comic-chat](https://github.com/microsoft/comic-chat),
 16 Jul 2026). Robert Standefer made the release happen with DJ's support; Scott Hanselman
-co-announced. The Repo Show asks: **what do we do with the source?** — and answers part of it
-on air: a **live Comic Chat** with the creator and the open-source agents in the same IRC room,
-emotion wheels spinning, panels landing in the show tree.
+co-announced it. The proposed show looks at what can be done with the released source, and
+part of the answer is a live Comic Chat on air, with DJ and the open-source agents in the same
+IRC room, using the emotion wheel, and with the generated panels saved to the show tree.
 
-DJ's own site still says you have a moral obligation to keep the characters extant. We're taking
-that seriously.
+DJ's site says users have a moral obligation to keep the characters extant. This show is one
+way to do that.
 
 Show seed: [`repo-shows/comic-chat-open-source/`](../../repo-shows/comic-chat-open-source/) ·
 Live plan: [`live-comic-chat.md`](../../repo-shows/comic-chat-open-source/live-comic-chat.md)
 
-Also in-repo: CS547 Winograd talk **"Comic Chat: Research and Productization War Stories"**
-(1998-04-03) — [`../terry-winograd/media/cs547-archive.yml`](../terry-winograd/media/cs547-archive.yml).
+Also in this repo: DJ's CS547 talk in Terry Winograd's seminar, "Comic Chat: Research and Productization War Stories"
+(1998-04-03), listed in [`../terry-winograd/media/cs547-archive.yml`](../terry-winograd/media/cs547-archive.yml).
 
 ---
 

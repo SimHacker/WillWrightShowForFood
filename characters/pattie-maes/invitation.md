@@ -16,28 +16,28 @@ format: remote_or_in_person
 
 Pattie —
 
-Cyrus Shaoul sent me your "Agent UI solutions" slide from your talk this week. It's the best summary
-I've seen of what I've been writing about, so I wrote something just for you:
+Cyrus Shaoul sent me your "Agent UI solutions" slide from your talk this week. It covers much of
+what I've been writing about, so I wrote a short piece on it for you:
 
 ### → [Your slide 13](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/pattie-maes/agent-ui-solutions.md)
 
 It reads your eight bullets against an *interface to agency*: agents and people share the same
 visible controls, no capability is reachable only by asking the agent, and programming by
-demonstration runs both ways. Your "allow user programming of the agent" bullet is the synthesis
-the 1997 debate never named, and Henry Lieberman, whom you cited from the stage, co-edited the book
-on it. He's at the same event this week, and I've sent him a note too.
+demonstration runs both ways. I read your "allow user programming of the agent" bullet as
+programming by demonstration, which I think is the synthesis the 1997 debate asked for without
+naming it. Henry Lieberman, whom you cited from the stage, co-edited a book on it. He's at the
+same event this week, and I'm writing to him too.
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 I'd love to talk with you about it, on a Repo Show (a talk show whose stage is a public GitHub repo)
 or just over email or a call. Possible threads, your pick:
 
-1. **Your eight bullets, 1997 → 2026.** Which ones today's AI tools fail, and what it would take.
-2. **The synthesis nobody named.** Programming by demonstration, with Henry and the rest of the
-   *Watch What I Do* crowd.
-3. **The debate, as it actually went.** It ended in agreement; the field kept the dichotomy.
+1. Your eight bullets, 1997 to 2026: which ones today's AI tools miss, and what it would take.
+2. Programming by demonstration, with Henry and others from *Watch What I Do*.
+3. The debate record: it ended in agreement, though the dichotomy is what most people cite.
 
-**Format:** remote is fine; in person if we overlap. Zero homework.
+Remote is fine, or in person if we're in the same place. No preparation needed.
 
 Would you be up for a conversation?
 
@@ -67,7 +67,7 @@ Would you be up for a conversation?
 
 - [The 1997 agents debate: what was argued, who made it possible, and the two answers in reach](https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md) — from the *interactions* transcript
 - [Ben Shneiderman](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md)
-- [Ted Selker](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ted-selker/README.md) — COACH, the other synthesis
+- [Ted Selker](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ted-selker/README.md) — COACH
 
 **Programming by demonstration**
 
