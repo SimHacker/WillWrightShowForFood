@@ -36,7 +36,7 @@ extensions in [DESIGN.md](DESIGN.md), and stock software never touches them:
 - **A DataHand** (device 57, [datahand.ts](src/plugins/datahand.ts)), after VPL's DataGlove: a
   webcam and a hand tracker in the browser report your hand as a palm frame and twenty bones. Only
   the numbers reach the PDP-7, never the video. [datahand.fs](tapes/pdp7forth/datahand.fs) draws
-  the hand with a 3D turtle ([HAND-TRACKING.md](HAND-TRACKING.md)).
+  the hand with a 3D turtle ([HAND-TRACKING.md](HAND-TRACKING.md)). [Live](https://hyperties.org/cabinet/hand/).
 - **ULTIMATE HAND**, written in Forth ([ultimate-hand.fs](tapes/pdp7forth/ultimate-hand.fs)): you
   are the Ultimate Machine's hand. Show the camera your hand and the box switches itself on, its arm
   carries your hand out to the switch, and you switch it off with a fingertip.
