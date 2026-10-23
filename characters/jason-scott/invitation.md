@@ -56,6 +56,22 @@ SIMH and checked against it. It runs in a web page. Today it runs:
 Every word in core maps to its source line and to the scanned page of the listing it came from,
 so you can go from the running machine to the paper and back.
 
+**The quickest way in is a 23-minute tour:**
+[PIXIE and FORTH on the PDP-7 cabinet emulator, with Type 340 vector graphics](https://www.youtube.com/watch?v=lo8kdY-5i6c)
+(October 2026). It starts with Heinz in the 1969 film, then draws circuits in PIXIE in the
+emulator ([try it](https://hyperties.org/cabinet/symelec/)). The rest shows what an emulator can
+do that the original machine could not:
+
+- Single-stepping PIXIE through source maps that go from core to the source line, in two assembler
+  dialects, and on to the scanned page. That is how we found the OCR errors: by running the
+  listing.
+- Editing the Type 340's display list in core while it draws, with eight light pens instead of one.
+- DEC's 1964 light pen test, which had a page missing from the listing that we reconstructed, and
+  which found bugs in the emulator.
+- DUEL (1968). When it halts, the emulator can read the result out of core and keep score.
+- Games on the Teletype, Mitch Bradley's Forth with turtle graphics, logging in to UNIX v0 as ken,
+  and PIXIE's ring structures shown live from 18-bit core, which Forth can build too.
+
 One more thing to play with: [vitamoo.space](https://vitamoo.space), character animation from
 The Sims 1 running in the browser, open source. The same WebGPU renderer will draw the PDP-7, the
 340, the Teletype and Heinz at the console in 3D, which makes modelling the machines mostly an
@@ -117,6 +133,8 @@ are up to.
 
 **The PDP-7 and PIXIE**
 
+- [The 23-minute tour (video)](https://www.youtube.com/watch?v=lo8kdY-5i6c) ·
+  [PIXIE in the emulator](https://hyperties.org/cabinet/symelec/)
 - [David's PDP-7 story](https://blog.dshr.org/2026/07/my-introduction-to-computer-graphics.html) ·
   [PIXIE restoration](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md) ·
   [the Cambridge films](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)
