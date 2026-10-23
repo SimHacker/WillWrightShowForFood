@@ -341,23 +341,45 @@ the drum to STATE, the head carriage to HEAD and ORIGIN, the pegboard to the tab
 
 ### Minsky's Ultimate Machine
 
-Marvin Minsky's 1952 design, which Claude Shannon built at Bell Labs: a plain wooden box with one
-switch on the lid. Flip it on, the lid opens, a hand comes out, switches it off, and goes back in.
-Arthur C. Clarke called it unspeakably sinister.
+Marvin Minsky's 1952 design, which Claude Shannon built at Bell Labs: a box with one switch.
+Switch it on, the lid opens, a hand comes out, switches it off, and goes back in. Arthur C.
+Clarke called it unspeakably sinister.
 
-As a cabinet device it does exactly that and nothing else: its power switch is its only input, and
-its only output is turning its own power switch off. Its one parameter is the **power-cycle delay**,
-in cabinet cycles, which times the animation: the lid lifts and the hand reaches out; the finger
-pushes the toggle, and at that moment the device's `power` goes false; the spring-loaded arm snaps
-back and the lid drops shut. The animation follows the device state, never the reverse. Click the
-switch off yourself before the hand gets there and the hand retracts from wherever it was.
+In the cabinet it is device 56, [ultimate.ts](src/plugins/ultimate.ts): a state machine with
+eight phases, OFF, WAIT, OPEN, REACH, PRESS, RETURN, CLOSE and REST. The lid and the arm each
+move from 0 to 1000. The phase, the lid and the arm are registers a program reads (UMRP, UMRL,
+UMRA), so anything that draws the box follows the device. Each phase after OFF has its own
+length in backplane steps, loaded with UMLT; the defaults are `UM_DEFAULT_TIMING`.
 
-It's the smallest complete device the cabinet can have, so it's also the test of the power-switch
-contract below and of the scene's hands. It belongs beside the repo's
+The switch-off has two handlers:
+
+- **Hardware**, the default. When the arm reaches full travel, the finger flips the lever off,
+  holds it down through PRESS (the lever can't be switched on meanwhile), and the arm and the lid
+  go home.
+- **Software**, manual press mode, set with UMLT. The arm reaches the lever and waits there
+  without moving it. Whatever switches the lever off next, a program issuing UMOF, makes that the
+  hand's press, and PRESS, RETURN, CLOSE and REST follow as usual. ULTIMATE HAND works this way:
+  your tracked fingertip touching the switch is the press. A program can also give up with
+  UMLT's retract bit, and the arm and the lid go home from wherever they are.
+
+Switching the lever off yourself before the arm is all the way out is an abort: the hand turns
+back from where it is. Switching it on while the hand is going home turns it round. The device
+counts the hand's presses (UMRC reads them) and the aborts, and every phase change raises a flag
+that can interrupt the PDP-7 (UMSI, UMIE).
+
+Power is the lever or the mechanism away from home, as on the real box, where a limit switch
+keeps the motor running until the arm is back and the lid shut. The lever, the counters and the
+registers answer even with the power off. Through device 55 the lever can be bound to another
+switch in the cabinet, so the hand can reach out and turn off something else.
+
+[ultimate.fs](tapes/pdp7forth/ultimate.fs) draws the box on the 340 with the light pen on its
+switch: touch it to switch the machine on, or to switch it off before the hand gets there
+([live](https://hyperties.org/cabinet/ultimate/)).
+[ultimate-hand.fs](tapes/pdp7forth/ultimate-hand.fs) makes your webcam hand the machine's hand
+([live](https://hyperties.org/cabinet/ultimate-hand/)). Being the smallest complete device, it
+also tests the power-switch contract below. It belongs beside the repo's
 [Ultimate Machine bot](../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/CHARACTER.yml),
-the gong that switches off the stream. The device is
-[ultimate.ts](src/plugins/ultimate.ts); `pose()` drives this panel
-([TURING-ENGINE.md](TURING-ENGINE.md#the-ultimate-machine)).
+the gong that switches off the stream ([TURING-ENGINE.md](TURING-ENGINE.md#the-ultimate-machine)).
 
 ### Movable Feast Machine: tiles, not a cabinet
 
