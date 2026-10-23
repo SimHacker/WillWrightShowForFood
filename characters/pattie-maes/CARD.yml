@@ -1,0 +1,66 @@
+# CARD — Pattie Maes (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: pattie-maes
+  name: Pattie Maes
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+card:
+  name: Pattie Maes
+  title: Interface Agents
+  rarity: uncommon
+  signifier: 🧭
+  flavor: Make the user model available to the user.
+abilities:
+- id: LEARNING-INTERFACE-AGENT
+  name: Learning Interface Agent
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: learningInterfaceAgent
+    signature: learningInterfaceAgent(user, task) → suggestion the user can accept, correct or ignore
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show an agent that learns from watching, and says what it learned.
+  verifiable: CACM 1994, "Agents that Reduce Work and Information Overload"
+  combos_with: [henry-lieberman, allen-cypher]
+- id: AGENT-UI-SOLUTIONS
+  name: Agent UI Solutions
+  type: static
+  mana: '{W}'
+  conditions:
+  - 'agent_on_stage: true'
+  advertisement:
+    method: agentUiChecklist
+    signature: agentUiChecklist(agent) → which of the eight 1997 requirements it meets
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Audit any agent on screen against her eight requirements from Jan '97.
+  verifiable: Slide 13, Software Agents Debate deck, Jan '97 (see agent-ui-solutions.md)
+  combos_with: [ben-shneiderman]
+- id: COLLABORATIVE-FILTERING
+  name: Collaborative Filtering
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: collaborativeFilter
+    signature: collaborativeFilter(people, tastes) → recommendations from people like you
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: Tell the Firefly story — recommendations before the web had them.
+  verifiable: Firefly, co-founded 1995, acquired by Microsoft 1998
+  combos_with: []

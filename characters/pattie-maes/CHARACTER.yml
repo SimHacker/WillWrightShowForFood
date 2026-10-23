@@ -1,0 +1,75 @@
+# Pattie Maes — invitation portrayal. NOT Pattie Maes.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: pattie-maes
+  name: "Pattie Maes"
+  type: invitation
+  signifier: "🧭"
+  status: living
+  field: "MIT Media Lab — software agents; Fluid Interfaces; human–AI interaction"
+  home: characters/pattie-maes/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  first_contact: "2026-10, in person via Cyrus Shaoul after her talk; link to agent-ui-solutions.md"
+
+bio:
+  summary: |
+    Professor at the MIT Media Lab; founded the Software Agents group, now leads Fluid Interfaces.
+    PhD, Vrije Universiteit Brussel AI Lab; behaviour-based action selection with Rodney Brooks's
+    group at the MIT AI Lab. "Agents that Reduce Work and Information Overload" (CACM, 1994).
+    Co-founded Firefly (collaborative filtering), acquired by Microsoft in 1998. Debated Ben
+    Shneiderman on direct manipulation vs. interface agents at IUI 97 and CHI 97.
+  known_for:
+    - "Learning interface agents (CACM 1994)"
+    - "Software Agents group, then Fluid Interfaces group, MIT Media Lab"
+    - "Firefly — collaborative filtering, acquired by Microsoft 1998"
+    - "Behaviour networks / action selection (late 1980s)"
+    - "1997 debates with Ben Shneiderman (IUI 97, CHI 97)"
+
+the_slide:
+  what: "Slide 13, 'Agent UI solutions', from her Software Agents Debate deck, Jan '97"
+  seen: "Shown again in her talk, October 2026; photographed from the audience by Cyrus Shaoul"
+  bullets:
+    - "make user model available to user"
+    - "method of operation has to be understandable to user"
+    - "explanations should be available"
+    - "gradual approaches work best"
+    - "give continuous feedback to user about agent's state, actions & learning"
+    - "allow variable degrees of autonomy (user decides)"
+    - "allow user programming of the agent (teach/forget)"
+    - "avoid making user learn a new language; use language of application to communicate between agent & user"
+  read_against: agent-ui-solutions.md
+
+connections:
+  ben-shneiderman: "1997 debates; he quoted her 'make the user model available to the user' back approvingly"
+  henry-lieberman: "MIT; she cited his teach-by-demonstration work from the IUI 97 stage, with him in the audience"
+  ted-selker: "COACH (IBM Almaden), the other synthesis in reach in 1997"
+  terry-winograd: "CS547 guest, 1994-01-14 — Learning Interface Agents"
+  cyrus-shaoul: "At her October 2026 talk; relayed the slide to Don"
+  marvin-minsky: "MIT Media Lab colleague"
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Pattie_Maes"
+  web:
+    - { title: "MIT Media Lab — Pattie Maes", url: "https://www.media.mit.edu/people/pattie/overview/" }
+    - { title: "Fluid Interfaces group", url: "https://www.media.mit.edu/groups/fluid-interfaces/overview/" }
+  papers:
+    - { title: "Agents that Reduce Work and Information Overload", venue: "CACM 37(7), 1994", url: "https://doi.org/10.1145/176789.176792" }
+    - { title: "Direct Manipulation vs. Interface Agents (with Ben Shneiderman)", venue: "interactions 4(6), 1997", url: "https://doi.org/10.1145/267505.267514" }
+  talks:
+    - { title: "Learning Interface Agents", venue: "Stanford CS547, 1994-01-14", archive: ../terry-winograd/media/cs547-ARCHIVE.md }
+
+see_also:
+  - { path: agent-ui-solutions.md, why: "Written for her: her 1997 slide against interface to agency" }
+  - { path: ../ben-shneiderman/agents-debate-1997.md, why: "The debate, from the transcript" }
+  - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
