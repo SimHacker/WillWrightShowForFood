@@ -13,61 +13,23 @@ machine_index: history/interval-research.yml
 | | |
 |---|---|
 | **Era** | Interval Research (Camelot) — parallel with Bounce, [IFC vs Bongo](ifc-vs-bongo-comparison.md), [Pluggers](https://donhopkins.com/home/interval/pluggers) |
-| **Implementation** | Don's **Mac Common Lisp + QuickTime** MediaFlow (separate from Bounce extensions) |
+| **Status** | 1996 design essay. Don's MediaFlow prototype ran in Mac Common Lisp + QuickTime, separate from his Bounce extensions; it never shipped as a product. Notes marked 2026 are later commentary. |
 | **Original** | [donhopkins.com/home/interval/mediaflow-design.html](https://donhopkins.com/home/interval/mediaflow-design.html) |
 | **Machine index** | [`history/interval-research.yml`](history/interval-research.yml) |
 | **Topics** | mediaflow · visual programming · dataflow · streams · Bongo · ScriptX · Snap! · MOOLLM |
 
 ---
 
-## Preface — reading design as a journey
+## How this page is organized
 
-One thing I love to do: **read and study expertly written code and design writing**, trace its structure, and **write about the journey of interpretation** — what it meant then, what it connects to now, where the bones show through.
-
-This Interval essay is in that tradition. Not a manual — a **design notebook** written while MediaFlow and Bounce were both in flight. Same impulse as working through a beautiful Lisp (ScriptX, PostScript interpreters, later MOOLLM skills): follow the author's choices, name the tradeoffs, map the unfinished edges. The [Modern echo — Snap!](#modern-echo--snap-written-before-it-existed) and [Modern echo — MOOLLM](#modern-echo--moollm-written-before-it-existed) sections at the end are part of that reading — 1996 primary text, 2026 footnotes.
-
-**Navigate this repo:** [Interval overview](interval-research-pluggers-and-mediaflow.md) · [IFC vs Bongo](ifc-vs-bongo-comparison.md) (Bongo persistence deep dive) · [Tom Ngo ECG](tom-ngo-embedded-constraint-graphics-at-interval.md) · [Kaleida ScriptX](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) · [Dan Ingalls Fabrik](../dan-ingalls/ideas.md) · [Snap!](../jens-monig/README.md) · [YAML Jazz trail](../../process/trails/yaml-jazz-collaboration-stack.md) · [`import-self-from-self.md`](import-self-from-self.md)
-
----
-
-## Introduction
-
-> *So far, MediaFlow has many requirements, but little overall design. We still need to decide what kind of language it's going to be, or if it's going to be a language at all.*
-
-**Context (2026):** Marc Davis's hypermedia / stream-dataflow thread at Interval. Don implemented MediaFlow in **Mac Common Lisp + QuickTime** while separately extending **Bounce / Body Electric** on Mac (live TV compositor, caption-driven puppets, COM on wires) — [two parallel projects](interval-research-pluggers-and-mediaflow.md), not one port of the other.
-
-**Written before Snap!** — but speaks to it. Snap! got so much right: first-class lists and procedures (enough for the **Y combinator**), **Build Your Own Blocks**, live editing without mistaking MacDraw for programming. [Brian Harvey](../brian-harvey/README.md) + [Jens Mönig](../jens-monig/README.md) resolved many tensions here via Logo/constructionism, not Interval's COM soup.
-
-**Written before MOOLLM** — but the tree namespace + path-to-every-element (like **Self**) paragraph is on the nose: **K-lines**, directories as rooms, Self-ish OOP over the filesystem. See [§ Keyboard-first editing](#keyboard-first-editing) callout and [Modern echo — MOOLLM](#modern-echo--moollm-written-before-it-existed).
-
-*Below: the 1996 essay, inlined. Section-end notes link forward; original voice preserved.*
-
----
-
-## Urban Safari 2026 echo — pie flick navigation on a bike
-
-**2026 harvest:** The geolocated **linked card overlay** inherits a long lineage. **MediaFlow** (Interval)
-is Mac Common Lisp + QuickTime hypermedia streams — **not pie menus**. Pie flick navigation comes from
-**MediaGraph** at SFC onward.
-
-```
-Logo Adventure (zeroth)  Terrapin C64 — REPL-as-parser; hidden graph; GO between rooms
-DreamScape (first)       1995 WWDC — rooms kiss; link globally, interact locally
-MediaFlow                Interval — Mac Common Lisp + QuickTime streams (no pie menus)
-iLoci                    pie-menu network — rooms kiss to connect
-MediaGraph               SFC Unity Jul 2015 — per-song pies; kiss roads; flick-on-song; CA biomes; LOD terrain
-Urban Safari             cards at POIs — invisible graph overlay
-eBike Safari       Outdoor = wide sloppy fast warbles, no social cost; pitch+vowel trace steers singing while biking
-```
-
-On a bike you cannot pinch-zoom a map — you **sing along wedge arcs** (Voystick) to hop between POIs
-and cards, hands on handlebars.
-
-Don (2026): *really fun and smooth — best gestural UI I've ever done.*
-
-→ [Urban Safari steering / Voystick](../../sources/urban-safari-steering-voystick-pie-network.md) ·
-[Crazy Idea Jam — Voystick](../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick) ·
-[eBike Safari](../../repo-shows/ebike-safari/README.md)
+- **The 1996 essay** (Introduction through [Tiny languages and Pluggers](#tiny-languages-and-pluggers)),
+  inlined as written. It is a design notebook: questions and proposals for MediaFlow, most of
+  which were never built as described.
+- **2026 notes**, marked as such where they appear inside the essay.
+- **Later echoes**: [Snap!](#modern-echo--snap-written-before-it-existed) and
+  [MOOLLM](#modern-echo--moollm-written-before-it-existed), built since then, read against the essay.
+- **[Navigation lineage](#navigation-lineage-logo-adventure-to-ebike-safari)**: related projects
+  from Logo Adventure to eBike Safari, each marked as history, built or designed.
 
 ---
 
@@ -75,7 +37,6 @@ Don (2026): *really fun and smooth — best gestural UI I've ever done.*
 
 - [Preface — reading design as a journey](#preface--reading-design-as-a-journey)
 - [Introduction](#introduction)
-
 1. [What kind of language?](#what-kind-of-language)
 2. [Requirements vs generality](#requirements-vs-generality)
 3. [Data flow and state](#data-flow-and-state)
@@ -93,6 +54,29 @@ Don (2026): *really fun and smooth — best gestural UI I've ever done.*
 15. [Tiny languages and Pluggers](#tiny-languages-and-pluggers)
 16. [Modern echo — Snap!](#modern-echo--snap-written-before-it-existed)
 17. [Modern echo — MOOLLM](#modern-echo--moollm-written-before-it-existed)
+18. [Navigation lineage: Logo Adventure to eBike Safari](#navigation-lineage-logo-adventure-to-ebike-safari)
+
+---
+
+## Preface — reading design as a journey
+
+One thing I love to do: **read and study expertly written code and design writing**, trace its structure, and **write about the journey of interpretation** — what it meant then, what it connects to now, where the bones show through.
+
+This Interval essay is in that tradition. Not a manual — a **design notebook** written while MediaFlow and Bounce were both in flight. Same impulse as working through a beautiful Lisp (ScriptX, PostScript interpreters, later MOOLLM skills): follow the author's choices, name the tradeoffs, map the unfinished edges.
+
+**Navigate this repo:** [Interval overview](interval-research-pluggers-and-mediaflow.md) · [IFC vs Bongo](ifc-vs-bongo-comparison.md) (Bongo persistence deep dive) · [Tom Ngo ECG](tom-ngo-embedded-constraint-graphics-at-interval.md) · [Kaleida ScriptX](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) · [Dan Ingalls Fabrik](../dan-ingalls/ideas.md) · [Snap!](../jens-monig/README.md) · [YAML Jazz trail](../../process/trails/yaml-jazz-collaboration-stack.md) · [`import-self-from-self.md`](import-self-from-self.md)
+
+---
+
+## Introduction
+
+> *So far, MediaFlow has many requirements, but little overall design. We still need to decide what kind of language it's going to be, or if it's going to be a language at all.*
+
+**2026 note:** Marc Davis's hypermedia / stream-dataflow thread at Interval. Don implemented MediaFlow in **Mac Common Lisp + QuickTime** while separately extending **Bounce / Body Electric** on Mac (live TV compositor, caption-driven puppets, COM on wires) — [two parallel projects](interval-research-pluggers-and-mediaflow.md), not one port of the other.
+
+**2026 note:** the essay predates Snap! and MOOLLM, and speaks to both; see
+[Modern echo — Snap!](#modern-echo--snap-written-before-it-existed) and
+[Modern echo — MOOLLM](#modern-echo--moollm-written-before-it-existed).
 
 ---
 
@@ -472,6 +456,30 @@ The **Keyboard-first editing** namespace paragraph is the MOOLLM constitution in
 Written in 1996 for a visual dataflow language that never shipped as one product — but the **addressing model** is what MOOLLM runs on today.
 
 → [`import-self-from-self.md`](import-self-from-self.md) · [MOOLLM](https://github.com/SimHacker/moollm) · [Self × MOOLLM](../../repo-shows/david-ungar-self-moollm/README.md) · [moollm-compose trail](../../process/trails/moollm-compose.md)
+
+---
+
+## Navigation lineage: Logo Adventure to eBike Safari
+
+MediaFlow was about hypermedia streams and had no pie menus. This is the separate line of work
+that led to pie-menu navigation of linked places, and on to riding through them.
+
+| Project | When | Status | What it did |
+|---|---|---|---|
+| [Logo Adventure](logo-adventure-c64-terrapin.md) | 1980s, Terrapin Logo on the C64 | History: shipped, Don's first commercial code | The Logo REPL was the parser; GO, LOOK and TAKE between rooms of a hidden graph |
+| [DreamScape](https://www.youtube.com/watch?v=5NytloOy7WM) | 1995, WWDC | History: demonstrated | Rooms connect by kissing on an editable map: link globally, interact locally |
+| MediaFlow | 1996, Interval | History: prototype | Hypermedia streams in Mac Common Lisp + QuickTime; no pie menus |
+| [iLoci](https://www.youtube.com/watch?v=03ddG3jWF98) | 2008 | History: built | A network of pie menus whose rooms kiss to connect |
+| [Urban Safari](https://www.youtube.com/watch?v=Db8KGNoeKHE) | 2008–11 | History: built, on Layar | Cards at points of interest over an invisible graph |
+| [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) | 2011–14, Stupid Fun Club | History: built, in Unity | Songs on maps connected by roads; a pie menu on each song; flick to navigate; cellular-automaton biomes; level-of-detail terrain |
+| [eBike Safari](../../repo-shows/ebike-safari/README.md) | 2026 | Designed | The linked-card overlay, ridden: points of interest and cards along the route |
+| [VoyStick](sources/urban-safari-steering-voystick-pie-network.md) | 2026 | Designed | Steer by singing: pitch and vowel trace an arc along the pie wedges, hands on the handlebars. Outdoors, wide, sloppy, fast warbles cost nothing socially |
+
+Don on MediaGraph's flick navigation: *"really fun and smooth — best gestural UI I've ever done."*
+
+More: [Urban Safari steering and VoyStick](sources/urban-safari-steering-voystick-pie-network.md) ·
+[Crazy Idea Jam: VoyStick](../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick) ·
+[eBike Safari](../../repo-shows/ebike-safari/README.md)
 
 ---
 
