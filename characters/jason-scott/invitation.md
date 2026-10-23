@@ -47,8 +47,10 @@ SIMH and checked against it. It runs in a web page. Today it runs:
 - **PDP-7 UNIX v0** from the pdp7-unix restoration: [log in as ken](https://hyperties.org/cabinet/unix/)
 - **Mitch Bradley's PDP-7 Forth**, with turtle graphics on the 340
 - Devices no PDP-7 ever had: a Turing machine engine running Minsky's universal machine and
-  Christopher Cherniak's busy beavers, Minsky's Ultimate Machine, and a DataHand that reports your
-  webcam hand to the PDP-7. In ULTIMATE HAND, written in Forth, you are the Ultimate Machine's hand.
+  Christopher Cherniak's busy beavers ([live](https://hyperties.org/cabinet/turing/)), Minsky's
+  Ultimate Machine ([live](https://hyperties.org/cabinet/ultimate/)), and a DataHand that reports
+  your webcam hand to the PDP-7. In ULTIMATE HAND, written in Forth, you are the Ultimate Machine's
+  hand: [try the live demo](https://hyperties.org/cabinet/ultimate-hand/) with your webcam.
 
 [Everything in the cabinet](https://hyperties.org/cabinet/) ·
 [source](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet)
