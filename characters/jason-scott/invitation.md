@@ -18,7 +18,7 @@ Jason —
 
 David Rosenthal introduced us, and I owe you a reply and some thanks. In March 2025 you told me
 the Internet Archive runs MAME's Apple II emulation compiled to WASM, so that MAME can concentrate
-on accuracy. That answer started me on browser-based emulation: a lot of research, thought,
+on accuracy. That answer guided me into browser-based emulation: a lot of research, thought,
 design and code followed from it, and this page puts the results in one place.
 
 I'm Don Hopkins. At the University of Maryland I worked with Ben Shneiderman and Mark Weiser on
