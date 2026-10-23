@@ -40,6 +40,8 @@ sources:
     talk: "Smart Interfaces to Smart Machines (1993 First Annual NPUC)"
 
 see_also:
+  - { path: ../pattie-maes/, why: "She cited his teach-by-demonstration work from the IUI 97 stage; same event, Oct 2026" }
+  - { path: ../ben-shneiderman/agents-debate-1997.md, why: "The 1997 debate; PBD as the synthesis nobody named" }
   - { path: ../ken-kahn/, why: "NPUC 1993 same program; constructionist AI arc" }
   - { path: ../ted-selker/, why: "NPUC organizer; archive keeper" }
   - { path: ../../repo-shows/npuc-reunion/, why: "Group reunion show" }

@@ -25,7 +25,7 @@ It reads your eight bullets against an *interface to agency*: agents and people 
 visible controls, no capability is reachable only by asking the agent, and programming by
 demonstration runs both ways. Your "allow user programming of the agent" bullet is the synthesis
 the 1997 debate never named, and Henry Lieberman, whom you cited from the stage, co-edited the book
-on it.
+on it. He's at the same event this week, and I've sent him a note too.
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
