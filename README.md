@@ -1,292 +1,118 @@
 # Will Wright Show For Food
 
-**A Repo Show with Will Wright** — polyglot **MOOLLM microworld** + **pnpm monorepo**.
-Browse without a GitHub account. Clone to play along.
+A Repo Show is a recorded conversation whose stage is a public GitHub repository. The guest talks
+about their work, the audience follows along in the repo and asks questions as issues and pull
+requests, and afterward the ideas get built into code and reusable skills here. Will Wright, who
+designed SimCity and The Sims, accepted the invitation to the first one in July 2026. Don Hopkins
+hosts.
 
-> *"So you have a Repo to Show us?"*
-
-**Stumbled here?** Long-term ambition since Will's **1996 Stanford talk** (and before) —
-this **GitHub repo** is the **first public point of origin** (tip of the pyramid). Not a launch promise:
-curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, real monorepo).
-→ [**Vision**](process/vision-and-ambition.md) ([sections](process/vision-and-ambition.md#on-this-page)) · [yaml girder](process/vision-and-ambition.yml) · [Crazy Idea Jam](process/crazy-idea-jam.md)
+This repo holds the guests, the shows, and what gets built from them. It is public but unannounced
+while invitations go out, so please don't post links to it yet.
 
 [![The User Interface Flower Child](characters/will-wright/media/DonHopkinsSimsCreditsIcon.jpg)](repo-shows/will-wright-premiere/README.md)
 
-## The cream (start here)
+## Try it now
+
+These run in a browser with nothing to install.
 
 | What | Where |
-|------|--------|
-| **Vision** (platforms, archives, viral readers) | [**process/vision-and-ambition.md**](process/vision-and-ambition.md) · [sections](process/vision-and-ambition.md#on-this-page) · [Crazy Idea Jam](process/crazy-idea-jam.md) |
-| **🐒✋ Palmhoo** (Palm's topic directory of the whole universe) | [**palmhoo/**](palmhoo/README.md) · [Constitution](palmhoo/CONSTITUTION.md) |
-| **MOOLLM pyramid** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · [`skills/repo-show/`](skills/repo-show/README.md) |
-| **Process room** | [`process/README.md`](process/README.md) · [`process/INDEX.yml`](process/INDEX.yml) |
-| **Repo Show format** | [`process/repo-show-format.md`](process/repo-show-format.md) · [`process/repo-show-format.yml`](process/repo-show-format.yml) · [**TicketPR**](process/ticket-pr.yml) |
-| **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
-| **Setup (dev)** | [**SETUP.md**](SETUP.md) |
-| **The show pitch** | [`repo-shows/will-wright-premiere/README.md`](repo-shows/will-wright-premiere/README.md) · [**Will: browse any order**](repo-shows/will-wright-premiere/BROWSE.md) |
-| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.md`](repo-shows/will-wright-premiere/slats-reincarnation.md) · [`characters/robots/slats/`](characters/robots/slats/README.md) |
-| **1996 Winograd talk** (centerpiece) | [`characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
-| **Will — accepted invitation** | [`characters/will-wright/invitation.md`](characters/will-wright/invitation.md) · [**BROWSE any order**](repo-shows/will-wright-premiere/BROWSE.md) |
-| **Guest directories** | [`characters/`](characters/README.md) · [`characters/README.md`](characters/README.md) |
-| **Portrayal standards** | [`schemas/portrayal-standards.md`](schemas/portrayal-standards.md) |
-| **Live repo policy** | [`process/live-repo.yml`](process/live-repo.yml) |
-| **AI-offs** (spend proof + thoughtful commits) | [`process/ai-offs.yml`](process/ai-offs.yml) |
-| **Rig schema** | [`schemas/rig-schema.yml`](schemas/rig-schema.yml) · [`rigs/`](rigs/README.md) (+ **SETUP.md** per rig) |
-| **Micropolis AI Drag Race** | [`process/micropolis-ai-drag-race.md`](process/micropolis-ai-drag-race.md) · [`process/micropolis-ai-drag-race.yml`](process/micropolis-ai-drag-race.yml) |
-| **Retrocomputing Drive** | [`process/challenges/retrocomputing-drive.md`](process/challenges/retrocomputing-drive.md) · Lars + Thomas |
-| **Manual Transmission** (fewest tokens to code the spec) | [`process/manual-transmission.yml`](process/manual-transmission.yml) |
-| **Orchestration gold** (training traces + thoughtful commits) | [`process/orchestration-gold.yml`](process/orchestration-gold.yml) |
-| **Homefun grading** (Repo Show — match commit to thinking) | [`process/homefun-grading.yml`](process/homefun-grading.yml) |
-| **Model branching** (fork chat, compare trajectories) | [`process/model-branching.yml`](process/model-branching.yml) |
-| **Brain stream** (live Cursor on overlay) | [`process/brain-stream.yml`](process/brain-stream.yml) · [`apps/stream-gateway/`](apps/stream-gateway/README.md) |
-| **Slats** (judge + RoboResurrection) | [`characters/robots/slats/`](characters/robots/slats/README.md) |
-| **Code That Spec** (game show) | [`process/code-that-spec.yml`](process/code-that-spec.yml) |
-| **Don Hopkins** (host bio) | [`characters/don-hopkins/README.md`](characters/don-hopkins/README.md) |
-| **All show seeds** | [`repo-shows/README.md`](repo-shows/README.md) · [`repo-shows/INDEX.yml`](repo-shows/INDEX.yml) |
-| **MOOLLM interface** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) |
-| **Entryways** (playlists by interest) | [**ENTRYWAYS.md**](ENTRYWAYS.md) · [`process/entryways/`](process/entryways/README.md) |
-| **Trails** (sideways leaps) | [**TRAILS.md**](TRAILS.md) · [`process/trails/`](process/trails/README.md) |
-| **Hello, bot** | [**FOR-BOTS.md**](FOR-BOTS.md) · [`process/for-bots.yml`](process/for-bots.yml) |
+|------|-------|
+| A PDP-7 and Type 340 emulator running PIXIE (1969), DUEL, PDP-7 UNIX, Mitch Bradley's Forth, a Turing machine and Minsky's Ultimate Machine | [hyperties.org/cabinet](https://hyperties.org/cabinet/) · [23-minute tour](https://www.youtube.com/watch?v=lo8kdY-5i6c) · [source](packages/cabinet/README.md) |
+| ULTIMATE HAND: your webcam hand becomes the Ultimate Machine's hand, in Forth | [hyperties.org/cabinet/ultimate-hand](https://hyperties.org/cabinet/ultimate-hand/) |
+| HyperTIES, Ben Shneiderman's 1980s hypertext system, restored | [reading room](https://hyperties.org/archive/reading-room/) · [source](apps/ties/FORMAT.md) |
+| Character animation from The Sims 1 | [vitamoo.space](https://vitamoo.space) |
+| SimCity, open source as Micropolis | [micropolisweb.com](https://micropolisweb.com/) |
+| CAM6, a cellular automata machine simulator | [donhopkins.com/home/CAM6](https://donhopkins.com/home/CAM6/) |
+| eBike Safari, a first prototype | [ebike-safari.com](https://ebike-safari.com/) |
 
-## What this is
+## Start here
 
-A **Repo Show**: live conversation whose stage is *this repo*, following through to working
-code and shared technique. **Repo Show** — real people, credited ideas in public.
-**Show, don't tell.** You do **not** need AI — bring your own rig.
+| If you are | Start with |
+|------------|-----------|
+| Will Wright | [Your invitation](characters/will-wright/invitation.md), then [browse in any order](repo-shows/will-wright-premiere/BROWSE.md) |
+| Someone invited | [How we portray people](schemas/portrayal-standards.md), then your page in [characters/](characters/README.md) |
+| A Sims or SimCity player | [The premiere](repo-shows/will-wright-premiere/README.md) and [Will's 1996 Stanford talk](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
+| Watching a stream | [How a show runs](process/repo-show-format.md) |
+| A programmer | [SETUP.md](SETUP.md), then [packages/](packages/README.md) |
+| Into old machines | [The cabinet](packages/cabinet/README.md) and [the retro tour](process/entryways/retro.md) |
+| A teacher | [The educator tour](process/entryways/educator.md) |
+| An archivist or historian | [The archivist tour](process/entryways/archivist.md) and [RIGHTS.md](RIGHTS.md) |
+| Planning your own show | [The repo-show skill](skills/repo-show/README.md) and [the show network](process/showmaker-network.yml) |
+| A platform or publisher | [Vision](process/vision-and-ambition.md) |
+| A bot | [FOR-BOTS.md](FOR-BOTS.md) |
 
-**Long-term ambition** Don and Will have discussed since the **1996 Winograd microworlds
-talk** (and earlier): a living repo you enter, fork, and breed — not just a video about
-simulation. This public tree is the **apex seed** — small, inspectable, growing downward.
-No production promises; see [**process/vision-and-ambition.md**](process/vision-and-ambition.md).
+All the tours: [ENTRYWAYS.md](ENTRYWAYS.md). Paths that cut across topics: [TRAILS.md](TRAILS.md).
+A hand-built topic directory of everything: [Palmhoo](palmhoo/README.md).
 
-**Skills are the big harvest** — each show melts ideas in the cauldron and lifts
-MOOLLM skills into [`skills/`](skills/README.md) (composable with [moollm](https://github.com/SimHacker/moollm)).
-Shows are the stage; inheritable technique is the stack that grows downward.
+## What's in the repo
 
-**Will Wright — confirmed kickoff guest, topic-less.** [Accepted](characters/will-wright/invitation.md) July 2026. Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
-(Proxi ↔ Sims ↔ …).
+| Directory | What it holds | Index |
+|-----------|---------------|-------|
+| [characters/](characters/README.md) | One directory per person or character: invitations to living guests, memorials, and fictional characters | [INDEX.yml](characters/INDEX.yml) |
+| [repo-shows/](repo-shows/README.md) | One directory per show, from the premiere to proposed episodes | [INDEX.yml](repo-shows/INDEX.yml) |
+| [packages/](packages/README.md) | Code: the PDP-7 cabinet, Embedded Constraint Graphics, TinyTeco, PIXIE, Turing machines | |
+| [apps/](apps/README.md) | HyperTIES, Soul Angel, SimFaux, eBike Safari, stream tools | [CARD.yml](apps/CARD.yml) |
+| [process/](process/README.md) | How shows are made: format, invitations, game-show formats, production | [INDEX.yml](process/INDEX.yml) |
+| [skills/](skills/README.md) | MOOLLM skills harvested from shows | [INDEX.yml](skills/INDEX.yml) |
+| [schemas/](schemas/README.md) | Portrayal standards, invitation workflow, rig schema | |
+| [designs/](designs/) | Design notes that span shows | |
+| [catalogs/](catalogs/README.md) | Sims custom content any show can recommend | |
+| [bits/](bits/README.md) | Running gags, themes and rituals | |
+| [videos/](videos/README.md) | Reproducible clip extraction from source video | |
+| [rigs/](rigs/README.md) | Participants' setups, AI or not | |
+| [kernel/](kernel/README.md) | How this repo plugs into [MOOLLM](https://github.com/SimHacker/moollm) | |
 
-## How a Repo Show runs
+People and LLMs read the same files. Each directory has a README for people and, often, YAML for
+programs; [GLANCE.yml](GLANCE.yml) and [CARD.yml](CARD.yml) summarize the repo for MOOLLM.
 
-A Repo Show is announced ahead of time — usually as a **pointer on Hacker News** — and the show
-**is** this repository. Beforehand you **RTFR** (read the repo); during the show you follow along
-on **whatever rig you bring**: vim, Emacs, Cursor, a Jupyter notebook, or pencil and paper.
+## How a show runs
 
-**AI is optional, and everyone is welcome.** Follow along with your own AI coding tools if you
-like, or none at all — **humans, bots, and AIs are all welcome**, with no gatekeeping. (See the
-[participation policy](process/repo-show-format.yml); bots, start at [FOR-BOTS.md](FOR-BOTS.md).)
+A show is announced ahead of time, usually on Hacker News. Before it, you read the repo. During it,
+you follow along with whatever you like: vim, Emacs, Cursor, a notebook, or paper. AI is optional,
+and people who program by hand are as welcome as anyone.
 
-At its heart a Repo Show is a **conversation, not a contest.** The guest — the
-**Repo Man, Woman, or Anybody** — is the topic, starting from their own work. The audience joins
-as **consensual characters** who ask questions as **pull requests, issues, and comments** — and
-live in **Twitch and YouTube chat** — and **Don Philahue** surfaces the good ones live.
+The guest is the topic, starting from their own work. Questions come in as issues, pull requests,
+and live chat. To get a seat, submit a [TicketPR](process/ticket-pr.yml): a pull request adding
+your questions under `repo-shows/<show>/audience/<your-github-username>/`. It's free. An issue or a
+comment on the announcement works too.
 
-**Want to attend live?** Submit a **TicketPR** — a pun on TicketMaster where **Master ⇒ PR**
-(pull request): free, public, in git at
-[`repo-shows/<show>/audience/<your-github-username>/`](repo-shows/will-wright-premiere/audience/README.md) with
-`questions.yml` (see [`process/ticket-pr.yml`](process/ticket-pr.yml)). Easier paths: comment on
-the HN announcement or [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues).
-A TicketPR is the high-value signal — your questions visible to the guest **before** they even
-accept the invitation. Optional donations → recognition + call-on priority; never required.
+Afterward, the ideas get built into code and [skills](skills/README.md) in this repo. Some episodes
+are game shows instead, such as [Code That Spec](process/code-that-spec.yml) and the
+[Micropolis AI Drag Race](process/micropolis-ai-drag-race.md). The full definition is in
+[repo-show-format.yml](process/repo-show-format.yml).
 
-A **[brain stream](process/brain-stream.yml)** overlay can show prompts and
-thinking in real time (Twitch / YouTube / OBS) when AI is in the mix. Afterward, ideas are melted
-in the **cauldron** and harvested into reusable **skills and code**, breeding technique back into
-the repo through git branches, merges, and nested worlds.
+If you use AI, we'd like to know your setup and what it cost: tools, models, tokens. See
+[rigs/](rigs/README.md) and [ai-offs](process/ai-offs.yml).
 
-Some episodes can instead be playful game shows — **[Code That Spec](process/code-that-spec.yml)**,
-**[Manual Transmission](process/manual-transmission.yml)** (*what's the smallest model — or fewest
-tokens — you can code the spec with?*), and the **[Micropolis AI Drag Race](process/micropolis-ai-drag-race.md)** (rig costumes welcome; Slats
-judges the werk). Those are optional fun we can do — not the point.
-
-Run **your own show** on your branch; **PR to link** it into the [ShowMaker network](process/showmaker-network.yml).
-
-Full definition: [`process/repo-show-format.yml`](process/repo-show-format.yml)
-
-## Your rig — artisanal, intentional, vibe, or orchestrated
-
-**Artisanal programmers** (humans programming by hand, **no AI**) earn **extra respect
-here** — TextEdit to Emacs to VS Code and beyond; honesty appreciated. We also honor
-**intentional coders** and **conscientious coders** — deliberate craft and show-your-work
-ethics (Don coined **consciencious objectors** at a Kaleida meetup with **David Ungar**;
-proposed show: [Self × MOOLLM](repo-shows/david-ungar-self-moollm/README.md)).
-
-**Vibe coders** — declare AI-forward flow; dance-off optional. **Orchestrated rigs** —
-tell us the stack (below).
-
-**Using AI?** We want real setups — tools, models, MCP, skills, repos, MOOLLM wiring,
-contexts. Report **token usage and spending** too: we score **cost to ship** (efficiency
-vs extravagance) *and* **solution quality**, then merge winners back and abstract reusable
-parts into [`skills/`](skills/README.md) and [`packages/`](packages/README.md). **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)**
-or PR with `rig-feedback` — preferably [`rigs/<slug>.rig.yml`](rigs/README.md) per [`schemas/rig-schema.yml`](schemas/rig-schema.yml)
-(lifecycle: download → install → configure → use → replicate → mash up). Details: [`process/repo-show-format.yml`](process/repo-show-format.yml).
-
-## Polyglot monorepo
-
-Two layers, one repo — patterned after [MicropolisCore](https://github.com/SimHacker/MicropolisCore)
-(apps/packages/pnpm) and [moollm](https://github.com/SimHacker/moollm) (skills/characters/yaml-jazz):
-
-| Layer | Paths |
-|-------|--------|
-| **MOOLLM microworld** | `repo-shows/`, `characters/`, `skills/`, `kernel/`, `schemas/` |
-| **Code monorepo** | `apps/`, `packages/`, `pnpm-workspace.yaml`, `requirements.txt` |
-
-Future: many apps sharing `@wwsff/*` packages + deps from MicropolisCore. Future show: teach Will
-to build a MOOLLM adventure world — record it, ship it ([`examples/README.md`](examples/README.md)).
+## Build
 
 ```bash
 nvm use && corepack enable && pnpm install && pnpm run verify
 ```
 
-Full instructions: [**SETUP.md**](SETUP.md).
+Details: [SETUP.md](SETUP.md). The repo is a pnpm monorepo (`apps/`, `packages/`) alongside
+directories of Markdown and YAML that [MOOLLM](https://github.com/SimHacker/moollm) can read.
 
-## MOOLLM plugin world
+## Get in touch
 
-**Semantic Image Pyramid** — read top-down:
+[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues) or a pull request. Anyone
+portrayed here can correct their page or ask for it to be removed; see
+[portrayal standards](schemas/portrayal-standards.md). Who owns what: [RIGHTS.md](RIGHTS.md).
 
-| Room | Sniff | Guide |
-|------|-------|-------|
-| Root | [`GLANCE.yml`](GLANCE.yml) | [`README.md`](README.md) |
-| Repo Show skill | [`skills/repo-show/GLANCE.yml`](skills/repo-show/GLANCE.yml) | [`SKILL.md`](skills/repo-show/SKILL.md) |
-| Process | [`process/GLANCE.yml`](process/GLANCE.yml) | [`process/README.md`](process/README.md) |
-| Shows | [`repo-shows/GLANCE.yml`](repo-shows/GLANCE.yml) | [`repo-shows/README.md`](repo-shows/README.md) |
-| Characters | [`characters/README.md`](characters/README.md) | [`INDEX.yml`](characters/INDEX.yml) |
-| Rigs | [`rigs/GLANCE.yml`](rigs/GLANCE.yml) | [`rigs/README.md`](rigs/README.md) |
-| Schemas | [`schemas/GLANCE.yml`](schemas/GLANCE.yml) | [`schemas/README.md`](schemas/README.md) |
+## Related repos
 
-Open alongside [`SimHacker/moollm`](https://github.com/SimHacker/moollm) in Cursor if you want
-orchestration — composes via [`kernel/moollm-plugin.yml`](kernel/moollm-plugin.yml). Many
-participants won't; that's fine.
-
-## Wanna chat?
-
-**[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)** or submit a PR.
-
-**Want a seat at the live show?** Read [**TicketPR**](process/ticket-pr.yml) — fork, add
-`repo-shows/will-wright-premiere/audience/<your-github-username>/questions.yml`, pull request. Free;
-not TicketMaster.
-
-Platforms, archives, publishers, production shops: read [**VISION.md**](process/vision-and-ambition.md) first —
-inspect the yaml, run verify, then talk. No NDAs to understand the shape.
-
-## Status
-
-| Item | State |
-|------|--------|
-| Repo | **Public** — `SimHacker/WillWrightShowForFood` |
-| Monorepo scaffold | pnpm + Python venv + verify CI |
-| Will invitation | **Accepted** (July 2026) — confirmed kickoff guest · [`invitation.md`](characters/will-wright/invitation.md) |
-| Phone call | 2026-06-24 — pitch call; written follow-up sent; accepted July 2026 |
-
-## Sibling repos
-
-| Repo | Role |
+| Repo | What |
 |------|------|
-| [SimHacker/moollm](https://github.com/SimHacker/moollm) | Orchestrator + skills |
-| [SimHacker/MicropolisCore](https://github.com/SimHacker/MicropolisCore) | Engine + packages |
+| [SimHacker/moollm](https://github.com/SimHacker/moollm) | MOOLLM: a git repo as a world for people and LLMs |
+| [SimHacker/MicropolisCore](https://github.com/SimHacker/MicropolisCore) | Micropolis (SimCity), VitaMoo, Screen Angel |
+| [SimHacker/Hyperties](https://github.com/SimHacker/Hyperties) | The HyperTIES restoration |
+| [SimHacker/CAM6](https://github.com/SimHacker/CAM6) | The CAM6 simulator |
+| [MitchBradley/pdp7forth](https://github.com/MitchBradley/pdp7forth) | The PDP-7 Forth the cabinet runs |
 
----
+## The Crazy Idea Jam
 
-## Museum map — pick your doorway
+The strangest ideas in the project, collected in one place: a robot resurrection on Easter Sunday,
+cellular automata that melt your city if you don't pay, GitHub as a multiplayer game.
+[Read it](process/crazy-idea-jam.md).
 
-Full labels: [**ENTRYWAYS.md**](ENTRYWAYS.md) · [`process/entryways/`](process/entryways/README.md) · [**TRAILS.md**](TRAILS.md)
-
-Playlists are ordered tours. [`cross-links.yml`](process/cross-links.yml) is for sideways leaps when one topic hooks you.
-
-### Entryways
-
-**Guest — Will Wright** · [playlist](process/entryways/guest-will.md)  
-→ Start with the invite, then the 1996 talk. Topic-less show orbiting Dollhouse and data portability; Slats optional.  
-*Stops: invitation → BROWSE → 1996 source → portrait → CARD → Slats quest → Don → Vision → browse characters/*
-
-**Guest — anyone invited** · [playlist](process/entryways/guest-any.md)  
-→ Standards once, then your invitation and CARD. Portrayal ABOUT you — revocable anytime.  
-*Stops: portrayal-standards → invitation → CARD → CHARACTER → FORMAT → repo-show SKILL*
-
-**Player — Sims / SimCity fan** · [playlist](process/entryways/player.md)  
-→ 1996 talk then show pitch. No git. Will's words, not wiki recap.  
-*Stops: show README → 1996 bundle → Will portrait → CARD → Chaim → Drag Race → Slats*
-
-**Watcher — stream / VOD** · [playlist](process/entryways/watcher.md)  
-→ FORMAT first so overlay and audience segments parse. Show is the repo.  
-*Stops: FORMAT → brain stream → Philahue → Code That Spec → Drag Race → Will context → Homefun*
-
-**Bot — browsing HTTP agent** · [playlist](process/entryways/for-bots.md) · [**FOR-BOTS.md**](FOR-BOTS.md)  
-→ Hello bot — GLANCE, CARD, pick one ENTRYWAY. Wander intelligently; we like to play.  
-*Stops: FOR-BOTS → GLANCE → CARD → museum map → MOOLLM → plugin → ethics → advertisement → guest CARDs*
-
-**Hacker — clone, verify** · [playlist](process/entryways/hacker.md)  
-→ `pnpm verify` then INDEX. Yaml girders canonical; real monorepo CI.  
-*Stops: SETUP → GLANCE → CARD → process INDEX → format girder → schemas → moollm-plugin → cabinet tests → HyperTIES reader*
-
-**AI — orchestration, rigs** · [playlist](process/entryways/ai-coder.md)  
-→ Declare rig honestly. Stick shift = model change is a commit. ai-offs = voluntary spend proof.  
-*Stops: manual transmission → ai-offs → rigs → SETUP DNA → orchestration gold → branching → SKILL → host rig*
-
-**Retro — PDP-7, PDP-10, Apple ][, LispM** · [playlist](process/entryways/retro.md)  
-→ Same spec, your emulator. Forward SETUP.md so others boot without you. [PIXIE on a PDP-7](https://hyperties.org/databases/pixie/pixie-live/) and [HyperTIES](https://hyperties.org/) already run in the browser. Heinz, Lars + Thomas orbit.  
-*Stops: RETROCOMPUTING → PIXIE live → cabinet → bug journal → three drives → HyperTIES → Heinz → Lars → Thomas → example SETUP → Drag Race*
-
-**Educator — microworlds** · [playlist](process/entryways/educator.md)  
-→ Will 1996 transcript, then Papert/Kay cards. Homefun grades commits vs thinking.  
-*Stops: transcript → Papert → Brian Harvey → Kay → Homefun → vision → constructionism skill*
-
-**Archivist / historian** · [playlist](process/entryways/archivist.md)  
-→ Provenance policy first — live repo vs DonHopkins archive, then 1996 primary source chain.  
-*Stops: live-repo → sync → MANIFEST → 1996 README → transcript → PIXIE listing → HyperTIES archive → portrayal → invitation workflow → sync log → Terry Winograd → browse characters/*
-
-**Producer — your Repo Show** · [playlist](process/entryways/producer.md)  
-→ repo-show SKILL, plant a show, PR ShowMaker network. Harvest → MOOLLM skills.  
-*Stops: SKILL → FORMAT → showmaker → REPO-SHOWS → plant → live-repo → guest template*
-
-**Publisher / platform** · [playlist](process/entryways/publisher.md)  
-→ VISION + verify, then talk. Public repo as pitch deck — no NDA to see shape.  
-*Stops: Vision → README → live-repo → Will show → portrayal standards → SETUP*
-
-### Trails (sideways)
-
-Full pages: [**TRAILS.md**](TRAILS.md)
-
-| Trail | One line |
-|-------|----------|
-| [repo-show-spine](process/trails/repo-show-spine.md) | Show IS the repo — RTFR, harvest skills back |
-| [augmentation-and-hypertext](process/trails/augmentation-and-hypertext.md) 🕯️ | Engelbart + Nelson + Weiser + Raskin → Player-in-the-Middle |
-| [constructionist-lineage](process/trails/constructionist-lineage.md) | 1996 → Will kickoff → Papert/Kay → Micropolis |
-| [drag-race-and-ai-offs](process/trails/drag-race-and-ai-offs.md) | Slats judges; ai-offs scores spend |
-| [retrocomputing-drive](process/trails/retrocomputing-drive.md) | One spec — SETUP DNA is viral |
-| [retro-guests-real-wire](process/trails/retro-guests-real-wire.md) | Lars ITS + Thomas FujiNet |
-| [live-production](process/trails/live-production.md) | Brain stream + Philahue bus |
-| [moollm-compose](process/trails/moollm-compose.md) | Plugin microworld — skills from shows |
-| [rig-personas](process/trails/rig-personas.md) | Rig = drag persona lifecycle |
-| [schemas-and-ethics](process/trails/schemas-and-ethics.md) | Contracts before characters |
-| [archive-and-provenance](process/trails/archive-and-provenance.md) | Public bud vs private archive — cite primary sources |
-
-### Rooms
-
-| Room | Door | Inside |
-|------|------|--------|
-| Root | [GLANCE.yml](GLANCE.yml) · [CARD.yml](CARD.yml) | Plugin map, FIND-GUEST |
-| Shows | [repo-shows/CARD.yml](repo-shows/CARD.yml) | will-wright flagship + seeds |
-| Guests | [characters/CARD.yml](characters/CARD.yml) | Invitations + CARD each |
-| Process | [process/CARD.yml](process/CARD.yml) | Format, drag race, retro |
-| Rigs | [rigs/CARD.yml](rigs/CARD.yml) | yaml + SETUP DNA |
-| Skills | [skills/INDEX.yml](skills/INDEX.yml) | repo-show harvest |
-| Schemas | [schemas/CARD.yml](schemas/CARD.yml) | Portrayal, rigs |
-| Apps | [apps/CARD.yml](apps/CARD.yml) | stream-gateway future |
-
----
-
-## 🤯 Before you go — the Crazy Idea Jam
-
-The wackiest, most forward-thinking ideas in the whole show, in one place: a **robo-resurrection
-cult on Easter Sunday**, **character endosymbiosis** as a save format, **cellular automata that
-melt your city** if you don't pay, **"hell is full" ZombieSims**, and **GitHub as an MMORPG
-multiverse**. Some are jokes that turned out to be load-bearing. All of them are real.
-
-> *AI proposes; the **player** disposes — now let's get weird with it.*
-
-→ **[Read the Crazy Idea Jam](process/crazy-idea-jam.md)** · girder [`crazy-idea-jam.yml`](process/crazy-idea-jam.yml) · trail [stupid-fun-forward](process/trails/stupid-fun-forward.md)
-
----
-
-— Don Hopkins *(the User Interface Flower Child)* 🌀
+— Don Hopkins
