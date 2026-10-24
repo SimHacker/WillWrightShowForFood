@@ -1,0 +1,86 @@
+# Catherine Plaisant — invitation portrayal. NOT Catherine Plaisant.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: catherine-plaisant
+  name: "Catherine Plaisant"
+  type: invitation
+  signifier: "🌳"
+  status: living
+  field: >-
+    Human-computer interaction and information visualization: HyperTIES,
+    touchscreen interaction, SpaceTree, LifeLines, EventFlow, evaluation of
+    visualization; Designing the User Interface; University of Maryland HCIL
+  home: characters/catherine-plaisant/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  relationship: >-
+    HCIL colleague of Don's from 1987; co-author of the 1991 HyperTIES paper.
+    In recent correspondence with Don and Ben Shneiderman about HyperTIES
+    history, PIXIE and Roger Gregory's Xanadu draft.
+  note: "Her HCIL page (2022) says she is fully retired and not taking students or review work. Ask for nothing that is work."
+
+bio:
+  summary: |
+    Doctorat d'Ingénieur, Université Pierre et Marie Curie, Paris; earlier a
+    research associate at the Centre Mondial Informatique et Ressource Humaine
+    in Paris. At the University of Maryland's Human-Computer Interaction Lab
+    from 1987, where her first project was hypertext. Interim director, then
+    associate director of HCIL from 1997; senior research scientist at UMIACS.
+    Co-author with Ben Shneiderman of Designing the User Interface (4th to 6th
+    editions). Editor of the HCIL video reports (1991-2006). Retired in June
+    2021; Research Scientist Emerita, UMIACS.
+  known_for:
+    - "Designing the User Interface, 4th to 6th editions (2005, 2010, 2016), with Ben Shneiderman and others"
+    - "SpaceTree (InfoVis 2002, with Grosjean and Bederson); InfoVis Test of Time award, 2022"
+    - "LifeLines, EventFlow and EventAction: visualizing personal histories and event sequences"
+    - "Touchscreen toggle switches (with Wallace, 1990; CHI '92 video); high-precision touchscreens (with Sears and Shneiderman, 1990)"
+    - "Co-edited BELIV 2006, the first workshop on evaluating information visualization; co-chaired the first IEEE Visual Analytics Challenge (2006)"
+  awards:
+    - "ACM SIGCHI Academy, 2015"
+    - "INRIA International Chair, 2018"
+    - "IEEE VGTC Visualization Career Award, 2020"
+    - "ACM SIGCHI Lifetime Service Award, 2020"
+
+shared_work_with_don:
+  hyperties_paper: "Shneiderman, Plaisant, Botafogo, Hopkins, Weiland. Designing to facilitate browsing: a look back at the Hyperties work station browser. Hypermedia 3(2), 1991. HCIL-90-02. Describes 'mouse ahead display suppression' for pie menus."
+  hyperties: "The HyperTIES browser, developed by Ben Shneiderman, Bill Weiland, Catherine Plaisant and Don Hopkins; the 'road pizza' architecture diagram drawn on a Xerox Star with Ben."
+  history: "In 2022 Ben and Catherine were running an HCI history group; Ben proposed a HyperTIES history paper. Don restored HyperTIES at hyperties.org."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Catherine_Plaisant"
+  web:
+    - { title: "HCIL profile", url: "http://hcil.umd.edu/catherine-plaisant" }
+    - { title: "Retirement (UMD, 2021)", url: "https://info.umd.edu/news/umiacs-plaisant-retires-concluding-stellar-34-year-career-umd/" }
+    - { title: "IEEE Visualization Career Award (UMIACS)", url: "https://www.umiacs.umd.edu/about-us/news/plaisant-honored-ieee-visualization-career-award" }
+    - { title: "Designing the User Interface, 6th edition (UMIACS)", url: "https://www.umiacs.umd.edu/news-events/news/shneiderman-plaisant-and-elmqvist-release-new-edition-classic-hci-textbook" }
+    - { title: "HCIL technical reports", url: "https://www.cs.umd.edu/hcil/trs/index.shtml" }
+    - { title: "HyperTIES look-back paper (HCIL-90-02, early version)", url: "https://www.cs.umd.edu/hcil/trs/90-02/90-02-early.pdf" }
+    - { title: "Hypertext on Hypertext demo (1988)", url: "https://www.youtube.com/watch?v=29b4O2xxeqg" }
+  hn_by_don:
+    - { id: 29275743, date: 2021-11-19, about: "Worked with Ben and Catherine on the NeWS HyperTIES browser" }
+    - { id: 22745742, date: 2020-04-01, about: "HCIL touchscreen research: Potter, Sears, Plaisant" }
+    - { id: 34446718, date: 2023-01-19, about: "Touchscreen toggle switches" }
+    - { id: 32735234, date: 2022-09-06, about: "Treemap history page by Shneiderman and Plaisant" }
+    - { id: 38920423, date: 2024-01-09, about: "'30 Years at the University of Maryland's HCIL' (2013)" }
+
+unverified:
+  - "LifeLines date (1996?)"
+  - "Role in TimeSearcher"
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../ben-shneiderman/README.md, why: "HCIL; co-author" }
+  - { path: ../don-hopkins/hyperties-reincarnation.md, why: "HyperTIES restoration" }
+  - { path: ../richard-potter/README.md, why: "HCIL touchscreen work" }
+  - { path: ../../apps/ties/examples/hyperties/articles/catherine-plaisant.md, why: "Her HyperTIES article" }

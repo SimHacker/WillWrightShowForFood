@@ -1,0 +1,38 @@
+# CARD — Catherine Plaisant (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: catherine-plaisant
+  name: Catherine Plaisant
+  type: [invitation, guest, portrayal]
+card:
+  name: Catherine Plaisant
+  title: HCIL
+  rarity: legendary
+  signifier: "🌳"
+  flavor: Show the whole tree, open the branch you need.
+abilities:
+  - id: SPACETREE
+    name: SpaceTree
+    type: activated
+    effect: Browse a huge tree by opening only the branch in focus.
+    verifiable: "InfoVis 2002; Test of Time award 2022"
+  - id: TOGGLE
+    name: Push or Slide
+    type: activated
+    effect: Test touchscreen toggle switches before anyone shipped one.
+    verifiable: "Plaisant and Wallace, HCIL-90-08 (1990); CHI '92 video"
+  - id: LOOK-BACK
+    name: A Look Back
+    type: static
+    effect: Write down what a system taught you, with the people who built it.
+    verifiable: "Hypermedia 3(2), 1991; HCIL-90-02"
+    combos_with: [BEN-DIRECT-MANIPULATION, DON-PIE-MENU]
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../ben-shneiderman/README.md
