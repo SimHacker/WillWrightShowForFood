@@ -60,7 +60,8 @@ questions we'd like to ask, so the conversation can start whenever they're ready
 
 Any represented real person may request **correction, edit, reduction, replacement, addition, or deletion** of their portrayal at any time. We comply promptly and gracefully. Deletion is the floor, not the ceiling — the preferred outcome is that you **take the keys**: ask for direct repo access (a free GitHub account is all it takes) and edit your own room yourself. See [Getting set up](#onboarding).
 
-**How:** open a GitHub issue on [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) or contact Don Hopkins via public channels.
+**How:** open a GitHub issue on [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) or contact Don Hopkins via public channels or private email at 
+don@DonHopkins.com.
 
 **Declines:** all responses honored — accepted, delayed, too busy, later, declined, rejected, no reply. No pressure. No re-pitch without new reason. Status tracked honestly in each guest's `invitation.md`.
 
@@ -165,6 +166,26 @@ Do not repeat this standards file in every character room — link here instead.
 Handing your voice and identity to ChatGPT (or ElevenLabs, etc.) to perform **as** you — scripted, cloned, opaque. The machine replaces your authorship and timing; the audience cannot tell simulation from the real person.
 
 Examples: AI DJ Drew with voice clone hosting the show · TTS clone of a living guest without consent · passing a bot off as the real person on air.
+
+### Stand-ins the person chooses (allowed)
+
+A guest may appear through an avatar, an altered voice, or someone else reading their words, when
+it is their choice, their words, and labeled as a stand-in. That is a format, not a simulation.
+
+Examples:
+
+- **Gwern on the Dwarkesh Podcast** (November 2024). Gwern writes under a pseudonym, so the
+  interview was recorded in person, then re-enacted with Dwarkesh's friend Chris Painter reading
+  Gwern's words and an avatar in place of his face. The episode opens: "This isn't his voice. This
+  isn't his face. But these are his words." Gwern's own account says he had asked for a text
+  transcript only, and agreed to the avatar version with some doubts
+  ([episode](https://www.dwarkesh.com/p/gwern-branwen) ·
+  [Gwern's account](https://gwern.net/interview-dwarkesh)). The lesson for us: offer text, audio
+  and stand-ins up front, and let the guest pick ([Gwern's invitation](../characters/gwern/invitation.md)
+  already does).
+- **David Ungar's Apple Vision Pro Persona.** A photorealistic avatar of himself, driven live by
+  his own face and voice, which he has used on calls with Don. A person operating their own
+  likeness in real time is that person, not a simulation of them.
 
 ### Simulation (allowed when labeled and governed)
 
