@@ -183,9 +183,9 @@ Examples:
   [Gwern's account](https://gwern.net/interview-dwarkesh)). The lesson for us: offer text, audio
   and stand-ins up front, and let the guest pick ([Gwern's invitation](../characters/gwern/invitation.md)
   already does).
-- **David Ungar's Apple Vision Pro Persona.** A photorealistic avatar of himself, driven live by
-  his own face and voice, which he has used on calls with Don. A person operating their own
-  likeness in real time is that person, not a simulation of them.
+- **Live avatars.** People already take calls as an Apple Vision Pro Persona, a photorealistic
+  likeness driven by their own face and voice, or as other avatars they control. A person operating
+  their own avatar in real time is that person, not a simulation of them.
 
 ### Simulation (allowed when labeled and governed)
 
