@@ -1,0 +1,33 @@
+# CARD — James Fogarty (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: james-fogarty
+  name: James Fogarty
+  type: [invitation, guest, portrayal]
+card:
+  name: James Fogarty
+  title: Interaction Proxy
+  rarity: rare
+  signifier: "🔧"
+  flavor: Fix the app while it runs, without its source.
+abilities:
+  - id: FOGARTY-PROXIES
+    name: Interaction Proxies
+    type: activated
+    effect: Repair a mobile app's accessibility at runtime, from outside.
+    verifiable: "CHI 2017, doi:10.1145/3025453.3025846"
+    combos_with: [PREFAB]
+  - id: PREFAB-ADVISOR
+    name: Prefab
+    type: static
+    effect: Recover interface structure from pixels.
+    verifiable: "CHI 2010 Best Paper"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../morgan-dixon/CARD.yml

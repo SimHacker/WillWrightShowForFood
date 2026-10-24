@@ -1,0 +1,41 @@
+# CARD — John Walker (memorial tribute portrayal)
+# NOT the person. Memorial mode: celebrate documented work; never speak as him.
+room:
+  id: john-walker
+  name: John Walker
+  type: [memorial, portrayal]
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: memorial_skills
+card:
+  name: John Walker
+  title: Fourmilab
+  rarity: legendary
+  signifier: 🕯️
+  flavor: Write it down, publish it, and give it away.
+abilities:
+  - id: AUTODESK-FILE
+    name: The Autodesk File
+    type: static
+    effect: Keep a company's history in its own documents, and publish them.
+    verifiable: "https://www.fourmilab.ch/autofile/"
+  - id: CELLAB
+    name: CelLab
+    type: activated
+    effect: Put cellular automata on every PC, with a manual that teaches the rules.
+    verifiable: "https://www.fourmilab.ch/cellab/"
+    combos_with: [CAM-6, RUCKER-CELLAB]
+  - id: HOTBITS
+    name: HotBits
+    type: activated
+    effect: Random numbers from radioactive decay, served on the web.
+    verifiable: "https://www.fourmilab.ch/hotbits/"
+invoke_rules:
+  consent: memorial
+  simulation: false
+  note: "Memorial — celebrate documented work; do not speak as him."
+see_also:
+  - path: CHARACTER.yml
+  - path: memorial.md
+  - path: ../rudy-rucker/README.md

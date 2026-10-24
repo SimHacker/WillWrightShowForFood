@@ -1,0 +1,84 @@
+# Timothy Leary — memorial portrayal (in memoriam). NOT Timothy Leary.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: timothy-leary
+  name: "Timothy Leary"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  field: >-
+    Psychologist and writer: the interpersonal circumplex (1957), the Harvard
+    Psilocybin Project, Mind Mirror (Electronic Arts, 1985), personal
+    computing and virtual reality advocacy
+  home: characters/timothy-leary/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_yet_asked
+  document: memorial.md
+  note: "deceased (22 October 1920 – 31 May 1996) — represent + discuss"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Discuss his documented work. Do not speak as him. Biographical, not sensational, about the 1960s and the legal history."
+  who_can_discuss:
+    - { who: brenda-laurel, why: "Worked with him as a producer at Activision on a game idea; wrote 'Remembering Timothy Leary' (SF Chronicle, 1996)", consent: not_yet_asked }
+    - { who: coco-conn, why: "Her own documented stories of him", consent: not_yet_asked }
+    - { who: don-hopkins, why: "Extracted Mind Mirror's text and data from the Apple II disk; built MOOLLM's mind-mirror skill on his circumplex" }
+  could_be_invited:
+    - "Denis Berry, trustee of his archives"
+    - "Michael Horowitz, his bibliographer and archivist"
+
+bio:
+  summary: |
+    Born in Springfield, Massachusetts, in 1920. PhD in clinical psychology,
+    UC Berkeley (1950). Director of psychiatric research at the Kaiser
+    Foundation in the 1950s; his Interpersonal Diagnosis of Personality (1957)
+    laid out the interpersonal circumplex. Led the Harvard Psilocybin Project
+    (1960-63) until Harvard dismissed him. Arrested and imprisoned on drug
+    charges; his Laredo conviction was overturned by the Supreme Court in
+    Leary v. United States (1969). Escaped prison in 1970, was recaptured in
+    1972 and released in 1976. In the 1980s and 1990s promoted personal
+    computers and virtual reality; his company Futique made Mind Mirror,
+    published by Electronic Arts (1985-86). Chaos & Cyber Culture (1994). Died
+    in Beverly Hills on 31 May 1996, after making his dying public.
+
+mind_mirror:
+  publisher: "Electronic Arts; Atari 8-bit 1985, IBM PC, Apple II and Commodore 64 1986"
+  credits_on_disk: "(c) 1985, 1986, Futique, Inc. Design and script by Timothy Leary. Program and Design by Peter Van den Beemt and Bob Dietz."
+  credits_note: "Wikipedia's infobox names Marc Dawson and Pete Lyon; the disk text is the primary source."
+  basis: "The interpersonal circumplex from his 1950 dissertation and 1957 book"
+  available: "Re-released on GOG and Steam (2021)"
+
+sources:
+  wikipedia:
+    - "https://en.wikipedia.org/wiki/Timothy_Leary"
+    - "https://en.wikipedia.org/wiki/Timothy_Leary%27s_Mind_Mirror"
+  web:
+    - { title: "NYPL Timothy Leary Papers", url: "https://archives.nypl.org/mss/18400" }
+    - { title: "NYPL Digital Collections", url: "https://digitalcollections.nypl.org/collections/timothy-leary-papers" }
+    - { title: "Dissertation scan (Internet Archive)", url: "https://archive.org/details/leary/leary.300dpi/mode/2up" }
+    - { title: "Mind Mirror text, extracted by Don", url: "https://donhopkins.com/home/mind-mirror.txt" }
+    - { title: "Mind Mirror data, extracted by Don", url: "https://donhopkins.com/home/mind-mirror.json" }
+    - { title: "Leary explaining Mind Mirror (video)", url: "https://www.youtube.com/watch?v=9oabRxvjf9k" }
+    - { title: "Kill Screen, 'Radical Dreamers' (2011)", url: "https://www.killscreen.com/radical-dreamers/" }
+    - { title: "Brenda Laurel, 'Remembering Timothy Leary' (1996)", url: "https://mail.tauzero.com/Brenda_Laurel/PersonalMusings/AnElegyForTimothyLeary.html" }
+    - { title: "Computer History Museum catalog", url: "https://www.computerhistory.org/collections/catalog/102720164" }
+  hn_by_don:
+    - { id: 32614336, date: 2022-08-27, about: "Extracted all the text from the Apple II Mind Mirror disk" }
+    - { id: 37486524, date: 2023-09-12, about: "Disk credits; the dissertation the game was based on" }
+    - { id: 50150433, date: 2026-10-19, about: "MOOLLM's Mind Mirror skill" }
+  local:
+    - { path: "https://github.com/SimHacker/moollm/tree/main/skills/mind-mirror", why: "MOOLLM's mind-mirror skill: his four planes beside the five Sims traits" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: ideas.md, why: "Threads" }
+  - { path: ../brenda-laurel/README.md, why: "Worked with him at Activision; wrote his eulogy" }
+  - { path: ../coco-conn/README.md, why: "Her stories of him" }

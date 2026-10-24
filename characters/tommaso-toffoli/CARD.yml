@@ -1,0 +1,39 @@
+# CARD — Tommaso Toffoli (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: tommaso-toffoli
+  name: Tommaso Toffoli
+  type: [invitation, guest, portrayal]
+card:
+  name: Tommaso Toffoli
+  title: Information Mechanic
+  rarity: legendary
+  signifier: "🔁"
+  flavor: A world whose laws run backward can still compute anything.
+abilities:
+  - id: TOFFOLI-GATE
+    name: Toffoli Gate
+    type: static
+    effect: Three bits in, three bits out; reversible and universal.
+    verifiable: "MIT/LCS/TM-151 (1980); https://en.wikipedia.org/wiki/Toffoli_gate"
+  - id: BILLIARD-BALLS
+    name: Conservative Logic
+    type: activated
+    effect: Compute with colliding balls and mirrors, losing no information.
+    verifiable: "Fredkin and Toffoli, Int. J. Theor. Phys. 21 (1982)"
+    combos_with: [MARGOLUS-NEIGHBORHOOD]
+  - id: CAM-6
+    name: Cellular Automata Machine
+    type: activated
+    effect: 256 by 256 cells, sixty generations a second, programmed in Forth.
+    verifiable: "Cellular Automata Machines (MIT Press, 1987); https://en.wikipedia.org/wiki/CAM-6"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../norman-margolus/CARD.yml
+  - path: ../rudy-rucker/README.md

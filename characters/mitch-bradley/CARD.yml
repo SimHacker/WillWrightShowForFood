@@ -1,0 +1,38 @@
+# CARD — Mitch Bradley (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: mitch-bradley
+  name: Mitch Bradley
+  type: [invitation, guest, portrayal]
+card:
+  name: Mitch Bradley
+  title: Father of Open Firmware
+  rarity: legendary
+  signifier: "🥾"
+  flavor: "ok"
+abilities:
+  - id: OPEN-FIRMWARE
+    name: Open Firmware
+    type: static
+    effect: The boot monitor is a Forth interpreter; the cards bring their own drivers.
+    verifiable: "IEEE 1275-1994; https://github.com/MitchBradley/openfirmware"
+  - id: PIE-MENU-NAME
+    name: Name the Pie
+    type: triggered
+    effect: Suggest the name "pie menu."
+    verifiable: "Don Hopkins, HN 39217923"
+    combos_with: [DON-PIE-MENU]
+  - id: PDP7-FORTH
+    name: Forth in a Day
+    type: activated
+    effect: Write a Forth for an 18-bit machine from 1964, with a turtle on the Type 340.
+    verifiable: "https://github.com/MitchBradley/pdp7forth"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../charles-moore/CARD.yml

@@ -1,0 +1,39 @@
+# CARD — Allen Cypher (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: allen-cypher
+  name: Allen Cypher
+  type: [invitation, guest, portrayal]
+card:
+  name: Allen Cypher
+  title: Watch What I Do
+  rarity: rare
+  signifier: "🐈"
+  flavor: It turns green before it acts.
+abilities:
+  - id: ANTICIPATION
+    name: Anticipation
+    type: static
+    effect: Show the inferred next step in place, before acting; the user's real choice corrects it.
+    verifiable: "EAGER, CHI '91, doi:10.1145/108844.108850"
+    combos_with: [MAES-AGENT, BEN-DIRECT-MANIPULATION]
+  - id: WATCH-WHAT-I-DO
+    name: Watch What I Do
+    type: activated
+    effect: Gather a field into one book and keep it online for thirty years.
+    verifiable: "MIT Press, 1993; http://acypher.com/wwid/"
+  - id: GRAPHICAL-REWRITE
+    name: Graphical Rewrite Rules
+    type: activated
+    effect: Children program agents with before-and-after pictures.
+    verifiable: "KidSim, CACM 1994; Stagecast Creator"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../henry-lieberman/README.md
+  - path: ../pattie-maes/CARD.yml

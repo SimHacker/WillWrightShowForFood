@@ -1,0 +1,37 @@
+# CARD — Mark S. Miller (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: mark-miller
+  name: Mark S. Miller
+  type: [invitation, guest, portrayal]
+card:
+  name: Mark S. Miller
+  title: Object-Capability Architect
+  rarity: legendary
+  signifier: "🔑"
+  flavor: Authority travels with the reference.
+abilities:
+  - id: POLA
+    name: Least Authority
+    type: static
+    effect: Each component gets only the references it needs, and so only the authority it needs.
+    verifiable: "Robust Composition (2006); http://www.erights.org/talks/thesis/"
+  - id: PROMISE
+    name: Promise
+    type: activated
+    effect: Send to a result that doesn't exist yet. From Udanax to E to JavaScript.
+    verifiable: "http://www.erights.org/history/index.html"
+  - id: HARDEN
+    name: Harden
+    type: activated
+    effect: Freeze the shared world so confined code cannot reach past what it was given.
+    verifiable: "https://github.com/endojs/endo"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../roger-gregory/CARD.yml

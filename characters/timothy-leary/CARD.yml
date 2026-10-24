@@ -1,0 +1,35 @@
+# CARD — Timothy Leary (memorial tribute portrayal)
+# NOT the person. Memorial mode: celebrate documented work; never speak as him.
+room:
+  id: timothy-leary
+  name: Timothy Leary
+  type: [memorial, portrayal]
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: memorial_skills
+card:
+  name: Timothy Leary
+  title: Mind Mirror
+  rarity: legendary
+  signifier: 🕯️
+  flavor: Personality drawn as a circle, then made into a game.
+abilities:
+  - id: CIRCUMPLEX
+    name: Interpersonal Circumplex
+    type: static
+    effect: Place behavior on two axes, dominance and affiliation.
+    verifiable: "The Interpersonal Diagnosis of Personality (1957)"
+  - id: MIND-MIRROR
+    name: Mind Mirror
+    type: activated
+    effect: Rate yourself and others, see the shape, try the scenario.
+    verifiable: "Electronic Arts, 1985; https://donhopkins.com/home/mind-mirror.txt"
+    combos_with: [WILL-SIMS-TRAITS]
+invoke_rules:
+  consent: memorial
+  simulation: false
+  note: "Memorial — discuss documented work; never speak as him."
+see_also:
+  - path: CHARACTER.yml
+  - path: memorial.md

@@ -1,0 +1,78 @@
+# Philip K. Dick — memorial portrayal (in memoriam). NOT Philip K. Dick.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: philip-k-dick
+  name: "Philip K. Dick"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  field: >-
+    Writer: Ubik, The Three Stigmata of Palmer Eldritch, Do Androids Dream of
+    Electric Sheep?, The Man in the High Castle, VALIS; simulated worlds and
+    counterfeit people
+  home: characters/philip-k-dick/
+  aliases: ["PKD", "Philip Kindred Dick"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_yet_asked
+  document: memorial.md
+  note: "deceased (16 December 1928 – 2 March 1982) — represent + discuss"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Discuss his published work. Do not speak as him; invent no inner life. Treat his 1974 experiences and the FBI letter factually and without diagnosis."
+  who_can_discuss:
+    - { who: david-rosenthal, why: "The PKD / Lem reading group; 'Rautavaara's Case'", consent: not_yet_asked }
+    - { who: will-wright, why: "The Sims and Palmer Eldritch's Perky Pat layouts, as Don reads them", consent: accepted }
+    - { who: tod-machover, why: "Composed the opera VALIS (1987)", consent: not_yet_asked }
+    - { who: don-hopkins, why: "Reads Dick as design documents; Mark Weiser told him Ubik was an inspiration for ubiquitous computing" }
+  could_be_invited:
+    - "Jonathan Lethem, co-editor of The Exegesis of Philip K. Dick (2011)"
+    - "Isa Dick Hackett, his daughter; Electric Shepherd Productions"
+
+bio:
+  summary: |
+    Born in Chicago in 1928; lived most of his life in California. Wrote 44
+    novels and over a hundred stories, including The Man in the High Castle
+    (1962; Hugo Award), The Three Stigmata of Palmer Eldritch (1965), Do
+    Androids Dream of Electric Sheep? (1968), Ubik (1969), Flow My Tears, the
+    Policeman Said (1974), A Scanner Darkly (1977) and VALIS (1981), and the
+    stories "Autofac" (1955), "We Can Remember It for You Wholesale" (1966)
+    and "The Electric Ant" (1969). His experiences of February and March 1974
+    led to the Exegesis, published in 2011. Died in Santa Ana on 2 March 1982,
+    months before Blade Runner opened. First science fiction writer in the
+    Library of America (2007).
+
+sources:
+  wikipedia:
+    - "https://en.wikipedia.org/wiki/Philip_K._Dick"
+    - "https://en.wikipedia.org/wiki/Ubik"
+    - "https://en.wikipedia.org/wiki/Autofac"
+    - "https://en.wikipedia.org/wiki/The_Exegesis_of_Philip_K._Dick"
+    - "https://en.wikipedia.org/wiki/If_You_Find_This_World_Bad,_You_Should_See_Some_of_the_Others"
+  web:
+    - { title: "Metz speech, 1977 (audio and transcript)", url: "https://www.openculture.com/2021/08/hear-philip-k-dicks-famous-metz-speech.html" }
+    - { title: "philipdick.com (fan archive)", url: "https://philipdick.com" }
+    - { title: "The 1974 FBI letter, full text (Lem FAQ)", url: "https://english.lem.pl/faq" }
+    - { title: "Lem, 'A Visionary Among the Charlatans' (1975, archived)", url: "http://web.archive.org/web/20251125045833/https://www.depauw.edu/sfs/backissues/5/lem5art.htm" }
+  hn_by_don:
+    - { id: 17353666, date: 2018-06-20, about: "'Mark Weiser once told me that Ubik was one of his inspirations for Ubiquitous Computing'" }
+    - { id: 18373592, date: 2018-11-04, about: "Palmer Eldritch and The Sims" }
+    - { id: 43672041, date: 2025-04-13, about: "Lem and Dick: the FBI letter and Lem's praise" }
+
+notes:
+  - "Ubik and ubicomp: the documented source is Don's account of what Mark Weiser told him. Wikipedia links them, but the source it cites does not mention Ubik."
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: ideas.md, why: "Threads" }
+  - { path: ../stanislaw-lem/README.md, why: "Lem praised Dick; Dick denounced Lem" }
+  - { path: ../mark-weiser/pkd-lem-ai-sf.md, why: "The reading group" }
+  - { path: "https://github.com/SimHacker/moollm/tree/main/designs/pkd", why: "MOOLLM's PKD designs: Ubik, Perky Pat, A Scanner Darkly" }

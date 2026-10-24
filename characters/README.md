@@ -58,6 +58,14 @@ Memorial mode examples — represent and discuss **the deceased only**; never vo
 |------|-----|------------|
 | 🎟️ **Invitation** | living guests | A standing, public **invitation** to a Repo Show, plus a portrayal drawn from their documented public work. They can accept, decline, delay, ignore, edit, or delete it. |
 | 🕯️ **Memorial** | people who have passed | A tribute in **memorial mode**: we *represent and discuss* their documented work and the stories friends tell — we do **not** interview them, speak as them, or invent words. We invite living people who knew them to remember them on air. |
+| 🎭 **Fictional and performed** | robots, agents, game characters, personas | Invented characters, labeled as invented, with a named author or operator. Where one is based on a real person or work, its page says which parts are documented and which are made up. |
+
+**Most invitations here are drafts.** We prepare a page before getting in touch, and we contact
+people one at a time, so that each reply gets proper attention. A page existing here does not mean
+its subject has been contacted, has agreed to anything, or is involved. The table at the top of each
+`invitation.md` shows its status: `draft` and `not_yet_asked` mean we haven't asked yet. If you find
+your own page before hearing from us, you're welcome to read it, correct it, or ask us to take it
+down.
 
 **Ethical framing.** Everything here is sourced from documented public work — no fabricated quotes.
 It exists to honor people's documented work and, for the living, to invite a conversation — never

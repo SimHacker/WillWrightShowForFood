@@ -1,0 +1,81 @@
+# Mark S. Miller — invitation portrayal. NOT Mark S. Miller.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: mark-miller
+  name: "Mark S. Miller"
+  type: invitation
+  signifier: "🔑"
+  status: living
+  field: >-
+    Object-capability security: Xanadu, Agoric Open Systems, E, Caja, TC39
+    (ECMAScript), SES / Hardened JavaScript, Endo; Chief Scientist at Agoric
+  home: characters/mark-miller/
+  aliases: ["markm", "erights (Hacker News)"]
+  disambiguation: >-
+    Not the Mark Miller quoted in Alan Kay's Quora threads, and not the Apple
+    ATG Mark Miller.
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+
+bio:
+  summary: |
+    BS in computer science, Yale (1980). In the 1979 Xanadu summer at
+    Swarthmore he and Stuart Greene developed General Enfilade Theory, and he
+    was one of Xanadu's lead architects through the Udanax Green and Gold
+    designs, including the Autodesk years (1988-92). Wrote the Agoric Open
+    Systems papers with K. Eric Drexler (1988). Worked at Xerox PARC on
+    concurrent logic programming, co-founded Agorics, designed E with
+    colleagues from Electric Communities, led the Virus-Safe Computing
+    Initiative at HP Labs, and was a research scientist at Google (2007-17),
+    where he designed the JavaScript side of Caja and worked on ECMAScript in
+    TC39: strict mode, Proxies, Promises and the foundations of SES. PhD, Johns
+    Hopkins (2006), "Robust Composition", advised by Jonathan Shapiro. Chief
+    Scientist at Agoric; Senior Fellow of the Foresight Institute.
+  known_for:
+    - "Object-capability security and the Principle of Least Authority"
+    - "E (erights.org); promises derived from Joule's channels and the Udanax promise architecture"
+    - "Agoric Open Systems, with K. Eric Drexler (1988)"
+    - "Robust Composition (PhD thesis, 2006)"
+    - "Caja; ECMAScript strict mode, Proxies, Promises; SES / Hardened JavaScript; Endo"
+    - "Capability Myths Demolished (with Yee and Shapiro, 2003)"
+    - "Miller columns (attributed; Wikipedia marks it citation needed)"
+
+sources:
+  wikipedia:
+    - "https://en.wikipedia.org/wiki/Mark_S._Miller"
+    - "https://en.wikipedia.org/wiki/Project_Xanadu"
+    - "https://en.wikipedia.org/wiki/Caja_project"
+  web:
+    - { title: "erights.org", url: "http://www.erights.org/" }
+    - { title: "History of E", url: "http://www.erights.org/history/index.html" }
+    - { title: "Robust Composition (thesis)", url: "http://www.erights.org/talks/thesis/" }
+    - { title: "Agoric papers", url: "https://papers.agoric.com/papers/" }
+    - { title: "Endo", url: "https://github.com/endojs/endo" }
+    - { title: "Xanadu history", url: "https://www.xanadu.net/HISTORY" }
+    - { title: "Capability Myths Demolished", url: "http://srl.cs.jhu.edu/pubs/SRL2003-02.pdf" }
+    - { title: "On the design of the ECMAScript Reflection API (with Tom Van Cutsem)", url: "https://research.google/pubs/on-the-design-of-the-ecmascript-reflection-api/" }
+    - { title: "Hacker News profile", url: "https://news.ycombinator.com/user?id=erights" }
+  hn_by_don:
+    - { id: 29196875, date: 2021-11-12, about: "Quotes his 'use strict' Bugzilla comment" }
+  local:
+    - { path: "https://github.com/SimHacker/moollm/blob/main/designs/MOOAM.md", why: "MOOLLM's access model: principals, resources, grants, least privilege; advisory inside one LLM call" }
+    - { path: "https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/CAPABILITIES.yml", why: "Three layers: OS-enforced, host-enforced, declared and audited" }
+    - { path: "https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/APP-CONTROL.yml", why: "Per-application, revocable, logged grants for driving other apps" }
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../roger-gregory/README.md, why: "Xanadu, from the 1979 Swarthmore summer" }
+  - { path: ../ted-nelson/README.md, why: "Xanadu" }
+  - { path: ../john-walker/README.md, why: "Autodesk's investment in Xanadu (memorial)" }
+  - { path: ../carl-hewitt/README.md, why: "The Actor model, E's first root (memorial)" }

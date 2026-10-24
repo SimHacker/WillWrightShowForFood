@@ -1,5 +1,5 @@
 # PKD · Lem · AI · SF — companion data for pkd-lem-ai-sf.md
-# Reading-group artifactory kept with Mark's memorial (seed: he named ubicomp after Ubik).
+# Reading-group artifactory kept with Mark's memorial (seed: he told Don Ubik inspired the name ubicomp).
 # Memorial mode for Mark: represent/discuss, never speak-as. Standards: ../../schemas/portrayal-standards.md
 
 meta:
@@ -9,7 +9,7 @@ meta:
   curated_by: don-hopkins
   consent: not_yet_asked
   framing: "conversation hooks grounded in public work — no fabricated quotes, no speak-for; Mark in memorial mode"
-  seed: "Weiser named ubiquitous computing after PKD's Ubik — the one fact that opens the whole thread"
+  seed: "Weiser told Don that PKD's Ubik inspired the name ubiquitous computing — the one fact that opens the whole thread"
   concept: ../../process/artifactory.yml   # this doc is itself an artifactory — an artifact that builds artifacts
   seeded_from:
     - ../david-rosenthal/correspondence.yml   # Lem 2+2=7 + Coprophagia + MOOLLM readings
@@ -25,9 +25,11 @@ thesis: |
 # CLAIM-LEDGER — every factual claim handled before it enters the repo (no-ai-slop).
 claim_ledger:
   weiser_coined_ubicomp_after_ubik:
-    status: CONFIRMED
-    detail: "Weiser coined 'ubiquitous computing' (PARC, 1988), explicitly referencing PKD's Ubik as ironically dystopian, inverted into 'calm technology'."
-    sources: [https://en.wikipedia.org/wiki/Ubiquitous_computing, https://en.wikipedia.org/wiki/Mark_Weiser]
+    status: CONFIRMED (first-hand, from Weiser to Don)
+    detail: "Weiser coined 'ubiquitous computing' (PARC, 1988) and told Don that PKD's Ubik was one of its inspirations; he inverted its metered dystopia into 'calm technology'."
+    sources:
+      - "Don Hopkins, first-hand from Mark Weiser; on HN: 17353666 (2018), 35026870 (2023), 43680891 (2025)"
+      - "https://en.wikipedia.org/wiki/Ubiquitous_computing (links Weiser and Ubik; 'ironically dystopian' is Wikipedia's phrase, and the UbiHome page it cites does not mention Ubik)"
     primary_source: |
       Don heard it directly from Mark — Don was Weiser's student at UMD and a close friend until
       Weiser's death. Mark cited the Ubik scene where Joe Chip is trapped in his apartment, unable

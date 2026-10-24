@@ -1,0 +1,37 @@
+# CARD — Richard Potter (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: richard-potter
+  name: Richard Potter
+  type: [invitation, guest, portrayal]
+card:
+  name: Richard Potter
+  title: Triggers
+  rarity: rare
+  signifier: "🎯"
+  flavor: If it draws on the screen, it can be scripted.
+abilities:
+  - id: POTTER-TRIGGERS
+    name: Triggers
+    type: static
+    effect: Match a pattern of pixels, run a recorded action. Works on any application.
+    verifiable: "Watch What I Do, ch. 17 (1993)"
+    combos_with: [PREFAB]
+  - id: JUST-IN-TIME
+    name: Just-in-Time Programming
+    type: activated
+    effect: Turn the task you're in the middle of into a program.
+    verifiable: "Watch What I Do, ch. 27 (1993)"
+  - id: TAKE-OFF
+    name: Take-Off
+    type: activated
+    effect: Select when the finger lifts, after you've seen what you'll get.
+    verifiable: "Potter, Weldon, Shneiderman, CHI '88"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md

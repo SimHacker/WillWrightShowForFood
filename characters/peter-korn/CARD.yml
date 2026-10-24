@@ -1,0 +1,31 @@
+# CARD — Peter Korn (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: peter-korn
+  name: Peter Korn
+  type: [invitation, guest, portrayal]
+card:
+  name: Peter Korn
+  title: Accessibility Architect
+  rarity: rare
+  signifier: "🦻"
+  flavor: Every interface already has a second one, for the people the first one leaves out.
+abilities:
+  - id: ACCESS-BRIDGE
+    name: Access Bridge
+    type: static
+    effect: Expose one platform's accessibility tree to another platform's assistive technology.
+    verifiable: "Java Access Bridge for Windows; https://wiki.gnome.org/PeterKorn"
+  - id: VOICEVIEW
+    name: VoiceView
+    type: activated
+    effect: A screen reader on the living-room TV.
+    verifiable: "Amazon Devices; https://www.ces.tech/speakers/peter-korn/"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md

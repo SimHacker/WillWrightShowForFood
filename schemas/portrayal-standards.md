@@ -41,6 +41,21 @@ A public portrayal **about** a real person — for Repo Show invitations and Rep
 - **HN point scores in citations** — you can only see your own, they drift, and they're
   irrelevant. Cite HN comments by id, author, date, and substance; never karma.
 
+## Credit and rooms are separate {#credit-and-rooms}
+
+Credit follows the record. Wherever a person's work or actions are part of a story, we credit
+the specific contribution the evidence supports: no less, and no more. Being introduced to a
+project, funding it, or asking a good question is credited as exactly that, not as authorship of
+the whole.
+
+A room in `characters/` is different: it is an invitation to a conversation, and offering one is a
+choice. Someone can appear throughout the record without having a room, and having a room does not
+enlarge anyone's credit.
+
+**Unsent drafts.** Invitations are prepared before contact and sent one at a time. A draft is still
+worth keeping: it records what we learned from someone's work, what we built with it, and the
+questions we'd like to ask, so the conversation can start whenever they're ready.
+
 ## Subject rights {#subject-rights}
 
 Any represented real person may request **correction, edit, reduction, replacement, addition, or deletion** of their portrayal at any time. We comply promptly and gracefully. Deletion is the floor, not the ceiling — the preferred outcome is that you **take the keys**: ask for direct repo access (a free GitHub account is all it takes) and edit your own room yourself. See [Getting set up](#onboarding).

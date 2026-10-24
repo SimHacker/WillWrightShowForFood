@@ -1,0 +1,40 @@
+# CARD — Philip K. Dick (memorial tribute portrayal)
+# NOT the person. Memorial mode: celebrate documented work; never speak as him.
+room:
+  id: philip-k-dick
+  name: Philip K. Dick
+  type: [memorial, portrayal]
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: memorial_skills
+card:
+  name: Philip K. Dick
+  title: Ubik
+  rarity: legendary
+  signifier: 🕯️
+  flavor: The door wants five cents.
+abilities:
+  - id: UBIK
+    name: Ubik
+    type: static
+    effect: The world decays unless a product holds it together.
+    verifiable: "Ubik (1969)"
+  - id: PERKY-PAT
+    name: Perky Pat Layout
+    type: activated
+    effect: Move into a dollhouse world.
+    verifiable: "The Three Stigmata of Palmer Eldritch (1965)"
+    combos_with: [WILL-THE-SIMS]
+  - id: VOIGHT-KAMPFF
+    name: Empathy Test
+    type: activated
+    effect: Tell the android from the person, if you can.
+    verifiable: "Do Androids Dream of Electric Sheep? (1968)"
+invoke_rules:
+  consent: memorial
+  simulation: false
+  note: "Memorial — discuss published work; never speak as him."
+see_also:
+  - path: CHARACTER.yml
+  - path: memorial.md

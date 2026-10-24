@@ -22,7 +22,7 @@ about model collapse (LLMs eating their own excreted output). See
 [`../david-rosenthal/correspondence.yml`](../david-rosenthal/correspondence.yml) and
 [`../david-rosenthal/media/pdp7-hex-let-machine-win.yml`](../david-rosenthal/media/pdp7-hex-let-machine-win.yml).
 
-Then the older, deeper thread: **Mark named his whole field after *Ubik*.** That turns a
+Then the older, deeper thread: **Mark told Don that *Ubik* inspired the name of his field.** That turns a
 correspondence tangent into a reading group — **science fiction read as literal engineering specs
 for the systems we are now building.** The recurring pattern below is an **author-god present inside
 a simulated reality**, plus an **arrow of entropy** — and whether the god running the sim is *calm*
@@ -48,12 +48,13 @@ to David's *Coprophagia* discussion the day before.
 
 ### 1. Ubik *is* ubiquitous computing — on purpose
 
-Mark Weiser coined **"ubiquitous computing"** at Xerox PARC in 1988, referencing PKD's *Ubik* —
-the novel where every doorknob, toilet, and coffee-pot is intelligent, chatty, and coin-operated.
-The public record has this too: Weiser cited *Ubik* as **"ironically dystopian"** and deliberately
-**inverted** it into **calm technology** — "the most profound technologies are those that
-disappear," the computer as "a quiet, invisible servant." So the name is homage *and* rebuttal:
-same premise as PKD, opposite ethics.
+Mark Weiser coined **"ubiquitous computing"** at Xerox PARC in 1988, and told Don that PKD's
+*Ubik* was one of his inspirations for it: the novel where every doorknob, toilet, and coffee-pot
+is intelligent, chatty, and coin-operated. Wikipedia's article on ubiquitous computing also links
+Weiser to the "ironically dystopian" *Ubik* (Wikipedia's phrase), though the Weiser page it cites
+doesn't mention the novel; Mark's own word to Don is the source. He **inverted** it into **calm
+technology**: "the most profound technologies are those that disappear." So the name is homage
+*and* rebuttal: same premise as PKD, opposite ethics.
 
 **Don heard this straight from Mark.** As Weiser's student at Maryland and his friend for years
 after, Don remembers Mark talking about how much *Ubik* shaped the idea — down to the scene Mark
@@ -170,7 +171,7 @@ between a god that *preserves* (LOCKSS, Ubik-as-calm-tech) and one that *consume
 
 ## Open questions
 
-1. Weiser named ubicomp after *Ubik* and inverted it to "calm." Did the field keep the calm, or
+1. Weiser took the name ubicomp partly from *Ubik* and inverted it to "calm." Did the field keep the calm, or
    ship the dystopia? (calm tech vs the actual attention economy)
 2. **Coprophagia / model collapse** — is "lots of copies keep stuff safe" also the antidote to
    models eating their own output? Preservation as a firebreak against collapse.

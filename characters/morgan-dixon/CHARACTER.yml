@@ -1,0 +1,67 @@
+# Morgan Dixon — invitation portrayal. NOT Morgan Dixon.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: morgan-dixon
+  name: "Morgan Dixon"
+  type: invitation
+  signifier: "🧩"
+  status: living
+  field: >-
+    Pixel-based reverse engineering of graphical interfaces (Prefab); UX
+    engineering
+  home: characters/morgan-dixon/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  first_contact: "Don emailed him around 2013 after James Landay pointed Don to Prefab; no reply recorded"
+
+bio:
+  summary: |
+    PhD, University of Washington (2015), "Pixel-Based Reverse Engineering of
+    Graphical Interfaces", advised by James Fogarty; Microsoft Research PhD
+    Fellow (2011). Prefab recovered the structure of any graphical interface
+    from its pixels, many times a second, so that it could be modified,
+    enhanced or made accessible without the application's source. CHI 2010
+    Best Paper. Research Scientist at Adobe (2016-17), then UX Engineer at
+    AppSheet, acquired by Google in 2020. Plays drums in the band Spesh.
+  papers:
+    - "Prefab: Implementing Advanced Behaviors Using Pixel-Based Reverse Engineering of Interface Structure. CHI 2010, Best Paper. doi:10.1145/1753326.1753554"
+    - "Prefab: What if Every GUI Were Open-Source? CHI 2010 FLOSS HCI workshop"
+    - "Content and Hierarchy in Pixel-Based Methods for Reverse Engineering Interface Structure. CHI 2011 (with Leventhal, Fogarty)"
+    - "A General-Purpose Target-Aware Pointing Enhancement Using Pixel-Level Analysis of Graphical Interfaces. CHI 2012 (with Fogarty, Wobbrock)"
+    - "Sliding Widgets. CHI 2014 (with Laput, Fogarty)"
+    - "Prefab Layers and Prefab Annotations. UIST 2014 (with Nied, Fogarty)"
+    - "Doctoral symposium, UIST 2013. doi:10.1145/2508468.2508469"
+  patent: "US9182981, with Fogarty and Leventhal (granted 2015)"
+
+sources:
+  web:
+    - { title: "Home page", url: "https://morgandixon.net/" }
+    - { title: "Prefab project", url: "https://prefab.github.io/" }
+    - { title: "Prefab papers", url: "https://prefab.github.io/papers.html" }
+    - { title: "Prefab videos", url: "https://prefab.github.io/videos.html" }
+    - { title: "Prefab: What if We Could Modify Any Interface? (video)", url: "https://www.youtube.com/watch?v=lju6IIteg9Q" }
+    - { title: "Prefab code", url: "https://github.com/prefab/code" }
+    - { title: "Dissertation", url: "https://digital.lib.washington.edu/researchworks/items/ad7ba861-8264-4248-a0a4-a53f655d381b/full" }
+  hn_by_don:
+    - { id: 9977226, date: 2015-07-30, about: "First public aQuery post; Prefab" }
+    - { id: 12425668, date: 2016-09-04, about: "Prefab and accessibility" }
+    - { id: 22283258, date: 2020-02-09, about: "Prefab as remixing existing interfaces" }
+    - { id: 48116547, date: 2026-05-13, about: "Prefab as pre-LLM pattern recognition, more relevant with LLMs" }
+  local:
+    - { path: "https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/sources/prefab-bibliography.md", why: "Prefab bibliography, checked against Crossref" }
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../james-fogarty/README.md, why: "Advisor and co-author" }
+  - { path: ../richard-potter/README.md, why: "Triggers: pixels driving automation, 1991" }

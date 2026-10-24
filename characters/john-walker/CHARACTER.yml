@@ -1,0 +1,82 @@
+# John Walker — memorial portrayal (in memoriam). NOT John Walker.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: john-walker
+  name: "John Walker"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  field: >-
+    Programmer and author: co-founder of Autodesk (AutoCAD), Marinchip Systems,
+    The Autodesk File, CelLab with Rudy Rucker, Fourmilab
+  home: characters/john-walker/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_yet_asked
+  document: memorial.md
+  note: "deceased (16 May 1949 – 2 February 2024) — represent + discuss; invite people who knew him"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work. Do not interview, do not speak as him, invent no inner life or quotes."
+  who_can_discuss:
+    - { who: rudy-rucker, why: "Walker hired him at Autodesk after they met at the Hackers conference in 1987; co-authors of CelLab", consent: not_yet_asked }
+    - { who: roger-gregory, why: "Xanadu during Autodesk's investment, 1988-92", consent: not_yet_asked }
+    - { who: mark-miller, why: "Xanadu architect during the Autodesk years", consent: not_yet_asked }
+    - { who: ted-nelson, why: "Xanadu; Autodesk acquired a controlling interest in 1988", consent: not_yet_asked }
+    - { who: liam-proven, why: "Wrote The Register's obituary", consent: not_yet_asked }
+    - { who: don-hopkins, why: "CelLab and the Autodesk File as influences; cites them throughout the CA work" }
+  draw_on_for_shows:
+    - "ANIMAL (1974-75): a UNIVAC Twenty Questions game whose PERVADE routine copied it from directory to directory"
+    - "Marinchip Systems (1976-85): the M9900, a 16-bit TMS9900 computer for the S-100 bus"
+    - "Autodesk (1982): fourteen founders; AutoCAD; public in 1985"
+    - "The Autodesk File: a company's history told in its own internal documents, the Information Letters"
+    - "Xanadu and AMIX: Autodesk's 1988 investment and 1992 divestment"
+    - "CelLab (1989), with Rudy Rucker: cellular automata on a PC, the first Autodesk Science Series title; later WebCA in JavaScript"
+    - "Fourmilab: The Hacker's Diet, HotBits, the Analytical Engine emulator, Earth and Moon Viewer, Home Planet, the Reading List"
+
+bio:
+  summary: |
+    Born 16 May 1949 in Baltimore; studied electrical engineering at Case
+    Western Reserve. Wrote ANIMAL on the UNIVAC in 1974. Founded Marinchip
+    Systems in Mill Valley in 1976. In 1982 he and Dan Drake gathered the
+    friends who founded Autodesk, which built AutoCAD and went public in 1985;
+    he stepped down as chairman and president in 1986 and left in 1994. Hired
+    Rudy Rucker and published CelLab (1989). Moved to Switzerland in 1991 with
+    his wife Roxie Smail and published everything at fourmilab.ch. Died 2
+    February 2024 in Neuchâtel after a fall at home.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/John_Walker_(programmer)"
+  web:
+    - { title: "Family announcement (Scanalyst)", url: "https://scanalyst.fourmilab.ch/t/john-walker-1949-2024/4305" }
+    - { title: "Fourmilab", url: "https://www.fourmilab.ch/" }
+    - { title: "The Autodesk File", url: "https://www.fourmilab.ch/autofile/" }
+    - { title: "CelLab", url: "https://www.fourmilab.ch/cellab/" }
+    - { title: "Origins of CelLab", url: "https://www.fourmilab.ch/cellab/manual/chap5.html" }
+    - { title: "UNIVAC Memories and ANIMAL", url: "https://www.fourmilab.ch/documents/univac/animal.html" }
+    - { title: "Marinchip Systems", url: "https://www.fourmilab.ch/documents/marinchip/" }
+    - { title: "The Register obituary (Liam Proven)", url: "https://www.theregister.com/2024/02/13/john_walker_obit/" }
+    - { title: "Digital Engineering 24/7 (David Cohn)", url: "https://www.digitalengineering247.com/article/remembering-autodesk-co-founder-polymath-and-programming-pioneer" }
+    - { title: "Rudy Rucker, The Roaring Twenties (with note on Walker's death)", url: "https://www.rudyrucker.com/blog/2023/12/07/the-roaring-twenties/" }
+    - { title: "Hacker News thread", url: "https://news.ycombinator.com/item?id=39297185" }
+  hn_by_don:
+    - { id: 39300605, date: 2024-02-08, about: "Tribute in the HN thread: CelLab, CHAOS, Artificial Life Lab, Home Planet, WebCA" }
+    - { id: 16009568, date: 2017-12-26, about: "Walker's video on billiard-ball computing in CelLab" }
+    - { id: 37035532, date: 2023-08-07, about: "Rudy showed Don CelLab at the Hackers conference" }
+    - { id: 24036886, date: 2020-08-03, about: "Points to The Autodesk File" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ideas.md, why: "Threads for a remembrance" }
+  - { path: ../rudy-rucker/README.md, why: "CelLab co-author" }
+  - { path: ../rudy-rucker/sources/cellab-celdoc/, why: "Cached CelLab manual" }
+  - { path: ../../packages/cabinet/DESIGN.md, why: "CelLab as material for the cabinet's CA courseware" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

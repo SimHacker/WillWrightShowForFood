@@ -1,0 +1,80 @@
+# Stanisław Lem — memorial portrayal (in memoriam). NOT Stanisław Lem.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: stanislaw-lem
+  name: "Stanisław Lem"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  field: >-
+    Writer and philosopher: The Cyberiad, Solaris, Summa Technologiae, His
+    Master's Voice, A Perfect Vacuum, Golem XIV
+  home: characters/stanislaw-lem/
+  aliases: ["Stanislaw Lem"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_yet_asked
+  document: memorial.md
+  note: "deceased (12 September 1921 – 27 March 2006) — represent + discuss; invite people who knew or translated him"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Discuss his published work. Do not speak as him; quote him only from published translations, credited to the translator."
+  who_can_discuss:
+    - { who: will-wright, why: "On record (1996) that the Seventh Sally of The Cyberiad inspired the kind of thing he builds; plays Klapaucius to Don's Trurl", consent: accepted }
+    - { who: marcin-wichary, why: "Translated Lem; Lem Google Doodle (2011) per this repo", consent: not_yet_asked }
+    - { who: david-rosenthal, why: "The Lem / PKD reading group; Trurl's Machine and model collapse", consent: not_yet_asked }
+    - { who: don-hopkins, why: "Reads Lem as design documents for simulation and AI" }
+  could_be_invited:
+    - "Michael Kandel, translator of The Cyberiad, The Futurological Congress, A Perfect Vacuum, His Master's Voice and Fiasco"
+    - "Joanna Zylinska, translator of Summa Technologiae (2013)"
+
+bio:
+  summary: |
+    Born in Lwów in 1921; studied medicine; lived in Kraków. Wrote Solaris
+    (1961), Memoirs Found in a Bathtub (1961), The Invincible (1964), Summa
+    Technologiae (1964), The Cyberiad (1965), His Master's Voice (1968), The
+    Futurological Congress (1971), A Perfect Vacuum (1971), Imaginary
+    Magnitude (1973), Golem XIV (1981) and Fiasco (1986). Translated into
+    dozens of languages, with tens of millions of copies sold. Died in Kraków
+    on 27 March 2006.
+
+sources:
+  wikipedia:
+    - "https://en.wikipedia.org/wiki/Stanis%C5%82aw_Lem"
+    - "https://en.wikipedia.org/wiki/The_Cyberiad"
+    - "https://en.wikipedia.org/wiki/Summa_Technologiae"
+    - "https://en.wikipedia.org/wiki/Golem_XIV"
+  web:
+    - { title: "Official site", url: "https://english.lem.pl/" }
+    - { title: "Lem FAQ (includes the 1974 FBI letter and the SFWA episode)", url: "https://english.lem.pl/faq" }
+    - { title: "A Kingdom in the Box (lem.pl on Lem and SimCity)", url: "https://english.lem.pl/blog/a-kingdom-in-the-box/" }
+    - { title: "Google Doodle, 23 November 2011", url: "https://doodles.google/doodle/60th-anniversary-of-stanislaw-lems-first-publication/" }
+    - { title: "Lem, 'Philip K. Dick: A Visionary Among the Charlatans' (SFS 5, 1975, archived)", url: "http://web.archive.org/web/20251125045833/https://www.depauw.edu/sfs/backissues/5/lem5art.htm" }
+  primary_local:
+    - { path: ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Will retells the Seventh Sally (at 9:10): 'what's inspired me through the years to build these things'" }
+  hn_by_don:
+    - { id: 18373592, date: 2018-11-04, about: "The Seventh Sally and SimCity" }
+    - { id: 26615042, date: 2021-03-28, about: "Reviews of nonexistent books; Golem XIV" }
+    - { id: 42894646, date: 2025-02-01, about: "The Electronic Bard's love poem (Kandel's translation) in an LLM thread" }
+    - { id: 48805234, date: 2026-07-06, about: "Trurl's machine that insists 2+2=7" }
+
+notes:
+  - "The Electronic Bard's poems in English are Michael Kandel's; credit him when quoting."
+  - "SFWA: his honorary membership was withdrawn in 1976 after his criticism of American SF; he declined regular membership. Do not simplify to 'expelled'."
+  - "The Sims 'klapaucius' cheat is documented only in secondary sources."
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: ideas.md, why: "Threads" }
+  - { path: ../philip-k-dick/README.md, why: "Lem praised Dick; Dick denounced Lem to the FBI" }
+  - { path: ../mark-weiser/pkd-lem-ai-sf.md, why: "The PKD · Lem · AI · SF reading group" }
+  - { path: ../../repo-shows/will-wright-premiere/lore/cyberiad-klapaucius-trurl.md, why: "Klapaucius and Trurl in the premiere" }
+  - { path: ../marcin-wichary/README.md, why: "Lem translator" }

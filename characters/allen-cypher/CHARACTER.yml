@@ -1,0 +1,79 @@
+# Allen Cypher — invitation portrayal. NOT Allen Cypher.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: allen-cypher
+  name: "Allen Cypher"
+  type: invitation
+  signifier: "🐈"
+  status: living
+  field: >-
+    Programming by demonstration and end-user programming: Eager, Watch What I
+    Do, KidSim / Cocoa / Stagecast Creator, CoScripter, No Code Required
+  home: characters/allen-cypher/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+
+bio:
+  summary: |
+    BA in Mathematics, Princeton (1975); PhD in Computer Science, Yale (1980).
+    Cognitive scientist and Sloan Fellow in Don Norman's group at UCSD
+    (1980-85). Expert systems at IntelliCorp (1985-88). Senior Scientist for
+    intelligent agents at Apple (1988-97), in Alan Kay's group, where he built
+    Eager and, with David Canfield Smith, KidSim (later Cocoa, then Stagecast
+    Creator). Cofounder and Chief Designer of Stagecast Software (1997-2001).
+    At IBM in San Jose (2002-14) he invented CoScripter, a Firefox extension
+    for recording and sharing web tasks. Later at Microsoft (Azure ML
+    Workbench), Socratic Arts and Uber. His home page says that with large
+    language models his dream of end-user programming has come true.
+  known_for:
+    - "Eager: Programming Repetitive Tasks by Example (CHI '91)"
+    - "Watch What I Do: Programming by Demonstration (MIT Press, 1993), editor"
+    - "KidSim: Programming Agents Without a Programming Language (CACM, 1994), with David Canfield Smith and Jim Spohrer"
+    - "Stagecast Creator: children build simulations and games with graphical rewrite rules"
+    - "CoScripter at IBM"
+    - "No Code Required: Giving Users Tools to Transform the Web (2010), co-editor"
+
+sources:
+  web:
+    - { title: "Home page", url: "http://acypher.com/" }
+    - { title: "Watch What I Do, full text", url: "http://acypher.com/wwid/" }
+    - { title: "Eager", url: "http://acypher.com/Eager/" }
+    - { title: "Stagecast Creator (Wikipedia)", url: "https://en.wikipedia.org/wiki/Stagecast_Creator" }
+    - { title: "No Code Required (Elsevier)", url: "https://shop.elsevier.com/books/no-code-required/cypher/978-0-12-381541-5" }
+  papers:
+    - "EAGER: Programming Repetitive Tasks by Example. CHI '91. doi:10.1145/108844.108850 (video: doi:10.1145/108844.108995)"
+    - "Smith, Cypher, Spohrer. KidSim: Programming Agents Without a Programming Language. CACM 37(7), 1994. doi:10.1145/176789.176795"
+    - "Smith, Cypher, Tesler. Programming by example: novice programming comes of age. CACM 43(3), 2000. doi:10.1145/330534.330544"
+    - "Smith, Cypher, Tesler. Chapter in Lieberman (ed.), Your Wish Is My Command (2001)"
+    - "The evolution of end user programming. VL/HCC 2009. doi:10.1109/vlhcc.2009.5295315"
+  hn_by_don:
+    - { id: 17423753, date: 2018-06-29, about: "Inspired by Watch What I Do" }
+    - { id: 22987729, date: 2020-04-26, about: "Watch What I Do online, editors, Alan Kay foreword" }
+    - { id: 26053703, date: 2021-02-07, about: "Potter's Just-in-Time Programming chapter" }
+    - { id: 33700318, date: 2022-11-22, about: "KidSim graphical rewrite rules as programming by demonstration" }
+    - { id: 38044329, date: 2023-10-27, about: "Stagecast Creator began as KidSim at Apple ATG" }
+  local:
+    - { path: "https://github.com/SimHacker/moollm/blob/main/designs/AGENTS-DEBATE-1997.md", why: "Eager as the synthesis the 1997 debate asked for" }
+    - { path: "https://github.com/SimHacker/moollm/blob/main/skills/design-sense/masters/allen-cypher.md", why: "MOOLLM design-sense master card" }
+    - { path: "https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/SCREEN-ANGEL.yml", why: "Screen Angel cites Potter's Triggers chapter in Watch What I Do" }
+
+unverified:
+  - "Whether he and Ted Selker overlapped at IBM; ask, do not assert"
+  - "Spelling: Don's older HN comments sometimes say 'Alan Cypher'; it is Allen"
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../henry-lieberman/README.md, why: "Watch What I Do co-editor" }
+  - { path: ../pattie-maes/README.md, why: "The 1997 agents debate" }
+  - { path: ../richard-potter/README.md, why: "Triggers, chapter 17 of Watch What I Do" }

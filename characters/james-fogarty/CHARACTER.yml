@@ -1,0 +1,60 @@
+# James Fogarty — invitation portrayal. NOT James Fogarty.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: james-fogarty
+  name: "James Fogarty"
+  type: invitation
+  signifier: "🔧"
+  status: living
+  field: >-
+    Human-computer interaction: interface software, Prefab, accessibility
+    repair (interaction proxies), personal data and health, human-AI
+    interaction; Professor, Paul G. Allen School, University of Washington
+  home: characters/james-fogarty/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+
+bio:
+  summary: |
+    PhD in Human-Computer Interaction, Carnegie Mellon (2006), in the first
+    cohort of CMU's HCII PhD program. Faculty at the University of Washington
+    since 2006, now Professor in the Paul G. Allen School of Computer Science &
+    Engineering; helped found and grow DUB. With Morgan Dixon, Prefab:
+    pixel-based reverse engineering of interfaces. With Xiaoyi Zhang, Anne
+    Spencer Ross and others, interaction proxies for repairing mobile app
+    accessibility at runtime (CHI 2017), and the first large-scale assessment
+    of accessibility in 10,000 Android apps. Personal informatics research
+    (menstrual tracking, food journaling, migraines). CHI Best Paper Awards in
+    2005, 2010, 2017, 2024 and 2025; SIGCHI Academy, 2025.
+  papers:
+    - "Prefab (CHI 2010, Best Paper), with Morgan Dixon"
+    - "Zhang, Ross, Caspi, Fogarty, Wobbrock. Interaction Proxies for Runtime Repair and Enhancement of Mobile Application Accessibility. CHI 2017. doi:10.1145/3025453.3025846"
+    - "Zhang, Ross, Fogarty. Robust Annotation of Mobile Application Interfaces in Methods for Accessibility Repair and Enhancement. UIST 2018. doi:10.1145/3242587.3242616"
+
+sources:
+  web:
+    - { title: "Home page", url: "https://homes.cs.washington.edu/~jfogarty/" }
+    - { title: "SIGCHI Academy 2025 (UW news)", url: "https://news.cs.washington.edu/2025/04/23/allen-school-professor-james-fogarty-inducted-into-sigchi-academy-class-of-2025" }
+    - { title: "Prefab", url: "https://prefab.github.io/" }
+  hn_by_don:
+    - { id: 15327767, date: 2017-09-25, about: "Dixon and Fogarty as proof pixel deconstruction works" }
+    - { id: 36166380, date: 2023-06-02, about: "'Morgan Dixon's and James Fogarty's amazing work on user interface customization with Prefab'" }
+
+unverified:
+  - "Which paper received the 2017 Best Paper award"
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../morgan-dixon/README.md, why: "Prefab" }
+  - { path: ../peter-korn/README.md, why: "Accessibility" }

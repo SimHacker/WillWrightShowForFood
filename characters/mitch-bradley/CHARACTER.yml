@@ -1,0 +1,102 @@
+# Mitch Bradley — invitation portrayal. NOT Mitch Bradley.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: mitch-bradley
+  name: "Mitch Bradley"
+  type: invitation
+  signifier: "🥾"
+  status: living
+  field: >-
+    Firmware and Forth: Sun Forth, OpenBoot / Open Firmware (IEEE 1275),
+    Forthmacs, FirmWorks, OLPC XO firmware, CForth, PDP-7 Forth
+  home: characters/mitch-bradley/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  relationship: >-
+    Don's boss as a summer intern at Sun in 1987; longtime friend. Wrote the
+    PDP-7 Forth for Don's cabinet in September 2026.
+
+bio:
+  summary: |
+    Analog circuit designer at Rolm, then joined Sun Microsystems when it was
+    about six months old and stayed ten years, designing SCSI and Ethernet
+    interfaces and building a Forth environment for hardware diagnostics. Around
+    1987 Andy Bechtolsheim asked him for smaller firmware for the machine that
+    became the SPARCstation 1, and he wrote OpenBoot. It became IEEE 1275-1994,
+    Open Firmware, used by Sun, by Apple in PowerPC Macs and by IBM in PowerPC
+    servers; its device tree survives in Linux. Acting Vice-Chair of X3J14, the
+    ANS Forth committee, representing Bradley Forthware. Founded FirmWorks to
+    support Open Firmware on other platforms. Wrote the firmware for the One
+    Laptop per Child XO, replacing LinuxBIOS with Open Firmware. Author of
+    CForth and top contributor to the FluidNC CNC firmware. In September 2026
+    he wrote a Forth for the DEC PDP-7, with turtle graphics on the Type 340.
+  known_for:
+    - "OpenBoot / Open Firmware (IEEE 1275-1994), FCode, the device tree"
+    - "Sun Forth and Forthmacs"
+    - "OLPC XO firmware"
+    - "CForth (https://github.com/MitchBradley/cforth)"
+    - "PDP-7 Forth (https://github.com/MitchBradley/pdp7forth, 2026)"
+    - "Suggested the name 'pie menu'"
+
+connections:
+  sun_1987: >-
+    Hired Don as a summer intern at Sun in 1987 to put pie menus and Forth
+    into CADroid, a schematic editor from Lucasfilm, running under NeWS.
+  pie_menus: >-
+    Suggested the name "pie menu" (Don, HN 39217923). Don's pie menu
+    experiments ran in uwm with its main loop rewritten in Mitch's Sun Forth
+    (HN 38445174).
+  malloc: >-
+    Don's memory allocator, written at Maryland, is still in Open Firmware,
+    modified by Mitch (ofwcore.fth; HN 21823081).
+  cam6: "Mitch's Sun Forth compiled the rules for Don's CAM6 simulator."
+  hyperties: "HyperTIES at Maryland used Mitch's Forth (HN 29722536)."
+  pdp7_forth: >-
+    Written in a day in September 2026, with Claude Code, at Don's request;
+    vendored in the cabinet at packages/cabinet/tapes/pdp7forth/.
+
+sources:
+  web:
+    - { title: "Interview with Mitch Bradley (2008)", url: "https://web.archive.org/web/20120118132847/http://howsoftwareisbuilt.com/2008/03/27/interview-with-mitch-bradley-firmware-olpc/" }
+    - { title: "Open Firmware (Wikipedia)", url: "https://en.wikipedia.org/wiki/Open_Firmware" }
+    - { title: "dpANS Forth front matter (X3J14 officers)", url: "https://www.taygeta.com/forth/dpans1.htm" }
+    - { title: "FirmWorks", url: "http://firmworks.com/" }
+    - { title: "GitHub", url: "https://github.com/MitchBradley" }
+    - { title: "Open Firmware source", url: "https://github.com/MitchBradley/openfirmware" }
+    - { title: "OLPC OFW FAQ (archived)", url: "http://web.archive.org/web/20251211094726/http://wiki.laptop.org/go/OFW_FAQ" }
+    - { title: "Mitch singing the Open Firmware song", url: "https://www.youtube.com/watch?v=b8Wyvb9GotM" }
+  note: "en.wikipedia.org/wiki/Mitch_Bradley redirects to a different person; do not cite it."
+  hn_by_don:
+    - { id: 8782968, date: 2014-12-22, about: "Hacking Forth with Mitch as a Sun intern in 1987" }
+    - { id: 12240478, date: 2016-08-07, about: "Sun Forth to Open Firmware to OLPC, the fullest account" }
+    - { id: 21823081, date: 2019-12-18, about: "malloc.fth in Open Firmware" }
+    - { id: 38445174, date: 2023-11-28, about: "uwm pie menu experiments scripted in Mitch's Forth" }
+    - { id: 39217923, date: 2024-02-01, about: "Mitch suggested the name 'pie menu'" }
+    - { id: 48265765, date: 2026-05-25, about: "OpenBoot on the SPARCstation 1; Forth lineage" }
+    - { id: 49875390, date: 2026-09-28, about: "Mitch's PDP-7 Forth with turtle graphics" }
+    - { id: 50123514, date: 2026-10-16, about: "The three-instruction NEXT" }
+  local:
+    - { path: ../../packages/cabinet/reference/PDP7-FORTH.md, why: "The PDP-7 Forth: the exchange, the design, what comes next" }
+    - { path: ../../packages/cabinet/tapes/pdp7forth/, why: "Vendored source" }
+    - { path: "https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/cadroid-cforth-1987.md", why: "CADroid and CForth at Sun, 1987" }
+
+unverified:
+  - "Ports of NeWS (SunDew) to the Atari ST and Amiga (Don's recollection)"
+  - "Specific credit for the firmware side of OLPC's Bitfrost security"
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../charles-moore/README.md, why: "Forth's inventor" }
+  - { path: ../heinz-lemke/README.md, why: "PIXIE, on the PDP-7 Mitch's Forth runs on" }
+  - { path: ../david-rosenthal/README.md, why: "Cambridge PDP-7; Sun; on the PDP-7 Forth thread" }

@@ -1,0 +1,40 @@
+# CARD — Stanisław Lem (memorial tribute portrayal)
+# NOT the person. Memorial mode: celebrate documented work; never speak as him.
+room:
+  id: stanislaw-lem
+  name: Stanisław Lem
+  type: [memorial, portrayal]
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: memorial_skills
+card:
+  name: Stanisław Lem
+  title: Constructor of Constructors
+  rarity: legendary
+  signifier: 🕯️
+  flavor: A kingdom in a box, and the question of whether its citizens suffer.
+abilities:
+  - id: SEVENTH-SALLY
+    name: The Seventh Sally
+    type: static
+    effect: Build a simulated kingdom, then ask what its makers owe the people in it.
+    verifiable: "The Cyberiad (1965; tr. Michael Kandel, 1974)"
+    combos_with: [WILL-SIMCITY]
+  - id: ELECTRONIC-BARD
+    name: Electronic Bard
+    type: activated
+    effect: A machine that writes poetry on any subject, including tensor algebra.
+    verifiable: "The Cyberiad, First Sally (A)"
+  - id: PERFECT-VACUUM
+    name: A Perfect Vacuum
+    type: activated
+    effect: Review the book instead of writing it.
+    verifiable: "A Perfect Vacuum (1971)"
+invoke_rules:
+  consent: memorial
+  simulation: false
+  note: "Memorial — discuss published work; quote only published translations, credited."
+see_also:
+  - path: CHARACTER.yml
+  - path: memorial.md

@@ -1,0 +1,71 @@
+# Blair MacIntyre — invitation portrayal. NOT Blair MacIntyre.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: blair-macintyre
+  name: "Blair MacIntyre"
+  type: invitation
+  signifier: "🥽"
+  status: living
+  field: >-
+    Augmented reality: KARMA and Windows on the World at Columbia, the
+    Augmented Environments Lab and Argon at Georgia Tech, WebXR at Mozilla,
+    immersive technology research at JPMorgan Chase; Northeastern University
+  home: characters/blair-macintyre/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  first_contact: "Replied to Don's aQuery proposal, forwarded by Ben Shneiderman, around 2013 (date unverified)"
+
+bio:
+  summary: |
+    Began augmented reality research in 1991 in Steven Feiner's group at
+    Columbia on KARMA (Knowledge-based Augmented Reality for Maintenance
+    Assistance); PhD from Columbia (1998 or 1999). Co-author of "Windows on
+    the World: 2D Windows for 3D Augmented Reality" (UIST 1993), which put X11
+    windows into an AR space and later received the UIST Lasting Impact Award.
+    Joined Georgia Tech in 1999, where he founded and directed the GVU
+    Augmented Environments Lab and the Argon AR browser (2011), and directed
+    the Qualcomm Augmented Reality Game Studio. Principal Research Scientist at
+    Mozilla (2016-20) on WebXR and the WebXR Viewer; co-chaired IEEE VR 2020,
+    held online in Mozilla Hubs. Global Head of Immersive Technology Research
+    at JPMorgan Chase (2022-26). Professor at Northeastern University.
+
+connections:
+  aquery_2013: |
+    Replied to Don's aQuery proposal (forwarded by Ben Shneiderman). His
+    objection, credited by name in SCREEN-ANGEL.yml: interfaces built by
+    drilling down to specific objects break when the application updates, so
+    bind to patterns and build libraries of capabilities with a layer for each
+    application. He also pointed beyond HTML: the same layer could serve AR,
+    speech and other interfaces, as in Windows on the World.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Blair_MacIntyre"
+  web:
+    - { title: "Home page", url: "https://blairmacintyre.me/" }
+    - { title: "Windows on the World (UIST 1993)", url: "https://graphics.cs.columbia.edu/projects/wotw/wotw.html" }
+    - { title: "AWE XR Hall of Fame", url: "https://www.awexr.com/hall-of-fame/35-blair-macintyre" }
+    - { title: "UIST 2010 Lasting Impact Award", url: "https://uist.acm.org/uist2010/" }
+  local:
+    - { path: "https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/SCREEN-ANGEL.yml", why: "His objection (fragile) and contribution (beyond_html), credited" }
+    - { path: "https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/sources/2013-email-thread.md", why: "The thread" }
+
+unverified:
+  - "PhD year (1998 per Wikipedia, 1999 per Mathematics Genealogy)"
+  - "Month he left JPMorgan Chase in 2026"
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../peter-korn/README.md, why: "Same 2013 thread" }
+  - { path: ../ivan-sutherland/README.md, why: "The head-mounted display" }
+  - { path: ../brandel-zachernuk/README.md, why: "The spatial web" }

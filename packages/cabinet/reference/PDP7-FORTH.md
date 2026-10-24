@@ -9,7 +9,8 @@ it works, and where it goes next in this repo. The course sketch it answers is
 [FORTH-TURTLE-340.md](FORTH-TURTLE-340.md).
 
 Mitch invented Open Firmware (IEEE 1275), the Forth boot firmware in Sun workstations,
-Apple's PowerPC Macs and the OLPC XO, and chaired the ANSI Forth technical subcommittee. His
+Apple's PowerPC Macs and the OLPC XO, and was acting Vice-Chair of X3J14, the ANS Forth
+committee ([dpANS](https://www.taygeta.com/forth/dpans1.htm)). His
 Sun Forth is also the Forth that compiled the rules for Don's CAM6 cellular automata
 emulator ([Norman Margolus](../../../characters/norman-margolus/CHARACTER.yml)).
 

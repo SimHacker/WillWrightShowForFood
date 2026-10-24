@@ -1,0 +1,67 @@
+# Richard Potter — invitation portrayal. NOT Richard Potter.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: richard-potter
+  name: "Richard Potter"
+  type: invitation
+  signifier: "🎯"
+  status: living
+  field: >-
+    End-user programming with pixels: Triggers, Just-in-Time Programming,
+    pixel data access and graphical macros (University of Maryland HCIL)
+  home: characters/richard-potter/
+  aliases: ["Rich Potter", "Richard L. Potter"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  relationship: "Don worked with him at Ben Shneiderman's HCIL while he was developing an early version of Triggers (HN 26060809)"
+
+bio:
+  summary: |
+    At the University of Maryland's Human-Computer Interaction Lab, co-author
+    with Linda Weldon and Ben Shneiderman of "Improving the accuracy of touch
+    screens" (CHI '88), the take-off strategy. Developed Triggers, which drove
+    Macintosh applications by recognizing patterns in screen pixels: "Guiding
+    automation with pixels" (HCIL video report 1992; INTERCHI '93 video
+    program), "Graphical macros" (HCIL 1994), and two chapters of Allen
+    Cypher's Watch What I Do (1993), "Triggers: Guiding Automation with Pixels
+    to Achieve Data Access" and "Just-in-Time Programming". PhD, University of
+    Maryland (1999), "Pixel Data Access: Interprocess Communication in the User
+    Interface for End-User Programming and Graphical Macros"; with Shneiderman
+    and Ben Bederson, "Pixel Data Access for End-User Programming and Graphical
+    Macros".
+  known_for:
+    - "Triggers: condition-action rules on screen pixels, driving any Mac application"
+    - "Just-in-Time Programming: programming a task that is already in progress"
+    - "The take-off touch-screen strategy (CHI '88)"
+
+sources:
+  web:
+    - { title: "Watch What I Do, chapter 17: Triggers", url: "http://acypher.com/wwid/Chapters/17Triggers.html" }
+    - { title: "Watch What I Do, table of contents", url: "https://acypher.com/wwid/WWIDToC.html" }
+    - { title: "Pixel Data Access (Potter, Shneiderman, Bederson)", url: "https://www.cs.umd.edu/~ben/papers/Potter1999Pixel.pdf" }
+    - { title: "PBE researcher page (Henry Lieberman)", url: "https://web.media.mit.edu/~lieber/PBE/Researchers/Potter.html" }
+  hn_by_don:
+    - { id: 11521683, date: 2016-04-18, about: "Pixel Data Access" }
+    - { id: 26053703, date: 2021-02-07, about: "Just-in-Time Programming" }
+    - { id: 26060809, date: 2021-02-08, about: "Worked with him at HCIL during early Triggers" }
+    - { id: 29921532, date: 2022-01-13, about: "The CHI '88 touch-screen paper" }
+
+unverified:
+  - "Later career: papers by a Richard Potter in Japan (JST PRESTO, NICT, University of Tokyo, 2002-2014), including fuzzy rewriting for children's programming with Yasunori Harada, are probably his but not confirmed"
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../ben-shneiderman/README.md, why: "Advisor and co-author" }
+  - { path: ../allen-cypher/README.md, why: "Editor of Watch What I Do" }
+  - { path: ../morgan-dixon/README.md, why: "Prefab, pixels again two decades later" }

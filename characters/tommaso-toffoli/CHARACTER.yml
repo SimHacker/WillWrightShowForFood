@@ -1,0 +1,98 @@
+# Tommaso Toffoli — invitation portrayal. NOT Tommaso Toffoli.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: tommaso-toffoli
+  name: "Tommaso Toffoli"
+  type: invitation
+  signifier: "🔁"
+  status: living
+  field: >-
+    Physicist and computer scientist: reversible computing, the Toffoli gate,
+    conservative logic, cellular automata machines (CAM-6, CAM-8), lattice gases
+  home: characters/tommaso-toffoli/
+  aliases: ["Tom Toffoli"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+
+bio:
+  summary: |
+    Born 1943 in Friuli and raised in Rome. Doctor of Physics, University of
+    Rome (1967); PhD in Computer and Communication Sciences, University of
+    Michigan (1977), thesis "Cellular Automata Mechanics". At MIT's Laboratory
+    for Computer Science 1977-1995, where he led the Information Mechanics
+    Group; then Boston University, Electrical and Computer Engineering. IEEE
+    Fellow (2012). Introduced the Toffoli gate (MIT/LCS/TM-151, 1980), wrote
+    "Conservative Logic" with Edward Fredkin (1982), and with Norman Margolus
+    built the CAM-6 and wrote Cellular Automata Machines (MIT Press, 1987).
+  known_for:
+    - "Toffoli gate (1980): the universal reversible gate, later a basic primitive of quantum computing"
+    - "Conservative Logic, with Edward Fredkin (1982), source of the billiard-ball computer"
+    - "Proof that invertible cellular automata are computation-universal (1977)"
+    - "CAM machines: Squareland (1982), CAM-2 to CAM-5, CAM-6 (1985-86), CAM-8 with Margolus (working 1992)"
+    - "Cellular Automata Machines: A New Environment for Modeling, with Norman Margolus (MIT Press, 1987)"
+    - "Lattice-gas hydrodynamics; organizer of the 1981 Physics of Computation conference at Endicott House"
+  later_work:
+    - "simp/step cellular automata environment, with Ted Bach"
+    - "Quantum gate speed limits, with Lev Levitin (2003, 2009)"
+    - "'Lattice gases vs cellular automata: the whole story at last' (Automata 2008)"
+    - "'Entropy? Honest!' (Entropy, 2016)"
+    - "'Action, or the fungibility of computation', in Feynman and Computation (1998)"
+
+connections:
+  cam6: >-
+    Don's CAM6 simulator follows the book and is compatible with the Forth rule
+    software Toffoli and Margolus wrote for the CAM-6. It went from C and Forth
+    to C++ and Python to JavaScript; the lookup tables stayed the same.
+  cam6_borrowed: >-
+    Don handled Norman Margolus's CAM-6 at the MIT AI Lab, and borrowed one for
+    a weekend science fiction convention (HN 37029593, 2023).
+  courseware: >-
+    Norman Margolus has given Don permission to build interactive courseware
+    from the book, chapter by chapter.
+  fredkin: >-
+    Edward Fredkin, Toffoli's co-author on Conservative Logic, died 13 June
+    2023. No Fredkin directory exists yet.
+
+sources:
+  wikipedia:
+    - "https://en.wikipedia.org/wiki/Tommaso_Toffoli"
+    - "https://en.wikipedia.org/wiki/Toffoli_gate"
+    - "https://en.wikipedia.org/wiki/Billiard-ball_computer"
+    - "https://en.wikipedia.org/wiki/CAM-6"
+  web:
+    - { title: "Curriculum vitae (BU, 2020)", url: "https://www.bu.edu/physics/files/2021/05/Toffoli-vita-1.pdf" }
+    - { title: "BU Physics profile", url: "https://www.bu.edu/physics/profile/tommaso-toffoli/" }
+    - { title: "Rudy Rucker on the CAM-6 demonstration (CelLab manual, ch. 5)", url: "https://www.fourmilab.ch/cellab/manual/chap5.html" }
+  hn_by_don:
+    - { id: 13506300, date: 2017-01-28, about: "Toffoli gate, Margolus neighborhood, spin glasses, spinsOnly code" }
+    - { id: 16009568, date: 2017-12-26, about: "Billiard-ball CA of Fredkin and Toffoli; universal reversible gates" }
+    - { id: 23058545, date: 2020-05-03, about: "Toffoli and Margolus's Forth and 8086 CAM driver" }
+    - { id: 29264489, date: 2021-11-18, about: "The Forth style in the book" }
+    - { id: 37029593, date: 2023-08-07, about: "Holding Norman's CAM-6 at the AI Lab; borrowing one for a convention" }
+    - { id: 42701412, date: 2025-01-14, about: "Reversible computing: Toffoli, Margolus, Knight, Feynman, Bennett" }
+  local:
+    - { path: ../don-hopkins/sources/cam6-simulator-wiki/cam-hardware-history.md, why: "CAM hardware history, Systems Concepts price list, CAM-PC, CAM-8" }
+    - { path: ../john-von-neumann/sources/hn/13506300-toffoli-margolus-fredkin.md, why: "HN 13506300 with code" }
+
+unverified:
+  - "PhD advisor: a Mathematics Genealogy snippet says John Holland; not confirmed"
+  - "Toffoli gate year: 1980 (TM-151, ICALP) vs 1981 (his CV)"
+  - "Current status at BU: adjunct (BU page) or retired (Wikipedia, uncited)"
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../norman-margolus/README.md, why: "Co-author of the book and the CAM machines" }
+  - { path: ../../repo-shows/norman-margolus/README.md, why: "Norman's show: CAM6 played and redesigned" }
+  - { path: ../rudy-rucker/README.md, why: "Programmed the CAM-6 in Forth; CelLab" }
+  - { path: ../john-walker/README.md, why: "CelLab at Autodesk, with Rucker" }

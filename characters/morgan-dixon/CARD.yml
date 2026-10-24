@@ -1,0 +1,33 @@
+# CARD — Morgan Dixon (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: morgan-dixon
+  name: Morgan Dixon
+  type: [invitation, guest, portrayal]
+card:
+  name: Morgan Dixon
+  title: Prefab
+  rarity: rare
+  signifier: "🧩"
+  flavor: What if every GUI were open source?
+abilities:
+  - id: PREFAB
+    name: Prefab
+    type: static
+    effect: Recover any interface's structure from its pixels, many times a second.
+    verifiable: "CHI 2010 Best Paper; https://prefab.github.io/"
+    combos_with: [POTTER-TRIGGERS, FOGARTY-PROXIES]
+  - id: TARGET-AWARE
+    name: Bubble Cursor Everywhere
+    type: activated
+    effect: Add target-aware pointing to programs whose source it never saw.
+    verifiable: "CHI 2012, with Fogarty and Wobbrock"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../james-fogarty/CARD.yml

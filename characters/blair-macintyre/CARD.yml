@@ -1,0 +1,31 @@
+# CARD — Blair MacIntyre (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: blair-macintyre
+  name: Blair MacIntyre
+  type: [invitation, guest, portrayal]
+card:
+  name: Blair MacIntyre
+  title: Windows on the World
+  rarity: rare
+  signifier: "🥽"
+  flavor: Bind to patterns, not to paths.
+abilities:
+  - id: WINDOWS-ON-THE-WORLD
+    name: Windows on the World
+    type: static
+    effect: Put ordinary application windows into the space around you.
+    verifiable: "UIST 1993; UIST Lasting Impact Award"
+  - id: FRAGILITY-OBJECTION
+    name: The Right Objection
+    type: triggered
+    effect: Interfaces built on specific objects break when the app updates; layer capabilities instead.
+    verifiable: "Credited in SCREEN-ANGEL.yml (MicropolisCore)"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md

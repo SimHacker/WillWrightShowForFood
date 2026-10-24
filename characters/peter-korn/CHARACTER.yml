@@ -1,0 +1,73 @@
+# Peter Korn — invitation portrayal. NOT Peter Korn.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: peter-korn
+  name: "Peter Korn"
+  type: invitation
+  signifier: "🦻"
+  status: living
+  field: >-
+    Accessibility: outSPOKEN for Windows, the Java Accessibility API and Java
+    Access Bridge, GNOME accessibility, Oracle, Amazon Devices (VoiceView)
+  home: characters/peter-korn/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  first_contact: "Don's email naming aQuery, around 2013 (date unverified)"
+
+bio:
+  summary: |
+    Co-developed outSPOKEN for Windows, a screen reader, at Berkeley Systems
+    (1994). At Sun Microsystems he was on the team that built the Java
+    Accessibility API and implemented it in Swing, wrote the original Java
+    Access Bridge for Windows, and as Accessibility Architect brought
+    accessibility to the Unix and GNU/Linux desktop, largely through GNOME.
+    Accessibility Principal at Oracle after it acquired Sun, and technical
+    manager of the EU AEGIS project. Director of Accessibility for Amazon
+    Devices (Lab126), where he led VoiceView, the screen reader for Fire TV,
+    Fire tablets and Kindle. Represented Sun, Oracle and Amazon at the W3C.
+  known_for:
+    - "Java Accessibility API; Java Access Bridge"
+    - "GNOME accessibility (AT-SPI)"
+    - "VoiceView on Amazon devices"
+    - "outSPOKEN for Windows (1994), with Ben Drees"
+
+connections:
+  aquery: >-
+    Don first described aQuery, now Screen Angel, in an email to Peter Korn
+    around 2013. Korn replied that it sounded "quite do-able" and that he had
+    more to say by email. The thread is public in MicropolisCore
+    (apps/screen-angel/sources/2013-email-thread.md).
+
+sources:
+  web:
+    - { title: "GNOME wiki", url: "https://wiki.gnome.org/PeterKorn" }
+    - { title: "Blog", url: "https://peterkorn.wordpress.com/about/" }
+    - { title: "outSPOKEN (Wikipedia)", url: "https://en.wikipedia.org/wiki/OutSpoken" }
+    - { title: "W3C, 2019: Director of Accessibility, Amazon Devices", url: "https://lists.w3.org/Archives/Public/public-silver/2019Jul/0068.html" }
+    - { title: "TDIConf21: Customer Obsession for Customers with Disabilities", url: "https://www.youtube.com/watch?v=JgysDOR3SPU" }
+    - { title: "CES 2026 session", url: "https://www.ces.tech/videos/amazons-vision-for-inclusive-entertainment-a-conversation-presented-by-amazon/" }
+  hn_by_don:
+    - { id: 13817649, date: 2017-03-08, about: "Don's aQuery email to Peter Korn" }
+    - { id: 32218330, date: 2022-07-24, about: "Links his TDIConf21 talk" }
+  local:
+    - { path: "https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/sources/2013-email-thread.md", why: "The 2013 thread" }
+
+unverified:
+  - "Year of the aQuery email (consistent with 2013-2014)"
+  - "Start dates at Sun and Amazon"
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../blair-macintyre/README.md, why: "Same 2013 thread" }
+  - { path: ../ben-shneiderman/README.md, why: "Forwarded the 2013 proposal" }
