@@ -6,8 +6,8 @@
 ## Who
 
 **Cynthia Solomon** is one of the original designers of **Logo** and a lifelong pioneer of bringing
-computing to children. In 1966, at Bolt, Beranek & Newman, she helped create Logo, which was working by the summer of 1967, with Wally
-Feurzeig, Seymour Papert, Daniel G. Bobrow and Richard Grant. When Papert started the MIT Logo
+computing to children. In 1966, at Bolt, Beranek & Newman, she helped create Logo with Wally
+Feurzeig, Seymour Papert, Daniel G. Bobrow and Richard Grant; it was working by the summer of 1967. When Papert started the MIT Logo
 Group in 1969, she was central to the culture that gave us **turtle graphics** and
 **constructionist learning** — the idea that children learn best by building things that matter to
 them.
@@ -24,13 +24,16 @@ She wrote *Computer Environments for Children: A Reflection on Theories of Learn
 Constructionism 2016 and FabLearn 2019 Lifetime Achievement Awards and gave the inaugural **Seymour
 Papert Memorial Lecture** (CrossRoads 2018).
 
-## The treasure trove
+## Her videos
 
-On her [YouTube channel](https://www.youtube.com/@cynthiaso) Cynthia has shared footage that exists
-almost nowhere else: Seymour Papert describing the turtle, Marvin Minsky on his early learning
-machine, children programming turtles, and the Atari Cambridge research lab. It is primary-source
-history of the constructionist movement — underappreciated, and exactly the kind of thing a Repo
-Show is for.
+On her [YouTube channel](https://www.youtube.com/@cynthiaso) Cynthia has posted 90 videos, much of
+it footage found almost nowhere else: the MIT Logo group's turtles in 1970, Seymour Papert explaining
+the turtle and body-syntonic learning, Marvin Minsky demonstrating General Turtle's 2500, the BBC's
+*Talking Turtle*, the Atari Cambridge Research demo tape, and children's Logo projects.
+
+**[The index](videos.md)** lists every video by topic, with what each shows and the Hacker News
+comments where Don has pointed people to them. The turtle footage is also the starting point for
+the cabinet's [Logo turtle plan](../../packages/cabinet/LOGO-TURTLE.md).
 
 ## Why a Repo Show
 

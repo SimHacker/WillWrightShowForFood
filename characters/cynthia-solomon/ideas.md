@@ -15,7 +15,7 @@ Cynthia Solomon — one of the original designers of Logo (1966, working by summ
 walk the repo on air and build from the seed.
 
 ### 2. Logo co-creator (BBN 1966–67, with Feurzeig/Papert/Bobrow); MIT Logo c...
-ure; Atari Cambridge children's computer; History of Logo (HOPL 2020); rare video treasure trove (YouTube @cynthiaso); Snap! friend — met Don at Snap!Con Barcelona
+ure; Atari Cambridge children's computer; History of Logo (HOPL 2020); her video archive (YouTube @cynthiaso; [index](videos.md)); Snap! friend — met Don at Snap!Con Barcelona
 
 ### 3. ACRC Lisp Machines — music demos *and* Star Wars turtles
 

@@ -17,8 +17,8 @@ Cynthia —
 It was a delight meeting you over video at **Snap!Con in Barcelona**. I'd love to have you on a
 **Repo Show** — a relaxed, recorded conversation built around the things you choose to share.
 
-What I keep coming back to is your **video treasure trove**: Papert and the turtle, the Minskys,
-children at the machine, the Atari Cambridge lab. It's primary-source history of constructionism
+What I keep coming back to are your **videos**: Papert and the turtle, the Minskys,
+children at the machine, the Atari Cambridge lab ([my index of them](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/cynthia-solomon/videos.md)). It's primary-source history of constructionism
 that almost no one else has, and you were *there*.
 
 **Threads — your pick:**

@@ -1,7 +1,8 @@
 # Emulation & Virtualization as Preservation Strategies (2015)
 
 David S. H. Rosenthal, LOCKSS Program, Stanford University Libraries. A report for the Andrew W.
-Mellon Foundation, October 2015. 37 pages.
+Mellon Foundation, on behalf of itself, the Sloan Foundation and the US Institute of Museum and
+Library Services, October 2015. 37 pages; references on pp. 31–37.
 
 **PDF:** [rosenthal-emulation-2015.pdf](rosenthal-emulation-2015.pdf), copied from the
 [UNT Digital Library](https://digital.library.unt.edu/ark:/67531/metadc799755/m2/1/high_res_d/rosenthal-emulation-2015.pdf)
@@ -11,24 +12,107 @@ Mellon Foundation, October 2015. 37 pages.
 [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/),
 as stated on its first page. Redistributed here unchanged under that license.
 
-## What it says
+**What follows from it for the cabinet:** [PRESERVATION.md](../../../packages/cabinet/PRESERVATION.md).
 
-Of the two basic digital preservation strategies, migration (converting files to current formats)
-has been strongly favored over emulation (running the original software). The report argues that
-web-based emulation frameworks, which make an emulator appear as an ordinary part of a web page,
-removed the main barrier to emulation. Two barriers remain: the tools for creating preserved system
-images are inadequate, and the legal basis for giving access to emulations is unclear, and highly
-restrictive where it is clear.
+## The argument
 
-It surveys the frameworks of the time (bwFLA, Olive at Carnegie Mellon, and the Internet Archive's
-JSMESS and Emularity) and the collections built on them, follows how digital artefacts and
-infrastructure changed over two decades, and ends with a ranked to-do list: standardize preserved
-system images, how emulators obtain them and how emulations are exposed to readers; improve the
-tools and metadata databases for preserving software; support emulators; and clarify the law.
+Of the two basic strategies for keeping digital things usable, migration (converting them to
+current formats) has been strongly favored over emulation (running the original software on a
+stand-in for the original machine). Emulation frameworks that deliver an emulator as an ordinary
+part of a web page removed the main barrier: "Readers see no difference between the emulated
+artefact and other components of a Web page" (p. 3). Two barriers remain: the tools for creating
+preserved system images are inadequate, and the legal basis for giving access to them is unclear,
+and highly restrictive where it is clear.
 
-## Two passages
+He is not selling it. "Emulation is not a panacea" (p. 1). It costs more per artefact than
+migration, most of the cost is ingest (metadata and quality assurance), and "the most important
+reason for the failure of current strategies to collect and preserve the majority of their target
+material is economic; the resources available are inadequate."
 
-From §2.3.2, *Internet Archive* (p. 10), with footnote 2:
+## Section by section
+
+**1. Introduction (pp. 2–3).** Jeff Rothenberg's 1995 *Scientific American* article, "Ensuring the
+Longevity of Digital Documents" (vol. 272, no. 1, pp. 42–47;
+[doi:10.1038/scientificamerican0195-42](https://doi.org/10.1038/scientificamerican0195-42),
+[JSTOR](https://www.jstor.org/stable/24980135)), set up the choice
+([preview, archived](https://web.archive.org/web/20110426062417/http://www.sciamdigital.com/index.cfm?fa=Products.ViewIssuePreview&ARTICLEID_CHAR=07FBACA7-7185-43C8-B9E7-E07B5343F87)).
+It opens in 2045, with grandchildren finding a CD-ROM and a letter in an attic: "only the letter
+will be immediately intelligible 50 years from now." On the same page (p. 42): "It is only slightly
+facetious to say that digital information lasts forever—or five years, whichever comes first."
+Rothenberg favored emulation; migration won anyway. Early demonstrations "had little effect," and the search for a Universal Virtual Computer
+"diverted resources that could have been applied to making the existing emulations easily usable."
+Terminology: a *preserved system image* is "a set of stored data that is input to an emulator or a
+VMM": configuration, storage media, and optionally memory.
+
+**2. Looking backward (pp. 3–19).** An emulation service has three parts: emulators, a collection of
+system images with metadata, and a framework that joins them.
+
+- *Emulators (2.1):* QEMU, MAME and MESS (merged in 2015; JSMESS compiles them to JavaScript with
+  Emscripten), Basilisk II, DOSBox, SheepShaver, UAE.
+- *Frameworks (2.2):* bwFLA at Freiburg, emulation as a service in the cloud, with each emulator
+  wrapped behind standard interfaces; Olive at Carnegie Mellon, which streams a virtual machine to
+  the reader's computer but needs software installed; and the Internet Archive's, which runs the
+  emulator in the reader's browser, so the Archive pays only to store and serve the files.
+- *Collections (2.3):* Rhizome (the Theresa Duncan CD-ROMs: 4,644 sessions in two months, median 99
+  seconds), the Internet Archive (nearly 36,000 items, p. 11, passage below), Carnegie Mellon (17
+  images, campus only), Yale (about 440 CD-ROMs in a pilot), the German National Library (about
+  500,000 physical carriers), the British Library. "The key to emulation's usefulness as a
+  preservation strategy will be large collections of preserved system images."
+- *Shared concerns (2.4):* emulator support, metadata, fidelity, load, intellectual property and
+  curation tools; the passages below cover the first three. Load: browser frameworks bring their
+  own computing, cloud frameworks must buy it (Bomb Iraq peaked at about 20 times normal load).
+  Intellectual property, at length (pp. 16–18): every layer of the stack is licensed, fonts
+  included; rights holders are often unfindable; "Institutions will not build … collections … at
+  the scale needed … unless the legal basis for doing so is clarified." Curation: a base operating
+  system image "might take 2–20 hours," packaged software an hour or two, research software
+  person-weeks (p. 18).
+- *Conclusions (2.5):* emulation works and scales. Most of what is emulated is games, which have a
+  market and fans; "preserving content for scholars lacks the business model and fan base of retro
+  gaming." bwFLA and Olive are "strikingly similar," but "their XML metadata is system-specific, so
+  they cannot share preserved system images."
+
+**3. The last two decades (pp. 19–23).** Artefacts became networked, active and huge; JavaScript
+became the Web's assembly language. Hardware moved to GPUs and phones, Moore's Law speedups ended,
+and old images grow less safe with age.
+
+**4. Looking forward (pp. 23–26).** Networked artefacts need an "Internet Emulator" that serves the
+web as it was, using Memento, sandboxed with "very restrictive default policies." GPUs and phones
+are hard to emulate. Current artefacts will be "far more difficult and costly" to preserve.
+
+**5. Sustainability (pp. 26–27).** Increasing returns favor one or a few "good enough" technologies.
+Emulators are maintained by retro gamers and QEMU's developers, with "no effective mechanism" for
+preservation-specific work. Olive and bwFLA had two or three years of grants and no plan for what
+came after, or for the legal problem of selling access to software they don't own. The Internet
+Archive's collection is "the result of dynamic leadership and its curation is of very variable
+quality"; it is "hard to imagine any other institution" copying it.
+
+**6. The to-do list (pp. 27–30).** Four goals: cheap packaging, reuse, no repackaging for each
+framework, and links that don't depend on one framework. Links into a particular service, like the
+Theresa Duncan URLs, make artefacts "not themselves discoverable or preservable." Eight tasks, and
+his ranking (Table 3, p. 30):
+
+| Task | Difficulty | Impact | Cost |
+|------|-----------|--------|------|
+| 6.1 Standard system images | Low | Medium | Low |
+| 6.2 Standard access to images | Low | Medium | Low |
+| 6.3 Standard invoking | Low | Low | Low |
+| 6.4 Improved tools | Medium | High | Medium |
+| 6.5 Metadata databases | Low | Low | Low |
+| 6.6 Emulator support | Low | Medium | Medium |
+| 6.7 Internet emulators | Low | Low | Low |
+| 6.8 Legalities | High | High | High |
+
+For emulator support he suggests pooled programmers, bounties or a hackathon. For the law: legal
+deposit in national libraries to collect operating systems and libraries, with reading-room access,
+and lending on the Internet Archive's model, one reader per copy.
+
+**7. Conclusion (pp. 30–31).** Current efforts save less than half of what they aim at. Emulation
+will matter more because it reaches artefacts migration can't, but it costs more, and diverting
+scarce resources to it could make the shortage worse.
+
+## Passages
+
+From §2.3.2, *Internet Archive* (p. 11), with footnote 2:
 
 > The Internet Archive's software collection currently holds nearly 36,000 items, including more
 > than 7,300 for MS-DOS, 3,600 for Apple, 2,900 console games and 600 arcade games. Some can be
@@ -90,29 +174,63 @@ From §2.4.3, *Fidelity* (p. 15), on the same Spacewar emulation:
 He distinguishes execution fidelity, whether the emulation runs the program correctly, from
 experiential fidelity, how close the user's experience is to the original user's.
 
-## Sections
+## Before 2015: Rothenberg, and David's answer to him
 
-1. Introduction (history, terminology)
-2. Looking backward: frameworks, collections, shared concerns
-3. The last two decades of evolution: digital artefacts and infrastructure
-4. Looking forward
-5. Sustainability: emulators, frameworks, collections, business models
-6. The to-do list (nine items, ranked)
-7. Conclusion
+Rothenberg's article ([Semantic Scholar](https://www.semanticscholar.org/paper/Ensuring-the-Longevity-of-Digital-Documents-Rothenberg/6f973a607d783e9fe12b3e56b6e02c22b0805376)
+lists 359 citations) led to his 1999 report for the Council on Library and Information Resources,
+[*Avoiding Technological Quicksand*](https://www.clir.org/pubs/reports/rothenberg/), the full case for
+emulation. David's 2009 slides, below, credit the 1995 article with getting governments and
+foundations to start funding digital preservation: the Mellon Foundation, NSF, the Library of
+Congress and the National Archives.
+
+In 2009, at the Library of Congress, David asked
+["How are we 'Ensuring the Longevity of Digital Documents'?"](https://www.digitalpreservation.gov/multimedia/documents/rosenthal_slides072709.pdf)
+(slides, CC BY-NC-ND 3.0 US). Kirk McKusick's Unix file system could still read every disk it had
+ever written, after thirty years. Documents had moved online, where copying is built in; formats had
+become standards with open source renderers; virtual machines had become ordinary. So on format
+obsolescence, "Jeff wrong in every particular," though "Jeff was right about emulation – But
+preservation wasn't the reason for doing it." His points that bear on the cabinet:
+
+- "Open Source is best preserved of all": source, history, and the ability to rebuild the stack as
+  it was. A format with an open source renderer is safe, its renderer being "executable
+  'preservation metadata'."
+- Scale and cost: preserving a document at a time is impractical, and "1 hour of 1 lawyer ≈ 5TB of
+  disk."
+- His practical next steps: collect the bits; "Please use Creative Commons licenses"; "Preserve
+  Open Source repositories: Easy & vital"; "Support Open Source renderers & emulators"; "KISS."
+
+The 2015 report is the next step in the same argument: by then emulation had become practical in
+the browser, and the remaining barriers were tools, standards, money and the law.
+
+## Since 2015
+
+- **His own follow-up.** In ["The Architecture of Emulation on the Web"](https://blog.dshr.org/2016/04/the-architecture-of-emulation-on-web.html)
+  (April 2016) he proposed MIME types for emulations and disk images, and a standard picker like
+  pdf.js, warning that wrapping an image in one particular emulation "makes it accessible in the
+  present, not preservable for the future."
+- **The law.** The Copyright Office granted a software preservation exemption to §1201 in 2018
+  ([Harvard Cyberlaw Clinic](https://clinic.cyber.harvard.edu/2018/10/26/a-victory-for-software-preservation-dmca-exemption-granted-for-spn/)).
+  The 2024 rule allows off-premises access to preserved software "to only one user at a time, for
+  a limited time" per lawfully owned copy, close to the lending he proposed, but keeps video games
+  on the premises ([Federal Register, 28 Oct 2024](https://www.govinfo.gov/content/pkg/FR-2024-10-28/pdf/2024-24563.pdf);
+  [Video Game History Foundation](https://gamehistory.org/dmca-2024-statement/)). The 2027 cycle
+  is open ([copyright.gov](https://www.copyright.gov/1201/2027/)). For books, the courts rejected
+  the Internet Archive's lending in *Hachette v. Internet Archive* (2024).
+- **Emulation as a service.** Yale's EaaSI program, which Mellon funded with $750,000 in 2020
+  ([Mellon](https://mellon.org/grant-details/eaasi-(emulation-as-a-service-infrastructure)%3A-phase-ii-20446893)),
+  continues in the [Software Preservation Network](https://www.softwarepreservationnetwork.org/).
+  bwFLA's line continues as [OpenSLX's EaaS](https://www.openslx.com/), which
+  [Rhizome](https://rhizome.org/artifacts-and-infrastructure/) uses.
+- **The browser.** WebAssembly became a W3C Recommendation in 2019
+  ([W3C](https://www.w3.org/press-releases/2019/wasm/)); the Archive runs MAME compiled to it, and
+  added Flash through Ruffle in 2020 ([Internet Archive](https://blog.archive.org/2020/11/19/flash-animations-live-forever-at-the-internet-archive/)),
+  as §4.2 predicted Flash would need.
 
 ## Why it's here
 
-The PDP-7 cabinet is a browser emulator built on the path this report describes, and its notes
-adopt lessons from the frameworks it surveys
-([WEB-BENCH.md](../../../packages/cabinet/WEB-BENCH.md)), and its cartridges carry the technical
-and usability metadata §2.4.2 asks for ([CARTRIDGES.md](../../../packages/cabinet/CARTRIDGES.md)). Its
-[open letter to museums, libraries and archives](../../../packages/cabinet/FOR-MUSEUMS.md) takes up
-the same questions: preserved system images, metadata, and access. The cabinet's
-[portrait](../../../packages/cabinet/PORTRAIT.md), which plans to draw the PDP-7, the 340 and the
-people at the console in 3D, is an attempt at the experiential fidelity §2.4.3 describes. [CAUSE-AND-EFFECT.md](../../../packages/cabinet/CAUSE-AND-EFFECT.md)
-ties the two kinds of fidelity together: each step from the person at the console to the phosphor
-links to the source and the scanned listing that explain it. And
-§2.3.2 is where David described Jason Scott's work, years before introducing Don to him
-([Jason Scott](../../jason-scott/README.md)).
+David introduced Don to Jason Scott in October 2026; §2.3.2 is where he had described Jason's work
+nine years earlier ([Jason Scott](../../jason-scott/README.md)). The cabinet is a browser emulator
+on the path this report describes, and its plans answer several of its tasks; which ones, how far,
+and what is missing is worked through in [PRESERVATION.md](../../../packages/cabinet/PRESERVATION.md).
 
 ↑ [David Rosenthal](../README.md)
