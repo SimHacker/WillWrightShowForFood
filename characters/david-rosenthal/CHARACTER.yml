@@ -46,6 +46,10 @@ sources:
       venue: "Alvey Workshop — Methodology of Window Management (1985)"
     - title: "Andrew, a Distributed Computing Environment"
       venue: "Communications of the ACM, March 1986"
+    - title: "Emulation & Virtualization as Preservation Strategies"
+      venue: "Andrew W. Mellon Foundation report, October 2015 (CC BY-SA 4.0)"
+      local: sources/rosenthal-emulation-2015.pdf
+      notes: sources/rosenthal-emulation-2015.md
 
 see_also:
   - { path: GLANCE.yml, why: "Navigation hub" }
