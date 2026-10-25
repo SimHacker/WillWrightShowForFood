@@ -20,7 +20,7 @@ card:
 
 relationships:
   # kinds may stack — real people relate in multiple ways at once
-  - { with: seymour-papert, kinds: [co_creator, closest_collaborator, memorial_discussant], why: "🕯️ Logo (BBN 1967, with Feurzeig/Bobrow/Grant); MIT Logo Group from 1969; gave the inaugural Papert Memorial Lecture" }
+  - { with: seymour-papert, kinds: [co_creator, closest_collaborator, memorial_discussant], why: "🕯️ Logo (BBN 1966–67, with Feurzeig/Bobrow/Grant); MIT Logo Group from 1969; gave the inaugural Papert Memorial Lecture" }
   - { with: marvin-minsky, kinds: [lab_milieu, archivist_of, memorial_discussant], why: "🕯️ MIT AI Lab Logo culture; her channel preserves rare footage of Marvin (incl. the SNARC story)" }
   - { with: margaret-minsky, kinds: [atari_cambridge_colleague, subject_of_footage], why: "ACRC children's computer; appears in the trove" }
   - { with: david-levitt, kinds: [atari_cambridge_colleague, subject_of_footage], why: "ACRC; her Lisp-machine music video documents his PhD-era work" }
@@ -34,18 +34,18 @@ relationships:
 
 abilities:
 - id: LOGO-ORIGIN
-  name: Logo Origin (1967)
+  name: Logo Origin (1966–67)
   type: activated
   mana: "{G}{G}"
   conditions:
   - segment_topic_in: [logo, turtle, constructionism, education, bbn]
   advertisement:
     method: logoOrigin
-    signature: logoOrigin(bbn1967) → the language built FOR children, firsthand
+    signature: logoOrigin(bbn1966) → the language built FOR children, firsthand
     score_when:
     - trigger: founding_designer_tells_origin
       weight: 0.96
-  effect: "One of the original designers of Logo tells the origin — BBN 1967, then the MIT Logo Group: children as builders of their own understanding."
+  effect: "One of the original designers of Logo tells the origin — BBN 1966–67, then the MIT Logo Group: children as builders of their own understanding."
   verifiable: "History of Logo (HOPL 2020); Wikipedia; Constructionism 2016 Lifetime Achievement"
   combos_with: [SEYMOUR-LOGO-TURTLE, CHILDREN-FIRST, TOONTALK]
 - id: VIDEO-TREASURE-TROVE

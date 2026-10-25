@@ -6,7 +6,7 @@
 ## Who
 
 **Cynthia Solomon** is one of the original designers of **Logo** and a lifelong pioneer of bringing
-computing to children. In 1967, at Bolt, Beranek & Newman, she helped create Logo with Wally
+computing to children. In 1966, at Bolt, Beranek & Newman, she helped create Logo, which was working by the summer of 1967, with Wally
 Feurzeig, Seymour Papert, Daniel G. Bobrow and Richard Grant. When Papert started the MIT Logo
 Group in 1969, she was central to the culture that gave us **turtle graphics** and
 **constructionist learning** — the idea that children learn best by building things that matter to

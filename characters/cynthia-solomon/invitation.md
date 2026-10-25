@@ -25,7 +25,7 @@ that almost no one else has, and you were *there*.
 
 - **A guided screening** — we watch clips from your channel and you narrate them: what was really
   going on, who's in the room, what it felt like.
-- **The birth of Logo** — BBN 1967, the MIT Logo Group, the turtle, and what "children as builders
+- **The birth of Logo** — BBN 1966–67, the MIT Logo Group, the turtle, and what "children as builders
   of their own understanding" actually meant in practice.
 - **Atari Cambridge** — the children's computer that almost was: object-oriented Logo, gesture,
   force feedback, music.

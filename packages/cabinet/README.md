@@ -199,6 +199,9 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
   timing first; today every instruction counts as one cycle.
 - One event followed from the hand on the light pen, through flags, interrupts and handlers, to
   the phosphor and back, each step linked to its source line and scan: [CAUSE-AND-EFFECT.md](CAUSE-AND-EFFECT.md).
+- The first Logo turtles, with the children, the Teletypes, the phone line to the AI Lab and the
+  room, driven by the period's own Logo from ITS: [LOGO-TURTLE.md](LOGO-TURTLE.md). Slow motion
+  down to the beam and the light pen's photocell: [BEAM-AND-PEN.md](BEAM-AND-PEN.md).
 - SIMH stays on the desk as the oracle.
 - Later, not yet: more DEC machines in the cabinet, each from its SIMH
   counterpart. No VAX for now.
