@@ -19,6 +19,27 @@ Her reason for the magazine, in Paleotronic's words: she "firmly believes that a
 early electronics, computers and programming languages is required for today's future engineers to
 eventually succeed in developing new innovative solutions for humanity's problems."
 
+## On learning
+
+In [#Learning2Pivot: What is the future of childhood education?](https://medium.com/@ayresgriffiths/learning2pivot-what-is-the-future-of-childhood-education-52190dd97a5d)
+(June 2020), written as co-founder of bopCode, "a company devoted to encouraging the exploration of
+digital technologies by children," she tells her own schooling. At seven, in 1982, in Alberta, she
+spent one afternoon a week in a "Challenge Program": self-directed group projects for children of
+mixed ages, with a facilitator, and Apple IIs with Logo, which they explored rather than being set
+tasks. Later she ran her school's Mac Plus lab and taught HyperCard and Pascal, again among students
+and teachers of all ages, which she found better for learning and teaching than classes separated by
+age.
+
+Rediscovering Logo while building microM8 with April led to turtleSpaces: "It's 2019 (at the time),
+why isn't there a 3D game engine that uses Logo? It seems brilliant for it, everything is relative to
+the turtle(s)." She found Scratch "a toy, not 'no ceiling', as Papert envisioned," and planned their
+Logo, with over 800 primitives, to be "connected and collaborative," matching learners with others
+further along the same path regardless of age. Her proposal for schools: project-based, self- or
+group-directed learning, each subject at the learner's own pace, mentors and mentees for every
+student, and school buildings as "co-working spaces for kids, with facilitators to help them as
+needed." It is the constructionist argument this repository keeps returning to
+([Remembering the Constructionists](../../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml)).
+
 ## What she makes
 
 - **Paleotronic Magazine**: interviews (Doug Carlston of Brøderbund, Rob Fulop of Imagic, 4am the
@@ -33,6 +54,8 @@ eventually succeed in developing new innovative solutions for humanity's problem
 - **Logo Adventure for Apple Logo** (November 2018): she ported Don's 1983 C64 Terrapin Logo game to
   Apple Logo, put her name in its banner ("MODIFIED FOR APPLE LOGO BY MELODY AYRES-GRIFFITHS 2018"),
   and published it with a disk image ([notes and links](sources/logo-adventure-apple-logo-2018/README.md)).
+- **An interview with Steve Wozniak** about designing the Disk II, for Paleotronic in 2018
+  ([Steve Wozniak Talks Disk ][](https://paleotronic.com/2018/05/19/steve-wozniak-talks-disk/)).
 - Talks with April at KansasFest: upcycling with microM8 (2018), and a Claude MCP server for
   microM8 (2025).
 

@@ -31,6 +31,12 @@ Possible threads, if they want a conversation. Theirs to change or drop.
     callbacks; Don offers to write the pull request
     ([MICROM8.md](../../packages/cabinet/MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly)).
 
+12. **Learning without grades.** Melody's 2020 essay: the 1982 Challenge Program's mixed-age,
+    self-directed Logo projects, bopCode, and turtleSpaces as a connected place where learners find
+    mentors of any age. With Cynthia Solomon, Brian Harvey and the constructionists.
+13. **Woz and the Disk II.** Their 2018 interview, and the "shew, shew, shew" of his accelerating
+    head, which the cabinet will make from the step timing ([DISK-II-SOUND.md](../../packages/cabinet/DISK-II-SOUND.md)).
+
 ## Things to bring
 
 - The cabinet running PDP-7 Forth, and the federation demo once it works.
