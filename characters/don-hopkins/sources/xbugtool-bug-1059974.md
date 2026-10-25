@@ -33,7 +33,7 @@
 | Don's xbugtool rant | [unix-haters/x-windows/xbugtool.html](http://www.art.net/~hopkins/Don/unix-haters/x-windows/xbugtool.html) |
 | OLWM server grab RFE | Bug #1059370 — root menu grabs server, queues client output |
 | X-Windows Disaster ch. | [medium.com/@donhopkins/the-x-windows-disaster-128d398ebd47](https://donhopkins.medium.com/the-x-windows-disaster-128d398ebd47) |
-| unnatural-selection | [`../../david-rosenthal/05-deskset-weiser-vickie-context.md`](../../david-rosenthal/05-deskset-weiser-vickie-context.md) |
+| unnatural-selection | [`../../david-rosenthal/05-deskset-weiser-vicky-context.md`](../../david-rosenthal/05-deskset-weiser-vicky-context.md) |
 | ICCCM treaty | [`../../david-rosenthal/03-icccm-the-xwindows-treaty.md`](../../david-rosenthal/03-icccm-the-xwindows-treaty.md) |
 
 ↑ [don-hopkins sources](README.md) if present

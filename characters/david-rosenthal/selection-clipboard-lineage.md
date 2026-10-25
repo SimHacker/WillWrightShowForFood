@@ -98,7 +98,7 @@ Research notes for on-air correction by guests — not authoritative history.
 
 ### Deskset / calm computing
 
-→ [Deskset flame](05-deskset-weiser-vickie-context.md) · [Don XBugTool](../don-hopkins/sources/xbugtool-bug-1059974.md) · Weiser/Vicky — ask consent before on-air
+→ [Deskset flame](05-deskset-weiser-vicky-context.md) · [Don XBugTool](../don-hopkins/sources/xbugtool-bug-1059974.md) · Weiser/Vicky — ask consent before on-air
 
 ---
 

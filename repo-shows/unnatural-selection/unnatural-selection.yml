@@ -67,7 +67,7 @@ threads:
     source: characters/david-rosenthal/04-nfs-news-x11-standards-war.md
   - id: deskset-calm
     lead: david-rosenthal
-    source: characters/david-rosenthal/05-deskset-weiser-vickie-context.md
+    source: characters/david-rosenthal/05-deskset-weiser-vicky-context.md
     don: characters/don-hopkins/sources/xbugtool-bug-1059974.md
     beats:
       - DSHR Lichtenstein PS — Deskset whizzy vs inconspicuous tools

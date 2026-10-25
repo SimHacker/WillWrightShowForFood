@@ -102,7 +102,7 @@ DSHR's [*History of Window Systems*](https://blog.dshr.org/2021/03/history-of-wi
 Ted Nelson (anti-invisible-clipboard) × DSHR (ICCCM author). PRIMARY/SECONDARY/CLIPBOARD, Alvey nomenclature fights, per-system taxonomy.
 
 → [00-START-HERE](00-START-HERE.md) · [selection-clipboard-lineage.md](selection-clipboard-lineage.md)  
-→ [Deskset flame](05-deskset-weiser-vickie-context.md) · [ICCCM treaty](03-icccm-the-xwindows-treaty.md)
+→ [Deskset flame](05-deskset-weiser-vicky-context.md) · [ICCCM treaty](03-icccm-the-xwindows-treaty.md)
 
 ---
 
