@@ -115,6 +115,78 @@ turtle and scheme alone, more for each cartridge.
 - The 512-word link limit is easier to meet, since names no longer sit between headers.
 - Saves about one bank-0 word for every three name characters: 200 to 600 words a cartridge.
 
+### What step 2 needs from the assembler: one definition, two destinations
+
+Words defined at run time are easy: `CREATE` keeps two pointers, `HERE` in bank 0 and a name
+pointer in bank 1, and writes to each. The kernel's own 84 headers, and pixie.s's, are written
+in assembler source, and today each one is spelled out by hand: the packed name words, then the
+header word with its count, tag and link computed from the previous header's label.
+
+```
+" DUP ( x -- x x )
+	0446560	" DUP
+h.dup:	0060000+tag.prim+h.dup-h.xi-1	" DUP
+dup:	jms un
+```
+
+With names in bank 1, every word would need two edits in two places that must agree: the
+name record in high memory, and the header in low memory pointing at it. So the assembler has to
+assemble into **two destinations at once**, low and high, from **one definition macro** per
+word:
+
+```
+	fword DUP, dup, tag.prim
+dup:	jms un
+```
+
+which expands to
+
+```
+lo.=.			" remember the low location counter
+.=hi.			" assemble into bank 1
+n.dup:	3		" count
+	0446560		" DUP
+hi.=.			" remember the high one
+.=lo.			" back to bank 0
+	n.dup		" the name's 15-bit address, at xt-1
+h.dup:	0060000+tag.prim+h.dup-last.-1	" count, tag, link
+last.=h.dup
+```
+
+- **Two location counters.** `lo.` and `hi.` are ordinary redefinable assignments, so the
+  expansion is plain as7 (or plain MACRO-9 with `.LOC`). The macro is the only new thing; the
+  assembler already has `.=` and redefinition.
+- **The link is computed, not written.** `last.` is the previous header, carried from one
+  expansion to the next, so inserting or moving a word no longer means editing its neighbour's
+  link expression. The 512-word link check is the assembler's: an error at the line, not a
+  broken chain at run time.
+- **The header keeps its count field**, so `FIND` rejects most candidates without an extended
+  fetch and only reads bank 1 when the count matches.
+- **The name pointer sits at xt-1**, where the name words are now, so the body stays at xt+1,
+  `>NAME` is `xt 1- @`, and `NEXT` and the threaded code don't change.
+- **Same macro, other layouts.** Pointed at one destination it lays the name down just before
+  the header, as kernel-names-full.s does now; pointed at none it makes a headerless word, as
+  Open Firmware's metacompiler does with `headerless` and `headers` (`forth/kernel/metacompile.fth`).
+  One source, three builds, chosen by an assignment at the top of the file.
+- **The run-time twin.** `fword` at assembly time and `mkhdr` at run time lay down the same two
+  records. Both should come from one declaration of the header and name types
+  ([DESIGN.md, Typed memory](DESIGN.md#typed-memory-core-as-typed-blocks)), and a test should
+  check that a word defined each way produces the same records.
+
+What the cabinet's assembler lacks today:
+
+| Needed | Today |
+|---|---|
+| A macro facility | None in `as7.ts`. MACRO-9 has `.DEFIN`, `.ETC`, `.ENDM` and created symbols (manual §3.16, §4.3.2, in [reference/](reference/)) |
+| Switching location counters | Have: `.=` and redefinable assignments in as7; `.LOC` "as many times as required" in MACRO-9 (§3.3) |
+| Names packed the kernel's way | Neither `.SIXBT` nor as7 does it. The kernel's SIXBIT is ASCII minus 040 (`D` is 044, space 0); MACRO-9's `.SIXBT` is trimmed ASCII (`A` is 01, space 040). The macro needs a name-packing operator of its own |
+| Addresses past 8K in the back end | `as7.ts` places 18-bit addresses, but `PDP7` declares 13 address bits, and the listing writes a line's extra words at `addr + k` masked to 13 bits. A line that emits into two banks needs each word listed at its own address, which `AsmLine.words` already records |
+| One source map across banks | `AsmLine.words` holds each word's address, so a word in bank 1 maps back to its `fword` line; the memory panel has to show bank 1 for that to be visible |
+
+Upstream compatibility: Mitch's build assembles with his `as7`. If the macro is expanded by a
+cabinet script into plain as7 (as make-forth-extended.py generates kernel-names-full-extended.s),
+his tools never see it. Whether his `as7` and loader place words above 8K is still to check.
+
 ## Step 3: overlays, not high-bank threaded code
 
 Putting the threaded code itself in high banks would free most of bank 0, but `NEXT` would have
@@ -137,5 +209,10 @@ names, or reload one overlay.
 1. ~~`X@`, `X!`, `XMOVE`, `XHERE`; the handler's `EMIR`.~~ Done.
 2. Programs on 32K machines: `coreWords: 32768` for the hand programs, and pose streams
    (capture, record, play back) in datahand.fs.
-3. Names in bank 1, in the full-names kernel.
+3. Names in bank 1, in the full-names kernel:
+   1. The assembler: macros, a name-packing operator, 15-bit addresses in the back end and the
+      listing.
+   2. `fword`, first pointed at one destination, reproducing kernel-names-full.s word for word.
+   3. Then pointed at bank 1, with `FIND`, `CREATE`, `WORDS` and `mkhdr` reading and writing
+      names there.
 4. Overlays for cartridges.

@@ -104,10 +104,12 @@ structures and files, working at every layer:
 - **Growing the assembler.** Macro features compatible with DEC's later assemblers, following the
   MACRO-9 manual already in [reference/](reference/), so later source can be read and translated
   too.
-- **A Forth that uses all of memory.** A headerless Forth keeps the low 8K for threaded code and
-  assembly, and moves its names, headers and strings to high memory, with words for reaching
-  extended memory. The first step works; moving the names is designed
-  ([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md)).
+- **A Forth that uses all of memory.** The low 8K keeps the threaded code, the assembly and a short
+  header for each word; the names move to high memory, with words for reaching extended memory
+  and, later, whole programs kept there as overlays. The first step works; moving the names is
+  designed ([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md)). It depends on the assembler growing
+  macros: one word-definition macro assembles each word into two destinations at once, its header
+  and code in low memory and its name in high memory, so the two can't disagree.
 
 Each tool feeds the others: the assembler checks the translation, the translation puts the 1969
 code into Forth, Forth builds rings, the ring viewer reads them out of core, and the source maps tie

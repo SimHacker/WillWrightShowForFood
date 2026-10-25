@@ -186,3 +186,7 @@ checked-in files are what the translator makes today.
    print it.
 6. **A 6502** machine description and front end, for symbols and source maps in a JavaScript 6502
    emulator.
+7. **Macros, and two destinations at once**: a word-definition macro that lays a Forth word's
+   header and code in bank 0 and its name in bank 1 from one line, with the link computed. It needs
+   macros (after MACRO-9's `.DEFIN`), a name-packing operator for the kernel's SIXBIT, and 15-bit
+   addresses in the back end and listing ([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md#what-step-2-needs-from-the-assembler-one-definition-two-destinations)).
