@@ -27,14 +27,19 @@ memory, soft switches, breakpoints and settings. The CPU's speed changes while i
 steps one or ten intervals, so you can go back to just before a crash and step from there. The memory
 pane edits hex or ASCII in main or auxiliary memory, searches for strings and byte sequences, and can
 ignore the high bit; the soft-switch pane toggles switches live (to look at another graphics page);
-breakpoints can tell main from auxiliary memory; memory blocks load and save.
+breakpoints can tell main from auxiliary memory; memory blocks load and save. The current
+[help page](https://paleotronic.com/software/microm8/help/web-debugger/) adds a **100% recording mode
+that "captures EVERYTHING"** (and uses a lot of disk), a heat map, the debugger reachable from the
+menu (Tools, Web Debugger, choose a VM), and command-line flags that launch a disk, open the
+debugger and run a control program, so debugging itself can be scripted.
 
 What the heat map is today: 256 counters, each holding a 4-bit read intensity and a 4-bit write
 intensity, either one per 256-byte page of the 64K, or one per byte within a chosen page, for main
 or aux memory (`core/memory/mmu.go`, `HeatMapRead`/`HeatMapWrite`). There is also a combined execute mode,
 instruction tracing, and settings for full CPU recording, to the debugger or to a file
-(`DebugFullCPURecord`, `FileFullCPURecord`). Memory writes are already recorded in real time for the rewind. What isn't kept is a per-address
-record of reads and executes, or an access history browsable by address.
+(`DebugFullCPURecord`, `FileFullCPURecord`). Memory writes are already recorded in real time for the rewind, and the 100% mode records
+everything. What's missing is less the data than the views: a per-address map of reads, writes and
+executes over a whole recording, and an access history you can browse by address.
 
 ## What turtleSpaces exposes
 
@@ -80,10 +85,11 @@ nothing changes unless it's turned on:
 - **Access counters for every address at once**: `@counter.set` already counts reads, writes or
   executes for a chosen address; a mode that keeps all three for all 64K, with the cycle of the first
   and last, would feed a full map. A few megabytes.
-- **An access log**: microM8 already records every memory write for rewind; adding reads and
-  executes as `(cycle, PC, address, kind, value)` records, and streaming them over the debug
-  WebSocket, would let a panel show what happened, where and when, and scrub through it with the
-  rewind that exists.
+- **Access history as a stream**: microM8 already records writes in real time and everything in
+  its 100% mode. Exposing that recording as `(cycle, PC, address, kind, value)` records over the debug
+  WebSocket, or to a WebAssembly host directly, would let a panel show what happened, where and when,
+  and scrub through it with the rewind that exists. The work is an export and an index, not new
+  capture.
 - **Subscriptions**: the WebSocket pushes changes to a watched range or to the heat map instead of
   being polled.
 - **Allowed origins** for the debug server, so a page from another host can connect when the user
