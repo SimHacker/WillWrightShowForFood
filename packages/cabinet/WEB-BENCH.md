@@ -62,8 +62,8 @@ April Ayres-Griffiths; free, for Windows, macOS and Linux, with a WebAssembly su
 not a browser emulator and not a library to borrow, but the clearest example of what an emulator
 owes the person using it. It runs the Apple ][, ][+ and //e with Mockingboard, mouse, Disk II,
 SmartPort and Z-80 CP/M cards, and then "upcycles" them: renders the graphics in 3D and HD with
-cameras you can move; records memory so you can rewind live ("never say die!"); maps a joystick to
-the mouse for GEOS and Dazzle Draw; lets a game ship as a **microPAK**, one file of presentation
+cameras you can move; records memory so you can rewind live ("never say die!"); lets GEOS and Dazzle
+Draw, which expect a joystick, be driven by the mouse; lets a game ship as a **microPAK**, one file of presentation
 for an old program (colour remapping, 3D pixel shifting, music, backdrops, overlays, cheats and
 control programs); keeps presets in YAML; and has a scriptable command line that can run a binary
 without booting a DOS disk. microPAK is the nearest thing anywhere to the cabinet's cartridge.

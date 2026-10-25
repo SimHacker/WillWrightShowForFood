@@ -101,8 +101,8 @@ command line tools in the cabinet's build.
 The other half is what the emulator owes the person using it. Running the program correctly is the
 floor. Paleotronic's [microM8](https://paleotronic.com/software/microm8/), designed and programmed by
 April Ayres-Griffiths, shows how much further an emulator can go, as a work of love: it renders Apple
-][ games in 3D with cameras you can move, rewinds them live, maps a modern game controller or mouse
-onto what each program expected, and packages a new presentation for an old game as one file,
+][ games in 3D with cameras you can move, rewinds them live, lets programs that expected a joystick be driven
+by a mouse, and packages a new presentation for an old game as one file,
 microPAK, without changing the game. That is accessibility in the full sense: an emulator that
 meets today's player halfway and still runs the original. The cabinet's cartridges, its photocell
 pen and its portrait are meant in the same spirit ([MANIFESTO.md](MANIFESTO.md)).
