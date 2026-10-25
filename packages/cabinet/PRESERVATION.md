@@ -25,7 +25,7 @@ His eight tasks (§6), with what the cabinet has, what is planned, and what is m
 
 | Task | Today | Planned | Missing |
 |------|-------|---------|---------|
-| 6.1 Standard system images | The RB09 disk uses SIMH's attach format, so UNIX's `image.fs` moves between SIMH and the cabinet unchanged ([UNIX-V0.md](UNIX-V0.md)) | A cartridge as a self-describing directory, `cartridge.yml` plus its media ([CARTRIDGES.md](CARTRIDGES.md) §1); portable JSON snapshots ([WEB-BENCH.md](WEB-BENCH.md)) | Cartridges are still entries in the applet's program table. No link to the qcow2 and XML world of other frameworks |
+| 6.1 Standard system images | The RB09 disk uses SIMH's attach format, so UNIX's `image.fs` moves between SIMH and the cabinet unchanged ([UNIX-V0.md](UNIX-V0.md)). HyperTIES articles are already unpacked into Markdown with YAML frontmatter ([FORMAT.md](../../apps/ties/FORMAT.md)) | Images unpacked into git trees of their files, with the metadata to repack them byte for byte ([below](#unpacked-images-an-escalator-not-a-blob)); a cartridge as a self-describing directory ([CARTRIDGES.md](CARTRIDGES.md) §1); portable JSON snapshots ([WEB-BENCH.md](WEB-BENCH.md)) | Cartridges are still entries in the applet's program table; no unpacker for the PDP-7 UNIX file system yet; packed images for qcow2-based frameworks are an export, not the format |
 | 6.2 Standard access | A stable URL per program, `/cabinet/<program>/` | Loading a cartridge from any repository ([CARTRIDGES.md](CARTRIDGES.md) §7) | A media type for a cartridge, so a link names the artefact, not the cabinet (see below) |
 | 6.3 Standard invoking | One device contract inside the cabinet, and one port for local or remote play | | Wrapping other emulators |
 | 6.4 Tools for images | The OCR'd PIXIE listing assembled and checked by running it; literal pools recovered by script ([PIXIE-RESTORATION.md](PIXIE-RESTORATION.md)) | A build cache, verify steps, decoding binaries back to verified source, CI that rebuilds every cartridge ([CARTRIDGES.md](CARTRIDGES.md) §§2, 4, 7) | Imaging physical media; identifying file systems |
@@ -42,6 +42,51 @@ one cycle, and the pen is sampled once per browser frame. **Load** is the Intern
 the reader's browser does the work, so serving costs almost nothing. **Curation cost** has not been
 measured, though the AI model bills for the PIXIE restoration, in the thousands of dollars a month,
 are a rare concrete figure ([PIXIE-RESTORATION.md](PIXIE-RESTORATION.md#what-it-cost)).
+
+## Unpacked images: an escalator, not a blob
+
+His first task asks for a standard format for preserved system images, and the frameworks of 2015
+answered with disk images: qcow2 files plus XML. The answer here is different. A disk image becomes
+a git repository of its contents: every file on it as a file, every archive inside it unpacked into
+its members, recursively, down to the smallest unit that has a meaning, with the metadata needed to
+pack it all back into the original bytes. The tools that pack and unpack are modern, open command
+line programs, one per format.
+
+This is what Don has been doing with The Sims. The Soul City pipeline unpacks Sims 1 FAR archives and
+IFF files layer by layer: raw bytes, then each chunk as its own file, then decoded fields as YAML,
+then readable pseudocode and plain English, then annotations, then a character's `CHARACTER.yml`.
+The design's invariant is that the first layers round-trip byte for byte: unpack and repack, and you
+get the identical file ([IFF-LAYERS.md](https://github.com/SimHacker/moollm/blob/main/archive/sim-obliterator/designs/IFF-LAYERS.md);
+[the TypeScript platform](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/vitamoo/OBLITERATOR-TYPESCRIPT.md)).
+At the YAML layers, comments carry intent for people and LLMs, and are stripped when the content is
+packed back into binary; annotations, such as the layout of a behavior graph that the shipped game
+threw away, live beside the data and are never lost. HyperTIES went the same way: each 1988 article
+is a Markdown file with everything the system knew in its frontmatter
+([FORMAT.md](../../apps/ties/FORMAT.md)).
+
+It works like an escalator: the tools carry you up from bytes to text you can read and edit, and back
+down to bytes the original software accepts. Mitch Hedberg said an escalator can never break, it can
+only become stairs. The same is true here. If the tools stop working, every layer is still files in
+a repository that anyone can read and walk through, and the raw layer is still the original bytes.
+
+What this gives preservation:
+
+- **Git does the hard parts.** History, diffs, review, branches, and many copies, which is
+  LOCKSS's principle, come free. A change to one file in a disk image is a one-line diff, not a new
+  multi-gigabyte blob.
+- **People and LLMs can read it.** Search, edit and annotate at the level where things have names;
+  the binary is generated, not hand-edited.
+- **The format lives in the tools.** David's 2009 point was that an open source renderer is
+  "executable preservation metadata." An open source packer and unpacker is the same for a file
+  format, and the source of the original tools, where it survives, is the blueprint for the new ones:
+  the Sims tools follow the game's own file formats, the cabinet's assembler follows the 1972
+  listing.
+- **Other frameworks still get an image.** Packing the tree produces the disk image a qcow2-based
+  framework expects, so the unpacked tree is the preserved form and the image is an export.
+
+For the cabinet this means: unpack the PDP-7 UNIX disk into its directories and files, each tape into
+its records, each listing into its pages and lines, and make the cartridge the manifest that says how
+to put them back.
 
 ## The criticism to take seriously
 
@@ -146,9 +191,11 @@ institution willing to be named as a partner.
 4. **A cost log**: hours, model costs and verification for each restoration.
 5. **SIMH contributions**: the JK09 and anything else the cabinet adds that SIMH lacks, as pull
    requests.
-6. **Memory-cycle timing**, which the radio, the photocell pen and honest fidelity all wait on.
-7. **A partner**: one museum, library or university willing to host cartridges and apply with the
+6. **Unpackers for the cabinet's media**: the PDP-7 UNIX file system into directories and files,
+   tapes into records, listings into pages and lines, each with a byte-exact repacker and a test.
+7. **Memory-cycle timing**, which the radio, the photocell pen and honest fidelity all wait on.
+8. **A partner**: one museum, library or university willing to host cartridges and apply with the
    project.
-8. **An NLnet application**, once 1 and 2 are done.
+9. **An NLnet application**, once 1 and 2 are done.
 
 ↑ [README](README.md) · [FOR-MUSEUMS](FOR-MUSEUMS.md) · [Rosenthal 2015](../../characters/david-rosenthal/sources/rosenthal-emulation-2015.md)
