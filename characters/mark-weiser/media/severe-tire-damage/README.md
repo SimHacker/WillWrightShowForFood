@@ -3,7 +3,14 @@
 Mark Weiser was the drummer of Severe Tire Damage, a band that called itself "the first band on the
 internet, the first band on the MBone." On 24 June 1993 it played live over the Internet, and then
 kept broadcasting most Wednesday nights "to demonstrate that technology can be both loud and
-annoying." Its web site, `www.std.org`, survives in the Wayback Machine (600 captures, 1997–2026).
+annoying." On 18 November 1994, in the band's words, it "opens for the Rolling Stones" on the
+Stones' own MBone broadcast.
+
+**The band is still online** at [std.org](https://www.std.org/), "the house band of the Internet,"
+with its history, videos and music, and its albums stream on
+[Spotify](https://open.spotify.com/artist/1FuRfxOAQQqlUSU5WqF9gJ), Apple Music and
+[YouTube](https://www.youtube.com/channel/UCIf99CMRPGZvYOZKEeCOGJQ). Listen there first. What
+follows is the 1990s site as the Wayback Machine kept it (600 captures, 1997–2026).
 
 ## The band
 
@@ -14,7 +21,8 @@ From the site's own pages ([band members](site/text/bandmembers.html), [friends]
 - **Steve Rubin**, vocals
 - **Mark Weiser**, drums
 
-Friends of the band: Hania Gajewska (band manager emeritus), Ken Beckman (founding member; drums,
+The live site adds the crew: Lance Berc (fog and imaging), Brad Horak (effects and networks) and
+Berry Kercheval (audio and hacks). Friends of the band, from the 1990s page: Hania Gajewska (band manager emeritus), Ken Beckman (founding member; drums,
 live audio engineering), Anna Karlin (founding member; guitar and vocals), Amy Lansky (vocals),
 Dexter Kozen (guitar, composer), Ethan Robertson (sax and keyboards), Bruce Donald (guitar), Daniel
 Scharstein (keyboards and drums), and Paul "Shag" Walmsley (remote operator).

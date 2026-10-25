@@ -48,8 +48,8 @@ microM8's 3D Logo turtle ([TINY-TITAN.md](../../packages/cabinet/TINY-TITAN.md#f
 In November 2018, when Alexey Slyusar ported Don's 1980s Logo Adventure to LLOGO on ITS, April
 explained in the [PDP-10/its issue](https://github.com/PDP-10/its/issues/1268) how to move Logo
 source into an emulated Apple ][: paste it at the Logo prompt with Ctrl-Shift-V in microM8, then
-`SAVE`. Paleotronic had just ported the same game to Apple Logo
-([HN](https://news.ycombinator.com/item?id=18409959)).
+`SAVE`. Melody had just ported the same game to Apple Logo
+([her port](../melody-ayres-griffiths/sources/logo-adventure-apple-logo-2018/README.md)).
 
 ## Connections
 

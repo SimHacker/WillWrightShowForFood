@@ -92,8 +92,8 @@ drives programs written for a joystick. Applesoft and Logo rewritten in Go, with
 microPAK, one file that dresses an old program in new colours, music, backdrops and controls,
 which is the nearest thing anywhere to our cartridge. And now an HTTP API and an MCP server, so
 another program, or an AI, can drive it. Much of this page is microM8's attitude, applied to a
-PDP-7. Don has been telling people so since 2018, when Paleotronic ported his 1980s Logo Adventure
-to Apple Logo ([HN](https://news.ycombinator.com/item?id=18409959)).
+PDP-7. Don has been telling people so since 2018, when Melody ported his 1983 Logo Adventure to Apple
+Logo ([HN](https://news.ycombinator.com/item?id=18409959)).
 
 **Other emulators join as peers, not as ports.** The cabinet doesn't need to contain every machine.
 It needs every machine to be able to talk to every other one. tiny-titan is the hub: each instance

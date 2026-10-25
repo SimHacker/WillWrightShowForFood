@@ -20,8 +20,12 @@ Possible threads, if they want a conversation. Theirs to change or drop.
    two fit together, and how the rest of us can send them users.
 8. **Paleotronic Magazine.** Interviews with Doug Carlston, Rob Fulop and 4am; what makes popular
    computing history work.
-9. **Logo Adventure.** Paleotronic ported Don's 1980s C64 Terrapin Logo game to Apple Logo in 2018,
+9. **Logo Adventure.** Melody ported Don's 1983 C64 Terrapin Logo game to Apple Logo in 2018,
    while Alexey Slyusar ported it to LLOGO on ITS. Play both side by side.
+
+10. **Woz's video, in 3D.** Don's 2018 letter to Melody: a 3D diagram of the logic between video
+    memory and the NTSC signal, "like a cybertronic rube goldberg device," built over microM8's 3D
+    pixels ([CAUSE-AND-EFFECT.md](../../packages/cabinet/CAUSE-AND-EFFECT.md)).
 
 ## Things to bring
 

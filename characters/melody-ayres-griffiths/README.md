@@ -30,6 +30,9 @@ eventually succeed in developing new innovative solutions for humanity's problem
 - **microM8**, and the Kickstarter, *Paleotronic Retro-Technology Magazine + microM8 3D
   Emulator*, which lists Melody as the project's creator
   ([Kickstarter](https://www.kickstarter.com/projects/paleotronic/paleotronic-retro-technology-magazine-microm8-3d-e)).
+- **Logo Adventure for Apple Logo** (November 2018): she ported Don's 1983 C64 Terrapin Logo game to
+  Apple Logo, put her name in its banner ("MODIFIED FOR APPLE LOGO BY MELODY AYRES-GRIFFITHS 2018"),
+  and published it with a disk image ([notes and links](sources/logo-adventure-apple-logo-2018/README.md)).
 - Talks with April at KansasFest: upcycling with microM8 (2018), and a Claude MCP server for
   microM8 (2025).
 
