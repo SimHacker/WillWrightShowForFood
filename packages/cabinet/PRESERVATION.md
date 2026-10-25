@@ -88,6 +88,16 @@ For the cabinet this means: unpack the PDP-7 UNIX disk into its directories and 
 its records, each listing into its pages and lines, and make the cartridge the manifest that says how
 to put them back.
 
+For an Apple ][ in the cabinet, it means the tools outside the emulator become universal file
+converters. One Apple ][ ran many operating systems, each with its own disk format: DOS 3.2's
+13-sector disks, DOS 3.3, ProDOS, UCSD Pascal, Forth's raw blocks, and CP/M on a Z-80 card. Their
+files are all unpacked the same way, into a tree in git, and the build tools pack whatever a program
+needs into whichever format the operating system it runs on expects. The same source and data can be
+deployed to DOS 3.3 one day and ProDOS the next, or moved from a Pascal disk to a Forth one, all from
+outside, without a copy program running inside the emulated machine. Open tools such as CiderPress and
+AppleCommander already read and write these formats, and are the blueprints for doing it as small
+command line tools in the cabinet's build.
+
 ## The criticism to take seriously
 
 In 2016 he wrote that the frameworks' links "are to specific emulation instances. Over time
