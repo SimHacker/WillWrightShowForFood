@@ -58,7 +58,10 @@ side, where it is easy.
 - **Dasher, steered by the program's own grammar.** The emulator can read what the running
   program would accept next (Forth's dictionary, PIXIE's commands, UNIX's files) straight out of
   core, so a Dasher-style input offers only those, sized by how likely they are, for anyone who
-  steers with a mouse, a finger, their eyes or one switch ([TELETYPE-DASHER.md](TELETYPE-DASHER.md)).
+  steers with a mouse, a finger, their eyes or one switch. For people who type, the same reading
+  gives Copilot-style Tab completion and help: on an Apple ][, BASIC keywords from the token table,
+  variables from the variable table, and `GOSUB` targets named by the `REM` on their first line,
+  all read from the tokenized program in memory ([TELETYPE-DASHER.md](TELETYPE-DASHER.md)).
 
 ## Every machine can see every other machine
 

@@ -92,6 +92,9 @@ WebSocket, the same panels would give:
 - **Data structure views**: Applesoft program lines and variables, ProDOS directories, the text
   and graphics screen memory as pictures, and for programs that have them, their own structures,
   declared once as types.
+- **Completion and help at the keyboard**: Applesoft keywords, line numbers named by their `REM`s,
+  and variables, read from the tokenized program in memory
+  ([TELETYPE-DASHER.md](TELETYPE-DASHER.md#completion-and-help-basic-on-the-apple-)).
 - **Forth on the Apple**: the same Forth dictionary and disassembler views the PDP-7 has, for an
   Apple ][ Forth.
 - **Logo's insides**: microM8's Logo is rewritten in Go, so its procedures and turtles aren't in
