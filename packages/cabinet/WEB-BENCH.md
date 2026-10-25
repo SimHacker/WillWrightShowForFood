@@ -57,10 +57,16 @@ this free.
   AI agent that reads registers, the screen and memory and sets breakpoints. Closest in spirit
   to the cabinet.
 
-**[microM8](https://paleotronic.com/software/microm8/)** (Paleotronic; designed and programmed by
-April Ayres-Griffiths; free, for Windows, macOS and Linux, with a WebAssembly subset, cyanIIde) —
-not a browser emulator and not a library to borrow, but the clearest example of what an emulator
-owes the person using it. It runs the Apple ][, ][+ and //e with Mockingboard, mouse, Disk II,
+**[microM8](https://paleotronic.com/software/microm8/)** (Paleotronic: [April](../../characters/april-ayres-griffiths/README.md) and
+[Melody](../../characters/melody-ayres-griffiths/README.md) Ayres-Griffiths; designed and programmed by
+April; free, for Windows, macOS
+and Linux, with a WebAssembly subset, cyanIIde; Go source under the MIT license since September 2025,
+[microm8-cln](https://github.com/paleotronic/microm8-cln)) — not a browser emulator, but the clearest
+example of what an emulator owes the person using it, and the inspiration the
+[MANIFESTO](MANIFESTO.md#a-federation-of-emulators-after-microm8) credits. Its MCP server and HTTP
+API make it the first peer for the tiny-titan federation.
+
+It runs the Apple ][, ][+ and //e with Mockingboard, mouse, Disk II,
 SmartPort and Z-80 CP/M cards, and then "upcycles" them: renders the graphics in 3D and HD with
 cameras you can move; records memory so you can rewind live ("never say die!"); lets GEOS and Dazzle
 Draw, which expect a joystick, be driven by the mouse; lets a game ship as a **microPAK**, one file of presentation

@@ -442,6 +442,39 @@ layer, so a character giving a talk can hold up a data structure and turn
 it. The cabinet's RINGS panel shows the live ring structure in a running
 SYMELEC's core, changed cells lit as they change, or a file.
 
+### The hub for every emulator
+
+The same seam that carries Wiseman's link can carry anything. tiny-titan becomes the switchboard
+for a federation of emulators ([MANIFESTO](MANIFESTO.md#a-federation-of-emulators-after-microm8)):
+
+- **Registration.** Each emulator instance, the cabinet's own or another program's, announces
+  itself with a `services` ring: its machine, its operating system, and what it can be asked to do.
+- **Peers outside the page.** A peer is reached over whatever it speaks. For microM8 that is its
+  MCP server (stdio or SSE) or its HTTP API; for a FujiNet-style device, its network protocol; for
+  another browser, a WebSocket.
+- **Translation.** Rings are the hub's own form. A translator per peer turns a ring into the
+  peer's language and its reply back into a ring, and the generic ones turn rings into JSON, YAML
+  and XML and back. The schema is a ring too, so a translator can be written from it.
+- **Fairness.** Machines run at their own speeds. Messages queue at the hub, and the PDP-7 polls
+  for them with `LSF` as it always has.
+
+### First demo: PIXIE rings to microM8's 3D turtle
+
+1. A Forth word on the PDP-7 builds a ring for a figure: a list of moves and turns, or a PIXIE
+   picture's lines.
+2. It sends the ring over the link. `BlockletHost` receives it as it receives a drawing today.
+3. A turtle translator walks the ring and writes Logo: `PENDOWN`, `FORWARD`, `RIGHT`, and the 3D
+   turns microM8's Logo adds.
+4. The translator calls microM8's MCP server: `type_text` at its Logo prompt, or
+   `write_interpreter_code` for a whole procedure, then `screenshot` to bring the picture back.
+5. The result returns to the PDP-7 as a ring: done, or the error microM8 reported.
+
+Nothing in it is new on microM8's side; its MCP tools already do each step. A remote turtle
+protocol, published by Paleotronic for turtleSpaces or for microM8, would be the better target
+than typed Logo, and the translator would switch to it. Ask them first:
+[April Ayres-Griffiths](../../characters/april-ayres-griffiths/README.md) and
+[Melody Ayres-Griffiths](../../characters/melody-ayres-griffiths/README.md).
+
 ## Where things are
 
 | What | Where |

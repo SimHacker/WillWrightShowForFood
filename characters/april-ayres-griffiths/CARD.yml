@@ -1,0 +1,40 @@
+# CARD — April Ayres-Griffiths (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: april-ayres-griffiths
+  name: April Ayres-Griffiths
+  type: [invitation, guest, portrayal]
+card:
+  name: April Ayres-Griffiths
+  title: Upcycler
+  rarity: rare
+  signifier: "🌈"
+  flavor: Run the machine faithfully, then give it what it never had.
+abilities:
+  - id: UPCYCLE
+    name: Upcycle
+    type: static
+    effect: An old machine gets 3D, HD, rewind, a reverse debugger and a printer that makes PDFs, and stays itself.
+    verifiable: "microM8 features: https://paleotronic.com/software/microm8/features/"
+    combos_with: [CABINET, CARTRIDGE]
+  - id: LIVE-REWIND
+    name: Live Rewind
+    type: activated
+    effect: Back up a running Apple ][ to any moment and go on from there.
+    verifiable: "microM8 memory recording and live rewind"
+  - id: MCP-DRIVEN
+    name: Driven by Agents
+    type: activated
+    effect: Another program, or an AI, types, reads memory, sets breakpoints and takes screenshots.
+    verifiable: "microM8 MCP server, KansasFest 2025; MCP tools in microm8-cln"
+    combos_with: [TINY-TITAN-HUB]
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../melody-ayres-griffiths/README.md
+  - path: ../../repo-shows/emulation-roundtable/README.md

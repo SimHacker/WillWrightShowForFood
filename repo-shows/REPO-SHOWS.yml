@@ -97,6 +97,7 @@ seeds:
   terry-winograd: "Solo / Forebear: Terry Winograd — the dragon with the treasure trove of videos. Archive as origin story, curriculum, and series material. Shoulders credit to Terry + every guest."
   jens-monig: "Solo: Jens Mönig — Snap! (BYOB) × Micropolis integration, Snap! internals + the Y combinator, schemas for Snap! (Don's Barcelona talk), and distributed/actor systems in Snap!."
   brian-harvey: "Solo: Brian Harvey — Logo + his books (CS Logo Style, Simply Scheme), BJC, and a lifetime of joyful CS education."
+  emulation-roundtable/: "Series: what does an emulator owe you? April + Melody Ayres-Griffiths (microM8, turtleSpaces), Bob Supnik (SIMH), Lars Brinkhoff, David Rosenthal, Al Kossow, Jason Scott, Thomas Cherryhomes, Mitch Bradley, Brian Silverman. Episodes: upcycling; the tiny-titan federation live (PDP-7 Forth to microM8 3D turtle); emulation is preservation; from the listing up; Logo then and now. SEED."
   thomas-cherryhomes: "Solo: Thomas Cherryhomes (@tschak) — FujiNet, Bus-over-IP, IRATA.ONLINE/PLATO, the Game Lobby. Repo-native retro infrastructure; a real-hardware/network path for the Apple ][ stack + bridges."
   snap-logo-brian-jens.yml: "Group/headline: Brian Harvey + Jens Mönig — Snap! & Logo together, centering Brian's book + lifelong Logo work and the Snap! they built."
   skill-creation.yml: "Group: Skill Creation — authoring Anthropic + MOOLLM skills as constructionism/PBD for the LLM era. Candidates: Walter Bender, Henry Minsky, Peter Norvig, + people into Claude skills + constructionism (to vet)."

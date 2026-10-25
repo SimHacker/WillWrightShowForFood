@@ -141,4 +141,14 @@ who keeps ITS running. Seymour Papert and Marvin Minsky are remembered in their
 5. The room, the machines and stylized children in 3D, with Solomon's guidance.
 6. Scenes and tours, slow motion through the chain, and the cabinet's own KA10 when it runs ITS.
 
+## Where the line goes on
+
+The turtle didn't stop in 1975. Apple Logo II carried it into schools, and
+[turtleSpaces](https://turtlespaces.org/), by [April](../../characters/april-ayres-griffiths/README.md) and
+[Melody](../../characters/melody-ayres-griffiths/README.md) Ayres-Griffiths, carries Apple Logo II into
+three dimensions, in a browser, with a gallery to publish and remix in. Anyone the old turtle hooks
+should be sent there. Their Apple ][ emulator, microM8, runs Apple Logo with 3D modes added, and is
+the target of the cabinet's first cross-emulator demo: Forth on the PDP-7 sends a figure through
+[tiny-titan](TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle), and microM8's turtle draws it.
+
 ↑ [README](README.md) · [PORTRAIT](PORTRAIT.md) · [CAUSE-AND-EFFECT](CAUSE-AND-EFFECT.md)

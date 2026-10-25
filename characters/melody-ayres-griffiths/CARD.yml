@@ -1,0 +1,39 @@
+# CARD — Melody Ayres-Griffiths (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: melody-ayres-griffiths
+  name: Melody Ayres-Griffiths
+  type: [invitation, guest, portrayal]
+card:
+  name: Melody Ayres-Griffiths
+  title: Editor of the Paleotronic
+  rarity: rare
+  signifier: "🐢"
+  flavor: The future's engineers start with the past's machines.
+abilities:
+  - id: TURTLE-SPACE
+    name: Turtle Space
+    type: static
+    effect: Logo in three dimensions, low threshold and no ceiling, in a browser.
+    verifiable: "turtleSpaces: https://turtlespaces.org/"
+    combos_with: [LOGO-TURTLE]
+  - id: PALEOTRONIC
+    name: Paleotronic
+    type: static
+    effect: Interviews and histories that teach where computing came from.
+    verifiable: "https://paleotronic.com/articles/"
+  - id: WEBTV-SOUNDTRACK
+    name: WebTV Soundtrack
+    type: static
+    effect: Background music for a whole platform.
+    verifiable: "Meet the Crew: background music for WebTV / MSNTV, late 1990s"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../april-ayres-griffiths/README.md
+  - path: ../../repo-shows/emulation-roundtable/README.md

@@ -1,0 +1,49 @@
+# Melody Ayres-Griffiths — invitation portrayal. NOT Melody Ayres-Griffiths.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: melody-ayres-griffiths
+  name: "Melody Ayres-Griffiths"
+  type: invitation
+  signifier: "🐢"
+  status: living
+  field: >-
+    Retro-computing writing and education: editor of Paleotronic Magazine; co-developer of turtleSpaces (3D Logo); novelist; musician (WebTV/MSNTV background music)
+  home: characters/melody-ayres-griffiths/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+  note: >-
+    Public record only, from Paleotronic's own pages, GitHub, Kickstarter and
+    KansasFest talks. April and Melody are partners in Paleotronic; how they
+    want to be presented together is theirs to say.
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  joint_with: april-ayres-griffiths
+
+bio:
+  summary: |
+    Editor of Paleotronic Magazine. BASIC on a Timex Sinclair 1000 at six,
+    then a Tandy MC-10, Commodore 64 and Atari 130XE; PC and Apple service
+    technician. Two self-published novels, short stories and editorials;
+    background music for the WebTV / MSNTV platform in the late 1990s. With
+    April, turtleSpaces (a 3D Logo based on Apple Logo II) and microM8; the
+    Paleotronic Kickstarter lists her as creator. Believes early electronics
+    and programming are what future engineers need to solve humanity's
+    problems.
+
+sources:
+  - "Paleotronic, Meet the Crew: https://paleotronic.com/about/meet-the-crew/"
+  - "microM8: https://paleotronic.com/software/microm8/ ; features: https://paleotronic.com/software/microm8/features/"
+  - "microM8 source, MIT, Sept 2025: https://github.com/paleotronic/microm8-cln"
+  - "turtleSpaces: https://turtlespaces.org/ (developed by April and Melody Ayres-Griffiths)"
+  - "KansasFest 2018, Upcycling with microM8: https://www.youtube.com/watch?v=DSnVe0xvkos"
+  - "KansasFest 2025, Claude MCP Server for microM8: https://www.youtube.com/watch?v=Jrkq8Mhww70"
+  - "HN, Logo Adventure for C64 Terrapin Logo, Nov 2018: https://news.ycombinator.com/item?id=18409959"
+  - "PDP-10/its issue 1268, Adventure game in Logo: https://github.com/PDP-10/its/issues/1268"

@@ -1,0 +1,47 @@
+# SHOW — Emulation roundtable: what does an emulator owe the person using it?
+
+show:
+  id: emulation-roundtable
+  title: "Emulation roundtable — what does an emulator owe you?"
+  type: series
+  host: Don Hopkins
+  status: seed
+  consent: not_yet_asked
+  readme: README.md
+
+guests:
+  - { id: april-ayres-griffiths, path: ../../characters/april-ayres-griffiths/, why: "microM8; upcycling; MCP server" }
+  - { id: melody-ayres-griffiths, path: ../../characters/melody-ayres-griffiths/, why: "Paleotronic; turtleSpaces" }
+  - { id: bob-supnik, path: ../../characters/bob-supnik/, why: "SIMH" }
+  - { id: lars-brinkhoff, path: ../../characters/lars-brinkhoff/, why: "ITS, PDP-10, Type 340 phosphor simulator" }
+  - { id: david-rosenthal, path: ../../characters/david-rosenthal/, why: "emulation as preservation; Mellon 2015 report" }
+  - { id: al-kossow, path: ../../characters/al-kossow/, why: "bitsavers; reading old media" }
+  - { id: jason-scott, path: ../../characters/jason-scott/, why: "Internet Archive in-browser emulation" }
+  - { id: thomas-cherryhomes, path: ../../characters/thomas-cherryhomes/, why: "FujiNet" }
+  - { id: mitch-bradley, path: ../../characters/mitch-bradley/, why: "PDP-7 Forth under SIMH; Open Firmware" }
+  - { id: brian-silverman, path: ../../characters/brian-silverman/, why: "PDP-1 Spacewar! emulator; transistor-level 6502/4004" }
+
+wanted_no_room_yet: [Will Scullin (apple2js), Chris Torrence (Apple2TS), Norbert Landsteiner (masswerk), Alexey Slyusar (LLOGO Logo Adventure)]
+
+episodes:
+  - { n: 1, title: "What an emulator owes you", guests: [april-ayres-griffiths, melody-ayres-griffiths, lars-brinkhoff, bob-supnik] }
+  - { n: 2, title: "The federation, live", guests: [april-ayres-griffiths, melody-ayres-griffiths, thomas-cherryhomes, lars-brinkhoff], demo: "PDP-7 Forth -> PIXIE ring -> tiny-titan -> Logo -> microM8 3D turtle; FujiNet joins" }
+  - { n: 3, title: "Emulation is preservation", guests: [david-rosenthal, al-kossow, jason-scott, bob-supnik] }
+  - { n: 4, title: "From the listing up", guests: [mitch-bradley, al-kossow, lars-brinkhoff, brian-silverman] }
+  - { n: 5, title: "Logo, then and now", guests: [melody-ayres-griffiths, april-ayres-griffiths, brian-silverman], maybe: [cynthia-solomon] }
+
+format:
+  live: true
+  run_code: true
+  async_first_ok: true
+  deliverables:
+    - "tiny-titan message vocabulary, written up for any emulator to join"
+    - "WEB-BENCH pages per guest emulator, checked by its authors"
+    - "cabinet license decision, with the guests' advice"
+
+ties_to:
+  - ../../packages/cabinet/MANIFESTO.md
+  - ../../packages/cabinet/TINY-TITAN.md
+  - ../../packages/cabinet/PRESERVATION.md
+  - ../thomas-cherryhomes/
+  - ../lars-brinkhoff/

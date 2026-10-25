@@ -74,6 +74,48 @@ check that serialising it and loading it back gives the same rings. No PDP-7 pro
 written or changed for that. It is a debugger, a file system and a network test at once, and it
 exists because nothing here is sealed off from anything else.
 
+## A federation of emulators, after microM8
+
+**microM8 showed what an emulator owes the person using it.** April and Melody Ayres-Griffiths's
+Apple ][ emulator ([Paleotronic](https://paleotronic.com/software/microm8/)) calls it
+"upcycling": it runs the machine faithfully and then gives it what it never had. Graphics in 3D
+and HD, with cameras you can move. Live rewind. A web debugger that runs time backwards, with
+trace recording and memory heat maps. An Epson FX-80 that prints to colour PDF. A mouse that
+drives programs written for a joystick. Applesoft and Logo rewritten in Go, with 3D modes added.
+microPAK, one file that dresses an old program in new colours, music, backdrops and controls,
+which is the nearest thing anywhere to our cartridge. And now an HTTP API and an MCP server, so
+another program, or an AI, can drive it. Much of this page is microM8's attitude, applied to a
+PDP-7. Don has been telling people so since 2018, when Paleotronic ported his 1980s Logo Adventure
+to Apple Logo ([HN](https://news.ycombinator.com/item?id=18409959)).
+
+**Other emulators join as peers, not as ports.** The cabinet doesn't need to contain every machine.
+It needs every machine to be able to talk to every other one. tiny-titan is the hub: each instance
+of each emulator, ours or anyone's, registers with it, and an Apple ][ running ProDOS Logo and a
+PDP-7 running Mitch's Forth exchange messages through it, each in its own operating system, at its
+own speed, in its own window. Thomas Cherryhomes's [FujiNet](https://fujinet.online/) does this
+for real 8-bit machines, a software-defined peripheral that puts an Atari or an Apple ][ on the
+network through its own bus. The cabinet does it for emulated ones, and the two can meet.
+
+**tiny-titan translates.** Its own language is PIXIE's rings, the PDP-7's data structure, so the
+PDP-7 needs no parser. For everyone else it converts rings to and from JSON, YAML and XML, and
+to whatever a peer speaks: Logo commands for a turtle, MCP calls for microM8, HTTP for a web
+service. It is the protocol droid of the federation, fluent in six million forms of
+communication; MOOLLM's adventure already has [C-3PO](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/robots/README.md)
+on its robot roster, and he would do the voice.
+
+**The first demo.** Forth on the PDP-7 builds a PIXIE ring describing a figure and sends it to
+tiny-titan. tiny-titan translates the ring into Logo and passes it to microM8, running beside the
+PDP-7 in another view, whose 3D turtle draws it. microM8's MCP server can take it today, as typed
+Logo or as interpreter code. The plan is in [TINY-TITAN.md](TINY-TITAN.md#the-hub-for-every-emulator).
+
+**Organelles, not a monoculture.** Each member keeps its own code, its own formats and its own
+license, inside the federation the way an organelle keeps its own DNA inside a cell: microM8's
+YAML presets and microPAKs stay microM8's, read and written in their own terms, with their
+authors' names on them. microM8's source is MIT. The cabinet's license isn't chosen yet; a
+permissive one (BSD or MIT) would let code and formats pass both ways with nothing more than a
+copyright notice, and let the federation become a consortium of emulator authors who agree on
+how their machines talk, and nothing else.
+
 ## Cartridges, and one description of everything
 
 A program on the menu is really a whole configuration: what to load and from where, how to build
