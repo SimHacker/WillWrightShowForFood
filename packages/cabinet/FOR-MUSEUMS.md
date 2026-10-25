@@ -91,6 +91,23 @@ If you hold software, listings, films or recordings like these, the cabinet can 
 running context, and I would be glad to work with you on how they are hosted, credited and
 linked.
 
+David Rosenthal's 2015 report for the Mellon Foundation,
+[*Emulation & Virtualization as Preservation Strategies*](../../characters/david-rosenthal/sources/rosenthal-emulation-2015.md),
+named what emulation-based preservation was missing, and the cabinet's
+[cartridges](CARTRIDGES.md) are an attempt at each:
+
+- **Technical metadata.** The tools of 2015 could not record what an artefact needs in order to
+  run: the emulator, operating system and application. A cartridge states it: the machine and its
+  devices, the tapes and disks, and how to build and load them.
+- **Usability metadata.** At the Archive, key bindings and reference cards often came from
+  visitors' comments. A cartridge carries its keys, switch settings, panels and a help article,
+  shown beside the machine.
+- **Experiential fidelity.** Running a program correctly is not the same as using it the way people
+  did. Spacewar! players wore out the PDP-1's test switches and built control boxes; the PDP-7
+  drew on a round, flickering CRT. The cabinet models the devices the machine saw, binds real ones
+  to them (a gamepad as the console switches, a mouse or a touch as the light pen), and draws the
+  340's phosphor; the [portrait](PORTRAIT.md) adds the machine, the room and the people at it.
+
 ## What would help
 
 **Your software.** Tapes, disk images, listings, and the stories behind them. The cabinet can run

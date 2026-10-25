@@ -72,6 +72,12 @@ From §2.4.1, *Emulator Support* (p. 14):
 The cabinet is one more result of that encouragement: Jason's answer about the Archive's Apple II
 emulation in 2025 is what pointed Don toward emulation in the browser.
 
+From §2.4.2, *Metadata* (p. 14): the tools of the time (JHOVE, DROID, Siegfried, PRONOM) "cannot
+identify or record the dependencies that specify the emulator, operating system and application
+needed to emulate a preserved artefact." Besides technical and bibliographic metadata, he names
+usability metadata, such as key bindings, which the Archive's visitors often supplied in comments,
+and usage metadata, which helps justify funding but raises privacy questions.
+
 From §2.4.3, *Fidelity* (p. 15), on the same Spacewar emulation:
 
 > The experience of pointing and clicking at the Internet Archive's web page, pressing LEFTCTRL and
@@ -98,7 +104,8 @@ experiential fidelity, how close the user's experience is to the original user's
 
 The PDP-7 cabinet is a browser emulator built on the path this report describes, and its notes
 adopt lessons from the frameworks it surveys
-([WEB-BENCH.md](../../../packages/cabinet/WEB-BENCH.md)). Its
+([WEB-BENCH.md](../../../packages/cabinet/WEB-BENCH.md)), and its cartridges carry the technical
+and usability metadata §2.4.2 asks for ([CARTRIDGES.md](../../../packages/cabinet/CARTRIDGES.md)). Its
 [open letter to museums, libraries and archives](../../../packages/cabinet/FOR-MUSEUMS.md) takes up
 the same questions: preserved system images, metadata, and access. The cabinet's
 [portrait](../../../packages/cabinet/PORTRAIT.md), which plans to draw the PDP-7, the 340 and the
