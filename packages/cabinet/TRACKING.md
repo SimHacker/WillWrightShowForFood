@@ -132,9 +132,13 @@ The 1972 software does the tracking.
 
 The pointer is secretly a true position source, which sets up the
 `honest`/`assist` dial in [DESIGN.md](DESIGN.md): honest mode feeds the
-pointer to the pen input and lets this machinery track — including the
-period-correct maximum drag speed (the `SRAST` net radius times the
-refresh rate) and the period-correct way to lose the cross. Assist mode
+pointer to the pen input and lets this machinery track, and lose the
+cross the way it was lost. The true limit is the `SRAST` net's reach per
+refresh times the refresh rate; today the pointer is sampled once per
+browser frame, so the cabinet loses the cross far sooner than 1969 did
+([ROADMAP §1](ROADMAP.md#1-tracking-the-pen-is-sampled-once-per-browser-frame)).
+Watching it happen in slow motion, beam by beam:
+[BEAM-AND-PEN.md](BEAM-AND-PEN.md). Assist mode
 teleports. The demo is honest mode, because the point of the cabinet is
 that the cross follows the mouse *because 1972 software tracks it*.
 

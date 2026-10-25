@@ -35,7 +35,8 @@ PDP-1's Type 30.
   ([ROADMAP §14](../ROADMAP.md#14-small-items)).
 - **Will:** watch the beam. At slow speeds, draw each stroke growing from its start at the 340's
   own pace, using the cycle stamps, with the spot on top; the decay runs in real time while the
-  machine crawls ([PORTRAIT.md](../PORTRAIT.md#slow-mode--watch-the-beam-work)).
+  machine crawls ([PORTRAIT.md](../PORTRAIT.md#slow-mode-watch-the-beam-work)). The full plan, with the pen as a photocell and
+  a hand that can outrun the cross: [BEAM-AND-PEN.md](../BEAM-AND-PEN.md).
 - **Could:** the tube in 3D: the canvas as a texture on curved glass inside the photographed
   PDP-7, with reflections ([PORTRAIT.md](../PORTRAIT.md)).
 - **Could:** measure a real P7 tube, if a museum lets us film one, and fit the curves to it.

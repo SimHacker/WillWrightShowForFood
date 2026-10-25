@@ -45,7 +45,7 @@ A light pen press, followed through the machine:
 |---|---|---|
 | 1 | The person, their body, the chair, the console, the room | Planned: the [portrait](PORTRAIT.md) and its scene player |
 | 2 | The physical input device and its chassis: light pen, Teletype, console switches, a hand | Virtual devices bound to real ones: a mouse or touch as the pen, a keyboard as the Teletype, a webcam hand as the [DataHand](HAND-TRACKING.md) (device 57) |
-| 3 | The sensor: the pen's photocell, the switch contact, the camera | The light pen sees a stroke within its aperture ([TRACKING.md](TRACKING.md)) |
+| 3 | The sensor: the pen's photocell, the switch contact, the camera | The light pen sees a stroke within its aperture ([TRACKING.md](TRACKING.md)); a photocell model is planned in [BEAM-AND-PEN.md](BEAM-AND-PEN.md) |
 | 4 | The device flag and register | Each device's flag on the backplane; the 340's status bits, including the pen hit |
 | 5 | Polling or an interrupt | Skip IOTs that test a flag; the interrupt line ORs every device's request |
 | 6 | IOT transfers and the display's own memory access | IOTs on the bus; the 340 fetching its display file from core |

@@ -84,7 +84,7 @@ to run when it's hit, once the kernel has `EVALUATE`.
   ([ROADMAP §1](../ROADMAP.md#1-tracking-the-pen-is-sampled-once-per-browser-frame)).
 - **Will:** separate pens; Forth pen words and handlers.
 - **Could:** a period photocell model (spot size, response time, the 1964 diagnostic's timing
-  tests); the Engelbart Cursor Party, eight people at one tube
+  tests), planned in [BEAM-AND-PEN.md](../BEAM-AND-PEN.md); the Engelbart Cursor Party, eight people at one tube
   ([ROADMAP §7](../ROADMAP.md#7-several-pens-the-engelbart-cursor-party)).
 
 ↑ [GUIDE](GUIDE.md) · [reference library](README.md)
