@@ -159,6 +159,12 @@ What both formats describe, grouped so each emulator can map its own names onto 
 3. **Outside, over an API**: microM8's MCP tools and debug WebSocket ([MICROM8.md](MICROM8.md));
    the cabinet's tiny-titan. Any language, any process, an AI.
 
+microM8's in-machine API is already broad: `@counter.set` watches reads, writes or executes at an
+address, `@mem.lock` holds a value, `@mem.poke` patches, `@key.type` and `@paddle.*` send input,
+`@camera.*`, `@color.*` and `@backdrop.*` change the presentation, `@vm.exec` and `@vm.redirect`
+reach other machines, and `@share.*` reaches them over the network
+([MICROM8.md](MICROM8.md#microbasics-functions-the-scripting-api-inside-the-machine)).
+
 A common event model would let a script be written once and run in any of the three places:
 **watch** an address or range for a condition, then **patch** memory, **send** keys, **set** a
 setting, **switch** a view, or **send a message** to another machine. microM8's control programs

@@ -77,8 +77,9 @@ The repository has issues enabled, no pull requests so far, and "Contribution gu
 added." Ask before sending anything. What we would like to contribute, each behind a setting so
 nothing changes unless it's turned on:
 
-- **Per-address access counters**: for each address, separate read, write and execute counts, and
-  the cycle of the first and last of each. 64K addresses times a few counters is a few megabytes.
+- **Access counters for every address at once**: `@counter.set` already counts reads, writes or
+  executes for a chosen address; a mode that keeps all three for all 64K, with the cycle of the first
+  and last, would feed a full map. A few megabytes.
 - **An access log**: microM8 already records every memory write for rewind; adding reads and
   executes as `(cycle, PC, address, kind, value)` records, and streaming them over the debug
   WebSocket, would let a panel show what happened, where and when, and scrub through it with the
@@ -192,6 +193,37 @@ WebSocket, the same panels would give:
 - **turtleSpaces**: no memory to read, but its API connection can query state and, with `share`
   and `store`, publish it; a cabinet panel could show the turtles' paths and the procedures that
   drew them.
+
+## microBASIC's @functions: the scripting API inside the machine
+
+microM8's enhanced Applesoft and Integer BASIC add `@` functions
+([reference](https://paleotronic.com/software/microm8/help/functions/)). They are the in-machine half
+of everything above, and several already do what this page proposes:
+
+| Family | What it does | Cabinet counterpart |
+|---|---|---|
+| `@counter.set{mode, address, counter}`, `@counter.value`, `@counter.bump` | count `read`, `write` or `exec` accesses by the CPU to a chosen address | the per-address access counters, for addresses you pick |
+| `@scan.sequence{file, …}`, `@scan.jumps{recording, count}` | search a recording for addresses written a given sequence of values, or jumped to a given number of times | finding a game's fields by changing one thing and seeing what moves ([apple-ii-floppy-bridge](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/apple-ii-floppy-bridge.md)) |
+| `@mem.peek`, `@mem.poke`, `@mem.range`, `@mem.lock` | read, write, show memory; hold an address at a value | core links, patches |
+| `@screen.read`, `@screen.contains` | read text off the screen | screen scraping, Dasher grammars |
+| `@key.type`, `@paddle.value`, `@paddle.button` | type into a VM at a given rate; set paddles | input synthesis |
+| `@vm.exec`, `@vm.redirect`, `@vm.var`, `@vm.select`, `@vm.enable`, `@system.new`, `@system.switch`, `@system.spawn{"fp"\|"int"\|"logo"\|"shell"}` | run commands in, read variables of, and redirect `@` functions to other VMs (eight in all) | machines on one backplane |
+| `@share.connect{host, port, vm}`, `@share.command`, `@share.input`, `@share.transfer` | microLink: VMs connected to remote hosts, with ownership passed between users | the tiny-titan hub over a network |
+| `@camera.*`, `@color.*` (palette, depth, offset, tint, rotate), `@light.*`, `@backdrop.*`, `@overlay.filename`, `@layer.pos{slotid, x, y, z}`, `@zone.define`, `@sprite.*`, `@cube.plot`, `@cube.line` | the upcycled presentation: cameras, palettes, voxel depth, backdrops, overlays, VM layers placed in 3D, per-zone rendering, sprites, 3D voxels | display devices, tile functions, the portrait |
+| `@audio.*`, `@music.notes`, `@music.play` (microTracker), `@mixer.*`, `@restalgia.play` | sound and music, a note language, the 1-bit speaker's level | |
+| `@video.record`, `@video.slice`, `@video.play` | record the VM's video and cut clips | scene recording |
+| `@asm.build{input, output, cpu}` | assemble 6502 or 65C02 to a file or to memory | the cabinet's assemblers |
+| `@bug.*`, `@feature.*` | file and discuss bug reports and feature requests from inside the emulator, with a memory capture | |
+
+Three consequences for this page:
+
+- **Counters exist per address**; what's missing is all addresses at once, and reads and executes in
+  the recording.
+- **The control programs in a microPAK are this API**, so a shared event model
+  ([UPCYCLING-FORMATS.md](UPCYCLING-FORMATS.md#scripting-three-places-a-script-can-live)) maps onto
+  `@counter`, `@mem.lock`, `@mem.poke`, `@key.type`, `@vm.exec` and `@share.command` directly.
+- **microLink already networks VMs**, so the federation's hub should speak to microM8 through
+  microLink as well as through MCP.
 
 ## Packages
 
