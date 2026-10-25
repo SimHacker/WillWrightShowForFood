@@ -109,7 +109,9 @@ and usability metadata §2.4.2 asks for ([CARTRIDGES.md](../../../packages/cabin
 [open letter to museums, libraries and archives](../../../packages/cabinet/FOR-MUSEUMS.md) takes up
 the same questions: preserved system images, metadata, and access. The cabinet's
 [portrait](../../../packages/cabinet/PORTRAIT.md), which plans to draw the PDP-7, the 340 and the
-people at the console in 3D, is an attempt at the experiential fidelity §2.4.3 describes. And
+people at the console in 3D, is an attempt at the experiential fidelity §2.4.3 describes. [CAUSE-AND-EFFECT.md](../../../packages/cabinet/CAUSE-AND-EFFECT.md)
+ties the two kinds of fidelity together: each step from the person at the console to the phosphor
+links to the source and the scanned listing that explain it. And
 §2.3.2 is where David described Jason Scott's work, years before introducing Don to him
 ([Jason Scott](../../jason-scott/README.md)).
 

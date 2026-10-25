@@ -174,6 +174,9 @@ The scene player is a planned extension of the portrait. It follows a
 physical action into a detector, through the machine, and back into
 visible or audible feedback.
 
+Layer by layer, from the room to the phosphor and back through the pen, with what runs today:
+[CAUSE-AND-EFFECT.md](CAUSE-AND-EFFECT.md).
+
 ### One history, several views
 
 The player records timestamped input, device and execution events, with

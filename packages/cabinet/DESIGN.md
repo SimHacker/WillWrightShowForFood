@@ -1455,6 +1455,9 @@ A built program is an address space that code and documentation are transcluded 
 is Ted Nelson's Xanadu and gwern.net's include-links (Said Achmiz, `js/transclude.js`), applied
 to core.
 
+The same links, followed in time instead of down the build, trace one event from a hand on the
+light pen to the phosphor and back: [CAUSE-AND-EFFECT.md](CAUSE-AND-EFFECT.md).
+
 - **Layer**: one immutable artifact, `{ hash, kind, media, units }`. Kinds are core, source in
   some dialect (Cambridge, as7, Forth), intermediate code, a listing, a scan, a PDF, a Markdown
   doc. `units` says what an index counts: words, lines, rectangles, sections. A rebuild makes a
