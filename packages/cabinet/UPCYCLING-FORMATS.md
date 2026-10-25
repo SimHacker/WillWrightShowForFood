@@ -165,6 +165,29 @@ address, `@mem.lock` holds a value, `@mem.poke` patches, `@key.type` and `@paddl
 reach other machines, and `@share.*` reaches them over the network
 ([MICROM8.md](MICROM8.md#microbasics-functions-the-scripting-api-inside-the-machine)).
 
+### A worked example: upcycling Pong
+
+Paleotronic's [“Upcycling” Pong](https://paleotronic.com/2018/07/07/upcycling-pong-putting-a-new-spin-on-an-old-game-using-microm8/)
+(July 2018) shows both kinds of control program, on an Integer BASIC Pong rendered as cubes in 3D:
+
+- **The spinner** changes nothing in the game. Its control program redirects the `@` functions to
+  the game's VM (`@vm.redirect`), resets and zooms the camera, then orbits it around the playfield
+  forever with `@camera.orbit` in a `FOR` loop, varying the speed each lap with `@system.pause`.
+- **The flipper** turns the playfield on its side and flips the view whenever the ball changes
+  direction, so the paddle about to hit is always at the bottom. That needs to know what the game is
+  doing, so the game was changed: it `POKE`s 1 into 37002 when it restarts, and sets 37000 (and
+  37001) when the ball changes direction. The control program `PEEK`s those addresses in the game's
+  VM, splits each flip into a thousand small `@camera.rotate` and `@camera.move` steps, sways the
+  camera between flips, and recolours the ball (colour index 2) with `@color.rgba`.
+
+Both ship as microPAKs (the game plus `control.apl`) in microM8's `micropaks` folder.
+
+The flipper is where the cabinet's approach would add something. Instead of adding `POKE`s to the
+game, a watch from outside can see the ball's direction change in the game's own variables (an
+Integer BASIC variable, or a memory location found with `@scan.sequence`), and fire the same control
+program, so the original program runs untouched. Both ways are worth keeping: a cooperative mailbox
+is simple and explicit; an outside watch works on programs no one can change.
+
 A common event model would let a script be written once and run in any of the three places:
 **watch** an address or range for a condition, then **patch** memory, **send** keys, **set** a
 setting, **switch** a view, or **send a message** to another machine. microM8's control programs
