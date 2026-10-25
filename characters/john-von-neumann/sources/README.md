@@ -15,6 +15,11 @@ Hard-to-find texts, transcriptions, and Don's HN corpus, formatted for humans.
   autoinitializing exclusive-or) with runnable initial configurations, the Factorio analogy,
   and the umbilical-cord boot sequence of self-reproduction. Links to working copies of
   Buckley's Automata-2008 paper (the Wikipedia citation is a dead link).
+- [cellular-automata-as-visual-programming-languages.md](cellular-automata-as-visual-programming-languages.md) --
+  Don, about 2014, for a visual programming languages collection: HyperCard, Viewpoint and
+  Sketchpad as honorary members; the 29-state rule as a visual programming language designed on
+  paper; a web IDE for CA rules with voxel blocks and scriptable cells; the constructor's life cycle
+  told as a family drama; WireWorld, billiard balls and the Turing Tar Pit.
 - [hn/](hn/README.md) -- readable local copies of the unique HN comments that are not
   subsets of those two write-ups (hacker emblem, 1948 prediction, Robust First tour,
   Factorio/SimCity/Kay, Omega Point, billiard-ball heat, etc.). Backup if HN goes away.
