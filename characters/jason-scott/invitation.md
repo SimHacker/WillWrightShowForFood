@@ -153,6 +153,16 @@ care I think Zork's source deserves too. Snorax's
    textfiles.com and the BBS era, *GET LAMP*, Archive Team, and emulation at library scale.
 5. Adventures, MUDs and LLMs: what *GET LAMP*'s interviews say about play that MOOLLM should learn
    from, and reading Zork's source with the care Knuth gave Adventure.
+6. Sound. In David's 2015 report on emulation you told him that sound was one of the hardest
+   problems for emulators in JavaScript, because the ear notices small flaws the eye forgives. The
+   cabinet has no sound yet, and the plan is unusual: hackers set a transistor radio on the PDP-7
+   and listened to its memory cycles play "munching tunes," so the cabinet will model the radio
+   ([AM-RADIO.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/AM-RADIO.md)).
+   I'd like to learn what eleven years of the Emularity taught you about browser audio. And the
+   only recordings of a real PDP-7 on a radio are the Living Computer Museum's, whose YouTube
+   channel is gone: two survive as Wayback copies, and the Archive declined to capture the third,
+   with four Gosper glider guns, in September. If Archive Team can still rescue it, or the
+   museum's other PDP-7 videos, that's the ground truth the emulation will be checked against.
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
@@ -173,6 +183,9 @@ are up to.
   [PIXIE restoration](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md) ·
   [the Cambridge films](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)
 - [Heinz Lemke](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/README.md)
+- David's 2015 Mellon report, [Emulation & Virtualization as Preservation Strategies](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/sources/rosenthal-emulation-2015.md),
+  where he vouches for the Archive's PDP-1 Spacewar from having played its cousins on the
+  Cambridge PDP-7 and 340, and describes your crowdsourced QA
 
 **The cabinet**
 

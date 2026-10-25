@@ -264,6 +264,22 @@ anyone can compare the emulator against the machine.
    question is in the letter to the Interim Computer Museum, in [UNIX-V0.md](UNIX-V0.md).)
 4. Which MIT programs made the best RFI, by folklore? Munching Squares, Spacewar!, MacHack?
 
+## Questions for Jason Scott
+
+[Jason Scott](../../characters/jason-scott/README.md) has run in-browser emulation at the Internet
+Archive since 2013. In 2015 he told David Rosenthal that sound was one of the hardest problems for
+emulators in JavaScript: "Different browsers handle sound differently, and the human ear notices
+tiny differences in sound quality much more than they noticed microscopic slowdowns in video
+rendering" ([Rosenthal 2015, §2.3.2](../../characters/david-rosenthal/sources/rosenthal-emulation-2015.md)).
+
+1. What did the Emularity and MAME's web build settle on for audio: AudioWorklet, buffer sizes,
+   resampling, what happens when a tab is throttled? Does postMessage hold up without
+   SharedArrayBuffer?
+2. Can Archive Team rescue the Living Computer Museum's PDP-7 videos, starting with the Gosper
+   glider gun recording the Wayback Machine declined on 2026-09-28?
+3. Would the calibration tape and the museum's recordings of it make sense as an Archive item, so
+   anyone can compare an emulator against the machine?
+
 ## Order of work
 
 1. Memory-cycle timing in the PDP-7 and 340.

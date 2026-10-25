@@ -23,7 +23,11 @@ it. With the Emularity loader and many contributors, the Archive's in-browser so
 its launch in October 2013 to more than 250,000 programs by 2023: the Console Living Room, the
 Internet Arcade, MS-DOS and Windows 3.x software, HyperCard stacks, Apple II software including
 4am's preserved disks, the Malware Museum with Mikko Hypponen, and Flash through Ruffle. He names
-the Archive's guiding principle as "Access Drives Preservation."
+the Archive's guiding principle as "Access Drives Preservation." In a 2015 report for the Mellon
+Foundation, David Rosenthal wrote that Jason "has been remarkably effective at encouraging emulator
+developers to work on problems relevant to preservation," and described his way of checking a
+collection that size: if it boots, put it up, and let the people who remember it say what's wrong
+([the report](../david-rosenthal/sources/rosenthal-emulation-2015.md)).
 
 He hosts the podcast *Jason Scott Talks His Way Out of It* and speaks often about digital
 preservation, at DEF CON since 1999 and in talks such as "The Web In An Eye Blink" (Long Now, 2015).

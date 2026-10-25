@@ -67,6 +67,7 @@ sources:
     - { title: "Podcast: Jason Scott Talks His Way Out of It", url: "https://archive.org/details/jasonscotttalks" }
   local:
     - { path: sources/get-lamp.md, why: "GET LAMP framing" }
+    - { path: ../david-rosenthal/sources/rosenthal-emulation-2015.md, why: "Rosenthal, Emulation & Virtualization as Preservation Strategies (Mellon, 2015): §2.3.2 describes Jason's crowdsourced QA and vouches for the PDP-1 Spacewar emulation" }
 
 see_also:
   - { path: invitation.md, why: "The invitation: the cabinet, PIXIE, the Cambridge films, and the Archive" }
