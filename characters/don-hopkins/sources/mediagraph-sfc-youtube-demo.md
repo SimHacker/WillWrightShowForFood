@@ -1,4 +1,4 @@
-# MediaGraph — SFC Unity music navigation demo (YouTube, Jul 2015)
+# MediaGraph — SFC Unity music navigation prototype (built 2010; video Jul 2015)
 
 **Don Hopkins · Stupid Fun Club (Will Wright) · Unity3D research prototype**
 
@@ -13,6 +13,40 @@
 YouTube description (Don): *pie menus, an editable map of music interconnected with roads, and cellular automata. Uses one kind of nested hierarchical pie menu to build and edit another kind of geographic networked pie menu.*
 
 Demo music on soundtrack: *Dueling Banjos* (Eric Weissberg, Steve Mandell).
+
+---
+
+## Timeline
+
+The video went up in 2015, but the prototype is five years older, and MediaGraph went on to become a
+product and a company. From Don's pie menu timeline and his 2012–13 correspondence:
+
+| When | What |
+|------|------|
+| 1995 | DreamScape at Kaleida: bumping objects together to connect them, and flicking to navigate |
+| 2008 | iLoci, Don's mind-mapping iPhone app, with the same bump-to-connect and flick-to-navigate gestures (Mobile Dev Camp talk, December 2008) |
+| April 2010 | The MediaGraph prototype in Unity3D at Stupid Fun Club |
+| April 2012 | The screencast `MediaGraphDemo1.mov` shared with Ben Cerveny and Tom Carden of Bloom, alongside StoryMaker |
+| August 2012 | MediaGraph becomes a product effort with a small team; Don builds a Mac app for adding a music library to it |
+| December 2012 | MediaGraph, LLC, a company Stupid Fun Club was involved in, takes over Don's work |
+| January 2013 | Don's iOS app for MediaGraph: finds the music on an iPad or iPhone, extracts its metadata and artwork, and plays it |
+| July 2015 | The demo uploaded to YouTube |
+
+Don's own description of the prototype, from April 2012:
+
+> This was a particularly fun project because Will wanted me to use cellular automata to decorate
+> the biomes. One nice thing about it that I'm proud of was the "Fahrvergnügen" and ease of
+> connecting and disconnecting places with roads by bumping them together, and the way you can
+> automatically travel down the roads by gesturally flicking between them, and the way that
+> seamlessly integrates with the free-form panning/zooming user interface, without creating another
+> "mode". The hard part was getting it to perform efficiently (breaking the terrain up into tiles,
+> and caching 2d images of tiles, so it was fast enough to animate the cellular automata and support
+> smooth fluid direct manipulation of the terrain).
+
+And on iLoci, the same year: a reformulation of pie menus "from a tree structured indirect
+manipulation user interface artifact, to a flat network structured geographical virtual
+environment," so that the menu editor "disappears and dissolves into an editable direct manipulation
+environment, by replacing hierarchy with geography."
 
 ---
 

@@ -138,7 +138,7 @@ eight light pens fired, and stock software never issues it, so nothing old is di
 - **Distributed graphics.** The 340's segment stream goes to every screen.
 - **A cursor playground** with pointer capture, for trying multi-cursor ideas, pie menus and
   flick-to-fly, Mario-cannon navigation
-  ([MediaGraph](../../repo-shows/ebike-safari/ebike-safari.md), 2011–14), before they go into
+  ([MediaGraph](../../repo-shows/ebike-safari/ebike-safari.md), 2010–13), before they go into
   PIXIE.
 
 Alan Kay's picture of objects is cells that talk only by messages, each one a whole computer.

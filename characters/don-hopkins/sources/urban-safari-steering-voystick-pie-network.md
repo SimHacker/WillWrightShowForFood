@@ -46,7 +46,7 @@ parallel hypermedia thread, not the flick-navigation UI.
 [iLoci](https://www.youtube.com/watch?v=03ddG3jWF98) — pie-menu network editor; rooms kiss to connect
 ([jam](../../../process/crazy-idea-jam.yml#iloci-memory-palace)).
 
-**MediaGraph** (SFC Unity, Jul 2015 — [YouTube demo](mediagraph-sfc-youtube-demo.md)) — **songs**
+**MediaGraph** (SFC Unity, built 2010, video Jul 2015 — [YouTube demo](mediagraph-sfc-youtube-demo.md)) — **songs**
 on **roads**; drag nodes, edit labels. Per-song **pie menu**: radius + **biome** (CA — Life, ice,
 moon surface; same merge, different compete). **Kiss-toggle roads:** drop on another → link; drop
 again → unlink. **Flick-on-song** (not empty map) travels down the road in drag direction — Mario
