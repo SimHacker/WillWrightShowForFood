@@ -168,13 +168,13 @@ The answer is to make the cartridge the thing that is preserved, and the cabinet
   machinery, and the source maps tie every word in core back to them, so the paper explains the
   machine and the machine checks the paper.
 
-  Don's story [The Uplift](https://github.com/SimHacker/moollm/blob/main/archive/sim-obliterator/designs/THE-UPLIFT.md)
+  Don's story [The Uplift](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/THE-UPLIFT.md)
   plays Rothenberg's scenario forward. A lonely Sim, saved on a novelty USB stick around 2001,
-  turns up in a drawer twenty-five years later. Plugged in, the save file is unpacked, its
-  personality numbers (neat 8, outgoing 2, playful 6, nice 9) become a character in MOOLLM who
-  remembers fragments of a house and a kitchen, makes friends and has adventures, and can be
-  written back into The Sims, changed. There the letter and the disk become one thing: the unpacked
-  YAML is the letter, readable by anyone, and it still packs back into the bytes the game loads.
+  turns up in a drawer twenty-five years later. Plugged in, the save file is read by
+  sims-io, its personality numbers (neat 8, outgoing 2, playful 6, nice 9) become a character in
+  Soul City who remembers fragments of a house and a kitchen, makes friends and has adventures,
+  and can be written back into The Sims, changed. There the letter and the disk become one
+  thing: the unpacked YAML is the letter, readable by anyone, and it still packs back into the bytes the game loads.
 - **Running the document checks the document.** The PIXIE listing was corrected by assembling it and
   running it. That turns an emulator into a tool for verifying a scan, which is work libraries
   already value, and it is cheap once the machine exists.
