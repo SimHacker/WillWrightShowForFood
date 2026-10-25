@@ -47,6 +47,22 @@ the public recording, and ACM's People of ACM interview cut the dinner-and-Calif
 ("So, I hate the 21st century. Thank you."). The Repo Show has no time slot and no editors —
 Brian delivers the 44 minutes, or longer; whatever the talk wants to be.
 
+### 5b. Grades, long before AI
+
+When AI made a Berkeley math professor give up grading homework (Daily Cal, October 2026), Brian's
+argument was decades old. In "Using Computers for Educational Freedom": "Students learn best through
+intrinsic motivation, not through force. What you learn under pressure doesn't last past the exam
+[...] In short, the reasons for grades are political"
+([freedom.html](https://people.eecs.berkeley.edu/~bh/freedom.html)); at Lincoln-Sudbury, a computer
+course of self-paced units "with no grades," and fifty kids with keys. At the 2005 Berkeley CS
+graduation: "all that structure of grades and tests makes it hard to learn and hard to teach"
+([grad05.html](https://people.eecs.berkeley.edu/~bh/grad05.html)). At Snap!Con 2025: "when you're
+giving somebody grades, you can't be their friend [...] you're a hurdle they have to overcome," and
+on AI, "computers already replace teachers for poor kids, long before AI"
+([video](https://www.youtube.com/watch?v=pDK2PE_pkqQ), 32:24 and 9:00). Pairs with Melody
+Ayres-Griffiths's 2020 case for mixed-age, ungraded, self-directed learning
+([her room](../melody-ayres-griffiths/README.md#on-learning)).
+
 ### 6. Teaching CS 61A and SICP at Berkeley
 
 The legendary course — what Brian kept, translated, and refused to dumb down.
