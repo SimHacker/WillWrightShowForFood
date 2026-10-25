@@ -1,10 +1,10 @@
-# Brewster Kahle — GLANCE
+📚 **Brewster Kahle**: WAIS; founded the Internet Archive (1996); The Little Garden ISP. In 1996:
+"It's the early dreams that we should be trying to live up to." In 2007, a book reader for the
+Archive's library on the OLPC XO.
 
-**Who:** Internet Archive · WAIS · web preservation · TLG ISP co-founder  
-**Hook:** 1996 — save WAIS search logs; *"live up to the early dreams"*  
-**2007:** OLPC book viewer wishlist — 100k IA books on the XO  
-**Status:** soft outreach 2026-07-16 → replied interested (logistics / Nov–Dec Amsterdam)  
-**Stage:** [How GitHub is a stage](README.md#how-github-is-a-stage) · [`invitation.md`](invitation.md)
+**Status:** replied 16 July 2026 (in Amsterdam November–December, up for video interviews in theory);
+invitation link sent 19 July; [`invitation.md`](invitation.md) updated 25 October with what now runs
+and what the Archive helped recover.
 
-**Read:** [README](README.md) · [ideas.md](ideas.md) · [CHM digest](sources/chm-interview-1996.md)  
-**Cast:** [Tom Jennings](../tom-jennings/) · [Walter Bender](../walter-bender/) · [Samuel Klein](../samuel-klein/)
+**Read:** [README](README.md) · [ideas](ideas.md) · [1996 interview](sources/chm-interview-1996.md) ·
+[PRESERVATION.md](../../packages/cabinet/PRESERVATION.md)

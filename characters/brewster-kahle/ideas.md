@@ -1,70 +1,79 @@
-# Ideas to explore with Brewster Kahle
+# Brewster Kahle — conversation hooks
 
-*Grounded in sourced history — not quotes from Brewster unless cited. Invitation:* [`invitation.md`](invitation.md)*.*
+*Public hooks only. Not Brewster Kahle, and not his words unless cited.* Invitation: [`invitation.md`](invitation.md)
 
-## 0. Show formats (pick one or combine)
+## Episodes
 
+| Episode | Core | Others, if they'd like |
+|---------|------|------------------------|
+| Early dreams | WAIS logs, the 1996 crawl, the ethics of keeping usage logs, Ted Nelson's "another piece of Xanadu" | Solo |
+| Archive items that run | Cabinet cartridges as Archive items; what emulation at library scale taught the Archive | Jason Scott, David Rosenthal |
+| Books | His 2007 XO reader wishlist, the Archive's book reader, HyperTIES's books read again | Walter Bender, Samuel Klein, Ben Shneiderman |
+| The Sims family albums | Sims Exchange albums in the Wayback Machine, brought back into a living world | Will Wright |
+| The Little Garden | The resale-friendly ISP and its prediction of a thousand ISPs | Tom Jennings, Tim Pozar, David Henkel-Wallace |
 
-| Episode                   | Core                                                                          | Co-guests (optional)           |
-| ------------------------- | ----------------------------------------------------------------------------- | ------------------------------ |
-| **Early dreams**          | WAIS logs, 1996 crawl, ethics of digital librarianship, Ted Nelson / Xanadu   | Solo                           |
-| **Books on the XO**       | Jan 2007 devel-list viewer spec; Flatland demo; streaming + search            | Walter Bender, Samuel Klein    |
-| **Little Garden reunion** | Resale-friendly ISP; co-op origins; the thousand-ISPs prediction              | Tom Jennings, Tim Pozar, Gumby |
-| **The Soul City tornado** | Sims Exchange in the Wayback Machine → family albums resurrected in Soul City | Will Wright                    |
+Recorded remotely or in Amsterdam, where he expects to be in November and December 2026.
 
+## 1. Early dreams
 
-Async segments OK — Brewster records when convenient; Don assembles with sourced clips from [`sources/`](sources/README.md).
+The 1996 interview ([digest](sources/chm-interview-1996.md), [clip](sources/chm-1996-early-dreams-clip.md)):
+why the WAIS search logs were worth keeping, the Archive's first crawl, and living up to the early
+dreams. The same instinct applies to programs: keep the world model readable and runnable, as Knuth
+did for Adventure ([Knuth's room](../donald-knuth/sources/adventure-knuth/README.md)).
 
-## 1. Early web dreams vs what shipped
+## 2. Found again through the Archive
 
-1996 CHM interview ([`sources/chm-interview-1996.md`](sources/chm-interview-1996.md)): WAIS logs, Internet Archive birth, "live up to the first dreams." Don's clip transcript: [`sources/chm-1996-early-dreams-clip.md`](sources/chm-1996-early-dreams-clip.md).
+What this project recovered from Wayback captures, as examples of what the Archive makes possible:
+Knuth's 2022 `advent.w`; the Living Computer Museum's PDP-7 videos, including one capture the Wayback
+Machine declined in September 2026 ([AM-RADIO.md](../../packages/cabinet/AM-RADIO.md)); the 2013 aQuery
+thread from Don's old wiki; Mitch Bradley's 2008 interview and OLPC's wiki; Brewster's own 2007
+`devel@laptop.org` post ([capture](https://web.archive.org/web/20070228082343/http://mailman.laptop.org/pipermail/devel/2007-January/003674.html));
+Mark Weiser's 1995 cats page. And what was lost: Cynthia Solomon's 2007 Logo lesson pages on
+Wikispaces, which closed in 2018 ([her videos](../cynthia-solomon/videos.md)).
 
-## 2. OLPC + Internet Archive (2007)
+## 3. Archive items that run
 
-[`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md) — Don's SimCity-on-XO offer; Brewster lunch reply.
+David Rosenthal's 2015 Mellon report credits the Archive's in-browser emulation and Jason Scott's
+crowdsourced QA, and warns that a page wrapping an image in one emulator "makes it accessible in the
+present, not preservable for the future" ([notes](../david-rosenthal/sources/rosenthal-emulation-2015.md)).
+The cabinet's answer is a cartridge, a program with its tapes, listing, scans and provenance, held
+as an Archive item and runnable by the cabinet ([PRESERVATION.md](../../packages/cabinet/PRESERVATION.md)).
+Questions: what the Archive needs in such an item; how an item names what can run it; whether the
+Cambridge PIXIE films, which Cambridge's own site no longer serves, could live beside the program.
 
-[`sources/olpc-book-viewer-devel-2007-01-21.md`](sources/olpc-book-viewer-devel-2007-01-21.md) — Brewster's **[devel@laptop.org](mailto:devel@laptop.org)** wishlist (100k books, tablet PDF viewer, streaming, Flatland demo URLs). [Wayback capture](https://web.archive.org/web/20070228082343/http://mailman.laptop.org/pipermail/devel/2007-January/003674.html).
+## 4. Books
 
-Pair with [`../walter-bender/`](../walter-bender/) and [`../samuel-klein/`](../samuel-klein/) · show [`../../repo-shows/walter-bender-olpc/README.md`](../../repo-shows/walter-bender-olpc/README.md).
+His 2007 wishlist for the XO ([post](sources/olpc-book-viewer-devel-2007-01-21.md)): 100,000 books,
+pages that fit the screen, streaming before download, search inside a book and across the library.
+HyperTIES, restored ([reading room](https://hyperties.org/archive/reading-room/)), was a book reader
+too, with links that show where they lead before you follow them. What would he want a reading
+device to do now? Pair with [Walter Bender](../walter-bender/) and [Samuel Klein](../samuel-klein/).
 
-## 3. The Little Garden cast
+## 5. The Sims family albums
 
-TLG ISP — Brewster, Tom Jennings, John Romkey, Steve Crocker, Gumby ([`../tom-jennings/`](../tom-jennings/), [`../david-henkel-wallace/`](../david-henkel-wallace/)).
+EA's Sims Exchange let players upload houses, families and family albums: stories told in captioned
+screenshots, a genre millions of players wrote in. EA closed it; the Wayback Machine holds what
+remains. Fans have already indexed much of the old Sims 1 web, in a community spreadsheet of archives
+and Wayback links and the Archive's [`sims-1-cc`](https://archive.org/details/sims-1-cc) collection.
+Soul City, in MOOLLM ([examples/soul-city](https://github.com/SimHacker/moollm/tree/main/examples/soul-city)),
+is meant to bring that content back into a world where it can be read and played. Questions: what a
+library owes a genre nobody thought was one; how a fan index can become a durable collection without
+replacing the fans who made it; what bulk access (CDX, item APIs) makes this practical.
 
-Tim Pozar's 1996 telling in the CHM video; Tim visited Amsterdam July 2026 ([`sources/outreach-amsterdam-2026-07-16.md`](sources/outreach-amsterdam-2026-07-16.md)).
+## 6. The Archive and AI
 
-## 4. Internet Archive ↔ Repo Show
+What the Archive is doing with AI, and what he wants it to do: tools for librarians, and models that
+cite the Archive rather than absorb it.
 
-Preservation ethos matches cited sources + Wayback; Wikimedia partnership already in [`CHARACTER.yml`](CHARACTER.yml#synergies).
+## 7. The Little Garden
 
-**Adventure as early dream:** Crowther/Woods → Knuth CWEB museum piece
-([`../donald-knuth/sources/adventure-knuth/`](../donald-knuth/sources/adventure-knuth/)) — keep the
-*world model* readable. Same instinct as WAIS logs: preserve intent, not only bits.
-[ADVENT ≈ SHRDLU inside-out](../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md).
+The co-op origins and the resale-friendly model, mostly in Tim Pozar's 1996 telling; Brewster's side
+of it. With [Tom Jennings](../tom-jennings/) and [David Henkel-Wallace](../david-henkel-wallace/).
 
-AskTog living-repo rescue names IA as ally ([`../bruce-tognazzini/sources/asktog-preservation.md`](../bruce-tognazzini/sources/asktog-preservation.md)).
+## 8. Amsterdam
 
-**The Internet Archive and AI** — open question for Brewster: AI is IA spelled backwards, so what is IA doing with AI, and what does he *want* to do? AI as patron vs. AI as extraction; librarian's-assistant tooling over the collections;
-provenance and citation so models point back to the Archive instead of dissolving it. Soul City
-(section 6) is one working answer — AI resurrecting archived culture with sources attached.
+Kennisnet, the Dutch public education organization that funded Micropolis in 2008–09, hosted
+Wikimedia's European servers from 2005 to 2009 ([`CHARACTER.yml`](CHARACTER.yml)). Internet Archive
+Europe is in Amsterdam.
 
-## 5. Amsterdam / Kennisnet overlap
-
-Dutch public-education hosting of Wikimedia servers during Kennisnet Micropolis years — [`CHARACTER.yml`](CHARACTER.yml#synergies.kennisnet_wikimedia_amsterdam). Kennisnet also supported the educational constructionist Micropolis (open source SimCity) project.
-
-## 6. The Soul City tornado — Sims Exchange resurrection
-
-EA's **Sims Exchange** let players upload save files, houses, families, characters, pets, and
-**family albums** — captioned-screenshot stories, a machinima literary genre millions of players
-practiced. EA shut it down; the **Wayback Machine** holds what remains.
-
-**Soul City** ([SimHacker/moollm — examples/soul-city](https://github.com/SimHacker/moollm/tree/main/examples/soul-city)) is the Wizard of Oz tornado: it sweeps that archived content out of the Wayback Machine and sets it down alive — houses rebuilt, families reunited, pets included, album stories readable again as literature. And when the tornado sets a house down, well — some wicked obstacles simply end up beneath it, striped socks curling. Inspired by Marusek's *The Wedding Album* (1999), where simulated people fight to live in "Simopolis" — we're building that place, under our own name, inspired by a civil rights anti racist urban development project ironically supported by Richard Nixon: Soul City.
-
-Beats for Brewster:
-
-- **Archive as ark, not amber** — the Exchange content wasn't just preserved, it was kept viable for resurrection; "early dreams" ([`sources/chm-1996-early-dreams-clip.md`](sources/chm-1996-early-dreams-clip.md)) applied to game culture
-- **Family albums as vernacular literature** — what does a library owe a genre nobody thought was one?
-- **Wayback → living world pipeline** — what IA infrastructure (bulk access, CDX, item APIs) makes resurrection projects like this practical
-- Natural crossover with **Will Wright** — the albums were his design's emergent literature
-
-↑ [`README.md`](README.md)
+Primary: [`CHARACTER.yml`](CHARACTER.yml) · Invitation: [`invitation.md`](invitation.md)

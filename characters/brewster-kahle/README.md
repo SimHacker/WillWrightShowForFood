@@ -1,118 +1,69 @@
-# Brewster Kahle
+# Brewster Kahle 📚
 
 Invitation portrayal — **not** Brewster Kahle. [Standards](../../schemas/portrayal-standards.md)
 
-*Sniff:* [`GLANCE.md`](GLANCE.md) · **Invite:** [`invitation.md`](invitation.md) · **Hooks:** [`ideas.md`](ideas.md)
+**Field:** the Internet Archive; WAIS; preserving the web and keeping it usable
 
-**Brewster Kahle** — founder of the **Internet Archive** (1996), **WAIS** pioneer, early web
-preservationist. Co-founded **The Little Garden (TLG)** ISP in Palo Alto with John Romkey,
-Steve Crocker, and **Tom Jennings**.
+[Invitation](invitation.md) · [Hooks](ideas.md) · [Sources](sources/README.md) · [CHARACTER.yml](CHARACTER.yml)
 
-**Will Wright is in** — signed on for the
-[premiere](../../repo-shows/will-wright-premiere/README.md) and more.
+## Who he is
 
----
+Brewster Kahle built WAIS, the Wide Area Information Servers, one of the first ways to search
+across the Internet, and in 1996 founded the Internet Archive, which has collected the web ever
+since and now also holds books, films, music and software. The Wayback Machine, its public window
+onto the archived web, is how most people meet it. Before WAIS and the Archive he co-founded The
+Little Garden, an early Palo Alto Internet provider, with John Romkey, Steve Crocker and Tom
+Jennings.
 
-## How GitHub is a stage — quite literally an adventure
+In a 1996 interview for the Computer History Museum, with Marc Weber and Tim Pozar, he explained
+why he kept WAIS's early search logs: they record what people hoped the network could answer, before
+the medium settled into what got built. "It's the early dreams that we should be trying to live up
+to" ([clip](sources/chm-1996-early-dreams-clip.md) · [video, about 45:35](https://www.youtube.com/watch?v=u2h2LHRFbNA)).
 
-A blog is a dead text-and-picture show. A podcast is a dead mp3. A YouTube channel is a dead
-mp4 plus a toxic comment section. We're **not inventing a new medium** — we're **reframing an
-existing one** (git + GitHub) for audience-participation, **time-shifted** shows: hang out in
-the tree before, during, and after the performance; ask questions as issues and PRs that don't
-vanish into a chat scroll.
+In 2007 he asked One Laptop per Child for a proper book reader for the Archive's scanned library on
+the XO, with streaming, search inside books, and pages that fit the screen
+([his wishlist](sources/olpc-book-viewer-devel-2007-01-21.md)); he and Don corresponded then about
+books and SimCity on the XO ([thread](sources/olpc-internet-archive-2007.md)).
 
-The **Internet Archive** already proved the opposite of dead media: keep the bits *alive* so
-someone later can build on the early dreams, not only freeze the HTML. A **Repo Show** applies
-that instinct to conversation. The stage **is** a public GitHub repository — not a metaphor for
-a venue, the actual working tree.
+## Why he's here
 
-And yes — quite literally it **is** an adventure. **MOOLLM** means **LambdaMOO + LLM
-orchestration**: The Sims meets LambdaMOO (a programmable multi-user adventure), represented
-*in* a GitHub repo. Rooms, characters, props, and shows are files you can walk, fork, and leave
-souvenirs in — same social-spatial instinct as a MOO, same constructionist instinct as The Sims,
-shipped as a living collection instead of a landfill of description-box links.
+Much of what this project has restored was found again through the Internet Archive:
 
-The founding schema is Colossal Cave: rooms as a graph, objects with properties, a tiny parser,
-trolls with axes. HN put it sharply — ADVENT is [SHRDLU](../terry-winograd/) turned inside out
-(also a fancier WUMPUS): [trail](../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md). Knuth
-recast Woods's Adventure as a literate CWEB program — documentation containing the world model —
-local study room: [`../donald-knuth/sources/adventure-knuth/`](../donald-knuth/sources/adventure-knuth/)
-([analysis](../donald-knuth/sources/adventure-knuth/ANALYSIS.md) · [cream](../donald-knuth/sources/adventure-knuth/CREAM.md)).
-Internet Archive instinct: keep the early dream *playable* and *readable*, not only frozen.
+- **Knuth's 2022 `advent.w`**, an earlier version of his literate Adventure, from a Wayback capture
+  ([Knuth's room](../donald-knuth/sources/adventure-knuth/README.md)).
+- **The Living Computer Museum's PDP-7 videos**, the only recordings of a radio picking up a PDP-7's
+  "munching tunes," whose YouTube channel is gone; two survive as Wayback copies
+  ([AM-RADIO.md](../../packages/cabinet/AM-RADIO.md)).
+- **The 2013 aQuery email thread**, rescued from Wayback captures of Don's wiki, now the earliest
+  record of Screen Angel ([the thread](https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/sources/2013-email-thread.md)).
+- **Mitch Bradley's 2008 interview** on Open Firmware and the OLPC firmware, and OLPC's wiki pages
+  ([Mitch's room](../mitch-bradley/README.md)).
+- **Mark Weiser's 1995 web page** for his cats, Nijinski and Pavlova, which David Rosenthal showed
+  in 2016 both from the Wayback Machine and as it first looked, in Mosaic via oldweb.today
+  ([Mark's memorial](../mark-weiser/README.md)).
 
-| Layer | What it does |
-|-------|----------------|
-| **git** | Full history — nothing lost; experiments on branches; tagged releases |
-| **GitHub** | The lobby / MMORPG layer — issues, pull requests, reviews, hanging out |
-| **MOOLLM** | The adventure — rooms and characters as navigable files; LLM orchestration optional |
-| **The show** | Recorded conversation (solo clip, call, or in-person) whose *product* is files in the tree |
+And the Archive's emulation is the path the cabinet follows. The cabinet is a PDP-7 and Type 340
+emulator in the browser that runs Heinz Lemke's 1969 PIXIE, restored from its printed listing,
+along with PDP-7 UNIX and Mitch Bradley's Forth ([try it](https://hyperties.org/cabinet/)).
+HyperTIES, Ben Shneiderman's 1980s hypertext system, has been restored too, and its recovered books
+can be read again ([reading room](https://hyperties.org/archive/reading-room/)). David Rosenthal
+introduced Don to Jason Scott, the Archive's software curator, in October 2026, and the open question
+is whether the cabinet's programs, with their listings and scans, belong in the Archive
+([PRESERVATION.md](../../packages/cabinet/PRESERVATION.md)).
 
-You do **not** need to know git (or MOOs) to appear. Easiest path: record a short video when
-convenient; Don places it with sources and credit in your room. Harder paths (live call,
-multi-guest, face-to-face in Amsterdam) when logistics work.
-
-**Will Wright Show For Food** is the first Repo Show Don is producing with Will — to prove the
-format. Format deep dive: [`process/repo-show-format.md`](../../process/repo-show-format.md) · MOOLLM:
-[SimHacker/moollm](https://github.com/SimHacker/moollm)
-
----
-
-## Why Brewster
-
-We've been in similar orbits since before most people knew what the web was for.
-
-In **1996**, Marc Weber interviewed Brewster and **Tim Pozar** for the Computer History Museum —
-TLG, WAIS, and the Internet Archive while it was still being born. Brewster kept the **early WAIS
-search logs** — what people searched for when the web still felt like open frontier — arguing the
-medium had already "stagnated" toward technician-defined limits, and that **early dreams** are
-what we should live up to:
-
-> *"It's the early dreams that we should be trying to live up to."*
-
-([clip](sources/chm-1996-early-dreams-clip.md) · [video ~45:35](https://www.youtube.com/watch?v=u2h2LHRFbNA))
-
-In **2007**, Don and Brewster corresponded about **OLPC**. Brewster wanted books that looked good
-on the XO — a proper **tablet-mode viewer** for Internet Archive's scanned library. Don was porting
-**SimCity** for the XO and chasing GPL relicensing with Will Wright and John Gilmore. That thread
-is sourced here: [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md).
-
-And before WAIS and the Archive — **The Little Garden** — making bandwidth resalable when the
-incumbents said it couldn't be done.
-
----
-
-## Early web dreams (1996)
-
-| | |
-|--|--|
-| Video | https://www.youtube.com/watch?v=u2h2LHRFbNA |
-| Digest | [`sources/chm-interview-1996.md`](sources/chm-interview-1996.md) |
-| Early-dreams clip (~45:35) | [`sources/chm-1996-early-dreams-clip.md`](sources/chm-1996-early-dreams-clip.md) |
-| Transcript | [`sources/chm-interview-1996-transcript.md`](sources/chm-interview-1996-transcript.md) |
-
-## OLPC + Internet Archive (2007)
-
-| | |
-|--|--|
-| Email thread | [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md) |
-| Book-viewer wishlist (`devel@`, 21 Jan 2007) | [`sources/olpc-book-viewer-devel-2007-01-21.md`](sources/olpc-book-viewer-devel-2007-01-21.md) |
-| Related show seed | [`../../repo-shows/walter-bender-olpc/README.md`](../../repo-shows/walter-bender-olpc/README.md) |
-
-## Episode angles
-
-See [`ideas.md`](ideas.md) — IA preservation, OLPC reader, TLG cast, Wikimedia partnership,
-Amsterdam / Kennisnet overlap, **Soul City tornado** (Sims Exchange family albums living in the
-Wayback Machine → resurrected into a playable liminal world).
-
-## Cast
+## Cast neighbors
 
 | Who | Why |
 |-----|-----|
-| [Tom Jennings](../tom-jennings/README.md) | TLG co-founder; FidoNet |
-| Tim Pozar | TLG operations; 1996 CHM interview |
-| [David Henkel-Wallace](../david-henkel-wallace/README.md) | TLG / Cygnus (Gumby) |
-| [Walter Bender](../walter-bender/README.md) | OLPC Stone Soup show |
-| [Samuel Klein](../samuel-klein/README.md) | OLPC content / GDC 2007 |
-| [Internet Archive](https://archive.org/) | WAIS → Wayback Machine |
+| [Jason Scott](../jason-scott/) | The Archive's software collections and emulation |
+| [David Rosenthal](../david-rosenthal/) | LOCKSS; his 2015 report on emulation for preservation |
+| [Tom Jennings](../tom-jennings/) · [David Henkel-Wallace](../david-henkel-wallace/) | The Little Garden |
+| [Art Medlar](../art-medlar/) | WAIS and the early Archive |
+| [Walter Bender](../walter-bender/) · [Samuel Klein](../samuel-klein/) | One Laptop per Child |
+| [Ted Nelson](../ted-nelson/) | Xanadu |
+| [Cynthia Solomon](../cynthia-solomon/) | Logo history on video ([index](../cynthia-solomon/videos.md)) |
+| [Will Wright](../will-wright/) | The Sims, whose players' family albums survive in the Wayback Machine |
 
 Subject may request correction or removal anytime.
+
+↑ [characters](../)

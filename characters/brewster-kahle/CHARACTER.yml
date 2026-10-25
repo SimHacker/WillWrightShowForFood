@@ -15,9 +15,13 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: sent
   consent: not_yet_asked
   document: invitation.md
+  history:
+    - "2026-07-16: replied to Don's outreach: visit Internet Archive Europe; in Amsterdam November–December; up for video interviews in theory"
+    - "2026-07-19: Don sent the invitation link"
+    - "2026-10-25: invitation updated with the cabinet, HyperTIES, recoveries from the Wayback Machine, and cartridges as Archive items"
 
 bio:
   summary: >
@@ -54,7 +58,11 @@ sources:
     - { title: "Weaving Books into the Web, starting with Wikipedia (2019)", url: "https://blog.archive.org/2019/10/29/weaving-books-into-the-web-starting-with-wikipedia/" }
 
 see_also:
-  - { path: ideas.md, why: "Episode hooks — OLPC, TLG, IA, Amsterdam" }
+  - { path: ideas.md, why: "Episode hooks: early dreams, Archive items that run, books, Sims albums, AI, TLG, Amsterdam" }
+  - { path: ../jason-scott/README.md, why: "The Archive's software curator; introduced to Don by David Rosenthal, Oct 2026" }
+  - { path: ../david-rosenthal/sources/rosenthal-emulation-2015.md, why: "Rosenthal's 2015 report on emulation, crediting the Archive's in-browser emulation" }
+  - { path: ../../packages/cabinet/PRESERVATION.md, why: "Cabinet cartridges as Archive items" }
+  - { path: ../cynthia-solomon/videos.md, why: "Logo history on video; her 2007 Wikispaces pages lost in 2018" }
   - { path: ../art-medlar/, why: "WAIS + early Internet Archive collaborator (Local Power bio; Leela AI colleague of Don)" }
   - { path: ../walter-bender/CHARACTER.yml, why: "OLPC Stone Soup show cast" }
   - { path: ../samuel-klein/CHARACTER.yml, why: "OLPC content / GDC 2007" }

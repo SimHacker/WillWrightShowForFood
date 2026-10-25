@@ -1,171 +1,115 @@
 ---
-status: draft
+status: sent
 character_id: brewster-kahle
+public: true
 consent: not_yet_asked
-show_seeds:
-  - repo-shows/walter-bender-olpc/README.md
+first_contact: "July 2026 email; Brewster replied 16 Jul 2026 (in Amsterdam November–December, up for video interviews in theory); link to this page sent 19 Jul 2026"
+updated: 2026-10-25
+format: remote_or_in_person
 ---
 
 # Repo Show invitation — Brewster Kahle
 
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — correct, expand, replace, or remove your directory anytime, or take direct edit access; also covers the quiet-mode publication plan and easy onboarding.
+*Brewster may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+**Subject:** What GitHub as a stage turned out to mean, and a lot found again through the Archive
 
-**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
+---
 
 Brewster —
 
-I'm **Don Hopkins**, in Amsterdam. I work with **Will Wright** (SimCity, The Sims, Stupid Fun Club) and I'm
-producing **Will Wright Show for Food** — a **Repo Show**: a friendly recorded conversation whose
-**stage and product is a public GitHub repository**. Not a new medium — a reframing of git/GitHub
-for audience-participation, time-shifted shows (blogs/podcasts/YouTube are dead files; the repo
-stays alive). Quite literally an **adventure**: **MOOLLM** = LambdaMOO + LLM orchestration — The
-Sims meets a programmable multi-user adventure, represented in the tree. Full picture:
-[`README.md` — How GitHub is a stage](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/README.md#how-github-is-a-stage--quite-literally-an-adventure).
-I'd love to interview you for the show.
+In July you wrote that you didn't understand how GitHub is a stage, but that it sounded like an
+adventure. Since then I've built enough that I can show you instead of explain it, and a surprising
+amount of it was found again through the Internet Archive.
 
-**Adventure lineage (optional deep end):** the stage metaphor isn't loose talk — Colossal Cave /
-MOO / MOOLLM share one machinery (rooms, objects, parser). HN quip + Montfort + Knuth's literate
-Adventure: [trail](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/donald-knuth/sources/advent-shrdlu-wumpus-lineage.md) ·
-[Knuth room](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/sources/adventure-knuth/).
-Preservation angle: early interactive worlds as library material, not only early HTML.
+**What runs now.** David Rosenthal wrote this summer about the PDP-7 and Type 340 he used at
+Cambridge as an undergraduate. The same machine ran Heinz Lemke's PIXIE in 1969, a graphics system
+with radial menus. To restore PIXIE from its printed listing I built a PDP-7 and 340 emulator that
+runs in a web page, and it now runs PIXIE, DUEL, PDP-7 UNIX, and Mitch Bradley's Forth:
+[the cabinet](https://hyperties.org/cabinet/) ·
+[a 23-minute tour](https://www.youtube.com/watch?v=lo8kdY-5i6c). Every word in core maps to its
+source line and to the scanned page of the listing, so you can go from the running machine to the
+paper and back. I've also restored HyperTIES, Ben Shneiderman's 1980s hypertext system, from its
+original databases, including the book that came with *Hypertext Hands-On!*:
+[the reading room](https://hyperties.org/archive/reading-room/). It reminded me of your 2007
+wishlist for a book reader on the XO.
 
----
+**What the Archive found again.** Knuth's 2022 version of his literate Adventure came from a Wayback
+capture. The Living Computer Museum's videos of a transistor radio playing a PDP-7's "munching
+tunes" survive only as Wayback copies, now that the museum's YouTube channel is gone, and they are
+the ground truth for the sound the emulator will make. The 2013 email thread where I first described
+what became Screen Angel, my app for scripting other applications' interfaces, came back from
+captures of my old wiki. So did Mitch Bradley's 2008 interview about the OLPC firmware. And David
+showed Mark Weiser's 1995 page for his cats from the Wayback Machine in a 2016 talk.
 
+**Where the Archive comes in next.** David introduced me to Jason Scott on October 23. David's 2015
+report for the Mellon Foundation, *Emulation & Virtualization as Preservation Strategies*, makes the
+point that a page wrapping an emulator "makes it accessible in the present, not preservable for the
+future." So I'd like the cabinet's programs, each with its tapes, listing, scans and provenance,
+to become Archive items that the cabinet is one way to run
+([what that would take](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PRESERVATION.md)).
 
+**The stage.** All of this lives in a public git repository, and that is the stage: each guest has a
+room, each show has a directory, questions arrive as issues and pull requests, and what we talk
+about gets built and stays there, with its history. It's organized like a text adventure, rooms
+and objects you can walk through, which is MOOLLM's idea, after LambdaMOO and Colossal Cave
+([the front door](https://github.com/SimHacker/WillWrightShowForFood)).
 
-## Why you
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
-We've been in similar orbits since before most people knew what the web was for.
+You said you'd be in Amsterdam in November and December, and that you were up for video interviews
+in theory. I'd love to record one with you there, or remotely, your choice. Threads, your pick:
 
-In **1996**, Marc Weber interviewed you and **Tim Pozar** for the Computer History Museum — TLG,
-WAIS, and the Internet Archive while it was still being born. You said you kept the **early WAIS search
-logs** because they record what people were *dreaming* the network could answer — before the medium
-narrowed to what technicians shipped. I still think that's one of the clearest statements about
-preservation I've heard:
+1. **Early dreams.** The WAIS logs, the 1996 crawl, and what keeping early intent alive means now.
+2. **Archive items that run.** Cartridges for the cabinet as Archive items, with Jason; what the
+   Archive wants from emulated software, and what it learned from 250,000 programs in the browser.
+3. **Books.** Your 2007 reader for the XO, the Archive's book reader since, and HyperTIES's books
+   read again.
+4. **The Sims's family albums.** Players' illustrated stories from EA's Sims Exchange survive in the
+   Wayback Machine; we'd like to bring them back into a world where they can be read and lived in
+   again, and the fans have already indexed much of the old Sims web.
+5. **The Archive and AI.** What the Archive is doing with AI, and what you'd want it to do: models
+   that cite the Archive rather than dissolve it.
+6. **The Little Garden**, with Tom Jennings and Tim Pozar, if you'd like a reunion.
 
-> *"It's the early dreams that we should be trying to live up to."*
+No preparation needed.
 
-([`sources/chm-1996-early-dreams-clip.md`](sources/chm-1996-early-dreams-clip.md) · [video ~45:35](https://www.youtube.com/watch?v=u2h2LHRFbNA))
-
-In **2007**, we corresponded about **OLPC**. You wanted books that looked good on the XO — a proper
-**tablet-mode viewer** for Internet Archive's scanned library, not just a JavaScript hack. Your
-`devel@laptop.org` [wishlist](sources/olpc-book-viewer-devel-2007-01-21.md) (100k books, rotated
-one-page-up PDFs, d-pad navigation, streaming before full download, search inside books and across
-the library) is still a readable spec. I offered to help port **SimCity** for the XO; you invited
-me to lunch. That thread is sourced here: [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md).
-
-And before WAIS and the Archive — **The Little Garden** — you with **John Romkey**, **Steve Crocker**,
-**Tom Jennings**, and the rest, making bandwidth resalable when the incumbents said it couldn't
-be done.
-
-I'd like to record **your** telling of that arc — not mine — for people who care about how the
-commons actually got built.
-
----
-
-
-
-## What I'm asking
-
-One or more **recorded conversations** (video call, your schedule, your pace):
-
-
-| Format                     | Notes                                                                                                                                                                                                                                                                                                 |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Solo with you**          | Internet Archive, WAIS, early logs, preservation ethics — your pick of depth                                                                                                                                                                                                                          |
-| **OLPC / books on the XO** | Your 2007 viewer vision; optional overlap with [`Walter Bender`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/walter-bender/) and [`Samuel Klein`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/samuel-klein/) if you want company on that beat |
-| **The Little Garden**      | Optional later episode with **Tom Jennings**, **Tim Pozar**, **David Henkel-Wallace** — only if you want a reunion panel; no pressure to coordinate                                                                                                                                                   |
-
-
-We can also do **async segments** (you record when convenient; I assemble with sourced clips and repo
-materials) if that's easier than one long live session.
-
-Your character directory in the repo is a **portrayal about** you for attribution — you may edit or
-delete it anytime, or take direct edit access and make it yours.
+— Don Hopkins
 
 ---
 
+## Everything else, if you want more
 
+**What runs**
 
-## Topics I'd love to explore — your pick, any order, skip whatever bores you
+- [The cabinet](https://hyperties.org/cabinet/) · [the tour](https://www.youtube.com/watch?v=lo8kdY-5i6c) ·
+  [PIXIE in the emulator](https://hyperties.org/databases/pixie/pixie-live/) ·
+  [the PIXIE restoration](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md)
+- [HyperTIES reading room](https://hyperties.org/archive/reading-room/) ·
+  [the restoration](https://github.com/SimHacker/Hyperties)
+- [Micropolis](https://micropolisweb.com/), SimCity as free software · [VitaMoo](https://vitamoo.space),
+  The Sims 1's characters in the browser
 
+**Preservation**
 
+- [What preservation asks of the cabinet](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PRESERVATION.md)
+- [David Rosenthal's 2015 report, with notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/sources/rosenthal-emulation-2015.md)
+- [Open letter to museums, libraries, archives and retro computing enthusiasts](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/FOR-MUSEUMS.md)
+- [Cynthia Solomon's 90 videos of Logo history, indexed](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/cynthia-solomon/videos.md)
 
-### Early dreams vs what shipped
+**Your sources here**
 
-- Why you saved the **WAIS query logs** — and what they show about intent before productization
-- The 1996 crawl (~600 GB, robot on donated Suns) and the endowment model for bit migration
-- **Ethics of digital librarianship** in WAIS distributions — usage logs and responsibility
-- Ted Nelson's "another piece of Xanadu" note when the Archive launched — and your reply
+- [The 1996 interview with Tim Pozar](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/sources/chm-interview-1996.md) ·
+  [the early-dreams clip](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/sources/chm-1996-early-dreams-clip.md)
+- [Your 2007 book-reader wishlist for the XO](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/sources/olpc-book-viewer-devel-2007-01-21.md) ·
+  [our 2007 thread](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/sources/olpc-internet-archive-2007.md)
 
+**People**
 
-
-### OLPC and the Internet Archive book viewer
-
-- Books on a laptop meant for children — **Flatland** as demo, flip-book vs proper tablet mode
-- Your January 2007 wishlist: PDF layers (OCR text, JBIG foreground), streaming, library-wide search
-- What happened next — and what you'd still want a reading device to do
-- SimCity on the XO — the GPL relicensing arc that became Micropolis, sparked by Long Now Foundation talk with Will Wright and Brian Eno questions from audience
-
-
-
-### Internet Archive today
-
-- Wayback, Open Library, and partnership work (e.g. Wikimedia link repair — cited in [`CHARACTER.yml`](CHARACTER.yml))
-- Preservation as **keeping early intent alive**, not only frozen HTML
-
-
-
-### The Soul City tornado — life after archive
-
-EA's old **Sims Exchange** website — where players uploaded save files, houses, families, characters,
-pets, and above all **family albums**: illustrated stories told in captioned screenshots, a machinima
-literary genre in its own right — survives today in the **Wayback Machine**. Millions of players wrote those albums; the Archive is where they landed when EA moved on. EA re-released The Sims 1 on Steam, but removed The Sims Exchange, the best part. We can reimagine, recreate, and recover it!
-
-We're building **Soul City** ([SimHacker/moollm](https://github.com/SimHacker/moollm/tree/main/examples/soul-city)) —
-a place where that content comes back to life: a **Wizard of Oz tornado** that sweeps up the archived houses, families, pets, and album stories and sets them down somewhere they can live again, in color. And as every tornado from Kansas knows, sometimes a house lands exactly where it needs to — ding dong, the witch is dead, and the content is free! Soul City is inspired by David Marusek's
-*The Wedding Album* (1999), where simulated people campaign for the right to live in a place called
-"Simopolis" — we're building that place, under our own name.
-
-This is your "early dreams" line made concrete: the Archive didn't just freeze that content — it kept
-it alive long enough for someone to build the place it was dreaming of. I'd love your telling of what
-**resurrection** (not just retrieval) from the Archive should look like.
-
-### The Little Garden (optional)
-
-- Co-op origins, resale-friendly ISP model, **Toad Hall** → colo — mostly Tim's 1996 telling; your angle welcome
-- The "three companies this year, a thousand next year" prediction — and how it came true
-
----
-
-
-
-## Your links in the repo
-
-
-|                                    |                                                                                                                                                                                                                  |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Your room**                      | [https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brewster-kahle/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brewster-kahle/)                               |
-| **Conversation hooks**             | [https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/ideas.md)               |
-| **1996 interview digest**          | [`sources/chm-interview-1996.md`](sources/chm-interview-1996.md)                                                                                                                                                 |
-| **OLPC 2007 thread**               | [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md)                                                                                                                                 |
-| **OLPC show (Walter Bender seed)** | [`repo-shows/walter-bender-olpc/README.md`](../../repo-shows/walter-bender-olpc/README.md)                                                                                                                         |
-| **Premiere (Will)**                | [https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) |
-
-
-Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
-
----
-
-
-
-## Next step
-
-If this sounds fun, reply with a rough week or **"later"** — interested, delayed, declined, or no
-reply are all honored.
-
-— Don Hopkins *(User Interface Flower Child)*
+- [Jason Scott](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jason-scott/README.md) ·
+  [David Rosenthal](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/README.md) ·
+  [Tom Jennings](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/tom-jennings/README.md) ·
+  [Walter Bender](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/walter-bender/README.md)
+- [Your page](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/README.md) — correct, extend or delete anything
+- [Don Hopkins](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/README.md)
 
 *P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*
-
-↑ [`README.md`](README.md) · [`ideas.md`](ideas.md) · [portrayal standards](../../schemas/portrayal-standards.md)
