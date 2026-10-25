@@ -58,7 +58,7 @@ PKD and Lem as literal engineering specs: **Ubik → ubiquitous computing** (Wei
 *Ubik*, inverted to calm tech), **Palmer Eldritch → The Sims**, **Counter-Clock World → resurrection
 as thermodynamics** (LOCKSS as an engineered Hobart Phase — preservation as applied eschatology),
 and Lem's authority-over-truth machine → model collapse. Documented intertwingle: David's LOCKSS
-co-founder/2025 co-awardee **Vicki Reich was Mark Weiser's widow**.
+co-founder/2025 co-awardee **Vicky Reich was Mark Weiser's widow**.
 [`../mark-weiser/pkd-lem-ai-sf.md`](../mark-weiser/pkd-lem-ai-sf.md) · [`../mark-weiser/pkd-lem-ai-sf.yml`](../mark-weiser/pkd-lem-ai-sf.yml) *(lives with Mark's memorial — Ubik→ubicomp seed)*
 
 ### 6. MOOLLM demo + primer readings (July 2026)

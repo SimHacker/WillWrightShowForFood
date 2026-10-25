@@ -78,7 +78,7 @@ Don's xbugtool rant: [XBUGTOOL horror stories](http://www.art.net/~hopkins/Don/u
 
 Don draws a parallel between DSHR's *"shut up and do their job inconspicuously"* and **Mark Weiser** ubiquitous/calm computing — tools that recede. Weiser named ubicomp after PKD's *Ubik* (inverted to calm tech).
 
-**At time of flame (1990):** Mark Weiser was **alive** and married to **Vickie Reich** (later Victoria Reich — LOCKSS co-founder with David; Mark's widow).
+**At time of flame (1990):** Mark Weiser was **alive** and married to **Vicky Reich** (later Victoria Reich — LOCKSS co-founder with David; Mark's widow).
 
 ---
 
@@ -87,11 +87,11 @@ Don draws a parallel between DSHR's *"shut up and do their job inconspicuously"*
 | Person | Status |
 |--------|--------|
 | **Mark Weiser** | d. 1999 — memorial / historical context OK with care |
-| **Vickie / Victoria Reich** | **Ask David** what she'd like published; respect wishes |
+| **Vicky (Victoria) Reich** | **Ask David** what she'd like published; respect wishes |
 | **David Rosenthal** | Author of flame; wrote ICCCM — can respond on air |
 | **Don Hopkins** | Unix-Haters chapter author; Sun engineer contemporaneous with DSHR |
 
-Do **not** spring the marriage/widow thread in public material without David's and Vickie's OK. Don will ask.
+Do **not** spring the marriage/widow thread in public material without David's and Vicky's OK. Don will ask.
 
 ---
 
