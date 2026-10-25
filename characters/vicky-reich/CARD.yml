@@ -1,0 +1,33 @@
+# CARD — Vicky Reich (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: vicky-reich
+  name: Vicky Reich
+  type: [invitation, guest, portrayal]
+card:
+  name: Vicky Reich
+  title: Lots of Copies Keep Stuff Safe
+  rarity: rare
+  signifier: "📦"
+  flavor: Every library keeps its own copy, and they check each other.
+abilities:
+  - id: LOCKSS
+    name: LOCKSS
+    type: static
+    effect: Libraries keep their own copies and repair them by comparison.
+    verifiable: "Founded 1999 with David Rosenthal; https://www.lockss.org/about/history"
+    combos_with: [DSHR-LOCKSS]
+  - id: HIGHWIRE
+    name: HighWire
+    type: activated
+    effect: Put society journals on the web, run by a library.
+    verifiable: "Assistant Director, HighWire Press, Stanford"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../mark-weiser/CHARACTER.yml

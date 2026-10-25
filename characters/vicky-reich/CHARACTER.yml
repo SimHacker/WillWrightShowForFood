@@ -1,0 +1,75 @@
+# Vicky Reich — invitation portrayal. NOT Vicky Reich.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: vicky-reich
+  name: "Vicky Reich"
+  type: invitation
+  signifier: "📦"
+  status: living
+  field: >-
+    Librarian: co-founder of the LOCKSS Program and of CLOCKSS; HighWire Press;
+    Stanford University Libraries; the Library of Congress
+  home: characters/vicky-reich/
+  aliases: ["Victoria Reich", "Victoria Ann Reich"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+  note: >-
+    Her marriage to Mark Weiser is public record (his Wikipedia article). Other
+    personal matters are hers to tell; ask before anything personal goes in.
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+
+bio:
+  summary: |
+    A librarian whose career runs from reference work to building the systems
+    that keep scholarly publishing readable. Library of Congress (science
+    reference, planning, and an early optical disk pilot in the 1980s);
+    National Agricultural Library (head of acquisitions); University of
+    Michigan; Stanford University Libraries (chief of serials and
+    acquisitions). Assistant Director of HighWire Press at Stanford, which put
+    scientific and medical journals on the web from 1995, and the Libraries'
+    expert on copyright and fair use. With David S. H. Rosenthal she founded the
+    LOCKSS Program at Stanford Libraries in 1999, and was a founder of the
+    CLOCKSS Archive; they stepped away from managing LOCKSS in 2016.
+  awards:
+    - "ALCTS Outstanding Collaboration Citation, February 2007, as a founder of CLOCKSS (LOCKSS history)"
+    - "ALCTS/Ulrich's Serials Librarianship Award, February 2008 (LOCKSS history)"
+    - "LITA/Library Hi Tech Award for Outstanding Communication in Library and Information Technology, April 2014, with David Rosenthal (LOCKSS history)"
+    - "Paul Evan Peters Award, 2025, with David Rosenthal, from CNI, ARL and EDUCAUSE (LOCKSS news; ARL)"
+  papers:
+    - "Vicky Reich and Mark Weiser, 'Libraries Are More Than Information: Situational Aspects of Electronic Libraries', Serials Review 20(3), 1994; Xerox PARC CSL-93-21"
+    - "David S. H. Rosenthal and Vicky Reich, 'Permanent Web Publishing', FREENIX track, USENIX 2000, which credits the Long Now clock as an inspiration"
+    - "Vicky Reich and Terry Winograd, 'Working Assumptions About the Digital Library', Stanford Digital Library Project"
+
+connections:
+  mark_weiser: >-
+    Married to Mark Weiser until his death in 1999. Co-author with him of the
+    1994 Serials Review paper. Mark's 1995 page for their kittens, Nijinsky and
+    Pavlova, linked to her home page; cached in his memorial.
+  lockss: "Co-founder of LOCKSS with David Rosenthal (1999)."
+  terry_winograd: "Co-author on the Stanford Digital Library Project."
+
+sources:
+  web:
+    - { title: "LOCKSS history (founding, awards)", url: "https://www.lockss.org/about/history" }
+    - { title: "LOCKSS news: 2025 Paul Evan Peters Award", url: "https://www.lockss.org/news/and-2025-paul-evan-peters-award-goes" }
+    - { title: "ARL: LOCKSS co-founders honored with 2025 Paul Evan Peters Award", url: "https://www.arl.org/news/lockss-co-founders-honored-with-2025-paul-evan-peters-award/" }
+    - { title: "Permanent Web Publishing (USENIX 2000)", url: "https://www.usenix.org/legacy/publications/library/proceedings/usenix2000/freenix/full_papers/rosenthal/rosenthal.pdf" }
+    - { title: "Her HighWire home page, 1999 (Wayback)", url: "https://web.archive.org/web/19990202071752/http://highwire.stanford.edu/%7Evreich/", summary: sources/highwire-home-1999.md }
+
+see_also:
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../mark-weiser/README.md, why: "Memorial" }
+  - { path: ../mark-weiser/media/ubiq-kittens-1995/README.md, why: "Nijinsky and Pavlova, 1995" }
+  - { path: ../david-rosenthal/README.md, why: "LOCKSS co-founder" }
+  - { path: ../brewster-kahle/README.md, why: "The Internet Archive" }
+  - { path: ../terry-winograd/README.md, why: "Stanford Digital Library Project" }

@@ -35,7 +35,7 @@ claim_ledger:
       Weiser's death. Mark cited the Ubik scene where Joe Chip is trapped in his apartment, unable
       to afford the fee to open his own door (Don recalls him borrowing coins from the toaster) as
       the dystopia calm technology was built to avoid. Attributed to Don's memory; not a Weiser quote.
-  vicki_reich_widow_of_weiser:
+  vicky_reich_widow_of_weiser:
     status: CONFIRMED
     detail: "Victoria 'Vicky' Reich was married to Mark Weiser (d. 1999); daughters Nicole & Corinne Reich-Weiser."
     sources: ["Weiser memorial bio (cs.berkeley.edu/Weiser/bio)", https://en.wikipedia.org/wiki/Mark_Weiser]
@@ -43,10 +43,10 @@ claim_ledger:
     status: CONFIRMED
     detail: "Victoria Reich & David S. H. Rosenthal founded LOCKSS (1999, Stanford); shared 2025 Paul Evan Peters Award."
     sources: [https://www.lockss.org/about/history, "CNI 2025 award"]
-  david_married_to_vicki:
+  david_married_to_vicky:
     status: DISPUTED_UNVERIFIED
     detail: |
-      Not in the public record we found; public materials describe David and Vicki as LOCKSS
+      Not in the public record we found; public materials describe David and Vicky as LOCKSS
       co-founders / professional partners, and one summary says they are not married. David's own
       marital status is his to state, not ours. DO NOT publish as fact.
     action: defer_to_david
@@ -120,7 +120,7 @@ open_questions:
 participants:
   mark-weiser:     { mode: memorial, note: "1952-1999; this is his dir; represent/discuss, no speak-as; Don's teacher & friend; David knew him; CHI'88 pie-menu co-author" }
   david-rosenthal: { mode: invitation_guest, consent: not_yet_asked, basis: public_work_only, note: "knew Mark; can speak to it firsthand" }
-  vicki-reich:     { mode: welcome_co_guest, consent: not_yet_asked, note: "LOCKSS co-founder; Weiser's widow; own body of work. Don would love both — David AND Vicki's call, together" }
+  vicky-reich:     { mode: welcome_co_guest, consent: not_yet_asked, note: "LOCKSS co-founder; Weiser's widow; own body of work. Don would love both — David AND Vicky's call, together" }
   will-wright:     { mode: guest, consent: invitation_accepted }
   philip-k-dick:   { mode: discuss_about, note: "deceased author; published work" }
   stanislaw-lem:   { mode: discuss_about, note: "deceased author; published work" }

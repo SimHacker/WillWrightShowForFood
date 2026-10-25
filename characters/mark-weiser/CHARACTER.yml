@@ -27,8 +27,8 @@ memorial:
   show_seed: ../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml
   who_can_discuss:
     - { who: don-hopkins, why: "Weiser's student at UMD and close friend until his death; co-author on the CHI'88 pie-menu paper (Callahan, Hopkins, Weiser, Shneiderman); primary source for the Ubik→ubicomp story" }
-    - { who: david-rosenthal, why: "Knew Mark; LOCKSS co-founder with Weiser's widow Vicki Reich; anchor of the Ubik/ubicomp reading-group thread", consent: not_yet_asked }
-    - { who: vicki-reich, why: "Mark Weiser's widow; LOCKSS co-founder — warmly welcome, David and Vicki's call together", consent: not_yet_asked }
+    - { who: david-rosenthal, why: "Knew Mark; LOCKSS co-founder with Weiser's widow Vicky Reich; anchor of the Ubik/ubicomp reading-group thread", consent: not_yet_asked }
+    - { who: vicky-reich, why: "Mark Weiser's widow; LOCKSS co-founder — warmly welcome, David and Vicky's call together", consent: not_yet_asked }
     - { who: ben-shneiderman, why: "Co-author on the same CHI'88 pie-menu paper" }
     - { who: brad-myers, why: "HCI peer — UI tools and techniques era" }
   draw_on_for_shows:
@@ -38,7 +38,7 @@ memorial:
     - "Xerox PARC CTO; garbage-collection and systems research"
     - "Co-author of the **CHI'88 pie-menu empirical study** with Don, Jack Callahan, Ben Shneiderman"
     - "Drummer for **Severe Tire Damage** — the first band to perform live on the Internet (1993)"
-    - "His web page for his and Vicky Reich's cats, Nijinski and Pavlova (11 Jan 1995), among the first cats on the Web; preserved by the Wayback Machine (https://web.archive.org/web/19981201080657/http://www.ubiq.com/hypertext/weiser/Kitten.html) and shown as it first looked, in NCSA Mosaic via oldweb.today, in David Rosenthal's 2016 Jisc/CNI talk on emulation (https://blog.dshr.org/2016/07/talk-at-jisccni-workshop.html)"
+    - "His web page for his and Vicky Reich's cats, Nijinski and Pavlova (11 Jan 1995), among the first cats on the Web; preserved by the Wayback Machine (https://web.archive.org/web/19981201080657/http://www.ubiq.com/hypertext/weiser/Kitten.html), cached with its photos in media/ubiq-kittens-1995/, and shown as it first looked, in NCSA Mosaic via oldweb.today, in David Rosenthal's 2016 Jisc/CNI talk on emulation (https://blog.dshr.org/2016/07/talk-at-jisccni-workshop.html)"
     - "**Living legacy** — the Mark D. Weiser Excellence in Computing Scholarship (UC Berkeley EECS) and the calm-tech torchbearers (Gregory Abowd, Amber Case). See legacy.yml + abowd-internet-of-materials.md"
 
 bio:

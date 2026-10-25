@@ -95,7 +95,7 @@ died). A hopeful, forward-looking segment: not just what Mark did, but who he ke
 |--------|------------|---------|
 | [Don Hopkins](../don-hopkins/) | Weiser's UMD student & friend; CHI'88 co-author; primary source for the Ubik story | self-sovereign (host) |
 | [David Rosenthal](../david-rosenthal/) | Knew Mark; LOCKSS co-founder; anchors the PKD/ubicomp thread | not_yet_asked |
-| Vicki Reich | Weiser's widow; LOCKSS co-founder — warmly welcome, David & Vicki's call together | not_yet_asked |
+| Vicky Reich | Weiser's widow; LOCKSS co-founder — warmly welcome, David & Vicky's call together | not_yet_asked |
 | [Ben Shneiderman](../ben-shneiderman/) | CHI'88 co-author; calm-tech vs direct-manipulation | not_yet_asked |
 | [Brad Myers](../brad-myers/) | HCI peer — UI tools & techniques era | not_yet_asked |
 | Jack Callahan | CHI'88 pie-menu co-author | not_yet_asked |

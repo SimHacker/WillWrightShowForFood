@@ -199,8 +199,8 @@ between a god that *preserves* (LOCKSS, Ubik-as-calm-tech) and one that *consume
 - **David S. H. Rosenthal** — invitation guest, `not_yet_asked`. Discuss his **public** work;
   speak *with* him via git; summarize private email in our words, quote public pages only. Knew
   Mark; can speak to it firsthand. [`../david-rosenthal/`](../david-rosenthal/)
-- **Vicki Reich** — warmly welcome potential co-guest; `not_yet_asked`. LOCKSS co-founder; Weiser's
-  widow; her own body of work. Don would love to have both — **David and Vicki's call**, together.
+- **Vicky Reich** — warmly welcome potential co-guest; `not_yet_asked`. LOCKSS co-founder; Weiser's
+  widow; her own body of work. Don would love to have both — **David and Vicky's call**, together.
 - **Will Wright** — guest, invitation accepted. The Sims / Palmer Eldritch reading.
   [`../will-wright/`](../will-wright/)
 - **Philip K. Dick, Stanisław Lem** — deceased authors; discuss published work only.
@@ -210,7 +210,7 @@ between a god that *preserves* (LOCKSS, Ubik-as-calm-tech) and one that *consume
 
 - Weiser ↔ *Ubik*: [Ubiquitous computing (Wikipedia)](https://en.wikipedia.org/wiki/Ubiquitous_computing); [Mark Weiser (Wikipedia)](https://en.wikipedia.org/wiki/Mark_Weiser)
 - David's public blog: <https://blog.dshr.org/> — esp. [Coprophagia Is Bad For You](https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html)
-- Weiser marriage / Vicki Reich: Weiser memorial bio; [LOCKSS history](https://www.lockss.org/about/history); 2025 CNI Paul Evan Peters Award
+- Weiser marriage / Vicky Reich: Weiser memorial bio; [LOCKSS history](https://www.lockss.org/about/history); 2025 CNI Paul Evan Peters Award
 - PKD: *Ubik* (1969), *The Three Stigmata of Palmer Eldritch* (1965), *Counter-Clock World* (1967), "Rautavaara's Case" (*Omni*, 1980), "Faith of Our Fathers" (*Dangerous Visions*, ed. Harlan Ellison, 1967)
 - Lem: "Trurl's Machine" (*The Cyberiad*, 1965)
 - Repo: [`../david-rosenthal/correspondence.yml`](../david-rosenthal/correspondence.yml) · [`../david-rosenthal/media/pdp7-hex-let-machine-win.yml`](../david-rosenthal/media/pdp7-hex-let-machine-win.yml)

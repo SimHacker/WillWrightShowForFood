@@ -23,4 +23,26 @@ his "mdw"-signed [game icon](media/sdi-icon-mdw.yml), the skyline with
 
 ![talkingmark — Mark's Game Over self-portrait](media/talkingmark-4x.png)
 
+## His home pages, from the Wayback Machine
+
+**Nijinsky and Pavlova (1995).** On 11 January 1995 Mark put up a page for the kittens he and
+[Vicky Reich](../vicky-reich/README.md) shared, nearly identical twins, one male and one female, with
+a puzzle: "The first picture is solved for you. Can you tell who is who in each of the others?" The
+page and its four photographs are cached here:
+[media/ubiq-kittens-1995](media/ubiq-kittens-1995/README.md). David Rosenthal used it in 2016 to show
+what emulation adds to web archiving, viewing it in NCSA Mosaic as it first looked
+([talk](https://blog.dshr.org/2016/07/talk-at-jisccni-workshop.html)).
+
+[![Pavlova and Nijinsky (Jinx)](media/ubiq-kittens-1995/KittenIdentificationSmall.gif)](media/ubiq-kittens-1995/README.md)
+
+**His home page (1999 capture).** In his own words there, he ran the Computer Science Laboratory at
+Xerox PARC for seven years, stepped down in 1994 to found a startup, and in August 1996 became PARC's
+Chief Technologist ("This will really be fun!"). He listed his research as garbage collection,
+operating systems, user interfaces and ubiquitous computing; was program chair of the 15th Symposium
+on Operating Systems Principles; organized the first workshop for heads of industrial computer
+science laboratories for the Computing Research Association; and posted slides for his ICSE 97
+keynote, "Software Engineering and People." Original HTML:
+[weiser-home-1999.html](media/ubiq-kittens-1995/weiser-home-1999.html) ·
+[the capture](https://web.archive.org/web/19990117032359/http://www.ubiq.com/hypertext/weiser/weiser.html).
+
 Verifiable sources in `CHARACTER.yml`.
