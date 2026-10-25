@@ -45,7 +45,12 @@ A roundtable of ten is a meeting, not a show, so this is a series with a few sha
    for everyone; what licenses, ROMs and the §1201 exemptions still block.
 4. **From the listing up.** Mitch, Al, Lars, Brian. Restoring software from printouts and scans:
    PIXIE from its 1972 listing, Forth assembled in the page, Spacewar! running its original PDP-1 code.
-5. **Logo, then and now.** Melody, April, Brian, with Cynthia Solomon if she'd like. The ITS turtle,
+5. **Packaging an upcycle.** April, Melody, Bob, Jason. microPAK and the cabinet's cartridge, SIMH
+   do-files, MAME software lists, the Internet Archive's emulation metadata: what an old program
+   needs to travel between emulators, how one format nests inside another, and a shared vocabulary
+   for upcycling metadata and scripts. Discussion paper:
+   [UPCYCLING-FORMATS.md](../../packages/cabinet/UPCYCLING-FORMATS.md).
+6. **Logo, then and now.** Melody, April, Brian, with Cynthia Solomon if she'd like. The ITS turtle,
    Apple Logo II, turtleSpaces; Logo Adventure in Apple Logo and in LLOGO side by side.
 
 ## What the repository gets

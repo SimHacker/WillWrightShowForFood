@@ -36,6 +36,21 @@ The same week:
   ([HN](https://news.ycombinator.com/item?id=18409959)).
 - Don wrote to thank her, which began the correspondence.
 
+From the rest of the [ITS issue](https://github.com/PDP-10/its/issues/1268) (September 2018 to
+January 2019):
+
+- Lars opened it with Don's source; Alexey Slyusar first ran it in Berkeley Logo, then ported it to
+  LLOGO, using MACLISP to stand in for Terrapin's `DEFINE` and LLOGO's `$...$` string quoting to
+  keep the original punctuation. Lars put it in Don's ITS home directory, `A2DEH`; the issue closed
+  with [#1494](https://github.com/PDP-10/its/pull/1494) on 21 January 2019.
+- Terrapin's C64 Logo descends from Terrapin's Apple II Logo, which MIT licensed to Terrapin.
+- Don's typo `PRPPER TOOLS` became `APPROPRIATE TOOLS` in the LLOGO port, "sanctioned by the author."
+- Lars also found Paleotronic's
+  [Logo Spacewar for Apple Logo](https://paleotronic.com/2018/09/27/ancient-tongues-logo-spacewar/)
+  (27 September 2018), and Alexey traced Logo Spacewar back to Alan Kay's version in the appendix of
+  the December 1972 Rolling Stone article "Spacewar: Fanatic Life and Symbolic Death Among the
+  Computer Bums" ([text](http://www.wheels.org/spacewar/stone/rolling_stone.html)).
+
 Paleotronic's related articles: "Lunarcy: A Lunar Lander in Apple Logo" and "Old Logo Turtle… New
 microLogo Tricks!"
 

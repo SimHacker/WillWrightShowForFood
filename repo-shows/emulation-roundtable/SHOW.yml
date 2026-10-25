@@ -28,7 +28,8 @@ episodes:
   - { n: 2, title: "The federation, live", guests: [april-ayres-griffiths, melody-ayres-griffiths, thomas-cherryhomes, lars-brinkhoff], demo: "PDP-7 Forth -> PIXIE ring -> tiny-titan -> Logo -> microM8 3D turtle; FujiNet joins" }
   - { n: 3, title: "Emulation is preservation", guests: [david-rosenthal, al-kossow, jason-scott, bob-supnik] }
   - { n: 4, title: "From the listing up", guests: [mitch-bradley, al-kossow, lars-brinkhoff, brian-silverman] }
-  - { n: 5, title: "Logo, then and now", guests: [melody-ayres-griffiths, april-ayres-griffiths, brian-silverman], maybe: [cynthia-solomon] }
+  - { n: 5, title: "Packaging an upcycle", guests: [april-ayres-griffiths, melody-ayres-griffiths, bob-supnik, jason-scott], paper: ../../packages/cabinet/UPCYCLING-FORMATS.md }
+  - { n: 6, title: "Logo, then and now", guests: [melody-ayres-griffiths, april-ayres-griffiths, brian-silverman], maybe: [cynthia-solomon] }
 
 format:
   live: true

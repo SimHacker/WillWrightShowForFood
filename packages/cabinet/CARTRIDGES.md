@@ -4,7 +4,8 @@
 owns the format: what a cartridge may carry, how it is built and cached, how one cartridge
 extends another, how code comes back out of a binary, and how an edit made in the page ends up
 in a git repo, built by CI and deployed. The LIVE CODING panel, variants and pen scripts stay
-in DESIGN.md.
+in DESIGN.md. How cartridges compare with microM8's microPAK and other emulators' formats, and how
+they nest, is in [UPCYCLING-FORMATS.md](UPCYCLING-FORMATS.md).
 
 Today a cartridge is an object in
 [`cabinet-programs.js`](../../apps/ties/src/lib/cabinet-programs.js) with its loading written as

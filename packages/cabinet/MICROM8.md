@@ -148,6 +148,12 @@ WebSocket, the same panels would give:
   and `store`, publish it; a cabinet panel could show the turtles' paths and the procedures that
   drew them.
 
+## Packages
+
+microPAK, their package for an upcycled program, compared with the cabinet's cartridge and others,
+with a shared vocabulary for upcycling metadata and scripts:
+[UPCYCLING-FORMATS.md](UPCYCLING-FORMATS.md).
+
 ## Order of work
 
 1. The federation demo over MCP: PDP-7 Forth to microM8's 3D turtle.
