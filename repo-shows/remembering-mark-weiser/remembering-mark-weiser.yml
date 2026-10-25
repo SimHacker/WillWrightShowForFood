@@ -46,16 +46,16 @@ possible_discussants:
       consent: self_sovereign
     - name: "David S. H. Rosenthal"
       character: characters/david-rosenthal/
-      connection: "Knew Mark; LOCKSS co-founder with Weiser's widow Vicki Reich; anchor of the Ubik/ubicomp/calm-tech reading-group thread."
+      connection: "Knew Mark; LOCKSS co-founder with Weiser's widow Vicky Reich; anchor of the Ubik/ubicomp/calm-tech reading-group thread."
       verified: true
       consent: not_yet_asked
       in_repo: ../../characters/mark-weiser/pkd-lem-ai-sf.md
-    - name: "Vicki Reich"
+    - name: "Vicky Reich"
       character: null
       connection: "Mark Weiser's widow; LOCKSS co-founder; e-journal preservation (HighWire, CLOCKSS)."
       verified: true
       consent: not_yet_asked
-      note: "Warmly welcome — Don would love to have her; entirely David and Vicki's call, together. Not a booking."
+      note: "Warmly welcome — Don would love to have her; entirely David and Vicky's call, together. Not a booking."
     - name: "Ben Shneiderman"
       character: characters/ben-shneiderman/
       connection: "Co-author on the CHI'88 pie-menu paper; direct-manipulation vs calm-technology framing."
