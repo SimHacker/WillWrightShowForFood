@@ -219,6 +219,12 @@ without a window frame. The endpoints, grouped:
 | **Memory and screen** | `GET memory/read/{address}`, `memory/write/{address}/{value}`; `GET memory/screen/text` returns the text screen |
 | **VMs and control** | `GET vm`, `vm/{1-8}`; `pause`; `cpu/warp/{up\|down}`; `audio/{master\|speaker}/{up\|down}`; `POST osd/send` shows a message on screen; `health`; `quit` |
 
+Paleotronic's own [GUI frontend](https://paleotronic.com/software/microm8/help/gui-frontend/) is a
+separate program built on this API: a cross-platform interface written in FreePascal with Lazarus
+that drives microM8 entirely over HTTP ([paleotronic/microm8-gui](https://github.com/paleotronic/microm8-gui),
+releases for Windows, macOS and Linux; no license file yet). A cabinet panel in SvelteKit doing the
+same is a second frontend on a path they already use.
+
 What this gives the cabinet now, before any WebAssembly:
 
 - **The federation demo over HTTP**: tiny-titan's host side starts microM8 in Logo
