@@ -211,3 +211,8 @@ test("the 1992 Turing Institute tape", { skip: !TAPE || !existsSync(TAPE) }, () 
 	assert.equal(a.entries.length, 1130);
 	assert.equal(a.warnings.length, 2, "one dropped block, and the last file runs onto tape 2");
 });
+
+test("a directory with a leftover link flag and no target is a directory", () => {
+	const a = readBar(concat(volumeHeader(), fileRecord({ name: "arthur/info/", mode: 0o40775, flag: "1" }), fileRecord({ name: "arthur/NeWS/", mode: 0o40755, flag: "2" }), END));
+	assert.deepEqual(a.entries.map((e) => e.kind), ["directory", "directory"]);
+});

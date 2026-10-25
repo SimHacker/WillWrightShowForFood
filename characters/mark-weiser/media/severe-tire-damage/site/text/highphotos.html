@@ -1,0 +1,39 @@
+
+<HTML>
+<HEAD>
+<TITLE>STD Band Members</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+function link(name, alt) {
+  var t = '<IMG SRC="../images/s_' + name + '.gif" BORDER=0 ALT="' + alt + '">';
+  return t.link(name + '.ra');
+}
+
+function initarray() {
+  this[0] = link("steve", "Steve");
+  this[1] = link("weiser", "Mark");
+  this[2] = link("msm", "Mark");
+  this[3] = link("russ", "Russ");
+ 
+this.length = 4;
+}
+
+var choice = new initarray();
+
+function choose() {
+  for (var i = choice.length; i > 0; ) {
+    var pick = Math.floor( Math.random() * i );
+    document.write(choice[pick]);
+    choice[pick] = choice[--i];
+  }
+}
+
+</SCRIPT>
+</HEAD>
+<BODY bgcolor="#000000" text="#ffffff" link="#ff0000" vlink="#cc0000">
+<SCRIPT LANGUAGE="JavaScript"> choose(); </SCRIPT>
+<BR><BR><BR><BR>
+
+<A HREF="pictures.html"><H1>Click for pictures of the band.</H1></a>
+P.S. If you had Javascript, you wouldn't see this message.
+</BODY>

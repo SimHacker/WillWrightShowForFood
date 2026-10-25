@@ -27,8 +27,8 @@ Please correct anything I got wrong.
 The plan is a federation rather than one big emulator: machines from different emulators talking
 through a hub. The first demo I'd like to build is Forth on the PDP-7 sending a drawing through the
 hub to microM8, where your 3D turtle draws it in the next window. Your MCP server can already take
-it as typed Logo; if you ever published a remote turtle protocol, for microM8 or turtleSpaces, I'd
-use that instead ([the plan](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle)).
+it as typed Logo, and turtleSpaces' `api` socket can take it too: I'd like the 1975 ITS Logo floor
+turtle's character stream to drive a turtleSpaces turtle, so anyone it hooks ends up with you ([the plan](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle)).
 And anyone the cabinet's Logo turtle gets hooked, I'd like to send to turtleSpaces.
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**

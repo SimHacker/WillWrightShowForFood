@@ -136,9 +136,12 @@ function readName(data: Uint8Array, pos: number): { text: string; next: number }
 	return { text: ascii.decode(data.subarray(pos, end)), next: end + 1 };
 }
 
-function kindOf(linkflag: number, mode: number, name: string): BarKind {
+function kindOf(linkflag: number, mode: number, name: string, linkName: string): BarKind {
 	// bar.c writes '3' for block, character and FIFO devices, but the 1992 Turing Institute tape
-	// also has seven directories flagged '3' with junk in rdev. The mode is the better witness.
+	// also has directories flagged '3' with junk in rdev, and directories flagged '1' or '2' with
+	// no link target: the flag left over from the header before. A name ending in "/" with no
+	// target, or a directory mode on a '3', is a directory.
+	if (name.endsWith("/") && linkName === "") return "directory";
 	if (linkflag === 0x33 && (mode & 0o170000) === 0o040000) return "directory";
 	switch (String.fromCharCode(linkflag)) {
 		case "1":
@@ -255,7 +258,7 @@ export function readBar(data: Uint8Array, options: ReadBarOptions = {}): BarArch
 
 		const mode = octal(block, 0, 8);
 		const linkflag = block[64] as number;
-		const kind = kindOf(linkflag, mode, name.text);
+		const kind = kindOf(linkflag, mode, name.text, link.text);
 		let size = octal(block, 24, 12);
 		if (!Number.isFinite(size) || size < 0) {
 			warnings.push({ offset: pos, message: `unreadable size field "${field(block, 24, 12)}"` });

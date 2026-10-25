@@ -55,6 +55,10 @@ side, where it is easy.
   prompt included, and not the echo of what you just typed. The command line under the paper is
   a real text field, so dictation, phone keyboards and input methods all work, and 🎤 sends a
   spoken line. HILO, a teletype game from a machine with no screen, plays by ear and voice.
+- **Dasher, steered by the program's own grammar.** The emulator can read what the running
+  program would accept next (Forth's dictionary, PIXIE's commands, UNIX's files) straight out of
+  core, so a Dasher-style input offers only those, sized by how likely they are, for anyone who
+  steers with a mouse, a finger, their eyes or one switch ([TELETYPE-DASHER.md](TELETYPE-DASHER.md)).
 
 ## Every machine can see every other machine
 

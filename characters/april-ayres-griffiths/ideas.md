@@ -14,7 +14,8 @@ Possible threads, if they want a conversation. Theirs to change or drop.
 6. **The federation demo.** Forth on an emulated PDP-7 builds a PIXIE ring, tiny-titan translates
    it to Logo, and microM8's 3D turtle draws it in the next window
    ([TINY-TITAN.md](../../packages/cabinet/TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle)).
-   Would they publish a remote turtle protocol for turtleSpaces or microM8?
+   turtleSpaces already listens on port 1967 (`api`); would they want the cabinet's ITS turtle
+   stream to drive it, and a link back to turtleSpaces wherever it does?
 7. **Making a living from it.** microM8 is free and now MIT; turtleSpaces is the product. How the
    two fit together, and how the rest of us can send them users.
 8. **Paleotronic Magazine.** Interviews with Doug Carlston, Rob Fulop and 4am; what makes popular

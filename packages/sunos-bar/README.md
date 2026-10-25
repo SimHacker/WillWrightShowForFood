@@ -30,7 +30,9 @@ for (const w of archive.warnings) console.warn(w.offset, w.message);
 ```
 
 Extraction stays inside the output directory: leading slashes are dropped, names with `..` are
-skipped, and symlinks pointing outside become `name.symlink` text files. Device files are listed in
+skipped, and symlinks pointing outside become `name.symlink` text files. On a case-insensitive disk
+(the Mac default), a symlink to its own name in another case is written as text too, so it can't
+point at itself. Device files are listed in
 `.bar-special.txt`, not created.
 
 ## The format
@@ -81,7 +83,7 @@ stops at the first bad header instead.
   takes the code width to 16 bits.
 - A real dump: a 55 MB tape of a Turing Institute home directory archived on 12 November 1992,
   tape 1 of a set. All 1,130 entries read. Files that also appear on a later tape Al read were
-  compared byte for byte: 514 are identical, and those that differ are later versions (mail files
+  compared byte for byte: 520 are identical, and those that differ are later versions (mail files
   marked read, edited sources). One file was missing a block in the dump. The reader recovered
   everything around it and the result matches the later tape's copy with that block removed. The
   last file runs onto tape 2. Set `SUNOS_BAR_TAPE` to the dump's path to run that test.

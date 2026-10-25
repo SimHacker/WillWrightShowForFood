@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Berry's STD Jukebox</TITLE>
+  </HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FF0000" VLINK="#990000" BACKGROUND="../images/band8.gif">
+
+
+<SCRIPT LANGUAGE="JavaScript">total_controls = 0;
+current_overID = "";
+last_overID = "";
+
+function control (img_name,icon_col,width,height) {
+        img_prefix = img_name;
+        this.icon_col = icon_col;
+        this.cntrl_img_off = new Image (width,height);
+        this.cntrl_img_off.src = "../images/jukebox/" + img_prefix + "_off.gif";
+        this.cntrl_img_on = new Image (width,height);
+        this.cntrl_img_on.src = "../images/jukebox/" + img_prefix + "_on.gif";
+}
+
+function new_control (img_name,icon_row,width,height) {
+        control [img_name] = new control (img_name,icon_row,width,height);
+}
+
+
+function cntrl_mouseover (itemID) {
+        current_overID = itemID;
+              document [current_overID].src = control [current_overID].cntrl_img_on.src;
+        if (last_overID != "") {
+                document.images [last_overID].src = control [last_overID].cntrl_img_off.src;
+        }
+                last_overID = current_overID;
+        }
+
+
+
+
+
+
+
+
+function cntrl_mouseout () {
+        if (current_overID != "") {
+        document.images [current_overID].src = control [current_overID].cntrl_img_off.src;
+        }
+        current_overID = "";
+        last_overID = "";
+}
+
+new_control ("STDonKFJC",1,40,180);
+new_control ("STDndaHouse",1,40,180);
+
+
+</SCRIPT>
+
+<BR><BR><BR><BR><BR>
+
+<A HREF="../music/STDonKFJC_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('STDonKFJC'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/STDonKFJC_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/STDonKFJC_off.gif" NAME="STDonKFJC" BORDER=0 ></A>
+<BR>
+<A HREF="../music/STDndaHouse_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('STDndaHouse'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/STDndaHouse_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/STDndaHouse_off.gif" NAME="STDndaHouse" BORDER=0 ></A>
+
+</BODY>
+</HTML>

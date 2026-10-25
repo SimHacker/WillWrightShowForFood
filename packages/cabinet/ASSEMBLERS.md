@@ -168,6 +168,37 @@ term by term against the Cambridge value; `FINDP=JMS,` becomes a label and `FIND
 only if as7 assembles them to the Cambridge words exactly; tests check that again, and that the
 checked-in files are what the translator makes today.
 
+## Macrology driven by measurement
+
+Because the cabinet owns the assembler, the metacompiler doesn't have to live in Forth. Open
+Firmware's metacompiler decides, word by word, whether a header is laid down, where, and in what
+form; the cabinet's assembler can make the same decisions with macros (`fword` in
+[FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md#what-step-2-needs-from-the-assembler-one-definition-two-destinations)),
+and with transformations over the source rather than over its text, in the spirit of James
+Gosling's Ace, a C macro processor that rewrote code by its structure.
+
+What's new is where the decisions come from. The emulator measures the running program exactly,
+from outside: how often each instruction runs, each Forth word is called, each call site is taken,
+each memory word is read or written, with no instrumentation inside the program and no change to
+its timing. Those profiles go back into the next build:
+
+- **Inline the hot words.** A primitive called from one hot loop is expanded in place; `NEXT`
+  disappears from the loop.
+- **Specialize.** A word always called with the same constant gets a version with the constant
+  folded in.
+- **Headers where they pay.** Words nobody looks up at run time go headerless; words `FIND` hits
+  often keep their names in bank 0, the rest move to bank 1.
+- **Lay out for the link limit.** Order the dictionary so the 512-word header links fit, from
+  measured call graphs rather than by hand.
+- **Check every transformation** by running the test suite on both builds and comparing traces.
+
+Self did this from inside: its compiler, polymorphic inline caches, recompilation and
+deoptimization ran in the same runtime as the program, at the same level as the language, seeing
+only what that runtime could see of the machine. The cabinet does it from outside, where it sees
+every register and every word of core, and the program and its timing are untouched. The cost is
+that the loop is slower: measure, rebuild, reload, rather than recompile on the fly. For a 1960s
+machine, rebuilding takes a fraction of a second.
+
 ## Next
 
 1. **Forth with RSPPIX, built in the page**: `kernel.s` and `rsppix.s` in one as7 run, one symbol
@@ -190,3 +221,6 @@ checked-in files are what the translator makes today.
    header and code in bank 0 and its name in bank 1 from one line, with the link computed. It needs
    macros (after MACRO-9's `.DEFIN`), a name-packing operator for the kernel's SIXBIT, and 15-bit
    addresses in the back end and listing ([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md#what-step-2-needs-from-the-assembler-one-definition-two-destinations)).
+8. **Profiles into the build**: per-instruction and per-word counts from the emulator, written
+   next to the source, and the first transformations that read them (inlining, headerless words)
+   ([Macrology driven by measurement](#macrology-driven-by-measurement)).

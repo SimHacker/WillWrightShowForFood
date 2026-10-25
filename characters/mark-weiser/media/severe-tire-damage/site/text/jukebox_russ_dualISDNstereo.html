@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Severe Tire Damage Jukebox</TITLE>
+  </HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FF0000" VLINK="#990000" BACKGROUND="../images/band2.gif">
+
+
+<SCRIPT LANGUAGE="JavaScript">total_controls = 0;
+current_overID = "";
+last_overID = "";
+
+function control (img_name,icon_col,width,height) {
+        img_prefix = img_name;
+        this.icon_col = icon_col;
+        this.cntrl_img_off = new Image (width,height);
+        this.cntrl_img_off.src = "../images/jukebox/" + img_prefix + "_off.gif";
+        this.cntrl_img_on = new Image (width,height);
+        this.cntrl_img_on.src = "../images/jukebox/" + img_prefix + "_on.gif";
+}
+
+function new_control (img_name,icon_row,width,height) {
+        control [img_name] = new control (img_name,icon_row,width,height);
+}
+
+
+function cntrl_mouseover (itemID) {
+        current_overID = itemID;
+              document [current_overID].src = control [current_overID].cntrl_img_on.src;
+        if (last_overID != "") {
+                document.images [last_overID].src = control [last_overID].cntrl_img_off.src;
+        }
+                last_overID = current_overID;
+        }
+
+
+
+
+
+
+
+
+function cntrl_mouseout () {
+        if (current_overID != "") {
+        document.images [current_overID].src = control [current_overID].cntrl_img_off.src;
+        }
+        current_overID = "";
+        last_overID = "";
+}
+
+new_control ("Daddy",1,40,180);
+new_control ("LancesDad",1,40,180);
+new_control ("NotDeadYet",1,40,180);
+new_control ("SandwichSong",1,40,180);
+new_control ("HospitalLove",1,40,180);
+new_control ("CarOnFire_msm",1,40,180);
+new_control ("CKYD",1,40,180);
+new_control ("Evariste_3Steve",1,40,180);
+new_control ("TimeMarchesOn",1,40,180);
+new_control ("Wimoweh",1,40,180);
+
+
+</SCRIPT>
+
+<IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+<A HREF="../music/Daddy_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('Daddy'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/Daddy_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/Daddy_off.gif" NAME="Daddy" BORDER=0 ></A><BR>
+<IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+<A HREF="../music/LancesDad_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('LancesDad'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/LancesDad_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/LancesDad_off.gif" NAME="LancesDad" BORDER=0 ></A><BR><IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+
+<A HREF="../music/NotDeadYet_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('NotDeadYet'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/NotDeadYet_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/NotDeadYet_off.gif" NAME="NotDeadYet" BORDER=0 ></A><BR><IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+
+
+<A HREF="../music/SandwichSong_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('SandwichSong'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/SandwichSong_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/SandwichSong_off.gif" NAME="SandwichSong" BORDER=0 ></A><BR><IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+
+<A HREF="../music/HospitalLove_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('HospitalLove'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/HospitalLove_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/HospitalLove_off.gif" NAME="HospitalLove" BORDER=0 ></A><BR><IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+
+<A HREF="../music/CarOnFire_msm_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('CarOnFire_msm'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/CarOnFire_msm_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/CarOnFire_msm_off.gif" NAME="CarOnFire_msm" BORDER=0 ></A><BR><IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+
+<A HREF="../music/CKYD_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"  ONMOUSEOVER="cntrl_mouseover ('CKYD'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/CKYD_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/CKYD_off.gif" NAME="CKYD" BORDER=0 ></A><BR><IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+
+<A HREF="../music/Evariste_3Steve_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('Evariste_3Steve'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/Evariste_3Steve_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/Evariste_3Steve_off.gif" NAME="Evariste_3Steve" BORDER=0 ></A><BR><IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+
+<A HREF="../music/TimeMarchesOn_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('TimeMarchesOn'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/TimeMarchesOn_dualISDNstereo.rpm'"  >
+<IMG SRC="../images/jukebox/TimeMarchesOn_off.gif" NAME="TimeMarchesOn" BORDER=0 ></A><BR><IMG SRC="../images/50.gif"><IMG SRC="../images/50.gif">
+
+<A HREF="../music/Wimoweh_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('Wimoweh'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/Wimoweh_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/Wimoweh_off.gif" NAME="Wimoweh" BORDER=0 ></A><BR>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Severe Tire Damage Jukebox</TITLE>
+  </HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FF0000" VLINK="#990000" BACKGROUND="../images/brad.gif">
+
+
+<SCRIPT LANGUAGE="JavaScript">total_controls = 0;
+current_overID = "";
+last_overID = "";
+
+function control (img_name,icon_col,width,height) {
+        img_prefix = img_name;
+        this.icon_col = icon_col;
+        this.cntrl_img_off = new Image (width,height);
+        this.cntrl_img_off.src = "../images/jukebox/" + img_prefix + "_off.gif";
+        this.cntrl_img_on = new Image (width,height);
+        this.cntrl_img_on.src = "../images/jukebox/" + img_prefix + "_on.gif";
+}
+
+function new_control (img_name,icon_row,width,height) {
+        control [img_name] = new control (img_name,icon_row,width,height);
+}
+
+
+function cntrl_mouseover (itemID) {
+        current_overID = itemID;
+              document [current_overID].src = control [current_overID].cntrl_img_on.src;
+        if (last_overID != "") {
+                document.images [last_overID].src = control [last_overID].cntrl_img_off.src;
+        }
+                last_overID = current_overID;
+        }
+
+
+
+
+
+
+
+
+function cntrl_mouseout () {
+        if (current_overID != "") {
+        document.images [current_overID].src = control [current_overID].cntrl_img_off.src;
+        }
+        current_overID = "";
+        last_overID = "";
+}
+
+
+new_control ("ChipmunksWannabe",1,40,180);
+new_control ("HospitalLove",1,40,180);
+new_control ("HRossPerot",1,40,180);
+new_control ("JingleBells",1,40,180);
+new_control ("LancesDad",1,40,180);
+new_control ("NotDeadYet",1,40,180);
+new_control ("RockSpam",1,40,180);
+new_control ("SandwichSong",1,40,180);
+new_control ("Wimoweh",1,40,180);
+new_control ("Ornamental",1,40,180);
+
+</SCRIPT>
+
+
+<DIV ALIGN=RIGHT>
+<A HREF="../music/ChipmunksWannabe_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('ChipmunksWannabe'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/ChipmunksWannabe_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/ChipmunksWannabe_off.gif" NAME="ChipmunksWannabe" BORDER=0 ></A>
+<IMG SRC="../images/50.gif"></DIV>
+<DIV ALIGN=RIGHT>
+<A HREF="../music/HospitalLove_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('HospitalLove'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/HospitalLove_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/HospitalLove_off.gif" NAME="HospitalLove" BORDER=0 ></A>
+<IMG SRC="../images/25.gif"></DIV>
+<DIV ALIGN=RIGHT>
+<A HREF="../music/HRossPerot_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('HRossPerot'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/HRossPerot_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/HRossPerot_off.gif" NAME="HRossPerot" BORDER=0 ></A><IMG SRC="../images/25.gif">
+</DIV><DIV ALIGN=RIGHT>
+<A HREF="../music/JingleBells_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('JingleBells'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/JingleBells_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/JingleBells_off.gif" NAME="JingleBells" BORDER=0 ></A><IMG SRC="../images/50.gif">
+</DIV><DIV ALIGN=RIGHT>
+<A HREF="../music/LancesDad_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('LancesDad'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/LancesDad_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/LancesDad_off.gif" NAME="LancesDad" BORDER=0 ></A>
+<IMG SRC="../images/25.gif"></DIV><DIV ALIGN=RIGHT>
+<A HREF="../music/NotDeadYet_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('NotDeadYet'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/NotDeadYet_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/NotDeadYet_off.gif" NAME="NotDeadYet" BORDER=0 ></A>
+</DIV><DIV ALIGN=RIGHT>
+
+<A HREF="../music/RockSpam_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('RockSpam'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/RockSpam_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/RockSpam_off.gif" NAME="RockSpam" BORDER=0 ></A>
+</DIV><DIV ALIGN=RIGHT>
+<A HREF="../music/Wimoweh_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('Wimoweh'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/Wimoweh_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/Wimoweh_off.gif" NAME="Wimoweh" BORDER=0 ></A>
+</DIV><BR>
+<DIV ALIGN=RIGHT>
+<A HREF="../music/SandwichSong_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('SandwichSong'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/SandwichSong_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/SandwichSong_off.gif" NAME="SandwichSong" BORDER=0 ></A>
+</DIV><DIV ALIGN=RIGHT>
+<A HREF="../music/Ornamental_dualISDNstereo.rpm" name="javaPlug1" width=40 height=20 controls="StatusField" CONSOLE="master" TARGET="dummy"  AUTOSTART="true"   ONMOUSEOVER="cntrl_mouseover ('Ornamental'); window.status = 'by Severe Tire Damage'; return true" ONMOUSEOUT="cntrl_mouseout ()" ONCLICK="this.href='../music/Ornamental_dualISDNstereo.rpm'"  ><IMG SRC="../images/jukebox/Ornamental_off.gif" NAME="Ornamental" BORDER=0 ></A>
+</DIV>
+</BODY>
+</HTML>

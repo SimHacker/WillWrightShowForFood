@@ -1,0 +1,150 @@
+<!DOCTYPE htmlplus PUBLIC "-//Internet/RFC xxxx//EN">
+<HTMLPLUS>
+<HEAD><TITLE>Sampling Music on an Indy for Posting to the Internet</TITLE></head>
+<BODY BACKGROUND="../images/treads.gif" bgcolor="#000000" text="#ffffff" link="#ff0000" vlink="#ff77ff">
+
+<H1 ALIGN=CENTER><FONT FACE="stencil,stamp">SAMPLING MUSIC ON AN INDY FOR POSTING TO THE INTERNET</FONT></H1>
+Mark Weiser<BR>
+August 7, 1994
+<P>
+Updated November 20, 1994 for MPEG.
+<H1 ALIGN=CENTER><FONT FACE="stencil,stamp">INTRODUCTION</FONT></H1>
+I just sampled several songs from my band, <B>Severe Tire Damage</B>, and released them for
+Mosaic access.  Here are some quick notes on the experience so that others may do
+better.  I'll update this file as I learn more, particularly from my Mosaic users.
+(The results may also be seen at
+http://www.std.org/Band.html.)
+<P>
+Basically there are five steps:
+<OL>
+<LI>Good recording and good analog playback.
+<LI>Good sampling.
+<LI>Snippets
+<LI>Conversions
+<LI>HTML
+</ol>
+My process is SGI Indy oriented, since its tools and capabilities determined my actions, it is widely available, and it is a very good machine on which to do audio processing.
+<P>
+Sampling rates are ordinarily specified in kilohertz, but the correct term is kilosamples/second.  I call these "ksamps".  I have used approximate rates: 44.1ksamp is CDROM rate; 22ksamp means one half of that, and 11ksamp one half again.  8ksamp means both a true 8ksamp, and the Sun rate of 8.01...ksamp.  I ignore stereo; thus a CD is really 88.2 ksamps (2 channels at 44.1)
+<H1 ALIGN=CENTER><FONT FACE="stencil,stamp">GOOD RECORDING AND GOOD ANALOG PLAYBACK</FONT></H1>
+Obviously, you should start with good quality sound.  Perhaps not so obviously, this matters even more if you are going to sample down to some low rate like 8ksamps for suns.  At one point I had the dolby set wrong (my tape was non-dolby, but I had dolby on, resulting in a compressed output with reduced lows and highs).  The 8ksamp version was awful -- much worse than the correct analog recording at 8ksamp, and relatively worse than the dolby analog vs. regular analog.  In other words, the downsampling accentuated the bad!  So start with the best you can.  Check all the settings of your analog playback device and make sure you are happy with the sound.  Maybe get an analog audio expert to listen and help.  (Not me: I play drums).
+<H1 ALIGN=CENTER><FONT FACE="stencil,stamp">GOOD SAMPLING</FONT></H1>
+Now you are ready to plug your analog sound source into your digital sampler.  I used Berry Kercheval's Sony tape deck plugged into the stereo sound inputs of an SGI Indy.
+<P>
+You can skip this whole section if you have an original digital source that you are plugging directly into the SGI digital audio port. You'll end up with a 44.1 (CD) or 48 (DAT) ksamps file.  Proceed to the next section on Snippets.
+<H2>Input Levels</H2>
+Input levels are tricky.  Too quiet, and you lose information, too loud and you distort.  Don't count on the SGI "loudness" postprocessing in the SoundEditor tool being able to fix a recording made too softly.  I initially recorded all songs with average levels in the green, with peak in yellow.  These did not sound good after conversion to lower rates: they were too soft for typical Sun and Mac speakers.  I redid them with average in the yellow, hitting red every few seconds (except for very loud passages, which hit red every second;  but never <I>dwelled</i> in the red.)  These were much better.
+<P>
+My friend and audiophile (and lead guitar player) Russ Haines says: "Sampling levels: how hot is hot? The accepted (non-standardized standard) for 0vu in digital format is (er, um...) 12dB down from 0. This is not exciting for a number of reasons you probably discovered; different speakers, listening levels, etc. The easy cheesy way to get around this is pretty much what you discovered: run it to redline with occasional 'overs'. This works for rock music because rock is basically a wall of sound with minimal peaks (which are, you guessed it, snare hits usually). The information that gets lost is not critical as it is usually high freq transients which are mimicked, if you're lucky, by the digital distortion incurred in 'going over'. If, however, the vocals are the peaky things, as in (um) folk music and barbershop quartets, the information  that gets lost is not just msec transients and the recording will suck (tt).
+<P>
+"The cure for a lot of quick and dirty recordings to digital is a stereo comp/limiter. It pumps everything up to listenable levels without sacrificing peaks to the gods of 'over'. There are an awful lot of groups that use comp/lims for dramatic impact: AM radio, commercials, home video distribution movies, old movie restoration."
+<H2>Sampling rate</H2>
+You might think sampling rate should be as high as possible: on the SGI, 48ksamps.  But actually it depends on your downsampling.  If you are aiming at a final sample rate of 11ksamp or 22ksamp, then starting at 44.1ksamp makes sense.  The downsampling is about 5 times faster (although I don't know that it is more accurate) when it is evenly divisible.  Also, all those samples have to go somewhere, and 44.1 stores 10% more music in the same space.
+<P>
+You can easily run out of disk space.  The Indy named Ark, that I used, has about 60MB of tmpfile space free, and this is used by the input recorder.  That holds about 5 minutes of stereo digitized music at 44.1ksamps.  (60MB/(44.1*2-bytes-per-16bit-sample*2-channels)). The Indy tends to hang if it can't write the full file.
+<H2>Program setup</H2>
+The Indy did a great job in recording the music and not being bothered by unix task switches and so on.   I did not do anything else on the screen while recording, to minimize interference.  (I left the meters on, that seemed fine.).
+<P>
+The Indy lets you specify a non-degrading priority for a unix task.  (Non-degrading means that it is not subject to the aging that normal Unix priorities are in the scheduler).  Priority 40 is the best non-privileged priority.  I became root and set my recording process to priority 39, just slightly better.  This meant that soundeditor had better priority than any interactive job, and I sometimes got slower screen painting if soundeditor was busy.  But I felt it was worth it to be sure the sound got recorded.  This command does it:
+<UL>
+<LI>npri -h 39 -p PID
+</ul>
+I used the Indy program SoundEditor to do the recording.  It did fine, but with these annoyances:
+<UL>
+<LI>Sometimes the SoundEditor fights about sample rate with the Indy SoundTool.  Generally I set my rate in the SoundTool.  The SoundEditor fights back if it thinks you have a file open at a different rate.  Select "NEW" from the file menu to make it docile.  You can then always "SAVE AS" to put it back in the old file.
+<LI>The soundeditor always starts recording where you last clicked the mouse.  So always scroll the sound visual display to the very left, and click to the very left, else you will have some unexpected leftover music.  To be even more sure, click the "Select All" button in SoundEditor, then pull down Edit and select "Clear".
+</ul>
+After your song is recorded and you have pressed "stop", do a "Save As" immediately to put it in a permanent file before something crashes..  This can take a long time -- you are writing many megabytes, probably over the network.  Go get a cup of coffee.  These files are in "aifc" format (Audio Interchange Format / Compressed), so .aifc is an appropriate suffix.
+<P>
+I used this trick: rather than doing the "Save As", from a Unix shell I cd'd to /usr/tmp, located the sound file (giant file with name starting with "aifc"), and initiated a <I>cp</i> of that file to a more permanent place.  I then proceeded to my next step, extracting snippets (see below), without needing to wait for the cp to complete.  This is a little dangerous (when is that tmp file rewritten, anyway?), but can save several minutes of thumb twiddling.
+<P>
+It turns out that no computer except SGI speaks AIFC.  Better would have been to use AIFF for all the operations above, rather than AIFC.
+<H1 ALIGN=CENTER><FONT FACE="stencil,stamp">SNIPPETS</FONT></H1>
+Now you have your beautiful music in 50MB sound files.  These are not user friendly for network access: <I>way</i> too big.  The first step in making them accessible is to select some sections of songs to put out as teasers.  About 20 seconds is right.  This is long enough for eight bars of even a slow song, but short enough to keep the kilobytes down.
+<P>
+Use your musical judgment on the snippet.  Technically, here is what I did: Zoom out the SoundEditor to show the whole song.  Listen to it, and write down the seconds counter of the possible snippet.  Zooming in and out is time consuming, so settle in on one snippet before the next step.
+<P>
+When you have the snippet you want, select it, plus about five seconds before and after, and zoom in (SoundEdit has a button that zooms in on the current selection).  Ideally you now have before you a piece of music between 20 and 30 seconds long.  You are going to add fade-in and fade-out so it sounds good.  
+<P>
+Near the beginning of the song, pick the point where you want full volume.  Select from that point to the left to the beginning of your snippet, use the "effects" menu, and select "fade-in".  Do the same at the end: pick the last point where you want full volume, select from there to the right the remainder of the snippet, and select "fade-out" from the "effects" menu.
+<P>
+For all of the above, apply taste and keep it interesting.  Fade-ins and outs should be fairly short, so your listeners gets the most music for their megabytes.  A couple seconds is good.
+<P>
+Save your snippets in appropriately named files.  (I put a capital S in front of the full song name; S for Snippet.)  These are still "aifc" format files.
+<H1 ALIGN=CENTER><FONT FACE="stencil,stamp">CONVERSIONS</FONT></H1>
+Now you have lots of music files, big ones with full songs, and smaller ones with snippets.  Unfortunately, these files are not very useful to anyone yet, because they are not in a format that either PC's or Mac's use, and they are still very big.  So you need to convert them into various formats.  You need at least three -- PC, Mac, and Sun -- plus your original, possibly converted to AIFF.
+<P>
+You should now convert all your files to AIFF, if you have not done so already:
+<UL>
+<LI>sfconvert foo.aifc foo.aiff format aiff
+</ul>
+You should do is many of the conversions as possible on the Indy using the progrma "soundfiler", because the Indy uses more sophisticated downsampling, than, say, the public-domain sound package <I>SOX</i>.  sfconvert does the same conversionson the Indy without needing an X Window.
+<H2>PC format</H2>
+There seem to be as many different PC formats as there are sound cards, and that is a lot.  But Microsoft Windows specifies a standard called WAVE that has become pretty common.  So we will create WAVE format files.
+<P>
+The Indy tool SoundFiler can create wave files directly.  Since PC's don't have such great sound systems anyway, 22ksamp is plenty good.  And stereo is probably overkill for the same reason.  So we'll save a factor of four in file size from full resolution: two from 44.1 to 22 ksamp, two for stereo to mono.  Select the 22k and mono and WAVE options in the SoundFiler buttons.  Make sure the sample size and format is 16 bits, 2s-complement.  Select an appropriate file name (I used origname<I>1622.wav</i>).
+<H2>Mac format</H2>
+There are many routes to a Mac sound file, and they all involve a Mac at the end, because Mac files are like nothing else.  Here is what I did:
+<P>
+Create a mono WAVE file with 11ksamp, and select 8-bit samples, and select unsigned integers.  This is very close to a standard Mac sound format.  There are many utilities on the Mac that claim to read WAVE files; however, they don't seem to handle complicated conversions.  Furthermore, when they fail to do a conversion they don't say so, but simply generate a garbage file of loud noise. So it is best to have the WAVE file already in nearly the correct format.  (Newer macs probably can take other formats with more ease, but 11k 8-bit unsigned will work on all Macs, I think).  Select an appropriate file name (I used origname<I>811.wav</i>).
+<P>
+Now take your WAVE file, get it onto your Macintosh, and run a converter tool from WAVE to Mac sound file.  I used the freeware program Balthazar. The result should be a file with a cute little icon showing a speaker.  If you click on this file, you should hear the sound.
+<P>
+Balthazer works on the sound in memory, so for longer files you will need to increase its memory size.  Before starting it, select Balthazer (single click), pull down the FILE menu, and select GET INFO, and then type in a larger value for Balthazer memory size.  It should hold your whole sound file.
+<P>
+But you are not done yet, because this file is not yet postable to the net.  That is because Macs use a special file format that is not just a stream of bytes.  It needs to be stuffed into an archive format that linearizes the Mac file format.  You will need to locate an archive creating program.  These are generally shareware, and want payment, because the authors make money on the stuffers, who are usually commercial software distributors.
+<P>
+You can find archive-creating software on the PARC 35-2 server called "MacServer (on sun)", folder "Library", folder "Util", folder "Compression Utilities", folder "Stuffit InstallerMaker".
+<P>
+When you find such a program, pass your Mac sound files through it to create archive format files.  StuffIt files, with suffix .sit, are fine and common.  Stick these .sit files on your server for your Mac users to download.  Your users will know what to do with .sit files, or can easily find someone who does.
+<H2>Sun format</H2>
+Although Suns supposedly understand many different sound file formats, a particular format has become known as Sun format (it is also apparently standard on NeXT machines).  This is 8ksamp, mulaw format, and the SGI program SoundFiler can generate it.  In SoundFiler select NeXT format, 8ksamp, and mulaw.  It may complain that it is using 8k, instead of 8.01k (the official sun number).  Ignore those messages -- they mean your sound is a fraction of a wavelength off from true pitch, but is being sampled with much more accuracy.  Select an appropriate file name (suffix ".au" is what sun uses, and what many Mosaic readers expect.)
+<P>
+The mulaw encoding of Sun format supposedly uses a floating-point-like representation to get 13 bits of range out of only 8 bits.  There are readers for Sun format files for Macs, and probably PCs.
+<H2>MPEG</H2>
+MPEG-2 is a video and audio compression format the reduces size of files about 10-1 at almost no quality reduction.  Although there are many MPEG players, it took a while to find an MPEG encoder.  I found the source code for one on ftp://www.iuma.com/audio_utils/converters/source/mpegaudio.tar.Z, compiled it for my sun, and used it to create mpeg files.  The result is in /tilde/weiser/src/mpeg/mpegaudio.
+<P>
+The program that creates MPEG from AIFF files is called "musicin".  You can run it with no parameters, and asks lots of questions.  To all the questions except two, you can type &lt;return&gt; to the question and take the default. When it asks for a PCM file, just give the AIFF file name, it can read it.  When it asks for "total bitrate", the default of 384kbps gives almost no compression.  Use 128 instead.  When it asks "Which mode do you want? Available: (&lt;s&gt;)tereo, (j)oint stereo, (d)ual channel, s(i)ngle Channel: i", make sure you answer according to the form of the input file.  It does <I>not</i> convert. I tried inputing a stereo AIFF file and asking for single channel mode output, and the result was noise.
+<P>
+Many players can only play mono MPEG files.  Thus, I recommend that you convert your AIFF file to a single channel before MPEG compression.  The SGI program "sfconvert" can do this.  Most audio files on WW (e.g. those on the Internet Underground Music Archive) are mono.
+<P>
+On an SS-20, to compress a 40MB AIFF file to a 4MB mpeg file took 23 minutes of cpu (29 minutes elapsed).
+<H1 ALIGN=CENTER><FONT FACE="stencil,stamp">HTML</FONT></H1>
+Now all that is left is to reference your sound files in your HTML document.   Sound files are simply referenced as anchors, and the filename suffix reveals to your browser that it is sound.  For instance:
+<UL>
+<LI>&lt;A HREF = "sound.au"&gt;Great Sound &lt;/A&gt;
+</ul>
+is a hyperlink refering to the sound file "sound.au", which will be fetched and played when the words "Great Sound" are pressed.
+<P>
+Sound files that are unknown to your browser will be retrieved as binary files and the user can place them somewhere.  For instance, the Mac ".sit" files will need to dropped into a folder somewhere and unpacked.  Not sure what happens to .wav files on a PC, but if you are using a PC Mosaic browser you'll find out soon enough.
+<P>
+As a courtesy to your browsing public, put the length of your music in both minutes, and Megabytes, so they can make good choices of retrieval.  Below is an HTML fragment for a snippet of the song <I>Carcinoma</i> in four formats.  This includes a small picture before the song title.
+<P>
+&lt;IMG SRC="../images/logoSmall.gif" ALT="STD"&gt; &lt;b&gt;Carcinoma&lt;/b&gt; (26.9 sec)
+<P>
+&lt;ul&gt;
+<P>
+&lt;li&gt;&lt;a href="SCarcinoma.au"&gt;Sun--224k&lt;/a&gt;
+<P>
+&lt;li&gt;&lt;a href="SCarcinoma811.wav"&gt;Macintosh--304k&lt;/a&gt;
+<P>
+&lt;li&gt;&lt;a href="SCarcinoma1622.wav"&gt;PC--1.2M&lt;/a&gt;
+<P>
+&lt;li&gt;&lt;a href="SCarcinoma.aiff"&gt;CD Rom--5M&lt;/a&gt;
+<P>
+&lt;/ul&gt;
+<P>
+The above looks like this when displayed by Mosaic:
+<!--  [Artwork node; type 'Artwork on' to command tool] 
+ -->
+<P>
+And  now, you are done!
+<H1 ALIGN=CENTER><FONT FACE="stencil,stamp">ACKNOWLEDGEMENTS</FONT></H1>
+Ron Frederick supplied cheerfulness and a great deal of know how in finding the right Indy tools.  Berry Kercheval supplied his tape deck, his headphones, and his belief that this should be done.  <B>Severe Tire Damage</B> created the music that demanded to be played in 8ksamp mulaw around the world.  The members of CSL showed friendly interest and encouragement as I sat in the open area with headphones on for two days.
+
+<TABLE COLSPEC="L40 L40 L40 L40 L40 L40 L40" BORDER=0><TR>
+<TD><A HREF="../first.html" TARGET = "_top"><IMG SRC="../images/iconhome.gif" BORDER=0></A></TD><TD> </TD><TD> </TD>
+<TD><ADDRESS>Severe Tire Damage (<A HREF="mailto:band@std.org">band@std.org</a>)</ADDRESS></TD><TD> </TD><TD> </TD>
+<TD><A HREF="buystuff.html"><IMG SRC="../images/buystuff.gif" BORDER=0></A></TD>
+</TR></TABLE><BR><BR>
+</BODY>

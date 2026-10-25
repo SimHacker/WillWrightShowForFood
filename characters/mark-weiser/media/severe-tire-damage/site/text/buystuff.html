@@ -1,0 +1,384 @@
+<HTML>
+<HEAD>
+<TITLE>Severe Tire Damage, Buy Stuff</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- this line hides the script from old browsers
+	numberOfCuts = 19
+
+	function makeArray(n) {
+		for(var i=1; i<=n; i++) this[i] = true;
+		return this
+	}
+
+	standardCut = new makeArray(numberOfCuts)
+	standardCut[2] = false
+	standardCut[4] = false
+	standardCut[8] = false
+	standardCut[9] = false
+	standardCut[12] = false
+	standardCut[16] = false
+	standardCut[19] = false
+
+	function cdcost(form)
+	{
+		if (isStandard(form))
+		{
+			return 1200
+		}
+		cuts = 0
+		for(i=1; i<=numberOfCuts; i++)
+		{
+			if (form.elements[i].checked) cuts = cuts + 1
+		}
+		return (cuts*50) + 1500
+	}
+
+	function price(pennies)
+	{
+		if (pennies < 10) return "$0.0" + pennies
+		if (pennies < 100) return "$0." + pennies
+		str = "$" + pennies
+		return str.substring(0, str.length-2) + "." + str.substring(str.length-2, str.length)
+	}
+
+	function calccost(form)
+	{
+		cdCost = form.CDCount.selectedIndex * cdcost(form)
+		form.CDCost.value = price(cdCost)
+		condomCost = form.CondomCount.selectedIndex * 100
+		form.CondomCost.value = price(condomCost)
+		matchCost = form.MatchCount.selectedIndex * 10
+		form.MatchCost.value = price(matchCost)
+		shirtCost = form.ShirtCount.selectedIndex * 2000
+		form.ShirtCost.value = price(shirtCost)
+		tattooCost = form.TattooCount.selectedIndex * 50
+		form.TattooCost.value = price(tattooCost)
+		subTotal = cdCost + condomCost + matchCost + shirtCost + tattooCost
+		form.Subtotal.value = price(subTotal)
+		if (subTotal != 0)
+		{
+			shipCost = 300;
+		} else
+		{
+			shipCost = 0;
+		}
+		form.Shipping.value = price(shipCost)
+		tax = parseFloat(form.Tax.value) * 100
+		form.Total.value = price(tax + subTotal + shipCost)
+	}
+
+	function recompute(form)
+	{
+		if (isStandard(form))
+		{
+			form.CDUnit.value = "$12.00 (standard album)"
+		} else
+		{
+			form.CDUnit.value = price(cdcost(form)) + " (custom album)"
+		}
+		calccost(form)
+	}
+
+	function doSubmit(form)
+	{
+		form.submit(); window.location="ordergood.html"
+	}
+
+	function isStandard(form)
+	{
+		for(i=1; i<=numberOfCuts; i++ )
+		{
+			if (form.elements[i].checked != standardCut[i]) return false;
+		}
+		return true
+	}
+
+	function setStandard(form)
+	{
+		for(i=1; i<=numberOfCuts; i++ )
+		{
+			form.elements[i].checked = standardCut[i]
+		}
+		recompute(form)
+	}
+// this is the end of the script and comment structure -->
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="../images/treads.gif" bgcolor="#000000" text="#ffffff" link="#ff0000" vlink="#ff77ff">
+
+<H1 ALIGN=CENTER><FONT FACE="stencil,stamp">BUY STUFF FROM SEVERE TIRE DAMAGE!</FONT></H1>
+
+This is the place to buy all of that fabulous <B>Severe Tire Damage</B> paraphenalia.
+You can buy <A HREF="matches.html">matches</A>, <A HREF="tattoo.html">tattoos</A>,
+<A HREF="condom.html">condoms</A>, <A HREF="tshirt.html">t-shirts</A>, and of course, a CD.
+
+<P>
+
+The table below shows all of the music that we have for sale.
+You can preview the different versions of each song, check out the lyrics, and decide which cuts to buy.
+If you order our "standard album" (with the cuts that we like) then it costs you just $12.00.
+If, however, you would like a custom album (we make the CD-R especially for you),
+then the cost is $15.00 plus 50 cents per cut.
+
+<P>
+<FORM NAME="order" ACTION="mailto:orders@std.org" METHOD=POST>
+<CENTER><INPUT TYPE="button" NAME="standard" VALUE="Click Here To Order a Standard Album" onClick="setStandard(this.form)"></CENTER>
+<P>
+<TABLE COLSPEC="L40 L40 L40 L40 L40 L40 L40" BORDER=4>
+<TR>
+<TH> </TH>
+<TH> </TH>
+<TH ALIGN=center COLSPAN=2>Long Audio Cut</TH>
+<TH ALIGN=center COLSPAN=2>Short Audio Cut</TH>
+<TH> </TH>
+</TR><TR>
+<TH>Style / Information</TH>
+<TH>Lyrics</TH>
+<TH>.wav</TH>
+<TH>Real Audio</TH>
+<TH>.wav</TH>
+<TH>Real Audio</TH>
+<TH>Order</TH>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Around and Around</TH>
+</TR><TR>
+<TD><A HREF="songinfo/around.a.html">Acousto-electric Folk-rock</A></TD>
+<TD><CENTER><A HREF="songinfo/around.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/around1.wav">51sec: 793kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/around1.ram">51sec: 98kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/around2.wav">8sec: 119kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/around2.ram">8sec: 16kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="around1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TD><A HREF="songinfo/around.a.html">Acoustic Folk-rock</A></TD>
+<TD><CENTER><A HREF="songinfo/around.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/arounda1.wav">51sec: 392kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/arounda1.ram">51sec: 95kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/arounda2.wav">17sec: 133kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/arounda2.ram">17sec: 32kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="around2" onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Car On Fire</TH>
+</TR><TR>
+<TD><A HREF="songinfo/caronfire.a.html">Punk</A></TD>
+<TD><CENTER><A HREF="songinfo/caronfire.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/caronfire1.wav">61sec: 958kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/caronfire1.ram">61sec: 117kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/caronfire2.wav">7sec: 112kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/caronfire2.ram">7sec: 13kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="caronfire1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TD><A HREF="songinfo/caronfire.a.html">Modern Rock</A></TD>
+<TD><CENTER><A HREF="songinfo/caronfire.l.html">Get</A></CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="caronfire2" onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Carcinoma</TH>
+</TR><TR>
+<TD><A HREF="songinfo/carcinoma.a.html">Punk</A></TD>
+<TD><CENTER><A HREF="songinfo/carcinoma.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/carcinoma1.wav">48sec: 772kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/carcinoma1.ram">48sec: 93kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/carcinoma2.wav">8sec: 123kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/carcinoma2.ram">8sec: 17kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="carcinoma1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Chris Killed Your Dog</TH>
+</TR><TR>
+<TD><A HREF="songinfo/ckyd.a.html">Hard Rock</A></TD>
+<TD><CENTER><A HREF="songinfo/ckyd.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/ckyd1.wav">30sec: 237kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/ckyd1.ram">55sec: 106kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/ckyd2.wav">17sec: 135kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/ckyd2.ram">13sec: 24kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="ckyd1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Evariste</TH>
+</TR><TR>
+<TD><A HREF="songinfo/evariste.a.html">Spoken Rock</A></TD>
+<TD><CENTER><A HREF="songinfo/evariste.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/evariste1.wav">51sec: 797kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/evariste1.ram">51sec: 98kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/evariste2.wav">9sec: 140kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/evariste2.ram">9sec: 19kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="evariste1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TD><A HREF="songinfo/evariste.a.html">Sung Rock</A></TD>
+<TD><CENTER><A HREF="songinfo/evariste.l.html">Get</A></CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="evariste2" onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Halloween</TH>
+</TR><TR>
+<TD><A HREF="songinfo/halloween.a.html">Classical / Rock</A></TD>
+<TD><CENTER><A HREF="songinfo/halloween.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/halloween1.wav">64sec: 994kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/halloween1.ram">64sec: 123kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/halloween2.wav">10sec: 158kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/halloween2.ram">10sec: 19kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="halloween1" onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>I Need More</TH>
+</TR><TR>
+<TD><A HREF="songinfo/ineedmore.a.html">Rock</A></TD>
+<TD><CENTER><A HREF="songinfo/ineedmore.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/ineedmore1.wav">60sec: 940kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/ineedmore1.ram">60sec: 115kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/ineedmore2.wav">10sec: 150kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/ineedmore2.ram">10sec: 19kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="ineedmore1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Jeremy / Voices</TH>
+</TR><TR>
+<TD><A HREF="songinfo/jeremy.a.html">"Jeremy" (Modern Rock)</A></TD>
+<TD><CENTER><A HREF="songinfo/jeremy.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/jeremy1.wav">63sec: 493kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/jeremy1.ram">63sec: 120kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/jeremy2.wav">21sec: 160kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/jeremy2.ram">21sec: 41kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="jeremy1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TD><A HREF="songinfo/voices.a.html">"Voices" (Angry Rock)</A></TD>
+<TD><CENTER><A HREF="songinfo/voices.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/voices1.wav">63sec: 490kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/voices1.ram">63sec: 120kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/voices2.wav">15sec: 121kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/voices2.ram">15sec: 30kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="voices1" onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Stuart</TH>
+</TR><TR>
+<TD><A HREF="songinfo/stuart.a.html">Rock</A></TD>
+<TD><CENTER><A HREF="songinfo/stuart.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/stuart1.wav">41sec: 635kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/stuart1.ram">41sec: 79kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/stuart2.wav">16sec: 258kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/stuart2.ram">16sec: 32kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="stuart1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>A Thousand Clowns</TH>
+</TR><TR>
+<TD><A HREF="songinfo/thousand.a.html">Blues Rock</A></TD>
+<TD><CENTER><A HREF="songinfo/thousand.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/thousand1.wav">36sec: 559kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/thousand1.ram">36sec: 68kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/thousand2.wav">16sec: 243kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/thousand2.ram">16sec: 30kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="thousand1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Time Marches On</TH>
+</TR><TR>
+<TD><A HREF="songinfo/timemarches.a.html">Alternative</A></TD>
+<TD><CENTER><A HREF="songinfo/timemarches.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/timemarches1.wav">46sec: 723kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/timemarches1.ram">46sec: 90kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/timemarches2.wav">12sec: 184kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/timemarches2.ram">12sec: 24kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="time1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TD><A HREF="songinfo/timemarches.a.html">Sweeter Alternative</A></TD>
+<TD><CENTER><A HREF="songinfo/timemarches.l.html">Get</A></CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="time2" onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>What I Do</TH>
+</TR><TR>
+<TD><A HREF="songinfo/whatido.a.html">Post Punk</A></TD>
+<TD><CENTER><A HREF="songinfo/whatido.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/whatido1.wav">37sec: 571kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/whatido1.ram">37sec: 71kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/whatido2.wav">17sec: 271kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/whatido2.ram">17sec: 35kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="whatido1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TH ALIGN=center COLSPAN=7>Who Cares</TH>
+</TR><TR>
+<TD><A HREF="songinfo/whocares.a.html">Alternative: psycho</A></TD>
+<TD><CENTER><A HREF="songinfo/whocares.l.html">Get</A></CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER><A HREF="../music/whocares1.wav">19sec: 144kb</A></CENTER></TD>
+<TD><CENTER>Sorry</CENTER></TD>
+<TD><CENTER><A HREF="../music/whocares1.ram">19sec: 35kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="whocares1" checked onClick="recompute(this.form)"></CENTER></TD>
+</TR><TR>
+<TD><A HREF="songinfo/whocares.a.html">Alternative: sung</A></TD>
+<TD><CENTER><A HREF="songinfo/whocares.l.html">Get</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/whocaresa1.wav">57sec: 440kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/whocaresa1.ram">57sec: 109kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/whocaresa2.wav">12sec: 92kb</A></CENTER></TD>
+<TD><CENTER><A HREF="../music/whocaresa2.ram">12sec: 24kb</A></CENTER></TD>
+<TD><CENTER><INPUT TYPE="checkbox" NAME="whocares2" onClick="recompute(this.form)"></CENTER></TD>
+</TR></TABLE>
+<HR>
+<TABLE COLSPEC="L40 L40 L40 L40 L40" BORDER=0><TR>
+<TH>Item</TH><TH>Unit cost</TH><TH>Number</TH><TH>Cost</TH>
+</TR><TR>
+<TD>CDs:</TD>
+<TD><INPUT TYPE="text" NAME="CDUnit" VALUE="$12.00 (standard album)" SIZE=23></TD>
+<TD><SELECT NAME="CDCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+<TD><INPUT TYPE="text" NAME="CDCost" VALUE="" SIZE=10></TD>
+</TR><TR>
+<TD><A HREF="condom.html">Condoms</A>:</TD>
+<TD>$1.00 each</TD>
+<TD><SELECT NAME="CondomCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+<TD><INPUT TYPE="text" NAME="CondomCost" VALUE="" SIZE=10></TD>
+</TR><TR>
+<TD><A HREF="matches.html">Matches</A>:</TD>
+<TD>10 cents each</TD>
+<TD><SELECT NAME="MatchCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+<TD><INPUT TYPE="text" NAME="MatchCost" VALUE="" SIZE=10></TD>
+</TR><TR>
+<TD><A HREF="tshirt.html">T-Shirts</A>:</TD>
+<TD>$20.00 each</TD>
+<TD><SELECT NAME="ShirtCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+<TD><INPUT TYPE="text" NAME="ShirtCost" VALUE="" SIZE=10></TD>
+<TD><SELECT NAME="ShirtSize"><OPTION SELECTED>Large<OPTION>X Large</SELECT></TD>
+</TR><TR>
+<TD><A HREF="tattoo.html">Tattoos</A>:</TD>
+<TD>50 cents each</TD>
+<TD><SELECT NAME="TattooCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+<TD><INPUT TYPE="text" NAME="TattooCost" VALUE="" SIZE=10></TD>
+</TR><TR>
+<TD>Order subtotal:</TD>
+<TD></TD><TD></TD><TD><INPUT TYPE="text" NAME="Subtotal" VALUE="0" SIZE=10></TD>
+</TR><TR>
+<TD>Sales tax (Ca. residents):</TD>
+<TD></TD><TD></TD><TD><INPUT TYPE="text" NAME="Tax" VALUE="0" SIZE=10 onChange="calccost(this.form)"></TD>
+</TR><TR>
+<TD>Shipping ($3.00):</TD>
+<TD></TD><TD></TD><TD><INPUT TYPE="text" NAME="Shipping" VALUE="0" SIZE=10 onChange="calccost(this.form)"></TD>
+</TR><TR>
+<TD>Order total:</TD>
+<TD></TD><TD></TD><TD><INPUT TYPE="text" NAME="Total" VALUE="0" SIZE=10></TD>
+</TR></TABLE>
+<HR>
+<TABLE COLSPEC="L40 L40" BORDER=0>
+<TR><TD>Name:</TD><TD><INPUT TYPE="text" NAME="Name" SIZE=30></TD></TR>
+<TR><TD>Street address:</TD><TD><INPUT TYPE="text" NAME="Street_Address" SIZE=50></TD></TR>
+<TR><TD>City:</TD><TD><INPUT TYPE="text" NAME="City" SIZE=30></TD></TR>
+<TR><TD>State:</TD><TD><INPUT TYPE="text" NAME="State" SIZE=4></TD></TR>
+<TR><TD>Zip code:</TD><TD><INPUT TYPE="text" NAME="Zip_code" SIZE=10></TD></TR>
+<TR><TD>E-Mail Address:</TD><TD><INPUT TYPE="text" NAME="E-Mail_Address" SIZE=30></TD></TR>
+<TR><TD>Telephone number:</TD><TD><INPUT TYPE="text" NAME="Telephone_Number" SIZE=12></TD></TR>
+<TR><TD>Credit card type:</TD><TD><SELECT NAME="CardType"><OPTION SELECTED>MASTERCARD<OPTION>VISA</SELECT></TD></TR>
+<TR><TD>Credit card #:</TD><TD><INPUT TYPE="text" NAME="Credit_Card_Number" SIZE=20></TD></TR>
+<TR><TD>Expiration date:</TD><TD><INPUT TYPE="text" NAME="Expiration" SIZE=10></TD></TR>
+</TABLE>
+
+<CENTER><INPUT TYPE="submit" VALUE="Submit Order"></CENTER>
+</FORM>
+
+<P>
+<HR>
+<ADDRESS><A HREF="../first.html" TARGET = "_top"><IMG SRC="../images/iconhome.gif" BORDER=0></A>Severe Tire Damage (<A HREF="mailto:band@std.org">band@std.org</a>)</ADDRESS>
+<BR><BR>
+</BODY>

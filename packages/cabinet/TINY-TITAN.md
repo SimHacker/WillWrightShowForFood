@@ -469,9 +469,11 @@ for a federation of emulators ([MANIFESTO](MANIFESTO.md#a-federation-of-emulator
    `write_interpreter_code` for a whole procedure, then `screenshot` to bring the picture back.
 5. The result returns to the PDP-7 as a ring: done, or the error microM8 reported.
 
-Nothing in it is new on microM8's side; its MCP tools already do each step. A remote turtle
-protocol, published by Paleotronic for turtleSpaces or for microM8, would be the better target
-than typed Logo, and the translator would switch to it. Ask them first:
+Nothing in it is new on microM8's side; its MCP tools already do each step. turtleSpaces has a
+remote protocol of its own: its `api` primitive opens a socket on port 1967 that takes Logo, one
+worker per connection ([reference](https://turtlespaces.org/reference/environment/#cmd-api)), so
+the same translator can send the figure to turtleSpaces instead, through tiny-titan's host side.
+Details in [MICROM8.md](MICROM8.md). Ask them first:
 [April Ayres-Griffiths](../../characters/april-ayres-griffiths/README.md) and
 [Melody Ayres-Griffiths](../../characters/melody-ayres-griffiths/README.md).
 

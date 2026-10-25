@@ -1,0 +1,843 @@
+<HTML>
+<HEAD>
+<TITLE>Severe Tire Damage, Buy Stuff</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- this line hides the script from old browsers
+	numberOfCuts = 39
+
+	function makeArray(n) {
+		for(var i=1; i<=n; i++) this[i] = true;
+		return this
+	}
+
+	standardCut = new makeArray(numberOfCuts)
+	standardCut[1] = false
+	standardCut[3] = false
+	standardCut[5] = false
+	standardCut[7] = false
+	standardCut[8] = false
+	standardCut[10] = false
+	standardCut[11] = false
+	standardCut[12] = false
+	standardCut[13] = false
+	standardCut[14] = false
+	standardCut[17] = false
+	standardCut[18] = false
+	standardCut[19] = false
+	standardCut[20] = false
+	standardCut[21] = false
+	standardCut[22] = false
+	standardCut[23] = false
+	standardCut[24] = false
+	standardCut[25] = false
+	standardCut[26] = false
+	standardCut[27] = false
+	standardCut[28] = false
+	standardCut[32] = false
+	standardCut[33] = false
+	standardCut[36] = false
+	standardCut[37] = false
+	standardCut[38] = false
+
+
+
+	function cdcost(form)
+	{
+		if (isStandard(form))
+		{
+			return 1200
+		}
+		cuts = 0
+		for(i=1; i<=numberOfCuts; i++)
+		{
+			if (form.elements[i].checked) cuts = cuts + 1
+		}
+		return (cuts*50) + 1500
+	}
+
+	function price(pennies)
+	{
+		if (pennies < 10) return "$0.0" + pennies
+		if (pennies < 100) return "$0." + pennies
+		str = "$" + pennies
+		return str.substring(0, str.length-2) + "." + str.substring(str.length-2, str.length)
+	}
+
+	function calccost(form)
+	{
+		cdCost = form.CDCount.selectedIndex * cdcost(form)
+		form.CDCost.value = price(cdCost)
+		condomCost = form.CondomCount.selectedIndex * 100
+		form.CondomCost.value = price(condomCost)
+		matchCost = form.MatchCount.selectedIndex * 10
+		form.MatchCost.value = price(matchCost)
+		shirtCost = form.ShirtCount.selectedIndex * 2000
+		form.ShirtCost.value = price(shirtCost)
+		tattooCost = form.TattooCount.selectedIndex * 50
+		form.TattooCost.value = price(tattooCost)
+		subTotal = cdCost + condomCost + matchCost + shirtCost + tattooCost
+		form.Subtotal.value = price(subTotal)
+		if (subTotal != 0)
+		{
+			shipCost = 300;
+		} else
+		{
+			shipCost = 0;
+		}
+		form.Shipping.value = price(shipCost)
+		tax = parseFloat(form.Tax.value) * 100
+		form.Total.value = price(tax + subTotal + shipCost)
+	}
+
+	function recompute(form)
+	{
+		if (isStandard(form))
+		{
+			form.CDUnit.value = "$12.00 (standard album)"
+		} else
+		{
+			form.CDUnit.value = price(cdcost(form)) + " (custom album)"
+		}
+		calccost(form)
+	}
+
+	function doSubmit(form)
+	{
+		form.submit(); window.location="ordergood.html"
+	}
+
+	function isStandard(form)
+	{
+		for(i=1; i<=numberOfCuts; i++ )
+		{
+			if (form.elements[i].checked != standardCut[i]) return false;
+		}
+		return true
+	}
+
+	function setStandard(form)
+	{
+		for(i=1; i<=numberOfCuts; i++ )
+		{
+			form.elements[i].checked = standardCut[i]
+		}
+		recompute(form)
+	}
+// this is the end of the script and comment structure -->
+</SCRIPT>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FF0000" VLINK="#990000" BACKGROUND="../images/treads.gif">
+
+<CENTER>
+<H1>
+<FONT FACE="stencil,stamp">BUY STUFF FROM SEVERE TIRE DAMAGE!</FONT></H1></CENTER>
+This is the place to buy all of that fabulous <B>Severe Tire Damage</B>
+paraphernalia:
+<CENTER><TABLE>
+<TR>
+<TD><A HREF="matches.html"><IMG SRC="../images/matchesS.gif" ALT="Match Book" BORDER=0 ></A></TD>
+
+<TD><A HREF="tattoo.html"><IMG SRC="../images/tattooS.gif" ALT="Tattoo" BORDER=0 ></A></TD>
+
+<TD><A HREF="condom.html"><IMG SRC="../images/condomS.gif" ALT="Condom" BORDER=0 ></A></TD>
+
+<TD><A HREF="tshirt.html"><IMG SRC="../images/shirtsS.jpg" ALT="T-Shirt" BORDER=0 ></A></TD>
+
+<TD><A HREF="customCD.html"><IMG SRC="../images/cdcoverS.jpg" ALT="CD" BORDER=0 ></A></TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>Matches</CENTER>
+</TD>
+
+<TD>
+<CENTER>Temporary Tattoos</CENTER>
+</TD>
+
+<TD>
+<CENTER>Condoms</CENTER>
+</TD>
+
+<TD>
+<CENTER>T-Shirts</CENTER>
+</TD>
+
+<TD>
+<CENTER>CDs</CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+The table below shows all of STD's original music. You can preview
+the different versions of each song, check out the lyrics, and decide which
+cuts to buy. If you order the "standard album" (with the cuts that STD likes)
+then it costs you just $12.00. If, however, you would like a custom album
+(STD burns a CD-R especially for you), then the cost is $15.00 plus 50
+cents per cut.
+<P>
+STREAMING AUDIO: <A HREF="buystuff_dualISDNstereo.html">Dual ISDN</A>,  
+<A HREF="buystuff_ISDNstereo.html">56k or Single ISDN</A>, life sucks with a  
+<A HREF="buystuff_288stereo.html">28.8 modem</A>. Or 
+<A HREF="buystuff_11kHz8bit.html">"I've never figured out RealAudio."</A>
+
+<P><FORM NAME="order" ACTION="mailto:orders@std.org" METHOD=POST>
+<CENTER>&nbsp;</CENTER>
+
+<CENTER><TABLE BORDER CELLSPACING=0 CELLPADDING=0 WIDTH="80%" >
+<TR>
+<TH>Title / Information</TH>
+
+<TH>Dual ISDN RA streaming</TH>
+
+<TH>Order</TH>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/around.html">Around and Around (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Around_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="around1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/around.html">Around and Around (Acoustic)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Around_Acoustic_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="around2" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/caronfire.html">Car On Fire (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/CarOnFire_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="caronfire1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/caronfire.html">Car On Fire (modern rock)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/CarOnFire_msm_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="caronfire2" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/carcinoma.html">Carcinoma (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Carcinoma_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="carcinoma1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/chipmunkswannabe.html">Small Furry Rodents "Wannabe"</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/ChipmunksWannabe_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="chipmunkswannabe" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/ckyd.html">Chris Killed Your Dog (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/CKYD_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="ckyd1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/daddy.html">Daddy</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Daddy_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="daddy"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/diana.html">Diana</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Diana_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="diana"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/evariste.html">Evariste (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Evariste_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="evariste1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/evariste.html">Evariste (with 3 Steves!)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Evariste_3Steve_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="evariste2" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/halloween.html">Halloween (Russ)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Halloween_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="halloween1" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/halloween.html">Halloween (Steve)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Halloween_Steve_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="halloween2"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/hospitallove.html">Hospital Love</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/HospitalLove_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="hospitallove"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/hrossperot.html">H Ross Perot</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/HRossPerot_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="hrossperot"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/ineedmore.html">I Need More (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/INeedMore_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="ineedmore1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/jeremy.html">Jeremy (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Jeremy_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="jeremy1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/voices.html">Voices ("Jeremy" by Steve)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Voices_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="voices1" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/jinglebells.html">Jingle Bells</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/JingleBells_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="jinglebells"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/lancesdad.html">Lance's Dad</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/LancesDad_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="lancesdad"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/monksondope.html">Monks On Dope</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/MonksOnDope_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="monksondope"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/notdeadyet.html">Not Dead Yet</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/NotDeadYet_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="notdeadyet"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/ornamental.html">Ornamental Comic Toad</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Ornamental_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="ornamental"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/pincushionboy.html">Pincushion Boy</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/PincushionBoy_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="pincushionboy"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/rockspam.html">Rockspam</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/RockSpam_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="rockspam"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/sandwichsong.html">The Sandwich Song</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/SandwichSong_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="sandwichsong" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/satchalike.html">Satch-alike</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/SatchAlike_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="satchalike" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/stdonkfjc.html">STD on KFJC</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/STDonKFJC_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="stdonkfjc"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/stdndahouse.html">STD 'n da House</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/STDndaHouse_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="stdndahouse"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/stuart.html">Stuart (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Stuart_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="stuart1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/thousand.html">A Thousand Clowns (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Thousand_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="thousand1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/timemarches.html">Time Marches On (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/TimeMarchesOn_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="time1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/timemarches.html">Time Marches On (Mark)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/TimeMarchesOn_msm_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="time2" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/wahnot.html">Wah Not</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/WahNot_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="wahnot"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/whatido.html">What I Do (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/WhatIDo_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="whatido1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/whocares.html">Who Cares (default)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/WhoCares_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="whocares1" checked onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/whocares.html">Who Cares (Steve)</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/WhoCares_Steve_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="whocares2" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/wimoweh.html">Wimoweh</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/Wimoweh_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="wimoweh"  onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><A HREF="songinfo/windyflutesong.html">Windy Flute Song</A></TD>
+
+<TD>
+<CENTER><A HREF="../music/WindyFluteSong_dualISDNstereo.ram">play</A></CENTER>
+</TD>
+
+<TD>
+<CENTER><INPUT TYPE="checkbox" NAME="windyflutesong" onClick="recompute(this.form)"></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+<INPUT TYPE="button" NAME="standard" VALUE="Click Here To Order a Standard Album" onClick="setStandard(this.form)">
+<HR>
+<TABLE BORDER=0 COLSPEC="L40 L40 L40 L40 L40" >
+<TR>
+<TH>Item</TH>
+
+<TH>Unit cost</TH>
+
+<TH>Number</TH>
+
+<TH>Cost</TH>
+</TR>
+
+<TR>
+<TD>CDs:</TD>
+
+<TD><INPUT TYPE="text" NAME="CDUnit" VALUE="$12.00 (standard album)" SIZE=23></TD>
+
+<TD><SELECT NAME="CDCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+
+<TD><INPUT TYPE="text" NAME="CDCost" VALUE="" SIZE=10></TD>
+</TR>
+
+<TR>
+<TD><A HREF="condom.html">Condoms</A>:</TD>
+
+<TD>$1.00 each</TD>
+
+<TD><SELECT NAME="CondomCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+
+<TD><INPUT TYPE="text" NAME="CondomCost" VALUE="" SIZE=10></TD>
+</TR>
+
+<TR>
+<TD><A HREF="matches.html">Matches</A>:</TD>
+
+<TD>10 cents each</TD>
+
+<TD><SELECT NAME="MatchCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+
+<TD><INPUT TYPE="text" NAME="MatchCost" VALUE="" SIZE=10></TD>
+</TR>
+
+<TR>
+<TD><A HREF="tshirt.html">T-Shirts</A>:</TD>
+
+<TD>$20.00 each</TD>
+
+<TD><SELECT NAME="ShirtCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+
+<TD><INPUT TYPE="text" NAME="ShirtCost" VALUE="" SIZE=10></TD>
+
+<TD><SELECT NAME="ShirtSize"><OPTION SELECTED>Large<OPTION>X Large</SELECT>&nbsp;<SELECT NAME="ShirtColor"><OPTION SELECTED>Purple<OPTION>Maroon<OPTION>Navy<OPTION>Grey<OPTION>Black&nbsp;</SELECT></TD>
+</TR>
+
+<TR>
+<TD><A HREF="tattoo.html">Tattoos</A>:</TD>
+
+<TD>50 cents each</TD>
+
+<TD><SELECT NAME="TattooCount" onChange="calccost(this.form)"><OPTION SELECTED>0<OPTION>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT></TD>
+
+<TD><INPUT TYPE="text" NAME="TattooCost" VALUE="" SIZE=10></TD>
+</TR>
+
+<TR>
+<TD>Order subtotal:</TD>
+
+<TD></TD>
+
+<TD></TD>
+
+<TD><INPUT TYPE="text" NAME="Subtotal" VALUE="0" SIZE=10></TD>
+</TR>
+
+<TR>
+<TD>Sales tax (Ca. residents):</TD>
+
+<TD></TD>
+
+<TD></TD>
+
+<TD><INPUT TYPE="text" NAME="Tax" VALUE="0" SIZE=10 onChange="calccost(this.form)"></TD>
+</TR>
+
+<TR>
+<TD>Shipping ($3.00):</TD>
+
+<TD></TD>
+
+<TD></TD>
+
+<TD><INPUT TYPE="text" NAME="Shipping" VALUE="0" SIZE=10 onChange="calccost(this.form)"></TD>
+</TR>
+
+<TR>
+<TD>Order total:</TD>
+
+<TD></TD>
+
+<TD></TD>
+
+<TD><INPUT TYPE="text" NAME="Total" VALUE="0" SIZE=10></TD>
+</TR>
+</TABLE>
+
+<HR>
+<TABLE BORDER=0 COLSPEC="L40 L40" >
+<TR>
+<TD>Name:</TD>
+
+<TD><INPUT TYPE="text" NAME="Name" SIZE=30></TD>
+</TR>
+
+<TR>
+<TD>Street address:</TD>
+
+<TD><INPUT TYPE="text" NAME="Street_Address" SIZE=50></TD>
+</TR>
+
+<TR>
+<TD>City:</TD>
+
+<TD><INPUT TYPE="text" NAME="City" SIZE=30></TD>
+</TR>
+
+<TR>
+<TD>State:</TD>
+
+<TD><INPUT TYPE="text" NAME="State" SIZE=4></TD>
+</TR>
+
+<TR>
+<TD>Zip code:</TD>
+
+<TD><INPUT TYPE="text" NAME="Zip_code" SIZE=10></TD>
+</TR>
+
+<TR>
+<TD>E-Mail Address:</TD>
+
+<TD><INPUT TYPE="text" NAME="E-Mail_Address" SIZE=30></TD>
+</TR>
+
+<TR>
+<TD>Telephone number:</TD>
+
+<TD><INPUT TYPE="text" NAME="Telephone_Number" SIZE=12></TD>
+</TR>
+
+<TR>
+<TD>Credit card type:</TD>
+
+<TD><SELECT NAME="CardType"><OPTION SELECTED>MASTERCARD<OPTION>VISA</SELECT></TD>
+</TR>
+
+<TR>
+<TD>Credit card #:</TD>
+
+<TD><INPUT TYPE="text" NAME="Credit_Card_Number" SIZE=20></TD>
+</TR>
+
+<TR>
+<TD>Expiration date:</TD>
+
+<TD><INPUT TYPE="text" NAME="Expiration" SIZE=10></TD>
+</TR>
+</TABLE>
+
+<CENTER><INPUT TYPE="submit" VALUE="Submit Order"></CENTER>
+</FORM>
+
+<P>
+<HR>
+<ADDRESS>
+<A HREF="../first.html" TARGET="_top"><IMG SRC="../images/iconhome.gif" BORDER=0 ></A>Severe
+Tire Damage (<A HREF="mailto:band@std.org">band@std.org</A>)</ADDRESS>
+
+<BR>&nbsp;
+</BODY>
+</HTML>

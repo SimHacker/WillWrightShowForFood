@@ -12,7 +12,7 @@
  * <name>.symlink. Special files are recorded in <dir>/.bar-special.txt rather than created.
  */
 
-import { mkdirSync, readFileSync, symlinkSync, utimesSync, writeFileSync, appendFileSync, linkSync, existsSync } from "node:fs";
+import { appendFileSync, existsSync, linkSync, lstatSync, mkdirSync, readFileSync, symlinkSync, unlinkSync, utimesSync, writeFileSync } from "node:fs";
 import { dirname, join, normalize, relative, resolve, sep } from "node:path";
 import { formatListing, readBar, type BarEntry } from "./bar.js";
 
@@ -29,6 +29,14 @@ export function safePath(root: string, name: string): string | null {
 	const rel = relative(resolve(root), full);
 	if (rel.startsWith("..") || rel.startsWith(sep)) return null;
 	return full;
+}
+
+function isSymlink(p: string): boolean {
+	try {
+		return lstatSync(p).isSymbolicLink();
+	} catch {
+		return false;
+	}
 }
 
 function extract(entries: BarEntry[], root: string, prefixes: string[]): void {
@@ -49,13 +57,21 @@ function extract(entries: BarEntry[], root: string, prefixes: string[]): void {
 				mkdirSync(out, { recursive: true });
 			} else if (e.kind === "file") {
 				mkdirSync(dirname(out), { recursive: true });
+				// On a case-insensitive disk, a symlink "foo -> Foo" made earlier now sits where Foo
+				// goes. Keep the file, and keep the link as text.
+				if (isSymlink(out)) {
+					unlinkSync(out);
+					console.error(`case collision: ${e.name} replaces a symlink of the same name in another case`);
+				}
 				writeFileSync(out, e.contents());
 				utimesSync(out, e.mtime, e.mtime);
 			} else if (e.kind === "symlink") {
 				mkdirSync(dirname(out), { recursive: true });
 				const target = normalize(join(dirname(out), e.linkName));
 				const inside = !e.linkName.startsWith("/") && safePath(root, relative(root, target)) !== null;
-				if (inside) symlinkSync(e.linkName, out);
+				// A link to its own name in another case points at itself on a case-insensitive disk.
+				const selfCase = target.toLowerCase() === out.toLowerCase();
+				if (inside && !selfCase) symlinkSync(e.linkName, out);
 				else writeFileSync(`${out}.symlink`, `${e.linkName}\n`);
 			} else if (e.kind === "hardlink") {
 				const from = safePath(root, e.linkName);

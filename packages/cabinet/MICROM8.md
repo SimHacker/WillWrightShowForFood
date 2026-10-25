@@ -1,0 +1,112 @@
+# Working with microM8 and turtleSpaces
+
+How the cabinet can work with [April](../../characters/april-ayres-griffiths/README.md) and
+[Melody](../../characters/melody-ayres-griffiths/README.md) Ayres-Griffiths's Apple ][ emulator,
+microM8, and their 3D Logo, turtleSpaces: what each exposes, how tightly we can connect, what we'd
+offer back, and how the cabinet's views could sit on top. Read from microM8's published source
+([paleotronic/microm8-cln](https://github.com/paleotronic/microm8-cln), MIT, September 2025) and
+turtleSpaces' reference, October 2026. Nothing here has been discussed with them yet.
+
+## What microM8 exposes
+
+| Surface | What it is | Use from the cabinet |
+|---|---|---|
+| **MCP server** | `microM8 -mcp`, over stdio or SSE (`-mcp-mode sse -mcp-port`). About 45 tools: `type_text`, `key_event`, `read_memory`, `write_memory`, `write_memory_range`, `screenshot`, `get_text_screen`, `get_graphics_screen`, `insert_disk`, `enable_live_rewind`, `rewind_back`, `assemble`, `disassemble`, `read_interpreter_code`, `write_interpreter_code`, `debug_breakpoint_add`, `debug_instruction_trace`, `debug_register_get`/`set` and more (`octalyzer/mcp_sdk.go`) | Agents drive it; tiny-titan's host side calls it for the federation demo ([TINY-TITAN.md](TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle)) |
+| **Debugger server** | An HTTP server microM8 runs itself (`debugger/api.go`): `GET /api/debug/screen/`, `POST /api/debug/asm/upload`, `POST /api/debug/upload`, `GET /api/debug/download/{mode}/{addr}/{size}`, and a JSON WebSocket at `/api/websocket/debug`. Its own debugger UI is plain HTML and JavaScript served from the same port (`octalyzer/debugger/index.html`, `js/ws.js`) | A SvelteKit app can speak the same WebSocket and be a second debugger front end, without touching microM8 |
+| **Debug WebSocket commands** | `attach`/`detach`, `pause`/`continue`/`step`/`step-over`/`step-out`, `setbp`/`clrbp`/`setbpcounter`, `memory`, `memsearch`, `memset`, `set-val`, `setpc`, `trace`, `get-heatmap`/`set-heatmap`, `live-rewind`, `back`/`forwards`, `state-save`, `decode-dasm`, `getstack`, `sendkey`, `setwarp` (`debugger/websocket.go`) | Memory reads and writes, disassembly, breakpoints and rewind from our panels |
+| **HTTP control API** | Get and set any emulator setting by `scope/key` (`octalyzer/apisettings.go`) | Profiles: a cartridge can set microM8's video mode, camera, speed |
+| **Several machines at once** | microM8 runs several interpreter slots side by side (its "parallel virtual machine scripting") | One microM8 can be several federation members |
+| **Source** | Go, MIT; builds with `lmake.sh`, including a `nox` build without X11 | Read, fork, contribute; a headless build is the starting point for anything in-browser |
+
+What the heat map is today: 256 counters, each holding a 4-bit read intensity and a 4-bit write
+intensity, either one per 256-byte page of the 64K, or one per byte within a chosen page, for main
+or aux memory (`core/memory/mmu.go`, `HeatMapRead`/`HeatMapWrite`). There is also a combined execute mode,
+instruction tracing, and settings for full CPU recording, to the debugger or to a file
+(`DebugFullCPURecord`, `FileFullCPURecord`). There is no per-address record of reads, writes and executes, and no access
+history you can browse.
+
+## What turtleSpaces exposes
+
+- **A socket API**: the `api` primitive opens port 1967; each connection runs its Logo as its own
+  worker (`api1`, `api2`, …), and `setwrite "api` sends output back down the connection
+  ([reference](https://turtlespaces.org/reference/environment/#cmd-api)). This is the remote
+  turtle protocol. The browser can't open TCP, so the cabinet reaches it through tiny-titan's host
+  side or a few lines of Node, with the desktop app.
+- **Embeddable players**: every published project has a Share link with an embeddable player, so
+  an article can embed a turtleSpaces project beside a cabinet applet.
+- **Shared containers and databases** inside Logo (`share`, `store`, `retrieve`), which a
+  translator can fill.
+- Source isn't published; turtleSpaces is their product, and the cabinet should send people to it,
+  not around it ([LOGO-TURTLE.md](LOGO-TURTLE.md#where-the-line-goes-on-the-escalator-to-turtlespaces)).
+
+## How tightly we can connect
+
+From loosest to tightest:
+
+1. **Side by side, today.** microM8 runs on the desktop; the cabinet runs in the page. tiny-titan's
+   host side talks to microM8's MCP server or debug WebSocket, and to turtleSpaces' port 1967.
+   Nothing on their side changes.
+2. **Our views on their machine.** A SvelteKit panel connects to microM8's debug WebSocket and shows
+   the cabinet's views of the Apple's memory (below). Read-only first, by polling `memory` and
+   `get-heatmap`; then breakpoints, stepping and rewind, through the same commands their own
+   debugger uses.
+3. **Contributions upstream**, if they want them: small, opt-in additions to the debug server (next
+   section), so our views get the data they need without polling.
+4. **In the page.** A headless microM8 core compiled to WebAssembly (Go builds to `js/wasm`),
+   running beside the PDP-7 in one tab. This is the most work and the least certain: microM8's core
+   assumes OpenGL and desktop audio, and cyanIIde, their own web Apple //e, may already be the
+   better starting point. Their call.
+
+Linking their Go code into our TypeScript directly isn't an option short of WebAssembly. Talking to
+it over its own protocols is, and that keeps each project's code its own.
+
+## What we'd offer back
+
+The repository has issues enabled, no pull requests so far, and "Contribution guidelines to be
+added." Ask before sending anything. What we would like to contribute, each behind a setting so
+nothing changes unless it's turned on:
+
+- **Per-address access counters**: for each address, separate read, write and execute counts, and
+  the cycle of the first and last of each. 64K addresses times a few counters is a few megabytes.
+- **An access log**: a ring buffer of `(cycle, PC, address, kind, value)` records, streamed over
+  the debug WebSocket, so a panel can show what happened and when, and scrub back through it with
+  live rewind.
+- **Subscriptions**: the WebSocket pushes changes to a watched range or to the heat map instead of
+  being polled.
+- **Allowed origins** for the debug server, so a page from another host can connect when the user
+  says so.
+- **Memory region typing hooks**: a place to say "this range is a Logo node space" or "this is a
+  display list", which their debugger and ours can both use.
+
+## Our views on their Apple, and on turtleSpaces
+
+The cabinet's panels are views over typed memory
+([DESIGN.md](DESIGN.md#typed-memory-core-as-typed-blocks)): core as a run of typed regions, each
+type knowing how to decode, describe and draw itself. Pointed at microM8's memory through the debug
+WebSocket, the same panels would give:
+
+- **A 6502 disassembler**, alongside microM8's own `decode-dasm`, with source maps when the program
+  came from source, and symbol tables from the assembler that built it.
+- **Heat maps and history**: microM8's page-level heat map today, per-address read, write and
+  execute maps once the counters exist, and a timeline of the access log you can scrub.
+- **Data structure views**: Applesoft program lines and variables, ProDOS directories, the text
+  and graphics screen memory as pictures, and for programs that have them, their own structures,
+  declared once as types.
+- **Forth on the Apple**: the same Forth dictionary and disassembler views the PDP-7 has, for an
+  Apple ][ Forth.
+- **Logo's insides**: microM8's Logo is rewritten in Go, so its procedures and turtles aren't in
+  emulated memory. `read_interpreter_code` gives the source; a turtle-state view would need an API
+  call from them.
+- **turtleSpaces**: no memory to read, but its API connection can query state and, with `share`
+  and `store`, publish it; a cabinet panel could show the turtles' paths and the procedures that
+  drew them.
+
+## Order of work
+
+1. The federation demo over MCP: PDP-7 Forth to microM8's 3D turtle.
+2. The `turtle.62` stream to turtleSpaces over port 1967.
+3. A read-only SvelteKit memory panel on microM8's debug WebSocket: hex, 6502 disassembly, the heat
+   map.
+4. Write to April and Melody with all of the above working, and ask what they'd want upstream.
+
+↑ [README](README.md) · [MANIFESTO](MANIFESTO.md) · [TINY-TITAN](TINY-TITAN.md) · [WEB-BENCH](WEB-BENCH.md) · [LOGO-TURTLE](LOGO-TURTLE.md)

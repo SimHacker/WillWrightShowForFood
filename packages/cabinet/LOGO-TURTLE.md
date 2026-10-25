@@ -141,14 +141,39 @@ who keeps ITS running. Seymour Papert and Marvin Minsky are remembered in their
 5. The room, the machines and stylized children in 3D, with Solomon's guidance.
 6. Scenes and tours, slow motion through the chain, and the cabinet's own KA10 when it runs ITS.
 
-## Where the line goes on
+## Where the line goes on: the escalator to turtleSpaces
 
 The turtle didn't stop in 1975. Apple Logo II carried it into schools, and
 [turtleSpaces](https://turtlespaces.org/), by [April](../../characters/april-ayres-griffiths/README.md) and
 [Melody](../../characters/melody-ayres-griffiths/README.md) Ayres-Griffiths, carries Apple Logo II into
-three dimensions, in a browser, with a gallery to publish and remix in. Anyone the old turtle hooks
-should be sent there. Their Apple ][ emulator, microM8, runs Apple Logo with 3D modes added, and is
-the target of the cabinet's first cross-emulator demo: Forth on the PDP-7 sends a figure through
+three dimensions, in a browser and on the desktop, with a gallery to publish and remix in.
+
+The cabinet doesn't build a modern Logo of its own. The 1970s ITS turtle is the historical end of
+the escalator; turtleSpaces is the modern end, and anyone the old turtle hooks gets sent there. That
+is also the most direct way to help its authors make a living from it.
+
+**The `turtle.62` stream can drive a turtleSpaces turtle.** turtleSpaces has a socket API: the
+`api` primitive opens port 1967, which you can reach with telnet or from another program, and each
+connection runs its instructions as its own worker, so several can drive turtles at once
+([reference](https://turtlespaces.org/reference/environment/#cmd-api)). A translator reads the
+characters ITS Logo sends down the Teletype line and writes turtleSpaces Logo:
+
+| `turtle.62` | turtleSpaces |
+|---|---|
+| `C` forward one step, `@` back one step | `forward 1`, `back 1` (scaled to the floor turtle's step) |
+| `B` right, `A` left, one step of turning | `right` and `left` by the floor turtle's angle per step |
+| `0` pen down, `8` pen up | `pendown`, `penup` |
+| `"` lamp on, `!` lamp off | a light or a colour change on the turtle |
+| `(` toot | a note |
+
+Runs of the same character collapse into one command (`CCCCC` becomes `forward 5`). The browser
+can't open a TCP socket, so the bytes go through tiny-titan's host side, or a few lines of Node, to
+port 1967 on the desktop app. The same 1975 program then draws on the 1970s floor in the cabinet and
+in turtleSpaces at once, and the second window is where a learner keeps going.
+
+Their Apple ][ emulator, microM8, runs Apple Logo with 3D modes added, and is the target of the
+cabinet's first cross-emulator demo: Forth on the PDP-7 sends a figure through
 [tiny-titan](TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle), and microM8's turtle draws it.
+How the cabinet can work with both is in [MICROM8.md](MICROM8.md).
 
 ↑ [README](README.md) · [PORTRAIT](PORTRAIT.md) · [CAUSE-AND-EFFECT](CAUSE-AND-EFFECT.md)
