@@ -238,6 +238,9 @@ separate PDP-11 emulators over a network socket. Here every machine is
 in one process, so the map is a function call, and a debugger can show
 both ends of a mapped word at once.
 
+Conversions beyond width, triggers, exclusive and shared modes, DMA and links to services are in
+[CORE-LINKS.md](CORE-LINKS.md).
+
 ## Sources
 
 - David Moon, [Hardware info](https://github.com/PDP-10/its/wiki/Hardware-info-from-David-Moon).

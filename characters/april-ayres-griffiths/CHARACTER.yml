@@ -10,6 +10,7 @@ character:
   field: >-
     Emulation and languages: designed and programmed microM8 (Apple ][ emulator, Go) and tapDancer; co-developer of turtleSpaces; technical director, Paleotronic
   home: characters/april-ayres-griffiths/
+  github: undefinedopcode
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

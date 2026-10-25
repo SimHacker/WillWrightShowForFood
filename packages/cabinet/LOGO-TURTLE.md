@@ -56,6 +56,12 @@ emulation today:
   up, `0` pen down; `"` lamp on, `!` lamp off; `(` for each toot.
 - **Perlman's TORTIS** is in [`src/radia/tortis.31`](https://github.com/PDP-10/its/blob/master/src/radia/tortis.31),
   with its button box mapped to forward, back, left, right, lamp, pen and toot.
+- **MIT's own Apple II Logo**, built from source, is in the ITS repository too:
+  [`src/aplogo`](https://github.com/PDP-10/its/tree/master/src/aplogo) and
+  [`doc/aplogo`](https://github.com/PDP-10/its/tree/master/doc/aplogo), pointed out by Lars Brinkhoff
+  in 2018 ([comment](https://github.com/PDP-10/its/issues/1268#issuecomment-439352015)). MIT licensed
+  it to Terrapin, whose C64 Logo Don wrote Logo Adventure for; LCSI wrote its own Apple Logo, the
+  one turtleSpaces follows.
 - Brian Silverman has revived the TT2500 in the browser
   ([MinskyLogo](http://www.playfulinvention.com/demos/MinskyLogo/)).
 

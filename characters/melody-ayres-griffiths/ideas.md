@@ -27,6 +27,10 @@ Possible threads, if they want a conversation. Theirs to change or drop.
     memory and the NTSC signal, "like a cybertronic rube goldberg device," built over microM8's 3D
     pixels ([CAUSE-AND-EFFECT.md](../../packages/cabinet/CAUSE-AND-EFFECT.md)).
 
+11. **microM8 as a WebAssembly module.** Direct calls from a web page, zero-copy memory views,
+    callbacks; Don offers to write the pull request
+    ([MICROM8.md](../../packages/cabinet/MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly)).
+
 ## Things to bring
 
 - The cabinet running PDP-7 Forth, and the federation demo once it works.

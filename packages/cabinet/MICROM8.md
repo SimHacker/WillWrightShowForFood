@@ -52,10 +52,10 @@ From loosest to tightest:
    debugger uses.
 3. **Contributions upstream**, if they want them: small, opt-in additions to the debug server (next
    section), so our views get the data they need without polling.
-4. **In the page.** A headless microM8 core compiled to WebAssembly (Go builds to `js/wasm`),
-   running beside the PDP-7 in one tab. This is the most work and the least certain: microM8's core
-   assumes OpenGL and desktop audio, and cyanIIde, their own web Apple //e, may already be the
-   better starting point. Their call.
+4. **In the page, with direct calls.** A headless microM8 core compiled to WebAssembly, running
+   beside the PDP-7 in one tab, no sockets
+   ([proposal below](#proposal-microm8-as-a-webassembly-module-called-directly)). The most work, and
+   the best result; their call.
 
 Linking their Go code into our TypeScript directly isn't an option short of WebAssembly. Talking to
 it over its own protocols is, and that keeps each project's code its own.
@@ -77,6 +77,50 @@ nothing changes unless it's turned on:
   says so.
 - **Memory region typing hooks**: a place to say "this range is a Logo node space" or "this is a
   display list", which their debugger and ours can both use.
+
+## Proposal: microM8 as a WebAssembly module, called directly
+
+The tightest connection has no sockets at all: microM8's emulation core compiled to WebAssembly and
+loaded into the cabinet's SvelteKit component, with JavaScript and Go calling each other directly.
+This is what we'd propose to April and Melody, and Don could write it and send it as a pull request
+if they want it.
+
+**What's there to build on.** Go compiles to WebAssembly (`GOOS=js GOARCH=wasm`), and
+`syscall/js` lets Go register functions JavaScript can call and call JavaScript back. microM8
+already separates a headless build: `settings_nox.go`, `vminit_nox.go`, `files_nox.go` and the
+`nox` target in `lmake.sh` leave out X11, and its vendored audio library (`ebitengine/oto`) has a
+browser driver. cyanIIde, their web Apple //e, may already be this, or most of it; ask first.
+
+**The shape of the PR**, all behind a `js && wasm` build tag so the desktop build is untouched:
+
+- A `wasmapi` package that boots one or more machines headless (the CPU, MMU, Disk II and SmartPort,
+  soft switches, video memory, sound) with no GL, no UI and no network.
+- Functions on a `microM8` object in JavaScript:
+  `create(profile)`, `runCycles(n)`, `runFrame()`, `key(code)`, `paddle(n, value)`,
+  `insertDisk(drive, bytes)`, `snapshot()`, `restore(state)`, `rewind(frames)`,
+  `readMemory(addr, len)`, `writeMemory(addr, bytes)`, `registers()`, `setBreakpoint(addr)`,
+  `disassemble(addr, n)`, `setHeatmap(mode)`, and `interpreterCode()` for its Go Logo and
+  Applesoft.
+- **Zero-copy views.** Go's memory is the module's linear memory, so `wasmapi` can return the
+  address and length of the Apple's RAM, the framebuffer and the audio buffer, and JavaScript wraps
+  them in `Uint8Array`s over the same bytes. The cabinet's panels then read every byte of the Apple
+  every frame without a copy or a call.
+- **Callbacks the other way**: an `onFrame`, `onBreakpoint` and, with the access counters
+  ([above](#what-wed-offer-back)), a ring buffer of memory accesses that JavaScript drains each
+  frame, rather than one call per access.
+- A `make wasm` target and a test page that boots a disk and checks a screen.
+
+**In the cabinet**, a `<MicroM8>` Svelte component loads `wasm_exec.js` and the module, draws the
+framebuffer with the cabinet's renderer (or lets microM8's own 3D view live in its own canvas), and
+registers the Apple on the backplane as a machine with a memory port
+([MAPPING.md](MAPPING.md)). Then tiny-titan can map Apple memory into the PDP-7's and back
+([CORE-LINKS.md](CORE-LINKS.md)), the federation demo runs in one page with no network, and every
+cabinet view (memory, disassembly, heat maps, completion at the keyboard) works on the Apple.
+
+**Costs to be honest about.** Go's WebAssembly output is large, often tens of megabytes before
+compression; TinyGo is smaller but may not compile everything microM8 uses. Go's runtime in the
+browser is single-threaded, so the Apple runs on the cabinet's clock or in a worker that posts
+frames. None of that matters much for a 1 MHz 6502.
 
 ## Our views on their Apple, and on turtleSpaces
 
@@ -110,6 +154,7 @@ WebSocket, the same panels would give:
 2. The `turtle.62` stream to turtleSpaces over port 1967.
 3. A read-only SvelteKit memory panel on microM8's debug WebSocket: hex, 6502 disassembly, the heat
    map.
-4. Write to April and Melody with all of the above working, and ask what they'd want upstream.
+4. Write to April and Melody with all of the above working, and propose the WebAssembly module,
+   offering to write it as a pull request.
 
 ↑ [README](README.md) · [MANIFESTO](MANIFESTO.md) · [TINY-TITAN](TINY-TITAN.md) · [WEB-BENCH](WEB-BENCH.md) · [LOGO-TURTLE](LOGO-TURTLE.md)

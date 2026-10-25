@@ -45,11 +45,18 @@ Its microPAK is the nearest thing to the cabinet's cartridge, and its MCP server
 federation demo possible: Forth on an emulated PDP-7 sending PIXIE rings through tiny-titan to
 microM8's 3D Logo turtle ([TINY-TITAN.md](../../packages/cabinet/TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle)).
 
-In November 2018, when Alexey Slyusar ported Don's 1980s Logo Adventure to LLOGO on ITS, April
-explained in the [PDP-10/its issue](https://github.com/PDP-10/its/issues/1268) how to move Logo
-source into an emulated Apple ][: paste it at the Logo prompt with Ctrl-Shift-V in microM8, then
-`SAVE`. Melody had just ported the same game to Apple Logo
-([her port](../melody-ayres-griffiths/sources/logo-adventure-apple-logo-2018/README.md)).
+In November 2018, when Alexey Slyusar ported Don's 1983 Logo Adventure to LLOGO on ITS, Lars
+Brinkhoff spotted Paleotronic's Apple Logo port of the same game on the
+[PDP-10/its issue](https://github.com/PDP-10/its/issues/1268#issuecomment-437609315). April (GitHub
+`undefinedopcode`) answered: "I can't take the credit for this one. My partner ported it to Apple
+Logo yesterday and wrote the article. I may have consulted a little :)"
+([comment](https://github.com/PDP-10/its/issues/1268#issuecomment-437630253)). When Lars asked how
+to get Logo source onto an Apple II disk, she explained: paste it at the Logo prompt with
+Ctrl-Shift-V in microM8, then `SAVE`
+([comment](https://github.com/PDP-10/its/issues/1268#issuecomment-439532245)), or put it on the
+disk with diskM8, "pretty alpha, and may eat your hamster :)"
+([comment](https://github.com/PDP-10/its/issues/1268#issuecomment-439561042)). Melody's port:
+[notes and links](../melody-ayres-griffiths/sources/logo-adventure-apple-logo-2018/README.md).
 
 ## Connections
 

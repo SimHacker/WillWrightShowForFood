@@ -31,6 +31,14 @@ it as typed Logo, and turtleSpaces' `api` socket can take it too: I'd like the 1
 turtle's character stream to drive a turtleSpaces turtle, so anyone it hooks ends up with you ([the plan](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle)).
 And anyone the cabinet's Logo turtle gets hooked, I'd like to send to turtleSpaces.
 
+One more proposal, which I'd be glad to write myself and send as a pull request if you'd like it:
+microM8's core built as a WebAssembly module with a small JavaScript API, so a web page can run it
+and call it directly, no sockets: step it, read and write its memory through zero-copy views, take
+snapshots and rewind, get callbacks. Then an Apple ][ and a PDP-7 can share memory in one page, and
+every view either of us builds works on both. It would sit behind a build tag and leave the desktop
+build alone; if cyanIIde already does this, even better
+([the proposal](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly)).
+
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 If you'd enjoy it, I'd like to invite you to a **Repo Show**, a recorded conversation whose stage is a
