@@ -18,12 +18,23 @@ turtleSpaces' reference, October 2026. Nothing here has been discussed with them
 | **Several machines at once** | microM8 runs several interpreter slots side by side (its "parallel virtual machine scripting") | One microM8 can be several federation members |
 | **Source** | Go, MIT; builds with `lmake.sh`, including a `nox` build without X11 | Read, fork, contribute; a headless build is the starting point for anything in-browser |
 
+**The web debugger, as its authors describe it** ([video and notes](https://www.youtube.com/watch?v=_4wTnaY8F2E),
+Melody Ayres-Griffiths, October 2018): Control-Shift-B opens it, paused. It keeps the CPU state, the
+program counter, recently executed instructions and a lookahead in view, with tabs for the video,
+memory, soft switches, breakpoints and settings. The CPU's speed changes while it runs. The
+**recorder** saves the CPU state at intervals (a tenth of a second by default, adjustable) and
+**records memory changes in real time**, and plays back forwards or backwards at 0.25× to 4×, or
+steps one or ten intervals, so you can go back to just before a crash and step from there. The memory
+pane edits hex or ASCII in main or auxiliary memory, searches for strings and byte sequences, and can
+ignore the high bit; the soft-switch pane toggles switches live (to look at another graphics page);
+breakpoints can tell main from auxiliary memory; memory blocks load and save.
+
 What the heat map is today: 256 counters, each holding a 4-bit read intensity and a 4-bit write
 intensity, either one per 256-byte page of the 64K, or one per byte within a chosen page, for main
 or aux memory (`core/memory/mmu.go`, `HeatMapRead`/`HeatMapWrite`). There is also a combined execute mode,
 instruction tracing, and settings for full CPU recording, to the debugger or to a file
-(`DebugFullCPURecord`, `FileFullCPURecord`). There is no per-address record of reads, writes and executes, and no access
-history you can browse.
+(`DebugFullCPURecord`, `FileFullCPURecord`). Memory writes are already recorded in real time for the rewind. What isn't kept is a per-address
+record of reads and executes, or an access history browsable by address.
 
 ## What turtleSpaces exposes
 
@@ -68,9 +79,10 @@ nothing changes unless it's turned on:
 
 - **Per-address access counters**: for each address, separate read, write and execute counts, and
   the cycle of the first and last of each. 64K addresses times a few counters is a few megabytes.
-- **An access log**: a ring buffer of `(cycle, PC, address, kind, value)` records, streamed over
-  the debug WebSocket, so a panel can show what happened and when, and scrub back through it with
-  live rewind.
+- **An access log**: microM8 already records every memory write for rewind; adding reads and
+  executes as `(cycle, PC, address, kind, value)` records, and streaming them over the debug
+  WebSocket, would let a panel show what happened, where and when, and scrub through it with the
+  rewind that exists.
 - **Subscriptions**: the WebSocket pushes changes to a watched range or to the heat map instead of
   being polled.
 - **Allowed origins** for the debug server, so a page from another host can connect when the user

@@ -54,6 +54,10 @@ needed." It is the constructionist argument this repository keeps returning to
 - **Logo Adventure for Apple Logo** (November 2018): she ported Don's 1983 C64 Terrapin Logo game to
   Apple Logo, put her name in its banner ("MODIFIED FOR APPLE LOGO BY MELODY AYRES-GRIFFITHS 2018"),
   and published it with a disk image ([notes and links](sources/logo-adventure-apple-logo-2018/README.md)).
+- **Videos** on her YouTube channel: the
+  [microM8 Apple IIe web debugger](https://www.youtube.com/watch?v=_4wTnaY8F2E) (October 2018), with
+  notes on every pane; a turtleSpaces demo reel; and music as **Xennial**, including "Lost (a
+  turtleSpaces Music Video)."
 - **An interview with Steve Wozniak** about designing the Disk II, for Paleotronic in 2018
   ([Steve Wozniak Talks Disk ][](https://paleotronic.com/2018/05/19/steve-wozniak-talks-disk/)).
 - Talks with April at KansasFest: upcycling with microM8 (2018), and a Claude MCP server for
