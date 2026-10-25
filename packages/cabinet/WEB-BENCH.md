@@ -57,6 +57,18 @@ this free.
   AI agent that reads registers, the screen and memory and sets breakpoints. Closest in spirit
   to the cabinet.
 
+**[microM8](https://paleotronic.com/software/microm8/)** (Paleotronic; designed and programmed by
+April Ayres-Griffiths; free, for Windows, macOS and Linux, with a WebAssembly subset, cyanIIde) —
+not a browser emulator and not a library to borrow, but the clearest example of what an emulator
+owes the person using it. It runs the Apple ][, ][+ and //e with Mockingboard, mouse, Disk II,
+SmartPort and Z-80 CP/M cards, and then "upcycles" them: renders the graphics in 3D and HD with
+cameras you can move; records memory so you can rewind live ("never say die!"); maps a joystick to
+the mouse for GEOS and Dazzle Draw; lets a game ship as a **microPAK**, one file of presentation
+for an old program (colour remapping, 3D pixel shifting, music, backdrops, overlays, cheats and
+control programs); keeps presets in YAML; and has a scriptable command line that can run a binary
+without booting a DOS disk. microPAK is the nearest thing anywhere to the cabinet's cartridge.
+([features](https://paleotronic.com/software/microm8/features/))
+
 **Decision: borrow, don't write.** The cabinet's backplane wants a CPU plugin and devices on a
 bus; a 6502 is a CPU plugin. Take `cpu6502` from apple2js as the Apple's CPU behind our `Cpu`
 interface, and read Apple2TS for the Apple's soft switches, video and game port. Then the Apple
