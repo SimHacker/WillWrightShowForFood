@@ -109,6 +109,15 @@ publishing the art.)*
 
 ### 9. Button sticking out of the window frame
 
+### 10. The Turing Institute tapes (2023)
+
+In November 2023 [Al Kossow](../al-kossow/README.md) read 1/4-inch Sun cartridge tapes from the
+Turing Institute and sent the results to Don and Arthur. They hold Arthur's home directory from 1992
+and later, with the HyperNeWS design documents, PdB papers and slides, and Don's VideoPIX
+frame-grabber library with a frame of the view from the Institute's window. One tape is a SunOS `bar`
+archive, read with [`@wwsff/sunos-bar`](../../packages/sunos-bar/README.md). Arthur's mail and
+personal files are his; only what he chooses goes public. A show thread: open the tape together.
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

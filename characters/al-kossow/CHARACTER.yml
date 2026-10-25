@@ -1,0 +1,58 @@
+# Al Kossow — invitation portrayal. NOT Al Kossow.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: al-kossow
+  name: "Al Kossow"
+  type: invitation
+  signifier: "💾"
+  status: living
+  field: >-
+    Computer history and software preservation: creator of bitsavers; Robert N.
+    Miner Software Curator, Computer History Museum (named 2006); Apple
+    1986-2005
+  home: characters/al-kossow/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+  note: >-
+    Public record only. The 2023 tape exchange is described here only as far as
+    Don's own work goes (the VideoPIX library and its frame); the tapes' other
+    contents are Arthur van Hoff's and stay private.
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+
+bio:
+  summary: |
+    Created bitsavers.org, an online archive of documentation and software for
+    historic computers. Senior software engineer at Apple, 1986 to 2005:
+    interactive graphics, operating systems, real-time control, software
+    liaison to CPU vendors. Long-time Computer History Museum volunteer, on the
+    PDP-1 restoration team. Named the museum's Robert N. Miner Software Curator
+    in July 2006; chairman of its Software Preservation Group from 2007.
+
+connections:
+  cabinet: >-
+    The cabinet's PDP-7, Type 340 and MACRO-9 work rests on bitsavers scans:
+    7-13_340_Display_Programming_Manual.pdf, pdf/dec/pdp7/,
+    DEC-9A-AMZA-D_MACRO9.pdf, PDP7_Instruction_list.pdf, MIT AI memos.
+  arthur_van_hoff: >-
+    November 2023: Al read 1/4-inch Sun tapes from the Turing Institute,
+    Glasgow, and passed them to Don and Arthur.
+  sunos_bar: >-
+    One tape was a SunOS bar archive; packages/sunos-bar reads it.
+  bruce_tognazzini: "Don asked Al and Arthur for platform advice on preserving asktog.com."
+  david_rosenthal: "Emulation and software preservation."
+
+sources:
+  - "CHM press release, Robert N. Miner Software Curator named: https://computerhistory.org/press-releases/robert-n-miner-software-curator-named-for-computer-history-museum/"
+  - "SCC_Active_Members, April 2006, Software Curator - Al Kossow: https://softwarepreservation.computerhistory.org/scc_active/2006-April/000819.html"
+  - "SCC_Active_Members, May 2007, Al Kossow becomes the Chairman of the Software Preservation Group: https://softwarepreservation.computerhistory.org/scc_active/2007-May/001051.html"
+  - "bitsavers: http://bitsavers.org/"
+  - "Don's correspondence with Al and Arthur, 13 November 2023 (private archive)"

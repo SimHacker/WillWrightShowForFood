@@ -22,6 +22,7 @@ what's reusable here — don't leave genius on a dead branch.
 | [`cabinet/`](cabinet/README.md) | Cabinet (`@wwsff/cabinet`) — emulator backplane; PDP-7 first plugin |
 | [`ecg/`](ecg/README.md) | ECG (`@wwsff/ecg`) — Embedded Constraint Graphics as courseware; design stage |
 | [`turing/`](turing/SCHEMA.yml) | YAML-Jazz Turing machines (Cherniak-class + UTMs); the recovered PCOMP disk in [`PCOMP.md`](turing/PCOMP.md) |
+| [`sunos-bar/`](sunos-bar/README.md) | SunOS bar (`@wwsff/sunos-bar`) — reads SunOS 4 bar archives from raw 1/4-inch Sun tape dumps; compress(1) decoding; reads past damaged blocks. Tested on a 1992 Turing Institute tape |
 
 Future packages may wrap [MicropolisCore](https://github.com/SimHacker/MicropolisCore) deps
 (`@micropolis/sims-io`, `@micropolis/render-core`, …) as `@wwsff/*` adapters for Repo Show bridges.

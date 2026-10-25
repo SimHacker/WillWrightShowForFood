@@ -1,0 +1,40 @@
+# CARD — Al Kossow (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: al-kossow
+  name: Al Kossow
+  type: [invitation, guest, portrayal]
+card:
+  name: Al Kossow
+  title: Bitsavers
+  rarity: rare
+  signifier: "💾"
+  flavor: If the manual exists, it's probably on bitsavers. If the tape exists, he can probably read it.
+abilities:
+  - id: BITSAVERS
+    name: Bitsavers
+    type: static
+    effect: Manuals, schematics, listings and bits for historic computers, online and mirrored.
+    verifiable: "http://bitsavers.org/"
+    combos_with: [CABINET, PIXIE-RESTORATION]
+  - id: READ-THE-TAPE
+    name: Read the Tape
+    type: activated
+    effect: Old media in, bits out, and the format named.
+    verifiable: "November 2023: Turing Institute Sun tapes; 'it came with sunos 4'"
+    combos_with: [SUNOS-BAR]
+  - id: SOFTWARE-CURATOR
+    name: Software Curator
+    type: static
+    effect: Keeps the Computer History Museum's software collection.
+    verifiable: "Robert N. Miner Software Curator, named July 2006 (CHM press release)"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../../packages/sunos-bar/README.md
+  - path: ../arthur-van-hoff/CHARACTER.yml
