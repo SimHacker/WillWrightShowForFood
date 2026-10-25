@@ -14,7 +14,7 @@ turtleSpaces' reference, October 2026. Nothing here has been discussed with them
 | **MCP server** | `microM8 -mcp`, over stdio or SSE (`-mcp-mode sse -mcp-port`). About 45 tools: `type_text`, `key_event`, `read_memory`, `write_memory`, `write_memory_range`, `screenshot`, `get_text_screen`, `get_graphics_screen`, `insert_disk`, `enable_live_rewind`, `rewind_back`, `assemble`, `disassemble`, `read_interpreter_code`, `write_interpreter_code`, `debug_breakpoint_add`, `debug_instruction_trace`, `debug_register_get`/`set` and more (`octalyzer/mcp_sdk.go`) | Agents drive it; tiny-titan's host side calls it for the federation demo ([TINY-TITAN.md](TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle)) |
 | **Debugger server** | An HTTP server microM8 runs itself (`debugger/api.go`): `GET /api/debug/screen/`, `POST /api/debug/asm/upload`, `POST /api/debug/upload`, `GET /api/debug/download/{mode}/{addr}/{size}`, and a JSON WebSocket at `/api/websocket/debug`. Its own debugger UI is plain HTML and JavaScript served from the same port (`octalyzer/debugger/index.html`, `js/ws.js`) | A SvelteKit app can speak the same WebSocket and be a second debugger front end, without touching microM8 |
 | **Debug WebSocket commands** | `attach`/`detach`, `pause`/`continue`/`step`/`step-over`/`step-out`, `setbp`/`clrbp`/`setbpcounter`, `memory`, `memsearch`, `memset`, `set-val`, `setpc`, `trace`, `get-heatmap`/`set-heatmap`, `live-rewind`, `back`/`forwards`, `state-save`, `decode-dasm`, `getstack`, `sendkey`, `setwarp` (`debugger/websocket.go`) | Memory reads and writes, disassembly, breakpoints and rewind from our panels |
-| **HTTP control API** | Get and set any emulator setting by `scope/key` (`octalyzer/apisettings.go`) | Profiles: a cartridge can set microM8's video mode, camera, speed |
+| **HTTP control API** | Plain HTTP on port 38911, with `-control-port` (and `-disable-border` for a frameless window). Window, input, disks, profiles, freeze, launch, settings, recorder, memory, text screen ([below](#the-http-control-api)) | tiny-titan drives microM8 with ordinary requests; a microPAK or disk launched by API |
 | **Several machines at once** | microM8 runs several interpreter slots side by side (its "parallel virtual machine scripting") | One microM8 can be several federation members |
 | **Source** | Go, MIT; builds with `lmake.sh`, including a `nox` build without X11 | Read, fork, contribute; a headless build is the starting point for anything in-browser |
 
@@ -199,6 +199,39 @@ WebSocket, the same panels would give:
 - **turtleSpaces**: no memory to read, but its API connection can query state and, with `share`
   and `store`, publish it; a cabinet panel could show the turtles' paths and the procedures that
   drew them.
+
+## The HTTP control API
+
+microM8's [API Control](https://paleotronic.com/software/microm8/help/api-control/) page documents
+it: start microM8 with `-control-port`, and it listens on port 38911; add `-disable-border` to run it
+without a window frame. The endpoints, grouped:
+
+| Group | Endpoints |
+|---|---|
+| **Window** | `POST window/position {x, y, w, h}`; `GET window/hide` (also suspends execution), `window/show`; `POST window/screen {path}` writes a PNG; `GET window/screenshot`; `GET window/focused` |
+| **Input** | `POST input/keyevent {key, scancode, action, modifier}`; `GET input/meta/key/{key}/value/{value}`; `POST input/mouseevent {x, y}`; mouse button state get, set and click; `POST paste` with text |
+| **Disks** | `POST hardware/disk/insert {path, drive}` (0 and 1 are Disk II, 2 is SmartPort); `eject/{drive}`, `blank/{drive}`, `swap`; write protect read and toggle |
+| **System** | `reboot`; `profile/set/{apple2-plus\|apple2e\|apple2e-en\|apple2e-en-cpm}`, `profile/get`; `POST freeze/save {path}`, `freeze/restore {path}`; `catalog`, `help`; `camera/reset` |
+| **Launch** | `POST system/launch {workingDir, disks[], pakfile, smartport, runfile, runcommand, dialect}`: boot disks, a microPAK, a SmartPort volume, or a BASIC, shell or Logo file or command |
+| **Interpreters** | `GET interpreter/{fp\|int\|logo}` starts Applesoft, Integer BASIC or Logo in the VM |
+| **Settings** | `POST settings/get {path, scope}`, `settings/update {path, scope, value, persist}` (for example scope `video`, path `current.fullscreen`) |
+| **Recorder** | `GET recorder` (0 off, 1 live rewind, 2 file recording); `recorder/{start-file-recording\|start-live-recording\|stop-recording\|rewind\|play\|resume}` |
+| **Memory and screen** | `GET memory/read/{address}`, `memory/write/{address}/{value}`; `GET memory/screen/text` returns the text screen |
+| **VMs and control** | `GET vm`, `vm/{1-8}`; `pause`; `cpu/warp/{up\|down}`; `audio/{master\|speaker}/{up\|down}`; `POST osd/send` shows a message on screen; `health`; `quit` |
+
+What this gives the cabinet now, before any WebAssembly:
+
+- **The federation demo over HTTP**: tiny-titan's host side starts microM8 in Logo
+  (`interpreter/logo`), pastes the translated figure (`paste`), and grabs the result
+  (`window/screen`).
+- **microM8 beside the cabinet**: a frameless window placed with `window/position` next to the page,
+  hidden and shown with it.
+- **Cartridges that launch microPAKs**: `system/launch` with `pakfile` is how a cabinet cartridge
+  would run an upcycled program in microM8.
+- **Completion and help at the keyboard**: `memory/screen/text` and `memory/read` give the text
+  screen and the tokenized program ([TELETYPE-DASHER.md](TELETYPE-DASHER.md)), one call per byte for
+  now; a range read would be the obvious small addition.
+- **Snapshots in cartridges**: `freeze/save` and `freeze/restore` by path.
 
 ## microBASIC's @functions: the scripting API inside the machine
 
