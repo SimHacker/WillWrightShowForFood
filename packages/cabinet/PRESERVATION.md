@@ -88,6 +88,31 @@ For the cabinet this means: unpack the PDP-7 UNIX disk into its directories and 
 its records, each listing into its pages and lines, and make the cartridge the manifest that says how
 to put them back.
 
+For SIMELEC and PIXIE it means TypeScript libraries and command line tools for PIXIE's data
+structures and files, working at every layer:
+
+- **Reading a running program.** Read PIXIE's rings straight out of the 18-bit core of the machine
+  while it runs. The RINGS panel already draws them in 3D, live, as they change
+  ([FORTH-RINGS.md](FORTH-RINGS.md)). Next: click a node in the 3D view and point the memory panel at
+  its words in core, and from there to the source line and the scanned page.
+- **Translating the source.** The cabinet's own assembler reads Cambridge's 1972 dialect, DEC's
+  1964 one and PDP-7 UNIX's as7, with one back end for all of them ([ASSEMBLERS.md](ASSEMBLERS.md)).
+  Its Cambridge-to-as7 translator already writes SYMELEC and RSPPIX as as7 source, and only if as7
+  assembles them back to exactly the Cambridge words. That is what lets RSPPIX, Cambridge's ring
+  structure processor, be linked into Mitch Bradley's Forth and wrapped in Forth words, low level
+  and high, so you can build and walk 1969 rings from the teletype.
+- **Growing the assembler.** Macro features compatible with DEC's later assemblers, following the
+  MACRO-9 manual already in [reference/](reference/), so later source can be read and translated
+  too.
+- **A Forth that uses all of memory.** A headerless Forth keeps the low 8K for threaded code and
+  assembly, and moves its names, headers and strings to high memory, with words for reaching
+  extended memory. The first step works; moving the names is designed
+  ([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md)).
+
+Each tool feeds the others: the assembler checks the translation, the translation puts the 1969
+code into Forth, Forth builds rings, the ring viewer reads them out of core, and the source maps tie
+every word back to the paper. It is one web of preservation, emulation, recreation and play.
+
 For an Apple ][ in the cabinet, with its Z-80 card, 80-column card and the rest of its slots
 emulated too, it means the tools outside the emulator become universal file converters. One Apple ][ ran many operating systems, each with its own disk format: DOS 3.2's
 13-sector disks, DOS 3.3, ProDOS, UCSD Pascal, Forth's raw blocks, and CP/M on a Z-80 card. Their
