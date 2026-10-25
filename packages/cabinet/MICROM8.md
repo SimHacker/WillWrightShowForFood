@@ -117,6 +117,39 @@ registers the Apple on the backplane as a machine with a memory port
 ([CORE-LINKS.md](CORE-LINKS.md)), the federation demo runs in one page with no network, and every
 cabinet view (memory, disassembly, heat maps, completion at the keyboard) works on the Apple.
 
+**The pattern already works in Micropolis.** MicropolisCore runs the SimCity engine (C++ compiled
+with Emscripten) in a SvelteKit page exactly this way, and it is the model for the microM8 module:
+
+```
+C++ Micropolis engine (WebAssembly)
+    calls its callback
+Embind JSCallback wrapper
+    delegates to
+MicropolisReactive.engineCallback
+    updates
+Svelte 5 $state / $derived runes
+    re-render
+UI components and the WebGPU tile renderer
+```
+
+- **Zero-copy map**: the renderer reads the engine's map and overlay arrays as `Uint16Array` views
+  straight over the module's linear memory, no calls per tile
+  ([`wasm/heap.ts`](https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/src/lib/wasm/heap.ts),
+  [`MicropolisSimulator.ts`](https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/src/lib/MicropolisSimulator.ts)).
+- **Events into runes**: the engine's callbacks (budget, messages, evaluation, map changes) land in
+  one reactive class whose fields are runes, so any component that reads them updates by itself
+  ([`MicropolisReactive.svelte.ts`](https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/src/lib/MicropolisReactive.svelte.ts),
+  with integration, simulation and poke tests beside it).
+- **The trap it found**: when the module's memory grows (loading a city), the old views detach and
+  read nothing; `syncMapViews()` makes new ones. Go's WebAssembly memory grows too, so microM8's
+  views of RAM, framebuffer and audio need the same re-binding, keyed to a generation counter the
+  module bumps when memory moves.
+
+For microM8 the chain is the same with Go in place of C++: `syscall/js` callbacks in place of
+Embind, a `MicroM8Reactive.svelte.ts` holding the machine's registers, run state, breakpoints and
+access-log counts as runes, and the cabinet's panels and display devices reading RAM through views.
+The cabinet's own machines and microM8's would then look the same to every component.
+
 **Costs to be honest about.** Go's WebAssembly output is large, often tens of megabytes before
 compression; TinyGo is smaller but may not compile everything microM8 uses. Go's runtime in the
 browser is single-threaded, so the Apple runs on the cabinet's clock or in a worker that posts

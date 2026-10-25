@@ -35,7 +35,9 @@ One more proposal, which I'd be glad to write myself and send as a pull request 
 microM8's core built as a WebAssembly module with a small JavaScript API, so a web page can run it
 and call it directly, no sockets: step it, read and write its memory through zero-copy views, take
 snapshots and rewind, get callbacks. Then an Apple ][ and a PDP-7 can share memory in one page, and
-every view either of us builds works on both. It would sit behind a build tag and leave the desktop
+every view either of us builds works on both. It's the pattern that already runs the SimCity engine in
+[MicropolisCore](https://github.com/SimHacker/MicropolisCore): WebAssembly, callbacks into Svelte's
+reactive state, and zero-copy views of the map. It would sit behind a build tag and leave the desktop
 build alone; if cyanIIde already does this, even better
 ([the proposal](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly)).
 
