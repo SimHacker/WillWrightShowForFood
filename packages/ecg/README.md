@@ -42,6 +42,7 @@ something else**. Every piece is built for that:
 | [DESIGN.md](DESIGN.md) | How the engine works and how the code will be laid out; the solver, zone walking, feel knobs, rendering targets, open questions |
 | [PATENT-NOTES.md](PATENT-NOTES.md) | Close reading of US5933150: what Tom specified, in his words, and what he left open |
 | [REFERENCES.md](REFERENCES.md) | Papers and prior/related work, every citation checked |
+| [VIEW-BLENDING.md](VIEW-BLENDING.md) | Blending saved views of windows, panels and cameras: resize to move through views, targets to keep going, and finding views to add near where you are |
 | [GLANCE.yml](GLANCE.yml) | One-screen summary |
 
 ## Related docs in this repo and its siblings
