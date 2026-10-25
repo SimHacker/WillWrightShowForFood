@@ -1,6 +1,6 @@
 # Wired TLG ad + pre-internet Wired (11 Apr 2020)
 
-**From:** Tom Jennings (`tom@sr-ix.com`)  
+**From:** Tom Jennings  
 **To:** Don Hopkins  
 **Cc:** Don  
 **Subject:** Re: Flight of the PIXIE  

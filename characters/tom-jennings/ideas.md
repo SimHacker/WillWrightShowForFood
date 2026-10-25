@@ -1,42 +1,35 @@
-# Ideas to explore with Tom Jennings
+# Tom Jennings — conversation hooks
 
-*Conversation hooks — Don's proposed topics from public record. Not quotes; consent not_yet_asked.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Public hooks only. Not Tom Jennings.* [Portrayal standards](../../schemas/portrayal-standards.md)
 
-## What Tom has done (public)
+## FidoNet
 
-- **Fido** BBS + **FidoNet** (1984) — first store-and-forward BBS network; international, multilingual; anti-apartheid connectivity in South Africa
-- **The Little Garden (TLGnet)** — Bay Area ISP from John Gilmore's basement era; common-carrier resale policy ("we will not censor it")
-- **Phoenix Technologies** portable BIOS; **Wired** magazine first web presence
-- Artist/programmer — CalArts; HOMOCORE zine; [sr-ix.com](http://sr-ix.com/) / [sensitiveresearch.com](https://www.sensitiveresearch.com/)
+- Fido and FidoNet (1984): bulletin boards passing mail overnight by phone, run by their owners.
+- How a network with no owner organized itself, and where hierarchy crept in anyway.
+- FidoNet next to git: store-and-forward, asynchronous, every node a full copy. A Repo Show's
+  audience asks questions the same way.
+- With Jason Scott, whose *BBS: The Documentary* recorded it.
 
-## Shared ground in this repo
+## The Little Garden and TLGnet
 
-| Thread | Link |
-|--------|------|
-| TLGnet partners | [`../david-henkel-wallace/`](../david-henkel-wallace/) |
-| WELL / Xanadu / NeWS social graph | [`../hugh-daniel/`](../hugh-daniel/) (memorial) |
-| John Gilmore orbit | Cygnus, Grasshopper Group, TLG basement — name in Hugh's story |
-| Pre-internet community | Repo Shows audience model; Micropolis publishing |
+- From a shared line and a ham-radio router at Toad Hall to TLGnet, Inc., in his telling
+  ([TLG history](https://www.sensitiveresearch.com/Archive/TLG/TLG.html)).
+- "TLGnet exercises no control whatsoever over the content of the information passing through
+  TLGnet": resale allowed, commercial use encouraged, and why that mattered in 1993.
+- Hiring and training people from local punk and queer communities, and paying them as they learned.
+- Wired's first connection to the Internet.
 
-## Hooks
+## Making things
 
-### 1. FidoNet as social organism
-
-Anarchist-principle growth, accidental hierarchy (REGION business), FidoNews as essential infrastructure.
-Compare to modern federated social and git-based async Q&A (Will Wright Adorable Minutes).
-
-### 2. TLGnet common-carrier ethics
-
-Reseller-friendly ISP policy enabling modem shops and local access — contrast with platform censorship debates.
-
-### 3. Art + technology + activism
-
-HOMOCORE, car hacking, z80 MP/M desktop project — not a single-track "founder" biography.
+- *The Delivery*, his novel; "wabi tek sabi," on living with craft and technology.
+- Embedded code: his real-time event-loop approach for Arduino.
+- Obsolete technology and the social context it was made in, which is also what the PDP-7 cabinet
+  is about.
 
 ## Sources
 
-- [FidoNet archive](https://www.sensitiveresearch.com/Archive/FidoNet/index.html)
-- [TLG archive](https://www.sensitiveresearch.com/Archive/TLG/TLG.html)
-- HN FidoNet history: [21669570](https://news.ycombinator.com/item?id=21669570)
-- BBS Documentary Part 4 (Jennings interviews on YouTube)
+- [Sensitive Research](https://www.sensitiveresearch.com/) · [FidoNet archive](https://www.sensitiveresearch.com/Archive/FidoNet/index.html)
+- HN on FidoNet's history: [21669570](https://news.ycombinator.com/item?id=21669570)
+- [His 2020 reply about the Wired ad](sources/2020-04-11-wired-tlg-ad-reply.md)
+
+Primary: [`CHARACTER.yml`](CHARACTER.yml) · Invitation: [`invitation.md`](invitation.md)

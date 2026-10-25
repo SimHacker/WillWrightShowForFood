@@ -11,9 +11,10 @@ Invitation portrayal — **not** Brewster Kahle. [Standards](../../schemas/portr
 Brewster Kahle built WAIS, the Wide Area Information Servers, one of the first ways to search
 across the Internet, and in 1996 founded the Internet Archive, which has collected the web ever
 since and now also holds books, films, music and software. The Wayback Machine, its public window
-onto the archived web, is how most people meet it. Before WAIS and the Archive he co-founded The
-Little Garden, an early Palo Alto Internet provider, with John Romkey, Steve Crocker and Tom
-Jennings.
+onto the archived web, is how most people meet it. In the 1996 interview below he and Tim Pozar told
+the story of The Little Garden, the Bay Area co-op that became one of the first Internet providers
+open to anyone; its founders were John Romkey, John Gilmore and Steve Crocker's Trusted Information
+Systems, and Tom Jennings built it into TLGnet.
 
 In a 1996 interview for the Computer History Museum, with Marc Weber and Tim Pozar, he explained
 why he kept WAIS's early search logs: they record what people hoped the network could answer, before
@@ -57,7 +58,7 @@ is whether the cabinet's programs, with their listings and scans, belong in the 
 |-----|-----|
 | [Jason Scott](../jason-scott/) | The Archive's software collections and emulation |
 | [David Rosenthal](../david-rosenthal/) | LOCKSS; his 2015 report on emulation for preservation |
-| [Tom Jennings](../tom-jennings/) · [David Henkel-Wallace](../david-henkel-wallace/) | The Little Garden |
+| [Tom Jennings](../tom-jennings/) | The Little Garden and TLGnet; FidoNet |
 | [Art Medlar](../art-medlar/) | WAIS and the early Archive |
 | [Walter Bender](../walter-bender/) · [Samuel Klein](../samuel-klein/) | One Laptop per Child |
 | [Ted Nelson](../ted-nelson/) | Xanadu |

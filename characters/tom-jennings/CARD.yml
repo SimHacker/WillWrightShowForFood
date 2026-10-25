@@ -1,0 +1,32 @@
+# CARD — Tom Jennings (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: tom-jennings
+  name: Tom Jennings
+  type: [invitation, guest, portrayal]
+card:
+  name: Tom Jennings
+  title: FidoNet
+  rarity: legendary
+  signifier: "📡"
+  flavor: TLGnet exercises no control whatsoever over the content of the information passing through TLGnet.
+abilities:
+  - id: FIDONET
+    name: FidoNet
+    type: static
+    effect: Bulletin boards pass mail to each other overnight, with no one in charge.
+    verifiable: "1984; https://www.sensitiveresearch.com/Archive/FidoNet/index.html"
+  - id: TLGNET
+    name: TLGnet
+    type: activated
+    effect: Sell a connection to anyone, allow resale, control no content.
+    verifiable: "https://www.sensitiveresearch.com/Archive/TLG/TLG.html"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../jason-scott/CARD.yml

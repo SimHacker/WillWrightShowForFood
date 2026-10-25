@@ -1,9 +1,14 @@
-# Show hooks — Art Medlar
+# Art Medlar — conversation hooks
 
-- WAIS → early Internet Archive: search and preservation as one craft
-- Connection Machines at Thinking Machines — parallel before it was cheap
-- PARC OS R&D in the 1990s
-- Brightmail napkin → Symantec: shipping anti-spam at scale
-- Leela AI crew episode with Henry / Cyrus / Milan Minsky
+*Public hooks only. Not Art Medlar.* Consent not yet asked.
 
-Consent: not yet asked (colleague path via Don). All responses honored.
+- **The Connection Machine** at Thinking Machines in the late 1980s: programming massive parallelism
+  before it was cheap.
+- **WAIS:** one of the first ways to search across the Internet, and what its search logs showed.
+- **The early Internet Archive:** the first version, the crawls, the hardware, what was hard.
+- **Xerox PARC** operating systems research in the 1990s.
+- **Brightmail:** from a napkin sketch through deployment to Symantec's purchase in 2004.
+- **Local Power:** modeling community choice energy programs.
+- **A WAIS reunion** with Brewster Kahle, and the Archive's software collections with Jason Scott.
+
+Primary: [`CHARACTER.yml`](CHARACTER.yml) · Invitation: [`invitation.md`](invitation.md)

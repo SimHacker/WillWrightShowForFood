@@ -10,7 +10,7 @@
 | Archive items that run | Cabinet cartridges as Archive items; what emulation at library scale taught the Archive | Jason Scott, David Rosenthal |
 | Books | His 2007 XO reader wishlist, the Archive's book reader, HyperTIES's books read again | Walter Bender, Samuel Klein, Ben Shneiderman |
 | The Sims family albums | Sims Exchange albums in the Wayback Machine, brought back into a living world | Will Wright |
-| The Little Garden | The resale-friendly ISP and its prediction of a thousand ISPs | Tom Jennings, Tim Pozar, David Henkel-Wallace |
+| The Little Garden | The resale-friendly ISP and its prediction of a thousand ISPs | Tom Jennings, Tim Pozar |
 
 Recorded remotely or in Amsterdam, where he expects to be in November and December 2026.
 
@@ -68,7 +68,7 @@ cite the Archive rather than absorb it.
 ## 7. The Little Garden
 
 The co-op origins and the resale-friendly model, mostly in Tim Pozar's 1996 telling; Brewster's side
-of it. With [Tom Jennings](../tom-jennings/) and [David Henkel-Wallace](../david-henkel-wallace/).
+of it. With [Tom Jennings](../tom-jennings/) and Tim Pozar.
 
 ## 8. Amsterdam
 

@@ -1,26 +1,41 @@
-# Art Medlar 🔎 *(WAIS; early Internet Archive; Connection Machines; Leela AI)*
+# Art Medlar 🔎
 
-*Invitation portrayal — not Art Medlar.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · authored by Don Hopkins
+Invitation portrayal — **not** Art Medlar. [Standards](../../schemas/portrayal-standards.md)
 
-## Who
+**Field:** systems builder: Connection Machines, WAIS, the early Internet Archive, PARC, Brightmail
 
-Veteran systems builder — **Thinking Machines** Connection Machines; **Xerox PARC** OS
-R&D; co-developed **WAIS** and early **Internet Archive**; principal engineer at
-**Brightmail** through Symantec acquisition; later CIO at Local Power. Current
-**Leela AI** collaborator with Don.
+[Invitation](invitation.md) · [Hooks](ideas.md) · [Sources](CHARACTER.yml)
 
-## Why invited
+## Who he is
 
-Living primary source on early internet search/preservation and parallel machines —
-and a present-tense Leela crew member for builder episodes.
+Art Medlar started in the late 1980s at Thinking Machines in Cambridge, Massachusetts, programming
+the massively parallel Connection Machine. He co-developed WAIS, the Wide Area Information Servers,
+one of the first ways to search across the Internet, and the early version of the Internet Archive.
+In the 1990s he worked on operating systems research at Xerox PARC. At Brightmail in San Francisco he
+took an anti-spam system from a sketch on a napkin through development and full-scale deployment to
+the company's sale to Symantec in 2004. From 2008 he was chief information officer of Local Power,
+building its cost, financial, logistical and GIS models for community choice energy programs
+([bio](https://localpower.com/MedlarBio.html)).
 
-## Links
+He works with Don at Leela AI.
 
-| | |
-|---|---|
-| **Bio** | [Local Power](https://localpower.com/MedlarBio.html) |
-| **WAIS** | [Wikipedia](https://en.wikipedia.org/wiki/Wide_area_information_server) |
-| **Leela show** | [../../repo-shows/leela-ai/](../../repo-shows/leela-ai/) |
+## Why he's here
 
-Sources in [CHARACTER.yml](CHARACTER.yml).
+He was there at the start of two things this project depends on: searching the Internet and
+archiving it. The Internet Archive turns up throughout this repository, in what the Wayback Machine
+helped recover and in the plan to make the PDP-7 cabinet's programs into Archive items
+([Brewster Kahle's room](../brewster-kahle/README.md),
+[PRESERVATION.md](../../packages/cabinet/PRESERVATION.md)).
+
+## Cast neighbors
+
+| Who | Why |
+|-----|-----|
+| [Brewster Kahle](../brewster-kahle/) | WAIS and the Internet Archive |
+| [Henry Minsky](../henry-minsky/) · [Cyrus Shaoul](../cyrus-shaoul/) | Leela AI |
+| [David Henkel-Wallace](../david-henkel-wallace/) | Formerly at Leela AI |
+| [Jason Scott](../jason-scott/) | The Internet Archive's software collections |
+
+Subject may request correction or removal anytime.
+
+↑ [characters](../)

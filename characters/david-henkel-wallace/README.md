@@ -2,7 +2,7 @@
 
 *Sniff:* [`GLANCE.md`](GLANCE.md) · [`ideas.md`](ideas.md) · [`invitation.md`](invitation.md)
 
-Cygnus Solutions co-founder (**Gumby**); BFD/binutils; TLGnet ISP pioneer; MIT AI Lab; formerly at **Leela AI**. Don's old friend — the man who **nominated Don for the unix-haters list** in 1991.
+Cygnus Solutions co-founder (**Gumby**); BFD/binutils; MIT AI Lab; formerly at **Leela AI**. Don's old friend — the man who **nominated Don for the unix-haters list** in 1991.
 
 1988 mailing-list classic **"Charles Fort died too soon"** — Unix≈Catholicism table on SubGenius/unix-haters, [full text + context](sources/charles-fort-died-too-soon-1988.md).
 

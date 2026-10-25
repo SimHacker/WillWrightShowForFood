@@ -6,8 +6,9 @@ Invitation portrayal — **not** Walter Bender. [Standards](../../schemas/portra
 
 **Stone Soup, literally:** OLPC was the pot Walter and others set boiling that everyone brought
 ingredients to — and **EA was persuaded to contribute SimCity** (GPL-3, trademark protected, renamed
-**Micropolis**) as one of the ingredients. The full documented chain — Long Now audience questions →
-Will's on-stage yes → Gilmore's spark → Don's skeptical-but-ask-anyway email → EA clearance — lives
+**Micropolis**) as one of the ingredients. The documented chain: Don's earlier proposals for an educational SimCity → the Long Now
+audience questions from Dan Ancona and Mark Live → Will's on-stage yes → John Gilmore connecting Don
+with OLPC → Don's skeptical-but-ask-anyway email to Will → EA clearance. It lives
 in [VISION.md § Documented seed](../../process/vision-and-ambition.md#documented-seed-open-source-simcity--olpc--micropolis).
 
 [Invitation](invitation.md) · [Show seed](../../repo-shows/walter-bender-olpc/README.md)

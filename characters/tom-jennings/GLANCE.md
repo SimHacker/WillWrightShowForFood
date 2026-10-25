@@ -1,4 +1,5 @@
-📡 **Tom Jennings** — FidoNet (1984), TLGnet ISP, Phoenix BIOS, Wired web. Artist/programmer; archive at
-[sensitiveresearch.com](https://www.sensitiveresearch.com/).
+📡 **Tom Jennings**: Fido and FidoNet (1984); ran The Little Garden from 1992 and built TLGnet, Inc.;
+Phoenix portable BIOS; *Homocore*; writer and maker ([Sensitive Research](https://www.sensitiveresearch.com/)).
 
-→ [`ideas.md`](ideas.md) · [`../david-henkel-wallace/`](../david-henkel-wallace/README.md) (TLGnet)
+**Invitation (draft):** [`invitation.md`](invitation.md). Replied to Don in April 2020 about the
+Wired ad for TLG.

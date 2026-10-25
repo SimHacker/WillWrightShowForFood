@@ -1,4 +1,4 @@
-📚 **Brewster Kahle**: WAIS; founded the Internet Archive (1996); The Little Garden ISP. In 1996:
+📚 **Brewster Kahle**: WAIS; founded the Internet Archive (1996). In 1996:
 "It's the early dreams that we should be trying to live up to." In 2007, a book reader for the
 Archive's library on the OLPC XO.
 

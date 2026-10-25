@@ -6,7 +6,7 @@ character:
   name: "Brewster Kahle"
   type: invitation
   status: living
-  field: "Internet Archive founder; WAIS; web preservation; TLG ISP co-founder"
+  field: "Internet Archive founder; WAIS; web preservation"
   home: characters/brewster-kahle/
 
 representation:
@@ -26,8 +26,8 @@ invitation:
 bio:
   summary: >
     **Brewster Kahle** — founded the **Internet Archive** (1996), built **WAIS** wide-area information
-    servers, and co-founded **The Little Garden (TLG)** early ISP in Palo Alto with John Romkey,
-    Steve Crocker, and Tom Jennings. Famous for preserving early web culture and arguing we
+    servers, and told the story of **The Little Garden (TLG)**, the early Bay Area ISP, with Tim
+    Pozar in a 1996 Computer History Museum interview. Famous for preserving early web culture and arguing we
     should live up to the **first dreams** of the medium, not only what technicians later shipped.
 
 synergies:

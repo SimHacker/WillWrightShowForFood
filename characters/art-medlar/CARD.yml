@@ -1,0 +1,32 @@
+# CARD — Art Medlar (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: art-medlar
+  name: Art Medlar
+  type: [invitation, guest, portrayal]
+card:
+  name: Art Medlar
+  title: Builder's Builder
+  rarity: rare
+  signifier: "🔎"
+  flavor: From a napkin sketch to full-scale deployment.
+abilities:
+  - id: WAIS
+    name: WAIS
+    type: static
+    effect: Search across the Internet, before the web had search.
+    verifiable: "https://localpower.com/MedlarBio.html"
+    combos_with: [BREWSTER-ARCHIVE]
+  - id: CONNECTION-MACHINE
+    name: Connection Machine
+    type: activated
+    effect: Program thousands of processors at once.
+    verifiable: "Thinking Machines, late 1980s"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md

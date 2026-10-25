@@ -24,7 +24,7 @@ runnable artifacts on stream. **Show, don't tell.**
 You've been in the origin story of half the things this repo cares about: youngest hacker
 with your own office at the MIT AI Lab, the Atari Cambridge gestural system with Margaret
 Minsky and Danny Hillis and Radia Perlman, **Cygnus** — the company that proved free software
-could be a business a decade before anyone had the phrase "open source" — BFD, TLGnet, and
+could be a business a decade before anyone had the phrase "open source" — BFD, and
 a mailing-list rap sheet that includes both *Charles Fort died too soon* and the
 PLEASE-REMOVE-ME list. We've been trading this history in public on HN for years; let's do
 it with a compiler running.

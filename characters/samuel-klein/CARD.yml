@@ -1,0 +1,33 @@
+# CARD — Samuel J Klein (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: samuel-klein
+  name: Samuel J Klein
+  type: [invitation, guest, portrayal]
+card:
+  name: Samuel J Klein
+  title: Director of Content
+  rarity: rare
+  signifier: "💻🌍"
+  flavor: Bring game developers to the children's laptop.
+abilities:
+  - id: OLPC-CONTENT
+    name: Content for the XO
+    type: activated
+    effect: Rally developers and archives to make and port work for a laptop meant for children.
+    verifiable: "GDC 2007 Serious Games Summit keynote (sources/gdc-2007-serious-games-keynote.md)"
+    combos_with: [WALTER-STONE-SOUP]
+  - id: FREE-KNOWLEDGE
+    name: Free Knowledge
+    type: static
+    effect: Universal access to knowledge, from Wikimedia to public AI.
+    verifiable: "https://cyber.harvard.edu/people/sklein"
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../walter-bender/CARD.yml

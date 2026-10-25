@@ -1,24 +1,54 @@
+# Tom Jennings — invitation portrayal. NOT Tom Jennings.
+# Standards: ../../schemas/portrayal-standards.md
+
 character:
   id: tom-jennings
   name: "Tom Jennings"
   type: invitation
+  signifier: "📡"
   status: living
-  field: "FidoNet, TLGnet ISP, Phoenix portable BIOS, Wired first web — artist/programmer"
+  field: >-
+    Fido and FidoNet (1984); The Little Garden and TLGnet, Inc.; Phoenix
+    portable BIOS; Homocore; writer and maker (Sensitive Research, BLEEVE.ME)
   home: characters/tom-jennings/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: draft
   consent: not_yet_asked
+  document: invitation.md
+  prior_contact: "Replied to Don, 11 April 2020, about the Wired ad for TLG (sources/2020-04-11-wired-tlg-ad-reply.md)"
 
 bio:
-  summary: "**Tom Jennings** (b. 1955) — created **Fido** BBS and **FidoNet** (1984), the first large store-and-forward BBS network; co-founded **The Little Garden (TLGnet)** early ISP (1992) with David Henkel-Wallace, John Romkey, and Steve Crocker; portable BIOS work at Phoenix Technologies; built **Wired** magazine's first internet presence; artist/programmer (CalArts). Archive: [sensitiveresearch.com](https://www.sensitiveresearch.com/)."
+  summary: |
+    Wrote the Fido BBS and FidoNet (1984), the store-and-forward network of
+    bulletin boards. In September 1992 took over running The Little Garden, a
+    shared Internet connection begun by John Gilmore, John Romkey and Trusted
+    Information Systems and extended by Tim Pozar, and built it into TLGnet,
+    Inc.: resale allowed, no control over content, hiring and training people
+    from local communities; Wired's first Internet connection. Portable BIOS at
+    Phoenix Technologies; co-published the zine Homocore. Writes and builds: a
+    novel, The Delivery; "wabi tek sabi"; embedded code.
+
+sources:
+  web:
+    - { title: "Sensitive Research (his archive)", url: "https://www.sensitiveresearch.com/" }
+    - { title: "The Little Garden and TLGnet, Inc. (his history)", url: "https://www.sensitiveresearch.com/Archive/TLG/TLG.html" }
+    - { title: "FidoNet archive", url: "https://www.sensitiveresearch.com/Archive/FidoNet/index.html" }
+    - { title: "BBS: The Documentary (Jason Scott)", url: "http://www.bbsdocumentary.com/" }
+  hn: [21669570]
+  local:
+    - { path: sources/2020-04-11-wired-tlg-ad-reply.md, why: "His 2020 reply about the Wired TLG ad" }
+    - { path: ../brewster-kahle/sources/chm-interview-1996.md, why: "1996 CHM interview with Tim Pozar and Brewster Kahle about TLG" }
 
 see_also:
-  - { path: ../david-henkel-wallace/, why: "TLGnet co-founder" }
-  - { path: ../brewster-kahle/, why: "TLG co-founder; Internet Archive / WAIS" }
-  - { path: ../hugh-daniel/, why: "WELL / Bay Area hacker social graph — parallel community-building lineage" }
+  - { path: invitation.md, why: "The invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../jason-scott/README.md, why: "BBS: The Documentary" }
+  - { path: ../brewster-kahle/README.md, why: "The 1996 interview; the Internet Archive" }
+  - { path: ../hugh-daniel/README.md, why: "Bay Area hacker community (memorial)" }
