@@ -12,12 +12,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: not_sent
-  consent: not_yet_asked
   channel: unknown
   show_seed: null
   the_ask: "The webtop — and specifically her own serial-port problem, which is the thing it exists to attack."

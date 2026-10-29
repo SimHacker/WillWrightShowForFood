@@ -12,7 +12,8 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: unverified
   authored_by: don-hopkins
   note: "Archival email source only. Jeff replied directly to Don Feb 2024; no invitation sent yet."
 

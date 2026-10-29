@@ -13,14 +13,16 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: unverified
+    note: "invitation.consent said granted; no evidence on file"
   authored_by: don-hopkins
   note: "Don's longtime friend + collaborator. Independent creator — promote his work, drive fans to his subscriptions/content (non-extractively)."
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: accepted
-  consent: granted
   sent: 2026-08-20
   accepted: 2026-09-05
   channel: chat

@@ -13,7 +13,8 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 5
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   evidence_note: >
     Documented public record (obituary, LWN, LtU, GNU project history, Tom's own
@@ -22,7 +23,6 @@ representation:
 
 invitation:
   status: memorial
-  consent: not_yet_asked
   document: memorial.md
   note: "deceased (1966–2022) — represent + discuss; invite people who knew him, family consent first"
 

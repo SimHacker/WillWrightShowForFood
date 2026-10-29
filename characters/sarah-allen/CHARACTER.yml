@@ -12,12 +12,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/openlaszlo/
   note: "Don's OpenLaszlo video-work boss and code reviewer (2006 contract — receipts in sources/); on Temkin's OL 5.0 cc list. Invite to OL reunion + solo option (streaming-media lineage / Bridge Foundry / cinematic interaction design)."

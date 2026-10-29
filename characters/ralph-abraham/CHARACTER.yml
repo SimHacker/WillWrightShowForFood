@@ -14,7 +14,6 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode
-  consent_level: 5_deceased_legacy
   mode: represent_and_discuss   # memorial — no interviews, no invented quotes or inner life
   authored_by: don-hopkins
   document: memorial.md

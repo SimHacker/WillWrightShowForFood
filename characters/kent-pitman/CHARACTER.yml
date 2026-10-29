@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   note: "Don: Kent and his :TEACH;LISP helped me learn Lisp on ITS as a high school kid. Expressed MOO interest (HN/Mastodon). Public invitation.md drafted; full private draft in DonHopkins correspondence — not sent."
 

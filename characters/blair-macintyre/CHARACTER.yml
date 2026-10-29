@@ -15,13 +15,14 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   first_contact: "Replied to Don's aQuery proposal, forwarded by Ben Shneiderman, around 2013 (date unverified)"
 

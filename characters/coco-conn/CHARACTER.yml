@@ -5,7 +5,9 @@ id: coco-conn
 name: Coco Conn
 signifier: "🎛️"
 status: active
-consent_level: 2
+representation:
+  consent:
+    state: unverified
 
 bio: |
   **Coco Conn** (with **Peter Conn** and in-house programmer **Paul Rother**) co-ran **HOMER & Assoc.**

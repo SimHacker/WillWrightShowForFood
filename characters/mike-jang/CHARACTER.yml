@@ -14,12 +14,10 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 5
   authored_by: don-hopkins
 
 invitation:
   status: memorial
-  consent: not_applicable
   document: memorial.md
   note: |
     Deceased (news reported Feb 2024). Represent + discuss documented cabinet design work.

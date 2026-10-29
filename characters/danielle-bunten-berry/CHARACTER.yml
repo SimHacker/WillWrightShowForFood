@@ -15,12 +15,10 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 5_deceased_legacy
   authored_by: don-hopkins
 
 invitation:
   status: memorial
-  consent: not_applicable
   document: memorial.md
   note: "Deceased (1949–1998) — represent + discuss; invite people who knew her, above all Will Wright"
 

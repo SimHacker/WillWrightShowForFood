@@ -12,13 +12,14 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Stub from Yoot People.md — deepen before invite."
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   note: "LRG / Smalltalk-80 books — invite with Kaehler. Drafted 2026-07-29."
 

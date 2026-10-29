@@ -12,12 +12,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: unverified
+    note: "warm — rehearsed Vanessa tribute 2026-07-20; cheered repo plans 2026-08-20; formal show ask pending"
   authored_by: don-hopkins
 
 invitation:
   status: in_conversation
-  consent: "warm — rehearsed Vanessa tribute 2026-07-20; cheered repo plans 2026-08-20; formal show ask pending"
   document: invitation.md
   show_seed: repo-shows/craig-latta/
   also_shows: [repo-shows/openlaszlo/]

@@ -18,7 +18,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: >
     Warm correspondent (2008–2026). INDEX: invitation_status warm; strongly interested in
@@ -27,7 +29,6 @@ representation:
 
 invitation:
   status: warm          # aligns with characters/INDEX.yml — draft invite text; warm relationship
-  consent: not_yet_asked
   document: invitation.md
   show_seed:
     - repo-shows/alan-kay-microworld/alan-kay-microworld.yml

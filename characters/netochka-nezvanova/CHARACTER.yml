@@ -13,7 +13,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3          # public figure: public work + net-art legend; no impersonation, no invented inner life
+  public_figure: true  # public figure: public work + net-art legend; no impersonation, no invented inner life
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   persona_note: >
     NN is a deliberately anonymous, possibly collective online identity. We portray the PUBLIC
@@ -22,7 +24,6 @@ representation:
 
 invitation:
   status: stub
-  consent: not_yet_asked
   document: invitation.md
   note: >
     Don would genuinely love her on the Repo Show. Reaching the person(s) behind the mask is its

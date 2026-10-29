@@ -14,7 +14,8 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: |
     Friendly professional acquaintance since 2010 — Skype call, echo-nest-remix debugging,
@@ -24,7 +25,6 @@ representation:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: ../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml
   role: "Bench (possible core): the machine-listening side of the moody panel; the

@@ -13,7 +13,10 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3          # real collaborator, active dialogue, enthusiastic — named + credited with consent
+  public_figure: true  # real collaborator, active dialogue, enthusiastic — named + credited with consent
+  consent:
+    state: granted
+    evidence: 2026-07
   authored_by: don-hopkins
   note: "Real collaborator + friend-of-the-project. Jeff may shape, delay, decline, or delete anytime."
   subject_rights: correction_edit_or_deletion_anytime
@@ -21,7 +24,6 @@ representation:
 invitation:
   status: accepted
   accepted: 2026-07
-  consent: granted
   document: ../../characters/jeff-adkins/invitation.md
   show_seed: repo-shows/jeff-adkins/
   note: |

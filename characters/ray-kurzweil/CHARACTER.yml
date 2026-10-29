@@ -12,7 +12,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   twin_disclaimer: >
     Ray launched his OWN consented digital twin, RAI (Kurzweil Technologies × Praxis AI,
@@ -22,7 +24,6 @@ representation:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   channel_note: "Facebook page Ray.Kurzweil.official — Don has mutual friends (Philip van Nedervelde, Anna Nachesa, Nicole Lazzaro, Pooky Amsterdam…); thekurzweillibrary.com contact as fallback"
   show_seed: repo-shows/ray-kurzweil/ray-kurzweil.yml

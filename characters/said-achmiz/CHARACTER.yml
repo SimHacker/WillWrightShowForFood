@@ -12,7 +12,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 privacy:
@@ -34,7 +36,6 @@ scope:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: null
   design_pack: https://github.com/SimHacker/moollm/tree/main/designs/webtop

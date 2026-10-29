@@ -14,12 +14,10 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 5
   authored_by: don-hopkins
 
 invitation:
   status: memorial
-  consent: not_applicable
   document: memorial.md
   note: "deceased (d. 2019) — represent + discuss; Don's late friend; many Ames-era colleagues knew and loved him"
 

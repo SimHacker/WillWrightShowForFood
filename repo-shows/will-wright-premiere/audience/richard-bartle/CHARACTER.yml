@@ -22,7 +22,8 @@ moollm_home:
 
 representation:
   real_being: true
-  consent: explicit
+  consent:
+    state: unverified
   consent_source: "Facebook conversation 2026-01-22 (documented in MOOLLM adventure-4)"
   consent_scope: |
     Richard has given permission to (a) simulate him in the audience and (b) draft example

@@ -12,14 +12,15 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Real longtime correspondent + friend-of-the-project. Daniel may shape, delay, decline, or delete anytime."
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/daniel-tupper/
 

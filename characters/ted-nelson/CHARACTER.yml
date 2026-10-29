@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: finished
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/ted-nelson/
   note: "Public invitation ready to formally send. Two offered shapes (his pick): a 'Têd-à-Têd Talk' tag-team with Ted Selker, OR a Doug Engelbart memorial tribute joined by Yoot Saito + Alan Kay (seed: repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml). Ordinarily declines email conversations; respect his time. Hero + north star for the guest list."

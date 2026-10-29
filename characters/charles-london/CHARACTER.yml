@@ -13,7 +13,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3                      # public Maxis Alumni posts; not yet contacted
+  public_figure: true  # public Maxis Alumni posts; not yet contacted
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   needs_confirmation:
     - "Contact Charles London; consent for this room and for quoting him."
@@ -25,7 +27,6 @@ representation:
 
 invitation:
   status: not_yet_written
-  consent: not_yet_asked
   contact: "via Maxis Alumni (Facebook)"
 
 bio:

@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: warm_correspondence
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml
   introduced_by: chaim-gingold

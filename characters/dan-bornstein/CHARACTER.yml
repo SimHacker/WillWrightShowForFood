@@ -13,12 +13,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   channel: "email — public address on milk.com; warm contact (fellow Kaleidan)"
   show_seed: null          # candidate: pair with david-ungar Kaleida/Korz material
 

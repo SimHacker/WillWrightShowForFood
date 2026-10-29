@@ -12,7 +12,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: |
     Warm contact — Don and Marcin corresponded on LinkedIn in March 2020 about his Lem
@@ -24,7 +26,6 @@ representation:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
 
 correspondence:

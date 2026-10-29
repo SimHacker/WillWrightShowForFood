@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   warm_path: "Coco Conn — intro by email still open (her 2026-07-06 Messenger reply). Not sent."
   document: invitation.md
   show_seed: repo-shows/coco-conn/

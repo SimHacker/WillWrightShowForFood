@@ -17,7 +17,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Don's friend since ~2000 (introduced by Howard Penner, Berkeley);
     Don forwarded his resume to Will Wright — which worked. Everything here
@@ -26,7 +28,6 @@ representation:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   channel_options: [facebook, email]
   show_fits:

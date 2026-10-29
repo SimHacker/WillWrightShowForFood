@@ -16,7 +16,8 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: |
     Known through PIPS:lab / Keez Duyves; Daan wrote Don in Feb 2017 (CV +
@@ -27,7 +28,6 @@ representation:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   role: |
     Guest in his own right (PIPS:lab audio brain: DieSpace sound, Max/MSP live

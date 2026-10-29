@@ -13,7 +13,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   subject_rights: correction_edit_or_deletion_anytime
   note: >-
@@ -23,7 +25,6 @@ representation:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   joint_with: april-ayres-griffiths
 

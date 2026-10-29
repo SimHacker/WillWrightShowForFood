@@ -14,7 +14,10 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: granted
+    evidence: "2026-07 — pitched; loves the idea, gets it, hot to trot"
   authored_by: don-hopkins
   primed_by: don-hopkins
   note: "Host-authored best effort — Will may edit, reduce, or delete anytime"
@@ -32,7 +35,6 @@ representation:
 
 invitation:
   status: accepted
-  consent: invitation_accepted
   accepted: "2026-07 — pitched; loves the idea, gets it, hot to trot"
   guest-prototype: guest-prototype.yml
   document: invitation.md

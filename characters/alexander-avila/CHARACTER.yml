@@ -23,7 +23,7 @@ identity:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
   authored_by: don-hopkins
   invitation_status: draft
   consent: not_yet_asked

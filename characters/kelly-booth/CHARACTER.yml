@@ -19,7 +19,6 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
   authored_by: don-hopkins
   note: "Public-source portrayal only. Cc'd on PIXIE thread 2026-07-09; not yet contacted."
   subject_rights: correction_edit_or_deletion_anytime

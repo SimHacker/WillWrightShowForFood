@@ -22,7 +22,6 @@ show:
 representation:
   schema: ../../../schemas/audience-character.yml
   authored_by: self
-  consent: self_sovereign
   note: |
     You portray YOURSELF for this episode. Do not impersonate the guest.
     Guest characters live in characters/ — audience characters live here, per show.

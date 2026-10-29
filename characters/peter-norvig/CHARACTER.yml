@@ -12,12 +12,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: unverified
+    note: warm_lead
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: warm_lead          # friend; has offered to write a chapter about Don's work
   document: invitation.md
   show_seed: repo-shows/peter-norvig/
 

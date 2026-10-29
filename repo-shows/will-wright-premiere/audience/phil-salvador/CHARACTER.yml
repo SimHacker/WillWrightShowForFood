@@ -10,7 +10,8 @@ character:
 
 representation:
   real_being: true
-  consent: not_yet_asked
+  consent:
+    state: not_asked
   status: |
     Don intends to invite Phil to the audience. Until he consents, this directory holds NO
     invented questions in his voice — only a public-fact bio and an invitation scaffold he can

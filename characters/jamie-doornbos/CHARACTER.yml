@@ -12,14 +12,15 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: asked
   authored_by: don-hopkins
 
 invitation:
   status: sent
   sent: 2026-08-19
   channel: facebook-messenger
-  consent: asked
   replied: 2026-08-20
   reply_note: |
     Praised same-sex record. Confirms Patrick's same-sex compromise was elegant. Does not

@@ -12,12 +12,14 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: unverified
+    note: warm_reconnect
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: warm_reconnect
   document: invitation.md
   show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 

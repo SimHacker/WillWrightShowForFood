@@ -13,14 +13,15 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Public-source portrayal. Natural fit for video feedback & cellular automata."
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: not_yet_asked
-  consent: not_yet_asked
   document: private   # invitation materials and correspondence history live in Don's private archive
   show_seed: repo-shows/jim-crutchfield/
 

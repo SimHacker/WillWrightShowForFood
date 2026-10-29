@@ -14,13 +14,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Host-authored from public sources (NYT 1996/97 'First Wired Family'; ACM Turing bio). Deliberately minimal — she may edit, expand, reduce, or delete anytime."
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: null   # invite via Henry (her twin) when the family memorial show firms up
 
 bio:

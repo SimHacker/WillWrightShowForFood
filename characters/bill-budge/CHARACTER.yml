@@ -13,7 +13,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3   # public figure — public work + tradition; no impersonation; not yet asked
+  public_figure: true  # public figure — public work + tradition; no impersonation; not yet asked
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   living_not_memorial: |
     Bill Budge is ALIVE (b. 1954-08-11; retired from Google Jan 2022; active on GitHub into 2026).
@@ -22,7 +24,6 @@ representation:
 
 invitation:
   status: not_yet_asked
-  consent: not_yet_asked
   document: invitation.md
   tribute_app: ../../apps/performance-space/faceball-construction-set.yml
   angle: "Faceball Construction Set tribute + construction-set genealogy + tools/frameworks ethos"

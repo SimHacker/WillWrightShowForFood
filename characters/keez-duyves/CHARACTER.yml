@@ -13,7 +13,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: asked
   authored_by: don-hopkins
   note: |
     Warm long Amsterdam friendship. Keez may correct, reduce, replace, or delete this portrayal
@@ -22,7 +24,6 @@ representation:
 
 invitation:
   status: reached_out_awaiting_reply
-  consent: asked_no_reply_yet
   document: invitation.md
   show_seed: ../../repo-shows/keez-duyves/
   outreach: "Facebook message sent 2026; no reply yet. Trying via PIPS:lab

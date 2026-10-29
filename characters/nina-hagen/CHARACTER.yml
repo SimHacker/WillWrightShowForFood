@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1          # dream guest; not yet asked
+  consent:  # dream guest; not yet asked
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: dream_guest
-  consent: not_yet_asked
   document: ../../characters/nina-hagen/invitation.md
   show_seed: repo-shows/nina-hagen/
 

@@ -76,7 +76,7 @@ function loadDonHopkins(slug) {
 		field: pick(/field:\s*["']?([^"'\n]+)/, yml, ""),
 		signifier: pick(/signifier:\s*["']?([^"'\n]+)/, yml, "👤"),
 		status: pick(/status:\s*(\w+)/, yml, "living"),
-		consent_level: pick(/consent_level:\s*(\d+)/, yml, "3"),
+		public_figure: pick(/public_figure:\s*(true|false)/, yml, ""),
 		glance,
 		wikipedia: wiki,
 		web: [...new Set(web)].slice(0, 8),
@@ -95,7 +95,7 @@ function writeGuest(slug, meta) {
 		meta.signifier.includes("🕯") ||
 		["marvin-minsky", "seymour-papert", "jean-piaget"].includes(slug);
 	const invStatus = deceased ? "legacy_only" : "draft";
-	const consentLevel = deceased ? 5 : meta.consent_level || 3;
+	const publicFigure = meta.public_figure ? `\n  public_figure: ${meta.public_figure}` : "";
 	const esc = (s) => (s || "").replace(/"/g, '\\"').slice(0, 500);
 
 	const characterYml = `# ${meta.name} — invitation portrayal. NOT ${meta.name}.
@@ -112,12 +112,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.yml
-  consent_level: ${consentLevel}
-  authored_by: don-hopkins
+  authored_by: don-hopkins${publicFigure}
+  consent:
+    state: not_asked
 
 invitation:
   status: ${invStatus}
-  consent: not_yet_asked
   document: invitation.md
   show_seed: ${meta.show_seed}
 ${meta.note ? `  note: "${esc(meta.note)}"` : ""}
@@ -195,7 +195,7 @@ for (const slug of readGuestSlugs()) {
 		field: src?.field ?? idx.note,
 		signifier: src?.signifier ?? "👤",
 		status: src?.status ?? "living",
-		consent_level: src?.consent_level ?? "3",
+		public_figure: src?.public_figure ?? "",
 		glance: src?.glance ?? "",
 		wikipedia: src?.wikipedia ?? null,
 		web: src?.web ?? [],

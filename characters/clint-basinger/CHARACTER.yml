@@ -14,12 +14,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/clint-basinger/
   note: "Don: 'invite the LGR guy! he loves SimCity and Maxis and Will!' Audience bridge to retro-PC/Sims fandom."

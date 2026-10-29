@@ -13,7 +13,6 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
   authored_by: don-hopkins
   invitation_status: invited
   consent: invited_2026-07-16

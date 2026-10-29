@@ -12,13 +12,14 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Utah/Armit film-lane invite — Multipatch film shown on US CAD tour."
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
 

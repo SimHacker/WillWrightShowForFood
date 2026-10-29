@@ -12,13 +12,14 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Stub from Yoot People.md — ThingLab ↔ Sketchpad kinship."
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   note: "Pair with Reenskaug (MVC) and Ivan citation (constraints)."
 

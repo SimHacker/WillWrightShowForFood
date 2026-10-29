@@ -78,7 +78,6 @@ function writeInvitation(slug, meta) {
 	const dir = path.join(CHAR, slug);
 	fs.mkdirSync(dir, { recursive: true });
 	const deceased = meta.status === "deceased" || meta.signifier.includes("🕯");
-	const consent = deceased ? "legacy_kline" : 3;
 
 	const characterYml = `# ${meta.name} — INVITATION CHARACTER (public WWSFF portrayal)
 # NOT ${meta.name}. See ../schemas/guest-invitation-status.yml
@@ -93,8 +92,9 @@ character:
   home: characters/${slug}/
 
 representation:
-  consent_level: ${consent}
   authored_by: don-hopkins
+  consent:
+    state: not_asked
   must_not: [impersonate, fabricate_quotes]
 
 invitation:

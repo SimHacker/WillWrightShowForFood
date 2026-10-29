@@ -29,7 +29,9 @@ status:
 
 fields:
   status: { type: enum, required: true, default: draft }
-  consent: { enum: [not_yet_asked, granted, declined], default: not_yet_asked }
+  # consent lives in representation.consent: { state, scope, date, evidence, note } (moollm
+  # skills/representation-ethics/REPRESENTATION.yml); granted needs evidence. Status is the
+  # invitation's progress; consent is what the person agreed to.
   invitation_note: { type: string, optional: true, note: "Non-private summary only" }
   show_seed: { type: path }
   public_url: { type: path, default: invitation.md }

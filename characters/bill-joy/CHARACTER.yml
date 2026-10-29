@@ -12,7 +12,8 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: |
     DREAM GUEST. Public portrayal from published talks, Don's Medium article on Joy's law,
@@ -22,7 +23,6 @@ representation:
 
 invitation:
   status: dream_guest
-  consent: not_yet_asked
   document: invitation.md
   quotes: quotes.md
   show_seed: repo-shows/bill-joy/

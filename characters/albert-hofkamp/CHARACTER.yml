@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2            # real correspondent; recent emails with Don
+  consent:  # real correspondent; recent emails with Don
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: README.md
 
 bio:

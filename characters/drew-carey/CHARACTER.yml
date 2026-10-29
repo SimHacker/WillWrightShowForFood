@@ -13,7 +13,8 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1                  # dream guest, public-figure sketch
+  consent:  # dream guest, public-figure sketch
+    state: not_asked
   authored_by: don-hopkins
   note: |
     DREAM GUEST. Public-figure portrayal only — built from public record, no invented quotes.
@@ -25,7 +26,6 @@ representation:
 
 invitation:
   status: dream_guest
-  consent: not_yet_asked
   show_seed: repo-shows/drew-carey/
   document: ../../characters/drew-carey/invitation.md
   ai_framing_md: ../../repo-shows/drew-carey/ai-contrast-framing.md

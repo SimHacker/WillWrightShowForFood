@@ -13,7 +13,8 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: unverified
   authored_by: don-hopkins
 
 relationship:

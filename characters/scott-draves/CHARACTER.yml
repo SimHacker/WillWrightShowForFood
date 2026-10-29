@@ -13,14 +13,14 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Old friend of Don's. Portrayal from public work + correspondence; Scott may edit anytime."
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: in_conversation
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/scott-draves/
 

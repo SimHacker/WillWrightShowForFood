@@ -13,7 +13,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3                      # public Maxis Alumni posts; has corresponded with Don, but portrayal consent not asked
+  public_figure: true  # public Maxis Alumni posts; has corresponded with Don, but portrayal consent not asked
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   needs_confirmation:
     - "Consent to name and quote her here."
@@ -22,7 +24,6 @@ representation:
 
 invitation:
   status: not_yet_written
-  consent: not_yet_asked
   contact: "via Maxis Alumni (Facebook); has previously corresponded with Don by mail"
 
 bio:

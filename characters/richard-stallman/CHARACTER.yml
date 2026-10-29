@@ -9,12 +9,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   note: "31 Jul — warm invite refreshed: rider accommodation, ethical virtual parrot (Copyleft / retrognuification), any medium he prefers. Draft: DonHopkins attachments/richard-stallman/2026-07-31-email-invitation.md"
 
 # Dual identity — descriptive, bidirectional, NOT inheritance

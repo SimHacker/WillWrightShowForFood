@@ -15,7 +15,7 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3_warm_contact
+  public_figure: true
   authored_by: don-hopkins
   note: "Warm, long-standing correspondent of Don's. Invitation drafted, not yet sent. He may edit, decline, delay, or remove anything."
 

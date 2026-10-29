@@ -11,12 +11,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: sent
-  consent: not_yet_asked
   document: invitation.md
   history:
     - "2026-07-16: replied to Don's outreach: visit Internet Archive Europe; in Amsterdam November–December; up for video interviews in theory"

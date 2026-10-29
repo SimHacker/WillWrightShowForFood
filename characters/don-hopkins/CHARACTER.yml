@@ -15,7 +15,6 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent: self_sovereign
   authored_by: self
   layers:
     public_wwsff: "This directory — career/ + portrayal/"

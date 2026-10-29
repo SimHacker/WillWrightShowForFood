@@ -13,12 +13,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   note: |
     Creator of Comic Chat. Retired from Microsoft; Seattle. Supportive of OSS release per Robert.

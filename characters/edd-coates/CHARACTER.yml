@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/edd-coates/
   note: "Friend of Don — GUIDB Guinness record; PadCrafter; Game UI Bible (Lost in Cult); ethical archives; pies + Gonzo bridge skins + PieCraft ep.2. Audience README ready; email soon."

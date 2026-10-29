@@ -16,12 +16,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 5
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: memorial
-  consent: not_yet_asked
   document: memorial.md
   note: "deceased (16 December 1928 – 2 March 1982) — represent + discuss"
 

@@ -18,13 +18,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 0
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Never contacted. Everything here is from public pages; nothing said on his behalf."
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   cluster: ../../repo-shows/lgbtq-sims-cluster/README.md
   stack_with: [ellpeck, heather-castillo, steve-alvey, patrick-j-barrett-iii]

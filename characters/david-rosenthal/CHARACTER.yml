@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: interested_async
-  consent: not_yet_asked
   responded: "2026-07-02"
   contributed: "PDP-7/340 Hex memories draft — pdp7-cambridge-memories.md (source pdp7.html)"
   document: invitation.md

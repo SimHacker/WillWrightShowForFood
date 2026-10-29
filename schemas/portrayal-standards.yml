@@ -70,11 +70,19 @@ onboarding:
     cursor_moollm: ../process/onboarding-cursor-moollm.yml
   ladder: ../process/guest-participation-ladder.yml
 
-consent_levels:
-  1_self_sovereign: "Subject controls their own directory (Don Hopkins)"
-  2_explicit: "Guest has agreed to portrayal / show"
-  3_public_figure: "Public work + tradition/K-line; no impersonation"
-  5_deceased_legacy: "Reverence; legacy and artifacts only; no invented inner life"
+# Each layer states facts; the rule is computed from them (moollm
+# skills/representation-ethics/REPRESENTATION.yml schema.rules). The first that holds governs:
+portrayal_rules:
+  memorial: "status: deceased. Reverence; legacy and artifacts only; no invented inner life"
+  self_authored: "authored_by is the subject (Don Hopkins). Subject controls their own directory"
+  consented: "representation.consent.state: granted, with evidence. Within the agreed scope"
+  public_figure: "public_figure: true. Public work + tradition/K-line; no impersonation"
+  private: "otherwise. Fictional inspired-by wrapper only"
+consent_record: |
+  representation.consent: { state, scope, date, evidence, note }. state is not_asked, asked,
+  granted, declined, revoked, or unverified (claimed earlier, no evidence on file). granted
+  needs evidence: the correspondence file or message that shows it. Relationship warmth
+  (warm lead, old friend) goes in note, not state.
 
 memorial-mode:
   what: "A full character directory for a deceased person, kept in memorial mode."
@@ -96,7 +104,6 @@ memorial-mode:
   fields:
     status: deceased
     invitation_status: memorial      # invitation-workflow.yml
-    consent_level: 5_deceased_legacy
     block: "memorial: { mode, rule, who_can_discuss[], draw_on_for_shows[] }"
   signifier_hint: "🕯️"
 

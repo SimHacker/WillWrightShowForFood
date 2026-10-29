@@ -11,13 +11,14 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: asked
   authored_by: don-hopkins
 
 invitation:
   status: sent
   sent: 2026-07-31
-  consent: awaiting_reply
   document: invitation.md
   show_seed: repo-shows/don-woods-adventure/don-woods-adventure.yml
   correspondent_since: 1986  # the misdirected ':mail don' — sources/correspondence-digest.md

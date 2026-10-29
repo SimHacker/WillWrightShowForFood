@@ -87,14 +87,22 @@ Three tiers, all honored — pick your commitment level (details: [participation
 
 Invitations link **here** for all of this — they never explain accounts or tools inline.
 
-## Consent levels
+## Which rules apply to a portrayal
 
-| Level | Meaning |
-|-------|---------|
-| **1 — self-sovereign** | Subject controls their own directory (Don Hopkins) |
-| **2 — explicit** | Guest has agreed to portrayal / show |
-| **3 — public figure** | Public work + tradition/K-line; no impersonation |
-| **5 — deceased legacy** | Reverence; legacy and artifacts only; no invented inner life |
+Each character file records facts: whether the person is living, who wrote the portrayal,
+whether they are a public figure, and what happened when we asked them. The rules follow from
+those facts; the first that holds applies.
+
+| Rule | When | What it means |
+|------|------|---------------|
+| **Memorial** | they have died | Reverence; legacy and artifacts only; no invented inner life |
+| **Self-authored** | they write their own directory (Don Hopkins) | They control it |
+| **Consented** | they said yes, and we have the message that shows it | Within what they agreed to; they can withdraw |
+| **Public figure** | they have a public role or published work | Public work + tradition/K-line; no impersonation |
+| **Private** | none of the above | A fictional character inspired by them, at most |
+
+What happened when we asked is recorded as one of: not asked, asked, granted, declined,
+revoked. Being a friend, or a warm conversation, is noted but is not consent.
 
 ## Memorial mode {#memorial-mode}
 
@@ -109,7 +117,7 @@ A full character directory for a deceased person, kept in **memorial mode**.
 - Doc: `characters/<id>/memorial.md` (a tribute, not an invitation)
 - Audience TicketPR: do **not** create `repo-shows/<show>/audience/<id>/` personas that speak **as** deceased people. See [fictional-audience.yml](fictional-audience.yml).
 
-Fields: `status: deceased` · `invitation_status: memorial` · `consent_level: 5_deceased_legacy` · signifier 🕯️
+Fields: `status: deceased` · `invitation_status: memorial` · signifier 🕯️
 
 ## Invitation documents
 

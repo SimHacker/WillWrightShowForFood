@@ -14,12 +14,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: asked
   authored_by: don-hopkins
 
 invitation:
   status: sent
-  consent: asked
   sent: 2026-08-20
   channel: chat
   replied: 2026-08-20

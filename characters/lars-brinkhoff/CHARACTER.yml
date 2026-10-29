@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: yes_later
-  consent: not_yet_asked
   responded: "2026-07-02"
   document: invitation.md
   correspondence: correspondence.yml

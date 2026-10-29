@@ -13,12 +13,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: dream_guest
-  consent: not_yet_asked
   document: invitation.md
   channel_note: |
     Knuth does not answer unsolicited email (except book-error reports).

@@ -9,7 +9,8 @@ character:
 
 representation:
   real_being: true
-  consent: collaborator_invited
+  consent:
+    state: asked
   self_authored: invited
   status: "Honored front-row invite. Writes his own questions / plugs. No fabricated words."
   canonical_guest: ../../../../characters/steve-alvey/

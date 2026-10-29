@@ -12,14 +12,15 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: |
     Living/passed UNKNOWN — do not memorialise until confirmed. Citation room for FLEX history.
 
 invitation:
   status: not_offered
-  consent: not_yet_asked
   note: "Storyline figure until status + contact verified."
 
 bio:

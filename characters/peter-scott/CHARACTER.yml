@@ -13,7 +13,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: |
     Public-source portrayal from ABug 13 talk (2021 recording, 2022 release) and Acorn scene
@@ -22,7 +24,6 @@ representation:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   show_seed: repo-shows/will-wright-premiere/
 
 bio:

@@ -13,13 +13,14 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Host-authored from public books and NN/g. Subject may edit/delete anytime."
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   note: "Dream invite — affordances, feedback, human-centered design for sims & tools"
 

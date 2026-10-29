@@ -135,7 +135,6 @@ ceremonies:
 
 # REPRESENTATION — consent and boundaries
 representation:
-  consent_level: 1
   self_authored: true
   what_this_is: |
     A drag-show tribute performance of Phil Donahue's audience-participation

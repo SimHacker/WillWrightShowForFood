@@ -13,13 +13,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: "Host-authored from public profiles + colleague knowledge (Don and Isabella are colleagues at Leela AI). She may edit, reduce, or delete anytime."
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/isabella-struckman/
 

@@ -13,7 +13,8 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1                      # public Facebook post to Maxis Alumni; not yet contacted
+  consent:  # public Facebook post to Maxis Alumni; not yet contacted
+    state: not_asked
   authored_by: don-hopkins
   needs_confirmation:
     - "Start date at Maxis — March 1996 newsletter says producers had been around 'the last year and a half', implying ~late 1994. Not stated directly."
@@ -25,7 +26,6 @@ representation:
 
 invitation:
   status: not_yet_written
-  consent: not_yet_asked
   contact: "via Maxis Alumni (Facebook)"
 
 bio:

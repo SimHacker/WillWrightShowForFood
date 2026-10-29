@@ -10,7 +10,8 @@ character:
 
 representation:
   real_being: true
-  consent: collaborator_invited
+  consent:
+    state: asked
   self_authored: invited
   status: "Honored front-row invite. She writes her own questions / plugs. No fabricated words."
   canonical_guest: ../../../../characters/heather-castillo/

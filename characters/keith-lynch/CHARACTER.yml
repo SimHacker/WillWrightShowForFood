@@ -8,12 +8,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: unverified
   authored_by: don-hopkins
 
 invitation:
   status: not_applicable
-  consent: not_applicable
   note: |
     Not a show guest — primary-source archivist. Public material only:
     keithlynch.net/history.net.html and HN cross-links.

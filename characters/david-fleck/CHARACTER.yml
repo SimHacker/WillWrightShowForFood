@@ -12,12 +12,14 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: unverified
+    note: async_welcome
   authored_by: don-hopkins
 
 invitation:
   status: declined_show
-  consent: async_welcome
   document: invitation.md
   show_seed: repo-shows/david-fleck-pen-input/david-fleck-pen-input.yml
   sent: 2026-07-30

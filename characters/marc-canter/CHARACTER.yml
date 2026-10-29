@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2          # old friend; Don expects an enthusiastic yes; consent not formally asked
+  consent:  # old friend; Don expects an enthusiastic yes; consent not formally asked
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/marc-canter/
   pair_with: david-levitt

@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: send_ready
-  consent: not_yet_asked
   warm_path: "Coco Conn email 2026-08-26 — Paul asked to talk (WhatsApp/text via Coco; number not in this repo). Offered a writeup."
   document: invitation.md
   show_seed: repo-shows/coco-conn/

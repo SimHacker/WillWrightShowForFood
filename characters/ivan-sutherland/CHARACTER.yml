@@ -18,7 +18,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3          # public figure — citation / lineage, not interview yes
+  public_figure: true  # public figure — citation / lineage, not interview yes
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   mode: hero_north_star
   note: >
@@ -27,7 +29,6 @@ representation:
 
 invitation:
   status: not_offered
-  consent: not_yet_asked
   document: null
   note: "Citation room. Educator bridge via Roy Eagleson; PIXIE show cites Sketchpad as north star."
 

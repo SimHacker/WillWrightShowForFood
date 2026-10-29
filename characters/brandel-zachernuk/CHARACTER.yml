@@ -13,12 +13,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: not_sent
-  consent: not_yet_asked
   channel: unknown          # site has no address listed; LinkedIn, Twitter, CodePen, or Future of Text
   show_seed: null
   the_ask: "The webtop. He builds spatial web interaction for a living and thinks about reading surfaces from first principles."

@@ -9,12 +9,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   note: "Draft invite — Don's friend; warm; not sent. Scientology segment optional per Will boundary."
 

@@ -16,7 +16,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3          # public figure; warm contact, but nothing reviewed by her yet
+  public_figure: true  # public figure; warm contact, but nothing reviewed by her yet
+  consent:
+    state: not_asked
   authored_by: don-hopkins
   note: |
     Old friend and former colleague — Maxis/EA. Warm, with a live 2024 thread about the Yoot Tower
@@ -24,7 +26,6 @@ representation:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/ebike-safari/
   also_fits:

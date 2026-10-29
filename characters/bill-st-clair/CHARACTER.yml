@@ -13,12 +13,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: warm_lead
-  consent: not_yet_asked
   contacted: 2024-05-04
   note: |
     Don emailed May 2024 about Star Wars cabinet; Bill confirmed ROM turtle-graphics hack +

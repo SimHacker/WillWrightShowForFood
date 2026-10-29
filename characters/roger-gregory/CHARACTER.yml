@@ -12,12 +12,13 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  public_figure: true
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: replied
-  consent: not_addressed          # he answered about the work, not about the show or the portrayal
   channel: facebook
   sent: 2026-09-13
   replied: 2026-09-14

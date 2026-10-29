@@ -6,7 +6,6 @@ meta:
   display_name: Rhys Simpson
   github: riperiperi
   invitation_status: not_invited
-  consent_level: 0
   role: community_engineer_reference
 
 identity:

@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent:
+    state: asked
   authored_by: don-hopkins
 
 invitation:
   status: in_conversation
-  consent: pending_response
   contacted: 2026-07-06
   contacted_via: phone
   sent_links: true

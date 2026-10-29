@@ -12,12 +12,12 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 5
+  consent:
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
   status: memorial
-  consent: not_yet_asked
   document: memorial.md
   note: "deceased (2025) — represent + discuss; invite people who knew her"
 
