@@ -113,5 +113,4 @@ see_also:
   - { path: ../micropolis-ai-drag-race.yml#pdp10-maclisp-drive, why: "Drag race rotation slot" }
   - { path: ../lisp-machine-stack.yml, why: "CADR → Symbolics/LMI — ancestor lap" }
   - { path: https://github.com/PDP-10/its, why: "Upstream ITS restoration project" }
-  - { path: SimHacker/DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml, why: "MACLISP lineage — AI Lab oral history" }
   - { path: https://github.com/SimHacker/moollm/skills/thoughtful-commitment, why: "Eval at ITS console — commit the Thinking ref" }

@@ -18,9 +18,7 @@ show:
   flagship_instance: challenges/apple2-drive.yml
   slats: "RoboResurrection may run legacy Slats in emulator — optional segment"
 
-authoritative:
-  repo: SimHacker/DonHopkins
-  path: projects/micropolis-moollm/process/apple2-emulator-stack.yml
+authoritative: Don's private archive (not public)
 
 ties:
   - challenges/retrocomputing-drive.yml

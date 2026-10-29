@@ -6,7 +6,7 @@
 
 ## The hook
 
-Public pointer — authoritative layers live in DonHopkins. Layered stack: L0 raw disk I/O → L1 DOS/ProDOS/UCSD → L2 per-game drivers. **apple2js** for live hot-write; Emularity/MAME complementary.
+Public pointer — authoritative layers live in Don's private archive. Layered stack: L0 raw disk I/O → L1 DOS/ProDOS/UCSD → L2 per-game drivers. **apple2js** for live hot-write; Emularity/MAME complementary.
 
 Show: retrocomputing-drive family — rig declares languages, tools, platform, emulator.
 

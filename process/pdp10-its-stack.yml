@@ -1,5 +1,5 @@
 # PDP-10 / ITS stack — public pointer + show-challenge hook
-# Authoritative preservation: PDP-10/its (Lars Brinkhoff et al.) + DonHopkins heritage notes
+# Authoritative preservation: PDP-10/its (Lars Brinkhoff et al.) + Don's private heritage notes
 # WWSFF does not duplicate full install — see process/live-repo.yml
 
 meta:
@@ -33,12 +33,10 @@ heritage:
   lars_brinkhoff: "PDP-10/its lead — invited guest; make-it-so challenge"
   maclisp: "MIT AI Lab dialect — Kent Pitman, Pitmanual, Logo/LLogo lineage"
   don_hopkins: "Tourist Policy era — MACLISP tutoring on ITS over ARPANET"
-  see: SimHacker/DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml
 
 authoritative:
   its_restoration: PDP-10/its
-  don_notes:
-    - SimHacker/DonHopkins/characters/margaret-minsky/correspondence/memory-lane-2019.yml
+  don_notes: private correspondence with Don (not public)
 
 ties:
   - challenges/retrocomputing-drive.yml

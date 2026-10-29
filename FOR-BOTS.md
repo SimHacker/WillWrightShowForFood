@@ -64,7 +64,7 @@ Portrayals are **about** real people — tribute cards, not impersonation. Brows
 
 **Do:** follow `see_also` whys · cite Will's [1996 transcript](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) · rate-limit · file issues for broken links
 
-**Don't:** flatten the repo · invent guest quotes · scrape private DonHopkins paths ([`live-repo.yml`](process/live-repo.yml))
+**Don't:** flatten the repo · invent guest quotes · scrape private archive paths ([`live-repo.yml`](process/live-repo.yml))
 
 ---
 

@@ -1,5 +1,5 @@
 # Scott Adams — show artifacts & correspondence pointers
-# Private email lives in DonHopkins repo; public-safe digest below.
+# Private email not in this repo; public-safe digest below.
 
 character: scott-adams
 consent: correspondence_verified
@@ -7,7 +7,6 @@ artifact_count: 8
 
 correspondence:
   digest: correspondence-digest.md
-  private_ref: DonHopkins/characters/don-hopkins/correspondence/scott-adams.yml
   email: [email redacted]
   verified_dates: ["2025-06 (HN/Messenger)", "2026-01-04", "2026-01-07", "2026-02-22"]
 

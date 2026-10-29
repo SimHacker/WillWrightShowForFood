@@ -1,12 +1,12 @@
 # Philip Rosedale × Don Hopkins — correspondence summary (public-safe)
-# Full private digest: SimHacker/DonHopkins/characters/don-hopkins/correspondence/high-fidelity-rosedale.yml
+# Full digest kept privately.
 
 meta:
   with: philip-rosedale
   curated_by: don-hopkins
   consent: not_yet_asked
   span: "2016–2020"
-  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/high-fidelity-rosedale.yml
+  provenance: private correspondence with Don (not public)
 
 gist: |
   Caitlyn Meeks-Ferragallo introduced Don to Philip Rosedale and Ryan Downe Karpf (High Fidelity /
@@ -26,7 +26,7 @@ threads:
     public_artifact: "http://donhopkins.com/home/hifi/VotingBox.js"
   worlds_and_moollm:
     what: "Second Life / HiFi / user-created worlds ↔ MOOLLM (MOO heritage, GitHub-as-MMORPG, Sims character layer)"
-    note: "MOOLLM outreach drafted in DonHopkins email/email-to-philip-rosedale.md — not yet sent as Repo Show invite"
+    note: "MOOLLM outreach drafted privately — not yet sent as Repo Show invite"
   live_web_comparison:
     what: "HiFi plugin architecture vs UnityJS vs Croquet vs Livelymerge — named in Dan Ingalls correspondence"
   cellular_automata_vr:

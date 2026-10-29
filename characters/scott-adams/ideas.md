@@ -128,7 +128,7 @@ GET LAMP: [`../jason-scott/sources/get-lamp.md`](../jason-scott/sources/get-lamp
 ### L3. DreamScape → iLoci → biography rooms 🎙️
 **Beat:** Kaleida ScriptX presentation memory palace (rearrange slides on the map **while presenting**)
 → iLoci iPhone palace → Scott's **playable biography** on the web. Same user gesture: **walk to learn**.
-**Artifact:** Don's [`talks/past/dreamscape-wwdc-1995.yml`](../../https://github.com/SimHacker/DonHopkins/blob/main/talks/past/dreamscape-wwdc-1995.yml) (stub)
+**Artifact:** Don's Dreamscape WWDC 1995 talk notes (private stub)
 
 ### L4. Pie menus as radial room exits 🎙️🔧
 **Beat:** Direct manipulation verb-picker for a modeled world — CHI'88 to The Sims to MOOLLM.
@@ -237,7 +237,7 @@ the pipeline; Scott critiques the data format.
 
 ### X1. MOOLLM microworld OS talk (nested) 🎙️
 **Beat:** Telescoping keynote segment — outer room MOOLLM, inner room Scott's engine. See Don's
-[`talks/moollm-microworld-os/TALK.yml`](../../https://github.com/SimHacker/DonHopkins/blob/main/talks/moollm-microworld-os/TALK.yml).
+MOOLLM microworld OS talk (private draft).
 
 ### X2. Empathy and Servitude (robot films) 🎙️
 **Beat:** Optional cold open if robotics audience — Stupid Fun Club one-minute movies; wizard-of-oz

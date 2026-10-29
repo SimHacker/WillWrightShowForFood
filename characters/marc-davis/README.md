@@ -30,5 +30,5 @@ fixed clips. NPUC reunion + Interval reunion threads converge here.
 | | |
 |---|---|
 | **Media Streams (thesis context)** | [Golan Levin note](https://acg.media.mit.edu/people/golan/mediastreams/) |
-| **Garage Cinema → MOOLLM** | [email draft in DonHopkins](https://github.com/SimHacker/DonHopkins/blob/main/characters/don-hopkins/email/email-to-marc-davis.md) |
+| **Garage Cinema → MOOLLM** | email draft (private) |
 | **Visual programming lineage** | [MOOLLM doc](https://github.com/SimHacker/moollm/blob/main/designs/VISUAL-PROGRAMMING-LINEAGE.md) |

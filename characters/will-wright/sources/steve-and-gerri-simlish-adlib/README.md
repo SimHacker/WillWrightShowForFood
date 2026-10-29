@@ -70,7 +70,7 @@ machine: [Arcade Seal Clubber 2: Barky's Revenge](../../../eric-hedman/barkys-re
 ## Ethics
 
 Gerri Lawlor died **January 2019**. Discuss and cite with memorial respect; **do not voice her as a
-character** on air. See [`RULES-AND-ETHICS.md`](https://github.com/SimHacker/DonHopkins/blob/main/projects/willwrightshowforfood/strategy/RULES-AND-ETHICS.md).
+character** on air. See [`portrayal-standards.md`](../../../../schemas/portrayal-standards.md#memorial-mode).
 
 ## Sibling video — a later session, now archived
 
@@ -82,7 +82,7 @@ along with its 290-comment corpus and the automatic captions that mistook Simlis
 
 ## Still to acquire
 
-- Don's **own video** of *this* session (listed in DonHopkins `GAPS.md` as Simlish ad-lib mp4) —
+- Don's **own video** of *this* session (listed in Don's private gaps list as Simlish ad-lib mp4) —
   still audio-only here. The 2001 video above is the same pair, but not this recording.
 
 ## Files in this bundle

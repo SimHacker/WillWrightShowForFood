@@ -127,7 +127,7 @@ Latent Office coinage is "a bad pun in search of meaning" and pivoted to GOLEM (
 - **Repo Show / interview** ask — friendly, advance questions, no ambushes; Ekiga or ordinary
   phone; Amsterdam if convenient.
 - **Elevator-phone pranks** — RMS at Boskone (see also March 2014 Gilmore-phone thread in
-  `DonHopkins/temp/rms-prompts.txt`); Don's pizza-guy / press-"L"-for-lobby variant.
+  Don's private email archive); Don's pizza-guy / press-"L"-for-lobby variant.
 
 **Why it's here.**
 

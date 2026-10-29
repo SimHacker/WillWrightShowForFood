@@ -17,17 +17,8 @@ about you and the whole group") and — half in jest, half in earnest — asks:
 
 > *"does Maurice Wilkes have an avatar in the SIMs milieu?"*
 
-He shares his own operator's-era backstory, kin to Heinz's all-night-mainframe
-memories: a midnight-shift computer operator job at his university Computing
-Centre, **~1979 to the mid-1980s**, tending a **PDP-10**, a **PDP-11** (driving the
-inkpen plotter), and a **Cyber-73**; his first exposure in high school was a
-**Honeywell GE-115**. *"We love the musty smell of old lineprinter listings."*
-
-Then his lineage: he began his PhD with **Zenon Pylyshyn**, whose own postdoc
-advisors were **Allen Newell** and **John McCarthy** (Roy says he has photos).
-Pylyshyn directed the **CIFAR** AI-and-Robotics program in the mid-1980s (which
-hired **Geoffrey Hinton**), was — with **Jerry Fodor** — a noted critic of
-connectionism, and started the Rutgers Cognitive Science program.
+He shares some of his own backstory (kept private), and his doctoral lineage through
+**Zenon Pylyshyn**, his PhD supervisor.
 
 For teaching: in his HCI course Roy has students **re-implement Sketchpad**, and in
 doing so they *rediscover* the importance of data structures and end up

@@ -1,7 +1,6 @@
 # Scott Adams — correspondence digest (public-safe)
 
-*Adventure-game pioneer — **not** the Dilbert cartoonist. Full private timeline:
-`DonHopkins/characters/don-hopkins/correspondence/scott-adams.yml`.*
+*Adventure-game pioneer — **not** the Dilbert cartoonist. Full timeline kept privately.*
 
 ## How we got here
 

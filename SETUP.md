@@ -22,7 +22,7 @@ Optional siblings (multi-root Cursor workspace — **recommended**):
 |------|------|
 | [SimHacker/moollm](https://github.com/SimHacker/moollm) | Orchestrator + skills kernel |
 | [SimHacker/MicropolisCore](https://github.com/SimHacker/MicropolisCore) | Engine + `@micropolis/*` packages |
-| DonHopkins (private) | Authoritative export source → this public repo |
+| Don's private archive | Authoritative export source → this public repo |
 
 Suggested layout (matches Don Hopkins dev machine):
 
@@ -30,7 +30,6 @@ Suggested layout (matches Don Hopkins dev machine):
 ~/GroundUp/git/
   moollm/
   MicropolisCore/
-  DonHopkins/
   WillWrightShowForFood/    ← you are here
 ```
 
@@ -112,7 +111,7 @@ WillWrightShowForFood/
 
 | Layer | Pattern source | What lives here |
 |-------|----------------|-----------------|
-| Content microworld | moollm + DonHopkins plugin | yaml-jazz trees at repo root |
+| Content microworld | moollm + Don's private plugin | yaml-jazz trees at repo root |
 | Code monorepo | MicropolisCore + mooco | `apps/*`, `packages/*`, pnpm |
 
 ---
@@ -136,14 +135,13 @@ pnpm --filter stream-gateway dev
 
 ---
 
-## Export / sync from DonHopkins
+## Export / sync from Don's private archive
 
 Private authoritative tree → filtered public projection. See:
 
-- [MANIFEST.yml](MANIFEST.yml)
 - [process/sync-with-donhopkins.yml](process/sync-with-donhopkins.yml)
 
-DonHopkins plan: `projects/micropolis-moollm/process/wwsff-export-sync.yml`
+The bundle manifest and export plan are kept privately.
 
 ---
 

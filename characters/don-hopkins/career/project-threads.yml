@@ -52,7 +52,7 @@ threads:
     goal: "Open-border game + character federation; data portability"
 
 coalesce_note: |
-  master-of-ceremonies/ in the full DonHopkins tree is a compartment of don-hopkins
+  master-of-ceremonies/ in Don's full private tree is a compartment of don-hopkins
   (on-stream Don), NOT a separate public character. don-philahue/ is the orchestrator avatar.
   See on-stream.yml.
 

@@ -36,7 +36,7 @@ The ["get the old band back together"](../../../process/old-band-back-together.m
 | Chris Baena | — | Associate Producer |
 | [Jason Shankel](../../../characters/jason-shankel/README.md) | — | Senior engineer |
 
-Team epithets from [Don Hopkins to Jess Bird](https://donhopkins.com) (BBC Sims documentary research, Apr 2025). Private canonical source in DonHopkins research archive.
+Team epithets from [Don Hopkins to Jess Bird](https://donhopkins.com) (BBC Sims documentary research, Apr 2025). Private canonical source in Don's research archive.
 
 ## Art, design & audio
 

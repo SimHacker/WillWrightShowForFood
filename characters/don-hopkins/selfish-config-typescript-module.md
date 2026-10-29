@@ -2,7 +2,7 @@
 
 **Status: note for a future Repo Show + MicropolisCore package — not building now.**
 
-Port Leela `central`'s **worker config fragment composition** into a general-purpose TypeScript
+Port Leela AI's internal **worker config fragment composition** into a general-purpose TypeScript
 module (`packages/selfish-config` in **MicropolisCore**, or folded into vitamoo). Makes the
 filesystem object model's advisory `parents:` delegation **operational**.
 
@@ -11,18 +11,16 @@ filesystem object model's advisory `parents:` delegation **operational**.
 | Piece | Behavior |
 |-------|----------|
 | **Load** | Named JSON/YAML config fragments from disk |
-| **Linearize** | Resolve `parents:` DAG via **C3 linearization** (Python MRO-style deterministic MI order — central's fragments assume this) |
+| **Linearize** | Resolve `parents:` DAG via **C3 linearization** (Python MRO-style deterministic MI order — the original fragments assume this) |
 | **Merge pass 1** | Deep-merge **slots** with local override + **provenance tracking** (which fragment each value came from) |
-| **Merge pass 2** | Overlay hook mirroring central's `shards.yml` mechanism |
+| **Merge pass 2** | Overlay hook mirroring the original's shards overlay mechanism |
 | **Vocabulary** | Drop Leela-specific worker/fleet terms; keep generic selfish inheritance |
-| **Test** | Mirror `image-web-caddy` composition from central |
+| **Test** | Mirror `image-web-caddy` composition from the original |
 
-## Upstream references (Leela central)
+## Upstream
 
-| Artifact | Path |
-|----------|------|
-| Playbook PB-44 | `skills/gcs/protocols/pipeline-optimization/playbooks/PB-44-worker-config-fragment-composition.md` |
-| Implementation | `packages/leela-cicd/src/leela_cicd/worker_config.py` (two-pass merge) |
+The original is Leela AI's internal worker-config composition: a playbook and a two-pass merge
+implementation, both private.
 
 ## WWSFF cross-links (concept, not implementation)
 

@@ -13,7 +13,7 @@ Open research and episode seeds. Not claims about private life.
 
 ## Open questions
 
-- Any HN / blog threads from Don that cite her? (Algolia: none under SimHacker/DonHopkins yet — widen search)
+- Any HN / blog threads from Don that cite her? (Algolia: none under HN accounts SimHacker or DonHopkins yet — widen search)
 - Living colleagues or foundation partners who might discuss her work on air (only after they accept)
 - Cross-links to other UK computing women pioneers already in the roster
 

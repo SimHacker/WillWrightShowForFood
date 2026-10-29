@@ -13,6 +13,7 @@ character:
   affiliation: "University of Cambridge Mathematical Laboratory (c. 1970–72)"
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   authored_by: don-hopkins
   note: "Documented from publications only. Identified as the 'Cheney' in Roy Eagleson's storyline via the RAINBOW co-authorship (same Cambridge Math Lab, same era). Living/passed status UNKNOWN — confirm before memorial mode or contact."

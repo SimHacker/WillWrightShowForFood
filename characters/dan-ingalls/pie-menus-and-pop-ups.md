@@ -20,7 +20,7 @@ Alan Kay introduced Don to Dan via the **Fabrik** paper (2018) — visual datafl
 
 ## Correspondence hooks (public-safe)
 
-From the 2021 thread ([DonHopkins private digest](https://github.com/SimHacker/DonHopkins/blob/main/characters/don-hopkins/correspondence/daniel-ingalls.yml)):
+From the 2021 thread (private digest):
 
 - **Pie Menus: A 30-Year Retrospective** — timing for HN / publication
 - **Live-web bridges** — Don's UnityJS JSON layer (path expressions, query templates) vs **High

@@ -195,9 +195,8 @@ currently empty). It is safe and singularly useful:
   site converts all of it into a funnel -- SEO that cannot be bought,
   plus community muscle memory.
 - **What to put there:** a period-faithful museum restoration (the
-  Wayback capture index and gap checklist already exist in the
-  DonHopkins strategy repo: `research/sources/transmogrifier-wayback-INDEX.yml`
-  and `strategy/acquisition/GAPS.md` -- home page, downloads
+  Wayback capture index and gap checklist already exist in
+  Don's private strategy notes -- home page, downloads
   (Transmogrifier 2.0.5 BETA, RugOMatic 1.6), tutorials, glossary,
   Magic Cookie registry, the click-through EULA flow), the restored
   authorized download, and a visible on-ramp to TMog and Soul City.

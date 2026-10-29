@@ -5,8 +5,8 @@
 [David Levitt](../), [Alan Kay](../../alan-kay/), and the children's-computer / Logo / music / haptics work.
 
 **Confirmed by:** [Bill St. Clair](../../bill-st-clair/) (email to Don, 5–7 May 2024), matching Don's
-eyewitness memory and Bill's public LinkedIn / résumé. Full private thread:
-DonHopkins green-room `green-room/bill-st-clair/`.
+eyewitness memory and Bill's public LinkedIn / résumé. Full thread kept
+privately.
 
 ---
 

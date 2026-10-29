@@ -28,7 +28,7 @@ trails:
       - { path: ../repo-shows/REPO-SHOWS.yml, why: "Implicit SHOW inheritance for whole collection" }
       - { path: couple-and-solo-shows.yml, why: "Async default — solo + weave, not sync roundtable" }
       - { path: guest-participation-ladder.yml, why: "Constitutional tiers — solo video first; full-service repo; franchise" }
-      - { path: live-repo.yml, why: "Public WWSFF vs DonHopkins private — export ethics" }
+      - { path: live-repo.yml, why: "Public WWSFF vs Don's private archive — export ethics" }
       - { path: ../README.md, why: "Two-layer navigation — brutalist listing + humane README overlay" }
       - { path: ../characters/jef-raskin/, why: "🕯️ Humane Interface memorial — philosophical anchor for README overlay" }
       - { path: character-colocation.yml, why: "github_ux — humans link to README.md, not bare directory URLs" }
@@ -155,9 +155,8 @@ trails:
     human: trails/archive-and-provenance.md
     why: "Historians and archivists — export policy, primary sources, honest invitation record"
     nodes:
-      - { path: live-repo.yml, why: "Public bud vs DonHopkins archive — on hold when projected" }
+      - { path: live-repo.yml, why: "Public bud vs Don's private archive — on hold when projected" }
       - { path: sync-with-donhopkins.yml, why: "SELECT → FILTER → EXPORT pipeline" }
-      - { path: ../MANIFEST.yml, why: "Bundle manifest — what maps from private source" }
       - { path: ../characters/don-hopkins/sync-sources.yml, why: "Inclusion/exclusion log for host portrayal" }
       - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Anchor artifact — Stanford, YouTube, Medium, attribution" }
       - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }

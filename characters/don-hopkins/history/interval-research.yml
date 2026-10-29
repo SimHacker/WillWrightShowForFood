@@ -1,5 +1,4 @@
 # Interval Research — public distill
-# Source: DonHopkins/characters/don-hopkins/history/interval-research.yml
 # Paul Allen's lab; Don's oompa-loompa year before Maxis.
 
 interval_research:
@@ -106,7 +105,7 @@ repo_show_nexus:
     - characters/rob-tow/
     - characters/glenn-edens/
     - characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
-  strong_candidates:  # Grokipedia + DonHopkins/contacts/interval-alumni.yml
+  strong_candidates:  # Grokipedia + Don's private alumni roster
     - paul-debevec     # Rouen Revisited dual w/ Golan
     - caterina_fake    # Interval → Flickr; braid w/ Ben Cerveny / Game Neverending
     - marc_davis       # MediaFlow / garage theatre (semantic video before vision AI)

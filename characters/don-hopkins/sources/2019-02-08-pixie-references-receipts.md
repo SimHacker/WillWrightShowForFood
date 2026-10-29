@@ -54,7 +54,7 @@ manuscript (`piepaper.comments`, last written 1989-02-14).
   University of Waterloo CGL "Paint" (Lyn Bartram) — three other early
   pie-adjacent implementations Don wanted tracked down.
 - **PIXIE's co-author Heinz Lemke** is a live correspondence thread:
-  `DonHopkins/characters/don-hopkins/correspondence/attachments/heinz-lemke/`.
+  [`../../heinz-lemke/correspondence.yml`](../../heinz-lemke/correspondence.yml).
   Siblings: [2008-2023-pixie-buxton-patent-thread.md](2008-2023-pixie-buxton-patent-thread.md),
   [2019-02-buxton-apology-demand-gdc-timeline.md](2019-02-buxton-apology-demand-gdc-timeline.md).
 

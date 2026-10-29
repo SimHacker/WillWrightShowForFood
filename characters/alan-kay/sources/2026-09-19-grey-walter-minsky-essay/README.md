@@ -14,8 +14,7 @@ folder exists:
 **He does not need to put it online. Both halves are already there and he does not have the links.**
 That is the exact failure this archive exists to fix, so this folder is the delivery.
 
-The reply Don sends is drafted in
-[`DonHopkins/characters/don-hopkins/notes/quora/comment-to-alan-kay-grey-walter-active-essay.md`](https://github.com/SimHacker/DonHopkins/blob/main/characters/don-hopkins/notes/quora/comment-to-alan-kay-grey-walter-active-essay.md).
+The reply Don sends is drafted privately.
 
 ## The two artifacts
 

@@ -34,22 +34,16 @@ light-pen interrupts (X11 locally; web mouse for shareable).
 → [`sources/2026-07-28-simh-oct-to-rim-loaded.md`](sources/2026-07-28-simh-oct-to-rim-loaded.md) ·
 [`../../packages/cabinet/reference/EMULATION-PLAN.md`](../../packages/cabinet/reference/EMULATION-PLAN.md)
 
-## Background (as Roy tells it)
+## Background
 
-On **9 July 2026** Roy filled in his own backstory. In his telling: he worked as a
-**midnight-shift computer operator** at his university Computing Centre from
-**~1979 to the mid-1980s** — a **PDP-10**, a **PDP-11** driving an inkpen plotter,
-and a **Cyber-73** — after first meeting computing on a high-school
-**Honeywell GE-115**. (*"We love the musty smell of old lineprinter listings."*)
-
-He began his PhD with cognitive scientist [**Zenon Pylyshyn**](https://en.wikipedia.org/wiki/Zenon_Pylyshyn),
-whose own postdoc advisors, Roy notes, were [**Allen Newell**](https://en.wikipedia.org/wiki/Allen_Newell)
-and [**John McCarthy**](https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist));
-Pylyshyn directed the [**CIFAR**](https://en.wikipedia.org/wiki/Canadian_Institute_for_Advanced_Research)
-AI-and-Robotics program that hired [**Geoffrey Hinton**](https://en.wikipedia.org/wiki/Geoffrey_Hinton),
-was (with [**Jerry Fodor**](https://en.wikipedia.org/wiki/Jerry_Fodor)) a noted
-critic of connectionism, and founded the Rutgers Cognitive Science program. Roy
-says he has photos of Pylyshyn with Newell and McCarthy.
+Roy took his PhD at Western's Centre for Cognitive Science in **1992** with cognitive
+scientist [**Zenon Pylyshyn**](https://en.wikipedia.org/wiki/Zenon_Pylyshyn)
+(*Visual Motion Analysis for Robotic Tracking Tasks*), held a postdoc at the Rutgers
+Center for Cognitive Science, taught in Toronto, and returned to Western in **1996**,
+where he is a Professor of Electrical and Computer Engineering working on perception,
+spatial cognition, surgical simulation and HCI
+([Rotman Institute](https://www.rotman.uwo.ca/portfolio-items/eagleson/),
+[Math Genealogy](https://www.mathgenealogy.org/id.php?id=312065)).
 
 ## How he teaches it — Sketchpad until they reinvent OOP
 

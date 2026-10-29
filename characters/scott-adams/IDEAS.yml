@@ -65,7 +65,7 @@ segments:
     G5: { title: "Biography room zero", tags: [live_build, mutual] }
 
   crossover:
-    X1: { title: "Nested MOOLLM talk segment", tags: [talk], artifact: "DonHopkins/talks/moollm-microworld-os/TALK.yml" }
+    X1: { title: "Nested MOOLLM talk segment", tags: [talk] }
     X2: { title: "Empathy and Servitude bridge", tags: [talk] }
     X3: { title: "Microworld morality / Will MediaGraph", tags: [talk] }
     X3b: { title: "Will + Parker advisors", tags: [mutual, talk], note: "Will on-air optional; Parker may coach topics off-mic" }

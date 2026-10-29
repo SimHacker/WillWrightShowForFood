@@ -1,5 +1,5 @@
 # Discord — Soul City pitch (public-safe recap)
-# Full private digest: DonHopkins/characters/don-hopkins/correspondence/ellpeck.yml
+# Full digest kept privately.
 # Layout recap only — wording paraphrased where not direct quote.
 
 meta:

@@ -1,5 +1,5 @@
 # TALK distill — Empathy and Servitude
-# Source: DonHopkins/talks/empathy-and-servitude/TALK.yml (public_safe)
+# Source: Don's private talks archive (public_safe)
 
 talk:
   id: empathy-and-servitude
@@ -23,4 +23,3 @@ alt-titles:
 formats: ["20 min lightning", "45 min conf", "60 min keynote", "Repo Show live"]
 
 wwsff_entry: ../stupid-fun-club-empathy-and-servitude.md
-upstream: SimHacker/DonHopkins/talks/empathy-and-servitude/TALK.yml

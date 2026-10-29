@@ -9,7 +9,7 @@ Open **Empathy and Servitude** — a reusable talk about how people treat machin
 - *Servitude* — robot begging for a good review
 - *Empathy* — robot broken down on the street
 
-YouTube links and full talk package: DonHopkins `talks/empathy-and-servitude/` (distilled in [`talks/empathy-and-servitude.yml`](talks/empathy-and-servitude.yml)).
+YouTube links and talk package: [`talks/empathy-and-servitude.yml`](talks/empathy-and-servitude.yml).
 
 ## Public vs private
 

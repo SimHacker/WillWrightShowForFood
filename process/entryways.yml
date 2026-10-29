@@ -182,16 +182,15 @@ entryways:
       invitation status, sourced quotes only. The 1996 Winograd seminar is the anchor
       artifact — Stanford Archives, Don's transcript, Terry Winograd's CS547 lineage.
     playlist:
-      - { priority: 1, title: "Live repo policy", path: live-repo.yml, why: "Public WWSFF vs DonHopkins authoritative archive — no backfill rule" }
+      - { priority: 1, title: "Live repo policy", path: live-repo.yml, why: "Public WWSFF vs Don's private authoritative archive — no backfill rule" }
       - { priority: 2, title: "Sync pipeline", path: sync-with-donhopkins.yml, why: "SELECT → FILTER → EXPORT — what crosses the membrane" }
-      - { priority: 3, title: "Export manifest", path: ../MANIFEST.yml, why: "Bundle list — which trees map from private source to this repo" }
       - { priority: 4, title: "1996 source README", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Provenance chain — SearchWorks, YouTube, Medium, attribution terms" }
       - { priority: 5, title: "1996 transcript", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — Will's words, Don's sectioning; cite don't paraphrase" }
       - { priority: 6, title: "PIXIE listing, 1972", path: ../characters/heinz-lemke/sources/pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md, why: "128 pages of printout to a file a PDP-7 runs; every fix named, and the errors only running it found" }
       - { priority: 7, title: "HyperTIES 1988 archive", path: ../apps/ties/FORMAT.md, why: "The NeWS databases converted to markdown; what survived, and [missing image] where a picture never existed" }
       - { priority: 8, title: "Portrayal standards", path: ../schemas/portrayal-standards.yml, why: "What we publish, avoid, and how subjects can correct or delete" }
       - { priority: 9, title: "Invitation workflow", path: ../schemas/invitation-workflow.yml, why: "Honest status enum — draft through aired; legacy_only for deceased K-lines" }
-      - { priority: 10, title: "Host sync log", path: ../characters/don-hopkins/sync-sources.yml, why: "What was pulled from moollm/DonHopkins and what stays private" }
+      - { priority: 10, title: "Host sync log", path: ../characters/don-hopkins/sync-sources.yml, why: "What was pulled from moollm and Don's private archive, and what stays private" }
       - { priority: 11, title: "Terry Winograd forebear", path: ../characters/terry-winograd/README.md, why: "CS547 open seminar — direct ancestor of Repo Show as recorded conversation" }
       - { priority: 12, title: "Browse characters", path: ../characters/, why: "Directories grow with responses — invitation.status in each CHARACTER.yml; INDEX.yml is machine-only" }
       - { priority: 13, title: "Vision forebears", path: vision-and-ambition.yml, why: "Long arc girder — design-in-public lineage stated in yaml" }
@@ -209,7 +208,7 @@ entryways:
       - { priority: 3, title: "ShowMaker network", path: showmaker-network.yml, why: "Graph of linked shows — PR adds your node" }
       - { priority: 4, title: "REPO-SHOWS collection", path: ../repo-shows/REPO-SHOWS.yml, why: "Implicit SHOW inheritance for the whole collection" }
       - { priority: 5, title: "Plant a show", path: ../repo-shows/README.md, why: "Directory + SHOW.yml + README — INDEX registration" }
-      - { priority: 6, title: "Live repo policy", path: live-repo.yml, why: "What exports from DonHopkins private — filtered public safe" }
+      - { priority: 6, title: "Live repo policy", path: live-repo.yml, why: "What exports from Don's private archive — filtered public safe" }
       - { priority: 7, title: "Guest CARD template", path: ../characters/_TEMPLATE/CARD.yml, why: "Copy for portrayals — abilities + room interface" }
 
   publisher:
@@ -222,7 +221,7 @@ entryways:
     playlist:
       - { priority: 1, title: "Vision", path: vision-and-ambition.md, why: "Platforms, archives, viral readers — long arc in prose" }
       - { priority: 2, title: "Root README", path: ../README.md, why: "Cream table, status, monorepo layers" }
-      - { priority: 3, title: "Live repo", path: live-repo.yml, why: "Public bud vs DonHopkins archive — sync policy" }
+      - { priority: 3, title: "Live repo", path: live-repo.yml, why: "Public bud vs Don's private archive — sync policy" }
       - { priority: 4, title: "Flagship show", path: ../repo-shows/will-wright-premiere/README.md, why: "First episode shape — Will, 1996, Proxi thread" }
       - { priority: 5, title: "Portrayal standards", path: ../schemas/portrayal-standards.yml, why: "How guests are treated before you meet them in docs" }
       - { priority: 6, title: "SETUP verify", path: ../SETUP.md, why: "Clone and pnpm verify — proves engineering is real" }

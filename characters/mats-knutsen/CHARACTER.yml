@@ -11,6 +11,7 @@ character:
   home: characters/mats-knutsen/
 
 representation:
+  public_figure: false
   governed_by: ../../schemas/portrayal-standards.md
   authored_by: don-hopkins
 

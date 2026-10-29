@@ -1,6 +1,6 @@
 # Sims bibliography — Repo Show projection
 
-**Curated subset** for the Will Wright Show audience. The full index (369 URLs, all topics, line numbers) lives in the private DonHopkins repo:
+**Curated subset** for the Will Wright Show audience. The full index (369 URLs, all topics, line numbers) lives in Don's private archive:
 
 private green-room note (not in this repo)
 Not DRY on purpose — each repo gets what fits its context.

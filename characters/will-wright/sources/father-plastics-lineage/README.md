@@ -19,7 +19,7 @@ SimCity, The Sims, and the SimCity box's Bakelite-appliance aesthetic.
 | Family expected Will to **take over plastics company**; he refused; business **sold** | **Confirmed** | [New Yorker 2006](../2006-11-06-new-yorker-game-master/excerpts.md#company-sold) |
 | Will **~5–6**, nearly suffocated in **polyethylene pellets** drum at father's **Atlanta factory** | **Confirmed** | [Vulture / NY Mag 2026](../2026-03-25-vulture-proxi-profile/README.md) (Will's own words) |
 | Will **loves Bakelite** / father **taught him** Bakelite | **Don's gift lore** | Bakelite quest motive — not yet primary-sourced in this repo; ask Will or find interview |
-| SimCity Classic box depicts a **marbled Bakelite-style appliance** | **Artifact** | [MicropolisCore cover (GitHub)](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/talks/har-2009/images/SimCity_Classic_Cover_Art.jpg) · DonHopkins sidecar |
+| SimCity Classic box depicts a **marbled Bakelite-style appliance** | **Artifact** | [MicropolisCore cover (GitHub)](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/talks/har-2009/images/SimCity_Classic_Cover_Art.jpg) · private sidecar |
 
 ## Bill Wright, Sr. (sketch)
 
@@ -71,11 +71,11 @@ design."
 | Raid on Bungling Bay — building > bombing | SimCity genesis — Forrester + Conway's Life |
 | SimCity box Bakelite appliance art | Packaging as **simulation console** metaphor — knobs, gauges, disaster buttons |
 
-## Bakelite gift thread (DonHopkins)
+## Bakelite gift thread (Don)
 
 The revenge Bakelite quest treats plastics as **personal**, not generic:
 
-- [DonHopkins bakelite quest](https://github.com/SimHacker/DonHopkins/blob/main/characters/don-hopkins/correspondence/attachments/bakelite/README.md)
+- Don's bakelite quest (private correspondence)
 - SimCity cover sidecar: `simcity-classic-box-cover-bakelite-appliance.md`
 
 This folder is the **public, citable** anchor for "father was a plastics engineer" in

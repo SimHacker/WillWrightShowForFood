@@ -46,8 +46,8 @@ all running on one 8 MB Sun 3/60.
 
 - [1991-09-news-tnt-icccm-death-match.md](1991-09-news-tnt-icccm-death-match.md) —
   Josh Siegel quoting Rosenthal's 1987 white paper on NeWS stability vs X.
-- `DonHopkins/characters/james-gosling/CHARACTER.yml` — co_stars: "David
-  Rosenthal (NeWS co-author)".
+- [James Gosling's room](../../james-gosling/CHARACTER.yml) — Andrew window
+  system with David Rosenthal.
 
 ## The email, verbatim
 

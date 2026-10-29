@@ -122,7 +122,7 @@ More names appear as you list this folder — or follow links from [`../repo-sho
 | `ideas.md` | Topic menu for browsing guests — career, shared ground, show hooks |
 | `correspondence.yml` | Optional public-safe thread digest |
 
-Normalize from DonHopkins sources: `pnpm run normalize:characters` · Scaffold cards: `pnpm run scaffold:cards` · Scaffold ideas: `python3 scripts/scaffold-guest-ideas.py`
+Normalize from private sources (`WWSFF_PRIVATE_CHARACTERS=<dir>`): `pnpm run normalize:characters` · Scaffold cards: `pnpm run scaffold:cards` · Scaffold ideas: `python3 scripts/scaffold-guest-ideas.py`
 
 ## Subject rights
 

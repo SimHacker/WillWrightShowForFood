@@ -21,7 +21,7 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: not_yet_asked
+  status: draft
   document: private   # invitation materials and correspondence history live in Don's private archive
   show_seed: repo-shows/jim-crutchfield/
 

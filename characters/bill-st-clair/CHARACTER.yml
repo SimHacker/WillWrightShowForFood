@@ -1,6 +1,6 @@
 # Bill St. Clair — invitation portrayal. NOT Bill St. Clair.
 # Standards: ../../schemas/portrayal-standards.md
-# Email: DonHopkins green-room/contacts/guest-emails.yml
+# Email: kept privately
 
 character:
   id: bill-st-clair
@@ -12,13 +12,14 @@ character:
   home: characters/bill-st-clair/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked
   authored_by: don-hopkins
 
 invitation:
-  status: warm_lead
+  status: draft
   contacted: 2024-05-04
   note: |
     Don emailed May 2024 about Star Wars cabinet; Bill confirmed ROM turtle-graphics hack +

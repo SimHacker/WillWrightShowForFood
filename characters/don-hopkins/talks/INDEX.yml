@@ -1,8 +1,7 @@
-# Talks — public portfolio index (distilled from DonHopkins/talks/)
+# Talks — public portfolio index (distilled from Don's private talks archive)
 # Export-safe summaries + links to full talk packages.
 
 talks_portfolio:
-  source_archive: SimHacker/DonHopkins/talks/
   public_safe: true
   last_distill: "2026-07-01"
 
@@ -34,4 +33,3 @@ seeds_to_develop:
 
 see_also:
   - { path: ../portrayal/presentations.yml, why: "Verified links + YouTube" }
-  - { path: ../../talks/, why: "DonHopkins/talks/ when browsing private repo" }

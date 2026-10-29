@@ -24,7 +24,7 @@ lifecycle:
     verify: "pnpm run verify"
   configure:
     steps:
-      - "Cursor: open multi-root workspace — WWSFF + moollm (+ DonHopkins local if private)"
+      - "Cursor: open multi-root workspace — WWSFF + moollm (+ Don's private archive locally if available)"
       - "Wire MOOLLM via kernel/moollm-plugin.yml"
       - "Enable MCP servers you use — document in components.mcp_servers"
       - "Model defaults: fast/budget for implementation (e.g. Composer 2.5 Fast); premium for planning passes"

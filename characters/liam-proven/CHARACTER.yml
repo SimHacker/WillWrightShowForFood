@@ -10,6 +10,9 @@ character:
   base: "Isle of Man"
   home: characters/liam-proven/
 
+representation:
+  public_figure: true
+
 relationship:
   kind: warm_correspondent
   since: 2023-01   # Liam contacted Don about the Alan Kay / NeWS Medium post; posted it to Reddit
@@ -27,7 +30,7 @@ story_now:
   offer: "Participate, not just report: write about whatever aspects he pleases; record the discussion as a show either direction (Don on Liam's show, Liam on the Repo Show); Don available for hours + live demos. Will's time never promised, never foreclosed."
   meta_angle: "MOOLLM is also the production tool — invitations, ethics enforcement, show seeds, and editorial workflow run as skills in the same public repos the audience browses."
   freedom: "All free and open — MOOLLM free, WWSFF free, Micropolis GPL; Soul City = repossessing our souls from soulless giant corporations like EA (Repo = repository AND repossession)."
-  pitch_doc: private   # DonHopkins green room; strategy never in this repo
+  pitch_doc: private   # Don's private green room; strategy never in this repo
   quiet_mode: "Links shared for first look; publication timing coordinated with premiere (portrayal-standards.md#stealth-mode)"
 
 see_also:

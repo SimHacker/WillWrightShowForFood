@@ -49,9 +49,9 @@ show_and_network:
   showmaker-network.yml:
     topic: "Graph of linked shows — PR adds nodes"
   live-repo.yml:
-    topic: "Public WWSFF vs DonHopkins private — no backfill"
+    topic: "Public WWSFF vs Don's private archive — no backfill"
   sync-with-donhopkins.yml:
-    topic: "Export/sync bundle from DonHopkins"
+    topic: "Export/sync bundle from Don's private archive"
   email-attachment-curation.yml:
     topic: "Mail attachment audit 2026-07-07 — dupes, k-line rename, Phase A–D decision tree; temp is source of truth; export gate before next wave"
     status: decision_pending

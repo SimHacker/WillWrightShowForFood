@@ -39,7 +39,7 @@ A **Repo Show** is a collaborative, GitHub-native, live-streamed design conversa
 
 ## Lineage
 
-Transplanted from [`SimHacker/DonHopkins/skills/repo-show`](https://github.com/SimHacker/DonHopkins/tree/main/skills/repo-show). DonHopkins remains the private scratchpad; **WillWrightShowForFood is the public live microworld**.
+Transplanted from Don's private repo-show skill. Don's private archive remains the scratchpad; **WillWrightShowForFood is the public live microworld**.
 
 Compose with [`SimHacker/moollm`](https://github.com/SimHacker/moollm).
 

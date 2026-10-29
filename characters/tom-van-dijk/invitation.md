@@ -8,20 +8,20 @@
 
 Hi Tom,
 
-Great to hear from you again in **2024** — I'm in the **Amsterdam area**, and Deventer is absolutely doable for a coffee or a recorded segment.
+Great to hear from you again in **2024**, and I'd still love to meet up in person, for a coffee or a recorded segment.
 
-I'm building **Will Wright Show For Food**: a repo-native talk show where the modding tools and correspondence *are* the set. Your thread is one of the best untold Sims stories:
+I'm building **Will Wright Show For Food**: a repo-native talk show where the modding tools and correspondence *are* the set. Your story is one of the best untold Sims stories:
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
-- **IFF Pencil** and holiday hex dumps decoding **SimAntics**
+- **IFF Pencil** and decoding **SimAntics** from hex dumps
 - **Behavior.iff** — was it a gift to modders or an accident?
 - **EA Legal** vs Will's intent to document Edith
-- **2024:** you and **Eric Bowman** in the same mail chain; **LUCPIX** and steering-committee archaeology
+- How modding and open source changed since then
 
-We've synced your mail here: `characters/tom-van-dijk/sources/2024-06-van-dijk-sims-modding-reconnect.md`
+Nothing from our emails is published. You decide what to tell, in your words, and what stays between us.
 
-I'd love a segment with you — solo or paired with **Jamie Doornbos** (SimAntics architect) and/or **Heather & Steve** (still using iffpencil2 for ZombieSim). Format flexible: async repo interview or meet in NL.
+Participation can be anything from confirming what we've written about you, to an email exchange, to an audio or video conversation — solo or paired with **Jamie Doornbos** (SimAntics architect) and/or **Heather & Steve** (still using iffpencil2 for ZombieSim).
 
 Still interested in putting your recovered tools on GitHub? The show repo is built for that.
 

@@ -28,7 +28,7 @@ representation:
     or remove anytime.
 
 invitation:
-  status: warm          # aligns with characters/INDEX.yml — draft invite text; warm relationship
+  status: draft          # aligns with characters/INDEX.yml — draft invite text; warm relationship
   document: invitation.md
   show_seed:
     - repo-shows/alan-kay-microworld/alan-kay-microworld.yml

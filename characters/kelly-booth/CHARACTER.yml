@@ -18,6 +18,7 @@ character:
     - "CHCCS/SCDHM Service Award (2020)"
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   authored_by: don-hopkins
   note: "Public-source portrayal only. Cc'd on PIXIE thread 2026-07-09; not yet contacted."
@@ -58,7 +59,7 @@ media:
     - { path: media/kelly-booth-casual.png, sidecar: media/kelly-booth-casual.yml }
 
 sources:
-  # email in DonHopkins green-room/contacts/guest-emails.yml
+  # email kept privately
   career: sources/career-and-awards.yml
   thread: ../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
   awards:

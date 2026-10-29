@@ -1,6 +1,6 @@
 # Don Hopkins ↔ Netochka Nezvanova — correspondence digest
 
-Public-safe timeline. Full threads live in Don's private archive (`DonHopkins/characters/netochka-nezvanova/sources/`).
+Public-safe timeline. Full threads live in Don's private archive.
 
 [Portrayal standards](../../../schemas/portrayal-standards.md)
 

@@ -13,6 +13,7 @@ character:
   home: characters/julie-minsky/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked

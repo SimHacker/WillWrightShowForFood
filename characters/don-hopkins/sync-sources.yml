@@ -15,9 +15,8 @@ upstream:
       Adventure microworld layer — rich CHARACTER.yml + artifacts.
       WWSFF takes Repo Show–relevant backbone; adventure-only state stays upstream.
 
-  donhopkins_upstream:
-    repo: SimHacker/DonHopkins
-    path: characters/don-hopkins/
+  private_upstream:
+    repo: Don's private archive (not public)
     role: authoritative_archive
     rule: "One-way cream export per sync-with-donhopkins.yml — do not dual-edit"
 
@@ -29,7 +28,7 @@ sync_policy:
     - verified presentations (titles + links only)
     - voice + frobisms (portrayal layer — no adventure plot)
     - heroes roster (direct mentors — condensed)
-    - talks portfolio distills (DonHopkins/talks public_safe)
+    - talks portfolio distills (public_safe talks from Don's private archive)
     - interval-research public distill
     - top-level topic markdown bouquet (self-declaring filenames)
     - micropoliscore-design-docs-packages-code-content.md (MicropolisCore hub)
@@ -51,11 +50,11 @@ wwsff_layout:
   browse-the-bouquet.yml: top-level topic index (filenames as ads)
   README.md: human narrative
   ideas.md: Repo Show + dream guest hooks
-  about-host.md: resume reimagined (from DonHopkins master-of-ceremonies)
+  about-host.md: resume reimagined (from Don's private master-of-ceremonies notes)
   "*.md topic files": self-declaring entry points (distilled from upstream)
   career/: yaml backbone (condensed from upstream)
   portrayal/: voice, heroes, presentations
-  talks/: talk package distills (from DonHopkins/talks/)
+  talks/: talk package distills (from Don's private talks archive)
   writing/: essay + primary source index
   history/: era distills (interval-research.yml)
   sync-sources.yml: this file

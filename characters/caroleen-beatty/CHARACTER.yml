@@ -11,6 +11,7 @@ character:
   home: characters/caroleen-beatty/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   authored_by: don-hopkins
   invitation_status: draft

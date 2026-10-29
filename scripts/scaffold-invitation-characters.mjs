@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Scaffold invitation character dirs from DonHopkins public portrayals + INDEX.yml.
- * Skips existing dirs. WWSFF is live — does not write back to DonHopkins.
+ * Scaffold invitation character dirs from private-archive portrayals + INDEX.yml.
+ * Skips existing dirs. WWSFF is live — does not write back to the private archive.
  */
 import fs from "fs";
 import path from "path";
@@ -9,7 +9,10 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const DON = path.resolve(ROOT, "../DonHopkins");
+// Optional private characters/ directory; unset means public INDEX.yml data only.
+const PRIVATE_CHARS = process.env.WWSFF_PRIVATE_CHARACTERS
+	? path.resolve(process.env.WWSFF_PRIVATE_CHARACTERS)
+	: null;
 const CHAR = path.join(ROOT, "characters");
 
 const SKIP = new Set([
@@ -43,7 +46,8 @@ function pick(re, text, fallback = "") {
 }
 
 function loadSource(slug) {
-	const dir = path.join(DON, "characters", slug);
+	if (!PRIVATE_CHARS) return null;
+	const dir = path.join(PRIVATE_CHARS, slug);
 	const charPath = path.join(dir, "CHARACTER.yml");
 	if (!fs.existsSync(charPath)) return null;
 	const yml = fs.readFileSync(charPath, "utf8");
@@ -103,7 +107,7 @@ invitation:
 ${meta.note ? `  note: "${meta.note.replace(/"/g, '\\"')}"` : ""}
 
 source:
-  projected_from: DonHopkins/characters/${slug}/
+  projected_from: private archive
   live_repo: WillWrightShowForFood
 `;
 
@@ -121,7 +125,7 @@ Show seed: \`${meta.show_seed}\`
 
 Draft invitation: [\`invitation.md\`](invitation.md) — *not sent* (\`invitation_status: not_yet_asked\`).
 
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not a private backfill.
 `;
 
 	const invitation = `# Invitation draft — ${meta.name}

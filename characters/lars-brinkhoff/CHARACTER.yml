@@ -11,6 +11,7 @@ character:
   home: characters/lars-brinkhoff/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked

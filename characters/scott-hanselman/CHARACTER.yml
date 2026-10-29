@@ -10,6 +10,7 @@ character:
   home: characters/scott-hanselman/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked

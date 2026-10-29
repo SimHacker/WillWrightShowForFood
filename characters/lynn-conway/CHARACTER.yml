@@ -68,7 +68,7 @@ see_also:
   - { path: README.md, why: "Room orientation" }
   - { path: ideas.md, why: "Show hooks and open research" }
   - { path: sources/images/, why: "Archived VLSI images from Lynn's site (MIT'78 / MPC79) + YAML Jazz sidecars with Don's HN context" }
-  - { path: ../../process/hn-harvest/lynn-conway.md, why: "Reviewed HN comment IDs only — raw harvest stays private (DonHopkins research/)" }
+  - { path: ../../process/hn-harvest/lynn-conway.md, why: "Reviewed HN comment IDs only — raw harvest stays private" }
   - { path: ../david-levitt/, why: "MIT'78 VLSI class — Levitt visible in archived class photo (crouching so hair doesn't block Steele)" }
   - { path: ../danielle-bunten-berry/, why: "Fellow memorial — trans pioneer in games; same respect protocol" }
   - { path: ../jennell-jaquays/, why: "Fellow memorial — trans pioneer in games/RPGs" }

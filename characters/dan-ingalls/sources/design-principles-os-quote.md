@@ -33,7 +33,7 @@ The HN Emacs thread (Charles Choi, Jul 2026) reframes Emacs as orchestration abo
 | Debugger | cursor-mirror — session thinking, tool calls |
 | Scheduler / processes | Skills composing (thoughtful-commitment, skill-snitch) |
 | Device / network edge | MCP, shell, ssh, gh — everything looks like a service |
-| UI | Cursor / Claude Code / mooco as the live frame |
+| UI | Cursor / Claude Code as the live frame |
 
 **Cursor** is filling the place of Emacs in Don's workflow: terminals, CLI utilities, ssh, stdin/stdout glue — same orchestration pattern, different century. Skills are composable modules; the LLM is `eval()`.
 
@@ -50,7 +50,7 @@ The HN Emacs thread (Charles Choi, Jul 2026) reframes Emacs as orchestration abo
 - [Byte Aug 1981 issue context (Curlie)](https://www.curlie.org/en/Computers/Programming/Languages/Smalltalk/)
 - Kell & Pike (2013): [The operating system: should there be one?](https://dl.acm.org/doi/10.1145/2525528.2525534)
 - Choi (2026): [In Emacs, Everything Looks Like a Service](https://yummymelon.com/notes/devnull/emacs-everything-looks-like-a-service.html)
-- Don's stack: [MOOLLM](https://github.com/SimHacker/moollm) · [cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) · [mooco](https://github.com/SimHacker/mooco)
+- Don's stack: [MOOLLM](https://github.com/SimHacker/moollm) · [cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror)
 
 ## See also
 

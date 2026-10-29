@@ -1,4 +1,4 @@
-# LIVE REPO — WillWrightShowForFood is the bud; DonHopkins source on hold
+# LIVE REPO — WillWrightShowForFood is the bud; private source on hold
 
 meta:
   id: live-repo
@@ -7,17 +7,16 @@ meta:
 
 rule: |
   Default workspace: SimHacker/WillWrightShowForFood. This is live — preparing for Will,
-  priming with correspondences, friends, show seeds, invitation characters. DonHopkins
+  priming with correspondences, friends, show seeds, invitation characters. Don's
   private monorepo is authoritative archive but ON HOLD for anything already projected here.
 
-donhopkins:
+private_archive:
   role: private_source_archive
   status: on_hold_when_projected
   rule: |
     If content has been exported or re-authored in WWSFF, edit WWSFF only.
-    Do not backfill DonHopkins to mirror WWSFF. One-way cream export when needed;
+    Do not backfill the private archive to mirror WWSFF. One-way cream export when needed;
     day-to-day work happens in the public bud.
-  manifest: ../MANIFEST.yml
 
 wwsff:
   role: live_public_bud
@@ -27,17 +26,17 @@ wwsff:
     - "Show seeds + ShowMaker graph"
     - "Skills harvest + packages abstraction"
     - "Correspondence-derived content (filtered, public-safe)"
-  not_promised: "Everything in DonHopkins — only filtered, representation-ethics-safe projections"
+  not_promised: "Everything in the private archive — only filtered, representation-ethics-safe projections"
 
 workflow:
   edit_here: [repo-shows/, characters/, process/, skills/, packages/, README.md]
-  pull_from_donhopkins: "SELECT → FILTER → EXPORT per MANIFEST.yml — not continuous dual-edit"
+  pull_from_donhopkins: "SELECT → FILTER → EXPORT per the private export manifest — not continuous dual-edit"
   guest_review_bundles: |
     Per-guest research packages: artifacts, links, videos, HN, Don's essays, email excerpts.
     Assembled in private archive → guest reviews/organizes → public-safe projection to WWSFF.
     Guest walks bundle on async video; audience opens same paths in Cursor time-shifted.
     See characters/will-wright/guest-prototype.yml#research-bundle.
-  prs: "Public PRs welcome; may cherry-pick back to DonHopkins later if needed"
+  prs: "Public PRs welcome; may cherry-pick back to the private archive later if needed"
 
 see_also:
   - sync-with-donhopkins.yml

@@ -155,7 +155,7 @@ name it, credit it, offer to bring its author in** — the anti-Alias. (Will's t
 genetic exploration approach for the prototype instead; the ECG patent expired ~2016, freeing
 the technique for the Faceball plans above.)
 
-Full thread receipts: private archive, `DonHopkins` repo, correspondence.
+Full thread receipts: Don's private correspondence archive.
 
 ## See also
 

@@ -23,7 +23,7 @@ representation:
     know him. Do NOT treat as memorial.
 
 invitation:
-  status: not_yet_asked
+  status: draft
   document: invitation.md
   tribute_app: ../../apps/performance-space/faceball-construction-set.yml
   angle: "Faceball Construction Set tribute + construction-set genealogy + tools/frameworks ethos"

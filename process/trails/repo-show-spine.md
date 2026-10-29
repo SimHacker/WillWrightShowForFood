@@ -18,7 +18,7 @@ The show **is** the repo — RTFR, play on your rig, harvest skills back into th
 | [**ShowMaker network**](../showmaker-network.yml) | Shows breed shows — graph of linked episodes |
 | [**will-wright show**](../../repo-shows/will-wright-premiere/README.md) | Flagship planted show — Will kickoff arc |
 | [**REPO-SHOWS.yml**](../../repo-shows/REPO-SHOWS.yml) | Implicit SHOW inheritance for whole collection |
-| [**Live repo**](../live-repo.yml) | Public WWSFF vs DonHopkins private — export ethics |
+| [**Live repo**](../live-repo.yml) | Public WWSFF vs Don's private archive — export ethics |
 | [**RepoShow — the medium**](../vision-and-ambition.md#reposhow-the-medium) | `reposhow-the-medium` — the verb is *reposhowing*; living forkable repo, not a dead clip |
 | [**The deep move**](../vision-and-ambition.md#the-deep-move) | `repo-as-simulation` — MOOLLM runs the repo as a simulation; the show is performed *inside* it |
 | [**MOOLLM stage**](../moollm-stage.yml) | The machinery — pub third place, room graph, session-log episodes |

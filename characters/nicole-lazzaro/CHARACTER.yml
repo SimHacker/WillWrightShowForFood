@@ -18,7 +18,7 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: not_sent
+  status: finished
   channel: unknown
   show_seed: null
   the_ask: "The webtop — and specifically her own serial-port problem, which is the thing it exists to attack."

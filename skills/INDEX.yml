@@ -10,7 +10,7 @@ entries:
   repo-show:
     path: repo-show/
     status: public_live
-    note: "Show orchestrator — transplanted from DonHopkins; canonical public instance"
+    note: "Show orchestrator — transplanted from Don's private archive; canonical public instance"
   ebike-safari:
     path: ebike-safari/
     status: public_live

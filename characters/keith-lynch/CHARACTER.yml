@@ -7,13 +7,14 @@ character:
   home: characters/keith-lynch/
 
 representation:
+  public_figure: false
   governed_by: ../../schemas/portrayal-standards.md
   consent:
-    state: unverified
+    state: not_asked
   authored_by: don-hopkins
 
 invitation:
-  status: not_applicable
+  status: n_a
   note: |
     Not a show guest — primary-source archivist. Public material only:
     keithlynch.net/history.net.html and HN cross-links.

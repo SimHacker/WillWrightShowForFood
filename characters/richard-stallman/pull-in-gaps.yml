@@ -27,7 +27,6 @@ gaps:
   - id: fannish-inquisition-primary
     status: harvest_queued
     what: "RMS's own Fannish Inquisition / ESR account from email harvest"
-    private_source: DonHopkins/temp/rms-prompts.txt (~L63187-63224)
     action: "Extract verified lines into sources/ when tone-checked."
 
   - id: stolen-sperm-verification
@@ -51,7 +50,6 @@ gaps:
       a while to dry before anyone could touch it.
     archive_local:
       - sources/2026-07-30-latent-trolls.md (Don's Aug 2026 email to RMS)
-      - DonHopkins/temp/rms-prompts.txt (Boskone real-time punning; RMS spectacular at cons)
     identity_hints:
       - "Glen Daniels, gub@vax.ftp.com — comp.object vote tally 1993"
       - "Don FB friends: Glen Daniels"
@@ -61,7 +59,6 @@ gaps:
   - id: gilmore-phone-rms-answered
     status: harvest_queued
     what: "Don called John Gilmore; RMS answered — recurring every few years"
-    private_source: DonHopkins/temp/rms-prompts.txt (~L14961, ~L15543, ~L18856)
     best_dated: "2014-03-15 (Node/npm follow-up email after phone pickup)"
     action: "Extract into sources/ when Don approves publication."
 

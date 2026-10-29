@@ -1,6 +1,6 @@
 # GRiD Compass correspondence (Oct 2021)
 
-Synced from `DonHopkins/characters/don-hopkins/correspondence/glenn-edens.yml`.
+Synced from Don's private correspondence archive.
 
 **Contact:** LinkedIn, 4 Oct 2021
 
@@ -14,7 +14,7 @@ Asked about rumor that a **GRiD Compass stopped a bullet** (Mossad story circula
 
 ## Glenn Edens — key beats (2021 exchange)
 
-| Topic | Glenn's line (summarized from DonHopkins sync) |
+| Topic | Glenn's line (summarized from Don's private archive) |
 |-------|--------------------------------------------------|
 | **Bullet** | "Closer to home" — **US agency**, not Mossad; returned units with bullet holes and shrapnel |
 | **GRiD Compass** | First laptop; Dynabook-inspired; magnesium alloy |

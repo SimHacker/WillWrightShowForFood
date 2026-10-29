@@ -9,6 +9,9 @@ character:
   role: "Reporter, The Register (Situation Publishing) — San Francisco"
   home: characters/thomas-claburn/
 
+representation:
+  public_figure: true
+
 relationship:
   kind: fresh_press_contact
   since: 2026-06-24   # replied to Don's brief (forwarded by Liam Proven): "if I can get an editor interested, will write something up"
@@ -34,7 +37,7 @@ story_now:
   offer: "Participate, not just report: write about whatever aspects he pleases; record the discussion as a show either direction (Don on a Register show, Tom on the Repo Show); Don available for hours + live demos. Will's time never promised, never foreclosed."
   meta_angle: "MOOLLM is also the production tool — invitations, ethics enforcement, show seeds, and editorial workflow run as skills in the same public repos the audience browses."
   freedom: "All free and open — MOOLLM free, WWSFF free, Micropolis GPL; Soul City = repossessing our souls from soulless giant corporations like EA (Repo = repository AND repossession)."
-  pitch_doc: private   # DonHopkins green room
+  pitch_doc: private   # Don's private green room
   quiet_mode: "Links shared for first look; publication timing coordinated with premiere (portrayal-standards.md#stealth-mode)"
 
 see_also:

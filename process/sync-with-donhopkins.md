@@ -1,16 +1,16 @@
-# Sync with DonHopkins
+# Sync with Don's private archive
 
-[Live repo](live-repo.md) · [Email attachment curation](email-attachment-curation.md) · [MANIFEST](../MANIFEST.yml)
+[Live repo](live-repo.md) · [Email attachment curation](email-attachment-curation.md)
 
 ---
 
 ## The hook
 
-Sibling path: `private (not in this repo) (same parent as this repo). **WWSFF is live; DonHopkins on hold for projected content** — edit WWSFF, do not backfill source. Primarily one-way export: SELECT → FILTER → AUGMENT → EXPORT → SYNC.
+Source: Don's private archive (not in this repo). **WWSFF is live; the private archive is on hold for projected content** — edit WWSFF, do not backfill source. Primarily one-way export: SELECT → FILTER → AUGMENT → EXPORT → SYNC.
 
 ## Select (cream first)
 
-- `projects/micropolis-moollm/repo-shows/will-wright-premiere/`
+- `repo-shows/will-wright-premiere/`
 - Character CHARACTER.yml, GLANCE.yml, README.md, CARD.md
 - MOOLLM adventure-4 don-hopkins (career + portrayal only — exclude sessions, correspondence)
 
@@ -27,7 +27,7 @@ Strip fields: private.home, real addresses. Coalesce master-of-ceremonies into p
 - **Before Will email:** full cream pass — invitation.md links to this repo
 - **Ongoing:** after each show segment or guest add — incremental export
 
-Tool: manual + `scripts/wwsff-sync.sh` (TODO). Manifest: MANIFEST.yml
+Tool: manual + `scripts/wwsff-sync.sh` (TODO). Manifest: kept privately with the export plan.
 
 ## Show hooks
 

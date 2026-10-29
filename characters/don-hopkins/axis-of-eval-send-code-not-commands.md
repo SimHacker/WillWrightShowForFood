@@ -18,4 +18,4 @@ objects; skills are methods you inherit.
 → Full trail: [`../../process/trails/send-code-not-commands.md`](../../process/trails/send-code-not-commands.md)  
 → [`career/lineage.yml`](career/lineage.yml) (`extensibility_theme`, `filesystem_oop_thread`)  
 → [Emacs in a browser mail thread (2011)](sources/2011-06-emacs-in-browser-mail-thread/README.md) — Blandy: JS is lispy; Don: shell prompt newline workaround  
-→ External: Axis of Eval essay on Medium (URL in DonHopkins `talks/INDEX.yml` — TODO canonical link)
+→ External: Axis of Eval essay on Medium (URL in Don's private talks index — TODO canonical link)

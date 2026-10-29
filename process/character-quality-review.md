@@ -95,7 +95,7 @@ HN harvest: [`hn-harvest/INDEX.md`](hn-harvest/INDEX.md)
 
 **Memorials (already + new):** Barton + Dahl/Nygaard (trinity); **steven-coons** (Utah/Armit lane)
 
-Not sent yet — drafts only. Contact channels remain private (DonHopkins).
+Not sent yet — drafts only. Contact channels remain private.
 
 ## Pass 2026-07-29e — People.md loose ends + Ivan/Alan/Will depth
 
@@ -122,7 +122,7 @@ Thin under ~100 lines: press (`liam-proven`, `thomas-claburn`), correspondence s
 
 1. Press contacts — deepen correspondence summaries only
 2. Creator Network rooms — fetch/verify each creator's own exit post before quotes
-3. **Curate** noisy Algolia dumps into private DonHopkins first; public = reviewed IDs/excerpts only
+3. **Curate** noisy Algolia dumps into Don's private archive first; public = reviewed IDs/excerpts only
 4. Firebase: walk remaining ~11k DonHopkins submitted IDs (roster NER)
 5. Status-unknown Cambridge co-authors — keep **not memorialized** until confirmed
 6. Zero curated HN yet: Shirley, Jaquays, Bunten, Abraham, Machover, Art Medlar — personal archive / wider search

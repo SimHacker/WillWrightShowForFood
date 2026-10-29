@@ -1,6 +1,6 @@
 # Email attachment curation
 
-[Sync with DonHopkins](sync-with-donhopkins.md) · [Archive trail](trails/archive-and-provenance.md) · [OLPC thread gold standard](../characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/)
+[Sync with Don's private archive](sync-with-donhopkins.md) · [Archive trail](trails/archive-and-provenance.md) · [OLPC thread gold standard](../characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/)
 
 ---
 

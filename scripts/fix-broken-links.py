@@ -78,7 +78,6 @@ GLOBAL = [
     ("repo-shows/news-postscript-window-system.yml", "repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml"),
     ("../news-postscript-window-system.yml", "../REPO-SHOWS.yml#news-postscript-window-system.yml"),
     ("process/design-in-public.yml", "process/vision-and-ambition.yml"),
-    ("process/RULES-AND-ETHICS.md", "https://github.com/SimHacker/DonHopkins/blob/main/projects/willwrightshowforfood/strategy/RULES-AND-ETHICS.md"),
     ("process/invitation.md", "process/invitation-email.md"),
     ("process/gary-drescher/made-up-minds.md", "characters/gary-drescher/made-up-minds.md"),
     ("repo-shows/scott-adams/IDEAS.yml", "characters/scott-adams/ideas.md"),
@@ -88,7 +87,6 @@ GLOBAL = [
 ]
 
 GITHUB_CROSS = [
-    ("../DonHopkins/", "https://github.com/SimHacker/DonHopkins/blob/main/"),
     ("../MicropolisCore/", "https://github.com/SimHacker/MicropolisCore/blob/main/"),
     ("../micropolis/", "https://github.com/SimHacker/micropolis/blob/main/"),
     ("../catalogs/soul-city/", "https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/"),

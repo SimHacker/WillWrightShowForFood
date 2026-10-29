@@ -2,7 +2,7 @@
 
 **Public seed index / extracts:**  
 [`../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md`](../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md)  
-**Full letter (private):** DonHopkins `correspondence/attachments/thomas-lord/private/2006-08-21-lua-spidermonkey-ungar-full.md`
+**Full letter:** kept privately
 
 **HN excerpt (2020):** same letter, posted on the [Call with David Ungar](2015-11-03-call-with-david-ungar-hernan-wilkinson.md) thread — [23806654](https://news.ycombinator.com/item?id=23806654).
 

@@ -29,4 +29,4 @@ job hunt: I'm **available for hire (2026)** — see [`hire-me.md`](hire-me.md).
 
 Canonical site: [donhopkins.com](https://donhopkins.com) · Distilled per [`sync-sources.yml`](sync-sources.yml)
 
-*Distilled from DonHopkins `master-of-ceremonies/about-host.yml` — public projection only.*
+*Distilled from Don's private master-of-ceremonies notes — public projection only.*

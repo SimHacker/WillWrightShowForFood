@@ -1,6 +1,6 @@
 # Distillery, PDF lineage — Don ↔ Glenn Reid correspondence (excerpts)
 
-Primary material from Don Hopkins (2026 paste into WillWrightShowForFood). Full mail archives may live in DonHopkins repo. Portrayal: first-person Don where quoted; Glenn's words attributed.
+Primary material from Don Hopkins (2026 paste into WillWrightShowForFood). Full mail archives may live in Don's private archive. Portrayal: first-person Don where quoted; Glenn's words attributed.
 
 ---
 

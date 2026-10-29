@@ -1,6 +1,6 @@
 # APPLE ][ DRIVE — retrocomputing instance (Micropolis AI Drag Race / flair lap)
 # Family: retrocomputing-drive.yml — rig = languages + tools + platform (emulator counts)
-# Stack background: apple2-emulator-stack.yml (DonHopkins authoritative layers)
+# Stack background: apple2-emulator-stack.yml (private archive holds authoritative layers)
 
 meta:
   id: apple2-drive

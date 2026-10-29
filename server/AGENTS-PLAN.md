@@ -67,9 +67,8 @@ To connect: `ssh -N -L 8765:127.0.0.1:8765 <you>@ebike-safari-1`, then add
 `http://127.0.0.1:8765` as a remote agent host in VS Code with the token. The firewall is
 unchanged. Tailscale would give a stable name without opening a port; it is not installed yet.
 
-The Toledo edgeboxes get the same thing as user `leela`, from central's edgebox skill:
-`skills/edgebox/runbooks/AGENT-HOST.md` and `scripts/install-agent-host.sh` (branch
-`don-fleet-phase-a`). It uses the same guard script with a different deny list.
+The Toledo edgeboxes get the same thing as user `leela`, from Leela's private edgebox skill.
+It uses the same guard script with a different deny list.
 
 ## Tier 2: worlds (once mooco runs)
 

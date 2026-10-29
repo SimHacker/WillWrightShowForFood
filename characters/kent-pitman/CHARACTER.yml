@@ -11,6 +11,7 @@ character:
   home: characters/kent-pitman/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked
@@ -19,7 +20,7 @@ representation:
 invitation:
   status: draft
   document: invitation.md
-  note: "Don: Kent and his :TEACH;LISP helped me learn Lisp on ITS as a high school kid. Expressed MOO interest (HN/Mastodon). Public invitation.md drafted; full private draft in DonHopkins correspondence — not sent."
+  note: "Don: Kent and his :TEACH;LISP helped me learn Lisp on ITS as a high school kid. Expressed MOO interest (HN/Mastodon). Public invitation.md drafted; full private draft in Don's correspondence archive — not sent."
 
 bio:
   summary: >
@@ -45,9 +46,6 @@ sources:
     - path: sources/kmp-animal-its.md
       artifact: sources/kmp-animal-its/animal-database-from-its.lisp.txt
       girder: sources/kmp-animal-its.yml
-  correspondence:
-    - path: ../../../DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml
-
 see_also:
   - { path: sources/README.md, why: "ANIMAL tree + apology email" }
   - { path: ../don-hopkins/CARD.yml, why: "Host — ITS tourist, MOOLLM, Micropolis" }

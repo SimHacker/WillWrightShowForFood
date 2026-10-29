@@ -31,6 +31,6 @@ Don's Laszlo/Ungar demo anecdote (not Ungar's voice): [33527618](https://news.yc
 - **jecel** on HN: Self sources largely open since 1990; Sparc-only binaries limited 1990s adoption; Sun/Java pivots.
 - Don's second comment ([45715306](https://news.ycombinator.com/item?id=45715306)): PataPata prototype critique + **Alan Kay OLPC emails** → Snap! — see [`../../alan-kay/sources/morphic-lineage.md`](../../alan-kay/sources/morphic-lineage.md).
 
-Private harvest crosswalk (DonHopkins): `characters/don-hopkins/research/hn-self-1989-efficient-implementation-45706924.md`
+Private harvest crosswalk kept in Don's archive.
 
 ↑ [`../README.md`](../README.md)

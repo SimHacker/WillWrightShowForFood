@@ -1,16 +1,16 @@
 # Live repo
 
-[Sync with DonHopkins](sync-with-donhopkins.md) · [vision-and-ambition.md](vision-and-ambition.md) · [MANIFEST](../MANIFEST.yml)
+[Sync with Don's private archive](sync-with-donhopkins.md) · [vision-and-ambition.md](vision-and-ambition.md)
 
 ---
 
 ## The hook
 
-**Default workspace:** [SimHacker/WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood). This is live — preparing for Will, priming correspondences, show seeds, invitation characters. DonHopkins private monorepo is authoritative archive but **on hold** for anything already projected here.
+**Default workspace:** [SimHacker/WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood). This is live — preparing for Will, priming correspondences, show seeds, invitation characters. Don's private monorepo is authoritative archive but **on hold** for anything already projected here.
 
 ## Rule
 
-If content has been exported or re-authored in WWSFF, **edit WWSFF only**. Do not backfill DonHopkins to mirror WWSFF. One-way cream export when needed; day-to-day work happens in the public bud.
+If content has been exported or re-authored in WWSFF, **edit WWSFF only**. Do not backfill the private archive to mirror WWSFF. One-way cream export when needed; day-to-day work happens in the public bud.
 
 ## WWSFF priorities
 
@@ -20,7 +20,7 @@ If content has been exported or re-authored in WWSFF, **edit WWSFF only**. Do no
 - Skills harvest + packages abstraction
 - Correspondence-derived content (filtered, public-safe)
 
-Not promised: everything in DonHopkins — only filtered, representation-ethics-safe projections.
+Not promised: everything in the private archive — only filtered, representation-ethics-safe projections.
 
 ## Guest research bundles
 

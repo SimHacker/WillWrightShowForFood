@@ -25,4 +25,4 @@ Career: [`sources/linkedin-career.md`](sources/linkedin-career.md)
 | LinkedIn | https://www.linkedin.com/in/wwstc/ |
 | HN | https://news.ycombinator.com/user?id=bill-stclair |
 | Mammudeck | https://mammudeck.com/ |
-| Private thread | DonHopkins `green-room/bill-st-clair/` |
+| Private thread | Don's private archive |

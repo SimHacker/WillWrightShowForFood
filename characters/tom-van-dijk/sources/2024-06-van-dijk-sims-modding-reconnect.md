@@ -1,66 +1,22 @@
-# Tom van Dijk — Sims modding reconnect (Jun 2024)
+# Tom van Dijk — reconnect with Don (June 2024)
 
-**Contact:** [email redacted] · Deventer, NL  
-**Thread:** LinkedIn → email with Don Hopkins; Eric Bowman in CC (Jun 2024)
+*Tom and Don reconnected by LinkedIn and email in June 2024, with Eric Bowman joining the thread.
+**The correspondence is private and is not stored in this public repo.** Nothing from it is quoted
+here until Tom clears it.*
 
----
+## Public context only
 
-## Jun 2024 — LUCPIX / steering committee
+- **IFF Pencil**, Tom's Sims 1 object editor written as a teenager under the handle
+  **mazelord2000**, is still in use: Heather (SimFreaks) and Steve Alvey (SimSlice) build with
+  **iffpencil2**, for example [ZombieSims](https://zombiesims.com/).
+- Don's 2004 Sims documentation names Tom alongside Dave Baum, Greg Noel, SimSlice, SimFreaks and
+  Hacker's Resource: [`../../will-wright/sources/2004-02-05-sims-proposals-and-documentation/`](../../will-wright/sources/2004-02-05-sims-proposals-and-documentation/).
+- Tanja Sihvonen's thesis on user-created content in The Sims:
+  [*Players Unleashed!*](https://library.oapen.org/handle/20.500.12657/34685).
 
-Someone (**LUCPIX**) asked Tom to adapt **IFF Pencil** for an interesting **steering committee** game build. Tom dug archives; found **email with Don** from ~2002 discussing **open/closed Edith/SimAntics** office politics.
+## Show themes, in our words
 
-**Tool archaeology (2024):**
-
-- Recovered most recent **FARx** executable; manually recompiled **XAbatch** in modern VC++
-- Spent evenings recompiling **FARx** before finding old binary anyway
-- *"17-year old me wrote some atrocious C++ code. (Even though it worked.)"*
-
-Tom on modding culture shift:
-
-> *"20 years later I would naturally share everything on Github… Back in the early 2000s… I was quite guarded with my source code… wasn't consciously aware of the open source movement either."*
-
----
-
-## Behavior.iff mystery (LinkedIn opener)
-
-Tom always wondered: **Behavior.iff** (?) in the public release — accidental leak or **on purpose** so people could mod? Helped him decode SimAntics on a family holiday (pages of hex dumps).
-
-Don offered meetup — Amsterdam area ↔ Deventer; pointed to **iffpencil2** still in use:
-
-- https://zombiesims.com/ (Heather **SimFreaks** + Steve **SimSlice**, married, still shipping Sims 1 content)
-
----
-
-## EA Legal timeline (from recovered mail)
-
-| When | Event |
-|------|--------|
-| **Feb 2002** | **PJB3** — remove SimAntics content or EA Legal gets involved |
-| **Oct 2002** | Tom's last useful source backup |
-| **Apr 2004** | Don mail to **mazelord2000** — student life had taken over; Tom felt guilty for abandoning community |
-
-Don on **Will vs EA Legal:** Will wanted Edith/formats documented; Don moved on (~2007 Amsterdam/TomTom).
-
----
-
-## Eric Bowman tangent (same thread)
-
-~**2008 Amsterdam Sound Garden:** Don + Eric randomly met **Tanja Sihvonen** writing PhD on Sims user-created content — didn't know her tablemates were original programmers.
-
-https://library.oapen.org/handle/20.500.12657/34685
-
----
-
-## Community contacts (Tom's era)
-
-- **Judson Hudson**, **Bil Simser**
-- Don's 2004 doc names Tom with Dave Baum, Greg Noel, SimSlice, SimFreaks, Hacker's Resource
-
----
-
-## Show beats
-
-1. **Jamie Doornbos** + Tom — SimAntics architecture vs teenage reverse engineering
-2. **Will Wright** — was Behavior.iff intentional?
-3. **Heather & Steve Alvey** — IFF Pencil 2 lineage to ZombieSim
-4. **Steering committee playthrough** — LUCPIX build + FARx tools
+1. Whether Behavior.iff and the shipped IFF files were meant to help modders.
+2. Teenage reverse engineering of SimAntics, set beside Jamie Doornbos's view from inside.
+3. Early modders and EA Legal pressure, against Will's wish to release Edith and document the formats.
+4. How modding and open source culture changed in twenty years.

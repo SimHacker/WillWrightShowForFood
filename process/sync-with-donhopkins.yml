@@ -1,22 +1,21 @@
-# Sync with DonHopkins private monorepo
+# Sync with Don's private monorepo
 #
-# Sibling path: ../DonHopkins/ (same parent as this repo under ~/GroundUp/git/)
 # private archive — not in this repo
 sync:
   direction: primarily one_way_export
   live_repo: live-repo.yml
-  source: ../DonHopkins/
+  source: Don's private archive (not public)
   target: .
-  rule: "WWSFF is live; DonHopkins on hold for projected content — edit WWSFF, do not backfill source"
-  reintegrate: "PRs/issues on this public repo → cherry-pick/review into DonHopkins"
+  rule: "WWSFF is live; private archive on hold for projected content — edit WWSFF, do not backfill source"
+  reintegrate: "PRs/issues on this public repo → cherry-pick/review into the private archive"
 
 pipeline: [SELECT, FILTER, AUGMENT, EXPORT, SYNC]
 
 select:
   cream_first:
-    - projects/micropolis-moollm/repo-shows/will-wright-premiere/
-    - projects/micropolis-moollm/repo-shows/INDEX.yml
-    - projects/micropolis-moollm/repo-shows/REPO-SHOWS.yml
+    - repo-shows/will-wright-premiere/
+    - repo-shows/INDEX.yml
+    - repo-shows/REPO-SHOWS.yml
     - characters/*/CHARACTER.yml
     - characters/*/GLANCE.yml
     - characters/*/README.md
@@ -48,7 +47,7 @@ augment:
 
 export:
   tool: "Manual + scripts/wwsff-sync.sh (TODO)"
-  manifest: MANIFEST.yml
+  manifest: kept privately with the export plan
 
 sync_cadence:
   before_will_email: "Full cream pass — invitation.md links to this repo"

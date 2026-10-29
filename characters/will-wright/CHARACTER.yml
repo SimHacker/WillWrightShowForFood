@@ -183,7 +183,7 @@ media:
     - { path: media/artwork.md, what: "Will's mixed-media relief constructions — evolution/systems piece, cell-division piece, terrain & city reliefs" }
 
 see_also:
-  - { path: ../../process/hn-harvest/will-wright.md, why: "DonHopkins/SimHacker HN harvest — Will Wright / SimCity / The Sims / Maxis queries (noisy; curate before quoting)" }
+  - { path: ../../process/hn-harvest/will-wright.md, why: "Don's HN harvest (DonHopkins + SimHacker accounts) — Will Wright / SimCity / The Sims / Maxis queries (noisy; curate before quoting)" }
   - { path: README.md, why: "Human portrait — start here" }
   - { path: GLANCE.md, why: "One-screen sniff" }
   - { path: CARD.yml, why: "Invokable abilities — show segments" }

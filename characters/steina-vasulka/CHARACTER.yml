@@ -6,6 +6,7 @@ character:
   home: characters/steina-vasulka/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked

@@ -18,7 +18,7 @@ Offered as topics to explore *with* Daniel — not a script.
 ## From the longer correspondence (enrich as Don adds)
 
 - **Transmogrifier modernization** — Daniel offered to put TMOG through LLM-assisted translation
-  toward modern/browser code (see DonHopkins simobliterator-deep-dive). Where does that meet Jeff's
+  toward modern/browser code (see Don's private SimObliterator deep-dive notes). Where does that meet Jeff's
   parsers and Don's clean-room browser tools?
 - **Artist + programmer** — Daniel as apex **tool-making artist** — not either/or; how art direction
   and engine ambition stay in one head.

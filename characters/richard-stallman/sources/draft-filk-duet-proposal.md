@@ -138,7 +138,7 @@ Bring the kernel up in no time
 We'll have an FCode time!
 ```
 
-Character room: DonHopkins `characters/mitch-bradley/` (OLPC SimCity thread; Forth archive mail with Don).
+Character room: [`characters/mitch-bradley/`](../../mitch-bradley/) (OLPC SimCity thread; Forth archive mail with Don).
 Contact hint from harvest: `wmb@firmworks.com`.
 
 **Ensemble map:** RMS filk (My Ronnie, Bardic Circle, Debugging, Boot It!) +

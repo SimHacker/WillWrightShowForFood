@@ -149,7 +149,7 @@ deeply painful laughter … to the point of a **rib fracturing** in one session.
 Gerri Lawlor died in January 2019. Cite and discuss with memorial respect; **do not voice her as a
 character** on air, and do not synthesize her voice. Her performance is the artifact — play it,
 credit it, don't puppet it. See
-[`RULES-AND-ETHICS.md`](https://github.com/SimHacker/DonHopkins/blob/main/projects/willwrightshowforfood/strategy/RULES-AND-ETHICS.md).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md#memorial-mode).
 
 The comment-farm analysis above is about **accounts**, not about grieving fans. Real people also
 mourned her in that thread, and the two are not separable by inspection. Don't use the farm finding

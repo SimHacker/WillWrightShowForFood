@@ -39,7 +39,7 @@ bio:
 
 correspondence:
   since: "2013-08 (first logged thread)"
-  note: "Verbatim logs in DonHopkins green-room only"
+  note: "Verbatim logs in Don's private green-room only"
 
 projects:
   - projects/freeta.yml
@@ -57,7 +57,7 @@ why_a_guest:
 
 sources:
   transmogrifier_thread: |
-    DonHopkins/characters/don-hopkins/notes/hacker-news/simobliterator-deep-dive.yml
+    Don's private SimObliterator deep-dive notes
     #transmogrifier_modernization (Daniel offered TMOG → modern code via LLM)
 
 see_also:

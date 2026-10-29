@@ -1,7 +1,7 @@
 # Apple ][ + FujiNet bridge — three-phase plan (stub)
 #
 # Decision doc: ../characters/thomas-cherryhomes/ideas.md §23
-# Stack layers (L0–L2): apple2-emulator-stack.yml → DonHopkins authoritative
+# Stack layers (L0–L2): apple2-emulator-stack.yml → private archive authoritative
 # Guest: Thomas Cherryhomes — discuss P1–P8 before IA pitch
 
 meta:

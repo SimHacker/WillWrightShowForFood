@@ -11,9 +11,12 @@ character:
   home: characters/craig-latta/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
-    state: unverified
+    state: interested
+    date: "2026-10-29"
+    evidence: "interest confirmed by Don Hopkins, 2026-10-29"
     note: "warm — rehearsed Vanessa tribute 2026-07-20; cheered repo plans 2026-08-20; formal show ask pending"
   authored_by: don-hopkins
 

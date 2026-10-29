@@ -56,7 +56,7 @@ please_dont:
   - Flatten the entire repo into one context blob without navigation
   - Invent quotes for real guests — use verifiable fields on CARD abilities
   - Assume invitation.status means consent to impersonate
-  - Backfill or scrape DonHopkins private paths — see live-repo.yml export policy
+  - Backfill or scrape private archive paths — see live-repo.yml export policy
 
 not_a_scraper_manifesto: |
   Dumb scrapers grab everything. You are invited to be dumb only if dumb is your job.

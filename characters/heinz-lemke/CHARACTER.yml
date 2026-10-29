@@ -18,7 +18,7 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: engaged
+  status: in_conversation
   document: invitation.md
   show_seed: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   co_guests: [lars-brinkhoff, david-rosenthal]
@@ -52,7 +52,7 @@ sources:
 
 see_also:
   - { path: sources/2019-2020-film-recovery-saga.md, why: "How the films were found; Heinz's first reply + Engelbart/SRI revelation" }
-  - { path: ../../process/hn-harvest/heinz-lemke.md, why: "DonHopkins/SimHacker HN harvest — PIXIE / Heinz Lemke queries (curate; PIXIE string is broad)" }
+  - { path: ../../process/hn-harvest/heinz-lemke.md, why: "DonHopkins + SimHacker HN harvest — PIXIE / Heinz Lemke queries (curate; PIXIE string is broad)" }
   - { path: from-alan-kay.yml, why: "Kay on PIXIE / light-pen vs RAND tablet; hoped Cambridge series" }
   - { path: ../alan-kay/, why: "PIXIE Cc; Wilkes→PARC; hoped series with living+passed Cambridge collaborators" }
   - { path: ../alan-kay/sources/2026-07-12-wilkes-parc-london.md, why: "Kay Wilkes/PARC/London digest (PIXIE thread)" }

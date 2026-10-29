@@ -18,4 +18,4 @@ Don hosts **Repo Show** / **Repo Show**: conversations whose **stage is a GitHub
 - **GitHub as MMO** — fork, PR, issues, stars; multiplayer on a microworld
 - **Representation ethics** — build character models *with respect*; inherit ideas not impersonation
 
-Distilled from DonHopkins `master-of-ceremonies/repo-show.yml` + `on-stream.yml`.
+Distilled from Don's private master-of-ceremonies notes.

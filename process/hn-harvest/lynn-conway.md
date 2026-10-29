@@ -1,9 +1,7 @@
 # HN — Lynn Conway (public index — reviewed IDs only)
 
 **Policy:** Do **not** dump raw unreviewed HN comment text into this public repo.
-Full excerpts and working notes live in the **private** DonHopkins repo:
-`DonHopkins/characters/don-hopkins/people/passed/lynn-conway.yml` ·
-`DonHopkins/characters/don-hopkins/research/hn-lynn-conway-*.md`
+Full excerpts and working notes are kept in Don's **private** archive.
 
 ## Memorial thread (public)
 

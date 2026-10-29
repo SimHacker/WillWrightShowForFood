@@ -6,7 +6,10 @@ affiliations:
   - Craig Hubley & Associates
   - ACM SIGCHI — CHI'90 Performance Chair; CHI'92 Interactive Performance Chair
   - University of Toronto Computing Services (1989–1990 mail era)
-consent: not_yet_asked
+representation:
+  public_figure: false
+  consent:
+    state: not_asked
 
 invitation:
   status: draft

@@ -5,7 +5,8 @@ character:
   id: stewart-brand
   name: "Stewart Brand"
   type: invitation
-  signifier: "📖"
+  signifier: "👤"
+  emoji: "📖"
   status: living
   born: "1938-12-14"
   field: "Media / culture — Whole Earth Catalog; Rolling Stone PARC; Long Now Foundation"

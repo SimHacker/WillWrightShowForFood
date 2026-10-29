@@ -7,7 +7,6 @@ warm_contact: true
 channel: email
 show_seed: repo-shows/richard-stallman-its-minsky-memorial.yml
 format: any_medium_he_prefers
-ready_email: DonHopkins/.../attachments/richard-stallman/2026-07-31-email-invitation.md
 ---
 
 # Repo Show invitation — Richard M. Stallman

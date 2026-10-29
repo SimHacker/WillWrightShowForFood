@@ -6,6 +6,7 @@ character:
   home: characters/tom-demeyer/
 
 representation:
+  public_figure: false
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked

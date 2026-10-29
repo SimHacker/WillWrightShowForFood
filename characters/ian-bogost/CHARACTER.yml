@@ -46,7 +46,7 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: contacted
+  status: sent
   document: invitation.md
   first_contact: correspondence/2026-08-23-don-to-ian-roles-not-characters.md
   note: |

@@ -78,7 +78,7 @@ Don later connected ECG to [**breakfast simplexes**](breakfast-simplex-barycentr
 | Malcolm Slaney — audio/video | Brenda Laurel → Purple Moon; Caterina Fake → Flickr |
 | | Bill Verplank, Franklin Crow, Gavin Miller (Sashimi), Trevor Darrell, … |
 
-**Roster detail:** [Grokipedia — Interval Research Corporation](https://grokipedia.com/page/interval_research_corporation) (surprisingly good name list). Machine-readable: [`history/interval-research.yml`](history/interval-research.yml) · private outreach roster in DonHopkins `contacts/interval-alumni.yml`.
+**Roster detail:** [Grokipedia — Interval Research Corporation](https://grokipedia.com/page/interval_research_corporation) (surprisingly good name list). Machine-readable: [`history/interval-research.yml`](history/interval-research.yml) · private outreach roster kept by Don.
 
 **Repo Show nexus:** Interval = dense cluster of would-be guests Don actually knows — see `repo_show_nexus` in yaml. Best episodes: Debevec + Levin (*Rouen Revisited*); Levitt + Jerry Martin ([music-and-theory](../../repo-shows/REPO-SHOWS.yml)); Fake + Ben Cerveny (two paths to Flickr).
 

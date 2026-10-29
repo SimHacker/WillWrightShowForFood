@@ -11,6 +11,7 @@ character:
   home: characters/brian-eno/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:  # dream guest, public-figure sketch — no relationship beyond a 2006 meeting
     state: not_asked

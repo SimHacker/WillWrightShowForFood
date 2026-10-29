@@ -16,7 +16,7 @@ Open http://localhost:5173 — all rides overlay + heatmap by default.
 Private instance (40 rides):
 
 ```bash
-EBIKE_DATA_DIR=~/GroundUp/git/Marconistraat25/ebike/web/data pnpm run sync:data
+EBIKE_DATA_DIR=/path/to/private/web/data pnpm run sync:data
 pnpm run dev
 ```
 

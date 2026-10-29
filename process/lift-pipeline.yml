@@ -70,5 +70,5 @@ lift_readiness:      # all true before extracting a generic MOOLLM skill
 see_also:
   - { path: ../skills/repo-show/, why: "The concrete instance currently being dogfooded." }
   - { path: artifactory.yml, why: "Example of core already lifted down into a public MOOLLM skill." }
-  - { path: live-repo.yml, why: "Public WWSFF vs DonHopkins private — what may travel." }
+  - { path: live-repo.yml, why: "Public WWSFF vs Don's private archive — what may travel." }
   - { path: cross-links.yml, why: "Trail registry — generous see_also habit." }

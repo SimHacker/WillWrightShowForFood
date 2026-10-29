@@ -13,18 +13,17 @@ character:
   home: characters/scott-adams/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
-    state: unverified
-    note: correspondence_verified
+    state: not_asked
+    note: "warm: HN reconnect and January 2026 email; likes MOOLLM"
   authored_by: don-hopkins
 
 invitation:
-  status: warm_contact   # HN reconnect + Jan 2026 email; likes MOOLLM; biography/adventure parallel
+  status: draft   # HN reconnect + Jan 2026 email; likes MOOLLM; biography/adventure parallel
   document: ../../characters/scott-adams/invitation.md
   show_seed: repo-shows/scott-adams/
-  correspondence: DonHopkins/characters/don-hopkins/correspondence/scott-adams.yml
-
 bio:
   summary: "**Scott Adams** (b. 1952) pioneered the **microcomputer text adventure**. In 1978 he wrote **Adventureland** on a TRS-80 -- the first commercially sold text adventure for a home computer -- and founded **Adventure International**, one of the earliest game companies. His key invention was engineering, not just design: a compact, portable **data-driven adventure engine** -- each game stored as a *database* of rooms, items, and verb/noun *actions*, executed by a small interpreter/'driver' that was re-implemented per machine. That let one adventure ship across the TRS-80, Apple ][, Atari 8-bit, VIC-20, Commodore 64, and more, with a whole game squeezed into ~16K and a two-word (verb-noun) parser. Classic titles include **Pirate Adventure** (co-written with Alexis Adams), Secret Mission, Voodoo Castle, The Count, Strange Odyssey, Mystery Fun House, Pyramid of Doom, Ghost Town, and the licensed Marvel **Questprobe** series (Hulk, Spider-Man). His engine and games shaped the entire adventure genre."
 

@@ -16,7 +16,8 @@ card:
   name: Matthew Sibigtroth
   title: StoryMaker Flash
   rarity: uncommon
-  signifier: 📖
+  signifier: "👤"
+  emoji: "📖"
   flavor: Will's lab needs someone who ships Flash apps that become TV backends.
 abilities:
 - id: STORYMAKER

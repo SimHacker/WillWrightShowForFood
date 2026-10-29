@@ -100,7 +100,7 @@ Useful audience mirror, not primary sources:
 | Ur-Punk / Gruselverein quotes | Reported | derStandard / APA interview |
 | Protestant baptism 2009 | Reported | derStandard |
 | Charles Normal = Larry Norman's brother | Confirmed | Wikipedia Charles Normal |
-| Charles Normal ≠ Chuck Normann (EA) | Confirmed | DonHopkins CHARACTER.yml vs music bios |
+| Charles Normal ≠ Chuck Normann (EA) | Confirmed | Don's private CHARACTER.yml vs music bios |
 | Rock The Flock on 2023 Larry Norman single | Confirmed | einfach-nina.de / Groenland |
 | Dianne Carter = photo credit; @bydiannecarter Instagram | Confirmed | Dianne Carter FB reply |
 | Charles Normal is Larry's **brother** (not son) | Confirmed | Aaldert Prins reply to Tino Brendel; Wikipedia |

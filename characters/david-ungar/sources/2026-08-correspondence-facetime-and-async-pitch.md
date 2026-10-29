@@ -47,7 +47,7 @@ ideas** when the stack finally catches up ([quote + video](https://youtu.be/ofA6
 
 ## Provenance
 
-- Private thread: `SimHacker/DonHopkins/characters/don-hopkins/correspondence/david-ungar.yml` (when synced)
+- Full thread kept privately.
 - This digest curated by Don Hopkins for WWSFF — subject may request edit or removal anytime.
 
 ↑ [sources](README.md) · [correspondence.yml](../correspondence.yml)

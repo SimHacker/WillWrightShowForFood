@@ -1,7 +1,7 @@
 # Amanda Walker — NeWS-makers, PostNews, InterCon → Visix (1989–1991)
 
 *Public-safe digest of Don's archived correspondence with / about Amanda. Full raw
-forwards live in the private DonHopkins repo. Consent not yet asked for show use.*
+forwards live in Don's private archive. Consent not yet asked for show use.*
 
 ## Arc
 
@@ -64,4 +64,4 @@ when Don asked if she was looking for a job.
 - [`../README.md`](../README.md) · [`../invitation.md`](../invitation.md)
 - [`../../don-hopkins/sources/1990-03-jwz-postnews-emacs-editor/README.md`](../../don-hopkins/sources/1990-03-jwz-postnews-emacs-editor/README.md) — jwz on Emacs + PostScript news (Mar 1990)
 - [`../../david-ungar/sources/2026-07-linkedin-self-manual-thread.md`](../../david-ungar/sources/2026-07-linkedin-self-manual-thread.md) — she found the Self manual, 2026
-- Private: `DonHopkins/.../attachments/amanda-walker/`
+- Private: Don's archive (not public)

@@ -12,7 +12,7 @@ plugin:
     - https://github.com/SimHacker/MicropolisCore
 
 purpose: |
-  Public-facing Repo Show world for Will Wright kickoff. Filtered export from DonHopkins
+  Public-facing Repo Show world for Will Wright kickoff. Filtered export from Don's private archive
   private monorepo. Two-way navigable indexes. Guest characters as potential show hosts.
   Long-term ambition (1996 lineage → living microworld) — see process/vision-and-ambition.md; no promises.
 

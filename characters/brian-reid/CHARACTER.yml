@@ -28,7 +28,9 @@ connections:
 show_seeds:
   - repo-shows/postscript-distillery-to-pdf/
 
-invitation_status: send_ready
+representation:
+  public_figure: true
+invitation_status: finished
 
 notes: |
   March 2, 1985 fa.laser-lovers post "PostScript and Interpress: a comparison" —

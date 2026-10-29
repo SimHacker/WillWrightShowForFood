@@ -19,6 +19,9 @@ tags:
 connections:
   - don-hopkins
 
+representation:
+  public_figure: false
+
 invitation_status: none
 
 notes: |

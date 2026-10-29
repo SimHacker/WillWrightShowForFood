@@ -114,7 +114,7 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [Pie Menu Timeline](pie-menu-timeline.md) | Email-dated chronology digest; OWM 1991 row; Kurtenbach 2018 footnote |
 | [Pie Menu Timeline — full Medium text](pie-menu-timeline-medium-full.md) | **Verbatim archive** — 4000+ lines, Medium chrome stripped (Feb 2019) |
 | [Don Hopkins Resume (Medium, May 2018)](2018-05-24-don-hopkins-resume.md) | Employment/education/awards summary; links to cached code trees |
-| [Tom Lord 2006 seeds (public)](../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md) | Ungar@Laszlo, OL SpiderMonkey ambition, TG rant, Lua/WoW pies — full letter private in DonHopkins |
+| [Tom Lord 2006 seeds (public)](../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md) | Ungar@Laszlo, OL SpiderMonkey ambition, TG rant, Lua/WoW pies — full letter kept privately |
 | [Alan Kay PIXIE thread (2020)](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) | Independent inventions: Fabrik, Etoys halo; Engelbart down-not-across |
 | [PIXIE/Buxton patent roadblock (2008–2023)](2008-2023-pixie-buxton-patent-thread.md) | Fleck → Buxton → Chapman digitization; 2008 email receipts; show not-invited policy; Brad Myers Ch. 33 |
 | [DDJ 1991: Design & Implementation of Pie Menus](ddj-1991-design-implementation-pie-menus.md) | **The published receipt** — mark-ahead, rehearsal, reselection, display suppression in print, pre-1993 |

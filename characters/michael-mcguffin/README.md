@@ -9,7 +9,7 @@ Don's **Oct 2022 visual-programming lineage letter** — the canonical essay lin
 Body Electric/Bounce, SimAntics, Viewpoint, and the Excel-as-VPL HN debate.
 
 Also appears in Don's **marking-menu prior-art** thread (Alias/Autodesk; see
-[`../don-hopkins/`](../don-hopkins/) via Bill Buxton correspondence in DonHopkins).
+[`../don-hopkins/`](../don-hopkins/) via Bill Buxton correspondence in Don's private archive).
 
 ## Primary source
 

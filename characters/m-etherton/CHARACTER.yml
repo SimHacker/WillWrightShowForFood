@@ -13,6 +13,7 @@ character:
   affiliation: "University of Cambridge Mathematical Laboratory (per RAINBOW 1972 paper)"
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   authored_by: don-hopkins
   note: "Thinnest of the storyline figures — documented only from the RAINBOW co-authorship. Given name, living/passed status, and biography all UNKNOWN. Heinz Lemke is the source to flesh this out."

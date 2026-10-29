@@ -18,7 +18,7 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: facebook_friend
+  status: draft
   note: "Don's Facebook friend — patron saint; aspire-to guest when the time is right"
 
 bio:

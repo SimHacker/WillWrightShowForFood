@@ -1,6 +1,6 @@
 # Don Hopkins — self-sovereign host character
 # Standards: ../../schemas/portrayal-standards.md
-# Sync: sync-sources.yml (from moollm adventure-4 + DonHopkins export)
+# Sync: sync-sources.yml (from moollm adventure-4 + Don's private archive export)
 
 character:
   id: don-hopkins
@@ -14,6 +14,7 @@ character:
   title: "Don Hopkins (the User Interface Flower Child)"
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   authored_by: self
   layers:

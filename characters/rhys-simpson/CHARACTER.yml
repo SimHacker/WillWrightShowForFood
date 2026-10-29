@@ -21,6 +21,9 @@ urls:
   simitone: https://github.com/riperiperi/Simitone
   legacy_gist: https://gist.github.com/riperiperi/78c843b7fc3b11a92e3d5585a7815fee
 
+representation:
+  public_figure: false
+
 wwsff_use:
   - Cite for Legacy Collection renderer facts (not Exchange gap — see will-wright/sources/sims1-legacy-collection-exchange-gap/)
   - Credit FreeSO/Simitone as prior art in catalogs/sims-open-source-and-formats.yml

@@ -23,7 +23,7 @@ Directories: `…/tree/main/characters/<slug>/`
 | **2. Invitation letter** | `characters/<slug>/invitation.md` | Public ask + links + next step | **BLUF first**; short sections OK; **no infodump** |
 | **3. Portrait + payload** | `characters/<slug>/README.md` | Birds-eye + why invited + full story | Top = skim; **bottom = any length** |
 
-**Private strategy** (pitch drafts, leverage, money, call agenda) stays in DonHopkins green room — never this repo.
+**Private strategy** (pitch drafts, leverage, money, call agenda) stays in Don's private green room — never this repo.
 See [invitation-workflow.yml](../schemas/invitation-workflow.yml) `publication_pattern`.
 
 ---

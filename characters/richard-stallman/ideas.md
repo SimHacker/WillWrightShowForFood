@@ -49,7 +49,7 @@ sources. Emacs/Unipress/natalism only if **he** opens that box.
 
 ### 5. Emacs optional drawer
 
-- Unipress / commercial Emacs pressure — **guest-led**; Don has DonHopkins Usenet receipts but
+- Unipress / commercial Emacs pressure — **guest-led**; Don has private Usenet receipts but
   will not ambush.
 - Natalism flame + doctor.el — primary source already public; revisit only if RMS chooses.
 - Gosling Emacs → GNU Emacs — now has its own reconciliation seed:
@@ -122,7 +122,7 @@ both senses — the actual pun lines are lost, but the recap pun isn't.
 technologist (WPI, Apache Axis / Sonic / Meta per public profiles — verify before naming on air).
 
 **Other receipts.** Don to someone else: "I will always remember how well you did at the real
-time punning contest at Boskone!" (`DonHopkins/temp/rms-prompts.txt`). Same file: RMS "was
+time punning contest at Boskone!" (Don's private email archive). Same archive: RMS "was
 spectacular in punning contests" at east-coast cons; filk dancing too
 ([stallman.org/doggerel.html](https://www.stallman.org/doggerel.html) — Boskone filk verses).
 

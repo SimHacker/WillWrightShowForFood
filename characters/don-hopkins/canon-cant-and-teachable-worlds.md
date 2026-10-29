@@ -59,7 +59,7 @@ teacher at authoring time, never a performer at play time. Field results: adults
 polarized in both directions; the eight-year-old was **indifferent** — wished, then
 immediately overwrote the output with her own words. AI as just another tool.
 
-*Steal for:* MOOLLM adventure onboarding and the [PBD-in-LLM-era vertical](https://github.com/SimHacker/DonHopkins/blob/main/projects/micropolis-moollm/repo-shows/brad-myers/garnet-vpl.yml)
+*Steal for:* MOOLLM adventure onboarding and the PBD-in-LLM-era vertical
 — Wish is a shipped, kid-tested instance of examples → commented code → human overwrite.
 The rate limit is the pedagogy: one seed a day forces reading and editing over generating.
 

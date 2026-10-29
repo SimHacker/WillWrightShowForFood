@@ -26,13 +26,32 @@ status:
     n_a: "Not applicable (host, fictional, legacy-only)"
     legacy_only: "Deceased / historical K-line — no invitation sent"
     memorial: "Deceased — memorial mode: represent + discuss, NEVER interview; invite living people who knew them to remember"
+    dream_guest: "A hope, kept as a page; nobody has reached out"
+    stub: "Page started; too little written to invite from"
+    not_offered: "Deliberately not invited; the note says why"
 
 fields:
   status: { type: enum, required: true, default: draft }
   # consent lives in representation.consent: { state, scope, date, evidence, note } (moollm
   # skills/representation-ethics/REPRESENTATION.yml); granted needs evidence. Status is the
-  # invitation's progress; consent is what the person agreed to.
+  # invitation's progress; consent is what the person agreed to. Warmth of the relationship
+  # (old friend, warm lead) is neither: it goes in note.
+  note: { type: string, optional: true, note: "Non-private summary only; relationship warmth goes here" }
   invitation_note: { type: string, optional: true, note: "Non-private summary only" }
+  participation:
+    type: list
+    optional: true
+    note: |
+      What the guest has contributed, one entry per contribution, in the order it happened.
+      A repo show invites any mix of media, timelines and levels of participation:
+      confirming or correcting what was written about them is participation, and there can
+      be any number of email, audio or video interviews. Consent (representation.consent)
+      is to participate; this list is what they did.
+    entry:
+      date: { type: date }
+      mode: { type: enum, values: [review, correction, email, chat, audio, video, live, written, simulation], note: "review: confirmed what was written; written: wrote their own lines or piece; simulation: approved a simulated version" }
+      what: { type: string, note: "Non-private summary" }
+      artifact: { type: path, optional: true, note: "Public file in this repo, when there is one" }
   show_seed: { type: path }
   public_url: { type: path, default: invitation.md }
   sent_at: { type: date, optional: true, note: "No private correspondence in repo" }
@@ -67,7 +86,7 @@ publication_pattern:
       1. EMAIL — copy GitHub-rendered characters/<guest>/invitation.md into Apple Mail (~one screen).
       2. invitation.md — public BLUF + absolute links + next step. NO infodump, NO mermaid, NO relative URLs.
       3. README.md — birds-eye at top; § Deep dive at bottom (unlimited) for guest + public.
-    PRIVATE green room — pitch drafts, strategy, call cliff-notes. DonHopkins green-room/ only.
+    PRIVATE green room — pitch drafts, strategy, call cliff-notes. Don's private green room only.
   scrub_from_public: [money, leverage, fundraising, "same boat", monetization, contact logistics, private correspondence]
   choreography: "expand README deep dive -> draft short invitation.md -> GitHub preview -> copy to Mail -> call after they've read -> on yes, upgrade public invite if guest blesses (Will pattern)."
   flagship: "characters/will-wright/invitation.md — accepted showpiece; longer exception."
@@ -76,6 +95,22 @@ publication_pattern:
 
 legacy_mapping:
   not_yet_asked: draft
+  not_yet_written: draft
+  not_sent: finished
+  send_ready: finished
+  contacted: sent
+  reached_out_awaiting_reply: sent
+  replied_enthusiastic: replied
+  engaged: in_conversation
+  declined_show: declined
+  not_applicable: n_a
+  # warmth is not a status: these become draft, and the old value moves to note
+  warm: draft
+  warm_lead: draft
+  warm_contact: draft
+  warm_correspondence: draft
+  facebook_friend: draft
+  lead: draft
 
 see_also:
   - portrayal-standards.yml

@@ -67,8 +67,8 @@ live and the post scrolls beside her.
 ## To do
 
 - [ ] Capture full story texts (Don, logged in) into dated files here,
-      one per story, following the fb capture pattern in the
-      DonHopkins repo.
+      one per story, following the fb capture pattern in Don's
+      private archive.
 - [ ] Verify the Hitch Hiking / Loving Awareness link overlap.
 
 ↑ [sources index](README.md) | [character](../README.md)

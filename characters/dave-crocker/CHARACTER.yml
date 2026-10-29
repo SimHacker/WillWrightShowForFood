@@ -29,6 +29,8 @@ connections:
 show_seeds:
   - repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml
 
+representation:
+  public_figure: true
 invitation_status: draft
 
 bio:

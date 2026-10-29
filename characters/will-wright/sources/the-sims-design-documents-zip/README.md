@@ -45,8 +45,8 @@ Policy: publish historic internal discussion Don holds rights to share; redact l
 
 ## Related HN / Don notes
 
-- `DonHopkins/characters/don-hopkins/notes/hacker-news/the-sims-inclusivity.yml`
-- `DonHopkins/characters/don-hopkins/notes/hacker-news/maxis-sim-game-requirements.yml`
+- The Sims inclusivity (Don's private HN notes)
+- Maxis sim game requirements (Don's private HN notes)
 
 ---
 

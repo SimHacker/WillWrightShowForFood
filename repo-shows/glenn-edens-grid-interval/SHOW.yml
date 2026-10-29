@@ -62,6 +62,5 @@ artifacts:
   - characters/don-hopkins/history/interval-research.yml
   - characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
   - characters/douglas-engelbart/engelbart-mouse-and-keyset.md
-  - DonHopkins/characters/don-hopkins/correspondence/glenn-edens.yml
 
 invitation_status: send_ready

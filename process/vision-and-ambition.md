@@ -152,7 +152,7 @@ third place, room graph, session-log episodes, [cauldron](https://github.com/Sim
 
 Picture a pyramid the ordinary way — **point up**. **You are standing on the tip**: the first public point of origin. The mass — skills, shows, characters, code — is **everything beneath your feet**, still being built.
 
-**On the tip today:** one kickoff [show seed](../repo-shows/will-wright-premiere/README.md), a [ShowMaker graph](showmaker-network.md) scaffold, verify CI, yaml indexes. [Curb appeal on the README](../README.md); [CARD.yml](../CARD.yml), [SHOW.yml](../schemas/), [MANIFEST](../MANIFEST.yml), and [`pnpm verify`](../SETUP.md) under that.
+**On the tip today:** one kickoff [show seed](../repo-shows/will-wright-premiere/README.md), a [ShowMaker graph](showmaker-network.md) scaffold, verify CI, yaml indexes. [Curb appeal on the README](../README.md); [CARD.yml](../CARD.yml), [SHOW.yml](../schemas/), and [`pnpm verify`](../SETUP.md) under that.
 
 **Building beneath you:**
 

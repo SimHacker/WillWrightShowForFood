@@ -2,7 +2,7 @@
 
 **Thread subject:** "HCI and Modelling -- where we come from and may be going to" for CARS 2027  
 **Span:** 13–14 August 2026  
-**Archive:** DonHopkins `lemke-messages-export.txt` (lines ~11137–11214 Heinz; ~31545–31558 Roy; ~70714–70736 Leo)
+**Archive:** Don's private messages export (lines ~11137–11214 Heinz; ~31545–31558 Roy; ~70714–70736 Leo)
 
 ---
 

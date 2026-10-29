@@ -14,7 +14,7 @@ Inspectable public repo as pitch deck: yaml girders, CI, portrayal ethics. Flags
 |---|------|-----|
 | 1 | [**Vision — stakeholders**](../vision-and-ambition.md#invitation-to-stakeholders) · [full doc](../vision-and-ambition.md#on-this-page) | Platforms, archives, viral readers — long arc in prose |
 | 2 | [**Root README**](../../README.md) | Cream table, status, monorepo layers |
-| 3 | [**Live repo**](../live-repo.yml) | Public bud vs DonHopkins archive — sync policy |
+| 3 | [**Live repo**](../live-repo.yml) | Public bud vs Don's private archive — sync policy |
 | 4 | [**Flagship show**](../../repo-shows/will-wright-premiere/README.md) | First episode shape — Will, 1996, Proxi thread |
 | 5 | [**Portrayal standards**](../../schemas/portrayal-standards.yml) | How guests are treated before you meet them in docs |
 | 6 | [**SETUP verify**](../../SETUP.md) | Clone and pnpm verify — proves engineering is real |

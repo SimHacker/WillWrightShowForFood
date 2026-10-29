@@ -34,4 +34,4 @@ see_also:
   - { path: ../process/cross-links.yml#repo-show-spine, why: "Show spine trail" }
   - { path: ../process/showmaker-network.yml, why: "Link your show into the graph" }
   - { path: ../characters/INDEX.yml, why: "Guests pair with shows" }
-  - { path: ../process/live-repo.yml, why: "Public vs DonHopkins export policy" }
+  - { path: ../process/live-repo.yml, why: "Public vs private-archive export policy" }

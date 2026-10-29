@@ -18,7 +18,7 @@ representation:
     state: granted
     date: "2026-09-05"
     scope: "Appear on the Will Wright Show for Food; accepted the WWSFF invitation."
-    evidence: "moollm://github/SimHacker/DonHopkins/characters/don-hopkins/correspondence/steve-alvey.yml (Messenger, 2026-09-05; private thread, cited by reference only)"
+    evidence: "Messenger, 2026-09-05; private thread, cited by reference only"
   authored_by: don-hopkins
   note: "Don's longtime friend + collaborator. Independent creator — promote his work, drive fans to his subscriptions/content (non-extractively)."
   subject_rights: correction_edit_or_deletion_anytime

@@ -117,7 +117,7 @@ Possessions: **writable control store panel** for VG3400, full docs + circuits, 
 ## Location / visit
 
 Lives near Cambridge. Heinz planning a visit when logistics allow (mentioned 12 Jul).
-# Village-level detail: DonHopkins green-room/locations.yml
+# Village-level detail: kept privately
 
 ---
 

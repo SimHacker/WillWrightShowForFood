@@ -11,6 +11,7 @@ character:
   home: characters/laurie-anderson/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:  # dream guest; not yet asked
     state: not_asked

@@ -19,7 +19,7 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: not_sent
+  status: finished
   channel: unknown          # site has no address listed; LinkedIn, Twitter, CodePen, or Future of Text
   show_seed: null
   the_ask: "The webtop. He builds spatial web interaction for a living and thinks about reading surfaces from first principles."

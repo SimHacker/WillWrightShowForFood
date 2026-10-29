@@ -30,7 +30,9 @@ show_seeds:
   - repo-shows/postscript-distillery-to-pdf/
   - repo-shows/news-postscript-window-system.yml
 
-invitation_status: send_ready
+representation:
+  public_figure: true
+invitation_status: finished
 
 notes: |
   Wrote The Distillery (still.ps) — partial evaluation of PostScript by redefining

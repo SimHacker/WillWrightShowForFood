@@ -1,6 +1,6 @@
 # Selfish Config — C3 Merge with Provenance (TypeScript port)
 
-> Live port of Leela central's two-pass config fragment composition: load YAML/JSON fragments, C3-linearize parents DAG, deep-merge slots with provenance, Pass-2 …
+> Live port of Leela's two-pass config fragment composition: load YAML/JSON fragments, C3-linearize parents DAG, deep-merge slots with provenance, Pass-2 …
 
 | Field | Value |
 |-------|-------|
@@ -10,7 +10,7 @@
 
 ## Topic
 
-Live port of Leela central's two-pass config fragment composition:
+Live port of Leela's two-pass config fragment composition:
 load YAML/JSON fragments, C3-linearize parents DAG, deep-merge slots with
 provenance, Pass-2 shards overlay. Test mirrors image-web-caddy composition.
 Makes MicropolisCore filesystem-object-model parents: operational.

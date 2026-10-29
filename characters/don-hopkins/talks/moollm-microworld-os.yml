@@ -1,5 +1,5 @@
 # TALK distill — MOOLLM: The Sims for your filesystem
-# Source: DonHopkins/talks/moollm-microworld-os/TALK.yml (public_safe)
+# Source: Don's private talks archive (public_safe)
 
 talk:
   id: moollm-microworld-os
@@ -24,4 +24,3 @@ nested_rooms:
 formats: ["45 min conf", "60 min keynote", "90 min deep dive", "Repo Show live"]
 
 wwsff_entry: ../moollm-microworld-os-talk.md
-upstream: SimHacker/DonHopkins/talks/moollm-microworld-os/TALK.yml

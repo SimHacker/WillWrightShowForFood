@@ -6,7 +6,11 @@ affiliations:
   - Gerrit Rietveld Academie, DesignLAB (graduated 2012)
   - Sandberg Instituut, Political Spatial Design
   - Don Hopkins / Stupid Fun Club — collaborator, July 2009 onward (Oosterpark, Amsterdam)
-consent: not_yet_asked   # past collaborator (2009); warm
+representation:
+  public_figure: false
+  consent:
+    state: not_asked
+    note: "past collaborator (2009); warm"
 
 invitation:
   status: draft

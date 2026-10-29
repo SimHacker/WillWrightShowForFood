@@ -91,4 +91,4 @@ from the *Persuasive Games* book-length argument.
 
 *One disambiguation, since the name recurs in this repo: the CV lists a 2016 Chicago Humanities
 Festival appearance with **Max Temkin** (Cards Against Humanity). No known relation to
-[David Temkin](https://github.com/SimHacker/DonHopkins).*
+[David Temkin](../../david-temkin/).*

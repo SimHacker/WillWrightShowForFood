@@ -1,7 +1,7 @@
 # Seeds — Don → Tom Lord, 21 Aug 2006 (Re: Lua)
 
 **Date:** 21 August 2006 · **From:** Don Hopkins · **To:** Thomas Lord  
-**Full letter (private):** DonHopkins `correspondence/attachments/thomas-lord/private/2006-08-21-lua-spidermonkey-ungar-full.md`  
+**Full letter (private):** kept privately.  
 **HN Ungar graph (2022):** [`../self-v8-tom-lord-2006-hn-2022.md`](../self-v8-tom-lord-2006-hn-2022.md)  
 **Ungar guest extract:** [`../../david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md`](../../david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md)
 

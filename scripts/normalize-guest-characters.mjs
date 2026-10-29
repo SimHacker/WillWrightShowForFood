@@ -9,7 +9,10 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const DON = path.resolve(ROOT, "../DonHopkins");
+// Optional private characters/ directory; unset means public INDEX.yml data only.
+const PRIVATE_CHARS = process.env.WWSFF_PRIVATE_CHARACTERS
+	? path.resolve(process.env.WWSFF_PRIVATE_CHARACTERS)
+	: null;
 const CHAR = path.join(ROOT, "characters");
 
 const SKIP = new Set(["don-hopkins", "will-wright", "don-philahue", "slats"]);
@@ -50,11 +53,12 @@ function pick(re, text, fallback = "") {
 	return m ? m[1].trim() : fallback;
 }
 
-function loadDonHopkins(slug) {
-	const p = path.join(DON, "characters", slug, "CHARACTER.yml");
+function loadPrivateSource(slug) {
+	if (!PRIVATE_CHARS) return null;
+	const p = path.join(PRIVATE_CHARS, slug, "CHARACTER.yml");
 	if (!fs.existsSync(p)) return null;
 	const yml = fs.readFileSync(p, "utf8");
-	const glancePath = path.join(DON, "characters", slug, "GLANCE.md");
+	const glancePath = path.join(PRIVATE_CHARS, slug, "GLANCE.md");
 	let glance = "";
 	if (fs.existsSync(glancePath)) {
 		glance = fs
@@ -189,7 +193,7 @@ let n = 0;
 for (const slug of readGuestSlugs()) {
 	if (SKIP.has(slug)) continue;
 	const idx = indexEntry(slug);
-	const src = loadDonHopkins(slug);
+	const src = loadPrivateSource(slug);
 	const meta = {
 		name: src?.name ?? titleCase(slug),
 		field: src?.field ?? idx.note,

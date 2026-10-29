@@ -5,7 +5,7 @@ of it built from reusable modules. Siblings:
 [browser-ecosystem.md](browser-ecosystem.md),
 [soul-angel.md](soul-angel.md),
 [steam-app-strategy.md](steam-app-strategy.md). Naming:
-`SOUL-FAMILY-NAMING.md` in the DonHopkins strategy repo.*
+Don's private strategy notes.*
 
 ## Portals: game-specific doors into one universe
 

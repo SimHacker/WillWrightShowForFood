@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Scaffold characters/<slug>/ideas.md from CHARACTER.yml + INDEX.yml + DonHopkins correspondence."""
+"""Scaffold characters/<slug>/ideas.md from CHARACTER.yml + INDEX.yml + private correspondence."""
 
 from __future__ import annotations
 
+import os
 import re
 import sys
 from pathlib import Path
@@ -15,11 +16,12 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[1]
 CHARS = ROOT / "characters"
 INDEX = CHARS / "INDEX.yml"
-# Optional sibling private repo — never hardcode absolute home paths in public tree
-DON_CORR = (ROOT.parent / "DonHopkins" / "characters" / "don-hopkins" / "correspondence")
+# Optional private correspondence directory, from the environment only
+_PRIVATE_CORR = os.environ.get("WWSFF_PRIVATE_CORRESPONDENCE")
+DON_CORR = Path(_PRIVATE_CORR).expanduser() if _PRIVATE_CORR else None
 SKIP = {"_TEMPLATE", "don-hopkins", "don-philahue", "slats", "ultimate-machine", "palm"}
 
-# WWSFF slug -> DonHopkins correspondence filename
+# WWSFF slug -> private correspondence filename
 CORR_MAP = {
     "alan-kay": "alan-kay.yml",
     "dan-ingalls": "daniel-ingalls.yml",
@@ -66,7 +68,7 @@ def guest_index() -> dict:
 
 def read_correspondence(slug: str) -> dict:
     fname = CORR_MAP.get(slug)
-    if not fname:
+    if not fname or DON_CORR is None:
         return {}
     return load_yaml(DON_CORR / fname)
 

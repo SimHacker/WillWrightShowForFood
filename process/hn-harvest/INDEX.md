@@ -7,7 +7,7 @@ Living index. Cite by id / author / date / substance — **never karma**.
 **Do not dump raw unreviewed HN comment text into this public repo.**
 
 - Public files here: **reviewed IDs + short notes** only (see `lynn-conway.md` as the pattern).
-- Working copies / full excerpts / flagged-fight archaeology: **private** `DonHopkins/characters/don-hopkins/research/` and person rooms under `people/passed/`.
+- Working copies / full excerpts / flagged-fight archaeology: kept **privately** in Don's archive.
 - Flagged comments are **not** exposed as a field by Firebase or Algolia; dead/deleted drop out of search. Author-login HN UI or BigQuery dump required to recover flagged text.
 
 Earlier bulk Algolia dumps below may still contain unreviewed excerpts — treat as **staging; curate before quoting on-air or in character rooms**. Prefer deleting/replacing with ID stubs as each character is reviewed.

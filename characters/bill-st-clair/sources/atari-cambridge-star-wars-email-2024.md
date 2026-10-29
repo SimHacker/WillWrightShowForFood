@@ -2,7 +2,7 @@
 
 **Subject:** Star Wars Cabinet connected to a Lisp Machine at Atari Cambridge Research Lab?
 **Dates:** 4–7 May 2024
-**Full private archive:** DonHopkins `green-room/bill-st-clair/correspondence-2024-05.md`
+**Full May 2024 correspondence:** kept privately by Don
 (emails + addresses stay out of this public tree)
 
 ## Timeline

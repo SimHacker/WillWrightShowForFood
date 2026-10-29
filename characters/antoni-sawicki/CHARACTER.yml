@@ -23,7 +23,7 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: engaged
+  status: in_conversation
   document: invitation.md
   show_seed: repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml
   responded: 2026-08-03

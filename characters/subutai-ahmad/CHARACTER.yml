@@ -11,13 +11,14 @@ character:
   home: characters/subutai-ahmad/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked
   authored_by: don-hopkins
 
 invitation:
-  status: lead
+  status: draft
   note: "Will knows him too. Topics Don wants: video (motion tracking + background removal, then→now), AI (neocortex vs LLMs), and Proxi."
 
 bio:

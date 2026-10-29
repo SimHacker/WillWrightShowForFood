@@ -72,7 +72,7 @@ abilities:
     - trigger: pdp10_maclisp_drive_active
       weight: 0.9
   effect: Legacy — Kent tutored Don on ITS; how the host learned Lisp as a high school kid.
-  verifiable: DonHopkins correspondence/kent-pitman.yml; pdp10-its-stack.yml
+  verifiable: Don's private correspondence; pdp10-its-stack.yml
   combos_with:
   - DON-MOOLLM-HOST
 

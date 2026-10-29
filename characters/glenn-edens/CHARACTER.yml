@@ -31,7 +31,9 @@ connections:
 show_seeds:
   - repo-shows/glenn-edens-grid-interval/
 
-invitation_status: send_ready
+representation:
+  public_figure: true
+invitation_status: finished
 
 notes: |
   GRiD Compass co-creator — often cited as first clamshell laptop (1982); Dynabook-inspired;
@@ -42,6 +44,3 @@ notes: |
   Interval Research circle (broadband → Avio Digital). Don's FMC Motor Home parked at Interval.
   Oct 2021 LinkedIn exchange; Dec 2022 Engelbart mouse consultation ([email redacted]).
   NOT Glenn Reid (PostScript Distillery) — different person.
-
-sync:
-  donhopkins: DonHopkins/characters/don-hopkins/correspondence/glenn-edens.yml

@@ -14,12 +14,14 @@ representation:
   governed_by: ../../schemas/portrayal-standards.md
   public_figure: true
   consent:
-    state: unverified
-    note: async_welcome
+    state: declined
+    date: "2026-08-03"
+    scope: "Declined the show. Retired; no longer works on pie menus or input devices."
+    evidence: sources/2026-08-03-decline-repo-show-reply.md
   authored_by: don-hopkins
 
 invitation:
-  status: declined_show
+  status: declined
   document: invitation.md
   show_seed: repo-shows/david-fleck-pen-input/david-fleck-pen-input.yml
   sent: 2026-07-30
@@ -27,7 +29,7 @@ invitation:
   note: |
     Respectfully declined recorded Repo Show — feels his pie-menu chapter was short/minor.
     Wacom **patented** his doctoral thesis work but **never shipped pie menus in product** (Aug 2026 correction).
-    Retired 2019; open to async conversation. Thesis (ACM DL) cleared for post/distribute (11 Aug 2026).
+    Retired 2019; no longer works on pie menus or input devices. Open to async conversation. Thesis (ACM DL) cleared for post/distribute (11 Aug 2026).
     Send working PIXIE film links — Cambridge embed broken for him.
 
 bio:

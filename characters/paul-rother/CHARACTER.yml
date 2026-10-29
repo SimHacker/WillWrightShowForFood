@@ -11,13 +11,14 @@ character:
   home: characters/paul-rother/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked
   authored_by: don-hopkins
 
 invitation:
-  status: send_ready
+  status: finished
   warm_path: "Coco Conn email 2026-08-26 — Paul asked to talk (WhatsApp/text via Coco; number not in this repo). Offered a writeup."
   document: invitation.md
   show_seed: repo-shows/coco-conn/

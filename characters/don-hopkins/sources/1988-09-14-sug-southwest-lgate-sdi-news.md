@@ -17,7 +17,7 @@ Marriott, Friday 30 September 1988.
 - **Corroborates two stories already in the archive**:
   - James Gosling's remark that Operation Desert Storm command-and-control
     ran on NeWS PostScript (Josh Siegel's LGATE at LANL) — k-line
-    `desert_storm_postscript` in `DonHopkins/characters/james-gosling/CHARACTER.yml`.
+    `desert_storm_postscript` in Don's private James Gosling notes.
   - Don's HN recollection that Siegel "at Los Alamos wrote MMPORG
     simulations of World War III for the Joint Chiefs of Staff with a
     beautiful interactive NeWS front-end" — see

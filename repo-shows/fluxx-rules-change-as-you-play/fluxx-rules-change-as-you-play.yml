@@ -55,7 +55,6 @@ segments:
 
   will_imessage_thread:
     ask: "Don texted Will about Fluxx packs + UMD — Jul 2026. Optional cold open."
-    private_source: DonHopkins/.../apple-messages/transcript/TRANSCRIPT.md
     consent: pending
 
   live_fluxx:

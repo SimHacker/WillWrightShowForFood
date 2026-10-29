@@ -56,7 +56,7 @@ sources:
   papers:
     - { title: "Rudy Rucker, 'Symbiotic Programming: Crossbreeding Cellular Automaton Rules on the CAM-6', Complex Systems 3 (1989) 79–90", url: "https://content.wolfram.com/sites/13/2018/02/03-1-6.pdf", cached: sources/wolfram-03-1-6.pdf }
   books: ["Software (1982)", "Wetware (1988)", "Freeware (1997)", "Realware (2000)", "Infinity and the Mind", "The Fourth Dimension", "Mind Tools", "The Hacker and the Ants"]
-  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/rudy-rucker.yml
+  provenance: private correspondence with Don (not public)
 
 see_also:
   - { path: invitation.md, why: "Warm Repo Show invitation (draft)" }

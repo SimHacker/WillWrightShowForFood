@@ -15,4 +15,4 @@ you're actually living.
 
 45 min conference · 60 min keynote · 90 min deep dive · **Repo Show** (walk the repo live)
 
-→ Full package: DonHopkins `talks/moollm-microworld-os/TALK.yml` · [`talks/moollm-microworld-os.yml`](talks/moollm-microworld-os.yml) · [`import-self-from-self.md`](import-self-from-self.md)
+→ Full package: [`talks/moollm-microworld-os.yml`](talks/moollm-microworld-os.yml) · [`import-self-from-self.md`](import-self-from-self.md)

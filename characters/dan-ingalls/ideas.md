@@ -49,7 +49,7 @@ The Byte 1981 line that keeps resurfacing on HN whenever someone calls Emacs (or
 
 - **1981:** Smalltalk absorbed filesystem, scheduler, display, debugger into one communicating-objects image — you shouldn't have to leave the model for "OS calls."
 - **2026:** Agent IDEs absorb git, gh, linters, MCP, ssh, session archaeology into one orchestration layer — Charles Choi's [*Emacs, Everything Looks Like a Service*](https://yummymelon.com/notes/devnull/emacs-everything-looks-like-a-service.html) is the Emacs version; Cursor is Don's daily driver (cat still named Emacs).
-- **MOOLLM:** skills, YAML Jazz, cursor-mirror, thoughtful-commitment — the collection of things that don't fit in Python *or* the prompt. [mooco](https://github.com/SimHacker/mooco) as open orchestrator.
+- **MOOLLM:** skills, YAML Jazz, cursor-mirror, thoughtful-commitment — the collection of things that don't fit in Python *or* the prompt.
 
 Show questions: Did Ingalls mean *erase* the OS boundary or *raise the floor*? Where does Livelymerge/Automerge sit vs git vs "the image"? Does Kell & Pike's 2013 *should there be one?* paper change the answer in the agent era?
 

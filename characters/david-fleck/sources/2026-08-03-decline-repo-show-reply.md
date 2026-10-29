@@ -44,7 +44,7 @@ Don replied to the thread with the Repo Show invitation link and PIXIE recovery 
 | 2008-07-08 | Dave forwards Don the two Buxton Wiseman PDFs |
 | 2008-07-07 | Buxton email to Kurtenbach, Newman, Heinz Lemke, Fleck — film exists |
 
-Full 2008 export: [`../../heinz-lemke/sources/pixie-film-emails-export.txt`](../../heinz-lemke/sources/pixie-film-emails-export.txt) (if present) · DonHopkins `pixie-film-emails-export.txt`
+Full 2008 export: [`../../heinz-lemke/sources/pixie-film-emails-export.txt`](../../heinz-lemke/sources/pixie-film-emails-export.txt) (if present)
 
 ---
 

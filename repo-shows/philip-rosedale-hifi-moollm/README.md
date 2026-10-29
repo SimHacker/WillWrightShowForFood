@@ -26,7 +26,6 @@ SimObliterator for Sims), plus GitHub-as-MMORPG and the Dan Ingalls HiFi-vs-Live
 - [yaml-jazz-collaboration-stack.md](process/trails/yaml-jazz-collaboration-stack.md)
 - [yaml-jazz](SimHacker/moollm/skills/yaml-jazz)
 - [MOO-HERITAGE.md](SimHacker/moollm/designs/MOO-HERITAGE.md)
-- [high-fidelity-rosedale.yml](SimHacker/DonHopkins/characters/don-hopkins/correspondence/high-fidelity-rosedale.yml)
 
 ## In this directory
 

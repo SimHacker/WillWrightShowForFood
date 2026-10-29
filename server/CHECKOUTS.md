@@ -59,4 +59,3 @@ Do not build that disk yet. When it exists it is still `/data/models/…` or
 The box owns physical paths (`server/MANIFEST.yml`). mooco owns the *virtual*
 namespace the LLM walks: rooms, skills, K-lines, which of these trees is
 "here." Mapping a mooco room onto `/data/models/<site>/…` is mooco's job.
-See `mooco/designs/MOOCO-MEMORY.md`.

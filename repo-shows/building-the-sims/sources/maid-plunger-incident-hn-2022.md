@@ -73,6 +73,5 @@ archive) — candidate flipbook / reconstruction reference.
 
 ## Show credit
 
-Homage format: Jimmy Kimmel **Unnecessary Censorship** — see
-[`DonHopkins/projects/willwrightshowforfood/strategy/RULES-AND-ETHICS.md`](https://github.com/SimHacker/DonHopkins/blob/main/projects/willwrightshowforfood/strategy/RULES-AND-ETHICS.md)
+Homage format: Jimmy Kimmel **Unnecessary Censorship** — see the show's rules and ethics
 (homages credit originator by name).

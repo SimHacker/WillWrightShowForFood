@@ -33,7 +33,7 @@ Sources: [3 Aug proposal](sources/2026-08-03-cars-2027-hci-modelling-cooperation
 - Whether a paper is expected (Mario spoke of submitting to CARS), its length, the proceedings,
   and the submission deadline.
 
-The 16–17 July messages are in the DonHopkins archive, not yet digested here.
+The 16–17 July messages are in Don's private archive, not yet digested here.
 
 ## Why medicine
 
@@ -767,7 +767,7 @@ one system in their workflow that cannot be replaced or changed, with how people
 
 - No clinical case, number or quote enters the essay unless its source gave it and agreed to
   publication.
-- Private correspondence stays in the DonHopkins repo; this file cites only the public digests.
+- Private correspondence stays in Don's private archive; this file cites only the public digests.
 - The essay part is written after the answers arrive; this file is the plan and the questions.
 
 ↑ [Heinz Lemke](README.md) · [ideas](ideas.md) · [correspondence](correspondence.yml)

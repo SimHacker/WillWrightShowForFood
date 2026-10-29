@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# agent-guard.sh — PreToolUse hook for the sysop agent. Same script as central's edgebox skill
-# (skills/edgebox/templates/agent-host/agent-guard.sh); only deny.txt differs.
+# agent-guard.sh — PreToolUse hook for the sysop agent. Same script as Leela's edgebox skill;
+# only deny.txt differs.
 #
 # Reads the hook's JSON on stdin, takes the shell command and any file path the tool names, and
 # refuses the call if either matches a line of deny.txt (extended regex, one per line, # comments).

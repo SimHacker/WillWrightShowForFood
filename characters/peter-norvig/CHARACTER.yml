@@ -5,16 +5,20 @@ character:
   id: peter-norvig
   name: "Peter Norvig"
   type: invitation
-  signifier: "📖"
+  signifier: "👤"
+  emoji: "📖"
   status: living
   field: "AI researcher, educator, author; Director of Research at Google + education fellow at Stanford; co-author of the standard AI textbook (AIMA); author of the essay 'Teach Yourself Programming in Ten Years'"
   home: characters/peter-norvig/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
-    state: unverified
-    note: warm_lead
+    state: interested
+    date: "2026-10-29"
+    evidence: "interest confirmed by Don Hopkins, 2026-10-29"
+    note: "no time or medium agreed; could be email only"
   authored_by: don-hopkins
 
 invitation:

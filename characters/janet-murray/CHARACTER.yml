@@ -11,6 +11,7 @@ character:
   home: characters/janet-murray/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked
@@ -21,7 +22,7 @@ invitation:
   document: invitation.md
   note: >
     Warm prior: SFC / StoryMaker with her Georgia Tech students (2011); private draft
-    "GitHub as Holodeck" in DonHopkins email-to-janet-murray.md — not sent as Repo Show invite.
+    "GitHub as Holodeck" in Don's private email drafts — not sent as Repo Show invite.
     Quitmeyer is her student. Chaim Gingold committee member.
 
 bio:
@@ -51,9 +52,6 @@ sources:
     - { title: "Hamlet on the Holodeck", year: 1997, publisher: "Free Press", note: "Founding interactive-narrative text" }
   local:
     - { path: sources/hamlet-on-the-holodeck.md, why: "Framing cream + show map" }
-  correspondence_private:
-    - { path: DonHopkins/characters/don-hopkins/email/email-to-janet-murray.md, why: "Draft GitHub-as-Holodeck outreach — not the public invite body" }
-
 see_also:
   - { path: sources/hamlet-on-the-holodeck.md, why: "Primary framing" }
   - { path: ../nick-montfort/sources/riddle-machines.md, why: "Cites Murray; IF literary map" }

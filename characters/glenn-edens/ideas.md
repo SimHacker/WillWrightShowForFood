@@ -68,4 +68,3 @@ Connect GRiD → Dynabook cardboard (Kay) → OLPC → Quest (Carmack tangent in
 ## Cross-links
 
 - Show: [`../../repo-shows/glenn-edens-grid-interval/`](../../repo-shows/glenn-edens-grid-interval/)
-- DonHopkins sync: `DonHopkins/characters/don-hopkins/correspondence/glenn-edens.yml`

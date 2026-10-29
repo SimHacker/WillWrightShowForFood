@@ -121,7 +121,7 @@ research-bundle:
     - characters/will-wright/sources/   # dozens of article bundles, YouTube indexes
     - characters/will-wright/media/
     - repo-shows/will-wright-premiere/audience/
-  private_first: "../../process/live-repo.yml — DonHopkins authoritative; WWSFF is live bud"
+  private_first: "../../process/live-repo.yml — private archive authoritative; WWSFF is live bud"
 
 video_walkthrough:
   guest_on_camera: |

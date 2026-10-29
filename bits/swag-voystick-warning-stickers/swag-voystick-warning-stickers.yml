@@ -273,7 +273,7 @@ pack_compositions:
 production:
   illustrator: howard-penner
   deliverables: [vector_svg, print_ready_pdf, tee_mockups]
-  pod: Fourthwall / Printful — see DonHopkins strategy/swag-lightpenisland.md
+  pod: Fourthwall / Printful — see Don's private swag strategy notes
   channel: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#swag
 
 see_also:

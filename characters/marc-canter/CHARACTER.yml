@@ -11,6 +11,7 @@ character:
   home: characters/marc-canter/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:  # old friend; Don expects an enthusiastic yes; consent not formally asked
     state: not_asked

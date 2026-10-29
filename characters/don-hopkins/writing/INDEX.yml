@@ -69,8 +69,8 @@ wwsff_primary_sources:
     - path: ../../characters/will-wright/sources/don-youtube-playlist-index/
       topic: Don Hopkins YouTube demos
 
-donhopkins_research_mirror:
-  note: "Full article recreations live in DonHopkins projects/willwrightshowforfood/research/ — distill on demand per sync-sources.yml"
+private_research_mirror:
+  note: "Full article recreations live in Don's private archive — distill on demand per sync-sources.yml"
   exclude: private personnel rosters, raw correspondence
 
 see_also:

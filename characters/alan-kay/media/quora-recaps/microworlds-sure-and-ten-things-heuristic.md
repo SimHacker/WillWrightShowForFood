@@ -58,7 +58,7 @@ Source SimCity"**:
 | Artifact | Link |
 |----------|------|
 | **Transcript + video** (Medium) | [HAR 2009 lightning talk](https://donhopkins.medium.com/har-2009-lightning-talk-transcript-constructionist-educational-open-source-simcity-by-don-3a9e010bf305) |
-| **Talk outline** (notes) | [`MicropolisDev/notes/MicropolisHARTalk/micropolis-talk.txt`](https://github.com/SimHacker/Micropolis/blob/master/notes/MicropolisHARTalk/micropolis-talk.txt) · [`notes/html/talk.html`](https://github.com/SimHacker/Micropolis/blob/master/notes/html/talk.html) |
+| **Talk outline** (notes) | [`notes/MicropolisHARTalk/micropolis-talk.txt`](https://github.com/SimHacker/Micropolis/blob/master/notes/MicropolisHARTalk/micropolis-talk.txt) · [`notes/html/talk.html`](https://github.com/SimHacker/Micropolis/blob/master/notes/html/talk.html) |
 | **Photos** | [`../../../don-hopkins/media/micropolis-gallery/micropolis-gallery.yml`](../../../don-hopkins/media/micropolis-gallery/micropolis-gallery.yml) (`har_constructionist`) |
 | **Winograd / constructionist thread** | [`../../../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md`](../../../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md) |
 | **Alan encouraged OLPC SimCity** | [`../../ideas.md`](../../ideas.md) hook **#6** · [`../llms-copilots-trust-and-teaching.md`](llms-copilots-trust-and-teaching.md) |

@@ -73,5 +73,5 @@ show_connections:
     why: premiere segment bridge
 
 private:
-  note: "Current Gallium runway — DonHopkins green-room only; not in public repo"
+  note: "Current Gallium runway — private green room only; not in public repo"
 # private archive — not in this repo

@@ -17,6 +17,7 @@ character:
     to him as he. Ask before writing pronouns into anything public or filmed.
 
 representation:
+  public_figure: false
   governed_by: ../../schemas/portrayal-standards.md
   consent:
     state: not_asked

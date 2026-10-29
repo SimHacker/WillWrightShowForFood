@@ -7,15 +7,15 @@ character:
   type: invitation
   signifier: "✏️"
   status: living
-  field: "Sims 1 modding pioneer — IFF Pencil author; SimAntics reverse-engineering; Netherlands"
+  field: "Sims 1 modding pioneer — IFF Pencil author; SimAntics reverse-engineering"
   home: characters/tom-van-dijk/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
   public_figure: true
   consent:
-    state: unverified
-    note: warm_reconnect
+    state: not_asked
+    note: "reconnected with Don by LinkedIn and email, June 2024; no show invitation yet"
   authored_by: don-hopkins
 
 invitation:
@@ -26,12 +26,9 @@ invitation:
 bio:
   summary: |
     **Tom van Dijk** wrote **IFF Pencil** as a teenager — the tool that helped the early Sims 1
-    modding community decipher **SimAntics** and object formats. He reverse-engineered from hex dumps
-    on family holidays; **Behavior.iff** (or similar shipped IFF) puzzled him — accidental modding
-    aid or intentional? **EA Legal** (via PJB3, Feb 2002) forced removal of SimAntics material from
-    his site. Nickname **mazelord2000**. Reconnected with Don **Jun 2024** after a LUCPIX request
-    for steering-committee-era tools; recovered dusty archives; reflected on how modding/open
-    source culture matured since the early 2000s.
+    modding community decipher **SimAntics** and object formats — under the handle
+    **mazelord2000**. He reverse-engineered the formats from hex dumps; IFF Pencil 2 is still
+    in use. Now an assistant professor of computer science. Reconnected with Don in **June 2024**.
 
 aliases:
   - mazelord2000
@@ -43,9 +40,9 @@ show_topics:
   behavior_iff:
     what: "Why was Behavior.iff in the shipping game? Will's modding intent vs EA Legal"
   ea_legal:
-    what: "Feb 2002 takedown; open vs closed Edith/SimAntics politics (Tom recovered old mail with Don)"
-  steering_committee:
-    what: "LUCPIX hunt for FARx/XAbatch — Tom recompiled in modern VC++ (2024)"
+    what: "Early modders under EA Legal pressure; open vs closed Edith/SimAntics politics"
+  recovered_tools:
+    what: "Publishing his recovered tools on GitHub, if he wants to"
 
 sources:
   primary:

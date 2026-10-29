@@ -340,7 +340,7 @@ One network (TNFS, lobby, N:), three attachment styles. **Do not pick one emulat
 | Need | Choose | Avoid |
 |------|--------|-------|
 | FujiNet-native Apple dev, CI, cc65 apps, Thomas demo | **AppleWin (`sa2`) + SPoverSLIP + FujiNet-PC** or **fujinet-vm** | Porting AppleWin to WASM first |
-| Browser hot-write, bots, AI, Mind Mirror L0–L2 | **apple2js** (TS stack per DonHopkins `apple2-emulator-stack.yml`) | MAME-wasm as primary hack surface |
+| Browser hot-write, bots, AI, Mind Mirror L0–L2 | **apple2js** (TS stack per [`apple2-emulator-stack.yml`](../../process/apple2-emulator-stack.yml)) | MAME-wasm as primary hack surface |
 | IA-scale preservation, multi-machine breadth | **MAME + Emularity** (complement, don't compete) | Expecting in-core MAME disk surgery API |
 | Audience wow in browser | **POM2 WASM** (parallel track) | POM2 as FujiNet integration path today |
 
@@ -370,4 +370,4 @@ running disk for a character bridge*, start Phase 2. Phase 3 only after Thomas b
 - Emularity / IA: https://github.com/db48x/emularity · https://blog.archive.org/2016/03/04/saving-500-apple-ii-programs-from-oblivion/
 - AppleWin 1.32: https://github.com/AppleWin/AppleWin · audetto Linux port
 - POM2: https://github.com/habib256/POM2
-- Don Hopkins apple2-emulator-stack: `SimHacker/*(private — not in this repo)*
+- Don Hopkins apple2-emulator-stack: *(private — not in this repo)*

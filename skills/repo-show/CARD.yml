@@ -1,6 +1,6 @@
 # CARD — repo-show (public live instance · WillWrightShowForFood)
 # Full protocol: SKILL.md | Glance: GLANCE.yml
-# Lineage: SimHacker/DonHopkins/skills/repo-show — distilled + anchored here
+# Lineage: Don's private repo-show skill — distilled + anchored here
 
 card:
   id: repo-show
@@ -116,10 +116,8 @@ see_also:
   - { path: ../../characters/INDEX.yml, why: "Guests + invitations" }
   - { path: ../../rigs/INDEX.yml, why: "Rig personas for drag race" }
   - { path: ../../process/homefun-grading.yml, why: "Homefun not homework rubric" }
-  - { path: https://github.com/SimHacker/DonHopkins/tree/main/skills/repo-show, why: "Private lineage — sync via live-repo.yml" }
-
 credits:
-  lineage: SimHacker/DonHopkins/skills/repo-show
+  lineage: Don's private repo-show skill (not public)
   public_instance: SimHacker/WillWrightShowForFood
   inspiration:
     branding_ssot: ../../process/repo-show-branding.yml

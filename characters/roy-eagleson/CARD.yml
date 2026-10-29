@@ -29,7 +29,6 @@ relationships:
 
 places:
   - { id: uwo, name: "Western University — London, Ontario" }
-  - { id: midnight-shift, name: "Honeywell GE-115 / PDP-10 operator nights", era: "1979–1980s" }
 
 abilities:
 - id: SKETCHPAD-TO-PIXIE-LECTURE

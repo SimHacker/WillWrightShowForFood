@@ -23,7 +23,7 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: reached_out_awaiting_reply
+  status: sent
   document: invitation.md
   show_seed: ../../repo-shows/keez-duyves/
   outreach: "Facebook message sent 2026; no reply yet. Trying via PIPS:lab

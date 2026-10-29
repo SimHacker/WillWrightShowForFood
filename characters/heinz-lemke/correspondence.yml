@@ -7,7 +7,7 @@ meta:
   curated_by: don-hopkins
   consent: not_yet_asked
   span: "~2020–present"
-  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/heinz-lemke.yml
+  provenance: private correspondence with Don (not public)
   human_readable: correspondence.md
 
 gist: |
@@ -119,17 +119,15 @@ threads:
     index: sources/THREAD-INDEX.md
     what: |
       Roy Eagleson (9 Jul 11:58) greets Don, jokes "does Maurice Wilkes have an avatar in the
-      SIMs milieu?", shares his own operator backstory (Honeywell GE-115 in HS; midnight shift
-      ~1979–mid-80s on PDP-10 / PDP-11 inkpen plotter / Cyber-73), his PhD under Zenon Pylyshyn
-      (whose postdoc advisors were Newell & McCarthy; CIFAR AI&Robotics director, hired Hinton;
-      Fodor connectionism critique; Rutgers CogSci), and his HCI teaching method — students
+      SIMs milieu?", shares some backstory (kept private) and his PhD lineage through Zenon
+      Pylyshyn, and his HCI teaching method — students
       re-implement Sketchpad until they reinvent OOP. He asks Heinz + Don to collect the CAMBRIDGE
       / TRE storyline: Maurice Wilkes, Neil Wiseman, John Hiles, Cheney, Etherton, the Rainbow
       Project, PIXIE, PDP-7 vector display ↔ Titan. Cc's his mentor Kelly Booth (UBC).
       Heinz (14:22) answers by starting to deliver it: attaches his 1967 origin story ("changed
       my life forever some 60 years ago"), first of installments over the coming weeks.
     pull_in: pull-in-gaps.md#heinz-1967-origin-story
-    received: "sources/1967-back-to-the-roots-part1.md — Heinz's memoir 'Back to the Roots (Part 1, 1967)' arrived 2026-07-09 (.docx). Spy accusation → Wilkes → medieval-statute PhD → Wiseman → 1972 thesis. Private archive in DonHopkins."
+    received: "sources/1967-back-to-the-roots-part1.md — Heinz's memoir 'Back to the Roots (Part 1, 1967)' arrived 2026-07-09 (.docx). Spy accusation → Wilkes → medieval-statute PhD → Wiseman → 1972 thesis. Kept in Don's private archive."
     new_people:
       - "Kelly Booth (UBC) — Roy's HCI storytelling mentor; newly Cc'd"
     storyline_targets: ["Maurice Wilkes", "Neil Wiseman", "John Hiles", "Cheney", "Etherton", "Rainbow Project", "PDP-7 ↔ Titan"]
@@ -158,7 +156,6 @@ threads:
       Met Joe Weizenbaum at MIT 1969 presenting PIXIE; decades of TU Berlin discussions — "many of
       his predictions have become true now." Asks Don about "model science." Don proposes two
       episodes (1969 US/Weizenbaum + modern CARS); Cc Alan Kay on light pen vs RAND tablet.
-    private_archive: DonHopkins/characters/don-hopkins/correspondence/attachments/heinz-lemke/
     pull_in: pull-in-gaps.md#nagoya-ai-surgery-slides-2026
 
   lemke_constellation_2026_07_10:

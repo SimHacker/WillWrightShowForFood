@@ -51,7 +51,6 @@ gaps:
     status: received   # 2026-07-09 (.docx)
     filed:
       public: sources/1967-back-to-the-roots-part1.md   # credited rendition
-      private_archive: SimHacker/DonHopkins/characters/don-hopkins/correspondence/attachments/heinz-lemke/ (.docx + .txt)
     show_use: "Opening act of the PIXIE interview — how Heinz got to Cambridge in the first place"
     more: "Heinz promised further installments over the coming weeks (Cambridge/TRE storyline)"
 

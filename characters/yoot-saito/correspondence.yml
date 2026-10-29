@@ -9,7 +9,7 @@ meta:
   curated_by: don-hopkins
   consent: not_yet_asked            # summary is public-safe + factual; full thread stays private until consent
   span: "2024–2025"
-  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/yoot-saito.yml
+  provenance: private correspondence with Don (not public)
 
 gist: |
   Don reached out to Yoot Saito about the Alan Kay interview Yoot conducted in Japan (1993) for

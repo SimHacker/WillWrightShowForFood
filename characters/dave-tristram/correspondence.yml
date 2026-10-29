@@ -1,5 +1,5 @@
 # Don Hopkins ↔ David A. Tristram — public-safe correspondence digest
-# Full Messenger thread: DonHopkins green-room/dave-tristram/ (PRIVATE)
+# Full Messenger thread kept privately.
 
 meta:
   with: dave-tristram
@@ -47,7 +47,7 @@ threads:
   adobe_live_painting_beta:
     what: "~2022 Feature Camp — liquid simulation filter; clearance required on air"
     public_stub: sources/live-canvas-effects-stub.md
-    private: green-room/dave-tristram/ + sources/private/
+    private: Don's private green-room + sources/private/
 
   europe_tour_2025:
     what: "Dave performing graphics live — Resolume, TouchDesigner"

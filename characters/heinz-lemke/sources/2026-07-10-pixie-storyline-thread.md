@@ -186,7 +186,7 @@ contributions.** See [`guest-participation-ladder.md`](../../../process/guest-pa
 
 ### Roy and Kelly Booth rooms
 
-- [`roy-eagleson/`](../../roy-eagleson/) — educator, midnight operator, Sketchpad-until-they-reinvent-OOP
+- [`roy-eagleson/`](../../roy-eagleson/) — educator, Sketchpad-until-they-reinvent-OOP
 - [`kelly-booth/`](../../kelly-booth/) — Roy's mentor; deserves a place in the pantheon
 
 ### PDP-10 · *The Americans* ARPANET · fair-use commentary

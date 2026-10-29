@@ -3,7 +3,6 @@
 meta:
   with: netochka-nezvanova
   public: true
-  full_archive: "DonHopkins/characters/netochka-nezvanova/sources/"
   digest: sources/don-hopkins-correspondence-digest.md
 
 threads:
@@ -18,10 +17,10 @@ threads:
     public: sources/smalltalk-squeak-lua-2006.md
   - date: 2007-11-11
     subject: OLPC SimCity; Amsterdam
-    note: DonHopkins archive
+    note: private archive
   - date: 2010-08-22
     subject: Amsterdam tea; Forth code
-    note: DonHopkins archive
+    note: private archive
   - date: 2014-2021
     subject: Don Hopkins HN tributes
-    note: DonHopkins characters/netochka-nezvanova/sources/hn-tributes-don-hopkins/
+    note: private archive

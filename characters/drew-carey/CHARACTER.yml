@@ -12,6 +12,7 @@ character:
   home: characters/drew-carey/
 
 representation:
+  public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   consent:  # dream guest, public-figure sketch
     state: not_asked

@@ -1,7 +1,6 @@
 # LinkedIn: Don Hopkins <=> Marcin Wichary (Mar 17-18, 2020)
 
 Source: Don Hopkins LinkedIn data export (`messages.csv`), downloaded 2025-02-03.
-Greppable extract: `DonHopkins/temp/MarcinWichary/linkedin-messages.txt`
 
 16 messages. Subject line (Don's first message): **One hundred and thirty-seven seconds** -- the title of Marcin's English translation of a 1976 Lem story.
 

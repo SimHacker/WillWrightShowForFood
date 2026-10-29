@@ -99,7 +99,7 @@ Links: [SELF-AND-MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/o
   subjective object must take a context as a parameter; every facet is
   one context's honest view. *Ask (it's his mirrors paper): what does a
   mirror reflect when the object is subjective?*
-- [ ] Future: claude-mirror, mooco-mirror — same protocol, different
+- [ ] Future: claude-mirror — same protocol, different
   orchestrator.
 
 Link: [cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror)
