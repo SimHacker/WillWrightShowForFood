@@ -12,12 +12,15 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
+  public_figure: true
   consent:
-    state: not_asked
+    state: granted
+    scope: "Represent and simulate him in MOOLLM, with respect, and participate in the Will Wright Show for Food. Time and medium not yet scheduled."
+    evidence: "Facebook conversation with Don, 2026-01-22; show participation and simulation confirmed by Don Hopkins, 2026-10-29"
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: accepted
   document: invitation.md
   show_seed: repo-shows/richard-bartle/
 

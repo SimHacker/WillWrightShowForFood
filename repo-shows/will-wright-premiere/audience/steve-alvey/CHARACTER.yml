@@ -10,7 +10,10 @@ character:
 representation:
   real_being: true
   consent:
-    state: asked
+    state: granted
+    date: "2026-09-05"
+    scope: "Front-row seat at the premiere; writes his own questions and plugs."
+    evidence: "moollm://github/SimHacker/DonHopkins/characters/don-hopkins/correspondence/steve-alvey.yml (Messenger, 2026-09-05; private thread, cited by reference only)"
   self_authored: invited
   status: "Honored front-row invite. Writes his own questions / plugs. No fabricated words."
   canonical_guest: ../../../../characters/steve-alvey/

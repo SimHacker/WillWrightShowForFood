@@ -23,12 +23,12 @@ moollm_home:
 representation:
   real_being: true
   consent:
-    state: unverified
-  consent_source: "Facebook conversation 2026-01-22 (documented in MOOLLM adventure-4)"
-  consent_scope: |
-    Richard has given permission to (a) simulate him in the audience and (b) draft example
-    questions IN THE SPIRIT of his documented public work, as templates he can edit, curate,
-    rewrite, or replace. Final voice is his.
+    state: granted
+    scope: |
+      Participate in the show and be simulated: (a) simulate him in the audience and (b) draft
+      example questions IN THE SPIRIT of his documented public work, as templates he can edit,
+      curate, rewrite, or replace. Final voice is his. Time and medium not yet scheduled.
+    evidence: "Facebook conversation with Don, 2026-01-22; show participation and simulation confirmed by Don Hopkins, 2026-10-29"
   self_authored: invited
   status: |
     Don is inviting Richard to Will's show. questions.yml now holds SIMULATED DRAFT questions
