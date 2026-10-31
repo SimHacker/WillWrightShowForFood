@@ -10,7 +10,7 @@ show:
   character: characters/oliver-steele/
   topic: "Instance-First Development and the Instance Substitution Principle — build the instance, refactor the class when a second case appears; LZX/OpenLaszlo as the working proof; what JavaScript got wrong and MOOLLM's LIFT gate got right."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   instance_first: "Named the discipline in 'Classes and Prototypes' (2004) — implement functionality for a single instance, generalize only when a second example forces it. Avoids premature abstraction."

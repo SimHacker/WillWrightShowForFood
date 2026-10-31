@@ -11,7 +11,7 @@ show:
   character: characters/ken-kahn/
   topic: "Fifty-three years of teaching AI to children — from the 1973-79 Logo Group classes through Ani (films from story descriptions, 1979), Pictorial Janus, ToonTalk's birds and robots, and the AI blocks for Snap! — plus the July 2026 machine-written AI-history essay and what an eyewitness adds when the archive is in the weights."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   taught_ai_to_kids_1973: "★ The one nobody has asked him. Between 1973 and 1979 he taught AI to elementary school children as a graduate researcher in the MIT AI Lab's Logo Group, and he is still teaching AI to children in 2026. The field currently debates whether this is possible; he has the longest-running attempt and no interviewer has gone looking for the results."

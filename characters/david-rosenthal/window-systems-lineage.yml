@@ -4,7 +4,7 @@
 meta:
   room: characters/david-rosenthal/
   curated_by: don-hopkins
-  consent: not_yet_asked
+  consent: not_asked
   guest: david-rosenthal
   human_readable: window-systems-lineage.md
   show:

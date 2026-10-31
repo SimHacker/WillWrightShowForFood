@@ -1,17 +1,19 @@
 # Blair MacIntyre — invitation portrayal. NOT Blair MacIntyre.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: blair-macintyre
-  name: "Blair MacIntyre"
-  type: invitation
-  signifier: "🥽"
-  status: living
-  field: >-
-    Augmented reality: KARMA and Windows on the World at Columbia, the
-    Augmented Environments Lab and Argon at Georgia Tech, WebXR at Mozilla,
-    immersive technology research at JPMorgan Chase; Northeastern University
-  home: characters/blair-macintyre/
+id: blair-macintyre
+name: "Blair MacIntyre"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🥽"
+status: living
+real_being: true
+field: >-
+  Augmented reality: KARMA and Windows on the World at Columbia, the
+  Augmented Environments Lab and Argon at Georgia Tech, WebXR at Mozilla,
+  immersive technology research at JPMorgan Chase; Northeastern University
+home: characters/blair-macintyre/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

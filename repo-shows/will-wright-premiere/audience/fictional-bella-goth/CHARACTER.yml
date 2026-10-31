@@ -1,15 +1,14 @@
 # Bella Goth — fictional Sims audience TicketPR
 # NOT official EA dialogue. Fan in-character voice for Repo Show.
 
-character:
-  name: Bella Goth
-  type: fictional_game_character
-  real_being: false
-  signifier: "👁️"
-  home: repo-shows/will-wright-premiere/audience/fictional-bella-goth/
-  canonical_soul: characters/sims/bella-goth/
-  prototype_ref: ../../../../characters/sims/bella-goth/CHARACTER.yml
-  origin: "The Sims — missing wife; Strangetown; alien abduction fan lore"
+name: Bella Goth
+type: fictional_game_character
+real_being: false
+signifier: "👁️"
+home: repo-shows/will-wright-premiere/audience/fictional-bella-goth/
+inherits:
+  - characters/sims/bella-goth/
+origin: "The Sims — missing wife; Strangetown; alien abduction fan lore"
 
 representation:
   fictional: true

@@ -1,17 +1,19 @@
 # Catherine Plaisant — invitation portrayal. NOT Catherine Plaisant.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: catherine-plaisant
-  name: "Catherine Plaisant"
-  type: invitation
-  signifier: "🌳"
-  status: living
-  field: >-
-    Human-computer interaction and information visualization: HyperTIES,
-    touchscreen interaction, SpaceTree, LifeLines, EventFlow, evaluation of
-    visualization; Designing the User Interface; University of Maryland HCIL
-  home: characters/catherine-plaisant/
+id: catherine-plaisant
+name: "Catherine Plaisant"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌳"
+status: living
+real_being: true
+field: >-
+  Human-computer interaction and information visualization: HyperTIES,
+  touchscreen interaction, SpaceTree, LifeLines, EventFlow, evaluation of
+  visualization; Designing the User Interface; University of Maryland HCIL
+home: characters/catherine-plaisant/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

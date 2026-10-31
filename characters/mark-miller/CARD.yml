@@ -30,7 +30,7 @@ abilities:
     effect: Freeze the shared world so confined code cannot reach past what it was given.
     verifiable: "https://github.com/endojs/endo"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

@@ -7,7 +7,7 @@ meta:
   home: characters/mark-weiser/
   doc: pkd-lem-ai-sf.md
   curated_by: don-hopkins
-  consent: not_yet_asked
+  consent: not_asked
   framing: "conversation hooks grounded in public work — no fabricated quotes, no speak-for; Mark in memorial mode"
   seed: "Weiser told Don that PKD's Ubik inspired the name ubiquitous computing — the one fact that opens the whole thread"
   concept: ../../process/artifactory.yml   # this doc is itself an artifactory — an artifact that builds artifacts
@@ -119,12 +119,12 @@ open_questions:
 
 participants:
   mark-weiser:     { mode: memorial, note: "1952-1999; this is his dir; represent/discuss, no speak-as; Don's teacher & friend; David knew him; CHI'88 pie-menu co-author" }
-  david-rosenthal: { mode: invitation_guest, consent: not_yet_asked, basis: public_work_only, note: "knew Mark; can speak to it firsthand" }
-  vicky-reich:     { mode: welcome_co_guest, consent: not_yet_asked, note: "LOCKSS co-founder; Weiser's widow; own body of work. Don would love both — David AND Vicky's call, together" }
-  will-wright:     { mode: guest, consent: invitation_accepted }
+  david-rosenthal: { mode: invitation_guest, consent: not_asked, basis: public_work_only, note: "knew Mark; can speak to it firsthand" }
+  vicky-reich:     { mode: welcome_co_guest, consent: not_asked, note: "LOCKSS co-founder; Weiser's widow; own body of work. Don would love both — David AND Vicky's call, together" }
+  will-wright:     { mode: guest, consent: granted }
   philip-k-dick:   { mode: discuss_about, note: "deceased author; published work" }
   stanislaw-lem:   { mode: discuss_about, note: "deceased author; published work" }
-  don-hopkins:     { mode: host, consent: self_sovereign, note: "primary source for Weiser/Ubik thread" }
+  don-hopkins:     { mode: host, authored_by: don-hopkins, note: "primary source for Weiser/Ubik thread" }
 
 klines: [ubik, ubiquitous-computing, calm-technology, palmer-eldritch, perky-pat, the-sims,
          counter-clock-world, hobart-phase, theophagia-inversa, model-collapse, coprophagia,

@@ -33,7 +33,7 @@ abilities:
     effect: Corpus density ≠ correspondence; medieval-medicine model still “heals” with bloodletting.
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 
 see_also:

@@ -1,14 +1,16 @@
 # Bill Joy — DREAM-GUEST invitation portrayal. NOT Bill Joy.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: bill-joy
-  name: "Bill Joy"
-  type: invitation
-  signifier: "☀️"
-  status: living
-  field: "Sun co-founder; Berkeley Unix, vi; Joy's law; venture capital (KPCB)"
-  home: characters/bill-joy/
+id: bill-joy
+name: "Bill Joy"
+type: person
+layer: dream_guest
+signifier: "👤"
+emoji: "☀️"
+status: living
+real_being: true
+field: "Sun co-founder; Berkeley Unix, vi; Joy's law; venture capital (KPCB)"
+home: characters/bill-joy/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

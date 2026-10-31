@@ -2,7 +2,7 @@
 status: draft
 character_id: philip-rosedale
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/philip-rosedale-hifi-moollm.yml
 format: remote_or_in_person
 ---

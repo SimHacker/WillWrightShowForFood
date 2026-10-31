@@ -1,14 +1,15 @@
 # Gary Drescher — invitation portrayal. NOT Gary Drescher.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: gary-drescher
-  name: "Gary Drescher"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "AI researcher & philosopher — the schema mechanism (Made-Up Minds); constructivist AI; decision theory & ethics (Good and Real)"
-  home: characters/gary-drescher/
+id: gary-drescher
+name: "Gary Drescher"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "AI researcher & philosopher — the schema mechanism (Made-Up Minds); constructivist AI; decision theory & ethics (Good and Real)"
+home: characters/gary-drescher/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

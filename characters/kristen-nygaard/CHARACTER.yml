@@ -1,17 +1,18 @@
 # kristen-nygaard — memorial. NOT the person.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: kristen-nygaard
-  name: "Kristen Nygaard"
-  full_name: "Kristen Nygaard"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1926-08-27"
-  died: "2002-08-10"
-  field: "Programming languages / participatory design — Simula with Ole-Johan Dahl"
-  home: characters/kristen-nygaard/
+id: kristen-nygaard
+name: "Kristen Nygaard"
+full_name: "Kristen Nygaard"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1926-08-27"
+died: "2002-08-10"
+field: "Programming languages / participatory design — Simula with Ole-Johan Dahl"
+home: characters/kristen-nygaard/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

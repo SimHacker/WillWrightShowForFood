@@ -2,7 +2,7 @@
 status: draft
 character_id: terry-winograd
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/terry-winograd/
 ---
 

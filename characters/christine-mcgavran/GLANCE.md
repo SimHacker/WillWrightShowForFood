@@ -25,6 +25,6 @@ thesis with a career attached to it.
 **Show seed:** [`repo-shows/ebike-safari/`](../../repo-shows/ebike-safari/) · also fits
 [`repo-shows/yoot-tower-revival/`](../../repo-shows/yoot-tower-revival/)
 
-**Consent:** `not_yet_asked` · portrayal level 3 · no simulation
+**Consent:** `not_asked` · portrayal level 3 · no simulation
 
 ↑ [characters](../INDEX.yml) · [contact queue](../contact-queue.yml)

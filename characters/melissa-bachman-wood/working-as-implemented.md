@@ -13,7 +13,7 @@ the lexicon.
 
 ## The thread
 
-> **Jim Mackraz** ([room](../jim-mackraz/README.md)) — *"Don't forget **Screw It, We're
+> **[Jim Mackraz](../jim-mackraz/README.md)** — *"Don't forget **Screw It, We're
 > Shipping**."*
 >
 > **Melissa Bachman-Wood** — *"dassa fact"*
@@ -21,7 +21,7 @@ the lexicon.
 > **Russ Fan** — *"**Unless it sets the computer on fire or makes us look stupid, it's
 > shipping.**"*
 >
-> **Eric Irk Hedman** ([room](../eric-hedman/README.md)) — *"**Working As Limitedly
+> **[Eric Irk Hedman](../eric-hedman/README.md)** — *"**Working As Limitedly
 > Understood**"*
 >
 > **Cory Tsang** — *"You used to give me **The Look** when I marked my bugs **WAI**"*

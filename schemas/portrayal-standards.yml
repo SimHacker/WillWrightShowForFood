@@ -3,6 +3,10 @@
 # Host (Don Hopkins) is self-sovereign — see characters/don-hopkins/CHARACTER.yml
 # MOOLLM: SimHacker/moollm/skills/representation-ethics
 
+schema:
+  extends:
+    - representation   # moollm skills/representation-ethics/REPRESENTATION.yml; consent lives there
+
 meta:
   id: portrayal-standards
   applies_to: "characters/* invitation portrayals — NOT the real people"
@@ -80,9 +84,12 @@ portrayal_rules:
   private: "otherwise. Fictional inspired-by wrapper only"
 consent_record: |
   representation.consent: { state, scope, date, evidence, note }. state is not_asked, asked,
-  granted, declined, revoked, or unverified (claimed earlier, no evidence on file). granted
-  needs evidence: the correspondence file or message that shows it. Relationship warmth
-  (warm lead, old friend) goes in note, not state.
+  interested, granted, declined, revoked, or unverified (claimed earlier, no evidence on file).
+  interested wants to take part while time, medium, and scope are planned, and governs nothing
+  until granted. granted needs evidence. This file does not keep a second consent vocabulary:
+  INDEX, cards, correspondence, and invitation frontmatter use the same state word.
+  Relationship warmth (warm lead, old friend) goes in note, not state. A recommendation letter
+  may be mentioned; its text is not copied here unless the letter is already public.
 
 memorial-mode:
   what: "A full character directory for a deceased person, kept in memorial mode."
@@ -219,8 +226,8 @@ simulation:
     game_and_fictional:
       rule: "Always OK when labeled — Sims dolls, game NPCs, fictional audience, historic figures in memorial/discuss mode"
     living_with_consent:
-      rule: "Guest models themselves (or a character they author); repo-editable; invitation.consent required"
-      self_sovereign: "Don Hopkins — see don-hopkins/CHARACTER.yml"
+      rule: "Guest models themselves (or a character they author); repo-editable; representation.consent.state: granted, with evidence"
+      host: "Don Hopkins authors his own directory (authored_by). That is the self-authored rule, not a consent state."
     living_without_consent:
       rule: "Portray ABOUT in invitation docs; discuss on air; never simulate-as-guest, never voice clone"
     deceased:

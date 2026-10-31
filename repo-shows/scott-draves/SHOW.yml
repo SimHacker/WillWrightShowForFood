@@ -11,7 +11,7 @@ show:
   character: characters/scott-draves/
   topic: "Generative and evolutionary art, end to end — from his Brown thesis language **fnord** (functional description of higher-D form) → the Fractal Flame algorithm → Electric Sheep (distributed render farm bred by a genetic algorithm + human votes) → Dreams in High Fidelity → Infinidream. Open source, collective intelligence, and where AI image generation fits."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
   likelihood: "high — old friend; recent Electric Sheep / Unity collaboration with Don"
 
 stretch_goal: "🐅 Dream guest Doug Hilsinger — honoring music by transforming it; his Tiger Mountain cover Eno himself loved. See ../../characters/doug-hilsinger/"

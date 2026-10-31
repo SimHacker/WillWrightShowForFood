@@ -1,17 +1,18 @@
 # warren-teitelman — memorial. NOT the person.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: warren-teitelman
-  name: "Warren Teitelman"
-  full_name: "Warren Teitelman"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1941-02-21"
-  died: "2013-08-12"
-  field: "Programming environments — Interlisp; DWIM; undo/redo pioneer"
-  home: characters/warren-teitelman/
+id: warren-teitelman
+name: "Warren Teitelman"
+full_name: "Warren Teitelman"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1941-02-21"
+died: "2013-08-12"
+field: "Programming environments — Interlisp; DWIM; undo/redo pioneer"
+home: characters/warren-teitelman/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

@@ -1,17 +1,20 @@
 # Rudy Rucker — invitation portrayal. NOT Rudy Rucker.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: rudy-rucker
-  name: "Rudy Rucker"
-  full_name: "Rudolf von Bitter Rucker"
-  type: correspondent
-  signifier: "🌀🐜"
-  status: living
-  born: "1946-03-22"   # Louisville, Kentucky
-  field: "Mathematics & set theory; cyberpunk SF; cellular automata; transrealism"
-  home: characters/rudy-rucker/
-  affiliation: "Professor emeritus, San José State University (CS, 1986–2004); formerly Autodesk (1988–1992)"
+id: rudy-rucker
+name: "Rudy Rucker"
+full_name: "Rudolf von Bitter Rucker"
+type: person
+show_role: correspondent
+layer: profile
+signifier: "👤"
+emoji: "🌀🐜"
+status: living
+real_being: true
+born: "1946-03-22"   # Louisville, Kentucky
+field: "Mathematics & set theory; cyberpunk SF; cellular automata; transrealism"
+home: characters/rudy-rucker/
+affiliation: "Professor emeritus, San José State University (CS, 1986–2004); formerly Autodesk (1988–1992)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

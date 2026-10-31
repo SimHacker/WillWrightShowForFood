@@ -1,14 +1,16 @@
 # Mats Knutsen — correspondence portrayal. NOT Mats Knutsen.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: mats-knutsen
-  name: "Mats Knutsen"
-  type: correspondence
-  signifier: "🧪"
-  status: unknown
-  field: "2006 correspondent — C# Sims AI reimplementation (TheSimsAITest)"
-  home: characters/mats-knutsen/
+id: mats-knutsen
+name: "Mats Knutsen"
+type: person
+show_role: correspondence
+layer: profile
+signifier: "👤"
+emoji: "🧪"
+real_being: true
+field: "2006 correspondent — C# Sims AI reimplementation (TheSimsAITest)"
+home: characters/mats-knutsen/
 
 representation:
   public_figure: false

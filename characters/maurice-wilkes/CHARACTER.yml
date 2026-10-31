@@ -1,18 +1,19 @@
 # Maurice Wilkes — memorial portrayal (in memoriam). NOT Maurice Wilkes.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: maurice-wilkes
-  name: "Maurice Wilkes"
-  full_name: "Sir Maurice Vincent Wilkes"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1913-06-26"   # Dudley, England
-  died: "2010-11-29"   # Cambridge, England (aged 97)
-  field: "Stored-program computing — EDSAC; microprogramming; Titan; Cambridge Mathematical/Computer Laboratory"
-  home: characters/maurice-wilkes/
-  affiliation: "University of Cambridge — Head of the Mathematical/Computer Laboratory 1946–1980"
+id: maurice-wilkes
+name: "Maurice Wilkes"
+full_name: "Sir Maurice Vincent Wilkes"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1913-06-26"   # Dudley, England
+died: "2010-11-29"   # Cambridge, England (aged 97)
+field: "Stored-program computing — EDSAC; microprogramming; Titan; Cambridge Mathematical/Computer Laboratory"
+home: characters/maurice-wilkes/
+affiliation: "University of Cambridge — Head of the Mathematical/Computer Laboratory 1946–1980"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

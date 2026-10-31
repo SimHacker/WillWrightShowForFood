@@ -1,15 +1,17 @@
 # Scott Draves ("Spot") — invitation portrayal. NOT Scott Draves.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: scott-draves
-  name: "Scott Draves"
-  type: invitation
-  signifier: "🐑"
-  status: living
-  field: "Software artist; creator of Electric Sheep; inventor of the Fractal Flame algorithm; generative / evolutionary art"
-  home: characters/scott-draves/
-  aliases: ["Spot", "spot"]
+id: scott-draves
+name: "Scott Draves"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🐑"
+status: living
+real_being: true
+field: "Software artist; creator of Electric Sheep; inventor of the Fractal Flame algorithm; generative / evolutionary art"
+home: characters/scott-draves/
+aliases: ["Spot", "spot"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

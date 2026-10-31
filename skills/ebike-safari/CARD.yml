@@ -6,6 +6,9 @@ skill:
   type: ebike-gps-pipeline
   status: public_live
 
+inherits:
+  - moollm://github/SimHacker/moollm/skills/urban-safari/
+
 app: ../../apps/ebike-safari/
 design: ../../apps/ebike-safari/design/
 scripts: ../../apps/ebike-safari/scripts/

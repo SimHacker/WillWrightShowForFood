@@ -8,7 +8,7 @@ An [incremental game](https://en.wikipedia.org/wiki/Incremental_game) -- numbers
 they keep going up without you -- a fecund litter of
 [Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi) (feed it or it dies) and Frank Lantz's
 [Universal Paperclips](https://www.decisionproblem.com/paperclips/)
-([Wikipedia](https://en.wikipedia.org/wiki/Universal_Paperclips)): a 2017 browser game of the
+([Wikipedia: Universal Paperclips](https://en.wikipedia.org/wiki/Universal_Paperclips)): a 2017 browser game of the
 [paperclip maximizer](https://en.wikipedia.org/wiki/Instrumental_convergence#Paperclip_maximizer).
 You make paperclips. Then you automate making paperclips. Then there is nothing left that is
 not a paperclip.
@@ -58,7 +58,7 @@ opens when either of you finishes your own universe. The lobby screen writes its
 ## Kin
 
 - Play it: [Universal Paperclips](https://www.decisionproblem.com/paperclips/) (Frank Lantz,
-  2017). Article: [Wikipedia](https://en.wikipedia.org/wiki/Universal_Paperclips). Industrial
+  2017). Article: [Wikipedia: Universal Paperclips](https://en.wikipedia.org/wiki/Universal_Paperclips). Industrial
   version of this curve.
 - [John von Neumann](../john-von-neumann/) -- self-replicating constructors at three levels
   of reality; the mathematical kind is a virtual pet that prints a copy of itself. This game

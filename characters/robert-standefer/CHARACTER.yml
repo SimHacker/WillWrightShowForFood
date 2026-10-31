@@ -1,13 +1,15 @@
 # Robert Standefer — invitation portrayal. NOT Robert Standefer.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: robert-standefer
-  name: "Robert Standefer"
-  type: invitation
-  status: living
-  field: "Principal Program Manager, Copilot Acceleration (Microsoft) — Comic Chat open-source release"
-  home: characters/robert-standefer/
+id: robert-standefer
+name: "Robert Standefer"
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "Principal Program Manager, Copilot Acceleration (Microsoft) — Comic Chat open-source release"
+home: characters/robert-standefer/
 
 representation:
   public_figure: true

@@ -42,7 +42,7 @@ connections:
     path: ../../../richard-bartle/
     show_seed: ../../../../repo-shows/richard-bartle/
     audience_seat: ../../../../repo-shows/will-wright-premiere/audience/richard-bartle/
-    consent: explicit
+    consent: granted
   game_design_trail: ../../../../process/trails/game-design-lineage.md
   sibling_beat: proxi-software-heirloom.yml
   identity_surfing: identity-pronoun-surfing.yml

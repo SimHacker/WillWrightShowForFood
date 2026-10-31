@@ -2,7 +2,7 @@
 status: draft
 character_id: alexander-avila
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/im-queer-therefore-i-sim.yml
 also_in: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
 format: async_friendly

@@ -2,7 +2,7 @@
 status: send_ready
 character_id: coco-conn
 public: true
-consent: not_yet_asked
+consent: interested
 parent: invitation.md
 replying_to: sources/messenger-2026-07-06-reply.md
 trigger: fb-llm-lsd-thread-2026-08

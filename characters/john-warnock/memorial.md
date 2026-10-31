@@ -9,5 +9,5 @@ Utah classmates and neighbors in the show's Kay line: [Alan Kay](../alan-kay/),
 
 We cite him; we do not speak as him.
 
-Sources: [Wikipedia](https://en.wikipedia.org/wiki/John_Warnock) ·
+Sources: [Wikipedia: John Warnock](https://en.wikipedia.org/wiki/John_Warnock) ·
 [Yoot People.md](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md)

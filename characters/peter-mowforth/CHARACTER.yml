@@ -1,15 +1,17 @@
 # Peter Mowforth — invitation portrayal. NOT Peter Mowforth.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: peter-mowforth
-  name: "Peter Mowforth"
-  also_known_as: ["Pete Mowforth", "Dr Peter Mowforth"]
-  type: invitation
-  signifier: "🤖📚"
-  status: living
-  field: "Turing Institute cofounder/director; First Robot Olympics; machine learning → ecommerce (INDEZ); people-first book on the Institute"
-  home: characters/peter-mowforth/
+id: peter-mowforth
+name: "Peter Mowforth"
+also_known_as: ["Pete Mowforth", "Dr Peter Mowforth"]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🤖📚"
+status: living
+real_being: true
+field: "Turing Institute cofounder/director; First Robot Olympics; machine learning → ecommerce (INDEZ); people-first book on the Institute"
+home: characters/peter-mowforth/
 
 representation:
   public_figure: true

@@ -1,6 +1,6 @@
 # Invitation — Peter Mowforth (draft)
 
-**Status:** draft · **Consent:** not_yet_asked  
+**Status:** draft · **Consent:** not_asked  
 **Tone:** old friend, not cold pitch. Pete already mailed Don for book anecdotes (Apr 2026).
 
 ---

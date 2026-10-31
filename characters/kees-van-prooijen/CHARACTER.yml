@@ -1,19 +1,21 @@
 # Kees van Prooijen — invitation portrayal. NOT Kees van Prooijen.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: kees-van-prooijen
-  name: "Kees van Prooijen"
-  type: invitation
-  signifier: "🎨"
-  status: living
-  field: "Computer artist + language designer (Intercol, IL) — Spore prototyping trio w/ Will Wright; independently discovered the Bohlen–Pierce scale (1978); Kees height; Electrogig Amsterdam technology founder; Institute of Sonology"
-  home: characters/kees-van-prooijen/
-  aliases: ["Kees", "Cornelis van Prooijen"]
-  pronounce: "Kees ~ 'Case' (like the Neuromancer protagonist)"
-  born: 1952-08-07   # The Hague; Wikipedia
-  # NOT the same person as kees-colijn (Arthur van Hoff's Amsterdam friend,
-  # private repo) or keez-duyves (PIPS:lab). Three Keeses, three characters.
+id: kees-van-prooijen
+name: "Kees van Prooijen"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎨"
+status: living
+real_being: true
+field: "Computer artist + language designer (Intercol, IL) — Spore prototyping trio w/ Will Wright; independently discovered the Bohlen–Pierce scale (1978); Kees height; Electrogig Amsterdam technology founder; Institute of Sonology"
+home: characters/kees-van-prooijen/
+aliases: ["Kees", "Cornelis van Prooijen"]
+pronounce: "Kees ~ 'Case' (like the Neuromancer protagonist)"
+born: 1952-08-07   # The Hague; Wikipedia
+# NOT the same person as kees-colijn (Arthur van Hoff's Amsterdam friend,
+# private repo) or keez-duyves (PIPS:lab). Three Keeses, three characters.
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

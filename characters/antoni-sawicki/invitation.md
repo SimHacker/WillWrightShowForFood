@@ -2,7 +2,7 @@
 status: draft
 character_id: antoni-sawicki
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/antoni-sawicki-ttycity.yml
 format: live_or_async
 ---

@@ -1,14 +1,16 @@
 # Dave Fleck — invitation portrayal. NOT Dave Fleck.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: david-fleck
-  name: "Dave Fleck (David C. Fleck)"
-  type: invitation
-  signifier: "🖊️"
-  status: living
-  field: "Pen input — 26 years at Wacom (VP Engineering / VP Software Technology); Wacom Radial Menu; W3C Pointer Events; 37 US patents"
-  home: characters/david-fleck/
+id: david-fleck
+name: "Dave Fleck (David C. Fleck)"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🖊️"
+status: living
+real_being: true
+field: "Pen input — 26 years at Wacom (VP Engineering / VP Software Technology); Wacom Radial Menu; W3C Pointer Events; 37 US patents"
+home: characters/david-fleck/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

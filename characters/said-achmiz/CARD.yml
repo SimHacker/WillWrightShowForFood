@@ -159,7 +159,7 @@ abilities:
     combos_with: [PIN-AS-FLAG]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
   credit_discipline: |
     Any segment touching the popup, annotation, sidenote or transclusion machinery

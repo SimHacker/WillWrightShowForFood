@@ -4,7 +4,7 @@
 
 1. [**Mike Perry** on Maxis Alumni, 21 July 2019](media/2019-07-21-maxis-alumni-post.jpg) — 27
    reactions, 1 comment. Photographs of **his own binder and discs**.
-2. [**Phil Salvador** ([room](../phil-salvador/)), 2 May 2018](media/2018-05-02-phil-salvador-museum-of-play-post.jpg)
+2. **[Phil Salvador](../phil-salvador/)**, 2 May 2018 ([screenshot of his post](media/2018-05-02-phil-salvador-museum-of-play-post.jpg))
    — the **press fact sheet**, photographed in the collection of **The Strong / Museum of Play**.
    *"Meant to share these earlier! I was doing research at the Museum of Play and came across a few
    things that might be familiar… 🙂"*

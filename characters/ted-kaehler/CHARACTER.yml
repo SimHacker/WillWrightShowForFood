@@ -2,14 +2,16 @@
 # Seeded from Yoot People.md + Don/Alan halos correspondence.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ted-kaehler
-  name: "Ted Kaehler"
-  type: invitation
-  signifier: "🫧"
-  status: living
-  field: "Smalltalk — OOZE VM; LRG; Apple / Disney / Viewpoints with Kay; halos"
-  home: characters/ted-kaehler/
+id: ted-kaehler
+name: "Ted Kaehler"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🫧"
+status: living
+real_being: true
+field: "Smalltalk — OOZE VM; LRG; Apple / Disney / Viewpoints with Kay; halos"
+home: characters/ted-kaehler/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

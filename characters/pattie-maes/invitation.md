@@ -2,7 +2,7 @@
 status: draft
 character_id: pattie-maes
 public: true
-consent: not_yet_asked
+consent: not_asked
 first_contact: in person via Cyrus Shaoul, October 2026
 format: remote_or_in_person
 ---

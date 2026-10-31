@@ -1,14 +1,16 @@
 # Ben Shneiderman — invitation portrayal. NOT Ben Shneiderman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ben-shneiderman
-  name: "Ben Shneiderman"
-  type: invitation
-  signifier: "👆"
-  status: living
-  field: "HCI — UMD HCIL founder; direct manipulation; embedded hyperlinks; info viz; human-centered AI"
-  home: characters/ben-shneiderman/
+id: ben-shneiderman
+name: "Ben Shneiderman"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "👆"
+status: living
+real_being: true
+field: "HCI — UMD HCIL founder; direct manipulation; embedded hyperlinks; info viz; human-centered AI"
+home: characters/ben-shneiderman/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

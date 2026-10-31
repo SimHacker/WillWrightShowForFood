@@ -24,4 +24,4 @@ We do not speak as her. Primary discussant: Will Wright.*
 ## Sources
 
 - [`CHARACTER.yml`](CHARACTER.yml) · [`memorial.md`](memorial.md)
-- [Wikipedia](https://en.wikipedia.org/wiki/Danielle_Bunten_Berry) · [AIAS Hall of Fame](https://www.interactive.org/special_awards/details.asp?idSpecialAwards=12)
+- [Wikipedia: Danielle Bunten Berry](https://en.wikipedia.org/wiki/Danielle_Bunten_Berry) · [AIAS Hall of Fame](https://www.interactive.org/special_awards/details.asp?idSpecialAwards=12)

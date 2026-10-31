@@ -11,6 +11,46 @@ Run it: [hyperties.org/cabinet/unix/](https://hyperties.org/cabinet/unix/),
 The historical and philosophical architecture: [ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md).
 Forth, the 340 and co-processors from a teaching angle, and where CAM-6 fits: [TEACHING.md](TEACHING.md).
 
+## Where this is going, and why
+
+**Done.** One machine, a PDP-7 emulated in TypeScript and running in the browser, with a Type
+340 display, light pen, teletype, paper tape and disk. It runs 1960s and 1970s programs from
+their own binaries: SYMELEC, DUEL, PDP-7 UNIX and Forth among them. The programs are listed
+[below](#the-rungs-climbed-so-far).
+
+**The goal: separate the package from the emulator.** A program should be described once, with
+its media, sources, symbols, builds, help and views. Then any emulator that can run it should
+be able to: this cabinet, SIMH, microM8, or one nobody has written yet. The Internet Archive
+already works this way. Its software items hold the content, separate emulators run it, and a
+few metadata fields connect them. The cabinet's package is called a cartridge.
+
+- [CARTRIDGES.md: the cartridge format](CARTRIDGES.md#the-goal-the-package-is-not-the-emulator):
+  why the package is kept apart from the emulator, the Internet Archive as the model, a
+  cartridge as a directory with `cartridge.yml`, and building, extending and sharing cartridges.
+  Today's cartridges are still JavaScript objects; the directory format is planned.
+- [UPCYCLING-FORMATS.md: other emulators' formats inside a cartridge](UPCYCLING-FORMATS.md#organelles-nesting-without-flattening):
+  the endosymbiosis approach. Each emulator's configuration, plumbing and code lives in its own
+  folder inside the cartridge, kept in its own format: microM8's microPAK, SIMH's scripts,
+  MAME's software lists. No folder is privileged, the cabinet's included, and any one can be
+  copied out and run by its emulator alone.
+- [MANIFESTO.md: a federation of emulators](MANIFESTO.md#a-federation-of-emulators-after-microm8):
+  other emulators join as peers that trade messages and memory, not as ports into this one.
+  The attitude comes from microM8, which "upcycles" the Apple ][.
+- [WEB-BENCH.md: the Apple ][ will be microM8](WEB-BENCH.md#decisions-for-the-cabinets-browser-bench): browser emulators compared, and
+  the plan to compile microM8's MIT-licensed Go to WebAssembly, with its unknowns.
+  [MICROM8.md](MICROM8.md) covers what microM8 exposes: an HTTP API, an MCP server and a debugger.
+- [MAPPING.md: shared memory between machines](MAPPING.md): planned, after MIT's Rubin 10/11
+  interface, which let the AI Lab's PDP-10 map PDP-11 memory and device registers into its own
+  address space. [CORE-LINKS.md](CORE-LINKS.md) extends it to machines that disagree on word
+  size, byte order and character set.
+- [PRESERVATION.md: what preservation asks of the cabinet](PRESERVATION.md): read against
+  David Rosenthal's 2015 report on emulation for the Mellon Foundation, including cartridges as
+  Internet Archive items. [FOR-MUSEUMS.md](FOR-MUSEUMS.md) is an open letter to museums and
+  archives.
+
+**Planned machines:** the GT40, a KA10 running ITS ([PDP10.md](PDP10.md)), a PDP-8, a PDP-1, the
+Apple ][ through microM8, and Knuth's MIX. They're listed with their sources [below](#next).
+
 ```ts
 import { Cabinet, Pdp7, Type340, LightPen } from "@wwsff/cabinet";
 
@@ -220,8 +260,9 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
     scans of Deutsch's listings and his documentation, and to the walkthroughs and
     explanations others have written since.
   - An Apple ][, the first machine that isn't DEC's. It has no SIMH counterpart, so
-    the spec is another emulator (MAME's `apple2` driver, or apple2js in JavaScript;
-    check licenses before lifting anything). It joins tiny-its as one more job, with
+    it will be April Ayres-Griffiths's microM8, the cabinet's inspiration, which is
+    MIT-licensed Go, compiled to WebAssembly
+    (the plan and its unknowns are in [WEB-BENCH.md](WEB-BENCH.md)). It joins tiny-its as one more job, with
     messages, device events and a symbol table. It trades messages rather than rings,
     since it has 8-bit bytes, not 18-bit words, and its screen is raster memory, so
     its frames are screen memory instead of 340 segments. Apple Logo brings its own

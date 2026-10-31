@@ -5,7 +5,7 @@
 meta:
   with: heinz-lemke
   curated_by: don-hopkins
-  consent: not_yet_asked
+  consent: interested
   span: "~2020–present"
   provenance: private correspondence with Don (not public)
   human_readable: correspondence.md
@@ -87,7 +87,7 @@ threads:
       *Flight of the PIXIE* in class. Heinz sent the YouTube link same day.
     transcript: sources/2026-07-07-pixie-trio-thread.md
     interest: "MIT and Cambridge beginnings of computer graphics"
-    consent: not_yet_asked
+    consent: interested
     note: "On the email thread — not a Repo Show bud unless invited separately"
 
   pixie_trio_invitation_2026:

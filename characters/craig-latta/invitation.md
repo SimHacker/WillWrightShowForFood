@@ -2,7 +2,8 @@
 status: in_conversation
 character_id: craig-latta
 public: true
-consent: warm — rehearsed the Vanessa tribute together 2026-07-20; has seen and cheered the repo plans; formal show ask pending
+consent: interested
+note: "Rehearsed the Vanessa tribute 2026-07-20 and cheered the repo plans. Time, medium, and scope are being planned."
 show_seed: repo-shows/craig-latta/
 also_shows: [repo-shows/openlaszlo/]
 memorial_arc: repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml

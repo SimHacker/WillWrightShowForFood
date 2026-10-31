@@ -1,14 +1,16 @@
 # Nick Montfort — invitation portrayal. NOT Nick Montfort.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: nick-montfort
-  name: "Nick Montfort"
-  type: invitation
-  signifier: "📜🗝"
-  status: living
-  field: "Interactive fiction / digital literature; Twisty Little Passages; computational poetry"
-  home: characters/nick-montfort/
+id: nick-montfort
+name: "Nick Montfort"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📜🗝"
+status: living
+real_being: true
+field: "Interactive fiction / digital literature; Twisty Little Passages; computational poetry"
+home: characters/nick-montfort/
 
 representation:
   public_figure: true

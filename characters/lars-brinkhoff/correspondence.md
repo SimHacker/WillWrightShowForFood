@@ -3,7 +3,7 @@
 Public-safe digest. **Not** the full private thread.  
 Machine index: [`correspondence.yml`](correspondence.yml) · [Portrayal standards](../../schemas/portrayal-standards.md)
 
-**Span:** December 2017 — ITS, Type 340, RFI, Emacs, Logo; July 2026 — PIXIE Repo Show invitation response · **Consent:** `not_yet_asked`
+**Span:** December 2017 — ITS, Type 340, RFI, Emacs, Logo; July 2026 — PIXIE Repo Show invitation response · **Consent:** `not_asked`
 
 ---
 

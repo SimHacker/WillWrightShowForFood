@@ -1,15 +1,14 @@
 # Seaman — fictional audience (Yoot Saito / Vivarium, 1999). Asks on Yoot's behalf.
 # Respects Yoot Saito without demanding his time — Seaman asks Will the embarrassing questions.
-character:
-  name: Seaman
-  type: fictional_game_character
-  real_being: false
-  signifier: "🐟😐"
-  home: repo-shows/will-wright-premiere/audience/fictional-seaman/
-  origin: |
-    Seaman (Dreamcast, 1999) — Yoot Saito's unsettling fish-with-a-human-face who interrogates
-    the player with personal questions (Leonard Nimoy narrated). Yoot Saito also made SimTower /
-    Yoot Tower; he and Will have a long, warm, mutually-respectful relationship.
+name: Seaman
+type: fictional_game_character
+real_being: false
+signifier: "🐟😐"
+home: repo-shows/will-wright-premiere/audience/fictional-seaman/
+origin: |
+  Seaman (Dreamcast, 1999) — Yoot Saito's unsettling fish-with-a-human-face who interrogates
+  the player with personal questions (Leonard Nimoy narrated). Yoot Saito also made SimTower /
+  Yoot Tower; he and Will have a long, warm, mutually-respectful relationship.
 
 representation:
   fictional: true

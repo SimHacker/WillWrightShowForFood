@@ -9,7 +9,7 @@ show:
   host: Don Hopkins
   topic: "A tribute to Mark Weiser (1952–1999) — ubiquitous computing, calm technology, PARC, CHI'88 pie menus, Severe Tire Damage — and the PKD/Ubik thread that named the field."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 memorial-mode:
   subject: mark-weiser
@@ -43,34 +43,34 @@ possible_discussants:
       character: characters/don-hopkins/
       connection: "Weiser's student at UMD and close friend until his death; co-author of the CHI'88 pie-menu study (Callahan, Hopkins, Weiser, Shneiderman); primary source for the Ubik→ubicomp story Mark told him."
       verified: true
-      consent: self_sovereign
+      authored_by: don-hopkins
     - name: "David S. H. Rosenthal"
       character: characters/david-rosenthal/
       connection: "Knew Mark; LOCKSS co-founder with Weiser's widow Vicky Reich; anchor of the Ubik/ubicomp/calm-tech reading-group thread."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
       in_repo: ../../characters/mark-weiser/pkd-lem-ai-sf.md
     - name: "Vicky Reich"
       character: null
       connection: "Mark Weiser's widow; LOCKSS co-founder; e-journal preservation (HighWire, CLOCKSS)."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
       note: "Warmly welcome — Don would love to have her; entirely David and Vicky's call, together. Not a booking."
     - name: "Ben Shneiderman"
       character: characters/ben-shneiderman/
       connection: "Co-author on the CHI'88 pie-menu paper; direct-manipulation vs calm-technology framing."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
     - name: "Brad Myers"
       character: characters/brad-myers/
       connection: "HCI peer — UI tools and techniques era."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
     - name: "John Seely Brown"
       character: null
       connection: "PARC Director/Chief Scientist; co-author with Weiser of 'The Coming Age of Calm Technology' / 'Designing Calm Technology'."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
       to_verify: "No repo character directory yet — candidate only."
 
 centerpieces:

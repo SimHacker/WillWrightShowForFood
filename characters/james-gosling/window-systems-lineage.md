@@ -1,7 +1,7 @@
 # Window-systems lineage — James Gosling
 
 Gosling at **Alvey 1985** — public sources. Shared workshop arc with [David Rosenthal](../david-rosenthal/window-systems-lineage.md).  
-Machine index: [`window-systems-lineage.yml`](window-systems-lineage.yml) · **Consent:** `not_yet_asked`
+Machine index: [`window-systems-lineage.yml`](window-systems-lineage.yml) · **Consent:** `not_asked`
 
 ---
 

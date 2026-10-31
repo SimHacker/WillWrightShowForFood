@@ -1,14 +1,16 @@
 # Marc Davis — invitation portrayal. NOT Marc Davis.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: marc-davis
-  name: "Marc Davis"
-  type: invitation
-  signifier: "🎬📝"
-  status: living
-  field: "Media Streams — semasiographic video annotation; Garage Cinema; Interval Research; generative media"
-  home: characters/marc-davis/
+id: marc-davis
+name: "Marc Davis"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎬📝"
+status: living
+real_being: true
+field: "Media Streams — semasiographic video annotation; Garage Cinema; Interval Research; generative media"
+home: characters/marc-davis/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

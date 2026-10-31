@@ -1,14 +1,16 @@
 # Upmanu Lall — invitation portrayal. NOT Upmanu Lall.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: upmanu-lall
-  name: "Upmanu Lall"
-  type: invitation
-  signifier: "💧📊"
-  status: living
-  field: "Hydrology, climate dynamics, water sustainability; SimCity-as-classroom-data-lab pioneer (Project OPTIMUS, Columbia)"
-  home: characters/upmanu-lall/
+id: upmanu-lall
+name: "Upmanu Lall"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "💧📊"
+status: living
+real_being: true
+field: "Hydrology, climate dynamics, water sustainability; SimCity-as-classroom-data-lab pioneer (Project OPTIMUS, Columbia)"
+home: characters/upmanu-lall/
 
 representation:
   public_figure: true

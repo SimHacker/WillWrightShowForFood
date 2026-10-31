@@ -1,14 +1,16 @@
 # Jared Tarbell — invitation portrayal. NOT Jared Tarbell.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jared-tarbell
-  name: "Jared S. Tarbell"
-  type: invitation
-  signifier: "🌱🧮🪵"
-  status: living
-  field: "Generative art; Flash/Processing; Etsy co-founder; digital fabrication (Levitated Toy Factory)"
-  home: characters/jared-tarbell/
+id: jared-tarbell
+name: "Jared S. Tarbell"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌱🧮🪵"
+status: living
+real_being: true
+field: "Generative art; Flash/Processing; Etsy co-founder; digital fabrication (Levitated Toy Factory)"
+home: characters/jared-tarbell/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

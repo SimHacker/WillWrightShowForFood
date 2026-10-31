@@ -10,7 +10,7 @@ show:
   character: characters/scott-mccloud/
   topic: "Scott McCloud's ideas from Understanding Comics — closure, masking, amplification through simplification — and how they shaped The Sims and apply to simulation games and microworlds."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   understanding_comics: "Understanding Comics (1993) reframed the reader as an active participant — closure, the gutter, masking, amplification through simplification."

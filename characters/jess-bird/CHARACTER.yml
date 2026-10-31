@@ -1,14 +1,17 @@
 # Jess Bird — collaborator portrayal. NOT Jess Bird.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jess-bird
-  name: "Jess Bird"
-  type: collaborator
-  signifier: "📺🎮📚"
-  status: living
-  field: "Documentary writer/researcher; Sims / Will Wright / Maxis history; BBC Studios lineage"
-  home: characters/jess-bird/
+id: jess-bird
+name: "Jess Bird"
+type: person
+show_role: collaborator
+layer: invitation
+signifier: "👤"
+emoji: "📺🎮📚"
+status: living
+real_being: true
+field: "Documentary writer/researcher; Sims / Will Wright / Maxis history; BBC Studios lineage"
+home: characters/jess-bird/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

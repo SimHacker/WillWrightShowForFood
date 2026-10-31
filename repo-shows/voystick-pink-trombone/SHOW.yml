@@ -28,7 +28,8 @@ backstory:
     MIDI/gamepad control, variable tract length.
   zack_channel: https://www.youtube.com/@ZackQattan
   pink_trombone: https://dood.al/pinktrombone/
-  consent: "Zack = private outreach lead (pink-trombone-jam.yml). His work is public; invitation not sent."
+  consent: not_asked
+  note: "Zack is the private outreach lead (pink-trombone-jam.yml). His work is public; invitation not sent."
 
 segments:
   - id: what_is_voystick

@@ -1,14 +1,16 @@
 # Brian Harvey — invitation portrayal. NOT Brian Harvey.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: brian-harvey
-  name: "Brian Harvey"
-  type: invitation
-  signifier: "🐢"
-  status: living
-  field: "Computer science education; UC Berkeley (Teaching Professor Emeritus). Logo, Scheme, Snap!. Author; co-creator of The Beauty and Joy of Computing."
-  home: characters/brian-harvey/
+id: brian-harvey
+name: "Brian Harvey"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🐢"
+status: living
+real_being: true
+field: "Computer science education; UC Berkeley (Teaching Professor Emeritus). Logo, Scheme, Snap!. Author; co-creator of The Beauty and Joy of Computing."
+home: characters/brian-harvey/
 
 representation:
   public_figure: true

@@ -1,18 +1,19 @@
 # Dame Stephanie Shirley — memorial portrayal (in memoriam). NOT Dame Stephanie Shirley.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: dame-stephanie-shirley
-  name: "Dame Stephanie Shirley"
-  also_known_as: ["Steve Shirley", "Stephanie Shirley CH"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1933-09-16"   # Dortmund, Germany (Kindertransport child refugee)
-  died: "2025-08-09"   # Reading, England; aged 91 — family / BBC / steveshirley.com
-  field: "Software entrepreneur; Freelance Programmers / FI Group; venture philanthropy (autism, IT)"
-  home: characters/dame-stephanie-shirley/
-  affiliation: "Freelance Programmers (founder, 1962); Shirley Foundation; Oxford Internet Institute (founding donor)"
+id: dame-stephanie-shirley
+name: "Dame Stephanie Shirley"
+also_known_as: ["Steve Shirley", "Stephanie Shirley CH"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1933-09-16"   # Dortmund, Germany (Kindertransport child refugee)
+died: "2025-08-09"   # Reading, England; aged 91 — family / BBC / steveshirley.com
+field: "Software entrepreneur; Freelance Programmers / FI Group; venture philanthropy (autism, IT)"
+home: characters/dame-stephanie-shirley/
+affiliation: "Freelance Programmers (founder, 1962); Shirley Foundation; Oxford Internet Institute (founding donor)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

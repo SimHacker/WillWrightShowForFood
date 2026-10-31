@@ -1,14 +1,16 @@
 # Nina Hagen — invitation portrayal. NOT Nina Hagen.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: nina-hagen
-  name: "Nina Hagen"
-  type: invitation
-  signifier: "🎤⚡"
-  status: living
-  field: "Punk / new-wave music, operatic multi-octave voice, taboo-breaking TV & performance, anti-censorship provocation"
-  home: characters/nina-hagen/
+id: nina-hagen
+name: "Nina Hagen"
+type: person
+layer: dream_guest
+signifier: "👤"
+emoji: "🎤⚡"
+status: living
+real_being: true
+field: "Punk / new-wave music, operatic multi-octave voice, taboo-breaking TV & performance, anti-censorship provocation"
+home: characters/nina-hagen/
 
 representation:
   public_figure: true

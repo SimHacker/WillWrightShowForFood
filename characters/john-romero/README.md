@@ -34,7 +34,7 @@ audio from BBC. First-pass analysis notes ready; public characters + invitation 
 
 ## Invitation status
 
-`not_yet_asked` — warm outreach when Don/Will ready. [Portrayal standards](../../schemas/portrayal-standards.md).
+`not_asked` — warm outreach when Don/Will ready. [Portrayal standards](../../schemas/portrayal-standards.md).
 
 ## See also
 

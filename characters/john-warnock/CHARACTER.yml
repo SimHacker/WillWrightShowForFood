@@ -2,17 +2,18 @@
 # Died 2023-11-19. Seeded from Yoot People.md + Utah/Kay orbit.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: john-warnock
-  name: "John Warnock"
-  full_name: "John Edward Warnock"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1940-10-06"
-  died: "2023-11-19"
-  field: "Computer graphics / typography — Utah PhD; Xerox PARC; PostScript; co-founder Adobe"
-  home: characters/john-warnock/
+id: john-warnock
+name: "John Warnock"
+full_name: "John Edward Warnock"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1940-10-06"
+died: "2023-11-19"
+field: "Computer graphics / typography — Utah PhD; Xerox PARC; PostScript; co-founder Adobe"
+home: characters/john-warnock/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

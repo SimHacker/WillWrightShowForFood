@@ -2,7 +2,7 @@
 status: draft
 character_id: ian-bogost
 public: true
-consent: not_yet_asked
+consent: asked
 show_seed: repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
 format: remote_or_async
 ---

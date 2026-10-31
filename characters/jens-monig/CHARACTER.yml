@@ -1,14 +1,16 @@
 # Jens Mönig — invitation portrayal. NOT Jens Mönig.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jens-monig
-  name: "Jens Mönig"
-  type: invitation
-  signifier: "🧩"
-  status: living
-  field: "Visual/block programming languages; architect + lead programmer of Snap! (Build Your Own Blocks). Morphic.js. Research Expert at SAP; consultant at UC Berkeley."
-  home: characters/jens-monig/
+id: jens-monig
+name: "Jens Mönig"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧩"
+status: living
+real_being: true
+field: "Visual/block programming languages; architect + lead programmer of Snap! (Build Your Own Blocks). Morphic.js. Research Expert at SAP; consultant at UC Berkeley."
+home: characters/jens-monig/
 
 representation:
   public_figure: true

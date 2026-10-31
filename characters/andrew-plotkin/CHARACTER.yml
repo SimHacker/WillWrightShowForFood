@@ -1,15 +1,16 @@
 # Andrew Plotkin — invitation portrayal. NOT Andrew Plotkin.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: andrew-plotkin
-  name: "Andrew Plotkin"
-  aka: "Zarf"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Interactive fiction — author (Spider and Web, Hadean Lands) and infrastructure architect (Glulx VM, Glk, Blorb); IFTF co-founder; Zarf of 1989 CMU TinyMUD"
-  home: characters/andrew-plotkin/
+id: andrew-plotkin
+name: "Andrew Plotkin"
+aka: "Zarf"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Interactive fiction — author (Spider and Web, Hadean Lands) and infrastructure architect (Glulx VM, Glk, Blorb); IFTF co-founder; Zarf of 1989 CMU TinyMUD"
+home: characters/andrew-plotkin/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

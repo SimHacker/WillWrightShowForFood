@@ -6,7 +6,7 @@
 meta:
   with: david-rosenthal
   curated_by: don-hopkins
-  consent: not_yet_asked
+  consent: not_asked
   span: "2026-07 — PIXIE invitation, Hex draft, MOOLLM demo readings, Lem/BioShocking HN thread"
   human_readable: correspondence.md
 
@@ -94,7 +94,7 @@ threads:
       David's LOCKSS co-founder & 2025 Paul Evan Peters co-awardee Victoria 'Vicky' Reich was
       Mark Weiser's widow — the man who coined ubiquitous computing after Ubik. Don would love to
       have both David and Vicky (she has her own body of work); it's David and Vicky's call,
-      together. Warm standing invitation, not_yet_asked.
+      together. Warm standing invitation, not_asked.
     primary_source: "Don was Weiser's UMD student & friend; heard the Ubik influence from Mark directly."
 
     artifact: ../mark-weiser/pkd-lem-ai-sf.md

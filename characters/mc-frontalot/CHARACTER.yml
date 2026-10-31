@@ -1,15 +1,17 @@
 # MC Frontalot — invitation portrayal. NOT MC Frontalot.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: mc-frontalot
-  name: "MC Frontalot"
-  legal_name: "Damian Hess"
-  type: invitation
-  signifier: "🎙🕯"
-  status: living
-  field: "Nerdcore hip-hop; interactive music videos; Infocom / RPG lyricism"
-  home: characters/mc-frontalot/
+id: mc-frontalot
+name: "MC Frontalot"
+legal_name: "Damian Hess"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎙🕯"
+status: living
+real_being: true
+field: "Nerdcore hip-hop; interactive music videos; Infocom / RPG lyricism"
+home: characters/mc-frontalot/
 
 representation:
   public_figure: true

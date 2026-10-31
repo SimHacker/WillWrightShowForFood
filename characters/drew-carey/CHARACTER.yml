@@ -2,14 +2,16 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Public-figure sketch, consent not yet requested. Represent + discuss only; no invented quotes.
 
-character:
-  id: drew-carey
-  name: "Drew Carey"
-  type: invitation
-  signifier: "🎟️"
-  status: living
-  field: "Comedian, improviser, game-show host — and a genuine part of The Sims' own mythology"
-  home: characters/drew-carey/
+id: drew-carey
+name: "Drew Carey"
+type: person
+layer: dream_guest
+signifier: "👤"
+emoji: "🎟️"
+status: living
+real_being: true
+field: "Comedian, improviser, game-show host — and a genuine part of The Sims' own mythology"
+home: characters/drew-carey/
 
 representation:
   public_figure: true

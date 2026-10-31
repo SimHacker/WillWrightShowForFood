@@ -7,9 +7,56 @@ in a git repo, built by CI and deployed. The LIVE CODING panel, variants and pen
 in DESIGN.md. How cartridges compare with microM8's microPAK and other emulators' formats, and how
 they nest, is in [UPCYCLING-FORMATS.md](UPCYCLING-FORMATS.md).
 
-Today a cartridge is an object in
-[`cabinet-programs.js`](../../apps/ties/src/lib/cabinet-programs.js) with its loading written as
-code. Every one of them already does one of the things below by hand:
+## The goal: the package is not the emulator
+
+A cartridge defines what to run: the machine it needs, the media, sources, symbols and patches,
+how to build and load it, its devices and settings, and the help and views around it. An emulator
+is one way to run it. The two are kept separate so that the same cartridge can run in the cabinet,
+in SIMH, in microM8 natively or compiled to WebAssembly, or in an emulator nobody has written yet,
+and so that it outlives any of them.
+
+- **The model: the Internet Archive.** Its software library already has three layers: the
+  content is an archive item (a disk or tape image), the emulators are separate (MAME, DOSBox and
+  others compiled for the browser, started by the Emularity loader), and a few metadata fields on
+  the item connect them. For example, the 1980 MECC disk *Elementary Volume 2*
+  ([item](https://archive.org/details/a2woz_A-703_Elementary_Volume_2_1980_MECC_v3.1)) says
+  `emulator: apple2woz` and `emulator_ext: woz`. The item doesn't contain the emulator, and the
+  emulator doesn't contain the item. The cabinet's cartridge is the same idea, with a richer
+  description of the content: sources, symbols, builds, views and help, not only the image. A
+  cartridge should be able to live in the Archive as an item
+  ([PRESERVATION.md](PRESERVATION.md)), and [Jason Scott](../../characters/jason-scott/README.md),
+  who proposed JSMESS in 2011 and recruited the people who built the Archive's in-browser
+  emulation, is the person to ask what metadata it should carry.
+- **Why.** Emulators come and go, and a program's preservation shouldn't depend on one of them.
+  Each emulator already has its own package format: microM8's microPAK, SIMH's `.ini` scripts,
+  MAME's software lists. Writing a program up once, and letting each emulator read what applies
+  to it, means writing it up only once. It also lets museums and archives keep the package
+  without keeping our code ([FOR-MUSEUMS.md](FOR-MUSEUMS.md)).
+- **How: endosymbiosis.** Borrowed from MOOLLM's
+  [character endosymbiosis](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/CHARACTER-ENDOSYMBIOSIS.md),
+  after Lynn Margulis: a complex cell keeps once-independent organisms alive inside it, each
+  with its own DNA. The cartridge is the cell. Everything specific to one emulator lives inside
+  it as that emulator's organelle, a folder that keeps its own format and is never flattened
+  into a shared schema:
+  - **configuration**: microM8's `.cfg` files, SIMH's `.ini` script, MAME's software-list entry;
+  - **plumbing**: how that emulator attaches the media, boots, maps keys and connects devices;
+  - **code**: microM8's Applesoft control programs, a SIMH do-file, the cabinet's per-program
+    helpers such as the SIGWINCH handler that finds Forth's constant.
+
+  `cartridge.yml` is the membrane. It describes the program in neutral terms and says which
+  neutral fields each organelle translates to, so a tool can carry a setting from one
+  emulator's organelle to another's without either losing its original. An emulator takes the
+  neutral part and its own organelle and ignores the rest, and any organelle can be lifted out
+  whole and run by its emulator alone. The layout and the rules are in
+  [UPCYCLING-FORMATS.md](UPCYCLING-FORMATS.md#organelles-nesting-without-flattening).
+- **Done.** Not yet. Today a cartridge is a JavaScript object in
+  [`cabinet-programs.js`](../../apps/ties/src/lib/cabinet-programs.js), with its loading written
+  as code for the cabinet only.
+- **Planned.** The directory format below, with `cartridge.yml`; loaders in the cabinet that read
+  it instead of code; then a second runner reading the same cartridges, SIMH first since it is
+  already the cabinet's oracle, and microM8 for the Apple ][.
+
+Every cartridge in `cabinet-programs.js` already does one of the things below by hand:
 
 | Today | Does | Becomes |
 |---|---|---|
@@ -30,6 +77,9 @@ tapes/forth-flowers/
 ```
 
 `cartridge.yml` lists **resources** and **build steps**, and refers to everything else by path.
+What it says should make sense to any emulator of the machine. Anything only one emulator can
+use goes in that emulator's organelle folder (`cabinet/`, `simh/`, `micropak/`), as described in
+[the goal](#the-goal-the-package-is-not-the-emulator) above.
 The design target is broader: the cartridge also declares the machine configuration—CPU,
 memory, devices, ports, mappings, timing, interrupts, and host-facing adapters. Today the
 cartridges are still JavaScript objects in `cabinet-programs.js`; the YAML below is a sketch of

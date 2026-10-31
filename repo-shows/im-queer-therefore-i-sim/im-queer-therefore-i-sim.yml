@@ -76,7 +76,7 @@ solidarity:
 invitation:
   path: characters/alexander-avila/invitation.md
   priority: send_now
-  consent: not_yet_asked
+  consent: not_asked
   also_in: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
 
 evidence:

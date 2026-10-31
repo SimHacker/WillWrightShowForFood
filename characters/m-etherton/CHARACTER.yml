@@ -1,16 +1,19 @@
 # M. Etherton — storyline figure portrayal. NOT M. Etherton.
 # Status UNKNOWN (living/passed unconfirmed). Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: m-etherton
-  name: "M. Etherton"
-  full_name: "M. Etherton"   # given name not yet confirmed
-  type: storyline_figure
-  signifier: "🖥️"
-  status: unknown              # living/passed not yet confirmed — do NOT assume memorial or invite
-  field: "Computer-aided design / computer graphics — University of Cambridge Mathematical Laboratory (early 1970s)"
-  home: characters/m-etherton/
-  affiliation: "University of Cambridge Mathematical Laboratory (per RAINBOW 1972 paper)"
+id: m-etherton
+name: "M. Etherton"
+full_name: "M. Etherton"   # given name not yet confirmed
+type: person
+show_role: storyline_figure
+layer: profile
+signifier: "👤"
+emoji: "🖥️"
+# living/passed not yet confirmed — do NOT assume memorial or invite
+real_being: true
+field: "Computer-aided design / computer graphics — University of Cambridge Mathematical Laboratory (early 1970s)"
+home: characters/m-etherton/
+affiliation: "University of Cambridge Mathematical Laboratory (per RAINBOW 1972 paper)"
 
 representation:
   public_figure: true

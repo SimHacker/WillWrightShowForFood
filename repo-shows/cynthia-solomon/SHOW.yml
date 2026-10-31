@@ -10,7 +10,7 @@ show:
   character: characters/cynthia-solomon/
   topic: "A guided screening + conversation through Cynthia Solomon's rare video archive — the birth of Logo, the MIT Logo culture, and the Atari Cambridge children's-computer research — narrated by one of Logo's original designers."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_her:
   logo_origin: "A founding designer of Logo (BBN, 1967, with Feurzeig, Papert, Bobrow, Grant) and central to the MIT Logo Group from 1969 — the source of turtle graphics and constructionist learning."

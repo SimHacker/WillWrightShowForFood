@@ -1,20 +1,23 @@
 # Ivan Sutherland — hero portrayal (cite, do not impersonate). NOT Ivan Sutherland.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ivan-sutherland
-  name: "Ivan Sutherland"
-  full_name: "Ivan Edward Sutherland"
-  type: hero
-  signifier: "✏️"
-  status: living
-  born: "1938-05-16"   # Hastings, Nebraska
-  field: "Computer graphics pioneer — Sketchpad (1963); head-mounted display; Evans & Sutherland; asynchronous circuits"
-  home: characters/ivan-sutherland/
-  affiliation: "MIT Lincoln Lab (TX-2); Harvard; University of Utah; Evans & Sutherland; Caltech; Sun Fellow; Portland State ARC (visiting scientist)"
-  awards:
-    - "ACM A.M. Turing Award (1988) — pioneering computer graphics"
-    - "Kyoto Prize; IEEE von Neumann Medal; ACM Software System Award (Sketchpad)"
+id: ivan-sutherland
+name: "Ivan Sutherland"
+full_name: "Ivan Edward Sutherland"
+type: person
+show_role: hero
+layer: invitation
+signifier: "👤"
+emoji: "✏️"
+status: living
+real_being: true
+born: "1938-05-16"   # Hastings, Nebraska
+field: "Computer graphics pioneer — Sketchpad (1963); head-mounted display; Evans & Sutherland; asynchronous circuits"
+home: characters/ivan-sutherland/
+affiliation: "MIT Lincoln Lab (TX-2); Harvard; University of Utah; Evans & Sutherland; Caltech; Sun Fellow; Portland State ARC (visiting scientist)"
+awards:
+  - "ACM A.M. Turing Award (1988) — pioneering computer graphics"
+  - "Kyoto Prize; IEEE von Neumann Medal; ACM Software System Award (Sketchpad)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

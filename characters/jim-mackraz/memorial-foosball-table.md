@@ -33,7 +33,7 @@ the memorial plaque as fact until Jim Mackraz shows up:
 >
 > **Jim Mackraz** — *"Save it for a special occasion?"*
 >
-> **Eric Lennon Bowman** ([room](../eric-bowman/)) — *"Rest In Peace, dude"*
+> **[Eric Lennon Bowman](../eric-bowman/)** — *"Rest In Peace, dude"*
 >
 > **Jim Mackraz** — *"Jim's FAMILY?"*
 >
@@ -55,7 +55,7 @@ the memorial plaque as fact until Jim Mackraz shows up:
 >
 > **Jim Mackraz** — *"Bradford Smith I obviously should have been creating my brand."*
 >
-> **Eric Irk Hedman** ([room](../eric-hedman/)) — *"Bradford Smith he was always **part of the
+> **[Eric Irk Hedman](../eric-hedman/)** — *"Bradford Smith he was always **part of the
 > solution and never part of the problem.** (TM) and then he was taken from us… his name lost to
 > history until this table was unearthed in far away Al Ameda"*
 >

@@ -1,11 +1,13 @@
-character:
-  id: phil-budne
-  name: "Philip L. Budne"
-  type: invitation
-  signifier: "🖥️"
-  status: living
-  field: "Unix systems programming, computer emulation, languages, and networking"
-  home: characters/phil-budne/
+id: phil-budne
+name: "Philip L. Budne"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🖥️"
+status: living
+real_being: true
+field: "Unix systems programming, computer emulation, languages, and networking"
+home: characters/phil-budne/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

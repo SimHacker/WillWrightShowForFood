@@ -226,7 +226,7 @@ abilities:
   - VIDEO-TREASURE-TROVE
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: asked
   simulation: false
 see_also:
 - path: CHARACTER.yml

@@ -24,7 +24,6 @@ lifecycle:
 
 graduation:
   authored_by: don-hopkins
-  consent: self_sovereign_fictional
   portrayal_tier: game_and_fictional
   rule: |
     NOT real people. Always labeled fictional gallery patrons. OK to simulate per

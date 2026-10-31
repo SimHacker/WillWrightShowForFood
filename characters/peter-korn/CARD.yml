@@ -25,7 +25,7 @@ abilities:
     effect: A screen reader on the living-room TV.
     verifiable: "Amazon Devices; https://www.ces.tech/speakers/peter-korn/"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

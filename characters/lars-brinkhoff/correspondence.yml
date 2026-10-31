@@ -5,7 +5,7 @@
 meta:
   with: lars-brinkhoff
   curated_by: don-hopkins
-  consent: not_yet_asked
+  consent: not_asked
   span: "2017-12 — ITS, Type 340, RFI, Emacs, Logo; 2026-07 — PIXIE Repo Show invitation response"
   provenance: private correspondence with Don (not public)
   human_readable: correspondence.md

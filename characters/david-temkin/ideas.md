@@ -4,7 +4,7 @@
 public work and documented connections to this repository. Things Don would love to follow
 **with** David Temkin (and Henry Minsky, Oliver Steele, the LinkedIn Laszlo Cc list); not
 quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_asked
 
 ## What David has done
 

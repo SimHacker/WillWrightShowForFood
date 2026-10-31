@@ -75,13 +75,30 @@ control programs); keeps presets in YAML; and has a scriptable command line that
 without booting a DOS disk. microPAK is the nearest thing anywhere to the cabinet's cartridge.
 ([features](https://paleotronic.com/software/microm8/features/))
 
-**Decision: borrow, don't write.** The cabinet's backplane wants a CPU plugin and devices on a
-bus; a 6502 is a CPU plugin. Take `cpu6502` from apple2js as the Apple's CPU behind our `Cpu`
-interface, and read Apple2TS for the Apple's soft switches, video and game port. Then the Apple
-][ joins the cabinet's machines with our panels (memory, trace, source maps, the pointer as an
-input device), and ROADMAP §13's mash-ups (the keyset and the glove as Apple paddles) have a
-machine to run on. Credit both in the UI and in the source headers. ROMs are Apple's: load them
-from the user, as both projects do, never commit them.
+**Decision: use microM8, compiled to WebAssembly.** microM8 is the cabinet's inspiration and is
+now MIT-licensed, so the cabinet's Apple ][ will be microM8's own emulator rather than a new one.
+The plan: build its Go core (the 6502 is `paleotronic.com/core/hardware/cpu/mos6502`; the Apple
+][ hardware is under `paleotronic.com/core/hardware`) with `GOOS=js GOARCH=wasm`, and put it
+behind the backplane's `Cpu` interface and memory map. Not done yet, and not known yet: the
+microm8-cln repo has no browser build script (only WebAssembly variants of a few vendored
+libraries), its desktop renderer and audio will need replacing with the cabinet's panels, and
+Paleotronic's WebAssembly subset, cyanIIde, may show which parts already build. Ask April first;
+she wrote it ([emulation roundtable](../../repo-shows/emulation-roundtable/README.md)).
+
+We have done this kind of integration before.
+[MicropolisCore](https://github.com/SimHacker/MicropolisCore) compiles SimCity's C++ simulation
+to WebAssembly with Emscripten and Embind and drives it from a TypeScript web front end: the
+simulation stays in its original language, and the web side reads its memory and calls its
+entry points. microM8 follows the same split: the emulator stays in Go, and the cabinet's panels
+are the front end. One difference: Go's WebAssembly target ships the Go runtime and talks to
+JavaScript through `syscall/js`, where Emscripten and Embind generate bindings, so the size of
+the build and the cost of calls across the boundary have to be measured, not assumed.
+
+Then the Apple ][ joins the cabinet's machines with our panels (memory, trace, source maps, the
+pointer as an input device), and ROADMAP §13's mash-ups (the keyset and the glove as Apple
+paddles) have a machine to run on. apple2js and Apple2TS stay as references and as a fallback 6502
+in TypeScript if the WebAssembly build stalls. Credit microM8 in the UI and in the source headers.
+ROMs are Apple's: load them from the user, as microM8 and the others do, never commit them.
 
 **Phosphor, borrowed:**
 

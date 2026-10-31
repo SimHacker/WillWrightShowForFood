@@ -1,14 +1,16 @@
 # Craig Latta — invitation portrayal. NOT Craig Latta.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: craig-latta
-  name: "Craig Latta"
-  type: invitation
-  signifier: "🎚️"
-  status: living
-  field: "Livecoding the web — Caffeine (SqueakJS + WebAssembly), Context Smalltalk, Catalyst; Keep whiteroom port to Smalltalk (agentic graph memory); Black Page Digital, Amsterdam/Berkeley"
-  home: characters/craig-latta/
+id: craig-latta
+name: "Craig Latta"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎚️"
+status: living
+real_being: true
+field: "Livecoding the web — Caffeine (SqueakJS + WebAssembly), Context Smalltalk, Catalyst; Keep whiteroom port to Smalltalk (agentic graph memory); Black Page Digital, Amsterdam/Berkeley"
+home: characters/craig-latta/
 
 representation:
   public_figure: true

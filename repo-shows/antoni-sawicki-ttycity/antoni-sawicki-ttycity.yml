@@ -8,7 +8,7 @@ show:
   guest: antoni-sawicki
   guest_room: ../../characters/antoni-sawicki/
   repo_to_show: https://github.com/tenox7/ttycity
-  consent: not_yet_asked
+  consent: not_asked
   interview_planned: true
 
 correspondence_jul_2026:

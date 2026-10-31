@@ -1,12 +1,11 @@
 # Red spider — SimAnt fictional audience
 
-character:
-  name: Red Spider (SimAnt)
-  type: fictional_game_character
-  real_being: false
-  signifier: "🕷️"
-  home: repo-shows/will-wright-premiere/audience/fictional-simant-red-spider/
-  origin: "SimAnt (1991) — antagonist colony; web in the house"
+name: Red Spider (SimAnt)
+type: fictional_game_character
+real_being: false
+signifier: "🕷️"
+home: repo-shows/will-wright-premiere/audience/fictional-simant-red-spider/
+origin: "SimAnt (1991) — antagonist colony; web in the house"
 
 representation:
   fictional: true

@@ -1,16 +1,18 @@
 # April Ayres-Griffiths — invitation portrayal. NOT April Ayres-Griffiths.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: april-ayres-griffiths
-  name: "April Ayres-Griffiths"
-  type: invitation
-  signifier: "🌈"
-  status: living
-  field: >-
-    Emulation and languages: designed and programmed microM8 (Apple ][ emulator, Go) and tapDancer; co-developer of turtleSpaces; technical director, Paleotronic
-  home: characters/april-ayres-griffiths/
-  github: undefinedopcode
+id: april-ayres-griffiths
+name: "April Ayres-Griffiths"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌈"
+status: living
+real_being: true
+field: >-
+  Emulation and languages: designed and programmed microM8 (Apple ][ emulator, Go) and tapDancer; co-developer of turtleSpaces; technical director, Paleotronic
+home: characters/april-ayres-griffiths/
+github: undefinedopcode
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

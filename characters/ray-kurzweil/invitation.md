@@ -1,7 +1,7 @@
 ---
 status: draft
 character_id: ray-kurzweil
-consent: not_yet_asked
+consent: not_asked
 channel: facebook
 show_seed: repo-shows/ray-kurzweil.yml
 ---

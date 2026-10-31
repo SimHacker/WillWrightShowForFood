@@ -26,7 +26,7 @@ abilities:
     effect: Universal access to knowledge, from Wikimedia to public AI.
     verifiable: "https://cyber.harvard.edu/people/sklein"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

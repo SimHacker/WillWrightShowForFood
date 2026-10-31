@@ -1,7 +1,7 @@
 # Window-systems lineage — David S. H. Rosenthal
 
 David's lived arc from Cambridge stack to NeWS **and** X11 — not Don's lecture.  
-Machine index: [`window-systems-lineage.yml`](window-systems-lineage.yml) · **Consent:** `not_yet_asked`
+Machine index: [`window-systems-lineage.yml`](window-systems-lineage.yml) · **Consent:** `not_asked`
 
 **Shows:** [PIXIE trio](../../repo-shows/pixie-pie-menus-pdp7/README.md) · [DSHR solo](../../repo-shows/david-rosenthal/README.md)
 

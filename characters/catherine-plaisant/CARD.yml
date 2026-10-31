@@ -31,7 +31,7 @@ abilities:
     verifiable: "Hypermedia 3(2), 1991; HCIL-90-02"
     combos_with: [BEN-DIRECT-MANIPULATION, DON-PIE-MENU]
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

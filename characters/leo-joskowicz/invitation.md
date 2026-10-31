@@ -1,7 +1,7 @@
 ---
 status: draft
 character_id: leo-joskowicz
-consent: not_yet_asked
+consent: not_asked
 show_seeds:
   - repo-shows/pixie-pie-menus-pdp7.yml
 ---

@@ -18,8 +18,8 @@ show:
     readable, and what forty-five years of this taught them.
   status: seed
   consent:
-    roger: not_addressed      # replied 14 Sep 2026 about the work; the show was never raised
-    ted: not_yet_asked
+    roger: asked             # replied 14 Sep 2026 about the work; the show was never raised
+    ted: not_asked
     will: standing_yes_to_the_series   # not yet asked about this episode
   urgency: |
     Time-sensitive in a way no other seed here is. The release has not happened yet, so the

@@ -1,13 +1,15 @@
 # Scott Hanselman — invitation portrayal. NOT Scott Hanselman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: scott-hanselman
-  name: "Scott Hanselman"
-  type: invitation
-  status: living
-  field: "VP, Member of Technical Staff, Microsoft/GitHub — Open Source, Windows, developer education"
-  home: characters/scott-hanselman/
+id: scott-hanselman
+name: "Scott Hanselman"
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "VP, Member of Technical Staff, Microsoft/GitHub — Open Source, Windows, developer education"
+home: characters/scott-hanselman/
 
 representation:
   public_figure: true

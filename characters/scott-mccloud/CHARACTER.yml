@@ -1,14 +1,16 @@
 # Scott McCloud — invitation portrayal. NOT Scott McCloud.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: scott-mccloud
-  name: "Scott McCloud"
-  type: invitation
-  signifier: "💭"
-  status: living
-  field: "Cartoonist & comics theorist — Understanding Comics; closure, masking, the space between the panels"
-  home: characters/scott-mccloud/
+id: scott-mccloud
+name: "Scott McCloud"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "💭"
+status: living
+real_being: true
+field: "Cartoonist & comics theorist — Understanding Comics; closure, masking, the space between the panels"
+home: characters/scott-mccloud/
 
 representation:
   public_figure: true

@@ -1,14 +1,16 @@
 # Syd Mac — portrayal. NOT Syd.
 # Consent level 3 — public figure; not yet asked. Verify primary posts before quoting.
 
-character:
-  id: syd-mac
-  name: Syd Mac
-  type: invitation
-  signifier: "🎬📺"
-  status: living
-  field: "Sims YouTuber; EA Creator Network resigner Oct 2025"
-  home: characters/syd-mac/
+id: syd-mac
+name: Syd Mac
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎬📺"
+status: living
+real_being: true
+field: "Sims YouTuber; EA Creator Network resigner Oct 2025"
+home: characters/syd-mac/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

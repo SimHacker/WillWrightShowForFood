@@ -1,6 +1,6 @@
 # Leo Joskowicz — public profile digest
 
-**Sources:** [Wikipedia](https://en.wikipedia.org/wiki/Leo_Joskowicz) ·
+**Sources:** [Wikipedia: Leo Joskowicz](https://en.wikipedia.org/wiki/Leo_Joskowicz) ·
 [ELSC faculty page](https://elsc.huji.ac.il/people-directory/faculty-members/leo-joskowicz/) ·
 [HUJI CV PDF](https://www.cs.huji.ac.il/~josko/publications/joskowicz-leo-cv-full.pdf) (updated Oct 2025)
 

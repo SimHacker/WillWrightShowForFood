@@ -35,7 +35,7 @@ abilities:
       - janet_outreach_status: draft_not_sent
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 
 see_also:

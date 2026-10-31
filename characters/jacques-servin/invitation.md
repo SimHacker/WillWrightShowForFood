@@ -2,7 +2,7 @@
 status: draft
 character_id: jacques-servin
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/simcopter-himbos/simcopter-himbos.yml
 also_in:
   - repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml

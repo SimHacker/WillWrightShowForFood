@@ -1,14 +1,16 @@
 # Josh Siegel — invitation portrayal. NOT Josh Siegel.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: josh-siegel
-  name: "Josh Siegel"
-  type: invitation
-  signifier: "📜🪟🏍️"
-  status: living
-  field: "NeWS PostScript interpreter rewrite (Sun); LANL NeWS war-game front ends (LGATE-SDI, MPM); owm/Open Window Manager with Don; General Magic Magic Cap"
-  home: characters/josh-siegel/
+id: josh-siegel
+name: "Josh Siegel"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📜🪟🏍️"
+status: living
+real_being: true
+field: "NeWS PostScript interpreter rewrite (Sun); LANL NeWS war-game front ends (LGATE-SDI, MPM); owm/Open Window Manager with Don; General Magic Magic Cap"
+home: characters/josh-siegel/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

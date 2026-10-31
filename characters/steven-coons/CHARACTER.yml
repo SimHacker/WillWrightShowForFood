@@ -1,17 +1,18 @@
 # Steven Anson Coons — memorial. NOT Steven Coons.
 # Coons patches — Utah / Armit / Kay lane. Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: steven-coons
-  name: "Steven Coons"
-  full_name: "Steven Anson Coons"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1912"
-  died: "1979-08"
-  field: "CAD / surfaces — Coons patches; MIT; foundational for Utah interactive 3D"
-  home: characters/steven-coons/
+id: steven-coons
+name: "Steven Coons"
+full_name: "Steven Anson Coons"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1912"
+died: "1979-08"
+field: "CAD / surfaces — Coons patches; MIT; foundational for Utah interactive 3D"
+home: characters/steven-coons/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

@@ -1,15 +1,16 @@
 # Isabella Struckman — invitation portrayal. NOT Isabella Struckman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: isabella-struckman
-  name: "Isabella Struckman"
-  type: invitation
-  signifier: "👤"
-  status: living
-  pronouns: "she/her"
-  field: "AI/ML researcher — computer-vision model evaluation & training (Leela AI); ML explainability & AI policy (MIT CSAIL, Mądry Lab)"
-  home: characters/isabella-struckman/
+id: isabella-struckman
+name: "Isabella Struckman"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+pronouns: "she/her"
+field: "AI/ML researcher — computer-vision model evaluation & training (Leela AI); ML explainability & AI policy (MIT CSAIL, Mądry Lab)"
+home: characters/isabella-struckman/
 
 representation:
   public_figure: true

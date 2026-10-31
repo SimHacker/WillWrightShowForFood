@@ -26,8 +26,7 @@ Programmers **Jim Turner** and **Jim Woodlee** ran a brown-bag seminar series so
 *"fill their minds and nourish careers on their own."* Recorded speakers and topics:
 
 - **"So You Want To Be A Programmer"** (15 Jan) — **Kevin "Scooter" O'Hare**, who worked his way up
-  from Maxis Customer Service through QA into programming, and **Jason Shankel**
-  ([room](../../../jason-shankel/)), who got his degree at UC Berkeley
+  from Maxis Customer Service through QA into programming, and **[Jason Shankel](../../../jason-shankel/)**, who got his degree at UC Berkeley
 - **"Game Design Techniques"** (26 Feb) — **Will Wright** with **Heather Mace** of Living Legend.
   Will practices *"organic"* game design, starting from a basic concept and building on it; Heather
   believes in *"structured"* design — planning, storyboarding, *"front loading"* the process.
@@ -56,7 +55,7 @@ Hiring dates, useful for dating anything else in the archive:
 | Myka Macaraeg | QA Technician I | 1/15/96 |
 | **Paul Pedriana** | Programmer II | 1/15/96 |
 | Peter Saylor | QA Technician II | 1/15/96 |
-| **Jerry Martin** ([room](../../../jerry-martin/)) | **Senior Composer/Sound Designer** | **1/17/96** |
+| **[Jerry Martin](../../../jerry-martin/)** | **Senior Composer/Sound Designer** | **1/17/96** |
 | Joleen Cole | Executive Assistant, Marketing | 1/22/96 |
 | Kevin Brown | Programmer III | 1/22/96 |
 
@@ -83,8 +82,8 @@ Bryan's bio contains the only org-chart fact in the issue, delivered as an insul
 simulator he was working on the year this newsletter was printed. Andy Larson and Chris Weiss have
 no rooms here yet.
 
-Under **Other Announcements**: *"On 3:30 p.m., February 6, Core Technology Group Manager **Jim
-Mackraz** ([room](../../../jim-mackraz/)) became a proud papa to a baby girl, 19½ inches and 6½
+Under **Other Announcements**: *"On 3:30 p.m., February 6, Core Technology Group Manager
+**[Jim Mackraz](../../../jim-mackraz/)** became a proud papa to a baby girl, 19½ inches and 6½
 pounds with blue eyes. Wife Barb and baby doing fine."* — which also records his 1996 **title**.
 
 ### "My How We've Grown!"

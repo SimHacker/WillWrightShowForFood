@@ -1,17 +1,18 @@
 # ole-johan-dahl — memorial. NOT the person.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ole-johan-dahl
-  name: "Ole-Johan Dahl"
-  full_name: "Ole-Johan Dahl"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1931-10-12"
-  died: "2002-06-29"
-  field: "Programming languages — Simula (with Kristen Nygaard); Turing Award 2001"
-  home: characters/ole-johan-dahl/
+id: ole-johan-dahl
+name: "Ole-Johan Dahl"
+full_name: "Ole-Johan Dahl"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1931-10-12"
+died: "2002-06-29"
+field: "Programming languages — Simula (with Kristen Nygaard); Turing Award 2001"
+home: characters/ole-johan-dahl/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

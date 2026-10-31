@@ -26,7 +26,7 @@ abilities:
     effect: Program thousands of processors at once.
     verifiable: "Thinking Machines, late 1980s"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

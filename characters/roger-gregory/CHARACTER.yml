@@ -1,20 +1,24 @@
 # Roger Gregory — invitation portrayal. NOT Roger Gregory.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: roger-gregory
-  name: "Roger Gregory"
-  type: invitation
-  signifier: "🔢"
-  status: living
-  field: "Project Xanadu implementation — tumblers (transfinite addressing) with Mark Miller, the Autodesk-era codebase, Xanadu Operating Company; Ann Arbor Computer Club; rotary rocket engine design"
-  home: characters/roger-gregory/
+id: roger-gregory
+name: "Roger Gregory"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔢"
+status: living
+real_being: true
+field: "Project Xanadu implementation — tumblers (transfinite addressing) with Mark Miller, the Autodesk-era codebase, Xanadu Operating Company; Ann Arbor Computer Club; rotary rocket engine design"
+home: characters/roger-gregory/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
   public_figure: true
   consent:
-    state: not_asked
+    state: asked
+    date: 2026-09-13
+    note: "Invitation sent. He replied about the work and said nothing about the show."
   authored_by: don-hopkins
 
 invitation:

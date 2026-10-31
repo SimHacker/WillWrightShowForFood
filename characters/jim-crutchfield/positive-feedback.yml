@@ -95,7 +95,7 @@ show_beats:
 
 consent:
   # Jim has not been asked. This is a portrayal, not his words.
-  status: not_yet_asked
+  status: not_asked
   governed_by: ../../schemas/portrayal-standards.md
   subject_rights: correction_edit_or_deletion_anytime
 

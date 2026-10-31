@@ -1,14 +1,16 @@
 # Cyrus Shaoul — invitation portrayal. NOT Cyrus Shaoul.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: cyrus-shaoul
-  name: "Cyrus Shaoul"
-  type: invitation
-  signifier: "🏭🧠🇯🇵"
-  status: living
-  field: "Co-founder & Chief Customer Officer, Leela AI — visual intelligence for manufacturing; computational cognitive modeling; Japan internet pioneer (Digital Garage / Eccosys)"
-  home: characters/cyrus-shaoul/
+id: cyrus-shaoul
+name: "Cyrus Shaoul"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🏭🧠🇯🇵"
+status: living
+real_being: true
+field: "Co-founder & Chief Customer Officer, Leela AI — visual intelligence for manufacturing; computational cognitive modeling; Japan internet pioneer (Digital Garage / Eccosys)"
+home: characters/cyrus-shaoul/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

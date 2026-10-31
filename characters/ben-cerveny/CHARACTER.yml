@@ -1,14 +1,15 @@
 # Ben Cerveny — invitation portrayal. NOT Ben Cerveny.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ben-cerveny
-  name: "Ben Cerveny"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Strategist, designer, public code & digital public infrastructure; Game Neverending / Flickr; Stamen; Foundation for Public Code (Amsterdam)"
-  home: characters/ben-cerveny/
+id: ben-cerveny
+name: "Ben Cerveny"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Strategist, designer, public code & digital public infrastructure; Game Neverending / Flickr; Stamen; Foundation for Public Code (Amsterdam)"
+home: characters/ben-cerveny/
 
 representation:
   public_figure: true

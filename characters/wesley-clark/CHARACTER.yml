@@ -2,17 +2,18 @@
 # Died 2016. Seeded from Yoot People.md + Alan Kay Wes Clark digests.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: wesley-clark
-  name: "Wesley A. Clark"
-  also_known_as: ["Wes Clark", "Wesley Clark"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1927-04-10"
-  died: "2016-02-22"
-  field: "LINC (1962) — early personal computer; TX-2; MIT Lincoln Lab / Washington University"
-  home: characters/wesley-clark/
+id: wesley-clark
+name: "Wesley A. Clark"
+also_known_as: ["Wes Clark", "Wesley Clark"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1927-04-10"
+died: "2016-02-22"
+field: "LINC (1962) — early personal computer; TX-2; MIT Lincoln Lab / Washington University"
+home: characters/wesley-clark/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

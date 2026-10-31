@@ -30,7 +30,7 @@ beyond a copy. That is the whole method of the recovery, in one paragraph, befor
 >
 > **Jim Siefert** — *"**Mike Perry**?"* (1 reply)
 >
-> **Mike Perry** ([room](../mike-perry/README.md)) — *"Hey Phil Salvador, can you post a link to
+> **[Mike Perry](../mike-perry/README.md)** — *"Hey Phil Salvador, can you post a link to
 > your interview with John Hiles? I really enjoyed it."*
 >
 > **Phil Salvador** — *"Here was our talk last year. It was really exciting to see how his mind

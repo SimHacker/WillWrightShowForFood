@@ -1,14 +1,16 @@
 # Jim Mackraz — invitation portrayal. NOT Jim Mackraz.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jim-mackraz
-  name: "Jim Mackraz"
-  type: invitation
-  signifier: "🧭"
-  status: living
-  field: "Jim \"Tricky Bit\" Mackraz — CTG team leader on The Sims (Maxis); Will Whisperer"
-  home: characters/jim-mackraz/
+id: jim-mackraz
+name: "Jim Mackraz"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧭"
+status: living
+real_being: true
+field: "Jim \"Tricky Bit\" Mackraz — CTG team leader on The Sims (Maxis); Will Whisperer"
+home: characters/jim-mackraz/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

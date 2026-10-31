@@ -1,18 +1,19 @@
 # Neil Wiseman — memorial portrayal (in memoriam). NOT Neil Wiseman.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: neil-wiseman
-  name: "Neil Wiseman"
-  full_name: "Neil Ernest Wiseman"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1934-05-19"   # Cowlinge, Suffolk, England
-  died: "1995-06-13"   # Cambridge, England (aged 61, cancer)
-  field: "Computer graphics; interactive CAD — Cambridge Computer Laboratory; founder of the Rainbow Group"
-  home: characters/neil-wiseman/
-  affiliation: "University of Cambridge Computer Laboratory — Reader in Computer Graphics (personal Readership, 1986); Fellow of Wolfson College (1983)"
+id: neil-wiseman
+name: "Neil Wiseman"
+full_name: "Neil Ernest Wiseman"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1934-05-19"   # Cowlinge, Suffolk, England
+died: "1995-06-13"   # Cambridge, England (aged 61, cancer)
+field: "Computer graphics; interactive CAD — Cambridge Computer Laboratory; founder of the Rainbow Group"
+home: characters/neil-wiseman/
+affiliation: "University of Cambridge Computer Laboratory — Reader in Computer Graphics (personal Readership, 1986); Fellow of Wolfson College (1983)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

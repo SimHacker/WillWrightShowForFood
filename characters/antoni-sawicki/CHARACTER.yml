@@ -1,15 +1,17 @@
 # Antoni Sawicki (Tenox) — invitation portrayal. NOT Antoni Sawicki.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: antoni-sawicki
-  name: "Antoni Sawicki"
-  aka: Tenox
-  type: invitation
-  signifier: "🖥️🏙️📟"
-  status: living
-  field: "Retrocomputing engineer; terminal and legacy-platform ports; ttycity (Micropolis for terminals); VirtuallyFun"
-  home: characters/antoni-sawicki/
+id: antoni-sawicki
+name: "Antoni Sawicki"
+aka: Tenox
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🖥️🏙️📟"
+status: living
+real_being: true
+field: "Retrocomputing engineer; terminal and legacy-platform ports; ttycity (Micropolis for terminals); VirtuallyFun"
+home: characters/antoni-sawicki/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,15 +1,17 @@
 # Patrick J. Barrett III — invitation portrayal. NOT Patrick Barrett.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: patrick-j-barrett-iii
-  name: "Patrick J. Barrett III"
-  aliases: [Patrick Barrett, Pat Barrett]
-  type: invitation
-  signifier: "💋🏳️‍🌈"
-  status: living
-  field: "Original The Sims programmer — same-sex romantic interactions; implementation + E3 kiss"
-  home: characters/patrick-j-barrett-iii/
+id: patrick-j-barrett-iii
+name: "Patrick J. Barrett III"
+aliases: [Patrick Barrett, Pat Barrett]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "💋🏳️‍🌈"
+status: living
+real_being: true
+field: "Original The Sims programmer — same-sex romantic interactions; implementation + E3 kiss"
+home: characters/patrick-j-barrett-iii/
 
 representation:
   public_figure: true

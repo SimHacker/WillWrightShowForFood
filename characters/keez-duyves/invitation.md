@@ -1,7 +1,7 @@
 ---
 status: draft
 character_id: keez-duyves
-consent: not_yet_asked
+consent: asked
 priority: send_now
 show_seed: repo-shows/keez-duyves/
 channel: Messenger

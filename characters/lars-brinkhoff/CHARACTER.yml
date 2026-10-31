@@ -1,14 +1,16 @@
 # Lars Brinkhoff — invitation portrayal. NOT Lars Brinkhoff.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: lars-brinkhoff
-  name: "Lars Brinkhoff"
-  type: invitation
-  signifier: "🖥️"
-  status: living
-  field: "Software preservationist; PDP-10/ITS restoration lead; Emacs/Lisp/Forth hacker; nocrew.org"
-  home: characters/lars-brinkhoff/
+id: lars-brinkhoff
+name: "Lars Brinkhoff"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🖥️"
+status: living
+real_being: true
+field: "Software preservationist; PDP-10/ITS restoration lead; Emacs/Lisp/Forth hacker; nocrew.org"
+home: characters/lars-brinkhoff/
 
 representation:
   public_figure: true

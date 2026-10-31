@@ -2,7 +2,7 @@
 status: send_now
 character_id: dan-ingalls
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/dan-ingalls/
 memorial_arc: repo-shows/remembering-vanessa-freudenberg.yml
 format: remote_or_in_person

@@ -2,7 +2,7 @@
 status: invited  # sent 2026-07
 character_id: ben-shneiderman
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/ben-shneiderman/
 send_batch: hci-pie-hyperties-2026
 format: remote_or_in_person

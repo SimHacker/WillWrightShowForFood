@@ -1,14 +1,14 @@
 # Slats — audience TicketPR overlay
 # Canonical character: characters/robots/slats/CHARACTER.yml
 
-character:
-  name: Slats
-  type: fictional_bot_audience
-  real_being: false
-  signifier: "🤖"
-  home: repo-shows/will-wright-premiere/audience/bot-slats/
+name: Slats
+type: fictional_bot_audience
+real_being: false
+signifier: "🤖"
+home: repo-shows/will-wright-premiere/audience/bot-slats/
 
-character_ref: ../../../../characters/robots/slats/CHARACTER.yml
+inherits:
+  - ../../../../characters/robots/slats/CHARACTER.yml
 
 representation:
   fictional: true

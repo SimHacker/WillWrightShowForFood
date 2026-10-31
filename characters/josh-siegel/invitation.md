@@ -2,7 +2,7 @@
 status: draft
 character_id: josh-siegel
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
 format: live_or_async
 ---

@@ -13,7 +13,7 @@ show:
   status: warm_contact
   dream_guest: true
   format: remote_or_in_person
-  consent: not_yet_asked
+  consent: not_asked
 
 episode:
   working_title: "Reflecting on Self: Narcissa's Mirror"

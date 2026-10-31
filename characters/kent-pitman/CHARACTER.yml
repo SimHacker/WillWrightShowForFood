@@ -1,14 +1,16 @@
 # Kent Pitman — invitation portrayal. NOT Kent Pitman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: kent-pitman
-  name: "Kent Pitman"
-  type: invitation
-  signifier: "🦥📖"
-  status: living
-  field: "MACLISP / Common Lisp standardization; Pitmanual; ANIMAL & DOCTOR; special forms & fexprs; MIT-AI Lab oral history"
-  home: characters/kent-pitman/
+id: kent-pitman
+name: "Kent Pitman"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🦥📖"
+status: living
+real_being: true
+field: "MACLISP / Common Lisp standardization; Pitmanual; ANIMAL & DOCTOR; special forms & fexprs; MIT-AI Lab oral history"
+home: characters/kent-pitman/
 
 representation:
   public_figure: true
@@ -20,7 +22,21 @@ representation:
 invitation:
   status: draft
   document: invitation.md
-  note: "Don: Kent and his :TEACH;LISP helped me learn Lisp on ITS as a high school kid. Expressed MOO interest (HN/Mastodon). Public invitation.md drafted; full private draft in Don's correspondence archive — not sent."
+  ideas: ideas.md
+  channel: "Facebook (Don and Kent chat there) or email"
+  warm_contact: true
+  note: "Don: Kent and his :TEACH;LISP helped me learn Lisp on ITS as a high school kid. Expressed MOO interest (HN/Mastodon). Don wants him on many Repo Shows, solo and in groups. Not sent."
+  quoting: "Kent's public Facebook comments (Oct 2026) are quotable; he posts publicly and wants the history preserved."
+
+stories:
+  - { path: teach-lisp.md, what: ":TEACH;LISP; the 1985 Pourne mail and the bright 12-yr-old" }
+  - { path: eval-in-other-lisp.md, what: "The duel over CLI core links; BASE set to ROMAN" }
+  - { path: animal.md, what: "ANIMAL 1978; the Pope; the 1982 apology" }
+  - { path: doctor-and-parry.md, what: "Weizenbaum's class; DOCTOR vs PARRY; 'how easily we were confused'" }
+  - { path: elevator-and-door.md, what: "TV-11 register bits, DOOR server, chsaux.112, ESCE" }
+  - { path: on-hacker-news.md, what: "netsettler's comments; stories about his work; Don's posts" }
+
+hacker_news: netsettler
 
 bio:
   summary: >

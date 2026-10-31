@@ -1,16 +1,18 @@
 # Heather Castillo — invitation portrayal. NOT Heather Castillo.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: heather-castillo
-  name: "Heather Castillo"
-  type: invitation
-  signifier: "🧟"
-  status: living
-  field: "SimFreaks founder — Sims content publisher, artist, programmer, community leader (26-year brand)"
-  home: characters/heather-castillo/
-  aliases: ["SimFreaks", "Heather Castillo (Facebook name)"]
-  naming: "Legally Heather Castillo -- 'Heather Castillo' is her Facebook name only. She prefers Castillo, the name the Sims community knows. (Confirmed by Heather, 2026-08-20.)"
+id: heather-castillo
+name: "Heather Castillo"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧟"
+status: living
+real_being: true
+field: "SimFreaks founder — Sims content publisher, artist, programmer, community leader (26-year brand)"
+home: characters/heather-castillo/
+aliases: ["SimFreaks", "Heather Castillo (Facebook name)"]
+naming: "Legally Heather Castillo -- 'Heather Castillo' is her Facebook name only. She prefers Castillo, the name the Sims community knows. (Confirmed by Heather, 2026-08-20.)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

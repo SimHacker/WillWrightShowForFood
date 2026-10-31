@@ -2,15 +2,17 @@
 # NOT Will Wright. Standards: ../../schemas/portrayal-standards.md
 # First full CHARACTER.yml in WWSFF — template for co-authored guest files later.
 
-character:
-  id: will-wright
-  name: Will Wright
-  type: invitation
-  signifier: "🌍"
-  status: living
-  field: "Simulation game designer — SimCity, The Sims, Spore, Proxi"
-  home: characters/will-wright/
-  aliases: ["Klapaucius"]
+id: will-wright
+name: Will Wright
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌍"
+status: living
+real_being: true
+field: "Simulation game designer — SimCity, The Sims, Spore, Proxi"
+home: characters/will-wright/
+aliases: ["Klapaucius"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

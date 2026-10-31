@@ -31,7 +31,7 @@ abilities:
     effect: Select when the finger lifts, after you've seen what you'll get.
     verifiable: "Potter, Weldon, Shneiderman, CHI '88"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

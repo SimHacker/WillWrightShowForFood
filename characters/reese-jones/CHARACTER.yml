@@ -1,14 +1,16 @@
 # Reese Jones — invitation portrayal. NOT Reese Jones.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: reese-jones
-  name: "Reese Jones"
-  type: invitation
-  signifier: "🧬📞"
-  status: living
-  field: "Biophysicist, networking pioneer — BMUG, Farallon/PhoneNET, Netopia; Singularity University associate founder; biology-of-technology"
-  home: characters/reese-jones/
+id: reese-jones
+name: "Reese Jones"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧬📞"
+status: living
+real_being: true
+field: "Biophysicist, networking pioneer — BMUG, Farallon/PhoneNET, Netopia; Singularity University associate founder; biology-of-technology"
+home: characters/reese-jones/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

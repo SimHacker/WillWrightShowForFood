@@ -26,7 +26,7 @@ abilities:
     effect: Put society journals on the web, run by a library.
     verifiable: "Assistant Director, HighWire Press, Stanford"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

@@ -112,7 +112,7 @@ abilities:
     combos_with: [POPUP-AS-WINDOW]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
   pen_name_only: true
 

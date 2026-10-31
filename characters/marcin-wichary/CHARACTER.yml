@@ -1,14 +1,16 @@
 # Marcin Wichary — invitation portrayal. NOT Marcin Wichary.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: marcin-wichary
-  name: "Marcin Wichary"
-  type: invitation
-  signifier: "⌨️👾🇵🇱"
-  status: living
-  field: "Designer, writer, engineer; keyboard historian (Shift Happens); Lem translator; Google Doodle author (Pac-Man, Lem)"
-  home: characters/marcin-wichary/
+id: marcin-wichary
+name: "Marcin Wichary"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "⌨️👾🇵🇱"
+status: living
+real_being: true
+field: "Designer, writer, engineer; keyboard historian (Shift Happens); Lem translator; Google Doodle author (Pac-Man, Lem)"
+home: characters/marcin-wichary/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

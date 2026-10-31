@@ -169,7 +169,7 @@ segments:
   sims-play-along-narration: ./sims-play-along-narration.yml   # Audience Sims footage + live guest voice-over improv (Foreign Poet × Drew Carey Show).
   performance-space: ../../process/performance-space.yml   # Umbrella — play-along, script reading, Conan face-puppet, OBS/webcam toys.
 
-consent: invitation_accepted          # Will accepted July 2026 — kickoff guest confirmed; async at his pace
+consent: granted          # Will accepted July 2026 — kickoff guest confirmed; async at his pace
 files:
   README.md:     "Overview + framing + the Flower-Child icon."
   INTRO-NARRATIVE.md: "Micropolis + WWSFF mapping, wedding playset phoenix, agitprop framing — proof it worked."

@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, soul_city_eligible]
@@ -12,62 +13,61 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../RELATIONSHIP-MATRIX.yml
 
-character:
-  id: eli-vandermeer
-  name: Prof. Eli Vandermeer
-  type: [fictional_menagerie_guest, simulation]
-  real_being: false
-  signifier: "📚"
-  status: reified
-  home: characters/menagerie/eli-vandermeer/
-  pronouns: he/him
+id: eli-vandermeer
+name: Prof. Eli Vandermeer
+type: [fictional_menagerie_guest, simulation]
+real_being: false
+signifier: "📚"
+status: reified
+home: characters/menagerie/eli-vandermeer/
+pronouns: he/him
 
-  emoji_identity: "📚📝🏴󠁧󠁢󠁳󠁣󠁴󠁿📎🎓"
-  tagline: "Scotland invented blockchain. I can prove it."
+emoji_identity: "📚📝🏴󠁧󠁢󠁳󠁣󠁴󠁿📎🎓"
+tagline: "Scotland invented blockchain. I can prove it."
 
-  soul_philosophy: |
-    The veil of Maya over a CSV. I wrote that in the guest book first.
+soul_philosophy: |
+  The veil of Maya over a CSV. I wrote that in the guest book first.
 
-  description: |
-    Adjunct critical theory in the Lower Chelsea Eight — misreads art for a living.
-    Lens: Misquoted Benjamin, Foucault, Scotland/blockchain. Blind spot: Confidence exceeds citations.
-    Debuts in JSONsters gallery; graduates to live Repo Show performance.
+description: |
+  Adjunct critical theory in the Lower Chelsea Eight — misreads art for a living.
+  Lens: Misquoted Benjamin, Foucault, Scotland/blockchain. Blind spot: Confidence exceeds citations.
+  Debuts in JSONsters gallery; graduates to live Repo Show performance.
 
-  sims:
-    traits:
-      neat: 4
-      outgoing: 7
-      active: 3
-      playful: 5
-      nice: 5
-      generous: 2
-    skills:
-      cooking: 2
-      mechanical: 0
-      charisma: 6
-      logic: 5
-      body: 2
-      creativity: 4
-      cleaning: 1
-    identity:
-      age: adult
-      gender: male
-      zodiac: gemini
-    career:
-      track: science
-      level: 2
-      performance: 310
+sims:
+  traits:
+    neat: 4
+    outgoing: 7
+    active: 3
+    playful: 5
+    nice: 5
+    generous: 2
+  skills:
+    cooking: 2
+    mechanical: 0
+    charisma: 6
+    logic: 5
+    body: 2
+    creativity: 4
+    cleaning: 1
+  identity:
+    age: adult
+    gender: male
+    zodiac: gemini
+  career:
+    track: science
+    level: 2
+    performance: 310
 
-  mind_mirror:
-    calm: 3
-    serious: 6
-    cautious: 4
-    confident: 5
-    docile: 3
-    logical: 4
-    practical: 2
-    dominant: 4
-    conventional: 1
+mind_mirror:
+  calm: 3
+  serious: 6
+  cautious: 4
+  confident: 5
+  docile: 3
+  logical: 4
+  practical: 2
+  dominant: 4
+  conventional: 1
 
 symbolic_attachments:
     - id: guest-book

@@ -9,7 +9,7 @@ show:
   character: characters/ted-selker/
   topic: "The TrackPoint and input efficiency; considerate / context-aware computing; the NPUC new-paradigms workshops"
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   trackpoint: "Invented the TrackPoint pointing stick — cursor control without leaving the home row."

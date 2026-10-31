@@ -10,7 +10,7 @@ show:
   character: characters/patrick-hulin/
   topic: "AI-assisted reverse engineering: how an LLM turned the SimTower binary into a spec, then a byte-identical TypeScript reimplementation — and where that could meet Yoot Tower and Micropolis."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   ai_re: "Used Claude Code + a Unicorn-based emulator (mocking ~195 Win 3.1 APIs) to reverse-engineer SimTower's simulation into a complete spec."

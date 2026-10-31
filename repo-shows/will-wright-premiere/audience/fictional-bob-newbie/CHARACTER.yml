@@ -1,13 +1,12 @@
 # Bob Newbie — EXAMPLE TicketPR (filled-out template)
 # Presumed sim in Will's hand — Don Hopkins promo trilogy. Fan voice, not EA canon.
 
-character:
-  name: Bob Newbie (presumed)
-  type: fictional_game_character
-  real_being: false
-  signifier: "👋"
-  home: repo-shows/will-wright-premiere/audience/fictional-bob-newbie/
-  origin: "The Sims tutorial family — fan presumption for EA promo sim in Will's palm"
+name: Bob Newbie (presumed)
+type: fictional_game_character
+real_being: false
+signifier: "👋"
+home: repo-shows/will-wright-premiere/audience/fictional-bob-newbie/
+origin: "The Sims tutorial family — fan presumption for EA promo sim in Will's palm"
 
 representation:
   fictional: true

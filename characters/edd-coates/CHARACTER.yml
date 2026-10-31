@@ -1,14 +1,15 @@
 # Edd Coates — invitation portrayal. NOT Edd Coates.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: edd-coates
-  name: "Edd Coates"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "UI Artist; creator of the Game UI Database; author of The Game UI Bible; PadCrafter"
-  home: characters/edd-coates/
+id: edd-coates
+name: "Edd Coates"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "UI Artist; creator of the Game UI Database; author of The Game UI Bible; PadCrafter"
+home: characters/edd-coates/
 
 representation:
   public_figure: true

@@ -1,14 +1,16 @@
 # Michael McGuffin — invitation portrayal. NOT Michael McGuffin.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: michael-mcguffin
-  name: "Michael McGuffin"
-  type: invitation
-  signifier: "📊"
-  status: living
-  field: "HCI — information visualization, marking menus, visual programming discourse"
-  home: characters/michael-mcguffin/
+id: michael-mcguffin
+name: "Michael McGuffin"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📊"
+status: living
+real_being: true
+field: "HCI — information visualization, marking menus, visual programming discourse"
+home: characters/michael-mcguffin/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

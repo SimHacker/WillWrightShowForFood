@@ -2,18 +2,19 @@
 # Robert W. Taylor died 2017. Seeded from Yoot People.md.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: bob-taylor
-  name: "Bob Taylor"
-  full_name: "Robert W. Taylor"
-  also_known_as: ["Robert Taylor"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1932-02-10"
-  died: "2017-04-13"
-  field: "ARPA IPTO (ARPANET); Xerox PARC CSL director; DEC SRC — funder of people, not projects"
-  home: characters/bob-taylor/
+id: bob-taylor
+name: "Bob Taylor"
+full_name: "Robert W. Taylor"
+also_known_as: ["Robert Taylor"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1932-02-10"
+died: "2017-04-13"
+field: "ARPA IPTO (ARPANET); Xerox PARC CSL director; DEC SRC — funder of people, not projects"
+home: characters/bob-taylor/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

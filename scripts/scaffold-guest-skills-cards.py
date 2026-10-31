@@ -70,7 +70,7 @@ def card(
     abilities: list[dict],
     *,
     slug: str,
-    consent: str = "not_yet_asked",
+    consent: str = "not_asked",
     simulation: bool = False,
     card_type: str = "guest_skills",
 ) -> dict:
@@ -97,7 +97,10 @@ def card(
             "flavor": flavor,
         },
         "abilities": abilities,
-        "invoke_rules": {"consent": consent, "simulation": simulation},
+        "invoke_rules": {
+            "consent": "not_asked" if consent == "self_sovereign" else consent,
+            "simulation": simulation,
+        },
         "see_also": [
             {"path": "CHARACTER.yml", "why": "Bio girder — invitation status"},
             {"path": "invitation.md", "why": "Public invitation document"},

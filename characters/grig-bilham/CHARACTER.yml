@@ -1,14 +1,16 @@
 # Grig Bilham — invitation portrayal. NOT Grig Bilham.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: grig-bilham
-  name: "Grig Bilham"
-  type: invitation
-  signifier: "🌐"
-  status: living
-  field: "Laszlo alum → public-good infrastructure: open metaverse standards (Web of Worlds / spatial fabric, Metaverse Standards Forum), EverArchive (200–1000 year storage), peers.social, Universal Manifest, Distributed Creatives; Chia work with Bram Cohen"
-  home: characters/grig-bilham/
+id: grig-bilham
+name: "Grig Bilham"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌐"
+status: living
+real_being: true
+field: "Laszlo alum → public-good infrastructure: open metaverse standards (Web of Worlds / spatial fabric, Metaverse Standards Forum), EverArchive (200–1000 year storage), peers.social, Universal Manifest, Distributed Creatives; Chia work with Bram Cohen"
+home: characters/grig-bilham/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

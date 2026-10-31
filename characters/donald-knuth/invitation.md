@@ -1,7 +1,7 @@
 ---
 status: dream_guest
 character_id: donald-knuth
-consent: not_yet_asked
+consent: not_asked
 channel: snail_mail
 show_seed: repo-shows/donald-knuth/
 ---

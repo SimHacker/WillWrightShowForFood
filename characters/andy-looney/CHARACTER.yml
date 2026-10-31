@@ -1,11 +1,13 @@
-character:
-  id: andy-looney
-  name: "Andrew Looney"
-  aliases: ["Andy Looney"]
-  type: invitation
-  status: living
-  field: "Fluxx, Looney Labs, procedural card chaos; NASA Goddard / Hubble software (pre-Labs)"
-  home: characters/andy-looney/
+id: andy-looney
+name: "Andrew Looney"
+aliases: ["Andy Looney"]
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "Fluxx, Looney Labs, procedural card chaos; NASA Goddard / Hubble software (pre-Labs)"
+home: characters/andy-looney/
 
 representation:
   public_figure: true

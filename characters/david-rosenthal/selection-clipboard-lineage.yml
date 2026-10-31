@@ -5,7 +5,7 @@
 meta:
   room: characters/david-rosenthal/
   curated_by: don-hopkins
-  consent: not_yet_asked
+  consent: not_asked
   human_readable: selection-clipboard-lineage.md
   guests: [ted-nelson, david-rosenthal]
   show: ../../repo-shows/unnatural-selection/unnatural-selection.yml

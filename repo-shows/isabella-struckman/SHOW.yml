@@ -10,7 +10,7 @@ show:
   character: characters/isabella-struckman/
   topic: "Computer-vision model evaluation & training at Leela AI; ML explainability; AI policy / AI supply chains; AI skills + teaching; and whatever she's passionate about in ML/vision."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_her:
   vision_eval: "Real-world CV model evaluation + fine-tuning in a production pipeline at Leela AI — including a technique that held detection performance after camera movements while cutting resource cost ~25%."

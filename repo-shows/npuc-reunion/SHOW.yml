@@ -26,7 +26,7 @@ show:
     - Heinz U. Lemke
     - David S. H. Rosenthal
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 what_was_npuc: |
   Ted Selker's **New Paradigms for Using Computers** workshop at IBM Almaden Research

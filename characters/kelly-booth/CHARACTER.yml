@@ -1,21 +1,24 @@
 # Kellogg S. Booth — correspondent portrayal. NOT Kelly Booth.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: kelly-booth
-  name: "Kelly Booth"
-  full_name: "Kellogg S. Booth"
-  type: correspondent
-  signifier: "🎓📽️"
-  status: living_emeritus
-  field: "Human–computer interaction; computer graphics; visualization — institution-builder"
-  home: characters/kelly-booth/
-  affiliation: "University of British Columbia (Professor Emeritus); formerly University of Waterloo"
-  honors:
-    - "ACM Distinguished Member"
-    - "CHCCS/SCDHM Achievement Award (2008)"
-    - "ACM SIGGRAPH Outstanding Service Award (2010)"
-    - "CHCCS/SCDHM Service Award (2020)"
+id: kelly-booth
+name: "Kelly Booth"
+full_name: "Kellogg S. Booth"
+type: person
+show_role: correspondent
+layer: profile
+signifier: "👤"
+emoji: "🎓📽️"
+status: living
+real_being: true
+field: "Human–computer interaction; computer graphics; visualization — institution-builder"
+home: characters/kelly-booth/
+affiliation: "University of British Columbia (Professor Emeritus); formerly University of Waterloo"
+honors:
+  - "ACM Distinguished Member"
+  - "CHCCS/SCDHM Achievement Award (2008)"
+  - "ACM SIGGRAPH Outstanding Service Award (2010)"
+  - "CHCCS/SCDHM Service Award (2020)"
 
 representation:
   public_figure: true

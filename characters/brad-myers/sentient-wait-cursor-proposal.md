@@ -2,7 +2,7 @@
 status: draft
 type: design_document_parody
 for: brad-myers
-consent: not_yet_asked
+consent: not_asked
 origin: MOOLLM microworld (Dizzy the Spinner)
 tone: deadpan
 ---

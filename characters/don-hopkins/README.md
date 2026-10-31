@@ -1,7 +1,7 @@
 ---
 title: Don Hopkins
 signifier: "👤"
-consent: self-sovereign
+authored_by: don-hopkins
 resolution: readme
 backbone: career/*.yml
 ---

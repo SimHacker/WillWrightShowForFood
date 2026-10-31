@@ -1,17 +1,18 @@
 # Stanisław Lem — memorial portrayal (in memoriam). NOT Stanisław Lem.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: stanislaw-lem
-  name: "Stanisław Lem"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: >-
-    Writer and philosopher: The Cyberiad, Solaris, Summa Technologiae, His
-    Master's Voice, A Perfect Vacuum, Golem XIV
-  home: characters/stanislaw-lem/
-  aliases: ["Stanislaw Lem"]
+id: stanislaw-lem
+name: "Stanisław Lem"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: >-
+  Writer and philosopher: The Cyberiad, Solaris, Summa Technologiae, His
+  Master's Voice, A Perfect Vacuum, Golem XIV
+home: characters/stanislaw-lem/
+aliases: ["Stanislaw Lem"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
@@ -28,9 +29,9 @@ memorial:
   mode: represent_and_discuss
   rule: "Discuss his published work. Do not speak as him; quote him only from published translations, credited to the translator."
   who_can_discuss:
-    - { who: will-wright, why: "On record (1996) that the Seventh Sally of The Cyberiad inspired the kind of thing he builds; plays Klapaucius to Don's Trurl", consent: accepted }
-    - { who: marcin-wichary, why: "Translated Lem; Lem Google Doodle (2011) per this repo", consent: not_yet_asked }
-    - { who: david-rosenthal, why: "The Lem / PKD reading group; Trurl's Machine and model collapse", consent: not_yet_asked }
+    - { who: will-wright, why: "On record (1996) that the Seventh Sally of The Cyberiad inspired the kind of thing he builds; plays Klapaucius to Don's Trurl", consent: granted }
+    - { who: marcin-wichary, why: "Translated Lem; Lem Google Doodle (2011) per this repo", consent: not_asked }
+    - { who: david-rosenthal, why: "The Lem / PKD reading group; Trurl's Machine and model collapse", consent: not_asked }
     - { who: don-hopkins, why: "Reads Lem as design documents for simulation and AI" }
   could_be_invited:
     - "Michael Kandel, translator of The Cyberiad, The Futurological Congress, A Perfect Vacuum, His Master's Voice and Fiasco"

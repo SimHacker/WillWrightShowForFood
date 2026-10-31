@@ -1,14 +1,16 @@
 # Eric Bowman — invitation portrayal. NOT Eric Bowman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: eric-bowman
-  name: "Eric Bowman"
-  type: invitation
-  signifier: "⚙️"
-  status: living
-  field: "Programmer on the original The Sims team (Maxis) — core/systems engineering"
-  home: characters/eric-bowman/
+id: eric-bowman
+name: "Eric Bowman"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "⚙️"
+status: living
+real_being: true
+field: "Programmer on the original The Sims team (Maxis) — core/systems engineering"
+home: characters/eric-bowman/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

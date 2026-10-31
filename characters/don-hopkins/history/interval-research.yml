@@ -110,7 +110,7 @@ repo_show_nexus:
     - caterina_fake    # Interval → Flickr; braid w/ Ben Cerveny / Game Neverending
     - marc_davis       # MediaFlow / garage theatre (semantic video before vision AI)
     - dan-ingalls      # Smalltalk at Interval
-  consent: not_yet_asked
+  consent: not_asked
 
 wwsff_entry: ../interval-research-pluggers-and-mediaflow.md
 see_also:

@@ -82,7 +82,7 @@ abilities:
   verifiable: EA 1983 launch campaign
   combos_with: []
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
   living_not_memorial: true
 see_also:

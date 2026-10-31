@@ -2,7 +2,7 @@
 status: draft
 character_id: amy-jo-kim
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/amy-jo-and-scott-kim/
 pair_with: scott-kim
 send_batch: shufflebrain-pair-2026

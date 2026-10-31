@@ -1,11 +1,13 @@
-character:
-  id: keith-henson
-  name: "Keith Henson"
-  aliases: ["H Keith Henson"]
-  type: invitation
-  status: living
-  field: "Cryonics (Alcor); alt.religion.scientology history; rockets/space; nanotechnology (Drexler orbit)"
-  home: characters/keith-henson/
+id: keith-henson
+name: "Keith Henson"
+aliases: ["H Keith Henson"]
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "Cryonics (Alcor); alt.religion.scientology history; rockets/space; nanotechnology (Drexler orbit)"
+home: characters/keith-henson/
 
 representation:
   public_figure: true

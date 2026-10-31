@@ -1,14 +1,15 @@
 # Bill Atkinson — legacy portrayal (in memoriam). NOT Bill Atkinson.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: bill-atkinson
-  name: "Bill Atkinson"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: "Apple GUI pioneer — QuickDraw, MacPaint, HyperCard, Atkinson dithering, marching ants"
-  home: characters/bill-atkinson/
+id: bill-atkinson
+name: "Bill Atkinson"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: "Apple GUI pioneer — QuickDraw, MacPaint, HyperCard, Atkinson dithering, marching ants"
+home: characters/bill-atkinson/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,15 +1,17 @@
 # Scott Kim — invitation portrayal. NOT Scott Kim.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: scott-kim
-  name: "Scott Kim"
-  type: invitation
-  signifier: "🔄"
-  status: living
-  beloved: true
-  field: "Puzzle designer & visual artist — ambigrams, puzzle design, symmetry & visual thinking"
-  home: characters/scott-kim/
+id: scott-kim
+name: "Scott Kim"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔄"
+status: living
+real_being: true
+beloved: true
+field: "Puzzle designer & visual artist — ambigrams, puzzle design, symmetry & visual thinking"
+home: characters/scott-kim/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

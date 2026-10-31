@@ -2,17 +2,19 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Spelling: Niblett (user "Nibblet" accepted as typo).
 
-character:
-  id: tim-niblett
-  name: "Tim Niblett"
-  also_known_as: ["Timothy Niblett"]
-  type: memorial
-  signifier: "🕯️♟️"
-  status: deceased
-  died: "2022-06-05"
-  age_at_death: 66
-  field: "Turing Institute cofounder; HyperNeWS/GoodNeWS/PdB/WiT; research direction & mentoring"
-  home: characters/tim-niblett/
+id: tim-niblett
+name: "Tim Niblett"
+also_known_as: ["Timothy Niblett"]
+type: person
+layer: memorial
+signifier: "🕯️"
+emoji: "🕯️♟️"
+status: deceased
+real_being: true
+died: "2022-06-05"
+age_at_death: 66
+field: "Turing Institute cofounder; HyperNeWS/GoodNeWS/PdB/WiT; research direction & mentoring"
+home: characters/tim-niblett/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

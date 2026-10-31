@@ -1,14 +1,16 @@
 # Dan Ingalls — invitation portrayal. NOT Dan Ingalls.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: dan-ingalls
-  name: "Dan Ingalls"
-  type: invitation
-  signifier: "🪟"
-  status: living
-  field: "Smalltalk architect — BitBlt, pop-up menus, Squeak, Fabrik, the Lively Kernel"
-  home: characters/dan-ingalls/
+id: dan-ingalls
+name: "Dan Ingalls"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🪟"
+status: living
+real_being: true
+field: "Smalltalk architect — BitBlt, pop-up menus, Squeak, Fabrik, the Lively Kernel"
+home: characters/dan-ingalls/
 
 representation:
   public_figure: true

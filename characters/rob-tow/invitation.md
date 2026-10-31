@@ -2,7 +2,7 @@
 status: draft
 character_id: rob-tow
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/placeholder/
 format: remote_or_in_person
 priority: send_ready

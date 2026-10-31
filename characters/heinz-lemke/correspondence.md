@@ -3,7 +3,7 @@
 Public-safe digest. **Not** the full private thread.  
 Machine index: [`correspondence.yml`](correspondence.yml) · [Portrayal standards](../../schemas/portrayal-standards.md)
 
-**Span:** ~2020–present · **Consent:** `not_yet_asked`
+**Span:** ~2020–present · **Consent:** `not_asked`
 
 ---
 

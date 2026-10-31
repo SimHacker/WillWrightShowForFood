@@ -1,7 +1,7 @@
 ---
 status: stub
 character_id: nick-montfort
-consent: not_yet_asked
+consent: not_asked
 ---
 
 # Repo Show invitation — Nick Montfort

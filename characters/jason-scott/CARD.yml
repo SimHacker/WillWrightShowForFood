@@ -24,7 +24,7 @@ abilities:
     type: triggered
     effect: Physical sold out → Archive download with director’s blessing.
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

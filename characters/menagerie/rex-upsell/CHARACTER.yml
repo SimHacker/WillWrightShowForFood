@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, glick-gallery, labeled_fiction_presenter]
@@ -12,69 +13,68 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../GLICK-GALLERY.yml
 
-character:
-  id: rex-upsell
-  name: Rex Upsell
-  type: [fictional_menagerie_guest, labeled_fiction_presenter, simulation]
-  real_being: false
-  signifier: "💰📈🪙🔔"
-  status: seed
-  home: characters/menagerie/rex-upsell/
-  pronouns: he/him
+id: rex-upsell
+name: Rex Upsell
+type: [fictional_menagerie_guest, labeled_fiction_presenter, simulation]
+real_being: false
+signifier: "💰📈🪙🔔"
+status: seed
+home: characters/menagerie/rex-upsell/
+pronouns: he/him
 
-  emoji_identity: "💰📈🪙🔔🤑"
-  tagline: "This childhood memory is brought to you by..."
-  archetype: the_monetizer
-  sin: "Every question is secretly a sales funnel"
+emoji_identity: "💰📈🪙🔔🤑"
+tagline: "This childhood memory is brought to you by..."
+archetype: the_monetizer
+sin: "Every question is secretly a sales funnel"
 
-  soul_philosophy: |
-    Do I hear five simoleons? Your anecdote has a sponsor. Limited edition.
+soul_philosophy: |
+  Do I hear five simoleons? Your anecdote has a sponsor. Limited edition.
 
-  description: |
-    Glick Gallery foil — the monetizer. Every question is a sales funnel.
-    Violates: scrub_from_public — money, leverage, monetization — he IS the scrub list, animated.
-    Philahue ejects him mid-auction.
+description: |
+  Glick Gallery foil — the monetizer. Every question is a sales funnel.
+  Violates: scrub_from_public — money, leverage, monetization — he IS the scrub list, animated.
+  Philahue ejects him mid-auction.
 
-  bits:
-    - "Interrupts the origin story to announce limited-edition mint-numbered commit NFTs"
-    - "Tries to auction the guest's artifacts mid-interview — 'do I hear five simoleons?'"
-    - "'This childhood memory is brought to you by...' — sponsors the guest's own anecdotes"
+bits:
+  - "Interrupts the origin story to announce limited-edition mint-numbered commit NFTs"
+  - "Tries to auction the guest's artifacts mid-interview — 'do I hear five simoleons?'"
+  - "'This childhood memory is brought to you by...' — sponsors the guest's own anecdotes"
 
-  sims:
-    traits:
-      neat: 7
-      outgoing: 9
-      active: 8
-      playful: 5
-      nice: 2
-      generous: 1
-    skills:
-      cooking: 1
-      mechanical: 2
-      charisma: 8
-      logic: 6
-      body: 5
-      creativity: 4
-      cleaning: 3
-    identity:
-      age: adult
-      gender: male
-      zodiac: aries
-    career:
-      track: business
-      level: 8
-      performance: 750
+sims:
+  traits:
+    neat: 7
+    outgoing: 9
+    active: 8
+    playful: 5
+    nice: 2
+    generous: 1
+  skills:
+    cooking: 1
+    mechanical: 2
+    charisma: 8
+    logic: 6
+    body: 5
+    creativity: 4
+    cleaning: 3
+  identity:
+    age: adult
+    gender: male
+    zodiac: aries
+  career:
+    track: business
+    level: 8
+    performance: 750
 
-  mind_mirror:
-    calm: 3
-    serious: 5
-    cautious: 2
-    confident: 7
-    docile: 1
-    logical: 5
-    practical: 6
-    dominant: 7
-    conventional: 4
+mind_mirror:
+  calm: 3
+  serious: 5
+  cautious: 2
+  confident: 7
+  docile: 1
+  logical: 5
+  practical: 6
+  dominant: 7
+  conventional: 4
 
 symbolic_attachments:
   - id: gavel-mic

@@ -1,14 +1,15 @@
 # Steve Kommrusch — invitation portrayal. NOT Steve Kommrusch.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: steve-kommrusch
-  name: "Steve Kommrusch"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Senior AI Scientist at Leela AI — ML for program repair & verifiable program equivalence; former CPU/chip architect (HP, National Semiconductor, AMD)"
-  home: characters/steve-kommrusch/
+id: steve-kommrusch
+name: "Steve Kommrusch"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Senior AI Scientist at Leela AI — ML for program repair & verifiable program equivalence; former CPU/chip architect (HP, National Semiconductor, AMD)"
+home: characters/steve-kommrusch/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

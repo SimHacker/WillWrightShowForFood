@@ -1,12 +1,11 @@
-character:
-  name: Tragic Clown (painting)
-  type: fictional_game_character
-  real_being: false
-  signifier: "🤡"
-  home: repo-shows/will-wright-premiere/audience/fictional-tragic-clown/
-  canonical_soul: characters/sims/tragic-clown/
-  prototype_ref: ../../../../characters/sims/tragic-clown/CHARACTER.yml
-  origin: "The Sims — negative aura object; Sims cry near the painting"
+name: Tragic Clown (painting)
+type: fictional_game_character
+real_being: false
+signifier: "🤡"
+home: repo-shows/will-wright-premiere/audience/fictional-tragic-clown/
+inherits:
+  - characters/sims/tragic-clown/
+origin: "The Sims — negative aura object; Sims cry near the painting"
 
 representation:
   fictional: true

@@ -1,15 +1,17 @@
 # Samuel J Klein — invitation portrayal. NOT Samuel Klein.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: samuel-klein
-  name: Samuel J Klein
-  also_known_as: [SJ Klein, Samuel Klein, S.J. Klein]
-  type: invitation
-  signifier: "💻🌍"
-  status: living
-  field: "OLPC Director of Content; game-dev evangelist; free knowledge advocate; Wikimedia veteran"
-  home: characters/samuel-klein/
+id: samuel-klein
+name: Samuel J Klein
+also_known_as: [SJ Klein, Samuel Klein, S.J. Klein]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "💻🌍"
+status: living
+real_being: true
+field: "OLPC Director of Content; game-dev evangelist; free knowledge advocate; Wikimedia veteran"
+home: characters/samuel-klein/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

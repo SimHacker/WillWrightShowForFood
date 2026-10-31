@@ -2,14 +2,17 @@
 # Standards: ../../schemas/portrayal-standards.md
 # No Repo Show invitation — attribution for Flight of the PIXIE musical edit only.
 
-character:
-  id: yuja-wang
-  name: "Yuja Wang"
-  type: tribute
-  signifier: "🎹"
-  status: living
-  field: "Concert pianist — virtuoso repertoire, Deutsche Grammophon; immersive and tech-forward performance (VR, cross-media collaborations)"
-  home: characters/yuja-wang/
+id: yuja-wang
+name: "Yuja Wang"
+type: person
+show_role: tribute
+layer: profile
+signifier: "👤"
+emoji: "🎹"
+status: living
+real_being: true
+field: "Concert pianist — virtuoso repertoire, Deutsche Grammophon; immersive and tech-forward performance (VR, cross-media collaborations)"
+home: characters/yuja-wang/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -6,7 +6,7 @@ ticket:
   attend_live: invited
   merged: false
   authored_by: self
-  consent: collaborator_invited
+  consent: asked
   awaiting_author: true
 
 character_ref: CHARACTER.yml

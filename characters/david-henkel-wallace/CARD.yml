@@ -107,7 +107,7 @@ abilities:
   combos_with: [SOCIETY-OF-MIND, VISUAL-INTELLIGENCE]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 
 see_also:

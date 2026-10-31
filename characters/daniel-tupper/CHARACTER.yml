@@ -1,14 +1,16 @@
 # Daniel Tupper — collaborator portrayal. NOT Daniel Tupper.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: daniel-tupper
-  name: "Daniel Tupper"
-  type: invitation
-  signifier: "🗽🛠️🎮"
-  status: living
-  field: "Artist-programmer fan; game dreams (FreeTA, SWRSgaming); long correspondence with Don; tool-maker climb"
-  home: characters/daniel-tupper/
+id: daniel-tupper
+name: "Daniel Tupper"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🗽🛠️🎮"
+status: living
+real_being: true
+field: "Artist-programmer fan; game dreams (FreeTA, SWRSgaming); long correspondence with Don; tool-maker climb"
+home: characters/daniel-tupper/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

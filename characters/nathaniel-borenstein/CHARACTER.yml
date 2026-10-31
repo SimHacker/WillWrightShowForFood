@@ -1,21 +1,23 @@
 # Nathaniel S. Borenstein — public portrayal (MIME co-creator). NOT Nathaniel.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: nathaniel-borenstein
-  name: Nathaniel S. Borenstein
-  type: invitation
-  signifier: "✉️🎶"
-  status: living
-  field: "MIME (RFC 1341 with Ned Freed); Andrew Message System (CMU ITC); metamail; ATOMICMAIL + Safe-Tcl active mail; First Virtual Holdings; Programming As If People Mattered"
-  home: characters/nathaniel-borenstein/
+id: nathaniel-borenstein
+name: Nathaniel S. Borenstein
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "✉️🎶"
+status: living
+real_being: true
+field: "MIME (RFC 1341 with Ned Freed); Andrew Message System (CMU ITC); metamail; ATOMICMAIL + Safe-Tcl active mail; First Virtual Holdings; Programming As If People Mattered"
+home: characters/nathaniel-borenstein/
 
 representation:
   public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   authored_by: don-hopkins
   invitation_status: send_now
-  consent: not_yet_asked
+  consent: not_asked
 
 bio:
   summary: |

@@ -1,0 +1,567 @@
+                           MASSACHUSETTS INSTITUTE OF TECHNOLOGY
+
+
+                               ARTIFICIAL INTELLIGENCE LABORATORY
+
+
+
+WORKING PAPER 227                                                                           27 January 1982
+
+
+                              A Guide to ITS Operations
+                            Useful Spells And Incantations
+
+                                     Christopher C. Stacy
+
+
+
+                                                 Abstract
+
+It is said that it is not wise to dabble in the Arts without care and caution, for the spell is at once subtle
+and dangerous: Look herein! For if you read carefully and closely, you can incant a Word of Magic,
+and the system might be revived.
+
+This Working Paper describes crash recovery procedures for a DEC KA-10 computer running ITS, the
+Incompatible Timesharing System. It is intended for people not intimately familiar with the system
+internals who need to handle emergency operation problems when a system maintaner is not
+available.
+
+
+
+
+A.I. Laboratory Working Papers are produced for internal circulation, and may contain information
+that is, for example, too preliminary or too detailed for formal publication. It is not intended that they
+should be considered papers to which reference can be made in the literature.
+
+ · MASSACIHUSETTS INSTITUTE OF TECHNOLOGY 1982
+Spells                                                                                                          27 January 1982
+
+
+1. Introduction
+      This document describes procedures for handling ITS system crashes.
+
+      ITS runs on four machines: Al, ML, MC, and DM. Currently, Al, ML, and DM are all KA processors.
+MC is a model KL processor with some different software and is discussed in a section by itself. This
+document deals primarily with the KA.
+
+      It must be strongly emphasized that these procedures are NOT comprehensive, and that you
+should always make a concerted effort to locate one of the people mentioned at the end of this paper
+before trying to do anything. Note that, "I followed the written instructions", is not a valid excuse for
+blowing it. A system wizard should generally see the system crash. If no one is around and you are
+not sure of what you are doing, you may want to simply reload the system. See Reloading.
+
+      Be sure you read and understand everything in this Introduction before you read the remainder of
+this document.
+
+
+1.1. System Log
+      Near the system console of each machine is the system log book. The most important thing to do
+when handling any crash is to record in the log the state of the machine. Record your name (or
+uname), the date, and time.'               Write down any unusual circumstances such as "momentary power
+failure" or "smoke coming out of machine". The specific information you need to record for a crash
+will be discussed in detail.
+
+
+1.2. Front Switch Panel
+      KA-IO processors have a front panel of swicthes and lights which can be used to determine the
+state of the machine. Many of the indicator lights can be read from either the front panel or the top of
+the two processor bays on the left (the CPA register). Indicator lights should be recorded in the log as
+octal numbers.
+
+      The most important lights on the panel are the Memory Address (MA) lights, and Program Counter
+(PC), the RUN, USER MODE, PROGRAM STOP (PSTP), MEMORY STOP (MSTP),
+
+      The most important switches are the Memory Address switches, STOP, START, RESET, CONT,
+and PARity STOP and NXM STOP.
+
+
+  1
+      Ifyou are not willing to take responsability for what you do to the system, do not
+                                                                                         touch   the ma:hine!
+
+
+
+Spells                                                                                                          27 January 1982
+Spells                                                                               27 January 1982
+
+
+   The RESET key is used to initialize the state of the machine; if you press RESET you cannot
+continue ITS and will need to reload.
+
+
+1.3. Exec DDT
+   Exec DDT is a program for examining and modifying the contents of memory, and running and
+debugging programs. DDT can be used to obtain useful crash information and possibly debug the
+system. You can get to DDT (assuming it is not clobbered) by setting the address switches to 774000,
+and pressing START. If DDT is alive it will kerchink the console TTY.
+
+   The most useful DDT commands include:
+
+     - <addr> ]
+         Close-bracket types out the symbolic name of an address.
+
+     - <addr>/
+       Slash opens a memory location for inspection and alteration.
+
+     - [CRLF]
+         Carriage-return means: deposit in the currently open location.
+
+     - [LF]
+         Linefeed means: deposit in this location and open the next one.
+
+     -$U
+      Gets you into DSKrMP. (The $ character in this document is an [ALTMODE].)
+
+
+1.4. DSKDMP
+   DSKDMP is a utility program which can be used to bootload an ITS.
+
+   If you are in exec DDT, you can get to DSKDMP by typing $U.
+
+   Otherwise: Set the address switches to 777700, and press RESET and START.                Hopefully,
+DSKDMP will announce itself on the console. If it does not, it has probably been clobberred and you
+will need to reload from paper or mag tape.
+
+   To load a file (such as ITS) into the machine, simply type its name at DSKDMP, and DSKDMP will
+try to load the program from disk. After DSKDMP loads a file, it drops you into exec DDT.
+
+
+1.5. Paper Tape DSKDMP
+   If DSKDMP is clobbered, you can 3ometimes boot DSKDMP from paper tape off the disk. Find the
+
+
+
+Spells                                                                                27 January 1982
+ Spells                                                                            27 January 1982
+
+
+ paper tape labeled DSKDMP BOOT. Thread the tape through the reader; the holes should fit in the
+ feed sprockets. Look inside the cabinet above the switches and make sure the READIN DEVICE
+switches are set so that 3,4,6,7, and 8 are up. Put the tape into the reader, and press RESET and
+ READIN. DSKDMP should announce itself on the console as usual.
+
+    Here is a list of DSKDMP commands:
+
+L$file       load file into core
+T$file       load file into core and give symbols to DDT and start DDT
+M$file       load file into core without clearing core first
+K$file       delete file
+D$file       dump core into file
+I$file       verify file against core
+G$           start at starting address
+U$dir;       list directory
+F$           list current directory
+S$           list pack ids then mfd
+nnn$         set starting address to nnn
+L$n$         put disk n online
+K$n$         take disk n offline
+
+DSKDMP Error Messages include:
+
+CMPERR       verify failed to match
+DIRFUL       directory full
+EOF          unexpected end of file
+DIRNF        directory does not exist
+FNF          file not found
+PKNMTD       file is on pack that is not mounted
+CKSERR       checksum error
+DSKFUL       disk full
+NODDT        can't address DDT symbol table (bug)
+?BUG?        BUG
+SEEKFL       disk failed to seek
+CLOBRD       disk read error
+CLOBWR       disk write error
+DIRCLB       dir name differs, TUT disagrees with UFD
+MFDCLB       M.F.D. clobbered
+
+
+1.6. MAGDMP
+   In some cases it may be necesary to use the MAGDMP program. MAGDMP is somewhat like
+DSKDMP, but it loads programs from magnetic tape. The usual thing to do with MAGDMP is load up
+DSKDMP, so that you can then load up an ITS.
+
+   Locate a reel of mag tape containing MAGDMP. Look inside the cabinet above the switches and
+make sure the READIN DEVICE switches are set so that the magnetic tape is selected as the bootload
+device (usually, swithces 3,7 and 8 are up). Mount the MAGDMP reel on the drive and press RESET
+
+
+Spells                                                                            27 January 1982
+Spells                                                                                  27 January 1982
+
+
+and READIN. When the MAGDMP announces itself on the system console, type DSKDMP BIN and
+
+press carriage return. When DSKDMP comes up, you will need to use the $Ln$ command to specify
+
+which of the five disks are online.
+
+
+
+1.7. SALVAGER
+
+   A program called the SALVAGER is run whenever ITS is started. It garbage collects directories and
+
+makes free space on the disks. It also reports about locked blocks which are possibly bad. If there
+are locked blocks on the disk, find a system hacker to see about UNLOCKing them.
+
+   UCOP is a subroutine which allows you to copy directories from pack to pack. You should not use
+this unless you know what you are doing, or you might easily destroy the file system.
+
+
+
+1.8. Time
+
+   If a system has been powered off, it will probably not know what time it is. Use the PDSET program
+under ITS to set the time of day. The TIMES program can be used to figure out what various other
+machines on the ARPAnet think the time is.
+
+
+
+
+Spells                                                                                  27 January 1982
+Spells                                                         5                                          27 January 1982
+
+
+2. Memory Errors
+    Frequently, a hardware memory error is responsible for halting the system. If the machine is in this
+state it is sometimes possible to continue the operation of ITS without losing anything.
+
+    If the RUN light and the MEMORY-STOP light are both on, the system has encountered a memory
+error.
+
+    In this case, look at the CPA register on Bay 2. Either NXM or PARERR should be lit, indicating a
+Nonexistant-memory or a Parity error, respectively. Be sure to record which one. If neither light is lit,
+one of them is burned out.
+
+    Record the PC, the MA, and if the machine is Al, record the right 20 bits indicated on the Paging
+Box, which is located at the top of the kludgey-looking bay on the right of the front panel.
+
+    If you are on ML, determine which memory module failed as follows: The four memory cabinets
+are named A,B,C, and D, from left to right. The leftmost bit of the ADDRESS is 0 for "A" and "B", 1
+for "C" and "D". Each cabinet contains four memory drawers, called 0,1,2, and 3 from bottom to top.
+Open the doors on the two memories in question and check the address switches at the lower left.
+Find the drawer whose MA18,MA19, and MA20 switches match bits 18,19, and 20 of the ADDRESS
+lights. This is the losing memory. Record the memory letter and drawer number in the log.
+
+   On ML or DM, If NXM FLAG is on, a memory may be hung. You may need to push the RESTART
+button on the hung memory before it will proceed.
+
+
+2.1. Parity Errors
+   In the parity error case, also record the PARITY BUFFER and PAR BIT indicators in the bottom row
+of lights one cabinet to the left of the console. This can be used to determine why the parity error
+occured, if the correct contents of the memory location can be determined.
+
+   If a parity error occurred in USER MODE, the system can probably be continued. Do not do this if
+there are any PI IN PROGRESS lights on at the console or if the machine is not in USER MODE.
+
+   Try to recover from parity errors by turning the PAR STOP switch on the console OFF, and then
+pressing STOP and CONT.
+
+   If PSTP comes on, hit CONT. 2 If it keeps coming on, then the system has been clobbered by a
+
+
+  21f nothing at all happens when you press CONT, the switch is flakey
+                                                                         and needs to be pressed again.
+
+
+
+Spells                                                                                                    27 January 1982
+Spells                                                                                  27 January 1982
+
+
+memory error, and you will need to reload the system. Otherwise the system should ring bells on
+theconsole and print ITS REVIVED. DO NOT FORGET to turn PAR STOP Back On.                      If another
+memory stop happens right away, something is seriously wrong with the memories. In that case, Get
+a system wizard.
+
+
+3. Program Halts
+   If RUN is on and PSTP is on, then the system has hit some sort of error halt. This can be either a
+software error or something wrong with the hardware such as a disk failure.
+
+   Record at least: the PC, the MA, the P1 ACTIVE lights, PI IN PROGRESS lights, the 103 REQUEST
+lights, the USER MODE and RUN lights.
+
+   You should either leave the system down for examination, or reload it. See Reloading.
+
+   If RUN is on, neither PSTP and MSTP are lit, and the machine is not doing anything, it may have
+dropped a pulse, or perhaps a light is burned out. If the system is really not running, try pressing
+STOP and then CONT a few times. If this doesnt work, get a system hacker.
+
+   Sometimes the system will halt with an informative error message called a Bughalt.             These
+messages are self-explanatory and look something like this:
+
+BUGHALT. FIND A WIZARD OR CONSIDER TAKING A CRASH DUMP.
+THE SYSTEM HAS CRASHED AND CANNOT BE REVIVED WITý:OUT EXPERT ATTENTION.
+IF YOU CAN'T FIND HELP, RELOAD THE SYSTEM.
+YOU ARE NOW IN DDT.
+
+
+3.1. Taking a Crash Dump
+   To take a crash dump of the system core image to disk, get to DSKDMP and use the D$ command.
+See DSKDMP.
+
+
+4. Disk Problems
+   Bear in mind that if you deal with the disk system and blow it, you will probably permanently
+destroy all the data on the disks. If you are not sure of what you are doing or dont want to take the
+risk, leave the system alone and call one of the people listed in the back of this document.
+
+   If the system has trouble accessing a disk drive, and perhaps prints a message like
+
+   DSK:HUNG ON UNIT 1, QCHIPRG = 521024,,150601 08:08:11
+
+
+
+Spells                                                                                   27 January 1982
+Spells                                                                                   27 January 1982
+
+
+   there is something wrong with the indicated disk drive. If the system seems to be stopped, there is
+sometimes something you can do. Begin by pressing the STOP key on the console.
+
+   On Al, there are eight Calcomp disk drives labeled "Moon's Laundromat", next to the PDP-6. You
+can locate a particular drive by reading the posted map of unit numbers. The offending drive will have
+a red light lit. Power the drive down with the toggle switch, and then spin it back up again. If this does
+not clear the red indicator, the disk drive is really broken. Get a system hacker.
+
+   If the red light goes out but the system does not continue to run, go to the disk controller (located
+inside the on the rightmost rack of Al). Open the door, and try pressing the big black button to reset
+the disk controller.
+
+   ML has four Calcomp disks which are handled the same as Al's, and several DEC disks. Don't
+bother trying to reset the controller.
+
+   The leftmost rack behind the DM processor cabinet houses the DM disk controller. If a light comes
+on indicating NRDY, note if the FILE UNSAFE light on the disk is lit and also write down the Unit
+Number shown (on the left of the controller panel). Power cycle the drive.
+
+
+5. Reloading
+   To reload ITS, get into DSKDMP. There is a punched card near the console which tells you the
+name of the system to load. There may also be additional patches which you should type at DDT after
+the system is loaded.
+
+   To start ITS running, turn off NXM STIO and type $0 at exec DDT. The Salvager should start
+running; it may take a few minutes to work on the disks. You may be asked a few yes or no questions
+conrcerning memories being turned off, the status of the lineprinter, etc. Be sure that NXM STOP
+and PAR STOP are turned ON before the system comes up. When the Salvager is done, the
+console TTY will kerchink, ring bells, and in a few seconds ITS should start up and print
+
+   AI ITS 1223 IN OPERATION AT 16:27:50
+
+   Al ITS 1123 SYSTEM JOB USING THIS CONSOLE.
+
+   IT IS NOW 4:27:54 PM EDT, SATURDA Y, OCT 24,1981
+
+   TV 11 ISUP- 16:27:54
+
+   If the system prints any other mssages, save them inthe log. Ifitsays: * * ERROR SYSTEM
+
+
+Spells                                                                                  27 January 1982
+Spells                                                                               27 January 1982
+
+
+CANNOT BE BROUGHT BACK UP * * * you should believe it and get a system hacker.
+
+   To reload ML or DM, the same basic procedure is used.
+
+   Are NXM STOP and PAR STOP turned ON !!!??!!! Good.
+
+
+
+6. KL Machines - MC
+   MC is a KL-1 0 processor, a newer generation of machine than the KA. It has a PDP-11 instead of a
+front panel, and runs a different set of console software.
+
+   To stop a program (such as ITS) which is running on the KL, press BREAK, followed by
+[CONTROL-C] on the system console TTY. Now type SP (stop).
+
+   To get to Exec DDT from KLDCP, type J NTSDDT [Return].
+
+
+6.1. Cold Booting
+   A cold boot completely reloads ITS after a power failure or when a Warm Boot fails.
+
+   o Ensure that the correct disks are mounted.
+
+   o Make sure the ENABLE switch is pushed in, allowing you to bootload.
+
+   o Push the DISK button. The system should respond by typing
+
+   DECSYSTEM10 DIAGNOSTIC CONSOLE
+
+   o Type RPO [Return].
+
+   o Type J KLINIT [Return].
+
+   o Wait for a >. prompt. If the "two-way interleave: note is on the console, type KLINI2 instead of
+KLINIT.
+
+   The system should respond
+
+;INITIALIZE KL10 FOR ITS
+MR
+P U1.RAM
+ITS OFF
+MR
+SM
+EX 700600 0
+I X2
+0000007/004000 000000
+
+
+Spells                                                                               27 January 1982
+Spells                                                                              27 January 1982
+
+
+SP
+P CHSREF$
+SM
+CMD:
+
+
+   o Type J NTSDDT [Return]. The system should repond with the message
+
+MR
+P IOELEV.A11
+ITS
+I NTSDDT
+
+   If it doesn's respond properly, find a system wizard. Exec DDT is now running.
+
+   o Reload the 10-11 by typing $L .;BOOTI1 [Return]. Type $G.
+
+   o Continue with the warm boot procedure.
+
+
+6.2. Warm Boting
+
+    1. Type $L.;<sys> [Return], where <sys> is the name of the current version of ITS (such as
+       ITS, NITS, NITS1, etc.).
+
+    2. Type $G to start the system running.
+
+   The Salvager should start running; it may take a few minutes to work on the disks. You may be
+asked a few yes or no questions concerning memories being tu. ned off, the status of the lineprinter,
+etc. When the Salvager is done, the console TTY will kerchink, ring bells, and in a few seconds ITS
+should start up and print
+
+   MC ITS 1223 IN OPERATION AT 16:27:50
+
+   MC ITS 1123 SYSTEM JOB USING THIS CONSOLE.
+
+   IT IS NOW 4:27:54 PM EDT, SATURDA Y, OCT 24,1981
+
+   If the system prints any other mssages, save them in the log. If it says: *** ERROR SYSTEM
+CANNOT BE BROUGHT BACK UP *** you should believe it and get a system hacker.
+
+   If it prints out ITS IN OPERATION but does nothing else, the 10-11 may need reloading. Use the
+Cold Boot procedure descibed above.
+
+
+6.3. KL Crash Procedures
+
+
+
+
+Spells                                                                              27 January 1982
+Spells                                                                                     27 January 1982
+
+
+   The best thing to do when the KL crashes is to call a system wizard. The next best thing is to get to
+exec DDT and take a system core dump (and then cold boot).                      The command is $Y CRASH;
+<reason>[Return], where <reason> is a six letter file name indicative of the cause of the crash.
+
+   Be sure to make an entry in the log book which says what error message the system crashed with.
+
+   In some cases, the system can be continued with the $P command. The error message on the
+console TTY will tell you if this is a reasonable option.
+
+
+
+7. TV system
+   The Knight TVs are controlled by the PDP-11 against the wall near the Al PDP-10. You can't miss it;
+it is the large rack with all the wires hanging out. It is extremely fragile.
+
+   If the TV-11 should crash, locate one of the people listed in the back of this document.
+
+   Before the TV system can be reloaded, it must be running. To start the TV-11 running, Halt it, Load
+Address 0 with 777, and Start the machine at 0. Run the STUFF program under ITS. If necessary,
+patch the value 1 into TT11P.
+
+
+8. Network problems
+   Sometimes ITS will decide that the connection to the ARPANET is losing, and will logically
+disconnect. The NET command in the LOCK will reset ITS's Network Control Program (NCP) and
+abort all connections; it will then attempt to reconnect to the network. If there seem to be consistant
+problems with the ARPANET connection, some cables may have to be diddled. Get a system hacker.
+
+   The Chaosnet interface to Al is the AI-CHAOS-11 next to the ARM-10 memory.                 It should not
+normally need to be touched.
+
+
+9. Shutting down the 9th floor
+   Sometimes, it may be necessary to shut down the ninth floor, typically because the air-conditioning
+has failed and alarms are going off.
+
+   The file SYS;SHUT DOWN contains detailed instructions for bringing down all the machines on the
+ninth floor. Unless you know exactly what you are doing (and you have been through the procedure
+before) you should not attempt this without help or you will probably severely screw things up.
+
+
+
+Spells                                                                                     27 January 1982
+ Spells                                                                                   27 January 1982
+
+
+ 10. Wizards
+    Around the 9th or 8th floor, you are likely to find one of the following people around:
+
+    RG (Richard Greenblatt) at Lisp Machines Incorporated, 876-2890/6819.
+
+    CSTACY (Chris Stacy) at home, 646-4162.
+
+    For the Al machine: RMS (Richard Stallman).
+
+    TK (Tom Knight).
+
+    RWK (Bob Kerns) at home, 266-8853; at Symbolics, 864-4660.
+
+    For the ML machine: GSB (Glen Burke).
+
+    At the Symbolics Cambridge Research Center (864-4660), you may try to contact MOON (Dave
+Moon) or HIC (Howard Cannon).
+
+
+
+
+Spells                                                                                  27 January 1982
+Table of Contents
+ 1. Introduction                   1
+       1.1. System Log             1
+       1.2. Front Switch Panel     1
+       1.3. Exec DDT               2
+       1.4. DSKDMP                 2
+       1.5. Paper Tape DSKDMP      2
+       1.6. MAGDMP                 3
+       1.7. SALVAGER               4
+       1.8. Time                   4
+ 2. Memory Errors                  5
+       2.1. Parity Errors          5
+ 3. Program Halts                  6
+       3.1. Taking a Crash Dump    6
+ 4. Disk Problems                  6
+ 5. Reloading                      7
+ 6. KL Machines - MC               8
+       6.1. Cold Booting           8
+       6.2. Warm Boting            9
+       6.3. KL Crash Procedures    9
+ 7. TV system                     10
+ 8. Network problems              10
+ 9. Shutting down the 9th floor   10
+ 1(1 Wizards
+ 10 Wizards
+

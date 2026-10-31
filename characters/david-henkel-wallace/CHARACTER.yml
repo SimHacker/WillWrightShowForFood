@@ -1,11 +1,13 @@
-character:
-  id: david-henkel-wallace
-  name: "David Henkel-Wallace"
-  aliases: ["Gumby"]
-  type: invitation
-  status: living
-  field: "Cygnus Solutions co-founder (BFD, binutils); MIT AI Lab; formerly Leela AI"
-  home: characters/david-henkel-wallace/
+id: david-henkel-wallace
+name: "David Henkel-Wallace"
+aliases: ["Gumby"]
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "Cygnus Solutions co-founder (BFD, binutils); MIT AI Lab; formerly Leela AI"
+home: characters/david-henkel-wallace/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

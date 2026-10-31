@@ -1,17 +1,18 @@
 # bob-barton — memorial. NOT the person.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: bob-barton
-  name: "Bob Barton"
-  full_name: "Robert Stanley Barton"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1925-02-13"
-  died: "2009-01-28"
-  field: "Architecture — Burroughs B5000 stack machines; Utah; OOP hardware root for Kay"
-  home: characters/bob-barton/
+id: bob-barton
+name: "Bob Barton"
+full_name: "Robert Stanley Barton"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1925-02-13"
+died: "2009-01-28"
+field: "Architecture — Burroughs B5000 stack machines; Utah; OOP hardware root for Kay"
+home: characters/bob-barton/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

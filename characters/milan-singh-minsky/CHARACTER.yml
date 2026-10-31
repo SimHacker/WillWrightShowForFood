@@ -1,14 +1,15 @@
 # Milan Singh Minsky — invitation portrayal. NOT Milan Singh Minsky.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: milan-singh-minsky
-  name: "Milan Singh Minsky"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Product leadership in AI — VP of Product at Leela AI"
-  home: characters/milan-singh-minsky/
+id: milan-singh-minsky
+name: "Milan Singh Minsky"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Product leadership in AI — VP of Product at Leela AI"
+home: characters/milan-singh-minsky/
 
 representation:
   public_figure: true

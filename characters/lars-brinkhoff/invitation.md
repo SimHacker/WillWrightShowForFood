@@ -1,7 +1,7 @@
 ---
 status: invited
 character_id: lars-brinkhoff
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/pixie-pie-menus-pdp7.yml
 ---
 

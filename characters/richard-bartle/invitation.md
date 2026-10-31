@@ -2,7 +2,7 @@
 status: draft
 character_id: richard-bartle
 public: true
-consent: not_yet_asked
+consent: granted
 show_seed: repo-shows/richard-bartle/
 ---
 

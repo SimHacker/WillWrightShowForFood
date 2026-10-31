@@ -8,4 +8,4 @@
 | **Cabinet** | [Mike Jang](../mike-jang/) designed the Star Wars cockpit |
 | **Career** | [`sources/linkedin-career.md`](sources/linkedin-career.md) |
 | **Site** | https://billstclair.com/ · Mammudeck |
-| **Status** | warm_lead · consent not_yet_asked |
+| **Status** | warm_lead · consent not_asked |

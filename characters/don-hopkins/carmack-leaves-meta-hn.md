@@ -30,7 +30,7 @@ Key Carmack quote (org dysfunction): influence at the margins, never a prime mov
 
 In reply to "Mac/Lisa ahead of its time" thread:
 
-- **Dynabook** — Alan Kay's original "ahead of its time" laptop ([Wikipedia](https://en.wikipedia.org/wiki/Dynabook))
+- **Dynabook** — Alan Kay's original "ahead of its time" laptop ([Wikipedia: Dynabook](https://en.wikipedia.org/wiki/Dynabook))
 - **GRiD Compass** — pre-Data General/One; NASA shuttle + military paratrooper niche ([HN 28736510](https://news.ycombinator.com/item?id=28736510))
 - Don corresponded with **Glenn Edens** (GRiD co-founder) — [Computer History Museum profile](https://computerhistory.org/profile/glenn-edens/)
 

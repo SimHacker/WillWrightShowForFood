@@ -2,7 +2,7 @@
 
 *Conversation hooks for a Repo Show — **Don's proposed topics**, grounded in the public record of
 the album and her own quoted account on saucefaucet.com. Not quotes, not claims about what she
-thinks.* [Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
+thinks.* [Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_asked
 
 ## The hooks
 

@@ -1,17 +1,19 @@
 # Leo Joskowicz — invitation portrayal. NOT Leo Joskowicz.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: leo-joskowicz
-  name: "Leo Joskowicz"
-  type: invitation
-  signifier: "🏥"
-  status: living
-  field: "Computer-aided surgery, medical image processing, CARS/MICCAI"
-  home: characters/leo-joskowicz/
-  affiliation: |
-    Rachel and Selim Benin School of Computer Science and Engineering, Hebrew University of Jerusalem;
-    Edmond and Lily Safra Center for Brain Sciences (ELSC)
+id: leo-joskowicz
+name: "Leo Joskowicz"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🏥"
+status: living
+real_being: true
+field: "Computer-aided surgery, medical image processing, CARS/MICCAI"
+home: characters/leo-joskowicz/
+affiliation: |
+  Rachel and Selim Benin School of Computer Science and Engineering, Hebrew University of Jerusalem;
+  Edmond and Lily Safra Center for Brain Sciences (ELSC)
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

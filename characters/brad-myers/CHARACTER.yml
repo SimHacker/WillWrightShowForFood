@@ -1,14 +1,15 @@
 # Brad A. Myers — invitation portrayal. NOT Brad A. Myers.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: brad-myers
-  name: "Brad A. Myers"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "CMU HCI — Garnet, PBD, visual programming taxonomies, UI software tools"
-  home: characters/brad-myers/
+id: brad-myers
+name: "Brad A. Myers"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "CMU HCI — Garnet, PBD, visual programming taxonomies, UI software tools"
+home: characters/brad-myers/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

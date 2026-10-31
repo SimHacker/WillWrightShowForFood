@@ -2,7 +2,7 @@
 status: draft
 character_id: lucy-bradshaw
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 send_batch: sims-fest-2026
 format: remote_or_in_person

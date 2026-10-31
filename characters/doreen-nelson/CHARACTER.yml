@@ -1,14 +1,16 @@
 # Doreen Nelson — invitation portrayal. NOT Doreen Nelson.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: doreen-nelson
-  name: "Doreen Nelson"
-  type: invitation
-  signifier: "📐"
-  status: living
-  field: "Educator — Design-Based Learning; Maxis SimCity curriculum guides"
-  home: characters/doreen-nelson/
+id: doreen-nelson
+name: "Doreen Nelson"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📐"
+status: living
+real_being: true
+field: "Educator — Design-Based Learning; Maxis SimCity curriculum guides"
+home: characters/doreen-nelson/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

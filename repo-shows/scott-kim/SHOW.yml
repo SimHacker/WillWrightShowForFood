@@ -10,7 +10,7 @@ show:
   character: characters/scott-kim/
   topic: "Ambigrams / inversions; Viewpoint; the craft of puzzle design"
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
   scheduling:
     primary: repo-shows/amy-jo-and-scott-kim/
     when_solo: "Optional second episode — Viewpoint/inversions vertical only; do not duplicate pair-show material"

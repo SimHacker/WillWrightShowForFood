@@ -1,14 +1,16 @@
 # Lucy Bradshaw — invitation portrayal. NOT Lucy Bradshaw.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: lucy-bradshaw
-  name: Lucy Bradshaw
-  type: invitation
-  signifier: "🏙️🎮"
-  status: living
-  field: "Maxis SVP/GM; executive producer The Sims 2, Spore; studio leadership 1997–2015"
-  home: characters/lucy-bradshaw/
+id: lucy-bradshaw
+name: Lucy Bradshaw
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🏙️🎮"
+status: living
+real_being: true
+field: "Maxis SVP/GM; executive producer The Sims 2, Spore; studio leadership 1997–2015"
+home: characters/lucy-bradshaw/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

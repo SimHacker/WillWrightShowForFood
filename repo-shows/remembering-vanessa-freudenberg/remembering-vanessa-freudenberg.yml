@@ -15,7 +15,10 @@ show:
     her VM; Dan's Smalltalk Zoo credits SqueakJS; Alan's constructionist microworld arc runs through
     the same live-object thread.
   status: rehearsed  # 2026-07-20 — Don + Craig read her DLS '14 paper on a rehearsal screencast
-  consent: "Craig warm — rehearsed the tribute, cheered the repo plans; Dan + Alan not yet asked"
+  consent:
+    craig-latta: interested
+    dan-ingalls: not_asked
+    alan-kay: not_asked
 
 memorial-mode:
   rule: "Represent and discuss documented work + stories friends tell. Do not interview Vanessa; do not speak as her."

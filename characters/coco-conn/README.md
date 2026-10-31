@@ -34,8 +34,8 @@ Coco herself open to chat. ·
 warm follow-up: [`invitation-followup-2026-08.md`](invitation-followup-2026-08.md) ·
 seed: [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/) ·
 **Paul Rother:** Coco intro 26 Aug 2026 — [invite](../paul-rother/invitation.md) send-ready.
-**[Peter Conn](../peter-conn/):** [room](../peter-conn/README.md) up; email intro still open.
-**[Charles Moore](../charles-moore/):** [room](../charles-moore/README.md) up; invitation draft.
+**[Peter Conn](../peter-conn/README.md):** character page is up; email intro still open.
+**[Charles Moore](../charles-moore/README.md):** character page is up; invitation draft.
 
 ## Media
 

@@ -3,7 +3,7 @@ status: invited
 sent: 2026-07-16
 channel: email
 character_id: blake-jennings
-consent: invited_2026-07-16
+consent: asked
 show_seed: repo-shows/will-wright-premiere/
 also_in:
   - repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml

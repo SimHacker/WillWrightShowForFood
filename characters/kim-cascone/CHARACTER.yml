@@ -1,14 +1,16 @@
 # Kim Cascone — invitation portrayal. NOT Kim Cascone.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: kim-cascone
-  name: "Kim Cascone"
-  type: invitation
-  signifier: "📡"
-  status: living
-  field: "Composer / theorist — Silent Records; 'The Aesthetics of Failure'; post-digital / glitch"
-  home: characters/kim-cascone/
+id: kim-cascone
+name: "Kim Cascone"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📡"
+status: living
+real_being: true
+field: "Composer / theorist — Silent Records; 'The Aesthetics of Failure'; post-digital / glitch"
+home: characters/kim-cascone/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

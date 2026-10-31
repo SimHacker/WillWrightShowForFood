@@ -37,7 +37,7 @@ Bonnie **wrote the first several drafts of TRON** (1982) and shares the **story 
 director Steven Lisberger; the screenplay credit went to Lisberger alone after what she has
 called "a rather bitter credits dispute" following Disney's extensive revisions
 ([her MediaMikes interview](https://mediamikes.com/2011/09/interview-with-trons-bonnie-macbird/),
-[Wikipedia](https://en.wikipedia.org/wiki/Tron_(film))). She developed Tron and Kevin Flynn
+[Wikipedia: Tron (film)](https://en.wikipedia.org/wiki/Tron_(film))). She developed Tron and Kevin Flynn
 from conceptual figures into characters — her Flynn was more comedic (she suggested Robin
 Williams) — and she created **Alan Bradley, the creator of Tron, based on Alan Kay**, whom she
 met at Xerox PARC on a research interview that stretched from thirty minutes to four hours and

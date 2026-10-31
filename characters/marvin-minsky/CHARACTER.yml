@@ -2,14 +2,15 @@
 # Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
 # Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: marvin-minsky
-  name: "Marvin Minsky"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: "AI pioneer — co-founder of the MIT AI Lab; Society of Mind, frames, K-lines, Perceptrons"
-  home: characters/marvin-minsky/
+id: marvin-minsky
+name: "Marvin Minsky"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: "AI pioneer — co-founder of the MIT AI Lab; Society of Mind, frames, K-lines, Perceptrons"
+home: characters/marvin-minsky/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

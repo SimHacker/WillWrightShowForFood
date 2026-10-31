@@ -1,14 +1,16 @@
 # Arthur van Hoff — invitation portrayal. NOT Arthur van Hoff.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: arthur-van-hoff
-  name: "Arthur van Hoff"
-  type: invitation
-  signifier: "🎷"
-  status: living
-  field: "NeWS/HyperLook, PdB compiler, early Java (compiler-in-Java, AWT, HotJava), Marimba (Castanet/Bongo), TiVo, Flipboard, Jaunt VR"
-  home: characters/arthur-van-hoff/
+id: arthur-van-hoff
+name: "Arthur van Hoff"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎷"
+status: living
+real_being: true
+field: "NeWS/HyperLook, PdB compiler, early Java (compiler-in-Java, AWT, HotJava), Marimba (Castanet/Bongo), TiVo, Flipboard, Jaunt VR"
+home: characters/arthur-van-hoff/
 
 representation:
   public_figure: true

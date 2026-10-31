@@ -67,7 +67,7 @@ abilities:
   combos_with:
   - WILL-PORTABILITY
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
   pair_with: scott-kim
 see_also:

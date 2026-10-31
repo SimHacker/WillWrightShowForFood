@@ -1,14 +1,16 @@
 # Ray Kurzweil — invitation portrayal. NOT Ray Kurzweil (and NOT RAI, his own digital twin).
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ray-kurzweil
-  name: "Ray Kurzweil"
-  type: invitation
-  signifier: "📈🔮"
-  status: living
-  field: "Inventor + futurist — OCR, reading machines, music synthesis, speech recognition; The Singularity Is Near/Nearer; Law of Accelerating Returns"
-  home: characters/ray-kurzweil/
+id: ray-kurzweil
+name: "Ray Kurzweil"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📈🔮"
+status: living
+real_being: true
+field: "Inventor + futurist — OCR, reading machines, music synthesis, speech recognition; The Singularity Is Near/Nearer; Law of Accelerating Returns"
+home: characters/ray-kurzweil/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

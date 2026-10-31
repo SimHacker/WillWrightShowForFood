@@ -11,8 +11,10 @@ their rooms, and why nobody puts words in Will Wright's mouth — or mine.*
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**Portrayal standards**](../../schemas/portrayal-standards.md) | The law of the land: consent levels, subject rights, no impersonation. Every character directory in WWSFF operates under this. |
-| [**portrayal-standards.yml**](../../schemas/portrayal-standards.yml) | Same law, machine-readable — so the orchestrator can enforce it, not just admire it. |
+| [**Portrayal standards**](../../schemas/portrayal-standards.md) | The show's law: a public portrayal is about a person, not the person. No impersonation, no fabricated quotes, and the subject may correct or delete the room. |
+| [**portrayal-standards.yml**](../../schemas/portrayal-standards.yml) | The same law, machine-readable, so a check can enforce it. |
+| [**representation-ethics**](https://github.com/SimHacker/moollm/tree/main/skills/representation-ethics) | The consent record. Four facts a single number used to blur: who wrote it, whether they agreed, whether they are a public figure, and whether they are living. Agreement is a state (`not_asked`, `asked`, `interested`, `granted`, `declined`, `revoked`, `unverified`), and `interested` governs nothing until `granted`. |
+| [**real-being**](https://github.com/SimHacker/moollm/tree/main/skills/real-being) | The tag for someone who exists apart from the file. A portrayal does not create them. |
 | [**Guest invitation workflow**](../../schemas/invitation-workflow.yml) | How a real person becomes a character with dignity: invited, consulted, in control of their own room. |
 | [**Audience ethics experiments**](../../schemas/audience-ethics-experiments.yml) | The edge cases, probed deliberately rather than discovered by accident. |
 

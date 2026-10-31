@@ -17,7 +17,7 @@ show:
     - characters/lars-brinkhoff/
   topic: "How you bring a beloved old game back to life — reverse engineering, emulation, and clean-room reimplementation — with the creator (Yoot), the person who already did it for SimTower (Patrick), and master retro/emulation preservationists in the room."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 the_cast:
   yoot_saito: "Creator of The Tower / SimTower / Yoot Tower; sent Don a code drop for archival + open-source study. → characters/yoot-saito/"

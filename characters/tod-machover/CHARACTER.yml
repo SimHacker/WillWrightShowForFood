@@ -1,14 +1,16 @@
 # Tod Machover — invitation portrayal. NOT Tod Machover.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: tod-machover
-  name: "Tod Machover"
-  type: invitation
-  signifier: "🎼🧠"
-  status: living
-  field: "Composer + inventor — MIT Media Lab Opera of the Future; hyperinstruments; Brain Opera; Death and the Powers; Hyperscore; the Guitar Hero lineage"
-  home: characters/tod-machover/
+id: tod-machover
+name: "Tod Machover"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎼🧠"
+status: living
+real_being: true
+field: "Composer + inventor — MIT Media Lab Opera of the Future; hyperinstruments; Brain Opera; Death and the Powers; Hyperscore; the Guitar Hero lineage"
+home: characters/tod-machover/
 
 representation:
   public_figure: true

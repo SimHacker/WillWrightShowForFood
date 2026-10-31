@@ -1,10 +1,12 @@
-character:
-  id: ian-bogost
-  name: "Ian Bogost"
-  type: invitation
-  status: living
-  field: "Procedural rhetoric; Persuasive Games; Cow Clicker; game criticism (Play Anything, How to Talk about Videogames)"
-  home: characters/ian-bogost/
+id: ian-bogost
+name: "Ian Bogost"
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "Procedural rhetoric; Persuasive Games; Cow Clicker; game criticism (Play Anything, How to Talk about Videogames)"
+home: characters/ian-bogost/
 
 # Verified 2026-09-06 against bogost.com/about + self-published CV.
 # Room previously said "Georgia Tech" — out of date since 2021.

@@ -29,7 +29,7 @@ abilities:
     type: triggered
     effect: Instant IF literacy signal for any Adventure/Infocom segment.
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

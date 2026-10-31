@@ -101,7 +101,7 @@ abilities:
 invoke_rules:
   on_show: "Don Philahue invokes ASK-QUESTION from merged TicketPRs — you may be called by display name"
   in_simulation: "LLM may fire advertisements when topics match — cite questions.yml"
-  consent: self_sovereign
+  authored_by: self
   simulation: true
   # Advertisements (The Sims model): each ability BROADCASTS what I can do, scored by context.
   # Any of these may pull the lever — autonomous (highest score), or invoked by another party:

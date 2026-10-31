@@ -1,14 +1,15 @@
 # Eric Hedman — invitation portrayal. NOT Eric Hedman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: eric-hedman
-  name: "Eric Hedman"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Animator, artist & game designer — original The Sims (character animation); design lead on Sims expansion packs; Pantomime Corporation (w/ David Levitt & Don Hopkins); later Disney/Henson/Nickelodeon; now indie creator (irkinteraction — Aether HeXXen)"
-  home: characters/eric-hedman/
+id: eric-hedman
+name: "Eric Hedman"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Animator, artist & game designer — original The Sims (character animation); design lead on Sims expansion packs; Pantomime Corporation (w/ David Levitt & Don Hopkins); later Disney/Henson/Nickelodeon; now indie creator (irkinteraction — Aether HeXXen)"
+home: characters/eric-hedman/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -2,7 +2,7 @@
 status: draft
 character_id: kristin-looney
 public: true
-consent: not_yet_asked
+consent: not_asked
 channel: email
 format: remote_or_async
 co_guest: andy-looney

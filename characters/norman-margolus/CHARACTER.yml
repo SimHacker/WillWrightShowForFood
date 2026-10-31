@@ -1,15 +1,17 @@
 # Norman Margolus — invitation portrayal. NOT Norman Margolus.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: norman-margolus
-  name: "Norman Margolus"
-  type: invitation
-  signifier: "🔲"
-  status: living
-  field: "Physicist & computer scientist — cellular automata, reversible computing, CAM-6; co-author of *Cellular Automata Machines*"
-  home: characters/norman-margolus/
-  aliases: ["Norm Margolus"]
+id: norman-margolus
+name: "Norman Margolus"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔲"
+status: living
+real_being: true
+field: "Physicist & computer scientist — cellular automata, reversible computing, CAM-6; co-author of *Cellular Automata Machines*"
+home: characters/norman-margolus/
+aliases: ["Norm Margolus"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,18 +1,20 @@
 # Jesus Mouse — memorial portrayal (in memoriam). NOT Jesus Mouse.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: jesus-mouse
-  name: "Jesus Mouse"
-  type: memorial
-  signifier: "🕯️🐭✝️"
-  status: deceased
-  field: "Street mythology — Haight/Ashbury; embodied Jesus × Mickey Mouse as American archetypes"
-  home: characters/jesus-mouse/
-  known_as: "Jesus Mouse"   # public street name; legal name not collected
-  when_where:
-    - "early 1990s — Haight Street coffee shop regular, San Francisco"
-    - "InterCHI '93 — Amsterdam, Homegrown Fantasy Coffeeshop (Don's last sighting)"
+id: jesus-mouse
+name: "Jesus Mouse"
+type: person
+layer: memorial
+signifier: "🕯️"
+emoji: "🕯️🐭✝️"
+status: deceased
+real_being: true
+field: "Street mythology — Haight/Ashbury; embodied Jesus × Mickey Mouse as American archetypes"
+home: characters/jesus-mouse/
+known_as: "Jesus Mouse"   # public street name; legal name not collected
+when_where:
+  - "early 1990s — Haight Street coffee shop regular, San Francisco"
+  - "InterCHI '93 — Amsterdam, Homegrown Fantasy Coffeeshop (Don's last sighting)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

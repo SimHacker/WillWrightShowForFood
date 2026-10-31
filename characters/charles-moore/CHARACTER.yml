@@ -1,14 +1,16 @@
 # Charles Moore — Forth inventor; Forth, Inc. programmed the Homer II host
 # Public sources only. No warm path yet (Paul / Coco). Not sent.
 
-character:
-  id: charles-moore
-  name: "Charles Moore"
-  type: invitation
-  signifier: "⚙️"
-  status: living
-  field: "Inventor of Forth; Forth, Inc. — Homer II host at HOMER & Assoc."
-  home: characters/charles-moore/
+id: charles-moore
+name: "Charles Moore"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "⚙️"
+status: living
+real_being: true
+field: "Inventor of Forth; Forth, Inc. — Homer II host at HOMER & Assoc."
+home: characters/charles-moore/
 
 representation:
   public_figure: true

@@ -7,7 +7,7 @@
 show Alan, fold his reply back in, iterate. Governed by
 [`portrayal-standards.md`](../../schemas/portrayal-standards.md).
 
-**Status:** draft · `consent: not_yet_asked` · for Repo Show invite + live segment
+**Status:** draft · `consent: not_asked` · for Repo Show invite + live segment
 
 **Related:** [`lenat-cyc-knowledge-and-slow-thinking.md`](media/quora-recaps/lenat-cyc-knowledge-and-slow-thinking.md)
 (white space · gutter · two computers) ·

@@ -2,15 +2,17 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Public info is thin by her choice — this room stays small and respectful until she shapes it.
 
-character:
-  id: julie-minsky
-  name: "Juliana Minsky"
-  aliases: [Julie, Julianna]
-  type: invitation
-  signifier: "🎬"   # her homepage was titled "Roll 'em"
-  status: living
-  field: "Universal Access Inc. co-founder (META-HTML, 1994) — VP marketing; the first wired family"
-  home: characters/julie-minsky/
+id: julie-minsky
+name: "Juliana Minsky"
+aliases: [Julie, Julianna]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎬"   # her homepage was titled "Roll 'em"
+status: living
+real_being: true
+field: "Universal Access Inc. co-founder (META-HTML, 1994) — VP marketing; the first wired family"
+home: characters/julie-minsky/
 
 representation:
   public_figure: true

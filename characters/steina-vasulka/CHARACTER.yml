@@ -1,9 +1,11 @@
-character:
-  id: steina-vasulka
-  name: "Steina Vasulka"
-  type: invitation
-  status: living
-  home: characters/steina-vasulka/
+id: steina-vasulka
+name: "Steina Vasulka"
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+home: characters/steina-vasulka/
 
 representation:
   public_figure: true

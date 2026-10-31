@@ -9,10 +9,10 @@ show:
   type: solo
   host: Don Hopkins                # incarnations: User Interface Flower Child / Don Philahue
   guests: ["Terry Winograd"]
-  character: ../../characters/terry-winograd/   # represented, living, consent not_yet_asked
+  character: ../../characters/terry-winograd/   # represented, living, consent not_asked
   topic: "CS547 as the forebear of the Repo Show — the archive as curriculum"
   status: planted                  # seed → PLANTED → DISTILL → public repo LIVE → INVITE
-  consent: not_yet_asked           # see ../../characters/terry-winograd/invitation.md
+  consent: not_asked           # see ../../characters/terry-winograd/invitation.md
 
 the_forebear_thesis:
   one_line: "CS547 IS the template: one luminary a week, open public access, recorded for posterity, real Q&A. The Repo Show is its descendant."

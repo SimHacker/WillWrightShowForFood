@@ -13,7 +13,7 @@ show:
     graphics → Andrew → NeWS → X11/ICCCM → Nvidia #4 → LOCKSS preservation. Plus MOOLLM,
     honest AI orchestration, and preservation of runnable emulators — not just papers.
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   both_sides: "Co-developed NeWS with Gosling; also architected winning rival X11 (ICCCM, X security patent)."

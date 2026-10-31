@@ -1,14 +1,15 @@
 # Ken Perlin — invitation portrayal. NOT Ken Perlin.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ken-perlin
-  name: "Ken Perlin"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Procedural graphics, Perlin noise, interactive Java demos, NYU, constructionist-adjacent teaching through runnable artifacts"
-  home: characters/ken-perlin/
+id: ken-perlin
+name: "Ken Perlin"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Procedural graphics, Perlin noise, interactive Java demos, NYU, constructionist-adjacent teaching through runnable artifacts"
+home: characters/ken-perlin/
 
 representation:
   public_figure: true

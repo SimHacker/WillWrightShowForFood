@@ -1,14 +1,16 @@
 # Henri Gouraud — invitation portrayal. NOT Henri Gouraud.
 # Utah shading + Armit Multipatch film tour. Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: henri-gouraud
-  name: "Henri Gouraud"
-  type: invitation
-  signifier: "☀️"
-  status: living
-  field: "Computer graphics — Gouraud shading; University of Utah PhD; CAD tour with Armit"
-  home: characters/henri-gouraud/
+id: henri-gouraud
+name: "Henri Gouraud"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "☀️"
+status: living
+real_being: true
+field: "Computer graphics — Gouraud shading; University of Utah PhD; CAD tour with Armit"
+home: characters/henri-gouraud/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

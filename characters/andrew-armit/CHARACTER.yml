@@ -1,15 +1,17 @@
 # Andrew Armit — invitation portrayal. NOT Andrew Armit.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: andrew-armit
-  name: "Andrew Armit"
-  type: invitation
-  signifier: "📐"
-  status: living
-  field: "Interactive 3D CAD pioneer — Cambridge graphics; Multipatch/ICON; hardware design"
-  home: characters/andrew-armit/
-  affiliation: "Andrew Armit Designs — Cambridge, UK"
+id: andrew-armit
+name: "Andrew Armit"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📐"
+status: living
+real_being: true
+field: "Interactive 3D CAD pioneer — Cambridge graphics; Multipatch/ICON; hardware design"
+home: characters/andrew-armit/
+affiliation: "Andrew Armit Designs — Cambridge, UK"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

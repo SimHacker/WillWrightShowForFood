@@ -1,16 +1,18 @@
 # Tom Jennings — invitation portrayal. NOT Tom Jennings.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: tom-jennings
-  name: "Tom Jennings"
-  type: invitation
-  signifier: "📡"
-  status: living
-  field: >-
-    Fido and FidoNet (1984); The Little Garden and TLGnet, Inc.; Phoenix
-    portable BIOS; Homocore; writer and maker (Sensitive Research, BLEEVE.ME)
-  home: characters/tom-jennings/
+id: tom-jennings
+name: "Tom Jennings"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📡"
+status: living
+real_being: true
+field: >-
+  Fido and FidoNet (1984); The Little Garden and TLGnet, Inc.; Phoenix
+  portable BIOS; Homocore; writer and maker (Sensitive Research, BLEEVE.ME)
+home: characters/tom-jennings/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

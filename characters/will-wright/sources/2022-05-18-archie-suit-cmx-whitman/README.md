@@ -41,12 +41,12 @@ move like somebody. The report ends, after 21 motions, on *"O I say now these ar
 The joke is exact, and it is structural rather than decorative: a body-part list interleaved with
 the poem about how a body-part list is a soul.
 
-Eric Lennon Bowman ([room](../../../eric-bowman/)), in the thread:
+[Eric Lennon Bowman](../../../eric-bowman/), in the thread:
 
 > "Embedding and interleaving a Walt Whitman poem within the file format has got to be the single
 > most 'this was The Sims team vibe' thing ever. Holy fucking shit."
 
-Jim Mackraz ([room](../../../jim-mackraz/)) offered the complete review: **"Freak."**
+[Jim Mackraz](../../../jim-mackraz/) offered the complete review: **"Freak."**
 
 ## The skeleton sings
 

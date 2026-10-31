@@ -1,14 +1,16 @@
 # CHARACTER.yml — said-achmiz
 # Standards: ../../schemas/portrayal-standards.md (read once — do not repeat per character)
 
-character:
-  id: said-achmiz
-  name: "Said Achmiz"
-  type: invitation
-  signifier: "📐"
-  status: living
-  field: "Interface designer and implementor — gwern.net design/JS/CSS; GreaterWrong frontend and themes"
-  home: characters/said-achmiz/
+id: said-achmiz
+name: "Said Achmiz"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📐"
+status: living
+real_being: true
+field: "Interface designer and implementor — gwern.net design/JS/CSS; GreaterWrong frontend and themes"
+home: characters/said-achmiz/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

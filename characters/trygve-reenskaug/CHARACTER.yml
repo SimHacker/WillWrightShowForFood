@@ -1,15 +1,17 @@
 # Trygve Reenskaug — invitation portrayal. NOT Trygve Reenskaug.
 # Seeded from Yoot People.md. Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: trygve-reenskaug
-  name: "Trygve Reenskaug"
-  type: invitation
-  signifier: "🎭"
-  status: living
-  born: "1930-06-21"
-  field: "Software architecture — MVC (Xerox PARC); roles / DCI; University of Oslo"
-  home: characters/trygve-reenskaug/
+id: trygve-reenskaug
+name: "Trygve Reenskaug"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎭"
+status: living
+real_being: true
+born: "1930-06-21"
+field: "Software architecture — MVC (Xerox PARC); roles / DCI; University of Oslo"
+home: characters/trygve-reenskaug/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

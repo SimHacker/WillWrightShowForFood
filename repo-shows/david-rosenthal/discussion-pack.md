@@ -1,7 +1,7 @@
 # Discussion pack — David S. H. Rosenthal (July 2026)
 
 Send-ready digest for async discussion with David.  
-Machine index: [`discussion-pack.md`](discussion-pack.md) · **Consent:** `not_yet_asked`
+Machine index: [`discussion-pack.md`](discussion-pack.md) · **Consent:** `not_asked`
 
 **Show:** [DSHR solo](README.md) · **Format:** async 1-on-1
 

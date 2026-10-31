@@ -1,14 +1,16 @@
 # Philip Rosedale — invitation portrayal. NOT Philip Rosedale.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: philip-rosedale
-  name: "Philip Rosedale"
-  type: invitation
-  signifier: "🌐"
-  status: living
-  field: "Second Life, High Fidelity, virtual worlds — user-created worlds × MOOLLM"
-  home: characters/philip-rosedale/
+id: philip-rosedale
+name: "Philip Rosedale"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌐"
+status: living
+real_being: true
+field: "Second Life, High Fidelity, virtual worlds — user-created worlds × MOOLLM"
+home: characters/philip-rosedale/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -80,7 +80,7 @@ abilities:
   combos_with: [MENTOR-CONSTELLATION, WIRED-CHILDHOOD, MEMORY-LANE]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
   minimal_by_design: "Public record is thin by her choice — abilities stay sparse until she co-authors"
 

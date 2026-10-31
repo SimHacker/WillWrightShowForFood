@@ -152,7 +152,7 @@ compose_with:
   tom-demeyer: steim_realtime_video_triangle
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
   on_show: Discuss ABOUT Coniglio's documented history — archive value even if he never appears.
 

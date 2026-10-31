@@ -1,17 +1,19 @@
 # Al Kossow — invitation portrayal. NOT Al Kossow.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: al-kossow
-  name: "Al Kossow"
-  type: invitation
-  signifier: "💾"
-  status: living
-  field: >-
-    Computer history and software preservation: creator of bitsavers; Robert N.
-    Miner Software Curator, Computer History Museum (named 2006); Apple
-    1986-2005
-  home: characters/al-kossow/
+id: al-kossow
+name: "Al Kossow"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "💾"
+status: living
+real_being: true
+field: >-
+  Computer history and software preservation: creator of bitsavers; Robert N.
+  Miner Software Curator, Computer History Museum (named 2006); Apple
+  1986-2005
+home: characters/al-kossow/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,15 +1,17 @@
 # Don Norman — invitation portrayal. NOT Don Norman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: don-norman
-  name: "Don Norman"
-  full_name: "Donald Arthur Norman"
-  type: invitation
-  signifier: "🚪"
-  status: living
-  field: "Cognitive scientist / design — The Design of Everyday Things; Nielsen Norman Group"
-  home: characters/don-norman/
+id: don-norman
+name: "Don Norman"
+full_name: "Donald Arthur Norman"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🚪"
+status: living
+real_being: true
+field: "Cognitive scientist / design — The Design of Everyday Things; Nielsen Norman Group"
+home: characters/don-norman/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

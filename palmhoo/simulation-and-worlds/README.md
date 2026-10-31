@@ -20,8 +20,9 @@ including the one you're standing in right now, which simulates itself by being 
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**adventure-4**](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4) | The reference world. A pub in Amsterdam with a stage, an arcade, cats, and me behind the stage in a nook. 150+ files of running simulation. |
-| [**room/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/room) | Directory as activation context — the atom of world-building. Read this and every folder becomes a place. |
+| [**adventure-4**](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4) | The reference world. A pub in Amsterdam with a stage, an arcade, cats, and me behind the stage in a nook. |
+| [**room/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/room) | Directory as activation context — the atom of world-building. A room knows what is inside and which way is out. |
+| [**place/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/place) | A subject with a location on Earth. A room has exits; a place has latitude. Coordinates stay as competing claims. Averaging two of them invents a building nobody asserted. |
 | [**adventure/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/adventure) | The prototype adventure-4 was cloned from. Instance-first, before we called it that. |
 | [**Soul City**](https://github.com/SimHacker/moollm/tree/main/examples/soul-city) | A city of Sims-flavored simulation experiments. |
 

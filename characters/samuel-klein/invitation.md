@@ -2,7 +2,7 @@
 status: draft
 character_id: samuel-klein
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/walter-bender-olpc/README.md
 format: remote_or_in_person
 channel: facebook

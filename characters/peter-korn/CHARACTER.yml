@@ -1,16 +1,18 @@
 # Peter Korn — invitation portrayal. NOT Peter Korn.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: peter-korn
-  name: "Peter Korn"
-  type: invitation
-  signifier: "🦻"
-  status: living
-  field: >-
-    Accessibility: outSPOKEN for Windows, the Java Accessibility API and Java
-    Access Bridge, GNOME accessibility, Oracle, Amazon Devices (VoiceView)
-  home: characters/peter-korn/
+id: peter-korn
+name: "Peter Korn"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🦻"
+status: living
+real_being: true
+field: >-
+  Accessibility: outSPOKEN for Windows, the Java Accessibility API and Java
+  Access Bridge, GNOME accessibility, Oracle, Amazon Devices (VoiceView)
+home: characters/peter-korn/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

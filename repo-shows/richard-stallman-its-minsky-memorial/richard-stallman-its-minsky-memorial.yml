@@ -14,7 +14,7 @@ show:
     sources, optional Emacs history, and a memorial discussant segment on Marvin's humor and
     cognitive-unconscious paper. Full transcript in repo; no clip-farming.
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 format:
   async_first: true
@@ -96,4 +96,4 @@ ties_to:
   - characters/brian-fox/
   - repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml
 
-consent: not_yet_asked
+consent: not_asked

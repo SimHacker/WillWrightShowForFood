@@ -2,14 +2,15 @@
 # Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
 # Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: jean-piaget
-  name: "Jean Piaget"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: "Developmental psychologist & genetic epistemologist — constructivism, stages of cognitive development"
-  home: characters/jean-piaget/
+id: jean-piaget
+name: "Jean Piaget"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: "Developmental psychologist & genetic epistemologist — constructivism, stages of cognitive development"
+home: characters/jean-piaget/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

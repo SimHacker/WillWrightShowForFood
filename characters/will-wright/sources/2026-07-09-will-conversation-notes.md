@@ -21,7 +21,7 @@ non-fiction**.
 | **Listen**        | [BBC Audio](https://www.bbc.com/audio/play/p0n7xpn6) · programme `p0n7xpn6`                                                                                    |
 | **Source bundle** | [`characters/john-romero/sources/bbc-2026-03-romeros-developing-digital-games/`](../../john-romero/sources/bbc-2026-03-romeros-developing-digital-games/)      |
 | **Also**          | Theresa Loong *Game On* (Brenda); *In the Studio* rebroadcast 24 Mar 2026 (`w3ct6vvx`)                                                                         |
-| **Repo Show**     | [`characters/john-romero/`](../../john-romero/README.md) · [`repo-shows/john-romero/`](../../../repo-shows/john-romero/README.md) — invitation `not_yet_asked` |
+| **Repo Show**     | [`characters/john-romero/`](../../john-romero/README.md) · [`repo-shows/john-romero/`](../../../repo-shows/john-romero/README.md) — invitation `not_asked` |
 
 
 Links:

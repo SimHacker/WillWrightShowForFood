@@ -10,7 +10,7 @@ show:
   character: characters/chaim-gingold/
   topic: "Building SimCity (MIT Press 2024) read against the running Micropolis source — reverse diagrams meet executable history."
   status: draft
-  consent: not_yet_asked
+  consent: not_asked
   pacing: "New parent — async-first, tiny asks, no deadlines"
   participation_ladder: process/guest-participation-ladder.md
 

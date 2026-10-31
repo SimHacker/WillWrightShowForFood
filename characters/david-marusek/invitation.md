@@ -2,7 +2,7 @@
 status: draft
 character_id: david-marusek
 public: true
-consent: not_yet_asked
+consent: not_asked
 format: live_or_async
 ---
 

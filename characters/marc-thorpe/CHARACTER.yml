@@ -1,18 +1,20 @@
 # Marc Thorpe — memorial portrayal (in memoriam). NOT Marc Thorpe.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: marc-thorpe
-  name: "Marc Thorpe"
-  full_name: "Marc Allen Thorpe"
-  type: memorial
-  signifier: "🤖🕯️"
-  status: deceased
-  born: "1946-11-09"
-  died: "2023-11-24"
-  field: "Robot Wars founder; ILM effects; Stupid Fun Club conceptual design; art sport"
-  home: characters/marc-thorpe/
-  affiliation: "Berkeley, CA; ILM; Gallium/Stupid Fun Club orbit; EA (2004–2005)"
+id: marc-thorpe
+name: "Marc Thorpe"
+full_name: "Marc Allen Thorpe"
+type: person
+layer: memorial
+signifier: "🕯️"
+emoji: "🤖🕯️"
+status: deceased
+real_being: true
+born: "1946-11-09"
+died: "2023-11-24"
+field: "Robot Wars founder; ILM effects; Stupid Fun Club conceptual design; art sport"
+home: characters/marc-thorpe/
+affiliation: "Berkeley, CA; ILM; Gallium/Stupid Fun Club orbit; EA (2004–2005)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

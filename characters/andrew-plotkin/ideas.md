@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Zarf's
 public work and the documented 1989 correspondence. Things Don would love to follow
 **with** Andrew Plotkin; not quotes, not claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_asked
 
 ## What Andrew has done
 

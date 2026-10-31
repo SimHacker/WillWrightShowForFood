@@ -2,16 +2,15 @@
 # A WWSFF oddball bot, in the spirit of Slats. Its historical ORIGIN is real + cited;
 # its philosophical "voice" is original in-character bot lore authored for this repo.
 
-character:
-  name: The Ultimate Machine
-  id: ultimate-machine
-  type: fictional_bot
-  real_being: false
-  signifier: "🔌"
-  status: fictional
-  field: "Foundational enigmatic bot — a machine whose only function is to switch itself off"
-  home: characters/robots/ultimate-machine/
-  aliases: ["Useless Machine", "Leave-Me-Alone Box", "Shannon's Hand"]
+name: The Ultimate Machine
+id: ultimate-machine
+type: fictional_bot
+real_being: false
+signifier: "🔌"
+status: fictional
+field: "Foundational enigmatic bot — a machine whose only function is to switch itself off"
+home: characters/robots/ultimate-machine/
+aliases: ["Useless Machine", "Leave-Me-Alone Box", "Shannon's Hand"]
 
 naming:
   why_ultimate_not_useless: "Marvin Minsky called his 1952 design the 'ultimate machine'; the world settled on 'useless machine.' We use ULTIMATE — out of respect for its ultimate uselessness. (Public history; see sources.)"

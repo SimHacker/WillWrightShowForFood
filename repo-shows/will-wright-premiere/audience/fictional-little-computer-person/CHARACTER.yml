@@ -1,16 +1,15 @@
 # Little Computer Person — fictional audience (Activision, 1985 — the Sims ANCESTOR)
 # We invent his name (none canonical); clearly labeled as a Little Computer Person + his dog.
-character:
-  name: "Pixel (a Little Computer Person) & his dog"
-  type: fictional_game_character
-  real_being: false
-  signifier: "🧍💾🐕"
-  home: repo-shows/will-wright-premiere/audience/fictional-little-computer-person/
-  origin: |
-    Little Computer People (Activision, 1985; David Crane) — a man and his DOG who live inside
-    your computer, whom you peek in on, feed, and play with. The direct ANCESTOR of The Sims.
-    Will has cited it. No canonical name exists for the resident — we name ours 'Pixel' and
-    clearly label him a Little Computer Person (his dog is unnamed, your call).
+name: "Pixel (a Little Computer Person) & his dog"
+type: fictional_game_character
+real_being: false
+signifier: "🧍💾🐕"
+home: repo-shows/will-wright-premiere/audience/fictional-little-computer-person/
+origin: |
+  Little Computer People (Activision, 1985; David Crane) — a man and his DOG who live inside
+  your computer, whom you peek in on, feed, and play with. The direct ANCESTOR of The Sims.
+  Will has cited it. No canonical name exists for the resident — we name ours 'Pixel' and
+  clearly label him a Little Computer Person (his dog is unnamed, your call).
 
 representation:
   fictional: true

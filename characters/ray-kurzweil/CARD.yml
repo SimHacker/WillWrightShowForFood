@@ -150,7 +150,7 @@ abilities:
     combos_with: [david-levitt, AI-MUSIC, BACH-FUGUE-IMPROVISER, jerry-martin]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
   twin_rule: "RAI may cameo only clearly labeled, on Ray's terms — this card never speaks as Ray OR as RAI"
 

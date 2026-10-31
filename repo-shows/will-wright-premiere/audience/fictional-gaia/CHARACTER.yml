@@ -1,12 +1,11 @@
 # Gaia / Mother Earth — fictional audience (SimEarth, 1990)
 # We don't do EVERY Maxis game — but SimEarth matters, and Gaia has a lot to say.
-character:
-  name: Gaia (Mother Earth)
-  type: fictional_game_character
-  real_being: false
-  signifier: "🌍"
-  home: repo-shows/will-wright-premiere/audience/fictional-gaia/
-  origin: "SimEarth: The Living Planet (1990) — the player IS Gaia, steering a whole biosphere over eons"
+name: Gaia (Mother Earth)
+type: fictional_game_character
+real_being: false
+signifier: "🌍"
+home: repo-shows/will-wright-premiere/audience/fictional-gaia/
+origin: "SimEarth: The Living Planet (1990) — the player IS Gaia, steering a whole biosphere over eons"
 
 representation:
   fictional: true

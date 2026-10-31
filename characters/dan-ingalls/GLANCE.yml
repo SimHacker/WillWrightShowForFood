@@ -5,7 +5,7 @@ glance:
   signifier: "🪟"
   one_line: "Smalltalk architect — BitBlt, pop-ups, Squeak, Lively; 'there shouldn't be one' (Byte 1981)"
   status: invitation_draft
-  consent: not_yet_asked
+  consent: not_asked
 
 read_order:
   - README.md

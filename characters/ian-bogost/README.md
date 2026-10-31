@@ -39,7 +39,7 @@ a Facebook game built in days to satirize FarmVille-era mechanics (click every s
 feed spam). It went viral anyway; Bogost leaned into the irony, then ended it with the **Cowpocalypse**
 (Sept 2011) — cows raptured, blanks remain, fan complaint answered: *"It wasn't very fun before."*
 
-Sources: [the Cow Clicker story](sources/cow-clicker.md) · [Wikipedia](https://en.wikipedia.org/wiki/Cow_Clicker) · [HN 2022](https://news.ycombinator.com/item?id=31979586)
+Sources: [the Cow Clicker story](sources/cow-clicker.md) · [Wikipedia: Cow Clicker](https://en.wikipedia.org/wiki/Cow_Clicker) · [HN 2022](https://news.ycombinator.com/item?id=31979586)
 
 **Show beat:** contrast with Peter Molyneux's *Curiosity* (2012) — cube clicker hype without Bogost's
 critical frame. Don's [Unite 2012 Amsterdam](https://www.youtube.com/watch?v=24AY4fJ66xA&t=1h08m21s)

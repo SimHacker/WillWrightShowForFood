@@ -2,7 +2,7 @@
 status: send_now
 character_id: nathaniel-borenstein
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/james-gosling/
 warm_contact: true
 channel: "LinkedIn — Don replied to his comment on Gosling's retirement post 31 Jul 2026; connect + DM"

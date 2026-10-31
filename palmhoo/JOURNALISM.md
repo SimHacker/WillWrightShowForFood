@@ -8,9 +8,9 @@
 
 Palmhoo is a tree of summaries over three living repos. Every note on every shelf is a claim
 about something that keeps changing. A claim with no maintenance plan is a lie with a delay on
-it. The MOOLLM skills count was 139 on 2026-07-08; it is already wrong, or will be by the time
-you read this. That's not fixable by writing more carefully — it's fixable by treating summaries
-as **living dependents of their sources**.
+it. On 2026-07-08 the skills count was 139, and the index and the README disagreed with the disk.
+On 2026-10-29 all three say 156. The sentence will be wrong again. That's not fixable by writing
+more carefully — it's fixable by treating summaries as **living dependents of their sources**.
 
 ## The mipmap
 

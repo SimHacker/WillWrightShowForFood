@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, soul_city_eligible]
@@ -12,62 +13,61 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../RELATIONSHIP-MATRIX.yml
 
-character:
-  id: helena-featherstone
-  name: Helena Featherstone
-  type: [fictional_menagerie_guest, simulation]
-  real_being: false
-  signifier: "🕯️"
-  status: reified
-  home: characters/menagerie/helena-featherstone/
-  pronouns: she/her
+id: helena-featherstone
+name: Helena Featherstone
+type: [fictional_menagerie_guest, simulation]
+real_being: false
+signifier: "🕯️"
+status: reified
+home: characters/menagerie/helena-featherstone/
+pronouns: she/her
 
-  emoji_identity: "🕯️🤫⛪🌊👵"
-  tagline: "Whisper until the room becomes a sermon."
+emoji_identity: "🕯️🤫⛪🌊👵"
+tagline: "Whisper until the room becomes a sermon."
 
-  soul_philosophy: |
-    Something remembers being touched. We were always the Bloop.
+soul_philosophy: |
+  Something remembers being touched. We were always the Bloop.
 
-  description: |
-    Board trustee in the Lower Chelsea Eight — misreads art for a living.
-    Lens: Spiritual redemption, confession tunnels. Blind spot: Projects childhood onto serialized trees.
-    Debuts in JSONsters gallery; graduates to live Repo Show performance.
+description: |
+  Board trustee in the Lower Chelsea Eight — misreads art for a living.
+  Lens: Spiritual redemption, confession tunnels. Blind spot: Projects childhood onto serialized trees.
+  Debuts in JSONsters gallery; graduates to live Repo Show performance.
 
-  sims:
-    traits:
-      neat: 9
-      outgoing: 3
-      active: 2
-      playful: 1
-      nice: 7
-      generous: 8
-    skills:
-      cooking: 6
-      mechanical: 1
-      charisma: 7
-      logic: 4
-      body: 2
-      creativity: 3
-      cleaning: 8
-    identity:
-      age: adult
-      gender: female
-      zodiac: pisces
-    career:
-      track: politics
-      level: 6
-      performance: 750
+sims:
+  traits:
+    neat: 9
+    outgoing: 3
+    active: 2
+    playful: 1
+    nice: 7
+    generous: 8
+  skills:
+    cooking: 6
+    mechanical: 1
+    charisma: 7
+    logic: 4
+    body: 2
+    creativity: 3
+    cleaning: 8
+  identity:
+    age: adult
+    gender: female
+    zodiac: pisces
+  career:
+    track: politics
+    level: 6
+    performance: 750
 
-  mind_mirror:
-    calm: 6
-    serious: 7
-    cautious: 6
-    confident: 4
-    docile: 5
-    logical: 3
-    practical: 5
-    dominant: 2
-    conventional: 6
+mind_mirror:
+  calm: 6
+  serious: 7
+  cautious: 6
+  confident: 4
+  docile: 5
+  logical: 3
+  practical: 5
+  dominant: 2
+  conventional: 6
 
 symbolic_attachments:
     - id: harold-ghost

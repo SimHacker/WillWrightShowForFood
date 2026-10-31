@@ -1,9 +1,12 @@
 id: dave-crocker
 name: David H. Crocker
+type: person
+layer: profile
 slug: dave-crocker
 also_known_as: [Dave Crocker, David Crocker]
 role: guest
-status: active
+signifier: "👤"
+real_being: true
 
 affiliations:
   - Brandenburg InternetWorking

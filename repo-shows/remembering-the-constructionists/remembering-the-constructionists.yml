@@ -1,5 +1,5 @@
 # SHOW SEED — Remembering the Constructionists (group memorial / tribute)
-# Standalone seed file. Memorial mode for Piaget, Papert & Minsky; living guests, consent not_yet_asked.
+# Standalone seed file. Memorial mode for Piaget, Papert & Minsky; living guests, consent not_asked.
 # Standards: ../../schemas/portrayal-standards.yml#memorial-mode
 
 show:
@@ -9,7 +9,7 @@ show:
   host: Don Hopkins
   topic: "A tribute to the lineage that taught us minds are built, not filled: Jean Piaget → Seymour Papert → Marvin Minsky. Memories and eulogies, and above all the INTENT — children (and machines) as active builders of their own understanding."
   status: seed
-  consent: not_yet_asked          # every living guest invited + consents per representation-ethics
+  consent: not_asked          # every living guest invited + consents per representation-ethics
 
 memorial-mode:
   subjects: [jean-piaget, seymour-papert, marvin-minsky]

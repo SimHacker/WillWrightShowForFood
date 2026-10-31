@@ -1,14 +1,15 @@
 # Patrick Hulin — invitation portrayal. NOT Patrick Hulin.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: patrick-hulin
-  name: "Patrick Hulin"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Software engineer — AI-assisted reverse engineering; tower-together / towers.world (a tick-for-tick TypeScript SimTower)"
-  home: characters/patrick-hulin/
+id: patrick-hulin
+name: "Patrick Hulin"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Software engineer — AI-assisted reverse engineering; tower-together / towers.world (a tick-for-tick TypeScript SimTower)"
+home: characters/patrick-hulin/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

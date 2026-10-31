@@ -2,7 +2,7 @@
 status: draft
 type: yc_application_parody
 for: brad-myers
-consent: not_yet_asked
+consent: not_asked
 origin: MOOLLM microworld (Preston Rockwell III / Dizzy the Spinner)
 tone: deadpan
 companion: sentient-wait-cursor-proposal.md

@@ -27,7 +27,7 @@ Longer arc in this repo:
 
 - **PhD/diploma lineage** from Heinz — Model-Guided Medicine and **Medical Model Science**
 - **CARS** organizer/program committee; MGM workshops with Heinz (e.g. CARS 2024 Barcelona)
-- **Barn video** — patient-modelling filmed at Heinz's Black Forest farmhouse ([`../heinz-lemke/correspondence.yml`](../heinz-lemke/correspondence.yml) — consent `not_yet_asked`)
+- **Barn video** — patient-modelling filmed at Heinz's Black Forest farmhouse ([`../heinz-lemke/correspondence.yml`](../heinz-lemke/correspondence.yml) — consent `interested`)
 
 Cypko advocates **transparent, inspectable clinical models** with **human-in-the-loop** — connecting
 Heinz's 1969 *graphical man-machine communication* (PIXIE) to today's model-guided medicine.

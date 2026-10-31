@@ -6,7 +6,7 @@ meta:
   show: scott-adams
   updated: 2026-08-01
   human: ideas.md
-  consent: correspondence_verified
+  consent: not_asked
 
 episode_shapes:
   one_shot_90min: [A1, A3, A4, G1, B2]

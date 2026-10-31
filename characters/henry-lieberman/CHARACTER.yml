@@ -1,14 +1,16 @@
 # Henry Lieberman — invitation portrayal. NOT Henry Lieberman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: henry-lieberman
-  name: "Henry Lieberman"
-  type: invitation
-  signifier: "🔧📚"
-  status: living
-  field: "Programming by demonstration — Tinker, Mondrian, agents; MIT AI Lab + Media Lab; smart interfaces"
-  home: characters/henry-lieberman/
+id: henry-lieberman
+name: "Henry Lieberman"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔧📚"
+status: living
+real_being: true
+field: "Programming by demonstration — Tinker, Mondrian, agents; MIT AI Lab + Media Lab; smart interfaces"
+home: characters/henry-lieberman/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -11,7 +11,7 @@ show:
   character: characters/thomas-cherryhomes/
   topic: "FujiNet co-founder — open ESP32 network peripheral for vintage computers; FujiNet-PC + emulator integration; cross-platform Game Lobby; IRATA.ONLINE/PLATO; community-built retro infrastructure"
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   fujinet_founder: "Firmware developer + co-founder. 5,000+ users, four production platforms (Atari 8-bit, Apple II, Coleco Adam, RS-232/MS-DOS), dozen vendors — mature community project."

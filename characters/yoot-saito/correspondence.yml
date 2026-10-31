@@ -7,7 +7,7 @@
 meta:
   with: yoot-saito
   curated_by: don-hopkins
-  consent: not_yet_asked            # summary is public-safe + factual; full thread stays private until consent
+  consent: not_asked            # summary is public-safe + factual; full thread stays private until consent
   span: "2024–2025"
   provenance: private correspondence with Don (not public)
 

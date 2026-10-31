@@ -2,7 +2,7 @@
 status: invited  # phone 2026-07-06, links sent
 character_id: david-levitt
 public: true
-consent: pending_response
+consent: asked
 show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml
 also_show: repo-shows/rebounce/
 contacted_at: 2026-07-06

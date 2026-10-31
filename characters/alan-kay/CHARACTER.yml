@@ -2,19 +2,21 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Room depth lives in ideas.md + media/quora-recaps/ + people-index.yml — this file is the girder.
 
-character:
-  id: alan-kay
-  name: "Alan Kay"
-  full_name: "Alan Curtis Kay"
-  type: invitation
-  signifier: "💡"
-  status: living
-  born: "1940-05-17"   # Springfield, Massachusetts
-  field: "Computer scientist — Smalltalk, Dynabook, overlapping GUI / personal computing; constructionist education"
-  home: characters/alan-kay/
-  awards:
-    - "ACM A.M. Turing Award (2003) — OOP / Smalltalk / personal computing"
-    - "Kyoto Prize; NAE Draper Prize (shared PARC personal-computing lineage — cite CHM/ACM for wording)"
+id: alan-kay
+name: "Alan Kay"
+full_name: "Alan Curtis Kay"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "💡"
+status: living
+real_being: true
+born: "1940-05-17"   # Springfield, Massachusetts
+field: "Computer scientist — Smalltalk, Dynabook, overlapping GUI / personal computing; constructionist education"
+home: characters/alan-kay/
+awards:
+  - "ACM A.M. Turing Award (2003) — OOP / Smalltalk / personal computing"
+  - "Kyoto Prize; NAE Draper Prize (shared PARC personal-computing lineage — cite CHM/ACM for wording)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

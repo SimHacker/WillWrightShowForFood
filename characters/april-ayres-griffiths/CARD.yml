@@ -32,7 +32,7 @@ abilities:
     verifiable: "microM8 MCP server, KansasFest 2025; MCP tools in microm8-cln"
     combos_with: [TINY-TITAN-HUB]
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

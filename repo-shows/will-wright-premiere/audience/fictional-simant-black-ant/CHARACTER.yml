@@ -1,13 +1,12 @@
 # Black ant worker — SimAnt fictional audience
 # SimAnt (1991) — Will's "too easy" post-mortem game (1996 Stanford talk)
 
-character:
-  name: Black Ant (SimAnt worker)
-  type: fictional_game_character
-  real_being: false
-  signifier: "🐜"
-  home: repo-shows/will-wright-premiere/audience/fictional-simant-black-ant/
-  origin: "SimAnt (1991) — colony sim on the lawn vs house vs red spiders"
+name: Black Ant (SimAnt worker)
+type: fictional_game_character
+real_being: false
+signifier: "🐜"
+home: repo-shows/will-wright-premiere/audience/fictional-simant-black-ant/
+origin: "SimAnt (1991) — colony sim on the lawn vs house vs red spiders"
 
 representation:
   fictional: true

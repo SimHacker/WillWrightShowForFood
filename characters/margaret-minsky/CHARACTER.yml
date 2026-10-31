@@ -1,14 +1,15 @@
 # Margaret Minsky — invitation portrayal. NOT Margaret Minsky.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: margaret-minsky
-  name: "Margaret Minsky"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Haptics / force-feedback (the Sandpaper system); Atari Cambridge Research Lab; MIT Media Lab"
-  home: characters/margaret-minsky/
+id: margaret-minsky
+name: "Margaret Minsky"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Haptics / force-feedback (the Sandpaper system); Atari Cambridge Research Lab; MIT Media Lab"
+home: characters/margaret-minsky/
 
 representation:
   public_figure: true

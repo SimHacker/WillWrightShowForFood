@@ -55,7 +55,7 @@ We celebrate his documented public work; we do not speak as him.
 
 ## Sources (public)
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Ralph_Abraham_(mathematician)) · [ralph-abraham.org](http://www.ralph-abraham.org/)
+- [Wikipedia: Ralph Abraham (mathematician)](https://en.wikipedia.org/wiki/Ralph_Abraham_(mathematician)) · [ralph-abraham.org](http://www.ralph-abraham.org/)
 - [UC Academic Senate in memoriam](https://senate.universityofcalifornia.edu/in-memoriam/files/ralph-abraham.html)
 - [Lookout Santa Cruz — "From math to mushrooms"](https://lookout.co/ralph-abraham-chaos-theory-counterculture-uc-santa-cruz-from-math-to-mushrooms-intellectual-explorer-was-always-looking-for-the-big-picture/story)
 - Abraham, R. (1976). "Simulation of cascades by video feedback." Springer LNM 525:10–14

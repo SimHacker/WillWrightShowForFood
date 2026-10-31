@@ -1,14 +1,16 @@
 # Nicholas Negroponte — invitation portrayal. NOT Nicholas Negroponte.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: nicholas-negroponte
-  name: "Nicholas Negroponte"
-  type: invitation
-  signifier: "🏛️💾"
-  status: living
-  field: "Architect of the MIT Media Lab — Architecture Machine Group; Being Digital; One Laptop per Child; Wired's founding backer"
-  home: characters/nicholas-negroponte/
+id: nicholas-negroponte
+name: "Nicholas Negroponte"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🏛️💾"
+status: living
+real_being: true
+field: "Architect of the MIT Media Lab — Architecture Machine Group; Being Digital; One Laptop per Child; Wired's founding backer"
+home: characters/nicholas-negroponte/
 
 representation:
   public_figure: true

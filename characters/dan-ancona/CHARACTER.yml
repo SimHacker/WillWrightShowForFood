@@ -1,15 +1,17 @@
 # Dan Ancona — invitation portrayal. NOT Dan Ancona.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: dan-ancona
-  name: "Dan Ancona"
-  type: invitation
-  signifier: "🗳️🎮"
-  status: living
-  field: "Political organizer, technologist, visualization — democracy tools & strategic research"
-  home: characters/dan-ancona/
-  location: Oakland, California
+id: dan-ancona
+name: "Dan Ancona"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🗳️🎮"
+status: living
+real_being: true
+field: "Political organizer, technologist, visualization — democracy tools & strategic research"
+home: characters/dan-ancona/
+location: Oakland, California
 
 representation:
   public_figure: true

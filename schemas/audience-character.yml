@@ -52,7 +52,6 @@ directory:
 character:
   type: audience_member
   authored_by: self
-  consent: self_sovereign
   home: "this directory — one instance per episode attended"
   show: "parent episode slug under repo-shows/<slug>/"
   optional: |

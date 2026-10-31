@@ -1,15 +1,17 @@
 # Brandel Zachernuk — invitation portrayal. NOT Brandel Zachernuk.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: brandel-zachernuk
-  name: "Brandel Zachernuk"
-  type: invitation
-  signifier: "🫲"          # embodied cognition — thinking with the hands
-  status: living
-  field: "Spatial web technologies at Apple Vision Products; embodied cognition and extended mind; 25+ years of novel web interaction"
-  home: characters/brandel-zachernuk/
-  site: http://www.zachernuk.com/
+id: brandel-zachernuk
+name: "Brandel Zachernuk"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🫲"          # embodied cognition — thinking with the hands
+status: living
+real_being: true
+field: "Spatial web technologies at Apple Vision Products; embodied cognition and extended mind; 25+ years of novel web interaction"
+home: characters/brandel-zachernuk/
+site: http://www.zachernuk.com/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

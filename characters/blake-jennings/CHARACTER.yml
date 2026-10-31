@@ -1,22 +1,26 @@
 # Blake Jennings — public portrayal (video essayist). NOT Blake.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: blake-jennings
-  name: Blake Jennings
-  also_known_as: [jakeblennings, Jake Blennings]
-  type: invitation
-  signifier: "🎬⚖️"
-  status: living
-  field: "YouTube essayist — An Unnecessary Analysis; game-community ethics / 'war crimes' series"
-  home: characters/blake-jennings/
+id: blake-jennings
+name: Blake Jennings
+also_known_as: [jakeblennings, Jake Blennings]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎬⚖️"
+status: living
+real_being: true
+field: "YouTube essayist — An Unnecessary Analysis; game-community ethics / 'war crimes' series"
+home: characters/blake-jennings/
 
 representation:
   public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   authored_by: don-hopkins
   invitation_status: invited
-  consent: invited_2026-07-16
+  consent:
+    state: asked
+    date: 2026-07-16
 
 web:
   youtube: https://www.youtube.com/@jakeblennings

@@ -1,14 +1,16 @@
 # Chris Trottier — invitation portrayal. NOT Chris Trottier.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: chris-trottier
-  name: "Chris Trottier"
-  type: invitation
-  signifier: "🪶"
-  status: living
-  field: "Lead Designer at Maxis (1997–2008) on The Sims, Sims Online, and Spore; known for 'design by accretion'"
-  home: characters/chris-trottier/
+id: chris-trottier
+name: "Chris Trottier"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🪶"
+status: living
+real_being: true
+field: "Lead Designer at Maxis (1997–2008) on The Sims, Sims Online, and Spore; known for 'design by accretion'"
+home: characters/chris-trottier/
 
 representation:
   public_figure: true

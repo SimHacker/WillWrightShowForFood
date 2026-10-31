@@ -1,5 +1,5 @@
 # SHOW SEED — Remembering Douglas Engelbart (group memorial / tribute)
-# Standalone seed file. Memorial mode for Doug; living guests, consent not_yet_asked.
+# Standalone seed file. Memorial mode for Doug; living guests, consent not_asked.
 # Standards: ../../schemas/portrayal-standards.yml#memorial-mode
 
 show:
@@ -9,7 +9,7 @@ show:
   host: Don Hopkins
   topic: "A tribute to Doug Engelbart (1925-2013) — memories, eulogies, and above all his INTENT: augmenting collective human intellect, not a laundry list of inventions."
   status: seed
-  consent: not_yet_asked          # every living guest invited + consents per representation-ethics
+  consent: not_asked          # every living guest invited + consents per representation-ethics
 
 memorial-mode:
   subject: douglas-engelbart

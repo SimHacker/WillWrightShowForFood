@@ -2,7 +2,7 @@
 status: dream_guest
 character_id: laurie-anderson
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/laurie-anderson/
 warm_intro_via: interval-alumni
 ---

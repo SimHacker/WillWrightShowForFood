@@ -3,7 +3,7 @@ status: draft
 character_id: melody-ayres-griffiths
 joint_with: april-ayres-griffiths
 public: true
-consent: not_yet_asked
+consent: not_asked
 format: remote_or_in_person
 ---
 

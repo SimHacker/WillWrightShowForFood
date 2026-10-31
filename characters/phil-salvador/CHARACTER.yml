@@ -1,14 +1,16 @@
 # Phil Salvador — invitation portrayal. NOT Phil Salvador.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: phil-salvador
-  name: Phil Salvador
-  type: invitation
-  signifier: "🛢️"
-  status: living
-  field: "Game historian; The Obscuritory; Video Game History Foundation; SimRefinery archivist"
-  home: characters/phil-salvador/
+id: phil-salvador
+name: Phil Salvador
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🛢️"
+status: living
+real_being: true
+field: "Game historian; The Obscuritory; Video Game History Foundation; SimRefinery archivist"
+home: characters/phil-salvador/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

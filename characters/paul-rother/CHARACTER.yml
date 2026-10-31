@@ -1,14 +1,16 @@
 # Paul Rother — HOMER & Assoc. in-house programmer; learned Forth from Charles Moore
 # Public sources only; warm path via Coco Conn.
 
-character:
-  id: paul-rother
-  name: "Paul Rother"
-  type: invitation
-  signifier: "🕹️"
-  status: living
-  field: "Homer II Forth programming (with Charles Moore); CAT-700 paint system; music-video and film FX pipeline"
-  home: characters/paul-rother/
+id: paul-rother
+name: "Paul Rother"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🕹️"
+status: living
+real_being: true
+field: "Homer II Forth programming (with Charles Moore); CAT-700 paint system; music-video and film FX pipeline"
+home: characters/paul-rother/
 
 representation:
   public_figure: true

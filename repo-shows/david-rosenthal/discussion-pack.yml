@@ -5,7 +5,7 @@ meta:
   for: david-rosenthal
   curated_by: don-hopkins
   date: "2026-07-03"
-  consent: not_yet_asked
+  consent: not_asked
   format: async_discussion
   human_readable: discussion-pack.md
   show: repo-shows/david-rosenthal/

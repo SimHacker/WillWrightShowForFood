@@ -1,20 +1,22 @@
 # Lumpinou — invitation portrayal. NOT Lumpinou.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: lumpinou
-  name: "Lumpinou"
-  type: invitation
-  signifier: "🏳️‍🌈🔧"
-  status: living
-  field: |
-    The Sims 4 gameplay modding (Python) — LGBTQIA+ / Gender & Orientation Overhaul and a
-    catalog of relationship and life-event mods; lumpinoumods.com
-  home: characters/lumpinou/
-  naming_note: |
-    Goes by the handle **Lumpinou** across the site, Mod The Sims, Patreon and Discord. No legal
-    name published on lumpinoumods.com. Pronouns are not stated in any source found; Don refers
-    to him as he. Ask before writing pronouns into anything public or filmed.
+id: lumpinou
+name: "Lumpinou"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🏳️‍🌈🔧"
+status: living
+real_being: true
+field: |
+  The Sims 4 gameplay modding (Python) — LGBTQIA+ / Gender & Orientation Overhaul and a
+  catalog of relationship and life-event mods; lumpinoumods.com
+home: characters/lumpinou/
+naming_note: |
+  Goes by the handle **Lumpinou** across the site, Mod The Sims, Patreon and Discord. No legal
+  name published on lumpinoumods.com. Pronouns are not stated in any source found; Don refers
+  to him as he. Ask before writing pronouns into anything public or filmed.
 
 representation:
   public_figure: false

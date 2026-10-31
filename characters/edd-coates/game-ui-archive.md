@@ -2,7 +2,7 @@
 
 North star for the **[Edd Coates](README.md)** Repo Show. Don's framing from public work and friendship —
 not quotes put in Edd's mouth.
-[Portrayal standards](../../schemas/portrayal-standards.md) · [brainstorm heartbeat](../../process/brainstorm-heartbeat.md) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · [brainstorm heartbeat](../../process/brainstorm-heartbeat.md) · consent not_asked
 
 | Jump | Link |
 |------|------|

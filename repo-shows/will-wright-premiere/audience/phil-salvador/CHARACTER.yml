@@ -1,12 +1,11 @@
 # Phil Salvador — RESERVED real-person audience seat (to be invited; consent pending)
 # Real person. NOT yet asked. NO fabricated questions in his voice until he consents.
-character:
-  name: Phil Salvador
-  type: real_being
-  real_being: true
-  signifier: "🗄️"
-  home: repo-shows/will-wright-premiere/audience/phil-salvador/
-  field: "Library Director, Video Game History Foundation; The Obscuritory; game preservationist"
+name: Phil Salvador
+type: real_being
+real_being: true
+signifier: "🗄️"
+home: repo-shows/will-wright-premiere/audience/phil-salvador/
+field: "Library Director, Video Game History Foundation; The Obscuritory; game preservationist"
 
 representation:
   real_being: true

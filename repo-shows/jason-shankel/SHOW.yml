@@ -9,7 +9,7 @@ show:
   character: [characters/jason-shankel/]
   topic: "Spore prototyping virtuous cycle, Sonoma teaching arc, Connected Play → 2026 AI/skills — with FlatterBot 2000! as optional cold open."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 episodes:
   - { id: ai-skills-prototyping, what: "ParticleMan / SimMars / first Spore programmer; MOOLLM skills as modern virtuous cycle; live tiny prototype in repo." }

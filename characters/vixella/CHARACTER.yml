@@ -1,14 +1,16 @@
 # Vixella — portrayal. NOT Vixella.
 # Consent level 3 — public figure; not yet asked. Verify primary posts before quoting.
 
-character:
-  id: vixella
-  name: Vixella
-  type: invitation
-  signifier: "✨📺"
-  status: living
-  field: "Sims YouTuber; EA Creator Network resigner Oct 2025"
-  home: characters/vixella/
+id: vixella
+name: Vixella
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "✨📺"
+status: living
+real_being: true
+field: "Sims YouTuber; EA Creator Network resigner Oct 2025"
+home: characters/vixella/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

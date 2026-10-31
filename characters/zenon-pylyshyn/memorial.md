@@ -29,4 +29,4 @@ We remember him by inviting those who knew him — see `CHARACTER.yml`
 invitation): **Roy Eagleson**.
 
 **Read:** [Rutgers RuCCS — In Memoriam](https://ruccs.rutgers.edu/people/people-details/146-emeritus-faculty/525-dr-zenon-pylyshyn)
-· [Wikipedia](https://en.wikipedia.org/wiki/Zenon_Pylyshyn)
+· [Wikipedia: Zenon Pylyshyn](https://en.wikipedia.org/wiki/Zenon_Pylyshyn)

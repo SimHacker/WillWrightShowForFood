@@ -7,7 +7,7 @@ status:
   repo: public
   monorepo: scaffolded
   will_invitation: accepted  # SSOT: characters/INDEX.yml#flagship.will-wright
-  consent: accepted
+  consent: granted
 
 read_order:
   - README.md

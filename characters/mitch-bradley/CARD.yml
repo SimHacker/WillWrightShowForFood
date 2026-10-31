@@ -31,7 +31,7 @@ abilities:
     effect: Write a Forth for an 18-bit machine from 1964, with a turtle on the Type 340.
     verifiable: "https://github.com/MitchBradley/pdp7forth"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

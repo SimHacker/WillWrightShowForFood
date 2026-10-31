@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, glick-gallery, labeled_fiction_presenter]
@@ -12,69 +13,68 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../GLICK-GALLERY.yml
 
-character:
-  id: paula-gotchya
-  name: Paula Gotchya
-  type: [fictional_menagerie_guest, labeled_fiction_presenter, simulation]
-  real_being: false
-  signifier: "🕵️📰🪤😱"
-  status: seed
-  home: characters/menagerie/paula-gotchya/
-  pronouns: she/her
+id: paula-gotchya
+name: Paula Gotchya
+type: [fictional_menagerie_guest, labeled_fiction_presenter, simulation]
+real_being: false
+signifier: "🕵️📰🪤😱"
+status: seed
+home: characters/menagerie/paula-gotchya/
+pronouns: she/her
 
-  emoji_identity: "🕵️📰🪤😱📎"
-  tagline: "But what are you HIDING in the gitignore?"
-  archetype: the_ambush_journalist
-  sin: "Manufactures controversy; frames gossip as accountability"
+emoji_identity: "🕵️📰🪤😱📎"
+tagline: "But what are you HIDING in the gitignore?"
+archetype: the_ambush_journalist
+sin: "Manufactures controversy; frames gossip as accountability"
 
-  soul_philosophy: |
-    I'm just reading here. People close to the matter. Dramatic pause. Response?
+soul_philosophy: |
+  I'm just reading here. People close to the matter. Dramatic pause. Response?
 
-  description: |
-    Glick Gallery foil — the ambush journalist. Manufactures controversy; frames gossip as accountability.
-    Violates: verifiability + subject rights — she fabricates; the show cites.
-    Philahue ejects her mid-gotcha.
+description: |
+  Glick Gallery foil — the ambush journalist. Manufactures controversy; frames gossip as accountability.
+  Violates: verifiability + subject rights — she fabricates; the show cites.
+  Philahue ejects her mid-gotcha.
 
-  bits:
-    - "'Your former collaborator — and I'm just reading here — HATES you. Response?'"
-    - "Quotes things the guest never said, sourced to 'people close to the matter'"
-    - "Dramatic pause, leans in: 'But what are you HIDING in the gitignore?'"
+bits:
+  - "'Your former collaborator — and I'm just reading here — HATES you. Response?'"
+  - "Quotes things the guest never said, sourced to 'people close to the matter'"
+  - "Dramatic pause, leans in: 'But what are you HIDING in the gitignore?'"
 
-  sims:
-    traits:
-      neat: 8
-      outgoing: 7
-      active: 7
-      playful: 3
-      nice: 1
-      generous: 2
-    skills:
-      cooking: 2
-      mechanical: 1
-      charisma: 7
-      logic: 5
-      body: 4
-      creativity: 6
-      cleaning: 5
-    identity:
-      age: adult
-      gender: female
-      zodiac: scorpio
-    career:
-      track: politics
-      level: 7
-      performance: 600
+sims:
+  traits:
+    neat: 8
+    outgoing: 7
+    active: 7
+    playful: 3
+    nice: 1
+    generous: 2
+  skills:
+    cooking: 2
+    mechanical: 1
+    charisma: 7
+    logic: 5
+    body: 4
+    creativity: 6
+    cleaning: 5
+  identity:
+    age: adult
+    gender: female
+    zodiac: scorpio
+  career:
+    track: politics
+    level: 7
+    performance: 600
 
-  mind_mirror:
-    calm: 2
-    serious: 6
-    cautious: 3
-    confident: 7
-    docile: 1
-    logical: 4
-    practical: 4
-    dominant: 7
-    conventional: 3
+mind_mirror:
+  calm: 2
+  serious: 6
+  cautious: 3
+  confident: 7
+  docile: 1
+  logical: 4
+  practical: 4
+  dominant: 7
+  conventional: 3
 
 symbolic_attachments:
   - id: unmarked-manila

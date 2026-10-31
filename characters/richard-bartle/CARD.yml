@@ -95,7 +95,7 @@ abilities:
   verifiable: Bartle/adventure crossover humor (consensual portrayal)
   combos_with: []
 invoke_rules:
-  consent: not_yet_asked
+  consent: granted
   simulation: false
 see_also:
 - path: CHARACTER.yml

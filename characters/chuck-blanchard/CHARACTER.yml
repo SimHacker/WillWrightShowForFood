@@ -1,14 +1,16 @@
 # Chuck Blanchard — invitation portrayal. NOT Chuck Blanchard.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: chuck-blanchard
-  name: "Chuck Blanchard"
-  type: invitation
-  signifier: "🥽🛠️"
-  status: living
-  field: "Lead designer/programmer of Body Electric at VPL Research — the real-time VR/music visual-programming language behind Bounce"
-  home: characters/chuck-blanchard/
+id: chuck-blanchard
+name: "Chuck Blanchard"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🥽🛠️"
+status: living
+real_being: true
+field: "Lead designer/programmer of Body Electric at VPL Research — the real-time VR/music visual-programming language behind Bounce"
+home: characters/chuck-blanchard/
 
 representation:
   public_figure: true

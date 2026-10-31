@@ -1,6 +1,6 @@
 # Ideas to explore with Ian Bogost
 
-*Conversation hooks — procedural rhetoric × Sims lineage. Consent not_yet_asked.*  
+*Conversation hooks — procedural rhetoric × Sims lineage. Consent not_asked.*  
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Show thesis
@@ -201,7 +201,7 @@ satire, withholding proves we got it. The Molyneux receipts (RPS
 as background, not ammunition.
 
 - [The Cow Clicker story](sources/cow-clicker.md) — mechanics, Cowpocalypse, citations
-- [Cow Clicker site](http://www.cowclicker.com/) · [Wikipedia](https://en.wikipedia.org/wiki/Cow_Clicker) · [HN 2022](https://news.ycombinator.com/item?id=31979586)
+- [Cow Clicker site](http://www.cowclicker.com/) · [Wikipedia: Cow Clicker](https://en.wikipedia.org/wiki/Cow_Clicker) · [HN 2022](https://news.ycombinator.com/item?id=31979586)
 - Bogost line: *"It wasn't very fun before."* — scheduled death as honesty
 - Don's [Unite 2012 cow joke](../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.md) — Curiosity didn't get the reference
 - [Curiosity + Cow Clicker parody](../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.md) — keep real Curiosity dead; center is your cow

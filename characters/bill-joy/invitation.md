@@ -2,7 +2,7 @@
 status: dream_guest
 character_id: bill-joy
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/bill-joy/
 ---
 

@@ -1,14 +1,16 @@
 # David S. H. Rosenthal — invitation portrayal. NOT David S. H. Rosenthal.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: david-rosenthal
-  name: "David S. H. Rosenthal"
-  type: invitation
-  signifier: "🗄️"
-  status: living
-  field: "NeWS (with Gosling), X11 ICCCM + X security, Andrew (CMU), Nvidia #4, LOCKSS; Cambridge PDP-7/Titan ~1970"
-  home: characters/david-rosenthal/
+id: david-rosenthal
+name: "David S. H. Rosenthal"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🗄️"
+status: living
+real_being: true
+field: "NeWS (with Gosling), X11 ICCCM + X security, Andrew (CMU), Nvidia #4, LOCKSS; Cambridge PDP-7/Titan ~1970"
+home: characters/david-rosenthal/
 
 representation:
   public_figure: true

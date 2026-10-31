@@ -1,16 +1,19 @@
 # Phil Cook — storyline figure portrayal. NOT Phil Cook.
 # Status UNKNOWN (living/passed unconfirmed). Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: phil-cook
-  name: "Phil Cook"
-  full_name: "Dr. Phil Cook"
-  type: storyline_figure
-  signifier: "🏭"
-  status: unknown              # living/passed not yet confirmed — do NOT assume memorial or invite
-  field: "Industrial research direction — Plessey Automation Research Laboratories, Poole, Dorset"
-  home: characters/phil-cook/
-  affiliation: "Plessey Automation Research Laboratories, Poole, Dorset, UK (1967)"
+id: phil-cook
+name: "Phil Cook"
+full_name: "Dr. Phil Cook"
+type: person
+show_role: storyline_figure
+layer: profile
+signifier: "👤"
+emoji: "🏭"
+# living/passed not yet confirmed — do NOT assume memorial or invite
+real_being: true
+field: "Industrial research direction — Plessey Automation Research Laboratories, Poole, Dorset"
+home: characters/phil-cook/
+affiliation: "Plessey Automation Research Laboratories, Poole, Dorset, UK (1967)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

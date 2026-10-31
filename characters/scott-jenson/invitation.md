@@ -2,7 +2,7 @@
 status: draft
 character_id: scott-jenson
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed:
 ---
 

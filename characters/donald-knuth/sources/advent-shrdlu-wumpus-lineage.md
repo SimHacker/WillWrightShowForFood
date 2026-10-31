@@ -22,10 +22,10 @@ leoc credits prior art:
 
 | Name | What | Link |
 |------|------|------|
-| **ADVENT** | Colossal Cave Adventure (Crowther → Woods) | [Wikipedia](https://en.wikipedia.org/wiki/Colossal_Cave_Adventure) · [`adventure-knuth/advent.w`](adventure-knuth/advent.w) |
-| **SHRDLU** | Winograd blocks-world dialogue (1972) | [Wikipedia](https://en.wikipedia.org/wiki/SHRDLU) · [`../../terry-winograd/`](../../terry-winograd/) |
-| **WUMPUS** | Hunt the Wumpus (Gregory Yob, 1973) | [Wikipedia](https://en.wikipedia.org/wiki/Hunt_the_Wumpus) |
-| **Zork / Dungeon** | MIT → Infocom; MUD name-seed | [Wikipedia](https://en.wikipedia.org/wiki/Zork) |
+| **ADVENT** | Colossal Cave Adventure (Crowther → Woods) | [Wikipedia: Colossal Cave Adventure](https://en.wikipedia.org/wiki/Colossal_Cave_Adventure) · [`adventure-knuth/advent.w`](adventure-knuth/advent.w) |
+| **SHRDLU** | Winograd blocks-world dialogue (1972) | [Wikipedia: SHRDLU](https://en.wikipedia.org/wiki/SHRDLU) · [`../../terry-winograd/`](../../terry-winograd/) |
+| **WUMPUS** | Hunt the Wumpus (Gregory Yob, 1973) | [Wikipedia: Hunt the Wumpus](https://en.wikipedia.org/wiki/Hunt_the_Wumpus) |
+| **Zork / Dungeon** | MIT → Infocom; MUD name-seed | [Wikipedia: Zork](https://en.wikipedia.org/wiki/Zork) |
 | **Don Woods** | Canonical Adventure expand; NeWS colleague of Don | motd: *Welcome to Adventure. Would you like instructions?* |
 | **Nick Montfort** | *Riddle Machines* (2007) | [nickm.com](https://nickm.com/if/riddle_machines.html) · framing [`../../nick-montfort/sources/riddle-machines.md`](../../nick-montfort/sources/riddle-machines.md) |
 | **Don Knuth** | CWEB literate Adventure (**he wrote it**) | Guest room [`../`](../) · [Knuth Programs](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent) · [`adventure-knuth/`](adventure-knuth/) |

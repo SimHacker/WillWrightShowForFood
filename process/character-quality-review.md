@@ -15,7 +15,7 @@ HN harvest: [`hn-harvest/INDEX.md`](hn-harvest/INDEX.md)
 
 - Line-count + README/bio audit across 218 `CHARACTER.yml` rooms.
 - Memorial mode: `type: memorial`, represent+discuss, no speaking-as, cite sources.
-- Living public figures not yet asked: `consent_level: 3`, subject rights explicit.
+- Living public figures not yet asked: `representation.consent.state: not_asked`, `public_figure: true`, subject rights explicit.
 - HN: Algolia author-scoped comment search; Firebase shows ~12,961 (DonHopkins) + ~607 (SimHacker) submitted items for a later full walk.
 
 ## Critical correction this pass

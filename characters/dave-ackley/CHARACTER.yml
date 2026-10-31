@@ -1,14 +1,16 @@
 # Dave Ackley — invitation portrayal. NOT Dave Ackley.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: dave-ackley
-  name: "Dave Ackley"
-  type: invitation
-  signifier: "🧱🦋"
-  status: living
-  field: "Computer scientist — robust-first computing, indefinitely scalable architecture; the Movable Feast Machine + T2 Tile Project; Prof. Emeritus, University of New Mexico"
-  home: characters/dave-ackley/
+id: dave-ackley
+name: "Dave Ackley"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧱🦋"
+status: living
+real_being: true
+field: "Computer scientist — robust-first computing, indefinitely scalable architecture; the Movable Feast Machine + T2 Tile Project; Prof. Emeritus, University of New Mexico"
+home: characters/dave-ackley/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

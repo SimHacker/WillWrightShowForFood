@@ -99,7 +99,7 @@ abilities:
     combos_with: [BOUNCE]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: interested
   simulation: false
 
 see_also:

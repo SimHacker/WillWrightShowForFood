@@ -1,13 +1,15 @@
 # Brewster Kahle — invitation portrayal. NOT Brewster Kahle.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: brewster-kahle
-  name: "Brewster Kahle"
-  type: invitation
-  status: living
-  field: "Internet Archive founder; WAIS; web preservation"
-  home: characters/brewster-kahle/
+id: brewster-kahle
+name: "Brewster Kahle"
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "Internet Archive founder; WAIS; web preservation"
+home: characters/brewster-kahle/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

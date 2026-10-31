@@ -1,20 +1,22 @@
 # Mark S. Miller — invitation portrayal. NOT Mark S. Miller.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: mark-miller
-  name: "Mark S. Miller"
-  type: invitation
-  signifier: "🔑"
-  status: living
-  field: >-
-    Object-capability security: Xanadu, Agoric Open Systems, E, Caja, TC39
-    (ECMAScript), SES / Hardened JavaScript, Endo; Chief Scientist at Agoric
-  home: characters/mark-miller/
-  aliases: ["markm", "erights (Hacker News)"]
-  disambiguation: >-
-    Not the Mark Miller quoted in Alan Kay's Quora threads, and not the Apple
-    ATG Mark Miller.
+id: mark-miller
+name: "Mark S. Miller"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔑"
+status: living
+real_being: true
+field: >-
+  Object-capability security: Xanadu, Agoric Open Systems, E, Caja, TC39
+  (ECMAScript), SES / Hardened JavaScript, Endo; Chief Scientist at Agoric
+home: characters/mark-miller/
+aliases: ["markm", "erights (Hacker News)"]
+disambiguation: >-
+  Not the Mark Miller quoted in Alan Kay's Quora threads, and not the Apple
+  ATG Mark Miller.
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

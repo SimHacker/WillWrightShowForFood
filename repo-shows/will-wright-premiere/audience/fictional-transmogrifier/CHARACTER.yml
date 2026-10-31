@@ -1,14 +1,13 @@
 # The Transmogrifier — fictional TOOL persona (user-created content incarnate)
 # Like Edith, personify the TOOL, not a human. Don Hopkins's real Sims content tool.
-character:
-  name: The Transmogrifier
-  type: fictional_tool_persona
-  real_being: false
-  signifier: "🧪🪄"
-  home: repo-shows/will-wright-premiere/audience/fictional-transmogrifier/
-  origin: |
-    The Sims Transmogrifier — Don Hopkins's tool that let anyone clone and re-skin Sims objects,
-    igniting the user-created-content explosion. Personified here as the SPIRIT of UGC itself.
+name: The Transmogrifier
+type: fictional_tool_persona
+real_being: false
+signifier: "🧪🪄"
+home: repo-shows/will-wright-premiere/audience/fictional-transmogrifier/
+origin: |
+  The Sims Transmogrifier — Don Hopkins's tool that let anyone clone and re-skin Sims objects,
+  igniting the user-created-content explosion. Personified here as the SPIRIT of UGC itself.
 
 representation:
   fictional: true

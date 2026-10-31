@@ -1,15 +1,17 @@
 # Peter Scott — invitation portrayal. NOT Peter Scott.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: peter-scott
-  name: Peter Scott
-  type: invitation
-  signifier: "🏙️🐝📺"
-  status: living
-  field: "BBC Micro/Acorn Electron games programmer; SimCity (Superior/Infogrames) port; Last Ninja, Barbarian, Predator conversions; later TV (Gamesmaster, Live TV, Channel 4 animation)"
-  home: characters/peter-scott/
-  location: "Northumberland → London (TV career); Bedlington roots"
+id: peter-scott
+name: Peter Scott
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🏙️🐝📺"
+status: living
+real_being: true
+field: "BBC Micro/Acorn Electron games programmer; SimCity (Superior/Infogrames) port; Last Ninja, Barbarian, Predator conversions; later TV (Gamesmaster, Live TV, Channel 4 animation)"
+home: characters/peter-scott/
+location: "Northumberland → London (TV career); Bedlington roots"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -196,10 +196,10 @@ between a god that *preserves* (LOCKSS, Ubik-as-calm-tech) and one that *consume
 - **Mark Weiser** — **memorial mode** (1952–1999); this is his directory. Represent and discuss
   documented work (ubicomp, calm technology, the *Ubik* reference); no speak-as, no invented inner
   life. Don was his student and friend; CHI'88 pie-menu co-author. [`memorial.md`](memorial.md)
-- **David S. H. Rosenthal** — invitation guest, `not_yet_asked`. Discuss his **public** work;
+- **David S. H. Rosenthal** — invitation guest, `not_asked`. Discuss his **public** work;
   speak *with* him via git; summarize private email in our words, quote public pages only. Knew
   Mark; can speak to it firsthand. [`../david-rosenthal/`](../david-rosenthal/)
-- **Vicky Reich** — warmly welcome potential co-guest; `not_yet_asked`. LOCKSS co-founder; Weiser's
+- **Vicky Reich** — warmly welcome potential co-guest; `not_asked`. LOCKSS co-founder; Weiser's
   widow; her own body of work. Don would love to have both — **David and Vicky's call**, together.
 - **Will Wright** — guest, invitation accepted. The Sims / Palmer Eldritch reading.
   [`../will-wright/`](../will-wright/)

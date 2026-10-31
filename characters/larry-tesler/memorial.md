@@ -8,5 +8,5 @@ ideas into Lisa and Macintosh.
 We cite him; we do not speak as him. Discussants on air: living colleagues who knew the work
 ([Alan Kay](../alan-kay/), [Dan Ingalls](../dan-ingalls/), [Adele Goldberg](../adele-goldberg/)).
 
-Sources: [Wikipedia](https://en.wikipedia.org/wiki/Larry_Tesler) ·
+Sources: [Wikipedia: Larry Tesler](https://en.wikipedia.org/wiki/Larry_Tesler) ·
 [Yoot People.md](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md)

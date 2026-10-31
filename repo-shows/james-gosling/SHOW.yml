@@ -10,7 +10,7 @@ show:
   character: characters/james-gosling/
   topic: "NeWS/SunDew, Gosling Emacs, HyperLook, and the road to Java — the network-window and extension-language lineage"
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
   note: "Pairing requested. Can also run as Gosling solo or van Hoff solo."
 
 why_pair:

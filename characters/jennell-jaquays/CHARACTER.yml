@@ -1,18 +1,19 @@
 # Jennell Jaquays — memorial portrayal (in memoriam). NOT Jennell Jaquays.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: jennell-jaquays
-  name: "Jennell Jaquays"
-  full_name: "Jennell Allyn Jaquays"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1956-10-14"
-  died: "2024-01-10"   # Dallas; complications of Guillain–Barré syndrome (aged 67)
-  field: "Tabletop RPG adventure design & art; video game level design (Quake, EVE Online, Age of Empires)"
-  home: characters/jennell-jaquays/
-  spouse: rebecca-heineman   # public obituaries / Wikipedia — Becky at her side; both memorial rooms
+id: jennell-jaquays
+name: "Jennell Jaquays"
+full_name: "Jennell Allyn Jaquays"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1956-10-14"
+died: "2024-01-10"   # Dallas; complications of Guillain–Barré syndrome (aged 67)
+field: "Tabletop RPG adventure design & art; video game level design (Quake, EVE Online, Age of Empires)"
+home: characters/jennell-jaquays/
+spouse: rebecca-heineman   # public obituaries / Wikipedia — Becky at her side; both memorial rooms
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

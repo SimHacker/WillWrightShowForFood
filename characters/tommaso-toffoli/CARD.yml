@@ -31,7 +31,7 @@ abilities:
     effect: 256 by 256 cells, sixty generations a second, programmed in Forth.
     verifiable: "Cellular Automata Machines (MIT Press, 1987); https://en.wikipedia.org/wiki/CAM-6"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

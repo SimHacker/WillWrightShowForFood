@@ -1,17 +1,19 @@
 # Richard Potter — invitation portrayal. NOT Richard Potter.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: richard-potter
-  name: "Richard Potter"
-  type: invitation
-  signifier: "🎯"
-  status: living
-  field: >-
-    End-user programming with pixels: Triggers, Just-in-Time Programming,
-    pixel data access and graphical macros (University of Maryland HCIL)
-  home: characters/richard-potter/
-  aliases: ["Rich Potter", "Richard L. Potter"]
+id: richard-potter
+name: "Richard Potter"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎯"
+status: living
+real_being: true
+field: >-
+  End-user programming with pixels: Triggers, Just-in-Time Programming,
+  pixel data access and graphical macros (University of Maryland HCIL)
+home: characters/richard-potter/
+aliases: ["Rich Potter", "Richard L. Potter"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

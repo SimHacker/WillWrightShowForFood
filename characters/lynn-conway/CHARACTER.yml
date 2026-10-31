@@ -1,18 +1,19 @@
 # Lynn Conway — memorial portrayal (in memoriam). NOT Lynn Conway.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: lynn-conway
-  name: "Lynn Conway"
-  full_name: "Lynn Ann Conway"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1938-01-02"   # Mount Vernon, New York
-  died: "2024-06-09"   # Jackson, Michigan (aged 86)
-  field: "Computer architecture; VLSI / Mead–Conway design methodology; transgender rights advocacy"
-  home: characters/lynn-conway/
-  affiliation: "IBM Research (ACS); Xerox PARC (LSI Systems); DARPA Strategic Computing; University of Michigan EECS"
+id: lynn-conway
+name: "Lynn Conway"
+full_name: "Lynn Ann Conway"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1938-01-02"   # Mount Vernon, New York
+died: "2024-06-09"   # Jackson, Michigan (aged 86)
+field: "Computer architecture; VLSI / Mead–Conway design methodology; transgender rights advocacy"
+home: characters/lynn-conway/
+affiliation: "IBM Research (ACS); Xerox PARC (LSI Systems); DARPA Strategic Computing; University of Michigan EECS"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

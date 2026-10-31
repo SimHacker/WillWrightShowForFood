@@ -1,14 +1,16 @@
 # Ken Kahn — invitation portrayal. NOT Ken Kahn.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ken-kahn
-  name: "Ken Kahn"
-  type: invitation
-  signifier: "🎈🐦🌀"
-  status: living
-  field: "Teaching AI to children since 1973 — Logo Group, Pictorial Janus, ToonTalk, AI blocks for Snap! (eCraft2Learn); The Learner's Apprentice; AI historiography with the chatbots themselves"
-  home: characters/ken-kahn/
+id: ken-kahn
+name: "Ken Kahn"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎈🐦🌀"
+status: living
+real_being: true
+field: "Teaching AI to children since 1973 — Logo Group, Pictorial Janus, ToonTalk, AI blocks for Snap! (eCraft2Learn); The Learner's Apprentice; AI historiography with the chatbots themselves"
+home: characters/ken-kahn/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

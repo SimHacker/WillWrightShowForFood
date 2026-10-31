@@ -1,14 +1,16 @@
 # Ted Nelson — invitation portrayal. NOT Ted Nelson.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ted-nelson
-  name: "Ted Nelson"
-  type: invitation
-  signifier: "🔗"
-  status: living
-  field: "Hypertext & hypermedia (coined the terms), Project Xanadu, Computer Lib / Dream Machines, transclusion, intertwingularity"
-  home: characters/ted-nelson/
+id: ted-nelson
+name: "Ted Nelson"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔗"
+status: living
+real_being: true
+field: "Hypertext & hypermedia (coined the terms), Project Xanadu, Computer Lib / Dream Machines, transclusion, intertwingularity"
+home: characters/ted-nelson/
 
 representation:
   public_figure: true

@@ -2,7 +2,7 @@
 status: draft
 character_id: scott-kim
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/amy-jo-and-scott-kim/
 pair_with: amy-jo-kim
 optional_solo_show: repo-shows/scott-kim/

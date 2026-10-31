@@ -2,17 +2,18 @@
 # Died 1954. Seeded from Don's typed-in Morphogenesis prefatory texts + Kay magic list.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: alan-turing
-  name: "Alan Mathison Turing"
-  also_known_as: ["Alan Turing", "A.M. Turing"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1912-06-23"  # London
-  died: "1954-06-07"  # Wilmslow (Cheshire) -- suicide, after criminal prosecution
-  field: "Universal machine; Enigma; ACE; Computing Machinery and Intelligence; morphogenesis / reaction-diffusion"
-  home: characters/alan-turing/
+id: alan-turing
+name: "Alan Mathison Turing"
+also_known_as: ["Alan Turing", "A.M. Turing"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1912-06-23"  # London
+died: "1954-06-07"  # Wilmslow (Cheshire) -- suicide, after criminal prosecution
+field: "Universal machine; Enigma; ACE; Computing Machinery and Intelligence; morphogenesis / reaction-diffusion"
+home: characters/alan-turing/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

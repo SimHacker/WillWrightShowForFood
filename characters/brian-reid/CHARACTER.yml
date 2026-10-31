@@ -1,8 +1,11 @@
 id: brian-reid
 name: Brian Reid
+type: person
+layer: profile
 slug: brian-reid
 role: guest
-status: active
+signifier: "👤"
+real_being: true
 
 affiliations:
   - Stanford University / CMU (Scribe; thesis advisor Bob Sproull)

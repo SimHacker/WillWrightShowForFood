@@ -1,22 +1,27 @@
 # Thomas Claburn — press contact. NOT an invitation portrayal.
 # Standards: ../../schemas/portrayal-standards.md — no private contact info in public repo.
 
-character:
-  id: thomas-claburn
-  name: "Thomas Claburn"
-  type: press_contact
-  signifier: "📰"
-  role: "Reporter, The Register (Situation Publishing) — San Francisco"
-  home: characters/thomas-claburn/
+id: thomas-claburn
+name: "Thomas Claburn"
+type: person
+show_role: press_contact
+layer: profile
+real_being: true
+signifier: "👤"
+emoji: "📰"
+role: "Reporter, The Register (Situation Publishing) — San Francisco"
+home: characters/thomas-claburn/
 
 representation:
   public_figure: true
+  consent:
+    state: not_asked
+    note: "Press contact since 2026-06. No show invitation offered."
 
 relationship:
   kind: fresh_press_contact
   since: 2026-06-24   # replied to Don's brief (forwarded by Liam Proven): "if I can get an editor interested, will write something up"
   invitation_status: not_offered
-  consent: correspondent_warm
 
 why_him:
   generative_agents_2023: |

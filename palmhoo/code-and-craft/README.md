@@ -19,7 +19,7 @@ it — per the wetware essay — runs on you.*
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**MOOLLM skills catalog**](https://github.com/SimHacker/moollm/tree/main/skills) | 139 skills and counting (catalogs lagging, as is proper). The standard library of the moollmiverse. |
+| [**MOOLLM skills catalog**](https://github.com/SimHacker/moollm/tree/main/skills) | 156 skills with a `SKILL.md` on 2026-10-29, and `skills/INDEX.yml` and `skills/README.md` say the same number. The count is a [tracked claim](../coherence.yml), not a slogan. |
 | [**skill/** (the meta-skill)](https://github.com/SimHacker/moollm/tree/main/skills/skill) | How skills work, compose, and evolve. "Skills are conventions the model follows, not code the orchestrator runs." |
 | [**Eval Incarnate framework**](https://github.com/SimHacker/moollm/blob/main/designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md) | The theory underneath: the LLM is `eval()`, and documents are programs. |
 | [**sniffable-python/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/sniffable-python) | Structuring Python so an LLM can comprehend it at a sniff — craft advice for the new reader over your shoulder. |

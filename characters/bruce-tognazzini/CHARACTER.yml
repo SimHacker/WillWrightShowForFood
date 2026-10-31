@@ -1,16 +1,18 @@
 # Bruce "Tog" Tognazzini — invitation portrayal. NOT Bruce Tognazzini.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: bruce-tognazzini
-  name: "Bruce Tognazzini"
-  aka: "Tog"
-  type: invitation
-  signifier: "🎩"   # designer AND magician — the hat does both jobs
-  status: living
-  born: 1945
-  field: "HCI — original Apple Human Interface Guidelines; AskTog; First Principles of Interaction Design"
-  home: characters/bruce-tognazzini/
+id: bruce-tognazzini
+name: "Bruce Tognazzini"
+aka: "Tog"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎩"   # designer AND magician — the hat does both jobs
+status: living
+real_being: true
+born: 1945
+field: "HCI — original Apple Human Interface Guidelines; AskTog; First Principles of Interaction Design"
+home: characters/bruce-tognazzini/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

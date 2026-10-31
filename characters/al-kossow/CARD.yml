@@ -32,7 +32,7 @@ abilities:
     effect: Keeps the Computer History Museum's software collection.
     verifiable: "Robert N. Miner Software Curator, named July 2006 (CHM press release)"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

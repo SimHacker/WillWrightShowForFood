@@ -99,26 +99,26 @@ invitations:
   patrick:
     path: characters/patrick-j-barrett-iii/invitation.md
     priority: send_now
-    consent: not_yet_asked
+    consent: not_asked
   alexander_avila:
     path: characters/alexander-avila/invitation.md
     priority: send_now
-    consent: not_yet_asked
+    consent: not_asked
     note: "Title borrows his essay — invitation required before on-air use of title/clips"
   jacques_servin:
     path: characters/jacques-servin/invitation.md
     priority: send_now
-    consent: not_yet_asked
+    consent: not_asked
   blake_jennings:
     path: characters/blake-jennings/invitation.md
     priority: send_now
-    consent: invited_2026-07-16
+    consent: asked
     note: "First round sent Jul 2026; follow-up adds LGBTQ cluster"
 
 invitation:
   path: characters/patrick-j-barrett-iii/invitation.md
   priority: send_now
-  consent: not_yet_asked
+  consent: not_asked
 
 evidence:
   - characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md

@@ -11,7 +11,7 @@ show:
   character: characters/dave-tristram/
   topic: "Electropaint, Raster Masters, and CA-inspired live performance graphics — improvisational generative imagery to music, ported to the browser era beside Don's CAM6."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   electropaint: "Author of Electropaint — the legendary SGI/IRIX screensaver and demo (NASA Ames → SGI Panel Library); grew into live performance instruments."

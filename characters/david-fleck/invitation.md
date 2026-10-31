@@ -2,7 +2,7 @@
 status: sent
 character_id: david-fleck
 public: true
-consent: async_welcome
+consent: declined
 response: declined_show
 sent: 2026-07-30
 responded: 2026-08-03

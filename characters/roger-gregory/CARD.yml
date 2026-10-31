@@ -82,7 +82,7 @@ abilities:
   verifiable: Rotary rocket engine from Robert Goddard's posthumous patents, US 6,212,876 (2001); the Smalltalk turned into C and Rust, announced 14 Sep 2026, unreleased
   combos_with: []
 invoke_rules:
-  consent: not_addressed          # replied 14 Sep 2026 about the work; nothing said about a show
+  consent: asked          # replied 14 Sep 2026 about the work; nothing said about a show
   simulation: false
 see_also:
 - path: sources/2026-09-14-facebook-reply-c-and-rust.md

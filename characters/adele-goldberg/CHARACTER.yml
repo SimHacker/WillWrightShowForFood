@@ -1,14 +1,16 @@
 # Adele Goldberg — invitation portrayal. NOT Adele Goldberg.
 # Seeded from Yoot People.md. Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: adele-goldberg
-  name: "Adele Goldberg"
-  type: invitation
-  signifier: "📒"
-  status: living
-  field: "Smalltalk — Learning Research Group manager; Smalltalk-80 books; ACM president"
-  home: characters/adele-goldberg/
+id: adele-goldberg
+name: "Adele Goldberg"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📒"
+status: living
+real_being: true
+field: "Smalltalk — Learning Research Group manager; Smalltalk-80 books; ACM president"
+home: characters/adele-goldberg/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

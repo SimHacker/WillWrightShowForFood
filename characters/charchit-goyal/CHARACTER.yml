@@ -1,9 +1,12 @@
 id: charchit-goyal
 name: Charchit Goyal
+type: person
+layer: profile
 slug: charchit-goyal
 also_known_as: themotionguy
 role: field_contact
-status: active
+signifier: "👤"
+real_being: true
 
 affiliations:
   - Wedge (After Effects context-aware pie menu plugin)

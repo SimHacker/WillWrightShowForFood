@@ -1,14 +1,16 @@
 # Albert Hofkamp — invitation portrayal. NOT Albert Hofkamp.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: albert-hofkamp
-  name: "Albert Hofkamp"
-  type: invitation
-  signifier: "🧹⚙️"
-  status: living
-  field: "Software craftsman — Micropolis C++ cleanup & Doxygen documentation (2008–09); OpenTTD GUI expert ('Alberth', 0.7–1.9); Eclipse ESCET supervisory control toolkit; TU Eindhoven"
-  home: characters/albert-hofkamp/
+id: albert-hofkamp
+name: "Albert Hofkamp"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧹⚙️"
+status: living
+real_being: true
+field: "Software craftsman — Micropolis C++ cleanup & Doxygen documentation (2008–09); OpenTTD GUI expert ('Alberth', 0.7–1.9); Eclipse ESCET supervisory control toolkit; TU Eindhoven"
+home: characters/albert-hofkamp/
 
 representation:
   public_figure: true

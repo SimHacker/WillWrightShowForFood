@@ -1,14 +1,15 @@
 # Jason Shankel — invitation portrayal. NOT Jason Shankel.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jason-shankel
-  name: "Jason Shankel"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Games + AI — Maxis / Stupid Fun Club alumnus; procedural/AI in games; teacher"
-  home: characters/jason-shankel/
+id: jason-shankel
+name: "Jason Shankel"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Games + AI — Maxis / Stupid Fun Club alumnus; procedural/AI in games; teacher"
+home: characters/jason-shankel/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

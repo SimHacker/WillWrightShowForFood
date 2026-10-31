@@ -155,7 +155,7 @@ wanted_artifacts:
     - artifact: "Bar Karma / CreationTV production StoryMaker database"
       why: "The real corpus of community submissions → producer outlines → voted storyboards → episode scripts. Gold for a show segment."
       ask: ["Will Wright", "Peter Swearengen (StoryMaker Producer)", "Albie Hecht / Worldwide Biggies", "Laura Knight", "David Cohn (Current TV)"]
-      status: not_yet_asked
+      status: not_asked
       detail: ../process/crazy-idea-jam.yml#creationtv-storymaker
 
 see_also:
@@ -168,7 +168,7 @@ maxis_history_parallel:
     - { id: jess-bird, status: correspondent_warm, synergy: characters/jess-bird/synergy/willwrightshowforfood.yml }
     - { id: jimmy-maher, status: contact_next, synergy: characters/jimmy-maher/synergy/willwrightshowforfood.yml }
     - { id: phil-salvador, status: draft_invite, show: repo-shows/phil-salvador-simrefinery/ }
-    - { id: chaim-gingold, status: not_yet_asked, note: Building SimCity book }
+    - { id: chaim-gingold, status: not_asked, note: Building SimCity book }
   community_leads:
     - { id: rowan-lipkovits, where: filfre comment 2026-07-04, don_replied: 2026-07-07 }
 

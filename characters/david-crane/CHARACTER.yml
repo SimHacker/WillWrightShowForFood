@@ -1,14 +1,16 @@
 # CHARACTER.yml — David Crane
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: david-crane
-  name: "David Crane"
-  type: invitation
-  signifier: "🕹️🏠"
-  status: living
-  field: "Activision founder; Pitfall!; the programmer who made Little Computer People interactive"
-  home: characters/david-crane/
+id: david-crane
+name: "David Crane"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🕹️🏠"
+status: living
+real_being: true
+field: "Activision founder; Pitfall!; the programmer who made Little Computer People interactive"
+home: characters/david-crane/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

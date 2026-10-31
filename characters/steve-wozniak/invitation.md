@@ -2,7 +2,7 @@
 status: draft
 character_id: steve-wozniak
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/steve-wozniak/
 ---
 

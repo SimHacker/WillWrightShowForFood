@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, soul_city_eligible]
@@ -12,62 +13,61 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../RELATIONSHIP-MATRIX.yml
 
-character:
-  id: mimsy-caldwell
-  name: Mimsy Caldwell
-  type: [fictional_menagerie_guest, simulation]
-  real_being: false
-  signifier: "🥂"
-  status: reified
-  home: characters/menagerie/mimsy-caldwell/
-  pronouns: she/her
+id: mimsy-caldwell
+name: Mimsy Caldwell
+type: [fictional_menagerie_guest, simulation]
+real_being: false
+signifier: "🥂"
+status: reified
+home: characters/menagerie/mimsy-caldwell/
+pronouns: she/her
 
-  emoji_identity: "🥂✨🖼️💸😭🏛️"
-  tagline: "Aggressive restraint before the sentence ends."
+emoji_identity: "🥂✨🖼️💸😭🏛️"
+tagline: "Aggressive restraint before the sentence ends."
 
-  soul_philosophy: |
-    I sell restraint aggressively. Two orbs and a sigh of graphite — I owned it mid-sentence.
+soul_philosophy: |
+  I sell restraint aggressively. Two orbs and a sigh of graphite — I owned it mid-sentence.
 
-  description: |
-    Chelsea gallerist in the Lower Chelsea Eight — misreads art for a living.
-    Lens: Semiotics, institutional art speak, pre-oedipal ceramics. Blind spot: Never asks what the software does; buys before the sentence ends.
-    Debuts in JSONsters gallery; graduates to live Repo Show performance.
+description: |
+  Chelsea gallerist in the Lower Chelsea Eight — misreads art for a living.
+  Lens: Semiotics, institutional art speak, pre-oedipal ceramics. Blind spot: Never asks what the software does; buys before the sentence ends.
+  Debuts in JSONsters gallery; graduates to live Repo Show performance.
 
-  sims:
-    traits:
-      neat: 7
-      outgoing: 9
-      active: 8
-      playful: 6
-      nice: 4
-      generous: 2
-    skills:
-      cooking: 3
-      mechanical: 1
-      charisma: 9
-      logic: 2
-      body: 4
-      creativity: 8
-      cleaning: 5
-    identity:
-      age: adult
-      gender: female
-      zodiac: leo
-    career:
-      track: entertainment
-      level: 7
-      performance: 820
+sims:
+  traits:
+    neat: 7
+    outgoing: 9
+    active: 8
+    playful: 6
+    nice: 4
+    generous: 2
+  skills:
+    cooking: 3
+    mechanical: 1
+    charisma: 9
+    logic: 2
+    body: 4
+    creativity: 8
+    cleaning: 5
+  identity:
+    age: adult
+    gender: female
+    zodiac: leo
+  career:
+    track: entertainment
+    level: 7
+    performance: 820
 
-  mind_mirror:
-    calm: 1
-    serious: 4
-    cautious: 2
-    confident: 7
-    docile: 1
-    logical: 2
-    practical: 4
-    dominant: 6
-    conventional: 3
+mind_mirror:
+  calm: 1
+  serious: 4
+  cautious: 2
+  confident: 7
+  docile: 1
+  logical: 2
+  practical: 4
+  dominant: 6
+  conventional: 3
 
 symbolic_attachments:
     - id: sancerre-fridge

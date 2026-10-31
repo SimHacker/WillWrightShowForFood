@@ -2,7 +2,7 @@
 status: sent
 character_id: steve-alvey
 public: true
-consent: asked
+consent: granted
 sent: 2026-08-20
 channel: chat
 show_seed: repo-shows/heather-and-steve/

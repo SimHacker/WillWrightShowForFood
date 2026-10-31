@@ -2,7 +2,7 @@
 status: finished
 character_id: ted-nelson
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/ted-nelson/
 ---
 

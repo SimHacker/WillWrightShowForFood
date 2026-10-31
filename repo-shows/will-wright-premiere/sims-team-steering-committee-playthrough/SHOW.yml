@@ -20,7 +20,7 @@ show:
     scenario system, Bobo's undo — while the people who built it react. Compare to the
     Jan 1999 alpha when available. The Sims post-mortem the 1996 Winograd talk seeded.
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 parent_show: ../../REPO-SHOWS.yml#building-the-sims.yml
 

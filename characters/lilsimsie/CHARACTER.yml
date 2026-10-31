@@ -1,15 +1,17 @@
 # Kayla Sims (lilsimsie) — portrayal. NOT Kayla.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: lilsimsie
-  name: Kayla Sims
-  also_known_as: [lilsimsie, LilSimsie]
-  type: invitation
-  signifier: "💛📺"
-  status: living
-  field: "Sims YouTuber (~2M subs); EA Creator Network; Jan 2025 EA collab pack; resigner Oct 2025"
-  home: characters/lilsimsie/
+id: lilsimsie
+name: Kayla Sims
+also_known_as: [lilsimsie, LilSimsie]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "💛📺"
+status: living
+real_being: true
+field: "Sims YouTuber (~2M subs); EA Creator Network; Jan 2025 EA collab pack; resigner Oct 2025"
+home: characters/lilsimsie/
 
 representation:
   public_figure: true

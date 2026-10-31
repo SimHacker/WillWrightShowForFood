@@ -1,7 +1,7 @@
 # Ideas to explore with Richard M. Stallman
 
 *Conversation hooks — narrow sessions, full context in repo, guest editorial veto.*  
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_asked
 
 ## Show thesis
 

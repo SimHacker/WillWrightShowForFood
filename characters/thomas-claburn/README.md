@@ -1,7 +1,7 @@
 # Thomas Claburn 📰
 
 *Press contact — not an invitation portrayal.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent: warm correspondent · authored by Don Hopkins
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent: not_asked, warm correspondent · authored by Don Hopkins
 
 **Thomas Claburn** reports for **[The Register](https://www.theregister.com/)** from San
 Francisco. In April 2023 he wrote

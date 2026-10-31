@@ -2,18 +2,19 @@
 # Charles P. Thacker died 2017 — represent + discuss. Seeded from Yoot People.md.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: chuck-thacker
-  name: "Chuck Thacker"
-  full_name: "Charles P. Thacker"
-  also_known_as: ["Charles Thacker"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1943-02-26"
-  died: "2017-06-12"
-  field: "Hardware — Xerox Alto; MAXC; Ethernet era; Microsoft Tablet PC; Turing Award 2009"
-  home: characters/chuck-thacker/
+id: chuck-thacker
+name: "Chuck Thacker"
+full_name: "Charles P. Thacker"
+also_known_as: ["Charles Thacker"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1943-02-26"
+died: "2017-06-12"
+field: "Hardware — Xerox Alto; MAXC; Ethernet era; Microsoft Tablet PC; Turing Award 2009"
+home: characters/chuck-thacker/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

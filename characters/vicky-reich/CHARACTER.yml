@@ -1,17 +1,19 @@
 # Vicky Reich — invitation portrayal. NOT Vicky Reich.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: vicky-reich
-  name: "Vicky Reich"
-  type: invitation
-  signifier: "📦"
-  status: living
-  field: >-
-    Librarian: co-founder of the LOCKSS Program and of CLOCKSS; HighWire Press;
-    Stanford University Libraries; the Library of Congress
-  home: characters/vicky-reich/
-  aliases: ["Victoria Reich", "Victoria Ann Reich"]
+id: vicky-reich
+name: "Vicky Reich"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📦"
+status: living
+real_being: true
+field: >-
+  Librarian: co-founder of the LOCKSS Program and of CLOCKSS; HighWire Press;
+  Stanford University Libraries; the Library of Congress
+home: characters/vicky-reich/
+aliases: ["Victoria Reich", "Victoria Ann Reich"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

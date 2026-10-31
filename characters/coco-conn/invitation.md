@@ -2,7 +2,7 @@
 status: invited  # sent 2026-07-06 via Facebook
 character_id: coco-conn
 public: true
-consent: not_yet_asked
+consent: interested
 show_seed: repo-shows/coco-conn/
 sent_at: 2026-07-06
 sent_via: facebook

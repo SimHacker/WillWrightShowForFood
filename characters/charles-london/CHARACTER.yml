@@ -2,14 +2,16 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Derived from README.md; every claim below traces to a cited thread there.
 
-character:
-  id: charles-london
-  name: "Charles London"
-  type: invitation
-  signifier: "💎"                        # the Plumbob
-  status: living
-  field: "Game art — Maxis, The Sims era; author of the Plumbob"
-  home: characters/charles-london/
+id: charles-london
+name: "Charles London"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "💎"                        # the Plumbob
+status: living
+real_being: true
+field: "Game art — Maxis, The Sims era; author of the Plumbob"
+home: characters/charles-london/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

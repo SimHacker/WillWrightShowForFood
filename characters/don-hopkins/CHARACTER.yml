@@ -2,16 +2,18 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Sync: sync-sources.yml (from moollm adventure-4 + Don's private archive export)
 
-character:
-  id: don-hopkins
-  name: Don Hopkins
-  type: self_sovereign
-  signifier: "🌀"
-  subtitle: "Programmer, Interface Designer, Pie Menu Baker"
-  status: living
-  field: "User-interface designer and programmer; Repo Show host; Repo Show"
-  home: characters/don-hopkins/
-  title: "Don Hopkins (the User Interface Flower Child)"
+id: don-hopkins
+name: Don Hopkins
+type: self_sovereign
+layer: invitation
+signifier: "👤"
+emoji: "🌀"
+subtitle: "Programmer, Interface Designer, Pie Menu Baker"
+status: living
+real_being: true
+field: "User-interface designer and programmer; Repo Show host; Repo Show"
+home: characters/don-hopkins/
+title: "Don Hopkins (the User Interface Flower Child)"
 
 representation:
   public_figure: true
@@ -26,11 +28,9 @@ representation:
     See portrayal/voice.yml#character-room.
 
 # Adventure-4 microworld character — absolute once; shorthand elsewhere
-moollm_source:
-  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
-  repo: SimHacker/moollm
-  path: moollm/examples/adventure-4/characters/real-people/don-hopkins
-  note: "Canonical adventure incarnation. Resolve shorthand paths against absolute_url."
+inherits:
+  # Canonical adventure incarnation. Resolve shorthand paths against absolute_url.
+  - moollm://github/SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins  # https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
 
 simulation:
   permitted: true

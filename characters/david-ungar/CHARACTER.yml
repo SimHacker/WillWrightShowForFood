@@ -1,14 +1,15 @@
 # David Ungar — invitation portrayal. NOT David Ungar.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: david-ungar
-  name: "David Ungar"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Self — prototype-based programming, adaptive JIT, generation-scavenging GC; Self × MOOLLM"
-  home: characters/david-ungar/
+id: david-ungar
+name: "David Ungar"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Self — prototype-based programming, adaptive JIT, generation-scavenging GC; Self × MOOLLM"
+home: characters/david-ungar/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

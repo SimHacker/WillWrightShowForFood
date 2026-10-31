@@ -10,8 +10,8 @@ invitation_status:
   default: draft
 
 consent:
-  enum: [not_yet_asked, granted, declined]
-  default: not_yet_asked
+  enum: [not_asked, granted, declined]
+  default: not_asked
 
 fields:
   show_seed: { type: path, example: "repo-shows/will-wright-premiere/" }

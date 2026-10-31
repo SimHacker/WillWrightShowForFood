@@ -6,7 +6,7 @@ show:
   type: series
   host: Don Hopkins
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
   readme: README.md
 
 guests:

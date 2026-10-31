@@ -2,7 +2,7 @@
 status: draft
 character_id: henry-minsky
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/henry-minsky/
 also_shows: [repo-shows/openlaszlo/, repo-shows/leela-ai/]
 ---

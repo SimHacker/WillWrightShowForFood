@@ -25,7 +25,7 @@ abilities:
     effect: Interfaces built on specific objects break when the app updates; layer capabilities instead.
     verifiable: "Credited in SCREEN-ANGEL.yml (MicropolisCore)"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

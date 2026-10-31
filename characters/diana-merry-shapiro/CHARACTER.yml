@@ -1,16 +1,18 @@
 # Diana Merry-Shapiro — invitation portrayal. NOT Diana Merry-Shapiro.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: diana-merry-shapiro
-  name: "Diana Merry-Shapiro"
-  also_known_as: ["Diana Merry"]
-  type: invitation
-  signifier: "🪟"
-  status: living
-  born: "1939-08-25"
-  field: "Xerox PARC Learning Research Group — Smalltalk; overlapping windows; BitBLT co-inventor"
-  home: characters/diana-merry-shapiro/
+id: diana-merry-shapiro
+name: "Diana Merry-Shapiro"
+also_known_as: ["Diana Merry"]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🪟"
+status: living
+real_being: true
+born: "1939-08-25"
+field: "Xerox PARC Learning Research Group — Smalltalk; overlapping windows; BitBLT co-inventor"
+home: characters/diana-merry-shapiro/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

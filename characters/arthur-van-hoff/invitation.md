@@ -2,7 +2,7 @@
 status: draft
 character_id: arthur-van-hoff
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/arthur-van-hoff/
 ---
 

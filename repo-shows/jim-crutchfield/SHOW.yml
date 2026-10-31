@@ -11,7 +11,7 @@ show:
   character: characters/jim-crutchfield/
   topic: "Video feedback, evolving cellular automata, and the edge of chaos — iterated systems that compute. Recurse, digress, iterate. Built live alongside Don's CAM6 platform."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   video_feedback: "Pioneered video feedback as a spatiotemporal dynamical system ('Space-time dynamics in video feedback', 1984) — the literal camera→screen→camera loop."

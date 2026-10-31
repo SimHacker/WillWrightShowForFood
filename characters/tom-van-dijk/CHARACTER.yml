@@ -1,14 +1,16 @@
 # Tom van Dijk — invitation portrayal. NOT Tom van Dijk.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: tom-van-dijk
-  name: "Tom van Dijk"
-  type: invitation
-  signifier: "✏️"
-  status: living
-  field: "Sims 1 modding pioneer — IFF Pencil author; SimAntics reverse-engineering"
-  home: characters/tom-van-dijk/
+id: tom-van-dijk
+name: "Tom van Dijk"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "✏️"
+status: living
+real_being: true
+field: "Sims 1 modding pioneer — IFF Pencil author; SimAntics reverse-engineering"
+home: characters/tom-van-dijk/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

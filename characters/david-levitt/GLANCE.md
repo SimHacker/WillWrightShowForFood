@@ -2,4 +2,4 @@
 
 The jewel for this project: **Pantomime's JSON object system** (Don's work under Levitt) — reflective, dynamic, self-inspired; MI + mixins for templates/classes/variations **and build configs** across iPhone/iPad/Android/GearVR/laptop/desktop, with digital-twin to-scale 3D models — the direct ancestor of Don's JSON/YAML config system and **MOOLLM**. See [`../david-rosenthal/slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md).
 
-Proposed Repo Show guest — **music-and-theory** with Jerry Martin, and/or a **Pantomime/Interval** episode (ConnectedTV, Bounce, VPL). Media: [`../don-hopkins/media/pantomime/`](../don-hopkins/media/pantomime/). `invitation.status: not_yet_asked`.
+Proposed Repo Show guest — **music-and-theory** with Jerry Martin, and/or a **Pantomime/Interval** episode (ConnectedTV, Bounce, VPL). Media: [`../don-hopkins/media/pantomime/`](../don-hopkins/media/pantomime/). `invitation.status: not_asked`.

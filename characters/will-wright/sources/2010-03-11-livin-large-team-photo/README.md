@@ -11,12 +11,12 @@ with two props that are also Sims objects: **a chicken** and **a lawn gnome**. B
 
 ## The thread
 
-> **Chris Trottier** ([room](../../../chris-trottier/)) — *"Wow. Love this photo."*
+> **[Chris Trottier](../../../chris-trottier/)** — *"Wow. Love this photo."*
 >
-> **Eric Irk Hedman** ([room](../../../eric-hedman/)) — *"It was well worth hitting up **Alex Z** to
+> **[Eric Irk Hedman](../../../eric-hedman/)** — *"It was well worth hitting up **Alex Z** to
 > shoot it. 😀"*
 >
-> **Charles London** ([room](../../../charles-london/README.md)) — *"That whole series of photos was
+> **[Charles London](../../../charles-london/README.md)** — *"That whole series of photos was
 > awesome. Also pictured: **Dr. Strange (chicken)**"*
 >
 > **Jonathan Knight** — *"**Bob**, that shirt is an **expansion pack of its own**!"*
@@ -25,7 +25,7 @@ with two props that are also Sims objects: **a chicken** and **a lawn gnome**. B
 > yesterday… and last night kinda felt like a decade. **Dr Strange says to say hi to all of you,
 > btw.**"*
 >
-> **Eric Lennon Bowman** ([room](../../../eric-bowman/)) — *"**Gnomingo** is staring into my soul,
+> **[Eric Lennon Bowman](../../../eric-bowman/)** — *"**Gnomingo** is staring into my soul,
 > even after I close the browser."*
 >
 > **John Brown** — *"Wow **the original crew**!"*

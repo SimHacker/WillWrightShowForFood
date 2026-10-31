@@ -1,18 +1,20 @@
 # Daan van West — invitation portrayal. NOT Daan van West.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: daan-van-west
-  name: "Daan van West"
-  full_name: "Daniel van West"
-  type: invitation
-  signifier: "🥁🎚️"
-  status: living
-  born: 1971  # Nov 22, 1971
-  field: |
-    Composer / sound designer / audio engineer — PIPS:lab (since June 1999);
-    Max/MSP/Jitter live systems; drummer; theater and installation sound
-  home: characters/daan-van-west/
+id: daan-van-west
+name: "Daan van West"
+full_name: "Daniel van West"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🥁🎚️"
+status: living
+real_being: true
+born: 1971  # Nov 22, 1971
+field: |
+  Composer / sound designer / audio engineer — PIPS:lab (since June 1999);
+  Max/MSP/Jitter live systems; drummer; theater and installation sound
+home: characters/daan-van-west/
 
 representation:
   public_figure: true

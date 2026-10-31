@@ -2,14 +2,16 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Derived from README.md, the-box.md, working-as-implemented.md.
 
-character:
-  id: melissa-bachman-wood
-  name: "Melissa Bachman-Wood"
-  type: invitation
-  signifier: "📦"                        # the box she mailed
-  status: living
-  field: "Game production / QA — Maxis and EA, The Sims era"
-  home: characters/melissa-bachman-wood/
+id: melissa-bachman-wood
+name: "Melissa Bachman-Wood"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📦"                        # the box she mailed
+status: living
+real_being: true
+field: "Game production / QA — Maxis and EA, The Sims era"
+home: characters/melissa-bachman-wood/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

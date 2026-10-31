@@ -1,17 +1,19 @@
 # Andrew Quitmeyer — invitation portrayal. NOT Andrew.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: andrew-quitmeyer
-  name: "Andrew Quitmeyer"
-  type: invitation
-  signifier: "🌿📍"
-  status: living
-  field: |
-    Stupid Fun Club intern; Georgia Tech (Janet Murray); Digital Naturalism Laboratories;
-    playful ubicomp — Mark Your Territory; field science + hiking hacker
-  home: characters/andrew-quitmeyer/
-  affiliation: "Digital Naturalism Laboratories; Georgia Tech; Stupid Fun Club alumni"
+id: andrew-quitmeyer
+name: "Andrew Quitmeyer"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌿📍"
+status: living
+real_being: true
+field: |
+  Stupid Fun Club intern; Georgia Tech (Janet Murray); Digital Naturalism Laboratories;
+  playful ubicomp — Mark Your Territory; field science + hiking hacker
+home: characters/andrew-quitmeyer/
+affiliation: "Digital Naturalism Laboratories; Georgia Tech; Stupid Fun Club alumni"
 
 representation:
   public_figure: true

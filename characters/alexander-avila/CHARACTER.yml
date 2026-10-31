@@ -1,16 +1,19 @@
 # Alexander Avila — public portrayal (video essayist). NOT Alexander Avila.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: alexander-avila
-  name: Alexander Avila
-  aliases: [Alex, AreTheyGay]
-  type: community_voice
-  signifier: "🎬🏳️‍⚧️"
-  status: living
-  field: "Video essayist — queer theory, games, manosphere critique; formerly AreTheyGay"
-  home: characters/alexander-avila/
-  web: https://www.itsall.gay
+id: alexander-avila
+name: Alexander Avila
+aliases: [Alex, AreTheyGay]
+type: person
+show_role: community_voice
+layer: profile
+signifier: "👤"
+emoji: "🎬🏳️‍⚧️"
+status: living
+real_being: true
+field: "Video essayist — queer theory, games, manosphere critique; formerly AreTheyGay"
+home: characters/alexander-avila/
+web: https://www.itsall.gay
 
 identity:
   openly: trans masc (transgender man)
@@ -26,7 +29,7 @@ representation:
   public_figure: true
   authored_by: don-hopkins
   invitation_status: draft
-  consent: not_yet_asked
+  consent: not_asked
   document: invitation.md
 
 relationship:

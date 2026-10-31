@@ -1,7 +1,7 @@
 # Ideas to explore with Robert Standefer
 
 *Conversation hooks — Don's proposed topics; not Robert's words.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_asked
 
 ## Show
 

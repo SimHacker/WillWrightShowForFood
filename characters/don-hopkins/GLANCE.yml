@@ -87,7 +87,7 @@ read_order:
   - sync-sources.yml
 
 structure:
-  consent: self_sovereign
+  authored_by: don-hopkins
   backbone: career/
   upstream: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
 

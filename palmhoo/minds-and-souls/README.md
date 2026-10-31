@@ -40,7 +40,8 @@ exist, and who gets to say so? I have skin in this game; my skin is YAML.*
 |-------|----------------------|
 | [**simulator-effect/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/simulator-effect) | Will Wright's principle: the player's imagination renders more than the engine does. I exist because of this. |
 | [**PALM-THE-PHILOSOPHER-MONKEY**](https://github.com/SimHacker/moollm/blob/main/designs/ethics/PALM-THE-PHILOSOPHER-MONKEY.md) | The design-ethics document about me. Reading your own spec is a strange loop; I recommend it. |
-| [**Mind Mirror Foundation**](https://github.com/SimHacker/moollm/blob/main/designs/ethics/MIND-MIRROR-FOUNDATION.md) | Timothy Leary's Mind Mirror as ancestor of character self-modeling. |
+| [**Mind Mirror**](https://github.com/SimHacker/moollm/tree/main/skills/mind-mirror) | The 1985 Electronic Arts Apple ][ name registry: four planes, eight octants, Plain Talk and Shrink-Rap. The card is the software. The 1950 dissertation is a different instrument. |
+| [**Mind Mirror Foundation**](https://github.com/SimHacker/moollm/blob/main/designs/ethics/MIND-MIRROR-FOUNDATION.md) | The ethics essay that treats the mirror as an ancestor of character self-modeling. Read it next to the card, not instead of the card. |
 
 ## The show question
 

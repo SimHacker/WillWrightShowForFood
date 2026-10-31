@@ -2,7 +2,7 @@
 status: draft
 character_id: peter-conn
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/coco-conn/
 warm_path: coco-conn — email intro still open
 sent_at: null

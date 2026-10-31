@@ -2,7 +2,7 @@
 status: send_now
 character_id: doug-hilsinger
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/brian-eno/
 co_guest: caroleen-beatty
 channel: "Bandcamp contact form + doug@saucefaucet.com (MX still live 2026-07-31)"

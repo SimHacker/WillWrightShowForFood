@@ -1,6 +1,6 @@
 # Ideas to explore with Keith Henson
 
-*Conversation hooks — Don's friend; stories verified on HN. Consent not_yet_asked.*  
+*Conversation hooks — Don's friend; stories verified on HN. Consent not_asked.*  
 [Portrayal standards](../../schemas/portrayal-standards.md) · **Will boundary:** no religious-scoop framing
 
 ## Show thesis

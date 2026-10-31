@@ -2,7 +2,7 @@
 status: draft
 character_id: lumpinou
 public: true
-consent: not_yet_asked
+consent: not_asked
 sent: null
 channel: "discord or site contact — confirm before sending"
 show_seed: repo-shows/lgbtq-sims-cluster/

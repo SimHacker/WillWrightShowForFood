@@ -1,20 +1,24 @@
 # Heinz U. Lemke — invitation portrayal. NOT Heinz U. Lemke.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: heinz-lemke
-  name: "Heinz U. Lemke"
-  type: invitation
-  signifier: "🥧"
-  status: living
-  field: "PIXIE (1969) co-author — radial menus, PDP-7/Titan distributed CAD; CARS / model-guided medicine"
-  home: characters/heinz-lemke/
+id: heinz-lemke
+name: "Heinz U. Lemke"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🥧"
+status: living
+real_being: true
+field: "PIXIE (1969) co-author — radial menus, PDP-7/Titan distributed CAD; CARS / model-guided medicine"
+home: characters/heinz-lemke/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
   public_figure: true
   consent:
-    state: not_asked
+    state: interested
+    date: 2026-10-29
+    note: "Asked; said yes. Planning the time, medium, and scope."
   authored_by: don-hopkins
 
 invitation:

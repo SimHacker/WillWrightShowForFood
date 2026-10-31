@@ -1,13 +1,15 @@
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: scott-jenson
-  name: "Scott Jenson"
-  type: invitation
-  signifier: "🍺"
-  status: living
-  field: "UX strategy and interaction design — Apple Human Interface group (System 7, Newton, the HIG), Symbian, Google (mobile UX, the Physical Web, Android), frog design; now open source UX for Mastodon and Home Assistant; 'are we really going to use the same desktop UX forever?'"
-  home: characters/scott-jenson/
+id: scott-jenson
+name: "Scott Jenson"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🍺"
+status: living
+real_being: true
+field: "UX strategy and interaction design — Apple Human Interface group (System 7, Newton, the HIG), Symbian, Google (mobile UX, the Physical Web, Android), frog design; now open source UX for Mastodon and Home Assistant; 'are we really going to use the same desktop UX forever?'"
+home: characters/scott-jenson/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

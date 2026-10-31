@@ -99,7 +99,7 @@ abilities:
     combos_with: [BUILD-THE-PRINTER]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 
 see_also:

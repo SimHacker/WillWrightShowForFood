@@ -1,7 +1,7 @@
 # Liam Proven 📰
 
 *Press contact and long-running correspondent — not an invitation portrayal.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent: warm correspondent · authored by Don Hopkins
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent: not_asked, warm correspondent · authored by Don Hopkins
 
 **Liam Proven** is the Linux and FOSS reporter at **[The Register](https://www.theregister.com/)**,
 writing from the Isle of Man. He first contacted Don in **January 2023** after Don's

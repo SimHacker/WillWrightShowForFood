@@ -9,8 +9,12 @@ moollm_source:
   import_mode: overlay
 
 inherits:
-  moollm_skills: [fictional, mythic, character, mind, game]
-  overlay_protocol: ../MOOLLM-OVERLAY.yml
+  - fictional
+  - mythic
+  - character
+  - mind
+  - game
+overlay_protocol: ../MOOLLM-OVERLAY.yml
 
 ontology:
   tags: [menagerie_guest, fictional, moollm_import, monster, gatekeeper, dual_minded, portable_npc]
@@ -18,82 +22,81 @@ ontology:
   origin: [adventure_1977, zork_1980]
   nature: gatekeeper_with_two_payment_protocols
 
-character:
-  id: troll
-  name: Two-Toll the Troll
-  aka: The Cross-Platform Troll   # plugs into Adventure AND Zork; canonical aka lives upstream
-  type: [menagerie_guest, monster, gatekeeper, game, commuter]
-  real_being: false
-  signifier: "🧌🪓🌉💰🎭"
-  status: reified
-  home: characters/menagerie/troll/
-  pronouns: he/him
+id: troll
+name: Two-Toll the Troll
+aka: The Cross-Platform Troll   # plugs into Adventure AND Zork; canonical aka lives upstream
+type: [menagerie_guest, monster, gatekeeper, game, commuter]
+real_being: false
+signifier: "🧌🪓🌉💰🎭"
+status: reified
+home: characters/menagerie/troll/
+pronouns: he/him
 
-  tagline: "All gates are markets. The only question is the currency."
+tagline: "All gates are markets. The only question is the currency."
 
-  description: |
-    The Zork troll and the Colossal Cave troll were the same troll all
-    along — one soul, two organelle minds, one per game. zork-mind
-    guards the Troll Room and prices passage in violence (bloody axe,
-    blocks all passages, vanishes in sinister black fog). adventure-mind
-    guards the chasm bridge and prices it in treasure (one per crossing,
-    he keeps it, skin like rhinoceros hide, afraid of exactly one bear).
-    The bloody axe fights, throws, and eats (stomach pocket universe);
-    location := self lets him eat himself — recursive Donnie Darko gut.
-    In any new world he samples the local advertisements and fronts the
-    mind whose currency the world speaks. He is soul-city's live
-    one-soul-two-minds example and PORTABLE-NPCS section 6's customs
-    case made flesh: every border crossing starts with the prototype's
-    personality and empty pockets.
+description: |
+  The Zork troll and the Colossal Cave troll were the same troll all
+  along — one soul, two organelle minds, one per game. zork-mind
+  guards the Troll Room and prices passage in violence (bloody axe,
+  blocks all passages, vanishes in sinister black fog). adventure-mind
+  guards the chasm bridge and prices it in treasure (one per crossing,
+  he keeps it, skin like rhinoceros hide, afraid of exactly one bear).
+  The bloody axe fights, throws, and eats (stomach pocket universe);
+  location := self lets him eat himself — recursive Donnie Darko gut.
+  In any new world he samples the local advertisements and fronts the
+  mind whose currency the world speaks. He is soul-city's live
+  one-soul-two-minds example and PORTABLE-NPCS section 6's customs
+  case made flesh: every border crossing starts with the prototype's
+  personality and empty pockets.
 
-    Retconned canonical 2026-08-20: he is LITERALLY TWO-HEADED — one
-    head per mind (axe-side and ledger-side), and head size displays
-    the live fronting weight; he can front one mind or blend both in
-    ratio. Bridge-toll head shrinking while the fighting head expands
-    means leave now. Heads are addable — a new mind buds a new head.
-    Korz-prime's `ambiguity: blend` worn on the neck.
+  Retconned canonical 2026-08-20: he is LITERALLY TWO-HEADED — one
+  head per mind (axe-side and ledger-side), and head size displays
+  the live fronting weight; he can front one mind or blend both in
+  ratio. Bridge-toll head shrinking while the fighting head expands
+  means leave now. Heads are addable — a new mind buds a new head.
+  Korz-prime's `ambiguity: blend` worn on the neck.
 
-  moollm_canon_summary:
-    minds:
-      zork-mind: "combat gate — currency: violence (minds/zork-mind.yml)"
-      adventure-mind: "toll gate — currency: treasure (minds/adventure-mind.yml)"
-    fronting: "world speaks combat -> axe; world speaks commerce -> invoice; both -> adventurer picks; neither -> riddles (species-level fallback, older than both games)"
-    axe_and_stomach: "bloody axe: fight / throw / eat into stomach/; location:=self enters recursive pocket universe (Donnie Darko)"
-    portability_archetype: "instanced border — instance binds to an EDGE in the room graph, not a node; his location IS a rule"
-    customs: "wealth lives in the instance, never the prototype; fifty years of tolls stay home"
-    audit_history: "the fee-fie-foe-foo golden eggs incident; he audits every crossing now"
+moollm_canon_summary:
+  minds:
+    zork-mind: "combat gate — currency: violence (minds/zork-mind.yml)"
+    adventure-mind: "toll gate — currency: treasure (minds/adventure-mind.yml)"
+  fronting: "world speaks combat -> axe; world speaks commerce -> invoice; both -> adventurer picks; neither -> riddles (species-level fallback, older than both games)"
+  axe_and_stomach: "bloody axe: fight / throw / eat into stomach/; location:=self enters recursive pocket universe (Donnie Darko)"
+  portability_archetype: "instanced border — instance binds to an EDGE in the room graph, not a node; his location IS a rule"
+  customs: "wealth lives in the instance, never the prototype; fifty years of tolls stay home"
+  audit_history: "the fee-fie-foe-foo golden eggs incident; he audits every crossing now"
 
-  # SIMS 1 — summarized from canon; full sheet upstream
-  sims:
-    traits:
-      neat: 2
-      outgoing: 4
-      active: 6
-      playful: 3
-      nice: 2
-      generous: 0
-    skills:
-      charisma: 5
-      logic: 7
-      body: 9
-    identity:
-      age: elder
-      gender: male
-    career:
-      track: business
-      level: 6
-      performance: 85
+# SIMS 1 — summarized from canon; full sheet upstream
+sims:
+  traits:
+    neat: 2
+    outgoing: 4
+    active: 6
+    playful: 3
+    nice: 2
+    generous: 0
+  skills:
+    charisma: 5
+    logic: 7
+    body: 9
+  identity:
+    age: elder
+    gender: male
+  career:
+    track: business
+    level: 6
+    performance: 85
 
-  mind_mirror:
-    calm: 5
-    cautious: 6
-    hostile: 5
-    confident: 8
-    forceful: 7
-    practical: 8
-    inhibited: 3
-    dominant: 8
-    suspicious: 7
+mind_mirror:
+  calm: 5
+  cautious: 6
+  hostile: 5
+  confident: 8
+  forceful: 7
+  practical: 8
+  inhibited: 3
+  dominant: 8
+  suspicious: 7
 
 wwsff_overlay:
   roles:

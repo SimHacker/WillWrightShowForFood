@@ -2,14 +2,15 @@
 # Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
 # Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: seymour-papert
-  name: "Seymour Papert"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: "Mathematician & educator — Constructionism, Logo and the turtle; co-founder of the MIT AI Lab"
-  home: characters/seymour-papert/
+id: seymour-papert
+name: "Seymour Papert"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: "Mathematician & educator — Constructionism, Logo and the turtle; co-founder of the MIT AI Lab"
+home: characters/seymour-papert/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

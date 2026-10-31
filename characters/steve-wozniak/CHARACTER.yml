@@ -1,14 +1,15 @@
 # Steve Wozniak — invitation portrayal. NOT Steve Wozniak.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: steve-wozniak
-  name: "Steve Wozniak"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Computer Engineer, Apple Co-founder, Creator of the Apple I and Apple II"
-  home: characters/steve-wozniak/
+id: steve-wozniak
+name: "Steve Wozniak"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Computer Engineer, Apple Co-founder, Creator of the Apple I and Apple II"
+home: characters/steve-wozniak/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,14 +1,15 @@
 # David Temkin — invitation portrayal. NOT David Temkin.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: david-temkin
-  name: "David Temkin"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Founder/CEO/CTO of Laszlo Systems — created OpenLaszlo (LZX); OpenLaszlo 5.0 revival; Declare (declarelang); Mesa; In Formation magazine; later co-founded Cola"
-  home: characters/david-temkin/
+id: david-temkin
+name: "David Temkin"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Founder/CEO/CTO of Laszlo Systems — created OpenLaszlo (LZX); OpenLaszlo 5.0 revival; Declare (declarelang); Mesa; In Formation magazine; later co-founded Cola"
+home: characters/david-temkin/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

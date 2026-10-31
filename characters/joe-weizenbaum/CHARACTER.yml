@@ -1,17 +1,18 @@
 # Joe Weizenbaum — memorial portrayal (in memoriam). NOT Joseph Weizenbaum.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: joe-weizenbaum
-  name: "Joseph Weizenbaum"
-  also_known_as: ["Joe Weizenbaum", "José Weizenbaum"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1923-01-08"
-  died: "2008-03-05"
-  field: "ELIZA; Computer Power and Human Reason; AI critic; MIT; TU Berlin"
-  home: characters/joe-weizenbaum/
+id: joe-weizenbaum
+name: "Joseph Weizenbaum"
+also_known_as: ["Joe Weizenbaum", "José Weizenbaum"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1923-01-08"
+died: "2008-03-05"
+field: "ELIZA; Computer Power and Human Reason; AI critic; MIT; TU Berlin"
+home: characters/joe-weizenbaum/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

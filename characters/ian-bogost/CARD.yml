@@ -42,7 +42,7 @@ abilities:
     combos_with: [PROCEDURAL-RHETORIC]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: asked
   simulation: false
 
 see_also:

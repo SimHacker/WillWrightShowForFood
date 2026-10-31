@@ -1,14 +1,16 @@
 # Subutai Ahmad — invitation portrayal. NOT Subutai Ahmad.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: subutai-ahmad
-  name: "Subutai Ahmad"
-  type: invitation
-  signifier: "🧠📹"
-  status: living
-  field: "Real-time computer vision (motion tracking / background removal) → neuroscience-based AI (neocortex, Thousand Brains)"
-  home: characters/subutai-ahmad/
+id: subutai-ahmad
+name: "Subutai Ahmad"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧠📹"
+status: living
+real_being: true
+field: "Real-time computer vision (motion tracking / background removal) → neuroscience-based AI (neocortex, Thousand Brains)"
+home: characters/subutai-ahmad/
 
 representation:
   public_figure: true

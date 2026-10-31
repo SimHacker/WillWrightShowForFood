@@ -1,14 +1,16 @@
 # Miller Puckette — invitation portrayal. NOT Miller Puckette.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: miller-puckette
-  name: "Miller Puckette"
-  type: invitation
-  signifier: "🎛️"
-  status: living
-  field: "Creator of Max (IRCAM) and Pure Data (Pd); real-time computer-music / dataflow programming; UC San Diego"
-  home: characters/miller-puckette/
+id: miller-puckette
+name: "Miller Puckette"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎛️"
+status: living
+real_being: true
+field: "Creator of Max (IRCAM) and Pure Data (Pd); real-time computer-music / dataflow programming; UC San Diego"
+home: characters/miller-puckette/
 
 representation:
   public_figure: true

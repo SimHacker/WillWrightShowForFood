@@ -2,7 +2,7 @@
 status: draft
 character_id: blair-macintyre
 public: true
-consent: not_yet_asked
+consent: not_asked
 format: remote_or_in_person
 ---
 

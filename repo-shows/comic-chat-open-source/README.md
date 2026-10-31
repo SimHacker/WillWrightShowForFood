@@ -3,7 +3,7 @@
 **Guests:** [DJ Kurlander](../../characters/dj-kurlander/) ·
 [Robert Standefer](../../characters/robert-standefer/) ·
 [Scott Hanselman](../../characters/scott-hanselman/)
-**Host:** Don Hopkins · **Status:** seed · consent not_yet_asked
+**Host:** Don Hopkins · **Status:** seed · consent not_asked
 
 **Centerpiece:** [**Live Comic Chat**](live-comic-chat.md) — private IRC room, emotion wheels,
 panels committed into the show tree.

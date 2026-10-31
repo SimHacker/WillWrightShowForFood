@@ -2,7 +2,7 @@
 status: draft
 character_id: patrick-j-barrett-iii
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/did-the-sims-make-you-gay.yml
 format: remote_or_in_person
 priority: send_now

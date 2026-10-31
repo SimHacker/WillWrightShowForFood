@@ -1,15 +1,17 @@
 # Mike Perry — invitation portrayal. NOT Mike Perry.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: mike-perry
-  name: "Mike Perry"
-  formal_name: "Michael Perry"          # as printed on the design document title page
-  type: invitation
-  signifier: "🌙"
-  status: living
-  field: "Game production + design — Maxis producer; designer of the unreleased LunaSim / Tycho Rising"
-  home: characters/mike-perry/
+id: mike-perry
+name: "Mike Perry"
+formal_name: "Michael Perry"          # as printed on the design document title page
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌙"
+status: living
+real_being: true
+field: "Game production + design — Maxis producer; designer of the unreleased LunaSim / Tycho Rising"
+home: characters/mike-perry/
 
 representation:
   public_figure: true

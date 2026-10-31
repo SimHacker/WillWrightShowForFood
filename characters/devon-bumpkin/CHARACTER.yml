@@ -1,13 +1,15 @@
 # Devon Bumpkin — portrayal. NOT Devon.
 
-character:
-  id: devon-bumpkin
-  name: Devon Bumpkin
-  type: invitation
-  signifier: "🌿📺"
-  status: living
-  field: "Sims creator; EA Creator Network resigner Oct 2025"
-  home: characters/devon-bumpkin/
+id: devon-bumpkin
+name: Devon Bumpkin
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌿📺"
+status: living
+real_being: true
+field: "Sims creator; EA Creator Network resigner Oct 2025"
+home: characters/devon-bumpkin/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

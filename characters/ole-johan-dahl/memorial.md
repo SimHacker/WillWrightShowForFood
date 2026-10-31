@@ -7,4 +7,4 @@
 
 We cite; we do not speak as them.
 
-Sources: [Wikipedia](https://en.wikipedia.org/wiki/Ole-Johan_Dahl) · [Yoot People.md](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md)
+Sources: [Wikipedia: Ole-Johan Dahl](https://en.wikipedia.org/wiki/Ole-Johan_Dahl) · [Yoot People.md](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md)

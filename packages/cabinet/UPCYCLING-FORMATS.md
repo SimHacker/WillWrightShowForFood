@@ -108,24 +108,35 @@ A ZIP is a good way to carry a program and a poor way to work on one. The cabine
 
 From MOOLLM's soul model: an organelle keeps its own format inside a larger thing and is never
 flattened into a common schema ([CHARACTER-ENDOSYMBIOSIS](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/CHARACTER-ENDOSYMBIOSIS.md)).
-For emulator packages:
+For emulator packages, each emulator's organelle holds everything specific to it: its
+configuration, its plumbing (attaching media, booting, key maps, devices), and its code (control
+programs, scripts, helpers). The cartridge's own files describe the program in neutral terms, and
+`cartridge.yml` is the membrane that says what each organelle's names mean in those terms. Why
+the cartridge and the emulator are kept apart at all is in
+[CARTRIDGES.md](CARTRIDGES.md#the-goal-the-package-is-not-the-emulator).
 
 ```
 karateka/
-  cartridge.yml          what it is, which organelles, how they map onto each other
+  cartridge.yml          the membrane: what it is, which organelles, how their names map
   README.md              help, history, credits
-  micropak/              microM8's organelle: the .cfg files and control programs, untouched
-    boot.cfg  video.cfg  camera.cfg  palette.cfg  audio.cfg  input.cfg  control.cfg
-    control/watch.bas
   media/
     karateka.woz         the disk, with its own META chunk
     karateka.dsk/        or unpacked, with the layout to repack it
+  micropak/              microM8's organelle: the .cfg files and control programs, untouched
+    boot.cfg  video.cfg  camera.cfg  palette.cfg  audio.cfg  input.cfg  control.cfg
+    control/watch.bas
+  cabinet/               the cabinet's organelle: its loader steps, helpers and views
+    views/               typed-memory declarations, Dasher grammars, tours
   simh/ mame/            other emulators' organelles, when there are any
-  views/                 the cabinet's typed-memory declarations, Dasher grammars, tours
 ```
 
 Rules that keep it honest:
 
+- **No organelle is privileged**, the cabinet's included. Its loaders, helpers and views sit in
+  `cabinet/` beside microM8's and SIMH's, so removing any one emulator's folder leaves a cartridge
+  the others can still run.
+- **An organelle can leave whole.** Copy `micropak/` out, zip it, and microM8 opens it as a PAK;
+  copy `simh/` out with the media and SIMH runs the script.
 - **Keep originals byte for byte**, and say which files a tool may rewrite.
 - **Preserve unknown keys.** A translator that doesn't understand a setting carries it through.
 - **Translate, don't replace.** `cartridge.yml` may say "microM8's `video.voxeldepth` is our

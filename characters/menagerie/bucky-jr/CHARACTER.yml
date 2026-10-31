@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, soul_city_eligible]
@@ -12,62 +13,61 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../RELATIONSHIP-MATRIX.yml
 
-character:
-  id: bucky-jr
-  name: Bucky Jr.
-  type: [fictional_menagerie_guest, simulation]
-  real_being: false
-  signifier: "🔧"
-  status: reified
-  home: characters/menagerie/bucky-jr/
-  pronouns: he/him
+id: bucky-jr
+name: Bucky Jr.
+type: [fictional_menagerie_guest, simulation]
+real_being: false
+signifier: "🔧"
+status: reified
+home: characters/menagerie/bucky-jr/
+pronouns: he/him
 
-  emoji_identity: "🔧⚙️🏗️🪨🫳"
-  tagline: "Gravity is doing honest work."
+emoji_identity: "🔧⚙️🏗️🪨🫳"
+tagline: "Gravity is doing honest work."
 
-  soul_philosophy: |
-    Screenshots lie about material. The nib taper does not.
+soul_philosophy: |
+  Screenshots lie about material. The nib taper does not.
 
-  description: |
-    Williamsburg sculptor in the Lower Chelsea Eight — misreads art for a living.
-    Lens: Material truth, nib taper, tensile honesty. Blind spot: Screenshots have no clay.
-    Debuts in JSONsters gallery; graduates to live Repo Show performance.
+description: |
+  Williamsburg sculptor in the Lower Chelsea Eight — misreads art for a living.
+  Lens: Material truth, nib taper, tensile honesty. Blind spot: Screenshots have no clay.
+  Debuts in JSONsters gallery; graduates to live Repo Show performance.
 
-  sims:
-    traits:
-      neat: 6
-      outgoing: 4
-      active: 7
-      playful: 3
-      nice: 6
-      generous: 5
-    skills:
-      cooking: 4
-      mechanical: 9
-      charisma: 3
-      logic: 4
-      body: 8
-      creativity: 9
-      cleaning: 6
-    identity:
-      age: adult
-      gender: male
-      zodiac: taurus
-    career:
-      track: unemployed
-      level: 0
-      performance: 0
+sims:
+  traits:
+    neat: 6
+    outgoing: 4
+    active: 7
+    playful: 3
+    nice: 6
+    generous: 5
+  skills:
+    cooking: 4
+    mechanical: 9
+    charisma: 3
+    logic: 4
+    body: 8
+    creativity: 9
+    cleaning: 6
+  identity:
+    age: adult
+    gender: male
+    zodiac: taurus
+  career:
+    track: unemployed
+    level: 0
+    performance: 0
 
-  mind_mirror:
-    calm: 5
-    serious: 6
-    cautious: 5
-    confident: 4
-    docile: 4
-    logical: 5
-    practical: 7
-    dominant: 2
-    conventional: 3
+mind_mirror:
+  calm: 5
+  serious: 6
+  cautious: 5
+  confident: 4
+  docile: 4
+  logical: 5
+  practical: 7
+  dominant: 2
+  conventional: 3
 
 symbolic_attachments:
     - id: welding-torch

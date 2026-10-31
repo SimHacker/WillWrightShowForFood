@@ -1,6 +1,6 @@
 # ideas.md — Netochka Nezvanova
 
-[Portrayal standards](../../schemas/portrayal-standards.md) · [`invitation.md`](invitation.md) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · [`invitation.md`](invitation.md) · consent not_asked
 
 ## Shows
 

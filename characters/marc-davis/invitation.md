@@ -2,7 +2,7 @@
 status: send_ready
 character_id: marc-davis
 public: true
-consent: not_yet_asked
+consent: not_asked
 group_show: repo-shows/npuc-reunion/
 format: remote_or_in_person
 ---

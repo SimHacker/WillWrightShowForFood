@@ -51,7 +51,7 @@ sneak peek. **Justin Graham** (Gallium programmer, LucasArts/Maxis alumni) has T
 
 Will on stream (not in PC Gamer article):
 
-- **13 episodes** of Bar Karma — [Wikipedia](https://en.wikipedia.org/wiki/Bar_Karma) lists 12 aired (101–112).
+- **13 episodes** of Bar Karma — [Wikipedia: Bar Karma](https://en.wikipedia.org/wiki/Bar_Karma) lists 12 aired (101–112).
 - **~25 people** on Proxi at Gallium — aligns with press headcount band; not a roster claim.
 
 ---

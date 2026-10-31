@@ -83,7 +83,7 @@ abilities:
     combos_with: [will-wright, rich-gold]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
   note: "Nothing here is a simulated Crane. These are segments Don would propose to the real person."
 

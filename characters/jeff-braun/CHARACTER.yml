@@ -1,14 +1,17 @@
 # Jeff Braun — archival source portrayal. NOT Jeffrey Braun.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jeff-braun
-  name: "Jeffrey Braun"
-  type: source
-  signifier: "🏢"
-  status: living
-  field: "Co-founder and CEO of Maxis; led the company through SimCity, SimEarth, SimAnt, and The Sims era"
-  home: characters/jeff-braun/
+id: jeff-braun
+name: "Jeffrey Braun"
+type: person
+show_role: source
+layer: profile
+signifier: "👤"
+emoji: "🏢"
+status: living
+real_being: true
+field: "Co-founder and CEO of Maxis; led the company through SimCity, SimEarth, SimAnt, and The Sims era"
+home: characters/jeff-braun/
 
 representation:
   public_figure: true

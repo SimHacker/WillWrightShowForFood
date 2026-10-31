@@ -1,14 +1,16 @@
 # Sergio van Pul — invitation portrayal. NOT Sergio van Pul.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: sergio-van-pul
-  name: "Sergio van Pul"
-  type: invitation
-  signifier: "🎮🐱"        # game design + Scratch cat
-  status: living
-  field: "Game designer & educator — Scratch 2.0 Game Development Hotshot co-author; Stichting Scratchweb workshop coach; HKU game-design MA; Micropolis Eduverse veteran (2008–10)"
-  home: characters/sergio-van-pul/
+id: sergio-van-pul
+name: "Sergio van Pul"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎮🐱"        # game design + Scratch cat
+status: living
+real_being: true
+field: "Game designer & educator — Scratch 2.0 Game Development Hotshot co-author; Stichting Scratchweb workshop coach; HKU game-design MA; Micropolis Eduverse veteran (2008–10)"
+home: characters/sergio-van-pul/
 
 representation:
   public_figure: true

@@ -31,8 +31,8 @@ in citations. The session was later lifted into the reusable
   grouped along parameterized dimensions, built at IBM, presented at Microsoft — and sent
   the updated [invitation](../invitation.md), which now carries Korz as a topic.
 
-That last message is why the invitation frontmatter reads `consent: warm` — Craig has seen
-the plans and cheered them; the formal show ask is the next step.
+That last message is why his consent state is `interested` — Craig has seen the plans and
+cheered them, and the time, medium, and scope are being planned.
 
 ## Show plan that came out of this
 

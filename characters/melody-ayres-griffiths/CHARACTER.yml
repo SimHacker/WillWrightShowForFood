@@ -1,15 +1,17 @@
 # Melody Ayres-Griffiths — invitation portrayal. NOT Melody Ayres-Griffiths.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: melody-ayres-griffiths
-  name: "Melody Ayres-Griffiths"
-  type: invitation
-  signifier: "🐢"
-  status: living
-  field: >-
-    Retro-computing writing and education: editor of Paleotronic Magazine; co-developer of turtleSpaces (3D Logo); novelist; musician (WebTV/MSNTV background music)
-  home: characters/melody-ayres-griffiths/
+id: melody-ayres-griffiths
+name: "Melody Ayres-Griffiths"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🐢"
+status: living
+real_being: true
+field: >-
+  Retro-computing writing and education: editor of Paleotronic Magazine; co-developer of turtleSpaces (3D Logo); novelist; musician (WebTV/MSNTV background music)
+home: characters/melody-ayres-griffiths/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

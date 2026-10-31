@@ -1,15 +1,17 @@
 # Donald Knuth — invitation portrayal. NOT Donald Knuth.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: donald-knuth
-  name: "Donald Knuth"
-  type: invitation
-  signifier: "🕸✒️"
-  status: living
-  beloved: true
-  field: "Analysis of algorithms, The Art of Computer Programming, TeX/METAFONT, literate programming (WEB/CWEB), MIX/MMIX"
-  home: characters/donald-knuth/
+id: donald-knuth
+name: "Donald Knuth"
+type: person
+layer: dream_guest
+signifier: "👤"
+emoji: "🕸✒️"
+status: living
+real_being: true
+beloved: true
+field: "Analysis of algorithms, The Art of Computer Programming, TeX/METAFONT, literate programming (WEB/CWEB), MIX/MMIX"
+home: characters/donald-knuth/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

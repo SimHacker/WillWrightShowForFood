@@ -1,15 +1,17 @@
 # Steve Alvey — invitation portrayal. NOT Steve Alvey.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: steve-alvey
-  name: "Steve Alvey"
-  type: invitation
-  signifier: "🏙️"
-  status: living
-  field: "SimSlice / SliceCity founder — SimCity inside The Sims; Sims content programmer, publisher, community leader (26-year brand); worked with Will Wright at Gallium Studios"
-  home: characters/steve-alvey/
-  aliases: ["SimSlice", "SliceCity"]
+id: steve-alvey
+name: "Steve Alvey"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🏙️"
+status: living
+real_being: true
+field: "SimSlice / SliceCity founder — SimCity inside The Sims; Sims content programmer, publisher, community leader (26-year brand); worked with Will Wright at Gallium Studios"
+home: characters/steve-alvey/
+aliases: ["SimSlice", "SliceCity"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,11 +1,10 @@
 # ZombieSim — fictional audience (the zombie SimFreaks/SimSlice brought along)
-character:
-  name: ZombieSim
-  type: fictional_game_character
-  real_being: false
-  signifier: "🧟"
-  home: repo-shows/will-wright-premiere/audience/fictional-zombie-sim/
-  origin: "ZombieSims — Heather & Steve Alvey's Sims zombie content. The crew brought one to the show."
+name: ZombieSim
+type: fictional_game_character
+real_being: false
+signifier: "🧟"
+home: repo-shows/will-wright-premiere/audience/fictional-zombie-sim/
+origin: "ZombieSims — Heather & Steve Alvey's Sims zombie content. The crew brought one to the show."
 
 representation:
   fictional: true

@@ -2,14 +2,16 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Contact: Don's private green-room only — no phone/address in this public repo.
 
-character:
-  id: dj-kurlander
-  name: "DJ Kurlander"
-  also_known_as: ["David J. Kurlander", "David Joshua Kurlander", "D.J. Kurlander"]
-  type: invitation
-  status: living
-  field: "Comic Chat creator; MSR → product; Mobile Internet Toolkit; Microsoft Surface GM"
-  home: characters/dj-kurlander/
+id: dj-kurlander
+name: "DJ Kurlander"
+also_known_as: ["David J. Kurlander", "David Joshua Kurlander", "D.J. Kurlander"]
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "Comic Chat creator; MSR → product; Mobile Internet Toolkit; Microsoft Surface GM"
+home: characters/dj-kurlander/
 
 representation:
   public_figure: true

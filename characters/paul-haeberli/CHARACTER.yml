@@ -1,14 +1,16 @@
 # Paul Haeberli — invitation portrayal. NOT Paul Haeberli.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: paul-haeberli
-  name: "Paul E. Haeberli"
-  type: invitation
-  signifier: "🎨🖥️✨"
-  status: living
-  field: "Computer graphics research (SGI 1983–1999); visual dataflow programming; image processing; free-form fabrication (Lamina Design)"
-  home: characters/paul-haeberli/
+id: paul-haeberli
+name: "Paul E. Haeberli"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎨🖥️✨"
+status: living
+real_being: true
+field: "Computer graphics research (SGI 1983–1999); visual dataflow programming; image processing; free-form fabrication (Lamina Design)"
+home: characters/paul-haeberli/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

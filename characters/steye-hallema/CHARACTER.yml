@@ -1,15 +1,17 @@
 # Steye Hallema — invitation portrayal. NOT Steye Hallema.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: steye-hallema
-  name: "Steye Hallema"
-  type: invitation
-  signifier: "📱🪄🎬"
-  status: living
-  beloved: false
-  field: "Immersive storytelling / participation media — PIPS:lab; Jaunt XR; Smartphone Orchestra; cinematic VR"
-  home: characters/steye-hallema/
+id: steye-hallema
+name: "Steye Hallema"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📱🪄🎬"
+status: living
+real_being: true
+beloved: false
+field: "Immersive storytelling / participation media — PIPS:lab; Jaunt XR; Smartphone Orchestra; cinematic VR"
+home: characters/steye-hallema/
 
 representation:
   public_figure: true

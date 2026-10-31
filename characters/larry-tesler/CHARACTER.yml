@@ -2,17 +2,18 @@
 # Died 2020-02-16. Seeded from Yoot People.md.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: larry-tesler
-  name: "Larry Tesler"
-  full_name: "Lawrence Gordon Tesler"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1945-04-24"
-  died: "2020-02-16"
-  field: "User interface — modeless editing; cut/copy/paste; Smalltalk demo to Apple (1979); Lisa/Mac"
-  home: characters/larry-tesler/
+id: larry-tesler
+name: "Larry Tesler"
+full_name: "Lawrence Gordon Tesler"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1945-04-24"
+died: "2020-02-16"
+field: "User interface — modeless editing; cut/copy/paste; Smalltalk demo to Apple (1979); Lisa/Mac"
+home: characters/larry-tesler/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

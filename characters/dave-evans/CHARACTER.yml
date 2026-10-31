@@ -2,18 +2,19 @@
 # Died 1998-10-03. Seeded from Yoot People.md (Utah + Evans & Sutherland).
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: dave-evans
-  name: "Dave Evans"
-  full_name: "David Cannon Evans"
-  also_known_as: ["David C. Evans"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1924-02-24"
-  died: "1998-10-03"
-  field: "Computer graphics — University of Utah ARPA program; co-founder Evans & Sutherland"
-  home: characters/dave-evans/
+id: dave-evans
+name: "Dave Evans"
+full_name: "David Cannon Evans"
+also_known_as: ["David C. Evans"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1924-02-24"
+died: "1998-10-03"
+field: "Computer graphics — University of Utah ARPA program; co-founder Evans & Sutherland"
+home: characters/dave-evans/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

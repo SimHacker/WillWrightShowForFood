@@ -11,7 +11,7 @@ show:
   topic: "Pie and radial menus across 1800+ games; success and failure cases from GUIDB; reinterpreting bad game UIs with Gonzo pies/tabs while keeping each game's face (bridge skins); designing the ultimate runtime-editable pie; PieCraft as constructionist UI literacy through combat pressure."
   status: seed
   parent_show: edd-coates/
-  consent: not_yet_asked
+  consent: not_asked
 
 the_core_idea: |
   Edd's Game UI Database is the world's largest curated collection of game interfaces —

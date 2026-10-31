@@ -1,14 +1,16 @@
 # Terry Winograd — invitation portrayal. NOT Terry Winograd.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: terry-winograd
-  name: "Terry Winograd"
-  type: invitation
-  signifier: "🐉📼"
-  status: living
-  field: "HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy, Interval Research alum"
-  home: characters/terry-winograd/
+id: terry-winograd
+name: "Terry Winograd"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🐉📼"
+status: living
+real_being: true
+field: "HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy, Interval Research alum"
+home: characters/terry-winograd/
 
 representation:
   public_figure: true

@@ -1,13 +1,15 @@
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: don-woods
-  name: "Don Woods"
-  type: invitation
-  signifier: "🏔️"
-  status: living
-  field: "Co-creator of Adventure (Crowther/Woods, 1977); co-designer of INTERCAL (1972); co-author of The Hacker's Dictionary; NeWS/PostScript hacker at Sun"
-  home: characters/don-woods/
+id: don-woods
+name: "Don Woods"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🏔️"
+status: living
+real_being: true
+field: "Co-creator of Adventure (Crowther/Woods, 1977); co-designer of INTERCAL (1972); co-author of The Hacker's Dictionary; NeWS/PostScript hacker at Sun"
+home: characters/don-woods/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

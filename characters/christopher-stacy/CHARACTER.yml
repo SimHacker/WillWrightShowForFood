@@ -1,0 +1,45 @@
+# Christopher C. Stacy — portrayal. NOT Christopher Stacy.
+# Standards: ../../schemas/portrayal-standards.md
+
+id: christopher-stacy
+name: "Christopher C. Stacy"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📘🗝️"
+status: unknown        # not verified; do not assume
+real_being: true
+field: "MIT AI Lab documentation: newcomers' guide (AI WP 235, 1982) and ITS crash-recovery spells (AI WP 227, 1982)"
+home: characters/christopher-stacy/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  public_figure: true
+  consent:
+    state: not_asked
+  authored_by: don-hopkins
+
+invitation:
+  status: stub
+  note: "Room started to host his two AI Lab working papers, which document the Knight TV door/elevator commands and the 10/11 interface. Not invited."
+
+bio:
+  summary: >
+    CSTACY at MIT-MC. Wrote "Getting Started Computing at the AI Lab" (AI Working Paper 235,
+    7 Sep 1982) and "A Guide to ITS Operations: Useful Spells And Incantations" (AI WP 227,
+    27 Jan 1982).
+
+sources:
+  local:
+    - sources/ai-wp-235-getting-started-1982/AI_WP_235.pdf
+    - sources/ai-wp-227-guide-to-its-operations/AI_WP_227.pdf
+  web:
+    - https://hdl.handle.net/1721.1/41180
+    - https://its.victor.se/wiki/_media/ai_wp_235.pdf
+    - https://its.victor.se/wiki/_media/ai_wp_227.pdf
+    - http://www.art.net/~hopkins/Don/text/pourne-smut.html   # his 19 Jan 1984 TACACS message; Kent's 1985 reply to him
+
+see_also:
+  - { path: README.md, why: "The papers, with excerpts" }
+  - { path: ../kent-pitman/elevator-and-door.md, why: "His guide is the contemporary record of ESC D and ESC E" }
+  - { path: ../../packages/cabinet/MAPPING.md, why: "10/11 interface history" }

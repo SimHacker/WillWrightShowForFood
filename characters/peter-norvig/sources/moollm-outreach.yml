@@ -2,7 +2,7 @@
 # Email summaries; paraphrase unless quoted.
 
 meta:
-  consent: warm_lead
+  consent: interested
   portrayal: paraphrase_only
 
 timeline:

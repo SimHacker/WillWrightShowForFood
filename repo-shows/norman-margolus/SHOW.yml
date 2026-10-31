@@ -11,7 +11,7 @@ show:
   character: characters/norman-margolus/
   topic: "Cellular automata machines, reversible computing, and the physics of computation — CAM-6, the Margolus neighborhood, billiard-ball computers, DLA/dendrite, and the Margolus–Levitin limit. Two acts: PLAY with Don's existing CAM6.js live, then DESIGN a modern version together."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 why_him:
   cam6: "With Tommaso Toffoli, built the CAM-6 machine and wrote *Cellular Automata Machines* (MIT Press, 1987) — the book Don's CAM6 simulator follows."
   reversible: "Invented the block cellular automaton + Margolus neighborhood; built reversible, universal CA (billiard-ball computers, the Critters rule)."

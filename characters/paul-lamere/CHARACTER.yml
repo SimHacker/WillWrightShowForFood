@@ -1,16 +1,18 @@
 # Paul Lamere — invitation portrayal. NOT Paul Lamere.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: paul-lamere
-  name: "Paul Lamere"
-  type: invitation
-  signifier: "🎛️🔁"
-  status: living
-  field: |
-    Music technology — The Echo Nest Director of Developer Platform (→ Spotify, 2014
-    acquisition); Music Machinery blog; the Infinite Jukebox; Music Hack Day
-  home: characters/paul-lamere/
+id: paul-lamere
+name: "Paul Lamere"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎛️🔁"
+status: living
+real_being: true
+field: |
+  Music technology — The Echo Nest Director of Developer Platform (→ Spotify, 2014
+  acquisition); Music Machinery blog; the Infinite Jukebox; Music Hack Day
+home: characters/paul-lamere/
 
 representation:
   public_figure: true

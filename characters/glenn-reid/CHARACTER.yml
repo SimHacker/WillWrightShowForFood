@@ -1,8 +1,11 @@
 id: glenn-reid
 name: Glenn Reid
+type: person
+layer: profile
 slug: glenn-reid
 role: guest
-status: active
+signifier: "👤"
+real_being: true
 
 affiliations:
   - Adobe Systems (employee #40; PostScript books, Distillery)

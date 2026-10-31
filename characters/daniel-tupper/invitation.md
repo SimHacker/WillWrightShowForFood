@@ -2,7 +2,7 @@
 status: draft
 character_id: daniel-tupper
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/daniel-tupper/
 format: live_or_async
 ---

@@ -11,7 +11,7 @@ show:
   character: characters/david-levitt/
   topic: "A nominal salute to Bounce (né Body Electric): check in Don's old Bounce source, and invite many people to reimplement it — by hand and with AI, competing, cooperating, and exchanging ideas — chasing the live-coding groove in a modern (TypeScript/web) stack. Seeded by David & Don's discussions, and Jaron's."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_this:
   the_salute: "Bounce/Body Electric was one of the most productive, delightful visual programming languages Don ever used — live-coding a running VR world before the phrase existed. Rebounce honors it by bringing it back."

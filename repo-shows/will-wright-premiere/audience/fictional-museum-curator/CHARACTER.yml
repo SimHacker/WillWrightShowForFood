@@ -1,12 +1,11 @@
 # Museum Curator — fictional audience (SimCity 2000 museum / digital archivist persona)
 # Honors real game-preservation archivists. Box-seated next to Phil Salvador (real, invited).
-character:
-  name: The Museum Curator
-  type: fictional_game_character
-  real_being: false
-  signifier: "🏛️"
-  home: repo-shows/will-wright-premiere/audience/fictional-museum-curator/
-  origin: "SimCity 2000 museum / civic buildings — reimagined as a digital-preservation archivist"
+name: The Museum Curator
+type: fictional_game_character
+real_being: false
+signifier: "🏛️"
+home: repo-shows/will-wright-premiere/audience/fictional-museum-curator/
+origin: "SimCity 2000 museum / civic buildings — reimagined as a digital-preservation archivist"
 
 representation:
   fictional: true

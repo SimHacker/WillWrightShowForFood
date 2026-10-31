@@ -2,17 +2,18 @@
 # Died 1957. Seeded from Don's HN von Neumann corpus + Theory of Self-Reproducing Automata transcriptions.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: john-von-neumann
-  name: "John von Neumann"
-  also_known_as: ["Johnny von Neumann", "Neumann Janos Lajos"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1903-12-28"  # Budapest
-  died: "1957-02-08"  # Washington, D.C. -- cancer, likely from radiation exposure at atomic bomb tests
-  field: "Self-reproducing automata; 29 state CA; stored-program architecture (EDVAC); game theory; QM foundations"
-  home: characters/john-von-neumann/
+id: john-von-neumann
+name: "John von Neumann"
+also_known_as: ["Johnny von Neumann", "Neumann Janos Lajos"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1903-12-28"  # Budapest
+died: "1957-02-08"  # Washington, D.C. -- cancer, likely from radiation exposure at atomic bomb tests
+field: "Self-reproducing automata; 29 state CA; stored-program architecture (EDVAC); game theory; QM foundations"
+home: characters/john-von-neumann/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

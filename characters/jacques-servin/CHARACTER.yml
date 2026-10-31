@@ -1,15 +1,17 @@
 # Jacques Servin (aka Andy Bichlbaum) -- invitation portrayal.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jacques-servin
-  name: "Jacques Servin"
-  aliases: [Andy Bichlbaum, Ray Thomas]
-  type: invitation
-  signifier: "🩳🏳️‍🌈"
-  status: living
-  field: "SimCopter programmer -- the 1996 'himbo' easter egg; The Yes Men co-founder; culture jamming"
-  home: characters/jacques-servin/
+id: jacques-servin
+name: "Jacques Servin"
+aliases: [Andy Bichlbaum, Ray Thomas]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🩳🏳️‍🌈"
+status: living
+real_being: true
+field: "SimCopter programmer -- the 1996 'himbo' easter egg; The Yes Men co-founder; culture jamming"
+home: characters/jacques-servin/
 
 representation:
   public_figure: true

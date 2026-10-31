@@ -9,7 +9,7 @@ show:
   character: characters/stephen-wolfram/
   topic: "Heizronyms as multiway systems; MOOLLM as a substitution system over a filesystem; irreducibility as a reason to play"
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_him:
   computation: "A New Kind of Science — simple rules generate irreducible complexity; the whole substrate reads in this language."

@@ -9,5 +9,5 @@ Kay's FLEX path starts here: Evans introduced him to Ed Cheadle (Yoot People.md)
 
 We cite him; we do not speak as him.
 
-Sources: [Wikipedia](https://en.wikipedia.org/wiki/David_C._Evans) ·
+Sources: [Wikipedia: David C. Evans](https://en.wikipedia.org/wiki/David_C._Evans) ·
 [Yoot People.md](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md)

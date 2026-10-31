@@ -52,7 +52,7 @@ Three more voices in that thread:
 - **Erica Stein:** *"Before Red Bull!"*
 - **Melissa Bachman-Wood:** *"this is before the collection of about 60 half-full (empty?) Coke and
   Pepsi cans took over the right side of the desk."*
-- **Jim Mackraz** ([room](../../jim-mackraz/)), on an earlier era: *"Hop, you remember the meeting at
+- **[Jim Mackraz](../../jim-mackraz/)**, on an earlier era: *"Hop, you remember the meeting at
   that dumb ScriptX place you worked, where Bobo and I showed up to talk to your suits about their
   pipe dreams… you were late, burst in with a Coke and a Pepsi, which made it with me. The suit guys
   had that 'No more words in edgewise for us' look on their face. One of my favoritest meetings
@@ -60,8 +60,7 @@ Three more voices in that thread:
 
 Mackraz's *"that dumb ScriptX place"* is **Kaleida Labs**, where Don worked on ScriptX and
 DreamScape before Maxis — so the two-fisted Coke-and-Pepsi habit predates this desk by years and was
-already load-bearing in meetings. *"Bobo"* appears to be **Eric Bowman**
-([room](../../eric-bowman/)), who is addressed by that nickname elsewhere in Don's threads; not
+already load-bearing in meetings. *"Bobo"* appears to be **[Eric Bowman](../../eric-bowman/)**, who is addressed by that nickname elsewhere in Don's threads; not
 independently confirmed.
 
 ## The office
@@ -94,11 +93,11 @@ plausibly [Eric Bowman](../../eric-bowman/), *not confirmed which figure*. Jim M
 corner was the SimSafari team's. Whiteboards full of working notes, ballet photographs on the
 partition, a Godzilla figure on the shelf above.
 
-**Chris Trottier** ([room](../../chris-trottier/)) opened with **"Fashion emergency."** and doubled
+**[Chris Trottier](../../chris-trottier/)** opened with **"Fashion emergency."** and doubled
 down: *"seriously, dude. all wrong, no right."* Chris Bennett: *"Was it 'Mr. Greenjeans' Day? 🙂"*
 Jim Mackraz: *"Howdy, gals!"*
 
-And **Kana Ryan** ([room](../../kana-ryan/)) caught the detail that rhymes with Don's desk:
+And **[Kana Ryan](../../kana-ryan/)** caught the detail that rhymes with Don's desk:
 
 > "Please note, 1 diet coke in hand and one on the desk."
 
@@ -115,7 +114,7 @@ Period detail worth having on the record: every machine is a **beige CRT**, the 
 tall grey fabric kind, and the decoration is entirely **toys, trading cards, and printouts**. This
 is what the studio looked like fourteen months before The Sims shipped.
 
-Also in the album thread, **Kana Ryan** ([room](../../kana-ryan/)):
+Also in the album thread, **[Kana Ryan](../../kana-ryan/)**:
 
 > "These are gems - thanks for sharing!"
 

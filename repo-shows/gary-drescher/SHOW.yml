@@ -10,7 +10,7 @@ show:
   character: characters/gary-drescher/
   topic: "The schema mechanism (Made-Up Minds) as constructivist AI — and what happens when you give it a language model for grounding. Built live on Henry Minsky's Python schema factory."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
   interview_planned: true
 
 why_him:

@@ -1,10 +1,13 @@
-character:
-  id: keith-lynch
-  name: "Keith F. Lynch"
-  type: primary_source
-  status: living
-  field: "ARPAnet/ITS witness; author of the 1994 net-history memoir"
-  home: characters/keith-lynch/
+id: keith-lynch
+name: "Keith F. Lynch"
+type: person
+show_role: primary_source
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "ARPAnet/ITS witness; author of the 1994 net-history memoir"
+home: characters/keith-lynch/
 
 representation:
   public_figure: false

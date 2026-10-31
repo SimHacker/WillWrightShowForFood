@@ -14,7 +14,7 @@ Education: **Technion** BSc (1983); **NYU Courant** MSc (1984) and PhD (1988, Er
 reasoning in mechanical devices). **IBM Watson** (1988–1995) computer-assisted surgery group before
 returning to Israel.
 
-Public profiles: [Wikipedia](https://en.wikipedia.org/wiki/Leo_Joskowicz) ·
+Public profiles: [Wikipedia: Leo Joskowicz](https://en.wikipedia.org/wiki/Leo_Joskowicz) ·
 [ELSC](https://elsc.huji.ac.il/people-directory/faculty-members/leo-joskowicz/) ·
 [HUJI CS](https://www.cs.huji.ac.il/~josko/)
 

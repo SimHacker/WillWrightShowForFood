@@ -10,7 +10,7 @@ show:
   character: characters/peter-norvig/
   topic: "An open-topic conversation, Peter's choice — MOOLLM, skills, or AI in general — with Don and Leela colleagues. May double as research for the AI-book chapter Peter offered to write about Don's work."
   status: seed
-  consent: warm_lead
+  consent: interested
 
 why_him:
   textbook: "Co-author (with Stuart Russell) of Artificial Intelligence: A Modern Approach — the standard AI textbook — and PAIP (1992)."

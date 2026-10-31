@@ -58,7 +58,7 @@ consistent with the Sims 1 era but proves nothing. **Ask Charles, ask Sean.**
 
 ## The DECO caricature
 
-**Eric Hedman** ([room](../eric-hedman/)) answered in the same thread —
+**[Eric Hedman](../eric-hedman/)** answered in the same thread —
 *"I see your scooter and I raise you… **DECO!!!**"*
 
 ![A painted caricature of a man in a white belted overcoat, purple shirt and yellow tie, wearing round glasses, seated against a night-time city skyline with falling snow. He holds up a green diamond shape like a cocktail glass. Beside him are a garden gnome in a red hat and a wooden artist's mannequin holding a club](media/deco-caricature-from-eric-hedman.png)

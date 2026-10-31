@@ -1,14 +1,15 @@
 # Stone Librande — invitation portrayal. NOT Stone Librande.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: stone-librande
-  name: "Stone Librande"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Game designer — one-page designs"
-  home: characters/stone-librande/
+id: stone-librande
+name: "Stone Librande"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Game designer — one-page designs"
+home: characters/stone-librande/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

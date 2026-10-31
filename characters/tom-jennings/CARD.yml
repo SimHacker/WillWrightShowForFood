@@ -25,7 +25,7 @@ abilities:
     effect: Sell a connection to anyone, allow resale, control no content.
     verifiable: "https://www.sensitiveresearch.com/Archive/TLG/TLG.html"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

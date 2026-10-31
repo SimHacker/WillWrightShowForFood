@@ -6,4 +6,4 @@
 
 **Show potential:** low priority — efficiency vs big-co dysfunction; pair with Alan Kay on portable vision.
 
-**Consent:** not_yet_asked · [`CHARACTER.yml`](CHARACTER.yml)
+**Consent:** not_asked · [`CHARACTER.yml`](CHARACTER.yml)

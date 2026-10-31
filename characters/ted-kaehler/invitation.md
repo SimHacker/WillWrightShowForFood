@@ -1,7 +1,7 @@
 ---
 status: send_ready
 character_id: ted-kaehler
-consent: not_yet_asked
+consent: not_asked
 quiet_mode: true
 ---
 

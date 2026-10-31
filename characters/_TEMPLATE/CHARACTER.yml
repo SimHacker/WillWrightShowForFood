@@ -1,14 +1,15 @@
 # CHARACTER.yml — copy to characters/<id>/CHARACTER.yml
 # Standards: ../../schemas/portrayal-standards.md (read once — do not repeat per character)
 
-character:
-  id: guest-slug
-  name: "Full Name"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "One-line public field — verifiable"
-  home: characters/guest-slug/
+id: guest-slug
+name: "Full Name"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "One-line public field — verifiable"
+home: characters/guest-slug/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

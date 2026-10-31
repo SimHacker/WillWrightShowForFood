@@ -68,7 +68,7 @@ abilities:
     combos_with: [MIME-EVERYTHING, BEHAVIOR-ON-THE-WIRE]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 
 see_also:

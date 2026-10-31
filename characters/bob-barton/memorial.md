@@ -7,4 +7,4 @@
 
 We cite; we do not speak as them.
 
-Sources: [Wikipedia](https://en.wikipedia.org/wiki/Robert_S._Barton) · [Yoot People.md](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md)
+Sources: [Wikipedia: Robert S. Barton](https://en.wikipedia.org/wiki/Robert_S._Barton) · [Yoot People.md](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md)

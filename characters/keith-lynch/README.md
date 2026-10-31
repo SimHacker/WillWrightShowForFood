@@ -28,8 +28,8 @@ In July 1994 [Keith F. Lynch](https://keithlynch.net/) answered [Ronda Hauben](h
 | **Doug Humphrey / Digex / WATS-80** | DEC-10 in apartment; "Aubrey Philipsz"; unauthorized-but-tolerated ARPAnet | *(no room yet)* |
 | **Devon Sean McCullough / SLOSTY** | 300 baud → 1200 effective; rewired MIT machines | *(not [Devon Bumpkin](../devon-bumpkin/) — different person)* |
 | **Chris Stacy — "incredible flushing man"** | Guest-user police at MIT | [`../lars-brinkhoff/ideas.md`](../lars-brinkhoff/ideas.md) (PDP-10 restoration orbit) |
-| **Eric Raymond** | CC'd; editor of *New Hacker's Dictionary* | [Wikipedia](https://en.wikipedia.org/wiki/Eric_S._Raymond) *(external)* |
-| **Steven Levy *Hackers*** | RMS quoted extensively (Dell 1984) | [Wikipedia](https://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Computer_Revolution) |
+| **Eric Raymond** | CC'd; editor of *New Hacker's Dictionary* | [Wikipedia: Eric S. Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond) *(external)* |
+| **Steven Levy *Hackers*** | RMS quoted extensively (Dell 1984) | [Wikipedia: Hackers: Heroes of the Computer Revolution](https://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Computer_Revolution) |
 | **SF-Lovers / Proxmire Golden Fleece** | List killed; wine-lovers never returned | [Brad Templeton](https://en.wikipedia.org/wiki/Brad_Templeton) SF-lovers archives |
 | **Human-Nets / worldnet** | Read backwards = period snapshot | [Human-Nets archives](https://www.davidwittenbrook.com/human-nets/) |
 | **Netism essay** | Usenet vs Internet as black/white — coined "netism" | Henry's [small web](https://henry.codes/writing/i-dream-of-quieter-computing/) thread — [`../don-hopkins/its-first-social-network-hn-2026.md`](../don-hopkins/its-first-social-network-hn-2026.md) |

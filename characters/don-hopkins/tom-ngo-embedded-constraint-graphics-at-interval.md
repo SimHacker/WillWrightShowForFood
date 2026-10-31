@@ -54,7 +54,7 @@ Patent abstract (condensed): examples grouped into subsets that interpolate; ani
 
 **Patent:** [US5933150 — System for image manipulation and animation using embedded constraint graphics](https://patents.google.com/patent/US5933150). Inventors J. Thomas Ngo and Bruce Randall Donald; granted 3 August 1999; expired 6 August 2016.
 
-**Simplicial complex:** [Wikipedia](https://en.wikipedia.org/wiki/Simplicial_complex) · **Barycentric coordinates:** [Wikipedia](https://en.wikipedia.org/wiki/Barycentric_coordinate_system)
+**Simplicial complex:** [Wikipedia: Simplicial complex](https://en.wikipedia.org/wiki/Simplicial_complex) · **Barycentric coordinates:** [Wikipedia: Barycentric coordinate system](https://en.wikipedia.org/wiki/Barycentric_coordinate_system)
 
 ---
 

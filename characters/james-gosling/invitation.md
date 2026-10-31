@@ -1,7 +1,7 @@
 ---
 status: send_now
 character_id: james-gosling
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/james-gosling/
 warm_contact: true
 channel: "LinkedIn — Don commented on his retirement post 31 Jul 2026 (lander.ps ask); Don sends personally"

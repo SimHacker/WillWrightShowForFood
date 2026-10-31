@@ -7,7 +7,7 @@ meta:
   date: 2026-01-07
   medium: facebook_group_thread
   direction: don_to_peter  # these are DON'S messages, addressed to Peter
-  consent: warm_lead
+  consent: interested
   portrayal: dons_words_only
 
 what_don_described: |

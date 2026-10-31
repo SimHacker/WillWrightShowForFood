@@ -2,7 +2,7 @@
 
 *Conversation hooks — Don's proposed topics, grounded in Gary's public work and documented
 connections. Not quotes, not claims about what Gary thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · interview planned · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · interview planned · consent not_asked
 
 ## Anchor essay
 

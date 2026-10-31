@@ -1,14 +1,16 @@
 # Nicole Lazzaro — invitation portrayal. NOT Nicole Lazzaro.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: nicole-lazzaro
-  name: "Nicole Lazzaro"
-  type: invitation
-  signifier: "🎭"          # emotion in play
-  status: living
-  field: "Player emotion research; the 4 Keys to Fun; XEODesign; facial-expression studies of players"
-  home: characters/nicole-lazzaro/
+id: nicole-lazzaro
+name: "Nicole Lazzaro"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎭"          # emotion in play
+status: living
+real_being: true
+field: "Player emotion research; the 4 Keys to Fun; XEODesign; facial-expression studies of players"
+home: characters/nicole-lazzaro/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,14 +1,16 @@
 # David Levitt — invitation portrayal. NOT David Levitt.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: david-levitt
-  name: "David Levitt"
-  type: invitation
-  signifier: "🎹"
-  status: living
-  field: "AI music / computational jazz (MIT/Minsky), visual programming (Hookup/Bounce), VR (VPL Body Electric), Interval Research, ConnectedTV, Pantomime AR/VR (with Don as Chief Architect)"
-  home: characters/david-levitt/
+id: david-levitt
+name: "David Levitt"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎹"
+status: living
+real_being: true
+field: "AI music / computational jazz (MIT/Minsky), visual programming (Hookup/Bounce), VR (VPL Body Electric), Interval Research, ConnectedTV, Pantomime AR/VR (with Don as Chief Architect)"
+home: characters/david-levitt/
 
 representation:
   public_figure: true

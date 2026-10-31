@@ -120,7 +120,7 @@ abilities:
   - DATA-DRIVEN-ENGINE
   - DON-ADVENTURE-COMPILER
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
   disambiguation: "Adventure-game pioneer. NOT the Dilbert cartoonist."
 see_also:

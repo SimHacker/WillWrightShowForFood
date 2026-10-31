@@ -1,14 +1,15 @@
 # Walter Bender — invitation portrayal. NOT Walter Bender.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: walter-bender
-  name: "Walter Bender"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "OLPC Stone Soup, open-sourcing SimCity, skill-creation show"
-  home: characters/walter-bender/
+id: walter-bender
+name: "Walter Bender"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "OLPC Stone Soup, open-sourcing SimCity, skill-creation show"
+home: characters/walter-bender/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

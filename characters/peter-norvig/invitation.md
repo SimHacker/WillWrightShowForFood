@@ -2,7 +2,7 @@
 status: draft
 character_id: peter-norvig
 public: true
-consent: warm_lead
+consent: interested
 show_seed: repo-shows/peter-norvig/
 ---
 

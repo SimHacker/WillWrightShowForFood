@@ -2,7 +2,7 @@
 
 **AI + skills** — Spore prototyping, Sonoma teaching, Connected Play, and optional **FlatterBot 2000!**
 
-Guest: [`characters/jason-shankel/`](../../characters/jason-shankel/README.md) · consent **not_yet_asked**
+Guest: [`characters/jason-shankel/`](../../characters/jason-shankel/README.md) · consent **not_asked**
 
 ## Hooks
 

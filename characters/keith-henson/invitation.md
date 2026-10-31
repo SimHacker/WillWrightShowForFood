@@ -2,7 +2,7 @@
 status: draft
 character_id: keith-henson
 public: true
-consent: not_yet_asked
+consent: not_asked
 channel: email
 format: remote_or_async
 ---

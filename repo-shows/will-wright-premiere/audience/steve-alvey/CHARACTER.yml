@@ -1,11 +1,10 @@
 # Steve Alvey (SimSlice / SliceCity) — RESERVED front-row audience (real; invited honored guest)
-character:
-  name: Steve Alvey
-  type: real_being
-  real_being: true
-  signifier: "🏙️🛋️"
-  home: repo-shows/will-wright-premiere/audience/steve-alvey/
-  field: "SimSlice / SliceCity — SimCity running INSIDE The Sims; ~26-year Sims content brand; ZombieSims"
+name: Steve Alvey
+type: real_being
+real_being: true
+signifier: "🏙️🛋️"
+home: repo-shows/will-wright-premiere/audience/steve-alvey/
+field: "SimSlice / SliceCity — SimCity running INSIDE The Sims; ~26-year Sims content brand; ZombieSims"
 
 representation:
   real_being: true

@@ -158,7 +158,7 @@ abilities:
   verifiable: MIT AI Lab film collaboration (referenced in invitation)
   combos_with: []
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
 - path: CHARACTER.yml

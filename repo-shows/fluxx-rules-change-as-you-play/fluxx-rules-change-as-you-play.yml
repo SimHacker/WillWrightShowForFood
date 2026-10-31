@@ -17,7 +17,7 @@ show:
     with a letter asking the real Looneys for blessing. Live play, simulation receipts, HCIL ↔
     Looney Labs geography, optional Will Wright Fluxx-pack thread.
   status: proposed
-  consent: not_yet_asked
+  consent: not_asked
 
 dialect:
   voice: stoner_techno_hippie
@@ -55,7 +55,7 @@ segments:
 
   will_imessage_thread:
     ask: "Don texted Will about Fluxx packs + UMD — Jul 2026. Optional cold open."
-    consent: pending
+    consent: not_asked
 
   live_fluxx:
     ask: "Play a hand on air — or react to simulation log cold read."

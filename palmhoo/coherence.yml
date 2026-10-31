@@ -17,7 +17,7 @@ summaries:
       - palmhoo/*/README.md
       - palmhoo/CONSTITUTION.md
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-10-29
     volatility: medium
     note: "root of the mipmap — stale whenever any shelf page changes meaningfully"
 
@@ -30,9 +30,10 @@ summaries:
       - https://github.com/SimHacker/moollm/tree/main/skills/schema-mechanism
       - https://github.com/SimHacker/moollm/tree/main/skills/society-of-mind
       - https://github.com/SimHacker/moollm/tree/main/skills/simulator-effect
+      - https://github.com/SimHacker/moollm/tree/main/skills/mind-mirror
       - https://github.com/SimHacker/moollm/tree/main/designs/ethics
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-10-29
     volatility: medium
 
   - summary: palmhoo/simulation-and-worlds/README.md
@@ -47,9 +48,10 @@ summaries:
       - characters/don-hopkins/sources/micropolis-svelte-snap-constraint-bridge.yml
       - characters/don-hopkins/snap-visual-engines-fundable-goals.md
       - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4
+      - https://github.com/SimHacker/moollm/tree/main/skills/place
       - https://github.com/SimHacker/MicropolisCore
     beat: palm
-    last_verified: 2026-07-09
+    last_verified: 2026-10-29
     volatility: medium
 
   - summary: palmhoo/design-methods/README.md
@@ -63,9 +65,10 @@ summaries:
       - https://github.com/SimHacker/moollm/tree/main/skills/cauldron
       - https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
       - https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz
+      - https://github.com/SimHacker/moollm/tree/main/skills/design-sense
       - https://github.com/SimHacker/moollm/blob/main/designs/MOOLLM-MANIFESTO.md
     beat: palm
-    last_verified: 2026-07-09
+    last_verified: 2026-10-29
     volatility: low
 
   - summary: palmhoo/shows-and-performance/README.md
@@ -115,7 +118,7 @@ summaries:
       - characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md
       - process/trails/visual-programming-patch-cord.md
     beat: palm
-    last_verified: 2026-07-09
+    last_verified: 2026-10-29
     volatility: medium
 
   - summary: palmhoo/ethics-and-portrayal/README.md
@@ -126,8 +129,10 @@ summaries:
       - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md
       - https://github.com/SimHacker/moollm/tree/main/designs/ethics
       - https://github.com/SimHacker/moollm/tree/main/skills/no-ai-slop
+      - https://github.com/SimHacker/moollm/tree/main/skills/representation-ethics
+      - https://github.com/SimHacker/moollm/tree/main/skills/real-being
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-10-29
     volatility: low
 
   - summary: palmhoo/people/README.md
@@ -139,7 +144,7 @@ summaries:
       - characters/dan-ingalls/
       - characters/david-ungar/
     beat: palm
-    last_verified: 2026-07-09
+    last_verified: 2026-10-29
     volatility: high
     note: "new characters land weekly; the reading-map picks need re-checking as dirs deepen"
 
@@ -154,7 +159,7 @@ summaries:
       - https://github.com/SimHacker/moollm/tree/main/kernel
       - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.md
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-10-29
     volatility: high
     note: "the sawdust shelf — highest churn in palmhoo by design"
 
@@ -231,23 +236,21 @@ summaries:
 # These are the canaries: when a source count/date changes, every dependent listed here is stale.
 tracked_claims:
 
-  - claim: "MOOLLM has 139 skills on disk"
-    as_of: 2026-07-08
+  - claim: "MOOLLM has 156 skills with a SKILL.md"
+    as_of: 2026-10-29
     source: https://github.com/SimHacker/moollm/tree/main/skills
     dependents:
-      - characters/chris-trottier/design-by-accretion.md
-      - characters/chris-trottier/suggested-questions.md
-      - repo-shows/design-by-accretion/design-by-accretion.yml
       - palmhoo/code-and-craft/README.md
-      - https://github.com/SimHacker/moollm/blob/main/skills/README.md
-    note: "deliberately load-bearing staleness — recount at each shelving pass, update all dependents together"
+      - palmhoo/under-development/README.md
+      - palmhoo/JOURNALISM.md
+    note: "Recounted this pass. 156 directories contain SKILL.md. INDEX.yml skill_count and skills/README.md say 156. The 2026-07-08 count was 139; character essays that still say 139 are the lag specimen, not a second census."
 
-  - claim: "moollm skills/INDEX.yml says 131; skills/README.md says 128"
+  - claim: "On 2026-07-08, moollm skills/INDEX.yml said 131 and skills/README.md said 128"
     as_of: 2026-07-08
     source: https://github.com/SimHacker/moollm/blob/main/skills/INDEX.yml
     dependents:
       - characters/chris-trottier/design-by-accretion.md
-    note: "the lag IS the evidence cited; if moollm re-indexes, rewrite the evidence, don't delete it"
+    note: "Historical. Both files say 156 as of 2026-10-29. The July lag stays in the accretion essay as evidence that catalogs trail the disk."
 
 # COHERENCE CONFLICTS — incompatible claims between documents, tracked like bugs.
 conflicts: []

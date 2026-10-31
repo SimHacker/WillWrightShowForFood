@@ -106,7 +106,7 @@ seeded:
     - id: phil-salvador
       name: Phil Salvador
       type: real_being
-      consent: not_yet_asked
+      consent: not_asked
       attend_live: invited
       status: "reserved — empty questions; he writes his own after invitation; DO NOT fabricate"
       box_seat_with: fictional-museum-curator
@@ -181,7 +181,7 @@ rituals:
     - id: richard-bartle
       name: Richard Bartle
       type: real_being
-      consent: explicit
+      consent: granted
       consent_scope: "simulate + draft spirit-of-work questions for his curation"
       authored_by: curator_draft_for_subject_review
       attend_live: optional

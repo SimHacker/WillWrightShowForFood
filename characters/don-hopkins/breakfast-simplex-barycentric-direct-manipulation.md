@@ -40,9 +40,9 @@ moultano plots breakfast recipes on a triangle whose vertices are **egg**, **mil
 
 That is not a vector space (no negative eggs in the standard formulation), but it **is** a simplex — and a **breakfast buffet** is a larger, possibly disconnected **simplicial complex** spanning multiple ingredient families (add butter or sugar → higher dimension; add prep method → adjacent regions).
 
-**Barycentric coordinates:** [Wikipedia](https://en.wikipedia.org/wiki/Barycentric_coordinate_system) — local coordinates **inside** a simplex; weights positive and sum to 1.
+**Barycentric coordinates:** [Wikipedia: Barycentric coordinate system](https://en.wikipedia.org/wiki/Barycentric_coordinate_system) — local coordinates **inside** a simplex; weights positive and sum to 1.
 
-**Simplicial complex:** [Wikipedia](https://en.wikipedia.org/wiki/Simplicial_complex) — simplices glued along shared **k-faces** (vertices, edges, triangles, tetrahedra, …).
+**Simplicial complex:** [Wikipedia: Simplicial complex](https://en.wikipedia.org/wiki/Simplicial_complex) — simplices glued along shared **k-faces** (vertices, edges, triangles, tetrahedra, …).
 
 ---
 

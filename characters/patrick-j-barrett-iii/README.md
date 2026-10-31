@@ -3,7 +3,7 @@
 **Original The Sims programmer** who implemented **same-sex romantic interactions** — the
 feature that helped make The Sims the queer microworld a generation grew up inside.
 
-**Status:** invitation draft · **Consent:** not_yet_asked · **Show:** [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) · **Public record:** [`same-sex-relationships-the-record.md`](same-sex-relationships-the-record.md)
+**Status:** invitation draft · **Consent:** not_asked · **Show:** [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) · **Public record:** [`same-sex-relationships-the-record.md`](same-sex-relationships-the-record.md)
 
 **His own photographs:** [The Sims booth at E3 1999](e3-1999-sims-booth.md) — *"Hidden behind the EA
 Arena. This was the closest I could get to it."* Eight months before ship, mobbed anyway.

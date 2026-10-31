@@ -1,18 +1,19 @@
 # Zenon Pylyshyn — memorial portrayal (in memoriam). NOT Zenon Pylyshyn.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: zenon-pylyshyn
-  name: "Zenon Pylyshyn"
-  full_name: "Zenon Walter Pylyshyn"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1937-08-25"   # Montreal, Quebec, Canada
-  died: "2022-12-06"   # The Bronx, New York, USA (aged 85)
-  field: "Cognitive science; philosophy of mind — cognition & computation; visual indexing (FINST) theory"
-  home: characters/zenon-pylyshyn/
-  affiliation: "Western University (UWO) 1966–1994; Rutgers University — founding director, Center for Cognitive Science (RuCCS), 1994"
+id: zenon-pylyshyn
+name: "Zenon Pylyshyn"
+full_name: "Zenon Walter Pylyshyn"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1937-08-25"   # Montreal, Quebec, Canada
+died: "2022-12-06"   # The Bronx, New York, USA (aged 85)
+field: "Cognitive science; philosophy of mind — cognition & computation; visual indexing (FINST) theory"
+home: characters/zenon-pylyshyn/
+affiliation: "Western University (UWO) 1966–1994; Rutgers University — founding director, Center for Cognitive Science (RuCCS), 1994"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

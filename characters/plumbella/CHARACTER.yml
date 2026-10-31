@@ -1,15 +1,17 @@
 # Jesse McNamara (Plumbella) — portrayal. NOT Jesse.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: plumbella
-  name: "Jesse McNamara"
-  also_known_as: [Plumbella]
-  type: invitation
-  signifier: "🟠📺"
-  status: living
-  field: "Sims YouTuber (Plumbella); advocacy; EA Creator Network resigner Oct 2025"
-  home: characters/plumbella/
+id: plumbella
+name: "Jesse McNamara"
+also_known_as: [Plumbella]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🟠📺"
+status: living
+real_being: true
+field: "Sims YouTuber (Plumbella); advocacy; EA Creator Network resigner Oct 2025"
+home: characters/plumbella/
 
 representation:
   public_figure: true

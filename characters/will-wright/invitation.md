@@ -3,7 +3,7 @@ status: accepted
 accepted: 2026-07
 character_id: will-wright
 public: true
-consent: invitation_accepted
+consent: granted
 role: flagship_public_invitation
 ---
 

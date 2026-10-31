@@ -2,7 +2,7 @@
 status: draft
 character_id: said-achmiz
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/said-achmiz/
 format: written_or_audio_or_repo
 paired_guest: gwern

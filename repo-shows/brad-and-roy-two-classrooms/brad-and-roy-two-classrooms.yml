@@ -12,7 +12,7 @@ show:
   guests: ["Brad A. Myers", "Roy Eagleson"]
   topic: "How do you teach the history of interaction? Brad's CMU 05-640 flew in sixteen pioneers whose guest lectures became the sixteen guest chapters of Pick, Click, Flick!; Roy's Western University course has students single-stepping the actual 1972 PIXIE code in a PDP-7 emulator. Lecture hall meets lab bench — reading the history versus running it."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_a_great_pair:
   - "Brad A. Myers — CMU 05-640 Interaction Techniques: the guest-lecture model. Bill Atkinson, Dan Bricklin, Don, and thirteen more walked the room; the lectures became Pick, Click, Flick! Teaching history by primary-source testimony."

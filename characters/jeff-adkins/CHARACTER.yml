@@ -1,15 +1,17 @@
 # Jeff Adkins — collaborator + guest portrayal. NOT Jeff Adkins.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jeff-adkins
-  name: "Jeff Adkins"
-  type: invitation
-  signifier: "🪓🧬"
-  status: living
-  handle: DnfJeff
-  field: "Sims save-file & object reverse-engineering; AI-assisted tooling; web development. Creator of SimObliterator."
-  home: characters/jeff-adkins/
+id: jeff-adkins
+name: "Jeff Adkins"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🪓🧬"
+status: living
+real_being: true
+handle: DnfJeff
+field: "Sims save-file & object reverse-engineering; AI-assisted tooling; web development. Creator of SimObliterator."
+home: characters/jeff-adkins/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -26,17 +26,12 @@ costumes and the revue, AI as instrument.
 ## The Micropolis work (2009)
 
 While Don was deep in engine code, Tom was imagining what open source SimCity
-could *feel* like as a social, multiplayer, creative medium. From Don's
-internship assessment and recommendation letter (November 2009):
-
-> "Made storyboards, mock-ups and concept illustrations about multi player
-> Micropolis and social networking, for a talk I gave at HAR 2009…"
-
-> "Presently working on the user interface design and multi player dynamics
-> for Micropolis, an open source multi player version of SimCity in
-> development. Ongoing work redesigning the user interface and graphics,
-> translating English text to Dutch, writing new documentation and
-> educational courseware."
+could *feel* like as a social, multiplayer, creative medium. Don's November 2009
+internship assessment and recommendation letter, which is not online and is not
+quoted here, describes that work: storyboards and mock-ups of multiplayer
+Micropolis and social networking for the HAR 2009 talk, the user interface and
+multiplayer dynamics, the Dutch translation, and new documentation and
+courseware.
 
 That concept art — the social layer, the multiplayer dynamics, cities as
 places where people meet — is the work Don proudly showed at
@@ -48,12 +43,8 @@ art and architecture scene ([Mediamatic](https://www.mediamatic.net/en/page/1870
 and in November 2009 pitched Micropolis to the **Architectuurfonds** open call
 *"Stedenbouw voor de volgende generatie"* — urbanism for the next generation.
 A design student proposing an open source city simulator to an architecture
-fund, seventeen years before it was obvious.
-
-Don's recommendation, verbatim:
-
-> "I would not hesitate to recommend Tom for challenging projects requiring
-> creativity, design skills and technical abilities."
+fund, seventeen years before it was obvious. Don wrote him a recommendation letter
+that November. It is not online, and its text is not included here.
 
 ## The work now
 

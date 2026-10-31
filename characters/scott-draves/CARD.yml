@@ -85,7 +85,7 @@ abilities:
   combos_with:
   - DON-CELLULAR-AUTOMATA
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
 - path: CHARACTER.yml

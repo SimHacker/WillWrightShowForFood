@@ -31,7 +31,7 @@ abilities:
     effect: Children program agents with before-and-after pictures.
     verifiable: "KidSim, CACM 1994; Stagecast Creator"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

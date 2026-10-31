@@ -3,18 +3,19 @@
 # NOTE: Directory was drafted as living invitation; public obituaries place death 2025-11-17.
 #        Reclassified to memorial. Correct dates/details welcome from family and colleagues.
 
-character:
-  id: rebecca-heineman
-  name: "Rebecca Heineman"
-  also_known_as: ["Burger Becky"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1963-10"      # Whittier, California (month from public bios)
-  died: "2025-11-17"   # Rockwall, Texas; cancer (aged 62) — NYT / Ars / NPR
-  field: "Game programmer & studio founder — Interplay co-founder; Bard's Tale III; ports; LGBTQ advocacy"
-  home: characters/rebecca-heineman/
-  spouse: jennell-jaquays   # public obituaries / Wikipedia — survived Jennell (2024); both memorial rooms
+id: rebecca-heineman
+name: "Rebecca Heineman"
+also_known_as: ["Burger Becky"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1963-10"      # Whittier, California (month from public bios)
+died: "2025-11-17"   # Rockwall, Texas; cancer (aged 62) — NYT / Ars / NPR
+field: "Game programmer & studio founder — Interplay co-founder; Bard's Tale III; ports; LGBTQ advocacy"
+home: characters/rebecca-heineman/
+spouse: jennell-jaquays   # public obituaries / Wikipedia — survived Jennell (2024); both memorial rooms
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

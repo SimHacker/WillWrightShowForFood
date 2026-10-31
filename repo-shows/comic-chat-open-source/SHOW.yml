@@ -12,7 +12,7 @@ show:
     Hanselman (who made the open-source release happen) for a Repo Show — including a LIVE Comic
     Chat on air: conversation that becomes comic panels, then lands in the show tree.
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
   interview_planned: true
   channel_hints: [email, hacker_news, twitter]
   centerpiece: live-comic-chat.md

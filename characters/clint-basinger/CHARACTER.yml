@@ -2,15 +2,17 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Note: public/legal name is **Clint Basinger**; channel brand **LGR** (@LGR on YouTube).
 
-character:
-  id: clint-basinger
-  name: "Clint Basinger (LGR)"
-  aliases: [LGR, Lazy Game Reviews]
-  type: invitation
-  signifier: "🕹️📼"
-  status: living
-  field: "Retro computing + games YouTuber; deep The Sims / Maxis-era coverage; audience bridge"
-  home: characters/clint-basinger/
+id: clint-basinger
+name: "Clint Basinger (LGR)"
+aliases: [LGR, Lazy Game Reviews]
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🕹️📼"
+status: living
+real_being: true
+field: "Retro computing + games YouTuber; deep The Sims / Maxis-era coverage; audience bridge"
+home: characters/clint-basinger/
 
 representation:
   public_figure: true

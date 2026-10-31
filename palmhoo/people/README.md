@@ -3,7 +3,7 @@
 *Palmhoo topic — the cast: real, fictional, and in between, with each one's best reading.*
 ↑ [Palmhoo root](../README.md) · [Constitution](../CONSTITUTION.md)
 
-🐒✋ *The characters directory has 150+ rooms and an [index](../../characters/INDEX.yml). This
+🐒✋ *The characters directory has 300+ rooms and an [index](../../characters/INDEX.yml). This
 shelf is not that index — it's my reading map: for each person, the one or two documents I'd hand
 you first. Selection is opinion; opinions are signed.*
 

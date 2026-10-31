@@ -5,7 +5,7 @@
 meta:
   id: drew-ai-contrast
   purpose: invitation_pitch
-  consent: not_yet_asked
+  consent: not_asked
   show: SHOW.yml
   rendered_for_drew: ai-contrast-framing.md
   invitation: ../../characters/drew-carey/invitation.md

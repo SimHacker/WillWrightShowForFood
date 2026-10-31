@@ -2,7 +2,7 @@
 status: draft
 character_id: dave-tristram
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/dave-tristram/
 ---
 

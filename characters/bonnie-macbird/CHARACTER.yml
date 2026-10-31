@@ -1,14 +1,16 @@
 # Bonnie MacBird — invitation portrayal. NOT Bonnie MacBird.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: bonnie-macbird
-  name: "Bonnie MacBird"
-  type: invitation
-  signifier: "🖋️"
-  status: living
-  field: "Author/screenwriter — original writer of TRON; Sherlock Holmes Adventures (HarperCollins)"
-  home: characters/bonnie-macbird/
+id: bonnie-macbird
+name: "Bonnie MacBird"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🖋️"
+status: living
+real_being: true
+field: "Author/screenwriter — original writer of TRON; Sherlock Holmes Adventures (HarperCollins)"
+home: characters/bonnie-macbird/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

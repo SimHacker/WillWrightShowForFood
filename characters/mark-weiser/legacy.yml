@@ -84,7 +84,7 @@ torchbearers:
     talks:
       - { title: "The Internet of Materials: The next logical step or a paradigm shift?", venue: "UC Berkeley EECS Colloquium", date: "2019-12-05", url: "https://www.youtube.com/watch?v=qko_wzQeP20", summary: abowd-internet-of-materials.md }
       - { title: "Beyond Weiser's Ubiquitous Computing (Sanders Series Lecture)", date: "2016", url: "https://www.youtube.com/watch?v=eYsLbVOl31M", note: "3rd generation (Weiser) → 4th generation (emerged) → 5th generation (soon)." }
-    why_draw_in: "A living researcher whose whole arc IS Weiser's legacy — ideal memorial voice; consent not_yet_asked."
+    why_draw_in: "A living researcher whose whole arc IS Weiser's legacy — ideal memorial voice; consent not_asked."
 
   amber_case:
     who: "Amber Case"

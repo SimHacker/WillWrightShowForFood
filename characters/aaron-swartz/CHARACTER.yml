@@ -1,17 +1,18 @@
 # Aaron Swartz -- memorial portrayal. NOT Aaron Swartz.
 # Died 2013. Guerilla Open Access; RSS; CC; Open Library. Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: aaron-swartz
-  name: "Aaron Swartz"
-  also_known_as: ["Aaron Swartz"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1986-11-08"
-  died: "2013-01-11"
-  field: "RSS 1.0; Creative Commons; Markdown/html2text; Open Library; Demand Progress; Guerilla Open Access Manifesto"
-  home: characters/aaron-swartz/
+id: aaron-swartz
+name: "Aaron Swartz"
+also_known_as: ["Aaron Swartz"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1986-11-08"
+died: "2013-01-11"
+field: "RSS 1.0; Creative Commons; Markdown/html2text; Open Library; Demand Progress; Guerilla Open Access Manifesto"
+home: characters/aaron-swartz/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

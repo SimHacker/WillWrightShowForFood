@@ -1,9 +1,11 @@
-character:
-  id: tom-demeyer
-  name: "Tom Demeyer"
-  type: invitation
-  status: living
-  home: characters/tom-demeyer/
+id: tom-demeyer
+name: "Tom Demeyer"
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+home: characters/tom-demeyer/
 
 representation:
   public_figure: false

@@ -63,7 +63,7 @@ Memorial mode examples — represent and discuss **the deceased only**; never vo
 **Most invitations here are drafts.** We prepare a page before getting in touch, and we contact
 people one at a time, so that each reply gets proper attention. A page existing here does not mean
 its subject has been contacted, has agreed to anything, or is involved. The table at the top of each
-`invitation.md` shows its status: `draft` and `not_yet_asked` mean we haven't asked yet. If you find
+`invitation.md` shows its status: `draft` and `not_asked` mean we haven't asked yet. If you find
 your own page before hearing from us, you're welcome to read it, correct it, or ask us to take it
 down.
 

@@ -49,5 +49,5 @@ ties_to:
   - SimHacker/MicropolisCore/documentation/designs/soul-city.md
   - SimHacker/MicropolisCore/packages/sims-io
 
-invitation_status: not_yet_asked
+invitation_status: not_asked
 precedes_or_pairs_with: will-wright

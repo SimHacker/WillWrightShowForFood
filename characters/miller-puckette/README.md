@@ -11,5 +11,5 @@ the "Music Hacker's Hangout," and sits on the same **patch-cord dataflow** linea
 **Hookup**.
 
 - Pure Data — [puredata.info](https://puredata.info/) · [msp.ucsd.edu](https://msp.ucsd.edu/)
-- [Wikipedia](https://en.wikipedia.org/wiki/Miller_Puckette)
+- [Wikipedia: Miller Puckette](https://en.wikipedia.org/wiki/Miller_Puckette)
 - Trail: [`visual-programming-patch-cord.md`](../../process/trails/visual-programming-patch-cord.md)

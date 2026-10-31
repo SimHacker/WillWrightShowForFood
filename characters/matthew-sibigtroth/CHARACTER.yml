@@ -1,14 +1,15 @@
 # Matthew Sibigtroth — invitation portrayal. NOT Matthew Sibigtroth.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: matthew-sibigtroth
-  name: "Matthew Sibigtroth"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Creative prototyping — speech/AI; original StoryMaker Flash app; ex-Stupid Fun Club, ex-Google X"
-  home: characters/matthew-sibigtroth/
+id: matthew-sibigtroth
+name: "Matthew Sibigtroth"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Creative prototyping — speech/AI; original StoryMaker Flash app; ex-Stupid Fun Club, ex-Google X"
+home: characters/matthew-sibigtroth/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

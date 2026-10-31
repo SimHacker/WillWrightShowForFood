@@ -1,14 +1,16 @@
 # Cynthia Solomon — invitation portrayal. NOT Cynthia Solomon.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: cynthia-solomon
-  name: "Cynthia Solomon"
-  type: invitation
-  signifier: "📼"
-  status: living
-  field: "Logo co-creator; pioneer of computing for children; constructionist educator; keeper of a video archive of early Logo / AI Lab / Atari Cambridge history"
-  home: characters/cynthia-solomon/
+id: cynthia-solomon
+name: "Cynthia Solomon"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📼"
+status: living
+real_being: true
+field: "Logo co-creator; pioneer of computing for children; constructionist educator; keeper of a video archive of early Logo / AI Lab / Atari Cambridge history"
+home: characters/cynthia-solomon/
 
 representation:
   public_figure: true

@@ -3,7 +3,7 @@
 **Video essayist** ([itsall.gay](https://www.itsall.gay)) — queer theory, games, and the politics of
 the body. Openly **trans masc** (he/him). Channel formerly **AreTheyGay**.
 
-**Status:** warm lead · invitation draft · consent `not_yet_asked`  
+**Status:** warm lead · invitation draft · consent `not_asked`  
 **Solo show:** [**I'm Queer Therefore I Sim**](../../repo-shows/im-queer-therefore-i-sim/README.md)  
 **Group show:** [**Did The Sims Make You Gay?**](../../repo-shows/did-the-sims-make-you-gay/README.md) — title borrowed; Alex invited before on-air use  
 **Cluster:** [`lgbtq-sims-cluster`](../../repo-shows/lgbtq-sims-cluster/README.md)

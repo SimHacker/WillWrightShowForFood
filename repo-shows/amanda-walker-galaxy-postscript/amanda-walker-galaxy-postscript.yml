@@ -9,7 +9,7 @@ show:
   guests: ["Amanda Walker"]
   topic: "Visix Galaxy — the 1990s cross-platform UI / distributed-app framework with a NeWS-like PostScript interpreter at its core. Commercial PostScript as linguistic motherboard; optional Self-manual reunion cameo."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 beats:
   - "Galaxy architecture — PostScript rendering (DPS + software fallback), ~3500 APIs, distributed services"

@@ -145,7 +145,7 @@ friends_of_the_thread:
     lineage: characters/roy-eagleson/sketchpad-to-pixie-lineage.md
     hero: characters/ivan-sutherland/
     possible_roles: [discussant, expert_audience_voice, classroom_bridge]
-    consent: not_yet_asked
+    consent: not_asked
     note: "On the email thread — not a show bud unless separately invited."
   kelly_booth:
     who: "Kellogg S. Booth (Kelly) — UBC Professor Emeritus; Waterloo CGL co-founder; SIGGRAPH Chair 1985–89"
@@ -159,7 +159,7 @@ friends_of_the_thread:
       Canadian graphics/HCI institution-builder on the PIXIE thread; menu-layout experimental
       tradition links to pie-menus shows; Roy's pedagogy ← Kelly's Waterloo/UBC corridor.
     possible_roles: [discussant, canadian_cg_hci_voice, roy_mentor_backstory]
-    consent: not_yet_asked
+    consent: not_asked
     note: "On the email thread — not contacted."
   brian_silverman:
     who: "Brian Silverman — Logo, Scratch, Brian's Brain CA; Playful Invention Montreal"
@@ -168,7 +168,7 @@ friends_of_the_thread:
     pdp7_fit: "Don witness — programmed PDP-7s; could read Heinz PIXIE listing"
     ca_fit: "Brian's Brain, Seeds, Wireworld — norman-margolus CA fest"
     possible_roles: [pixie_listing_reviewer, ca_rule_demonstrator, logo_scratch_constructionist]
-    consent: not_yet_asked
+    consent: not_asked
     invite: characters/brian-silverman/invitation.md
 
 not_invited:
@@ -353,4 +353,4 @@ ties_to:
   - ../../process/challenges/retrocomputing-drive.yml
   - ../../process/trails/live-objects.md
 
-consent: not_yet_asked
+consent: not_asked

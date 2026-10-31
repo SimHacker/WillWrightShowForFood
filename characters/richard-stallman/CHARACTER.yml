@@ -1,11 +1,13 @@
-character:
-  id: richard-stallman
-  name: "Richard M. Stallman"
-  aliases: [rms, RMS]
-  type: invitation
-  status: living
-  field: "GNU, free software movement, copyleft, Emacs, GPL"
-  home: characters/richard-stallman/
+id: richard-stallman
+name: "Richard M. Stallman"
+aliases: [rms, RMS]
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "GNU, free software movement, copyleft, Emacs, GPL"
+home: characters/richard-stallman/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

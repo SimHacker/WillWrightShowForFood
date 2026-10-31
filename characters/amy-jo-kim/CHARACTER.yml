@@ -1,15 +1,17 @@
 # Amy Jo Kim — invitation portrayal. NOT Amy Jo Kim.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: amy-jo-kim
-  name: "Amy Jo Kim"
-  type: invitation
-  signifier: "🎮"
-  status: living
-  beloved: true
-  field: "Social game designer, community architect, Game Thinking — retention and social systems"
-  home: characters/amy-jo-kim/
+id: amy-jo-kim
+name: "Amy Jo Kim"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎮"
+status: living
+real_being: true
+beloved: true
+field: "Social game designer, community architect, Game Thinking — retention and social systems"
+home: characters/amy-jo-kim/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -11,18 +11,18 @@ screen reader, a 3D view of a 1980 screen, a way for one machine to talk to anot
 
 ## Who
 
-| Guest | Why | Room |
-|---|---|---|
-| April Ayres-Griffiths | microM8: the "upcycling" Apple ][ emulator, live rewind, reverse debugger, MCP server | [room](../../characters/april-ayres-griffiths/README.md) |
-| Melody Ayres-Griffiths | Paleotronic Magazine; turtleSpaces, Logo in 3D | [room](../../characters/melody-ayres-griffiths/README.md) |
-| Bob Supnik | SIMH, the framework most historic-machine simulators grew from | [room](../../characters/bob-supnik/README.md) |
-| Lars Brinkhoff | ITS and the PDP-10 running again; the Type 340 phosphor simulator | [room](../../characters/lars-brinkhoff/README.md) |
-| David Rosenthal | Emulation as a preservation strategy (his 2015 Mellon report); the Cambridge PDP-7 | [room](../../characters/david-rosenthal/README.md) |
-| Al Kossow | bitsavers, the manuals everyone's emulators are built from; reading old tapes | [room](../../characters/al-kossow/README.md) |
-| Jason Scott | The Internet Archive's in-browser emulation, from 2013 to more than 250,000 programs | [room](../../characters/jason-scott/README.md) |
-| Thomas Cherryhomes | FujiNet: real 8-bit machines on the network, and emulators that join them | [room](../../characters/thomas-cherryhomes/README.md) |
-| Mitch Bradley | Forth on the PDP-7, built and tested under SIMH; Open Firmware | [room](../../characters/mitch-bradley/README.md) |
-| Brian Silverman | The PDP-1 Spacewar! emulator; transistor-level 6502 and 4004 | [room](../../characters/brian-silverman/README.md) |
+| Guest | Why |
+|---|---|
+| [April Ayres-Griffiths](../../characters/april-ayres-griffiths/README.md) | microM8: the "upcycling" Apple ][ emulator, live rewind, reverse debugger, MCP server |
+| [Melody Ayres-Griffiths](../../characters/melody-ayres-griffiths/README.md) | Paleotronic Magazine; turtleSpaces, Logo in 3D |
+| [Bob Supnik](../../characters/bob-supnik/README.md) | SIMH, the framework most historic-machine simulators grew from |
+| [Lars Brinkhoff](../../characters/lars-brinkhoff/README.md) | ITS and the PDP-10 running again; the Type 340 phosphor simulator |
+| [David Rosenthal](../../characters/david-rosenthal/README.md) | Emulation as a preservation strategy (his 2015 Mellon report); the Cambridge PDP-7 |
+| [Al Kossow](../../characters/al-kossow/README.md) | bitsavers, the manuals everyone's emulators are built from; reading old tapes |
+| [Jason Scott](../../characters/jason-scott/README.md) | The Internet Archive's in-browser emulation, from 2013 to more than 250,000 programs |
+| [Thomas Cherryhomes](../../characters/thomas-cherryhomes/README.md) | FujiNet: real 8-bit machines on the network, and emulators that join them |
+| [Mitch Bradley](../../characters/mitch-bradley/README.md) | Forth on the PDP-7, built and tested under SIMH; Open Firmware |
+| [Brian Silverman](../../characters/brian-silverman/README.md) | The PDP-1 Spacewar! emulator; transistor-level 6502 and 4004 |
 
 Also wanted, no rooms yet: Will Scullin (apple2js), Chris Torrence (Apple2TS), Norbert Landsteiner
 (masswerk's Spacewar! and other in-browser machines), Alexey Slyusar (Logo Adventure on LLOGO under

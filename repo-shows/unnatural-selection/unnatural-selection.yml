@@ -23,7 +23,7 @@ show:
     - Brad A. Myers
   character: characters/david-rosenthal/
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 topic: |
   Natural selection froze accidental winners. Archaeology of icon/selection vocabulary at Alvey 1985;
@@ -73,7 +73,7 @@ threads:
       - DSHR Lichtenstein PS — Deskset whizzy vs inconspicuous tools
       - Don X-Windows Disaster — File Manager bomb icon; double-click core dump
       - XBugTool #1059974 — input focus trap; X11 input queue lock
-    consent: ask_before_publishing_weiser_vicky_thread
+    clearance: pending_ask   # the Weiser / Vicky thread, before any quote is published
   - id: naming-challenge
     what: "Invent a word — not ClipRepo — for git-visible transfer"
   - id: wysiwyg-highways

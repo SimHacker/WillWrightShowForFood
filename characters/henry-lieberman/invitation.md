@@ -2,7 +2,7 @@
 status: send_ready
 character_id: henry-lieberman
 public: true
-consent: not_yet_asked
+consent: not_asked
 first_contact: in person via Cyrus Shaoul, October 2026 (same event as Pattie Maes)
 group_show: repo-shows/npuc-reunion/
 format: remote_or_in_person

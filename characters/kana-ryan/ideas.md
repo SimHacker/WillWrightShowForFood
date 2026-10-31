@@ -1,7 +1,7 @@
 # Ideas to explore with Kana Ryan 🐈
 
 *Production-side reunion hooks — Don's proposed topics, not Kana's words.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_asked
 
 ## Reunion hub
 

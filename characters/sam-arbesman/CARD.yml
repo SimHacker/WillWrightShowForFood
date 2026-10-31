@@ -132,7 +132,7 @@ abilities:
   - MICROCOSM-SIM
   - HOST-REPO-SHOW
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
 - path: who-is-sam-arbesman.md

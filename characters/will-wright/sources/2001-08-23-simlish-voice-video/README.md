@@ -24,7 +24,7 @@ Don posted this video to the **Maxis Alumni** group on **19 May 2022**:
 > "OMG this precious video only has 700 views! RIP Gerri. It's so fun to see Gerri Lawlor and Steve
 > Kearin working so playfully together."
 
-In the same thread he attached the English ad-lib audio, and **Jim Mackraz** ([room](../../../jim-mackraz/))
+In the same thread he attached the English ad-lib audio, and **[Jim Mackraz](../../../jim-mackraz/)**
 answered:
 
 > "I'm not sure everybody appreciates what a treasure this recording is!"
@@ -129,7 +129,7 @@ The Sims 2, Life Stories, and SimCity 4; guest vocals for **The Residents**. In 
 **Margaret Cho**'s *Be Robin* campaign, busking around San Francisco for the city's homeless
 population after Robin Williams' death. She died suddenly in San Francisco, aged 49; cause not
 disclosed.
-[Wikipedia](https://en.wikipedia.org/wiki/Gerri_Lawlor) ·
+[Wikipedia: Gerri Lawlor](https://en.wikipedia.org/wiki/Gerri_Lawlor) ·
 [KQED remembrance (Rae Alexandra, 21 Feb 2019)](https://www.kqed.org/pop/109322/remembering-gerri-lawlor-sims-voice-actor-improv-star-and-homeless-advocate) ·
 [EA memorial (Robi Kauker)](https://www.ea.com/news/in-memory-gerri-lawlor)
 

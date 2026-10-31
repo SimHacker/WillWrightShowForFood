@@ -1,7 +1,7 @@
 # Ideas to explore with Golan Levin 🎛️
 
 *Don’s proposed topics — not Golan’s words.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · warm contact · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · warm contact · consent not_asked
 
 **Heartbeat:** [brainstorm-heartbeat.md](../../process/brainstorm-heartbeat.md) — talk designs; others implement.
 

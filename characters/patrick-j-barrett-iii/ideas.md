@@ -1,7 +1,7 @@
 # Ideas to explore with Patrick J. Barrett III
 
 *Conversation hooks — Don's proposed topics. Not quotes, not claims about what Patrick thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_asked
 
 ## The integrated story (Don + Patrick)
 

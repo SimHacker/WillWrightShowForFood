@@ -39,7 +39,7 @@ rewrites.*
 | [**kernel/**](https://github.com/SimHacker/moollm/tree/main/kernel) | active | Architecture, protocols (context assembly, event logging, memory, self-healing), naming, drivers. The part of MOOLLM that isn't a skill — the part skills stand on. |
 | [**kernel/ARCHITECTURE.md**](https://github.com/SimHacker/moollm/blob/main/kernel/ARCHITECTURE.md) | living doc | The system diagram in prose. Read before proposing kernel changes. |
 | [**cursor-mirror**](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) | active | Introspection tooling over Cursor session history — the instrument for watching the coherence engine at work. |
-| [**Skills catalog**](https://github.com/SimHacker/moollm/tree/main/skills) | accreting daily | 139 on disk at last count; the count is a [tracked coherence dependency](../coherence.yml) now, not a fact. |
+| [**Skills catalog**](https://github.com/SimHacker/moollm/tree/main/skills) | accreting | 156 `SKILL.md` files on 2026-10-29. The count is a [tracked claim](../coherence.yml). |
 
 ## Dreams (pre-development, declared)
 

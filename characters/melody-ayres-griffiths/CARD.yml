@@ -31,7 +31,7 @@ abilities:
     effect: Background music for a whole platform.
     verifiable: "Meet the Crew: background music for WebTV / MSNTV, late 1990s"
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
   - path: README.md

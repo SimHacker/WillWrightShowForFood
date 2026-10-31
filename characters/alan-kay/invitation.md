@@ -2,7 +2,7 @@
 status: draft
 character_id: alan-kay
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/alan-kay-microworld.yml
 memorial_arc: repo-shows/remembering-vanessa-freudenberg.yml
 format: remote_or_in_person

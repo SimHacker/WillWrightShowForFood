@@ -2,15 +2,17 @@
 # Memorial mode: represent + discuss, never interview.
 # Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: mike-jang
-  name: "Mike Jang"
-  also_known_as: ["Michael Jang"]
-  type: memorial
-  signifier: "🕯️🕹️"
-  status: deceased
-  field: "Atari coin-op Industrial Design — Star Wars cockpit, Missile Command, Hard Drivin', RoadBlasters…"
-  home: characters/mike-jang/
+id: mike-jang
+name: "Mike Jang"
+also_known_as: ["Michael Jang"]
+type: person
+layer: memorial
+signifier: "🕯️"
+emoji: "🕯️🕹️"
+status: deceased
+real_being: true
+field: "Atari coin-op Industrial Design — Star Wars cockpit, Missile Command, Hard Drivin', RoadBlasters…"
+home: characters/mike-jang/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,16 +1,18 @@
 # Morgan Dixon — invitation portrayal. NOT Morgan Dixon.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: morgan-dixon
-  name: "Morgan Dixon"
-  type: invitation
-  signifier: "🧩"
-  status: living
-  field: >-
-    Pixel-based reverse engineering of graphical interfaces (Prefab); UX
-    engineering
-  home: characters/morgan-dixon/
+id: morgan-dixon
+name: "Morgan Dixon"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧩"
+status: living
+real_being: true
+field: >-
+  Pixel-based reverse engineering of graphical interfaces (Prefab); UX
+  engineering
+home: characters/morgan-dixon/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

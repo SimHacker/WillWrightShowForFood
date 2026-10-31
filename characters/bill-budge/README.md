@@ -16,7 +16,7 @@ Bill Budge is **alive** (retired from Google in 2022; still shipping editor fram
 
 - We represent his **public work** and cite public sources. We do **not** speak as him, invent his
   words, or run him as a simulation.
-- `consent: not_yet_asked`. He can accept, decline, correct, or ask us to take the page down — his
+- `consent: not_asked`. He can accept, decline, correct, or ask us to take the page down — his
   call. See [`invitation.md`](invitation.md).
 - We also want to **talk with people who know him** and who work in his lineage (Will Wright, Apple
   II / early-EA peers). Anyone can add clips or corrections via issue or PR.

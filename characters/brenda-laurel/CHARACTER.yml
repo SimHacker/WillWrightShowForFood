@@ -1,14 +1,16 @@
 # Brenda Laurel — invitation portrayal. NOT Brenda Laurel.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: brenda-laurel
-  name: "Brenda Laurel"
-  type: invitation
-  signifier: "🎭"
-  status: living
-  field: "HCI dramaturgy (Computers as Theatre) · Interval Research · Purple Moon · games for girls"
-  home: characters/brenda-laurel/
+id: brenda-laurel
+name: "Brenda Laurel"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎭"
+status: living
+real_being: true
+field: "HCI dramaturgy (Computers as Theatre) · Interval Research · Purple Moon · games for girls"
+home: characters/brenda-laurel/
 
 representation:
   public_figure: true

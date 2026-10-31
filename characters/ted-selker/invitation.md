@@ -2,7 +2,7 @@
 status: send_ready
 character_id: ted-selker
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/ted-selker/
 format: remote_or_in_person
 paired_guest: ted-nelson

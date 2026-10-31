@@ -1,16 +1,18 @@
 # Mitch Bradley — invitation portrayal. NOT Mitch Bradley.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: mitch-bradley
-  name: "Mitch Bradley"
-  type: invitation
-  signifier: "🥾"
-  status: living
-  field: >-
-    Firmware and Forth: Sun Forth, OpenBoot / Open Firmware (IEEE 1275),
-    Forthmacs, FirmWorks, OLPC XO firmware, CForth, PDP-7 Forth
-  home: characters/mitch-bradley/
+id: mitch-bradley
+name: "Mitch Bradley"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🥾"
+status: living
+real_being: true
+field: >-
+  Firmware and Forth: Sun Forth, OpenBoot / Open Firmware (IEEE 1275),
+  Forthmacs, FirmWorks, OLPC XO firmware, CForth, PDP-7 Forth
+home: characters/mitch-bradley/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -71,7 +71,7 @@ RoboResurrection, and whatever threads Will wants to pull. See
 | **Proxi** | Gallium research — **software heirloom**, **Minecraft export (shipped)**, Bartle types; data-portability über-character. Dev Diaries: [`sources/2025-12-will-wright-dev-diaries/`](sources/2025-12-will-wright-dev-diaries/README.md) |
 | **Stupid Fun Club** | Think-tank era — robots, hidden-camera learning (incl. **Slats**) |
 
-Sources: [Wikipedia](https://en.wikipedia.org/wiki/Will_Wright_(game_designer)), 1996 transcript in this repo, public interviews cited in [`CARD.md`](CARD.md).
+Sources: [Wikipedia: Will Wright (game designer)](https://en.wikipedia.org/wiki/Will_Wright_(game_designer)), 1996 transcript in this repo, public interviews cited in [`CARD.md`](CARD.md).
 
 ## Design ideas (documented public traditions)
 

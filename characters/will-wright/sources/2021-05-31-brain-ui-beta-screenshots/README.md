@@ -89,7 +89,7 @@ That is the same exporter whose debug output is
 [`archie-suit.txt`](../2022-05-18-archie-suit-cmx-whitman/README.md) — the arrow it replaced, and the
 proof-of-smoothing-groups that made it, are two halves of one toolchain story.
 
-And on the mood indicator's color, **Eric Hedman** ([room](../../../eric-hedman/)) asked *"Why
+And on the mood indicator's color, **[Eric Hedman](../../../eric-hedman/)** asked *"Why
 Blue?"* Don:
 
 > "nobody ever got fired for choosing Big Blue!"
@@ -106,7 +106,7 @@ Full thread, photos, and open leads:
 
 ## Censorship shipped before nakedness
 
-**Jim Mackraz** ([room](../../../jim-mackraz/)) — *"Don, have you got any of the shower door?
+**[Jim Mackraz](../../../jim-mackraz/)** — *"Don, have you got any of the shower door?
 **#stillproud**"* — prompting Don to the stippled shower door around **13:30** in
 [The Sims Steering Committee, June 4 1998](https://www.youtube.com/watch?v=zC52jE60KjY&t=13m30s)
 (archived: [that build's page](../1998-06-04-sims-steering-committee-demo/README.md)). Then the

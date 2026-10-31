@@ -1,14 +1,16 @@
 # Tanja Sihvonen — invitation portrayal. NOT Tanja Sihvonen.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: tanja-sihvonen
-  name: "Tanja Sihvonen"
-  type: invitation
-  signifier: "📚"
-  status: living
-  field: "Game studies — The Sims modding culture; Players Unleashed!"
-  home: characters/tanja-sihvonen/
+id: tanja-sihvonen
+name: "Tanja Sihvonen"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📚"
+status: living
+real_being: true
+field: "Game studies — The Sims modding culture; Players Unleashed!"
+home: characters/tanja-sihvonen/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

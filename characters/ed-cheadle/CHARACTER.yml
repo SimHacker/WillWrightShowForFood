@@ -1,14 +1,16 @@
 # Ed Cheadle — storyline figure (FLEX with Alan Kay). Status unverified living/passed.
 # Seeded from Yoot People.md. Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: ed-cheadle
-  name: "Ed Cheadle"
-  type: storyline_figure
-  signifier: "🔧"
-  status: unknown
-  field: "Hardware — FLEX machine with Alan Kay (Utah / Memcor / Montec)"
-  home: characters/ed-cheadle/
+id: ed-cheadle
+name: "Ed Cheadle"
+type: person
+show_role: storyline_figure
+layer: invitation
+signifier: "👤"
+emoji: "🔧"
+real_being: true
+field: "Hardware — FLEX machine with Alan Kay (Utah / Memcor / Montec)"
+home: characters/ed-cheadle/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

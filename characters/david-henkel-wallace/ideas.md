@@ -1,6 +1,6 @@
 # Ideas to explore with David Henkel-Wallace
 
-*Conversation hooks — Don's proposed topics from public record. Formerly at Leela AI (tenure did not overlap Don's) — consent not_yet_asked.*
+*Conversation hooks — Don's proposed topics from public record. Formerly at Leela AI (tenure did not overlap Don's) — consent not_asked.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What David has done (public)

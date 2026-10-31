@@ -1,14 +1,16 @@
 # Art Medlar — invitation portrayal. NOT Art Medlar.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: art-medlar
-  name: "Art Medlar"
-  type: invitation
-  signifier: "🔎"
-  status: living
-  field: "Software engineer & systems builder — WAIS + early Internet Archive; Thinking Machines, Xerox PARC, Brightmail; a Leela AI collaborator (per Don)"
-  home: characters/art-medlar/
+id: art-medlar
+name: "Art Medlar"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔎"
+status: living
+real_being: true
+field: "Software engineer & systems builder — WAIS + early Internet Archive; Thinking Machines, Xerox PARC, Brightmail; a Leela AI collaborator (per Don)"
+home: characters/art-medlar/
 
 representation:
   public_figure: true

@@ -1,14 +1,16 @@
 # Luc Barthelet — invitation portrayal. NOT Luc Barthelet.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: luc-barthelet
-  name: Luc Barthelet
-  type: invitation
-  signifier: "⛵"
-  status: living
-  field: "GM Maxis (EA era); instrumental in shipping The Sims; SimShow & fan tools pre-launch; The Sims Online; Apple ][ veteran; ex-Unity; now sailing"
-  home: characters/luc-barthelet/
+id: luc-barthelet
+name: Luc Barthelet
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "⛵"
+status: living
+real_being: true
+field: "GM Maxis (EA era); instrumental in shipping The Sims; SimShow & fan tools pre-launch; The Sims Online; Apple ][ veteran; ex-Unity; now sailing"
+home: characters/luc-barthelet/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

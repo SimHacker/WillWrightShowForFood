@@ -2,15 +2,17 @@
 # Seeded from Yoot People.md + Alan Kay Quora ("quintessential computer scientist").
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: butler-lampson
-  name: "Butler Lampson"
-  full_name: "Butler W. Lampson"
-  type: invitation
-  signifier: "🔷"
-  status: living
-  field: "Operating systems, architecture, security — Project GENIE / SDS-940; Xerox Alto; Turing Award 1992"
-  home: characters/butler-lampson/
+id: butler-lampson
+name: "Butler Lampson"
+full_name: "Butler W. Lampson"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔷"
+status: living
+real_being: true
+field: "Operating systems, architecture, security — Project GENIE / SDS-940; Xerox Alto; Turing Award 1992"
+home: characters/butler-lampson/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

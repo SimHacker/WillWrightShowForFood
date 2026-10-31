@@ -1,12 +1,11 @@
 # Cow Plant — fictional audience (The Sims 2 carnivorous plant; speaks Simlish-ish moo)
 # Feed Me Seymour (Little Shop) + MOOLLM + Mario Chain Chomp vibes.
-character:
-  name: Cow Plant (Laganaphyllis simnovorii)
-  type: fictional_game_character
-  real_being: false
-  signifier: "🐮🌱"
-  home: repo-shows/will-wright-premiere/audience/fictional-cow-plant/
-  origin: "The Sims 2: University (2005) — carnivorous bovine plant; lures Sims with cake, eats them"
+name: Cow Plant (Laganaphyllis simnovorii)
+type: fictional_game_character
+real_being: false
+signifier: "🐮🌱"
+home: repo-shows/will-wright-premiere/audience/fictional-cow-plant/
+origin: "The Sims 2: University (2005) — carnivorous bovine plant; lures Sims with cake, eats them"
 
 representation:
   fictional: true

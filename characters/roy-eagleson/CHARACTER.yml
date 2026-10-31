@@ -1,15 +1,18 @@
 # Roy Eagleson — educator portrayal. NOT Roy Eagleson.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: roy-eagleson
-  name: "Roy Eagleson"
-  type: correspondent
-  signifier: "🎓"
-  status: living
-  field: "Computer science education — history of computer graphics; HCI; UWO"
-  home: characters/roy-eagleson/
-  affiliation: "Western University (UWO), London, Ontario"
+id: roy-eagleson
+name: "Roy Eagleson"
+type: person
+show_role: correspondent
+layer: profile
+signifier: "👤"
+emoji: "🎓"
+status: living
+real_being: true
+field: "Computer science education — history of computer graphics; HCI; UWO"
+home: characters/roy-eagleson/
+affiliation: "Western University (UWO), London, Ontario"
 
 representation:
   public_figure: true

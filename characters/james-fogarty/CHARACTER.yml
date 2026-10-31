@@ -1,17 +1,19 @@
 # James Fogarty — invitation portrayal. NOT James Fogarty.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: james-fogarty
-  name: "James Fogarty"
-  type: invitation
-  signifier: "🔧"
-  status: living
-  field: >-
-    Human-computer interaction: interface software, Prefab, accessibility
-    repair (interaction proxies), personal data and health, human-AI
-    interaction; Professor, Paul G. Allen School, University of Washington
-  home: characters/james-fogarty/
+id: james-fogarty
+name: "James Fogarty"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔧"
+status: living
+real_being: true
+field: >-
+  Human-computer interaction: interface software, Prefab, accessibility
+  repair (interaction proxies), personal data and health, human-AI
+  interaction; Professor, Paul G. Allen School, University of Washington
+home: characters/james-fogarty/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

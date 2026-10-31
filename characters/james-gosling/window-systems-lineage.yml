@@ -4,7 +4,7 @@
 meta:
   room: characters/james-gosling/
   curated_by: don-hopkins
-  consent: not_yet_asked
+  consent: not_asked
   guest: james-gosling
   shared: ../david-rosenthal/window-systems-lineage.md
   human_readable: window-systems-lineage.md

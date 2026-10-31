@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, soul_city_eligible]
@@ -12,62 +13,61 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../RELATIONSHIP-MATRIX.yml
 
-character:
-  id: julian-strait
-  name: Julian Strait
-  type: [fictional_menagerie_guest, simulation]
-  real_being: false
-  signifier: "💋"
-  status: reified
-  home: characters/menagerie/julian-strait/
-  pronouns: he/him
+id: julian-strait
+name: Julian Strait
+type: [fictional_menagerie_guest, simulation]
+real_being: false
+signifier: "💋"
+status: reified
+home: characters/menagerie/julian-strait/
+pronouns: he/him
 
-  emoji_identity: "💋🫦🕐🥙😳"
-  tagline: "Arrives late. Loudest at the hummus."
+emoji_identity: "💋🫦🕐🥙😳"
+tagline: "Arrives late. Loudest at the hummus."
 
-  soul_philosophy: |
-    The bulge in the width curve is the story. Darling.
+soul_philosophy: |
+  The bulge in the width curve is the story. Darling.
 
-  description: |
-    Provocateur in the Lower Chelsea Eight — misreads art for a living.
-    Lens: Erotic geometry, narrative climax in width curves. Blind spot: Parabolas are always about him.
-    Debuts in JSONsters gallery; graduates to live Repo Show performance.
+description: |
+  Provocateur in the Lower Chelsea Eight — misreads art for a living.
+  Lens: Erotic geometry, narrative climax in width curves. Blind spot: Parabolas are always about him.
+  Debuts in JSONsters gallery; graduates to live Repo Show performance.
 
-  sims:
-    traits:
-      neat: 3
-      outgoing: 8
-      active: 6
-      playful: 9
-      nice: 4
-      generous: 4
-    skills:
-      cooking: 2
-      mechanical: 1
-      charisma: 8
-      logic: 3
-      body: 5
-      creativity: 7
-      cleaning: 0
-    identity:
-      age: adult
-      gender: male
-      zodiac: sagittarius
-    career:
-      track: entertainment
-      level: 5
-      performance: 640
+sims:
+  traits:
+    neat: 3
+    outgoing: 8
+    active: 6
+    playful: 9
+    nice: 4
+    generous: 4
+  skills:
+    cooking: 2
+    mechanical: 1
+    charisma: 8
+    logic: 3
+    body: 5
+    creativity: 7
+    cleaning: 0
+  identity:
+    age: adult
+    gender: male
+    zodiac: sagittarius
+  career:
+    track: entertainment
+    level: 5
+    performance: 640
 
-  mind_mirror:
-    calm: 1
-    serious: 2
-    cautious: 1
-    confident: 6
-    docile: 2
-    logical: 2
-    practical: 2
-    dominant: 5
-    conventional: 0
+mind_mirror:
+  calm: 1
+  serious: 2
+  cautious: 1
+  confident: 6
+  docile: 2
+  logical: 2
+  practical: 2
+  dominant: 5
+  conventional: 0
 
 symbolic_attachments:
     - id: hummus-table

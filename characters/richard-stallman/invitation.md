@@ -2,7 +2,7 @@
 status: send_now
 character_id: richard-stallman
 public: true
-consent: not_yet_asked
+consent: not_asked
 warm_contact: true
 channel: email
 show_seed: repo-shows/richard-stallman-its-minsky-memorial.yml

@@ -3,16 +3,15 @@
 # Schema: ../../../schemas/audience-character.yml
 # NOT a guest portrayal — you write yourself. See CHARACTER.md
 
-character:
-  id: YOUR-GITHUB-USERNAME
-  name: "Your Display Name"
-  type: audience_member
-  signifier: "🎟️"
-  subtitle: "TicketPR audience — this show"
-  status: living
-  field: "One line — SimCity kid | rug maker | first-time caller | …"
-  home: "repo-shows/<show-slug>/audience/YOUR-GITHUB-USERNAME/"
-  github: "@YOUR-GITHUB-USERNAME"
+id: YOUR-GITHUB-USERNAME
+name: "Your Display Name"
+type: audience_member
+signifier: "🎟️"
+subtitle: "TicketPR audience — this show"
+status: living
+field: "One line — SimCity kid | rug maker | first-time caller | …"
+home: "repo-shows/<show-slug>/audience/YOUR-GITHUB-USERNAME/"
+github: "@YOUR-GITHUB-USERNAME"
 
 show:
   slug: "<show-slug>"

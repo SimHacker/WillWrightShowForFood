@@ -1,16 +1,18 @@
 # Allen Cypher — invitation portrayal. NOT Allen Cypher.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: allen-cypher
-  name: "Allen Cypher"
-  type: invitation
-  signifier: "🐈"
-  status: living
-  field: >-
-    Programming by demonstration and end-user programming: Eager, Watch What I
-    Do, KidSim / Cocoa / Stagecast Creator, CoScripter, No Code Required
-  home: characters/allen-cypher/
+id: allen-cypher
+name: "Allen Cypher"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🐈"
+status: living
+real_being: true
+field: >-
+  Programming by demonstration and end-user programming: Eager, Watch What I
+  Do, KidSim / Cocoa / Stagecast Creator, CoScripter, No Code Required
+home: characters/allen-cypher/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

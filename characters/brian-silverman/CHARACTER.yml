@@ -1,15 +1,17 @@
 # Brian Silverman — invitation portrayal. NOT Brian Silverman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: brian-silverman
-  name: "Brian Silverman"
-  type: invitation
-  signifier: "🧠"
-  status: living
-  field: "Logo, Scratch, programmable bricks, cellular automata, emulators — constructionist computing for children"
-  home: characters/brian-silverman/
-  location: "Montreal, Quebec, Canada (Playful Invention Company)"
+id: brian-silverman
+name: "Brian Silverman"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧠"
+status: living
+real_being: true
+field: "Logo, Scratch, programmable bricks, cellular automata, emulators — constructionist computing for children"
+home: characters/brian-silverman/
+location: "Montreal, Quebec, Canada (Playful Invention Company)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

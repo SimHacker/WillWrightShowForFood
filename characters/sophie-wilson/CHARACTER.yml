@@ -1,15 +1,17 @@
 # Sophie Wilson — invitation portrayal. NOT Sophie Wilson.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: sophie-wilson
-  name: "Sophie Wilson"
-  type: invitation
-  signifier: "🦾"
-  status: living
-  field: "Computer architect — BBC Micro / BBC BASIC; ARM instruction set; Firepath (Broadcom)"
-  home: characters/sophie-wilson/
-  affiliation: "Acorn Computers; Element 14; Broadcom (Distinguished Engineer / research fellow)"
+id: sophie-wilson
+name: "Sophie Wilson"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🦾"
+status: living
+real_being: true
+field: "Computer architect — BBC Micro / BBC BASIC; ARM instruction set; Firepath (Broadcom)"
+home: characters/sophie-wilson/
+affiliation: "Acorn Computers; Element 14; Broadcom (Distinguished Engineer / research fellow)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

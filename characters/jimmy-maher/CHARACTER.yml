@@ -1,14 +1,17 @@
 # Jimmy Maher — collaborator portrayal. NOT Jimmy Maher.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jimmy-maher
-  name: Jimmy Maher
-  type: collaborator
-  signifier: "📜🕹️"
-  status: living
-  field: "Computer entertainment historian; interactive fiction author; The Digital Antiquarian"
-  home: characters/jimmy-maher/
+id: jimmy-maher
+name: Jimmy Maher
+type: person
+show_role: collaborator
+layer: invitation
+signifier: "👤"
+emoji: "📜🕹️"
+status: living
+real_being: true
+field: "Computer entertainment historian; interactive fiction author; The Digital Antiquarian"
+home: characters/jimmy-maher/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

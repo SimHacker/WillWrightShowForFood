@@ -2,7 +2,7 @@
 status: draft
 character_id: golan-levin
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/tom-and-golan-ecg-mouther/
 format: remote_or_in_person
 priority: warm_contact

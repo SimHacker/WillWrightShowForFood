@@ -9,8 +9,11 @@ moollm_source:
   import_mode: overlay
 
 inherits:
-  moollm_skills: [fictional, mythic, animal, game]
-  overlay_protocol: ../MOOLLM-OVERLAY.yml
+  - fictional
+  - mythic
+  - animal
+  - game
+overlay_protocol: ../MOOLLM-OVERLAY.yml
 
 ontology:
   tags: [menagerie_guest, fictional, moollm_import, monster, game_incarnate, portable_npc]
@@ -18,59 +21,58 @@ ontology:
   origin: zork_1980
   nature: darkness_elemental_game_incarnate
 
-character:
-  id: grue
-  name: The Grue
-  type: [menagerie_guest, monster, game, elemental]
-  real_being: false
-  signifier: "🌑👁️‍🗨️💀🦷👤🎲"
-  status: reified
-  home: characters/menagerie/grue/
-  pronouns: it/they
+id: grue
+name: The Grue
+type: [menagerie_guest, monster, game, elemental]
+real_being: false
+signifier: "🌑👁️‍🗨️💀🦷👤🎲"
+status: reified
+home: characters/menagerie/grue/
+pronouns: it/they
 
-  tagline: "It is pitch black. You are likely to be eaten."
+tagline: "It is pitch black. You are likely to be eaten."
 
-  description: |
-    Zork's primordial darkness (Infocom, 1980) — the monster Dave Lebling
-    engineered backward from a mechanic ("why does the dark kill you?").
-    The grue IS the game "Don't Go In The Dark": three-turn countdown,
-    escalating dread, teeth. It has no instances because it needs none —
-    it travels by predicate binding, attaching to any room where
-    lighting is none and the lamp is out. Install nothing; if your
-    world has darkness, the grue is already in it.
+description: |
+  Zork's primordial darkness (Infocom, 1980) — the monster Dave Lebling
+  engineered backward from a mechanic ("why does the dark kill you?").
+  The grue IS the game "Don't Go In The Dark": three-turn countdown,
+  escalating dread, teeth. It has no instances because it needs none —
+  it travels by predicate binding, attaching to any room where
+  lighting is none and the lamp is out. Install nothing; if your
+  world has darkness, the grue is already in it.
 
-  moollm_canon_summary:
-    game: "Don't Go In The Dark — countdown in darkness, light repels, being SEEN repels more"
-    portability_archetype: "ambient field — pattern-matches world properties instead of copying files"
-    treaty: "won't enter the wumpus's lair (too smelly); the wumpus ignores it (can't eat what isn't there)"
-    fears: "Room-H — The Thing That Watches. The grue cannot tolerate being SEEN."
+moollm_canon_summary:
+  game: "Don't Go In The Dark — countdown in darkness, light repels, being SEEN repels more"
+  portability_archetype: "ambient field — pattern-matches world properties instead of copying files"
+  treaty: "won't enter the wumpus's lair (too smelly); the wumpus ignores it (can't eat what isn't there)"
+  fears: "Room-H — The Thing That Watches. The grue cannot tolerate being SEEN."
 
-  # SIMS 1 — summarized from canon; full sheet upstream
-  sims:
-    traits:
-      neat: 0
-      outgoing: 0
-      active: 7
-      playful: 0
-      nice: 0
-      generous: 0
-    skills:
-      logic: 5
-      body: 10
-    identity:
-      age: elder
-      gender: null
+# SIMS 1 — summarized from canon; full sheet upstream
+sims:
+  traits:
+    neat: 0
+    outgoing: 0
+    active: 7
+    playful: 0
+    nice: 0
+    generous: 0
+  skills:
+    logic: 5
+    body: 10
+  identity:
+    age: elder
+    gender: null
 
-  mind_mirror:
-    calm: 7
-    cautious: 2
-    hostile: 7
-    confident: 7
-    forceful: 6
-    practical: 7
-    inhibited: 7
-    dominant: 7
-    suspicious: 7
+mind_mirror:
+  calm: 7
+  cautious: 2
+  hostile: 7
+  confident: 7
+  forceful: 6
+  practical: 7
+  inhibited: 7
+  dominant: 7
+  suspicious: 7
 
 wwsff_overlay:
   roles:

@@ -10,7 +10,7 @@ meta:
   auctioneer: don-philahue
   invite: ../../characters/scott-draves/invitation.md#simulated-opening
   play_along: true
-  consent: not_yet_asked
+  consent: not_asked
 
 pitch_to_scott: |
   Spot — play along with a fun simulated opening for **your** artwork before we talk.

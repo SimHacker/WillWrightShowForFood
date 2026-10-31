@@ -1,15 +1,14 @@
 # Dents — fictional broken robot (NOT a real person)
 # Stupid Fun Club Empathy One Minute Movie star
 
-character:
-  id: dents
-  name: Dents
-  type: fictional_sidekick
-  real_being: false
-  signifier: "🤖💔"
-  status: fictional
-  field: "Stupid Fun Club broken robot — Empathy One Minute Movie; empathy probe; trot-out running gag"
-  home: characters/robots/dents/
+id: dents
+name: Dents
+type: fictional_sidekick
+real_being: false
+signifier: "🤖💔"
+status: fictional
+field: "Stupid Fun Club broken robot — Empathy One Minute Movie; empathy probe; trot-out running gag"
+home: characters/robots/dents/
 
 representation:
   note: "Beloved fictional broken robot from Will Wright's Stupid Fun Club — character + tool, not a soul we pretend into being"

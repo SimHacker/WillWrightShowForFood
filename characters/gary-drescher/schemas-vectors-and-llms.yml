@@ -6,7 +6,7 @@ meta:
   topic: "Constructivist representations (Drescher schemas) meeting vectors, neural cellular automata, and LLMs"
   curated_by: don-hopkins            # host + a participant in the thread
   framing: "Condensed by Claude (LLM) from a real email thread. NOT a transcript."
-  consent: assumed_pending_confirmation   # Don is confirming with Henry & Gary; both expected to welcome it
+  consent: not_asked   # Don is confirming with Henry and Gary; nothing agreed
   authorship: "Real quotes attributed by name; narration + all AI-speculation blocks are Claude's (the LLM)."
   ai_speculation: "The narrative (schemas-vectors-and-llms.md) includes clearly-fenced 🤖 'Claude (AI speculation)' blocks — informed guesses from the AI, with confidence flags. Invited by the host; not anyone else's claim."
   provenance: |

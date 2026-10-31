@@ -8,7 +8,7 @@ show:
   host: Don Hopkins
   topic: "TurtleStitch — the Snap!-based platform that turns turtle-geometry code into real machine embroidery — as both a beautiful maker tool and a living example of constructionist education done right."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 the_project:
   what: "TurtleStitch (turtlestitch.org) — a fork of Snap! whose turtle is the needle of a programmable embroidery machine; code on screen becomes thread on fabric. 'Low threshold, high ceiling' (Papert)."

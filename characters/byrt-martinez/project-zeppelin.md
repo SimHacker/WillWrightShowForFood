@@ -74,7 +74,7 @@ is what makes it a good primary source.
 
 > **Kaye Mason** — *"TOO SOON"*
 >
-> **Jim Mackraz** ([room](../jim-mackraz/)) — *"Save the Nazi Airship…"*
+> **[Jim Mackraz](../jim-mackraz/)** — *"Save the Nazi Airship…"*
 >
 > **Don Hopkins** — *"They made a great around-the-world movie about the Hindenburg's sister ship,
 > the **Graf Zeppelin**, which (spoiler warning) didn't blow up."*

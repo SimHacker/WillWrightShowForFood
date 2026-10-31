@@ -159,7 +159,7 @@ Move existing long `invitation.md` bodies here when refactoring (e.g. David Levi
 
 ## HN additions worth keeping
 
-- **BLUF** — bottom line up front; rationale below for those who want it ([Wikipedia](https://en.wikipedia.org/wiki/BLUF_(communication))).
+- **BLUF** — bottom line up front; rationale below for those who want it ([Wikipedia: BLUF (communication)](https://en.wikipedia.org/wiki/BLUF_(communication))).
 - **Default action** — *"I'll proceed with drafting the show seed unless you'd rather I wait"* beats limbo.
 - **One question per email** when you need an answer; numbered list if you need several.
 - **Subject = conclusion** — *"Invitation: Rebounce with David + Jaron"* not *"Update"*.

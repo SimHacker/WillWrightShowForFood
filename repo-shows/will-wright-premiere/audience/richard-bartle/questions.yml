@@ -20,7 +20,7 @@ ticket:
   attend_live: optional
   merged: false                 # merges when Richard reviews / approves / rewrites
   authored_by: curator_draft_for_subject_review
-  consent: explicit
+  consent: granted
   consent_scope: |
     Simulate in audience + draft example questions in the spirit of his work for him to
     curate. Final voice is HIS — he edits, approves, or replaces.

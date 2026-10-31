@@ -1,6 +1,13 @@
 # Rhys Simpson (riperiperi) — FreeSO / Simitone
 # Public engineering voice on Sims Online + Sims 1 reimplementation and Legacy Collection reverse notes.
 
+id: rhys-simpson
+name: Rhys Simpson
+type: person
+layer: profile
+real_being: true
+signifier: "👤"
+
 meta:
   id: rhys-simpson
   display_name: Rhys Simpson

@@ -1,15 +1,17 @@
 # Jim Crutchfield — invitation portrayal. NOT Jim Crutchfield.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jim-crutchfield
-  name: "James P. Crutchfield"
-  type: invitation
-  signifier: "🦋"
-  status: living
-  field: "Physicist of complexity — chaos, video feedback, the 'edge of chaos', evolving cellular automata, and computational mechanics (ε-machines)"
-  home: characters/jim-crutchfield/
-  aliases: ["Jim Crutchfield", "Chaos", "J. P. Crutchfield"]
+id: jim-crutchfield
+name: "James P. Crutchfield"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🦋"
+status: living
+real_being: true
+field: "Physicist of complexity — chaos, video feedback, the 'edge of chaos', evolving cellular automata, and computational mechanics (ε-machines)"
+home: characters/jim-crutchfield/
+aliases: ["Jim Crutchfield", "Chaos", "J. P. Crutchfield"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

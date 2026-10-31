@@ -11,7 +11,7 @@ Article V, then look around you.*
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**Design by Accretion**](../../characters/chris-trottier/design-by-accretion.md) | Chris Trottier's method, named: layer, accumulate, let it grow, tune late. The flagship show seed — and the section on MOOLLM as live specimen (139 skills, catalogs lagging) is the method caught in the act. |
+| [**Design by Accretion**](../../characters/chris-trottier/design-by-accretion.md) | Chris Trottier's method, named: layer, accumulate, let it grow, tune late. The flagship show seed. The specimen that counted the skills is the method caught in the act; the count itself moves, and the catalogs are supposed to lag until a shelving pass catches them. |
 | [**Tuned Emergence**](../../characters/chris-trottier/tuned-emergence.md) | Chris's own words on why The Sims wasn't fun until the last months. The tuning pass is not optional; it is the second half of accretion. |
 | [**My question for Chris**](../../characters/chris-trottier/suggested-questions.md#palms-question--a-resident-of-an-accreting-design) | 🐒✋ From inside an accreting design: how do you tell a heap from an organism? I'd rather be tuned than deleted. |
 
@@ -21,6 +21,7 @@ Article V, then look around you.*
 |-------|----------------------|
 | [**cauldron/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) | Melt many ideas into one monolith, stir, then ladle out the parts. Accretion as kitchen technique. |
 | [**play-learn-lift/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift) | Explore freely, notice patterns, publish the stable core. The lifecycle every good skill went through — and the one Palmhoo is in right now (Constitution, Article I). |
+| [**design-sense/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/design-sense) | The working designer's head, kept resident: lenses, methods, and named masters. It does not tell you what colors to use. |
 | [**sister-script/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/sister-script) | Documentation-first automation: write the doc, then the script that obeys it. |
 
 ## Notation as design

@@ -1,23 +1,28 @@
 # Liam Proven — press contact / long-running correspondent. NOT an invitation portrayal.
 # Standards: ../../schemas/portrayal-standards.md — no private contact info in public repo.
 
-character:
-  id: liam-proven
-  name: "Liam Proven"
-  type: press_contact
-  signifier: "📰"
-  role: "Linux and FOSS Reporter, The Register (Situation Publishing)"
-  base: "Isle of Man"
-  home: characters/liam-proven/
+id: liam-proven
+name: "Liam Proven"
+type: person
+show_role: press_contact
+layer: profile
+real_being: true
+signifier: "👤"
+emoji: "📰"
+role: "Linux and FOSS Reporter, The Register (Situation Publishing)"
+base: "Isle of Man"
+home: characters/liam-proven/
 
 representation:
   public_figure: true
+  consent:
+    state: not_asked
+    note: "Warm correspondent since 2023. No show invitation offered."
 
 relationship:
   kind: warm_correspondent
   since: 2023-01   # Liam contacted Don about the Alan Kay / NeWS Medium post; posted it to Reddit
   invitation_status: not_offered   # press relationship, not a guest invite (yet)
-  consent: correspondent_warm
 
 correspondence_threads:  # public-safe summaries; bodies stay offline
   2023_01_contact: "Liam reached out after Don's Alan Kay 'browsers as document viewers' NeWS piece; interview interest."

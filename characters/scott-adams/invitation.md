@@ -2,7 +2,7 @@
 status: warm
 character_id: scott-adams
 public: true
-consent: correspondence_verified
+consent: not_asked
 show_seed: repo-shows/scott-adams/
 format: remote_or_in_person
 ---

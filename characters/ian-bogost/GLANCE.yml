@@ -27,7 +27,7 @@ card: CARD.yml
 
 status:
   invitation: contacted
-  consent: outreach_sent_awaiting_reply
+  consent: asked
   note: "First contact 2026-08-23 (roles-not-characters + Korz question); formal show invite unsent"
 
 navigation:

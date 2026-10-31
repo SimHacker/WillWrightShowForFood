@@ -4,7 +4,7 @@ Public-safe digest. **Not** the full private thread.
 Machine index: [`correspondence.yml`](correspondence.yml) · [Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Span:** July 2026 — PIXIE invitation, Hex draft, MOOLLM demo readings, Lem/BioShocking HN thread  
-**Consent:** `not_yet_asked`
+**Consent:** `not_asked`
 
 ---
 

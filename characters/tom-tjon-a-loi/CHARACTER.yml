@@ -1,5 +1,9 @@
 # Tom Tjon A Loi — designer; storyboarded the Micropolis social layer (2009); now AI-as-instrument creative strategist
 name: Tom Tjon A Loi
+type: person
+layer: invitation
+real_being: true
+signifier: "👤"
 role: designer / artist / creative strategist
 location: Rotterdam, Netherlands
 affiliations:
@@ -14,7 +18,6 @@ representation:
 
 invitation:
   status: draft
-  consent: not_yet_asked
   documents:
     - invitation-1.md   # performance + instrument, no explanation
     - invitation-2.md   # the Rosetta Stone
@@ -37,9 +40,8 @@ current_work:
     - "REmemory ethic = portrayal-standards ethic (representations are interpretations)"
     - "2009 social-multiplayer storyboards = federation + MOOLLM roadmap"
 
-don_2009: >
-  "I would not hesitate to recommend Tom for challenging projects requiring creativity,
-  design skills and technical abilities."
+recommendation:
+  what: "Don wrote a recommendation letter for Tom in November 2009. The letter is not online, and its text is not included here."
 
 links:
   linkedin: https://www.linkedin.com/in/tomtjonaloi/

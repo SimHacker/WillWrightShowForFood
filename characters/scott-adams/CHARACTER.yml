@@ -2,15 +2,17 @@
 # The ADVENTURE-GAME PIONEER (Adventureland, Adventure International), NOT the Dilbert cartoonist.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: scott-adams
-  name: "Scott Adams"
-  disambiguation: "Adventure-game pioneer (Adventure International). NOT the Dilbert cartoonist of the same name."
-  type: invitation
-  signifier: "🗺️"
-  status: living
-  field: "Text adventures / interactive fiction; the data-driven adventure engine; retro IF; now AI"
-  home: characters/scott-adams/
+id: scott-adams
+name: "Scott Adams"
+disambiguation: "Adventure-game pioneer (Adventure International). NOT the Dilbert cartoonist of the same name."
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🗺️"
+status: living
+real_being: true
+field: "Text adventures / interactive fiction; the data-driven adventure engine; retro IF; now AI"
+home: characters/scott-adams/
 
 representation:
   public_figure: true

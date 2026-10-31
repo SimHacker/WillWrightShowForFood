@@ -1,17 +1,19 @@
 # L Peter Deutsch — invitation / public-figure portrayal. NOT L Peter Deutsch.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: l-peter-deutsch
-  name: "L Peter Deutsch"
-  full_name: "L Peter Deutsch"
-  also_known_as: ["L. Peter Deutsch", "Peter Deutsch"]
-  name_note: "His legal first name has been the letter L, without a dot, since 2007; earlier publications print 'L. Peter Deutsch'."
-  type: invitation
-  signifier: "⚙️"
-  status: living
-  field: "Lisp, virtual machines, PostScript; composer"
-  home: characters/l-peter-deutsch/
+id: l-peter-deutsch
+name: "L Peter Deutsch"
+full_name: "L Peter Deutsch"
+also_known_as: ["L. Peter Deutsch", "Peter Deutsch"]
+name_note: "His legal first name has been the letter L, without a dot, since 2007; earlier publications print 'L. Peter Deutsch'."
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "⚙️"
+status: living
+real_being: true
+field: "Lisp, virtual machines, PostScript; composer"
+home: characters/l-peter-deutsch/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

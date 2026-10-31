@@ -1,17 +1,18 @@
 # carl-hewitt — memorial. NOT the person.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: carl-hewitt
-  name: "Carl Hewitt"
-  full_name: "Carl Eddie Hewitt"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1944-12-07"
-  died: "2022-12-16"
-  field: "Concurrency — Actor model; MIT AI Lab"
-  home: characters/carl-hewitt/
+id: carl-hewitt
+name: "Carl Hewitt"
+full_name: "Carl Eddie Hewitt"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1944-12-07"
+died: "2022-12-16"
+field: "Concurrency — Actor model; MIT AI Lab"
+home: characters/carl-hewitt/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

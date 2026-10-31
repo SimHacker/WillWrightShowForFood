@@ -9,7 +9,7 @@ show:
   guests: ["Dave Fleck"]
   topic: "Twenty-six years inside the Wacom tablet — and the 2008 prior-art question that accidentally recovered the 1969 PIXIE films. The Wacom Radial Menu origin story, the patent portfolio as autobiography, and closing an eighteen-year loop on air."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 cold_open:
   beat: |

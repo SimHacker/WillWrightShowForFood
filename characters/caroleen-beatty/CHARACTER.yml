@@ -1,21 +1,23 @@
 # Caroleen Beatty — public portrayal (singer). NOT Caroleen.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: caroleen-beatty
-  name: Caroleen Beatty
-  type: invitation
-  signifier: "🎤🐅"
-  status: living
-  field: "San Francisco Bay Area singer — Taking Tiger Mountain (By Strategy) cover w/ Doug Hilsinger; Bedlam Rovers; Waycross"
-  home: characters/caroleen-beatty/
+id: caroleen-beatty
+name: Caroleen Beatty
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎤🐅"
+status: living
+real_being: true
+field: "San Francisco Bay Area singer — Taking Tiger Mountain (By Strategy) cover w/ Doug Hilsinger; Bedlam Rovers; Waycross"
+home: characters/caroleen-beatty/
 
 representation:
   public_figure: true
   governed_by: ../../schemas/portrayal-standards.md
   authored_by: don-hopkins
   invitation_status: draft
-  consent: not_yet_asked
+  consent: not_asked
 
 bio:
   summary: |

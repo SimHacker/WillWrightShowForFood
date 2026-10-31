@@ -1,18 +1,19 @@
 # Philip K. Dick — memorial portrayal (in memoriam). NOT Philip K. Dick.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: philip-k-dick
-  name: "Philip K. Dick"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: >-
-    Writer: Ubik, The Three Stigmata of Palmer Eldritch, Do Androids Dream of
-    Electric Sheep?, The Man in the High Castle, VALIS; simulated worlds and
-    counterfeit people
-  home: characters/philip-k-dick/
-  aliases: ["PKD", "Philip Kindred Dick"]
+id: philip-k-dick
+name: "Philip K. Dick"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: >-
+  Writer: Ubik, The Three Stigmata of Palmer Eldritch, Do Androids Dream of
+  Electric Sheep?, The Man in the High Castle, VALIS; simulated worlds and
+  counterfeit people
+home: characters/philip-k-dick/
+aliases: ["PKD", "Philip Kindred Dick"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
@@ -29,9 +30,9 @@ memorial:
   mode: represent_and_discuss
   rule: "Discuss his published work. Do not speak as him; invent no inner life. Treat his 1974 experiences and the FBI letter factually and without diagnosis."
   who_can_discuss:
-    - { who: david-rosenthal, why: "The PKD / Lem reading group; 'Rautavaara's Case'", consent: not_yet_asked }
-    - { who: will-wright, why: "The Sims and Palmer Eldritch's Perky Pat layouts, as Don reads them", consent: accepted }
-    - { who: tod-machover, why: "Composed the opera VALIS (1987)", consent: not_yet_asked }
+    - { who: david-rosenthal, why: "The PKD / Lem reading group; 'Rautavaara's Case'", consent: not_asked }
+    - { who: will-wright, why: "The Sims and Palmer Eldritch's Perky Pat layouts, as Don reads them", consent: granted }
+    - { who: tod-machover, why: "Composed the opera VALIS (1987)", consent: not_asked }
     - { who: don-hopkins, why: "Reads Dick as design documents; Mark Weiser told him Ubik was an inspiration for ubiquitous computing" }
   could_be_invited:
     - "Jonathan Lethem, co-editor of The Exegesis of Philip K. Dick (2011)"

@@ -1,7 +1,7 @@
 ---
 status: send_ready
 character_id: alan-borning
-consent: not_yet_asked
+consent: not_asked
 quiet_mode: true
 ---
 

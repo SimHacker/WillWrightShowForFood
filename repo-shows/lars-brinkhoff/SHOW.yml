@@ -56,4 +56,4 @@ ties_to:
   - ../../process/micropolis-ai-drag-race.yml
   - ../../rigs/pdp10-maclisp-flair-lap.rig.yml
 
-consent: not_yet_asked
+consent: not_asked

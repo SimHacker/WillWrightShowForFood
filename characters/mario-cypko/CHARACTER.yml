@@ -1,15 +1,17 @@
 # Mario A. Cypko — invitation portrayal. NOT Mario A. Cypko.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: mario-cypko
-  name: "Mario A. Cypko"
-  type: invitation
-  signifier: "🧬"
-  status: living
-  field: "Medical AI, model-guided medicine, human–AI model interaction"
-  home: characters/mario-cypko/
-  affiliation: "Hahn-Schickard — Head of Medical AI and Modeling (MedAIM); lecturer, University of Freiburg"
+id: mario-cypko
+name: "Mario A. Cypko"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧬"
+status: living
+real_being: true
+field: "Medical AI, model-guided medicine, human–AI model interaction"
+home: characters/mario-cypko/
+affiliation: "Hahn-Schickard — Head of Medical AI and Modeling (MedAIM); lecturer, University of Freiburg"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
@@ -32,7 +34,7 @@ relationship:
     PhD (2017, Leipzig/ICCAS) and diploma thesis supervised by **Heinz U. Lemke** (with Prof. Andreas
     Dietz, MD). Advocates **Medical Model Science** — term from Lemke. iSMIT Patient Safety Award 2025
     credited Lemke as pioneer (public LinkedIn post). Patient-modelling video filmed at Heinz's barn
-    (Don/Heinz correspondence — consent not_yet_asked).
+    (Don/Heinz correspondence — consent not_asked).
   to_model_guided_medicine: |
     Lead author/editor with Heinz Lemke and Dirk Wilhelm on Model-Guided Medicine at CARS; co-organizer
     CARS workshops; head of MedAIM developing transparent clinical models + wearables + LLM-guided

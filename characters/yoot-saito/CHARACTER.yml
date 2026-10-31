@@ -1,14 +1,15 @@
 # Yoot Saito — invitation portrayal. NOT Yoot Saito.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: yoot-saito
-  name: "Yoot Saito"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Game designer — The Tower / SimTower, Yoot Tower, Seaman, Odama; founder of OPeNBooK (1993) & Vivarium (1996)"
-  home: characters/yoot-saito/
+id: yoot-saito
+name: "Yoot Saito"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Game designer — The Tower / SimTower, Yoot Tower, Seaman, Odama; founder of OPeNBooK (1993) & Vivarium (1996)"
+home: characters/yoot-saito/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

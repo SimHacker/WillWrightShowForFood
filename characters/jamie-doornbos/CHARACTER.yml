@@ -1,14 +1,16 @@
 # Jamie Doornbos — invitation portrayal. NOT Jamie Doornbos.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jamie-doornbos
-  name: "Jamie Doornbos"
-  type: invitation
-  signifier: "🧠"
-  status: living
-  field: "Lead programmer on The Sims (Maxis); a principal architect of the Sims' behavior / AI (SimAntics)"
-  home: characters/jamie-doornbos/
+id: jamie-doornbos
+name: "Jamie Doornbos"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧠"
+status: living
+real_being: true
+field: "Lead programmer on The Sims (Maxis); a principal architect of the Sims' behavior / AI (SimAntics)"
+home: characters/jamie-doornbos/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

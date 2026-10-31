@@ -1,14 +1,16 @@
 # James Gosling — invitation portrayal. NOT James Gosling.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: james-gosling
-  name: "James Gosling"
-  type: invitation
-  signifier: "☕"
-  status: living
-  field: "Window systems (Andrew, NeWS/SunDew), Gosling/UniPress Emacs, Java;"
-  home: characters/james-gosling/
+id: james-gosling
+name: "James Gosling"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "☕"
+status: living
+real_being: true
+field: "Window systems (Andrew, NeWS/SunDew), Gosling/UniPress Emacs, Java;"
+home: characters/james-gosling/
 
 representation:
   public_figure: true

@@ -1,14 +1,16 @@
 # Alan Borning — invitation portrayal. NOT Alan Borning.
 # Seeded from Yoot People.md (ThingLab). Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: alan-borning
-  name: "Alan Borning"
-  type: invitation
-  signifier: "🔗"
-  status: living
-  field: "Constraints — ThingLab (Smalltalk); constraint programming; University of Washington"
-  home: characters/alan-borning/
+id: alan-borning
+name: "Alan Borning"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔗"
+status: living
+real_being: true
+field: "Constraints — ThingLab (Smalltalk); constraint programming; University of Washington"
+home: characters/alan-borning/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

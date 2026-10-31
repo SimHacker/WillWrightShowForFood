@@ -1,14 +1,16 @@
 # Brian Eno — DREAM-GUEST invitation portrayal. NOT Brian Eno.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: brian-eno
-  name: "Brian Eno"
-  type: invitation
-  signifier: "🎛️"
-  status: living
-  field: "Musician, composer, producer, visual artist — pioneer of ambient and generative music/art"
-  home: characters/brian-eno/
+id: brian-eno
+name: "Brian Eno"
+type: person
+layer: dream_guest
+signifier: "👤"
+emoji: "🎛️"
+status: living
+real_being: true
+field: "Musician, composer, producer, visual artist — pioneer of ambient and generative music/art"
+home: characters/brian-eno/
 
 representation:
   public_figure: true

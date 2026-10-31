@@ -1,6 +1,6 @@
 # Ideas to explore with Andy Looney
 
-*Conversation hooks — UMD / LUMSSFS friend; MOOLLM fluxx-chaos. Consent not_yet_asked.*
+*Conversation hooks — UMD / LUMSSFS friend; MOOLLM fluxx-chaos. Consent not_asked.*
 
 ## Show thesis
 

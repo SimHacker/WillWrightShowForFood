@@ -1,9 +1,12 @@
 id: dave-maynard
 name: David Maynard
+type: person
+layer: profile
 slug: dave-maynard
 also_known_as: Dave Maynard
 role: guest
-status: active
+signifier: "👤"
+real_being: true
 
 affiliations:
   - software-artist.com

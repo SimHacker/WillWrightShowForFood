@@ -1,15 +1,17 @@
 # CHARACTER.yml — Dan Bornstein (danfuzz)
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: dan-bornstein
-  name: "Dan Bornstein"
-  aka: danfuzz
-  type: invitation
-  signifier: "🥛"          # milk.com — he'd want the glass, not the trophy
-  status: living
-  field: "VMs and language runtimes — Kaleida ScriptX, Danger, Dalvik (Android's original VM)"
-  home: characters/dan-bornstein/
+id: dan-bornstein
+name: "Dan Bornstein"
+aka: danfuzz
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🥛"          # milk.com — he'd want the glass, not the trophy
+status: living
+real_being: true
+field: "VMs and language runtimes — Kaleida ScriptX, Danger, Dalvik (Android's original VM)"
+home: characters/dan-bornstein/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -50,6 +50,8 @@ relationships:
   - { with: richard-stallman, kinds: [lab_lisp_peer], why: "Same ITS/MACLISP culture; Emacs DOCTOR vs RMS transcript" }
   - { with: david-henkel-wallace, kinds: [lab_lisp_peer], why: "Overlapping AI Lab Lisp era" }
   - { with: will-wright, kinds: [proto_sims_precedent], why: "ANIMAL's per-user emotional state — social memory decades before The Sims" }
+  - { with: christopher-stacy, kinds: [lab_peer, correspondent], why: "Kent's 31 May 1985 Pourne mail was addressed to CStacy; Stacy's 1982 guide documents the Knight TV door and elevator commands" }
+  - { with: lars-brinkhoff, kinds: [its_restorer], why: "ITS restoration preserves TEACH, ANIMAL, DOCTOR, ESCE and the DOOR server" }
 
 places:
   - { id: mit-ai-its, name: "MIT-AI / ITS / PDP-10", things: [doctor_maclisp, animal, pitmanual] }
@@ -72,7 +74,7 @@ abilities:
     - trigger: pdp10_maclisp_drive_active
       weight: 0.9
   effect: Legacy — Kent tutored Don on ITS; how the host learned Lisp as a high school kid.
-  verifiable: Don's private correspondence; pdp10-its-stack.yml
+  verifiable: "teach-lisp.md; github.com/PDP-10/its/tree/master/src/teach; HN 38061207, 49387117"
   combos_with:
   - DON-MOOLLM-HOST
 
@@ -155,12 +157,89 @@ abilities:
   combos_with:
   - DON-MOOLLM-HOST
 
+- id: CALL-ME-AN-ELEVATOR
+  name: "ESCE — Call Me an Elevator"
+  type: triggered
+  mana: "{1}{U}"
+  conditions:
+  - segment_topic_in: [its, tech-square, ten-eleven, emulation, lisp-machine, door, elevator]
+  advertisement:
+    method: callMeAnElevator
+    signature: "callMeAnElevator(floor) → DOOR server on AI → TV-11 register bit → elevator"
+    score_when:
+    - trigger: emulation_roundtable
+      weight: 0.93
+    - trigger: cabinet_shared_memory_demo
+      weight: 0.92
+  effect: "Got jealous that only CADR users could call the elevator with ESC E; asked for SYS3;TS ESCE (1982) and remembered its name exactly in 2026."
+  verifiable: "elevator-and-door.md; src/sysen1/esce.12; Kent's public Facebook comments, Oct 2026"
+  combos_with: [EVAL-IN-OTHER-LISP, BOOT-ITS]
+
+- id: EVAL-IN-OTHER-LISP
+  name: Eval In Other Lisp
+  type: activated
+  mana: "{U}{R}"
+  conditions:
+  - segment_topic_in: [its, maclisp, ipc, message-passing, moo, moollm, tool-calls]
+  advertisement:
+    method: evalInOtherLisp
+    signature: "evalInOtherLisp(uname, jname, sexpr) → PRINT down a CLI core link; the other Lisp READs and EVALs"
+    score_when:
+    - trigger: send_code_not_data_thread
+      weight: 0.92
+    - trigger: don_origin_story_on_air
+      weight: 0.9
+  effect: "The duel: Kent defined and called functions in Don's Lisp, then set its BASE to ROMAN. He won."
+  verifiable: "eval-in-other-lisp.md; maclisp.info/pitmanual/system.html; HN 38061207, 20267415"
+  combos_with: [TEACH-MACLISP, DON-MOOLLM-HOST]
+
+- id: CONDITION-SYSTEM
+  name: Signal, Handle, Restart
+  type: static
+  mana: "{W}{U}"
+  conditions:
+  - segment_topic_in: [errors, exceptions, agents, recovery, common-lisp]
+  advertisement:
+    method: conditionSystem
+    signature: "conditionSystem(problem) → handlers choose among offered restarts without unwinding"
+    score_when:
+    - trigger: agent_error_recovery_discussion
+      weight: 0.94
+  effect: "The Common Lisp condition system as a design for LLM agents that should ask, retry, or pick a recovery instead of crashing."
+  verifiable: "nhplace.com/kent/Papers/Condition-Handling-2001.html; HN 23845935"
+  combos_with: [SPECIAL-FORMS-FEXPRS]
+
+- id: HYPERSPEC
+  name: Standard as Hypertext
+  type: legacy
+  mana: "{U}{U}{W}"
+  conditions:
+  - segment_topic_in: [hypertext, standards, documentation, x3j13]
+  advertisement:
+    method: hyperSpec
+    signature: "hyperSpec(ansiStandard) → Common Lisp HyperSpec"
+    score_when:
+    - trigger: ted_nelson_or_hyperties_present
+      weight: 0.88
+  effect: "Project Editor of ANSI Common Lisp; prepared the Common Lisp HyperSpec."
+  verifiable: "Wikipedia Kent_Pitman; HN 22345209"
+  combos_with: [TEACH-MACLISP]
+
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 
 see_also:
 - path: README.md
+- path: teach-lisp.md
+- path: eval-in-other-lisp.md
+- path: animal.md
+- path: doctor-and-parry.md
+- path: elevator-and-door.md
+- path: on-hacker-news.md
+- path: ideas.md
+- path: invitation.md
+- path: ../christopher-stacy/README.md
 - path: sources/weizenbaum-class-doctor-hn.yml
 - path: ../joe-weizenbaum/CARD.yml
 - path: ../heinz-lemke/pixie-constellation.yml

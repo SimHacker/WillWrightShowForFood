@@ -2,7 +2,7 @@
 status: sent
 character_id: brewster-kahle
 public: true
-consent: not_yet_asked
+consent: not_asked
 first_contact: "July 2026 email; Brewster replied 16 Jul 2026 (in Amsterdam November–December, up for video interviews in theory); link to this page sent 19 Jul 2026"
 updated: 2026-10-25
 format: remote_or_in_person

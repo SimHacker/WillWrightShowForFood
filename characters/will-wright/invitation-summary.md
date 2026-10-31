@@ -2,7 +2,7 @@
 status: accepted
 character_id: will-wright
 public: true
-consent: invitation_accepted
+consent: granted
 show_seed: repo-shows/will-wright-premiere/
 ---
 

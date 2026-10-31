@@ -8,15 +8,15 @@ fix is a commit with his name on it.
 
 | When | What | Source |
 |------|------|--------|
-| 1970s | Gregory founds the **Ann Arbor Computer Club** while studying mathematics at Michigan | [Wikipedia](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)) |
-| 1974 | Meets Ted Nelson, author of *Computer Lib / Dream Machines* | [Wikipedia](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)) |
+| 1970s | Gregory founds the **Ann Arbor Computer Club** while studying mathematics at Michigan | [Wikipedia: Roger Gregory (programmer)](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)) |
+| 1974 | Meets Ted Nelson, author of *Computer Lib / Dream Machines* | [Wikipedia: Roger Gregory (programmer)](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)) |
 | 1979 | The **Swarthmore Summer** — Nelson, Gregory, Stuart Greene, Mark Miller. Gregory and Miller design **tumblers**: transfinite-number addresses naming any range of any version | [Project Xanadu](https://en.wikipedia.org/wiki/Project_Xanadu) |
 | 1983 | Nelson meets John Walker at the Hackers Conference; Autodesk backing follows | [Project Xanadu](https://en.wikipedia.org/wiki/Project_Xanadu) |
-| 1988 | The team moves to Sausalito; Autodesk buys a controlling interest | Denise Caruso, *SF Examiner*, Apr 1988, quoting Gregory on the rumours about the buyer (cited by [Wikipedia](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)); her archive copy of the column is currently dead) |
+| 1988 | The team moves to Sausalito; Autodesk buys a controlling interest | Denise Caruso, *SF Examiner*, Apr 1988, quoting Gregory on the rumours about the buyer (cited by [Wikipedia: Roger Gregory (programmer)](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)); her archive copy of the column is currently dead) |
 | Autodesk years | A version **in C**, led by Gregory, is completed and demonstrated at the Hackers Conference. Programmers hired from Xerox PARC then argue for a **rewrite in Smalltalk**, splitting the group and blowing the Autodesk deadline | [Project Xanadu](https://en.wikipedia.org/wiki/Project_Xanadu) |
-| Aug 1992 | Autodesk divests; the group becomes the **Xanadu Operating Company**. Gregory later serves as founder, CEO, CTO and chairman | [Wikipedia](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)) |
+| Aug 1992 | Autodesk divests; the group becomes the **Xanadu Operating Company**. Gregory later serves as founder, CEO, CTO and chairman | [Wikipedia: Roger Gregory (programmer)](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)) |
 | Aug 1999 | The code is published as open source at **udanax.com**, in two flavours: **Udanax Green** and **Udanax Gold** | [udanax.com](http://udanax.com/); Don's review, 25–27 Aug 1999 |
-| 2001 | US patent 6,212,876 — rotary rocket engine, from Robert Goddard's posthumous patents, Gregory co-designer | [Wikipedia](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)) |
+| 2001 | US patent 6,212,876 — rotary rocket engine, from Robert Goddard's posthumous patents, Gregory co-designer | [Wikipedia: Roger Gregory (programmer)](https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)) |
 
 Wikipedia dates the release decision to **1998** and the release pages to `udanax.xanadu.com`; Don's
 contemporaneous correspondence is dated **25–27 August 1999**, days after the announcement. Both may

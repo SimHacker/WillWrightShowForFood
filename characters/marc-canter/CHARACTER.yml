@@ -1,14 +1,16 @@
 # Marc Canter — invitation portrayal. NOT Marc Canter.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: marc-canter
-  name: "Marc Canter"
-  type: invitation
-  signifier: "🎬🕺"
-  status: living
-  field: "Desktop multimedia authoring (MacroMind → Macromedia, Director) → open social web (People Aggregator, Broadband Mechanics)"
-  home: characters/marc-canter/
+id: marc-canter
+name: "Marc Canter"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎬🕺"
+status: living
+real_being: true
+field: "Desktop multimedia authoring (MacroMind → Macromedia, Director) → open social web (People Aggregator, Broadband Mechanics)"
+home: characters/marc-canter/
 
 representation:
   public_figure: true

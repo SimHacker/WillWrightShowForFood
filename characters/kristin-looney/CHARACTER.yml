@@ -1,11 +1,13 @@
-character:
-  id: kristin-looney
-  name: "Kristin Looney"
-  aliases: ["Kristie Looney"]  # common misspelling — verify on air
-  type: invitation
-  status: living
-  field: "Looney Labs president; Fluxx co-creator; NASA Goddard electronics engineer (pre-Labs)"
-  home: characters/kristin-looney/
+id: kristin-looney
+name: "Kristin Looney"
+aliases: ["Kristie Looney"]  # common misspelling — verify on air
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "Looney Labs president; Fluxx co-creator; NASA Goddard electronics engineer (pre-Labs)"
+home: characters/kristin-looney/
 
 representation:
   public_figure: true

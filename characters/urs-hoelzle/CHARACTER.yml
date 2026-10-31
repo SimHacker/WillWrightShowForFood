@@ -1,14 +1,16 @@
 # Urs Hölzle — invitation portrayal. NOT Urs Hölzle.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: urs-hoelzle
-  name: "Urs Hölzle"
-  type: invitation
-  signifier: "⚡"
-  status: living
-  field: "Self adaptive optimization (PICs, dynamic deoptimization, SIC) → Animorphic/Strongtalk → HotSpot lineage; Google employee #8, first VP Engineering, Google Fellow; datacenter-as-a-computer"
-  home: characters/urs-hoelzle/
+id: urs-hoelzle
+name: "Urs Hölzle"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "⚡"
+status: living
+real_being: true
+field: "Self adaptive optimization (PICs, dynamic deoptimization, SIC) → Animorphic/Strongtalk → HotSpot lineage; Google employee #8, first VP Engineering, Google Fellow; datacenter-as-a-computer"
+home: characters/urs-hoelzle/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

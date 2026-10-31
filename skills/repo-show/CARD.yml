@@ -12,6 +12,9 @@ card:
   home: https://github.com/SimHacker/WillWrightShowForFood
   tagline: "Plant a seed, tend the repo, raise the barn live, harvest the crop."
 
+inherits:
+  - moollm://github/SimHacker/moollm/skills/cauldron/
+
 term_of_art:
   name: "Repo Show"
   etymology: "Like blog = web log — a show whose artifact + stage IS a git repo."
@@ -95,7 +98,6 @@ k_lines:
   activates: [SHOW, REPO-SHOW, RTFR, HOMEFUN, SEED, PLANT, HARVEST, CODE-THAT-SPEC]
 
 compose_with:
-  - SimHacker/moollm/skills/cauldron
   - SimHacker/moollm/skills/character
   - SimHacker/moollm/skills/thoughtful-commitment
   - SimHacker/moollm/skills/cursor-mirror

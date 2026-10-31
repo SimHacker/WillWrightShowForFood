@@ -1,14 +1,15 @@
 # Hugh Daniel — memorial portrayal (in memoriam). NOT Hugh Daniel.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: hugh-daniel
-  name: "Hugh Daniel"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: "Xanadu, The WELL, GoodNeWS/NeWS, FreeS/WAN — hacker, social connector, Don's dear friend"
-  home: characters/hugh-daniel/
+id: hugh-daniel
+name: "Hugh Daniel"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: "Xanadu, The WELL, GoodNeWS/NeWS, FreeS/WAN — hacker, social connector, Don's dear friend"
+home: characters/hugh-daniel/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

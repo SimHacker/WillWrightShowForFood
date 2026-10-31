@@ -1,17 +1,18 @@
 # Timothy Leary — memorial portrayal (in memoriam). NOT Timothy Leary.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: timothy-leary
-  name: "Timothy Leary"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: >-
-    Psychologist and writer: the interpersonal circumplex (1957), the Harvard
-    Psilocybin Project, Mind Mirror (Electronic Arts, 1985), personal
-    computing and virtual reality advocacy
-  home: characters/timothy-leary/
+id: timothy-leary
+name: "Timothy Leary"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: >-
+  Psychologist and writer: the interpersonal circumplex (1957), the Harvard
+  Psilocybin Project, Mind Mirror (Electronic Arts, 1985), personal
+  computing and virtual reality advocacy
+home: characters/timothy-leary/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
@@ -28,8 +29,8 @@ memorial:
   mode: represent_and_discuss
   rule: "Discuss his documented work. Do not speak as him. Biographical, not sensational, about the 1960s and the legal history."
   who_can_discuss:
-    - { who: brenda-laurel, why: "Worked with him as a producer at Activision on a game idea; wrote 'Remembering Timothy Leary' (SF Chronicle, 1996)", consent: not_yet_asked }
-    - { who: coco-conn, why: "Her own documented stories of him", consent: not_yet_asked }
+    - { who: brenda-laurel, why: "Worked with him as a producer at Activision on a game idea; wrote 'Remembering Timothy Leary' (SF Chronicle, 1996)", consent: not_asked }
+    - { who: coco-conn, why: "Her own documented stories of him", consent: interested }
     - { who: don-hopkins, why: "Extracted Mind Mirror's text and data from the Apple II disk; built MOOLLM's mind-mirror skill on his circumplex" }
   could_be_invited:
     - "Denis Berry, trustee of his archives"

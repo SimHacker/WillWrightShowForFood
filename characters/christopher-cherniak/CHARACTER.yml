@@ -2,15 +2,16 @@
 # Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
 # Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: christopher-cherniak
-  name: "Christopher Cherniak"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  died: unknown        # Don reported his death 2026-09-24; date not yet recorded
-  field: "Philosophy of mind and computation, University of Maryland — Minimal Rationality, Undebuggability, PCOMP"
-  home: characters/christopher-cherniak/
+id: christopher-cherniak
+name: "Christopher Cherniak"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+died: unknown        # Don reported his death 2026-09-24; date not yet recorded
+field: "Philosophy of mind and computation, University of Maryland — Minimal Rationality, Undebuggability, PCOMP"
+home: characters/christopher-cherniak/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

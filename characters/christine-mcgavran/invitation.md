@@ -2,7 +2,7 @@
 status: draft
 character_id: christine-mcgavran
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/ebike-safari/
 format: remote_or_in_person
 ---

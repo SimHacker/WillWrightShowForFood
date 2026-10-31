@@ -1,14 +1,16 @@
 # Owen Densmore — invitation portrayal. NOT Owen Densmore.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: owen-densmore
-  name: "Owen Densmore"
-  type: invitation
-  signifier: "🌻"
-  status: living
-  field: "Object-oriented PostScript (NeWS class.ps); Xerox/Apple/Sun; complexity science (Redfish, Santa Fe Institute) — the OG 'User Interface Flower Child'"
-  home: characters/owen-densmore/
+id: owen-densmore
+name: "Owen Densmore"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌻"
+status: living
+real_being: true
+field: "Object-oriented PostScript (NeWS class.ps); Xerox/Apple/Sun; complexity science (Redfish, Santa Fe Institute) — the OG 'User Interface Flower Child'"
+home: characters/owen-densmore/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,14 +1,16 @@
 # Rob Tow — invitation portrayal. NOT Rob Tow.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: rob-tow
-  name: "Rob Tow"
-  type: invitation
-  signifier: "🔬🌲"
-  status: living
-  field: "Visual psychophysics · Interval Research · Placeholder VR (landscape + narrative)"
-  home: characters/rob-tow/
+id: rob-tow
+name: "Rob Tow"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔬🌲"
+status: living
+real_being: true
+field: "Visual psychophysics · Interval Research · Placeholder VR (landscape + narrative)"
+home: characters/rob-tow/
 
 representation:
   public_figure: true

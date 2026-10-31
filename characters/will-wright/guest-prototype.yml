@@ -13,7 +13,7 @@ meta:
 acceptance:
   when: "2026-07"
   summary: "Pitched and accepted. Will loves the async repo-show idea, understands the format, eager to participate."
-  consent: invitation_accepted
+  consent: granted
 
 respect-time:
   north_star: |

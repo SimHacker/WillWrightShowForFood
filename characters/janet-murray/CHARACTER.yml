@@ -1,14 +1,16 @@
 # Janet Murray — invitation portrayal. NOT Janet Murray.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: janet-murray
-  name: "Janet H. Murray"
-  type: invitation
-  signifier: "🎭🕳"
-  status: living
-  field: "Interactive narrative; Georgia Tech; Hamlet on the Holodeck; agency / immersion / transformation"
-  home: characters/janet-murray/
+id: janet-murray
+name: "Janet H. Murray"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎭🕳"
+status: living
+real_being: true
+field: "Interactive narrative; Georgia Tech; Hamlet on the Holodeck; agency / immersion / transformation"
+home: characters/janet-murray/
 
 representation:
   public_figure: true

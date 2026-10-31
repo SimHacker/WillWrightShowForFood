@@ -1,13 +1,15 @@
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: simon-schneegans
-  name: "Simon Schneegans"
-  type: invitation
-  signifier: "🥧"
-  status: living
-  field: "Pie menus for a living ecosystem — Gnome-Pie, Fly-Pie, Kando (3.0: automation workflows); GNOME eye-candy (Burn-My-Windows, Desktop Cube); CosmoScout VR"
-  home: characters/simon-schneegans/
+id: simon-schneegans
+name: "Simon Schneegans"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🥧"
+status: living
+real_being: true
+field: "Pie menus for a living ecosystem — Gnome-Pie, Fly-Pie, Kando (3.0: automation workflows); GNOME eye-candy (Burn-My-Windows, Desktop Cube); CosmoScout VR"
+home: characters/simon-schneegans/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,14 +1,16 @@
 # Golan Levin — invitation portrayal. NOT Golan Levin.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: golan-levin
-  name: "Golan Levin"
-  type: invitation
-  signifier: "🎛️"
-  status: living
-  field: "Interactive / computational media art, creative coding, gestural & audiovisual interfaces, generative systems, critical making, art-as-research education"
-  home: characters/golan-levin/
+id: golan-levin
+name: "Golan Levin"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎛️"
+status: living
+real_being: true
+field: "Interactive / computational media art, creative coding, gestural & audiovisual interfaces, generative systems, critical making, art-as-research education"
+home: characters/golan-levin/
 
 representation:
   public_figure: true

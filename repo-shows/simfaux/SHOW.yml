@@ -17,7 +17,7 @@ show:
     Declare as sibling organelles (Soul City parallel souls). Use Declare-SimFaux as
     live/recorded Repo Show instrument. Development: WWSFF apps/simfaux/.
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
   app_hub: ../../apps/simfaux/
   organelles: ../../apps/simfaux/ORGANELLES.yml
   spin_out: ../../apps/simfaux/SPIN-OUT.md

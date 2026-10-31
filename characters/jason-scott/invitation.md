@@ -2,7 +2,7 @@
 status: draft
 character_id: jason-scott
 public: true
-consent: not_yet_asked
+consent: not_asked
 first_contact: "2025-03 email (Apple II emulation); introduced by David Rosenthal 2026-10-23"
 format: remote_or_in_person
 ---

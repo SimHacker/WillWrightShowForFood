@@ -1,15 +1,17 @@
 # Stephen Wolfram — invitation portrayal. NOT Stephen Wolfram.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: stephen-wolfram
-  name: "Stephen Wolfram"
-  type: invitation
-  signifier: "🔁"
-  status: living
-  beloved: false
-  field: "Computation & science — cellular automata, A New Kind of Science, Wolfram Language, multiway systems / the ruliad"
-  home: characters/stephen-wolfram/
+id: stephen-wolfram
+name: "Stephen Wolfram"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔁"
+status: living
+real_being: true
+beloved: false
+field: "Computation & science — cellular automata, A New Kind of Science, Wolfram Language, multiway systems / the ruliad"
+home: characters/stephen-wolfram/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,17 +1,19 @@
 # Rich Gold -- memorial portrayal. NOT Rich Gold.
 # Died 2003. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: rich-gold
-  name: "Rich Gold"
-  also_known_as: ["Richard J. Goldstein"]
-  type: memorial
-  signifier: "🕯️🏠"
-  status: deceased
-  born: "1950-06-24"
-  died: "2003-01-09"  # Menlo Park, CA -- died in his sleep, aged 52
-  field: "Little Computer People; Mattel PowerGlove; Xerox PARC ubicomp, PAIR and RED; Evocative Knowledge Objects"
-  home: characters/rich-gold/
+id: rich-gold
+name: "Rich Gold"
+also_known_as: ["Richard J. Goldstein"]
+type: person
+layer: memorial
+signifier: "🕯️"
+emoji: "🕯️🏠"
+status: deceased
+real_being: true
+born: "1950-06-24"
+died: "2003-01-09"  # Menlo Park, CA -- died in his sleep, aged 52
+field: "Little Computer People; Mattel PowerGlove; Xerox PARC ubicomp, PAIR and RED; Evocative Knowledge Objects"
+home: characters/rich-gold/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

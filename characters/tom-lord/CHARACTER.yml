@@ -1,15 +1,16 @@
 # Tom Lord — memorial portrayal (in memoriam). NOT Tom Lord.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: tom-lord
-  name: "Thomas Lord"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  lived: "1966-04-26 — 2022-06"
-  field: "GEL/Guile creator, GNU arch, the Tcl War, extension language philosophy — Don's close friend and sparring partner for decades"
-  home: characters/tom-lord/
+id: tom-lord
+name: "Thomas Lord"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+lived: "1966-04-26 — 2022-06"
+field: "GEL/Guile creator, GNU arch, the Tcl War, extension language philosophy — Don's close friend and sparring partner for decades"
+home: characters/tom-lord/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

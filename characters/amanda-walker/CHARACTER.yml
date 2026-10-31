@@ -1,14 +1,16 @@
 # Amanda Walker — invitation portrayal. NOT Amanda Walker.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: amanda-walker
-  name: "Amanda Walker"
-  type: invitation
-  signifier: "🌌"
-  status: living
-  field: "NeWS / PostScript hacker; Visix Galaxy (NeWS into a commercial product); privacy, safety, security engineering at Google"
-  home: characters/amanda-walker/
+id: amanda-walker
+name: "Amanda Walker"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌌"
+status: living
+real_being: true
+field: "NeWS / PostScript hacker; Visix Galaxy (NeWS into a commercial product); privacy, safety, security engineering at Google"
+home: characters/amanda-walker/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

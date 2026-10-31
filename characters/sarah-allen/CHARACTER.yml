@@ -1,14 +1,16 @@
 # Sarah Allen — invitation portrayal. NOT Sarah Allen.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: sarah-allen
-  name: "Sarah Allen"
-  type: invitation
-  signifier: "🎬"
-  status: living
-  field: "After Effects 1.0 (CoSA co-founder) → first Shockwave player → Flash Video / Flash Media Server → OpenLaszlo + Laszlo Webtop → RailsBridge / Bridge Foundry → Smithsonian PIF → 18F → Google Cloud"
-  home: characters/sarah-allen/
+id: sarah-allen
+name: "Sarah Allen"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎬"
+status: living
+real_being: true
+field: "After Effects 1.0 (CoSA co-founder) → first Shockwave player → Flash Video / Flash Media Server → OpenLaszlo + Laszlo Webtop → RailsBridge / Bridge Foundry → Smithsonian PIF → 18F → Google Cloud"
+home: characters/sarah-allen/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

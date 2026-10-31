@@ -2,7 +2,7 @@
 
 **Media scientist** — *Media Streams*, Garage Cinema, generative media.
 
-**Status:** `send_ready` · NPUC reunion invite · consent `not_yet_asked`
+**Status:** `send_ready` · NPUC reunion invite · consent `not_asked`
 
 [Invitation](invitation.md) · [NPUC Reunion](../../repo-shows/npuc-reunion/README.md) · [CARD](CHARACTER.yml)
 

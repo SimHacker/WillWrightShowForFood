@@ -28,7 +28,7 @@ within games to convey ideology.
 (MIT Press, 2007) and "The Rhetoric of Video Games" (*The Ecology of
 Games*, ed. Katie Salen, MIT Press, 2008).
 [Full citation chain](../../../ian-bogost/sources/procedural-rhetoric-quote.md) ·
-[Wikipedia](https://en.wikipedia.org/wiki/Procedural_rhetoric) ·
+[Wikipedia: Procedural rhetoric](https://en.wikipedia.org/wiki/Procedural_rhetoric) ·
 the satire-as-proof:
 [Cow Clicker](../../../ian-bogost/sources/cow-clicker.md).
 

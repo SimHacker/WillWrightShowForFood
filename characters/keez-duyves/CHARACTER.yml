@@ -1,15 +1,17 @@
 # Keez Duyves — invitation portrayal. NOT Keez Duyves.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: keez-duyves
-  name: "Keez Duyves"
-  type: invitation
-  signifier: "💡📡🪦"
-  status: living
-  beloved: false
-  field: "Interactive multimedia / participation art — PIPS:lab; Lumasol light-writing; Die Space; AnywaysVR; Hybrid Sculptors"
-  home: characters/keez-duyves/
+id: keez-duyves
+name: "Keez Duyves"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "💡📡🪦"
+status: living
+real_being: true
+beloved: false
+field: "Interactive multimedia / participation art — PIPS:lab; Lumasol light-writing; Die Space; AnywaysVR; Hybrid Sculptors"
+home: characters/keez-duyves/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

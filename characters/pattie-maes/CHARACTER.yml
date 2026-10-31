@@ -1,14 +1,16 @@
 # Pattie Maes — invitation portrayal. NOT Pattie Maes.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: pattie-maes
-  name: "Pattie Maes"
-  type: invitation
-  signifier: "🧭"
-  status: living
-  field: "MIT Media Lab — software agents; Fluid Interfaces; human–AI interaction"
-  home: characters/pattie-maes/
+id: pattie-maes
+name: "Pattie Maes"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧭"
+status: living
+real_being: true
+field: "MIT Media Lab — software agents; Fluid Interfaces; human–AI interaction"
+home: characters/pattie-maes/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,14 +1,15 @@
 # Jef Raskin — memorial portrayal (in memoriam). NOT Jef Raskin.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: jef-raskin
-  name: "Jef Raskin"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: "The Humane Interface — locus of attention, modelessness, cognetics; Macintosh origin; Canon Cat; Archy"
-  home: characters/jef-raskin/
+id: jef-raskin
+name: "Jef Raskin"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: "The Humane Interface — locus of attention, modelessness, cognetics; Macintosh origin; Canon Cat; Archy"
+home: characters/jef-raskin/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

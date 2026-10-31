@@ -1,14 +1,15 @@
 # Mark Weiser — memorial portrayal (in memoriam). NOT Mark Weiser.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: mark-weiser
-  name: "Mark Weiser"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: "Ubiquitous computing, calm technology — Xerox PARC CTO; co-author of Don's CHI'88 pie-menu paper"
-  home: characters/mark-weiser/
+id: mark-weiser
+name: "Mark Weiser"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: "Ubiquitous computing, calm technology — Xerox PARC CTO; co-author of Don's CHI'88 pie-menu paper"
+home: characters/mark-weiser/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
@@ -27,8 +28,8 @@ memorial:
   show_seed: ../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml
   who_can_discuss:
     - { who: don-hopkins, why: "Weiser's student at UMD and close friend until his death; co-author on the CHI'88 pie-menu paper (Callahan, Hopkins, Weiser, Shneiderman); primary source for the Ubik→ubicomp story" }
-    - { who: david-rosenthal, why: "Knew Mark; LOCKSS co-founder with Weiser's widow Vicky Reich; anchor of the Ubik/ubicomp reading-group thread", consent: not_yet_asked }
-    - { who: vicky-reich, why: "Mark Weiser's widow; LOCKSS co-founder — warmly welcome, David and Vicky's call together", consent: not_yet_asked }
+    - { who: david-rosenthal, why: "Knew Mark; LOCKSS co-founder with Weiser's widow Vicky Reich; anchor of the Ubik/ubicomp reading-group thread", consent: not_asked }
+    - { who: vicky-reich, why: "Mark Weiser's widow; LOCKSS co-founder — warmly welcome, David and Vicky's call together", consent: not_asked }
     - { who: ben-shneiderman, why: "Co-author on the same CHI'88 pie-menu paper" }
     - { who: brad-myers, why: "HCI peer — UI tools and techniques era" }
   draw_on_for_shows:

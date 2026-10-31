@@ -1,14 +1,15 @@
 # Vanessa Freudenberg — legacy portrayal (in memoriam). NOT Vanessa Freudenberg.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: vanessa-freudenberg
-  name: "Vanessa Freudenberg"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: "Smalltalk in the browser — SqueakJS, Croquet/Multisynq, Etoys, Plopp"
-  home: characters/vanessa-freudenberg/
+id: vanessa-freudenberg
+name: "Vanessa Freudenberg"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: "Smalltalk in the browser — SqueakJS, Croquet/Multisynq, Etoys, Plopp"
+home: characters/vanessa-freudenberg/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

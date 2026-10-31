@@ -1,7 +1,7 @@
 ---
 status: invited
 character_id: heinz-lemke
-consent: not_yet_asked
+consent: interested
 show_seed: repo-shows/pixie-pie-menus-pdp7.yml
 ---
 

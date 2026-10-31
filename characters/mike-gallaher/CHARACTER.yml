@@ -1,18 +1,22 @@
 # MIKE GALLAHER — character card
 # Portrayal: real person, warm contact, consent not yet asked. See schemas/portrayal-standards.md
 
-character:
-  id: mike-gallaher
-  name: "Mike Gallaher"
-  role: "Emacs hacker · co-discoverer of pie menus · committee methodologist"
-  status: stub_warm          # rich material exists; enrich after contact
-  consent: not_yet_asked
-  portrayal:
-    standard: ../../schemas/portrayal-standards.md
-    notes: "All quotes sourced from his own essay (archived in moollm designs) or the documented pie-menu history. No invented voice."
+id: mike-gallaher
+name: "Mike Gallaher"
+type: person
+layer: profile
+role: "Emacs hacker · co-discoverer of pie menus · committee methodologist"
+# rich material exists; enrich after contact
+signifier: "👤"
+real_being: true
+portrayal:
+  standard: ../../schemas/portrayal-standards.md
+  notes: "All quotes sourced from his own essay (archived in moollm designs) or the documented pie-menu history. No invented voice."
 
 representation:
   public_figure: true
+  consent:
+    state: not_asked
 
 bio:
   unipress: "UniPress Emacs — the commercial Gosling Emacs; RMS's epithet 'Software Hoarder Emacs' worn as a trophy"

@@ -105,7 +105,7 @@ Abowd is Weiser's legacy in a single career: a researcher who read "The Computer
 Century," changed direction, and has spent 25+ years chipping at the same vision — now arguing the
 way to finally make computing "disappear" is to stop shrinking chips and start growing **materials**.
 He's a natural voice for [Remembering Mark Weiser](../../repo-shows/remembering-mark-weiser/README.md)
-(consent not_yet_asked), and this talk pairs directly with the calm-tech thread in
+(consent not_asked), and this talk pairs directly with the calm-tech thread in
 [`ideas.md`](ideas.md) and the *Ubik → ubicomp* seed in [`pkd-lem-ai-sf.md`](pkd-lem-ai-sf.md).
 
 *Source: talk transcript, [youtube.com/watch?v=qko_wzQeP20](https://www.youtube.com/watch?v=qko_wzQeP20). Figures/quotes paraphrased from Abowd's public presentation.*

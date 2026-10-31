@@ -1,18 +1,20 @@
 # Christine McGavran — invitation portrayal. NOT Christine McGavran.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: christine-mcgavran
-  name: "Christine McGavran"
-  pronouns: She/Her
-  type: invitation
-  signifier: "🗺️🏙️"
-  status: living
-  field: |
-    Mapping and navigation leader — SimCity 3000, the connected PND at Dash Navigation, navigation at
-    Apple and Google, satellite imagery at Vantor, and since July 2026 VP of Engineering for
-    Mapbox's navigation products.
-  home: characters/christine-mcgavran/
+id: christine-mcgavran
+name: "Christine McGavran"
+pronouns: She/Her
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🗺️🏙️"
+status: living
+real_being: true
+field: |
+  Mapping and navigation leader — SimCity 3000, the connected PND at Dash Navigation, navigation at
+  Apple and Google, satellite imagery at Vantor, and since July 2026 VP of Engineering for
+  Mapbox's navigation products.
+home: characters/christine-mcgavran/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

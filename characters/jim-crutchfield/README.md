@@ -119,5 +119,5 @@ reversible CA — and the book behind the playgrounds). All Santa Fe Institute�
 - The lineage: [`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md)
 - The GPU rig: [`crutchfield-machine.md`](crutchfield-machine.md)
 - Joint CA show: [Norman Margolus](../norman-margolus/README.md) · Dream co-guest: [Scott Draves](../scott-draves/README.md)
-- Live work / sources: [UC Davis CSC](https://csc.ucdavis.edu/~chaos/) · [Art & Science Laboratory](https://artscilab.com/) · [Wikipedia](https://en.wikipedia.org/wiki/James_P._Crutchfield)
+- Live work / sources: [UC Davis CSC](https://csc.ucdavis.edu/~chaos/) · [Art & Science Laboratory](https://artscilab.com/) · [Wikipedia: James P. Crutchfield](https://en.wikipedia.org/wiki/James_P._Crutchfield)
 

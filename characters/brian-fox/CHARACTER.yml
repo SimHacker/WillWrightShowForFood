@@ -1,14 +1,16 @@
 # Brian Fox — invitation portrayal. NOT Brian Fox.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: brian-fox
-  name: "Brian J. Fox"
-  type: invitation
-  signifier: "🐚$"
-  status: living
-  field: "Author of GNU Bash — first employee of the Free Software Foundation; readline; first US online banking; Universal Access with Henry and Julie Minsky; open-source elections; Orchid"
-  home: characters/brian-fox/
+id: brian-fox
+name: "Brian J. Fox"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🐚$"
+status: living
+real_being: true
+field: "Author of GNU Bash — first employee of the Free Software Foundation; readline; first US online banking; Universal Access with Henry and Julie Minsky; open-source elections; Orchid"
+home: characters/brian-fox/
 
 representation:
   public_figure: true

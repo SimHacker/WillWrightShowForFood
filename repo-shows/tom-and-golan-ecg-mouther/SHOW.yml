@@ -12,7 +12,7 @@ show:
     - characters/golan-levin/
   topic: "Brainstorm patent-free ECG reimplementation; WigFabrik as showcase (multitarget mesh+texture + AI target gen); Mouther recover/reverse-engineer; Faceball — conversation only, no coding required."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
   heartbeat: ../../process/brainstorm-heartbeat.yml
 
 the_core_idea: |

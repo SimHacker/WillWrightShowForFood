@@ -2,7 +2,7 @@
 status: draft
 character_id: david-temkin
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/openlaszlo/
 also_shows: []
 format: remote_or_in_person

@@ -1,10 +1,9 @@
-character:
-  name: Social Bunny
-  type: fictional_game_character
-  real_being: false
-  signifier: "🐰"
-  home: repo-shows/will-wright-premiere/audience/fictional-social-bunny/
-  origin: "The Sims — hallucinated friend when Social need is critical"
+name: Social Bunny
+type: fictional_game_character
+real_being: false
+signifier: "🐰"
+home: repo-shows/will-wright-premiere/audience/fictional-social-bunny/
+origin: "The Sims — hallucinated friend when Social need is critical"
 
 representation:
   fictional: true

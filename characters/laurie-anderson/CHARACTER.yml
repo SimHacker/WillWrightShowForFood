@@ -1,14 +1,16 @@
 # Laurie Anderson — invitation portrayal. NOT Laurie Anderson.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: laurie-anderson
-  name: "Laurie Anderson"
-  type: invitation
-  signifier: "🎻🗣️"
-  status: living
-  field: "Performance art, experimental music, storytelling, invented instruments, immersive & VR art, spoken-word technology"
-  home: characters/laurie-anderson/
+id: laurie-anderson
+name: "Laurie Anderson"
+type: person
+layer: dream_guest
+signifier: "👤"
+emoji: "🎻🗣️"
+status: living
+real_being: true
+field: "Performance art, experimental music, storytelling, invented instruments, immersive & VR art, spoken-word technology"
+home: characters/laurie-anderson/
 
 representation:
   public_figure: true

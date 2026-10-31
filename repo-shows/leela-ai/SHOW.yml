@@ -11,7 +11,7 @@ show:
   character: characters/henry-minsky/
   topic: "What we do at Leela AI — visual intelligence that reads activity in video, learning systems in the Society-of-Mind lineage, and turning research into a real product. A friendly show-and-tell by the people who build it."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_this_show:
   the_work: "Leela AI builds visual intelligence that understands what's happening in video — carrying MIT-AI-Lab ideas (Society of Mind, schema learning) into modern, explainable AI for the real world."

@@ -1,14 +1,16 @@
 # Audrey Tang — invitation portrayal. NOT Audrey Tang.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: audrey-tang
-  name: "Audrey Tang"
-  type: invitation
-  signifier: "🌐"
-  status: living
-  field: "Civic hacker; Taiwan digital minister / cyber ambassador; g0v; Plurality"
-  home: characters/audrey-tang/
+id: audrey-tang
+name: "Audrey Tang"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌐"
+status: living
+real_being: true
+field: "Civic hacker; Taiwan digital minister / cyber ambassador; g0v; Plurality"
+home: characters/audrey-tang/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

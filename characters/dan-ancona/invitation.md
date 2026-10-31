@@ -2,7 +2,7 @@
 status: send_now
 character_id: dan-ancona
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/dan-ancona-long-now.yml
 format: remote_or_in_person_oakland
 priority: send_now

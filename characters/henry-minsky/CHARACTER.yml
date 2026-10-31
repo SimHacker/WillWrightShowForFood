@@ -1,14 +1,15 @@
 # Henry Minsky — invitation portrayal. NOT Henry Minsky.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: henry-minsky
-  name: "Henry Minsky"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Software architect / AI engineer — Leela AI (co-founder, CTO), Laszlo Systems (OpenLaszlo), MIT AI Lab"
-  home: characters/henry-minsky/
+id: henry-minsky
+name: "Henry Minsky"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Software architect / AI engineer — Leela AI (co-founder, CTO), Laszlo Systems (OpenLaszlo), MIT AI Lab"
+home: characters/henry-minsky/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,14 +1,15 @@
 # Bret Victor — invitation portrayal. NOT Bret Victor.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: bret-victor
-  name: "Bret Victor"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Interface researcher — explorable explanations, Dynamicland"
-  home: characters/bret-victor/
+id: bret-victor
+name: "Bret Victor"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Interface researcher — explorable explanations, Dynamicland"
+home: characters/bret-victor/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

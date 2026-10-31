@@ -1,15 +1,17 @@
 # Bill Budge — invitation portrayal. NOT Bill Budge.
-# LIVING person — invitation mode, consent not_yet_asked. NOT a memorial.
+# LIVING person — invitation mode, consent not_asked. NOT a memorial.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: bill-budge
-  name: "Bill Budge"
-  type: invitation
-  signifier: "🕹️"
-  status: living
-  field: "Raster Blaster; Pinball Construction Set — the construction-set genre & user-generated content; a lifelong tools/frameworks builder (BudgeCo, EA, 3DO, Sony, Google)"
-  home: characters/bill-budge/
+id: bill-budge
+name: "Bill Budge"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🕹️"
+status: living
+real_being: true
+field: "Raster Blaster; Pinball Construction Set — the construction-set genre & user-generated content; a lifelong tools/frameworks builder (BudgeCo, EA, 3DO, Sony, Google)"
+home: characters/bill-budge/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

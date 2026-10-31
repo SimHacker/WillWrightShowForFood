@@ -54,6 +54,7 @@ Living code: MicropolisCore, skills as programs, visual programming, emoji citie
 ### ⚖️ [Ethics & Portrayal](ethics-and-portrayal/README.md)
 Consent, soul rights, portrayal standards, the dignity of fictional beings, AI hygiene.
 *Highlights:* [Portrayal standards](../schemas/portrayal-standards.md) ·
+[representation-ethics](https://github.com/SimHacker/moollm/tree/main/skills/representation-ethics) ·
 [Will Wright Soul For Food](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md)
 
 ### 🧑‍🤝‍🧑 [People](people/README.md)
@@ -116,6 +117,8 @@ decaying into half-life.
 ---
 
 🐒✋ *A directory that is never out of date is a directory nobody is using. Last big shelving pass:
-2026-07-09 — Morphic/Snap! metaprogramming, glass-box Micropolis bridge, constructionist blocks lineage.*
+2026-10-29 — consent is a state, not a level; the Mind Mirror card is the 1985 name registry;
+design-sense joins the methods shelf; place joins the worlds shelf; the skill count is 156
+and the catalogs agree.*
 
 ↑ [WWSFF root](../README.md) · [Constitution](CONSTITUTION.md) · [Palm](../characters/palm/README.md)

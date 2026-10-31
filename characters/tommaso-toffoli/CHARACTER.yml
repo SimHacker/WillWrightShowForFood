@@ -1,17 +1,19 @@
 # Tommaso Toffoli — invitation portrayal. NOT Tommaso Toffoli.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: tommaso-toffoli
-  name: "Tommaso Toffoli"
-  type: invitation
-  signifier: "🔁"
-  status: living
-  field: >-
-    Physicist and computer scientist: reversible computing, the Toffoli gate,
-    conservative logic, cellular automata machines (CAM-6, CAM-8), lattice gases
-  home: characters/tommaso-toffoli/
-  aliases: ["Tom Toffoli"]
+id: tommaso-toffoli
+name: "Tommaso Toffoli"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔁"
+status: living
+real_being: true
+field: >-
+  Physicist and computer scientist: reversible computing, the Toffoli gate,
+  conservative logic, cellular automata machines (CAM-6, CAM-8), lattice gases
+home: characters/tommaso-toffoli/
+aliases: ["Tom Toffoli"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

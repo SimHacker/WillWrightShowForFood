@@ -1,7 +1,7 @@
 # Pull-in gaps — PIXIE + Cambridge assets
 
 Assets to pull into repo / show. **gap** = not yet in git or not linked; **pull_in** = action needed.  
-Machine index: [`pull-in-gaps.md`](pull-in-gaps.md) · **Consent:** `not_yet_asked`
+Machine index: [`pull-in-gaps.md`](pull-in-gaps.md) · **Consent:** `not_asked`
 
 ---
 

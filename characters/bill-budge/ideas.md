@@ -11,7 +11,7 @@ him or invent his words. Standards: [`portrayal-standards.md`](../../schemas/por
 Drag parts onto the table, wire their behavior, play. That's the birth of the **construction-set
 genre** and of **user-generated content** as a first-class idea — the through-line to SimCity, The
 Sims, LittleBigPlanet, Minecraft, Roblox. Great opener with **Will Wright**, who treats construction
-sets as a design philosophy. *Source: [Wikipedia](https://en.wikipedia.org/wiki/Bill_Budge),
+sets as a design philosophy. *Source: [Wikipedia: Bill Budge](https://en.wikipedia.org/wiki/Bill_Budge),
 [MobyGames](https://www.mobygames.com/person/742/bill-budge/).*
 
 ### 2. Pinball Construction Set is an *artifactory*
@@ -59,7 +59,7 @@ set, looking at a construction set built in his honor.
 |--------|------------|---------|
 | [Will Wright](../will-wright/) | Construction sets as design philosophy; PCS as direct ancestor of The Sims | guest |
 | [Don Hopkins](../don-hopkins/) | Apple II / construction-set / tool-builder era; host | self-sovereign (host) |
-| Bill Budge | The man himself — living; invite via [invitation.md](invitation.md) | not_yet_asked |
+| Bill Budge | The man himself — living; invite via [invitation.md](invitation.md) | not_asked |
 | Early-EA & Apple II peers | "Software Artists" era; anyone PCS taught to make things | open — add yourself |
 
 *Anyone who knew Bill or works in his lineage: open an issue or PR, or email Don to be wired in.*

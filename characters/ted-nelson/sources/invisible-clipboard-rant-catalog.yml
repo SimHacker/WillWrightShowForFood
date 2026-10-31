@@ -4,7 +4,7 @@
 meta:
   character: ted-nelson
   curated_by: don-hopkins
-  consent: not_yet_asked
+  consent: not_asked
   show: ../../../repo-shows/unnatural-selection/unnatural-selection.yml
   companion: invisible-clipboard-rant-catalog.md
 

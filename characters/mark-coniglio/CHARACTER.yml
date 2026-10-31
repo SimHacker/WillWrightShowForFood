@@ -1,14 +1,16 @@
 # Mark Coniglio — invitation portrayal. NOT Mark Coniglio.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: mark-coniglio
-  name: "Mark Coniglio"
-  type: invitation
-  signifier: "🎚️💃"
-  status: living
-  field: "Composer/media artist; creator of Interactor and Isadora (real-time interactive media); co-founder of Troika Ranch"
-  home: characters/mark-coniglio/
+id: mark-coniglio
+name: "Mark Coniglio"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎚️💃"
+status: living
+real_being: true
+field: "Composer/media artist; creator of Interactor and Isadora (real-time interactive media); co-founder of Troika Ranch"
+home: characters/mark-coniglio/
 
 representation:
   public_figure: true

@@ -3,8 +3,11 @@
 
 id: coco-conn
 name: Coco Conn
-signifier: "🎛️"
-status: active
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎛️"
+real_being: true
 representation:
   public_figure: true
   consent:

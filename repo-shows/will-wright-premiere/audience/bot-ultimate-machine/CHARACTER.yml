@@ -1,14 +1,14 @@
 # The Ultimate Machine — audience TicketPR overlay
 # Canonical character: characters/robots/ultimate-machine/CHARACTER.yml
 
-character:
-  name: The Ultimate Machine
-  type: fictional_bot_audience
-  real_being: false
-  signifier: "🔌"
-  home: repo-shows/will-wright-premiere/audience/bot-ultimate-machine/
+name: The Ultimate Machine
+type: fictional_bot_audience
+real_being: false
+signifier: "🔌"
+home: repo-shows/will-wright-premiere/audience/bot-ultimate-machine/
 
-character_ref: ../../../../characters/robots/ultimate-machine/CHARACTER.yml
+inherits:
+  - ../../../../characters/robots/ultimate-machine/CHARACTER.yml
 
 representation:
   fictional: true

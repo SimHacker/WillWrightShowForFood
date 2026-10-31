@@ -21,7 +21,7 @@ show:
   hub: ./
   topic: "How the original Sims simulation worked — pools, SimAntics, pixelation, pause/RNG, QA folklore, design, production, TSO."
   status: planted
-  consent: not_yet_asked
+  consent: not_asked
 
 format:
   async: true

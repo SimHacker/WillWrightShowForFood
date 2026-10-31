@@ -1,14 +1,15 @@
 # Oliver Steele — invitation portrayal. NOT Oliver Steele.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: oliver-steele
-  name: "Oliver Steele"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Chief Software Architect of Laszlo Systems (designed LZX / OpenLaszlo); instance-first & reactive programming; tools for creativity & learning"
-  home: characters/oliver-steele/
+id: oliver-steele
+name: "Oliver Steele"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Chief Software Architect of Laszlo Systems (designed LZX / OpenLaszlo); instance-first & reactive programming; tools for creativity & learning"
+home: characters/oliver-steele/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -1,7 +1,7 @@
 # Proposal for Lars — AM Radio Simulator beside the big iron
 
 *Don’s proposal to [Lars Brinkhoff](README.md) — not Lars’s words.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_asked
 
 ## The pitch
 

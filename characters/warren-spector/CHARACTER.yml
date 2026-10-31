@@ -1,14 +1,16 @@
 # Warren Spector — invitation portrayal. NOT Warren Spector.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: warren-spector
-  name: "Warren Spector"
-  type: invitation
-  signifier: "📜"
-  status: living
-  field: "Immersive-sim pioneer (System Shock, Deus Ex, Thief); game preservationist; UT Videogame Archive donor"
-  home: characters/warren-spector/
+id: warren-spector
+name: "Warren Spector"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📜"
+status: living
+real_being: true
+field: "Immersive-sim pioneer (System Shock, Deus Ex, Thief); game preservationist; UT Videogame Archive donor"
+home: characters/warren-spector/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

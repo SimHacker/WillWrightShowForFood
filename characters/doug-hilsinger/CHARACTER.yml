@@ -1,14 +1,16 @@
 # Doug Hilsinger — invitation portrayal. NOT Doug Hilsinger.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: doug-hilsinger
-  name: "Doug Hilsinger"
-  type: invitation
-  signifier: "🐅"
-  status: living
-  field: "Bay Area multi-instrumentalist; maker of the all-acoustic-instruments track-for-track cover of Brian Eno's Taking Tiger Mountain (By Strategy)"
-  home: characters/doug-hilsinger/
+id: doug-hilsinger
+name: "Doug Hilsinger"
+type: person
+layer: dream_guest
+signifier: "👤"
+emoji: "🐅"
+status: living
+real_being: true
+field: "Bay Area multi-instrumentalist; maker of the all-acoustic-instruments track-for-track cover of Brian Eno's Taking Tiger Mountain (By Strategy)"
+home: characters/doug-hilsinger/
 
 representation:
   public_figure: true

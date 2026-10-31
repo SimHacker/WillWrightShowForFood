@@ -2,7 +2,7 @@
 status: draft
 character_id: charles-moore
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/coco-conn/
 warm_path: none yet
 sent_at: null

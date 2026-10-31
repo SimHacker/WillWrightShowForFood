@@ -1,14 +1,16 @@
 # Thomas Cherryhomes — invitation portrayal. NOT Thomas Cherryhomes.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: thomas-cherryhomes
-  name: "Thomas Cherryhomes"
-  type: invitation
-  signifier: "📡"
-  status: living
-  field: "Retrocomputing hacker/engineer; firmware developer + co-founder of FujiNet; IRATA.ONLINE (PLATO). Cross-platform C; community-builder; preservationist."
-  home: characters/thomas-cherryhomes/
+id: thomas-cherryhomes
+name: "Thomas Cherryhomes"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📡"
+status: living
+real_being: true
+field: "Retrocomputing hacker/engineer; firmware developer + co-founder of FujiNet; IRATA.ONLINE (PLATO). Cross-platform C; community-builder; preservationist."
+home: characters/thomas-cherryhomes/
 
 representation:
   public_figure: true

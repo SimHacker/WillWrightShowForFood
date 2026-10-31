@@ -3,8 +3,12 @@
 
 id: donald-michie
 name: Donald Michie
+type: person
+layer: memorial
 nickname: Duckmouse
-status: memorial
+status: deceased
+signifier: "🕯️"
+real_being: true
 alive: false
 born: 1923-11-11
 died: 2007-07-07

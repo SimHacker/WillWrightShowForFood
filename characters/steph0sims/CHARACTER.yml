@@ -1,14 +1,16 @@
 # Steph0Sims — portrayal. NOT Steph.
 # Consent level 3 — public figure; not yet asked. Verify primary posts before quoting.
 
-character:
-  id: steph0sims
-  name: Steph0Sims
-  type: invitation
-  signifier: "🎀📺"
-  status: living
-  field: "Sims creator; EA Creator Network resigner Oct 2025"
-  home: characters/steph0sims/
+id: steph0sims
+name: Steph0Sims
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎀📺"
+status: living
+real_being: true
+field: "Sims creator; EA Creator Network resigner Oct 2025"
+home: characters/steph0sims/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

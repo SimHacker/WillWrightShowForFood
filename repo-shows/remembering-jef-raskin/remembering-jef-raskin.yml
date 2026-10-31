@@ -9,7 +9,7 @@ show:
   host: Don Hopkins
   topic: "A tribute to Jef Raskin (1943–2005) — The Humane Interface, the Macintosh he started, the Canon Cat, and humane-interface ideas in this repo."
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 memorial-mode:
   subject: jef-raskin
@@ -36,34 +36,34 @@ possible_discussants:
       character: characters/terry-winograd/
       connection: "Hosted Raskin's CS547 talk 'Prolegomena to future interface design' (2001-10-05)."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
       in_repo: ../../characters/terry-winograd/media/cs547-ARCHIVE.md
     - name: "Ben Shneiderman"
       character: characters/ben-shneiderman/
       connection: "HCI peer — direct manipulation era; humane attention vs calm technology (Weiser) framing."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
     - name: "Bret Victor"
       character: characters/bret-victor/
       connection: "Humane-interface lineage in writing — read intent, not feature lists."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
       to_verify: "Personal acquaintance with Raskin not established — only lineage/essay framing unless he says otherwise."
     - name: "Alan Kay"
       character: characters/alan-kay/
       connection: "Mac/Dynabook era contemporary — what shipped vs what humane computing could have been."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
     - name: "Walter Bender"
       character: characters/walter-bender/
       connection: "OLPC View Source + constructionist navigation — inspectability half of the pair."
       verified: true
-      consent: not_yet_asked
+      consent: not_asked
     - name: "Don Hopkins"
       character: characters/don-hopkins/
       connection: "Host — README-overlay design; CHI'88 pie menus; Repo Show format."
       verified: true
-      consent: self_sovereign
+      authored_by: don-hopkins
 
 centerpieces:
   two_layer_demo: "Live on GitHub — directory URL vs README.md URL for the same folder. Name the projections."

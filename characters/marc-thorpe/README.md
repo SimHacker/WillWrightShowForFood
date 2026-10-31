@@ -8,7 +8,7 @@ interview him or speak as him.* [Memorial standards](../../schemas/portrayal-sta
 
 **Marc Allen Thorpe** — San Francisco artist, ILM veteran, inventor of **Robot Wars**
 (1994), conceptual designer at **Stupid Fun Club** with Will Wright and Mike Winter.
-Died 24 November 2023 (Parkinson's). [Wikipedia](https://en.wikipedia.org/wiki/Marc_Thorpe)
+Died 24 November 2023 (Parkinson's). [Wikipedia: Marc Thorpe](https://en.wikipedia.org/wiki/Marc_Thorpe)
 
 ## Why he's in this cast
 

@@ -1,14 +1,16 @@
 # Tom Ngo — invitation portrayal. NOT Tom Ngo.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: tom-ngo
-  name: "Tom Ngo"
-  type: invitation
-  signifier: "🔺"
-  status: living
-  field: "Constraint-based animation — Embedded Constraint Graphics (ECG) at Interval Research; example-based direct manipulation"
-  home: characters/tom-ngo/
+id: tom-ngo
+name: "Tom Ngo"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🔺"
+status: living
+real_being: true
+field: "Constraint-based animation — Embedded Constraint Graphics (ECG) at Interval Research; example-based direct manipulation"
+home: characters/tom-ngo/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

@@ -2,7 +2,7 @@
 status: draft
 character_id: dj-kurlander
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/comic-chat-open-source/
 format: remote_with_live_comic_chat
 priority: warm_lead

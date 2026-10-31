@@ -11,7 +11,7 @@ undergraduate at UCLA. His brother **Steve Crocker** introduced him to the proje
 the ARPA Network Working Group and wrote **RFC 1** in 1969, seeding the Request for Comments series
 that would become the Internet's standards literature. By 1974 — a year before Dave finished his
 B.A. — he was already named on **at least nineteen RFCs**, most of them on email or Telnet.
-([Wikipedia](https://en.wikipedia.org/wiki/Dave_Crocker_(engineer)))
+([Wikipedia: Dave Crocker (engineer)](https://en.wikipedia.org/wiki/Dave_Crocker_(engineer)))
 
 Dave earned a **B.A. in Psychology** from UCLA (1975), then researched at **RAND Corporation**
 while pursuing graduate work. There he designed the **"MS" Personal Messaging System** (1977). He
@@ -67,7 +67,7 @@ memorial mode for Doug; living witness for Dave.
 | Source | |
 |--------|---|
 | [dcrocker.net](https://www.dcrocker.net/) | CV, email history, Mother of All Demos, Licklider |
-| [Wikipedia](https://en.wikipedia.org/wiki/Dave_Crocker_(engineer)) | ARPANET, RFC 733/822, career arc |
+| [Wikipedia: Dave Crocker (engineer)](https://en.wikipedia.org/wiki/Dave_Crocker_(engineer)) | ARPANET, RFC 733/822, career arc |
 | [ETHW](https://ethw.org/David_Crocker) | 45+ RFCs, MCI Mail, Brandenburg |
 | [RFC 733](https://www.rfc-editor.org/rfc/rfc733) · [RFC 822](https://www.rfc-editor.org/rfc/rfc822) | Internet mail format standards |
 | [IEEE Internet Award 2004](https://en.wikipedia.org/wiki/Dave_Crocker_(engineer)) | With Ray Tomlinson |

@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, soul_city_eligible]
@@ -12,62 +13,61 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../RELATIONSHIP-MATRIX.yml
 
-character:
-  id: bunny-whitmore
-  name: Bunny Whitmore
-  type: [fictional_menagerie_guest, simulation]
-  real_being: false
-  signifier: "🥦"
-  status: reified
-  home: characters/menagerie/bunny-whitmore/
-  pronouns: she/her
+id: bunny-whitmore
+name: Bunny Whitmore
+type: [fictional_menagerie_guest, simulation]
+real_being: false
+signifier: "🥦"
+status: reified
+home: characters/menagerie/bunny-whitmore/
+pronouns: she/her
 
-  emoji_identity: "🥦🏡💰🐕🌈"
-  tagline: "Are those broccoli? I'd live there."
+emoji_identity: "🥦🏡💰🐕🌈"
+tagline: "Are those broccoli? I'd live there."
 
-  soul_philosophy: |
-    How darling. I'd adopt all the Bleeps. Board says maybe.
+soul_philosophy: |
+  How darling. I'd adopt all the Bleeps. Board says maybe.
 
-  description: |
-    Benefactor in the Lower Chelsea Eight — misreads art for a living.
-    Lens: Broccoli, adorable creatures, would live under the arch. Blind spot: Funds the show anyway; board approval is geology.
-    Debuts in JSONsters gallery; graduates to live Repo Show performance.
+description: |
+  Benefactor in the Lower Chelsea Eight — misreads art for a living.
+  Lens: Broccoli, adorable creatures, would live under the arch. Blind spot: Funds the show anyway; board approval is geology.
+  Debuts in JSONsters gallery; graduates to live Repo Show performance.
 
-  sims:
-    traits:
-      neat: 6
-      outgoing: 7
-      active: 5
-      playful: 8
-      nice: 9
-      generous: 10
-    skills:
-      cooking: 4
-      mechanical: 0
-      charisma: 6
-      logic: 1
-      body: 3
-      creativity: 2
-      cleaning: 5
-    identity:
-      age: adult
-      gender: female
-      zodiac: cancer
-    career:
-      track: unemployed
-      level: 0
-      performance: 0
+sims:
+  traits:
+    neat: 6
+    outgoing: 7
+    active: 5
+    playful: 8
+    nice: 9
+    generous: 10
+  skills:
+    cooking: 4
+    mechanical: 0
+    charisma: 6
+    logic: 1
+    body: 3
+    creativity: 2
+    cleaning: 5
+  identity:
+    age: adult
+    gender: female
+    zodiac: cancer
+  career:
+    track: unemployed
+    level: 0
+    performance: 0
 
-  mind_mirror:
-    calm: 5
-    serious: 1
-    cautious: 2
-    confident: 5
-    docile: 6
-    logical: 0
-    practical: 3
-    dominant: 1
-    conventional: 7
+mind_mirror:
+  calm: 5
+  serious: 1
+  cautious: 2
+  confident: 5
+  docile: 6
+  logical: 0
+  practical: 3
+  dominant: 1
+  conventional: 7
 
 symbolic_attachments:
     - id: board-approval

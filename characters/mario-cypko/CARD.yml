@@ -65,7 +65,7 @@ abilities:
   combos_with: [PIXIE-RADIAL-MENUS]
 
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 
 see_also:

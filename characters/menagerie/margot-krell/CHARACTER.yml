@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, soul_city_eligible]
@@ -12,62 +13,61 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../RELATIONSHIP-MATRIX.yml
 
-character:
-  id: margot-krell
-  name: Margot Krell
-  type: [fictional_menagerie_guest, simulation]
-  real_being: false
-  signifier: "⚔️"
-  status: reified
-  home: characters/menagerie/margot-krell/
-  pronouns: she/her
+id: margot-krell
+name: Margot Krell
+type: [fictional_menagerie_guest, simulation]
+real_being: false
+signifier: "⚔️"
+status: reified
+home: characters/menagerie/margot-krell/
+pronouns: she/her
 
-  emoji_identity: "⚔️😭📑🏚️🥙"
-  tagline: "Administrative overhead crushing the suburban dream."
+emoji_identity: "⚔️😭📑🏚️🥙"
+tagline: "Administrative overhead crushing the suburban dream."
 
-  soul_philosophy: |
-    Every arc administers distance. I'm openly crying and I'm fine.
+soul_philosophy: |
+  Every arc administers distance. I'm openly crying and I'm fine.
 
-  description: |
-    Deconstructionist in the Lower Chelsea Eight — misreads art for a living.
-    Lens: Violence, administrative overhead, suburban dream crushed. Blind spot: Never enjoys anything.
-    Debuts in JSONsters gallery; graduates to live Repo Show performance.
+description: |
+  Deconstructionist in the Lower Chelsea Eight — misreads art for a living.
+  Lens: Violence, administrative overhead, suburban dream crushed. Blind spot: Never enjoys anything.
+  Debuts in JSONsters gallery; graduates to live Repo Show performance.
 
-  sims:
-    traits:
-      neat: 5
-      outgoing: 5
-      active: 4
-      playful: 1
-      nice: 2
-      generous: 3
-    skills:
-      cooking: 5
-      mechanical: 1
-      charisma: 4
-      logic: 7
-      body: 3
-      creativity: 5
-      cleaning: 4
-    identity:
-      age: adult
-      gender: female
-      zodiac: scorpio
-    career:
-      track: science
-      level: 4
-      performance: 520
+sims:
+  traits:
+    neat: 5
+    outgoing: 5
+    active: 4
+    playful: 1
+    nice: 2
+    generous: 3
+  skills:
+    cooking: 5
+    mechanical: 1
+    charisma: 4
+    logic: 7
+    body: 3
+    creativity: 5
+    cleaning: 4
+  identity:
+    age: adult
+    gender: female
+    zodiac: scorpio
+  career:
+    track: science
+    level: 4
+    performance: 520
 
-  mind_mirror:
-    calm: 2
-    serious: 7
-    cautious: 3
-    confident: 5
-    docile: 1
-    logical: 6
-    practical: 4
-    dominant: 5
-    conventional: 1
+mind_mirror:
+  calm: 2
+  serious: 7
+  cautious: 3
+  confident: 5
+  docile: 1
+  logical: 6
+  practical: 4
+  dominant: 5
+  conventional: 1
 
 symbolic_attachments:
     - id: open-crying

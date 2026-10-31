@@ -2,7 +2,7 @@
 status: send_ready
 character_id: paul-rother
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/coco-conn/
 warm_path: coco-conn email 2026-08-26
 sent_at: null

@@ -1,15 +1,17 @@
 # W. Watson — invitation portrayal. NOT W. Watson.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: w-watson
-  name: "W. Watson (Wavell Watson)"
-  type: invitation
-  signifier: "🛋️"
-  status: living
-  field: "Lacanian psychoanalysis of programming languages — The Pervert's Guide to Computer Programming Languages; software ideology; worker co-ops (Vulk)"
-  home: characters/w-watson/
-  aliases: ["Wavell Watson", "W Watson", "Watson"]
+id: w-watson
+name: "W. Watson (Wavell Watson)"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🛋️"
+status: living
+real_being: true
+field: "Lacanian psychoanalysis of programming languages — The Pervert's Guide to Computer Programming Languages; software ideology; worker co-ops (Vulk)"
+home: characters/w-watson/
+aliases: ["Wavell Watson", "W Watson", "Watson"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

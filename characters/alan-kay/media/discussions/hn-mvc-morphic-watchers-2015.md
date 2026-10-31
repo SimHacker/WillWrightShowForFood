@@ -80,7 +80,7 @@ should know how to reverse user input back to the model. Today that is usually h
 tracking ("a high art form").
 
 **Ben Shneiderman's "direct manipulation"** — continuous representation, rapid reversible incremental actions
-and feedback ([Wikipedia](https://en.wikipedia.org/wiki/Direct_manipulation_interface)) — as the UI style Kay
+and feedback ([Wikipedia: Direct manipulation interface](https://en.wikipedia.org/wiki/Direct_manipulation_interface)) — as the UI style Kay
 was getting at; DM could benefit from an automatic inverter but is usually ad hoc in the view.
 
 **Smalltalk / Self / Morphic reflection** — editable UIs for booleans, numbers, colors; falls back to generic

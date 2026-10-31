@@ -2,7 +2,7 @@
 status: draft
 character_id: robert-standefer
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/comic-chat-open-source/
 format: remote_async_or_live
 priority: warm_lead

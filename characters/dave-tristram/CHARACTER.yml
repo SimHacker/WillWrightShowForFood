@@ -1,15 +1,17 @@
 # Dave Tristram — invitation portrayal. NOT Dave Tristram.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: dave-tristram
-  name: "David A. Tristram"
-  type: invitation
-  signifier: "🎸"
-  status: living
-  field: "Live generative graphics — Electropaint, Raster Masters visual-music ensemble, reaction-diffusion, video feedback, and cellular-automata-inspired performance"
-  home: characters/dave-tristram/
-  aliases: ["Dave Tristram", "David Tristram", "Tristram Visual"]
+id: dave-tristram
+name: "David A. Tristram"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎸"
+status: living
+real_being: true
+field: "Live generative graphics — Electropaint, Raster Masters visual-music ensemble, reaction-diffusion, video feedback, and cellular-automata-inspired performance"
+home: characters/dave-tristram/
+aliases: ["Dave Tristram", "David Tristram", "Tristram Visual"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

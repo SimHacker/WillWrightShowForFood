@@ -1,7 +1,7 @@
 ---
 status: draft
 character_id: david-crane
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/little-computer-people/
 ---
 

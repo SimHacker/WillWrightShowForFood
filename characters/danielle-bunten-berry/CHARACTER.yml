@@ -1,17 +1,18 @@
 # Danielle Bunten Berry — legacy portrayal (in memoriam). NOT Danielle Bunten Berry.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: danielle-bunten-berry
-  name: "Danielle Bunten Berry"
-  also_known_as: ["Dani Bunten Berry", "Dani Bunten", "Danielle Berry"]
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  born: "1949-02-19"   # St. Louis, Missouri (as Daniel Paul Bunten)
-  died: "1998-07-03"   # Little Rock area; lung cancer (aged 49)
-  field: "Game designer — M.U.L.E., The Seven Cities of Gold; pioneer of multiplayer social games"
-  home: characters/danielle-bunten-berry/
+id: danielle-bunten-berry
+name: "Danielle Bunten Berry"
+also_known_as: ["Dani Bunten Berry", "Dani Bunten", "Danielle Berry"]
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+born: "1949-02-19"   # St. Louis, Missouri (as Daniel Paul Bunten)
+died: "1998-07-03"   # Little Rock area; lung cancer (aged 49)
+field: "Game designer — M.U.L.E., The Seven Cities of Gold; pioneer of multiplayer social games"
+home: characters/danielle-bunten-berry/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

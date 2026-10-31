@@ -3,8 +3,9 @@
 # NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
-  moollm_skills: [character, mind-mirror]
-  note: SimHacker/moollm — traits + Leary circumplex condensed
+  - character
+  - mind-mirror
+note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
   tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, soul_city_eligible]
@@ -12,62 +13,61 @@ ontology:
   nature: fictional_menagerie_guest
   ensemble: ../RELATIONSHIP-MATRIX.yml
 
-character:
-  id: gregory-kwan
-  name: Gregory Kwan
-  type: [fictional_menagerie_guest, simulation]
-  real_being: false
-  signifier: "📈"
-  status: reified
-  home: characters/menagerie/gregory-kwan/
-  pronouns: he/him
+id: gregory-kwan
+name: Gregory Kwan
+type: [fictional_menagerie_guest, simulation]
+real_being: false
+signifier: "📈"
+status: reified
+home: characters/menagerie/gregory-kwan/
+pronouns: he/him
 
-  emoji_identity: "📈💹🖤📉🚗🥂"
-  tagline: "Source node, sink node, one conduit."
+emoji_identity: "📈💹🖤📉🚗🥂"
+tagline: "Source node, sink node, one conduit."
 
-  soul_philosophy: |
-    Every arc is a conduit. I wish my books looked this honest.
+soul_philosophy: |
+  Every arc is a conduit. I wish my books looked this honest.
 
-  description: |
-    Hedge-fund collector in the Lower Chelsea Eight — misreads art for a living.
-    Lens: Liquidity, tranches, gamma, short/long positions. Blind spot: Thinks every arc is a yield curve.
-    Debuts in JSONsters gallery; graduates to live Repo Show performance.
+description: |
+  Hedge-fund collector in the Lower Chelsea Eight — misreads art for a living.
+  Lens: Liquidity, tranches, gamma, short/long positions. Blind spot: Thinks every arc is a yield curve.
+  Debuts in JSONsters gallery; graduates to live Repo Show performance.
 
-  sims:
-    traits:
-      neat: 8
-      outgoing: 6
-      active: 5
-      playful: 2
-      nice: 3
-      generous: 1
-    skills:
-      cooking: 1
-      mechanical: 2
-      charisma: 5
-      logic: 9
-      body: 3
-      creativity: 1
-      cleaning: 7
-    identity:
-      age: adult
-      gender: male
-      zodiac: capricorn
-    career:
-      track: politics
-      level: 9
-      performance: 900
+sims:
+  traits:
+    neat: 8
+    outgoing: 6
+    active: 5
+    playful: 2
+    nice: 3
+    generous: 1
+  skills:
+    cooking: 1
+    mechanical: 2
+    charisma: 5
+    logic: 9
+    body: 3
+    creativity: 1
+    cleaning: 7
+  identity:
+    age: adult
+    gender: male
+    zodiac: capricorn
+  career:
+    track: politics
+    level: 9
+    performance: 900
 
-  mind_mirror:
-    calm: 6
-    serious: 7
-    cautious: 6
-    confident: 7
-    docile: 2
-    logical: 7
-    practical: 7
-    dominant: 5
-    conventional: 5
+mind_mirror:
+  calm: 6
+  serious: 7
+  cautious: 6
+  confident: 7
+  docile: 2
+  logical: 7
+  practical: 7
+  dominant: 5
+  conventional: 5
 
 symbolic_attachments:
     - id: carry-trade-tesla

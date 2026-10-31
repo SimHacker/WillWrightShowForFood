@@ -183,7 +183,7 @@ abilities:
   verifiable: Snap! extension work
   combos_with: []
 invoke_rules:
-  consent: not_yet_asked
+  consent: not_asked
   simulation: false
 see_also:
 - path: CHARACTER.yml

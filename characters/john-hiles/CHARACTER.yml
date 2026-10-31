@@ -1,16 +1,19 @@
 # John Hiles — storyline figure portrayal. NOT John Hiles.
 # Status UNKNOWN (living/passed unconfirmed). Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: john-hiles
-  name: "John Hiles"
-  full_name: "John O. Hiles"   # "J.O. Hiles" on the PIXIE + RAINBOW papers
-  type: storyline_figure
-  signifier: "🖥️"
-  status: unknown              # living/passed not yet confirmed — do NOT assume memorial or invite
-  field: "Interactive computer graphics / CAD — Cambridge University Mathematical Laboratory (late 1960s–early 1970s)"
-  home: characters/john-hiles/
-  affiliation: "University of Cambridge Mathematical Laboratory (per PIXIE 1969 & RAINBOW 1972 papers)"
+id: john-hiles
+name: "John Hiles"
+full_name: "John O. Hiles"   # "J.O. Hiles" on the PIXIE + RAINBOW papers
+type: person
+show_role: storyline_figure
+layer: profile
+signifier: "👤"
+emoji: "🖥️"
+# living/passed not yet confirmed — do NOT assume memorial or invite
+real_being: true
+field: "Interactive computer graphics / CAD — Cambridge University Mathematical Laboratory (late 1960s–early 1970s)"
+home: characters/john-hiles/
+affiliation: "University of Cambridge Mathematical Laboratory (per PIXIE 1969 & RAINBOW 1972 papers)"
 
 representation:
   public_figure: true

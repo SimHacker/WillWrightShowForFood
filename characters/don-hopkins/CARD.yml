@@ -11,7 +11,7 @@ room:
   - self_sovereign
   - host
   - real_being
-  consent: self_sovereign
+  authored_by: don-hopkins
 layers:
   wwsff_public: This directory — Repo Show host projection
   career_backbone: career/
@@ -493,5 +493,5 @@ abilities:
   - PROGRAM-ROBOT-BRAIN
   - OPEN-SOURCE-MICROPOLIS
 invoke_rules:
-  consent: self_sovereign
+  authored_by: don-hopkins
   simulation: true

@@ -57,7 +57,7 @@ persuasive coherence; the file supplies the self. Which lands on the English idi
 You cannot make up someone else's mind — grammar forbids it, and so does the ethics. That aphorism
 is secretly the whole [portrayal standards](../../schemas/portrayal-standards.md) document in one
 line: an invitation can only *persuade*; the guest makes up their own mind. Consent levels,
-subject rights, `not_yet_asked` as an honest state — all of it is the reflexive reading of the pun,
+subject rights, `not_asked` as an honest state — all of it is the reflexive reading of the pun,
 enforced. Even Drescher's *Good and Real* runs on this axis: what genuine choice means for a
 deterministic mechanism — a made-up mind making itself up, on the record, with reasons.
 

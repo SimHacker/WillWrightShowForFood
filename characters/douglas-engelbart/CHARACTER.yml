@@ -1,14 +1,15 @@
 # Douglas Engelbart — memorial portrayal (in memoriam). NOT Douglas Engelbart.
 # Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
-character:
-  id: douglas-engelbart
-  name: "Douglas Engelbart"
-  type: memorial
-  signifier: "🕯️"
-  status: deceased
-  field: "Augmenting human intellect — NLS, the mouse, hypertext, the Mother of All Demos (1968)"
-  home: characters/douglas-engelbart/
+id: douglas-engelbart
+name: "Douglas Engelbart"
+type: person
+layer: memorial
+signifier: "🕯️"
+status: deceased
+real_being: true
+field: "Augmenting human intellect — NLS, the mouse, hypertext, the Mother of All Demos (1968)"
+home: characters/douglas-engelbart/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

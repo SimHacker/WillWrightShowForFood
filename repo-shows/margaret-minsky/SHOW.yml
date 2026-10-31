@@ -10,7 +10,7 @@ show:
   character: characters/margaret-minsky/
   topic: "Haptics / force-feedback as real HCI (the Sandpaper texture-synthesis system); Atari Cambridge & MIT Media Lab; and growing up in the MIT-AI-Lab 'first wired family.'"
   status: seed
-  consent: not_yet_asked
+  consent: not_asked
 
 why_her:
   haptics: "MIT Media Lab PhD on the Sandpaper system — synthesizing texture for a force-feedback display. Touch you can program, as HCI rather than gimmick."

@@ -2,7 +2,7 @@
 status: replied
 character_id: roger-gregory
 public: true
-consent: not_addressed
+consent: asked
 channel: facebook
 sent: 2026-09-13
 replied: 2026-09-14

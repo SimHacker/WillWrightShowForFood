@@ -2,7 +2,7 @@
 
 *Conversation hooks — **Don's proposed topics**, grounded in Edd's public work. Not quotes
 put in Edd's mouth.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · friend · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · friend · consent not_asked
 
 Audience README: [README.md](README.md) · North star: [game-ui-archive.md](game-ui-archive.md) ·
 Queer Oui: [Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md) ·

@@ -1,16 +1,18 @@
 # Ralph Abraham — memorial portrayal. NOT Ralph Abraham; we do not speak as him.
 # Standards: ../../schemas/portrayal-standards.md (memorial mode)
 
-character:
-  id: ralph-abraham
-  name: "Ralph Herman Abraham"
-  type: memorial
-  signifier: "🌀"
-  status: deceased
-  born: 1936-07-04
-  died: 2024-09-19   # at home, Santa Cruz County, age 88
-  field: "Mathematician — dynamical systems, chaos; visual mathematics; UCSC from 1968"
-  home: characters/ralph-abraham/
+id: ralph-abraham
+name: "Ralph Herman Abraham"
+type: person
+layer: memorial
+signifier: "🕯️"
+emoji: "🌀"
+status: deceased
+real_being: true
+born: 1936-07-04
+died: 2024-09-19   # at home, Santa Cruz County, age 88
+field: "Mathematician — dynamical systems, chaos; visual mathematics; UCSC from 1968"
+home: characters/ralph-abraham/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md#memorial-mode

@@ -1,14 +1,16 @@
 # Peter Conn — HOMER & Assoc. founder; optical printer; Flying Logos
 # Public sources only. Coco said an intro by email is coming; not yet landed.
 
-character:
-  id: peter-conn
-  name: "Peter Conn"
-  type: invitation
-  signifier: "🎬"
-  status: living
-  field: "HOMER & Assoc. founder; optical printer; Flying Logos (SIGGRAPH); Stanford papers M2262"
-  home: characters/peter-conn/
+id: peter-conn
+name: "Peter Conn"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎬"
+status: living
+real_being: true
+field: "HOMER & Assoc. founder; optical printer; Flying Logos (SIGGRAPH); Stanford papers M2262"
+home: characters/peter-conn/
 
 representation:
   public_figure: true

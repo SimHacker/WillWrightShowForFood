@@ -12,7 +12,7 @@ session as audio on his catalog; this bundle indexes it for the show.
   the repo copy — 6,639,436 bytes, `sha256 3da12c79745d4dcd8ab63e6c3e872d9c7d17b871c58705a5c564081d3c414fd2`
 - **HN citation:** [Don Hopkins on NaturalSpeech / TTS thread](https://news.ycombinator.com/item?id=31430802) (May 19, 2022)
 - **Also posted:** [Maxis Alumni group, 19 May 2022](../../media/2022-05-19-maxis-alumni-simlish-video-post.png) —
-  same day as the HN comment. **Jim Mackraz** ([room](../../../jim-mackraz/)) replied: *"I'm not sure
+  same day as the HN comment. **[Jim Mackraz](../../../jim-mackraz/)** replied: *"I'm not sure
   everybody appreciates what a treasure this recording is!"*
 - **Transcript (draft):** [`TRANSCRIPT-DRAFT.md`](TRANSCRIPT-DRAFT.md) — Whisper + human proofread pending
 - **Date:** *Unknown* — pre-release Sims (thought bubbles, kitchen fires, motive meters, pixelated WooHoo); likely **1998–1999** VO sessions
@@ -23,7 +23,7 @@ session as audio on his catalog; this bundle indexes it for the show.
 *Source:* [Maxis Alumni thread screenshot](../../../eric-hedman/media/2015-02-06-jim-mackraz-shtick-thread.png),
 Jim Mackraz, **6 February 2015**, 6 comments.
 
-The recording has a request behind it. **Jim Mackraz** ([room](../../../jim-mackraz/)) asked the
+The recording has a request behind it. **[Jim Mackraz](../../../jim-mackraz/)** asked the
 group:
 
 > "Does anybody have **the comedy shtick the Sims V1 voice talent put together** (*'I'm going to
@@ -51,8 +51,7 @@ Three things this fixes:
    corrected — worth confirming, since old copies of the link may be dead.
 
 **In the same thread**, Don posted the design-document bundle —
-[`TheSimsDesignDocuments.zip`](../the-sims-design-documents-zip/README.md) — and **Eric Hedman**
-([room](../../../eric-hedman/)) replied with his 2002 concept sheet for an unbuilt Sims arcade
+[`TheSimsDesignDocuments.zip`](../the-sims-design-documents-zip/README.md) — and **[Eric Hedman](../../../eric-hedman/)** replied with his 2002 concept sheet for an unbuilt Sims arcade
 machine: [Arcade Seal Clubber 2: Barky's Revenge](../../../eric-hedman/barkys-revenge.md).
 
 ## Why it matters

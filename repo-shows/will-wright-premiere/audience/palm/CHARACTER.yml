@@ -2,14 +2,14 @@
 # Canonical character: characters/palm/CHARACTER.yml
 # MOOLLM soul: moollm/examples/adventure-4/characters/animals/monkey-palm/
 
-character:
-  name: Palm
-  type: fictional_ai_audience
-  real_being: false
-  signifier: "🐒✋🌴🔮💜"
-  home: repo-shows/will-wright-premiere/audience/palm/
+name: Palm
+type: fictional_ai_audience
+real_being: false
+signifier: "🐒✋🌴🔮💜"
+home: repo-shows/will-wright-premiere/audience/palm/
 
-character_ref: ../../../../characters/palm/CHARACTER.yml
+inherits:
+  - ../../../../characters/palm/CHARACTER.yml
 
 representation:
   fictional: true

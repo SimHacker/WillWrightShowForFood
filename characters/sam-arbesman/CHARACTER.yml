@@ -1,14 +1,16 @@
 # Samuel Arbesman — invitation portrayal. NOT Samuel Arbesman.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: sam-arbesman
-  name: Samuel Arbesman
-  type: invitation
-  signifier: "🧬"
-  status: living
-  field: "Complexity scientist, writer; Microcosm Industries; Overedge Catalog; Long Now · Lux · xLab"
-  home: characters/sam-arbesman/
+id: sam-arbesman
+name: Samuel Arbesman
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧬"
+status: living
+real_being: true
+field: "Complexity scientist, writer; Microcosm Industries; Overedge Catalog; Long Now · Lux · xLab"
+home: characters/sam-arbesman/
 
 representation:
   public_figure: true

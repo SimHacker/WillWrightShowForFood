@@ -1,7 +1,7 @@
 ---
 status: draft
 character_id: janet-murray
-consent: not_yet_asked
+consent: not_asked
 channel: email
 ---
 

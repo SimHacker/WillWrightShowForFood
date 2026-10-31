@@ -1,14 +1,16 @@
 # CHARACTER.yml — gwern
 # Standards: ../../schemas/portrayal-standards.md (read once — do not repeat per character)
 
-character:
-  id: gwern
-  name: "Gwern Branwen"
-  type: invitation
-  signifier: "🧊"
-  status: living
-  field: "Long-form essayist and site-builder — gwern.net; hypertext annotation, popups, archiving"
-  home: characters/gwern/
+id: gwern
+name: "Gwern Branwen"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🧊"
+status: living
+real_being: true
+field: "Long-form essayist and site-builder — gwern.net; hypertext annotation, popups, archiving"
+home: characters/gwern/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

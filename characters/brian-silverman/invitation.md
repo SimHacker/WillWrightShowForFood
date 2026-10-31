@@ -2,7 +2,7 @@
 status: draft
 character_id: brian-silverman
 public: true
-consent: not_yet_asked
+consent: not_asked
 show_seed: repo-shows/brian-silverman-ca-logo-pdp7.yml
 format: async_one_on_one
 priority: send_ready

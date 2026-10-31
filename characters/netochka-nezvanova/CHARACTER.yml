@@ -2,14 +2,16 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Mystique is the medium here: suspected identities and rumors are labeled AS rumors, on purpose.
 
-character:
-  id: netochka-nezvanova
-  name: "Netochka Nezvanova"
-  type: invitation
-  signifier: "🌼🎭🖥️"
-  status: living            # person(s) behind the persona presumed living; the persona is a collective mask
-  field: "Net-art persona / performance-art trolling; author of NATO.0+55+3d and m9ndfukc.0+99 (real-time video/audio for Max, classic Mac OS)"
-  home: characters/netochka-nezvanova/
+id: netochka-nezvanova
+name: "Netochka Nezvanova"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🌼🎭🖥️"
+status: living            # person(s) behind the persona presumed living; the persona is a collective mask
+real_being: true
+field: "Net-art persona / performance-art trolling; author of NATO.0+55+3d and m9ndfukc.0+99 (real-time video/audio for Max, classic Mac OS)"
+home: characters/netochka-nezvanova/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

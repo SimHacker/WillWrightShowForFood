@@ -2,14 +2,16 @@
 # Standards: ../../schemas/portrayal-standards.md
 # Email: kept privately
 
-character:
-  id: bill-st-clair
-  name: "Bill St. Clair"
-  also_known_as: ["William St. Clair", "wwstc"]
-  type: invitation
-  status: living
-  field: "Lisp hacker — ACRC Star Wars↔Lisp Machine; Thinking Machines; Apple MCL/Dylan; Clozure; Mammudeck"
-  home: characters/bill-st-clair/
+id: bill-st-clair
+name: "Bill St. Clair"
+also_known_as: ["William St. Clair", "wwstc"]
+type: person
+layer: invitation
+status: living
+signifier: "👤"
+real_being: true
+field: "Lisp hacker — ACRC Star Wars↔Lisp Machine; Thinking Machines; Apple MCL/Dylan; Clozure; Mammudeck"
+home: characters/bill-st-clair/
 
 representation:
   public_figure: true

@@ -1,11 +1,13 @@
-character:
-  id: bob-supnik
-  name: "Robert M. Supnik"
-  type: invitation
-  signifier: "🖥️"
-  status: living
-  field: "Computer architecture, historic-system emulation, and software preservation"
-  home: characters/bob-supnik/
+id: bob-supnik
+name: "Robert M. Supnik"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🖥️"
+status: living
+real_being: true
+field: "Computer architecture, historic-system emulation, and software preservation"
+home: characters/bob-supnik/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

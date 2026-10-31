@@ -2,7 +2,7 @@
 status: draft
 character_id: w-watson
 public: true
-consent: not_yet_asked
+consent: not_asked
 ---
 
 # Repo Show invitation — W. Watson

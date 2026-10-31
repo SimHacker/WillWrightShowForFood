@@ -1,14 +1,15 @@
 # Chaim Gingold — invitation portrayal. NOT Chaim Gingold.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: chaim-gingold
-  name: "Chaim Gingold"
-  type: invitation
-  signifier: "👤"
-  status: living
-  field: "Designer & historian — Building SimCity, reverse diagrams"
-  home: characters/chaim-gingold/
+id: chaim-gingold
+name: "Chaim Gingold"
+type: person
+layer: invitation
+signifier: "👤"
+status: living
+real_being: true
+field: "Designer & historian — Building SimCity, reverse diagrams"
+home: characters/chaim-gingold/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

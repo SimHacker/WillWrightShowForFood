@@ -1,8 +1,11 @@
 id: glenn-edens
 name: Glenn Edens
+type: person
+layer: profile
 slug: glenn-edens
 role: guest
-status: active
+signifier: "👤"
+real_being: true
 
 affiliations:
   - GRiD Systems (GRiD Compass — early laptop)

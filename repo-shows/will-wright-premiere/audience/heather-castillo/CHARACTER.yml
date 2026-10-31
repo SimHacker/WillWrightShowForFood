@@ -1,12 +1,11 @@
 # Heather Castillo (SimFreaks) — RESERVED front-row audience (real; invited honored guest)
 # Real person, Don's collaborator. Front row with the SimSlice/SimFreaks crew. Plug her sites.
-character:
-  name: Heather Castillo
-  type: real_being
-  real_being: true
-  signifier: "🧟‍♀️🛋️"
-  home: repo-shows/will-wright-premiere/audience/heather-castillo/
-  field: "SimFreaks founder — ~26-year Sims custom-content brand; ZombieSims; worked with Will at Gallium"
+name: Heather Castillo
+type: real_being
+real_being: true
+signifier: "🧟‍♀️🛋️"
+home: repo-shows/will-wright-premiere/audience/heather-castillo/
+field: "SimFreaks founder — ~26-year Sims custom-content brand; ZombieSims; worked with Will at Gallium"
 
 representation:
   real_being: true

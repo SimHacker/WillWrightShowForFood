@@ -159,7 +159,7 @@ Invites Alan as dream guest; mentions **Conscientious Objector club cards** for 
 ### Palm / MOOLLM / The Americans
 
 Side threads: Palm Love Wave videos; PalmHoo directory; *The Americans* **ARPANET episode**
-([Wikipedia](https://en.wikipedia.org/wiki/Arpanet_(The_Americans))) — Don got on ARPANET as a
+([Wikipedia: Arpanet (The Americans)](https://en.wikipedia.org/wiki/Arpanet_(The_Americans))) — Don got on ARPANET as a
 kid by asking the MIT AI Lab for Lisp, not murdering anyone.
 
 ---

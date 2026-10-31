@@ -30,7 +30,7 @@ state properly on air.
 **Don Hopkins:** *"Why the long face?"*
 **Tim LeTourneau:** *"Oh man that brings back memories!"*
 **Cory Tsang:** *"LOL, that was priceless."*
-**Patrick J. Barrett III** ([room](../patrick-j-barrett-iii/README.md)) — *"I almost feel bad as that
+**[Patrick J. Barrett III](../patrick-j-barrett-iii/README.md)** — *"I almost feel bad as that
 was what happened to Sean from working with me. Almost."*
 
 Patrick's is the caption. The pink bear hoodie, the cigarette, the thousand-yard deadpan next to a

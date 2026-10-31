@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Henry's
 public work and documented connections to this repository. Things Don would love to follow
 **with** Henry Minsky; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_asked
 
 ## What Henry has done
 
@@ -45,6 +45,17 @@ printing terminal and lost it. Henry already has ToTS pulls of Marvin's files �
 the person to ask Distinctive Collections for `AI:MINSKY;` versions and DUMP dates
 (create / last-write / last-read), not only a Unix copy of one file.
 [`../marvin-minsky/sources/teco-utm/tots-request.md`](../marvin-minsky/sources/teco-utm/tots-request.md)
+
+### 8. The espresso machine in the Publications Department
+At 545 Tech Square, a large espresso machine stood in the Publications Department, the
+office that published the AI Lab memos and had chairs and couches for reading. Anyone
+could use it. Don remembers it as the AI Lab's or LCS's, and thinks Marvin may have bought
+it, possibly bringing it back from a trip to Europe; he isn't sure of any of that. In his
+2022 HN comment ([33356932](https://news.ycombinator.com/item?id=33356932)) he quotes a grad
+student: "I came here because of LCS's cappuccino machine!" Questions for Henry: who bought
+it and where it came from; whether the Publications Department belonged to the AI Lab, LCS,
+or both; and whether the recruiting story is true. The machine shows up in Don's
+[urchin confession](../kent-pitman/elevator-and-door.md#the-urchins-confession-from-don).
 
 ## Sources (public)
 

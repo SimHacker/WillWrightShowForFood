@@ -1,14 +1,16 @@
 # Jerry Martin — invitation portrayal. NOT Jerry Martin.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: jerry-martin
-  name: "Jerry Martin"
-  type: invitation
-  signifier: "🎵"
-  status: living
-  field: "Composer, producer & sound designer — The Sims, SimCity 3000 & SimCity 4 (Maxis Studio Audio Director / Lead Composer); now Jerry Martin Music / BoomBamBoom"
-  home: characters/jerry-martin/
+id: jerry-martin
+name: "Jerry Martin"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "🎵"
+status: living
+real_being: true
+field: "Composer, producer & sound designer — The Sims, SimCity 3000 & SimCity 4 (Maxis Studio Audio Director / Lead Composer); now Jerry Martin Music / BoomBamBoom"
+home: characters/jerry-martin/
 
 representation:
   public_figure: true

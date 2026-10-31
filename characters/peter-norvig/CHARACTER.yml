@@ -1,15 +1,16 @@
 # Peter Norvig — invitation portrayal. NOT Peter Norvig.
 # Standards: ../../schemas/portrayal-standards.md
 
-character:
-  id: peter-norvig
-  name: "Peter Norvig"
-  type: invitation
-  signifier: "👤"
-  emoji: "📖"
-  status: living
-  field: "AI researcher, educator, author; Director of Research at Google + education fellow at Stanford; co-author of the standard AI textbook (AIMA); author of the essay 'Teach Yourself Programming in Ten Years'"
-  home: characters/peter-norvig/
+id: peter-norvig
+name: "Peter Norvig"
+type: person
+layer: invitation
+signifier: "👤"
+emoji: "📖"
+status: living
+real_being: true
+field: "AI researcher, educator, author; Director of Research at Google + education fellow at Stanford; co-author of the standard AI textbook (AIMA); author of the essay 'Teach Yourself Programming in Ten Years'"
+home: characters/peter-norvig/
 
 representation:
   public_figure: true
