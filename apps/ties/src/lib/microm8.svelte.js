@@ -34,6 +34,17 @@ class MicroM8Machine {
 	/** Speed measured from the cycle counter, in MHz. */
 	mhz = $state(0);
 	sound = $state(true);
+	/** The game port's outputs AN0-AN3 as bits 0-3. */
+	annunciators = $state(0);
+	/** Paddles 0 and 1 follow the pointer over the screen; its buttons are pushbuttons 0 and 1. */
+	mouseStick = $state(false);
+	/** Name of the gamepad driving the paddles, '' when none. */
+	gamepad = $state('');
+	/** Pushbuttons 0-2 as each source holds them; the Apple sees any source holding one. */
+	#held = { key: [false, false, false], mouse: [false, false, false], pad: [false, false, false] };
+	#sent = [false, false, false];
+	/** @type {number[]} */
+	#padAxes = [];
 	/** @type {{ ctx: AudioContext, out: AudioNode, next: number } | null} */
 	#audio = null;
 	#samples = new Float32Array(48000);
@@ -95,6 +106,9 @@ class MicroM8Machine {
 				this.frames++;
 			}
 			this.#play(m);
+			this.#pollGamepad(m);
+			const an = m.annunciators();
+			if (an !== this.annunciators) this.annunciators = an;
 			if (now - polled > 250) {
 				const s = m.status();
 				if (polled && s.cycles >= lastCycles) this.mhz = (s.cycles - lastCycles) / (now - polled) / 1000;
@@ -145,6 +159,48 @@ class MicroM8Machine {
 		src.connect(a.out);
 		src.start(a.next);
 		a.next += n / rate;
+	}
+
+	/**
+	 * Hold or let go of pushbutton `n` for one source of presses.
+	 * @param {'key' | 'mouse' | 'pad'} source
+	 * @param {number} n
+	 * @param {boolean} down
+	 */
+	button(source, n, down) {
+		this.#held[source][n] = down;
+		const any = this.#held.key[n] || this.#held.mouse[n] || this.#held.pad[n];
+		if (any === this.#sent[n] || !this.#m) return;
+		this.#sent[n] = any;
+		this.#m.button(n, any);
+	}
+
+	/** @param {number} n @param {number} value 0 to 255 */
+	paddle(n, value) {
+		this.#m?.paddle(n, value);
+	}
+
+	/**
+	 * The first gamepad: left stick paddles 0 and 1, right stick 2 and 3, its first three
+	 * buttons pushbuttons 0-2. Only changes go to the Apple, so the mouse can drive between.
+	 * @param {import('@wwsff/cabinet/microm8').MicroM8} m
+	 */
+	#pollGamepad(m) {
+		const pad = typeof navigator !== 'undefined' && navigator.getGamepads ? [...navigator.getGamepads()].find((p) => p?.connected) : null;
+		const id = pad?.id ?? '';
+		if (id !== this.gamepad) this.gamepad = id;
+		if (!pad) return;
+		pad.axes.slice(0, 4).forEach((a, n) => {
+			const v = Math.round(((a + 1) / 2) * 255);
+			if (v !== this.#padAxes[n]) {
+				this.#padAxes[n] = v;
+				m.paddle(n, v);
+			}
+		});
+		for (let n = 0; n < 3; n++) {
+			const down = !!pad.buttons[n]?.pressed;
+			if (down !== this.#held.pad[n]) this.button('pad', n, down);
+		}
 	}
 
 	/** @param {KeyboardEvent} ev */

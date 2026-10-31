@@ -40,6 +40,9 @@ export interface MicroM8Api {
 	reboot(): void;
 	reset(): void;
 	speed(warp: number): void;
+	paddle(n: number, value: number): void;
+	button(n: number, down: boolean): void;
+	annunciators(): number;
 	status(): MicroM8Status;
 	key(code: number): void;
 	type(text: string): void;
@@ -205,6 +208,21 @@ export class MicroM8 {
 	/** Run at `warp` times an Apple's speed; the browser tops out near 1.7 MHz for now. */
 	speed(warp: number): void {
 		this.api.speed(warp);
+	}
+
+	/** Game port paddle `n` (0-3) turned to `value`, 0 to 255; PDL(n) reads it back. */
+	paddle(n: number, value: number): void {
+		this.api.paddle(n, Math.round(value));
+	}
+
+	/** Pushbutton `n` (0-2) held or let go; on a //e, 0 and 1 are also Open and Solid Apple. */
+	button(n: number, down: boolean): void {
+		this.api.button(n, down);
+	}
+
+	/** The game port's four one-bit outputs, AN0-AN3, as bits 0-3. */
+	annunciators(): number {
+		return this.api.annunciators();
 	}
 
 	/** The image as the guest has written it, after its pending tracks are written back. */

@@ -2,6 +2,9 @@
 	// The microM8 Apple: its screen, its keyboard, and two drives. Click the screen to type;
 	// pick a disk or drop an image on the screen to put it in the chosen drive. Swapping a disk
 	// never restarts the Apple; Reboot boots drive 1. Pasted text is typed in.
+	// Game port: left and right Alt (Option) are Open and Solid Apple, pushbuttons 0 and 1. A
+	// gamepad drives the paddles whenever one is connected; Joystick puts paddles 0 and 1 under
+	// the pointer, with its buttons as pushbuttons 0 and 1. The lamps are AN0-AN3.
 	// Nothing heavy loads with the page: the 41 MB module comes on the first click, boot or
 	// drop, and a disk only when it is picked.
 	import { FRAME_HEIGHT, FRAME_WIDTH } from '@wwsff/cabinet/microm8';
@@ -66,7 +69,37 @@
 	function onkeydown(ev) {
 		if (!engaged || isField(ev.target)) return;
 		microM8.listen();
-		if (microM8.press(ev)) ev.preventDefault();
+		if (ev.key === 'Alt') {
+			microM8.button('key', ev.location === 2 ? 1 : 0, true);
+			ev.preventDefault();
+		} else if (microM8.press(ev)) ev.preventDefault();
+	}
+
+	/** @param {KeyboardEvent} ev */
+	function onkeyup(ev) {
+		if (ev.key === 'Alt') microM8.button('key', ev.location === 2 ? 1 : 0, false);
+	}
+
+	function onblur() {
+		for (const n of [0, 1, 2]) {
+			microM8.button('key', n, false);
+			microM8.button('mouse', n, false);
+		}
+	}
+
+	/** @param {PointerEvent} ev */
+	function stick(ev) {
+		if (!microM8.mouseStick || !canvas) return;
+		const r = canvas.getBoundingClientRect();
+		const at = (/** @type {number} */ v) => Math.min(255, Math.max(0, Math.round(v * 255)));
+		microM8.paddle(0, at((ev.clientX - r.left) / r.width));
+		microM8.paddle(1, at((ev.clientY - r.top) / r.height));
+	}
+
+	/** @param {PointerEvent} ev @param {boolean} down */
+	function stickButton(ev, down) {
+		if (!microM8.mouseStick || ev.button > 2 || ev.button === 1) return;
+		microM8.button('mouse', ev.button === 2 ? 1 : 0, down);
 	}
 
 	/** @param {PointerEvent} ev */
@@ -105,7 +138,7 @@
 	const baseName = (/** @type {string} */ path) => path.slice(path.lastIndexOf('/') + 1);
 </script>
 
-<svelte:window {onkeydown} {onpaste} {onpointerdown} />
+<svelte:window {onkeydown} {onkeyup} {onblur} {onpaste} {onpointerdown} />
 
 <div class="microm8" {@attach (el) => void (root = el)}>
 	<canvas
@@ -116,7 +149,10 @@
 		class:dragging
 		class:engaged
 		aria-label="Apple II screen"
-		onpointerdown={engage}
+		onpointerdown={(ev) => (engage(), stick(ev), stickButton(ev, true))}
+		onpointermove={stick}
+		onpointerup={(ev) => stickButton(ev, false)}
+		oncontextmenu={(ev) => microM8.mouseStick && ev.preventDefault()}
 		ondragover={(ev) => {
 			ev.preventDefault();
 			dragging = true;
@@ -169,6 +205,12 @@
 				>
 			{/each}
 		</span>
+		<button
+			class:on={microM8.mouseStick}
+			aria-pressed={microM8.mouseStick}
+			title="Joystick: paddles 0 and 1 follow the pointer over the screen; left and right buttons are pushbuttons 0 and 1"
+			onclick={() => ((microM8.mouseStick = !microM8.mouseStick), canvas?.focus())}>Joystick</button
+		>
 		<button onclick={download} disabled={!microM8.drives[drive]} title="Download the disk in the selected drive as the Apple has written it"
 			>Save disk</button
 		>
@@ -184,6 +226,12 @@
 			<span class="num">PC ${hex(microM8.status.pc, 4)}</span>
 			<span class="num">{microM8.mhz.toFixed(2)} MHz</span>
 			<span>{microM8.status.modes.join(' ')}</span>
+			<span class="lamps" title="Annunciators AN0-AN3">
+				{#each [0, 1, 2, 3] as n (n)}
+					<span class="lamp" class:lit={microM8.annunciators & (1 << n)}>{n}</span>
+				{/each}
+			</span>
+			{#if microM8.gamepad}<span class="drive" title={microM8.gamepad}>pad</span>{/if}
 			{#each microM8.drives as name, d (d)}
 				<span class="drive" title={name || 'empty'}>{d + 1}: {name ? baseName(name) : 'empty'}</span>
 			{/each}
@@ -243,6 +291,21 @@
 	}
 	.state .num {
 		font-variant-numeric: tabular-nums;
+	}
+	.lamps {
+		display: inline-flex;
+		gap: 3px;
+	}
+	.lamp {
+		width: 1.2em;
+		text-align: center;
+		border-radius: 3px;
+		background: #333;
+		color: #888;
+	}
+	.lamp.lit {
+		background: #f80;
+		color: #000;
 	}
 	.state .drive {
 		min-width: 0;

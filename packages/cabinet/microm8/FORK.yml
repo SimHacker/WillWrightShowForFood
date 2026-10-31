@@ -44,7 +44,9 @@ patches:
       never cleared, so an idle card wrote the light off on every cycle; the $Cxxx ROM select
       registers skip writes that change nothing. Together 13-19% faster, half the GC time.
       The disk's 8x boost no longer lowers a faster user speed, and a user speed change while
-      the motor runs no longer blocks the boost.
+      the motor runs no longer blocks the boost. Game port: annunciators AN0-AN3 implemented
+      (the $C058-$C05F handler was a TODO; AN3 also on the double hires switch), and
+      paddle(n, value), button(n, down) and annunciators() in the JavaScript API.
     for: upstream, split by subject; the fixes stand alone
     status: >
       applies after 0001-0003 and builds; 220 cabinet tests pass, including keyboard, disk

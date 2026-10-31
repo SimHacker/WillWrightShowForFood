@@ -81,4 +81,29 @@ describe("microm8 module", { skip: !haveMicroM8() && "microm8/dist not built" },
 		}, 10);
 		assert.equal(m.audioRate(), 48000);
 	});
+
+	test("paddles and pushbuttons read back in Applesoft; POKEs set the annunciators", async () => {
+		m.paddle(0, 200);
+		m.paddle(3, 40);
+		m.button(0, true);
+		m.button(2, true);
+		m.type("HOME:PRINT PDL(0);\" \";PDL(3);\" \";PEEK(49249);\" \";PEEK(49250);\" \";PEEK(49251)\n");
+		let got: number[] = [];
+		await until("game port line", () => {
+			const line = m.text().find((l) => /^\d+ \d+ \d+ \d+ \d+/.test(l.trim()));
+			if (line) got = line.trim().split(/\s+/).map(Number);
+			return !!line;
+		}, 10);
+		const [p0, p3, b0, b1, b2] = got;
+		assert.ok(Math.abs(p0! - 200) <= 4, `PDL(0) ${p0}`);
+		assert.ok(Math.abs(p3! - 40) <= 4, `PDL(3) ${p3}`);
+		assert.ok(b0! >= 128 && b1! < 128 && b2! >= 128, `buttons ${b0} ${b1} ${b2}`);
+		m.button(0, false);
+		m.button(2, false);
+
+		m.type("POKE 49240,0:POKE 49243,0:POKE 49244,0:POKE 49247,0\n");
+		await until("annunciators", () => m.annunciators() === 0b1010, 10);
+		m.type("POKE 49241,0:POKE 49246,0\n");
+		await until("AN0 on, AN3 off", () => m.annunciators() === 0b0011, 10);
+	});
 });

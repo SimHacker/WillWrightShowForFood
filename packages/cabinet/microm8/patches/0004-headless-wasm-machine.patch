@@ -82,10 +82,18 @@ index 0000000..b8b8f6f
 +	return this
 +}
 diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go b/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
-index 0e72776..d8266c0 100755
+index 0e72776..0ab0111 100755
 --- a/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
 +++ b/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
-@@ -180,7 +180,14 @@ func (mr *Apple2IOChip) GetRegKeyVal() uint64 {
+@@ -36,6 +36,7 @@ type Apple2IOChip struct {
+ 	Flags         map[string]bool
+ 	e             interfaces.Interpretable
+ 	ss            apple2helpers.SoftSwitchConfig
++	annunciators  [4]bool
+ 	//KeyVal            uint64
+ 	speaker, cassette *AppleSpeaker
+ 	memmode           MemoryFlag
+@@ -180,7 +181,14 @@ func (mr *Apple2IOChip) GetRegKeyVal() uint64 {
  	return uint64(mr.e.GetMemoryMap().ReadInterpreterMemory(mr.e.GetMemIndex(), memory.MICROM8_KEYCODE))
  }
  
@@ -100,7 +108,7 @@ index 0e72776..d8266c0 100755
  	mr.e.GetMemoryMap().WriteInterpreterMemory(mr.e.GetMemIndex(), memory.OCTALYZER_IO_BASE+REG_IOSELECT, uint64(v))
  }
  
-@@ -189,6 +196,9 @@ func (mr *Apple2IOChip) GetRegIOSelect() int {
+@@ -189,6 +197,9 @@ func (mr *Apple2IOChip) GetRegIOSelect() int {
  }
  
  func (mr *Apple2IOChip) SetRegIOInternalROM(v int) {
@@ -110,7 +118,7 @@ index 0e72776..d8266c0 100755
  	mr.e.GetMemoryMap().WriteInterpreterMemory(mr.e.GetMemIndex(), memory.OCTALYZER_IO_BASE+REG_IOINTERNALROM, uint64(v))
  }
  
-@@ -197,6 +207,9 @@ func (mr *Apple2IOChip) GetRegIOInternalROM() int {
+@@ -197,6 +208,9 @@ func (mr *Apple2IOChip) GetRegIOInternalROM() int {
  }
  
  func (mr *Apple2IOChip) SetRegPeripheralROMSlot(v uint64) {
@@ -120,7 +128,7 @@ index 0e72776..d8266c0 100755
  	mr.e.GetMemoryMap().WriteInterpreterMemory(mr.e.GetMemIndex(), memory.OCTALYZER_IO_BASE+REG_PERIPHERALROMSLOT, uint64(v))
  }
  
-@@ -378,6 +391,9 @@ func NewApple2IOChip(mm *memory.MemoryMap, globalbase int, base int, ent interfa
+@@ -378,6 +392,9 @@ func NewApple2IOChip(mm *memory.MemoryMap, globalbase int, base int, ent interfa
  				slotNum := slot.(int)
  				slotDefinition := parseSlotDef(tmp.(map[interface{}]interface{}))
  				//fmt.Printf("*** Slot %d: %v\n", slotNum, slotDefinition)
@@ -130,7 +138,7 @@ index 0e72776..d8266c0 100755
  
  				var f func(b bool)
  
-@@ -388,7 +404,12 @@ func NewApple2IOChip(mm *memory.MemoryMap, globalbase int, base int, ent interfa
+@@ -388,7 +405,12 @@ func NewApple2IOChip(mm *memory.MemoryMap, globalbase int, base int, ent interfa
  						if b && !settings.NoDiskWarp[ent.GetMemIndex()] {
  							//fmt.Println("Engaging warp mode for disk access")
  							settings.MuteCPU = true
@@ -144,7 +152,7 @@ index 0e72776..d8266c0 100755
  						} else {
  							//fmt.Println("Disengaging warp mode for disk access")
  							userwarp, userspeed := cpu.HasUserWarp()
-@@ -705,7 +726,7 @@ func (mr *Apple2IOChip) ResetMemory(skip bool) {
+@@ -705,7 +727,7 @@ func (mr *Apple2IOChip) ResetMemory(skip bool) {
  	}
  
  	cpu.SetWarpUser(1.01)
@@ -241,6 +249,58 @@ index da9f6b2..1df5c18 100755
  	} else {
  		fp, e = files.ReadBytesViaProvider(files.GetPath(filename), files.GetFilename(filename))
  	}
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go b/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go
+index b11ebe5..28f455f 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go
+@@ -1185,8 +1185,24 @@ func (mr *Apple2IOChip) ClearKeyStrobeR(addr int, value *uint64) {
+ 	mr.SetRegKeyVal(mr.GetRegKeyVal() & 0x7f)
+ }
+ 
++// AddressAnnunciator: any access to $C058+2n turns annunciator n off, $C059+2n on. AN3
++// ($C05E/$C05F) is also the //e's double hires switch, handled with the video switches.
+ func (mr *Apple2IOChip) AddressAnnunciator(addr int, value *uint64) {
+-	// TODO: Implement this
++	n := ((addr & 0xf) - 8) >> 1
++	if n >= 0 && n < 4 {
++		mr.annunciators[n] = addr&1 == 1
++	}
++}
++
++// Annunciators returns AN0-AN3 as bits 0-3.
++func (mr *Apple2IOChip) Annunciators() int {
++	bits := 0
++	for n, on := range mr.annunciators {
++		if on {
++			bits |= 1 << n
++		}
++	}
++	return bits
+ }
+ 
+ func (mr *Apple2IOChip) AddressRead_C01x(addr int, value *uint64) {
+@@ -1437,8 +1453,10 @@ func (mr *Apple2IOChip) AddressRead_C05x(addr int, value *uint64) {
+ 	case 0xD:
+ 		mr.AddressAnnunciator(addr, value)
+ 	case 0xE:
++		mr.AddressAnnunciator(addr, value)
+ 		mr.AddressSetVideo(addr, value)
+ 	case 0xF:
++		mr.AddressAnnunciator(addr, value)
+ 		mr.AddressSetVideo(addr, value)
+ 	}
+ 
+@@ -1479,8 +1497,10 @@ func (mr *Apple2IOChip) AddressWrite_C05x(addr int, value *uint64) {
+ 	case 0xD:
+ 		mr.AddressAnnunciator(addr, value)
+ 	case 0xE:
++		mr.AddressAnnunciator(addr, value)
+ 		mr.AddressSetVideo(addr, value)
+ 	case 0xF:
++		mr.AddressAnnunciator(addr, value)
+ 		mr.AddressSetVideo(addr, value)
+ 	}
+ }
 diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/scanrenderer.go b/GoPath/src/paleotronic.com/core/hardware/apple2/scanrenderer.go
 index 567bd67..bdcd2b6 100644
 --- a/GoPath/src/paleotronic.com/core/hardware/apple2/scanrenderer.go
@@ -1241,10 +1301,10 @@ index 0000000..68ec980
 +module github.com/atotto/clipboard
 diff --git a/GoPath/src/paleotronic.com/wasm/main.go b/GoPath/src/paleotronic.com/wasm/main.go
 new file mode 100644
-index 0000000..4dd148d
+index 0000000..7216df1
 --- /dev/null
 +++ b/GoPath/src/paleotronic.com/wasm/main.go
-@@ -0,0 +1,268 @@
+@@ -0,0 +1,307 @@
 +//go:build js && wasm
 +
 +// microM8 as a WebAssembly module: the Apple runs headless in Go, and JavaScript drives it
@@ -1261,6 +1321,7 @@ index 0000000..4dd148d
 +	"syscall/js"
 +	"time"
 +
++	"paleotronic.com/core/hardware/apple2"
 +	"paleotronic.com/core/hardware/apple2helpers"
 +	"paleotronic.com/core/hardware/servicebus"
 +	"paleotronic.com/core/interfaces"
@@ -1335,6 +1396,18 @@ index 0000000..4dd148d
 +	go backend.Run(ram, nil)
 +	ram.InputToggle(slot)
 +}
++
++func ioChip() *apple2.Apple2IOChip {
++	mr, ok := ram.InterpreterMappableAtAddress(slot, 0xc000)
++	if !ok {
++		return nil
++	}
++	io, _ := mr.(*apple2.Apple2IOChip)
++	return io
++}
++
++// The game port's pushbuttons as microM8 stores them: $C063 (PB2) reads its button 3.
++var buttonIndex = [3]int{0, 1, 3}
 +
 +func bytesArg(v js.Value) []byte {
 +	b := make([]byte, v.Get("length").Int())
@@ -1445,6 +1518,32 @@ index 0000000..4dd148d
 +				"cycles": float64(cpu.GlobalCycles),
 +				"disk0":  settings.PureBootVolume[slot],
 +			}
++		}),
++		// paddle(n, value): game port paddle n (0-3) turned to value, 0 to 255.
++		"paddle": js.FuncOf(func(this js.Value, args []js.Value) any {
++			n, v := args[0].Int(), args[1].Int()
++			if n >= 0 && n < 4 {
++				ram.IntSetPaddleValue(slot, n, uint64(min(max(v, 0), 255)))
++			}
++			return nil
++		}),
++		// button(n, down): pushbutton n (0-2); on a //e, 0 and 1 are also Open and Solid Apple.
++		"button": js.FuncOf(func(this js.Value, args []js.Value) any {
++			n, state := args[0].Int(), uint64(0)
++			if args[1].Truthy() {
++				state = 1
++			}
++			if n >= 0 && n < 3 {
++				ram.IntSetPaddleButton(slot, buttonIndex[n], state)
++			}
++			return nil
++		}),
++		// annunciators() is the game port's four outputs AN0-AN3 as bits 0-3.
++		"annunciators": js.FuncOf(func(this js.Value, args []js.Value) any {
++			if io := ioChip(); io != nil {
++				return io.Annunciators()
++			}
++			return 0
 +		}),
 +		"key": js.FuncOf(func(this js.Value, args []js.Value) any {
 +			ram.KeyBufferAdd(slot, uint64(args[0].Int()))
