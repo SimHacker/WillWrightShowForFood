@@ -65,7 +65,7 @@ Not a bug we wrote — a boundary 1972 designed in. `IDRC` returns the
 pen hit packed as `(x>>1)<<9 | (y>>1)`: the low bit of each coordinate
 is gone before software ever sees it. We know because `TRCR` unpacks
 with one left rotate for Y, a shift of eight for X, and masks of
-`1776` — not `1777`. The unpack in the listing is the receipt for the
+`1776` — not `1777`. The unpack in the listing confirms the
 packing formula, and the unit test asserts the round trip. Pen
 coordinates on this machine arrive even; anyone tempted to assert an
 odd number loses to the mask.

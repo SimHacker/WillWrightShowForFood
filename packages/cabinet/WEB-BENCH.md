@@ -9,7 +9,7 @@ either. Companion to [SIMH-MAP.md](SIMH-MAP.md) and [DESIGN.md](DESIGN.md).
 
 **PCjs** (Jeff Parsons, pcjs.org) — the existence proof for this whole bench.
 Pure JavaScript, no WASM, no plugins; IBM PC, PDP-11, PDP-10 and more; runs
-"with or without a web server." Its load-bearing ideas:
+"with or without a web server." Its main ideas:
 
 - **Machines are declarative documents.** A page embeds a machine as config
   (XML v1, JSON v2) listing components wired by id — CPU, RAM, ROM, video,

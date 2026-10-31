@@ -69,6 +69,36 @@ So the simulated turtle can be driven by the actual code: run ITS Logo, connect 
 line to a virtual control box, and let the 1970s program send its characters to a turtle on a
 virtual floor.
 
+## Every device Logo drove, to emulate
+
+The goal is to emulate all of them, so the period's Logos run with everything they could talk
+to. From the LLOGO memo ([AIM-307, 1974](../../characters/henry-lieberman/sources/aim-307-llogo-1974/aim-307-llogo-1974.pdf),
+[OCR text](../../characters/henry-lieberman/sources/aim-307-llogo-1974/aim-307-llogo-1974.ocr.txt)) and LLOGO's
+source ([llogo.lisp.txt](../../characters/don-hopkins/sources/llogo-maclisp-its/llogo.lisp.txt)),
+whose start-up asks which device packages to load:
+
+| Device | Driven by | How it was reached | Cabinet |
+|---|---|---|---|
+| Type 340 display | LLOGO's display turtle, CLOGO, 11LOGO | the PDP-6/10's 340; 11LOGO runs today on the KA10 simulator with a 340 | built, on the PDP-7; needs the KA10 |
+| GT40 | LLOGO (`STARTDISPLAY` with the GT40), asked at start-up: "DO YOU WANT TO USE THE GT40 RATHER THAN THE 340?" | a PDP-11/05 and VT11 display | planned |
+| Knight TV | LLOGO's TV turtle, offered when you log in at a TV terminal | a Lisp array mapped onto TV-11 memory through the 10/11 interface ([MAPPING.md](MAPPING.md#llogo-a-lisp-array-that-is-the-screen)) | planned, with the KA10 |
+| Character terminals | GERMLAND, "the display turtle for character displays such as DATAPOINT terminals", a grid world of germs and food | ordinary terminal output | planned |
+| Music box | LLOGO's music package, on ITS and Multics; an old box and a new one on port 1, 2 or 3, four voices | each note an ASCII character from 040 to 137 down a line | planned, as Web Audio |
+| Pots and joystick | LLOGO's `DIALS`: a pot as a fraction from 0 to 1; the joystick is pots 66 and 67, "must be calibrated" | read through MacLisp's `MPX` and `IMPX`, which the source says has a "bad bit" to mask off | planned, as axes any instrument can turn ([DEVICES.md](DEVICES.md)) |
+| Plotter | LLOGO's `PLOTTER`: the display plotted on a new or the current page | display arrays handed to a separate plotting job | planned, as SVG or PDF |
+| Floor turtle | CLOGO and 11LOGO; the 1974 memo hopes to add it to LLOGO, "controlled by the Thornton Box" | one ASCII character a step down a teletype line ([`turtle.62`](https://github.com/PDP-10/its/blob/master/src/11logo/turtle.62), above) | planned, in 3D ([What to build](#what-to-build)) |
+| TORTIS button box | Radia Perlman's TORTIS | buttons for forward, back, left, right, lamp, pen and toot | planned |
+
+The memo also says why a program can be written without the device: "It is not necessary that
+you have the 340 display scope, or the GT40 display, to do just defining and editing. You can
+even run the procedure if you do not mind not being able to see what the procedure does." The
+cabinet's version of that sentence: every device is there, so you can see it.
+
+Each one fits [DEVICES.md](DEVICES.md)'s layers. The pots are axes, so a data hand or a mouse can
+turn LLOGO's `DIALS`; the music box is a character stream, so the same box plays from 11LOGO on
+a PDP-11 or LLOGO on a PDP-10; the floor turtle's protocol is a serial binding, so any Logo that
+could drive one drives the same 3D turtle.
+
 ## What to build
 
 **1. The turtle as a device on a Teletype line.** It reads the `turtle.62` characters, moves its

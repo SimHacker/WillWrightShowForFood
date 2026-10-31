@@ -1,0 +1,13 @@
+# A Mind Mirror disk. Saves are characters; import writes them back. This file is a description.
+
+game: Timothy Leary's Mind Mirror
+platform: Apple II
+source: mm-flux-raitan.woz
+sha1: e88f71c08e1761ef8c9129bbc41b4bfa2522aecf
+volume: 254
+saves:
+  - file: RAITAN
+    character: characters/raitan/CHARACTER.yml
+    unfinished: true
+files:
+  - {name: RAITAN, type: B, sectors: 1}

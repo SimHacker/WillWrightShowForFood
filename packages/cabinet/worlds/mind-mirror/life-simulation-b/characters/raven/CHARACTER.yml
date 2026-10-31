@@ -1,0 +1,11 @@
+# RAVEN, a life saved by Mind Mirror. The scores are the game's; what each measures is not decoded yet.
+
+name: RAVEN # the name inside the save, from offset 45
+home: DISK.yml
+location: DISK.yml#saves/RAVEN
+mind_mirror:
+  file: RAVEN # the DOS file the game lists and loads
+  address: 1036 # $040C, where SAVE.OVR loads it
+  flag: 1 # offset 0
+  scores: [1, -9, 5, 3, -1, 9, 5, 27, 39, 100, 7, 13, -10, 0, 9, 8, 16] # 17 signed 16-bit words from offset 1
+  bytes: [0, 96, 79, 76, 6, 8, 7, 107, 100, 1] # offsets 35-44

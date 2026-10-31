@@ -27,6 +27,32 @@ This repo traces a line from *Tinker* ("show the machine what you mean") through
 demonstration to pie menus and MOOLLM skills. The NPUC reunion draws on Ted Selker's seven years
 of recordings, and Henry gave the opening talk at the first one.
 
+## Logo papers in this folder
+
+Copies of Henry's MIT Logo papers, from MIT's DSpace, with OCR text beside the scans so they can
+be searched:
+
+- [*LLOGO: An Implementation of LOGO in LISP*](sources/aim-307-llogo-1974/aim-307-llogo-1974.pdf), MIT AI Memo 307
+  (Logo Memo 11), June 1974, with Ira Goldstein, Harry Bochner and Mark L. Miller
+  ([OCR text](sources/aim-307-llogo-1974/aim-307-llogo-1974.ocr.txt), [DSpace](https://dspace.mit.edu/handle/1721.1/6220)).
+  Logo in MacLisp on ITS, TEN50, TENEX and Multics; why Lisp; how it differs from CLOGO and
+  11LOGO; its display turtle for the 340 and GT40, GERMLAND for character terminals, the music
+  box, pots and plotter. On compiling Logo procedures: "For safety's sake, all variables are
+  automatically declared SPECIAL", that is, dynamically bound, as interpreted MacLisp already was.
+- [The March 1975 revision](sources/aim-307a-llogo-1975/aim-307a-llogo-1975.pdf), AIM-307A
+  ([DSpace](https://dspace.mit.edu/handle/1721.1/6221)).
+- [*The TV Turtle: A Logo Graphics System for Raster Displays*](sources/aim-361-tv-turtle-1976/aim-361-tv-turtle-1976.pdf),
+  AI Memo 361 (Logo Memo 25), June 1976: LLOGO's turtle on the Knight TV, which the cabinet's
+  [MAPPING.md](../../packages/cabinet/MAPPING.md#llogo-a-lisp-array-that-is-the-screen) traces
+  through the 10/11 interface.
+- [*Logo Turtle Graphics for the Lisp Machine*](sources/wp-214-lisp-machine-turtle-1981/wp-214-lisp-machine-turtle-1981.pdf), MIT AI
+  Lab Working Paper 214, May 1981.
+- He is also a co-author of the 2020 *History of Logo*, filed with
+  [Cynthia Solomon](../cynthia-solomon/README.md#history-of-logo-2020), its first author.
+
+The cabinet plans to emulate every device these Logos drove:
+[LOGO-TURTLE.md](../../packages/cabinet/LOGO-TURTLE.md#every-device-logo-drove-to-emulate).
+
 ## Links
 
 | | |

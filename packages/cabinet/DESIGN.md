@@ -162,7 +162,7 @@ Per [`TITAN-LINK-PROTOCOL.md`](reference/TITAN-LINK-PROTOCOL.md)
 — the codec and plug-in surface are designed there; the module is
 [`src/plugins/tiny-titan.ts`](src/plugins/tiny-titan.ts), and
 [TINY-TITAN.md](TINY-TITAN.md) is its own page — what it does now,
-what it could do, and why the name is the punchline. Two layers,
+what it could do, and where the name comes from. Two layers,
 split so the far side is repackageable:
 
 - **`TinyTitan`** is the cabinet device, claiming devs 22–23. Its pulses
@@ -921,9 +921,9 @@ loader-side module, not a Device.
 | recorder | segment stream | timestamped segment log (JSONL); WebM via `captureStream` | deterministic replay |
 | phosphor | segment stream | canvas fade; WebGPU dual-phosphor later | the pretty-pass, never a blocker |
 
-Load-bearing choice: **the segment log is the one stream** — snapshot, video,
-phosphor, and the pen all consume it. Record and replay it and every display
-bug is reproducible; the film comparison becomes a diff, not a squint.
+**The segment log is the one stream.** Snapshot, video, phosphor and the pen all
+consume it. Recording and replaying it makes every display bug reproducible, and
+comparing with the films becomes a diff.
 Media files carry YAML-jazz sidecars (source, date, provenance), repo style.
 
 The SVG snapshot is vector-to-vector with no rasterization between: a 340

@@ -59,7 +59,7 @@ needed." It is the constructionist argument this repository keeps returning to
   notes on every pane; a turtleSpaces demo reel; and music as **Xennial**, including "Lost (a
   turtleSpaces Music Video)."
 - **An interview with Steve Wozniak** about designing the Disk II, for Paleotronic in 2018
-  ([Steve Wozniak Talks Disk ][](https://paleotronic.com/2018/05/19/steve-wozniak-talks-disk/)).
+  ([Steve Wozniak Talks Disk \]\[](https://paleotronic.com/2018/05/19/steve-wozniak-talks-disk/)).
 - Talks with April at KansasFest: upcycling with microM8 (2018), and a Claude MCP server for
   microM8 (2025).
 

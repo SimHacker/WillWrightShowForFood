@@ -153,7 +153,7 @@ editor (below). `EDIT` asks the IDE to open a source, a ring or a config at a na
 sends the result back as an ordinary command (`ASSEMBLE`, `DEPOSIT`, `LOAD`). So no Emacs in
 PDP-7 assembly or in Forth. Yet.
 
-## Friendly to an LLM on purpose
+## Designed for an LLM user
 
 An LLM typing at the console is a user like any other, with its own login and rights, and
 the language suits it for the same reasons it suits a newcomer:

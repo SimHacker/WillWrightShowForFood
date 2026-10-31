@@ -1,0 +1,224 @@
+# SCENARIO.MESGS. Each message starts at line, 12 lines to a block; specials and items name the first line.
+
+messages:
+  - line: 0
+    text:
+      - "Ú\túôÌêøðïïºðãæ®ÞÍÊÍ"
+      - "×ÔÑÎÿ÷ÅäñåçÝ³äÜªÛÌÆ\x9eÁÊ¶Ë\x9d"
+      - ÖÿùòýÇêðóí¸èæÔÜÜ¦ÄÈÂ»» 
+      - "ÕÒÏÌëû÷ÀñâéÙÖ®ÞÜÊÒÒ\x9cºÍ´É\x9b\x8c"
+  - line: 4
+    text:
+      - "ú\x03ýøÈæîë¼ÝßåÕÐÞÐÓÏÑ\x9b»¶À\x8f®®\x86«¥\x9e¬\x9b"
+      - "\aøòÊöñêìêíè²âÛÞÔÇÓ\x9dÉ½\x94¹Ã¹¯·»\x8b"
+      - "\tøøíÆååÞíëç±ÝÑ¨ÆÎË\x9c½»Æ³¿³·¸ª­©«\x83"
+  - line: 7
+    text:
+      - "Ó\x02óúêç¿îè××ã­ÞÖ¤ÇÍÇÄÄÉ"
+      - "ÐÍÊÇóïêô¸äàÔ¬ÖÇÜ ÖÉÌ\x94Å¯¶­\x93"
+      - "ÏïñõòóâºîÝäÓ×á¥ÃÌËÇ½\x93Äµ¯´\x90"
+      - "ÎËÈÅîäïí¶çØÒªØÙÆÑÏ\x98ÎÁÄ\x8c¯µµ³\x9e¥\x9c\x82s"
+  - line: 11
+    text:
+      - "îýÇýðó»ÝãæÔÞ©ÚËÅ\x9dÌÆÃ¾\x9a\x8bÁ´·\x7f¯\x9e\x9b"
+      - "íÉìäíææàÕã®ÑÑÌ×ÑÁ\x99È¼Ã²\x96\x87»¢´ x\x9d\x9b¢l\x8a\x98\x90\x93"
+      - ìöéÂòäèëç¼
+      - ""
+      - "ÉÆÃÀ½¼äÕá×Ý×¥ÏÀÄºÃ´\x90±³¹³®\x9f¯z"
+  - line: 16
+    text:
+      - "ñÅãì¼Ú¶ßßÛÏÓÝ¡ÀÀÁÃ¹\x9b\x8c¼©¤²¯\x9f\x9bt\x93§k\x9b\x9c\x91\x91\x80\x8c"
+      - "þóöìßÝÙ²Ñå©ÏÕÏË¦\x97Ç²Â°¬\x85¹¨°¡"
+      - "ÆÃÀ½ºÙÕåâ×Í²ÆÄÁ½É\x9f"
+      - "üçàîâÛ×°Ïã§ÆÍ¿¿½È \x8f»¯º¨®"
+      - "ÄÁ¾»¸Þ²æÕÝÔÈÓÐ\x9aÎµÃ\x9a"
+      - "óåïãããæá«ÎÎÉÇÐ¥\x96Á¿¿\x8a¯³±£"
+      - "Â¿¼¹¶ÙßßªÊÓÏÑÊÄ¶Æ¸»·\x92"
+      - "õæÜìµÓÝå©ÎÈÌÍ\x9aÄµÊ\x8e½­¸¥´¡y£\x98p\x93\x9c\x96\x91"
+      - "óñìàÚÖ®ÍÍËÑÑÁ\x99¿\x93À²¼°·©~\x9c¥¤ \x96l\x8f\x8f\x8a\x88\x91\x83\x85{"
+      - "ìáçÄ³°ÏßÛ¤É¿ÈÅºÄ´°\x89¹º¯¯\x9eª\x80"
+      - "¾»¸µ²×ÍÛÊ£ÅÁÁ¼¸\x91¯¹¬\x85©±¥¦¢¬p \x92\x88\x96\x91j"
+      - "ßÛëèÖà«ÕÊ®\x9f½Çº\x93Äµ¯\x87¬¢¬\x9f¯¤¤\x9a"
+      - "¼¹¶³°ÜÐ§ØÉÃ\x9bËÂ»Ã´"
+      - "Ýáé×â¬ÒÔ£ÔÅ¿\x97·²Á¿´ªµ\x9a|¢v ¥ \x9eg\x89\x97\x83\x8dX\x8csx\x80"
+      - "Û·×àÜßÍØÖ\x9fÕ¾Ê\x93½¼¼¬\x84¤°°\x9d¡\x80"
+      - "¹¶³°­Ó§ÇÐÓÇ¼\x95À´Â®¸"
+      - "áã²ÐÚâ¦ËÁ¿ÃËµÅ·º¶\x85¨¨ª\x9dv§\x98\x92j\x9a\x93\x93\x92"
+      - "æÚ±ÒÚËÙÑÑ\x9cÐ¾Â\x90°¹¼°¥~£\x9d\x96\x9e"
+      - "¶³°­ªÔÝ¡ÕÊÍÃ¶Â\x8cÀ¯·¨}¢\x9c¦\x93¡"
+      - "×çã¬ÌÛ×Ó\x9dÀÉÃ¾\x8e¾¿´´£¯"
+      - "´±®«ÍÛÇÑ\x9cÂÄ¶Â²«º©\x81­©x¢\x97"
+      - "çØßÙÜËÉ\x9e¿½¶¶»Å\x89©²®±\x9fª¨}"
+      - "²¯¬©ÈÒÔÅ\x9a¹Í\x91²¬Á\x85£­ y¤\x9c\x97\x95\x9eu"
+      - ±
+      - "°­ª§¤ØÆ¼Ì\x95³¼\x8c²¥"
+  - line: 41
+    text:
+      - âÔÒËÏÄ
+  - line: 42
+    text:
+      - "×Ù¨ÙÊÄ\x9c¼»ÁÄ²¼\x87³§~¯ \x9ar¡\x9b\x98\x93c\x93\x91{\x85x\x84Nl"
+      - "ÏÜÐÇÌ«Ò¹Á¾´°\x89½¨¬©\x88w\x96\x96¡\x94\x8c\x8ab\x88\x90Y\x7f\x86PnJzmhl"
+      - "ÞÎÇÇÉËÁ±\x94\x93Å´»­§²\x96y\x8b\x83\x80}j\x8e\x94a^\x92\x81\x8f{r{{vQB"
+  - line: 45
+    text:
+      - "Ì¨ØËÆÊ\x99Ä¸±¿\x8a»¬¦~¢ª¤§\x9d\x90i\x98\x88\x81\x81\x8dq"
+      - "ª§¤£¿\x9b»¶È´¾·\x8d¶\x80¡\x9b©\x9f\x7f|yj"
+  - line: 47
+    text:
+      - "©¦£¢¾Í\x97È¹³\x8b±³µ¨ \x9ev¢\x96m\x8bg\x91\x90\x93\x89\x8cv{}ZWTE"
+  - line: 48
+    text:
+      - "¨¥¢¡ÀÈÍÁ\x90Á²¬\x84©\x9f§¤\x83\x80}n"
+  - line: 49
+    text:
+      - "§¤¡ ©¦£\x92°\x8c¬²¨¡¯z\x99 ¦\x93k\x8e\x94\x97\x8d\x90z\x7f\x81^O"
+      - ¦£ 
+      - "¥¢\x9f\x9c\x99\x96\x93\x90\x8d\x8a\x87\x84\x81~{xurol\x8b\x9b\x95\x8d~Z\x8a|r\x84pHMvlE"
+  - line: 52
+    text:
+      - "ÅÔ\x9eÔÇÊ\x92´º½«µ\x8c}\x9b¥t\x96\x93\x9d\x91\x8ab\x86\x88\x88\x8dSvvvswArc]"
+      - "ÕÏÌÇ¥\x94È·¿°\x85£\x7f\x9e«\x9f\x9f\x9c\x96\x8b\x95\x98a\x84\x87y\x88z[Lj"
+      - "ÖÎÓ¾È¼¾´\x8a¨´±\x9f­¡©\x9b\x9e\x9ai\x87\x93\x90\x82{\x89\x87Qppnttd<reh"
+      - "ÔÆÀ\x98ÈÂ´­´¹\x9d"
+      - "¢Å¿¸Æ\x91Â³­¸§\x8b|­\x9e\x98p¤\x99\x99\x88\x94^\x8a~Uy}uujdN"
+      - "ÓÄ¾\x96¶¹ÁÃ\x87°­·§\x9f\x96\x9f\x9dl\x91\x87\x99\x89\x8b\x81W\x87y}\x82vEkso"
+      - "ÓÉÏÄÄÃ´²´¨³°\x86w\x9dq\x91\x93\x97\x98\x87_\x90\x88V\x85upvhmn"
+      - "ÑÂ¼\x94ÄÇ¸ª´®²|¨\x9cs\x9d¦j\x8d\x85\x97\x8d\x8df"
+      - "\x9eÈÄ¿É\x8d²¬¶¦\x8a{¡£r\x9c¥i\x9a\x88\x8d\x8d\x86|`Q{l\x81Eqma9"
+      - "ÒÇÇÆ·Å\x89«±¯²¡\x9ft£\x93\x92\x89\x8e\x90_\x90\x81\x85\x86uM}\x80qcmgk5"
+      - "»Å¸\x91À°¼º´­\x8ayv\x95¥¡j\x9e\x93\x86^\x8f\x87U\x86w{|kC"
+      - "ÎÄ·µÀ¯¹ºª¬¢x¬\x9a\x9el\x96\x87\x9c`\x91\x8c\x90b"
+      - "\x9aÉÁ\x8f»«º¤©«z¤­q¡\x9f\x89\x8b\x88k\\\x88\x84xPz\x7fzxA_^ij[aQ"
+      - "Ë¼¶\x8e±±»§\x8d|­\x9e\x98£\x92j\x88\x96\x86^\x8f\x80zR\x83q|zvL"
+      - "·Á´\x8d½¯¥­ª{\x9a\x9ar£\x94\x8ef\x93\x92\x8c\x89}`"
+      - "\x95\x92\x8f\x8c\x89¨¨¦¬¬\x9ct\x9e\x93k\x98\x97\x87\x92\x81\x87\x8axt["
+      - "\x96Å¶´»\x85«²|­\x9e\x98p¤\x93\x93\x90a\x8d\x81X|\x80xxmgQB"
+      - "\x93"
+      - "Æ·±\x89§³°\x9e¬ ¨\x9a\x9d\x99h\x98\x8e\x8e\x93\x85\x8fSvnnlwO"
+  - line: 71
+    text:
+      - "²\x8e»©³§«|¬¢\x94\x9d j\x9a\x8c\x96\x92[zzzxzmF|or;"
+  - line: 72
+    text:
+      - "É¼¿\x87·µ\x9f©\x9cu\x93£l\x9d\x8e\x88`\x82\x88\x8b\x86r|nmEqe<p^Td"
+      - "Â±®³¶\x80±©w\x96\x96n\x8ch\x8d\x97\x86\x81Yyt\x86r|uRArc]5X[[XX"
+      - "¯¹¬\x85¹ ¨¥©s\x91\x9f\x8fg\x87\x90\x94\x80\x8azvO\x83rzk@ji`gec]M@"
+      - "Á²¬\x84¢§­x\x9e¥o\x8f\x98\x95\x8f`~\x88{TuoysS"
+      - "²»µ°\x80±¢\x9ct§\x8f \x94\x99\x87\x83\\|{||vxnDi_i_5YaQJZ"
+      - "¾¼¦® \x9f­\x9f§\x95 vg\x85\x8f\x82[\x8d\x83}}{\x80tCsj[c`1OYQRCKO"
+      - "½¸¹¦\x9f¦x\x96 \x93l\x9c\x89\x98\x92\x8f\x93W}\x7fN\x7fpjBc]kaaU`]5"
+  - line: 79
+    text:
+      - "®¼¨²}\x9d¦¢¤\x97\x8f\x8d\x97\x87\x83\\z\x84\x82\x84uoyDmgi]5aU,`UUK<"
+  - line: 80
+    text:
+      - "ªª¨®®\x9ev¬\x9f¢j\x90\x97a\x7f[\x88~~tLxlCse[khV`PL"
+      - "º¸°¬ x¬\x9a\x98\x8f\x91f\x84\x90\x8d\x7fx\x86\x84N\x7fwEdd<m^X0_OZYMR"
+      - "µ©\x80\x9ez\x9a\x95§\x93x\x91\x93p_"
+      - "\x85"
+      - "¦¦¬ \x99©\x9ao \x91\x8bc\x92\x8c}\x82\x87]N\x84wzBcelYbfR\\"
+      - "¶¨\x9e¬\x9b§q\x9d\x91h\x87\x94\x8e\x87~\x84Sr|xlDbl_8W[c_)UI"
+      - "µ¬\x9d¬\x9e\x98\x94yj\x99\x99\x94\x92\x80|Us\x81yxxQ"
+  - line: 87
+    text:
+      - "µ¦\x9c¬u\x9d\x98\x9a\x90rc\x94\x85\x7fW\x7fz|rH|jn<peecUSWW!NJO:D"
+      - "\x80}z®\x9d\x9d\x9ak\x90\x86\x98\x84\\\x87\x85\x81uM\x81pxigi8][b,]UPB+"
+  - line: 89
+    text:
+      - "³¤\x9aªs\x9b\x96\x98\x8epa\x92\x83}U}xzpFzhl:nccaSQUU\x1fCHB7\x1c"
+      - "~{x¬\x9b\x9b\x98i\x94\x92`\x8a\x89\x89yQ\x81pmEjho9jeUN]\\VF\x1eMGD?\x1d"
+  - line: 91
+    text:
+      - "±¢\x98¨q\x99\x94\x96\x8cn_\x90\x81{S{vxnDxfj8laa_QOSS\x1dN?9D3"
+      - "|yv§\x98\x8e\x9eg\x8f\x8a\x8c\x82dUztLooqdp:[c`[,"
+  - line: 93
+    text:
+      - "§±\x9e \x96l\x92\x94c\x86\x8f\x89\x85\x88Q}qHyjd<]ebb-SZ$B\x1e==6EC"
+      - "± ¨\x99n\x9f\x90\x8ab\x87\x81zzS\x7fsJhDn_i8V`S,]NH ?I;M\x11=1"
+      - "\x9av\x9f\x99\x9c\x98ud\x8a\x8c[y\x83Rw\x85ytrtf]7j`WNM%"
+      - "¡©r\x98\x9a\x9d\x95\x91\x85\x90t"
+      - "y\x99\x9f¢\x90\x9ae\x8a\x84\x8e~bS\x84uoGzfpt8[Wf"
+      - "vª\x98\x9cj\x8a\x85\x8f^\x82\x81\x8bwO\x80qkCakmnYc._ZZG"
+      - "u¡\x95l\x9d\x8e\x8c\x93]\x8c\x80xuzpHfuja]6bV-cVY/"
+      - t
+      - "s£\x92\x8b\x99\x87\x89^\x8f\x80~\x85Oxn|hlI:`Z1gZ]%F@N>"
+      - "r¢\x91\x8a\x98\x86\x88]\x7fxwyNomsB`j]6`_[][IS\x1eG9>D"
+      - "q¢\x93\x9a\x8a\x87_\x7f\x85\x8bx\x83Mrhzf>d8][SPNT#TE?I9\x1f"
+      - p
+      - "o\x9f\x8e\x87\x95\x83\x85Z|utvKxfur]`[3Q[N'IBAC\x18GA>9"
+      - "n\x91\x97\x97b\x80\\\x84\x7f\x81wM\x81pxigi8][b,]UPB"
+      - "m\x90\x96\x96a\x92\x83}Us}\x7f\x80ku@t[j4YW^(IQNI'"
+      - l
+      - "k\x91\x8bb\x98\x8b\x8eV\x7fy\x83oSDzmp8hZ^aUJ#NLN\x17@@A0"
+      - "j\x8d\x93\x93^\x8f\x80zRpz|}hr=nf4eVT[%TTO>"
+      - "i\x92\x8c\x85\x90Zz\x83\x7ft\x80{jf?]feaW-^OI!AGM:E\x1d"
+  - line: 112
+    text:
+      - "\x9c\x8d\x87_\x87\x87\x7fzx\x81JvjAbdYba]P\\"
+  - line: 113
+    text:
+      - "\x9b\x8c\x86^|\x88\x85s\x81u}orn=l\\Ua^PIWU\x1f=G:\x139;>62&1\x15"
+      - f
+      - eb_\YVSPOyuiA_ggcW=.
+  - line: 116
+    text:
+      - "\x85a\x91\x8fy\x89\x87tLxlCte_7YR`_P2IN@%\x16:>66+%"
+  - line: 117
+    text:
+      - "\x8aumjg"
+  - line: 118
+    text:
+      - "\x83_\x8a\x88\x8dSvnwppj_m8Vb_M[OWILH\x175A>0)75"
+      - "\x82\x8c\x7fX\x88s\x88\x7fcFCBqbicfUS(^QTN\x19L4<<<\x13\x048'/\x04"
+      - "\x81\x8b~W\x84\x83s~msed<h\\3]VXK0!\x1eTGJ\x127-?+\x030/)-\x19\x15"
+      - "\x98\x8b\x8e\x88\x86uypGxign8YSh:)&EY\x1dI9H27913)ÿ0!\e"
+      - "\x84\x90\x84\x81R\x81qpgoi^:fZ1bSM%NDC>D71?C\a//'\" )"
+      - "~\x88{T\x81\x80p{jpseg]3Ya*OISC\e::8>>.\x060%\tú0#&"
+      - "\x84z\x8cxPqotsoqojVfTP)ZKE\x1dQFFE6\v7+\x028+.("
+      - "\x84\x84\x80`OLrFvh^fc4cSNTFKL\x1cM>BC2
+
+        (65'!\x19\x18&\"ø"
+      - "|\x8c\x88Qow{tBveeb3Y-ZYITCIL\x15K>A\t=,4%ú\x18"
+      - "\x80\x7fy\x84["
+      - X
+  - line: 129
+    text:
+      - "\x89ytst~jBsd^6fdNPM$PD\e?C;;0*\a"
+  - line: 130
+    text:
+      - "wS\x87v\x84lrfb;kVYT8)YLTQCE;\x1179\b&\x02+\x1d+\x1d\x18ð"
+      - "\x85{{qIui@aojhj:+U^USAK?BE@
+
+        )30).\x04õ&$\x1e\x17\x19"
+      - "\x88\x80N\x84wzB`j]6fQf]A$#DJJ\x154D@\t\x17\x13\x10\r
+
+        \aô\x18\x1d\x17\fñ"
+      - "\x80q{\x83Gxigi_h2fUUR#YLO\x1766\x0e?71&\rþ"
+  - line: 134
+    text:
+      - r`\YVSP
+  - line: 135
+    text:
+      - "\x85vpHxcfa9kfXR\\Z$ZMP\x18>@C;\t'\x03,\x1e0 '\x19\x1a$"
+      - "trmvvbr`\\5ecaM_/ Q;B9D\x0e,\b-7&!ù*\"\x1d\x12ê\x16
+
+        \a"
+      - "~znFrvblccRRPL%DNKDI;590\x13\x044'/+õ\x16\x1e#\x17"
+      - "pppnpc<Z6_Q_QL$ECNC!\x120:-\x0660\"\e\"'\v"
+      - "Ow\x80Dtrp\\^Wb,QGYE\x1dM?CH<\v<-'ÿ/-\x17%#í\r\x16\x11\x06"
+      - "uwzr@^:eYh.NWSHHCNH4D695\x04'\x1f1''\x13\x11\x18\x0eæ\x17\x0f"
+      - "xis{?pa_aW`8'QVAC\x18=3B\f,.$.$\x1f\e\0ñ\x0f\x19\få\x16\a\x01"
+      - "\x81pwf>hYn2_^XLLT\x1d@IC>\x0e>=(*ÿ\x1f!\x17!\x17\x12\x1dõ"
+      - "KyhvblX`1a[MQNR\x1c:H8\x10;9;\x048&\x1c,õ&\x17\x11\"æ\x16\x05\x02\a"
+      - "|tBaaG6fYYOUGF\x1eRAA>\x0f>./*.\tú* \x16\x13\eè\f\x11"
+      - "vrAsi\\^eca[HHD)\x1a8B5\x0eD7:4ÿ!'\e \x19\x12\x1dç\e
+
+
+        \a"
+      - "hh@e_cX1PLKP\"AA?EE5\rC69\x0f"
+      - "Gpdem^Xb-RHW!J<LJ?0<2)\x03',(\x1cô&\x1c\x0e\x10\x06\x10\x06\x01ýñ"
+      - "iwci8iZT,PXHAQ\x1aNCC2\v5&* )\x1a$ó\x18\x0e\x1dç
+
+        \x10\x13\tü"
+      - "d@c[mccOMTJ\"BDH?65\r35\x045& ø(&\x10\x1e\x1côå"

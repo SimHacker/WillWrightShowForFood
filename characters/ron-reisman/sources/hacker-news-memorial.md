@@ -16,7 +16,7 @@ Key links cited in-thread:
 - [NASA 50th CTAS/TFAS bio](https://www.nasa.gov/50th/Folklife/biosPropulsion.html)
 - [USEnix 2002 ATM intro PDF](https://www.usenix.org/legacy/events/usenix02/usenix02.pdf)
 - [Minsky at Ames simulator](https://www.youtube.com/watch?v=mOKENF_-z8Y)
-- [Dolphin / Apple ][ thread](https://news.ycombinator.com/item?id=32039126)
+- [Dolphin / Apple \]\[ thread](https://news.ycombinator.com/item?id=32039126)
 - [Dolphin video — Ron on intelligence (~6:32)](https://www.youtube.com/watch?v=CWHCTNztnwQ&t=392s)
 
 Documented Ron quote (from video, not paraphrase):

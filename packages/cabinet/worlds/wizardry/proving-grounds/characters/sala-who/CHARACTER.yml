@@ -1,0 +1,43 @@
+# SALA WHO: roster slot 13 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: SALA WHO
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 55
+inventory:
+  - {item: LONG SWORD+1, equipped: true, cursed: false, identified: true}
+  - {item: HELM, equipped: true, cursed: false, identified: true}
+  - {item: SHIELD + 2, equipped: true, cursed: false, identified: true}
+  - {item: BREAST PLATE +1, equipped: true, cursed: false, identified: true}
+  - {item: SHIELD + 2, equipped: false, cursed: false, identified: false}
+  - {item: CHAIN -1, equipped: false, cursed: false, identified: false}
+spells: []
+wizardry:
+  slot: 13
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: DWARF
+  class: FIGHTER
+  age_weeks: 1223
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 18, iq: 10, piety: 15, vitality: 14, agility: 18, luck: 12}
+  luck_skill: [13, 16, 16, 12, 16]
+  experience: 98115
+  max_level: 10
+  level: 10
+  hp: 53 # hit points left
+  hp_max: 68
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 13
+  armor_class: -1 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 3
+  damage: {count: 1, sides: 8, bonus: 4}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

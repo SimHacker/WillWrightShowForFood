@@ -1,0 +1,305 @@
+# Apple II floppies and Apple Pascal manuals for the cabinet's microM8 Apple.
+# Fetched 2026-10-31 from the microM8 server's shared library (microm8.paleotronic.com,
+# the /appleii mount; files over HTTP :6582/files/legacy/<path>) with microM8's tools/m8lib.
+# LIBRARY.tsv: the whole library as walked 2026-10-31 (kind, bytes, path, description; 27,687 files).
+# source: the library path, which carries the publisher, year and cracker in the old naming,
+# or an archive.org download URL.
+# note: what is on the disk, where it differs from its siblings.
+
+disks:
+  - file: little-computer-people/lcp-4am-side-a.dsk
+    bytes: 143360
+    sha1: c155e5cfd7890322a86361398a5fdcccaca5d9f3
+    source: "disk images/collections/4am collection/littlecomputerpeople4amcrack/little computer people (4am crack) side a.dsk"
+  - file: little-computer-people/lcp-4am-side-b.dsk
+    bytes: 143360
+    sha1: c486880355f57bce67c0948b0973a8d4007cb1b4
+    source: "disk images/collections/4am collection/littlecomputerpeople4amcrack/little computer people (4am crack) side b.dsk"
+  - file: little-computer-people/lcp-4am-work-disk.dsk
+    bytes: 143360
+    sha1: 58061c061602dc6bcc212fcd6b5a8bcfd9762a62
+    source: "disk images/collections/4am collection/littlecomputerpeople4amcrack/little computer people (4am crack) work disk.dsk"
+  - file: little-computer-people/lcp-house-on-a-disc-side-a.woz
+    bytes: 233468
+    sha1: edb4e8650e848e6090f636bebd1cbf95b0cad535
+    source: "disk images/woz/games j-r/little computer people project - house-on-a-disc (activision)/little computer people project - disk 1, side a.woz"
+  - file: little-computer-people/lcp-house-on-a-disc-side-b.woz
+    bytes: 233468
+    sha1: 6225f1a5fb14033197367271c6b66fa5fe9ecbe4
+    source: "disk images/woz/games j-r/little computer people project - house-on-a-disc (activision)/little computer people project - disk 1, side b.woz"
+  - file: mind-mirror/mind-mirror-disk-1.dsk
+    bytes: 143360
+    sha1: 7ec85189893041eca9bb8c89fd22b7d432d832d3
+    source: "disk images/applications/mind mirror (1985)(electronic arts)(disk 1 of 3)[cr digital gang].dsk"
+  - file: mind-mirror/mind-mirror-disk-2.dsk
+    bytes: 143360
+    sha1: 0afb8287e588ef15595447cb2e842cbdf5f42181
+    source: "disk images/applications/mind mirror (1985)(electronic arts)(disk 2 of 3)[cr digital gang].dsk"
+  - file: mind-mirror/mind-mirror-disk-3.dsk
+    bytes: 143360
+    sha1: 5452cb7473dabba56fefbc044cf8324d7d403d7c
+    source: "disk images/applications/mind mirror (1985)(electronic arts)(disk 3 of 3)[cr digital gang].dsk"
+  - file: mind-mirror/mind-mirror-4am-playable.dsk
+    bytes: 143360
+    sha1: bde3a53c7fc6b0e2ca57f3e864f685f5a21538a6
+    source: "disk images/collections/4am collection/mindmirror4amcrack/00playable.dsk"
+  - file: little-computer-people/lcp-wozaday-playable.woz
+    bytes: 234752
+    sha1: d3c86984960e66b4a1bf988047b495d766973225
+    source: "https://archive.org/download/wozaday_Little_Computer_People/00playable.woz"
+    note: "house 318"
+  - file: little-computer-people/lcp-project-disk-1-of-2.woz
+    bytes: 233216
+    sha1: edf4f2aaa8b626479b3162fbcdebc014fe12f3a5
+    source: "disk images/woz/games j-r/little computer people project (1985)(activision)(disk 1 of 2).woz"
+    note: "house 318; the 4am crack was made from this copy"
+  - file: little-computer-people/lcp-project-alt-disk-1-of-2.woz
+    bytes: 233216
+    sha1: 030deedd52d3acb6d7cb46fe9f9af95118c0de07
+    source: "disk images/woz/games j-r/little computer people project (1985)(activision)(alt)(disk 1 of 2).woz"
+    note: "house 443"
+  - file: little-computer-people/lcp-project-disk-2-of-2-alt-2.woz
+    bytes: 233216
+    sha1: 0cf61f0f92b344952f51dd236a9f28336e786613
+    source: "disk images/woz/games j-r/little computer people project (1985)(activision)(disk 2 of 2)(alt 2).woz"
+  - file: little-computer-people/lcp-side-b.dsk
+    bytes: 143360
+    sha1: e82315f9e7a9d940f8fac4574d1ed6084c62519e
+    source: "disk images/games/l/little computer people (1985)(activision)(side b).dsk"
+  - file: little-computer-people/lcp-circle-k-side-a.dsk
+    bytes: 143360
+    sha1: 5706b405ea786101f0dcc09652377374337d14f2
+    source: "disk images/games/l/little computer people (1985)(activision)(side a)[cr circle k - extension 1200].dsk"
+    note: "house 314; the same image is in the library as (disk 1 of 1 side a)[cr cirlce k- extension 1200] and on archive.org as little_computer_people_1"
+  - file: little-computer-people/lcp-circle-k-side-b.dsk
+    bytes: 143360
+    sha1: a6f100174e10ad56faedf14eadb0f2566a9482c5
+    source: "disk images/games/l/little computer people (1985)(activision)(side b)[cr circle k - extension 1200].dsk"
+    note: "also (disk 1 of 1 side b) in the library and little_computer_people_2 on archive.org"
+  - file: little-computer-people/lcp-circle-k-431-side-a.dsk
+    bytes: 143360
+    sha1: e397d09ed302f68e6e7083a91fce0f08eec08c0c
+    source: "https://archive.org/download/431_Little_Computer_People_Disk_1/431_Little_Computer_People_Disk_1.dsk"
+    note: "the Circle K crack with five loader bytes at 32.E changed so the crack's title screen is skipped"
+  - file: little-computer-people/lcp-french-touch-face-1.dsk
+    bytes: 143360
+    sha1: 755b8ff39a0ed9524b2672967d14bd7415c14780
+    source: "disk images/collections/french touch/mars 2012/boite 3/little computer people - face 1.dsk"
+    note: "house 47"
+  - file: little-computer-people/lcp-french-touch-face-2.dsk
+    bytes: 143360
+    sha1: fd8220c9385d169ca2afaa0e861c81688e241e2a
+    source: "disk images/collections/french touch/mars 2012/boite 3/little computer people - face 2.dsk"
+  - file: little-computer-people/lcp-french-touch-utilitaires-a.dsk
+    bytes: 143360
+    sha1: 6b64a844175b14752ace5b674b283ab027ad93ff
+    source: "disk images/collections/french touch/avril-mai (2) 2013/boite utilitaires 2/little computer people -a.dsk"
+    note: "house 2493"
+  - file: little-computer-people/lcp-french-touch-utilitaires-b.dsk
+    bytes: 143360
+    sha1: 301239ae4ad79a0ca4c1f17851f60bfe2513190a
+    source: "disk images/collections/french touch/avril-mai (2) 2013/boite utilitaires 2/little computer people -b.dsk"
+  - file: little-computer-people/lcp-french-touch-fastdsk-a.dsk
+    bytes: 143360
+    sha1: 8c27e240da642769fb2fb2fcf1f3d4545b292653
+    source: "disk images/collections/french touch/avril-mai (2) 2013/boite jeux 3/fastdsk/little computer people -a.dsk"
+  - file: little-computer-people/lcp-french-touch-fastdsk-b.dsk
+    bytes: 143360
+    sha1: 6ada49b085a2e381d36056818c200a88fe2974b7
+    source: "disk images/collections/french touch/avril-mai (2) 2013/boite jeux 3/fastdsk/little computer people -b.dsk"
+  - file: mind-mirror/mm-wozaday-playable.woz
+    bytes: 228157
+    sha1: a148b04f37305f6be616edfa382c0197fa2a9b88
+    source: "https://archive.org/download/wozaday_Mind_Mirror/00playable.woz"
+  - file: mind-mirror/mm-flux-disk-1-side-a.woz
+    bytes: 228147
+    sha1: 2428e2db308ae10ead72841fd35d6090953ef94b
+    source: "https://archive.org/download/electronic-arts-mind-mirror-a2-ph/software/Mind%20Mirror%20-%20Disk%201%2C%20Side%20A.woz"
+    note: "flux capture, collection flux_capacity_hagstrom; 16 sectors unreadable (the protection)"
+  - file: mind-mirror/mm-flux-disk-2-side-a.woz
+    bytes: 234803
+    sha1: 4d93b41c613e503aa7640ea954ae6f4bd95a0057
+    source: "https://archive.org/download/electronic-arts-mind-mirror-a2-ph/software/Mind%20Mirror%20-%20Disk%202%2C%20Side%20A.woz"
+    note: "flux capture"
+  - file: mind-mirror/mm-flux-disk-2-side-b.woz
+    bytes: 234803
+    sha1: f1bf6ff2f03a59d125671ba821b0a64622e59969
+    source: "https://archive.org/download/electronic-arts-mind-mirror-a2-ph/software/Mind%20Mirror%20-%20Disk%202%2C%20Side%20B.woz"
+    note: "flux capture"
+  - file: mind-mirror/mm-flux-life-simulation-a.woz
+    bytes: 234815
+    sha1: 370087d3c3fdaa6795c641eebf97de2f616363f0
+    source: "https://archive.org/download/electronic-arts-mind-mirror-a2-ph/software/Mind%20Mirror%20-%20Life%20Simulation%20A%20-%20Disk%201%2C%20Side%20A.woz"
+    note: "a user's copy of Disk 2 Side A; no save on it"
+  - file: mind-mirror/mm-flux-life-simulation-b.woz
+    bytes: 234815
+    sha1: 6f09c3c97fe262070c888a3aa88fa73e4975ca3c
+    source: "https://archive.org/download/electronic-arts-mind-mirror-a2-ph/software/Mind%20Mirror%20-%20Life%20Simulation%20B%20-%20Disk%201%2C%20Side%20A.woz"
+    note: "a user's copy of Disk 2 Side B holding the save RAVEN; see worlds/mind-mirror"
+  - file: mind-mirror/mm-flux-raitan.woz
+    bytes: 234941
+    sha1: e88f71c08e1761ef8c9129bbc41b4bfa2522aecf
+    source: "https://archive.org/download/electronic-arts-mind-mirror-a2-ph/software/Misc%20blue%20RAITAN%20disk%20-%20Disk%201%2C%20Side%20A.woz"
+    note: "a blue disk holding only the catalog entry of an unfinished save, RAITAN"
+  - file: mind-mirror/mm-screen-30-life-sim.png
+    bytes: 692965
+    sha1: a65dc8fd21fc00eee87bfe5fcec468f2d63ea8e8
+    source: "https://archive.org/download/electronic-arts-mind-mirror-a2-ph/00-screens/30-life%20sim.png"
+    note: "screenshot"
+  - file: mind-mirror/mm-screen-32-life-sim.png
+    bytes: 858492
+    sha1: 3186f5bdfcab4c715865f636623e256f1b341fa0
+    source: "https://archive.org/download/electronic-arts-mind-mirror-a2-ph/00-screens/32-life%20sim.png"
+    note: "screenshot"
+  - file: logo/apple-logo-ii.woz
+    bytes: 234795
+    sha1: d0c898ed57afd1112af6058ef22d00b0dc04b855
+    source: "disk images/woz/applications/apple logo ii.woz"
+  - file: logo/apple-logo-ii.dsk
+    bytes: 143360
+    sha1: 24d347f08fa218b5f21be85ac81f8125985b5a2d
+    source: "disk images/programming/apple_logo_ii.dsk"
+  - file: logo/mit-logo-1981.dsk
+    bytes: 143360
+    sha1: 0ac75f2a190fd3d7e1702fb56fe5cfe4a62aeddf
+    source: "disk images/programming/mit-logo-for-the-appleii-1981.dsk"
+  - file: logo/terrapin-logo-1.0-disk-1.dsk
+    bytes: 143360
+    sha1: 25ba95fc731134fcba20c11aa6738c21707c0352
+    source: "disk images/games/t/terrapin logo language, the v1.0 (1981)(mit)(disk 1 of 2).dsk"
+  - file: logo/terrapin-logo-1.0-disk-2-utilities.dsk
+    bytes: 143360
+    sha1: 82bd6da0b61dd65292e11748528ffbbc423ae602
+    source: "disk images/games/t/terrapin logo language, the v1.0 (1981)(mit)(disk 2 of 2)(utilities).dsk"
+  - file: logo/krell-logo-side-a.woz
+    bytes: 233443
+    sha1: 6bbb3947834bc01ef8b7fe30fd358d9b81098f2c
+    source: "disk images/woz/games j-r/krell's logo for apple ii (krell)/krell's logo for apple ii - disk 1, side a.woz"
+  - file: logo/apple-logo-french-touch.dsk
+    bytes: 143360
+    sha1: 78703c2a546129dc8adb31971bad2b5a44d3effe
+    source: "disk images/collections/french touch/avril-mai (2) 2013/boite utilitaires 1/apple logo.dsk"
+  - file: dos33/dos-3.3-august-1980.dsk
+    bytes: 143360
+    sha1: e799927bcb9487a9329debe134b041cae433326b
+    source: "disk images/operating systems/apple dos/3.3/apple dos 3.3 august 1980.dsk"
+  - file: dos33/dos-3.3-january-1983.dsk
+    bytes: 143360
+    sha1: 63392d078a159342b12667d0fdfea7a01a961978
+    source: "disk images/operating systems/apple dos/3.3/apple dos 3.3 january 1983.dsk"
+  - file: prodos/prodos-8-2.0.3.dsk
+    bytes: 143360
+    sha1: 9170bdfc4bbfb4102211e468931cf8ee25278ec8
+    source: "disk images/operating systems/apple prodos/disk images/2.0.3/prodos 8 v2.0.3.dsk"
+  - file: prodos/prodos-1.1.1-users-disk.dsk
+    bytes: 143360
+    sha1: cff0059003616766e0813a0c8ad1534559e5cfab
+    source: "disk images/operating systems/apple prodos/disk images/1.1.1/prodos 1.1.1 - user's disk.dsk"
+  - file: prodos/prodos-1.1.1-basic-examples.dsk
+    bytes: 143360
+    sha1: d7a840febe5b27bd36bbced7551adf0f3a94505b
+    source: "disk images/operating systems/apple prodos/disk images/1.1.1/prodos 1.1.1 - basic examples.dsk"
+  - file: wizardry/wizardry-i-proving-grounds-disk-1.dsk
+    bytes: 143360
+    sha1: 06f1ed7820857e88f5270f91c755ff53e2fed5e4
+    source: "disk images/games/w/wizardry (1981)(andrew greenberg)(disk 1 of 2).dsk"
+  - file: wizardry/wizardry-i-proving-grounds-disk-2.dsk
+    bytes: 143360
+    sha1: 44a03784493d42e34f7931e925a625d434b24e40
+    source: "disk images/games/w/wizardry (1981)(andrew greenberg)(disk 2 of 2).dsk"
+  - file: wizardry/wizardry-ii-knight-of-diamonds-disk-1.dsk
+    bytes: 143360
+    sha1: b921b3233aa98ef315a1aafe00117f8324c2aab1
+    source: "disk images/games/w/wizardry ii - knight and diamons (1982)(andrew greenberg)(disk 1 of 2).dsk"
+  - file: wizardry/wizardry-ii-knight-of-diamonds-disk-2.dsk
+    bytes: 143360
+    sha1: bf57d3552c0c032517252b298f3f6d2492120291
+    source: "disk images/games/w/wizardry ii - knight and diamons (1982)(andrew greenberg)(disk 2 of 2).dsk"
+  - file: wizardry/wizardry-iii-legacy-of-llylgamyn-disk-1.dsk
+    bytes: 143360
+    sha1: ce30d1ae61929be762dc4c94d3ecea65c4bb459d
+    source: "disk images/games/w/wizardry iii - the legacy of llylgamyn (1983)(andrew greenberg)(disk 1 of 2).dsk"
+  - file: wizardry/wizardry-iii-legacy-of-llylgamyn-disk-2.dsk
+    bytes: 143360
+    sha1: a2e2a1f2b0887412bfad7af52675b38c0db7a8a9
+    source: "disk images/games/w/wizardry iii - the legacy of llylgamyn (1983)(andrew greenberg)(disk 2 of 2).dsk"
+  - file: wizardry/wizardry-scenario-editor.dsk
+    bytes: 143360
+    sha1: ab4dc8952fc36a26b3c6bb829f30286f6348d079
+    source: "disk images/games/w/wizardry scenary editor (19xx)(-).dsk"
+  - file: wizardry/wizfix-wizardry-editor.dsk
+    bytes: 143360
+    sha1: 43188eb3ad272cf6dbf40983ed2cd2477f193b84
+    source: "disk images/games/w/wizfix - wizardry editor (19xx)(-).dsk"
+  - file: wizardry/wizardry-i-scenario-original.woz   # flux image; roster empty, as shipped
+    bytes: 233484
+    sha1: 29239657b321817d9566408dbadf072c20b3e13b
+    source: "disk images/woz/games s-z/wizardry - proving grounds of the mad overlord (sir-tech software)/wizardry - scenario #1.woz"
+  - file: wizardry/wizardry-iii-scenario-original.woz   # flux image; roster empty, as shipped
+    bytes: 233470
+    sha1: 1fbf35a22562c3413f7d9fe060ca2a629a71b47a
+    source: "disk images/woz/games s-z/wizardry 3 - legacy of llylgamyn (sir-tech software)/wizardry 3 - scenario #3.woz"
+  - file: wizardry/wizardry-character-printout-side-a.woz
+    bytes: 233474
+    sha1: 8493336de0c0e6343a4796310732f75f92374460
+    source: "disk images/woz/games s-z/wizardry - caracter statistics printout program (sir-tech software)/wizardry - disk 1, side a.woz"
+  - file: wizardry/wizardry-character-printout-side-b.woz   # Pascal volume WIZPBT
+    bytes: 233474
+    sha1: 39ec27a11b91a897ab0d610b4e33644ba1fe2c62
+    source: "disk images/woz/games s-z/wizardry - caracter statistics printout program (sir-tech software)/wizardry - disk 1, side b.woz"
+  - file: pascal/apple-pascal-disk-0.dsk
+    bytes: 143360
+    sha1: 4bb99d9d91f2486eef8964a36b467c69bd35727e
+    source: "disk images/programming/apple pascal/disk images/apple pascal - disk 0.dsk"
+  - file: pascal/apple-pascal-disk-1.dsk
+    bytes: 143360
+    sha1: 1cbb3bfc0d1157d0aa9442a2e0702c4b17f8fd40
+    source: "disk images/programming/apple pascal/disk images/apple pascal - disk 1.dsk"
+  - file: pascal/apple-pascal-disk-2.dsk
+    bytes: 143360
+    sha1: 6aa55b582afa91abb950ec57aca7a0a2feb2752b
+    source: "disk images/programming/apple pascal/disk images/apple pascal - disk 2.dsk"
+  - file: pascal/apple-pascal-disk-3.dsk
+    bytes: 143360
+    sha1: 11ee20129e7cdc08b36de6d50f3048e8dd4637a0
+    source: "disk images/programming/apple pascal/disk images/apple pascal - disk 3.dsk"
+  - file: pascal/manuals/apple-pascal-operating-system-reference-manual.pdf
+    bytes: 20871782
+    sha1: 9cf73a2973086cf573046893b3e5af0cf45d8844
+    source: "disk images/programming/apple pascal/manuals/apple pascal - operating system reference manual.pdf"
+  - file: pascal/manuals/addendum-apple-pascal-language-reference-manual.pdf
+    bytes: 1024224
+    sha1: f4e01100f3555f76db83b600443c54e1e68a48fb
+    source: "disk images/programming/apple pascal/manuals/addendum to the apple pascal - language reference manual.pdf"
+  - file: pascal/manuals/addendum-apple-ii-pascal-1.2-update.pdf
+    bytes: 194128
+    sha1: a1dd09a1bd6cce3843c41eab97866528fdeab50b
+    source: "disk images/programming/apple pascal/manuals/addendum to the apple ii pascal 1.2 update.pdf"
+  - file: pascal/technical-notes/tn-2523004-declarations.pdf
+    bytes: 55626
+    sha1: 2aa315f45b25b22fc9cdf6363b1bce5d4277c9dc
+    source: "disk images/programming/apple pascal/technical notes/pascal _2523004 declarations.pdf"
+  - file: pascal/technical-notes/tn-2523010-runtime-systems.pdf
+    bytes: 655089
+    sha1: 77894bf0c43254aef2fab09be72dad17f37f7a74
+    source: "disk images/programming/apple pascal/technical notes/pascal _2523010 runtime systems.pdf"
+  - file: pascal/technical-notes/tn-2523012-disk-formatter.pdf
+    bytes: 292362
+    sha1: 87e9d894e37dfe8c53e1eb55bd965346e0d820b9
+    source: "disk images/programming/apple pascal/technical notes/pascal _2523012 disk formatter.pdf"
+  - file: pascal/technical-notes/tn-2523014-treesearch-and-idse.pdf
+    bytes: 184926
+    sha1: a7ff4a95bd7f34ba953eea72be415056f783f1a2
+    source: "disk images/programming/apple pascal/technical notes/pascal _2523014 treesearch and idse.pdf"
+  - file: pascal/technical-notes/tn-2523015-shortgraphics.pdf
+    bytes: 197312
+    sha1: 116187103cc3f3443f24afd537b3467c678bc02b
+    source: "disk images/programming/apple pascal/technical notes/pascal _2523015 shortgraphics.pdf"
+  - file: pascal/technical-notes/tn-2523016-driver-3.5-disk.pdf
+    bytes: 327515
+    sha1: 8884cc0c9676dd8b6f17ea79a7f54e835a5b295e
+    source: "disk images/programming/apple pascal/technical notes/pascal _2523016 driver 3.5 disk.pdf"
+  - file: pascal/technical-notes/tn-2523017-patch-2.0.pdf
+    bytes: 58074
+    sha1: 59d20c922f73273724a41285c33a0be3489f894d
+    source: "disk images/programming/apple pascal/technical notes/pascal _2523017 patch 2.0.pdf"

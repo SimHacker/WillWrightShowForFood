@@ -1,0 +1,111 @@
+# Sidecar: LLOGO, MIT AI Memo 307A / Logo Memo 11, revised March 4, 1975.
+# Human-readable exposition: README.md in this folder.
+# Every page of this scan is dated March 4, 1975. Printed page = scan page - 4 throughout.
+# Sections 1-16 match the June 1974 memo (../aim-307-llogo-1974/) except where `changes_from_1974`
+# says otherwise; their scan numbers here differ from the 1974 scan's by up to two pages.
+
+artifact:
+  file: aim-307a-llogo-1975.pdf
+  ocr: aim-307a-llogo-1975.ocr.txt    # Tesseract 5.5.1, 300 dpi gray; "=== scan page N ===" markers
+  title: "LLOGO: An Implementation of LOGO in LISP"
+  series: [MIT AI Memo 307A, Logo Memo 11]
+  date: "1975-03-04"                  # title page: "June 27, 1974 / Revised March 4, 1975"
+  authors: [Ira Goldstein, Henry Lieberman, Harry Bochner, Mark L. Miller]
+  pages_scanned: 93
+  kind: memo
+
+provenance:
+  source: MIT DSpace
+  handle: https://hdl.handle.net/1721.1/6221
+  dspace_page: https://dspace.mit.edu/handle/1721.1/6221
+  acquired: "2026-10-31"
+  dspace_md5: b28541844b19db1854cc65a957a721d0
+  funding: "NSF grant GJ-1049 (the revised title page names no ARPA contract)"
+
+abstract: "Same as the 1974 memo; see ../aim-307-llogo-1974/aim-307-llogo-1974.yml."
+
+changes_from_1974:
+  - { scan: 4, what: "Table of contents adds Section 17 and its subsections" }
+  - { scan: 8, section: "2.1", what: "TEST's flag is now 'a LISP variable, local to the procedure in which the TEST occurs'. 1974 said it was global, so a TEST in a subprocedure changed the caller's IFTRUE." }
+  - { scan: 16, section: 5, what: "Notational conventions; step-by-step ITS login for 'very naive users', including turning on a TV console at the gray switch box on the wall and typing CALL" }
+  - { scan: 17, section: 5, what: "Versions: LLOGO (11LOGO vocabulary), CLLOGO (CLOGO vocabulary), NLLOGO (experimental). New start-up question 'DO YOU WANT TO USE THE TV TURTLE?' at TV consoles; the 340 question now lists the PDP-6 as well." }
+  - { scan: 24, what: "Top-level history: LASTVALUE, LASTFORM, THISFORM" }
+  - { scan: 31, section: "8.3", what: "Returning from a breakpoint continues 'from exactly the point at which it was interrupted', unlike 11LOGO's CONTINUE" }
+  - { scan: 32, section: "8.6", what: "'Other Debugging Facilities' replaces 'Tracing'" }
+  - { scan: 40, section: 11, what: "Decimal-point and floating-point input conventions follow Lisp's; the 1974 paragraph on 11LOGO's single global test box is gone" }
+  - { scan: 68-85, section: 17, what: "New: Display Turtle for the Knight TV Terminals" }
+  - { scan: 86-93, what: "Indexes regenerated" }
+
+structure:
+  - { scan: 1, what: "Title page and abstract" }
+  - { scan: 2-4, what: "Table of contents" }
+  - { section: 1, title: "Why Implement LOGO in LISP", scan: 5 }
+  - { section: 2, title: "Differences between LOGO and LISP", scan: 6-10, subsections: ["2.1 Simplicity (6)", "2.2 Naturalness (8)", "2.3 Disparity (10)"] }
+  - { section: 3, title: "Overview of the Implementation", scan: 11-13, subsections: ["3.1 Reader (11)", "3.2 Parser (12)", "3.3 Evaluation (12)", "3.4 Printing (12)", "3.5 Error Analysis (13)"] }
+  - { section: 4, title: "Performance", scan: 14-15 }
+  - { section: 5, title: "Getting Started", scan: 16-18 }
+  - { section: 6, title: "Parsing LOGO", scan: 19-22, subsections: ["6.1 Infix Expressions (19)", "6.2 Minus Sign (21)", "6.3 Homonyms (21)", "6.4 Abbreviations (22)"] }
+  - { section: 7, title: "Defining and Editing Functions", scan: 23-27, subsections: ["7.1 Control Character Editing (23)", "7.2 Printing Function Definitions (24)"] }
+  - { section: 8, title: "Error Handling and Debugging", scan: 28-33, subsections: ["8.1 Parsing Errors (28)", "8.2 Run Time Errors (28)", "8.3 Breakpoints (29)", "8.4 Wrong Number of Inputs Errors (32)", "8.5 Garbage Collector Errors (32)", "8.6 Other Debugging Facilities (32)", "8.7 Interaction with LISP (33)"] }
+  - { section: 9, title: "Compiling LLOGO User Procedures", scan: 34-35, note: "all variables declared SPECIAL, unchanged from 1974" }
+  - { section: 10, title: "Using Files in LLOGO", scan: 36-37 }
+  - { section: 11, title: "Differences between 11LOGO and LLOGO", scan: 38-41 }
+  - { section: 12, title: "Using LLOGO on MULTICS", scan: 42-43 }
+  - { section: 13, title: "Using LLOGO on TEN50 and TENEX systems", scan: 44 }
+  - { section: 14, title: "GERMLAND", scan: 45-50 }
+  - { section: 15, title: "Display Turtle for the 340 and GT40", scan: 51-60, subsections: ["15.11 Manipulating Scenes (56)", "15.12 Plotter (58)", "15.13 Pots (58)", "15.14 Points (58)", "15.15 Global State of the Turtle's World (59)"] }
+  - { section: 16, title: "The Music Box", scan: 61-67 }
+  - section: 17
+    title: "Display Turtle for the Knight TV Terminals"
+    scan: 68-85
+    printed: 64-81
+    subsections:
+      - { n: "17", title: "(intro) STARTDISPLAY, NODISPLAY, SAVEDISPLAY", scan: 68, note: "raster vs the 340: no flicker, shading, testing points, an eraser, split screen; loadable into plain Lisp as TVRTLE FASL" }
+      - { n: "17.1", title: "The Turtle", scan: 69-70, note: "XOR'd triangle; centre shows pen/eraser/XOR state; MAKETURTLE for user-drawn turtles" }
+      - { n: "17.2", title: "Moving the Turtle", scan: 70-71, note: "WRAP: the screen as a torus" }
+      - { n: "17.3", title: "Erasing the Screen", scan: 71 }
+      - { n: "17.4", title: "Turning the Turtle", scan: 71 }
+      - { n: "17.5", title: "The Pen", scan: 72 }
+      - { n: "17.6", title: "The Eraser", scan: 72 }
+      - { n: "17.7", title: "Drawing in XOR Mode", scan: 72-73 }
+      - { n: "17.8", title: "Examining and Modifying the Turtle's State", scan: 73-74 }
+      - { n: "17.9", title: "Multiple Turtles", scan: 74, note: "HATCH, USETURTLE, :TURTLE, :TURTLES" }
+      - { n: "17.10", title: "Global Navigation", scan: 74-75 }
+      - { n: "17.11", title: "Trigonometry", scan: 75 }
+      - { n: "17.12", title: "Text", scan: 75 }
+      - { n: "17.13", title: "Points and Circles", scan: 75-76, note: "POINTSTATE reads the screen" }
+      - { n: "17.14", title: "Scaling", scan: 76-77, note: "TVSIZE default 300x300 of the 455x576 screen; TURTLESIZE default 1000x1000; SETHOME" }
+      - { n: "17.15", title: "Screen Color", scan: 77-78 }
+      - { n: "17.16", title: "Saving Pictures", scan: 78-80, note: "windows: point arrays" }
+      - { n: "17.17", title: "Printing Pictures on the XGP", scan: 80 }
+      - { n: "17.18", title: "Shading", scan: 81 }
+      - { n: "17.19", title: "Shading Patterns", scan: 81 }
+      - { n: "17.20", title: "Invisible Mode", scan: 82-83 }
+      - { n: "17.21", title: "Extensions", scan: 83-84 }
+      - { n: "17.22", title: "Implementation", scan: 84-85, note: "TV-11 memory mapped into the PDP-10 job as a Lisp array; DRAWMODE" }
+  - { scan: 86-93, printed: 82-89, what: "Index and Index to LLOGO Primitives" }
+
+devices:   # those of the 1974 memo, plus:
+  - { name: Knight TV, via: "TV-11 memory mapped as a Lisp array; split screen; SAVEDISPLAY to DDT and back", section: 17 }
+  - { name: Xerox Graphics Printer (XGP), via: XGP, section: "17.17" }
+
+binding_and_scope:
+  - { scan: 8, section: "2.1", quote: "In LLOGO, this flag is a LISP variable, local to the procedure in which the TEST occurs." }
+  - { scan: 34, section: 9, quote: "For safety's sake, all variables are automatically declared SPECIAL." }
+  - { scan: 69, section: "17.1", quote: "The procedures will be executed with :SEETURTLE bound to NIL, to prevent infinite recursion. All turtle state variables are rebound during the execution of user supplied turtle marker procedures, so that you can change them in the course of drawing a turtle." }
+  - source: "../../../don-hopkins/sources/llogo-maclisp-its/llogo.lisp.txt"
+    note: >
+      ADDLINE adds TESTFLAG to the PROG variables of any procedure containing a TEST, and TESTFLAG
+      is in the SPECIAL declaration, so the fix binds it dynamically per procedure. The comment
+      above DEFINE TEST still says "IN LLOGO, TESTFLAG IS GLOBAL".
+
+related:
+  henry_lieberman: ../../README.md
+  original_1974: ../aim-307-llogo-1974/README.md
+  tv_turtle_1976: ../aim-361-tv-turtle-1976/README.md
+  lisp_machine_turtle_1981: ../wp-214-lisp-machine-turtle-1981/README.md
+  history_of_logo_2020: ../../../cynthia-solomon/sources/history-of-logo-hopl-2020/README.md
+  llogo_source_dossier: ../../../don-hopkins/sources/llogo-maclisp-its.md
+  its_tv_turtle_source: https://github.com/PDP-10/its/blob/master/src/llogo/tvrtle.542
+  cabinet_devices_to_emulate: ../../../../packages/cabinet/LOGO-TURTLE.md#every-device-logo-drove-to-emulate
+  cabinet_tv_mapping: ../../../../packages/cabinet/MAPPING.md#llogo-a-lisp-array-that-is-the-screen

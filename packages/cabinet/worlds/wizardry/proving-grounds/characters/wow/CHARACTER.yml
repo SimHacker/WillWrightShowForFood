@@ -1,0 +1,55 @@
+# WOW!: roster slot 12 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: WOW!
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 712
+inventory:
+  - {item: STAFF, equipped: true, cursed: false, identified: true}
+  - {item: ROBES, equipped: true, cursed: false, identified: true}
+  - {item: LATUMOFIS POT., equipped: false, cursed: false, identified: true}
+  - {item: SCROLL/DILTO, equipped: false, cursed: false, identified: true}
+spells:
+  - HALITO
+  - MOGREF
+  - KATINO
+  - DUMAPIC
+  - DILTO
+  - SOPIC
+  - MAHALITO
+  - MOLITO
+  - MORLIS
+  - DALTO
+  - LAHALITO
+  - MAMORLIS
+  - MAKANITO
+  - MADALTO
+wizardry:
+  slot: 12
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: ELF
+  class: MAGE
+  age_weeks: 983
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 11, iq: 18, piety: 14, vitality: 16, agility: 18, luck: 14}
+  luck_skill: [16, 16, 14, 16, 13]
+  experience: 98007
+  max_level: 10
+  level: 10
+  hp: 28 # hit points left
+  hp_max: 28
+  mage_spells: [9, 8, 6, 4, 3, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 2
+  armor_class: 9 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 1
+  damage: {count: 1, sides: 5, bonus: 0}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

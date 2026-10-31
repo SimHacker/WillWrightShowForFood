@@ -1,0 +1,8 @@
+# RAITAN, a life saved by Mind Mirror. The scores are the game's; what each measures is not decoded yet.
+
+name: RAITAN # the name inside the save, from offset 45
+home: DISK.yml
+location: DISK.yml#saves/RAITAN
+mind_mirror:
+  file: RAITAN # the DOS file the game lists and loads
+  saved: false # the catalog entry points at track 111, off the disk: the save stopped after the name

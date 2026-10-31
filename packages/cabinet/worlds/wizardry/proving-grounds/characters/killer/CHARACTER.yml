@@ -1,0 +1,94 @@
+# KILLER: roster slot 7 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: KILLER
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 121
+inventory:
+  - {item: HELM +2 (EVIL), equipped: false, cursed: false, identified: true}
+  - {item: MURASAMA BLADE, equipped: false, cursed: false, identified: true}
+  - {item: EVIL PLATE + 3, equipped: false, cursed: false, identified: true}
+  - {item: SILVER GLOVES, equipped: false, cursed: false, identified: true}
+  - {item: EVIL SHIELD +3, equipped: false, cursed: false, identified: true}
+  - {item: RING OF HEALING, equipped: false, cursed: false, identified: true}
+spells:
+  - 0
+  - HALITO
+  - MOGREF
+  - KATINO
+  - DUMAPIC
+  - DILTO
+  - SOPIC
+  - MAHALITO
+  - MOLITO
+  - MORLIS
+  - DALTO
+  - LAHALITO
+  - MAMORLIS
+  - MAKANITO
+  - MADALTO
+  - LAKANITO
+  - ZILWAN
+  - MASOPIC
+  - HAMAN
+  - MALOR
+  - MAHAMAN
+  - TILTOWAI
+  - KALKI
+  - DIOS
+  - BADIOS
+  - MILWA
+  - PORFIC
+  - MATU
+  - CALFO
+  - MANIFO
+  - MONTINO
+  - LOMILWA
+  - DIALKO
+  - LATUMAPI
+  - BAMATU
+  - DIAL
+  - BADIAL
+  - LATUMOFI
+  - MAPORFIC
+  - DIALMA
+  - BADIALMA
+  - LITOKAN
+  - KANDI
+  - DI
+  - BADI
+  - LORTO
+  - MADI
+  - MABADI
+  - LOKTOFEI
+  - MALIKTO
+  - KADORTO
+wizardry:
+  slot: 7
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: HUMAN
+  class: NINJA
+  age_weeks: 938
+  status: OK
+  alignment: EVIL
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 18, agility: 18, luck: 18}
+  luck_skill: [16, 16, 16, 16, 16]
+  experience: 740000
+  max_level: 32
+  level: 32
+  hp: 249 # hit points left
+  hp_max: 249
+  mage_spells: [9, 9, 9, 9, 9, 9, 9] # spell points per level, 1 to 7
+  priest_spells: [9, 9, 9, 9, 9, 9, 9]
+  hp_calc: 0
+  armor_class: 10 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 0
+  damage: {count: 0, sides: 0, bonus: 0}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

@@ -1,0 +1,121 @@
+# Commodore 64 disks (.d64) and tapes (.tap) for Little Computer People and Mind Mirror.
+# Fetched 2026-10-31 from archive.org. Read with src/c64/d64.ts.
+# Little Computer People keeps the house number in sector 18.17 and the resident in sector 1.4;
+# worlds/little-computer-people has the residents as characters.
+
+disks:
+  - file: little-computer-people/lcp-h-stephen-7-times-started.d64
+    bytes: 174848
+    sha1: 87b26e118bcccd8ea694c9ec7ce227e20350e092
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_h_stephen_7_times_started/Little_Computer_People_1985_Activision_h_stephen_7_times_started.d64"
+    note: "lived in: researcher Stephen, resident Rob; adds INSTRUCTIONS LCP and CREATE NEW LCP"
+  - file: little-computer-people/lcp-a131.d64
+    bytes: 174848
+    sha1: 892e7603cd02c3e7ea4cd53a9e07dc2a02b5d064
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_a131/Little_Computer_People_1985_Activision_a131.d64"
+    note: "move-in template"
+  - file: little-computer-people/lcp-a132.d64
+    bytes: 174848
+    sha1: 65929e009f57b53dd8de0631858cfd05b9125038
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_a132/Little_Computer_People_1985_Activision_a132.d64"
+    note: "move-in template"
+  - file: little-computer-people/lcp-a133.d64
+    bytes: 174848
+    sha1: 9dfd6ae1ca60c96fab48af86eb6012fc8098ecb4
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_a133/Little_Computer_People_1985_Activision_a133.d64"
+    note: "move-in template"
+  - file: little-computer-people/lcp-a134.d64
+    bytes: 174848
+    sha1: 418310dd85d77ec0a63e590dbbb2123757f53a3a
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_a134/Little_Computer_People_1985_Activision_a134.d64"
+    note: "move-in template"
+  - file: little-computer-people/lcp-a135.d64
+    bytes: 174848
+    sha1: 21eca1ebb5bc578270949c78d0191d1c4702b272
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_a135/Little_Computer_People_1985_Activision_a135.d64"
+    note: "move-in template"
+  - file: little-computer-people/lcp-a136.d64
+    bytes: 174848
+    sha1: 48296f49b8618edd751ad229ff96e93f065b5e8c
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_a136/Little_Computer_People_1985_Activision_a136.d64"
+    note: "move-in template"
+  - file: little-computer-people/lcp-a137.d64
+    bytes: 174848
+    sha1: 58cc08150b41a400e05781b0414acf075e314864
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_a137/Little_Computer_People_1985_Activision_a137.d64"
+    note: "move-in template"
+  - file: little-computer-people/lcp-a138.d64
+    bytes: 174848
+    sha1: 6cf1d778d280ce86d0b78248c9e9b643e6ad8dc6
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_a138/Little_Computer_People_1985_Activision_a138.d64"
+    note: "move-in template"
+  - file: little-computer-people/lcp-a139.d64
+    bytes: 174848
+    sha1: c5eb0c1f28131537920e510e5ebacd625c792b54
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_a139/Little_Computer_People_1985_Activision_a139.d64"
+    note: "move-in template"
+  - file: little-computer-people/lcp-cr-sca.d64
+    bytes: 174848
+    sha1: 6623095d9084793452abc63b126f32ad55c2ed12
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_cr_SCA/Little_Computer_People_1985_Activision_cr_SCA.d64"
+    note: "lived in: researcher Sca Cracks All, resident Fritz"
+  - file: little-computer-people/lcp-cr-sphinx.d64
+    bytes: 174848
+    sha1: 0f705320294bcf2d9b2bde60d498fe34acd2e5a3
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_cr_Sphinx/Little_Computer_People_1985_Activision_cr_Sphinx.d64"
+    note: "lived in: researcher Rainer Huhn, resident Ivan"
+  - file: little-computer-people/lcp-cr-snail.d64
+    bytes: 174848
+    sha1: 74c341a76f8605620e8d4f39b9cab6de6e213a8f
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_cr_Snail/Little_Computer_People_1985_Activision_cr_Snail.d64"
+  - file: little-computer-people/lcp-cr-radwar.d64
+    bytes: 174848
+    sha1: c14dc22cc6cb2f9403abe81997e805c21559b1aa
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_cr_Radwar/Little_Computer_People_1985_Activision_cr_Radwar.d64"
+  - file: little-computer-people/lcp-cr-abc.d64
+    bytes: 174848
+    sha1: 2a5b468c3be43e8bf4ba28d096caeb0ab18ea7a3
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_cr_ABC/Little_Computer_People_1985_Activision_cr_ABC.d64"
+  - file: little-computer-people/lcp-cr-tac.d64
+    bytes: 174848
+    sha1: f1c910b75d7d4d233192dfc447422751a184f2bb
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_cr_TAC/Little_Computer_People_1985_Activision_cr_TAC.d64"
+  - file: little-computer-people/lcp-cr-tgs.d64
+    bytes: 174848
+    sha1: 7f3784a326d663c8db936428163a9e02cb233cc7
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_cr_TGS/Little_Computer_People_1985_Activision_cr_TGS.d64"
+  - file: little-computer-people/lcp-plain.d64
+    bytes: 174848
+    sha1: acfce1997fe8a7c0c4198c91a62562d247dbd911
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision/Little_Computer_People_1985_Activision.d64"
+    note: "one-file crack"
+  - file: little-computer-people/lcp-side-a.d64
+    bytes: 174848
+    sha1: ab9c44bbf5dc14a913d0b5de62ed4058836a5351
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_Side_A/Little_Computer_People_1985_Activision_Side_A.d64"
+    note: "move-in template, house number 00002100"
+  - file: little-computer-people/lcp-tools-side-b.d64
+    bytes: 174848
+    sha1: 9bb1deba9058a1be19a440be5c427aea9ed1c356
+    source: "https://archive.org/download/Little_Computer_People_1985_Activision_Side_A/Little_Computer_People_1985_Activision_Side_B.d64"
+    note: "ASS PRESENTS: tool disk: LCP CREATOR, HOTEL V1.1, EVICTOR, GENERATOR, KEYS, EDITOR, TIPS"
+  - file: little-computer-people/lcp-tape-activision-2467.tap
+    bytes: 621632
+    sha1: a82cac076e0b0236a3914c0f11da9c559ac4c148
+    source: "https://archive.org/download/uta_Little_Computer_People_1985_Activision_2467/Little_Computer_People.tap"
+  - file: little-computer-people/lcp-tape-ricochet-2185.tap
+    bytes: 582790
+    sha1: 9fd4bb79488358f903a4452cde00008d831377fc
+    source: "https://archive.org/download/uta_Little_Computer_People_19xx_Ricochet_2185/Little_Computer_People.tap"
+  - file: mind-mirror/mm-disk-1-side-a.d64
+    bytes: 174848
+    sha1: d297f176d36a5a5038426425357898bb2cf61195
+    source: "https://archive.org/download/d64_Mind_Mirror_1986_Electronic_Arts_Disk_1_of_2_Side_A/Mind_Mirror_1986_Electronic_Arts_Disk_1_of_2_Side_A.d64"
+  - file: mind-mirror/mm-disk-1-side-b.d64
+    bytes: 174848
+    sha1: 36e2692ae986daf98743810484ef14362e6cf849
+    source: "https://archive.org/download/d64_Mind_Mirror_1986_Electronic_Arts_Disk_1_of_2_Side_A/Mind_Mirror_1986_Electronic_Arts_Disk_1_of_2_Side_B.d64"
+  - file: mind-mirror/mm-disk-2-side-a.d64
+    bytes: 174848
+    sha1: a8e5217803a7fccc5e3d2efc6c279fe28353e664
+    source: "https://archive.org/download/d64_Mind_Mirror_1986_Electronic_Arts_Disk_1_of_2_Side_A/Mind_Mirror_1986_Electronic_Arts_Disk_2_of_2_Side_A.d64"

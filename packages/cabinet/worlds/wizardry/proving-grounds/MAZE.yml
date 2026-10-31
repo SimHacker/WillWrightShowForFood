@@ -1,0 +1,771 @@
+# The ten levels of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Locations: MAZE.yml#level-3/4,7 is x 4, y 7 of level 3.
+# North is up; x runs 0-19 east, y 0-19 north. Each square is three characters:
+# a * where fights happen, the hex digit of its special (blank is special 0),
+# and that special's letter: S stairs, P pit, C chute, @ spinner, # dark, T transfer,
+# O ouchy, B buttons, R rock/water, F fizzle, M message, E encounter.
+# Walls: - and |, doors D, hidden doors h. A wall is drawn once, for both squares;
+# one_way lists the sides where the two squares disagree. The letters follow the
+# digits and are not read back. The edges wrap around.
+
+castle: {note: Not on the disk. Characters not lost in the maze are here; stairs to level 0 lead here.}
+level-1:
+  map: |
+    +---+-D-+---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+---+---+
+    |       |*  |   h*  |   h*   *   *  | 4MD a#|   D*   *  D*   *  D*   *  |*  |*  | 19
+    +---+---+-D-+---+-D-+---+   +   +   +---+   +   +-h-+-h-+---+---+   +   +-h-+-h-+
+    |       h               D*   *   *  | a#  a#|   |*  |*8M|       |*   *  |*   *  | 18
+    +-D-+---+-D-+   +---+---+   +   +   +   +   +   +---+---+---+-h-+---+---+   +   +
+    |*  |   |   |   |       |*   *   *  | a#  a#|   |   |   D*   *  D*   *  D*   *  | 17
+    +---+---+---+   +---+---+---+---+-D-+   +   +   +   +   +---+---+---+---+---+---+
+    |*   *   *  |   |*   *   *  |   |   | a#| a#|   |   |   |       |*   *  |*   *  | 16
+    +   +   +   +-D-+   +   +   +   +   +---+   +   +   +   +   +---+---+-D-+   +   +
+    |*   *   *  D   D*   *   *  |   |   | a#  a#|   |   |   |   |   D*   *  D*   *  | 15
+    +   +   +   +-D-+   +   +   +   +   +   +   +   +   +   +   +   +---+---+-h-+-h-+
+    |*   *   *  |   |*   *   *  |   |   | a#  a#|   |   |   |   |   |       |*  |*  | 14
+    +---+---+---+   +-h-+---+---+   +   +   +   +   +   +   +   +   +---+---+---+---+
+    |   h           |   |   |       |   | a#  a#|   |   |   |   |   |*   *  D*   *  | 13
+    +---+-D-+---+   +---+   +---+---+   +   +---+   +   +   +   +   +-D-+-D-+   +   +
+    |*   *   *  |       D   D*   *  |   | 3M    |   |   |   |   |   |*  |   |*   *  | 12
+    +   +   +   +   +   +   +   +   +-D-+   +   +   +   +   +   +   +   +   +-h-+-h-+
+    |*   *   *  |       |   |*   *  |   |       |   |   |   |   |   |*  |   |*  |*  | 11
+    +---+---+---+---+---+-D-+---+---+---+   +   +   +   +   +   +   +---+   +---+-D-+
+    | 2S                                        |   |   |   |   |   |   h   |       | 10
+    +---+---+---+---+---+---+---+---+---+   +   +-D-+---+-D-+---+-D-+---+-D-+---+---+
+    |                     5T            |                                           h  9
+    +---+---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+---+---+---+
+    |                                   D   | 9B|                                   |  8
+    +   +---+---+   +---+---+   +---+---+---+   +   +---+---+---+---+   +---+---+---+
+    |   |       |   |       |   |       | a#  a#|   |   h   |       |   |           |  7
+    +   +   +   +   +   +---+-D-+---+   +   +   +   +-h-+---+---+   +   +   +---+   +
+    |   |       |   |   |*   *   *  |   | a#  a#|   |   |   h   |   |   |   |   |   |  6
+    +   +   +   +   +   +   +   +   +   +   +   +   +-h-+---+-D-+-D-+   +   +   +   +
+    |   |       |   |   |*   *   *  |   | a#  a#|   |   | 6MD       |   |   |   |   |  5
+    +   +   +   +   +   +---+---+---+   +   +   +   +-h-+---+   +   +   +   +   +   +
+    |   |       |   |                   | a#  a#|   |   | 5TD       |   |   |   |   |  4
+    +   +   +---+-D-+---+   +   +   +   +   +   +   +-h-+---+   +   +   +   +   +   +
+    |   |   |*   *   *  |               | a#  a#|   |   | 7MD       |   |   |   |   |  3
+    +   +   +   +   +   +   +---+---+---+   +   +   +-h-+---+---+-D-+---+   +   +   +
+    |   |   |*   *   *  |   |*   *   *  | a#  a#|   |   |   |   |   D       |   |   |  2
+    +   +   +---+---+---+   +   +   +   +   +   +   +---+---+---+---+---+---+   +   +
+    |   |                   |*   *   *  | a#  a#|                               |   |  1
+    +   +---+---+---+---+---+---+-D-+---+   +   +---+---+---+---+---+---+---+---+---+
+    | 1S                                | a#  a#| a#  a#  a#  a#  a#  a#  a#  a#  a#|  0
+    +---+---+---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+---+---+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 1, y: 13, side: W, wall: WALL}
+    - {x: 1, y: 17, side: W, wall: DOOR}
+    - {x: 4, y: 14, side: S, wall: WALL}
+    - {x: 4, y: 17, side: W, wall: HIDEDOOR}
+    - {x: 4, y: 19, side: W, wall: WALL}
+    - {x: 5, y: 1, side: S, wall: DOOR}
+    - {x: 6, y: 19, side: W, wall: WALL}
+    - {x: 7, y: 16, side: W, wall: HIDEDOOR}
+    - {x: 8, y: 17, side: S, wall: HIDEDOOR}
+    - {x: 11, y: 0, side: W, wall: OPEN}
+    - {x: 12, y: 3, side: S, wall: WALL}
+    - {x: 12, y: 4, side: S, wall: WALL}
+    - {x: 12, y: 5, side: S, wall: WALL}
+    - {x: 12, y: 6, side: S, wall: WALL}
+    - {x: 12, y: 7, side: S, wall: WALL}
+    - {x: 12, y: 17, side: W, wall: DOOR}
+    - {x: 13, y: 2, side: W, wall: HIDEDOOR}
+    - {x: 13, y: 7, side: S, wall: HIDEDOOR}
+    - {x: 13, y: 7, side: W, wall: WALL}
+    - {x: 14, y: 2, side: W, wall: HIDEDOOR}
+    - {x: 14, y: 3, side: S, wall: DOOR}
+    - {x: 14, y: 6, side: W, wall: WALL}
+    - {x: 14, y: 7, side: W, wall: DOOR}
+    - {x: 14, y: 16, side: W, wall: DOOR}
+    - {x: 15, y: 2, side: W, wall: HIDEDOOR}
+    - {x: 16, y: 4, side: W, wall: HIDEDOOR}
+    - {x: 16, y: 14, side: W, wall: HIDEDOOR}
+    - {x: 17, y: 10, side: W, wall: WALL}
+    - {x: 19, y: 1, side: S, wall: OPEN}
+    - {x: 19, y: 11, side: S, wall: WALL}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [0, 0, 0]} # to the castle
+    - {index: 2, kind: STAIRS, aux: [2, 7, 12]} # to MAZE.yml#level-2/12,7
+    - {index: 3, kind: SCNMSG, aux: [-1, 0, 1]} # message 0 "A LARGE SIGN ON THE WALL READS:", every time
+    - {index: 4, kind: SCNMSG, aux: [-1, 3, 8]} # message 3 "A STRANGE GLOW SEEMS TO EMANATE FROM", back to the shop, every time
+    - {index: 5, kind: TRANSFER, aux: [1, 4, 15]} # to MAZE.yml#level-1/15,4
+    - {index: 6, kind: SCNMSG, aux: [77, 11, 4]} # message 11 "YOU SEE A LARGE STATUE OF A HOODED", search: fight monster 77 (MURPHY'S GHOST)
+    - {index: 7, kind: SCNMSG, aux: [-1097, 18, 4]} # message 18 "WITHIN THE ROOM IS A STATUETTE OF A", search: finds item 97 (BRONZE KEY)
+    - {index: 8, kind: SCNMSG, aux: [-1098, 24, 4]} # message 24 "IN THIS ROOM IS A SILVER STATUE OF A", search: finds item 98 (SILVER KEY)
+    - {index: 9, kind: BUTTONZ, aux: [0, 4, 1]} # buttons to levels 1-4
+    - {index: 10, kind: DARK, aux: [0, 0, 0]}
+    - {index: 11, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 12, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 13, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 14, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 15, kind: NORMAL, aux: [0, 0, 0]}
+  encounters:
+    - {min_enemy: 0, mult_worse: 0, worse01: 0, range0n: 4, perc_worse: 0}
+    - {min_enemy: 1, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: 0}
+    - {min_enemy: 3, mult_worse: 0, worse01: 0, range0n: 3, perc_worse: 0}
+level-2:
+  map: |
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+    |                                                   |                           | 19
+    +   +   +   +   +   +   +   +   +   +---+---+---+   +   +---+---+---+---+---+   +
+    |                                   |*cM|*  |*  |   |   |                   |   | 18
+    +   +   +---+---+---+---+---+   +---+-D-+-D-+-D-+---+   +   +---+---+---+   +   +
+    |       | a#  a#  a#  a#  a#|   |*   *  |*  |*   *  |   |   |           |   |   | 17
+    +   +   +   +   +---+   +   +   +-D-+---+-D-+---+-D-+   +   +   +---+   +   +   +
+    |       | a#| a#|*bM| a#| a#|   |                   |   |   |   |   h   |   |   | 16
+    +   +   +   +   +-D-+   +   +   +---+---+-D-+---+---+   +   +   +---+   +   +   +
+    |       | a#| a#| a#| a#| a#|           |   |           |   |   | 4S|   |   |   | 15
+    +   +   +   +   +   +   +   +   +   +   +   +   +---+---+   +   +   +   +   +   +
+    |       | a#| a#  a#  a#| a#|           |   |   |   |*  D   |   |       |   |   | 14
+    +   +   +   +---+---+---+   +   +   +   +   +   +   +---+   +   +---+---+   +   +
+    |       D a#  a#  a#  a#  a#|           |   |   |       |   |               |   | 13
+    +   +   +---+---+-D-+---+---+   +---+---+-D-+   +   +   +   +---+---+---+---+   +
+    |               | fM|           | 3M        |   |       h                       | 12
+    +   +   +   +   +-D-+   +   +   +-D-+---+---+-D-+---+---+---+---+---+---+---+---+
+    |               | eM|           |               | 8P  7M  6M  5M                | 11
+    +---+---+---+---+-D-+---+---+---+   +---+---+   +---+---+---+---+   +---+-D-+---+
+                                    D   |*  D*  |   |               D   |       |     10
+    +---+---+---+---+   +---+-D-+---+   +---+   +   +   +   +   +   +   +---+---+   +
+    |       |*   *  |   |           |   |*  D*9B|   |               |   |*   *  |   |  9
+    +   +---+   +   +   +   +   +   +   +---+-D-+   +---+   +   +   +   +   +   +   +
+    |   |   D*   *  |   |           |       |   |       |           |   D*   *  |   |  8
+    +   +   +---+-D-+   +   +   +   +-D-+---+---+   +   +   +   +   +   +---+---+   +
+    |   |   |       |   |           | 2M        |     1S|           |   |*   *  D   |  7
+    +   +   +   +---+   +   +   +   +---+---+-D-+-D-+---+   +   +   +   +   +   +   +
+    |   |   |           |                   |*  |                   |   |*   *  |   |  6
+    +   +   +---+---+   +   +   +---+---+---+   +---+---+---+   +   +   +---+---+   +
+    |   h   |       D   |       |*   *  |*   *   *  |*   *  |       |   |*   *  |   |  5
+    +   +   +   +---+-D-+---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    |   |   |   |   |*   *  |   |*  |*  |*   *   *  |*dM|*  |       |   D*   *  |   |  4
+    +---+-D-+   +   +   +   +   +   +---+   +   +   +---+   +   +   +   +---+---+   +
+            |   |   |*   *  |   |*   *   *   *   *   *   *  |       |   |*   *  D      3
+    +   +   +   +   +---+---+   +   +---+---+-D-+---+---+   +---+---+   +   +   +   +
+            |   |               |*  |*  |*   *   *  |*  |*  |*   *  |   |*   *  |      2
+    +-h-+---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+---+   +
+    |       |   |               |*   *  |*   *   *  |*   *  |*   *  |   |*   *  h   |  1
+    +   +   +   +---+---+---+---+---+---+---+---+---+---+---+   +   +   +   +   +   +
+    |       |                                               D*   *  |   h*   *  |   |  0
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+-D-+---+---+---+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 0, y: 2, side: S, wall: WALL}
+    - {x: 1, y: 5, side: W, wall: WALL}
+    - {x: 2, y: 13, side: W, wall: WALL}
+    - {x: 3, y: 2, side: W, wall: HIDEDOOR}
+    - {x: 6, y: 10, side: S, wall: WALL}
+    - {x: 6, y: 11, side: S, wall: DOOR}
+    - {x: 11, y: 7, side: S, wall: WALL}
+    - {x: 14, y: 12, side: W, wall: WALL}
+    - {x: 16, y: 10, side: W, wall: WALL}
+    - {x: 17, y: 16, side: W, wall: WALL}
+    - {x: 18, y: 11, side: S, wall: WALL}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [1, 10, 0]} # to MAZE.yml#level-1/0,10
+    - {index: 2, kind: SCNMSG, aux: [97, 32, 5]} # only with item 97 (BRONZE KEY)
+    - {index: 3, kind: SCNMSG, aux: [98, 36, 5]} # only with item 98 (SILVER KEY)
+    - {index: 4, kind: STAIRS, aux: [3, 11, 15]} # to MAZE.yml#level-3/15,11
+    - {index: 5, kind: SCNMSG, aux: [-1, 41, 1]} # message 41 "A PLACARD NEAR THE GROUND READS:", every time
+    - {index: 6, kind: SCNMSG, aux: [-1, 43, 1]} # message 43 "A PLACARD NEAR THE GROUND READS:", every time
+    - {index: 7, kind: SCNMSG, aux: [-1, 45, 1]} # message 45 "A PLACARD NEAR THE GROUND READS:", every time
+    - {index: 8, kind: PIT, aux: [0, 8, 2]} # damage 0 + 2 rolls of d8
+    - {index: 9, kind: BUTTONZ, aux: [0, 4, 1]} # buttons to levels 1-4
+    - {index: 10, kind: DARK, aux: [0, 0, 0]}
+    - {index: 11, kind: SCNMSG, aux: [-1099, 18, 4]} # message 18 "WITHIN THE ROOM IS A STATUETTE OF A", search: finds item 99 (GOLD KEY)
+    - {index: 12, kind: SCNMSG, aux: [-1095, 47, 4]} # message 47 "THERE IS A STATUETTE OF A BEAR ON", search: finds item 95 (STATUETTE/BEAR)
+    - {index: 13, kind: SCNMSG, aux: [-1096, 50, 4]} # message 50 "UPON A SMALL SILVERY DISK RESTS A", search: finds item 96 (STATUETTE/FROG)
+    - {index: 14, kind: SCNMSG, aux: [95, 138, 5]} # only with item 95 (STATUETTE/BEAR)
+    - {index: 15, kind: SCNMSG, aux: [96, 138, 5]} # only with item 96 (STATUETTE/FROG)
+  encounters:
+    - {min_enemy: 7, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: 0}
+    - {min_enemy: 8, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: 0}
+    - {min_enemy: 10, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: 0}
+level-3:
+  map: |
+    +   +-h-+---+---+---+   +-h-+---+---+---+   +-h-+---+---+---+   +-h-+---+---+---+
+      3@                  4P                  3@                  4P                  19
+    +   +---+---+---+-h-+   +---+---+---+-h-+   +---+---+---+-h-+   +---+---+---+-h-+
+    |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  | 18
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    |   |*   *  D*   *  |   |*   *  D*   *  |   |*   *  D*5E *  |   |*   *  D*   *  | 17
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  | 16
+    +   +-h-+---+---+---+   +-h-+---+---+---+   +-h-+---+---+---+   +-h-+---+---+---+
+      8M                  9M                  aM                  aM                  15
+    +   +---+---+---+-h-+   +---+---+---+---+---+---+---+---+-h-+   +---+---+---+-h-+
+    |   |*   *  |*   *  |   |                   |*   *  |*   *  |   |*   *  |*   *  | 14
+    +   +   +   +   +   +   +---+---+---+---+---+   +   +   +   +   +   +   +   +   +
+    |   |*   *  D*   *  |   |           |   D   |*   *  D*   *  |   |*   *  D*   *  | 13
+    +   +   +   +   +   +   +   +---+-D-+   +   +   +   +   +   +   +   +   +   +   +
+    |   |*   *  |*   *  |   |   |*  h       |   |*   *  |*   *  |   |*   *  |*   *  | 12
+    +   +-h-+---+---+---+   +   +---+---+---+   +-h-+---+---+---+   +-h-+---+---+---+
+      4P                  4P|   |   D*  D*  |   |                 1S                  11
+    +   +---+---+---+-h-+   +   +   +---+-D-+---+---+---+---+-h-+   +---+---+---+-h-+
+    |   |*  D*  |*   *  |   |   |   |           |*   *  |*   *  |   |*   *  |*   *  | 10
+    +   +-D-+---+   +   +   +   +   +   +---+---+   +   +   +   +   +   +   +   +   +
+    |   |*  |*  D*   *  |   |       |           |*   *  D*   *  |   |*   *  D*   *  |  9
+    +   +---+-D-+   +   +   +---+---+---+---+   +   +   +   +   +   +   +   +   +   +
+    |   |*2S|*  |*   *  |   |               D 7B|*   *  |*   *  |   |*   *  |*   *  |  8
+    +   +-h-+---+---+---+   +---+---+---+---+---+---+---+---+---+   +-h-+---+---+---+
+      4P                  9M                  8M                  8M                   7
+    +   +---+---+---+-h-+   +---+---+---+-h-+   +---+---+---+-h-+   +---+---+---+-h-+
+    |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |  6
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    |   |*   *  D*   *  |   |*   *  D*   *  |   |*   *  D*   *  |   |*   *  D*   *  |  5
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |  4
+    +   +-h-+---+---+---+   +-h-+---+---+---+   +-h-+---+---+---+   +-h-+---+---+---+
+      3@                  aM                  9M                  3@                   3
+    +   +---+---+---+-h-+   +---+---+---+-h-+   +---+---+---+-h-+   +---+---+---+-h-+
+    |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |  2
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    |   |*   *  D*   *  |   |*   *  D*   *  |   |*   *  D*   *  |   |*   *  D*   *  |  1
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |   |*   *  |*   *  |  0
+    +   +-h-+---+---+---+   +-h-+---+---+---+   +-h-+---+---+---+   +-h-+---+---+---+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 1, y: 10, side: S, wall: WALL}
+    - {x: 2, y: 8, side: S, wall: DOOR}
+    - {x: 2, y: 9, side: W, wall: DOOR}
+    - {x: 2, y: 10, side: S, wall: DOOR}
+    - {x: 2, y: 10, side: W, wall: WALL}
+    - {x: 8, y: 14, side: S, wall: DOOR}
+    - {x: 9, y: 11, side: S, wall: WALL}
+    - {x: 10, y: 8, side: W, wall: WALL}
+    - {x: 10, y: 11, side: S, wall: DOOR}
+    - {x: 11, y: 11, side: W, wall: DOOR}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [2, 15, 16]} # to MAZE.yml#level-2/16,15
+    - {index: 2, kind: STAIRS, aux: [4, 18, 10]} # to MAZE.yml#level-4/10,18
+    - {index: 3, kind: SPINNER, aux: [0, 0, 0]}
+    - {index: 4, kind: PIT, aux: [0, 8, 3]} # damage 0 + 3 rolls of d8
+    - {index: 5, kind: ENCOUNTE, aux: [5, 4, 40]} # monster 40 (LVL 5 MAGE), 5 times left, range 4
+    - {index: 6, kind: TRANSFER, aux: [3, 1, 13]} # to MAZE.yml#level-3/13,1
+    - {index: 7, kind: BUTTONZ, aux: [0, 4, 1]} # buttons to levels 1-4
+    - {index: 8, kind: SCNMSG, aux: [-1, 57, 1]} # message 57 "THE FLOOR HAS A MOSAIC READING:", every time
+    - {index: 9, kind: SCNMSG, aux: [-1, 59, 1]} # message 59 "THE FLOOR HAS A MOSAIC READING:", every time
+    - {index: 10, kind: SCNMSG, aux: [-1, 61, 1]} # message 61 "THE FLOOR HAS A MOSAIC READING:", every time
+    - {index: 11, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 12, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 13, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 14, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 15, kind: NORMAL, aux: [0, 0, 0]}
+  encounters:
+    - {min_enemy: 15, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: 0}
+    - {min_enemy: 14, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: 0}
+    - {min_enemy: 20, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: 10}
+level-4:
+  map: |
+    +   +   +   +   +   +   +   +   +   +   +---+   +   +   +   +   +   +   +   +   +
+                                                                                      19
+    +   +   +   +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+   +   +
+                |                             1S                            |         18
+    +   +   +   +   +---+---+---+---+---+---+---+---+---+---+---+---+---+   +   +   +
+                |   |*  D*  D*  D*  |                                   |   |         17
+    +   +   +   +   +-D-+---+-h-+-D-+---+   +---+   +   +   +   +   +   +   +   +   +
+                |   |*  |       |*  |*  |   |*  |                       |   |         16
+    +   +   +   +   +-D-+   +   +-D-+-D-+---+-D-+---+---+   +   +   +   +   +   +   +
+                |   |*  |       |*  | 4M      3M      5M|               |   |         15
+    +   +   +   +   +-D-+   +   +-D-+---+---+-D-+---+-D-+   +   +   +   +   +   +   +
+                |   |*  |       |*  |       | 2M|*6E *6E|               |   |         14
+    +   +   +   +   +-D-+---+---+-D-+   +   +   +   +   +---+   +   +   +   +   +   +
+                |                   |       |   |*6E *6ED*  |           |   |         13
+    +   +   +   +   +---+---+---+-D-+   +   +   +   +   +---+   +   +   +-D-+   +   +
+                |   |                       |   |*6E *6E|               | dM|         12
+    +   +   +   +   +   +   +   +   +   +   +   +---+---+   +   +   +   +   +   +   +
+                |   |                       |   |*bM|                   |   |         11
+    +   +   +   +-D-+   +   +   +   +   +   +   +---+   +   +   +   +   +   +   +   +
+                |   |                       |   |*cM|                   |   |         10
+    +   +   +   +   +   +   +   +   +   +   +-D-+---+   +   +   +   +   +   +   +   +
+                |   |                       |   |                       |   |          9
+    +   +   +   +   +   +   +   +   +   +   +-D-+---+---+---+---+---+---+   +---+---+
+    |           |   |                       | 7B|*  D*  D*  D*  D*  D*  D   D*  D*  |  8
+    +   +   +   +   +   +   +   +   +   +   +   +-D-+---+---+---+---+-D-+---+---+-D-+
+    |           |   |                       |   |*  |                   |*eS|   D*  |  7
+    +   +---+---+---+---+---+   +   +   +   +   +-D-+   +   +   +   +   +-h-+   +-D-+
+    |   |*  D*  D*  D*  D*  |               |   |*  |                   |   |   |*  |  6
+    +   +-D-+---+---+---+-D-+   +   +   +   +   +-D-+---+---+---+---+---+-h-+---+-D-+
+    |   |*  |           |*  |               |   |*  h                           h*  |  5
+    +   +-D-+   +   +   +-D-+   +   +   +   +   +-D-+---+---+---+---+---+---+---+-D-+
+    |   |*  |           |*  |               |   |*  |                           |*  |  4
+    +   +-D-+   +   +   +-D-+   +   +   +   +   +-D-+   +   +   +   +   +   +   +-D-+
+    |   |*  |           |*  |               |   |*  |                           |*  |  3
+    +   +-D-+---+---+---+-D-+   +   +   +   +   +-D-+---+---+---+---+---+---+---+-D-+
+    |   |*  D*  D*  D*  D*  |               | 9M|*  D*  D*  D*  D*  D*  D*  D*  D*  |  2
+    +   +---+---+---+---+---+   +   +   +   +-D-+---+---+---+---+---+---+---+---+---+
+                                            |*aM|                                      1
+    +   +   +   +   +   +   +   +   +   +   +-D-+   +   +   +   +   +   +   +   +   +
+                                            |*8B|                                      0
+    +   +   +   +   +   +   +   +   +   +   +---+   +   +   +   +   +   +   +   +   +
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 3, y: 3, side: S, wall: DOOR}
+    - {x: 6, y: 17, side: S, wall: WALL}
+    - {x: 7, y: 13, side: S, wall: WALL}
+    - {x: 9, y: 16, side: S, wall: HIDEDOOR}
+    - {x: 11, y: 10, side: W, wall: DOOR}
+    - {x: 11, y: 11, side: S, wall: DOOR}
+    - {x: 11, y: 12, side: S, wall: DOOR}
+    - {x: 16, y: 3, side: S, wall: DOOR}
+    - {x: 16, y: 8, side: S, wall: WALL}
+    - {x: 19, y: 7, side: W, wall: WALL}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [3, 8, 1]} # to MAZE.yml#level-3/1,8
+    - {index: 2, kind: SCNMSG, aux: [-1, 63, 1]} # message 63 "A SIGN ON THE DOOR READS:", every time
+    - {index: 3, kind: SCNMSG, aux: [2, 67, 9]} # message 67 "SUDDENLY, A LOUD PENETRATING CLANGING", a lookout
+    - {index: 4, kind: SCNMSG, aux: [-1, 73, 1]} # message 73 "A SIGN ON THE DOOR READS:", every time
+    - {index: 5, kind: SCNMSG, aux: [-1, 75, 1]} # message 75 "A SIGN ON THE DOOR READS:", every time
+    - {index: 6, kind: ENCOUNTE, aux: [-1, 0, 100]} # monster 100 (LVL 7 FIGHTER), -1 times left, range 0
+    - {index: 7, kind: BUTTONZ, aux: [0, 4, 1]} # buttons to levels 1-4
+    - {index: 8, kind: BUTTONZ, aux: [0, 9, 4]} # buttons to levels 4-9
+    - {index: 9, kind: SCNMSG, aux: [-1, 77, 1]} # message 77 "A SIGN ON THE DOOR READS:", every time
+    - {index: 10, kind: SCNMSG, aux: [100, 80, 5]} # only with item 100 (BLUE RIBBON)
+    - {index: 11, kind: SCNMSG, aux: [-1, 88, 1]} # message 88 "IN THIS 10 BY 10 ROOM, YOU", every time
+    - {index: 12, kind: SCNMSG, aux: [100, 107, 2]} # message 107 "AS THE PARTY ENTERS THE ROOM, THE", gives item 100 (BLUE RIBBON)
+    - {index: 13, kind: SCNMSG, aux: [95, 133, 5]} # only with item 95 (STATUETTE/BEAR)
+    - {index: 14, kind: STAIRS, aux: [5, 0, 0]} # to MAZE.yml#level-5/0,0
+    - {index: 15, kind: SCNMSG, aux: [99, 138, 5]} # only with item 99 (GOLD KEY)
+  encounters:
+    - {min_enemy: 20, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: 0}
+    - {min_enemy: 25, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: 0}
+    - {min_enemy: 30, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: 1}
+level-5:
+  map: |
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+                                                                                      19
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+-D-+   +---+---+---+
+                                        |*   *   *   *  |       D*  |   |             18
+    +   +---+   +---+   +---+   +---+   +   +   +---+---+---+---+-D-+   +---+   +---+
+    |   |*  |   |*  D   |*  |   |*  |   |*   *  D   |           D*  |   |*  |   |*  | 17
+    +   +-D-+   +-D-+   +-D-+   +-D-+   +-D-+-D-+   +---+---+---+-D-+-D-+-D-+   +-D-+
+                                                |   D           D*  |                 16
+    +---+---+---+---+---+---+---+---+---+---+---+   +---+---+---+-D-+---+---+---+---+
+    |       |       |       |   |       |       |   |           D*  |   |           | 15
+    +   +   +   +   +   +   +   +   +   +   +   +   +---+---+---+-D-+   +---+-h-+   +
+    |   |       |       |       h   |       |   D   D           D*  |           |   | 14
+    +-D-+---+---+---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+-D-+
+    |   | 6#  6#  6#  6#  6#  6#  6#  6#  6#  6#                                    | 13
+    +-D-+---+---+---+---+   +---+---+---+---+---+---+---+---+---+---+---+   +---+---+
+    |       |       |*  | 6#|*   *   *   *  |*4F *4F *4F *4F *4F *4F *4F|   |*   *  | 12
+    +   +   +   +   +-h-+   +-h-+   +   +   +   +   +---+---+   +   +   +   +   +   +
+    |   |       |       | 6#D   |*   *   *  h*4F *4F|       |*4F *4F *4F|   D*   *  | 11
+    +---+---+---+---+   +   +---+   +   +   +   +   +---+   +---+   +   +   +---+---+
+    |                   | 6#|*   *   *   *  |*4F *4F *4F|       |*4F *4F|   |*   *  | 10
+    +-D-+---+---+---+---+   +---+---+---+---+   +   +   +   +---+   +   +   +   +   +
+    |*  |               | 6#|               |*4F *4F *4F|   |*4F *4F *4F|   D*   *  |  9
+    +-D-+-D-+---+---+-D-+   +   +---+---+   +   +---+   +---+   +---+   +   +---+---+
+    |   |*   *  |*   *  | 6#|       |*2SD   |*4F|   h*4F *4F *4F|   |*4F|   |*   *  |  8
+    +   +   +   +   +   +   +---+   +---+   +   +---+   +   +   +---+   +   +   +   +
+    |   |*   *  |*   *  D   |*  |       |   |*4F *4F *4F *4F *4F *4F *4F|   D*   *  |  7
+    +   +---+   +---+---+   +   +---+   +   +---+---+---+-D-+---+---+---+   +---+-h-+
+    |   |*  h*  |       |   D*   *  h   |   |                                   |   |  6
+    +   +---+---+-h-+---+   +---+---+---+-h-+---+---+---+---+---+---+---+---+---+   +
+    |                     3@            |   |   |*   *   *  |*   *   *  |*  D   |   |  5
+    +---+---+-h-+---+---+---+---+---+---+   +   +   +   +   +   +   +   +---+   +   +
+    |               |*  D   |   h*   *  |   h   |*   *   *  D*   *   *  |*  D   |   |  4
+    +   +---+---+---+-h-+   +   +---+---+   +   +   +   +   +   +   +   +---+   +   +
+    |       D   |   |   |   |   |       |   |   |*   *   *  |*   *   *  |*  D   |   |  3
+    +---+---+   +   +   +   +   +---+---+   +-D-+---+-D-+---+---+---+-h-+---+   +   +
+    |       |       |   |   |   h*   *  h   |*   *  |*   *  |*  |*  |*  |*  D   |   |  2
+    +   +-D-+---+   +-D-+   +---+---+---+   +   +   +   +   +-D-+-D-+-D-+-D-+   +   +
+    |   |   |   D   |*  |   |*  |*  |*  |   |*   *  D*   *  |                   |   |  1
+    +   +   +-D-+   +-D-+-D-+-D-+-D-+-D-+   +---+---+---+-D-+   +---+---+---+---+   +
+    | 1Sh   D   |       D                     5B            |   D                   |  0
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 3, y: 3, side: W, wall: DOOR}
+    - {x: 4, y: 17, side: W, wall: WALL}
+    - {x: 5, y: 0, side: W, wall: WALL}
+    - {x: 7, y: 3, side: W, wall: DOOR}
+    - {x: 11, y: 16, side: W, wall: DOOR}
+    - {x: 12, y: 8, side: W, wall: WALL}
+    - {x: 12, y: 14, side: W, wall: WALL}
+    - {x: 12, y: 16, side: W, wall: WALL}
+    - {x: 13, y: 9, side: S, wall: HIDEDOOR}
+    - {x: 13, y: 18, side: W, wall: DOOR}
+    - {x: 15, y: 8, side: W, wall: HIDEDOOR}
+    - {x: 15, y: 15, side: S, wall: WALL}
+    - {x: 15, y: 16, side: S, wall: WALL}
+    - {x: 15, y: 17, side: S, wall: WALL}
+    - {x: 15, y: 18, side: S, wall: WALL}
+    - {x: 15, y: 19, side: S, wall: WALL}
+    - {x: 16, y: 15, side: W, wall: DOOR}
+    - {x: 17, y: 5, side: W, wall: DOOR}
+    - {x: 17, y: 15, side: S, wall: DOOR}
+    - {x: 18, y: 15, side: S, wall: WALL}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [4, 7, 17]} # to MAZE.yml#level-4/17,7
+    - {index: 2, kind: STAIRS, aux: [6, 8, 8]} # to MAZE.yml#level-6/8,8
+    - {index: 3, kind: SPINNER, aux: [0, 0, 0]}
+    - {index: 4, kind: FIZZLE, aux: [0, 0, 0]}
+    - {index: 5, kind: BUTTONZ, aux: [0, 9, 4]} # buttons to levels 4-9
+    - {index: 6, kind: DARK, aux: [0, 0, 0]}
+    - {index: 7, kind: PIT, aux: [0, 8, 5]} # damage 0 + 5 rolls of d8
+    - {index: 8, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 9, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 10, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 11, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 12, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 13, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 14, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 15, kind: NORMAL, aux: [0, 0, 0]}
+  encounters:
+    - {min_enemy: 30, mult_worse: 10, worse01: 1, range0n: 10, perc_worse: 35}
+    - {min_enemy: 30, mult_worse: 10, worse01: 2, range0n: 10, perc_worse: 35}
+    - {min_enemy: 30, mult_worse: 10, worse01: 3, range0n: 10, perc_worse: 30}
+level-6:
+  map: |
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+   +
+    |                                                                           |   | 19
+    +   +---+---+   +---+---+   +   +---+-h-+---+   +   +---+---+   +---+---+   +   +
+    h   D*   *  D   D*   *  D       D*3P| 2S|*3PD       D*   *  D   D*   *  D   D   h 18
+    +   +---+---+   +---+---+   +   +---+-h-+---+   +   +---+---+   +---+---+   +   +
+    |                                                                           |   | 17
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+   +
+    |                           D*   *   *  D                           |*  h*  |   | 16
+    +   +---+---+---+---+---+---+   +   +   +---+---+---+---+---+---+   +---+-h-+   +
+    |   |                   |   D*   *   *  D                       |   |*   *  |   | 15
+    +   +   +---+---+---+   +   +---+-D-+---+---+---+   +---+---+---+   +   +   +   +
+    |   |   |*  D*   *  |   |   |   |   |           |   |*  |*  |*  |   |*   *  |   | 14
+    +   +   +---+   +   +   +   +-D-+   +-D-+-D-+-D-+   +---+-D-+-D-+   +-D-+---+   +
+    |   |   |*  D*   *  D   |   |   |   |*  |   |*  |   |*  D       |   |       h   | 13
+    +   +   +---+---+---+   +   +   +   +---+   +---+   +---+   +   +   +---+---+   +
+    |   |   |*  D*   *  |   |   |   |   |           |   |*  D       |   |       h   | 12
+    +   +   +---+   +   +   +   +   +   +-D-+---+---+   +---+---+-D-+   +-D-+---+   +
+    |   |   |*  D*   *  D   |   |   |   |             4@            |   |*   *  |   | 11
+    +   +   +---+---+---+   +   +   +   +-D-+---+---+   +---+---+---+   +   +   +   +
+    |   |   |*  D*   *  |   |   |   |   |*   *   *  |   |*   *  D   |   |*   *  |   | 10
+    +-D-+-D-+---+   +   +   +   +   +   +   +   +   +   +   +   +-D-+-D-+---+-h-+   +
+    |*   *  |*  D*   *  D   |       |   |*   *   *  |   |*   *  |*   *  |*  h*  |   |  9
+    +   +   +---+---+---+---+---+---+   +---+---+---+---+---+---+   +   +---+---+   +
+    |*   *  D                         1S                        D*   *  h           |  8
+    +   +   +---+---+---+---+---+---+   +---+---+---+---+---+---+   +   +---+---+   +
+    |*   *  |                       |   |       |               |*   *  |*  h*  | 6M|  7
+    +-D-+-D-+   +---+---+---+-h-+   +   +   +   +   +---+   +   +-D-+-D-+---+-h-+   +
+    |   |       |               h   |   |   |   |   |*  |   |   |   |   |*   *  |   |  6
+    +   +---+---+   +---+---+   +   +   +   +   +   +-D-+   +   +   +   +   +   +   +
+    |   |*   *  D   |   D*  |   |   |   |   |   |       |   |       |   |*   *  |   |  5
+    +   +   +   +   +   +---+   +   +   +   +   +---+---+   +---+---+   +-D-+---+   +
+    |   |*   *  |   |       h   |   |   |   |             4@        |   |       h   |  4
+    +   +---+---+   +---+---+   +   +   +   +   +---+---+   +---+---+   +---+---+   +
+    |   |*   *  D               |   |   |   |   |       |   |       |   |       h   |  3
+    +   +   +   +---+---+-D-+---+   +   +-D-+   +   +-D-+   +-D-+   +   +-D-+---+   +
+    |   |*   *  |*   *  |   |       |   |*  |   |   |*  |   |*  |   |   |*   *  |   |  2
+    +   +-D-+---+   +   +   +   +---+-D-+---+   +   +---+   +---+   +   +   +   +   +
+    |   |*  |*  D*   *  D   |   D*   *   *  D   |                   |   |*   *  |   |  1
+    +   +---+---+---+---+---+---+   +   +   +---+---+---+---+---+---+   +---+---+   +
+    |                           D*   *   *  D 5B                        |*  h*  |   |  0
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+   +
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 17, y: 0, side: W, wall: HIDEDOOR}
+    - {x: 17, y: 7, side: W, wall: HIDEDOOR}
+    - {x: 17, y: 9, side: W, wall: HIDEDOOR}
+    - {x: 17, y: 16, side: W, wall: HIDEDOOR}
+    - {x: 19, y: 18, side: W, wall: HIDEDOOR}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [5, 8, 8]} # to MAZE.yml#level-5/8,8
+    - {index: 2, kind: STAIRS, aux: [7, 19, 0]} # to MAZE.yml#level-7/0,19
+    - {index: 3, kind: PIT, aux: [0, 8, 6]} # damage 0 + 6 rolls of d8
+    - {index: 4, kind: SPINNER, aux: [0, 0, 0]}
+    - {index: 5, kind: BUTTONZ, aux: [0, 9, 4]} # buttons to levels 4-9
+    - {index: 6, kind: SCNMSG, aux: [0, 159, 1]} # message 159 "SUDDENDLY YOU SEE A GROUP OF 3 HUMAN-", used up
+    - {index: 7, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 8, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 9, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 10, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 11, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 12, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 13, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 14, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 15, kind: NORMAL, aux: [0, 0, 0]}
+  encounters:
+    - {min_enemy: 40, mult_worse: 10, worse01: 1, range0n: 10, perc_worse: 35}
+    - {min_enemy: 40, mult_worse: 10, worse01: 2, range0n: 10, perc_worse: 35}
+    - {min_enemy: 40, mult_worse: 10, worse01: 3, range0n: 10, perc_worse: 35}
+level-7:
+  map: |
+    +   +---+---+---+---+---+   +---+---+---+---+---+---+   +---+---+---+---+---+   +
+     *1S|                   |   |*7TD*   *   *   *  D*  |   |                   |*    19
+    +---+   +   +   +   +   +   +   +---+---+---+---+   +   +   +   +   +   +   +-h-+
+    |                       |   |*  |   D   D   D   |*  |   |                       | 18
+    +   +   +---+---+   +   +   +   +-D-+---+---+-D-+   +   +   +   +---+-h-+   +   +
+    |       |*8# *8#|       |   |*  |   |   D   |   |*  |   |       |*   *  |       | 17
+    +   +   +   +   +   +   +   +   +-D-+-D-+-D-+-D-+   +   +   +   +---+---+   +   +
+    |       |*8# *8#|       |   |*  |   |   |   |   |*  |   |       D*   *  |       | 16
+    +   +   +---+---+   +   +   +   +-D-+-D-+-D-+-D-+-h-+   +   +   +---+---+   +   +
+    |                       |   |*  |   D   |   D           |                       | 15
+    +   +   +   +   +   +   +   +-D-+---+---+---+   +-h-+   +   +   +   +   +   +   +
+    |                       h   h*   *   *   *  h   h*  h   h                       | 14
+    +---+---+---+---+---+-h-+   +-h-+---+---+---+   +-h-+   +-h-+---+---+---+---+---+
+                              5T                          9P                          13
+    +---+---+---+---+   +-h-+   +-h-+---+---+---+---+-h-+   +-h-+---+---+---+---+---+
+    |*   *   *   *  h   h*  h   h                       h   h*  D*   *   *   *   *  | 12
+    +-D-+---+---+---+   +-h-+   +   +-D-+   +   +-D-+   +   +   +---+---+---+---+-D-+
+    |*  |   D   D   D           |   D*3TD       D*  D   |   |*  |   D   D   D   |*  | 11
+    +   +-D-+---+---+-D-+-h-+   +   +-D-+   +   +-D-+   +   +   +-D-+---+---+-D-+   +
+    |*  |   |   D   D bM|*  |   |                       |   |*  |   D   D   |   |*  | 10
+    +   +-D-+---+---+---+   +   +   +   +   +   +   +   +   +   +---+---+-D-+-D-+   +
+    |*  | dMh eE|   D   |*  |   |                       |   |*  |   D   D   |   |*  |  9
+    +   +-D-+---+---+-D-+   +   +   +-D-+   +   +-D-+   +   +-h-+-D-+---+---+-D-+   +
+    |*  |   D   D cMD   |*  |   |   D*9PD       D*2SD   |           D   D   D   |*  |  8
+    +-D-+---+---+---+---+   +   +   +-D-+   +   +-D-+   +   +-h-+   +---+---+---+-D-+
+    |*   *   *   *   *  D*6Fh   h                       h   h*  h   h*   *   *   *  |  7
+    +---+---+---+---+---+-h-+   +-h-+---+---+---+---+-h-+   +-h-+   +---+---+---+---+
+                                                                                       6
+    +---+---+---+---+---+-h-+   +-h-+   +---+---+---+-h-+   +-h-+---+---+---+---+---+
+    |                       h   h*  h   h*   *   *   *  h   h                       |  5
+    +   +   +   +   +   +   +   +-h-+   +---+---+---+-D-+   +   +   +   +   +   +   +
+    |                       |           D   |   D   |*  |   |                       |  4
+    +   +   +-h-+---+   +   +   +-h-+-D-+-D-+-D-+-D-+   +   +   +   +-D-+---+   +   +
+    |       |*  |*  |       |   |*  |   |   |   |   |*  |   |       |*   *  |       |  3
+    +   +   +---+-D-+   +   +   +   +-D-+-D-+-D-+-D-+   +   +   +   +-D-+---+   +   +
+    |       D*  D*  |       |   |*  |   |   D   |   |*  |   |       |*  h*  |       |  2
+    +   +   +---+---+   +   +   +   +-D-+---+---+-D-+   +   +   +   +---+---+   +   +
+    |                       |   |*  |   D   D   D   |*  |   |                       |  1
+    +---+   +   +   +   +   +   +   +---+---+---+---+   +   +   +   +   +   +   +---+
+     *  D                   |   |*  D*   *   *aB *  D*  |   |                   |*     0
+    +   +---+---+---+---+---+   +---+---+---+---+---+---+   +---+---+---+---+---+   +
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 1, y: 0, side: W, wall: WALL}
+    - {x: 2, y: 3, side: S, wall: HIDEDOOR}
+    - {x: 2, y: 4, side: S, wall: WALL}
+    - {x: 2, y: 16, side: W, wall: HIDEDOOR}
+    - {x: 3, y: 2, side: W, wall: WALL}
+    - {x: 3, y: 3, side: S, wall: WALL}
+    - {x: 3, y: 3, side: W, wall: DOOR}
+    - {x: 3, y: 18, side: S, wall: DOOR}
+    - {x: 19, y: 19, side: S, wall: WALL}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [6, 8, 8]} # to MAZE.yml#level-6/8,8
+    - {index: 2, kind: STAIRS, aux: [8, 0, 0]} # to MAZE.yml#level-8/0,0
+    - {index: 3, kind: TRANSFER, aux: [7, 0, 19]} # to MAZE.yml#level-7/19,0
+    - {index: 4, kind: SPINNER, aux: [0, 0, 0]}
+    - {index: 5, kind: TRANSFER, aux: [7, 6, 13]} # to MAZE.yml#level-7/13,6
+    - {index: 6, kind: FIZZLE, aux: [0, 0, 0]}
+    - {index: 7, kind: TRANSFER, aux: [7, 12, 19]} # to MAZE.yml#level-7/19,12
+    - {index: 8, kind: DARK, aux: [0, 0, 0]}
+    - {index: 9, kind: PIT, aux: [0, 8, 7]} # damage 0 + 7 rolls of d8
+    - {index: 10, kind: BUTTONZ, aux: [0, 9, 4]} # buttons to levels 4-9
+    - {index: 11, kind: SCNMSG, aux: [0, 166, 1]} # message 166 "ITS GETTING WARM AROUND HERE!", used up
+    - {index: 12, kind: SCNMSG, aux: [0, 167, 1]} # message 167 "ITS GETTING REALLY HOT!", used up
+    - {index: 13, kind: SCNMSG, aux: [0, 168, 1]} # message 168 "ITS ALMOST TOO HOT TO BEAR!", used up
+    - {index: 14, kind: ENCOUNTE, aux: [4, 0, 81]} # monster 81 (FIRE DRAGON), 4 times left, range 0
+    - {index: 15, kind: NORMAL, aux: [0, 0, 0]}
+  encounters:
+    - {min_enemy: 45, mult_worse: 10, worse01: 1, range0n: 10, perc_worse: 35}
+    - {min_enemy: 45, mult_worse: 10, worse01: 2, range0n: 10, perc_worse: 35}
+    - {min_enemy: 45, mult_worse: 10, worse01: 3, range0n: 10, perc_worse: 35}
+level-8:
+  map: |
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    | 1@  1@  1@  1@  1@  1@  1@  1@|   |   |   | 8#  8#  8#  8#  8#  8#| 4R  4R  4R| 19
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    | 1@  1@  1@  1@  1@  1@  1@  1@|   |   |   | 8#  8#  8#  8#  8#  8#| 4R  4R  4R| 18
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    | 1@  1@  1@  1@  1@  1@  1@  1@|   |   |   | 8#  8#  8#  8#  8#  8#| 4R  4R  4R| 17
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    | 1@  1@  1@  1@  1@  1@  1@  1@|   |   |   | 8#  8#  8#  8#  8#  8#| 4R  4R  4R| 16
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    | 1@  1@  1@  1@  1@  1@  1@  1@|   |       | 7T  8#  8#  8#  8#  8#| 4R  4R  4R| 15
+    +---+---+---+---+---+---+---+---+   +---+---+-D-+---+---+---+---+---+   +   +   +
+    |   |               |           |   |           |               |   | 4R  4R  4R| 14
+    +   +   +---+---+   +   +   +   +   +   +   +   +   +---+---+   +   +   +   +   +
+    |   |   |       |   |           |   |           |   |       |   |   | 4R  4R  4R| 13
+    +   +   +   +-D-+-D-+---+---+   +   +   +   +   +-D-+-D-+   +   +   +   +   +   +
+    |   |   |   |*   *   *   *  |   |   |           |*   *  |   |   |   | 4R  4R  4R| 12
+    +   +   +   +   +---+---+   +   +   +   +   +   +---+   +   +   +   +   +   +   +
+    |   |   |   |*  |*  D*  |*  |   |   |               |*  |   |   |   | 4R  4R  4R| 11
+    +   +   +   +   +-D-+---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+    |   |   |   |*   *   *   *  |   |   |               |*  |   |   |   | 4R  4R  4R| 10
+    +   +   +   +   +   +   +---+   +   +   +   +   +   +   +   +   +   +   +   +   +
+    |   |   |   |*   *   *  |       |   |               |*  |   |   |   | 4R  4R  4R|  9
+    +   +   +   +   +---+   +---+   +   +   +---+   +   +   +   +   +   +   +   +   +
+    |   |   |   |*  |   |*   *  |   |   |   |*  |       |*  |   |   |   | 4R  4R  4R|  8
+    +   +   +   +   +   +---+   +   +   +   +   +---+---+   +   +   +   +   +   +   +
+    |   |   |   |*  |       |*  |   |   |   |*   *   *   *  |   |   |   | 4R  4R  4R|  7
+    +   +   +   +---+   +   +---+   +   +   +---+---+---+---+   +   +   +   +   +   +
+    |   |   |                       |   |                       |   |   | 4R  4R  4R|  6
+    +   +   +---+   +   +   +   +   +   +   +   +   +   +   +---+   +   +   +   +   +
+    |   |       |                   |   |         5T        |       |   | 4R  4R  4R|  5
+    +   +---+   +---+   +   +   +---+-D-+---+   +   +   +---+   +---+   +   +   +   +
+    |       |       |           |*  D*  D*  |           |       |       | 4R  4R  4R   4
+    +   +   +---+   +---+---+---+-D-+   +-D-+---+---+---+   +---+   +   +   +   +   +
+    |           |                   |*  |                   |           | 4R  4R  4R|  3
+    +   +   +   +---+---+---+---+---+-h-+---+---+---+---+---+   +   +   +   +   +   +
+    |                                                                   | 4R  4R  4R|  2
+    +---+---+---+---+---+---+---+-h-+---+---+---+---+---+---+---+---+---+   +   +   +
+    | 1@  1@  1@  1@  1@  1@  1@  1@|       | 8#  8#  8#  8#  8#  8#  8#| 4R  4R  4R|  1
+    +   +   +   +   +   +   +   +   +   +   +---+   +   +   +   +   +   +   +   +   +
+    | 1@  1@  1@  1@  1@  1@ *6T  1@|   |   | 3B| 8#  8#  8#  8#  8#  8#| 4R  4R  4R|  0
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 7, y: 2, side: S, wall: WALL}
+    - {x: 8, y: 3, side: S, wall: WALL}
+    - {x: 15, y: 15, side: S, wall: DOOR}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: SPINNER, aux: [0, 0, 0]}
+    - {index: 2, kind: DARK, aux: [0, 0, 0]}
+    - {index: 3, kind: BUTTONZ, aux: [0, 9, 4]} # buttons to levels 4-9
+    - {index: 4, kind: ROCKWATE, aux: [0, 0, 0]} # damage 0 + 0 rolls of d0
+    - {index: 5, kind: TRANSFER, aux: [8, 18, 3]} # to MAZE.yml#level-8/3,18
+    - {index: 6, kind: TRANSFER, aux: [8, 5, 5]} # to MAZE.yml#level-8/5,5
+    - {index: 7, kind: TRANSFER, aux: [8, 19, 14]} # to MAZE.yml#level-8/14,19
+    - {index: 8, kind: DARK, aux: [0, 0, 0]}
+    - {index: 9, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 10, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 11, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 12, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 13, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 14, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 15, kind: NORMAL, aux: [0, 0, 0]}
+  encounters:
+    - {min_enemy: 50, mult_worse: 10, worse01: 1, range0n: 10, perc_worse: 35}
+    - {min_enemy: 50, mult_worse: 10, worse01: 2, range0n: 10, perc_worse: 35}
+    - {min_enemy: 50, mult_worse: 3, worse01: 10, range0n: 10, perc_worse: 35}
+level-9:
+  map: |
+    +   +   +   +   +   +   +   +   +   +   +---+   +   +   +   +   +   +   +   +   +
+      3T  3T  3T  3T  3T  3T|   |   |   |       |   | 3T  3T  3T  3T  3T  3T  3T  3T  19
+    +   +   +---+---+---+---+-D-+---+   +---+---+   +---+---+---+---+---+---+   +   +
+      3T  3T|*   *   *   *  |       |                   |   |*   *   *   *  | 3T  3T  18
+    +   +   +   +   +---+   +   +   +---+---+---+---+---+   +   +   +   +   +   +   +
+      3T  3T|*   *  D   |*  D                               |*   *   *   *  | 3T  3T  17
+    +   +   +-D-+---+---+---+---+---+---+---+---+---+---+---+-D-+---+   +   +   +   +
+      3T  3T|*   *  | 3T  3T  3T  3T  3T  3T  3T  3T  3T  3T|   | 3T|*   *  | 3T  3T  16
+    +   +   +   +   +   +---+---+---+---+   +   +---+---+---+-D-+   +---+---+   +   +
+      3T  3T|*   *  | 3T|               | 3T  3T|               | 3T  3T  3T  3T  3T  15
+    +   +   +-D-+---+   +   +---+---+   +   +   +   +---+---+---+   +   +   +   +   +
+      3T  3T|*   *  | 3T|   |*   *  D   | 3T  3T|   | 3T  3T  3T  3T  3T  3T  3T  3T  14
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+      3T  3T|*   *  | 3T|   |*   *  |   | 3T  3T|   | 3T  3T  3T  3T  3T  3T  3T  3T  13
+    +   +   +-D-+---+---+   +---+---+   +   +   +   +   +   +   +   +   +   +   +   +
+      3T  3T|*   *  D   |               | 3T  3T|   | 3T  3T  3T  3T  3T  3T  3T  3T  12
+    +   +   +   +   +---+   +---+---+   +   +   +   +   +   +   +   +   +   +   +   +
+      3T  3T|*   *  | 3T|   | 3T  3T|   | 3T  3T|   | 3T  3T  3T  3T  3T  3T  3T  3T  11
+    +   +   +---+-D-+   +   +   +   +   +   +   +   +---+---+---+   +   +   +   +   +
+      3T  3T|*   *  | 3T|   | 3T  3T|   | 3T  3T|               | 3T  3T  3T  3T  3T  10
+    +   +   +   +   +   +---+   +   +---+   +   +---+---+---+-D-+   +   +   +   +   +
+      3T  3T|*   *  | 3T  3T  3T  3T  3T  3T  3T  3T  3T  3T|   | 3T  3T  3T  3T  3T   9
+    +   +   +---+-D-+   +   +   +   +   +---+---+---+---+---+-D-+---+---+---+   +   +
+      3T  3T|       | 3T  3T  3T  3T  3T|*   *  D*   *  |*   *  |*   *   *  | 3T  3T   8
+    +---+---+---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+---+
+     *   *   *  |   | 3T  3T  3T  3T  3T|*   *  |*   *  D*   *  D*   *   *   *   *     7
+    +---+---+-D-+   +   +   +   +   +   +---+---+---+---+---+---+---+   +   +---+---+
+      3T  3T|       | 3T  3T  3T  3T  3T  3T  3T  3T  3T  3T  3T  3T|*   *  | 3T  3T   6
+    +   +   +---+---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+      3T  3T|   D   | 3T  3T  3T  3T  3T  3T  3T  3T  3T  3T  3T  3T|*   *  | 3T  3T   5
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+-D-+   +   +
+      3T  3T|   |   | 3T  3T  3T  3T  3T  3T  3T  3T  3T  3T  3T  3T|*   *  | 3T  3T   4
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+      3T  3T|   |   | 3T  3T  3T  3T  3T  3T  3T  3T  3T  3T  3T  3T|*   *  | 3T  3T   3
+    +   +   +-D-+   +---+---+---+---+---+---+---+---+---+---+---+---+-D-+---+   +   +
+      3T  3T|   |                   |*2C *  |               |               | 3T  3T   2
+    +   +   +   +---+---+---+---+   +   +   +   +---+   +   +   +---+   +   +   +   +
+      3T  3T                    |   D*   *  D   D   |   |           |       | 3T  3T   1
+    +   +   +---+---+---+---+-D-+---+-D-+---+-D-+   +---+---+---+---+---+---+   +   +
+      3T  3T  3T  3T  3T  3T|   |   |   |   | 1B|   | 3T  3T  3T  3T  3T  3T  3T  3T   0
+    +   +   +   +   +   +   +   +   +   +   +---+   +   +   +   +   +   +   +   +   +
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 2, y: 1, side: W, wall: WALL}
+    - {x: 5, y: 12, side: W, wall: HIDEDOOR}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: BUTTONZ, aux: [0, 9, 4]} # buttons to levels 4-9
+    - {index: 2, kind: CHUTE, aux: [10, 0, 0]}
+    - {index: 3, kind: TRANSFER, aux: [1, 5, 0]} # to MAZE.yml#level-1/0,5
+    - {index: 4, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 5, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 6, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 7, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 8, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 9, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 10, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 11, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 12, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 13, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 14, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 15, kind: NORMAL, aux: [0, 0, 0]}
+  encounters:
+    - {min_enemy: 55, mult_worse: 10, worse01: 1, range0n: 10, perc_worse: 35}
+    - {min_enemy: 55, mult_worse: 10, worse01: 2, range0n: 10, perc_worse: 35}
+    - {min_enemy: 55, mult_worse: 10, worse01: 3, range0n: 10, perc_worse: 35}
+level-10:
+  map: |
+    +---+---+   +   +---+---+---+---+   +---+---+---+   +   +   +   +   +   +   +---+
+    |*2T *7T| fR  fR|               | fR|*   *3T *  | fR  fR  fR  fR  fR  fR  fR  fR| 19
+    +   +   +---+   +---+---+---+   +   +   +   +   +   +   +---+---+---+   +   +   +
+    |*   *  D   | fR  fR  fR  fR|   | fR|*   *   *7T| fR  fR|           | fR  fR  fR| 18
+    +   +   +   +   +---+---+---+   +   +---+-D-+---+   +   +   +---+   +   +   +   +
+    |*   *  |   | fR|               | fR  fR|   | fR  fR  fR|   | fR|   | fR  fR  fR| 17
+    +---+---+   +   +   +---+---+---+---+---+   +   +   +   +---+   +   +   +   +   +
+    |           | fR|                           | fR  fR  fR  fR  fR|   | fR  fR  fR| 16
+    +   +---+---+   +---+---+---+---+---+---+---+   +   +---+---+---+   +   +---+---+
+    |   | fR  fR  fR  fR  fR  fR  fR  fR  fR  fR  fR  fR|               | fR|*   *  | 15
+    +   +   +---+---+---+---+   +   +   +---+---+---+---+   +---+---+---+   +   +   +
+    |   | fR|     9M        | fR  fR  fR|                   | fR  fR  fR  fR|*   *  | 14
+    +   +   +---+---+---+   +   +   +   +   +---+---+---+---+   +---+---+---+   +   +
+    |   | fR  fR  fR  fR|   | fR  fR  fR|   | fR  fR  fR  fR  fR|           D*   *5T| 13
+    +   +---+---+---+---+   +   +   +---+-D-+---+---+   +---+---+   +---+---+   +---+
+    |                       | fR  fR| 7T *   *   *  | fR|           | fR  fR| 7T| fR| 12
+    +---+---+---+---+---+---+   +   +---+   +   +   +   +   +---+---+---+   +---+   +
+      fR  fR  fR  fR  fR  fR  fR  fR  fR|*   *4T *  | fR|   |*6T *   *  | fR  fR  fR  11
+    +---+---+---+   +   +---+   +   +   +   +   +   +   +   +   +   +   +---+   +   +
+    |*1T *   *  | fR  fR|   | fR  fR  fR|*   *   *  | fR|   |*   *   *    7T| fR  fR| 10
+    +   +   +   +   +   +   +   +   +   +---+---+---+   +   +   +   +-D-+---+---+   +
+    |*   *   *  | fR  fR|   | fR  fR  fR  fR  fR  fR  fR|   |*   *  |   | fR|   | fR|  9
+    +   +   +   +   +   +   +---+---+   +---+---+---+---+   +---+---+   +   +   +   +
+    |*   *   *7T| fR  fR|           | fR|                   | fR  fR|   | fR|   | fR|  8
+    +---+-D-+---+   +   +---+---+   +   +   +---+---+---+---+   +   +   +   +   +   +
+      fR|   | fR  fR  fR  fR  fR|   | fR|   | fR  fR  fR  fR  fR  fR|   | fR|   | fR   7
+    +   +   +---+---+---+   +   +   +---+   +   +   +   +   +   +   +   +---+   +   +
+      fR|               | fR  fR|           | fR  fR  fR  fR  fR  fR|           | fR   6
+    +   +---+---+---+   +   +   +---+---+---+   +   +---+   +   +   +---+---+---+   +
+      fR  fR  fR  fR|   | fR  fR  fR  fR  fR  fR  fR|   | fR  fR  fR  fR  fR  fR  fR   5
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+---+---+   +   +
+      fR  fR  fR  fR|   | fR  fR  fR  fR  fR  fR  fR|   | fR  fR|         aM| fR  fR   4
+    +---+---+---+---+   +   +   +---+---+---+---+---+   +   +   +   +---+-D-+---+---+
+    |                   | fR  fR|                       | fR  fR|   | fR|*bE *   *  |  3
+    +   +---+---+---+---+   +   +   +---+---+---+---+---+   +   +   +   +   +   +   +
+    |   | fR  fR  fR  fR  fR  fR|   | fR  fR  fR  fR  fR  fR  fR|   | fR|*   *   *  |  2
+    +   +   +   +   +   +   +   +   +---+---+---+---+---+---+---+   +   +   +   +   +
+    |   | fR  fR  fR  fR  fR  fR|                                   | fR|*   *   *  |  1
+    +   +---+   +   +   +   +   +---+---+---+---+---+---+---+---+---+   +---+---+---+
+    | 8M  cT| fR  fR  fR  fR  fR  fR  fR  fR  7T  fR  fR  fR  fR  fR  fR  fR  fR| cT|  0
+    +---+---+   +   +---+---+---+---+   +---+---+---+   +   +   +   +   +   +   +---+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way: []
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: TRANSFER, aux: [10, 14, 2]} # to MAZE.yml#level-10/2,14
+    - {index: 2, kind: TRANSFER, aux: [10, 19, 4]} # to MAZE.yml#level-10/4,19
+    - {index: 3, kind: TRANSFER, aux: [10, 17, 14]} # to MAZE.yml#level-10/14,17
+    - {index: 4, kind: TRANSFER, aux: [10, 10, 5]} # to MAZE.yml#level-10/5,10
+    - {index: 5, kind: TRANSFER, aux: [10, 9, 18]} # to MAZE.yml#level-10/18,9
+    - {index: 6, kind: TRANSFER, aux: [10, 5, 12]} # to MAZE.yml#level-10/12,5
+    - {index: 7, kind: TRANSFER, aux: [10, 0, 0]} # to MAZE.yml#level-10/0,0
+    - {index: 8, kind: SCNMSG, aux: [-1, 140, 1]} # message 140 "INSCRIBED ON AN ORNATE GOLD PLAQUE IS", every time
+    - {index: 9, kind: SCNMSG, aux: [-1, 153, 1]} # message 153 "ONE GROUP OF GUARDIANS YE HAVE BEATEN", every time
+    - {index: 10, kind: SCNMSG, aux: [-1, 157, 1]} # message 157 ""LAIR OF THE EVIL WIZARD WERDNA"", every time
+    - {index: 11, kind: ENCOUNTE, aux: [-1, 0, 96]} # monster 96 (W E R D N A), -1 times left, range 0
+    - {index: 12, kind: TRANSFER, aux: [0, 0, 0]} # to the castle
+    - {index: 13, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 14, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 15, kind: ROCKWATE, aux: [0, 0, 0]} # damage 0 + 0 rolls of d0
+  encounters:
+    - {min_enemy: 70, mult_worse: 10, worse01: 1, range0n: 10, perc_worse: 35}
+    - {min_enemy: 74, mult_worse: 10, worse01: 1, range0n: 10, perc_worse: 35}
+    - {min_enemy: 86, mult_worse: 0, worse01: 0, range0n: 9, perc_worse: 0}

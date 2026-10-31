@@ -1,0 +1,2225 @@
+# Items, by the number characters and rewards use.
+
+items:
+  - index: 0
+    name: BROKEN ITEM
+    name_unknown: BROKEN ITEM # shown until identified
+    type: MISC
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 0
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: []
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 1
+    name: LONG SWORD
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 25
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 4
+    damage: {count: 1, sides: 8, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 2
+    name: SHORT SWORD
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 15
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 3
+    damage: {count: 1, sides: 6, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 3
+    name: ANOINTED MACE
+    name_unknown: KNOBBED STICK # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 30
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 2
+    damage: {count: 2, sides: 3, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 4
+    name: ANOINTED FLAIL
+    name_unknown: STICK W/CHAIN # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 150
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 3
+    damage: {count: 1, sides: 7, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 5
+    name: STAFF
+    name_unknown: STICK # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 10
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 1, sides: 5, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 6
+    name: DAGGER
+    name_unknown: DAGGER # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 5
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 1
+    damage: {count: 1, sides: 4, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 7
+    name: SMALL SHIELD
+    name_unknown: SHIELD # shown until identified
+    type: SHIELD
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 20
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 2
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 8
+    name: LARGE SHIELD
+    name_unknown: SHIELD # shown until identified
+    type: SHIELD
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 40
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 3
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 9
+    name: ROBES
+    name_unknown: CLOTHING # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 15
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 1
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 10
+    name: LEATHER ARMOR
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 50
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 2
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 11
+    name: CHAIN MAIL
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 90
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 3
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 12
+    name: BREAST PLATE
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 200
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 4
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 13
+    name: PLATE MAIL
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 750
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 5
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 14
+    name: HELM
+    name_unknown: HELM # shown until identified
+    type: HELMET
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 100
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 1
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 15
+    name: DIOS POTION
+    name_unknown: POTION # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 500
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 23 # casts DIOS
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 16
+    name: LATUMOFIS POT.
+    name_unknown: POTION # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 300
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 37 # casts LATUMOFI
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 17
+    name: LONG SWORD+1
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 10000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 5
+    damage: {count: 1, sides: 8, bonus: 1}
+    extra_swings: 2
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 18
+    name: SHORT SWORD+1
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 15000
+    boltac_stock: 2 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 4
+    damage: {count: 1, sides: 6, bonus: 1}
+    extra_swings: 2
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 19
+    name: MACE+1
+    name_unknown: KNOBBED STICK # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 12500
+    boltac_stock: 1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 3
+    damage: {count: 2, sides: 4, bonus: 1}
+    extra_swings: 2
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 20
+    name: STAFF OF MOGREF
+    name_unknown: STAFF # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 25
+    price: 3000
+    boltac_stock: 3 # how many Boltac's has; -1 unlimited
+    spell_power: 2 # casts MOGREF
+    class_use: [MAGE, BISHOP]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 1
+    damage: {count: 1, sides: 6, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 21
+    name: SCROLL/KANTINO
+    name_unknown: SCROLL # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 500
+    boltac_stock: 4 # how many Boltac's has; -1 unlimited
+    spell_power: 3 # casts KATINO
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 22
+    name: LEATHER + 1
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1500
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 3
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 23
+    name: CHAIN MAIL + 1
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1500
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 4
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 24
+    name: PLATE MAIL + 1
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1500
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 6
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 25
+    name: SHIELD + 1
+    name_unknown: SHIELD # shown until identified
+    type: SHIELD
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1500
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 4
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 26
+    name: BREAST PLATE +1
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1500
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 5
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 27
+    name: SCROLL/BADIOS
+    name_unknown: PAPER # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 25
+    price: 500
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 24 # casts BADIOS
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 1, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 28
+    name: SCROLL/HALITO
+    name_unknown: SCROLL # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 500
+    boltac_stock: 27 # how many Boltac's has; -1 unlimited
+    spell_power: 1 # casts HALITO
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 29
+    name: LONG SWORD -1
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1000
+    boltac_stock: 1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: -1
+    damage: {count: 1, sides: 8, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 30
+    name: SHORT SWORD -1
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1000
+    boltac_stock: 2 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: -1
+    damage: {count: 1, sides: 6, bonus: 0}
+    extra_swings: 1
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 31
+    name: MACE -1
+    name_unknown: KNOBBED STICK # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1000
+    boltac_stock: 1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: -1
+    damage: {count: 2, sides: 3, bonus: 0}
+    extra_swings: 1
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 32
+    name: STAFF +2
+    name_unknown: STICK # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 2500
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 2
+    damage: {count: 1, sides: 4, bonus: 2}
+    extra_swings: 1
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 33
+    name: DRAGON SLAYER
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 10000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000100000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 1
+    damage: {count: 1, sides: 10, bonus: 1}
+    extra_swings: 1
+    critical_hit: false
+    vs_type: "00000001000000"
+  - index: 34
+    name: HELM + 1
+    name_unknown: HELM # shown until identified
+    type: HELMET
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 3000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 2
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 35
+    name: LEATHER -1
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1500
+    boltac_stock: 1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, BISHOP, SAMURAI, LORD]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 1
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 36
+    name: CHAIN -1
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1500
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 2
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 37
+    name: BREAST PLATE-1
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1500
+    boltac_stock: 1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 3
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 38
+    name: SHIELD -1
+    name_unknown: SHIELD # shown until identified
+    type: SHIELD
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 1500
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, SAMURAI, LORD]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: -1
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 39
+    name: JEWELED AMULET
+    name_unknown: AMULET # shown until identified
+    type: MISC
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 5000
+    boltac_stock: 2 # how many Boltac's has; -1 unlimited
+    spell_power: 4 # casts DUMAPIC
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 40
+    name: SCROLL/BADIOS
+    name_unknown: SCROLL # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 500
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 24 # casts BADIOS
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 1, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 41
+    name: POTION OF SOPIC
+    name_unknown: POTION # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 1500
+    boltac_stock: 1 # how many Boltac's has; -1 unlimited
+    spell_power: 6 # casts SOPIC
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 42
+    name: LONG SWORD + 2
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 4000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 6
+    damage: {count: 1, sides: 10, bonus: 2}
+    extra_swings: 3
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 43
+    name: SHORT SWORD +2
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 4000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 5
+    damage: {count: 1, sides: 6, bonus: 2}
+    extra_swings: 3
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 44
+    name: MACE + 2
+    name_unknown: KNOBBED STICK # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 4000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 4
+    damage: {count: 1, sides: 8, bonus: 2}
+    extra_swings: 2
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 45
+    name: SCROLL/LOMILWA
+    name_unknown: SCROLL # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 2500
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 31 # casts LOMILWA
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 46
+    name: SCROLL/DILTO
+    name_unknown: SCROLL # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 2500
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 5 # casts DILTO
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 47
+    name: COPPER GLOVES
+    name_unknown: GLOVES # shown until identified
+    type: GAUNTLET
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 6000
+    boltac_stock: -1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 1
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 48
+    name: LEATHER + 2
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 6000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 4
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 49
+    name: CHAIN + 2
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 6000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 5
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 50
+    name: PLATE MAIL + 2
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 6000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 7
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 51
+    name: SHIELD + 2
+    name_unknown: SHIELD # shown until identified
+    type: SHIELD
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 7000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 5
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 52
+    name: HELM +2 (EVIL)
+    name_unknown: HELM # shown until identified
+    type: HELMET
+    alignment: EVIL
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 24 # casts BADIOS
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 3
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 53
+    name: POTION OF DIAL
+    name_unknown: POTION # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 5000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 35 # casts DIAL
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 1, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 54
+    name: RING OF PORFIC
+    name_unknown: RING # shown until identified
+    type: MISC
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 5
+    price: 10000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 26 # casts PORFIC
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 55
+    name: WERE SLAYER
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 10000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000001000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 5
+    damage: {count: 1, sides: 10, bonus: 1}
+    extra_swings: 2
+    critical_hit: false
+    vs_type: "00000000010000"
+  - index: 56
+    name: MAGE MASHER
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 10000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0100000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 5
+    damage: {count: 1, sides: 6, bonus: 1}
+    extra_swings: 2
+    critical_hit: false
+    vs_type: "01000000000000"
+  - index: 57
+    name: MACE PRO POISON
+    name_unknown: KNOBBED STICK # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 10000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000001000"
+    vs_type_3: "0001000000000000"
+    armor_mod: 0
+    to_hit: 3
+    damage: {count: 1, sides: 8, bonus: 0}
+    extra_swings: 2
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 58
+    name: STAFF/MONTINO
+    name_unknown: STAFF # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 5 # item it becomes when used up
+    change_chance: 10
+    price: 15000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 30 # casts MONTINO
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 1
+    damage: {count: 1, sides: 5, bonus: 1}
+    extra_swings: 1
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 59
+    name: BLADE CUSINART'
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 15000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 6
+    damage: {count: 1, sides: 3, bonus: 9}
+    extra_swings: 4
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 60
+    name: AMULET/MANIFO
+    name_unknown: AMULET # shown until identified
+    type: MISC
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 10
+    price: 15000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 29 # casts MANIFO
+    class_use: [PRIEST]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 61
+    name: ROD OF FLAME
+    name_unknown: ROD # shown until identified
+    type: MISC
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 10
+    price: 25000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 7 # casts MAHALITO
+    class_use: [MAGE, BISHOP, SAMURAI]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0100000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 62
+    name: EVIL CHAIN + 2
+    name_unknown: CHAIN # shown until identified
+    type: ARMOR
+    alignment: EVIL
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 2 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 5
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 63
+    name: NEUT P-MAIL + 2
+    name_unknown: PLATE ARMOR # shown until identified
+    type: ARMOR
+    alignment: NEUTRAL
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 7
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 64
+    name: EVIL SHIELD +3
+    name_unknown: SHIELD # shown until identified
+    type: SHIELD
+    alignment: EVIL
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 25000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 5
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 65
+    name: AMULET/MAKANITO
+    name_unknown: AMULET # shown until identified
+    type: MISC
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 5
+    price: 20000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 13 # casts MAKANITO
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 66
+    name: DIADEM OF MALOR
+    name_unknown: DIADEM # shown until identified
+    type: HELMET
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 14 # item it becomes when used up
+    change_chance: 100
+    price: 25000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 19 # casts MALOR
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 2
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 67
+    name: SCROLL/BADIAL
+    name_unknown: SCROLL # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 36 # casts BADIAL
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 68
+    name: SHORT SWORD -2
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 1
+    damage: {count: 1, sides: 6, bonus: 0}
+    extra_swings: 1
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 69
+    name: DAGGER + 2
+    name_unknown: DAGGER # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 3
+    damage: {count: 1, sides: 4, bonus: 2}
+    extra_swings: 2
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 70
+    name: MACE -2
+    name_unknown: KNOBBED STICK # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 1, sides: 8, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 71
+    name: STAFF -2
+    name_unknown: STICK # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: -2
+    damage: {count: 1, sides: 4, bonus: 0}
+    extra_swings: 1
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 72
+    name: DAGGER OF SPEED
+    name_unknown: DAGGER # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 30000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [MAGE, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: -3
+    to_hit: -1
+    damage: {count: 1, sides: 4, bonus: 0}
+    extra_swings: 7
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 73
+    name: CURSED ROBE
+    name_unknown: ROBE # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: -2
+    to_hit: -2
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 74
+    name: LEATHER -2
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 75
+    name: CHAIN -2
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 1
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 76
+    name: BREAST PLATE -2
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 2
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 77
+    name: SHIELD - 2
+    name_unknown: SHIELD # shown until identified
+    type: SHIELD
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 8000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 78
+    name: CURSED HELMET
+    name_unknown: HELM # shown until identified
+    type: HELMET
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 50000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: -2
+    to_hit: -2
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 79
+    name: BREAST PLATE +2
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 10000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 6
+    to_hit: 0
+    damage: {count: 0, sides: 1, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 80
+    name: SILVER GLOVES
+    name_unknown: GAUNTLETS # shown until identified
+    type: GAUNTLET
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 60000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 3
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 81
+    name: EVIL SWORD + 3
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: EVIL
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 50000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 7
+    damage: {count: 1, sides: 10, bonus: 3}
+    extra_swings: 4
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 82
+    name: EVIL SSWORD + 3
+    name_unknown: SWORD # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 50000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 6
+    damage: {count: 1, sides: 6, bonus: 0}
+    extra_swings: 4
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 83
+    name: THIEVES DAGGER
+    name_unknown: DAGGER # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: 17
+    change_to: 0 # item it becomes when used up
+    change_chance: 100
+    price: 50000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [THIEF, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 5
+    damage: {count: 1, sides: 6, bonus: 0}
+    extra_swings: 4
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 84
+    name: BREAST PLATE +3
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 100000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 7
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 85
+    name: LORDS GARB
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: 23
+    change_to: 0 # item it becomes when used up
+    change_chance: 50
+    price: 1000000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [LORD]
+    heal_points: 1
+    vs_type_2: "0000001100000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 10
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: true
+    vs_type: "00000000011100"
+  - index: 86
+    name: MURASAMA BLADE
+    name_unknown: WEAPON # shown until identified
+    type: WEAPON
+    alignment: UNALIGN
+    cursed: false
+    special: 1
+    change_to: 0 # item it becomes when used up
+    change_chance: 50
+    price: 1000000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [SAMURAI]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 8
+    damage: {count: 10, sides: 5, bonus: 0}
+    extra_swings: 3
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 87
+    name: SHURIKEN
+    name_unknown: WEAPON # shown until identified
+    type: WEAPON
+    alignment: EVIL
+    cursed: false
+    special: 22
+    change_to: 0 # item it becomes when used up
+    change_chance: 50
+    price: 50000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0001100000000000"
+    armor_mod: 0
+    to_hit: 7
+    damage: {count: 1, sides: 5, bonus: 10}
+    extra_swings: 3
+    critical_hit: true
+    vs_type: "00000000000000"
+  - index: 88
+    name: CHAIN PRO FIRE
+    name_unknown: ARMOR # shown until identified
+    type: ARMOR
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 150000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0100000000000000"
+    armor_mod: 6
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 89
+    name: EVIL PLATE + 3
+    name_unknown: PLATE ARMOR # shown until identified
+    type: ARMOR
+    alignment: EVIL
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 150000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 9
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 90
+    name: SHIELD + 3
+    name_unknown: SHIELD # shown until identified
+    type: SHIELD
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 250000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, PRIEST, THIEF, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 6
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 91
+    name: RING OF HEALING
+    name_unknown: RING # shown until identified
+    type: MISC
+    alignment: UNALIGN
+    cursed: false
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 300000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 1
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 92
+    name: RING PRO UNDEAD
+    name_unknown: RING # shown until identified
+    type: MISC
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 500000
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 0
+    vs_type_2: "0000000000100000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 1, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 93
+    name: DEADLY RING
+    name_unknown: RING # shown until identified
+    type: MISC
+    alignment: UNALIGN
+    cursed: true
+    special: -1
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 500000
+    boltac_stock: 1 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: -3
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 94
+    name: WERDNA'S AMULET
+    name_unknown: AMULET # shown until identified
+    type: MISC
+    alignment: EVIL
+    cursed: true
+    special: 23
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 999999999999
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 19 # casts MALOR
+    class_use: [FIGHTER, MAGE, PRIEST, THIEF, BISHOP, SAMURAI, LORD, NINJA]
+    heal_points: 5
+    vs_type_2: "1111111111111000"
+    vs_type_3: "1111111000000000"
+    armor_mod: 10
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 95
+    name: STATUETTE/BEAR
+    name_unknown: STATUETTE/BEAR # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 0
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: []
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 96
+    name: STATUETTE/FROG
+    name_unknown: STATUETTE/FROG # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 0
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: []
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 2
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 97
+    name: BRONZE KEY
+    name_unknown: BRONZE KEY # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 0
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: []
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 98
+    name: SILVER KEY
+    name_unknown: SILVER KEY # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 0
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: []
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 99
+    name: GOLD KEY
+    name_unknown: GOLD KEY # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 0
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: []
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"
+  - index: 100
+    name: BLUE RIBBON
+    name_unknown: BLUE RIBBON # shown until identified
+    type: SPECIAL
+    alignment: UNALIGN
+    cursed: false
+    special: 0
+    change_to: 0 # item it becomes when used up
+    change_chance: 0
+    price: 0
+    boltac_stock: 0 # how many Boltac's has; -1 unlimited
+    spell_power: 0
+    class_use: []
+    heal_points: 0
+    vs_type_2: "0000000000000000"
+    vs_type_3: "0000000000000000"
+    armor_mod: 0
+    to_hit: 0
+    damage: {count: 0, sides: 0, bonus: 0}
+    extra_swings: 0
+    critical_hit: false
+    vs_type: "00000000000000"

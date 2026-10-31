@@ -1,0 +1,58 @@
+# A Little Computer People disk. Import writes the resident back; this file is a description.
+
+game: Little Computer People
+platform: Commodore 64
+source: lcp-a131.d64
+sha1: 892e7603cd02c3e7ea4cd53a9e07dc2a02b5d064
+disk_name: RESEARCH PROJECT
+disk_id: CP
+resident: characters/zeke/CHARACTER.yml # the person living here
+files:
+  - {name: HOUSE, type: PRG, blocks: 1}
+  - {name: AB, type: PRG, blocks: 17}
+  - {name: "{c}LIL", type: PRG, blocks: 16}
+  - {name: "{10}PIANOA", type: PRG, blocks: 16}
+  - {name: "{10}PIANOB", type: PRG, blocks: 14}
+  - {name: "{e}NAMI", type: PRG, blocks: 9}
+  - {name: "{10}PIANOC", type: PRG, blocks: 8}
+  - {name: "{10}PIANOD", type: PRG, blocks: 8}
+  - {name: "{10}PIANOE", type: PRG, blocks: 5}
+  - {name: "{10}PIANOF", type: PRG, blocks: 4}
+  - {name: "{10}PIANOG", type: PRG, blocks: 10}
+  - {name: "{7}Card War", type: PRG, blocks: 13}
+  - {name: "{16}Name Changer", type: PRG, blocks: 5}
+  - {name: "{17}WORD", type: PRG, blocks: 13}
+  - {name: "{12}REB", type: PRG, blocks: 13}
+  - {name: "{12}REC", type: PRG, blocks: 11}
+  - {name: "{12}RED", type: PRG, blocks: 12}
+  - {name: "{12}REE", type: PRG, blocks: 12}
+  - {name: "{12}REF", type: PRG, blocks: 12}
+  - {name: "{12}REG", type: PRG, blocks: 12}
+  - {name: "{7}Anagrams", type: PRG, blocks: 15}
+  - {name: "{3}REI", type: PRG, blocks: 12}
+  - {name: "{3}REJ", type: PRG, blocks: 11}
+  - {name: "{3}REK", type: PRG, blocks: 12}
+  - {name: "{3}REL", type: PRG, blocks: 12}
+  - {name: "{8}M1B", type: PRG, blocks: 4}
+  - {name: "{8}M1C", type: PRG, blocks: 4}
+  - {name: "{8}M1A", type: PRG, blocks: 4}
+  - {name: "{8}M2B", type: PRG, blocks: 4}
+  - {name: "{8}M2C", type: PRG, blocks: 4}
+  - {name: "{8}M2A", type: PRG, blocks: 4}
+  - {name: "{8}M3B", type: PRG, blocks: 4}
+  - {name: "{8}M3C", type: PRG, blocks: 4}
+  - {name: "{8}M3A", type: PRG, blocks: 4}
+  - {name: "{8}M4B", type: PRG, blocks: 4}
+  - {name: "{8}M4C", type: PRG, blocks: 4}
+  - {name: "{8}M4A", type: PRG, blocks: 4}
+  - {name: "{8}M5B", type: PRG, blocks: 4}
+  - {name: "{8}M5C", type: PRG, blocks: 4}
+  - {name: "{8}M5A", type: PRG, blocks: 4}
+  - {name: "{13}SPEAK", type: PRG, blocks: 6}
+  - {name: "{f}PET1", type: PRG, blocks: 90}
+  - {name: "{18}P1", type: PRG, blocks: 37}
+  - {name: "{19}P2", type: PRG, blocks: 5}
+  - {name: "{1a}P3", type: PRG, blocks: 4}
+  - {name: "{11}PET2", type: PRG, blocks: 51}
+  - {name: "{7}Poker", type: PRG, blocks: 16}
+  - {name: "{15}PET3", type: PRG, blocks: 48}

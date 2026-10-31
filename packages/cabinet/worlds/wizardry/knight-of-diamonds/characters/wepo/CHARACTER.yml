@@ -1,0 +1,57 @@
+# WEPO: roster slot 15 of THE KNIGHT OF DIAMONDS.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: WEPO
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 50349
+inventory:
+  - {item: SILVER GLOVES, equipped: true, cursed: false, identified: true}
+  - {item: SHIELD + 1, equipped: true, cursed: false, identified: true}
+  - {item: PLATE MAIL + 2, equipped: true, cursed: false, identified: true}
+  - {item: RING OF PORFIC, equipped: true, cursed: false, identified: true}
+  - {item: SHSWD./SWINGING, equipped: true, cursed: false, identified: true}
+  - {item: HELM + 1, equipped: true, cursed: false, identified: true}
+spells:
+  - HALITO
+  - MOGREF
+  - KATINO
+  - DUMAPIC
+  - DILTO
+  - SOPIC
+  - MAHALITO
+  - MOLITO
+  - MORLIS
+  - DALTO
+  - LAHALITO
+  - MAMORLIS
+  - MAKANITO
+  - MADALTO
+wizardry:
+  slot: 15
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: ELF
+  class: SAMURAI
+  age_weeks: 1238
+  status: LOST
+  alignment: NEUTRAL
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 18, agility: 18, luck: 18}
+  luck_skill: [12, 14, 12, 14, 12]
+  experience: 2094065
+  max_level: 16
+  level: 16
+  hp: 80 # hit points left
+  hp_max: 80
+  mage_spells: [9, 9, 7, 4, 3, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 14
+  armor_class: -5 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 10
+  damage: {count: 1, sides: 4, bonus: 5}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [0, 11] # AWARDS[4] bits

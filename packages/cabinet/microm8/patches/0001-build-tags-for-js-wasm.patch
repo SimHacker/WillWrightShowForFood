@@ -1,0 +1,101 @@
+diff --git a/GoPath/src/paleotronic.com/api/chat.go b/GoPath/src/paleotronic.com/api/chat.go
+index fd2b633..f2072f7 100644
+--- a/GoPath/src/paleotronic.com/api/chat.go
++++ b/GoPath/src/paleotronic.com/api/chat.go
+@@ -1,3 +1,5 @@
++//go:build !(js && wasm)
++
+ package s8webclient
+ 
+ import (
+diff --git a/GoPath/src/paleotronic.com/api/forum.go b/GoPath/src/paleotronic.com/api/forum.go
+index dacaa38..ba813b6 100644
+--- a/GoPath/src/paleotronic.com/api/forum.go
++++ b/GoPath/src/paleotronic.com/api/forum.go
+@@ -1,3 +1,5 @@
++//go:build !(js && wasm)
++
+ package s8webclient
+ 
+ import (
+diff --git a/GoPath/src/paleotronic.com/api/remote.go b/GoPath/src/paleotronic.com/api/remote.go
+index 002768b..4f18b6c 100644
+--- a/GoPath/src/paleotronic.com/api/remote.go
++++ b/GoPath/src/paleotronic.com/api/remote.go
+@@ -1,3 +1,5 @@
++//go:build !(js && wasm)
++
+ package s8webclient
+ 
+ import (
+diff --git a/GoPath/src/paleotronic.com/decoding/ogg/internal/vorbis/vorbis.go b/GoPath/src/paleotronic.com/decoding/ogg/internal/vorbis/vorbis.go
+index f6fa57a..a3d9d00 100755
+--- a/GoPath/src/paleotronic.com/decoding/ogg/internal/vorbis/vorbis.go
++++ b/GoPath/src/paleotronic.com/decoding/ogg/internal/vorbis/vorbis.go
+@@ -1,3 +1,5 @@
++//go:build !(js && wasm)
++
+ // Package vorbis decodes Ogg Vorbis files.
+ package vorbis
+ 
+diff --git a/GoPath/src/paleotronic.com/go.mod b/GoPath/src/paleotronic.com/go.mod
+index 5e4cabe..b30d688 100644
+--- a/GoPath/src/paleotronic.com/go.mod
++++ b/GoPath/src/paleotronic.com/go.mod
+@@ -5,6 +5,7 @@ go 1.24
+ require (
+ 	github.com/atotto/clipboard v0.1.4
+ 	github.com/chzyer/readline v1.5.1
++	github.com/ebitengine/oto/v3 v3.3.3
+ 	github.com/go-gl/gl v0.0.0-20231021071112-07e5d0ea2e71
+ 	github.com/go-gl/glfw v0.0.0-20250301202403-da16c1255728
+ 	github.com/go-gl/mathgl v1.2.0
+@@ -41,7 +42,6 @@ require (
+ require (
+ 	github.com/DATA-DOG/go-sqlmock v1.5.2 // indirect
+ 	github.com/creack/goselect v0.1.2 // indirect
+-	github.com/ebitengine/oto/v3 v3.3.3 // indirect
+ 	github.com/ebitengine/purego v0.8.4 // indirect
+ 	github.com/friendsofgo/errors v0.9.2 // indirect
+ 	github.com/fsnotify/fsnotify v1.8.0 // indirect
+diff --git a/GoPath/src/paleotronic.com/decoding/ogg/internal/vorbis/vorbis_wasm.go b/GoPath/src/paleotronic.com/decoding/ogg/internal/vorbis/vorbis_wasm.go
+new file mode 100644
+index 0000000..68e6de7
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/decoding/ogg/internal/vorbis/vorbis_wasm.go
+@@ -0,0 +1,35 @@
++//go:build js && wasm
++
++// The cgo stb_vorbis decoder can't build for js/wasm; Ogg audio is unavailable there.
++package vorbis
++
++import (
++	"errors"
++	"io"
++	"time"
++)
++
++var errUnavailable = errors.New("vorbis: not available in js/wasm")
++
++type Vorbis struct {
++	Channels   int
++	SampleRate int
++}
++
++func Decode(b []byte) (data []int16, channels int, sampleRate int, err error) {
++	return nil, 0, 0, errUnavailable
++}
++
++func Length(b []byte) (time.Duration, error) {
++	return 0, errUnavailable
++}
++
++func New(r io.Reader) (*Vorbis, error) {
++	return nil, errUnavailable
++}
++
++func (v *Vorbis) Decode() (data []float32, err error) {
++	return nil, errUnavailable
++}
++
++func (v *Vorbis) Close() {}

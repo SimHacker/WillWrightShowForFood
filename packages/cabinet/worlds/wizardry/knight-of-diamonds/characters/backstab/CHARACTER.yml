@@ -1,0 +1,45 @@
+# BACKSTAB: roster slot 8 of THE KNIGHT OF DIAMONDS.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: BACKSTAB
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 61169
+inventory:
+  - {item: SHIELD + 1, equipped: true, cursed: false, identified: true}
+  - {item: LEATHER + 2, equipped: true, cursed: false, identified: true}
+  - {item: SHORT SWORD +2, equipped: true, cursed: false, identified: true}
+  - {item: LATUMOFIS POT., equipped: false, cursed: false, identified: true}
+  - {item: METAMORPH RING, equipped: false, cursed: false, identified: true}
+  - {item: MAGE MASHER, equipped: false, cursed: false, identified: true}
+  - {item: DRAGON SLAYER, equipped: false, cursed: false, identified: true}
+  - {item: WERE SLAYER, equipped: false, cursed: false, identified: true}
+spells: []
+wizardry:
+  slot: 8
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: HOBBIT
+  class: THIEF
+  age_weeks: 1000
+  status: LOST
+  alignment: EVIL
+  attributes: {strength: 13, iq: 14, piety: 17, vitality: 8, agility: 18, luck: 18}
+  luck_skill: [14, 14, 14, 11, 11]
+  experience: 1309382
+  max_level: 16
+  level: 16
+  hp: 63 # hit points left
+  hp_max: 63
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 8
+  armor_class: 2 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 3
+  damage: {count: 1, sides: 6, bonus: 2}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [0] # AWARDS[4] bits

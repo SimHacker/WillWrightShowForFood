@@ -1,0 +1,43 @@
+# GOR: roster slot 3 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: GOR
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 520
+inventory:
+  - {item: LONG SWORD, equipped: true, cursed: false, identified: true}
+  - {item: BRONZE KEY, equipped: false, cursed: false, identified: false}
+  - {item: HELM, equipped: true, cursed: false, identified: true}
+  - {item: COPPER GLOVES, equipped: true, cursed: false, identified: true}
+  - {item: BREAST PLATE +1, equipped: true, cursed: false, identified: true}
+  - {item: SHIELD + 1, equipped: true, cursed: false, identified: true}
+spells: []
+wizardry:
+  slot: 3
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: HUMAN
+  class: FIGHTER
+  age_weeks: 1059
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 18, iq: 12, piety: 6, vitality: 18, agility: 17, luck: 12}
+  luck_skill: [12, 16, 16, 16, 16]
+  experience: 185227
+  max_level: 11
+  level: 11
+  hp: 93 # hit points left
+  hp_max: 95
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 12
+  armor_class: -1 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 3
+  damage: {count: 1, sides: 8, bonus: 3}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

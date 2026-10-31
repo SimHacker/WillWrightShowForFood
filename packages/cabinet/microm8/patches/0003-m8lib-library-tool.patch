@@ -1,0 +1,119 @@
+diff --git a/GoPath/src/paleotronic.com/tools/m8lib/main.go b/GoPath/src/paleotronic.com/tools/m8lib/main.go
+new file mode 100644
+index 0000000..d24129a
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/tools/m8lib/main.go
+@@ -0,0 +1,113 @@
++// m8lib lists and fetches files from the microM8 server's shared library,
++// the same space the app mounts as /appleii (legacy LDR listings, HTTP :6582 files).
++package main
++
++import (
++	"flag"
++	"fmt"
++	"io"
++	"net/http"
++	"net/url"
++	"os"
++	"path/filepath"
++	"strings"
++	"time"
++
++	"paleotronic.com/ducktape/client"
++)
++
++const session = "deadbeefdeadbeefdeadbeefdeadbeef"
++
++var (
++	host  = flag.String("server", "microm8.paleotronic.com", "server")
++	port  = flag.String("port", ":6581", "ducktape port, with the colon")
++	walk  = flag.String("walk", "", "walk the tree from this path and print every entry")
++	depth = flag.Int("depth", 6, "max walk depth")
++	get   = flag.String("get", "", "fetch this file path")
++	out   = flag.String("out", ".", "directory for -get")
++)
++
++func listDir(c *client.DuckTapeClient, path string) ([]string, error) {
++	c.SendMessage("LDR", []byte(session+path+":*"), true)
++	select {
++	case <-time.After(30 * time.Second):
++		return nil, fmt.Errorf("timeout listing %q", path)
++	case msg := <-c.Incoming:
++		if msg.ID != "DIR" {
++			return nil, fmt.Errorf("%s listing %q: %s", msg.ID, path, msg.Payload)
++		}
++		var rows []string
++		for _, r := range strings.Split(string(msg.Payload), "\r\n") {
++			if r != "" {
++				rows = append(rows, r)
++			}
++		}
++		return rows, nil
++	}
++}
++
++func doWalk(c *client.DuckTapeClient, path string, d int) {
++	rows, err := listDir(c, path)
++	if err != nil {
++		fmt.Fprintln(os.Stderr, err)
++		return
++	}
++	for _, r := range rows {
++		parts := strings.SplitN(r, ":", 4)
++		if len(parts) < 4 {
++			continue
++		}
++		kind, name, size, desc := parts[0], parts[1], parts[2], parts[3]
++		full := name
++		if path != "" {
++			full = strings.TrimRight(path, "/") + "/" + name
++		}
++		fmt.Printf("%s\t%s\t%s\t%s\n", kind, size, full, desc)
++		if kind == "D" && name != "" && d < *depth {
++			doWalk(c, full, d+1)
++		}
++	}
++}
++
++func fetch(path string) error {
++	segs := strings.Split(strings.Trim(path, "/"), "/")
++	for i, s := range segs {
++		segs[i] = url.PathEscape(s)
++	}
++	u := "http://" + *host + ":6582/files/legacy/" + strings.Join(segs, "/")
++	resp, err := http.Get(u)
++	if err != nil {
++		return err
++	}
++	defer resp.Body.Close()
++	if resp.StatusCode != 200 {
++		return fmt.Errorf("%s: %s", u, resp.Status)
++	}
++	dst := filepath.Join(*out, filepath.Base(path))
++	f, err := os.Create(dst)
++	if err != nil {
++		return err
++	}
++	defer f.Close()
++	n, err := io.Copy(f, resp.Body)
++	fmt.Printf("%d\t%s\n", n, dst)
++	return err
++}
++
++func main() {
++	flag.Parse()
++	if *get != "" {
++		if err := fetch(*get); err != nil {
++			fmt.Fprintln(os.Stderr, err)
++			os.Exit(1)
++		}
++		return
++	}
++	c := client.NewDuckTapeClient(*host, *port, "m8lib", "tcp")
++	if err := c.ConnectTCP(); err != nil {
++		fmt.Fprintln(os.Stderr, err)
++		os.Exit(1)
++	}
++	defer c.Close()
++	doWalk(c, *walk, 0)
++}

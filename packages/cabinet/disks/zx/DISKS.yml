@@ -1,0 +1,13 @@
+# ZX Spectrum snapshots (.z80). Fetched 2026-10-31 from archive.org.
+
+disks:
+  - file: little-computer-people/lcp-128k.z80
+    bytes: 111969
+    sha1: 501f230a14e2b2f17d5927491034c5c9aefd032d
+    source: "https://archive.org/download/zx_Little_Computer_People_1986_Activision_128K/Little_Computer_People_1986_Activision_128K.z80"
+    note: "snapshot; the move-in template names are in memory"
+  - file: little-computer-people/lcp-128k-alt.z80
+    bytes: 112903
+    sha1: 701a6e2ad7bbd29f2b90d849636083b48866eb50
+    source: "https://archive.org/download/zx_Little_Computer_People_1986_Activision_a_128K/Little_Computer_People_1986_Activision_a_128K.z80"
+    note: "snapshot"

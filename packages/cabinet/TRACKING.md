@@ -34,7 +34,7 @@ Moving the cross means depositing new coordinates into `YCROSS`/`XCROSS`
 **`TRCR` (0o5466) recenters on every hit.** The pen interrupt reads the
 packed hit coordinates with `IDRC` twice — one left rotate for Y, four
 right rotates (a shift of 8) for X, each masked with `1776`. That
-unpack is the receipt for the cabinet's packing formula
+unpack confirms the cabinet's packing formula
 `(x>>1)<<9 | (y>>1)`, and the unit test asserts the round trip. Then
 `POSCR` adds the position-word opcode bases and deposits into
 `YCROSS`/`XCROSS` — and ANDs with `GRID`, so the logical point SYMELEC

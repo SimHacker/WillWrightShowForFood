@@ -1,0 +1,96 @@
+# SAM THE SHAM: roster slot 11 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: SAM THE SHAM
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 14520
+inventory:
+  - {item: HELM, equipped: true, cursed: false, identified: true}
+  - {item: SILVER GLOVES, equipped: true, cursed: false, identified: true}
+  - {item: MURASAMA BLADE, equipped: true, cursed: false, identified: true}
+  - {item: PLATE MAIL + 2, equipped: true, cursed: false, identified: true}
+  - {item: BLUE RIBBON, equipped: false, cursed: false, identified: true}
+  - {item: RING OF HEALING, equipped: true, cursed: false, identified: true}
+  - {item: SHIELD + 3, equipped: true, cursed: false, identified: true}
+  - {item: HELM, equipped: false, cursed: false, identified: false}
+spells:
+  - 0
+  - HALITO
+  - MOGREF
+  - KATINO
+  - DUMAPIC
+  - DILTO
+  - SOPIC
+  - MAHALITO
+  - MOLITO
+  - MORLIS
+  - DALTO
+  - LAHALITO
+  - MAMORLIS
+  - MAKANITO
+  - MADALTO
+  - LAKANITO
+  - ZILWAN
+  - MASOPIC
+  - HAMAN
+  - MALOR
+  - MAHAMAN
+  - TILTOWAI
+  - KALKI
+  - DIOS
+  - BADIOS
+  - MILWA
+  - PORFIC
+  - MATU
+  - CALFO
+  - MANIFO
+  - MONTINO
+  - LOMILWA
+  - DIALKO
+  - LATUMAPI
+  - BAMATU
+  - DIAL
+  - BADIAL
+  - LATUMOFI
+  - MAPORFIC
+  - DIALMA
+  - BADIALMA
+  - LITOKAN
+  - KANDI
+  - DI
+  - BADI
+  - LORTO
+  - MADI
+  - MABADI
+  - LOKTOFEI
+  - MALIKTO
+  - KADORTO
+wizardry:
+  slot: 11
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: ELF
+  class: SAMURAI
+  age_weeks: 1000
+  status: OK
+  alignment: NEUTRAL
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 18, agility: 18, luck: 18}
+  luck_skill: [5, 7, 5, 7, 5]
+  experience: 961391
+  max_level: 50
+  level: 50
+  hp: 247 # hit points left
+  hp_max: 247
+  mage_spells: [9, 9, 9, 9, 9, 9, 9] # spell points per level, 1 to 7
+  priest_spells: [5, 4, 4, 4, 6, 4, 2]
+  hp_calc: 29
+  armor_class: -7 # lower is better
+  heal_points: 1 # regeneration per move
+  critical_hit: false
+  swings: 10
+  damage: {count: 10, sides: 5, bonus: 3}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

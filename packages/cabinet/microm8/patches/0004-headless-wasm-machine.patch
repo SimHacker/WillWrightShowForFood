@@ -1,0 +1,1515 @@
+diff --git a/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinchat.go b/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinchat.go
+index 721f9b8..8e11132 100644
+--- a/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinchat.go
++++ b/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinchat.go
+@@ -1,3 +1,5 @@
++//go:build !(js && wasm)
++
+ package plus
+ 
+ import (
+diff --git a/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinforum.go b/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinforum.go
+index b3e7210..6ca42e4 100644
+--- a/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinforum.go
++++ b/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinforum.go
+@@ -1,3 +1,5 @@
++//go:build !(js && wasm)
++
+ package plus
+ 
+ import (
+diff --git a/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinnet_wasm.go b/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinnet_wasm.go
+new file mode 100644
+index 0000000..b8b8f6f
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/core/dialect/plus/plus_builtinnet_wasm.go
+@@ -0,0 +1,57 @@
++//go:build js && wasm
++
++package plus
++
++import (
++	"errors"
++
++	"paleotronic.com/core/dialect"
++	"paleotronic.com/core/types"
++)
++
++// @builtin.chat{} and @builtin.forum{} talk to paleotronic.com's servers, whose client
++// packages aren't published; in the browser they report that instead of linking them.
++
++type PlusBuiltinChat struct {
++	dialect.CoreFunction
++}
++
++func (this *PlusBuiltinChat) FunctionExecute(params *types.TokenList) error {
++	return errors.New("chat is not available in the browser build")
++}
++
++func (this *PlusBuiltinChat) Syntax() string { return "REBOOT{}" }
++
++func (this *PlusBuiltinChat) FunctionParams() []types.TokenType {
++	return []types.TokenType{types.STRING}
++}
++
++func NewPlusBuiltinChat(a int, b int, params types.TokenList) *PlusBuiltinChat {
++	this := &PlusBuiltinChat{}
++	this.CoreFunction = *dialect.NewCoreFunction(a, b, params)
++	this.Name = "REBOOT"
++	this.MinParams = 0
++	this.MaxParams = 1
++	return this
++}
++
++type PlusBuiltinForum struct {
++	dialect.CoreFunction
++}
++
++func (this *PlusBuiltinForum) FunctionExecute(params *types.TokenList) error {
++	return errors.New("the forum is not available in the browser build")
++}
++
++func (this *PlusBuiltinForum) Syntax() string { return "REBOOT{}" }
++
++func (this *PlusBuiltinForum) FunctionParams() []types.TokenType {
++	return []types.TokenType{}
++}
++
++func NewPlusBuiltinForum(a int, b int, params types.TokenList) *PlusBuiltinForum {
++	this := &PlusBuiltinForum{}
++	this.CoreFunction = *dialect.NewCoreFunction(a, b, params)
++	this.Name = "REBOOT"
++	return this
++}
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go b/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
+index 0e72776..d8266c0 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
+@@ -180,7 +180,14 @@ func (mr *Apple2IOChip) GetRegKeyVal() uint64 {
+ 	return uint64(mr.e.GetMemoryMap().ReadInterpreterMemory(mr.e.GetMemIndex(), memory.MICROM8_KEYCODE))
+ }
+ 
++// The ROM select registers are set on nearly every $Cxxx read, usually to what they hold
++// already; a write that changes nothing is skipped, since each goes through the full memory
++// write path.
++
+ func (mr *Apple2IOChip) SetRegIOSelect(v int) {
++	if mr.GetRegIOSelect() == v {
++		return
++	}
+ 	mr.e.GetMemoryMap().WriteInterpreterMemory(mr.e.GetMemIndex(), memory.OCTALYZER_IO_BASE+REG_IOSELECT, uint64(v))
+ }
+ 
+@@ -189,6 +196,9 @@ func (mr *Apple2IOChip) GetRegIOSelect() int {
+ }
+ 
+ func (mr *Apple2IOChip) SetRegIOInternalROM(v int) {
++	if mr.GetRegIOInternalROM() == v {
++		return
++	}
+ 	mr.e.GetMemoryMap().WriteInterpreterMemory(mr.e.GetMemIndex(), memory.OCTALYZER_IO_BASE+REG_IOINTERNALROM, uint64(v))
+ }
+ 
+@@ -197,6 +207,9 @@ func (mr *Apple2IOChip) GetRegIOInternalROM() int {
+ }
+ 
+ func (mr *Apple2IOChip) SetRegPeripheralROMSlot(v uint64) {
++	if mr.GetRegPeripheralROMSlot() == v {
++		return
++	}
+ 	mr.e.GetMemoryMap().WriteInterpreterMemory(mr.e.GetMemIndex(), memory.OCTALYZER_IO_BASE+REG_PERIPHERALROMSLOT, uint64(v))
+ }
+ 
+@@ -378,6 +391,9 @@ func NewApple2IOChip(mm *memory.MemoryMap, globalbase int, base int, ent interfa
+ 				slotNum := slot.(int)
+ 				slotDefinition := parseSlotDef(tmp.(map[interface{}]interface{}))
+ 				//fmt.Printf("*** Slot %d: %v\n", slotNum, slotDefinition)
++				if settings.OmitCards[slotDefinition.Driver] {
++					continue
++				}
+ 
+ 				var f func(b bool)
+ 
+@@ -388,7 +404,12 @@ func NewApple2IOChip(mm *memory.MemoryMap, globalbase int, base int, ent interfa
+ 						if b && !settings.NoDiskWarp[ent.GetMemIndex()] {
+ 							//fmt.Println("Engaging warp mode for disk access")
+ 							settings.MuteCPU = true
+-							cpu.SetWarp(8)
++							// at least 8, never slower than the speed the user chose
++							if _, userspeed := cpu.HasUserWarp(); userspeed > 8 {
++								cpu.SetWarp(userspeed)
++							} else {
++								cpu.SetWarp(8)
++							}
+ 						} else {
+ 							//fmt.Println("Disengaging warp mode for disk access")
+ 							userwarp, userspeed := cpu.HasUserWarp()
+@@ -705,7 +726,7 @@ func (mr *Apple2IOChip) ResetMemory(skip bool) {
+ 	}
+ 
+ 	cpu.SetWarpUser(1.01)
+-	cpu.SetWarpUser(1.00)
++	cpu.SetWarpUser(settings.BootWarp)
+ 	cpu.CalcTiming()
+ 
+ 	if !skip {
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/diskiicard.go b/GoPath/src/paleotronic.com/core/hardware/apple2/diskiicard.go
+index 3941e39..80c9e67 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/diskiicard.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/diskiicard.go
+@@ -6,7 +6,6 @@ import (
+ 	//rlog "log"
+ 	//log2 "log"
+ 	"math"
+-	"os"
+ 	"strings"
+ 	"sync"
+ 
+@@ -584,7 +583,6 @@ func (d *IOCardDiskII) CheckUpdate() {
+ 			}
+ 
+ 			if strings.HasPrefix(volume, "local:") {
+-				fn := strings.Replace(volume, "local:", "", -1)
+ 				if settings.PreserveDSK && denibbleOnSave {
+ 					var buffer []byte
+ 					var err error
+@@ -595,21 +593,14 @@ func (d *IOCardDiskII) CheckUpdate() {
+ 						buffer, err = woz.DeNibblizeImage13(d.disks[disk].NibImage.GetNibbles(), d.disks[disk].NibImage.CurrentSectorOrder)
+ 					}
+ 					if err == nil {
+-						f, err := os.Create(fn)
+-						if err == nil {
++						if settings.WriteLocal(volume, buffer) == nil {
+ 							log.Printf("DiskII: saving nib -> DSK: %s", volume)
+-							f.Write(buffer)
+-							f.Close()
+ 						}
+ 					} else {
+ 						log.Printf("DiskII: saving nib -> DSK failed: %v", err)
+ 					}
+ 				} else {
+-					f, err := os.Create(fn)
+-					if err == nil {
+-						f.Write(d.disks[disk].NibImage.GetNibbles())
+-						f.Close()
+-					}
++					settings.WriteLocal(volume, d.disks[disk].NibImage.GetNibbles())
+ 				}
+ 
+ 			} else {
+@@ -671,12 +662,7 @@ func (d *IOCardDiskII) CheckUpdate() {
+ 
+ 			d.disks[disk].Disk.UpdateCRC32()
+ 			if strings.HasPrefix(volume, "local:") {
+-				fn := strings.Replace(volume, "local:", "", -1)
+-				f, err := os.Create(fn)
+-				if err == nil {
+-					f.Write(d.disks[disk].Disk.GetData().ByteSlice(0, d.disks[disk].Disk.GetSize()))
+-					f.Close()
+-				}
++				settings.WriteLocal(volume, d.disks[disk].Disk.GetData().ByteSlice(0, d.disks[disk].Disk.GetSize()))
+ 			} else {
+ 				files.WriteBytesViaProvider(files.GetPath(volume), files.GetFilename(volume), d.disks[disk].Disk.GetData().ByteSlice(0, d.disks[disk].Disk.GetSize()))
+ 			}
+@@ -702,6 +688,7 @@ func (d *IOCardDiskII) Increment(n int) {
+ 	d.currentLSSCycles += float64(n) * d.lssCycleRatio
+ 
+ 	if d.driveBlinkCycles != 0 && d.driveBlinkCycles < d.currentCycles {
++		d.driveBlinkCycles = 0
+ 		if current == 0 {
+ 			d.mm.IntSetLED0(d.index, 0)
+ 		} else {
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/diskiidrive.go b/GoPath/src/paleotronic.com/core/hardware/apple2/diskiidrive.go
+index da9f6b2..1df5c18 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/diskiidrive.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/diskiidrive.go
+@@ -2,7 +2,6 @@ package apple2
+ 
+ import (
+ 	"bytes"
+-	"io/ioutil"
+ 	"math/rand"
+ 	"strings"
+ 	"time"
+@@ -798,8 +797,7 @@ func (d *DiskIIDrive) InsertDisk(filename string, wp bool) {
+ 	}
+ 
+ 	if strings.HasPrefix(filename, "local:") {
+-		lfilename := strings.Replace(filename, "local:", "", -1)
+-		fp.Content, e = ioutil.ReadFile(lfilename)
++		fp.Content, e = settings.ReadLocal(filename)
+ 	} else {
+ 		fp, e = files.ReadBytesViaProvider(files.GetPath(filename), files.GetFilename(filename))
+ 	}
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/scanrenderer.go b/GoPath/src/paleotronic.com/core/hardware/apple2/scanrenderer.go
+index 567bd67..bdcd2b6 100644
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/scanrenderer.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/scanrenderer.go
+@@ -691,10 +691,8 @@ func (io *ScanRenderer) ScanBitsText(line int, raw []byte, mult int, mono bool,
+ 	out := make([]byte, len(raw))
+ 	ptr := 0
+ 	// var b, bit6, bit5, bit4, bit3, bit2, bit1, bit0 byte
+-	var txt = ""
+ 	for _, v := range raw {
+ 		asc = rune(io.PokeToAsciiApple(uint64(v), useAlt))
+-		txt += string(asc)
+ 		attr = io.PokeToAttribute(uint64(v), useAlt)
+ 		switch attr {
+ 		case types.VA_NORMAL:
+@@ -717,10 +715,6 @@ func (io *ScanRenderer) ScanBitsText(line int, raw []byte, mult int, mono bool,
+ 		out = ConvertHGRToDHGRPattern(out, mono)
+ 	}
+ 
+-	//if strings.Trim(txt, " ") != "" {
+-	//	log.Printf("ScanBitsText: line = %d, txt = '%s', raw = %+v", line, txt, raw)
+-	//}
+-
+ 	return out
+ }
+ 
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/smartportcard.go b/GoPath/src/paleotronic.com/core/hardware/apple2/smartportcard.go
+index a7928ba..aa20c65 100644
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/smartportcard.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/smartportcard.go
+@@ -598,8 +598,7 @@ func (d *IOCardSmartPort) HandleServiceBusRequest(r *servicebus.ServiceBusReques
+ 		}
+ 		fn := t.Filename
+ 		if strings.HasPrefix(fn, "local:") {
+-			fn = fn[6:]
+-			data, err := files.ReadBytes(fn)
++			data, err := settings.ReadLocal(fn)
+ 			if err == nil {
+ 				var s *SmartPortBlockDevice
+ 				var err error
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/smartportdevice.go b/GoPath/src/paleotronic.com/core/hardware/apple2/smartportdevice.go
+index af6aab7..187bd8e 100644
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/smartportdevice.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/smartportdevice.go
+@@ -5,7 +5,6 @@ import (
+ 	"errors"
+ 	"fmt"
+ 	log2 "log"
+-	"os"
+ 	"strings"
+ 
+ 	"paleotronic.com/core/hardware/apple2helpers"
+@@ -371,12 +370,7 @@ func (s *SmartPortBlockDevice) CheckUpdate() {
+ 	settings.PureBootSmartVolume[s.e.GetMemIndex()] = s.Filename
+ 
+ 	if strings.HasPrefix(s.Filename, "local:") {
+-		fn := s.Filename[6:]
+-		f, err := os.Create(fn)
+-		if err == nil {
+-			defer f.Close()
+-			f.Write(s.Data)
+-		}
++		settings.WriteLocal(s.Filename, s.Data)
+ 	} else {
+ 		err := files.WriteBytesViaProvider(files.GetPath(s.Filename), files.GetFilename(s.Filename), s.Data)
+ 		if err != nil {
+diff --git a/GoPath/src/paleotronic.com/core/hardware/common/serialcommand_js.go b/GoPath/src/paleotronic.com/core/hardware/common/serialcommand_js.go
+new file mode 100644
+index 0000000..121f744
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/core/hardware/common/serialcommand_js.go
+@@ -0,0 +1,25 @@
++//go:build js && wasm
++
++package common
++
++import (
++	"os/exec"
++	"strings"
++)
++
++// A browser can't run a host command behind the serial card; Start fails and the card stays idle.
++
++func (e *Executor) Stop() {
++	e.r = false
++}
++
++func NewExecutor(commandString string) *Executor {
++	return &Executor{
++		cmd:         exec.Command("sh", "-c", commandString),
++		toCommand:   make(chan byte, 1024),
++		fromCommand: make(chan byte, 24576),
++		echo:        !strings.Contains(commandString, "telnet"),
++		crToLF:      !strings.Contains(commandString, "telnet"),
++		addCRtoLF:   true,
++	}
++}
+diff --git a/GoPath/src/paleotronic.com/core/hardware/cpu/mos6502/core6502.go b/GoPath/src/paleotronic.com/core/hardware/cpu/mos6502/core6502.go
+index 9e243bc..90f5bf8 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/cpu/mos6502/core6502.go
++++ b/GoPath/src/paleotronic.com/core/hardware/cpu/mos6502/core6502.go
+@@ -347,8 +347,8 @@ func (this *Core6502) CheckWarp() bool {
+ 
+ 		//fmt.Printf("Warp changed from %f%% to %f%%\n", this.PrevWarp*100, this.Warp*100)
+ 
+-		// Defer user speed changes when blocked
+-		if this.UserWarpMode && !settings.CanUserChangeSpeed() {
++		// Defer user speed changes when blocked; the drive's own warp still applies
++		if this.UserWarpMode && this.Warp == this.UserWarp && !settings.CanUserChangeSpeed() {
+ 			return false
+ 		}
+ 
+@@ -450,18 +450,17 @@ func (this *Core6502) ExecuteSliced() cpu.FEResponse {
+ 			return cpu.FE_SLEEP
+ 		}
+ 
+-		// if we've been here too long, perhaps nitro CPU mode and we need to service the loops
+-		if time.Since(entryTime) > 500*time.Millisecond {
+-			this.ResetSliced()
+-			if this.Suspended {
+-				this.SuspendAcknowledged = true
+-			}
+-			return cpu.FE_SLEEP
+-		}
+-
+ 		loopcount++
+ 		if loopcount > 100 {
+ 			loopcount = 0
++			// if we've been here too long, perhaps nitro CPU mode and we need to service the loops
++			if time.Since(entryTime) > 500*time.Millisecond {
++				this.ResetSliced()
++				if this.Suspended {
++					this.SuspendAcknowledged = true
++				}
++				return cpu.FE_SLEEP
++			}
+ 			this.Int.PBPaste()
+ 			if this.CheckWarp() {
+ 				this.ResetSliced()
+diff --git a/GoPath/src/paleotronic.com/core/interpreter/player.go b/GoPath/src/paleotronic.com/core/interpreter/player.go
+index 5f2afb0..a3a5a24 100755
+--- a/GoPath/src/paleotronic.com/core/interpreter/player.go
++++ b/GoPath/src/paleotronic.com/core/interpreter/player.go
+@@ -1259,8 +1259,8 @@ func (p *Player) Do(msg *ducktape.DuckTapeBundle) bool {
+ 		mr, ok := p.Destination.Memory.InterpreterMappableAtAddress(p.Destination.MemIndex, 0xc000)
+ 		if ok {
+ 			io := mr.(*apple2.Apple2IOChip)
+-			card := (io.GetCard(4)).(*apple2.IOCardMockingBoard)
+-			if len(msg.Payload) >= 30 {
++			card, isMB := (io.GetCard(4)).(*apple2.IOCardMockingBoard)
++			if isMB && len(msg.Payload) >= 30 {
+ 				card.GetChip(0).FromBytes(msg.Payload[:15])
+ 				card.GetChip(1).FromBytes(msg.Payload[15:])
+ 			}
+diff --git a/GoPath/src/paleotronic.com/core/producer.go b/GoPath/src/paleotronic.com/core/producer.go
+index 19b6a95..dc28e97 100755
+--- a/GoPath/src/paleotronic.com/core/producer.go
++++ b/GoPath/src/paleotronic.com/core/producer.go
+@@ -3,7 +3,6 @@ package core
+ import (
+ 	"bytes"
+ 	"errors"
+-	"io/ioutil"
+ 	"os"
+ 	"runtime"
+ 	"sort"
+@@ -954,7 +953,7 @@ func (this *Producer) ExecutorInitBBC(slotid int) {
+ 	// force CPU to bootstrap..
+ 	cpu := apple2helpers.GetCPU(ent)
+ 	cpu.Reset()
+-	cpu.SetWarpUser(1.0)
++	cpu.SetWarpUser(settings.BootWarp)
+ 	ent.SetState(types.EXEC6502)
+ 
+ 	fmt.Printf("CPU address @ 0x%.4x\n", cpu.PC)
+@@ -979,8 +978,8 @@ func (this *Producer) CheckSystemCompat(slotid int, filename string) bool {
+ 
+ 	var inlineLoad = func() error {
+ 		if strings.HasPrefix(filename, "local:") {
++			data, err = settings.ReadLocal(filename)
+ 			filename = filename[6:]
+-			data, err = ioutil.ReadFile(filename)
+ 			if err != nil {
+ 				return err
+ 			}
+@@ -1128,8 +1127,8 @@ func (this *Producer) IsReconfigureNeeded(slotid int, filename string, profile s
+ 
+ 	var inlineLoad = func() error {
+ 		if strings.HasPrefix(filename, "local:") {
++			data, err = settings.ReadLocal(filename)
+ 			filename = filename[6:]
+-			data, err = ioutil.ReadFile(filename)
+ 			if err != nil {
+ 				return err
+ 			}
+@@ -1415,24 +1414,18 @@ func (this *Producer) ExecutorInitApple2(slotid int) {
+ 				log.Printf("Smart volume: %s", settings.PureBootSmartVolume[slotid])
+ 
+ 				if strings.HasPrefix(settings.PureBootSmartVolume[slotid], "local:") {
+-					f, e := os.Open(strings.Replace(settings.PureBootSmartVolume[slotid], "local:", "", -1))
++					data, e := settings.ReadLocal(settings.PureBootSmartVolume[slotid])
+ 					if e == nil {
+-						log.Println("read file ok")
+-						data, e := ioutil.ReadAll(f)
+-						f.Close()
+-						if e == nil {
+-							log.Println("Injecting service bus")
+-							servicebus.SendServiceBusMessage(
+-								slotid,
+-								servicebus.SmartPortInsertBytes,
+-								servicebus.DiskTargetBytes{
+-									Drive:    0,
+-									Bytes:    data,
+-									Filename: settings.PureBootSmartVolume[slotid],
+-								},
+-							)
+-						}
+-
++						log.Println("Injecting service bus")
++						servicebus.SendServiceBusMessage(
++							slotid,
++							servicebus.SmartPortInsertBytes,
++							servicebus.DiskTargetBytes{
++								Drive:    0,
++								Bytes:    data,
++								Filename: settings.PureBootSmartVolume[slotid],
++							},
++						)
+ 					} else {
+ 						log.Printf("File read failed: %v", e)
+ 					}
+@@ -1460,22 +1453,16 @@ func (this *Producer) ExecutorInitApple2(slotid int) {
+ 				}
+ 
+ 				if strings.HasPrefix(settings.PureBootVolume[slotid], "local:") {
+-					f, e := os.Open(strings.Replace(settings.PureBootVolume[slotid], "local:", "", -1))
+-					if e == nil {
+-						data, e := ioutil.ReadAll(f)
+-						f.Close()
+-						if e == nil {
+-							servicebus.SendServiceBusMessage(
+-								slotid,
+-								servicebus.DiskIIInsertBytes,
+-								servicebus.DiskTargetBytes{
+-									Drive:    0,
+-									Bytes:    data,
+-									Filename: settings.PureBootVolume[slotid],
+-								},
+-							)
+-						}
+-
++					if data, e := settings.ReadLocal(settings.PureBootVolume[slotid]); e == nil {
++						servicebus.SendServiceBusMessage(
++							slotid,
++							servicebus.DiskIIInsertBytes,
++							servicebus.DiskTargetBytes{
++								Drive:    0,
++								Bytes:    data,
++								Filename: settings.PureBootVolume[slotid],
++							},
++						)
+ 					}
+ 				} else {
+ 					//hardware.DiskInsert(ent, 0, settings.PureBootVolume[slotid], settings.PureBootVolumeWP[slotid])
+@@ -1492,22 +1479,16 @@ func (this *Producer) ExecutorInitApple2(slotid int) {
+ 
+ 			if settings.PureBootVolume2[slotid] != "" {
+ 				if strings.HasPrefix(settings.PureBootVolume2[slotid], "local:") {
+-					f, e := os.Open(strings.Replace(settings.PureBootVolume2[slotid], "local:", "", -1))
+-					if e == nil {
+-						data, e := ioutil.ReadAll(f)
+-						f.Close()
+-						if e == nil {
+-							servicebus.SendServiceBusMessage(
+-								slotid,
+-								servicebus.DiskIIInsertBytes,
+-								servicebus.DiskTargetBytes{
+-									Drive:    1,
+-									Bytes:    data,
+-									Filename: settings.PureBootVolume2[slotid],
+-								},
+-							)
+-						}
+-
++					if data, e := settings.ReadLocal(settings.PureBootVolume2[slotid]); e == nil {
++						servicebus.SendServiceBusMessage(
++							slotid,
++							servicebus.DiskIIInsertBytes,
++							servicebus.DiskTargetBytes{
++								Drive:    1,
++								Bytes:    data,
++								Filename: settings.PureBootVolume2[slotid],
++							},
++						)
+ 					}
+ 				} else {
+ 					servicebus.SendServiceBusMessage(
+@@ -1535,7 +1516,7 @@ func (this *Producer) ExecutorInitApple2(slotid int) {
+ 		// force CPU to bootstrap..
+ 		cpu := apple2helpers.GetCPU(ent)
+ 		cpu.Reset()
+-		cpu.SetWarpUser(1.0)
++		cpu.SetWarpUser(settings.BootWarp)
+ 
+ 		ml := settings.MemLocks[ent.GetMemIndex()]
+ 		if ml != nil && len(ml) > 0 {
+@@ -1765,7 +1746,8 @@ func (this *Producer) BuildBootConfig(slotid int) *VMLauncherConfig {
+ 	// 		Forceboot: true,
+ 	// 	}
+ 	// }
+-	if settings.SystemType == "nox" {
++	pureBootRequested := settings.PureBootVolume[slotid] != "" || settings.PureBootSmartVolume[slotid] != "" || settings.ForcePureBoot[slotid]
++	if settings.SystemType == "nox" && !pureBootRequested {
+ 		_, f, _ := files.ReadDirViaProvider("/", "Nox*Archaist*.HDV")
+ 		if len(f) == 0 {
+ 			_, f, _ = files.ReadDirViaProvider("/", "Nox*Archaist*.2MG")
+diff --git a/GoPath/src/paleotronic.com/core/settings/settings.go b/GoPath/src/paleotronic.com/core/settings/settings.go
+index a5ac2ce..22e20ca 100755
+--- a/GoPath/src/paleotronic.com/core/settings/settings.go
++++ b/GoPath/src/paleotronic.com/core/settings/settings.go
+@@ -5,6 +5,7 @@ import (
+ 	"image"
+ 	"os"
+ 	"path/filepath"
++	"strings"
+ 	"sync"
+ 	"time"
+ 
+@@ -399,6 +400,14 @@ var MockingBoardPSG1Bal = 0.5
+ var TemporaryMute bool
+ var WindowApplied bool
+ var Verbose bool
++
++// OmitCards names slot card drivers the machine spec asks for but this build leaves out.
++// Every card ticks every cycle, so an embedder with no serial line, printer or sound
++// output drops them to run faster.
++var OmitCards = map[string]bool{}
++
++// BootWarp is the CPU speed a reboot starts at, in Apples (1 is 1.02 MHz).
++var BootWarp = 1.0
+ var NoUpdates bool
+ var MenuActive bool
+ var SampleRate int = 48000
+@@ -598,6 +607,42 @@ func PureBoot(slotid int) bool {
+ 	return PBState[slotid] || ForcePureBoot[slotid]
+ }
+ 
++// Disk images held in memory under a "local:" path, for hosts without a file system (wasm).
++// ReadLocal and WriteLocal use the map for any path stored here, and the OS otherwise, so a
++// guest that saves to an in-memory disk updates the map and the host can read it back.
++var memVolumes sync.Map
++
++func ReadLocal(path string) ([]byte, error) {
++	if data, ok := MemVolume(path); ok {
++		return data, nil
++	}
++	return os.ReadFile(strings.TrimPrefix(path, "local:"))
++}
++
++func WriteLocal(path string, data []byte) error {
++	if _, ok := memVolumes.Load(path); ok {
++		memVolumes.Store(path, append([]byte(nil), data...))
++		return nil
++	}
++	return os.WriteFile(strings.TrimPrefix(path, "local:"), data, 0644)
++}
++
++func SetMemVolume(path string, data []byte) {
++	if data == nil {
++		memVolumes.Delete(path)
++		return
++	}
++	memVolumes.Store(path, data)
++}
++
++func MemVolume(path string) ([]byte, bool) {
++	v, ok := memVolumes.Load(path)
++	if !ok {
++		return nil, false
++	}
++	return v.([]byte), true
++}
++
+ func PureBootCheck(slotid int) {
+ 	PBState[slotid] = (PureBootVolume[slotid] != "") || (PureBootRestoreState[slotid] != "") || (PureBootSmartVolume[slotid] != "")
+ }
+diff --git a/GoPath/src/paleotronic.com/core/vm.go b/GoPath/src/paleotronic.com/core/vm.go
+index 29b9828..99c11f1 100644
+--- a/GoPath/src/paleotronic.com/core/vm.go
++++ b/GoPath/src/paleotronic.com/core/vm.go
+@@ -1500,7 +1500,7 @@ func (vm *VM) handleTask(task *Task) (interface{}, error) {
+ 		vm.cpu6502 = cpu
+ 		cpu.Reset()
+ 		cpu.ResetSliced()
+-		cpu.SetWarpUser(1.0)
++		cpu.SetWarpUser(settings.BootWarp)
+ 		cpu.RunState = mos6502.CrsFreeRun
+ 
+ 		settings.PureBootCheck(vm.Index)
+diff --git a/GoPath/src/paleotronic.com/go.mod b/GoPath/src/paleotronic.com/go.mod
+index b30d688..5666603 100644
+--- a/GoPath/src/paleotronic.com/go.mod
++++ b/GoPath/src/paleotronic.com/go.mod
+@@ -71,3 +71,5 @@ require (
+ replace github.com/volatiletech/inflect => github.com/aarondl/inflect v0.0.2
+ 
+ replace code.google.com/p/portaudio-go/portaudio => github.com/gordonklaus/portaudio v0.0.0-20250206071425-98a94950218b
++
++replace github.com/atotto/clipboard => ./third_party/atotto-clipboard
+diff --git a/GoPath/src/paleotronic.com/octalyzer/errorreport/version_js.go b/GoPath/src/paleotronic.com/octalyzer/errorreport/version_js.go
+new file mode 100644
+index 0000000..35de651
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/octalyzer/errorreport/version_js.go
+@@ -0,0 +1,7 @@
++//go:build js && wasm
++
++package errorreport
++
++func GetOSVersion() string {
++	return "browser (js/wasm)"
++}
+diff --git a/GoPath/src/paleotronic.com/third_party/atotto-clipboard/LICENSE b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/LICENSE
+new file mode 100644
+index 0000000..dee3257
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/LICENSE
+@@ -0,0 +1,27 @@
++Copyright (c) 2013 Ato Araki. All rights reserved.
++
++Redistribution and use in source and binary forms, with or without
++modification, are permitted provided that the following conditions are
++met:
++
++   * Redistributions of source code must retain the above copyright
++notice, this list of conditions and the following disclaimer.
++   * Redistributions in binary form must reproduce the above
++copyright notice, this list of conditions and the following disclaimer
++in the documentation and/or other materials provided with the
++distribution.
++   * Neither the name of @atotto. nor the names of its
++contributors may be used to endorse or promote products derived from
++this software without specific prior written permission.
++
++THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
++SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
++LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+diff --git a/GoPath/src/paleotronic.com/third_party/atotto-clipboard/README.md b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/README.md
+new file mode 100644
+index 0000000..41fdd57
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/README.md
+@@ -0,0 +1,48 @@
++[![Build Status](https://travis-ci.org/atotto/clipboard.svg?branch=master)](https://travis-ci.org/atotto/clipboard)
++
++[![GoDoc](https://godoc.org/github.com/atotto/clipboard?status.svg)](http://godoc.org/github.com/atotto/clipboard)
++
++# Clipboard for Go
++
++Provide copying and pasting to the Clipboard for Go.
++
++Build:
++
++    $ go get github.com/atotto/clipboard
++
++Platforms:
++
++* OSX
++* Windows 7 (probably work on other Windows)
++* Linux, Unix (requires 'xclip' or 'xsel' command to be installed)
++
++
++Document: 
++
++* http://godoc.org/github.com/atotto/clipboard
++
++Notes:
++
++* Text string only
++* UTF-8 text encoding only (no conversion)
++
++TODO:
++
++* Clipboard watcher(?)
++
++## Commands:
++
++paste shell command:
++
++    $ go get github.com/atotto/clipboard/cmd/gopaste
++    $ # example:
++    $ gopaste > document.txt
++
++copy shell command:
++
++    $ go get github.com/atotto/clipboard/cmd/gocopy
++    $ # example:
++    $ cat document.txt | gocopy
++
++
++
+diff --git a/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard.go b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard.go
+new file mode 100644
+index 0000000..d7907d3
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard.go
+@@ -0,0 +1,20 @@
++// Copyright 2013 @atotto. All rights reserved.
++// Use of this source code is governed by a BSD-style
++// license that can be found in the LICENSE file.
++
++// Package clipboard read/write on clipboard
++package clipboard
++
++// ReadAll read string from clipboard
++func ReadAll() (string, error) {
++	return readAll()
++}
++
++// WriteAll write string to clipboard
++func WriteAll(text string) error {
++	return writeAll(text)
++}
++
++// Unsupported might be set true during clipboard init, to help callers decide
++// whether or not to offer clipboard options.
++var Unsupported bool
+diff --git a/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_darwin.go b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_darwin.go
+new file mode 100644
+index 0000000..6f33078
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_darwin.go
+@@ -0,0 +1,52 @@
++// Copyright 2013 @atotto. All rights reserved.
++// Use of this source code is governed by a BSD-style
++// license that can be found in the LICENSE file.
++
++// +build darwin
++
++package clipboard
++
++import (
++	"os/exec"
++)
++
++var (
++	pasteCmdArgs = "pbpaste"
++	copyCmdArgs  = "pbcopy"
++)
++
++func getPasteCommand() *exec.Cmd {
++	return exec.Command(pasteCmdArgs)
++}
++
++func getCopyCommand() *exec.Cmd {
++	return exec.Command(copyCmdArgs)
++}
++
++func readAll() (string, error) {
++	pasteCmd := getPasteCommand()
++	out, err := pasteCmd.Output()
++	if err != nil {
++		return "", err
++	}
++	return string(out), nil
++}
++
++func writeAll(text string) error {
++	copyCmd := getCopyCommand()
++	in, err := copyCmd.StdinPipe()
++	if err != nil {
++		return err
++	}
++
++	if err := copyCmd.Start(); err != nil {
++		return err
++	}
++	if _, err := in.Write([]byte(text)); err != nil {
++		return err
++	}
++	if err := in.Close(); err != nil {
++		return err
++	}
++	return copyCmd.Wait()
++}
+diff --git a/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_js.go b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_js.go
+new file mode 100644
+index 0000000..5765519
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_js.go
+@@ -0,0 +1,26 @@
++//go:build js && wasm
++
++package clipboard
++
++import "sync"
++
++// The browser's clipboard is asynchronous and needs a user gesture, so the WebAssembly build
++// keeps its own; the page copies between it and navigator.clipboard.
++
++var (
++	mu   sync.Mutex
++	text string
++)
++
++func readAll() (string, error) {
++	mu.Lock()
++	defer mu.Unlock()
++	return text, nil
++}
++
++func writeAll(t string) error {
++	mu.Lock()
++	defer mu.Unlock()
++	text = t
++	return nil
++}
+diff --git a/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_plan9.go b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_plan9.go
+new file mode 100644
+index 0000000..9d2fef4
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_plan9.go
+@@ -0,0 +1,42 @@
++// Copyright 2013 @atotto. All rights reserved.
++// Use of this source code is governed by a BSD-style
++// license that can be found in the LICENSE file.
++
++// +build plan9
++
++package clipboard
++
++import (
++	"os"
++	"io/ioutil"
++)
++
++func readAll() (string, error) {
++	f, err := os.Open("/dev/snarf")
++	if err != nil {
++		return "", err
++	}
++	defer f.Close()
++
++	str, err := ioutil.ReadAll(f)
++	if err != nil {
++		return "", err
++	}
++	
++	return string(str), nil
++}
++
++func writeAll(text string) error {
++	f, err := os.OpenFile("/dev/snarf", os.O_WRONLY, 0666)
++	if err != nil {
++		return err
++	}
++	defer f.Close()
++	
++	_, err = f.Write([]byte(text))
++	if err != nil {
++		return err
++	}
++	
++	return nil
++}
+diff --git a/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_unix.go b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_unix.go
+new file mode 100644
+index 0000000..d9f6a56
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_unix.go
+@@ -0,0 +1,149 @@
++// Copyright 2013 @atotto. All rights reserved.
++// Use of this source code is governed by a BSD-style
++// license that can be found in the LICENSE file.
++
++// +build freebsd linux netbsd openbsd solaris dragonfly
++
++package clipboard
++
++import (
++	"errors"
++	"os"
++	"os/exec"
++)
++
++const (
++	xsel               = "xsel"
++	xclip              = "xclip"
++	powershellExe      = "powershell.exe"
++	clipExe            = "clip.exe"
++	wlcopy             = "wl-copy"
++	wlpaste            = "wl-paste"
++	termuxClipboardGet = "termux-clipboard-get"
++	termuxClipboardSet = "termux-clipboard-set"
++)
++
++var (
++	Primary bool
++	trimDos bool
++
++	pasteCmdArgs []string
++	copyCmdArgs  []string
++
++	xselPasteArgs = []string{xsel, "--output", "--clipboard"}
++	xselCopyArgs  = []string{xsel, "--input", "--clipboard"}
++
++	xclipPasteArgs = []string{xclip, "-out", "-selection", "clipboard"}
++	xclipCopyArgs  = []string{xclip, "-in", "-selection", "clipboard"}
++
++	powershellExePasteArgs = []string{powershellExe, "Get-Clipboard"}
++	clipExeCopyArgs        = []string{clipExe}
++
++	wlpasteArgs = []string{wlpaste, "--no-newline"}
++	wlcopyArgs  = []string{wlcopy}
++
++	termuxPasteArgs = []string{termuxClipboardGet}
++	termuxCopyArgs  = []string{termuxClipboardSet}
++
++	missingCommands = errors.New("No clipboard utilities available. Please install xsel, xclip, wl-clipboard or Termux:API add-on for termux-clipboard-get/set.")
++)
++
++func init() {
++	if os.Getenv("WAYLAND_DISPLAY") != "" {
++		pasteCmdArgs = wlpasteArgs
++		copyCmdArgs = wlcopyArgs
++
++		if _, err := exec.LookPath(wlcopy); err == nil {
++			if _, err := exec.LookPath(wlpaste); err == nil {
++				return
++			}
++		}
++	}
++
++	pasteCmdArgs = xclipPasteArgs
++	copyCmdArgs = xclipCopyArgs
++
++	if _, err := exec.LookPath(xclip); err == nil {
++		return
++	}
++
++	pasteCmdArgs = xselPasteArgs
++	copyCmdArgs = xselCopyArgs
++
++	if _, err := exec.LookPath(xsel); err == nil {
++		return
++	}
++
++	pasteCmdArgs = termuxPasteArgs
++	copyCmdArgs = termuxCopyArgs
++
++	if _, err := exec.LookPath(termuxClipboardSet); err == nil {
++		if _, err := exec.LookPath(termuxClipboardGet); err == nil {
++			return
++		}
++	}
++
++	pasteCmdArgs = powershellExePasteArgs
++	copyCmdArgs = clipExeCopyArgs
++	trimDos = true
++
++	if _, err := exec.LookPath(clipExe); err == nil {
++		if _, err := exec.LookPath(powershellExe); err == nil {
++			return
++		}
++	}
++
++	Unsupported = true
++}
++
++func getPasteCommand() *exec.Cmd {
++	if Primary {
++		pasteCmdArgs = pasteCmdArgs[:1]
++	}
++	return exec.Command(pasteCmdArgs[0], pasteCmdArgs[1:]...)
++}
++
++func getCopyCommand() *exec.Cmd {
++	if Primary {
++		copyCmdArgs = copyCmdArgs[:1]
++	}
++	return exec.Command(copyCmdArgs[0], copyCmdArgs[1:]...)
++}
++
++func readAll() (string, error) {
++	if Unsupported {
++		return "", missingCommands
++	}
++	pasteCmd := getPasteCommand()
++	out, err := pasteCmd.Output()
++	if err != nil {
++		return "", err
++	}
++	result := string(out)
++	if trimDos && len(result) > 1 {
++		result = result[:len(result)-2]
++	}
++	return result, nil
++}
++
++func writeAll(text string) error {
++	if Unsupported {
++		return missingCommands
++	}
++	copyCmd := getCopyCommand()
++	in, err := copyCmd.StdinPipe()
++	if err != nil {
++		return err
++	}
++
++	if err := copyCmd.Start(); err != nil {
++		return err
++	}
++	if _, err := in.Write([]byte(text)); err != nil {
++		return err
++	}
++	if err := in.Close(); err != nil {
++		return err
++	}
++	return copyCmd.Wait()
++}
+diff --git a/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_windows.go b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_windows.go
+new file mode 100644
+index 0000000..253bb93
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/clipboard_windows.go
+@@ -0,0 +1,157 @@
++// Copyright 2013 @atotto. All rights reserved.
++// Use of this source code is governed by a BSD-style
++// license that can be found in the LICENSE file.
++
++// +build windows
++
++package clipboard
++
++import (
++	"runtime"
++	"syscall"
++	"time"
++	"unsafe"
++)
++
++const (
++	cfUnicodetext = 13
++	gmemMoveable  = 0x0002
++)
++
++var (
++	user32                     = syscall.MustLoadDLL("user32")
++	isClipboardFormatAvailable = user32.MustFindProc("IsClipboardFormatAvailable")
++	openClipboard              = user32.MustFindProc("OpenClipboard")
++	closeClipboard             = user32.MustFindProc("CloseClipboard")
++	emptyClipboard             = user32.MustFindProc("EmptyClipboard")
++	getClipboardData           = user32.MustFindProc("GetClipboardData")
++	setClipboardData           = user32.MustFindProc("SetClipboardData")
++
++	kernel32     = syscall.NewLazyDLL("kernel32")
++	globalAlloc  = kernel32.NewProc("GlobalAlloc")
++	globalFree   = kernel32.NewProc("GlobalFree")
++	globalLock   = kernel32.NewProc("GlobalLock")
++	globalUnlock = kernel32.NewProc("GlobalUnlock")
++	lstrcpy      = kernel32.NewProc("lstrcpyW")
++)
++
++// waitOpenClipboard opens the clipboard, waiting for up to a second to do so.
++func waitOpenClipboard() error {
++	started := time.Now()
++	limit := started.Add(time.Second)
++	var r uintptr
++	var err error
++	for time.Now().Before(limit) {
++		r, _, err = openClipboard.Call(0)
++		if r != 0 {
++			return nil
++		}
++		time.Sleep(time.Millisecond)
++	}
++	return err
++}
++
++func readAll() (string, error) {
++	// LockOSThread ensure that the whole method will keep executing on the same thread from begin to end (it actually locks the goroutine thread attribution).
++	// Otherwise if the goroutine switch thread during execution (which is a common practice), the OpenClipboard and CloseClipboard will happen on two different threads, and it will result in a clipboard deadlock.
++	runtime.LockOSThread()
++	defer runtime.UnlockOSThread()
++	if formatAvailable, _, err := isClipboardFormatAvailable.Call(cfUnicodetext); formatAvailable == 0 {
++		return "", err
++	}
++	err := waitOpenClipboard()
++	if err != nil {
++		return "", err
++	}
++
++	h, _, err := getClipboardData.Call(cfUnicodetext)
++	if h == 0 {
++		_, _, _ = closeClipboard.Call()
++		return "", err
++	}
++
++	l, _, err := globalLock.Call(h)
++	if l == 0 {
++		_, _, _ = closeClipboard.Call()
++		return "", err
++	}
++
++	text := syscall.UTF16ToString((*[1 << 20]uint16)(unsafe.Pointer(l))[:])
++
++	r, _, err := globalUnlock.Call(h)
++	if r == 0 {
++		_, _, _ = closeClipboard.Call()
++		return "", err
++	}
++
++	closed, _, err := closeClipboard.Call()
++	if closed == 0 {
++		return "", err
++	}
++	return text, nil
++}
++
++func writeAll(text string) error {
++	// LockOSThread ensure that the whole method will keep executing on the same thread from begin to end (it actually locks the goroutine thread attribution).
++	// Otherwise if the goroutine switch thread during execution (which is a common practice), the OpenClipboard and CloseClipboard will happen on two different threads, and it will result in a clipboard deadlock.
++	runtime.LockOSThread()
++	defer runtime.UnlockOSThread()
++
++	err := waitOpenClipboard()
++	if err != nil {
++		return err
++	}
++
++	r, _, err := emptyClipboard.Call(0)
++	if r == 0 {
++		_, _, _ = closeClipboard.Call()
++		return err
++	}
++
++	data := syscall.StringToUTF16(text)
++
++	// "If the hMem parameter identifies a memory object, the object must have
++	// been allocated using the function with the GMEM_MOVEABLE flag."
++	h, _, err := globalAlloc.Call(gmemMoveable, uintptr(len(data)*int(unsafe.Sizeof(data[0]))))
++	if h == 0 {
++		_, _, _ = closeClipboard.Call()
++		return err
++	}
++	defer func() {
++		if h != 0 {
++			globalFree.Call(h)
++		}
++	}()
++
++	l, _, err := globalLock.Call(h)
++	if l == 0 {
++		_, _, _ = closeClipboard.Call()
++		return err
++	}
++
++	r, _, err = lstrcpy.Call(l, uintptr(unsafe.Pointer(&data[0])))
++	if r == 0 {
++		_, _, _ = closeClipboard.Call()
++		return err
++	}
++
++	r, _, err = globalUnlock.Call(h)
++	if r == 0 {
++		if err.(syscall.Errno) != 0 {
++			_, _, _ = closeClipboard.Call()
++			return err
++		}
++	}
++
++	r, _, err = setClipboardData.Call(cfUnicodetext, h)
++	if r == 0 {
++		_, _, _ = closeClipboard.Call()
++		return err
++	}
++	h = 0 // suppress deferred cleanup
++	closed, _, err := closeClipboard.Call()
++	if closed == 0 {
++		return err
++	}
++	return nil
++}
+diff --git a/GoPath/src/paleotronic.com/third_party/atotto-clipboard/go.mod b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/go.mod
+new file mode 100644
+index 0000000..68ec980
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/third_party/atotto-clipboard/go.mod
+@@ -0,0 +1 @@
++module github.com/atotto/clipboard
+diff --git a/GoPath/src/paleotronic.com/wasm/main.go b/GoPath/src/paleotronic.com/wasm/main.go
+new file mode 100644
+index 0000000..4dd148d
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/wasm/main.go
+@@ -0,0 +1,268 @@
++//go:build js && wasm
++
++// microM8 as a WebAssembly module: the Apple runs headless in Go, and JavaScript drives it
++// through globalThis.microM8. No GL, no window, no network. The screen is the scan
++// renderer's 560x192 RGBA frame, which the core makes at every vertical blank.
++package main
++
++import (
++	"encoding/binary"
++	"io"
++	stdlog "log"
++	"math"
++	"sync"
++	"syscall/js"
++	"time"
++
++	"paleotronic.com/core/hardware/apple2helpers"
++	"paleotronic.com/core/hardware/servicebus"
++	"paleotronic.com/core/interfaces"
++	"paleotronic.com/core/memory"
++	"paleotronic.com/core/settings"
++	"paleotronic.com/files"
++	"paleotronic.com/octalyzer/backend"
++	"paleotronic.com/runestring"
++)
++
++var ram *memory.MemoryMap
++
++const slot = 0
++
++func ready() bool {
++	return backend.ProducerMain != nil && backend.ProducerMain.GetInterpreter(slot) != nil
++}
++
++// innermost is the interpreter actually running: microM8 nests one per launched program.
++func innermost() interfaces.Interpretable {
++	e := backend.ProducerMain.GetInterpreter(slot)
++	for e.GetChild() != nil {
++		e = e.GetChild()
++	}
++	return e
++}
++
++// The speaker's samples (float32, settings.SampleRate a second), kept until JavaScript takes
++// them with audio(). A page that stops taking them loses the oldest, never the machine's time.
++var sound struct {
++	sync.Mutex
++	buf  []float32
++	rate int
++}
++
++const soundKeep = 48000 / 2
++
++func speakerOut(index int, channel int, data []uint64, rate int, packed bool) {
++	if channel != 0 || packed {
++		return
++	}
++	sound.Lock()
++	defer sound.Unlock()
++	sound.rate = rate
++	for _, v := range data {
++		sound.buf = append(sound.buf, math.Float32frombits(uint32(v)))
++	}
++	if over := len(sound.buf) - soundKeep; over > 0 {
++		sound.buf = append(sound.buf[:0], sound.buf[over:]...)
++	}
++}
++
++func boot() {
++	settings.Verbose = js.Global().Get("microM8Verbose").Truthy()
++	if !settings.Verbose {
++		stdlog.SetOutput(io.Discard)
++	}
++	settings.EBOOT = true
++	settings.DONTLOG = true
++	files.System = false
++	// No serial line, printer or Mockingboard output in the browser yet.
++	for _, card := range []string{"superserialcard", "parallel", "mockingboard", "uthernet"} {
++		settings.OmitCards[card] = true
++	}
++	// Start as a bare Apple at the ROM reset routine, not the microM8 menu.
++	settings.PureBootVolume[slot] = "ram:0xfa62"
++	ram = memory.NewMemoryMap()
++	for i := 0; i < memory.OCTALYZER_NUM_INTERPRETERS; i++ {
++		ram.SlotReset(i)
++	}
++	ram.SetWaveCallback(slot, speakerOut)
++	go backend.Run(ram, nil)
++	ram.InputToggle(slot)
++}
++
++func bytesArg(v js.Value) []byte {
++	b := make([]byte, v.Get("length").Int())
++	js.CopyBytesToGo(b, v)
++	return b
++}
++
++func api() map[string]any {
++	return map[string]any{
++		"ready": js.FuncOf(func(this js.Value, args []js.Value) any {
++			return ready()
++		}),
++		// insertDisk(drive, name, bytes): drive 0 or 1 is a Disk II drive; 3.5" and hard disk
++		// images go to the SmartPort whatever the drive. The image also becomes the boot
++		// volume for that drive, so reboot() boots it.
++		"insertDisk": js.FuncOf(func(this js.Value, args []js.Value) any {
++			drive, name, data := args[0].Int(), args[1].String(), bytesArg(args[2])
++			path := "local:/mem/" + name
++			settings.SetMemVolume(path, data)
++			kind := servicebus.DiskIIInsertBytes
++			if files.Apple2IsHighCapacity(files.GetExt(name), len(data)) {
++				kind = servicebus.SmartPortInsertBytes
++				settings.PureBootSmartVolume[slot] = path
++			} else if drive == 1 {
++				settings.PureBootVolume2[slot] = path
++			} else {
++				settings.PureBootVolume[slot] = path
++			}
++			servicebus.SendServiceBusMessage(slot, kind, servicebus.DiskTargetBytes{Filename: path, Drive: drive, Bytes: data})
++			return kind == servicebus.SmartPortInsertBytes
++		}),
++		// flush() writes changed tracks back into the in-memory images; volume(name) then
++		// returns the image as the guest left it, or null.
++		"flush": js.FuncOf(func(this js.Value, args []js.Value) any {
++			servicebus.SendServiceBusMessage(slot, servicebus.DiskIIFlush, 0)
++			servicebus.SendServiceBusMessage(slot, servicebus.DiskIIFlush, 1)
++			servicebus.SendServiceBusMessage(slot, servicebus.SmartPortFlush, 0)
++			return nil
++		}),
++		"volume": js.FuncOf(func(this js.Value, args []js.Value) any {
++			data, ok := settings.MemVolume("local:/mem/" + args[0].String())
++			if !ok {
++				return nil
++			}
++			out := js.Global().Get("Uint8Array").New(len(data))
++			js.CopyBytesToJS(out, data)
++			return out
++		}),
++		"reboot": js.FuncOf(func(this js.Value, args []js.Value) any {
++			backend.ProducerMain.RestartSlot(slot)
++			return nil
++		}),
++		// audio(into) moves waiting speaker samples into `into`, a Uint8Array over a
++		// Float32Array's buffer, and returns how many floats it wrote. audioRate() is their rate.
++		"audio": js.FuncOf(func(this js.Value, args []js.Value) any {
++			sound.Lock()
++			defer sound.Unlock()
++			n := len(sound.buf)
++			if most := args[0].Get("length").Int() / 4; n > most {
++				n = most
++			}
++			if n == 0 {
++				return 0
++			}
++			b := make([]byte, n*4)
++			for i, v := range sound.buf[:n] {
++				binary.LittleEndian.PutUint32(b[i*4:], math.Float32bits(v))
++			}
++			js.CopyBytesToJS(args[0], b)
++			sound.buf = append(sound.buf[:0], sound.buf[n:]...)
++			return n
++		}),
++		"audioRate": js.FuncOf(func(this js.Value, args []js.Value) any {
++			if sound.rate == 0 {
++				return settings.SampleRate
++			}
++			return sound.rate
++		}),
++		// reset() is Ctrl-Reset: the 6502 takes its reset vector, memory stays.
++		"reset": js.FuncOf(func(this js.Value, args []js.Value) any {
++			// microM8 mutes the speaker while a drive spins; a reset that stops a boot leaves it so.
++			settings.MuteCPU = false
++			apple2helpers.GetCPU(innermost()).PullResetLine()
++			return nil
++		}),
++		// speed(n) runs the 6502 at n times an Apple's 1.02 MHz; a reboot keeps it.
++		"speed": js.FuncOf(func(this js.Value, args []js.Value) any {
++			settings.BootWarp = args[0].Float()
++			apple2helpers.GetCPU(innermost()).SetWarpUser(args[0].Float())
++			return nil
++		}),
++		"status": js.FuncOf(func(this js.Value, args []js.Value) any {
++			cpu := apple2helpers.GetCPU(innermost())
++			e := innermost()
++			modes := []any{}
++			for _, m := range apple2helpers.GetActiveVideoModes(e) {
++				modes = append(modes, m)
++			}
++			for _, m := range apple2helpers.GetActiveTextModes(e) {
++				modes = append(modes, m)
++			}
++			return map[string]any{
++				"dialect":  e.GetDialect().GetShortName(),
++				"pureBoot": settings.PureBoot(slot),
++				"pc":       cpu.PC, "a": cpu.A, "x": cpu.X, "y": cpu.Y, "sp": cpu.SP, "p": cpu.P,
++				"modes":  modes,
++				"speed":  cpu.GetWarp(),
++				"cycles": float64(cpu.GlobalCycles),
++				"disk0":  settings.PureBootVolume[slot],
++			}
++		}),
++		"key": js.FuncOf(func(this js.Value, args []js.Value) any {
++			ram.KeyBufferAdd(slot, uint64(args[0].Int()))
++			return nil
++		}),
++		"type": js.FuncOf(func(this js.Value, args []js.Value) any {
++			e := backend.ProducerMain.GetInterpreter(slot)
++			e.SetPasteBuffer(runestring.Cast(e.GetPasteBuffer().String() + args[0].String()))
++			return nil
++		}),
++		"readMemory": js.FuncOf(func(this js.Value, args []js.Value) any {
++			addr, n := args[0].Int(), args[1].Int()
++			e := backend.ProducerMain.GetInterpreter(slot)
++			b := make([]byte, n)
++			for i := range b {
++				b[i] = byte(e.GetMemory(addr + i))
++			}
++			out := js.Global().Get("Uint8Array").New(n)
++			js.CopyBytesToJS(out, b)
++			return out
++		}),
++		"writeMemory": js.FuncOf(func(this js.Value, args []js.Value) any {
++			addr, b := args[0].Int(), bytesArg(args[1])
++			e := backend.ProducerMain.GetInterpreter(slot)
++			for i, x := range b {
++				e.SetMemory(addr+i, uint64(x))
++			}
++			return nil
++		}),
++		// frame(dst) copies the newest frame into dst (a Uint8Array or Uint8ClampedArray of
++		// 560*192*4 bytes) and returns true, or returns false when nothing changed.
++		"frame": js.FuncOf(func(this js.Value, args []js.Value) any {
++			f := settings.UnifiedRenderFrame[slot]
++			if f == nil || !settings.UnifiedRenderChanged[slot] {
++				return false
++			}
++			settings.UnifiedRenderChanged[slot] = false
++			js.CopyBytesToJS(args[0], f.Pix)
++			return true
++		}),
++		// stop() ends the Go program, so a Node process can exit.
++		"stop": js.FuncOf(func(this js.Value, args []js.Value) any {
++			close(stop)
++			return nil
++		}),
++		"width":  560,
++		"height": 192,
++	}
++}
++
++var stop = make(chan struct{})
++
++func main() {
++	m := js.Global().Get("Object").New()
++	for k, v := range api() {
++		m.Set(k, v)
++	}
++	js.Global().Set("microM8", m)
++	boot()
++	start := time.Now()
++	for !ready() && time.Since(start) < 30*time.Second {
++		time.Sleep(10 * time.Millisecond)
++	}
++	if cb := js.Global().Get("onMicroM8Ready"); cb.Type() == js.TypeFunction {
++		cb.Invoke(ready())
++	}
++	<-stop
++}

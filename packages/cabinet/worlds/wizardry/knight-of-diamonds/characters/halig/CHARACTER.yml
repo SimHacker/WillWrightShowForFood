@@ -1,0 +1,92 @@
+# HALIG: roster slot 2 of THE KNIGHT OF DIAMONDS.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: HALIG
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 162976
+inventory:
+  - {item: MIND STONE, equipped: true, cursed: false, identified: true}
+  - {item: PRIEST'S MACE, equipped: true, cursed: false, identified: true}
+  - {item: LEATHER + 2, equipped: true, cursed: false, identified: true}
+  - {item: SMALL SHIELD, equipped: true, cursed: false, identified: true}
+  - {item: DAMIEN STONE, equipped: false, cursed: false, identified: true}
+spells:
+  - HALITO
+  - MOGREF
+  - KATINO
+  - DUMAPIC
+  - DILTO
+  - SOPIC
+  - MAHALITO
+  - MOLITO
+  - MORLIS
+  - DALTO
+  - LAHALITO
+  - MAMORLIS
+  - MAKANITO
+  - MADALTO
+  - LAKANITO
+  - ZILWAN
+  - MASOPIC
+  - HAMAN
+  - MALOR
+  - MAHAMAN
+  - TILTOWAI
+  - KALKI
+  - DIOS
+  - BADIOS
+  - MILWA
+  - PORFIC
+  - MATU
+  - CALFO
+  - MANIFO
+  - MONTINO
+  - LOMILWA
+  - DIALKO
+  - LATUMAPI
+  - BAMATU
+  - DIAL
+  - BADIAL
+  - LATUMOFI
+  - MAPORFIC
+  - DIALMA
+  - BADIALMA
+  - LITOKAN
+  - KANDI
+  - DI
+  - BADI
+  - LORTO
+  - MADI
+  - MABADI
+  - LOKTOFEI
+  - MALIKTO
+  - KADORTO
+wizardry:
+  slot: 2
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: ELF
+  class: BISHOP
+  age_weeks: 1356
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 18, agility: 18, luck: 18}
+  luck_skill: [12, 10, 8, 12, 10]
+  experience: 7811260
+  max_level: 29
+  level: 29
+  hp: 203 # hit points left
+  hp_max: 203
+  mage_spells: [9, 9, 9, 9, 9, 9, 5] # spell points per level, 1 to 7
+  priest_spells: [9, 9, 9, 9, 9, 6, 2]
+  hp_calc: 13
+  armor_class: 4 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 2
+  damage: {count: 2, sides: 8, bonus: 3}
+  vs_type_2: ["00000000001000", "00000000000000"]
+  vs_type_3: ["0000100", "0000000"]
+  vs_type: "00000000001000"
+  awards: [0, 11] # AWARDS[4] bits

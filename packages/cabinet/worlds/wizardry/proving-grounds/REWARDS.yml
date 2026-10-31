@@ -1,0 +1,555 @@
+# Treasure tables, by the number monsters' rewards use. A reward is gold or an item.
+
+rewards:
+  - index: 0
+    chest: false
+    traps: "00000000"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 2, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 1
+    chest: false
+    traps: "00000000"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 4, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 2
+    chest: false
+    traps: "00000000"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 6, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 0
+        item: {min_index: 1, factor: 0, max_times: 0, range: 6, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 3
+    chest: false
+    traps: "10011000"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 8, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 70
+        item: {min_index: 3, factor: 0, max_times: 0, range: 7, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 4
+    chest: false
+    traps: "11011000"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 50
+        item: {min_index: 5, factor: 4, max_times: 2, range: 4, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 5
+    chest: false
+    traps: "11011001"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 12, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 40
+        item: {min_index: 5, factor: 4, max_times: 1, range: 4, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 50
+        item: {min_index: 15, factor: 5, max_times: 2, range: 4, percent_bigger: 20, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 6
+    chest: false
+    traps: "00000000"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 10, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 7
+    chest: false
+    traps: "00000000"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 10, min_add: 0, multiply: 10, tries2: 1, average2: 2, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 8
+    chest: false
+    traps: "00000000"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 10, min_add: 0, multiply: 10, tries2: 1, average2: 4, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 9
+    chest: false
+    traps: "11110111"
+    count: 1
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 10, min_add: 0, multiply: 10, tries2: 1, average2: 8, min_add2: 0}
+      - chance: 50
+        item: {min_index: 10, factor: 5, max_times: 1, range: 5, percent_bigger: 30, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 10
+    chest: true
+    traps: "11010000"
+    count: 2
+    rewards:
+      - chance: 100
+        gold: {tries: 2, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 10
+        item: {min_index: 1, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 11
+    chest: true
+    traps: "11110000"
+    count: 3
+    rewards:
+      - chance: 100
+        gold: {tries: 4, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 20
+        item: {min_index: 1, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 10
+        item: {min_index: 17, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 12
+    chest: true
+    traps: "11011000"
+    count: 3
+    rewards:
+      - chance: 100
+        gold: {tries: 6, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 30
+        item: {min_index: 1, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 15
+        item: {min_index: 17, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 13
+    chest: true
+    traps: "11111000"
+    count: 3
+    rewards:
+      - chance: 100
+        gold: {tries: 8, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 40
+        item: {min_index: 1, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 20
+        item: {min_index: 17, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 14
+    chest: true
+    traps: "11110100"
+    count: 4
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 50
+        item: {min_index: 1, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 30
+        item: {min_index: 17, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 10
+        item: {min_index: 33, factor: 0, max_times: 0, range: 18, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 15
+    chest: true
+    traps: "11110001"
+    count: 4
+    rewards:
+      - chance: 100
+        gold: {tries: 12, average: 5, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 100
+        item: {min_index: 1, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 50
+        item: {min_index: 17, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 20
+        item: {min_index: 33, factor: 0, max_times: 0, range: 18, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 16
+    chest: true
+    traps: "10011110"
+    count: 4
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 10, min_add: 0, multiply: 10, tries2: 1, average2: 1, min_add2: 0}
+      - chance: 75
+        item: {min_index: 17, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 25
+        item: {min_index: 33, factor: 0, max_times: 0, range: 18, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 10
+        item: {min_index: 52, factor: 0, max_times: 0, range: 27, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 17
+    chest: true
+    traps: "11101001"
+    count: 4
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 10, min_add: 0, multiply: 10, tries2: 1, average2: 2, min_add2: 0}
+      - chance: 100
+        item: {min_index: 17, factor: 0, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 50
+        item: {min_index: 33, factor: 0, max_times: 0, range: 18, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 15
+        item: {min_index: 52, factor: 0, max_times: 0, range: 27, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 18
+    chest: true
+    traps: "01100110"
+    count: 4
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 10, min_add: 0, multiply: 10, tries2: 1, average2: 4, min_add2: 0}
+      - chance: 70
+        item: {min_index: 33, factor: 0, max_times: 0, range: 18, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 25
+        item: {min_index: 52, factor: 0, max_times: 0, range: 27, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 5
+        item: {min_index: 79, factor: 0, max_times: 0, range: 13, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 19
+    chest: true
+    traps: "11111111"
+    count: 4
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 10, min_add: 0, multiply: 10, tries2: 1, average2: 8, min_add2: 0}
+      - chance: 100
+        item: {min_index: 33, factor: 0, max_times: 0, range: 18, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 50
+        item: {min_index: 52, factor: 0, max_times: 0, range: 27, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 10
+        item: {min_index: 78, factor: 0, max_times: 0, range: 13, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 20
+    chest: false
+    traps: "00000000"
+    count: 1
+    rewards:
+      - chance: 100
+        item: {min_index: 94, factor: 0, max_times: 0, range: 0, percent_bigger: 0, unused1: 5, unused2: 5}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 21
+    chest: true
+    traps: "01111001"
+    count: 3
+    rewards:
+      - chance: 100
+        item: {min_index: 16, factor: 0, max_times: 0, range: 0, percent_bigger: 0, unused1: 4, unused2: 4}
+      - chance: 100
+        item: {min_index: 93, factor: 0, max_times: 0, range: 0, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 100
+        item: {min_index: 61, factor: 0, max_times: 0, range: 0, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 100
+        item: {min_index: 84, factor: 0, max_times: 0, range: 0, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 100
+        item: {min_index: 59, factor: 0, max_times: 0, range: 0, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 100
+        item: {min_index: 81, factor: 0, max_times: 0, range: 0, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 100
+        item: {min_index: 77, factor: 0, max_times: 0, range: 0, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 100
+        item: {min_index: 16, factor: 0, max_times: 0, range: 0, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 100
+        gold: {tries: 12000, average: 0, min_add: 0, multiply: 1, tries2: 1, average2: 1, min_add2: 0}
+  - index: 22
+    chest: true
+    traps: "01111101"
+    count: 3
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 15, min_add: 10, multiply: 5, tries2: 5, average2: 5, min_add2: 5}
+      - chance: 60
+        item: {min_index: 50, factor: 10, max_times: 0, range: 15, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 20
+        item: {min_index: 50, factor: 10, max_times: 0, range: 20, percent_bigger: 0, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+  - index: 23
+    chest: true
+    traps: "01111111"
+    count: 3
+    rewards:
+      - chance: 100
+        gold: {tries: 10, average: 10, min_add: 10, multiply: 7, tries2: 5, average2: 5, min_add2: 5}
+      - chance: 30
+        item: {min_index: 40, factor: 5, max_times: 5, range: 5, percent_bigger: 30, unused1: 0, unused2: 0}
+      - chance: 30
+        item: {min_index: 50, factor: 10, max_times: 1, range: 10, percent_bigger: 50, unused1: 0, unused2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}
+      - chance: 0
+        gold: {tries: 0, average: 0, min_add: 0, multiply: 0, tries2: 0, average2: 0, min_add2: 0}

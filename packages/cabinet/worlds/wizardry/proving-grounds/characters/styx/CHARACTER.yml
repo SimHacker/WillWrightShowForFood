@@ -1,0 +1,41 @@
+# STYX: roster slot 6 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: STYX
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 23
+inventory:
+  - {item: SHIELD + 1, equipped: true, cursed: false, identified: true}
+  - {item: SHORT SWORD +2, equipped: true, cursed: false, identified: true}
+  - {item: PLATE MAIL + 2, equipped: true, cursed: false, identified: true}
+  - {item: HELM, equipped: true, cursed: false, identified: true}
+spells: []
+wizardry:
+  slot: 6
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: DWARF
+  class: FIGHTER
+  age_weeks: 1000
+  status: OK
+  alignment: EVIL
+  attributes: {strength: 18, iq: 15, piety: 15, vitality: 17, agility: 15, luck: 12}
+  luck_skill: [13, 16, 16, 12, 16]
+  experience: 154647
+  max_level: 11
+  level: 11
+  hp: 98 # hit points left
+  hp_max: 98
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 13
+  armor_class: -2 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 3
+  damage: {count: 1, sides: 6, bonus: 5}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

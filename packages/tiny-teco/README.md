@@ -42,25 +42,23 @@ trick Minsky's program plays one level down, with a corpus of exactly
 chose is the 7-state 4-symbol universal machine from
 [AI Memo 33](../../characters/marvin-minsky/sources/papers/AIM-033-universality-tag-systems-utm-1962.md),
 every other Turing machine arrives as *data on the tape*, never as a
-feature request against the interpreter. Implement one machine; pick it
-universal; you have implemented them all. It is the only rung of this
-ladder where the method provably terminates — after the first entry.
+feature request against the interpreter. Implementing one universal
+machine implements them all, so here one program was enough.
 
-(The honest wrinkle: his simulator is table-driven, so it happens to run
-any TM description; the generality came free with the representation.
-Hard-wiring the seven states would have bought the same class.)
+His simulator is table-driven, so it runs any TM description, not only
+the universal one. Hard-wiring the seven states would have computed the
+same class of functions.
 
-The limit that keeps this package employed: **universality buys behavior,
-not interface.** Nothing on the UTM's tape can type at a terminal or read
-a keyboard, so the commands that touch the world stay in the emulator
-forever. That is why growing TinyTeco toward RMAIL and EMACS is real work
-rather than an exercise the 1981 mail already finished.
+**Universality covers computation, not input and output.** Nothing on the
+UTM's tape can type at a terminal or read a keyboard, so commands that
+touch the world have to be in the emulator. That is why growing TinyTeco
+toward RMAIL and EMACS is real work.
 
-Same bet at three scales: Minsky implemented one machine and got all
-machines. TinyTeco implements one program's commands and gets, complaint
-by complaint, as much of TECO as its corpus ever exercises. The
-[cabinet](../cabinet/) implements one listing's instructions and gets the
-PDP-7 that PIXIE needs.
+Minsky implemented one machine and got all machines. TinyTeco implements
+one program's commands and grows, one complaint at a time, to as much of
+TECO as its programs use. The [cabinet](../cabinet/README.md#how-the-cabinet-grows-one-program-at-a-time)
+started the same way from SYMELEC's listing; it now has the whole PDP-7
+instruction set and adds devices as programs need them.
 
 **Stretch goal, off every critical path: TinyTeco as a cabinet.** The
 [cabinet backplane](../cabinet/)'s CPU contract is just `step()`, words,
@@ -71,10 +69,9 @@ the TM's quintuples, the microcode is TECO, the micro-microcode is
 TypeScript. The bridge that makes it more than a curiosity is a tape
 convention — which cell ranges are core and which are the device window —
 so programs on the tape can issue IOTs and light the same console lamps
-the PDP-7 does. And because the UTM is itself a TM, its own description
-can go on the tape: the tower of an emulator emulating itself emulating
-something else, each level paying the exponential toll, runnable in a
-browser tab. Universality as a party trick you can actually invoke.
+the PDP-7 does. Because the UTM is itself a TM, its own description can
+go on the tape, so the UTM can run itself running another machine, each
+level much slower than the one below it.
 
 ## What this subset does
 

@@ -1,0 +1,17 @@
+# IBM PC disks, as archive.org packs them. Fetched 2026-10-31.
+
+disks:
+  - file: mind-mirror/mm-msdos.zip
+    bytes: 163808
+    sha1: 72d22448aefa9fbfaf6d84edf786a73f37e8ce2b
+    source: "https://archive.org/download/msdos_Timothy_Learys_Mind_Mirror_1986/Timothy_Learys_Mind_Mirror_1986.zip"
+    note: "GAME.DAT boot disk and SAVE.DAT, a formatted save disk with nothing saved"
+  - file: mind-mirror/mm-tgod-000396.7z
+    bytes: 141221
+    sha1: 6c94404887a4f5feb27226f6d069fe22dc35a8cd
+    source: "https://archive.org/download/000396-TimothyLearysMindMirror/000396_mind_mirror.7z"
+    note: "The Good Old Days 000396, disk1.img"
+  - file: mind-mirror/mm-tgod-000396.7z.nfo
+    bytes: 302
+    sha1: 495e7e39bb163e96e621a368bf4089c46379c3f6
+    source: "https://archive.org/download/000396-TimothyLearysMindMirror/000396_mind_mirror.7z.nfo"

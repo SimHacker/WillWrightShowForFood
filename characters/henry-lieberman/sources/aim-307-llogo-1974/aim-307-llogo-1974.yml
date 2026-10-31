@@ -1,0 +1,209 @@
+# Sidecar: LLOGO, MIT AI Memo 307 / Logo Memo 11, June 27, 1974.
+# Human-readable exposition: README.md in this folder.
+# Page numbers: "scan" is the page of the PDF; "printed" is the memo's own page number, read from
+# the OCR of the running header, so a few may be off by one where the header was garbled.
+
+artifact:
+  file: aim-307-llogo-1974.pdf
+  ocr: aim-307-llogo-1974.ocr.txt     # Tesseract 5.5.1, 300 dpi gray; "=== scan page N ===" markers
+  title: "LLOGO: An Implementation of LOGO in LISP"
+  series: [MIT AI Memo 307, Logo Memo 11]
+  date: "1974-06-27"
+  authors: [Ira Goldstein, Henry Lieberman, Harry Bochner, Mark L. Miller]
+  pages_scanned: 93
+  kind: memo
+
+provenance:
+  source: MIT DSpace
+  handle: https://hdl.handle.net/1721.1/6220
+  dspace_page: https://dspace.mit.edu/handle/1721.1/6220
+  bitsavers_mirror: http://bitsavers.org/pdf/mit/ai/aim/AIM-307.pdf
+  acquired: "2026-10-31"
+  dspace_md5: 35cfac40d441d1f7489b5bf2f7dc15f4
+  funding: "NSF grant GJ-1049; ARPA, monitored by ONR under contract N00014-70-A-0362-0005 (read from the scan; the OCR garbles both)"
+  scan_composition: |
+    Scans 1-76 are the June 27, 1974 memo, through its two indexes (printed pages 63-72).
+    Scans 77-93 are dated March 4, 1975: the second half of Section 17, "Display Turtle for the
+    Knight TV Terminals" (printed pages 73-81, from 17.14's TVSIZE through 17.22 Implementation),
+    and the revised indexes (printed pages 82-89). They are pages of the March 1975 revision,
+    AIM-307A, bound into this scan; 17.1 to 17.13 are not here. See ../aim-307a-llogo-1975/.
+
+abstract: |
+  This paper describes LLOGO, an implementation of the LOGO language written in MACLISP for the
+  ITS, TEN50 and TENEX PDP-10 systems, and MULTICS. The relative merits of LOGO and LISP as
+  educational languages are discussed. Design decisions in the LISP implementation of LOGO are
+  contrasted with those of two other implementations: CLOGO for the PDP-10 and 11LOGO for the
+  PDP-11, both written in assembler language. LLOGO's special facilities for character-oriented
+  display terminals, graphic display "turtles", and music generation are also described.
+
+structure:
+  - { scan: 1, what: "Title page and abstract" }
+  - { scan: 2-4, what: "Table of contents" }
+  - section: 1
+    title: "Why Implement LOGO in LISP"
+    scan: 5
+    printed: 1
+  - section: 2
+    title: "Differences between LOGO and LISP"
+    scan: 6-11
+    printed: 2-7
+    subsections:
+      - { n: "2.1", title: "Simplicity", scan: 6, topics: [lists vs sentences, rigid program form, integer arithmetic, conditionals] }
+      - { n: "2.2", title: "Naturalness", scan: 8, topics: [mnemonic names, noise words, parsing, infix] }
+      - { n: "2.3", title: "Disparity", scan: 10, topics: [program vs data, homonyms, NIL, line-oriented input] }
+  - section: 3
+    title: "Overview of the Implementation"
+    scan: 12-14
+    printed: 8-10
+    subsections:
+      - { n: "3.1", title: "Reader", scan: 12, note: "separate readtables and obarrays; switching worlds rebinds READTABLE and OBARRAY" }
+      - { n: "3.2", title: "Parser", scan: 13 }
+      - { n: "3.3", title: "Evaluation", scan: 13, note: "a parsed Logo procedure is a Lisp PROG; line numbers are PROG tags" }
+      - { n: "3.4", title: "Printing", scan: 13-14, note: "the unparser; USER-PAREN" }
+      - { n: "3.5", title: "Error Analysis", scan: 14 }
+  - section: 4
+    title: "Performance"
+    scan: 15-16
+    printed: 11-12
+    subsections:
+      - { n: "4.1", title: "Size", scan: 15, note: "Lisp 26 blocks + LLOGO 14 = 40 blocks of 1024 36-bit words; 11 of LLOGO's 14 pure and shared" }
+      - { n: "4.2", title: "Computation Time", scan: 15 }
+      - { n: "4.3", title: "Use", scan: 15 }
+      - { n: "4.4", title: "Availability", scan: 16 }
+  - { section: 5, title: "Getting Started", scan: 17-19, printed: 13-15, note: "log in; LLOGO, 11LOGO-compatible and NLLOGO versions; the start-up questions for the display turtle, GERMLAND and the music box" }
+  - section: 6
+    title: "Parsing LOGO"
+    scan: 20-23
+    printed: 16-19
+    subsections:
+      - { n: "6.1", title: "Infix Expressions", scan: 20, note: "precedence table, user-definable" }
+      - { n: "6.2", title: "Minus Sign", scan: 22 }
+      - { n: "6.3", title: "Homonyms", scan: 22 }
+      - { n: "6.4", title: "Abbreviations", scan: 23 }
+  - section: 7
+    title: "Defining and Editing Functions"
+    scan: 24-27
+    printed: 20-23
+    subsections:
+      - { n: "7.1", title: "Control Character Editing", scan: 24 }
+      - { n: "7.3", title: "Erasing", scan: 26 }
+  - section: 8
+    title: "Error Handling and Debugging"
+    scan: 28-33
+    printed: 24-29
+    subsections:
+      - { n: "8.1", title: "Parsing Errors", scan: 28 }
+      - { n: "8.2", title: "Run Time Errors", scan: 28 }
+      - { n: "8.3", title: "Breakpoints", scan: 29, note: "LOGOBREAK/PAUSE, UP, DOWN, PRINTUP, EXIT, CONTINUE: Logo as its own debugging language" }
+      - { n: "8.4", title: "Wrong Number of Inputs Errors", scan: 32 }
+      - { n: "8.5", title: "Garbage Collector Errors", scan: 32 }
+      - { n: "8.6", title: "Tracing", scan: 33 }
+      - { n: "8.7", title: "Interaction with LISP", scan: 33, note: "control-@ switches between the Logo and Lisp top levels; # crosses obarrays" }
+  - { section: 9, title: "Compiling LLOGO User Procedures", scan: 34-35, printed: 30-31, note: "all variables declared SPECIAL" }
+  - section: 10
+    title: "Using Files in LLOGO"
+    scan: 36-37
+    printed: 32-33
+    subsections:
+      - { n: "10.1", title: "Saving and Reading Files", scan: 36 }
+      - { n: "10.2", title: "Other File Commands", scan: 37 }
+  - { section: 11, title: "Differences between 11LOGO and LLOGO", scan: 38-41, printed: 34-37 }
+  - section: 12
+    title: "Using LLOGO on MULTICS"
+    scan: 42-43
+    printed: 38-39
+    subsections:
+      - { n: "12.1", title: "Where To Find It", scan: 42 }
+      - { n: "12.2", title: "File Naming Conventions", scan: 42 }
+      - { n: "12.3", title: "Terminology", scan: 43 }
+  - { section: 13, title: "Using LLOGO on TEN50 and TENEX systems", scan: 44, printed: 40 }
+  - section: 14
+    title: "GERMLAND"
+    scan: 45-50
+    printed: 41-46
+    subsections:
+      - { n: "14.1", title: "Starting Up", scan: 45 }
+      - { n: "14.2", title: "Toplevel Primitives", scan: 45 }
+      - { n: "14.3", title: "Grid Primitives", scan: 46 }
+      - { n: "14.4", title: "Property Primitives", scan: 47 }
+      - { n: "14.5", title: "Multiple Germ Primitives", scan: 48 }
+      - { n: "14.6", title: "Turtle Primitives", scan: 48 }
+      - { n: "14.7", title: "Touch Primitives", scan: 49 }
+      - { n: "14.8", title: "Global Variables", scan: 49 }
+      - { n: "14.9", title: "Implementation", scan: 50 }
+  - section: 15
+    title: "Display Turtle Primitives"
+    scan: 51-59
+    printed: 47-55
+    note: "for the 340 (through a display slave on the PDP-6) and the GT40"
+    subsections:
+      - { n: "15.1", title: "Starting The Display", scan: 51 }
+      - { n: "15.2", title: "The Turtle", scan: 51 }
+      - { n: "15.3", title: "Moving the Turtle", scan: 52 }
+      - { n: "15.4", title: "Erasing the Screen", scan: 53 }
+      - { n: "15.5", title: "Turning the Turtle", scan: 53 }
+      - { n: "15.6", title: "Examining the Turtle's State", scan: 53 }
+      - { n: "15.7", title: "The Pen", scan: 54 }
+      - { n: "15.8", title: "Global Navigation", scan: 55 }
+      - { n: "15.9", title: "Trigonometry", scan: 55 }
+      - { n: "15.10", title: "Text", scan: 55 }
+      - { n: "15.11", title: "Manipulating Scenes", scan: 56, note: "SNAP: pictures saved as display-list subroutines" }
+      - { n: "15.12", title: "Plotter", scan: 57 }
+      - { n: "15.13", title: "Pots", scan: 58, note: "DIALS" }
+      - { n: "15.14", title: "Points", scan: 58 }
+      - { n: "15.15", title: "Global State of the Turtle's World", scan: 58 }
+  - section: 16
+    title: "The Music Box"
+    scan: 60-66
+    printed: 56-62
+    subsections:
+      - { n: "16.1", title: "Plugging In", scan: 60, note: "old (Minsky) box on an Execuport; new box on a Thornton box port" }
+      - { n: "16.2", title: "Turning On", scan: 60 }
+      - { n: "16.3", title: "Music Primitives", scan: 61-66 }
+  - { scan: 67-70, printed: 63-66, what: "Index" }
+  - { scan: 71-76, printed: 67-72, what: "Index to LLOGO Primitives" }
+  - section: 17
+    title: "Display Turtle for the Knight TV Terminals (March 4, 1975 pages, second half only)"
+    scan: 77-85
+    printed: 73-81
+    subsections:
+      - { n: "17.14", title: "(end) TVSIZE, TURTLESIZE, SETHOME", scan: 77 }
+      - { n: "17.15", title: "Screen Color", scan: 77 }
+      - { n: "17.16", title: "Saving Pictures", scan: 78-80, note: "windows: point arrays, 'what you see is what you get'" }
+      - { n: "17.17", title: "Printing Pictures on the XGP", scan: 80 }
+      - { n: "17.18", title: "Shading", scan: 81 }
+      - { n: "17.19", title: "Shading Patterns", scan: 81 }
+      - { n: "17.20", title: "Invisible Mode", scan: 82-83 }
+      - { n: "17.21", title: "Extensions", scan: 83-84 }
+      - { n: "17.22", title: "Implementation", scan: 84-85, note: "TV-11 memory mapped into the PDP-10 job; a Lisp array; two 16-bit words per 36-bit word; DRAWMODE" }
+  - { scan: 86-93, printed: 82-89, what: "Index and Index to LLOGO Primitives, March 4, 1975" }
+
+devices:   # every device the memo drives; the cabinet's plan for each is in LOGO-TURTLE.md
+  - { name: Type 340 display, via: "display slave on the PDP-6", section: 15 }
+  - { name: GT40, via: "STARTDISPLAY with the GT40; must not be logged in to ITS as a console", section: 15 }
+  - { name: Knight TV, via: "TV-11 memory mapped as a Lisp array", section: 17 }
+  - { name: Character display terminals (Datapoint and others), via: GERMLAND, section: 14 }
+  - { name: Music box, via: "old (Minsky) box behind an Execuport; new box on a Thornton box port 1-3", section: 16 }
+  - { name: Pots and joystick, via: DIALS, section: "15.13" }
+  - { name: Plotter, via: PLOTTER, section: "15.12" }
+  - { name: Xerox Graphics Printer (XGP), via: "XGP primitive (1975 pages)", section: "17.17" }
+  - { name: Floor turtle, via: "hoped for, 'controlled by the Thornton Box'", section: 12 }
+
+binding_and_scope:   # answers "does it declare dynamic binding?" with page references
+  - { scan: 34, section: 9, quote: "For safety's sake, all variables are automatically declared SPECIAL." }
+  - { scan: 35, section: 9, quote: "procedures which depend heavily on maintaining the dynamic environment of the interpreter may fail to compile correctly without modification." }
+  - { scan: 41, section: 11, quote: "Regardless of where a LOCAL statement is placed in a procedure, the variables declared will be local to the entire procedure. This corresponds to a PROG variable in LISP." }
+  - { scan: 40, section: 11, note: "variables set by MAKE are Lisp atoms whose names begin with a colon" }
+  - { scan: 8, section: "2.1", note: "the TEST flag is a global Lisp variable, so a TEST in a subprocedure affects IFTRUE in its caller" }
+  - { scan: 12, section: "3.1", note: "switching between the Logo, Lisp, PLANNER and CONNIVER worlds is done by rebinding READTABLE and OBARRAY" }
+
+related:
+  henry_lieberman: ../../README.md
+  revision_1975: ../aim-307a-llogo-1975/README.md
+  tv_turtle_1976: ../aim-361-tv-turtle-1976/README.md
+  lisp_machine_turtle_1981: ../wp-214-lisp-machine-turtle-1981/README.md
+  history_of_logo_2020: ../../../cynthia-solomon/sources/history-of-logo-hopl-2020/README.md
+  llogo_source_dossier: ../../../don-hopkins/sources/llogo-maclisp-its.md
+  its_sources: https://github.com/PDP-10/its/tree/master/src/llogo
+  cabinet_devices_to_emulate: ../../../../packages/cabinet/LOGO-TURTLE.md#every-device-logo-drove-to-emulate
+  cabinet_tv_mapping: ../../../../packages/cabinet/MAPPING.md#llogo-a-lisp-array-that-is-the-screen

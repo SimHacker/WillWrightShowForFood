@@ -1,0 +1,2577 @@
+# Monsters, by the number encounters use.
+
+monsters:
+  - index: 0
+    name_unknown: GIANT SERPENT
+    name_unknown_plural: GIANT SERPENTS
+    name: MOAT MONSTER
+    name_plural: MOAT MONSTERS
+    picture: 9 # index into the pictures
+    group_size: {count: 2, sides: 2, bonus: 1} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 10, bonus: 5}
+    class: 7
+    armor_class: 6
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 1, sides: 3, bonus: 0}
+      - {count: 1, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 300
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 0
+    partner: 0 # monster that may join the group
+    partner_chance: 35
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 1
+    name_unknown: CORSAIR
+    name_unknown_plural: CORSAIRS
+    name: HIGH CORSAIR
+    name_plural: HIGH CORSAIRS
+    picture: 14 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 15, bonus: 5}
+    class: 0
+    armor_class: 3
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 6, bonus: 4}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 400
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 13
+    partner: 4 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 2
+    name_unknown: CORSAIR
+    name_unknown_plural: CORSAIRS
+    name: GARIAN RAIDER
+    name_plural: GARIAN RAIDERS
+    picture: 14 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 4, bonus: 0}
+    class: 0
+    armor_class: 5
+    attack_count: 1
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 100
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 1
+    partner: 2 # monster that may join the group
+    partner_chance: 20
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 3
+    name_unknown: CORSAIR
+    name_unknown_plural: CORSAIRS
+    name: GARIAN GUARD
+    name_plural: GARIAN GUARDS
+    picture: 14 # index into the pictures
+    group_size: {count: 2, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 5, bonus: 2}
+    class: 0
+    armor_class: 4
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 150
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 1
+    partner: 3 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 4
+    name_unknown: CORSAIR
+    name_unknown_plural: CORSAIRS
+    name: GARIAN CAPTAIN
+    name_plural: GARIAN CAPTAINS
+    picture: 14 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 6, bonus: 0}
+    class: 0
+    armor_class: 3
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 8, bonus: 2}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 200
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 1
+    partner: 3 # monster that may join the group
+    partner_chance: 50
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 5
+    name_unknown: CORSAIR
+    name_unknown_plural: CORSAIRS
+    name: GARIAN PRIEST
+    name_plural: GARIAN PRIESTS
+    picture: 14 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 4, bonus: 2}
+    class: 2
+    armor_class: 5
+    attack_count: 1
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 150
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 1
+    partner: 2 # monster that may join the group
+    partner_chance: 35
+    mage_spells: 0
+    priest_spells: 1
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 6
+    name_unknown: CORSAIR
+    name_unknown_plural: CORSAIRS
+    name: GARIAN MAGE
+    name_plural: GARIAN MAGES
+    picture: 14 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 1, sides: 4, bonus: 2}
+    class: 1
+    armor_class: 9
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 150
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 1
+    partner: 2 # monster that may join the group
+    partner_chance: 35
+    mage_spells: 1
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 7
+    name_unknown: UNSEEN ENTITY
+    name_unknown_plural: UNSEEN ENTITIES
+    name: POLTERGEIST
+    name_plural: POLTERGEISTS
+    picture: 11 # index into the pictures
+    group_size: {count: 1, sides: 3, bonus: 1} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 1, sides: 6, bonus: 2}
+    class: 10
+    armor_class: 10
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 2, bonus: 0}
+      - {count: 2, sides: 2, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 100
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 1
+    partner: 7 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 8
+    name_unknown: SHADOWY FIGURE
+    name_unknown_plural: SHADOWY FIGURES
+    name: DUSTER
+    name_plural: DUSTERS
+    picture: 21 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 4, bonus: 2}
+    class: 10
+    armor_class: 8
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 150
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 1
+    partner: 8 # monster that may join the group
+    partner_chance: 20
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 9
+    name_unknown: SLIMY THING
+    name_unknown_plural: SLIMY THINGS
+    name: GIANT SLUG
+    name_plural: GIANT SLUGS
+    picture: 15 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 6, bonus: 0}
+    class: 8
+    armor_class: 10
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 3, bonus: 2}
+      - {count: 2, sides: 3, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 350
+    drain: 0 # levels drained per hit
+    heal_points: 5
+    reward_wandering: 14
+    reward_lair: 14
+    partner: 9 # monster that may join the group
+    partner_chance: 15
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 10
+    name_unknown: LARGE SNAKE
+    name_unknown_plural: LARGE SNAKES
+    name: ANACONDA
+    name_plural: ANACONDAS
+    picture: 17 # index into the pictures
+    group_size: {count: 2, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 1, sides: 8, bonus: 2}
+    class: 8
+    armor_class: 3
+    attack_count: 2
+    attacks:
+      - {count: 1, sides: 4, bonus: 1}
+      - {count: 1, sides: 4, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 250
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 1
+    partner: 10 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1001000000000000"
+    abilities: "0000100000000000"
+  - index: 11
+    name_unknown: STRANGE PLANT
+    name_unknown_plural: STRANGE PLANTS
+    name: CRAWLING KELP
+    name_plural: CRAWLING KELP
+    picture: 10 # index into the pictures
+    group_size: {count: 4, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 1, sides: 2, bonus: 1}
+    class: 13
+    armor_class: 10
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 2, bonus: 1}
+      - {count: 1, sides: 2, bonus: 1}
+      - {count: 1, sides: 2, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 5
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 14
+    reward_lair: 14
+    partner: 11 # monster that may join the group
+    partner_chance: 40
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 50 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 12
+    name_unknown: MAN IN ARMOR
+    name_unknown_plural: MEN IN ARMOR
+    name: MAN AT ARMS
+    name_plural: MEN AT ARMS
+    picture: 3 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 10, bonus: 0}
+    class: 0
+    armor_class: 4
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 8, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 200
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 12 # monster that may join the group
+    partner_chance: 20
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 13
+    name_unknown: MAN IN ROBES
+    name_unknown_plural: MEN IN ROBES
+    name: FRIAR
+    name_plural: FRIARS
+    picture: 4 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 8, bonus: 0}
+    class: 2
+    armor_class: 6
+    attack_count: 1
+    attacks:
+      - {count: 2, sides: 3, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 200
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 16 # monster that may join the group
+    partner_chance: 41
+    mage_spells: 0
+    priest_spells: 2
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 14
+    name_unknown: WOMAN IN ROBES
+    name_unknown_plural: WOMEN IN ROBES
+    name: WITCH
+    name_plural: WITCHES
+    picture: 5 # index into the pictures
+    group_size: {count: 7, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 4, bonus: 0}
+    class: 1
+    armor_class: 9
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 4, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 175
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 12 # monster that may join the group
+    partner_chance: 40
+    mage_spells: 2
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 15
+    name_unknown: MAN IN LEATHER
+    name_unknown_plural: MEN IN LEATHER
+    name: LOOTER
+    name_plural: LOOTERS
+    picture: 6 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 6, bonus: 0}
+    class: 3
+    armor_class: 6
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 4, bonus: 0}
+      - {count: 1, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 200
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 14 # monster that may join the group
+    partner_chance: 20
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 16
+    name_unknown: MAN IN ARMOR
+    name_unknown_plural: MEN IN ARMOR
+    name: RONIN
+    name_plural: RONIN
+    picture: 7 # index into the pictures
+    group_size: {count: 3, sides: 2, bonus: 2} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 10, bonus: 0}
+    class: 0
+    armor_class: 4
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 8, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 250
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 16 # monster that may join the group
+    partner_chance: 20
+    mage_spells: 2
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 17
+    name_unknown: SHADOWY FIGURE
+    name_unknown_plural: SHADOWY FIGURES
+    name: ASHER
+    name_plural: ASHERS
+    picture: 21 # index into the pictures
+    group_size: {count: 1, sides: 6, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 4, bonus: 2}
+    class: 10
+    armor_class: 6
+    attack_count: 2
+    attacks:
+      - {count: 1, sides: 3, bonus: 0}
+      - {count: 1, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 225
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 8 # monster that may join the group
+    partner_chance: 25
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0010000000000000"
+  - index: 18
+    name_unknown: STRANGE BIRD
+    name_unknown_plural: STRANGE BIRDS
+    name: WERE VULTURE
+    name_plural: WERE VULTURES
+    picture: 13 # index into the pictures
+    group_size: {count: 3, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 6, bonus: 4}
+    class: 9
+    armor_class: 4
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 1, sides: 4, bonus: 0}
+      - {count: 1, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 400
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 20 # monster that may join the group
+    partner_chance: 50
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 25 # spell resistance, percent
+    resists: "1001000000000000"
+    abilities: "0100100000000000"
+  - index: 19
+    name_unknown: GAUNT FIGURE
+    name_unknown_plural: GAUNT FIGURES
+    name: MUMMY
+    name_plural: MUMMIES
+    picture: 12 # index into the pictures
+    group_size: {count: 1, sides: 6, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 1, sides: 3, bonus: 6}
+    class: 10
+    armor_class: 5
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 400
+    drain: 1 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 19 # monster that may join the group
+    partner_chance: 20
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 20
+    name_unknown: STRANGE BIRD
+    name_unknown_plural: STRANGE BIRDS
+    name: VULTURE
+    name_plural: VULTURES
+    picture: 13 # index into the pictures
+    group_size: {count: 2, sides: 4, bonus: 1} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 6, bonus: 0}
+    class: 8
+    armor_class: 8
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 1, sides: 3, bonus: 0}
+      - {count: 1, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 300
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 20 # monster that may join the group
+    partner_chance: 33
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 21
+    name_unknown: STRANGE ANIMAL
+    name_unknown_plural: STRANGE ANIMALS
+    name: BENGAL TIGER
+    name_plural: BENGAL TIGERS
+    picture: 29 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 6, bonus: 0}
+    class: 8
+    armor_class: 7
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 350
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 2
+    reward_lair: 3
+    partner: 21 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 22
+    name_unknown: GOBLIN
+    name_unknown_plural: GOBLINS
+    name: GOBLIN
+    name_plural: GOBLINS
+    picture: 20 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 3} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 8, bonus: 4}
+    class: 0
+    armor_class: 4
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 250
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 16
+    reward_lair: 17
+    partner: 22 # monster that may join the group
+    partner_chance: 25
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000110000000000"
+  - index: 23
+    name_unknown: GOBLIN
+    name_unknown_plural: GOBLINS
+    name: HOBGOBLIN
+    name_plural: HOBGOBLINS
+    picture: 20 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 12, bonus: 0}
+    class: 5
+    armor_class: 3
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 300
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 16
+    reward_lair: 17
+    partner: 22 # monster that may join the group
+    partner_chance: 40
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000110000000000"
+  - index: 24
+    name_unknown: STRANGE ANIMAL
+    name_unknown_plural: STRANGE ANIMALS
+    name: DARK STEED
+    name_plural: DARK STEEDS
+    picture: 25 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 3, bonus: 15}
+    class: 13
+    armor_class: 4
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 3, bonus: 1}
+      - {count: 2, sides: 3, bonus: 1}
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 325
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 16
+    reward_lair: 17
+    partner: 24 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 10 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 25
+    name_unknown: STRANGE BIRD
+    name_unknown_plural: STRANGE BIRDS
+    name: HARPY
+    name_plural: HARPIES
+    picture: 13 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 1} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 5, bonus: 0}
+    class: 6
+    armor_class: 5
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 400
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 16
+    reward_lair: 17
+    partner: 25 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000110000000000"
+  - index: 26
+    name_unknown: MAN IN BLACK
+    name_unknown_plural: MEN IN BLACK
+    name: NINJA
+    name_plural: NINJA
+    picture: 8 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 4, bonus: 3}
+    class: 0
+    armor_class: 4
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 400
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 16
+    reward_lair: 17
+    partner: 26 # monster that may join the group
+    partner_chance: 25
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0001110000000000"
+  - index: 27
+    name_unknown: TINY FIGURE
+    name_unknown_plural: TINY FIGURES
+    name: LEPRECHUAN
+    name_plural: LEPRECHUANS
+    picture: 16 # index into the pictures
+    group_size: {count: 1, sides: 4, bonus: 1} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 6, bonus: 0}
+    class: 4
+    armor_class: 4
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 2, bonus: 0}
+      - {count: 2, sides: 2, bonus: 0}
+      - {count: 2, sides: 2, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 300
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 18
+    reward_lair: 19
+    partner: 27 # monster that may join the group
+    partner_chance: 15
+    mage_spells: 2
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000110000000000"
+  - index: 28
+    name_unknown: STRANGE ANIMAL
+    name_unknown_plural: STRANGE ANIMALS
+    name: UNICORN
+    name_plural: UNICORNS
+    picture: 25 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 3, bonus: 15}
+    class: 13
+    armor_class: 4
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 3, bonus: 1}
+      - {count: 2, sides: 3, bonus: 1}
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 325
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 18
+    reward_lair: 19
+    partner: 28 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 10 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 29
+    name_unknown: FIGHTER
+    name_unknown_plural: FIGHTERS
+    name: CRUSADER
+    name_plural: CRUSADERS
+    picture: 3 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 8, bonus: 0}
+    class: 0
+    armor_class: 4
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 300
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 18
+    reward_lair: 19
+    partner: 29 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 0
+    priest_spells: 2
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000110000000000"
+  - index: 30
+    name_unknown: TINY FIGURE
+    name_unknown_plural: TINY FIGURES
+    name: PIXIE
+    name_plural: PIXIES
+    picture: 16 # index into the pictures
+    group_size: {count: 1, sides: 4, bonus: 3} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 6, bonus: 0}
+    class: 4
+    armor_class: 4
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 2, bonus: 0}
+      - {count: 2, sides: 2, bonus: 0}
+      - {count: 2, sides: 2, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 300
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 18
+    reward_lair: 19
+    partner: 27 # monster that may join the group
+    partner_chance: 35
+    mage_spells: 1
+    priest_spells: 3
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000010000000000"
+  - index: 31
+    name_unknown: STRANGE ANIMAL
+    name_unknown_plural: STRANGE ANIMALS
+    name: CENTAUR
+    name_plural: CENTAURS
+    picture: 28 # index into the pictures
+    group_size: {count: 1, sides: 5, bonus: 2} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 6, bonus: 4}
+    class: 6
+    armor_class: 7
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 400
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 18
+    reward_lair: 19
+    partner: 31 # monster that may join the group
+    partner_chance: 15
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000110000000000"
+  - index: 32
+    name_unknown: MAN IN ARMOR
+    name_unknown_plural: MEN IN ARMOR
+    name: DWARF FIGHTER
+    name_plural: DWARF FIGHTERS
+    picture: 3 # index into the pictures
+    group_size: {count: 2, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 10, bonus: 0}
+    class: 0
+    armor_class: 2
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 500
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 4
+    reward_lair: 5
+    partner: 12 # monster that may join the group
+    partner_chance: 75
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 33
+    name_unknown: MAN IN ROBES
+    name_unknown_plural: MEN IN ROBES
+    name: ACOLYTE
+    name_plural: ACOLYTES
+    picture: 4 # index into the pictures
+    group_size: {count: 2, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 8, bonus: 0}
+    class: 2
+    armor_class: 5
+    attack_count: 1
+    attacks:
+      - {count: 2, sides: 3, bonus: 2}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 500
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 4
+    reward_lair: 5
+    partner: 13 # monster that may join the group
+    partner_chance: 65
+    mage_spells: 0
+    priest_spells: 3
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 34
+    name_unknown: MAN IN ROBES
+    name_unknown_plural: MEN IN ROBES
+    name: NECROMANCER
+    name_plural: NECROMANCERS
+    picture: 5 # index into the pictures
+    group_size: {count: 6, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 4, bonus: 0}
+    class: 1
+    armor_class: 9
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 4, bonus: 2}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 500
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 4
+    reward_lair: 5
+    partner: 32 # monster that may join the group
+    partner_chance: 50
+    mage_spells: 3
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 35
+    name_unknown: GIANT INSECT
+    name_unknown_plural: GIANT INSECTS
+    name: GIANT ANT
+    name_plural: GIANT ANTS
+    picture: 27 # index into the pictures
+    group_size: {count: 4, sides: 2, bonus: 1} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 2, sides: 5, bonus: 10}
+    class: 12
+    armor_class: 4
+    attack_count: 1
+    attacks:
+      - {count: 2, sides: 5, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 150
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 4
+    reward_lair: 5
+    partner: 35 # monster that may join the group
+    partner_chance: 50
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0010000000000000"
+  - index: 36
+    name_unknown: STRANGE PLANT
+    name_unknown_plural: STRANGE PLANTS
+    name: STRANGLER VINE
+    name_plural: STRANGLER VINES
+    picture: 10 # index into the pictures
+    group_size: {count: 4, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 3, bonus: 0}
+    class: 13
+    armor_class: 6
+    attack_count: 4
+    attacks:
+      - {count: 1, sides: 2, bonus: 0}
+      - {count: 1, sides: 2, bonus: 0}
+      - {count: 1, sides: 2, bonus: 0}
+      - {count: 2, sides: 8, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 150
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 14
+    reward_lair: 15
+    partner: 36 # monster that may join the group
+    partner_chance: 45
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 50 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 37
+    name_unknown: UNSEEN ENTITY
+    name_unknown_plural: UNSEEN ENTITIES
+    name: BANSHEE
+    name_plural: BANSHEES
+    picture: 11 # index into the pictures
+    group_size: {count: 2, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 1, sides: 3, bonus: 10}
+    class: 10
+    armor_class: 4
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 1, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 550
+    drain: 1 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 4
+    reward_lair: 5
+    partner: 37 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 38
+    name_unknown: STRANGE ANIMAL
+    name_unknown_plural: STRANGE ANIMALS
+    name: WERE TIGER
+    name_plural: WERE TIGERS
+    picture: 29 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 6, bonus: 0}
+    class: 9
+    armor_class: 3
+    attack_count: 3
+    attacks:
+      - {count: 3, sides: 3, bonus: 0}
+      - {count: 3, sides: 3, bonus: 0}
+      - {count: 3, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 650
+    drain: 0 # levels drained per hit
+    heal_points: 2
+    reward_wandering: 4
+    reward_lair: 5
+    partner: 21 # monster that may join the group
+    partner_chance: 67
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 10 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0100100000000000"
+  - index: 39
+    name_unknown: DRAGON
+    name_unknown_plural: DRAGONS
+    name: KOMODO DRAGON
+    name_plural: KOMODO DRAGONS
+    picture: 9 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 6, sides: 5, bonus: 0}
+    class: 7
+    armor_class: 3
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 650
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 4
+    reward_lair: 5
+    partner: 39 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 3
+    unaffected: 0 # spell resistance, percent
+    resists: "0001000000000000"
+    abilities: "0100100000000000"
+  - index: 40
+    name_unknown: SLIMY THING
+    name_unknown_plural: SLIMY THINGS
+    name: GIANT LEECH
+    name_plural: GIANT LEECHES
+    picture: 15 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 6, bonus: 0}
+    class: 8
+    armor_class: 8
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 600
+    drain: 0 # levels drained per hit
+    heal_points: 7
+    reward_wandering: 14
+    reward_lair: 15
+    partner: 40 # monster that may join the group
+    partner_chance: 15
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0100000000000000"
+  - index: 41
+    name_unknown: LARGE SNAKE
+    name_unknown_plural: LARGE SNAKES
+    name: 2-HEADED SNAKE
+    name_plural: 2-HEADED SNAKES
+    picture: 17 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 8, bonus: 0}
+    class: 8
+    armor_class: 2
+    attack_count: 4
+    attacks:
+      - {count: 1, sides: 6, bonus: 1}
+      - {count: 1, sides: 6, bonus: 1}
+      - {count: 1, sides: 6, bonus: 1}
+      - {count: 1, sides: 6, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 700
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 4
+    reward_lair: 5
+    partner: 10 # monster that may join the group
+    partner_chance: 50
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0100100000000000"
+  - index: 42
+    name_unknown: GOBLIN
+    name_unknown_plural: GOBLINS
+    name: GOBLIN PRINCE
+    name_plural: GOBLIN PRINCES
+    picture: 20 # index into the pictures
+    group_size: {count: 2, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 5, bonus: 20}
+    class: 5
+    armor_class: 1
+    attack_count: 4
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 600
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 20
+    reward_lair: 21
+    partner: 23 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 15 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 43
+    name_unknown: GOBLIN
+    name_unknown_plural: GOBLINS
+    name: GOBLIN SHAMAN
+    name_plural: GOBLIN SHAMANS
+    picture: 20 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 6, bonus: 0}
+    class: 5
+    armor_class: 4
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 600
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 20
+    reward_lair: 21
+    partner: 23 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 3
+    priest_spells: 2
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 44
+    name_unknown: SHADOWY FIGURE
+    name_unknown_plural: SHADOWY FIGURES
+    name: DARK RIDER
+    name_plural: DARK RIDERS
+    picture: 21 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 6, bonus: 20}
+    class: 11
+    armor_class: 2
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 800
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 20
+    reward_lair: 21
+    partner: 24 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 3
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 40 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000001000000000"
+  - index: 45
+    name_unknown: STRANGE BIRD
+    name_unknown_plural: STRANGE BIRDS
+    name: COCKATRICE
+    name_plural: COCKATRICES
+    picture: 13 # index into the pictures
+    group_size: {count: 1, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 5, bonus: 5}
+    class: 6
+    armor_class: 5
+    attack_count: 2
+    attacks:
+      - {count: 1, sides: 5, bonus: 0}
+      - {count: 1, sides: 5, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 800
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 20
+    reward_lair: 21
+    partner: 25 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000010000000000"
+    abilities: "1000110000000000"
+  - index: 46
+    name_unknown: MAN IN BLACK
+    name_unknown_plural: MEN IN BLACK
+    name: MASTER NINJA
+    name_plural: MASTER NINJA
+    picture: 8 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 6, sides: 4, bonus: 0}
+    class: 0
+    armor_class: 2
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 900
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 20
+    reward_lair: 21
+    partner: 26 # monster that may join the group
+    partner_chance: 25
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0001110000000000"
+  - index: 47
+    name_unknown: FIGHTER
+    name_unknown_plural: FIGHTERS
+    name: CRUSADER LORD
+    name_plural: CRUSADER LORDS
+    picture: 3 # index into the pictures
+    group_size: {count: 2, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 5, bonus: 20}
+    class: 0
+    armor_class: 1
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 600
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 22
+    reward_lair: 23
+    partner: 29 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 0
+    priest_spells: 4
+    unique: -1
+    breathe: 0
+    unaffected: 5 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 48
+    name_unknown: TINY FIGURE
+    name_unknown_plural: TINY FIGURES
+    name: FAERIE
+    name_plural: FAERIES
+    picture: 16 # index into the pictures
+    group_size: {count: 1, sides: 6, bonus: 2} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 10, bonus: 0}
+    class: 4
+    armor_class: 3
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 600
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 22
+    reward_lair: 23
+    partner: 30 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 3
+    priest_spells: 2
+    unique: -1
+    breathe: 0
+    unaffected: 15 # spell resistance, percent
+    resists: "1000001000000000"
+    abilities: "0000010000000000"
+  - index: 49
+    name_unknown: SHADOWY FIGURE
+    name_unknown_plural: SHADOWY FIGURES
+    name: SERAPH
+    name_plural: SERAPHIM
+    picture: 21 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 6, bonus: 10}
+    class: 11
+    armor_class: 2
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 800
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 22
+    reward_lair: 23
+    partner: 28 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 3
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 40 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000001000000000"
+  - index: 50
+    name_unknown: DRAGON
+    name_unknown_plural: DRAGONS
+    name: T'IEN LUNG
+    name_plural: T'IEN LUNG
+    picture: 9 # index into the pictures
+    group_size: {count: 1, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 6, sides: 4, bonus: 8}
+    class: 7
+    armor_class: 0
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 3, sides: 8, bonus: 3}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 4000
+    drain: 0 # levels drained per hit
+    heal_points: 2
+    reward_wandering: 22
+    reward_lair: 23
+    partner: 50 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 2
+    unaffected: 35 # spell resistance, percent
+    resists: "1010000000000000"
+    abilities: "0000100000000000"
+  - index: 51
+    name_unknown: STRANGE BIRD
+    name_unknown_plural: STRANGE BIRD
+    name: ROC
+    name_plural: ROCS
+    picture: 13 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 5, bonus: 8}
+    class: 6
+    armor_class: 2
+    attack_count: 4
+    attacks:
+      - {count: 3, sides: 8, bonus: 0}
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 1800
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 22
+    reward_lair: 23
+    partner: 20 # monster that may join the group
+    partner_chance: 50
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 52
+    name_unknown: MAN IN ARMOR
+    name_unknown_plural: MEN IN ARMOR
+    name: BERSERKER
+    name_plural: BERSERKERS
+    picture: 3 # index into the pictures
+    group_size: {count: 2, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 8, bonus: 0}
+    class: 0
+    armor_class: 0
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 5, bonus: 0}
+      - {count: 2, sides: 5, bonus: 0}
+      - {count: 2, sides: 5, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 800
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 32 # monster that may join the group
+    partner_chance: 35
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 53
+    name_unknown: MAN IN ROBES
+    name_unknown_plural: MEN IN ROBES
+    name: GNOME PRIEST
+    name_plural: GNOME PRIESTS
+    picture: 4 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 1} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 7, bonus: 0}
+    class: 2
+    armor_class: 3
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 800
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 55 # monster that may join the group
+    partner_chance: 50
+    mage_spells: 0
+    priest_spells: 4
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 54
+    name_unknown: MAN IN ROBES
+    name_unknown_plural: MEN IN ROBES
+    name: ELVEN MAGE
+    name_plural: ELVEN MAGES
+    picture: 5 # index into the pictures
+    group_size: {count: 2, sides: 3, bonus: 1} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 3, bonus: 4}
+    class: 1
+    armor_class: 8
+    attack_count: 1
+    attacks:
+      - {count: 1, sides: 4, bonus: 2}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 700
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 52 # monster that may join the group
+    partner_chance: 62
+    mage_spells: 4
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 10 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 55
+    name_unknown: MAN IN LEATHER
+    name_unknown_plural: MEN IN LEATHER
+    name: BURGLAR
+    name_plural: BURGLARS
+    picture: 6 # index into the pictures
+    group_size: {count: 2, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 6, bonus: 0}
+    class: 3
+    armor_class: 4
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 3, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 800
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 32 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000110000000000"
+  - index: 56
+    name_unknown: MAN IN ARMOR
+    name_unknown_plural: MEN IN ARMOR
+    name: SAMURAI
+    name_plural: SAMURAI
+    picture: 7 # index into the pictures
+    group_size: {count: 3, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 7, bonus: 0}
+    class: 0
+    armor_class: 0
+    attack_count: 2
+    attacks:
+      - {count: 1, sides: 6, bonus: 4}
+      - {count: 1, sides: 6, bonus: 4}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 1000
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 56 # monster that may join the group
+    partner_chance: 20
+    mage_spells: 3
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000100000000000"
+  - index: 57
+    name_unknown: UNSEEN ENTITY
+    name_unknown_plural: UNSEEN ENTITIES
+    name: GHOST
+    name_plural: GHOSTS
+    picture: 11 # index into the pictures
+    group_size: {count: 1, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 6, bonus: 0}
+    class: 10
+    armor_class: 3
+    attack_count: 2
+    attacks:
+      - {count: 1, sides: 6, bonus: 2}
+      - {count: 1, sides: 6, bonus: 2}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 1000
+    drain: 1 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 57 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000000000000000"
+  - index: 58
+    name_unknown: UNSEEN ENTITY
+    name_unknown_plural: UNSEEN ENTITIES
+    name: WIGHT
+    name_plural: WIGHTS
+    picture: 11 # index into the pictures
+    group_size: {count: 1, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 5, sides: 6, bonus: 0}
+    class: 10
+    armor_class: 2
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 1, sides: 6, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 1000
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 57 # monster that may join the group
+    partner_chance: 5
+    mage_spells: 4
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 33 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0010000000000000"
+  - index: 59
+    name_unknown: SHADOWY FIGURE
+    name_unknown_plural: SHADOWY FIGURES
+    name: DOPPELGANGER
+    name_plural: DOPPELGANGERS
+    picture: 21 # index into the pictures
+    group_size: {count: 2, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 6, sides: 9, bonus: 0}
+    class: 9
+    armor_class: -2
+    attack_count: 2
+    attacks:
+      - {count: 3, sides: 5, bonus: 0}
+      - {count: 3, sides: 5, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 1750
+    drain: 0 # levels drained per hit
+    heal_points: 5
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 52 # monster that may join the group
+    partner_chance: 40
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 25 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0100100000000000"
+  - index: 60
+    name_unknown: SHADOWY FIGURE
+    name_unknown_plural: SHADOWY FIGURES
+    name: FIEND
+    name_plural: FIENDS
+    picture: 21 # index into the pictures
+    group_size: {count: 1, sides: 4, bonus: 2} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 6, bonus: 8}
+    class: 11
+    armor_class: 0
+    attack_count: 4
+    attacks:
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 1, sides: 3, bonus: 1}
+      - {count: 1, sides: 3, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 3000
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 57 # monster that may join the group
+    partner_chance: 30
+    mage_spells: 3
+    priest_spells: 3
+    unique: -1
+    breathe: 0
+    unaffected: 40 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000001000000000"
+  - index: 61
+    name_unknown: STRANGE ANIMAL
+    name_unknown_plural: STRANGE ANIMALS
+    name: GIANT GORILLA
+    name_plural: GIANT GORILLAS
+    picture: 20 # index into the pictures
+    group_size: {count: 1, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 1, bonus: 50}
+    class: 5
+    armor_class: 4
+    attack_count: 2
+    attacks:
+      - {count: 6, sides: 6, bonus: 0}
+      - {count: 6, sides: 6, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 1500
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 6
+    reward_lair: 7
+    partner: 61 # monster that may join the group
+    partner_chance: 20
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000100000000000"
+  - index: 62
+    name_unknown: UNSEEN ENTITY
+    name_unknown_plural: UNSEEN ENTITIES
+    name: GHAST
+    name_plural: GHASTS
+    picture: 11 # index into the pictures
+    group_size: {count: 1, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 4, sides: 6, bonus: 6}
+    class: 10
+    armor_class: 1
+    attack_count: 1
+    attacks:
+      - {count: 2, sides: 6, bonus: 6}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 6000
+    drain: 1 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 57 # monster that may join the group
+    partner_chance: 10
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0010000000000000"
+  - index: 63
+    name_unknown: DRAGON
+    name_unknown_plural: DRAGONS
+    name: FIREDRAKE
+    name_plural: FIREDRAKES
+    picture: 9 # index into the pictures
+    group_size: {count: 1, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 8, bonus: 0}
+    class: 7
+    armor_class: 0
+    attack_count: 3
+    attacks:
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 4, sides: 8, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 10000
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 63 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 1
+    unaffected: 15 # spell resistance, percent
+    resists: "0100000000000000"
+    abilities: "0000100000000000"
+  - index: 64
+    name_unknown: STRANGE PLANT
+    name_unknown_plural: STRANGE PLANTS
+    name: VENUS MAN-TRAP
+    name_plural: VENUS MAN-TRAPS
+    picture: 10 # index into the pictures
+    group_size: {count: 1, sides: 4, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 3, bonus: 0}
+    class: 13
+    armor_class: 4
+    attack_count: 1
+    attacks:
+      - {count: 4, sides: 6, bonus: 4}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 7999
+    drain: 0 # levels drained per hit
+    heal_points: 1
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 36 # monster that may join the group
+    partner_chance: 50
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 50 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0110000000000000"
+  - index: 65
+    name_unknown: MAN IN ARMOR
+    name_unknown_plural: MEN IN ARMOR
+    name: MIFUNE
+    name_plural: MIFUNE
+    picture: 7 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 6, bonus: 25}
+    class: 0
+    armor_class: -2
+    attack_count: 4
+    attacks:
+      - {count: 1, sides: 6, bonus: 4}
+      - {count: 1, sides: 6, bonus: 4}
+      - {count: 1, sides: 6, bonus: 4}
+      - {count: 1, sides: 6, bonus: 4}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 35000
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 56 # monster that may join the group
+    partner_chance: 50
+    mage_spells: 3
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 20 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0000000000000000"
+  - index: 66
+    name_unknown: FIERY FIGURE
+    name_unknown_plural: FIERY FIGURES
+    name: ARCHDEMON
+    name_plural: ARCHDEMONS
+    picture: 22 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 10, bonus: 10}
+    class: 11
+    armor_class: -2
+    attack_count: 4
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 30000
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 60 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 6
+    priest_spells: 3
+    unique: -1
+    breathe: 0
+    unaffected: 60 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000001000000000"
+  - index: 67
+    name_unknown: GIANT
+    name_unknown_plural: GIANTS
+    name: CYCLOPS
+    name_plural: CYCLOPES
+    picture: 26 # index into the pictures
+    group_size: {count: 1, sides: 2, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 10, bonus: 0}
+    class: 5
+    armor_class: 0
+    attack_count: 2
+    attacks:
+      - {count: 3, sides: 6, bonus: 2}
+      - {count: 3, sides: 6, bonus: 2}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 12000
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 67 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 25 # spell resistance, percent
+    resists: "1100000000000000"
+    abilities: "0000100000000000"
+  - index: 68
+    name_unknown: GIANT INSECT
+    name_unknown_plural: GIANT INSECTS
+    name: GIANT MANTIS
+    name_plural: GIANT MANTISES
+    picture: 27 # index into the pictures
+    group_size: {count: 1, sides: 3, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 6, bonus: 0}
+    class: 12
+    armor_class: 0
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 2, sides: 6, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 15000
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 68 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1010000000000000"
+    abilities: "0001100000000000"
+  - index: 69
+    name_unknown: RADIANT FIGURE
+    name_unknown_plural: RADIANT FIGURES
+    name: ARCHANGEL
+    name_plural: ARCHANGELS
+    picture: 22 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 10, bonus: 10}
+    class: 11
+    armor_class: -2
+    attack_count: 4
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 30000
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 49 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 5
+    priest_spells: 3
+    unique: -1
+    breathe: 0
+    unaffected: 60 # spell resistance, percent
+    resists: "0000000000000000"
+    abilities: "0010001000000000"
+  - index: 70
+    name_unknown: SLIMY THING
+    name_unknown_plural: SLIMY THINGS
+    name: XENO
+    name_plural: XENOS
+    picture: 15 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 6, bonus: 0}
+    class: 8
+    armor_class: 6
+    attack_count: 2
+    attacks:
+      - {count: 1, sides: 10, bonus: 5}
+      - {count: 1, sides: 10, bonus: 5}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 6000
+    drain: 0 # levels drained per hit
+    heal_points: 10
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 70 # monster that may join the group
+    partner_chance: 15
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "1000001000000000"
+  - index: 71
+    name_unknown: LARGE SNAKE
+    name_unknown_plural: LARGE SNAKES
+    name: HYDRA
+    name_plural: HYDRAE
+    picture: 17 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 11, sides: 7, bonus: 0}
+    class: 7
+    armor_class: -1
+    attack_count: 7
+    attacks:
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+      - {count: 2, sides: 3, bonus: 0}
+    experience: 50000
+    drain: 0 # levels drained per hit
+    heal_points: 5
+    reward_wandering: 8
+    reward_lair: 9
+    partner: 41 # monster that may join the group
+    partner_chance: 70
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0010100000000000"
+  - index: 72
+    name_unknown: ROBED MAN
+    name_unknown_plural: ROBED MEN
+    name: PRIEST OF FUNG
+    name_plural: PRIESTS OF FUNG
+    picture: 4 # index into the pictures
+    group_size: {count: 1, sides: 5, bonus: 2} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 5, bonus: 0}
+    class: 2
+    armor_class: 3
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 3, bonus: 1}
+      - {count: 2, sides: 3, bonus: 1}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 800
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 7
+    reward_lair: 7
+    partner: 72 # monster that may join the group
+    partner_chance: 25
+    mage_spells: 0
+    priest_spells: 5
+    unique: -1
+    breathe: 0
+    unaffected: 0 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000100000000000"
+  - index: 73
+    name_unknown: RADIANT FIGURE
+    name_unknown_plural: RADIANT FIGURES
+    name: ANGEL
+    name_plural: ANGELS
+    picture: 22 # index into the pictures
+    group_size: {count: 1, sides: 4, bonus: 2} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 8, sides: 6, bonus: 8}
+    class: 11
+    armor_class: 0
+    attack_count: 2
+    attacks:
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 2000
+    drain: 0 # levels drained per hit
+    heal_points: 5
+    reward_wandering: 10
+    reward_lair: 10
+    partner: 47 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 0
+    priest_spells: 4
+    unique: -1
+    breathe: 0
+    unaffected: 40 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0010001000000000"
+  - index: 74
+    name_unknown: LIVING LEGEND
+    name_unknown_plural: LIVING LEGENDS
+    name: DELF
+    name_plural: DELFEN
+    picture: 23 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 1, bonus: 50}
+    class: 11
+    armor_class: 0
+    attack_count: 4
+    attacks:
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 2, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 7200
+    drain: 0 # levels drained per hit
+    heal_points: 5
+    reward_wandering: 11
+    reward_lair: 11
+    partner: 75 # monster that may join the group
+    partner_chance: 100
+    mage_spells: 4
+    priest_spells: 3
+    unique: -1
+    breathe: 0
+    unaffected: 40 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "1000000000000000"
+  - index: 75
+    name_unknown: GAUNT FIGURE
+    name_unknown_plural: GAUNT FIGURES
+    name: DELF'S MINION
+    name_plural: DELF'S MINIONS
+    picture: 12 # index into the pictures
+    group_size: {count: 1, sides: 4, bonus: 5} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 3, sides: 3, bonus: 10}
+    class: 10
+    armor_class: 3
+    attack_count: 2
+    attacks:
+      - {count: 1, sides: 6, bonus: 2}
+      - {count: 1, sides: 6, bonus: 2}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 1200
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 7
+    reward_lair: 7
+    partner: 75 # monster that may join the group
+    partner_chance: 25
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 25 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "1000000000000000"
+  - index: 76
+    name_unknown: SKELETAL FIGURE
+    name_unknown_plural: SKELETAL FIGURE
+    name: PO'LE
+    name_plural: PO'LE
+    picture: 24 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 10, sides: 1, bonus: 50}
+    class: 1
+    armor_class: 4
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 4, bonus: 0}
+      - {count: 1, sides: 4, bonus: 0}
+      - {count: 1, sides: 4, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 12000
+    drain: 0 # levels drained per hit
+    heal_points: 1
+    reward_wandering: 7
+    reward_lair: 12
+    partner: 76 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 7
+    priest_spells: 0
+    unique: -1
+    breathe: 0
+    unaffected: 15 # spell resistance, percent
+    resists: "1000000000000000"
+    abilities: "0000010000000000"
+  - index: 77
+    name_unknown: L'KBRETH
+    name_unknown_plural: L'KBRETHS
+    name: L'KBRETH
+    name_plural: L'KBRETHS
+    picture: 0 # index into the pictures
+    group_size: {count: 1, sides: 1, bonus: 0} # declared TWIZLONG, used as THPREC dice by ENEMYCNT
+    hp: {count: 100, sides: 1, bonus: -60}
+    class: 7
+    armor_class: -20
+    attack_count: 3
+    attacks:
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 1, sides: 8, bonus: 0}
+      - {count: 3, sides: 5, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+      - {count: 0, sides: 0, bonus: 0}
+    experience: 1
+    drain: 0 # levels drained per hit
+    heal_points: 0
+    reward_wandering: 0
+    reward_lair: 0
+    partner: 77 # monster that may join the group
+    partner_chance: -1
+    mage_spells: 0
+    priest_spells: 0
+    unique: -1
+    breathe: 1
+    unaffected: 100 # spell resistance, percent
+    resists: "1111111000000000"
+    abilities: "0000000000000000"

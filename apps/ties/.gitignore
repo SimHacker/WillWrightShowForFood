@@ -7,3 +7,4 @@ dist-bundle/
 __pycache__/
 .env
 .env.*
+static/microm8/

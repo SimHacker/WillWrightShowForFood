@@ -1,0 +1,88 @@
+# ROB: roster slot 5 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: ROB
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 3028
+inventory: []
+spells:
+  - 0
+  - HALITO
+  - MOGREF
+  - KATINO
+  - DUMAPIC
+  - DILTO
+  - SOPIC
+  - MAHALITO
+  - MOLITO
+  - MORLIS
+  - DALTO
+  - LAHALITO
+  - MAMORLIS
+  - MAKANITO
+  - MADALTO
+  - LAKANITO
+  - ZILWAN
+  - MASOPIC
+  - HAMAN
+  - MALOR
+  - MAHAMAN
+  - TILTOWAI
+  - KALKI
+  - DIOS
+  - BADIOS
+  - MILWA
+  - PORFIC
+  - MATU
+  - CALFO
+  - MANIFO
+  - MONTINO
+  - LOMILWA
+  - DIALKO
+  - LATUMAPI
+  - BAMATU
+  - DIAL
+  - BADIAL
+  - LATUMOFI
+  - MAPORFIC
+  - DIALMA
+  - BADIALMA
+  - LITOKAN
+  - KANDI
+  - DI
+  - BADI
+  - LORTO
+  - MADI
+  - MABADI
+  - LOKTOFEI
+  - MALIKTO
+  - KADORTO
+wizardry:
+  slot: 5
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: ELF
+  class: LORD
+  age_weeks: 1000
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 17, agility: 18, luck: 18}
+  luck_skill: [9, 9, 9, 11, 11]
+  experience: 862540
+  max_level: 34
+  level: 34
+  hp: 758 # hit points left
+  hp_max: 758
+  mage_spells: [4, 2, 2, 3, 3, 4, 3] # spell points per level, 1 to 7
+  priest_spells: [9, 9, 9, 9, 9, 9, 9]
+  hp_calc: 16
+  armor_class: 10 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 7
+  damage: {count: 2, sides: 2, bonus: 3}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [0] # AWARDS[4] bits

@@ -1,0 +1,63 @@
+# FURY: roster slot 5 of THE KNIGHT OF DIAMONDS.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: FURY
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 340030
+inventory:
+  - {item: HRATHNIR, equipped: true, cursed: false, identified: true}
+  - {item: KOD'S HELMET, equipped: true, cursed: false, identified: true}
+  - {item: NEUT P-MAIL + 2, equipped: true, cursed: false, identified: true}
+  - {item: KOD'S SHIELD, equipped: true, cursed: false, identified: true}
+  - {item: COPPER GLOVES, equipped: true, cursed: false, identified: true}
+spells:
+  - HALITO
+  - MOGREF
+  - KATINO
+  - DUMAPIC
+  - DILTO
+  - SOPIC
+  - MAHALITO
+  - MOLITO
+  - MORLIS
+  - DALTO
+  - LAHALITO
+  - MAMORLIS
+  - MAKANITO
+  - MADALTO
+  - LAKANITO
+  - ZILWAN
+  - MASOPIC
+  - HAMAN
+  - MALOR
+  - MAHAMAN
+  - TILTOWAI
+wizardry:
+  slot: 5
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: ELF
+  class: SAMURAI
+  age_weeks: 1304
+  status: OK
+  alignment: NEUTRAL
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 17, agility: 18, luck: 18}
+  luck_skill: [10, 12, 10, 12, 10]
+  experience: 7801260
+  max_level: 32
+  level: 28
+  hp: 300 # hit points left
+  hp_max: 300
+  mage_spells: [9, 9, 9, 9, 9, 9, 7] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 21
+  armor_class: -8 # lower is better
+  heal_points: 1 # regeneration per move
+  critical_hit: true
+  swings: 6
+  damage: {count: 2, sides: 10, bonus: 13}
+  vs_type_2: ["01000101000000", "00000000000000"]
+  vs_type_3: ["0010110", "0000000"]
+  vs_type: "00000000000100"
+  awards: [0, 14] # AWARDS[4] bits

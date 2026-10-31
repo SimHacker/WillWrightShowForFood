@@ -1,0 +1,5281 @@
+=== scan page 1 ===
+MASSACHUSETTS INSTITUTE OF TECHNOLOGY
+ARTIFICIAL INTELLIGENCE LABORATORY
+
+June 27, 1974
+
+A. L MEMO 407 LOGO MEMO II
+
+LLOGO:
+
+An Implementation of LOGO in LISP
+
+ira Goldstein
+Heery Lieberman
+Harry Bochner
+
+Mark Miller
+
+Abstract:
+
+This paper describes LLOGO, an implementation of the LOGO language writhen in
+MACLISP for the ITS, TENE and TENEX POP-10 systems, and MULTICS. The relative
+merits of LOGO and LISP as educational languages are discussed. Design decisions in the
+LISP implementation of LOGO are contrasted with those of two other implementations:
+CLOGO for the POP-10 aed 1LLOGO for the POP=11, both written in assembler language.
+LLOGO's special facilities for character-oriented display terminals, graphic display
+*turtles", and music generation are siso described.
+
+This work was supported in part by the National Science Foundation under grant
+number GLO49 and conducted at the Artificial Intelligence Laboratory, a Massachusetts
+Institute of Technology research program supported in part by the Advanced Research
+Projects Agency of the Department of Defense and monitored by the Office of Naval
+Research under Contract Number NOO0O14-70-4-0962-0005. Reproduction of this
+document in whole or in pert is permitted for any purpose of the United States
+Government, ‘
+=== scan page 2 ===
+LISP LOGO MEMO
+
+Section |
+
+Section 2
+
+el
+22
+2.3
+
+Section 3
+
+al
+a2
+33
+3.4
+35
+
+section 4
+4.1
+ae
+43
+4.4
+
+Section 5
+
+Page |
+
+TABLE OF CONTENTS
+
+Why Implemant LOGO in LISP
+
+Differences between LOGO and LISP
+
+Simplicity
+Naturainess
+Disparity
+
+Overview of the lnplementation
+
+Reader
+
+Parser
+Evaluation
+Printing
+
+Error Analysis
+
+Performance
+
+Size
+
+Computation Tima
+Lee
+
+Availability
+
+Getting Started
+
+Parsing LOGO
+
+lnfix Expressions
+Minus Sign
+Horan yin
+Abbreviations
+
+Defining and Editing Functions
+
+Control Character Editing
+Printing Function Definitions
+Erasing
+
+Error Handling and Debugging
+
+Parsing Errora
+
+Run Time Errors
+
+Breakpoints
+
+Wrong Number of inputs Errors
+Garbage Collector Errors
+Tracing
+
+Interaction with LISP
+
+Table of Contents
+
+June 27, 1574
+
+Page
+
+i)
+
+6 ABH
+
+aS —_ —=
+AQ ee So uo wo oS
+
+bs
+=== scan page 3 ===
+LISP LOGO MEMO
+
+Section 9
+
+Section 10
+
+10.1
+10.2
+
+Section 11
+
+Section 12
+
+12.1
+izZ2
+12.3
+
+Section 12
+
+Section 14
+
+141
+142
+14.3
+14.4
+145
+14.6
+147
+14.8
+14.9
+
+Section 15
+
+15.1
+15.2
+15.3
+15,4
+155
+15.6
+15,7
+158
+15.9
+15.10
+15.11
+15.12
+15.13
+15.14
+15.15
+
+Section 16
+
+Page ii
+
+Compiling LLOGO Leer Procedures
+
+Using Files in LLOGOD
+
+Saving and Reading Files
+Other File Commands
+
+Differences between 11L0G0 and LLOGO
+
+Using LLOGO on MULTICS ‘
+
+Where To Find It
+Fila Naming Conventions
+Terminalogy
+
+Using LLOGO on TENSO and TENEX systems
+
+GERMLAND
+Starting Up
+
+Toplevel Primitives
+
+Grid Primitives
+Property Primitives
+Multiple Germ Primilives
+Turtle Primitives
+
+Touch Primitives
+
+Global Variables
+Implementation
+
+Display Turtle Primitives
+
+Starting The Display
+
+The Turtle
+
+haoving the Turtle
+
+Erasing the Screen
+
+Turning the Turtle
+Examining the Turtle’s State
+The Pen
+
+Global Navigation
+Trigonometry
+
+Text
+
+Manipulating Scenes
+
+Plotter
+
+Pats
+
+Points
+
+Global State of the Turtle’s World
+
+The Musle Bow
+
+Table of Contents
+
+June a7, 174
+
+a2
+ae
+
+a4
+
+a8
+
+BG oe
+
+4]
+
+41
+4]
+a2
+
+44
+4a
+
+a7
+
+47
+a7
+
+49
+49
+
+Sl
+51
+Sl
+52
+J
+54
+54
+54
+
+56
+=== scan page 4 ===
+LISP LOG) MEMO Page ial Jone 27, 1974
+
+16,1 Plugging fn 56
+162 Turning On 56
+16.3 Music Primitives Sf
+
+Table of Contents
+=== scan page 5 ===
+LISP LOGO MEMO Page | ° June 27, 1374
+
+Section 1. Why Implement LOCO in LISP
+
+LISP has proved itself to be a powerful language for representing complex
+information processing tasks. This power stems from:
+
+1. The uniform representation of programs and data.
+2. The ability to build arbitrarily complex data structures in the form of s-expressions.
+3. Recursion.
+
+Power, however, is not necessarily good pedagogy. LOGO is a computer language
+designed especially for the beginner. Its purpose is to introduce the fundamental ideas
+of computation as clearly as possible.
+
+LISP LOGO is an implementation of LOGO in LISP. ft has been designed for several
+reasons. The first is that these two languages share a fundamental core in common.
+Both are time shared, interpretive languages capable of full recursion. Variable and
+procedure names may be any string of letters and digits. Sub-procedure definitions are
+independent of super-procedures. Both numerical and list-structured information can be
+manipulated with equal facility. Thus, {he LOGO systems programmer is freed of the
+necessity of re-developing various facilities already available in LISP (lists, recursion,
+garbage collection, error service traps, interrupts), He can concentrate on additions
+(better error analysis) and modifications (pedagogical simplifications) to LISP. LLOGO
+unifies language development across a broad spectrum ranging from PLANNER and
+CONNIVER through LISP to LOGO.
+
+A second reason for this implementation is to provide a natural transition lo the
+more powerful computational world of LISP as the student grows more sophisticated.
+When desired, the student has access to all of the capabilities of LISP including:
+
+Arrays
+
+Functions of arbitrary number of inputs
+Functions that do not evaluate their inputs
+MOCRO-PLANNER and QONMIVER
+
+Interrupts
+
+LISP compiler
+
+Property lists
+
+Floating point numbers
+
+Character display cursor manipulation
+Infinite precision fixed point arithmetic
+
+Why Implement LOGO in LISP Section I
+=== scan page 6 ===
+LISP LOGO MEMO Page 2 June 27, 1974
+
+Section 9. Differences between LOGO and LISP
+
+The differences belween LOGO and LISP can be described on the basis of three
+educational goals:
+
+Simplicity of both the computational and explanatory kind,
+Naturalness wherein the overhead for a naive user is minimized by following
+
+standard English conventions.
+
+Disparity which emphasizes the distinction belween various modes such as
+defining versus running programs.
+
+ft should be noted, however, that thera can be mo one unique solution to the
+“nest” educational language: These three goals can conflict. Furthermore, they cannot be
+sO emphasized that important ideas of computation are completely eliminated from the
+language. For students of diffarent backgrounds, simplicity and naturalness may have
+very different meanings. Hence, allernatives to the particular choices made in designing
+CLOGO and JILOGO are also described. This section may be viewed as presenting a
+spectrum of possibilites from which = teacher can build a computational world tailored to
+his own pedagogical purposes,
+
+2.1 Simplicity
+
+Lists wersus Sentences
+Lists have a simple recursive definition, A list is either
+
+L. MIE, the empty list
+2. (word! word? ...), a sequence of words (= atoms)
+3. A list of lists.
+
+This definition is confusing when the student is still having trouble with the concept of
+recursion, CLOGO limits itself to lists built fram only the first two of these three clauses,
+Such lists are called "sentences".
+
+Alternative view: the concept of recursion is too important to be eliminated
+from LOGO. Recursive programs are allowed. Educationally, the more examples
+of recursion available, the easier it is to understand. Hence, lists should be
+allowed.
+
+Computational power is not always in conflict with educational simplicity. In
+addition to the standard list operations of FIRST (CAR) and BUTFIRST (CDR), LOGO
+provides LAST and BUTLAST. Furthermore, all four of these operations work on words
+as well as senlences. The fact that word manipulation is more costly than list
+manipulation for LISP, or that taking the LAST of a list is more expensive than computing
+its FIRST is not of interest to the beginner. The natural symmetry of having all of these
+Operations is to be preferred.
+
+Alternative view: LOGO introduces two data types - words and sentences.
+
+Differences between LOGO and LISP Section 2.1
+=== scan page 7 ===
+LISP LOGO MEMO Page 3 June 27, 1974
+
+There is both an empty word and an empty sentence, LISP’s world ia easier to
+understand, There is only one type of data, s-expressions, Primitives like CAR
+are list operations only; thay do not operate on words by manipulating the
+word's print name, as LOGO's FIRST dows,
+
+Repeated BUTFIRSTing a sentence in LOGO always terminates in the empty list,
+In LISP, with its more general list structure built from “dotted pairs” and COWSing, this is
+not always so. The resull is the possibility of “slip-through” bugs for EMPTY P endtests
+of recursive procedures. Thus, LOGO eliminates a common source of error wilhout
+significantly limiling computational power.
+
+Alternative view: Allowing an atom to be the COR of an s-expression
+sometimes allows for economy of storage. Also, the symmetry of CAR and COR
+in LISP make the data structure easier to explain, athough they are symmetric
+as list operations only for the particular representation of lists used in LISP,
+
+Rigid program form
+
+LISP allows programs to be lists of any form, Editing and debugging comsequently
+become awkward due to the difficulty in naming parts of the program LOGO simplifies
+program structure by requiring that a program be a series of numbered lines. The
+locations of bugs and intended edits are then far easier fo describe.
+
+Criticism: LOGO violates this assumption by allowing the user to create lines of
+unlimited complexity. it would be preferable to limit a line to a single top lewel
+call, This does not prohibit nesting, a fundamental idea in computation, But it
+does prohibit defeating the entire point of line numbers with such code as:
+
+710 FD 100 RT FD 0 RTM...
+
+An alternative scheme might ba to adopt a “DOT” like convention. Lines are
+identified by offsets from user-defined location symbols. This has the
+advantage of encouraging the use of mnamonic names for portions of the user's
+program, rather than line numbers, which have no mnemonic value, while
+retaining the virtue of having a mame for every part of the program. The user
+would mot have to renumber lines if he wanted to insert more lines between
+two lines of code than the difference between their line numbers.
+
+Integer Arithmetic
+
+The initial CLOGO world limits the user to intager arithmetic. The rationale behind
+this is to avoid the complewity of decimal fractions. This is clearly a simplification whose
+value depends on the background of the students. .
+
+Criticism: @ven for elementary school children, this simplification may cause
+confusion, Most beginners are troubled with
+
+i
+
+===
+
+2
+
+Proponents of fixed point arithmetic might reply thal this is no,worse than
+|
+
+--- = 999999
+|
+
+Differences between LOD and LISP Section 2.1
+=== scan page 8 ===
+LISP LOGO MEMO Page 4 June 27, 1974
+
+However, a decimal printer can be clover in performing roundoff,
+
+Other alternatives are to limit arithmetic to rational numbers, or fo use the
+following LISP convention: Numbers are fixed point unless ending in a decimal
+fraction, Operations only return fied point if both operands are fixed point.
+
+Another virtue of LISP is that fixed point numbers can be infinitely large.
+Arbitrary limitations due to the finite size of the computer's word do nolexist to confuse
+the beginner.
+
+Canditionals
+LOGO allows the following type of branching:
+
+> TEST «predicate?
+>20 JFTRUE....
+>30 JFFALSE....
+
+TEST sets a flag which subsequent [FTRUE's and [FFALSE's access. This avoids the
+necessity of the entire condilional appearing on a single line of the procedure. The
+student has explicit names in the form of line numbers for each branch.
+
+Criticism: This prevents nesting of conditionals, A second conditional wipes out
+the results of the first. Im LLOGO, the flag set by TEST is simply a LISP
+wariable. Since it is global, TEST’s in sub-procedures can affect IFTRULE's in
+the super-procedure. This introduces a non-local nature to control structure.
+
+LOGO's lack of canned loops such as DX) and MAPCAR can be crilicized as
+encouraging bad programming practice, such as excessive use of GO. This obscures the
+logical structure of programs, Also, it may be significantly confusing to (he beginner, and
+the source of many bugs. A child might understand quite well a control structure concept
+like “do [his part of the program three times", or “do this part of the program for each
+element of the list", but may be unable to open-code that control structure in terms of
+jumps and condilionals. LOGO programs can't be "pretty printed” to reveal their logical
+structure as can programs written im LISP or a block structured language.
+
+9.9 Natoralness
+Mnemonic Names
+
+An obvious virtue of any computer language is fo use procedure names whose
+English meaning suggests their purpose, Consequently, LISP’s primitives CAR and COR
+are renamed FIRST and AUT FIRST.
+
+Note: Everyone remembers how un-mnemoni¢ CAR and CDR are. However,
+most LISP primitives are named after their English counterparts.
+
+CLOGO syntax allows {he use of certain “noise words", words which appear in the
+uger's code, bul have no effect beyond making the code read more like English sentences.
+For example, in the following lines of LOGO code, the AND, OR, THEN, and TO are
+permitted but serve mo computational purpose. They do nol designale procedures, as is
+the usual case with words not baginning with a colon,
+
+Differences between LOD and LISP Section 22
+=== scan page 9 ===
+LISF LOGO MEMO Page 5 June 27, 1574
+
+tROTH «predicate [> AND <predicate >
+TEITHER <predicate [> OR “predicate >
+IF <predicate I> THEN ...
+
+However, as the student gains more insight into LOGO, noise words become a
+burden. They complicate the task of the parser, preventing the student from feeling that
+he really understands the language. Most of the noise words have been eliminated in
+both PDPLL LOGO and LISP LOGO. [LLOGO will tolerate THEN in condilionals, and TO in
+transfers, however, because they are so commonly used] ‘
+
+Matching English vocabulary to computer functions can be difficult. English words
+rarely have a single meaning, Following are some examples where CLOGO may have made
+the wrong choice,
+
+1. CLOGO uses [5 instead of EQUAL for its equality predicate. The rationale is thal [5
+will be more familiar to a non-mathematical beginner. However, tha omnipresent nature
+of this English verb results in such LOGO code as:
+
+‘TEST [8 :THIS.MUMBER GREATERP :THAT.NUMBER
+thus, it might be better for LOGO to use EOL AL
+
+2, Another example where LOGO may have chosen the wrong word is in defining
+procedures. This is done via:
+
+?TO PROCEDURE.NAME :-INPUTI :INPUT2. ..
+
+The English word "lo" can imply emeculion. For example, “he is to run his program", A
+better choice would be “define”.
+
+Parsing
+
+LISP avoids the necessily of parsing through the use of parentheses. This might
+be considered well worth emulating in LOGO for its explanatory simplicity. However,
+simplicity must be contrasted with naturalness, A beginner is used to using English
+where verbs and modifiers are conmacted by grammar, context and meaning rather than
+explicit parenthesizing. This naturalness can be preserved for procedures thal take a
+fixed number of inputs. This allows such lines of code to be undersiood by anyone
+without any special programming knowledge.
+
+‘FORWARD 100 RIGHT
+
+Thus, a beginner can express himself with no extra burden of parenthesizing when his
+programs are still very simple.
+
+Parsing can be used to permit infix notation. Again it is simpler ta demand thal all
+functional calls be in prefix notation. However, a beginner is far more familar with
+FOR ARD :SIDE+t0 than with (FORFARD (SUM SIDE 10).
+
+Eventually, as one’s code becomes more complex, parentheses become a
+
+simplifying tool. Gne does not have to guess how the parser will work, LLOGO allows
+this. lf desired, parentheses are permilted and interpreted in the standard way.
+
+Differences between LOG] and LISP Section 22
+=== scan page 10 ===
+LISP L0G0 MEMO Page 6 June 27, 1574
+
+Criticism: LOGO complicates its parsing algorithm in several ways, making it
+difficult to explain fo a student. For axample, the language does nol insist that
+all primitives fake a fixed number of inputs. In some cases such as the title
+lines of definitions, this is reasonable. On the other hand, it is somewhat
+confusing to limit such primitives as SUM to only 2 inputs if mot parenthesized
+but any number of inputs if parenthesized. Equally bed is the fact that
+primitives like LILOGO’s PRINTOUT for printing definitions do not evaluate
+their inputs. If would be more consistant for
+
+'PRINTOUT “PROGRAM”
+
+bo be required.
+
+2.5 Disparity
+
+Program Versus Data
+
+Both programs and data are information structures. The difference between the
+two is solely a matter of use. LISP preserves this elegant view by allowing programs to
+be passed as inpul and, indeed, to even redefine themselves. This power, for all ifs
+simplicity, can confuse the beginner, For the novice, the difference between defining and
+running a procedure is unclear. LOGO provides clarification by forcing a complete
+distinction between the processes of defining and of evaluation,
+
+Criticism: LOGO violates this idea. A program can be executed inside a
+definition if not preceded by a line number, This 6 a mistake, The typical case
+is for the user to have intended to type the line number. In its wistful desire
+for more compulational power, LOGO hat forgotten its epistemological
+foundations.
+
+Ho nnony ins
+
+LISP has the ability for a word to be fhe mame of both a procedure and a
+Variable, The position of the word in a list then determines how it ig used, Homonyms,
+however, cam be confusing. How should a word which is both a procedure and a variable
+be treated when it is the first element in a list? The choice is arbitrary.
+
+LOGO prevents guch homonyms. Words evaluate at variables only when preceded
+by 7",
+
+-.» EX .. causes % to evaluate as a procedure call.
+2k... returns the value of the variable %.
+
+thus, LOGO and LISP share the power of allowing any string of letters to be either a
+procedure or a variable name. But LOGO insists on an unambiguous “local” distinction,
+independent of position, between these two uses.
+
+Another example of the clever ways LISP fakes advantage of homonyms is WIE.
+LISP uses this word to name both the empty list and the logical truth value FALSE. This
+can result in more economical procedures. The convenience, however, has no conceptual
+basis. Hence, it can confuse the user who does mot yel understand either list
+manipulation or logical analysis well. This is similar to the situation in APL, where the
+
+Tifferences between LOGO and LISP Section 2.3
+=== scan page 11 ===
+LISP LOGO MEMO Page 7 June 27, 1374
+
+logical constants are the integers 0 and 1, and condifionals are accomplished by numerical
+manipulation, |f can lead fo obscuring the purpose of a given piece of code,
+
+Ling oriented Input
+
+LISP evaluates an expression when parentheses balance. Thus it cannot cateh
+errors caused by typing [oo many righ! parentheses. LOGO waits for a carriage return.
+Hence if is capable of recognizing this problem. Furthermore, a user cam write several
+calls on a line. Execution is delayed until a carriage return is typed. This has the virtue
+of separating the tasks of forming grammatical expressions from executing programs.
+
+Differences between LOGO and LISP Section 23
+=== scan page 12 ===
+LISP LOGO MEMO Page B June 27, 1374
+
+Section §. Overview of the Implementation
+
+LISP LOGO is designed so that the user need never know thal he is communicating
+with other than a standard LOGO. However, if desired, he can insert parenthasized LISP
+code anywhere in his LOGO program.
+
+LISP LOGO is basically a compiler, It converts LOGO input to LISP programs, The
+result is that running most procedures takes less time since the code need not be
+repeated interned and parsed.
+
+The following pages provide an overview of the major parts of the system,
+These are its reader, parser, evaluator, printer, and error handler, More detailed
+explanations of thease will follow in later sections of this mamo. For implementation
+details, LISP LOGO is available in well-commented interpretive code,
+
+Code for the LOGO display turtle is discussed in Section 15, and code for the
+music box in Section 16. The “LOGO project” is concerned with more than the
+development of a computer language. Of major interest is the design of various
+compuler-driven devices which provide a rich problem solving environment for the
+student. However, special purpose primitives for driving these devices are independent of
+LOGO versus LISP issues and must be added individually. A LISP-basad implementation
+does have one special virtue, For those devices like the music box which are driven by
+ASC characters, the primitives can be written in LISP or LOGO and then compiled. It is
+net necessary to create code at the machine level.
+
+3.1 Reader
+
+The LOGO reader is basically a line-oriented LISP reader, It returns a list of
+atoms read between carriage returns. The fundamental tasks of interning atoms and
+bullding list structure are handled by LISP. Conflicts in character syntax and identifiers
+belween LISP and LOGO present the only subtleties.
+
+Certain characters such as the infix operators 4, -, 4, and / do not require spaces
+to be set off a5 atoms. This is equivalent to being a “single character object” in LISP.
+(her characters such a6 °" in dotted pairs are special in LISP but mot in LOGO. The
+sOlution to these conflicts is found in using separate “readtable™s for LOGO and LISP.
+
+Conflicts in names also occur, The LOGO user has access to all the ordinary LISP
+procedures, but must be prevented from accessing LISP procedures which are internal to
+LLOGO. This is accomplished by using two “obarrays". When the user types in an
+identifier with the same name as an internal procedure, he accesses a different atom,
+
+MACLISP allows any number of separate “readtable"s and “obarray"s. This
+permits multiple worlds = PLANNER, CONNIVER, LISP, LOGO = to co-exist wilh na conflict,
+Switching worlds is computationally fast. AM that is necessary is to rebind the
+READTABLE and OBARRAY variables to the desired world. On the other hand, the
+naive user is protected completely from other environments and need not even know of
+their existance.
+
+Overview of the Implementation Section 3.1
+=== scan page 13 ===
+LISP LOGO MEMO Page 3 June 27, 1374
+
+3.9 Parser
+
+The parser converts a LOGO line to list-structured form. This requires that
+information on the sumber of inputs used by a procedure be available. Inserting
+Parentheses is a trivial computation for procedures with a fixed number of inputs.
+However, complewities are introduced into the LOGO parser by:
+
+1. Having infix as well as prefiv operators.
+
+2. Changing the number of inputs depending upon whether the user embedded the form
+in parentheses (SUM, SENTENCE, ...).
+
+_ @. Primitives like TQ) that do not parse their input.
+
+4, KHomonyms: Functions which have the same name in LSP and LOGO, but have different
+meanings. These are handled by having the parser detect the names of LOGO primitives
+which conflict with LISP, and convert them to functions with different names that do not
+conflict.
+
+This makes the parser the most complicated part of the simulalion.
+
+Parsing information is stored on the property list of » function. The major sub-
+procedures are concerned with prefix, infiz, and user-lyped parentheses. Special
+primitives are parsed by sioring a procedure as lhe parsing property.
+
+3.3 Evaluation
+
+The basic LOGO functions that do the wer's computation - Le. the arithmetic, list,
+and logical primitives - are the simplest part of the simulation. These functions all occur
+in LISP, usually in a somewhal more general form. Hence, thes part of the implementation
+is little more than renaming. For many primitives, LLOGO provides more argument type
+checking and informative error messages than are supplied by their LISP counterparts.
+
+Parsed code is executed directly by fhe LISP evaluator, Indeed, a user-defined
+program in parsed form is simply a LISP PROG. The line sombers are tags in the PROG.
+
+3.4 Printing
+
+LOGO procedures could be represented as lists of unparsed lines internally. In
+this case, a line must be interned and parsed each time it is run. However, the problems
+of printing the definition and editing a function are simplified. The internal format is
+identical to the format in which the user originally typed the expression.
+
+An alternative solution is to represent LOGO programs in parsed, wo. LISP form A
+LOGO program internally is a LISP program, This maximizes run time speed and simplifies
+building program wrderstanders. It has the disadvantage of complicating the parser and
+the printer.
+
+1. The parser must handle functions that have mot yel been defined. This can be
+accomplished, however, by reverting fo the solution of parsing af run time those lines
+which contain unknown functions. This run-time parsing can alter the program's definition
+as well so if only need occur ones,
+
+(Oheerview of the Implementation Section 3.4
+=== scan page 14 ===
+LISP LOGO MEMO Page 18 June 27, 1574
+
+2. Printing definitions and editing lings requires an inverse parser or “unparser” which
+
+returne the LISP-ified code to ils original form This is possible providing there is no
+
+information lost in parsing. Such is the case if the parser makes special provision for
+
+distinguishing user-lyped parentheses from parser-generated parentheses. One way to
+
+rial this is by beginning user-lists with a do-nothing function USER-PAREN
+ined as:
+
+(DEFUN USER-PAREWN (X) X)
+
+a Editing tithe lines is made more complex, The editor must reparse the lines of super-
+procedures im which the ediled function appears. This can be accomplished by
+maintaining a super-procedure tree, although LLOGO? does not currently do this.
+
+These complications can be avoided by storing both representations of the
+procedure. This is an excellant example of a space versus complexity trade-off. LISP
+LOGO currently does not store both representations.
+
+$.5 Error Analysis
+
+Since LOGO is a language which is designed to be used by beginning
+Programmers, it is important to provide informative orror mossages. Consequenily, all
+LOGO primitives do extensive type checking on their inputs. LLOGO will try to print out
+the form which caused the error, and give the line number if the error occurred inside a
+procedure. After a simple mistyping error which can be detacted by the parser, the user
+is given an immediate opportunity to correct the line. For run time errors, he is given
+the option of causing breakpoints, Facilities for exploring the stack from inside a
+breakpoint loop are available. Since LOGO procedures are represented internally as LISP
+procedures, ihe standard LISP TRACE package can be used.
+
+These facilities are implemented using LISP error interrupt handlers and
+
+EV ALFRAME. |f the sophisticated user wishes to provide his own error handlers, he can
+acoess the LISP facilities directly.
+
+Overview of the Implementation Secthon 35
+=== scan page 15 ===
+LISP LOG] MEMO Page 11 Jone 27, 1574
+
+Section 4. Performance
+
+4.1 Size
+LISP 26 Glocks (1024 36 bit words)
+LLOGO (compiled) 7 Binary program
+5 List structure
+2 Numbers, Atomic symbals, ate.
+Total space 40
+
+These figures do not include space for user programs, or loading the display
+turtle, music, or GERMLAND packeges. Between 5 and LOK beyond the amount of storage
+mentioned above would provide a reasonable amount of workspace for user programs
+and data; this would correspond roughly to programs of perhaps a few pages. In the
+current MACLISP, storage expands as needed. LLOGO lakes advantage of this feature -- If
+programs grow beyond a certain size the user is asked whether he wishes the allocation
+fo be increased. Storage is expanded aulomalically on loading special packages such as
+the display turtle. Of the 14 blocks which comprise the LLOGO system, all bul 3 are pure,
+and can be shared among users.
+
+4.2 Computation Time
+
+For most processing, LLOGOD enjoys a speed-up over CLOGO and 1ILOGO due to
+the fact that parsing and interning occur only once at define time. Further, LLOGO makes
+it possible to compile LOGO source programs into machine code using the MACLISP
+compiler for increased efficiency [See Section 91 Workspaces can be stored on the
+disk in internal LISP format. [See Section 10.1] Consequenily, re-reading files has no
+overhead. CLOGO has an advantage, however, in manipulating words, as its internal data
+structure is string rather than list oriented,
+
+43 Use
+
+Almost all of {he primitives of CLOGO and 1LLOGO, {including the music box,
+display turtle for the POP-6 and GT40) are implemented. Hence, LISP LOGO is capable of
+reading, parsing and running most files saved under CLOGO or LILOGO [perhaps
+
+necessitating minor modification}
+
+I can also be used real-time by an individual familiar only with LOGO: ino
+knowledge of LISP is required, On the other hand, all of LISP’s facilities are available.
+Programs can be written in LISP, or in machine language using LAP, and can be made
+callable from LOGO. The special packages for the display turtle, music box and
+GERMLAND can also be used from an ordinary LISP, Some other facilities of LLOGO, such
+as the breakpoint and stack manipulating functions, are also available for use in LISP.
+LISP users can take advantage of these facilities withoul interaction with LOGO simply by
+loading the appropriate files of LISP functions.
+
+Perhoomonce Section 4.3
+=== scan page 16 ===
+LISP LOGO MEMO Page 12 June 27, 1374
+
+4.4 Availability
+
+The implementation is written completely in interpretive code, ft runs compiled
+under the MACLISP currently in use af the Artificial Intelligence Laboratory. LLOGO has
+also bean implemented on standard DEC POP-10"s under the TENSO and TENEX systems,
+and on MULTICS. These implementations are discussed in Saction 13 and Section 1? of
+this memo.
+
+Section 4.4
+=== scan page 17 ===
+LISF LOGO MEMO Page 13 June 27, 1974
+
+Section 5, Getting Started
+
+In the following sections, we will go into more detail concerning the
+implementation of LISP LOGO, and provide some praciical information for using it. We will
+not attempt fo provide the reader with an introduction fo the LOGO language; several
+excellent sources for this already exist, such as the LOGO Primer, and the | LLOGO Leer's
+manual [LOGO memo 7] We will assume that the reader has read these, or is already
+familiar with CLOGO or 11LOG0, the other implementations of the LOGO language available
+al the Al lab. Instead, we will concentrate on pointing oul differences between LLOGO and
+other implementations of LOGO, and describing features unique to our implementation. It is
+hot macessary to know LISP to understand most of what follows, although some
+knowledge of LISP would be helpful in gaining insight into the implementation. For more
+information on LISP, see the MACLISP Reference Manual by Dave Moon, and the Interim
+LISP User's Guide [Al memo 190)
+
+Notational conventions: Throughout this memo, USER TYPEIN and LOCO CODE
+till appear in a font like this, SYSTEM TYPEQUT will appear in a font like this, Control
+characters are denoted by A followed by the character. You type a control character by
+holding down the contro! key while you are typing the character, 2 means escape or
+altmade, nol dollar-sign, excep! where otherwise noted. Angle brackets < > mean
+something of the appropriate type suggested within the brackets; for instance, if your
+user name is HENRY, “user name> means your user mame, e.g. HENRY, Except for control
+characters, which usually take immediate effect, and except where otherwise noted, and
+all lines of fypein with a carriage return.
+
+The following procedure is intended to help very naive users of ITS to get logged
+in, and to obtain LISP LOG. See Al memo 215, How To Gat On the System, for more
+details.
+
+l. Find a free coneola, A console which ia free shows,
+AL ITS <version> CONSOLE <nomber> FREE, <time>,
+2. A console which is free understands only one command. ft is Az. The computer will
+respond with the following messages:
+<nomber> USERS.
+<news>
+3. When it stops printing, login as follows: type
+:LOGIN “user name>
+H there are any messages for you,
+
+Betting Started Section 5
+=== scan page 18 ===
+LISP LOGO MEMO Page 14 Jone 27, 1574
+
+will be printed, You can type a space lo receive it or any other character to postpone it,
+A # will be typed at the end.
+
+4. Now you have completed logging in to the Al system LLOGO is a subsystem of Al ITS.
+To get LLOGO started,
+
+5. Decide which version of LISP LOGO you want. Choose from:
+LLOGO - Standard version of LISP LOGO. Vocabulary is compatible with CLOGO.
+
+LILOGO - A version which uses a vocabulary which is compatible with POP]! LOGO, See
+Section Li for details.
+
+NLLOGO -The very latest version of LISP LOGO. This is experimental, so we make no
+
+promises.
+When you decide which you want, type
+name of program>
+
+for example, -LLOGO .
+
+6 Then LLOGO will print out some Initial messages, including its version number and
+LISP’s and will ask you some questions.
+
+DO YOU WANT TO USE THE DISPLAY TUATLE?
+
+if you want to define and edit a procedure which contains turtle display commands, you
+should answer PES to this question. [tis not meacessary thal you have the 340 display
+scope, or the GT40 display, to do just defining and editing. You can even run the
+procedure if you do mol mind not being able lo see what the procedure does. See Section
+15 for more information.
+
+GERMLAND?
+
+H you want to play with GERMLAND, the display turtle for character displays such as
+DATAPOINT terminals, answer FES, This has a prompter which will run some
+demonstrations and provide help if you need it. Again, if you intend to define or edit
+procedures designed to run in GERMLAND, you must answer FES. See Section 14.
+
+MUSIC BOK?
+
+Wh you want to use LOGO music box primilives, answer FES. This will inquire further, as to
+which music box, etc. See Section 16. In case you have answered FES to any of these
+questions you have to wait for a while, because it takes some time fo load in the files. If
+you want to interrupt loading in type AX , not AG. Woyou have a file named LLOGO
+CONIT) on your directory or there is a file named “ager name> .LLOGO. on the (INIT)
+directory, LLOGO will read it as an initialization file, execuling LOGO code contained
+therein, When all this is finished, LLOGO will indscate its readiness with
+
+Getting Storted Section 5
+=== scan page 19 ===
+LISP LOGO MEMO Page 15 June 27, 1574
+
+LLOGO LISTENING
+t
+
+7. Uf you find yourself in the unfortunate situation of meeting a bug in LISP LOGO, you
+may report it by using the function BIG. The input to BL should be a message
+describing the difficulty, enclosed in dollar signs. For avample,
+
+TBUG §
+
+THE TURTLE ESCAPED FROM THE
+
+DISPLAY SCREEN...
+
+i
+
+iTHANK YOU.
+
+?
+8. You can logout when you are finished by typing COODRBYE te LOGO. The terminal
+should then say,
+
+AND A PLEASANT DAY TO YOU!
+AL TTS <“werabon> OOUNSOLE <aumber> FREE “time
+
+9. Have fun!
+=== scan page 20 ===
+LISP LOGO MEMO Page 16 June 27, 1574
+
+Section 6. Parsing LOCO
+
+This section will digeuss a few of the more complew issues in parsing LOGO into
+LISP, and discuss how they are handled by LLOGO. LISP is trivial fo parse, as its syntax
+is totally unambiguous, The application of a function to ils inputs always happens in
+prefix notalion, and the precise syntactic extent of a form is always clearly delineated by
+parentheses. LOGO syntax affords the beginning programmer some conveniences Over
+LISP syntax, while relaining much of the expressive power of LISP, Parentheses can be
+omitted surrounding every form, and the more customary infix notation for arithmetic
+expressions can be arbitrarily intermingled with prefix nolalion. These conveniences are
+bought at the cost of complicating the parser, and introducing some cases where
+ambiguity results ragerding the user's intent for some of the language's syntactic
+constructs.
+
+6.1 infix Expressions
+
+LLOGO allows infix notation to be used as well as prefix functions in arithmetic
+expressions. Most LOGO arithmetic functions exists in both prefix and infix flavors, and
+the user is free to use whichever he desires. .
+
+?PRINT 344A0SUM FIRST :X DIFFERENCE :Crl7 2
+is the same as
+tPRINT (TIMES 3 4(E XPT 2A (CF PRST sXMTIMES © 17 +2))
+
+LLOGO observes the weual precedence and associativity of arithmetic operators,
+
+Note that a complication of the LOGO syntax is thal all functions, nol just infix
+operators, are required to have precedence lavels. ls
+
+*FIRST cA & 17
+the same as
+
+‘TIMES (FIRST :A4) 17) or OFIRST (TIMES :A I?) P
+The situation is further complicated by the user's probable expectation that funchons
+which manipulate logical values have lower precedence than comparison operators like <,
+> and = Sa,
+
+TTEST :NLUMBER @ :PI
+
+is taken to mean,
+
+PEST (LESSP :NUMBER :PI) and not (LESSP (TEST :NUMBER) :PI
+
+Parsing LOGO Section 6.1
+=== scan page 21 ===
+LISP LOGO MEMO Page I? June 27, 1374
+
+CLOGO gives all arithmetic operators the same precedence on the grounds that
+precedence would be difficult to explain clearly to children. However, this has the
+drawback of deviating from the customary mathematical convertion, Since the motivation
+for introducing infix nolation into LOGO syntax is so Ehal arithmetic expressions can be
+written in the infiz form in common use, LLOGO has been designed to obey the usual
+precedence conventions.
+
+LLOGO tries to please everybody. If you feel that the precedence scheme which
+has been implemented does nol agree with your intuilion, you are free to redefine the
+precedence levels as you wish. LLOGO also provides the capability of defining new infix
+operators.
+
+The initial default precedences are identical to those of LILOGO and are os
+follows:
+
+7OO: A [exponentiation]
+
+600: + - [prefix]
+
+500: % 2 \
+
+400: + - [infix]
+
+200: (default precedence for system and user functions)
+700: ae |
+
+100: FF MOT BOTH EITHER AND OR TEST
+
+50: _ [MAKE]
+
+Initially, operators of levels 50 and 700 are right associative, and the rest are bet!
+associative, which is the default. Logical functions should have precedence lower than
+comparison operators, so if the user defines a logical function he should sel the
+
+precedence himself, otherwise it will receive the defaull precedence. The user can
+change things by using the following functions:
+
+PRECEDENCE <op>
+
+Returns the precedence level of <op>.
+PRECEDENCE <op> <level>
+
+Sets <op>"’s precedence level to the specified <level>, which may either be a
+number, or another operator, which means thal top> is to be given the same precedence
+as that operator,
+PRECEDENCE NIL <level>
+
+Sets the default precedence for functions to <level>. All functions which are not
+
+in the abowe list of inflz functions, or have not been assigned a precedence by the user,
+receive the defaull precedence.
+ASSOCIATE <number> <which-way>
+
+Declares that all functions of precedence level «number? will assaciala <which-
+way>, which is either "LEFT or ‘RIGHT.
+
+INFIX <op> <leval>
+
+Parsing LOGO Section 6.1
+=== scan page 22 ===
+LISP LOGO MEMO Page 18 June 27, 1974
+
+Defines <op> fo be an infix operator of precedence <leval>. Specifying a
+precedence is optional.
+
+NOPRECEDENCE
+
+Forces all infix operators to the same precedence level [this will be higher than
+the default precedence] Makes LISP LOGO look like CLOGO [well, almost...]
+
+iENFIX
+
+This variable contains a list of all current infix operators, Look, but don't touch.
+Lise SNFIX to add new infix operators.
+
+6.2 Minus Sign
+There is some ambiguity in the handling of minus sign. For example, consider
+
+NEENTENCE 3 -:4)
+
+if the minus sign is interpreted as an infix differance operator, this will result in a list of
+one element. If the minus sign is interpreted as prefix negation, it will result in a list of
+two elements. CLOGO uses the spaces in the line to disambiguate this case. If there is a
+space between the minus sign and the ;4, it is interpreted as infix, Otherwise, it is
+interpreted as prefix, In TILOGO, spaces are nol semantically significant except to delimit
+words, 50 this is interpreted as (SENTENCE (DIFFERENCE 3 :A)) regardless of the
+Occurrence of spaces. LLOGO treats minus sign as does LILOGO. One would obtain the
+result of the other interpretation by using
+
+WSENTENCE 3 (=:4))
+
+The preceding discussion applies only to the parsing of infix expressions. So, /-4/
+is @ list of one element, a negative number, but f= 4/ is a list of two elements, minus sign
+and 4,
+
+6.3 Homonyms
+
+LLOGO makes all the functions of LISF directly accessible to the LOGO user, in
+exactly the same way as LOGO primitives. This runs inte difficulty when a LISP function
+and @ LOGO function have the same name but differen! meanings. These are currently
+handled by the parser, which converts them into innocuous atoms which do not conflict
+with LISP, and are reconverted upon unparsing. Currently the following functions are
+Ferre riny res 2
+
+PRINT, RANDOM, LAST, EDIT, SAVE [in MULTICS only]
+
+When the user types in one of these, it is converted by the parser to an internal
+representation consisting of a different function name [LOGO-PRINT, LOGO-LAST
+LOGO-EDIT LOGO-RANDOM or LOCO-SAVE, a: appropriate] When the user requests
+that the line be printed out or edited the unparser converts it back fo the way it was
+originally typed in, In the CLOGO-compatible version of LLOGO, when CAREFUL is set to
+non-NIL the following primitives which conflict with CLOGO are also changed by the
+
+Parsing LOGO Section 6.3
+=== scan page 23 ===
+LISP LOGO MEMO Page 19 June 27, 1574
+parser: LIST is changed to PRINTOUT, DISPLAY to STARTDISPLAY, GET and READ
+to READFILE, and DO to RUN. Warning messages are also printed in these cases.
+
+There is one pitfall in the current method of handling homonyms: sometimes, as
+with passing functional arguments, the parser does not get a chance to do its thing, so
+{he user may find an unexpected function called; APPLY "PRIAT ... . calls LISP*s
+PRINT function, not LOGC's,
+
+6.4 Abbreviations
+
+Abbreviations are accomplished in LLOGO by putting the name of the function
+which is abbreviated on the property list of the abbreviation as an EXPR or FEXPR
+property, as appropriate, Abbreviations are expanded into their full form on parsing, and
+are left that way. The user has the capability of creating his own abbreviations by
+
+TARBREVIATE naw nome* <old name>
+ond erasing them by
+TERASE ABBREVIATION <name>
+
+ABBREVIATE evaluates its inputs, but ERASE doesn't. A complete listing of
+abbreviations can be obtained by doing
+
+TPRINTOUT ABBREVIATIONS
+
+Parsing LOGO Section 6.4
+=== scan page 24 ===
+LISP LOGO MEMO Page 26 June 27, 1374
+
+Section 7. Defining and Editing Functions
+
+In LOGO, when the weer defines a procedure using TO, or EDITs a procedure he
+has previously defined, LOGO enters an “edit mode", where lines beginning with a number
+are inserted into the procedure under modification. LOGO prompts with ">" rather than "?"
+to indi¢ate this. The intent of having a separate mode for editing procedures is to stress
+the distinction between defining procedures and executing them. This distinction is mot
+strictly maintained: if the line does nol begin with a number, the commands are executed
+at they would be ordinarily, with a few exceptions [the user is prevented from doing
+another TO or EDIT for instance] Occasionally, this leads to errors, for instance if the
+user forgot to type the line number at the beginning of a line intended for insertion.
+
+The default state of LLOGO is to retain the separation of edit mode from ordinary
+mode at in LILOGO and CLOGO. The slightly more sophisticated user, however, might find
+himself in an unnecessary loop of continually typing ED TMs and END's while working on
+the same procedure. Since the lines typed by the weer for insertion into a procedure are
+inserted immediately when the user finishes typing the line, END does not cause
+anything to happen other than the termination of edit mode. The system always
+remembers the name of the last function mentioned by TO, EDIT, PRINTOUT, ete. as a
+default for these functions, so when working on a single function, FOIT serves only to
+enter edit mode. The user has an option of turning off the separate edit mode by setting
+the variable :-EDITMODE to NIL. This will cause lines beginning with a number to be
+inserted into the defaull procedure at any time. In this mode, it is never necessary to use
+END, and EDIT will only change the name of the default procedure if given an input.
+The promplter will not be changed.
+
+In LLOGO, it is not necessary to be in edit mode to use EDITLINE or EDITTITLE
+on a@ line of the default procedure, and the editing control characters are available even
+when not in edit mode.
+
+7.1 Control Character Editing
+
+LLOGO has a control-character line editor similar to those in CLOGO and 11LO0G0,
+This makes it particularly convenient to correct minor typing errors, by providing a
+means of recycling portions of the line typed previously, instead of requiring retyping of
+the entire line. The editor keeps track of two lines: an old line which you are editing, and
+a new line, which LLOGO is fo use as the next line of input. The old line is always the last
+line you typed al LLOGO, except immediately after a parsing error, when the offending
+line will be typed out al you, and it may be edited, You can also set the old line yoursell
+fo be @ line in the current default procedure by doing EDITLINE “line nomber>, or the
+tithe of a procedure by calling EDITTITLE. Everything you type after the prompter, or
+cause to appear using the control characters, is included in the new line, until you type
+carriage return, which terminates editing for thal ling, You may use paris of the old line
+in constructing the mew line by using the following editor commands:
+
+AE = Get the next word from the front of the old line, and pul it om the end of the new
+lire.
+
+AR = Put the rest of the old line at the end of the new line, This is like doing AE's until
+there is nothing left in the old line.
+
+Delining and Editing Functions Section 7.1
+=== scan page 25 ===
+LISP LOG) MEMO Page 21 June 27, 1974
+
+“5 - Delete a word from the front of the old line,
+
+AP = Delete a word from the end of the new line. Like rubout, except rubs out a word
+instead of a character,
+
+LLOGO uses different characters than LILOGO and CLOGO do because LISP uses
+most of the control characters for interrupts and i/o.
+
+¥.2 Printing Function Definitions
+
+The function PRINTOUT can be used fo look al definitions of user procedures. In
+addition, it has other options for examining the state of your LLOGO. PRINTOUT doesn't
+evaluate its inpuls.
+
+PRINTOUT <procedure-name* / Abbreviation PO}
+
+Will print out the definition of the specitied procedure. Hf the mame is omitted, it
+will assume the last funchon thal was defined, edited, or printed.
+
+PRINTOUT LINE <namber> [POL]
+
+Prints out only the specified ling in the default procedure,
+PRINTOUT TITLE “procedura> {POT
+
+Prints the just the tithe of the procedure given, Uf the input is omitted, prints the
+title of the current default procedure. This is useful if you forget which procedure is the
+default.
+PRINTOUT TITLES {POTS}
+
+Prints the titles of all current user procedures. ignores buried procedures [see
+Section 10.1}
+
+PRINTOUT PROCEDURES /POPR}
+
+Prints out the definitions of all currently defined user procedures. Will not print
+the definitions of procedures thal are buried [see Section 10.1]
+
+PRINTOUT NAMES [PON
+
+Prints the names and values of all user variables,
+PRINTOUT ALL [POA]
+
+Does PRINTOUT PROCEDURES and PRINTOUT NAMES.
+PRINTOUT SNAPS
+
+Prints a list of saved display turtle scenes. See Section 15.11.
+
+PRINTOUT FILE, PRINTOUT [INDEX
+
+Delining and Editing Functions Section 72
+=== scan page 26 ===
+LISP LOGO MEMO Page 2d June d7, 1374
+
+See Section 102.
+PRIATOUT ABRBRREVIATIONS
+
+Prints a list of all currant abbreviations, and the names of the procedures which
+each abbreviales. ;
+
+PRINTOUT PRIMITIVES
+Prints a complete list of all LLOGO primilives.
+Another useful command is LINEPRINT, which causes a listing, similar to the
+
+oulpul of PRINTOUT ALL, to appear on the line printer, It takes an optional input, a
+word to be wsed as a title fo name the listing generated.
+
+7.3 Erasing
+
+The command ERASE will remove unwanted portions of your LOGO. The inpuls to
+ERASE are not evaluated. The options available are:
+
+ERASE <procedure, voriahle or snap name>
+
+Cause the definition of the specified object to vanish. Note: When you dafine a
+function using TO, it checks to see if there already ewists a procedure of [he same name,
+and if so, inquires whether you want the old definition ERASEd, This is to prevent you
+from accidentally overwriting definitions of functions.
+ERASE PRIMITIVE <primitive name>
+
+The LLOGO primitive given as inpul will be erated. You might use this, for
+ewvamople, if you wanted fo use a mame used by LOGO for one of your own functions, I
+you defing a name using Ti) which conflicts with a LOGO primitive, if will inquire if you
+want the definition of the primitive to be erased.
+ERASE LINE <number> /ERL!
+
+Erases lina «number? of the default procedure.
+ERASE NAMES /ERN/
+
+Unbinds all user variables.
+ERASE PROCEDURES [ERP
+
+Erases all interpretive user functions. Does not affect compiled or buried
+procedures.
+
+ERASE COMPILED
+Erases all compiled user functions.
+
+ERASE ALL {ERA}
+
+Defining and Editing Functions Section 7.3
+=== scan page 27 ===
+LISP LOGO MEMO Page 23 June 27, 1974
+
+Like doing ERASE PROCEDURES, ERASE COMPILED and ERASE NIMES.
+ERASE ABBREVIATION <abbreviation=
+
+Erases the abbreviation given as input. Goes nol affect the procedure thal it
+abbreviates.
+
+ERASE FILE <file spec (ERF |
+
+See Section 10.2.
+ERASE TRACE <fanction> {ERTR/
+
+Removes trace from <function>. See Section 8.6,
+ERASE BURY <functions> [ERB]
+
+The functions will mo longer be buried. For a discussion on buried procedures, see
+Section 10.1. .
+
+Defining and Editing Functions Section 7.3
+=== scan page 28 ===
+LISP LOGO MEMO Page 24 June 27, 1574
+
+Section & Error Handling and Debugging
+
+The philosophy of the LISP LOGO error handling system is fo try to be as
+forgiving as possible; the system will give you an opportunity to recover from almost any
+type of error [except a bug in LLOGO!)] There are two types of errors which can occur:
+
+8.1 Parsing Errors
+
+lf for some reason, LLOGO cannot parse the line you typed [for example, you may
+have typed mismatched parentheses], this causes a parsing error, When this happens,
+LLOGO will print a message felling you why if was unhappy, retype the offending line af
+you, and type the editor prompt character. You mow have a chance to redeem yoursell
+by correcting the line -- you may use any of the editing contro! characters [see Section
+7.1) When you are satisfied that the line is correct, type carriage return, and LLOGO will
+resume evaluation, using the corrected line in place of the one which was in error,
+
+8.7 Run Time Errors
+
+When a run time error occurs, a message will be printed If the error occurs
+inside « LOGO user defined function, tha message will say something like:
+
+‘ERROR IN LINE <qumber> OF <procedure>
+LINE <number> 15: ....
+ytreason for error>
+
+If the error occured inside a LOGO primitive, the message will look like:
+
+OULD T EVALUATE <bad form=
+sBECAUSE
+jtreason for ecror>
+
+where “bad form? is what LLOGO was trying fo evaluate when the error occurred,
+Usually, this will give you enough information to figure out where the error occurred,
+although «bad form> is sometimes uninformative. Usually, LLOGO will simply return te the
+top level loop when such an error occurs. However, if you SETQ the variable
+:ERRAREAK to something other than AVL, [or MAKE 'ERRAREAK ... ] a run time
+error will cause a LOGO break loop to be entered after the message is printed. Setting
+the variable :-LISPRREAK to mon-AIL will cause a LISP style breakpoint to occur when
+an error happens. [For a detailed discussion of breakpoints, see below, Section §.3.]
+You can resume execution of your program from the point at which the error occurred,
+by CONTIAMUEing with something to be used in place of the piece of data which caused
+the error. If the error was an undefined function, you may CONTINVE with the name of
+a function which has a definition, If the error was an unbound variable, CONTINUE with
+a value for that variable. lf the error was a wrong type of input to a LOGO primitive,
+CONTINUE with some appropriate value for an input to that function, ete. Usually it will
+be obvious from the context what sort of item is required. Computation will be resumed
+from where the error occurred, with the returned item substituted for the one which
+caused the error. [Note: the usual LISP interrupt handler functions expect a list of the
+new item to be returned, while LLOGO'’s expect simply the item) The LISP LOGO run-time
+
+Error Handling and Debugging Section 82
+=== scan page 29 ===
+LISP LOGO MEMO Page 2 June 27, 1974
+
+error handling works by ulilizing the LISP error interrupt facility. If you don't like the
+way LLOGO handles any of the error conditions, you are free to design your awn error
+interrupt handlers, either in LISP or in LOGO,
+
+8.3 Breakpoints
+
+A powerful debugging aid is the ability fo cause breakpoinis. Stopping a program
+in the process of being evaluated allows the user to examine and modify its state, and
+explore {he history of evaluation which led up to the breakpoint, LISP provides excellent
+facilities for doing this, inchuding automatic generation of breakpoints when an error
+occurs. Whenever LISP starts (o evaluate a form, it first pushes the form on a stack; from
+a breakpoint one can examine the stack to determine what forms were in the process of
+being evaluated, and perform evaluations relative to a particular stack frame. LISP LOGO
+attempts to make these features easily available to the user, from either LISP or LOGO.
+Versions of these breakpoint functions are also available which can run in an ordinary
+LISP, withoul the rest of the LOGO environment. The following facilities are available for
+causing breakpoints:
+
+LOGORREAK <“massage* *condition® <return-value? / Abbreviation PAUSE}
+
+The inputs are all optional, and are not evaluated. Unless *oondition= is given and
+evaluates to AIL, DOGORREAK causes the user to enter a loop where LOGO commands
+can be typed and the results printed. This is similar to the top level loop except that 7 is
+printed as a prompler rather than 3 it ia very much like repeatedly evaluating PRINT
+RUN REQUEST. if <message> is present, it will be printad out upon entry to the break
+point, It also prints the form in the current stack frame, which will be the call to
+ELOGORREAE if called explicithy by the user. If the breakpoint happened because of an
+error, the initial stack frame will be the one containing the form which caused the error.
+LOGOBREAK tries wherever possible to print out the current form as LOGO code before .
+it enters a LOGO break point. However, the current version is nal always smart enough
+to distinguish between LISP and LOGO frames on the stack, so you might! occasionally see
+whal looks like infernal LISP garbage there. lf you go up far enough, you are sure to find
+the LOGO code. A smarter version could recognize the LISP frames and ignore them. The
+third input is a default value for LOGORREAK to return if it is CONTINUE [See
+description of CONTINUE, below] Caution: the breakpoint functions described in this
+zection use LISP's CATCH and THROW. Unlabeled THROW s from inside a breakpoint
+loop are highly discouraged.
+
+AA
+
+Hf control=A is typed al any tima, even while a program is running, it will cause an
+interrupt and a LOGO break point will be entered,
+
+LISPBREAK <message? “condition? <return value / Abb, BREAK |
+
+This is like LOGOBREAR, except that the loop is a LISP (PRINT (EVAL (READ)
+loop, This is especially useful when debugging a set of LISP functions designed to run in
+LOGO, To secess your LOGO variables and weer functions from inside a LISP break loop,
+prefix them with a sharp sign ["e"] LISP users mote: you can interact with this break
+loop as with the standard LISP BREAK function, axcept that it is set up to allow use of
+the stack hacking functions described below. If $P is typed, or (CONTINUE) invoked, the
+“return value> will be the value of the call to LISPRREAK.
+
+Error Handling and Debugging Section 8.3
+=== scan page 30 ===
+LISP LOGO MEMO Page 25 June 27, 1374
+
+AH
+
+As in LISP, AW typed at any time will interrupt and cause a LISP breakpoint to be
+entered. .
+
+tERRAREAK
+if this variable is not AL, when a run time error happens, LOGORREAK will be
+called automatically. This gives you a chance to find oul what want wrong, and recover
+
+by CONTINU Ring with a new piece of data to replace the one thal caused the error. It is
+initially set to AFL.
+
+iLISPAREAK
+
+Like -FRREREAK, except that if set to something other than AL, when an error
+happens, LISPRREAK rather than LOCORREAK will be called. Initially set to WPL
+
+The following functions can be called from inside a breakpoint fo examine and manipulate
+the stack:
+
+LIP
+
+Moves the breakpoint up one frame in the stack, printing out the form which was
+about to be evaluated in that frame. This will be the form which called the one which was
+last typed oul by any of the functions mentioned in this section Evaluation mow flakes
+place in the new stack frame, This means that all local and input variables will have the
+Values they did when that form was about to be evaluated. However, side effects such as
+assignment of global variables are not undone. Frames are numbered for the user's
+convenience, from 0 increasing up to top level.
+UP <ramber>
+
+Goes ‘number? frames up the stack. Like doing L'P, <number> times. The
+<number> may be negative, In which case, the breakpoint is moved down the stack rather
+than up.
+UP “anom>
+
+Goes up the stack until a call to the function whose name is <atom=> is found.
+UP <atom> <mumber>
+
+Goes up the stack until the <number2th call to <atom> is found. Searches
+downward for the ¢number?th call to the specified function if “number> is negative.
+
+BOW 6 <atom> <number>
+
+Like LIP, except thal it proceeds down the stack instead of up. Both inputs are
+optional, and default as for L/P, except thal <number> defaults to -1 instead of +1, if
+“number is given it is equivalent to LIP .. {-<nomber?)
+
+PRIATUP “atom? <nomber>
+
+Error Handling and Debugging Section 6.3
+=== scan page 31 ===
+LISP LOGO MEMO Page 27 June a7, 1374
+
+Accepts inpuls as does LP, bul instead of moving the breakpoint up the stack to
+the desired frame, all frames between the current one and the one specified are printed
+out. This function is good for getting a quick view of the stack in the immediate vicinity of
+the breakpoint. The breakpoint remains in the same frame as before, The two inputs are
+optional, and default as for LIP.
+
+PRINTDOOP N catom> “number>
+
+Like PRINTUP, except thal the inputs are interpreted as for DOWN rather than
+es for CP, that is, it prints frames going down the stack.
+
+EXIT “retarn-value>
+
+Causes the current slack frame to return with the value <return-value>. Thal is,
+the computation continues as if the form in the current frame had returned wilh <return-
+velue>. The inpul is optional, and defaulls to NIL.
+
+CONTINUE <return-value> / Abbreviations CO, $P/
+
+Causes the frame of the originally invoked breakpoint to return with the specified
+value. The input is optional. Use CONTINUE to return a new item of data from inside an
+error breakpoint; for instance a new function name to use in place of one which was
+undefined. Mote that in many situations, for example from a user-invoked breakpoint or
+from an error breakpoint which expects an item to be returned as the value of the form
+which caused the error, if you haven't moved the breakpoint around the stack,
+CONTINUE will be identical to EX/T. lf the inpul to CONTIALE is omitted, the defaull
+return value specified by a third input to LISPRREAK or LOGORREAK will be returned
+as the value of the breakpoint. If no such default return value was given, N/E will be
+returned.
+
+Here's an example: '
+
+tM AKE "ERRBREAK T
+‘Assure LOGO break happens!
+twhen an arror occurs!
+{CHANGING A SYSTEM NAME
+T
+
+‘TO SCRE UP :N iDefing our losing procedure.!
+=f TF :N=0 THEN OUTPLT :UNBOUND
+tGount down to 0, then!
+*2 OUTPUT SCREW LIP :N-1
+laval variable which has no value!
+>END
+SCAEWUP DEFINED
+TSCRERUP 3
+-ERAOR IN LINE 1 OF SCREWUP
+‘LINE 1 15: IF -W=8 THEN OUTPUT :UNBOUND
+UNBOUND IS AN UNBOUND VARIABLE
+-BREAKPOINT FRAME &: :-UNBOUND
+TN Frame O is ihe variable, Eval was!
+8 tworking on this when we bombed!
+We can do any command!
+twhile in the breakpoint!
+aLiP IGoing up a frame, -L/N BOLD!
+
+Error Handling and Debugging Section 13
+=== scan page 32 ===
+LISP LOGO MEMO Page 20 June 27, 1574
+
+BREAKPOINT FRAME 1; OUTPUT UNBOUND
+
+twas the input to GUTPLT!
+RDO N oing down a frame,!
+‘BREAKPOINT FAAME @: -UNBOUND
+2UP ‘SCREFUP
+;HREAKPOINT FRAME 4: SCAEWUP -M-1
+
+‘we arrive at recursive invocation!
+
+GN twhere :¥ had the value 1!
+
+i
+
+aUP ‘SCREPLP 2 it we rise past 2 calls to SCREFLP,!
+;BREAKPOINT FRAME 18: SCREWUP -H-1
+
+aii LN waa a!
+
+a
+
+TEXIT ‘SCREWED MWe decide for some reason!
+SCREWED that SCREPUP of 2 is !
+
+t fia return the value "SCRER ED!
+
+land all the previous invocations !
+
+lot SCRE UP return with the value!
+PSCREFED and we are at top level!
+AWasn't thal fur?
+
+8.4 Wrong Number of Inputs Errors
+
+Since LOGO syntax requires thal the parser know bow many inputs a function
+requires, and LLOGO parses your inpul as you type it in, errors may be generated if you
+change the number of inputs a function takes Sy redefining the function, or by calling
+EDITTITLE. Calls fo that function which you typed previously are now incorrectly
+parsed, LLOGO will catch most occurrences of this when the function is called, and print a
+mescage like:
+
+JAEPARSING LINE <number> OF <procedure> AS: <new parse>
+
+and atlemp! to recover. LLOGO always alfempls to reparse a line which caused a wrong
+number of inputs error. It is not always possible fo win, however, a5 side effects may
+have occurred before the error was detected,
+
+8.5 Garbage Collector Errors
+
+Versions of LLOGO running in BIBOP LISP [LISPs with the capability of dynamically
+allocating storage) have special handlers for garbage collector interrupts. If it decides
+you have used too much storage space of a particular type, or too much stack space, it
+will stop and politely ask if you wish more fo be added. If you see these questions
+repeated many times in a short span of time while running one program you should give
+serious consideration to the possibility thal your program is doing infinite CONSing or
+recursing infinitely,
+
+Errar Handling and Debugging Section 8.5
+=== scan page 33 ===
+LISP LOGO MEMO Page 29 June 27, 1574
+
+&.6 Tracing
+
+The standard LISP TRACE package may be used to trace LLOGO primitives or
+user functions. The tracer is not normally resident, but is loaded in when you first
+reference if. See the LISP manual for delails on the syntaw of its use and the various
+options available,
+
+8.7 Interaction with LISP
+
+In debugging functions written in LISP for use in LLOGO, it is offen useful to be
+able to switch back and forth between LOGO and LISP top level loops. You can leave the
+LOGO top level boop and enter a LISP READ-EVAL-PRINT loop by using the LLOGO
+function LASP. From this mode, executing (LOGO) [remember to type the parentheses,
+you're in LISP?) will return to LOGO, Typing control-atsign [sa] at any time will cause an
+interrupt and switch worlds; you will enter LISP if you typed aq@ from LOGO, or enter
+LOGO if you typed it from LISP. The LISP loop gives you access to all internal LLOGO
+functions and global variables, which are normally inaccessible from LOGO since they are
+on a differen! obarray. LLUOGO primitives and system variables are On both obarrays, so
+they will be accessible from both LISP and LOGO, but LOGO uter functions and variables
+are on the LOGO obarray only. The character sharp sign ["a"] is an obarray-swilching
+macro; to access LOGO user functions and variables from the LISP hoop, prefix them with a
+sharp sign.
+
+Error Handling and Debugging Section 8.7
+=== scan page 34 ===
+LISP LOGO MEMO Page 38 June 27, 1374
+
+Section 9. Com piling LLOGO User Procedures
+
+LISP LOGO compiles a LOGO source program into LISP and it is stored internally
+only a6 LISP code. Since this is tha case, tha LOGO user has the capability of using the
+LISP compiler directly on his LOGO programs, and obtain a substantial gain in efficiency,
+once his programs are thoroughly debugged. LISP LOGO provides an interface fo the LISP
+compiler which should make it unnecessary for the user to worry aboul interacting with a
+separate program,
+
+To compile all of the functions currently in the workspace, the function OOM PILE
+is available. [This does mot include buried procedures -= see Section L&k1.] lt expects
+one word as input, to name the file which will contain the compiled code, The names of
+the functions which are being compiled will be printed out. A temporary oulput file
+[named LOGO. OUTPUT] will be written on the current directory and deleted after the
+compilation is camplete. The output file will have as first name the input to COMPILE,
+and second file name FASL. [In the MULTICS implementation, the temporary file will be
+named logo output and placed in the current directory. The output file wil appear in the
+working directory, with one mame, the input to COMPILE.) Since the LISP compiler must
+be called up a¢ a separate program, be careful about interrupting the compilation before
+it is finished [for instance, by AG] as you will not find yourself in LLOGO amymore.
+
+To load a compiled file into LLOGO, say READFILE <name> FASE. This will load
+all the compiled functions which were compiled by COMPILE <name>, and also restore
+the values of variables that were defined at hat time. The names of compelled functions
+will be kept on a list callad -Q0MPILED and not on -CONTEATS. For debugging
+purposes, you might want to read in both the compiled and interpreted definitions of the
+same functions, and you can owuse the functions FLUSHCOMPILED = and
+FLUSHINTERPRETED to switch back and forth between compiled and interpreted
+definitions.
+
+The LOGO COMPILE function supplies declarations for LOGO primitives. Some of
+the declarations include LISP macros which replace calls to LOGO primitives with calls to
+their faster LISP counterparts for efficiency, and some optimization is dane. For safely’s
+sake, all variables are automatically declared SPECIAL However, the sophisticated user
+is free to include in his program DECLAREs to UNSPECIAL inpul or local variables
+which he knows will not be referenced globally, or provide declarations which will make
+use of the fast-arithmetic LISP compiler,
+
+A few warnings about compiling LOGO procedures: First, remember that LOGO
+syntay requires that it be known how many inputs a function expects, belore a decision
+can be made as to how to parse a line of LOGO code, If, when defining a procedure, you
+inchxde a call to a procedure which is not yel defined, parsing is delayed until run time
+[see Section 6 and Section 3.2 of this memo for more details] The compiler, of course,
+cannot do anything reasonable with an unparsed lina of LOGO code, oo afl parsing must
+be completed by the time the definition of any procedure is compiled. The COMPILE
+function allempts to make eure this is the case. Therefore, it is an error to attempt to
+compile a procedure which contains a call to a procedure which is not a LOGO primitive
+and has not yet been defined.
+
+Also, it must ba remembered that compilation of LOGO procedures, like thoee of
+LISP, is mot “foolproof”, tt is not always the case that a procedure which runs correctly
+
+Compiling LLOGO User Procedures Section 9
+=== scan page 35 ===
+LISP LOGO MEMO Page 31 June 27, 1974
+
+when interpreted, will be guaranteed to run correctly whan compiled, Self-modifying
+procedures, weird control structures, and in general procedures which depend heavily on
+maintaining the dynamic environment of the interpreter may fail to compile correctly
+withoul modification.
+
+Compiling LLOGO User Procedures Section 9
+=== scan page 36 ===
+LISP LOGO MEMO Page 32 June 27, 1574
+
+Section 10. Using Files in LLOGO
+
+A file specification on ITS has four components. Each file is named by two words,
+of up to six characters each, a device [almost always OSE), and a directory name [usually
+the same as the user's name) You can refer to a file in LOGO by using anywhere from 0
+to 4 words. If you leave out fhe name alfogether, it will be assumed that you are
+referring to the last file name mentioned. One word will be taken as the first file name,
+and the second will default to >, which means the highest numbered second file name
+whith currently exists if you are reading, or one higher if you are wriling. Two words
+will be taken as the two file names, and the directory and device will be defaulted. If
+three mames are given, the third will be assumed as the directory mame, and the device
+will be OSE. If four words are given, the third is device and fourth is the directory. Here
+are s0mt examples:
+
+[Assume that the current user name is E5G, and FOO 3 is the highest! numbered file with
+FOO as its first filename)
+
+LOGO ITS [<fnl> <fn2> <dew=:dir>y]
+TREADF ILE FOO FOO > DSK:ES¢; J FOO ay
+SAVE FOU FOO > DSK:ESG; {FOO 4)
+TREADFILE FOX) BAR FOO BAR D5K:Es¢;
+TREADFILE Ft) BAR NW ENRY FOO BAR DSK:HENRY;
+TREADFILE FOO BAR DSK HENRY FOO BAR DSK:HENRY;
+
+See Section 12.2 and Section 13 for information about file specifications on the
+MULTICS and TENSO implementations. File specifications are accepted by LOG) in the
+same format as an ITS, so it may not be necessary to change any code to run on ather
+implementations.
+
+10.1 Saving and Reading Files
+
+There are two ways of storing LOGO programs on the disk for later use. To store
+the contents of the current workspace [all user functions and variables currently defined]
+on the disk in the form of LOGO source code, use SAVE. Ht expects as input a file
+specification, as discussed above. The file created will contain the contents of the user's
+workspace, function definitions and MAKEs for variables, exactly in the form that he
+would see if he did a PRINTOUT ALL
+
+Workspaces can also be saved in LISP formal, as they are represented internally
+by LOGO. This ts accomplished by the function FPRITE which takes its inputs as does
+SAVE, Although the file created will not be so preity to look at if you print it, using
+WRITE produces files which are considerably faster to reload, since the program does
+not have to be reparsed. For long-term storage of programs, however, if is recommended
+that you use SAVE rather than PRITE. Changes in the implementation of LISP LOGO may
+result in changing the internal format of LOGO programs, in which case, files created by
+WRITE would not remain compatible, but files created by SAVE would remain so.
+
+Using Files in LLOGO Secthon 18,1
+=== scan page 37 ===
+LISP LOGO MEMO Page 33 June 27, 1574
+
+To reload a file from the disk, use the function READFILE. This accepts a
+slandard file specification, and reads it in, printing the name of the,file. READFILE does
+not care whether the file is in SAV Ed or WRITten form. lf the file was created by SAVE,
+lines of code will be printed out as they come in from the disk. For written files, only the
+Rhames of functions and values of variables will appear. IF you get annoyed at all this
+output, you can shut it up with AIF. LOGO will return with a question mark when the
+loading is complete.
+
+It is offen convenient to treat a set of functions as a “package” or “subsystem”.
+For instance, you may have a set of your favorite functions which you place in your
+initialization file, or a set of functions designed for a specific purpose, When this is the
+case, it is inconvenient to have all these functions written out when you are working on
+additional procedures, or have to see their definitions when you do a PRINTOUT ALL
+That is, one would like a method of having the package of functions available, but mot
+considered as part of the workspace by certain commands, You can do this by using the
+function ALIRY. it takes unevaluated procedure names as input, and will assure that the
+function is ignored by the following commands: PRINTOUT PROCEDURES, PRINTOUT
+ALL, PRINTOUT TITLES, ERASE PROCEDURES, ERASE ALL, SAVE, WRITE and
+COMPILE. Otherwise the function is unaffected, and can be invoked, printed, edited, etc.
+A list of the names of buried procedures is kept as the value of the variable :BLRIED.
+BURY ALL will BURY all currently defined procedures, and ERASE BURY will undo the
+effect of a BURY.
+
+10.2 Other File Commands
+
+PRINTOUT FILE [abbreviated POF] will print out the contents of a file, ERASE
+FILE will cause the specified file to vanish [This has a safely check to make sure you
+don"t do anything you'll be sorry about] These take file names as above, except that if |
+only one inpul is given to ERASE it defaults to <, the least numbered second file name,
+again for safety reasons. PRINTOUT INDEX / POL) will print out all the file mames in
+the directory specified by one word. USE will change the name of the default directory.
+
+Using Files in LLOGO Section 18.2
+=== scan page 38 ===
+LISP LOGO MEMO Page 34 June 27, 1374
+
+Section Ll. Differences between LILOGO and LLOGO
+
+LISP LOGO was originally written to be compatible with CLOGO, a version of LOGO
+written in POPLO assembler language. There mow exists a version of LLOGO which we
+believe to be “semantically compatible” with the POPL1 version. By this we mean that the
+wocabulary is the same -- any primitive in LILOGO also exists in LLOGO and will
+(hopefully) have the same meaning. LLOGO in fact has many primitives which do not ewet
+in LILOGO, as well as offering the user access to the full capabilities of LISP, There are
+substantial differences between LLOGO and 11L0G0 with regard to file systems and error
+handling, and somewhat less substantial differences in the editor, turtle and music
+packages. These are described in detail in other sections of this document, There are also
+are several loss substantial differences, not mentioned in the preceding discussions, and
+what follows is an attempt to provide a reasonably complete list of the knowledge that an
+experienced 11L0G0 user would need to use LLOGO.
+
+In LILOGO, the double quote character “is used to specify that the atom following
+it is mot to be evaluated-
+
+IP RINT “FOO
+Foo
+
+it is like LISP’s single quote, except thal it also affects the LOGO reader's decision about
+when to stop including successive characters iin forming the name of an atom. In
+
+'P RINT :FOO+3
+
+the plus sign is a separator character; it signals the end of the atom :F 00 just as if there
+was a space following :FOQ. However, following a double quote, the only separator
+characters recognized are space, carriage return, and square brackets. Thus, in 11LOGO,
+
+?PRINT “FH
+FO0+43
+
+In LLUOGO, the user may use fhe LISP single quote fo specify that an atom or
+parenthesized list following the single quote is not to be evaluated. The presence of the
+single quote does not change the way LLOGO decides when an atom ends. In LLOGO,
+
+t PRINT 'FOGHT
+‘THE INPUT ‘FOO TO + 15 OF THE WAONG TYPE
+
+because the plus sign is still a separator character, LLOGO wees the dowble quotes as
+CLOGO does; they are always matched. Wf one s-expression (atom or list) occurs in
+between double quotes, it is quoted. If more than one occurs, the list containing them is
+quoted. The correspondence between LLOGO double quoted expressions and LISP s-
+expressions is as follows:
+
+" oe NIE
+
+*<atom>” oe? (OUOTE “atom?!
+
+"eal? oo. ND" => (QLMOTE (<al>.... tal)
+"(tg l> .. tae’ ==> (OLIOTE (<al> .. . tah? ))
+
+Differences between [1L0G0 and LL0G0 Section 11
+=== scan page 39 ===
+LISF LOGO MEMO Page 35 June 27, 1974
+
+Square brackels in LILOGO specify quoted lists. Parentheses are newer used
+around lists as in LISP, but are only used to delimit forms. LLOGO recognizes square
+brackets as well as LISP’s parentheses in denoting lists. The difference belween brackels
+and parentheses in LLOGO is thal the brackets always denote list constants, and mot
+forms, and that the outer level of brackets is implicitly quoted:
+
+/{FOO BAR/] ==> (QUOTE ((FOO BAR)))
+
+There is a minor pitfall in the current implementation: note that top level parentheses
+implicitly quote the list, interior ones do not, This dors not always work, for instance
+when using RUN one may expect interior lists also to remain unevalualed:
+
+?PRINT {PRINT {FOO BAR|] ==> (PRINT (PRINT (FOO BAR)})
+PRINT (FOO BAR)
+?RUN {PRINT {FOO BAR] ==> (RUN (PRINT (FOO BAR)))
+
+prints the value of the function FCM) applied to input BAR.
+
+Square brackets in LLLOGO also share with double quotes the property described
+above of affecting the LOGO reader's decision on ending the names of atoms. Within a
+square bracketed ‘ist in 11 LOGO, an atom is terminated only by a space, carriage return
+or brackel. This property is not true of square brackets in LLOGO. In LLOGO, / FOO / is
+a list containing three elements, but in 11L0G0, it contains only one element.
+
+String quoting in LLOGO is accomplished using (he dollar sign character, §. LLOGO
+will treat anything appearing between dollar signs literally, with special characlers dewoid
+of any special meaning. Within such a siring, two consecutive dollar signs will be
+interpreted as a single dollar sign. So, $829 would be the word whose name is a single
+dollar sign. $$ is the empty word. Ruboul, editing and interrupt characters cannot be
+quoted in this manner, Use the ASCH! function of LISP if you really need them,
+
+The character sharp sign ["s") in LLLOGO is used as a prefix macro character
+which takes one input which must be a word, and executes it as a procedure. ft is used
+where one wants to use a weird name for a procedure, or a name already used by the
+system Sharp sign is used as an ascape fo call that procedure, Thus, a procedure
+defined in LILOGO by TO "PRINT... would be called by «PRINT, TO °3... would be
+called by #93, ete. In LLOGO, sharp sign is used as a macro character which causes the
+next s-expression to be interned as if it ware read in LISP if you are in LOGO, or as if if
+was read by LOGO if you are in LISP. If you are in the LISP mode of LLOGO and want to
+access your LOGO variables, you can say # FOO, etc. The conflic! may be changed in the
+near future by altering LISP LOGO's macro character fo one that does not conflicl with
+L1LOGO, Suggestions welcome.
+
+The Boolean [logical] constants in 11LOGO ara TRUE and FALSE, while in LLOGO,
+they are T and NIL, as in LISP.
+
+The 1ILOGO function LEVEL, which returns the current procedure depth, is not
+implemented.
+
+LILOGO forms are divided into two categories: those that output [return a value]
+and those which do not. In LLOGO, at in LISP, avery form returns @ value. To simulate
+LILOGO and CLOGO in this respect, as a special hack, forms which return a question mark
+do not have their values printed by LLOGO's top level function. However, LLOGO cannot
+
+Dilferences between LILOG0 and LLOGO Section il
+=== scan page 40 ===
+LISP LOGO MEMO Page 36 June 27, 1974
+
+catch the error of such @ form hiding inside parentheses, as can 11LO0GO, Most of the
+primitives which do mot return a value in LILOGO return ? in LLOGO.
+
+The character: in LLLOGO is treated as a macro “the value of "if A is bound to
+B and B is bound to C, then =4 is CG. In LLOGO, variables set by MAKE are just LISP
+atoms beginning with the character ; 60 <4 will be the value of the variable sel by
+MAKE "4" <whatever?, ete. We are seriously considering changing this, eliminating the
+incompatibility. The present setup requires MAKE to do an expensive EXPLODE on the
+Variable name, in order to create the word which begins with a colon.
+
+LLOGO expects to find only one form inside parentheses: constructs like
+WFD 100 FD S50 SUM 4 5)
+
+are prohibited, 11LOGO allows more than one form inside parentheses under certain
+restrictions,
+
+The 11ILOGO procedure TEXT, which returns a list of lists which are the lines of
+a procedure whose name is given as input, is not implemented in LLOGO, However, you
+can access the definition of a function in its parsed LISP form on the property list (CDR)
+of the atom,
+
+Comments: LLOGO understands two comment conventions: LISP’s convention of
+treating as a comment anything between a semicolon and the next carriage return, and
+LOGO's of treating at a comment anything in between exclamation points. [The
+exclamation points must be matched, and comments can be continued past the end of the
+line] Anything after exclamation points on a line is ignored,
+
+The top level loop in LISP LOGO is a READ-EVAL-PRIAT loop whereas POP11
+LOGO is a READ-EVAL loop. This means that 1 LOGO prints out only when you ask it to
+print unlike LLOGO which prints out values after every evaluation of a LOGO form.
+
+in LILOGC:
+SUM 46
+YOU DONT SAY WHAT TO DO WITH f2
+
+In LLOGO:
+SUM 48
+12
+
+Line numbers can be any integer inside the INU limit. Floating point, negative
+numbers and zero are allowed also,
+
+Percent sign (%) does not echo as @ space. Carriage returns within square-
+bracketed lists print out as such, not as spaces, as in 1 1LOGO,
+
+:EMPTY is the empty list, which is LISPs WIL sEMPTYE is the emply word,
+which is the LISP atom whose print name is (ASCI! a
+
+The character control-T [AT] is converted to dowble quote ["] when if is read in,
+This is for compatibility with CLOGO. | haven't the faintest idea of why CLOGO does ib
+
+LISP LOGO and 11LOGO differ on the syntax for arrays. LISP LOGO uses the LISP
+array facility; fo define an array use:
+
+Dilferences between [LOGO and LLOGO Section Tl
+=== scan page 41 ===
+LISP L0G) MEMO Page 37 June 27, 1574
+
+TARRAY <name> T <dimension [> ... <dimension N>
+Values can be stored by
+TSTORE <orray name* “subscript I>. . taubecript N> <ealue™
+
+Values are accessed as if the array were a function, which expected {he sama number of
+inputs as the number of dimensions in the array.
+
+The LLOGO function RANDOM, of no inpuls, returns a random floating point
+number, which is between zero and one. If given two arguments, it returns a random
+number belween its first and second argument, inclusive. H both ifs inputs are fixed
+point, it returns a fixed point number, otherwise it returns a finating point number.
+(RANDOM 0 9) behaves as 1 LOGO RANDOM.
+
+LLOGO has only one global fest box. When a subprocedure performs a TEST the
+result replaces the result produced by any TEST s prior to the subprocedure call in ite
+superprocedure. IFTRUE's and IFFALSE’s after the subprocedure call in the
+superprocedure will be conditional on the last TEST which was performed, regardless of
+what procedure it was in
+
+ROUNDOFF in LLG takes either one or two inputs. Wf given one input, the
+number is rounded (o an integer, otherwise if is rounded to aa many places to the right
+of the decimal point as specified by the second input.
+
+LOCAL variables are handled differently in LLOGO than in LILOGO, Regardless of
+where a LOCAL statement is placed in a procedure, the variables declared will be local to
+the entire procedure. This corresponds to a PROG variable in LISP. LOCAL accepts any
+number of variable names as input.
+
+Inserting lines into procedures under program control should be done using the
+function INSERTLINE. In 1 1LOGO, the following will insert a line into BLETCH when
+MUNG is executed:
+
+?TO MUNG
+>10 EDIT BLETCH
+>20 10 PRINT {NEW LINE ADDED TO BLETCH/
+>END
+This: will not work in LLUOGO. Instead replace line 20 with:
+>20 INSERTLINE 10 PRINT [NEW CLINE ADDED TO BLETCH}
+There i¢ a memo by Wade Williams which explains some of the finer points of
+
+LILOGO syntax, and should be consulted for further information. The 11L0GO Leer’s
+Manuel should also be of assislance.
+
+Ditlerences between 11L0G0 end LLOGO Sextion ti
+=== scan page 42 ===
+LISP LOGO MEMO Page 38 June 27, 1574
+
+Section 13. Using LLOCGO on MULTICS
+
+USP LOGO has now been implemented on MULTICS, and this is the only version of
+LOGO available for that system. Below are instructions for using if, and a list of
+differences between the MULTICS and ITS versions. Except for the differences in file
+naming conventions, and limitalions imposed by (he operating system, source language
+programs should be entirely compatible. For more information on MULTICS LISP, see the
+MACLISP Reference Manual by Dave Moon,
+
+The LISP LOGO music package is available for we on MULTICS. See Section 16 for
+more details, The display turtle and GERMLAND packages are not available in the MULTICS
+implementation. MULTICS does nol have adequate facilities for using displays such as the
+340 and the GT40. It prebably would ba possible to implement a rudimentary turtle
+package for the storage type displays on MULTICS such as the ARDS and TEKTROMX
+terminals, bul we have no plans to do 90 al present. We do hope fo have available soon,
+however, facilities for using the mechanical floor turtles [controlled by the Thornton Box]
+on both ITS and MULTICS.
+
+12.1 Where To Find It
+
+To obtain LISP LOGO, you must first create a link lo the necessary files. After
+you log in, lype
+
+link >udd>ap>lib>logo
+
+This needs to be done only once for each user. Subsequently, you can gel LLOGO simply
+by typing
+
+loge
+
+You should then get a message indicating the version numbers of LISP and LOGO, as on
+ITS, and the allocator will ask you if you want to use the music bow. MW you have a file in
+your directory named stert optoge it will be read in as an initialization file.
+
+12.2 File Naming Conventions
+
+An ITS file specification consists of two file names of up to six characters each, 3
+device and directory name. A file specification on MULTICS is called a “pathname”, and
+consists of arbitrarily many components each naming a mode in a tree structure of
+directories and segments [files] The components of a MULTICS pathname are separated
+by ">" characters. Any pathname beginning with ">" is considered to be a full pathname,
+ie. start af the root of the tree, otherwise, il is considered to be relative to the directory
+which is currently the default This will usually be something like “=udd>;our-praject=
+name>your-user-name", File names are assumed also fo have two components as on ITS
+and you type therm into to LOGO the same way, as two words, excep! thal each word is
+nat limited ta six characters, The default second file mame is “logo”, mot ">", to be
+consistent with MULTICS. conventions. in your directory, the two file names will appear
+separated by a “.”. Files whose second names are “fasl” are assumed to contain object
+code produced by the LISP compiler. This will correspond to the file with only the first
+
+Using LLOGO on MULTICS Section 12.2
+=== scan page 43 ===
+LISF LOGO MEMO Page 39) June 27, 1974
+
+name [no second component] in your directory. Here are some examples: [assume your
+name is “person” and your project is “project™]
+
+LOGO file name MULTICS file name
+
+tread file foo sudd> project? person? footage
+
+Tread file foo bor *ndd> project” person fooAar
+
+tread file foo feal *udd? pro jeet® person? foo
+
+tread file foo bor mumble *udd>project™ person? mumble? foobar
+tread file foo ber *udd>logo *odd?lloge* foobar
+
+12.3 Terminalogy
+
+On MULTICS, control characters are entered to LISP by first hitting the break or
+attm key [if you have one) and LISP should type CTAL/, then typing the ordinary non-
+control character, then a carriage return, MULTICS has mo other way of acknowledging
+your existence before you hit a return, which is the reason for this kludge. Because of
+this the control-character line oriented editor which exists in the ITS implementation,
+does not exist in the MULTICS implementation. MULTICS uses # to rub out the previous
+character, and @ to rub out the entire line. To enter these characters to LLOGO, precede
+them with 4,
+
+lf you should have to use an IBM 2741 terminal, remember that certain characters
+must be escaped, The worst offenders are f/f and / (type ‘eent-sign> “Iess-than> for f
+and “cent-sign® <greater-than> for /), type <not-sign? for A, *rent-sign> “eent-sign® for
+\. and type a <cent-sign> before # and @ Upper and lower cases are distinguished on
+MULTICS, and all of the system functions, both MULTICS’s and LLOGO"’s, have lower case
+names.
+
+To use LISP LOGO on MULTICS over the ARPANET from. ITS, it is recommended that
+
+Dave Moon's program TN6 be used rather than TELNET. See OSRAINFOSTHG INFO for more
+ide iails.
+
+Using LLOGO on MULTICS Section 123
+=== scan page 44 ===
+LISP LOGO MEMO Page 46 June 27, 1574
+
+Section 13. Using LLOCO on TENS® and TENEX systems
+
+The version of LLOGO for TENSO runs in a version of MACLISP that is nearly
+compatible with that used at MIT-Al The TENS0 version can also be used om TENEX
+systems. Most of the incompatibililies are those necessitated by the difference in
+operating systems. Specifically, the following commands are not implemented:
+
+PRINTOUT INDEX (olias POI, LIST FILES)
+LOGOUT (BYE
+
+COM PILE
+
+LINEPRINT
+
+BUG
+
+Also, the special packages for LLOGO (the turtle primitives, the music primitives, and
+GERMLAND) are unavailable.
+
+Another difference between TENSO LLOGO and LLOGO on ITS is in the typing of
+control characters (such as -G, AH, and all the editing characters - AR AE etc.) on ITS
+these characters may be typed at any time, Those specifying an interrupt action (AG, AM)
+will always take effect immediately. Unfortunately, this is not true in the TENSO
+implementation, because TEN5SO allows a running program to be interrupted only by the
+character AC. As a resull of this, if the user wants to interrupt the LLOGO system while
+it is running (e. g. execuling a user defined function), he must first type «iC. This will
+interrupt the program, and cause it to print 7, indicaling that it is wailing to read a
+control-character. The user may then type the desired control-character, and it will be
+ached upon. Note that typing AC is not necessary if the LLOGO system is nol running, but
+rather waiting for input. Therefore the editing characters may be used without difficulty,
+even on the TENSO system
+
+Another minor difference between the two operaling systems is in the notation
+for file names. This difference is minimized by the syntaw used by the LLOGO file
+commands. For instance, the command
+
+PREADFILE PROGRM LGO DSK USER
+
+will read the file DSKAVSER; PROGRM LGO on ITS, while on TENSO the file read will be
+DSK:PROGRM.LGCO/USER), Thus most user programs will ba able to run with little or
+no modification ta their input/output operations. (Note that the default second file name
+is > on ITS, while on TENSO it is B60) W you want to use a LLOGO initialization file with
+the TENSO implementation, tha name of the file should be FAVT.LGO on your user
+directory.
+
+A version of TEN5O LLOGO is currently available at Carnegie-Mellon (CML-E LOB). it
+may be loaded there by means of the following command:
+
+.RUN DSK:LOGOs A490LC99]
+
+Using LLOG) on TENSE and TEMEX systems Section 13
+=== scan page 45 ===
+LISP LOGO MEMO Page 41 June 27, 1974
+
+Section 14. GERMLAND
+
+The GERMLAND package is designed to provide the user with a display
+environment in which interesting nontrivial questions can easily be investigated, without
+the need for sophisticated display equipment. The current implementation runs on any of
+the character display consoles in use at the ALL laboratory.
+
+Conceptually, GERMLAND consists of a square grid, on which may “live” as many
+as 10 "germs™. Each germ may have an arbitrary LOGO program associated with it; this
+program delermines the germ's movements, as well as whether it eats any of the “food”
+present at its position of the grid. For a discussion of some of the problems that can be
+investigated in this environment, see LOGO working paper 7.
+
+14.1 Starting Up
+
+The GERMLAND package may be loaded automatically al the start of an LLOGO
+run, When started, LLOGO will ask which of the special packages you want. Simply type
+YES, followed by a carriage return, when it asks whether you want GERMLAND, The
+GERMLAND package will then be loaded, and give you instructions for further help. Note
+thal if the grid becomes garbled, because of a transmission error for instance, you can at
+any time cause it to be redisplayed by typing the character «\ [control-backslash}
+
+14.2 Toplevel Primitives :
+RUNGERM
+
+Invakes prompter. Asks questions necessary to get started and offers help.
+CERMDEMOS
+
+Runs a series of demos, leaving the demo programs available for the user to play
+with,
+
+TOPCGERM
+
+Starts up a GERMLAND READ-EVAL-PRINT loop, using the grid set up by the
+most recent call lo RUNCERM.
+
+UNGRID
+
+Exits from TOPCERM, back to LLOGO.
+REPEAT <program!> <program?> ...
+
+Each program defines one creature. A round consists of ewecuting each program
+in turn, After each round, the program waits for inpul, if the user types a space, one
+round is performed; if the user types a number, that many rounds are done. This is
+
+repeated indefinitely until an error occurs. REPEAT is not subtle with respect to
+parallel processing. No effort is made to try each program and see whether any conflicts
+
+GEAMLAND Sectlan 14.2
+=== scan page 46 ===
+LISP LOGO MEMO Page 42 June 27, 1874
+
+secur. However, eventually a more elaborate version could be designed thal wes
+sensitive to synchronizing the lives of the germs. If no programs are passed fo REPEAT,
+it attempts to use the programs associated wilh each germ by RAUNGCERM,
+
+14.3 Grid Primitives
+CRID <number>
+
+Initializes GERMLAND, A square grid is created with <number> squares in a side.
+PRIANTGRID
+
+Clear screen and redisplay GERMLAND grid. Typing A\ also causes thes to
+happen. lf there is a germ on the square, the character which represents that germ is
+printed in the square’s position. Mf the square is an obstacle, an "x" is printed. if there is
+food on the square, the number of particles is printed. If the square is empty, a “." is
+printed,
+CRIDP <position>
+
+A predicate which oulputs T iff the position is a legitimate grid square.
+FRAP
+
+Go into “wraparound” mode, in which germs are allowed to go across the
+boundaries of the grid.
+
+NOW RAP
+
+Leave “wraparound” mode,
+Note that FRAP and NOW RAP affect the variable -PRAPAROUND. See Page 46.
+MOVE <position=
+
+The germ is moved fo the specified grid square. *position> is a sentence of [he »
+and y coordinates of the square. Typical use is: MOVE MORTH. If the germ moves to a
+equare which is already inhabited, the former inhabitant is killed MOVE prints an error
+message if an attempt is made to MOVE to a square wilh an obstacle on il, or a square
+outside the grid. The <position> does not have fo be adjacent fo the current location of
+the germ. Hence, MOVE allows non-local movement to any grid square.
+STEP <direetian>
+
+<direclion= is interpreted as a heading. Mt must be either 0, 90, 180 or 270 (mod
+360) STEP allows more elogance in the description of a germ program If fhe same
+ghructure is weed for all diractions, than the program can call a subprocedure whose inpul
+is cycled through the four directions.
+
+GEAMLAND Section 14.3
+=== scan page 47 ===
+LISP LOG) MEMO Page 43 June 27, 1574
+
+14.4 Property Primitives
+PUTSQUARE <position> <information> <proparty>
+
+For the specified grid square, the data stored under the given property is set to
+<information=.
+
+CETSOUARE <position> <properts>
+The information stored under the <property? is returned. Typical uses are:
+(GETSQUARE <porition> "F OOD) returns food at <position=.
+
+(GETSQOUARE <postion>? "INHARITANT) returns the number of the germ
+currently living there, MEL it unoccupied.
+
+(GCETSQUARE <pesition> “OBST ACLE) returns T iff the square is an obstacle.
+REMSQOU ARE <position> <property?
+
+Remowes information stored under <property>.
+WHAT <position=
+
+Outputs all of the information stored for the given position.
+FOOD <position>
+
+Outputs the number of food particles at the given position. FOOD returns 0, not
+NIL, when there is no food.
+
+FOOOP <position=
+
+Predicate which returns number of food particles if any al the given position; WIE
+if nore,
+
+FILEF OOD <n>
+Puls <n* morsels of food on each square of GERMLAND.
+EAT <nomber>
+
+Subtracts <number= of food particles from the current square. Generates an
+error if <number> is larger than the total food available, There are two types of germs
+== those that are hungry and those that are mot. Each hungry germ has a food supply
+associated with it. The food supply is increased every time he eats by that number of
+particles, and decreased by one for each generation. |f it ever reaches zero, the germ
+dies. So, if he eats only one particle of food on a turn, he must eat again on the newt
+turny if he eats 2, he cen skip a turn without eating, etc.
+
+GEAMLAND Secthom 14,4
+=== scan page 48 ===
+LISP LOGO MEMO Page 44 June 27, 1374
+
+14.5 Multiple Germ Primitives
+WERE «:germ>
+
+Returns the coordinates of the square that germ is currently inhabiting.
+NORTH P <:germ>
+
+Returns true only if the » coordinate of sgerm is greater than the X coordinate of
+the germ whose program is currently being executed by REPEAT.
+
+SOUTH P, FESTP, EASTP
+
+Analogous to MORTHP.
+KU LL *:germ>
+
+Assassinates “germ? and prints eulogy.
+GERM «:germ> <sqoore™
+
+Initializes «germ to start out located at <square>.. germ is an integer between |
+and 10.
+
+FOOOSUPPLY <:germ>
+Returns the amount of food that the germ has.
+ACCESSIBLE <aquare> <:germ>
+
+True if and only if <agarm> can get to <square> on his next move.
+
+14.6 Turtle Primitives
+HEADING «:germ>
+
+Returns the current heading of the germ.
+FORF ARD <number>
+
+Move <number> spaces in the direction of the current heading. Abbreviates to
+FD <number>. <number> may be negative.
+
+BACK <number>
+
+Move <mumber> spaces opposite to the current beading, Abbreviales to BK
+“number,
+
+NEXT <direction>
+
+Returns the coordinates of the next square in the current direction.
+
+GERMLAND Li. Section 14,6
+=== scan page 49 ===
+LISP LOGO MEMO Page 45 June 27, 13974
+
+RIGHT <aumber=
+
+Turn right <number> degress--number> should be a multiple of 90, This may be
+abbreviated as RT <mumber> .
+
+LEFT <rumber>
+
+Equivalent to RIGHT -<number>. Abbreviates as LT <number>.
+FRONT
+
+Returns coordinates of the square in front of the turtle.
+RIGHTSIDE, REAR, LEFTSIDE
+
+Analogous to FRONT,
+FSIDE, RSIDE, BSIDE, LSIDE
+
+Abbreviations for FRONT ete.
+
+14.7 Touch Primitives
+TOUCH <position>
+
+Qulpuls AVL if <pesitien> does not contain something that can be touched.
+Otherwise it outputs an atom describing the touchable object, eg. BORDER or
+OBSTACLE, Typical use is: TOUCH FRONT.
+OBSTRUCT <square>
+
+Puts an obstacle al <square>, Germs cannot move onto squares with obstacles.
+DESTRUCT <aquare>
+
+Removes obstacle at <square>.
+
+14.6 Global Variables .
+GERM
+The number of the germ whose program is being ewecuted by REPEAT.
+aC RIDSIZE
+Size of the GERMLAND grid set by the CAND function.
+HUNGRY
+T = Germs are killed if their foodsupply goes to 0.
+NIL => A germ's foodsupply is ignored by REPEAT.
+
+GEAMLAND Section 14.8
+=== scan page 50 ===
+LISP LOGO MEMO Page 46 June 27, 1574
+
+IF RAP AROUND
+T => Mothon across borders is permitted,
+NIL => Motion across borders is an error,
+
+The user should never change -FRAPAROUND directly. Use FRAP and
+NOWRAP to change modes,
+
+14.9 Im plementation
+
+GERMLAND uses an array to represent the grid, and additional arrays for easy
+acoess fo information about a particular germ The individual primitives are, for the most
+part, straightforwardly implamentable, given this data representation. Some care is taken
+In interfacing with the standard LLOGO envirionenent, so that all the usual debugging
+features of LLOGO may be used in the development of germ programs, without
+interference with the display of the grid.
+
+GEAMLAND Section 14,3
+=== scan page 51 ===
+LISP LOGO MEMO Page 47 Jone 27, 1574
+
+Section 15. Display Turtle Primitives
+
+The display turtle package for the 340 and GT40 is also usable from an ordinary
+LISP as well as from LLOGO. Do (FASLOAD TURTLE FASL DSK LLOGO) to get the
+simple display commands like FORF ARD, RIGHT, ete. and (FASLOAD DISPLAY FASL
+DSK LLOGO) for the fancier snap-manipulating commands,
+
+Abbreviations for the following primitives area noted in square brackets.
+
+15.1 Starting The Display
+STARTOISPLAY /[SD/
+
+Initializes the screen. The turtle is displayed at its home, the center of the
+screen. This command is also useful for restarling everything when things get fouled up,
+the POPS loses, etc. STARTDOISPLAY CT) uses the GT40 display rather than the 240
+display. If you are using the GT40 as a display for the LOGO turtle, it must not be logged
+in to ITS as a console,
+
+NODISPLAY (ND;
+Says you want to stop using the display, Flushes the display slave,
+
+li the display slave for the POP-6 dies, check that the run light is on, ff not, stop, io
+reset, deposit 0 in 40 and 41 and then start.
+
+LISP has three control characters for the display:
+
+AN
+Turns off display.
+Ar
+Display prints like thy.
+AF
+Turns on display for turtle, assuming a prior call to START OISPLAY.
+15.2 The Turtle
+
+HIDETURTLE {HT /
+
+Makes the turtle disappear.
+SHOWTURTLE {ST/
+
+Brings the turtle back to life.
+
+Display Turtle Primitives Section (2
+=== scan page 52 ===
+LISP L000 MEMO Page 46 June 27, 1574
+
+TWURTLESTATE
+
+Returns © if the turtle is not displayed, else refurns the value of : TURTLE,
+‘TURTLE is the number of the display item which is the current durthe.
+
+MAKTURTLE <code>
+
+The current turtle is replaced by the picture drawn by <code>. Provides
+capability to rotate pictures. Subsequent turtle commands, like FORWARD, RIGHT, etc.
+will make the picture drawn by <code> move as if it were the original turtle [triangle]
+OLDTURTLE
+
+Restores the original LLOGO turtle.
+
+15.8 Moving the Turtle
+FORWARD :eeps [FD
+
+Moves the turtle :steps in the direction it Is currently pointed.
+BACK ceteps | BK}
+Moves the turtle steps opposite to the direction in which it js pointed.
+SETX cx
+Moves the turtle to (x, POOR)
+SETY sy
+Moves the turtle to (XCOR, si.
+SETXY cx cy
+Moves the turtle to (ae, a)
+DELX :dz
+Moves turtle to (XOOR+dx, YCORL
+DELY :dy
+Mowers turtle to (XCOR, FCOR+dy).
+DELXY :dx ody
+Moves turtle to (NCOR¢six, FOOR+cdy).
+HOME [HH]
+
+Moves turtle home to its slarting slate.
+
+Display. Turtle Primitives Section 15.5
+=== scan page 53 ===
+LISP LOGO MEMO Page 43 June 2, 1574
+
+15.4 Erasing the Screen
+FIPE
+
+Erases the picture on the sereen, Does not affect the turtle, or any snaps.
+WIPECLEAN [FC/
+
+Like FFEPE, except hides snaps also.
+CLEARSCREEN /CS/
+
+Equivalent jo WIPE HOME.
+
+15.5 Turning the Turtle
+RIGHT sangle { RT]
+
+Turns the turtle clockwise :angle degrees.
+LEFT sangle [LT
+
+Turns the turtle counter-clackwise sangle degrees.
+SETHEAD :angle
+
+The turtle is turned to a heading of rangle.
+
+15.6 Examining the Turtle's State
+Note: The turthe’s home is (0, 0) and a heading of 0 corresponds to pointing stramght up.
+The variables -XCOR, -YCOR and :-HEADING describe the state of the turtle in floating
+point. These variables should not be changed explicitly by the user. The following
+funclions return components of the turtle’s stale rounded to the neares! integer.
+XGOR
+
+Qutputs the % coordinate of the turtle.
+¥COR
+
+Gutputs the ¥ coordinate of the turtle.
+HEADING
+
+Outputs the heading of the turtle.
+XHOME
+
+Outputs the X coordinate of tha turtle’s home in absolute scope coordinates (i.e.
+relative te lower left-hand corner of the screen)
+
+Display Turtle Primitives Section 15.6
+=== scan page 54 ===
+LISP LOGO MEMO . Page 58 June 27, 1574
+
+YHOME
+
+Outputs the ¥ coordinate of the furtle's home in absolute scope coordinates,
+
+15.7 The Pen
+PENDOWN {PD}
+
+Pen lowered to paper. Turtle leaves a track when moved.
+PENUP {PU
+
+Pen raised from paper. Turtle does not leave a track when moved,
+PENSTATE
+
+Returns +1 = penup or -1 = pendown
+PENSTATE <I or -I>
+
+Sets the penstate. A common use for this primitive is to make a sub-procedure
+transparent to pen slate,
+
+PENP
+Tif pen is down, else WIE,
+HERE
+
+Qutputs (SENTENCE XCOR YCOR HEADING). Useful for remembering location
+via MVIKE "P" HERE.
+
+SETTURTLE sstate [SETT/
+
+Sels the state of the turtle to state. stato is a sentence of X coordinate, ¥
+coordinate, and heading. The heading may be omilted, in which case it is not affected,
+
+RANGE :p
+
+Distance from the furtle’s current location fo :p. <p is a point specified by a
+sentence of X and ¥ coordinates.
+
+BEARING :p
+Outputs absolute direction of zp from turtle,
+TOW ARDS :p
+
+Outputs relative direction of sp from turtle,
+
+Display Turtle Primitives Section 15,7
+=== scan page 55 ===
+LISP LOGO MEMO Page 51 June 27, 1574
+
+15.8 Global Navigation
+Note: These primitives return floating point if sither of their inputs are floating point.
+RANCE :x sy
+Outputs distance of turtle from the point (x, sy)
+BEARING :x sy
+
+Ouiputs absolute direction of (x, sy) from turtle. (SETNEAD (BEARING ex zy!)
+points the turtle in the direction of {--y).
+
+TOW ARDS x zy
+Outputs relative direction of (x, sy) from turtle. {RIGHT (TOM ARDS :x :y))
+points the turtle in the direction of (sv, sy).
+
+15.9 Trigonometry
+QOSINE :angle
+
+Cosine of :angle degrees.
+SINE :angle
+
+Sine of :angle degrees.
+ATANGENT :x zy
+
+Angle whose tangent is sj/sy.
+
+(S/N, COS, and ATAN are the corresponding functions which input or oulput in radians]
+
+15.10 Text
+SHOWTEXT
+
+Subsequent printing is moved on the screen. Inilially, printing begins in the upper
+left corner.
+
+AIDETEXT
+
+Subsequent printing is no longer displayed. Text currently on the screen remains.
+
+REMTEXT
+Any text on the screen is erased and subsequent printing is not displayed.
+
+SAO
+
+Display Turtle Primitives Section 15,18
+=== scan page 56 ===
+LISP LOG] MEMO Page 32 June 27, 1974
+A variable which is T if printing is being displayed, WIL if not. Set by
+
+SHOWTENXT, HIDETEXT, and REMTEXT. Don't cet it yourself.
+
+‘TEXT
+
+Variable containing the number of the display item which is the tewt displayed by
+SHOPTEXT, etc.
+
+MARK :x
+(TYPE :X} is placed at the turtie’s current location, SNAP “sitle” MARK “text”
+
+creates a snap of the word “text”. This allows the word to be manipulated, ie. Moved to
+any part of the screen, otc.
+‘TEXTXHOME, :TEXTY HOME
+
+Variables containing coordinates of text to ba displayed on the sereen.
+Changeable by user. Initially :‘TEXTEHOME= 0, :‘TEXTYHOME= 1000, These are in
+absalute scope coordinates.
+15.11 Manipulating Scenes
+Note: sFICTURE is the name of the turtle’s track, Does nol include any snaps displayed
+via SHOP, SHOP SNAP, etc. :TURTLE is the name of the turtle. :TEXT is the name of
+any text displayed via SHOW TEXT.
+SHOW :scene
+
+<cene is moved ta tha current position of the turtle and displayed. It is not
+copied.
+
+AIDE :sceme
+scene ts hidden but not destroyed,
+PHOTO “seana” {SNAP |
+
+The current picture is copied and named :scene, Any old snap of this name is
+destroyed.
+
+PHOTO “ecena” <line> [SNAP]
+The picture drawn by “linea> is named scene.
+EATERSNAP “teens”
+
+HPICTURE is rebound to a fresh display item. The initial state of this item hides
+the turtle, Subsequent commands refer ho this new item,
+
+ENDS NAP
+
+The original -PICTURE is restored.
+
+Display Turtle Primitives Section 15.11
+=== scan page 57 ===
+LISP LOG) MEMO Page 53 June Z7, 1374
+
+RESNAP “scene”
+
+scene is made the current picture. The only difference between this and
+EATERSNAP “teene” is thet a new display item is not created, and the turtle is nat
+hidden, ENDSNAP also restores the original sPICTURE.
+RESNAP “econe” <line>
+
+The picture drawn by <line> is added to scene. The <line> is executed, referring
+to the turtle residing in scene, Subsequent commands will refer to the old turtle.
+
+PICTURE <display commands
+
+‘PICTURE is bound to a new display item while the commands are executed, The
+original :PICTURE is restored following execution of the commands. Similar to SNAP
+“scone” <commands> except that no name is given to the new item. instead, the number
+of the item is returned. Thus, the same effect is achieved by:
+
+SNAP “scene” <commands or
+MAKE “eeene” PICTURE “commands?
+
+Except thal scene is not added to the list of snaps,
+SHOW SNAP sacene
+A copy of scene is displayed at the turtla’s current position.
+HIDESNAP sacene
+All copies of scone are hidden,
+ERASE :acene
+All copies of scene are destroyed.
+SNAPS
+
+A list containing all currant snaps.
+
+15.17 Plotter
+PLOTTER
+
+The display is plotted on a new plotler page. PLOTTER will ask if arrays from
+previous plot should be erased. The user should type FES if his preceding plot is
+complete.
+PLOTTER |
+
+Display plotted on current plotter page.
+
+NOP LOT
+
+Display Turtle Primitives Section 15.12
+=== scan page 58 ===
+LISP LOGO MEMO Page 34 June 77, 1374
+
+The plotter |¢ reloated,
+DISPACE
+
+Outhing of 7x11 page displayed as :-PACE.
+
+15.13 Pots
+DIALS
+Outputs the value of pot = as a decimal fraction belween 0 and |. Careful: the
+a on the pots are marked in octal, but LLOGO normally expects decimal numbers as
+15.14 Points
+[Points ane displayed whather or not the pen is down]
+POINT
+Displays a point al the furtle’s current location.
+POINT sp
+Displays a point af sp.
+POINT snap ip
+Displays a point in ssnap at :p.
+POPNT snap ne ty
+
+Cisplays a pont in ssmap at (i, sy)
+
+15.15 Global State of the Turtle's World
+
+For all of these functions, the first input “scene” is optional. if left oul, the commansd
+refers to :PICTURE by default.
+
+SETHOME -:ec4ene
+
+Resets turtle’s home to current position,
+SETHOME :ecene ix cy
+
+Resets the turtle’s home to the absolute scope coordinates of (x, sy) Takes
+effect immediately by moving the current sPICTIRE to the now home. (SETHOME cecane
+S12, 512.) restores the home to the center of the screen.
+
+MOTION srcene
+
+Display Turtle Primitives Section 15.15
+=== scan page 59 ===
+LISP LOGO MEMO Page 55 June 27, 1574
+
+Moves :scene under the control of space war console 1. Button lerminales
+movement. The new home is returned, expressed in absolute scope coordinates. If the
+current home is returned immediately and the space war console is ignored, check that all
+switches on the color scope data ewitch extension are in the middie position.
+
+ALINK :acene
+Blinks :scene.
+UNBLINK sacene
+Terminates blinking.
+BRIGHT sacene
+
+Returns current brightness of scene as a number from | idimmest) to @
+(brightest). Ordinarily, ‘TURTLE and :PICTURE are al maximum brightness.
+
+BRIGHT sacene level
+
+Sets brightness of scene to level, where devel is an integer from 1 to &
+SCALE sacene
+
+Returns current scale of scene. Scale is an integer from | (standard scale) to 4
+(16 times standard scale},
+
+SCALE vecene sive
+
+Sets scale of :scene fo zsize, where size is an integer from 1 to 4. size is a
+multiplicative scale factor, Hence, SCALE 2 doubles the size of an ordinary picture,
+SCALE J quadruples if and SCALE 4 multiplies the size by & SCALE | restores picture
+to standard size. This is a hardware scaling and affects the current display as well as
+future displayage.
+
+DSCALE :acala
+
+The length of a turtle step is reset lo scale. sscale may be any real number.
+Resetting the scale with DSCALE rather than SCALE has the advantage that the scale
+factor may be any real number. However, OSC/ILE applies only to future display and not
+the current picture.
+
+Display Turth Primitives Section 15.15
+=== scan page 60 ===
+LISP LOGO MEMO Page 58 June 27, 1574
+
+Section 16, The Music Box
+
+The music bow is a fone generator for from one to four simultaneous voices,
+having a range of five octaves. Because of the timasharing environment, music ls
+compiled into a buffer, and then shipped to the music box all at once, for smooth timing.
+Wherever possible, these primitives have been made compatible with both those of
+POP 1] LOGO and POPLO CLOGO. They made be used with the “old” (Minsky) music box,
+or the "new" (Thornton box compatible) music bow.
+
+16.1 Plugging In
+
+To plug in the old music box, find an EXECUPORT terminal. Plug it into a 300 beud
+ITS line, using the phono type plug on the top right of the EXECUPORT back, or the
+acoustic coupler, Make sure the terminal is turned off, and plug the music box info the
+left back of the EXECUPORT. (Or find this all cet up in the musle room on the third floor.)
+Turn off the music box and attached percussion box, and pul the EXECUPORT switches
+into the “line” and “uppercase” positions. Turn on the terminal, type AZ and log into ITS.
+The panic procedure for the old music box (symptom: keyboard dead but ITS nat down) is
+to switch to local lowercase mode, turn off the music bow, and type 4. Then type SP.
+
+When using the music box fram MULTICS, remember thal both carriage return and
+line feed must be typed to end a line, when using an EXECUPORT. The terminal should be
+in “half duplex” and “lower case” modes. The panic procedure described above is not
+recommended, since pulling the terminal into local mode will have the effect of logging
+you oul of MULTICS.
+
+Plugging in the maw music box is a bit more of a problem due to limitations of
+present hardware. The critical item is a small piece of electronics known as the “terminal
+controller card”, ta be had tram Genoral Turtle in the basement of 545 Tech Square. This
+card is to be inserted in the correct orientation in port 4 of a Thornton bow. (i you have
+never done this, ask! Putting it in backwards will burn out the card.) The music box
+should be plugged into port |, 2, or 3, depending upon which has the music bow card. (it
+should be labelled.) Then, plug the interface connector of the Thorton box into # 300
+baud ITS line, a terminal into port 4, and log into ITS. The panic procedure for the new
+music box is fo get your terminal to echo "AQ) * (contral-Q space). Since the normal print
+routines will actually send “uparrow Q> for «controle, this is most easily done with the
+“echo” gadget of the Thorton Box, a small connector which makes the Thorton Box look
+like a full duplex computer line. (lf you want to make yoursell one, see General Turtle or
+Mark Miller; you probably won't need i.)
+
+16.2 Turning On
+
+Assuming you are plugged in and logged into ITS, you may now run either music
+box in LISP er LLOGO. LLOGO will ask you if you want the music box; if so, it will ask you
+which one; if the new one, it will ask you which port it is plugged into. After answering
+all questions, type STARTMUSIC. tt will tell you to turn om the music box (the old one
+will make a lol of noise), and then type OK. Then, the noise (if any) will stop, and you
+are ready to go. LLOGO behaves much like other LOGOs, and understands the primitives
+below,
+
+The Music Box Section Ui,
+=== scan page 61 ===
+LISP LOGO MEMO Page 57 June 27, 1574
+
+The music box can also be run from « pure LISP, Type (FASLOAD MUSIC FASL
+DSK LLOGO), and answer the questions. Type (STARTMUSIC) and the following
+
+primitives will behave like LISP SUBRS or FSUBRS, (if you do ERRLIST hacking, see Mark
+Miller.) :
+
+16.3 Music Primitives
+
+A great deal of effort has gone into ensuring upward compatibility with CLOGO
+and 11LOGO. If you have programs for either of these which no longer work on LLOGO,
+Please let me kmow, Notice that many “intermediate” level functions such as CHORLS,
+which had been written in LOGO code, are supplied as LISP primitives for efficiency, In
+addition, new facilities have been added which should be helpful. in the following, all
+such situations have been indicated. Occasionally, a single function replaces several
+LOGO functions; the others are still available, but may print a message recommending the
+newer function for future code. Since most music functions are executed for effect,
+unless otherwise indicated, the value of a function is the atom (word) 7.
+
+BOOM
+
+Returns the number which corresponds to a drum beat. Using DALM is more
+efficient. No inpuls.
+
+BRUSH <duration liat>
+
+Takes 1 input, a list of durations. Plays (ie. stores in the music buffer for the
+current voice) a sequence of brush notes (see GRITCH) and rests. A duration of n
+means | brush followed by n-l rests.
+CHORUS <form I>... . ¢form 4
+
+Takes from one to four inputs, which should be forms [procedures with
+
+arguments, or constants] CHORUS evaluates each argument in turn, and then goes on to
+the mext voice, in cyclic order, and evaluates the next argument. Example:
+
+*CHORUS SING | 10 SING 5 10 SING 8 10
+|
+
+If the number of inputs is the same as :AVONCES, sequential calls to CHORDS or
+SING will do the expected thing; if the number of voices used by the arguments is equal
+fo :ATVONCES, recursive calls will also work, For ofher situations, just remember thal
+‘VOICE is updated after evaluating each argument. For example, if :NVOCES = 3 and
+you CHORUS two calls to SING, the next call to CHORUS will affect voice 3.
+CHORUS? <form I> <form >
+
+Version of CHORUS which takes ewactly two arguments, For upward
+compatibility only.
+
+CHORUS <form [> <form I> <form J>
+
+Analogous to CHORLS2.
+
+The Music Box Section 16.5
+=== scan page 62 ===
+LISP LOGO MEMO Page 58 June 27, 1574
+
+CHORUS *form [> *form 2 “form I* <form
+Analogous to CHORLS3.
+DRUM <liat of duretions>
+Analogous to BRUSH for drum motes (see BOOM),
+GRITCH
+
+Returns the sumber corresponding to the brush sound of the percussion speaker,
+More efficient to use BRUSH.
+
+MAKETUWNE “tune nome*
+
+Takes os input a nama, like LOGO MAKE or LISP SET, ft multiplewes the buffer
+and saves it as the “thing” of the name. Thal is, it stores the tune as data, as opposed to
+procedures. This allows faster playing (see PLAY TUNE) and easy storage (SAV Ed with
+other LOGO variables.) Since MAKETUNE does not clear the buffer, allows saving and
+playing incrementally larger portions of a long piece. Tunes made on one music bow can
+be played on the other, with the exceplion that tunes with exactly three voices can
+never be played an the mew music box (see AFOICES) MARKETLNE did not exist in
+CLOGO or 11 L0G0.
+
+MBUFCLEAR
+
+Ne inputs, Clears the music buffer, and starts at voice 1. This should be done for
+example, after typing AG to kill an unpleasant song, or alter MAKETLNEing the final
+version of a song, before starting a naw one.
+
+MBUFCOUNT
+
+Same as LEN.
+MBF INIT
+
+No-op. Prints message to lat you Know you triad to use this relic of the past.
+HBUF NEXT
+
+No-op. (See MBLIF INIT)
+
+MBUF PUT
+No-op. (See MBLIFINIT)
+MBUFOUT
+
+Na inputs. Plays the music buffer. Does not clear it.
+
+MCLEAR
+
+Same as MBUFCLEAR.
+
+The Music Box Section 16.3
+=== scan page 63 ===
+LISP LOGO MEMO Page 59 June 27, 1374
+
+MLEN
+
+Returns the duration of the longest -V ONCE created so far (since the last
+MBUFCEAR) Useful for building procedures such a percussion accompaniments for
+arbitrary length tunes. (see PLEN, :MAX)
+
+MODMUSIC <T or NIL
+
+Takes one inpul, AVL or otherwise. lf mon-MIL, puts music in a mode where
+numbering is from O to 59, and note 60. is the same as note 0, fie, (note mod 60)), so
+that one need nol worry aboul exceeding the range of the music box.
+
+NEP MUSIC
+
+No inputs, Informs system that you wish to use the new music box, Asks which
+port music box is plugged into. Normally user will nol need to call NEP MUSIC, as the
+questionnaire at load lime suffices. Sea: OLDMUSIC.
+
+NOMUSIC
+
+No-op. See MAUFPLT. This function may be reinstated as a way (a excise the
+music package, for example, when one wants to load the turtle package instead.
+
+NOTE <pitch> <duration>
+
+Unfortunately, {through no fault of LLOGO) there are minor variations belween
+LILOGO and CLOGO. The difference between NOTE and SINC is one such problem.
+According to LOGO memo 7 (8/10/73), MOTE is the basic DLLOGO music command, It
+takes two inputs, a pitch and a duration. If numbers pitches chromatically from -24. to
+36. with 0 being middie C. There are also three special pitches, as follows:
+
+“28. is a rest
+-é7, is a boom
+“26. is a gritch
+-25. is illegal.
+
+LILOGO MOTE can also take multiple inputs. LLOGO music has implemented all of this for
+NOTE, except the multiple inputs. The numbering is slightly different from CLOGO S/NG,
+which is also implemented in LLOGO, (see: S/MG).
+
+NVONCES <I, 2, 3, or 4
+
+Takes one inpul, hopefully a number between | and 4. Sets :AVOICES to that
+number, clears the buffer, and sets -FOCE to 1. Remember that 3 voices is illegal on the
+new music system, and will generale an error. itis generally better to use four voices,
+one blank, so that tunes will play on either music bow. In MODMUSIC T mode, (normally
+not the case), calling NVOICES with a number outside of [1,4] will not cause an error,
+but seems crazy. The 1+ inpul mod 4 will be used instead. SETing :AVOVCES or
+MAKEing "AVOICES" cannot be prevented, bul is considered a faux pas. Accessing
+:-AVOICES is welcomed. Calls MBUFCLEAR and resets VOICE to 1, See: :NVOICES,
+‘VOICE, VOICES, MODMUSIC
+
+OLDMUSIC
+
+The Music Box Section 16.3
+=== scan page 64 ===
+LISP LOGO MEMO Page G8 June 27, 1574
+
+Mo inputs. Puts system in mode for old music box. Normally nol needed by user,
+as questionnaire at load time suffices. Might be used, for example, if you made a mistake
+answering the questions. See: WEAF MUSIC.
+
+PERFORM | Abbreviation PM}
+
+No inputs. Outputs the music buffer, and then does an MALIFCLEAR. See:
+MBUFOUT, MBUFCLEAR, PLAYTUNE.
+
+PLAYTUNE <tune>
+
+Takes one input, which must evaluate to a tune crealed by MAKETUWE. tt plays
+the tune. Does not clear or olherwiae alter the current music buffer, PLAY TENE is
+transparent to the current number of voices, even if the fume uses a different number,
+See: MAKETLUNE, PM.
+
+REST
+
+Mo inputs. Return the number of the note which generates silence on the music
+box. (Like BOOM and CRITCH, this will win independently of whether 11LOGO or CLOGO
+primitives are being used; likewise, it will be the correct number for MOOMUSIC T or
+normal state, even for different scalebases,) Naturally this checking is bess afficient than
+just calling S/NG -25. or NOTE -28. for the appropriate duration, See: S/MG, MOTE,
+MODMUSIC, :5CALEBASE.
+
+RESTARTMUSIC
+
+No inputs. Like STARTMUSIC, except re-initializes all system variables, and runs
+questionnaire as far back as asking which music box, Leeful in situations of total boss.
+after panit procedure, Usually tunes created by MAKETUNE, and user procedures will
+be intact. Buffer will be wiped out. In cases of peculiar behavior at login or load time,
+guarantees that everybody thinks they have the device you think they do. if this does
+not work, go to “PLUGGING INT.
+
+SING <pitch> <dwration®
+
+Basic CLOGO and LLOGO music command. Takes two inputs, a pitch number, and a
+duration. ft is highly recommended that durations be integers greater than O! Very large
+durations {each unit corresponds to a character atom in LISP) are apt ta slow down the
+system a lol, so small integers are highly advised. Pitches are from =25. to 39., with ©
+being middle ©. (But see the remarks about LILOGO's variant, MOTE, and also
+‘SCALEBASE and MODMUSIC) Pitch -25, is a rest, -24. a boom, -?3. a gritch, -2??.
+ignored. (Bul see REST, BOOM, GRITCH) Durations are normally broken down into N-1
+beats of pitch and 1 beat of rest, to avoid slurring the music. However, if the SPECIAL
+wartable -INSTRUMEAT is “STACCATO, 1 beat of note followed by N-1 beats of rest
+will be sung. (Le, stored in the music buffer under the current voice). If other phrasing
+is desired, it may be added later,
+
+SONG <pitche> «duration
+Takes two inputs, a list of pitches and a list of durations. Calls SING, pairing
+
+pilches with durations until the shorter list is exhausted. Im other LOGOs, this was not a
+primitive, bul was writlen as a recursive LOGO procedure.
+
+The Music Box , Section 16.3
+=== scan page 65 ===
+LISF LOGO MEMO Page 61 June 27, 1974
+
+STARTMUSIC
+
+Ho inputs. Should be called to turn on the music bow. Unlike CLOGO, it pauses fo
+let you turn on the box, to minimize the unpleasant noise generation on the old music
+box. (PERFORM alone will suffice). Clears the music buffer and sets :VONCE to 1.
+Probably unnecessary with new music box.
+
+VLEN
+
+No inpuls. Returns duration of current buffer, See: MEUIFCOUNT, :MAX,
+MLEN. Useful when chorusing a tune wilh an accompaniment. |f the accompaniment is
+the last argument to CHORUS and contains a stop rule like,
+
+IF VLEN = MLEN THEN STOP
+the accompaniment can be used wilh arbitrarily bong tunes,
+FORCE <potee=
+
+Sets :FOICE to its one input, provided that input is a positive integer jess than 5.
+H greater than the current number of voices, AFOICES is called to increase the number.
+All music from pow until the next call to FOICE (or a primitive like CNORUS which calls
+FORCE) will go into this voice. All the voices in use will be multiplexed prior to
+PERFORMing the buffer. In MODMUSIC T mode inputs greater than 4. do not cause
+
+errors, bul are simply cycled through the allowed voices. MAKEing (LLOGO) or SETing
+(LISP) -VONCE is not nice.
+
+FORCES
+
+No-op. See NOMLSIC If anyone has a use for this which is reasonable, eg,
+synonym for WVONCES, | will be glad to implement if.
+
+INSTRUM ENT
+
+Special system variable which is user settable. ts value determines the behavior
+of MOTE and SING as above. Current meaningful modes are LEGATO and STACCATO.
+Anything else is considered STACCATO for now.
+:MAX
+
+This pseudo variable is actually a call to MLEN, above. It exists for compatibility
+with CLOGO.
+
+:NVOICES
+
+Special system variable, nol to be changed except by calling AVOICES. It tells
+you the number of voices being filled or played al prasent. Default is 2.
+
+OME
+Special system variable, to be changed only by calling VORCE. Tells you the
+
+current voice that ls being filed. MEUFCLEAR resets to 1. Always initialized to 1. Can
+be changed by call to CHORLS,
+
+The Music Box Section 16.3
+=== scan page 66 ===
+LISP LOGO MEMO Page G2 June 27, 1374
+SCALERASE
+
+Special system variable which may be changed by user. [ft tells the offset from
+middle C to ba used in renumbering notes fo ones taste. Default ls zero.
+
+The Music Box Section 16.3
+=== scan page 67 ===
+LISP LOG) MEMO
+
+Page BS June 27, 1974
+
+Index
+
+1ILOGO = «2, 11, 13, 37
+LiLOGO User's manual = =13, 37
+
+340 «= «14,38, 47
+
+Abbreviation 19, 22, 23
+
+alimode 13
+ambiguity 16
+Angle brackets 13
+APL 6
+
+arithmetic 3, 16, 1?
+ARPANET a4
+Array 1, 36
+
+ASCIl #8
+associativity 16
+RBOP 28
+brackets 35
+
+breakpoint 10, 24, 25
+buried procedures 21, 22, 23, 30
+
+canned loop =
+
+carriage return = 7, 8, 13, 20, 24, 35, 36, 39, 41
+Character display 1, 14, 41
+
+character syntax =
+
+CLOGO §=2, 3, 4,5, 11, 19, 18
+
+CMU 40
+
+colon 6
+
+comments 36
+
+comparison = 16, 17
+
+compile 22, 30
+
+Conditionals 4,5
+
+CONNVER 1,8
+
+Control character = =—-13, 20, 21, 24, 39, 40
+eontral structure 4, 31
+
+coniral-alsign 29
+
+DATAPOINT terminals 14
+defining = =, 14, 20
+device 32
+
+devices &
+
+directory 32,38
+Disparity 2
+
+dollar 35
+
+dotted pair = =3, 8
+
+double quote 24, 36
+=== scan page 68 ===
+LISP LOGO MEMO
+
+Page 64 Jone 27, 1574
+edit mode 20)
+Editing =, 9, 10, 14, 20, 35, 40
+English 2, 4,5
+
+error handling 24, 34
+error interrupt 25
+
+error interrupt handlers = 10
+error messages 9, 10
+evaluator =9
+
+exclamation points 36
+exponentiation 17
+
+file specification 32, 38
+fixed point 1,3, 4, 37
+Floating point =|
+
+food supply 43
+
+fraction = 3
+
+functional arguments 19
+
+garbage collector 28
+generation 43
+
+GERMLAND 11, 14, 38, 40, 41
+global variables 29
+
+GT4)—sL I, 14, 38, 47
+
+heading 42
+homonyms 6,9, 18, 19
+How To Gel On the System 13
+
+hungry 43
+M274. 99
+identiliers
+
+implementation 8 lz
+
+infix 5, 8,9, 16, 17, 12
+initialization file 14, 38, 40
+inputs 5, 6, 9, 28
+
+Interim LISP User's Guide 19
+interning 8, Li
+
+Interrupi 1, 21, 35, 40
+
+line number 3, 4, 6, 9, 38
+Line oriented input 7
+ling-oriented LISP reader = 8
+
+link 3
+
+lists 2
+
+logic =, 16, 17, 35
+Jogin la
+
+logout 15
+
+MACLISP Reference Manual 13, 38
+minus sign = 1B
+
+mislyping LO
+
+mnemonic 3,4
+
+MULTICS l2, 18, 30, 32, 38, 39
+music 3, 11, 14, 34, 33, 40
+
+Index
+=== scan page 69 ===
+LISP LOGO MEMO
+
+Page & June @7, 1574
+
+Naturainess 2
+negative number 18
+NLLOGO = 14
+
+noise words 4,5
+
+obarray 8
+Gulput 35
+
+parentheses 5, 7,9, 16,36
+Parser 5, 9, 16, 18, 19, 28
+parsing property 9
+pathname 38
+
+POP-6 =A, a
+
+Percent sign 836
+
+PLANNER 61,8
+
+precedence 16, 17
+
+prefix 5,9, 16, 18
+
+pretty print = 4
+
+primitives 8,5, 22,30, 34
+printing 9, 10
+
+program form 3
+
+program understanders 9
+prompter 20, 41
+
+Property list 1,9, 19, 36
+pure 11
+
+reader  &
+
+readiable 2
+recursian tl. ?
+roundoff 4
+
+rubout 21,35
+
+run fime arror 10, 24
+
+Self-modifying procedures 31
+semicolon 36
+
+sentences 2
+
+sharp sign 25, 29, 95
+side effects 28
+Simplicity 2
+
+single character object &
+singh quote 94
+
+size = A.
+
+snap =F
+
+speed 9,11
+
+stack 10, 25, 28
+
+string 11,35
+super-procedure trea 10
+
+TENSO 8=—s-«12, 32, 40
+TENEX 1?
+Thornton box 56
+TNs 39
+
+top level 29, 36
+
+Index
+=== scan page 70 ===
+LISP LOGO MEMO
+
+Page 66 June 27, 1974
+
+turtle = =8, 11, 14, 21, 38, 40, 47
+type checking 9, 10
+
+typing errars = 20
+
+unparser 10, 18
+
+variables 6, 21, 29,33
+
+words 2
+wrong number of inpuls 28
+=== scan page 71 ===
+LISP LOG) MEMO
+
+Page 67 Jone 27, 1374
+
+Lndex to LLOCO Primitives
+
+al 41, 42
+
+Ado 3
+
+AC rit
+
+AE 20
+
+AF a?
+
+AG =§ 14, 30, 40, 58
+AM 26
+
+aly 4
+
+AP #l
+
+AR eu
+
+i a |
+
+Ar 26
+
+AF
+
+Ax 14
+
+AF 6a?
+
+Ag ©6193, 56
+
+$P (25, 27
+SCAREFUL 18
+
+COMPILED 30
+MCONTENTS 30
+:ERITMODE 20
+:EMPTY 36
+r-EMPTVYRF 36
+-ERREREAK = 24, 26
+GERM 646
+CRIDSIZE 8645
+:HEADING 49
+-HUNGRY 45
+INF IX 18.
+-INSTRUMENT 61
+:LISPRREAK rds]
+‘MAX 61
+‘NVOICES §=6 61
+SCALERASE = 62
+
+SHOP 451
+
+‘SNAPS 5a
+‘TEXTXHOME 52
+‘TEXTYHOME 52
+‘TURTLE 8648
+VOICE 61
+‘FRAPAROUND 46
+:NCOR 8649
+
+:‘¥COR 49
+
+Index te LLOGO Primitives
+=== scan page 72 ===
+LISP LOGO MEMO
+
+Page G8 June 27, 1574
+
+ABBREVIATE 6145
+ACCESSIALE 44
+AND 4,5, 17
+ARRAY af
+ASCIY 36
+ASSOCIATE 1?
+ATANGENT 51
+
+BACK 44, 48
+
+’ BEARING 59
+
+BK 644,48
+BLINK 55
+
+ROOM &F
+
+BOTH 5,17
+BREAK #5
+BRIGHT 55
+RRUSH 57
+ASIDE 645
+
+BUG 15, 40)
+BURY 33
+BUTFIRST 2,3, 4
+BUTELAST 2
+
+CAR 2,3,4
+CATCH 25
+
+CDR 2,3, 4,36
+CHORUS SF
+CHORUS? ‘57
+CHORUS 5?
+CHORUS4 58
+CLEARSCREEN 49
+
+co 27
+
+COMPILE 30, 33, 40
+CONS 3,28
+CONTINUE 24, 25, 26, 27
+COSINE 51
+
+cs 49
+
+DECLARE 30
+DERM 45
+DELXY 48
+DELY 48
+DESTRUCT 45
+IWALS 54
+DISPAGE 84
+DSP LAF 19
+mo 64,19
+DOF NN 26, 28
+DRUM 58
+DSCALE 55
+
+Index to LLG) Primitives
+=== scan page 73 ===
+LISP L0G0 MEMO
+
+Page 63 June ZF, 1574
+
+EASTP 44
+
+EAT 43
+
+EDIT 18,20
+EDITLINE 20
+EDITTITLE 20, 28
+EITHER 5,1?
+END 20
+ENDSNAP Se
+ENTERSNAP 52
+FOUAL 5
+ERASE = 19, 22, 23, 33,53
+EFALFRAME 10
+EXIT 27
+EXPLODE 36
+
+FALSE 6,35
+
+FD 44, 48
+
+FILLFOOD = 43
+
+FIRST 24,4
+FLUSHCOMPILED 30 .
+FLUSHIANTERPRETED 8 30
+Foop 43
+
+FOODP 43
+
+FOORSUPPLF 4&4
+FORWARD 44,48
+FRONT 45
+
+FSIDE 45
+
+GERM 44
+CERMDEMOS 41
+GET 19
+CETSQUARE 43
+GO 4,5
+COODAYE 15
+GRID 42
+CRIDP 42
+
+HW 48
+
+HEADING 44,49
+HERE 50
+
+HIDE 52
+HIDESNAP 453
+HIDETEXT 51
+HIDETURTLE = 47
+HOME 48,49
+
+HY = 6a?
+
+IF 5,1?
+IFFALSE 4,37
+IFTRUE 4,37
+INFIX L?, 18
+INSERTLINE 37
+ms 5
+
+Index ta LLOGO Primitives:
+=== scan page 74 ===
+LISP LOG0 MEMO
+
+Page 78 June 27, 1974
+
+KILL = 44
+
+LAST 2, 18
+
+LEFT 45,49
+LEFTSIDE 45
+LEVEL 3%
+LENEPRINT = é2, 40
+LISPAREAK 25, 27
+“isT = 619
+
+LOOGO (NIT) = 14
+LOCAL =a?
+LOCGORREAK 25, 26, 27
+LOcoLT =a
+
+iSIDE 8645
+
+LT 45,49
+
+MAKE = 17, 32, 36
+MAKETUNE 58
+MAKTURTLE 48
+MAPCAR 4
+MARK 52
+MBUFCLEAR 58
+MBUFCOUNT 58
+MBUFINIT 58
+MBUFNEXT 58
+MBUFOUT 58
+MBUFPUT 58
+MCLEAR 58
+MLEN 59
+MODMUSIC 459
+MOTION 54
+MOFE 42
+
+NERF MUSIC 59
+NEXT 44
+
+NIL 6,35, 36
+NODISPLAY 47
+
+NOMUSIC 59
+
+NOPLOT 53
+
+NOPRECEDENCE 18
+
+NORTHP = aa
+
+NOT 17
+
+NOTE 59
+
+NOWRAP 42, 46
+
+AVONCES 5g
+
+ORSTRUCT 45 .
+
+OLDMUSIC 59
+OLOTURTLE 48
+OR 45,1?
+
+Index io LLOGO Primitives
+=== scan page 75 ===
+LISP LOG) MEMO
+
+Page 71 June 27, 1574
+
+PAUSE 25
+
+Po 50
+PENDOWRN = 50
+PENP 50
+PENSTATE 50
+PENUP 50
+PERFORM 60
+PHOTO 52
+PICTURE 83
+PLAYTUNE = 60
+PLOTTER 53
+POINT = 54
+PRECEDENCE 17
+PRINT 18
+PRISTDORN 27
+PRINTCRID 42
+PRINTOUT = 6, 13, 20, 21, 22, 32, 33, 40
+
+PRINTUP = 26
+PROG 43,37
+PU O50
+
+PLTSQUARE 43
+
+RANDOM 18,37
+RANGE 5&0
+READ 19
+READFILE = 19,90, 33
+REAR 45
+REMSQUARE 43
+REMTEXT 4&1
+REPEAT = 41
+RESNAP 53
+REST 60
+RESTARTHUSIC =660
+RIGHT 45, 49
+RIGHTSIDE = 46
+ROUNDOFF a7
+RSIDE 645
+
+RT 45,49
+
+RUN 19
+RUNGERM 41
+
+SAVE 18, 92,33
+SCALE 55
+
+Sp af
+SETHEAD 49
+SETHOME 54
+SETT 50
+SETTURTLE = =550
+SETX 48
+SETX¥ 48
+SET¥ 48
+SHOW 4&2
+SHOP SNAP 53
+SHOWTEXT 451,52
+
+Index: to LLOOO Primitives
+=== scan page 76 ===
+LISP LOGO MEMO
+
+Page 72 June 27, 1574
+
+SHOWTURTLE = 47
+SINE 51
+
+SING 60
+
+SONG 60
+
+SOUTHP 44 ‘
+SPECIAL 30
+
+ST 4?
+
+STARTDISPLA¥ 19, 4?
+STARTHUSIC 61
+
+STEP 42
+
+STORE 3?
+
+SUM 6
+
+Tr 35
+TEST 4, 17, 37
+TEXT dé
+
+THEN 4,5
+THROW = 25
+
+TO 4,5, 20, 22
+TOPCERM = 4
+TOUCH = 45
+
+TOR ARDS 50
+TRACE 10, 23, 29
+PRUE a5
+TURTLESTATE 48
+TFPE Be
+
+UNEEINK 55
+UNGRID = 41
+ONSPECIAL = 24
+UP 26, 27, 28
+USE 39
+USER-PAREN 10
+
+FOE 61
+VOICES 61
+Fo 49
+ESTP = 48
+HAT 43
+FHERE 4a
+Free 49
+FIPECLEAN 49
+FRAP 42, 46
+WRITE 32,33
+XCOR 49
+XHOME 49
+FOOR 49
+YHOME 50
+
+Index to LLOGD Primitives
+=== scan page 77 ===
+LISP LOGO MEMO Page 73 March 4, 15975
+
+TVSIZE
+
+Returns a list containing the horizontal and vertical sizes of the display area in raster
+points. The default size is 300 « 300, The dimensions of the entire TV screen are 455 [vertical] «
+576 [horizontal]
+
+TVSIZE “new-iize™
+
+Sets both the horizontal and vertical sizes of the display ar@a to “new-stze>. Modifying the
+TVSIZE causes a CLEARSCREEN to be performed. The size of the area at the bottom of the screen
+for typein and typeout is adjusted to take up as much space as possible on the screen not being
+used for graphic output. Changing the TVS/ZE will not have any effect on pictures previously saved
+by MAKE INDO [see Section 17.16)
+
+TVSIZE “new-x-site? “new-y-sire>
+
+Sets the horizontal and vertical sizes indapendantly. If either of the two inpuls ie NIL, the
+corresponding size remains unchanged.
+
+TURTLESIZE
+
+Returns a list containing the horizontal and vertical sizes of the displa, area in turtle
+coordinates. These are in floating point. The initial default is 1000 * 1000, and the origin is always at
+the canter of the screen -- so turtle coordinates initially range from -500 to #500, If wraparound
+rode is in effect, turtle coordinates are allowed above and below the range sel by TURTLESIZE,
+and will be mapped to appropriate points on the screen.
+
+TURTLESIZE “new-sise™
+
+Sets the dimensions of the sereen in turtle coordinates to <new-aire? furtle steps, [ft the
+display area is not square [that is, if the horizontal and vertical TV size parameters are not equal),
+then <new-size> is taken to be the number of turtle steps for the minimum dimension of the screen,
+and the other dimension is adjusted accordingly. In particular, you can't specify TLRTLESIZE
+independently in each direction, so that a turtle step always corresponds to the same number of TV
+points. Changing TURTLESIZE bas no affect on the picture currently being displayed, or on any
+pictures saved by MARE INDOF.
+
+SETHOME {TURTLEIOME}
+SETHOME “new-x-home> <new-y-hame> [TH]
+
+Changes the origin of turtle coordinates to the specified location, defaulting to the turtle’s
+present position, That position on the screen will then correspond to an XOOR and FCOR of zero for
+all subsequent turtle commands, The home location is local to each turtle, so that each of several
+turtles may be assigned differen! homes on the screen
+
+=
+
+17.15 Screen Color
+
+The Knight terminals have a facility for easily changing whether bits which are on in the TV
+memory will be displayed as dark or light on the user's screen. By analogy with a photograph, in
+*negative” mode, points which are on [graphics and text] will be displayed as light on a dark
+background, Im “positive” mode, (hey are displayed as dark on a light background, The current state
+
+Display Turtle for the Knight TY Terminals Section 17.15
+=== scan page 78 ===
+LISP LOGO MEMO Page 74 March 4, 1575
+
+of a weer's terminal can be complemented by typing <ESC> C. The following functions allow it to be
+examined and controlled by a user program.
+
+COLORSTATE (CLST}
+T iff the user is in “positive” mode, NIL if in “negative” mode.
+COLORNEGATIVE [(CLN}
+
+Puts the user in negalive mode, ie. light text and lines on a dark background, This is the
+mode in effect initially al login time.
+
+COLORPOSITIFE {CLP}
+Puts the user in positive mode; dark text and pictures on a light background.
+COLORS ITCH {CLS}
+
+Complements the COLORST ATE; if the current mode is negalive, swilches fo posilive mode,
+or vice versa. This has the same effect as typing <ESC> C on the terminal,
+
+17.16 Saving Pictures
+
+In creating pictures which consist of repeating patlerns of smaller pictures, and creating
+animated cartoons, it is offen useful to be able fo save displayed pictures drawn by a series of
+turtle commands, and operate upon them as a unit, displaying and erasing tham, moving them to
+other parts of the sereen, ete. The LLOGO TV turtle provides such a facility, allowing the user to
+save rectangular portions of the screen as arrays of points. These arrays can be displayed and
+erased al any location on the screen, although they cannot be aulomatically rotated.
+
+This facility is somewhat different from the SNAP command in the LLOGO 340 turtle and
+LILOGO. The SAVIP operation saves the picture as display lists, essentially a vector representation,
+while the TV turtle window saves an array of points. For large, sparse pictures, the vector
+representation consumes less space, while the point array representation favors small, complex
+pictures. Saving point arrays mekes it possible to redisplay pictures much more rapidly than
+redrawing them with the commands used to originally generate the picture, since recomputation of
+points lying along vectors is unnecessary. It is therefore ideal for programs which want to make only
+lew, spatially localized changes to a picture, but need the maximum possible speed for dynamic
+updating of the screen. [ft also has the advantage thal the amount of space and time used for
+creating and redisplaying pictures is insensitive to the complaxily of a picture within an area. These
+characteristics make an array representation more suilable than a vector representation for, say, a
+épate war program, where the space ship must be redisplayed rapidly, and consists of perhaps a
+large number of vectors confined to a small area of the screen. It also provides a “clipping” facility,
+
+Saving point arrays has a property mot shared by LLOGO's SNAP for the 340 -- "What you
+see i¢ what you gel", Everything within the designated area is included, regardless of how it was
+caused to appear -- vectors, text, points, other FPN DO's, atc. This means that you can always tell
+what will be included ina saved picture simply by looking at the screen.
+
+Display Turtle for the Height TY Terminals Secthon 17,16
+=== scan page 79 ===
+LISP LOGO MEMO Page 75 March 4, 1975
+
+MAKEPINDOW <window-rame® “size (MIF)
+
+Creates a "window", Le, an array of points, and mames it <window-mame>, The “soindow-
+name> should be a word, and should be chosen so as nol to conilict with existing funclions or
+arrays. The window is centered on the turtle’s current location, and extends for <sise> turtle steps
+horizontally and vertically from the center. The location of the center of the window and its size are
+remembered,
+
+MAKEWINDOW <window-name? “horizonal-ere> *vertical-elne*
+
+Creates a window centered on the turtle’s current location, but sets the horizontal and
+vertical sizes of the window independently, 0 the area saved can be rectangular instead of square,
+as. in the one input mode.
+
+MARE INDOW <window-name> *center-x* *center-y~* *harisontal-sise® “vertical-sire>
+
+Creates a window centered on the specified location, of the specified size. If the <eertical-
+sise> is omitted it is assumed identical to the *horizontal-sice>.
+
+ERASER INDOW <window-name> [EM }
+
+Destroys the window specified by *window-name>, If the window is no longer needed, this
+permits the space that it occupied to be reclaimed.
+
+ERASEVINDOWS {EWS}
+Erases all currently defined windows,
+HFINDOR'S
+
+Global variable which contains a list of all currently defined windows.
+FINDOWFRAME.... {RF}
+
+Takes inpuls like MAK EIF INDO, except for the window name, That is, it takes from one
+to four inpuls specifying a size and optionally a center location. FPINDOU FRAME displays a box on
+the sereen which indicates the extent of the picture which would be saved by a MAKER INDO of
+the corresponding size and location. This is useful in deciding how large a window is necessary
+before using MARKEIFINDOW. The box is XORed info the sereen, so thal giving the
+PUNDOR FRAME command again will cause the box to disappear. If no inpuls are given to
+INDO FRAME the size and location default to the last ones specified.
+
+SHOR RP INDOW <window-name> [SH]
+Causes the specified window to be displayed alt the location af which it was originally
+created. Currently, wraparound is not allowed, display of {he picture is nol allowed to cross the edge
+
+of the display area. Changing TWS/ZE and TURTLESIZE have no effect on the size of saved
+pictures.
+
+Display Turtle for the Knight TY Terminals Section 17.16
+=== scan page 80 ===
+LISP LOGO MEMO Page 76 March 4, 1375
+
+SHORRF INDO <window-name* <new-conier-x> *now-ecantar-¥*
+Causes the window to be displayed af the new location specified.
+AIDE INDO? .... [NE
+
+Accepts arguments like SHOMIFINDOMW, but displays the window turning off any point
+which was on in the window when it was created. The effect of this is as if the picture were
+redrawn in eraser mode, If a call to SHOR INDO displayed the window on a blank area, a
+similar call to HIDEWINDOW will erase it. If SHOW INDOR superimposed the window on
+something already displayed, the old picture is nol guaranteed fo ramain intact after the window is
+
+en.
+
+XORWINDOW .... {XI}
+
+Like SHO IFINDOW and HIDEW INDF, but XOR's the picture into the screen.
+WINDOP HOME <citndow-rame> [FP 'Il}
+UNDO HOME <window-name? <new-x-home> <new-y-home*
+
+Changes the home location associated with a window to the specified location, defaulting to
+HERE, This is the location where the center of the window will be displayed if only the name of the
+window is given as input to SHOP INDOW, HIDER INDO, atc.
+
+SAVEWINDOW'S <filespec> [SIF S)
+
+Creates a file on the disk which saves all currently defined windows in binary. They can be
+reloaded al a laler time with CEMFINDOWS. The file specification follows the same formal as other
+LLOGO file commands such as READFILE, and LISP’s DREAD. The filenames are not evaluated.
+CETWINDOWS <filespec> (CH)
+
+Reloads windows from a disk file created by SAFER INDOORS.
+
+U7.17 Printing Pictures on the XCP
+
+Pictures drawn with the LLOGO TV turtle may be printed on the Al Labs Kerox Graphics
+Printer to obtain hard copy. The following primitive creates a fila which can be printed by the XGP
+control program SCRIMP,
+XGP <file> <area>
+
+Creates a file saving the picture in the designated area of the screen. The file can then be
+printed on the XGP, The file specification follows the same formal as other LLOGO file commands --
+from one to four words. A rectangular area limiting the picture saved is specified in the same format
+atcepled by the window commands -- from one to four numbers. If omitted, the area defaults to the
+entire screen, Example:
+
+XGP PICTURE = 200 300 100
+
+saves the picture extending for 100 turtle steps horizontally and vertically from the point (200, 300)
+
+Display Turtle for the Knight TY Terminals Section 17.17
+=== scan page 81 ===
+LISP LOGO MEMO Page 7? March 4, 1575
+
+in the file PICTURE > on the current directory. Captions can be printed on the screen using the
+MARK command and will appear on the printed picture. The pichures will be approximalely the same
+size as they appear on the TY screen. Currently pictures saved are limited to 300 by 300 TV points.
+
+Two warnings concerning XGP pictures: First, the MGP has a problem common to all Xerox
+machines. =~ an inability to reproduce large black regions. An attempt to print a picture with areas
+filled in black will cause the black regions to "white oul”. Pictures created by using the SHADE
+command to shade regions with dense patterns will nol be printed correctly on the XGP, Also, it is
+best to try to limit the area of the screen saved fo as small an area as possible. Since picture files
+must be output to the ¥GP fast enough to insure that one line is printed before the next one is read,
+large filas may lose when the system is crowded. The symptom of this sort of lossage is blank
+horizontal bands in the middle of the picture. More efficiant XGP commands to be implemented soon
+will reduce the likelihood of this sort of lossage. Images on the TV screen drawn by the TY turtle
+can aloo be printed using the Tektronix hard copy machine.
+
+17.18 Shading
+
+A unique advantage of the TY displays over vector oriented displays is that in addition to
+the display of lime drawings, they make feasible the creation of pictures using shaded areas.
+Patterns of polnis of varying densities can be used to fill regions, creating the effect of a "gray
+scale”. The TY turtle’s shading facility is aimed toward crealing a convenient and efficient means of
+specifying areas to be shaded, and pallerns lo be used in shading. The basic idea is thal regions to
+be shaded are indicated by drawing a closed curve around them in PEN DOWN mode, and placing the
+turtle inside the regeon before issuing the SHADE command, with an argument determining the
+pattern to be used. Several simple patterns are supplied by the system, bul the user has the
+opportunity of defining mew ones.
+
+SHADE <pattern name>
+
+Shades the area enclosing the turtle’s current localion. The input is a pallern fo be used in
+shading the area, and defaulfs to the SOL/D pattern if omitted, The turtle must be sitling in an
+empty area [not on a line or in a filled in region), or an error results. The effect of this primitive is
+fo fill in the region surrounding the turtle’s location with fhe shading pattern given [by inclusive
+ORing it in with the existing picture] The region lo be shaded must be bounded by a closed curve;
+SHADE works by filling in the paltern starting from the turtle’s location, and stopping when @
+boundary is reached, If the region is not closed, the entire screen will be shaded!
+
+17.19 Shading Patterns
+
+Shading patterns are represented as functions which fell the SHADE primitive how to
+shade an area. The system provides a group of predefined shading pallerns, described below, These
+will probably be sufficient for most simple uses of shading, ie. distinguishing a few meighboring
+regions with different shading pallerns, atc. Those needing more sophisticated capabilitias can define
+their own patterns. The predefined shading patterns currently available are:
+
+SOLID
+
+A shading pattern which fills in every point. This pattern is the default used if no argument
+is given to SHADE.
+
+Display Turtle for the Knight TY Terminals Section 17.13
+=== scan page 82 ===
+LISP LOGO MEMO Page 78 March 4, 1575
+
+CHECKER
+
+A pattern which fills in every other point, in checkerboard fashion.
+HORTZLINES
+
+4A pattern consisting of horizontal lines, alternating light and dark,
+VERTLINES
+
+Like NORIZLINES, except lines are vertical.
+GRID
+
+Both horizontal and vertical lines, superimposed.
+TEXTURE
+
+A pattern which turns on points randomly, creating a texture like effect. An average of half
+the points will be turned on.
+
+DARKTEXTURE
+
+LIGHTTEXTURE
+
+Like TEXTURE, but shade using different densities of points. DARKTEXTURE turns on an
+average of 3/4 of the points, created by OR'ing two random numbers, LIGHTTEXTURE averages
+1/4 of the points, obtained by ANDing two random numbers.
+
+Mew shading patterns consisting of arbitrary pictures can be defined by using the following
+primitive:
+
+MAKEPATTERN <pattern-name* <window-name> {MP}
+
+The first argument is a mame for the new pattern. The second Is the mame of a window,
+constructed by the MARKER NIN command. This creates a new pattern, which consists of the
+picture saved in the window. The pattern name may then be given as input fo SHADE. The effect
+will be to fill the closed curve to be shaded with the picture specified by the window. I[f area
+beyond the extent of the original picture is to be shaded, the picture will be repeated horizontally
+and vertically as many times as is necessary to fill the area,
+
+Alternatively, a shading pattern may be constructed by the user directly as a function. [This
+can result in faster shading than by using a pattern conslrucled by MAKEPATTERN, although it's
+more difficult to write, especially for complex patterns.) A pattern is a function of two integer
+arguments, X and ¥ coordinates of a word in the TW memory [as for the inputs to Ti’, See Section
+17.22). It returns an injeger, which indicates the stale of 32 bils of the screen, left justified,
+
+17.20 Invisible Mode
+
+When 4a program does both a considerable amount of graphics as well as non-graphic
+computation, it often becomes convenient to be able fo debug these components separately, An
+
+Display Turtle for the Knight TV Terminals Section 17.28
+=== scan page 83 ===
+LISP LOGO MEMO Page 73 March 4, 1375
+
+“invisible” mode makes it possible to dabug the non-graphic parts of a program containing turtle
+commands, withoul incurring the overhead of drawing on the screen. When the system is heavily
+loaded, code run in “invisible” mode will rum much faster, allowing the user to run a procedure if he
+is mot interested in the picture drawn, then return to "visible" mode to debug the pictures drawn by
+the program. Pictures drawn in invisible mode are nol saved and returning to visible mode requires
+that programs be re-executed to observe the picture drawn.
+
+INVISIBLE
+
+Enters “invisible” mode. Any primitive that would cause changes to pictures on the screen:
+movement of the turtle, display of saved pictures, points, ele, will nol cause anything on the screen
+fo change while running in invisible mode, Execution of procedures containing turtle primitives will
+proceed much faster; this permits running of procedures containing turtle primitives for the purpose
+Of debugging their non-graphic behavior,
+
+VISIBLE
+
+Returns to “visible” mode. Turtle functions have their usual effect, as well as their usual
+slowness. VISIBLE causes a CLEARSCREEN,
+
+17.21 Extensions
+
+One possible source of exlensions fo the TY turtle package would be the inclusion of
+Picture-saving capabilities similar to the SNAP command of the LLOGO turtle for the 340, or to
+LILOGO"'s SNAP. This would differ from the "windows" described above in that it would be a lower-
+level representation of the picture in terms of vectors to be displayed, rather than an array of
+points. Because the TW terminals do not have hardware for display of vectors, necessitating the
+computation of points lying along a vector fo draw it, redisplay of a snap would be very nearly as
+time-consuming as re-ewecuting the LOGO procedure which drew the picture. In contrast, redisplay
+of a window bypasses that recompulation, and requires much lass time to redisplay than the original
+drawing procedure required. However, a vector representation does provide several advantages. It
+is less space-consuming for pictures which occupy large portions of the screen, but contain fow
+vectors. It can be used more easily with pictures for which a description in terms of rectangular
+Portions of the screen would be inconvenient; for example, an irregularly shaped picture surrounded
+by drawings not to be included in the saved pichure. The window representation makes it difficult to
+assign independent names to the saved graphic oulput of each of several programs if the pictures
+overlap. Certain transformations such as rotations and scaling might be more easily performed on a
+vector representation than on point arrays.
+
+An additional difficulty in providing a snap facility in the TV turtle similar to that possible
+with vector oriented displays would arise in implementing the ERASE SNAP command. If several
+lines all pass through a single point on the sereen, the point must not be turned off until all lines are
+erased, If one line is erased via an ERASE SNAP, and other lines still pass through the point, the
+point must not be turned off. This requires keeping track of how many lines pass through each poinl.
+Such information could be obtained from computing the intersection and overlap of vectors displayed
+whenever a vector is drawn or erased, or by keeping a “reference count” for each point,
+incremented whenever a line passing through the point le drawn, decremented when such a ling is
+erased. The “eraser mode” of the TV turtle turns off points along lines drawn regardless of their
+previous state. This makes if somewhal less convenient than ERASE SNAP for erasure of one of
+several overlapping pictures, although the same effect can be achieved by saving the previous
+
+Display Turtle for the Knight TY Terminals Section 1721
+=== scan page 84 ===
+LISP LOGO MEMO Page 5B March 4, 1575
+
+contents of an aree in a window before drawing over it. In some cases, MOR mode can be used
+instead, so that the same procedure can be used both to draw a picture, and to erase if.
+
+Another alternative representation for picture elements would be run lengih encoding. This
+would record the contents of an area of the screen, as does the TY turtle “window". Each line of the
+area is represented as a sequence of numbers, The numbers in the sequence allernately specify
+how many conseculive points are on, and how many conseculive points are off. Like the window
+operation, this technique is capable of being used with pictures containing shaded areas, which
+would not be possible with a representation consisting solely of vectors, Although it would require
+somewhat more computation time to redisplay than would a window, it would not prove quite as
+Space consuming for large and sparse pictures, [t is nol clear whether the lime and space tradeotfs
+involved would justify the use of this representation.
+
+Each alternative representation for picture elements carries with if unique advantages and
+disadvantages, in terms of time and space efficiency, ease of modification, etc, Rather than becoming
+committed to a single representation, a beller goal is to provide flexibility by making available many
+oplians and allowing a wser or an intelligent system to choose the representation according to the
+requirements of the application.
+
+An alternative to the TY turtle’s approach fo pictures involving shading is fo extend the
+LOGO concept of the turtle’s "pen" and “eraser” to a “paintbrush”, A "paint" consisting of a particular
+shading pattern and a width for the paintbrush would be chosen by the user. When the turtle is
+moved after the execution of a BRUSH DOU'N command, the shading pattern is drawn in an area
+extending for the specified width on either side of the path of the turtle’s movement, However, this
+method has the disadvantage that programs to shade even very simple geometric figures can become
+quite complicated. This mode might be useful however, if il were possible lo move the brush under
+contral of some analog input such as a light pen or mouse. Another possibility is ta supply the
+system with specific knowledge about shading common shapes, such as circles.
+
+Other extensions to the TY turtle could center on providing facilities oriented towards
+ahimation. LOGO as a graphics language i¢ primarily oriented toward the display of statle pletures; it
+is weak in some of the capabililies needed for convenient generation of movies. A more extensive
+vocabulary of transformations which can be applied to pictures would be helpful. This could include
+rotation and scaling of saved pictures, fhree dimensional coordinate transformations, as well as a
+convenient way of incorporating user defined transformations, Some means of explicithy controlling
+the time in which changes happen lo the displayed picture should be provided. Extension of the
+control structure fo allow parallel execution of procedures would facilitate programming
+independently changes to the picture which should occur simullaneously.
+
+Another capability which the system should have is some provision for analog input, such as
+from a light pen, joystick, tablet, or mouse. This would allow the system to obtain and manipulate
+freehand sketches. Convincing drawings of people or objacts that would be difficult to construct
+from turtle programs could be readily inpul and [hen manipulated by programs. Objects on the
+ecreen could be selected by a user interactively using a rubber band vector, which is often more
+conveniont than typing, especially for children,
+
+17.39 Implementation
+
+The POP LL whieh controls the TV terminals maintains the user's sereen in ils memory, one
+bit per point. An ITS system call allows the 11's memory fo be mapped into the address space of a
+program running on the POP!O. An initialization routine written in LAP assembly language performs
+this system call, and sels up an array header which convinces LISP that this area of memory is really
+
+Display Turtle for the Haight TY Terminals Section 1722
+=== scan page 85 ===
+LISP LOGO MEMO Page Bl March 4, 1575
+
+the data for a LISP two-dimensional integer array. This array is accessible directly by the user who
+finds the supplied turtle primitives mot suited ta his needs. All changes to the display screen are
+
+performed directly by LISP STOREs, and the remainder of the display package is written entirely in
+LISP.
+
+The following primitives are probably mot of general interest, bul are internal to the TV
+turtle package, and might conceivably be of use fo a user desiring nonstandard applications.
+
+TY <line® “eolumn-uord>
+
+This is the array which helds the user's TV buffer. Acall to TV returns a 36 bit fixed point
+number, which contains two 16 bit POPL1 words, left justified. STOREs into the array will cause
+the array and the users screen to be modified as described in the discussion of DRAW MODE,
+below, Any such STORE’s should keep the low order four bits of each word zero. The first input
+counts mumber of lines from the top, from 0 to 454, The second selects a word on the line, left ta
+right, from 0 to 17 [for a total of 18 # 32 = 576 bits per line}
+
+DRAW MODE <mode>
+
+The POPIL has a feature which enables any attempt fo wrile a word in the 11°s memory
+from the POPLO to result in a specified boolean function of the word being writhen and the word
+previously there, DR/UFMQDE changes thal specification according to *mede*, which should be an
+integer representing the mode chosen from the values of one of the following atoms: JOR, XOR,
+ANDC, SAME, COMP, EQV, SETO, SETZ, SET. For example, STORE TY 0 0 16 will turn the low
+order bit of the second 16 bit word of the TV buffer on if [OR mode is in effect, off if ANDO mode
+is in effect, and complement whatever is there if in XOR mode. DRA MODE returns the number
+describing the mode previously in affect.
+
+:DRARF MODE
+
+A global variable containing’ the current mode number as set by the last call to
+DRAW MODE.
+
+Display Turtle for the Knight TV Terminals Section 17:22
+=== scan page 86 ===
+LISP LOGO MEMO
+
+SHOWTURTLE mode 68, 69
+
+LiLOGO 2, 4, 10, 12, 13, 37, 64, 74, 79
+11 LOGO User's manual 12, 37, 60
+
+340 1d, 38, 47, 64, fe, 74, 79
+abbreviation
+abbreviations
+altmode 12
+ambiguity 15
+analog input 80
+Angle brackets 12
+animation 80
+
+APL 6
+arithmetic
+ARPANET a9
+Array 1, a?
+ASCII Hi
+associativity 15
+
+21, 22
+18
+
+3, 15
+
+background 68, 73
+
+BIBOP 28
+
+block structure 4
+braces l2
+
+brackets 35
+breakpoint 9, 24, 25
+
+buried procedures Zl, 22, 2a, 30
+canned loop 4
+
+carriage return = 6, 7, 12, 19, 24, 35, 36, 3
+Character display 1, 13, 41
+
+character syntaw 7
+
+circle fe
+
+clipping 74
+
+CLLOGO is
+
+CLOGO z, 4, 4,5, 10, 12, 17
+
+closed curve if
+
+CMU 40
+colon Bi va
+comments
+comparison 15, lé
+compile 22, 20
+compiler 7
+conditianals 4,6
+CONNIVER 1,7?
+Control character
+contrel structure
+
+36
+
+12, 19, 20, 24, 39, 40
+a1
+
+=
+=
+a
+
+Index
+
+Page 82
+
+March 4, 1975
+
+DATAPOINT terminals
+decimal poini 36
+defining 5, 13,19
+degrees 67, 71
+device 22
+
+devices 7
+direction 71
+directory 32, 38
+Disparity 2
+display area
+display lists
+dollar = 35
+dotted pair
+double quote
+
+12
+
+64, 72
+64, 74
+
+3, 7
+a4
+
+edit moda 19
+
+Editing 3, 8, 13, 19, 35, 40
+editing charatters 40
+English 2,4,5
+
+eraser 65, 68, 69, 71, BO
+error handling #4, 34
+error interrupt = 24
+
+error interrupl handlers 9
+error messages 8,9
+evaluator 6
+exclamation points
+exponentiation 16
+
+36
+
+file 76
+
+fila specification 32, 38
+fimed point =, 3, 4,37
+Floating point 1, 36, 70, 73
+food supply 49
+
+FORTRAN a6
+
+fraction =3, 36
+
+functional arguments = 17
+garbage collector 28
+generalion 43
+
+GERMLAND = =:10, 13, 38, 40, 41
+global variable 6&5
+
+global variables 29
+
+GT40 —s: 1.3, 38, 47, 64
+=== scan page 87 ===
+LISP LOGO MEMO
+
+heading 42,67, 70, 72
+home 67
+homonyms 6,8, 17
+
+How To Get On the System lz
+hungry 43
+
+IBM 2741 a9
+
+identifiers 7
+implementation 7, 10
+
+infix 5, 7, 8 15, 16, 17
+initialization file 14, 38, 40
+inputs 5, 8, 28
+
+integers 70
+
+Interim LISP User's Guide 12
+interning 7, 10
+
+Interrupt 1, 20, 35, 40
+invisible mode 79
+
+joystick 8&0
+
+LAP &O
+
+light pen BO
+
+line mumber 3,4, 6, 8, 36
+Line oriented input 6
+link 38
+
+LISP 36, 64, 71, 76, 80
+lists 2
+
+logic 6, 15, 16, 35
+
+login 12
+
+logout 14
+
+MACLISP Reference Manual le, 38
+minus sign 1?
+
+mistyping 9
+
+mnemonic 3,4
+
+Mouse Bo
+
+MULTICS 11, 17,30, 32, 38,39
+
+music 7, 10, 13,34, 38, 40
+
+Naturalness zZ
+negative mode 7a
+negative number L?
+ALLOGO 8643
+
+noise words 4
+numerical input 36
+
+Page 83
+
+March 4, 1375
+
+obarray 7
+obstacle 42
+OR 77
+oulpul 36
+
+paintbrush 80
+
+parentheses 5, 6, 8, 15,35
+parser 4,5, 8, 15, 17, 28
+parsing property #8
+pathname = 38
+
+POP-5 47
+
+POP LI BO
+
+pen 65, 68,69, 71, 80
+Percent sign = 36
+
+‘PLANNER 861, 7
+
+point = 72 ;
+
+point arrays =F
+
+positive mode 74)
+precedence 15
+
+prefix 5,8, 15, 17
+
+pretty print 4
+
+primitives 7, 8, 22,30, 34
+printing 8
+
+program form 3
+
+program understanders 8
+prompter 19, 4]
+
+Property list 1, 8, 18, 36
+pure 10
+
+radians =F.
+
+reader r
+
+readtabla rs
+
+recursion 12
+
+rolation 79
+
+roundolf! ==
+
+rubout 20, 35
+
+run length encoding 80
+runtime error =|, 24
+
+sealing 879
+
+SCRIMP = E
+
+Self-modifying procedures J]
+semicolon = =36
+
+sentences 2
+
+shading 77
+
+shading paltenn if
+
+sharp sign = 25, 29, 35
+
+tide affects 28
+=== scan page 88 ===
+LISP LOGO MEMO Page 84
+
+Simplicity 2
+single character object 7
+single quote 34
+
+size 10
+
+snap 7a
+space war 74
+speed & 10
+
+split screen 64
+
+slack 9%, 25, 28
+
+string 10, 35
+super-procedure tree 9
+
+Tektronix oF
+
+TENSO 11, 32, 40
+
+TENES li
+
+text Fl, 74
+
+Tharntan box a
+
+TNS a9
+
+top level 29, 36
+
+triangle turthe 65
+
+turtle ¥, 10, 2l, 38, 40, 47
+turtle coordinates 72, 7d
+turtle marker 65
+
+turtle state 70
+
+TY buffer Bl
+
+TY screen Ta
+
+TY turtle 64
+
+type checking 68,9
+typing errors 19
+
+unparser 8, 17
+
+Variables 6, 21, 29, 33
+wectors 67, 74,79
+
+windows 79
+
+words 2
+
+wraparound 67, 73, 75
+wrong number of inputs 28
+
+XGP 76
+KOR 65, 68, 75, 89
+
+March 4, 1975
+=== scan page 89 ===
+LISP LOG0 MEMO
+
+AN 41, 42
+
+Pur 29
+
+al 25
+
+Ac 40
+
+AE 19
+
+AF ay
+
+AG 14, 30, 40,59.
+An 6 25, 40
+AN a?
+
+AP 20
+
+AR 20
+
+AS 20
+
+ar HE
+
+AX 14
+
+AF a7
+
+AZ 12, 57, 6a
+IP 25, 27
+
++ ral
+
+- 20
+
+HCAREFOL l?
+COMPILED 30
+MCONTENTS a0
+IDRARF MODE 81
+DRAW TURTLE 66
+‘EDITMODE 19
+:EMPTY af
+
+rEM PTY ar
+-ERASERSTATE 68
+tERASETURTLE 66
+tERRAREAK 24, 26
+GERM 45
+mRIDSIZE 45
+‘HEADING 49, 65, 69, 70
+
+sHISTORY = =20
+HUNGRY = 45
+SNF IX \? my
+
+INSTRUMENT 62
+iLISPRREAK 26
+iMAK 8662
+‘INVOICES 62
+:PENSTATE 65, 68
+:-PICTURE 55
+SSCALEBASE 63
+
+Page 85 March 4, 1975
+
+Index to LLOCO Primitives
+
+SSEETURTLE = 65
+
+SNOrF 52
+SAPS 59
+‘TEXT 4S?
+
+TEXTXHOME 52
+‘TEXTY HOME Be
+‘TURTLE 48, 55, 70
+‘TURTLES 70
+VOICE 62
+AFINDOWS 75
+‘FRAP 67
+
+dF RAP AROUND 46
+:XCOR 49, 65, 69, 70
+:‘XORSTATE 669
+‘FCOR 49, 69, 70
+
+«ESC 74
+
+ABRREVIATE 18
+ACCESSIBLE 44
+ALLOCATOR 14
+AND 4,16
+
+ARC 2
+ARCTAN 71
+ARRAY = 37
+ASCIP ay
+ASSOCIATE 16
+ATANGENT 51,71
+
+BACK 44, 48, 66
+REARING 51,71
+AK 644, 48, 66
+BLINK = 55
+BOOM 658
+
+ROTI = 4, 16
+BREAK 25
+BRIGHT 55
+BRUSH 58
+ASIDE = 6%
+
+BUG 14, 40
+BURY ALL 33
+RUTFIRST 62,3, 4
+BUTLAST 2
+BYE 40
+
+Index to LLOGO Primitives
+=== scan page 90 ===
+LISP LOGO MEMO
+
+CALE il?
+CAR 2,4,4
+CATCH 2
+
+COR 2,3, 4,36
+CHECKER 78
+CHORUS 58
+CHORUS2 58
+CHORUS] 58
+CHORUS+ 58
+CIRCLE 72
+CLEARSCREEN 49, 67,79
+CLN 74
+
+CLP 74
+
+CLST 74
+
+CLSF 74
+
+co 27
+COLORNEGATIVE 74
+COLORPOSITIVE 74
+COLORSTATE 74
+COLORSH ITCH r4
+COMPILE 30,33, 40
+CONS 3,28
+CONTINUE 24, 25, 26, 27
+COSINE 51,71
+
+cs 49, 67
+
+DARKTEXTURE 78
+DAT 64
+
+DE AUG 26
+DECLARE 30
+DELETE 22
+DELX 48, 66
+DELXY 48, 66
+DELY 48, 66
+DESTRUCT 45
+DLS 64
+DISPAGE 54
+DISPLAY l?
+pO OA?
+DOWN 26,27
+DRAW MODE 4&1
+DRUM 54 *
+DSCALE 56
+EASTP 44
+
+EAT 43
+
+EDIT i?7, 19
+
+EDITLINE 19
+EDITTITLE 195,28
+
+Page 66 March 4, 1575
+
+EITHER 4,16
+
+END 19
+
+ENDSNAP 53
+ENTERSNAP = 53
+EQUAL 5
+
+ERA #2
+
+ERASE 22,33, 53
+ERASE ABBREVIATION 18, 22
+ERASE ALL = 22,33
+ERASE BURY = 23
+ERASE COMPILED 22
+ERASE FILE = 2,33
+ERASE LINE = 22
+ERASE NAMES 22
+ERASE PRIMITIVE = Ze
+ERASE PROCEDURES 22, 33
+ERASE SNAP 79
+ERASE TRACE 23
+ERASERDOWN 68
+ERASERUP = 68
+ERASER INDOW 75
+ERASER INDOWS 75
+
+ERE 23
+
+ERD 68
+
+ERF 22
+
+ERL #2
+
+ERN 22
+
+ERP #2
+ERXREIST 5?
+ERTR 23
+
+EAL 68
+EVALFRAME 4
+Eir 75
+
+EIFS 75
+
+EXIT 27
+EXPLODE 35
+FALSE 6, 35
+FASLOAD 47,57
+FD #44, 48, 66
+FILLFOOD 43
+FIRST 2,4
+Fie 30
+
+ft
+
+FLUSHCOMPILED 30
+FIUSHINTERPRETED = 30
+Foop 43
+
+FOODP 43
+FOODSUPPLY 44
+
+Index to LLOGO Primitives
+=== scan page 91 ===
+LISP LOGO MEMO Page 87 Marth 4, 1375
+
+FORF ARD 44, 48, 66, 67, 70 LEVEL 35
+FRONT 45 LIGHTTEXTURE 78
+FSIDE 45 LINEPRINT 21, 40
+LISPRREAK 25, 27
+GERM 44 LIST 17
+CERMDEMOS 41 LIST FILES 40
+CET 17 LLOGO (INIT) = 14
+GCETSQUARE 43 LOCAL a?
+CETWINDOWS 76 LOCORREAK 25, 26, 27
+co 4 LOGOTURTLE 70
+COODBYE 14 LOCOLT 40
+GRID 42,78 LSIDE 45
+CRIDP 42 LT 45, 49, 67
+GRITCH 59
+cr 76 MAKE 16, 32, 35, 65
+MAKEPATTERN 78
+i 49, 67 HARKETUNE 5a
+HATCH 70 MAKETURTLE 65
+HEADING 44, 50, 69 MAKEWINDOW 73, 75, 78
+HERE 50, 70, 72, 76 MAKTURTLE 48
+HIDE bad MAPCAR 4
+HIDESNAP = 53 MARK 52,71
+HIDETEXT 52 MRUFCLEAR 59
+HIDETURTLE 47, 65 MBUFCOUNT 59
+HIDEWINDOW 76 MBUFINIT 59
+HISTORY 20 MBUFNEXT 59
+HOME 49, 67 MEUFOUT 59
+HORIZLINES 78 MRUFPUT 59
+HT 47, 65 MCLEVR 59
+HIF 676 MLEN 60
+MODMUSIC 60
+IRASE 36 MOTION 55
+fF 4, 16 MOVE 42
+IFFALSE 4 MP O78
+fFTRUE 4 MUCRTE 63
+ILINE 20 MUTYO 63
+INFIX 16,17 MUWFAIT 63
+INSERTLINE 37 MIF 75
+INVISIBLE 79
+is 5 ND 47,64
+NEIFMUSIC 60
+KILL 4a . NEXT 44
+NODISPLAY 47, 64
+LAST 2,17 NOMUSIC 60
+LASTFORM = 20 NOPLOT 54
+LASTLINE 20 NOPRECEDENCE lf
+LASTV ALLIE 20 NORTHP 43
+LEFT 45, 49, 67 . NOT 16
+LEFTSIDE 5 NOTE 60
+
+Index to LLOGO Primitives
+=== scan page 92 ===
+LISF LOGO MEMO
+
+NOWRAP 42, 46, 67
+
+ANVOICES 60
+
+OBSTRUCT 45
+OLDMUSIC 61
+OLDTURTLE 48
+OR 4,16
+
+PALSE 25
+
+PD 50, 68
+PENI N (50, 68
+PENP 50
+PENSTATE 50
+PENUP 50, 68
+PERFORM 61
+PHOTO 52,53
+PICTURE 53 °*
+PLAYTUNE 61
+PLOTTER 54
+PLOTTER! 54
+PM 6]
+
+PO Zl
+
+PO = 2]
+
+POF 33
+
+Por 33,40
+POINT 54, 72
+POONTSTATE Te
+POR 21
+
+PON Zl
+
+POPR zl
+
+Por 21
+
+POTS 21
+PRECEDENCE 16
+PRINC 71
+PRINT Ll?
+PRINTDOIRN 27
+PRINTGRID 42
+
+PRINTOUT = 5, 17, 19, 20, 21
+PRINTOUT ABBREVIATIONS
+PRINTOUT ALL = 21,92, 99
+
+PRINTOUT FILE
+PRINTOUT INDEX,
+PRINTOUT LINE
+PRINTOUT NAMES
+
+PRINTOUT PRIMITIVES
+PRINTOUT PROCEDURES
+
+PRINTOUT SNAPS
+PRINTOUT TITLE
+PRINTOUT TITLES
+
+18, 21
+
+Page 68
+
+March 4, 1975
+
+PRINTUP = 26
+
+PROG
+PU
+
+B37
+
+50, 68
+
+PLTSQUARE 42
+
+RANDOM = 17,37
+
+RANGE
+
+READ
+
+50, 51, 71
+\?
+
+READFILE — 17, 30, 32, 40, 76
+45
+
+REAR
+
+REMSQUARE 43
+REMTEXT S22
+
+REPEAT
+RESNVIP
+
+REST
+
+al
+5d
+61
+
+RESTARTMUSIC §661
+
+RF
+
+a2
+
+RIGHTY 44, 49, 67, 70, 71
+RIGNTSIDE 45
+ROUNDOFF = 37
+
+RSIDE
+
+RT
+RUN
+
+45
+
+44, 49, 67
+\?
+
+RUNGERM 41
+
+SARE
+
+17, 32, 33
+
+SAFEDISPLAY 64
+SAVER INDORS 76
+
+SCALE
+47, 64
+
+50
+
+55
+
+SETHNEAD = =49, 68, 71
+SETNOME 85, 69, 72
+
+SETQ
+SETT
+
+65
+50, 70
+
+SETTURTLE 50, 70
+
+SETX
+
+SETXY
+
+SETY
+SHOW
+
+SHADE
+
+48, 66
+
+45, 66, 67
+48, 66
+
+FF, 78
+52
+
+SHOFPSNAP 53
+SHOWTEXT 51, 52
+SMOWTURTLE «47, 65
+SHORRF INDO 675, 76
+
+SINE
+
+21,33 SING
+
+SNAP
+SOLTD
+SONG
+
+Index to LLOGO Primitives
+
+51, 71
+
+6]
+
+52, 59, 74, 79
+T?
+
+él
+=== scan page 93 ===
+LISP LOGO MEMO
+
+SOUTHP 44
+SPECIAL a0
+ST 47,65
+STARTOISPLAY
+STARTMUSIC
+STEP 42
+STORE 37, 81
+SUM 65
+
+SVD 64
+
+Si 75
+
+SFS 76
+
+17, 47, 64, 70
+57, 62
+
+TEST 4, 16
+TEXT 36
+TEXTURE 78
+TH #673
+
+THEN 4
+THISFORM = 20
+THROF = 25
+TIME a7
+
+TO 04,5, 19, 22
+TOPGERM = 41
+TOUCH 45
+TOWARDS 51, 71
+TRACK 9, 28
+TRIANGLETURTLE 66
+TRUE 35
+TURTLENOME 73
+TURTLESIZE = 73
+TURTLESTATE 48
+TY 78, 4l
+TVSIZE 673
+TYPE 52,71
+
+UNBEINK = §&5
+UNGRID 41
+UNSPECIAL 30
+UP 26, 28
+UREAD 76
+
+USE 3a
+USER-PAREN 93
+VSETURTLE 70 +
+uT rt)
+
+WERTLINES 78
+VISIBLE 79
+VEEN 62
+VOICE 62
+VOICES 62
+
+Page 8
+
+Fo 49
+
+ESTP 44
+
+Fr 75
+
+Wil = 76
+
+FiaT 43
+WHERE 43
+WINDOIFFRAME = 75
+FINDOWHOME 76
+FiPE b?
+
+IFIPE 49
+IFIPECLEAN 49
+WRAP 42, 67
+WRITE 32,33
+XCOR 49, 66, 69, 73
+XD 69
+
+XCP 76
+XNOME 50
+XORDOWN 69
+XORUP 69
+XORWINDOW = 76
+XU 69
+
+XF 76
+
+FCOR 66, 69, 73
+
+FCcoR 49
+FHOME 50
+
+Index ta LLOGO Primitives
+
+March 4, 1975

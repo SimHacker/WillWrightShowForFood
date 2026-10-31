@@ -13,10 +13,29 @@ Forth, the 340 and co-processors from a teaching angle, and where CAM-6 fits: [T
 
 ## Where this is going, and why
 
-**Done.** One machine, a PDP-7 emulated in TypeScript and running in the browser, with a Type
-340 display, light pen, teletype, paper tape and disk. It runs 1960s and 1970s programs from
-their own binaries: SYMELEC, DUEL, PDP-7 UNIX and Forth among them. The programs are listed
-[below](#the-rungs-climbed-so-far).
+**Done.** One machine, a PDP-7 emulated in TypeScript and running in the browser: the whole
+instruction set, with the EAE and 32K of memory, a Type 340 display, light pen, teletype, paper
+tape and disk. It runs 1960s and 1970s programs from their own binaries: SYMELEC, DUEL, PDP-7
+UNIX and Forth among them. The programs are listed [below](#the-rungs-climbed-so-far). It also
+has devices no PDP-7 ever had: a [Turing engine](TURING-ENGINE.md), Minsky's Ultimate Machine
+(Shannon built it), and a [DataHand](DEVICES.md#the-datahand-layer-by-layer) driven by camera
+hand tracking.
+
+**Next: invented devices, more CPUs, and features across all of them.**
+
+- More devices: frame buffers, tile engines, and the CAM-6 cellular automata machine
+  ([CARTRIDGES.md §5](CARTRIDGES.md#5-the-cellular-automata-machine-as-cartridges)). Other CPUs
+  use the same devices through adaptors, the binding layer in
+  [DEVICES.md](DEVICES.md#how-a-device-reaches-a-machine).
+- A branch of microM8, compiled to WebAssembly and run in the cabinet's page, the way the
+  Micropolis engine runs in MicropolisCore
+  ([MICROM8.md](MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly)). On that
+  branch, its Go gains memory mapped between machines, per-address heat maps, causality tracing,
+  and rewind across all of it ([MICROM8.md](MICROM8.md#a-branch-of-microm8)).
+  The traffic goes both ways: what microM8 already does, its live rewind, full CPU recording,
+  heat map, debugger and MCP server, can be built for the PDP-7 or for every CPU in the cabinet.
+- A time machine: git as the machine's history. Snapshots and recordings are commits, a branch
+  is a different future from the same moment, and rewinding is checking out an earlier commit.
 
 **The goal: separate the package from the emulator.** A program should be described once, with
 its media, sources, symbols, builds, help and views. Then any emulator that can run it should
@@ -41,7 +60,7 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
 - [MANIFESTO.md: a federation of emulators](MANIFESTO.md#a-federation-of-emulators-after-microm8):
   other emulators join as peers that trade messages and memory, not as ports into this one.
   The attitude comes from microM8, which "upcycles" the Apple ][.
-- [WEB-BENCH.md: the Apple ][ will be microM8](WEB-BENCH.md#decisions-for-the-cabinets-browser-bench): browser emulators compared, and
+- [WEB-BENCH.md: the Apple \]\[ will be microM8](WEB-BENCH.md#decisions-for-the-cabinets-browser-bench): browser emulators compared, and
   the plan to compile microM8's MIT-licensed Go to WebAssembly, with its unknowns.
   [MICROM8.md](MICROM8.md) covers what microM8 exposes: an HTTP API, an MCP server and a debugger.
 - [MAPPING.md: shared memory between machines](MAPPING.md): planned, after MIT's Rubin 10/11
@@ -80,13 +99,11 @@ does not care that the accumulator is a JavaScript number.
 phosphor decay. It can be looser or more physical than the original
 program ever saw.
 
-SIMH calls itself a simulator because that was DEC/academic English in
-the 1990s — *SIMulator for Historical computers*, Bob Supnik. What it
-mostly *does* is emulate instruction sets so historic binaries run. We
-keep the useful distinction: this package emulates cabinets; a P7
-afterglow on the canvas would be a simulation *inside* the emulator.
-We do not use "sim" in the name. SIMH already owns that word, and in
-this shop it also means SimCity.
+SIMH, Bob Supnik's Computer History Simulation project, calls itself a
+simulator. What it mostly does is emulate instruction sets so historic
+binaries run. This package emulates cabinets; a P7 phosphor afterglow
+on the canvas would be a simulation inside the emulator. "Sim" stays out
+of the name: SIMH already uses it, and in this repo it also means SimCity.
 
 ## Why cabinet
 
@@ -102,28 +119,29 @@ cute, opaque on npm).
 
 ![PDP-7A serial 113, Paul G. Allen collection](reference/iron/pdp7a-allen-collection-christies.jpg)
 
-The two DECtape 555 reels are eyes; the console's bit rows are the
-mouth; the maintenance panel's lights are the brow. This one is
-[serial no. 113](https://onlineonly.christies.com/s/firsts-history-computing-paul-g-allen-collection/pdp-7a-minicomputer-117/230055) —
-five decades counting isotopes at the University of Oregon's nuclear
-accelerator lab before landing in the Allen collection. Provenance in
-[reference/iron/SOURCES.yml](reference/iron/SOURCES.yml). The web bench
-keeps the face: the bezel is a portrait of a machine that looks back,
-not a rack drawing. The full 3D build plan — live duty-cycle lamps,
-phosphor on curved glass, and sim-Heinz whose pen tip *is* the light
-pen input — is [PORTRAIT.md](PORTRAIT.md).
+Read the two DECtape 555 reels as eyes, the console's bit rows as a mouth and the maintenance
+panel's lights as a brow. This is
+[serial no. 113](https://onlineonly.christies.com/s/firsts-history-computing-paul-g-allen-collection/pdp-7a-minicomputer-117/230055),
+which did isotope analysis at the University of Oregon's nuclear physics accelerator lab for
+five decades before the Allen collection bought it. Provenance is in
+[reference/iron/SOURCES.yml](reference/iron/SOURCES.yml). The web page's bezel is drawn from
+this machine, not from a rack diagram. The 3D plan, with lamps lit by duty cycle, phosphor on
+curved glass, and a Heinz whose pen tip is the light pen input, is [PORTRAIT.md](PORTRAIT.md).
 
-## The corpus rule, and Minsky's receipt
+## How the cabinet grows: one program at a time
 
-This cabinet implements only what its corpus executes — PIXIE's listing
-decides which instructions exist, and an unknown IOT no-ops. The founding
-case of that method is one shelf over:
-[tiny-teco](../tiny-teco/README.md) runs Minsky's 1981 TECO Universal
-Turing Machine, where the corpus is a single program *chosen universal*,
-so the emulator was provably complete after its first entry. No such
-theorem covers a PDP-7 — SYMELEC can always demand one more instruction —
-but the bet is the same: the corpus, not the databook, is the
-specification. The databook is the oracle for what the corpus means.
+The cabinet started with one program, SYMELEC, and built what its listing used. Each program
+since brought what it needed: DUEL the paper tape reader and switch register, PDP-7 UNIX the
+RB09 disk. The CPU is now the whole PDP-7 instruction set, all sixteen opcodes with the EAE and
+the 32K memory extension, ported from SIMH's `pdp18b_cpu.c`. Devices are still added only when a program uses
+them, and each is tested by running that program. An IOT to a device that isn't plugged in does
+nothing, as in SIMH.
+
+[tiny-teco](../tiny-teco/README.md) uses the same method more strictly. It implements only the
+TECO commands that Minsky's 1981 Universal Turing Machine uses, and throws on any other. Because
+that program is a universal machine, every other Turing machine runs on it as data, so one
+program was enough. A PDP-7 has no such shortcut: the next program can always need another
+device.
 
 ## What we lift from SIMH, and thank
 
@@ -135,20 +153,15 @@ What to take from Paul Kimpel's IBM 1620 emulator, with a plan:
 [Open SIMH](https://github.com/open-simh/simh) is the reference bench.
 Bob Supnik built the 18-bit family. Lars Brinkhoff wrote the Type 340
 glue (`PDP18B/pdp18b_dpy.c`). Philip Budne and Douglas Gwyn wrote the
-XY display core (`display/`) — pen-on-beam as a hit against the last
-intensified point. We steal those ideas on purpose.
+XY display core (`display/`), where the light pen hits if it is near the
+last intensified point. The cabinet uses both designs.
 
-One act of recovery deserves its own paragraph. The Type 342 character
-generator's letterforms survive nowhere on paper — so **Lars Brinkhoff
-recovered the glyph shapes from MIT AI Lab film footage**, frame by
-frame, filling the gaps from the Knight TV font. The `chars[]` table in
-SIMH's `display/type340.c` is annotated per glyph: `Source: AI film
-75`, `Source: AI film 104`, `Source: Knight TV`. That table is the only
-existing answer to "what did a 342's lowercase `g` look like," and it
-was read off celluloid. When PIXIE draws text (it uses the 342), our
-character stroke tables descend from that archaeology — the same
-method this repo runs on OCR'd listings and 1969 films, done first and
-done heroically.
+The Type 342 character generator's letterforms survive on no known paper, so **Lars Brinkhoff
+recovered the glyph shapes from MIT AI Lab film footage**, frame by frame, and filled the gaps
+from the Knight TV font. The `chars[]` table in SIMH's `display/type340.c` gives a source per
+glyph: `Source: AI film 75`, `Source: AI film 104`, `Source: Knight TV`. When PIXIE draws text
+on the 342, the cabinet's stroke tables come from that table. This repo does the same with
+OCR'd listings and 1969 films.
 
 We shed the rest: SDL / X11 / Win32 / Carbon backends, remote telnet
 console, one tree for fifty architectures, pthreads, `dlopen`, every
@@ -179,7 +192,6 @@ to a `TitanPort`. That is the whole backplane.
 
 Not built:
 
-- the full PDP-7 card
 - 340 DMA
 - Wiseman's link in the Titan → PDP direction (serving drawings back). The codec and a
   diagnostic are ready in `packages/pixie`; `BlockletHost.serving` is what's missing
@@ -282,7 +294,8 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
 ### Where the bugs are written down
 
 - [OFF-BY-ONE.md](OFF-BY-ONE.md): the boundary bugs met on the way up
-  each rung, and the one where 1972 NAK'd 2026.
+  each rung, including the one where SYMELEC's 1972 link code NAK'd our host for sending a
+  blocklet one word too long.
 - [BUG-JOURNAL.md](BUG-JOURNAL.md): every bug since, including the
   browser page's: wrong words in the transcription, and a PDP-7 whose
   speed was set by the monitor it was shown on.

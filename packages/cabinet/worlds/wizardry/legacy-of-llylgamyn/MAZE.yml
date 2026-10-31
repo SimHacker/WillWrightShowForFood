@@ -1,0 +1,735 @@
+# The ten levels of THE LEGACY OF LLYLGAMYN.
+# Locations: MAZE.yml#level-3/4,7 is x 4, y 7 of level 3.
+# North is up; x runs 0-19 east, y 0-19 north. Each square is three characters:
+# a * where fights happen, the hex digit of its special (blank is special 0),
+# and that special's letter: S stairs, P pit, C chute, @ spinner, # dark, T transfer,
+# O ouchy, B buttons, R rock/water, F fizzle, M message, E encounter.
+# Walls: - and |, doors D, hidden doors h. A wall is drawn once, for both squares;
+# one_way lists the sides where the two squares disagree. The letters follow the
+# digits and are not read back. The edges wrap around.
+
+castle: {note: Not on the disk. Characters not lost in the maze are here; stairs to level 0 lead here.}
+level-1:
+  map: |
+    +---+---+   +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+            | 6M|*  D   D*  D   D*  |                    *8E *8E *8E *8E              19
+    +---+   +-D-+---+   +---+   +---+   +---+---+   +   +   +   +   +   +   +   +---+
+    D*cE|   |   D*  |   |*  |   |*  |   |*cED*  |        *8E *8E *8E *8E        |*  D 18
+    +-D-+   +---+-D-+-D-+-D-+-D-+-D-+   +-D-+-D-+---+---+---+---+---+---+---+---+-D-+
+    D*  | 7MD   D                   |   |*  D   D           D           D           D 17
+    +---+   +-D-+-D-+-D-+-D-+-D-+-D-+   +---+   +---+---+---+---+-D-+---+---+---+---+
+    |       |   |   |*  |*  |*  |   |       |   |*cED*  D           D*  D*  D*  D*  | 16
+    +   +   +   +   +---+---+---+   +   +   +   +-D-+---+---+---+---+---+---+---+---+
+    |       |   |   D*  |*  |*  |   |*8E *8E|   |*  D*cED*  D*  D*  |*  |*  |   D fT| 15
+    +   +   +   +-D-+---+-D-+-D-+-D-+   +   +-D-+   +---+---+---+---+-D-+-D-+   +---+
+    |       |   |*   *  |*  |*  |*  |*8E *8ED*  |*  D*cED*cE *cE *cED*bE *bE|   D aS| 14
+    +   +   +   +   +---+---+   +   +   +   +---+---+---+---+---+---+   +   +   +---+
+    |       |   |*          D*  |*  |*8E *8ED*  |*  D*cED*cE *cE *cED*bE *bED eMD 9S| 13
+    +   +   +-D-+---+---+---+---+---+   +   +-D-+   +---+---+---+---+-D-+-D-+   +---+
+    |       |   D       D       D   |*8E *8E|   |*  D*cED*  D*  D*  |*  |*  |   D   | 12
+    +   +   +---+---+---+---+---+   +   +   +   +-D-+---+---+---+---+---+---+---+---+
+    |       |*   *  D           |   |       |   |*cED*  D           D*  D*  D*  D*  | 11
+    +---+   +   +   +---+---+-D-+   +   +---+   +---+---+---+---+-D-+---+---+---+---+
+    D*  |   |*   *  |*  D*  |   D   |   |*  D   D           D           D           D 10
+    +-D-+   +-D-+-D-+-D-+---+---+   +   +-D-+-D-+---+---+---+---+---+---+---+---+-D-+
+    D*cE|   |   |*  |       D*  |   |   |*cED*  |        *8E *8E *8E *8E        |*  D  9
+    +---+   +   +---+   +---+---+   +   +---+---+   +   +   +   +   +   +   +   +---+
+            |       D   D       D   |                    *8E *8E *8E *8E               8
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+    |     2M  2M  1R  1R  2M    D 4S|   D*   *  D*   *  |   |*   *  |               |  7
+    +   +   +   +   +   +   +   +---+   +   +   +---+---+   +   +-D-+-D-+   +---+---+
+    |             2M  1R  2M    D 5S|   |*   *  |*   *  |   |*  |*  |*  |   |*   *  |  6
+    +   +   +   +   +   +   +   +---+-D-+---+---+-D-+-D-+   +-D-+   +---+-D-+   +   +
+    |             2M  1R  1R  2M  1R|               |           |*   *  D   D*   *  |  5
+    +   +   +   +   +   +   +   +   +-D-+   +---+---+---+   +---+---+---+-D-+---+---+
+    |                 2M  1R  1R  1R|   |   D*   *  |*  D   D           D   |*   *  |  4
+    +   +   +   +   +   +   +   +   +   +---+---+   +---+   +---+---+---+   +   +   +
+    |                     2M  2M  1R|   D*   *  |*   *  |   |               |*   *  |  3
+    +---+   +   +   +   +   +   +   +---+   +   +   +---+-D-+   +---+---+   +-D-+---+
+        h 3M                      2M|   D*   *  |*  |           D*   *  |   D          2
+    +-D-+-h-+   +   +   +   +   +   +   +   +-D-+-D-+   +---+---+   +   +   +-D-+---+
+    |       h 3M          2M  2M  1R|   |*  |*   *  D   D*   *  |*   *  |   |*   *  |  1
+    +   +   +-h-+   +   +   +   +   +   +---+   +   +   +   +   +---+---+---+   +   +
+    | dS    D   |     2M  1R  1R  1R|   D*   *   *  |   |*   *  |           D*   *  |  0
+    +---+---+   +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way: []
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: ROCKWATE, aux: [0, 0, 0]} # damage 0 + 0 rolls of d0
+    - {index: 2, kind: SCNMSG, aux: [5, 2, 5]} # only with item 5 (SHIP IN BOTTLE)
+    - {index: 3, kind: SCNMSG, aux: [1, 0, 13]} # message 0 "\x11\x04\x07Ïÿýçñä½éå´Ò®ÍÍÆÅÇª\x99¸¸É¼¸«\x84ª²{¤\x9e\x97¢l\x8a", action 13
+    - {index: 4, kind: STAIRS, aux: [4, 1, 7]} # to MAZE.yml#level-4/7,1
+    - {index: 5, kind: STAIRS, aux: [5, 0, 18]} # to MAZE.yml#level-5/18,0
+    - {index: 6, kind: SCNMSG, aux: [-1, 4, 1]} # message 4 "õÑ\x01ôïóÂîê¹êÛÕ­ÎÖÓÓ\x9eÍ½¶¶Â¦\x89\x88¥¡¯¬\x98\x97\x9c¡m", every time
+    - {index: 7, kind: SCNMSG, aux: [-1, 5, 1]} # message 5 "õõóùùéÁ÷êíµåãÍ×ÊÖ ¾\x9a¾Æ¶¯¿\x88«±±°«\x9b¦£{", every time
+    - {index: 8, kind: ENCOUNTE, aux: [-1, -1, 0]} # monster 0 (MOAT MONSTER), -1 times left, range -1
+    - {index: 9, kind: STAIRS, aux: [2, 0, 19]} # to MAZE.yml#level-2/19,0
+    - {index: 10, kind: STAIRS, aux: [3, 2, 2]} # to MAZE.yml#level-3/2,2
+    - {index: 11, kind: ENCOUNTE, aux: [-1, -1, 1]} # monster 1 (HIGH CORSAIR), -1 times left, range -1
+    - {index: 12, kind: ENCOUNTE, aux: [-1, -1, 3]} # monster 3 (GARIAN GUARD), -1 times left, range -1
+    - {index: 13, kind: STAIRS, aux: [0, 0, 0]} # to the castle
+    - {index: 14, kind: SCNMSG, aux: [-1, 9, 1]} # message 9 "÷ñêøÃùâºëÜÖ®â××ÆÒ\x9cÈ¼\x93¼\x94µ©¶¦²£\x92", every time
+    - {index: 15, kind: TRANSFER, aux: [0, 0, 0]} # to the castle
+  encounters:
+    - {min_enemy: 2, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: -1}
+    - {min_enemy: 7, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: -1}
+    - {min_enemy: 7, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: -1}
+level-2:
+  map: |
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+    | 6S              7M|*   *   *  h*   *  |*   *fED dMD*   *   *  |*a# *a# *a#D*  | 19
+    +---+---+---+---+   +   +---+---+   +   +   +---+   +---+---+---+   +   +   +---+
+    |*   *  D*  D*  |   |*  |*  |*  |*   *  |*  |       |   h*a# *a# *a# *a# *a#|*  | 18
+    +   +---+   +---+   +   +   +   +---+-h-+---+   +---+   +   +---+---+---+---+-D-+
+    |*  |*   *   *  |   |*  |*  |*   *   *  D*  |           |*a# *a# *a# *a# *a# *a#| 17
+    +-D-+---+---+---+   +-h-+   +   +-D-+---+---+---+---+---+---+---+---+   +   +   +
+    |*   *  |*   *  D   |*   *  |*  |*  D*   *   *  h*   *   *   *  D*3T|*a# *a# *a#| 16
+    +-D-+   +   +-D-+   +---+---+---+---+   +   +-D-+---+---+---+---+---+---+   +---+
+    |*  |*  |*  |*  |                   |*   *  |               |*   *  |*   *   *  | 15
+    +   +---+-D-+   +---+---+---+---+   +---+-h-+   +---+---+   +---+   +   +   +   +
+    |*   *  D*  |*   *  D           |       |   |   h*  D*  |   |*  |*  |*   *   *  | 14
+    +---+---+   +---+---+   +---+---+---+---+   +   +---+---+   +   +   +   +   +   +
+    |*   *   *  |           D                   |               |*  |*  |*   *   *  | 13
+    +---+---+---+---+---+---+---+---+---+---+   +---+-D-+---+-D-+---+-h-+   +   +   +
+    |*  |*   *   *  D*   *  | a#  a#  a#D*  |       |*  |*   *   *  |*  |*   *4M *  | 12
+    +   +   +---+-D-+---+   +   +---+---+   +---+---+   +---+   +---+   +-h-+-D-+   +
+    |*  |*  |*   *  | a#|*  | a#|*bMD*  |*  |*  D*   *  |   |*  |*  h*  |*  |   |*a#| 11
+    +-D-+-D-+---+---+   +---+   +-D-+   +---+---+---+---+   +   +---+   +   +   +   +
+    |       |       D a#  a#  a#h*  |*cT|*   *  D           |*  h*   *  |*  |   |*a#| 10
+    +   +-D-+   +---+---+---+---+---+---+   +   +---+---+---+---+---+---+---+   +   +
+    |   |*  |   |*   *  D*   *  |*   *  D*   *  |                   D           |*a#|  9
+    +   +   +   +   +---+-D-+   +---+   +---+---+---+---+---+---+---+   +---+---+   +
+    |   |*  |   |*  |*  |*  |*   *  D*   *  |*9SD*  D                   |*  h*a# *a#|  8
+    +-D-+---+   +-D-+   +   +---+---+---+---+---+---+---+---+---+---+---+---+   +   +
+    |   |       |*   *  |*   *  D*   *   *  | 8T                h*a#D*  h*a# *a# *a#|  7
+    +   +   +---+   +---+---+---+-D-+---+---+---+---+---+---+---+---+---+---+---+---+
+    |   |   |*  |*  |*  |*   *  D*  |*   *  |           |*  |*  h*   *   *  |*  h*  |  6
+    +   +   +   +-D-+   +   +---+   +-D-+   +-D-+---+   +---+---+---+---+   +   +---+
+    |   |   |*  |*   *  |*  |*   *  |*  |*  |       |                   |*  |*   *  |  5
+    +   +   +   +   +---+-D-+-D-+---+   +-D-+-D-+   +---+---+---+---+   +   +-h-+---+
+    |   |   |*  |*  |*   *  |*  |*   *  |*  |   |                   |   |*  |*   *  |  4
+    +   +   +   +-D-+   +---+   +-D-+---+   +   +---+---+---+---+   +---+-D-+   +---+
+    |   |   |*  |*   *  D*  D*   *  D*   *  |                   |   |*   *  D*  h*  |  3
+    +   +   +-h-+---+---+---+---+---+---+-h-+-h-+---+---+---+   +   +   +-D-+---+   +
+    |   |   |*  |*   *   *   *  |*   *  |*  h*a# *a#|*   *  D   |   |*  |*  |*   *  |  2
+    +   +-D-+   +   +   +   +   +   +   +---+   +---+   +---+-h-+   +   +   +---+---+
+    |   |*   *eMD*2E *   *   *  D*5M *   *  |*a#|*  D*  |*  |*  |   |*  |*   *   *  |  1
+    +-h-+   +   +   +   +---+-D-+---+   +   +   +-D-+-D-+   +   +   +-h-+-D-+---+---+
+    |*   *   *  |*   *  |*   *  |*  D*   *  |*a# *  |*   *  |*  |                 1S|  0
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 0, y: 16, side: S, wall: WALL}
+    - {x: 1, y: 15, side: S, wall: DOOR}
+    - {x: 6, y: 3, side: W, wall: WALL}
+    - {x: 6, y: 5, side: S, wall: WALL}
+    - {x: 6, y: 5, side: W, wall: DOOR}
+    - {x: 7, y: 4, side: S, wall: WALL}
+    - {x: 7, y: 4, side: W, wall: DOOR}
+    - {x: 7, y: 6, side: W, wall: WALL}
+    - {x: 8, y: 6, side: W, wall: DOOR}
+    - {x: 10, y: 3, side: S, wall: WALL}
+    - {x: 12, y: 0, side: W, wall: DOOR}
+    - {x: 12, y: 1, side: W, wall: WALL}
+    - {x: 13, y: 6, side: S, wall: DOOR}
+    - {x: 13, y: 11, side: W, wall: DOOR}
+    - {x: 14, y: 6, side: W, wall: HIDEDOOR}
+    - {x: 14, y: 10, side: W, wall: DOOR}
+    - {x: 15, y: 6, side: S, wall: DOOR}
+    - {x: 15, y: 13, side: W, wall: DOOR}
+    - {x: 15, y: 15, side: S, wall: HIDEDOOR}
+    - {x: 16, y: 9, side: W, wall: HIDEDOOR}
+    - {x: 16, y: 13, side: S, wall: DOOR}
+    - {x: 17, y: 4, side: S, wall: WALL}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [1, 13, 19]} # to MAZE.yml#level-1/19,13
+    - {index: 2, kind: ENCOUNTE, aux: [-1, -1, 60]} # monster 60 (FIEND), -1 times left, range -1
+    - {index: 3, kind: TRANSFER, aux: [2, 18, 3]} # to MAZE.yml#level-2/3,18
+    - {index: 4, kind: SCNMSG, aux: [-1, 107, 1]} # message 107 "¡\x92\x90\x97a\x87\x8eX\x89ztLpxdna:[]_WYO%TNKF\x16B6##>/)", every time
+    - {index: 5, kind: SCNMSG, aux: [-1006, 22, 4]} # message 22 "ã¿èÚèÚÕ¹ªËÙÔÒÔ\x98¹·Â·\x89¹·¡«\x9eªt\x92\x95\x8c\x91\x93\x95\x93\\x8d~x", search: finds item 6 (STAFF OF EARTH)
+    - {index: 6, kind: STAIRS, aux: [4, 2, 10]} # to MAZE.yml#level-4/10,2
+    - {index: 7, kind: SCNMSG, aux: [80, 71, 10]} # message 71 "º\x8e¬µ\x85£±«®¤\x97p¦\x99\x9cd\x82\x8a\x92y\x8e\x85[", a riddle
+    - {index: 8, kind: TRANSFER, aux: [2, 12, 9]} # to MAZE.yml#level-2/9,12
+    - {index: 9, kind: STAIRS, aux: [4, 13, 13]} # to MAZE.yml#level-4/13,13
+    - {index: 10, kind: DARK, aux: [0, 0, 1]}
+    - {index: 11, kind: SCNMSG, aux: [28, 26, 10]} # message 26 "ßé¸ÚÞÔÓÊÔ×ÌÖ\x9a»Æ¶Á¾­©\x82¶«¦\x97¡p¤\x93\x9b\x8ca\x7f[\x8f}{\x7f", a riddle
+    - {index: 12, kind: TRANSFER, aux: [2, 9, 11]} # to MAZE.yml#level-2/11,9
+    - {index: 13, kind: SCNMSG, aux: [-1, 16, 1]} # message 16 "éÅõèãç¶âÞ­ÞÏÉ¡ÂÊÇÇ\x92Á±ªª¶\x80\x7f± ¢\x96n\x8e\x8d\x91\x8e\x80\x8e[", every time
+    - {index: 14, kind: SCNMSG, aux: [-1, 17, 1]} # message 17 "èÄèêêïÞàÖ¬ÖËÖÓ¾Á¼\x94²¾»­¦´²|¢¤s\x9d\x96\x8et\x85\x8a\x90u", every time
+    - {index: 15, kind: ENCOUNTE, aux: [-1, -1, 76]} # monster 76 (PO'LE), -1 times left, range -1
+  encounters:
+    - {min_enemy: 12, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: -1}
+    - {min_enemy: 22, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: -1}
+    - {min_enemy: 12, mult_worse: 20, worse01: 1, range0n: 10, perc_worse: 50}
+level-3:
+  map: |
+    +---+---+   +---+---+---+---+---+   +   +   +---+   +   +   +   +---+---+---+---+
+    |*6T *  |   |         6T|       |   D*   *9M|           |   |           |*8M *  | 19
+    +   +   +   +   +---+---+   +   +   +---+---+   +---+---+   +---+---+   +   +   +
+    |*   *  D   |               |       |*  D       |                   |   D*   *  | 18
+    +---+-D-+   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+---+-D-+---+
+        |   |                                                       | dM  eM|         17
+    +-D-+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+
+    |*  D   |                         6T                            | cM| fR|   |   | 16
+    +-D-+---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+---+   +
+        |   |                                                                         15
+    +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+---+
+            |                                                                         14
+    +---+---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+
+            |                                                                         13
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+---+
+    |   |   |                                                                       | 12
+    +   +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +
+            |                                                                   |     11
+    +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +-D-+---+
+     *  |   |                                                                *  |*    10
+    +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +-D-+   +
+     *  D   |                                                                   |*     9
+    +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+
+            D                                                                          8
+    +   +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+
+    |   |   |                     5M                      6T                      6T|  7
+    +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+
+    |       |                                                                       |  6
+    +   +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+   +
+    |       |                                                                       |  5
+    +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +-D-+-D-+
+    |       |                                                                   |*  |  4
+    +   +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+
+            | 2M                                                                       3
+    +---+   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +   +---+
+            D 1S  3M                                                            |      2
+    +---+-D-+-D-+---+---+---+---+---+-D-+---+---+---+---+---+---+---+---+---+-D-+---+
+    |*4S *  |               D   |*bTD   |           |   |               |   D*   *  |  1
+    +   +---+   +   +---+   +   +---+   +---+---+   +   +   +---+---+   +   +   +   +
+    |*aM *  |   D   |       |           |*   *  |       |   |       |       |*   *8M|  0
+    +---+---+   +---+---+---+---+---+   +   +   +---+   +   +   +   +---+---+---+---+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 1, y: 2, side: S, wall: WALL}
+    - {x: 2, y: 2, side: S, wall: WALL}
+    - {x: 2, y: 2, side: W, wall: WALL}
+    - {x: 2, y: 4, side: S, wall: WALL}
+    - {x: 2, y: 5, side: S, wall: WALL}
+    - {x: 2, y: 6, side: S, wall: WALL}
+    - {x: 2, y: 7, side: S, wall: WALL}
+    - {x: 2, y: 8, side: S, wall: WALL}
+    - {x: 2, y: 8, side: W, wall: WALL}
+    - {x: 2, y: 9, side: S, wall: WALL}
+    - {x: 2, y: 10, side: S, wall: WALL}
+    - {x: 2, y: 11, side: S, wall: WALL}
+    - {x: 2, y: 12, side: S, wall: WALL}
+    - {x: 2, y: 13, side: S, wall: WALL}
+    - {x: 2, y: 14, side: S, wall: WALL}
+    - {x: 2, y: 15, side: S, wall: WALL}
+    - {x: 2, y: 16, side: S, wall: WALL}
+    - {x: 2, y: 17, side: S, wall: WALL}
+    - {x: 2, y: 18, side: S, wall: WALL}
+    - {x: 3, y: 4, side: S, wall: WALL}
+    - {x: 3, y: 5, side: S, wall: WALL}
+    - {x: 3, y: 6, side: S, wall: WALL}
+    - {x: 3, y: 7, side: S, wall: WALL}
+    - {x: 3, y: 8, side: S, wall: WALL}
+    - {x: 3, y: 9, side: S, wall: WALL}
+    - {x: 3, y: 10, side: S, wall: WALL}
+    - {x: 3, y: 11, side: S, wall: WALL}
+    - {x: 3, y: 12, side: S, wall: WALL}
+    - {x: 3, y: 13, side: S, wall: WALL}
+    - {x: 3, y: 14, side: S, wall: WALL}
+    - {x: 3, y: 15, side: S, wall: WALL}
+    - {x: 3, y: 16, side: S, wall: WALL}
+    - {x: 3, y: 17, side: S, wall: WALL}
+    - {x: 3, y: 18, side: S, wall: WALL}
+    - {x: 4, y: 2, side: W, wall: WALL}
+    - {x: 4, y: 3, side: W, wall: WALL}
+    - {x: 4, y: 5, side: S, wall: WALL}
+    - {x: 4, y: 6, side: S, wall: WALL}
+    - {x: 4, y: 7, side: S, wall: WALL}
+    - {x: 4, y: 8, side: S, wall: WALL}
+    - {x: 4, y: 9, side: S, wall: WALL}
+    - {x: 4, y: 10, side: S, wall: WALL}
+    - {x: 4, y: 11, side: S, wall: WALL}
+    - {x: 4, y: 12, side: S, wall: WALL}
+    - {x: 4, y: 13, side: S, wall: WALL}
+    - {x: 4, y: 14, side: S, wall: WALL}
+    - {x: 4, y: 15, side: S, wall: WALL}
+    - {x: 4, y: 16, side: S, wall: WALL}
+    - {x: 4, y: 17, side: S, wall: WALL}
+    - {x: 4, y: 18, side: S, wall: WALL}
+    - {x: 5, y: 2, side: W, wall: WALL}
+    - {x: 5, y: 3, side: W, wall: WALL}
+    - {x: 5, y: 4, side: W, wall: WALL}
+    - {x: 5, y: 6, side: S, wall: WALL}
+    - {x: 5, y: 7, side: S, wall: WALL}
+    - {x: 5, y: 8, side: S, wall: WALL}
+    - {x: 5, y: 9, side: S, wall: WALL}
+    - {x: 5, y: 10, side: S, wall: WALL}
+    - {x: 5, y: 11, side: S, wall: WALL}
+    - {x: 5, y: 12, side: S, wall: WALL}
+    - {x: 5, y: 13, side: S, wall: WALL}
+    - {x: 5, y: 14, side: S, wall: WALL}
+    - {x: 5, y: 15, side: S, wall: WALL}
+    - {x: 5, y: 16, side: S, wall: WALL}
+    - {x: 5, y: 17, side: S, wall: WALL}
+    - {x: 5, y: 18, side: S, wall: WALL}
+    - {x: 6, y: 1, side: W, wall: WALL}
+    - {x: 6, y: 2, side: W, wall: WALL}
+    - {x: 6, y: 3, side: W, wall: WALL}
+    - {x: 6, y: 4, side: W, wall: WALL}
+    - {x: 6, y: 5, side: W, wall: WALL}
+    - {x: 6, y: 7, side: S, wall: WALL}
+    - {x: 6, y: 8, side: S, wall: WALL}
+    - {x: 6, y: 9, side: S, wall: WALL}
+    - {x: 6, y: 10, side: S, wall: WALL}
+    - {x: 6, y: 11, side: S, wall: WALL}
+    - {x: 6, y: 12, side: S, wall: WALL}
+    - {x: 6, y: 13, side: S, wall: WALL}
+    - {x: 6, y: 14, side: S, wall: WALL}
+    - {x: 6, y: 15, side: S, wall: WALL}
+    - {x: 6, y: 16, side: S, wall: WALL}
+    - {x: 6, y: 17, side: S, wall: WALL}
+    - {x: 6, y: 18, side: S, wall: WALL}
+    - {x: 7, y: 2, side: W, wall: WALL}
+    - {x: 7, y: 3, side: W, wall: WALL}
+    - {x: 7, y: 4, side: W, wall: WALL}
+    - {x: 7, y: 5, side: W, wall: WALL}
+    - {x: 7, y: 6, side: W, wall: WALL}
+    - {x: 7, y: 8, side: S, wall: WALL}
+    - {x: 7, y: 9, side: S, wall: WALL}
+    - {x: 7, y: 10, side: S, wall: WALL}
+    - {x: 7, y: 11, side: S, wall: WALL}
+    - {x: 7, y: 12, side: S, wall: WALL}
+    - {x: 7, y: 13, side: S, wall: WALL}
+    - {x: 7, y: 14, side: S, wall: WALL}
+    - {x: 7, y: 15, side: S, wall: WALL}
+    - {x: 7, y: 16, side: S, wall: WALL}
+    - {x: 7, y: 17, side: S, wall: WALL}
+    - {x: 7, y: 18, side: S, wall: WALL}
+    - {x: 8, y: 2, side: S, wall: WALL}
+    - {x: 8, y: 2, side: W, wall: WALL}
+    - {x: 8, y: 3, side: W, wall: WALL}
+    - {x: 8, y: 4, side: W, wall: WALL}
+    - {x: 8, y: 5, side: W, wall: WALL}
+    - {x: 8, y: 6, side: W, wall: WALL}
+    - {x: 8, y: 7, side: W, wall: WALL}
+    - {x: 8, y: 9, side: S, wall: WALL}
+    - {x: 8, y: 10, side: S, wall: WALL}
+    - {x: 8, y: 11, side: S, wall: WALL}
+    - {x: 8, y: 12, side: S, wall: WALL}
+    - {x: 8, y: 13, side: S, wall: WALL}
+    - {x: 8, y: 14, side: S, wall: WALL}
+    - {x: 8, y: 15, side: S, wall: WALL}
+    - {x: 8, y: 16, side: S, wall: WALL}
+    - {x: 8, y: 17, side: S, wall: WALL}
+    - {x: 8, y: 18, side: S, wall: WALL}
+    - {x: 9, y: 1, side: W, wall: DOOR}
+    - {x: 9, y: 2, side: W, wall: WALL}
+    - {x: 9, y: 3, side: W, wall: WALL}
+    - {x: 9, y: 4, side: W, wall: WALL}
+    - {x: 9, y: 5, side: W, wall: WALL}
+    - {x: 9, y: 6, side: W, wall: WALL}
+    - {x: 9, y: 7, side: W, wall: WALL}
+    - {x: 9, y: 8, side: W, wall: WALL}
+    - {x: 9, y: 10, side: S, wall: WALL}
+    - {x: 9, y: 11, side: S, wall: WALL}
+    - {x: 9, y: 12, side: S, wall: WALL}
+    - {x: 9, y: 13, side: S, wall: WALL}
+    - {x: 9, y: 14, side: S, wall: WALL}
+    - {x: 9, y: 15, side: S, wall: WALL}
+    - {x: 9, y: 16, side: S, wall: WALL}
+    - {x: 9, y: 17, side: S, wall: WALL}
+    - {x: 9, y: 18, side: S, wall: WALL}
+    - {x: 10, y: 2, side: W, wall: WALL}
+    - {x: 10, y: 3, side: W, wall: WALL}
+    - {x: 10, y: 4, side: W, wall: WALL}
+    - {x: 10, y: 5, side: W, wall: WALL}
+    - {x: 10, y: 6, side: W, wall: WALL}
+    - {x: 10, y: 7, side: W, wall: WALL}
+    - {x: 10, y: 8, side: W, wall: WALL}
+    - {x: 10, y: 9, side: W, wall: WALL}
+    - {x: 10, y: 11, side: S, wall: WALL}
+    - {x: 10, y: 12, side: S, wall: WALL}
+    - {x: 10, y: 13, side: S, wall: WALL}
+    - {x: 10, y: 14, side: S, wall: WALL}
+    - {x: 10, y: 15, side: S, wall: WALL}
+    - {x: 10, y: 16, side: S, wall: WALL}
+    - {x: 10, y: 17, side: S, wall: WALL}
+    - {x: 10, y: 18, side: S, wall: WALL}
+    - {x: 10, y: 18, side: W, wall: WALL}
+    - {x: 11, y: 2, side: W, wall: WALL}
+    - {x: 11, y: 3, side: W, wall: WALL}
+    - {x: 11, y: 4, side: W, wall: WALL}
+    - {x: 11, y: 5, side: W, wall: WALL}
+    - {x: 11, y: 6, side: W, wall: WALL}
+    - {x: 11, y: 7, side: W, wall: WALL}
+    - {x: 11, y: 8, side: W, wall: WALL}
+    - {x: 11, y: 9, side: W, wall: WALL}
+    - {x: 11, y: 10, side: W, wall: WALL}
+    - {x: 11, y: 12, side: S, wall: WALL}
+    - {x: 11, y: 13, side: S, wall: WALL}
+    - {x: 11, y: 14, side: S, wall: WALL}
+    - {x: 11, y: 15, side: S, wall: WALL}
+    - {x: 11, y: 16, side: S, wall: WALL}
+    - {x: 11, y: 17, side: S, wall: WALL}
+    - {x: 11, y: 18, side: S, wall: WALL}
+    - {x: 12, y: 2, side: W, wall: WALL}
+    - {x: 12, y: 3, side: W, wall: WALL}
+    - {x: 12, y: 4, side: W, wall: WALL}
+    - {x: 12, y: 5, side: W, wall: WALL}
+    - {x: 12, y: 6, side: W, wall: WALL}
+    - {x: 12, y: 7, side: W, wall: WALL}
+    - {x: 12, y: 8, side: W, wall: WALL}
+    - {x: 12, y: 9, side: W, wall: WALL}
+    - {x: 12, y: 10, side: W, wall: WALL}
+    - {x: 12, y: 11, side: W, wall: WALL}
+    - {x: 12, y: 13, side: S, wall: WALL}
+    - {x: 12, y: 14, side: S, wall: WALL}
+    - {x: 12, y: 15, side: S, wall: WALL}
+    - {x: 12, y: 16, side: S, wall: WALL}
+    - {x: 12, y: 17, side: S, wall: WALL}
+    - {x: 12, y: 18, side: S, wall: WALL}
+    - {x: 13, y: 2, side: W, wall: WALL}
+    - {x: 13, y: 3, side: W, wall: WALL}
+    - {x: 13, y: 4, side: W, wall: WALL}
+    - {x: 13, y: 5, side: W, wall: WALL}
+    - {x: 13, y: 6, side: W, wall: WALL}
+    - {x: 13, y: 7, side: W, wall: WALL}
+    - {x: 13, y: 8, side: W, wall: WALL}
+    - {x: 13, y: 9, side: W, wall: WALL}
+    - {x: 13, y: 10, side: W, wall: WALL}
+    - {x: 13, y: 11, side: W, wall: WALL}
+    - {x: 13, y: 12, side: W, wall: WALL}
+    - {x: 13, y: 14, side: S, wall: WALL}
+    - {x: 13, y: 15, side: S, wall: WALL}
+    - {x: 13, y: 16, side: S, wall: WALL}
+    - {x: 13, y: 17, side: S, wall: WALL}
+    - {x: 13, y: 18, side: S, wall: WALL}
+    - {x: 14, y: 2, side: W, wall: WALL}
+    - {x: 14, y: 3, side: W, wall: WALL}
+    - {x: 14, y: 4, side: W, wall: WALL}
+    - {x: 14, y: 5, side: W, wall: WALL}
+    - {x: 14, y: 6, side: W, wall: WALL}
+    - {x: 14, y: 7, side: W, wall: WALL}
+    - {x: 14, y: 8, side: W, wall: WALL}
+    - {x: 14, y: 9, side: W, wall: WALL}
+    - {x: 14, y: 10, side: W, wall: WALL}
+    - {x: 14, y: 11, side: W, wall: WALL}
+    - {x: 14, y: 12, side: W, wall: WALL}
+    - {x: 14, y: 13, side: W, wall: WALL}
+    - {x: 14, y: 15, side: S, wall: WALL}
+    - {x: 14, y: 16, side: S, wall: WALL}
+    - {x: 14, y: 17, side: S, wall: WALL}
+    - {x: 14, y: 18, side: S, wall: WALL}
+    - {x: 15, y: 2, side: W, wall: WALL}
+    - {x: 15, y: 3, side: W, wall: WALL}
+    - {x: 15, y: 4, side: W, wall: WALL}
+    - {x: 15, y: 5, side: W, wall: WALL}
+    - {x: 15, y: 6, side: W, wall: WALL}
+    - {x: 15, y: 7, side: W, wall: WALL}
+    - {x: 15, y: 8, side: W, wall: WALL}
+    - {x: 15, y: 9, side: W, wall: WALL}
+    - {x: 15, y: 10, side: W, wall: WALL}
+    - {x: 15, y: 11, side: W, wall: WALL}
+    - {x: 15, y: 12, side: W, wall: WALL}
+    - {x: 15, y: 13, side: W, wall: WALL}
+    - {x: 15, y: 14, side: W, wall: WALL}
+    - {x: 15, y: 16, side: S, wall: WALL}
+    - {x: 15, y: 17, side: S, wall: WALL}
+    - {x: 15, y: 18, side: S, wall: WALL}
+    - {x: 16, y: 2, side: W, wall: WALL}
+    - {x: 16, y: 3, side: W, wall: WALL}
+    - {x: 16, y: 4, side: W, wall: WALL}
+    - {x: 16, y: 5, side: W, wall: WALL}
+    - {x: 16, y: 6, side: W, wall: WALL}
+    - {x: 16, y: 7, side: W, wall: WALL}
+    - {x: 16, y: 8, side: W, wall: WALL}
+    - {x: 16, y: 9, side: W, wall: WALL}
+    - {x: 16, y: 10, side: W, wall: WALL}
+    - {x: 16, y: 11, side: W, wall: WALL}
+    - {x: 16, y: 12, side: W, wall: WALL}
+    - {x: 16, y: 13, side: W, wall: WALL}
+    - {x: 16, y: 14, side: W, wall: WALL}
+    - {x: 16, y: 15, side: W, wall: WALL}
+    - {x: 17, y: 2, side: W, wall: WALL}
+    - {x: 17, y: 3, side: W, wall: WALL}
+    - {x: 17, y: 4, side: W, wall: WALL}
+    - {x: 17, y: 5, side: W, wall: WALL}
+    - {x: 17, y: 6, side: W, wall: WALL}
+    - {x: 17, y: 7, side: W, wall: WALL}
+    - {x: 17, y: 8, side: W, wall: WALL}
+    - {x: 17, y: 9, side: W, wall: WALL}
+    - {x: 17, y: 10, side: W, wall: WALL}
+    - {x: 17, y: 11, side: W, wall: WALL}
+    - {x: 17, y: 12, side: W, wall: WALL}
+    - {x: 17, y: 13, side: W, wall: WALL}
+    - {x: 17, y: 14, side: W, wall: WALL}
+    - {x: 17, y: 15, side: W, wall: WALL}
+    - {x: 18, y: 2, side: W, wall: WALL}
+    - {x: 18, y: 3, side: W, wall: WALL}
+    - {x: 18, y: 4, side: W, wall: WALL}
+    - {x: 18, y: 5, side: S, wall: WALL}
+    - {x: 18, y: 5, side: W, wall: WALL}
+    - {x: 18, y: 6, side: W, wall: WALL}
+    - {x: 18, y: 7, side: W, wall: WALL}
+    - {x: 18, y: 8, side: W, wall: WALL}
+    - {x: 18, y: 9, side: W, wall: WALL}
+    - {x: 18, y: 10, side: W, wall: WALL}
+    - {x: 18, y: 11, side: W, wall: WALL}
+    - {x: 18, y: 12, side: W, wall: WALL}
+    - {x: 18, y: 13, side: W, wall: WALL}
+    - {x: 18, y: 14, side: W, wall: WALL}
+    - {x: 18, y: 15, side: W, wall: WALL}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [1, 14, 19]} # to MAZE.yml#level-1/19,14
+    - {index: 2, kind: SCNMSG, aux: [-1, 14, 1]} # message 14 "óÎèÁòðêã²ÑÍÌÑ£ÉÃ\x9aÀ\x94È³½­\x85»®±\x87", every time
+    - {index: 3, kind: SCNMSG, aux: [-1, 15, 1]} # message 15 "ñçùå½óæé±ÑÚÖØËÃÁË»·\x90®¸¶¸©£­x\x99\x9b¡\x91\x8c\x9a\x8c\x8f\x8by", every time
+    - {index: 4, kind: STAIRS, aux: [5, 0, 11]} # to MAZE.yml#level-5/11,0
+    - {index: 5, kind: SCNMSG, aux: [-21410, 35, 4]} # message 35 "Öà¯ÍÐËÇ ÊÉÅ¿\x91¯»¸ª£±¯y\x98\x98\x96\x9c\x9c\x8cd\x9a\x8d\x90r", search: finds item 20410 (#20410)
+    - {index: 6, kind: TRANSFER, aux: [3, 3, 3]} # to MAZE.yml#level-3/3,3
+    - {index: 7, kind: TRANSFER, aux: [0, 0, 0]} # to the castle
+    - {index: 8, kind: SCNMSG, aux: [43, 41, 11]} # message 41 "ÐÎÍÛÏ§Ð\x9a¼È¹³½­¦®\x7f°\x9a®\x9cp \x8f\x99\x9a\x8a\x81\x80", a fee
+    - {index: 9, kind: SCNMSG, aux: [-21008, 38, 4]} # message 38 "ÓÝ¬ÊÖÓÁÏÃË½À¼\x8bªª¥ª«§©s¤\x9cj \x93\x96^\x81\x8a\x84\x7f", search: finds item 20008 (#20008)
+    - {index: 10, kind: SCNMSG, aux: [202, 8, 14]} # message 8 "ÐÍÌééøßíÝµáÕ¬ÖÕÄÔ\x9dÇÆÂÄÂ°º¸\x83\x80}{", action 14
+    - {index: 11, kind: TRANSFER, aux: [3, 0, 1]} # to MAZE.yml#level-3/1,0
+    - {index: 12, kind: SCNMSG, aux: [-1, 67, 1]} # message 67 "\x97³\x8f³»§¹¥¶\x9b©\x98x¡k\x8c\x86\x94\x8ajgdU", every time
+    - {index: 13, kind: SCNMSG, aux: [-1, 68, 1]} # message 68 "\x96²¼¯\x88¹ª¨¯yª¥\x91\x9dq\x9ad\x82^~\x8a\x84uzZWTE", every time
+    - {index: 14, kind: SCNMSG, aux: [-1, 69, 1]} # message 69 "\x95´¼¸\x8e¸\x81¥ªx\x96 ¨l\x8f\x9b\x95\x94\x85\x7f\x89`Q}}VSPA", every time
+    - {index: 15, kind: ROCKWATE, aux: [0, 0, 0]} # damage 0 + 0 rolls of d0
+  encounters:
+    - {min_enemy: 12, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: -1}
+    - {min_enemy: 27, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: -1}
+    - {min_enemy: 12, mult_worse: 20, worse01: 1, range0n: 10, perc_worse: 50}
+level-4:
+  map: |
+    +   +---+---+---+---+   +---+---+---+---+   +---+---+---+---+   +---+-D-+-D-+---+
+    | 4#|               | 4#|               | 4#|               | 4#|*  |*  D*eMD*  | 19
+    +   +   +---+---+   +   +   +---+---+   +   +   +---+---+   +   +-D-+---+---+   +
+    | 4#|   |*  D*  |   | 4#|   |*   *  |   | 4#|   |*  D*  |   | 4#| 4#|*   *eMD*  | 18
+    +   +   +-D-+-D-+   +   +   +   +   +   +   +   +-D-+-D-+   +   +   +-D-+---+-D-+
+    | 4#|   |*  |*9T|   | 4#|   |*bM *  |   | 4#|   |*aE|*  |   | 4#| 4#|*eM *  |*  | 17
+    +   +   +-D-+---+   +   +   +-D-+---+   +   +   +---+-D-+   +   +   +-D-+   +   +
+    | 4#h               h 4#h               h 4#h               h 4#| 4#|*  |*  D*  | 16
+    +   +---+---+---+---+   +---+---+---+---+   +---+---+---+---+   +   +   +---+---+
+    | 4#  4#  4#  4#  4#  4#  4#  4#  4#  4#  4#  4#  4#  4#  4#  4#| 4#|*  |*   *  | 15
+    +---+---+---+---+---+-D-+-h-+---+---+---+---+---+---+---+---+   +   +   +-D-+   +
+    |*  D*  D*  D*  |*   *  | 4#|*   *  D*   *  |*   *  D*   *  | 4#| 4#|*   *  |*2S| 14
+    +-D-+---+---+-D-+-D-+---+   +-D-+   +   +---+   +---+---+   +   +   +---+---+---+
+      4#  4#  4#|*  |*  |*  | 4#|*  |*  |*  D*   *  |*cC *  |*  | 4#  4#  4#  4#  4#  13
+    +---+---+   +-D-+   +   +   +   +---+---+---+---+   +   +-D-+---+---+---+---+---+
+    |*   *  | 4#|*  |*  D*  | 4#|*   *  D*  |*   *  h*dM *  h       D               | 12
+    +   +-D-+   +-D-+---+-D-+   +   +---+   +   +-D-+---+---+---+   +---+   +-D-+---+
+    |*  |*  | 4#|*  D*  D*  | 4#|*  |*   *  |*  |*  D*   *  D*  |       |   |*6M *  | 11
+    +-D-+   +-h-+---+-D-+---+   +---+-D-+   +---+   +---+   +-D-+---+-D-+-D-+---+-D-+
+    |*4#|*   *  |*  | 4#| 4#| 4#|*   *  |*  |*   *   *  |*  |*  |       |*   *  |*fT| 10
+    +   +---+---+   +   +   +   +   +---+---+---+---+---+---+   +-D-+---+   +   +---+
+    |*4# *4#D*   *  | 4#| 4#| 4#|*  |*   *  |*   *  D*  |*   *  | 4#|*   *eM *   *  |  9
+    +-h-+---+---+---+   +   +   +   +   +-D-+   +---+   +---+   +   +   +   +   +   +
+    |*   *  h*   *  | 4#  4#| 4#|*  D*  |*   *  |*7C *   *  D*  | 4#|*   *   *   *eM|  8
+    +   +---+---+   +---+   +   +---+---+---+---+---+---+---+---+   +---+   +   +---+
+    |*  |*   *  |*  | 4#| 4#| 4#  4#  4#  4#  4#  4#  4#  4#  4#  4#|*  D*eM *  D*  |  7
+    +-h-+---+   +-h-+   +   +   +---+-D-+---+-D-+-D-+---+-D-+---+   +-D-+---+-h-+-D-+
+    |*  |*  h*  |*  | 4#  4#| 4#|*   *  |*4# *4#|*   *  |*  |*  | 4#|*  D*   *  D*eM|  6
+    +   +-h-+---+   +   +---+   +   +---+   +---+---+   +   +-D-+   +---+   +   +---+
+    |*   *  h*   *  | 4#  4#| 4#|*  |*4# *4#h*8M| 4#|*  |*   *  | 4#|*   *   *   *eM|  5
+    +---+---+---+---+---+---+   +---+---+---+---+   +---+-D-+   +   +---+   +   +---+
+    | 4#  4#h 4#  4#  4#  4#  4#  4#  4#  4#  4#  4#  4#|*  |*  | 4#|*  D*eM *  D*  |  4
+    +   +-D-+---+---+   +---+---+---+---+---+---+---+---+   +---+   +-D-+---+---+-D-+
+    | 4#|*  |*   *  | 4#|       D                   D*   *   *  D 4#|*  |*   *fT|*  |  3
+    +   +   +---+   +---+   +---+-D-+-D-+-D-+---+   +---+   +---+   +   +   +   +   +
+    | 4#|*  |*3Th*  h*  D   |*   *  |*  |*  |*1S|   |*  |*  |*  | 4#|*  D*   *  D*  |  2
+    +-D-+   +---+---+   +   +   +---+   +   +   +---+   +-D-+   +   +---+-D-+-D-+---+
+    | 4#|*  |*   *  h*  |   |*  |*5S *  |*  |*  D*  |*   *   *  | 4#|*  |*eM *eM|*  |  1
+    +   +-D-+---+---+   +-D-+   +---+---+   +-D-+   +---+-D-+---+   +   +-D-+-D-+   +
+    | 4#|*  |*   *  h*  | 4#|*  |*   *   *  | 4#|*   *  D*   *  | 4#|*   *  |*   *  |  0
+    +   +---+---+---+---+   +---+---+---+---+   +---+---+---+---+   +---+-D-+-D-+---+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 0, y: 2, side: S, wall: WALL}
+    - {x: 3, y: 11, side: S, wall: DOOR}
+    - {x: 5, y: 1, side: S, wall: WALL}
+    - {x: 5, y: 11, side: S, wall: DOOR}
+    - {x: 5, y: 15, side: S, wall: WALL}
+    - {x: 10, y: 1, side: S, wall: WALL}
+    - {x: 14, y: 12, side: W, wall: WALL}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [2, 19, 0]} # to MAZE.yml#level-2/0,19
+    - {index: 2, kind: STAIRS, aux: [6, 0, 5]} # to MAZE.yml#level-6/5,0
+    - {index: 3, kind: TRANSFER, aux: [4, 6, 1]} # to MAZE.yml#level-4/1,6
+    - {index: 4, kind: DARK, aux: [0, 1, 1]}
+    - {index: 5, kind: STAIRS, aux: [1, 7, 7]} # to MAZE.yml#level-1/7,7
+    - {index: 6, kind: SCNMSG, aux: [89, 81, 10]} # message 81 "¶¹³±{¡¨r\x90\x9ai\x9b\x91\x85~\x8d\x90Tw\x80tmsfrdbfA", a riddle
+    - {index: 7, kind: CHUTE, aux: [4, 7, 1]}
+    - {index: 8, kind: SCNMSG, aux: [4, 32, 3]} # message 32 "Ùã²ÞÕÕß£ÂÉ»º¿\x91º´¹º«£|\x9d¨\x9c  j\x8d\x96\x90\x8b[\x8c}w", a fountain (effect 4)
+    - {index: 9, kind: TRANSFER, aux: [4, 6, 14]} # to MAZE.yml#level-4/14,6
+    - {index: 10, kind: ENCOUNTE, aux: [-1, -1, 75]} # monster 75 (DELF'S MINION), -1 times left, range -1
+    - {index: 11, kind: SCNMSG, aux: [0, 74, 15]} # message 74 "\x8e", action 15
+    - {index: 12, kind: CHUTE, aux: [2, 11, 2]}
+    - {index: 13, kind: SCNMSG, aux: [-1, 29, 1]} # message 29 "Ü¸èÚÞÞÝ²£ÓÔ»ÉÈ¹Ç\x8bµ¦°\x7f¥§v\x94p¡\x9f\x99\x86\x82\x8c", every time
+    - {index: 14, kind: SCNMSG, aux: [1, 34, 9]} # message 34 "ââßØªÖÙÕ\x9f", a lookout
+    - {index: 15, kind: TRANSFER, aux: [4, 15, 17]} # to MAZE.yml#level-4/17,15
+  encounters:
+    - {min_enemy: 32, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: -1}
+    - {min_enemy: 42, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: -1}
+    - {min_enemy: 32, mult_worse: 20, worse01: 1, range0n: 10, perc_worse: 50}
+level-5:
+  map: |
+    +   +   +   +   +   +   +   +   +   +   +   +---+-D-+-D-+-D-+-D-+-D-+-D-+---+   +
+     *   *   *   *   *   *   *   *   *   *   *8#|*  |*  |*  |*  |*  |*  |*  D   |*8#  19
+    +   +   +   +   +   +   +   +   +   +   +   +-D-+---+-D-+---+-D-+---+---+   +   +
+     *   *   *7P *   *7P *   *7P *   *7P *   *8#|           |   |   |           |*8#  18
+    +   +   +   +   +   +   +   +   +   +   +   +   +---+---+   +   +   +---+---+   +
+     *   *   *   *   *   *   *   *   *   *   *8#|   |           |   |   D*   *  |*8#  17
+    +   +   +   +   +   +   +   +   +   +   +   +   +---+   +-D-+   +   +   +   +   +
+     *   *   *   *   *   *   *5M *   *   *   *8#|           |*  |   |   |*   *  |*8#  16
+    +   +   +   +   +   +   +   +   +   +   +   +   +---+-D-+---+   +   +   +---+   +
+     *8# *8# *8# *8# *8# *8# *8# *8# *8# *8# *8#|   |*  |               |*  D*  |*8#  15
+    +---+---+---+---+---+---+-D-+---+---+---+---+   +-D-+---+---+---+-D-+---+---+---+
+    D*  D*  D*  D*  D*  D*  | 9F|                       |*   *  D*   *  D*   *  |*  D 14
+    +-D-+-D-+-D-+---+---+---+   +---+---+   +---+---+   +   +   +   +   +---+-D-+-D-+
+    |*1SD*  |*  D       D 2M        D*  |   |*   *  D   |*   *  D*   *  D*   *  |*  | 13
+    +---+-D-+-D-+---+---+---+   +---+---+   +---+---+---+---+---+---+---+---+---+-D-+
+    D*  D*  D*  D*  D*  D   |   |*  |       |*   *  |   |*   *  |*   *  |*   *  |*  D 12
+    +---+---+---+---+---+   +-D-+-D-+   +---+   +   +---+   +   +   +   +   +   +---+
+                        |   |   |   |   D*  |*   *  |*  |*   *  |*   *  |*   *  |     11
+    +   +---+---+-D-+   +   +   +   +   +---+---+---+   +---+-D-+---+-D-+-D-+---+   +
+        D*6ED*6E|*  |   |   |   |   |   D*  |   D*   *dM *  |   |           |         10
+    +---+---+-D-+-D-+---+   +-D-+-D-+   +---+---+---+   +---+-D-+   +---+---+---+---+
+    D*6E *6ED*6E|*  D*  |   |*   *  |   D   D*   *  |*  |*   *  |       h*   *   *4MD  9
+    +---+---+-D-+-D-+---+   +   +   +---+---+   +   +---+   +   +---+   +---+---+---+
+    D*  D*6ED*6E|*  |*eM|   |*   *  |   D   |*   *  D   D*   *  |           |*  D*  D  8
+    +---+---+---+---+---+-D-+-D-+-D-+   +   +---+---+---+---+---+---+   +---+---+-D-+
+    D*  D*  D*  D*  |*fM| 8#D           |           |                   |*   *  |*  D  7
+    +---+---+---+---+---+---+---+---+---+---+---+   +---+-D-+---+   +---+   +   +---+
+     *8# *8# *8# *8# *8# *8# *8# *8# *8# *8# *8#|           |*  |       D*   *  |*8#   6
+    +   +   +   +   +   +   +   +   +   +   +   +---+---+---+   +   +   +-D-+-D-+   +
+     *   *   *   *   *   *   *   *   *   *7P *8#|           D*  |       |   |*  |*8#   5
+    +   +   +   +   +   +   +   +   +   +   +   +-D-+-D-+-D-+---+---+   +   +---+   +
+     *   *   *7P *   *   *aT *   *   *   *   *8#|*  |*  |   |*   *  |       D*  |*8#   4
+    +   +   +   +   +   +   +   +   +   +   +   +   +---+   +   +   +-D-+   +---+   +
+     *   *   *   *   *   *   *   *   *   *   *8#|*   *  |   D*   *  D   |   |   |*8#   3
+    +   +   +   +   +   +   +   +   +   +   +   +---+-D-+   +---+---+   +   +   +   +
+     *5M *   *   *7P *   *   *   *   *   *   *8#|*   *  |   D*   *  D   |       |*8#   2
+    +   +   +   +   +   +   +   +   +   +   +   +   +---+---+   +   +---+---+   +   +
+     *   *   *   *   *   *   *5M *   *7P *   *8#|*  |*  |*  |*   *  |*  |*  |   |*8#   1
+    +   +   +   +   +   +   +   +   +   +   +   +---+-D-+-D-+-D-+-D-+-D-+-D-+---+   +
+     *   *   *7P *   *   *   *   *   *   *   *8#| bSD                       h cS|*8#   0
+    +   +   +   +   +   +   +   +   +   +   +   +---+-D-+-D-+-D-+-D-+-D-+-D-+---+   +
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 1, y: 13, side: W, wall: WALL}
+    - {x: 1, y: 14, side: W, wall: WALL}
+    - {x: 4, y: 7, side: W, wall: DOOR}
+    - {x: 4, y: 8, side: S, wall: DOOR}
+    - {x: 4, y: 9, side: S, wall: DOOR}
+    - {x: 6, y: 7, side: W, wall: WALL}
+    - {x: 10, y: 10, side: W, wall: DOOR}
+    - {x: 10, y: 11, side: S, wall: DOOR}
+    - {x: 12, y: 8, side: W, wall: WALL}
+    - {x: 12, y: 12, side: W, wall: DOOR}
+    - {x: 13, y: 8, side: W, wall: WALL}
+    - {x: 13, y: 12, side: W, wall: DOOR}
+    - {x: 14, y: 10, side: S, wall: WALL}
+    - {x: 14, y: 11, side: S, wall: WALL}
+    - {x: 18, y: 0, side: W, wall: DOOR}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [6, 0, 14]} # to MAZE.yml#level-6/14,0
+    - {index: 2, kind: SCNMSG, aux: [106, 101, 10]} # message 101 "\x9cp\x8e\x97g\x93\x8f\x83[\x87{R\x83tnFge`e7cW.^M[GMPR#8942;\x10", a riddle
+    - {index: 3, kind: TRANSFER, aux: [0, 0, 0]} # to the castle
+    - {index: 4, kind: SCNMSG, aux: [-1, 44, 1]} # message 44 "Í×¦ÌÎÐ½É½ÁÂ´·³\x82®ªyª\x9b\x95m\x8e\x96\x93\x93^\x8d}vv\x82f", every time
+    - {index: 5, kind: SCNMSG, aux: [49, 47, 11]} # message 47 "ÊÈÇÕÉ¡Ê\x94¶Â³­·§ ¨yª\x94¨\x96j\x9a\x89\x93\x94\x84{z`]Zpoye", a fee
+    - {index: 6, kind: ENCOUNTE, aux: [-1, -1, 72]} # monster 72 (PRIEST OF FUNG), -1 times left, range -1
+    - {index: 7, kind: PIT, aux: [5, 5, 1]} # damage 5 + 1 rolls of d5
+    - {index: 8, kind: DARK, aux: [0, 0, 0]}
+    - {index: 9, kind: FIZZLE, aux: [0, 0, 0]}
+    - {index: 10, kind: TRANSFER, aux: [5, 7, 5]} # to MAZE.yml#level-5/5,7
+    - {index: 11, kind: STAIRS, aux: [3, 1, 0]} # to MAZE.yml#level-3/0,1
+    - {index: 12, kind: STAIRS, aux: [1, 6, 7]} # to MAZE.yml#level-1/7,6
+    - {index: 13, kind: SCNMSG, aux: [0, 73, 16]} # message 73 "\x8f", action 16
+    - {index: 14, kind: SCNMSG, aux: [59, 50, 11]} # message 50 "Ç£ÓÅÉÉÈ\x9d\x8e¾¿¦´³¤²v \x91\x9bj\x90\x92a\x7f[\x8c\x8a\x84qmwF", a fee
+    - {index: 15, kind: SCNMSG, aux: [9, 60, 2]} # message 60 "½»ºÈ¼\x8d¹·©¯±{\x99u\x9c\x94£\x8e\x92c\x85\x8b}\x89\x89\x84\x82plEenb_[e<", gives item 9 (ROD OF FIRE)
+  encounters:
+    - {min_enemy: 32, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: -1}
+    - {min_enemy: 47, mult_worse: 0, worse01: 0, range0n: 5, perc_worse: -1}
+    - {min_enemy: 32, mult_worse: 20, worse01: 1, range0n: 10, perc_worse: 50}
+level-6:
+  map: |
+    +---+---+---+   +   +---+---+---+---+---+---+---+---+---+---+   +   +---+---+-h-+
+    | 7R  7R  7R| 6#  6#|*8T|*  |*  |               |   D*  |*9# *9# *9#|*   *   *  | 19
+    +   +   +   +---+   +---+   +   +   +---+---+   +   +---+   +   +   +   +   +   +
+    | 7R  7R  7R| 6#  6#|*  |*  |*  |       |           |*9# *9# *9# *9#|*   *   *  | 18
+    +   +   +   +   +---+   +   +   +---+   +   +---+---+   +   +   +   +-D-+---+   +
+    | 7R  7R  7R| 6#  6#|*   *   *  |*9#D   |   |*9# *9# *9# *9# *9# *9#|*dM *4M|*aM| 17
+    +---+---+---+---+---+---+-h-+---+   +---+---+   +   +   +   +-D-+   +---+---+---+
+    | 6#  6#  6#  6#| 6#| 6#  6#|*9# *9# *9# *9# *9# *9# *9# *9#D*  D*9# *9# *9# *9#| 16
+    +   +---+   +---+   +---+   +   +   +   +   +   +   +   +   +-D-+   +   +   +   +
+    | 6#  6#| 6#| 6#| 6#  6#| 6#D*9# *9# *9# *9# *9# *9# *9# *9# *9# *9# *9# *9# *9#| 15
+    +---+   +   +   +   +---+   +   +   +---+---+---+---+   +   +   +   +---+---+---+
+    | 6#  6#| 6#| 6#  6#  6#  6#|*9# *9#| 6#  6#  6#D*  |*9# *9# *9# *9#  6#  6#  6#| 14
+    +   +---+   +---+---+   +---+---+---+   +---+---+---+---+---+---+---+   +   +-D-+
+    | 6#| 6#  6#  6#  6#| 6#  6#  6#| 6#  6#| 6#  6#D 6#  6#  6#  6#| 6#  6#| 6#|*  | 13
+    +   +   +---+---+---+---+   +---+   +---+   +---+---+---+   +---+   +---+   +---+
+      6#| 6#  6#  6#  6#  6#| 6#  6#  6#  6#  6#| 7R  7R  7R| 6#| 6#  6#  6#| 6#| 6#  12
+    +---+---+   +---+---+   +---+---+   +---+---+   +   +   +   +---+---+---+   +   +
+      6#  6#| 6#  6#  6#  6#D*  | 6#  6#| 6#  6#| 7R  7R  7R| 6#  6#  6#  6#| 6#| 6#  11
+    +   +   +   +---+   +---+---+   +---+   +   +   +   +   +---+---+   +   +   +---+
+      6#| 6#| 6#  6#| 6#|*   *  | 6#  6#| 6#| 6#| 7R  7R  7R| 6#  6#  6#| 6#  6#| 6#  10
+    +   +---+---+   +---+---+   +   +---+   +   +---+---+---+   +   +   +---+---+   +
+    | 6#  6#  6#  6#| 6#  6#D*  | 6#| 6#  6#| 6#  6#| 6#  6#  6#| 6#| 6#| 6#  6#| 6#|  9
+    +   +---+   +   +---+   +---+   +   +---+   +   +---+---+---+   +---+   +   +   +
+    | 6#| 6#  6#| 6#  6#  6#| 6#  6#| 6#  6#| 6#| 6#  6#  6#| 6#  6#| 6#  6#| 6#  6#|  8
+    +   +---+---+---+---+---+   +---+---+---+   +---+---+   +   +---+   +   +---+---+
+      6#  6#  6#  6#  6#  6#  6#  6#  6#  6#  6#  6#  6#| 6#  6#| 6#  6#| 6#| 6#  6#   7
+    +   +---+---+---+---+---+---+   +---+---+   +---+   +---+---+   +---+   +   +---+
+    | 6#| 6#  6#| 6#|*   *   *  h 6#  6#  6#|   | 6#  6#|*  D*  D 6#| 6#  6#| 6#  6#|  6
+    +   +   +---+   +---+   +   +---+---+---+-D-+   +---+---+---+   +---+---+   +---+
+      6#| 6#| 6#  6#|*4M|*   *  | 6#  6#|*3E *3E| 6#  6#  6#  6#| 6#  6#  6#| 6#| 6#   5
+    +---+   +   +---+   +   +   +   +   +   +   +---+---+---+   +   +---+   +   +   +
+      6#  6#| 6#  6#|*fMD*   *  | 6#| 6#|*3E *3E|*bM *   *  h 6#| 6#  6#| 6#| 6#| 6#   4
+    +---+---+---+   +---+---+---+   +---+---+-D-+---+   +   +   +---+   +---+   +---+
+      6#  6#  6#| 6#| 6#  6#| 6#  6#D 5MD*   *  |*  |*   *  | 6#  6#  6#| 6#| 6#  6#   3
+    +---+---+   +   +   +   +   +---+---+   +   +   +---+-D-+---+   +---+   +---+---+
+      6#| 6#  6#  6#  6#| 6#  6#  6#D*  |*   *  |*   *4M *eM| 6#  6#  6#  6#| 6#  6#   2
+    +   +   +---+   +---+   +---+---+---+-D-+-D-+---+---+---+   +---+---+---+   +---+
+    | 6#| 6#  6#| 6#|*  | 6#|*   *  |*   *  |*   *  |*   *  | 6#|*  D 6#  6#| 6#  6#|  1
+    +   +---+   +---+-D-+---+   +   +   +   +   +   +   +   +---+---+   +---+---+   +
+    | 6#  6#  6#  6#| 6#| 1SD*   *  D*   *  |*   *  D*   *  D 2S|*9#| 6#  6#  6#  6#|  0
+    +---+---+---+   +   +---+---+---+---+---+---+---+---+---+---+   +   +---+---+-h-+
+      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  one_way:
+    - {x: 4, y: 6, side: S, wall: DOOR}
+    - {x: 5, y: 4, side: W, wall: WALL}
+    - {x: 5, y: 19, side: S, wall: DOOR}
+    - {x: 6, y: 19, side: W, wall: DOOR}
+    - {x: 9, y: 3, side: W, wall: WALL}
+    - {x: 10, y: 4, side: S, wall: WALL}
+    - {x: 10, y: 6, side: S, wall: WALL}
+    - {x: 11, y: 4, side: S, wall: DOOR}
+    - {x: 13, y: 3, side: S, wall: WALL}
+    - {x: 17, y: 18, side: S, wall: WALL}
+    - {x: 19, y: 17, side: W, wall: DOOR}
+  specials:
+    - {index: 0, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 1, kind: STAIRS, aux: [4, 14, 19]} # to MAZE.yml#level-4/19,14
+    - {index: 2, kind: STAIRS, aux: [5, 13, 0]} # to MAZE.yml#level-5/0,13
+    - {index: 3, kind: ENCOUNTE, aux: [-1, -1, 77]} # monster 77 (L'KBRETH), -1 times left, range -1
+    - {index: 4, kind: SCNMSG, aux: [2, 63, 13]} # message 63 "º\x96Å±±³¨²µ~®¬\x96¦¤\x91i\x99\x97\x81\x8b~\x8aTssqwwg?uhk?", action 13
+    - {index: 5, kind: SCNMSG, aux: [0, 13, 13]} # message 13 "ñé÷çöáåâÁ°ÚËà¤ÚÍÐÊ\x95É°Å\x89¨¨\x80¢\x9bª­\x7f", action 13
+    - {index: 6, kind: DARK, aux: [0, 1, 1]}
+    - {index: 7, kind: ROCKWATE, aux: [0, 0, 0]} # damage 0 + 0 rolls of d0
+    - {index: 8, kind: TRANSFER, aux: [1, 0, 0]} # to MAZE.yml#level-1/0,0
+    - {index: 9, kind: DARK, aux: [0, 0, 0]}
+    - {index: 10, kind: SCNMSG, aux: [95, 90, 10]} # message 90 "§\x99\x98\x9do\x92\x92\x8d\x98\x92\x82Z\x86\x82QoKjqcbg9^bb`O3", a riddle
+    - {index: 11, kind: SCNMSG, aux: [100, 96, 10]} # message 96 "§£r\x9c¥i\x98\x92\x8c\x89fW\x8d\x80\x83Kutxd<_eegN\K?", a riddle
+    - {index: 12, kind: NORMAL, aux: [0, 0, 0]}
+    - {index: 13, kind: SCNMSG, aux: [-20201, 70, 4]} # message 70 "Ë¾Á\x89®¤¶¢z©\x99\x92\x91\x93\x8d\x89b\x93\x84~V\x86\x84n~|iO", search: finds item 19201 (#19201)
+    - {index: 14, kind: SCNMSG, aux: [-20211, 70, 4]} # message 70 "Ë¾Á\x89®¤¶¢z©\x99\x92\x91\x93\x8d\x89b\x93\x84~V\x86\x84n~|iO", search: finds item 19211 (#19211)
+    - {index: 15, kind: SCNMSG, aux: [70, 70, 4]} # message 70 "Ë¾Á\x89®¤¶¢z©\x99\x92\x91\x93\x8d\x89b\x93\x84~V\x86\x84n~|iO", search: fight monster 70 (XENO)
+  encounters:
+    - {min_enemy: 52, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: -1}
+    - {min_enemy: 62, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: -1}
+    - {min_enemy: 62, mult_worse: 0, worse01: 0, range0n: 10, perc_worse: -1}

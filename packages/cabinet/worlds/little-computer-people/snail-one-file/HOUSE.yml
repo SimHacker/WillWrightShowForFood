@@ -1,0 +1,15 @@
+# A Little Computer People disk. Import writes the resident back; this file is a description.
+
+game: Little Computer People
+platform: Commodore 64
+source: lcp-cr-snail.d64
+sha1: 74c341a76f8605620e8d4f39b9cab6de6e213a8f
+disk_name: " "
+disk_id: "00"
+resident: null # no research data in sector 1.4: this crack keeps the house inside its one file
+files:
+  - name: LITTLE COMPUTER
+    type: PRG
+    blocks: 2
+    listing: programs/little-computer.bas
+  - {name: -- PEOPLE --, type: PRG, blocks: 225}

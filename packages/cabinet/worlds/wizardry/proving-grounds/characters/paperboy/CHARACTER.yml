@@ -1,0 +1,52 @@
+# PAPERBOY: roster slot 14 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: PAPERBOY
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 2145
+inventory:
+  - {item: STAFF, equipped: true, cursed: false, identified: true}
+  - {item: ROBES, equipped: true, cursed: false, identified: true}
+spells:
+  - HALITO
+  - MOGREF
+  - KATINO
+  - DUMAPIC
+  - DILTO
+  - SOPIC
+  - MAHALITO
+  - MOLITO
+  - MORLIS
+  - DALTO
+  - LAHALITO
+  - MAMORLIS
+  - MAKANITO
+wizardry:
+  slot: 14
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: ELF
+  class: MAGE
+  age_weeks: 962
+  status: OK
+  alignment: NEUTRAL
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 18, agility: 18, luck: 18}
+  luck_skill: [18, 18, 16, 18, 15]
+  experience: 75655
+  max_level: 9
+  level: 9
+  hp: 32 # hit points left
+  hp_max: 32
+  mage_spells: [9, 7, 5, 3, 2, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 1
+  armor_class: 9 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 1
+  damage: {count: 1, sides: 5, bonus: 0}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

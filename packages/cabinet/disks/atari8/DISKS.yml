@@ -1,0 +1,8 @@
+# Atari 8-bit disks (.atr). Fetched 2026-10-31 from archive.org.
+
+disks:
+  - file: little-computer-people/lcp-megamania-de.atr
+    bytes: 133136
+    sha1: 9f00869efc9dac79b1135eb32124f996bd478e97
+    source: "https://archive.org/download/a8b_Little_Computer_People_1986_Megamania_Software_de/Little_Computer_People_1986_Megamania_Software_de.atr"
+    note: "German, Megamania"

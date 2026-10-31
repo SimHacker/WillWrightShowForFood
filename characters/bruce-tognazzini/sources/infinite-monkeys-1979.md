@@ -45,7 +45,7 @@ ask him one question.
 
 ## Links
 
-- [Don's reading video — Palm's tribute + the Apple ][ program, narrated](https://www.youtube.com/watch?v=lL2sw2oYU98)
+- [Don's reading video — Palm's tribute + the Apple \]\[ program, narrated](https://www.youtube.com/watch?v=lL2sw2oYU98)
 - [Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem)
 - [Dasher project](http://www.inference.org.uk/dasher/)
 - [The Apple Tapes](https://www.mobygames.com/game/group/the-apple-tapes/)

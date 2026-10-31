@@ -1,0 +1,89 @@
+# GIMLI: roster slot 10 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: GIMLI
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 4690
+inventory:
+  - {item: BLUE RIBBON, equipped: false, cursed: false, identified: true}
+spells:
+  - 0
+  - HALITO
+  - MOGREF
+  - KATINO
+  - DUMAPIC
+  - DILTO
+  - SOPIC
+  - MAHALITO
+  - MOLITO
+  - MORLIS
+  - DALTO
+  - LAHALITO
+  - MAMORLIS
+  - MAKANITO
+  - MADALTO
+  - LAKANITO
+  - ZILWAN
+  - MASOPIC
+  - HAMAN
+  - MALOR
+  - MAHAMAN
+  - TILTOWAI
+  - KALKI
+  - DIOS
+  - BADIOS
+  - MILWA
+  - PORFIC
+  - MATU
+  - CALFO
+  - MANIFO
+  - MONTINO
+  - LOMILWA
+  - DIALKO
+  - LATUMAPI
+  - BAMATU
+  - DIAL
+  - BADIAL
+  - LATUMOFI
+  - MAPORFIC
+  - DIALMA
+  - BADIALMA
+  - LITOKAN
+  - KANDI
+  - DI
+  - BADI
+  - LORTO
+  - MADI
+  - MABADI
+  - LOKTOFEI
+  - MALIKTO
+  - KADORTO
+wizardry:
+  slot: 10
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: DWARF
+  class: FIGHTER
+  age_weeks: 1000
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 18, agility: 18, luck: 18}
+  luck_skill: [5, 8, 8, 4, 8]
+  experience: 661002
+  max_level: 48
+  level: 48
+  hp: 147 # hit points left
+  hp_max: 250
+  mage_spells: [4, 2, 2, 3, 3, 4, 3] # spell points per level, 1 to 7
+  priest_spells: [5, 4, 4, 4, 6, 4, 2]
+  hp_calc: 21
+  armor_class: 10 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 10
+  damage: {count: 2, sides: 2, bonus: 3}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [0] # AWARDS[4] bits

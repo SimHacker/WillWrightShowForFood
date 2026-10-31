@@ -47,6 +47,38 @@ to 32K.
 
 ## Could
 
+- **Wizardry worlds, the rest** ([worlds/wizardry/](worlds/wizardry/README.md)): unscramble
+  Wizardry III's SCENARIO.MESGS; read the monster picture format (ENEMYPIC in COMBAT, PIC2SCRN
+  in REWARDS) so PICTURES.yml becomes art; name the bits of `vs_type`, `resists` and
+  `abilities` from the source; empty a roster slot from YAML (import now only writes slots
+  the files name).
+
+- **Saved lives, the rest** ([worlds/mind-mirror/](worlds/mind-mirror/README.md),
+  [worlds/little-computer-people/](worlds/little-computer-people/README.md)): disassemble Mind
+  Mirror's `SAVE.OVR` and `R1.OVR`–`R4.OVR` to name RAVEN's seventeen scores and ten bytes;
+  decode the rest of Little Computer People's research data (moods, needs, house); read the
+  Apple II record on track 8, the one-file C64 cracks, the Atari disk and the ZX Spectrum
+  snapshots; fetch the archive.org item `432_Little_Computer_People_Disk_2`, which failed to
+  download, and the disk-label photos in `electronic-arts-mind-mirror-a2-ph`.
+
+- **Our own PDP-10 Forth, triangulated from three others, with credit to each.**
+  [Mitch Bradley's PDP-7 Forth](tapes/pdp7forth/README.md) (MIT: `xct` threading, NEXT in three
+  instructions); [Open Firmware](https://github.com/MitchBradley/OpenFirmware) and
+  [CForth](https://github.com/MitchBradley/cforth), whose names and practices the cabinet's Forth
+  already follows ([PDP7-FORTH.md](reference/PDP7-FORTH.md#aligning-with-open-firmware)); and
+  Angelo Papenhoff's [tenth](https://github.com/aap/tenth) (MIT), a bare-metal PDP-10 Forth from
+  2015–16 in 947 lines of assembly with its own assembler, which packs names five 7-bit characters
+  to a 36-bit word with the PDP-10's byte instructions. tenth is a port of his PDP-11 Forth
+  [ainliforth](https://github.com/aap/ainliforth) (2015, hand-assembled octal with `sed` filling
+  in labels, loaded from paper tape in SIMH's `pdp11`), the Forth to read for the GT40 and the
+  Knight TV, both PDP-11/05s. tenth runs in Open SIMH's KS10 `pdp10` once its tape has the
+  RIM10B loader block current SIMH expects and plain-sum checksums (`as.c` writes negated ones),
+  with input typed one character per console poll; there `+` leaves the instruction word
+  `262700000000` on the stack instead of the sum, and a `DO … LOOP` definition panics. Its
+  console is the KS10's: characters pass through the front end's words 32 and 33 with a
+  `WRAPR 12000`. The cabinet's KA10 ([PDP10.md](PDP10.md)) has the console teletype as device
+  120 instead, so the I/O words change there.
+
 - **A PDP-1, and L Peter Deutsch's PDP-1 Lisp with its scans.** A CPU plugin and a Type 30
   device, with SIMH's `PDP1/` as the oracle (it already has `spacewar1/`), and a front end for
   the PDP-1's assembler dialect. Then the first full test of the

@@ -100,9 +100,10 @@ nothing changes unless it's turned on:
 ## Proposal: microM8 as a WebAssembly module, called directly
 
 The tightest connection has no sockets at all: microM8's emulation core compiled to WebAssembly and
-loaded into the cabinet's SvelteKit component, with JavaScript and Go calling each other directly.
-This is what we'd propose to April and Melody, and Don could write it and send it as a pull request
-if they want it.
+loaded into the cabinet's SvelteKit component, with JavaScript and Go calling each other directly,
+the way the Micropolis engine runs in MicropolisCore. This is the main way the cabinet will run the
+Apple. We build it on [our branch](#a-branch-of-microm8) and run it in the page; if April and Melody
+want it, it goes back to them as a pull request.
 
 **What's there to build on.** Go compiles to WebAssembly (`GOOS=js GOARCH=wasm`), and
 `syscall/js` lets Go register functions JavaScript can call and call JavaScript back. microM8
@@ -163,6 +164,10 @@ UI components and the WebGPU tile renderer
   read nothing; `syncMapViews()` makes new ones. Go's WebAssembly memory grows too, so microM8's
   views of RAM, framebuffer and audio need the same re-binding, keyed to a generation counter the
   module bumps when memory moves.
+- **The same module in Node for tests**: MicropolisCore loads the engine headless in Node
+  ([`wasm/node.ts`](https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/src/lib/wasm/node.ts))
+  and runs simulation and poke tests against it. Go's `wasm_exec.js` runs under Node too, so the
+  Apple gets acceptance tests in the cabinet's suite: boot a disk, check the screen memory.
 
 For microM8 the chain is the same with Go in place of C++: `syscall/js` callbacks in place of
 Embind, a `MicroM8Reactive.svelte.ts` holding the machine's registers, run state, breakpoints and
@@ -276,13 +281,36 @@ microPAK, their package for an upcycled program, compared with the cabinet's car
 with a shared vocabulary for upcycling metadata and scripts:
 [UPCYCLING-FORMATS.md](UPCYCLING-FORMATS.md).
 
+## A branch of microM8
+
+The source is MIT-licensed Go, so we can keep a branch and build there what we'd offer back, plus
+what only the cabinet needs:
+
+- **Memory mapping between machines**: a window of the Apple's 64K mapped into another machine's
+  address space and back, after MIT's Rubin 10/11 interface ([MAPPING.md](MAPPING.md)).
+- **Per-address heat maps**: reads, writes and executes for every address over a whole recording,
+  beside the 256 counters there are today.
+- **Causality tracing**: which instruction wrote the byte that this instruction read, followed back
+  through the recording, as [CAUSE-AND-EFFECT.md](CAUSE-AND-EFFECT.md) plans for the PDP-7.
+- **Rewind across all of it**, built on the recorder microM8 already has, and saved as commits in
+  git, so a recording can be shared, branched and replayed.
+
+Anything upstream wants goes back as the pull requests above, after asking. The ideas also move the
+other way: features microM8 has and the cabinet lacks, starting with live rewind and full CPU
+recording, get built for the PDP-7 or once for every CPU the cabinet runs.
+
 ## Order of work
 
-1. The federation demo over MCP: PDP-7 Forth to microM8's 3D turtle.
-2. The `turtle.62` stream to turtleSpaces over port 1967.
-3. A read-only SvelteKit memory panel on microM8's debug WebSocket: hex, 6502 disassembly, the heat
-   map.
-4. Write to April and Melody with all of the above working, and propose the WebAssembly module,
-   offering to write it as a pull request.
+1. The WebAssembly module on our branch: a headless `GOOS=js GOARCH=wasm` build that boots a disk,
+   loaded in Node first, with a test that checks the screen memory.
+2. The `<MicroM8>` component in the cabinet page: the framebuffer drawn by the cabinet's renderer,
+   keyboard and paddles, RAM read through views over the module's memory, and a
+   `MicroM8Reactive.svelte.ts` holding the machine's state as runes, as in Micropolis.
+3. The Apple on the backplane, with a memory port, so the cabinet's memory, disassembly and heat map
+   panels work on it, and PDP-7 Forth drives microM8's turtle in the same page.
+4. Write to April and Melody with it running, and offer the module back as a pull request.
+
+The desktop routes stay available for whatever needs the full program: the MCP server, the debug
+WebSocket, and the `turtle.62` stream to turtleSpaces over port 1967.
 
 ↑ [README](README.md) · [MANIFESTO](MANIFESTO.md) · [TINY-TITAN](TINY-TITAN.md) · [WEB-BENCH](WEB-BENCH.md) · [LOGO-TURTLE](LOGO-TURTLE.md)

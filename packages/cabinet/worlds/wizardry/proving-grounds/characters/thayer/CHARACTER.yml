@@ -1,0 +1,45 @@
+# THAYER: roster slot 19 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: THAYER
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 11057
+inventory:
+  - {item: SHIELD + 1, equipped: false, cursed: false, identified: true}
+  - {item: LONG SWORD, equipped: true, cursed: false, identified: true}
+  - {item: LARGE SHIELD, equipped: true, cursed: false, identified: true}
+  - {item: PLATE MAIL, equipped: true, cursed: false, identified: true}
+  - {item: HELM, equipped: true, cursed: false, identified: true}
+  - {item: SCROLL/LOMILWA, equipped: false, cursed: false, identified: true}
+  - {item: BLUE RIBBON, equipped: false, cursed: false, identified: true}
+  - {item: MACE -1, equipped: false, cursed: false, identified: true}
+spells: [KALKI, DIOS, BADIOS, MILWA, MATU, MANIFO, MONTINO, LOMILWA, LATUMAPI, BAMATU]
+wizardry:
+  slot: 19
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: HUMAN
+  class: LORD
+  age_weeks: 1035
+  status: OK
+  alignment: NEUTRAL
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 18, agility: 18, luck: 18}
+  luck_skill: [13, 14, 16, 16, 16]
+  experience: 74007
+  max_level: 9
+  level: 9
+  hp: 76 # hit points left
+  hp_max: 76
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [6, 4, 3, 0, 0, 0, 0]
+  hp_calc: 12
+  armor_class: 1 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 2
+  damage: {count: 1, sides: 8, bonus: 3}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

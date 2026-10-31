@@ -1,0 +1,42 @@
+# QUIOP WERT: roster slot 9 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: QUIOP WERT
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 3481
+inventory:
+  - {item: BREAST PLATE +1, equipped: true, cursed: false, identified: true}
+  - {item: HELM, equipped: true, cursed: false, identified: true}
+  - {item: COPPER GLOVES, equipped: true, cursed: false, identified: true}
+  - {item: LONG SWORD+1, equipped: true, cursed: false, identified: true}
+  - {item: SHIELD + 2, equipped: true, cursed: false, identified: true}
+spells: [HALITO, MOGREF, KATINO, DUMAPIC, DILTO, SOPIC, MAHALITO]
+wizardry:
+  slot: 9
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: HUMAN
+  class: SAMURAI
+  age_weeks: 1532
+  status: OK
+  alignment: NEUTRAL
+  attributes: {strength: 13, iq: 17, piety: 12, vitality: 12, agility: 15, luck: 16}
+  luck_skill: [13, 16, 16, 16, 14]
+  experience: 295830
+  max_level: 11
+  level: 11
+  hp: 55 # hit points left
+  hp_max: 55
+  mage_spells: [8, 5, 2, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 10
+  armor_class: -2 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 3
+  damage: {count: 1, sides: 8, bonus: 1}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

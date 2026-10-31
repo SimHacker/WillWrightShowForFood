@@ -1,0 +1,366 @@
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..3261fd8bf35d9d46d852ffc5ca8d5233cdc74d9b
+GIT binary patch
+literal 2048
+zcmZ`)F>BjU5I)2sXfVmcWY8djFd9th;3=3Q#N#1?=}=6_kRgNdlrd8=#Ry?KgwVl=
+zOdT?G%#SFU`a3do%;3>e+&kI2I~#g3_WSPp-rale?#TfAw%Kg<9RPbS1bcWZ7T0zp
+z7<mMOw?Odg^7U!e3F0>Ca=BXm4#Tj;RaHH$B5PZGe?Lxg#jmQDr={ZWs%qYiPrI%D
+zuA11lZnvZG*<WLhTYUJ7p(Xi_JW(Q|H71ID|1;uG4oHoOU(?slNUAZpbw!BRnD{k0
+zm1*3}R~!vD3KOp_B7=xs=jYv&0S?l%#7A6VKFYdtE)Pr}Z|%p+A3P-)kEf6KUl~VH
+zC}Q+>Y?36F%L9YZ7!wXyZ|ke!RjsC2`!3zEl^w(^d2&0z9kmvi&?c^GAq<O$`d2Yz
+z91iJla>kht;>1bF(u8r~Gv-a_G%bx`T)KIn`Lo2$z0#M>0ut6|NNOHI9+(;PK-G}t
+z!xpPEJc=gKk;nl`e3T&@O$6h9Iu_(SGyn7X(aC<I)cewVo`8#|597G!oa^y*g<0Xf
+zFJ!%?b2F#UtHDms|KfXRjBz%mlYDX0n-c#R+rg;%_+m7^Ekuv2L6aRX{yf)<#X{mw
+zFF#+X_`?EO6^}ND0a#D`L-C0*@gtQl^Dfi%#bzX9J?;ff&J&Xr{l4&+eNjIbtX~v;
+z+b?9jgmt|4reEJ#pAX1##+6HKXadIh5t;B|{DDrC`Q3m6Mv*-r*Jl3x8|xjluc|*l
+z=AD!HL69RanD|olQ`}2tc*8j!1Q~TWpOAAmQw+d-xP6;4Hb4zv()J2CcX2(rzF<B&
+z=of&u8jX2?n;x3Nn4hzgyV;*}tZ4QV$cf%eb$<Zl*Z^`Lz~)#k{dZEJN&f&~2dMfJ
+w*7XPQDc(8GzSAc!>?uu@l#Dty9E9q9NwwAWB@!j9pVabhC1*OSn@=nF2UVKTDF6Tf
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_apl.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_apl.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..cfb80e317e37115c90c26e8a997314c7deddb4c1
+GIT binary patch
+literal 2048
+zcmZ`(J&W5w5M7q#*h1Vb#)S%DgmH0P<<bNp7O@1AA{^n$6vkDG6j!<sLZ~{fGUDnh
+zQr?dUsq#CnNSVUrRr1Z)*38Hu;}7kdH#0l4Gg_sFvfuBA3Z(`r00Vq9X4P@U7<d4T
+zkAU&(_Vsxe>7?IuyWMSnT5Ee;*Y)!*cCN<{54UM9_+9<$c`Nw)x-Lh_c+}h9*DLpT
+zG>QbC{4wUT$LCK7&6}UdD`AAR#7Lp;e}eqg87VRHZ}@i-G?f_DvLnb#jQkrag-Cqx
+z7aT740wXVFDgmtL))-^wti6a=@x?i;SfM)j2m$MO#W=q}$yw2aYicfP-F0Y~RoZl}
+z^EGQ6gdaF46~~q}&UHL3C$~5ze{HNwMZ86LY=49W@pgfS!}(=}PEybHRmLW|$jIJA
+z<5^`4;mVg<@{`n;g|M#<38ZA70V#O^xi%Z(BbTPBqw!Vw9EJ0P;)nH5$9626c;G3V
+zs(tFL(WK~T)i2gh4^QhJz|(<9E6A{58d>M)^#vmL8!z%x<>7ERLicaOnFRkB&Y$ZA
+zJmc=2^%|@z$fhVNO6WA&gq4DE7z{+&G)+moYws3!EsqcMJ92{ogL>Cry+3&*7;O-5
+z)yiyf|C@xaFYto&cw7L7rft8UqTvJPh0{?sxxo;Euj-o1Q!4eHPX+CLMaiMsn$8IK
+z<Lf5_r~$y&O*SN+!D)&HmqmeJ+Ax`V@23gjO@R6W&nqOefs}|pVow<SKNr&pVQe1!
+z2q##*<@lFy{TT6n7GZh&EwDXg1H$_?zh7EtFvTm@Up{>l@fQJD5f6)l0A!E+WB5QA
+z`K8z|D}1I!Ll4s><^gH}$;clz3)kX?gWa3<B`^<%FK;|-hMX^GCfrvY*+<UKt+)@A
+Y)|J*o!+q`0gcLSkW}}kl8;F7ZJF^MM8vp<R
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_epson.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_epson.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..2857f0f5b2b0ea7a3e658a204e954b041e1cfb2f
+GIT binary patch
+literal 2048
+zcmeH@PfEi;7{x`h2vY1Y1St}Vbm<{_29MAaNDkm)aMgv#P`WHxcmT->#3S?wL0lFY
+zg1EFk`(^UY^9nVa%x~U%-=Fc@#v5a%C;eBsh3%%+ru>-~v&g}{-v43uo#%O?KXkS@
+zi@fk*wVo71z1FurB>lj37@d~U?|twuNj>LW9VW&^eYw23nkPEusePhX&fVEk`(dB5
+zvvw5o;OTpookwmxI?_CTy<>gzmgU3yzz^1W!RuWy&tg5lZB|9HFZ!A8@?zK@^KQD*
+z4*O!>%Ci3Sbv+y2`!IjvN8WuHGt3Wu^vU~GuBoep@xITgj&*NMqQ|-8KZFpEhyQpy
+zCf@J&!~lu_h><5oo)~#*0g)I$j65;&G!pW}FcSlaWf>hwPRi0uS;ES)zcNnpN#Wn+
+zh><6TO)R}1A~Ap%d1Az*q~?iXCI%2o3@**%q%0?8gh>a;$eJfcl31E+Jt?LvW@Vh@
+z>+2&=jBB~l{=_g71BfMtE6q#Eo{=XOr}`mcWMu#`^2BfwBQGQN{U8zph><6j;ix}A
+RS<K1@Ez$e7|Gy)BfgjpkhKK+F
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_french.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_french.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..2992220de7d2ac355ac77cf3b476ac79606e47bf
+GIT binary patch
+literal 2048
+zcmZ{lF>BjU5XTSk2pUZCFc~z6@DLt6bjTD;5#k|42px(E88T!ro-$@CrU)TShY&g#
+zlQ~1je29{%pCd!Z3?4njy_2H5lcAU3=y(5nckjJBIRJgz?RI?!K+lEH<2G1a?UOL-
+z2*NE0zph@NHiIDUimq0h)$cG2JFe^cX%ku7@%{bOWlG=FFHb9_-_><FjE{$1{9Qe>
+zZ^Pk0@yTCf4m;lei>amfhj^rdNY+de`Tl35AMJ^nN#D}Phf%0za_f$eu9@^LIhAQ{
+z)+>!3cZx~Z7Lh^3uCue@hyfp>k-KwA$*wTFNQWi22j-8r_S5B0*4=bEf4u+397Ul7
+zqjzAPbC%l!r=c+>Jmq-1zM5RE)e>vpWg6PBy_^*<?jG<&odqVe&et8nq<C2WDkjX~
+zgf1szPV*pkUQ$*jjDtL7-3*RLl`+hfF9WTgIA7)}zG^n$I6g&D>j+t37OVqxL$;3%
+zAXayH5Y3_k2?wa~M;WToOc>8Iupsy8-PV*pzH>k{%JVAEnQ`;<%N!@(`-ERtSQL4l
+z7qZ{V`-Ru{)v(v=zvjsaGp@#RQZH_1Q}Q3;I2hHRyttU&77~xUL6Z|N|2(gk%cbO>
+zUw%1P`6mUcDjyvV6L37~55;F@(l1oKH210QFAgIa$KzShWInK1F&>MK)tBq%g5#IP
+z*p3U?FR{+|-puPe$H$~vxgP-Bk<WM_V!AIQdU%}hT6vIsQDphMw$=Od;AwnS|3B(+
+zsvyWv&zMQCyqrHy+ydWl(SwvGoNvhcn>i+6J#4>CnGG}t8g;LL_vhEM>vPtly?Ft6
+zTcfcKaFd`Z#`;{H+|BvC=ZNM!LBM=7*Yg38;Q*AZg3YiW`rk=`Ci4S;6QKG}tosj;
+nkMNz7d~LjYVNYcuS23Bef4|Q5>p9!kq4(_#5GU&8#jO7T!mH1h
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_german.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_german.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..6a0dfaccea2619f906074bc205d705aa890866e3
+GIT binary patch
+literal 2048
+zcmZ`)F>BjU5I)2sXfTa188nC>j0O)KG6hqFcsw4#bSNfd$l$?v%9yE`VuUaqLg-*b
+z<_sP4BTA?Kjtm_$c+3>{&dR$x8+sD9zWcs+ckkWF2H3alcDwHY*mEJ+!<|@M-IHMC
+z5eV*p;OF)8<E9s7A?bR(S^tXTIN+vf9ye){1blZl$t%Tgn%|FW#oso~vY(ywgZ{Re
+zB`^JcPvO(Q#(W6)@Eb!*@^|uBiHO#iDDwT!h(A6cH75R*KHiO_8k1Xhgm{gKe<i0f
+zjd$x6M~_>DiQlu73{v);pZ5y}_)ruzUgC<YaoJyTe_;M_lYG4V!AtVVWd3mXm2sNJ
+zB1Ug7$@4tn{=ivmjET=!pR`w_t5z*Zk~bNLPIeHp=EdOwcN8o#agy66Kp6S^_NN~)
+zjz@Gl730!HS#Bj{ZQ?9)CG)0tQq;yUuI)0?{Aq5NPU-7i0XgeSBsGtqip+v}pl(R{
+z&|!6kN9im*5;;JPmojA2nPA*cF9AN!kv|*zB9#M33+HO*cmWnqH{)zztsU_D3JdR?
+z^HOhZ?ZWEw+F`5Le{q9T#<&{ONxp11oD%;7j)Rf%!1?jy#)}@SL6aS?{yep-)k@;e
+zFF#+X_#=<3ibtEn0IVne-hX0D{8;5Hoh@~LaTv*1k9$Fr`M_j;I20bUui7Wi`jsCh
+zLof9b*74qU^ZFL_1z>|ze>@Jb-cJDs`Qwv8SgXD{9*$GOKenCV)hxe%W38p}Rs9FR
+z6R;KYQB)x>nE2Yt{<A^8z&D)r5S29H%iyqfI>!J3LfrkFGB!X1V2bbxSbK3jyS`vP
+zJ(w4OmllnAfaw5DVa%`k13(?NRs^`8DvAV8=XyQ>DjWbVA0Vl)UHbpTqsjaLV0%>m
+v3G4m?xB^=$>44<9s;4$-UNb+2{r(hq-g-X;?B_>z>Mo}tUNLTWcZl~7(LvR*
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_graphics.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_graphics.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..1ce10406c04863290ba9f01a2f6eba75e5bd0fba
+GIT binary patch
+literal 2048
+zcmZWpy^7mF5MCC6w+QhP3~_Pb#kf%E(uFyMQQ^`UKY+;-q)UoJ5LH(i*Lj#LQe2UT
+z2zdgRD#R+^tnX%Km64I>)BNwwj4?SqfEM&p)GHp^!!S5az~W;D`b;lH3&oSY8QJ3t
+zlTuAAg&tIV1kU1<p)yZ?2IWL2`p)a{<bKcrQ2ru6fWGe~0SY(L&+4Zb)AvAc|DD1q
+zUxkSs<&X18Wu%uxzH|5ZBBxSyy^xH<4^9=F)RlpFVy=6A?HDu_5koK*^r%0W^Ln1)
+z$z;Mf+GuUDVQe~Au0ti*`Ss!A1vfiT!#K8WYYXweU9Gk(Oib174?4rI-h0X4ARr!P
+zayk`mt*|jq3Pt;AHdpx-g`1aq#~L09>3mE?I3HQ=Vy++J5>&I?M?7BYMY);3s@Xp~
+zA6VZsbl!3vb*$?w|3CI`;cl!S3+K!F2V=xvh48=_hr87Iqy473VbNvie^xiZ{m|cg
+zkKSnZjJ6{Z%{xc^Jr#F`u)Ylv^@R{1T^JL|2N4&9do|w)=RuJln-h~^=y#p+pEUD?
+zviT?fdY}*r`+&X*jof7r`invB6IhM+2`v;R$TR!5C@e?5|DDe_NyVgnpfIs=`zD>g
+zzK~}3<@!O*gS%0Gp4r3kc(l4-o>Ie$JcM<L24j89g7<2E(s0Rmm}u+Lm%l{6cYbq{
+z1wi-V!wbvj#SR;wWn5LXkscY-c5y0S6AsUXwJfJ}PFI<?6yK#bN;;T*`tb)OU$<>!
+z2X;Agv*io>>%GVCBV(FxT|ZobRKbnK1k3#5{E+d6?Q4*pXMed|uh*X}N3pwI{hhHf
+eq01M9=|TwH!8ckL1w%9ceO9($eMbwIzx@Li^9sQL
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_inverse.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_inverse.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..32356eb8d87222b6dcdcb4f6d67fff0b0d75f600
+GIT binary patch
+literal 2048
+zcmZ`(tFGfP5UmwZT~w_W6|JfTQDJ3d<Zp`%szn7sM){U1peph=Tm=~Jm4b}CXOh@6
+zxzf&kWX_x!+w-t<-pk=|*c)=*nE-Zpb!OA5F$NF7cm<44?Wt99PSdul){WL(jB&#j
+zqQV$L<?n&$!XNEv$KT=ayzBku|FA>&HF`fvEaFdX+n#_wH-0AB^z!*C3cf^3OcdGv
+zC&Yh!BPAxjp?{l@tHflM9U)#~;u|swk$8z09H|F^iI+m9iMdoaXYWfTSFgTT_~~m%
+z>{|D3N_TP|{2YT%m4CGD<D&mmOsh+QcL<Ryj!{TyW}n!NW5+P(7}0*Y0`wU906D8~
+zEIF_Vi-&=syInrc##KXnQ31-d<m^lu2g^&UG*3zRPh+o@m>6Z7B>CrH8zcM?PZ`(!
+z97xFnbZI_T9*S%S*?~pADGrg#4O;CB05%R3whHo@LYDjAF4}g5&ad7WWlY75_s)Bs
+zNM~@tL_SAtjM02vW$h6+w#Kj6Ry=xpGyYjIqOl$CH&XdU{V@%@dK!%fL$m*|2%q2l
+zP*=I0Ie%PkVtv#X!u@WHX^>Gp5AkwdiI@8!f0so3@)n7KT$UF+aNocF*7b?MD!xCU
+zspOT%OGO2!7{h>h<@}x)o)EZxdBE*S)jdC#f(bs3p4qCYqD67{R@-rQn)kCbzJ~ix
+zH^Pc}NvQ+R{=_T6Pw&vkdCwXC9anH&pYx~Tmif=?>#FbDfrr8O_xifi)nBBfgYVBP
+zL|}~X?hT_3bN}&rQhwIfh$WxICH;Mt^MUhY07N~4LVBMydU-L$eCJFZ=Kd3w{RgH2
+q5b?%f1cEpZ27v23h4_eJs{T|f`YS>tTnfx@*H)dBci%3*#rO|ASCiiW
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_katakana.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_katakana.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..be2d5e72d64f506ed8324c4931dd1da47bb43f1f
+GIT binary patch
+literal 2048
+zcmZ`)y=ogl5FVB#Y$5DJs8Auqa;Oj{g-Q{GSdJ@H1tIhRB9%*(D#URdE)L`35H3==
+z2&w!K!9~b(7?U!EN*CdjnUi;R&X7gu_M2~hcV_PZ+Us;WwFLkz5rP&zD+kee7clY&
+z0zQL)pR4DGV@C~q(5gCCKa4RR=Xw5c>_?HuWx2F-!5{Odhf46<Jl}T*y{^~a=9}nG
+zx7!hT_*?4>kKaGhbqM}OUJ50mB_@hw|69agz9S_j{+0gT7O6^1V%ZVmB_{rrgknkD
+z*b9!fCxMA?Et4j=3YJ}6@wVAajMmyrSZL;pS$EI<fiL&h(Z|)D=bfvQbm8V6Z_9G)
+z_w>y3zu4kDW0{J3rWZdku9eaz+AxMFs>3*(#r?hs2>=9V-m2gCJ6JB4tJV4|<7s+(
+z_?Au?n<<?R=L@q$4Xg_;Gi?ScnX$g^^hTN1j5D`ak{?>PPlSF(<yg!5GbAOCV6OCz
+zd4TmAEds_`WWBZ0<H&IQA|2QAfT9|Wr|SdT6CS7BUu)|)j*}ba`=cbul7ulPPd~<k
+z*f|&TeT5y(OB(XcoZC5hUJZ8A{&Nx!8KX6Z3-Jcca0dSuIBr_>2d8Oyod$i(23P1$
+z@$2zW6kH$N{QQ1@cN6NHrpO9^R2(|se2BkIKQShLA>z#vH<SIvVWh?SSPQN&9~dkh
+zj{}d<i^F5e`q(hp4<Ic4QNOIKz5etAOge!7Z>v__0jgV%p{4+=4s?3t!1J4`+W39*
+z#M<#lw=Bz&f(#hr{mYbMhj{x6nqcPlfF}_ALo+F?4p8HSSv&Ol@8_+#&C-6?^glSj
+zeDH-3@+p$ImEVg}FWMZve>fZtt^6>5kv>>E8INqZe{@&Yt8hK&{Lp^l{YBBf^}^9R
+zf}vhhoBnuF^7jg;`{=;i13c3UEaXScC~D<-tYxyS!u-(r$ov4qV??hGSPtI!kRP5m
+aVeSWBh0=)rb?{wdBmVpW*k!2|hlhVy4)H+%
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_russian.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_russian.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..b160d1edf5ed831c591d11e04c96a6e6905228c7
+GIT binary patch
+literal 2048
+zcmZ`(F>BjU5I%%38jSN09yEv`j0O)KJZca|JcKdELogmfCzGk8@f3;>!gL6wgE5^w
+zbnK5Pnfg02bnM{KQ`|e*x;v%qB_#UpyLa#2-S-|q+s@~6+X2vWA!y-Cu(&Q?f{{lc
+z_yPpK>|PGXt`jz!?smuB56|-&TvgTK7#P#wr>DDUtoUQ~eAp>|T~&o2_WdS)U9HS-
+z-|s4X`^$BE4SxF{Q_JR8@<s&_tuayL`=1ei^M=%z_!IrP8ii_1Zaop=H75Q<PGuU`
+z>lH_zXN8H^7LY-}t~ieQn?B;W#2@j^7mLkeG3S_vuOH02#TUl!?PRuiu#B%;Gwzxw
+ziVTkjMxN`s-iUd~hp)q2AQ<y1YPk9XkM)6`Qbjib>~dVsL|Mf+$v^ME<q2aip$f;0
+zQ|p9LCMiqT3muy>?{@of>AH-|tZ+1c8)b!6@nu~=#PKPTnny5p+(+htW+CH1KVfy=
+zPOu6(Djbh5)uJESU?n`Br)xmkHOBq?fy^g}tu3wKBBS~XPLS7DI*lVmfuJUML78Qb
+znd+A*_GCq~Bl2X;a<Ft>htt7DE}Rbb%fuwhJ;zU`cdNVUgmDjxM`OJG`F+3LZW$wo
+z#}PiskyZ01QuE8&<h*ovU2kd;sd=Ip$#_3ZJ~YuYV_L8KcgZjPqwry_>)p&|vkk8&
+z{b@aoM`WT;fG`gGav#SXGU3<8guc(uE8uNQ2LsWsG5pkC_dL19r;ofpK!E~~egKdF
+zq<#QWfXpAUEi=iV)B-3>!WnA?FalHn3P9oZdjX^XHUBJ|+^_Cs{s6TC)cRTh3b*x4
+z_38TtP%A*i(}eVS|D^!wFF>sTwf=7fwEIW-b^mOPcTTOhcBAHx^`ZczpK(y%5EY-=
+Yp3)=093NzPk1v5G$H&us{o6SH02J%mp#T5?
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_spanish.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_spanish.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..b428986b6c6f38e7fca116e812dbd35ea660a94a
+GIT binary patch
+literal 2048
+zcmZ`)F>BjU5I)2syul<7lR<+BLTK>N!E`c3h=&j%lu}H{kRgNdlrd8=#Ry?KgwVm5
+z%o#f7N0dzc9T_@i@R%v?ofO@j3_Tm?efNFu-rc)<1fXxb-LCHd=(!N|a4Qy9yAq5%
+z0>Ld1{JegC*baiIJ9NF?u76u=J6zZG!!~rT!?(B7I9L3(etK9d{-&;%!{~U}>2K<p
+zdl?P~3ZMKn=CH&2e=)Qi{!Sh#5z!hGMZW(T@ke{4#>BtU&%2RSV{+?`5U(-uujEvw
+zakF1>wA?97yta@GLUyHT%4=GrX@wv0+59XUF1bB0zrS`L&VTZrcsiZm-+p7ff4Kt}
+z$Fbw~z}OmN?3nd#b1}KtNPKYaO{Srhg`rgfsCaX?z=}ExjCHZEI|!5VZu6_0Ft!uA
+zoSbo11X1iIWMym=6dChoaGX}gFs}SE(ELg4mxa<-O#(6NGbA;SAP>xfd7y4c`p{xk
+z??E^V4@3@FzGRDjWW$;8SkJ(Lx-JWL>?Of4EsClrcmpO+U&c}5y-)bL!lEpSqLh3q
+z?-yR*SA)IY|FuX?7~^g{PR@&(*_8N)I1Wbjrzp>+*QMw&8#JkS_2+T3TCF7h{QUE&
+zia#llRq?1e48VHg@5)b%i9b{4Wrfdle{mSeSdX=!$$a2p<!B^4p1#^VmaJcuBR47~
+zU&1=xTQje3tk1_}IpY#aG|4wVAQRpmC#-E2G*0xy-|gcUxJnYOc{R%)-#Z#Sjj!rI
+z0N#L?_(6~(FPQksOZ`z2FYtwPJP0zHaK0h$ujUwlc^pSF#s+8rOxh*v{pscG@|5{-
+zZ(aaiHfYR4Q=YC5&*#%g*3{=c?`Y}?0>)Q!Js$u$4#1LGa5=V1|2ygT0{|yL^`Efr
+nKR}V<o0E90K7L|PWx}{(<l=sRjP2jIX)loV#Or#k>*x0mSIN;S
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_std7x9.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_std7x9.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..f30fafeee98eb75fcedbc79423686f104c9af7ee
+GIT binary patch
+literal 2048
+zcmZ`)v1%JZ5M7SNY$5DLxVYjlhqyw76sn8}$FVGj5h;Q&E?lS(s$9AXB8cM<DTGOJ
+z9IjHhNa>FVuJRo&T%>TJ(v_8&lWt}t$efV&&3ikuyEA)IYTq`S&AvmaJr{sIycM%+
+zJ7Nqx0LELu__=z1Sa*V`O<Gm!>bEhb#bsGOtV3&CyjqRpOz`XS>7f$*ZCNh5(P_8U
+z-<DJR+U<4(K6}ynxW&&^RsA)FFofphJJCrihF_#5MhboZGvrSWNQseu!>^s8RAO|?
+ziXbmB@^9!ACUG-ga5&rujJ&iEO@-t-Kkp_4V2~sQJnS;rDD5t&JZg4-V?SR0pegZq
+zJiA|gB^-u^#o+DOIF2oqM-7bD+6+i<>#N~aEv8ue&fTz;9mFhXayx(>wH9b&V^_9N
+z4fDJDS3V?chIlv`;nW9F>^NkhO%(W)c-=Wo3atqjZV^cSEOrYo^hL9PnDi--k_V6l
+zdQQB;YVh*a7K<}H3a8-_%atnN5e95HWeof2SjFd=`k#;Yj`tHL-WT4}1Xw(N2uD5V
+zT#v4+n&;m8oYz}8H+S;98tml!FTQt17-mB{&KEVk$?=b&9ki&A&qw2%ob|98Fy8U<
+z&ttt@E;;_}^7Dm=Kg@v@@o;kxfb_`U<(~*6KN9&;?^0P`Xht;B!(PDnJRw=$?=uhC
+zm-S;#`eoj?{hZf}SjKyA`t_ak*#IpgT)NmA9T3ir(3m&T2Ru>YcLNF-hW3Db(~Ixl
+zNbj(HMg5gZy>lEt2r}RqBVUMqihA)JZaBqLL5dwtC*<5@1_6jS+qWrUt*`-f(p~}Q
+zF0QB77sQ7L{i4)s4Mx0DlOCABke{-nyV;*}q-gdN@QF@lvOko{paJ+kD4RjK=<frf
+z<Y3%CN<jyR`XiS0SIQ@F=P3J5A3u?&&|zE<>R2-{;(dv=mGwmuB&46#{BA{OGOC+T
+GEBFU#SJS@$
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_supersub.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_supersub.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..be547b2e392a599c3e4eb7f5f799e16ae63f7b0d
+GIT binary patch
+literal 2048
+zcmeHHu};G<5VfKV9vC9j!9xbi@(@)WI-tr!gd*etbz<lT@DYp%p?-qJ#L%H*M@A;5
+zehx#$z+`wyiG9~EK!S7A_W9X&&vzHcb#GCO79R&2p{NGSd@)$Yx{~*J()zgHh21{$
+zqA0I#Zo9-gk7&(%!n*tPrYI7wWEo3YB@9o;&(93xgq6#DwQ?NmE_OQe&O?uP$sgi}
+zHNg>b==t3$Y$%WQ8w8;H4-Buufvz_b`Lum|OzZD`Z~KIizKAE`=$oqXIbTxNwUjxZ
+z?Nv9IB4g-@G+qpdPwTf{A416faJUV_0p}y@m9<tSH9|-Q1q8cN>6YU%XQN-=v{{`H
+zt#*vBwPXHU6gO8#2xT#de`Ra7UnmS}z@$BT<^)r<$BooMf%y73oxcBa4i*c0o)UpS
+z%C^>$31=|~R#vlmIrI<ZQGeDiJ=SD@t!I|@mpzHsH$UaevSjgWGjFIq4Wkt|i>War
+zp1qi{^PJWir(^oSHxsfSJd0Or#rpFSdTIY79Zat=xDkjyW2RH;AMAwc1!n&G_l2IX
+za$QHRKjHlA3%%cZIfMPgbpCn!>}iDt;%k(|-@fDQe-HfL9;nUy+Mb`KiavaN+)ZF(
+VJ>}4lx#QlK%jL-B-!CyXz&9;knqmL|
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_symbol.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_symbol.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..833df173089f07ef810818c96ab67dfe32cb92f4
+GIT binary patch
+literal 2048
+zcmZ`)F>BjE6h6dZZZOSZJZKQ%5TY2<!DJG}7$HQ+&>@2d4;e%V8A=EqLoq@aQ#=aM
+zsY9mziVh|8mt^QzipLB^?t7B&-E*KXN_5}%z0<vW@7+a+W83fd$Al0^6o4b#IXkKw
+zISe`ghdbc#bM^eV>wAG+w5oR152cjFWm!J%e620sZZFM@>AUjjv10nNELVeIII#Z9
+zGS|NcgFeHjzodL)@#{By+AV$%PnZ+R9HWHX{|xn$S0cx#zu=#Pp)1Eo^NOI(G3qZ!
+zGUK?N&omtF8AkosX7k}NVpI@@R2`uET1}Lud<q0W*$ETXVj}vwv)noeUlj0bEjZ|I
+zi97;(Z>$5pm6}mQ;20Xf$$eV8<vgjhaVm_?J}~G<ev}qzN>rS!*Xt}MtYXa0jPNw|
+z0+SSk3#kGxof4M)VN^&-xJXtW*H2BdN|}Gr2588C3L@75%slx(x*CQwZU?uwN4UUr
+zMUHEP){Q$a2h`A<t{}O^O=>hGEOideIvde(L$|xSzO(K^)bn|)waZtmS9QH&gf@j?
+z^Lu{o_u#Q#(0Vk=vOgBWJ8LqAR4~Q@5Cc>F93D&Lbzd~_V-20h0r^iZq?~3M6%@Jw
+zP1yp$2u;}teMsI&k6i>sXuy{C^8)(gJMWJognWgrAB2+7666k%Wvh(E=SNGEe_J>Q
+zJ<8TDd;#@NdHwEcjMwE?bQ^Z_J-NNi6T&8s-^RHi?8!zqNlCaJ_&(u@JGw15?2L4A
+zU4Pkry&(+8e;S5o?<}D{jv?J{!@8@#&8L8bC6k2m57Tf1WKYIG2V8t6LR^Jlo=1d_
+z6?HQpRo!D9&KLRO+yZ!K>zXwvv^U;Q?1B=TG#t8k+l0I0D-d5_B?)~ooMQk4@qTFd
+z4e@ES**uUe#HxaNQGWj>u=`}{xedVL><Igjj#+yO@e|sQ<>MN&;Vwf_m;`L<{y~ah
+hHe-6wwzHH($zE_1^lZChocC3A@8ZSof*ZmT{{RZ*%OwB+
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_uc.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_chr_uc.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..30f94d6159aff77ed1c3e59c8f06d3238497d343
+GIT binary patch
+literal 2048
+zcmZ`)v1%JZ5M7SLY$4)Bs5rtQmgO))q!1wp5sqV7jv!J5Vf+EYl}lH_g*XmX#-tF3
+zs}wF$`XfTBe20saDO9?$G9&qB<^-7&^1gX*XJ%(sXQjHf+wHmzr8+JE9efb8>#$-B
+zJOIWA!1!tN^swzkX`6Jj*=~Mnty^5z^}{wXrp33n3tI?&TmO342>!aRSN(L*Z}r#p
+z(){iBdjb#t#PORJAOD5WocxtM6(Xc1MhboZGvrT?NQseu#;;dHsl@1(6G2{L<e$+g
+zOyd21!QpZzF!It8G?kERI_+l!V3B1NJnYiNJnye)JnHiP%Dg-OMqBJ+ae06Hm2i@1
+z7K68EthI*5qb53zV?80gX)b0Ljo4z$3*Ux=>?meMo7)APsI@58#`?O2YF6GgKgt<l
+zJ;UY{g!2%k)^o@z)@c-S;^W>RtKyh&<yVp9ht{ux&{z8cEa`I~B@dv8;v3=>PJ_!=
+z2P}Gck}Q)GmMc}kBMjJN$r#SlGm86}hwqQ~p3jqHAygsI1}Gjsgj46ecl2{rH)RN+
+z<a#UbZ@lc+9(%d}OK?NNup82GzI1;#IsO~C4zZX|DCdi-lJ!sx7@v6k`>|QC*Bt-y
+z{PQOfe^vr3;^E;S0O^sxD?buOelGIm!RK<ma2e4^4`%`6enPTxG-4jIuban`^y_kD
+zMkUvaSjKzV-`5w?7ZbFCaP6(paYVQ{L1SL0W9%sLuL}y8B<6_J16Meq&mBAhr_PG`
+zE0sIf;R`#noL?!#R_q_zGckXq9Hf)^@CNYwm4X|P$sd5rMjxae-XEQOZaVJ7bMMDz
+zQlCP-GCrKHQ(x-F*;`RB@R{5{v}q*!f&YzU3n6?bKEOejA5UdGU<XII6R&_9!2RqQ
+cJ<;NQiMeHdBtb&;FB^WhqBEN}`%f$Q2g*{r4FCWD
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_fw21.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_fw21.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..55143e218b25eb04427ba27a90f541d488c05c59
+GIT binary patch
+literal 1024
+zcmZuwO=#Rk6rSCcMp`9y7CT$iw53DW3085bDRnzN)D&{4>@H-X_ab_l4J|a6ASkXk
+zB<mVCTU1J5-6B|s10ItNYI{+G1-c|?<c5g!RN9yv`eXNyOfEt6$LZ7N+IN_F@6DU{
+zzW2SED8yDSX5~De^+W7ajnHJxj;LnUw$`j8>zz0{pRAvY_rS>Rvn`H%ikp|kC_*aS
+z%*uSC+i=Lu<o8o>cZlNJqnTPPK7)gw#ktIY$c48caqvr#)-afdMeLOqh;1$Vp~{?(
+zTkl&(^@&MzC_aQh3i}z|d>ZMoUf2+H<@jByN`R-5MtWuHZm4(_KUAPz6sqJxdNs#<
+zgf&#mrLY2c`8Yu5Xo)IdI8lhJW$4f0vCTXCrR<;KY|LPP=xjrpc6tyhQK*QPx5#^9
+zEW^-ds5sS*7zDfGQ}0!IvwhZkS<bZo_1=;1!g^YMA`W}c$`9HPy>WRIJliAxrC_os
+zrWD0?L#6f?KLwd0KreTx+H9nBA(k&ecu(Ggbzc4o>#^)dfB``^Igt`G9U#_5HyWM{
+zo@&-pG8BFJ+n>!S8KD9aHX+YQKcFhyg2?wExd|*p6t`92m16Qr%EyZFJ)z@pp^nJd
+zXsq_3%m6{5pfR)a_#=gSX4rdto78ulFQ#cA0Sq4iD@ok)atA8(a>X#r4|8RSVtWz9
+zrwTJb{IKGD?rQyl^`5Ja2w&8#ieZf9_`=-g_nmlSZu*+5Iz}=5MRwXICsP)vKKcPh
+zh;ChTHOB_v<c}TT&C)W3H7A9oWG}LPVlCUdAujxttj=yUf(kT0%vI3>EmVL7*2`6A
+z^mG{vE66k`QmtiG@lB?KYCUL<C*s?z$`9V8nol)Hd<RD9xhF=mB>uO5d(H0K`pVpO
+z2C~W6S6h91t!Q`iVvgCg-Kz0gm#)0QweD*xuM?D*p364o<O{1q7mHPS>?c%~^#uZ3
+zHV>|KR1Pq)6LLoI4tbP<D!!KYMK6Pi*Hb1gWfR3aJedY+R1g!PTh&g_#hDJF19Z{F
+z*Z21Jd{hFuIO<NpNV>-X*%ouyHq~nSRTsziyi%WBPWUp}PvJ33y#Ka$r~SOyo$_wO
+Ww-jGyN8n=?AM|f=URFS-4*Cy6*|+Hc
+
+literal 0
+HcmV?d00001
+
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx_fw24.rom b/GoPath/src/paleotronic.com/octalyzer/data/videx_fw24.rom
+new file mode 100644
+index 0000000000000000000000000000000000000000..9b9d12f1a9bded887668bfd52bdde096fb21c240
+GIT binary patch
+literal 1024
+zcmXw2U1%It6uz6Czg?PiO(I>;l55&h2cxFN=!!2s2u{M%u5SiKt`yoEA!yzf=OIzq
+zG_8(|ghE6Y)?hF<WN;E+8X+*XKFpakn_K9M6d_M_8?a0Y!G+PpGb^5#Irq$W&wS@Q
+z-*~oewqZDaMhrW)?j*V(PNLEGVUb*S{9yCD&{+#wy9K%Lj0en1bkm4)bpDVI{!OnP
+z@@2ll8NC}mxFEY8T=Ym#IH2!_Zah>7iVQxNUE)4`BJ+4}^mT0R|6yU8&vSPGeD|rL
+zOTlnI_;C*eh?H>OHOw8Uh~IP6GN&C|<0bZS<-HdNN%15xb`64o)ul7ri5hE8qEaPV
+zI=yYHZq~6?&(`R*NE}Dno~=T~@0+w0WG{NKBFJQt9@uCAhJSKdfVJ^>%VK-0wkjHQ
+zDhh*&+h*b=RDp@}vfT(4XCnEJHyq5#1BNJkuUgaxjyd8V+3HYLDd_)wil+!KL4Y1n
+z1sa4;5GcB_e~Mm#g}8;P+A0!Wj(eN7TBwVQDPf#qzL}_HCF-cpb2G3euL#3=JCN_d
+zx_nC<KA)sZVL0`Ls#4wx>DlN}lHSDbV|dp~v<U^Z!kzU-qPsJDXXs;Tnsm|=NUA}Q
+zmVX0&l072Ro#;}4FTXA4!tz<bZcbat=O^3BWTIJP7*3+_JceT{47#P(;m?p?!*9Y>
+z*XZcC0TwGx^{rd%$NJ;G|KoB`Uy1bF#RXK~>d0>8&0{N@e!$203d^Ss7~>yUbUfm|
+zS|@khY@KW~OZ-I}fF|?Mk-AiP`BY>oakhLFc<CWEr>&-qV(VsBKFOizXHiYBovu0E
+zJxa)(w#v|fFfWgz{ZcO`@L8P2oGovh+oJm+eItaXZveOo+>v|b{cvw+>*%9%CAWC9
+z@?7TAC;FcrERz&wPA?Khf55+h0f}?iEbnH~*?9iy+0sqtXveCJT(=girIFc@#oJ$2
+z6{}JZ=WC_eSA|}CdG-}b!lL^j|9&JMnDeR{%*7{uBVBRtD8+|-4NG5>E<a2EjKmB*
+zfRx!c@jf^bEtCNcH)L<>v+>ARH&cl=$#!nWscO<dXoGxF)qZZZT6K~Uq;?t?SUXdG
+yA>^xxUNBaxTCnS87U)_?cOo&3vZ6^JzUkhZ7$~}TS!rtBCf4O&f4OyZd+%R4)z1z9
+
+literal 0
+HcmV?d00001
+

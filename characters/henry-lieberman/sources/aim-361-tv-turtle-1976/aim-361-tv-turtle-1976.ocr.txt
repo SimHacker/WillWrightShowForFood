@@ -1,0 +1,710 @@
+=== scan page 1 ===
+MASSACHUSETTS INSTITUTE OF TECHNOLOGY
+ARTIFICIAL INTELLIGENCE LABORATORY
+
+June 8, 1976
+
+A. MEMO 461 LOGO MEMO 25
+
+The TV Turtle
+A Logo Graphics System for Raster Displays
+
+Henry Lieberman
+
+This paper was presented at the ACM Graphics Languages Symposium, April 27, (976.
+
+Abstract:
+
+Until recently, most computer graphics systems have been oriented toward the display of line
+drawings, continually refreshing the screen from a display Hist of vectors. Developments such
+as plasma panel displays and rapidly declining memory prices have now made feasible raster
+graphics systems, which instead associate some memory with each point on the screen, and display
+points according to the contents of the memory. This paper discusses the advantages and
+limitations of such systems. Raster systems permit operations which are not feasible on vector
+displays, such as reading directly from the screen as well as writing it, and manipulating two
+dimensional areas as well as vectors. Conceptual differences between programming for raster and
+wector systems are illustrated with a description of the author's TV Turtle, a graphics system for
+raster scan video display terminals. This system is imbedded in Logo, a Lisp-like interactive
+programming language designed for use by kids, and is based on Logo's turtle geometry —
+approach to graphics. Logo provides powerful ideas for using graphics which are easy for kids to
+bearn, yet generalize naturally when advanced capabilities such as primitives for animation and
+color are added to the system.
+
+~The wert reperted in thls paper was supported in part by the National Sclenos Foundation under grand rember ECAOT ORM and
+onducted af the Artifical intelligence Laboraiory, Massachusetts Inailtuie of Techeology, Cambridge, Mass. The views and
+conclusions contained In ibis papar are those of the author and should pot be imerpreied aa necessarily representing the
+officlal pellicles, either sxprecead of inolled, of the Naibonal Schence Foundation o¢ the Untied Staies Government.
+=== scan page 2 ===
+The TV Turtle
+
+Lego G hlos &
+
+em for Ras
+
+Digplays
+
+Beary Lieberman
+Loge Group
+MIT Artificial Intelligence Lob
+
+Until recently, most computer graphics systems have been
+oriented toward the dephy of line drawings, continually
+refreshing the screen from a display fist of  vecnors,
+Developesents seach a9 plasma panel displays and sapudly
+Gechining memory prices have now made feasible raster
+graphics systems, which instead associate wome memory wich each
+POing on the screen, and disglay geunts according to che convents
+of the memory, Thit paper discusses the advantages and
+imitations ef such syvema Raster symems permit operations
+which are moc feasible on weeier disglays, such au reading
+Girectly from the streen as well as wrinng &, and manapulating
+two dimensional areas ai well ai vecnars. Conceptual differences
+between programming for aster and vector sysnema are
+illustrated with a deteripthon of the aurhor’s TH Turtle, a
+Braphics system for raster scan video display terminals. This
+ayttem is imbedced in Loge. a Laspelike interactive programming
+language designed for use by kids, and is based on Logo's
+nti geometry approach to graphecs. Loge provedes
+powerful ideas for wang graphics whoch are easy for kids co
+learn, yet generalize naturally when acvanced capabilites such
+as primutived for animaion and color are added co the system.
+
+Drawing wi turtles
+
+The fundamental concept of the Loge approach to computer
+graphics is the turtle, A qurte is an wmaginary creature which
+lowes on thee display screen. [t has a pow!tuew on the screen and
+a Aeeding the direction in which the turtle is facing, The
+Tuttle. algo has a pen which can be either op of down The
+commands FORWARD and BACK change the cutie’: pouiteon,
+moving it along the direction of the heading. If the pen is down
+when the turtle moves, a line is drawn between the old and mew
+positions LEFT and MIGHT change the heading. (See Figure 1).
+
+Thit scheme is generally much more convenient for interactive
+graphics than the convenrianal approach whinge absoluce
+Cartesian coordinans, and its mathemaical mmiplicasions lead
+naturally towarc & few view of geometry called tertile
+Heameiry. The Logo graphics philswoohy and curcle geometry
+are discussed im decal in (1 [2] and (8) The curtle is
+normally represented visually on the screen by a trangia shaped
+SUrhOT POIMCing in the dintcman of the heading, although any
+Peiure con be subskured for this purpew. Any numer of
+Kurthes cam be created, tach with ats own local sabe.
+
+These basic turtle commands are common to a variety of Logo
+syRema for creating pictures wing several different typer of
+
+devices. In addition to the raiter avviem, there ane graphata
+fystems which operate uding vecor cuplay lat displays, such aa
+the DEC 30 and GTa0 [8] Another version uses chazacier-
+efily ditplay termanais, where che surtle as comsrained jo move
+about a recianguilar grid ef characters (3) The gare turtle
+Commands cin also be wed to comtral 2 poset turtle, whech
+draws pictures on che floor with a fet chp peer tal
+
+=. Veotors versus video
+
+Raster graphics systems such as the TV Turtle represent a
+figmificant departure from the wecior dusplay ligt approach
+which has characterized most previcus graphics symems, Since
+the primitive capabilities of raster systema differ from those
+offered by vector display last systems, raster spitems encourage a
+new outlook on graphics, and strongly unflwence che style of
+graphics programming.
+
+Ohne aspect of this is illustrated by an analogy with che contrast
+berween compilers and interpreters for general purpose
+Progamming languages, The promary component of meer vectar
+display list systems isa display List compiler which compales
+Eraphics commanda into a display ist, a ie of instructions for
+a display processor, Raster ayuems eliminate the deenlay luz,
+making the cosplay last compiler wnmeccessary. As a mesh, raacer
+fyitems take on mare of the flawor of an incerpeemr, The
+advantages im generality, samolioty, and ease of miteracien
+offered by interpreters are especially important for systems lke
+Loge, which are cesigned for use by begenmers and are highly
+interactive, Although the extra concepiual complexity empoied
+by a compilation process can be minumiced by a clever compiler
+When programs are simple, ut becomes troublesome when un
+ECrempe it made to uncluce more sophinicued tcapabilicaes.
+
+The display list compiler found in most prevent Braphice spans
+if mecessary because the procemor controlleng che displays in such
+systems had primetive instrucnions which ciplay visible ob yeccs
+SUCH &h Vectors momentarily. lin order fora PActUre fo remain
+On the ftreen, the processor ruil repeatedly execu a loop
+Containing the Wieructions to draw the picture, refrecheng the
+screen when Che image fades. The user would mormally like po
+have commands which cau eb ject. drawn to atay on che screen
+Father than flash and digippear, Thi m accomplished by
+having graphics commands operate by insirwcting. a digalay list
+eaenpiler bo compile the user's requests unto che antresnors
+understood by the display processor, The global display lise
+fépretenting the picture iy then edited te inser: the compiled
+=== scan page 3 ===
+CLEARSCREEN
+
+Figure La. This is the invlial gtale. The turtle, rapreaeied by
+a triangular cursor, starts oul al ds home at the cerder of the
+ecreen. [he heading points wowarcl The square al the center
+of the turtle inditales ila pan is Gown,
+
+FORWARD 188
+
+q
+
+Figure ib. The turtle mowes 100 stepa in ihe direction ae! the
+heading. Whar thm burthe faved ail the pen doer, il draws a
+live.
+
+RIGHT 6@
+
+Figure Je, The heading is turmed G0 degree,
+
+FORWARD lee
+
+(*
+
+Figure id. The turtle now mowes on [he direelign of fhe new
+feateng.
+
+PENUP
+FORWARO 188
+
+(
+
+7
+
+Figure le, When the per is up, the turtle dees oat Grae a
+firs wher it is mowed.
+
+TO POLY :STDE sRNGLE
+18 FORWARD
+
+28 RIGHT "ANGLE.
+
+38 POLY :SIDE :ANGLE
+POLY 488 146
+
+Figure 16. @ typical procedure for crowing polygont. Note
+fhat the recursion does mot bermimale, and the présedure
+must be shepped by Rend,
+=== scan page 4 ===
+INstrwctions into the refeech loop. This refreah loop it a
+SPparate process running 1 parallel wah the wver’s Program.
+The display list compiler usually must have the billy eo
+compile incrementally, 26 that when the paccure o char ced ic is
+nee meceitary to recampule all of it) The repertoire of vusible
+objects available in the ingiructan set af most Giiplay pracerors
+typically includes vectors, points, and text. fn addicion, many
+“display processors have the capability eo call subroutines, so that
+a gequence of ditplay instructions may be used from many places
+in thee display list. Weenar display lie spsreme and display sr
+compilers are discuseed pn detail iy [7]
+
+In raster systema like the TY Turtle all Rphics commands
+cause changes (a the cusplay screen derectly By model ying che
+memory aociated with @ach point on ihe screen Hardware
+independently refreshes the screen from the contents of the
+memory, i the software need moc cancer self with
+Mainining @ Separate proces to refresh the screen, The
+Primitive operation in a raster graphs system es co diiplay a
+Viseble abject which persists om the screen until it is explecitly
+erased or modified. Since changes are made directly io the
+Gisplayed visual images there is ne need for a hidden dara
+Ftruckure like a display list, and mo meed for a display leg
+compiler. The visible effect of a commaned occurs ierimediarely a
+the command is interprered.
+
+Interpretive systems only require a nave user to understand the
+Femantics of the source Language, Compilers tend to farce the
+user to explicitly comsider the semantics af the target language,
+and the process of translating Brograms From ane language into
+the other. Thus, graphics ymemsa based on display lit compilers
+may Péquire the wer to knee abour che deenlay proceswar's
+Instructions ame think of commands in termi af hue they
+compile inte display ist. With compilers, the weer must alan
+understand the effects of declarations as well as imperative
+commands; for example, declaraieons co a gFaphice compiler a
+“open” or “close” a display list (7 Compiler systems are much
+less flexible than interpreters in inceracnive debugging.
+Examining compiled represencations such as display lists us
+usually locke help in debugging, and problems may arive because
+Of discrepancies between source and compiled verssons af a
+program. The compilaion proces Frequently loses inpeoctant
+information about the original program, The weer must colerae
+the delay of compibe chime, during which intended changed ta the
+Program become effective. Local changer to a program ofnn
+FeCeLitAce extensive FetOmpllation. Ag Paver spsnerr inkerpret
+rather than compile graphics commands, they are able to avgid
+many of these problems wapoccated with compliers.
+
+Rater systems also permit a greater degree af Flexthvlicy in dhe
+Shore of data structures used co represent pictures. Graphics
+fystema of the vector display lim wpe provide a very Sore
+inducement for the user to conceptualize Pictures as consiaring
+solely of sets of lines. In many wuch systema, if the description of
+the picture is very complex an terms of the vector represencaian,
+the display will seart to fMicker obpertionably, as the display
+Processor will not be able to anterpret all the instructions rapudly
+@hough to refresh che screen, Curved lines are Approwumaced by
+many ghort vectors and tend og require large dasplap lien, Very
+few Wector Cype ipttems can Giply a aufficent cumber of
+vectors io make shading areas feasible. The raster system,
+however, if mat limated by the complexity of the picture. Ic will
+nog flicker, even if the picture consis: of a large number of
+WECtOrs, GENE. peoints, curved, or filled in areas. Raster graphics
+
+EMCOUragel Experimentation wih a Rreater variety of
+Fepresentations for vasual informacion, Pactures can be
+Tepretented ai sets of points, vectors, run length codes,
+Procedure, or other akermatives
+
+8, Erasin g pictures
+
+In raster graphics systema, Point, vectaré and orher vitible
+ob jects can be erased Ait as easily as they are drain, by turning
+OFF bits in the screen memory inwead of iufhing them on We
+An supply the turthe with an @rager in addewan toa pen. When
+the eraser ts down, points aloeg the tures path are erased. must
+as they are drawn when the qurele paces over chem witk the pen
+dawn. Alternatively, this can be thought of as drawing in the
+samt color “ink” as the backeraund, tauiing previguily drawn
+Pactires (Oo disappear. (See Figure 2)
+
+PENDOWN
+REPEAT 4 FD 388 RT 9a
+
+Figura 2a The turiie draws @ Square with [he pen down,
+
+ERASERDOUN
+FORWARD 15a
+
+an
+
+Figure 2b. The tutle erases part cf one side of the square
+by going over it with the eraser down.
+
+In weetor display list system, erasing @ picture us accomphiybed
+by deleting the instruceans which craw # from the refresh loop
+Of the display processor. This us in many resmcts bees flexebbe, aa
+Chet structure of an objerr ce be deleted meyar correspond exaciiy
+=== scan page 5 ===
+a an obpect drawn. The decision bo enable erasing an object
+nuat be made when the display lie compiled, whereas ini
+aster syrtems this deciion can be made ab amy time during the
+secutbon of a program, [t i generally nat possible in Cisplay
+ystems 1a erase only part of a vecior or vector subroutine
+i wiouily displaped .
+
+Dne problem with wsing qhe turtles éraser fo remoee pactures
+ron the screen is that ic often dors mat behave as expected for
+siepures thal are considered io overlap on the screen. When
+seniidering to dimensional pactures af Tepreeecitatioes of three
+“mensional abpects, an opaque object prevents Gb jfcrt behind at
+-rem being seen by an objerver. {f the opaque object bb
+emoved, obscured objects which were behind it reappear. Thus,
+fi expected that drawing an object and erating i will leave a
+sbeture wndisturbed, The semantich of the erase command
+desired, then, is ta erage an ob ject but peitore whalever was
+visible behind it before the object was drawn, In vector duiplay
+list systems, instructions for displaying to insersecting ¥eciors
+will result in displaying the mntersescion point tudce during thet
+refresh eyele, so that removing one of the vectors will mex CauEe
+che intersection point to go away, a will be diglayed by the
+instruction for the remaining vector. In the TW Turtle, if
+intersecting lines are drawn with the pen down, and ane ling is
+crazed by backing over i with the eraser down, the point af
+intersection will be turned off as well When a picture ib drawn
+aver ancsher, the obscured picture is not saved. and #0 15 not
+restored when anather picture pasting throwgh the same paints
+Ls erased.
+
+ne mechanism for selving this problem as to explicitly save a
+portion of the old picture before drawing 3 new picture over K.
+“hat the old picture can be restored when the new picture 15
+. a@d, This complicates programs which do frequent display
+and erasing of overlapping pictures. More elaborate hardware
+could provide a “two-and-a-half dimensional feature, in a
+syiter with several bics per point, where exch big is assigned 2
+plane and hardware determines the visibility af each point
+according bo its plane [B).
+
+In addision to the per and the eraser, the turtle 5 also equipped
+with an exclusive OR (XOR) mode. In this mode, the turile
+complements the stare of points as bt pasted over therm, busing
+on points which were previously off anc turning off points
+which were on This mode is aften useful with simple
+overlapping pictures, where display of the mmterseening area ah
+not critical, but it is important to aveid diserbing a back ground.
+picture while some other picture is drawn and then erased.
+Using MOR mode, a picture can be drawn apd subsequently
+erased using the same procedure, transparent to any previously
+existing picture It as also very useful when a particular pierre
+should remain distinetly visible, even against backgrownds of
+heavily shaded pictures, For these reasons, KOR made is weed to
+display the triangle cursor which marks the scare of she cure on
+the screen. :
+
+4, Reading the screen
+
+Another important conteprual extension permuted by racer
+“phies is that the screen remembers what ts crawn upon at
+. a podiible ta read from the screen at well ag-write om i.
+Individual points on the screen can be tested to see if chey are
+an or off, This allows programs i perceive what is on the
+
+screen aa well as modify it, A veruen af the FORWARD
+command can easly be defined whech will stop iF i the Gare
+hits any displayed “obstacles” in its path. A “seeing eye turtle”
+ean report evidence of viable abjects in the direction ai the
+curtie’s heading. The purtle can be programmed bo find ats say
+out of mates or navigate around obstacles, The shading faciicy
+also depends im an essential way upon being able to reac the
+screen to ptarch for the boundaries of a region.
+
+Im aimou every vector display lit aysera, ous imposible to
+eXaAming a display fiat abner gt rs created oo determine! hal 1k on
+the screen. Dosplay lists are uaually mace acceuble only from
+machine language, and pequire knowing the format af ihe
+display processor instruction set. Even if this infarmation were
+available, figuring out whether a particular point on che screen
+was on would be a lengthy computation, as at would invalve
+examining all the display lists existing in the ayanem, Pragrams
+which need co know what had been drawn mug inwead maintain
+sore auxiliary dala structure to record changer ba the sreen,
+and modify that structure whenever a display command ts
+istued. Instead of using display lias as the primary cata
+structure fer pictures, in raster systems the user deals directly
+with the screen memory, and can think Of sensing and
+displaying points as sumply reading or writnig Che screen.
+
+a. Wor and pictures
+
+AM interaction with the system involving text, weh a command
+input, program editing, and error messaged Occurs on The sare
+display screen used for graphics This has the advantage of
+Conceniraling the attention of the wser on a single streen, rather
+than dividing it between a graphic display and text terminal An
+auxiliary processor is employed to speec up The drawing of leat
+on the streen during mormal character input anc output One
+can, however, Ud6 dhe graphics commands to display text as well,
+perhaps to print using a different fort than the spwem's default.
+For convenience, a split screen mode is normally used in which
+the top area of the screen is reserved for graphit output, and the
+boom for typen and typeout. The sizes of the text and
+graphics sections are easily adjustable so that, for example, the
+text aréa can be expanded while edicing the text of a program,
+er the graphics area enlarged while wamhing pictures being
+drawn, Text and graphics can interact flexibly, and the user can
+print labels or captions om pittures, of draw picture: fo
+accompany text. Printed copy of beh text amd graphics is
+available.
+
+6. Shading arenos
+
+Raster style graphics sprema enable the user to think about
+areas 2% picture components as well as just limes anc points.
+This allows the user to Fully exploat the feo dimensional mature
+of the display screen. In the TY Turcle, primitives are pre vided
+for constructing, namung and maninulating areas.
+
+The concept of the turtles pen whith draws lines is reacily
+reneralized to thar of a brosh which seeps aut areas. An
+arbitrary picture may be designases ax the tures Grush, and
+Lat picture is swept across the path along which the wurtle
+moves, This permits the rurcle 9a draw or erase lines of any
+thickness, as well as lemes mormally one point wice In
+=== scan page 6 ===
+ion juncucs with IPipay fram & device dich o4 a mouse or tablet,
+the brush can be used for Painting regeons Firezhand,
+
+For programa, however, the brugh mode ia net comaletely
+satisfactory. Programs for constructing filled im areas with even
+Himple geometric dhapea quickly become complicated. To allow
+easy creation of shaded regeons, the sytem provides a SHADE
+command, A closed curve id drawn sath the pen doen, outlining
+the region be be filled in, and the purthe i placed af any anberior
+point of the region before isuing the commanc. The sysiem
+then scane che sereen-to find the boundaries of che region and
+fills it, The area to be shaded may be of any shape or ize. An
+argument can be given to SHABE ta ipeity a aang
+‘pattern, which telly the curt: how to fall the area. The defaulr
+shading parcern, SOLID, cures on every poant in the region. The
+ayuer also provides a pet of predefined shading patterns, whech
+are sufficient for typical uses af thas feature, lke dustinguashing
+between. a few netghaorimng reguans The perform functions
+such as Filling areai wih boruzontal or vertical lines. The wier
+alo has the option of using any fa¥eG piciure ak a paren, bn
+which case the pegian is filled with that potture, repeating, it
+“walla per atyle if neceeeiry, Alnernagively, the user cam supply a
+Function ta decide how to shade the area, (See Fegure 3)
+
+SNOW 3 28
+
+Figure 3a. The turtle is inside a “snowflake curve’,
+
+SHADE *HORTZLINES
+
+Ss
+
+Figure Sb. The curve ia filled in with herazerdal lves.
+
+PEACOCK
+
+Figura Je. A Paciure erated Ue doveral cifferent shading,
+patterns,
+
+In the color version of the spitem described below the shacing
+facility as expecially usefull on Filling areas with different colors
+
+7. Animation
+
+For real time animation, @ is important that the user be able to
+create, display, erase and wransform pictures rapidly enough ba
+give the appearance of meoton Neither the vector display let
+Aor Tatber graphict ipiems are weually Faw trough bo make if
+featible fo draw each frame from srankh, dynaenically
+computing the transformatvons of the pactune from ome frame to
+thot mea. lin weenor display Lit aymems, the limiaciom is usually
+mot the speed of the display processor, but the speed af che
+display list compiler. Umstead, movies are usually made by
+drawing frames or wey components of frames, and saving them
+in some bower bevel form which is faster wo redinlay, erase, and
+move Than fetxecuiing The original protecure What Geew chet
+pleture, Im the cas of wetter displays, this iow level
+repretentation for pictures is a cinplay last.
+
+In the TY Turtle spare, Chit principal damm soructure used for
+this puro is called & wide. A windaw of am array of
+Poin fepresenting the picture im a rectangular area.on the
+ereen. Tt can be thought of ax a “phatograph” of char pari of
+the screen within a given rectangular “voew! inder”. Ones creaved,
+& Window can be displayed of erased at amy locamon on che
+presen, (See Figure 4)
+
+Redisplay of a window is implenencec umply by transferring
+the contend of the window array inte the screen memory, whe
+is a very fas operation, Transformations such aa rotatoon,
+reflection, and scaling of windows are correnily fal prowiced as
+primitives, but may be progracnmed by the wser or a syaeme
+programmer Showing a movie by displaying pactures aves in
+windows is Waually much fasier than executing procedures bo
+draw each picture, Windows also provide a means of clipping
+pletures, as any portion of the picture outside the rectangu lar
+area will be excluded from the window,
+=== scan page 7 ===
+CIRCLE 58
+MAKEWINOOW *BALL
+
+O
+
+Figure 4a, 4 piclure ef a ball is saved in a window,
+
+WIPE *BALL
+RIGHT 98
+FORWARD 298
+DISPLAY *BALL
+
+O
+
+Figure 46, The ball is moved 200 steps bo tie right of its.
+original posibion.
+
+The speed of displaying windows depends only upon haw much
+area the picture occupied It if fetally insensinve be the
+complexity of a picure within a region, unlike display Tits, The
+window representation is therefore ideal for animation im whuch
+most changes happen within small areas of the screen, buy moat
+happen very fax. An example is a game like spate war, where
+Object: thar move, appear and disappear (vhips and corpedios)
+maght be complex pictured, but are small relative oo the site of
+the fereen, and need 0 be changed rapidly, Windows may pend
+to be somewhat space consumang for same applicateons. This
+Problem could be reduced by converting to a run length
+encoding scheme, at the coi of increasing the amount of time
+neceHary to recitplay a window. Te is also possible no construct
+other types of low iewel representation for poctures, optimized for
+pictures with partsular known charmcteristice
+
+A disadvantage of the window commands ai they currencly exis
+is that the area saved on a window must be specified as a
+rectangular area. This may make it inappropriace for saving
+pletures with irreguiarly thaped boundaries, Saving the
+
+enclosing rectangular area map save in the window porteons of
+some other unwanced plictare ad pucent Co it, or at least wane
+Space saving empry area, Cverlapeeng pacoused are aloo a eouree
+ef gifficuky, making & difficuk to align separate names to the
+cuipat of peo procedures if the pictures they draw can overlap
+ion the streen. Erasing a window also erases the picture behind”
+a problem alo encountered when aging the eraeer mode of
+the Wirth, ad ditusied above, Ag with the @rager rege, the
+problem can Ge alleviated bo ame extent by wang MOR made,
+‘or explicitly SAVIN and Fegorimg pictures. Rocion amd scaling
+tranifanmations are mare difficuk ta apply ie parmures using the
+window representation than os the case with vecvor display les.
+
+In Loga implementatvons for vector dirplays puch as (howe
+deacrlbed in 1) and [5] the basic picture caving tapabilay is
+provided by the SNAP command. The command saves a picture
+(usually the enuire seréen) ad a diiplay Got dubrowione A shag car
+Subsequently be reditplayed anywhere on the screen by unserting
+a@ call to that subroutine into the current display luc. Removing
+the call erases the picture saved in the nap fram the creen. The
+implementation described in [8] provide: such capabslinies as
+copying snaps, editing them by appending mostructeans io the
+twbroutine, and revricing the epe of the pasture saved in a
+imap to the dusplay list output by a particular piece of source
+ones,
+
+A problem with saving pittures as diplay lit subroutines using
+the SNAP command ts thar the relationship between pictures
+visible on the gcreen aned PICTURES cared un inaps ome aleapa
+clear. “This if especially rue when muliple copies of snags may
+exist, when snapi-can be edited. and when there is exceniive
+overlapping of pulctures, There is io way to restrict the extent of
+a imap to a particular area on the ictern. Windows, however,
+have the property that what you see fis what pou gee
+Everything wislble within che specu! ied area wall be ancluded in
+the windew, regardless of what caused at to appear, including
+WeOre, Dex, paints, thaded areas and oher cisplayed wundows.
+Windows allow gelecung a partcular regeon of che screen co be
+faved, whereas smapd allow selectively with respect 0a Che (ime at
+which the pucture was drawn. Another problem with snaps it
+that they canned be examined i any reasonable way, and must
+remain someshat mysterious to a naive user, The ingernal
+Hructure of a window, however, i samply an array Gf paints,
+and can easily be examined and modeled by the uter or by
+
+programs,
+8. Color
+
+In addigion to che black and white syipem, ainocker wersion of the
+TY¥ Turtle disoiays Full color poctures on an Agvent pro pion
+television screen. The color version unmderiands moe af the
+SauTee commands as the black amd white verseon, with additional
+extensions fer creating and manipulaung colors. The speem
+supplies a set of colors onitially, but the user may defane mew
+colors using the MAKECOLOR comand, which oneanes a mew
+éolor From a specified mix of the primary calork ned, green, and
+blue. The turtle’: pen has a poo cofor, and all drasengs dane
+by the turtle appear on the screen in the currently ielected per
+color, “The ayeterm also keepa track of the color of the
+Background again which pene: ant Cras, Pictures are
+erased by redrawing them with the eraser down, ucing thai
+background color, called the eraser cofor. CLEARSCAEEN falls
+the streen with the eraier color, thereby erasing everything on
+the screen.
+=== scan page 8 ===
+The cereen memory for the color syem ued feveral bus co
+describe the atace of gach point These bits address an array
+Called the palette, whith edd: a set of currently availible
+colors. A pount may be duplaped in amy color which i a member
+of this set. The colors chosen for the paleite may be changed at
+any time. Thus, any number of colors may Ge defined, but the
+number of colors actually visible on the screen at any pactiqular
+tite bf limited by the capacity of the pale. Whenever a
+PENCOLOR command ts issued. the palette is searched no find
+the mew pen color. [f it is prestat, that color is selecned. Ef noe,
+the mew color is inserted into the mext available apace in the
+paleote. CLEARSCAEEN delecer all the color from che paleme
+excep for the current pen amd eraser cobors. Thos, the weer ted
+think only in germ of ipmbolocally named colori rather than
+Aulmerical indices into the paler, and will only get an error if
+the limet on che number of different colors in use sumulaneously
+is excetded. The palette can, however, be explictly accesed if
+desired.
+
+Tt is very @asy to change the color to which a paricular number
+repreienting the state of 2 point correiponds, simaly by
+modifying the paler This hai the visual effex of
+fimaianeauely changing all posnés on che ree in that color, 4
+REPLACECOLOR primitive is wupplied, which given two colors,
+changes all picture: on the screen in one color to another. This
+operation is much faster than achieving the same effect by
+_Pedirawing the pocture in anceher colar, Using this, it is easy oo
+program piychedelic effects by rapidly changing colors randamly
+ina multicolored picture It is also possible to exploir thia feature
+for animation, so-that a picture could be made to appear or
+Gitappear very quickly by wing AEPLACECOLOR ta change it
+from the backprownd color to tome contracting color and back
+again,
+
+13] mentation
+
+The TW Turtle is a package of functions written in the
+MacLisp dialect of Lisp fer the PDPIO [91 Je con be used
+either directly from Lisp or from our Lisp implementawan of
+Logo [$1 A similar graphic syvem it currency bring
+implemented far the POPIU45 im assembly language, Both the
+black and white and the calor disglys are compatible with
+Sandard broadcast televiseon, allowing the use of standard TV
+Paniiers or vedeoape equipment. Resolucice ia approximately
+575 points horizongally by 454 points verneally. The black and
+white system bas one bit per point (mo gray levels). The color
+system has four bats per point, allwing up to siteen different
+colors to appear on the screen at once. Hardware for the black
+and white sysem was designed by Tom Knight, for the color
+aystem by Ran Lebel
+
+now led te
+
+The author would like to thank Hal Abshion, Ken Kahn, aid
+Ira Goldarein for conversations wheth helped to crysallige the
+ideas prevented here, and far supgesans which were very
+helpful in debugging this paper.
+
+Bibliography
+
+(10 Seymour Papert
+A Compurer Laboratory for Elementary School
+Logo memo |, MIT Aruficual Intelligence Lab, October 1971
+
+[2] Seymour Papert
+
+Teaching Children fm be Mathematicians Vi Teaching Abour
+Marhematies
+
+Logo memo 4, MIT Artificial Intelligence Lab, July 1971
+
+[3] Howard Awatin
+The Loge Primer
+
+ee working paper 19, MIT Arnificial Intelligence Lab, January
+]
+
+[4] Hal Abelton, Nat Goodman, Lee Rudalph
+FOP anual
+Loge mero 7, MIT Artificial Intelligence Lab, August 1074
+
+(5) Ira Goldstein, Heary Loeberman, Harry Bochner, Mark
+Miller
+
+L An Implementation en Li
+
+Loge memo Il, MIT Artificial Intelligence Lab. March (S75
+
+(B) Ira Goldstein
+
+Germiand
+Logo working paper 7, MIT Artificial Intelligence Lab, February
+
+1a73
+
+(7) Willam Newman, Robert Sproul
+
+Principles of lncerartive Computer Ciraphigk
+
+McGraw Hill, itd
+
+[8] Nicholas Negroporre
+Raster f_Agorgaches T ter Graphics
+MIT Architecture Machine Group memo
+
+[8] Dawid A, Masry
+
+MacLisp Reference Manual
+
+MIT Praject MAC mema, December 1975

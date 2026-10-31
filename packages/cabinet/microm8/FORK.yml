@@ -1,0 +1,62 @@
+# Our changes to microM8, kept apart from the cabinet's packaging of it.
+# Each patch applies to upstream master with `git apply`; each says whether it is meant
+# to go back upstream (after asking April and Melody) or stays ours.
+# The working copy is a clone of upstream on branch wasm-scope; the patches here are the record.
+
+upstream:
+  repo: https://github.com/paleotronic/microm8-cln
+  license: MIT
+  base_commit: aaea81e7a5385c66e0378e2b93232534725b2558   # 2025-09-24, "Create LICENSE"
+  module_root: GoPath/src/paleotronic.com
+branch: wasm-scope
+
+patches:
+  0001-build-tags-for-js-wasm.patch:
+    what: >
+      Keeps the network client (api/chat.go, forum.go, remote.go) and the cgo stb_vorbis decoder
+      out of GOOS=js GOARCH=wasm builds; vorbis_wasm.go is a stub with the same exported API
+      that returns an error. go.mod lists ebitengine/oto/v3 as a direct requirement.
+    for: upstream
+    status: builds; the desktop build is unchanged
+  0002-videx-roms.patch:
+    what: >
+      Videx Videoterm firmware 2.4 and 2.1 and its character ROMs in octalyzer/data, beside
+      microM8's Apple ROMs, for a Videx 80-column card in slot 3. From btb/80ColumnCard;
+      firmware 2.4 and the normal, uppercase, APL and Spanish character sets match MAME's
+      checksums.
+    for: upstream, with the card
+    status: ROMs only; assets.go is not regenerated and no card uses them yet
+  0003-m8lib-library-tool.patch:
+    what: >
+      tools/m8lib: lists microM8's shared library (the /appleii mount) over its DuckTape
+      protocol (LDR on :6581) and fetches files over HTTP (:6582/files/legacy/<path>), as the
+      app does.
+    for: upstream, if wanted
+    status: works; produced ../disks/apple2/LIBRARY.tsv and the disks in DISKS.yml
+  0004-headless-wasm-machine.patch:
+    what: >
+      wasm/main.go: a headless //e for GOOS=js GOARCH=wasm -tags nox, driven from JavaScript
+      through globalThis.microM8 (boot, insert, keys, text and screen, status, reset, speed,
+      speaker samples). In-memory disk volumes; js/wasm stubs for the serial command, net and
+      version code; atotto/clipboard vendored with a js stub. settings.OmitCards leaves cards out
+      of the slot table; settings.BootWarp keeps the chosen speed through reboots and resets.
+      Fixes found by profiling (scripts/microm8-bench.mjs): the Disk II drive light timer was
+      never cleared, so an idle card wrote the light off on every cycle; the $Cxxx ROM select
+      registers skip writes that change nothing. Together 13-19% faster, half the GC time.
+      The disk's 8x boost no longer lowers a faster user speed, and a user speed change while
+      the motor runs no longer blocks the boost.
+    for: upstream, split by subject; the fixes stand alone
+    status: >
+      applies after 0001-0003 and builds; 220 cabinet tests pass, including keyboard, disk
+      boot and the speaker
+next:
+  - "WebAssembly: the full desktop build still stops at go-gl/gl, go-gl/glfw and portaudio, and
+    at octalyzer/ui/chat and ui/forumtool, which import paleotronic.com/server packages that
+    aren't published. 0004's headless machine goes beside them, not through them."
+  - "Speed: per-cycle device clocking (video scanner, speaker, every card) is the largest cost
+    left; reads below $10000 allocate because the value pointer escapes into listener
+    interfaces; mouse and SmartPort tick every cycle when unused."
+  - "Videx card: videx.go (6845 registers, 2K screen RAM in four 512-byte banks at $CC00-$CDFF,
+    chosen by reads of $C0B0/$C0B4/$C0B8/$C0BC), a writable $CC00 window in memcxxx.go, an 80x24
+    text layer, annunciator 0 routed to the card, an Apple II+ profile with slot 3 = videx.
+    MAME's a2videoterm.cpp (BSD-3) is the reference."

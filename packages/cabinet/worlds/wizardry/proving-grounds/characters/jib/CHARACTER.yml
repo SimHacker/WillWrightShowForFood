@@ -1,0 +1,45 @@
+# JIB: roster slot 0 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: JIB
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 2995
+inventory:
+  - {item: HELM, equipped: true, cursed: false, identified: true}
+  - {item: PLATE MAIL, equipped: true, cursed: false, identified: true}
+  - {item: BLUE RIBBON, equipped: false, cursed: false, identified: true}
+  - {item: DRAGON SLAYER, equipped: true, cursed: false, identified: true}
+  - {item: SHIELD + 1, equipped: true, cursed: false, identified: true}
+  - {item: COPPER GLOVES, equipped: true, cursed: false, identified: true}
+  - {item: DRAGON SLAYER, equipped: false, cursed: false, identified: false}
+  - {item: SCROLL/BADIAL, equipped: false, cursed: false, identified: false}
+spells: []
+wizardry:
+  slot: 0
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: HUMAN
+  class: FIGHTER
+  age_weeks: 1218
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 17, iq: 14, piety: 8, vitality: 18, agility: 16, luck: 13}
+  luck_skill: [12, 16, 16, 16, 16]
+  experience: 174819
+  max_level: 11
+  level: 11
+  hp: 89 # hit points left
+  hp_max: 97
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 8
+  armor_class: -1 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 3
+  damage: {count: 1, sides: 10, bonus: 3}
+  vs_type_2: ["00000001000000", "00000001000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000001000000"
+  awards: [] # AWARDS[4] bits

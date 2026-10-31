@@ -1,0 +1,14 @@
+# Rob, the Little Computer Person in GAMES 47B.
+# name, lcp.researcher and lcp.logged_on are written over LCP-RECORD.yml on import.
+
+name: Rob # 13 characters at $CA of sector 1.4
+home: HOUSE.yml
+location: HOUSE.yml
+relationships:
+  - {name: Stephen, role: researcher}
+lcp:
+  house_number: =8336>76 # sector 18.17, stored backwards. LCP CREATOR and CREATE NEW LCP write a new one to get a new person
+  researcher: Stephen # 21 characters at $B2. In the game: ask the person to log on to his computer to change it
+  logged_on: Stephen # a second copy at $E6; on a disk nobody has played, these bytes are leftover code
+  move_in_template: false # true when the research data is what every disk ships with: nobody has moved in. Import ignores it
+  record: LCP-RECORD.yml # all 256 bytes of sector 1.4

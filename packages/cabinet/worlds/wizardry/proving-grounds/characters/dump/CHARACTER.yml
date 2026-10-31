@@ -1,0 +1,41 @@
+# DUMP: roster slot 16 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: DUMP
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 305
+inventory:
+  - {item: SHORT SWORD, equipped: true, cursed: false, identified: true}
+  - {item: SMALL SHIELD, equipped: true, cursed: false, identified: true}
+  - {item: LEATHER + 1, equipped: true, cursed: false, identified: true}
+  - {item: MACE+1, equipped: false, cursed: false, identified: false}
+spells: []
+wizardry:
+  slot: 16
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: HOBBIT
+  class: THIEF
+  age_weeks: 1042
+  status: OK
+  alignment: NEUTRAL
+  attributes: {strength: 8, iq: 9, piety: 8, vitality: 14, agility: 18, luck: 18}
+  luck_skill: [16, 16, 16, 13, 13]
+  experience: 55969
+  max_level: 9
+  level: 9
+  hp: 46 # hit points left
+  hp_max: 46
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 4
+  armor_class: 5 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 1
+  damage: {count: 1, sides: 6, bonus: 0}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

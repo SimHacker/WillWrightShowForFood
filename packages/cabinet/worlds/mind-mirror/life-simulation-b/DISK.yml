@@ -1,0 +1,34 @@
+# A Mind Mirror disk. Saves are characters; import writes them back. This file is a description.
+
+game: Timothy Leary's Mind Mirror
+platform: Apple II
+source: mm-flux-life-simulation-b.woz
+sha1: 6f09c3c97fe262070c888a3aa88fa73e4975ca3c
+volume: 254
+saves:
+  - {file: RAVEN, character: characters/raven/CHARACTER.yml}
+files:
+  - {name: FILEC, type: B, sectors: 11}
+  - {name: FILE200, type: B, sectors: 17}
+  - {name: FILE20A, type: B, sectors: 8}
+  - {name: FILE21A, type: B, sectors: 15}
+  - {name: FILE21B, type: B, sectors: 15}
+  - {name: FILE22A, type: B, sectors: 16}
+  - {name: FILE22B, type: B, sectors: 16}
+  - {name: FILE23A, type: B, sectors: 14}
+  - {name: FILE23B, type: B, sectors: 14}
+  - {name: FILE300, type: B, sectors: 7}
+  - {name: FILE31A, type: B, sectors: 18}
+  - {name: FILE31B, type: B, sectors: 17}
+  - {name: FILE31C, type: B, sectors: 13}
+  - {name: FILE32A, type: B, sectors: 20}
+  - {name: FILE32B, type: B, sectors: 17}
+  - {name: FILE32C, type: B, sectors: 25}
+  - {name: FILE33A, type: B, sectors: 26}
+  - {name: FILE34A, type: B, sectors: 35}
+  - {name: CNTRL.OVR, type: B, sectors: 5}
+  - {name: R2.OVR, type: B, sectors: 14}
+  - {name: R3.OVR, type: B, sectors: 15}
+  - {name: SEGUE.OVR, type: B, sectors: 8}
+  - {name: SAVE.OVR, type: B, sectors: 8}
+  - {name: RAVEN, type: B, sectors: 2}

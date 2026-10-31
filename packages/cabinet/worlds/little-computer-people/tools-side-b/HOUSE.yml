@@ -1,0 +1,38 @@
+# A Little Computer People disk. Import writes the resident back; this file is a description.
+
+game: Little Computer People
+platform: Commodore 64
+source: lcp-tools-side-b.d64
+sha1: 9bb1deba9058a1be19a440be5c427aea9ed1c356
+disk_name: "ASS PRESENTS:   "
+disk_id: "     "
+resident: null # no research data in sector 1.4: this crack keeps the house inside its one file
+files:
+  - name: LCP CREATOR
+    type: PRG
+    blocks: 8
+    listing: programs/lcp-creator.bas
+  - name: LCP HOTEL V1.1
+    type: PRG
+    blocks: 19
+    listing: programs/lcp-hotel-v1-1.bas
+  - name: LCP EVICTOR
+    type: PRG
+    blocks: 7
+    listing: programs/lcp-evictor.bas
+  - name: LCP GENERATOR
+    type: PRG
+    blocks: 4
+    listing: programs/lcp-generator.bas
+  - name: LCP KEYS
+    type: PRG
+    blocks: 4
+    listing: programs/lcp-keys.bas
+  - name: LCP EDITOR
+    type: PRG
+    blocks: 41
+    listing: programs/lcp-editor.bas
+  - name: LCP TIPS
+    type: PRG
+    blocks: 7
+    listing: programs/lcp-tips.bas

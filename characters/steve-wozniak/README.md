@@ -11,7 +11,7 @@ Invitation portrayal — **not** Steve Wozniak. [Standards](../../schemas/portra
 In 2018 he told Paleotronic how he built the Disk II controller in a few weeks for CES, with a
 state machine in a one-dollar PROM in place of Shugart's fifty chips, the software timing every bit,
 and the "five and three" encoding that took a disk from 13 sectors to 16
-([Steve Wozniak Talks Disk ][](https://paleotronic.com/2018/05/19/steve-wozniak-talks-disk/),
+([Steve Wozniak Talks Disk \]\[](https://paleotronic.com/2018/05/19/steve-wozniak-talks-disk/),
 interviewed by [Melody](../melody-ayres-griffiths/README.md) and [April Ayres-Griffiths](../april-ayres-griffiths/README.md)).
 His favourite part was the sound: by accelerating the head and slowing it before it arrived, his
 seeks went "shew, shew, shew" instead of the other drives' buzz-saw "ennnnnnnnnnnh." The cabinet's

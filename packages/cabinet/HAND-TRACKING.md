@@ -232,7 +232,7 @@ animation decorating a command.
 
 But **camera tracking restores some manipulation, not touch**. The person
 does not feel the switch's resistance or snap, the box, or the weight of the
-virtual mechanism. A beautifully tracked skeleton does not replace those
+virtual mechanism. A well-tracked skeleton does not replace those
 sensations. DATAHAND is an experiment in embodied visual interaction, not a
 solution to Victor's whole critique. Visual feedback and the person's own
 sense of their moving body help, but they are not force feedback.

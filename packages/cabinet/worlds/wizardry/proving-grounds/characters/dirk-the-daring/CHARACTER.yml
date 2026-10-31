@@ -1,0 +1,42 @@
+# DIRK THE DARING: roster slot 4 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: DIRK THE DARING
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 3208
+inventory:
+  - {item: SHIELD + 1, equipped: true, cursed: false, identified: true}
+  - {item: HELM, equipped: true, cursed: false, identified: true}
+  - {item: PLATE MAIL + 2, equipped: true, cursed: false, identified: true}
+  - {item: SILVER GLOVES, equipped: true, cursed: false, identified: true}
+  - {item: LONG SWORD + 2, equipped: true, cursed: false, identified: true}
+spells: []
+wizardry:
+  slot: 4
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: HUMAN
+  class: FIGHTER
+  age_weeks: 1016
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 18, agility: 18, luck: 18}
+  luck_skill: [12, 16, 16, 16, 16]
+  experience: 74265
+  max_level: 9
+  level: 9
+  hp: 77 # hit points left
+  hp_max: 77
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [0, 0, 0, 0, 0, 0, 0]
+  hp_calc: 14
+  armor_class: -5 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 3
+  damage: {count: 1, sides: 10, bonus: 5}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

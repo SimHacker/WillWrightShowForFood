@@ -1,0 +1,21 @@
+{
+	"name": "@wwsff/bridge",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Bridges from old games' saved worlds to YAML Jazz directories and back: binary record layouts, comment-preserving YAML merges, world locations.",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"test": "tsc -p tsconfig.json && node --test dist/*.test.js"
+	},
+	"dependencies": {
+		"yaml": "^2.9.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.17.0",
+		"typescript": "^5.8.0"
+	}
+}

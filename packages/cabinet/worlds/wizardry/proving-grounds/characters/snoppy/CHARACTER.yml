@@ -1,0 +1,61 @@
+# SNOPPY: roster slot 18 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: SNOPPY
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 255
+inventory:
+  - {item: BREAST PLATE +1, equipped: true, cursed: false, identified: true}
+  - {item: ANOINTED FLAIL, equipped: false, cursed: false, identified: true}
+  - {item: LARGE SHIELD, equipped: true, cursed: false, identified: true}
+  - {item: STAFF/MONTINO, equipped: true, cursed: false, identified: true}
+spells:
+  - KALKI
+  - DIOS
+  - BADIOS
+  - MILWA
+  - PORFIC
+  - MATU
+  - CALFO
+  - MANIFO
+  - MONTINO
+  - LOMILWA
+  - DIALKO
+  - LATUMAPI
+  - BAMATU
+  - DIAL
+  - BADIAL
+  - LATUMOFI
+  - MAPORFIC
+  - DIALMA
+  - KANDI
+  - BADI
+wizardry:
+  slot: 18
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: ELF
+  class: PRIEST
+  age_weeks: 976
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 14, iq: 18, piety: 18, vitality: 15, agility: 14, luck: 14}
+  luck_skill: [16, 13, 14, 16, 16]
+  experience: 95916
+  max_level: 10
+  level: 10
+  hp: 55 # hit points left
+  hp_max: 55
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [9, 8, 6, 3, 3, 0, 0]
+  hp_calc: 6
+  armor_class: 2 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 1
+  damage: {count: 1, sides: 5, bonus: 1}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits

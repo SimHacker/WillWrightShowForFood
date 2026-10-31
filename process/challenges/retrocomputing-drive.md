@@ -83,7 +83,7 @@ Audience chant: **CODE THAT SPEC!!!!!** *(on your platform)*
 
 | Instance | Tagline | Girder |
 |----------|---------|--------|
-| **Apple ][ drive** | *Drive the ][ — INTEGER BASIC if you dare* | [`apple2-drive.yml`](apple2-drive.yml) · example [`apple2-flair-lap.rig.yml`](../../rigs/apple2-flair-lap.rig.yml) |
+| **Apple \]\[ drive** | *Drive the \]\[ — INTEGER BASIC if you dare* | [`apple2-drive.yml`](apple2-drive.yml) · example [`apple2-flair-lap.rig.yml`](../../rigs/apple2-flair-lap.rig.yml) |
 | **PDP-10 MACLISP drive** | *Write in MACLISP on a PDP-10 emulator running ITS!* | [`pdp10-maclisp-drive.yml`](pdp10-maclisp-drive.yml) · example [`pdp10-maclisp-flair-lap.rig.yml`](../../rigs/pdp10-maclisp-flair-lap.rig.yml) |
 | **Lisp Machine hack-off** | *Symbolics vs LMI — the battle continues* | [`lisp-machine-hack-off.yml`](lisp-machine-hack-off.yml) · example rigs: Symbolics + LMI |
 

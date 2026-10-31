@@ -35,6 +35,15 @@ the turtle and body-syntonic learning, Marvin Minsky demonstrating General Turtl
 comments where Don has pointed people to them. The turtle footage is also the starting point for
 the cabinet's [Logo turtle plan](../../packages/cabinet/LOGO-TURTLE.md).
 
+## History of Logo (2020)
+
+[*History of Logo*](sources/history-of-logo-hopl-2020/history-of-logo-hopl-2020.pdf), by Cynthia Solomon, Brian Harvey, Ken
+Kahn, Henry Lieberman, Mark L. Miller, Margaret Minsky, Artemis Papert and Brian Silverman, in
+*Proceedings of the ACM on Programming Languages* (HOPL IV), June 2020. Open access under CC BY-SA
+4.0 ([DSpace](https://dspace.mit.edu/handle/1721.1/133952)). The cabinet's
+[LOGO-TURTLE.md](../../packages/cabinet/LOGO-TURTLE.md) draws its timeline from it. Henry's LLOGO
+and TV Turtle memos are in [his folder](../henry-lieberman/README.md#logo-papers-in-this-folder).
+
 ## Why a Repo Show
 
 Don met Cynthia by video conference at the **Snap! conference (Snap!Con) in Barcelona**. Snap! is a

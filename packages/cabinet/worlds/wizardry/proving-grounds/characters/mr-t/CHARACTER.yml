@@ -1,0 +1,61 @@
+# MR.T: roster slot 17 of PROVING GROUNDS OF THE MAD OVERLORD!.
+# Possessions name items in ITEMS.yml; spells name SCENARIO.yml spells.
+
+name: MR.T
+home: MAZE.yml#castle
+location: MAZE.yml#castle # where the character was left in the maze, or MAZE.yml#castle
+gold: 1318
+inventory:
+  - {item: ANOINTED MACE, equipped: true, cursed: false, identified: true}
+  - {item: CHAIN MAIL + 1, equipped: true, cursed: false, identified: true}
+  - {item: SHIELD + 1, equipped: true, cursed: false, identified: true}
+spells:
+  - KALKI
+  - DIOS
+  - BADIOS
+  - MILWA
+  - PORFIC
+  - MATU
+  - CALFO
+  - MANIFO
+  - MONTINO
+  - LOMILWA
+  - DIALKO
+  - LATUMAPI
+  - BAMATU
+  - DIAL
+  - BADIAL
+  - LATUMOFI
+  - MAPORFIC
+  - DIALMA
+  - BADIALMA
+  - LITOKAN
+  - DI
+wizardry:
+  slot: 17
+  password: ""
+  in_maze: false # out on an expedition when the disk was saved
+  race: HUMAN
+  class: PRIEST
+  age_weeks: 1076
+  status: OK
+  alignment: GOOD
+  attributes: {strength: 18, iq: 18, piety: 18, vitality: 18, agility: 18, luck: 18}
+  luck_skill: [17, 15, 18, 18, 18]
+  experience: 68919
+  max_level: 9
+  level: 9
+  hp: 56 # hit points left
+  hp_max: 56
+  mage_spells: [0, 0, 0, 0, 0, 0, 0] # spell points per level, 1 to 7
+  priest_spells: [9, 7, 5, 4, 4, 0, 0]
+  hp_calc: 6
+  armor_class: 2 # lower is better
+  heal_points: 0 # regeneration per move
+  critical_hit: false
+  swings: 1
+  damage: {count: 2, sides: 3, bonus: 0}
+  vs_type_2: ["00000000000000", "00000000000000"]
+  vs_type_3: ["0000000", "0000000"]
+  vs_type: "00000000000000"
+  awards: [] # AWARDS[4] bits
