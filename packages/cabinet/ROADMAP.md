@@ -629,12 +629,18 @@ Don has an actual pair. Simulated in the bench first, then digital twins.
   kit, and finished Bluetooth HID devices that work with the simulator and with any
   computer. The hardware project gets its own home when it starts; this bench is its
   first software.
+- **From two bare hands.** The design goal: the webcam tracks both hands, one plays the keyset
+  with its fingers and the other drives a simulated mouse, wheels and buttons included, over
+  3D models of the pair: [DEVICES.md](DEVICES.md#the-design-goal-engelbarts-keyset-and-mouse-from-two-bare-hands).
 
 ## 13. Emulation mash-ups
 
 Plug virtual devices into virtual machines that never met: a VPL DataGlove on a
 PDP-7, tracking your real hand with computer vision; an Engelbart mouse and keyset on
 the PDP-7, or on an Apple ][ as PDL(0), PDL(1) and three buttons.
+
+The full layering, with an interpreter layer for gestures and accessibility between the
+instrument and the machine, and what's built: [DEVICES.md](DEVICES.md).
 
 **Split the device from the port.** A device is two halves:
 

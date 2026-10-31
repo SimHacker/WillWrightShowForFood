@@ -33,6 +33,11 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
   folder inside the cartridge, kept in its own format: microM8's microPAK, SIMH's scripts,
   MAME's software lists. No folder is privileged, the cabinet's included, and any one can be
   copied out and run by its emulator alone.
+- [DEVICES.md: devices in layers](DEVICES.md): instrument, interpreter, abstract device, binding
+  to an architecture, and the host emulator, so a data hand, an Engelbart mouse and keyset, a
+  gesture recognizer or an accessibility interface can plug into any machine, and the Turing
+  engine, frame buffers, tile engines and vector displays can run on any of them. The hand and
+  the Turing engine are already split this way; the rest is planned.
 - [MANIFESTO.md: a federation of emulators](MANIFESTO.md#a-federation-of-emulators-after-microm8):
   other emulators join as peers that trade messages and memory, not as ports into this one.
   The attitude comes from microM8, which "upcycles" the Apple ][.

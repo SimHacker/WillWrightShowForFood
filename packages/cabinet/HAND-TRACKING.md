@@ -458,6 +458,10 @@ use their right hand. Association needs continuity, ambiguity detection,
 and explicit reclaim when identity is lost. Test occlusion and limited
 camera space before treating this as a reliable multiplayer mode.
 
+**One player, two hands, as Engelbart's keyset and mouse.** The design goal for two hands is
+in [DEVICES.md](DEVICES.md#the-design-goal-engelbarts-keyset-and-mouse-from-two-bare-hands):
+fingers up and down as chords, the other hand's position, rotation and curls as the mouse.
+
 **One player, two hands.** Give the hands complementary jobs: one steers,
 the other supplies thrust and fire. Compare a proportional throttle hand
 with a simpler curl-to-thrust hand, and allow roles to be swapped. This

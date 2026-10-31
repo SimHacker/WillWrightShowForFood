@@ -123,7 +123,8 @@ CPUs share one bus:
   JavaScript from URL-loaded cartridges is not evaluated: today's cartridge scripts use a
   constrained declarative vocabulary, and adapter code needs an explicit trust/capability boundary.
 
-This separation lets one device travel across unlike machines. For example, a mouse/keyset
+The layers a device is split into, from the person's hand to the emulator, are in
+[DEVICES.md](DEVICES.md). This separation lets one device travel across unlike machines. For example, a mouse/keyset
 instrument can become a PDP-7 light pen plus teletype input, or Apple II paddle values, pushbuttons,
 and keyboard events. Only the cartridge's adapter changes; neither machine needs to pretend its
 I/O architecture is the other's. The configuration itself is inspectable and testable, so wiring
