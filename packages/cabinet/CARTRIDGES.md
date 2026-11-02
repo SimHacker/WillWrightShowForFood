@@ -2,7 +2,7 @@
 
 [DESIGN.md](DESIGN.md#cartridges-and-live-coding) named the cartridge and sketched one. This file
 owns the format: what a cartridge may carry, how it is built and cached, how one cartridge
-extends another, how code comes back out of a binary, and how an edit made in the page ends up
+is built on others, how code comes back out of a binary, and how an edit made in the page ends up
 in a git repo, built by CI and deployed. The LIVE CODING panel, variants and pen scripts stay
 in DESIGN.md. How cartridges compare with microM8's microPAK and other emulators' formats, and how
 they nest, is in [UPCYCLING-FORMATS.md](UPCYCLING-FORMATS.md).
@@ -88,7 +88,7 @@ the file format, not a claim that every machine field is parsed and wired alread
 ```yaml
 id: forth-flowers
 label: FLOWERS (2026)
-extends: forth                       # everything of forth's, then these changes
+parents: [forth]                     # everything of forth's, then these changes
 machine:
   cpu: pdp7
   memory: { core_words: 8192 }
@@ -162,7 +162,7 @@ kinds. A cartridge from tomorrow still loads today; it just can't do the new thi
 **Panels are opted into.** A cartridge lists the panels it needs, and a panel's chip appears
 only when the running cartridge asks for it. RINGS already works this way: it shows only for
 a program that says where its ring structure lives (`rings: { beg, end, roots }`), today only
-SYMELEC. A Forth cartridge that `extends` the base with `rsp.fs` and names its ring area gets
+SYMELEC. A Forth cartridge built on the base that adds `rsp.fs` and names its ring area gets
 the 3D ring viewer for free, live on the rings the Forth is building, the same viewer PIXIE's
 rings use. DUEL's game panel, read from core through its symbols, is the next opt-in panel.
 
@@ -194,9 +194,13 @@ Forty cartridges that share one Forth kernel assemble it once. The cache lives i
 the page and in a directory under Node. Because the emulator is deterministic, the hash also
 names the result, and CI can check it (§7).
 
-## 3. Extending: many cartridges, one Forth
+## 3. Parents and mixins: many cartridges, one Forth
 
-`extends` names a parent cartridge. The child gets every resource and step of the parent, then:
+`parents` lists the cartridges a child is built on, in order. The first is its base, what it
+is; any later ones are mixins, one capability each (a device, a library, a player's settings).
+[@wwsff/flavors](../flavors/README.md) composes them: C3 precedence, the later parent winning,
+`resources` matched by `path` and `build` steps by `id`. The child gets every resource and step
+of its parents, then:
 
 - adds resources;
 - replaces a resource by giving the same path;
@@ -231,7 +235,7 @@ too. So decoding needn't be a script run once on a desk: it is a panel, and a st
 6. **Factor.** Lift a routine that recurs into a `library`, a fragment into a snippet, a family
    of near-copies into a `template` with parameters. Verify still green.
 
-The result is a new cartridge that `extends` the binary one and replaces the tape with sources,
+The result is a new cartridge whose parent is the binary one, replacing the tape with sources,
 with `verify` in its build against the original image. The tape stays in the cartridge as the
 witness. [ROADMAP §15](ROADMAP.md#15-duel-from-tape-to-source) is this, done for DUEL first;
 the same panel then serves every symbol-less tape from Oslo.
@@ -244,11 +248,11 @@ on the machine.
 ## 5. The cellular automata machine, as cartridges
 
 The CAM base ([DESIGN.md](DESIGN.md#cam-on-the-pdp-7-a-cam-off)) is a cartridge: Mitch's Forth,
-Don's rule compiler in Forth, the CAM-6 device. Each rule `extends` it with one file:
+Don's rule compiler in Forth, the CAM-6 device. Each rule is a child of it with one file:
 
 ```yaml
 id: cam-life
-extends: cam6
+parents: [cam6]
 resources:
   - { path: life.fs, kind: source, lang: forth }       # the rule, in CAM-6 Forth
   - { path: life.lut, kind: table, built: true }       # compiled by the machine, kept
@@ -285,7 +289,7 @@ and docs, and also the models and characters that show it being used.
 The characters are retro Sims 1 people animated by [VitaMoo](https://vitamoo.space), Don's open
 source TypeScript reimplementation of The Sims 1 character animation system.
 
-**Shared models, by `extends` and `library`.** The machine itself, its optional devices, round
+**Shared models, by mixins and `library`.** The machine itself, its optional devices, round
 vector displays (the 340, the Type 30), large raster framebuffers, keyboards, mice, light pens,
 joysticks, buttons and paddles are models in a shared library cartridge. A program's cartridge
 picks the ones its machine configuration has. A PDP-7 without a 340 has no round tube in the room.
@@ -324,7 +328,7 @@ make them:
 - a core image, saved from a running machine;
 - a decoded and commented source (§4).
 
-**Laying an egg** turns a working copy into a new cartridge: a child that `extends` the one it
+**Laying an egg** turns a working copy into a new cartridge: a child whose parent is the one it
 came from, carrying only what changed, with a name, a label and who made it. It lands as a
 visible object (the cabinet's menu, the rack), unhatched until it goes somewhere. This is
 Screen Angel's egg ([EGGS.yml](https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/EGGS.yml)), "a promise
@@ -390,7 +394,8 @@ and anything that claims to be a period program, which needs its provenance said
    boots the same, and its tests pass unchanged.
 2. **Build cache.** Content-addressed, IndexedDB and Node. Accept: a second boot of FORTH
    assembles nothing.
-3. **`extends`.** Accept: a one-file Forth cartridge boots with its words loaded.
+3. **`parents`**, composed by [@wwsff/flavors](../flavors/README.md). Accept: a one-file Forth
+   cartridge boots with its words loaded.
 4. **Working copies and eggs**, local only, with zip download and upload.
 5. **Live decode** on DUEL ([ROADMAP §15](ROADMAP.md#15-duel-from-tape-to-source)), in the page.
 6. **The cartridge check in CI.**

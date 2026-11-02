@@ -5,6 +5,7 @@
 # source: the library path, which carries the publisher, year and cracker in the old naming,
 # or an archive.org download URL.
 # note: what is on the disk, where it differs from its siblings.
+# profile: the microM8 machine the disk needs, when it is not the //e; the page restarts on it.
 
 disks:
   - file: little-computer-people/lcp-4am-side-a.dsk
@@ -187,6 +188,18 @@ disks:
     bytes: 143360
     sha1: 63392d078a159342b12667d0fdfea7a01a961978
     source: "disk images/operating systems/apple dos/3.3/apple dos 3.3 january 1983.dsk"
+  - file: forth/forth.po
+    bytes: 143360
+    sha1: 5f98080675a44ea7e7792651c5ee58f786fd0147
+    source: "Don Hopkins, characters/don-hopkins/artifacts/Apple2Forth/forth.dsk (ProDOS block order)"
+    profile: apple2-plus-videx
+    note: "Don's ProDOS Forth and H19 terminal (1986-88); boots into the terminal on the slot 4 serial card; button 1 with F enters Forth"
+  - file: forth/forth-ok.po
+    bytes: 143360
+    sha1: 272f5583a6d18aefb69f4ac55a07dbe9a47e3e2c
+    source: "forth/forth.po with `term` blanked out of block 4 of BLOCKS.4TH (src/apple2/prodos.ts)"
+    profile: apple2-plus-videx
+    note: "boots to the Forth prompt; `term` starts the terminal"
   - file: prodos/prodos-8-2.0.3.dsk
     bytes: 143360
     sha1: 9170bdfc4bbfb4102211e468931cf8ee25278ec8

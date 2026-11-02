@@ -2,15 +2,21 @@
 	// The microM8 Apple: its screen, its keyboard, and two drives. Click the screen to type;
 	// pick a disk or drop an image on the screen to put it in the chosen drive. Swapping a disk
 	// never restarts the Apple; Reboot boots drive 1. Pasted text is typed in.
-	// Game port: left and right Alt (Option) are Open and Solid Apple, pushbuttons 0 and 1. A
+	// Game port: left and right Alt (Option) are Open and Solid Apple, pushbuttons 0 and 1,
+	// held while other keys type as themselves: Option-F is F with the button down (Don's
+	// H19 terminal: button 0 is Meta, button 1 its commands, right Option-F enters Forth). A
 	// gamepad drives the paddles whenever one is connected; Joystick puts paddles 0 and 1 under
 	// the pointer, with its buttons as pushbuttons 0 and 1. The lamps are AN0-AN3.
 	// Nothing heavy loads with the page: the 41 MB module comes on the first click, boot or
 	// drop, and a disk only when it is picked.
-	import { FRAME_HEIGHT, FRAME_WIDTH } from '@wwsff/cabinet/microm8';
+	// A disk with a profile (Don's Forth: a II+ with a Videx and a serial card) needs that
+	// machine. Picked while another machine runs, it reloads the page as ?disk=<name>, and the
+	// page boots it on its own machine.
+	import { onMount } from 'svelte';
+	import { FRAME_HEIGHT, FRAME_WIDTH, VIDEX_HEIGHT, VIDEX_WIDTH } from '@wwsff/cabinet/microm8';
 	import { microM8 } from './microm8.svelte.js';
 
-	/** @type {{ disks?: { name: string, url: () => Promise<string> }[] }} */
+	/** @type {{ disks?: { name: string, profile?: string, url: () => Promise<string> }[] }} */
 	let { disks = [] } = $props();
 
 	/** @type {HTMLCanvasElement | undefined} */
@@ -36,29 +42,56 @@
 		microM8.start();
 	}
 
-	/** @param {HTMLCanvasElement} c */
-	function screen(c) {
-		canvas = c;
-		return microM8.attach(c);
+	/** @param {HTMLCanvasElement} el */
+	function apple(el) {
+		canvas = el;
+		return () => {
+			if (canvas === el) canvas = undefined;
+		};
 	}
 
-	/** @param {string} name @param {ArrayBuffer} data */
-	function insert(name, data) {
-		microM8.insert(name, new Uint8Array(data), drive);
+	/** @param {HTMLCanvasElement} el */
+	function videx(el) {
+		// Mounts after the Apple canvas, so `canvas` is already set.
+		if (!canvas) return;
+		return microM8.attach(canvas, el);
+	}
+
+	/** @param {string} name @param {ArrayBuffer} data @param {string} [profile] */
+	function insert(name, data, profile) {
+		microM8.insert(name, new Uint8Array(data), drive, profile);
 		engaged = true;
 		canvas?.focus();
 	}
 
+	/** @param {{ name: string, profile?: string, url: () => Promise<string> }} disk */
+	async function load(disk) {
+		const profile = disk.profile ?? '';
+		if (microM8.phase !== 'idle' && profile !== microM8.profile) {
+			location.assign(`?disk=${encodeURIComponent(disk.name)}`);
+			return;
+		}
+		const response = await fetch(await disk.url());
+		insert(disk.name, await response.arrayBuffer(), profile);
+	}
+
 	// The menu is an action, not a setting: it resets, and the keyboard goes to the Apple at
 	// once, so typing never reaches the menu's type-ahead and swaps the disk.
-	async function insertChoice() {
+	function insertChoice() {
 		const disk = disks.find((d) => d.name === choice);
 		choice = '';
 		canvas?.focus();
-		if (!disk) return;
-		const response = await fetch(await disk.url());
-		insert(disk.name, await response.arrayBuffer());
+		if (disk) load(disk);
 	}
+
+	onMount(() => {
+		const name = new URLSearchParams(location.search).get('disk');
+		const disk = name ? disks.find((d) => d.name === name) : undefined;
+		if (disk) {
+			drive = 0;
+			load(disk);
+		}
+	});
 
 	/** @param {File | undefined | null} file */
 	async function insertFile(file) {
@@ -141,31 +174,39 @@
 <svelte:window {onkeydown} {onkeyup} {onblur} {onpaste} {onpointerdown} />
 
 <div class="microm8" {@attach (el) => void (root = el)}>
-	<canvas
-		{@attach screen}
-		width={FRAME_WIDTH}
-		height={FRAME_HEIGHT}
-		tabindex="0"
-		class:dragging
-		class:engaged
-		aria-label="Apple II screen"
-		onpointerdown={(ev) => (engage(), stick(ev), stickButton(ev, true))}
-		onpointermove={stick}
-		onpointerup={(ev) => stickButton(ev, false)}
-		oncontextmenu={(ev) => microM8.mouseStick && ev.preventDefault()}
-		ondragover={(ev) => {
-			ev.preventDefault();
-			dragging = true;
-		}}
-		ondragleave={() => (dragging = false)}
-		{ondrop}
-	></canvas>
+	<div class={['glass', { dragging, engaged }]}>
+		<canvas
+			{@attach apple}
+			width={FRAME_WIDTH}
+			height={FRAME_HEIGHT}
+			tabindex="0"
+			class={{ covered: microM8.videxShowing }}
+			aria-label="Apple II screen"
+			onpointerdown={(ev) => (engage(), stick(ev), stickButton(ev, true))}
+			onpointermove={stick}
+			onpointerup={(ev) => stickButton(ev, false)}
+			oncontextmenu={(ev) => microM8.mouseStick && ev.preventDefault()}
+			ondragover={(ev) => {
+				ev.preventDefault();
+				dragging = true;
+			}}
+			ondragleave={() => (dragging = false)}
+			{ondrop}
+		></canvas>
+		<canvas
+			{@attach videx}
+			class={['videx', { off: !microM8.videxShowing }]}
+			width={VIDEX_WIDTH}
+			height={VIDEX_HEIGHT}
+			aria-label="Videx 80-column screen"
+		></canvas>
+	</div>
 
 	<div class="bar">
 		<span class="speeds" role="group" aria-label="Drive">
 			{#each [0, 1] as d (d)}
 				<button
-					class:on={drive === d}
+					class={{ on: drive === d }}
 					aria-pressed={drive === d}
 					title={microM8.drives[d] || 'empty'}
 					onclick={() => ((drive = d), canvas?.focus())}>drive {d + 1}</button
@@ -176,7 +217,7 @@
 			<select bind:value={choice} onchange={insertChoice} aria-label="Put a cabinet disk in the drive">
 				<option value="">Insert a disk…</option>
 				{#each disks as d (d.name)}
-					<option value={d.name}>{d.name}</option>
+					<option value={d.name}>{d.name}{d.profile ? ` (${d.profile})` : ''}</option>
 				{/each}
 			</select>
 		{/if}
@@ -187,26 +228,26 @@
 		<button onclick={() => (microM8.reboot(), canvas?.focus())} title="Power cycle and boot drive 1">Reboot</button>
 		<button onclick={() => (microM8.reset(), canvas?.focus())} title="Ctrl-Reset: stop the program, keep memory">Ctrl-Reset</button>
 		<button
-			class:on={microM8.caps}
+			class={{ on: microM8.caps }}
 			aria-pressed={microM8.caps}
 			title="Caps Lock: DOS 3.3 and Integer BASIC only know capitals"
 			onclick={() => ((microM8.caps = !microM8.caps), canvas?.focus())}>Caps Lock</button
 		>
 		<button
-			class:on={microM8.sound}
+			class={{ on: microM8.sound }}
 			aria-pressed={microM8.sound}
 			title="The Apple's speaker"
 			onclick={() => ((microM8.sound = !microM8.sound), microM8.listen(), canvas?.focus())}>Sound</button
 		>
 		<span class="speeds" role="group" aria-label="Speed">
 			{#each [1, 2, 4, 100] as w (w)}
-				<button class:on={microM8.warp === w} aria-pressed={microM8.warp === w} onclick={() => (microM8.speed(w), canvas?.focus())}
+				<button class={{ on: microM8.warp === w }} aria-pressed={microM8.warp === w} onclick={() => (microM8.speed(w), canvas?.focus())}
 					>{w === 100 ? 'max' : `${w}×`}</button
 				>
 			{/each}
 		</span>
 		<button
-			class:on={microM8.mouseStick}
+			class={{ on: microM8.mouseStick }}
 			aria-pressed={microM8.mouseStick}
 			title="Joystick: paddles 0 and 1 follow the pointer over the screen; left and right buttons are pushbuttons 0 and 1"
 			onclick={() => ((microM8.mouseStick = !microM8.mouseStick), canvas?.focus())}>Joystick</button
@@ -228,7 +269,7 @@
 			<span>{microM8.status.modes.join(' ')}</span>
 			<span class="lamps" title="Annunciators AN0-AN3">
 				{#each [0, 1, 2, 3] as n (n)}
-					<span class="lamp" class:lit={microM8.annunciators & (1 << n)}>{n}</span>
+					<span class={['lamp', { lit: !!(microM8.annunciators & (1 << n)) }]}>{n}</span>
 				{/each}
 			</span>
 			{#if microM8.gamepad}<span class="drive" title={microM8.gamepad}>pad</span>{/if}
@@ -246,17 +287,34 @@
 		gap: 0.5rem;
 		max-width: 1120px;
 	}
-	canvas {
+	.glass {
 		width: 100%;
 		aspect-ratio: 560 / 384;
-		image-rendering: pixelated;
+		position: relative;
 		background: #000;
 		outline: none;
 	}
-	canvas.engaged {
+	.glass canvas {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		image-rendering: pixelated;
+	}
+	.glass canvas.covered {
+		opacity: 0;
+	}
+	.glass canvas.videx {
+		z-index: 1;
+		pointer-events: none;
+	}
+	.glass canvas.off {
+		display: none;
+	}
+	.glass.engaged {
 		box-shadow: 0 0 0 2px #4a4;
 	}
-	canvas.dragging {
+	.glass.dragging {
 		box-shadow: 0 0 0 3px #48f;
 	}
 	.bar {

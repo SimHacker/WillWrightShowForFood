@@ -1,0 +1,25 @@
+# 👁️ @wwsff/flavors — directories that inherit from directories
+what: |
+  A flavor is a directory with a marker file (flavor.yml) and any other files. `parents`
+  lists what it is built on. Instantiating composes one value tree, every flavor's files, and
+  the comments that still apply. Baking renders templates, runs the recipe, and writes what the
+  recipe's output steps make.
+package: "@wwsff/flavors"
+class: Flavors
+entry: [instantiate, precedence, order, leaves, find, parentFlavors, image, build, bake]
+vocabulary: base flavor (first parent) · mixin (later parent, one capability) · vanilla · abstract · requires · combination · instance · daemons · recipe · output · bake / fry
+flavor_keys: parents (ordered references) · abstract (:abstract-flavor) · requires { flavors, keys } (:required-flavors, :required-instance-variables)
+parents: one key, an ordered list of references; names in files, Flavor objects in memory; a value can still hold a reference to any flavor
+precedence: C3 with the later parent winning; parents that disagree on an order are an error
+multiple_inheritance: harmless shape — a base plus mixins that own their own keys, one printable order, shared ancestors once, data only
+combination: RFC 7386 (maps merge, null deletes, arrays replace) + per-path replace | append | keyed
+passes: the flavor and its ancestors, then overlays (an id, or a map with parents)
+syntaxes: plugins; yaml, json, ogdl included; any in, any out
+files: keep their flavor's path in source and image; rules mark overlays (micropak/*), merged across syntaxes at the image root
+templates: plugins; LiquidJS default; acia.fs.liquid → acia.fs with values, flavor, instance, path
+recipe: steps keyed by id; before/after daemons; builders output, zip, unzip; no output step → the marker in YAML
+full_form: format "full" — values' history, setters, comments' authors, files' sources, as commented YAML; written only by an output step
+build_vs_run_time: bake writes plain files run time reads; run time never composes
+plan: DESIGN.md — tool builders (AppleCommander, Packer), step cache, inputs and fry, JSON Schema
+not: emulator-specific; the cabinet's cartridges are one user
+k_line: PARENTS · MIXIN · INSTANTIATE · RECIPE · OUTPUT · BAKE · WHY

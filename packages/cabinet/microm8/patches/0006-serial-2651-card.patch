@@ -1,0 +1,335 @@
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/card.go b/GoPath/src/paleotronic.com/core/hardware/apple2/card.go
+index bc12d2e..617df45 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/card.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/card.go
+@@ -238,13 +238,16 @@ func CardFactory(name string, mm *memory.MemoryMap, index int, acb func(b bool),
+ 		return NewIOCardUthernet(mm, index, ent)
+ 	case "videx":
+ 		return NewIOCardVidex(mm, index, ent)
++	case "serial2651":
++		return NewIOCardSerial2651(mm, index, ent)
+ 	}
+ 	return nil
+ }
+ 
+-// C8RAMCard is a card with RAM in its $C800 space. Reads and writes there,
+-// while the card owns the space, go to RedirectedRead and RedirectedWrite
+-// with the offset from $C800.
++// C8RAMCard is a card with RAM or registers in its $C800 space. Reads and
++// writes there, while the card owns the space, go to RedirectedRead and
++// RedirectedWrite with the offset from $C800. A card with no expansion ROM
++// owns the space the same way.
+ type C8RAMCard interface {
+ 	C8RAM(addr int) bool
+ }
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go b/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go
+index 134405f..b82984e 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go
+@@ -974,6 +974,19 @@ func (mr *Apple2IOChip) HasC8Rom(slot uint64) bool {
+ 	return v
+ }
+ 
++// ownsC8 is whether the slot's card takes the $C800 space when selected: it
++// has an expansion ROM, or RAM or registers there.
++func (mr *Apple2IOChip) ownsC8(slot uint64) bool {
++	if mr.HasC8Rom(slot) {
++		return true
++	}
++	if slot >= uint64(len(mr.cards)) {
++		return false
++	}
++	_, ok := mr.cards[slot].(C8RAMCard)
++	return ok
++}
++
+ func (mr *Apple2IOChip) HasCard(slot uint64) bool {
+ 	return mr.cards[int(slot)] != nil
+ }
+@@ -1037,11 +1050,11 @@ func (mr *Apple2IOChip) primeC8(addr int) {
+ 		if addr >= SlotStartAddress && addr <= SlotEndAddress {
+ 			slot := uint64((addr >> 8) & 0x7)
+ 			if slot != 3 {
+-				if mr.HasC8Rom(slot) {
++				if mr.ownsC8(slot) {
+ 					mr.SetRegIOSelect(mr.GetRegIOSelect() | 1<<slot)
+ 				}
+ 			} else {
+-				if mr.SW_SLOTC3ROM() && mr.HasC8Rom(slot) {
++				if mr.SW_SLOTC3ROM() && mr.ownsC8(slot) {
+ 					mr.SetRegIOSelect(mr.GetRegIOSelect() | 1<<slot)
+ 				} else if !mr.SW_SLOTC3ROM() {
+ 					mr.SetRegIOInternalROM(1)
+@@ -1060,11 +1073,13 @@ func (mr *Apple2IOChip) primeC8(addr int) {
+ 				}
+ 			}
+ 
+-			if mr.HasC8Rom(slot) && mr.GetRegPeripheralROMSlot() != slot {
++			if mr.ownsC8(slot) && mr.GetRegPeripheralROMSlot() != slot {
+ 				cpu := apple2helpers.GetCPU(mr.e)
+ 				log.Printf("Turning on C8 Device rom at %.4x", cpu.PC)
+ 				exprom := mbm.Get(fmt.Sprintf("slotexp%d.rom", slot))
+-				exprom.SetState("r")
++				if exprom != nil {
++					exprom.SetState("r")
++				}
+ 				for bank := 0xc8; bank < 0xd0; bank++ {
+ 					mbm.PageSetREAD(bank, exprom)
+ 				}
+@@ -1125,9 +1140,9 @@ func (mr *Apple2IOChip) releaseC8() {
+ 	}
+ }
+ 
+-// c8Card is the card whose screen RAM answers addr, while it owns $C800.
++// c8Card is the card whose RAM or registers answer addr, while it owns $C800.
+ func (mr *Apple2IOChip) c8Card(addr int) (SlotCard, bool) {
+-	if addr < 0xCC00 || addr >= 0xCE00 || mr.GetRegC8ROMType() != c8RomDevice {
++	if addr < 0xC800 || addr >= 0xCFFF || mr.GetRegC8ROMType() != c8RomDevice {
+ 		return nil, false
+ 	}
+ 	slot := mr.GetRegPeripheralROMSlot()
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/serial2651.go b/GoPath/src/paleotronic.com/core/hardware/apple2/serial2651.go
+new file mode 100644
+index 0000000..bda0e2c
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/serial2651.go
+@@ -0,0 +1,193 @@
++package apple2
++
++import (
++	"sync"
++
++	"paleotronic.com/core/hardware/apple2helpers"
++	"paleotronic.com/core/interfaces"
++	"paleotronic.com/core/memory"
++)
++
++// IOCardSerial2651 is a serial card with a Signetics 2651 communications
++// chip and no firmware, as Don Hopkins's Forth drives it from slot 4. Reading
++// $Cn00 selects the card's $C800 space; the chip's four registers are at
++// $CE00-$CE03, and $CE41 and $CE40 turn its interrupt on and off.
++//
++// The other end of the line is the host: Send queues bytes for the Apple to
++// receive, at the programmed baud rate, and Take returns what it sent.
++type IOCardSerial2651 struct {
++	IOCard
++	e interfaces.Interpretable
++
++	m       sync.Mutex
++	in      []byte // host to Apple, waiting for the receiver
++	out     []byte // Apple to host, waiting for Take
++	rx      byte   // receive holding register
++	rxReady bool
++	mode    [2]byte
++	modePtr int
++	command byte
++	irqOn   bool
++	wait    int // cycles until the receiver takes the next byte
++}
++
++const (
++	s2651Data    = 0
++	s2651Status  = 1
++	s2651Mode    = 2
++	s2651Command = 3
++
++	s2651TxReady = 0x01
++	s2651RxReady = 0x02
++	s2651TxEmpty = 0x04
++	s2651DCD     = 0x40
++	s2651DSR     = 0x80
++
++	s2651RxEnable = 0x04
++)
++
++// The low nibble of mode register 2 is the baud rate, by the codes in the
++// Forth's 300-BAUD .. 38400-BAUD words.
++var s2651Baud = map[byte]int{
++	0x6: 300, 0x8: 1200, 0xb: 2400, 0xc: 4800, 0xd: 9600, 0xe: 19200, 0xf: 38400,
++}
++
++func NewIOCardSerial2651(mm *memory.MemoryMap, index int, ent interfaces.Interpretable) *IOCardSerial2651 {
++	c := &IOCardSerial2651{e: ent}
++	c.Name = "IOCardSerial2651"
++	c.mm = mm
++	c.index = index
++	return c
++}
++
++func (c *IOCardSerial2651) Init(slot int) {
++	c.IOCard.Init(slot)
++	c.Reset()
++	c.e.SetCycleCounter(c)
++}
++
++func (c *IOCardSerial2651) Reset() {
++	c.m.Lock()
++	defer c.m.Unlock()
++	c.rxReady = false
++	c.modePtr = 0
++	c.command = 0
++	c.irqOn = false
++	c.wait = 0
++}
++
++func (c *IOCardSerial2651) ImA() string {
++	return "serial2651"
++}
++
++// C8RAM claims the chip's registers and the interrupt latch, $CE00-$CEFF.
++func (c *IOCardSerial2651) C8RAM(addr int) bool {
++	return addr >= 0xce00 && addr < 0xcf00
++}
++
++func (c *IOCardSerial2651) RedirectedRead(offset int) uint64 {
++	c.m.Lock()
++	defer c.m.Unlock()
++	if offset&0x40 != 0 {
++		c.irqOn = offset&1 != 0
++		return 0
++	}
++	switch offset & 3 {
++	case s2651Data:
++		c.rxReady = false
++		return uint64(c.rx)
++	case s2651Status:
++		s := byte(s2651TxReady | s2651TxEmpty | s2651DCD | s2651DSR)
++		if c.rxReady {
++			s |= s2651RxReady
++		}
++		return uint64(s)
++	case s2651Mode:
++		v := c.mode[c.modePtr]
++		c.modePtr ^= 1
++		return uint64(v)
++	default:
++		c.modePtr = 0
++		return uint64(c.command)
++	}
++}
++
++func (c *IOCardSerial2651) RedirectedWrite(offset int, value uint64) {
++	c.m.Lock()
++	defer c.m.Unlock()
++	v := byte(value)
++	if offset&0x40 != 0 {
++		c.irqOn = offset&1 != 0
++		return
++	}
++	switch offset & 3 {
++	case s2651Data:
++		c.out = append(c.out, v)
++	case s2651Mode:
++		c.mode[c.modePtr] = v
++		c.modePtr ^= 1
++	case s2651Command:
++		c.command = v
++	}
++}
++
++// cyclesPerByte is ten bits at the programmed rate.
++func (c *IOCardSerial2651) cyclesPerByte() int {
++	baud, ok := s2651Baud[c.mode[1]&0x0f]
++	if !ok {
++		baud = 9600
++	}
++	return 1020484 * 10 / baud
++}
++
++func (c *IOCardSerial2651) Increment(n int) {
++	c.m.Lock()
++	if c.wait > 0 {
++		c.wait -= n
++	}
++	if c.wait <= 0 && !c.rxReady && len(c.in) > 0 && c.command&s2651RxEnable != 0 {
++		c.rx, c.in = c.in[0], c.in[1:]
++		c.rxReady = true
++		c.wait = c.cyclesPerByte()
++	}
++	raise := c.rxReady && c.irqOn
++	c.m.Unlock()
++	if raise {
++		if cpu := apple2helpers.GetCPU(c.e); !cpu.PendingIRQ() {
++			cpu.PullIRQLine()
++		}
++	}
++}
++
++func (c *IOCardSerial2651) Decrement(n int)   {}
++func (c *IOCardSerial2651) AdjustClock(n int) {}
++
++func (c *IOCardSerial2651) Done(slot int) {
++	c.e.ClearCycleCounter(c)
++}
++
++// Send queues bytes for the Apple to receive.
++func (c *IOCardSerial2651) Send(b []byte) {
++	c.m.Lock()
++	defer c.m.Unlock()
++	c.in = append(c.in, b...)
++}
++
++// Take returns the bytes the Apple has sent since the last Take.
++func (c *IOCardSerial2651) Take() []byte {
++	c.m.Lock()
++	defer c.m.Unlock()
++	b := c.out
++	c.out = nil
++	return b
++}
++
++// Serial is the first 2651 serial card in the machine.
++func (mr *Apple2IOChip) Serial() *IOCardSerial2651 {
++	for _, card := range mr.cards {
++		if s, ok := card.(*IOCardSerial2651); ok {
++			return s
++		}
++	}
++	return nil
++}
+diff --git a/GoPath/src/paleotronic.com/octalyzer/assets/profile-extra/apple2-plus-videx.yaml b/GoPath/src/paleotronic.com/octalyzer/assets/profile-extra/apple2-plus-videx.yaml
+index aa411c5..f21c0cc 100644
+--- a/GoPath/src/paleotronic.com/octalyzer/assets/profile-extra/apple2-plus-videx.yaml
++++ b/GoPath/src/paleotronic.com/octalyzer/assets/profile-extra/apple2-plus-videx.yaml
+@@ -120,7 +120,7 @@ components:
+             base: 0x000
+             size: 0x400
+         4:
+-          driver: "mockingboard"    
++          driver: "serial2651"
+         # 5:
+         #   driver: "mousecard"
+         6:
+diff --git a/GoPath/src/paleotronic.com/wasm/main.go b/GoPath/src/paleotronic.com/wasm/main.go
+index 9094a5a..9f79652 100644
+--- a/GoPath/src/paleotronic.com/wasm/main.go
++++ b/GoPath/src/paleotronic.com/wasm/main.go
+@@ -303,6 +303,28 @@ func api() map[string]any {
+ 			js.CopyBytesToJS(out, b)
+ 			return out
+ 		}),
++		// serialSend(bytes) queues bytes for the 2651 serial card to receive and
++		// returns false when there is no card.
++		"serialSend": js.FuncOf(func(this js.Value, args []js.Value) any {
++			io := ioChip()
++			if io == nil || io.Serial() == nil {
++				return false
++			}
++			io.Serial().Send(bytesArg(args[0]))
++			return true
++		}),
++		// serialTake() is what the card has sent since the last call, or null when
++		// there is no card.
++		"serialTake": js.FuncOf(func(this js.Value, args []js.Value) any {
++			io := ioChip()
++			if io == nil || io.Serial() == nil {
++				return nil
++			}
++			b := io.Serial().Take()
++			out := js.Global().Get("Uint8Array").New(len(b))
++			js.CopyBytesToJS(out, b)
++			return out
++		}),
+ 		"videxWidth":  apple2.VidexWidth,
+ 		"videxHeight": apple2.VidexHeight,
+ 		// frame(dst) copies the newest frame into dst (a Uint8Array or Uint8ClampedArray of

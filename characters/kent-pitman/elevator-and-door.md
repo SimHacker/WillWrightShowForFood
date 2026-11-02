@@ -51,6 +51,27 @@ Don asked about the elevator and door
 
 The emulated TV-11 still has the pins. Nothing is wired to them yet.
 
+## The tenth floor
+
+The buttons those pins were wired to are a floor above the lab. The tenth floor
+of NE43 was the electromechanical level, and the elevators ran on relays.
+James Turner, on 4 April 2025, got up there in the summer of 1980 from a
+skylight at the top of the stairwell. He found the wires for the floors ESC E
+could call, and he and a friend learned to move the cars by triggering the
+relays themselves
+([PiDP-10 thread](https://groups.google.com/g/pidp-10/c/l_lq8Tk3bf8)).
+
+The installation is older than that visit. The TV-11 file is headed "ELEVATOR
+CODE 2/13/79 BY DANNY & HIC". Danny is Danny Hillis. Bill Silver, in the same
+thread, remembers Hillis saying he put dirt and grime on the new wires so they
+would look as though they had always been there. Silver calls it a
+fifty-year-old memory. Henry Minsky told Don on 31 October 2026 that Hillis
+and some others went up, put a relay in, and covered it with dust. Henry has
+not reviewed this sentence.
+[MIT News, 17 March 2004](https://news.mit.edu/2004/techsquare-0317), has the
+box the wiring was hidden in. The label read "Do Not Remove" and the signature
+was DH, Hillis's initials, which were also the elevator maintenance person's.
+
 ## The long way round: Lisp Machines
 
 Lisp Machines had no wire to the building. Terminal-D and Terminal-E ran
@@ -122,6 +143,28 @@ tells it, citing Steven Levy's *Hackers*. And
 gumby who remembers the 10/11 as "an arcane process I have thankfully
 forgotten", was the youngest urchin ever to get his own office. Today's urchin
 is tomorrow's door-buzzer.
+
+## The floors
+
+Which lab had which floor changed. *A User's Guide to the AI Lab* (AI Working
+Paper 335, 18 August 1991) says LCS had the first, second, third, and fifth,
+AI had the seventh, eighth, and ninth, and the fourth and sixth were mixed.
+The publications office was room 818, off the eighth-floor playroom. The
+seventh floor had a playroom of its own, where people ate lunch, a TV lounge,
+and the velo binder. Eric Swenson, in the PiDP-10 thread above, remembers the
+eighth floor as LCS in the years he worked there.
+
+Henry, on 31 October 2026, describes the eighth floor of the 1970s as the room
+Marvin furnished. Orange shag carpet, plants, a common space where people
+would hang out and talk. The seventh floor copied it, partly. He puts the
+espresso machine with people who had been in Europe and had one sent back, on
+the seventh floor, which he says was the AI Lab. He has not reviewed this.
+Yoshiaki Shirai, a visitor in 1971–72, describes that eighth-floor hall: a
+PDP-6, terminals, robots, somewhere to lie down, a piano, a ball for balancing
+on, a coffee server, and anyone could walk in. Minsky sometimes played.
+([*Jinkou Chinou* 31:3, May 2016](https://www.jstage.jst.go.jp/article/jjsai/31/3/31_439/_pdf).)
+Mark L. Miller, on 7 December 2013, remembers hearing him
+([MIT Alumni](https://alum.mit.edu/slice/great-music-awaits-mit-jazz-timeline)).
 
 ## Kent's part
 

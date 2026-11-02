@@ -17,6 +17,14 @@ test("microm8: keys map to Apple codes", () => {
 	assert.equal(appleKey({ key: "a" }, true), 0x41);
 	assert.equal(appleKey({ key: "1" }, true), 0x31);
 	assert.equal(appleKey({ key: "c", ctrlKey: true }, true), 3);
+	// Alt is a pushbutton held down; the key is the one under the finger, not Option's character.
+	assert.equal(appleKey({ key: "ƒ", code: "KeyF", altKey: true }), 0x66);
+	assert.equal(appleKey({ key: "Ï", code: "KeyF", altKey: true, shiftKey: true }), 0x46);
+	assert.equal(appleKey({ key: "Dead", code: "KeyE", altKey: true }, true), 0x45);
+	assert.equal(appleKey({ key: "¡", code: "Digit1", altKey: true, shiftKey: true }), 0x21);
+	assert.equal(appleKey({ key: "«", code: "Backslash", altKey: true }), 0x5c);
+	assert.equal(appleKey({ key: "x", code: "KeyX", altKey: true, ctrlKey: true }), 0x18);
+	assert.equal(appleKey({ key: "Enter", code: "Enter", altKey: true }), 13);
 });
 
 test("microm8: the text page reads in Apple row order, inverse and flashing as plain", () => {

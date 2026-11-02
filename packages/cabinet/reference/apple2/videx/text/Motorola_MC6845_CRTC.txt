@@ -1,0 +1,1735 @@
+®         MOTOROLA                                                           MC6845
+
+
+                     CRT CONTROLLER (CRTC)
+   The MC6845 CRT controller performs the interface between an MPU
+and a raster-scan CRT display. It is intended for use in MPU-based con-           MOS
+                                                                          IN-CHANNEL, SILICON-GATEI
+trollers for CRT terminals in stand-alone or cluster configurations.
+   The CRTC is optimized for the hardware/software balance required
+for maximum flexibility. All keyboard functions, reads, writes, cursor     CRT CONTROLLER
+movements, and editing are under processor control. The CRTC pro-               (CRTC)
+vides video timing and refresh memory addressing.
+•     Useful in Monochrome or Color CRT Applications
+• Applications Include "Glass-Teletype," Smart, Programmable, Intel-
+  ligent CRT Terminals; Video Games; Information Displays
+•     Alphanumeric, Semi-Graphic, and Full-Graphic Capability
+•     Fully Programmable Via Processor Data Bus. Timing May Be Gen-
+      erated for Almost Any Alphanumeric Screen Format, e.g., 80x 24,
+      72x64, 132 x20
+•     Single + 5 V Supply
+• M6800 Compatible Bus Interface
+• TTL-Compatible Inputs and Outputs
+• Start Address Register Provides Hardware Scroll Iby Page or
+  Characterl
+•     Programmable Cursor Register Allows Control of Cursor Format
+      and Blink Rate
+•     Light Pen Register
+•     Refresh IScreenl Memory May be Multiplexed Between the CRTC
+      and the MPU Thus Removing the Requirements for Line Buffers or
+      External DMA Devices
+•     Programmable Interlace or Non-Interlace Scan Modes
+•     14-Bit Refresh Address Allows Up to 16K of Refresh Memory for
+                                                                              PIN ASSIGNMENT
+      Use In Character or Semi-Graphic Displays
+• 5-Bit Row Address Allows Up to 32 Scan-Line Character Blocks                                 VS
+• By UtilIZing Both the Refresh Addresses and the Row Addresses,
+                                                                                               HS
+  a 512K Address Space is Available for Use in Graphics Systems
+                                                                                               RAO
+• Refresh Addresses are Provided DUring Retrace, Allowing the CRTC
+  to Provide Row Addresses to Refresh Dynamic RAMs                                             RA1
+• Pin Compatible with the MC6835                                                               RA2
+                                                                                               RA3
+                                                                                               RA4
+                        OROERING INFORMATION                                                   00
+                                                                                               01
+Package Type       Frequency IMHz}    Temperature      Order Number
+                                                                                               02
+    Ceramic             1.0           O°C to 70'C      MC6845l
+      l Suffix          1.0          -40'C to 85'C     MC6845Cl                                03
+                        1.5           O°C to 70'C      MC68A45l                                04
+                        15           -40'C to 85'C     MC68A45Cl
+                                                                                               05
+                        2.0           O°C to 70'C      MC68B45l
+    Cerdip              1.0           O'C to 70'C      MC6845S                                 06
+      S Suffix          1.0          -40'C to 85'C     MC6845CS                                07
+                        1.5           O°C to 70'C      MC68A45S
+                        1.5          -40'C to 85'C     MC68A45CS                               CS
+                        2.0           O°C to 70'C      MC68B45S                                RS
+    PlastiC             1.0           aoc to 70 0 e    MC6845P
+      P Suffix          1.0          -40'C to 85'C     MC6845CP
+                        15            O°C to 70'C      MC68A45P                                R/VV
+                        1.5          -40'C to 85'C     MC68A45CP                               ClK
+                        2.0           aoc to 70 0 e    MC68B45P
+MC6845
+
+
+                                         FIGURE 1 - TYPICAL CRT CONTROLLER APPLICATION
+
+
+
+
+                   r---~----------~----------------------------------~AB
+
+   L ____j---I---~~-I----------------~~---+DB Primary Bus
+
+
+                                                                                                 Cursor,
+                                                                                                 Display
+                                                                                                 Enable
+
+
+
+
+                                                   Row Addresses
+
+
+
+                               HS   VS
+
+
+
+
+ MAXIMUM RATINGS                                                                      The device contains circuitry to protect the
+                          Rating         Symbol            Value    Unit            inputs against damage due to high static
+  Supply Voltage                                    -0.3 to + 7.0     V             voltages or electric fields; however, it is ad-
+                                          VCC
+                                                                                    vised that normal precautions be taken to
+  Input Voltage                           Vm        -0.3 to + 7.0     V
+                                                                                    avoid application of any voltage higher than
+  Operating Temperature Range                         TL to TH                      maximum      rated   voltages   to     this       high-
+    MC6845, MC68A45, MC68B45               TA          o to 70       'c             impedance circuit. For proper operation it is
+    MC6845C, MC68A45C                                -40to +85                      recommended that Vin and Vout be con-
+  Storage Temperature Range                Tsta      -55to+150       'c             strained to the range VSS"5: (Vin or
+                                                                                    Vou tl :5VCC·
+ THERMAL CHARACTERISTICS
+                       Characteristic     Symbol           Value    Rating
+  Thermal Resistance
+    Plastic Package                                         100
+    Cerdip Package                         °JA              60
+                                                                    'c/w
+    Ceramic Package                                         60
+
+
+
+
+ RECOMMENDED OPERATING CONDITIONS
+                                         Characteristics                                 Symbol      Min    Typ     Max      Unit
+  Supply Voltage                                                                           VCC      4.75    5.0     5.25          V
+  Input Low Voltage                                                                        VIL      -0.3     -      0.8           V
+  Input High Voltage                                                                       VIH       2.0     -      VCC           V
+MC6845
+
+
+                                                        POWER CONSIDERATIONS
+
+   The average chip-junction temperature, T j, in 'c can be obtained from:
+        Tj=TA+IPD-OjAI                                                                                                     III
+          Where:
+                  T A'" Ambient Temperature, 'c
+                  OjA'" Package Thermal Resistance, junction-to-Ambient, 'c/W
+                 PO'" PINT+ PPORT
+                 PINT"'ICCxVCc, Watts - Chip Internal Power
+                 PPORT'" Port Power Dissipation, Watts - User Determined
+    For most applications PPORT<il PINT and can be neglected. PpORT may become significant If the device IS configured to
+ drive Darlington bases or sink LED loads.
+   An approximate relationship between PD and T j lif PPORT is neglectedl is:
+       PD = K + IT j + 273'CI                                                                                                  121
+   Solving equations 1 and 2 for K gives:
+        K = PD-IT A + 273°CI + OjA-PD 2                                                                                        131
+    Where K IS a constant pertaining to the particular part. K can be determined from equation 3 by measuring PD lat equilibriumi
+ for a known T A. Using this value of K the values of PD and T j can be obtained by solving equations 111 and 121 Iteratively for any
+ value of T A.
+
+
+
+
+  DC ELECTRICAL CHARACTERISTICS (VCC= 50 Vdc -+ 5% VSS = 0 T A =0 to 70°C unless otherwise noted see Figures 2-41
+                                              Characteristic                                        Symbol   Min    Typ   Max        Unit
+   Input High Voltage                                                                                VIH     2.0    -     VCC         V
+   Input Low Voltage                                                                                 VIL     -0.3   -     0.8         V
+   Input Leakage Current                                                                              I",     -     0.1   2.5        ~A
+   Hi-Z State Input Current IVCC=5.25 VI IVin=O.4 to 2.4 VI                                          ITSI    -10    -      10        ~A
+   Output High Voltage
+    ((Load = - 205 ~AI                                                                    00-07      VOH     2.4    3.0    -          V
+    ((Load = -100 ~AI                                                              Other Outputs             2.4    3.0    -
+
+
+   Output Low Voltage ((Load -1.6 mAl                                                                VOL      -     0.3   0.4         V
+   Internal Power uissipatlon (Measured at T A = QOC)                                                PINT     -     600   750        mW
+   Input Capacitance                                                                       00-07              -     -     12.5
+                                                                                                     C,n                             pF
+                                                                                       All Others             -     -      10
+   Output Capacitance                                                                 All Outputs    Cout     -     -     10         pF
+MC6845
+
+
+    BUS TIMING CHARACTERISTICS ISee Notes 1 and 2) IReferenee Figures 2 and 3)
+
+       Ident.                                                                                 MC6845     MC68A46       MC68846
+                                            Characteristic                          Symbol                                         Unit
+      Number
+                                                                                             Min   Max   Min     Max   Min   Max
+            1    Cycle Time                                                          teye    1.0   -     0.67     -    0.5   -     I's
+            2
+            3
+                 Pulse Width, E Low
+                  Pulse Width, E High
+                                                                                    PWEL
+                                                                                    PWEH
+                                                                                             430
+                                                                                             450
+                                                                                                   -
+                                                                                                   -
+                                                                                                         260.
+                                                                                                         280
+                                                                                                                 -
+                                                                                                                 -
+                                                                                                                       210
+                                                                                                                       220
+                                                                                                                             --    ns
+                                                                                                                                   ns
+            4    Clock Rise and Fall Time                                            tr,tf   -     25     -.     25    -     20    ns
+            9     Address Hold Time (RS)                                             tAH     10     -     10     -     10     7    ns
+         13
+         14
+                  RS Setup Time Before E
+                  R/IN and ~ Setup Time Before E
+                                                                                     tAS
+                                                                                     tr:s
+                                                                                             60
+                                                                                             60
+                                                                                                    -
+                                                                                                    -
+                                                                                                          60
+                                                                                                          60
+                                                                                                                 -
+                                                                                                                 -
+                                                                                                                       40
+                                                                                                                       40
+                                                                                                                             --    ns
+                                                                                                                                   ns
+                  R/Vi and ~ Hold Time
+                                                                         .'
+         15                                                                          tCH     10     -     10     -     10    -     ns
+         18       Read Data Hold Time                                               tDHR     20    50'    20     50"   20    50"   ns
+         21       Write Data Hold Time                                              tDHW     10     -     10     -     10    -     ns
+         30       Peripheral Output Data Delay Time                                 tDDR     -     290    -      160    0    150   ns
+         31       Peripheral Input Data Setup Time                                   tDSW    165     -    60      -    60    -     ns
+      *The data bus output buffers are no longer sourcing or Sinking current by tOHR maximum (high Impedancel.
+
+
+
+                                                       FIGURE 2 - MC6845 BUS TIMING
+
+
+
+
+        E
+                                                                              ~-------I<D'------=-~
+
+       RS
+
+
+
+
+ R/W,es
+
+                                                                              i+---{:30'J---+j
+
+ ReadData ______~~~--------------------~--~~~~~~~-------------1~----------------~4_--.p
+
+
+
+
+ Write Data ----~--~r----------------------------------------------------------1'-------.....,=_+--.::If"
+ NOTES:
+  1. Voltage levels shown are VL"O.4 V, VH:.:2.4 V, unless otherwise specified.
+  2. Measurement points shown are 0.8 V and 2.0 V" unless otherwise specified.
+
+
+
+                                                     FIGURE 3 -   BUS TIMING TEST LOAD
+
+
+                                                                     5:0 V
+
+
+
+                       Test Point 0---__.>----111----I0Il1---.... RL =2.4 kll       C = 130 pF for 00-07
+                                                                                      =30 pF for MAO-MA 13, RAO-RA4,
+                                                                                        DE. HS. VS, and CURSOR
+                                        C             R              MMD6150        R=11 kG for 00-07
+                                                                                      = 24 kG for All Other Outputs
+MC6845
+
+
+  CRTC TIMING CHARACTERISTICS I Reference Figures 4 and 51
+                                                 Characteristic                                              Symbol     Min   Max   Unit
+   Minimum Clock Pulse Width, Low                                                                            PWCl       150   ~
+
+                                                                                                                                     ns
+   Minimum Clock Pulse Width, High                                                                           PWCH       150   ~
+
+
+                                                                                                                                     ns
+   Clock Frequency                                                                                             fe       -     3.0   MHz
+   Rise and Fall Time for Clock Input                                                                        tcr. lef   -     20     ns
+   Memory Address Delay Time                                                                                 tMAD       -     160    ns
+   Raster Address Delay Time                                                                                 tRAD       ~
+
+
+                                                                                                                              160    ns
+   Display Timing Delay Time                                                                                  tDTD      -     250    ns
+   Horizontal Sync Delay Time                                                                                tHSD       -     250    ns
+   Vertical Sync Delay Time                                                                                  tVSD       ~
+
+
+
+
+                                                                                                                              250    ns
+   Cursor Display Timing Delay Time                                                                          tCDD       -     250    ns
+   Light Pen Strobe Minimum Pulse Width                                                                     PWlPH       80    -      ns
+   Light Pen Strobe Disable Time                                                                             tlPD1      -     80     ns
+                                                                                                             tlPD2      -     10     ns
+
+  NOTE: The light pun strobe must faU to low level before VS pulse rises.
+
+
+
+
+                                                    FIGURE 4 ~ CRTC TIMING CHART
+
+
+
+                                ClK
+
+
+
+
+                         MAO-MA13
+
+
+
+
+                           RAO-RA4
+
+
+
+
+                                 DE
+
+
+
+
+                                 HS
+
+
+
+
+                                 VS
+
+
+
+
+                          CURSOR
+
+
+
+
+  NOTE: Timing measurements are referenced to and from a low voltage ot 0.8 volts and a high voltaoe of 2.0 volts unless otherwise noted.
+MC6845
+
+
+                                      FIGURE 5 - CRTC-CLK, MAO-MA13, AND LPSTB TIMING DIAGRAM
+
+                    ~-----l/fc-----:~
+
+
+
+
+         ClK
+
+
+
+
+MAO-MA13
+
+
+
+
+       LPSTB
+
+
+
+NOTE Timing measurements are referenced to and
+     from a low voltage of 0.8 volts and a high
+         voltage of 2.0 volts. unless otherwise noted.
+                                                                        tLPD2   l   ~----+----PWlPH------~
+
+
+
+
+                                                                                 When  :~:~~TC     detects the rising edge of LPSTB In
+                                                                                 this period, the CRTC sets the Refresh Memory Ad-
+                                                                                 dress 'M + 2' into the LIGHT PEN REGISTER.
+                                                                                 tLPD1, tLPD2: Period of uncertainty for the Refresh
+                                                                                 Memory Address
+
+
+                                               CRTC INTERFACE SYSTEM DESCRIPTION
+    The CRT controller generates the signals necessary to in-                      Interlace scanning is used in broadcast TV and on data
+ terface a digital system to a raster scan CRT display. In this                 monitors where high density or high resolution data must be
+ type of display, an electron beam starts in the upper left                     displayed. Two fields, or vertical scans are made down the
+ hand corner, moves qUickly across the screen and returns.                      screen for each single picture or frame. The first field leven
+ This action is called a horrzontalscan. After each horizontal                  field I starts in the upper left hand corner; the second lodd
+ scan the beam is incrementally moved down in the vertical                      field I in the upper center. Both fields overlap as shown in
+ direction until it has reached the bottom. At this point one                   Figure 7, thus interlacing the two fields into a single frame.
+ frame has been displayed, as the beam has made many                               In order to display the characters on the CRT screen the
+ honzontal scans and one vertical scan.                                         frames must be continually repeated. The data to be
+   Two types of raster scanning are used in CRTs, interlace                     displayed IS stored in the refresh Iscreenl memory by the
+ and non-interlace, shown in Figures 6 and 7. Non-interlace                     MPU controlling the data processing system. The data is
+ scanning consists of one field per frame. The scan lines in                    usually written in ASCII code, so it cannot be directly
+ Figure 6 are shown as solid lines and the retrace patterns are                 displayed as characters. A character generator ROM IS
+ indicated by the dotted lines. Increasing the number of                        typically used to convert the ASCII codes into the "dot" pat-
+ frames per second will decrease the flicker. Ordinarily, either                tern for every character.
+ a 50 or 60 frame per second refresh rate is used to minimize                      The most common method of generating characters is to
+ beating between the CRT and the power line frequency. This                     create a matrix of dots "x" dots Icolumnsl wide and "y" dots
+ prevents the displayed data from weaving.                                      (rowsl high. Each character is created by selectively filling in
+
+       FIGURE 6 -   RASTER SCAN SYSTEM (NON-INTERLACEI                                FIGURE 7 -   RASTER SCAN SYSTEM (lNTERLACEI
+
+
+
+
+                                        Retrace            Vertical
+                                                           Scan
+                                                           Period
+
+
+                                                           vertl:Jcal
+                                                           Retrace
+                                                           Period
+
+
+   I-==========N~
+                                      Ho~izQntal Retrace
+                                                                                                ---Even Number Field (First)
+   I      Horizontal Scan
+          Penod                       Period
+                                                                                                - - - - - Odd Number Field (Second}
+MC6845
+
+
+ the dots. As "x" and "y" get larger a more detailed character            The processor communicates with the CRTC through an
+ may be created. Two common dot matrices are 5 x 7 and                  8-bit data bus by reading or writing into the 19 registers.
+ 7 x 9. Many variations of these standards will allow Chinese,            The refresh memory address is multiplexed between the
+ Japanese, or Arabic letters instead of English. Since                  processor and the CRTC. Data appears on a secondary bus
+ characters require some space between them, a character                separate from the processor's bus. The secondary data bus
+ block larger than the character is typically used, as shown in         concept in no way precludes using the refresh RAM for other
+ Figure 8. The figure also shows the corresponding timing               purposes. It looks like any other RAM to the processor. A
+ and levels for a video signal that would generate the                  number of approaches are possible for solving contentions
+ characters.                                                            for the refresh memory:
+
+                                                                          1. Processor always gets priority. (Generally, "hash" oc-
+    Referring to Figure 1, the CRT controller generates the                  curs as MPU and CRTC clocks are not synchronized.1
+ refresh addresses (MAO-MA13I, row addresses (RAO-RA4I,
+ and the video timing (vertical sync - VS, horizontal sync -              2. Processor gets priority access anytime, but can be
+ HS, and display enable - DEI. Other functions include an                    synchronized by an interrupt to perform accesses only
+ internal cursor register which generates a cursor output                    during horizontal and vertical retrace times.
+ when its contents compare to the current refresh address. A
+ light pen strobe input signal allows capture of the refresh ad-          3. Synchronize the processor with memory wait cycles
+ dress in an internal light pen register.                                    (statesl.
+
+                                                                          4. Synchronize the processor to the .character rate as
+    All timing in the CRTC is derived from the ClK input. In                 shown in Figure 9. The M6800 processor family works
+ alphanumeric terminals, this signal is the character rate. The              works very well in this configuration as constant cycle
+ video rate or "dot" clock is externally divided by high-speed               lengths are present. This method provides no
+ logic (TTL) to generate the ClK input. The high-speed logic                 overhead for the processor as there is never a conten-
+ must also generate the timing and control signals necessary                 tion for a memory access. All accesses are
+ for the shift register, latch, and MUX control.                             transparent.
+
+
+
+
+                                FIGURE 8 -   CHARACTER DISPLAY ON THE SCREEN AND VIDEO SIGNAL
+
+                                     One Character
+                                         Clock
+                                 ~
+                                         4       6   8
+
+
+
+
+                                                                                                                       Character
+                      4
+                                                                                                                   }    Display
+                      &
+         One Line
+         14 Scan
+
+
+
+
+                                                                                                                   }"""~.
+          Lines       8
+
+                      lQ
+
+
+                      12
+
+                      14
+
+
+
+
+         First Scan Line                IJ~ ~~             U       IL
+      Second Scan Line
+                                     Ir~ ~~ ~l ~~n
+                                          ~~         ~~
+MC6845
+
+
+                                              FIGURE 9 - TRANSPARENT REFRESH MEMORY
+                                            CONFIGURATION TIMING USING M6800 FAMILY MPU
+
+
+
+
+                                                    I
+                                                    I                                         I
+                                                    I                                         I
+                                                    I'*--tcyc= nxtc or tc/m~
+                                                    I                       I
+
+                                                 Where: m, n are integers; tc is character period
+
+
+
+                                                            PIN DESCRIPTION
+
+PROCESSOR INTERFACE                                                            Vertical Sync (VSI and Horizontal Sync (HS) - These
+   The CRTC interfaces to a processor bus on the bidirec-                    TTL-compatible outputs are active high signals which drive
+tional data bus 100-07) using CS, RS, E, and Rlw for con-                    the monitor directly or are fed to the video processing cir-
+trol signals.                          .      .                              cuitry to generate a composite video signal. The VS signal
+                                                                             determines the vertical position of the displayed text while
+   Data Bus (DO-D7) - The bidirectional data lines 100-07)                   the HS signal determines the horizontal position of the
+allow data transfers between the internal CRTC register file                 displayed text.
+and the processor. Data bus output drivers are in the high-
+impedance state until the processqr performs a CRTC read                        Display Enable IDE) - This TTL-compatible output is an
+operation.                                                                    active high signal which indicates the CRTC is providing ad-
+                                                                              dressing in the active display area.
+  Enable (E) - The enable Signal is a high-impedance
+TTUMOS compatible input which enables the data bus in-                        REFRESH MEMORY/CHARACTER GENERATOR
+put/ output buffers and clocks data to and from the CRTC.                     ADDRESSING
+This Signal is usually derived from the processor clock. The                     The CRTC provides memory addresses IMAO-MA13) to
+high-ta-Iow transition is the active edge.                                    scan the refresh RAM. Row addresses IRAO-RA41 are also
+                                                                              provided for use with character generator ROMs. In a
+   Chip Select (CS) '-' The CS line is a high-impedance                       graphics system, both the memory addresses and the row
+TTUMOS compatible input which selects the CRTC, when                          addresses would be used to scan the refresh RAM. Both the
+low, to read or write to the internal register file. This signal              memory addresses and the row addresses continue to run
+should only be active when there is a valid stable address be-                during vertical retrace thus allowing the CRTC to provide the
+ing decoded from the processor.                                               refresh addresses required to refresh dynamic RAMs.
+
+   Register Select (RS) - The RS line is. a high-impedance                       Refresh Memory Addresses (MAO-MA 13) - These 14 out-
+TTU MaS compatible input which selects either the address                     puts are used .to refresh the CRT screen with pages of data
+register IRS = Q) or one of the data register IRS = 11 or the                 located within 1) 16K block of refresh memory. These outputs
+internal register file.                                                       are capable of driving one standard TTL load and 30 pF.
+
+                                            is
+    Read/Write (R/W) - The R/W line a high-impedance                             Row Addresses (RAO-RA4) - These five outputs from the
+ TTU MaS compatible input which determines whether the                        internal row address counter are used to address the
+'internal register file gets written or read. A write is defined as           character generator ROM. These outputs are cllpable of driv-
+ a low level. .                                                               ing one standard TTL load and 30 pF.
+
+CRT CONTROL
+  The CRTC' prov;'des horizontal sync IHS), vertical -sync                   OTHER PINS
+IVSI, and display enablelDEI signals.                                           Cursor - This TTL-compatible output indicates a valid
+                                                                             cursor address to external video processing logic. It is an ac-
+                            NOTE                                             tive high signal.
+       Care should be e~ercise.d when. interfacing to CRT
+    monitors, as many monitors claiming to .be "TTL com-                        Clock :(CLK) - The ClK isaTTUMOS-compatible input
+    patible" have transistor input circuits which require                    used to synchronize all CRT' functions except for the pro-
+    the CRTC or TTL devices bufferin(j signals from the                      cessor interface. An external dot count\3r is used to derive
+    CRTCivideo circ'uits to exceed the maximum-rated                         this signal which is usually the character rate in an
+    drive currents.                                                          alphanumeric CRT. The active transition is high-to-Iow.
+MC6845
+
+
+
+    Light Pen Strobe (LPSTB) - A low-to-high transition on           lal The RESET input and the lPSTB input are encoded as
+ this high-impedance TTL! MaS-compatible input latches the               shown in Table 1.
+ current Refresh Address In the light pen register. The latch-
+ Ing of the refresh address IS Internally synchronized to the
+                                                                                TABLE 1 - CRTC OPERATING MODE
+ character clock IClKI.
+   Vee and VSS -       These inputs supply + 5 Vdc ± 5% to                     RESET         LPSTB      Operating Mode
+ the CRTC.                                                                                        0
+                                                                                  0                           Reset
+    RESET - The RESET input IS used to reset the CRTC. A                          0               1        Test Mode
+ low level on the RESET input forces the CRTC into the                            1               0       Normal Mode
+ following state:                                                                 1               1       Normal Mode
+   lal All counters In the CRTC are cleared and the deVice                    The test mode configures the memory ad-
+       stops the display operation.                                         dresses as two Independent 7-blt counters to
+   Ibl All the outputs are driven low.                                      minimiZe test time.
+
+                           NOTE
+     The horizontal sync output is not defined until after           Ibl After RESET has gone low and (LPSTB=OI, MAO-
+     R2 is programmed.                                                   MA13 and RAO-RA4 will be driven Iowan the falling
+                                                                         edge of ClK. RESET must remain low for at least one
+   Icl The control registers of the CRTC are not affected and            cycle of the character clock (ClKI.
+       remain unchanged.                                             Icl The CRTC resumes the display operation immediately
+   Functionality of RES ET differs from that of other M6800              after the release of RESET. DE and the CURSOR are
+ parts in the following functions:                                       not active until after the first frame has been displayed.
+
+                                                        CRTC DESCRIPTION
+
+    The CRTC consists of programmable horizontal and ver-          register. The contents of the light pen register are subse-
+ tical timing generators, programmable linear address              quently read by the processor.
+ register, programmable cursor logic, light pen capture               Internal CRTC registers are programmed by the processor
+ register, and control cirCUitry for interface to a processor      through the data bus, 00-07, and the control signals -
+ bus. A block diagram of the CRTC is shown in Figure 10.           Riw, CS, RS, and E.
+    All CRTC timing is derived from the ClK, usually the out-
+ put of an external dot rate counter. Coincidence ICOI cir-
+ cuits continuously compare counter contents to the con-                       REGISTER FILE DESCRIPTIONS
+ tents of the programmable register file, RO-R17. For horizon-
+ tal timing generation, comparisons result in: 11 horizontal         The nineteen registers of the CRTC may be accessed
+ sync pulse IHSI of a frequency, position, and width deter-        through the data bus. Only two memory locations are re-
+ mined by the registers; 21 horizontal display signal of a fre-    quired as one location is used as a pointer to address one of
+ quency, position, and duration determined by the registers.       the remaining eighteen registers. These eighteen registers
+    The hOrizontal counter produces H clock which drives the       control horizontal timing, vertical timing, interlace operation,
+ scan line counter and vertical control. The contents of the       row address operation, and define the cursor, cursor ad-
+ raster counter are continuously compared to the maximum           dress, start address, and light pen register. The register ad-
+ scan line address register. A COincidence resets the raster       dresses and sizes are shown In Table 2.
+ counter and clocks the vertical counter.
+    Comparisons of vertical counter contents and vertical          ADDRESS REGISTER
+ registers result in: 1I vertical sync pulse IVSI of a frequency
+                                                                     The address register is a 5-bit write-only register used as
+ and position determined by the registers; 21 vertical display
+                                                                   an "indirect"or "pointer" register. It contains the address of
+ of a frequency and position determined by the registers.
+                                                                   one of the other eighteen registers. When both RSand CS
+    The vertical control logic has other functions.                are low, the address register is selected. When CS is low and
+    1. Generate row selects, RAO-RA4, from the raster count        RS is high, the register pointed to by the address register is
+       for the corresponding interlace or non-Interlace            selected.
+       modes.
+     2. Extend the number of scan lines in the vertical total by   TIMING REGISTERS RO-R9
+        the amount programmed in the vertical total adjust            Figure 11 shows the visible display area of a typical CRT
+        register.                                                  monitor giving the point of reference for horizontal registers
+    The linear address generator is driven by the ClK and          as the left-most displayed character position. Horizontal
+ locates the relative positions of characters in memory with       registers are programmed in character clock time units with
+ their positions on the screen. Fourteen lines, MAO-MA 13,         respect to the reference as shown in Figure 12. The point of
+ are available for addressing up to four pages of 4K               reference for the vertical registers is the top character posi-
+ characters, eight pages of 2K characters, etc. Using the start    tion displayed. Vertical registers are programmed in scan line
+ address register, hardware scrolling through 16K characters       times with respect to the reference as shown in Figure 13.
+ is possible. The linear address generator repeats the same se-
+ quence of addresses for each scan line of a character row.           Horizontal Total Register (RO) - ThiS 8-bit wrrte-only
+    The cursor logic determines the cursor location, size, and     register determines the horizontal sync IHSI frequency by
+ blink rate on the screen. All are programmable.                   defining the HS period in character times. It is the total of the
+    The light pen strobe going high causes the current con-        displayed characters plus the non-displayed character times
+ tents of the address counter to be latched in the light pen       Iretracel minus one.
+MC6845
+
+
+                              FIGURE 10 - CRTC BLOCK DIAGRAM
+
+                    Vee GND                        R/W CS RS   'R'ESTI   DO- D7
+
+
+
+
+   CLK--r-----.-~~
+
+
+
+                                                                                     DE
+
+
+
+
+                                          -.~--~----------------+4_+~----~~HS
+
+
+
+
+         H----t-1~
+         HH--t-1~
+
+
+
+
+         H-+-t-I--+l~
+
+
+
+
+             ~::::::~::::~::::~>(::~~:J~--------------~--;-t-------+-~CURSOR
+
+
+
+
+                                                                    ~-----------t---LPSTB
+MC6845
+
+
+                                                               TABLE 2 - CRTC INTERNAL REGISTER ASSIGNMENT
+                Address Register
+ cs RS                                            Register
+                                                                     Register File
+                                                                                              Program
+                                                                                                               Read   Write
+                                                                                                                                                           Number of Bits
+
+  ,     'X
+              4
+              X
+                  3
+                  X
+                       2
+                       X   X
+                            1    0
+                                 X
+                                                     #
+                                                     X                      -
+                                                                                                Unit
+                                                                                                  -             -      -
+                                                                                                                                   7           6          5          4          3          2          1          0
+                                                                                                                               ........... .......... .......... ........... .......... .......... .......... ..........
+  0
+  0
+         0
+         1
+              X
+              0
+                   X
+                   0
+                              X
+                              0
+                                       X
+                                       0
+                                           X
+                                           0
+                                                    AR
+                                                    RO
+                                                             Address Register
+                                                             Horizontal Tatal
+                                                                                                  -
+                                                                                                Char.
+                                                                                                               No
+                                                                                                               No
+                                                                                                                      Yes
+                                                                                                                      Yes
+                                                                                                                               ...........   ""'- ""'-
+  0      1    0    0          0        0   1        Rl       Ho.rizontal Displayed              Char.          No     Yes
+  0      1    0    0          0        1   0        R2       H. Sync Position                   Char.          No     Yes
+  0      1    0    0          0        1   1        R3       Sync Width                           -            No     Yes     ~              ""'- ""'- ~ H H H H
+  0      1    0    0          1        0   0        R4       Vertical Total                  Char. Row         No     Yes       ...........
+  0      1    0    0          1        0   1        R5       V. Total Adjust                  Scan Line        No     Yes      ............ "'-.. 1""'-
+  0      1    0    0          1        1   0        R6       Vertical Displayed              Char. Row         No     Yes     ............
+  0      1    0    0          1        1   1        R7       V. Sync Position                Char. Row         No     Yes     ............
+  0      1    0    1          0        0   0        R8       Interlace Mode and Skew           Note 1          No     Yes
+                                                                                                                              ~
+                                                                                                                               ........... "'-.. "-.. "'-..                  ""'- ~ I                              I
+  0
+  0
+         1
+         1
+              0
+              0
+                   1
+                   1
+                              0
+                              0
+                                       0
+                                       1
+                                           1
+                                           0
+                                                    R9
+                                                    RIO
+                                                             Max Scan Line Address
+                                                             Cursor Start
+                                                                                              Scan Line
+                                                                                              Scan Line
+                                                                                                               No
+                                                                                                               No
+                                                                                                                      Yes
+                                                                                                                      Yes     ...........
+                                                                                                                                             ""'- 1"'-..
+                                                                                                                                               B    P                                          INote 21
+                                                                                                                                             "'-.. ..........
+                                                                                                                              "
+  0      1    0    1          0        1   1        Rl1      Cursor End                       Scan Line        No     Yes
+  0      1    0    1          1        0   0        R12      Start Address IHI                    -            No     Yes          0           0
+  0      1    0    1          1        0   1        R13      Start Address III                    -            No     Yes
+  0      1    0    1          1        1   0        R14      Cursor IHI                           -            Yes    Yes          0           0
+  0      1    0    1          1        1   1        R15      Cursor ILl                           -            Yes    Yes
+  0      1    1    0          0        0   0        R16      Light Pen IHI                        -            Yes     No          0           0
+  0      1    1    0          0        0   1        R17      Ught Pen III                         -            Yes     No
+
+NOTES:
+ 1. The interlace is shown in Table 3.
+ 2. Bit 5 of the cursor start rast,er register is used for blink 'period control, and bit 6 is used to select blink or no-blink.
+
+
+
+                                                     FIGURE 11 - ILLUSTRATION OF THE CRT SCREEN FORMAT
+                                                  I'"I---------Number of Horizontal Total Char. INht+ 1 1 - - - - - - - - - - - .
+
+
+
+
+                        ~
+                                  l.. ~ {'"I-----Number of Horizontal Displayed Char. INhdl------,
+
+                                                    A     B      C                                                                                                                           }une INSLI
+
+
+
+                                  >
+                                  ~
+                                            "
+                                           :.:J
+
+                       ;:::       ~
+                                   .        "
+                                            ~
+                       +          u        '"
+                       :;         -0        E
+                       z          ~         ::J
+                       --         co       .~
+                        co        ~         ctI
+                       6          (5       ~
+                       5o         13
+                                  .~
+
+
+                                  -
+                       f-
+                       13         >                                                   Display Period
+                       .~         o
+                       >          ~
+                       '0         §
+                        Ii;       z
+
+                       iL
+                       C
+       Total Scan Une Adjust INadjl-
+      iNOTE 1: Timing values are described in Table 5,
+                                                                                     Vertical Retrace Period
+MC6845
+
+
+    Horizontal Displayed Register (Rl) - This 8-bit write-only           Interlace Mode and Skew Register IRB) - The MC6845
+ register determines the number of displayed characters per            only allows control of the interlace modes as programmed by
+ line. Any 8-bit number may be programmed as long as the               the low order two bits of this write-only register. Table 3
+ contents of RO are greater than the contents of R1.                   shows the interlace modes available to the user. These
+                                                                       modes are selected using the two low order bits of this 6-bit
+   Horizontal Sync Position Register (R2) - This 8-bit write-          write-only register.
+ only register controls the H S position. The horizontal sync
+ position defines the horizontal sync delay (front porch I and
+ the horizontal scan delay (back porchl. When the program-
+ med value of this register is increased, the display on the                         TABLE 3 -    INTERLACE MODE REGISTER
+ CRT screen IS shifted to the left.. When the programmed
+ value is decreased the display is shifted to the right. Any
+ 8-bit number may be programmed as long as the sum of the                     Bit'        Bit 0                  Mode
+ contents of R2 and R3 are less than the contents of RO. R2
+ must be greater than R1.
+                                                                               0
+                                                                                ,           0
+                                                                                            0
+                                                                                                   Normal Sync Mode (Non-Interlace)
+
+
+   Sync Width Register (R3) - This 8-bit write-only register
+ determines the width of the horizontal sync IHSI pulse. The
+                                                                                0
+                                                                                1           ,
+                                                                                            1      Interlace Sync Mode
+                                                                                                   Interlace Sync and Video Mode
+
+ vertical sync pulse width is fixed at 16 scan-line times.
+   The HS pulse width may be programmed from 1-to-15
+ character clock periods thus "lIowing compatibility with the
+ HS pulse width specifications of many different monitors. If             In the normal sync mode Inon,interlacel only one field is
+ zero is written into this register then no HS is provided             available as shown in Figures 6 and 14a. Each scan line is
+                                                                       refreshed at the VS frequency le.g., 50 or 60 Hzl.
+    Horizontal Timing Summary (Figure 12) - The difference                Two interlace modes are available as shown in Figures 7,
+ between RO and R1 is the horizontal blanking interval. This           14b, and 14c. The frame time is divided between even and
+ interval In the horizontal scan period allows the beam to             odd alternating fields. The horizontal and vertical timing rela-
+ return I retrace I to the left side of the screen. The retrace time   tionship IVS delayed by one half scan line timel results in the
+ is determined by the monitor's horizontal scan components.            displacement of scan lines in the odd field with respect to the
+ Retrace time is less than the horizontal blanking interval. A         even field.
+ good rule of thumb is to make the honzontal blanking about               In the interlace sync mode the same information is painted
+ 20% of the total horizontal scanning period for a CRT. In In-         in both fields as shown in Figure 14b. This is a useful mode
+ expensive TV receivers, the beam overscans the display                for filling in a character to enhance readability.
+ screen so that aging of parts does not result in underscan-              In the interlace sync and video mode, shown in Figure 14c,
+ ning. Because of this, the retrace time should be about one           alternating lines of the character are displayed in the even
+ third the horizontal scanning period. The horizontal sync             field and the odd field. This effectively doubles the given
+ delay, HS pulse width, and horizontal scan delay are typically        bandwidth of the CRT monitor.
+ programmed with a 1:2:2 ratio.                                           Care must be taken when using either interlace mode to
+                                                                       avoid an apparent flicker effect. This flicker effect is due to
+    Vertical Total Register (R4) and Vertical Total Adjust             the doubling of the refresh time for all scan lines since each
+ Register (R5) - The frequency of VS is determined by both             field is displayed alternately and may be minimized with pro-
+ R4 and R5. The calculated number of character row times is            per monitor deSign le.g., longer persistence phosphorsl.
+ usually an integer plus a fraction to get exactly a 50 or 60 Hz          In addition, there are restrictions on the programming of
+ vertical refresh rate. The integer number of character row            the CRTC registers for interlace operation:
+ times minus one is programmed in the 7-bit write-only ver-
+ tical total register IR41. The fraction of character line times IS      1. The horizontal total register value, RO, must be odd
+ programmed in the 5-bit write-only vertical total adjust                   {i. 8. an even number of character times}.
+                                                                                 I
+
+
+
+ register IR51 as the number of scan lines required.                     2. For interlace sync and video mode only, the maximum
+                                                                            scan-line address, R9, must be odd ii.e., an even
+   Vertical Displayed Register (R6) - This 7-bit write-only                 number of scan linesl.
+ register specifies the number of displayed character rows on            3. For interlace sync and video mode only, the number
+ the CRT screen, and IS programmed in character row times.·                 I Nvdl programmed into the vertical display register I R61
+ Any number smaller than the contents of R4 may be pro-                     must be one half the actual number required. The even
+ grammed into R6.                                                           numbered scan lines are displayed in the even field and
+                                                                            the odd numbered scan lines are displayed in the odd
+    Vertical Sync Position (R7) - This 7-bit write-only register            field.
+ controls the position of vertical sync with respect to the              4. For interlace sync and video mode only, the cursor start
+ reference. It is programmed in character row times. When                   register IR101 and cursor end register IR111 must both
+ the programmed value of this register is increased, the                    be even or both odd depending on which field the cur-
+ display position of the CRT screen is shifted up. When the                 sor is to be displayed in. A full block cursor will be
+ programmed value is decreased the display position is                      displayed in both the even and the odd field when the
+ shifted down. Any number equal to or less than the vertical                cursor end registerlR111 is programmed to a value
+ total I R41 and greater than or equal to the vertical displayed            greater than theValue in the maximum scan line address
+ IR61 may be used.                                                          register I R91.
+                                               FIGURE 12 - CRTC HORIZONTAL TIMING
+
+
+                                                           HOrizontal Total (ROl
+
+~
+   -.----------------------------------ts=(Nht+lxtc------------------------------------~----~--~:~:I
+               ~orizontal
+                   Display (R 1)Nhd x         tc------~.*II(-------------------Horizontal Retrace-----------------------...,-~.
+        tc
+
+                                       I       I   ~~~'l-""~
+                                       I       I       I       I       I       I      I       I       I       I      I       I       I       I       I    I
+                                      ~                                              ~NhSP-1NhSP,L                   ~
+*==~~=:Jt:=*=~:::Jr_v~~
+                                       I       I       I       I       I
+                                                                              * ~. ,  I       I       I
+                                                                                                             iii
+                                                                                                              I
+                                                                                                                     ~
+                                                                                                                     I       I       I       I
+                                                                                                                                                    ,LNht l
+                                                                                                                                                    ,
+                                                                                                                                                    I
+                                                                                                                                                         ~
+                                                                                                                                                          I
+
+C::t:::t:::t:=t:=jl=::tl~ lNhd- 11 Nhd I
+                                               I               I
+                                                                                      I ~ rhs,-thsP I
+                                                                                      I
+                                                                                                                     I~ j
+                                                                                                                     I
+                                                                                                                                     I~ I
+                                                                                                                                                    I Nht
+                                                                                                                                                    I     I
+                                                               I     ..                               IHS Pulse Width (R3) I                              I
+                                                               I
+                                                               I
+                                                                    Honzontal Sync Position IR21
+                                                                      Front Porch (Sync Delay)
+                                                                                                      I&--N
+                                                                                                      ,-
+                                                                                                               xt ~
+                                                                                                            hsw c        ":..ri Back P",h (Scan Delay) II
+~---------------~~~--------~                                                                                                                              I
+
+~============~~~~.I~------~.-------~~~--~~--~
+* Timing is shown for first displayed scan row only. See chart in Figure 15 for other rows. The initial MA is determined by the contents of start
+ address register. R12/R13. Timing is shown for R12/R13=O.
+NOTE: Timing values are described in Table 5.
+                                                                                                                                        FIGURE 13 -                           CRTC VERTICAL TIMING
+
+                       ,                                                                                                                                              ,
+                                                                                           _I"                                                                                                                                   _,"
+                                                                                                                                                                                                           I I , I I
+                                                                                               I
+
+
+
+
+                                                                                                                                    INvsd -j" I
+  Non-Interlace                                                                                                                                                                                                                   1
+         Mode          111(                      Frame'                                                                   Frame2                                                               Frame 3                                                     Frame4
+                       I                                                                                                                                                                                                          1
+   Line Number
+      isVSYNC          I I    0       1   I
+                                                         16-t     -.sIH!.-
+                                                                        I
+                                                                        N"p
+                                                                                               I I I
+                                                                                               I
+                                                                                                   0       1                                                                  0   1
+                                                                                                                                                                                                            1
+                                                                                                                                                                                                                Nvsp                       0       1
+
+
+                                                                                                                                                                                                                                                                              __~:___
+                                                             ,I
+                                                                                               i                                        h                                                                  n              ~-+
+                                                                                                                                                                                                                                  1
+                                                                                                                                                                                                                            1 __________~tl~
+                                                                                                                                                                                                                            I
+                       I
+                       1
+               '''III(l_------------Framel-------------l_~:.l------------Frame2--------------i_~i
+       Int~~~: I;"~__- - - - E v e n Field------J_--I,.."f------Odd Field------J.-:;             :
+  line Number
+                                                                                                                                                Nvsp                                                                      Nvsp                                                Nvsp
+     is VSYNC
+                                                                                                       L                       16·tsl~                      ...-                                         Y,tsl~ ~
+
+
+                                                                              L-~~~~~'~--------~r-l~--~--------------M:~~--~--------------~
+                                                                                               :                 !~                      :
+  Non-Interlace        i
+         Mode          : . -TR---..l                                              I                                                     I                     I                                                       I           I                                           I
+                       :...           I                                                                                                                                                                         )r:               '.
+                       r--v-u---
+                                              LinexO                      .. ; .                               Line x 1            _;                         :.                      line x Nvsp                                                       LinexNvl        _; ...                     lineX{AdjUstRasterl------l
+
+
+            DE
+                  -:
+                       I              I
+
+
+                                      I
+                                                                  ~----
+                                                                              I
+
+
+                                                                              I
+                                                                                                                           .,r-u-- I    I
+
+
+                                                                                                                                        I       --
+                                                                                                                                                              :
+                                                                                                                                                              I
+                                                                                                                                                                                                                  :
+                                                                                                                                                                                                                  I
+                                                                                                                                                                                                                  :
+                                                                                                                                                                                                                                  :
+                                                                                                                                                                                                                                  I
+                                                                                                                                                                                                                                  :
+                                                                                                                                                                                                                                                                              :
+                                                                                                                                                                                                                                                                              I
+                                                                                                                                                                                                                                                                              :                            -
+                                                                                                                                                                                                                                                                                                                               1
+                                                                                                                                                                                                                                                                                                                               I
+                                                                                                                                                                                                                                                                                                                               I
+      RAO-RA4     rrxI:X----~
+                       I                                                      ~
+                                                                                                                     --- )(:EX----XJ:JC::X----XEX---- ~ ~----JCEE(
+                                                                                                                                                              ,                                                   I               I                                           I                                                I
+
+       VSYNC           :
+                       I
+                                                                              :                                                                               k==16.t S I=-;J                                    i:                                                        :                                                   Ii
+                        I                                                                                                                                                                                                                                                                                                   1
+                       II .                    .
+                                              linexO                      )It'..                           Line x 1
+                                                                                                                                    .
+                                                                                                                                   __   I                     I
+                                                                                                                                                              ,III(                   Line x Nvsp               ... 1   ...
+                                                                                                                                                                                                                                 I                     .
+                                                                                                                                                                                                                                                       llflexNvl
+                                                                                                                                                                                                                                                                    ')I'll(
+                                                                                                                                                                                                                                                                                                   ..                       I
+                                                                                                                                                                                                                                                                                                  llflex{AdJustRasterl-----';               1
+      Interlace
+    Sync Mode
+                       :
+                       I
+                                                                              ~
+                                                                              I
+                                                                                                                                        I
+                                                                                                                                        I~,-
+                                                                                                                                                            -.{'hTr"-                                               I :
+                                                                                                                                                                                                                      ~           I
+                                                                                                                                                                                                                                                                           :
+                                                                                                                                                                                                                                                                           I
+                                                                                                                                                                                                                                                                                                                       ~ y,
+                                                                                                                                                                                                                                                                                                                               1
+                                                                                                                                                                                                                                                                                                                                            k-
+                                                                                                                                                                                                                                                                                                                                             I
+
+     Re~-~~~ n::x::IX--~                                                                                              --~---~---~---~----~---~
+                       ~
+                       ;"                     Even Field
+                                                                              ~
+                                                                                      ')
+                                                                                                                                        ~
+                                                                                                                                            "
+                                                                                                                                                              ~I
+                                                                                                                                                                  '> 1+"==16-Tr=:;:j
+                                                                                                                                                                                                                  l' , >
+                                                                                                                                                                                                                       l                                                  :"                                                   II
+                                                                                                                                                                                                                                                                                                                                    '> I
+             .... ~T,*-                                                                    ~                                                            ~             )                                                      ,                 ~                                          'I                                            "
+     Re~-~~~ ~---~---JC2X---~--~----x:::oc::J:J(;---~---~
+                       I          :                                                        l                                                            I                 l                                                                    :                                              :                                             I
+                       :                                    Odd Field                                                                                   I                 k==16-t S I = : : ; J                                                                                                                                         . :
+
+                   I                                                                                                                                                                                                                                                                                                                        I
+                   :                                                                                                                                                                                                                                                                                                                        I
+ Interlace Sync    I...,                      Line x 0                   )11111(                           Line x 1                .,                         I",                     Line x Nvsp               "I                1l1li(               Line x Nvl      )II III(                   Line x (Adjust Rasted ~                   I
+andVideoMode       I                                                          :                                                     :                         !                                                   :               I                                       I                                           ~ Y2Tr ~
+                   I                                                          I                                                     1                         I                                                   I               I                                       I                                                I                I
+     Re~~~~)(IXZX----~---~----nx:IX---~----XJ:JC::X----~----~
+                   1                                         I                                                                      '                         1           I                                       '               I                                       ~,,---...:.....,
+                                                                                                                                    l"                        ,
+                   I
+                   !
+                                                   . '
+                                              Even F i e l d ' ,                                                                            "                     ,       k-- 1 6 - T r - - - - - - " «l" '       I                                                               ,
+                                                                                                                                                                                                                                                                                      ,
+                                                                                                                                                                                                                                                                                                                           "
+                                                                                                                                                                                                                                                                                                                                    )
+                                                                                                                                                                                                                                                                                                                                            I
+                                                                                                                                                                                                                                                                                                                                            I
+                   In"                                                                     ) .                                                  )                     )                                                      I                 ~                                          )                                             "
+     Re~-~~~ mc:::x::I:J(----~----~----:c::x::::DC----~---~--~--~
+                  ::
+                   :
+                                          .
+                                              Odd Field
+                                                                                           I                                                        :                     :                                                  :                 :
+                                                                                                                                                                          k==16.Tr------..'L_ _ _ _ _ _ _ _'_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _~
+                                                                                                                                                                                                                                                                                              l                                          I
+
+                   I
+            NOTES: 1. In interlace sync and video mode, maximum raster address (Nr) shall be odd.
+                   2. In interlace mode, Nht shall be odd,
+MC6845
+
+
+                                                     FIGURE 14 - INTERLACE CONTROL
+
+         Scan Line Address                         Scan Line Address                                 Scan Line Address
+                0                                         0----------------0                               0---------------
+                                                                                                           2- 8   - g                      -1
+                     0                   0                1      0                       o
+                                                              - e-
+                                                                0
+                                                                   --                    -6- -1
+                                                                                                           4-80008 -3
+                     0                   0
+                                                                                         ~ -2
+                                                          2
+                                                              -9--                                             --9               - -&-5
+                3    0                    0               3      0
+                                                              - & --                 -6-3
+                                                                                         o                 6     -9
+                                                                                                               --6-
+                                                                                                                                    0
+                                                                                                                                 ---6--7
+                4    0    0    0 0 0
+                                                          :-8~.g g§-4                                      0----------------          --1
+                5    0                    0
+                6    0                    0
+                                                          6-   8 -- --- g                    -5                       - - - --3
+                                                                                                           4----------------
+                     0                    0               7
+                                                              -8 -- - - e--6
+                                                                        0                                  6----------____
+                                                                                                                      -
+                                                                                                                           ___
+                                                                                                                           -5
+
+                                                              --9-                   -9-7                             --------7
+                                                         Even                                Odd          Even                              Odd
+                                                         Field                               Field        Field                             Field
+                       lal Normal Sync                               Ibllnterlace Sync                         I ellnterlaee Sync and Video
+
+
+
+    Maximum Scan Line Address Register (R91 - This 5-bit                      invert cursor is easily implemented by programming the
+ write-only register determines the number of scan lines per                  CRTC for a blinking cursor and externally inverting the video
+ character row including the spacing; thus, controlling opera-                signal with an exclusive-OR gate.
+ tion of the roW address counter. The programmed value is a
+ maximum address and is one less than the number of scan                         Cursor Register (Rl4-H, RI5-LI - This 14-bit read/write
+ lines.                                                                       register pair is programmed to position the cursor anywhere
+                                                                              in the refresh RAM area; thus, allowing hardware paging and
+ CURSOR CONTROL                                                               scrolling through memory without loss of the original cursor
+    Cursor Start Register (RIOI and Cursor End Reigster                       position. It consists of an 8-bit low order IMAO-MAll register
+ (RIll - These registers allow a cursor of up to 32 scan lines                and a 6-bit high (Jrder I MA8-MA 131 register.
+ in height to tie placed on any scan line of the character block
+ as shown in Figure 15. RIO is a 7-bit write-only register used               OTHER REGISTERS
+ to define the start scan line and the cursor blink rate ..Bits 5                Start Address Register (R12-H, RI3-LI - This 14-bit
+ and 6 of the cursor start address register control the cursor                write-only register pair controls the first address output by
+ operation as shown in Table 4. Non-display, display, and two                 the CRTC after vertical blanking. It consists of an 8-bit low
+ blink modes 116 times or 32 times the field periodl are                      order IMAO-MA71 register and a 6-bit high order IMA8-
+ available. Rll is a 5-bit write-only register which defines the              MA 131 register. The start address register determines which
+ last scan line of the cursor.                                                portion of the refresh RAM is displayed on the CAT screen.
+                                                                              Hardware scrolling by character or page may be accom-
+             TABLE 4 - CURSOR START REGISTER                                  plished by modifying the contents of this register.
+
+             Bit 6      Bit 5    Cursor Display Mode                             Light Pen Register (RIS-H, R17-LI - This 14-bit read-only
+              0          0      Non-Blink                                     register pair captures the refresh address output by the
+              0           1     Cursor Non-Display                            CRTC on the. positive edge of a pulse input to the LPSTB
+               1         0      Blink, 1/16 Field Rate                        pin. It consists of an 8-bit low order I MAO-MA71 register and
+                                                                              a 6-bit high order IMA8-MA 131 register. Since the light pen
+               1          1     Blink, 1/32 Field Rate
+                                                                              pulse is asynchronous with respect to refresh address timing
+           Example of cursor display mode
+                                                                              an internal synchronizer is deSigned into the CRTC. Due to
+                                                                              delays IFigure 51 in this circuit, the value of R16 and R17 will
+   When an external blink feature on characters is required, it               need to be corrected in software. Figure 16 shows an inter-
+ may be necessary to perform cursor blink externally so that                  rupt driven approach although a polling routine could be
+ both blink rates are synchronized. Note that an invert/non-                  used.
+MC6845
+
+
+                                                        FIGURE 15 -     CURSOR CONTROL
+
+
+
+                                                                 I
+                                            -
+                                                          On          Ott      On
+                                                    I            I
+                                                    I
+                                                                 ~ Blink Pe[lod~
+                                                    I            I      16 or 32 Times
+                                                                         Field Period
+
+
+
+                            0-+++-+++-1-                                                        O-+-+-1-jH-+-+-
+                             1-+-+-+-I-++-+-
+                             2-t--t-H--t-t-t-
+                            3-+-+-++H+-
+
+                             7 -+-+-+-I-+--t-+-
+                                                               l-+-++-H-+-+-
+                                                               2-t-t--t-I-+-+-+-
+                                                               3-+-t--t-I-+-+-+-
+                                                               4-+-t--t-1-+-+--t-
+                                                               5-t-t--t-I-+-+-+-
+                                                               6-t-+-t-H-++-
+                                                               7-t-t--t-I-+-+--t-
+                                                                                                jie
+                                                                                                6 +-Hf-++-H-
+                                                                                                7-+-+-t-H-+--t-
+                                                               8-t-t--t-I-+-+--t-               8-t-+-t-H-+--t-
+                            1~3~~~ES~
+                            11-+-+-++-HH-
+                                                               9~~tOO*9-EBE~
+                                                               1O~~E9E00l®&
+                                                               11-t-t--t-1-+-+--t-
+                                                                                                9 -+-+--HH--+-+-
+                                                                                               1O-t-+t-1-t++-
+                                                                                               11 -+-+++-H-t-
+                              Cursor Start Adr.=9               Cursor Start Adr. = 9            Cursor Start Adr. = 1
+                              Cursor End Adr. = 9               Cursor End Adr.~10               Cursor End Adr. = 5
+
+
+
+
+                                             FIGURE 16 -         INTERFACING OF LIGHT PEN
+
+
+
+
+                                                                                                        Light Pen
+
+
+
+
+                                                        OPERATION OF THE CRTC
+
+ TIMING CHART OF THE CRT INTERFACE SIGNALS                                      TABLE 5 -      VALUES PROGRAMMED INTO CRTC REGISTERS
+    Timing charts of CRT interface signals are illustrated in
+ this section. When values listed in Table 5 are programmed                                                                        Programmed
+                                                                                    Reg. #         Register Name         Value
+ into CRTCcontrol registers, the device provides the outputs                                                                         Value
+ as shown in the timing diagrams IFigures 12,13,17, and 181.                         RO      H. Total                    Nht+ 1       Nht
+ The screen format is shown in Figure 11 which illustrates the                       R1      H. Displayed                             Nhd
+                                                                                                                          Nhd
+ relation between refresh memory address IMAO-MA131,
+                                                                                     R2      H. Sync Position            Nhsp         NhSp
+ raster address IRAO-RA41, and the position on the screen. In
+                                                                                     R3      H. Sync Width               Nhsw        Nhsw
+ this example, the start address is assumed to be zero.
+                                                                                     R4      V. Total                    Nvt + 1      Nvt
+                                                                                      R5     V. Scan Line Adjust          Nad;        Nad;
+                                                                                      R6     V. Displayed                 Nvd         Nvd
+                                                                                      R7     V. Sync Position             Nysp        Nysp
+                                                                                      R8     Interlace Mode
+                                                                                      R9     Max. Scan Line Address       Nsl          Nsl
+                                                  FIGURE 17 - CURSOR TIMING
+
+
+
+
+ * Timing is shown for non-interlace and interlace sync modes.
+   Example shown has cursor programmed as
+       Cursor Register::: Nhd + 2
+       Cursor Start = 1
+      Cursor End = 3
+**The initial MA is determined by the contents of start address register, R12/R13 Timing is shown for R12/R13=O.
+
+NOTE 1: Timing values are described in Table 5.
+                                                                                                                                                                                                                          3:
+                                                                                                                                                                                                                          oen
+                                                           FIGURE 18 -      REFRESH MEMORY ADDRESSING (MAO-MA131 STAGE CHART                                                                                              CD
+                                                                                                                                                                                                                          0l:Io
+    !'l
+    u        .5" .....-___________H_°_r_'z_°n_t_al_D_,...;sp_la...;y_ _ _ _ _ _ _ _ _ _ _ _-,r______:..:H.::.or~lz:.::o:::nt:.::a::..1:;.Re:::t:.:ra:::c:::e..:.IN..:.o:::n.:,.-::.D:::.isc::PI:::ay:..:I_ _ _ _ _ _- ,   c.n
+     ~ ~
+    .c 0
+    Ua:      ~I~                                                                                                                  II
+                                0                   1,
+                                                                                                •             Nh9    1                       N~d                                         •              Nht
+                                                                                                                                                                                                         I
+                                I
+                                I
+                                                    I
+                                                    I                                           •.           Nh~
+                                                                                                                 I                            I
+                                                                                                                                                                                         .               J
+                                                                                                                                                                                                         J
+
+
+                                                                                                                                                                                         ..
+               I                0                                                                                    1                       Nhd                                                        Nht
+                                                                                                            2XN~d-1
+                               Nt'd               Nhq+ 1
+                                                                                                                                              ,
+                                                                                                                                           2XNhd                                                     Nhd+ Nht
+
+
+                                                                                                                                                                                         .
+                                                                                                                                                                                                        J
+
+               I
+                                I,
+                               Nhd
+                                                    I
+                                                  Nhd+ 1                                        ..         2XNhd
+                                                                                                                 I
+                                                                                                                      1
+                                                                                                                                              I
+                                                                                                                                           2XNhd
+                                                                                                                                                                                                        J
+                                                                                                                                                                                                          I
+                                                                                                                                                                                                     Nhd + Nht
+                              2XNhd            2XN~d+ 1
+                                                                                                •          3XNhd ,    1                    3X~hd
+                                                                                                                                                                                         •           2Nhd+ Nht
+
+
+               I
+                                I
+                                J
+                              2XN h d
+                                                    I
+                                              2XNhd+ 1                                          .          3XNhd
+                                                                                                                 I
+                                                                                                                      1
+                                                                                                                                              I
+                                                                                                                                           3XNhd                                         .               I
+                                                                                                                                                                                                         J
+                                                                                                                                                                                                     2Nhd'+ Nht
+
+
+
+
+                               1                    j                                                           j                            1                                                           1
+                       (Nvd-11 x Nhd       INvd-1lx Nhd+ 1                                      ..       Nvd X Nhd+ 1
+                                                                                                               J
+                                                                                                                                         Nvd ~ Nhd                                       ..   INvd-lIxNhd+Nht
+
+
+                 I     INvd
+                                i
+                                il x Nhd   INvd
+                                                    ,i
+                                                   1lxNhd+ 1                                    ..
+                                                                                                ..
+                                                                                                                 I
+                                                                                                         Nvd x Nhd        1
+                                                                                                                                              I
+                                                                                                                                         Nvd x Nhd                                       ..   (Nvd
+                                                                                                                                                                                                          I
+                                                                                                                                                                                                          J
+                                                                                                                                                                                                       1lxNhd+Nht
+                         Nvd x Nhd           Nvd x Nhd+ 1
+                                                    ,                                                 INvd+ 11 x Nhd          1        INvd+ 11 x Nhd                                    ..     Nvd x Nhd + Nht
+
+
+                                                                                                .                                                                                        .
+                                                                                                              I                               I                                                         I
+  NVd{        0                 I                                                                                                             I
+                                                    I                                                            I                                                                                        I
+            Ns I          Nvd x Nhd          Nvd x Nhd+ 1                                             INvd+ 11 X Nhd-1                 INvt+ 11 x Nhd                                            Nvd + Nhd + Nht
+
+
+
+
+                          Nvt x Nhd          Nvtx Nhd+ 1                                              INvt+1IxNhd-1                    INvt+ ~I x Nhd                                            Nvt x Nhd + Nht
+                                                    I                                                                                                                                                   I
+   Nvt{      0                  I                   I                                                            i                            I                                                           I
+           Ns I           N vt " Nhd                I                                                  INvt + lIx Nhd-1                INvt + 11 x Nhd                                           Nvt x Nhd+ Nht
+                       INvt + 11 x Nhd     INvt + 11,X Nhd+ 1                                          INvt + 21 x Nhd-1               INvt+:1 x Nhd                                            IN v + 1J~hd+ Nht
+Nvt+ 1 {      0                 I
+                                I
+                                                    I                                                            i                            I                                                           I
+           NadJ        INvt+ 11 x Nhd      INvt + 11 x Nd + 1                                         IN vt + 21 x Nhd-1               IN vt + 21 x Nhd                                        INvt + 1lNhd+ Nht
+              1
+                     NOTE 1: The initial MA is determined by the contents of start address register, R12/R13, Timing is shown for R12/R13=O. Only non-
+                               interlace and interlace sync modes are shown
+MC6845
+
+
+ DETERMINING REGISTER CONTENTS                                                        The remaining register contents must be determined from
+   Some of the register contents are determined rather easily.                        some basic data related to the CRT monitor and from the
+ They are:                                                                            user-desired display format. The CRTC reference sheet (see
+                                                                                      Figure 191 gives a set of formulas for calculating the register
+  Register                    Name                      Contents                      contents as well as other useful characteristics of the
+       RS        Interlace Mode Register     See Table 3                              display. This type of data is summarized under basic
+                                                                                      parameters in Figures 20 and 21, most or all of this data must
+       Rl0       Cursor Start                See Figure 15 and
+                                               Table 4                                be supplied by the user before he can determine the contents
+       Rll       Cursor End                  See Figure 15                            for registers RO-R7 and R9. All variables Bl-BlO are equal to
+                                                                                      basic parameters 1 through 10.
+       R12       Start Address IHI           User programs first
+       R13       Start Address III             memory location
+                                                  to be displayed
+       R14       Cursor IHI                  User programs desired
+       R15       Cursor III                       cursor location
+       R16       Light Pen I HI              Can be loaded via
+       R17       Light Pen III                 light-pen strobe
+                                               only
+
+
+                                                               FIGURE 19 - CRTC REFERENCE SHEET
+
+ Register Function                                              Intermediate Calculations                             Register Calculations
+
+ RO         HOrizontal Total               Symbol         Description                 Calculation          Register                  Calculation
+
+ Rl         Horizontal Displayed                         Dot frequency               850187+ 8S1             RO
+                                                          11 st approx. I            11/811 83                                    810187+ 8S1
+
+ R2         Horizontal Sync Position
+
+ R3         Horizontal Sync Width            tc         Character Time                                       Rl                          85
+                                                                                     [IROI+ 11081
+
+ R4         Vertical Total                               Dot frequency                  87+ 8S
+                                                                                          tc
+
+ R5         Vertical Total Adjust                                                                            R2                      IRlI+ IR31
+
+
+ R6         Vertical Displayed              tsl          Scan line time              [IRQ) + 1I0tc           R3                      IRQ}-IRll
+                                                                                                                                     --3--
+
+ R7         Vertical Sync Position                         Total # of
+                                                           scan lines                   82 0t sl
+
+ RS         I nterlace Mode                                                                                  R4                         N-l
+
+ RS         Maximum Scan Line Address        N               Integer                n =N+ R                  R5
+                                                                                 8S+ 810 8S+81O
+                                                              and
+ Rl0        Cursor Start                     R         Integer remainder
+
+ Rll        Cursor End                                                                                       R6                          86
+
+ R12        Start Address IHI                ter           Character                18S + 81OIotsi           R7          [IR41+ 11- 16-IR51 ",IR71", IR61
+                                                           row time                                                                  88+ 810
+
+ R13        Start Address III               thr            Horizontal         '" IIROI + 1- 8510187+ 8S1
+                                                          retrace time                     f
+
+ R14        Cursor IHI                                                                                       R9                     18S+ 8101-1
+
+ R15        Cursor III                      tvr             Vertical          '" ill - 8618S+ 81OI otsi
+                                                          retrace time           82
+
+ R16        Light Pen (HI
+
+ R17        Light Pen III
+MC6845
+
+
+
+    In Figures 20 and 21, worksheet example calculations are
+ shown for 32x16 and 80x 24 display formats respectively.
+                                                                                 ®          Calculate n. This is the total number Df scan lines
+                                                                                            for each frame. Discard any fractiDn.
+ The following items are keyed to the figures. Basic para-                       @          Calculate Nand R.
+ meters ~.through@havebeenprovided;itemsCD                                       (jJ)       Calculate R4.
+ through 4 are data about the CRT monitor and items            ®                 @          Fill in R5.
+ through 1 are data about the user's desired display.
+                                                                                 @          Fill in R6.
+           Calculate the approximate dot frequency. The user                     @          Calculate R7. If there is nD pDssible value fDr R7,
+           shDuldverify that the bandwidth Df his CRT                                       then the display demands fDr the CRT mDnitDr ex-
+           monitor will accDmDdate this frequency.                                          ceed its capability. A cDmpromise adjustment must
+           Calculate RO. The resultant answer will usually be                               be made in basic parameter 6, 8, Dr 10.
+           an integer plus a fractiDn. Assume the next high                      @          Calculate R9.
+           integer.                                                              @          Calculate t cr . This the time required fDr Dne char-
+           Fill in value fDr R1.                                                            acter row tD be written.
+           Calculate R3. Use the next highest integer. In these                  @          Calculate thr· thr> B3·
+           examples the sync width was chDsen tD be Dne                          @          Calculate t vr · t vr > B4.
+           third Df the hDrizontal blanking interval.
+           Calculate R2. Again, use the next highest integer.                 In Figure 20, calculatiDn      ®
+                                                                                                          verifies that the vertical periDd IS
+           Calculate t c , character tie. This is the time required           16.667 miliisecDnds Dr 60 hertz. The expressiDn used is:
+           fDr one scan line Df Dne character blDck to be
+           written.                                                                                tcrx [IR41 + 11 + [tsl x IR511 ~ Vp
+    (j)    Calculate the exact dDt frequency.
+                                                                              Another check is calculation Df hDrizDntal sync pulse width
+    ®      Calculate tsl, scan line time. This is the time re-
+                                                                              R3.    tc = PWHS (typically approximately equals 4
+           quired for one scan line of one character row to be
+                                                                              microsecondsl.
+           written including retrace time.
+                                                                                 For convenience, a blank worksheet is provided in Figure
+                                                                              22.
+
+
+                                     FIGURE 20 - CRTC WORKSHEET EXAMPLE CALCULATION (32 x 161
+
+ Basic Parameters (Bl-Bl01                                  Intermediate Calculations                                Register Calculations
+                                             Symbol                                             Value     Register                   Decimal   Hex
+
+  1. Horizontal frequency      ~ 15750 ± 500 CD f'               32x15+21                    4.27 x 10 6 (DRO          4.27 x 106 ~            26
+                                                                1 -11 x 10                                           15,750x 15+21
+                                                              15750                                                        -1~
+
+
+
+ 2. Vertical frequency         ~----.2Q-     ® te                    1
+                                                                 39x 15750
+                                                                                        = 1.63x1O- 6 @Rl                  B5=32      --1L _2_0_
+                                                                                                          @R2             32+],      ~_2_1_
+ 3. Minimum Horizontal         ~ 11x1O- 6    (j) f                 5+2                  -    4.29xl06
+    retrace time                                                1.63x 10 6
+                                                                                                          (3)R3       38-32 ~        _ 2_ _2_
+                                                                                                                      --3
+ 4. Minimum vertical           ~~®tsl                        39x 1.63x 10- 6            -63.6x1O- 6
+    retrace time
+                                                                                                          @R4             17-1 ~    _ 1_6_ _1_0_
+ 5. # of displayed             ~_3_2_        ®n                                                  262
+                                                                                                                           R=7       __
+                                                                                                                                      7 _ _7_
+    characters per row                                       60x63.6x 10 6                                @R5
+
+ 6. # of displayed             ~ __16_ _     @ N                                                 17       @R6             B6~ 16    _1_6_ _ _
+                                                                                                                                            10_
+    character rows
+
+ 7. # of dots in character         _ _5_ _
+                                                                                                          @R7              ®        _1_6_ _1_0_
+                                                  R                   262
+    dot matrix row                                                    7+8                                      R8                   ------
+ 8. # of scan lines in char-   ~ __7_ _ @tcr                17+81 x63.6x 10- 6          ~ 954 x 10- 6     @R9         7+8-1~         _1_4_ _O_E_
+    actor· matrix column
+                                                                                                               Rl0
+ 9. Number of dots between = _ _2 _ _ @thr                                              ~11.42x 10- 6
+                                                                                                                                     ------
+                                                            138+ 1-321 0 15+21
+    horizontal adjacents                                        4.29 x 106                                     Rll
+
+                                                                                                               R12
+ 10. Number of scan lines      = __8 __ @tvr [15750-1617+8IJ x63.6x 10-6~ 1431 x 10- 3
+     between vertical                          60
+                                                                                                               R13
+    adjacents
+
+ ® 16+1- 1~;~ "'IR71",16                  ® 954 x 1O- 6 x 17~ 16.218x 10- 3                                    R14
+                                             + 63.6xl0-6x7~.445x1O-3_.1
+     17 - .6", IR71 '" 16
+                                                      16.663 ms     - f                                        R15
+                                               f=60Hz
+MC6845
+
+
+                                           FIGURE 21 - CRTC WORKSHEET EXAMPLE CALCULATION 180 x 24)
+
+ Basic Parameters IB1-B101                                           Intermediate Calculations                               Register Calculations
+                                                     Symbol                                          Value        Register                 Decimal    Hex
+
+  1. Horizontal fr~quency                lB,600      CDI'                  800 17+ 2)             160B36 x 106 (DRO 16.B36 x 106-1 --1.QL ~
+                                                                     lB~OO -11xlO- 6                                   I1B,6001(9)
+
+                                                                                                                  @Rl          65=80       ~~
+ 2. Vertical frequency                  _60
+                                          __ @            te                                     532.31 x 10- 9
+                                                                         1100+ 11° 1B600                          @R2           BO+7       ~~
+                                                                                                                                    2"
+ 3. Minimum Horizontal
+    retrace time
+                                        11 x 10- 6
+                                                     CD f                     7+2
+                                                                         532.31 x 10 9
+                                                                                                  16.907x 106
+                                                                                                                  @R3          RO-Rl       _7_ _0_7_
+                                                                                                                               -3-
+ 4. Minimum vertical                    1 x 10- 3    ®tSI          1100+ 111532.31 x 10- 9 1     53.76 x 10- 6
+    retrace ti me                                                                                                 @R4           2B-l       --1:L _l_B_
+  5. # of displayed                     __
+                                         BO_ _
+                                                     ®n                        1
+                                                                      1601153.76 x 10 61
+                                                                                                      310         @R5            R=2       ~_0_2_
+     characters per row
+                                                                                                                  @R6          66=24       ~         __
+                                                                                                                                                      lB_
+ 6. # of displayed                       24_ _ @)N
+                                        __                                                             2B
+    charactor rows                                                                                                @R7            ®         ~_1_9_
+
+  7. # of-dots in character             _ _7_ _           R                   310                                     RB                   _0_ _ _0_
+    dot matrix row
+
+ B. # of scan lines in char-
+    actor. matrix column
+                                        _ _9_ _ @ter                          "
+                                                                    19+ 21153.76 x 10- 6 1       591.39x 10- 6
+                                                                                                                  @R9         19+21-1      _10_-2L
+
+                                                                                                                      RlO                  ~~
+
+  9. Number of dots between = _ _2_ _ @thr                           S    1101-80117+21          11.17x 10- 6         R11                  _11_._ -.J!L
+    horizontal adjacents                                                  16.907 x 106
+                                                                                                                      R12                            ~
+                                                         tvr S ~B:O _ 241 11j53.76x 10-6
+ 10. Number of scan lines               _ _2_ _                                                   2.47 x 10- 3
+                                                     @
+    between vertical                                                                                                  R13                  ~ ~
+    adjacents
+
+                                                  ® 62 = 1/[lter IlR4+ 11 + ItslllR511                                R14                  ~ ~
+ ® 127+11-ll~~21 .. R7 .. 24
+                                                               1/[159139x 106112BI+153.76x 10- 611211                 R15                            ~
+                    26.72 .. R7 .. 24
+                                                               1/16.B67x 10- 3
+                                                               60
+MC6845
+
+
+                                                    FIGURE 22 - CRTC WORKSHEET
+
+  Basic Parameters                                       Intermediate Calculations                        Register Calculations
+                                           Symbol                                      Value   Register                 Decimal   Hex
+
+  1. Horizontal frequency                                                                        RO
+
+  2. Vertica'i frequency                                                                         Rl
+                                                                                                 R2
+  3. Minimum Horizontal
+                                                                                                 R3
+     retrace time
+                                                                                                 R4
+  4. Minimum vertical                        tsl                                                 R5
+     retrace time
+                                                                                                  R6
+  5. # of displayed                                                                               R7
+     characters per row
+                                                                                                  R8
+  6. # of displayed                          N                                                    R9
+     character rows
+                                                                                                  Rl0
+  7. # of dots in character                                                                       Rll
+     dot matrix row
+                                                                                                  R12
+  8. # of scan lines in char-                tcr                                                  R13
+     actor· matrix column
+                                                                                                  R14
+
+  9. Number of dots between ::::                                                                  R15
+     horizontal adjacents                                                                         R16
+
+ 10. Number of scan lines                    tvr                                                  R17
+     between vertical                                                                             R18
+     adjacents
+                                                                                                  R19
+
+
+
+
+ CRTC INITIALIZATION                                                      is quite simple as the refresh addresses continually run.
+    Register RO-R15 must be initialized after the system is                  Note that the LPSTB input may be used to support addi-
+ powered up. The processor will normally load the CRTC                    tional system functions other than a light pen. A digital-to-
+ register file from a firmware table. The program required to             analog converter !DAC) and comparator could be configured
+ initialize the CRTC for a 80 x 24 format (example calculation            to use the refresh addresses as a reference to a DAC com-
+ #2) is shown in Figure 23.                                               posed of a resistive adder network connected to a com-
+    The CRTC registers will have an initial value at power up.            parator. The output of the comparator would generate the
+ When using a direct drive monitor (sans horizontal oscillator)           LPSTB input signifying a match between the refresh address
+ these initial values may result in out-of-tolerance operation.           analog level and the unknown voltage.
+ CRTC programming should be done immediately after power                     The light-pen strobe input could also be used as a
+ up especially in this type of system.                                    character strobe to allow the CRTC refresh addresses to
+                                                                          decode a keyboard matrix. Debouncing would need to be
+ ADDITIONAL CRTC APPLICATIONS                                             done in software.
+   The foremost system function which may be performed by                    Both the VS and HS outputs may be used as a real-time
+ the CRTC controller is the refreshing of dynamic RAM. This               clock. Once programmed, the CRTC will provide a stable
+                                                                          reference frequency.
+MC6845
+
+
+                          FIGURE 23 - MC6800 PROGRAM FOR CRTC INITIALIZATION
+
+
+  PAGE 001     CRTCINIT.SA:O      MC6845 CRTC Initialization Program
+  00001                         NAM    MC6845
+  00002                         TTL     / ~1C6845-1 CRTC i ni ti al i zati on program
+  00003                         OPT    G,S,LLE=85 print FCB's, FOB's & XREF table
+  00004                  ********************************************************
+  00005                  * Assign CRTC addresses
+  00006                  *
+  00007           9000 A CRTCAO EQU    $9000       Address Register
+  00008           9001 A CRTCRG EQU     CRTCAO+l Data Register
+  00009                  ********************************************************
+  00010                  * Initialization program
+  00011                  *
+  00012A 0000                   ORG     o          a place to start
+  00013A 0000 5F                CLRB               cl eat counter
+  00014A 0001 CB 1020 A         LOX    #CRTTAB table pointer
+  0001 SA 0004 F7 9000 A CRTCl STAB CRTCAO         load address register
+  00016A 0007 A6 00    A        LOAA O,X           get register value from table
+  00017A 0009 B7 9001 A         STAA CRTCRG        program register
+  0001 8A OOOC 08               INX                increment counters
+  00019A 0000 5C                 INCB
+  00020A OOOE Cl 10    A        CMPB $10           finished?
+  00021A 0010 26 F2 0004        BNE     CRTCl      no: take branch
+  00022A 0012 3F                SWI                yes: ca 11 moni tor
+  00023                  ********************************************************
+  00024                  * CRTC register initialization table
+  00025                  * 80 x 24 non-interlaced format
+  00026A 1020                   ORG     $1020      start of table
+  00027A 1020     65   A CRTTAB FCB     $64,$50 RO, Rl - H total & H di spl ayed
+        A 1021    50   A
+  00028A 1022     56   A        FCB     $54,$07 R2, R3 - HS pos. & HS width
+        A 1023    09   A
+  00029A 1024     18   A        FCB     $lB,$02 R4, R5 - V total &V total adj.
+        A 1025    OA   A
+  00030A 1026     18   A        FCB     $18,$19 R6, R7 - V displayed $ VS pos.
+        A 1027    18   A
+  00031 A 1028    00   A        FCB    $OO,$OA R8, R9 - Interlace &Max scan line
+        A 1029    OB   A
+  00032A 102A     00   A        FCB    $OO,$OB R10,Rll- Cursor start & end
+        A 102B    OB   A
+  00033A 102C     0080 A        FOB     $0080      R12,R13- Start Address
+  00034A 102E     0080 A        FOB     $0080      R14,R15- Cursor Address
+  00035                         END
+  TOTAL ERRORS 00000--00000
+  CRTCl      0004   CRTCAO 9000      CRTCRG 9001      CRTTAB 1020
+

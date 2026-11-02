@@ -48,7 +48,8 @@ colour-remapping, 3D pixel shifting, music, backdrops, overlays, memory cheats, 
   interrupts, host adapters.
 - **Resources and build steps**: sources, tapes, images, symbols, listings and source maps;
   `assemble`, `tape-compile`, `patch`, `read-in`, with a cache.
-- **`extends`**: a child cartridge names a parent and adds to it (`forth-flowers` extends `forth`).
+- **`parents`**: a child cartridge lists a base and any mixins and adds to them
+  (`forth-flowers` has `parents: [forth]`), composed by [@wwsff/flavors](../flavors/README.md).
 - **Profiles** stacked in the URL (`/cabinet/forth/?profile=trace`), and **scenes** of several
   machines with the room and the people at them.
 - **Live coding and git**: edits in the page are saved, become commits in your own repo, a pull
@@ -61,13 +62,13 @@ colour-remapping, 3D pixel shifting, music, backdrops, overlays, memory cheats, 
 | | microPAK | Cabinet cartridge |
 |---|---|---|
 | Container | one ZIP file | a directory; a ZIP or a git repo to move it |
-| Syntax | OGDL, one file per concern | YAML, one manifest plus files |
+| Syntax | OGDL, one file per concern | YAML, one manifest plus files; organelles keep their own syntax |
 | Scope | presentation and control of a program that runs unchanged | machine wiring, build, presentation, help, scenes |
-| Base | a machine profile (`apple2e-en`) | `extends` another cartridge |
+| Base | a machine profile (`apple2e-en`); each `.cfg` the pak has replaces that whole section of `/boot/defaults` | `parents`: a base cartridge and mixins, merged key by key, `.cfg` files included |
 | Scripting | Applesoft with `@vm.*`, in sibling virtual machines on the same emulator | host TypeScript handlers, Forth on the machine, tiny-titan translators |
 | Made by | capturing a running session, or from a disk in the catalog | writing YAML, or saving from the LIVE CODING panel |
 | Edited | inside the emulator | in the page or in any editor |
-| Provenance | file metadata in the ZIP | `VARIANTS.yml`, source maps, git history |
+| Provenance | file metadata in the ZIP | `VARIANTS.yml`, source maps, git history, and a composed cartridge's full form (who set each value) |
 | Diff and merge | as a ZIP, no | line by line in git |
 | Runs today | yes, for years | partly; the format is the target |
 

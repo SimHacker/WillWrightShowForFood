@@ -1,0 +1,2638 @@
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go b/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
+index 0ab0111..02831ab 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
+@@ -478,6 +478,15 @@ func NewApple2IOChip(mm *memory.MemoryMap, globalbase int, base int, ent interfa
+ 			Target: this,
+ 		},
+ 	)
++	mbm.RegisterListener(
++		&memory.MemoryListener{
++			Label:  "0xCXXX write",
++			Start:  0xC800,
++			End:    0xCFFF,
++			Type:   memory.MA_WRITE,
++			Target: this,
++		},
++	)
+ 	// mbm.RegisterListener(
+ 	// 	&memory.MemoryListener{
+ 	// 		Label:  "0x400",
+@@ -660,6 +669,8 @@ func (mr *Apple2IOChip) ProcessEvent(name string, addr int, value *uint64, actio
+ 	case "0xCXXX read":
+ 		mr.AddressRead_Cxxx(addr, value)
+ 		return false, false
++	case "0xCXXX write":
++		return mr.AddressWrite_Cxxx(addr, value)
+ 	case "0x400":
+ 		if settings.UnifiedRender[index] {
+ 			// log2.Printf("%s handler: write to $%.4x", name, addr)
+@@ -1791,8 +1802,9 @@ func (mr *Apple2IOChip) ReconfigureMemoryMap(e interfaces.Interpretable, s apple
+ 		IfDefinedRead(MEM, "slot6.rom", "slot6.rom", "rom.slothole6")
+ 		IfDefinedRead(MEM, "slot7.rom", "slot7.rom", "rom.slothole7")
+ 
+-		// Disabble slot 3 if SLOTC3ROM is off
+-		if !s.SoftSwitch_SLOTC3ROM {
++		// Disabble slot 3 if SLOTC3ROM is off. A II+ has no internal ROM to put
++		// there (DisableSW80); clearing the slot would hide a card in it.
++		if !s.SoftSwitch_SLOTC3ROM && !mr.DisableSW80 {
+ 			ClrREAD(MEM, "slot3.rom")
+ 			ClrREAD(MEM, "rom.slothole3")
+ 			SetREAD(MEM, "rom.intc3rom") // make sure we can see rom underneath
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/card.go b/GoPath/src/paleotronic.com/core/hardware/apple2/card.go
+index ce1aaab..bc12d2e 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/card.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/card.go
+@@ -236,10 +236,19 @@ func CardFactory(name string, mm *memory.MemoryMap, index int, acb func(b bool),
+ 		return NewIOCardSlot3()
+ 	case "uthernet":
+ 		return NewIOCardUthernet(mm, index, ent)
++	case "videx":
++		return NewIOCardVidex(mm, index, ent)
+ 	}
+ 	return nil
+ }
+ 
++// C8RAMCard is a card with RAM in its $C800 space. Reads and writes there,
++// while the card owns the space, go to RedirectedRead and RedirectedWrite
++// with the offset from $C800.
++type C8RAMCard interface {
++	C8RAM(addr int) bool
++}
++
+ func (d *IOCard) FirmwareRead(offset int) uint64 {
+ 	return 0
+ }
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go b/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go
+index 28f455f..134405f 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/memcxxx.go
+@@ -301,7 +301,9 @@ func (mr *Apple2IOChip) SW_PAGE2() bool {
+ }
+ 
+ func (mr *Apple2IOChip) SW_SLOTC3ROM() bool {
+-	return !mr.DisableSW80 && (mr.memmode&MF_SLOTC3ROM) != 0
++	// A II or II+ has no internal 80-column firmware, so slot 3 is a slot.
++	// DisableSW80 is that machine. A //e leaves it clear and uses the switch.
++	return mr.DisableSW80 || (mr.memmode&MF_SLOTC3ROM) != 0
+ }
+ 
+ func (mr *Apple2IOChip) SW_SLOTCXROM() bool {
+@@ -988,24 +990,50 @@ func (mr *Apple2IOChip) AddressRead_Cxxx(addr int, value *uint64) {
+ 	mbm := mm.BlockMapper[mr.e.GetMemIndex()]
+ 
+ 	if addr == 0xCFFF {
+-		mr.SetRegIOSelect(0)
+-		mr.SetRegIOInternalROM(0)
+-		mr.SetRegPeripheralROMSlot(0)
++		mr.releaseC8()
++	}
+ 
+-		if mr.SW_SLOTCXROM() {
+-			for bank := 0xc8; bank < 0xd0; bank++ {
+-				mbm.PageSetREAD(bank, nil)
+-			}
+-			mr.SetRegC8ROMType(c8RomEmpty)
++	mr.primeC8(addr)
++
++	if addr >= SlotStartAddress && addr <= SlotEndAddress {
++		slot := uint64((addr >> 8) & 0xf)
++		if mr.SW_SLOTCXROM() && !(!mr.SW_SLOTC3ROM() && slot == 3) && !mr.HasCard(slot) {
++			*value = 0xA0
++			*value = mr.FloatingBus(addr, value)
++			return
+ 		}
+ 	}
+ 
++	if mr.GetRegC8ROMType() == c8RomEmpty && addr >= C8ROMStartAddress {
++		*value = 0x00
++		return
++	}
++
++	if card, ok := mr.c8Card(addr); ok {
++		*value = card.RedirectedRead(addr - 0xC800)
++		return
++	}
++
++	// read from memory
++	if addr == 0xc800 {
++		//fmt.Printf("Block read for %d\n", addr)
++	}
++	mbm.Do(addr, memory.MA_READ, value)
++
++}
++
++// primeC8 latches which slot owns $C800. Reading $Csxx sets the latch, and the
++// next access in $C800-$CFFF, read or write, turns that slot's ROM on. The
++// Videoterm driver writes $CC00 with no read of $C800 in between, and that
++// write is the access that turns its screen RAM on.
++func (mr *Apple2IOChip) primeC8(addr int) {
++	mm := mr.e.GetMemoryMap()
++	mbm := mm.BlockMapper[mr.e.GetMemIndex()]
++
+ 	IOStrobe := 0
+ 
+ 	if mr.SW_SLOTCXROM() {
+ 
+-		//fmt.Println("SW_SLOTCXROM")
+-
+ 		if addr >= SlotStartAddress && addr <= SlotEndAddress {
+ 			slot := uint64((addr >> 8) & 0x7)
+ 			if slot != 3 {
+@@ -1023,27 +1051,16 @@ func (mr *Apple2IOChip) AddressRead_Cxxx(addr int, value *uint64) {
+ 			IOStrobe = 1
+ 		}
+ 
+-		//log.Printf("IOSelect = %b, IOStrobe = %d", mr.GetRegIOSelect(), IOStrobe)
+-
+ 		if mr.GetRegIOSelect() != 0 && IOStrobe != 0 && mr.GetRegIOInternalROM() == 0 {
+ 
+-			//fmt.Printf("RegIOSelect=%d, IOStrobe=%d\n", mr.GetRegIOSelect(), IOStrobe)
+-
+-			// Turn on peripheral expansion ROM
+ 			var slot uint64
+ 			for slot = 1; slot < MaxSlots; slot++ {
+ 				if mr.GetRegIOSelect()&(1<<slot) != 0 {
+-					//remainingSelected := mr.GetRegIOSelect() & (0xff ^ (1 << slot))
+-					//~ if remainingSelected != 0 {
+-					//~ panic("IOSelect issue")
+-					//~ }
+ 					break
+ 				}
+ 			}
+ 
+-			// slot should be set
+ 			if mr.HasC8Rom(slot) && mr.GetRegPeripheralROMSlot() != slot {
+-				//fmt.Printf("Turning on peripheral ROM in slot %d\n", slot)
+ 				cpu := apple2helpers.GetCPU(mr.e)
+ 				log.Printf("Turning on C8 Device rom at %.4x", cpu.PC)
+ 				exprom := mbm.Get(fmt.Sprintf("slotexp%d.rom", slot))
+@@ -1070,11 +1087,8 @@ func (mr *Apple2IOChip) AddressRead_Cxxx(addr int, value *uint64) {
+ 
+ 	}
+ 
+-	// Handle switching internal ROM back on
+ 	if !mr.SW_SLOTCXROM() {
+ 
+-		//fmt.Println("!SW_SLOTCXROM")
+-
+ 		if addr >= SlotStartAddress && addr <= SlotEndAddress {
+ 			mr.SetRegIOInternalROM(1)
+ 		} else if addr >= C8ROMStartAddress && addr <= C8ROMEndAddress {
+@@ -1091,30 +1105,59 @@ func (mr *Apple2IOChip) AddressRead_Cxxx(addr int, value *uint64) {
+ 			}
+ 			mr.SetRegC8ROMType(c8RomInternal)
+ 			mr.SetRegPeripheralROMSlot(0)
+-			//fmt.Println("Turning internal C8 rom back on")
+ 		}
+ 	}
++}
+ 
+-	if addr >= SlotStartAddress && addr <= SlotEndAddress {
+-		slot := uint64((addr >> 8) & 0xf)
+-		if mr.SW_SLOTCXROM() && !(!mr.SW_SLOTC3ROM() && slot == 3) && !mr.HasCard(slot) {
+-			*value = 0xA0
+-			*value = mr.FloatingBus(addr, value)
+-			return
++// releaseC8 drops every card's claim on $C800. The firmware does it with
++// STA $CFFF; a read of the same address does it too.
++func (mr *Apple2IOChip) releaseC8() {
++	mm := mr.e.GetMemoryMap()
++	mbm := mm.BlockMapper[mr.e.GetMemIndex()]
++	mr.SetRegIOSelect(0)
++	mr.SetRegIOInternalROM(0)
++	mr.SetRegPeripheralROMSlot(0)
++	if mr.SW_SLOTCXROM() {
++		for bank := 0xc8; bank < 0xd0; bank++ {
++			mbm.PageSetREAD(bank, nil)
+ 		}
++		mr.SetRegC8ROMType(c8RomEmpty)
+ 	}
++}
+ 
+-	if mr.GetRegC8ROMType() == c8RomEmpty && addr >= C8ROMStartAddress {
+-		*value = 0x00
+-		return
++// c8Card is the card whose screen RAM answers addr, while it owns $C800.
++func (mr *Apple2IOChip) c8Card(addr int) (SlotCard, bool) {
++	if addr < 0xCC00 || addr >= 0xCE00 || mr.GetRegC8ROMType() != c8RomDevice {
++		return nil, false
+ 	}
+-
+-	// read from memory
+-	if addr == 0xc800 {
+-		//fmt.Printf("Block read for %d\n", addr)
++	slot := mr.GetRegPeripheralROMSlot()
++	if slot >= uint64(len(mr.cards)) {
++		return nil, false
+ 	}
+-	mbm.Do(addr, memory.MA_READ, value)
++	card := mr.cards[slot]
++	ram, ok := card.(C8RAMCard)
++	if !ok || !ram.C8RAM(addr) {
++		return nil, false
++	}
++	return card, true
++}
+ 
++// AddressWrite_Cxxx serves the writable half of $C800. A write of $CFFF
++// releases the space. A write the owning card claims goes to its RAM and is
++// not stored in the 64K. Anything else is written as it was before.
++func (mr *Apple2IOChip) AddressWrite_Cxxx(addr int, value *uint64) (bool, bool) {
++	if addr == 0xCFFF {
++		mr.releaseC8()
++		return false, false
++	}
++	// A write is a $C800 strobe too. The Videoterm's own driver selects the
++	// slot with LDA $C3xx and then STA $CC00,Y, with no read of $C800 between.
++	mr.primeC8(addr)
++	if card, ok := mr.c8Card(addr); ok {
++		card.RedirectedWrite(addr-0xC800, *value)
++		return false, false
++	}
++	return false, true
+ }
+ 
+ func (mr *Apple2IOChip) AddressRead_C00x(addr int, value *uint64) {
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/videx.go b/GoPath/src/paleotronic.com/core/hardware/apple2/videx.go
+new file mode 100644
+index 0000000..379d885
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/videx.go
+@@ -0,0 +1,287 @@
++package apple2
++
++import (
++	"paleotronic.com/core/hardware/common"
++	"paleotronic.com/core/interfaces"
++	"paleotronic.com/core/memory"
++	"paleotronic.com/fmt"
++	"paleotronic.com/log"
++
++	yaml "gopkg.in/yaml.v2"
++)
++
++// VidexWidth and VidexHeight are the card's picture: 80 cells of 9 dots by 24
++// cells of 9 lines. The Apple //e's 80-column text is drawn the same way, one
++// font dot to one pixel, white on black; this is that, from the Videoterm's
++// own character ROM.
++const (
++	VidexWidth  = 720
++	VidexHeight = 216
++)
++
++// Register write masks. R16 and R17 are not written by the 6502.
++var videxRegMask = [16]byte{
++	0xff, 0xff, 0xff, 0x0f,
++	0x7f, 0x1f, 0x7f, 0x7f,
++	0x03, 0x1f, 0x7f, 0x1f,
++	0x3f, 0xff, 0x3f, 0xff,
++}
++
++// IOCardVidex is a Videx Videoterm: a 6845 and 2K of screen RAM, firmware in
++// the slot ROM and at $C800, screen RAM paged into $CC00-$CDFF.
++type IOCardVidex struct {
++	IOCard
++	e         interfaces.Interpretable
++	ram       [0x800]byte
++	reg       [18]byte
++	sel       int
++	page      int
++	chr       [2][0x800]byte
++	changed   bool
++	lastBlink int
++}
++
++func NewIOCardVidex(mm *memory.MemoryMap, index int, ent interfaces.Interpretable) *IOCardVidex {
++	c := &IOCardVidex{e: ent, lastBlink: -1}
++	c.Name = "IOCardVidex"
++	c.mm = mm
++	c.index = index
++	c.loadCharset(0, "data/videx_chr.rom")
++	c.loadCharset(1, "data/videx_chr_inverse.rom")
++	return c
++}
++
++func (c *IOCardVidex) loadCharset(set int, name string) {
++	data, err := common.LoadData(name, 0, 0x800)
++	if err != nil {
++		log.Printf("videx: %s: %s", name, err.Error())
++		return
++	}
++	for i, v := range data {
++		if i < len(c.chr[set]) {
++			c.chr[set][i] = byte(v)
++		}
++	}
++}
++
++func (c *IOCardVidex) HandleIO(register int, value *uint64, t IOType) {
++	c.page = (register >> 2) & 3
++	if register&1 == 0 {
++		if t == IOT_WRITE {
++			c.sel = int(*value) & 0x1f
++		} else {
++			*value = 0
++		}
++		return
++	}
++	if t == IOT_WRITE {
++		c.writeReg(byte(*value))
++		return
++	}
++	*value = uint64(c.readReg())
++}
++
++func (c *IOCardVidex) writeReg(v byte) {
++	if c.sel > 15 {
++		return
++	}
++	c.reg[c.sel] = v & videxRegMask[c.sel]
++	c.changed = true
++}
++
++func (c *IOCardVidex) readReg() byte {
++	if c.sel >= 14 && c.sel <= 17 {
++		return c.reg[c.sel]
++	}
++	return 0
++}
++
++func (c *IOCardVidex) RedirectedRead(offset int) uint64 {
++	if offset >= 0x400 && offset < 0x600 {
++		return uint64(c.ram[(offset&0x1ff)+c.page*512])
++	}
++	return 0
++}
++
++func (c *IOCardVidex) RedirectedWrite(offset int, value uint64) {
++	if offset >= 0x400 && offset < 0x600 {
++		c.ram[(offset&0x1ff)+c.page*512] = byte(value)
++		c.changed = true
++	}
++}
++
++// C8RAM reports the screen window. The firmware above it stays ordinary ROM,
++// so the 6502 executes it; a firmware memory block would swallow the opcode.
++func (c *IOCardVidex) C8RAM(addr int) bool {
++	return addr >= 0xcc00 && addr < 0xce00
++}
++
++func (c *IOCardVidex) Reset() {
++	c.page = 0
++}
++
++func (c *IOCardVidex) ImA() string {
++	return "videx"
++}
++
++func (c *IOCardVidex) Init(slot int) {
++	c.IOCard.Init(slot)
++}
++
++// LoadROM maps the slot ROM and leaves it readable. IOCard.LoadROM parks slot
++// 3 in state "off", which is how a //e hides it behind the internal firmware.
++// A II+ has no internal firmware there.
++func (c *IOCardVidex) LoadROM(ent interfaces.Interpretable, addr int) {
++	c.IOCard.LoadROM(ent, addr)
++	slot := (addr - 0xc000) / 256
++	if mb := ent.GetMemoryMap().BlockMapper[ent.GetMemIndex()].Get(fmt.Sprintf("slot%d.rom", slot)); mb != nil {
++		mb.SetState("r")
++	}
++}
++
++type videxState struct {
++	RAM  []byte `yaml:"ram"`
++	Reg  []byte `yaml:"reg"`
++	Sel  int    `yaml:"sel"`
++	Page int    `yaml:"page"`
++}
++
++func (c *IOCardVidex) GetYAML() []byte {
++	b, _ := yaml.Marshal(videxState{
++		RAM: append([]byte(nil), c.ram[:]...),
++		Reg: append([]byte(nil), c.reg[:]...),
++		Sel: c.sel, Page: c.page,
++	})
++	return b
++}
++
++func (c *IOCardVidex) SetYAML(b []byte) {
++	var s videxState
++	if yaml.Unmarshal(b, &s) != nil {
++		return
++	}
++	copy(c.ram[:], s.RAM)
++	copy(c.reg[:], s.Reg)
++	c.sel = s.Sel
++	c.page = s.Page
++	c.changed = true
++}
++
++// Snapshot is the 2K of screen RAM, then R12 and R13, the start address.
++func (c *IOCardVidex) Snapshot() []byte {
++	b := make([]byte, 2050)
++	copy(b, c.ram[:])
++	b[2048] = c.reg[12]
++	b[2049] = c.reg[13]
++	return b
++}
++
++// Render draws the card into dst (VidexWidth by VidexHeight, RGBA) and reports
++// whether it differs from the last call. cycles is the 6502's cycle count; the
++// cursor blinks from it. Lit dots are the same white the //e 80-column renderer
++// writes (palette 15), unlit the same black, alpha 255.
++func (c *IOCardVidex) Render(dst []byte, cycles int64) bool {
++	if len(dst) < VidexWidth*VidexHeight*4 {
++		return false
++	}
++	field := 0
++	if cycles > 0 {
++		field = int(cycles / 17030)
++	}
++	mode := (c.reg[10] >> 5) & 3
++	blink := 0
++	switch mode {
++	case 0:
++		blink = 1
++	case 2:
++		if (field/8)&1 == 0 {
++			blink = 1
++		}
++	case 3:
++		if (field/16)&1 == 0 {
++			blink = 1
++		}
++	}
++	if !c.changed && blink == c.lastBlink {
++		return false
++	}
++	c.changed = false
++	c.lastBlink = blink
++
++	for i := 0; i < VidexWidth*VidexHeight*4; i += 4 {
++		dst[i], dst[i+1], dst[i+2], dst[i+3] = 0, 0, 0, 255
++	}
++
++	cols := int(c.reg[1])
++	if cols < 1 {
++		cols = 1
++	}
++	if cols > 80 {
++		cols = 80
++	}
++	rows := int(c.reg[6])
++	if rows < 1 {
++		rows = 1
++	}
++	if rows > 24 {
++		rows = 24
++	}
++	lines := int(c.reg[9]) + 1
++	if lines > 16 {
++		lines = 16
++	}
++	ma := int(c.reg[12])<<8 | int(c.reg[13])
++	cur := (int(c.reg[14])<<8 | int(c.reg[15])) & 0x7ff
++	c0 := int(c.reg[10] & 31)
++	c1 := int(c.reg[11] & 31)
++
++	for y := 0; y < rows; y++ {
++		for l := 0; l < lines; l++ {
++			py := y*lines + l
++			if py >= VidexHeight {
++				break
++			}
++			row := dst[py*VidexWidth*4:]
++			for x := 0; x < cols; x++ {
++				cell := (ma + y*cols + x) & 0x7ff
++				b := c.ram[cell]
++				bits := c.chr[b>>7][int(b&0x7f)*16+(l&15)]
++				invert := blink == 1 && cell == cur && l >= c0 && l <= c1
++				for dot := 0; dot < 9; dot++ {
++					px := x*9 + dot
++					if px >= VidexWidth {
++						break
++					}
++					on := bits&(0x80>>dot) != 0
++					if dot == 8 {
++						on = bits&1 != 0
++					}
++					if invert {
++						on = !on
++					}
++					if on {
++						o := px * 4
++						row[o], row[o+1], row[o+2], row[o+3] = 255, 255, 255, 255
++					}
++				}
++			}
++		}
++	}
++	return true
++}
++
++// Videx returns the Videoterm if one is plugged in.
++func (mr *Apple2IOChip) Videx() *IOCardVidex {
++	for _, card := range mr.cards {
++		if v, ok := card.(*IOCardVidex); ok {
++			return v
++		}
++	}
++	return nil
++}
++
++// VidexShowing is what the Soft Video Switch puts on the monitor: the card,
++// when annunciator 0 is on and the Apple is not in a graphics mode.
++func (mr *Apple2IOChip) VidexShowing() bool {
++	return mr.Videx() != nil && mr.annunciators[0] && mr.SW_TEXT()
++}
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/videx_test.go b/GoPath/src/paleotronic.com/core/hardware/apple2/videx_test.go
+new file mode 100644
+index 0000000..5a7ea5b
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/videx_test.go
+@@ -0,0 +1,86 @@
++package apple2
++
++import (
++	"strings"
++	"testing"
++
++	"paleotronic.com/octalyzer/assets"
++)
++
++func TestVidexAssets(t *testing.T) {
++	fw, err := assets.Asset("data/videx_fw24.rom")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(fw) != 1024 {
++		t.Fatalf("firmware is %d bytes", len(fw))
++	}
++	spec, err := assets.Asset("profile/apple2-plus-videx.yaml")
++	if err != nil {
++		t.Fatal(err)
++	}
++	text := string(spec)
++	if !strings.Contains(text, `id  : "apple2-plus-videx"`) || !strings.Contains(text, `driver: "videx"`) {
++		t.Fatal("profile is not the II+ with a Videx in slot 3")
++	}
++}
++
++func TestVidexGlyph(t *testing.T) {
++	rom, err := assets.Asset("data/videx_chr.rom")
++	if err != nil {
++		t.Fatal(err)
++	}
++	c := NewIOCardVidex(nil, 0, nil)
++	// Firmware 2.4's init table at ROM $A1, written the way the card's loop does.
++	init := []byte{0x7A, 0x50, 0x5E, 0x2F, 0x22, 0x00, 0x18, 0x1D, 0x00, 0x08, 0xE0, 0x08, 0x00, 0x00, 0x00, 0x00}
++	for i, v := range init {
++		sel, val := uint64(i), uint64(v)
++		c.HandleIO(0, &sel, IOT_WRITE)
++		c.HandleIO(1, &val, IOT_WRITE)
++	}
++	c.ram[0] = 0x41
++	dst := make([]byte, VidexWidth*VidexHeight*4)
++	if !c.Render(dst, 0) {
++		t.Fatal("first render did not draw")
++	}
++	// Glyph $41 is an A on lines 0-6. Dot 7 is the leftmost bit. A blink of
++	// period 32 (R10 = $E0) is on at field 0, and the cursor is on cell 0,
++	// so the cell is inverted: a lit ROM dot is black.
++	for line := 0; line < 7; line++ {
++		bits := rom[0x410+line]
++		row := dst[line*VidexWidth*4:]
++		for dot := 0; dot < 8; dot++ {
++			lit := bits&(0x80>>dot) != 0
++			pix := row[dot*4]
++			if lit && pix != 0 {
++				t.Fatalf("line %d dot %d: cursor should invert a lit dot, got %d", line, dot, pix)
++			}
++			if !lit && pix != 255 {
++				t.Fatalf("line %d dot %d: cursor should invert an unlit dot, got %d", line, dot, pix)
++			}
++		}
++		repeat := rom[0x410+line]&1 != 0
++		got := row[8*4]
++		if repeat && got != 0 || !repeat && got != 255 {
++			t.Fatalf("line %d dot 8: bit0 %v pixel %d", line, repeat, got)
++		}
++	}
++	// Hide the cursor (mode 1) and the same dots are the ROM, uninverted.
++	sel, val := uint64(10), uint64(0x20)
++	c.HandleIO(0, &sel, IOT_WRITE)
++	c.HandleIO(1, &val, IOT_WRITE)
++	if !c.Render(dst, 0) {
++		t.Fatal("cursor change did not redraw")
++	}
++	for line := 0; line < 7; line++ {
++		bits := rom[0x410+line]
++		row := dst[line*VidexWidth*4:]
++		for dot := 0; dot < 8; dot++ {
++			lit := bits&(0x80>>dot) != 0
++			pix := row[dot*4]
++			if lit && pix != 255 || !lit && pix != 0 {
++				t.Fatalf("line %d dot %d: rom bit %v pixel %d", line, dot, lit, pix)
++			}
++		}
++	}
++}
+diff --git a/GoPath/src/paleotronic.com/core/memory/memorymodel.go b/GoPath/src/paleotronic.com/core/memory/memorymodel.go
+index 7851102..edab9de 100755
+--- a/GoPath/src/paleotronic.com/core/memory/memorymodel.go
++++ b/GoPath/src/paleotronic.com/core/memory/memorymodel.go
+@@ -883,6 +883,13 @@ func (m *MemoryMap) WriteInterpreterMemory(index int, address int, value uint64)
+ 
+ 	} else {
+ 
++		// $C800-$CFFF has no write page: expansion ROM is mapped for reads only.
++		// Do still runs so a card can catch writes there (the Videx screen window).
++		if address >= 0xC800 && address <= 0xCFFF {
++			m.BlockMapper[index].Do(address, MA_WRITE, &value)
++			return
++		}
++
+ 		//		fmt.Printf("about to write to slot index = %d, mb = %d, address = %d, value  = %d\n", index, m.MEMBASE(index), address, value)
+ 		if address < 0x10000 {
+ 			return
+diff --git a/GoPath/src/paleotronic.com/core/producer.go b/GoPath/src/paleotronic.com/core/producer.go
+index dc28e97..0e17dac 100755
+--- a/GoPath/src/paleotronic.com/core/producer.go
++++ b/GoPath/src/paleotronic.com/core/producer.go
+@@ -917,7 +917,7 @@ func (this *Producer) Activate(slot int) {
+ 
+ func (this *Producer) ExecutorInit(slotid int) {
+ 	switch settings.SpecFile[slotid] {
+-	case "apple2e-en.yaml", "apple2e-en-cpm.yaml", "apple2-plus.yaml", "apple2e.yaml":
++	case "apple2e-en.yaml", "apple2e-en-cpm.yaml", "apple2-plus.yaml", "apple2-plus-videx.yaml", "apple2e.yaml":
+ 		this.ExecutorInitApple2(slotid)
+ 	case "bbcb.yaml":
+ 		this.ExecutorInitBBC(slotid)
+@@ -1058,7 +1058,7 @@ func (this *Producer) CheckSystemCompat(slotid int, filename string) bool {
+ 			current = 0x0001
+ 		case "apple2e-en.yaml", "apple2e-en-cpm.yaml":
+ 			current = 0x0010
+-		case "apple2-plus.yaml":
++		case "apple2-plus.yaml", "apple2-plus-videx.yaml":
+ 			current = 0x0002
+ 		case "apple2e.yaml":
+ 			current = 0x0004
+@@ -1201,7 +1201,7 @@ func (this *Producer) IsReconfigureNeeded(slotid int, filename string, profile s
+ 			current = 0x0001
+ 		case "apple2e-en.yaml", "apple2e-en-cpm.yaml":
+ 			current = 0x0010
+-		case "apple2-plus.yaml":
++		case "apple2-plus.yaml", "apple2-plus-videx.yaml":
+ 			current = 0x0002
+ 		case "apple2e.yaml":
+ 			current = 0x0004
+diff --git a/GoPath/src/paleotronic.com/octalyzer/assets/extra.go b/GoPath/src/paleotronic.com/octalyzer/assets/extra.go
+new file mode 100644
+index 0000000..3a6c9f8
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/octalyzer/assets/extra.go
+@@ -0,0 +1,49 @@
++package assets
++
++import (
++	"embed"
++	"io/fs"
++	"os"
++	"path"
++
++	"paleotronic.com/octalyzer/data"
++)
++
++//go:embed profile-extra/*.yaml
++var extraProfiles embed.FS
++
++// Profiles and ROMs added after assets.go was generated. Regenerating assets.go
++// would drop every profile: their sources are not in the tree, only the gzipped
++// copies inside that file.
++func init() {
++	addDir(data.Videx, ".", "data/", nil)
++	addDir(extraProfiles, "profile-extra", "profile/", _bintree.Children["profile"])
++}
++
++func addDir(fsys fs.FS, dir, prefix string, tree *bintree) {
++	entries, err := fs.ReadDir(fsys, dir)
++	if err != nil {
++		return
++	}
++	for _, e := range entries {
++		if e.IsDir() {
++			continue
++		}
++		b, err := fs.ReadFile(fsys, path.Join(dir, e.Name()))
++		if err != nil {
++			continue
++		}
++		name := prefix + e.Name()
++		bb := append([]byte(nil), b...)
++		fn := func() (*asset, error) {
++			return &asset{
++				bytes: bb,
++				info:  bindataFileInfo{name: name, size: int64(len(bb)), mode: os.FileMode(0444)},
++			}, nil
++		}
++		_bindata[name] = fn
++		if tree != nil {
++			tree.Children[e.Name()] = &bintree{Func: fn, Children: map[string]*bintree{}}
++		}
++	}
++}
+diff --git a/GoPath/src/paleotronic.com/octalyzer/assets/profile-extra/apple2-plus-videx.yaml b/GoPath/src/paleotronic.com/octalyzer/assets/profile-extra/apple2-plus-videx.yaml
+new file mode 100644
+index 0000000..aa411c5
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/octalyzer/assets/profile-extra/apple2-plus-videx.yaml
+@@ -0,0 +1,1791 @@
++--- !<tag:planetirata.com,machine>
++name: "Apple ][+ with Videx Videoterm"
++sortorder: 3
++id  : "apple2-plus-videx"
++font: "fonts/appleiifont.yaml"
++auxfonts: 
++ - "fonts/appleiifancyfont.yaml"
++ - "fonts/appleiiscififont.yaml"
++ - "fonts/osdfont.yaml"
++ - "fonts/appleiialtairfont.yaml"
++capsonly: true
++cpu:
++  model: "6502"
++  clocks: 1020484
++ram : 
++  - name: "main"
++    type: 0
++    size: 0x10000
++    base: 0x0000
++    regions:
++      - name: "all"
++        base: 0x0000
++        end : 0xffff
++      - name: "languagecard"
++        base: 0xd000
++        end : 0xffff
++      - name: "lcbank2"
++        base: 0xd000
++        end : 0xdfff
++        mux : 0xc000  
++  # - name: "aux"
++  #   type: 1
++  #   size: 0x10000
++  #   base: 0x0000
++  #   regions:
++  #     - name: "all"
++  #       base: 0x0000
++  #       end : 0xffff
++      # - name: "languagecard"
++      #   base: 0xd000
++      #   end : 0xffff
++      # - name: "lcbank2"
++      #   base: 0xd000
++      #   end : 0xdfff
++      #   mux : 0xc000
++  - name: "rom"
++    type: 2
++    base: 0x20000
++    size: 0x10000
++    regions:
++      - name: "monitor"
++        base: 0xf800
++        end : 0xffff
++        src : "data/apple2plus.rom"
++        srcbegin: 0x4800
++        srclength: 0x0800
++        active: true
++      - name: "applesoft"
++        base: 0xd000
++        end : 0xf7ff
++        src : "data/apple2plus.rom"
++        srcbegin: 0x2000
++        srclength: 0x2800
++        active: true
++      # - name: "intcxrom"
++      #   base: 0xc100
++      #   end : 0xcfff
++      #   src : "data/apple2plus.rom"
++      #   srcbegin: 0x0100
++      #   srclength: 0x0f00
++      #   active: false
++      # - name: "intc8rom"
++      #   base: 0xc800
++      #   end : 0xcfff
++      #   src : "data/apple2plus.rom"
++      #   srcbegin: 0x0800
++      #   srclength: 0x0800
++      #   active: false
++      # - name: "intc3rom"
++      #   base: 0xc300
++      #   end : 0xc3ff
++      #   src : "data/apple2plus.rom"
++      #   srcbegin: 0x0300
++      #   srclength: 0x0100
++      #   active: false
++components:
++  - type   : "apple2zeropage"
++    base   : 0
++    size   : 256
++  - type   : "apple2iochip"
++    base   : 0xc000
++    size   : 256
++    options: "sw80,swdbl,swaux,swalt"
++    misc   :
++      slots:
++        1: 
++          driver: "parallel"
++          slotrom:
++            source: "data/parallel.rom"
++            base: 0x000
++            size: 0x100
++        2:
++          driver: "superserialcard"
++          slotrom:
++            source: "data/superserial.rom"
++            base: 0x700
++            size: 0x100
++          exprom:
++            source: "data/superserial.rom"
++            base: 0x000
++            size: 0x700
++        3:
++          driver: "videx"
++          slotrom:
++            source: "data/videx_fw24.rom"
++            base: 0x300
++            size: 0x100
++          exprom:
++            source: "data/videx_fw24.rom"
++            base: 0x000
++            size: 0x400
++        4:
++          driver: "mockingboard"    
++        # 5:
++        #   driver: "mousecard"
++        6:
++          driver: "diskiicard"
++          slotrom:
++            source: "@{diskii.sectors==13,data/diskii_13s.rom,data/diskii_aw.rom}"
++            base: 0x000
++            size: 0x100
++        7:
++          driver: "smartport"
++layers:
++  - id     : TEXT
++    format : 1
++    index  : 0
++    type   : 0
++    base   : 0x400
++    blocks :
++      - base: 0x400
++        size: 0x400
++      - base: 0x10400
++        size: 0x400
++      - base: 0x30000
++        size: 0x400
++      - base: 0x30800
++        size: 0x400
++    active : 1
++    width  : 80
++    height : 48
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 79
++      y1   : 47
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : TXT2
++    format : 1
++    index  : 2
++    type   : 0
++    base   : 0x800
++    blocks :
++      - base: 0x800
++        size: 0x400
++      - base: 0x10800
++        size: 0x400
++      - base: 0x31000
++        size: 0x400
++      - base: 0x31800
++        size: 0x400
++    active : 0
++    width  : 80
++    height : 48
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 79
++      y1   : 47
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : MONI
++    format : 1
++    index  : 1
++    type   : 0
++    base   : 0x3e000
++    blocks :
++      - base: 0x3e000
++        size: 0x1000
++    active : 0
++    width  : 80
++    height : 48
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 79
++      y1   : 47
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : OOSD
++    format : 1
++    index  : 3
++    type   : 0
++    base   : 0x41000
++    blocks :
++      - base: 0x41000
++        size: 0x1000
++    active : 0 
++    width  : 80
++    height : 48
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 79
++      y1   : 47
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : LOGR
++    format : 3
++    index  : 0
++    type   : 1
++    base   : 0x400
++    blocks :
++      - base: 0x400
++        size: 0x400
++      - base: 0x10400
++        size: 0x400
++      - base: 0x30000
++        size: 0x400
++      - base: 0x30800
++        size: 0x400
++    active : 0
++    width  : 40
++    height : 48
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 39
++      y1   : 47
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : DLGR
++    format : 3
++    index  : 4
++    type   : 1
++    base   : 0x400
++    blocks :
++      - base: 0x400
++        size: 0x400
++      - base: 0x10400
++        size: 0x400
++      - base: 0x30000
++        size: 0x400
++      - base: 0x30800
++        size: 0x400
++    active : 0
++    width  : 80
++    height : 48
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 79
++      y1   : 47
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : HGR1
++    format : 5
++    index  : 1
++    type   : 1
++    base   : 0x2000
++    blocks :
++      - base: 0x2000
++        size: 0x2000
++    active : 0
++    width  : 280
++    height : 192
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 279
++      y1   : 191
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 0
++        green: 178
++        blue: 255
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : HGR2
++    format : 5
++    index  : 2
++    type   : 1
++    base   : 0x4000
++    blocks :
++      - base: 0x4000
++        size: 0x2000
++    active : 0
++    width  : 280
++    height : 192
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 279
++      y1   : 191
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 0
++        green: 178
++        blue: 255
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : VCTR
++    format : 7
++    index  : 3
++    type   : 1
++    base   : 0x42000
++    blocks :
++      - base: 0x42000
++        size: 0x10000
++    active : 0
++    width  : 280 
++    height : 192
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 279
++      y1   : 191
++    palette:
++      colorspace: 0
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : DHR1
++    format : 8
++    index  : 5
++    type   : 1
++    base   : 0x2000
++    blocks :
++      - base: 0x2000
++        size: 0x2000
++      - base: 0x12000
++        size: 0x2000
++    active : 0
++    width  : 560
++    height : 192
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 559
++      y1   : 191
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : DHR2
++    format : 8
++    index  : 6
++    type   : 1
++    base   : 0x4000
++    blocks :
++      - base: 0x4000
++        size: 0x2000
++      - base: 0x14000
++        size: 0x2000
++    active : 0
++    width  : 560
++    height : 192
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 559
++      y1   : 191
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : XGR1
++    format : 6
++    index  : 7
++    type   : 1
++    base   : 0x31000
++    blocks :
++      - base: 0x31000
++        size: 0x4000
++    active : 0
++    width  : 280
++    height : 192
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 279
++      y1   : 191
++    palette:
++      colorspace: 0
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 53
++        green: 167
++        blue: 51
++        alpha: 255
++      - red: 174
++        green: 76
++        blue: 204
++        alpha: 255
++      - red: 209
++        green: 217
++        blue: 223
++        alpha: 255
++      - red: 18
++        green: 26
++        blue: 32
++        alpha: 255
++      - red: 174
++        green: 105
++        blue: 51
++        alpha: 255
++      - red: 53
++        green: 138
++        blue: 204
++        alpha: 255
++      - red: 224
++        green: 224
++        blue: 224
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 96
++        green: 160
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : XGR2
++    format : 6
++    index  : 8
++    type   : 1
++    base   : 0x35000
++    blocks :
++      - base: 0x35000
++        size: 0x4000
++    active : 0
++    width  : 280
++    height : 192
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 279
++      y1   : 191
++    palette:
++      colorspace: 0
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 53
++        green: 167
++        blue: 51
++        alpha: 255
++      - red: 174
++        green: 76
++        blue: 204
++        alpha: 255
++      - red: 209
++        green: 217
++        blue: 223
++        alpha: 255
++      - red: 18
++        green: 26
++        blue: 32
++        alpha: 255
++      - red: 174
++        green: 105
++        blue: 51
++        alpha: 255
++      - red: 53
++        green: 138
++        blue: 204
++        alpha: 255
++      - red: 224
++        green: 224
++        blue: 224
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 96
++        green: 160
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : CUBE
++    format : 9
++    index  : 9
++    type   : 1
++    base   : 0x42000
++    blocks :
++      - base: 0x42000
++        size: 0x10000
++    active : 0
++    width  : 40 
++    height : 40
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 39
++      y1   : 39
++    palette:
++      colorspace: 0
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : LGR2
++    format : 3
++    index  : 10
++    type   : 1
++    base   : 0x800
++    blocks :
++      - base: 0x800
++        size: 0x400
++      - base: 0x10800
++        size: 0x400
++      - base: 0x30000
++        size: 0x400
++      - base: 0x30800
++        size: 0x400
++    active : 0
++    width  : 40
++    height : 48
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 39
++      y1   : 47
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : SHR1
++    format : 16
++    index  : 11
++    type   : 1
++    base   : 0x12000
++    blocks :
++      - base: 0x12000
++        size: 0x8000
++    active : 0
++    width  : 640
++    height : 200
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 639
++      y1   : 199
++    palette:
++      colorspace: 0
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 53
++        green: 167
++        blue: 51
++        alpha: 255
++      - red: 174
++        green: 76
++        blue: 204
++        alpha: 255
++      - red: 209
++        green: 217
++        blue: 223
++        alpha: 255
++      - red: 18
++        green: 26
++        blue: 32
++        alpha: 255
++      - red: 174
++        green: 105
++        blue: 51
++        alpha: 255
++      - red: 53
++        green: 138
++        blue: 204
++        alpha: 255
++      - red: 224
++        green: 224
++        blue: 224
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 96
++        green: 160
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++  - id     : DLG2
++    format : 3
++    index  : 12
++    type   : 1
++    base   : 0x800
++    blocks :
++      - base: 0x800
++        size: 0x400
++      - base: 0x10800
++        size: 0x400
++      - base: 0x30000
++        size: 0x400
++      - base: 0x30800
++        size: 0x400
++    active : 0
++    width  : 80
++    height : 48
++    bounds : 
++      x0   : 0
++      y0   : 0
++      x1   : 79
++      y1   : 47
++    palette:
++      colorspace: 1
++      items:
++      - red: 0
++        green: 0
++        blue: 0
++        alpha: 0
++      - red: 224
++        green: 0
++        blue: 48
++        alpha: 255
++      - red: 0
++        green: 0
++        blue: 128
++        alpha: 255
++      - red: 255
++        green: 0
++        blue: 255
++        alpha: 255
++      - red: 0
++        green: 128
++        blue: 0
++        alpha: 255
++      - red: 128
++        green: 128
++        blue: 128
++        alpha: 255
++      - red: 47
++        green: 149
++        blue: 229
++        alpha: 255
++      - red: 171
++        green: 171
++        blue: 255
++        alpha: 255
++      - red: 128
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 80
++        blue: 0
++        alpha: 255
++      - red: 192
++        green: 192
++        blue: 192
++        alpha: 255
++      - red: 255
++        green: 161
++        blue: 234
++        alpha: 255
++      - red: 0
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 0
++        alpha: 255
++      - red: 64
++        green: 255
++        blue: 144
++        alpha: 255
++      - red: 255
++        green: 255
++        blue: 255
++        alpha: 255
++restalgia:
++  - name: "tone"
++    inst: "WAVE=SAWTOOTH:VOLUME=1.0:ADSR=0,0,1,1"
++    port: 0x00
++  - name: "beep"
++    inst: "WAVE=SQUARE:VOLUME=1.0:ADSR=0,0,100,1"
++    port: 0x01
++  - name: "speaker"
++    inst: "WAVE=CUSTOM:VOLUME=1.0:ADSR=0,0,0,0"
++    port: 0x02
++  - name: "musicl"
++    inst: "WAVE=CUSTOM:VOLUME=1.0:ADSR=0,0,0,0"
++    port: 0x03
++  - name: "musicr"
++    inst: "WAVE=CUSTOM:VOLUME=1.0:ADSR=0,0,0,0"
++    port: 0x04
++  - name: "psgnoise0c0"
++    inst: "WAVE=NOISE:VOLUME=1.0:ADSR=0,0,1,1"
++    port: 0x05
++  - name: "psgtones0c0v0"
++    inst: "WAVE=SQUARE:VOLUME=1.0:ADSR=0,0,1,1"
++    port: 0x06
++  - name: "psgtones0c0v1"
++    inst: "WAVE=SQUARE:VOLUME=1.0:ADSR=0,0,1,1"
++    port: 0x07
++  - name: "psgtones0c0v2"
++    inst: "WAVE=SQUARE:VOLUME=1.0:ADSR=0,0,1,1"
++    port: 0x08
++  - name: "psgnoise0c1"
++    inst: "WAVE=NOISE:VOLUME=1.0:ADSR=0,0,1,1"
++    port: 0x09
++  - name: "psgtones0c1v0"
++    inst: "WAVE=SQUARE:VOLUME=1.0:ADSR=0,0,1,1"
++    port: 0x0a
++  - name: "psgtones0c1v1"
++    inst: "WAVE=SQUARE:VOLUME=1.0:ADSR=0,0,1,1"
++    port: 0x0b
++  - name: "psgtones0c1v2"
++    inst: "WAVE=SQUARE:VOLUME=1.0:ADSR=0,0,1,1"
++    port: 0x0c
++  - name: "cassette"
++    inst: "WAVE=CUSTOM:VOLUME=1.0:ADSR=0,0,0,0"
++    port: 0x0d
++  - name: "boom"
++    inst: "WAVE=NOISE:VOLUME=1.0:ADSR=0,0,0,0"
++    port: 0x0e
+\ No newline at end of file
+diff --git a/GoPath/src/paleotronic.com/octalyzer/data/videx.go b/GoPath/src/paleotronic.com/octalyzer/data/videx.go
+new file mode 100644
+index 0000000..72b83f8
+--- /dev/null
++++ b/GoPath/src/paleotronic.com/octalyzer/data/videx.go
+@@ -0,0 +1,6 @@
++package data
++
++import "embed"
++
++//go:embed videx_*.rom
++var Videx embed.FS
+diff --git a/GoPath/src/paleotronic.com/wasm/main.go b/GoPath/src/paleotronic.com/wasm/main.go
+index 7216df1..9094a5a 100644
+--- a/GoPath/src/paleotronic.com/wasm/main.go
++++ b/GoPath/src/paleotronic.com/wasm/main.go
+@@ -27,6 +27,9 @@ import (
+ 
+ var ram *memory.MemoryMap
+ 
++// The Videx picture, kept so a frame that has not changed is not copied again.
++var videxFrame []byte
++
+ const slot = 0
+ 
+ func ready() bool {
+@@ -69,6 +72,9 @@ func speakerOut(index int, channel int, data []uint64, rate int, packed bool) {
+ 
+ func boot() {
+ 	settings.Verbose = js.Global().Get("microM8Verbose").Truthy()
++	if p := js.Global().Get("microM8Profile"); p.Type() == js.TypeString && p.String() != "" {
++		settings.SpecFile[slot] = p.String() + ".yaml"
++	}
+ 	if !settings.Verbose {
+ 		stdlog.SetOutput(io.Discard)
+ 	}
+@@ -202,14 +208,17 @@ func api() map[string]any {
+ 			for _, m := range apple2helpers.GetActiveTextModes(e) {
+ 				modes = append(modes, m)
+ 			}
++			io := ioChip()
+ 			return map[string]any{
+ 				"dialect":  e.GetDialect().GetShortName(),
+ 				"pureBoot": settings.PureBoot(slot),
+ 				"pc":       cpu.PC, "a": cpu.A, "x": cpu.X, "y": cpu.Y, "sp": cpu.SP, "p": cpu.P,
+-				"modes":  modes,
+-				"speed":  cpu.GetWarp(),
+-				"cycles": float64(cpu.GlobalCycles),
+-				"disk0":  settings.PureBootVolume[slot],
++				"modes":        modes,
++				"speed":        cpu.GetWarp(),
++				"cycles":       float64(cpu.GlobalCycles),
++				"disk0":        settings.PureBootVolume[slot],
++				"videx":        io != nil && io.Videx() != nil,
++				"videxShowing": io != nil && io.VidexShowing(),
+ 			}
+ 		}),
+ 		// paddle(n, value): game port paddle n (0-3) turned to value, 0 to 255.
+@@ -266,6 +275,36 @@ func api() map[string]any {
+ 			}
+ 			return nil
+ 		}),
++		// videx(dst) copies the Videx card's picture (videxWidth x videxHeight RGBA)
++		// into dst and returns true, or returns false when there is no card or
++		// nothing changed.
++		"videx": js.FuncOf(func(this js.Value, args []js.Value) any {
++			io := ioChip()
++			if io == nil || io.Videx() == nil {
++				return false
++			}
++			if videxFrame == nil {
++				videxFrame = make([]byte, apple2.VidexWidth*apple2.VidexHeight*4)
++			}
++			if !io.Videx().Render(videxFrame, apple2helpers.GetCPU(innermost()).GlobalCycles) {
++				return false
++			}
++			js.CopyBytesToJS(args[0], videxFrame)
++			return true
++		}),
++		// videxRAM() is the card's 2K and then R12, R13, or null when there is no card.
++		"videxRAM": js.FuncOf(func(this js.Value, args []js.Value) any {
++			io := ioChip()
++			if io == nil || io.Videx() == nil {
++				return nil
++			}
++			b := io.Videx().Snapshot()
++			out := js.Global().Get("Uint8Array").New(len(b))
++			js.CopyBytesToJS(out, b)
++			return out
++		}),
++		"videxWidth":  apple2.VidexWidth,
++		"videxHeight": apple2.VidexHeight,
+ 		// frame(dst) copies the newest frame into dst (a Uint8Array or Uint8ClampedArray of
+ 		// 560*192*4 bytes) and returns true, or returns false when nothing changed.
+ 		"frame": js.FuncOf(func(this js.Value, args []js.Value) any {

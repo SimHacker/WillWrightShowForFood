@@ -25,7 +25,7 @@ patches:
       firmware 2.4 and the normal, uppercase, APL and Spanish character sets match MAME's
       checksums.
     for: upstream, with the card
-    status: ROMs only; assets.go is not regenerated and no card uses them yet
+    status: ROMs only; the card that uses them is 0005
   0003-m8lib-library-tool.patch:
     what: >
       tools/m8lib: lists microM8's shared library (the /appleii mount) over its DuckTape
@@ -51,6 +51,36 @@ patches:
     status: >
       applies after 0001-0003 and builds; 220 cabinet tests pass, including keyboard, disk
       boot and the speaker
+  0005-videx-videoterm.patch:
+    what: >
+      A Videx Videoterm in slot 3. 6845 registers at $C0B0, 2K of screen RAM in four 512-byte
+      banks at $CC00-$CDFF, firmware 2.4 in the slot ROM and at $C800, and a 720x216 picture
+      drawn the same way as the //e 80-column text: one character-ROM dot, one pixel, white on
+      black. The Apple II+ profile apple2-plus-videx. Annunciator 0 shows the card while text
+      mode is on. Writes to $C800-$CFFF reach the card even though that range has no write page,
+      and a write is the strobe that turns the screen RAM on.
+    for: upstream
+    status: >
+      applies after 0001-0004 and the wasm build succeeds. 231 cabinet tests pass, including
+      the card's ROM, screen RAM, cursor, reset, graphics switch and Don's Forth banner.
+      GetYAML/SetYAML are there; freeze and thaw were not run (no desktop build). The speed
+      bench was not re-run.
+  0006-serial-2651-card.patch:
+    what: >
+      The serial card Don's Forth drives from slot 4: a Signetics 2651 communications chip
+      with no firmware, selected by reading $C400, its data, status, mode and command
+      registers at $CE00-$CE03 in the card's $C800 space, and an interrupt latch at $CE41 (on)
+      and $CE40 (off). Mode register 2's baud code paces the receiver; the card raises IRQ
+      while a byte waits and the latch is on. The other end is the host: serialSend(bytes)
+      and serialTake() in the JavaScript API. A card with registers in $C800 and no
+      expansion ROM owns that space the way a ROM card does (C8RAMCard), and
+      apple2-plus-videx has this card in slot 4 instead of a Mockingboard.
+    for: upstream, with a name for the card if anyone knows which one it was
+    status: >
+      applies after 0001-0005 and the wasm build succeeds. Don's H19 terminal boots into
+      `term`, shows what arrives on the line through its interrupt handler, sends the keys,
+      and button 1 with F enters Forth. The chip's error bits, break, the modem lines and
+      the transmitter's pacing are not modeled; GetYAML/SetYAML keep nothing.
 next:
   - "WebAssembly: the full desktop build still stops at go-gl/gl, go-gl/glfw and portaudio, and
     at octalyzer/ui/chat and ui/forumtool, which import paleotronic.com/server packages that
@@ -58,7 +88,7 @@ next:
   - "Speed: per-cycle device clocking (video scanner, speaker, every card) is the largest cost
     left; reads below $10000 allocate because the value pointer escapes into listener
     interfaces; mouse and SmartPort tick every cycle when unused."
-  - "Videx card: videx.go (6845 registers, 2K screen RAM in four 512-byte banks at $CC00-$CDFF,
-    chosen by reads of $C0B0/$C0B4/$C0B8/$C0BC), a writable $CC00 window in memcxxx.go, an 80x24
-    text layer, annunciator 0 routed to the card, an Apple II+ profile with slot 3 = videx.
-    MAME's a2videoterm.cpp (BSD-3) is the reference."
+  - "Videx: the card's picture is drawn by the wasm page, not by microM8's own GL window.
+    The light pen is LIGHTPEN.md."
+  - "Serial: the desktop build's line devices (telnet server, virtual modem) behind the 2651
+    card, as the Super Serial Card has them."

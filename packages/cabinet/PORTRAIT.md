@@ -257,9 +257,9 @@ touchscreen IBM PC, made with their guidance.
 
 ### Detectors, actuators and the shape of an action
 
-Bill Buxton's *Lexical and Pragmatic Considerations of Input Structures*
-([author's publications](https://www.billbuxton.com/papers.html)) is the
-conceptual reference: study the physical structure of input and its use in
+Bill Buxton's [*Lexical and Pragmatic Considerations of Input
+Structures*](https://www.billbuxton.com/lexical.pdf) is the conceptual
+reference: study the physical structure of input and its use in
 context, as well as the command eventually delivered. Each device declares
 what it senses and drives, with units, thresholds and timing: a pen's
 aperture, a key's travel, a knob's detents and end stops, a switch that

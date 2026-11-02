@@ -1,0 +1,167 @@
+--- page 1
+a
+; The Soft Video Switch
+
+The Soft Video Switch is an automatic version of the Switchplate
+assembly. It will automatically switch to 80 columns when any
+character is sent to the Videoterm. If any color graphics mode is ac-
+tive, the Soft Video Switch will automatically switch to the 40 column
+video signal. When the graphics mode is deselected, the Soft Video
+Switch returns to the previous mode.
+
+Installation and checkout of the Soft Video Switch.
+1) Turn the Apple ][ off and remove the cover.
+
+2) Locate the I.C. chip F-14 on the motherboard. It is the second chip
+down from the game I/O socket. The chip is either a 9334 or a 74LS259.
+Carefully remove this chip with an IC puller or a small flat bladed
+screwdriver. Set this chip aside.
+
+3) Plug the Soft Video Switch into the F-14 socket. The five prong
+molex connector should face the keyboard. Be sure that all of the pins
+go into the socket.
+
+4) Place the chip that you removed from the F-14 socket into the
+socket on the Soft Video Switch. The notched end should point toward
+the keyboard (the same direction as before).
+
+5) Plug the three wire cable from the Soft Video Switch onto the four
+prong video connector on the Apple ][ motherboard. The cable should
+be oriented so that the two empty holes at the top of the plug are to
+the right of the Apple ][ (i.e. away from the power supply). Please note
+the four prong video connector on the Soft Video Switch. This connec-
+tor is a direct replacement of the video connector on ‘he motherboard
+(for RF modulators).
+
+6) Plug the two wire cable from the Soft Video Switc:; onto the five pin
+video connector on the Videoterm.
+
+7) Plug the cable supplied with the Videoterm « :to the five prong
+video connector on the Soft Video Switch. This c: -ie should be con-
+nected to a monochromatic video monitor.
+
+8) Turn your Apple on. If the speaker does not’ -p upon powe: up,
+turn your Apple off and re-check your installation. ay particular atten-
+tion to step 4. ul
+
+SVS-MAN-000
+--- page 2
+9) If you have an Autostart ROM, Apple Language Card, or an Apple ][
+plus, goto step 10. Otherwise, your display will probably be blank. If so
+type the following:
+
+C058 (CR)
+
+10) Adjust the 40 column video level adjustment (a little turn dial on
+the Soft Video Switch) so that you can see the 40 column screen. You
+should adjust this to be the same strength as the Videoterm’s output
+signal.
+
+Soft Video Switch Theory of Operation.
+
+The Soft Video Switch is controlled by two conditions: the state of
+annunciator zero and the color killer signal. If the color killer is off, the
+Apple ][ is in its color graphics mode and the Soft Video Switch will
+always display 40 columns (i.e. graphics). If the color killer is on, the
+Soft Video Switch follows the state of annunciator zero (set to off by
+Autostart on power up and reset). If the annunciator is off, the Soft
+Video Switch displays 40 columns. If the annunciator is on, 80 col-
+umns is displayed. The firmware on the Videoterm sets annunciator
+zero on as EACH character is output. To turn annuciator zero on, a
+memory reference to $CO58 (-16296) must be made. To turn it off,
+$CO59 (-16295).
+
+Use of the Soft Video Switch.
+To enter 80 columns, type:
+
+PR#3 (CR)
+
+To go back to 40 columns, hit Reset or type a control Z immediately
+followed by a “1”. A control X should be used to prevent an error
+message in immediate mode. A return is not required.
+--- page 3
+Shift Wire Mod.
+
+To install the shift wire mod, connect a wire from pin one of chip
+H14 to the second pin from the right (farthest away from the power
+supply) of the keyboard connector comb on the encoder board of the
+keyboard.
+
+Control A now becomes a shift lock/unlock and the shift keys
+operate normally. With the shift wire mod, these characters are
+available:
+
+Character Mode Description
+Left Bracket Shift lock Control K
+Right Bracket Shift lock Shift M
+
+Left Brace Shift unlock Control K
+
+Right Brace Shift unlock Shift 0 (zero)
+--- page 4
+80 -COLUMN IN
+
+CONNECTOR
+
++ BV [PIN 16] BLOCK
+
+4
+2N3904
+ne [NEXT TO —
+
+9334 RESISTORS)
+INS14
+
+PIN4 «—k}—4
+
+SWITCHED VIDEO OUT
+
+5-PRONG
+QUTPUT
+
+COLOR KILLER
+LOW WHEN GRAPHICS IS ON
+HIGH WHEN GRAPHICS IS OFF ¢
+
+INS14
+
+ang PINS «—}—_A
+LOW - 40 coLumns [NEXT TO
+
+APPLE
+
+VIDEO IN -5+12
+
+4-PRONG
+OUTPUT
+
+a 3-WIRE
+HIGH = 80 COLUMNS CABLE]
+
+PINS —e |
+
+(THE 9334 IS =
+WIRED TO
+CORRESPONDING *
+PINS ON THE
+HEADER)
+
+VIDEX INC.
+
+897 N.W. GRANT AVE.
+CORVALLIS, ORE 97330
+
+SOFT VIDEO SWF
+
+DATE: [DAN BY:
+24 OCT 81] J. BAILEY | S'
+
+© VIDEX INC. 1°
+
+0521
+
+503/758:
+
+497330 U.S.A. ¢
+
+CORVALLIS,

@@ -26,7 +26,7 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 14 | The big dive | TAGS-AND-PIES §12 steps 8–10, mostly MicropolisCore | — |
 | 15 | DUEL from tape to source, proven by round trip | a showpiece, not a blocker: DUEL already runs and explains its halt | [§15](#15-duel-from-tape-to-source) |
 | 16 | Forth turtle with a 340 and a PIXIE back end; Forth symbols as subpictures; drag a vertex on the tube | Forth drawings PIXIE can edit; needs serve-back and the element decode | [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module) |
-| 17 | Cartridges as files: build cache, `extends`, eggs, live decode, GitHub commits and PRs, CI | many programs from one Forth; edits that end up deployed | [CARTRIDGES.md](CARTRIDGES.md#8-order-of-work) |
+| 17 | Cartridges as files: build cache, `parents` and mixins, eggs, live decode, GitHub commits and PRs, CI | many programs from one Forth; edits that end up deployed | [CARTRIDGES.md](CARTRIDGES.md#8-order-of-work) |
 | 18 | Turtle programming by demonstration, after CADroid's `?[ ][ ]` | drag and key the turtle, get Forth; loops and branches by acting out the first pass | [§16](#16-programming-the-turtle-by-demonstration) |
 
 Odds and ends are in [§14](#14-small-items).

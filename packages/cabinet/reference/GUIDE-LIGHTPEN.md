@@ -87,4 +87,6 @@ to run when it's hit, once the kernel has `EVALUATE`.
   tests), planned in [BEAM-AND-PEN.md](../BEAM-AND-PEN.md); the Engelbart Cursor Party, eight people at one tube
   ([ROADMAP §7](../ROADMAP.md#7-several-pens-the-engelbart-cursor-party)).
 
+The same pen object on the Apple, aimed at a Videx cell or at paddle 0, is [LIGHTPEN.md](../LIGHTPEN.md).
+
 ↑ [GUIDE](GUIDE.md) · [reference library](README.md)

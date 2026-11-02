@@ -6,7 +6,7 @@
 // packages/cabinet/scripts/microm8-wasm.mjs.
 
 import { asset } from '$app/paths';
-import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, startMicroM8 } from '@wwsff/cabinet/microm8';
+import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, VIDEX_BYTES, VIDEX_HEIGHT, VIDEX_WIDTH, startMicroM8 } from '@wwsff/cabinet/microm8';
 
 /** @param {string} src */
 function loadScript(src) {
@@ -23,6 +23,8 @@ class MicroM8Machine {
 	/** @type {'idle' | 'loading' | 'running' | 'error'} */
 	phase = $state('idle');
 	error = $state('');
+	/** The machine profile it was switched on with, without ".yaml"; '' is the //e. Fixed once on. */
+	profile = $state('');
 	/** @type {import('@wwsff/cabinet/microm8').MicroM8Status | null} */
 	status = $state(null);
 	/** Names of the disks in drives 1 and 2, '' when empty. */
@@ -36,6 +38,8 @@ class MicroM8Machine {
 	sound = $state(true);
 	/** The game port's outputs AN0-AN3 as bits 0-3. */
 	annunciators = $state(0);
+	/** The monitor is showing the Videx 80-column picture. */
+	videxShowing = $state(false);
 	/** Paddles 0 and 1 follow the pointer over the screen; its buttons are pushbuttons 0 and 1. */
 	mouseStick = $state(false);
 	/** Name of the gamepad driving the paddles, '' when none. */
@@ -56,6 +60,7 @@ class MicroM8Machine {
 	/** @type {Promise<void> | null} */
 	#starting = null;
 	#pixels = new Uint8ClampedArray(FRAME_BYTES);
+	#videxPixels = new Uint8ClampedArray(VIDEX_BYTES);
 
 	start() {
 		this.#starting ??= this.#start();
@@ -75,7 +80,7 @@ class MicroM8Machine {
 			} else {
 				const response = await fetch(asset('/microm8/microm8.wasm'));
 				if (!response.ok) throw new Error(`microm8.wasm: ${response.status} ${response.statusText}`);
-				this.#m = await startMicroM8(g.Go, response);
+				this.#m = await startMicroM8(g.Go, response, { profile: this.profile });
 			}
 			this.#m.speed(this.warp);
 			this.phase = 'running';
@@ -86,13 +91,19 @@ class MicroM8Machine {
 	}
 
 	/**
-	 * Draw frames into `canvas` (FRAME_WIDTH x FRAME_HEIGHT) until the returned function is called.
+	 * Draw frames into `canvas` (the Apple, FRAME_WIDTH x FRAME_HEIGHT) and `videx` (the
+	 * Videoterm, VIDEX_WIDTH x VIDEX_HEIGHT) until the returned function is called.
 	 * @param {HTMLCanvasElement} canvas
+	 * @param {HTMLCanvasElement | null} [videx]
 	 */
-	attach(canvas) {
+	attach(canvas, videx = null) {
 		const ctx = canvas.getContext('2d');
+		const vctx = videx?.getContext('2d') ?? null;
 		if (!ctx) return () => {};
+		ctx.imageSmoothingEnabled = false;
+		if (vctx) vctx.imageSmoothingEnabled = false;
 		const image = new ImageData(this.#pixels, FRAME_WIDTH, FRAME_HEIGHT);
+		const vimage = vctx ? new ImageData(this.#videxPixels, VIDEX_WIDTH, VIDEX_HEIGHT) : null;
 		let raf = 0;
 		let polled = 0;
 		let lastCycles = 0;
@@ -105,6 +116,9 @@ class MicroM8Machine {
 				ctx.putImageData(image, 0, 0);
 				this.frames++;
 			}
+			const show = !!m.status().videxShowing;
+			if (show !== this.videxShowing) this.videxShowing = show;
+			if (show && vctx && vimage && m.videx(this.#videxPixels)) vctx.putImageData(vimage, 0, 0);
 			this.#play(m);
 			this.#pollGamepad(m);
 			const an = m.annunciators();
@@ -233,13 +247,16 @@ class MicroM8Machine {
 
 	/**
 	 * Put a disk in drive 0 or 1 of the running Apple, the way a hand swaps floppies: nothing
-	 * restarts. Given to a machine not yet switched on, a drive 1 disk is what it boots.
+	 * restarts. Given to a machine not yet switched on, a drive 1 disk is what it boots, on
+	 * `profile`.
 	 * @param {string} name
 	 * @param {Uint8Array} bytes
 	 * @param {number} drive
+	 * @param {string} [profile]
 	 */
-	async insert(name, bytes, drive = 0) {
+	async insert(name, bytes, drive = 0, profile = '') {
 		const off = this.phase === 'idle';
+		if (off) this.profile = profile;
 		await this.start();
 		const m = this.#m;
 		if (!m) return;

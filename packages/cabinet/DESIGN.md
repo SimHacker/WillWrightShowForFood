@@ -951,7 +951,7 @@ composing.
 
 ## Cartridges and live coding
 
-The format, the build cache, `extends`, live decoding, eggs and the git workflow are in
+The format, the build cache, `parents` and mixins, live decoding, eggs and the git workflow are in
 [CARTRIDGES.md](CARTRIDGES.md). This section keeps the name, variants and the LIVE CODING panel.
 
 **The name.** What the menu calls a program is really a whole configuration: which machine, which

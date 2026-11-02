@@ -23,6 +23,7 @@ what's reusable here — don't leave genius on a dead branch.
 | [`ecg/`](ecg/README.md) | ECG (`@wwsff/ecg`) — Embedded Constraint Graphics as courseware; design stage |
 | [`turing/`](turing/SCHEMA.yml) | YAML-Jazz Turing machines (Cherniak-class + UTMs); the recovered PCOMP disk in [`PCOMP.md`](turing/PCOMP.md) |
 | [`bridge/`](bridge/README.md) | Bridge (`@wwsff/bridge`) — the base layer for game bridges: binary records declared as data and encoded back over the original bytes, comment-preserving YAML Jazz merges, world locations as `FILE#key/sub`. Used by the cabinet's Wizardry worlds |
+| [`flavors/`](flavors/README.md) | Flavors (`@wwsff/flavors`) — directories that inherit from directories: bases and mixins, C3 precedence, merge-patch overlay rules, comments kept, YAML/JSON/OGDL and plugin syntaxes in and out, files kept at their flavor's path, LiquidJS templates, recipe steps with output/zip builders, and an optional full form of who set what. The cabinet's cartridges are its first user |
 | [`sunos-bar/`](sunos-bar/README.md) | SunOS bar (`@wwsff/sunos-bar`) — reads SunOS 4 bar archives from raw 1/4-inch Sun tape dumps; compress(1) decoding; reads past damaged blocks. Tested on a 1992 Turing Institute tape |
 
 Future packages may wrap [MicropolisCore](https://github.com/SimHacker/MicropolisCore) deps

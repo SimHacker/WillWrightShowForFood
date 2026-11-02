@@ -4,11 +4,17 @@
 //
 // The screen is microM8's own scan renderer: a 560x192 RGBA frame made at every vertical
 // blank, covering text, lores, hires, double hires and mixed modes. A page draws it into a
-// canvas at 560x384 (each row twice), the shape of an Apple monitor.
+// canvas at 560x384 (each row twice), the shape of an Apple monitor. A Videx Videoterm, on
+// a II+ profile, draws its own 720x216 picture the same way: one character-ROM dot, one pixel.
 
 export const FRAME_WIDTH = 560;
 export const FRAME_HEIGHT = 192;
 export const FRAME_BYTES = FRAME_WIDTH * FRAME_HEIGHT * 4;
+
+/** The Videoterm's picture: 80 by 24 cells, 9 dots by 9 lines. */
+export const VIDEX_WIDTH = 720;
+export const VIDEX_HEIGHT = 216;
+export const VIDEX_BYTES = VIDEX_WIDTH * VIDEX_HEIGHT * 4;
 
 export interface MicroM8Status {
 	/** microM8's interpreter in the slot; "fp" even while the 6502 runs a disk. */
@@ -29,6 +35,10 @@ export interface MicroM8Status {
 	speed: number;
 	/** 6502 cycles since the last reset; two readings over time give the real speed. */
 	cycles: number;
+	/** A Videx Videoterm is plugged in. */
+	videx: boolean;
+	/** The monitor is showing the Videx: annunciator 0 on, and not a graphics mode. */
+	videxShowing: boolean;
 }
 
 /** What the Go side puts on globalThis.microM8. */
@@ -49,6 +59,16 @@ export interface MicroM8Api {
 	readMemory(address: number, length: number): Uint8Array;
 	writeMemory(address: number, bytes: Uint8Array): void;
 	frame(into: Uint8Array | Uint8ClampedArray): boolean;
+	/** The Videx picture, 720x216 RGBA. False when there is no card or nothing changed. */
+	videx(into: Uint8Array | Uint8ClampedArray): boolean;
+	/** The card's 2K of screen RAM, then R12 and R13. Null when there is no card. */
+	videxRAM(): Uint8Array | null;
+	/** Queues bytes for the 2651 serial card to receive. False when there is no card. */
+	serialSend(bytes: Uint8Array): boolean;
+	/** What the serial card sent since the last call. Null when there is no card. */
+	serialTake(): Uint8Array | null;
+	videxWidth: number;
+	videxHeight: number;
 	/** Moves waiting speaker samples into a byte view of a Float32Array; returns how many. */
 	audio(into: Uint8Array): number;
 	audioRate(): number;
@@ -76,12 +96,16 @@ interface Host {
 	microM8?: MicroM8Api;
 	microM8Exited?: Promise<void>;
 	microM8Verbose?: boolean;
+	/** Profile name without ".yaml", empty for the //e. Read once, at boot. */
+	microM8Profile?: string;
 	onMicroM8Ready?: (ok: boolean) => void;
 }
 
 export interface StartOptions {
 	/** Print microM8's own logging to the console. */
 	verbose?: boolean;
+	/** Machine profile, without ".yaml": "apple2-plus-videx" is a II+ with a Videoterm. */
+	profile?: string;
 }
 
 /**
@@ -97,6 +121,7 @@ export async function startMicroM8(
 	const host = globalThis as unknown as Host;
 	if (host.microM8 && host.microM8Exited) return new MicroM8(host.microM8, host.microM8Exited);
 	host.microM8Verbose = options.verbose ?? false;
+	host.microM8Profile = options.profile ?? "";
 	const ready = new Promise<boolean>((resolve) => {
 		host.onMicroM8Ready = resolve;
 	});
@@ -123,9 +148,43 @@ export async function startMicroM8(
 /** A key as a DOM KeyboardEvent describes it; only these fields are read. */
 export interface KeyLike {
 	key: string;
+	/** The key's place on the keyboard (KeyF, Digit1); read when Alt changes what `key` says. */
+	code?: string;
 	ctrlKey?: boolean;
+	shiftKey?: boolean;
 	altKey?: boolean;
 	metaKey?: boolean;
+}
+
+// US layout, unshifted and shifted, for the keys that are not letters or digits.
+const CODE_CHARS: Record<string, [string, string]> = {
+	Backquote: ["`", "~"],
+	Minus: ["-", "_"],
+	Equal: ["=", "+"],
+	BracketLeft: ["[", "{"],
+	BracketRight: ["]", "}"],
+	Backslash: ["\\", "|"],
+	Semicolon: [";", ":"],
+	Quote: ["'", '"'],
+	Comma: [",", "<"],
+	Period: [".", ">"],
+	Slash: ["/", "?"],
+	Space: [" ", " "],
+};
+const SHIFTED_DIGITS = ")!@#$%^&*(";
+
+/**
+ * The character a key makes with Alt left out. Alt is the Apple's pushbuttons (Open and
+ * Solid Apple on a //e, Meta on Don's keyboard), held while the key is typed, so Alt-F is F
+ * with button 0 down; on a Mac, Option-F alone would type "ƒ".
+ */
+function baseKey(ev: KeyLike): string | null {
+	const code = ev.code ?? "";
+	if (/^Key[A-Z]$/.test(code)) return ev.shiftKey ? code[3]! : code[3]!.toLowerCase();
+	if (/^Digit[0-9]$/.test(code)) return ev.shiftKey ? SHIFTED_DIGITS[Number(code[5])]! : code[5]!;
+	const pair = CODE_CHARS[code];
+	if (pair) return pair[ev.shiftKey ? 1 : 0];
+	return ev.key.length === 1 ? null : ev.key;
 }
 
 const NAMED_KEYS: Record<string, number> = {
@@ -145,11 +204,13 @@ const NAMED_KEYS: Record<string, number> = {
  * //e's Caps Lock down, letters go in as capitals: DOS 3.3 and Integer BASIC know no others.
  */
 export function appleKey(ev: KeyLike, caps = false): number | null {
-	if (ev.metaKey || ev.altKey) return null;
-	const named = NAMED_KEYS[ev.key];
+	if (ev.metaKey) return null;
+	const key = ev.altKey ? baseKey(ev) : ev.key;
+	if (key === null) return null;
+	const named = NAMED_KEYS[key];
 	if (named !== undefined) return named;
-	if (ev.key.length !== 1) return null;
-	const c = ev.key.charCodeAt(0);
+	if (key.length !== 1) return null;
+	const c = key.charCodeAt(0);
 	if (c >= 128) return null;
 	if (ev.ctrlKey) return c >= 0x40 && c < 0x80 ? c & 0x1f : null;
 	return caps && c >= 0x61 && c <= 0x7a ? c - 0x20 : c;
@@ -268,6 +329,45 @@ export class MicroM8 {
 	/** Copy the newest frame into `into` (FRAME_BYTES long); false when it hasn't changed. */
 	frame(into: Uint8Array | Uint8ClampedArray): boolean {
 		return this.api.frame(into);
+	}
+
+	/** The Videx picture, VIDEX_BYTES long. False when there is no card or nothing changed. */
+	videx(into: Uint8Array | Uint8ClampedArray): boolean {
+		return this.api.videx(into);
+	}
+
+	/**
+	 * The 24 rows of the Videx screen, 80 columns, from its RAM and the 6845 start
+	 * address. Control codes are spaces. Empty when there is no card.
+	 */
+	videxText(): string[] {
+		const raw = this.api.videxRAM();
+		if (!raw) return [];
+		const start = ((raw[2048]! << 8) | raw[2049]!) & 0x7ff;
+		const rows: string[] = [];
+		for (let y = 0; y < 24; y++) {
+			let row = "";
+			for (let x = 0; x < 80; x++) {
+				const b = raw[(start + y * 80 + x) & 0x7ff]! & 0x7f;
+				row += b < 0x20 ? " " : String.fromCharCode(b);
+			}
+			rows.push(row);
+		}
+		return rows;
+	}
+
+	/**
+	 * Sends to the serial card: the Apple receives the bytes at its baud rate, a string as
+	 * Latin-1. False when the machine has no card.
+	 */
+	serialSend(data: Uint8Array | string): boolean {
+		const bytes = typeof data === "string" ? Uint8Array.from(data, (c) => c.charCodeAt(0) & 0xff) : data;
+		return this.api.serialSend(bytes);
+	}
+
+	/** What the Apple sent on the serial card since the last call; empty when there is no card. */
+	serialTake(): Uint8Array {
+		return this.api.serialTake() ?? new Uint8Array();
 	}
 
 	/**

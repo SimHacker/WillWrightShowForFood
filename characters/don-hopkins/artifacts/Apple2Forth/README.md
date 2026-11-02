@@ -1,5 +1,12 @@
 # Don's ProDOS Forth and H19 terminal, Apple ][
 
+A Forth Don wrote for the Apple ][ under ProDOS, starting from fig-FORTH, with an H19 terminal
+emulator built on it in its own RPN 6502 assembler. The terminal is how he reached the ARPANET
+and MIT-AI ([lineage](../../career/lineage.yml)). What survives is the bootable disk from May
+1990, its 48 blocks of source, a capture of the serial line, and the Forth that uploaded the
+Apple's ROMs and disk blocks to Unix. This directory is the restoration: what each file is, what
+the system does, and what is left to bring it back running in the cabinet's browser Apple.
+
 | File | What it is |
 |------|-----------|
 | [`forth.dsk`](forth.dsk) | 140K ProDOS volume `/H19` in ProDOS block order (a `.po` image). Boots. |
@@ -19,14 +26,46 @@ handler and a ring buffer, baud rates to 38400, and H19 escape sequences. `BLOCK
 blocks of source, 64-column text.
 
 Startup: block 3, which builds the system, sets `4 ABORT-LOAD-BLK !`, so block 4 is loaded at
-every start and abort. Block 4 runs `init-term von`, prints the banner, then `term`. In the
-terminal, Ctrl-\ (character 28) quits to Forth. The Videx Soft Video Switch follows annunciator 0:
-a reference to `$C058` shows the Videx's 80 columns, `$C059` the Apple's 40. `VIDOFF` touches
-`$C058` and `VIDON` touches `$C059`. `von` and `voff` are separate, longer words, not yet decoded.
+every start and abort. Block 4 runs `init-term von`, prints the banner, then `term`.
 
-To run it in microM8: `microM8 -drive1 forth.po` on a copy, since microM8 writes to the image.
-microM8 has no Videx card. A copy with `init-term`, `von` and `term` commented out of block 4
-boots straight to the `Ok` prompt.
+`TERM` loops: `POLL-KBD`, then a byte from the serial ring buffer to the H19 emulator, or
+`RELAX`. The keyboard has two game-port buttons on it. Button 0 (`$C061`) is Meta: a key typed
+with it held goes out with bit 7 set. Button 1 (`$C062`) is the command shift: the key indexes
+`KEYCMDS`, 128 words, `ERROR-SOUND` where nothing is defined:
+
+| Key with button 1 | Word |
+|---|---|
+| F | `ENTER-FORTH`, prints `[Forth]` and leaves the terminal |
+| T | `ENTER-TERM` |
+| R | `INIT-TERM` |
+| I | `INIT-MODEM` |
+| M | `SET-MINPUT` |
+| P | `PRINT-SCREEN` |
+| U | `UPDATE-VIDEX` |
+| V | `SETVID` |
+| W | `SETWRAP` |
+| Z | `ZAP-MBUFF` |
+| Ctrl-Q | `EMPTY-MBUFF` |
+| , | `BUMP-MBUFF` |
+| Space | `UNDER-CUR` |
+| arrows (Ctrl-H, J, K, U) | `LEFT`, `DOWN`, `UP`, `RIGHT` |
+
+Block 23's simpler terminal `t` quits on Ctrl-\ (character 28); `term` sends Ctrl-\ down the
+line. The Videx Soft Video Switch follows annunciator 0
+unless a graphics mode is on: a reference to `$C059` shows the Videx's 80 columns, `$C058` the
+Apple's 40. `VIDON` touches `$C059` and `VIDOFF` touches `$C058`. The Videx firmware does the same,
+`STA $C059` on every character it prints; the Soft Video Switch manual has the two addresses
+swapped. `von` and `voff` are separate, longer words, not yet decoded.
+
+To run it in microM8: pick `forth/forth.po` on the browser Apple's disk menu; the page restarts
+on the `apple2-plus-videx` profile, a II+ with the Videx in slot 3 and the serial card in slot 4
+(patch `0006-serial-2651-card`). The driver programs a Signetics 2651: data, status, two mode
+registers and command at `$CE00`-`$CE03` in slot 4's `$C800` space, selected by `LDA $C400`, with
+the card's interrupt latch at `$CE41` (on) and `$CE40` (off). The page's `microM8.serialSend`
+and `serialTake` are the other end of the line. Left Option is button 0 (Meta) and right Option
+is button 1, held while the other key types as itself: right Option-F enters Forth.
+`forth/forth-ok.po` is the same disk with `term` blanked out of block 4; it stops at the Forth
+prompt. Both are in [DISKS.yml](../../../../packages/cabinet/disks/apple2/DISKS.yml).
 
 ## A recording of the serial line
 
@@ -37,10 +76,18 @@ ring buffer at `$2800`-`$3FFF` into blocks `$20`-`$25` with six `plop`s and prin
 `mbuff-out` to `$2CF3` and `gulp`s the six blocks back, so the whole ring reads as unread input
 for the terminal to play again.
 
-## For later
+## TODO
 
+- Something on the far end of the serial line in the page: a loopback, a telnet bridge, or a
+  Unix to log in to.
+- Name the serial card, if anyone recognizes a 2651 card with an interrupt latch at `$CE40`.
+- Watch the soft switch: the browser Apple now tracks the annunciators, so its AN0 lamp follows
+  `VIDOFF` ($C058) and `VIDON` ($C059) as the Forth switches screens.
+- Decode `von` and `voff`.
 - Replay blocks 32 to 37 through the H19 emulator (`31 load`, then `term`) and record what the
   screen shows.
+- The same dictionary and disassembler views the cabinet's PDP-7 Forth has, reading this Forth's
+  dictionary out of the emulated Apple's memory.
 - Decompile the whole system, `H19.SYSTEM` and the source in `BLOCKS.4TH`, into source a
   metacompiler can rebuild: the Forth kernel's 6502 code, the threaded definitions, and the
   dictionary headers. Then the image can be rebuilt, changed and documented word by word, the way
