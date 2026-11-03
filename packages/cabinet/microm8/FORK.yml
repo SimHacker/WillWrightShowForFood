@@ -10,6 +10,14 @@ upstream:
   module_root: GoPath/src/paleotronic.com
 branch: wasm-scope
 
+# The released module is keyed by what makes it: base_commit, this Go, the build flags and every
+# patch byte (scripts/microm8-wasm.mjs --key). CI builds a new key from upstream plus patches/ and
+# uploads it; deploys fetch it by key. Nothing to bump by hand: change a patch and the key changes.
+build:
+  go: 1.25.7            # wasm_exec.js comes from the same Go; a different Go is a different key
+  bucket: wwsff-artifacts   # public read; only the GitHub Actions identity writes
+  prefix: microm8
+
 patches:
   0001-build-tags-for-js-wasm.patch:
     what: >
@@ -46,7 +54,9 @@ patches:
       The disk's 8x boost no longer lowers a faster user speed, and a user speed change while
       the motor runs no longer blocks the boost. Game port: annunciators AN0-AN3 implemented
       (the $C058-$C05F handler was a TODO; AN3 also on the double hires switch), and
-      paddle(n, value), button(n, down) and annunciators() in the JavaScript API.
+      paddle(n, value), button(n, down) and annunciators() in the JavaScript API. main waits
+      for the boot for 3000 scheduler turns rather than 30 seconds, so a page loaded in a
+      hidden tab, whose timers run late, still starts.
     for: upstream, split by subject; the fixes stand alone
     status: >
       applies after 0001-0003 and builds; 220 cabinet tests pass, including keyboard, disk

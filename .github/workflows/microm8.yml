@@ -1,0 +1,64 @@
+name: microM8 module
+
+# Builds microM8's WebAssembly module from upstream at FORK.yml's base_commit plus
+# packages/cabinet/microm8/patches/, and publishes it to Cloud Storage under its key
+# (scripts/microm8-wasm.mjs --key). A key already published is left alone: objects are
+# write-once. Deploys fetch by key (apps/ties/scripts/build-app.sh), so nothing is committed back.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - packages/cabinet/microm8/FORK.yml
+      - packages/cabinet/microm8/patches/**
+      - packages/cabinet/scripts/microm8-wasm.mjs
+      - .github/workflows/microm8.yml
+  workflow_dispatch:
+
+concurrency:
+  group: microm8
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --filter @wwsff/cabinet
+      - id: release
+        working-directory: packages/cabinet
+        run: |
+          key=$(node scripts/microm8-wasm.mjs --key)
+          go=$(node -e 'console.log(require("yaml").parse(require("fs").readFileSync("microm8/FORK.yml","utf8")).build.go)')
+          url="https://storage.googleapis.com/wwsff-artifacts/microm8/$key/SHA256SUMS"
+          published=$(curl -sfo /dev/null "$url" && echo true || echo false)
+          echo "key=$key" >> "$GITHUB_OUTPUT"
+          echo "go=$go" >> "$GITHUB_OUTPUT"
+          echo "published=$published" >> "$GITHUB_OUTPUT"
+          echo "release $key, go $go, published: $published"
+      - if: steps.release.outputs.published == 'false'
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ steps.release.outputs.go }}
+          cache: false
+      - if: steps.release.outputs.published == 'false'
+        working-directory: packages/cabinet
+        run: node scripts/microm8-wasm.mjs --patches
+      - if: steps.release.outputs.published == 'false'
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/714406903698/locations/global/workloadIdentityPools/github/providers/github
+          service_account: wwsff-ci@ebike-safari.iam.gserviceaccount.com
+      - if: steps.release.outputs.published == 'false'
+        uses: google-github-actions/setup-gcloud@v2
+      - if: steps.release.outputs.published == 'false'
+        working-directory: packages/cabinet
+        run: node scripts/microm8-wasm.mjs --publish

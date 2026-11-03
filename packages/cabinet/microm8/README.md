@@ -21,5 +21,12 @@ cd microm8 && git checkout -b wasm-scope
 git apply ../WillWrightShowForFood/packages/cabinet/microm8/patches/*.patch
 ```
 
+`node scripts/microm8-wasm.mjs` builds that working copy into `dist/` and the site's
+`static/microm8/`. Releases are built from upstream plus `patches/` alone (`--patches`), keyed
+by a hash of what goes into them (`--key`), published to Cloud Storage by CI, and fetched by
+deploys (`--fetch`); the details are in [apps/ties/SERVER.md](../../../apps/ties/SERVER.md). The
+two builds are byte-identical when the patches are exported from the working copy, so export
+them before pushing.
+
 The disks this Apple boots are in [../disks/apple2](../disks/apple2/DISKS.yml); the Apple section
 as a whole is [APPLE2.md](../APPLE2.md).

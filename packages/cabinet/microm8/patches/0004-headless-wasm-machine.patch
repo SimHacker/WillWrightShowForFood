@@ -1603,8 +1603,8 @@ index 0000000..7216df1
 +	}
 +	js.Global().Set("microM8", m)
 +	boot()
-+	start := time.Now()
-+	for !ready() && time.Since(start) < 30*time.Second {
++	// Counted in turns, not seconds: a hidden tab runs timers late, and the boot with them.
++	for turn := 0; !ready() && turn < 3000; turn++ {
 +		time.Sleep(10 * time.Millisecond)
 +	}
 +	if cb := js.Global().Get("onMicroM8Ready"); cb.Type() == js.TypeFunction {

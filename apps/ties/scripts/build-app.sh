@@ -73,6 +73,11 @@ fi
 # them first. "ties^..." is every workspace package ties depends on, not ties itself.
 pnpm --filter "ties^..." run build
 
+# microM8's 41 MB module is not in git. It is fetched by a key computed from the patches this
+# commit has, from where the microm8 workflow publishes it; a deploy right after a patch change
+# waits for that workflow instead of shipping the previous module.
+node "$REPO/packages/cabinet/scripts/microm8-wasm.mjs" --fetch --wait "${MICROM8_WAIT:-900}"
+
 SVELTE_ADAPTER="$MODE" pnpm build
 
 rm -rf "$STAGE"
