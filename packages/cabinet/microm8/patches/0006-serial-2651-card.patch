@@ -90,10 +90,10 @@ index 134405f..b82984e 100755
  	slot := mr.GetRegPeripheralROMSlot()
 diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/serial2651.go b/GoPath/src/paleotronic.com/core/hardware/apple2/serial2651.go
 new file mode 100644
-index 0000000..bda0e2c
+index 0000000..bc55a4f
 --- /dev/null
 +++ b/GoPath/src/paleotronic.com/core/hardware/apple2/serial2651.go
-@@ -0,0 +1,193 @@
+@@ -0,0 +1,195 @@
 +package apple2
 +
 +import (
@@ -143,7 +143,9 @@ index 0000000..bda0e2c
 +)
 +
 +// The low nibble of mode register 2 is the baud rate, by the codes in the
-+// Forth's 300-BAUD .. 38400-BAUD words.
++// Forth's 300-BAUD .. 38400-BAUD words. The 2651 datasheet, with its 5.0688
++// MHz crystal, gives these codes as 600, 1800, 3600, 4800, 7200, 9600 and
++// 19200; the host end is not a real line, so only the pacing differs.
 +var s2651Baud = map[byte]int{
 +	0x6: 300, 0x8: 1200, 0xb: 2400, 0xc: 4800, 0xd: 9600, 0xe: 19200, 0xf: 38400,
 +}

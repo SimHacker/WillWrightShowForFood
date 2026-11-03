@@ -1,5 +1,5 @@
 diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go b/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
-index 0ab0111..02831ab 100755
+index 0ab0111..55c3e8e 100755
 --- a/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
 +++ b/GoPath/src/paleotronic.com/core/hardware/apple2/apple2io.go
 @@ -478,6 +478,15 @@ func NewApple2IOChip(mm *memory.MemoryMap, globalbase int, base int, ent interfa
@@ -33,7 +33,7 @@ index 0ab0111..02831ab 100755
  
 -		// Disabble slot 3 if SLOTC3ROM is off
 -		if !s.SoftSwitch_SLOTC3ROM {
-+		// Disabble slot 3 if SLOTC3ROM is off. A II+ has no internal ROM to put
++		// Disable slot 3 if SLOTC3ROM is off. A II+ has no internal ROM to put
 +		// there (DisableSW80); clearing the slot would hide a card in it.
 +		if !s.SoftSwitch_SLOTC3ROM && !mr.DisableSW80 {
  			ClrREAD(MEM, "slot3.rom")
@@ -256,10 +256,10 @@ index 28f455f..134405f 100755
  func (mr *Apple2IOChip) AddressRead_C00x(addr int, value *uint64) {
 diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/videx.go b/GoPath/src/paleotronic.com/core/hardware/apple2/videx.go
 new file mode 100644
-index 0000000..379d885
+index 0000000..4df9810
 --- /dev/null
 +++ b/GoPath/src/paleotronic.com/core/hardware/apple2/videx.go
-@@ -0,0 +1,287 @@
+@@ -0,0 +1,288 @@
 +package apple2
 +
 +import (
@@ -273,9 +273,10 @@ index 0000000..379d885
 +)
 +
 +// VidexWidth and VidexHeight are the card's picture: 80 cells of 9 dots by 24
-+// cells of 9 lines. The Apple //e's 80-column text is drawn the same way, one
-+// font dot to one pixel, white on black; this is that, from the Videoterm's
-+// own character ROM.
++// cells of 9 lines, MAME's 9-dot clock and the firmware's R9 of 8. The manual
++// describes a 7x9 glyph in an 8x10 cell. The Apple //e's 80-column text is
++// drawn the same way, one font dot to one pixel, white on black; this is that,
++// from the Videoterm's own character ROM.
 +const (
 +	VidexWidth  = 720
 +	VidexHeight = 216
@@ -549,7 +550,7 @@ index 0000000..379d885
 +}
 diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/videx_test.go b/GoPath/src/paleotronic.com/core/hardware/apple2/videx_test.go
 new file mode 100644
-index 0000000..5a7ea5b
+index 0000000..9bac699
 --- /dev/null
 +++ b/GoPath/src/paleotronic.com/core/hardware/apple2/videx_test.go
 @@ -0,0 +1,86 @@
@@ -598,7 +599,7 @@ index 0000000..5a7ea5b
 +	if !c.Render(dst, 0) {
 +		t.Fatal("first render did not draw")
 +	}
-+	// Glyph $41 is an A on lines 0-6. Dot 7 is the leftmost bit. A blink of
++	// Glyph $41 is an A on lines 0-6. Bit 7 is the leftmost dot. A blink of
 +	// period 32 (R10 = $E0) is on at field 0, and the cursor is on cell 0,
 +	// so the cell is inverted: a lit ROM dot is black.
 +	for line := 0; line < 7; line++ {

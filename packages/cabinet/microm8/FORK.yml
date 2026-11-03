@@ -70,7 +70,9 @@ patches:
       The serial card Don's Forth drives from slot 4: a Signetics 2651 communications chip
       with no firmware, selected by reading $C400, its data, status, mode and command
       registers at $CE00-$CE03 in the card's $C800 space, and an interrupt latch at $CE41 (on)
-      and $CE40 (off). Mode register 2's baud code paces the receiver; the card raises IRQ
+      and $CE40 (off). Mode register 2's baud code paces the receiver, at the rates the
+      Forth's 300-BAUD .. 38400-BAUD words name; the 2651 datasheet gives those codes
+      (6, 8, B-F) as 600, 1800, 3600, 4800, 7200, 9600 and 19200. The card raises IRQ
       while a byte waits and the latch is on. The other end is the host: serialSend(bytes)
       and serialTake() in the JavaScript API. A card with registers in $C800 and no
       expansion ROM owns that space the way a ROM card does (C8RAMCard), and
