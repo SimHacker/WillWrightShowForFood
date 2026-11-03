@@ -72,6 +72,9 @@ const mindMirrorBridge: CharacterBridge = {
 	},
 };
 
+/** The bridges by the id an app's `people.bridge` names (disks/apple2/APPS.yml). */
+export const BRIDGES: Record<string, CharacterBridge> = { wizardry: wizardryBridge, "mind-mirror": mindMirrorBridge };
+
 export const WIZARDRY_I: AppleGame = {
 	id: "wizardry-i",
 	title: "Wizardry: Proving Grounds of the Mad Overlord",

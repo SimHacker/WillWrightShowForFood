@@ -2,7 +2,7 @@
  * The page's board: each applet publishes its state under its id, and a
  * ```transclude with `follows: <id>` reads it (transclude.js).
  *
- *     cabinet → { program: 'lp370', label: 'LIGHT PEN TEST (1964)' }
+ *     cabinet → { program: 'lp370', label: 'Light Pen Test (1964)' }
  */
 import { getContext, setContext } from 'svelte';
 

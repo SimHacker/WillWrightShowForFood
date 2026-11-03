@@ -55,8 +55,13 @@ the files no syntax reads.
    more (parallel steps, dependencies across recipes), the next tool is an existing one.
 3. **Inputs, and fry.** A baked image declares values it leaves open, with a type and an
    optional default, filled at boot or run time: a site's address, a player's name, a person
-   injected into a disk at startup. Run time reads the baked files and the inputs, and never
-   walks parents, combines values or renders templates.
-4. **JSON Schema checks.** A base flavor ships a schema for the surfaces it offers, and
+   injected into a disk at startup. A baked image runs from its files and inputs alone, without
+   walking parents, combining values or rendering templates.
+4. **Mixins at run time.** A page can also add mixins to a flavor when it starts one, from a URL
+   (`?with=serial-fast`) or a menu: it instantiates the flavor with those mixins as later parents,
+   in the browser, and caches the result under the flavor, the mixins and the inputs. The flavor
+   lists the mixins it accepts this way; inputs are the values a URL may set. The cabinet's
+   catalog uses both ([CARTRIDGES.md §7a](../cabinet/CARTRIDGES.md#7a-the-catalog-one-browser-for-every-machine)).
+5. **JSON Schema checks.** A base flavor ships a schema for the surfaces it offers, and
    instantiating validates against it with [Ajv](https://ajv.js.org). `requires` is the small
    version of this that exists now.

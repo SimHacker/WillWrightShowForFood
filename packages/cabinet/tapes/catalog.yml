@@ -1,0 +1,95 @@
+# The PDP-7 programs, as catalog entries (CARTRIDGES.md §7a). `runs.program` is the id in
+# apps/ties/src/lib/cabinet-programs.js, which still holds how each one boots.
+# `size` is the tube's side in CSS pixels, as cabinet-url.js reads it. `was` keeps the old
+# /cabinet/<program>/ links working. `order` puts the Forth programs in the order they build on
+# each other: Forth and its turtle, the light pen, the Ultimate Machine the pen switches off, the
+# hand tracker, the hand that switches it off, then the Turing machines.
+defaults:
+  tags: { machine: pdp7 }
+  runs: { machine: pdp7 }
+  inputs:
+    size: { type: integer, min: 256, max: 2048, default: 640, title: Tube Size }
+entries:
+  - id: symelec
+    title: PIXIE / SYMELEC
+    path: applications/pixie-symelec
+    description: "Heinz Lemke's circuit editor, 1972, from the listing."
+    tags: { year: 1972, by: heinz-lemke }
+    runs: { program: symelec }
+    was: [symelec]
+  - id: lp370
+    title: Light Pen Test
+    path: devices/light-pen-test
+    order: 1
+    description: "Type 370 light pen test, DEC-4-45-M, C. Stein, 1964: sensitivity, follow and field of view. Page 6 is reconstructed."
+    tags: { year: 1964, by: c-stein, publisher: dec }
+    runs: { program: lp370 }
+    was: [lp370]
+  - id: duel
+    title: DUEL
+    path: games/duel
+    description: "Spacewar for two on a PDP-7, DECUS 7-40, from paper tape via the RIM loader. A control is active with its switch down."
+    tags: { year: 1968, publisher: decus }
+    runs: { program: duel }
+    was: [duel]
+  - id: hilo
+    title: HILO
+    path: games/hilo
+    description: "A number guessing game on the teletype, written for this cabinet in 2026."
+    tags: { year: 2026 }
+    runs: { program: hilo }
+    was: [hilo]
+  - id: lander
+    title: LANDER
+    path: games/lander
+    description: "A lunar landing game on the teletype: type the fuel to burn each second. Written for this cabinet in 2026."
+    tags: { year: 2026 }
+    runs: { program: lander }
+    was: [lander]
+  - id: forth
+    title: Forth + Turtle
+    path: languages/forth-turtle
+    order: 1
+    description: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP"
+    tags: { year: 2026, by: mitch-bradley, language: forth }
+    runs: { program: forth }
+    was: [forth]
+  - id: turing
+    title: Turing Machine
+    path: devices/turing-machine
+    order: 5
+    description: "Turing machines on device 54, the tape drawn by the 342 character generator: busy beavers, a binary counter, and Minsky's universal machine, compiled from TM-Forth."
+    tags: { year: 2026, language: forth }
+    runs: { program: turing }
+    was: [turing]
+  - id: ultimate
+    title: Ultimate Machine
+    path: devices/ultimate-machine
+    order: 2
+    description: "Minsky's Ultimate Machine, the box whose only function is to switch itself off: device 56, drawn on the 340 by Forth. Click the switch with the light pen."
+    tags: { year: 2026, language: forth }
+    runs: { program: ultimate }
+    was: [ultimate]
+  - id: hand
+    title: DataHand
+    path: devices/datahand
+    order: 3
+    description: "A hand tracker as PDP-7 device 57: each bone a 3D turtle move (yaw, pitch, length), drawn by Forth on the 340. Allow the camera and hold up your hand."
+    tags: { year: 2026, language: forth, needs: camera }
+    runs: { program: hand }
+    was: [hand]
+  - id: ultimate-hand
+    title: Ultimate Hand
+    path: devices/ultimate-hand
+    order: 4
+    description: "Minsky's Ultimate Machine, and you are its hand. Show the camera your hand, then touch the switch."
+    tags: { year: 2026, language: forth, needs: camera }
+    runs: { program: ultimate-hand }
+    was: [ultimate-hand]
+  - id: unix
+    title: PDP-7 UNIX
+    path: systems/pdp-7-unix
+    description: "PDP-7 UNIX, Thompson and Ritchie, from the pdp7-unix restoration: booted off an emulated RB09 disk. Log in as ken, password ken."
+    tags: { year: 1969, by: [ken-thompson, dennis-ritchie] }
+    runs: { program: unix }
+    was: [unix]

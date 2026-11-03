@@ -1,0 +1,13 @@
+# The cabinet's part of the catalog tree (CARTRIDGES.md §7a): the folders everything else sits in.
+# Entries live beside what they describe: tapes/catalog.yml for the PDP-7 programs,
+# disks/apple2/APPS.yml for the Apple apps. Paths are slugs; titles are declared here once.
+folders:
+  - { path: games, title: Games, order: 1 }
+  - { path: languages, title: Languages, order: 2 }
+  - { path: applications, title: Applications, order: 3 }
+  - { path: devices, title: Devices, order: 4, description: "The PDP-7's light pen, and devices built on the PDP-7 for this cabinet, drawn and driven by Forth." }
+  - { path: systems, title: Operating Systems, order: 5 }
+  # Saved filters: folders whose children are whatever matches.
+  - { path: machines/pdp-7, title: "PDP-7", query: { tags: { machine: pdp7 } } }
+  - { path: machines/apple-ii, title: "Apple ][", query: { tags: { machine: apple2 } } }
+  - { path: machines, title: Machines, order: 6 }

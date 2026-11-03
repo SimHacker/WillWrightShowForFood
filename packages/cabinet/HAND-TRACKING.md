@@ -2,7 +2,7 @@
 
 A webcam hand tracker running in the browser, plugged into the emulated PDP-7
 as **device 57**. Forth programs read the hand, then draw it on the Type 340
-in 3D. On the cabinet menu it is **DATAHAND (2026)**, which runs
+in 3D. On the cabinet menu it is **DataHand (2026)**, which runs
 [datahand.fs](tapes/pdp7forth/datahand.fs) at 10× a real PDP-7. The hand in the
 DATAHAND panel starts automatically when DATAHAND is selected (and **only** then).
 There is nothing to click in the app: allow the browser's camera prompt and

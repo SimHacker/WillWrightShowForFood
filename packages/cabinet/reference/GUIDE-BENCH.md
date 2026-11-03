@@ -16,7 +16,7 @@ From the hardware up to the page. All TypeScript and Svelte; nothing below JavaS
 | Programs | `symelec-*.ts`, `lp370.ts`, `forth.ts`, `unixv0.ts`, `duel.ts`, `hilo.ts`, `lander.ts`, `tapes/` | Boot recipes, demo scripts that are acceptance tests, halt explanations |
 | Rings | `packages/pixie` | PIXIE's word classes, `CAR`/`CDR`, `RingBuilder`, relocation, the transfer encoding, graphs and scenes |
 | Applet | `apps/ties/src/lib/CabinetApplet.svelte` | The machine on a page: a `requestAnimationFrame` loop that runs cycles in slices (so pen moves land between refreshes), integrates the last 48 refreshes into one picture ([GUIDE-PHOSPHOR](GUIDE-PHOSPHOR.md)), draws on a 1024² canvas, and the panels: memory (octal, code, source, trace), rings, teletype, config, the tool menu (eight pens and the instruction editor) |
-| Pages | `CabinetPage.svelte`, `routes/cabinet/[program]`, `cabinet-programs.js` | One route per program; the same applet embeds in any HyperTIES article (`Article.svelte`) |
+| Pages | `CatalogShell.svelte`, `routes/cabinet/[...path]`, `catalog.js`, `machines.js`, `cabinet-programs.js` | One page per catalog path, PDP-7 and Apple II alike; the same applet embeds in any HyperTIES article (`Article.svelte`) |
 | Server | SvelteKit, `apps/ties` | Static build by default, `SVELTE_ADAPTER=node` for the server; deployed by `scripts/server-deploy.sh hyperties` to hyperties.org, releases kept on the data disk |
 
 **Where to start reading:** `cabinet.ts` (60 lines), then `type340.ts`'s `instruction()`, then

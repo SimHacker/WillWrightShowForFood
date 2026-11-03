@@ -17,6 +17,7 @@ const loaders = import.meta.glob(
 		'../../../../characters/roy-eagleson/**/*.md',
 		'../../../../packages/cabinet/*.md',
 		'../../../../packages/cabinet/tapes/**/*.md',
+		'../../../../packages/cabinet/guides/**/*.md',
 		'../../../../repo-shows/pixie-pie-menus-pdp7/**/*.md',
 		'../../../../repo-shows/ben-and-heinz-pie-menus/**/*.md',
 		'!**/node_modules/**'
@@ -59,7 +60,8 @@ function joinPath(base, rel) {
 const md = new MarkdownIt({ html: false, linkify: true, typographer: false });
 
 // Relative links in a repo doc point at its neighbours on disk. On this site they would
-// resolve against the article URL, so send them to GitHub, where the neighbours are.
+// resolve against the article URL, so send them to GitHub, where the neighbours are. Every
+// link but an anchor opens a new tab: a doc sits beside a running machine, never in its place.
 function rewrite(attr, kind) {
 	return (tokens, idx, options, env, self) => {
 		const token = tokens[idx];
@@ -69,7 +71,7 @@ function rewrite(attr, kind) {
 			const target = file ? joinPath(env.path, file) : normalize(env.path);
 			token.attrSet(attr, githubUrl(target, kind) + (hash ? `#${hash}` : ''));
 		}
-		if (attr === 'href' && /^https?:/i.test(token.attrGet('href') ?? '')) {
+		if (attr === 'href' && !(token.attrGet('href') ?? '#').startsWith('#')) {
 			token.attrSet('target', '_blank');
 			token.attrSet('rel', 'noopener');
 		}

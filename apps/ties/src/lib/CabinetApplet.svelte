@@ -45,12 +45,14 @@
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
 
-	let { spec, embedded = false } = $props();
+	// `onprogram`, when given, owns the program menu: a pick is passed to it (the catalog page
+	// navigates to that program's entry), and the applet switches when `spec.program` changes.
+	let { spec, embedded = false, onprogram = undefined } = $props();
 
 	const programs = PROGRAMS.map((p) => p.createInstance?.() ?? p);
 	const programById = (id) => programs.find((p) => p.id === id) ?? null;
 
-	// The spec picks the first program; after that the menu owns it.
+	// The spec picks the first program; after that the menu owns it, or `onprogram` does.
 	let programId = $state(untrack(() => spec.program ?? DEFAULT_PROGRAM));
 	const program = $derived(programById(programId));
 
@@ -2471,8 +2473,21 @@
 		toggleNote = '';
 	}
 
-	async function onProgram(event) {
-		const next = programById(event.currentTarget.value);
+	function onProgram(event) {
+		const id = event.currentTarget.value;
+		if (onprogram) {
+			event.currentTarget.value = programId;
+			onprogram(id);
+		} else switchProgram(id);
+	}
+
+	$effect(() => {
+		const id = spec.program;
+		if (onprogram && id && id !== untrack(() => programId)) untrack(() => switchProgram(id));
+	});
+
+	async function switchProgram(id) {
+		const next = programById(id);
 		if (!next) return;
 		stopRecording();
 		stopToggles();
@@ -2489,7 +2504,7 @@
 		displayOpen = next.display !== false;
 		if (next.tty && !ttyOpen) togglePanel('tty', {});
 		if (next.panel && !progOpen) togglePanel('prog', {});
-		if (next.speed) setSpeed(next.speed);
+		setSpeed(next.speed ?? 1);
 		queueMicrotask(syncToggles);
 		await onReset();
 	}

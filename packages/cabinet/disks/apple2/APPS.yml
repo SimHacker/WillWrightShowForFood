@@ -1,0 +1,137 @@
+# The Apple apps in the catalog (CARTRIDGES.md §7a), entries by src/apple2/disk-catalog.ts. An entry is a program a person runs, not a
+# floppy: one app per program, the best copy that boots and plays, chosen by booting it.
+#
+# disks: the app's floppies by a short id, each with a label that says what it is for.
+#   `file` is a DISKS.yml path.
+# starts: what goes in drive 1 and drive 2 to begin; the first is the default.
+# actions: the moves a player makes mid-program, offered as buttons. `insert` puts disks in
+#   drives, then `keys` are typed. `prompt` is the screen text that asks for the move, copied
+#   from the screen; a screen angel watching for it takes the same action the button does.
+# people: the disks a character bridge (src/apple2/games.ts) can read people off and write back.
+# profile: the microM8 machine, when it is not the //e.
+apps:
+  - id: wizardry
+    title: Wizardry
+    path: games/wizardry
+    description: "Sir-Tech's dungeon crawl, the first three scenarios. Each boots from its own disk with its scenario disk in drive 2; Knight of Diamonds and Legacy of Llylgamyn take characters made in the one before."
+    tags: { publisher: sir-tech, year: 1981 }
+    disks:
+      pg-boot: { file: wizardry/wizardry-i-proving-grounds-disk-1.dsk, label: "Proving Grounds: Boot" }
+      pg-scenario: { file: wizardry/wizardry-i-proving-grounds-disk-2.dsk, label: "Proving Grounds: Scenario and Characters" }
+      kod-boot: { file: wizardry/wizardry-ii-knight-of-diamonds-disk-1.dsk, label: "Knight of Diamonds: Boot" }
+      kod-scenario: { file: wizardry/wizardry-ii-knight-of-diamonds-disk-2.dsk, label: "Knight of Diamonds: Scenario and Characters" }
+      lol-boot: { file: wizardry/wizardry-iii-legacy-of-llylgamyn-disk-1.dsk, label: "Legacy of Llylgamyn: Boot" }
+      lol-scenario: { file: wizardry/wizardry-iii-legacy-of-llylgamyn-disk-2.dsk, label: "Legacy of Llylgamyn: Scenario and Characters" }
+    starts:
+      - { label: "Proving Grounds of the Mad Overlord", drives: [pg-boot, pg-scenario] }
+      - { label: "Knight of Diamonds", drives: [kod-boot, kod-scenario] }
+      - { label: "Legacy of Llylgamyn", drives: [lol-boot, lol-scenario] }
+    people: { bridge: wizardry, disks: [pg-scenario, kod-scenario, lol-scenario] }
+
+  - id: little-computer-people
+    title: Little Computer People
+    path: games/little-computer-people
+    description: "A little person moves into the house on the disk and lives there. 4am's crack of Activision's Research Project disk: it boots the guestbook side, then asks for the disk to be turned over."
+    tags: { publisher: activision, year: 1985, by: david-crane }
+    guide: packages/cabinet/guides/little-computer-people.md
+    angel: packages/cabinet/angels/little-computer-people/ANGEL.yml
+    drives: 1
+    disks:
+      guestbook: { file: little-computer-people/lcp-4am-side-a.dsk, label: "Guestbook Side" }
+      house: { file: little-computer-people/lcp-4am-side-b.dsk, label: "House Side" }
+    starts:
+      - { label: "Move In", drives: [guestbook] }
+    actions:
+      - label: "Turn the Disk Over"
+        prompt: "Please turn over HOUSE-ON-A-DISK and press a key"
+        insert: { drive1: house }
+        keys: " "
+      # Once he has moved in. Control keys from the manual; requests are typed lines.
+      - { label: "Food", keys: "\x06" }
+      - { label: "Water", keys: "\x17" }
+      - { label: "Dog Food", keys: "\x04" }
+      - { label: "Ring the Alarm", keys: "\x01" }
+      - { label: "Ring the Phone", keys: "\x03" }
+      - { label: "Pat Him", keys: "\x10" }
+      - { label: "A Record", keys: "\x12" }
+      - { label: "A Book", keys: "\x02" }
+      - { label: "Ask for the Piano", keys: "PLEASE PLAY THE PIANO\r" }
+      - { label: "Ask for a Fire", keys: "PLEASE BUILD A FIRE\r" }
+      - { label: "Ask Him to Dance", keys: "PLEASE DANCE\r" }
+      - { label: "Ask for a Letter", keys: "PLEASE TYPE A LETTER TO ME\r" }
+
+  - id: mind-mirror
+    title: Timothy Leary's Mind Mirror
+    path: games/mind-mirror
+    description: "Map your own mind, or anyone's, then play out their life. 4am's crack of the program disk, with the Digital Gang crack's two simulation disks."
+    tags: { publisher: electronic-arts, year: 1985, by: timothy-leary }
+    guide: packages/cabinet/guides/mind-mirror.md
+    disks:
+      game: { file: mind-mirror/mind-mirror-4am-playable.dsk, label: "Program" }
+      sim-a: { file: mind-mirror/mind-mirror-disk-2.dsk, label: "Simulation Disk A" }
+      sim-b: { file: mind-mirror/mind-mirror-disk-3.dsk, label: "Simulation Disk B" }
+    starts:
+      - { label: "Play", drives: [game] }
+    actions:
+      - label: "Insert the Simulation Disks"
+        prompt: "Insert Simulation Disk A in drive 1 and Simulation Disk B in drive 2, then press RETURN to proceed"
+        insert: { drive1: sim-a, drive2: sim-b }
+        keys: "\r"
+      - label: "Put the Program Disk Back"
+        insert: { drive1: game }
+
+  - id: hopkins-forth
+    title: Don Hopkins's ProDOS Forth
+    path: languages/don-hopkins-prodos-forth
+    description: "Don's ProDOS Forth and H19 terminal (1986-88), on a II+ with a Videx card and a serial card in slot 4."
+    tags: { by: don-hopkins, language: forth }
+    profile: apple2-plus-videx
+    disks:
+      terminal: { file: forth/forth.po, label: "Forth, Starting the Terminal" }
+      prompt: { file: forth/forth-ok.po, label: "Forth, Starting at the Prompt" }
+    starts:
+      - { label: "Terminal", drives: [terminal] }
+      - { label: "Forth Prompt", drives: [prompt] }
+
+  - id: apple-logo-ii
+    title: Apple Logo II
+    path: languages/apple-logo-ii
+    description: "Logo Computer Systems' Logo for the Apple //e (1984): turtle graphics and lists."
+    tags: { language: logo, publisher: apple, year: 1984 }
+    disks:
+      logo: { file: logo/apple-logo-ii.dsk, label: "Apple Logo II" }
+    starts:
+      - { label: "Start Logo", drives: [logo] }
+
+  - id: apple-pascal
+    title: Apple Pascal
+    path: languages/apple-pascal
+    description: "Apple II Pascal 1.1 (1980), from UCSD Pascal II.1: editor, filer, compiler and assembler. Wizardry was written in it."
+    tags: { language: pascal, publisher: apple, year: 1980 }
+    disks:
+      boot: { file: pascal/apple-pascal-disk-1.dsk, label: "Boot, Editor and Filer" }
+      compiler: { file: pascal/apple-pascal-disk-2.dsk, label: "Compiler, Linker and Assembler" }
+      utilities: { file: pascal/apple-pascal-disk-3.dsk, label: "Utilities and Demos" }
+      one-disk: { file: pascal/apple-pascal-disk-0.dsk, label: "Editor, Filer and Compiler on One Disk" }
+    starts:
+      - { label: "Start Pascal", drives: [boot, compiler] }
+
+  - id: apple-dos-3-3
+    title: Apple DOS 3.3
+    path: systems/apple-dos-3-3
+    description: "The January 1983 System Master: Applesoft BASIC and DOS commands."
+    tags: { publisher: apple, year: 1983 }
+    disks:
+      master: { file: dos33/dos-3.3-january-1983.dsk, label: "System Master" }
+    starts:
+      - { label: "Boot", drives: [master] }
+
+  - id: prodos
+    title: ProDOS 8
+    path: systems/prodos-8
+    description: "ProDOS 8 2.0.3 with BASIC.SYSTEM."
+    tags: { publisher: apple }
+    disks:
+      system: { file: prodos/prodos-8-2.0.3.dsk, label: "ProDOS 8 2.0.3" }
+    starts:
+      - { label: "Boot", drives: [system] }

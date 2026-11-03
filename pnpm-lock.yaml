@@ -18,6 +18,9 @@ importers:
       '@wwsff/cabinet':
         specifier: workspace:*
         version: link:../../packages/cabinet
+      '@wwsff/catalog':
+        specifier: workspace:*
+        version: link:../../packages/catalog
       '@wwsff/pixie':
         specifier: workspace:*
         version: link:../../packages/pixie
@@ -74,6 +77,22 @@ importers:
       '@wwsff/bridge':
         specifier: workspace:*
         version: link:../bridge
+      yaml:
+        specifier: ^2.9.1
+        version: 2.9.1
+    devDependencies:
+      '@types/node':
+        specifier: ^20.17.0
+        version: 20.19.43
+      '@wwsff/catalog':
+        specifier: workspace:*
+        version: link:../catalog
+      typescript:
+        specifier: ^5.8.0
+        version: 5.9.3
+
+  packages/catalog:
+    dependencies:
       yaml:
         specifier: ^2.9.1
         version: 2.9.1

@@ -57,6 +57,6 @@ How the threading works, and what to call it:
 Mitch's build compiles the prelude into the image by running the kernel under SIMH, feeding it the
 source on paper tape. The cabinet does the same thing itself (`src/forth.ts`). It loads the
 kernel, mounts the Forth sources on the reader, types `TAPE`, and keeps the core that results. The
-menu's FORTH + TURTLE loads the full-names kernel with PIXIE rings, then `prelude.fs`, `does.fs`,
+menu's Forth + Turtle loads the full-names kernel with PIXIE rings, then `prelude.fs`, `does.fs`,
 `turtle.fs` and `pixie.fs`. The upstream kernel, prelude, and turtle remain unchanged apart from
 the prelude's `CELLS` and `CHARS`; `scheme.fs` is a separate local experiment.

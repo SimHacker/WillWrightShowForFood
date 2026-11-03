@@ -161,7 +161,7 @@ function handControls({ extra = () => [] } = {}) {
 		dispose: controller.dispose,
 		activate: controller.activate,
 		panel: {
-			label: 'DATAHAND',
+			label: 'DataHand',
 			title: 'The DataHand: where the hand comes from, and what the tracker sees.',
 			canvasLabel: 'The camera, mirrored, with the hand the tracker found drawn over it',
 			instructions: () => controller.snapshot().instructions,
@@ -307,7 +307,7 @@ function forthProgram({ id, label, kernelFile, extras = [], pixie: withRings = t
 export const PROGRAMS = [
 	{
 		id: 'symelec',
-		label: 'PIXIE SYMELEC (1972)',
+		label: 'PIXIE / SYMELEC (1972)',
 		// As the 1972 listing heads every page: ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470.
 		listing: { user: 'HL1470', title: 'SYMELEC' },
 		title: 'PIXIE / SYMELEC, 1972: Heinz Lemke’s circuit editor, from the listing',
@@ -341,7 +341,7 @@ export const PROGRAMS = [
 	},
 	{
 		id: 'lp370',
-		label: 'LIGHT PEN TEST (1964)',
+		label: 'Light Pen Test (1964)',
 		// No user ID survives; a 1964 PDP-4 had no logins. Named for the author, C. Stein.
 		listing: { user: 'CSTEIN' },
 		title: 'Type 370 light pen test, DEC-4-45-M, C. Stein, 1964: sensitivity, follow and field of view. Page 6 is reconstructed.',
@@ -482,10 +482,10 @@ export const PROGRAMS = [
 			return `alt ${v('h2') / 2} vel ${v('v')} fuel ${v('fuel')}`;
 		}
 	},
-	forthProgram({ id: 'forth', label: 'FORTH + TURTLE (2026)', kernelFile: 'kernel-names-full.s' }),
+	forthProgram({ id: 'forth', label: 'Forth + Turtle (2026)', kernelFile: 'kernel-names-full.s' }),
 	forthProgram({
 		id: 'turing',
-		label: 'TURING MACHINE (2026)',
+		label: 'Turing Machine (2026)',
 		kernelFile: 'kernel-names-full.s',
 		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'turing.fs', 'pcomp-tm.fs'],
 		pixie: false,
@@ -506,7 +506,7 @@ export const PROGRAMS = [
 	}),
 	forthProgram({
 		id: 'ultimate',
-		label: 'ULTIMATE MACHINE (2026)',
+		label: 'Ultimate Machine (2026)',
 		kernelFile: 'kernel-names-full.s',
 		extras: ['code.fs', 'interrupt.fs', 'tags.fs', 'ultimate.fs'],
 		pixie: false,
@@ -528,7 +528,7 @@ export const PROGRAMS = [
 	}),
 	forthProgram({
 		id: 'hand',
-		label: 'DATAHAND (2026)',
+		label: 'DataHand (2026)',
 		kernelFile: 'kernel-names-full.s',
 		extras: ['code.fs', 'tags.fs', 'clip.fs', 'turtle3d.fs', 'datahand.fs'],
 		pixie: false,
@@ -552,7 +552,7 @@ export const PROGRAMS = [
 	}),
 	forthProgram({
 		id: 'ultimate-hand',
-		label: 'ULTIMATE HAND (2026)',
+		label: 'Ultimate Hand (2026)',
 		kernelFile: 'kernel-names-full.s',
 		extras: ['code.fs', 'tags.fs', 'clip.fs', 'turtle3d.fs', 'datahand.fs', 'ultimate-hand.fs'],
 		pixie: false,
@@ -576,7 +576,7 @@ export const PROGRAMS = [
 	}),
 	{
 		id: 'unix',
-		label: 'UNIX v0 (1969)',
+		label: 'PDP-7 UNIX (1969)',
 		listing: { user: 'ken' },
 		title: 'PDP-7 UNIX, Thompson and Ritchie, from the pdp7-unix restoration: booted off an emulated RB09 disk. Log in as ken, password ken.',
 		help: {

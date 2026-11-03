@@ -1,0 +1,131 @@
+# Screen angel for Little Computer People (Activision, 1985), Apple //e.
+# Looks are cut from the 560x192 frame microM8 draws (scripts/angel-cut.mjs).
+# The guestbook's black message box is x 69-338, y 136-167: four text lines 8 pixels apart.
+
+title: Little Computer People
+screen: [560, 192]
+
+looks:
+  - id: guestbook          # HOUSE-ON-A-DISK logo on the book cover, every guestbook screen
+    png: looks/guestbook.png
+    at: [98, 28]
+    looks:
+      - id: flip           # "Please turn over / HOUSE-ON-A-DISK / and press a key"
+        png: looks/flip.png
+        at: [69, 136]
+      - id: name           # "NAME OF RESEARCHER / (first name then last) / Example: JOHN DOE"
+        png: looks/name.png
+        at: [69, 136]
+        looks:
+          - id: name-empty # the line the name is typed on, still black
+            png: looks/name-empty.png
+            at: [69, 160]
+      - id: date           # "Enter Date: MM/DD/YY / Example: 09/30/88"
+        png: looks/date.png
+        at: [69, 136]
+        looks:
+          - id: date-empty # the line the date is typed on, still black
+            png: looks/date-empty.png
+            at: [69, 152]
+      - id: signed         # "RESEARCHER" over the name, session and date
+        png: looks/signed.png
+        at: [69, 136]
+        looks:
+          - id: session    # "SESSION ", drawn a moment after the name
+            png: looks/session.png
+            at: [69, 152]
+            looks:
+              - id: session-1  # first visit: he has not moved in yet
+                png: looks/session-1.png
+                at: [69, 152]
+  - id: house              # attic floor left of the stairs; he never stands on it
+    png: looks/house.png
+    at: [0, 56]
+
+states:
+  - id: loading
+    say: The Apple is reading the guestbook side of the disk.
+
+  - id: flip
+    when: [guestbook, flip]
+    say: >-
+      The game wants the disk turned over to the house side. The screen angel turns it for
+      you; on a real Apple you would flip the floppy and press a key.
+    speak: Turning the disk over.
+    auto: Turn the Disk Over
+    moves: [Turn the Disk Over]
+
+  - id: name
+    when: [guestbook, name, name-empty]
+    say: >-
+      Sign the guestbook. The game keeps your name as the researcher studying the little
+      person who lives on this disk.
+    lock: true
+    ask:
+      label: Your name
+      hint: Type it here and press OK. The Apple only has capitals; Return is pressed for you.
+      speak: Enter your name.
+      keys: "{value}\r"
+      upper: true
+      maxlength: 30
+
+  - id: signing
+    when: [guestbook, name]
+    unless: name-empty
+    say: Writing your name in the guestbook.
+    lock: true
+
+  - id: date
+    when: [guestbook, date, date-empty]
+    say: The guestbook dates each visit. Today is filled in; change it if you like.
+    lock: true
+    ask:
+      label: Today's date
+      hint: Month, day, year as MM/DD/YY.
+      default: "{MM}/{DD}/{YY}"
+      speak: Enter the date.
+      keys: "{value}\r"
+      maxlength: 8
+
+  - id: first-visit
+    when: [guestbook, signed, session-1]
+    say: Signed for session 1. The Apple is loading the house; someone is about to move in.
+
+  - id: return-visit
+    when: [guestbook, signed, session]
+    say: Signed. The Apple is loading the house. He is home.
+
+  - id: home
+    when: house
+    from: [moving-in, return-visit]
+    # Nothing on screen marks the end of the move-in. In one run (scripts/angel-run.mjs, a
+    # request typed every 60 s) the house appeared at 173 s, a request at 480 s was ignored
+    # and the one at 540 s was echoed: settled 307-367 s in.
+    after: 370
+    speed: 1
+    speak: He is home. Take care of him with the buttons, or ask him something.
+    say: >-
+      He lives here now. The buttons give him things: the game's own keys are Control-F food,
+      Control-W water, Control-D dog food, Control-A the alarm, Control-C the phone, Control-P
+      a pat, Control-R a record and Control-B a book, but you don't need to type them, just
+      press the buttons. Or ask him to do something in the field below.
+    moves: [Food, Water, Dog Food, Ring the Alarm, Ring the Phone, Pat Him, A Record, A Book,
+      Ask for the Piano, Ask for a Fire, Ask Him to Dance, Ask for a Letter]
+    ask:
+      label: Say something to him
+      hint: A request, starting with PLEASE. Return is pressed for you.
+      keys: "{value}\r"
+      upper: true
+      maxlength: 38
+      keep: true
+      examples: [PLEASE PLAY THE PIANO, PLEASE PLAY ANOTHER SONG, PLEASE BUILD A FIRE, PLEASE DANCE,
+        PLEASE TYPE A LETTER TO ME, PLEASE PLAY WITH ME]
+
+  - id: moving-in
+    when: house
+    from: [loading, flip, name, signing, date, first-visit]
+    speed: 4
+    speak: He is moving in. Running fast until he is home.
+    say: >-
+      He is moving in. The game ignores the keyboard until he has, so there is nothing to do
+      but watch. The screen angel runs the Apple at 4× until he is home, then back to 1×.

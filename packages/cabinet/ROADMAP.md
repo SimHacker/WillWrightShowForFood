@@ -608,6 +608,48 @@ type Demo = {
   which migrates in as the first user demo.
 - The party demo (§7) and Heinz's walkthroughs ship as built-ins.
 
+**Apple ][ apps get demos too.** An app in `disks/apple2/APPS.yml` carries a `demos` list,
+written as steps instead of a generator, so the YAML is the demo:
+
+```yaml
+demos:
+  - id: move-in
+    title: "Moving In"
+    description: "Sign the guestbook, wait for him, then feed him and ask for a song."
+    steps:
+      - start: play                    # a start, as the Start buttons do
+      - until: flip                    # a screen angel state; the angel turns the disk itself
+      - until: name
+        say: "The guestbook wants the researcher's name: that is you"
+        answer: "DON HOPKINS"          # filled into the angel's field, then OK
+      - until: date
+        answer: "11/03/86"
+      - until: home
+        say: "He moves in; the keyboard works once he has"
+      - do: "Food"
+        say: "Control-F puts food at his front door"
+      - wait: 30
+      - do: "Ask for the Piano"
+```
+
+- **The moves are the demo's vocabulary.** `do` presses the same action button a player
+  presses, so a demo shows the interface as well as the game, and every action a demo needs
+  becomes a button first. `answer` fills the screen angel's field the way a player would.
+- **Wait for the machine, not the clock.** `until` names a state of the app's screen angel
+  (`angels/<app>/ANGEL.yml`), which keeps the game's state from the machine's own 560x192
+  pixels, so a prompt drawn in hi-res is as visible as one on the text page. `wait` is in
+  emulated seconds from the cycle counter, so a demo holds at 1× and at max, and the runner
+  may warp through long waits.
+- **`say` is the caption,** shown under the screen as the PDP-7 demos show theirs.
+- **Characters come along.** A Wizardry demo can roll a party into the scenario disk through
+  the character interface, then play with it.
+
+**Programming by demonstration.** ⏺ on an Apple app records Start presses, action presses,
+inserts, answers and typed keys, each with the cycle and the screen angel's state at that
+moment. Saving turns the recording into steps, with the angel's state as each step's `until`,
+so it replays by what it saw instead of when. The same holds for the PDP-7: the teletype's last line is
+the guard. A recording edited and titled is a demo, in the same picker as the built-ins.
+
 **Accept:** the PC, a demo and a recording all run from the same transport component
 with the same buttons; a recorded demo can be titled, saved, reloaded, single
 stepped and exported.

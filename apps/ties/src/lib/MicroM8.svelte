@@ -10,14 +10,30 @@
 	// Nothing heavy loads with the page: the 41 MB module comes on the first click, boot or
 	// drop, and a disk only when it is picked.
 	// A disk with a profile (Don's Forth: a II+ with a Videx and a serial card) needs that
-	// machine. Picked while another machine runs, it reloads the page as ?disk=<name>, and the
-	// page boots it on its own machine.
+	// machine. Picked while another machine runs, it reloads the page at relaunch(disk), by
+	// default ?disk=<name>, and the page boots it on its own machine.
+	// `boot` is a disk to boot: on the first click while the Apple is off, at once (inserted,
+	// then a reboot) when it is already running, or at once after a relaunch. `begin` does an
+	// app's own start on the first click instead (AppleApp.svelte), named by `beginLabel`.
+	// A disk's `label` names it in the menu and the drive lamps.
 	import { onMount } from 'svelte';
 	import { FRAME_HEIGHT, FRAME_WIDTH, VIDEX_HEIGHT, VIDEX_WIDTH } from '@wwsff/cabinet/microm8';
 	import { microM8 } from './microm8.svelte.js';
 
-	/** @type {{ disks?: { name: string, profile?: string, url: () => Promise<string> }[] }} */
-	let { disks = [] } = $props();
+	/** @typedef {{ name: string, label?: string, profile?: string, url: () => Promise<string> }} Disk */
+	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string }} */
+	let {
+		disks = [],
+		boot = undefined,
+		relaunch = (disk) => `?disk=${encodeURIComponent(disk.name)}`,
+		begin = undefined,
+		beginLabel = ''
+	} = $props();
+
+	const RELAUNCHED = 'microm8-relaunched';
+	/** The disk `boot` names, waiting for the first click while the Apple is off. */
+	/** @type {Disk | undefined} */
+	let pending = $state();
 
 	/** @type {HTMLCanvasElement | undefined} */
 	let canvas;
@@ -39,7 +55,13 @@
 		engaged = true;
 		canvas?.focus();
 		microM8.listen();
-		microM8.start();
+		const disk = pending;
+		pending = undefined;
+		if (disk && microM8.phase === 'idle') {
+			drive = 0;
+			load(disk);
+		} else if (begin && microM8.phase === 'idle') begin();
+		else microM8.start();
 	}
 
 	/** @param {HTMLCanvasElement} el */
@@ -58,21 +80,24 @@
 	}
 
 	/** @param {string} name @param {ArrayBuffer} data @param {string} [profile] */
-	function insert(name, data, profile) {
-		microM8.insert(name, new Uint8Array(data), drive, profile);
+	async function insert(name, data, profile) {
 		engaged = true;
 		canvas?.focus();
+		await microM8.insert(name, new Uint8Array(data), drive, profile);
 	}
 
-	/** @param {{ name: string, profile?: string, url: () => Promise<string> }} disk */
-	async function load(disk) {
+	/** @param {Disk} disk @param {{ reboot?: boolean }} [how] */
+	async function load(disk, { reboot = false } = {}) {
 		const profile = disk.profile ?? '';
 		if (microM8.phase !== 'idle' && profile !== microM8.profile) {
-			location.assign(`?disk=${encodeURIComponent(disk.name)}`);
+			globalThis.sessionStorage?.setItem(RELAUNCHED, disk.name);
+			location.assign(relaunch(disk));
 			return;
 		}
+		const running = microM8.phase !== 'idle';
 		const response = await fetch(await disk.url());
-		insert(disk.name, await response.arrayBuffer(), profile);
+		await insert(disk.name, await response.arrayBuffer(), profile);
+		if (reboot && running) microM8.reboot();
 	}
 
 	// The menu is an action, not a setting: it resets, and the keyboard goes to the Apple at
@@ -85,12 +110,17 @@
 	}
 
 	onMount(() => {
-		const name = new URLSearchParams(location.search).get('disk');
+		const relaunched = globalThis.sessionStorage?.getItem(RELAUNCHED) ?? null;
+		globalThis.sessionStorage?.removeItem(RELAUNCHED);
+		const asked = new URLSearchParams(location.search).get('disk');
+		const name = boot ?? asked;
 		const disk = name ? disks.find((d) => d.name === name) : undefined;
-		if (disk) {
-			drive = 0;
-			load(disk);
-		}
+		if (!disk) return;
+		drive = 0;
+		// Picked from a menu or relaunched for its machine: boot now. Opened from a link while
+		// the Apple is off: wait for the click, so the module only loads when wanted.
+		if (asked === name || relaunched === name || microM8.phase !== 'idle') load(disk, { reboot: true });
+		else pending = disk;
 	});
 
 	/** @param {File | undefined | null} file */
@@ -142,7 +172,7 @@
 
 	/** @param {ClipboardEvent} ev */
 	function onpaste(ev) {
-		if (!engaged || isField(ev.target)) return;
+		if (!engaged || microM8.locked || isField(ev.target)) return;
 		const text = ev.clipboardData?.getData('text');
 		if (text) {
 			microM8.type(text);
@@ -162,13 +192,14 @@
 		if (!data) return;
 		const a = document.createElement('a');
 		a.href = URL.createObjectURL(new Blob([data]));
-		a.download = microM8.drives[drive];
+		a.download = baseName(microM8.drives[drive]);
 		a.click();
 		URL.revokeObjectURL(a.href);
 	}
 
 	const hex = (/** @type {number} */ n, /** @type {number} */ w) => n.toString(16).toUpperCase().padStart(w, '0');
 	const baseName = (/** @type {string} */ path) => path.slice(path.lastIndexOf('/') + 1);
+	const labelOf = (/** @type {string} */ name) => disks.find((d) => d.name === name)?.label ?? baseName(name);
 </script>
 
 <svelte:window {onkeydown} {onkeyup} {onblur} {onpaste} {onpointerdown} />
@@ -200,6 +231,7 @@
 			height={VIDEX_HEIGHT}
 			aria-label="Videx 80-column screen"
 		></canvas>
+		{#if microM8.locked && engaged}<p class="locked" role="status">{microM8.locked}</p>{/if}
 	</div>
 
 	<div class="bar">
@@ -217,7 +249,7 @@
 			<select bind:value={choice} onchange={insertChoice} aria-label="Put a cabinet disk in the drive">
 				<option value="">Insert a disk…</option>
 				{#each disks as d (d.name)}
-					<option value={d.name}>{d.name}{d.profile ? ` (${d.profile})` : ''}</option>
+					<option value={d.name}>{d.label ?? d.name}{d.profile && !d.label ? ` (${d.profile})` : ''}</option>
 				{/each}
 			</select>
 		{/if}
@@ -257,7 +289,9 @@
 		>
 	</div>
 	<p class="state">
-		{#if microM8.phase === 'idle'}
+		{#if microM8.phase === 'idle' && (pending || beginLabel)}
+			click the screen to start {pending ? (pending.label ?? pending.name) : beginLabel} (loads 41 MB, 10 MB compressed)
+		{:else if microM8.phase === 'idle'}
 			click the screen to switch on (loads 41 MB, 10 MB compressed)
 		{:else if microM8.phase === 'loading'}
 			loading microM8…
@@ -274,7 +308,7 @@
 			</span>
 			{#if microM8.gamepad}<span class="drive" title={microM8.gamepad}>pad</span>{/if}
 			{#each microM8.drives as name, d (d)}
-				<span class="drive" title={name || 'empty'}>{d + 1}: {name ? baseName(name) : 'empty'}</span>
+				<span class="drive" title={name || 'empty'}>{d + 1}: {name ? labelOf(name) : 'empty'}</span>
 			{/each}
 		{/if}
 	</p>
@@ -288,17 +322,21 @@
 		max-width: 1120px;
 	}
 	.glass {
-		width: 100%;
+		--bezel: 8px;
+		box-sizing: content-box;
+		width: calc(100% - 2 * var(--bezel));
+		padding: var(--bezel);
 		aspect-ratio: 560 / 384;
 		position: relative;
 		background: #000;
 		outline: none;
+		box-shadow: 0 0 0 1px #444;
 	}
 	.glass canvas {
 		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
+		inset: var(--bezel);
+		width: calc(100% - 2 * var(--bezel));
+		height: calc(100% - 2 * var(--bezel));
 		image-rendering: pixelated;
 	}
 	.glass canvas.covered {
@@ -310,6 +348,20 @@
 	}
 	.glass canvas.off {
 		display: none;
+	}
+	.locked {
+		position: absolute;
+		left: 50%;
+		bottom: calc(var(--bezel) + 6px);
+		z-index: 2;
+		transform: translateX(-50%);
+		margin: 0;
+		padding: 0.2rem 0.6rem;
+		border-radius: 3px;
+		background: rgb(0 0 0 / 0.8);
+		color: #ffd27a;
+		font: 0.8rem system-ui, sans-serif;
+		pointer-events: none;
 	}
 	.glass.engaged {
 		box-shadow: 0 0 0 2px #4a4;
@@ -326,6 +378,7 @@
 	}
 	button.on {
 		background: #cfc;
+		color: #000;
 	}
 	.speeds {
 		display: inline-flex;

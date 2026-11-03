@@ -392,7 +392,7 @@ as many states as it needs.
 
 ### Running it: TURING MACHINE on the menu
 
-The cabinet applet's menu has **TURING MACHINE (2026)**, which also has its own page at
+The cabinet applet's menu has **Turing Machine (2026)**, which also has its own page at
 `/cabinet/turing/`. It is the same Forth as ULTIMATE MACHINE, built without the rings. Device 54
 sits on the backplane and makes a transition every three cycles when it runs free.
 
@@ -488,7 +488,7 @@ switches itself off: it gets the last word.
 
 ### Running it: ULTIMATE MACHINE on the menu
 
-The cabinet applet's menu has **ULTIMATE MACHINE (2026)**; it also has a page of its own at
+The cabinet applet's menu has **Ultimate Machine (2026)**; it also has a page of its own at
 `/cabinet/ultimate/`. This is Mitch Bradley's Forth, without PIXIE's rings (8K holds those or
 this, not both), with four more sources compiled into it, the same build
 [ultimate.test.ts](src/ultimate.test.ts) runs, and

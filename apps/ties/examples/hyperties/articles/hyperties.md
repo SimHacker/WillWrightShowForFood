@@ -23,6 +23,8 @@ article: The Space Telescope in Orbit
 
 - ~pixie/Food Transfer Protocol~ — **Kent Pitman's 1982 FTP parody for MIT-MC, restored from the ITS binary.** CONNECT to a Cambridge restaurant, set your BITE size, read the MENU, on a green phosphor terminal.
 - ~pixie/PIXIE live~ — **a PDP-7 running in this page.** Heinz Lemke's 1972 PIXIE program, SYMELEC, executing on an emulated PDP-7 and Type 340 vector display. Your mouse is the light pen. The earliest known radial menus, operated by hand.
+- [Little Computer People](/cabinet/games/little-computer-people/?solo) — **Activision's 1985 house on a disk, on an Apple ][ in this page.** microM8 runs the original disks. A screen angel watches the screen: it turns the disk over, asks your name and the date, runs fast while he moves in, then gives you the buttons to take care of him.
+- [The cabinet](/cabinet/) — the emulators in one catalog: PDP-7 programs on the Type 340 display, and Apple ][ disks.
 - ~playground/Sun Founders Big Heads~ — Educom 1988. Point at a Sun founder and his head pops out. Click the background and all three pop. I inflated them by blowing into the optical mouse, for a guy who turned out to be Bill Joy.
 - ~A Look Back~ — Shneiderman, Plaisant, Botafogo, Hopkins, Weiland, 1991. The paper, with the pictures, on this site.
 - ~Wikipedia~ — the stub the encyclopedia has. This page is the article they have not written.

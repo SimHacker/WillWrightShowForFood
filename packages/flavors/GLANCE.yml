@@ -19,7 +19,7 @@ files: keep their flavor's path in source and image; rules mark overlays (microp
 templates: plugins; LiquidJS default; acia.fs.liquid → acia.fs with values, flavor, instance, path
 recipe: steps keyed by id; before/after daemons; builders output, zip, unzip; no output step → the marker in YAML
 full_form: format "full" — values' history, setters, comments' authors, files' sources, as commented YAML; written only by an output step
-build_vs_run_time: bake writes plain files run time reads; run time never composes
-plan: DESIGN.md — tool builders (AppleCommander, Packer), step cache, inputs and fry, JSON Schema
+build_vs_run_time: bake writes plain files run time reads; a baked image never composes; a page adding mixins at start (URL ?with=, menu) instantiates in the browser and caches
+plan: DESIGN.md — tool builders (AppleCommander, Packer), step cache, inputs and fry, run-time mixins, JSON Schema
 not: emulator-specific; the cabinet's cartridges are one user
 k_line: PARENTS · MIXIN · INSTANTIATE · RECIPE · OUTPUT · BAKE · WHY

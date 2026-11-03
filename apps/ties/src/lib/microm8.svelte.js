@@ -7,6 +7,7 @@
 
 import { asset } from '$app/paths';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, VIDEX_BYTES, VIDEX_HEIGHT, VIDEX_WIDTH, startMicroM8 } from '@wwsff/cabinet/microm8';
+import { APPLE_HZ } from '@wwsff/cabinet/angel';
 
 /** @param {string} src */
 function loadScript(src) {
@@ -44,6 +45,8 @@ class MicroM8Machine {
 	mouseStick = $state(false);
 	/** Name of the gamepad driving the paddles, '' when none. */
 	gamepad = $state('');
+	/** Why the page has the keyboard instead of the Apple, '' when the Apple has it. */
+	locked = $state('');
 	/** Pushbuttons 0-2 as each source holds them; the Apple sees any source holding one. */
 	#held = { key: [false, false, false], mouse: [false, false, false], pad: [false, false, false] };
 	#sent = [false, false, false];
@@ -139,9 +142,16 @@ class MicroM8Machine {
 		return () => cancelAnimationFrame(raf);
 	}
 
-	/** Open the page's audio. Call it from a click or key: browsers start sound only then. */
+	/**
+	 * Open the page's audio. Browsers start sound only after a click or key: opened before one,
+	 * it waits suspended, and the next call from a click or key lets it play.
+	 */
 	listen() {
-		if (this.#audio || typeof AudioContext === 'undefined') return;
+		if (this.#audio) {
+			if (this.#audio.ctx.state === 'suspended') this.#audio.ctx.resume();
+			return;
+		}
+		if (typeof AudioContext === 'undefined') return;
 		const ctx = new AudioContext();
 		// The speaker is a one-bit cone pushed one way; take off the offset it leaves.
 		const highpass = ctx.createBiquadFilter();
@@ -220,7 +230,7 @@ class MicroM8Machine {
 	/** @param {KeyboardEvent} ev */
 	press(ev) {
 		const m = this.#m;
-		if (!m) return false;
+		if (!m || this.locked) return false;
 		m.caps = this.caps;
 		return m.press(ev);
 	}
@@ -238,6 +248,16 @@ class MicroM8Machine {
 	/** @param {string} text */
 	type(text) {
 		this.#m?.type(text);
+	}
+
+	/** The Apple's canvas pixels as last drawn, FRAME_WIDTH x FRAME_HEIGHT RGBA, before the page scales them. */
+	get picture() {
+		return { width: FRAME_WIDTH, height: FRAME_HEIGHT, data: this.#pixels };
+	}
+
+	/** Machine time in seconds, from the cycle counter. */
+	seconds() {
+		return (this.#m?.status().cycles ?? 0) / APPLE_HZ;
 	}
 
 	/** Name of the disk in drive 1. */

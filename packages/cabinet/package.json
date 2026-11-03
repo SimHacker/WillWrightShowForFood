@@ -8,7 +8,11 @@
 		".": "./dist/index.js",
 		"./fixtures": "./dist/symelec-fixtures.js",
 		"./microm8": "./dist/microm8/microm8.js",
-		"./microm8/node": "./dist/microm8/node.js"
+		"./microm8/node": "./dist/microm8/node.js",
+		"./disk-catalog": "./dist/apple2/disk-catalog.js",
+		"./apple2/games": "./dist/apple2/games.js",
+		"./angel": "./dist/angel/angel.js",
+		"./angel/png": "./dist/angel/png.js"
 	},
 	"scripts": {
 		"build": "tsc -p tsconfig.json",
@@ -20,6 +24,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^20.17.0",
-		"typescript": "^5.8.0"
+		"typescript": "^5.8.0",
+		"@wwsff/catalog": "workspace:*"
 	}
 }

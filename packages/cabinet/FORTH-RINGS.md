@@ -95,7 +95,7 @@ RINGS" SAYS` adds three words to the ring you're watching.
 
 ## 3. Seeing it
 
-The FORTH + TURTLE program tells the RINGS panel where to look: `RBEG`, `REND` and
+The Forth + Turtle program tells the RINGS panel where to look: `RBEG`, `REND` and
 `RSAVINS`, the same three cells it reads in a running SYMELEC. The panel copies the ring
 area out of live core, lays it out in 3D from `RSAVINS`, and lights cells as they change.
 

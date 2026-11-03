@@ -18,7 +18,7 @@ files:
 
   kernel-names-full.s:
     parent: kernel.s
-    role: the cabinet's Forth, FORTH + TURTLE on the program menu. Tiny ITS, turtle Forth and
+    role: the cabinet's Forth, Forth + Turtle on the program menu. Tiny ITS, turtle Forth and
       PIXIE rings build on this copy; kernel.s stays as the upstream reference and test baseline.
     what: Names kept whole, up to 31 characters.
     cost: 231 more dictionary words with the prelude, turtle and scheme loaded (dp 10022, not 7453).

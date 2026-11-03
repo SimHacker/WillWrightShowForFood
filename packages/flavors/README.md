@@ -207,7 +207,8 @@ any output, it names all of them.
 Instantiating and baking happen once, before anything runs: when a cartridge is built, a menu
 is made, or an image is made. `bake` ends build time by writing a plain directory. Run time
 reads that directory and nothing else. It never walks parents, combines values, or needs the
-package.
+package. The exception is a page that adds mixins when it starts a flavor, from a URL or a menu:
+it instantiates in the browser and caches the result ([DESIGN.md](DESIGN.md#next), item 4).
 
 ### The full form
 

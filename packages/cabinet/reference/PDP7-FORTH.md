@@ -295,7 +295,7 @@ CS PU 200 BK 90 LT 200 FD 90 RT PD STAR
 
 ## In the cabinet: full names, CREATE DOES>, and PIXIE rings
 
-Mitch's Forth runs in the browser on the cabinet's emulated PDP-7, as **FORTH + TURTLE** on
+Mitch's Forth runs in the browser on the cabinet's emulated PDP-7, as **Forth + Turtle** on
 the program menu ([hyperties.org/cabinet/forth/](https://hyperties.org/cabinet/forth/)). The
 page assembles the kernel itself with an `as7` front end, then does what his `prelude.py`
 does under SIMH: it mounts the Forth sources on the paper tape reader, types `TAPE`, and keeps

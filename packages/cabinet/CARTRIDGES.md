@@ -387,8 +387,136 @@ JavaScript, so a reviewer is judging content and taste, not reading for exploits
 are still checked by people: help articles (rendered markdown, sanitized like every article)
 and anything that claims to be a period program, which needs its provenance said in its README.
 
+## 7a. The catalog: one browser for every machine
+
+The PDP-7 and the Apple ][ run under one interface: a browser of everything that can run, the
+running machine's display, and the panels that machine supports. What the browser shows is a
+**catalog**, assembled from entries that can live anywhere.
+
+**An entry declares where it appears.** The tree the user browses is independent of where files
+sit on disk. A `catalog.yml` holds one entry, or `entries:` and `folders:` lists, and can sit beside
+the thing it describes, in another package, at a URL, in a `gh:` repo, or in the browser's own
+storage:
+
+```yaml
+entries:
+  - id: lcp-4am
+    title: Little Computer People (4am crack)
+    path: games/simulations/little-computer-people   # its home, and its URL
+    also: [people/david-crane]                         # listed here too
+    was: [apple2/lcp]                                  # old paths, redirected
+    tags: { machine: apple2, year: 1985, publisher: activision, by: [david-crane] }
+    runs: { machine: apple2, disk: little-computer-people/lcp-4am-side-a.dsk }
+folders:
+  - { path: games, title: Games }
+  - { path: games/simulations, title: Simulations }
+```
+
+- **Paths are slugs.** Lower case, digits and hyphens, one per level. A folder's title is declared
+  once, in a `folders:` entry; without one, the browser title-cases the slug. Titles can then
+  change and carry any punctuation ("Apple ][") without breaking a link.
+- **Folders come from paths.** A folder exists when some entry's path passes through it. A folder
+  entry adds a title, a description or an order, nothing more.
+- **Runnable is a property, not a kind.** An entry with `runs:` boots something; one without is a
+  container. An entry can be both, such as a program whose saved games sit under it.
+- **`also:`** lists the entry in more places; its URL stays its `path`, so a link means one thing.
+  **`was:`** keeps old links working after a move.
+- **Tags have facets**: `machine`, `year`, `genre`, `by`, `needs`, any key. A value is a string or
+  a list. Besides the tree, the browser offers a flat list filtered by tags and a tree by one
+  facet (by year, by machine). A folder entry with `query:` instead of children is a saved filter,
+  like Steam's dynamic collections: `{ path: forths, query: { tags: { language: forth } } }`.
+
+**URLs use the same hierarchy.** `/cabinet/<path>` opens the entry at that path. A path in some
+entry's `was:` redirects to its new home. The query adds run-time configuration:
+
+```
+/cabinet/languages/forth/apple-ii-forth/forth/?with=player/don&baud=19200&speed=4
+```
+
+- **`with=`** adds mixins after the entry's own parents, in order, so later ones win: the same rule
+  as `parents`.
+- **Every other parameter is a value**, by dotted path (`serial.baud`) or by an alias the entry
+  declares (`baud`), applied last.
+- **A link is something anyone can send anyone**, so the entry decides what a URL may change. It
+  lists the mixins a URL may add (`mixins: [forth-ok, player/*]`) and its **inputs**, each with a
+  type and a default (`inputs: { baud: { path: serial.baud, type: integer, default: 9600 } }`).
+  Anything else is ignored, and the page says what it ignored. A mixin from a `gh:` repo or a URL
+  loads only if the entry allows that source.
+- **The address follows the machine.** Changing the speed or plugging in a card rewrites the URL
+  with `replaceState`, so the address always reproduces what is on screen, and **save as entry**
+  turns it into a catalog file of your own (an egg, [§6](#6-live-coding-saving-and-laying-eggs)).
+- **One shape in three places.** An entry (`parents`, `with`, values), a URL (path, `with=`,
+  values) and an article's `yaml cabinet` fence say the same things, and each converts to the
+  others. [`cabinet-url.js`](../../apps/ties/src/lib/cabinet-url.js) already makes a URL into the
+  fence's spec; the catalog generalizes it.
+- **Composition happens in the page.** `@wwsff/flavors` composes in the browser, with files loaded
+  only when used. A baked entry runs without composing; an entry with run-time mixins is composed
+  once and cached by the entry, its mixins and its values.
+
+**Everything loads when used.** The catalog index is small: ids, titles, paths, tags, what each
+entry runs on and needs. It is the only thing the browser loads up front. Machines, devices,
+panels, tapes, disks and sources are dynamic `import()`s, fetched when an entry boots that needs
+them, the way the microM8 module and its disks already are. The offline bundle still carries
+every chunk, precached rather than inlined.
+
+**Panels are matched to machines.** A machine adapter (the PDP-7, microM8, the Turing engine,
+later CAM-6) boots a composed entry and declares what it **implements**; a panel declares what it
+**requires**, and its chip shows only when the running machine implements all of it. A panel that
+belongs to one program (RINGS, DUEL's game panel) also needs the entry to ask for it.
+
+| Panel | Requires | PDP-7 | Apple ][ |
+|---|---|---|---|
+| memory, heat map | `memory`: word size, address space, read | yes | after the memory port ([MICROM8.md](MICROM8.md#order-of-work) step 3) |
+| registers | `cpu.pdp7`, `cpu.6502` | yes | a 6502 panel |
+| teletype | `serial` | yes | the 2651 card's line |
+| drives | `drives` | | yes |
+| rings, DUEL | the entry asks | per program | |
+
+**Where the names come from.** Each of these solved one part already:
+
+- [Desktop Menu Specification](https://specifications.freedesktop.org/menu-spec/latest/):
+  `.desktop` files declare `Categories=`; a separate menu file lays out the tree.
+- Smalltalk's System Browser: each class declares its category string, and the browser builds the
+  tree from the strings, wherever the code came from.
+- The Sims' Buy Mode: each object declares a function sort and a room sort, two facets of one
+  catalog, independent of the file it shipped in.
+- Gmail's nested labels: a label with slashes is a tag and a place in a tree at once.
+- [Debtags](https://wiki.debian.org/Debtags): faceted tags, `facet::value`.
+- VS Code's `contributes` and `activationEvents`, and Eclipse's `plugin.xml` before it: the
+  manifest is read up front, the code loads on activation.
+- COM component categories: Implemented and Required Categories, so a container hosts only the
+  controls it can support. Here, machines and panels.
+- MAME: machines made of devices in slots, software lists matched by `compatible`, parents and
+  clones.
+- [libretro](https://docs.libretro.com/): cores loaded on demand, info files that declare what each
+  core runs, and Explore, a faceted browser over a database of games.
+- Hugo's `aliases`, and MediaWiki's redirects: old addresses kept alive after a move.
+
+**Done:** [`@wwsff/catalog`](../catalog/README.md): entries, the tree, facets, search, and URLs
+with run-time mixins and inputs, with entries for every cabinet program and every Apple app.
+The shell at `/cabinet/<path>/` (`apps/ties/src/lib/CatalogShell.svelte`): the catalog as a tree,
+a list or by any facet, with search and tag chips, beside the entry it shows. Every catalog path
+and old program path is a prerendered page; old paths and `?program=` move to the entry's own
+path. Machine adapters (`machines.js`) are imported when an entry first needs one; a link to an
+entry on the other machine reloads the page. One PDP-7 applet serves every PDP-7 entry: its
+program menu goes to the picked program's entry, and a new entry switches its program.
+An Apple entry is an app (`disks/apple2/APPS.yml`), not a floppy: its disks named by what they
+are for, its starts (which disk goes in which drive), its moves (a disk to insert and a key to
+press when the program asks, such as turning Little Computer People over), and a character
+bridge (Wizardry) that reads the characters off the disk the game writes. `AppleApp.svelte` puts
+every one of these on a button, so a player does by hand what a screen angel would do for them;
+a start that needs another profile reloads and starts after. `/microm8/` lists every app's disks.
+**Planned:** a screen angel that reads the screen and offers or performs an app's moves at the
+prompt it names; writing edited characters back to a disk; the capability registry and panels
+chosen by it, URL write-back for inputs, save as entry, then the steps below.
+
 ## 8. Order of work
 
+0. **The catalog** ([§7a](#7a-the-catalog-one-browser-for-every-machine)): entries for every
+   program and disk where they are, then one browser page over them; machine adapters for the
+   PDP-7 and microM8 behind one shell, with panels chosen by what the machine implements; the
+   PDP-7 programs and microM8 imported lazily. Accept: `/cabinet/` and `/microm8/` boot
+   everything they boot today, from one page.
 1. **Cartridges as files.** Move each object in `cabinet-programs.js` into
    `tapes/<id>/cartridge.yml`, with a loader that interprets the steps. Accept: every program
    boots the same, and its tests pass unchanged.

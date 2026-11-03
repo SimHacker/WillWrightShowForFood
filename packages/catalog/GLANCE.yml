@@ -1,0 +1,16 @@
+# 👁️ @wwsff/catalog — what can run, in one tree
+what: |
+  Entries declare their place in one browsable tree (path, in slugs), wherever their files live.
+  Folders are implied by paths or declared for a title, order or saved filter. Tags have facets.
+  URLs are the same paths; the query adds mixins (with=) and inputs the entry allows.
+package: "@wwsff/catalog"
+class: Catalog
+entry: [add, tree, find, facets, byFacet, resolve, entry, parseLaunch, launchUrl, effectiveValues, nest]
+entry_keys: id · title · path · also (folders also listed in) · was (old paths) · tags · runs · mixins · inputs · description
+file_keys: entries · folders (path, title, order, description, query) · defaults (tags, mixins, inputs; runs only for runnable entries)
+runnable: an entry with runs; without, a container
+url: /cabinet/<path>/?with=a,b&input=value; old and also paths redirect; undeclared params are ignored with a reason
+problems: bad entries are left out and named in catalog.problems, never thrown
+design: ../cabinet/CARTRIDGES.md §7a
+not: emulator-specific; the cabinet is its first user
+k_line: PATH · ALSO · WAS · FACET · QUERY · WITH · INPUTS
