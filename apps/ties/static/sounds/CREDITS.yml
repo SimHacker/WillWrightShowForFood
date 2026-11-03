@@ -1,0 +1,7 @@
+asr33-bell.wav:
+  what: the bell of a Teletype Model 33 ASR, rung by ^G (BEL); the cabinet teletype's bell
+  recorded_by: Hugh Pyle, from his restored ASR-33, for his ttyemu (https://github.com/hughpyle/ttyemu, no license file)
+  # The same author republished all 34 ttyemu samples in hermes-skills under MIT; that copy is the source here.
+  source: https://github.com/hughpyle/hermes-skills/blob/main/plugins/teletype/dashboard/dist/sounds/up-bell.wav
+  license: MIT, Copyright (c) 2026 Hugh Pyle, inguz outcomes llc (the repository's LICENSE)
+  edits: lid-up take; mixed to mono, 24 kHz, trimmed to 1.6 s from the strike with a 0.4 s fade

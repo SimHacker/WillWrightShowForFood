@@ -4,6 +4,8 @@
 	 * with a menu of programs (cabinet-programs.js). See apps/ties/CABINET-APPLET.md.
 	 */
 	import { onMount, tick, untrack } from 'svelte';
+	import { asset } from '$app/paths';
+	import { createBeeper } from './beeper.js';
 	import {
 		Pdp7,
 		Type340,
@@ -1404,21 +1406,22 @@
 		if (!ttyOpen) ttyUnread += 1;
 	}
 
-	/** The bell, ^G: a short tone until there is a recording of a real Model 33's. */
-	let audio = null;
+	/**
+	 * The bell, ^G: beeper.js. The ASR-33 recording is fetched when the applet mounts and the first
+	 * ring waits for it. Muting silences the sound, not the flash.
+	 */
+	const TTY_MUTE_KEY = 'cabinet-tty-mute';
+	let ttyMute = $state(untrack(() => globalThis.localStorage?.getItem(TTY_MUTE_KEY) === '1'));
+	const beeper = createBeeper({ resolve: asset });
+	beeper.muted = untrack(() => ttyMute);
+	function setMute(on) {
+		ttyMute = on;
+		beeper.muted = on;
+		store(TTY_MUTE_KEY, on ? '1' : '');
+	}
+	onMount(() => beeper.preload());
 	function beep() {
-		const Ctx = globalThis.AudioContext ?? globalThis.webkitAudioContext;
-		if (!Ctx) return;
-		audio ??= new Ctx();
-		const t = audio.currentTime;
-		const osc = audio.createOscillator();
-		const gain = audio.createGain();
-		osc.frequency.value = 880;
-		gain.gain.setValueAtTime(0.15, t);
-		gain.gain.exponentialRampToValueAtTime(0.001, t + 0.25);
-		osc.connect(gain).connect(audio.destination);
-		osc.start(t);
-		osc.stop(t + 0.25);
+		beeper.ring();
 	}
 
 	/**
@@ -1447,33 +1450,44 @@
 		const s = await speechReady();
 		if (!s || !ttySpeak) return;
 		// The newest output matters most: cut off whatever is still being read.
+		const id = ++talkId;
 		s.cancel();
-		// Fingers in ears: the microphone would hear the machine and type its words back in.
-		if (listening && !earsShut) {
-			earsShut = true;
-			recognizer?.abort();
-		}
-		const done = () => setTimeout(openEars, 300);
+		// Fingers in ears: the session that could hear this is aborted, so none of its results,
+		// however late they come, get typed in. Ears open when this utterance (not a cancelled
+		// one) ends, after the tail of the sound has left the speakers.
+		talking = true;
+		deafen();
+		const done = () => id === talkId && setTimeout(() => id === talkId && stopTalking(), 300);
+		clearInterval(talkWatch);
+		// Some browsers drop the end event; when the synthesizer has gone quiet, the talk is over.
+		talkWatch = setInterval(() => {
+			if (id !== talkId) return clearInterval(talkWatch);
+			if (!speechSynthesis.speaking && !speechSynthesis.pending) {
+				clearInterval(talkWatch);
+				done();
+			}
+		}, 1000);
 		const opts = { rate: 1.1, onEnd: done, onError: done };
 		if (speechVoice) s.speakWithVoice(text, speechVoice, opts);
 		else s.speak(text, { voiceType: 'male', language: 'en', ...opts });
 	}
-	let earsShut = false;
-	function openEars() {
-		if (!earsShut || speechSynthesis.speaking || speechSynthesis.pending) return;
-		earsShut = false;
-		if (!listening) return;
-		try {
-			recognizer.start();
-		} catch {
-			listening = false;
-		}
+	let talkId = 0;
+	let talking = false;
+	let talkWatch = null;
+	function stopTalking() {
+		talkId += 1;
+		talking = false;
+		clearInterval(talkWatch);
+		hearAgain();
 	}
 	function setSpeak(on) {
 		ttySpeak = on;
 		store(TTY_SPEAK_KEY, on ? '1' : '');
 		if (on) sayAloud('Speaking.');
-		else speech?.cancel();
+		else {
+			speech?.cancel();
+			stopTalking();
+		}
 	}
 	let ttySaid = '';
 	let ttySayTimer = null;
@@ -1576,53 +1590,80 @@
 		'audio-capture': 'no microphone found',
 		aborted: ''
 	};
+	/**
+	 * One phrase per recognition session, restarted as soon as it ends. In continuous mode Chrome
+	 * holds a phrase as interim until the next one starts, so one number arrived with the next.
+	 * The status says "listening" only once the browser reports the microphone open.
+	 *
+	 * `recognizer` is the one live session. A session that is replaced or aborted is forgotten:
+	 * every handler checks it is still `recognizer`, so nothing it says arrives late.
+	 */
 	function toggleVoice() {
 		cliEl?.focus({ preventScroll: true });
-		earsShut = false;
 		if (listening) {
 			listening = false;
-			recognizer?.stop();
+			deafen();
+			voiceNote = '';
 			return;
 		}
-		recognizer = new SpeechRecognition();
-		recognizer.lang = navigator.language || 'en-US';
-		// Interim results show in the command line as you speak, so you can see it hearing you.
-		recognizer.interimResults = true;
-		recognizer.continuous = true;
-		recognizer.onresult = (e) => {
-			if (earsShut) return;
+		listening = true;
+		voiceNote = 'starting the microphone…';
+		hearAgain();
+	}
+	function deafen() {
+		const rec = recognizer;
+		recognizer = null;
+		ttyLine = '';
+		if (!rec) return;
+		rec.abort();
+		if (listening) voiceNote = 'not listening while the machine speaks';
+	}
+	function hearAgain() {
+		if (!listening || talking || recognizer || !SpeechRecognition) return;
+		const rec = new SpeechRecognition();
+		recognizer = rec;
+		rec.lang = navigator.language || 'en-US';
+		rec.interimResults = true;
+		rec.continuous = false;
+		rec.onaudiostart = () => {
+			if (recognizer === rec && !voiceNote.startsWith('heard')) voiceNote = 'listening';
+		};
+		rec.onresult = (e) => {
+			if (recognizer !== rec) return;
 			for (let i = e.resultIndex; i < e.results.length; i++) {
 				const r = e.results[i];
 				const said = r?.[0]?.transcript?.trim() ?? '';
 				if (!r?.isFinal) {
 					ttyLine = said;
+					voiceNote = `hearing “${said}”`;
 					continue;
 				}
 				ttyLine = '';
-				voiceNote = said ? `heard “${said}”` : 'listening…';
+				voiceNote = said ? `heard “${said}”` : 'listening';
 				if (said) sendSpoken(said);
 			}
 		};
-		// Browsers end a session after silence; keep listening until the mic is pressed again.
-		recognizer.onend = () => {
-			if (!listening || earsShut) return;
+		rec.onend = () => {
+			if (recognizer !== rec || !listening) return;
 			try {
-				recognizer.start();
+				rec.start();
 			} catch {
+				recognizer = null;
 				listening = false;
+				voiceNote = 'the microphone stopped';
 			}
 		};
-		recognizer.onerror = (e) => {
-			if (e.error === 'no-speech' || e.error === 'aborted') return;
+		rec.onerror = (e) => {
+			if (recognizer !== rec || e.error === 'no-speech' || e.error === 'aborted') return;
+			recognizer = null;
 			listening = false;
 			voiceNote = VOICE_ERRORS[e.error] ?? `speech recognition failed: ${e.error}`;
 			console.warn('cabinet: speech recognition', e.error, e.message);
 		};
-		voiceNote = 'listening…';
-		listening = true;
 		try {
-			recognizer.start();
+			rec.start();
 		} catch (err) {
+			recognizer = null;
 			listening = false;
 			voiceNote = `speech recognition failed: ${err instanceof Error ? err.message : err}`;
 		}
@@ -3233,6 +3274,16 @@
 							onclick={() => setSpeak(!ttySpeak)}>🔊</button
 						>
 					{/if}
+					<button
+						type="button"
+						class="chip"
+						class:on={!ttyMute}
+						aria-pressed={!ttyMute}
+						aria-label={ttyMute ? 'The bell is muted; press to unmute' : 'Mute the bell'}
+						title={ttyMute ? 'The bell (^G) is muted; the paper still flashes' : 'Mute the bell (^G); the paper still flashes'}
+						onpointerdown={(e) => e.preventDefault()}
+						onclick={() => setMute(!ttyMute)}>{ttyMute ? '🔕' : '🔔'}</button
+					>
 				</div>
 				{#if voiceNote}<p class="mem-hint" role="status">🎤 {voiceNote}</p>{/if}
 				<div class="tty-bar">
@@ -3447,6 +3498,12 @@
 					<span class="tty-cfg-row">
 						{#each [[false, 'OFF'], [true, 'ON']] as [value, text]}
 							<button type="button" class="chip" class:on={ttySpeak === value} aria-pressed={ttySpeak === value} title="Read what the machine prints aloud, for when no screen reader is on" onclick={() => setSpeak(value)}>{text}</button>
+						{/each}
+					</span>
+					<span class="tty-cfg-label">Bell</span>
+					<span class="tty-cfg-row">
+						{#each [[false, 'ON'], [true, 'MUTE']] as [value, text] (text)}
+							<button type="button" class="chip" class:on={ttyMute === value} aria-pressed={ttyMute === value} title="The ^G bell. Muted, the paper still flashes." onclick={() => setMute(value)}>{text}</button>
 						{/each}
 					</span>
 					<span class="tty-cfg-label">Type</span>

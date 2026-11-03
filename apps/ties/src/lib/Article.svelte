@@ -51,11 +51,21 @@
 		onnavigate?.(target);
 	}
 
-	/** Prose links are anchors inside {@html}, so they are caught by delegation. */
+	/**
+	 * Prose links are anchors inside {@html}, so they are caught by delegation. Link text selects
+	 * like the rest of the prose: a click that ends a selection neither arms nor follows, and only
+	 * the second press of a double click is kept from selecting the word.
+	 */
+	function onProseMouseDown(event) {
+		if (event.detail > 1 && event.target.closest?.('a.ties-link')) event.preventDefault();
+	}
+
 	function onProseClick(event) {
 		const anchor = event.target.closest?.('a.ties-link');
 		if (!anchor) return;
 		event.preventDefault();
+		const sel = globalThis.getSelection?.();
+		if (sel && !sel.isCollapsed && sel.containsNode(anchor, true)) return;
 		const found = resolveAnchor(anchor, db);
 		if (!found) return;
 		if (event.detail > 1 || browser?.isArmed(found)) go(found);
@@ -75,6 +85,7 @@
 		const root = bodyEl;
 		if (!root) return;
 		for (const a of root.querySelectorAll('a.ties-link')) {
+			a.draggable = false;
 			const found = resolveAnchor(a, db);
 			a.classList.toggle('armed', Boolean(armed && found && browser.isArmed(found)));
 		}
@@ -99,6 +110,7 @@
 		class="body"
 		bind:this={bodyEl}
 		role="presentation"
+		onmousedown={onProseMouseDown}
 		onclick={onProseClick}
 		ondblclick={onProseDblClick}
 	>
@@ -162,8 +174,7 @@
 		text-decoration: none;
 		border-bottom: 1px solid var(--ink, #000);
 		cursor: pointer;
-		user-select: none;
-		-webkit-user-select: none;
+		-webkit-user-drag: none;
 	}
 	.body :global(p) {
 		line-height: 1.45;
