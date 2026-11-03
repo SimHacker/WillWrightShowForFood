@@ -54,6 +54,7 @@
 		const query = new URLSearchParams(search);
 		solo = query.has('solo');
 		if (solo) sidebar = false;
+		document.documentElement.classList.remove('solo');
 		const program = home ? query.get('program') : null;
 		const old = program ? entryForProgram(program) : undefined;
 		if (old) {
@@ -206,6 +207,8 @@
 
 <svelte:head>
 	<title>{title} — Cabinet</title>
+	<!-- Prerendered pages cannot see the query, so ?solo is applied by class until the script runs. -->
+	{@html `<script>if (/[?&]solo(?:[=&]|$)/.test(location.search)) document.documentElement.classList.add('solo')</script>`}
 </svelte:head>
 
 {#snippet link(/** @type {CatalogNode} */ node)}
@@ -455,8 +458,13 @@
 		color: #d8e8d8;
 		font: 14px/1.4 system-ui, sans-serif;
 	}
-	.catalog.closed {
+	.catalog.closed,
+	:global(html.solo) .catalog {
 		grid-template-columns: minmax(0, 1fr);
+	}
+	:global(html.solo) .catalog > :is(.edge, aside),
+	:global(html.solo) :is(.about, .tags, .guide) {
+		display: none;
 	}
 	.catalog.dragging {
 		cursor: col-resize;
