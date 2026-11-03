@@ -1,0 +1,81 @@
+# Mira (Mira-Cult/math), a 17-state beeping Turing machine for the full Collatz conjecture.
+# From a blank tape it beeps infinitely often if and only if every positive integer reaches 1
+# under v/2 (even), 3v+1 (odd). If b is the least counterexample it beeps exactly b(b-1)/2
+# times and then runs silently forever. It never halts; a beep is every exit from state O.
+#
+# Source: https://github.com/Mira-Cult/math/tree/main/turing-machines/collatz-beeping17
+# (commit c392b7f, 2026-11-01), literal table collatz_beeping17.tm:
+#   1RL0RB_1LC1RB_0LK0LD_1RE1LD_0RF0RB_0LG0LG_1LH1LG_0RA0RI_1RJ1RI_1RF1RF_0RA1LK_0LM0LM_0LN1LM_1RO1LN_0RA0RP_0RQ1RP_1RL1RQ
+# Generated from that string; the state roles are the README table, abridged.
+# Mira proves it in ordinary mathematics with finite checks; it is not Lean-certified.
+# Their repository has no license yet; this is the table only, with credit.
+#
+# Checked here (TURING-ENGINE.md, "Beeping machines"): 200,000,000 transitions from blank tape
+# give 1,081 beeps, 1+2+...+46, as Mira reports.
+
+id: mira-collatz-beeping17
+name: Collatz beeping machine, 17 states (Mira)
+credits:
+  - Mira (github.com/Mira-Cult), the 17-state machine and its proof
+  - Charlie Reams, the 14-state weak-Collatz machine whose arithmetic core it adapts (calr3/tinycryptids)
+  - Pascal Michel, Simulation of the Collatz 3x+1 function by Turing machines (arXiv:1409.7322)
+
+blank: "0"
+symbols: ["0", "1"]
+start: A
+halt: []        # no halting state: the run is infinite either way; what counts is the beeps
+missing: error
+universality: { kind: none }
+
+states:
+  A:  # dispatch on whether the value is 1
+    "0": { write: "1", move: R, next: L }
+    "1": { write: "0", move: R, next: B }
+  B:  # find and fill the value hole
+    "0": { write: "1", move: L, next: C }
+    "1": { write: "1", move: R, next: B }
+  C:  # move the hole left, or detect the even meeting
+    "0": { write: "0", move: L, next: K }
+    "1": { write: "0", move: L, next: D }
+  D:  # return to the halving marker
+    "0": { write: "1", move: R, next: E }
+    "1": { write: "1", move: L, next: D }
+  E:  # move the marker right, or detect the odd meeting
+    "0": { write: "0", move: R, next: F }
+    "1": { write: "0", move: R, next: B }
+  F:  # place the odd-step hole
+    "0": { write: "0", move: L, next: G }
+    "1": { write: "0", move: L, next: G }
+  G:  # return to the odd-step marker
+    "0": { write: "1", move: L, next: H }
+    "1": { write: "1", move: L, next: G }
+  H:  # move that marker left, or finish the odd step
+    "0": { write: "0", move: R, next: A }
+    "1": { write: "0", move: R, next: I }
+  I:  # find and fill the odd-step hole
+    "0": { write: "1", move: R, next: J }
+    "1": { write: "1", move: R, next: I }
+  J:  # advance the odd-step hole
+    "0": { write: "1", move: R, next: F }
+    "1": { write: "1", move: R, next: F }
+  K:  # return to the active field beginning
+    "0": { write: "0", move: R, next: A }
+    "1": { write: "1", move: L, next: K }
+  L:  # place the reset or copy hole
+    "0": { write: "0", move: L, next: M }
+    "1": { write: "0", move: L, next: M }
+  M:  # return over the active field to the separator
+    "0": { write: "0", move: L, next: N }
+    "1": { write: "1", move: L, next: M }
+  N:  # increment the counter, or restore a copy marker
+    "0": { write: "1", move: R, next: O }
+    "1": { write: "1", move: L, next: N }
+  O:  # BEEP on every exit; finish the reset, or copy another cell
+    "0": { write: "0", move: R, next: A, beep: true }
+    "1": { write: "0", move: R, next: P, beep: true }
+  P:  # cross the counter and separator
+    "0": { write: "0", move: R, next: Q }
+    "1": { write: "1", move: R, next: P }
+  Q:  # find and advance the active-field hole
+    "0": { write: "1", move: R, next: L }
+    "1": { write: "1", move: R, next: Q }

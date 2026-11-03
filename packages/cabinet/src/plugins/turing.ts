@@ -25,6 +25,13 @@ import type { Cpu, Device, Iot, IotReply, Step } from "../bus.js";
  *     +7 ALPHA   address of NSYM cell codes, symbol i is written as ALPHA[i]; 0 = codes are indices
  *     +8 COUNT   transitions executed, low word
  *     +9 COUNTH  transitions executed, high word
+ *   and only in emit mode (TMLM bit 15), so ten-word control blocks stay valid:
+ *     +10 EMIT    address of the emit table, one word per transition entry; 0 = none
+ *     +11 ECOUNT  emitting transitions taken, low word   engine writes back
+ *     +12 ECOUNTH emitting transitions taken, high word
+ *
+ *   emit word, beside each transition entry: a character for the teletype, 0 = this door is
+ *   silent. BEL (007) is the beep. The bits above the low seven are reserved and read as zero.
  *
  *   tape window: cells of `cellBits`, packed from the high end of each word, as many as fit. On a
  *   PDP-7 that is three six-bit cells a word, the Type 342's character word, so a window whose
@@ -67,7 +74,15 @@ export const TCB = {
 	COUNT: 8,
 	COUNTH: 9,
 	SIZE: 10,
+	EMIT: 10,
+	ECOUNT: 11,
+	ECOUNTH: 12,
+	/** The control block's length in emit mode. */
+	EMIT_SIZE: 13,
 } as const;
+
+export const BEL = 0o7;
+const EMIT_CHAR = 0o177;
 
 export const MOVE = { NONE: 0, R: 1, L: 2, N: 3 } as const;
 
@@ -79,14 +94,20 @@ export const TM_FAULT = 0o040000;
 export const TM_STEP = 0o020000;
 /** With FAULT: the head ran off the left of the window. */
 export const TM_LEFT = 0o010000;
-export const TM_FLAGS = TM_HALT | TM_UNDEF | TM_FAULT | TM_STEP;
+/** Stopped after an emitting transition (emit-stop mode). */
+export const TM_EMIT = 0o004000;
+export const TM_FLAGS = TM_HALT | TM_UNDEF | TM_FAULT | TM_STEP | TM_EMIT;
 
 /** Mode word: bit 17 set = the host pages the tape (fault and stop); clear = the engine pages it. */
 export const TM_MODE_HOST = 0o1;
 /** Mode word, bit 16: forget the spilled tape (a new program). Acts once; not remembered. */
 export const TM_MODE_FORGET = 0o2;
+/** Mode word, bit 15: emit mode. The TCB is EMIT_SIZE words and transitions may emit. */
+export const TM_MODE_EMIT = 0o4;
+/** Mode word, bit 14: stop after every emitting transition, raising EMIT. Clear: count and run on. */
+export const TM_MODE_EMIT_STOP = 0o10;
 
-export type StopReason = "halt" | "undef" | "fault" | "step";
+export type StopReason = "halt" | "undef" | "fault" | "step" | "emit";
 
 /**
  * The rest of the tape, run-length encoded: only non-blank runs are kept. The engine spills to it
@@ -199,6 +220,19 @@ export class TuringEngine {
 	alpha = 0;
 	count = 0;
 
+	/** Emit mode: the TCB has EMIT, ECOUNT and ECOUNTH. */
+	emitting = false;
+	/** Stop after each emitting transition. */
+	emitStop = false;
+	emitTable = 0;
+	/** Emitting transitions taken. */
+	emits = 0;
+	/** The last character emitted, and the absolute tape cell its transition read. */
+	lastEmit = 0;
+	emitCell = 0;
+	/** The last transition emitted. */
+	emitted = false;
+
 	status = 0;
 	/** Engine pages by itself (false) or faults to the host (true). */
 	hostPaging = false;
@@ -252,6 +286,8 @@ export class TuringEngine {
 		this.nsym = at(TCB.NSYM);
 		this.alpha = at(TCB.ALPHA) & this.amask;
 		this.count = at(TCB.COUNT) + at(TCB.COUNTH) * (this.wmask + 1);
+		this.emitTable = this.emitting ? at(TCB.EMIT) & this.amask : 0;
+		this.emits = this.emitting ? at(TCB.ECOUNT) + at(TCB.ECOUNTH) * (this.wmask + 1) : 0;
 		this.spill.blank = this.code(0);
 	}
 
@@ -282,10 +318,17 @@ export class TuringEngine {
 		this.pages = 0;
 		this.scanned = -1;
 		this.entryAddr = -1;
+		this.emitting = false;
+		this.emitStop = false;
+		this.emitTable = 0;
+		this.emits = 0;
+		this.lastEmit = 0;
+		this.emitted = false;
 	}
 
 	/** One transition. Returns why it stopped, or null if it is still running. */
 	step(): StopReason | null {
+		this.emitted = false;
 		if (!this.running) return null;
 		if (this.state === 0) return this.halt(TM_HALT, "halt");
 		if (this.head < 0 || this.head >= this.wlen) {
@@ -303,6 +346,15 @@ export class TuringEngine {
 		const next = entry % 2 ** this.qbits;
 		if (move === MOVE.NONE || write >= this.nsym) return this.halt(TM_UNDEF, "undef");
 
+		if (this.emitTable) {
+			const word = this.mem.read((this.emitTable + this.state * this.nsym + sym) & this.amask) & EMIT_CHAR;
+			if (word) {
+				this.emitted = true;
+				this.lastEmit = word;
+				this.emitCell = this.origin + this.head;
+				this.emits += 1;
+			}
+		}
 		this.writeCell(this.head, this.code(write));
 		if (move === MOVE.R) this.head += 1;
 		else if (move === MOVE.L) this.head -= 1;
@@ -321,6 +373,10 @@ export class TuringEngine {
 		if (next === 0) {
 			flags |= TM_HALT;
 			reason = "halt";
+		}
+		if (this.emitted && this.emitStop) {
+			flags |= TM_EMIT;
+			reason ??= "emit";
 		}
 		if (!reason && this.stepOnce) {
 			flags |= TM_STEP;
@@ -400,6 +456,10 @@ export class TuringEngine {
 		put(TCB.ORIGIN, this.origin < 0 ? base + this.origin : this.origin);
 		put(TCB.COUNT, this.count % base);
 		put(TCB.COUNTH, Math.floor(this.count / base));
+		if (this.emitting) {
+			put(TCB.ECOUNT, this.emits % base);
+			put(TCB.ECOUNTH, Math.floor(this.emits / base));
+		}
 	}
 
 	private signed(w: number): number {
@@ -417,21 +477,25 @@ export type TuringDeviceOpts = {
 	rate?: number;
 	/** Every transition, for traces and the panel. */
 	onStep?: (e: TuringEngine) => void;
+	/** Every emitting transition, with its character; in free-running emit mode the host prints it. */
+	onEmit?: (char: number, e: TuringEngine) => void;
 };
 
 /**
  * The PDP-7 adapter: device 54, a cabinet extension on a free code (TURING-ENGINE.md has the map).
  *
- *   705401 TMSF  skip on flag (halt, undefined, fault, step)
+ *   705401 TMSF  skip on flag (halt, undefined, fault, step, emit)
  *   705402 TMRS  OR status into AC             705412 clear AC first
  *   705404 TMLA  AC is the TCB: load it, clear flags, run
  *   705421 TMSR  skip while running
  *   705422 TMRQ  OR the current state into AC  705432 clear AC first
  *   705424 TMGO  reload the TCB (the host may have paged), clear flags, run
  *   705441 TMSS  reload, clear flags, run one transition, raise STEP
- *   705442 TMLM  AC is the mode word: bit 17 host pages, bit 16 forget the spilled tape
- *                705452 clears it: the engine pages
+ *   705442 TMLM  AC is the mode word: bit 17 host pages, bit 16 forget the spilled tape,
+ *                bit 15 emit mode (13-word TCB), bit 14 stop on every emit
+ *                705452 clears it: the engine pages, no emits
  *   705444 TMST  stop and clear flags
+ *   705462 TMRE  OR the last emitted character into AC  705472 clear AC first
  *
  * The flag is the interrupt request, as the 340's is: halt and fault arrive on the PDP-7's one
  * level, and the handler finds the engine on its skip chain with TMSF.
@@ -442,6 +506,7 @@ export class TuringDevice implements Device {
 	readonly engine: TuringEngine;
 	rate: number;
 	onStep: ((e: TuringEngine) => void) | undefined;
+	onEmit: ((char: number, e: TuringEngine) => void) | undefined;
 	private accum = 0;
 
 	constructor(opts: TuringDeviceOpts) {
@@ -451,6 +516,7 @@ export class TuringDevice implements Device {
 		});
 		this.rate = opts.rate ?? 1;
 		this.onStep = opts.onStep;
+		this.onEmit = opts.onEmit;
 	}
 
 	iot(req: Iot): IotReply {
@@ -477,6 +543,8 @@ export class TuringDevice implements Device {
 			if (req.pulse & 0o2) {
 				const mode = clear ? 0 : ac;
 				e.hostPaging = (mode & TM_MODE_HOST) !== 0;
+				e.emitting = (mode & TM_MODE_EMIT) !== 0;
+				e.emitStop = e.emitting && (mode & TM_MODE_EMIT_STOP) !== 0;
 				if (mode & TM_MODE_FORGET) e.forget();
 			}
 			if (req.pulse & 0o1) {
@@ -486,6 +554,8 @@ export class TuringDevice implements Device {
 				e.stop();
 				e.clearFlags();
 			}
+		} else if (sub === 0o60) {
+			if (req.pulse & 0o2) ac = (clear ? 0 : ac) | e.lastEmit;
 		}
 		return { ac, skip };
 	}
@@ -497,6 +567,7 @@ export class TuringDevice implements Device {
 			this.accum -= 1;
 			this.engine.step();
 			this.onStep?.(this.engine);
+			if (this.engine.emitted) this.onEmit?.(this.engine.lastEmit, this.engine);
 		}
 		if (!this.engine.running) this.accum = 0;
 	}

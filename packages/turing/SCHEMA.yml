@@ -33,6 +33,9 @@ machine:
       # L / R / N  (N = stay). The floor plan never changes; only the body does.
       "1": { write: X, move: R, next: seek }
       "0": { write: "0", move: N, next: done }
+      # Optional per door: beep: true. Taking the door emits one beep, an event, not a state.
+      # A beeping machine (machines/mira-collatz-beeping17.yml) usually has halt: [] and is
+      # judged by whether it beeps finitely or infinitely often. See TURING-ENGINE.md.
 
 tape:
   id: copy-111

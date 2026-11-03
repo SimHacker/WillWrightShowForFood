@@ -108,6 +108,8 @@ transition, so the host and the panels see live state in core.
 | +8 | COUNT | transitions, low word |
 | +9 | COUNTH | transitions, high word |
 
+In emit mode (TMLM bit 15) the block is thirteen words; see [Emits on device 54](#emits-on-device-54).
+
 ### Transition table
 
 One word per (state, symbol), row-major by state: `TABLE + state × NSYM + symbol`. Row 0 is the
@@ -138,18 +140,19 @@ printer shows); without one, they hold symbol indices.
 
 | IOT | name | |
 |---|---|---|
-| 705401 | TMSF | skip on flag (halt, undefined, fault, step) |
+| 705401 | TMSF | skip on flag (halt, undefined, fault, step, emit) |
 | 705402 | TMRS | OR status into AC (705412: clear AC first) |
 | 705404 | TMLA | AC is the TCB: load it, clear flags, run |
 | 705421 | TMSR | skip while running |
 | 705422 | TMRQ | OR the current state into AC (705432: clear first) |
 | 705424 | TMGO | reload the TCB, clear flags, run |
 | 705441 | TMSS | reload, run one transition, raise STEP |
-| 705442 | TMLM | mode from AC: bit 17 host pages, bit 16 forget the spilled tape (705452: engine pages) |
+| 705442 | TMLM | mode from AC: bit 17 host pages, bit 16 forget the spilled tape, bit 15 emit mode, bit 14 stop on every emit (705452: clear, engine pages, no emits) |
 | 705444 | TMST | stop and clear flags |
+| 705462 | TMRE | OR the last emitted character into AC (705472: clear first) |
 
-Status bits: RUN 400000, HALT 200000, UNDEF 100000, FAULT 040000, STEP 020000, and LEFT 010000
-(the fault was off the left end). Any flag raises the interrupt request, on the PDP-7's one
+Status bits: RUN 400000, HALT 200000, UNDEF 100000, FAULT 040000, STEP 020000, LEFT 010000
+(the fault was off the left end), and EMIT 004000. Any flag raises the interrupt request, on the PDP-7's one
 level, like the 340's.
 
 **Device 56, the Ultimate Machine:**
@@ -205,6 +208,92 @@ nothing in the engine changes:
   the other way.
 - Guard bands (fault a few cells before the edge) let the host start the I/O while the engine keeps
   running. That is one more TCB word and one comparison.
+
+## Beeping machines
+
+A halting machine answers a question of the form "there exists": a counterexample to Goldbach, a
+proof of 0 = 1 in ZFC, a nontrivial Collatz cycle. Some questions take one more quantifier.
+"Every positive integer reaches 1" is for-all-n there-exists-k, and "P = NP" is there-exists an
+algorithm and an exponent such that for-all inputs it is right in time. A machine can't settle
+those by halting, but it can by **beeping**: a beep is an event on a transition, the machine never
+halts, and the answer is whether it beeps infinitely often (for-all-exists) or only finitely often
+(exists-for-all). That is Scott Aaronson's beeping busy beaver, from *The Busy Beaver Frontier*
+(2020).
+
+### Mira's Collatz machines
+
+[Mira-Cult/math](https://github.com/Mira-Cult/math/tree/main/turing-machines) (checked at commit
+`c392b7f`, 2026-11-01) publishes three two-symbol machines:
+
+| machine | from a blank tape | proof |
+|---|---|---|
+| 12-state evaluator | halts on an encoded n exactly when n's orbit reaches 1 | Lean |
+| 16-state cycle detector | halts exactly when a nontrivial positive cycle exists | Lean |
+| 17-state beeper | beeps infinitely often exactly when every orbit reaches 1; with least counterexample b, exactly b(b−1)/2 beeps | ordinary proof and finite checks |
+
+The 17-state beeper is in [`packages/turing/machines/mira-collatz-beeping17.yml`](../turing/machines/mira-collatz-beeping17.yml),
+generated from Mira's literal string, with `beep: true` on both doors out of state O. Its arithmetic
+core is Charlie Reams's 14-state weak-Collatz machine. Mira's repository has no license yet; only
+the table is copied here.
+
+Checked here:
+
+- Mira's `machine.py`: `PASS: 2079 macro cases; 17 states; beep state O`.
+- An independent stepper written from the literal string: 200,000,000 transitions from a blank tape
+  give 1,081 beeps, which is 1 + 2 + … + 46, matching Mira's README. The last beep is at
+  transition 181,892,196, and the run takes half a second in Node.
+- Where the beeps happen: round n (the round that has just driven n to 1) beeps once on each counter
+  cell from −n to −1, right to left. The first beeps are at transitions 6, 17, 26, 150, 161 and 172,
+  on cells −1, −2, −1, −3, −2 and −1. Marking beep cells on the tape picture draws a triangle that
+  grows by one cell per round.
+- The tape stays small: at transition 200 million the head is at cell +1860, and the left end is
+  the counter, about −47. The engine's paging handles this without host help.
+
+### The P = NP candidate
+
+Mira also posted a screenshot on X: "P = NP iff this Turing Machine ever stops beeping."
+The image shows 290 states and 580 transitions, start state 0, no halting transitions, and one
+designated beep transition, state 95 reading 1 (write 0, move L, next 1). Its caption says
+"candidate; independent review pending", and the post says proofs are "incoming". The table is not
+in Mira-Cult/math as of `c392b7f`. Copy it from Mira's published file when there is one, not from
+the screenshot, since 580 hand-transcribed entries won't be right. The quantifiers are consistent
+with the claim: P = NP is exists-for-all, which matches "finitely many beeps". Nothing about its
+correctness has been checked here.
+
+It beeps on one door, not on every exit from a state. So beeps belong on transitions, as in the
+schema, and "every exit from O" is the special case of marking both of O's doors.
+
+Two other images that came with it:
+
+- A 254-state table in arrow notation that halts (state 78 reading 1 goes to `h`). It is an ordinary
+  halting machine of unknown origin; record it when its source is known.
+- A chart ranking theories and large cardinals by consistency strength. It is the context for
+  machines that halt exactly when a theory is inconsistent, such as the K215 machine that Mira's
+  488-tile Wang set is pinned to.
+
+### Emits on device 54
+
+A transition can print a character. A beep is the character BEL (007), which the teletype rings.
+Emit mode is TMLM bit 15; without it the TCB stays ten words, so every existing block is valid.
+
+| offset | name | |
+|---|---|---|
+| +10 | EMIT | address of the emit table, one word per transition entry, parallel to TABLE; 0 = none |
+| +11 | ECOUNT | emitting transitions taken, low word |
+| +12 | ECOUNTH | emitting transitions taken, high word |
+
+- An emit word's low seven bits are the character; 0 means the transition is silent. The bits above
+  are reserved.
+- Each emitting transition adds 1 to ECOUNT and leaves its character for TMRE.
+- TMLM bit 14 stops the engine after every emitting transition and raises EMIT (004000), like
+  STEP, so a PDP-7 program or TM-Forth word takes each emit as an interrupt, reads it with TMRE,
+  types it, and restarts with TMGO.
+- With bit 14 clear the engine runs on, counting, and the host's `onEmit(char, engine)` hook prints
+  each character. The Collatz beeper's beeps are dense at first (the first three come within 26
+  transitions) and then thin out.
+- `engine.emitCell` is the absolute tape cell the emitting transition read, for marking the tape
+  picture where the beep happened.
+- The engine implements this; `tm.ts` and TM-Forth do not build emit tables yet.
 
 ## Portability: any host, any memory shape
 
