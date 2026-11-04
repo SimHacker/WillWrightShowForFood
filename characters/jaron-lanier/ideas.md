@@ -59,6 +59,19 @@ Will's xmas party → Don has SimCity on XO → Jaron (2 Jan 2007): converge wit
 Lanier's 2005 *American Scientist* review of Markoff. Opening warrant: UI history is the Shakespeare problem, not Tesla trivia. Engelbart wanted **musician-grade virtuosity**; the mainstream kept the easy half (mouse, not keyset). He names **Kay** and **Nelson** as still building the "half-born" computer. Same review: SAIL funk; Spacewar as first open-source; communal-era email → forgeable identity → spam; organizing portraits McCarthy + **Stewart Brand**, best portrait Engelbart. The line Don already quoted — Engelbart to Minsky: *"You're going to do all that for the machines? What are you going to do for the people?"*  
 → Full text: [`sources/2005-american-scientist-early-computings-long-strange-trip.md`](sources/2005-american-scientist-early-computings-long-strange-trip.md) · apparatus: [`sources/2005-american-scientist-dormouse.md`](sources/2005-american-scientist-dormouse.md) · [`sources/2023-01-24-dormouse-engelbart-minsky.md`](sources/2023-01-24-dormouse-engelbart-minsky.md) · [`../douglas-engelbart/engelbart-mouse-and-keyset.md`](../douglas-engelbart/engelbart-mouse-and-keyset.md) · [`../stewart-brand/`](../stewart-brand/)
 
+### 9. Prompt for an editor, not a result *(2026)*
+On The Times Tech Podcast: AI repeats social media because "we became addicted to addiction as a
+business model," and the agent is "a ritual worship object." His experiment instead: ask the model for
+an **editor** of results near what you want, with sliders (visual detail, historical reference,
+technical accuracy), so making stays exploration. Three gains: intuition, clear authorship, getting what
+you actually want. Same stance as the show's toys: Will Wright's possibility spaces, Bret Victor's
+explorables, pie menus with live feedback ([MediaGraph](../don-hopkins/sources/mediagraph-sfc-youtube-demo.md)),
+Engelbart's augmentation. Fair question for the repo, whose guests are LLM-performed portrayals: does
+naming a human author for every move answer his objection? Also: Eliza as the 60s proof
+([`../joe-weizenbaum/`](../joe-weizenbaum/README.md)); "oracle at Delphi or library at Alexandria";
+speaking out without having to quit.
+→ [`sources/2026-11-02-times-tech-podcast-addicted-to-addiction.md`](sources/2026-11-02-times-tech-podcast-addicted-to-addiction.md)
+
 ## Sources
 
 - [jaronlanier.com/vpl.html](http://www.jaronlanier.com/vpl.html)

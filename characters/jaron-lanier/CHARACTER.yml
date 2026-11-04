@@ -6,7 +6,7 @@ signifier: "👤"
 emoji: "🥽🎼"
 status: living
 real_being: true
-field: "VR pioneer (coined 'virtual reality'); VPL Research; performing musician & rare-instrument collector; VR/input devices as live instruments; 'data dignity' / anti-extraction thinker & author"
+field: "VR pioneer (coined 'virtual reality'); VPL Research; performing musician & rare-instrument collector; VR/input devices as live instruments; 'data dignity' / anti-extraction thinker & author; Prime Unifying Scientist, Microsoft Office of the CTO (OCTOPUS)"
 home: characters/jaron-lanier/
 
 representation:
@@ -33,6 +33,8 @@ see_also:
   - { path: sources/2005-american-scientist-early-computings-long-strange-trip.md, why: "Full 2005 American Scientist review — Engelbart to Minsky: what are you going to do for the people?" }
   - { path: sources/2005-american-scientist-dormouse.md, why: "Apparatus / show beats for the 2005 review" }
   - { path: sources/2023-01-24-dormouse-engelbart-minsky.md, why: "Engelbart vs Minsky quote; Bay Area reopen" }
+  - { path: sources/2026-11-02-times-tech-podcast-addicted-to-addiction.md, why: "Times Tech Podcast 2026: 'addicted to addiction'; agents as ritual worship; prompt for an editor with sliders, not a result; Delphi or Alexandria; speak without quitting" }
+  - { path: ../joe-weizenbaum/, why: "Eliza, cited as the 60s proof that a responding machine becomes a manipulation box" }
   - { path: ../stewart-brand/, why: "Markoff organizing portrait; Spacewar / Rolling Stone adjacency" }
   - { path: ../alan-kay/, why: "Named with Nelson as still building the half-born computer" }
   - { path: ../ted-nelson/, why: "Named with Kay as still building the half-born computer" }

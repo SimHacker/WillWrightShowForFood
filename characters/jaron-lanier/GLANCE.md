@@ -13,4 +13,6 @@ Dream guest — a **VPL reunion / patch-cord lineage** show with David Levitt + 
 
 Engelbart to Minsky, as Jaron heard it (2005): *"You're going to do all that for the machines? What are you going to do for the people?"* — [`sources/2005-american-scientist-early-computings-long-strange-trip.md`](sources/2005-american-scientist-early-computings-long-strange-trip.md)
 
+On AI (2026): *"We became addicted to addiction as a business model."* His alternative: don't prompt for a result, prompt for an **editor** with sliders, so you learn as you make and you're the author of what you choose. *"Do we want the oracle at Delphi or the library at Alexandria?"* — [`sources/2026-11-02-times-tech-podcast-addicted-to-addiction.md`](sources/2026-11-02-times-tech-podcast-addicted-to-addiction.md)
+
 → [`ideas.md`](ideas.md) · [`../david-levitt/`](../david-levitt/README.md) · [`../don-hopkins/levity-bounce-space-seed.md`](../don-hopkins/levity-bounce-space-seed.md)

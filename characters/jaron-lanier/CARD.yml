@@ -50,6 +50,7 @@ relationships:
   - { with: brian-eno, kinds: [generative_performance_peer], why: "Rare-instrument / generative music ensemble" }
   - { with: don-hopkins, kinds: [correspondent_1999, pie_menu_quote], why: "1999 UI-all-the-way-down email; 'the body remembers' quote in Don's pie-menu materials" }
   - { with: ivan-sutherland, kinds: [vr_lineage], why: "Sword of Damocles (1968) → VPL coining 'virtual reality'" }
+  - { with: joe-weizenbaum, kinds: [cites_as_precedent], why: "Eliza as the 60s proof that any responding machine is easily made a manipulation box (Times Tech Podcast, 2026)" }
 
 abilities:
 - id: COINED-VR
@@ -175,6 +176,27 @@ abilities:
   combos_with:
   - MENTOR-CONSTELLATION
   - TWIN-PROVENANCE
+
+- id: EDITOR-NOT-ORACLE
+  name: Editor, Not Oracle
+  type: activated
+  mana: "{U}{W}"
+  conditions:
+  - segment_topic_in: [ai, agents, llm, authorship, toys, explorable-explanations]
+  advertisement:
+    method: editorNotOracle
+    signature: editorNotOracle(prompt) → an editor with sliders for results near what you want
+    score_when:
+    - trigger: audience_plays_sliders_instead_of_prompting
+      weight: 0.94
+    - trigger: agents_as_worship_challenged
+      weight: 0.9
+    - trigger: co_guest_is_bret_victor_or_will_wright
+      weight: 0.92
+  effect: Cast — prompt for the editor, not the result; cognitively enhancing, not offloading; you're the author of what you choose. "Do we want the oracle at Delphi or the library at Alexandria?"
+  verifiable: sources/2026-11-02-times-tech-podcast-addicted-to-addiction.md
+  combos_with:
+  - DATA-DIGNITY-REPO
 
 compose_with:
   chuck-blanchard: rebounce_origin_ensemble
