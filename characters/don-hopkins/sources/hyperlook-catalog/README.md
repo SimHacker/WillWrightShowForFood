@@ -35,7 +35,7 @@ editors stripped out, that you could ship with apps." The spoken version is in t
 | [`DocBrowser.gif`](DocBrowser.gif) | Class browser with on-line method documentation |
 | [`Warehouse1.gif`](Warehouse1.gif) · [`Warehouse3.gif`](Warehouse3.gif) | Object warehouse: prototype components to copy into your own stacks |
 | [`Help.gif`](Help.gif) | Integrated on-line help, authored without programming |
-| [`HappyProps.gif`](HappyProps.gif) | Property sheet (Happy Tool) |
+| [`HappyProps.gif`](HappyProps.gif) | Property stack (each object class has one) |
 | [`NeatClocks.gif`](NeatClocks.gif) · [`NeatClockProps.gif`](NeatClockProps.gif) · [`Clocks.gif`](Clocks.gif) | Scripted clocks and the clock property sheet that edits face and hands |
 | [`ButtonIdeas2.gif`](ButtonIdeas2.gif) · [`ButtonIdeas4.gif`](ButtonIdeas4.gif) · [`ButtonIdeas5.gif`](ButtonIdeas5.gif) | ButtonIdeas: buttons with embedded behavior |
 
