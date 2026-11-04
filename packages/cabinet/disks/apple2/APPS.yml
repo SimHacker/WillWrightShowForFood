@@ -11,25 +11,25 @@
 # profile: the microM8 machine, when it is not the //e.
 apps:
   - id: wizardry
-    title: Wizardry
+    title: "Wizardry: Proving Grounds of the Mad Overlord"
     path: games/wizardry
-    description: "Sir-Tech's dungeon crawl, the first three scenarios. Each boots from its own disk with its scenario disk in drive 2; Knight of Diamonds and Legacy of Llylgamyn take characters made in the one before."
+    description: "Sir-Tech's dungeon crawl, 1981. Boot from the boot disk alone; after S)tart, the game asks for the scenario disk in drive 1."
     tags: { publisher: sir-tech, year: 1981 }
     # A //e's slot 3 firmware answers Pascal's console probe and switches on 80 columns, and
     # Wizardry then writes 40-column screens into main memory only: every other letter.
     profile: apple2-plus
     disks:
-      pg-boot: { file: wizardry/wizardry-i-proving-grounds-disk-1.dsk, label: "Proving Grounds: Boot" }
-      pg-scenario: { file: wizardry/wizardry-i-proving-grounds-disk-2.dsk, label: "Proving Grounds: Scenario and Characters" }
-      kod-boot: { file: wizardry/wizardry-ii-knight-of-diamonds-disk-1.dsk, label: "Knight of Diamonds: Boot" }
-      kod-scenario: { file: wizardry/wizardry-ii-knight-of-diamonds-disk-2.dsk, label: "Knight of Diamonds: Scenario and Characters" }
-      lol-boot: { file: wizardry/wizardry-iii-legacy-of-llylgamyn-disk-1.dsk, label: "Legacy of Llylgamyn: Boot" }
-      lol-scenario: { file: wizardry/wizardry-iii-legacy-of-llylgamyn-disk-2.dsk, label: "Legacy of Llylgamyn: Scenario and Characters" }
+      pg-boot: { file: wizardry/wizardry-i-proving-grounds-disk-1.dsk, label: "Boot" }
+      pg-scenario: { file: wizardry/wizardry-i-proving-grounds-disk-2.dsk, label: "Scenario and Characters" }
     starts:
-      - { label: "Proving Grounds of the Mad Overlord", drives: [pg-boot, pg-scenario] }
-      - { label: "Knight of Diamonds", drives: [kod-boot, kod-scenario] }
-      - { label: "Legacy of Llylgamyn", drives: [lol-boot, lol-scenario] }
-    people: { bridge: wizardry, disks: [pg-scenario, kod-scenario, lol-scenario] }
+      - { label: "Proving Grounds of the Mad Overlord", drives: [pg-boot] }
+    # One drive only. The boot disk must be write-protected or the game hangs after the title.
+    actions:
+      - label: "Insert the Scenario Disk"
+        prompt: "SCENARIO MASTER IN DRV 1"
+        insert: { drive1: pg-scenario }
+        keys: "\r"
+    people: { bridge: wizardry, disks: [pg-scenario] }
 
   - id: little-computer-people
     title: Little Computer People

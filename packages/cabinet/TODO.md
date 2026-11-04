@@ -47,8 +47,7 @@ to 32K.
 
 ## Could
 
-- **Wizardry worlds, the rest** ([worlds/wizardry/](worlds/wizardry/README.md)): unscramble
-  Wizardry III's SCENARIO.MESGS; read the monster picture format (ENEMYPIC in COMBAT, PIC2SCRN
+- **Wizardry worlds, the rest** ([worlds/wizardry/](worlds/wizardry/README.md)): read the monster picture format (ENEMYPIC in COMBAT, PIC2SCRN
   in REWARDS) so PICTURES.yml becomes art; name the bits of `vs_type`, `resists` and
   `abilities` from the source; empty a roster slot from YAML (import now only writes slots
   the files name).

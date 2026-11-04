@@ -95,30 +95,10 @@ disks:
     bytes: 143360
     sha1: 44a03784493d42e34f7931e925a625d434b24e40
     source: "disk images/games/w/wizardry (1981)(andrew greenberg)(disk 2 of 2).dsk"
-  - file: wizardry/wizardry-ii-knight-of-diamonds-disk-1.dsk
-    bytes: 143360
-    sha1: b921b3233aa98ef315a1aafe00117f8324c2aab1
-    source: "disk images/games/w/wizardry ii - knight and diamons (1982)(andrew greenberg)(disk 1 of 2).dsk"
-  - file: wizardry/wizardry-ii-knight-of-diamonds-disk-2.dsk
-    bytes: 143360
-    sha1: bf57d3552c0c032517252b298f3f6d2492120291
-    source: "disk images/games/w/wizardry ii - knight and diamons (1982)(andrew greenberg)(disk 2 of 2).dsk"
-  - file: wizardry/wizardry-iii-legacy-of-llylgamyn-disk-1.dsk
-    bytes: 143360
-    sha1: ce30d1ae61929be762dc4c94d3ecea65c4bb459d
-    source: "disk images/games/w/wizardry iii - the legacy of llylgamyn (1983)(andrew greenberg)(disk 1 of 2).dsk"
-  - file: wizardry/wizardry-iii-legacy-of-llylgamyn-disk-2.dsk
-    bytes: 143360
-    sha1: a2e2a1f2b0887412bfad7af52675b38c0db7a8a9
-    source: "disk images/games/w/wizardry iii - the legacy of llylgamyn (1983)(andrew greenberg)(disk 2 of 2).dsk"
   - file: wizardry/wizardry-i-scenario-original.woz   # flux image; roster empty, as shipped
     bytes: 233484
     sha1: 29239657b321817d9566408dbadf072c20b3e13b
     source: "disk images/woz/games s-z/wizardry - proving grounds of the mad overlord (sir-tech software)/wizardry - scenario #1.woz"
-  - file: wizardry/wizardry-iii-scenario-original.woz   # flux image; roster empty, as shipped
-    bytes: 233470
-    sha1: 1fbf35a22562c3413f7d9fe060ca2a629a71b47a
-    source: "disk images/woz/games s-z/wizardry 3 - legacy of llylgamyn (sir-tech software)/wizardry 3 - scenario #3.woz"
   - file: wizardry/wizardry-character-printout-side-b.woz   # Pascal volume WIZPBT
     bytes: 233474
     sha1: 39ec27a11b91a897ab0d610b4e33644ba1fe2c62

@@ -1,14 +1,12 @@
 # Wizardry worlds
 
-Three Wizardry scenario disks exported to YAML Jazz with
-[scripts/wizardry-world.mjs](../../scripts/wizardry-world.mjs). Each directory is one
-scenario disk; importing it onto that disk gives the disk back byte for byte.
+The Proving Grounds scenario disk exported to YAML Jazz with
+[scripts/wizardry-world.mjs](../../scripts/wizardry-world.mjs). Importing the directory onto
+that disk gives the disk back byte for byte.
 
 | World | Disk | Characters |
 |---|---|---|
 | [proving-grounds/](proving-grounds/) | [wizardry-i-proving-grounds-disk-2.dsk](../../disks/apple2/wizardry/wizardry-i-proving-grounds-disk-2.dsk) | 20 |
-| [knight-of-diamonds/](knight-of-diamonds/) | [wizardry-ii-knight-of-diamonds-disk-2.dsk](../../disks/apple2/wizardry/wizardry-ii-knight-of-diamonds-disk-2.dsk) | 18 |
-| [legacy-of-llylgamyn/](legacy-of-llylgamyn/) | [wizardry-iii-legacy-of-llylgamyn-disk-2.dsk](../../disks/apple2/wizardry/wizardry-iii-legacy-of-llylgamyn-disk-2.dsk) | none (20 UNSET slots) |
 
 ```
 node scripts/wizardry-world.mjs export DISK DIR             # .dsk, .po or .woz; merges into DIR
@@ -51,10 +49,5 @@ of levels 1-4 and DIALMA, KANDI and BADI of level 5.
 
 ## Not yet readable
 
-- Wizardry II's and III's SCENARIO.MESGS are scrambled; the lines round-trip but read as
-  noise, written with \x escapes for the control characters YAML can't hold. The original
-  Wizardry III disk differs from the played one only in bit 7 of those blocks.
 - PICTURES.yml is hex until the picture format is read from the source (ENEMYPIC in
   COMBAT, PIC2SCRN in REWARDS).
-- Item 20 on the original Wizardry III disk has length byte 0x85 and a high-bit I in
-  FLA\xC9L SHIELD; it round-trips as stored.
