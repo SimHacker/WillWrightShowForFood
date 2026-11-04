@@ -93,7 +93,7 @@
 	// Opened at an entry's address, the page is that machine: the catalog starts closed. At a
 	// folder or the root it starts open. After that it stays as the reader leaves it.
 	let sidebar = $state(untrack(() => !catalog.resolve(path)?.entry));
-	/** `?solo`: the machine alone, the catalog closed and the entry's notes and guide left out. */
+	/** `?solo`: the machine and its guide, the catalog closed and the entry's notes and tags left out. */
 	let solo = $state(false);
 
 	/** The catalog column's width in px, dragged by its edge and kept across visits. */
@@ -419,7 +419,7 @@
 					{/await}
 				{/key}
 			</div>
-			{#if entry.guide && !solo}
+			{#if entry.guide}
 				<details class="guide" open>
 					<summary>Guide</summary>
 					{@render guideDoc(entry.guide)}
@@ -485,7 +485,7 @@
 		grid-template-columns: minmax(0, 1fr);
 	}
 	:global(html.solo) .catalog > :is(.edge, aside),
-	:global(html.solo) :is(.about, .tags, .guide) {
+	:global(html.solo) :is(.about, .tags) {
 		display: none;
 	}
 	.catalog.dragging {
