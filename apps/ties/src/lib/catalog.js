@@ -83,6 +83,3 @@ export function entryForApp(/** @type {string} */ id) {
 export function entryForProgram(/** @type {string} */ id) {
 	return catalog.entries.find((e) => e.runs?.machine === 'pdp7' && e.runs.program === id);
 }
-
-/** The entry the bare /cabinet/ address runs, as it always has. */
-export const DEFAULT_ENTRY = 'symelec';

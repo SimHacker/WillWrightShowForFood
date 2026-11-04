@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { catalog, DEFAULT_ENTRY } from '$lib/catalog.js';
+import { catalog } from '$lib/catalog.js';
 
 /** Every place in the catalog's tree, and every old path, so each is a real file. */
 export function entries() {
@@ -18,7 +18,7 @@ export function entries() {
 
 export function load({ params }) {
 	const asked = params.path ?? '';
-	const at = asked ? catalog.resolve(asked) : catalog.resolve(catalog.entry(DEFAULT_ENTRY)?.path ?? '');
+	const at = catalog.resolve(asked);
 	if (!at) error(404, `nothing in the catalog at ${asked}`);
 	return { asked, path: at.path, redirect: asked ? (at.redirect ?? null) : null, home: !asked };
 }

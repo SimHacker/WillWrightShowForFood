@@ -62,6 +62,23 @@ test("entries are normalized, with the file's defaults under them", () => {
 	assert.equal(c.entry("apple-forth")!.inputs.term?.type, "string");
 });
 
+test("the root resolves, declared or not, and features entries from anywhere", () => {
+	const bare = sample();
+	assert.equal(bare.resolve("")?.path, "");
+	assert.equal(bare.resolve("")?.entry, undefined);
+	const c = sample().add({ root: { title: "Cabinet", description: "Welcome.", featured: ["apple-forth", "games/simulations/little-computer-people", "nope"] } }, "root.yml");
+	const root = c.tree()!;
+	assert.equal(root.title, "Cabinet");
+	assert.equal(root.folder?.description, "Welcome.");
+	assert.deepEqual(
+		c.featured(root.folder).map((e) => e.id),
+		["apple-forth", "lcp"]
+	);
+	assert.equal(c.problems.length, 1, "a featured name that names nothing is a problem");
+	assert.ok(!root.children.some((n) => n.path === ""), "the root is not its own child");
+	assert.ok(parseLaunch(c, "/cabinet/")?.folder, "the bare address is the root folder");
+});
+
 test("the tree comes from the paths; folders are implied or declared", () => {
 	const c = sample();
 	const root = c.tree()!;

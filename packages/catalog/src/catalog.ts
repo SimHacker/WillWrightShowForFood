@@ -4,7 +4,9 @@
  *
  *   entry    a thing in the catalog; runnable when it has `runs`, a container when it has not
  *   folder   a place in the tree; implied by any path through it, declared only to add a title,
- *            a description, an order, or a `query` (a saved filter)
+ *            a description, an order, a `query` (a saved filter), or `featured` (entries
+ *            picked out at the top, by id or path, wherever they live)
+ *   root     the folder above everything, declared in a file's `root:`: the welcome
  *   path     slugs, one per level: games/simulations/little-computer-people. Its URL too.
  *   also     folders the entry is also listed in; its URL stays its path
  *   was      old paths, which resolve to the entry's path
@@ -64,6 +66,8 @@ export interface Folder {
 	description?: string;
 	order?: number;
 	query?: Query;
+	/** Entries picked out at the top of the folder, by id or path. */
+	featured?: string[];
 	source?: string | undefined;
 }
 
@@ -192,6 +196,8 @@ function normalizeQuery(raw: unknown): Query | undefined {
 export interface CatalogFile {
 	entries?: unknown[];
 	folders?: unknown[];
+	/** The folder above everything: a title, a description, `featured`. No path. */
+	root?: unknown;
 	/** Merged under every entry of this file: tags, mixins, inputs, and runs for runnable entries. */
 	defaults?: unknown;
 }
@@ -213,8 +219,9 @@ export class Catalog {
 			this.problems.push({ source, message: "not a map" });
 			return this;
 		}
-		if ("entries" in file || "folders" in file || "defaults" in file) {
+		if ("entries" in file || "folders" in file || "defaults" in file || "root" in file) {
 			const defaults = isMap(file.defaults) ? file.defaults : {};
+			if (isMap(file.root)) this.addFolder({ ...file.root, path: "" }, source);
 			for (const f of list(file.folders)) this.addFolder(f, source);
 			for (const e of list(file.entries)) this.addEntry(e, source, defaults);
 		} else this.addEntry(file, source, {});
@@ -227,16 +234,18 @@ export class Catalog {
 			return null;
 		}
 		const path = slugPath(raw.path);
-		if (!path) {
+		if (!path && raw.path !== "") {
 			this.problems.push({ source, message: `folder path has no slugs: ${raw.path}` });
 			return null;
 		}
 		const prior = this.#folders.get(path);
 		const folder: Folder = {
 			path,
-			title: typeof raw.title === "string" ? raw.title : prior?.title ?? titleCase(lastSegment(path)),
+			title: typeof raw.title === "string" ? raw.title : prior?.title ?? (path ? titleCase(lastSegment(path)) : ""),
 			source
 		};
+		const featured = raw.featured === undefined ? prior?.featured : list(raw.featured).map(String).filter(Boolean);
+		if (featured?.length) folder.featured = featured;
 		const description = typeof raw.description === "string" ? raw.description : prior?.description;
 		if (description) folder.description = description;
 		const order = typeof raw.order === "number" ? raw.order : prior?.order;
@@ -244,7 +253,7 @@ export class Catalog {
 		const query = normalizeQuery(raw.query) ?? prior?.query;
 		if (query) folder.query = query;
 		this.#folders.set(path, folder);
-		this.#link(path);
+		if (path) this.#link(path);
 		return folder;
 	}
 
@@ -340,8 +349,21 @@ export class Catalog {
 	#folder(path: string): Folder | undefined {
 		const declared = this.#folders.get(path);
 		if (declared) return declared;
-		if (path === "" || !(this.#children.has(path) || this.#also.has(path))) return undefined;
+		if (path === "") return { path, title: "" };
+		if (!(this.#children.has(path) || this.#also.has(path))) return undefined;
 		return { path, title: titleCase(lastSegment(path)) };
+	}
+
+	/** A folder's `featured` entries, in its order; any that name nothing go to `problems` once. */
+	featured(folder: Folder | undefined): Entry[] {
+		const found: Entry[] = [];
+		for (const name of folder?.featured ?? []) {
+			const e = this.entry(name);
+			if (e) found.push(e);
+			else if (!this.problems.some((p) => p.message === `featured ${name} in ${folder?.path || "root"}: no such entry`))
+				this.problems.push({ source: folder?.source, message: `featured ${name} in ${folder?.path || "root"}: no such entry` });
+		}
+		return found;
 	}
 
 	/** The tree from a path down; the root by default. */

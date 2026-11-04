@@ -5,6 +5,7 @@
 	 * its machine, imported when first needed; going to an entry on another machine reloads the
 	 * page, so only one emulator is ever loaded.
 	 */
+	import { untrack } from 'svelte';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { afterNavigate, goto } from '$app/navigation';
 	import { parseLaunch, effectiveValues, launchUrl } from '@wwsff/catalog';
@@ -70,7 +71,7 @@
 	const folder = $derived(entry ? undefined : catalog.tree(path));
 	const values = $derived(entry ? effectiveValues(entry, launch?.values) : {});
 	const machine = $derived(machineFor(/** @type {string | undefined} */ (entry?.runs?.machine)));
-	const title = $derived(entry?.title ?? folder?.title ?? 'Catalog');
+	const title = $derived(entry?.title ?? (folder?.title || 'Cabinet'));
 
 	/** The machine this page has started; another one needs a fresh page. */
 	/** @type {string | undefined} */
@@ -89,7 +90,9 @@
 	/** @type {Record<string, string>} */
 	let picked = $state({});
 	let facet = $state('machine');
-	let sidebar = $state(true);
+	// Opened at an entry's address, the page is that machine: the catalog starts closed. At a
+	// folder or the root it starts open. After that it stays as the reader leaves it.
+	let sidebar = $state(untrack(() => !catalog.resolve(path)?.entry));
 	/** `?solo`: the machine alone, the catalog closed and the entry's notes and guide left out. */
 	let solo = $state(false);
 
@@ -147,7 +150,7 @@
 	const shown = $derived(tree ? (filtering ? prune(tree) : tree) : undefined);
 
 	/** @param {CatalogNode} node */
-	const hrefOf = (node) => (node.entry ? launchUrl(node.entry, {}, { base: CATALOG_BASE }) : `${CATALOG_BASE}${node.path}/`);
+	const hrefOf = (node) => (node.entry ? launchUrl(node.entry, {}, { base: CATALOG_BASE }) : node.path ? `${CATALOG_BASE}${node.path}/` : CATALOG_BASE);
 
 	/** A link to an entry on another machine than the one running reloads the page. */
 	/** @param {Entry | undefined} target */
@@ -206,7 +209,7 @@
 </script>
 
 <svelte:head>
-	<title>{title} — Cabinet</title>
+	<title>{path ? `${title} — Cabinet` : title}</title>
 	<!-- Prerendered pages cannot see the query, so ?solo is applied by class until the script runs. -->
 	{@html `<script>if (/[?&]solo(?:[=&]|$)/.test(location.search)) document.documentElement.classList.add('solo')</script>`}
 </svelte:head>
@@ -223,7 +226,7 @@
 	<a
 		href={hrefOf(node)}
 		class={{ entry: !!node.entry, also: node.link, peeked: peek?.path === node.path && peek?.entry === node.entry }}
-		aria-current={node.entry && node.entry === entry ? 'page' : undefined}
+		aria-current={(node.entry ? node.entry === entry : !entry && !node.link && node.path === path) ? 'page' : undefined}
 		data-sveltekit-reload={reloads(node.entry) ? '' : undefined}
 		title={node.entry?.description}
 		onclick={(ev) => look(ev, node)}
@@ -256,6 +259,32 @@
 			{/if}
 		{/await}
 	{/key}
+{/snippet}
+
+{#snippet contents(/** @type {CatalogNode} */ node)}
+	{@const picks = catalog.featured(node.folder)}
+	{#if picks.length}
+		<h2 class="section">Start here</h2>
+		<ul class="contents featured">
+			{#each picks as e (e.id)}
+				<li>
+					{@render link({ path: e.path, slug: '', title: e.title, entry: e, children: [] })}
+					{#if e.description}<span class="note">{e.description}</span>{/if}
+				</li>
+			{/each}
+		</ul>
+		<h2 class="section">Everything</h2>
+	{/if}
+	<ul class="contents">
+		{#each node.children as child (child.path + (child.link ? '@' : ''))}
+			<li>
+				{@render link(child)}
+				{#if child.entry?.description ?? child.folder?.description}
+					<span class="note">{child.entry?.description ?? child.folder?.description}</span>
+				{/if}
+			</li>
+		{/each}
+	</ul>
 {/snippet}
 
 {#snippet branch(/** @type {CatalogNode} */ node)}
@@ -330,6 +359,17 @@
 							<li>{@render link({ path: e.path, slug: '', title: e.title, entry: e, children: [] })}</li>
 						{/each}
 					</ul>
+				{:else if shown && view === 'tree'}
+					<ul class="tree">
+						<li class="root">
+							{@render anchor({ ...shown, title: shown.title || 'Cabinet' })}
+							<ul>
+								{#each shown.children as child (child.path + (child.link ? '@' : ''))}
+									{@render branch(child)}
+								{/each}
+							</ul>
+						</li>
+					</ul>
 				{:else if shown}
 					<ul class="tree">
 						{#each shown.children as child (child.path + (child.link ? '@' : ''))}
@@ -347,7 +387,7 @@
 			<div class="titlebar">
 				{#if !sidebar}
 					<button class="toggle" onclick={() => (sidebar = true)} aria-expanded="false" title="Show the catalog">›</button>
-					<span class="brand">Cabinet:</span>
+					<a class="brand" href={CATALOG_BASE} title="Everything in the cabinet">Cabinet:</a>
 				{/if}
 				{#if crumbs.length > 1}
 					<span class="crumbs"
@@ -388,16 +428,7 @@
 		{:else if entry}
 			<p class="wait">No machine runs <code>{String(entry.runs?.machine ?? 'nothing')}</code> yet.</p>
 		{:else if folder}
-			<ul class="contents">
-				{#each folder.children as child (child.path + (child.link ? '@' : ''))}
-					<li>
-						{@render link(child)}
-						{#if child.entry?.description ?? child.folder?.description}
-							<span class="note">{child.entry?.description ?? child.folder?.description}</span>
-						{/if}
-					</li>
-				{/each}
-			</ul>
+			<div class="folder">{@render contents(folder)}</div>
 		{/if}
 
 		{#if peek}
@@ -427,16 +458,7 @@
 						{/if}
 						{#if p.entry.guide}{@render guideDoc(p.entry.guide)}{/if}
 					{:else if p.children.length}
-						<ul class="contents">
-							{#each p.children as child (child.path + (child.link ? '@' : ''))}
-								<li>
-									{@render link(child)}
-									{#if child.entry?.description ?? child.folder?.description}
-										<span class="note">{child.entry?.description ?? child.folder?.description}</span>
-									{/if}
-								</li>
-							{/each}
-						</ul>
+						{@render contents(p)}
 					{/if}
 				</div>
 			</div>
@@ -515,6 +537,9 @@
 	.brand {
 		font-weight: 600;
 		font-size: 1.15rem;
+	}
+	a.brand {
+		color: inherit;
 	}
 	a {
 		color: #9fd89f;
@@ -753,6 +778,24 @@
 	}
 	.contents {
 		padding: 0.5rem 1rem;
+	}
+	.folder {
+		padding: 0 1rem;
+	}
+	.folder .contents {
+		padding: 0.25rem 0 0.75rem;
+	}
+	.section {
+		margin: 0.75rem 0 0.1rem;
+		font-size: 0.95rem;
+		font-weight: 600;
+		opacity: 0.75;
+	}
+	.featured li {
+		margin: 0.5rem 0;
+	}
+	li.root > a {
+		font-weight: 600;
 	}
 	.contents li {
 		margin: 0.35rem 0;

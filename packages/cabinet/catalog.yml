@@ -1,6 +1,23 @@
 # The cabinet's part of the catalog tree (CARTRIDGES.md §7a): the folders everything else sits in.
 # Entries live beside what they describe: tapes/catalog.yml for the PDP-7 programs,
 # disks/apple2/APPS.yml for the Apple apps. Paths are slugs; titles are declared here once.
+# The root is the welcome at /cabinet/. `featured` is curated, not everything: the few worth
+# trying first, by entry id, each a link straight to it.
+root:
+  title: Cabinet
+  description: >-
+    Old machines running in the browser: a DEC PDP-7 with its 340 display, light pen and
+    teletype, and microM8's Apple ][. Pick one from the tree, or start with these.
+  featured:
+    - unix
+    - symelec
+    - duel
+    - forth
+    - ultimate-hand
+    - apple2:little-computer-people
+    - apple2:mind-mirror
+    - apple2:wizardry
+    - apple2:hopkins-forth
 folders:
   - { path: games, title: Games, order: 1 }
   - { path: languages, title: Languages, order: 2 }
