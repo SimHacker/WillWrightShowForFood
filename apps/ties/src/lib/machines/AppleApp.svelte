@@ -55,6 +55,9 @@
 		}
 	}
 
+	/** @param {string} id */
+	const locked = (id) => app.disks[id]?.write_protected === true;
+
 	/** Put each of a start's disks in its drive and boot drive 1. */
 	function start(i = 0) {
 		const s = app.starts[i];
@@ -72,7 +75,7 @@
 		return doing(s.label, async () => {
 			const images = await Promise.all(s.drives.map(bytes));
 			const files = s.drives.map((id) => app.disks[id]?.file ?? id);
-			for (let d = files.length - 1; d >= 0; d--) await microM8.insert(files[d], images[d], d, profile);
+			for (let d = files.length - 1; d >= 0; d--) await microM8.insert(files[d], images[d], d, profile, locked(s.drives[d]));
 			microM8.reboot();
 		});
 	}
@@ -80,13 +83,13 @@
 	/** @param {string} id @param {number} drive */
 	const insert = (id, drive) =>
 		doing(app.disks[id]?.label ?? id, async () => {
-			await microM8.insert(app.disks[id]?.file ?? id, await bytes(id), drive, profile);
+			await microM8.insert(app.disks[id]?.file ?? id, await bytes(id), drive, profile, locked(id));
 		});
 
 	/** @param {AppAction} a */
 	const act = (a) =>
 		doing(a.label, async () => {
-			for (const [drive, id] of Object.entries(a.insert ?? {})) await microM8.insert(app.disks[id]?.file ?? id, await bytes(id), driveIndex(drive), profile);
+			for (const [drive, id] of Object.entries(a.insert ?? {})) await microM8.insert(app.disks[id]?.file ?? id, await bytes(id), driveIndex(drive), profile, locked(id));
 			if (a.keys) microM8.type(a.keys);
 		});
 

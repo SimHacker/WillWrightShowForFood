@@ -11,6 +11,8 @@ export interface AppDisk {
 	file: string;
 	/** What the disk is for, in the words a player would use. */
 	label: string;
+	/** Goes in with the write-protect tab on, as copy protection that checks for it needs. */
+	write_protected?: boolean;
 }
 
 export interface AppStart {

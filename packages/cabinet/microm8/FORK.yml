@@ -93,6 +93,20 @@ patches:
       `term`, shows what arrives on the line through its interrupt handler, sends the keys,
       and button 1 with F enters Forth. The chip's error bits, break, the modem lines and
       the transmitter's pacing are not modeled; GetYAML/SetYAML keep nothing.
+  0007-disk-write-protect.patch:
+    what: >
+      The Disk II write-protect tab. Both insert paths, by file name and by bytes, passed
+      write-protect false, and InsertDisk and InsertDiskBin ignored the flag anyway, so
+      -drive1wp and -drive2wp did nothing and every disk could be written. Now every insert
+      into a drive honors PureBootVolumeWP / PureBootVolumeWP2, reboots included, and
+      protection a WOZ image declares itself is never cleared. insertDisk(drive, name, bytes,
+      writeProtect) sets the tab from JavaScript.
+    for: upstream
+    status: >
+      applies after 0001-0006 and the release build succeeds. DOS 3.3 SAVE on a protected
+      disk prints WRITE PROTECTED and leaves the image unchanged; unprotected it writes.
+      Wizardry: Proving Grounds, whose copy protection hangs after the title on a writable
+      boot disk, reaches the Castle.
 next:
   - "WebAssembly: the full desktop build still stops at go-gl/gl, go-gl/glfw and portaudio, and
     at octalyzer/ui/chat and ui/forumtool, which import paleotronic.com/server packages that

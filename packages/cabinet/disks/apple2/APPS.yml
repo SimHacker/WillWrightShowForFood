@@ -18,16 +18,21 @@ apps:
     # A //e's slot 3 firmware answers Pascal's console probe and switches on 80 columns, and
     # Wizardry then writes 40-column screens into main memory only: every other letter.
     profile: apple2-plus
+    drives: 1
     disks:
-      pg-boot: { file: wizardry/wizardry-i-proving-grounds-disk-1.dsk, label: "Boot" }
+      # Copy protection: a writable boot disk hangs the game after the title, as on a real Apple.
+      pg-boot: { file: wizardry/wizardry-i-proving-grounds-disk-1.dsk, label: "Boot", write_protected: true }
       pg-scenario: { file: wizardry/wizardry-i-proving-grounds-disk-2.dsk, label: "Scenario and Characters" }
     starts:
       - { label: "Proving Grounds of the Mad Overlord", drives: [pg-boot] }
-    # One drive only. The boot disk must be write-protected or the game hangs after the title.
+    # Space ends the title, S starts, and the game asks for its disks in drive 1, one at a time.
     actions:
       - label: "Insert the Scenario Disk"
-        prompt: "SCENARIO MASTER IN DRV 1"
+        prompt: "SCENARIO MASTER IN DRV 1, PRESS [RET]"
         insert: { drive1: pg-scenario }
+        keys: "\r"
+      - label: "Continue with this Disk"
+        prompt: "MASTER/DUPLICATE IN DRV 1, PRESS [RET]"
         keys: "\r"
     people: { bridge: wizardry, disks: [pg-scenario] }
 

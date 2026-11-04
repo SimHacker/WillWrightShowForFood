@@ -273,8 +273,9 @@ class MicroM8Machine {
 	 * @param {Uint8Array} bytes
 	 * @param {number} drive
 	 * @param {string} [profile]
+	 * @param {boolean} [writeProtect] the write-protect tab on
 	 */
-	async insert(name, bytes, drive = 0, profile = '') {
+	async insert(name, bytes, drive = 0, profile = '', writeProtect = false) {
 		const off = this.phase === 'idle';
 		if (off) this.profile = profile;
 		await this.start();
@@ -282,9 +283,9 @@ class MicroM8Machine {
 		if (!m) return;
 		if (off && drive === 0) {
 			this.#bare = false;
-			m.boot(name, bytes);
+			m.boot(name, bytes, writeProtect);
 		} else {
-			m.insertDisk(name, bytes, drive);
+			m.insertDisk(name, bytes, drive, writeProtect);
 		}
 		this.drives[drive] = name;
 	}

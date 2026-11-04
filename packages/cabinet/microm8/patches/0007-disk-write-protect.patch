@@ -1,0 +1,109 @@
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/diskiicard.go b/GoPath/src/paleotronic.com/core/hardware/apple2/diskiicard.go
+index 80c9e67..521169a 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/diskiicard.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/diskiicard.go
+@@ -345,7 +345,7 @@ func (d *IOCardDiskII) HandleServiceBusRequest(r *servicebus.ServiceBusRequest)
+ 		drive := t.Drive
+ 		log.Printf("Insert disk to drive %d", t.Drive)
+ 		d.GetDrive(drive % 2).Eject()
+-		d.GetDrive(drive%2).InsertDisk(t.Filename, false)
++		d.GetDrive(drive%2).InsertDisk(t.Filename, bootWriteProtect(index, drive))
+ 		switch t.Drive {
+ 			case 0:
+ 				settings.PureBootVolume[index] = t.Filename
+@@ -359,7 +359,7 @@ func (d *IOCardDiskII) HandleServiceBusRequest(r *servicebus.ServiceBusRequest)
+ 		drive := t.Drive
+ 		log.Printf("Insert disk to drive %d", t.Drive)
+ 		d.GetDrive(drive % 2).Eject()
+-		d.GetDrive(drive%2).InsertDiskBin(t.Bytes, t.Filename, false)
++		d.GetDrive(drive%2).InsertDiskBin(t.Bytes, t.Filename, bootWriteProtect(index, drive))
+ 		switch t.Drive {
+ 			case 0:
+ 				settings.PureBootVolume[index] = t.Filename
+@@ -1167,6 +1167,15 @@ func (mr *IOCardDiskII) getCycles() int64 {
+ 	return cpu.GlobalCycles
+ }
+ 
++// bootWriteProtect is the write-protect tab the user set for a drive (-drive1wp, -drive2wp, or
++// insertDisk's fourth argument in the browser); every insert into that drive honors it.
++func bootWriteProtect(index, drive int) bool {
++	if drive%2 == 1 {
++		return settings.PureBootVolumeWP2[index]
++	}
++	return settings.PureBootVolumeWP[index]
++}
++
+ func (mr *IOCardDiskII) InsertHelper(drive int, filename string, wp bool) bool {
+ 
+ 	fmt.Printf("InsertHelper(%d, \"%s\", %v)\n", drive, filename, wp)
+diff --git a/GoPath/src/paleotronic.com/core/hardware/apple2/diskiidrive.go b/GoPath/src/paleotronic.com/core/hardware/apple2/diskiidrive.go
+index 1df5c18..2ae26f8 100755
+--- a/GoPath/src/paleotronic.com/core/hardware/apple2/diskiidrive.go
++++ b/GoPath/src/paleotronic.com/core/hardware/apple2/diskiidrive.go
+@@ -860,6 +860,8 @@ func (d *DiskIIDrive) InsertDisk(filename string, wp bool) {
+ 		d.Disk = dsk
+ 	}
+ 
++	d.protect(wp)
++
+ 	parts := strings.Split(filename, "/")
+ 
+ 	d.VolumeName = parts[len(parts)-1]
+@@ -877,6 +879,20 @@ func (d *DiskIIDrive) InsertDisk(filename string, wp bool) {
+ 	}
+ }
+ 
++// protect write-protects the inserted disk when wp is set. It never clears protection a WOZ
++// image declares itself.
++func (d *DiskIIDrive) protect(wp bool) {
++	if !wp {
++		return
++	}
++	if d.Disk != nil {
++		d.Disk.SetWriteProtected(true)
++	}
++	if d.NibImage != nil {
++		d.NibImage.WriteProtected = true
++	}
++}
++
+ func (d *DiskIIDrive) InsertDiskWrapper(dsk *disk.DSKWrapper) {
+ 
+ 	panic("InsertDiskWrapper needs to be implemented")
+@@ -937,6 +953,8 @@ func (d *DiskIIDrive) InsertDiskBin(data []byte, filename string, wp bool) {
+ 		d.Disk = dsk
+ 	}
+ 
++	d.protect(wp)
++
+ 	parts := strings.Split(filename, "/")
+ 
+ 	d.VolumeName = parts[len(parts)-1]
+diff --git a/GoPath/src/paleotronic.com/wasm/main.go b/GoPath/src/paleotronic.com/wasm/main.go
+index 30728fc..0fe99a9 100644
+--- a/GoPath/src/paleotronic.com/wasm/main.go
++++ b/GoPath/src/paleotronic.com/wasm/main.go
+@@ -121,9 +121,11 @@ func api() map[string]any {
+ 		}),
+ 		// insertDisk(drive, name, bytes): drive 0 or 1 is a Disk II drive; 3.5" and hard disk
+ 		// images go to the SmartPort whatever the drive. The image also becomes the boot
+-		// volume for that drive, so reboot() boots it.
++		// volume for that drive, so reboot() boots it. An optional fourth argument true
++		// write-protects the disk, as a tab over the notch would; it stays until the next insert.
+ 		"insertDisk": js.FuncOf(func(this js.Value, args []js.Value) any {
+ 			drive, name, data := args[0].Int(), args[1].String(), bytesArg(args[2])
++			wp := len(args) > 3 && args[3].Truthy()
+ 			path := "local:/mem/" + name
+ 			settings.SetMemVolume(path, data)
+ 			kind := servicebus.DiskIIInsertBytes
+@@ -132,8 +134,10 @@ func api() map[string]any {
+ 				settings.PureBootSmartVolume[slot] = path
+ 			} else if drive == 1 {
+ 				settings.PureBootVolume2[slot] = path
++				settings.PureBootVolumeWP2[slot] = wp
+ 			} else {
+ 				settings.PureBootVolume[slot] = path
++				settings.PureBootVolumeWP[slot] = wp
+ 			}
+ 			servicebus.SendServiceBusMessage(slot, kind, servicebus.DiskTargetBytes{Filename: path, Drive: drive, Bytes: data})
+ 			return kind == servicebus.SmartPortInsertBytes

@@ -44,7 +44,8 @@ export interface MicroM8Status {
 /** What the Go side puts on globalThis.microM8. */
 export interface MicroM8Api {
 	ready(): boolean;
-	insertDisk(drive: number, name: string, bytes: Uint8Array): boolean;
+	/** writeProtect holds for that drive until the next insert, reboots included. */
+	insertDisk(drive: number, name: string, bytes: Uint8Array, writeProtect?: boolean): boolean;
 	flush(): void;
 	volume(name: string): Uint8Array | null;
 	reboot(): void;
@@ -247,13 +248,13 @@ export class MicroM8 {
 	) {}
 
 	/** Put a disk image in a drive (0 or 1); 3.5" and hard disk images go to the SmartPort. */
-	insertDisk(name: string, bytes: Uint8Array, drive = 0): void {
-		this.api.insertDisk(drive, name, bytes);
+	insertDisk(name: string, bytes: Uint8Array, drive = 0, writeProtect = false): void {
+		this.api.insertDisk(drive, name, bytes, writeProtect);
 	}
 
 	/** Insert and boot from it, as with the power switch. */
-	boot(name: string, bytes: Uint8Array): void {
-		this.api.insertDisk(0, name, bytes);
+	boot(name: string, bytes: Uint8Array, writeProtect = false): void {
+		this.api.insertDisk(0, name, bytes, writeProtect);
 		this.api.reboot();
 	}
 
