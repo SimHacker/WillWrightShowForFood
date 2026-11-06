@@ -12,7 +12,7 @@ they built, and the evidence.
 
 **[Procedural rhetoric](https://en.wikipedia.org/wiki/Procedural_rhetoric)** is
 [Ian Bogost](https://en.wikipedia.org/wiki/Ian_Bogost)'s term, coined in his book
-[*Persuasive Games: The Expressive Power of Videogames*](https://mitpress.mit.edu/9780262026147/persuasive-games/)
+*[Persuasive Games: The Expressive Power of Videogames](https://mitpress.mit.edu/9780262026147/persuasive-games/)*
 (MIT Press, 2007). He defines it as "the art of persuasion through rule-based representations and
 interactions, rather than the spoken word, writing, images, or moving pictures." He later
 summed up where it came from in The Atlantic:
@@ -47,32 +47,32 @@ Frasca and Bogost didn't just theorize. They made games that argue, and co-publi
 Watercoolergames about them.
 
 - **[September 12th](https://en.wikipedia.org/wiki/Gonzalo_Frasca)** (Frasca, 2003) is a response
-  to the September 11 attacks. You can fire missiles at terrorists in a crowded town, but the
-  missiles kill civilians, mourners become new terrorists, and the more you shoot the worse it
-  gets. It makes the argument that a military response breeds more terrorism, and it makes it
-  better than any op-ed could. Frasca is credited with coining the word *newsgame* for games like
-  it, and it won a Knight Foundation award in 2009.
+to the September 11 attacks. You can fire missiles at terrorists in a crowded town, but the
+missiles kill civilians, mourners become new terrorists, and the more you shoot the worse it
+gets. It makes the argument that a military response breeds more terrorism, and it makes it
+better than any op-ed could. Frasca is credited with coining the word *newsgame* for games like
+it, and it won a Knight Foundation award in 2009.
 - **Madrid** (Frasca, 2004), about the Madrid train bombings.
 - **The Howard Dean for Iowa Game** (Bogost and Frasca, 2003), made for Dean's presidential
-  primary campaign. Bogost later said its rules expressed the "procedural rhetoric of politics," in
-  which "one amasses supporters in support of nothing more than support."
+primary campaign. Bogost later said its rules expressed the "procedural rhetoric of politics," in
+which "one amasses supporters in support of nothing more than support."
 - **Bogost's studio, Persuasive Games**, made games about politics, health and airports, including
-  *Fatworld* (2007) and *Jetset* (2006). His *Cow Clicker* (2010) satirized Facebook games by
-  reducing them to their rules: click a cow, wait six hours, pay to skip the wait. It became a
-  hit with exactly the players it mocked.
+*Fatworld* (2007) and *Jetset* (2006). His *Cow Clicker* (2010) satirized Facebook games by
+reducing them to their rules: click a cow, wait six hours, pay to skip the wait. It became a
+hit with exactly the players it mocked.
 
 They also read other people's games for their arguments:
 
 - **America's Army**, the US Army's recruiting shooter, "serves as a convincing procedural rhetoric
-  for the chain of command": you accept your missions and do not question them.
+for the chain of command": you accept your missions and do not question them.
 - **Animal Crossing** puts rare items behind late-night play, so children negotiate with parents
-  ("do your chores and I will let you stay up to get it"), and the game's rules reach out into the household.
+("do your chores and I will let you stay up to get it"), and the game's rules reach out into the household.
 - **Frasca's four levels of ideology** in a simulation start with representation: "a simple
-  switching of character skins could turn Quake into a deathmatch between Israelis and
-  Palestinians ... the rules of the game remain unchanged ... However, on an ideological level,
-  this game completely differs from the original." Then come the rules of what you can do, the
-  rules of what counts as winning, and the meta-rules: who gets to change the game, by modding,
-  editing, and source access.
+switching of character skins could turn Quake into a deathmatch between Israelis and
+Palestinians ... the rules of the game remain unchanged ... However, on an ideological level,
+this game completely differs from the original." Then come the rules of what you can do, the
+rules of what counts as winning, and the meta-rules: who gets to change the game, by modding,
+editing, and source access.
 
 The theory has serious critics, and they're worth reading too. Treanor and Mateas point out that
 designers often don't think about the rhetoric their systems carry; Frasca's own *Madrid* makes
@@ -133,11 +133,11 @@ recognized because I'd been on the receiving end of it in life. The scanned, ann
 are public at [donhopkins.com/home/TheSims/](https://donhopkins.com/home/TheSims/).
 
 - [How same-sex relationships really got into The Sims: the record](../patrick-j-barrett-iii/same-sex-relationships-the-record.md),
-  myth versus primary sources.
+myth versus primary sources.
 - [Reading the prototype's rhetoric, nine years before it had a name](sources/qgcon-inclusivity-paper/reading-the-prototype.md),
-  my own account, including the theory I actually had at the time, which was about suicide:
-  a place where a kid could play a life nobody would let them have, without the game raising an
-  eyebrow.
+my own account, including the theory I actually had at the time, which was about suicide:
+a place where a kid could play a life nobody would let them have, without the game raising an
+eyebrow.
 
 ## The proof: "Did The Sims make you gay?"
 
@@ -204,7 +204,7 @@ not a rainbow banner on a lawn. A rule that didn't check gender, in a game playe
 of kids, many of them in homes where nothing else told them they were normal.
 
 - [Did The Sims Make You Gay? (show)](../../repo-shows/did-the-sims-make-you-gay/README.md),
-  with Patrick Barrett's engine-room story alongside the testimonies.
+with Patrick Barrett's engine-room story alongside the testimonies.
 - [I'm Queer Therefore I Sim](../../repo-shows/im-queer-therefore-i-sim/README.md)
 
 ## The Sims refuted GamerGate fourteen years before GamerGate
@@ -277,7 +277,7 @@ What refuted GamerGate wasn't a press release. It was the procedural rhetoric: a
 everybody play, and the players who showed up because of it.
 
 - [OG Cozy Games: The Sims, Soul City, Micropolis, and the cozy lineage Gamergate quietly avoided](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md),
-  claim by claim, with sources.
+claim by claim, with sources.
 - [My HN record on GamerGate](../ian-bogost/sources/hn-gamergate-sims-thesis.md)
 
 ## Objects that argue
@@ -285,15 +285,15 @@ everybody play, and the players who showed up because of it.
 After The Sims shipped, I kept making arguments in its rules, still without the vocabulary:
 
 - **The SimProv Wedding Playset** (circa 2002) has a marriage contract that binds two Sims and
-  doesn't check gender. At the time, same-sex marriage wasn't legal in any US state.
+doesn't check gender. At the time, same-sex marriage wasn't legal in any US state.
 - **The Dumbold Voting Machine** (2004) is a Sims voting machine full of real e-voting failure
-  modes and easter eggs you can exploit. It argues that election software must be open and
-  inspectable by letting you hack it yourself.
-  [The illustrated article](../will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md).
+modes and easter eggs you can exploit. It argues that election software must be open and
+inspectable by letting you hack it yourself.
+[The illustrated article](../will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md).
 - **The tombstone generator** let anyone put a memorial for a real person into the game, with a
-  photograph and an epitaph, for free, with no moderator.
+photograph and an epitaph, for free, with no moderator.
 - **SimShow, Transmogrifier, and RugOMatic** are tools, Frasca's meta-rule level: they argue that the shipped
-  game is a starting point that players can rewrite.
+game is a starting point that players can rewrite.
 
 The whole chapter: [Objects that argue](sources/qgcon-inclusivity-paper/objects-that-argue.md).
 
@@ -305,8 +305,8 @@ prototype slap in The Sims wasn't malicious. It was the default, and it took som
 code as an argument to change it.
 
 So read your own game's rules as an argument. Ask what they reward, what they make permanent, what
-they leave out, and who gets to change them. Then decide what you want them to say, and make them
-say it on purpose.
+they leave out, who gets to change them, and who owns the save files and plugins. Then decide what 
+you want them to say, and make them say it on purpose.
 
 "I don't want to be political" is not an option, because every game has rules, and every rule
 takes a position on something: who can love whom, who gets to win, what violence costs, what
@@ -324,14 +324,14 @@ players who can't stand anybody else being included, that's not a loss. That's y
 ## Read more
 
 - [Procedural rhetoric](https://en.wikipedia.org/wiki/Procedural_rhetoric),
-  [Ian Bogost](https://en.wikipedia.org/wiki/Ian_Bogost),
-  [Gonzalo Frasca](https://en.wikipedia.org/wiki/Gonzalo_Frasca) on Wikipedia
-- Ian Bogost, [*Persuasive Games*](https://mitpress.mit.edu/9780262026147/persuasive-games/)
-  (MIT Press, 2007) and ["The Rhetoric of Video Games"](https://se4n.org/papers/bogost-rhetoric.pdf)
-  (*The Ecology of Games*, 2008)
+[Ian Bogost](https://en.wikipedia.org/wiki/Ian_Bogost),
+[Gonzalo Frasca](https://en.wikipedia.org/wiki/Gonzalo_Frasca) on Wikipedia
+- Ian Bogost, *[Persuasive Games](https://mitpress.mit.edu/9780262026147/persuasive-games/)*
+(MIT Press, 2007) and ["The Rhetoric of Video Games"](https://se4n.org/papers/bogost-rhetoric.pdf)
+(*The Ecology of Games*, 2008)
 - Gonzalo Frasca, "Simulation versus Narrative: Introduction to Ludology" (2003)
 - [Bogost citation page](../ian-bogost/sources/procedural-rhetoric-quote.md)
 - *How Inclusivity Saved The Sims*, the QGCon paper this essay draws on:
-  [index](sources/qgcon-inclusivity-paper/README.md) ·
-  [theory](sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.md) ·
-  [Soul City and Soul Saver](sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md)
+[index](sources/qgcon-inclusivity-paper/README.md) ·
+[theory](sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.md) ·
+[Soul City and Soul Saver](sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md)
