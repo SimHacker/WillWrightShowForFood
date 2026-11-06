@@ -118,6 +118,10 @@ really there, and in my review of Design Document Draft 3 (August 7, 1998) I wro
 > anyone offended by that needs to grow up and get a life, and hopefully our game will help them
 > in that quest.
 
+"And hopefully our game will help them in that quest." The 2026 analysis of the comments on
+*Did The Sims make you gay?* [below](#the-proof-did-the-sims-make-you-gay) measures the impact
+of that hope 27 years later.
+
 Draft 5 (August 31, 1998) answered: "Currently the game only allows heterosexual romance. This
 will not be the only type available ... Will is reviewing the code and will make recommendations
 for how to implement homosexual romance as well." Patrick J. Barrett III implemented it. At E3 in
