@@ -3,6 +3,10 @@
 *Ian Bogost's term for games that argue through their rules. Source data:
 [procedural-rhetoric-quote.yml](procedural-rhetoric-quote.yml).*
 
+**The essay:** [Procedural rhetoric: games argue with their rules, and The Sims changed lives with one](../../don-hopkins/procedural-rhetoric.md),
+covering Bogost and Frasca, September 12th, The Sims' same-sex rule, the *Did The Sims Make You
+Gay?* comment analysis, and GamerGate.
+
 ## The quote
 
 > I developed my own design philosophy that I called procedural

@@ -6,6 +6,8 @@
 
 > *Objects argue — the rules are the rhetoric.*
 
+**The essay:** [Procedural rhetoric: games argue with their rules, and The Sims changed lives with one](../../characters/don-hopkins/procedural-rhetoric.md)
+
 
 **Shows:** will-wright, heather-and-steve · **Status:** ready
 
