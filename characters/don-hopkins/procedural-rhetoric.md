@@ -246,7 +246,7 @@ After The Sims shipped, I kept making arguments in its rules, still without the 
   [The illustrated article](../will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md).
 - **The tombstone generator** let anyone put a memorial for a real person into the game, with a
   photograph and an epitaph, for free, with no moderator.
-- **Transmogrifier and RugOMatic** are tools, Frasca's meta-rule level: they argue that the shipped
+- **SimShow, Transmogrifier, and RugOMatic** are tools, Frasca's meta-rule level: they argue that the shipped
   game is a starting point that players can rewrite.
 
 The whole chapter: [Objects that argue](sources/qgcon-inclusivity-paper/objects-that-argue.md).
@@ -261,6 +261,19 @@ code as an argument to change it.
 So read your own game's rules as an argument. Ask what they reward, what they make permanent, what
 they leave out, and who gets to change them. Then decide what you want them to say, and make them
 say it on purpose.
+
+"I don't want to be political" is not an option, because every game has rules, and every rule
+takes a position on something: who can love whom, who gets to win, what violence costs, what
+lasts and what gets rebuilt. A game that avoids taking sides hasn't left politics out. It has
+handed the decision to whatever defaults it inherited, which in the 1998 prototype of The Sims
+meant a slap. Not deciding is a decision, made by nobody.
+
+"I don't want to lose half my audience" assumes half your audience shares the worst opinion you're
+afraid to contradict, which is an insult to them. The Sims made its position on same-sex
+relationships a rule of the world in 2000, years before any US state allowed same-sex marriage,
+and it didn't lose half its audience. It became the best-selling PC game of its time, and players
+who had nowhere else to go found a home in it. If taking a position costs you the players who
+can't stand anybody else being included, that's not a loss. That's your game working.
 
 ## Read more
 
