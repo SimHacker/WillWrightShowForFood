@@ -259,9 +259,9 @@ found that "contrary to its stated goal, Gamergate spends more time tweeting neg
 developers than at game journalists." An academic analysis of a week of #Gamergate posts found
 they were not "only or even primarily" concerned with ethics in games journalism.
 
-**It ignored every real ethics problem in the industry.** Games journalism does have real ethics
-problems, and they're about money: publishers controlling review access, advertising pressure,
-paid coverage. GamerGate went after poor independent developers and critics, nearly all of them
+**It ignored every real ethics problem in the industry.** As the developer David Hill pointed out,
+the game industry really does have corruption, nepotism and excessive commercialism, and
+GamerGate addressed none of it. It went after poor independent developers and critics, nearly all of them
 women, instead of the giant publishers whose games its members bought. Every ethics question it
 raised, as Vox put it, "has either been debunked or dealt with." The Columbia Journalism Review
 concluded that "at core, the movement is a classic culture war."
