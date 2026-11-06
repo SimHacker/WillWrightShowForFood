@@ -1,7 +1,6 @@
-# "An unholy blend of Will Wright and Aristotle" — the citation chain
+# Procedural rhetoric: "an unholy blend of Will Wright and Aristotle"
 
-*Where "procedural rhetoric" comes from and where the famous line was
-actually said. Machine-readable source data:
+*Ian Bogost's term for games that argue through their rules. Source data:
 [procedural-rhetoric-quote.yml](procedural-rhetoric-quote.yml).*
 
 ## The quote
@@ -13,13 +12,38 @@ actually said. Machine-readable source data:
 ["Video Games Are Better Without Characters"](https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/),
 The Atlantic, March 16, 2015.
 
-**Get the attribution right:** the exact Wright-plus-Aristotle phrasing
-is from the 2015 Atlantic essay, not the 2007 book jacket. The book
-defines the term; the Atlantic line is Bogost's memorable
-self-summary. Will Wright's SimCity lineage (and Bogost's own
-Persuasive Games studio work on politics, nutrition, and immigration)
-is the practical half of the blend; Aristotle supplies the rhetorical
-tradition of persuasion toward correct judgment.
+Will Wright's simulations are the practical half of the blend, along with Bogost's own
+Persuasive Games studio work on politics, nutrition and immigration. Aristotle is the
+rhetorical tradition.
+
+## Applied in this repo
+
+Don's cases, in the QGCon paper
+*How Inclusivity Saved The Sims*
+([index](../../don-hopkins/sources/qgcon-inclusivity-paper/README.md)):
+
+- [**Reading the prototype**](../../don-hopkins/sources/qgcon-inclusivity-paper/reading-the-prototype.md):
+  in the 1998 SimAntics prototype, one woman kissing another got slapped. No document said to
+  and nobody intended it. Don read the code as homophobic nine years before *Persuasive Games*
+  named what he was reading. Rules argue whether or not their authors mean them to.
+- [**Objects that argue**](../../don-hopkins/sources/qgcon-inclusivity-paper/objects-that-argue.md):
+  the SimProv Wedding Playset's marriage contract with no gender check (circa 2002, before any
+  US state allowed same-sex marriage), the
+  [Dumbold Voting Machine](../../will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md)
+  ("free speech and political commentary rendered as executable multimedia software"), the
+  tombstone generator, and the Transmogrifier and RugOMatic tools that handed authorship to
+  players.
+- [**The record**](../../patrick-j-barrett-iii/same-sex-relationships-the-record.md): from Don's
+  design review to Patrick Barrett's implementation of same-sex relationships to ship, with the
+  myths checked against primary sources.
+- [**Did The Sims Make You Gay?**](../../../repo-shows/did-the-sims-make-you-gay/README.md):
+  Alexander Avila's video essay and its 1,712 comments, the reported result of that design.
+- [**Theory spine**](../../don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.md):
+  Bogost, Murray, Frasca and constructionism.
+- [**Soul City / Soul Saver**](../../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md):
+  procedural rhetoric as platform, with exits for players' characters.
+- [**GamerGate and The Sims**](hn-gamergate-sims-thesis.md): Don's HN record on why The Sims
+  proves GamerGate's premise wrong.
 
 ## Primary sources
 
