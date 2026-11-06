@@ -227,6 +227,52 @@ As I wrote on [Hacker News](https://news.ycombinator.com/item?id=38396604) in 20
 > developers and artists working on it and players playing it. And it was around and successful
 > long before your precious Gamergate.
 
+### "Actually, it's about ethics in games journalism"
+
+No, it wasn't, and the record shows that from the first day to the last. Every fact below is from
+[Wikipedia's Gamergate article](https://en.wikipedia.org/wiki/Gamergate) and the sources it cites.
+
+**It started as an ex-boyfriend's revenge post, and the ethics charge in it was false.** In August
+2014 Eron Gjoni published "The Zoe Post", a long account of his breakup with the developer Zoë
+Quinn, with their private chat logs, emails and texts. It implied that Quinn got a favorable
+review of *Depression Quest* by sleeping with Kotaku reporter Nathan Grayson. **Grayson never
+reviewed any of Quinn's games.** His only Kotaku article that mentioned them was published before
+their relationship began. Gjoni himself later said he had "no evidence" of a conflict of interest.
+The founding ethics scandal never happened.
+
+**The people who started it said in their own chat logs what it was for.** Ars Technica read the
+logs of the 4chan users who pushed the hashtag into the spotlight and reported that the goal was to
+"perpetuate misogynistic attacks by wrapping them in a debate about ethics." The ethics framing
+was the wrapper, chosen on purpose, and the same logs suggest sockpuppet Twitter accounts were
+used to spread the hashtag.
+
+**The targets were women, not journalists.** Quinn's record of threats grew a thousand-fold in less
+than four months. Anita Sarkeesian, a critic, not a journalist, received rape and death threats,
+and canceled a talk at Utah State University in October 2014 after a threat promised a "Montreal
+Massacre style attack" on the attendees and the nearby Women's Center. Brianna Wu, a developer,
+not a journalist, had her home address posted on 8chan and fled her home after rape and death
+threats. Sarkeesian asked the obvious question: "if this 'movement' was about journalism, why
+wasn't it journalists who had to deal with a barrage of rape and death threats?"
+
+**When people measured it, it wasn't about journalists.** Newsweek analyzed Gamergate tweets and
+found that "contrary to its stated goal, Gamergate spends more time tweeting negatively at game
+developers than at game journalists." An academic analysis of a week of #Gamergate posts found
+they were not "only or even primarily" concerned with ethics in games journalism.
+
+**It ignored every real ethics problem in the industry.** Games journalism does have real ethics
+problems, and they're about money: publishers controlling review access, advertising pressure,
+paid coverage. GamerGate went after poor independent developers and critics, nearly all of them
+women, instead of the giant publishers whose games its members bought. Every ethics question it
+raised, as Vox put it, "has either been debunked or dealt with." The Columbia Journalism Review
+concluded that "at core, the movement is a classic culture war."
+
+And then there's The Sims. If GamerGate had been about ideology sneaking into games, the
+best-selling PC game, with same-sex relationships written into its rules since 1998 by people who
+said so in their design documents, would have been its first target. It never came up, because
+The Sims disproved everything GamerGate claimed about who plays games and what sells. A campaign
+about ethics would have dealt with that evidence. A harassment campaign looking for women to
+attack just ignored it.
+
 What refuted GamerGate wasn't a press release. It was the procedural rhetoric: a rule that let
 everybody play, and the players who showed up because of it.
 
