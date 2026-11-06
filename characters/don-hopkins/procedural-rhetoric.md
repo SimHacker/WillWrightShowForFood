@@ -93,7 +93,7 @@ relationships:
 
 — Gonzalo Frasca, "Simulation versus Narrative" (2003), quoted on [Wikipedia](https://en.wikipedia.org/wiki/Procedural_rhetoric#Education)
 
-And Bogost named his whole theory after Will Wright. SimCity (1989) was a software toy with no
+Bogost described his theory as "an unholy blend of Will Wright and Aristotle." SimCity (1989) was a software toy with no
 win state and no enemies, whose model of land value, traffic, pollution and taxes was itself a set
 of claims about how cities work. The Sims (2000) put the same kind of model inside a household.
 
