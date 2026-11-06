@@ -269,11 +269,11 @@ handed the decision to whatever defaults it inherited, which in the 1998 prototy
 meant a slap. Not deciding is a decision, made by nobody.
 
 "I don't want to lose half my audience" assumes half your audience shares the worst opinion you're
-afraid to contradict, which is an insult to them. The Sims made its position on same-sex
-relationships a rule of the world in 2000, years before any US state allowed same-sex marriage,
-and it didn't lose half its audience. It became the best-selling PC game of its time, and players
-who had nowhere else to go found a home in it. If taking a position costs you the players who
-can't stand anybody else being included, that's not a loss. That's your game working.
+afraid to contradict, which is an insult to them, and cowardly of you. The Sims made its position 
+on same-sex relationships a rule of the world in 2000, years before any US state allowed same-sex
+marriage, and it didn't lose half its audience. It became the best-selling PC game of its time, 
+and players who had nowhere else to go found a home in it. If taking a position costs you the 
+players who can't stand anybody else being included, that's not a loss. That's your game working.
 
 ## Read more
 
