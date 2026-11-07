@@ -42,6 +42,17 @@ hardware. ITS pages are 1024 words and the KL's are 512, so each ITS page
 loads as two hardware entries. Same contract, different implementation:
 the cabinet's pager should be swappable for the same reason.
 
+MC itself survives: KL10 serial 1038, in service at MIT from 1975 to 1988, is at the
+[Interim Computer Museum](https://icm.museum/blog/?p=38). Their page has the KL-UDGE, the
+DeCoriolis clock (set by `PDSET`, his initials), Moon's February 1976 note putting MC on the
+ARPANET as host 354 octal, and the configuration it ended with: 2 MW of core, three RP04s
+and three T-300s behind a slave PDP-11, the DL10 with CHAOS through a PDP-11 running NSWIT, and
+the Dover printer reached through an Alto called SPRUCE. The KL-UDGE also gave MC 36 lights a
+program could set, "since the KL10 didn't sport any", which is what a null job needs. The KA10
+and KI10 consoles have a lights register a program can write; the PDP-7's console only shows
+its registers, so a PDP-7 null job keeps its pattern in AC ([TODO](TODO.md), the PDP-7
+operator console).
+
 ## Words: 36 bits in a 53-bit number
 
 JavaScript numbers hold integers exactly up to 2^53, so a 36-bit word is
@@ -225,3 +236,5 @@ display, same phosphor, same light pen; the 344 is a dozen lines.
 - [KL-UDGE](https://github.com/PDP-10/its/issues/622), MIT-MC's
   homebrew box for the IMP interface, clocks and console lights; not a
   pager.
+- Interim Computer Museum, [MIT-MC.ARPA](https://icm.museum/blog/?p=38): the machine itself,
+  its configuration, and photographs.
