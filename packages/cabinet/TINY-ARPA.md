@@ -49,16 +49,19 @@ decimal host number ([Don on HN](https://news.ycombinator.com/item?id=13518273),
 | MIT-DM | `@L 70` |
 | MIT-ML | `@L 198` |
 
-The same comment remembers two tricks from BBN's *Users Guide to the Terminal IMP*, which BBN
-mailed free to anyone who asked (Don got his that way); the scan is on bitsavers and the
-Internet Archive, to add to `reference/`:
+The same comment remembers two tricks from BBN's *Users Guide to the Terminal IMP*
+([reference/BBN-ADA014398_Users_Guide_to_the_Terminal_IMP_Aug75.pdf](reference/BBN-ADA014398_Users_Guide_to_the_Terminal_IMP_Aug75.pdf),
+August 1975, from [bitsavers via the Internet Archive](https://archive.org/details/bitsavers_bbntipADA0eTerminalIMPAug75_2157363)).
+BBN mailed Don a copy for the asking, free, to his home address, with no questions.
 
-- **TIP-to-TIP link** (page 5-4): connect the input and output sockets of one TIP terminal to
-  those of another through an unsuspecting host, with `@HOST`, `@SEND TO SOCKET`,
-  `@RECEIVE FROM SOCKET` and `@PROTOCOL BOTH`, so two dial-ups could chat without logging in to
-  the host. The sockets had to be of different parity.
-- **Setting another terminal's parameters** (page 5-7): the octal port number of another user
-  on the same TIP, between the `@` and the command, ran the command on their session.
+- **Talking to another TIP** (section 5-B, page 5-4): "using the TIP as a fancy telephone
+  connection". `@HOST 158`, `@SEND TO SOCKET 1600002`, `@RECEIVE FROM SOCKET 1600003`,
+  `@PROTOCOL BOTH`, with the far end doing the same, opens a full duplex line between two TIP
+  ports. The TIP puts the port number in the high 16 bits of the socket and 2 or 3 in the low
+  bits for receiving or sending, which is the parity Don remembered.
+- **Setting another terminal's parameters** (section 5-D, page 5-7): the octal port number of
+  another user on the same TIP, between the `@` and the command, ran the command on their
+  session.
 
 tiny-tip implements the commands from the manual, not from memory, and both tricks: the second
 is a lesson in what the network trusted.
