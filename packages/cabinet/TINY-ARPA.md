@@ -102,6 +102,33 @@ The stream is plain telnet-style bytes first; SUPDUP later, for ITS's display te
 3. Then `ATDT 3019483850`, NBS-TIP answers, `@L 236`, and an ITS login on MC, first on SIMH
    behind the bridge and later on the cabinet's own PDP-10.
 
+## The script: Bruce's recipe
+
+The acceptance test is the recipe Bruce of Bruce's NorthStar BBS gave Don, as Don wrote it down
+in [PDP-10/its#1339](https://github.com/PDP-10/its/issues/1339) (2018) and on
+[Hacker News](https://news.ycombinator.com/item?id=15080221) (2017, archived in
+[mit-ai-lab-grateful-tourist-hn.md](../../characters/don-hopkins/mit-ai-lab-grateful-tourist-hn.md)).
+Each step is something tiny-mabell, tiny-tip or the ITS behind them must do:
+
+1. After 8 PM Eastern, dial NBS-TIP at 300 baud. tiny-mabell keeps a clock; tourist hours
+   are part of the simulation.
+2. Type `E` to get the TIP's banner.
+3. `@L 134` to connect to MIT-AI. NCP host numbers were 8 bits.
+4. Make up a name and `:LOGIN A2DEH`. If ITS asks for a password, the name is taken: pick
+   another.
+5. If ITS doesn't know the name, it asks whether you want to apply for an account, and why you
+   want to use the AI Lab's PDP-10. "Learning LISP."
+6. Once approved, every ITS machine knows you, but DM still won't let you log in directly.
+7. For Zork, after 8 PM, `@L 70` to DM and log in as `URANUS` with password `RINGS`.
+8. `:CHUNAME A2DEH`, so three kids logged in as `URANUS`, `URANU0` and `URANU1` don't look
+   suspicious.
+9. Two can play Zork at once. Everyone else chats, or watches the game with `:OS PDL`.
+
+Steps 1 to 3 are tiny-mabell's and tiny-tip's. Steps 4 to 9 belong to the ITS behind them, and
+some are history rather than code: the account application went to people, and the restored
+ITS's guest accounts and Zork setup differ from DM's in 1981. Where they differ, the cabinet
+says so on the screen and does not fake it.
+
 The disk answers the modem questions. `INIT-MODEM` sends nothing down the line: it installs the
 interrupt vector and programs the 2651's mode, baud and command registers. The driver has words
 for 300 to 38400 baud and loads at 2400. Dialing is Hayes, typed through the terminal or sent by
