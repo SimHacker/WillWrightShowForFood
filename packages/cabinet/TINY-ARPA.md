@@ -126,7 +126,7 @@ Each step is something tiny-mabell, tiny-tip or the ITS behind them must do:
 
 Steps 1 to 3 are tiny-mabell's and tiny-tip's. Steps 4 to 9 belong to the ITS behind them, and
 some are history rather than code: the account application went to people, and the restored
-ITS's guest accounts and Zork setup differ from DM's in 1981. Where they differ, the cabinet
+ITS's guest accounts and Zork setup differ from DM's back then. Where they differ, the cabinet
 says so on the screen and does not fake it.
 
 The disk answers the modem questions. `INIT-MODEM` sends nothing down the line: it installs the
