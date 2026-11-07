@@ -134,6 +134,27 @@ to 32K.
   and Minsky's UTM, the MFM's snap-together T2-style tiles, von Neumann's 29 states on a
   split-flap station board (a tile-engine specialisation with photographic flap tiles). Every control is
   bound to real state ([PORTRAIT.md](PORTRAIT.md#cabinets-for-machines-that-never-had-one)).
+- **The PDP-7 operator console, and a null job to light it.** The console has no lights register
+  for programs to write: its lamps show the machine's registers live (AC, MB, MA, PC, MQ with the
+  EAE, link, PIE, RUN, the FETCH/DEFER/EXECUTE/BREAK states, SINGLE STEP, SINGLE INST, REPEAT,
+  TRAP, EXTEND, POWER), and programs read the eighteen ACCUMULATOR switches with OAS or LAS, an
+  operate-class microinstruction, not an IOT (Table 28 of the
+  [User Handbook](reference/F-75_PDP-7userHbk_Jun65.pdf), Figure 36; the indicator panel's
+  device lamps are Table 29, Figure 37). So a null job just keeps its pattern in AC.
+  1. **Null job.** Ric Werme's Stanford NULL job at 18 bits: rotate right, complement bit 0 when
+     the bit rotated into bit 1 is clear, delay, repeat. Decide whether the link joins the ring
+     (RAR rotates 19 bits) or stays out (CLL first), and run both to compare the periods.
+  2. **In the shared keyboard wait.** Move `getc` into `tapes/lib/` (HILO and LANDER each have
+     their own copy now; HILO's also steps its random seed) and step the pattern while KSF
+     waits, with an ISZ delay so it changes at a visible rate at 1.75 µs a cycle. The AC is
+     free while waiting; the key goes in AC only after KRB.
+  3. **Console model.** Expose MB, MA, IR and the major state from `Pdp7Cpu` alongside `ac`,
+     `link`, `pc` and `switches`, and keys for START, STOP, CONTINUE, EXAMINE (NEXT), DEPOSIT
+     (NEXT), READ-IN, SINGLE STEP, SINGLE INST and REPEAT with the SPEED controls.
+  4. **Canvas 2D panel.** Draw the console from Figure 36 and period photographs; lamps with
+     persistence (average each lamp over the frame, so a running machine glows at duty-cycle
+     brightness instead of flickering); switches and keys bound to the console model; lazy-loaded
+     like the other panels.
 - **tiny-titan's `type` service**: deliver a Forth (or any) file by typing it into the teletype at
   a fast, configurable rate, waiting for ` ok` per line, errors returned. The live-coding path into
   a running Forth without rebuilding the image ([TINY-TITAN.md](TINY-TITAN.md)).
