@@ -266,6 +266,17 @@ machine to record for the AM radio, and a second witness for the display, would 
 > pattern above is a ready-made test for it. And is sn 129's own 340 at the museum as well, or
 > is the one on the PDP-6 the same unit?
 >
+> For the pen, we can offer DEC's own test. We restored C. Stein's 1964 Type 370 light pen
+> diagnostic (DEC-4-45-M, issued for the PDP-7 as 7-78-M) from the bitsavers scan: hand
+> transcribed, page 6 missing from the scan and reconstructed from the test descriptions, marked
+> as ours. It runs in the cabinet now (https://hyperties.org/cabinet/lp370/): eight vectors at
+> the eight intensities for pen sensitivity, a tracking cross that follows the pen, and a field
+> of view box that counts the points the pen saw. The cabinet also runs headless in Node, so a
+> Pi could run the emulated PDP-7 and this test with its points going out to the DACs and the
+> real pen's hits coming back in on a GPIO pin: DEC's diagnostic testing your pen and tube with
+> no PDP-7 attached. The same program can be punched for sn 129 once its 340 and pen are
+> working.
+>
 > And if anyone can hold an AM radio by the machine while it runs, the sound would be worth as
 > much as the picture. We would write sound studies on purpose (exact loop lengths for pitch,
 > the 340 drawing different things for timbre, clock-timed notes and rests) so each recording
@@ -273,7 +284,8 @@ machine to record for the AM radio, and a second witness for the display, would 
 >
 > Everything is in git: https://github.com/SimHacker/WillWrightShowForFood (the emulator is in
 > `packages/cabinet`, and it runs in the page at hyperties.org). Thank you for bringing sn 129
-> back, twice.
+> back, twice. And thank you for MC: I lived on it day and night, from an Apple ][ running a
+> terminal emulator I wrote in my own Forth, and it is good to know it is in your hands.
 >
 > Don Hopkins
 
