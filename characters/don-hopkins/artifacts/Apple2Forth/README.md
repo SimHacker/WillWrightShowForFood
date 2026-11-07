@@ -69,6 +69,16 @@ is button 1, held while the other key types as itself: right Option-F enters For
 `forth/forth-ok.po` is the same disk with `term` blanked out of block 4; it stops at the Forth
 prompt. Both are in [DISKS.yml](../../../../packages/cabinet/disks/apple2/DISKS.yml).
 
+## The serial driver and the modem
+
+`INIT-MODEM` sends nothing to the modem. It installs the interrupt vector at `$3FE` and runs
+`INIT-ACIA`, which writes the 2651's mode register twice (mode `$4E`, then the baud code) and
+its command register (`$36`, `$37` while transmitting), then enables the card's interrupt. Baud
+words run from `300-BAUD` (`$36`) to `38400-BAUD` (`$3F`); the system loads at 2400. Dialing is
+Hayes `AT` commands, typed at the terminal or sent by Forth words that build `ATZ` and `ATDT`
+strings a character at a time, with a delay between characters. `BRILLIG.UMD.EDU`, the UMD
+CS department's machine, is the host in the captured sessions.
+
 ## A recording of the serial line
 
 Blocks 32 to 37 hold a capture of the terminal's serial input. Block 29 defines `gulp` (block to

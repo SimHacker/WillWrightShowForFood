@@ -94,8 +94,17 @@ The stream is plain telnet-style bytes first; SUPDUP later, for ITS's display te
 3. Then `ATDT 3019483850`, NBS-TIP answers, `@L 236`, and an ITS login on MC, first on SIMH
    behind the bridge and later on the cabinet's own PDP-10.
 
-To check on the way: what `INIT-MODEM` in block 4's terminal sends, whether Don's terminal
-spoke Hayes or expected a coupler, and the rates its 2651 driver sets. And which network the
+The disk answers the modem questions. `INIT-MODEM` sends nothing down the line: it installs the
+interrupt vector and programs the 2651's mode, baud and command registers. The driver has words
+for 300 to 38400 baud and loads at 2400. Dialing is Hayes, typed through the terminal or sent by
+small Forth words that build `ATZ` and `ATDT` strings, so tiny-mabell's modem must accept Hayes
+at the card's rate. The disk also holds a January 1989 capture of sessions on
+`brillig.umd.edu`, the University of Maryland CS department machine. It has no script for the
+campus Gandalf dial-up switch that connected modems to the department's VAXen and other campus
+machines, and no campus numbers. tiny-mabell can still answer as a Gandalf switch, prompt and
+all, once someone remembers or finds what it said.
+
+Still to check: which network the
 1986 terminal reached: the ARPANET moved from NCP to TCP/IP on 1 January 1983, and dial-up TIPs
 gave way to TACs about then, so the H19 terminal may have dialed a TAC, whose commands the TAC user's guide will settle,
 where the earlier 300 baud calls reached NBS-TIP. tiny-tip can answer as either.
