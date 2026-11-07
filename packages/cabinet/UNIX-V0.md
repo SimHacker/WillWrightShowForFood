@@ -98,6 +98,17 @@ by Josh Dersch. The drum-like memory hardware was developed by Jeff Kaylin based
 Boeing in August 1966 with 8K, EAE, a 340 with the 342 character generator and the 347
 subroutine interface, and a 370 light pen.
 
+The same page logs the restoration from the console. With the ADDRESS and ACCUMULATOR switches,
+DEPOSIT and EXAMINE, they found that at addresses ending in 010 the most significant data bit
+alternated on each successive EXAMINE. They traced it to that bit's sense amplifier and replaced
+it, which changed the pattern elsewhere and left a bit that looked stuck on. They pulled the
+front panel and found the switches good, cleaned the connectors, and on reassembly the panel
+lamps stayed dark: one cable had gone back upside down, and reversing it with the machine plugged
+in shorted the one cable that carries line voltage. Since then Charles and Bruce have been tracing
+an intermittent bit on the wire-wrapped backplane. A cabinet console that runs the same
+DEPOSIT and EXAMINE sequences shows what a healthy sn 129 should light up
+([TODO](TODO.md), the PDP-7 operator console).
+
 That options list is the cabinet. SYMELEC, DUEL and the AM radio all assume exactly that machine,
 and now so does UNIX. So the ask goes to the ICM and SDF, to the people who did the 2019 work, and
 to the pdp7-unix list.

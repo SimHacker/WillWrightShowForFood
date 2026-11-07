@@ -151,7 +151,9 @@ to 32K.
   3. **Console model.** Expose MB, MA, IR and the major state from `Pdp7Cpu` alongside `ac`,
      `link`, `pc` and `switches`, and keys for START, STOP, CONTINUE, EXAMINE (NEXT), DEPOSIT
      (NEXT), READ-IN, SINGLE STEP, SINGLE INST and REPEAT with the SPEED controls.
-  4. **Canvas 2D panel.** Draw the console from Figure 36 and period photographs; lamps with
+  4. **Canvas 2D panel.** Draw the console from Figure 36, period photographs, and the ICM's photos
+     of sn 129 ([Boeing's PDP-7a](https://icm.museum/blog/?p=352); it is a PDP-7A, so check its
+     panel against the 1965 handbook's); lamps with
      persistence (average each lamp over the frame, so a running machine glows at duty-cycle
      brightness instead of flickering); switches and keys bound to the console model; lazy-loaded
      like the other panels.
