@@ -48,6 +48,24 @@ beam was; `IDVE`, `IDHE` skip on the beam leaving the screen. Devices 05, 06, 07
 **Addresses.** The display address register is 13 bits: the 340 sees 8K, bank 0 on a bigger
 PDP-7 ([GUIDE-PDP7](GUIDE-PDP7.md#memory-beyond-8k)).
 
+## A real 340 coming back
+
+The [Interim Computer Museum](https://icm.museum/) has a 340's cabinet and round CRT, attached to
+their PDP-6, whose insides are now a Raspberry Pi simulating the machine. Most of the 340's logic is
+missing. The deflection and intensity analog cards were re-implemented with substitutes for
+unobtainable parts, so they no longer match the drawings. The plan in Charles Anthony's
+[Opening up the DEC Precision Display 340](https://icm.museum/blog/?p=49) (three parts, from June
+2025) skips rebuilding the digital side: the Pi simulates the 340's I/O bus and sends X/Y point
+coordinates and control signals out its GPIO pins to two DACs driving the deflection pre-amplifiers
+(0 V left, −10 V right). Deflection checks out; the intensity board is set aside until an EE can
+look at it. He began with the 30E documentation and found the 340 is quite different inside; both
+manuals are here ([H-340](H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf),
+[Type 30E](Type_30E_Precision_CRT_Display_Dec63.pdf)).
+
+The cabinet's 340 already produces that point stream with every point in order, so the same
+emulated display could drive a real tube through those DACs: a cartridge running on the ICM's
+glass, and a check of our phosphor rendering against the P7 it imitates.
+
 ## Status
 
 - **Done:** the 340 as a processor, ported from SIMH's `display/type340.c`, every mode but
