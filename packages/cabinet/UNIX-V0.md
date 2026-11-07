@@ -152,7 +152,7 @@ machine to record for the AM radio, and a second witness for the display, would 
 
 ### Draft letter (not sent)
 
-> **To:** the Interim Computer Museum; Jeff Kaylin, Josh Dersch, Stephen Jones and Fred Yearian.
+> **To:** the Interim Computer Museum; Charles Anthony, Jeff Kaylin, Josh Dersch, Stephen Jones and Fred Yearian.
 > **Cc:** the pdp7-unix list (Warren Toomey, Phil Budne) and Lars Brinkhoff.
 >
 > **Subject:** sn 129's disk, in a browser: may we have the image, and would you like the
@@ -256,6 +256,16 @@ machine to record for the AM radio, and a second witness for the display, would 
 > demos. Each demo would also have music, cleared for YouTube, cut to the program's own timing,
 > so the film and the emulator run play in sync with the same soundtrack.
 >
+> The same goes for the 340 Charles is bringing back on the PDP-6. His plan is ours turned
+> inside out: the Pi simulates the 340's bus and sends X/Y points out to two DACs on the
+> deflection amplifiers. The cabinet's 340 already produces that point stream, every point in
+> order with its intensity, so it could feed the same DACs: PIXIE, DUEL, the Forth turtle and
+> the test patterns on a real round P7 tube, with no PDP-7 attached. We would write the bridge to
+> whatever format the Pi side expects, and help any way we can with the two manuals (we have the
+> H-340 and the Type 30E). When the intensity board is working again, the eight-intensity
+> pattern above is a ready-made test for it. And is sn 129's own 340 at the museum as well, or
+> is the one on the PDP-6 the same unit?
+>
 > And if anyone can hold an AM radio by the machine while it runs, the sound would be worth as
 > much as the picture. We would write sound studies on purpose (exact loop lengths for pitch,
 > the 340 drawing different things for timbre, clock-timed notes and rests) so each recording
@@ -276,5 +286,9 @@ Before sending:
 - For the demo scene ask: have one finished demo to attach, as a tape image and an emulator
   link, so the request is concrete. A turtle drawing with spin, scale and intensity is the
   smallest that shows off the 340.
+- For the 340 offer: read Charles Anthony's three posts first
+  ([Opening up the DEC Precision Display 340](https://icm.museum/blog/?p=49), summarized in
+  [GUIDE-340](reference/GUIDE-340.md#a-real-340-coming-back)), and ask what the Pi sends the DACs
+  before proposing a format.
 
 Nothing has been sent.
