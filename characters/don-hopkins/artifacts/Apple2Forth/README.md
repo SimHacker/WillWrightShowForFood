@@ -81,7 +81,8 @@ for the terminal to play again.
 ## TODO
 
 - Something on the far end of the serial line in the page: a loopback, a telnet bridge, or a
-  Unix to log in to.
+  Unix to log in to. Planned as a modem and phone network, dialing the PDP-7 UNIX and then ITS
+  ([TINY-ARPA.md](../../../../packages/cabinet/TINY-ARPA.md)).
 - Name the serial card, if anyone recognizes a 2651 card with an interrupt latch at `$CE40`.
 - Watch the soft switch: the browser Apple now tracks the annunciators, so its AN0 lamp follows
   `VIDOFF` ($C058) and `VIDON` ($C059) as the Forth switches screens.

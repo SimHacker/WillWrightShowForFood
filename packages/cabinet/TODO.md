@@ -157,6 +157,10 @@ to 32K.
      persistence (average each lamp over the frame, so a running machine glows at duty-cycle
      brightness instead of flickering); switches and keys bound to the console model; lazy-loaded
      like the other panels.
+- **tiny-mabell, tiny-tip and tiny-arpa.** A Hayes modem for any serial port, a phone exchange
+  with a number directory on tiny-titan's server, a Terminal IMP with `@` commands, and a
+  `HOSTS.TXT` host table. First call: Don's 1986 Apple ][ H19 terminal dials the PDP-7 UNIX in the
+  same page, then MIT-MC's ITS ([TINY-ARPA.md](TINY-ARPA.md)).
 - **tiny-titan's `type` service**: deliver a Forth (or any) file by typing it into the teletype at
   a fast, configurable rate, waiting for ` ok` per line, errors returned. The live-coding path into
   a running Forth without rebuilding the image ([TINY-TITAN.md](TINY-TITAN.md)).
