@@ -2,7 +2,9 @@
 
 A Forth Don wrote for the Apple ][ under ProDOS, starting from fig-FORTH, with an H19 terminal
 emulator built on it in its own RPN 6502 assembler. The terminal is how he reached the ARPANET
-and MIT-AI ([lineage](../../career/lineage.yml)). What survives is the bootable disk from May
+and the ITS machines, MIT-MC above all, where he hung out all day and all night
+([lineage](../../career/lineage.yml)). MC itself survives, at the
+[Interim Computer Museum](https://icm.museum/blog/?p=38). What survives is the bootable disk from May
 1990, its 48 blocks of source, a capture of the serial line, and the Forth that uploaded the
 Apple's ROMs and disk blocks to Unix. This directory is the restoration: what each file is, what
 the system does, and what is left to bring it back running in the cabinet's browser Apple.
