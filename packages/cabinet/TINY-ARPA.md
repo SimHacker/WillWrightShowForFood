@@ -34,10 +34,41 @@ A modem device for any machine's serial port, and a phone network between them.
 ## tiny-tip: the Terminal IMP
 
 A TIP was an IMP with terminal ports: you dialed its number, typed `@` commands, and it opened a
-connection to a host on the network. tiny-tip answers on a tiny-mabell number and does the same:
-the `@` command language from BBN's TIP user documentation (to find and add to `reference/`),
-host names or numbers from tiny-arpa's table, and the byte stream to the host once open. It is
-the TIP's front end only, as tiny-titan is Titan's.
+connection to a host on the network. tiny-tip answers on a tiny-mabell number and does the same,
+and it is the TIP's front end only, as tiny-titan is Titan's.
+
+The TIPs Don dialed from Maryland at 300 baud were NBS-TIP, at **301-948-3850** (he dialed it
+often enough to still remember it; the number came from Bruce of Bruce's NorthStar BBS in
+Virginia), MITRE's and PENT-TIP at the Pentagon. Logging in to an ITS host was `@L` and its
+decimal host number ([Don on HN](https://news.ycombinator.com/item?id=13518273), 2017):
+
+| Host | Command |
+|------|---------|
+| MIT-MC | `@L 236` |
+| MIT-AI | `@L 134` |
+| MIT-DM | `@L 70` |
+| MIT-ML | `@L 198` |
+
+The same comment remembers two tricks from BBN's *Users Guide to the Terminal IMP*, which BBN
+mailed free to anyone who asked (Don got his that way); the scan is on bitsavers and the
+Internet Archive, to add to `reference/`:
+
+- **TIP-to-TIP link** (page 5-4): connect the input and output sockets of one TIP terminal to
+  those of another through an unsuspecting host, with `@HOST`, `@SEND TO SOCKET`,
+  `@RECEIVE FROM SOCKET` and `@PROTOCOL BOTH`, so two dial-ups could chat without logging in to
+  the host. The sockets had to be of different parity.
+- **Setting another terminal's parameters** (page 5-7): the octal port number of another user
+  on the same TIP, between the `@` and the command, ran the command on their session.
+
+tiny-tip implements the commands from the manual, not from memory, and both tricks: the second
+is a lesson in what the network trusted.
+
+Geoff Mulligan, who ran PENT-TIP from 1979, describes it on
+[NANOG](https://lists.nanog.org/archives/list/nanog@lists.nanog.org/message/3IOQEWFC4E5BF6W66W7XH5UDD2CNECEL/)
+(2020): a bank of 300 and 1200 baud modems, an IMP on the ARPANET through a 56K modem the size of
+a five-foot 19-inch rack, a TI Silent 700 with a built-in acoustic coupler to take home, and
+"TIP phone numbers were closely guarded treasure". tiny-mabell's directory starts with
+NBS-TIP's number; MITRE's and PENT-TIP's are still to find.
 
 ## tiny-arpa: the hosts
 
@@ -60,11 +91,14 @@ The stream is plain telnet-style bytes first; SUPDUP later, for ITS's display te
 2. Before ITS exists anywhere in reach: the Apple dials a number that answers with the PDP-7
    UNIX in the same page, and logs in as `dmr`. One page, two machines, a phone line between
    them.
-3. Then tiny-tip, `@` to MC, and an ITS login, first on SIMH behind the bridge and later on the
-   cabinet's own PDP-10.
+3. Then `ATDT 3019483850`, NBS-TIP answers, `@L 236`, and an ITS login on MC, first on SIMH
+   behind the bridge and later on the cabinet's own PDP-10.
 
 To check on the way: what `INIT-MODEM` in block 4's terminal sends, whether Don's terminal
-spoke Hayes or expected a coupler, and the rates its 2651 driver sets.
+spoke Hayes or expected a coupler, and the rates its 2651 driver sets. And which network the
+1986 terminal reached: the ARPANET moved from NCP to TCP/IP on 1 January 1983, and dial-up TIPs
+gave way to TACs about then, so the H19 terminal may have dialed a TAC (`@O` rather than `@L`)
+where the earlier 300 baud calls reached NBS-TIP. tiny-tip can answer as either.
 
 ## Order of work
 
