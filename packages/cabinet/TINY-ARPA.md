@@ -66,6 +66,11 @@ BBN mailed Don a copy for the asking, free, to his home address, with no questio
 tiny-tip implements the commands from the manual, not from memory, and both tricks: the second
 is a lesson in what the network trusted.
 
+In [*The Americans*](https://en.wikipedia.org/wiki/Arpanet_(The_Americans)) the Soviet spies kill
+a man to get onto the ARPANET. A teenager in Maryland did it with a phone number from a BBS: a
+TIP asked for no password, the ITS machines gave accounts to whoever asked nicely, and BBN mailed
+the manual to his house. "I didn't even have to kill anyone!"
+
 Geoff Mulligan, who ran PENT-TIP from 1979, describes it on
 [NANOG](https://lists.nanog.org/archives/list/nanog@lists.nanog.org/message/3IOQEWFC4E5BF6W66W7XH5UDD2CNECEL/)
 (2020): a bank of 300 and 1200 baud modems, an IMP on the ARPANET through a 56K modem the size of
