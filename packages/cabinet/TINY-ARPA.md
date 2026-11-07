@@ -97,7 +97,7 @@ The stream is plain telnet-style bytes first; SUPDUP later, for ITS's display te
 To check on the way: what `INIT-MODEM` in block 4's terminal sends, whether Don's terminal
 spoke Hayes or expected a coupler, and the rates its 2651 driver sets. And which network the
 1986 terminal reached: the ARPANET moved from NCP to TCP/IP on 1 January 1983, and dial-up TIPs
-gave way to TACs about then, so the H19 terminal may have dialed a TAC (`@O` rather than `@L`)
+gave way to TACs about then, so the H19 terminal may have dialed a TAC, whose commands the TAC user's guide will settle,
 where the earlier 300 baud calls reached NBS-TIP. tiny-tip can answer as either.
 
 ## Order of work
