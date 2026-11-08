@@ -1,12 +1,17 @@
-const STORAGE_KEY = 'ebike-safari-selected-trips-v3';
+const STORAGE_KEY = 'ebike-safari-selected-trips-v4';
 
-/** Long Aug 5 roundtrip — flood-fill de Pijp showcase ride. */
-export const DEFAULT_TRIP_ID = 'badhoevedorp-roundtrip-21bcec00-90ac-11f1-8ad1-a40dbc8fa83a';
-
-export function loadSelectedTripIds(validIds: Set<string>): Set<string> {
-	if (typeof localStorage === 'undefined') {
-		return defaultSelection(validIds);
+/**
+ * `?rides=all` or `?rides=<id>,<id>` beats storage; otherwise the saved set; otherwise every ride.
+ * Unknown ids are dropped, and a list that drops to nothing falls through to the next source.
+ */
+export function loadSelectedTripIds(validIds: Set<string>, url?: URL): Set<string> {
+	const param = url?.searchParams.get('rides');
+	if (param) {
+		if (param === 'all') return new Set(validIds);
+		const fromUrl = param.split(',').filter((id) => validIds.has(id));
+		if (fromUrl.length) return new Set(fromUrl);
 	}
+	if (typeof localStorage === 'undefined') return new Set(validIds);
 	try {
 		const raw = localStorage.getItem(STORAGE_KEY);
 		if (raw) {
@@ -17,13 +22,7 @@ export function loadSelectedTripIds(validIds: Set<string>): Set<string> {
 	} catch {
 		/* private mode / corrupt JSON */
 	}
-	return defaultSelection(validIds);
-}
-
-function defaultSelection(validIds: Set<string>): Set<string> {
-	if (validIds.has(DEFAULT_TRIP_ID)) return new Set([DEFAULT_TRIP_ID]);
-	const first = validIds.values().next().value;
-	return first ? new Set([first]) : new Set();
+	return new Set(validIds);
 }
 
 export function saveSelectedTripIds(ids: Set<string>) {

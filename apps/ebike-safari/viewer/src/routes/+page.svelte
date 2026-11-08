@@ -140,7 +140,7 @@
 			manifest = m;
 
 			const validIds = new Set(m.trips.map((t) => t.id));
-			selected = loadSelectedTripIds(validIds);
+			selected = loadSelectedTripIds(validIds, page.url);
 			if (selected.size === 1) setActive([...selected][0]);
 
 			if (m.coverage?.all_routes) {
