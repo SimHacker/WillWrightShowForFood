@@ -7,11 +7,13 @@
 	import TripPicker from '$lib/components/TripPicker.svelte';
 	import { getAuthContext } from '$lib/auth-context';
 	import { debugLog, skipHeatmap } from '$lib/debug-trap';
-	import { filterRoutes, heatFromRoutes, unionTripBounds } from '$lib/map-bounds';
+	import { filterRoutes, heatFromRoutes } from '$lib/map-bounds';
 	import { loadSelectedTripIds, saveSelectedTripIds } from '$lib/selected-trips';
 	import { getSettingsContext } from '$lib/settings-context';
 	import type { FeatureCollection } from 'geojson';
 	import type { UserLocation } from '$lib/types/location';
+	import { page } from '$app/state';
+	import { AMSTERDAM_CENTER, mapViewFromUrl } from '$lib/types/settings';
 	import type { MapViewMode, SafariManifest, SafariSeries } from '$lib/types/safari';
 
 	const settingsStore = getSettingsContext();
@@ -50,27 +52,15 @@
 		return heatFromRoutes(filterRoutes(allRoutes, new Set([activeTripId])));
 	});
 
-	const mapBounds = $derived.by(() => {
-		if (!manifest) return undefined;
-		if (manifest.coverage?.bounds) {
-			return manifest.coverage.bounds;
-		}
-		return unionTripBounds(
-			manifest.trips,
-			new Set(manifest.trips.map((t) => t.id))
-		);
-	});
-
 	const replayMode = $derived(activeTripId !== null);
 
 	const locationMode = $derived(settingsStore.current.locationMode);
 	const followUser = $derived(settingsStore.current.followUser);
 
-	function defaultLocation(): UserLocation | null {
-		if (!manifest) return null;
+	function defaultLocation(): UserLocation {
 		return {
-			lat: manifest.home.lat,
-			lon: manifest.home.lon,
+			lat: AMSTERDAM_CENTER.lat,
+			lon: AMSTERDAM_CENTER.lon,
 			updated_at: new Date().toISOString(),
 			source: 'manual'
 		};
@@ -556,7 +546,7 @@
 			<SafariMap
 				tileUrl={manifest.map.tile_url}
 				attribution={manifest.map.attribution}
-				bounds={mapBounds}
+				initialView={mapViewFromUrl(page.url)}
 				routes={filteredRoutes}
 				heatmap={displayHeatmap}
 				{viewMode}

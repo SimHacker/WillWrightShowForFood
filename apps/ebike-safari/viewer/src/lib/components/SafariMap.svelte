@@ -18,6 +18,7 @@
 	import { onMount } from 'svelte';
 	import type { MapViewMode } from '$lib/types/safari';
 	import type { UserLocation } from '$lib/types/location';
+	import { AMSTERDAM_CENTER, type MapView } from '$lib/types/settings';
 	import {
 		HEATMAP_PAINT,
 		ROUTE_CASING_PAINT,
@@ -33,7 +34,8 @@
 	type Props = {
 		tileUrl: string;
 		attribution: string;
-		bounds?: [number, number, number, number];
+		/** Read once at mount; later changes don't move the map. */
+		initialView?: MapView;
 		routes?: FeatureCollection | null;
 		heatmap?: FeatureCollection | null;
 		viewMode?: MapViewMode;
@@ -52,7 +54,7 @@
 	let {
 		tileUrl,
 		attribution,
-		bounds,
+		initialView = AMSTERDAM_CENTER,
 		routes = null,
 		heatmap = null,
 		viewMode = 'both',
@@ -222,17 +224,6 @@
 		applyVisibility();
 	}
 
-	function fitMapBounds() {
-		if (!map || !bounds) return;
-		map.fitBounds(
-			[
-				[bounds[0], bounds[1]],
-				[bounds[2], bounds[3]]
-			],
-			{ padding: 56, duration: 600 }
-		);
-	}
-
 	onMount(() => {
 		if (!container) return;
 
@@ -250,8 +241,8 @@
 				},
 				layers: [{ id: 'osm', type: 'raster', source: 'osm' }]
 			},
-			center: bounds ? [(bounds[0] + bounds[2]) / 2, (bounds[1] + bounds[3]) / 2] : [4.78, 52.34],
-			zoom: 12
+			center: [initialView.lon, initialView.lat],
+			zoom: initialView.zoom
 		});
 
 		map.addControl(new NavigationControl(), 'bottom-right');
@@ -323,7 +314,6 @@
 			debugLog(`map load zoom=${map?.getZoom()?.toFixed(2)}`);
 			styleLoaded = true;
 			syncAll();
-			fitMapBounds();
 		});
 
 		map.on('error', (e) => {
