@@ -22,7 +22,7 @@ Public record, Don's own account, quoted verbatim.
 > at each other and said "Yeah!" Fortunately we refrained from throwing it at
 > a bat.
 
-## Why it lives in Bogost's room
+## The Bogost connection
 
 Ian's 2015 essay
 ["Video Games Are Better Without Characters"](https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/)

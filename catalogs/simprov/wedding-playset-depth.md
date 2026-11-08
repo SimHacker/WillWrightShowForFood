@@ -54,7 +54,7 @@ after-effects of the simulation** —
 Personalized procedural content generated from *social simulation
 after-effects*, designed circa 2002: your own emergent story, printed
 and framed and placed back into the world that produced it. The
-[emergence↔nuance slider](../../characters/ian-bogost/roles-not-characters.md)
+[emergence↔nuance slider](../../characters/don-hopkins/roles-not-characters.md)
 running in reverse — the engine authoring keepsakes of what the player
 improvised.
 

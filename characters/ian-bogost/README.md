@@ -51,7 +51,7 @@ Bogost's [2015 Atlantic essay](https://www.theatlantic.com/technology/archive/20
 (written the week Maxis Emeryville closed) asks why games need characters
 at all, holding up SimCity — protagonist: the system — as the abandoned
 road. Don's response doc,
-[`roles-not-characters.md`](roles-not-characters.md), argues the
+[`roles-not-characters.md`](../don-hopkins/roles-not-characters.md), argues the
 dichotomy is inside-versus-around: SimCity always implied its characters
 as **roles** on the player's side of the glass (mayor, treasurer,
 planner), multiplayer X11 SimCity made them literal voting seats, and
@@ -64,7 +64,7 @@ while the system stays the protagonist.
 |------|----------|
 | [sources/procedural-rhetoric-quote.md](sources/procedural-rhetoric-quote.md) | Wright + Aristotle line + MIT Press sources ([data](sources/procedural-rhetoric-quote.yml)) |
 | [sources/cow-clicker.md](sources/cow-clicker.md) | Mechanics, Cowpocalypse, reception, HN ([data](sources/cow-clicker.yml)) |
-| [roles-not-characters.md](roles-not-characters.md) | Response to the 2015 "Better Without Characters" essay |
+| [Don's roles-not-characters.md](../don-hopkins/roles-not-characters.md) | Don's response to Ian's 2015 "Better Without Characters" essay (lives in Don's room) |
 | [correspondence/](correspondence/README.md) | Don's outreach, archived — first message sent 2026-08-23 |
 | [invitation.md](invitation.md) | Draft show invite (not yet sent; first contact made) |
 | [ideas.md](ideas.md) | Segment map |

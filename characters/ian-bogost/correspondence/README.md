@@ -11,4 +11,4 @@ accessible markdown.
 Replies from Ian are his to share; they will only be archived here with
 his consent.
 
-↑ [README.md](../README.md) · [roles-not-characters.md](../roles-not-characters.md)
+↑ [README.md](../README.md) · [roles-not-characters.md](../../don-hopkins/roles-not-characters.md)

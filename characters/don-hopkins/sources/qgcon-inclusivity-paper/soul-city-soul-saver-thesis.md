@@ -68,7 +68,7 @@ bridge outward.
 
 EA is now private — Saudi PIF, Silver Lake, and Jared Kushner's
 Affinity Partners, with the receipts and the indictment laid out in
-[roles, not characters](../../../ian-bogost/roles-not-characters.md).
+[roles, not characters](../../roles-not-characters.md).
 The Creator Network voices walked; the community praised
 [Ellpeck](../../../ellpeck/)'s Tiny Life as "what we know and love."
 The response, in order:
@@ -105,5 +105,5 @@ original inclusion was in SimAntics.
 - [Abstract and theory stack](abstract.md)
 - [Soul City catalog](../../../../catalogs/soul-city/README.md)
 - [The record — how same-sex relationships really got into The Sims](../../../patrick-j-barrett-iii/same-sex-relationships-the-record.md)
-- [Roles, not characters — the Bogost response essay](../../../ian-bogost/roles-not-characters.md)
+- [Roles, not characters — the Bogost response essay](../../roles-not-characters.md)
 - [David Marusek — The Wedding Album and digital souls](../../../david-marusek/the-wedding-album-and-digital-souls.md)

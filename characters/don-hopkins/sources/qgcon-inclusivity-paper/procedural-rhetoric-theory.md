@@ -78,7 +78,7 @@ argument none of them states, all built before the term existed.
   — built for the 2 November 2004 election, the one where eleven states constitutionalized the
   marriage ban. "Free speech and political commentary rendered as executable multimedia software."
 - **Authorship without gatekeepers:** the
-  [tombstone generator and the Original Sims cemetery](../../../ian-bogost/sources/original-sims-cemetery-epitaphs.md)
+  [tombstone generator and the Original Sims cemetery](../../original-sims-cemetery/README.md)
   — 2,249 stones written by strangers with no moderator, and the worst thing in them is
   playground spite.
 - **Substrate persuasion:**

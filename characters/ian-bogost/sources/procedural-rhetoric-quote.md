@@ -46,7 +46,7 @@ Don's cases, in the QGCon paper
   Bogost, Murray, Frasca and constructionism.
 - [**Soul City / Soul Saver**](../../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md):
   procedural rhetoric as platform, with exits for players' characters.
-- [**GamerGate and The Sims**](hn-gamergate-sims-thesis.md): Don's HN record on why The Sims
+- [**GamerGate and The Sims**](../../don-hopkins/sources/hn-gamergate-sims-thesis.md): Don's HN record on why The Sims
   proves GamerGate's premise wrong.
 
 ## Primary sources

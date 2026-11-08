@@ -54,7 +54,7 @@ output shipped. Key passages quoted; full text at the links.
   later. Bogost's 2015 line that SFC's "output remains mysterious and
   largely hypothetical" reads differently against a stated thesis and
   a shipped show: see
-  [roles-not-characters.md](../../../ian-bogost/roles-not-characters.md).
+  [roles-not-characters.md](../../../don-hopkins/roles-not-characters.md).
 - **The narcissism quote is the tension Bogost's essay lives in.**
   Will diagnosed the identification hook in April 2009 — make the game
   about the person and they're emotionally involved — while spending

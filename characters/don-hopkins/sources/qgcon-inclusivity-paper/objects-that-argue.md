@@ -114,7 +114,7 @@ to write the rules, made twice, in the medium where rules are the thing you writ
 
 ## Case three: the tombstone generator
 
-[The cemetery, reconstructed from the Archive](../../../ian-bogost/sources/original-sims-cemetery-epitaphs.md)
+[The cemetery, reconstructed from the Archive](../../original-sims-cemetery/README.md)
 
 **Two object prototypes — Halloween and Solemn — and thousands of stones.** That ratio is the
 whole design. A web generator let anyone engrave a personalized tombstone, upload a photograph of

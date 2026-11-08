@@ -34,7 +34,7 @@ people the data comes from. "Information is people in disguise."
   the value from the walled garden. Lanier's "you could see the real
   middle class come out of something like Facebook if it were
   monetized" is the
-  [repossession thesis](../../../characters/ian-bogost/roles-not-characters.md)
+  [repossession thesis](../../don-hopkins/roles-not-characters.md)
   in economic form.
 - **Micropayments every time code runs.** "There is a third
   alternative: every time code runs, micropayments go back to whoever

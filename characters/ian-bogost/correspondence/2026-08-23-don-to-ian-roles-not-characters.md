@@ -34,6 +34,6 @@ I apologize reparatively in retrospect and preventatively in advance for info-du
 
 ## Context
 
-- The essay: [roles-not-characters.md](../roles-not-characters.md)
+- The essay: [roles-not-characters.md](../../don-hopkins/roles-not-characters.md)
 - The Korz directory: [../david-ungar/korz/](../../david-ungar/korz/README.md)
 - Ian's room: [README.md](../README.md) · segment map: [ideas.md](../ideas.md)

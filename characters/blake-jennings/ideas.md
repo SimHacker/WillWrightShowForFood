@@ -42,7 +42,7 @@
     Not a gotcha — Patrick's account of his own work was accurate; he'd been hired into the
     middle of a process whose paper trail he hadn't seen. Good material on how games history
     gets written and how it gets fixed.
-11. **Procedural rhetoric without the jargon** — [Bogost's frame](../ian-bogost/roles-not-characters.md):
+11. **Procedural rhetoric without the jargon** — [Don's roles-not-characters essay](../don-hopkins/roles-not-characters.md):
     the kiss-slap rule was never written in any design doc, so the *code* made an argument no
     human on the team endorsed. Blake reads game systems as arguments for a living; this gives
     him the academic handle if he wants it.

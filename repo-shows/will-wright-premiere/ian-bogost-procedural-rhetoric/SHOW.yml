@@ -38,8 +38,8 @@ discussion_prompts:
 
 roles_not_characters_beat:
   path: roles-not-characters-beat.md
-  essay: ../../../characters/ian-bogost/roles-not-characters.md
-  dark_castle: ../../../characters/ian-bogost/sources/hn-dark-castle-nya.md
+  essay: ../../../characters/don-hopkins/roles-not-characters.md
+  dark_castle: ../../../characters/don-hopkins/sources/hn-dark-castle-nya.md
   will_quote: ../../../characters/will-wright/sources/2009-cnet-stupid-fun-club/README.md
   micropolis: https://github.com/SimHacker/micropolis
   hook: "The rebuttal isn't an argument; it's a table with more chairs."

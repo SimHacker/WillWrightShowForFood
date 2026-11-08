@@ -278,7 +278,7 @@ everybody play, and the players who showed up because of it.
 
 - [OG Cozy Games: The Sims, Soul City, Micropolis, and the cozy lineage Gamergate quietly avoided](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md),
 claim by claim, with sources.
-- [My HN record on GamerGate](../ian-bogost/sources/hn-gamergate-sims-thesis.md)
+- [My HN record on GamerGate](sources/hn-gamergate-sims-thesis.md)
 
 ## Objects that argue
 

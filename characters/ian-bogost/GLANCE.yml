@@ -43,7 +43,7 @@ navigation:
 
 read_order:
   - README.md
-  - roles-not-characters.md
+  - ../don-hopkins/roles-not-characters.md  # Don's essay answering Ian, not Ian's
   - CARD.yml
   - sources/procedural-rhetoric-quote.md
   - sources/affiliation-and-books.md

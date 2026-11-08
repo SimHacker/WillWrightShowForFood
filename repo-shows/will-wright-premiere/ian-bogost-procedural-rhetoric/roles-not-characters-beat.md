@@ -2,7 +2,7 @@
 
 **Guests:** Ian Bogost, Will Wright (minimum); Don Hopkins hosts  
 **Essay:** ["Video Games Are Better Without Characters"](https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/) (The Atlantic, March 2015)  
-**Don's response:** [roles-not-characters.md](../../../characters/ian-bogost/roles-not-characters.md)
+**Don's response:** [roles-not-characters.md](../../../characters/don-hopkins/roles-not-characters.md)
 
 The essay says games about systems lost. The rebuttal isn't an argument; it's a table with more chairs.
 
@@ -22,7 +22,7 @@ about manipulating the then-unfamiliar mouse to throw rocks at bats" — and dro
 at CGDC as Dark Castle's creator, Don held his hands above his head and shouted in monster-voice:
 "Nya nya nya nya nya! Yow! Uuuurh! Yeah! Yeah! Yeah!"
 
-Receipts: [hn-dark-castle-nya.md](../../../characters/ian-bogost/sources/hn-dark-castle-nya.md) ·
+Receipts: [hn-dark-castle-nya.md](../../../characters/don-hopkins/sources/hn-dark-castle-nya.md) ·
 [Dark Castle sounds (YouTube, t=43s)](https://youtu.be/6U6v3XyrPLc?t=43)
 
 Same game, two ends of the fourth wall — Ian played it in a mall bookstore; Don greeted its creator

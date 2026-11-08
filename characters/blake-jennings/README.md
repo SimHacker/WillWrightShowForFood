@@ -121,7 +121,7 @@ The full list of hooks lives in [`ideas.md`](ideas.md); the short version:
 - **The record, corrected** — [how same-sex relationships really got into The Sims](../patrick-j-barrett-iii/same-sex-relationships-the-record.md):
   a decade of retellings (New Yorker, Game Developer, Kotaku) that the 1998 primary sources
   contradict. A case study in how games history gets written and how it gets fixed.
-- **Procedural rhetoric without the jargon** — [Bogost's frame](../ian-bogost/roles-not-characters.md):
+- **Procedural rhetoric without the jargon** — [Don's roles-not-characters essay](../don-hopkins/roles-not-characters.md):
   the kiss-slap rule was never in any spec, so the code argued something no human on the team
   endorsed. The academic handle for what his essays already do.
 - **Repo Show mechanics** — retrofit an Unnecessary Analysis video as a living repo: transcript,

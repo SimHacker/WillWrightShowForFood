@@ -162,4 +162,4 @@ to dismiss the mourning.
 - [`sims-play-along-narration`](../../../../repo-shows/will-wright-premiere/sims-play-along-narration.yml) — Foreign Poet as a live segment
 - [Performance Space](../../../../process/performance-space/README.md) — where the play-along lives
 - [Claire Curtin](../../../claire-curtin/) · [Jerry Martin](../../../jerry-martin/) — audio-side guest arcs
-- [Ian Bogost — procedural rhetoric](../../../ian-bogost/roles-not-characters.md) — the frame for reading both the ASR pass and the comment farm
+- [Don Hopkins — roles, not characters](../../../don-hopkins/roles-not-characters.md), his answer to Ian Bogost — the frame for reading both the ASR pass and the comment farm

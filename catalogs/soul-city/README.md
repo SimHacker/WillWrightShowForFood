@@ -75,7 +75,7 @@ Each keeps its brand and storefront; Soul City is the shared rails:
 
 Don's OpenLaszlo SimFreaks CMS was built for love, not rent — life interrupted before it shipped. The Steam Sims 1 window, federation tooling, and Heather and Steve's permission to republish make **now** the moment to finish the job.
 
-The EA take-private (Saudi PIF, Silver Lake, Kushner's Affinity Partners — [receipts in the indictment](../../characters/ian-bogost/roles-not-characters.md)) and Legacy Collection's Exchange removal sharpen the case: **Soul Saver** / [**SoulAngel**](soul-angel.md) relocates character souls from oligarch-owned silos into git-checked-in hub-and-spoke rails — first spoke [**Tiny Life**](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.md). Academic frame: Don's QGCon paper [**How Inclusivity Saved The Sims**](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/abstract.md) — procedural rhetoric saved the franchise in rules; Soul City extends it to publish gates and exit ([the thesis](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md)). Namesake: [Soul City NC](../../repo-shows/will-wright-premiere/soul-city-namesake.md) (McKissick, Nixon HUD, Helms foreclosure).
+The EA take-private (Saudi PIF, Silver Lake, Kushner's Affinity Partners — [receipts in the indictment](../../characters/don-hopkins/roles-not-characters.md)) and Legacy Collection's Exchange removal sharpen the case: **Soul Saver** / [**SoulAngel**](soul-angel.md) relocates character souls from oligarch-owned silos into git-checked-in hub-and-spoke rails — first spoke [**Tiny Life**](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.md). Academic frame: Don's QGCon paper [**How Inclusivity Saved The Sims**](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/abstract.md) — procedural rhetoric saved the franchise in rules; Soul City extends it to publish gates and exit ([the thesis](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md)). Namesake: [Soul City NC](../../repo-shows/will-wright-premiere/soul-city-namesake.md) (McKissick, Nixon HUD, Helms foreclosure).
 
 See [INTRO-NARRATIVE.md](../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) and [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md).
 
@@ -83,7 +83,7 @@ The design thesis behind character import — SimCity's characters live *around*
 the simulation as roles (mayor, treasurer, planner), multiplayer made them
 voting seats, and Soul City casts traveling characters and agents into them —
 is argued against Ian Bogost's 2015 "Better Without Characters" essay in
-[roles-not-characters.md](../../characters/ian-bogost/roles-not-characters.md).
+[roles-not-characters.md](../../characters/don-hopkins/roles-not-characters.md).
 
 ## The attitude
 
@@ -114,7 +114,7 @@ objections of the fund's own screening panel
 Golf and Newcastle United; The Sims is the newest asset in a
 reputation-laundering portfolio. You don't petition that wall.
 Full receipts and the argument:
-[roles-not-characters.md](../../characters/ian-bogost/roles-not-characters.md).
+[roles-not-characters.md](../../characters/don-hopkins/roles-not-characters.md).
 
 Call it what it is: an **underground railroad**. Not the nineteenth-century
 network — though the moral rhyme is deliberate — but the same structural
@@ -187,7 +187,7 @@ naturally, Halloween or Solemn — and a *lot* of grass, because the lawn
 has to hold everyone. The cemetery grows with the count; the memorial
 lawn is the tote board's diegetic twin, one grave per saved soul, the
 in-game mirror of the
-[Original Sims cemetery](../../characters/ian-bogost/sources/original-sims-cemetery-epitaphs.md).
+[Original Sims cemetery](../../characters/don-hopkins/original-sims-cemetery/README.md).
 The very first stone in the 2006 capture reads "Here lies Kyle Smith,
 who fell asleep in the swimming pool." These Sims dive on purpose, on
 the record, souls already saved — the drowning pool turned into a

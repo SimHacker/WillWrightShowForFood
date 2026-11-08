@@ -60,7 +60,7 @@
   the emergence↔nuance slider applied to grief
 - The [Original Sims cemetery](http://www.originalsims.com/cemetery): 1200+
   memorials of people *and* Sims by 2005, 2,249 by June 2006
-  ([harvested sample, verbatim](sources/original-sims-cemetery-epitaphs.md):
+  ([Don's museum of the cemetery, verbatim](../don-hopkins/original-sims-cemetery/README.md):
   Christopher Reeve beside Frankenstein, the first Sim to die of a broken
   heart, the Updating Queen, an excellent cat), then ask the 2026 question:
   what does a UGC memorial site where strangers wrote each other's grief
@@ -111,7 +111,7 @@
   made them literal seats with voting
 - Soul City casts the roles: characters imported from other games — and
   agents — playing mayor's advisor, traffic engineer, opposition paper
-- Full response doc: [`roles-not-characters.md`](roles-not-characters.md)
+- Full response doc: [`roles-not-characters.md`](../don-hopkins/roles-not-characters.md)
 - On-air segment beat: [`../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/roles-not-characters-beat.md`](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/roles-not-characters-beat.md) — Act 4: Bogost closing + Soul City underground railroad
 
 ### 4c. The Wumpus and the Troll — characters that are operations, not personalities
@@ -220,7 +220,7 @@ as background, not ammunition.
   with Will's "what now?" answer opening on **data portability** (1996!)
 - Study Will's early words against everything since: two representational
   systems for same-sex love (see
-  [roles-not-characters.md](roles-not-characters.md)), the expansion-pack
+  [roles-not-characters.md](../don-hopkins/roles-not-characters.md)), the expansion-pack
   arc, the Exchange rise and removal, Moola, the 2026 take-private
 - Ian's 2015 essay was a eulogy for Maxis; the postmortem of The Sims is
   the sequel only he can co-write — with Will in the room and the source
@@ -228,7 +228,7 @@ as background, not ammunition.
 - The Khandaker-Kokoris emergence↔nuance spectrum, answered: the Family
   Album and Exchange made it a per-scene slider — retroactively narrate the
   emergence, or stage-direct every shot, or anywhere between; improv meets
-  playwriting (see [roles-not-characters.md](roles-not-characters.md))
+  playwriting (see [roles-not-characters.md](../don-hopkins/roles-not-characters.md))
 
 ## Sources
 
