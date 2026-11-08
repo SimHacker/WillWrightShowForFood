@@ -1,0 +1,23 @@
+{
+  "id": "bosch-ebike-tour-8880df80-7baa-11f1-8ad1-a40dbc8fa83a",
+  "title": "Bosch eBike Tour",
+  "source_fit": "Bosch eBike Tour-8880df80-7baa-11f1-8ad1-a40dbc8fa83a.fit",
+  "bounds": [
+    4.7447,
+    52.401402,
+    4.748704,
+    52.407921
+  ],
+  "pauses": [
+    {
+      "after_t": "2026-07-09T15:27:52+00:00",
+      "before_t": "2026-07-09T15:29:44+00:00",
+      "gap_s": 112.0
+    }
+  ],
+  "videos": [],
+  "distance_km": 1.3,
+  "duration_min": 4.6,
+  "started_at": "2026-07-09T15:26:19",
+  "point_count": 263
+}
