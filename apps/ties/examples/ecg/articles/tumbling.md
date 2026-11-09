@@ -37,5 +37,3 @@ view: [-1.5, -0.6, 10, 4]
 ```
 
 Look closely mid-roll: the box shrinks a little. Each pose is placed once when the state enters a zone, and then the placed poses are blended linearly, so a corner cuts across the chord of its arc instead of following it. That's Tom's **linearized configuration map**. It costs a little accuracy and keeps the drag a small linear solve. More poses make the chords shorter.
-
-Next: ~Feel~

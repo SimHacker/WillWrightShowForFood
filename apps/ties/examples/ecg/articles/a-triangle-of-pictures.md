@@ -22,5 +22,3 @@ examples:
 Try: drag to (2, 3) and read the weights: 0.5, 0.2, 0.3.
 
 Now drag out past an edge. A weight would have to go below zero ("less than none of B"), so the engine pins it at zero and the state **slides along the wall**. The crosshair is where you asked for; the point is the nearest blend. Keep going past a corner and everything stops at that one example.
-
-Next: ~More Examples Than You Need~

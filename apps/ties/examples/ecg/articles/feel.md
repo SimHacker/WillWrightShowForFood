@@ -46,5 +46,3 @@ presets:
   clay: { damping: 0.12 }
   puppet: { inertia: 0.85, sticky: 0.15, snap: 0.06 }
 ```
-
-Next: ~Colour~

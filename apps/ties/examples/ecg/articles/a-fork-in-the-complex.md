@@ -35,5 +35,3 @@ view: [-12, -28, 40, 40]
 ```
 
 Neither rule is always right. That's why it's a knob.
-
-Next: ~Walking~

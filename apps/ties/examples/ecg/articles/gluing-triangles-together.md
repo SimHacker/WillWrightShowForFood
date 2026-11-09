@@ -40,5 +40,3 @@ ghosts: none
 ```
 
 Under the panel, the readout names each crossing: which zone it left, which it entered, and through which face. Drag the mouth's middle straight up and it crosses at neutral itself: a face can be a single shared example, not only a whole edge.
-
-Next: ~A Fork in the Complex~

@@ -20,5 +20,3 @@ examples:
 ```
 
 The free choices left over are the **null space**: weight changes that don't move the point. A later step spends them on something useful.
-
-Next: ~More Handles Than You Can Satisfy~

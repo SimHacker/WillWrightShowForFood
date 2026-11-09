@@ -37,5 +37,3 @@ view: [-3, -3, 44, 14]
 Only the hump (the middle point) moves steadily forward in every pose, so it's the handle that walks. The head stands still while the tail catches up, and the tail stands still while the head reaches. Drag those and see.
 
 In the panel, the dashed edge is the one carrying the stride. The state goes round the loop once per step.
-
-Next: ~Tumbling~

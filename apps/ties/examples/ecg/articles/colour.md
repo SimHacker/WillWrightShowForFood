@@ -27,5 +27,3 @@ view: [-24, -24, 48, 48]
 ```
 
 Drag halfway between red and blue, then switch **blend in** from OKLab to raw sRGB. Averaging raw sRGB numbers sags darker in the middle: perceived lightness 0.61 at red and 0.64 at blue, but 0.57 halfway, against 0.63 in OKLab. Equal steps in sRGB aren't equal steps to your eye. OKLab (Björn Ottosson, 2020) is built so they are. Same weights, same simplex; only the space the colour numbers live in changes.
-
-Next: ~Motion, Skeleton, Skin~

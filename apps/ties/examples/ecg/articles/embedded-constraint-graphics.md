@@ -11,18 +11,19 @@ Tom Ngo's **Embedded Constraint Graphics** (Interval Research, 1996, patent US59
 
 You never see the machinery in Tom's original. Here every demo shows it beside the drawing: the weights, the simplex, the shape of the matrix the solver inverts. Each step adds one idea to the one before.
 
-1. ~Two Pictures~ — a mouth, a frown and a smile
-2. ~A Triangle of Pictures~ — one point, three examples, and the walls
-3. ~More Examples Than You Need~ — four examples for one point
-4. ~More Handles Than You Can Satisfy~ — a face; pin the brows, pull the mouth
-5. ~Gluing Triangles Together~ — two zones, and the state walks between them
-6. ~A Fork in the Complex~ — three zones on one edge: which way?
-7. ~Walking~ — an inchworm that keeps going
-8. ~Tumbling~ — a box that rolls over
-9. ~Feel~ — rubber, clay, puppet
-10. ~Colour~ — blending things that aren't points
-11. ~Motion, Skeleton, Skin~ — one performance, two characters
+1. ~Tour: Two Pictures~ — a mouth, a frown and a smile
+2. ~Tour: A Triangle of Pictures~ — one point, three examples, and the walls
+3. ~Tour: More Examples Than You Need~ — four examples for one point
+4. ~Tour: More Handles Than You Can Satisfy~ — a face; pin the brows, pull the mouth
+5. ~Tour: Gluing Triangles Together~ — two zones, and the state walks between them
+6. ~Tour: A Fork in the Complex~ — three zones on one edge: which way?
+7. ~Tour: Walking~ — an inchworm that keeps going
+8. ~Tour: Tumbling~ — a box that rolls over
+9. ~Tour: Feel~ — rubber, clay, puppet
+10. ~Tour: Colour~ — blending things that aren't points
+11. ~Tour: Motion, Skeleton, Skin~ — one performance, two characters
+12. ~Tour: Mouther~ — a face that talks, after Golan Levin's Mouther (1995)
 
-Next on this road: Golan Levin's Mouther (1995), a talking face of ten mouth shapes, rebuilt on this engine.
+All of it on one scrolling page: ~ECG: The Whole Story~.
 
 The engine, with a worked test for every step: [packages/ecg](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/ecg). The history: [Tom Ngo's Embedded Constraint Graphics at Interval](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md).

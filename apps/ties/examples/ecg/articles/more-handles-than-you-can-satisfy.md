@@ -33,5 +33,3 @@ ghosts: none
 Now **shift-click** both inner brow points to pin them, and pull the mouth again. Each pin adds two rows to J; with three handles **J is 6×3, tall**, and the solver splits the difference. Pull the mouth into a big smile with the brows pinned low and you get something sly that isn't any of the four examples.
 
 On a touch screen, drag two points at once with two fingers. It's the same stacking.
-
-Next: ~Gluing Triangles Together~

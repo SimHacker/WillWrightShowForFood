@@ -9,7 +9,13 @@
 	 *     edges: [{ from: C, to: A, translate: [6, 0] }]     optional automatic transforms
 	 *     start: A
 	 *     strokes: [[0, 1, 2], { path: [3, 4, 5], closed: true, fill: true }]
-	 *     decor: [{ circle: [x, y, r] }, { line: [x1, y1, x2, y2] }]     fixed: a head, the ground
+	 *       fill: true blends the examples' fills; fill: "#hex" is fixed. color, width,
+	 *       stroke: false style the outline.
+	 *     decor: [{ circle: [x, y, r], fill: "#hex" }, { line: [x1, y1, x2, y2] }]     fixed parts
+	 *     handles: dots                     small handles, for drawings with many points
+	 *     say: { rest: M, ms: 110, letters: { a: AY }, pairs: { th: L } }
+	 *       a text box: each letter (or pair) names an example, and the state is driven
+	 *       through them in time, the way Mouther's speech recognizer drove its face
 	 *     characters:                       optional: several drawings of the same examples,
 	 *       - { name: smiley, examples: [...], strokes: [...] }     sharing one state
 	 *     importance: { 0: 5 }              per point, how hard its handle pulls
@@ -70,7 +76,14 @@
 			const strokes = (c?.strokes ?? spec?.strokes ?? []).map((s) => {
 				const o = Array.isArray(s) ? { path: s } : s;
 				const path = (o.path ?? []).map((p) => (typeof p === 'number' ? p : loaded.pointNames.indexOf(String(p))));
-				return { path, closed: !!o.closed || !!o.fill, fill: !!o.fill };
+				return {
+					path,
+					closed: !!o.closed || !!o.fill,
+					fill: o.fill === true ? 'blend' : typeof o.fill === 'string' ? o.fill : null,
+					color: typeof o.color === 'string' ? o.color : null,
+					width: Number.isFinite(o.width) ? o.width : null,
+					outline: o.stroke !== false
+				};
 			});
 			const decor = (c?.decor ?? spec?.decor ?? []).filter((d) => Array.isArray(d?.circle) || Array.isArray(d?.line));
 			return { name: c?.name ?? `character ${i + 1}`, ...loaded, strokes, decor };
@@ -230,6 +243,8 @@
 		if (event.button !== 0) return;
 		event.preventDefault();
 		stop();
+		speaking = -1;
+		settleIntoZone();
 		if (event.shiftKey) {
 			const at = pos(configs[ci], p);
 			const has = pins.some((q) => q.character === ci && q.point === p);
@@ -375,6 +390,72 @@
 		});
 	}
 
+	const dots = $derived(spec?.handles === 'dots');
+
+	/** Letters to examples: pairs first ("th", "oo"), then single letters, the rest at rest. */
+	function sayScript(text) {
+		const cfg = spec?.say ?? {};
+		const index = (id) => lead.ids.indexOf(String(id));
+		const rest = Math.max(0, index(cfg.rest ?? lead.ids[lead.start]));
+		const pairs = cfg.pairs ?? {};
+		const letters = cfg.letters ?? {};
+		const out = [rest];
+		const lower = String(text).toLowerCase();
+		for (let i = 0; i < lower.length; ) {
+			const two = lower.slice(i, i + 2);
+			const hit = pairs[two] !== undefined ? pairs[two] : null;
+			const id = hit ?? letters[lower[i]];
+			const k = id === undefined || id === null ? rest : index(id);
+			out.push(k < 0 ? rest : k);
+			i += hit !== null ? 2 : 1;
+		}
+		out.push(rest);
+		return out;
+	}
+
+	// Writable derived: the spec's sample sentence, until the reader types their own.
+	let sayText = $derived(String(spec?.say?.text ?? ''));
+	let speaking = $state(-1);
+
+	/** Driving, Mouther style: through each example in turn, easing between them. */
+	function say() {
+		stop();
+		result = null;
+		const script = sayScript(sayText);
+		const ms = Number(spec?.say?.ms ?? 110);
+		const t0 = performance.now();
+		const zoneOf = (a, b) => {
+			const z = zones.findIndex((zone) => zone.includes(a) && zone.includes(b));
+			return z >= 0 ? z : Math.max(0, zones.findIndex((zone) => zone.includes(b)));
+		};
+		animate((_, now) => {
+			const t = (now - t0) / ms;
+			const k = Math.min(script.length - 1, Math.floor(t));
+			const a = script[k];
+			const b = script[Math.min(script.length - 1, k + 1)];
+			const f = Math.min(1, (t - k) * 1.6);
+			const e = f * f * (3 - 2 * f);
+			speaking = b;
+			ecg = { ...ecg, zone: zoneOf(a, b), weights: mix(vertexWeights(n, a), vertexWeights(n, b), e) };
+			if (k < script.length - 1) return true;
+			speaking = -1;
+			return false;
+		});
+	}
+
+	/** After driving, the weights may sit across zones; settle into one before a drag. */
+	function settleIntoZone() {
+		const support = ecg.weights.map((w, k) => (w > 1e-9 ? k : -1)).filter((k) => k >= 0);
+		if (support.every((k) => zones[ecg.zone].includes(k))) return;
+		const z = zones.findIndex((zone) => support.every((k) => zone.includes(k)));
+		if (z >= 0) {
+			ecg = { ...ecg, zone: z };
+			return;
+		}
+		const k = nearestExample(ecg.weights);
+		ecg = { ...ecg, zone: Math.max(0, zones.findIndex((zone) => zone.includes(k))), weights: vertexWeights(n, k) };
+	}
+
 	$effect(() => () => cancelAnimationFrame(animation));
 
 	const S = 160;
@@ -465,9 +546,25 @@
 					>
 						{#each c.decor as d, i (i)}
 							{#if d.circle}
-								<circle class="decor" cx={d.circle[0]} cy={sy(d.circle[1])} r={d.circle[2]} />
+								<circle
+									class="decor"
+									style:fill={d.fill}
+									style:stroke={d.color}
+									style:stroke-width={d.width}
+									cx={d.circle[0]}
+									cy={sy(d.circle[1])}
+									r={d.circle[2]}
+								/>
 							{:else}
-								<line class="decor" x1={d.line[0]} y1={sy(d.line[1])} x2={d.line[2]} y2={sy(d.line[3])} />
+								<line
+									class="decor"
+									style:stroke={d.color}
+									style:stroke-width={d.width}
+									x1={d.line[0]}
+									y1={sy(d.line[1])}
+									x2={d.line[2]}
+									y2={sy(d.line[3])}
+								/>
 							{/if}
 						{/each}
 						{#each handleEdges as [p, q], i (i)}
@@ -484,8 +581,10 @@
 						{/each}
 						{#each c.strokes as stroke, s (s)}
 							<path
-								class={['live', { filled: stroke.fill }]}
-								style:fill={stroke.fill ? (fillColors[ci] ?? 'var(--flash)') : 'none'}
+								class="live"
+								style:fill={stroke.fill === 'blend' ? (fillColors[ci] ?? 'var(--flash)') : (stroke.fill ?? 'none')}
+								style:stroke={stroke.outline ? stroke.color : 'none'}
+								style:stroke-width={stroke.width}
 								d={pathOf(config, stroke)}
 							/>
 						{/each}
@@ -497,10 +596,10 @@
 						{/each}
 						{#each c.pointNames as name, p (p)}
 							<circle
-								class={['point', { pinned: pins.some((q) => q.character === ci && q.point === p) }]}
+								class={['point', { pinned: pins.some((q) => q.character === ci && q.point === p), dot: dots }]}
 								cx={config[2 * p]}
 								cy={sy(config[2 * p + 1])}
-								{r}
+								r={dots ? r * 0.55 : r}
 								role="button"
 								tabindex="0"
 								aria-label="Point {name} at {config[2 * p].toFixed(2)}, {config[2 * p + 1].toFixed(2)}: drag, or use the arrow keys"
@@ -542,7 +641,7 @@
 				<table class="weights">
 					<tbody>
 						{#each ecg.weights as w, k (k)}
-							<tr class={{ wall: walls.includes(k), out: !inZone(k) }}>
+							<tr class={{ wall: walls.includes(k), out: !inZone(k), speaking: speaking === k }}>
 								<td>
 									<button
 										type="button"
@@ -609,6 +708,18 @@
 					</p>
 				{/if}
 				{#each warnings as w (w)}<p class="warning">{w}.</p>{/each}
+				{#if spec?.say}
+					<form
+						class="say"
+						onsubmit={(e) => {
+							e.preventDefault();
+							say();
+						}}
+					>
+						<input type="text" bind:value={sayText} aria-label="Something to say" />
+						<button type="submit">Say</button>
+					</form>
+				{/if}
 				<p class="buttons">
 					<button type="button" onclick={reset}>Reset</button>
 					{#if spec?.record}
@@ -713,6 +824,17 @@
 	.point.pinned {
 		fill: var(--ink);
 	}
+	.point.dot {
+		fill: var(--ink);
+		fill-opacity: 0.35;
+		stroke: none;
+	}
+	.point.dot:hover,
+	.point.dot:focus-visible {
+		fill: var(--flash);
+		fill-opacity: 1;
+		stroke: var(--ink);
+	}
 	.panel {
 		flex: 0 1 260px;
 		font-size: 0.9em;
@@ -768,6 +890,21 @@
 	}
 	.weights tr.out {
 		opacity: 0.45;
+	}
+	.weights tr.speaking button {
+		background: var(--flash);
+	}
+	.say {
+		display: flex;
+		gap: 0.4em;
+		margin: 0.6em 0;
+	}
+	.say input {
+		flex: 1;
+		min-width: 0;
+		font: inherit;
+		border: 1px solid var(--ink);
+		padding: 0.2em 0.4em;
 	}
 	.weights tr.wall .num {
 		text-decoration: line-through;

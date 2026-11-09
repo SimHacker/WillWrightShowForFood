@@ -61,5 +61,3 @@ characters:
 ```
 
 This is the piece that makes the next step possible: Mouther drives a face from a speech recognizer instead of a mouse, and the face is just a skin.
-
-Back to ~Embedded Constraint Graphics~

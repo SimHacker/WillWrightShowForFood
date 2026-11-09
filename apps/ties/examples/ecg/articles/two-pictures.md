@@ -28,5 +28,3 @@ ghosts: all
 ```
 
 The readout says **J is 2×1, tall**: you asked for two numbers (the corner's x and y) and there's one free number (how much smile). You can't always get both, so the solver gets as close as it can.
-
-Next: ~A Triangle of Pictures~
