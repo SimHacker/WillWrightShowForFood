@@ -26,6 +26,9 @@
 	 *     ghosts: all | zone | none         faint examples behind the drawing
 	 *     layout: { A: [0, 0], ... }        where examples sit in the complex view
 	 *     record: true                      record and play buttons
+ *     outputs: { title, names: [...], values: { A: [...] } }
+ *       numbers each example carries besides its points (blendshape coefficients, say),
+ *       blended by the same weights and shown as bars
 	 *
 	 * Drag any point and the engine walks the state to put it under the cursor (@wwsff/ecg
 	 * walk). Every number the solver uses is on screen. Several fingers drag several points.
@@ -353,41 +356,82 @@
 		marks = [];
 	}
 
+	function ease(to, done, ms = 350) {
+		const from = [...ecg.weights];
+		const t0 = performance.now();
+		animate((_, now) => {
+			const t = Math.min(1, (now - t0) / ms);
+			ecg = { ...ecg, weights: mix(from, to, t * t * (3 - 2 * t)) };
+			if (t < 1) return true;
+			done?.();
+			return false;
+		});
+	}
+
+	/** The shortest chain of zones from one zone to one that passes the test, each sharing a face with the next. */
+	function route(from, isGoal) {
+		const back = new Map([[from, -1]]);
+		const queue = [from];
+		while (queue.length) {
+			const z = queue.shift();
+			if (isGoal(z)) {
+				const path = [];
+				for (let at = z; at !== -1; at = back.get(at)) path.unshift(at);
+				return path;
+			}
+			zones.forEach((other, j) => {
+				if (!back.has(j) && other.some((v) => zones[z].includes(v))) {
+					back.set(j, z);
+					queue.push(j);
+				}
+			});
+		}
+		return null;
+	}
+
 	/**
-	 * Driving, not tugging: ease the weights to one example. Outside this zone, ease to an
-	 * example both zones share (the rest pose, if it can), then on into the zone across.
+	 * Driving, not tugging: ease the weights to a target in some zone. Elsewhere in the complex,
+	 * ease to the face each zone shares with the next, cross it, and go on.
 	 */
-	function goTo(k) {
+	function driveTo(goal, to, done) {
 		stop();
 		stopListening();
 		result = null;
 		settleIntoZone();
-		const ease = (to, done) => {
-			const from = [...ecg.weights];
-			const t0 = performance.now();
-			animate((_, now) => {
-				const t = Math.min(1, (now - t0) / 350);
-				ecg = { ...ecg, weights: mix(from, to, t * t * (3 - 2 * t)) };
-				if (t < 1) return true;
-				done?.();
-				return false;
-			});
+		const path = route(ecg.zone, (z) => z === goal);
+		if (!path) {
+			ecg = { ...startState(lead.model, zones[goal][0]), weights: to };
+			return done?.();
+		}
+		const hop = (i) => {
+			if (i === path.length - 1) return ease(to, done, path.length > 1 ? 250 : 350);
+			const face = zones[path[i]].filter((v) => zones[path[i + 1]].includes(v));
+			const on = (w) => face.reduce((t, v) => t + Math.max(0, w[v]), 0);
+			const from = on(ecg.weights) > 1e-6 ? ecg.weights : on(to) > 1e-6 ? to : null;
+			const via = ecg.weights.map((_, v) => (!face.includes(v) ? 0 : from ? Math.max(0, from[v]) / on(from) : 1 / face.length));
+			ease(
+				via,
+				() => {
+					enterZone(path[i + 1], face);
+					hop(i + 1);
+				},
+				250
+			);
 		};
-		if (zones[ecg.zone].includes(k)) return ease(vertexWeights(n, k));
+		hop(0);
+	}
+
+	/** Drive to one example, through the rest pose when it has to leave this zone. */
+	function goTo(k) {
+		if (zones[ecg.zone].includes(k)) return driveTo(ecg.zone, vertexWeights(n, k));
 		const rest = lead.ids.indexOf(String(spec?.say?.rest ?? spec?.listen?.rest ?? lead.ids[lead.start]));
-		const hubs = zones[ecg.zone].filter((v) => zones.some((z) => z.includes(v) && z.includes(k)));
-		if (!hubs.length) {
+		const across = zones[ecg.zone].includes(rest) ? zones.findIndex((z) => z.includes(rest) && z.includes(k)) : -1;
+		const path = across > -1 ? [ecg.zone, across] : route(ecg.zone, (z) => zones[z].includes(k));
+		if (!path) {
 			ecg = startState(lead.model, k);
 			return;
 		}
-		const hub = hubs.includes(rest) ? rest : hubs[0];
-		ease(vertexWeights(n, hub), () => {
-			enterZone(
-				zones.findIndex((z) => z.includes(hub) && z.includes(k)),
-				[hub]
-			);
-			ease(vertexWeights(n, k));
-		});
+		driveTo(path[path.length - 1], vertexWeights(n, k));
 	}
 
 	function reset() {
@@ -500,6 +544,16 @@
 		};
 	});
 	let allWeights = $state(false);
+
+	const outputs = $derived.by(() => {
+		const o = spec?.outputs;
+		if (!Array.isArray(o?.names) || !o.values) return null;
+		const rows = lead.ids.map((id) => o.names.map((_, j) => Number(o.values[id]?.[j] ?? 0)));
+		return { title: o.title ?? 'outputs', names: o.names, rows };
+	});
+	const outputValues = $derived(
+		outputs ? outputs.names.map((_, j) => ecg.weights.reduce((sum, w, k) => sum + w * outputs.rows[k][j], 0)) : []
+	);
 
 	/** Letters to examples: pairs first ("th", "oo"), then single letters, the rest at rest. */
 	function sayScript(text) {
@@ -732,6 +786,17 @@
 
 	function onSheetDown(event, i) {
 		const s = sheets[i];
+		if (!stateDots.some((d) => d.i === i)) {
+			// Not where the state is: travel there through the complex, then keep dragging.
+			grabMap(event, { sheet: i, travelling: true });
+			const local = snapToFaces(s, nearestOnSheet(s, toSvg(mapSvg, event)).local);
+			const to = ecg.weights.map(() => 0);
+			s.verts.forEach((v, j) => (to[v] = local[j]));
+			driveTo(s.zone, to, () => {
+				if (mapGrab?.sheet === i) mapGrab.travelling = false;
+			});
+			return;
+		}
 		settleIntoZone();
 		enterZone(
 			s.zone,
@@ -820,14 +885,14 @@
 	function onMapMove(event) {
 		if (mapGrab?.pointerId !== event.pointerId) return;
 		if (mapGrab.view !== undefined) dragView(event);
-		else dragSheet(event);
+		else if (!mapGrab.travelling) dragSheet(event);
 	}
 
 	function onMapUp(event) {
 		if (mapGrab?.pointerId !== event.pointerId) return;
-		const wasEyes = mapGrab.eyes;
+		const quiet = mapGrab.eyes || mapGrab.travelling;
 		mapGrab = null;
-		if (!wasEyes) settle();
+		if (!quiet) settle();
 	}
 
 	/** Weight sliders: drag one weight along the line from its example; the rest keep their ratios. */
@@ -1044,7 +1109,9 @@
 				{#each verts as k, i (k)}
 					{@const p = TETRAHEDRON[i]}
 					<circle class={['corner', { wall: wallList.includes(k) }]} cx={p[a]} cy={-p[b]} r="0.09" />
-					<text x={p[a] * 1.1} y={-p[b] * 1.38 + 0.12} text-anchor={p[a] > 0 ? 'end' : 'start'}>{labelOf(k)}</text>
+					<text x={p[a] * 1.1} y={-p[b] * 1.38 + 0.12} text-anchor={p[a] > 0 ? 'end' : 'start'}
+						>{labelOf(k).length > 6 ? labelOf(k).slice(0, 4) : labelOf(k)}<title>{labelOf(k)}</title></text
+					>
 				{/each}
 				<circle class="state" cx={at[a]} cy={-at[b]} r="0.13" />
 			</svg>
@@ -1203,7 +1270,7 @@
 								role="button"
 								tabindex="-1"
 								aria-label="Zone {zoneName(s.zone)}"
-								onpointerdown={holds ? (e) => onSheetDown(e, i) : undefined}
+								onpointerdown={(e) => onSheetDown(e, i)}
 							/>
 						{/each}
 						{#each looseEdges as e (e.a + '-' + e.b)}
@@ -1283,6 +1350,20 @@
 							>{allWeights ? 'this zone only' : `all ${n} weights`}</button
 						>
 					</p>
+				{/if}
+				{#if outputs}
+					<p class="outputs-title">{outputs.title}</p>
+					<table class="weights outputs">
+						<tbody>
+							{#each outputs.names as name, j (name)}
+								<tr class={{ out: Math.abs(outputValues[j]) < 1e-3 }}>
+									<td class="tag">{name}</td>
+									<td class="bar"><span style:width="{Math.max(0, Math.min(1, outputValues[j])) * 100}%"></span></td>
+									<td class="num">{outputValues[j].toFixed(2)}</td>
+								</tr>
+							{/each}
+						</tbody>
+					</table>
 				{/if}
 				{/if}
 
@@ -1425,6 +1506,15 @@
 	.pupil {
 		pointer-events: none;
 	}
+	.outputs-title {
+		margin: 0.6em 0 0.2em;
+		font-weight: bold;
+	}
+	.outputs .tag {
+		font-family: ui-monospace, monospace;
+		font-size: 0.85em;
+		padding-right: 0.5em;
+	}
 	.handle-edge {
 		stroke: var(--ink);
 		stroke-opacity: 0.18;
@@ -1465,7 +1555,7 @@
 		stroke: var(--ink);
 		stroke-width: 2;
 		vector-effect: non-scaling-stroke;
-		cursor: grab;
+		cursor: crosshair;
 	}
 	.point:focus-visible {
 		outline: none;
@@ -1515,8 +1605,8 @@
 		fill: var(--flash);
 		fill-opacity: 0.25;
 	}
-	.sheet.holds {
-		cursor: pointer;
+	.sheet {
+		cursor: crosshair;
 	}
 	.simplex text,
 	.view text {
@@ -1555,7 +1645,7 @@
 		vector-effect: non-scaling-stroke;
 	}
 	.state {
-		cursor: grab;
+		cursor: crosshair;
 	}
 	.voice {
 		fill: none;
