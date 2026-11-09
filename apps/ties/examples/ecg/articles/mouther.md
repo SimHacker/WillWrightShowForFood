@@ -123,8 +123,6 @@ decor:
   - { circle: [34, -14, 8], fill: "#ff9eb5", color: "none" }
   - { circle: [-19, 13, 10], fill: "#ffffff", width: 3 }
   - { circle: [19, 13, 10], fill: "#ffffff", width: 3 }
-  - { circle: [-17, 11, 4.5], fill: "#000000" }
-  - { circle: [21, 11, 4.5], fill: "#000000" }
 view: [-60, -54, 120, 120]
 map: { size: 230, pages: down }
 poses:
@@ -141,6 +139,30 @@ say:
   letters: { a: AY, e: EE, i: EE, y: EE, o: OH, u: UH, w: OO, q: OO, r: R, s: S, z: S, c: S, x: S, j: S, t: S, d: S, n: S, k: S, g: S, h: UH, f: F, v: F, l: L, m: M, b: M, p: M }
   pairs: { th: L, oo: OO, ee: EE, ea: EE, sh: S, ch: S, ow: OH, ou: OO, ay: AY, ai: AY, er: R, ph: F }
 listen: { rest: M, ring: [OO, R, OH, UH, L, AY, EE, F, S] }
+eyes:
+  examples:
+    - { id: ahead, points: [[-19, 13], [19, 13]] }
+    - { id: left, points: [[-23.8, 13], [14.2, 13]] }
+    - { id: right, points: [[-14.2, 13], [23.8, 13]] }
+    - { id: up, points: [[-19, 17.8], [19, 17.8]] }
+    - { id: down, points: [[-19, 8.2], [19, 8.2]] }
+    - { id: cross, points: [[-14.2, 13], [14.2, 13]] }
+    - { id: wall, points: [[-23.8, 13], [23.8, 13]] }
+  zones:
+    - [ahead, left, up, cross]
+    - [ahead, left, up, wall]
+    - [ahead, up, right, cross]
+    - [ahead, up, right, wall]
+    - [ahead, right, down, cross]
+    - [ahead, right, down, wall]
+    - [ahead, down, left, cross]
+    - [ahead, down, left, wall]
+  start: ahead
+  centers: [[-19, 13], [19, 13]]
+  reach: 4.8
+  far: 80
+  near: 10
+  pupil: { r: 4.5, fill: "#000000" }
 ```
 
 The map is the face's state space. M, lips pressed, is in the middle; the nine sounds sit around it, dark to bright, and every triangle of M and two neighbours is a zone. A point in a triangle is a blend of three mouths. The twelve faces make a second fan around the same M. Both fans can't lie flat in one picture, so the faces get their own page, glued to the sounds at M: when the state is at rest, the dot shows on both pages, and you can grab it on either. Driving (Say, Listen) and tugging (Pull) are two ways of moving that one point.

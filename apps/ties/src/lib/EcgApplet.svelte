@@ -423,6 +423,62 @@
 
 	const dots = $derived(spec?.handles === 'dots');
 	const compactWeights = $derived(n > 12);
+
+	/** A second complex, tracked in parallel: where the pupils look. */
+	const eyes = $derived.by(() => {
+		const e = spec?.eyes;
+		if (!Array.isArray(e?.examples)) return null;
+		const loaded = loadModel({ examples: e.examples, zones: e.zones, start: e.start });
+		if (loaded.errors.length) return null;
+		return {
+			...loaded,
+			centers: Array.isArray(e.centers) ? e.centers : [],
+			far: Number(e.far ?? 160),
+			near: Number(e.near ?? 12),
+			reach: Number(e.reach ?? 4),
+			r: Number(e.pupil?.r ?? 4),
+			fill: e.pupil?.fill ?? '#000'
+		};
+	});
+	let eyeState = $derived(eyes ? startState(eyes.model, eyes.start) : null);
+	const eyePoints = $derived(eyes && eyeState ? configurationOf(eyes.model, eyeState) : []);
+	let focusNear = false;
+
+	function look(event) {
+		if (!eyes || !eyeState || !svgs[0]) return;
+		const [x, y] = toData(0, event);
+		const depth = focusNear ? eyes.near : eyes.far;
+		const middle = eyes.centers.reduce((m, c) => [m[0] + c[0] / eyes.centers.length, m[1] + c[1] / eyes.centers.length], [0, 0]);
+		const targets = [];
+		eyes.centers.forEach(([cx, cy], p) => {
+			// far away, both eyes look along one line from between them; up close, each aims itself
+			const [ox, oy] = focusNear ? [cx, cy] : middle;
+			const len = Math.hypot(x - ox, y - oy, depth);
+			targets.push(...pointTargets(p, cx + (eyes.reach * (x - ox)) / len, cy + (eyes.reach * (y - oy)) / len));
+		});
+		eyeState = walk(eyes.model, eyeState, targets).state;
+	}
+
+	$effect(() => {
+		if (!eyes) return;
+		const move = (e) => look(e);
+		const down = (e) => {
+			focusNear = true;
+			look(e);
+		};
+		const up = (e) => {
+			focusNear = false;
+			look(e);
+		};
+		window.addEventListener('pointermove', move);
+		window.addEventListener('pointerdown', down, true);
+		window.addEventListener('pointerup', up, true);
+		return () => {
+			window.removeEventListener('pointermove', move);
+			window.removeEventListener('pointerdown', down, true);
+			window.removeEventListener('pointerup', up, true);
+		};
+	});
 	let allWeights = $state(false);
 
 	/** Letters to examples: pairs first ("th", "oo"), then single letters, the rest at rest. */
@@ -978,6 +1034,11 @@
 								/>
 							{/if}
 						{/each}
+						{#if ci === 0 && eyes}
+							{#each eyes.centers as _, p (p)}
+								<circle class="pupil" style:fill={eyes.fill} cx={eyePoints[2 * p]} cy={sy(eyePoints[2 * p + 1])} r={eyes.r} />
+							{/each}
+						{/if}
 						{#each handleEdges as [p, q], i (i)}
 							<line class="handle-edge" x1={p[0]} y1={sy(p[1])} x2={q[0]} y2={sy(q[1])} />
 						{/each}
@@ -1290,6 +1351,9 @@
 		stroke: var(--ink);
 		stroke-width: 1.5;
 		vector-effect: non-scaling-stroke;
+	}
+	.pupil {
+		pointer-events: none;
 	}
 	.handle-edge {
 		stroke: var(--ink);

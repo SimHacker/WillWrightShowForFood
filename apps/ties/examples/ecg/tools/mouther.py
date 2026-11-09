@@ -95,6 +95,41 @@ def mouth(w, u, d, c, r, t, g, b, k, s=0, a=0):
     return lips + tongue + teeth + brows
 
 
+# The eyes are a second complex, tracked in parallel with the mouth: seven pupil poses, and
+# tetrahedra of a direction pair plus a vergence. A pose outside them isn't in the space.
+EYES = [(-19, 13), (19, 13)]
+REACH = 4.8
+GAZES = {
+    "ahead": ((0, 0), (0, 0)),
+    "left": ((-REACH, 0), (-REACH, 0)),
+    "right": ((REACH, 0), (REACH, 0)),
+    "up": ((0, REACH), (0, REACH)),
+    "down": ((0, -REACH), (0, -REACH)),
+    "cross": ((REACH, 0), (-REACH, 0)),
+    "wall": ((-REACH, 0), (REACH, 0)),
+}
+
+
+def eyes():
+    lines = ["eyes:", "  examples:"]
+    for name, offsets in GAZES.items():
+        pts = ", ".join(pair((cx + dx, cy + dy)) for (cx, cy), (dx, dy) in zip(EYES, offsets))
+        lines.append(f"    - {{ id: {name}, points: [{pts}] }}")
+    lines.append("  zones:")
+    for a, b in [("left", "up"), ("up", "right"), ("right", "down"), ("down", "left")]:
+        for v in ("cross", "wall"):
+            lines.append(f"    - [ahead, {a}, {b}, {v}]")
+    lines += [
+        "  start: ahead",
+        "  centers: [" + ", ".join(pair(c) for c in EYES) + "]",
+        f"  reach: {REACH}",
+        "  far: 80",
+        "  near: 10",
+        '  pupil: { r: 4.5, fill: "#000000" }',
+    ]
+    return lines
+
+
 def pair(p):
     return f"[{round(p[0], 2):g}, {round(p[1], 2):g}]"
 
@@ -131,8 +166,6 @@ def fence():
         '  - { circle: [34, -14, 8], fill: "#ff9eb5", color: "none" }',
         '  - { circle: [-19, 13, 10], fill: "#ffffff", width: 3 }',
         '  - { circle: [19, 13, 10], fill: "#ffffff", width: 3 }',
-        '  - { circle: [-17, 11, 4.5], fill: "#000000" }',
-        '  - { circle: [21, 11, 4.5], fill: "#000000" }',
         "view: [-60, -54, 120, 120]",
         "map: { size: 230, pages: down }",
         "poses:",
@@ -147,6 +180,7 @@ def fence():
         "  letters: { " + ", ".join(f"{k}: {v}" for k, v in LETTERS.items()) + " }",
         "  pairs: { " + ", ".join(f"{k}: {v}" for k, v in PAIRS.items()) + " }",
         "listen: { rest: M, ring: [" + ", ".join(RING) + "] }",
+        *eyes(),
         "```",
     ]
     return "\n".join(lines)
