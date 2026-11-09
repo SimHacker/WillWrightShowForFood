@@ -21,7 +21,7 @@ It's direct manipulation for anything you can show by example. You don't hunt fo
 
 Language models mix ideas the same way, with weights that sum to one.
 
-This page starts with a face that talks, takes it apart one idea at a time, then points the same engine at each of these. The end covers where it could live and how to take the code.
+This page starts with a face that talks, takes it apart one idea at a time, then points the same engine at each of these. The end covers where it could live, and how to take it: the idea is what's free, and the code is one worked example of it.
 
 Every demo is live, and beside each drawing is the machinery Tom's editor kept hidden: the weights, the map of the state space, the shape of the matrix the solver inverts. Drag the drawing, the dot on the map, or a weight bar. Click anywhere on a map to travel there.
 
@@ -159,6 +159,10 @@ The forward half of ECG, blending examples by weights, is already built into the
 What's missing in all of them is the other half: grab the result and say where it should go. A Godot blend space you steer by dragging the character's hand. A Blender add-on where you pull a vertex on a FaceIt head and the expression shape keys follow. An Illustrator blend of five drawings you reshape by dragging the in-between. A D3 or D2 diagram whose saved layouts you move between by dragging one node. Window layouts that follow a resize, as in Arranging Views.
 
 ## Take it
+
+What's free is a way of looking at things: a few examples make a space you can move through, and the thing you see is the control. You don't need this code to use it.
+
+The code is one worked example, and worked examples are what other implementations interpolate from, whether a person writes them or a language model does. Give a model this page and the package and it treats them the way ECG treats examples: as points to blend toward a version in GDScript, Blender Python, C#, or whatever you use.
 
 The engine is [packages/ecg](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/ecg): TypeScript, MIT licensed, no runtime dependencies, with a worked test for every idea on this page. Copy it into your project. Tom's patent expired in 2016, so the technique is free to use too.
 
