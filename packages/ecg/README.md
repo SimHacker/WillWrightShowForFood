@@ -19,7 +19,7 @@ technique is free.
 **Status: every lesson through *Motion, skeleton, skin* is implemented.** Blending, barycentric
 weights, driving, damped least squares, tugging with several handles, walls, zones glued into a
 complex with via points and a zone chooser, edge transforms (shifts, turns, point renaming),
-feel knobs, OKLab colour, clip motions pasted between characters, and a model loader. `pnpm test`
+feel knobs, OKLab color, clip motions pasted between characters, and a model loader. `pnpm test`
 runs a worked example for each. The playground is the
 [ECG database](https://github.com/SimHacker/WillWrightShowForFood/tree/main/apps/ties/examples/ecg)
 in the HyperTIES app, eleven steps from two pictures to paste. *Same engine, other worlds* is

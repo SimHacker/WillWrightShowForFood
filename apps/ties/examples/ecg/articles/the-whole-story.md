@@ -77,10 +77,10 @@ article: "Tumbling"
 article: "Feel"
 ```
 
-## Colour
+## Color
 
 ```transclude
-article: "Colour"
+article: "Color"
 ```
 
 ## Motion, Skeleton, Skin

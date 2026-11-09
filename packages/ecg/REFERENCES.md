@@ -88,7 +88,7 @@ Where a link is dead, it says so; please add a working one if you find it.
   Real-Time Deformation.* SIGGRAPH 2011.
   [doi:10.1145/1964921.1964973](https://doi.org/10.1145/1964921.1964973)
 - **Björn Ottosson.** *A perceptual color space for image processing* (OKLab).
-  [blog](https://bottosson.github.io/posts/oklab/). For blending colours.
+  [blog](https://bottosson.github.io/posts/oklab/). For blending colors.
 
 ## Ancestors and cousins
 

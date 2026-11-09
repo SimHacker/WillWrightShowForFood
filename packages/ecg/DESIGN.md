@@ -19,7 +19,7 @@ Tom's own terms are used throughout, so the code can be read against the patent.
  (where you are)             (what the drawing is)              (what you see)
 
    B                          handle positions,
-  / \        drive  ───▶       colours, any numbers   ── render ──▶   🙂
+  / \        drive  ───▶       colors, any numbers   ── render ──▶   🙂
  / • \       ◀─── tug
 A─────C        (solve)
  \   /
@@ -168,7 +168,7 @@ lines with a comment saying what it trades away.
 | Thing | Approach | Status |
 |-------|----------|--------|
 | Points, scalars | Weighted sum | *Blend two pictures* |
-| Colours | Blend in a perceptual space (e.g. OKLab), not raw RGB | Early |
+| Colors | Blend in a perceptual space (e.g. OKLab), not raw RGB | Early |
 | Angles, rotations | Blend as transforms, or as unit vectors and renormalise | *Transformations* |
 | SVG paths | Require matching structure in examples; validator explains mismatches; resampling helper later | Early |
 | Meshes (WigFabrik, Faceball) | Same vertex count and order per example; GPU blend | Later |
@@ -213,7 +213,7 @@ packages/ecg/
     transforms.ts            automatic transformations, renaming, linearized map
     walk.ts                  the drag across the complex: walls, crossings, chooser, overshoot, sticky
     feel.ts                  snap, release spring, inertia
-    color.ts                 blending colours in OKLab
+    color.ts                 blending colors in OKLab
     paste.ts                 motion / skeleton / skin
     map.ts                   draggable complex: sheets, pages, three views, weight bars
     model.ts                 model loading and validation (takes parsed YAML)

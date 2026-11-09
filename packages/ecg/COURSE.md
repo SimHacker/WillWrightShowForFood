@@ -71,7 +71,7 @@ added up. That's one matrix times one vector.
   that handle?
 
 **Words.** Tom calls this **driving**: state → **configuration**. The configuration is all the
-numbers that describe the drawing (handle positions, colours, anything). Because it's a
+numbers that describe the drawing (handle positions, colors, anything). Because it's a
 weighted sum, the map is **linear**.
 
 ## Tugging: drag the drawing, solve the weights
@@ -252,7 +252,7 @@ model, with its own lesson page:
 | World | Examples at the corners | What you drag |
 |-------|------------------------|---------------|
 | **Breakfast** ([essay](../../characters/don-hopkins/breakfast-simplex-barycentric-direct-manipulation.md)) | Egg, milk, flour | The recipe dot; find the Dark Breakfast Abyss |
-| **Colour** | Paint swatches | A colour toward the one you want |
+| **Color** | Paint swatches | A color toward the one you want |
 | **Glyphs** ([MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/webtop/GLYPH-BENCHMARK.md)) | Designed icon extremes | An icon feature; the model places documents in the same space |
 | **Wigs** ([WigFabrik](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio)) | Hair shapes and textures, some AI-authored | The silhouette; the texture blend follows |
 | **Faces** ([Faceball](../../apps/performance-space/faceball-construction-set.yml)) | Blend-shape targets | The mouth and eyes; out come ARKit-style coefficients |

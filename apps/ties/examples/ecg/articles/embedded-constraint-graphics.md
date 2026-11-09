@@ -26,7 +26,7 @@ How it works, one idea at a time:
 - ~Tour: Walking~ — an inchworm that keeps going
 - ~Tour: Tumbling~ — a box that rolls over
 - ~Tour: Feel~ — rubber, clay, puppet
-- ~Tour: Colour~ — blending things that aren't points
+- ~Tour: Color~ — blending things that aren't points
 - ~Tour: Motion, Skeleton, Skin~ — one performance, two characters
 
 The same engine, other things:

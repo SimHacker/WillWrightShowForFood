@@ -26,7 +26,7 @@ definition: "Every principal in the ECG database, by name."
 
 ~Feel~
 
-~Colour~
+~Color~
 
 ~Motion, Skeleton, Skin~
 

@@ -19,7 +19,7 @@ on Google Patents.
 | Zone | A simplex of examples that may blend | `zone` |
 | State space | All zones glued together | `complex` |
 | State | Barycentric weights in a zone | `state` |
-| Configuration | The numbers that describe a drawing (control points, colours, …) | `configuration` |
+| Configuration | The numbers that describe a drawing (control points, colors, …) | `configuration` |
 | Driving | State → configuration | `drive()` |
 | Tugging | Configuration → state; "essentially the inverse of the driving operation" | `tug()` |
 | Automatic transformation | A transform attached to edges, for registration | `transform` |
@@ -121,9 +121,9 @@ pace to the right."
 
 ## Tugging more than positions
 
-Specified: colour can be tugged too. "A zone might be composed of example images which depict
-the same scene but in different respective colors," with a colour tool whose sliders work in a
-colour space while the system solves for the state.
+Specified: color can be tugged too. "A zone might be composed of example images which depict
+the same scene but in different respective colors," with a color tool whose sliders work in a
+color space while the system solves for the state.
 
 ## Pasting
 

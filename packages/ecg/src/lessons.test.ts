@@ -230,7 +230,7 @@ test("feel: inertia coasts and slows", () => {
 	close(c.velocity, [10 * Math.exp(-1), 0]);
 });
 
-test("colour: blending in OKLab keeps the ends and brightens the middle", () => {
+test("color: blending in OKLab keeps the ends and brightens the middle", () => {
 	assert.equal(mixColors(["#ff0000", "#00ff00"], [1, 0]), "#ff0000");
 	assert.equal(mixColors(["#ff0000", "#00ff00"], [0, 1]), "#00ff00");
 	const mid = mixColors(["#ff0000", "#00ff00"], [0.5, 0.5]);

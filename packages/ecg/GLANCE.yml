@@ -5,7 +5,7 @@ what: |
   the barycentric weights. Built to be learned from: lessons, readable source,
   live playground, worked-example tests.
 package: "@wwsff/ecg"
-status: all lessons through paste in src/ (zones, walking, edge transforms with renaming, feel, OKLab colour, clip motion, model loader); playground is the HyperTIES ecg database; other worlds next
+status: all lessons through paste in src/ (zones, walking, edge transforms with renaming, feel, OKLab color, clip motion, model loader); playground is the HyperTIES ecg database; other worlds next
 not: a black-box library; a linear algebra dependency; tied to one renderer
 docs:
   readme: README.md
@@ -14,5 +14,5 @@ docs:
   patent: PATENT-NOTES.md    # what Tom specified vs left open
   references: REFERENCES.md  # checked citations
 render_order: [svg, canvas2d, webgpu]
-applications: [breakfast, colour, glyphs, wigfabrik, faceball, pie-menus]
+applications: [breakfast, color, glyphs, wigfabrik, faceball, pie-menus]
 k_line: DRIVE · TUG · HIT THE WALL · GLUE THE ZONES · FEEL

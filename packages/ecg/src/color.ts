@@ -1,11 +1,11 @@
 /**
- * Lesson: Blending things that aren't points: colour.
+ * Lesson: Blending things that aren't points: color.
  *
  *     red ●─────●─────● green          raw sRGB: the middle is #808000, olive
  *     red ●─────●─────● green          OKLab:    the middle is #d0a800, mustard
  *
  * Anything that can be added and scaled can be blended with the same weights as the points.
- * Colours can, but blending raw sRGB numbers goes muddy and dark in the middle, because sRGB is
+ * Colors can, but blending raw sRGB numbers goes muddy and dark in the middle, because sRGB is
  * not perceptually even. So convert to OKLab (Björn Ottosson, 2020), blend there, convert back.
  * Same weights, same simplex; only the space the numbers live in changes.
  */
@@ -58,7 +58,7 @@ const hexToRgb = (hex: string): Lab => {
 const rgbToHex = (rgb: Lab) =>
 	"#" + rgb.map((c) => Math.round(Math.min(1, Math.max(0, c)) * 255).toString(16).padStart(2, "0")).join("");
 
-/** Blend colours with ECG weights, in OKLab (or raw sRGB, to see why not). */
+/** Blend colors with ECG weights, in OKLab (or raw sRGB, to see why not). */
 export function mixColors(colors: string[], weights: Weights, space: "oklab" | "srgb" = "oklab"): string {
 	const [to, from] = space === "oklab" ? [hexToOklab, oklabToHex] : [hexToRgb, rgbToHex];
 	const sum: Lab = [0, 0, 0];

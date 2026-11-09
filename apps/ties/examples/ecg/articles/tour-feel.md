@@ -7,6 +7,6 @@ definition: "The two-zone face with every feel knob live: damping, snap, spring,
 article: "Feel"
 ```
 
-Previous: ~Tour: Tumbling~ · ~Embedded Constraint Graphics~ · Next: ~Tour: Colour~
+Previous: ~Tour: Tumbling~ · ~Embedded Constraint Graphics~ · Next: ~Tour: Color~
 
 All of it on one page: ~ECG: The Whole Story~

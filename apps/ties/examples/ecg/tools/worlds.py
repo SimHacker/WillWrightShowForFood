@@ -331,7 +331,7 @@ The rig comes from `examples/ecg/tools/worlds.py`.
 # Views: four windows on a screen, laid out four ways.
 
 SCREEN_W, SCREEN_H = 160, 100
-WINDOWS = [  # name, colour, where it shrinks to when a layout hides it
+WINDOWS = [  # name, color, where it shrinks to when a layout hides it
     ("article", "#ffd23f", (0, 100)),
     ("source", "#b8e0a8", (0, 0)),
     ("memory", "#f4a7b9", (160, 0)),
@@ -364,8 +364,8 @@ def views_fence():
     lines = ["title: Four windows, four layouts", "examples:"]
     lines += examples_yaml(examples)
     lines += [f"zones: [[{', '.join(LAYOUTS)}]]", "strokes:"]
-    for name, colour, _ in WINDOWS:
-        lines.append(f"  - {{ path: [{name}0, {name}1, {name}2, {name}3], fill: \"{colour}\" }}")
+    for name, color, _ in WINDOWS:
+        lines.append(f"  - {{ path: [{name}0, {name}1, {name}2, {name}3], fill: \"{color}\" }}")
     lines += [
         "decor:",
         f"  - {{ line: [0, 0, {SCREEN_W}, 0] }}",
