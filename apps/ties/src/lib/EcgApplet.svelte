@@ -443,9 +443,29 @@
 	let eyeState = $derived(eyes ? startState(eyes.model, eyes.start) : null);
 	const eyePoints = $derived(eyes && eyeState ? configurationOf(eyes.model, eyeState) : []);
 	let focusNear = false;
+	let track = $state('face'); // which complex the panel shows
+	let eyesFollow = $state(true); // off: the eyes stay where the panel puts them
+
+	/** Drive the eyes to one gaze, within the zone if it can, else jump. */
+	function lookAt(k) {
+		eyesFollow = false;
+		if (!eyes.model.zones[eyeState.zone].includes(k)) {
+			eyeState = startState(eyes.model, k);
+			return;
+		}
+		const from = [...eyeState.weights];
+		const to = vertexWeights(eyes.ids.length, k);
+		const t0 = performance.now();
+		const step = (now) => {
+			const t = Math.min(1, (now - t0) / 250);
+			eyeState = { ...eyeState, weights: mix(from, to, t * t * (3 - 2 * t)) };
+			if (t < 1) requestAnimationFrame(step);
+		};
+		requestAnimationFrame(step);
+	}
 
 	function look(event) {
-		if (!eyes || !eyeState || !svgs[0]) return;
+		if (!eyes || !eyeState || !svgs[0] || !eyesFollow || mapGrab?.eyes) return;
 		const [x, y] = toData(0, event);
 		const depth = focusNear ? eyes.near : eyes.far;
 		const middle = eyes.centers.reduce((m, c) => [m[0] + c[0] / eyes.centers.length, m[1] + c[1] / eyes.centers.length], [0, 0]);
@@ -674,7 +694,6 @@
 
 	/** Dragging the map: the pointer's place on a sheet is the weights, no solver. */
 	let mapSvg = $state();
-	const viewSvgs = $state([]);
 	let mapGrab = null; // { pointerId, sheet } or { pointerId, view }
 
 	function toSvg(svg, event) {
@@ -771,19 +790,31 @@
 
 	function onViewDown(event, view) {
 		settleIntoZone();
-		grabMap(event, { view });
+		grabMap(event, { view, svg: event.currentTarget });
+		dragView(event);
+	}
+
+	function onEyeViewDown(event, view) {
+		eyesFollow = false;
+		grabMap(event, { view, svg: event.currentTarget, eyes: true });
 		dragView(event);
 	}
 
 	/** Move in the view's plane, keep the coordinate it looks along. */
 	function dragView(event) {
-		if (!tetra) return;
-		const [x, y] = toSvg(viewSvgs[mapGrab.view], event);
+		const verts = mapGrab.eyes ? eyes?.model.zones[eyeState.zone] : tetra;
+		if (!verts || verts.length !== 4) return;
+		const weights = mapGrab.eyes ? eyeState.weights : ecg.weights;
+		const [x, y] = toSvg(mapGrab.svg, event);
 		const [a, b] = AXIS_VIEWS[mapGrab.view];
-		const p = [...tetraAt];
+		const p = tetraPoint(verts.map((k) => weights[k]));
 		p[a] = Math.max(-1, Math.min(1, x));
 		p[b] = Math.max(-1, Math.min(1, -y));
-		setWeights(tetra, tetraWeights(p));
+		const local = tetraWeights(p);
+		if (!mapGrab.eyes) return setWeights(verts, local);
+		const w = eyeState.weights.map(() => 0);
+		verts.forEach((v, j) => (w[v] = local[j]));
+		eyeState = { ...eyeState, weights: w };
 	}
 
 	function onMapMove(event) {
@@ -794,8 +825,9 @@
 
 	function onMapUp(event) {
 		if (mapGrab?.pointerId !== event.pointerId) return;
+		const wasEyes = mapGrab.eyes;
 		mapGrab = null;
-		settle();
+		if (!wasEyes) settle();
 	}
 
 	/** Weight sliders: drag one weight along the line from its example; the rest keep their ratios. */
@@ -944,9 +976,10 @@
 		const pts = mapCorners.map((c) => c.at);
 		const xs = pts.map((p) => p[0]);
 		const ys = pts.map((p) => p[1]);
-		const x = Math.min(...xs) - 28;
+		const pad = 17 + 3.4 * Math.max(1, ...mapCorners.map((c) => label(c.k).length));
+		const x = Math.min(...xs) - pad;
 		const y = Math.min(...ys) - 18;
-		return { x, y, w: Math.max(...xs) - x + 28, h: Math.max(...ys) - y + 22 };
+		return { x, y, w: Math.max(...xs) - x + pad, h: Math.max(...ys) - y + 22 };
 	});
 	const mapMiddle = $derived([
 		corners.reduce((s, c) => s + c[0], 0) / corners.length,
@@ -964,7 +997,6 @@
 			.filter((d) => d.at)
 	);
 	const tetra = $derived(!problem && zones[ecg.zone]?.length === 4 ? zones[ecg.zone] : null);
-	const tetraAt = $derived(tetra ? tetraPoint(tetra.map((k) => ecg.weights[k])) : [0, 0, 0]);
 	const VIEW_NAMES = ['front', 'top', 'side'];
 	const label = (k) => lead.labels[k] ?? String(k);
 	const zoneName = (z) => zones[z]?.map(label).join('–') ?? '';
@@ -988,6 +1020,39 @@
 	const inZone = (k) => zones[ecg.zone]?.includes(k);
 	const knobValue = (key) => Number(feel[key]).toFixed(key === 'spring' ? 0 : 2);
 </script>
+
+{#snippet axisViews(verts, weights, labelOf, wallList, onDown)}
+	{@const at = tetraPoint(verts.map((k) => weights[k]))}
+	<div class="views">
+		{#each AXIS_VIEWS as [a, b], v (v)}
+			<div>
+			<svg
+				class="view"
+				viewBox="-1.5 -1.8 3 3.6"
+				role="application"
+				aria-label="The tetrahedron seen from the {VIEW_NAMES[v]}: drag the dot"
+				onpointerdown={(e) => onDown(e, v)}
+				onpointermove={onMapMove}
+				onpointerup={onMapUp}
+				onpointercancel={onMapUp}
+			>
+				{#each TETRAHEDRON as p, i (i)}
+					{#each TETRAHEDRON.slice(i + 1) as q, j (j)}
+						<line class="edge" x1={p[a]} y1={-p[b]} x2={q[a]} y2={-q[b]} />
+					{/each}
+				{/each}
+				{#each verts as k, i (k)}
+					{@const p = TETRAHEDRON[i]}
+					<circle class={['corner', { wall: wallList.includes(k) }]} cx={p[a]} cy={-p[b]} r="0.09" />
+					<text x={p[a] * 1.1} y={-p[b] * 1.38 + 0.12} text-anchor={p[a] > 0 ? 'end' : 'start'}>{labelOf(k)}</text>
+				{/each}
+				<circle class="state" cx={at[a]} cy={-at[b]} r="0.13" />
+			</svg>
+			<span class="view-name">{VIEW_NAMES[v]}</span>
+			</div>
+		{/each}
+	</div>
+{/snippet}
 
 <figure class="ecg">
 	{#if spec?.title}<figcaption>{spec.title}</figcaption>{/if}
@@ -1084,35 +1149,39 @@
 			</div>
 
 			<div class="panel" style:flex-basis="{Math.max(260, S + 90)}px">
+				{#if eyes}
+					<p class="buttons track">
+						<button type="button" class={{ on: track === 'face' }} onclick={() => (track = 'face')}>face</button>
+						<button type="button" class={{ on: track === 'eyes' }} onclick={() => (track = 'eyes')}>eyes</button>
+					</p>
+				{/if}
+				{#if track === 'eyes' && eyes && eyeState}
+					{@const ez = eyes.model.zones[eyeState.zone]}
+					<p class="buttons">
+						<button type="button" class={{ on: eyesFollow }} onclick={() => (eyesFollow = true)}>follow the pointer</button>
+						<button type="button" class={{ on: !eyesFollow }} onclick={() => (eyesFollow = false)}>manual</button>
+					</p>
+					{#if ez.length === 4}
+						{@render axisViews(ez, eyeState.weights, (k) => eyes.labels[k], [], onEyeViewDown)}
+					{/if}
+					<p class="note">
+						In zone {ez.map((k) => eyes.labels[k]).join('–')}, {ez.length === 4 ? 'a tetrahedron' : `${ez.length - 1}-simplex`}, one
+						of {eyes.model.zones.length}.
+					</p>
+					<table class="weights">
+						<tbody>
+							{#each eyeState.weights as w, k (k)}
+								<tr class={{ out: !ez.includes(k) }}>
+									<td><button type="button" onclick={() => lookAt(k)}>{eyes.labels[k]}</button></td>
+									<td class="bar"><span style:width="{Math.max(0, Math.min(1, w)) * 100}%"></span></td>
+									<td class="num">{w.toFixed(3)}</td>
+								</tr>
+							{/each}
+						</tbody>
+					</table>
+				{:else}
 				{#if tetra}
-					<div class="views">
-						{#each AXIS_VIEWS as [a, b], v (v)}
-							<svg
-								bind:this={viewSvgs[v]}
-								class="view"
-								viewBox="-1.7 -1.75 3.4 3.5"
-								role="application"
-								aria-label="The tetrahedron seen from the {VIEW_NAMES[v]}: drag the dot"
-								onpointerdown={(e) => onViewDown(e, v)}
-								onpointermove={onMapMove}
-								onpointerup={onMapUp}
-								onpointercancel={onMapUp}
-							>
-								{#each TETRAHEDRON as p, i (i)}
-									{#each TETRAHEDRON.slice(i + 1) as q, j (j)}
-										<line class="edge" x1={p[a]} y1={-p[b]} x2={q[a]} y2={-q[b]} />
-									{/each}
-								{/each}
-								{#each tetra as k, i (k)}
-									{@const p = TETRAHEDRON[i]}
-									<circle class={['corner', { wall: walls.includes(k) }]} cx={p[a]} cy={-p[b]} r="0.09" />
-									<text x={p[a] * 1.32} y={-p[b] * 1.32 + 0.1} text-anchor="middle">{label(k)}</text>
-								{/each}
-								<circle class="state" cx={tetraAt[a]} cy={-tetraAt[b]} r="0.13" />
-								<text class="view-name" x="0" y="1.68" text-anchor="middle">{VIEW_NAMES[v]}</text>
-							</svg>
-						{/each}
-					</div>
+					{@render axisViews(tetra, ecg.weights, label, walls, onViewDown)}
 				{:else}
 					<svg
 						bind:this={mapSvg}
@@ -1214,6 +1283,7 @@
 							>{allWeights ? 'this zone only' : `all ${n} weights`}</button
 						>
 					</p>
+				{/if}
 				{/if}
 
 				{#each shownKnobs as key (key)}
@@ -1470,15 +1540,14 @@
 		cursor: crosshair;
 	}
 	.view text {
-		font-size: 0.36px;
+		font-size: 0.3px;
 		font-weight: bold;
 	}
-	.view .view-name {
-		font-size: 0.28px;
-		font-weight: normal;
-	}
 	.view-name {
-		fill-opacity: 0.55;
+		display: block;
+		text-align: center;
+		font-size: 0.75em;
+		opacity: 0.6;
 	}
 	.view .state,
 	.view .corner {
@@ -1530,6 +1599,9 @@
 	}
 	.weights tr.speaking button {
 		background: var(--flash);
+	}
+	.track {
+		margin: 0 0 0.4em;
 	}
 	.poses {
 		margin: 0.6em 0 0.2em;
