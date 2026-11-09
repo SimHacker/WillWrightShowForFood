@@ -89,7 +89,8 @@ Tom Ngo's **Embedded Constraint Graphics** (Interval Research; [US patent 593315
 Ngo and Bruce Donald, filed 1996, expired 2016) solves for several handles at once. Example
 drawings sit at the vertices of simplices glued into a simplicial complex; a state is a point with
 barycentric weights; dragging a feature is mapped through the pseudoinverse of the Jacobian into a
-change of weights. Golan Levin used the ECG editor to draw the faces for Mouther. Ngo's later
+change of weights. I worked with Tom on ECG at Interval. Golan Levin used the ECG editor to draw
+the faces for Mouther. Ngo's later
 SIGGRAPH paper: [graphics.stanford.edu/papers/simplicial-animation](https://graphics.stanford.edu/papers/simplicial-animation/).
 See [ECG at Interval](tom-ngo-embedded-constraint-graphics-at-interval.md).
 
