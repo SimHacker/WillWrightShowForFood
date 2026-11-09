@@ -45,10 +45,12 @@
 	:global(a) {
 		color: inherit;
 	}
-	:global(*:focus),
-	:global(*:focus-visible) {
+	:global(*:focus:not(:focus-visible)) {
 		outline: none;
-		box-shadow: none;
+	}
+	:global(*:focus-visible) {
+		outline: 2px solid #2563eb;
+		outline-offset: 2px;
 	}
 	:global(button::-moz-focus-inner) {
 		border: 0;

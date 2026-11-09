@@ -488,7 +488,40 @@
 	let eyeState = $derived(eyes ? startState(eyes.model, eyes.start) : null);
 	const eyePoints = $derived(eyes && eyeState ? configurationOf(eyes.model, eyeState) : []);
 	let focusNear = false;
-	let track = $state('face'); // which complex the panel shows
+	/**
+	 * The panel's pages, by task. spec.tabs: [{ name, show: [map, weights, feel, outputs, poses,
+	 * say, listen, eyes] }]. Without it, a demo with only a map gets one page and no tabs.
+	 */
+	const tabs = $derived.by(() => {
+		if (Array.isArray(spec?.tabs)) return spec.tabs.map((t) => ({ name: String(t.name), show: t.show ?? [] }));
+		const list = [];
+		if (Array.isArray(spec?.poses)) list.push({ name: 'faces', show: ['poses'] });
+		if (spec?.say || spec?.listen) list.push({ name: 'voice', show: ['say', 'listen'] });
+		if (!list.length && !eyes && !spec?.outputs) return [{ name: 'state', show: ['map', 'weights', 'feel'] }];
+		list.push({ name: 'map', show: ['map'] }, { name: 'weights', show: ['weights', 'feel'] });
+		if (spec?.outputs) list.push({ name: String(spec.outputs.tab ?? 'outputs'), show: ['outputs'] });
+		if (eyes) list.push({ name: 'eyes', show: ['eyes'] });
+		return list;
+	});
+	let tab = $state(0);
+
+	/** Arrow keys, Home and End move between tabs; Tab leaves the tab bar for the page it shows. */
+	function onTabKey(event) {
+		const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[event.key];
+		const to =
+			step !== undefined
+				? (tab + step + tabs.length) % tabs.length
+				: event.key === 'Home'
+					? 0
+					: event.key === 'End'
+						? tabs.length - 1
+						: -1;
+		if (to < 0) return;
+		event.preventDefault();
+		tab = to;
+		event.currentTarget.querySelectorAll('[role=tab]')[to]?.focus();
+	}
+	const shows = (key) => (tabs[Math.min(tab, tabs.length - 1)]?.show ?? []).includes(key);
 	let eyesFollow = $state(true); // off: the eyes stay where the panel puts them
 
 	/** Drive the eyes to one gaze, within the zone if it can, else jump. */
@@ -1134,7 +1167,7 @@
 	{#if problem}
 		<p class="problem">{problem}</p>
 	{:else}
-		<div class="stage">
+		<div class={["stage", { tabbed: tabs.length > 1 }]}>
 			<div class="drawings">
 				{#each characters as c, ci (ci)}
 					{@const b = bounds[ci]}
@@ -1224,14 +1257,21 @@
 			</div>
 
 			<div class="panel" style:flex-basis="{Math.max(260, S + 90)}px">
-				{#if eyes}
-					<div class="tabs" role="tablist" aria-label="Which complex to show">
-						{#each ['face', 'eyes'] as t (t)}
-							<button type="button" role="tab" aria-selected={track === t} onclick={() => (track = t)}>{t}</button>
+				{#if tabs.length > 1}
+					<div class="tabs" role="tablist" aria-label="What to do" tabindex="-1" onkeydown={onTabKey}>
+						{#each tabs as t, i (t.name)}
+							<button
+								type="button"
+								role="tab"
+								aria-selected={tab === i}
+								tabindex={tab === i ? 0 : -1}
+								onclick={() => (tab = i)}>{t.name}</button
+							>
 						{/each}
 					</div>
 				{/if}
-				{#if track === 'eyes' && eyes && eyeState}
+				<div class="panel-body">
+				{#if shows('eyes') && eyes && eyeState}
 					{@const ez = eyes.model.zones[eyeState.zone]}
 					<fieldset class="radios">
 						<legend>The eyes</legend>
@@ -1256,7 +1296,8 @@
 							{/each}
 						</tbody>
 					</table>
-				{:else}
+				{/if}
+				{#if shows('map')}
 				{#if tetra}
 					{@render axisViews(tetra, ecg.weights, label, walls, onViewDown)}
 				{:else}
@@ -1319,6 +1360,8 @@
 					{#if zones.length > 1}In zone {zoneName(ecg.zone)}, {shape(ecg.zone)}, one of {zones.length}.
 					{:else}The state in {shape(0)}{tetra ? ', seen down three axes' : n > 3 ? ', flattened' : ''}.{/if}
 				</p>
+				{/if}
+				{#if shows('weights')}
 
 				<table class="weights">
 					<tbody>
@@ -1361,7 +1404,8 @@
 						>
 					</p>
 				{/if}
-				{#if outputs}
+				{/if}
+				{#if outputs && (shows('outputs') || (tabs.length === 1 && shows('weights')))}
 					<p class="outputs-title">{outputs.title}</p>
 					<table class="weights outputs">
 						<tbody>
@@ -1375,8 +1419,8 @@
 						</tbody>
 					</table>
 				{/if}
-				{/if}
 
+				{#if shows('feel')}
 				{#each shownKnobs as key (key)}
 					{#if KNOBS[key]}
 						<label class="knob">
@@ -1410,7 +1454,9 @@
 						{/each}
 					</p>
 				{/if}
+				{/if}
 
+				{#if shows('map') || (shows('weights') && !tabs.some((t) => t.show.includes('map')))}
 				<p class="readout">
 					{#if result}
 						J is {result.rows}×{Math.max(0, result.cols)}, {jShape}.
@@ -1428,8 +1474,9 @@
 						{/if}
 					</p>
 				{/if}
+				{/if}
 				{#each warnings as w (w)}<p class="warning">{w}.</p>{/each}
-				{#if Array.isArray(spec?.poses)}
+				{#if shows('poses') && Array.isArray(spec?.poses)}
 					<div class="poses">
 						{#each spec.poses as row, r (r)}
 							<p class="buttons">
@@ -1440,7 +1487,7 @@
 						{/each}
 					</div>
 				{/if}
-				{#if spec?.say}
+				{#if shows('say') && spec?.say}
 					<form
 						class="say"
 						onsubmit={(e) => {
@@ -1452,19 +1499,20 @@
 						<button type="submit">Say</button>
 					</form>
 				{/if}
-				{#if spec?.listen}
+				{#if shows('listen') && spec?.listen}
 					<p class="buttons">
 						<button type="button" class={{ on: listening }} onclick={listen}>{listening ? '■ Stop listening' : '🎤 Listen'}</button>
 					</p>
 					{#if problemNote}<p class="warning">{problemNote}</p>{/if}
 				{/if}
-				<p class="buttons">
+				<p class="buttons footer">
 					<button type="button" onclick={reset}>Reset</button>
 					{#if spec?.record}
 						<button type="button" class={{ on: recording }} onclick={toggleRecord}>{recording ? '■ Stop' : '● Record'}</button>
 						<button type="button" onclick={play} disabled={frames.length < 2 || recording}>▶ Play</button>
 					{/if}
 				</p>
+				</div>
 			</div>
 		</div>
 	{/if}
@@ -1473,9 +1521,7 @@
 <style>
 	.ecg {
 		margin: 1.5em 0;
-		border: 1px solid var(--ink);
-		background: var(--panel);
-		padding: 0.75em;
+		--tab-h: 1.75rem;
 	}
 	figcaption {
 		font-weight: bold;
@@ -1488,12 +1534,14 @@
 	}
 	.stage {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 1em;
 		align-items: flex-start;
 	}
+	.stage.tabbed .drawings {
+		margin-top: var(--tab-h);
+	}
 	.drawings {
-		flex: 1 1 320px;
+		flex: 1 1 300px;
+		min-width: 0;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.5em;
@@ -1501,7 +1549,8 @@
 	}
 	.drawing {
 		flex: 1 1 200px;
-		max-height: 420px;
+		min-width: 0;
+		height: auto;
 		border: 1px solid var(--ink);
 		background: var(--paper);
 		touch-action: none;
@@ -1586,8 +1635,26 @@
 		stroke: var(--ink);
 	}
 	.panel {
-		flex: 0 1 260px;
+		flex: 0 0 260px;
 		font-size: 0.9em;
+		margin-left: -1px;
+	}
+	@media (max-width: 640px) {
+		.stage {
+			flex-wrap: wrap;
+		}
+		.stage.tabbed .drawings {
+			margin-top: 0;
+		}
+		.panel {
+			flex-grow: 1;
+			margin: 0.5em 0 0;
+		}
+	}
+	.panel-body {
+		border: 1px solid var(--ink);
+		background: var(--panel);
+		padding: 0.6em 0.75em;
 	}
 	.simplex {
 		max-width: 100%;
@@ -1702,14 +1769,16 @@
 	}
 	.tabs {
 		display: flex;
+		align-items: flex-end;
 		gap: 3px;
-		padding-left: 4px;
-		margin: 0 0 0.5em;
-		border-bottom: 1px solid var(--ink);
+		height: var(--tab-h);
+		padding-left: 8px;
 	}
 	.panel .tabs button {
+		position: relative;
 		margin-bottom: -1px;
-		padding: 0.15em 0.9em;
+		height: calc(var(--tab-h) - 3px);
+		padding: 0 0.9em;
 		border-radius: 5px 5px 0 0;
 		border-bottom-color: var(--ink);
 		box-shadow: none;
@@ -1717,8 +1786,10 @@
 		transform: none;
 	}
 	.panel .tabs button[aria-selected='true'] {
-		background: var(--paper);
-		border-bottom-color: var(--paper);
+		z-index: 1;
+		height: var(--tab-h);
+		background: var(--panel);
+		border-bottom-color: var(--panel);
 		font-weight: bold;
 		cursor: default;
 	}
@@ -1742,7 +1813,12 @@
 		cursor: pointer;
 	}
 	.poses {
-		margin: 0.6em 0 0.2em;
+		margin: 0 0 0.2em;
+	}
+	.footer {
+		margin-top: 0.6em;
+		padding-top: 0.5em;
+		border-top: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
 	}
 	.poses .buttons {
 		margin: 0.25em 0;

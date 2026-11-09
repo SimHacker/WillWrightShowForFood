@@ -70,6 +70,7 @@ ghosts: none
 view: [-46, -46, 92, 92]
 outputs:
   title: ARKit blendshape coefficients
+  tab: coefficients
   names: ["jawOpen", "mouthSmileLeft", "mouthSmileRight", "mouthFrownLeft", "mouthFrownRight", "mouthPucker", "browInnerUp", "browOuterUpLeft", "browOuterUpRight", "browDownLeft", "browDownRight", "eyeBlinkLeft", "eyeBlinkRight", "eyeWideLeft", "eyeWideRight"]
   values:
     neutral: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

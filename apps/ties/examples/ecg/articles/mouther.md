@@ -123,7 +123,7 @@ decor:
   - { circle: [34, -14, 8], fill: "#ff9eb5", color: "none" }
   - { circle: [-19, 13, 10], fill: "#ffffff", width: 3 }
   - { circle: [19, 13, 10], fill: "#ffffff", width: 3 }
-view: [-60, -54, 120, 120]
+view: [-60, -58, 120, 120]
 map: { size: 230, pages: down }
 poses:
   - [smile, grin, laugh, smirk]

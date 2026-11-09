@@ -166,7 +166,7 @@ def fence():
         '  - { circle: [34, -14, 8], fill: "#ff9eb5", color: "none" }',
         '  - { circle: [-19, 13, 10], fill: "#ffffff", width: 3 }',
         '  - { circle: [19, 13, 10], fill: "#ffffff", width: 3 }',
-        "view: [-60, -54, 120, 120]",
+        "view: [-60, -58, 120, 120]",  # the face circle with 8 units all round
         "map: { size: 230, pages: down }",
         "poses:",
         *[f"  - [{', '.join(row)}]" for row in POSES],

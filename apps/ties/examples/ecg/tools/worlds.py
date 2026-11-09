@@ -282,6 +282,7 @@ def blend_fence():
         "view: [-46, -46, 92, 92]",
         "outputs:",
         "  title: ARKit blendshape coefficients",
+        "  tab: coefficients",
         f"  names: {flow(names)}",
         "  values:",
         f"    neutral: {flow([0] * len(names))}",
