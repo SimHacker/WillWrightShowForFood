@@ -31,7 +31,7 @@ layout: { A: [-1, 0], B: [1, 0], C: [0, 1], D: [0, -1], E: [0, -2] }
 start: C
 strokes: [[kite, tail]]
 knobs: [chooser]
-view: [-12, -28, 40, 40]
+view: [-15.5, -28, 44, 44]
 ```
 
 Neither rule is always right. That's why it's a knob.
