@@ -1,5 +1,8 @@
 ---
 title: "ECG: The Whole Story"
+author: Don Hopkins
+email: don@donhopkins.com
+date: 2026-11-09
 synonyms:
   - the whole story
   - ecg on one page

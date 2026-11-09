@@ -92,6 +92,9 @@ function buildDatabases() {
 			// since the converter only writes the flag to record its absence.
 			contents: meta.contents !== false,
 			source: meta.source ?? '',
+			author: meta.author ?? '',
+			email: meta.email ?? '',
+			date: meta.date ? String(meta.date) : '',
 			body
 		};
 		db.articles.set(article.slug, article);
