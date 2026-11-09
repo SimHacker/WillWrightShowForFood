@@ -3,15 +3,16 @@ title: Mouther
 synonyms:
   - mouther stand-in
   - talking face
-definition: "A talking cartoon face with ten mouth shapes, after Golan Levin's Mouther (1995). It says what you type, listens to your voice, and you can grab its lips and pull."
+definition: "A talking cartoon face with ten mouth shapes and twelve expressions, after Golan Levin's Mouther (1995). It says what you type, listens to your voice, pulls faces, and you can grab its lips and pull."
 ---
 
 Golan Levin's **Mouther** (Interval Research, 1995, with Malcolm Slaney and Tom Ngo) listened to your voice and drove a cartoon face through the sounds you made, in real time. The face was built with Tom Ngo's Embedded Constraint Graphics: ten drawings of a mouth, and an engine that blends between them.
 
 This face is a stand-in with its own cartoons. Ten mouths, M, OO, R, OH, UH, L, AY, EE, F and S, each a few numbers (how wide, how open, how round, how much teeth and tongue) turned into twenty points.
 
-Three ways to move it, all moving the same weights:
+Four ways to move it, all moving the same weights:
 
+- **Pull a face.** Smile, grin, laugh, smirk, sad, cry, angry, disgust, surprise, kiss, raspberry, yawn. Each is one more drawing of the same twenty points. From any mouth it eases back through M and out to the face.
 - **Say.** Type something and press Say. It speaks, and the mouth follows the letters, re-syncing on every word.
 - **Listen.** Press Listen and talk. Loudness opens the mouth; how bright the sound is picks the shape, dark OO and R to bright EE and S. Your voice drags the dot on the map.
 - **Pull.** Grab the lips, teeth or brows and drag. The engine finds the blend of mouths that puts the point under your finger, and switches between them as you go. Or drag the dot on the map, or one weight bar.
@@ -39,6 +40,30 @@ examples:
     points: [[-17, -18], [-7.65, -14.8], [0, -15.2], [7.65, -14.8], [17, -18], [8.5, -18.85], [0, -19], [-8.5, -18.85], [-7.14, -18.85], [7.14, -18.85], [5, -18.85], [-5, -18.85], [-9.35, -15.28], [9.35, -15.28], [9.35, -19.11], [-9.35, -19.11], [-30, 29], [-12, 27], [12, 27], [30, 29]]
   - id: S
     points: [[-19, -15], [-8.55, -14.4], [0, -15.9], [8.55, -14.4], [19, -15], [9.5, -19.65], [0, -21], [-9.5, -19.65], [-7.98, -20.55], [7.98, -20.55], [5.59, -20.55], [-5.59, -20.55], [-10.45, -15.96], [10.45, -15.96], [10.45, -18.66], [-10.45, -18.66], [-30, 27], [-12, 29], [12, 29], [30, 27]]
+  - id: smile
+    points: [[-20, -11], [-9, -14.4], [0, -17.3], [9, -14.4], [20, -11], [10, -19.3], [0, -22], [-10, -19.3], [-8.4, -21.4], [8.4, -21.4], [5.88, -21.4], [-5.88, -21.4], [-11, -17.32], [11, -17.32], [11, -18], [-11, -18], [-30, 29], [-12, 31], [12, 31], [30, 29]]
+  - id: grin
+    points: [[-24, -10], [-10.8, -10.8], [0, -14.5], [10.8, -10.8], [24, -10], [12, -23.25], [0, -27], [-12, -23.25], [-10.08, -25.65], [10.08, -25.65], [7.06, -25.65], [-7.06, -25.65], [-13.2, -14.6], [13.2, -14.6], [13.2, -19.28], [-13.2, -19.28], [-30, 30], [-12, 32], [12, 32], [30, 30]]
+  - id: laugh
+    points: [[-22, -12], [-12.21, -7], [0, -10.1], [12.21, -7], [22, -12], [12.98, -34.1], [0, -38], [-12.98, -34.1], [-9.24, -35], [9.24, -35], [6.47, -26], [-6.47, -26], [-10.65, -11.2], [10.65, -11.2], [10.65, -14.44], [-10.65, -14.44], [-30, 35], [-12, 35], [12, 35], [30, 35]]
+  - id: surprise
+    points: [[-10, -18], [-8, -7], [0, -7], [8, -7], [10, -18], [8, -32], [0, -32], [-8, -32], [-4.2, -29.9], [4.2, -29.9], [2.94, -26.9], [-2.94, -26.9], [-3.3, -10.52], [3.3, -10.52], [3.3, -10.52], [-3.3, -10.52], [-30, 37], [-12, 39], [12, 39], [30, 37]]
+  - id: yawn
+    points: [[-13, -19], [-9.95, -6.64], [0, -6.36], [9.95, -6.64], [13, -19], [10.01, -37.02], [0, -37], [-10.01, -37.02], [-5.46, -34.15], [5.46, -34.15], [3.82, -26.71], [-3.82, -26.71], [-4.58, -9.84], [4.58, -9.84], [4.58, -9.84], [-4.58, -9.84], [-30, 20], [-12, 28], [12, 28], [30, 20]]
+  - id: kiss
+    points: [[-4, -18], [-3.2, -15.5], [0, -15.5], [3.2, -15.5], [4, -18], [3.2, -20.5], [0, -20.5], [-3.2, -20.5], [-1.68, -20.12], [1.68, -20.12], [1.18, -20.12], [-1.18, -20.12], [-1.32, -16.3], [1.32, -16.3], [1.32, -16.3], [-1.32, -16.3], [-30, 30], [-12, 36], [12, 36], [30, 30]]
+  - id: raspberry
+    points: [[-14, -19], [-7.28, -16.72], [0, -16.48], [7.28, -16.72], [14, -19], [7.84, -20.94], [0, -21], [-7.84, -20.94], [-7.7, -18.9], [7.7, -18.9], [5.39, -32.9], [-5.39, -32.9], [-7.08, -16.64], [7.08, -16.64], [7.08, -16.64], [-7.08, -16.64], [-30, 33], [-12, 31], [12, 31], [30, 33]]
+  - id: smirk
+    points: [[-17, -21], [-7.65, -18.4], [0, -17.3], [7.65, -14.4], [17, -11], [8.5, -17.6], [0, -20], [-8.5, -20.6], [-7.14, -19.7], [7.14, -19.7], [5, -19.7], [-5, -19.7], [-9.35, -17.32], [9.35, -17.32], [9.35, -17.59], [-9.35, -17.59], [-30, 32], [-12, 34], [12, 26], [30, 24]]
+  - id: disgust
+    points: [[-16, -18], [-7.2, -14.8], [0, -15.2], [7.2, -17.2], [16, -24], [8, -21.5], [0, -20], [-8, -19.7], [-6.72, -19.7], [6.72, -19.7], [4.7, -19.7], [-4.7, -19.7], [-8.8, -15.28], [8.8, -15.28], [8.8, -17.98], [-8.8, -17.98], [-30, 25], [-12, 21], [12, 27], [30, 31]]
+  - id: angry
+    points: [[-16, -21], [-7.2, -16.8], [0, -15.9], [7.2, -16.8], [16, -21], [8, -22.3], [0, -22], [-8, -22.3], [-6.72, -21.4], [6.72, -21.4], [4.7, -21.4], [-4.7, -21.4], [-8.8, -15.96], [8.8, -15.96], [8.8, -21], [-8.8, -21], [-30, 29], [-12, 19], [12, 19], [30, 29]]
+  - id: cry
+    points: [[-18, -26], [-10.62, -14.16], [0, -11.44], [10.62, -14.16], [18, -26], [11.16, -33.14], [0, -32], [-11.16, -33.14], [-7.56, -29.9], [7.56, -29.9], [5.29, -27.26], [-5.29, -27.26], [-8.32, -12.56], [8.32, -12.56], [8.32, -13.64], [-8.32, -13.64], [-30, 22], [-12, 38], [12, 38], [30, 22]]
+  - id: sad
+    points: [[-15, -24], [-6.75, -19.6], [0, -17.3], [6.75, -19.6], [15, -24], [7.5, -20.65], [0, -19], [-7.5, -20.65], [-6.3, -18.85], [6.3, -18.85], [4.41, -18.85], [-4.41, -18.85], [-8.25, -17.32], [8.25, -17.32], [8.25, -17.32], [-8.25, -17.32], [-30, 23], [-12, 35], [12, 35], [30, 23]]
 zones:
   - [M, OO, R]
   - [M, R, OH]
@@ -49,6 +74,18 @@ zones:
   - [M, EE, F]
   - [M, F, S]
   - [M, S, OO]
+  - [M, smile, grin]
+  - [M, grin, laugh]
+  - [M, laugh, surprise]
+  - [M, surprise, yawn]
+  - [M, yawn, kiss]
+  - [M, kiss, raspberry]
+  - [M, raspberry, smirk]
+  - [M, smirk, disgust]
+  - [M, disgust, angry]
+  - [M, angry, cry]
+  - [M, cry, sad]
+  - [M, sad, smile]
 layout:
   M: [0, 0]
   OO: [0.000, 1.000]
@@ -60,6 +97,18 @@ layout:
   EE: [-0.866, -0.500]
   F: [-0.985, 0.174]
   S: [-0.643, 0.766]
+  smile: [0.000, 1.000]
+  grin: [0.500, 0.866]
+  laugh: [0.866, 0.500]
+  surprise: [1.000, 0.000]
+  yawn: [0.866, -0.500]
+  kiss: [0.500, -0.866]
+  raspberry: [0.000, -1.000]
+  smirk: [-0.500, -0.866]
+  disgust: [-0.866, -0.500]
+  angry: [-1.000, -0.000]
+  cry: [-0.866, 0.500]
+  sad: [-0.500, 0.866]
 start: M
 strokes:
   - { path: [0, 1, 2, 3, 4, 5, 6, 7], fill: "#5b0e2d", stroke: false }
@@ -77,7 +126,11 @@ decor:
   - { circle: [-17, 11, 4.5], fill: "#000000" }
   - { circle: [21, 11, 4.5], fill: "#000000" }
 view: [-60, -54, 120, 120]
-map: { size: 230 }
+map: { size: 230, pages: down }
+poses:
+  - [smile, grin, laugh, smirk]
+  - [sad, cry, angry, disgust]
+  - [surprise, kiss, raspberry, yawn]
 ghosts: none
 handles: dots
 say:
@@ -90,7 +143,7 @@ say:
 listen: { rest: M, ring: [OO, R, OH, UH, L, AY, EE, F, S] }
 ```
 
-The map is the face's state space. M, lips pressed, is in the middle; the other nine sit around it, dark to bright, and every triangle of M and two neighbours is a zone. A point in a triangle is a blend of three mouths. Driving (Say, Listen) and tugging (Pull) are two ways of moving that one point.
+The map is the face's state space. M, lips pressed, is in the middle; the nine sounds sit around it, dark to bright, and every triangle of M and two neighbours is a zone. A point in a triangle is a blend of three mouths. The twelve faces make a second fan around the same M. Both fans can't lie flat in one picture, so the faces get their own page, glued to the sounds at M: when the state is at rest, the dot shows on both pages, and you can grab it on either. Driving (Say, Listen) and tugging (Pull) are two ways of moving that one point.
 
 How that works, one idea at a time, is the rest of this story, starting from ~Two Pictures~.
 

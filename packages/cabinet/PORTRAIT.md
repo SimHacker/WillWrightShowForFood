@@ -139,7 +139,9 @@ Author sim-Heinz's extreme poses once (pen high on the tube, pen low,
 turned to the ASR-33, and so on) at the vertices of a simplicial
 complex. Any posture is barycentric blend weights over those vertices,
 and dragging a feature solves for the weights. ECG generalizes blend
-shapes; Ngo built it for direct-manipulation character animation.
+shapes; Ngo built it for direct-manipulation character animation. The
+engine is [packages/ecg](../ecg/), and the walk-through with live demos
+is [ECG: The Whole Story](../../apps/ties/examples/ecg/articles/the-whole-story.md).
 
 The input mapping becomes one chain, every link declared:
 
@@ -160,7 +162,10 @@ body. The same recording plays through a stick figure or a finished
 Heinz, and upgrading the body never invalidates a demo. Because many
 blend weights put the tip in the same place, slow noise among
 alternative whole-body poses gives idle breathing while the tip stays
-pinned. The early demo uses a canned whole-body clip, with the tip
+pinned. That is Ken Perlin's trick from Improv (Perlin and Goldberg,
+SIGGRAPH 96): weighted layers of action on a skeleton, with coherent
+noise so an actor is never still. Don built The Sims 1 character
+animation system inspired by Improv. The early demo uses a canned whole-body clip, with the tip
 stream still the source of truth for the emulator.
 
 The avatar portrays Heinz Lemke operating his own program, made with

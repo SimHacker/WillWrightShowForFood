@@ -91,4 +91,8 @@ article: "Motion, Skeleton, Skin"
 
 ## Where it comes from
 
-The engine is [packages/ecg](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/ecg), MIT licensed, with a worked test for every step. It blends any list of numbers, so the same engine drives 2D drawings or a 3D face's blendshape coefficients. The history: [Tom Ngo's Embedded Constraint Graphics at Interval](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md).
+The engine is [packages/ecg](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/ecg), MIT licensed, with a worked test for every step. It blends any list of numbers, so the same engine drives 2D drawings or a 3D face's blendshape coefficients. Blending authored poses to drive a character also runs through Ken Perlin's **Improv** (with Athomas Goldberg, NYU Media Research Lab, [SIGGRAPH 96](https://mrl.nyu.edu/projects/improv/)), which inspired Don Hopkins's character animation system for The Sims 1.
+
+Next for the engine: a body. Sim-Heinz Lemke at the PDP-7, drawing on the Type 340 display with a light pen, his poses blended by ECG so the pen tip lands where the demo needs it ([the portrait design](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PORTRAIT.md#ecg-drives-the-body)).
+
+The history: [Tom Ngo's Embedded Constraint Graphics at Interval](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md).

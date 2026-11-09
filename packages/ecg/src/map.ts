@@ -50,18 +50,23 @@ function overlaps(a: Point2[], b: Point2[], margin: number): boolean {
 
 /**
  * Lay the zones out as sheets. Segments and triangles keep the layout; a triangle that would
- * overlap one already placed moves right, a page at a time, until it doesn't.
+ * overlap one already placed moves over a page at a time, right or down, until it doesn't.
  */
-export function sheetsOf(zones: number[][], corners: Point2[], gap = 24): Sheet[] {
-	const xs = corners.map((c) => c[0]);
-	const page = Math.max(...xs) - Math.min(...xs) + gap;
+export function sheetsOf(zones: number[][], corners: Point2[], gap = 24, direction: "right" | "down" = "right"): Sheet[] {
+	const axis = direction === "down" ? 1 : 0;
+	const along = corners.map((c) => c[axis]);
+	const page = Math.max(...along) - Math.min(...along) + gap;
 	const sheets: Sheet[] = [];
 	for (const [z, verts] of zones.entries()) {
 		if (verts.length < 2 || verts.length > 3) continue;
 		let at = verts.map((v) => [...corners[v]] as Point2);
 		if (verts.length === 3) {
 			for (let k = 1; sheets.some((s) => s.at.length === 3 && overlaps(s.at, at, 1e-6 * page)); k++)
-				at = verts.map((v) => [corners[v][0] + k * page, corners[v][1]] as Point2);
+				at = verts.map((v) => {
+					const p = [...corners[v]] as Point2;
+					p[axis] += k * page;
+					return p;
+				});
 		}
 		sheets.push({ zone: z, verts, at });
 	}

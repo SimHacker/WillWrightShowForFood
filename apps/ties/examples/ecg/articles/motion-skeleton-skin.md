@@ -64,4 +64,6 @@ characters:
       - { line: [30, -6, 50, -2] }
 ```
 
+The examples don't have to be drawings. They can be skeleton poses: a body's joint angles at the corners, and the state a blend of postures. Ken Perlin's **Improv** (with Athomas Goldberg, NYU Media Research Lab, [SIGGRAPH 96](https://mrl.nyu.edu/projects/improv/)) drove interactive actors that way, layering weighted actions on a skeleton and adding noise so they never stood dead still. Don Hopkins built the character animation system of The Sims 1 inspired by Improv.
+
 This is how Mouther works: the voice drives the state, and the face is a skin.

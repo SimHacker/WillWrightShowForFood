@@ -242,10 +242,11 @@
 		stop();
 		let then = performance.now();
 		const tick = (now) => {
+			const mine = animation;
 			const dt = Math.min(0.05, (now - then) / 1000);
 			then = now;
 			if (step(dt, now)) animation = requestAnimationFrame(tick);
-			else animation = 0;
+			else if (animation === mine) animation = 0; // unless the step started the next animation
 		};
 		animation = requestAnimationFrame(tick);
 	}
@@ -352,21 +353,40 @@
 		marks = [];
 	}
 
-	/** Driving, not tugging: ease the weights to one example of this zone; elsewhere, jump. */
+	/**
+	 * Driving, not tugging: ease the weights to one example. Outside this zone, ease to an
+	 * example both zones share (the rest pose, if it can), then on into the zone across.
+	 */
 	function goTo(k) {
 		stop();
+		stopListening();
 		result = null;
-		if (!zones[ecg.zone].includes(k)) {
+		settleIntoZone();
+		const ease = (to, done) => {
+			const from = [...ecg.weights];
+			const t0 = performance.now();
+			animate((_, now) => {
+				const t = Math.min(1, (now - t0) / 350);
+				ecg = { ...ecg, weights: mix(from, to, t * t * (3 - 2 * t)) };
+				if (t < 1) return true;
+				done?.();
+				return false;
+			});
+		};
+		if (zones[ecg.zone].includes(k)) return ease(vertexWeights(n, k));
+		const rest = lead.ids.indexOf(String(spec?.say?.rest ?? spec?.listen?.rest ?? lead.ids[lead.start]));
+		const hubs = zones[ecg.zone].filter((v) => zones.some((z) => z.includes(v) && z.includes(k)));
+		if (!hubs.length) {
 			ecg = startState(lead.model, k);
 			return;
 		}
-		const from = [...ecg.weights];
-		const to = vertexWeights(n, k);
-		const t0 = performance.now();
-		animate((_, now) => {
-			const t = Math.min(1, (now - t0) / 350);
-			ecg = { ...ecg, weights: mix(from, to, t * t * (3 - 2 * t)) };
-			return t < 1;
+		const hub = hubs.includes(rest) ? rest : hubs[0];
+		ease(vertexWeights(n, hub), () => {
+			enterZone(
+				zones.findIndex((z) => z.includes(hub) && z.includes(k)),
+				[hub]
+			);
+			ease(vertexWeights(n, k));
 		});
 	}
 
@@ -402,6 +422,8 @@
 	}
 
 	const dots = $derived(spec?.handles === 'dots');
+	const compactWeights = $derived(n > 12);
+	let allWeights = $state(false);
 
 	/** Letters to examples: pairs first ("th", "oo"), then single letters, the rest at rest. */
 	function sayScript(text) {
@@ -835,7 +857,7 @@
 				}
 		return out;
 	});
-	const sheets = $derived(problem ? [] : sheetsOf(zones, corners));
+	const sheets = $derived(problem ? [] : sheetsOf(zones, corners, 24, spec?.map?.pages === 'down' ? 'down' : 'right'));
 	const looseEdges = $derived(
 		complexEdges.filter((e) => !sheets.some((s) => s.verts.includes(e.a) && s.verts.includes(e.b)))
 	);
@@ -1094,35 +1116,44 @@
 				<table class="weights">
 					<tbody>
 						{#each ecg.weights as w, k (k)}
-							<tr class={{ wall: walls.includes(k), out: !inZone(k), speaking: speaking === k }}>
-								<td>
-									<button
-										type="button"
-										onclick={() => goTo(k)}
-										title={inZone(k) ? `Drive to ${label(k)}` : `Jump to ${label(k)}`}>{label(k)}</button
+							{#if !compactWeights || allWeights || inZone(k) || Math.abs(w) > 1e-6}
+								<tr class={{ wall: walls.includes(k), out: !inZone(k), speaking: speaking === k }}>
+									<td>
+										<button
+											type="button"
+											onclick={() => goTo(k)}
+											title={inZone(k) ? `Drive to ${label(k)}` : `Jump to ${label(k)}`}>{label(k)}</button
+										>
+									</td>
+									<td
+										class="bar"
+										role="slider"
+										tabindex="0"
+										aria-label="Weight of {label(k)}"
+										aria-valuemin="0"
+										aria-valuemax="1"
+										aria-valuenow={Number(w.toFixed(3))}
+										onpointerdown={(e) => onBarDown(e, k)}
+										onpointermove={onBarMove}
+										onpointerup={onBarUp}
+										onpointercancel={onBarUp}
+										onkeydown={(e) => onBarKey(e, k)}
 									>
-								</td>
-								<td
-									class="bar"
-									role="slider"
-									tabindex="0"
-									aria-label="Weight of {label(k)}"
-									aria-valuemin="0"
-									aria-valuemax="1"
-									aria-valuenow={Number(w.toFixed(3))}
-									onpointerdown={(e) => onBarDown(e, k)}
-									onpointermove={onBarMove}
-									onpointerup={onBarUp}
-									onpointercancel={onBarUp}
-									onkeydown={(e) => onBarKey(e, k)}
-								>
-									<span style:width="{Math.max(0, Math.min(1, w)) * 100}%"></span>
-								</td>
-								<td class="num">{w.toFixed(3)}</td>
-							</tr>
+										<span style:width="{Math.max(0, Math.min(1, w)) * 100}%"></span>
+									</td>
+									<td class="num">{w.toFixed(3)}</td>
+								</tr>
+							{/if}
 						{/each}
 					</tbody>
 				</table>
+				{#if compactWeights}
+					<p class="buttons">
+						<button type="button" class={{ on: allWeights }} onclick={() => (allWeights = !allWeights)}
+							>{allWeights ? 'this zone only' : `all ${n} weights`}</button
+						>
+					</p>
+				{/if}
 
 				{#each shownKnobs as key (key)}
 					{#if KNOBS[key]}
@@ -1176,6 +1207,17 @@
 					</p>
 				{/if}
 				{#each warnings as w (w)}<p class="warning">{w}.</p>{/each}
+				{#if Array.isArray(spec?.poses)}
+					<div class="poses">
+						{#each spec.poses as row, r (r)}
+							<p class="buttons">
+								{#each (Array.isArray(row) ? row : [row]).map((id) => lead.ids.indexOf(String(id))).filter((k) => k >= 0) as k (k)}
+									<button type="button" class={{ on: nearestExample(ecg.weights) === k && ecg.weights[k] > 0.6 }} onclick={() => goTo(k)}>{label(k)}</button>
+								{/each}
+							</p>
+						{/each}
+					</div>
+				{/if}
 				{#if spec?.say}
 					<form
 						class="say"
@@ -1424,6 +1466,12 @@
 	}
 	.weights tr.speaking button {
 		background: var(--flash);
+	}
+	.poses {
+		margin: 0.6em 0 0.2em;
+	}
+	.poses .buttons {
+		margin: 0.25em 0;
 	}
 	.say {
 		display: flex;

@@ -274,6 +274,7 @@ test("maps: glued sheets lie flat, a fork's third page moves over, a tetrahedron
 	close(sheets[2].at.flat(), [12, 0, 22, 0, 17, -20]);
 	assert.ok(gluedFace(sheets[0], sheets[1], [0, 1]));
 	assert.ok(!gluedFace(sheets[0], sheets[2], [0, 1]));
+	close(sheetsOf([[0, 1, 2], [0, 1, 3], [0, 1, 4]], corners, 2, "down")[2].at.flat(), [0, 32, 10, 32, 5, 12]);
 	const inside = nearestOnSheet(sheets[0], [5, 5]);
 	assert.equal(inside.distance, 0);
 	close(inside.local, [0.25, 0.25, 0.5]);

@@ -19,7 +19,8 @@ from pathlib import Path
 MOUTH_Y = -18
 
 # w: half width   u: upper lip opening   d: lower lip opening   c: corners up
-# r: roundness 0-1   t: teeth showing   g: tongue up 0-1   b: brows up   k: brows tilt
+# r: roundness 0-1   t: teeth showing   g: tongue up 0-1, below 0 sticks out   b: brows up
+# k: brows tilt, inner ends up   s: smirk, right corner up and left down   a: left brow up, right down
 SHAPES = {
     "M": dict(w=14, u=0.6, d=0.6, c=1, r=0.0, t=0.0, g=0.0, b=0, k=0),
     "AY": dict(w=18, u=10, d=17, c=2, r=0.3, t=0.8, g=0.35, b=5, k=1),
@@ -34,6 +35,28 @@ SHAPES = {
 }
 RING = ["OO", "R", "OH", "UH", "L", "AY", "EE", "F", "S"]  # around the rest pose M, dark sounds to bright
 
+# Faces, not sounds: a second fan around M, its own page on the map. Neighbours blend well.
+EXPRESSIONS = {
+    "smile": dict(w=20, u=1, d=4, c=7, r=0.0, t=0.3, g=0.0, b=3, k=0),
+    "grin": dict(w=24, u=5, d=9, c=8, r=0.0, t=1.3, g=0.0, b=4, k=0),
+    "laugh": dict(w=22, u=10, d=20, c=6, r=0.3, t=0.9, g=0.5, b=8, k=-1),
+    "surprise": dict(w=10, u=11, d=14, c=0, r=1.0, t=0.0, g=0.2, b=11, k=0),
+    "yawn": dict(w=13, u=12, d=19, c=-1, r=0.9, t=0.0, g=0.4, b=-3, k=3),
+    "kiss": dict(w=4, u=2.5, d=2.5, c=0, r=1.0, t=0.0, g=0.0, b=6, k=2),
+    "raspberry": dict(w=14, u=2, d=3, c=-1, r=0.2, t=0.0, g=-1.0, b=5, k=-2),
+    "smirk": dict(w=17, u=1, d=2, c=2, r=0.0, t=0.2, g=0.0, b=2, k=0, s=5, a=4),
+    "disgust": dict(w=16, u=4, d=2, c=-3, r=0.0, t=1.0, g=0.0, b=-1, k=-3, s=-3, a=-3),
+    "angry": dict(w=16, u=3, d=4, c=-3, r=0.0, t=1.6, g=0.0, b=-3, k=-6),
+    "cry": dict(w=18, u=8, d=14, c=-8, r=0.4, t=0.3, g=0.2, b=3, k=7),
+    "sad": dict(w=15, u=1, d=1, c=-6, r=0.0, t=0.0, g=0.0, b=2, k=5),
+}
+FACES = list(EXPRESSIONS)
+POSES = [
+    ["smile", "grin", "laugh", "smirk"],
+    ["sad", "cry", "angry", "disgust"],
+    ["surprise", "kiss", "raspberry", "yawn"],
+]
+
 LETTERS = {
     "a": "AY", "e": "EE", "i": "EE", "y": "EE", "o": "OH", "u": "UH", "w": "OO", "q": "OO",
     "r": "R", "s": "S", "z": "S", "c": "S", "x": "S", "j": "S", "t": "S", "d": "S", "n": "S",
@@ -45,25 +68,30 @@ PAIRS = {
 }
 
 
-def mouth(w, u, d, c, r, t, g, b, k):
+def mouth(w, u, d, c, r, t, g, b, k, s=0, a=0):
     y = MOUTH_Y
+    cl, cr = c - s, c + s
     lips = [
-        (-w, y + c),
-        (-w * (0.45 + 0.35 * r), y + u * (0.8 + 0.2 * r) + c * 0.4),
+        (-w, y + cl),
+        (-w * (0.45 + 0.35 * r), y + u * (0.8 + 0.2 * r) + cl * 0.4),
         (0, y + u * (0.7 + 0.3 * r)),
-        (w * (0.45 + 0.35 * r), y + u * (0.8 + 0.2 * r) + c * 0.4),
-        (w, y + c),
-        (w * (0.5 + 0.3 * r), y - d * (0.85 + 0.15 * r) + c * 0.3),
+        (w * (0.45 + 0.35 * r), y + u * (0.8 + 0.2 * r) + cr * 0.4),
+        (w, y + cr),
+        (w * (0.5 + 0.3 * r), y - d * (0.85 + 0.15 * r) + cr * 0.3),
         (0, y - d),
-        (-w * (0.5 + 0.3 * r), y - d * (0.85 + 0.15 * r) + c * 0.3),
+        (-w * (0.5 + 0.3 * r), y - d * (0.85 + 0.15 * r) + cl * 0.3),
     ]
-    gw, base = w * 0.42, y - d * 0.85
-    gh = g * (u + d) * 0.6
+    if g < 0:
+        gw, base = max(w * 0.55, 7), y - d * 0.3
+        gh = g * 14
+    else:
+        gw, base = w * 0.42, y - d * 0.85
+        gh = g * (u + d) * 0.6
     tongue = [(-gw, base), (gw, base), (gw * 0.7, base + gh), (-gw * 0.7, base + gh)]
     tw, top = w * 0.55 * (1 - 0.4 * r), y + u * 0.68
     th = t * min(u + d, 8) * 0.45
     teeth = [(-tw, top), (tw, top), (tw, top - th), (-tw, top - th)]
-    brows = [(-30, 26 + b - k), (-12, 28 + b + k), (12, 28 + b + k), (30, 26 + b - k)]
+    brows = [(-30, 26 + b + a - k), (-12, 28 + b + a + k), (12, 28 + b - a + k), (30, 26 + b - a - k)]
     return lips + tongue + teeth + brows
 
 
@@ -73,18 +101,21 @@ def pair(p):
 
 def fence():
     lines = ["```ecg", "title: Mouther, a stand-in", "examples:"]
-    for name in ["M"] + RING:
-        pts = ", ".join(pair(p) for p in mouth(**SHAPES[name]))
+    shapes = {**SHAPES, **EXPRESSIONS}
+    for name in ["M"] + RING + FACES:
+        pts = ", ".join(pair(p) for p in mouth(**shapes[name]))
         lines.append(f"  - id: {name}")
         lines.append(f"    points: [{pts}]")
     lines.append("zones:")
-    for a, b in zip(RING, RING[1:] + RING[:1]):
-        lines.append(f"  - [M, {a}, {b}]")
+    for ring in (RING, FACES):
+        for a, b in zip(ring, ring[1:] + ring[:1]):
+            lines.append(f"  - [M, {a}, {b}]")
     lines.append("layout:")
     lines.append("  M: [0, 0]")
-    for i, name in enumerate(RING):
-        a = math.pi / 2 - 2 * math.pi * i / len(RING)
-        lines.append(f"  {name}: [{math.cos(a):.3f}, {math.sin(a):.3f}]")
+    for ring in (RING, FACES):
+        for i, name in enumerate(ring):
+            a = math.pi / 2 - 2 * math.pi * i / len(ring)
+            lines.append(f"  {name}: [{math.cos(a):.3f}, {math.sin(a):.3f}]")
     lines += [
         "start: M",
         "strokes:",
@@ -103,7 +134,9 @@ def fence():
         '  - { circle: [-17, 11, 4.5], fill: "#000000" }',
         '  - { circle: [21, 11, 4.5], fill: "#000000" }',
         "view: [-60, -54, 120, 120]",
-        "map: { size: 230 }",
+        "map: { size: 230, pages: down }",
+        "poses:",
+        *[f"  - [{', '.join(row)}]" for row in POSES],
         "ghosts: none",
         "handles: dots",
         "say:",
@@ -124,22 +157,23 @@ title: Mouther
 synonyms:
   - mouther stand-in
   - talking face
-definition: "A talking cartoon face with ten mouth shapes, after Golan Levin's Mouther (1995). It says what you type, listens to your voice, and you can grab its lips and pull."
+definition: "A talking cartoon face with ten mouth shapes and twelve expressions, after Golan Levin's Mouther (1995). It says what you type, listens to your voice, pulls faces, and you can grab its lips and pull."
 ---
 
 Golan Levin's **Mouther** (Interval Research, 1995, with Malcolm Slaney and Tom Ngo) listened to your voice and drove a cartoon face through the sounds you made, in real time. The face was built with Tom Ngo's Embedded Constraint Graphics: ten drawings of a mouth, and an engine that blends between them.
 
 This face is a stand-in with its own cartoons. Ten mouths, M, OO, R, OH, UH, L, AY, EE, F and S, each a few numbers (how wide, how open, how round, how much teeth and tongue) turned into twenty points.
 
-Three ways to move it, all moving the same weights:
+Four ways to move it, all moving the same weights:
 
+- **Pull a face.** Smile, grin, laugh, smirk, sad, cry, angry, disgust, surprise, kiss, raspberry, yawn. Each is one more drawing of the same twenty points. From any mouth it eases back through M and out to the face.
 - **Say.** Type something and press Say. It speaks, and the mouth follows the letters, re-syncing on every word.
 - **Listen.** Press Listen and talk. Loudness opens the mouth; how bright the sound is picks the shape, dark OO and R to bright EE and S. Your voice drags the dot on the map.
 - **Pull.** Grab the lips, teeth or brows and drag. The engine finds the blend of mouths that puts the point under your finger, and switches between them as you go. Or drag the dot on the map, or one weight bar.
 
 {fence}
 
-The map is the face's state space. M, lips pressed, is in the middle; the other nine sit around it, dark to bright, and every triangle of M and two neighbours is a zone. A point in a triangle is a blend of three mouths. Driving (Say, Listen) and tugging (Pull) are two ways of moving that one point.
+The map is the face's state space. M, lips pressed, is in the middle; the nine sounds sit around it, dark to bright, and every triangle of M and two neighbours is a zone. A point in a triangle is a blend of three mouths. The twelve faces make a second fan around the same M. Both fans can't lie flat in one picture, so the faces get their own page, glued to the sounds at M: when the state is at rest, the dot shows on both pages, and you can grab it on either. Driving (Say, Listen) and tugging (Pull) are two ways of moving that one point.
 
 How that works, one idea at a time, is the rest of this story, starting from ~Two Pictures~.
 
