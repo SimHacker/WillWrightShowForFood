@@ -12,12 +12,13 @@ idea gets four things:
 The rule for the whole course: **every number the solver uses is on screen.** If the code
 computes it, the playground shows it, and you can poke it.
 
-Status: **planned.** The file names below are the [source layout](DESIGN.md#source-layout)
-we'll build to. Nothing is coded yet.
+Status: the lessons from *Blend two pictures* through *Hitting walls* are coded, for a single
+zone, in the [source layout](DESIGN.md#source-layout). The playground and the later lessons
+are next.
 
 ---
 
-## Lesson 0 — Blend two pictures
+## Blend two pictures
 
 **Play.** Two drawings of a face: neutral and smiling. A slider from 0 to 1. Slide it and the
 face morphs. Every point on the drawing moves in a straight line from where it is in one
@@ -28,13 +29,13 @@ number in the drawing.
 
 **Try.**
 - Push the slider past 1, or below 0. What happens to the smile? (This is *extrapolation* —
-  remember it for squash and stretch in Lesson 9.)
+  remember it for squash and stretch in *Feel*.)
 - Blend two drawings whose points are numbered differently. Why does it turn to spaghetti?
 
 **Words.** Linear interpolation (*lerp*). The two weights are `1 − t` and `t`; they add up to 1.
 A line segment between two examples is a **1-simplex**.
 
-## Lesson 1 — Three pictures and a triangle
+## Three pictures and a triangle
 
 **Play.** Three faces at the corners of a triangle: neutral, smile, surprise. Drag a dot around
 inside the triangle. The face is a mix of all three, with more of whichever corner you're
@@ -53,7 +54,7 @@ It's a 2×2 equation solve, written out longhand.
 3-simplex. Tom's patent calls a simplex of compatible examples a **zone**. The set of all
 blends is the **state space**; a single blend is a **state**.
 
-## Lesson 2 — Driving: weights in, drawing out
+## Driving: weights in, drawing out
 
 **Play.** Same triangle, but now the screen shows the drawing's handle positions as a column
 of numbers, and the examples as a table of columns. Move the state dot and watch the numbers
@@ -72,7 +73,7 @@ added up. That's one matrix times one vector.
 numbers that describe the drawing (handle positions, colours, anything). Because it's a
 weighted sum, the map is **linear**.
 
-## Lesson 3 — Tugging: drag the drawing, solve the weights
+## Tugging: drag the drawing, solve the weights
 
 This is the heart of ECG.
 
@@ -84,12 +85,12 @@ themselves so the mouth corner stays under your cursor.
 Here's the key insight, and it's worth stopping on. For **one handle in one triangle**, the
 handle has a position in each of the three examples. Those three positions form *another*
 triangle, out in the drawing. Dragging the handle to a spot means: **find the barycentric
-coordinates of the cursor in that triangle.** That's Lesson 1 again, run backwards. Those
+coordinates of the cursor in that triangle.** That's *Three pictures and a triangle* again, run backwards. Those
 coordinates are the weights.
 
 **Try.**
 - Show the handle's triangle on screen as a ghost. Drag outside it. What should happen? (That
-  question is Lesson 5.)
+  question is *Hitting walls*.)
 - Use a tetrahedron (four examples) and one handle. Now there are infinitely many weight
   choices that put the handle in the same spot. Drag the handle and watch the *rest* of the
   face — which choice did the solver make? Why?
@@ -102,7 +103,7 @@ matrix relating weight changes to handle movement is the **Jacobian** (J). Three
 smallest change), **tall / overdetermined** (no exact answer; the solver gets as close as it
 can). One tool handles all three: the **pseudo-inverse** (J⁺).
 
-## Lesson 4 — The pseudo-inverse, by hand
+## The pseudo-inverse, by hand
 
 **Play.** A panel showing J, J⁺, and their product live as you drag. A "damping" slider.
 
@@ -122,7 +123,7 @@ function says what it's for in plain words before the code.
 **Null space** — the weight changes that don't move the handle; the free choices the solver can
 spend on other goals. **Singular** and **near-singular** Jacobians. **Damped least squares**.
 
-## Lesson 5 — Hitting walls
+## Hitting walls
 
 **Play.** Drag the mouth until one weight hits zero. Instead of the face breaking, the state
 slides along the edge of the triangle. Keep going and it stops at a corner.
@@ -140,7 +141,7 @@ simplex with what's left of the drag.
 the other side means "continue with one vertex removed"; down to one vertex means "stop."
 (Optimisation people would call it an **active-set** method.)
 
-## Lesson 6 — Gluing triangles together
+## Gluing triangles together
 
 **Play.** Two triangles sharing an edge: ABC and ABD. Drag the face toward D's expression. The
 state crosses from one triangle into the other without a bump.
@@ -159,7 +160,7 @@ one zone to its neighbour.
 points**: equivalent states in two zones, with the same proportions of the shared examples
 and zero for the rest.
 
-## Lesson 7 — More than one handle
+## More than one handle
 
 **Play.** Pin the eyes and drag the mouth. Then grab two handles with two fingers.
 
@@ -172,7 +173,7 @@ handles get a target of "don't move." Weights say which handles matter more.
 
 **Words.** **Weighted least squares.** **Task priority.** **Over-constrained** systems.
 
-## Lesson 8 — Beyond sliding points: transformations
+## Beyond sliding points: transformations
 
 **Play.** A figure walks across the screen. Each step reuses the same four poses, but the
 figure keeps moving forward instead of snapping back.
@@ -191,7 +192,7 @@ Tom's trick for making rotations and other non-linear transforms draggable: the
 **Words.** **Registration.** **Anti-symmetric** edge transforms. A transformation **vector
 field** and its **path integral**. **Linearization.**
 
-## Lesson 9 — Feel
+## Feel
 
 This is the craft lesson, and the one the patent doesn't write down.
 
@@ -207,7 +208,7 @@ release, inertia, how far weights may overshoot, sticky boundaries.
 
 **Words.** None official. This is the part you learn with your hands.
 
-## Lesson 10 — Motion, skeleton, skin
+## Motion, skeleton, skin
 
 **Play.** Record a dance on one character. Paste it onto a different character drawn by someone
 else.
@@ -223,7 +224,7 @@ the **graphic skin** (configuration → pixels).
 **Words.** Tom's terms: clip motion, clip character, clip art. **Isomorphic** configuration
 spaces.
 
-## Lesson 11 — Same engine, other worlds
+## Same engine, other worlds
 
 The point of a general engine is that it isn't about faces. Each of these is a small example
 model, with its own lesson page:

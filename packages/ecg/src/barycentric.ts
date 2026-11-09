@@ -1,5 +1,5 @@
 /**
- * Lesson 1: three pictures and a triangle.
+ * Lesson: Three pictures and a triangle.
  *
  *            B
  *           / \
@@ -42,7 +42,7 @@ export function normalizeWeights(weights: Weights): Weights {
 }
 
 /**
- * Barycentric coordinates of point p in the 2D triangle (a, b, c). Lesson 3 runs this in
+ * Barycentric coordinates of point p in the 2D triangle (a, b, c). *Tugging* runs this in
  * reverse: the triangle is where one handle sits in three examples, p is the cursor.
  */
 export function barycentric2D(

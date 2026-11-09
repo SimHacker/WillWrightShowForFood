@@ -24,7 +24,7 @@ on Google Patents.
 | Tugging | Configuration → state; "essentially the inverse of the driving operation" | `tug()` |
 | Automatic transformation | A transform attached to edges, for registration | `transform` |
 | Via points | Equivalent states in two adjacent zones | `viaPoint()` |
-| Clip motion / graphic skeleton / graphic skin | Motion, state→configuration, configuration→image | `paste` (Lesson 10) |
+| Clip motion / graphic skeleton / graphic skin | Motion, state→configuration, configuration→image | `paste` (*Motion, skeleton, skin*) |
 
 ## Zones and the state space
 
@@ -80,7 +80,7 @@ interpolate those linearly to build a flat map.
 > configuration parameter.
 
 This is what makes ECG feel solid rather than squishy, and it's the main thing to get right
-in Lesson 8.
+in *Transformations*.
 
 ## Boundaries
 
@@ -115,7 +115,7 @@ the barycentric coordinates, and along an edge the integral equals that edge's t
 which is anti-symmetric (going back undoes going forward). For linear paths "the automatic
 transformations reduce to the matrix computation described above."
 
-Left open for us: a readable derivation for the course. Lesson 8 should build it from the
+Left open for us: a readable derivation for the course. *Transformations* should build it from the
 walk-cycle example in the patent, where each reused pose is shifted "by the distance of one
 pace to the right."
 

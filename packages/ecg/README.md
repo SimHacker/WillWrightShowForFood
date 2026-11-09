@@ -16,9 +16,9 @@ technique is free.
 > represent blending manifolds — in the same way that gluing polygons together has done us so
 > much good in 3D modeling.* — Tom Ngo, to Don, after the patent expired
 
-**Status: lessons 0–5 implemented, for a single zone.** Blending, barycentric weights,
+**Status: the first six lessons are implemented, for a single zone.** Blending, barycentric weights,
 driving, damped least squares, tugging with several handles, and walls that keep the weights
-inside the simplex. Gluing zones (lesson 6) and the playground are next. `pnpm test` runs the
+inside the simplex. *Gluing triangles together* and the playground are next. `pnpm test` runs the
 worked examples.
 
 ---

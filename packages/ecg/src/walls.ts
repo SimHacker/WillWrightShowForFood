@@ -1,5 +1,5 @@
 /**
- * Lesson 5: hitting walls.
+ * Lesson: Hitting walls.
  *
  *            B
  *           / \
@@ -13,7 +13,8 @@
  * example at zero and solve again with the rest. The state slides along the face, then into a
  * corner, and stops there. With one example left, there is nothing to solve.
  *
- * (The patent walks across a face into a neighbouring zone when there is one. That is lesson 6;
+ * (The patent walks across a face into a neighbouring zone when there is one. That is *Gluing triangles
+ * together*;
  * a single zone has no neighbours, so every face is a wall.)
  */
 

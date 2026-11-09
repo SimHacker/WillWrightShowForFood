@@ -1,5 +1,5 @@
 /**
- * Lesson 2: driving. Weights in, drawing out.
+ * Lesson: Driving. Weights in, drawing out.
  *
  *     examples (columns)        weights        drawing
  *     ┌ x₀  x₁  x₂ ┐           ┌ λ₀ ┐

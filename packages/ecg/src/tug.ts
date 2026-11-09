@@ -1,5 +1,5 @@
 /**
- * Lesson 3: tugging. Drag the drawing, solve for the weights.
+ * Lesson: Tugging. Drag the drawing, solve for the weights.
  *
  *     you drag this ──▶ ●                     the weights move so it follows
  *                        \
@@ -46,7 +46,7 @@ export function pointTargets(point: number, x: number, y: number, importance = 1
 
 /**
  * One unconstrained solve. Only examples marked active may carry weight; the result can have
- * negative weights, which lesson 5 deals with.
+ * negative weights, which *Hitting walls* deals with.
  */
 export function tugOnce(
 	examples: Configuration[],

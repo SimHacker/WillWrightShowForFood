@@ -1,5 +1,5 @@
 /**
- * Lesson 4: the pseudo-inverse, by hand.
+ * Lesson: The pseudo-inverse, by hand.
  *
  * The matrices in ECG are small: a few rows per grabbed handle, a column per example. So the
  * operations are written here in plain loops instead of pulled from a library, because reading

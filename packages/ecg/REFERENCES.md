@@ -46,7 +46,7 @@ Where a link is dead, it says so; please add a working one if you find it.
 - **Samuel R. Buss.** *Introduction to Inverse Kinematics with Jacobian Transpose, Pseudoinverse
   and Damped Least Squares methods.* Tutorial notes.
   [PDF](https://mathweb.ucsd.edu/~sbuss/ResearchWeb/ikmethods/iksurvey.pdf). The friendliest
-  derivation; Lesson 4 follows it.
+  derivation; *The pseudo-inverse, by hand* follows it.
 - **Samuel R. Buss, Jin-Su Kim.** *Selectively Damped Least Squares for Inverse Kinematics.*
   Journal of Graphics Tools, 2005.
   [doi:10.1080/2151237x.2005.10129202](https://doi.org/10.1080/2151237x.2005.10129202)

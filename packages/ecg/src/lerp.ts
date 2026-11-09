@@ -1,5 +1,5 @@
 /**
- * Lesson 0: blend two pictures.
+ * Lesson: Blend two pictures.
  *
  *     A ●━━━━━━━●━━━━━━━━━━━━━━━● B
  *       t = 0   t = 0.3          t = 1
