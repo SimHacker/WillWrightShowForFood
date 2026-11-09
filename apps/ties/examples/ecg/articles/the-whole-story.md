@@ -9,7 +9,16 @@ definition: "Embedded Constraint Graphics, every demo live on one page: a face t
 
 Tom Ngo's **Embedded Constraint Graphics** (Interval Research, 1996, patent US5933150, expired 2016). You draw a few examples of a picture. Then you **drag the picture itself**, and the engine works out which blend of your examples puts the part you're holding under your cursor.
 
-That's the whole trick, and it's general: an example is any list of numbers. Points of a cartoon, a 3D head, a face rig's coefficients, a layout of windows. This page starts with a face that talks, takes it apart one idea at a time, then points the same engine at other things.
+It's direct manipulation for anything you can show by example. You don't hunt for the slider that does what you want; you grab what you want to move and move it. An example is any list of numbers, so the same engine applies to:
+
+- **Facial animation**: drag a mouth corner or an eyelid and the face finds the expression. The expressions can be ARKit blendshape coefficients from a rig built in Blender.
+- **Character animation**: skeleton poses instead of faces. Record a performance as weights over time and play it on another character.
+- **2D and 3D graphics**: cartoon outlines, colors, a 3D head you turn by the nose.
+- **User interfaces**: example layouts of windows, so dragging one window rearranges the rest.
+
+Language models mix ideas the same way, with weights that sum to one.
+
+This page starts with a face that talks, takes it apart one idea at a time, then points the same engine at each of these. The end covers where it could live and how to take the code.
 
 Every demo is live, and beside each drawing is the machinery Tom's editor kept hidden: the weights, the map of the state space, the shape of the matrix the solver inverts. Drag the drawing, the dot on the map, or a weight bar. Click anywhere on a map to travel there.
 
