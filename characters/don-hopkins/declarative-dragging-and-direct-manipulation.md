@@ -89,8 +89,8 @@ See [angle at release](https://github.com/SimHacker/moollm/blob/main/skills/desi
 Tom Ngo's **Embedded Constraint Graphics** (Interval Research; [US patent 5933150](https://patents.google.com/patent/US5933150),
 Ngo and Bruce Donald, filed 1996, expired 2016) solves for several handles at once.
 
-The author draws a few complete example pictures of the same figure. Each example is a vertex of
-an abstract simplex the user never sees; simplices are glued along shared faces into a simplicial
+The author draws a few complete example pictures of the same figure. Each example corresponds to a
+vertex of an abstract simplex the user never sees; simplices are glued along shared faces into a simplicial
 complex that records which examples may blend with which. The state is a point in one simplex, and
 its barycentric coordinates are blend weights. The screen always shows one picture, the weighted mix
 of that simplex's examples, and that picture is what you manipulate: drag a point on it, and the
