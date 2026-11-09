@@ -1,6 +1,7 @@
 {
 	"name": "@wwsff/ecg",
 	"version": "0.0.0",
+	"license": "MIT",
 	"private": true,
 	"description": "Embedded Constraint Graphics as courseware: drag the drawing, solve the blend weights. Design stage.",
 	"type": "module",

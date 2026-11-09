@@ -16,7 +16,7 @@ living people, which is a separate question from who owns the recordings.
 
 | Material | Holder | License |
 |---|---|---|
-| Code: apps, packages, scripts, rigs, kernel | Don Hopkins | MIT |
+| Code: apps, packages, scripts, rigs, kernel | Don Hopkins | MIT ([`LICENSE`](LICENSE)) |
 | Our writing: designs, catalogs, show notes, episode structure, essays | Don Hopkins | CC-BY-4.0 |
 | Our own photographs and video | Don Hopkins | CC-BY-4.0 |
 | Character portrayals we authored | Don Hopkins, under [portrayal standards](schemas/portrayal-standards.md) | CC-BY-4.0 |
