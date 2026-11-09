@@ -545,8 +545,31 @@
 		requestAnimationFrame(step);
 	}
 
+	/** On the eyes tab a pupil is a handle: drag it and the eye complex solves for the gaze. */
+	let pupilGrab = null; // { pointerId, pupil }
+	function onPupilDown(event, p) {
+		if (event.button !== 0) return;
+		event.preventDefault();
+		event.stopPropagation();
+		eyesFollow = false;
+		try {
+			event.currentTarget.setPointerCapture(event.pointerId);
+		} catch {
+			// Synthetic pointers can't be captured.
+		}
+		pupilGrab = { pointerId: event.pointerId, pupil: p };
+	}
+	function onPupilMove(event) {
+		if (pupilGrab?.pointerId !== event.pointerId) return;
+		const [x, y] = toData(0, event);
+		eyeState = walk(eyes.model, eyeState, pointTargets(pupilGrab.pupil, x, y)).state;
+	}
+	function onPupilUp(event) {
+		if (pupilGrab?.pointerId === event.pointerId) pupilGrab = null;
+	}
+
 	function look(event) {
-		if (!eyes || !eyeState || !svgs[0] || !eyesFollow || mapGrab?.eyes) return;
+		if (!eyes || !eyeState || !svgs[0] || !eyesFollow || mapGrab?.eyes || pupilGrab) return;
 		const [x, y] = toData(0, event);
 		const depth = focusNear ? eyes.near : eyes.far;
 		const middle = eyes.centers.reduce((m, c) => [m[0] + c[0] / eyes.centers.length, m[1] + c[1] / eyes.centers.length], [0, 0]);
@@ -1215,7 +1238,20 @@
 						{/each}
 						{#if ci === 0 && eyes}
 							{#each eyes.centers as _, p (p)}
-								<circle class="pupil" style:fill={eyes.fill} cx={eyePoints[2 * p]} cy={sy(eyePoints[2 * p + 1])} r={eyes.r} />
+								<circle
+									class={['pupil', { handle: shows('eyes') }]}
+									style:fill={eyes.fill}
+									cx={eyePoints[2 * p]}
+									cy={sy(eyePoints[2 * p + 1])}
+									r={eyes.r}
+									role="button"
+									tabindex="-1"
+									aria-label="Pupil {p + 1}: drag to aim the eyes"
+									onpointerdown={shows('eyes') ? (e) => onPupilDown(e, p) : undefined}
+									onpointermove={onPupilMove}
+									onpointerup={onPupilUp}
+									onpointercancel={onPupilUp}
+								/>
 							{/each}
 						{/if}
 						{#each handleEdges as [p, q], i (i)}
@@ -1568,6 +1604,10 @@
 	.pupil {
 		pointer-events: none;
 	}
+	.pupil.handle {
+		pointer-events: auto;
+		cursor: crosshair;
+	}
 	.outputs-title {
 		margin: 0.6em 0 0.2em;
 		font-weight: bold;
@@ -1762,6 +1802,9 @@
 	.note {
 		margin: 0.2em 0 0.6em;
 		font-style: italic;
+		line-height: 1.5;
+		height: 3em; /* exactly two lines, so a longer zone name doesn't move what's below */
+		overflow: hidden;
 	}
 	.weights {
 		border-collapse: collapse;

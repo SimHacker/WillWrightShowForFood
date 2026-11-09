@@ -259,10 +259,6 @@ The solver never imports a renderer.
 
 ## Suggestions
 
-- **Drag the eyeballs.** In Mouther's manual eye mode, grabbing a pupil should pull it like any
-  other handle: the pupil is a point target on the eye complex, the other pupil follows through
-  the shared gaze examples, and the walker crosses zones as you drag. Each pupil's handle is its
-  pupil circle, hit-tested before the face handles.
 - **Handles through any linear map.** A target today is one coordinate of the configuration.
   Generalize it to a row: any linear combination of the configuration's numbers. Then a handle
   can be a mesh vertex driven by blendshape coefficients (neutral plus offsets times
