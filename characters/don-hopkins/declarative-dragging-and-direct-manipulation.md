@@ -160,7 +160,10 @@ adds states to the complex where the user's manipulation goes. See
 ### Not listed: discovery and cancelling
 
 The paper does not discuss how a user finds out what can be dragged and what dragging it will do
-before grabbing it, or how to let go without committing. Pie menus address both:
+before grabbing it, or how to let go without committing. Pie menus were designed for both, and D2
+could build in the same properties. Pie menus lead, follow, or get out of the way: when you don't
+know them they lead, when you're familiar they follow, and when you know them well you don't see
+them unless you stop.
 
 - **Self-revealing.** Press and wait, and the menu appears and shows every choice.
 - **Browsing.** Moving around the center highlights the slice in that direction; nothing commits.
