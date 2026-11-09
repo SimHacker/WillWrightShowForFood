@@ -67,6 +67,7 @@
 	} from '@wwsff/ecg';
 
 	let { spec } = $props();
+	const uid = $props.id();
 
 	const FEEL = { damping: 0, snap: 0, spring: 0, inertia: 0, overshoot: 0, sticky: 0, chooser: 'state' };
 	const KNOBS = {
@@ -1083,6 +1084,13 @@
 	const lastCrossing = $derived(result?.crossings?.[result.crossings.length - 1] ?? null);
 	const walls = $derived(result?.walls ?? []);
 	const inZone = (k) => zones[ecg.zone]?.includes(k);
+	/** Compact table: always as many rows as the biggest zone, the heaviest weights, in example order, so it never changes height. */
+	const shownRows = $derived.by(() => {
+		const size = Math.max(...zones.map((z) => z.length));
+		const score = (k) => (inZone(k) ? 1 : 0) + Math.abs(ecg.weights[k]) * 2;
+		const ranked = ecg.weights.map((_, k) => k).sort((a, b) => score(b) - score(a));
+		return new Set(ranked.slice(0, size));
+	});
 	const knobValue = (key) => Number(feel[key]).toFixed(key === 'spring' ? 0 : 2);
 </script>
 
@@ -1217,17 +1225,19 @@
 
 			<div class="panel" style:flex-basis="{Math.max(260, S + 90)}px">
 				{#if eyes}
-					<p class="buttons track">
-						<button type="button" class={{ on: track === 'face' }} onclick={() => (track = 'face')}>face</button>
-						<button type="button" class={{ on: track === 'eyes' }} onclick={() => (track = 'eyes')}>eyes</button>
-					</p>
+					<div class="tabs" role="tablist" aria-label="Which complex to show">
+						{#each ['face', 'eyes'] as t (t)}
+							<button type="button" role="tab" aria-selected={track === t} onclick={() => (track = t)}>{t}</button>
+						{/each}
+					</div>
 				{/if}
 				{#if track === 'eyes' && eyes && eyeState}
 					{@const ez = eyes.model.zones[eyeState.zone]}
-					<p class="buttons">
-						<button type="button" class={{ on: eyesFollow }} onclick={() => (eyesFollow = true)}>follow the pointer</button>
-						<button type="button" class={{ on: !eyesFollow }} onclick={() => (eyesFollow = false)}>manual</button>
-					</p>
+					<fieldset class="radios">
+						<legend>The eyes</legend>
+						<label><input type="radio" name="{uid}-follow" bind:group={eyesFollow} value={true} /> follow the pointer</label>
+						<label><input type="radio" name="{uid}-follow" bind:group={eyesFollow} value={false} /> manual</label>
+					</fieldset>
 					{#if ez.length === 4}
 						{@render axisViews(ez, eyeState.weights, (k) => eyes.labels[k], [], onEyeViewDown)}
 					{/if}
@@ -1313,7 +1323,7 @@
 				<table class="weights">
 					<tbody>
 						{#each ecg.weights as w, k (k)}
-							{#if !compactWeights || allWeights || inZone(k) || Math.abs(w) > 1e-6}
+							{#if !compactWeights || allWeights || shownRows.has(k)}
 								<tr class={{ wall: walls.includes(k), out: !inZone(k), speaking: speaking === k }}>
 									<td>
 										<button
@@ -1682,7 +1692,7 @@
 		width: 100%;
 	}
 	.weights td {
-		padding: 1px 4px 1px 0;
+		padding: 2px 4px 2px 0;
 	}
 	.weights tr.out {
 		opacity: 0.45;
@@ -1690,8 +1700,46 @@
 	.weights tr.speaking button {
 		background: var(--flash);
 	}
-	.track {
-		margin: 0 0 0.4em;
+	.tabs {
+		display: flex;
+		gap: 3px;
+		padding-left: 4px;
+		margin: 0 0 0.5em;
+		border-bottom: 1px solid var(--ink);
+	}
+	.panel .tabs button {
+		margin-bottom: -1px;
+		padding: 0.15em 0.9em;
+		border-radius: 5px 5px 0 0;
+		border-bottom-color: var(--ink);
+		box-shadow: none;
+		background: color-mix(in srgb, var(--paper) 85%, var(--ink));
+		transform: none;
+	}
+	.panel .tabs button[aria-selected='true'] {
+		background: var(--paper);
+		border-bottom-color: var(--paper);
+		font-weight: bold;
+		cursor: default;
+	}
+	.radios {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.2em 1em;
+		margin: 0 0 0.5em;
+		padding: 0;
+		border: none;
+	}
+	.radios legend {
+		float: left;
+		margin-right: 0.6em;
+		padding: 0;
+	}
+	.radios label {
+		display: flex;
+		align-items: center;
+		gap: 0.3em;
+		cursor: pointer;
 	}
 	.poses {
 		margin: 0.6em 0 0.2em;
@@ -1770,8 +1818,9 @@
 	.presets,
 	.buttons {
 		display: flex;
-		gap: 0.4em;
+		gap: 0.3em 0.4em;
 		flex-wrap: wrap;
+		margin: 0.3em 0;
 	}
 	.readout {
 		min-height: 1.5em;
