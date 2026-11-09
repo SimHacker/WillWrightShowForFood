@@ -50,6 +50,7 @@ something else**. Every piece is built for that:
 | Where | What |
 |-------|------|
 | [ECG at Interval](../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md) | Don's essay: the mechanism, Mouther, the 2016 HN comment, the 2013 Syntertainment pitch, WigFabrik and Faceball plans |
+| [Declarative Dragging and direct manipulation](../../characters/don-hopkins/declarative-dragging-and-direct-manipulation.md) | D2 (Horowitz, Blinn, Heer 2026) and the ideas it could take from ECG: multiple handles, the Jacobian solve, glued simplices |
 | [Breakfast simplex](../../characters/don-hopkins/breakfast-simplex-barycentric-direct-manipulation.md) | ECG applied to egg/milk/flour space and pie menus — the friendliest first example |
 | [Tom Ngo](../../characters/tom-ngo/README.md) · [ideas](../../characters/tom-ngo/ideas.md) | Character room and brainstorm topics |
 | [Golan Levin](../../characters/golan-levin/README.md) | Mouther, built in Tom's ECG editor |

@@ -113,6 +113,8 @@ On **G9.js** (2016), the same ECG story — see [embedded constraint graphics ar
 | Link | Why |
 |------|-----|
 | [Tom Ngo ECG at Interval](tom-ngo-embedded-constraint-graphics-at-interval.md) | Patent, Mouther, 2016 HN comment |
+| [`@wwsff/ecg`](../../packages/ecg/README.md) | The reimplementation, design stage; breakfast is a planned application |
+| [Declarative Dragging and direct manipulation](declarative-dragging-and-direct-manipulation.md) | D2 (2026) and what ECG, pie menus and The Sims would add to it |
 | [Interval Camelot](interval-research-pluggers-and-mediaflow.md) | Where ECG was built |
 | [Pie menus CHI'88](pie-menus-chi-88-and-beyond.md) | Radial direct manipulation |
 | [Direct manipulation trail](../../process/trails/direct-manipulation.md) | Repo Show thread |
