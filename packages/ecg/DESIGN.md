@@ -256,3 +256,10 @@ The solver never imports a renderer.
 - Strict priority for pins, or weighted only?
 - How close can we get to the feel of Tom's editor without seeing it? (Ask Tom and Golan.)
 - Can the Mouther cartoons be recovered as test models? (Ask Golan.)
+
+## Suggestions
+
+- **Drag the eyeballs.** In Mouther's manual eye mode, grabbing a pupil should pull it like any
+  other handle: the pupil is a point target on the eye complex, the other pupil follows through
+  the shared gaze examples, and the walker crosses zones as you drag. Each pupil's handle is its
+  pupil circle, hit-tested before the face handles.
