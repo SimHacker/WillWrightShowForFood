@@ -21,6 +21,9 @@ importers:
       '@wwsff/catalog':
         specifier: workspace:*
         version: link:../../packages/catalog
+      '@wwsff/ecg':
+        specifier: workspace:*
+        version: link:../../packages/ecg
       '@wwsff/pixie':
         specifier: workspace:*
         version: link:../../packages/pixie

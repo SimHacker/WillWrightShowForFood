@@ -1,0 +1,10 @@
+{
+  "database": "ecg",
+  "handmade": true,
+  "source": "packages/ecg",
+  "namespaces": {
+    "pictures": {
+      "index": {}
+    }
+  }
+}

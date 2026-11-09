@@ -14,6 +14,7 @@
 	import { provideApplets } from './applets.svelte.js';
 	import TargetApplet from './TargetApplet.svelte';
 	import CabinetApplet from './CabinetApplet.svelte';
+	import EcgApplet from './EcgApplet.svelte';
 	import YouTubeEmbed from './YouTubeEmbed.svelte';
 	import PageEmbed from './PageEmbed.svelte';
 	import RepoDoc from './RepoDoc.svelte';
@@ -121,6 +122,8 @@
 				<RepoDoc spec={segment.spec} />
 			{:else if segment.kind === 'cabinet'}
 				<CabinetApplet spec={segment.spec} embedded />
+			{:else if segment.kind === 'ecg'}
+				<EcgApplet spec={segment.spec} />
 			{:else if segment.kind === 'youtube'}
 				<YouTubeEmbed spec={segment.spec} />
 			{:else if segment.kind === 'page'}
