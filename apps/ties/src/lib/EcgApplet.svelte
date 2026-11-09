@@ -1104,20 +1104,24 @@
 		const pts = mapCorners.map((c) => c.at);
 		const xs = pts.map((p) => p[0]);
 		const ys = pts.map((p) => p[1]);
-		const pad = 17 + 3.4 * Math.max(1, ...mapCorners.map((c) => label(c.k).length));
+		const pad = 12 + 6.8 * Math.max(1, ...mapCorners.map((c) => label(c.k).length));
 		const x = Math.min(...xs) - pad;
-		const y = Math.min(...ys) - 18;
+		const y = Math.min(...ys) - 20;
 		return { x, y, w: Math.max(...xs) - x + pad, h: Math.max(...ys) - y + 22 };
 	});
 	const mapMiddle = $derived([
 		corners.reduce((s, c) => s + c[0], 0) / corners.length,
 		corners.reduce((s, c) => s + c[1], 0) / corners.length
 	]);
-	/** Labels sit outside the corner, away from the middle; a corner in the middle gets its label below. */
+	/** Labels sit outside the corner, away from the middle; a corner in the middle gets its label below.
+	 *  Side labels are anchored at their near end so a long word never runs back over its dot. */
 	function labelAt(at) {
 		const d = [at[0] - mapMiddle[0], at[1] - mapMiddle[1]];
 		const len = Math.hypot(...d);
-		return len < 8 ? [at[0], at[1] + 18] : [at[0] + (d[0] / len) * 13, at[1] + (d[1] / len) * 13 + 4];
+		if (len < 8) return [at[0], at[1] + 18, 'middle'];
+		const [ux, uy] = [d[0] / len, d[1] / len];
+		const anchor = ux > 0.5 ? 'start' : ux < -0.5 ? 'end' : 'middle';
+		return [at[0] + ux * (anchor === 'middle' ? 13 : 8), at[1] + uy * 13 + 4, anchor];
 	}
 	const stateDots = $derived(
 		sheets
@@ -1378,7 +1382,7 @@
 						{#each mapCorners as c (c.k + '@' + c.at.join(','))}
 							{@const t = labelAt(c.at)}
 							<circle class={['corner', { wall: walls.includes(c.k), out: !inZone(c.k) }]} cx={c.at[0]} cy={c.at[1]} r="4" />
-							<text x={t[0]} y={t[1]} text-anchor="middle">{label(c.k)}</text>
+							<text x={t[0]} y={t[1]} text-anchor={t[2]}>{label(c.k)}</text>
 						{/each}
 						{#each stateDots as d (d.i)}
 							<circle
