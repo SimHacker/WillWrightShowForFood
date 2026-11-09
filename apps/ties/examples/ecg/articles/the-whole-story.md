@@ -4,12 +4,24 @@ synonyms:
   - the whole story
   - ecg on one page
   - play
-definition: "Embedded Constraint Graphics from two pictures to a talking face, every demo live on one page."
+definition: "Embedded Constraint Graphics, every demo live on one page: a face that talks first, then how it works, from two pictures up."
 ---
 
 Tom Ngo's **Embedded Constraint Graphics** (Interval Research, 1996, patent US5933150, expired 2016). You draw a few examples of a picture. Then you **drag the picture itself**, and the engine works out which blend of your examples puts the part you're holding under your cursor.
 
-Every demo below is live. Beside each drawing is the machinery Tom's editor kept hidden: the weights, the simplex, the shape of the matrix the solver inverts. Each step adds one idea to the one before, and it ends with a face that talks.
+The whole idea first: a face that talks, listens, and lets you pull its lips. Then it comes apart, one idea at a time, from two pictures up.
+
+Every demo is live. Beside each drawing is the machinery Tom's editor kept hidden: the weights, the map of the state space, the shape of the matrix the solver inverts. Drag the drawing, the dot on the map, or a weight bar.
+
+## Mouther
+
+```transclude
+article: "Mouther"
+```
+
+## How it works
+
+Everything Mouther does, built up from nothing.
 
 ## Two Pictures
 
@@ -77,12 +89,6 @@ article: "Colour"
 article: "Motion, Skeleton, Skin"
 ```
 
-## Mouther
-
-```transclude
-article: "Mouther"
-```
-
 ## Where it comes from
 
-The engine is [packages/ecg](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/ecg), with a worked test for every step. The history: [Tom Ngo's Embedded Constraint Graphics at Interval](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md).
+The engine is [packages/ecg](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/ecg), MIT licensed, with a worked test for every step. It blends any list of numbers, so the same engine drives 2D drawings or a 3D face's blendshape coefficients. The history: [Tom Ngo's Embedded Constraint Graphics at Interval](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md).

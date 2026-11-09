@@ -1,12 +1,12 @@
 ---
 title: "Tour: Mouther"
-definition: "A talking cartoon face with ten mouth shapes, after Golan Levin's Mouther (1995). Type something and it says it; grab its lips and pull."
+definition: "A talking cartoon face with ten mouth shapes, after Golan Levin's Mouther (1995). It says what you type, listens to your voice, and you can grab its lips and pull."
 ---
 
 ```transclude
 article: "Mouther"
 ```
 
-Previous: ~Tour: Motion, Skeleton, Skin~ · ~Embedded Constraint Graphics~
+~Embedded Constraint Graphics~ · Next: ~Tour: Two Pictures~
 
 All of it on one page: ~ECG: The Whole Story~

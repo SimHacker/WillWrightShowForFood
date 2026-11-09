@@ -410,49 +410,176 @@
 		const rest = Math.max(0, index(cfg.rest ?? lead.ids[lead.start]));
 		const pairs = cfg.pairs ?? {};
 		const letters = cfg.letters ?? {};
-		const out = [rest];
+		const script = [rest];
+		const at = [0]; // where in the text each step starts
 		const lower = String(text).toLowerCase();
 		for (let i = 0; i < lower.length; ) {
 			const two = lower.slice(i, i + 2);
 			const hit = pairs[two] !== undefined ? pairs[two] : null;
 			const id = hit ?? letters[lower[i]];
 			const k = id === undefined || id === null ? rest : index(id);
-			out.push(k < 0 ? rest : k);
+			script.push(k < 0 ? rest : k);
+			at.push(i);
 			i += hit !== null ? 2 : 1;
 		}
-		out.push(rest);
-		return out;
+		script.push(rest);
+		at.push(lower.length);
+		return { script, at };
 	}
 
 	// Writable derived: the spec's sample sentence, until the reader types their own.
 	let sayText = $derived(String(spec?.say?.text ?? ''));
 	let speaking = $state(-1);
+	const canSpeak = typeof window !== 'undefined' && 'speechSynthesis' in window;
 
-	/** Driving, Mouther style: through each example in turn, easing between them. */
+	/**
+	 * Driving, Mouther style: through each example in turn, easing between them. Aloud, the
+	 * synthesizer's word boundaries pull the script back into step with the voice.
+	 */
 	function say() {
 		stop();
+		stopListening();
 		result = null;
-		const script = sayScript(sayText);
+		const { script, at } = sayScript(sayText);
 		const ms = Number(spec?.say?.ms ?? 110);
-		const t0 = performance.now();
+		let t0 = performance.now();
+		let voiceDone = true;
+		if (spec?.say?.aloud && canSpeak) {
+			speechSynthesis.cancel();
+			const u = new SpeechSynthesisUtterance(sayText);
+			voiceDone = false;
+			let started = false;
+			u.onstart = () => {
+				started = true;
+				t0 = performance.now();
+			};
+			setTimeout(() => {
+				if (!started) voiceDone = true;
+			}, 1000);
+			u.onboundary = (e) => {
+				const k = at.findIndex((c) => c >= e.charIndex);
+				if (k > 0) t0 = performance.now() - (k - 0.5) * ms;
+			};
+			u.onend = u.onerror = () => (voiceDone = true);
+			speechSynthesis.speak(u);
+		}
 		const zoneOf = (a, b) => {
 			const z = zones.findIndex((zone) => zone.includes(a) && zone.includes(b));
 			return z >= 0 ? z : Math.max(0, zones.findIndex((zone) => zone.includes(b)));
 		};
 		animate((_, now) => {
-			const t = (now - t0) / ms;
-			const k = Math.min(script.length - 1, Math.floor(t));
+			const t = Math.max(0, (now - t0) / ms);
+			const last = script.length - 1;
+			if (t > last * 3) voiceDone = true;
+			const k = Math.min(voiceDone ? last : last - 1, Math.floor(t));
 			const a = script[k];
-			const b = script[Math.min(script.length - 1, k + 1)];
+			const b = script[Math.min(last, k + 1)];
 			const f = Math.min(1, (t - k) * 1.6);
 			const e = f * f * (3 - 2 * f);
 			speaking = b;
 			ecg = { ...ecg, zone: zoneOf(a, b), weights: mix(vertexWeights(n, a), vertexWeights(n, b), e) };
-			if (k < script.length - 1) return true;
+			if (k < last || !voiceDone) return true;
 			speaking = -1;
 			return false;
 		});
 	}
+
+	/**
+	 * Listening: the microphone as a hand on the map. Loudness pushes the dot from the rest
+	 * example out to the ring; the spectral centroid, dark to bright, picks where on the ring.
+	 */
+	let listening = $state(false);
+	let voiceAt = $state(null);
+	let audio = null; // { context, stream, analyser }
+
+	function stopListening() {
+		if (!audio) return;
+		audio.stream.getTracks().forEach((t) => t.stop());
+		audio.context.close();
+		audio = null;
+		listening = false;
+		voiceAt = null;
+		stop();
+	}
+
+	async function listen() {
+		if (listening) {
+			stopListening();
+			settle();
+			return;
+		}
+		stop();
+		speechSynthesis?.cancel?.();
+		const cfg = spec?.listen ?? {};
+		const index = (id) => lead.ids.indexOf(String(id));
+		const rest = Math.max(0, index(cfg.rest ?? lead.ids[lead.start]));
+		const ring = (cfg.ring ?? []).map(index).filter((k) => k >= 0);
+		if (ring.length < 2 || !sheets.length) return;
+		let stream;
+		try {
+			stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+		} catch {
+			problemNote = 'No microphone: the browser said no.';
+			return;
+		}
+		const context = new AudioContext();
+		const analyser = context.createAnalyser();
+		analyser.fftSize = 2048;
+		analyser.smoothingTimeConstant = 0.5;
+		context.createMediaStreamSource(stream).connect(analyser);
+		audio = { context, stream, analyser };
+		listening = true;
+		problemNote = '';
+		result = null;
+		const wave = new Float32Array(analyser.fftSize);
+		const spectrum = new Float32Array(analyser.frequencyBinCount);
+		const hz = context.sampleRate / analyser.fftSize;
+		let floor = null; // the room's noise level: starts at the first frame, creeps up to steady noise
+		let loud = 0;
+		let bright = 0.5;
+		animate(() => {
+			if (!audio) return false;
+			analyser.getFloatTimeDomainData(wave);
+			analyser.getFloatFrequencyData(spectrum);
+			const rms = Math.sqrt(wave.reduce((s, x) => s + x * x, 0) / wave.length);
+			const db = 20 * Math.log10(rms + 1e-9);
+			floor = floor === null ? db : Math.min(db, floor + 0.03);
+			const open = Math.max(0, Math.min(1, (db - floor - 6) / 30));
+			let sum = 0;
+			let moment = 0;
+			for (let i = Math.floor(250 / hz); i < Math.min(spectrum.length, 8000 / hz); i++) {
+				const m = 10 ** (spectrum[i] / 20);
+				sum += m;
+				moment += m * i * hz;
+			}
+			const centroid = sum > 0 ? moment / sum : 1000;
+			const b = Math.max(0, Math.min(1, Math.log(centroid / 600) / Math.log(4500 / 600)));
+			loud += (open - loud) * 0.35;
+			if (open > 0.05) bright += (b - bright) * 0.25;
+			const along = bright * (ring.length - 1);
+			const i = Math.min(ring.length - 2, Math.floor(along));
+			const f = along - i;
+			const [p, q] = [corners[ring[i]], corners[ring[i + 1]]];
+			const edge = [p[0] + (q[0] - p[0]) * f, p[1] + (q[1] - p[1]) * f];
+			const r = corners[rest];
+			const target = [r[0] + (edge[0] - r[0]) * loud, r[1] + (edge[1] - r[1]) * loud];
+			voiceAt = target;
+			let best = null;
+			for (const sheet of sheets) {
+				const near = nearestOnSheet(sheet, target);
+				if (!best || near.distance < best.near.distance) best = { sheet, near };
+			}
+			if (best) {
+				enterZone(
+					best.sheet.zone,
+					best.sheet.verts.filter((v) => zones[ecg.zone].includes(v))
+				);
+				setWeights(best.sheet.verts, best.near.local);
+			}
+			return true;
+		});
+	}
+	let problemNote = $state('');
 
 	/** After driving, the weights may sit across zones; settle into one before a drag. */
 	function settleIntoZone() {
@@ -670,9 +797,13 @@
 		if (face) pullTo(k, face, ecg.weights[k] + delta);
 	}
 
-	$effect(() => () => cancelAnimationFrame(animation));
+	$effect(() => () => {
+		cancelAnimationFrame(animation);
+		stopListening();
+		if (spec?.say?.aloud && canSpeak) speechSynthesis.cancel();
+	});
 
-	const S = 160;
+	const S = $derived(Number(spec?.map?.size ?? 160));
 	const corners = $derived.by(() => {
 		const layout = spec?.layout;
 		if (layout && lead.ids.every((id) => Array.isArray(layout[id]))) {
@@ -869,7 +1000,7 @@
 				{/each}
 			</div>
 
-			<div class="panel">
+			<div class="panel" style:flex-basis="{Math.max(260, S + 90)}px">
 				{#if tetra}
 					<div class="views">
 						{#each AXIS_VIEWS as [a, b], v (v)}
@@ -952,6 +1083,7 @@
 								onpointerdown={(e) => onSheetDown(e, d.i)}
 							/>
 						{/each}
+						{#if voiceAt}<circle class="voice" cx={voiceAt[0]} cy={voiceAt[1]} r="9" />{/if}
 					</svg>
 				{/if}
 				<p class="note">
@@ -1055,6 +1187,12 @@
 						<input type="text" bind:value={sayText} aria-label="Something to say" />
 						<button type="submit">Say</button>
 					</form>
+				{/if}
+				{#if spec?.listen}
+					<p class="buttons">
+						<button type="button" class={{ on: listening }} onclick={listen}>{listening ? '■ Stop listening' : '🎤 Listen'}</button>
+					</p>
+					{#if problemNote}<p class="warning">{problemNote}</p>{/if}
 				{/if}
 				<p class="buttons">
 					<button type="button" onclick={reset}>Reset</button>
@@ -1243,6 +1381,13 @@
 	}
 	.state {
 		cursor: grab;
+	}
+	.voice {
+		fill: none;
+		stroke: var(--ink);
+		stroke-width: 1.5;
+		stroke-dasharray: 3 2;
+		pointer-events: none;
 	}
 	.state.other {
 		fill: var(--paper);

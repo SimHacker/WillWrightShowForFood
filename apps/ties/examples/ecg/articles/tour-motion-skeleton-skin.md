@@ -7,6 +7,6 @@ definition: "A person and a cat drawn with the same four expressions. Drag eithe
 article: "Motion, Skeleton, Skin"
 ```
 
-Previous: ~Tour: Colour~ · ~Embedded Constraint Graphics~ · Next: ~Tour: Mouther~
+Previous: ~Tour: Colour~ · ~Embedded Constraint Graphics~
 
 All of it on one page: ~ECG: The Whole Story~

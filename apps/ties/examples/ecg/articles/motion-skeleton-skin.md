@@ -14,6 +14,10 @@ Tom splits an animation into three parts you can swap:
 
 A person and a cat, drawn separately, with the same four expressions under the same names. Their points have nothing in common: the cat has ears and no brows. But they share a state space, so one state drives both. Drag either one.
 
+Pull the cat's ears up and the person looks surprised, though the person has no ears. The cat's ears and the person's brows are different ways of saying the same thing, and the state is the thing they say.
+
+So one state can drive any number of characters, each with its own way of showing it. A dog drops its ears where a cat flattens them; a bird puffs its feathers. Add an expression called *lie*, and Pinocchio's nose grows while Nixon's jowls give the tell.
+
 Then press **Record**, perform something on the person, press **Stop** and **Play**. The motion is only weights over time, so it plays on the cat too.
 
 ```ecg
@@ -60,4 +64,4 @@ characters:
       - { line: [30, -6, 50, -2] }
 ```
 
-This is the piece that makes the next step possible: Mouther drives a face from a speech recognizer instead of a mouse, and the face is just a skin.
+This is how Mouther works: the voice drives the state, and the face is a skin.

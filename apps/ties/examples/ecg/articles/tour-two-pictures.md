@@ -7,6 +7,6 @@ definition: "Two examples of a mouth. Every in-between is a blend: so much frown
 article: "Two Pictures"
 ```
 
-~Embedded Constraint Graphics~ · Next: ~Tour: A Triangle of Pictures~
+Previous: ~Tour: Mouther~ · ~Embedded Constraint Graphics~ · Next: ~Tour: A Triangle of Pictures~
 
 All of it on one page: ~ECG: The Whole Story~

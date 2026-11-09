@@ -32,7 +32,7 @@ SHAPES = {
     "OO": dict(w=6, u=5, d=6, c=-1, r=1.0, t=0.0, g=0.0, b=5, k=-1),
     "R": dict(w=9, u=6, d=7, c=0, r=0.8, t=0.6, g=0.2, b=2, k=1),
 }
-RING = ["AY", "EE", "S", "F", "L", "UH", "OH", "OO", "R"]  # around the rest pose, M
+RING = ["OO", "R", "OH", "UH", "L", "AY", "EE", "F", "S"]  # around the rest pose M, dark sounds to bright
 
 LETTERS = {
     "a": "AY", "e": "EE", "i": "EE", "y": "EE", "o": "OH", "u": "UH", "w": "OO", "q": "OO",
@@ -103,14 +103,17 @@ def fence():
         '  - { circle: [-17, 11, 4.5], fill: "#000000" }',
         '  - { circle: [21, 11, 4.5], fill: "#000000" }',
         "view: [-60, -54, 120, 120]",
+        "map: { size: 230 }",
         "ghosts: none",
         "handles: dots",
         "say:",
         "  text: Hello! I am Mouther. Pleased to meet you.",
         "  rest: M",
         "  ms: 120",
+        "  aloud: true",
         "  letters: { " + ", ".join(f"{k}: {v}" for k, v in LETTERS.items()) + " }",
         "  pairs: { " + ", ".join(f"{k}: {v}" for k, v in PAIRS.items()) + " }",
+        "listen: { rest: M, ring: [" + ", ".join(RING) + "] }",
         "```",
     ]
     return "\n".join(lines)
@@ -121,18 +124,24 @@ title: Mouther
 synonyms:
   - mouther stand-in
   - talking face
-definition: "A talking cartoon face with ten mouth shapes, after Golan Levin's Mouther (1995). Type something and it says it; grab its lips and pull."
+definition: "A talking cartoon face with ten mouth shapes, after Golan Levin's Mouther (1995). It says what you type, listens to your voice, and you can grab its lips and pull."
 ---
 
-Golan Levin's **Mouther** (Interval Research, 1995, with Malcolm Slaney and Tom Ngo) listened to your voice, recognized the sounds you were making, and drove a cartoon face through them in real time. The face was built with ECG: ten drawings of a mouth, blended by the recognizer the way the demos before this one are blended by your mouse.
+Golan Levin's **Mouther** (Interval Research, 1995, with Malcolm Slaney and Tom Ngo) listened to your voice and drove a cartoon face through the sounds you made, in real time. The face was built with Tom Ngo's Embedded Constraint Graphics: ten drawings of a mouth, and an engine that blends between them.
 
-This face is a stand-in with its own cartoons, after Golan's: the same ten mouth shapes, AY, EE, UH, OH, R, OO, S, F, L and M, each a few numbers (how wide, how open, how round, how much teeth and tongue) turned into twenty points. M, lips pressed, is the rest pose in the middle; the other nine sit around it, each zone a triangle of M and two neighbours.
+This face is a stand-in with its own cartoons. Ten mouths, M, OO, R, OH, UH, L, AY, EE, F and S, each a few numbers (how wide, how open, how round, how much teeth and tongue) turned into twenty points.
 
-Type something and press **Say**. Letters stand in for the sounds a recognizer would hear, so English spelling makes it mumble in places. Then grab the lips, teeth or brows and pull: it's the same engine, tugged instead of driven.
+Three ways to move it, all moving the same weights:
+
+- **Say.** Type something and press Say. It speaks, and the mouth follows the letters, re-syncing on every word.
+- **Listen.** Press Listen and talk. Loudness opens the mouth; how bright the sound is picks the shape, dark OO and R to bright EE and S. Your voice drags the dot on the map.
+- **Pull.** Grab the lips, teeth or brows and drag. The engine finds the blend of mouths that puts the point under your finger, and switches between them as you go. Or drag the dot on the map, or one weight bar.
 
 {fence}
 
-Driving and tugging meet here. A speech recognizer, a timeline or a letter-by-letter script **drives** the state; your hand **tugs** it. Both move the same weights, so one face answers to both.
+The map is the face's state space. M, lips pressed, is in the middle; the other nine sit around it, dark to bright, and every triangle of M and two neighbours is a zone. A point in a triangle is a blend of three mouths. Driving (Say, Listen) and tugging (Pull) are two ways of moving that one point.
+
+How that works, one idea at a time, is the rest of this story, starting from ~Two Pictures~.
 
 The mouths come from `examples/ecg/tools/mouther.py`; change a number and run it to restyle the face.
 """
