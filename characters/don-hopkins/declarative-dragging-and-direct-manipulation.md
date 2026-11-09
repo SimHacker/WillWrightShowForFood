@@ -157,6 +157,20 @@ drawing examples. [View blending](../../packages/ecg/VIEW-BLENDING.md#finding-vi
 adds states to the complex where the user's manipulation goes. See
 [Allen Cypher](../allen-cypher/README.md) and [Henry Lieberman](../henry-lieberman/README.md).
 
+### Not listed: carrying without holding the button
+
+D2 assumes press, drag, release. In The Sims, moving an object is click to pick up, move freely,
+click to put down, which is easier and less stressful than holding a button through the whole move,
+especially for children and people with low dexterity.
+
+Rotation happens at either end. Press on the object, optionally move around to turn it, and release
+to pick it up; carry it with no button held; press to place it, optionally move around to turn it
+again, and release. The direction can be decided at pickup or changed at placement, which makes
+rearranging chairs around a table one gesture each. The placement grid is chunky: between valid
+positions the object slides, at a valid position it clicks in, and where it can't go it turns red.
+See the [2015 demo summary](../will-wright/sources/don-youtube-exdu4ETscs-edith-simantics-demo/article.md)
+and [video](https://www.youtube.com/watch?v=-exdu4ETscs).
+
 ### Not listed: discovery and cancelling
 
 The paper does not discuss how a user finds out what can be dragged and what dragging it will do

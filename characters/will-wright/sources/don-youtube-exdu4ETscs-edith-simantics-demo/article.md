@@ -35,6 +35,9 @@ easier for kids to use than a full freedom 3D graphics editor would be."
 - **Orienting while placing.** Press the button down while placing an object and drag in the
   direction it should face, "a pie menu like gesture." Chairs go around a table in one quick motion
   each, and the next object keeps the last orientation.
+- **Carrying without holding the button.** Click to pick up, move freely, click to put down. Don:
+  rotation can be set at either end: press, optionally move around to rotate, release to pick up;
+  carry with no button held; press, optionally rotate again, release to place.
 - **Sticky and slippery.** Between valid positions an object slides; at a valid position it clicks
   in; an invalid placement turns red. "You can kind of tell just by moving that you're not in a
   valid location," which helps people with low dexterity.
