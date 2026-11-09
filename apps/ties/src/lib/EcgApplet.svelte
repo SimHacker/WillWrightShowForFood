@@ -227,7 +227,10 @@
 		if (Number(feel.snap) > 0) next = { ...next, weights: snap(next.weights, Number(feel.snap), zones[next.zone]) };
 		ecg = next;
 		result = { ...r, crossings: r.crossings.length ? r.crossings : (result?.crossings ?? []) };
-		marks = wants.map((w) => ({ character: ci, at: w.at }));
+		const placed = configurationOf(c.model, next);
+		marks = wants
+			.map((w) => ({ character: ci, at: w.at, from: [placed[2 * w.point], placed[2 * w.point + 1]] }))
+			.filter((m) => Math.hypot(m.at[0] - m.from[0], m.at[1] - m.from[1]) > radii[ci] * 1.5);
 		if (recording) frames = [...frames, { time: performance.now(), state: next }];
 	}
 
@@ -782,6 +785,7 @@
 
 	/** Dragging the map: the pointer's place on a sheet is the weights, no solver. */
 	let mapSvg = $state();
+	let mapDragging = $state(false);
 	let mapGrab = null; // { pointerId, sheet } or { pointerId, view }
 
 	function toSvg(svg, event) {
@@ -816,6 +820,7 @@
 			// Synthetic pointers can't be captured.
 		}
 		mapGrab = { pointerId: event.pointerId, ...start };
+		mapDragging = true;
 	}
 
 	function onSheetDown(event, i) {
@@ -926,6 +931,7 @@
 		if (mapGrab?.pointerId !== event.pointerId) return;
 		const quiet = mapGrab.eyes || mapGrab.travelling;
 		mapGrab = null;
+		mapDragging = false;
 		if (!quiet) settle();
 	}
 
@@ -1175,7 +1181,7 @@
 					{@const config = configs[ci]}
 					<svg
 						bind:this={svgs[ci]}
-						class="drawing"
+						class={['drawing', { dragging: grabs.size > 0 }]}
 						viewBox="{b.x} {b.y} {b.w} {b.h}"
 						style:aspect-ratio="{b.w} / {b.h}"
 						onpointermove={(e) => onMove(e, ci)}
@@ -1234,10 +1240,7 @@
 							/>
 						{/each}
 						{#each marks.filter((m) => m.character === ci) as m, i (i)}
-							<g class="mark">
-								<line x1={m.at[0] - r} y1={sy(m.at[1])} x2={m.at[0] + r} y2={sy(m.at[1])} />
-								<line x1={m.at[0]} y1={sy(m.at[1]) - r} x2={m.at[0]} y2={sy(m.at[1]) + r} />
-							</g>
+							<line class="mark" x1={m.from[0]} y1={sy(m.from[1])} x2={m.at[0]} y2={sy(m.at[1])} />
 						{/each}
 						{#each c.pointNames as name, p (p)}
 							<circle
@@ -1303,7 +1306,7 @@
 				{:else}
 					<svg
 						bind:this={mapSvg}
-						class="simplex"
+						class={['simplex', { dragging: !!mapDragging }]}
 						viewBox="{mapBox.x} {mapBox.y} {mapBox.w} {mapBox.h}"
 						style:width="{mapBox.w}px"
 						style:aspect-ratio="{mapBox.w} / {mapBox.h}"
@@ -1604,10 +1607,16 @@
 		stroke-linejoin: round;
 		stroke-linecap: round;
 	}
-	.mark line {
-		stroke: var(--flash);
-		stroke-width: 2;
+	.mark {
+		stroke: var(--ink);
+		stroke-width: 1;
+		stroke-dasharray: 3 3;
 		vector-effect: non-scaling-stroke;
+		pointer-events: none;
+	}
+	.drawing.dragging,
+	.simplex.dragging {
+		cursor: crosshair;
 	}
 	.point {
 		fill: var(--paper);

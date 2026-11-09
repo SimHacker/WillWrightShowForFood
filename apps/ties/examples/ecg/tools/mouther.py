@@ -135,7 +135,7 @@ def pair(p):
 
 
 def fence():
-    lines = ["```ecg", "title: Mouther, a stand-in", "examples:"]
+    lines = ["```ecg", "title: Mouther, after Golan Levin (1995)", "examples:"]
     shapes = {**SHAPES, **EXPRESSIONS}
     for name in ["M"] + RING + FACES:
         pts = ", ".join(pair(p) for p in mouth(**shapes[name]))
@@ -189,14 +189,14 @@ def fence():
 ARTICLE = """---
 title: Mouther
 synonyms:
-  - mouther stand-in
+  - mouther face
   - talking face
 definition: "A talking cartoon face with ten mouth shapes and twelve expressions, after Golan Levin's Mouther (1995). It says what you type, listens to your voice, pulls faces, and you can grab its lips and pull."
 ---
 
 Golan Levin's **Mouther** (Interval Research, 1995, with Malcolm Slaney and Tom Ngo) listened to your voice and drove a cartoon face through the sounds you made, in real time. The face was built with Tom Ngo's Embedded Constraint Graphics: ten drawings of a mouth, and an engine that blends between them.
 
-This face is a stand-in with its own cartoons. Ten mouths, M, OO, R, OH, UH, L, AY, EE, F and S, each a few numbers (how wide, how open, how round, how much teeth and tongue) turned into twenty points.
+This face has ten mouths, M, OO, R, OH, UH, L, AY, EE, F and S, each a few numbers (how wide, how open, how round, how much teeth and tongue) turned into twenty points.
 
 Four ways to move it, all moving the same weights:
 

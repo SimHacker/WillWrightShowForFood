@@ -1,14 +1,14 @@
 ---
 title: Mouther
 synonyms:
-  - mouther stand-in
+  - mouther face
   - talking face
 definition: "A talking cartoon face with ten mouth shapes and twelve expressions, after Golan Levin's Mouther (1995). It says what you type, listens to your voice, pulls faces, and you can grab its lips and pull."
 ---
 
 Golan Levin's **Mouther** (Interval Research, 1995, with Malcolm Slaney and Tom Ngo) listened to your voice and drove a cartoon face through the sounds you made, in real time. The face was built with Tom Ngo's Embedded Constraint Graphics: ten drawings of a mouth, and an engine that blends between them.
 
-This face is a stand-in with its own cartoons. Ten mouths, M, OO, R, OH, UH, L, AY, EE, F and S, each a few numbers (how wide, how open, how round, how much teeth and tongue) turned into twenty points.
+This face has ten mouths, M, OO, R, OH, UH, L, AY, EE, F and S, each a few numbers (how wide, how open, how round, how much teeth and tongue) turned into twenty points.
 
 Four ways to move it, all moving the same weights:
 
@@ -18,7 +18,7 @@ Four ways to move it, all moving the same weights:
 - **Pull.** Grab the lips, teeth or brows and drag. The engine finds the blend of mouths that puts the point under your finger, and switches between them as you go. Or drag the dot on the map, or one weight bar.
 
 ```ecg
-title: Mouther, a stand-in
+title: Mouther, after Golan Levin (1995)
 examples:
   - id: M
     points: [[-14, -17], [-6.3, -17.12], [0, -17.58], [6.3, -17.12], [14, -17], [7, -18.21], [0, -18.6], [-7, -18.21], [-5.88, -18.51], [5.88, -18.51], [4.12, -18.51], [-4.12, -18.51], [-7.7, -17.59], [7.7, -17.59], [7.7, -17.59], [-7.7, -17.59], [-30, 26], [-12, 28], [12, 28], [30, 26]]
