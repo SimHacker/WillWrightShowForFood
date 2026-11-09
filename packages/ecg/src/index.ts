@@ -1,8 +1,15 @@
 /**
  * @wwsff/ecg — Embedded Constraint Graphics, as courseware.
  *
- * Design stage: nothing is implemented yet. Read ../COURSE.md for the lesson
- * ladder and ../DESIGN.md for the planned source layout, one file per lesson.
+ * One file per lesson; read them in order. ../COURSE.md is the lesson ladder and ../DESIGN.md
+ * the plan. Implemented so far: lessons 0–5, one zone (no gluing yet).
  */
 
-export const status = "design" as const;
+export * from "./lerp.js";
+export * from "./barycentric.js";
+export * from "./drive.js";
+export * from "./linear-algebra.js";
+export * from "./tug.js";
+export * from "./walls.js";
+
+export const status = "lessons 0-5" as const;

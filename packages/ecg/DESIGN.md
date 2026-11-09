@@ -192,25 +192,27 @@ The schema is an open question until the first two applications exist.
 
 ## Source layout
 
-Planned. One file per lesson, so the code and the course line up.
+One file per lesson, so the code and the course line up. File names say what the file does;
+the lesson number lives in each file's header comment, so lessons can be renumbered without
+renaming files. Lessons 0–5 are implemented; the rest are planned.
 
 ```
 packages/ecg/
   src/
-    00-lerp.ts               mix two configurations
-    01-barycentric.ts        point in simplex ↔ weights
-    02-drive.ts              state → configuration
-    03-tiny-linear-algebra.ts   multiply, transpose, solve, pseudo-inverse, damped
-    04-tug-one-zone.ts       drag → weights inside one zone
-    05-walls.ts              active set: slide along faces, stop at corners
-    06-complex.ts            zones, faces, adjacency, via points, zone chooser
-    07-many-handles.ts       stacking, pins, importance
-    08-transforms.ts         automatic transformations, linearized map
-    09-feel.ts               damping, snap, springs, inertia, overshoot
-    10-paste.ts              motion / skeleton / skin
-    model.ts                 YAML model loading and validation
+    lerp.ts                  L0  mix two configurations
+    barycentric.ts           L1  point in simplex ↔ weights
+    drive.ts                 L2  state → configuration
+    linear-algebra.ts        L4  multiply, transpose, solve, damped least squares
+    tug.ts                   L3  drag → weights inside one zone
+    walls.ts                 L5  active set: slide along faces, stop at corners
+    complex.ts               L6  zones, faces, adjacency, via points, zone chooser (planned)
+    handles.ts               L7  stacking, pins, importance (planned; tug.ts already stacks)
+    transforms.ts            L8  automatic transformations, linearized map (planned)
+    feel.ts                  L9  damping, snap, springs, inertia, overshoot (planned)
+    paste.ts                 L10 motion / skeleton / skin (planned)
+    model.ts                 YAML model loading and validation (planned)
     index.ts                 public API
-    *.test.ts                worked examples, checkable by hand
+    lessons.test.ts          worked examples, checkable by hand
   playground/                live lessons (SVG first)
   models/                    example models: smiley, breakfast, walk cycle
 ```

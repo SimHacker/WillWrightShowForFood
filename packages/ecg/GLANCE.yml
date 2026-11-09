@@ -5,7 +5,7 @@ what: |
   the barycentric weights. Built to be learned from: lessons, readable source,
   live playground, worked-example tests.
 package: "@wwsff/ecg"
-status: design only — src/index.ts is a stub
+status: lessons 0–5 in src/ (one zone, multi-handle tug, walls); gluing and playground next
 not: a black-box library; a linear algebra dependency; tied to one renderer
 docs:
   readme: README.md
