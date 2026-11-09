@@ -45,8 +45,9 @@ export function pointTargets(point: number, x: number, y: number, importance = 1
 }
 
 /**
- * One unconstrained solve. Only examples marked active may carry weight; the result can have
- * negative weights, which *Hitting walls* deals with.
+ * One unconstrained solve. Only examples marked active may change weight; the result can have
+ * negative weights, which *Hitting walls* deals with. Inactive examples drop to zero, unless
+ * `keep` holds them at their start weight (the walker parks a vertex just past a wall that way).
  */
 export function tugOnce(
 	examples: Configuration[],
@@ -54,27 +55,34 @@ export function tugOnce(
 	targets: Target[],
 	damping: number,
 	active: boolean[] = examples.map(() => true),
+	keep = false,
 ): Weights {
 	const ids = examples.map((_, i) => i).filter((i) => active[i]);
 	if (ids.length === 0) throw new Error("no active examples");
 	const base = ids.reduce((best, i) => (start[i] > start[best] ? i : best), ids[0]);
 	const others = ids.filter((i) => i !== base);
+	const fixed = keep ? examples.map((_, i) => i).filter((i) => !active[i] && start[i] !== 0) : [];
 	const xb = examples[base];
 	const mu0 = others.map((i) => start[i]);
+	const fixedSum = fixed.reduce((s, i) => s + start[i], 0);
 
 	const j: Matrix = [];
 	const r: number[] = [];
 	for (const t of targets) {
 		const w = t.importance ?? 1;
 		const rowJ = others.map((i) => w * (examples[i][t.row] - xb[t.row]));
-		const current = xb[t.row] + others.reduce((s, i, c) => s + mu0[c] * (examples[i][t.row] - xb[t.row]), 0);
+		const current =
+			(1 - fixedSum) * xb[t.row] +
+			others.reduce((s, i, c) => s + mu0[c] * (examples[i][t.row] - xb[t.row]), 0) +
+			fixed.reduce((s, i) => s + start[i] * examples[i][t.row], 0);
 		j.push(rowJ);
 		r.push(w * (t.value - current));
 	}
 	const dmu = dampedLeastSquares(j, r, damping);
 
 	const weights = examples.map(() => 0);
-	let sum = 0;
+	let sum = fixedSum;
+	for (const i of fixed) weights[i] = start[i];
 	others.forEach((i, c) => {
 		weights[i] = mu0[c] + dmu[c];
 		sum += weights[i];

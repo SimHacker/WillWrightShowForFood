@@ -16,10 +16,14 @@ technique is free.
 > represent blending manifolds — in the same way that gluing polygons together has done us so
 > much good in 3D modeling.* — Tom Ngo, to Don, after the patent expired
 
-**Status: the first six lessons are implemented, for a single zone.** Blending, barycentric weights,
-driving, damped least squares, tugging with several handles, and walls that keep the weights
-inside the simplex. *Gluing triangles together* and the playground are next. `pnpm test` runs the
-worked examples.
+**Status: every lesson through *Motion, skeleton, skin* is implemented.** Blending, barycentric
+weights, driving, damped least squares, tugging with several handles, walls, zones glued into a
+complex with via points and a zone chooser, edge transforms (shifts, turns, point renaming),
+feel knobs, OKLab colour, clip motions pasted between characters, and a model loader. `pnpm test`
+runs a worked example for each. The playground is the
+[ECG database](https://github.com/SimHacker/WillWrightShowForFood/tree/main/apps/ties/examples/ecg)
+in the HyperTIES app, eleven steps from two pictures to paste. *Same engine, other worlds* is
+next.
 
 ---
 
@@ -32,8 +36,8 @@ something else**. Every piece is built for that:
 | Piece | What it teaches |
 |-------|-----------------|
 | **Lessons** ([COURSE.md](COURSE.md)) | A ladder from "blend two pictures with a slider" to "drag a face through a complex of glued simplices." Each rung has a live demo, a source file, and exercises. |
-| **Source** (`src/`, planned in [DESIGN.md](DESIGN.md#source-layout)) | One file per idea, read top to bottom. Every file opens with the lesson it implements: the picture, the idea in words, then in symbols, then the code. No hidden linear algebra library. |
-| **Playground** (planned) | Every internal on screen: the simplex with the current state as a dot, the weights as bars, the Jacobian and its pseudo-inverse as live numbers, the drawing with its handles. Turn any knob and watch everything else move. |
+| **Source** (`src/`, laid out in [DESIGN.md](DESIGN.md#source-layout)) | One file per idea, read top to bottom. Every file opens with the lesson it implements: the picture, the idea in words, then in symbols, then the code. No hidden linear algebra library. |
+| **Playground** ([HyperTIES ECG database](https://github.com/SimHacker/WillWrightShowForFood/tree/main/apps/ties/examples/ecg)) | Every internal on screen: the simplex with the current state as a dot, the weights as bars, the Jacobian and its pseudo-inverse as live numbers, the drawing with its handles. Turn any knob and watch everything else move. |
 | **Tests** | Worked examples with numbers small enough to check by hand. |
 | **Applications** | The same engine driving breakfasts, glyphs, wigs, faces, pie menus — so you see what's general and what's specific. |
 

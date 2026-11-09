@@ -12,9 +12,10 @@ idea gets four things:
 The rule for the whole course: **every number the solver uses is on screen.** If the code
 computes it, the playground shows it, and you can poke it.
 
-Status: the lessons from *Blend two pictures* through *Hitting walls* are coded, for a single
-zone, in the [source layout](DESIGN.md#source-layout). The playground and the later lessons
-are next.
+Status: every lesson through *Motion, skeleton, skin* is coded in the
+[source layout](DESIGN.md#source-layout), with a worked test each in `src/lessons.test.ts`. The
+playground is the [ECG database](https://github.com/SimHacker/WillWrightShowForFood/tree/main/apps/ties/examples/ecg) in the HyperTIES app (`apps/ties`): one article per
+step, each with a live demo. *Same engine, other worlds* is next.
 
 ---
 
@@ -24,7 +25,7 @@ are next.
 face morphs. Every point on the drawing moves in a straight line from where it is in one
 picture to where it is in the other.
 
-**Read.** `src/00-lerp.ts`. One function: `mix(a, b, t) = a + t·(b − a)`, applied to every
+**Read.** `src/lerp.ts`. One function: `mix(a, b, t) = a + t·(b − a)`, applied to every
 number in the drawing.
 
 **Try.**
@@ -41,7 +42,7 @@ A line segment between two examples is a **1-simplex**.
 inside the triangle. The face is a mix of all three, with more of whichever corner you're
 nearest. Bars show the three weights.
 
-**Read.** `src/01-barycentric.ts`. Given a dot inside a triangle, find the three weights.
+**Read.** `src/barycentric.ts`. Given a dot inside a triangle, find the three weights.
 It's a 2×2 equation solve, written out longhand.
 
 **Try.**
@@ -60,7 +61,7 @@ blends is the **state space**; a single blend is a **state**.
 of numbers, and the examples as a table of columns. Move the state dot and watch the numbers
 change.
 
-**Read.** `src/02-drive.ts`. The drawing is the examples' numbers multiplied by the weights and
+**Read.** `src/drive.ts`. The drawing is the examples' numbers multiplied by the weights and
 added up. That's one matrix times one vector.
 
 **Try.**
@@ -80,7 +81,7 @@ This is the heart of ECG.
 **Play.** Grab the corner of the mouth and drag it. The face follows: the weights change by
 themselves so the mouth corner stays under your cursor.
 
-**Read.** `src/04-tug-one-zone.ts`.
+**Read.** `src/tug.ts`.
 
 Here's the key insight, and it's worth stopping on. For **one handle in one triangle**, the
 handle has a position in each of the three examples. Those three positions form *another*
@@ -107,7 +108,7 @@ can). One tool handles all three: the **pseudo-inverse** (J⁺).
 
 **Play.** A panel showing J, J⁺, and their product live as you drag. A "damping" slider.
 
-**Read.** `src/03-tiny-linear-algebra.ts`. Matrix multiply, transpose, a small linear solve,
+**Read.** `src/linear-algebra.ts`. Matrix multiply, transpose, a small linear solve,
 pseudo-inverse, damped pseudo-inverse. No library; about the size of this page. Every
 function says what it's for in plain words before the code.
 
@@ -128,7 +129,7 @@ spend on other goals. **Singular** and **near-singular** Jacobians. **Damped lea
 **Play.** Drag the mouth until one weight hits zero. Instead of the face breaking, the state
 slides along the edge of the triangle. Keep going and it stops at a corner.
 
-**Read.** `src/05-walls.ts`. Walk from the current state toward the solution. If a weight would
+**Read.** `src/walls.ts`. Walk from the current state toward the solution. If a weight would
 go negative, stop where it hits zero, drop that example, and solve again in the smaller
 simplex with what's left of the drag.
 
@@ -146,7 +147,7 @@ the other side means "continue with one vertex removed"; down to one vertex mean
 **Play.** Two triangles sharing an edge: ABC and ABD. Drag the face toward D's expression. The
 state crosses from one triangle into the other without a bump.
 
-**Read.** `src/06-complex.ts`. Which zones share which faces, and how to hand the state from
+**Read.** `src/complex.ts`, then `src/walk.ts`. Which zones share which faces, and how to hand the state from
 one zone to its neighbour.
 
 **Try.**
@@ -164,7 +165,7 @@ and zero for the rest.
 
 **Play.** Pin the eyes and drag the mouth. Then grab two handles with two fingers.
 
-**Read.** `src/07-many-handles.ts`. Stack each handle's rows into one bigger Jacobian. Pinned
+**Read.** `src/tug.ts` again. Stack each handle's rows into one bigger Jacobian. Pinned
 handles get a target of "don't move." Weights say which handles matter more.
 
 **Try.**
@@ -178,7 +179,7 @@ handles get a target of "don't move." Weights say which handles matter more.
 **Play.** A figure walks across the screen. Each step reuses the same four poses, but the
 figure keeps moving forward instead of snapping back.
 
-**Read.** `src/08-transforms.ts`. Each edge carries an **automatic transformation** (e.g.
+**Read.** `src/transforms.ts`. Each edge carries an **automatic transformation** (e.g.
 "shift one pace right"). Going along an edge one way applies it; going back undoes it. Then
 Tom's trick for making rotations and other non-linear transforms draggable: the
 **linearized configuration map**.
@@ -199,7 +200,7 @@ This is the craft lesson, and the one the patent doesn't write down.
 **Play.** A panel of feel knobs, live: damping, snap-to-example radius, springiness on
 release, inertia, how far weights may overshoot, sticky boundaries.
 
-**Read.** `src/09-feel.ts`. Each knob is a few lines, and each one says what it costs.
+**Read.** `src/feel.ts`. Each knob is a few lines, and each one says what it costs.
 
 **Try.**
 - Tune it until the face feels like rubber. Then like clay. Then like a marionette. Save your
@@ -213,7 +214,7 @@ release, inertia, how far weights may overshoot, sticky boundaries.
 **Play.** Record a dance on one character. Paste it onto a different character drawn by someone
 else.
 
-**Read.** `src/10-paste.ts`. Tom splits an animation into three swappable parts: the **clip
+**Read.** `src/paste.ts`. Tom splits an animation into three swappable parts: the **clip
 motion** (a path through state space), the **graphic skeleton** (state → configuration), and
 the **graphic skin** (configuration → pixels).
 

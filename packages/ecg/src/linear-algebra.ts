@@ -83,7 +83,8 @@ export function dampedLeastSquares(j: Matrix, r: Vector, damping: number): Vecto
 	if (cols === 0) return [];
 	if (rows === 0) return new Array<number>(cols).fill(0);
 	const jt = transpose(j);
-	const d2 = Math.max(damping * damping, 1e-12);
+	// The floor keeps a zero Jacobian (a handle that doesn't move in this zone) solvable: no change.
+	const d2 = Math.max(damping * damping, 1e-10);
 	if (rows <= cols) {
 		const y = solve(addDiagonal(multiply(j, jt), d2), r);
 		return multiplyVector(jt, y);

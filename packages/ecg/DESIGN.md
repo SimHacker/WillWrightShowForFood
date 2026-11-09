@@ -134,13 +134,18 @@ corner without overshoot. The simplices are tiny, so this is cheap.
 ## Automatic transformations
 
 Tom's patent lets each edge carry a transformation, so reused poses register correctly (a
-walk cycle that actually travels). We'll implement it in two steps:
+walk cycle that actually travels). Implemented with Tom's **linearized configuration map**:
+when the state enters a zone, each new example is placed once (its neighbour's placement
+composed with the edge's transform), then the placed examples are blended. The map is flat, so
+tugging stays a linear solve, computed once per zone entry rather than every frame.
 
-1. **Translations only.** They add a constant per edge, so everything stays linear.
-2. **General transforms** using Tom's **linearized configuration map**: when the state enters
-   a zone, transform each example once, then blend those. The map is flat, so tugging stays a
-   linear solve, and it's computed once per zone entry rather than every frame. The exact
-   path-integral version is kept as a reference implementation to compare against.
+- A transform is a 2D affine map (shift, turn, scale) applied to every point, after an optional
+  **renaming** of the points. A rolling box needs the renaming: composing "turn 90° about the
+  pivot" keeps the old pivot, while "shift one box-width and rename the corners" makes the next
+  roll pivot on the right corner.
+- Transforms are anti-symmetric: walking an edge backwards applies the inverse.
+- The exact path-integral version, which follows arcs instead of chords, is not built; it would
+  be the reference to compare the linearized map against.
 
 ## Feel
 
@@ -193,7 +198,7 @@ The schema is an open question until the first two applications exist.
 ## Source layout
 
 One file per lesson, so the code and the course line up. Each file's header comment names its
-lesson. *Blend two pictures* through *Hitting walls* are implemented; the rest are planned.
+lesson. Everything through *Motion, skeleton, skin* is implemented.
 
 ```
 packages/ecg/
@@ -204,16 +209,18 @@ packages/ecg/
     linear-algebra.ts        multiply, transpose, solve, damped least squares
     tug.ts                   drag → weights inside one zone
     walls.ts                 active set: slide along faces, stop at corners
-    complex.ts               zones, faces, adjacency, via points, zone chooser (planned)
-    handles.ts               stacking, pins, importance (planned; tug.ts already stacks)
-    transforms.ts            automatic transformations, linearized map (planned)
-    feel.ts                  damping, snap, springs, inertia, overshoot (planned)
-    paste.ts                 motion / skeleton / skin (planned)
-    model.ts                 YAML model loading and validation (planned)
+    complex.ts               zones, faces, via points, authoring warnings
+    transforms.ts            automatic transformations, renaming, linearized map
+    walk.ts                  the drag across the complex: walls, crossings, chooser, overshoot, sticky
+    feel.ts                  snap, release spring, inertia
+    color.ts                 blending colours in OKLab
+    paste.ts                 motion / skeleton / skin
+    model.ts                 model loading and validation (takes parsed YAML)
     index.ts                 public API
     lessons.test.ts          worked examples, checkable by hand
-  playground/                live lessons (SVG first)
-  models/                    example models: smiley, breakfast, walk cycle
+
+apps/ties/examples/ecg/      the playground: one HyperTIES article per lesson, each with a live
+                             ```ecg fence rendered by apps/ties/src/lib/EcgApplet.svelte
 ```
 
 ### Code style for courseware
@@ -246,6 +253,5 @@ The solver never imports a renderer.
   the sum constraint as an extra row is the alternative; try both.
 - Zone chooser default: least state movement, or least movement of unheld handles?
 - Strict priority for pins, or weighted only?
-- Should the playground live in this package or in an app under `apps/`?
 - How close can we get to the feel of Tom's editor without seeing it? (Ask Tom and Golan.)
 - Can the Mouther cartoons be recovered as test models? (Ask Golan.)

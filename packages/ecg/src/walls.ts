@@ -13,9 +13,8 @@
  * example at zero and solve again with the rest. The state slides along the face, then into a
  * corner, and stops there. With one example left, there is nothing to solve.
  *
- * (The patent walks across a face into a neighbouring zone when there is one. That is *Gluing triangles
- * together*;
- * a single zone has no neighbours, so every face is a wall.)
+ * (The patent walks across a face into a neighbouring zone when there is one. That is *Gluing
+ * triangles together*, in walk.ts; a single zone has no neighbours, so every face is a wall.)
  */
 
 import type { Configuration } from "./lerp.js";
@@ -28,8 +27,14 @@ export interface TugResult {
 	walls: number[];
 }
 
-export function tug(examples: Configuration[], start: Weights, targets: Target[], damping: number): TugResult {
-	const active = examples.map(() => true);
+export function tug(
+	examples: Configuration[],
+	start: Weights,
+	targets: Target[],
+	damping: number,
+	zone: boolean[] = examples.map(() => true),
+): TugResult {
+	const active = [...zone];
 	const walls: number[] = [];
 	for (;;) {
 		const remaining = active.filter(Boolean).length;
