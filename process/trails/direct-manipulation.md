@@ -22,6 +22,7 @@ Direct manipulation, programming by demonstration, media for thought — the lin
 | [**Don CARD.yml**](../../characters/don-hopkins/CARD.yml) | Pie menus + PostScript UI — direct manipulation in practice |
 | [**ECG at Interval**](../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md) | Tom Ngo simplicial complexes — Mouther; drag features, solve blend weights |
 | [**`@wwsff/ecg`**](../../packages/ecg/README.md) | ECG reimplemented as courseware — learn the math by dragging |
+| [**Declarative Dragging**](../../characters/don-hopkins/declarative-dragging-and-direct-manipulation.md) | D2 (2026) against Shneiderman's definition; its limitations against ARK, ECG, pie menus, programming by demonstration |
 | [**Breakfast simplex**](../../characters/don-hopkins/breakfast-simplex-barycentric-direct-manipulation.md) | Barycentric breakfast space × pie menus — HN essay |
 | [**Visual programming (patch-cord)**](visual-programming-patch-cord.md) | Hookup → Bounce → live performance UIs — sibling trail |
 

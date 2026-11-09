@@ -163,6 +163,7 @@ Full thread receipts: Don's private correspondence archive.
 |------|-----|
 | [`@wwsff/ecg`](../../packages/ecg/README.md) | The reimplementation: [course](../../packages/ecg/COURSE.md), [design](../../packages/ecg/DESIGN.md), [patent notes](../../packages/ecg/PATENT-NOTES.md), [references](../../packages/ecg/REFERENCES.md) |
 | [Interval Research — Camelot](interval-research-pluggers-and-mediaflow.md) | Era context — Director plugins, Bounce, MediaFlow, visiting speakers |
+| [Declarative Dragging and direct manipulation](declarative-dragging-and-direct-manipulation.md) | D2 (2026) compared with ECG: speculative views vs drawn examples, `vary` vs Jacobian pseudoinverse, single touch vs multi-handle |
 | [Breakfast simplex & barycentric UI](breakfast-simplex-barycentric-direct-manipulation.md) | Don's 2025 HN essay — ECG applied to egg/milk/flour space |
 | [Pie menus CHI'88](pie-menus-chi-88-and-beyond.md) | Direct manipulation in practice — radial menus as simplex UI |
 | [Golan Levin](../golan-levin/README.md) | Mouther, computational media at Interval and CMU |
