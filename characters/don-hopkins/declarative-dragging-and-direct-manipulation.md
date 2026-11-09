@@ -55,9 +55,10 @@ Checked against the three parts:
 | Rapid, incremental, immediately visible | Yes. Speculative rendering shows the result before release. |
 | Reversible | During a drag, yes, without being claimed: the library is history-independent, so dragging back returns to the earlier state. After release, cancel and undo are not discussed. |
 
-## The paper's limitations, and earlier work on each
+## Ideas D2 could incorporate
 
-Section 9 of the paper lists its limitations. Each has prior work.
+Section 9 of the paper lists its limitations. Each one has earlier work that D2 could build in,
+keeping its declarative, model-driven core and becoming more general.
 
 ### Velocity and path
 
@@ -121,6 +122,15 @@ interpolates between drawn examples. D2's `vary` finds parameters by optimizatio
 weights by the Jacobian pseudoinverse. The [`@wwsff/ecg`](../../packages/ecg/README.md) package
 reimplements ECG as courseware, and [view blending](../../packages/ecg/VIEW-BLENDING.md) applies it
 to window layouts, which is the D2 problem with saved views as the states.
+
+Incorporated into D2, ECG would add:
+
+- continuous blends inside a simplex of states, not only discrete states plus `vary`;
+- a simplicial complex that declares which states may blend, so the author draws a few examples
+  instead of enumerating every reachable state;
+- several handles solved at once, which is the multitouch case;
+- crossing between simplices at shared faces, which gives drags a structured path through a large
+  state space.
 
 ### Coinciding drop targets
 
