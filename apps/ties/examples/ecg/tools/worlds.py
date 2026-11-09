@@ -78,10 +78,10 @@ HEAD_STROKES = [
 
 TURNS = [  # id, label, yaw (to the viewer's right), pitch (up)
     ("ahead", None, 0, 0),
-    ("left", "turn left", -50, 0),
-    ("up", "look up", 0, 38),
-    ("right", "turn right", 50, 0),
-    ("down", "look down", 0, -38),
+    ("left", None, -50, 0),
+    ("up", None, 0, 38),
+    ("right", None, 50, 0),
+    ("down", None, 0, -38),
 ]
 
 
