@@ -215,6 +215,7 @@ packages/ecg/
     feel.ts                  snap, release spring, inertia
     color.ts                 blending colours in OKLab
     paste.ts                 motion / skeleton / skin
+    map.ts                   draggable complex: sheets, pages, three views, weight bars
     model.ts                 model loading and validation (takes parsed YAML)
     index.ts                 public API
     lessons.test.ts          worked examples, checkable by hand

@@ -225,6 +225,25 @@ the **graphic skin** (configuration → pixels).
 **Words.** Tom's terms: clip motion, clip character, clip art. **Isomorphic** configuration
 spaces.
 
+## A map you can drag
+
+**Play.** Skip the drawing and drag the state itself: the dot on the complex map, or one weight
+bar at a time.
+
+**Read.** `src/map.ts`. Inside a triangle, the pointer's barycentric coordinates are the
+weights, exactly. Glued triangles lie flat, so dragging across a shared face crosses zones. A
+fork can't lie flat, so each overlapping triangle becomes its own page with its own copy of the
+shared edge, and the state shows on every page that holds it. A tetrahedron is drawn as three
+views down the axes of a cube. A weight bar slides the state along the line from its example,
+so the other weights keep their ratios, and the bar remembers them through zero.
+
+**Try.**
+- Park the kite on the fork's spine and pick a page.
+- Drag the walking map round its loop twice. Count the strides.
+- Drag Mouther's M bar to 1 and back. The mouth you had comes back.
+
+**Words.** **Unfolding** (the net of a complex). **Radial** renormalization.
+
 ## Same engine, other worlds
 
 The point of a general engine is that it isn't about faces. Each of these is a small example

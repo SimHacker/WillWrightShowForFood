@@ -18,5 +18,6 @@ export * from "./feel.js";
 export * from "./color.js";
 export * from "./paste.js";
 export * from "./model.js";
+export * from "./map.js";
 
-export const status = "complex, transforms, feel, paste" as const;
+export const status = "complex, transforms, feel, paste, map" as const;

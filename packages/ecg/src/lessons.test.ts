@@ -11,6 +11,7 @@
  */
 
 import assert from "node:assert/strict";
+import { gluedFace, nearestOnSheet, oppositeFace, pullWeight, sheetsOf, stateOnSheet, tetraPoint, tetraWeights } from "./map.js";
 import { test } from "node:test";
 import {
 	barycentric2D,
@@ -264,4 +265,37 @@ test("model files: named points, zones by name, Tom's authoring warnings", () =>
 	close(loaded.model.examples[1], [-24, 4, 24, 4]);
 	assert.ok(loaded.warnings.some((w) => w.includes("example 3")));
 	assert.ok(loadModel({ examples: [{ id: "x", points: [[0, 0]] }] }).errors.length > 0);
+});
+
+test("maps: glued sheets lie flat, a fork's third page moves over, a tetrahedron reads back", () => {
+	const corners: [number, number][] = [[0, 0], [10, 0], [5, 10], [5, -10], [5, -20]];
+	const sheets = sheetsOf([[0, 1, 2], [0, 1, 3], [0, 1, 4]], corners, 2);
+	close(sheets[1].at.flat(), [0, 0, 10, 0, 5, -10]);
+	close(sheets[2].at.flat(), [12, 0, 22, 0, 17, -20]);
+	assert.ok(gluedFace(sheets[0], sheets[1], [0, 1]));
+	assert.ok(!gluedFace(sheets[0], sheets[2], [0, 1]));
+	const inside = nearestOnSheet(sheets[0], [5, 5]);
+	assert.equal(inside.distance, 0);
+	close(inside.local, [0.25, 0.25, 0.5]);
+	const below = nearestOnSheet(sheets[0], [5, -3]);
+	close(below.local, [0.5, 0.5, 0]);
+	assert.equal(below.distance, 3);
+	close(stateOnSheet(sheets[2], [0.5, 0.5, 0, 0, 0]) ?? [], [17, 0]);
+	assert.equal(stateOnSheet(sheets[2], [0.5, 0, 0.5, 0, 0]), null);
+	const w = [0.1, 0.2, 0.3, 0.4];
+	close(tetraWeights(tetraPoint(w)), w);
+	close(tetraWeights([1, 1, 1]), [1, 0, 0, 0]);
+	assert.ok(tetraWeights([1, -1, 1]).every((x) => x >= 0));
+});
+
+test("weight sliders: the others keep their ratios, and remember them through zero", () => {
+	const zone = [0, 1, 2];
+	const face = oppositeFace([0.2, 0.2, 0.6], 0, zone);
+	close(face, [0, 0.25, 0.75]);
+	close(pullWeight(face, 0, 0.6), [0.6, 0.1, 0.3]);
+	const top = pullWeight(face, 0, 1);
+	close(top, [1, 0, 0]);
+	const back = oppositeFace(top, 0, zone, face);
+	close(pullWeight(back, 0, 0.2), [0.2, 0.2, 0.6]);
+	close(oppositeFace([1, 0, 0], 0, zone), [0, 0.5, 0.5]);
 });

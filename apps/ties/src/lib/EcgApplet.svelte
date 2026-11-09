@@ -38,6 +38,17 @@
 		loadModel,
 		mix,
 		mixColors,
+		AXIS_VIEWS,
+		gluedFace,
+		nearestOnSheet,
+		oppositeFace,
+		pullWeight,
+		register,
+		sheetsOf,
+		stateOnSheet,
+		TETRAHEDRON,
+		tetraPoint,
+		tetraWeights,
 		nearestExample,
 		normalizeWeights,
 		placedExamples,
@@ -456,6 +467,209 @@
 		ecg = { ...ecg, zone: Math.max(0, zones.findIndex((zone) => zone.includes(k))), weights: vertexWeights(n, k) };
 	}
 
+	/** Dragging the map: the pointer's place on a sheet is the weights, no solver. */
+	let mapSvg = $state();
+	const viewSvgs = $state([]);
+	let mapGrab = null; // { pointerId, sheet } or { pointerId, view }
+
+	function toSvg(svg, event) {
+		const m = svg?.getScreenCTM();
+		if (!m) return [0, 0];
+		const p = new DOMPoint(event.clientX, event.clientY).matrixTransform(m.inverse());
+		return [p.x, p.y];
+	}
+
+	function setWeights(verts, local) {
+		const w = ecg.weights.map(() => 0);
+		verts.forEach((v, j) => (w[v] = local[j]));
+		ecg = { ...ecg, weights: w };
+		if (recording) frames = [...frames, { time: performance.now(), state: ecg }];
+	}
+
+	function enterZone(z, face) {
+		if (z === ecg.zone) return;
+		ecg = { ...ecg, zone: z, placements: register(ecg.placements, zones[z], face, lead.model.edges) };
+	}
+
+	function grabMap(event, start) {
+		if (event.button !== 0) return;
+		event.preventDefault();
+		stop();
+		speaking = -1;
+		result = null;
+		marks = [];
+		try {
+			event.currentTarget.setPointerCapture(event.pointerId);
+		} catch {
+			// Synthetic pointers can't be captured.
+		}
+		mapGrab = { pointerId: event.pointerId, ...start };
+	}
+
+	function onSheetDown(event, i) {
+		const s = sheets[i];
+		settleIntoZone();
+		enterZone(
+			s.zone,
+			s.verts.filter((v) => Math.abs(ecg.weights[v]) > 1e-9)
+		);
+		grabMap(event, { sheet: i });
+		dragSheet(event);
+	}
+
+	/** A pointer never lands exactly on an edge: within a few pixels of a face, put it on the face. */
+	function snapToFaces(s, local) {
+		const [a, b, c] = s.at;
+		const heights =
+			s.at.length === 2
+				? [Math.hypot(b[0] - a[0], b[1] - a[1]), Math.hypot(b[0] - a[0], b[1] - a[1])]
+				: s.at.map((_, j) => {
+						const [p, q] = [s.at[(j + 1) % 3], s.at[(j + 2) % 3]];
+						const area = Math.abs((b[0] - a[0]) * (c[1] - a[1]) - (c[0] - a[0]) * (b[1] - a[1]));
+						return area / (Math.hypot(q[0] - p[0], q[1] - p[1]) || 1);
+					});
+		const out = local.map((w, j) => (w * heights[j] < 3 ? 0 : w));
+		const sum = out.reduce((t, w) => t + w, 0);
+		return sum > 1e-9 ? out.map((w) => w / sum) : local;
+	}
+
+	/** Clamp to the sheet; if the pointer is past a glued face, cross onto the sheet across it. */
+	function dragSheet(event) {
+		const p = toSvg(mapSvg, event);
+		let i = mapGrab.sheet;
+		for (let hop = 0; hop < 16; hop++) {
+			const s = sheets[i];
+			const near = nearestOnSheet(s, p);
+			setWeights(s.verts, snapToFaces(s, near.local));
+			if (near.distance < 1e-6) break;
+			let best = -1;
+			let bestFace = [];
+			let bestDistance = near.distance - 1e-6;
+			sheets.forEach((t, j) => {
+				const face = s.verts.filter((v) => t.verts.includes(v));
+				if (j === i || !face.length || !gluedFace(s, t, face)) return;
+				const d = nearestOnSheet(t, p).distance;
+				if (d < bestDistance) [best, bestFace, bestDistance] = [j, face, d];
+			});
+			if (best < 0) break;
+			const onFace =
+				bestFace.length === 1
+					? [1]
+					: nearestOnSheet({ zone: s.zone, verts: bestFace, at: bestFace.map((v) => s.at[s.verts.indexOf(v)]) }, p)
+							.local;
+			setWeights(bestFace, onFace);
+			enterZone(sheets[best].zone, bestFace);
+			i = best;
+		}
+		mapGrab.sheet = i;
+	}
+
+	function onViewDown(event, view) {
+		settleIntoZone();
+		grabMap(event, { view });
+		dragView(event);
+	}
+
+	/** Move in the view's plane, keep the coordinate it looks along. */
+	function dragView(event) {
+		if (!tetra) return;
+		const [x, y] = toSvg(viewSvgs[mapGrab.view], event);
+		const [a, b] = AXIS_VIEWS[mapGrab.view];
+		const p = [...tetraAt];
+		p[a] = Math.max(-1, Math.min(1, x));
+		p[b] = Math.max(-1, Math.min(1, -y));
+		setWeights(tetra, tetraWeights(p));
+	}
+
+	function onMapMove(event) {
+		if (mapGrab?.pointerId !== event.pointerId) return;
+		if (mapGrab.view !== undefined) dragView(event);
+		else dragSheet(event);
+	}
+
+	function onMapUp(event) {
+		if (mapGrab?.pointerId !== event.pointerId) return;
+		mapGrab = null;
+		settle();
+	}
+
+	/** Weight sliders: drag one weight along the line from its example; the rest keep their ratios. */
+	const faceMemory = new SvelteMap(); // example -> the others' proportions, last time they had any
+	let barGrab = null; // { pointerId, k, face, cell }
+
+	function pullFace(k) {
+		stop();
+		speaking = -1;
+		result = null;
+		settleIntoZone();
+		if (!zones[ecg.zone].includes(k)) {
+			const support = ecg.weights.map((w, v) => (w > 1e-9 ? v : -1)).filter((v) => v >= 0);
+			let z = -1;
+			let shared = [];
+			zones.forEach((zone, i) => {
+				if (!zone.includes(k)) return;
+				const s = support.filter((v) => zone.includes(v));
+				if (z < 0 || s.length > shared.length) [z, shared] = [i, s];
+			});
+			if (z < 0) return null;
+			if (!shared.length) {
+				ecg = startState(lead.model, k);
+				return oppositeFace(ecg.weights, k, zones[ecg.zone], faceMemory.get(k));
+			}
+			setWeights(shared, normalizeWeights(shared.map((v) => ecg.weights[v])));
+			enterZone(z, shared);
+		}
+		const face = oppositeFace(ecg.weights, k, zones[ecg.zone], faceMemory.get(k));
+		faceMemory.set(k, face);
+		return face;
+	}
+
+	function pullTo(k, face, value) {
+		const w = pullWeight(face, k, value);
+		ecg = { ...ecg, weights: w };
+		if (recording) frames = [...frames, { time: performance.now(), state: ecg }];
+	}
+
+	const barValue = (cell, event) => {
+		const r = cell.getBoundingClientRect();
+		return (event.clientX - r.left) / Math.max(1, r.width);
+	};
+
+	function onBarDown(event, k) {
+		if (event.button !== 0) return;
+		event.preventDefault();
+		const face = pullFace(k);
+		if (!face) return;
+		const cell = event.currentTarget;
+		try {
+			cell.setPointerCapture(event.pointerId);
+		} catch {
+			// Synthetic pointers can't be captured.
+		}
+		barGrab = { pointerId: event.pointerId, k, face, cell };
+		pullTo(k, face, barValue(cell, event));
+	}
+
+	function onBarMove(event) {
+		if (barGrab?.pointerId !== event.pointerId) return;
+		pullTo(barGrab.k, barGrab.face, barValue(barGrab.cell, event));
+	}
+
+	function onBarUp(event) {
+		if (barGrab?.pointerId !== event.pointerId) return;
+		barGrab = null;
+		settle();
+	}
+
+	function onBarKey(event, k) {
+		const step = event.shiftKey ? 0.1 : 0.02;
+		const delta = { ArrowLeft: -step, ArrowDown: -step, ArrowRight: step, ArrowUp: step }[event.key];
+		if (delta === undefined) return;
+		event.preventDefault();
+		const face = pullFace(k);
+		if (face) pullTo(k, face, ecg.weights[k] + delta);
+	}
+
 	$effect(() => () => cancelAnimationFrame(animation));
 
 	const S = 160;
@@ -490,15 +704,59 @@
 				}
 		return out;
 	});
-	const zonePolygon = $derived(
-		zones[ecg.zone]
-			?.map((k) => corners[k])
-			.map((c) => c.join(','))
-			.join(' ') ?? ''
+	const sheets = $derived(problem ? [] : sheetsOf(zones, corners));
+	const looseEdges = $derived(
+		complexEdges.filter((e) => !sheets.some((s) => s.verts.includes(e.a) && s.verts.includes(e.b)))
 	);
-	const stateDot = $derived(
-		corners.reduce((acc, c, k) => [acc[0] + ecg.weights[k] * c[0], acc[1] + ecg.weights[k] * c[1]], [0, 0])
+	const sheetEdges = $derived(
+		sheets.flatMap((s, i) =>
+			s.verts.flatMap((a, j) =>
+				s.verts.slice(j + 1).map((b, l) => ({
+					key: `${i}:${a}-${b}`,
+					p: s.at[j],
+					q: s.at[j + 1 + l],
+					moved: lead.model.edges.has(`${a}>${b}`) || lead.model.edges.has(`${b}>${a}`)
+				}))
+			)
+		)
 	);
+	const mapCorners = $derived.by(() => {
+		const seen = new Map();
+		const add = (k, at) => seen.set(`${k}@${at[0].toFixed(1)},${at[1].toFixed(1)}`, { k, at });
+		sheets.forEach((s) => s.verts.forEach((k, j) => add(k, s.at[j])));
+		looseEdges.forEach((e) => {
+			add(e.a, corners[e.a]);
+			add(e.b, corners[e.b]);
+		});
+		if (!seen.size) corners.forEach((c, k) => add(k, c));
+		return [...seen.values()];
+	});
+	const mapBox = $derived.by(() => {
+		const pts = mapCorners.map((c) => c.at);
+		const xs = pts.map((p) => p[0]);
+		const ys = pts.map((p) => p[1]);
+		const x = Math.min(...xs) - 28;
+		const y = Math.min(...ys) - 18;
+		return { x, y, w: Math.max(...xs) - x + 28, h: Math.max(...ys) - y + 22 };
+	});
+	const mapMiddle = $derived([
+		corners.reduce((s, c) => s + c[0], 0) / corners.length,
+		corners.reduce((s, c) => s + c[1], 0) / corners.length
+	]);
+	/** Labels sit outside the corner, away from the middle; a corner in the middle gets its label below. */
+	function labelAt(at) {
+		const d = [at[0] - mapMiddle[0], at[1] - mapMiddle[1]];
+		const len = Math.hypot(...d);
+		return len < 8 ? [at[0], at[1] + 18] : [at[0] + (d[0] / len) * 13, at[1] + (d[1] / len) * 13 + 4];
+	}
+	const stateDots = $derived(
+		sheets
+			.map((s, i) => ({ i, at: stateOnSheet(s, ecg.weights), current: s.zone === ecg.zone }))
+			.filter((d) => d.at)
+	);
+	const tetra = $derived(!problem && zones[ecg.zone]?.length === 4 ? zones[ecg.zone] : null);
+	const tetraAt = $derived(tetra ? tetraPoint(tetra.map((k) => ecg.weights[k])) : [0, 0, 0]);
+	const VIEW_NAMES = ['front', 'top', 'side'];
 	const label = (k) => lead.labels[k] ?? String(k);
 	const zoneName = (z) => zones[z]?.map(label).join('–') ?? '';
 	const faceName = (face) => face.map(label).join('–');
@@ -612,30 +870,93 @@
 			</div>
 
 			<div class="panel">
-				<svg class="simplex" viewBox="-28 -14 {S + 56} {S + 28}" aria-label="The state in the zone {zoneName(ecg.zone)}">
-					{#if zones.length > 1}<polygon class="zone" points={zonePolygon} />{/if}
-					{#each complexEdges as e (e.a + '-' + e.b)}
-						<line
-							class={{ moved: e.moved }}
-							x1={corners[e.a][0]}
-							y1={corners[e.a][1]}
-							x2={corners[e.b][0]}
-							y2={corners[e.b][1]}
-						/>
-					{/each}
-					{#each corners as c, k (k)}
-						<circle class={['corner', { wall: walls.includes(k), out: !inZone(k) }]} cx={c[0]} cy={c[1]} r="4" />
-						<text
-							x={S / 2 + (c[0] - S / 2) * 1.2}
-							y={S / 2 + (c[1] - S / 2) * 1.2 + 4}
-							text-anchor="middle">{label(k)}</text
-						>
-					{/each}
-					<circle class="state" cx={stateDot[0]} cy={stateDot[1]} r="6" />
-				</svg>
+				{#if tetra}
+					<div class="views">
+						{#each AXIS_VIEWS as [a, b], v (v)}
+							<svg
+								bind:this={viewSvgs[v]}
+								class="view"
+								viewBox="-1.7 -1.75 3.4 3.5"
+								role="application"
+								aria-label="The tetrahedron seen from the {VIEW_NAMES[v]}: drag the dot"
+								onpointerdown={(e) => onViewDown(e, v)}
+								onpointermove={onMapMove}
+								onpointerup={onMapUp}
+								onpointercancel={onMapUp}
+							>
+								{#each TETRAHEDRON as p, i (i)}
+									{#each TETRAHEDRON.slice(i + 1) as q, j (j)}
+										<line class="edge" x1={p[a]} y1={-p[b]} x2={q[a]} y2={-q[b]} />
+									{/each}
+								{/each}
+								{#each tetra as k, i (k)}
+									{@const p = TETRAHEDRON[i]}
+									<circle class={['corner', { wall: walls.includes(k) }]} cx={p[a]} cy={-p[b]} r="0.09" />
+									<text x={p[a] * 1.32} y={-p[b] * 1.32 + 0.1} text-anchor="middle">{label(k)}</text>
+								{/each}
+								<circle class="state" cx={tetraAt[a]} cy={-tetraAt[b]} r="0.13" />
+								<text class="view-name" x="0" y="1.68" text-anchor="middle">{VIEW_NAMES[v]}</text>
+							</svg>
+						{/each}
+					</div>
+				{:else}
+					<svg
+						bind:this={mapSvg}
+						class="simplex"
+						viewBox="{mapBox.x} {mapBox.y} {mapBox.w} {mapBox.h}"
+						style:width="{mapBox.w}px"
+						style:aspect-ratio="{mapBox.w} / {mapBox.h}"
+						role="application"
+						aria-label="The state in the zone {zoneName(ecg.zone)}: drag the dot"
+						onpointermove={onMapMove}
+						onpointerup={onMapUp}
+						onpointercancel={onMapUp}
+					>
+						{#each sheets as s, i (i)}
+							{@const holds = stateDots.some((d) => d.i === i)}
+							<polygon
+								class={['sheet', { current: s.zone === ecg.zone && zones.length > 1, holds }]}
+								points={s.at.map((p) => p.join(',')).join(' ')}
+								role="button"
+								tabindex="-1"
+								aria-label="Zone {zoneName(s.zone)}"
+								onpointerdown={holds ? (e) => onSheetDown(e, i) : undefined}
+							/>
+						{/each}
+						{#each looseEdges as e (e.a + '-' + e.b)}
+							<line
+								class={{ moved: e.moved }}
+								x1={corners[e.a][0]}
+								y1={corners[e.a][1]}
+								x2={corners[e.b][0]}
+								y2={corners[e.b][1]}
+							/>
+						{/each}
+						{#each sheetEdges as e (e.key)}
+							<line class={{ moved: e.moved }} x1={e.p[0]} y1={e.p[1]} x2={e.q[0]} y2={e.q[1]} />
+						{/each}
+						{#each mapCorners as c (c.k + '@' + c.at.join(','))}
+							{@const t = labelAt(c.at)}
+							<circle class={['corner', { wall: walls.includes(c.k), out: !inZone(c.k) }]} cx={c.at[0]} cy={c.at[1]} r="4" />
+							<text x={t[0]} y={t[1]} text-anchor="middle">{label(c.k)}</text>
+						{/each}
+						{#each stateDots as d (d.i)}
+							<circle
+								class={['state', { other: !d.current }]}
+								cx={d.at[0]}
+								cy={d.at[1]}
+								r="6"
+								role="button"
+								tabindex="-1"
+								aria-label="The state in {zoneName(sheets[d.i].zone)}"
+								onpointerdown={(e) => onSheetDown(e, d.i)}
+							/>
+						{/each}
+					</svg>
+				{/if}
 				<p class="note">
 					{#if zones.length > 1}In zone {zoneName(ecg.zone)}, {shape(ecg.zone)}, one of {zones.length}.
-					{:else}The state in {shape(0)}{n > 3 ? ', flattened' : ''}.{/if}
+					{:else}The state in {shape(0)}{tetra ? ', seen down three axes' : n > 3 ? ', flattened' : ''}.{/if}
 				</p>
 
 				<table class="weights">
@@ -649,7 +970,22 @@
 										title={inZone(k) ? `Drive to ${label(k)}` : `Jump to ${label(k)}`}>{label(k)}</button
 									>
 								</td>
-								<td class="bar"><span style:width="{Math.max(0, Math.min(1, w)) * 100}%"></span></td>
+								<td
+									class="bar"
+									role="slider"
+									tabindex="0"
+									aria-label="Weight of {label(k)}"
+									aria-valuemin="0"
+									aria-valuemax="1"
+									aria-valuenow={Number(w.toFixed(3))}
+									onpointerdown={(e) => onBarDown(e, k)}
+									onpointermove={onBarMove}
+									onpointerup={onBarUp}
+									onpointercancel={onBarUp}
+									onkeydown={(e) => onBarKey(e, k)}
+								>
+									<span style:width="{Math.max(0, Math.min(1, w)) * 100}%"></span>
+								</td>
 								<td class="num">{w.toFixed(3)}</td>
 							</tr>
 						{/each}
@@ -696,7 +1032,7 @@
 						{#if walls.length}Walls: {walls.map(label).join(', ')} pinned at zero.{/if}
 						{#if result.residual > 1e-3 * bounds[0].span}Out of reach by {result.residual.toFixed(2)}.{/if}
 					{:else}
-						Drag a point. Shift-click pins one. The buttons drive to an example.
+						Drag a point, or the dot on the map. Shift-click pins a point. The buttons drive to an example.
 					{/if}
 				</p>
 				{#if lastCrossing}
@@ -840,26 +1176,76 @@
 		font-size: 0.9em;
 	}
 	.simplex {
-		width: 216px;
-		height: 188px;
+		max-width: 100%;
 		display: block;
+		touch-action: none;
+		user-select: none;
 	}
-	.simplex line {
+	.simplex line,
+	.view .edge {
 		stroke: var(--ink);
 		stroke-opacity: 0.35;
+		vector-effect: non-scaling-stroke;
+		pointer-events: none;
 	}
 	.simplex line.moved {
 		stroke-opacity: 0.8;
 		stroke-dasharray: 3 2;
 	}
-	.zone {
-		fill: var(--flash);
-		fill-opacity: 0.25;
+	.sheet {
+		fill: var(--ink);
+		fill-opacity: 0.03;
 		stroke: none;
 	}
-	.simplex text {
+	.sheet.current {
+		fill: var(--flash);
+		fill-opacity: 0.25;
+	}
+	.sheet.holds {
+		cursor: pointer;
+	}
+	.simplex text,
+	.view text {
 		font-family: ui-monospace, monospace;
 		font-size: 11px;
+		pointer-events: none;
+	}
+	.views {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.3em;
+		max-width: 260px;
+	}
+	.view {
+		display: block;
+		width: 100%;
+		border: 1px solid var(--ink);
+		background: var(--paper);
+		touch-action: none;
+		user-select: none;
+		cursor: crosshair;
+	}
+	.view text {
+		font-size: 0.36px;
+		font-weight: bold;
+	}
+	.view .view-name {
+		font-size: 0.28px;
+		font-weight: normal;
+	}
+	.view-name {
+		fill-opacity: 0.55;
+	}
+	.view .state,
+	.view .corner {
+		stroke-width: 1.5;
+		vector-effect: non-scaling-stroke;
+	}
+	.state {
+		cursor: grab;
+	}
+	.state.other {
+		fill: var(--paper);
 	}
 	.corner {
 		fill: var(--ink);
@@ -921,6 +1307,13 @@
 	}
 	.bar {
 		width: 100%;
+		cursor: ew-resize;
+		touch-action: none;
+		user-select: none;
+		box-shadow: inset 0 -1px 0 color-mix(in srgb, var(--ink) 25%, transparent);
+	}
+	.bar:focus-visible {
+		outline: 2px solid var(--flash);
 	}
 	.bar span {
 		display: block;
