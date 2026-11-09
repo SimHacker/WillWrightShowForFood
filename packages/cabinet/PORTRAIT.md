@@ -168,6 +168,34 @@ noise so an actor is never still. Don built The Sims 1 character
 animation system inspired by Improv. The early demo uses a canned whole-body clip, with the tip
 stream still the source of truth for the emulator.
 
+### Heads, hands and bodies from Blender
+
+The characters are modelled in Blender and animated by ECG, so the
+same pipeline serves Heinz, Sims-style characters with high-resolution
+heads, hands and bodies, and anyone else's rigs:
+
+- **Faces.** FaceIt rigs a head with ARKit's 52 blendshapes as shape
+  keys. Expressions are settings of those coefficients, sculpted by
+  hand or recorded with an iPhone's face tracking. ECG blends the
+  expressions; the `outputs` of a model are the 52 coefficients
+  ([Blendshapes](../../apps/ties/examples/ecg/articles/blendshapes.md)).
+- **Hands.** Grips as skeleton poses: holding the pen, pressing a key,
+  resting, pointing. The pen tip or fingertip is the handle.
+- **Bodies.** Postures as skeleton poses, glued into a complex: at the
+  tube, at the Teletype, leaning in, sitting back.
+- **Export.** glTF 2.0 carries all of it: shape keys become named morph
+  targets, the armature becomes a skin, and three.js reads both.
+
+One state per layer drives everything: the voice and the scene drive
+the face's state the way Mouther's does, the pen drives the hand and
+body. The demo the portrait is for is Heinz demonstrating PIXIE: the
+pen held to the glass, the arm following the tracking cross, the face
+watching it.
+
+Engine work this needs, in [ECG's design](../ecg/DESIGN.md#suggestions):
+handles on a 3D mesh seen through a perspective camera, and a glTF
+loader that turns morph targets and poses into examples.
+
 The avatar portrays Heinz Lemke operating his own program, made with
 his participation: he sent the 128-page listing this whole machine
 exists to run. His character dir is the source of grounding; anything

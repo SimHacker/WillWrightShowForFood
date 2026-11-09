@@ -1709,7 +1709,12 @@
 		min-width: 0;
 		font: inherit;
 		border: 1px solid var(--ink);
+		border-radius: 0;
 		padding: 0.2em 0.4em;
+		background: #fff;
+		color: #000;
+		box-shadow: inset 1px 2px 3px color-mix(in srgb, var(--ink) 30%, transparent);
+		cursor: text;
 	}
 	.weights tr.wall .num {
 		text-decoration: line-through;
@@ -1717,12 +1722,21 @@
 	.panel button {
 		font-family: ui-monospace, monospace;
 		min-width: 2.5em;
-		background: var(--paper);
 		border: 1px solid var(--ink);
+		border-radius: 4px;
+		background: linear-gradient(var(--paper), color-mix(in srgb, var(--paper) 82%, var(--ink)));
+		box-shadow: 0 1px 0 color-mix(in srgb, var(--ink) 55%, transparent);
 		cursor: pointer;
 	}
+	.panel button:hover {
+		background: linear-gradient(var(--paper), color-mix(in srgb, var(--paper) 90%, var(--ink)));
+	}
+	.panel button:active {
+		box-shadow: inset 0 1px 2px color-mix(in srgb, var(--ink) 45%, transparent);
+		transform: translateY(1px);
+	}
 	.panel button.on {
-		background: var(--flash);
+		background: linear-gradient(color-mix(in srgb, var(--flash) 70%, var(--paper)), var(--flash));
 	}
 	.bar {
 		width: 100%;

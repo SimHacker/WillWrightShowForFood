@@ -29,6 +29,12 @@ How it works, one idea at a time:
 - ~Tour: Colour~ — blending things that aren't points
 - ~Tour: Motion, Skeleton, Skin~ — one performance, two characters
 
-All of it on one scrolling page: ~ECG: The Whole Story~.
+The same engine, other things:
+
+- ~Tour: Turning a Head~ — 3D poses through a camera; steer by the nose
+- ~Tour: Blendshapes~ — ARKit coefficients out of a dragged face
+- ~Tour: Arranging Views~ — window layouts that follow a resize
+
+All of it on one scrolling page, with how it could live in Godot, Blender, Illustrator, D3 and D2, and what it has in common with how language models blend ideas: ~ECG: The Whole Story~.
 
 The engine, MIT licensed, with a worked test for every step: [packages/ecg](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/ecg). The history: [Tom Ngo's Embedded Constraint Graphics at Interval](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md).

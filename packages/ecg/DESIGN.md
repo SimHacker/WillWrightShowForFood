@@ -263,3 +263,16 @@ The solver never imports a renderer.
   other handle: the pupil is a point target on the eye complex, the other pupil follows through
   the shared gaze examples, and the walker crosses zones as you drag. Each pupil's handle is its
   pupil circle, hit-tested before the face handles.
+- **Handles through any linear map.** A target today is one coordinate of the configuration.
+  Generalize it to a row: any linear combination of the configuration's numbers. Then a handle
+  can be a mesh vertex driven by blendshape coefficients (neutral plus offsets times
+  coefficients), seen through a camera. A perspective camera isn't linear, so linearize it at the
+  current state each step, as the walker already does for crossings.
+- **Load glTF.** Turn a glTF file's named morph targets and saved poses into examples, so faces
+  rigged in Blender (FaceIt's ARKit 52) and Sims-style heads, hands and bodies drop straight in.
+  The portrait's Heinz demonstrating PIXIE is the first customer
+  ([PORTRAIT.md](../cabinet/PORTRAIT.md#heads-hands-and-bodies-from-blender)).
+- **Integrations.** The forward half of ECG ships in Godot (`AnimationNodeBlendSpace2D`
+  triangulates and blends barycentrically), Blender (shape keys), Illustrator (Blend), D3
+  (interpolators) and D2 (layouts). Each could take the inverse half: drag the result, solve for
+  the weights. A Blender add-on and a Godot node are the two most direct.

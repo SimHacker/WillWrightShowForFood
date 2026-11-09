@@ -30,6 +30,12 @@ definition: "Every principal in the ECG database, by name."
 
 ~Motion, Skeleton, Skin~
 
+~Turning a Head~
+
+~Blendshapes~
+
+~Arranging Views~
+
 ~Mouther~
 
 ~ECG: The Whole Story~
