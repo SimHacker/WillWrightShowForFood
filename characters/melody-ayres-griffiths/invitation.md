@@ -57,8 +57,10 @@ turned off, it leaves the machine and the keyboard to you
 [the guide](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/guides/little-computer-people.md)).
 That's accessibility for games that never had any: spoken prompts, plain fields and buttons,
 and no need to know a 1985 keyboard convention. The disks live in memory too, so per-game bridges
-read and write the saves the guest just wrote: a Wizardry character, a Mind Mirror life, a Little
-Computer Person, exported as files and imported back into any copy of the game.
+read and write the saves the guest just wrote. To start, they wrap Little Computer People, Mind
+Mirror and Wizardry: each adds its own subdirectory to your Soul City character's directory (the
+Little Computer Person, the Mind Mirror life, the Wizardry adventurer), imports back into any copy
+of the game, and can move what one game knows about a character into another.
 
 That is one bridge, the Apple ][, with sub-bridges for each game, inside a larger plan I call
 SoulAngel: one companion for many machines and many games, with bridges to the PDP-7 and other
