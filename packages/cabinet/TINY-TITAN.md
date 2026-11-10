@@ -245,15 +245,22 @@ The 340 panel gets two commands, **Send display list to Titan** and **Send PIXIE
 Titan**, and a PDP-7 program can do the same with CALL. Either level goes to a drawing service
 on Titan that saves it, loads it, and converts it for whoever asks.
 
-- **Display list:** the 340 words from a start address, with their origin. This is what Forth
-  programs such as the hand and the turtle build, in fixed point: `SIN` and `COS` scaled by
-  16384, on the 340's 1024-point grid with y up.
+- **Display list:** what the 340 drew, not the instructions that drew it. It is a frame of
+  `Segment`s, the stream the 340 emulator already emits: each stroke's endpoints on the
+  1024-point grid with y up, its kind, intensity and scale, annotated with the DJS subroutine
+  call it ran in, the return address, the block, the DTG tag, the POINT words that placed it,
+  and the display-file address and cycle that drew it. The canvas renderer draws this stream
+  today, and the WebGPU phosphor simulator will. The 340 editor traces the same annotations back
+  to the words in memory, so direct manipulation with constraints edits the instructions
+  ([DESIGN.md](DESIGN.md#a-universal-340-editor), [DRAWING-CONSTRAINTS.md](DRAWING-CONSTRAINTS.md)).
+  A Forth program such as the hand or the turtle computes in fixed point (`SIN` and `COS`
+  scaled by 16384). By the time its words have run on the 340, what is left is grid coordinates.
 - **PIXIE drawing:** SYMELEC's rings as the link sends them (`PXID`, `DSBEG`, `DSEND`,
-  `SAVINS`), plus the display file it compiled from them.
+  `SAVINS`), plus the display list its compiled display file draws.
 
-The host turns a display list into strokes with `preview340`, the throwaway 340 that draws one
-pass without running the CPU. Each stroke keeps its provenance: display address, DJS
-subpicture, tag.
+Send takes the 340's last completed frame. For a display file that isn't on the tube, the host
+runs it through `preview340`, the throwaway 340 that draws one pass without running the CPU, and
+gets the same annotated segments.
 
 A PIXIE drawing needs no new capture code. The cartridge already names its ring area by symbol
 (`rings: { beg, end, roots }`, [CARTRIDGES.md](CARTRIDGES.md)). The applet's `captureRings`
@@ -283,7 +290,8 @@ Formats out:
 | `json`, `yaml` | strokes with floats in the consumer's frame, groups by subpicture and tag |
 | `svg` | `toSvg`, DJS subpictures as `<g>`, provenance as `data-` attributes |
 | `png` | rasterized at the size asked, with the cabinet's PNG encoder |
-| `dl`, `pxid`, `rings` | the original words, for another 340 or another PIXIE |
+| `segments` | the display list as captured, every annotation kept, for another renderer or editor |
+| `pxid`, `rings` | the original ring words, for another PIXIE |
 
 A consumer names a format and a frame: origin (centre, bottom left, top left), y up or down,
 scale, and precision. The fixed point stays on the PDP-7. The consumer gets floats in its own
@@ -294,8 +302,8 @@ subscriber in its own format. The PDP-7 can read conversions back through the fi
 
 On the PDP-7:
 
-    DLIST 512 2 S" drawing.send dl hand" HOST    \ origin and length as numbers, name as text
-    0 S" drawing.send pixie hand" HOST            \ the rings SYMELEC holds now
+    0 S" drawing.send display hand" HOST    \ the 340's last frame, as the display list
+    0 S" drawing.send pixie hand" HOST      \ the rings SYMELEC holds now
 
 This is the first demo below, generalized: the turtle translator becomes one of the drawing
 service's formats.
