@@ -486,7 +486,10 @@ access. tiny-its makes the cross-machine map a command.
 
 **Shared memory and locks.** The per-VM sharing config and the implicit locks in
 [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module) are the state that
-tiny-its commands edit. The YAML is the saved form. Commands cover:
+tiny-its commands edit. The YAML is the saved form. Every command reaches the host as one CALL
+on device 24, a command name plus raw numeric arguments
+([TINY-TITAN.md](TINY-TITAN.md#one-call-for-the-host-call-on-device-24)), so the Forth tiny-its
+defines each word in one line and needs no device of its own. Commands cover:
 
 - **segments:** create, resize, delete, snapshot, copy;
 - **maps:** map and unmap a segment into a VM at an address, read-write or read-only, and list

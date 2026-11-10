@@ -135,6 +135,112 @@ and LOAD of a whole core image as files, which gives every program save and rest
 Every rung below is the same `BlockletHost` with more behind it. The device and the 1972
 software never change.
 
+### One call for the host: CALL on device 24
+
+Every interface the emulator offers a PDP-7 program goes through one operation on device 24,
+not a device each. tiny-titan stands in for the emulator, the way Titan stood in for a
+filestore. The program names a command in a string and passes numbers as raw 18-bit words, so
+nothing is converted to text and back. Both parents of tiny-its did this:
+
+- **ITS symbolic system calls.** `SYSCAL CORBLK,[%CLIMM,,%CBNDR ? %CLIMM,,%JSELF ? ...]` names
+  the call and flags each argument: `%CLIMM` immediate, `%CLOUT` written back.
+- **Open Firmware's client interface.** One entry point, and an array that holds the service
+  name, the argument count, the return count, the arguments and the returns.
+
+CALL is operation 6 in the device 24 request block. Words 0–6 keep their meaning, and two words
+are added for a text reply:
+
+| word | CALL |
+|---|---|
+| 0 | 6 |
+| 1, 6 | the command string's address and length, one character per word |
+| 2 | number of numeric arguments, *n* |
+| 3 | room for numeric returns, *m* |
+| 4 | the vector's address: *n* arguments in, returns written over it |
+| 5 | result: the number of returns, or a negative error |
+| 7, 8 | reply buffer address and room; the host writes the reply's length back into 8 |
+
+The string may carry its arguments as text, `map rings forth 12000 ro`, or only the command
+name, with the numbers in the vector. Both forms reach the same handler. The host parses text
+numbers in octal unless marked, as tiny-its does. Names in the string (segments, VMs, drawings)
+resolve to the same handles a numeric call returns.
+
+On the host, a CALL is a `TinyCommand`. Its id is the command name, its source is the calling
+VM, and its risk comes from the handler. So it rides tiny-bus ([below](#tiny-bus-the-backplane-between-machines))
+with the same policy as a pie item or an LLM: a destructive call from a visitor's VM waits for
+a person. Discovery is a call too: `services` returns the command names, one per line, in the
+reply buffer.
+
+The Forth side is three words, in `host.fs` after `files.fs`:
+
+    HOST    ( n1 .. nk k addr u -- r1 .. rm m )   command string from the stack
+    HOST"   ( n1 .. nk k "cmd" -- r1 .. rm m )    command string parsed from the source
+    REPLY   ( -- addr u )                         the last call's text reply
+
+tiny-its in Forth defines its memory mapping words on these, one line each:
+
+    : MAP     ( seg vm at access -- r 1 )  4 S" map" HOST ;
+    : UNMAP   ( seg vm -- r 1 )            2 S" unmap" HOST ;
+    HOST" map rings forth 12000 ro"   \ the same call, typed
+
+The command set, by the same big-endian ids as tiny-bus:
+
+- **`map.*`**: segments (`map.segment.create`, `resize`, `delete`, `snapshot`, `copy`), `map`,
+  `unmap` and `map.list` ([TINY-ITS.md](TINY-ITS.md#what-it-manages)). The host's memory map
+  is the per-VM sharing config in
+  [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module). The YAML is the
+  saved form, and these calls edit it live.
+- **`lock.*`**, **`vm.*`** (list, boot, stop, continue, reset), **`sym.*`** (export and look up
+  symbol tables): the rest of what tiny-its manages.
+- **`file.*`**: operations 1–5, also reachable by name.
+- **`drawing.*`**: the drawing service ([below](#drawings-converted-for-each-consumer)).
+
+One new device would have meant new IOTs and a new emulator class for each interface. This way
+it costs one handler and one Forth line.
+
+### Drawings, converted for each consumer
+
+The 340 panel gets two commands, **Send display list to Titan** and **Send PIXIE drawing to
+Titan**, and a PDP-7 program can do the same with CALL. Either level goes to a drawing service
+on Titan that saves it, loads it, and converts it for whoever asks.
+
+- **Display list:** the 340 words from a start address, with their origin. This is what Forth
+  programs such as the hand and the turtle build, in fixed point: `SIN` and `COS` scaled by
+  16384, on the 340's 1024-point grid with y up.
+- **PIXIE drawing:** SYMELEC's rings as the link sends them (`PXID`, `DSBEG`, `DSEND`,
+  `SAVINS`), plus the display file it compiled from them.
+
+The host turns a display list into strokes with `preview340`, the throwaway 340 that draws one
+pass without running the CPU. Each stroke keeps its provenance: display address, DJS
+subpicture, tag. For a PIXIE drawing, the geometry comes from its compiled display file. The
+rings travel as rings, JSON or YAML until the extraction rung reads geometry from rings
+directly.
+
+Formats out:
+
+| format | what the consumer gets |
+|---|---|
+| `logo` | a procedure that draws it: `SETPOS` moves, or turtle moves (`SETH`, `FD`, `RT`), floats in the consumer's turtle coordinates |
+| `json`, `yaml` | strokes with floats in the consumer's frame, groups by subpicture and tag |
+| `svg` | `toSvg`, DJS subpictures as `<g>`, provenance as `data-` attributes |
+| `png` | rasterized at the size asked, with the cabinet's PNG encoder |
+| `dl`, `pxid`, `rings` | the original words, for another 340 or another PIXIE |
+
+A consumer names a format and a frame: origin (centre, bottom left, top left), y up or down,
+scale, and precision. The fixed point stays on the PDP-7. The consumer gets floats in its own
+units, so microM8's Logo gets turtle steps around the screen's centre, and a browser gets SVG
+with y down. Consumers can subscribe: each new drawing is converted and delivered to every
+subscriber in its own format. The PDP-7 can read conversions back through the file path
+(`/titan/hand.logo`, `/titan/hand.json`), as text, one character per word.
+
+On the PDP-7:
+
+    DLIST 512 2 S" drawing.send dl hand" HOST    \ origin and length as numbers, name as text
+    0 S" drawing.send pixie hand" HOST            \ the rings SYMELEC holds now
+
+This is the first demo below, generalized: the turtle translator becomes one of the drawing
+service's formats.
+
 ### Serve structures back
 
 Direction bit `200000` in the header turns the queue around. Titan streams, the PDP reads,
