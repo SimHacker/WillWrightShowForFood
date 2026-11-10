@@ -60,8 +60,29 @@ needed." It is the constructionist argument this repository keeps returning to
   turtleSpaces Music Video)."
 - **An interview with Steve Wozniak** about designing the Disk II, for Paleotronic in 2018
   ([Steve Wozniak Talks Disk \]\[](https://paleotronic.com/2018/05/19/steve-wozniak-talks-disk/)).
-- Talks with April at KansasFest: upcycling with microM8 (2018), and a Claude MCP server for
-  microM8 (2025).
+- Talks with April at KansasFest: PERCOL-8 (2016), upcycling with microM8 (2018), and a Claude
+  MCP server for microM8 (2025). PERCOL-8, microM8's predecessor, was their Java BASIC
+  interpreter DiscoRunner ported to Go: Applesoft, Integer BASIC, Apple Logo and 6502 code, with
+  an OpenGL display whose layers have their own cameras, and a cloud server for files, chat and
+  shared machines. Each emulated byte took 32 bits, the Apple's 8 and 24 more for colour, font
+  size and extended characters, so the Apple's memory layout stayed compatible. Two players
+  shared one machine's memory over the network, with one player's paddle 0 remapped to the
+  other's paddle 1, and the stream of memory changes could be recorded and played back
+  ([talk](https://www.youtube.com/watch?v=6pb5lDgNjwI)).
+- **microM8's newer machines**, announced by Melody in the Apple II Enthusiasts Facebook group:
+  IIGS emulation, with memory expansion cards, accelerators, an integrated GUI and CRT shader
+  effects, then the Apple III. The published source
+  ([microm8-cln](https://github.com/paleotronic/microm8-cln)) is still the September 2025 release.
+
+## Contact so far
+
+- 11 November 2018: Don wrote to editor@paleotronic.com to thank Melody for porting Logo
+  Adventure. No reply.
+- In the Apple II Enthusiasts group, on Melody's IIGS post, Don said he was writing a Videx
+  Videoterm for microM8 in Go and would send a pull request, and thanked her for the inspiration
+  behind the PDP-7 cabinet; on her Apple III post he asked whether an Apple I is next. No reply
+  yet.
+- The [invitation](invitation.md) has not been sent.
 
 ## Why she's here
 

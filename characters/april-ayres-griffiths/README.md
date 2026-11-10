@@ -19,8 +19,9 @@ in Go ([Meet the Crew](https://paleotronic.com/about/meet-the-crew/)).
 
 ## What she built
 
-[microM8](https://paleotronic.com/software/microm8/) runs the Apple ][, ][+ and //e, and then
-"upcycles" them:
+[microM8](https://paleotronic.com/software/microm8/) runs the Apple ][, ][+ and //e, and now the
+IIGS and the Apple III (releases Melody announced in the Apple II Enthusiasts Facebook group, not
+yet in the published source), and then "upcycles" them:
 
 - graphics in 3D and HD, with cameras you can move, rendered in LED, raster or voxel styles;
 - live rewind, and freeze and thaw of a running machine;
@@ -57,6 +58,11 @@ Ctrl-Shift-V in microM8, then `SAVE`
 disk with diskM8, "pretty alpha, and may eat your hamster :)"
 ([comment](https://github.com/PDP-10/its/issues/1268#issuecomment-439561042)). Melody's port:
 [notes and links](../melody-ayres-griffiths/sources/logo-adventure-apple-logo-2018/README.md).
+
+Their 2016 KansasFest talk on PERCOL-8, microM8's predecessor, already had 24 spare bits beside
+every Apple byte and memory shared between machines over the network
+([Melody's page](../melody-ayres-griffiths/README.md#what-she-makes)); what contact there has been
+is listed there too ([Contact so far](../melody-ayres-griffiths/README.md#contact-so-far)).
 
 ## Connections
 

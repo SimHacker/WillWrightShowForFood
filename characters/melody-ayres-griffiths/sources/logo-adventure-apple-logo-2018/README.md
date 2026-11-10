@@ -34,7 +34,10 @@ The same week:
   where Alexey Slyusar had ported the game to LLOGO on ITS: "Someone else had the same idea!"
 - On Hacker News, as empressplay: "I ported it to Apple Logo"
   ([HN](https://news.ycombinator.com/item?id=18409959)).
-- Don wrote to thank her, which began the correspondence.
+- Don wrote to thank her, at editor@paleotronic.com on 11 November 2018. No reply came.
+- Lars, assembling MIT's 1981 Apple II Logo (`APLOGO; LOGO 299`) from the ITS sources, tested
+  the disk in microM8, and Peter Neubauer ran it in Virtual ][ and microM8 on macOS
+  ([PDP-10/its#1386](https://github.com/PDP-10/its/pull/1386), merged 15 November 2018).
 
 From the rest of the [ITS issue](https://github.com/PDP-10/its/issues/1268) (September 2018 to
 January 2019):

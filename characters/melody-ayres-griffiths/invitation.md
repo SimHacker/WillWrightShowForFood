@@ -16,8 +16,9 @@ format: remote_or_in_person
 
 April and Melody —
 
-You ported my old Logo Adventure to Apple Logo in 2018, and I've been telling people about microM8
-ever since. It has become the inspiration for something I'm building: an emulator of the Cambridge
+You ported my old Logo Adventure to Apple Logo in 2018. I wrote to the magazine to thank you then,
+and I've been telling people about microM8 ever since. Congratulations on the IIGS and the Apple
+III; I asked on Facebook whether an Apple I is next, and I'd still love to play with one. It has become the inspiration for something I'm building: an emulator of the Cambridge
 PDP-7 and its Type 340 display that runs in a web page, where Mitch Bradley's PDP-7 Forth and Heinz
 Lemke's 1969 PIXIE run again ([the cabinet](https://hyperties.org/cabinet/)). Its manifesto credits
 microM8 by name, for the idea that an emulator owes the person using it more than fidelity
@@ -31,15 +32,25 @@ it as typed Logo, and turtleSpaces' `api` socket can take it too: I'd like the 1
 turtle's character stream to drive a turtleSpaces turtle, so anyone it hooks ends up with you ([the plan](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TINY-TITAN.md#first-demo-pixie-rings-to-microm8s-3d-turtle)).
 And anyone the cabinet's Logo turtle gets hooked, I'd like to send to turtleSpaces.
 
-One more proposal, which I'd be glad to write myself and send as a pull request if you'd like it:
-microM8's core built as a WebAssembly module with a small JavaScript API, so a web page can run it
-and call it directly, no sockets: step it, read and write its memory through zero-copy views, take
-snapshots and rewind, get callbacks. Then an Apple ][ and a PDP-7 can share memory in one page, and
-every view either of us builds works on both. It's the pattern that already runs the SimCity engine in
-[MicropolisCore](https://github.com/SimHacker/MicropolisCore): WebAssembly, callbacks into Svelte's
-reactive state, and zero-copy views of the map. It would sit behind a build tag and leave the desktop
-build alone; if cyanIIde already does this, even better
-([the proposal](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MICROM8.md#microm8-as-a-webassembly-module-called-directly)).
+I've also built microM8 as a WebAssembly module: a headless //e that runs in a web page and is
+called directly from JavaScript, no sockets ([try it](https://hyperties.org/microm8/)). It's
+seven patches on your September 2025 source, kept apart from your tree
+([the patches](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/microm8/FORK.yml)):
+build tags that keep the network client and cgo out of the js/wasm build and leave the desktop
+build alone, the headless machine, a Videx Videoterm in slot 3 (the card my old Apple ][+ Forth
+and terminal emulator used), the 2651 serial card that Forth drives, annunciators AN0-AN3, a
+Disk II write-protect tab that now takes effect, and two speed fixes found by profiling. Whatever
+you'd like goes back to you as pull requests, one subject each; the rest stays ours. Your public
+repo is still at the 2025 release, so if you publish the IIGS and Apple III source, I'll rebase
+onto it first.
+
+Watching your 2016 KansasFest talk on PERCOL-8 again, I found you'd been there before me: 32 bits
+for every Apple byte, with the 24 spare holding colour, font size and extended characters, and
+memory synced between machines over the network, with one player's paddle 0 remapped to the
+other's paddle 1. The cabinet keeps each 18-bit PDP-7 word in 32 bits and uses the 14 spare for
+tags the machine never sees, and its next step is machines mapping each other's memory, after the
+interface MIT's AI Lab built between its PDP-10 and PDP-11s
+([MAPPING](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MAPPING.md)).
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 

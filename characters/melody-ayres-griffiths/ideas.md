@@ -27,15 +27,25 @@ Possible threads, if they want a conversation. Theirs to change or drop.
     memory and the NTSC signal, "like a cybertronic rube goldberg device," built over microM8's 3D
     pixels ([CAUSE-AND-EFFECT.md](../../packages/cabinet/CAUSE-AND-EFFECT.md)).
 
-11. **microM8 as a WebAssembly module.** Direct calls from a web page, zero-copy memory views,
-    callbacks; Don offers to write the pull request
-    ([MICROM8.md](../../packages/cabinet/MICROM8.md#microm8-as-a-webassembly-module-called-directly)).
+11. **microM8 as a WebAssembly module.** Built and running in a web page, as seven patches on their
+    2025 source: the headless machine, a Videx Videoterm, a 2651 serial card, annunciators, the
+    Disk II write-protect tab, speed fixes. Which do they want back, and will the IIGS and Apple III
+    source be published to rebase onto
+    ([MICROM8.md](../../packages/cabinet/MICROM8.md#microm8-as-a-webassembly-module-called-directly),
+    [FORK.yml](../../packages/cabinet/microm8/FORK.yml))?
 
 12. **Learning without grades.** Melody's 2020 essay: the 1982 Challenge Program's mixed-age,
     self-directed Logo projects, bopCode, and turtleSpaces as a connected place where learners find
     mentors of any age. With Cynthia Solomon, Brian Harvey and the constructionists.
 13. **Woz and the Disk II.** Their 2018 interview, and the "shew, shew, shew" of his accelerating
     head, which the cabinet will make from the step timing ([DISK-II-SOUND.md](../../packages/cabinet/DISK-II-SOUND.md)).
+14. **The IIGS, the Apple III, and an Apple I?** What it took to add two machines to microM8,
+    year, and whether the Apple I, with little software but a lot to write, is next.
+15. **Spare bits, and memory between machines.** PERCOL-8 (KansasFest 2016) gave every Apple byte
+    24 more bits for colour and fonts, and synced memory between players over the network with
+    paddles remapped. The cabinet tags its PDP-7 words with spare bits the same way and plans
+    shared memory between machines after MIT's 10/11 interface
+    ([MAPPING.md](../../packages/cabinet/MAPPING.md)).
 
 ## Things to bring
 
