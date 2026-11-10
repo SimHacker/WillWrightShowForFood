@@ -40,7 +40,7 @@ Possible threads, if they want a conversation. Theirs to change or drop.
 13. **Woz and the Disk II.** Their 2018 interview, and the "shew, shew, shew" of his accelerating
     head, which the cabinet will make from the step timing ([DISK-II-SOUND.md](../../packages/cabinet/DISK-II-SOUND.md)).
 14. **The IIGS, the Apple III, and an Apple I?** What it took to add two machines to microM8,
-    year, and whether the Apple I, with little software but a lot to write, is next.
+    and whether the Apple I, with little software but a lot to write, is next.
 15. **Spare bits, and memory between machines.** PERCOL-8 (KansasFest 2016) gave every Apple byte
     24 more bits for colour and fonts, and synced memory between players over the network with
     paddles remapped. The cabinet tags its PDP-7 words with spare bits the same way and plans
