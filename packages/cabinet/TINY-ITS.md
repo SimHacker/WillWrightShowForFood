@@ -4,8 +4,7 @@ tiny-its is a command-line navigator and editor for ring structures. What you ed
 graph, and you walk it like a MUD. Around that it is the editor, debugger, controller,
 memory mapper, lock and device manager and remote job manager for a
 room full of emulated machines. It has no assembler of its own: assembling, disassembling and
-building are tiny-titan's `build` service, which tiny-its calls ([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do) has what it
-manages). This page designs the language you type at it: ergonomic, two-way,
+building are tiny-titan's `build` service, which tiny-its calls ([below](#what-it-manages) has what it manages; [TINY-TITAN.md](TINY-TITAN.md#services) has the services it calls). This page designs the language you type at it: ergonomic, two-way,
 self-documenting and discoverable. Three kinds of user type at it: people, an LLM, and
 PDP-7 programs. It needs only a serial teletype line.
 
@@ -443,6 +442,64 @@ where a tree (an outline, JSON, XML) has to fake them with IDs. So:
 
 Code as data, the way Lisp has it, but a graph, not a tree.
 
+## What it manages
+
+On ITS your top-level job was DDT, called HACTRN: the shell and the debugger at once, so the
+keystrokes that ran a program also opened its memory. Jobs under it could be stopped, examined,
+patched and continued, and `:UJOB` reached into other users' jobs
+([reference/GUIDE.md](reference/GUIDE.md) has the `DPSTOK` story). tiny-its gives every VM that
+treatment, all over tiny-titan messages:
+
+- **jobs:** list, select, boot a program, stop, continue, start at an address, reset, kill;
+- **memory:** examine and deposit (`addr/` opens a word, as in any DDT), symbolic, from each
+  program's symbol table;
+- **code:** disassemble and assemble in place, by calling tiny-titan's `build` service (the
+  cabinet's `asm.ts` and as7, every dialect) rather than an assembler of its own;
+- **dump and load:** copy a range, a segment or a whole core in or out as a filestore file, a
+  paper tape or a ring file, and from one VM into another;
+- **watch:** follow another machine's core, tube or teletype live.
+
+Because it is messages, a VM can be the DDT: a Forth on one PDP-7 can stop, patch and restart
+another. The browser front end adds pie menus, help, and a panel of all your jobs.
+
+**Not a timesharing system itself.** tiny-its does one thing at a time: it is a command
+interpreter. The parallel part is the VMs, which the backplane steps. It needs only a teletype,
+no display: the cabinet's KSR-33 panel, a terminal on the server, or a PDP-7 VM typing at it.
+
+**Shared memory and locks.** The per-VM sharing config and the implicit locks in
+[DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module) are the state that
+tiny-its commands edit. The YAML is the saved form. Commands cover:
+
+- **segments:** create, resize, delete, snapshot, copy;
+- **maps:** map and unmap a segment into a VM at an address, read-write or read-only, and list
+  who maps what. A map entry is modelled on MIT-AI's 10/11 map word: valid, write, machine, base,
+  limit, and a packing rule between word sizes ([MAPPING.md](MAPPING.md#what-the-cabinet-takes-from-this));
+- **locks:** define one over symbol ranges (held inside or free inside), list holders and
+  waiters, watch stray writes to a window, and break a deadlock by hand.
+
+**Symbol tables and source maps, as a protocol.** Each VM can export a symbol table, and
+tiny-its and the emulator's panels use it for everything: examine by name (`FLST/`), disassemble
+a routine, show its source, name the lock sections. A symbol is a name, an address, a kind (code,
+variable, constant, literal, Forth word), a length where known, its segment, and a source file
+and line where known. Tables carry a generation number, so a live change (a new Forth word, a
+patch) tells every viewer to refresh. Where they come from:
+
+- **Our assembler:** `asm.ts` already gives a static symbol table and an address-to-source-line
+  map ([`sourceFromAsm`](src/source.ts)). The 1972 listing gives the same through
+  `sourceFromListing` and `symelec-symbols.tsv`. The applet's symbol dropdown, which scrolls the
+  octal view, disassembles, or opens the source, already runs on these.
+- **`as7` and Unix:** `as7` writes a listing and a name list, and PDP-7 Unix had its own `nm`,
+  so Unix programs can export theirs.
+- **Mitch's Forth, live and unchanged:** its dictionary is a linked list of two-word headers
+  (length and first three characters), so the host can walk it in core and list every word with
+  its address. Full names and a source map come from the feeding side: the host types the source
+  in, so it knows which line was being read while `HERE` moved, and maps each new word's address
+  range to that file and line. With IP in location 10, the panels can show which Forth word is
+  running and where it came from.
+
+All of it is optional, and each piece helps: tiny-its commands, the debugger, the source view,
+program visualisation panels.
+
 ## To decide
 
 - The verb list for a first cut (`WHO`, `BOOT`, `STOP`, `CONTINUE`, `RESET`, `EXAMINE`,
@@ -450,7 +507,7 @@ Code as data, the way Lisp has it, but a graph, not a tree.
   `SEND`, `EVAL`, `DEFINE`, `ON`, `HELP`, `EXPLAIN`, `UNDO`, `EDIT`, `SET`), and the field
   types. `SEND (TO) FORTH (MESSAGE) ...` and `EVAL (IN) LISP "(...)"` go through the
   tiny-titan device, interrupting the receiver where it allows it
-  ([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do)).
+  ([TINY-TITAN.md](TINY-TITAN.md#interrupting-messages)).
 - The ring layout of a verb and a field, so the PDP-7 walker and the host agree.
 - Mitch's Forth first ([above](#written-in-forth)), and whether its line reader and parse
   loop can be replaced from Forth or need kernel changes.

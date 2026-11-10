@@ -22,7 +22,9 @@ your mail, `:UNTALK` chatted back and forth in split screen — and `:UJOB` open
 user's running job, examine-only by the book, until `:DDTSYM DPSTOK/-1` and `$$^R` let you
 deposit into it and hack it live. Security through obscurity: DDT answered `$$^R` with a fake
 " OP? " so onlookers would think it failed
-([Don on HN, 2020](https://news.ycombinator.com/item?id=22840639)).
+([Don on HN, 2020](https://news.ycombinator.com/item?id=22840639)). `DPSTOK` sits right after
+`BYERUN`, so you could put `BYERUN/-1` in your world-readable login file, type line feed to open
+the next symbol, and deposit -1 without ever typing its name.
 Presence, messaging, mail, chat, and writable-by-design shared state, a decade before
 anyone said "social network."
 
