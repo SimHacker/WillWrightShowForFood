@@ -44,6 +44,31 @@ you'd like goes back to you as pull requests, one subject each; the rest stays o
 repo is still at the 2025 release, so if you publish the IIGS and Apple III source, I'll rebase
 onto it first.
 
+Having microM8 in the page is what makes the rest possible. A "screen angel" sits beside it and
+watches the same 560x192 frame the canvas shows, matching small pictures cut from the screen, so
+it knows where a game is from what's on the screen, with a state machine written as data, one
+file per game. For Little Computer People it turns the disk over for you, and when the guestbook
+asks for the researcher's name and the date, it puts an ordinary HTML field under the screen
+(the date already filled in), and types the answer into the Apple when you press OK. Once he has
+moved in, the game's Control-key commands become buttons, and a chat field sends him requests
+like PLEASE PLAY THE PIANO. It can speak what the game wants, speed through the long move-in, and
+turned off, it leaves the machine and the keyboard to you
+([the angel](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/angels/little-computer-people/ANGEL.yml),
+[the guide](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/guides/little-computer-people.md)).
+That's accessibility for games that never had any: spoken prompts, plain fields and buttons,
+and no need to know a 1985 keyboard convention. The disks live in memory too, so per-game bridges
+read and write the saves the guest just wrote: a Wizardry character, a Mind Mirror life, a Little
+Computer Person, exported as files and imported back into any copy of the game.
+
+That is one bridge, the Apple ][, with sub-bridges for each game, inside a larger plan I call
+SoulAngel: one companion for many machines and many games, with bridges to the PDP-7 and other
+CPUs in the cabinet and the games on them, and out to games running natively on your own
+computer, starting with The Sims 1, under a programmable transparent full-screen overlay that
+does the same watching, asking and typing
+([SoulAngel](https://github.com/SimHacker/WillWrightShowForFood/blob/main/catalogs/soul-city/soul-angel.md)).
+The emulator in the browser is where it's easiest to get right: exact pixels, a keyboard we can
+type into, saves we can read, and runs we can repeat.
+
 Watching your 2016 KansasFest talk on PERCOL-8 again, I found you'd been there before me: 32 bits
 for every Apple byte, with the 24 spare holding colour, font size and extended characters, and
 memory synced between machines over the network, with one player's paddle 0 remapped to the
