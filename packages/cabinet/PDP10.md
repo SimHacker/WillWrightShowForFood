@@ -13,6 +13,18 @@ in [ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md#different-processor
 which already decided that "a PDP-10 should not pretend its channels are
 PDP-7 IOTs".
 
+**TypeScript, CPU by CPU, like the PDP-7.** The KA10 is written in
+TypeScript on the cabinet's framework, so it shares the backplane, the
+devices (the 340, the light pen, the teletype, the tapes), the memory
+map and the panels with the PDP-7 and with a PDP-11 written the same
+way, the GT40's and the Knight TV's 11/05. SIMH is not compiled to
+WebAssembly for this: it is a large program, and a module built from it
+would be a sealed box beside the cabinet instead of machines sharing
+code. The one public attempt, OhmGeek's
+[SIMH-WebAssembly](https://github.com/OhmGeek/SIMH-WebAssembly) (2022),
+got the VAX-11/780 started under Node and left the browser side
+unfinished. SIMH stays native, on the desk, as the oracle (Phases, below).
+
 ## Which machine
 
 ITS ran on four kinds of PDP-6/10 at MIT ([doc/machines.md](https://github.com/PDP-10/its/blob/master/doc/machines.md)):

@@ -42,10 +42,24 @@ to 32K.
 
 - **Ask Lars** to add a licence to [crt-simulation](https://github.com/larsbrinkhoff/crt-simulation),
   then port its phosphor shaders to the cabinet ([WEB-BENCH.md](WEB-BENCH.md#the-field)).
-- **An Apple ][ in the cabinet**, borrowing apple2js's MIT `cpu6502` as a CPU plugin and reading
-  Apple2TS for the rest; ROMs from the user. Gives ROADMAP §13's mash-ups a machine.
+- **A PDP-10 in TypeScript**, the KA10 running ITS ([PDP10.md](PDP10.md)), on the PDP-7's
+  framework: same backplane, devices, memory map and panels. CPU by CPU, with SIMH's `pdp10-ka`
+  as the oracle; SIMH is not compiled to WebAssembly.
+- **A PDP-11 in TypeScript**, the 11/05 behind the GT40 and the Knight TV's TV-11, on the same
+  framework, with Angelo Papenhoff's `aap/pdp11` and SIMH's `pdp11` as references.
+- **The 10/11 interface between them**: the PDP-10 maps PDP-11 memory and the PDP-7's into its
+  own address space through `MapEntry` and `MemoryPort` ([MAPPING.md](MAPPING.md)).
+
+Done: **the Apple ][ in the cabinet**, microM8 compiled to WebAssembly and running in the page
+([MICROM8.md](MICROM8.md)), good enough for now. ROADMAP §13's mash-ups have a machine.
 
 ## Could
+
+- **Longer term: expose more of microM8's Go to the TypeScript wrapper**, as patches on our branch: its memory
+  on the backplane's map, its CPU behind the `Cpu` interface, the trace and breakpoints
+  ([MICROM8.md](MICROM8.md#microm8-as-a-webassembly-module-called-directly)).
+- **Translate microM8's Go to TypeScript**, so the Apple shares code and framework with the other
+  machines the way the PDP-7 does. apple2js and Apple2TS are references.
 
 - **Wizardry worlds, the rest** ([worlds/wizardry/](worlds/wizardry/README.md)): read the monster picture format (ENEMYPIC in COMBAT, PIC2SCRN
   in REWARDS) so PICTURES.yml becomes art; name the bits of `vs_type`, `resists` and

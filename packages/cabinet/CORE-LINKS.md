@@ -25,7 +25,7 @@ type CoreLink = {
 ```
 
 A **domain** is anything with addressable words: a PDP-7's 8K bank, a bank above it, an Apple ]['s 64K
-(the cabinet's own or microM8's through its [WebAssembly module](MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly)),
+(the cabinet's own or microM8's through its [WebAssembly module](MICROM8.md#microm8-as-a-webassembly-module-called-directly)),
 a PDP-10 job's address space, the Type 340's display list, a disk image, or a tiny-titan service.
 
 ## Codecs: what the words mean on each side

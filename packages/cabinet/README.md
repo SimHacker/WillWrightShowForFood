@@ -27,11 +27,17 @@ hand tracking.
   ([CARTRIDGES.md §5](CARTRIDGES.md#5-the-cellular-automata-machine-as-cartridges)). Other CPUs
   use the same devices through adaptors, the binding layer in
   [DEVICES.md](DEVICES.md#how-a-device-reaches-a-machine).
-- A branch of microM8, compiled to WebAssembly and run in the cabinet's page, the way the
+- More CPUs in TypeScript, sharing the PDP-7's framework, devices and memory map: a KA10
+  running ITS ([PDP10.md](PDP10.md)) and a PDP-11 for the GT40 and the Knight TV, joined by
+  MIT-AI's 10/11 shared memory ([MAPPING.md](MAPPING.md)). One CPU at a time, with SIMH as the
+  oracle, not one big port of SIMH to WebAssembly.
+- microM8, already compiled to WebAssembly and running in the cabinet's page, the way the
   Micropolis engine runs in MicropolisCore
-  ([MICROM8.md](MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly)). On that
-  branch, its Go gains memory mapped between machines, per-address heat maps, causality tracing,
-  and rewind across all of it ([MICROM8.md](MICROM8.md#a-branch-of-microm8)).
+  ([MICROM8.md](MICROM8.md#microm8-as-a-webassembly-module-called-directly)), integrated less
+  tightly than the PDP-7. Longer term, on our branch, its Go exposes more to the TypeScript
+  wrapper: memory mapped between machines, per-address heat maps, causality tracing, and rewind
+  across all of it ([MICROM8.md](MICROM8.md#a-branch-of-microm8)). More ambitious still:
+  translate the Go to TypeScript.
   The traffic goes both ways: what microM8 already does, its live rewind, full CPU recording,
   heat map, debugger and MCP server, can be built for the PDP-7 or for every CPU in the cabinet.
 - A time machine: git as the machine's history. Snapshots and recordings are commits, a branch
@@ -60,8 +66,8 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
 - [MANIFESTO.md: a federation of emulators](MANIFESTO.md#a-federation-of-emulators-after-microm8):
   other emulators join as peers that trade messages and memory, not as ports into this one.
   The attitude comes from microM8, which "upcycles" the Apple ][.
-- [WEB-BENCH.md: the Apple \]\[ will be microM8](WEB-BENCH.md#decisions-for-the-cabinets-browser-bench): browser emulators compared, and
-  the plan to compile microM8's MIT-licensed Go to WebAssembly, with its unknowns.
+- [WEB-BENCH.md: the Apple \]\[ is microM8](WEB-BENCH.md#decisions-for-the-cabinets-browser-bench): browser emulators compared, and
+  microM8's MIT-licensed Go compiled to WebAssembly, built and running.
   [MICROM8.md](MICROM8.md) covers what microM8 exposes: an HTTP API, an MCP server and a debugger.
 - [MAPPING.md: shared memory between machines](MAPPING.md): planned, after MIT's Rubin 10/11
   interface, which let the AI Lab's PDP-10 map PDP-11 memory and device registers into its own
@@ -72,8 +78,11 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
   Internet Archive items. [FOR-MUSEUMS.md](FOR-MUSEUMS.md) is an open letter to museums and
   archives.
 
-**Planned machines:** the GT40, a KA10 running ITS ([PDP10.md](PDP10.md)), a PDP-8, a PDP-1, the
-Apple ][ through microM8, and Knuth's MIX. They're listed with their sources [below](#next).
+**Running beside the PDP-7:** the Apple ][, through microM8 compiled to WebAssembly
+([APPLE2.md](APPLE2.md)).
+
+**Planned machines,** each in TypeScript on the PDP-7's framework: a KA10 running ITS
+([PDP10.md](PDP10.md)), a PDP-11 (the GT40 and the Knight TV), a PDP-8, a PDP-1, and Knuth's MIX. They're listed with their sources [below](#next).
 
 ```ts
 import { Cabinet, Pdp7, Type340, LightPen } from "@wwsff/cabinet";
@@ -261,25 +270,30 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
   after David Rosenthal's 2015 report: [PRESERVATION.md](PRESERVATION.md). Slow motion
   down to the beam and the light pen's photocell: [BEAM-AND-PEN.md](BEAM-AND-PEN.md).
 - SIMH stays on the desk as the oracle.
-- Later, not yet: more DEC machines in the cabinet, each from its SIMH
-  counterpart. No VAX for now.
-  - The GT40 (PDP-11/05 and VT11 display), to run Jack Burness's 1973
-    MOONLANDER from its own binary. SIMH has all three pieces:
-    `PDP11/lunar11/` (source `gtlem.mac` and notes; the README says the
-    source does not match the binaries), the binary as
+- Later, not yet: more DEC machines in the cabinet, each written in TypeScript
+  from its SIMH counterpart, CPU by CPU, sharing the PDP-7's framework, devices
+  and memory map. SIMH itself is not compiled to WebAssembly: it is large, and
+  it would arrive as one sealed module instead of machines that share code. No
+  VAX for now.
+  - A PDP-11, one CPU for two machines: the GT40 (PDP-11/05 and VT11 display),
+    to run Jack Burness's 1973 MOONLANDER from its own binary, and the AI Lab's
+    TV-11, the PDP-11 behind the Knight TV, mapped into the PDP-10 (Angelo
+    Papenhoff's `aap/pdp11` and `aap/tv11` are the C references). SIMH has the
+    GT40's pieces: `PDP11/lunar11/` (source `gtlem.mac` and notes; the README
+    says the source does not match the binaries), the binary as
     `PDP11/pdp11_vt_lunar_rom.h`, and `display/vt11.c`.
   - A PDP-10 that runs ITS: the 36-bit KA10, from `PDP10/ka10_*.c`
-    ([PDP10.md](PDP10.md)), with MIT-AI's memory mapping between machines
+    ([PDP10.md](PDP10.md)), sharing devices and memory with the PDP-7 and the
+    PDP-11 through MIT-AI's memory mapping between machines
     ([MAPPING.md](MAPPING.md)).
   - A PDP-8, from `PDP8/`.
   - A PDP-1, from `PDP1/`, with the Type 30 display. It runs Spacewar! and L Peter
     Deutsch's PDP-1 Lisp, and those programs get source maps all the way down: to the
     scans of Deutsch's listings and his documentation, and to the walkthroughs and
     explanations others have written since.
-  - An Apple ][, the first machine that isn't DEC's. It has no SIMH counterpart, so
-    it will be April Ayres-Griffiths's microM8, the cabinet's inspiration, which is
-    MIT-licensed Go, compiled to WebAssembly
-    (the plan and its unknowns are in [WEB-BENCH.md](WEB-BENCH.md)). It joins tiny-its as one more job, with
+  - The Apple ][, the first machine that isn't DEC's, is already running: April
+    Ayres-Griffiths's microM8, the cabinet's inspiration, MIT-licensed Go compiled
+    to WebAssembly ([MICROM8.md](MICROM8.md)). Still to do: it joins tiny-its as one more job, with
     messages, device events and a symbol table. It trades messages rather than rings,
     since it has 8-bit bytes, not 18-bit words, and its screen is raster memory, so
     its frames are screen memory instead of 340 segments. Apple Logo brings its own

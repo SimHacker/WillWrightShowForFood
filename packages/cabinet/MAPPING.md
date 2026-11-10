@@ -248,9 +248,13 @@ the Type 340 display and the Ultimate Machine. The Turing engine already
 reads and writes its tape through a `MemoryPort { read, write }`
 ([turing.ts](src/plugins/turing.ts)) instead of touching core directly.
 
-Planned, not built: more machines on the backplane, among them a GT40, a
-KA10 running ITS, and an Apple ][ that is microM8 compiled to WebAssembly
-([README.md](README.md), "Later, not yet"; [WEB-BENCH.md](WEB-BENCH.md)); map entries in each
+Also built: an Apple ][, microM8 compiled to WebAssembly and running in the
+cabinet's page ([MICROM8.md](MICROM8.md)), though its memory isn't on the
+backplane's map yet.
+
+Planned, not built: more machines on the backplane, in TypeScript like the
+PDP-7, among them a KA10 running ITS ([PDP10.md](PDP10.md)) and a PDP-11 for
+the GT40 and the Knight TV ([README.md](README.md), "Later, not yet"); map entries in each
 machine's `read` and `write`; packing rules between word sizes; device
 registers as map targets; locks shared across machines.
 

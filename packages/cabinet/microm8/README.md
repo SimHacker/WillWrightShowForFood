@@ -8,8 +8,8 @@ apart here:
   Each applies to their `master` with `git apply` and is marked for upstream or for us.
   Anything for upstream goes to them as a pull request, after asking.
 - **Our packaging of it**: building their Go, with our patches, as a WebAssembly module, and the
-  cabinet's Svelte component, reactive state and panels around it. The plan and the API are in
-  [MICROM8.md](../MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly); that code
+  cabinet's Svelte component, reactive state and panels around it. Built and running; the design and the API are in
+  [MICROM8.md](../MICROM8.md#microm8-as-a-webassembly-module-called-directly); that code
   lives in the cabinet, not in their tree.
 
 To work on the patches, clone their repo, apply them in order, and export them again when

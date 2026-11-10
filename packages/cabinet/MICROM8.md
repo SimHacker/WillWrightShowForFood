@@ -68,10 +68,10 @@ From loosest to tightest:
    debugger uses.
 3. **Contributions upstream**, if they want them: small, opt-in additions to the debug server (next
    section), so our views get the data they need without polling.
-4. **In the page, with direct calls.** A headless microM8 core compiled to WebAssembly, running
-   beside the PDP-7 in one tab, no sockets
-   ([proposal below](#proposal-microm8-as-a-webassembly-module-called-directly)). The most work, and
-   the best result; their call.
+4. **In the page, with direct calls. Built and running.** A headless microM8 core compiled to
+   WebAssembly from [our branch](microm8/README.md), running in the cabinet's page with no sockets
+   ([below](#microm8-as-a-webassembly-module-called-directly)). It is integrated less tightly
+   than the PDP-7, and that is enough for now.
 
 Linking their Go code into our TypeScript directly isn't an option short of WebAssembly. Talking to
 it over its own protocols is, and that keeps each project's code its own.
@@ -97,13 +97,23 @@ nothing changes unless it's turned on:
 - **Memory region typing hooks**: a place to say "this range is a Logo node space" or "this is a
   display list", which their debugger and ours can both use.
 
-## Proposal: microM8 as a WebAssembly module, called directly
+## microM8 as a WebAssembly module, called directly
 
 The tightest connection has no sockets at all: microM8's emulation core compiled to WebAssembly and
 loaded into the cabinet's SvelteKit component, with JavaScript and Go calling each other directly,
-the way the Micropolis engine runs in MicropolisCore. This is the main way the cabinet will run the
-Apple. We build it on [our branch](#a-branch-of-microm8) and run it in the page; if April and Melody
-want it, it goes back to them as a pull request.
+the way the Micropolis engine runs in MicropolisCore. This is how the cabinet runs the Apple: a
+headless //e built from [our branch](#a-branch-of-microm8) with our patches
+([microm8/](microm8/README.md)), driven from [src/microm8/microm8.ts](src/microm8/microm8.ts) in the
+browser and in Node, with disks, the game port and a Videx card, on hyperties.org at `/microm8/`.
+If April and Melody want it, it goes back to them as a pull request.
+
+Status: built, and good enough for now. It is integrated less tightly than the PDP-7: the
+cabinet drives it and reads its frame and status, but its memory isn't yet on the backplane's
+memory map and its CPU isn't behind the `Cpu` interface. Two longer projects, neither urgent:
+expose more of microM8's Go to the TypeScript wrapper (memory views, the trace, breakpoints), as
+patches on the branch; and, more ambitious, translate microM8's Go to TypeScript, so the Apple
+shares code and framework with the cabinet's other machines the way the PDP-7 does. The rest of
+this section is the design the build followed.
 
 **What's there to build on.** Go compiles to WebAssembly (`GOOS=js GOARCH=wasm`), and
 `syscall/js` lets Go register functions JavaScript can call and call JavaScript back. microM8

@@ -39,7 +39,7 @@ every view either of us builds works on both. It's the pattern that already runs
 [MicropolisCore](https://github.com/SimHacker/MicropolisCore): WebAssembly, callbacks into Svelte's
 reactive state, and zero-copy views of the map. It would sit behind a build tag and leave the desktop
 build alone; if cyanIIde already does this, even better
-([the proposal](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly)).
+([the proposal](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MICROM8.md#microm8-as-a-webassembly-module-called-directly)).
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 

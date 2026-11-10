@@ -76,14 +76,16 @@ without booting a DOS disk. microPAK is the nearest thing anywhere to the cabine
 ([features](https://paleotronic.com/software/microm8/features/))
 
 **Decision: use microM8, compiled to WebAssembly.** microM8 is the cabinet's inspiration and is
-now MIT-licensed, so the cabinet's Apple ][ will be microM8's own emulator rather than a new one.
-The plan: build its Go core (the 6502 is `paleotronic.com/core/hardware/cpu/mos6502`; the Apple
-][ hardware is under `paleotronic.com/core/hardware`) with `GOOS=js GOARCH=wasm`, and put it
-behind the backplane's `Cpu` interface and memory map. Not done yet, and not known yet: the
-microm8-cln repo has no browser build script (only WebAssembly variants of a few vendored
-libraries), its desktop renderer and audio will need replacing with the cabinet's panels, and
-Paleotronic's WebAssembly subset, cyanIIde, may show which parts already build. Ask April first;
-she wrote it ([emulation roundtable](../../repo-shows/emulation-roundtable/README.md)).
+now MIT-licensed, so the cabinet's Apple ][ is microM8's own emulator rather than a new one.
+Done: its Go core (the 6502 is `paleotronic.com/core/hardware/cpu/mos6502`; the Apple ][
+hardware is under `paleotronic.com/core/hardware`) builds with `GOOS=js GOARCH=wasm` from our
+branch and patches ([microm8/](microm8/README.md)), runs headless in the cabinet's page and in
+Node, and draws through the cabinet's canvas instead of its desktop renderer
+([MICROM8.md](MICROM8.md#microm8-as-a-webassembly-module-called-directly)). Good enough for now.
+Still to do, longer term: put its memory on the backplane's memory map and its CPU behind the
+`Cpu` interface by exposing more of its Go to the TypeScript wrapper, and perhaps translate the
+Go to TypeScript. Anything for upstream goes to April first; she wrote it
+([emulation roundtable](../../repo-shows/emulation-roundtable/README.md)).
 
 We have done this kind of integration before.
 [MicropolisCore](https://github.com/SimHacker/MicropolisCore) compiles SimCity's C++ simulation
@@ -96,8 +98,8 @@ the build and the cost of calls across the boundary have to be measured, not ass
 
 Then the Apple ][ joins the cabinet's machines with our panels (memory, trace, source maps, the
 pointer as an input device), and ROADMAP §13's mash-ups (the keyset and the glove as Apple
-paddles) have a machine to run on. apple2js and Apple2TS stay as references and as a fallback 6502
-in TypeScript if the WebAssembly build stalls. Credit microM8 in the UI and in the source headers.
+paddles) have a machine to run on. apple2js and Apple2TS stay as references for a TypeScript
+translation. Credit microM8 in the UI and in the source headers.
 ROMs are Apple's: load them from the user, as microM8 and the others do, never commit them.
 
 **Phosphor, borrowed:**

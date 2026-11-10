@@ -39,7 +39,7 @@ with its optional per-tile function ([tile-functions.md](https://github.com/SimH
 - **80 columns and double hi-res**, through the auxiliary memory bank, when the Apple has it.
 
 Each is the same device type with a different codec and configuration, and microM8's screens could
-come in the same way, through its [WebAssembly module](MICROM8.md#proposal-microm8-as-a-webassembly-module-called-directly).
+come in the same way, through its [WebAssembly module](MICROM8.md#microm8-as-a-webassembly-module-called-directly).
 
 ## Configuration
 
