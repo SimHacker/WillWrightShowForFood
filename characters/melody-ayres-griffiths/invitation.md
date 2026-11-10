@@ -62,7 +62,7 @@ Mirror and Wizardry: each adds its own subdirectory to your Soul City character'
 Little Computer Person, the Mind Mirror life, the Wizardry adventurer), imports back into any copy
 of the game, and can move what one game knows about a character into another. Underneath is a
 TypeScript library that reads and writes Apple ][ disk images: DOS 3.3, ProDOS and UCSD Pascal
-volumes, raw blocks for Forth screens, 2MG, and WOZ decoded to sectors
+volumes, raw 512-byte blocks, 2MG, and WOZ decoded to sectors
 ([APPLE2.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/APPLE2.md)).
 So a page can fill in a template disk, boot it in microM8, fish out what the game wrote, edit it,
 write it back, and restart the Apple with the updated disk.
