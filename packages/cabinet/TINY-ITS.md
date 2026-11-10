@@ -466,6 +466,24 @@ another. The browser front end adds pie menus, help, and a panel of all your job
 interpreter. The parallel part is the VMs, which the backplane steps. It needs only a teletype,
 no display: the cabinet's KSR-33 panel, a terminal on the server, or a PDP-7 VM typing at it.
 
+**HACTRN had the page half of this.** From [DDT
+ORDER](https://github.com/PDP-10/its/blob/master/doc/_info_/ddtord.1462):
+
+- `:CORBLK FRESH|NONE|PURE|IMPURE <addr>` creates, deletes, purifies or unpurifies the page
+  holding `<addr>` in the current job.
+- `:CORTYP <addr>` describes that page. `:CORPRT` runs `:CORTYP` over every page of the job.
+- `:UNPURE <addr>` and `$$^M` make a pure page writable. With `..UNPURE` set, as it is by
+  default, a deposit into a pure page unpurifies it and types `:UNPURE <addr>`.
+- `.PMAP+<n>` examines page-map word `<n>`.
+- `:PDUMP` dumps a program so that every job that loads it shares its pure pages.
+
+DDT ORDER lists no command to map a page from one job into another, though the `CORBLK`
+system call did it
+([.CALLS](https://github.com/PDP-10/its/blob/master/doc/sysdoc/_calls.127)). Its source could
+be another job, a disk file, a page of physical memory (`%JSABS`), or the TV video buffer
+(`%JSTVB`, as in [MAPPING.md](MAPPING.md)), with public and private pages deciding who got write
+access. tiny-its makes the cross-machine map a command.
+
 **Shared memory and locks.** The per-VM sharing config and the implicit locks in
 [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module) are the state that
 tiny-its commands edit. The YAML is the saved form. Commands cover:

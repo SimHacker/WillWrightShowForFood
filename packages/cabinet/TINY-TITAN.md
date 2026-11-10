@@ -214,9 +214,15 @@ a copy ([CORE-LINKS.md](CORE-LINKS.md)).
 
 ### Interrupting messages
 
-ITS jobs talked through core links, a device you opened like a file. The interrupting kind woke
-the receiving job. That is how `:SEND` put a line on someone's screen, and how one Lisp could
-evaluate something in another. The tiny-titan device can do the same for VMs that ask for it: a
+ITS jobs talked through core links, a device you opened like a file
+([ITS CLO](https://github.com/PDP-10/its/blob/master/doc/sysdoc/clo.100)). Two jobs that opened
+`CLO:FOO;BAR BAZ`, one for input and one for output, were joined by a one-way stream with a
+buffer of about 100 words. `CLU` was the same but would not create a link. The interrupting
+pair was `CLI` and `CLA`. A sender opened `CLI:<uname> <jname>`, which gave that job the
+`%PICLI` interrupt, and the receiver opened `CLA:` to read the message and learn who sent it.
+That is how `:SEND` put a line on someone's screen: DDT opens `CLI:<user> HACTRN`, and the
+receiving HACTRN prints it. Core links are also how one Lisp could evaluate something in another. The
+tiny-titan device can do the same for VMs that ask for it: a
 new IOT enables a link interrupt, and an arriving message raises the PDP-7's program interrupt,
 so the handler runs without polling. It is per-VM configuration and off by default. PIXIE
 services the link with interrupts off, and its interrupt routine at location 1 knows nothing of
@@ -226,8 +232,8 @@ it. Two kinds of message ride it:
 - **eval:** a request whose reply comes back to the sender: a Forth word run in another Forth, a
   Lisp form in another Lisp, a tiny-its command on another node.
 
-Addresses are node, VM, handler: `CAMBRIDGE:FORTH:ON-DRAW`. To check: the ITS core-link device
-names and how `:SEND` used them, in the ITS documentation.
+Addresses are node, VM, handler: `CAMBRIDGE:FORTH:ON-DRAW`, as `CLI:` addressed a job by
+UNAME and JNAME.
 
 ### Device events are messages too
 
