@@ -135,6 +135,47 @@ and LOAD of a whole core image as files, which gives every program save and rest
 Every rung below is the same `BlockletHost` with more behind it. The device and the 1972
 software never change.
 
+### One Titan for every machine
+
+The name outgrew Cambridge's Titan. tiny-titan is one small file, and the host behind every
+machine in the room: the PDP-7s, the Apple ][, the PDP-10 and the PDP-11. There is one per realm
+(a browser tab, a node process), reachable as a global, so any device gets to it directly
+instead of through a CPU:
+
+    import { titan } from "./titan.js";        // the realm's one Titan, made on first use
+    titan.call("drawing.send", args, source);  // the 340 panel's Send button, a link card, a test
+
+This is the one exception to the backplane rule that plugins never see each other. Devices
+still don't see each other: they see Titan, and anything between them goes through it. Titan
+holds what is shared: the file mounts, the memory map (domains and links,
+[CORE-LINKS.md](CORE-LINKS.md)), the drawing store, the service registry, the machines' clocks,
+and the realm's end of tiny-bus. Because every machine meets there, it is where time and space
+are managed. Each machine's cycle count runs at its own speed and can be kept in step or replayed
+(`clock`, tiny-tape). Each machine's memory can be mapped into another's.
+
+Each machine reaches Titan through a door in its own idiom. Behind every door is the same CALL
+(below), with the request block in the machine's own word size. Titan's codecs convert widths,
+character sets and number formats ([CORE-LINKS.md](CORE-LINKS.md#codecs-what-the-words-mean-on-each-side)),
+so numbers arrive native: 18 bits from a PDP-7, 36 from a PDP-10, 16 from a PDP-11, 8 and 16
+from an Apple ][.
+
+| machine | door |
+|---|---|
+| PDP-7 | device 24 CALL; the 1972 link on 22–23 |
+| Apple ][ | a slot card: soft switches at `$C0n0` take the block address and start the call, a status switch is the flag |
+| PDP-10 | a device on the KA10 I/O bus ([PDP10.md](PDP10.md#the-io-bus-is-not-the-pdp-7s)): `DATAO` the block address, `CONO` to start, `CONSO` on the done flag |
+| PDP-11 | a Unibus device: a block-address register and a CSR with GO and READY bits, an interrupt on READY if enabled |
+| microM8, other programs | no card: the hub reaches them over MCP, HTTP or WebSocket ([below](#the-hub-for-every-emulator)) |
+
+Serial lines, modems and network interfaces stay ordinary devices on their own machines, with
+their own registers, so period software drives them unchanged. Titan can be what is on the
+other end of one: a serial line's far end can be a Titan port.
+
+Singular per realm, not alone. Two tabs or a tab and a server are two Titans joined over
+tiny-bus, each the host for its own machines. A test makes its own with `new Titan()`, so tests
+don't share state. Robust-first, as the stub is now: with no Titan, every door answers "not
+here" and no machine wedges.
+
 ### One call for the host: CALL on device 24
 
 Every interface the emulator offers a PDP-7 program goes through one operation on device 24,
