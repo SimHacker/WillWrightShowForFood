@@ -253,9 +253,27 @@ on Titan that saves it, loads it, and converts it for whoever asks.
 
 The host turns a display list into strokes with `preview340`, the throwaway 340 that draws one
 pass without running the CPU. Each stroke keeps its provenance: display address, DJS
-subpicture, tag. For a PIXIE drawing, the geometry comes from its compiled display file. The
-rings travel as rings, JSON or YAML until the extraction rung reads geometry from rings
-directly.
+subpicture, tag.
+
+A PIXIE drawing needs no new capture code. The cartridge already names its ring area by symbol
+(`rings: { beg, end, roots }`, [CARTRIDGES.md](CARTRIDGES.md)). The applet's `captureRings`
+snapshots it out of core, and the RINGS viewer exports that snapshot as PXID wire format, JSON
+or YAML. Send uses the same snapshot. Geometry from the rings comes in two steps, both planned:
+
+1. **Let 1972 SYMELEC do it.** `implant` already puts a ring image into a running machine's
+   ring area. Implant the drawing into a scratch SYMELEC, let its own down-compiler build the
+   permanent display file, and read that with `preview340`. This needs no knowledge of what the
+   blocks mean, and it is right by construction.
+2. **Port the walk.** Read the down-compiler in the
+   [listing](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt)
+   and write the same walk in TypeScript over a `RingImage`: element blocks to strokes, with
+   subpicture names and hierarchy kept. The acceptance test is step 1: for every drawing, the
+   TypeScript walk and the scratch SYMELEC give the same strokes. The port adds what the display
+   file has lost: names, so the Logo output can be one procedure per subpicture (`TO SQUARE`)
+   instead of one flat list of moves.
+
+Until step 1, a PIXIE drawing's geometry comes from the display file SYMELEC compiled before it
+was sent, and the rings travel as rings, JSON or YAML.
 
 Formats out:
 

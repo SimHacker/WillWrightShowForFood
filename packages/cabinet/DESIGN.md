@@ -268,6 +268,11 @@ Built in `packages/pixie` (16 tests pass, 3 Oct 2026):
 - a 3D ring renderer (`scene`, `view`, the holodeck plugin), shown in the cabinet's RINGS panel
   with roots per program; rings are Tiny Titan's file format.
 
+Extraction is planned in two steps ([TINY-TITAN.md](TINY-TITAN.md#drawings-converted-for-each-consumer)):
+the cartridge's `rings` symbols already give the snapshot, a scratch SYMELEC with the snapshot
+implanted runs its own down-compiler for the geometry, and a TypeScript port of that walk is
+checked against it stroke for stroke.
+
 Not built: the Titan → PDP half, so a structure made in TypeScript has not yet been drawn by
 PIXIE. `scripts/trace-serveback.mjs` is the diagnostic written ahead of it: it boots SYMELEC
 and photographs the rings, then stops at `BlockletHost.serving`, which doesn't exist yet.
