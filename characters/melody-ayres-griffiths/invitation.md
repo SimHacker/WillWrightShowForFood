@@ -60,7 +60,12 @@ and no need to know a 1985 keyboard convention. The disks live in memory too, so
 read and write the saves the guest just wrote. To start, they wrap Little Computer People, Mind
 Mirror and Wizardry: each adds its own subdirectory to your Soul City character's directory (the
 Little Computer Person, the Mind Mirror life, the Wizardry adventurer), imports back into any copy
-of the game, and can move what one game knows about a character into another.
+of the game, and can move what one game knows about a character into another. Underneath is a
+TypeScript library that reads and writes Apple ][ disk images: DOS 3.3, ProDOS and UCSD Pascal
+volumes, raw blocks for Forth screens, 2MG, and WOZ decoded to sectors
+([APPLE2.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/APPLE2.md)).
+So a page can fill in a template disk, boot it in microM8, fish out what the game wrote, edit it,
+write it back, and restart the Apple with the updated disk.
 
 That is one bridge, the Apple ][, with sub-bridges for each game, inside a larger plan I call
 SoulAngel: one companion for many machines and many games, with bridges to the PDP-7 and other
