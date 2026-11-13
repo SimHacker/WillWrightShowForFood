@@ -299,12 +299,12 @@ close, and a way to show Heinz his 1969 data structures running.
 Panes, all linked, all driven by the running cabinet:
 
 1. **Tube** — the live 340, as now.
-2. **Core strip** — `BEG..END` as a bar, one tick per word, coloured by
+2. **Core strip** — `BEG..END` as a bar, one tick per word, colored by
    class (atom, name, NIL, block, nonitem, free list, GC mark). Watch it
    fill as the pen draws and watch the collector sweep. A second layout:
    all of core on a Hilbert curve (8K words as two 64×64 squares end to
-   end), so neighbouring addresses stay neighbours on screen with no
-   jumps, coloured by class, or by read and write heat from shadow
+   end), so neighboring addresses stay neighbors on screen with no
+   jumps, colored by class, or by read and write heat from shadow
    memory.
 3. **Ring graph** — elements as nodes, pointers as edges, rings drawn as
    literal circles; printnames shown as strings, blocks as arrays.
@@ -365,7 +365,7 @@ Split it at `moveto`: the path goes to an emitter held in a variable and run wit
   anything it drew. Serve-back is the missing piece (`BlockletHost.serving`).
 - **Symbols:** a Forth word that draws a symbol (a resistor, a battery, a gate) builds a
   SUBPICTURE once. In the 340 back end it is a 347 subroutine called by `DJS`, so every
-  instance shares one copy of the words; in the ring back end it goes in the catalogue, and
+  instance shares one copy of the words; in the ring back end it goes in the catalog, and
   PIXIE's INSTANCE places it in drawings. Forth draws the parts, PIXIE composes them.
 
 Order: the emitter seam, with Mitch's tests passing under SIMH and ours; the TypeScript twin
@@ -418,7 +418,7 @@ palette of tools for the pointer, one active at a time, each a plain object with
 - **Corner**: today's ✋.
 - **Select**: drag a rectangle, or shift-click, to collect corners, strings and subroutine calls;
   the selection is a set of display addresses, drawn as handles.
-- **Move, rotate, scale**: about a pivot the user places (default: the selection's centre).
+- **Move, rotate, scale**: about a pivot the user places (default: the selection's center).
   Each transforms the selection's points and re-encodes the words that hold them: vector words
   for corners, the point words in front of a string or a `DJS` call for a whole thing. A word
   that can't hold the result is refused and shown red, as now. Rotating a character string
@@ -530,7 +530,7 @@ the graph. Each node remembers the words it came from.
 | a repeated shape | one subroutine and `DJS` per instance | 1 per instance |
 | a short wiggle | increment mode | 1 per 4 steps |
 
-It chooses the scale per run that minimises words without losing a point that isn't on that
+It chooses the scale per run that minimizes words without losing a point that isn't on that
 scale's grid, splits a step that won't fit, and merges dark moves that cancel.
 
 **Where the result goes** depends on what kind of words were edited, which the editor knows from
@@ -799,7 +799,7 @@ path. Sketch of the 14:
 | 21 | watch 340 fetches | trap |
 | 22–25 | lock section, 15 locks (replaces the separate byte per word) | trap |
 | 26 | executed (code coverage, like `ccov7` in pdp7-unix) | sticky |
-| 27 | written since boot (a read without it is an uninitialised read) | sticky |
+| 27 | written since boot (a read without it is an uninitialized read) | sticky |
 | 28 | dirty since last snapshot | sticky |
 | 29–31 | spare | |
 
@@ -817,7 +817,7 @@ from, a short history per word. That is the shape of Valgrind's memcheck
 and AddressSanitizer, here for free because we own the machine. It
 covers all memory, not only shared segments, and it feeds the panels:
 break on a word, show who last wrote it and from which source line, and
-colour the core strip by heat or coverage.
+color the core strip by heat or coverage.
 
 What changes in `Pdp7`: `write` must keep the tag bits and replace only
 the low 18 (`core[a] = (core[a] & ~0o777777) | word`), every read the
@@ -1228,8 +1228,8 @@ sees how pixels are pulled out. All the cleverness is on the TypeScript side.
 
 1. *Cells.* The CAM6 device, or the PDP-7 rule in assembly, or Forth, steps cell buffers in core
    through lookup tables (the CAM-off above).
-2. *Cell renderer.* A device pointed at a cell buffer, a colour map and a framebuffer writes
-   pixels from cells: state through the colour map, each cell as a block of pixels. Colour-map
+2. *Cell renderer.* A device pointed at a cell buffer, a color map and a framebuffer writes
+   pixels from cells: state through the color map, each cell as a block of pixels. Color-map
    animation (cycling, fading, blink) is the renderer changing the map, not the cells, so a still
    automaton can shimmer, after CAM6.js's colormap generators.
 3. *Framebuffer.* Shows any memory as a picture on a canvas beside the tube.
@@ -1243,8 +1243,8 @@ sees how pixels are pulled out. All the cleverness is on the TypeScript side.
 | colbytes | step from one pixel to the next along a row, in bytes (can skip, for interleaving) |
 | rowbytes | step from one row to the next, in bytes; negative flips vertically |
 | flip h / v | mirror, cheap since the stride is already there |
-| format | monochrome (1 bit), indexed (any byte size up to 18) through a colour map, or direct RGB (3 fields) |
-| colour map | another byte pointer: a table of RGB entries in shared core, so programs animate it by writing it |
+| format | monochrome (1 bit), indexed (any byte size up to 18) through a color map, or direct RGB (3 fields) |
+| color map | another byte pointer: a table of RGB entries in shared core, so programs animate it by writing it |
 
 With byte pointers and strides, one bank can hold several interleaved planes, a framebuffer can
 be a window into a larger picture, and the same cells can be viewed as monochrome, indexed or RGB
@@ -1254,20 +1254,20 @@ by three descriptors at once. Layouts that fit a 32K machine are in
 
 **Eight displays, eight pens.** The device holds eight descriptors, each its own canvas, so one
 machine can show eight views at once: the same cells as monochrome, indexed and RGB, a zoomed
-window, a mirror, a colour plane alone. Any pen can point at any display. On a raster, a pen hit
+window, a mirror, a color plane alone. Any pen can point at any display. On a raster, a pen hit
 needs no beam: the device reports which display, the pixel, and the byte pointer of the word and
 bits under it, so a program knows exactly which cell it touched, through the same pen IOTs and
 `IDPN`. Eight people, eight pens, eight screens, one PDP-7.
 
 **Tile renderer.** Each cell state picks a *tile*, a small picture from a tile table in core, so
-cells tessellate into a pattern: a fluffy, textured colour map. A colour map is the special case
+cells tessellate into a pattern: a fluffy, textured color map. A color map is the special case
 of 1×1 tiles, so there is one renderer, not two: cells × tile size = image. 16² cells of 16²
-tiles make a 256² image; 256² cells of 1×1 tiles are the same image as a colour-mapped screen;
+tiles make a 256² image; 256² cells of 1×1 tiles are the same image as a color-mapped screen;
 anything between trades cell resolution for texture. Tiles are framebuffer descriptors too, so a tile can be
-indexed through its own colour map, and animating either the tiles or the map restyles a running
+indexed through its own color map, and animating either the tiles or the map restyles a running
 automaton without touching a cell. The raster twin of the 340's tiles-as-subroutines below, and
-of CAM6.js's tile views. Tile selection can also use the neighbours (a cell's state plus which
-neighbours are alive picks the tile), so edges join up into continuous shapes, Wang-tile style.
+of CAM6.js's tile views. Tile selection can also use the neighbors (a cell's state plus which
+neighbors are alive picks the tile), so edges join up into continuous shapes, Wang-tile style.
 
 **Sprites** (later): a short list of descriptors (position, size, byte pointer, transparent
 index) composited over the framebuffer, read from core every frame, so a program moves a sprite
@@ -1281,7 +1281,7 @@ browser frame.
 
 **The state is the display list.** Each cell is one `DJS` word whose target is a tile, a 340
 subroutine that draws the cell's state and moves the beam one cell on. A generation step rewrites
-those words, and the rule reads a neighbour from the low 13 bits of its word. There is no separate
+those words, and the rule reads a neighbor from the low 13 bits of its word. There is no separate
 state array, so an edit to a cell is an edit to running display code: the pen, the map editor or a
 script writes a word and the 340 draws it on its next refresh.
 
@@ -1293,20 +1293,20 @@ next step reads.
 
 **Wrapping without bounds checks.** Each buffer is two cells wider and taller than the grid. Before
 a step, the edge copy writes each border cell from the opposite edge, so the inner loop reads its
-eight neighbours at fixed offsets (±1, ±stride, ±stride±1) and never tests for an edge. Will Wright
+eight neighbors at fixed offsets (±1, ±stride, ±stride±1) and never tests for an edge. Will Wright
 suggested this one; it came down through CAM6.js's predecessors. Other edge treatments, clamp or reflect, are
 only a different edge copy.
 
 **Layout of a row.** `[P] [L] [cells] [R]`, stride W+3:
 
 - `P` is the 340 point word that puts the beam at the row's start. No cell reads it: the nearest
-  neighbour offsets from row cells land on `L` and `R`.
+  neighbor offsets from row cells land on `L` and `R`.
 - `L` and `R` are the border cells. The beam draws them too, as a one-cell frame outside the grid.
 - The frame shows the wrap. The edge copy writes border calls to a dim twin of each tile, one
   address bit apart, and the rule masks that bit, so the frame is a ghost of the far edges and
   clamp or reflect is visible as it runs.
 
-**Tiles as numbers.** Tiles sit at `T + state * size` with `size` a power of two, so a neighbour's
+**Tiles as numbers.** Tiles sit at `T + state * size` with `size` a power of two, so a neighbor's
 state is its target minus `T`, shifted; a two-state rule like Life only compares with the live
 tile's address. A 32 by 32 grid is 34 rows of 35 words, 1,190 words a buffer and 2,380 for the
 pair, plus the tiles.
@@ -1326,8 +1326,8 @@ eight bits of state and its own modified bit.
   cells changed this generation; the tile engine rewrites those cells' `DJS` words and clears
   the bits.
 
-- **A parity word says which layer is now.** A step reads the neighbours' now layer and writes
-  each cell's other layer, then flips parity. Neighbours' now layers are never written during
+- **A parity word says which layer is now.** A step reads the neighbors' now layer and writes
+  each cell's other layer, then flips parity. Neighbors' now layers are never written during
   the step, so one array is safe where one buffer of whole states was not. No swap, no copy.
 - **One rule for everyone else: now is what you see and what you edit.** The tile engine
   renders the now layer; the pen, the map editor and scripts write the now layer; the next step
@@ -1346,7 +1346,7 @@ eight bits of state and its own modified bit.
   state words plus 1,190 display words for 32 by 32), but a cell has 256 states, not as many as
   there are tiles.
 - **Reversible rules come free.** Fredkin's second-order rules compute
-  `next = f(neighbours now) XOR past`, and the past is the very layer being overwritten, in
+  `next = f(neighbors now) XOR past`, and the past is the very layer being overwritten, in
   the same word. Flip parity once without stepping and the same rule runs backward:
   Toffoli and Margolus's reversible CAM-6 rules, run forward and back on a PDP-7, with
   `characters/norman-margolus` to check the details.
@@ -1367,7 +1367,7 @@ subroutine. So a rule brings its own tiles, drawn in Forth with the turtle.
   and `moveto`. The turtle's own vectors are relative already.
 - **A tile table, not a tile per state.** 256 states times a tile slot is more core than there
   is, so state indexes a table of tile addresses and many states share a tile. That table is the
-  340's colour map: CAM6.js's colormap generators, with strokes instead of colours, and swapping
+  340's color map: CAM6.js's colormap generators, with strokes instead of colors, and swapping
   the table restyles a running automaton without touching a cell.
 - **Rules carry their tiles.** A rule cartridge (CARTRIDGES.md) holds `rule.fs` and `tiles.fs`;
   Life might draw a filled square and an empty dot, a heat rule a ladder of hatchings, Langton's
@@ -1622,7 +1622,7 @@ with `.ISA` and `.TYPE`.
    (fast blue flash for the pen, slow green for the human) is a stretch,
    never a blocker. **Calibrated against the real tube**: test-pattern tapes for sn 129
    (each intensity, a timed single flash, refresh rates down to flicker, a moving dot), filmed
-   with locked exposure, frame rate and white balance, give brightness per intensity, colour,
+   with locked exposure, frame rate and white balance, give brightness per intensity, color,
    and the two decay curves. Fit the shader's parameters (the `PHOSPHOR` knobs, then the
    uniforms) to the films; check the fit on the demos, with the emulator's run rendered beside
    the film frame by frame. The draft letter asks for the films

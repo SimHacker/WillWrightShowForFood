@@ -145,7 +145,7 @@ the machinery described in Section 2 above.
 
 ## 4. Access to the Titan disk file from the PDP-7
 
-Access to the disk can be achieved in several ways. Three are set out below. I favour
+Access to the disk can be achieved in several ways. Three are set out below. I favor
 the first for initial implementation. The second could be implemented later if found
 necessary.
 

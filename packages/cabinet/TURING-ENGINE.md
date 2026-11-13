@@ -171,7 +171,7 @@ A Turing machine's tape is unbounded; core is not. The window is the resident pa
 ways to handle the head leaving it, chosen by TMLM.
 
 **The engine pages (the default).** When the head leaves the window, the engine itself spills the
-window into a run-length-encoded store ([`RleTape`](src/plugins/turing.ts)), recentres the window
+window into a run-length-encoded store ([`RleTape`](src/plugins/turing.ts)), recenters the window
 on the head, and loads the cells back. It then updates ORIGIN and HEAD in the TCB. Turing machine
 tapes are mostly blank and long runs of one symbol, so RLE is compact. Lookups are binary searches, and a store splices only the
 runs it overlaps. A three-cell window gives the same tape as a roomy one (the "auto paging" test).

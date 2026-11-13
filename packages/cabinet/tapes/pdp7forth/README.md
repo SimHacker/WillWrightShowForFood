@@ -1,7 +1,7 @@
 # PDP-7 Forth, by Mitch Bradley
 
 A small Forth for the PDP-7, from [MitchBradley/pdp7forth](https://github.com/MitchBradley/pdp7forth)
-(MIT licence, `LICENSE` here), commit `96c3202` of 26 September 2026. Its README and `DESIGN.md`
+(MIT license, `LICENSE` here), commit `96c3202` of 26 September 2026. Its README and `DESIGN.md`
 explain it. Among the ideas: each cell of a colon definition is a PDP-7 instruction run by `xct`,
 so NEXT is three instructions.
 

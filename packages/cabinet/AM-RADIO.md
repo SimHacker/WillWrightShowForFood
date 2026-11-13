@@ -143,7 +143,7 @@ What it changes here:
   the room was also hearing. Tuning then behaves as it did: the station, a whistle sliding in
   pitch as the dial nears a harmonic, the louder signal modulating the weaker, the machine's tune
   ring-modulated by the beat. Detuning alone only changes how much of the sidebands the passband
-  keeps, which still colours the timbre, more gently.
+  keeps, which still colors the timbre, more gently.
 - **The sources map straight across.** Each memory-cycle harmonic h·571,428 Hz near the dial is
   one of Kline's transmitters, and the probe's activity score, decimated to 48 kHz, is its
   amplitude: the mean is the carrier, the wobble is the modulation, and it never goes negative.
@@ -237,7 +237,7 @@ The approaches are not rivals. They answer different questions and can share one
 
 ## What we would ask of museums with a running machine
 
-One careful recording is worth more than any amount of modelling. For SDF's sn 129, or any
+One careful recording is worth more than any amount of modeling. For SDF's sn 129, or any
 PDP-7, PDP-9 or PDP-10 with a 340:
 
 1. **A known program.** Munching Squares with its switch settings written down, or better, a

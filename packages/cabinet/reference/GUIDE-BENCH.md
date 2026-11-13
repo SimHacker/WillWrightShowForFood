@@ -8,7 +8,7 @@ From the hardware up to the page. All TypeScript and Svelte; nothing below JavaS
 | Backplane | `packages/cabinet/src/cabinet.ts`, `bus.ts` | `Cabinet.step()`: OR every device's `irq()` onto one line, step the CPU, hand any IOT to the device that claims its code, `tick` every device. Devices never see each other |
 | CPU | `plugins/pdp7.ts` | 18-bit words in a `Uint32Array`, 4K to 32K in 8K banks with extend mode, one interrupt level (PC to 0, jump to 1), auto-index 10–17, `XCT`, the EAE ops programs use. Ported from SIMH's `pdp18b_cpu.c` |
 | Display | `plugins/type340.ts` | The 340 as a processor: fetches display words from core, runs PARAM, POINT, VECTOR, VCONT, INCR, CHAR (Type 342 glyphs from SIMH), SUBR (Type 347 `DJS`/`DJP`/`DDS`, one save register). Emits **segments** with provenance (display address, cycle, frame, subroutine, pen bit, glyph); a frame closes at each `IDLA`. Owns the pen IOTs (dev 07) because the hardware did, plus the `IDPN` extension (dev 11) |
-| Pens | `plugins/lightpen.ts` | Input adapters, not devices: a position, an aperture, a colour. Any number, ORed into one pen input; `IDPN` tells which fired |
+| Pens | `plugins/lightpen.ts` | Input adapters, not devices: a position, an aperture, a color. Any number, ORed into one pen input; `IDPN` tells which fired |
 | Other devices | `teletype.ts`, `clock.ts`, `papertape.ts`, `rb09.ts`, `tiny-titan.ts` | Each is a `Device`: the IOT codes it claims, `iot()`, `tick()`, `irq()` |
 | Assemblers | `asm/` | DEC and Cambridge dialects, `as7` for Mitch's Forth and UNIX; every word tied to its source line |
 | Tools on core | `monitor.ts`, `disasm.ts`, `source.ts`, `trace.ts`, `core.ts`, `media.ts`, `session.ts` | Peek and poke by symbol, disassembly, source maps, the instruction trace, whole-core raw/JSON/YAML, SVG and YAML captures, recorded sessions that replay to the same core |
@@ -25,7 +25,7 @@ the house demo is a test SYMELEC has to pass.
 
 **Plans above the bench** (designs in the cabinet's DESIGN.md, ROADMAP.md, MANIFESTO.md):
 
-- *Phosphor and colour:* [GUIDE-PHOSPHOR](GUIDE-PHOSPHOR.md).
+- *Phosphor and color:* [GUIDE-PHOSPHOR](GUIDE-PHOSPHOR.md).
 - *Editing any 340 program's screen:* the universal drawing and a paused drawing editor beside
   the low-level instruction editor ([DESIGN.md](../DESIGN.md#a-universal-340-editor)); the
   longer-term questions in [DRAWING-CONSTRAINTS.md](../DRAWING-CONSTRAINTS.md).

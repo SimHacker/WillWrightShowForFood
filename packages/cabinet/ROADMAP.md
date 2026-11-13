@@ -114,7 +114,7 @@ it never talks over a screen reader.
 | 4 | what do the 17 switches do? | the console's ACCUMULATOR switches, read by `OAS`/`LAS`. SYMELEC never reads them; DUEL's players fly with them | label them per tape, and say so on SYMELEC's page |
 | 5 | a line printout of the house | 🖨️ saves the tube as SVG, with DJS subpictures as groups; `toYaml` gives the display list as text | add YAML and PNG to the button, and tell him |
 | 6 | the RSP data of his Bayesian network | PIXIE exchange, [TAGS-AND-PIES §7](TAGS-AND-PIES.md#7-pixie-as-the-exchange-format) | walk the structure from core, export as YAML and `encodeTransfer`; a "save structure" button |
-| 7 | a lit line catches the cross | authentic 1972 behaviour, and he agrees he'd now program it differently | none; it stays, documented in TRACKING.md |
+| 7 | a lit line catches the cross | authentic 1972 behavior, and he agrees he'd now program it differently | none; it stays, documented in TRACKING.md |
 
 ## 5. Forth that draws and speaks
 
@@ -193,7 +193,7 @@ can share the screen:
   pen down.
 - **A game loop in Forth**, paced by the clock (`wait`, §5): read controls, move, test hits with
   `distance`, aim with `towards`, redraw by poking. Thrust adds `cos`/`sin` of the heading to the
-  velocity; a star at the centre pulls with `atan2` and `distance`.
+  velocity; a star at the center pulls with `atan2` and `distance`.
 - **Controls**: the console switches, as DUEL reads them, so the same `keys` table, the keyboard
   and two game controllers (§14) fly both ships.
 - **The lineage**, credited on the page: Spacewar! on the PDP-1 (1962), DUEL on Cambridge's PDP-7
@@ -210,7 +210,7 @@ coral grows from a seed. On the 340 it is a demo for the tube and the slow phosp
 - **The cluster is a grid of bits**, 64 by 64 in 128 words of core, for the stuck test, and a
   display list that only grows. A walker that sticks stamps its shape (or a point) into it at
   its spot and is reborn on the launch circle.
-- **Colour by age.** Intensity steps down as the cluster grows, so the oldest branches are
+- **Color by age.** Intensity steps down as the cluster grows, so the oldest branches are
   brightest and the phosphor shows its history.
 - **Forth needs `random`.** Neither the kernel nor turtle.fs has one; HILO counts a seed while it
   waits for a key. A 17-bit linear feedback shift register in a few words of Forth is enough,
@@ -234,7 +234,7 @@ display list is a fixed 1,024 words at 1260. Budget for sprites:
   since the 340 addresses 13 bits ([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md)).
 
 **Order: pre-rotated first, then live transforms.** Start with the 24 precomputed rotations,
-which only rewrite a `DJS` target per turn. Then dynamic, about the sprite's centre: one rotate
+which only rewrite a `DJS` target per turn. Then dynamic, about the sprite's center: one rotate
 and scale pass over the ideal points, `x' = (x cos − y sin) * s`, the same `*/` the turtle uses,
 re-encoded into the slot. Scale up to the 127 limit per step, refused past it. Intensity is a
 PARAM word at the head of the slot (`intensity`, 0–7, the 340's own eight levels), so fading,
@@ -266,13 +266,13 @@ cabinet's 340 takes any number of pens, so the party is the same thing on 1964 i
 
 **What is built.** The 340 takes a list of pens, all sharing the one LPHIT flag, as
 on the real hardware. IDPN (device 011, a cabinet extension) reports which pen fired
-([DESIGN.md](DESIGN.md), IOT table). Pens have colours (`PEN_COLORS`, pen 0 amber).
+([DESIGN.md](DESIGN.md), IOT table). Pens have colors (`PEN_COLORS`, pen 0 amber).
 The applet drives one pen from one pointer (`pressedId`).
 
 **Guests.**
 
 - **Every pointer is a pen.** Each `pointerId` (mouse, each finger, each stylus) gets
-  its own `LightPen`, coloured and labelled, created on press and kept while it
+  its own `LightPen`, colored and labeled, created on press and kept while it
   hovers. Two hands on a touch screen are two pens.
 - **Every user is a pen.** A watcher on another node ([DESIGN.md](DESIGN.md),
   watchers and pens) sends pen events over tiny-its; the host adds a pen for them.
@@ -280,14 +280,14 @@ The applet drives one pen from one pointer (`pressedId`).
 - **Every script is a pen.** A driver script (§8) takes `pen: n`, so a test or demo can
   play several users at once, and a recording stores which pen did what.
 - **Each pen is a vehicle** ([TAGS-AND-PIES §8](TAGS-AND-PIES.md#8-cursors-are-vehicles)):
-  a cursor in its colour with its owner's name, and its own coverage and hit feedback.
+  a cursor in its color with its owner's name, and its own coverage and hit feedback.
 
 **The show.** The LP370 diagnostic is the dance floor:
 
-- Upgrade the LP370 program so each hit is drawn in the colour of the pen that made
+- Upgrade the LP370 program so each hit is drawn in the color of the pen that made
   it (read with IDPN), with a per-pen hit count; stock LP370 still runs unchanged.
 - A party demo: three scripted guests at once. One drags the box corner, one sweeps
-  the lines, one holds still on a dot, so you see three trackers and three colours
+  the lines, one holds still on a dot, so you see three trackers and three colors
   sharing one flag, and where 1964's single flag makes them collide.
 - Then the Engelbart tributes from DESIGN.md: two pens drag two corners of one
   rectangle; two pies open at once; a quiver of eight wands.
@@ -304,7 +304,7 @@ per step, is the demo; the same script, recorded, is the replay.
 
 **Accept:** two scripted pens on LP370 produce hits tagged with the right pen numbers;
 two fingers on a touch screen drive two pens; a remote watcher's pen shows up in its
-own colour on the host and in the recording.
+own color on the host and in the recording.
 
 ## 8. Driving the UI
 
@@ -342,7 +342,7 @@ box and their strokes. Symbol names come from the assembler's symbol table.
 
 | call | does |
 |---|---|
-| `tapOn(item, where)` | pen down and up on the item; `where` is a point along a stroke, a fraction of the box, or "centre" |
+| `tapOn(item, where)` | pen down and up on the item; `where` is a point along a stroke, a fraction of the box, or "center" |
 | `penTo(x, y)` | move the pen without touching |
 | `dragAlong(path, duration)` | pen down, follow the path over time, pen up; interpolated as in §1 |
 | `key(text)`, `switches(n)` | keyboard and switch register |
@@ -350,7 +350,7 @@ box and their strokes. Symbol names come from the assembler's symbol table.
 | `as(pen, script)` | run calls with pen n, so one script plays several users (§7) |
 
 All of them are `async`, timed in machine cycles like `DemoPlayer` in
-[symelec-demo.ts](src/symelec-demo.ts), which this generalises: its `tap`, `drag`,
+[symelec-demo.ts](src/symelec-demo.ts), which this generalizes: its `tap`, `drag`,
 `glide` and `tapMenu` become calls on the driver, with `find` replacing hard-coded
 coordinates. So a script survives the picture moving.
 
@@ -418,7 +418,7 @@ in shape and in names, exactly:
 | **Slice** | a fixed direction; the slice count (4, 8, 12) is chosen first and does not change when items come and go |
 | **Item** | label, optional icon, and a command id with args ([§8](#8-driving-the-ui)), dispatched with `source: 'pie-menu'` |
 
-- **Selection** follows the model's §3: the slice comes from the angle from the centre,
+- **Selection** follows the model's §3: the slice comes from the angle from the center,
   and the item from the distance along the slice. Inside the numb radius nothing is
   selected; there is no outer limit, so moving further out only adds precision.
 - **First iteration:** one item per slice, which is exactly the NeWS 1.1 case. An empty
@@ -452,7 +452,7 @@ C# pie menus (`PieMenus/Misc/Unity3DPieMenu/PieMenu.cs`). Take their coverage, n
 their names:
 
 - **Three levels:** the pie, each slice, each item, every hook available at each, so
-  an item can preview itself while a slice highlights and the pie updates its centre.
+  an item can preview itself while a slice highlights and the pie updates its center.
 - **Lifecycle:** down, up, start, show (after mouse-ahead delay), update (every move,
   with direction and distance), enter and leave of a slice or item, pin and unpin
   (click-up mode), select, submenu, cancel, stop, and a timer for dwell.
@@ -486,12 +486,12 @@ APIs or naming conventions.
   width is 360/n. MicropolisCore's `sliceDirection` maps onto this; the skin converts.
 - **Label placement** (`layout`, line 366): each label sits at its slice angle on a
   circle of `LabelRadius`. Within 0.05 of straight up or down (|cos| < .05) it is
-  centred horizontally, above the point at the top and hanging below it at the bottom.
+  centered horizontally, above the point at the top and hanging below it at the bottom.
   Otherwise it is left-justified on the right half, right-justified on the left half,
-  and centred vertically.
+  and centered vertically.
 - **Label radius:** start at `LabelMinRadius` 25 and step out by `LabelRadiusStep` 5
-  until no two neighbouring label boxes overlap, then add `LabelRadiusExtra` 10.
-- **Pie radius:** the farthest label-box corner from the centre, plus `Gap` 9, plus
+  until no two neighboring label boxes overlap, then add `LabelRadiusExtra` 10.
+- **Pie radius:** the farthest label-box corner from the center, plus `Gap` 9, plus
   `Border` 3, rounded. The menu is a circle of that radius.
 - **Frame** (`PaintMenuFrame`, line 577): fill the circle white, then a black ring
   `Border` 3 wide inside the edge (even-odd fill between the two circles).
@@ -516,7 +516,7 @@ APIs or naming conventions.
 - **Screen edge:** a pie that would not fit is pushed on screen, and the pointer is
   warped by the same amount, so it stays over the same spot.
 - **Ker and Chunk** (`KerProc`, `ChunkProc`, lines 682–693): the adjust button (middle,
-  or a modifier on one-button devices) pulls the pointer back to the centre on press,
+  or a modifier on one-button devices) pulls the pointer back to the center on press,
   and pops back to the parent menu on release.
 - **Submenus** are items whose command opens a pie; they show where the button came up.
 - **Cursor:** the `beye` cursor (line 456) while the pie is up.
@@ -769,12 +769,12 @@ than the computer, as tiny-titan does
   (`hoverAt`), so grab the group, find the point words that open it, and poke those; a
   shared subroutine stays shared, since only the call site moves. Ephemeral like corners:
   PIXIE's next recompile puts its picture back.
-- **Colour.** Pens become a palette of RGB colours, one property per pen (`LightPen.color`,
+- **Color.** Pens become a palette of RGB colors, one property per pen (`LightPen.color`,
   today a CSS string from `PEN_COLORS`, becomes `{ r, g, b }`), editable in CONFIG; choosing a
-  pen or changing its colour are both allowed. What a pen draws (the turtle under that pen's
-  hand, an element PIXIE builds while that pen tracks) is painted in its colour, carried on the
-  segment as RGB, not an index. Default stays P7 green. Procedural colour later: gradients,
-  marching ants, fading blink, flicker; the WebGPU phosphor takes colour as a uniform.
+  pen or changing its color are both allowed. What a pen draws (the turtle under that pen's
+  hand, an element PIXIE builds while that pen tracks) is painted in its color, carried on the
+  segment as RGB, not an index. Default stays P7 green. Procedural color later: gradients,
+  marching ants, fading blink, flicker; the WebGPU phosphor takes color as a uniform.
 - **Watch the beam.** At slow speeds draw each segment growing from its start at the 340's own
   pace, using the cycle stamps segments already carry, with the beam's spot on top.
 - **Prefab controls for PIXIE.** Sliders and buttons outside the tube that drive PIXIE through
@@ -782,7 +782,7 @@ than the computer, as tiny-titan does
   scale matches, an intensity slider on `IN`, zoom as a tag-aware pan over the tube. They read
   the result from core by symbol (`BSWOR`, `MBLINK`) to stay in sync, and sit beside the memory
   panel, pokes and the teletype, so every level stays open. After Morgan Dixon and James
-  Fogarty's Prefab (2010), which reverse engineered GUIs from their pixels to add behaviour
+  Fogarty's Prefab (2010), which reverse engineered GUIs from their pixels to add behavior
   without the source; here the program's own buttons are the API.
 - **A 3D PDP-1 for the PDP-1 cabinet.** [PDP-1 Computer](https://sketchfab.com/3d-models/pdp-1-computer-2bf2f166747643eea4a82030b33e461e)
   by [eastcoastinteractive](https://sketchfab.com/eastcoastinteractive), made for the intro to
@@ -861,7 +861,7 @@ recorded wire became 32.
    already compiled, so it runs three more times.
 3. **Repeat by pressing.** Act out a pass, then press *repeat* five times: each press runs the
    last pass again and counts. When you stop, the count becomes the loop: `6 [ … ]`.
-4. **Afterwards.** You did four things, then realised they should loop. Select them in the
+4. **Afterwards.** You did four things, then realized they should loop. Select them in the
    history (or mark the first with *from here*), choose *loop*, give a count. The recording is
    rewritten around them.
 

@@ -50,7 +50,7 @@ export const speaker = defineUnit({
 
 State fields carry the same annotations: the video unit's horizontal and vertical counters link to
 the counter chips in figure S-4, the Disk II's sequencer state to its state machine PROM, and so on.
-When the code abstracts instead of modelling, the link says so, and where it matters for teaching
+When the code abstracts instead of modeling, the link says so, and where it matters for teaching
 there is an exact mode to switch to: the video counters ticking cycle by cycle, the sequencer
 stepping at its own clock.
 
@@ -94,10 +94,10 @@ nodes and views, and text that walks through them. Each one ends in an experimen
   refresh the dynamic RAM, so one counter does two jobs. The text page's 24 lines sit in three
   interleaved groups of eight, at `$400 + 128 × (line mod 8) + 40 × (line div 8)`, because that is
   what the counters produce most cheaply; the eight bytes left over in each 128 are the screen holes
-  that cards use. Hires colour comes from where a dot falls against the colour subcarrier, and the
-  high bit of each byte delays its seven dots by half a dot to give a second pair of colours.
+  that cards use. Hires color comes from where a dot falls against the color subcarrier, and the
+  high bit of each byte delays its seven dots by half a dot to give a second pair of colors.
 - **Experiments**: switch modes mid-line and watch the scanner cross the split; draw one byte at a
-  time on the hires page and watch its colour depend on its column; vapor lock: read the floating
+  time on the hires page and watch its color depend on its column; vapor lock: read the floating
   bus until a marker byte comes back, then split the screen at a scanline of your choosing.
 
 ### The Disk II
@@ -159,7 +159,7 @@ device, to illustrate the brilliance of WOZ’s hardware design."
 
 **Every stage is a function.** The video circuit is a pipeline: the horizontal and vertical counters,
 the address multiplexer, the RAM byte on the data bus, the latch, the character generator or the
-hires shift register with its half-dot delay, the dot clock, and the colour that comes out against
+hires shift register with its half-dot delay, the dot clock, and the color that comes out against
 the subcarrier. Given the cycle, memory and the mode table, each stage's value at any beam position
 is computed directly; this is the same address function and dot pass the shaders use
 ([STACK.md](STACK.md#video-on-the-gpu)), split at every stage. Nothing has to tick, so the 3D view can
@@ -170,7 +170,7 @@ it only computes the stages it is showing.
 with a `models` link to the stage that computes its outputs. The scene places them as machinery:
 memory as a field of byte blocks, the counters as odometers, the multiplexer as a switch yard picking
 the address, the latch catching the byte, the shift register as a conveyor that pushes out dots, the
-colour subcarrier as a wave the dots ride against, and at the end the screen, drawn with microM8's 3D
+color subcarrier as a wave the dots ride against, and at the end the screen, drawn with microM8's 3D
 pixels. Signals are cables carrying their live values. Clicking any part opens its figure, its code,
 and the memory it is reading.
 

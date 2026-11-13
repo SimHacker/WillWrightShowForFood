@@ -1,7 +1,7 @@
 # PIXIE's data: ring structures, from the ground up
 
 **The problem.** A circuit drawing is not a tree. A node touches several branches, a branch
-touches two nodes, and a symbol instance belongs to a group, a subpicture and a catalogue
+touches two nodes, and a symbol instance belongs to a group, a subpicture and a catalog
 at once. That needs many-to-many relationships, walkable both ways.
 
 **The idea.** Each element is a small block of words. A **ring** is a circular linked list
@@ -21,8 +21,8 @@ Processor RSP" to 1967. Bachman's IDS carried owner/member chains into databases
 **Names.** RSP is the library. A ring structure built with it we call a **pixie**, lower
 case, after Heinz's manual, which says the representation "is also referred to as the PIXIE
 data structure". PIXIE in capitals is his program. A ring in a pixie is a pixie ring, and
-pixie rings in a meadow are mushrooms around a centre, joined underground by a mycelium
-nobody sees, which is a ring structure, and drawn around its centre, a pie menu
+pixie rings in a meadow are mushrooms around a center, joined underground by a mycelium
+nobody sees, which is a ring structure, and drawn around its center, a pie menu
 ([TINY-ITS.md](../TINY-ITS.md#pixie-rings-are-pie-menus)).
 
 **PIXIE's variant** is a hybrid: Lisp-style two-word cells used to build rings. Word

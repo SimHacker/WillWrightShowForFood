@@ -21,7 +21,7 @@ cartridges from [CARTRIDGES.md](CARTRIDGES.md). Questions for April and Melody a
   `angle`, `fov`, `near`, `far`, `zoom`, `panx`, `pany`; `video` gives the display modes (`hgrmode`,
   `dhgrmode`, `shrmode`, `grmode`, `hgrntsc`, `tintmode`, `scanline`, `vertblend`, `voxeldepth`),
   lighting (`light.ambient`, `light.diffuse`), `font`, `aspect`, `bgcolor`, `highcontrast`;
-  `palette` gives colours as `rgba`, `offset` and `depth`. A machine profile (`apple2e-en`) is the
+  `palette` gives colors as `rgba`, `offset` and `depth`. A machine profile (`apple2e-en`) is the
   base the PAK's settings apply to.
 - **Control programs.** `control.cfg` names Applesoft programs that load into virtual machines two,
   three and on (microM8 runs up to eight sessions), while the root program boots in slot one. With
@@ -82,7 +82,7 @@ and git. Neither is wrong; they're organelles of the same cell.
   rather than a description. The cabinet's [SIMH map](SIMH-MAP.md) compares SIMH's model
   with the cabinet's; the cabinet doesn't run SIMH's command language yet.
 - **MAME** software lists (XML, by checksum, with part and interface names) and per-system `.ini`
-  files: the best catalogue of what a medium is; little about how to present it.
+  files: the best catalog of what a medium is; little about how to present it.
 - **RetroArch** core options and per-game overrides, and playlists: layered settings by core, by
   directory and by game.
 - **DOSBox** `.conf` with an `[autoexec]` section: settings plus a boot script.
@@ -157,7 +157,7 @@ What both formats describe, grouped so each emulator can map its own names onto 
 | **Presentation** | palette, display modes, 3D, camera, lighting, overlays, backdrops, music | `video`, `camera`, `palette`, `audio` | profiles, panels, the portrait |
 | **Input** | key maps, joystick and paddle mapping, mouse as joystick | `input.cfg` | the teletype's bindings, host devices |
 | **Memory semantics** | what regions mean, values to watch, cheats as patches | control programs | typed memory, `patch` resources |
-| **Behaviour** | scripts that watch and change the running program | Applesoft with `@vm.*` | host handlers, Forth words |
+| **Behavior** | scripts that watch and change the running program | Applesoft with `@vm.*` | host handlers, Forth words |
 | **Access** | screen-reader text, captions, the grammar for Dasher and completion | | [TELETYPE-DASHER](TELETYPE-DASHER.md) |
 | **Teaching** | help, tours, annotated views, sources | | README, HyperTIES, source maps, tours |
 
@@ -190,7 +190,7 @@ Paleotronic's [“Upcycling” Pong](https://paleotronic.com/2018/07/07/upcyclin
   doing, so the game was changed: it `POKE`s 1 into 37002 when it restarts, and sets 37000 (and
   37001) when the ball changes direction. The control program `PEEK`s those addresses in the game's
   VM, splits each flip into a thousand small `@camera.rotate` and `@camera.move` steps, sways the
-  camera between flips, and recolours the ball (colour index 2) with `@color.rgba`.
+  camera between flips, and recolors the ball (color index 2) with `@color.rgba`.
 
 Both ship as microPAKs (the game plus `control.apl`) in microM8's `micropaks` folder.
 
@@ -216,7 +216,7 @@ What a federation of emulators would want, starting small:
   know, never drop them.
 - **Configure**: a settings panel generated from the schema, so a palette or a camera is edited
   with a picker, live, as microM8 does with its in-emulator editor.
-- **Manage**: a catalogue across emulators, with what each package needs and which emulators can
+- **Manage**: a catalog across emulators, with what each package needs and which emulators can
   run it.
 - **Package and publish**: zip for microM8, a git repo for the cabinet, an Internet Archive item with
   a manifest of checksums and sources (as for [Severe Tire Damage](../../characters/mark-weiser/media/severe-tire-damage/README.md)).

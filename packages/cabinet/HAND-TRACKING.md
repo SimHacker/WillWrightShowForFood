@@ -42,7 +42,7 @@ the side MediaPipe saw and how sure it was) and the device's latched registers
 (status, wrist, flex per finger, pinch). The `340` line reports display frames
 and the hardware status in octal, separately from the device's latch count.
 
-DATAHAND normally scales and centres the hand (`FIT`). `0 FITTING !` draws it
+DATAHAND normally scales and centers the hand (`FIT`). `0 FITTING !` draws it
 where the camera has it instead, so a hand can walk on from the side of the
 stage, fingers first. Either way, lines that leave the glass are clipped
 (Cohen–Sutherland, [clip.fs](tapes/pdp7forth/clip.fs)) by turtle3d.fs's
@@ -84,7 +84,7 @@ A survey of what runs in a browser, as of October 2026, with versions from npm:
 | [WebXR Hand Input](https://www.w3.org/TR/webxr-hand-input-1/) | W3C | 25 joints per hand, from a headset's own tracking | Headsets only (Quest, Vision Pro), no webcam. The same port can take it. |
 | Ultraleap (Leap Motion) | — | Dedicated hardware, very good joints | Not a browser library. |
 
-MediaPipe wins on accuracy, speed, size and licence, and it gives 3D points
+MediaPipe wins on accuracy, speed, size and license, and it gives 3D points
 with a stable numbering that everything else (kalidokit, fingerpose, WebXR
 mappings) already speaks. The applet imports it lazily, so nobody downloads
 it until they select DATAHAND.
@@ -189,7 +189,7 @@ Positions are kept in 1/16 pixel, so a long walk doesn't drift.
 and the finger names), then loops until a key:
 
 - Latch a new frame.
-- Fit the hand to the screen (`FIT`): scale and centre it from the box
+- Fit the hand to the screen (`FIT`): scale and center it from the box
   around its 21 points, so a hand close to the camera, or half out of the
   picture, still fills the space between the meters and the captions.
 - Walk the skeleton: the knuckle line, then each finger from the wrist, with a
@@ -328,7 +328,7 @@ direction unstable. Try taking the heading at the start of each pull,
 or steering with the palm while the index finger supplies the stroke.
 Show reach, pull, and recovery visibly. Start with forward pulls only;
 experiment separately with an explicit reverse modifier for `BK`, rather
-than making the recovery stroke undo the distance just travelled.
+than making the recovery stroke undo the distance just traveled.
 
 This adds a third movement feel alongside discrete steps and held-rate
 control: **movement by accumulated strokes**. Compare how precisely a
@@ -352,7 +352,7 @@ Allow forward/backward and turning simultaneously, just as `W+A` makes
 a moving left turn. Opposing controls cancel on their axis. Compare
 simple on/off gestures with proportional deflection for speed and turn
 rate, with a neutral dead zone. Here A/D turn, not strafe; lateral motion
-can be a separately labelled experiment later. Keep `PU`/`PD` available
+can be a separately labeled experiment later. Keep `PU`/`PD` available
 independently so flying can draw curves or reposition without drawing.
 
 Make **stroke mode** and **fly mode** explicit selectable profiles. In

@@ -1,5 +1,5 @@
 /**
- * PNG in and out for screen angel templates and captures: 8-bit grey, grey+alpha, RGB, RGBA or
+ * PNG in and out for screen angel templates and captures: 8-bit gray, gray+alpha, RGB, RGBA or
  * palette, not interlaced. Inflate and deflate come from the platform's CompressionStream, so
  * the same code runs in Node and in the browser.
  */
@@ -25,7 +25,7 @@ export async function decodePng(png: Uint8Array): Promise<Picture> {
 	let width = 0;
 	let height = 0;
 	let depth = 0;
-	let colour = 0;
+	let color = 0;
 	let palette: Uint8Array | null = null;
 	let alphas: Uint8Array | null = null;
 	const idat: Uint8Array[] = [];
@@ -37,7 +37,7 @@ export async function decodePng(png: Uint8Array): Promise<Picture> {
 			width = be32(data, 0);
 			height = be32(data, 4);
 			depth = data[8]!;
-			colour = data[9]!;
+			color = data[9]!;
 			if (data[12]) throw new Error("interlaced PNG");
 		} else if (type === "PLTE") palette = data;
 		else if (type === "tRNS") alphas = data;
@@ -46,8 +46,8 @@ export async function decodePng(png: Uint8Array): Promise<Picture> {
 		i += 12 + len;
 	}
 	if (depth !== 8) throw new Error(`PNG depth ${depth}; only 8 bits per channel`);
-	const channels = ({ 0: 1, 2: 3, 3: 1, 4: 2, 6: 4 } as Record<number, number>)[colour];
-	if (!channels) throw new Error(`PNG colour type ${colour}`);
+	const channels = ({ 0: 1, 2: 3, 3: 1, 4: 2, 6: 4 } as Record<number, number>)[color];
+	if (!channels) throw new Error(`PNG color type ${color}`);
 	const joined = new Uint8Array(idat.reduce((n, d) => n + d.length, 0));
 	idat.reduce((at, d) => (joined.set(d, at), at + d.length), 0);
 	const raw = await pipe(joined, new DecompressionStream("deflate"));
@@ -80,7 +80,7 @@ export async function decodePng(png: Uint8Array): Promise<Picture> {
 	for (let p = 0; p < width * height; p++) {
 		const s = rows.subarray(p * channels, (p + 1) * channels);
 		const o = p * 4;
-		if (colour === 3) {
+		if (color === 3) {
 			const k = s[0]!;
 			rgba[o] = palette?.[k * 3] ?? 0;
 			rgba[o + 1] = palette?.[k * 3 + 1] ?? 0;

@@ -163,7 +163,7 @@ assembler's own parser, tokenizer, assignments and literal pool, so the two cann
 what a line means. Each name gets a prefix (`s` for SYMELEC, `r` for RSPPIX) to stay apart from
 the Forth kernel and `sop.s`. Ones' complement arithmetic and as7's OR-by-space are reconciled
 term by term against the Cambridge value; `FINDP=JMS,` becomes a label and `FINDP` in an operand
-`jms rfindp`. Literals become labelled words after the variables, in the same places.
+`jms rfindp`. Literals become labeled words after the variables, in the same places.
 `scripts/translate-cambridge.mjs` writes `tapes/symelec/symelec.s` and `tapes/pdp7forth/rsppix.s`
 only if as7 assembles them to the Cambridge words exactly; tests check that again, and that the
 checked-in files are what the translator makes today.

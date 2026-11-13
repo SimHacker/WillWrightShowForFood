@@ -33,7 +33,7 @@ is read according to the current mode, and most words name the next.
 | INCR | four 4-bit steps of one unit times scale | short wiggles, 1 word per 4 steps |
 | CHAR | three 6-bit characters (Type 342) | each letter advances the beam; LF and CR move it |
 | SUBR | `DJS` call, `DJP` jump, `DDS` dispatch, target address | Type 347; one save register, so calls nest one deep |
-| SLAVE | Type 343 slave displays | not modelled |
+| SLAVE | Type 343 slave displays | not modeled |
 
 **Scale is a shift count on relative moves.** Vectors, increments and characters are multiplied
 by 1, 2, 4 or 8; points are not. A long line at scale 8 costs one word and lands on multiples of

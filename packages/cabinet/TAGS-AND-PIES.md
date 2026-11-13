@@ -141,7 +141,7 @@ order, doing all of the above.
 A second press soon after the first acts on **the latch**, not on whatever is under the
 second press, which makes thin vectors easy to hit.
 
-- **Double tap and release:** do the **centre action**. For a link, that's follow it.
+- **Double tap and release:** do the **center action**. For a link, that's follow it.
   Or should a double tap pop up the pie of ways to follow it? We don't know yet, so it
   is a setting (§8).
 - **Double tap and hold, or tap and swipe:** the pie opens, with mouse-ahead, so a
@@ -159,7 +159,7 @@ draws on the 340 itself, and it is styled so nobody confuses the two.
 
 | direction | item |
 |---|---|
-| centre | follow the link |
+| center | follow the link |
 | up | open in a browser tab (a webtop window, later) |
 | left | open in the left pile |
 | right | open in the right pile |
@@ -191,7 +191,7 @@ to a "more" submenu), and an action.
 | app, keyed on the id's type half | e.g. open the card, open the listing at this address |
 | tape-specific, reading core | e.g. SYMELEC: the element under the pen and its commands |
 | the program itself | an optional tag-record field pointing at a menu list in its own core: label and code pairs |
-| background | for a double tap on empty screen: run/stop, pen colour, listing, card |
+| background | for a double tap on empty screen: run/stop, pen color, listing, card |
 
 Background is off unless something registers background ads for that tape, because
 SYMELEC's tracking cross needs taps on empty screen.
@@ -213,7 +213,7 @@ SYMELEC's tracking cross needs taps on empty screen.
 
 ## 7. PIXIE as the exchange format
 
-- **Out:** walk a structure in core into a TypeScript graph and serialise it with
+- **Out:** walk a structure in core into a TypeScript graph and serialize it with
   `encodeTransfer`.
 - **In:** decode, check with `pointersResolve` and the address limits, relocate into
   core taken from PIXIE's own free list, and link it in. The 1969 program sees ordinary
@@ -239,8 +239,8 @@ Input focus is the driver, who hops between them.
 
 - Opening the pie **parks** the pen: it stays where it was and its rim dims or turns
   dotted, because that is still where the program thinks the pen is. A pie cursor
-  appears at the pie's centre and you drive that.
-- Choosing or cancelling ends the ride: the pen is warped back, drawn solid, and gets
+  appears at the pie's center and you drive that.
+- Choosing or canceling ends the ride: the pen is warped back, drawn solid, and gets
   focus again, like Emacs `save-excursion`. The program never sees the pen move during
   a ride.
 - Rides nest: a "more" submenu, a macro you can watch and stop with Escape, the keyboard
@@ -274,7 +274,7 @@ This cannot be designed in our heads. The gesture layer is built so every guess 
 setting, changed live from a panel beside the tube and saved per user:
 
 - double-tap timeout and distance;
-- what a double tap does: centre action, or open the pie;
+- what a double tap does: center action, or open the pie;
 - whether tap and swipe opens the pie, and how far a swipe must go;
 - how long a hesitation before the pie is drawn;
 - whether a single tap shows the tooltip at once or after a delay;
@@ -286,7 +286,7 @@ The pieces stay separate so each can be swapped while trying things:
 |---|---|
 | tag decoder | display list and core → tags map, in `packages/cabinet` |
 | latch | in `Type340`, read by IDPN pulse 4 |
-| gesture recogniser | pointer events + settings → tap, double tap, swipe; pure, testable without a browser |
+| gesture recognizer | pointer events + settings → tap, double tap, swipe; pure, testable without a browser |
 | advertiser registry | context → items |
 | pie | items → choice; mouse, keyboard and screen reader |
 | actions | links, piles, macros, mailbox, JS |
@@ -298,7 +298,7 @@ The pieces stay separate so each can be swapped while trying things:
 |---|---|
 | DTG, tag records, latch, IDPN pulse 4, tags in frames | `packages/cabinet/src/plugins/type340.ts`, tests in `src/cabinet.test.ts` |
 | Forth `TAG"`, `TAGGED`, `TAG-AT`, `NOTAG` (built); `title"`, `id"`, `hit` (not yet) | `packages/cabinet/tapes/pdp7forth/tags.fs` |
-| gesture recogniser, advertiser registry | `packages/cabinet`, framework-free |
+| gesture recognizer, advertiser registry | `packages/cabinet`, framework-free |
 | focus, tooltip, announcer, playground panel, first pie | `apps/ties/src/lib/CabinetApplet.svelte` and new components beside it |
 | the real pie, cursor layer, tabs, windows, pushpins | MicropolisCore, then shared |
 
@@ -340,7 +340,7 @@ Its model and its NeWS 1.1 skin are planned in
 
 **Then the playground:**
 
-5. The gesture recogniser, with its settings panel.
+5. The gesture recognizer, with its settings panel.
 6. The advertiser registry and the link pie, with keyboard and screen reader from the
    start.
 7. The parked pen and the pie cursor, as the first ride.

@@ -39,7 +39,7 @@ DEC).
      The PDP-6 was a 36 bit machine and the first machine to implement
 the most wonderful computer architecture known to man.  It was rather
 expensive and difficult to maintain, and not many were sold.  As a
-result, DEC cancelled 36 bit computers for what was to be the first of
+result, DEC canceled 36 bit computers for what was to be the first of
 many times.
 
      The PDP-7 was an 18 bit machine and the sucessor to the PDP-4.

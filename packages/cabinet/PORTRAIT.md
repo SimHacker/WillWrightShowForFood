@@ -170,7 +170,7 @@ stream still the source of truth for the emulator.
 
 ### Heads, hands and bodies from Blender
 
-The characters are modelled in Blender and animated by ECG, so the
+The characters are modeled in Blender and animated by ECG, so the
 same pipeline serves Heinz, Sims-style characters with high-resolution
 heads, hands and bodies, and anyone else's rigs:
 
@@ -319,9 +319,9 @@ real state**, through the same seams (declared registers, device properties,
 events). Nothing on a panel is decoration that lies. They share a design kit so they
 sit together in one room, and each stays recognizably its own machine.
 
-**The shared kit.** A 19-inch rack frame in brushed aluminium with a coloured front,
+**The shared kit.** A 19-inch rack frame in brushed aluminum with a colored front,
 the DEC way. Bezels, lamp rows, toggle switches and paddle handles come from one
-parts library, in each machine's own colour. Lamps use the duty-cycle physics above,
+parts library, in each machine's own color. Lamps use the duty-cycle physics above,
 so a busy register glows instead of strobing. Each machine has a nameplate with its
 inventor's name and year, set in a typeface of its period. Each cabinet is a glTF
 `model` in a library cartridge ([CARTRIDGES.md §6a](CARTRIDGES.md#6a-scenes-the-machine-the-room-and-the-people-at-it)),
@@ -329,11 +329,11 @@ and its panel bindings live in the `scene`.
 
 ### CAM-6: the cellular automaton machine
 
-The real board was a bare card in a PC slot. Low and wide, in black anodised aluminium, like late-80s lab gear. A square raster
+The real board was a bare card in a PC slot. Low and wide, in black anodized aluminum, like late-80s lab gear. A square raster
 monitor on top shows the planes. The front panel is the machine's structure:
 
 - **Four plane lamps**, 0–3, each a 16×16 window onto its plane, live.
-- **The neighbourhood selector**, a rotary switch with engraved positions: Moore, von
+- **The neighborhood selector**, a rotary switch with engraved positions: Moore, von
   Neumann, Margolus. In Margolus the panel's grid lamps show the 2×2 block
   partition flipping phase each step.
 - **The lookup table** as a lamp matrix, lit by entry as the rule is used: you watch
@@ -364,7 +364,7 @@ head carriage moves; the tape doesn't jump. Above the head, a **state drum** tur
 the current state's name. Beside it, the **transition table** as a pegboard: one peg
 lights per step, the rule being applied.
 
-Minsky's universal machine gets the same case in a second colour, and a second,
+Minsky's universal machine gets the same case in a second color, and a second,
 smaller tape inside the window: the machine being simulated, encoded on the big
 tape, with the decoded state shown on its own little drum. Two levels of machine,
 both visible. A brass plate on it: *7 states, 4 symbols, 1962*.
@@ -420,7 +420,7 @@ the gong that switches off the stream ([TURING-ENGINE.md](TURING-ENGINE.md#the-u
 ### Movable Feast Machine: tiles, not a cabinet
 
 Ackley's machine is tiles and grows by adding them, so instead of a box it's blinking-light
-Borg Lego: square tiles that snap together edge to edge, modelled on his real
+Borg Lego: square tiles that snap together edge to edge, modeled on his real
 [T2 tiles](https://t2tile.com/), each with its own small screen of sites and LEDs pulsing out of
 step with the others. Drag a tile in to grow the machine; pull one out and the computation routes
 around the hole. The engine is Andrew Walpole's
@@ -432,14 +432,14 @@ cabinet, with one model tile per simulated tile.
 The display is a railway station departures board. Each cell is a split-flap unit, the kind
 Solari of Udine made for stations and airports, whose flaps carry the 29 states as icons
 instead of letters. When a cell changes state its flaps clatter round to the new icon, so you
-can hear the constructor's arm extend across the board. This is a specialisation of the tile engine
+can hear the constructor's arm extend across the board. This is a specialization of the tile engine
 ([DESIGN.md](DESIGN.md#tiles-are-subroutines-drawn-by-the-forth-turtle)): a tile per state, as
 photographic renders of real flaps, and a transition that is the flap animation.
 
-The board sits in a tall 1950s frame of grey crackle paint and chrome, IAS-machine style,
+The board sits in a tall 1950s frame of gray crackle paint and chrome, IAS-machine style,
 with a station clock above it showing the generation count. The panel has:
 
-- **A state legend** of 29 coloured lamps, each lit in proportion to how many cells are in
+- **A state legend** of 29 colored lamps, each lit in proportion to how many cells are in
   that state.
 - **The construction arm's position** on an X/Y pair of meters.
 - **The description tape** read-out, scrolling, the copy's blueprint.
@@ -457,7 +457,7 @@ up in order.
 ### Shared devices
 
 Light pens, mice, joysticks, keyboards, buttons and paddles, round vector tubes and
-raster monitors are one model each, in the kit's materials, re-coloured per machine.
+raster monitors are one model each, in the kit's materials, re-colored per machine.
 The input devices are the virtual ones the emulated machine sees. A real mouse, a
 touch or a demo session moves them, and the scene shows the device moving.
 

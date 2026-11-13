@@ -293,9 +293,9 @@ Formats out:
 | `segments` | the display list as captured, every annotation kept, for another renderer or editor |
 | `pxid`, `rings` | the original ring words, for another PIXIE |
 
-A consumer names a format and a frame: origin (centre, bottom left, top left), y up or down,
+A consumer names a format and a frame: origin (center, bottom left, top left), y up or down,
 scale, and precision. The fixed point stays on the PDP-7. The consumer gets floats in its own
-units, so microM8's Logo gets turtle steps around the screen's centre, and a browser gets SVG
+units, so microM8's Logo gets turtle steps around the screen's center, and a browser gets SVG
 with y down. Consumers can subscribe: each new drawing is converted and delivered to every
 subscriber in its own format. The PDP-7 can read conversions back through the file path
 (`/titan/hand.logo`, `/titan/hand.json`), as text, one character per word.

@@ -25,13 +25,13 @@ PDP-1's Type 30.
   ([ROADMAP §2](../ROADMAP.md#2-contrast-display-knobs-in-config)).
 - **Will:** borrow Lars Brinkhoff's GLSL
   [crt-simulation](https://github.com/larsbrinkhoff/crt-simulation), written for the Type 30 and
-  340 with photos of a real 340, once he adds a licence: blue flash and green decay as two layers
+  340 with photos of a real 340, once he adds a license: blue flash and green decay as two layers
   with their own curves, in WebGL2 first, then WebGPU, fitted against calibration footage
   ([AM-RADIO.md](../AM-RADIO.md)). Norbert Landsteiner's masswerk Spacewar shows the dual
   phosphor on canvas 2D is enough for a first version; its code isn't openly licensed, so learn
   from it and ask before copying ([WEB-BENCH.md](../WEB-BENCH.md)).
-- **Will:** colour. Default P7 green; each pen an RGB colour, and what it draws painted in it;
-  procedural colour (gradients, marching ants, blink, flicker) later
+- **Will:** color. Default P7 green; each pen an RGB color, and what it draws painted in it;
+  procedural color (gradients, marching ants, blink, flicker) later
   ([ROADMAP §14](../ROADMAP.md#14-small-items)).
 - **Will:** watch the beam. At slow speeds, draw each stroke growing from its start at the 340's
   own pace, using the cycle stamps, with the spot on top; the decay runs in real time while the

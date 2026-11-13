@@ -32,7 +32,7 @@ the console switches under the tube.
 ## Tests
 
 1. Sensitivity and resume (`senst`): eight horizontal vectors, intensities 0–7. The pen truncates
-   a line right of centre; left of centre the line resumes in full (IDRS, `iot 504`).
+   a line right of center; left of center the line resumes in full (IDRS, `iot 504`).
 2. Follow (`follow`): a tracking cross that follows the pen and stops at the screen edge.
 3. Field of view: a box of points at a switch-selected position and intensity, with a 4×
    enlargement of the points the pen saw and a decimal count above it (`outnox`).

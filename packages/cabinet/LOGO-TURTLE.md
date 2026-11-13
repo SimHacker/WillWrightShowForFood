@@ -37,7 +37,7 @@ HOPL 2020; [open access](https://dspace.mit.edu/handle/1721.1/133952)) and Solom
 How the floor turtle worked, from Papert and Solomon's
 [*Twenty Things to Do with a Computer*](https://dspace.mit.edu/handle/1721.1/5836) (1971): the
 turtle is attached "by a wire that plugs into a control-box that connects to a telephone line that
-speaks to the computer, which thinks it is talking to a teletype." It has a pen at its centre,
+speaks to the computer, which thinks it is talking to a teletype." It has a pen at its center,
 stepping motors, and inlets for sensors: the memo's examples use FRONTTOUCH, BACKTOUCH, LEFTTOUCH and
 RIGHTTOUCH to follow a wall and find the door of a room. Children called the robot the "turtle
 turtle" and the one on the screen the "display turtle."
@@ -104,7 +104,7 @@ could drive one drives the same 3D turtle.
 **1. The turtle as a device on a Teletype line.** It reads the `turtle.62` characters, moves its
 two wheels by stepping-motor steps, raises and lowers its pen, lights its lamp, toots, and reports
 its touch sensors back up the line as characters. Step size, wheel base and speed come from photos,
-films and anyone who remembers; until then they are knobs, labelled as guesses.
+films and anyone who remembers; until then they are knobs, labeled as guesses.
 
 **2. The physical world.** A floor with paper on it, a pen that leaves ink where it touches, walls
 and furniture for the touch sensors to find, and the tether: a cable from the turtle to the control
@@ -199,7 +199,7 @@ characters ITS Logo sends down the Teletype line and writes turtleSpaces Logo:
 | `C` forward one step, `@` back one step | `forward 1`, `back 1` (scaled to the floor turtle's step) |
 | `B` right, `A` left, one step of turning | `right` and `left` by the floor turtle's angle per step |
 | `0` pen down, `8` pen up | `pendown`, `penup` |
-| `"` lamp on, `!` lamp off | a light or a colour change on the turtle |
+| `"` lamp on, `!` lamp off | a light or a color change on the turtle |
 | `(` toot | a note |
 
 Runs of the same character collapse into one command (`CCCCC` becomes `forward 5`). The browser

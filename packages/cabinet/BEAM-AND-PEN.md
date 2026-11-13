@@ -59,7 +59,7 @@ not just per stroke.
 
 **2. The phosphor, borrowed.** Lars's [crt-simulation](https://github.com/larsbrinkhoff/crt-simulation)
 was written for these tubes, the Type 30 and Type 340, with a generalized Gaussian spot, separate
-point and line shaders, a phosphor decay pass and photos of a real 340. It has no licence yet; ask
+point and line shaders, a phosphor decay pass and photos of a real 340. It has no license yet; ask
 Lars to add one, then run it in WebGL2 and port it to WebGPU, fed by the cabinet's beam timeline
 ([WEB-BENCH.md](WEB-BENCH.md)). Two layers with their own curves: the P7's blue flash, gone in
 microseconds, and its yellow-green persistence, lasting seconds. Norbert Landsteiner's masswerk
@@ -120,7 +120,7 @@ Recorded walks through it are tours: authored, shareable, and steerable by anyon
 2. Memory-cycle timing in the PDP-7, with the 340's display fetches counted (shared with the
    [AM radio](AM-RADIO.md)).
 3. Beam timing inside each stroke, in the segment log.
-4. Ask Lars for a licence; the two-layer phosphor in WebGL2, fed by the beam timeline.
+4. Ask Lars for a license; the two-layer phosphor in WebGL2, fed by the beam timeline.
 5. The photocell model, with the diagnostic and an agreement test against the geometric pen.
 6. The slow-motion view with the signal trace and the source links.
 7. Recorded paths, the DataHand pen, then the portrait's operator.
@@ -128,7 +128,7 @@ Recorded walks through it are tours: authored, shareable, and steerable by anyon
 
 ## Questions for Lars
 
-1. Would you add a licence to crt-simulation so the cabinet can build on it?
+1. Would you add a license to crt-simulation so the cabinet can build on it?
 2. Did you fit the decay curves to anything measured, or to the photos?
 3. Do you know of measurements of the Type 370's photocell: field of view, threshold, response
    time?

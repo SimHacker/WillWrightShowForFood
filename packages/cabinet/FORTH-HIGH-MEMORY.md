@@ -157,7 +157,7 @@ last.=h.dup
   expansion is plain as7 (or plain MACRO-9 with `.LOC`). The macro is the only new thing; the
   assembler already has `.=` and redefinition.
 - **The link is computed, not written.** `last.` is the previous header, carried from one
-  expansion to the next, so inserting or moving a word no longer means editing its neighbour's
+  expansion to the next, so inserting or moving a word no longer means editing its neighbor's
   link expression. The 512-word link check is the assembler's: an error at the line, not a
   broken chain at run time.
 - **The header keeps its count field**, so `FIND` rejects most candidates without an extended

@@ -406,7 +406,7 @@ generation enriches the 340 without replacing its vector core.
 - A **dumb framebuffer** is a descriptor over memory—base pointer, dimensions,
 	strides and pixel format. A program writes pixels; a host renderer shows
 	them.
-- A **smart cell/tile renderer** interprets cell state through a colour map
+- A **smart cell/tile renderer** interprets cell state through a color map
 	or tile table and writes a raster image. A cellular-automaton rule changes
 	the cells; the renderer decides how those states look.
 - **Sprites** are composited records—position, shape or pixel pointer, and

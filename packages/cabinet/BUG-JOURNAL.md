@@ -415,7 +415,7 @@ innocent.
 **The probe that found it.** Two more Node runs. A hit map pressed the
 pen at every point around S and read location 55 afterwards, which showed
 the target is about 24 by 30 grid units, some 12 pixels on screen: small,
-but hittable. Then a hold sweep pressed dead centre on S for longer and
+but hittable. Then a hold sweep pressed dead center on S for longer and
 longer. Short holds left F. Long holds left S. Nobody had looked at how
 long the button stayed down, because a light pen has no button.
 
@@ -462,7 +462,7 @@ On a hit the cabinet stopped the 340 but latched the coordinates of the
 vector's end point, which is the same wherever the pen sits on the line.
 The follow test steers the cross by where on its arms the pen was seen.
 The diagnostic's sensitivity test says what the hardware does: with the
-pen right of centre the line is truncated at the pen, and after `IDRS`
+pen right of center the line is truncated at the pen, and after `IDRS`
 (`iot 504`) the rest is drawn. **Fix.** A hit stops a vector at the
 first raster point inside the aperture and latches that point; `IDRS`
 draws the remainder before the next display word. **Kind:** ours.

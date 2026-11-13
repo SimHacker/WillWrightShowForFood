@@ -34,13 +34,13 @@ to 32K.
   ([DESIGN.md, The light pen](DESIGN.md#the-light-pen)).
 - **Forth pen words** `pen?`, `pen@`, `resume`, `tag@`, and Forth interrupt handlers
   ([ROADMAP §14](ROADMAP.md#14-small-items)).
-- **RGB pen colours**, watch the beam, Prefab-style controls for PIXIE (ROADMAP §14).
+- **RGB pen colors**, watch the beam, Prefab-style controls for PIXIE (ROADMAP §14).
 - **Full-names Forth**: the cabinet's Forth now; next, the PRs to Mitch and the Open Firmware name words ([VARIANTS.yml](tapes/pdp7forth/VARIANTS.yml)).
 - **DUEL game panel**: ship records at 1471 and 1514, torpedoes 1537–1544.
 - **Instruction editor:** grab POINT words and whole strings; skip dark vectors when picking.
 - **Forth `random`, `atan2`, shapes** (ROADMAP §5); **gamepads** (ROADMAP §14).
 
-- **Ask Lars** to add a licence to [crt-simulation](https://github.com/larsbrinkhoff/crt-simulation),
+- **Ask Lars** to add a license to [crt-simulation](https://github.com/larsbrinkhoff/crt-simulation),
   then port its phosphor shaders to the cabinet ([WEB-BENCH.md](WEB-BENCH.md#the-field)).
 - **A PDP-10 in TypeScript**, the KA10 running ITS ([PDP10.md](PDP10.md)), on the PDP-7's
   framework: same backplane, devices, memory map and panels. CPU by CPU, with SIMH's `pdp10-ka`
@@ -99,7 +99,7 @@ Done: **the Apple ][ in the cabinet**, microM8 compiled to WebAssembly and runni
   Lisp, with layers for its transcribed source, rectangles on the scans of his listings, his
   documentation (Deutsch and Berkeley's 1964 "The LISP Implementation for the PDP-1 Computer"),
   and the walkthroughs others have written, all linked to the words they explain. Spacewar!
-  can follow the same route. Harvest first: find and check the scans and their licences, and
+  can follow the same route. Harvest first: find and check the scans and their licenses, and
   record them in [characters/l-peter-deutsch](../../characters/l-peter-deutsch/CHARACTER.yml),
   which has no PDP-1 material yet.
 - **Knuth's MIX in the cabinet, running his own examples**, alongside the Apple ][ and PDP-10
@@ -124,11 +124,11 @@ Done: **the Apple ][ in the cabinet**, microM8 compiled to WebAssembly and runni
   [listing scan archive](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md).
 - **Raster, in order** ([DESIGN.md, Raster](DESIGN.md#raster-a-vanilla-virtual-video-display-and-a-cell-renderer)):
   1. the framebuffer device: descriptor with byte-pointer base, width, height, colbytes,
-     rowbytes, flips, monochrome / indexed / RGB, colour map in core; a canvas beside the tube;
+     rowbytes, flips, monochrome / indexed / RGB, color map in core; a canvas beside the tube;
   2. Forth `fb!`, `pixel!`, `pixel@`, `cmap!`; a Life cartridge on a 256² monochrome screen in
      bank 0;
-  3. the cell renderer device: cells through a colour map into the framebuffer, with colour-map
-     animation; then tiles, a picture per state (and per neighbour pattern), animated too;
+  3. the cell renderer device: cells through a color map into the framebuffer, with color-map
+     animation; then tiles, a picture per state (and per neighbor pattern), animated too;
   4. the CAM6 device and the CAM-off against PDP-7 assembly;
   5. RGB planes in banks 1–3, after `far@`;
   6. sprites.
@@ -146,7 +146,7 @@ Done: **the Apple ][ in the cabinet**, microM8 compiled to WebAssembly and runni
   CAM6 as the other two engines.
 - **Cabinets and front panels for the wrapped engines**: CAM-6, Micropolis, the Turing machine
   and Minsky's UTM, the MFM's snap-together T2-style tiles, von Neumann's 29 states on a
-  split-flap station board (a tile-engine specialisation with photographic flap tiles). Every control is
+  split-flap station board (a tile-engine specialization with photographic flap tiles). Every control is
   bound to real state ([PORTRAIT.md](PORTRAIT.md#cabinets-for-machines-that-never-had-one)).
 - **The PDP-7 operator console, and a null job to light it.** The console has no lights register
   for programs to write: its lamps show the machine's registers live (AC, MB, MA, PC, MQ with the
@@ -196,15 +196,15 @@ Done: **the Apple ][ in the cabinet**, microM8 compiled to WebAssembly and runni
   tile/sprite engines can sit on one backplane, each with its own PC, trace and source maps
   ([ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md#cpus-are-devices)).
 - **A new CAM engine, on CAM-8's machine model** (stub). Margolus's CAM-8
-  ([summary](../../characters/norman-margolus/sources/cam8.md)) replaces fixed neighbourhoods with
+  ([summary](../../characters/norman-margolus/sources/cam8.md)) replaces fixed neighborhoods with
   bit-fields kicked across space and 16-bit lookup events, behind a small machine language that runs
   unchanged on any number of modules, or none. Plan to fill in:
   - **Core model**: an N-dimensional periodic space, bit-fields as typed arrays, kicks as index
     offsets (CAM-8's scan-offset trick, no copying), lookup events, event counters, step programs.
-  - **CAM-6 as a library** over it: Moore, von Neumann and Margolus neighbourhoods, echo and heat,
+  - **CAM-6 as a library** over it: Moore, von Neumann and Margolus neighborhoods, echo and heat,
     as Margolus did on CAM-8. CAM6.js's tables and the CelLab rules must run bit for bit.
   - **Zero-module scalability**: one step program on plain JS, on workers splitting space into
-    modules with halos (the generalised gutter), and on the GPU (lookups and kicks as shaders).
+    modules with halos (the generalized gutter), and on the GPU (lookups and kicks as shaders).
   - **The cabinet device**: IOTs for the machine language (load table, kick, run, read counters),
     so PDP-7 Forth drives it; the CAM-off against plain PDP-7 assembly.
   - **First test**: the paper's Figure 8 HPP gas, then DLA, then Critters running backward.

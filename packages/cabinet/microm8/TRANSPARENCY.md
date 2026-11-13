@@ -48,7 +48,7 @@ watched pages. For each watched address it can keep:
 
 Overlays turn on per machine, per range and per kind, from a panel, a cartridge profile or the
 console. Pages nobody watches stay on the fast path. A view of an overlay is a renderer like any
-other: a 256×256 grid of the 64K coloured by reads, writes and executes; the text page with its
+other: a 256×256 grid of the 64K colored by reads, writes and executes; the text page with its
 last writers; the hires page with the PC that last drew each byte, so clicking a pixel opens the
 code that drew it.
 
@@ -110,6 +110,45 @@ The assemblers share one back end, as the PDP-7's do ([ASSEMBLERS.md](../ASSEMBL
 encoder, the opcode table from the processor, and front ends for the listing as printed, for
 dialects people use now (Merlin, the S-C Assembler, ca65), and for the mini-assembler's own
 syntax. Every front end produces the same symbol table and source map.
+
+### Further down: from the 6502 to JavaScript and the host's machine code
+
+```
+rectangle on the scanned page  →  listing line  →  6502 bytes  →  JavaScript line  →  host machine code
+```
+
+Below the 6502 there are two more layers once code stops being interpreted: the JavaScript that
+runs in its place, and the machine code V8 compiles that JavaScript to. The map goes through both,
+in both directions.
+
+- **Hand-written accelerators** ([STACK.md](STACK.md#accelerators-typescript-in-place-of-a-6502-routine))
+  are TypeScript files with ordinary build source maps. Each one links with `abstracts` to the
+  listing lines it replaces, so the scanned page shows those lines as accelerated, and clicking
+  them opens the TypeScript.
+- **Compiled blocks** ([STACK.md](STACK.md#faster-later-compiling-6502-to-javascript)) are
+  generated JavaScript text. The compiler emits one statement group per 6502 instruction and
+  records its address. Each block ends with `//# sourceURL=6502/FDED.js` and an inline
+  `//# sourceMappingURL=data:...` whose sources are the listing files themselves. Chrome DevTools
+  and Node's inspector then show Woz's listing lines while compiled code runs, take breakpoints on
+  them, and the host's profiler charges compiled time to listing lines. The emulator keeps each
+  block's text and its offset-to-address table, so the cabinet's own views show the JavaScript
+  next to the listing line and the scan.
+- **Versions.** A block recompiled after its bytes change gets a new name (`6502/FDED@2.js`).
+  Traces and profiles taken against the old code still resolve to the bytes and lines that ran
+  then.
+- **The host's machine code.** In Node, `--perf-basic-prof` writes a map that names each optimized
+  function, so `perf` charges native samples to `6502/FDED.js` and from there to the listing.
+  Where the build includes V8's disassembler, `--print-opt-code` dumps the x86 or ARM instructions
+  for each block, and the cabinet splits that dump by the block's source positions, so one listing
+  line shows the 6502 instructions it assembled to, the JavaScript compiled from them, and the
+  native instructions V8 made from that. `--trace-deopt` reports why V8 threw a block's machine
+  code away, attached to the 6502 address. Browsers don't expose native code, so there the chain
+  stops at the JavaScript.
+
+So a breakpoint set on a line of the scanned Red Book page holds in every mode: interpreted, where
+the processor checks it at fetch; accelerated, where it makes the accelerator decline; compiled,
+where it is a DevTools breakpoint on the mapped JavaScript line, or forces the block back to the
+interpreter.
 
 ### Up: from the 6502 to the program it is interpreting
 

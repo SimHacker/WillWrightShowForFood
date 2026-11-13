@@ -111,7 +111,7 @@ it. None of it needs the emulator, except running.
 | Parts | a unit's state by path | read `cpu.pc`; set `slots.3.reg.12`; list a card's fields with their meanings from its schema |
 | Memory | addresses as the CPU sees them | read `$D000` with the language card banking the soft switches select; or a bank by offset |
 | Typed views | memory read as what it is | the text page as 24 lines; the hires page as an image; page zero as named variables; the Applesoft program as its `LIST`; the Videx screen as 80 columns |
-| Media | what is in the drives | catalogue the disk in drive 1; read a file from it; the bit stream under the head |
+| Media | what is in the drives | catalog the disk in drive 1; read a file from it; the bit stream under the head |
 | Edits | changes that keep the machine consistent | insert or eject a disk; queue keys; set a paddle; plug or pull a card; replace a BASIC line, retokenised and relinked |
 | Derived layers | computed from the save | render the screen with the reference decoder; disassemble; the graph's live values at this moment |
 | History | a session ending at the save | replay with overlays on; heat map; trace; profile |
@@ -126,7 +126,7 @@ save set   lode-runner.save slots.3.reg.12 0
 save peek  lode-runner.save '$400' 40 --as text
 save poke  lode-runner.save '$3F2' 00 03
 save view  lode-runner.save text | hires --png out.png | zero-page | basic | videx
-save cat   lode-runner.save 6:1                catalogue of slot 6, drive 1
+save cat   lode-runner.save 6:1                catalog of slot 6, drive 1
 save card  lode-runner.save add 3 videx-videoterm
 save disk  lode-runner.save insert 6:1 game.woz
 save diff  a.save b.save                       parts, fields, memory pages

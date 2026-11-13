@@ -71,7 +71,7 @@ event that executes code.
 
 The same chain runs through any machine the cabinet hosts. On an Apple ][ the most beautiful
 stretch is layers 10 to 12: the video circuitry reading screen memory and turning it into NTSC, with
-Woz's tricks for colour and timing. Don proposed showing exactly that in a November 2018 letter to
+Woz's tricks for color and timing. Don proposed showing exactly that in a November 2018 letter to
 Paleotronic's editor, Melody Ayres-Griffiths, after seeing microM8 draw pixels in 3D: "a 3d diagram
 representing of all the logic and circuitry behind the pixels, reading from video memory and mutating
 it into NTSC video, like a cybertronic rube goldberg device, to illustrate the brilliance of WOZ’s

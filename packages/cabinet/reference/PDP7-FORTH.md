@@ -286,7 +286,7 @@ CS PU 200 BK 90 LT 200 FD 90 RT PD STAR
   top of stack can't live in AC): see [FORTH-TURTLE-340.md](FORTH-TURTLE-340.md#it-exists-mitch-bradleys-pdp-7-forth-26-sep-2026).
 - **On the wheel of reincarnation** ([Myer & Sutherland](../../../characters/ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md)):
   his turtle is the "turtle as a compiler" layer. Geometry happens in the PDP-7; the 340
-  only executes the vectors Forth wrote, which is the division of labour the 1968 paper
+  only executes the vectors Forth wrote, which is the division of labor the 1968 paper
   recommends.
 - **One open question for us.** DESIGN.md puts the display list below 4K because the 340's
   address counter is 12 bits, as SIMH has it. SYMELEC starts the 340 at `12301`, in the upper

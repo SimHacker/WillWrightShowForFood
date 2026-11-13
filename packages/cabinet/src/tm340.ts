@@ -141,7 +141,7 @@ export function pdp7TmDeck(programs: readonly TmProgram[], opts: Pdp7TmDeckOpts 
 		out.push(clip(`\\ ${word.toUpperCase()}: ${caption(p)}`));
 		out.push(clip(`\\ ${p.states.length} states, ${nsym} symbols (${p.symbols.join(" ")}); ${halts ? `halts after ${run.steps} steps` : "runs free"}.`));
 		out.push(`create ${rec}`);
-		// Words a line, as many as fit, the first line labelled.
+		// Words a line, as many as fit, the first line labeled.
 		const chunk = (label: string, ws: number[]) => {
 			let line = "";
 			let first = true;

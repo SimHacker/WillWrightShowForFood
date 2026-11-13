@@ -49,7 +49,7 @@ this free.
 **Apple ][ in TypeScript, two of them, both MIT** (checked 4 Oct 2026):
 
 - **[apple2js](https://github.com/whscullin/apple2js)** (Will Scullin, since 2013): Apple ][,
-  ][+ and //e, mostly TypeScript now, React UI. Its 6502 core and its Apple ][ colour shader are
+  ][+ and //e, mostly TypeScript now, React UI. Its 6502 core and its Apple ][ color shader are
   git submodules (`cpu6502`, `apple2shader`), so the CPU is already a separate package.
 - **[Apple2TS](https://github.com/ct6502/apple2ts)** (Chris Torrence and contributors): //e
   in TypeScript, Vite, slot cards (Mockingboard, mouse card, Z-80 SoftCard, Disk II, SmartPort),
@@ -70,7 +70,7 @@ It runs the Apple ][, ][+ and //e with Mockingboard, mouse, Disk II,
 SmartPort and Z-80 CP/M cards, and then "upcycles" them: renders the graphics in 3D and HD with
 cameras you can move; records memory so you can rewind live ("never say die!"); lets GEOS and Dazzle
 Draw, which expect a joystick, be driven by the mouse; lets a game ship as a **microPAK**, one file of presentation
-for an old program (colour remapping, 3D pixel shifting, music, backdrops, overlays, cheats and
+for an old program (color remapping, 3D pixel shifting, music, backdrops, overlays, cheats and
 control programs); keeps presets in YAML; and has a scriptable command line that can run a binary
 without booting a DOS disk. microPAK is the nearest thing anywhere to the cabinet's cartridge.
 ([features](https://paleotronic.com/software/microm8/features/))
@@ -107,13 +107,13 @@ ROMs are Apple's: load them from the user, as microM8 and the others do, never c
 - **Lars Brinkhoff's [crt-simulation](https://github.com/larsbrinkhoff/crt-simulation)**: GLSL
   shaders (`phosphor.glsl`, `point.glsl` with a generalized Gaussian spot, `line.glsl`,
   `render.glsl`), a WebGL version (`crt.js`), and photos of a real Type 340 in `pics/`. Written
-  for exactly our tubes: the Type 30, Type 340, GT40, Imlac. No licence file yet: ask Lars, who
+  for exactly our tubes: the Type 30, Type 340, GT40, Imlac. No license file yet: ask Lars, who
   is already on the show ([correspondence](../../characters/lars-brinkhoff/correspondence.md)),
   to add one, then port the shaders to WebGPU (or run them in WebGL2 first) fed by our segments.
 - **masswerk's Spacewar** (Norbert Landsteiner, building on Barry and Brian Silverman's and Vadim
   Gerasimov's emulator): the best-looking P7 on canvas 2D, sub-pixel spots, seven intensities as
   spot sizes, with Steve Russell's account of the dual phosphor. Copyright Landsteiner, no open
-  licence: learn from it and ask before copying any code. He also wrote "Inside Spacewar!", the
+  license: learn from it and ask before copying any code. He also wrote "Inside Spacewar!", the
   model for how to walk a 1962 program in prose.
 
 ## Decisions for the cabinet's browser bench

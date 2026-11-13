@@ -278,7 +278,7 @@ and the people operating it, animated by what the machine is actually doing. The
 (the tube on curved glass). This is how a cartridge carries it.
 
 **Like a Sims object.** A Sims 1 object came with its own models, animations and code (its
-behaviour trees), and dropped into any house. A cartridge is the same kind of thing: tape, sources
+behavior trees), and dropped into any house. A cartridge is the same kind of thing: tape, sources
 and docs, and also the models and characters that show it being used.
 
 - **PIXIE** carries a Sims 1 Heinz Lemke at the PDP-7, working the light pen and the Teletype,

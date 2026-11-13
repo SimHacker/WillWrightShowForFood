@@ -179,7 +179,7 @@ What each step needs:
   coordinates need it.
 - **SYMELEC's drawing schema.** For SYMELEC to accept a drawing, Forth has to build what
   SYMELEC builds: the instance ring at `SAVINS`, `SUBP` and `INST`, line and point blocks,
-  and the catalogue. This is the research step. Its oracle is easy, though: draw something
+  and the catalog. This is the research step. Its oracle is easy, though: draw something
   in SYMELEC, photograph the structure with the RINGS panel, and make Forth build the same
   structure.
 - **`CREATE DOES>`** is in ([`does.fs`](tapes/pdp7forth/does.fs)), so ring types can be

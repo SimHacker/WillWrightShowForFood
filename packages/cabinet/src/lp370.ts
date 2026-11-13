@@ -72,7 +72,7 @@ export function* lp370Demo(h: DemoHost & { cpu: Pdp7 }, program: AsmResult): Dem
 	yield* glide(h, 0o1200, 0o1200);
 	yield* wait(600_000);
 
-	yield "Pen right of centre on a line: the display stops where the pen sees it, so the line is cut short";
+	yield "Pen right of center on a line: the display stops where the pen sees it, so the line is cut short";
 	for (const y of [0o700, 0o500, 0o300, 0o100]) yield* hold(h, 0o1040, y, 400_000);
 
 	yield "Slide the pen along a line and the cut follows it";
@@ -85,7 +85,7 @@ export function* lp370Demo(h: DemoHost & { cpu: Pdp7 }, program: AsmResult): Dem
 	h.cpu.switches = 0;
 	yield* wait(200_000);
 
-	yield "Test 2, follow: switch 3 up. A tracking cross, with two lines from the centre to it";
+	yield "Test 2, follow: switch 3 up. A tracking cross, with two lines from the center to it";
 	h.cpu.switches = SW.follow | SW.intensity(7);
 	yield* wait(400_000);
 	const cx = at("xpt");

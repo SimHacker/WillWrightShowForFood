@@ -173,7 +173,7 @@ with its operands and their labels.
 [Processor tracing fields](https://github.com/pkimpel/retro-1620/blob/2cb4ed7/emulator/Processor.js#L866-L872).
 
 **Plan.** A trace ring buffer in the cabinet, off by default, that the
-tests can dump when an acceptance test fails, labelled from
+tests can dump when an acceptance test fails, labeled from
 `symelec-symbols.txt`. Most of the bugs in [BUG-JOURNAL.md](BUG-JOURNAL.md)
 were found by stepping through by hand; this would have shown them in
 the first failing run.
@@ -202,7 +202,7 @@ the first failing run.
 - **Power-up and Emergency Off.** Power-up takes 4.5 seconds while the
   "DC supplies" come up, and Emergency Off takes a double click and
   plays a siren ([`emergencyOffClick`](https://github.com/pkimpel/retro-1620/blob/2cb4ed7/webUI/ControlPanel.js#L875-L888)).
-  Good theatre, but nothing the PDP-7 did.
+  Good theater, but nothing the PDP-7 did.
 
 ## People
 

@@ -173,7 +173,7 @@ export class RleTape {
 		if (lo < hi && last!.start + last!.length > end)
 			repl.push({ start: end, length: last!.start + last!.length - end, code: last!.code });
 		this.runs.splice(lo, hi - lo, ...repl);
-		// Merge equal neighbours across the seams.
+		// Merge equal neighbors across the seams.
 		let k = Math.max(1, lo);
 		const stop = Math.min(this.runs.length, lo + repl.length + 1);
 		while (k < stop && k < this.runs.length) {

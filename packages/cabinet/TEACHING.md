@@ -381,7 +381,7 @@ CAM-6 is the third co-processor on the same contract, and the one these ideas or
   simulator (CAM6.js with jsforth) runs the same rules in the browser today. TM-Forth was the
   rehearsal.
 - **The picture.** Cells want pixels and the 340 draws vectors, so the plan adds two raster
-  devices that also read core directly: a cell renderer (state through a colour map) and a
+  devices that also read core directly: a cell renderer (state through a color map) and a
   framebuffer described by a byte pointer and strides
   ([DESIGN.md](DESIGN.md#raster-a-vanilla-virtual-video-display-and-a-cell-renderer)). The 340
   can still label and annotate the cells, as it does the Turing tape.

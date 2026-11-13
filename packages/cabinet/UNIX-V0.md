@@ -82,7 +82,7 @@ u.type("ken\r");
 The Living Computer Museum ran UNIX v0 on a real PDP-7, serial 129. Boeing had used the machine
 with an SDS-930 and a Type 340; Fred Yearian bought it at Boeing Surplus in 1979 for $500. The
 museum's [blog of 1 November 2019](https://web.archive.org/web/20240424192104/https://livingcomputers.org/Blog/Restoring-UNIX-v0-on-a-PDP-7-A-look-behind-the-sce.aspx)
-says how. sn 129 has no RB09, so Jeff Kaylin built a disk emulator, the **JK09**. It is modelled on
+says how. sn 129 has no RB09, so Jeff Kaylin built a disk emulator, the **JK09**. It is modeled on
 the RB09 and hooks into a custom DMA modification that Boeing had installed. Josh Dersch wrote a
 new UNIX v0 driver for it, "likely the first new driver for UNIX Version 0 in the last 45 years".
 It first booted on Monday 28 October 2019, and the first login was `dmr`. The JK09 and its driver

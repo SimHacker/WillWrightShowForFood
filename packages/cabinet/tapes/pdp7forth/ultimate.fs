@@ -81,7 +81,7 @@ variable tw   variable tn
   131072 dl,  28752 dl,  0 tw !  0 tn !  dup 12 * bx +!
   0 do dup i + c@ >342 char, loop drop
   31 char,  begin tn @ while 0 char, repeat  36928 dl, ;
-: centred ( c-addr u cx y -- ) >r  over 6 * -  r> beam  text ;
+: centered ( c-addr u cx y -- ) >r  over 6 * -  r> beam  text ;
 
 \ A new display list: parameters (scale 1, bright, light pen off), the
 \ beam to 0,0, then vectors. DL, keeps a terminator after each word.
@@ -138,7 +138,7 @@ variable ph   variable arm   variable fx   variable fy   variable on
   fx @ 25 + fy @ beam  fx @ fy @ line ;
 
 \ A square per phase, OFF to REST, each tagged and captioned with its
-\ name above it; the current one crossed out. 88 apart, centred on the
+\ name above it; the current one crossed out. 88 apart, centered on the
 \ tube, leaves room for RETURN, 72 wide at 12 a letter.
 : name ( p -- c-addr u )
   dup 0 = if drop s" OFF" exit then   dup 1 = if drop s" WAIT" exit then
@@ -150,7 +150,7 @@ variable ph   variable arm   variable fx   variable fy   variable on
 : lamps ( -- )
   ph-max 1+ 0 do
     i name tagged  i lamp-x 200 24 square
-    i name  i lamp-x 12 +  232 centred
+    i name  i lamp-x 12 +  232 centered
   loop ;
 \ The lit lamp is a star, a + and an X, the + reaching past the square
 \ like a glint, drawn four times 2 apart to make it bold. That is 32
@@ -179,7 +179,7 @@ variable cx   variable cy
   712 r@ 6 - beam  712 r> 6 + line ;
 : meter ( n y -- ) >r  312 r@ beam  400 um-max */ 312 + r> line ;
 \ Each ends at 300, a little left of the end stops.
-: legend ( c-addr u y -- ) >r  300 over 6 * -  r> centred ;
+: legend ( c-addr u y -- ) >r  300 over 6 * -  r> centered ;
 : labels ( -- )
   tag" How far the lid is open"  s" LID" 153 legend
   tag" How far the arm is out"  s" ARM" 123 legend
@@ -205,7 +205,7 @@ variable still   variable still-x   variable still-y
 \ ON or OFF under the plate, as the lever says.
 : caption ( -- )
   tag" The switch: tap it with the pen"
-  on @ if s" ON" else s" OFF" then  400 376 centred ;
+  on @ if s" ON" else s" OFF" then  400 376 centered ;
 : frame ( -- )
   read-box  rewind
   lid lever caption hand lamp

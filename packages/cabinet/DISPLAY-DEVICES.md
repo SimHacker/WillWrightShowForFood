@@ -2,13 +2,13 @@
 
 A display device is a plug-in on the backplane that reads a range of some machine's memory through a
 read-only [core link](CORE-LINKS.md) and turns it into something to look at: compact RGBA, indexed
-colour, tiles from an atlas, or vectors. The machine doesn't know it's being watched. Each device is
+color, tiles from an atlas, or vectors. The machine doesn't know it's being watched. Each device is
 configured for a size, a layout, a shape and a view, and several can read the same memory at once.
 Design only, apart from the Type 340, which runs.
 
 ## Why core links
 
-A video circuit is DMA: it reads memory the CPU wrote and paints from it. Modelling a display as a
+A video circuit is DMA: it reads memory the CPU wrote and paints from it. Modeling a display as a
 read-only link means the same machinery serves the real display (the Apple's text page, the 340's
 display list) and any number of invented ones (a heat map, a hex view drawn as tiles, the Apple's
 memory as a picture), with the codec doing the conversion ([CORE-LINKS.md](CORE-LINKS.md#codecs-what-the-words-mean-on-each-side)).
@@ -18,8 +18,8 @@ A display never writes; the link is read-only, so a display can't disturb the pr
 
 | Output | Good for | Example |
 |---|---|---|
-| **RGBA** | bitmaps that need their exact colours | Apple ][ hi-res with NTSC artefact colour, done once per frame on the GPU |
-| **Indexed colour** | small palettes, cheap to recolour | Apple lo-res's sixteen colours; a palette swap as a microPAK does |
+| **RGBA** | bitmaps that need their exact colors | Apple ][ hi-res with NTSC artifact color, done once per frame on the GPU |
+| **Indexed color** | small palettes, cheap to recolor | Apple lo-res's sixteen colors; a palette swap as a microPAK does |
 | **Tiles** | character and block screens, maps | the Apple text page from a character-set atlas; a SimCity map from its tile atlas |
 | **Vectors** | stroke displays | the Type 340's display list as line segments (runs today) |
 
@@ -33,9 +33,9 @@ with its optional per-tile function ([tile-functions.md](https://github.com/SimH
   the interleave into rows; each byte is a tile from a character-set atlas. Characters `$00`–`$3F` are
   inverse and `$40`–`$7F` are `FLASH`: a tile function draws `FLASH` characters as their inverse on a
   duty cycle, the same mechanism as SimCity's power blink, with no copy of the screen.
-- **Lo-res**: the same memory, each byte two blocks of sixteen colours; indexed colour.
-- **Hi-res**: `$2000`–`$3FFF` (page 1), seven pixels a byte plus a colour-shift bit, interleaved;
-  RGBA with a choice of monochrome, simple colour or NTSC artefact colour.
+- **Lo-res**: the same memory, each byte two blocks of sixteen colors; indexed color.
+- **Hi-res**: `$2000`–`$3FFF` (page 1), seven pixels a byte plus a color-shift bit, interleaved;
+  RGBA with a choice of monochrome, simple color or NTSC artifact color.
 - **80 columns and double hi-res**, through the auxiliary memory bank, when the Apple has it.
 
 Each is the same device type with a different codec and configuration, and microM8's screens could
@@ -59,7 +59,7 @@ A display device declares, in its cartridge or profile:
 Because a display is just a codec over memory, the instructive ones are free:
 
 - **The memory as a picture**: all 64K of the Apple, or a PDP-7 bank, a pixel per byte or word,
-  coloured by value or by what last touched it.
+  colored by value or by what last touched it.
 - **Two views of one screen**: the hi-res page as the game shows it, and beside it the bytes that
   made it, linked so pointing at one lights the other.
 - **The video chain itself**: the circuitry between memory and NTSC, drawn in 3D and driven by the

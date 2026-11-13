@@ -52,7 +52,7 @@ TypeScript. Instead the Apple is cut into the cabinet's parts: a processor, a me
 ports, codecs and services ([ARCHITECTURE-AND-LINEAGE.md](../ARCHITECTURE-AND-LINEAGE.md#cpus-are-devices)).
 
 **Guest memory is exactly as wide as the guest's word.** The Apple's banks are `Uint8Array`s, 64K
-main and 64K aux. microM8 stores every byte in a `uint64` (8 MB per slot) so it can keep colour
+main and 64K aux. microM8 stores every byte in a `uint64` (8 MB per slot) so it can keep color
 attributes in the upper bits of text-page cells; every read pays a mask, and every write to
 `$400–$7FF` reads the cell first to keep its upper bits (`core6502.go`, `StoreByteAddr`). Here those
 attributes go in a plane. Byte banks make mapping, sharing and DMA a `subarray` or a `set()`, and a
@@ -60,12 +60,12 @@ panel reads the same bytes the 6502 reads.
 
 **Everything else lives in planes beside memory.** A plane is a typed array or a sparse map keyed
 by address, owned by whoever turned it on: heat counts, the last reader, writer and executor, the
-type map, source maps, microM8's text colours. A machine pays only for the planes in use. This is
+type map, source maps, microM8's text colors. A machine pays only for the planes in use. This is
 the cabinet's rule already: tags and shadow layers are never written into core
 ([`src/core.ts`](../src/core.ts); DESIGN.md, "Shadow memory").
 
-**State is data, behaviour is code.** A unit's state is plain data: numbers, typed arrays and
-plain objects, with no closures and no class instances inside it. Its behaviour is a module that
+**State is data, behavior is code.** A unit's state is plain data: numbers, typed arrays and
+plain objects, with no closures and no class instances inside it. Its behavior is a module that
 operates on that state. Snapshots, rewind, lockstep, worker transfer and hot reload then all work
 the same way: copy the state, or keep the state and swap the module.
 
@@ -474,17 +474,17 @@ teaching graph's `drives` and `decodes` links read ([TEACHING.md](TEACHING.md)).
 **Self practices, in TypeScript.**
 
 - **Prototypes, not classes.** A card definition is a prototype: plugging it into a slot copies its
-  state template and shares its behaviour. No class hierarchy of cards.
+  state template and shares its behavior. No class hierarchy of cards.
 - **Stable shapes.** State objects are created with every field present, in a fixed order, numbers
   staying numbers, so V8's hidden classes (Self's maps) stay monomorphic and the JIT keeps its fast
   paths.
-- **Customise, then invalidate.** Resolved tables are specialised per configuration and variant, as
+- **Customize, then invalidate.** Resolved tables are specialized per configuration and variant, as
   Self compiled methods per receiver map; adding or removing a slot invalidates the tables and any
-  compiled 6502 blocks that depend on the pages it covers, as Self deoptimised on dependency change.
+  compiled 6502 blocks that depend on the pages it covers, as Self deoptimized on dependency change.
 - **Mirrors.** Reflection goes through the `debugger` coordinate and the slot listing, not through
   the machine's own paths.
 
-Where a unit's behaviour is a state machine or a timing model (the video scanner, the Disk II's
+Where a unit's behavior is a state machine or a timing model (the video scanner, the Disk II's
 sequencer, a 6522) it is ordinary code; the slots are its entry points on the bus.
 
 ### Units and time
@@ -588,11 +588,11 @@ exact mode is on.
 1. **Dots.** For each of the 192 visible lines, the shader works out which bytes the scanner reads
    for each of the 40 columns (main and aux interleaved for 80-column text and double hires), looks
    up the mode for that column, and produces the line's 560 dots, with hires's half-dot delay from
-   the high bit. This is the signal the Apple puts out before colour.
-2. **Colour.** The dots become a picture: an NTSC decoder that recovers colour from the dot pattern
-   the way a television did, or monochrome green, amber or white, or the idealised colours of an RGB
+   the high bit. This is the signal the Apple puts out before color.
+2. **Color.** The dots become a picture: an NTSC decoder that recovers color from the dot pattern
+   the way a television did, or monochrome green, amber or white, or the idealised colors of an RGB
    card. Each is its own shader, chosen per view. microM8's decoders (`core/hires`, the scan
-   renderer) and its colour tables are the reference for what each mode should look like.
+   renderer) and its color tables are the reference for what each mode should look like.
 
 **Overlays are passes too.** The planes ([TRANSPARENCY.md](TRANSPARENCY.md#overlays-reader-writer-executor))
 upload as textures the same way, and the overlay pass draws heat, last writer or type over the
@@ -601,7 +601,7 @@ byte without the CPU side doing anything per pixel.
 
 **The same address function, twice.** Which byte the scanner reads at a given line and column is
 also needed on the CPU side: some programs read the floating bus, the last byte the video scanner
-put on the data bus, to synchronise with the beam. Don Lancaster's vapor lock (*Enhancing Your Apple
+put on the data bus, to synchronize with the beam. Don Lancaster's vapor lock (*Enhancing Your Apple
 II*, volume 1) puts a marker byte in screen memory, polls the floating bus until it comes back, then
 counts cycles and flips soft switches at chosen scanlines, for a text window of any height under
 graphics or mixed modes anywhere on the screen. The CPU side must return the exact byte the scanner
@@ -619,7 +619,7 @@ easier to step through.
 | Thread | Does |
 |---|---|
 | machine (page or worker) | the 6502, the units, the mode log, the input log |
-| GPU | dots, colour, overlays, the 3D presentation |
+| GPU | dots, color, overlays, the 3D presentation |
 | AudioWorklet | sound, from the speaker's timestamps and the other sources |
 | page | panels, debugger, editors, network |
 
@@ -734,7 +734,7 @@ an `Exit` into the same records the 6502 would have left:
   separate state from executed, so the memory view shows which code ran as TypeScript.
 - **Trace.** The instruction trace gets one record for the call: entry, exit, cycles, registers in
   and out, and the accelerator's name. The bus trace gets the spans, not individual cycles.
-- **Profiler.** The routine's frame in the flame graph has its cycles and its symbol, labelled as
+- **Profiler.** The routine's frame in the flame graph has its cycles and its symbol, labeled as
   accelerated. Interpreter layers above it still get their line numbers, because the cycle totals
   are the 6502's.
 - **Expand.** Opening an accelerated call in the trace reruns it as 6502 code, from the nearest
@@ -754,11 +754,14 @@ first tests, since the compiled block has to give the same `Exit` from the same 
 ## Faster, later: compiling 6502 to JavaScript
 
 After the interpreter passes the oracles: compile hot 6502 basic blocks to JavaScript with
-`new Function` and let the engine's JIT optimise them, as SqueakJS does for Smalltalk bytecode
+`new Function` and let the engine's JIT optimize them, as SqueakJS does for Smalltalk bytecode
 ([Vanessa Freudenberg's jit notes](../../../characters/vanessa-freudenberg/sources/jit-notes/README.md)).
 A write to a page holding compiled code invalidates it through the write watch flags. Compiled blocks
 must make the same bus calls in the same order, so the dummy cycles above are part of the generated
-code. Apple programs modify themselves often, so whether this wins is a benchmark result.
+code. Apple programs modify themselves often, so whether this wins is a benchmark result. Each
+block carries a `sourceURL` and a source map back to the listing, so DevTools, the host's profiler
+and V8's own code dumps all name 6502 addresses and listing lines
+([TRANSPARENCY.md](TRANSPARENCY.md#further-down-from-the-6502-to-javascript-and-the-hosts-machine-code)).
 
 ## Threads
 

@@ -93,7 +93,7 @@ again with **Insert file…** to pick up where you left off.
 ## Going deeper
 
 - [The Little Computer People show](../../../repo-shows/little-computer-people/README.md): reading
-  the first computer person off a 1985 floppy and giving him neighbours, by moving him into
+  the first computer person off a 1985 floppy and giving him neighbors, by moving him into
   [Tiny Life](https://tinylifegame.com/).
 - [What a house remembers](../worlds/little-computer-people/README.md): the house number and the
   256-byte research record, decoded from the Commodore 64 disks, and where the same template sits

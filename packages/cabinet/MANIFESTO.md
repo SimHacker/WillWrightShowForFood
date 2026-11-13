@@ -11,7 +11,7 @@ runs today.
 
 ## Tribute, accessibility and fun beat realism
 
-We bend the rules and depart from realism whenever that honours someone, lets more people in, or
+We bend the rules and depart from realism whenever that honors someone, lets more people in, or
 makes it more fun. Realism is a way to reach those, not a goal of its own.
 
 - **Tribute.** Listings say who assembled them, and the name goes to whoever wrote the code, even
@@ -77,7 +77,7 @@ Two PDP-7s, an Apple ][ and a PDP-10 can run side by side on the
 
 And because they share a process, one can **read another's mind**. tiny-titan can walk PIXIE's
 ring structures in the PDP-7's core while it runs, lift each pixie out into a file, and then
-check that serialising it and loading it back gives the same rings. No PDP-7 program has to be
+check that serializing it and loading it back gives the same rings. No PDP-7 program has to be
 written or changed for that. It is a debugger, a file system and a network test at once, and it
 exists because nothing here is sealed off from anything else.
 
@@ -87,9 +87,9 @@ exists because nothing here is sealed off from anything else.
 Apple ][ emulator ([Paleotronic](https://paleotronic.com/software/microm8/)) calls it
 "upcycling": it runs the machine faithfully and then gives it what it never had. Graphics in 3D
 and HD, with cameras you can move. Live rewind. A web debugger that runs time backwards, with
-trace recording and memory heat maps. An Epson FX-80 that prints to colour PDF. A mouse that
+trace recording and memory heat maps. An Epson FX-80 that prints to color PDF. A mouse that
 drives programs written for a joystick. Applesoft and Logo rewritten in Go, with 3D modes added.
-microPAK, one file that dresses an old program in new colours, music, backdrops and controls,
+microPAK, one file that dresses an old program in new colors, music, backdrops and controls,
 which is the nearest thing anywhere to our cartridge. And now an HTTP API and an MCP server, so
 another program, or an AI, can drive it. Much of this page is microM8's attitude, applied to a
 PDP-7. Don has been telling people so since 2018, when Melody ported his 1983 Logo Adventure to Apple
@@ -153,7 +153,7 @@ Next the assembler, so the page assembles `kernel.s` itself and gets source maps
 table. Then the trace steps through Mitch's source lines, and a LIVE CODING panel lets you edit,
 build and run it.
 
-The showcase is tiny-its, the first real application of that Forth, modelled on Mitch's Open
+The showcase is tiny-its, the first real application of that Forth, modeled on Mitch's Open
 Firmware command line, key bindings and device tree. You can hack on it at three levels at once:
 rebuild the whole system from its assembly and Forth; load changed Forth words into the image
 that is running, without a rebuild; and look underneath, in octal, disassembly and source, while

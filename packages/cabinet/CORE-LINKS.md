@@ -36,7 +36,7 @@ rest, as a stack of steps declared once and run in both directions:
 | Step | What it does | Examples |
 |---|---|---|
 | **pack / unpack** | width: several small words in one big one, or the reverse | 18 ↔ 36 as `left,,right`; 16 → 36 the 10/11 way; three 6-bit characters in an 18-bit word; 8 → 18 a byte per word or packed |
-| **depth** | bits per element | 1-bit display memory ↔ 8-bit pixels; Apple ][ hires seven pixels a byte with a colour bit ↔ RGBA |
+| **depth** | bits per element | 1-bit display memory ↔ 8-bit pixels; Apple ][ hires seven pixels a byte with a color bit ↔ RGBA |
 | **endian** | byte and halfword order | the 6502's and PDP-11's little-endian words; a 68000's big-endian; PDP-10 byte pointers that count from the left |
 | **character set** | text | the PDP-7 kernel's SIXBIT (ASCII − 040) ↔ ASCII; PDP-10 7-bit ASCII five to a word; Apple ][ ASCII with the high bit set; FIODEC on the PDP-1 |
 | **number format** | floating and fixed point | PDP-10 floating point ↔ IEEE 754; Applesoft's five-byte floats ↔ IEEE 754; ones' complement on the PDP-7 and PDP-1 ↔ two's complement |

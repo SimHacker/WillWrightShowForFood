@@ -48,7 +48,7 @@ decimal
 : switch ( -- )
   tag" The switch"  swx swr - swy swr - swx swr + swy swr + rect
   swx swy beam  um-on? if 30 else -30 then swx + swy 36 + line
-  um-on? if s" ON" else s" OFF" then swx swy 70 + centred ;
+  um-on? if s" ON" else s" OFF" then swx swy 70 + centered ;
 
 \ A real hand, not the demo's (status bit 4).
 : real? ( -- flag ) hand-seen? if 0 reg 4 and 0= else 0 then ;
@@ -98,17 +98,17 @@ variable armed   -1 armed !
 : prompt ( -- )
   um-phase ph-off = if
     real? if s" TAKE YOUR HAND AWAY, THEN SHOW IT AGAIN"
-    else s" SHOW THE CAMERA YOUR HAND, FINGERS UP" then 512 30 centred
+    else s" SHOW THE CAMERA YOUR HAND, FINGERS UP" then 512 30 centered
   then
   um-phase ph-reach = um-arm 1000 = and if
-    s" TOUCH THE SWITCH" 512 30 centred
+    s" TOUCH THE SWITCH" 512 30 centered
   then ;
 
 \ Brightness: from vector mode, escape to a parameter word (mode 1,
 \ vectors next; bit 14 sets the intensity to 0..7), then go on.
 : bright! ( 0..7 -- ) 131072 dl,  8 + 32768 + dl, ;
 : uframe ( -- )
-  new-frame  5 bright!  s" THE ULTIMATE MACHINE DATA HAND" 512 975 centred
+  new-frame  5 bright!  s" THE ULTIMATE MACHINE DATA HAND" 512 975 centered
   box  switch
   \ Yours is sized when the round starts; the demo's always by itself.
   um-phase ph-off = real? 0= or if hand-seen? if null then then

@@ -52,7 +52,7 @@ place or `IDLA` restarts it, so a polling program loses nothing but time.
 ## Tracking
 
 Pointing at something lit is easy. Moving a cross with the pen means the program must keep
-something lit under the pen as it moves: SYMELEC re-centres its cross on every hit and draws a
+something lit under the pen as it moves: SYMELEC re-centers its cross on every hit and draws a
 small spiral around it to catch the pen when it slips. [TRACKING.md](../TRACKING.md) walks
 through it against the listing.
 
@@ -78,7 +78,7 @@ to run when it's hit, once the kernel has `EVALUATE`.
 ## Status
 
 - **Done:** the pen in the emulator (aperture test against fresh strokes, `IDSP`, `IDRC`,
-  `IDRS`, freeze and resume); `DDS`; any number of shared pens and `IDPN`; pen colours; the
+  `IDRS`, freeze and resume); `DDS`; any number of shared pens and `IDPN`; pen colors; the
   LP370 diagnostic passing.
 - **Next:** pen interpolation between browser frames, so fast drags don't lose the cross
   ([ROADMAP §1](../ROADMAP.md#1-tracking-the-pen-is-sampled-once-per-browser-frame)).

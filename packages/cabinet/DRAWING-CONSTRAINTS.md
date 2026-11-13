@@ -29,7 +29,7 @@ into constraints any drawing editor understands:
 
 | 340 fact | General constraint |
 |---|---|
-| a vector's delta is 7 bits times scale | this point stays within a box around its neighbour |
+| a vector's delta is 7 bits times scale | this point stays within a box around its neighbor |
 | characters advance from the one before | the things after me move with me |
 | POINT words are absolute | this point is free anywhere on the screen |
 | a run shares one scale | these points move on a grid of that step |

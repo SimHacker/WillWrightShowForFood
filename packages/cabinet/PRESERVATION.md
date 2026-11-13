@@ -12,7 +12,7 @@ leads, who it is for, and how to pay for it.
 Emulation in the browser works, at scale: "You don't even need to know you're seeing an emulation"
 (2016). What holds it back is the cost of preparing preserved system images, the lack of standards
 that would let one framework's images run in another, the absence of any institution paying for
-emulator maintenance, and the law. "Emulation is not a panacea": it costs more per artefact than
+emulator maintenance, and the law. "Emulation is not a panacea": it costs more per artifact than
 migration, most of the cost is ingest, and the deeper problem is that "the resources available are
 inadequate." Games are emulated because they have a market and fans; "preserving content for
 scholars lacks the business model and fan base of retro gaming." In the 2016 talk his conclusion
@@ -26,7 +26,7 @@ His eight tasks (§6), with what the cabinet has, what is planned, and what is m
 | Task | Today | Planned | Missing |
 |------|-------|---------|---------|
 | 6.1 Standard system images | The RB09 disk uses SIMH's attach format, so UNIX's `image.fs` moves between SIMH and the cabinet unchanged ([UNIX-V0.md](UNIX-V0.md)). HyperTIES articles are already unpacked into Markdown with YAML frontmatter ([FORMAT.md](../../apps/ties/FORMAT.md)) | Images unpacked into git trees of their files, with the metadata to repack them byte for byte ([below](#unpacked-images-an-escalator-not-a-blob)); a cartridge as a self-describing directory ([CARTRIDGES.md](CARTRIDGES.md) §1); portable JSON snapshots ([WEB-BENCH.md](WEB-BENCH.md)) | Cartridges are still entries in the applet's program table; no unpacker for the PDP-7 UNIX file system yet; packed images for qcow2-based frameworks are an export, not the format |
-| 6.2 Standard access | A stable URL per program, `/cabinet/<program>/` | Loading a cartridge from any repository ([CARTRIDGES.md](CARTRIDGES.md) §7) | A media type for a cartridge, so a link names the artefact, not the cabinet (see below) |
+| 6.2 Standard access | A stable URL per program, `/cabinet/<program>/` | Loading a cartridge from any repository ([CARTRIDGES.md](CARTRIDGES.md) §7) | A media type for a cartridge, so a link names the artifact, not the cabinet (see below) |
 | 6.3 Standard invoking | One device contract inside the cabinet, and one port for local or remote play | | Wrapping other emulators |
 | 6.4 Tools for images | The OCR'd PIXIE listing assembled and checked by running it; literal pools recovered by script ([PIXIE-RESTORATION.md](PIXIE-RESTORATION.md)) | A build cache, verify steps, decoding binaries back to verified source, CI that rebuilds every cartridge ([CARTRIDGES.md](CARTRIDGES.md) §§2, 4, 7) | Imaging physical media; identifying file systems |
 | 6.5 Metadata | Provenance READMEs for each tape; source maps from core to the scanned listing | Typed links between every layer, by hash ([DESIGN.md](DESIGN.md#source-maps-as-transclusion-layers-spans-links)) | PRONOM, PREMIS, any shared registry |
@@ -143,7 +143,7 @@ emulator "makes it accessible in the present, not preservable for the future." T
 
 The answer is to make the cartridge the thing that is preserved, and the cabinet one way to play it:
 
-- **A cartridge is an artefact.** A directory with the media (tapes, disks, listings, scans), a
+- **A cartridge is an artifact.** A directory with the media (tapes, disks, listings, scans), a
   `cartridge.yml` naming the machine and devices it needs, the provenance and license of every file,
   and checksums. Nothing in it depends on the cabinet's code.
 - **It has a media type.** So a page can link to the cartridge and let the reader's browser choose

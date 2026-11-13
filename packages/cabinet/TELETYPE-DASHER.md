@@ -43,7 +43,7 @@ zero pointer ends the program. The simple variables start at `$69-$6A` (VARTAB) 
 - **Keywords**, from the token table, with a line of help for each from the Applesoft manual.
 - **Line numbers with names.** By convention a subroutine starts with a `REM` (token `$B2`):
   `1000 REM DRAW SHIP`. After `GOSUB` (`$B0`) or `GOTO` (`$AB`), Tab offers the program's line
-  numbers labelled by those comments (`1000 DRAW SHIP`), and the lines that are actually `GOSUB`
+  numbers labeled by those comments (`1000 DRAW SHIP`), and the lines that are actually `GOSUB`
   targets first. Help on a number shows the line and its callers.
 - **Variables**, from the variable table, with their current values, and array names with their
   dimensions.

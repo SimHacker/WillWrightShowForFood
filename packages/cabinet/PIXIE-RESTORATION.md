@@ -314,7 +314,7 @@ one Tiny Titan, a drawing made by Forth's turtle edited in PIXIE and walked agai
 
 - **Heinz.** He plans to use PIXIE, instead of PowerPoint, to build Bayesian network models of
   health care situations, and has invited the IFCARS Think Tank and their students to do the
-  same. CARS 2027 in Berlin will have a session on "HCI and Modelling: where we come from and may
+  same. CARS 2027 in Berlin will have a session on "HCI and Modeling: where we come from and may
   be going to", chaired by Leo Joskowicz and Roy Eagleson, with PIXIE in the "where we come from"
   part; 29 June 2027 is the 60th anniversary of Heinz's first Cambridge lecture
   ([character](../../characters/heinz-lemke/README.md)).
@@ -352,27 +352,27 @@ model charges, and the monthly bills run into the thousands of dollars.
 ## Cambridge sources and contact leads
 
 Research notes added 16 October 2026 from sources supplied by Don. These
-distinguish catalogue descriptions, published accounts, personal recollections,
+distinguish catalog descriptions, published accounts, personal recollections,
 and questions still to be answered. No new archive material has yet been
 obtained through the requests proposed below.
 
 ### Neil Wiseman papers: specific folders to request
 
-The catalogue of the N. E. Wiseman papers, **NCUACS 154/4/07**, identifies
+The catalog of the N. E. Wiseman papers, **NCUACS 154/4/07**, identifies
 two groups of PIXIE material in its University Mathematical Laboratory,
 Cambridge section:
 
 https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/WISEMAN_NEIL_ERNEST_v2.pdf
 
-| Catalogue references | Folder title and dates | Described contents relevant to restoration |
+| Catalog references | Folder title and dates | Described contents relevant to restoration |
 |---|---|---|
 | B.214–B.216 | “Pixie I,” 1967–1968 | Computer printouts; manuscript and typescript notes and drafts, including “Display File Compiler,” “Ring Structure Entertainer,” and “Notes on RSP [Ring Structure Processor] Data Structures”; requests for offprints of Wiseman's papers. |
 | B.217–B.223 | “Pixie II,” 1968–1971 | Computer printouts; correspondence; Rainbow memos; an offprint of “A ring structure processor for a small computer”; a proof of “A note on compiling display file from a data structure”; drafts including “Rainbow CAD [Computer Aided Design] Project,” M. Etherton's notes on representing pictorial and topological information, and a summary of the computer-aided electronics design group's work. |
 
 “Computer printouts” does not establish that these are source listings,
 complete programs, or versions compatible with the surviving 1972 listing.
-Those are questions for inspection. Likewise, “Pixie II” is the catalogue's
-historical folder title, not the later medical-modelling project of that name.
+Those are questions for inspection. Likewise, “Pixie II” is the catalog's
+historical folder title, not the later medical-modeling project of that name.
 
 There is an existing reason to start with **B.218**: Bill Buxton identifies
 it as the source of his 2008 report on Wiseman's radial-menu notes,
@@ -433,7 +433,7 @@ https://www.cl.cam.ac.uk/relics/database/?uid=&class=&name=pdp&machine=Titan
   [Photograph](https://www.cl.cam.ac.uk/relics/jpegs/CL.16-97.jpg).
 - **CL-54/97, Experimental graphical input for PDP7.** The notes describe
   a ferrite pickup and crossed wires for detecting pointer position.
-  The speaker, labelled “DW,” credits Maurice Wilkes and himself with the
+  The speaker, labeled “DW,” credits Maurice Wilkes and himself with the
   concept, Norman Unwin with some detailed design, and another technician
   with the electronics.
   [Photograph](https://www.cl.cam.ac.uk/relics/jpegs/CL.54-97.jpg).
@@ -587,7 +587,7 @@ invitation as consent to publish later correspondence.
 
 ### Other people and records to follow up
 
-- **Heinz Lemke:** ask which catalogue titles and program names he
+- **Heinz Lemke:** ask which catalog titles and program names he
   recognizes, how versions changed between the films and the 1972 listing,
   and who might know about the analysis programs or Titan software.
 - **David S. H. Rosenthal:** already recalled working on the PDP-7/340 and

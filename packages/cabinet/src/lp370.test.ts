@@ -74,7 +74,7 @@ test("lp370 sensitivity: eight lines at eight intensities", () => {
 	assert.ok(segs.every((s) => s.x0 === 0o700 && s.x1 === 0o1077));
 });
 
-test("lp370 sensitivity: pen right of centre truncates the line", () => {
+test("lp370 sensitivity: pen right of center truncates the line", () => {
 	const m = machine(SW.sensitivity);
 	m.drawn(50_000);
 	m.pen.point(0o1040, LINE_Y);
@@ -83,10 +83,10 @@ test("lp370 sensitivity: pen right of centre truncates the line", () => {
 	assert.ok(line.length > 0);
 	const reach = Math.max(...line.map((s) => s.x1));
 	assert.ok(reach < 0o1040, `stopped where the pen saw it, reached ${reach.toString(8)}`);
-	assert.ok(reach >= 0o1000, "right of centre");
+	assert.ok(reach >= 0o1000, "right of center");
 });
 
-test("lp370 sensitivity: pen left of centre, IDRS resumes and the line appears in full", () => {
+test("lp370 sensitivity: pen left of center, IDRS resumes and the line appears in full", () => {
 	const m = machine(SW.sensitivity);
 	m.drawn(50_000);
 	m.pen.point(0o740, LINE_Y);
@@ -96,7 +96,7 @@ test("lp370 sensitivity: pen left of centre, IDRS resumes and the line appears i
 	assert.ok(line.some((s) => s.x1 < 0o1000 && s.x1 > 0o700), "the pen did stop it on the way");
 });
 
-/* Page 3, 2-2: the cross follows the pen; two lines from the centre to it. */
+/* Page 3, 2-2: the cross follows the pen; two lines from the center to it. */
 test("lp370 follow: the tracking cross follows the pen", () => {
 	const m = machine(SW.follow | SW.intensity(7));
 	m.drawn(50_000);
@@ -112,7 +112,7 @@ test("lp370 follow: the tracking cross follows the pen", () => {
 	const y = m.cpu.read(sym("ypt"));
 	assert.ok(Math.abs(x - (target[0] as number)) <= 4 && Math.abs(y - (target[1] as number)) <= 4, `cross at ${x},${y}`);
 	const legs = m.drawn(50_000).filter((s) => s.kind === "vector" && s.x0 === 0o1000 && s.y0 === 0o1000);
-	assert.ok(legs.length > 0, "the line from the centre");
+	assert.ok(legs.length > 0, "the line from the center");
 	assert.equal(m.cpu.halted, false, "no edge violation");
 });
 
@@ -198,7 +198,7 @@ function decodeReadout(cpu: Pdp7, buffer: number): number {
 			a += (digits[d] as number[]).length;
 		} else if (blank.every((w, k) => cpu.read(a + k) === w)) {
 			a += blank.length;
-		} else throw new Error(`unrecognised digit at ${a.toString(8)}`);
+		} else throw new Error(`unrecognized digit at ${a.toString(8)}`);
 	}
 	return Number(text);
 }

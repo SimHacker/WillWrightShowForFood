@@ -270,7 +270,7 @@ offensive code.  "I think I've found an I/O device that might suit us."
 "Yes indeed, if it's a fast channel.  We must get off this device."
 
 "Fast channel? The Milliamp Falcon has made the ARPA gate in less than
-twelve nodes!  Why, I've even outrun cancelled messages.  It's fast
+twelve nodes!  Why, I've even outrun canceled messages.  It's fast
 enough for you, old version."
 
 Our heroes, Luke Vaxhacker and PDP-1 Kenobie made their way to the

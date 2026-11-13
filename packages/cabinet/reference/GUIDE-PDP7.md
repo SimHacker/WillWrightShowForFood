@@ -77,7 +77,7 @@ to check against the Apple ][ Reference Manual (1978).
 | **Instructions per second** | about 300,000 | about 250,000–400,000 |
 | **Instruction set** | 16 opcodes on an index card, plus OPR bits and IOTs | 56 instructions, 151 opcodes, 13 addressing modes |
 | **Arithmetic** | 18-bit add in one instruction; the EAE multiplies and divides | 18 bits takes several instructions; no multiply |
-| **Display** | Type 340: a vector display processor, 1024², light pen | memory-mapped raster, 280×192, 6 colours, drawn by the CPU |
+| **Display** | Type 340: a vector display processor, 1024², light pen | memory-mapped raster, 280×192, 6 colors, drawn by the CPU |
 | **I/O** | IOT: each device adds its own instructions | memory-mapped soft switches, 8 slots |
 | **Software** | paper-tape assembler; PIXIE; UNIX (1969) | BASIC in ROM, Applesoft, VisiCalc, games |
 
@@ -93,15 +93,15 @@ a canvas. Layouts that fit:
 
 | Layout | Words | Where |
 |---|---|---|
-| 256², 2 bits a pixel per colour plane: red in bank 1, green in bank 2, blue in bank 3 | 7,282 per bank | 32K, one plane a bank, 910 words spare in each |
+| 256², 2 bits a pixel per color plane: red in bank 1, green in bank 2, blue in bank 3 | 7,282 per bank | 32K, one plane a bank, 910 words spare in each |
 | 256², three 6-bit pixels a word, packed | 21,846 | banks 1–3, across the boundaries |
 | 256² monochrome, 18 pixels a word, dense | 3,641 | bank 0, in Forth's 4,455 free words |
 | 256² monochrome, 16 pixels a word, a row is 16 words | 4,096 | bank 0, 359 words spare; addressing is shifts, not division |
 
-Planes are the elegant one: each bank holds a whole picture in one colour, 64 colours together,
+Planes are the elegant one: each bank holds a whole picture in one color, 64 colors together,
 and a program can draw in red alone by writing one bank. The monochrome plane in bank 0 can be a
 fourth plane over them, or the whole screen on an 8K machine. Point it at the dictionary,
-the stack or PIXIE's rings and memory becomes colour; point it at two buffers in turn and a
+the stack or PIXIE's rings and memory becomes color; point it at two buffers in turn and a
 cellular automaton never tears. In Forth, `fb ( addr fmt -- )`, `pixel!`, `pixel@`.
 
 ## Status

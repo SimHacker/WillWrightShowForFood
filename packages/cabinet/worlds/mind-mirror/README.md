@@ -8,7 +8,7 @@ a saved life on it: `DISK.yml` describes the disk, and each save is a character 
 
 | World | Disk | Save |
 |---|---|---|
-| [life-simulation-b](life-simulation-b/) | a user's copy of Disk 2 Side B, labelled Life Simulation B | RAVEN |
+| [life-simulation-b](life-simulation-b/) | a user's copy of Disk 2 Side B, labeled Life Simulation B | RAVEN |
 | [raitan](raitan/) | a blue disk with one catalog entry | RAITAN, unfinished |
 
 Both are flux captures in archive.org's `electronic-arts-mind-mirror-a2-ph`, collection

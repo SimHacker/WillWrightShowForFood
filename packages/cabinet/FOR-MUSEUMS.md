@@ -84,7 +84,7 @@ machine to the paper and back. Two examples of why this matters:
   I put online are, for now, on YouTube. Films, listings and the program that runs them belong
   together somewhere that will last.
 - **Stanford.** Stanford Libraries hold the recordings of Terry Winograd's CS547 seminar, with a
-  finding aid and some scans online. I have catalogued 339 of the talks
+  finding aid and some scans online. I have cataloged 339 of the talks
   ([cs547-ARCHIVE.md](../../characters/terry-winograd/media/cs547-ARCHIVE.md)).
 
 If you hold software, listings, films or recordings like these, the cabinet can give them a
@@ -97,12 +97,12 @@ named what emulation-based preservation was missing, and the cabinet's
 [cartridges](CARTRIDGES.md) are designed to answer each. Today a cartridge is an entry in the
 applet's program table; the format below is the plan.
 
-- **Technical metadata.** The tools of 2015 could not record what an artefact needs in order to
+- **Technical metadata.** The tools of 2015 could not record what an artifact needs in order to
   run: the emulator, operating system and application. A cartridge will state it: the machine and
   its devices, the tapes and disks, and how to build and load them.
 - **Usability metadata.** At the Archive, key bindings and reference cards often came from
   visitors' comments. The cabinet's programs already carry their keys, switch settings and help
-  articles, shown beside the machine; the cartridge format makes that part of the artefact.
+  articles, shown beside the machine; the cartridge format makes that part of the artifact.
 - **Experiential fidelity.** Running a program correctly is not the same as using it the way people
   did. Spacewar! players wore out the PDP-1's test switches and built control boxes; the PDP-7
   drew on a round, flickering CRT. The cabinet models the devices the machine saw, binds real ones

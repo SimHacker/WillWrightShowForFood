@@ -18,13 +18,13 @@ Heinz if he minds.) A ring in a pixie is a **pixie ring**.
 ## Pixie rings are pie menus
 
 A [pixie ring](https://en.wikipedia.org/wiki/Fairy_ring) is mushrooms in a circle around a
-centre, joined underground by one mycelium nobody sees. That is an RSP ring: members around
-an owner, joined by pointers under the picture. And things in a circle around a centre are
+center, joined underground by one mycelium nobody sees. That is an RSP ring: members around
+an owner, joined by pointers under the picture. And things in a circle around a center are
 a pie menu.
 
-- **Every ring is a pie.** In the IDE, and on a 340, point sits at the centre and the rings
+- **Every ring is a pie.** In the IDE, and on a 340, point sits at the center and the rings
   through it are the slices: the direction you flick picks the ring to `GO` along. Inside a
-  ring, the owner is the centre and the members stand around it in ring order, so the
+  ring, the owner is the center and the members stand around it in ring order, so the
   circle on the screen is the ring in memory. Each slice is a two-way exit, because a ring
   always comes back to its owner: pie menus as two-way room exits, the idea behind iLoci
   and MediaGraph.
@@ -32,7 +32,7 @@ a pie menu.
   commented `/LB'S AT CROSS`): a small radial menu of verbs around the pen
   ([TRACKING.md](TRACKING.md)).
 - **PSIBER's Pseudo-Scientific Visualizer is a recursive pixie ring projector,** in Don's
-  words: each object drawn as a ring around its centre, each member a ring of its own, as
+  words: each object drawn as a ring around its center, each member a ring of its own, as
   deep as you look. So the PSIBER view on a second tube
   ([fun list](../../process/crazy-idea-jam.md#-pdp-7-fun-list), two tubes, one heap) is
   that projector pointed at live pixies, and the pie at point is its first level.
@@ -88,7 +88,7 @@ printnames and blocks, by name where the schema gives names) is what the pen doe
 SAVE-EXCURSION
   GO (TO) NAME-LIST
   FIND (ELEMENT NAMED) "FERN"
-  SET (PROPERTY) COLOUR (TO) 3
+  SET (PROPERTY) COLOR (TO) 3
 END
 ```
 
@@ -159,7 +159,7 @@ the language suits it for the same reasons it suits a newcomer:
 
 - **Full words always work,** so it never needs ESC or abbreviations.
 - **One grammar, discoverable:** `?` and `HELP verb`, with examples, from the same tables
-  the parser runs on, so the help cannot drift from the behaviour.
+  the parser runs on, so the help cannot drift from the behavior.
 - **Errors say what was expected** and list the alternatives, at the field that failed.
 - **Structured replies on request:** `SET OUTPUT YAML` makes every reply parseable.
 - **Look before leaping:** `EXPLAIN` shows what a command would do without doing it, and
@@ -493,7 +493,7 @@ defines each word in one line and needs no device of its own. Commands cover:
 
 - **segments:** create, resize, delete, snapshot, copy;
 - **maps:** map and unmap a segment into a VM at an address, read-write or read-only, and list
-  who maps what. A map entry is modelled on MIT-AI's 10/11 map word: valid, write, machine, base,
+  who maps what. A map entry is modeled on MIT-AI's 10/11 map word: valid, write, machine, base,
   limit, and a packing rule between word sizes ([MAPPING.md](MAPPING.md#what-the-cabinet-takes-from-this));
 - **locks:** define one over symbol ranges (held inside or free inside), list holders and
   waiters, watch stray writes to a window, and break a deadlock by hand.
@@ -519,7 +519,7 @@ patch) tells every viewer to refresh. Where they come from:
   running and where it came from.
 
 All of it is optional, and each piece helps: tiny-its commands, the debugger, the source view,
-program visualisation panels.
+program visualization panels.
 
 ## To decide
 

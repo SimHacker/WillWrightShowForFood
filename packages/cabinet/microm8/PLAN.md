@@ -184,7 +184,9 @@ unchanged.
 whose `Exit` the compiler derives; the hand-written accelerators from step 9a are its first tests.
 
 **Done when** the differential and SingleStepTests results are unchanged with it on, and its speed
-on the step 0 workloads is written down, whether or not it wins.
+on the step 0 workloads is written down, whether or not it wins; a DevTools breakpoint on a Monitor
+listing line stops inside compiled `COUT`; in Node, one listing line shows its 6502, JavaScript and
+native instructions together.
 
 ## Not in order
 

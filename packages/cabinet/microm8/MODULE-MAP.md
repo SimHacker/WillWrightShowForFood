@@ -55,7 +55,7 @@ Verdicts:
 | `core/vdu`, `vdu/net`, `vduconst`, `vduproto`, `vduserver` | 5,940 | the VDU layer, its network protocol, video and audio servers | redesign | renderer and input units over tiny-bus |
 | `core/types` | 13,903 | shared types: text buffers, video attributes and palettes, cameras, layer specs, tokens, variables | split | video and layer types to the renderer; tokens and variables stay with the dialects |
 | `presentation`, `accelimage` | 1,468 | presentation files, image helpers | redesign | renderer plugins, the canvas |
-| `restalgia`, `control`, `driver` | 7,161 | Restalgia, microM8's synthesiser | translate | an audio source in the AudioWorklet |
+| `restalgia`, `control`, `driver` | 7,161 | Restalgia, microM8's synthesizer | translate | an audio source in the AudioWorklet |
 | `microtracker`, `mock`, `tracker` | 4,974 | microTracker | translate | an audio source and a panel |
 | `decoding/ogg` | 5,629 | Ogg Vorbis decoder | replace | the browser's audio decoding |
 

@@ -33,7 +33,7 @@ faster than either browser build will be.
   dispatch table and no allocation in the loop should run many times faster than a 1 MHz Apple. We
   are about 85% confident of that; [PLAN.md](PLAN.md) measures it against apple2js's MIT-licensed
   core and the Go build on the same workloads.
-- **TypeScript's risks**: deoptimisation when a call site sees too many shapes, garbage-collection
+- **TypeScript's risks**: deoptimization when a call site sees too many shapes, garbage-collection
   pauses if the hot loop allocates, and no fast 64-bit integers (`BigInt` is slow). None of these
   matter to an 8-bit machine that keeps 8-bit banks and 32-bit planes.
 - **Native Go beats both on the desktop.**
@@ -73,7 +73,7 @@ This is where the difference is largest.
   the live object, add a watch or a plane, load a plugin with `import()` mid-session, generate code
   with `new Function`, and keep the machine running across edits with hot module replacement.
 - **Code generation becomes possible**: hot 6502 blocks compiled into JavaScript that the browser's
-  JIT then optimises, Vanessa Freudenberg's approach in SqueakJS applied to a 6502. Her reasons, in
+  JIT then optimizes, Vanessa Freudenberg's approach in SqueakJS applied to a 6502. Her reasons, in
   her words: "I just love coding and debugging in a dynamic high-level language. The only thing we
   could potentially gain from WASM is speed, but we would lose a lot in readability, flexibility,
   and to be honest, fun." And: "I'd much rather make the SqueakJS JIT produce code that the

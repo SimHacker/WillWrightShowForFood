@@ -3,7 +3,7 @@
 \ walks it: start at the wrist in the palm's frame, then for each finger
 \ four bones of YAW, PITCH and FWD. Five branches from one REMEMBER.
 \ Under it, the flex of each finger, 0 straight to 16384 curled, as a
-\ DataGlove's fibre-optic sensors measured it. VPL's RB2 did the same:
+\ DataGlove's fiber-optic sensors measured it. VPL's RB2 did the same:
 \ datahand values to skeleton joints (Body Electric), joints to pictures.
 \
 \ DATAHAND runs until a key. 30 VIEW turns the hand to be seen from the
@@ -42,7 +42,7 @@ variable txw   variable txn
   131072 dl,  28752 dl,  0 txw !  0 txn !  dup 12 * bx +!
   0 do dup i + c@ >342 char, loop drop
   31 char,  begin txn @ while 0 char, repeat  36928 dl, ;
-: centred ( c-addr u cx y -- ) >r  over 6 * -  r> beam  text ;
+: centered ( c-addr u cx y -- ) >r  over 6 * -  r> beam  text ;
 
 : new-frame ( -- )
   12367 dlist !  8192 dlist 1+ !  98304 dlist 2 + !
@@ -76,9 +76,9 @@ create spots 42 allot
 : level ( f -- ) dup h-flex + reg 140 16384 */ 60 + y1 !  meter-x
   4 1 do dup i 12 * + dup 60 beam  y1 @ line loop drop ;
 : names ( -- )
-  s" THUMB" 137 30 centred   s" INDEX" 307 30 centred
-  s" MIDDLE" 477 30 centred  s" RING" 647 30 centred
-  s" PINKY" 817 30 centred ;
+  s" THUMB" 137 30 centered   s" INDEX" 307 30 centered
+  s" MIDDLE" 477 30 centered  s" RING" 647 30 centered
+  s" PINKY" 817 30 centered ;
 
 \ The backdrop is drawn once; STILL remembers where it ends, and each
 \ frame goes on from there (terminator first: the 340 may be running).
@@ -91,9 +91,9 @@ variable still   variable still-x   variable still-y
   131072 still @ !  1024 still @ 1+ !
   still @ dl> !  still-x @ bx !  still-y @ by ! ;
 
-\ FIT ( -- )  scale and centre the hand between the meters and the
+\ FIT ( -- )  scale and center the hand between the meters and the
 \ captions, whatever its size in the camera, from the box around its
-\ 21 points. Turns go about the hand's centre. A small hand is
+\ 21 points. Turns go about the hand's center. A small hand is
 \ enlarged at most 8 to 5.
 79 constant h-points
 variable lox   variable hix   variable loy   variable hiy
@@ -121,13 +121,13 @@ variable spinning
   2 flex 4096 <  1 flex 12288 > and
   3 flex 12288 > and  4 flex 12288 > and ;
 : captions ( -- )
-  0 reg 2 and if s" RIGHT" else s" LEFT" then 512 990 centred
-  h-pinch reg 40 < if s" PINCH" 512 960 centred then
-  bird? if s" THE BIRD" 512 930 centred then ;
+  0 reg 2 and if s" RIGHT" else s" LEFT" then 512 990 centered
+  h-pinch reg 40 < if s" PINCH" 512 960 centered then
+  bird? if s" THE BIRD" 512 930 centered then ;
 : placed ( -- ) fitting @ if fit else as-seen then ;
 : frame ( -- )
   rewind  spinning @ spin +!
-  hand-seen? if placed hand captions else s" NO HAND" 512 600 centred then
+  hand-seen? if placed hand captions else s" NO HAND" 512 600 centered then
   tag" Flex" 5 0 do i level loop  notag ;
 : show ( -- ) dsp-stopped? if dlist dsp-start then ;
 

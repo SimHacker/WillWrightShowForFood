@@ -242,7 +242,7 @@ display-file address range  ->  object id  ->  handler
 - **The pen sees only lit strokes**, never an abstract box. A thin outline is a thin
   target: fill it with a bright pattern, or use the hit coordinates against logical bounds.
 - **Interaction needs state:** press, drag, release from a stream of hits. Sliders map hit
-  position to value; dials map angle around a centre.
+  position to value; dials map angle around a center.
 - **Fonts:** the 342 character generator is the fast path; stroke fonts through the
   geometry compiler give any size and symbol. Layout sits above both.
 - Display-file length is the budget. More words, more flicker.
@@ -276,7 +276,7 @@ A PDP-7 Forth makes the boundary something students can move and measure:
 **NeWS** is a later lap with a different boundary: the client downloads PostScript into the
 window server, which runs drawing *and* local interaction and sends back only meaningful
 events. The case for it is the same one Myer & Sutherland allow: when the display is across
-a network, move behaviour to the display. Don made that case in September 1988, in a
+a network, move behavior to the display. Don made that case in September 1988, in a
 position statement for Robin Schaufler's proposed CHI panel,
 [*Rapid Prototyping in Interactive Programming Environments*](https://www.donhopkins.com/home/catalog/text/interactive-programming.html):
 
@@ -288,7 +288,7 @@ position statement for Robin Schaufler's proposed CHI panel,
 
 1. The host interprets every action.
 2. The host compiles tagged native 340 display words.
-3. NeWS-style: the menu's behaviour runs at the display end.
+3. NeWS-style: the menu's behavior runs at the display end.
 
 For each, ask: where does the event become meaningful? At the beam hit, the display
 word, the widget, or the application command? What crosses the processor or network
