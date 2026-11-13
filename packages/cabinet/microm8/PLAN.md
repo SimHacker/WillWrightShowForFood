@@ -54,7 +54,8 @@ The mode log, the TypeScript reference decoder, the shaders ([STACK.md](STACK.md
 
 **Done when** text, lores, hires and mixed modes match microM8's frames for a set of test screens;
 the shader's address function equals the TypeScript one at every line and column; a program that
-switches modes mid-line shows the split where the reference puts it.
+switches modes mid-line shows the split where the reference puts it; a vapor-lock program (Don
+Lancaster's floating-bus sync) finds its marker and splits the screen at the scanline it chose.
 **Measure** frame time on the CPU side (should be the upload only) and on the GPU.
 
 ### 4. Speaker and Disk II

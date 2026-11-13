@@ -305,7 +305,12 @@ change memory mapping. After a slot runs, the machine recomputes the configurati
 
 **The base case: the floating bus.** The least specific slot on the I/O page. Every switch below
 overrides part of it, and any address nobody claims returns what the video scanner last put on the
-bus.
+bus. That leftover byte is what Don Lancaster turned into his vapor lock (*Enhancing Your Apple II*,
+volume 1, 1984): plant a marker byte in screen memory, poll an unclaimed address until the marker
+comes back, and the program knows where the beam is to the cycle, so it can switch modes at any
+scanline. This one line is where an emulator keeps or breaks that trick, so `floatingBus()` returns
+the byte the scanner fetches on this exact cycle, from the same address function as the shaders
+([video](#video-on-the-gpu)), and a vapor-lock program is one of the tests ([PLAN.md](PLAN.md)).
 
 ```ts
 { guard: { addr: span(0xc000, 0x100) }, run: (c) => c.floatingBus(), by: "motherboard: floating bus" }
