@@ -1,10 +1,8 @@
 # A transparent Apple ][: overlays, traces, source maps, rewind and peers
 
-The TypeScript Apple ([STACK.md](STACK.md)) is built to be looked into. Debugging, tracing,
-profiling, heat maps, source maps and rewind are what it is for, not extras bolted on afterwards:
-the cabinet's [manifesto](../MANIFESTO.md) says nothing is a black box, and microM8 already shows how
-much an emulator can give the person using it. This page says what microM8 has, what the
-TypeScript machine keeps of it, and where it goes further.
+Debugging, tracing, profiling, heat maps, source maps, rewind and network sharing for the
+TypeScript Apple ([STACK.md](STACK.md)): what microM8 has, what the TypeScript machine keeps, and
+what it adds.
 
 ## What microM8 already shows
 

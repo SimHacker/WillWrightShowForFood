@@ -16,33 +16,31 @@ Companion documents:
 - [MODULE-MAP.md](MODULE-MAP.md): every microM8 package, and where it goes.
 - [PLAN.md](PLAN.md): the order of work, each step with a test that can fail.
 
-## What it is for
+## Why not the Go build
 
-The cabinet's [manifesto](../MANIFESTO.md) says we control the horizontal and the vertical: every
-register, every byte, every device and the host around them, with nothing sealed off. The Go build
-in the page today is the opposite of that. It is one 41 MB module, one machine per JavaScript
-realm, opaque to the browser's debugger, with every new hook a Go change and a rebuild, and its
-frames copied out through `syscall/js`. It runs at about 1.7 MHz in the browser
-([`src/microm8/microm8.ts`](../src/microm8/microm8.ts)).
+The Go build in the page today: one 41 MB module; one machine per JavaScript realm; no breakpoints,
+no inspection and no profiling of the Go from the browser's tools; every new hook a Go change and a
+rebuild; frames copied out through `syscall/js`; about 1.7 MHz in the browser
+([`src/microm8/microm8.ts`](../src/microm8/microm8.ts)). The cabinet's
+[manifesto](../MANIFESTO.md) wants every register, byte and device of every machine reachable from
+the page.
 
-The TypeScript stack is meant to be:
+Requirements:
 
-0. **Teaching.** It shows how the Apple works and why Woz designed it that way: the video, the
-   Disk II, the speaker, cassette, paddles, buttons and slots, from the schematics through the ROM
-   listings to the program running, with the emulator's own code and data linked to the hardware
-   they model ([TEACHING.md](TEACHING.md)).
-1. **Live coding first.** Every part of the machine can be read, replaced and extended while it
-   runs, from the console, from a cartridge, or from a panel, with no rebuild and no lost state.
-2. **Transparent.** Every read, write and execute can be watched, counted, traced, mapped to source
-   and rewound, at no cost while nobody is watching ([TRANSPARENCY.md](TRANSPARENCY.md)).
-3. **Exact.** Programs behave as they do on the hardware. microM8, apple2js and the SingleStepTests
-   suite are the oracles, run against the same inputs ([PLAN.md](PLAN.md)).
-4. **Fast, by measurement.** Every speed claim is a number from a benchmark, kept with the change
-   that produced it.
-5. **Browser first, Node second.** The same modules run in a page, in a worker and in Node; Node
-   runs tests, benchmarks, headless machines and the server side of services.
-6. **Many machines, many peers.** Several machines on one backplane, mapped into each other, and
-   the same machines in lockstep across the network.
+0. **Teaching.** The video, the Disk II, the speaker, cassette, paddles, buttons and slots, linked
+   from the schematics through the ROM listings to the running program, with the emulator's own code
+   and data linked to the hardware they model ([TEACHING.md](TEACHING.md)).
+1. **Live coding.** Any part of the machine can be read, replaced and extended while it runs, from
+   the console, a cartridge or a panel, without a rebuild or losing state.
+2. **Transparent.** Any read, write or execute can be watched, counted, traced, mapped to source and
+   rewound; unwatched pages cost nothing ([TRANSPARENCY.md](TRANSPARENCY.md)).
+3. **Exact.** Checked against microM8, apple2js and SingleStepTests on the same inputs
+   ([PLAN.md](PLAN.md)).
+4. **Fast, measured.** Every speed claim is a benchmark number, committed with the change.
+5. **Browser and Node.** The same modules in a page, a worker and Node; Node runs tests, benchmarks,
+   headless machines and the server side of services.
+6. **Several machines, several peers.** Machines on one backplane mapped into each other; copies in
+   lockstep over the network.
 
 ## The rules
 
@@ -76,8 +74,7 @@ wall clock. The same inputs at the same cycles after the same snapshot give the 
 is what the cabinet's sessions rely on already ([`src/session.ts`](../src/session.ts)).
 
 **Every hook says who installed it.** A replaced opcode, a memory handler, a watch or a trap carries
-the name of the plugin or cartridge that put it there, and the debugger lists them. Live patching
-without provenance becomes impossible to reason about.
+the name of the plugin or cartridge that put it there, and the debugger lists them.
 
 ## The parts
 
@@ -97,21 +94,65 @@ without running the emulator ([SAVE-FILES.md](../SAVE-FILES.md)).
 
 ### The processor
 
-A 6502 and a 65C02, one module each or one with a variant table, in the shape the cabinet's
-`Processor` interface needs: `pc`, `step()`, `read`, `write`, a disassembler
-([ARCHITECTURE-AND-LINEAGE.md](../ARCHITECTURE-AND-LINEAGE.md#cpus-are-devices)). The PDP-7's
-`Cpu` type is accumulator-and-IOT shaped; the Apple has neither, so `Cabinet` grows the processor
-list that section already plans, rather than the Apple pretending its soft switches are IOTs.
+`bus.ts`'s `Cpu` is PDP-7 specific: `ac`, `skip()`, word-addressed core, I/O through IOTs. The
+6502 has no I/O instructions; everything is a memory access. It implements the `Processor`
+interface planned in [ARCHITECTURE-AND-LINEAGE.md](../ARCHITECTURE-AND-LINEAGE.md#cpus-are-devices),
+and `Cabinet` takes a list of processors.
 
-The opcode table is data: 256 entries of `{ mnemonic, mode, bytes, cycles, run }`. A plugin can
-wrap or replace an entry; the disassembler, the assembler and the typed-memory declarations read
-the same table ([DESIGN.md](../DESIGN.md#typed-memory-core-as-typed-blocks)).
+```ts
+interface Processor6502 {
+  regs: { pc: number; a: number; x: number; y: number; s: number; p: number };  // saved as cpu.yml
+  cycle: number;                       // bus cycles since power-on
+  ops: Opcode[];                       // 256 entries, per variant
+  bus: { read(addr: number): number; write(addr: number, v: number): void };
+  step(): number;                      // one instruction; returns its cycles
+  irq(level: boolean): void;
+  nmi(): void;
+  reset(): void;
+}
 
-**Traps** replace guest code with TypeScript at an address: microM8's firmware handlers
-(`FirmwareExec` on the SmartPort, mouse, Mockingboard and SoftCard cards) and its call shims
-(`RegisterCallShim`, used for DOS's RWTS) become one mechanism. A trap runs when the PC reaches its
-address, reads and sets registers and memory, charges cycles, and returns. This is high-level
-emulation on purpose, the cabinet's native-CPU idea at the scale of one routine.
+type Opcode = {
+  mnemonic: string; mode: Mode; bytes: 1 | 2 | 3; cycles: number;
+  run(cpu: Processor6502): void;       // makes every bus cycle itself
+  by?: string;                         // who installed it, if not the base table
+};
+```
+
+**One bus call per bus cycle.** `run` calls `bus.read` or `bus.write` once for each cycle the chip
+puts on the bus, in the chip's order, and `cycle` advances by one per call. That includes the cycles
+that aren't the instruction's own access:
+
+- NMOS: the dummy read at the unfixed address on indexed addressing (always for stores and
+  read-modify-write, on a page cross for loads); the double write of read-modify-write instructions
+  (old value, then new); the dummy reads of implied and stack instructions.
+- 65C02: read-modify-write reads twice instead of writing twice; indexed dummy reads go to the last
+  instruction byte instead of the unfixed address.
+
+On the Apple these matter, because the soft switches react to any access. The language card's
+write enable needs two reads in a row; `STA $C0xx,X` on an NMOS part reads the switch before it writes
+it, so the switch sees two accesses; the Disk II's write sequence depends on the exact cycle of each access. SingleStepTests
+records the bus activity of every opcode, so all of this is tested, not hoped for ([PLAN.md](PLAN.md)).
+
+**Variants.** The NMOS table holds all 256 entries, including the stable undocumented opcodes
+(`LAX`, `SAX`, `DCP`, `ISC`, `SLO`, `RLA`, `SRE`, `RRA`, `ANC`, `ALR`, `ARR`, `SBX`) and the `JAM`s. The
+65C02 table is the NMOS table with overrides: `BRA`, `PHX`, `PHY`, `PLX`, `PLY`, `STZ`, `TRB`, `TSB`,
+`(zp)` addressing, `BIT #imm`, `INC A`, `DEC A`, `JMP (abs,X)`; `JMP ($xxFF)` fixed, at one more cycle;
+valid N and Z in decimal mode, at one more cycle; D cleared on interrupts; unused opcodes as NOPs of
+the right length and timing. The enhanced //e's 65C02 has no Rockwell bit instructions (`RMB`, `SMB`,
+`BBR`, `BBS`), so they are a third table, for cards and machines that have them.
+
+**Interrupts** are sampled where the chip samples them, before the last cycle of an instruction,
+including the NMOS part's one-instruction delay after a taken branch that doesn't cross a page.
+
+**The table is the only description of the instruction set.** The disassembler, the assembler's back
+end and the typed-memory declarations read it ([DESIGN.md](../DESIGN.md#typed-memory-core-as-typed-blocks)).
+A plugin wraps or replaces an entry (`cpu.ops[0x00] = trapBrk(cpu.ops[0x00])`), and `by` records it.
+
+**Traps** run TypeScript when the PC reaches an address: they read and set registers and memory,
+charge cycles, and return with an `RTS` or a jump. microM8's firmware handlers (`FirmwareExec` on the
+SmartPort, mouse, Mockingboard and SoftCard cards) and its call shims (`RegisterCallShim`, used for
+DOS's RWTS) become traps. A trap is checked at instruction fetch through the execute watch flags of
+its page, so pages without traps pay nothing.
 
 ### The memory map
 
@@ -180,11 +221,9 @@ since we wrote them.
 
 ### Video, on the GPU
 
-The machine never makes pixels. Its job ends at two facts per frame: what is in memory, and which
-video mode was in force at each moment of the scan. Turning that into a picture is the GPU's job,
-where it is cheap, parallel and off the 6502's thread. microM8 decodes video in Go, on the CPU
-thread, and the WebAssembly build then copies the frame out to JavaScript; here no frame is ever
-built on the CPU.
+The machine produces memory and a log of video mode changes; the GPU produces pixels. microM8
+decodes video in Go on the emulation thread, and the WebAssembly build then copies each frame out to
+JavaScript. Here no frame is built on the CPU side.
 
 **What the machine hands over at vertical blank:**
 
@@ -241,8 +280,8 @@ the first target, with WebGL 2 as the fallback for browsers without it.
 ### Sound
 
 Sources write to a mixer in an AudioWorklet: the speaker's timestamps, the Mockingboard's AY-3-8910s,
-the cassette, Restalgia instruments and microTracker songs. The worklet runs on its own thread, so
-sound keeps time even when the machine's frame is late.
+the cassette, Restalgia instruments and microTracker songs. The worklet runs on the audio thread and
+is fed ahead by a frame, so a late emulation frame doesn't drop samples.
 
 ### Storage
 
@@ -299,13 +338,12 @@ an object: `apple.pages.read[0xc0]`, `apple.cpu.ops[0xea]`, `apple.slots[6].stat
 
 ## Faster, later: compiling 6502 to JavaScript
 
-Once the interpreter is exact and measured, a second tier can compile hot 6502 code into
-JavaScript functions with `new Function`, which the browser's JIT then optimises. A write to a page
-holding compiled code invalidates it through the same watch flags. Apple programs modify
-themselves, so this is an experiment with a benchmark, not a promise. It is Vanessa Freudenberg's
-SqueakJS approach applied to a 6502: generate JavaScript the engine can optimise, rather than
-leave the engine
-([jit notes](../../../characters/vanessa-freudenberg/sources/jit-notes/README.md)).
+After the interpreter passes the oracles: compile hot 6502 basic blocks to JavaScript with
+`new Function` and let the engine's JIT optimise them, as SqueakJS does for Smalltalk bytecode
+([Vanessa Freudenberg's jit notes](../../../characters/vanessa-freudenberg/sources/jit-notes/README.md)).
+A write to a page holding compiled code invalidates it through the write watch flags. Compiled blocks
+must make the same bus calls in the same order, so the dummy cycles above are part of the generated
+code. Apple programs modify themselves often, so whether this wins is a benchmark result.
 
 ## Threads
 

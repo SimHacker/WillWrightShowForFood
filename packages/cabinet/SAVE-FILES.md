@@ -1,10 +1,9 @@
 # Save files: the whole machine, at rest
 
 A save file holds everything needed to resume a machine exactly where it stopped, and nothing that
-can be worked out again from it. It is also a document in its own right: tools read it, change it,
-render it and compare it without running the emulator, from the command line, from TypeScript in
-Node or the page, and from the cabinet's panels. Running the machine is one more thing you can do
-with it.
+can be recomputed from it. Tools read, edit, render and compare it without running the emulator, from
+the command line, from TypeScript in Node or the page, and from the cabinet's panels; running the
+machine from it is one more operation.
 
 The format is the same for every machine on the backplane. The Apple ][ is the first full user
 ([microm8/STACK.md](microm8/STACK.md)); the PDP-7, whose state today is a core image plus a

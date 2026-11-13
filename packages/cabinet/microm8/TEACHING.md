@@ -1,11 +1,9 @@
 # Teaching the Apple ][: a live source graph
 
-The TypeScript Apple ([STACK.md](STACK.md)) is meant to teach. It should show how the machine works,
-from Woz's schematics to a BASIC program, while it runs. How the video circuitry turns memory into a
-colour picture; how the Disk II reads a floppy with a handful of chips and a lot of software; how
-the speaker, cassette, paddles, buttons and slots work; and why they were designed that way. The
-emulator is one of the things it explains: its own code and data are linked to the hardware they
-model, so a student can see what the program does and where it simplifies.
+The TypeScript Apple ([STACK.md](STACK.md)) as a teaching machine: the video circuit, the Disk II,
+the speaker, cassette, paddles, buttons and slots, each linked from its schematic to the code and
+memory that use it, while the machine runs. The emulator's own code and data are linked to the
+hardware they model, with every simplification marked.
 
 ## The graph
 
@@ -157,8 +155,6 @@ In November 2018 Don wrote to Paleotronic's editor, after seeing microM8 draw an
 pixels, reading from video memory and mutating it into NTSC video, like a cybertronic rube goldberg
 device, to illustrate the brilliance of WOZ’s hardware design."
 
-The TypeScript stack makes that a view over parts it already has.
-
 **Every stage is a function.** The video circuit is a pipeline: the horizontal and vertical counters,
 the address multiplexer, the RAM byte on the data bus, the latch, the character generator or the
 hires shift register with its half-dot delay, the dot clock, and the colour that comes out against
@@ -176,10 +172,9 @@ colour subcarrier as a wave the dots ride against, and at the end the screen, dr
 pixels. Signals are cables carrying their live values. Clicking any part opens its figure, its code,
 and the memory it is reading.
 
-**The work is the netlist.** Rendering is the easy part. The hard part is the wiring: which chip
-feeds which, signal by signal, transcribed from the figures. The check is mechanical: a chip-level
-simulation of the transcribed netlist, run for one frame, must produce the same dots as the reference
-decoder for every test screen. It is slow, and it only has to run for that check and for the
+**The work is the netlist**: which chip feeds which, signal by signal, transcribed from the figures.
+Check: a chip-level simulation of the transcribed netlist, run for one frame, produces the same dots
+as the reference decoder for every test screen. It is slow and only runs for that check and for the
 slow-motion view.
 
 **Cards and cables too.** The same scene holds the slots and the cards in them, with their cables to
