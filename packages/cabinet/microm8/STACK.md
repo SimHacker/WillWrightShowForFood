@@ -182,10 +182,103 @@ banks on both sides need no codec; unlike widths go through one.
 
 ### The IOU and the soft switches
 
-The //e's soft switches at `$C000–$C0FF` as a declared table: address, read or write, name, what it
-sets, and which pages it rewires. microM8 spreads this over `apple2io.go` and `memcxxx.go` (about
-5,000 lines) as handler functions per switch. As a table, the debugger can list every switch and
-its state, a panel can flip one, and the typed-memory map can name the I/O page.
+The //e's soft switches at `$C000–$C0FF` as declared slots (below): address bits, read or write, name,
+what it sets, and which configuration bits it changes. microM8 spreads this over `apple2io.go` and
+`memcxxx.go` (about 5,000 lines) as handler functions per switch. As slots, the debugger can list
+every switch and its state, a panel can flip one, and the typed-memory map can name the I/O page.
+
+### Dispatch: guarded slots, resolved ahead of time
+
+Memory handlers, soft switches, traps, watches and opcode table entries are all slots in one sea, in
+the manner of Korz (Ungar, Ossher and Kimelman, *Korz: Simple, Symmetric, Subjective,
+Context-Oriented Programming*, Onward! 2014; notes in
+[moollm/designs/korz](https://github.com/SimHacker/moollm/blob/main/designs/korz/README.md)). A slot
+has a guard over dimensions; an access or an opcode is dispatched to the most specific slot whose
+guard matches. Nothing here is a framework: a slot type, add and remove, a resolver, and a compile
+step that fills the tables the fast path already uses.
+
+```ts
+type Bits = { mask: number; match: number };          // x & mask === match
+type Guard = {
+  access?: "read" | "write" | "fetch";
+  addr?: Bits;
+  op?: Bits;                                          // opcode bit fields
+  who?: "cpu" | "video" | "dma" | "debugger";
+  machine?: string;                                   // "apple2plus", "apple2e", ...
+  variant?: "nmos" | "65c02" | "rockwell";
+  config?: Bits;                                      // memory configuration soft-switch bits
+};
+type Slot = { guard: Guard; run: (c: Access) => number | void; by: string };
+```
+
+**Specificity is a partial order.** Guard A is more specific than B when every access A matches, B
+matches too: A's masks contain B's bits with the same values, and A constrains every dimension B
+does. The unique most specific match runs. Two matching slots with neither more specific is an
+error, reported when the second one is added, with both slots' `by`.
+
+**Resolved when slots change, never per access.** Adding or removing a slot recomputes the affected
+pages and table entries:
+
+- A page wholly covered by one bank slot becomes a direct `Uint8Array` page, as before.
+- An I/O page gets a 256-entry handler array, one resolved slot per address.
+- `config` dimensions (language card banks, aux read and write, `80STORE`, `PAGE2`, `HIRES`) are
+  resolved per configuration, and the resolved page tables are cached by configuration bits. A
+  soft switch that changes banking swaps the table, the way the hardware switches its decoders.
+  How many configurations real programs use is measured.
+- The opcode table is compiled per `variant` into the 256 entries the processor dispatches on.
+
+The inner loop sees arrays, as in [the memory map](#the-memory-map); the slots are how the arrays get
+made, listed, explained and changed.
+
+**Decoding by address bits, as the hardware does.** Much of the Apple's I/O is addressable latches:
+address bits select a latch, `A0` is the value written. The motherboard's `$C050–$C05F` (graphics,
+mixed, page 2, hires, the annunciators) and the Disk II's `$C0n0–$C0nF` (four stepper phases, motor,
+drive select, Q6, Q7) both decode `A1–A3` as the latch and `A0` as the value, so each is one slot:
+
+```ts
+slot({ addr: { mask: 0xfff0, match: 0xc050 } },
+  (c) => { latch[(c.addr >> 1) & 7] = c.addr & 1; return floatingBus(c); }, "motherboard");
+
+slot({ addr: { mask: 0xfff0, match: 0xc080 + 16 * 6 } },
+  (c) => disk2.latch(c, (c.addr >> 1) & 7, c.addr & 1), "disk2 in slot 6");
+
+slot({ addr: { mask: 0xff00, match: 0xc000 }, who: "debugger" },
+  (c) => ioPeek(c.addr), "debugger: read I/O without side effects");
+
+slot({ access: "fetch", addr: { mask: 0xffff, match: 0xfded } }, cout, "trace COUT");
+```
+
+The third slot is the reason for `who`: a debugger or a panel reading `$C0xx` must not flip a switch,
+so its reads dispatch to a peek that returns the value without the side effect, with no test in the
+CPU's path. The fourth is a trap: traps, execute breakpoints and execute watches are `fetch` slots.
+
+**Opcodes by bit field.** The 6502 decodes an opcode as `aaabbbcc`: `cc` picks the group, `aaa` the
+operation, `bbb` the addressing mode. The table is built from slots on those fields: operation slots
+guarded on `aaa` and `cc`, mode slots on `bbb` and `cc`, and exact-opcode slots (`mask: 0xff`) for
+the irregular ones, the undocumented NMOS opcodes and the 65C02's additions, which are more specific
+and win. A plugin that wraps one opcode adds an exact slot; a variant adds slots guarded on
+`variant`.
+
+**Views of the sea.** The slots can be listed along any dimension: everything slot 6's card
+installed, everything that touches `$C0xx`, everything a plugin added, everything that applies to the
+//e and not the ][+. That is Korz's subjectivity, and it is what the debugger's plugin list and the
+teaching graph's `drives` and `decodes` links read ([TEACHING.md](TEACHING.md)).
+
+**Self practices, in TypeScript.**
+
+- **Prototypes, not classes.** A card definition is a prototype: plugging it into a slot copies its
+  state template and shares its behaviour. No class hierarchy of cards.
+- **Stable shapes.** State objects are created with every field present, in a fixed order, numbers
+  staying numbers, so V8's hidden classes (Self's maps) stay monomorphic and the JIT keeps its fast
+  paths.
+- **Customise, then invalidate.** Resolved tables are specialised per configuration and variant, as
+  Self compiled methods per receiver map; adding or removing a slot invalidates the tables and any
+  compiled 6502 blocks that depend on the pages it covers, as Self deoptimised on dependency change.
+- **Mirrors.** Reflection goes through the `debugger` coordinate and the slot listing, not through
+  the machine's own paths.
+
+Where a unit's behaviour is a state machine or a timing model (the video scanner, the Disk II's
+sequencer, a 6522) it is ordinary code; the slots are its entry points on the bus.
 
 ### Units and time
 
@@ -307,8 +400,8 @@ a profile file can be loaded as it is.
 
 ## Plugin surfaces
 
-Each of these is a table or a list on the running machine, with a name for each entry and the
-name of whoever installed it:
+Each of these is a set of slots or a list on the running machine ([dispatch](#dispatch-guarded-slots-resolved-ahead-of-time)),
+with a name for each entry and the name of whoever installed it:
 
 | Surface | What a plugin adds | microM8's counterpart |
 |---|---|---|
