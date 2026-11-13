@@ -28,5 +28,15 @@ deploys (`--fetch`); the details are in [apps/ties/SERVER.md](../../../apps/ties
 two builds are byte-identical when the patches are exported from the working copy, so export
 them before pushing.
 
+The plan to rebuild this Apple in TypeScript, as plugins on the cabinet's backplane, with microM8
+as the reference it is checked against:
+
+- [STACK.md](STACK.md): the parts, the rules, the plugin surfaces, video on the GPU.
+- [TRANSPARENCY.md](TRANSPARENCY.md): overlays, traces, profiles, source maps from the printed
+  listings to BASIC, rewind, lockstep and distributed devices.
+- [GO-AND-TYPESCRIPT.md](GO-AND-TYPESCRIPT.md): what each language gives this job.
+- [MODULE-MAP.md](MODULE-MAP.md): every microM8 package and where it goes.
+- [PLAN.md](PLAN.md): the steps, each with a test and a number.
+
 The disks this Apple boots are in [../disks/apple2](../disks/apple2/DISKS.yml); the Apple section
 as a whole is [APPLE2.md](../APPLE2.md).

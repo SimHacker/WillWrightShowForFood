@@ -112,8 +112,12 @@ cabinet drives it and reads its frame and status, but its memory isn't yet on th
 memory map and its CPU isn't behind the `Cpu` interface. Two longer projects, neither urgent:
 expose more of microM8's Go to the TypeScript wrapper (memory views, the trace, breakpoints), as
 patches on the branch; and, more ambitious, translate microM8's Go to TypeScript, so the Apple
-shares code and framework with the cabinet's other machines the way the PDP-7 does. The rest of
-this section is the design the build followed.
+shares code and framework with the cabinet's other machines the way the PDP-7 does. That
+translation is designed in [microm8/STACK.md](microm8/STACK.md): a transparent Apple with overlays,
+source maps from the printed listings up to BASIC, rewind and lockstep peers
+([TRANSPARENCY.md](microm8/TRANSPARENCY.md)), each microM8 package mapped
+([MODULE-MAP.md](microm8/MODULE-MAP.md)), and steps checked against oracles
+([PLAN.md](microm8/PLAN.md)). The rest of this section is the design the build followed.
 
 **What's there to build on.** Go compiles to WebAssembly (`GOOS=js GOARCH=wasm`), and
 `syscall/js` lets Go register functions JavaScript can call and call JavaScript back. microM8
