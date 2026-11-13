@@ -283,6 +283,180 @@ the irregular ones, the undocumented NMOS opcodes and the 65C02's additions, whi
 and win. A plugin that wraps one opcode adds an exact slot; a variant adds slots guarded on
 `variant`.
 
+#### Examples
+
+Helpers, and what a handler gets:
+
+```ts
+const bits = (mask: number, match: number): Bits => ({ mask, match });
+const span = (start: number, length: number): Span => ({ start, length });
+const dev = (slot: number) => bits(0xfff0, 0xc080 + 16 * slot);     // $C0n0-$C0nF, n = slot + 8
+const cfg = (on: Record<string, number>): Bits => configBits(on);    // named configuration bits
+const map = (access: "read" | "write", addr: Span, config: Bits, bank: string, base: number) =>
+  ({ guard: { access, addr, config }, bank, base });
+
+type Access = { access: "read" | "write" | "fetch"; addr: number; value: number; cycle: number;
+                floatingBus(): number };
+```
+
+A card is a prototype: `state` is its template, `slots` its entry points, `config` the state bits that
+change memory mapping. After a slot runs, the machine recomputes the configuration word from every
+`config`, and swaps page tables if it changed.
+
+**The base case: the floating bus.** The least specific slot on the I/O page. Every switch below
+overrides part of it, and any address nobody claims returns what the video scanner last put on the
+bus.
+
+```ts
+{ guard: { addr: span(0xc000, 0x100) }, run: (c) => c.floatingBus(), by: "motherboard: floating bus" }
+```
+
+**The speaker.** The decoder ignores R/W and A0–A3, so any access to `$C030–$C03F` toggles it, once
+per bus cycle the CPU makes there.
+
+```ts
+{ guard: { addr: span(0xc030, 0x10) },
+  run: (c) => { speaker.toggles.push(c.cycle); return c.floatingBus(); }, by: "speaker" }
+```
+
+**The keyboard, by machine.** The ][+ and the //e share the keyboard latch and differ around it; the
+`machine` dimension says where.
+
+```ts
+{ guard: { access: "read", addr: span(0xc000, 0x10) }, run: () => kbd.data(), by: "keyboard" },
+{ guard: { addr: span(0xc010, 0x10) }, run: () => kbd.clearStrobe(), by: "keyboard strobe" },
+{ guard: { machine: "apple2e", access: "read", addr: span(0xc011, 0x0f) },     // status in bit 7
+  run: (c) => (iou.status(c.addr) << 7) | (kbd.data() & 0x7f), by: "//e status flags" },
+{ guard: { machine: "apple2e", access: "write", addr: span(0xc000, 0x10) },    // 80STORE ... ALTCHAR
+  run: (c) => { iou.memSwitch[(c.addr >> 1) & 7] = c.addr & 1; }, by: "//e memory switches" },
+```
+
+The //e's memory switches are the same addressable-latch pattern as `$C050`: `A1–A3` pick one of
+eight, `A0` is the value.
+
+**Slot ROM and the `$C800` space.** An access to `$Cn00–$CnFF` gives slot n's card the shared
+`$C800–$CFFF` space; an access to `$CFFF` takes it away. Ownership is a configuration value, so each
+card's `$C800` mappings are guarded on it. On real boards each card keeps its own flip-flop; one
+`c8owner` value is a simplification, and the teaching graph marks it `abstracts`.
+
+```ts
+{ guard: { addr: span(0xc100, 0x700) },
+  run: (c) => { motherboard.c8owner = (c.addr >> 8) & 7; return slotRom(c); }, by: "I/O select" },
+{ guard: { addr: span(0xcfff, 1) },
+  run: (c) => { motherboard.c8owner = 0; return c.floatingBus(); }, by: "I/O strobe release" },
+```
+
+**The language card.** 16K of RAM in 12K of address space: two 4K banks at `$D000` and 8K at `$E000`.
+The switches at `$C080–$C08F` decode by bit: `A3` picks the `$D000` bank (0 is bank 2), RAM is read
+when `A1` equals `A0`, and `A0 = 1` asks for write enable, granted on the second read in a row. `A2`
+is not decoded, so `$C084–$C087` mirror `$C080–$C083`.
+
+```ts
+type Lc = { ram: Uint8Array; read: boolean; write: boolean; prewrite: boolean; bank2: boolean };
+
+function lcSwitch(s: Lc, c: Access) {
+  const a = c.addr;
+  s.bank2 = (a & 8) === 0;
+  s.read = ((a ^ (a >> 1)) & 1) === 0;
+  if (a & 1) {
+    if (c.access === "read") { s.write ||= s.prewrite; s.prewrite = true; } else s.prewrite = false;
+  } else { s.write = false; s.prewrite = false; }
+  return c.floatingBus();
+}
+
+const lcMap = (base: number, extra: Record<string, number> = {}) => [
+  map("read",  span(0xd000, 0x1000), cfg({ lcRead: 1, lcBank2: 0, ...extra }), "lc", base + 0x0000),
+  map("read",  span(0xd000, 0x1000), cfg({ lcRead: 1, lcBank2: 1, ...extra }), "lc", base + 0x1000),
+  map("read",  span(0xe000, 0x2000), cfg({ lcRead: 1, ...extra }),              "lc", base + 0x2000),
+  map("write", span(0xd000, 0x1000), cfg({ lcWrite: 1, lcBank2: 0, ...extra }), "lc", base + 0x0000),
+  map("write", span(0xd000, 0x1000), cfg({ lcWrite: 1, lcBank2: 1, ...extra }), "lc", base + 0x1000),
+  map("write", span(0xe000, 0x2000), cfg({ lcWrite: 1, ...extra }),              "lc", base + 0x2000),
+];
+
+export const languageCard = {
+  name: "language-card",
+  state: (): Lc => ({ ram: new Uint8Array(0x4000), read: false, write: false, prewrite: false, bank2: true }),
+  slots: (s: Lc, slot: number) => [
+    { guard: { addr: dev(slot) }, run: (c: Access) => lcSwitch(s, c), by: "language card switches" },
+    ...lcMap(0),
+  ],
+  config: (s: Lc) => ({ lcRead: +s.read, lcWrite: +s.write, lcBank2: +s.bank2 }),
+};
+```
+
+The motherboard ROM at `$D000–$FFFF` is a mapping slot with no `config`; writes there go to a discard
+slot. The card's slots constrain `config`, so they are more specific and win when their bits are set,
+and the ROM shows through when they aren't. Nothing tests "is the language card on" per access: the
+configuration picks a resolved page table.
+
+**The Saturn 128K card: the language card plus one more specific slot.** Eight 16K banks, each laid out
+like the language card. Its manual's map: `$C0N4–$C0N7` select banks 1–4, `$C0NC–$C0NF` banks 5–8. So
+`A2 = 1` means bank select, the bank number is `A3`, `A1`, `A0`, and `A2 = 0` is the language card's
+switches unchanged. The Saturn is the language card prototype, copied, with one slot whose mask also
+fixes `A2`, which makes it more specific than the language card's switch slot on those eight
+addresses and no others.
+
+```ts
+type Saturn = Lc & { block: number };
+
+export const saturn128 = {
+  ...languageCard,
+  name: "saturn-128k",
+  state: (): Saturn => ({ ...languageCard.state(), ram: new Uint8Array(8 * 0x4000), block: 0 }),
+  slots: (s: Saturn, slot: number) => [
+    { guard: { addr: dev(slot) }, run: (c: Access) => lcSwitch(s, c), by: "language card switches" },
+    { guard: { addr: bits(0xfff4, 0xc084 + 16 * slot) },
+      run: (c: Access) => { s.block = ((c.addr >> 1) & 4) | (c.addr & 3); return c.floatingBus(); },
+      by: "saturn bank select" },
+    ...[0, 1, 2, 3, 4, 5, 6, 7].flatMap((b) => lcMap(b * 0x4000, { lcBlock: b })),
+  ],
+  config: (s: Saturn) => ({ ...languageCard.config(s), lcBlock: s.block }),
+};
+```
+
+The Legend S'Card is the same kind of card, a language card with more 16K banks, up to 4MB; its
+bank-select decoding goes in when we have its manual. RamWorks-style //e auxiliary cards, which bank
+64K at a time, are the same pattern again on the aux space.
+
+**The Videx Videoterm.** Its registers at `$C0n0–$C0nF`: `A0 = 0` is the 6845's register select,
+`A0 = 1` its data register, and `A2–A3` pick which 512 bytes of its 2K screen RAM appear at
+`$CC00–$CDFF` (as our microM8 patch decodes it, `videx.go`). The screen RAM window exists only while
+the card owns `$C800`.
+
+```ts
+type Videx = { reg: Uint8Array; sel: number; page: number; ram: Uint8Array };
+
+export const videx = {
+  name: "videx-videoterm",
+  state: (): Videx => ({ reg: new Uint8Array(18), sel: 0, page: 0, ram: new Uint8Array(2048) }),
+  slots: (s: Videx, slot: number) => [
+    { guard: { addr: dev(slot) }, by: "videx 6845",
+      run: (c: Access) => {
+        s.page = (c.addr >> 2) & 3;
+        if ((c.addr & 1) === 0) { if (c.access === "write") s.sel = c.value & 0x1f; return c.floatingBus(); }
+        if (c.access === "write") crtcWrite(s, c.value);
+        return crtcRead(s);                       // R14-R17 readable: cursor and light pen
+      } },
+    ...[0, 1, 2, 3].flatMap((p) => (["read", "write"] as const).map((rw) =>
+      map(rw, span(0xcc00, 0x200), cfg({ c8owner: slot, videxPage: p }), "videx.ram", p * 0x200))),
+  ],
+  config: (s: Videx) => ({ videxPage: s.page }),
+};
+```
+
+**Parts of the emulator itself.** The same slots, installed by tools instead of cards:
+
+```ts
+{ guard: { access: "fetch", addr: span(0xbd00, 1) }, run: rwtsTrap, by: "DOS 3.3 RWTS trap" },
+{ guard: { space: "aux", access: "write", addr: span(0x400, 0x400) }, run: lastWriter, by: "writer overlay" },
+{ guard: { access: "fetch", addr: span(0xf800, 0x800) }, run: countFetch, by: "profile the Monitor" },
+```
+
+The RWTS trap is microM8's call shim at `$BD00`. The writer overlay is in the `aux` space, so it
+follows aux text memory whichever switches map it. The profiler's slot takes only the Monitor's eight
+pages off the fast path for fetches. The instruction trace is not a slot: it is a few typed-array
+writes in the processor's step loop and stays on ([TRANSPARENCY.md](TRANSPARENCY.md#traces-and-profiles)).
+
 **Views of the sea.** The slots can be listed along any dimension: everything slot 6's card
 installed, everything that touches `$C0xx`, everything a plugin added, everything that applies to the
 //e and not the ][+. That is Korz's subjectivity, and it is what the debugger's plugin list and the
@@ -344,15 +518,49 @@ JavaScript. Here no frame is built on the CPU side.
 
 **What the machine hands over at vertical blank:**
 
-- **The banks**, main and aux, as one 8-bit texture. The whole 128K is about 7.7 MB a second at 60
-  frames, which is little for any GPU; uploading only the video areas is an option if measurement
-  says it matters.
+- **The displayed pages, straight from the bank.** The page the frame showed is passed to the GPU as
+  a view of the emulator's own `Uint8Array`, with no copy in JavaScript, no intermediate frame
+  buffer and no pixel conversion on the CPU. Hires page 1 is 8,192 bytes at `$2000` of main memory:
+
+  ```ts
+  device.queue.writeBuffer(hiresBuf, 0, main.buffer, main.byteOffset + 0x2000, 0x2000);
+  ```
+
+  Double hires adds the same 8K of aux; text and lores are 1K per bank. If the mode log shows a page
+  flip during the frame, both pages go. At 60 frames that is about 0.5 MB a second for hires, 1 MB
+  for double hires.
 - **The mode log**: each soft-switch change that affects video (text, mixed, page 2, hires, 80
   columns, double hires, alternate characters), with the cycle it happened at. A frame is 262 lines
   of 65 cycles, and the beam position is a function of the cycle, so the log converts to a small
   per-line, per-column mode table. Mid-line mode changes, which some programs use, come out exact,
   because the table is indexed by the column the beam was on.
 - **The character ROM** as a texture, loaded once, and the flash phase as a uniform.
+
+**The one copy left.** WebGPU has no way for a shader to read a live JavaScript `ArrayBuffer`.
+`writeBuffer` makes the one transfer from the emulator's bank to GPU memory, inside the browser,
+even on unified-memory machines. A buffer mapped with `mapAsync` gives JavaScript an `ArrayBuffer`
+in GPU-visible memory, but it detaches when unmapped, so it can't be the bank the CPU keeps writing.
+So the rule is: no copies of our own, and the browser's single upload is of the bytes the frame
+read, not 128K. Skipping the upload when the page wasn't written would need a dirty bit in the
+write path; at 8K a frame, uploading every frame is likely cheaper, and is measured.
+
+**The bytes as the shader sees them.** A storage buffer of the uploaded bytes. WGSL has no 8-bit
+type, so the shader reads 32-bit words and extracts bytes; the row address is the hires
+interleave, the same function as the CPU side's:
+
+```wgsl
+@group(0) @binding(0) var<storage, read> hires: array<u32, 2048>;    // the 8,192 bytes as uploaded
+
+fn hiresByte(i: u32) -> u32 { return (hires[i >> 2u] >> ((i & 3u) * 8u)) & 0xffu; }
+fn rowBase(y: u32) -> u32 { return (y & 7u) * 0x400u + ((y >> 3u) & 7u) * 0x80u + (y >> 6u) * 0x28u; }
+```
+
+**Racing the beam.** Uploading at vertical blank shows memory as it was at the end of the frame. A
+program that writes the displayed page while the beam passes would show its writes too early. For
+those, an exact mode puts a write watch on the displayed page only, logs each write with its cycle,
+and uploads the page as it was at the start of the frame plus the log; the dot pass applies, for each
+byte, the last write before the beam reached it. The watch costs only writes to that 8K, only while
+exact mode is on.
 
 **Two passes:**
 
