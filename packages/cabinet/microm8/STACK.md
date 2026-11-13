@@ -580,7 +580,11 @@ byte without the CPU side doing anything per pixel.
 
 **The same address function, twice.** Which byte the scanner reads at a given line and column is
 also needed on the CPU side: some programs read the floating bus, the last byte the video scanner
-put on the data bus, to synchronise with the beam. And clicking a pixel to find its address is the
+put on the data bus, to synchronise with the beam. Don Lancaster's vapor lock (*Enhancing Your Apple
+II*, volume 1) puts a marker byte in screen memory, polls the floating bus until it comes back, then
+counts cycles and flips soft switches at chosen scanlines, for a text window of any height under
+graphics or mixed modes anywhere on the screen. The CPU side must return the exact byte the scanner
+fetches on that cycle, or the marker is never found. And clicking a pixel to find its address is the
 same function backwards. So it is written once in TypeScript and once in the shader language, and
 a test runs every line and column of every mode through both and compares them.
 

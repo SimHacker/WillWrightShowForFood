@@ -96,7 +96,8 @@ nodes and views, and text that walks through them. Each one ends in an experimen
   that cards use. Hires colour comes from where a dot falls against the colour subcarrier, and the
   high bit of each byte delays its seven dots by half a dot to give a second pair of colours.
 - **Experiments**: switch modes mid-line and watch the scanner cross the split; draw one byte at a
-  time on the hires page and watch its colour depend on its column; read the floating bus.
+  time on the hires page and watch its colour depend on its column; vapor lock: read the floating
+  bus until a marker byte comes back, then split the screen at a scanline of your choosing.
 
 ### The Disk II
 
