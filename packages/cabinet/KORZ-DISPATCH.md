@@ -367,9 +367,11 @@ applies here line for line:
 - **The same rule for when to stop.** Tabulate when the domain is small; emit code when it isn't.
   CAM-6's limit is large neighborhoods and real-valued parameters. Here it is the 6502 blocks of
   step 3, where the input is the whole machine state.
-- **The same ancestor for code generation.** James Gosling's Ace (1989) generated Sun's bitblt
-  routines from one description specialized across depth, rasterop and clipping. Compiled page
-  dispatch and compiled blocks are that kind of generator.
+- **The same ancestor for code generation.** James Gosling's Ace (1989) is a C preprocessor that
+  rewrites syntax trees with rules the programmer writes, used to generate the bitblt routines of
+  Sun's SHAPES library from one description specialized across depth, rasterop and clipping.
+  Compiled page dispatch and compiled blocks are that kind of generator, with the standard slots'
+  templates in place of Ace's rules.
 
 It works for both because the hardware was tables already. The Disk II controller is a state latch
 and a 256-byte PROM indexed by state and inputs: a rule table. Address decoders, the character
@@ -428,7 +430,9 @@ counts are written down.
   Deoptimization*. PLDI 1992.
 - Tommaso Toffoli and Norman Margolus. *Cellular Automata Machines: A New Environment for
   Modeling*. MIT Press, 1987.
-- James Gosling. Ace, the code generator for the bitblt and vector routines of Sun's Shapes library,
-  1989 ([notes](https://github.com/SimHacker/moollm/blob/main/designs/cellular-automata/cam-construction-set.md#ace-gosling-already-built-stage-2-for-exactly-this-problem)).
+- James Gosling. [*Ace: a syntax-driven C preprocessor*](https://swtch.com/gosling89ace.pdf). July
+  1989. Rules rewrite C syntax trees; X/NeWS 2.0's SHAPES graphics library needs Ace to build its
+  device-dependent part ([HN](https://news.ycombinator.com/item?id=43594513)). More in
+  [moollm's notes](https://github.com/SimHacker/moollm/blob/main/designs/cellular-automata/cam-construction-set.md#ace-gosling-already-built-stage-2-for-exactly-this-problem).
 - Jeff Bezanson, Jiahao Chen, Ben Chung, Stefan Karpinski, Viral Shah, Jan Vitek and Lionel Zoubritzky.
   *Julia: Dynamism and Performance Reconciled by Design*. OOPSLA 2018. World age.
