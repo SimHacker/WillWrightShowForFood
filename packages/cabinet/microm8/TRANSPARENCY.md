@@ -180,6 +180,38 @@ seek time and is measured.
 A session is the cabinet's existing format ([`src/session.ts`](../src/session.ts)), so a recorded
 Apple session can be shared, committed to git and replayed in another browser.
 
+## Speedruns and demos
+
+The same pieces are a tool-assisted speedrun kit, in the manner of TASVideos and BizHawk's TAStudio:
+a deterministic machine, an input log, cheap snapshots, rewind and branches.
+
+- **Frame advance.** A frame is one video frame, 17,030 cycles on an NTSC Apple. Step a frame, a
+  scanline, an instruction or a cycle; the input for the next step is set before it runs.
+- **The input log as an editable grid.** Rows are frames, columns are inputs: keys, the three
+  buttons, the four paddles, disk inserts and swaps. Inputs can sit at any cycle inside a frame,
+  since the Apple has no input polling of its own; the grid shows the cycle when it isn't the frame
+  start. Editing a row replays from the nearest snapshot before it.
+- **Snapshots along the run.** Kept densely near the edit point and thinned further back, so any
+  frame is a short replay away. Seek time and memory are measured ([PLAN.md](PLAN.md)).
+- **Branches.** Any point can be forked: a branch is a save ([SAVE-FILES.md](../SAVE-FILES.md)) plus
+  an input log from it. Branches are compared by state hash, by any memory location, or side by
+  side on screen, and spliced: the input log of one, from a frame on, onto another.
+- **Search.** Forks are plain data, so a Node script or a pool of workers can run thousands of
+  them headless: try a key on every cycle of a window and keep the ones where a memory condition
+  holds. Much Apple randomness comes from timing. The Monitor's keyboard wait counts in `$4E–$4F`
+  while it waits, and programs seed from it, so the cycle a key lands on is the luck being
+  manipulated. Disk timing is in the state too: where the disk is in its rotation when a read starts.
+- **Watches for runners.** The overlays and `@scan.sequence`-style searches
+  ([above](#what-microm8-already-shows)) find the lives counter, the level number, the player's
+  position and the random seed; those become columns beside the input grid.
+- **Verification.** A finished run is a save at power-on (or a boot state) and an input log. Anyone
+  replays it in a browser and gets the same state hash at the end; a lockstep peer can check it
+  frame by frame. The run's rerecord count, the number of edits that went into it, is kept in the log.
+
+A demo is the same thing published: a session that opens in the cabinet already running, the
+boot-state URLs of [WEB-BENCH.md](../WEB-BENCH.md), with the input grid and the overlays available
+to anyone who wants to see how it was made.
+
 ## Peers: three ways to share a machine
 
 ### Lockstep: send the inputs

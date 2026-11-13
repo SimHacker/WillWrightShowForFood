@@ -141,6 +141,15 @@ a session recorded in one browser replays in another with the same hashes; save,
 the same bytes; a save with an unknown card loads and writes that card's part back unchanged.
 **Measure** snapshot size, interval, and seek time.
 
+### 11a. Speedrun tools
+
+Frame advance, the input grid, branches, splicing, headless search in Node and workers
+([TRANSPARENCY.md](TRANSPARENCY.md#speedruns-and-demos)).
+
+**Done when** a run built by editing the grid replays to the same final state hash in another
+browser; a search over key cycles finds a known random outcome in a game that seeds from the
+Monitor's keyboard counter; seek time to any frame of a ten-minute run is measured.
+
 ### 12. Peers
 
 Lockstep between two pages, rollback for late input, streaming for a peer that can't be

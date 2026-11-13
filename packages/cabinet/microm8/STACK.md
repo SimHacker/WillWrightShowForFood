@@ -16,7 +16,7 @@ Companion documents:
 - [MODULE-MAP.md](MODULE-MAP.md): every microM8 package, and where it goes.
 - [PLAN.md](PLAN.md): the order of work, each step with a test that can fail.
 
-## Why not the Go build
+## Why not use just the Go build
 
 The Go build in the page today: one 41 MB module; one machine per JavaScript realm; no breakpoints,
 no inspection and no profiling of the Go from the browser's tools; every new hook a Go change and a
