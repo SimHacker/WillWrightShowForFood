@@ -147,6 +147,12 @@ commented disassemblies published by others, as further layers with their author
 named, and from symbols we add ourselves. Each claim is linked to its evidence, as DESIGN.md's
 "reverse over-engineering" asks.
 
+### The schematics and the emulator's own code
+
+The same graph reaches below the machine code, to the schematics the hardware was built from and
+to the emulator's code and data that model them, and it is what the teaching tours walk through
+([TEACHING.md](TEACHING.md)).
+
 ### The scanned page in the debugger
 
 The memory panel already offers, per program, the views it has maps for: octal, disassembly, source

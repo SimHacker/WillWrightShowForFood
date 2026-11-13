@@ -5,10 +5,11 @@ backplane rather than one Go program compiled to WebAssembly. microM8 is April a
 Ayres-Griffiths's emulator ([paleotronic/microm8-cln](https://github.com/paleotronic/microm8-cln),
 MIT). Its Go source is the reference for what works: we read it, test against it, and translate
 from it where its design fits the browser. Where the browser offers something better, we change
-the design and measure the result. Nothing here has been discussed with April and Melody yet.
+the design and measure the result.
 
 Companion documents:
 
+- [TEACHING.md](TEACHING.md): the live source graph from schematics to BASIC, and the tours.
 - [TRANSPARENCY.md](TRANSPARENCY.md): overlays, tracing, profiling, source maps, rewind, lockstep
   and distributed devices.
 - [GO-AND-TYPESCRIPT.md](GO-AND-TYPESCRIPT.md): what each language gives this job.
@@ -26,6 +27,10 @@ frames copied out through `syscall/js`. It runs at about 1.7 MHz in the browser
 
 The TypeScript stack is meant to be:
 
+0. **Teaching.** It shows how the Apple works and why Woz designed it that way: the video, the
+   Disk II, the speaker, cassette, paddles, buttons and slots, from the schematics through the ROM
+   listings to the program running, with the emulator's own code and data linked to the hardware
+   they model ([TEACHING.md](TEACHING.md)).
 1. **Live coding first.** Every part of the machine can be read, replaced and extended while it
    runs, from the console, from a cartridge, or from a panel, with no rebuild and no lost state.
 2. **Transparent.** Every read, write and execute can be watched, counted, traced, mapped to source

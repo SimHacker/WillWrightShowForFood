@@ -32,6 +32,8 @@ The plan to rebuild this Apple in TypeScript, as plugins on the cabinet's backpl
 as the reference it is checked against:
 
 - [STACK.md](STACK.md): the parts, the rules, the plugin surfaces, video on the GPU.
+- [TEACHING.md](TEACHING.md): a live source graph from the Red Book's schematics to BASIC, and
+  tours of the video, the Disk II, sound, game I/O and slots.
 - [TRANSPARENCY.md](TRANSPARENCY.md): overlays, traces, profiles, source maps from the printed
   listings to BASIC, rewind, lockstep and distributed devices.
 - [GO-AND-TYPESCRIPT.md](GO-AND-TYPESCRIPT.md): what each language gives this job.

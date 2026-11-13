@@ -111,6 +111,17 @@ Applesoft first, then SWEET 16, Integer BASIC, Pascal and Forth
 **Done when** a breakpoint on a BASIC line stops there; the profiler charges a BASIC program's
 cycles to its lines, and the totals equal the 6502's.
 
+### 10a. The graph and the first tours
+
+Unit annotations (`models`, `abstracts`, `drives`), the Red Book figures as layers with regions,
+live values on nodes, the logic analyser view; then the video and speaker tours
+([TEACHING.md](TEACHING.md)).
+
+**Done when** every unit and every soft switch links to a figure or says why it can't; from any
+figure region the graph reaches the code that models it, the addresses that touch it and the ROM
+lines that use them; a student can run each tour's experiment start to finish. The Disk II, game
+I/O and slot tours follow once their sources are chosen.
+
 ### 11. Rewind and sessions
 
 Snapshots of unit state, the input log, the cabinet's session format.
