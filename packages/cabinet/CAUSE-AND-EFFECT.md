@@ -73,8 +73,8 @@ The same chain runs through any machine the cabinet hosts. On an Apple ][ the mo
 stretch is layers 10 to 12: the video circuitry reading screen memory and turning it into NTSC, with
 Woz's tricks for colour and timing. Don proposed showing exactly that in a November 2018 letter to
 Paleotronic's editor, Melody Ayres-Griffiths, after seeing microM8 draw pixels in 3D: "a 3d diagram
-representing all the logic and circuitry behind the pixels, reading from video memory and mutating
-it into NTSC video, like a cybertronic rube goldberg device, to illustrate the brilliance of WOZ's
+representing of all the logic and circuitry behind the pixels, reading from video memory and mutating
+it into NTSC video, like a cybertronic rube goldberg device, to illustrate the brilliance of WOZ’s
 hardware design." With microM8 as a federation peer ([MICROM8.md](MICROM8.md)), that becomes a
 view the cabinet can build over a running Apple.
 

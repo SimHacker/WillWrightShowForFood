@@ -137,7 +137,8 @@ until their implementation and tests exist:
   when the debugger or another CPU needs a shared stop taxonomy, watchpoints,
   or breakpoints.
 - **Whole-machine snapshots.** Define versioned CPU/device/memory state and
-  restore compatibility separately from external-input session replay.
+  restore compatibility separately from external-input session replay. Designed in
+  [SAVE-FILES.md](SAVE-FILES.md).
 - **Declarative cartridge machine wiring.** Cartridge manifests may describe
   CPU, memory, devices, ports, timing, interrupts, media, and panels, then be
   validated before boot. Current program setup is still app JavaScript; see

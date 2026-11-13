@@ -38,6 +38,7 @@ as the reference it is checked against:
   listings to BASIC, rewind, lockstep and distributed devices.
 - [GO-AND-TYPESCRIPT.md](GO-AND-TYPESCRIPT.md): what each language gives this job.
 - [MODULE-MAP.md](MODULE-MAP.md): every microM8 package and where it goes.
+- [SAVE-FILES.md](../SAVE-FILES.md): the save file, per card, with its command line and library.
 - [PLAN.md](PLAN.md): the steps, each with a test and a number.
 
 The disks this Apple boots are in [../disks/apple2](../disks/apple2/DISKS.yml); the Apple section

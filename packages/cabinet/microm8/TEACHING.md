@@ -150,6 +150,44 @@ nodes and views, and text that walks through them. Each one ends in an experimen
 - **Experiments**: step an instruction and watch its bus cycles; write to ROM and see nothing
   change; watch the keyboard strobe at `$C000` and its clear at `$C010`.
 
+## The video circuit in 3D
+
+In November 2018 Don wrote to Paleotronic's editor, after seeing microM8 draw an Apple's pixels in
+3D: "Hey, you could even draw a 3d diagram representing of all the logic and circuitry behind the
+pixels, reading from video memory and mutating it into NTSC video, like a cybertronic rube goldberg
+device, to illustrate the brilliance of WOZ’s hardware design."
+
+The TypeScript stack makes that a view over parts it already has.
+
+**Every stage is a function.** The video circuit is a pipeline: the horizontal and vertical counters,
+the address multiplexer, the RAM byte on the data bus, the latch, the character generator or the
+hires shift register with its half-dot delay, the dot clock, and the colour that comes out against
+the subcarrier. Given the cycle, memory and the mode table, each stage's value at any beam position
+is computed directly; this is the same address function and dot pass the shaders use
+([STACK.md](STACK.md#video-on-the-gpu)), split at every stage. Nothing has to tick, so the 3D view can
+freeze the beam, crawl it one cycle a second, or scrub it backwards through a recorded session, and
+it only computes the stages it is showing.
+
+**The scene comes from the graph.** Each chip and region of figures S-4, S-7, S-8 and S-11 is a node,
+with a `models` link to the stage that computes its outputs. The scene places them as machinery:
+memory as a field of byte blocks, the counters as odometers, the multiplexer as a switch yard picking
+the address, the latch catching the byte, the shift register as a conveyor that pushes out dots, the
+colour subcarrier as a wave the dots ride against, and at the end the screen, drawn with microM8's 3D
+pixels. Signals are cables carrying their live values. Clicking any part opens its figure, its code,
+and the memory it is reading.
+
+**The work is the netlist.** Rendering is the easy part. The hard part is the wiring: which chip
+feeds which, signal by signal, transcribed from the figures. The check is mechanical: a chip-level
+simulation of the transcribed netlist, run for one frame, must produce the same dots as the reference
+decoder for every test screen. It is slow, and it only has to run for that check and for the
+slow-motion view.
+
+**Cards and cables too.** The same scene holds the slots and the cards in them, with their cables to
+the drives, the monitor and the game port. Plugging a card in the scene is the same act as adding it
+to the save file ([SAVE-FILES.md](../SAVE-FILES.md#plugging-in-a-card-adds-its-state)); the cable is a
+link in the graph. The Disk II's sequencer, with the bit stream passing under the head, the speaker's
+flip-flop and the paddle timers charging get the same treatment.
+
 ## Sources
 
 - **The Red Book**: the *Apple II Reference Manual*, January 1978. The full scan is public

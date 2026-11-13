@@ -69,6 +69,11 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
 - [WEB-BENCH.md: the Apple \]\[ is microM8](WEB-BENCH.md#decisions-for-the-cabinets-browser-bench): browser emulators compared, and
   microM8's MIT-licensed Go compiled to WebAssembly, built and running.
   [MICROM8.md](MICROM8.md) covers what microM8 exposes: an HTTP API, an MCP server and a debugger.
+  [microm8/STACK.md](microm8/STACK.md) plans its successor: a transparent, teaching Apple in
+  TypeScript, with microM8 as the oracle.
+- [SAVE-FILES.md: the whole machine, at rest](SAVE-FILES.md): planned. One save format for every
+  machine, extended by each card that is plugged in, and read, edited, rendered and run from a
+  command line and a library without starting the emulator.
 - [MAPPING.md: shared memory between machines](MAPPING.md): planned, after MIT's Rubin 10/11
   interface, which let the AI Lab's PDP-10 map PDP-11 memory and device registers into its own
   address space. [CORE-LINKS.md](CORE-LINKS.md) extends it to machines that disagree on word

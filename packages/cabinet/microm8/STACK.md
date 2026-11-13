@@ -92,6 +92,9 @@ machine "apple2e"
   log         cycle-stamped inputs; snapshots
 ```
 
+The whole machine saves to a file each unit and card adds its own part to, readable and editable
+without running the emulator ([SAVE-FILES.md](../SAVE-FILES.md)).
+
 ### The processor
 
 A 6502 and a 65C02, one module each or one with a variant table, in the shape the cabinet's

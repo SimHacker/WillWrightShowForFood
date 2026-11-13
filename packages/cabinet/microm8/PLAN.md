@@ -122,12 +122,23 @@ figure region the graph reaches the code that models it, the addresses that touc
 lines that use them; a student can run each tour's experiment start to finish. The Disk II, game
 I/O and slot tours follow once their sources are chosen.
 
+### 10b. The video circuit in 3D
+
+The video pipeline split into stages, the netlist of figures S-4, S-7, S-8 and S-11, the 3D scene
+([TEACHING.md](TEACHING.md#the-video-circuit-in-3d)).
+
+**Done when** each stage's value at every line and column equals what the reference decoder
+implies; the netlist, simulated for a frame, gives the reference decoder's dots for every test
+screen; the beam can be frozen, slowed and run backwards in the scene.
+
 ### 11. Rewind and sessions
 
-Snapshots of unit state, the input log, the cabinet's session format.
+Save files ([SAVE-FILES.md](../SAVE-FILES.md)) as the snapshot format, with the library and the
+command line; the input log; the cabinet's session format; the microM8 freeze importer.
 
 **Done when** rewinding to any cycle and running forward gives the same state hash as the first run;
-a session recorded in one browser replays in another with the same hashes.
+a session recorded in one browser replays in another with the same hashes; save, load, save gives
+the same bytes; a save with an unknown card loads and writes that card's part back unchanged.
 **Measure** snapshot size, interval, and seek time.
 
 ### 12. Peers
