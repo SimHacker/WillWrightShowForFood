@@ -59,14 +59,14 @@ export class Pdp7 implements Cpu {
 	/** Extend mode: indirect addresses are 15 bits, reaching every bank. Off: they stay in the current bank. */
 	extend = false;
 	/** EMIR: the next JMP I restores extend mode from bit 16 of its target word. */
-	private emirPending = false;
+	protected emirPending = false;
 	irqLine = false; // ORed device requests, set by the Cabinet each step
 	halted = false;
 	/** The console's eighteen ACCUMULATOR switches, read by OAS/LAS. SYMELEC never reads them; DUEL's players do. */
 	switches = 0;
 	/** When set, every fetch is recorded: the instruction stream. */
 	trace: Trace | null = null;
-	private readonly core: Uint32Array;
+	protected readonly core: Uint32Array;
 
 	constructor(opts: Pdp7Opts = {}) {
 		this.coreWords = opts.coreWords ?? 8192;
@@ -202,7 +202,7 @@ export class Pdp7 implements Cpu {
 	}
 
 	/** Indirect resolution with auto-indexing: 0o10–0o17 of each bank increment before use. SIMH's Ia. */
-	private resolveIndirect(ma: number, jmp: boolean): number {
+	protected resolveIndirect(ma: number, jmp: boolean): number {
 		let t: number;
 		if ((ma & ADDR & ~0o7) === 0o10) {
 			t = (this.read(ma) + 1) & WMASK;
@@ -218,7 +218,7 @@ export class Pdp7 implements Cpu {
 	}
 
 	/** JMS/CAL/interrupt save word: link in the sign bit, extend mode in bit 16, then the 15-bit PC. */
-	private jmsWord(): number {
+	protected jmsWord(): number {
 		return ((this.link & 1) << 17) | (this.extend ? EXTEND_BIT : 0) | (this.pc & XADDR);
 	}
 
@@ -229,11 +229,11 @@ export class Pdp7 implements Cpu {
 	}
 
 	// 19-bit link'AC composition, the SIMH LAC representation.
-	private lac(): number {
+	protected lac(): number {
 		return ((this.link & 1) << 18) | (this.ac & WMASK);
 	}
 
-	private setLac(v: number): void {
+	protected setLac(v: number): void {
 		this.link = (v >> 18) & 1;
 		this.ac = v & WMASK;
 	}
@@ -306,7 +306,7 @@ export class Pdp7 implements Cpu {
 	}
 
 	/* EAE, opcode 64. Port of pdp18b_cpu.c case 032/033. */
-	private eae(ir: number): void {
+	protected eae(ir: number): void {
 		let lac = this.lac();
 		let mq = this.mq;
 
@@ -448,7 +448,7 @@ export class Pdp7 implements Cpu {
 }
 
 /** PC + 1 wraps within its 8K bank; only a jump changes banks. */
-function incr(pc: number): number {
+export function incr(pc: number): number {
 	return (pc & BANK) | ((pc + 1) & ADDR);
 }
 

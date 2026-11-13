@@ -25,6 +25,7 @@ export class Cabinet {
 			if (!device?.bindSwitches) throw new Error(`device ${name} cannot bind switches`);
 			device.bindSwitches(bindings);
 		}
+		this.cpu.attach?.(this);
 	}
 
 	device(name: string): Device | undefined {

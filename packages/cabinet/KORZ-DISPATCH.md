@@ -1,6 +1,8 @@
 # Korz dispatch for emulators, in TypeScript
 
-Design. Nothing here is built yet.
+Step 1 is built, for the PDP-7: the interpreter in [`src/korz/korz.ts`](src/korz/korz.ts) and the
+PDP-7 on it in [`src/korz/pdp7.ts`](src/korz/pdp7.ts), tested against `Pdp7`
+([the PDP-7 first](#the-pdp-7-first)). The rest is design.
 
 Everything a machine does on its bus is a lookup on a few small bit fields: which address, read or
 write, who is asking, which memory configuration, which opcode. Emulators usually spread that
@@ -392,24 +394,237 @@ and nothing left over, is a CAM-6 rule table; `CAM6.js` is its oracle the way mi
 Apple's. The cabinet's cell renderer and a CAM-6 profile
 ([TODO.md](TODO.md)) get rules from the same place the Apple gets its soft switches.
 
+## The PDP-7 first
+
+The PDP-7 goes first because the cabinet already has a conventional emulator for it, `Pdp7`
+([`src/plugins/pdp7.ts`](src/plugins/pdp7.ts)), which runs UNIX v0, SYMELEC and the 340 software, and
+whose semantics are ported from SIMH's `pdp18b_cpu.c`. The Korz version, `KorzPdp7`, subclasses it, keeps its registers and EAE
+arithmetic, and moves every decision into one sea per machine:
+
+| Selector | Dimensions | Slots |
+|---|---|---|
+| `fetch`, `read`, `write` | `addr` (15 bits), `who` (cpu, device, debugger) | core; a fetch is a read |
+| `ea` | `op`, `ind` | direct is the base case; indirect with auto-indexing, JMP I with EMIR, CAL, CAL I |
+| `exec` | `op`, `ind` | one per opcode; OPR and LAW split on `ind` |
+| `skip`, `cc`, `rot` | the three OPR fields | 16 skip conditions, 16 clear/complement combinations, 4 rotates, the undefined rotates, no rotate |
+| `iot` | `device`, `pulse` | the CPU's IOF, ION and memory extension; the backplane's CAF and unclaimed codes; one slot per device code |
+
+The operate group shows why fields become dimensions. `Pdp7.opr` is three switch statements over
+three fields of one word; here each field is a selector, and "SZA SNL" or "CLA CLL CMA" is a slot
+whose name `why` can print. The IOT bus shows why the CPU and the devices share a sea: the clock
+claims device 0, and ION and IOF are slots on device 0 with a pulse, more specific than the clock's,
+so the special case in `Pdp7.iot` is gone. `Cabinet` calls the CPU's optional `attach(box)`
+([`src/bus.ts`](src/bus.ts)), and the backplane installs its devices' codes as slots; two devices
+claiming one code is an install-time error instead of `devices.find` picking the first.
+
+**The oracle.** [`src/korz/pdp7.test.ts`](src/korz/pdp7.test.ts) runs both CPUs side by side:
+
+- 300 seeded random cores (8K and 32K, so the memory extension IOTs are live), every opcode and
+  IOT, random interrupt requests, up to 2,000 steps each: registers and the `Step` result equal
+  after every step, thrown errors equal, core equal at the end.
+- UNIX v0 booted twice in lockstep from the RB09 platter, through login to the shell prompt:
+  registers equal at every step, then paper and core equal.
+
+Both tests fail when one slot is wrong: rotating RAL by two fails at step 4 of seed 3; deferring ION
+by two instructions fails at step 51,210 of the boot.
+
+**Speed.** UNIX v0, 3 million steps, Node 20 on an M4 Max:
+
+| CPU | Steps per second | Time per step |
+|---|---|---|
+| `Pdp7` | 22–28 M | 35–45 ns |
+| `KorzPdp7`, interpreter | 1.1 M | 880–915 ns |
+| A real PDP-7 | about 0.3 M | 1.75 µs memory cycle |
+
+A step makes five to eight dispatches (fetch, its read, `ea`, `exec`, operand reads and writes,
+three more for OPR), and each filters the selector's slots and sorts the matches: about 150 ns a
+dispatch. The interpreter is the oracle and the engine behind `why`, and at 3.7 times a real PDP-7
+it is fast enough to boot UNIX in a test.
+
+**Predictions for the next steps.** The resolver turns each selector into an array: `exec` and `ea`
+have 32 entries, the OPR fields 16 each, `iot` 64 × 64, memory one entry per 256-word page. A
+separate benchmark of resolved table dispatch measured 10–14 ns a call, so the resolved PDP-7 should
+run near 10–15 M steps per second. The compiler then folds the dispatches into each block's code,
+which should bring it to `Pdp7`'s speed or past it, since `Pdp7` decodes every instruction every
+time and a compiled block decodes once.
+
+**Per-word invalidation.** PDP-7 code writes into itself as a matter of course: JMS stores the return
+address in the subroutine's first word, auto-index registers sit in the same core as the code, and
+programs of the period modify their own instructions.
+A compiled block therefore depends on the exact words it was compiled from, not on their page.
+Invalidating by page would recompile every subroutine on every call, because its link word sits next
+to its code. JMS's link word is never executed, so a block starts at `ea + 1` and the store at `ea`
+invalidates nothing; a store into a word that a block was compiled from clears that block's `valid`
+flag, which the block checks at entry, as the 6502 blocks below do.
+
+## The whole machine
+
+The CPU is the first client, not the only one. Every part of a cabinet that answers to coordinates
+is a selector with dimensions:
+
+- **Devices** are slots on the IOT bus, guarded on device code and pulse bits. The two showcases
+  follow.
+- **The backplane** is the `iot` selector itself, plus CAF, the power switches (a powered-off device
+  is a slot that answers with `offIot`), and the order of IOP pulses within one IOT.
+- **Buses and DMA.** The 340 and the RB09 read and write core with `who: device`. An observe slot on
+  `{ who: "device" }` lights the words the display processor is fetching in the memory panel.
+- **Storage.** The RB09's dimensions are track and sector. A bad sector, a write-protected track or a
+  platter swapped mid-run is a patch slot on those coordinates, and `why` names it.
+- **Networks.** A link between two machines in the cabinet's array carries messages with a port and
+  a type; routing, logging and fault injection are slots on those.
+- **Memory, shared and transformed.** Two machines whose `read` slots map one page to the same array
+  share memory, and the slot says so. A transformed view is a selector over a virtual address
+  space: the 340's display file read as instructions, SIXBIT words read as characters, the Apple's
+  interleaved hi-res memory read as a linear bitmap. Writing through the view lands in the machine's
+  memory through its `write` selector, so watches still fire.
+
+Some things are reductions, not dispatch. The interrupt line is a wired OR of every device's flag;
+slots with one guard would conflict. The backplane computes it over a view (every slot of selector
+`irq`), and `why` on the line lists who is pulling it.
+
+### Showcase: the Type 340
+
+The 340 has two seas' worth of behavior: its IOTs on the PDP-7's bus, and its own instruction set,
+which it fetches from PDP-7 core by DMA.
+
+**IOTs as timed pulses.** A PDP-7 IOT does not deliver a pulse mask. It fires IOP1, IOP2 and IOP4 in
+that order, for the bits that are set, and each device gate answers one pulse. `type340.ts` reads
+the whole mask and needs `if … else if` to get the order right. With one dimension for the device
+code and one for the pulse, the order is the backplane's and every gate is a slot:
+
+```ts
+const iop = (device: number, pulse: 1 | 2 | 4, by: string, run: Run<Io>): SlotSpec<Io> =>
+  ({ selector: "iop", guard: { device, iop: pulse }, by: `340 ${by}`, run });
+
+export const type340Iots = (d: Type340): SlotSpec<Io>[] => [
+  iop(0o05, 1, "IDVE: skip on vertical edge",  (c) => c.skip(d.status & ST340_VEDGE)),
+  iop(0o05, 2, "DAC into AC",                  (c) => { c.ac |= d.dac; }),
+  iop(0o05, 4, "IDRS: resume in place",        () => d.resume()),
+  iop(0o06, 1, "IDSI: skip on stop",           (c) => c.skip(d.status & ST340_STOPPED)),
+  iop(0o06, 2, "clear DAC",                    () => d.setDac(0)),
+  iop(0o06, 4, "IDLA: AC into DAC, start",     (c) => { d.setDac(d.dac | (c.ac & ADDR)); d.restart(); }),
+  iop(0o07, 1, "IDSP: skip on light pen",      (c) => c.skip(d.status & ST340_LPHIT)),
+  iop(0o07, 2, "IDRC: beam coordinates",       (c) => { c.ac |= d.penWord(); }),
+  iop(0o07, 4, "clear flags, hold",            () => d.clearFlags()),
+  iop(0o10, 1, "IDHE: skip on horizontal edge", (c) => c.skip(d.status & ST340_HEDGE)),
+  iop(0o10, 2, "ASR into AC",                  (c) => { c.ac |= d.asr; }),
+  { selector: "iop", guard: { device: 0o11, iop: 1 }, by: "cabinet: IDPN, skip on a pen hit", run: (c) => c.skip(d.lastHitPen) },
+  { selector: "iop", guard: { device: 0o11, iop: 2 }, by: "cabinet: IDPN, which pen", run: (c) => { c.ac |= d.penNumber(); } },
+];
+```
+
+IDLA (700606) is IOP2 then IOP4: clear the address register, then OR the AC into it. That is a load
+built from two gates, as the hardware builds it, and the special case in `type340.ts` disappears.
+700604 alone ORs into a DAC that is not cleared, which the current code treats as a load; the
+differential test against `Type340` and SIMH decides which is right before this replaces it. IDPN is
+the cabinet's extension, not DEC's, and its `by` says so: `view` on `by` lists every behavior DEC
+did not build.
+
+**The display processor as a sea.** The 340 decodes each word by its mode register, and in some
+modes by the top two bits (DEC bits 0 and 1). Those are the dimensions:
+
+```ts
+const dims340 = [
+  { name: "mode", width: 3, names: ["param", "point", "slave", "char", "vector", "vcont", "incr", "subr"] },
+  { name: "top", width: 2 },   // DEC bits 0-1: escape and intensify in vector mode, the jump type in subr
+];
+
+export const type340Words = (d: Type340): SlotSpec<Word>[] => [
+  { selector: "word", guard: { mode: "param" },  by: "340 parameter: mode, scale, intensity, stop", run: (w) => d.param(w.word) },
+  { selector: "word", guard: { mode: "point" },  by: "340 point: load X or Y, maybe intensify", run: (w) => d.point(w.word, w.addr) },
+  { selector: "word", guard: { mode: "slave" },  by: "340 slave: no Type 343, stop", run: (w) => d.slave(w.word) },
+  { selector: "word", guard: { mode: "char" },   by: "340 three characters", run: (w) => d.chars(w.word, w.addr) },
+  { selector: "word", guard: { mode: "vector" }, by: "340 vector", run: (w) => d.vector(w.word, w.addr) },
+  { selector: "word", guard: { mode: "vector", top: bits(2, 2) }, by: "340 vector, escape after", run: (w) => { d.vector(w.word, w.addr); d.escape(); } },
+  { selector: "word", guard: { mode: "vcont" },  by: "340 vector to the edge", run: (w) => d.vcont(w.word, w.addr) },
+  { selector: "word", guard: { mode: "incr" },   by: "340 four increments", run: (w) => d.incr(w.word, w.addr) },
+  { selector: "word", guard: { mode: "subr", top: 0 }, by: "cabinet: DTG, tag what follows", run: (w) => d.tag(w.word) },
+  { selector: "word", guard: { mode: "subr", top: 1 }, by: "347 DDS", run: (w) => d.dds(w.word) },
+  { selector: "word", guard: { mode: "subr", top: 2 }, by: "347 DJP: jump", run: (w) => d.djp(w.word) },
+  { selector: "word", guard: { mode: "subr", top: 3 }, by: "347 DJS: jump and save", run: (w) => d.djs(w.word) },
+];
+```
+
+The 340 fetches its word with `read` on the PDP-7's sea, `who: device`, so the memory panel, the
+watches and the source map see display-file fetches the same way they see CPU fetches. Teaching
+uses follow from the slots, not from extra code:
+
+- An observe slot on `{ mode: "vector" }` draws each vector into the slow-motion beam view as it is
+  decoded, with the display-file address it came from.
+- `why` on any word says which mode decoded it and which bits mattered: "subr, top 3: 347 DJS".
+- The edge and light-pen flags are what make SYMELEC interactive. A patch slot on `{ mode: "point" }`
+  can inject a pen hit at a chosen point, so a test drives the pen menus without a mouse.
+- The resolved form is an 8 × 4 table, 32 entries; the compiler can then compile a display file
+  that does not change into one function that emits its segments.
+
+### Showcase: the Turing machine
+
+The cabinet's Turing engine ([`src/plugins/turing.ts`](src/plugins/turing.ts), device 054) runs a
+transition table out of PDP-7 core: one word per (state, symbol), `[move:2][write:4][next:12]`, at
+`TABLE + state × NSYM + symbol`, with the all-zero word meaning "no transition". Its IOTs split on
+`pulse & 060` into four groups: status (skip on a flag, read, load and go), state (skip while
+running, read, resume), mode (single step, set the mode, stop) and the last emitted character. On
+the `iop` selector that is a `sub` dimension beside `device` and `iop`, and ten slots.
+
+The table itself is where Korz fits best. A transition table is a rule table, like CAM-6's: a
+function of a few small fields, stored as its graph. Written by hand it is a grid of words with
+holes; written as a sea it is a few rules with defaults, and the resolver writes the grid. A binary
+incrementer, with the head starting on the number's first digit:
+
+```ts
+const BLANK = 0, ZERO = 1, ONE = 2;
+const R = 1, L = 2, N = 3;
+const door = (move: number, write: number, next: number) => (move << 16) | (write << 12) | next;
+
+const tm = new Sea<{ state: number; sym: number }>([{ name: "state", width: 12 }, { name: "sym", width: 4 }]);
+tm.install([
+  { selector: "door", by: "no transition", run: () => 0 },
+  { selector: "door", guard: { state: 1 }, by: "scan right over the digits", run: (c) => door(R, c.sym, 1) },
+  { selector: "door", guard: { state: 1, sym: BLANK }, by: "past the end: turn back", run: () => door(L, BLANK, 2) },
+  { selector: "door", guard: { state: 2 }, by: "0 or blank: write 1, halt", run: () => door(N, ONE, 0) },
+  { selector: "door", guard: { state: 2, sym: ONE }, by: "1: write 0, carry left", run: () => door(L, ZERO, 2) },
+]);
+
+for (let q = 0; q < 3; q += 1)
+  for (let s = 0; s < NSYM; s += 1)
+    cpu.write(TABLE + q * NSYM + s, tm.dispatch("door", { state: q, sym: s }));
+```
+
+The loop is the resolver by hand: it tabulates the sea into the words the engine reads, exactly as
+`compileRule` fills CAM-6's table. State 0's row comes out zero, which the engine reads as halt.
+Rules with a wildcard symbol ("in state 1, any digit") cannot be written in the table, which has one
+word per pair; in the sea they are one slot each, and the more specific slot for the blank overrides
+them without an `if`. An `emit` selector over the same two dimensions fills the emit table: one
+slot `{ state: 2, sym: ONE }` returning BEL beeps on every carry.
+
+`why` closes the loop for teaching. When the engine stops on an undefined transition, `why("door",
+{ state, sym })` names the rule that should have answered and the dimension it missed on. When it
+takes a transition, the trace record carries the table address, the address maps back to (state,
+symbol), and (state, symbol) maps back to the slot and its `by`: the rule in the program, not the
+word in core.
+
 ## Other machines
 
-The same sea fits the cabinet's other machines; these are the first candidates, not commitments.
-
-- **The PDP-7.** IOTs ([`src/bus.ts`](src/bus.ts)) carry a device code and pulse bits; a `Device`'s
-  `iots` list is a guard on the device dimension, and per-pulse behavior is slots on the pulse bits.
 - **The C64.** Its PLA banking (`LORAM`, `HIRAM`, `CHAREN`, `GAME`, `EXROM`) selects RAM, BASIC,
   KERNAL, character ROM, I/O or cartridge per region: configuration-guarded mapping slots, the
   language card's pattern with five bits.
 
 ## Steps
 
-1. Normal forms and set operations, with the brute-force tests.
-2. The interpreter, `why`, views, install-time ambiguity, layers and `next`.
-3. The Apple bus on the interpreter, against microM8 ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2).
-4. The resolver: table sets, page kinds, interned chains, the opcode table, invalidation.
-5. Standard slots, and compiled page dispatch.
-6. Compiled 6502 blocks (microM8 plan step 14).
+1. **Built.** The interpreter, `why`, views, install-time ambiguity, layers and `next`, with sets as
+   bitsets per dimension ([`src/korz/korz.ts`](src/korz/korz.ts)).
+2. **Built.** The PDP-7 on the interpreter, against `Pdp7`: random programs and UNIX v0 in lockstep
+   ([`src/korz/pdp7.ts`](src/korz/pdp7.ts)).
+3. The IOT bus as timed IOP pulses; the Type 340 and the Turing engine as slots, against the current
+   plugins and SIMH.
+4. The resolver on the PDP-7: per-selector tables, then the measured speed against the 10–15 M steps
+   per second predicted above.
+5. Page-set normal forms with the brute-force tests; the Apple bus on the interpreter, against
+   microM8 ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2).
+6. The resolver for the Apple: table sets, page kinds, interned chains, the opcode table,
+   invalidation.
+7. Standard slots, and compiled page dispatch.
+8. Compiled blocks: PDP-7 first, with per-word invalidation, then 6502 (microM8 plan step 14).
 
 Each step is done when it agrees with the step before it on every test, and its speed and table
 counts are written down.

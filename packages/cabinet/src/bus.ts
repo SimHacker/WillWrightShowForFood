@@ -48,8 +48,16 @@ export type Step = {
 	halt?: boolean;
 };
 
+/** What a CPU sees of the backplane it is plugged into. */
+export type Backplane = {
+	readonly devices: readonly Device[];
+	resetDevices(): void;
+};
+
 export interface Cpu {
 	power?: boolean;
+	/** Called once by the backplane, so a CPU that dispatches IOTs itself can see the devices. */
+	attach?(box: Backplane): void;
 	readonly wordBits: number;
 	readonly coreWords: number;
 	pc: number;

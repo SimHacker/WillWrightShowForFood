@@ -1,7 +1,7 @@
 import { Cabinet } from "./cabinet.js";
 import { Clock } from "./plugins/clock.js";
 import { PaperTape, readInAndGo } from "./plugins/papertape.js";
-import { Pdp7 } from "./plugins/pdp7.js";
+import { Pdp7, type Pdp7Opts } from "./plugins/pdp7.js";
 import { Rb09 } from "./plugins/rb09.js";
 import { Teletype } from "./plugins/teletype.js";
 import { type DemoScript, wait } from "./symelec-demo.js";
@@ -16,6 +16,8 @@ export type UnixV0Opts = {
 	bootTape: Uint8Array;
 	/** Paper output, echo included, one character at a time. */
 	onPaper?: (char: string) => void;
+	/** Build the CPU: `Pdp7` by default, `KorzPdp7` for the differential tests. */
+	cpu?: (opts: Pdp7Opts) => Pdp7;
 };
 
 /**
@@ -25,7 +27,7 @@ export type UnixV0Opts = {
  * plugged in; its IOTs no-op and the kernel's display code stays idle.
  */
 export function bootUnixV0(opts: UnixV0Opts) {
-	const cpu = new Pdp7({ coreWords: 8192 });
+	const cpu = (opts.cpu ?? ((o) => new Pdp7(o)))({ coreWords: 8192 });
 	let paper = "";
 	const print = (c: number): void => {
 		const ch = String.fromCharCode(c & 0o177);
