@@ -519,6 +519,18 @@ Super Serial Card, the Mockingboard, the mouse, the parallel printer and the Z80
 become one. The Videx and 2651 cards we added to microM8 ([FORK.yml](FORK.yml)) translate first,
 since we wrote them.
 
+**A card without a ROM.** A new card needs no 6502 firmware. Its `$Cn00` page is a few bytes of
+data in the card's definition, and its entry points are
+[accelerators](#accelerators-typescript-in-place-of-a-6502-routine) with no 6502 code behind them.
+The bytes are what software inspects before it calls: the ProDOS ID bytes at `$Cn01`, `$Cn03`,
+`$Cn05` and `$Cn07`, the driver offset at `$CnFF`, the Pascal 1.1 signature and entry offsets.
+Each entry address holds a placeholder byte that a fetch slot catches. microM8's SmartPort and
+mouse cards already work this way through `FirmwareExec`. The card ships no ROM image to license,
+and its firmware is TypeScript in the same file as its registers. The trace, overlays and profiler
+show these calls like any accelerated call. Expand and diff have no 6502 code to compare against,
+so the TypeScript is the reference. A real card's ROM can still be loaded in its place to run the
+real firmware for comparison.
+
 ### Video, on the GPU
 
 The machine produces memory and a log of video mode changes; the GPU produces pixels. microM8
