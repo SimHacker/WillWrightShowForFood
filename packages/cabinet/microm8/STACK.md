@@ -199,27 +199,51 @@ step that fills the tables the fast path already uses.
 
 ```ts
 type Bits = { mask: number; match: number };          // x & mask === match
+type Span = { start: number; length: number };        // in words of the space: bytes on the Apple
+type Addr = Bits | Span | (Bits | Span)[];            // a list is a union
 type Guard = {
   access?: "read" | "write" | "fetch";
-  addr?: Bits;
+  space?: "cpu" | string;                             // "cpu", or a bank: "main", "aux", "lc2", "slot3-rom"
+  addr?: Addr;
   op?: Bits;                                          // opcode bit fields
   who?: "cpu" | "video" | "dma" | "debugger";
   machine?: string;                                   // "apple2plus", "apple2e", ...
   variant?: "nmos" | "65c02" | "rockwell";
   config?: Bits;                                      // memory configuration soft-switch bits
 };
-type Slot = { guard: Guard; run: (c: Access) => number | void; by: string };
+type Slot = { guard: Guard; by: string } & (
+  | { run(c: Access): number | void }                 // a handler
+  | { bank: string; base: number }                    // a mapping: addr - start + base in a bank
+);
 ```
 
-**Specificity is a partial order.** Guard A is more specific than B when every access A matches, B
-matches too: A's masks contain B's bits with the same values, and A constrains every dimension B
-does. The unique most specific match runs. Two matching slots with neither more specific is an
-error, reported when the second one is added, with both slots' `by`.
+**Two address forms, for two jobs.** `Bits` is how hardware decodes: a partially decoded address
+repeats, and the mask says which bits the decoder ignores (the speaker answers anywhere in
+`$C030–$C03F`). `Span` is how software and people name memory: a bank, a card's `$C800–$CFFF`, a
+40-byte text line, a variable, a routine. Either can be used anywhere; a list mixes them.
+
+**Mappings are slots too.** A slot with `bank` and `base` instead of `run` maps a span of the space to
+a bank. The compile step, not the guard, is what makes whole banks cheap: a page covered by one
+mapping slot and nothing more specific becomes a direct `Uint8Array` page, however the slot was
+written. A watch on 40 bytes of that page makes only that page take the slow path.
+
+**Two spaces.** `space: "cpu"` is the 16-bit address the 6502 puts on the bus, which the memory
+configuration maps to banks. A bank name is physical memory, whatever is mapped where. Banking
+switches and I/O are declared in the CPU space; heat maps, writer overlays and data watches usually
+belong in a bank (aux `$400` is the same memory whichever switch made it visible). A slot in a bank
+space is reached through whatever CPU pages map to it in the current configuration.
+
+**Specificity is a partial order, by set inclusion.** Every guard denotes a set of accesses. Guard A
+is more specific than B when A's set is a strict subset of B's: per dimension, A's addresses are
+contained in B's, whatever form each is written in, and A constrains every dimension B does. The
+resolver tests containment with per-page bitsets at install time, so mixing masks and spans costs
+nothing per access. The unique most specific match runs. Two matching slots with neither more
+specific is an error, reported when the second one is added, with both slots' `by`.
 
 **Resolved when slots change, never per access.** Adding or removing a slot recomputes the affected
 pages and table entries:
 
-- A page wholly covered by one bank slot becomes a direct `Uint8Array` page, as before.
+- A page wholly covered by one mapping slot becomes a direct `Uint8Array` page, as before.
 - An I/O page gets a 256-entry handler array, one resolved slot per address.
 - `config` dimensions (language card banks, aux read and write, `80STORE`, `PAGE2`, `HIRES`) are
   resolved per configuration, and the resolved page tables are cached by configuration bits. A
