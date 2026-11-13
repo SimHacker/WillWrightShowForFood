@@ -33,7 +33,7 @@ Verdicts:
 | `core/hardware/apple2helpers` | 5,948 | helpers for the dialects: disk access, CPU wrappers (local and remote), the monitor, dithering, zones | redesign | split: the monitor and CPU control into the debugger; the rest follows the dialects |
 | `core/interpreter`: recorder, player, `cpudelta` | 3,228 | rewind and 100% recording | redesign | snapshots plus the input log ([TRANSPARENCY.md](TRANSPARENCY.md#time-rewind-without-recording-everything)) |
 | `core/interpreter`: `interpreter.go` and the rest | 6,992 | the `Interpretable` VM: about 355 methods covering BASIC, CPU, memory, files, video and sound | redesign | cut into the parts it already contains; no single interface survives |
-| `core/settings` | 1,027 | 102 global arrays indexed by VM slot | redesign | each setting moves to the unit it configures, as state |
+| `core/settings` | 1,027 | 102 global arrays indexed by VM slot | redesign | each setting moves to the unit it configures, as state; no VM slots, a machine is an object in the cabinet's array |
 | `core` (root) | 5,290 | the VM, its launcher, tasks, the producer that runs VMs | redesign | the cabinet's machine list and scheduler |
 
 ## Other machines

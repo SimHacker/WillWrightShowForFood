@@ -33,8 +33,9 @@ functions, and the generated code is plain JavaScript.
 
 **Words.** "Slot" alone always means a Korz slot. The Apple's eight card connectors are **expansion
 slots**, always written that way, in prose and in code (`expansionSlots[6]`, a parameter `n`, never
-`slot`). microM8's interpreter instances are **VM slots**. microM8's own identifiers (`SlotCard`,
-`SW_SLOTC3ROM`) keep their names.
+`slot`). Running machines have no slots of their own: each is an object in the cabinet's array of
+machines. microM8's eight "VM slots" and its identifiers (`SlotCard`, `SW_SLOTC3ROM`) are named only
+when describing microM8.
 
 ## The model
 

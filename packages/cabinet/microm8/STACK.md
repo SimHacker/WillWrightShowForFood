@@ -39,8 +39,8 @@ Requirements:
 4. **Fast, measured.** Every speed claim is a benchmark number, committed with the change.
 5. **Browser and Node.** The same modules in a page, a worker and Node; Node runs tests, benchmarks,
    headless machines and the server side of services.
-6. **Several machines, several peers.** Machines on one backplane mapped into each other; copies in
-   lockstep over the network.
+6. **Several machines, several peers.** Any number of machines of any kinds, each its own world;
+   machines on one backplane mapped into each other; copies in lockstep over the network.
 
 ## The rules
 
@@ -77,8 +77,14 @@ is what the cabinet's sessions rely on already ([`src/session.ts`](../src/sessio
 the name of the plugin or cartridge that put it there, and the debugger lists them.
 
 **"Slot" means a Korz slot.** The Apple's card connectors are always "expansion slots", in prose
-and in code; microM8's interpreter instances are "VM slots"
-([KORZ-DISPATCH.md](../KORZ-DISPATCH.md#the-model)).
+and in code ([KORZ-DISPATCH.md](../KORZ-DISPATCH.md#the-model)).
+
+**A machine is a value, with no fixed place to live.** microM8 has eight numbered VM slots, and its
+settings and memory are global arrays indexed by them. Here a machine is an object that owns its
+state and nothing else: its own world, with no globals shared with other machines. The cabinet or
+tiny-titan keeps however many machines are running, of any kinds, in an ordinary array, and the UI
+shows that array. Nothing in the Apple knows how many other machines exist or where it is in the
+list. "VM slot" appears only when describing microM8.
 
 ## The parts
 
