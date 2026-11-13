@@ -78,6 +78,34 @@ rectangles of that line on a scanned 1972 line-printer listing ([`src/source.ts`
 Apple gets the same model, with more layers above the machine code, because so much Apple software
 is an interpreter running a program of its own.
 
+### Every layer, one map
+
+The stack, top to bottom, at one moment of a running machine:
+
+| Layer | What is selected | Where it comes from |
+|---|---|---|
+| Program source | a BASIC line, a Pascal statement, a Forth word | the disk, a listing, a magazine scan |
+| Interpreter's form | the tokenized line in memory, the p-code, the threaded cells | the [up](#up-from-the-6502-to-the-program-it-is-interpreting) maps |
+| Interpreter's 6502 | the routine running that token, on its listing line and scanned page | [down](#down-from-a-byte-in-rom-to-the-printed-page) |
+| Bytes | the addresses, with their reader, writer and executor planes | [overlays](#overlays-reader-writer-executor) |
+| Bus cycles | each read and write, its cycle, the soft switch it hit | the bus trace |
+| Hardware | the chip and signal that switch drives, on the schematic's figure | [TEACHING.md](TEACHING.md#the-graph): `drives`, `decodes` |
+| Emulator code | the TypeScript that ran it: opcode function, slot, accelerator, compiled block; and the microM8 Go it was translated from | build source maps; [GO-AND-TYPESCRIPT.md](GO-AND-TYPESCRIPT.md) |
+| Shader code | the WGSL lines that turned those bytes into dots and pixels | [STACK.md](STACK.md#video-on-the-gpu) |
+| V8 bytecode | Ignition bytecode for that JavaScript (`--print-bytecode`, Node) | [further down](#further-down-from-the-6502-to-javascript-and-the-hosts-machine-code) |
+| Host machine code | the optimized x86 or ARM instructions (Node) | further down |
+
+**Every adjacent pair has a map both ways**, and maps compose, so any layer reaches any other. A
+selection in one view selects its images in every open view: click a BASIC line and the token
+bytes, the Applesoft routines that ran it, their lines on the scanned page, the cycles, the
+TypeScript and the JavaScript light up together; click a hires pixel and the byte, the code that
+wrote it, the shader line that drew it and the video circuit's figure do the same. Time is the
+extra axis: every map is taken at a cycle, and rewind moves all of them together.
+
+**The gaps are stated, not hidden.** Browsers don't expose native code or the GPU's instruction
+set, so in the browser the chain stops at JavaScript and WGSL. A layer without a map (a program
+with no source, a ROM with no printed listing) shows as unmapped, with the address range it covers.
+
 ### Down: from a byte in ROM to the printed page
 
 ```
