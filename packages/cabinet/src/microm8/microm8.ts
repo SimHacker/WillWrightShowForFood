@@ -17,9 +17,9 @@ export const VIDEX_HEIGHT = 216;
 export const VIDEX_BYTES = VIDEX_WIDTH * VIDEX_HEIGHT * 4;
 
 export interface MicroM8Status {
-	/** microM8's interpreter in the slot; "fp" even while the 6502 runs a disk. */
+	/** microM8's interpreter in the VM slot; "fp" even while the 6502 runs a disk. */
 	dialect: string;
-	/** True while the slot is an Apple running 6502 code rather than microM8's own shell. */
+	/** True while the VM slot is an Apple running 6502 code rather than microM8's own shell. */
 	pureBoot: boolean;
 	pc: number;
 	a: number;

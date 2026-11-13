@@ -24,7 +24,7 @@ cartridges from [CARTRIDGES.md](CARTRIDGES.md). Questions for April and Melody a
   `palette` gives colors as `rgba`, `offset` and `depth`. A machine profile (`apple2e-en`) is the
   base the PAK's settings apply to.
 - **Control programs.** `control.cfg` names Applesoft programs that load into virtual machines two,
-  three and on (microM8 runs up to eight sessions), while the root program boots in slot one. With
+  three and on (microM8 runs up to eight sessions), while the root program boots in VM slot one. With
   microM8's `@functions`, specifically the `@vm.*` family and `@vm.redirect`, a control program reads
   and changes the root machine's memory and settings: watch addresses for values, hold values fixed
   ("for cheating!"), change the presentation as the game goes.

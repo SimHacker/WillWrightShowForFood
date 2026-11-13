@@ -70,7 +70,7 @@ They live next to Don's Forth
 ([Apple2Forth](../../characters/don-hopkins/artifacts/Apple2Forth/README.md)), as source to load
 into it, not as blocks on the disk image until that image is being rebuilt.
 
-`pen-videx.fth` reads the 6845. With the card in slot 3:
+`pen-videx.fth` reads the 6845. With the card in expansion slot 3:
 
 ```
 $C0B0 !   ( register number )

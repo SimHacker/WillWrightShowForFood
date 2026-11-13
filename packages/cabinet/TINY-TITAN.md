@@ -162,7 +162,7 @@ from an Apple ][.
 | machine | door |
 |---|---|
 | PDP-7 | device 24 CALL; the 1972 link on 22–23 |
-| Apple ][ | a slot card: soft switches at `$C0n0` take the block address and start the call, a status switch is the flag |
+| Apple ][ | an expansion card: soft switches at `$C0n0` take the block address and start the call, a status switch is the flag |
 | PDP-10 | a device on the KA10 I/O bus ([PDP10.md](PDP10.md#the-io-bus-is-not-the-pdp-7s)): `DATAO` the block address, `CONO` to start, `CONSO` on the done flag |
 | PDP-11 | a Unibus device: a block-address register and a CSR with GO and READY bits, an interrupt on READY if enabled |
 | microM8, other programs | no card: the hub reaches them over MCP, HTTP or WebSocket ([below](#the-hub-for-every-emulator)) |

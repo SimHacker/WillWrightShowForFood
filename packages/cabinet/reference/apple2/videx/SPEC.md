@@ -5,21 +5,21 @@ in microM8's `octalyzer/data` (patch 0002) and MAME's `src/devices/bus/a2bus/a2v
 (BSD-3, R. Belmont). Line numbers point into `text/`. Where the sources disagree, the ROM wins, and
 the disagreement is written down. The implementation plan is [VIDEX.md](../../../VIDEX.md).
 
-Slot n is 3 throughout: the firmware assumes it, and the manual says the card must be in slot 3.
+Expansion slot n is 3 throughout: the firmware assumes it, and the manual says the card must be in expansion slot 3.
 
 ## Address map
 
 | Range | What | Source |
 |---|---|---|
 | `$C0B0`-`$C0BF` | Device select, 16 bytes. Bit 0: 0 = 6845 address register, 1 = 6845 data register. Bits 2-3: screen RAM page 0-3, latched on **any** access, read or write. Bit 1: 8 or 9 dot cells; ignored (always 9) | manual 3514-3546; MAME `read_c0nx`/`write_c0nx` |
-| `$C300`-`$C3FF` | Slot ROM: the last 256 bytes of the 1K firmware (ROM offset `$300`-`$3FF`). The same bytes also appear at `$CB00`-`$CBFF` | MAME `read_cnxx` returns `m_rom[offset+0x300]`; ROM `$300` = `2C CB FF 70`, the listing's `$CB00: BIT IORTS` (manual 4298) |
+| `$C300`-`$C3FF` | Expansion slot ROM: the last 256 bytes of the 1K firmware (ROM offset `$300`-`$3FF`). The same bytes also appear at `$CB00`-`$CBFF` | MAME `read_cnxx` returns `m_rom[offset+0x300]`; ROM `$300` = `2C CB FF 70`, the listing's `$CB00: BIT IORTS` (manual 4298) |
 | `$C800`-`$CBFF` | Firmware, 1K, ROM offset `$000`-`$3FF` | manual 3610; MAME `read_c800` |
 | `$CC00`-`$CDFF` | Screen RAM window, 512 bytes, read and write: byte `(addr & $1FF) + page*512` of the card's 2K | manual 3610-3690; MAME `read_c800`/`write_c800` |
 | `$CE00`-`$CFFF` | Not used (open bus) | manual 3614 |
 | `$CFFF` | Any access releases every card's `$C800` space (Apple convention). The firmware does `STA $CFFF` at `$CB36` | ROM scan |
 
-The `$C800` space belongs to slot 3 once code runs or reads in `$C300`-`$C3FF` (the 6502 fetching
-the slot ROM is enough). The firmware never writes `$Cnxx` to claim it.
+The `$C800` space belongs to expansion slot 3 once code runs or reads in `$C300`-`$C3FF` (the 6502 fetching
+the expansion slot ROM is enough). The firmware never writes `$Cnxx` to claim it.
 
 Firmware accesses to card space, from a scan of `videx_fw24.rom`:
 `STA $C0B0`/`STA $C0B1` pairs at `$C81C`, `$C8D3`, `$C8E5`, `$C9CF`, `$C9DA` (register writes);
@@ -103,7 +103,7 @@ R10&31 through R11.
   `c5c1f726…`, not MAME's clone dump (`50c3df52…`); plus APL, Epson, French, German, graphics,
   Katakana, Russian, Spanish, std7x9, super/subscript and symbol sets.
 
-## Screen holes the firmware uses (slot 3)
+## Screen holes the firmware uses (expansion slot 3)
 
 Manual Table 1, line 1294, and listing equates 3741-3750:
 

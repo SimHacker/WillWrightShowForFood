@@ -61,7 +61,7 @@ for the record layout in [`@wwsff/bridge`](../bridge/README.md), and
 The three scenario disks here still hold the characters of whoever last played them: twenty on
 Proving Grounds (JIB, a level 11 human fighter with a Dragon Slayer and the Blue Ribbon; DIRK
 THE DARING; SAM THE SHAM, level 50), eighteen on Knight of Diamonds (HELLFIRE, an elf bishop at
-level 249), and twenty slots named UNSET on Legacy of Llylgamyn.
+level 249), and twenty roster slots named UNSET on Legacy of Llylgamyn.
 
 A character written back into `SCENARIO.DATA` is loaded by the real game, so the same
 character can move between Wizardry and another world and back: the kind of crossing Soul City's
@@ -133,10 +133,10 @@ them, and `scripts/a2disk.mjs` lists and extracts their files.
 
 ## Don's Forth
 
-Don Hopkins's 6502 fig-FORTH terminal for ProDOS drives a Videx Videoterm in slot 3. The wasm
+Don Hopkins's 6502 fig-FORTH terminal for ProDOS drives a Videx Videoterm in expansion slot 3. The wasm
 build has the card, on the `apple2-plus-videx` profile ([VIDEX.md](VIDEX.md)): boot `forth.po`
 and block 4 draws its banner on the card, then runs `term`, the H19 terminal, on the serial card
-in slot 4 (patch `0006-serial-2651-card`): a 2651 at `$CE00` in the slot's `$C800` space, which
+in expansion slot 4 (patch `0006-serial-2651-card`): a 2651 at `$CE00` in the expansion slot's `$C800` space, which
 the page reaches with `serialSend` and `serialTake`. Left and right Option are the keyboard's two
 buttons, Meta and the terminal's command shift; right Option-F enters Forth. Both disks,
 `forth/forth.po` and `forth/forth-ok.po` (stops at the Forth prompt), are on the page's disk menu,

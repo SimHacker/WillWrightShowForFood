@@ -25,7 +25,7 @@ Read first:
 | microM8 working copy (upstream's repo; never push there) | `~/GroundUp/git/microm8`, branch `wasm-scope` |
 | Go module root (run `go` commands here) | `~/GroundUp/git/microm8/GoPath/src/paleotronic.com` |
 | Apple I/O chip, soft switches, `$Cxxx` mapping | `core/hardware/apple2/apple2io.go`, `memcxxx.go` |
-| Slot card interface, `IOCard`, `CardFactory` | `core/hardware/apple2/card.go` |
+| Expansion card interface, `IOCard`, `CardFactory` | `core/hardware/apple2/card.go` |
 | A small card to copy the shape of | `core/hardware/apple2/slot3card.go`, `parallel.go` |
 | Memory blocks and listeners | `core/memory/mmu.go` |
 | Embedded files (go-bindata, generated) | `octalyzer/assets/assets.go` |
@@ -41,24 +41,24 @@ Read first:
 
 Found by reading the code; each item below is handled by a step.
 
-1. **Card I/O.** `$C0B0`-`$C0BF` reach the slot 3 card as `HandleIO(offset&0xf, &value, IOT_READ|IOT_WRITE)`
+1. **Card I/O.** `$C0B0`-`$C0BF` reach the expansion slot 3 card as `HandleIO(offset&0xf, &value, IOT_READ|IOT_WRITE)`
    (`memcxxx.go`, the `default:` cases of `RelativeRead`/`RelativeWrite`). That is all the 6845
    ports and the page select need.
 2. **Expansion ROM.** A card with a `C8ROM` gets a read-only `MemoryBlockROM` named
    `slotexp<n>.rom` over `$C800`-`$CFFF` (`IOCard.LoadExpROM`). `AddressRead_Cxxx` (`memcxxx.go`
-   ~985) maps it in with `PageSetREAD` when the slot's `$Cnxx` page is read, and unmaps on a read
+   ~985) maps it in with `PageSetREAD` when the expansion slot's `$Cnxx` page is read, and unmaps on a read
    of `$CFFF`. Only reads: nothing maps the `$C800` space for writes, so `STA $CC00,X` goes nowhere.
 3. **Firmware blocks won't do for the RAM window.** `NewMemoryBlockFirmware` routes reads and
    writes to a card, but the 6502 core (`core6502.go` ~1295) calls `FirmwareExec` *instead of*
    executing any opcode fetched from such a block. The Videx ROM runs from `$C800`, so the whole
    `$C800` space can't be one. The RAM window goes through listeners instead (step 5).
 4. **`$CFFF` on write.** The `$Cxxx` listener is registered for reads only (`apple2io.go` ~472).
-   The firmware releases the space with `STA $CFFF`. Today that does nothing; harmless while slot 3
+   The firmware releases the space with `STA $CFFF`. Today that does nothing; harmless while expansion slot 3
    is the only card with a `$C800` ROM, wrong in general.
-5. **Slot 3 on a II+.** `SW_SLOTC3ROM()` is `!mr.DisableSW80 && …` (`memcxxx.go` 303). The II and
-   II+ profiles set the option `sw80`, so `DisableSW80` is true and slot 3's ROM can never be
+5. **Expansion slot 3 on a II+.** `SW_SLOTC3ROM()` is `!mr.DisableSW80 && …` (`memcxxx.go` 303). The II and
+   II+ profiles set the option `sw80`, so `DisableSW80` is true and expansion slot 3's ROM can never be
    seen: `$C300` reads the internal ROM path (none on a II+), and the `$C800` select at
-   `memcxxx.go` 1016 never fires for slot 3. `IOCard.LoadROM` also starts `slot3.rom` in state
+   `memcxxx.go` 1016 never fires for expansion slot 3. `IOCard.LoadROM` also starts `slot3.rom` in state
    `off`, and the older `ReconfigureMemoryMap` (`apple2io.go` ~1795) clears its read state when
    `SoftSwitch_SLOTC3ROM` is false.
 6. **Assets can't be regenerated.** `assetbuild.sh` runs go-bindata over `fonts images profile
@@ -80,8 +80,8 @@ does not add an address: it latches R16/R17, which the 6502 reads through the `$
 | Range | Today | Change |
 |---|---|---|
 | `$C000`-`$C0FF` | `Apple2IOChip.RelativeRead` and `RelativeWrite`, both live. `$C080` up calls `card.HandleIO` on read and on write (`memcxxx.go`, the `default:` cases) | None. `$C0B0`/`$C0B1` are the 6845, and any access to `$C0B0`-`$C0BF` selects the RAM page |
-| `$C100`-`$C7FF` | Slot ROM blocks, read-only. Slot 3 starts in state `off` and `SW_SLOTC3ROM` hides it on a II+ (obstacle 5) | Step 4 makes `slot3.rom` readable. It stays ROM: writes there do nothing |
-| `$C800`-`$CBFF` | Expansion ROM, `PageSetREAD` only, and only while slot 3 owns `$C800` | None. The firmware executes from here, so this range must stay ordinary ROM. A firmware memory block would steal the opcode (`core6502.go` ~1295 calls `FirmwareExec` instead of the instruction) |
+| `$C100`-`$C7FF` | Expansion slot ROM blocks, read-only. Expansion slot 3 starts in state `off` and `SW_SLOTC3ROM` hides it on a II+ (obstacle 5) | Step 4 makes `slot3.rom` readable. It stays ROM: writes there do nothing |
+| `$C800`-`$CBFF` | Expansion ROM, `PageSetREAD` only, and only while expansion slot 3 owns `$C800` | None. The firmware executes from here, so this range must stay ordinary ROM. A firmware memory block would steal the opcode (`core6502.go` ~1295 calls `FirmwareExec` instead of the instruction) |
 | `$CC00`-`$CDFF` | Same expansion ROM mapping, read-only, so a read returns firmware bytes (or 0) and a write vanishes | Step 5. Reads: `AddressRead_Cxxx` calls `RedirectedRead` and returns the card's RAM. Writes: a new listener, `"0xCXXX write"`, `$C800`-`$CFFF`, `MA_WRITE`, calls `RedirectedWrite`. Both go through the page the last `$C0Bx` access selected |
 | `$CE00`-`$CFEF` | Open | Leave open |
 | `$CFFF` | A read releases `$C800`. A write does not, because the `$Cxxx` listener is `MA_READ` only (`apple2io.go` ~472) | The write listener's `$CFFF` case calls the same `releaseC8()` as the read |
@@ -93,7 +93,7 @@ PEEK, a POKE, and a `readMemory`/`writeMemory` of `$C0B0` or `$CC00` all hit the
 consequences:
 
 - `readMemory($CC00)` sees one 512-byte page, whichever `$C0B0`/`$C0B4`/`$C0B8`/`$C0BC` selected
-  last, and only while slot 3 owns `$C800`. The whole 2K is `videxRAM` in step 7, not a loop of
+  last, and only while expansion slot 3 owns `$C800`. The whole 2K is `videxRAM` in step 7, not a loop of
   `readMemory`.
 - Card RAM is not in the 64K array. `Do` returns the listener's value and does not store one.
   Don't also map a block over `$CC00`.
@@ -131,7 +131,7 @@ Do the same for every file in a second embed, `//go:embed profile-extra/*.yaml` 
 profile to `_bintree.Children["profile"].Children[name]` so the desktop's machine menu
 (`octalyzer/ui/machines.go`, `AssetDir("profile")`) lists it.
 
-The profile `apple2-plus-videx.yaml` is the II+ profile with slot 3 added. Get the II+ profile out
+The profile `apple2-plus-videx.yaml` is the II+ profile with expansion slot 3 added. Get the II+ profile out
 of `assets.go` (it exists nowhere else):
 
 ```
@@ -145,7 +145,7 @@ EOF
 ```
 
 Then edit three things in it: `name: "Apple ][+ with Videx Videoterm"`, `id  : "apple2-plus-videx"`,
-and under `slots:` after slot 2:
+and under `slots:` after expansion slot 2:
 
 ```yaml
         3:
@@ -241,10 +241,10 @@ scanning `mr.cards` with a type assertion.
 Check: the `apple2-plus-videx` profile boots to the Applesoft `]` prompt (the step 2 test with the
 new profile name).
 
-### 4. Slot 3's ROM visible on a II and II+
+### 4. Expansion slot 3's ROM visible on a II and II+
 
-Change `SW_SLOTC3ROM()` so a machine without the //e's internal 80-column firmware treats slot 3
-like any slot:
+Change `SW_SLOTC3ROM()` so a machine without the //e's internal 80-column firmware treats expansion slot 3
+like any expansion slot:
 
 ```go
 func (mr *Apple2IOChip) SW_SLOTC3ROM() bool {
@@ -252,8 +252,8 @@ func (mr *Apple2IOChip) SW_SLOTC3ROM() bool {
 }
 ```
 
-The //e profiles don't set `sw80`, so nothing changes for them. On the II+ with slot 3 empty,
-`$C3xx` now reads like any other empty slot (floating bus, `memcxxx.go` 1100) instead of setting the
+The //e profiles don't set `sw80`, so nothing changes for them. On the II+ with expansion slot 3 empty,
+`$C3xx` now reads like any other empty expansion slot (floating bus, `memcxxx.go` 1100) instead of setting the
 internal-ROM flag.
 
 Then test whether `slot3.rom` is readable. If `$C300` still doesn't read `$2C`, the block is still
@@ -264,7 +264,7 @@ in state `off`: give `IOCardVidex` its own `LoadROM` that calls `IOCard.LoadROM`
 Check (Applesoft, `apple2-plus-videx` profile):
 
 - `PRINT PEEK(49920)` ($C300) prints `44` ($2C, ROM offset `$300`).
-- `X=PEEK(49920):PRINT PEEK(51200)` ($C800 after selecting slot 3) prints `173` ($AD, ROM offset 0).
+- `X=PEEK(49920):PRINT PEEK(51200)` ($C800 after selecting expansion slot 3) prints `173` ($AD, ROM offset 0).
 - `X=PEEK(53247):PRINT PEEK(51200)` ($CFFF releases, then $C800) prints `0` (`c8RomEmpty`).
 - With the plain `apple2-plus` profile, `PR#3` still hangs or does nothing as before (no card),
   and the existing //e tests still pass.
@@ -316,10 +316,10 @@ restore the Videx screen; step 9 covers saving it.
 
 `WriteInterpreterMemory` calls `Do` for `$C800`-`$CFFF` even though that range has no write page
 (`memorymodel.go`); that is what runs the listener. `primeC8` runs on a write as well as a read.
-Forth's driver selects the slot with `LDA $C3xx` and then `STA $CC00,Y`, and that write is the
+Forth's driver selects the expansion slot with `LDA $C3xx` and then `STA $CC00,Y`, and that write is the
 strobe that turns the screen RAM on.
 
-Check (Applesoft): `X=PEEK(49920):X=PEEK(49336):POKE 52224,65:PRINT PEEK(52224)` (select slot 3,
+Check (Applesoft): `X=PEEK(49920):X=PEEK(49336):POKE 52224,65:PRINT PEEK(52224)` (select expansion slot 3,
 page 2 via `$C0B8`, write `$CC00`) prints `65`; `X=PEEK(49328):PRINT PEEK(52224)` (page 0) prints
 something else, and `X=PEEK(49336):PRINT PEEK(52224)` prints `65` again.
 
@@ -406,7 +406,7 @@ starting the machine with `profile: "apple2-plus-videx"`:
 7. **Don's Forth**: insert `characters/don-hopkins/artifacts/Apple2Forth/forth.dsk` as
    `forth.po` (it's ProDOS block order, volume `/H19`), reboot, and wait up to 60 s until
    `videxText()` shows the banner block 4 prints. The line that stays on the screen is
-   `Duh, huh, it worked again!`. `term` then runs on the serial card in slot 4, patch
+   `Duh, huh, it worked again!`. `term` then runs on the serial card in expansion slot 4, patch
    `0006-serial-2651-card`.
 
 Run `npm test` in `packages/cabinet`: the new file passes and the existing 221 tests still pass.
@@ -467,9 +467,9 @@ Don't commit or push unless Don asks.
 
 ## Open questions
 
-- **Which Apple did the Forth run on?** A II+ with a Videx in slot 3 is the usual pairing and what
+- **Which Apple did the Forth run on?** A II+ with a Videx in expansion slot 3 is the usual pairing and what
   this plan builds. If it was a //e, the card needs the //e's `SLOTC3ROM` switch on (the //e's
-  internal 80-column firmware owns slot 3 by default), and the plan's step 4 change doesn't apply.
+  internal 80-column firmware owns expansion slot 3 by default), and the plan's step 4 change doesn't apply.
 - **50 or 60 Hz firmware?** Our ROM is the 50 Hz build. MAME's 60 Hz v2.4 (`6.ic6.bin`, SHA-1
   `19f69011ed7d2551c39d5c1cac1f5a2defc8f8fb`) is a 2K dump from a clone card and isn't in patch
   0002. Nothing here depends on the timing registers.

@@ -27,7 +27,7 @@ the page.
 
 Requirements:
 
-0. **Teaching.** The video, the Disk II, the speaker, cassette, paddles, buttons and slots, linked
+0. **Teaching.** The video, the Disk II, the speaker, cassette, paddles, buttons and expansion slots, linked
    from the schematics through the ROM listings to the running program, with the emulator's own code
    and data linked to the hardware they model ([TEACHING.md](TEACHING.md)).
 1. **Live coding.** Any part of the machine can be read, replaced and extended while it runs, from
@@ -47,12 +47,12 @@ Requirements:
 **Re-cut along the cabinet's seams, not microM8's.** microM8's structure grew around one desktop
 program: `Interpretable` is one Go interface of about 355 methods, the `settings` package holds 102
 global arrays indexed by VM slot (158 files reach into it), and machine state lives at fixed
-addresses in a 1 MB space per slot. Translating that line by line would carry those problems into
+addresses in a 1 MB space per VM slot. Translating that line by line would carry those problems into
 TypeScript. Instead the Apple is cut into the cabinet's parts: a processor, a memory map, units,
 ports, codecs and services ([ARCHITECTURE-AND-LINEAGE.md](../ARCHITECTURE-AND-LINEAGE.md#cpus-are-devices)).
 
 **Guest memory is exactly as wide as the guest's word.** The Apple's banks are `Uint8Array`s, 64K
-main and 64K aux. microM8 stores every byte in a `uint64` (8 MB per slot) so it can keep color
+main and 64K aux. microM8 stores every byte in a `uint64` (8 MB per VM slot) so it can keep color
 attributes in the upper bits of text-page cells; every read pays a mask, and every write to
 `$400–$7FF` reads the cell first to keep its upper bits (`core6502.go`, `StoreByteAddr`). Here those
 attributes go in a plane. Byte banks make mapping, sharing and DMA a `subarray` or a `set()`, and a
@@ -76,6 +76,10 @@ is what the cabinet's sessions rely on already ([`src/session.ts`](../src/sessio
 **Every hook says who installed it.** A replaced opcode, a memory handler, a watch or a trap carries
 the name of the plugin or cartridge that put it there, and the debugger lists them.
 
+**"Slot" means a Korz slot.** The Apple's card connectors are always "expansion slots", in prose
+and in code; microM8's interpreter instances are "VM slots"
+([KORZ-DISPATCH.md](../KORZ-DISPATCH.md#the-model)).
+
 ## The parts
 
 ```
@@ -83,7 +87,7 @@ machine "apple2e"
   processor   65C02                 registers, opcode table, cycle count
   memory map  page tables           256 read pages, 256 write pages, watch flags
   banks       Uint8Array            main 64K, aux 64K, ROM, card ROMs, language card
-  units       iou, video, speaker, keyboard, game port, slots 1-7 (cards)
+  units       iou, video, speaker, keyboard, game port, expansion slots 1-7 (cards)
   planes      heat, last access, types, source, text attributes (only those switched on)
   ports       memory ports and request ports to other machines and services
   log         cycle-stamped inputs; snapshots
@@ -267,7 +271,7 @@ slot({ addr: { mask: 0xfff0, match: 0xc050 } },
   (c) => { latch[(c.addr >> 1) & 7] = c.addr & 1; return floatingBus(c); }, "motherboard");
 
 slot({ addr: { mask: 0xfff0, match: 0xc080 + 16 * 6 } },
-  (c) => disk2.latch(c, (c.addr >> 1) & 7, c.addr & 1), "disk2 in slot 6");
+  (c) => disk2.latch(c, (c.addr >> 1) & 7, c.addr & 1), "disk2 in expansion slot 6");
 
 slot({ addr: { mask: 0xff00, match: 0xc000 }, who: "debugger" },
   (c) => ioPeek(c.addr), "debugger: read I/O without side effects");
@@ -293,7 +297,7 @@ Helpers, and what a handler gets:
 ```ts
 const bits = (mask: number, match: number): Bits => ({ mask, match });
 const span = (start: number, length: number): Span => ({ start, length });
-const dev = (slot: number) => bits(0xfff0, 0xc080 + 16 * slot);     // $C0n0-$C0nF, n = slot + 8
+const dev = (n: number) => bits(0xfff0, 0xc080 + 16 * n);           // $C0n0-$C0nF for expansion slot n
 const cfg = (on: Record<string, number>): Bits => configBits(on);    // named configuration bits
 const map = (access: "read" | "write", addr: Span, config: Bits, bank: string, base: number) =>
   ({ guard: { access, addr, config }, bank, base });
@@ -302,7 +306,8 @@ type Access = { access: "read" | "write" | "fetch"; addr: number; value: number;
                 floatingBus(): number };
 ```
 
-A card is a prototype: `state` is its template, `slots` its entry points, `config` the state bits that
+A card is a prototype: `state` is its template, `slots` its entry points (Korz slots; `n` is the
+expansion slot it is plugged into), `config` the state bits that
 change memory mapping. After a slot runs, the machine recomputes the configuration word from every
 `config`, and swaps page tables if it changed.
 
@@ -342,7 +347,7 @@ per bus cycle the CPU makes there.
 The //e's memory switches are the same addressable-latch pattern as `$C050`: `A1–A3` pick one of
 eight, `A0` is the value.
 
-**Slot ROM and the `$C800` space.** An access to `$Cn00–$CnFF` gives slot n's card the shared
+**Expansion slot ROM and the `$C800` space.** An access to `$Cn00–$CnFF` gives expansion slot n's card the shared
 `$C800–$CFFF` space; an access to `$CFFF` takes it away. Ownership is a configuration value, so each
 card's `$C800` mappings are guarded on it. On real boards each card keeps its own flip-flop; one
 `c8owner` value is a simplification, and the teaching graph marks it `abstracts`.
@@ -384,8 +389,8 @@ const lcMap = (base: number, extra: Record<string, number> = {}) => [
 export const languageCard = {
   name: "language-card",
   state: (): Lc => ({ ram: new Uint8Array(0x4000), read: false, write: false, prewrite: false, bank2: true }),
-  slots: (s: Lc, slot: number) => [
-    { guard: { addr: dev(slot) }, run: (c: Access) => lcSwitch(s, c), by: "language card switches" },
+  slots: (s: Lc, n: number) => [
+    { guard: { addr: dev(n) }, run: (c: Access) => lcSwitch(s, c), by: "language card switches" },
     ...lcMap(0),
   ],
   config: (s: Lc) => ({ lcRead: +s.read, lcWrite: +s.write, lcBank2: +s.bank2 }),
@@ -411,9 +416,9 @@ export const saturn128 = {
   ...languageCard,
   name: "saturn-128k",
   state: (): Saturn => ({ ...languageCard.state(), ram: new Uint8Array(8 * 0x4000), block: 0 }),
-  slots: (s: Saturn, slot: number) => [
-    { guard: { addr: dev(slot) }, run: (c: Access) => lcSwitch(s, c), by: "language card switches" },
-    { guard: { addr: bits(0xfff4, 0xc084 + 16 * slot) },
+  slots: (s: Saturn, n: number) => [
+    { guard: { addr: dev(n) }, run: (c: Access) => lcSwitch(s, c), by: "language card switches" },
+    { guard: { addr: bits(0xfff4, 0xc084 + 16 * n) },
       run: (c: Access) => { s.block = ((c.addr >> 1) & 4) | (c.addr & 3); return c.floatingBus(); },
       by: "saturn bank select" },
     ...[0, 1, 2, 3, 4, 5, 6, 7].flatMap((b) => lcMap(b * 0x4000, { lcBlock: b })),
@@ -437,8 +442,8 @@ type Videx = { reg: Uint8Array; sel: number; page: number; ram: Uint8Array };
 export const videx = {
   name: "videx-videoterm",
   state: (): Videx => ({ reg: new Uint8Array(18), sel: 0, page: 0, ram: new Uint8Array(2048) }),
-  slots: (s: Videx, slot: number) => [
-    { guard: { addr: dev(slot) }, by: "videx 6845",
+  slots: (s: Videx, n: number) => [
+    { guard: { addr: dev(n) }, by: "videx 6845",
       run: (c: Access) => {
         s.page = (c.addr >> 2) & 3;
         if ((c.addr & 1) === 0) { if (c.access === "write") s.sel = c.value & 0x1f; return c.floatingBus(); }
@@ -446,7 +451,7 @@ export const videx = {
         return crtcRead(s);                       // R14-R17 readable: cursor and light pen
       } },
     ...[0, 1, 2, 3].flatMap((p) => (["read", "write"] as const).map((rw) =>
-      map(rw, span(0xcc00, 0x200), cfg({ c8owner: slot, videxPage: p }), "videx.ram", p * 0x200))),
+      map(rw, span(0xcc00, 0x200), cfg({ c8owner: n, videxPage: p }), "videx.ram", p * 0x200))),
   ],
   config: (s: Videx) => ({ videxPage: s.page }),
 };
@@ -468,14 +473,14 @@ follows aux text memory whichever switches map it. The profiler's slot takes onl
 pages off the fast path for fetches. The instruction trace is not a slot: it is a few typed-array
 writes in the processor's step loop and stays on ([TRANSPARENCY.md](TRANSPARENCY.md#traces-and-profiles)).
 
-**Views of the sea.** The slots can be listed along any dimension: everything slot 6's card
+**Views of the sea.** The slots can be listed along any dimension: everything expansion slot 6's card
 installed, everything that touches `$C0xx`, everything a plugin added, everything that applies to the
 //e and not the ][+. That is Korz's subjectivity, and it is what the debugger's plugin list and the
 teaching graph's `drives` and `decodes` links read ([TEACHING.md](TEACHING.md)).
 
 **Self practices, in TypeScript.**
 
-- **Prototypes, not classes.** A card definition is a prototype: plugging it into a slot copies its
+- **Prototypes, not classes.** A card definition is a prototype: plugging it into an expansion slot copies its
   state template and shares its behavior. No class hierarchy of cards.
 - **Stable shapes.** State objects are created with every field present, in a fixed order, numbers
   staying numbers, so V8's hidden classes (Self's maps) stay monomorphic and the JIT keeps its fast
@@ -653,7 +658,7 @@ A service's answer enters the machine as a cycle-stamped input, so replay stays 
 ### Profiles and cartridges
 
 microM8's machine profiles are YAML (`octalyzer/assets/profile-extra/apple2-plus-videx.yaml`):
-RAM areas, ROM regions, components, slots and their ROMs, layers. They become the `machine:` and
+RAM areas, ROM regions, components, expansion slots and their ROMs, layers. They become the `machine:` and
 `devices:` parts of a cartridge ([CARTRIDGES.md](../CARTRIDGES.md)), read in microM8's own terms so
 a profile file can be loaded as it is.
 
@@ -670,7 +675,7 @@ with a name for each entry and the name of whoever installed it:
 | Watches | read, write or execute hooks on a range | `MemoryListener`, `@counter`, `@mem.lock` |
 | Planes | per-address data beside memory | high bits of `uint64` cells; heat map |
 | Soft switches | a switch, its state, the pages it rewires | `apple2io.go`, `memcxxx.go` |
-| Cards | a slot device | `SlotCard` |
+| Cards | an expansion slot device | `SlotCard` |
 | Units | anything that advances with time | `Countable.Increment` |
 | Renderers | a view of the banks and the mode log | `octalyzer/video`, `core/hires` |
 | Audio sources | samples into the mixer | speaker, Mockingboard, Restalgia |
@@ -686,7 +691,7 @@ Because state is data, a module can be reloaded while the machine runs: Vite's h
 replacement swaps the module, the machine keeps its state, and the next instruction runs the new
 code. A cartridge's LIVE CODING panel edits a card, a trap or a renderer the same way it edits Forth
 ([DESIGN.md](../DESIGN.md#cartridges-and-live-coding)). From the console, the running machine is
-an object: `apple.pages.read[0xc0]`, `apple.cpu.ops[0xea]`, `apple.slots[6].state`.
+an object: `apple.pages.read[0xc0]`, `apple.cpu.ops[0xea]`, `apple.expansionSlots[6].state`.
 
 ## Accelerators: TypeScript in place of a 6502 routine
 
@@ -710,7 +715,7 @@ type Exit = {
   inside the routine, with the registers and memory as the 6502 would have them there. A loop head
   is the usual place. The 6502 code finishes the cases the accelerator doesn't handle.
 - **Guarded twice.** The slot's guard names the machine, the variant and the mapping (`romMapped`,
-  the language card bank, the card in the slot). At run time the accelerator checks that the
+  the language card bank, the card in the expansion slot). At run time the accelerator checks that the
   routine's bytes still hash to what it was written for. A patched routine runs as 6502 code. In
   RAM, a write watch on the routine's pages clears the hash check's cache.
 - **Watches win.** If a watched address or a breakpoint falls in `reads`, `writes` or `covered`,

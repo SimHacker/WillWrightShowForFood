@@ -94,7 +94,7 @@ The stream is plain telnet-style bytes first; SUPDUP later, for ITS's display te
 ## The first call
 
 1. The browser Apple boots the H19 disk on the `apple2-plus-videx` profile, with the 2651 serial
-   card in slot 4. The card's other end, `microM8.serialSend` and `serialTake`, connects to a
+   card in expansion slot 4. The card's other end, `microM8.serialSend` and `serialTake`, connects to a
    tiny-mabell modem.
 2. Before ITS exists anywhere in reach: the Apple dials a number that answers with the PDP-7
    UNIX in the same page, and logs in as `dmr`. One page, two machines, a phone line between

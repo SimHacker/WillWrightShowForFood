@@ -31,6 +31,11 @@ itself, and on what Self's and Julia's compilers suggest for it, are in
 No language, parser or virtual machine: slots are TypeScript objects, handlers are TypeScript
 functions, and the generated code is plain JavaScript.
 
+**Words.** "Slot" alone always means a Korz slot. The Apple's eight card connectors are **expansion
+slots**, always written that way, in prose and in code (`expansionSlots[6]`, a parameter `n`, never
+`slot`). microM8's interpreter instances are **VM slots**. microM8's own identifiers (`SlotCard`,
+`SW_SLOTC3ROM`) keep their names.
+
 ## The model
 
 - A **dimension** is a named coordinate with a finite domain: `addr` (0–`$FFFF`), `access` (read,
@@ -105,7 +110,7 @@ are ambiguous on their intersection I = A ∩ B unless more specific slots cover
 check: for each slot already in the sea that overlaps the new one, compute I; if neither guard
 contains the other, subtract from I every slot ≤ both; anything left is a set of contexts where
 dispatch would fail. The error names both slots' `by` and prints the leftover set. Two cards
-configured into slot 3 give "videx 6845 and super serial registers: equal guards on `$C0B0–$C0BF`";
+configured into expansion slot 3 give "videx 6845 and super serial registers: equal guards on `$C0B0–$C0BF`";
 a plugin's handler that half-overlaps a card's gives the half. A whole card's slots install as one
 transaction, so a card can bring the slot that resolves its own overlaps.
 
@@ -176,7 +181,7 @@ matched, and if it lost, why ("matches, less specific on `addr`"; "doesn't match
 then the chain as it ran. It is what the debugger shows for "who handles `$C08B` right now".
 
 **Views** are the same set machinery with a guard as the query: everything that intersects
-`{ addr: page $C0 }`; everything slot 6's card installed (`by` prefix); everything that applies to
+`{ addr: page $C0 }`; everything expansion slot 6's card installed (`by` prefix); everything that applies to
 the //e and not the ][+ (intersects `machine: apple2e`, disjoint from `machine: apple2plus`). The
 plugin list, the teaching graph's `drives` and `decodes` links and the memory map panel read views.
 

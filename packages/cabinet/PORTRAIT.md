@@ -329,7 +329,7 @@ and its panel bindings live in the `scene`.
 
 ### CAM-6: the cellular automaton machine
 
-The real board was a bare card in a PC slot. Low and wide, in black anodized aluminum, like late-80s lab gear. A square raster
+The real board was a bare card in a PC expansion slot. Low and wide, in black anodized aluminum, like late-80s lab gear. A square raster
 monitor on top shows the planes. The front panel is the machine's structure:
 
 - **Four plane lamps**, 0–3, each a 16×16 window onto its plane, live.

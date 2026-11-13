@@ -52,7 +52,7 @@ this free.
   ][+ and //e, mostly TypeScript now, React UI. Its 6502 core and its Apple ][ color shader are
   git submodules (`cpu6502`, `apple2shader`), so the CPU is already a separate package.
 - **[Apple2TS](https://github.com/ct6502/apple2ts)** (Chris Torrence and contributors): //e
-  in TypeScript, Vite, slot cards (Mockingboard, mouse card, Z-80 SoftCard, Disk II, SmartPort),
+  in TypeScript, Vite, expansion cards (Mockingboard, mouse card, Z-80 SoftCard, Disk II, SmartPort),
   a debugger with a memory heat map, save states, Internet Archive and DemoZoo loaders, and an
   AI agent that reads registers, the screen and memory and sets breakpoints. Closest in spirit
   to the cabinet.

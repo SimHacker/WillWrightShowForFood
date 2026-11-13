@@ -1,4 +1,4 @@
-// A II+ with a Videx Videoterm in slot 3. One machine per process, so this file starts its
+// A II+ with a Videx Videoterm in expansion slot 3. One machine per process, so this file starts its
 // own: node --test runs each file separately. The card's picture is 720x216, the same kind
 // of drawing as the //e's 80-column text: the character ROM, one dot per pixel.
 
@@ -41,7 +41,7 @@ describe("videx videoterm", { skip: !haveMicroM8() && "microm8/dist not built" }
 		await m?.stop();
 	});
 
-	test("the slot ROM, the firmware and the screen RAM answer", async () => {
+	test("the expansion slot ROM, the firmware and the screen RAM answer", async () => {
 		m.type("PRINT PEEK(64435)\n");
 		await until("II+ rom", () => shown("234"));
 		m.type("PRINT PEEK(49920)\n");
@@ -99,7 +99,7 @@ describe("videx videoterm", { skip: !haveMicroM8() && "microm8/dist not built" }
 	test("Don's Forth prints its banner on the card", async () => {
 		m.speed(8);
 		m.boot("forth.po", new Uint8Array(readFileSync(FORTH)));
-		// Block 4 prints this line, then runs `term`, the terminal on the slot 4 serial card.
+		// Block 4 prints this line, then runs `term`, the terminal on the expansion slot 4 serial card.
 		await until("banner", () => m.videxText().some((r) => r.includes("Duh, huh, it worked again!")), 90);
 	});
 

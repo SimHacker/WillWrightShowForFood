@@ -43,7 +43,7 @@ faster than either browser build will be.
 - **Go** is explicit, uniformly formatted, statically checked, and readable by anyone; it is also
   verbose, and microM8's structure has grown monolithic around it: `Interpretable` has about 355
   methods, `settings` holds 102 global arrays indexed by VM slot, and machine state lives at fixed
-  addresses in a 1 MB word space per slot.
+  addresses in a 1 MB word space per VM slot.
 - **TypeScript**'s union types, generics, closures and object literals make declarations short:
   typed memory regions, codecs, opcode tables, soft-switch tables and cartridge YAML fit naturally.
   The types vanish at run time and don't catch everything, so readability depends on discipline.

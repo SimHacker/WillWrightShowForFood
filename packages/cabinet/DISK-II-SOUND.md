@@ -15,7 +15,7 @@ like "shew" because of Woz's code, and anything that steps the head another way 
 Woz took the Shugart drive's own stepping electronics out. On the Shugart, a seek stepped the head
 one track at a time and waited a fixed fifteen milliseconds after each step, so a long seek was a
 steady buzz. On the Disk II the Apple's software drives the four stepper-motor phases directly,
-through soft switches in the controller's slot (`$C0E0`–`$C0E7` for slot 6, each phase on and off),
+through soft switches in the controller's expansion slot (`$C0E0`–`$C0E7` for expansion slot 6, each phase on and off),
 and Woz timed them like pushing a heavy wagon:
 
 > why don't I speed up the head that's moving from track one to track two to track three… speed it

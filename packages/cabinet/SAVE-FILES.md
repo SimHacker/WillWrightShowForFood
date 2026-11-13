@@ -51,7 +51,7 @@ lode-runner.save/
     speaker.yml          level
     gameport.yml         paddle timers, buttons, annunciators
     cassette.yml         level, tape position
-  slots/
+  expansion-slots/
     3-videx/
       state.yml          6845 registers R0-R17 (R16, R17 are the light pen), selected register, RAM page
       ram.bin            2K screen RAM
@@ -88,14 +88,14 @@ export const videx = defineCard({
 });
 ```
 
-Plugging a card into a slot creates its part from those defaults; removing it removes the part.
+Plugging a card into an expansion slot creates its part from those defaults; removing it removes the part.
 A save that contains a card the current build doesn't know is still loaded: the card's part is
 kept as it is, shown as an unknown card, and written back unchanged, so a save never loses state
 because a plugin is missing. A part at an older version is upgraded by the card's migrations;
 a part at a newer version than the plugin understands is kept and the card stays out of the
 machine until the plugin is updated.
 
-microM8 does the same per card with `GetYAML` and `SetYAML` on every slot card; the Videx state
+microM8 does the same per card with `GetYAML` and `SetYAML` on every expansion card; the Videx state
 above is the one our patch already saves (`core/hardware/apple2/videx.go`). Its freeze file
 (`freeze/freeze.go`: registers, compressed memory, memory and video modes, disks by name, blobs)
 is read by an importer, so a microM8 freeze becomes a save.
@@ -108,7 +108,7 @@ it. None of it needs the emulator, except running.
 | Level | What it works with | Examples |
 |---|---|---|
 | Container | files, hashes, the manifest | list parts; check hashes; pack and unpack the zip; compare two saves |
-| Parts | a unit's state by path | read `cpu.pc`; set `slots.3.reg.12`; list a card's fields with their meanings from its schema |
+| Parts | a unit's state by path | read `cpu.pc`; set `expansion-slots.3.reg.12`; list a card's fields with their meanings from its schema |
 | Memory | addresses as the CPU sees them | read `$D000` with the language card banking the soft switches select; or a bank by offset |
 | Typed views | memory read as what it is | the text page as 24 lines; the hires page as an image; page zero as named variables; the Applesoft program as its `LIST`; the Videx screen as 80 columns |
 | Media | what is in the drives | catalog the disk in drive 1; read a file from it; the bit stream under the head |
@@ -122,11 +122,11 @@ From the command line (`node scripts/save.mjs`, short form `save` here):
 ```
 save info  lode-runner.save                    manifest, parts, sizes, hashes
 save get   lode-runner.save cpu.pc
-save set   lode-runner.save slots.3.reg.12 0
+save set   lode-runner.save expansion-slots.3.reg.12 0
 save peek  lode-runner.save '$400' 40 --as text
 save poke  lode-runner.save '$3F2' 00 03
 save view  lode-runner.save text | hires --png out.png | zero-page | basic | videx
-save cat   lode-runner.save 6:1                catalog of slot 6, drive 1
+save cat   lode-runner.save 6:1                catalog of expansion slot 6, drive 1
 save card  lode-runner.save add 3 videx-videoterm
 save disk  lode-runner.save insert 6:1 game.woz
 save diff  a.save b.save                       parts, fields, memory pages

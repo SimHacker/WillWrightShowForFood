@@ -131,7 +131,7 @@ live values on nodes, the logic analyser view; then the video and speaker tours
 **Done when** every unit and every soft switch links to a figure or says why it can't; from any
 figure region the graph reaches the code that models it, the addresses that touch it and the ROM
 lines that use them; a student can run each tour's experiment start to finish. The Disk II, game
-I/O and slot tours follow once their sources are chosen.
+I/O and expansion slot tours follow once their sources are chosen.
 
 ### 10b. The video circuit in 3D
 

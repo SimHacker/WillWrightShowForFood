@@ -78,7 +78,7 @@ to check against the Apple ][ Reference Manual (1978).
 | **Instruction set** | 16 opcodes on an index card, plus OPR bits and IOTs | 56 instructions, 151 opcodes, 13 addressing modes |
 | **Arithmetic** | 18-bit add in one instruction; the EAE multiplies and divides | 18 bits takes several instructions; no multiply |
 | **Display** | Type 340: a vector display processor, 1024², light pen | memory-mapped raster, 280×192, 6 colors, drawn by the CPU |
-| **I/O** | IOT: each device adds its own instructions | memory-mapped soft switches, 8 slots |
+| **I/O** | IOT: each device adds its own instructions | memory-mapped soft switches, 8 expansion slots |
 | **Software** | paper-tape assembler; PIXIE; UNIX (1969) | BASIC in ROM, Applesoft, VisiCalc, games |
 
 Speed is a draw: the PDP-7 wins on wide arithmetic, the 6502 on bytes and addressing modes.

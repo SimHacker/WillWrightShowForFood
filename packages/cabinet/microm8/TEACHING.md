@@ -1,7 +1,7 @@
 # Teaching the Apple ][: a live source graph
 
 The TypeScript Apple ([STACK.md](STACK.md)) as a teaching machine: the video circuit, the Disk II,
-the speaker, cassette, paddles, buttons and slots, each linked from its schematic to the code and
+the speaker, cassette, paddles, buttons and expansion slots, each linked from its schematic to the code and
 memory that use it, while the machine runs. The emulator's own code and data are linked to the
 hardware they model, with every simplification marked.
 
@@ -134,14 +134,14 @@ nodes and views, and text that walks through them. Each one ends in an experimen
 - **Experiments**: turn a paddle and watch the counting loop get longer; read two paddles too soon
   after each other and see why programs wait.
 
-### Slots
+### Expansion slots
 
-- **Shown**: figure S-9 (peripheral I/O); the slot signals: device select for `$C0n0–$C0nF`, I/O
+- **Shown**: figure S-9 (peripheral I/O); the expansion slot signals: device select for `$C0n0–$C0nF`, I/O
   select for `$Cn00–$CnFF`, the shared `$C800–$CFFF` space and its strobe, `$CFFF` to release it;
   each card in [STACK.md](STACK.md#cards).
 - **The ideas**: a card gets sixteen registers, a page of ROM and, when selected, two kilobytes of
-  shared ROM, with no configuration; the Monitor finds a boot card by looking at slot ROMs.
-- **Experiments**: put a card in a different slot and follow how its code finds its own slot number.
+  shared ROM, with no configuration; the Monitor finds a boot card by looking at expansion slot ROMs.
+- **Experiments**: put a card in a different expansion slot and follow how its code finds its own expansion slot number.
 
 ### The 6502 and the bus
 
@@ -179,7 +179,7 @@ Check: a chip-level simulation of the transcribed netlist, run for one frame, pr
 as the reference decoder for every test screen. It is slow and only runs for that check and for the
 slow-motion view.
 
-**Cards and cables too.** The same scene holds the slots and the cards in them, with their cables to
+**Cards and cables too.** The same scene holds the expansion slots and the cards in them, with their cables to
 the drives, the monitor and the game port. Plugging a card in the scene is the same act as adding it
 to the save file ([SAVE-FILES.md](../SAVE-FILES.md#plugging-in-a-card-adds-its-state)); the cable is a
 link in the graph. The Disk II's sequencer, with the bit stream passing under the head, the speaker's

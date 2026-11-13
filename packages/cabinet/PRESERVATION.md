@@ -115,7 +115,7 @@ Each tool feeds the others: the assembler checks the translation, the translatio
 code into Forth, Forth builds rings, the ring viewer reads them out of core, and the source maps tie
 every word back to the paper. It is one web of preservation, emulation, recreation and play.
 
-For an Apple ][ in the cabinet, with its Z-80 card, 80-column card and the rest of its slots
+For an Apple ][ in the cabinet, with its Z-80 card, 80-column card and the rest of its expansion slots
 emulated too, it means the tools outside the emulator become universal file converters. One Apple ][ ran many operating systems, each with its own disk format: DOS 3.2's
 13-sector disks, DOS 3.3, ProDOS, UCSD Pascal, Forth's raw blocks, and CP/M on a Z-80 card. Their
 files are all unpacked the same way, into a tree in git, and the build tools pack whatever a program
