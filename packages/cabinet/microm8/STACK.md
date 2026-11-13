@@ -196,7 +196,9 @@ Context-Oriented Programming*, Onward! 2014; notes in
 [moollm/designs/korz](https://github.com/SimHacker/moollm/blob/main/designs/korz/README.md)). A slot
 has a guard over dimensions; an access or an opcode is dispatched to the most specific slot whose
 guard matches. Nothing here is a framework: a slot type, add and remove, a resolver, and a compile
-step that fills the tables the fast path already uses.
+step that fills the tables the fast path already uses. The dispatcher itself (normal forms,
+ambiguity, layers and `next` for watches, the interpreter, the resolver and the compiler) is
+designed in [KORZ-DISPATCH.md](../KORZ-DISPATCH.md); this section is the Apple's slots.
 
 ```ts
 type Bits = { mask: number; match: number };          // x & mask === match

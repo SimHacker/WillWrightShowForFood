@@ -74,6 +74,9 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
 - [SAVE-FILES.md: the whole machine, at rest](SAVE-FILES.md): planned. One save format for every
   machine, extended by each card that is plugged in, and read, edited, rendered and run from a
   command line and a library without starting the emulator.
+- [KORZ-DISPATCH.md: one sea of guarded slots](KORZ-DISPATCH.md): planned. Every handler, mapping,
+  soft switch, opcode, trap and watch as a Korz slot, dispatched to the most specific match; an
+  interpreter first, then resolved tables, then generated JavaScript.
 - [MAPPING.md: shared memory between machines](MAPPING.md): planned, after MIT's Rubin 10/11
   interface, which let the AI Lab's PDP-10 map PDP-11 memory and device registers into its own
   address space. [CORE-LINKS.md](CORE-LINKS.md) extends it to machines that disagree on word

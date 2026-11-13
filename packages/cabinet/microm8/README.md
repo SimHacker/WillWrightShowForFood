@@ -39,6 +39,8 @@ as the reference it is checked against:
 - [GO-AND-TYPESCRIPT.md](GO-AND-TYPESCRIPT.md): what each language gives this job.
 - [MODULE-MAP.md](MODULE-MAP.md): every microM8 package and where it goes.
 - [SAVE-FILES.md](../SAVE-FILES.md): the save file, per card, with its command line and library.
+- [KORZ-DISPATCH.md](../KORZ-DISPATCH.md): the dispatcher behind STACK's slots: specificity,
+  layers and `next`, the interpreter, the resolver and the compiler.
 - [PLAN.md](PLAN.md): the steps, each with a test and a number.
 
 The disks this Apple boots are in [../disks/apple2](../disks/apple2/DISKS.yml); the Apple section
