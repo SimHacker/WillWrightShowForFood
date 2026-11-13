@@ -152,7 +152,8 @@ A plugin wraps or replaces an entry (`cpu.ops[0x00] = trapBrk(cpu.ops[0x00])`), 
 charge cycles, and return with an `RTS` or a jump. microM8's firmware handlers (`FirmwareExec` on the
 SmartPort, mouse, Mockingboard and SoftCard cards) and its call shims (`RegisterCallShim`, used for
 DOS's RWTS) become traps. A trap is checked at instruction fetch through the execute watch flags of
-its page, so pages without traps pay nothing.
+its page, so pages without traps pay nothing. A trap that stands in for a whole routine is an
+[accelerator](#accelerators-typescript-in-place-of-a-6502-routine).
 
 ### The memory map
 
@@ -453,11 +454,14 @@ export const videx = {
 
 ```ts
 { guard: { access: "fetch", addr: span(0xbd00, 1) }, run: rwtsTrap, by: "DOS 3.3 RWTS trap" },
+{ guard: { access: "fetch", addr: span(0xfca8, 1), config: cfg({ romMapped: 1 }) }, run: accel(wait), by: "Monitor WAIT accelerator" },
 { guard: { space: "aux", access: "write", addr: span(0x400, 0x400) }, run: lastWriter, by: "writer overlay" },
 { guard: { access: "fetch", addr: span(0xf800, 0x800) }, run: countFetch, by: "profile the Monitor" },
 ```
 
-The RWTS trap is microM8's call shim at `$BD00`. The writer overlay is in the `aux` space, so it
+The RWTS trap is microM8's call shim at `$BD00`. The WAIT accelerator only applies while the
+Monitor ROM is mapped at `$FCA8`, so a language card holding other code there runs that code. The
+writer overlay is in the `aux` space, so it
 follows aux text memory whichever switches map it. The profiler's slot takes only the Monitor's eight
 pages off the fast path for fetches. The instruction trace is not a slot: it is a few typed-array
 writes in the processor's step loop and stays on ([TRANSPARENCY.md](TRANSPARENCY.md#traces-and-profiles)).
@@ -669,6 +673,71 @@ replacement swaps the module, the machine keeps its state, and the next instruct
 code. A cartridge's LIVE CODING panel edits a card, a trap or a renderer the same way it edits Forth
 ([DESIGN.md](../DESIGN.md#cartridges-and-live-coding)). From the console, the running machine is
 an object: `apple.pages.read[0xc0]`, `apple.cpu.ops[0xea]`, `apple.slots[6].state`.
+
+## Accelerators: TypeScript in place of a 6502 routine
+
+An accelerator is a `fetch` slot on a routine's entry point. When the PC gets there, a TypeScript
+function runs instead of the 6502 code. It reads the registers and memory, does the routine's work
+directly on the bank arrays, writes back the registers, flags and memory the routine would have
+left, charges the cycles the routine would have taken, and picks the PC to continue at.
+
+```ts
+type Exit = {
+  pc: number;              // where the 6502 resumes: the caller (after an RTS it performed), or any other address
+  cycles: number;          // what the 6502 code would have taken, charged before the next fetch
+  reads: Span[];           // what the 6502 code would have read and written, for planes and watches
+  writes: Span[];
+  covered: Span[];         // the routine bytes it stood in for
+} | null;                  // null: decline, run the 6502 code from the entry
+```
+
+- **Many exits.** The exit is any address: the caller, an error handler, a loop's exit in the
+  middle of a program. An accelerator can do part of the work and return the PC of an instruction
+  inside the routine, with the registers and memory as the 6502 would have them there. A loop head
+  is the usual place. The 6502 code finishes the cases the accelerator doesn't handle.
+- **Guarded twice.** The slot's guard names the machine, the variant and the mapping (`romMapped`,
+  the language card bank, the card in the slot). At run time the accelerator checks that the
+  routine's bytes still hash to what it was written for. A patched routine runs as 6502 code. In
+  RAM, a write watch on the routine's pages clears the hash check's cache.
+- **Watches win.** If a watched address or a breakpoint falls in `reads`, `writes` or `covered`,
+  the accelerator declines and the 6502 runs, so every breakpoint fires where the 6502 would have
+  hit it.
+- **Time stays exact.** The cycle count is the routine's own: a closed form for loops like WAIT,
+  measured against the emulated routine for every input class. Units catch up to the charged cycle
+  before the next fetch. An accelerator that touches a soft switch makes that access with `c.bus` at
+  the cycle the 6502 would have, or it doesn't accelerate that routine.
+
+Candidates, by cycles saved: the Monitor's `WAIT` (`$FCA8`) and `MOVE` (`$FE2C`), DOS 3.3's RWTS
+(`$BD00`, already a call shim in microM8), ProDOS's block calls, Applesoft's floating point and its
+garbage collector, hires line and fill routines, and a game's own inner loop, installed by its
+cartridge.
+
+### Seeing what an accelerator did
+
+An accelerator skips the bus, so it has to report what the bus would have shown. The runtime turns
+an `Exit` into the same records the 6502 would have left:
+
+- **Overlays.** Counts, last reader and last writer are filled from `reads` and `writes`, with the
+  entry PC and the accelerator's `by`. The executor plane marks the `covered` bytes as accelerated, a
+  separate state from executed, so the memory view shows which code ran as TypeScript.
+- **Trace.** The instruction trace gets one record for the call: entry, exit, cycles, registers in
+  and out, and the accelerator's name. The bus trace gets the spans, not individual cycles.
+- **Profiler.** The routine's frame in the flame graph has its cycles and its symbol, labelled as
+  accelerated. Interpreter layers above it still get their line numbers, because the cycle totals
+  are the 6502's.
+- **Expand.** Opening an accelerated call in the trace reruns it as 6502 code, from the nearest
+  snapshot in a scratch machine with the accelerator off ([TRANSPARENCY.md](TRANSPARENCY.md#time-rewind-without-recording-everything)).
+  That gives the full instruction and bus trace on demand. The live run doesn't pay for it.
+- **Diff.** In diff mode every call runs both ways from the same state and compares registers,
+  flags, memory, cycles and exit PC. A mismatch stops the machine at the call. This is how
+  accelerators are tested, and in a tour it shows the TypeScript beside the listing lines it
+  replaces.
+- **Graph.** An accelerator's source links to the routine's lines in the listing with `abstracts`
+  ([TEACHING.md](TEACHING.md#the-graph)), so the scanned page shows which lines it replaces.
+
+Accelerators are written by hand first. Later, the compiler below generates them: a compiled block
+is an accelerator whose `Exit` the compiler derives from the code. The hand-written ones are its
+first tests, since the compiled block has to give the same `Exit` from the same state.
 
 ## Faster, later: compiling 6502 to JavaScript
 

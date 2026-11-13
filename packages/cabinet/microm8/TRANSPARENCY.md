@@ -63,6 +63,9 @@ code that drew it.
   line of the BASIC, Pascal or Forth program the 6502 was running at the time (below). A flame
   graph whose frames are 6502 subroutines from the JSR and RTS stack, with interpreter layers above
   them.
+- **Accelerated calls**: a routine run as TypeScript leaves one trace record, overlay entries from
+  the spans it reports, and an accelerated frame in the profiler; opening it reruns the 6502 code
+  from a snapshot for the full trace ([STACK.md](STACK.md#seeing-what-an-accelerator-did)).
 - **The JavaScript underneath**: the host's own profiler sees the TypeScript functions that ran the
   6502, by name, so the emulator's cost and the program's cost show in the same tools.
 

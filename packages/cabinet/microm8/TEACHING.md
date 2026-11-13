@@ -28,8 +28,9 @@ the rest) plus a few for hardware:
 
 - `models`: emulator code or state that reproduces a part of the schematic, signal for signal.
 - `abstracts`: emulator code that gets the same result another way (a unit catching up by
-  elapsed cycles instead of ticking; a trap running TypeScript in place of a ROM routine). The link
-  says what is skipped.
+  elapsed cycles instead of ticking; an [accelerator](STACK.md#accelerators-typescript-in-place-of-a-6502-routine)
+  running TypeScript in place of a ROM routine). The link says what is skipped, and diff mode runs
+  both side by side.
 - `drives` and `reads`: a chip or signal and the addresses or soft switches that touch it.
 - `decodes`: an address decoder and the range it selects.
 

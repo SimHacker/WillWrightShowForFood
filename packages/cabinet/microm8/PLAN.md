@@ -104,6 +104,16 @@ Monitor; map the scans; assemble and compare byte for byte with the ROM.
 **Done when** the assembled transcription equals the ROM, or every difference is listed with its
 cause; stepping through `COUT` highlights the line on the scanned page.
 
+### 9a. Accelerators, by hand
+
+`WAIT` and `MOVE` first, then RWTS, with the guards, the `Exit` record, expand and diff mode
+([STACK.md](STACK.md#accelerators-typescript-in-place-of-a-6502-routine)).
+
+**Done when** diff mode shows no mismatch for `WAIT` at all 256 values of A and for `MOVE` over
+random ranges, overlapping ones included; a breakpoint inside `MOVE`'s destination fires at the same
+cycle with the accelerator on; a patched `WAIT` runs as 6502 code; expanding an accelerated call
+gives the same trace as running with it off.
+
 ### 10. Interpreter layers
 
 Applesoft first, then SWEET 16, Integer BASIC, Pascal and Forth
@@ -170,7 +180,8 @@ unchanged.
 
 ### 14. Compiling hot code, as an experiment
 
-6502 basic blocks to JavaScript, invalidated by writes to their pages.
+6502 basic blocks to JavaScript, invalidated by writes to their pages, each one an accelerator
+whose `Exit` the compiler derives; the hand-written accelerators from step 9a are its first tests.
 
 **Done when** the differential and SingleStepTests results are unchanged with it on, and its speed
 on the step 0 workloads is written down, whether or not it wins.
