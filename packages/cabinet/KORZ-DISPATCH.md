@@ -340,8 +340,54 @@ is a scan of the guards at resolve time.
 - **Machines.** The Apple on the interpreter, on the resolver and compiled, against microM8 and
   against each other: SingleStepTests for the processor, the Monitor and DOS boot for the machine,
   state hashes equal at every frame ([microm8/PLAN.md](microm8/PLAN.md)).
+- **Rule tables.** Life and the other `CAM6.js` rules written as seas and resolved: the tables
+  equal `CAM6.js`'s `ruleTableBytes` byte for byte.
 - **Numbers.** The bench from microM8's step 0, per step, with the slot counts, table sets, split
   pages and compiled blocks it took to get there.
+
+## The same move as CAM-6's rule tables
+
+The resolver is the CAM-6 rule compiler pointed at a bus. CAM-6 rules were Forth words over named
+neighbor bits (Tommaso Toffoli and Norman Margolus, *Cellular Automata Machines*, MIT Press 1987).
+Loading a rule ran the word for every value of the neighborhood and stored the answers in the
+lookup table the board indexes each cell with. Don's `CAM6.js` does the same in `compileRule`, which
+fills `ruleTableBytes`, and its neighborhood functions gather the index bits for each cell. The
+analysis in moollm's
+[CAM construction set](https://github.com/SimHacker/moollm/blob/main/designs/cellular-automata/cam-construction-set.md#the-move-has-a-name-partial-evaluation-and-one-more-thing)
+applies here line for line:
+
+- **The same binding-time division.** For CAM-6 the rule and its parameters are static and the
+  neighborhood is dynamic. Here machine, variant and configuration are static, and address, access
+  and `who` are dynamic.
+- **Partial evaluation, then tabulation.** The residual function's domain is small enough to
+  enumerate, so instead of residual code the resolver writes the function's graph: every input
+  with its answer. A page table, a 256-entry I/O page and the opcode table are that kind of table,
+  just as CAM-6's rule table is.
+- **The same rule for when to stop.** Tabulate when the domain is small; emit code when it isn't.
+  CAM-6's limit is large neighborhoods and real-valued parameters. Here it is the 6502 blocks of
+  step 3, where the input is the whole machine state.
+- **The same ancestor for code generation.** James Gosling's Ace (1989) generated Sun's bitblt
+  routines from one description specialized across depth, rasterop and clipping. Compiled page
+  dispatch and compiled blocks are that kind of generator.
+
+It works for both because the hardware was tables already. The Disk II controller is a state latch
+and a 256-byte PROM indexed by state and inputs: a rule table. Address decoders, the character
+generator and the video timing are fixed functions of a few bits. An emulator that resolves to
+tables reproduces how the hardware was built, and the teaching graph's `models` links can say so.
+
+**Cellular automata as a Korz sea.** A CA rule is a sea whose dimensions are the neighbor bits
+(and the phase, and the planes), with the same specificity: a default slot ("stay as you are"),
+more specific slots for the cases that change, ambiguity reported at install
+([moollm's Korz CA case](https://github.com/SimHacker/moollm/blob/main/designs/korz/case-cellular-automata.md)).
+Totalistic rules like Life's B3/S23 guard on a **derived dimension**, the neighbor count, which is a
+function of other coordinates. The emulator has the same thing: the configuration word is computed
+from the cards' states. The design admits derived dimensions on the same terms: they are computed
+when the context is built, they have finite domains, and the resolver tabulates through them.
+
+So one dispatcher serves both. A CA rule sea, resolved with the neighbor bits as table dimensions
+and nothing left over, is a CAM-6 rule table; `CAM6.js` is its oracle the way microM8 is the
+Apple's. The cabinet's cell renderer and a CAM-6 profile
+([TODO.md](TODO.md)) get rules from the same place the Apple gets its soft switches.
 
 ## Other machines
 
@@ -379,5 +425,9 @@ counts are written down.
   Languages with Polymorphic Inline Caches*. ECOOP 1991.
 - Urs Hölzle, Craig Chambers and David Ungar. *Debugging Optimized Code with Dynamic
   Deoptimization*. PLDI 1992.
+- Tommaso Toffoli and Norman Margolus. *Cellular Automata Machines: A New Environment for
+  Modeling*. MIT Press, 1987.
+- James Gosling. Ace, the code generator for the bitblt and vector routines of Sun's Shapes library,
+  1989 ([notes](https://github.com/SimHacker/moollm/blob/main/designs/cellular-automata/cam-construction-set.md#ace-gosling-already-built-stage-2-for-exactly-this-problem)).
 - Jeff Bezanson, Jiahao Chen, Ben Chung, Stefan Karpinski, Viral Shah, Jan Vitek and Lionel Zoubritzky.
   *Julia: Dynamism and Performance Reconciled by Design*. OOPSLA 2018. World age.
