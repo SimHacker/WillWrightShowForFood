@@ -182,6 +182,17 @@ It waits on a measurement, like everything in this section: in ULTIMATE-HAND, NE
 block once per Forth word is the cost to measure first. The same slot shape covers Sweet 16 on
 the Apple ][: its opcodes as slots, installed by whoever enters it.
 
+**A second target: threaded code in core.** Also planned. A slot could carry a thread template
+beside its JavaScript one, saying what cells to emit (`JMP` to a primitive, `LAC` for a constant,
+`CAL` for a call), and the compiler would write them, with a header, into the running Forth's
+dictionary through `cpu.write`, so watchers and `why` see it. Only slots that run on the machine
+qualify (application behavior, device drivers, adventure rules), not slots that are the machine
+(`read`, `exec`, the bus). The reasons: it runs on hardware (paper tape to SIMH or the RDP-9), a
+device can carry its own driver words as Open Firmware cards carry FCode, a resolved sea is
+tables a PDP-7 can run, and it is one more implementation to compare against. The cost: guest
+Forth is slower than generated JavaScript, and it needs core, which is what
+[FORTH-DEVICE.md](FORTH-DEVICE.md) and [FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md) free.
+
 ## The accessors
 
 The devices' DMA, the cabinet and the tests reach core through `m.read` and `m.write`. The
