@@ -3,7 +3,8 @@
 Steps 1 and 2 are built, for the PDP-7: the interpreter and the resolver in
 [`src/korz/korz.ts`](src/korz/korz.ts), and the PDP-7 on them in
 [`src/korz/pdp7.ts`](src/korz/pdp7.ts), which runs either way and is tested both ways against
-`Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The compiler is design.
+`Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The compiler is design. A short summary of results
+and open questions, for readers who know Korz and Self, is [KORZ-MACHINES.md](KORZ-MACHINES.md).
 
 Everything a machine does on its bus is a lookup on a few small bit fields: which address, read or
 write, who is asking, which memory configuration, which opcode. Emulators usually spread that
