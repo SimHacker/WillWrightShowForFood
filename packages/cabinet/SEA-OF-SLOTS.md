@@ -8,7 +8,7 @@ Don Hopkins, November 2026
 
 I have a PDP-7 running in a web page. It boots Ken Thompson and Dennis Ritchie's 1969 UNIX to the
 `@` prompt. That UNIX was rebuilt from the original listings by Warren Toomey's pdp7-unix project
-(Phil Budne, Tom Everett, Sebastian Rasmussen, Robert Swierczek and others), working from Norman
+(Phil Budne, Tom Everett, Sebastian Rasmussen, Robert Swierczek, and others), working from Norman
 Wilson's scans. It also runs Mitch Bradley's PDP-7 Forth.
 
 The PDP-7 draws lines on a DEC Type 340 vector graphics display. You point back at the screen with
@@ -85,14 +85,14 @@ in computing.
 ### Making it fast
 
 A language that dynamic looked like it had to be slow. Ungar's group at Stanford and Sun, including
-Craig Chambers, Urs Hölzle and Elgin Lee, made it fast. The techniques they invented are the ones
+Craig Chambers, Urs Hölzle, and Elgin Lee, made it fast. The techniques they invented are the ones
 running in your browser right now:
 
 - **Maps.** Objects cloned from the same prototype share a hidden description of their layout, so
   a slot lookup becomes a fixed offset.
 - **Customization.** Compile a separate copy of a method for each kind of receiver (the object
   the message was sent to), so the compiler knows exactly what `self` is.
-- **Polymorphic inline caches** (Hölzle, Chambers and Ungar, ECOOP 1991). Each call site remembers
+- **Polymorphic inline caches** (Hölzle, Chambers, and Ungar, ECOOP 1991). Each call site remembers
   the few receiver maps it has seen and jumps straight to their methods. The cache doubles as a
   profile of what the program actually does.
 - **Dynamic deoptimization** (PLDI 1992). Optimize aggressively on assumptions. When an assumption
@@ -166,7 +166,7 @@ Few people program in Self today. Every Chrome tab and every Node process runs i
 
 Vanessa Freudenberg wrote SqueakJS, a Smalltalk virtual machine in JavaScript. It runs real Squeak
 images (saved snapshots of a whole running Smalltalk system), decades old, in any browser. Her
-paper (DLS 2014, with Dan Ingalls, Tim Felgentreff, Tobias Pape and Robert Hirschfeld) won the
+paper (DLS 2014, with Dan Ingalls, Tim Felgentreff, Tobias Pape, and Robert Hirschfeld) won the
 Most Notable Paper award ten years later.
 
 Squeak objects are plain JavaScript objects. Her hybrid garbage collector hands as much work as
@@ -188,7 +188,7 @@ Vanessa died in 2025. Every fast path in this emulator is built on her bet.
 
 ## Korz: Self without the objects
 
-### Slots, guards and contexts
+### Slots, guards, and contexts
 
 In 2014, Ungar, with Harold Ossher and Doug Kimelman at IBM Research, took the next subtraction.
 Self removed classes. Korz ("Korz: Simple, Symmetric, Subjective, Context-Oriented Programming",
@@ -233,7 +233,7 @@ concerns": code like logging or checking that ends up scattered across modules a
 together. Then it cuts in with pointcuts, patterns that pick out places in the program, and a
 compiler weaves advice, the code to run at those places, back through it.
 
-Ossher had been there before Korz. With Peri Tarr, William Harrison and Stanley Sutton he wrote
+Ossher had been there before Korz. With Peri Tarr, William Harrison, and Stanley Sutton he wrote
 ["N Degrees of Separation"](https://dl.acm.org/doi/10.1145/302405.302457) (ICSE 1999). It sliced
 programs into overlapping "hyperslices" along many dimensions, and composed them back together.
 
@@ -260,7 +260,7 @@ fits problems I've been working on my whole career.
 #### Zork's five dimensions
 
 Zork's parser binds five globals every turn: the verb (`PRSA`), the direct object (`PRSO`), the
-indirect object (`PRSI`), the character acting (`WINNER`) and the room (`HERE`). Then, roughly, the
+indirect object (`PRSI`), the character acting (`WINNER`), and the room (`HERE`). Then, roughly, the
 room gets first crack, then the objects, then the verb's default.
 
 That's Korz dispatch: five dimensions, carried implicitly, with the most specific handler winning,
@@ -270,7 +270,7 @@ shipped on Infocom's Z-machine virtual machine in 1979! Say "ROBOT, PUSH BUTTON"
 The Sims, which I worked on at Maxis, did the same with two dimensions: `me`, the person acting,
 and `stackObject`, the thing being acted on.
 
-#### Korz, Zork and Korzybski
+#### Korz, Zork, and Korzybski
 
 David Ungar assures me that Korz is only accidentally an anagram of Zork. I believe him, but
 Korzybski would have loved it. Every Zork player drew a map on graph paper of a territory they
@@ -293,8 +293,7 @@ automaton is "us".
 
 ### Emulators
 
-This is the one I'm building. An emulator is a dispatcher whose coordinates are small, finite and
-completely known: which address, read or write or instruction fetch, who is on the bus, which
+This is the one I'm building. An emulator is a dispatcher whose coordinates are small, finite, and completely known: which address, read or write or instruction fetch, who is on the bus, which
 opcode bits, which device code, which I/O pulse, which memory configuration.
 
 Emulators encode that dispatch by hand, in switch statements and page tables. If you want to watch
@@ -323,7 +322,7 @@ that runs UNIX is 99 slots, on these selectors:
 - `read` and `write`, for memory;
 - `ea`, the effective address;
 - `exec` and `skip`;
-- `cc` and `rot`, the operate instruction's clear, complement and rotate bits;
+- `cc` and `rot`, the operate instruction's clear, complement, and rotate bits;
 - `iot` and `iop`, the I/O bus.
 
 Every device the cabinet has is on that bus: clock, teletype, paper tape, RB09 disk, the Type 340,
@@ -369,7 +368,7 @@ by instruction, comparing registers every step:
 1. **`Pdp7`**, plain switch statements, the TypeScript port of SIMH's PDP-7, with Phil Budne's
    and Lars Brinkhoff's Type 340 code ported nearly line by line. This is the reference.
 2. **The Korz interpreter.** For every dispatch, it filters the selector's slots, sorts the matches
-   by specificity, and calls the chain. Slow, obvious and correct. It boots UNIX at about four
+   by specificity, and calls the chain. Slow, obvious, and correct. It boots UNIX at about four
    times the speed of a real PDP-7.
 3. **The resolver.** The tables above, with one generated JavaScript function per selector.
 4. **The compiler**, which turns runs of PDP-7 instructions into JavaScript functions.
@@ -427,8 +426,7 @@ Max with Node 26:
 | Forth with 340, DataHand, Ultimate Machine, 10M | [cabinet/ultimate-hand](https://hyperties.org/cabinet/ultimate-hand/) | 21 | 13 | 44 | 763 |
 | Turing engine running free, 5M | [cabinet/turing](https://hyperties.org/cabinet/turing/) | 67 | 71 | 118 | 1,211 |
 
-In instructions per second, that's 92 million for `Pdp7` on UNIX, 189 million compiled, 34 million
-resolved and 1.3 million interpreted. A real PDP-7 did about 0.3 million.
+In instructions per second, that's 92 million for `Pdp7` on UNIX, 189 million compiled, 34 million resolved, and 1.3 million interpreted. A real PDP-7 did about 0.3 million.
 
 The Korz machine, made entirely of guarded slots you can inspect and replace at run time, boots
 UNIX twice as fast as the hand-written switch statements. On the Turing workload they tie, because
@@ -466,8 +464,7 @@ isn't in the tables and isn't in the compiled code. It costs nothing.
 - **Monitoring.** An observe slot sees every access to a region, then calls `next` to let the
   access through. The 340 display uses exactly this to hear about writes into memory it has
   already read.
-- **Instrumentation.** The same kind of observe slot can count reads, writes and instruction
-  fetches for every word, to make a heat map of where a program spends its time. It can also
+- **Instrumentation.** The same kind of observe slot can count reads, writes, and instruction fetches for every word, to make a heat map of where a program spends its time. It can also
   record who last wrote each word, at what program counter and on what cycle, so a corrupted word
   can tell you whodunit. That's what Valgrind and AddressSanitizer do for native code, and here it
   comes free because we own the machine. These are designed and next in line, and they cost
@@ -571,10 +568,9 @@ from one machine to another.
 
 ### Fun first
 
-The cabinet has a manifesto, and its first rule is that tribute, accessibility and fun beat
-realism. Realism is one way to reach them.
+The cabinet has a manifesto, and its first rule is that tribute, accessibility, and fun beat realism. Realism is one way to reach them.
 
-The teletype wraps, scrolls, zooms, reads aloud and takes dictation, which no Teletype Model 33
+The teletype wraps, scrolls, zooms, reads aloud, and takes dictation, which no Teletype Model 33
 ever did. HILO, a guessing game Claude and I wrote for a machine with no screen, takes "ninety
 nine" by voice. Listings credit the people who wrote the code, by name, even where the real machine
 had no logins.
@@ -587,8 +583,7 @@ old binaries run unchanged, and the switch-statement reference checks it at ever
 That's the deal Korz makes possible. The faithful machine is the 99 slots, and everything we add is
 more slots, labeled with who added them, removable, and visible to `why`.
 
-You can have a scrupulously accurate PDP-7, and a PDP-7 with a Turing machine, a camera hand and a
-self-switching-off box. It's the same machine with a different set of slots installed.
+You can have a scrupulously accurate PDP-7, and a PDP-7 with a Turing machine, a camera hand, and a self-switching-off box. It's the same machine with a different set of slots installed.
 
 ## Where this is going
 
@@ -625,11 +620,11 @@ of it is out in the open:
   It's Chapter 27 of his *Selected Papers on Fun and Games*, and the copyright line says "Don Woods
   and Don Knuth". My
   [notes on it](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/sources/adventure-knuth)
-  pull out the travel table, the dwarves, the pirate and the lamp.
+  pull out the travel table, the dwarves, the pirate, and the lamp.
 - [MIT Zork](https://github.com/MITDDC/zork) in MDL, from the Dynamic Modeling Group's tape, where
-  `PRSA`, `PRSO`, `PRSI`, `WINNER` and `HERE` were born.
+  `PRSA`, `PRSO`, `PRSI`, `WINNER`, and `HERE` were born.
 - Infocom's ZIL source for [Zork I](https://github.com/historicalsource/zork1),
-  [II](https://github.com/historicalsource/zork2) and [III](https://github.com/historicalsource/zork3),
+  [II](https://github.com/historicalsource/zork2), and [III](https://github.com/historicalsource/zork3),
   which Microsoft put under the MIT license in November 2025.
 
 #### Rebuilding them in Korz
@@ -684,7 +679,7 @@ Every demo runs in the browser, from the original code where it survives:
 - [UNIX v0](https://hyperties.org/cabinet/unix/): Thompson and Ritchie's PDP-7 UNIX, booting from the RB09
   disk to the `@` prompt.
 - [Forth](https://hyperties.org/cabinet/forth/): Mitch Bradley's PDP-7 Forth, with his turtle
-  graphics on the 340, after Logo's turtle by Seymour Papert, Wally Feurzeig and Cynthia Solomon.
+  graphics on the 340, after Logo's turtle by Seymour Papert, Wally Feurzeig, and Cynthia Solomon.
 - [SYMELEC](https://hyperties.org/cabinet/symelec/): PIXIE's main program, Heinz Lemke's 1972
   editor, driven by the light pen, with its radial menus. This is where the whole emulator started.
 - [DUEL](https://hyperties.org/cabinet/duel/): DECUS 7-40, by Peterson and Viner (Cambridge, 1968), two ships on the
@@ -702,12 +697,12 @@ Every demo runs in the browser, from the original code where it survives:
 
 All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet/):
 
-- [`src/korz/korz.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/korz/korz.ts): the sea, the Korz interpreter and the resolver
+- [`src/korz/korz.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/korz/korz.ts): the sea, the Korz interpreter, and the resolver
 - [`src/korz/pdp7.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/korz/pdp7.ts): the PDP-7 as slots, with their JavaScript templates
 - [`src/korz/compile7.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/korz/compile7.ts): the compiler
 - [`src/korz/iop.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/korz/iop.ts): the I/O bus as timed pulses
 - [`src/plugins/pdp7.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/plugins/pdp7.ts): `Pdp7`, the switch-statement reference, after SIMH
-- [`src/cabinet.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/cabinet.ts): the cabinet itself: the bus, the devices and the scheduler that runs them
+- [`src/cabinet.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/cabinet.ts): the cabinet itself: the bus, the devices, and the scheduler that runs them
 - Devices: [`type340.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/plugins/type340.ts),
   [`turing.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/plugins/turing.ts), [`ultimate.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/plugins/ultimate.ts),
   [`datahand.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/plugins/datahand.ts), [`hand.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/plugins/hand.ts),
@@ -722,14 +717,14 @@ All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightSho
 
 - [KORZ-MACHINES.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/KORZ-MACHINES.md): the technical summary, with open questions for the
   Self and Smalltalk people
-- [KORZ-DISPATCH.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/KORZ-DISPATCH.md): the sea, the resolver, the device scheduler and
+- [KORZ-DISPATCH.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/KORZ-DISPATCH.md): the sea, the resolver, the device scheduler, and
   the 340 running ahead
-- [KORZ-COMPILER.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/KORZ-COMPILER.md): the compiler, its tests, its planted errors and its
+- [KORZ-COMPILER.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/KORZ-COMPILER.md): the compiler, its tests, its planted errors, and its
   numbers
 - [MANIFESTO.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MANIFESTO.md): the cabinet manifesto
 - [PIXIE-RESTORATION.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md): restoring PIXIE from a 1972 printout to a
   tool its author uses
-- [TURING-ENGINE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TURING-ENGINE.md): the Turing engine, the Ultimate Machine and TM-Forth
+- [TURING-ENGINE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TURING-ENGINE.md): the Turing engine, the Ultimate Machine, and TM-Forth
 - [DEVICES.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/DEVICES.md): how a device reaches a machine, and the DataHand layer by layer
 - [UNIX-V0.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/UNIX-V0.md): PDP-7 UNIX in the cabinet
 - [MAPPING.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MAPPING.md): one machine's memory mapped into another's, after the Rubin 10/11
@@ -746,14 +741,14 @@ All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightSho
 
 ## References
 
-- David Ungar, Harold Ossher and Doug Kimelman. *Korz: Simple, Symmetric, Subjective,
+- David Ungar, Harold Ossher, and Doug Kimelman. *Korz: Simple, Symmetric, Subjective,
   Context-Oriented Programming*. Onward! 2014.
 - David Ungar and Randall B. Smith. *Self: The Power of Simplicity*. OOPSLA 1987.
-- Urs Hölzle, Craig Chambers and David Ungar. *Optimizing Dynamically-Typed Object-Oriented
+- Urs Hölzle, Craig Chambers, and David Ungar. *Optimizing Dynamically-Typed Object-Oriented
   Languages with Polymorphic Inline Caches*. ECOOP 1991.
-- Urs Hölzle, Craig Chambers and David Ungar. *Debugging Optimized Code with Dynamic
+- Urs Hölzle, Craig Chambers, and David Ungar. *Debugging Optimized Code with Dynamic
   Deoptimization*. PLDI 1992.
-- Vanessa Freudenberg, Dan Ingalls, Tim Felgentreff, Tobias Pape and Robert Hirschfeld. *SqueakJS: A
+- Vanessa Freudenberg, Dan Ingalls, Tim Felgentreff, Tobias Pape, and Robert Hirschfeld. *SqueakJS: A
   Modern and Practical Smalltalk That Runs in Any Browser*. DLS 2014.
 - Vanessa Freudenberg on Hacker News, [December 2023](https://news.ycombinator.com/item?id=38774277).
 - Tommaso Toffoli and Norman Margolus. *Cellular Automata Machines*. MIT Press, 1987.
