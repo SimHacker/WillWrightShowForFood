@@ -52,16 +52,27 @@ the browser, and the tests drive it in Node. The layers, from the bottom:
 | The Korz machines | [`src/korz/`](src/korz) | The PDP-7, its I/O bus, and the 340 as slots; the compiler; the Forth device. |
 | The page | [`apps/ties/src/lib/CabinetApplet.svelte`](../../apps/ties/src/lib/CabinetApplet.svelte) | The applet. |
 
-An **oracle**, in testing, is an implementation you trust, which the one under test must agree
-with. The cabinet is a ladder of them. SIMH's C code is the oracle for `Pdp7`, the switch-statement
-CPU. `Pdp7` is the oracle for the Korz interpreter, the interpreter for the resolver, and the
-resolver for the compiler.
+**How you know the fast parts are right.** Most of the cabinet exists twice: a simple version you
+can check by reading it beside the manual, and a fast or clever version you can't check that way.
+The tests run both on the same input, side by side, and stop at the first instruction where they
+disagree, naming it. The simple version is called the **oracle**: the one whose answer counts.
+This is why you can trust a compiler that generates JavaScript on the fly. It isn't trusted
+because it looks right; it's checked against something that obviously is, millions of
+instructions at a time. And when you change something, the oracle tells you within seconds what
+you broke and where.
 
-The display has two versions too. `Type340` decodes display words with a switch statement. It's
-ported nearly line by line from Phil Budne's `display/type340.c` in SIMH, and it's the oracle for `KorzType340`, which decodes them with
-slots, on the interpreter and on the resolver. Two more pairs work the same way. The backplane
-that ticks every device every cycle is the oracle for the event-driven one. Mitch's Forth kernel
-running by itself is the oracle for the same kernel with the Forth device plugged in.
+The cabinet is a ladder of oracles, each rung checking the next:
+
+- SIMH's C code is the oracle for `Pdp7`, the CPU as switch statements.
+- `Pdp7` is the oracle for the Korz interpreter, the interpreter for the Korz resolver, and the
+  resolver for the Korz compiler.
+- `Type340` decodes display words with a switch statement, ported nearly line by line from Phil
+  Budne's `display/type340.c` in SIMH. It's the oracle for `KorzType340`, which decodes them with
+  slots.
+- Each device's `iot()` method is the oracle for the same device's slots.
+- The backplane that ticks every device every cycle is the oracle for the event-driven one.
+- Mitch's Forth kernel running by itself is the oracle for the same kernel with the Forth device
+  plugged in.
 
 ## Port 1: the bus
 
@@ -193,13 +204,61 @@ Both must agree on every register at every step.
 
 ## Port 3: the PDP-7
 
-[`src/plugins/pdp7.ts`](src/plugins/pdp7.ts) is the PDP-7 as switch statements, ported from Bob
-Supnik's [SIMH](https://github.com/open-simh/simh) (`PDP18B/pdp18b_cpu.c`). It's 495 lines, and
-reading it is the quickest way to learn the machine. Here are its high points.
+[`src/plugins/pdp7.ts`](src/plugins/pdp7.ts) is the PDP-7 written as switch statements, ported from
+Bob Supnik's [SIMH](https://github.com/open-simh/simh) (`PDP18B/pdp18b_cpu.c`). It's 495 lines, and
+reading it is the quickest way to learn the machine. If you've never written machine code, start
+with the next few paragraphs; if you have, skip to "Memory in banks".
 
-**18-bit words, and the link above them.** The PDP-7 has an 18-bit accumulator and a one-bit link,
-which catches carries and takes part in rotates. Following SIMH, the code keeps the link as bit 18,
-just above the word, so link and AC together are one 19-bit number and a rotate is a shift:
+### A CPU in five minutes
+
+**Memory** is a long row of numbered boxes called **words**. On the PDP-7 each word holds 18
+bits, and there are 8,192 of them in the basic machine (up to 32,768 with more memory). A word's
+number is its **address**. Everything lives in those words: the program, its data, and some
+of the machine's own bookkeeping.
+
+**Registers** are a few words inside the CPU itself. The PDP-7 has very few:
+
+- The **accumulator**, AC: the one word arithmetic happens in. To add two numbers, you load one
+  into AC, add the other to it, and store AC back into memory.
+- The **link**: one extra bit beside AC that catches the carry out of an addition, and takes part
+  in shifts.
+- The **program counter**, PC: the address of the next instruction.
+
+The CPU does one thing forever: read the word at PC, add one to PC, and do what the word says.
+That's **fetch, decode, execute**. A word that's an instruction says two things: what to do (the
+**opcode**) and, usually, which memory word to do it to (the **address**).
+
+**Assembly language** gives each opcode a short name, a **mnemonic**, so people don't have to
+write the numbers. `LAC 1234` means "load AC from address 1234". `DAC 1234` means "deposit AC
+into address 1234". An **assembler** turns those names into numbers, and a **disassembler**
+turns numbers back into names. Port 5 has both.
+
+**Octal.** PDP-7 people write numbers in octal, base 8, because each octal digit is exactly three
+bits, so an 18-bit word is exactly six octal digits, and the fields of an instruction line up with
+the digits. In TypeScript an octal number is written with `0o`: `0o777777` is the largest 18-bit
+word. In this tour, addresses and instruction words are octal unless they say otherwise.
+
+Here's how one instruction word reads. `LAC 1234` is the word 201234. Its top four bits are the
+opcode, 04 for `LAC`, which puts 20 at the front of the word. The next bit is the **indirect** bit,
+0 here. The low 13 bits are the address, 1234.
+
+With the indirect bit set, the word is 221234, `LAC I 1234`: don't load from 1234, load from the
+address that's stored in 1234. Location 1234 is a **pointer**. That's how the PDP-7 reaches
+anything an instruction can't name directly.
+
+**There are no "if" instructions.** Instead, some instructions **skip**: they jump over the next
+word when a condition holds. So "if AC is zero, go to DONE" is written as two words:
+
+```
+	sna		" skip if AC is not zero
+	jmp done	" so this runs only when AC is zero
+```
+
+### The machine itself
+
+**18-bit words, and the link above them.** Following SIMH, the code keeps the link as bit 18, just
+above the 18 bits of AC, so link and AC together are one 19-bit number, and a rotate through the
+link is a shift:
 
 ```ts
 const WORD = 18;
@@ -208,8 +267,9 @@ const SIGN = 1 << 17; // 0o400000
 const LINKBIT = 1 << 18; // link lives above the word, SIMH-style
 ```
 
-**Memory in banks.** An instruction has 13 address bits, which reach 8K words. Above 8K, memory
-comes in 8K banks, and the program counter wraps within its bank. Only a jump changes banks:
+**Memory in banks.** An instruction has 13 address bits, which reach 8K words (8,192). A machine
+with more memory has it in 8K banks, and the program counter wraps around within its bank. Only a
+jump changes banks:
 
 ```ts
 /** PC + 1 wraps within its 8K bank; only a jump changes banks. */
@@ -218,18 +278,32 @@ export function incr(pc: number): number {
 }
 ```
 
-Extend mode (the IOTs EEM, LEM, EMIR, and SEM on device 77) lets indirect addresses use 15 bits and
-reach all 32K.
+A mode called **extend mode** lets pointers hold 15-bit addresses, which reach all 32K.
 
-**Instructions.** The top four bits are the opcode, and the next bit says indirect. The
-memory-reference instructions are a short list: `DAC` (deposit AC), `LAC` (load AC), `XOR`, `ADD`
-(ones' complement, with end-around carry), `TAD` (two's complement), `AND`, `SAD` (skip if AC
-differs), `ISZ` (increment and skip if zero), `JMP`, `JMS` (jump to subroutine), `DZM` (deposit
-zero), and `XCT`, which executes the word at an address as if it were the next instruction.
+**The instruction set.** The instructions that work on a memory word are a short list:
 
-**Auto-index registers.** Locations 10 to 17 of each bank increment themselves when used
-indirectly, before the address is used. They are the PDP-7's index registers, and they live in
-core:
+| Mnemonic | Word | What it does |
+|---|---|---|
+| `LAC` | 20xxxx | load AC from the word |
+| `DAC` | 04xxxx | deposit AC into the word |
+| `DZM` | 14xxxx | deposit zero into the word |
+| `ADD` | 30xxxx | add the word to AC, in ones' complement, where -0 and +0 both exist |
+| `TAD` | 34xxxx | add the word to the link and AC, in two's complement, as modern machines do |
+| `AND`, `XOR` | 50xxxx, 24xxxx | bitwise and, exclusive or |
+| `SAD` | 54xxxx | skip if AC differs from the word |
+| `ISZ` | 44xxxx | add one to the word, and skip if that made it zero: a loop counter |
+| `JMP` | 60xxxx | jump to the address |
+| `JMS` | 10xxxx | jump to a subroutine |
+| `XCT` | 40xxxx | execute the word at the address, as if it were the next instruction |
+| `CAL` | 00xxxx | call location 20 |
+
+The `xxxx` is the address, plus 20000 for indirect. Everything else is in three groups, coming up:
+the operate group (74), the EAE (64), and I/O (70).
+
+**Auto-index registers.** Locations 10 to 17 of each bank add one to themselves whenever an
+instruction uses them as a pointer, before the pointer is used. So `LAC I 10` steps through
+memory one word at a time, which is how the PDP-7 walks an array or a stack. They are the
+machine's index registers, and they're ordinary memory words:
 
 ```ts
 	protected resolveIndirect(ma: number, jmp: boolean): number {
@@ -245,9 +319,11 @@ core:
 	}
 ```
 
-**Subroutines without a stack.** `JMS` stores the return address in the subroutine's first word and
-starts at its second. A subroutine returns with `JMP I` through its own first word. The stored word
-carries the link in its sign bit and the extend-mode flag in bit 16:
+**Subroutines without a stack.** A modern CPU pushes a return address on a stack. The PDP-7 has no
+stack. `JMS X` stores the return address in word X, the subroutine's first word, and starts
+running at X + 1. The subroutine returns with `JMP I X`: jump to the address stored in its own
+first word. (That's why a PDP-7 subroutine can't call itself: the second call would overwrite the
+first one's return address.) The stored word also carries the link and the extend-mode flag:
 
 ```ts
 	protected jmsWord(): number {
@@ -255,24 +331,37 @@ carries the link in its sign bit and the extend-mode flag in bit 16:
 	}
 ```
 
-**`CAL`, a call to a fixed place.** Opcode 00 is `CAL`, and it does exactly what `JMS 20` would
-(20 octal, location 16): it stores the return word in location 20 and starts running at 21. Its
-own 13-bit address field plays no part, so the program can put anything there. Whatever sits at
-21 is the one routine every `CAL` reaches. It finds the `CAL` that called it one word before the
-return address in 20, and it can read that word's address field as an argument. So `CAL` is a
-one-word call with a free 13-bit argument. In extend mode it goes to location 20 of bank 0; without
-it, to location 20 of the current bank. `CAL I` is `JMS I 20`, a call through whatever pointer 20
-holds. Port 6 shows what Forth does with it.
+**`CAL`, a call to a fixed place.** `CAL` does exactly what `JMS 20` would (20 octal, location
+16): it stores the return address in location 20 and starts running at 21. Its own address field
+plays no part, so the program can put anything there. Whatever sits at 21 is the one routine every
+`CAL` reaches. It finds the `CAL` that called it one word before the return address in 20, and it
+can read that word's address field as an argument. So `CAL` is a one-word call with a free 13-bit
+argument. In extend mode it goes to location 20 of bank 0; without it, to location 20 of the
+current bank. `CAL I` is `JMS I 20`, a call through whatever pointer 20 holds. Port 6 shows what
+Forth does with it.
 
-An interrupt is the same trick at location 0. There is one interrupt level, with no vectors: the
-CPU saves the PC at 0 and starts at 1. `ION` turns interrupts on after one more instruction, so a
-handler can turn them on and return before the next one arrives.
+**Interrupts.** A device that needs attention, a key pressed say, raises a flag. If interrupts
+are on, the CPU stops what it's doing between instructions and does what `JMS 0` would: it saves
+the address it was about to run in location 0 and starts running at location 1. Every device shares that one
+interrupt, so the program at 1 has to ask each device in turn whether it was the one. The instruction `ION` turns interrupts on, after one more instruction, so a handler can turn
+them on and return before the next interrupt arrives.
 
-**The operate group.** Opcode 74 isn't one instruction. It's a word of control bits for several
-steps that run at once, which DEC called microprogrammed. A skip group tests the AC and link; then
-clear and complement act on AC and link; then `OAS` ORs in the console switches; then a rotate;
-then maybe `HLT`. `CLA CLL` is one instruction, and so is `SZA CLA` ("skip if AC is zero, then
-clear it"). The code decodes each field with its own switch:
+**The operate group.** Words starting with 74 aren't one instruction. The low bits of the word are
+switches for several small steps that all run in one instruction: first a skip test on AC and the
+link, then clearing and complementing AC and the link, then ORing in the 18 switches on the console,
+then a rotate, then maybe a halt. Each step has its own mnemonic, and you combine them by naming
+them together:
+
+| Word | Mnemonics | What it does |
+|---|---|---|
+| 750000 | `CLA` | clear AC |
+| 744000 | `CLL` | clear the link |
+| 754000 | `CLA CLL` | both, in one instruction |
+| 740200 | `SZA` | skip if AC is zero |
+| 750200 | `SZA CLA` | skip if AC is zero, then clear it |
+| 740040 | `HLT` | stop the machine |
+
+The code decodes each group of bits with its own switch:
 
 ```ts
 		switch ((ir >> 6) & 0o17) { // skip group, IR<8:11>
@@ -293,22 +382,43 @@ clear it"). The code decodes each field with its own switch:
 		}
 ```
 
-With the indirect bit set, opcode 74 is `LAW`, "load AC with this word": the instruction itself is
-the constant. That's the PDP-7's only immediate operand.
+(`IR<8:11>` is DEC's way of naming bits 8 to 11 of the instruction register. DEC numbers bits from
+the left: bit 0 is the most significant.)
 
-**The EAE.** The Extended Arithmetic Element is an option: multiply, divide, normalize, and long
-shifts across AC and its multiplier-quotient register, MQ. Multiply and divide take their operand
-from the word after the instruction.
+With the indirect bit set, a 74 word is `LAW` instead (words starting with 76): "load AC with this
+very word". `LAW 17` puts 760017 in AC. It's the PDP-7's only way to put a constant in an
+instruction.
 
-**IOT.** Device 0 pulse 2 is `IOF` and pulse 42 is `ION`, handled inside the CPU. Device 77 is
-memory extension. Everything else goes out on the bus. Bit 010 of an IOT clears the AC before the
-pulse, so "read a key" (`KRB`, 700312) is "clear AC, then OR the key in".
+**The EAE.** The Extended Arithmetic Element is an option that adds multiply, divide, and long
+shifts. It has a second register, MQ, the multiplier-quotient, which holds the other half of a
+36-bit product.
+
+**I/O, the IOT instruction.** A word starting with 70 is an **IOT**, input/output transfer: a
+message to a device. The next two octal digits pick the device (64 possible devices), and the last
+two say what to do. Take "read the key that was typed", `KRB`, which is 700312:
+
+| Digits | Meaning |
+|---|---|
+| 70 | IOT |
+| 03 | device 3, the keyboard |
+| 12 | 10: clear AC first; then 2: the keyboard ORs the key's code into AC |
+
+So `KRB` leaves the key's code in AC. The keyboard's other instruction, `KSF` (700301), is pulse 1
+on the same device: "skip if a key is waiting". A program waits for a key with two words, `KSF`
+then `JMP` back to the `KSF`. Port 9 shows why the pulses are numbered 1, 2, and 4.
+
+A few IOTs never leave the CPU. Device 0 is the interrupt system: 700042 is `ION` and 700002 is
+`IOF`, interrupts on and off. Device 77 controls extend mode. Every other IOT goes out on the I/O
+bus to whatever device is plugged in at that number, and if nothing is, it does nothing.
 
 ## Port 4: the devices
 
-Each device is a class implementing `Device`, in [`src/plugins/`](src/plugins). Each has its
-`iot()`, and, since Port 9, a list of Korz slots that does the same thing. The `iot()` stays as the
-oracle.
+Each device is a class implementing `Device`, in [`src/plugins/`](src/plugins). Each answers its
+IOTs twice. Its `iot()` method is one plain function that looks at the pulse bits and does what the
+manual says. Its Korz slots (Port 9) do the same thing as separate pieces the CPU's sea can look
+up, inspect, and compile. Both are kept, so the tests can run a program once through `iot()` and
+once through the slots, and fail at the first IOT where the two disagree. If you write a device,
+write `iot()` first: it's short, and it tells you when your slots are wrong.
 
 **The clock** ([`clock.ts`](src/plugins/clock.ts)) shows how much of the PDP-7's personality lives in
 core. The line clock doesn't keep a counter of its own. Each tick, sixty times a second, it adds
