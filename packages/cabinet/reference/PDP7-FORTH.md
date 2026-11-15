@@ -358,6 +358,14 @@ SYMELEC, and draws the live structure in 3D with printnames spelled out. Running
 runs the 1972 garbage collector. The turtle draws as before with all of this loaded. The
 whole story is in [FORTH-RINGS.md](../FORTH-RINGS.md).
 
+## Past 8K: extended memory
+
+The PDP-7 addresses 8K with 13 bits, and a Type 148 memory extension adds banks up to 32K. The
+cabinet's Forth already reaches them for data with `X@`, `X!`, and `XMOVE`, and an extended kernel
+is built. Next is moving every word's header and full name into bank 1, so bank 0 holds only
+threaded code, assembled code, and data. Then overlays. The plan is in
+[FORTH-HIGH-MEMORY.md](../FORTH-HIGH-MEMORY.md).
+
 ## On real hardware: a homebrew PDP-9
 
 Two weeks after Mitch released it, this Forth ran on hardware. Tergav
