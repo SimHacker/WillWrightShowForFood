@@ -139,6 +139,10 @@ one prompt.
 
 ## Next: two PDP-7s, one Titan
 
+(The other way, planned in [FORTH-DEVICE.md](FORTH-DEVICE.md): one PDP-7, with Forth as a device
+whose dictionary is outside core, beside SYMELEC, calling its RSPPIX on its rings and keeping its
+own rings in bank 1.)
+
 In 1972, PIXIE's PDP-7 was a satellite of Titan, Cambridge's Atlas 2. It sent its drawings
 to Titan over Neil Wiseman's link and fetched them back. [Tiny Titan](TINY-TITAN.md) is that
 far end, as one TypeScript file. 1972 SYMELEC already uploads to it: type `TITAN`, and the

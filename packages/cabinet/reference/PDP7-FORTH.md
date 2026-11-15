@@ -419,6 +419,16 @@ schema. [FORTH-RINGS.md](../FORTH-RINGS.md#next-two-pdp-7s-one-titan) has the or
 **Upstream.** If Mitch wants them, the full-names copy, a `KERNEL` parameter for his
 Makefile, and the test harness changes would go to him as pull requests.
 
+**A Forth device, so Forth fits beside SYMELEC.** SYMELEC fills 8K, so Forth can't share its
+machine. The plan is a device that is this Forth word for word, with primitives as IOT
+instructions and the dictionary in ROM in bank 1, booting to `ok` with one instruction and
+taking almost no core. Then Forth can live in SYMELEC's PDP-7 and control it, with a ring
+library for its own rings in high memory. Design in [FORTH-DEVICE.md](../FORTH-DEVICE.md).
+
+**Compiling threads.** The Korz compiler could compile whole Forth definitions, not one cell at a
+time, and a second target could emit threaded code into core instead of JavaScript.
+[KORZ-COMPILER.md](../KORZ-COMPILER.md#threaded-code-planned).
+
 **Smaller.** A light pen vocabulary: the turtle writes the display list, but nothing reads
 the pen yet.
 

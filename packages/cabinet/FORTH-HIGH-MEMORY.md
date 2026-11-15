@@ -204,6 +204,13 @@ The loader writes 18-bit words wherever the tape says, in any bank, so one tape 
 32K image. Separate tapes per bank would only help development: rebuild bank 0 without the
 names, or reload one overlay.
 
+## Related: the Forth device
+
+[FORTH-DEVICE.md](FORTH-DEVICE.md) puts the whole dictionary in ROM in bank 1, read through slots,
+so Forth takes almost no core and fits beside SYMELEC. It shares Step 2's change: `FIND` and
+`WORDS` reading headers and names with extended fetches. Its high-memory ring library keeps
+Forth's own PIXIE rings in bank 1.
+
 ## Order of work
 
 1. ~~`X@`, `X!`, `XMOVE`, `XHERE`; the handler's `EMIR`.~~ Done.
