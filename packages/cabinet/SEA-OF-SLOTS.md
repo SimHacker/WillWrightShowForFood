@@ -57,7 +57,7 @@ TV font.
 
 Once that worked, it became the reference: the known-good machine every later version has to agree
 with. Then I rebuilt the PDP-7 in Korz three times over, as an interpreter, as precomputed dispatch
-tables and as a compiler, each one checked instruction by instruction against the one before.
+tables, and as a compiler, each one checked instruction by instruction against the one before.
 
 ### What this article is about
 
