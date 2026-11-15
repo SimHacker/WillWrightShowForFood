@@ -570,9 +570,7 @@ hand:
   head runs off the end of its window, the engine can page the tape itself, or raise a fault and
   let the PDP-7 page it: a page fault raised by a coprocessor and serviced by its host, like
   SPARC's window overflow traps or a GPU's replayable faults, which turns a few words of core into
-  a virtually infinite tape. A Forth
-  called TM-Forth compiles high-level programs into its tables, the way Toffoli and Margolus used
-  Forth to build CAM-6 rules.
+  a virtually infinite tape.
 - **The DataHand**, device 57, is named after VPL's DataGlove (Thomas Zimmerman and Jaron Lanier).
   It uses Google's MediaPipe in the browser to turn a webcam's view of your hand into 18-bit
   registers, in the units PDP-7 Forth's turtle graphics already uses. A Forth program walks the 3D
@@ -897,7 +895,11 @@ Every demo runs in the browser, from the original code where it survives:
 - [DUEL](https://hyperties.org/cabinet/duel/): DECUS 7-40, by Peterson and Viner (Cambridge, 1968), two ships on the
   340, flown from the console switches by two players on one keyboard.
 - [Turing engine](https://hyperties.org/cabinet/turing/): the Turing machine coprocessor on device
-  54, driven from Forth.
+  54, driven from PDP-7 Forth, with the tape drawn on the 340. It runs busy beavers, a binary
+  counter, and Minsky's universal machine, written in
+  [TM-Forth](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TURING-ENGINE.md#tm-forth),
+  a little Forth whose output is transition tables, the way Toffoli and Margolus used Forth to
+  build CAM-6 rules.
 - [Ultimate Machine](https://hyperties.org/cabinet/ultimate/): switch it on and it switches itself
   off.
 - [ULTIMATE-HAND](https://hyperties.org/cabinet/ultimate-hand/): your hand through the webcam,
