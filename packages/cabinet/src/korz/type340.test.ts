@@ -102,7 +102,7 @@ test("korz 340: guards read as text, and nextWhy names the slot for the word at 
 	const text = (by: string) => t.sea.guardText(t.sea.slots("word").find((s) => s.by === by)!);
 	assert.equal(text("347 DJS: jump and save"), "mode=subr top=3");
 	assert.equal(text("340 vector, escape after"), "mode=vector top=2-3");
-	assert.deepEqual(t.sea.shape("word"), { dims: ["mode", "top"], size: 32 });
+	assert.deepEqual(t.sea.shape("word"), { dims: ["mode", "top"], size: 32, table: true });
 	t.iot({ device: 0o06, pulse: 0o04, ac: 0o100 });
 	const next = t.nextWhy();
 	assert.ok(next);

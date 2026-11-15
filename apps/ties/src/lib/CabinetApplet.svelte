@@ -1094,7 +1094,7 @@
 		return sea.selectors().map((selector) => {
 			const shape = sea.shape(selector);
 			const slots = sea.slots(selector).map((s) => ({ by: s.by, layer: s.layer, guard: sea.guardText(s) }));
-			return { selector, dims: shape.dims, size: shape.size, slots };
+			return { selector, dims: shape.dims, size: shape.size, table: shape.table, slots };
 		});
 	}
 	function whyRows(selector, lines) {
@@ -3419,8 +3419,11 @@
 							<summary title="Every slot in this sea, by selector. A selector is one kind of question the machine asks, such as which code runs this opcode.">{sea.name}: {sea.total} slots, {sea.selectors.length} {sea.selectors.length === 1 ? 'selector' : 'selectors'}</summary>
 							{#each sea.selectors as sel (sel.selector)}
 								<details class="sea-sel">
-									<summary title="Resolved, this selector is a table indexed by these dimensions: one entry per combination, each the chain of slots that answers there."
-										><b>{sel.selector}</b> {sel.slots.length} slots · table {sel.size.toLocaleString()} over {sel.dims.join(' × ') || 'nothing'}</summary
+									<summary
+										title={sel.table
+											? 'Resolved, this selector is a table indexed by these dimensions: one entry per combination, each the chain of slots that answers there.'
+											: 'A table over these dimensions would be too big to build, so the resolver and the compiler leave this selector to the interpreter, which searches its slots on every call. The compiler still inlines the chain wherever it knows the coordinates when it compiles.'}
+										><b>{sel.selector}</b> {sel.slots.length} slots · {sel.table ? 'table' : 'interpreted, a table would be'} {sel.size.toLocaleString()} over {sel.dims.join(' × ') || 'nothing'}</summary
 									>
 									{#each sel.slots as slot, i (i)}
 										<div class="slot-row">

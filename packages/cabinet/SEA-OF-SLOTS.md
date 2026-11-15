@@ -1029,7 +1029,9 @@ Every demo runs in the browser, from the original code where it survives:
 
 ## Source code
 
-All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet/):
+All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet/).
+[A voyage through the sea of slots](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/SEA-OF-SLOTS-VOYAGE.md)
+tours all of it, port by port, with the code quoted and projects to try at the end.
 
 - [`src/korz/korz.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/korz/korz.ts): the sea, the Korz interpreter, and the resolver
 - [`src/korz/pdp7.ts`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/src/korz/pdp7.ts): the PDP-7 as slots, with their JavaScript templates

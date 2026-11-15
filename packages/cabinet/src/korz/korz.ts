@@ -69,6 +69,9 @@ export class Slot<C> {
 
 export class AmbiguityError extends Error {}
 
+/** The largest table `resolve` builds by default; past it, the selector stays on the interpreter. */
+export const TABLE_LIMIT = 1 << 16;
+
 /** A selector's chains as a table, indexed by the dimensions its slots constrain. */
 export type Resolved<C> = {
 	readonly selector: string;
@@ -193,7 +196,7 @@ export class Sea<C extends object> {
 	 * an entry that throws the same error when it is dispatched, as the interpreter would. Returns
 	 * null when the table would exceed `limit` entries; the caller keeps the interpreter.
 	 */
-	resolve(selector: string, limit = 1 << 16): Resolved<C> | null {
+	resolve(selector: string, limit = TABLE_LIMIT): Resolved<C> | null {
 		const slots = this.bySelector.get(selector) ?? [];
 		const rel = [...new Set(slots.flatMap((s) => s.constrained))].sort((a, b) => a - b);
 		const bits = rel.reduce((n, d) => n + this.dims[d]!.width, 0);
@@ -362,10 +365,14 @@ export class Sea<C extends object> {
 		return [...this.bySelector.keys()].filter((k) => this.bySelector.get(k)!.length > 0);
 	}
 
-	/** The dimensions a resolved table for this selector is indexed by, and its size, without building it. */
-	shape(selector: string): { dims: string[]; size: number } {
+	/**
+	 * The dimensions a resolved table for this selector is indexed by, and its size, without building
+	 * it. `table` is false when the size is past `limit`, where `bind` leaves the selector to the interpreter.
+	 */
+	shape(selector: string, limit = TABLE_LIMIT): { dims: string[]; size: number; table: boolean } {
 		const rel = [...new Set((this.bySelector.get(selector) ?? []).flatMap((s) => s.constrained))].sort((a, b) => a - b);
-		return { dims: rel.map((d) => this.dims[d]!.name), size: 2 ** rel.reduce((n, d) => n + this.dims[d]!.width, 0) };
+		const size = 2 ** rel.reduce((n, d) => n + this.dims[d]!.width, 0);
+		return { dims: rel.map((d) => this.dims[d]!.name), size, table: size <= limit };
 	}
 
 	/** A slot's guard as text: `mode=subr top=2-3`, octal numbers, `any` for a base case. */
