@@ -255,7 +255,15 @@ carries the link in its sign bit and the extend-mode flag in bit 16:
 	}
 ```
 
-`CAL` is `JMS 20`. It ignores its own address field, which Forth turns to good use at Port 6.
+**`CAL`, a call to a fixed place.** Opcode 00 is `CAL`, and it does exactly what `JMS 20` would
+(20 octal, location 16): it stores the return word in location 20 and starts running at 21. Its
+own 13-bit address field plays no part, so the program can put anything there. Whatever sits at
+21 is the one routine every `CAL` reaches. It finds the `CAL` that called it one word before the
+return address in 20, and it can read that word's address field as an argument. So `CAL` is a
+one-word call with a free 13-bit argument. In extend mode it goes to location 20 of bank 0; without
+it, to location 20 of the current bank. `CAL I` is `JMS I 20`, a call through whatever pointer 20
+holds. Port 6 shows what Forth does with it.
+
 An interrupt is the same trick at location 0. There is one interrupt level, with no vectors: the
 CPU saves the PC at 0 and starts at 1. `ION` turns interrupts on after one more instruction, so a
 handler can turn them on and return before the next one arrives.
@@ -451,9 +459,12 @@ and `NEXT` executes them with `XCT`:
 
 - Location 10 is the instruction pointer, IP. It's an auto-index register, so `xct i 010` steps IP
   and fetches the cell in one instruction.
-- A colon definition's cell is its bare address, which as an instruction is `CAL`. `CAL` ignores its
-  address field and does `JMS 20`, which lands in `nest`. `nest` reads the cell back through IP to
-  find the body. The trap the PDP-7 provides for system calls is Forth's call instruction.
+- A colon definition's cell is just the address of its body. An address below 8K fits in 13 bits,
+  so the opcode bits above it are zero, and opcode zero is `CAL`. `XCT` runs that cell as an
+  instruction: the return word goes into 20, and the CPU starts at 21, which is `nest`. `nest`
+  doesn't need the return word. IP still points at the cell, so it reads the cell again, and its
+  address field, which `CAL` ignored, is the body to run. `nest` pushes IP on the return stack and
+  points IP at the body. A word's address is its call instruction.
 - A constant's cell is `LAC` of where the value is. `XCT` loads it, and `NEXT` falls through to
   `dac i 012`, which pushes it.
 - A variable's cell is `LAW` of its address: the cell is its own value, and it gets pushed too.
