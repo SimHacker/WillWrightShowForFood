@@ -60,6 +60,14 @@ the team in Aarhus that built V8 for Chrome in 2008. V8's "hidden classes" are S
 V8 they are still called maps. Its inline caches, its speculative optimization, its deoptimization
 when a guess goes wrong: Self, all of it.
 
+And V8 is only the best known. HotSpot is still the JVM in OpenJDK. Safari's JavaScriptCore calls
+its hidden classes Structures, and Firefox's SpiderMonkey calls them Shapes. Both use inline
+caches, and both bail out of optimized code when a speculation fails. Dart's VM came from Lars Bak
+and Kasper Lund, after V8. GraalVM's Truffle makes deoptimization the center of its design. PyPy
+gives Python objects maps, Ruby 3.2 gave its objects shapes, CPython 3.11 added inline caches to
+its interpreter, and Eliot Miranda's Cog VM for Squeak and Pharo uses polymorphic inline caches.
+The same speculate, guard and fall back move drives trace compilers like LuaJIT.
+
 Brendan Eich says Self inspired JavaScript's prototypes, and every time someone repeats it, I
 cringe. JavaScript missed the whole point of Self, which is right there in the title of the paper:
 the power of simplicity. Self has nothing but objects with slots, all the way down. A Self object
