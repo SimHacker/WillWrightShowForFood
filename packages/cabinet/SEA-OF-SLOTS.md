@@ -5,23 +5,24 @@ Don Hopkins, November 2026
 I have a PDP-7 running in a web page. It boots Ken Thompson and Dennis Ritchie's 1969 UNIX to the `@`
 prompt, rebuilt from the original listings by Warren Toomey's pdp7-unix project (Phil Budne, Tom
 Everett, Sebastian Rasmussen, Robert Swierczek and others, working from Norman Wilson's scans). It
-runs Mitch Bradley's PDP-7 Forth, and draws on a DEC Type 340 vector display with a
-light pen. It also has a Turing machine coprocessor plugged into its I/O bus, a DataHand that
+runs Mitch Bradley's PDP-7 Forth. The PDP-7 draws lines on a DEC Type 340 vector graphics display,
+and you point back at the screen with a light pen, the input device that complements it: the pen
+sees the beam pass under it and tells the program which line you're pointing at. It also has a Turing machine coprocessor plugged into its I/O bus, a DataHand that
 reads your hand through a webcam, and Marvin Minsky's Ultimate Machine, the box whose only
 function is to switch itself off. Claude Shannon built the real one. Ours is device 56.
 
 All of that grew out of one program and its menus. In 1969 at the Cambridge University
-Mathematical Laboratory, Heinz Lemke, with Neil Wiseman and John Hiles, published PIXIE, a
-light-pen editor for graph models such as electronic circuits and control systems. It ran on a
-PDP-7 with a Type 340 vector graphics display, linked to Cambridge's Titan mainframe. Its menu pops up around the light
-pen's tracking cross, which makes it one of the earliest known radial menus. I've been building
+Mathematical Laboratory, Heinz Lemke, with Neil Wiseman and John Hiles, published PIXIE, an
+editor for graph models such as electronic circuits and control systems, which you drive with the
+light pen. It ran on a PDP-7 with a Type 340 vector graphics display, linked to Cambridge's Titan
+mainframe. Its menu pops up around the light pen's tracking cross, which makes it one of the earliest known radial menus. I've been building
 pie menus since the 1980s, so when Heinz scanned his 1972 printout of SYMELEC, PIXIE's main
 program, 128 lineprinter pages of it, I wanted to see and feel those menus running again. I had no
 PDP-7 to run it on, so I built one. Anthropic's Claude (no relation to Shannon) was my programming
 partner, and [MOOLLM](https://github.com/SimHacker/moollm) was where we worked: my open-source
 system that treats a git repository as a world people and language models share, like a text
-adventure, with the model's know-how written down as skills, plain text it reads and follows. SYMELEC now reassembles word for word from the transcribed
-listing and runs in the browser with its light pen and its radial menus. Heinz plans to use PIXIE
+adventure, with the model's know-how written down as skills, plain text it reads and follows. SYMELEC now
+reassembles word for word from the transcribed listing and runs in the browser with its light pen and its radial menus. Heinz plans to use PIXIE
 again, for Bayesian network models of health care. PIXIE is on the program of an HCI session at
 CARS 2027 in Berlin on 29 June 2027, the 60th anniversary of his first Cambridge lecture.
 
