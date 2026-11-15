@@ -17,7 +17,10 @@ PDP-7 with a Type 340 vector graphics display, linked to Cambridge's Titan mainf
 pen's tracking cross, which makes it one of the earliest known radial menus. I've been building
 pie menus since the 1980s, so when Heinz scanned his 1972 printout of SYMELEC, PIXIE's main
 program, 128 lineprinter pages of it, I wanted to see and feel those menus running again. I had no
-PDP-7 to run it on, so I built one, with Anthropic's Claude (no relation to Shannon) as my programming partner. SYMELEC now reassembles word for word from the transcribed
+PDP-7 to run it on, so I built one. Anthropic's Claude (no relation to Shannon) was my programming
+partner, and [MOOLLM](https://github.com/SimHacker/moollm) was where we worked: my open-source
+system that treats a git repository as a world people and language models share, like a text
+adventure, with the model's know-how written down as skills, plain text it reads and follows. SYMELEC now reassembles word for word from the transcribed
 listing and runs in the browser with its light pen and its radial menus. Heinz plans to use PIXIE
 again, for Bayesian network models of health care. PIXIE is on the program of an HCI session at
 CARS 2027 in Berlin on 29 June 2027, the 60th anniversary of his first Cambridge lecture.
@@ -434,6 +437,14 @@ oil, the thief, the troll, the parser rebinding `WINNER`. Each translated piece 
 original game, the way SIMH checked the PDP-7, with forty-five years of players as extra testers.
 Knuth's commentary rides along as comments beside the slots it explains. The plan is in
 [Zorkizing Adventure](https://github.com/SimHacker/moollm/blob/main/designs/korz/case-zork.md).
+
+MOOLLM is where all these threads meet. In MOOLLM, directories are rooms, files are the objects in
+them, and characters are files that a person or a model can play, so a MOOLLM repository is already
+an adventure game. Its skills shaped this whole project: its notes on Self and Korz, its cellular
+automata designs, and the [no-ai-slop](https://github.com/SimHacker/moollm/blob/main/skills/no-ai-slop/SKILL.md)
+writing guide this article tries to follow. And MOOLLM already dispatches on context. What a
+character can do depends on who the character is and which room they're in, Zork's `WINNER` and
+`HERE`, with the directory tree standing in for the guards.
 
 MOOLLM's
 [adventure compiler](https://github.com/SimHacker/moollm/blob/main/skills/adventure/ADVENTURE-COMPILER.md)
