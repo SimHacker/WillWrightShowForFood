@@ -76,7 +76,10 @@ at run time, which Self programmers do as an everyday technique and the VM handl
 JavaScript gave each object one prototype, made changing it something
 [MDN warns you against](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
 because it's slow, and bolted on functions that double as constructors and misbehave if you call
-them without `new`. That's stolen valor: Self's name on the box, and none of its simplicity inside.
+them without `new`. In Self, `self` is just the receiver. In JavaScript, `this` depends on how a
+function was called, so pass a method as a callback and it forgets its own object. Twenty years
+later ES2015 had to add arrow functions, a second kind of closure, just to get a `this` that isn't
+aimed at your foot. That's stolen valor: Self's name on the box, and none of its simplicity inside.
 Eich's misunderstanding of the meaning of equality shows up in JavaScript's
 [`==` table](https://dorey.github.io/JavaScript-Equality-Table/), and in his
 [donation against marriage equality](https://www.theguardian.com/commentisfree/2014/apr/07/brendan-eich-has-the-right-to-fight-gay-rights-but-not-to-be-mozillas-ceo).
