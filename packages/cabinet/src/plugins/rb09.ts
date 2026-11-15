@@ -37,6 +37,11 @@ export type Rb09Opts = {
  * 71. Port of Open SIMH PDP18B/pdp18b_rb.c (Bob Supnik), including its
  * rotational latency and burst transfer: the whole block moves at once when
  * the first sector comes under the heads, then DONE.
+ *
+ * Placement: controller state, rotational timing and the burst DMA through `cpu` are the bus
+ * side and run with the core. The platter is a 1M-word `Uint32Array` held in this thread; `dirty`
+ * tells the host to save it. Remote storage would load the image before boot and save it after,
+ * or page tracks in ahead of a transfer. DESIGN.md, "Placement: what can run where".
  */
 export class Rb09 implements KorzDevice {
 	readonly name = "rb09";

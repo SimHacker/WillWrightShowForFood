@@ -500,6 +500,11 @@ export type TuringDeviceOpts = {
  *
  * The flag is the interrupt request, as the 340's is: halt and fault arrive on the PDP-7's one
  * level, and the handler finds the engine on its skip chain with TMSF.
+ *
+ * Placement: the engine reads and writes its table and tape in core through `fetch` and
+ * `store`, so the device runs with the core. `onStep` and `onEmit` are the far side (views, the
+ * teletype). `TuringCpu` is the same engine as a machine of its own, so it can be a separate site
+ * linked to a PDP-7 like any other. DESIGN.md, "Placement: what can run where".
  */
 export class TuringDevice implements Device, KorzDevice {
 	readonly name = "turing";

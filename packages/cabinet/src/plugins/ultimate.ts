@@ -93,6 +93,11 @@ const RETURN = 5;
 const CLOSE = 6;
 const REST = 7;
 
+/**
+ * Placement: the phases, lever and arm are all bus side, ticked every step. The far side only
+ * draws `pose()` (the front panel, the 340 picture) or would drive a real servo and read a real
+ * lever, sending lever changes in at a stated cycle. DESIGN.md, "Placement: what can run where".
+ */
 export class UltimateMachine implements Device, KorzDevice {
 	readonly name = "ultimate";
 	readonly iots = [0o55, 0o56];

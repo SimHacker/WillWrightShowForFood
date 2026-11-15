@@ -64,6 +64,12 @@ const HALTED: Step = Object.freeze({ halt: true });
 const k7 = (): K7 => ({ op: 0, ind: 0, skp: 0, cc: 0, rot: 0, addr: 0, who: 0, access: 0, device: 0, pulse: 0, sub: 0, iop: 0, skip: 0,
 	ir: 0, at: 0, xct: 0, ea: 0, lac: 0, value: 0, ac: 0 });
 
+/**
+ * Placement: the sea lives with the CPU and its slots are closures over this CPU and its devices'
+ * bus sides. A function can't be posted, so a slot installed from another worker or host arrives as
+ * a module name and arguments and is built here. The generated dispatch functions are per process.
+ * DESIGN.md, "Placement: what can run where".
+ */
 export class KorzPdp7 extends Pdp7 implements IopBus {
 	readonly sea = new Sea<K7>(PDP7_DIMS);
 	/** Instructions, memory and IOTs nest, so each gets its own context. */

@@ -27,6 +27,11 @@ export type LightPenOpts = {
  * just a photocell with a position. Register any number of these in
  * Type340's `pens`: sim-Heinz's hand and the user's mouse are two pens on
  * the same tube.
+ *
+ * Placement: the bus-side proxy for a pen anywhere. The 340 reads `x`, `y` and `enabled`
+ * synchronously as it draws, in beam time, so this object lives with the 340. A remote pen (another
+ * tab, a viewer's cursor) sends positions that are written here at a stated cycle; the hit test
+ * never leaves the machine. DESIGN.md, "Placement: what can run where".
  */
 export class LightPen implements PenInput {
 	enabled: boolean;

@@ -155,6 +155,10 @@ export type TinyTitanOpts = {
  * the display and keyboard by hand — so this device raises no IRQ.
  * Robust-first: with no port attached, LSF and LSA always skip, so a
  * TITAN command against an empty socket cannot wedge the machine.
+ *
+ * Placement: the link registers are the bus side; `TitanPort` is the seam to the far end,
+ * already transport-agnostic. For a run that must replay, a remote port has to stamp each arriving
+ * word with the cycle it became ready, not just buffer it. DESIGN.md, "Placement: what can run where".
  */
 export class TinyTitan implements Device, KorzDevice {
 	readonly name = "tiny-titan";

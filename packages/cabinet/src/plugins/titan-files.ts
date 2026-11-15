@@ -184,7 +184,15 @@ export type TitanFilesOpts = {
 	mounts?: Record<string, FileMount>;
 };
 
-/** The device: a request block, a flag, and the host doing the transfer. */
+/**
+ * The device: a request block, a flag, and the host doing the transfer.
+ *
+ * Placement: the request block and the transfer reach core through `core`, so the device runs
+ * with it. The mounts are the far side and are asynchronous (browser storage, the network), so a
+ * request finishes when the host's promise does, in host time, not at a fixed cycle. Replay would
+ * need the completion cycle recorded, and a remote mount is just another `FileMount`.
+ * DESIGN.md, "Placement: what can run where".
+ */
 export class TitanFiles implements KorzDevice {
 	readonly name = "titan-files";
 	readonly iots = [FILES_DEVICE];

@@ -11,6 +11,13 @@ export type CabinetOpts = {
 /**
  * The backplane. One CPU plugin, devices on the IOT bus.
  * Plugins never see each other — only Words, IOTs, and (for the pen) segments.
+ *
+ * Placement: the one place where time passes. One thread steps the CPU and ticks every
+ * device's bus side each step; `cycles` is the clock that ports stamp events with. A far side in a
+ * worker or on another host sends events to be applied at a stated cycle and receives output through
+ * the devices' callbacks; machines on separate sites meet only through links. Event-driven devices
+ * (`nextEvent`) and running to the next stamped event come before any of that.
+ * DESIGN.md, "Placement: what can run where".
  */
 export class Cabinet {
 	readonly cpu: Cpu;

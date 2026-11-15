@@ -45,6 +45,12 @@ export type Pdp7Opts = {
  * Implements what SYMELEC uses (DESIGN.md), plus the memory extension to
  * 32K with extend mode (EEM/LEM/EMIR/SEM, IOT 77) as SIMH's PDP-7 does it.
  * The rest of the 18b family (trap mode, API, user mode) is absent.
+ *
+ * Placement: core is a private array in this object, and every DMA device (340, RB09, Turing
+ * engine, titan-files, the clock's location 7) reaches it through `read`/`write` closures, so they all
+ * run in this thread. Sharing core with a worker or another host means a window map in `read` and
+ * `write` over a shared segment (DESIGN.md, "Sharing PIXIE's own window"; CORE-LINKS.md, modes).
+ * DESIGN.md, "Placement: what can run where".
  */
 export class Pdp7 implements Cpu {
 	readonly wordBits = WORD;

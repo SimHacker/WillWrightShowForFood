@@ -13,6 +13,11 @@ export type TeletypeOpts = {
  * (device 04: TSF 700401, TCF 700402, TLS 700406) as one box, the KSR-33.
  * Semantics from SIMH pdp18b_stddev.c tti()/tto(): pulse&1 skip-on-flag,
  * pulse&2 clear flag (keyboard also ORs buffer into AC), pulse&4 load & print.
+ *
+ * Placement: the flags, buffers and print timing are the bus side. The far side is `onPrint`
+ * (each character, synchronously) and `type` (a key, applied when called, between steps). Remote,
+ * `onPrint` becomes a posted stream and `type` must carry the cycle it applies at, so replay stays
+ * exact. DESIGN.md, "Placement: what can run where".
  */
 export class Teletype implements Device, KorzDevice {
 	readonly name = "teletype";

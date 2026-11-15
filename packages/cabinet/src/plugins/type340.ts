@@ -149,6 +149,15 @@ export type Type340Opts = {
 	wordsPerTick?: number;
 };
 
+/**
+ * Placement: the display processor is bus side. It fetches the display file through `fetch` at
+ * machine speed, tests `pens` as each segment is drawn, and answers its IOTs within the
+ * instruction, so it runs with the core. Rendering is the far side: `onSegment` and `onFrame` feed
+ * plain segments to whatever draws them (canvas now; a WebGPU phosphor simulation in the browser,
+ * which a Node server running the CPU never needs). Remote, segments go down and pen positions come
+ * up, applied at a stated cycle. The page also reads `lastFrame` and registers directly; that
+ * becomes a per-frame snapshot. DESIGN.md, "Placement: what can run where".
+ */
 export class Type340 implements Device, KorzDevice {
 	readonly name = "type340";
 	readonly iots = [0o05, 0o06, 0o07, 0o10, 0o11];

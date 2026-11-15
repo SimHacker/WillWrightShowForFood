@@ -12,6 +12,10 @@ export type PaperTapeOpts = {
  * RSB 700144. Semantics from SIMH pdp18b_stddev.c ptr()/ptr_svc(): RSA
  * reads one frame, RSB assembles three frames with channel 8 punched,
  * six bits each, skipping the rest. Not part of SYMELEC; DUEL loads from it.
+ *
+ * Placement: the reader's state and frame timing are the bus side. The whole tape is a
+ * `Uint8Array` held here, mounted before it is read; from remote storage it is fetched first, then
+ * `mount`ed. DESIGN.md, "Placement: what can run where".
  */
 export class PaperTape implements KorzDevice {
 	readonly name = "papertape";

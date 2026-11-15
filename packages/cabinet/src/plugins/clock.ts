@@ -14,6 +14,10 @@ export type ClockOpts = {
  * CLON) or off (CLOF). Each tick increments core location 7; overflow to 0
  * raises the flag. The counter living in core is the period detail programs
  * exploit: SYMELEC presets 7 to control the blink rate.
+ *
+ * Placement: all bus side, with no far side. It writes core location 7 through the CPU, so it
+ * runs with the core. Its ticks are machine time (`cyclesPerTick`), not wall time, so it stays exact
+ * wherever the machine runs and however fast. DESIGN.md, "Placement: what can run where".
  */
 export class Clock implements Device, KorzDevice {
 	readonly name = "clock";

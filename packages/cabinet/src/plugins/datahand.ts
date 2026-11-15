@@ -125,6 +125,12 @@ export type DataHandOpts = {
 	mirror?: boolean;
 };
 
+/**
+ * Placement: the latched registers and flag are the bus side. The tracker (camera and MediaPipe
+ * in the browser) is the far side and sends only numbers: `feed` pushes a frame in host time,
+ * `source` is pulled every `framePeriod` steps in machine time. A remote tracker sends frames
+ * that are fed at a stated cycle. DESIGN.md, "Placement: what can run where".
+ */
 export class DataHand implements KorzDevice {
 	readonly name = "datahand";
 	readonly iots = [HAND_DEVICE];
