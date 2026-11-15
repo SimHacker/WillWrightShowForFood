@@ -361,6 +361,40 @@ with who proposed it, and runs in lockstep against the oracle on recorded traces
 stays. If it ever disagrees, out it goes. That's Self's speculate-and-deoptimize, with meanings in
 place of types.
 
+Then back to the cave. The maps we drew on graph paper were never the game. The source code is the
+territory, and now all of it is out in the open:
+
+- Will Crowther's original FORTRAN Adventure, recovered in 2005 from Don Woods's own account on the
+  Stanford backup tapes, and examined by Dennis Jerz in
+  ["Somewhere Nearby is Colossal Cave"](https://www.digitalhumanities.org/dhq/vol/1/2/000009/000009.html).
+- [ADVENT](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent): Crowther and Woods's
+  Adventure, translated by Donald Knuth into CWEB, a literate program you can read like a book.
+  It's Chapter 27 of his *Selected Papers on Fun and Games*, and the copyright line says "Don Woods
+  and Don Knuth". My
+  [notes on it](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/sources/adventure-knuth)
+  pull out the travel table, the dwarves, the pirate and the lamp.
+- [MIT Zork](https://github.com/MITDDC/zork) in MDL, from the Dynamic Modeling Group's tape, where
+  `PRSA`, `PRSO`, `PRSI`, `WINNER` and `HERE` were born.
+- Infocom's ZIL source for [Zork I](https://github.com/historicalsource/zork1),
+  [II](https://github.com/historicalsource/zork2) and [III](https://github.com/historicalsource/zork3),
+  which Microsoft put under the MIT license in November 2025.
+
+I want to rebuild both games in Korz, a piece at a time: the dwarf daemon, the lamp's fuse, the
+thief, the troll, the parser rebinding `WINNER`. Each translated piece gets checked against the
+original game, the way SIMH checked the PDP-7, with forty-five years of players as extra testers.
+Knuth's commentary rides along as comments beside the slots it explains. The plan is in
+[Zorkizing Adventure](https://github.com/SimHacker/moollm/blob/main/designs/korz/case-zork.md).
+
+MOOLLM's
+[adventure compiler](https://github.com/SimHacker/moollm/blob/main/skills/adventure/ADVENTURE-COMPILER.md)
+already turns adventure worlds written in YAML (rooms, objects, verbs, guards) into deterministic
+JavaScript and Python. That model is already slot-shaped, so the next compiler emits Korz slots and
+runs them on the Korz engine, not a new engine for every game. Past that is
+[Korz′](https://github.com/SimHacker/moollm/blob/main/designs/korz/korz-prime/README.md), "Korz
+prime": one semantics, two dispatchers. When the guards can be decided, the deterministic tier runs
+them, compiled and exact. When the player walks off the map, a language model improvises. As the
+design doc puts it: "Korz compiles; Zork improvises."
+
 Self's ideas went into the engine under every web page. Korz's ideas have barely been tried. I think
 they belong in emulators, adventure games, cellular automata, and any system where the interesting
 question is what happens in this context, more than which object owns the method. The code is all
@@ -424,6 +458,14 @@ All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightSho
 - [MAPPING.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MAPPING.md): one machine's memory mapped into another's, after the Rubin 10/11
 - [Korz notes in moollm](https://github.com/SimHacker/moollm/tree/main/designs/korz): Korz explained,
   with the Zork and cellular automata cases
+- [case-zork.md](https://github.com/SimHacker/moollm/blob/main/designs/korz/case-zork.md): Zorkizing
+  Adventure, rebuilding Adventure and Zork as Korz slots
+- [Korz′](https://github.com/SimHacker/moollm/blob/main/designs/korz/korz-prime/README.md): Korz for
+  the age of LLMs, with one semantics and two dispatchers
+- [ADVENTURE-COMPILER.md](https://github.com/SimHacker/moollm/blob/main/skills/adventure/ADVENTURE-COMPILER.md):
+  MOOLLM's adventure compiler, from YAML worlds to playable code
+- [Knuth's literate Adventure](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/sources/adventure-knuth):
+  `advent.w`, with notes
 
 ## References
 
@@ -438,3 +480,6 @@ All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightSho
   Modern and Practical Smalltalk That Runs in Any Browser*. DLS 2014.
 - Vanessa Freudenberg on Hacker News, [December 2023](https://news.ycombinator.com/item?id=38774277).
 - Tommaso Toffoli and Norman Margolus. *Cellular Automata Machines*. MIT Press, 1987.
+- Donald E. Knuth. *Selected Papers on Fun and Games*. CSLI, 2011. Chapter 27: ADVENT.
+- Dennis G. Jerz. *Somewhere Nearby is Colossal Cave: Examining Will Crowther's Original
+  "Adventure" in Code and in Kentucky*. Digital Humanities Quarterly 1(2), 2007.
