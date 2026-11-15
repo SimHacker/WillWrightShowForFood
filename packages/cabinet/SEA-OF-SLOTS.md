@@ -226,9 +226,59 @@ Now `main()` sets `assertions: true`, and the context carries it implicitly down
 way `this` flows in an object-oriented language. No code in between mentions assertions at all.
 You added a new axis of variation to a running design without touching the middle.
 
+### Multiple dispatch, and who gets to be special
+
+Korz has ancestors besides Self. Multiple dispatch picks a method by looking at the run-time
+values of all the arguments, not just the first one.
+
+In Common Lisp's object system, CLOS, methods belong to generic functions, not to classes.
+`(defmethod collide ((a asteroid) (b ship)) ...)` is a method on `collide` for an asteroid hitting
+a ship, and neither the asteroid nor the ship owns it. A parameter can be specialized on a class
+("is a kind of that"), or, with an `eql` specializer, on one exact object ("is that"). Dylan, Apple's
+descendant of CLOS, kept multiple dispatch.
+
+So is the receiver still special? Mostly not, but not completely. When two methods both apply,
+CLOS compares their parameters left to right, so the first argument still gets the first say,
+unless you give the generic function a different `:argument-precedence-order`. Craig Chambers,
+from the Self group, made his language Cecil compare the arguments pointwise instead, and call a
+tie ambiguous. That's the rule Korz uses.
+
+ScriptX, the multimedia language I worked on at Kaleida Labs, called methods through generic
+functions too. But a ScriptX generic always took the target object as its first argument, so it
+was single dispatch in generic clothing. It did let you specialize methods on individual objects,
+the way Self does.
+
+#### Changing the rules of dispatch
+
+Gregor Kiczales, Jim des Rivières, and Daniel Bobrow wrote *The Art of the Metaobject Protocol*
+(1991). A metaobject protocol, or MOP, implements CLOS in CLOS: classes, generic functions, and
+methods are themselves objects, so you can change how dispatch works by specializing the
+dispatcher.
+
+Predicate dispatch (Michael Ernst, Craig Kaplan, and Craig Chambers, ECOOP 1998) goes further. A
+method's guard can be any condition: this parameter is that, or is in that range, or is a kind of
+that, or is in that state. One method overrides another when its condition logically implies the
+other's.
+
+That's close to a Korz guard. In the cabinet, a guard is a set of allowed values on each
+dimension: an exact device code, a range of addresses, or a group of opcodes.
+
+#### More axes to cache on
+
+Every axis you dispatch on is an axis you can cache on. PCL, the portable implementation of CLOS,
+remembered the chosen method in a table keyed on the classes of all the specialized arguments
+(Kiczales and Luis Rodriguez, 1990). That's the multi-argument cousin of Self's inline caches.
+Julia compiles a separate copy of a function for each combination of argument types, which is
+Self's customization applied to every argument.
+
+Korz's dimensions go one step further. They aren't only the arguments you pass; they're the
+context carried implicitly down every call. In the cabinet, the resolver turns them into tables,
+and the compiler turns the tables into code.
+
 ### Aspects without the knives
 
-Aspect-oriented programming fights the same war with knives. It names the problem "crosscutting
+Aspect-oriented programming, which Kiczales's group at Xerox PARC introduced in 1997, fights the
+same war with knives. It names the problem "crosscutting
 concerns": code like logging or checking that ends up scattered across modules and tangled
 together. Then it cuts in with pointcuts, patterns that pick out places in the program, and a
 compiler weaves advice, the code to run at those places, back through it.
@@ -748,6 +798,11 @@ All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightSho
   Languages with Polymorphic Inline Caches*. ECOOP 1991.
 - Urs Hölzle, Craig Chambers, and David Ungar. *Debugging Optimized Code with Dynamic
   Deoptimization*. PLDI 1992.
+- Gregor Kiczales and Luis H. Rodriguez Jr. *Efficient Method Dispatch in PCL*. LFP 1990.
+- Gregor Kiczales, Jim des Rivières, and Daniel G. Bobrow. *The Art of the Metaobject Protocol*.
+  MIT Press, 1991.
+- Michael D. Ernst, Craig Kaplan, and Craig Chambers. *Predicate Dispatching: A Unified Theory of
+  Dispatch*. ECOOP 1998.
 - Vanessa Freudenberg, Dan Ingalls, Tim Felgentreff, Tobias Pape, and Robert Hirschfeld. *SqueakJS: A
   Modern and Practical Smalltalk That Runs in Any Browser*. DLS 2014.
 - Vanessa Freudenberg on Hacker News, [December 2023](https://news.ycombinator.com/item?id=38774277).
