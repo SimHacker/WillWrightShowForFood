@@ -15,7 +15,7 @@ this article. It's the shallow end of the deep end.
 
 **Then try it.** [Hold your hand up to your webcam](https://hyperties.org/cabinet/ultimate-hand/).
 A PDP-7 running Forth draws your hand on its vector display, and your hand becomes the hand of
-Marvin Minsky's Ultimate Machine, the box whose only function is to switch itself off. Show it your
+[Marvin Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky)'s [Ultimate Machine](https://en.wikipedia.org/wiki/Useless_machine), the box whose only function is to switch itself off. Show it your
 hand and the box switches itself on, its arm carries your hand out to the switch, and you switch it
 off with a fingertip.
 
@@ -25,43 +25,44 @@ Keep it open while you read. Every part of that page is explained below.
 
 ### What it runs
 
-I have a PDP-7 running in a web page. It boots Ken Thompson and Dennis Ritchie's 1969 UNIX to the
-`@` prompt. That UNIX was rebuilt from the original listings by Warren Toomey's pdp7-unix project
+I have a PDP-7 running in a web page. It boots [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson) and [Dennis Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie)'s 1969 UNIX to the
+`@` prompt. That UNIX was rebuilt from the original listings by [Warren Toomey](https://github.com/DoctorWkt)'s [pdp7-unix](https://github.com/DoctorWkt/pdp7-unix) project
 (Phil Budne, Tom Everett, Sebastian Rasmussen, Robert Swierczek, and others), working from Norman
-Wilson's scans. It also runs Mitch Bradley's PDP-7 Forth.
+Wilson's scans. It also runs [Mitch Bradley](https://github.com/MitchBradley)'s [PDP-7 Forth](https://github.com/MitchBradley/pdp7forth).
 
-The PDP-7 draws lines on a DEC Type 340 vector graphics display. You point back at the screen with
-a light pen, the input device that complements it: the pen sees the beam pass under it and tells
+The [PDP-7](https://en.wikipedia.org/wiki/PDP-7) draws lines on a DEC [Type 340](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/DISPLAY-DEVICES.md) [vector graphics display](https://en.wikipedia.org/wiki/Vector_monitor). You point back at the screen with
+a [light pen](https://en.wikipedia.org/wiki/Light_pen), the input device that complements it: the pen sees the beam pass under it and tells
 the program which line you're pointing at.
 
-It also has a Turing machine coprocessor plugged into its I/O bus, and a DataHand that reads your
+It also has a [Turing machine coprocessor](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TURING-ENGINE.md) plugged into its I/O bus, and a [DataHand](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/DEVICES.md#the-datahand-layer-by-layer) that reads your
 hand through a webcam. And it has Marvin Minsky's Ultimate Machine, the box whose only function is
-to switch itself off. Claude Shannon built the real one. Ours is device 56.
+to switch itself off. [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon) [built the real one](https://www.youtube.com/watch?v=cZ34RDn34Ws), and Minsky [tells how it
+came about](https://www.webofstories.com/play/marvin.minsky/127). Ours is [device 56](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TURING-ENGINE.md#the-ultimate-machine).
 
 ### How it started: PIXIE's radial menus
 
 All of that grew out of one program and its menus. In 1969 at the Cambridge University
-Mathematical Laboratory, Heinz Lemke, with Neil Wiseman and John Hiles, published PIXIE. It's an
+Mathematical Laboratory, Heinz Lemke, with [Neil Wiseman](https://en.wikipedia.org/wiki/Neil_Wiseman) and John Hiles, published [PIXIE](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md). It's an
 editor for graph models such as electronic circuits and control systems, and you drive it with the
-light pen. It ran on a PDP-7 with a Type 340 vector graphics display, linked to Cambridge's Titan
+light pen. It ran on a PDP-7 with a Type 340 vector graphics display, linked to Cambridge's [Titan](https://en.wikipedia.org/wiki/Titan_(1963_computer))
 mainframe.
 
 PIXIE's menu pops up around the light pen's tracking cross, which makes it one of the earliest
-known radial menus. I've been building pie menus since the 1980s. So when Heinz scanned his 1972
+known radial menus. I've been building [pie menus](https://en.wikipedia.org/wiki/Pie_menu) since the 1980s. So when Heinz scanned his 1972
 printout of SYMELEC, PIXIE's main program, 128 lineprinter pages of it, I wanted to see and feel
 those menus running again.
 
 I had no PDP-7 to run it on, so I built one. SYMELEC now reassembles word for word from the
 transcribed listing, and runs in the browser with its light pen and its radial menus. Heinz plans
 to use PIXIE again, for Bayesian network models of health care. PIXIE is on the program of an HCI
-session at CARS 2027 in Berlin on 29 June 2027, the 60th anniversary of his first Cambridge
+session at [CARS 2027](https://www.cars-int.org/) in Berlin on 29 June 2027, the 60th anniversary of his first Cambridge
 lecture.
 
 ### How it was built
 
 Anthropic's Claude (no relation to Shannon) was my programming partner, and
 [MOOLLM](https://github.com/SimHacker/moollm) was where we worked. MOOLLM is my open-source
-collection of 156 skills in Anthropic's Agent Skills format: folders of plain-text instructions, in
+collection of 156 skills in Anthropic's [Agent Skills](https://agentskills.io/) format: folders of plain-text instructions, in
 Markdown and YAML, that a model loads and follows when a task calls for them.
 
 MOOLLM extends that format so the file system works like Self's object system. Directories are
@@ -69,8 +70,8 @@ objects that inherit from prototype directories, and the language model fills in
 files leave open. And it treats the whole git repository as a world people and language models
 share, like a text adventure.
 
-My first implementation was a straight port to TypeScript of SIMH's PDP-7 simulator, by Bob
-Supnik, and SIMH's Type 340 display, by Phil Budne. It includes Lars Brinkhoff's PDP-7 display
+My first implementation was a straight port to TypeScript of [SIMH](https://github.com/simh/simh)'s PDP-7 simulator, by [Bob
+Supnik](https://en.wikipedia.org/wiki/Bob_Supnik), and SIMH's Type 340 display, by [Phil Budne](https://github.com/philbudne). It includes [Lars Brinkhoff](https://github.com/larsbrinkhoff)'s PDP-7 display
 interface, and the 340 character shapes he recovered from MIT AI Lab film footage and the Knight
 TV font.
 
@@ -80,8 +81,8 @@ tables, and as a compiler, each one checked instruction by instruction against t
 
 ### What this article is about
 
-Korz is a language almost nobody has heard of. It runs here on a JavaScript JIT that exists
-because of a language almost nobody uses any more called Self. This article is about those two
+[Korz](https://doi.org/10.1145/2661136.2661147) is a language almost nobody has heard of. It runs here on a JavaScript JIT that exists
+because of a language almost nobody uses any more called [Self](https://selflanguage.org/). This article is about those two
 languages, and why they turn out to be exactly the right tools for building emulators you can take
 apart while they run.
 
@@ -89,7 +90,7 @@ apart while they run.
 
 ### The power of simplicity
 
-In 1986 at Xerox PARC, David Ungar and Randall Smith designed Self by taking Smalltalk and removing
+In 1986 at Xerox PARC, [David Ungar](https://en.wikipedia.org/wiki/David_Ungar) and Randall Smith designed Self by taking Smalltalk and removing
 things. Smalltalk said everything is an object, but an object got its behavior from its class, a
 separate thing above it.
 
@@ -98,46 +99,47 @@ value or a method. An object inherits by pointing at another object, its parent.
 
 Want a teletype that reads aloud? Copy a teletype and give the copy a new `print` slot. Even
 reading a variable is a message send, so there is no difference between a stored value and a
-computed one. "Self: The Power of Simplicity" (OOPSLA 1987) is still one of the best-titled papers
-in computing.
+computed one. ["Self: The Power of Simplicity"](https://bibliography.selflanguage.org/self-power.html) (OOPSLA 1987) is still one of the best-titled papers
+in computing. To see it run, watch [Self: The Movie](https://www.youtube.com/watch?v=Ox5P7QyL774), Smith and Ungar's
+1995 tour of the live system at Sun.
 
 ### Making it fast
 
 A language that dynamic looked like it had to be slow. Ungar's group at Stanford and Sun, including
-Craig Chambers, Urs Hölzle, and Elgin Lee, made it fast. The techniques they invented are the ones
+[Craig Chambers](https://en.wikipedia.org/wiki/Craig_Chambers), [Urs Hölzle](https://en.wikipedia.org/wiki/Urs_H%C3%B6lzle), and Elgin Lee, made it fast. The techniques they invented are the ones
 running in your browser right now:
 
 - **Maps.** Objects cloned from the same prototype share a hidden description of their layout, so
   a slot lookup becomes a fixed offset.
 - **Customization.** Compile a separate copy of a method for each kind of receiver (the object
   the message was sent to), so the compiler knows exactly what `self` is.
-- **Polymorphic inline caches** (Hölzle, Chambers, and Ungar, ECOOP 1991). Each call site remembers
+- **[Polymorphic inline caches](https://bibliography.selflanguage.org/pics.html)** (Hölzle, Chambers, and Ungar, ECOOP 1991). Each call site remembers
   the few receiver maps it has seen and jumps straight to their methods. The cache doubles as a
   profile of what the program actually does.
-- **Dynamic deoptimization** (PLDI 1992). Optimize aggressively on assumptions. When an assumption
+- **[Dynamic deoptimization](https://bibliography.selflanguage.org/dynamic-deoptimization.html)** (PLDI 1992). Optimize aggressively on assumptions. When an assumption
   breaks, or a debugger looks, fall back to unoptimized code mid-execution, with every frame
   intact.
 
 ### From Self to V8
 
-Then some of the Self people started Animorphic Systems and built Strongtalk, a fast Smalltalk on
+Then some of the Self people started Animorphic Systems and built [Strongtalk](http://strongtalk.org/), a fast Smalltalk on
 that technology. Sun bought Animorphic in 1997, and the Strongtalk VM became the basis of Java's
-HotSpot.
+[HotSpot](https://openjdk.org/groups/hotspot/).
 
-Lars Bak, who had worked on Self and Strongtalk and led HotSpot, went to Google. There he led the
+[Lars Bak](https://en.wikipedia.org/wiki/Lars_Bak_(computer_programmer)), who had worked on Self and Strongtalk and led HotSpot, went to Google. There he led the
 team in Aarhus that built V8 for Chrome in 2008. V8's "hidden classes" are Self's maps, and inside
-V8 they are still called maps. Its inline caches, its speculative optimization, its deoptimization
+V8 they are [still called maps](https://v8.dev/blog/fast-properties). Its inline caches, its speculative optimization, its deoptimization
 when a guess goes wrong: Self, all of it.
 
 ### Everywhere else
 
-V8 is only the best known. HotSpot is still the JVM in OpenJDK. Safari's JavaScriptCore calls its
+V8 is only the best known. HotSpot is still the JVM in OpenJDK. Safari's [JavaScriptCore](https://webkit.org/blog/10308/speculation-in-javascriptcore/) calls its
 hidden classes Structures, and Firefox's SpiderMonkey calls them Shapes. Both use inline caches,
 and both bail out of optimized code when a speculation fails.
 
-Dart's VM came from Lars Bak and Kasper Lund, after V8. GraalVM's Truffle makes deoptimization the
-center of its design. PyPy gives Python objects maps, Ruby 3.2 gave its objects shapes, and CPython
-3.11 added inline caches to its interpreter. Eliot Miranda's Cog VM for Squeak and Pharo uses
+[Dart](https://dart.dev/)'s VM came from Lars Bak and Kasper Lund, after V8. GraalVM's [Truffle](https://www.graalvm.org/latest/graalvm-as-a-platform/language-implementation-framework/) makes deoptimization the
+center of its design. PyPy gives Python objects maps, Ruby 3.2 gave its objects [shapes](https://bugs.ruby-lang.org/issues/18776), and CPython
+3.11 added [inline caches](https://peps.python.org/pep-0659/) to its interpreter. [Eliot Miranda](https://github.com/eliotmiranda)'s [Cog VM](https://github.com/OpenSmalltalk/opensmalltalk-vm) for Squeak and Pharo uses
 polymorphic inline caches.
 
 Microsoft's CLR now switches running methods from quick code to optimized code by on-stack
@@ -145,15 +147,15 @@ replacement. The .NET runtime's
 [design doc](https://github.com/dotnet/runtime/blob/main/docs/design/features/OnStackReplacement.md)
 says OSR "was pioneered in Self", citing the 1992 deoptimization paper.
 
-Mike Pall announced "adaptive deoptimization support" in LuaJIT 1.1.0 in 2006, using Self as his
-example of code that needs aggressive inlining. LuaJIT 2 has a trace compiler, which compiles the
+[Mike Pall](https://github.com/MikePall) announced "adaptive deoptimization support" in [LuaJIT](https://luajit.org/) 1.1.0 in 2006, using Self as his
+example of code that needs aggressive inlining. LuaJIT 2 has a [trace compiler](https://en.wikipedia.org/wiki/Tracing_just-in-time_compilation), which compiles the
 paths a program actually takes through its loops. For that he credited Gal and Franz and HP's
 Dynamo, and [noted](http://lua-users.org/lists/lua-l/2008-02/msg00051.html) that "the technique
 originated in system emulators doing on-the-fly binary-to-binary translation." Emulators, again.
 
 ### What JavaScript left out
 
-Brendan Eich says Self inspired JavaScript's prototypes, and every time someone repeats it, I
+[Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich) says Self inspired JavaScript's prototypes, and every time someone repeats it, I
 cringe. JavaScript missed the whole point of Self, which is right there in the title of the paper:
 the power of simplicity.
 
@@ -183,9 +185,9 @@ Few people program in Self today. Every Chrome tab and every Node process runs i
 
 ### SqueakJS
 
-Vanessa Freudenberg wrote SqueakJS, a Smalltalk virtual machine in JavaScript. It runs real Squeak
-images (saved snapshots of a whole running Smalltalk system), decades old, in any browser. Her
-paper (DLS 2014, with Dan Ingalls, Tim Felgentreff, Tobias Pape, and Robert Hirschfeld) won the
+[Vanessa Freudenberg](https://github.com/codefrau) wrote [SqueakJS](https://squeak.js.org/), a Smalltalk virtual machine in JavaScript. It runs real Squeak
+images (saved snapshots of a whole running Smalltalk system), decades old, in any browser. [Her
+paper](https://doi.org/10.1145/2775052.2661100) (DLS 2014, with [Dan Ingalls](https://en.wikipedia.org/wiki/Dan_Ingalls), [Tim Felgentreff](https://github.com/timfel), [Tobias Pape](https://github.com/krono), and [Robert Hirschfeld](https://www.hpi.uni-potsdam.de/hirschfeld/)) won the
 Most Notable Paper award ten years later.
 
 Squeak objects are plain JavaScript objects. Her hybrid garbage collector hands as much work as
@@ -193,7 +195,7 @@ possible to the JavaScript collector, keeping for itself only what JavaScript ca
 
 ### Don't fight the host
 
-Talking about WebAssembly on Hacker News in December 2023, she wrote:
+Talking about WebAssembly [on Hacker News in December 2023](https://news.ycombinator.com/item?id=38774277), she wrote:
 
 > I'd much rather make the SqueakJS JIT produce code that the JavaScript JIT can optimize well.
 > That would potentially give us more speed than even WASM.
@@ -210,8 +212,9 @@ Vanessa died in 2025. Every fast path in this emulator is built on her bet.
 ### Slots, guards, and contexts
 
 In 2014, Ungar, with Harold Ossher and Doug Kimelman at IBM Research, took the next subtraction.
-Self removed classes. Korz ("Korz: Simple, Symmetric, Subjective, Context-Oriented Programming",
-Onward! 2014) removes objects.
+Self removed classes. Korz (["Korz: Simple, Symmetric, Subjective, Context-Oriented Programming"](https://doi.org/10.1145/2661136.2661147),
+Onward! 2014) removes objects. Ossher's [FOOL 2014 talk](https://2014.splashcon.org/details/fool2014/4/A-Simple-Symmetric-Subjective-Foundation-for-Object-Aspect-and-Context-Oriented-)
+has the slides.
 
 The behavior stays. What goes is the rule that every piece of behavior belongs to exactly one
 object. In Korz, a program is a flat "sea" of slots that belong to nothing.
@@ -250,18 +253,18 @@ You added a new axis of variation to a running design without touching the middl
 Korz has ancestors besides Self. Multiple dispatch picks a method by looking at the run-time
 values of all the arguments, not just the first one.
 
-In Common Lisp's object system, CLOS, methods belong to generic functions, not to classes.
+In Common Lisp's object system, [CLOS](https://en.wikipedia.org/wiki/Common_Lisp_Object_System), methods belong to generic functions, not to classes.
 `(defmethod collide ((a asteroid) (b ship)) ...)` is a method on `collide` for an asteroid hitting
 a ship, and neither the asteroid nor the ship owns it. A parameter can be specialized on a class
-("is a kind of that"), or, with an `eql` specializer, on one exact object ("is that"). Dylan, Apple's descendant of CLOS, kept multiple dispatch.
+("is a kind of that"), or, with an `eql` specializer, on one exact object ("is that"). [Dylan](https://opendylan.org/), Apple's descendant of CLOS, kept multiple dispatch.
 
 So is the receiver still special? Mostly not, but not completely. When two methods both apply,
 CLOS compares their parameters left to right, so the first argument still gets the first say,
 unless you give the generic function a different `:argument-precedence-order`. Craig Chambers,
-from the Self group, made his language Cecil compare the arguments pointwise instead, and call a
+from the Self group, made his language [Cecil](https://en.wikipedia.org/wiki/Cecil_(programming_language)) compare the arguments pointwise instead, and call a
 tie ambiguous. That's the rule Korz uses.
 
-ScriptX, the multimedia language I worked on at Kaleida Labs, was class-based, not prototype-based,
+[ScriptX](https://en.wikipedia.org/wiki/ScriptX), the multimedia language I worked on at [Kaleida Labs](https://en.wikipedia.org/wiki/Kaleida_Labs), was class-based, not prototype-based,
 and its generic functions worked the CLOS way. Each method declared the class its first argument,
 `self`, had to be, and you could use the same syntax to declare classes for any of the other
 arguments, so dispatch looked at the class of each argument. What it didn't have, as far as I
@@ -269,12 +272,12 @@ remember, was a guard like "this argument equals this" or "is in this range."
 
 #### Changing the rules of dispatch
 
-Gregor Kiczales, Jim des Rivières, and Daniel Bobrow wrote *The Art of the Metaobject Protocol*
+[Gregor Kiczales](https://en.wikipedia.org/wiki/Gregor_Kiczales), Jim des Rivières, and [Daniel Bobrow](https://en.wikipedia.org/wiki/Daniel_G._Bobrow) wrote [*The Art of the Metaobject Protocol*](https://en.wikipedia.org/wiki/The_Art_of_the_Metaobject_Protocol)
 (1991). A metaobject protocol, or MOP, implements CLOS in CLOS: classes, generic functions, and
 methods are themselves objects, so you can change how dispatch works by specializing the
 dispatcher.
 
-Predicate dispatch (Michael Ernst, Craig Kaplan, and Craig Chambers, ECOOP 1998) goes further. A
+[Predicate dispatch](https://homes.cs.washington.edu/~mernst/pubs/dispatching-ecoop98.pdf) ([Michael Ernst](https://homes.cs.washington.edu/~mernst/), Craig Kaplan, and Craig Chambers, ECOOP 1998) goes further. A
 method's guard can be any condition: this parameter is that, or is in that range, or is a kind of
 that, or is in that state. One method overrides another when its condition logically implies the
 other's.
@@ -286,8 +289,8 @@ dimension: an exact device code, a range of addresses, or a group of opcodes.
 
 Every axis you dispatch on is an axis you can cache on. PCL, the portable implementation of CLOS,
 remembered the chosen method in a table keyed on the classes of all the specialized arguments
-(Kiczales and Luis Rodriguez, 1990). That's the multi-argument cousin of Self's inline caches.
-Julia compiles a separate copy of a function for each combination of argument types, which is
+([Kiczales and Luis Rodriguez, 1990](https://doi.org/10.1145/91556.91600)). That's the multi-argument cousin of Self's inline caches.
+[Julia](https://julialang.org/) compiles a separate copy of a function for each combination of argument types, which is
 Self's customization applied to every argument.
 
 Korz's dimensions go one step further. They aren't only the arguments you pass; they're the
@@ -296,13 +299,13 @@ and the compiler turns the tables into code.
 
 ### Aspects without the knives
 
-Aspect-oriented programming, which Kiczales's group at Xerox PARC introduced in 1997, fights the
+[Aspect-oriented programming](https://www.cs.ubc.ca/~gregor/papers/kiczales-ECOOP1997-AOP.pdf), which Kiczales's group at Xerox PARC introduced in 1997, fights the
 same war with knives. It names the problem "crosscutting
 concerns": code like logging or checking that ends up scattered across modules and tangled
 together. Then it cuts in with pointcuts, patterns that pick out places in the program, and a
 compiler weaves advice, the code to run at those places, back through it.
 
-Ossher had been there before Korz. With Peri Tarr, William Harrison, and Stanley Sutton he wrote
+Ossher had been there before Korz. With [Peri Tarr](https://en.wikipedia.org/wiki/Peri_Tarr), William Harrison, and Stanley Sutton he wrote
 ["N Degrees of Separation"](https://dl.acm.org/doi/10.1145/302405.302457) (ICSE 1999). It sliced
 programs into overlapping "hyperslices" along many dimensions, and composed them back together.
 
@@ -315,8 +318,8 @@ And objects come back, as a point of view. Gather the slots by `rcvr` and you se
 them by `assertions` and you see all the assertion checking. Gather them by `user` and you see one
 person's view of the system.
 
-Same sea, different cuts. That's the "subjective" in the title, and the name comes from Alfred
-Korzybski: the map is not the territory.
+Same sea, different cuts. That's the "subjective" in the title, and the name comes from [Alfred
+Korzybski](https://en.wikipedia.org/wiki/Alfred_Korzybski): [the map is not the territory](https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation).
 
 The Korz prototype was written in Self, on the Self VM. Korz appeared in three papers and a talk in
 2014 and 2015. I think it's one of the most mind-expanding ideas in programming languages, and it
@@ -333,10 +336,10 @@ indirect object (`PRSI`), the character acting (`WINNER`), and the room (`HERE`)
 room gets first crack, then the objects, then the verb's default.
 
 That's Korz dispatch: five dimensions, carried implicitly, with the most specific handler winning,
-shipped on Infocom's Z-machine virtual machine in 1979! Say "ROBOT, PUSH BUTTON" in Zork II, and
+shipped on Infocom's [Z-machine](https://en.wikipedia.org/wiki/Z-machine) virtual machine in 1979! Say "ROBOT, PUSH BUTTON" in Zork II, and
 `WINNER` becomes the robot: same verb, same object, different dispatch.
 
-The Sims, which I worked on at Maxis, did the same with two dimensions: `me`, the person acting,
+[The Sims](https://en.wikipedia.org/wiki/The_Sims_(video_game)), which I worked on at Maxis, did the same with two dimensions: `me`, the person acting,
 and `stackObject`, the thing being acted on.
 
 #### Korz, Zork, and Korzybski
@@ -349,14 +352,14 @@ territory.
 ### Cellular automata
 
 A cell's rule dispatches on its neighborhood, and every neighbor is a dimension. That's five for
-the von Neumann neighborhood (a cell and its four edge neighbors), nine for Moore (the full 3×3
+the [von Neumann neighborhood](https://en.wikipedia.org/wiki/Von_Neumann_neighborhood) (a cell and its four edge neighbors), nine for [Moore](https://en.wikipedia.org/wiki/Moore_neighborhood) (the full 3×3
 square).
 
-Toffoli and Margolus's CAM-6 hardware compiled rules written as Forth functions into a lookup
-table, by running the rule for every possible neighborhood and storing the answers. (My CAM6.js
+[Tommaso Toffoli](https://en.wikipedia.org/wiki/Tommaso_Toffoli) and [Norman Margolus](https://en.wikipedia.org/wiki/Norman_Margolus)'s [CAM-6](https://www.donhopkins.com/home/CAM6/) hardware compiled rules written as Forth functions into a lookup
+table, by running the rule for every possible neighborhood and storing the answers. (My [CAM6.js](https://github.com/SimHacker/CAM6)
 does the same compile in the browser.)
 
-The Margolus neighborhood has no center cell at all: a 2×2 block where all four cells update
+The [Margolus neighborhood](https://en.wikipedia.org/wiki/Block_cellular_automaton) has no center cell at all: a 2×2 block where all four cells update
 together, and none of them is "the receiver". Object-oriented programming is "this". A cellular
 automaton is "us".
 
@@ -396,7 +399,7 @@ that runs UNIX is 99 slots, on these selectors:
 
 Every device the cabinet has is on that bus: clock, teletype, paper tape, RB09 disk, the Type 340,
 the Turing engine, the Ultimate Machine, and the hand tracker. So is a file service onto browser
-storage, and the Tiny Titan link that connects one emulated machine to another (named after
+storage, and the [Tiny Titan](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TINY-TITAN.md) link that connects one emulated machine to another (named after
 Cambridge's Titan).
 
 Because an emulator's coordinates are finite, two things that general Korz can't do become
@@ -541,7 +544,7 @@ isn't in the tables and isn't in the compiled code. It costs nothing.
   already read.
 - **Instrumentation.** The same kind of observe slot can count reads, writes, and instruction fetches for every word, to make a heat map of where a program spends its time. It can also
   record who last wrote each word, at what program counter and on what cycle, so a corrupted word
-  can tell you whodunit. That's what Valgrind and AddressSanitizer do for native code, and here it
+  can tell you whodunit. That's what [Valgrind](https://valgrind.org/) and [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) do for native code, and here it
   comes free because we own the machine. These are designed and next in line, and they cost
   nothing until you add them.
 - **Fault injection.** A patch slot can make a word read-only, a sector bad, a device slow.
@@ -563,7 +566,7 @@ hand:
 - **The Type 340 display** reads its display file out of PDP-7 core by DMA, drawing vectors. In
   the emulator it runs ahead of the CPU from a snapshot, optimistically. If the CPU writes a word
   the 340 already read, the 340 rolls back and replays up to the write. That's Time Warp, David
-  Jefferson's optimistic simulation, inside one emulated cabinet.
+  Jefferson's [optimistic simulation](https://doi.org/10.1145/3916.3988), inside one emulated cabinet.
 - **The Turing engine** on device 54 runs Turing machine transition tables stored in PDP-7 core,
   one 18-bit word per (state, symbol), the way the 340 runs display files. It writes its registers
   back to a control block in core, so the PDP-7 reads them as memory-mapped registers. When the
@@ -571,8 +574,8 @@ hand:
   let the PDP-7 page it: a page fault raised by a coprocessor and serviced by its host, like
   SPARC's window overflow traps or a GPU's replayable faults, which turns a few words of core into
   a virtually infinite tape.
-- **The DataHand**, device 57, is named after VPL's DataGlove (Thomas Zimmerman and Jaron Lanier).
-  It uses Google's MediaPipe in the browser to turn a webcam's view of your hand into 18-bit
+- **The DataHand**, device 57, is named after VPL's [DataGlove](https://en.wikipedia.org/wiki/Wired_glove) (Thomas Zimmerman and [Jaron Lanier](https://en.wikipedia.org/wiki/Jaron_Lanier)).
+  It uses Google's [MediaPipe](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker) in the browser to turn a webcam's view of your hand into 18-bit
   registers, in the units PDP-7 Forth's turtle graphics already uses. A Forth program walks the 3D
   turtle through them and draws your hand on the 340, with no floating point of its own.
 
@@ -592,6 +595,60 @@ the lid angle into the accumulator, `UMSB` skips if the machine is busy, and so 
 Nothing in the CPU knows the device exists. The resolver puts its slots in the I/O tables, and the
 compiler handles its IOTs like any other instruction.
 
+### A Forth accelerator
+
+A device doesn't have to use IOTs. It can also sit on the memory bus and answer fetches. The
+cabinet's first coprocessor of that kind runs Mitch Bradley's PDP-7 Forth.
+
+[Forth](https://en.wikipedia.org/wiki/Forth_(programming_language)) compiles a definition into a
+list of addresses, called [threaded code](https://en.wikipedia.org/wiki/Threaded_code). Each cell
+in the list names another word to run. NEXT, the inner interpreter, fetches the next cell and runs
+it. Mitch's NEXT is one PDP-7 instruction, `XCT I 10`: execute the cell that register 10 points
+at, and advance it. A Forth program spends most of its time in NEXT and in small primitives like
+`DUP` and `+`.
+
+The accelerator is a few Korz slots on `read`. One answers the CPU's fetch of NEXT. Instead of
+handing back `XCT I 10`, it walks the thread itself. A call to another definition pushes the
+return address on Forth's return stack. A constant or a variable goes on the data stack. A jump to
+one of 30 known primitives runs in TypeScript, on the same stacks in the same core words that
+Mitch's code uses. For anything else, such as `EMIT`, a 340 IOT, or a `CODE` word you wrote, the
+slot hands the CPU a jump to that word's code, and the PDP-7 runs it.
+
+The other slot answers the fetch of `FIND`, the word that looks a name up in the dictionary. It
+keeps a table of the names in core, checks every hit against its header in core, and returns
+the answer as `FIND` would.
+
+The image in core is exactly the same with or without the accelerator. The slots are given the
+kernel's labels at boot, and they decline whenever the code isn't what they expect: NEXT patched,
+extend mode on, an interrupt waiting, a cell they don't recognize. Then the CPU runs Mitch's code
+as written. A program never has to know the accelerator is there.
+
+It runs one thread cell per memory cycle, a Forth word per cycle, the way
+[Chuck Moore](https://en.wikipedia.org/wiki/Charles_H._Moore)'s Novix chip ran Forth in silicon
+in the 1980s. A loop of 30,000 passes of `I +` takes 890,000 cycles in software, and 107,000 with
+the accelerator. Turned up to eight cells per cycle, it takes 29,000.
+
+Why build it? Three reasons.
+
+- **Room.** SYMELEC fills the PDP-7. Heinz Lemke [wrote](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md)
+  that its models "had to fit in the remaining 3000 words on the PDP 7". Mitch's Forth needs most of 8K too. I want a Forth that
+  lives in SYMELEC's own machine and drives it: calls its routines, reads its rings, and scripts
+  the light pen. That means Forth with almost nothing in core. This accelerator is the first step.
+  The next is the dictionary in ROM, answered by `read` slots in bank 1, so the image itself
+  shrinks.
+- **Proof.** Mitch's kernel is the oracle. The tests run the same Forth sessions on the SIMH-style
+  CPU and on all three Korz levels, with and without the accelerator. They must print the same
+  Teletype output and draw the same picture on the 340.
+- **Price.** A coprocessor is just more slots. Unplug it and they're gone, and the PDP-7 runs at
+  the speed it did before. That's what Korz buys: an accelerator is a context, and when you leave
+  that context it costs nothing.
+
+The Forth page has a menu, **Forth: software / hardware**, beside the CPU menu. Switching reboots
+the same image, with or without the slots. Try
+[Forth with the accelerator](https://hyperties.org/cabinet/forth/?forth=hardware). The design,
+including the ROM dictionary and a ring library in high memory, is in
+[FORTH-DEVICE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/FORTH-DEVICE.md).
+
 ### Displays as views of memory
 
 Displays plug in the same way, from the other side. A display is a view projected out of memory:
@@ -608,7 +665,7 @@ monitor.
 #### The PIXIE ring view
 
 The PIXIE ring view is another one that already runs. PIXIE keeps its circuits in ring structures,
-linked lists of 18-bit words in core, the data structure Sketchpad made famous.
+linked lists of 18-bit words in core, the data structure [Ivan Sutherland](https://en.wikipedia.org/wiki/Ivan_Sutherland)'s [Sketchpad](https://en.wikipedia.org/wiki/Sketchpad) made famous.
 
 The RINGS panel draws those rings in 3D, live from the running PDP-7's core, and lights up the
 cells that just changed. Point at a cell to read it, and click to open it in the memory panel.
@@ -650,14 +707,14 @@ Korz paper again: the variation is a new axis, and nothing in the middle mention
 
 So one sea could be all four machines, and four machines could run side by side in one page, on the
 same program, with `why` showing exactly which slots make them differ. And there's real hardware
-to check the PDP-9 against: Tergav's homebrew PDP-9 clone,
+to check the PDP-9 against: [Gavin Tersteeg](https://github.com/tergav17)'s homebrew PDP-9 clone,
 [RDP-9](https://github.com/tergav17/RDP-9), which
 [runs Mitch Bradley's PDP-7 Forth](https://www.youtube.com/watch?v=oNwXu50hZ44) without
 modification.
 
 ### Machines sharing memory
 
-And then machines sharing memory with each other. MIT's AI Lab had a Rubin 10/11 interface that let
+And then machines sharing memory with each other. MIT's AI Lab had a [Rubin 10/11](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MAPPING.md) interface that let
 the PDP-10 map a PDP-11's memory and device registers into its own address space.
 
 In the cabinet, two machines will share memory through slots that say so, and `why` will tell you
@@ -668,10 +725,10 @@ from one machine to another.
 
 ### Fun first
 
-The cabinet has a manifesto, and its first rule is that tribute, accessibility, and fun beat realism. Realism is one way to reach them.
+The cabinet has a [manifesto](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MANIFESTO.md), and its first rule is that tribute, accessibility, and fun beat realism. Realism is one way to reach them.
 
-The teletype wraps, scrolls, zooms, reads aloud, and takes dictation, which no Teletype Model 33
-ever did. HILO, a guessing game Claude and I wrote for a machine with no screen, takes "ninety
+The teletype wraps, scrolls, zooms, reads aloud, and takes dictation, which no [Teletype Model 33](https://en.wikipedia.org/wiki/Teletype_Model_33)
+ever did. [HILO](https://hyperties.org/cabinet/hilo/), a guessing game Claude and I wrote for a machine with no screen, takes "ninety
 nine" by voice. Listings credit the people who wrote the code, by name, even where the real machine
 had no logins.
 
@@ -697,24 +754,24 @@ kernel.
 
 Mitch's Forth is a virtual machine one layer up. Every cell of a Forth definition is itself a
 PDP-7 instruction: a call to another definition, a jump to a primitive, a constant, or a
-variable's address. Forth's inner interpreter, NEXT, is one instruction, `XCT I 10`: execute the
-cell that register 10 points at, and advance it.
+variable's address. NEXT executes them one at a time, as the Forth accelerator above does.
 
 Today the compiler compiles each cell, but leaves its block for the dispatch loop once per Forth
 word. The next step is to compile a whole Forth definition as one block: follow the thread, inline
-each cell, and stop at a branch or a return. Ian Piumarta and Fabio Riccardi's selective inlining
-(PLDI 1998), and Anton Ertl and David Gregg's dynamic superinstructions, turn threaded code into
+each cell, and stop at a branch or a return. [Ian Piumarta](https://www.piumarta.com/) and Fabio Riccardi's [selective inlining](https://doi.org/10.1145/277650.277743)
+(PLDI 1998), and [Anton Ertl](https://www.complang.tuwien.ac.at/anton/) and David Gregg's [dynamic superinstructions](https://doi.org/10.1145/780822.781162), turn threaded code into
 straight-line native code the same way. Here the native code is JavaScript, and V8 takes it from
 there.
 
-The Apple ][ has the same layering. Steve Wozniak's Sweet 16, in the Integer BASIC ROM, is a
-16-bit machine with sixteen registers, interpreted by 6502 code. Infocom's Z-machine and UCSD
-Pascal's p-code are more of the same.
+The Apple ][ has the same layering. [Steve Wozniak](https://en.wikipedia.org/wiki/Steve_Wozniak)'s [Sweet 16](https://en.wikipedia.org/wiki/SWEET16), in the Integer BASIC ROM, is a
+16-bit machine with sixteen registers, interpreted by 6502 code. Infocom's Z-machine and [UCSD
+Pascal](https://en.wikipedia.org/wiki/UCSD_Pascal)'s p-code are more of the same.
 
 In Korz, a virtual machine on a real one is just more slots. Whoever loads the Forth installs a
 slot that says `XCT I 10` is a step through a thread, and the compiler follows threads. Leave it
 out, and XCT is just XCT. Sweet 16's opcodes would be slots the same way. The compiler never needs
-to know that Forth or Sweet 16 exists. None of this is built yet.
+to know that Forth or Sweet 16 exists. None of this is built yet. The Forth accelerator above
+runs threads in slots at run time; this would compile them.
 
 ### The Apple ][
 
@@ -742,7 +799,7 @@ and weigh what each language gives the job in
 ### Slots proposed by a language model
 
 And one speculative step I can't resist. A language model can propose slots: an accelerator for
-UNIX's idle loop, or for Forth's inner interpreter.
+UNIX's idle loop, or for a word in Forth that the Forth accelerator doesn't know yet.
 
 The proposed slots go in labeled with who proposed them, and run in lockstep against the reference
 machine on recorded traces. If they agree, they stay. If they ever disagree, out they go. That's
@@ -755,11 +812,11 @@ Self's speculate-and-deoptimize, with meanings in place of types.
 The maps we drew on graph paper were never the game. The source code is the territory, and now all
 of it is out in the open:
 
-- Will Crowther's original FORTRAN Adventure, recovered in 2005 from Don Woods's own account on the
+- [Will Crowther](https://en.wikipedia.org/wiki/Will_Crowther)'s original FORTRAN Adventure, recovered in 2005 from [Don Woods](https://en.wikipedia.org/wiki/Don_Woods_(programmer))'s own account on the
   Stanford backup tapes, and examined by Dennis Jerz in
   ["Somewhere Nearby is Colossal Cave"](https://www.digitalhumanities.org/dhq/vol/1/2/000009/000009.html).
 - [ADVENT](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent): Crowther and Woods's
-  Adventure, translated by Donald Knuth into CWEB, a literate program you can read like a book.
+  Adventure, translated by [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) into CWEB, a literate program you can read like a book.
   It's Chapter 27 of his *Selected Papers on Fun and Games*, and the copyright line says "Don Woods
   and Don Knuth". My
   [notes on it](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/sources/adventure-knuth)
@@ -809,7 +866,7 @@ model improvises. As the design doc puts it: "Korz compiles; Zork improvises."
 
 ### Sims advertisements, on the same Korz library
 
-In Will Wright's The Sims, which I worked on at Maxis, the people aren't smart: the objects are.
+In [Will Wright](https://en.wikipedia.org/wiki/Will_Wright_(game_designer))'s The Sims, which I worked on at Maxis, the people aren't smart: the objects are.
 Each object advertises what it can do, and how much each action would satisfy a Sim's needs. The
 fridge advertises food to a hungry Sim, and the bed advertises sleep to a tired one. A Sim looks
 at what's advertised nearby and picks something.
@@ -908,7 +965,7 @@ the tree that performs it, and the needs it advertises to satisfy.
 That's the same shape as a MOOLLM advertisement: a guard, an action, and a score. So the compiler
 that writes `guard_js` and `score_if_js` can also write SimAntics.
 
-[SimObliterator Suite](https://github.com/DnfJeff/SimObliterator_Suite), Dnf_Jeff's open source
+[SimObliterator Suite](https://github.com/DnfJeff/SimObliterator_Suite), [Dnf_Jeff](https://github.com/DnfJeff)'s open source
 toolkit for The Sims 1 files, can already disassemble behavior trees and inject new ones into an
 object, through checked transactions it can roll back. Put the compiler in front of it, and a Sims
 player could describe what an object should do in plain English and get a working object.
@@ -935,7 +992,7 @@ Every demo runs in the browser, from the original code where it survives:
 - [UNIX v0](https://hyperties.org/cabinet/unix/): Thompson and Ritchie's PDP-7 UNIX, booting from the RB09
   disk to the `@` prompt.
 - [Forth](https://hyperties.org/cabinet/forth/): Mitch Bradley's PDP-7 Forth, with his turtle
-  graphics on the 340, after Logo's turtle by Seymour Papert, Wally Feurzeig, and Cynthia Solomon.
+  graphics on the 340, after Logo's turtle by [Seymour Papert](https://en.wikipedia.org/wiki/Seymour_Papert), [Wally Feurzeig](https://en.wikipedia.org/wiki/Wally_Feurzeig), and [Cynthia Solomon](https://en.wikipedia.org/wiki/Cynthia_Solomon).
 - [SYMELEC](https://hyperties.org/cabinet/symelec/): PIXIE's main program, Heinz Lemke's 1972
   editor, driven by the light pen, with its radial menus. This is where the whole emulator started.
 - [DUEL](https://hyperties.org/cabinet/duel/): DECUS 7-40, by Peterson and Viner (Cambridge, 1968), two ships on the
@@ -1001,22 +1058,42 @@ All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightSho
 
 ## References
 
-- David Ungar, Harold Ossher, and Doug Kimelman. *Korz: Simple, Symmetric, Subjective,
-  Context-Oriented Programming*. Onward! 2014.
-- David Ungar and Randall B. Smith. *Self: The Power of Simplicity*. OOPSLA 1987.
-- Urs Hölzle, Craig Chambers, and David Ungar. *Optimizing Dynamically-Typed Object-Oriented
-  Languages with Polymorphic Inline Caches*. ECOOP 1991.
-- Urs Hölzle, Craig Chambers, and David Ungar. *Debugging Optimized Code with Dynamic
-  Deoptimization*. PLDI 1992.
-- Gregor Kiczales and Luis H. Rodriguez Jr. *Efficient Method Dispatch in PCL*. LFP 1990.
-- Gregor Kiczales, Jim des Rivières, and Daniel G. Bobrow. *The Art of the Metaobject Protocol*.
-  MIT Press, 1991.
-- Michael D. Ernst, Craig Kaplan, and Craig Chambers. *Predicate Dispatching: A Unified Theory of
-  Dispatch*. ECOOP 1998.
-- Vanessa Freudenberg, Dan Ingalls, Tim Felgentreff, Tobias Pape, and Robert Hirschfeld. *SqueakJS: A
-  Modern and Practical Smalltalk That Runs in Any Browser*. DLS 2014.
+- David Ungar, Harold Ossher, and Doug Kimelman.
+  [*Korz: Simple, Symmetric, Subjective, Context-Oriented Programming*](https://doi.org/10.1145/2661136.2661147).
+  Onward! 2014. [Talk page](https://2014.onward-conference.org/details/onward2014-papers/8/Korz-Simple-Symmetric-Subjective-Context-Oriented-Programming).
+- Harold Ossher, David Ungar, and Doug Kimelman.
+  [*A Simple, Symmetric, Subjective Foundation for Object-, Aspect- and Context-Oriented Programming*](https://2014.splashcon.org/details/fool2014/4/A-Simple-Symmetric-Subjective-Foundation-for-Object-Aspect-and-Context-Oriented-),
+  with slides. FOOL 2014.
+- David Ungar and Randall B. Smith. [*Self: The Power of Simplicity*](https://bibliography.selflanguage.org/self-power.html).
+  OOPSLA 1987. And [*Self: The Movie*](https://www.youtube.com/watch?v=Ox5P7QyL774), Sun, 1995.
+- Urs Hölzle, Craig Chambers, and David Ungar. [*Optimizing Dynamically-Typed Object-Oriented
+  Languages with Polymorphic Inline Caches*](https://bibliography.selflanguage.org/pics.html). ECOOP 1991.
+- Urs Hölzle, Craig Chambers, and David Ungar. [*Debugging Optimized Code with Dynamic
+  Deoptimization*](https://bibliography.selflanguage.org/dynamic-deoptimization.html). PLDI 1992.
+- Gregor Kiczales and Luis H. Rodriguez Jr. [*Efficient Method Dispatch in PCL*](https://doi.org/10.1145/91556.91600). LFP 1990.
+- Gregor Kiczales, Jim des Rivières, and Daniel G. Bobrow. [*The Art of the Metaobject
+  Protocol*](https://en.wikipedia.org/wiki/The_Art_of_the_Metaobject_Protocol). MIT Press, 1991.
+- Gregor Kiczales, John Lamping, Anurag Mendhekar, Chris Maeda, Cristina Lopes, Jean-Marc Loingtier,
+  and John Irwin. [*Aspect-Oriented Programming*](https://www.cs.ubc.ca/~gregor/papers/kiczales-ECOOP1997-AOP.pdf). ECOOP 1997.
+- Peri Tarr, Harold Ossher, William Harrison, and Stanley M. Sutton Jr.
+  [*N Degrees of Separation: Multi-Dimensional Separation of Concerns*](https://dl.acm.org/doi/10.1145/302405.302457). ICSE 1999.
+- Michael D. Ernst, Craig Kaplan, and Craig Chambers. [*Predicate Dispatching: A Unified Theory of
+  Dispatch*](https://homes.cs.washington.edu/~mernst/pubs/dispatching-ecoop98.pdf). ECOOP 1998.
+- David R. Jefferson. [*Virtual Time*](https://doi.org/10.1145/3916.3988). TOPLAS 7(3), 1985.
+- Ian Piumarta and Fabio Riccardi. [*Optimizing Direct Threaded Code by Selective
+  Inlining*](https://doi.org/10.1145/277650.277743). PLDI 1998.
+- M. Anton Ertl and David Gregg. [*Optimizing Indirect Branch Prediction Accuracy in Virtual
+  Machine Interpreters*](https://doi.org/10.1145/780822.781162). PLDI 2003.
+- Vanessa Freudenberg, Dan Ingalls, Tim Felgentreff, Tobias Pape, and Robert Hirschfeld. [*SqueakJS: A
+  Modern and Practical Smalltalk That Runs in Any Browser*](https://doi.org/10.1145/2775052.2661100). DLS 2014.
+  [Run it](https://squeak.js.org/).
 - Vanessa Freudenberg on Hacker News, [December 2023](https://news.ycombinator.com/item?id=38774277).
-- Tommaso Toffoli and Norman Margolus. *Cellular Automata Machines*. MIT Press, 1987.
-- Donald E. Knuth. *Selected Papers on Fun and Games*. CSLI, 2011. Chapter 27: ADVENT.
-- Dennis G. Jerz. *Somewhere Nearby is Colossal Cave: Examining Will Crowther's Original
-  "Adventure" in Code and in Kentucky*. Digital Humanities Quarterly 1(2), 2007.
+- Tommaso Toffoli and Norman Margolus. *Cellular Automata Machines*. MIT Press, 1987. CAM-6 in the
+  browser: [CAM6.js](https://www.donhopkins.com/home/CAM6/) ([source](https://github.com/SimHacker/CAM6)).
+- Donald E. Knuth. [*Selected Papers on Fun and Games*](https://www-cs-faculty.stanford.edu/~knuth/fg.html).
+  CSLI, 2011. Chapter 27: [ADVENT](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent).
+- Dennis G. Jerz. [*Somewhere Nearby is Colossal Cave: Examining Will Crowther's Original
+  "Adventure" in Code and in Kentucky*](https://www.digitalhumanities.org/dhq/vol/1/2/000009/000009.html).
+  Digital Humanities Quarterly 1(2), 2007.
+- Claude Shannon's [Ultimate Machine](https://www.youtube.com/watch?v=cZ34RDn34Ws), and Marvin
+  Minsky [on inventing it](https://www.webofstories.com/play/marvin.minsky/127).
