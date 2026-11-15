@@ -627,7 +627,24 @@ same picture at any speed.
 
 Mitch Bradley's Forth ([`tapes/pdp7forth/kernel-names-full.s`](tapes/pdp7forth/kernel-names-full.s))
 is the best demonstration of the PDP-7 I know, because it makes its odd features do the work.
-Here's the whole inner interpreter:
+
+**Forth in two minutes.** A Forth program is a series of **words**, separated by spaces. Words
+pass values to each other on a **stack**, a pile where the last value put on (**pushed**) is the
+first taken off (**popped**). Typing `2 3 + .` pushes 2, pushes 3, and then `+` pops both and pushes
+5, and `.` pops the 5 and prints it. You make a new word out of old ones with a **colon definition**:
+`: SQUARE DUP * ;` defines `SQUARE` as "duplicate the top value, then multiply the two", so
+`4 SQUARE .` prints 16. Every word lives in the **dictionary**, a list of words kept in memory,
+each with its name and its **body**, the part that runs. A colon definition's body is a list
+of the words it uses. A **primitive** is a word whose body is machine code instead, like `+` or
+`DUP`. A word that calls another word has to remember where to come back to, and Forth keeps those
+return places on a second stack, the **return stack**, so the values on the **data stack** stay
+out of the way.
+
+The list of words in a body is a **thread**, and one entry in it is a **cell**, one PDP-7 word.
+The **inner interpreter**, called `NEXT`, runs a thread: it steps a pointer called IP (for
+"interpreter pointer") to the next cell and runs that word. In most Forths, a cell holds an
+address, and `NEXT` jumps through it. In Mitch's, each cell is a PDP-7 instruction, and `NEXT` runs
+it. Here's the whole inner interpreter, three instructions:
 
 ```
 next:	xct i 010	" pre-increment IP, execute the thread cell
@@ -635,33 +652,128 @@ next:	xct i 010	" pre-increment IP, execute the thread cell
 	jmp next
 ```
 
-A Forth program is a thread: a list of cells, one per word to run. **Threaded code** usually means
-a loop that reads the next cell and jumps through it. Mitch's thread cells are PDP-7 instructions,
-and `NEXT` executes them with `XCT`:
+Reading it word by word needs two PDP-7 features from Port 1.
 
-- Location 10 is the instruction pointer, IP. It's an auto-index register, so `xct i 010` steps IP
-  and fetches the cell in one instruction.
-- A colon definition's cell is just the address of its body. An address below 8K fits in 13 bits,
-  so the opcode bits above it are zero, and opcode zero is `CAL`. `XCT` runs that cell as an
-  instruction: the return word goes into 20, and the CPU starts at 21, which is `nest`. `nest`
-  doesn't need the return word. IP still points at the cell, so it reads the cell again, and its
-  address field, which `CAL` ignored, is the body to run. `nest` pushes IP on the return stack and
-  points IP at the body. A word's address is its call instruction.
-- A constant's cell is `LAC` of where the value is. `XCT` loads it, and `NEXT` falls through to
-  `dac i 012`, which pushes it.
-- A variable's cell is `LAW` of its address: the cell is its own value, and it gets pushed too.
-- A primitive's cell is `JMP` to its machine code, which ends with `jmp next`.
+The first is the `i` after an instruction, which means **indirect**: the instruction's address
+names a location that holds the address to use, like a pointer. The second is the **auto-index
+registers**, locations 10 through 17. When an instruction goes indirect through one of them, the
+CPU first adds 1 to the address stored there, then uses the new address. Step and fetch happen in
+one instruction.
 
-Locations 11 and 12 are the return stack and data stack pointers, also auto-index registers, so
-`dac i 011` is "push AC on the return stack". And `DO … LOOP` keeps its counter as index minus
-limit, so it counts up to zero, and `ISZ` (increment, skip if zero) does the test:
+Mitch keeps Forth's three pointers in three of them:
+
+| Location | Holds | So |
+| --- | --- | --- |
+| 10 | IP, the address of the current cell | `xct i 010` steps to the next cell and reaches it |
+| 11 | RP, the address of the top of the return stack | `dac i 011` pushes onto the return stack |
+| 12 | SP, the address of the top of the data stack | `dac i 012` pushes onto the data stack |
+
+Both stacks grow upward in memory: pushing adds 1 to the pointer, then stores at the new top.
+
+Now the three lines:
+
+1. `xct i 010` is **XCT**, "execute": it runs the word at an address as if it were the next
+   instruction, then carries on after the `XCT`, unless that word jumped somewhere. With `i 010`,
+   it adds 1 to IP and runs the cell IP now points at.
+2. `dac i 012` is **DAC**, "deposit AC": it stores the **accumulator** (AC), the CPU's one
+   working register, into memory. With `i 012`, it adds 1 to SP and stores AC there: a push.
+3. `jmp next` is **JMP**, "jump": it goes back to the top for the next cell.
+
+What happens next depends on what's in the cell. There are four kinds, and each is an instruction
+that does the right thing when `XCT` runs it.
+
+**A colon definition's cell is just the address of its body.** Running a colon definition means
+calling it: save where we are, and start running its body's thread. The cell does that by itself,
+using an instruction called **CAL**.
+
+The PDP-7 has no call instruction with a stack. It has **JMS**, "jump to subroutine", which stores
+the return address in the subroutine's first word and starts running at the word after it. **CAL**,
+"call", is a JMS that always goes to location 20, whatever address it holds: it stores the return
+address in 20 and starts running at 21. Mitch puts `nest`, his code for calling a colon definition,
+at 21.
+
+Why would a bare address run as CAL? A PDP-7 word is 18 bits. The top four are the **opcode**,
+which says what the instruction does. The next bit is the indirect bit, and the low 13 are the
+address. Every address in the first 8K of core fits in those 13 bits, so a bare address has zeros
+in the opcode, and opcode zero is CAL. So when `XCT` runs a colon definition's cell, the CPU calls
+`nest`.
+
+`nest` ignores the return address CAL left in 20, because `NEXT` doesn't need it. What it needs is
+in IP, which still points at the cell that ran:
+
+```
+nest:	lac 010		" IP -> the CAL cell just executed
+	dac i 011	" push it on the return stack
+	dac t
+	lac i t		" cell = body address (tag 00, "CAL -- bare address")
+	tad m1		" back up one for NEXT's pre-increment
+	dac 010
+	jmp next
+```
+
+In words:
+
+- **LAC**, "load AC", copies a word from memory into AC, so `lac 010` loads IP.
+- `dac i 011` pushes IP onto the return stack. That's where this word will come back to.
+- `dac t` saves IP in a scratch word, `t`.
+- `lac i t` loads the word `t` points at, which is the cell itself. CAL ignored the cell's address
+  field, but `nest` reads it again, and it's the address of the body.
+- **TAD**, "two's complement add", adds a word to AC, and `m1` holds −1. So `tad m1` backs up one,
+  because `NEXT` will add 1 before it reads.
+- `dac 010` points IP at the body.
+- `jmp next` runs the body's first cell.
+
+So a colon definition's address is its own call instruction. The return trip is a primitive called
+`EXIT`: it pops the return stack into IP, and the thread carries on where it left off.
+
+**A constant's cell is LAC of where its value is kept.** `XCT` runs the LAC, which loads the value
+into AC. LAC doesn't jump, so `NEXT` carries on to its second line, `dac i 012`, which pushes the
+value onto the data stack. That second line runs only for constants and variables, because every
+other kind of cell jumps away first.
+
+**A variable's cell is LAW of its address.** **LAW**, "load accumulator with", copies the
+instruction word itself into AC, so the cell is its own value: running it puts 760000 plus the
+variable's address in AC, and `dac i 012` pushes that. A Forth variable pushes the address where
+its value lives, and `@` ("fetch") and `!` ("store") use that address. The 760000 on top doesn't
+get in the way, because when the PDP-7 goes through an address, it uses only the low 13 bits.
+
+**A primitive's cell is JMP to its machine code.** `XCT` runs the jump, and the primitive's code
+runs. It ends with `jmp next`, back to the inner interpreter.
+
+**A loop that counts with ISZ.** Forth's `DO … LOOP` repeats a thread a given number of times.
+`10 0 DO … LOOP` runs its body with the index going from 0 up to 9, and stops before 10, the limit.
+At the start, `DO` pushes the limit and a counter onto the return stack. Mitch's counter is the
+index minus the limit, so it starts negative and counts up to zero. That's the shape of a PDP-7
+instruction, **ISZ**, "increment and skip if zero": it adds 1 to a word in memory, and if the result
+is zero, it skips the next instruction. The end of every loop, `(LOOP)`, is a primitive:
 
 ```
 xloop:	lac 011
 	dac t2
 	isz i t2	" counter++; skips when it reaches 0
 	jmp bran	" not done: loop back
+	lac 011
+	tad m2
+	dac 011		" drop limit and counter
+	isz 010		" step over the inline cell
+	jmp next
 ```
+
+In words:
+
+- `lac 011` and `dac t2` copy RP, the address of the counter on top of the return stack, into a
+  scratch word, `t2`. Location 11 can't be used for this itself, because going indirect through it
+  would add 1 to it first.
+- `isz i t2` adds 1 to the counter. While it's still negative, ISZ doesn't skip, and `jmp bran`
+  goes to `BRANCH`'s code, which jumps the thread back to the top of the loop. The address to
+  jump to is in the cell after `(LOOP)` in the thread.
+- When the counter reaches zero, ISZ skips the `jmp bran`. Then `lac 011`, `tad m2` (`m2` holds
+  −2), and `dac 011` take 2 off RP, which drops the counter and the limit from the return stack.
+- `isz 010` adds 1 to IP, to step over the cell that holds the loop's address. Here ISZ is used
+  only for its add, because IP is never zero.
+- `jmp next` carries on with whatever follows the loop.
+
+`I`, the word that gives the loop's index, adds the limit back to the counter.
 
 [`src/forth.ts`](src/forth.ts) assembles the kernel with the cabinet's `as7` and compiles Mitch's
 Forth prelude into the image. [`tapes/pdp7forth/code.fs`](tapes/pdp7forth/code.fs) writes CODE
