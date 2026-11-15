@@ -82,9 +82,9 @@ Its first line is a rule:
 ```ts
 /** What a CPU puts on the I/O bus. Devices do not see the ISA. */
 export type Iot = {
-	device: number;
-	pulse: number;
-	ac: number;
+    device: number;
+    pulse: number;
+    ac: number;
 };
 ```
 
@@ -99,21 +99,21 @@ optional:
 
 ```ts
 export interface Device {
-	readonly name: string;
-	/** Device-select codes this box claims. Unclaimed IOTs no-op. */
-	readonly iots: readonly number[];
-	iot(req: Iot): IotReply;
-	/** Run `cycles` cycles; `at`, when the backplane knows it, is the number of the first. */
-	tick?(cycles: number, at?: number): void;
-	// …
-	nextEvent?(lead: number): number;
-	coreWrite?(addr: number, point: number): boolean;
-	answersAhead?(code: number, pulse: number): boolean;
-	irq?(): boolean;
-	reset?(): void;
-	power?: boolean;
-	offIot?(req: Iot): IotReply;
-	bindSwitches?(bindings: readonly SwitchBinding[]): void;
+    readonly name: string;
+    /** Device-select codes this box claims. Unclaimed IOTs no-op. */
+    readonly iots: readonly number[];
+    iot(req: Iot): IotReply;
+    /** Run `cycles` cycles; `at`, when the backplane knows it, is the number of the first. */
+    tick?(cycles: number, at?: number): void;
+    // …
+    nextEvent?(lead: number): number;
+    coreWrite?(addr: number, point: number): boolean;
+    answersAhead?(code: number, pulse: number): boolean;
+    irq?(): boolean;
+    reset?(): void;
+    power?: boolean;
+    offIot?(req: Iot): IotReply;
+    bindSwitches?(bindings: readonly SwitchBinding[]): void;
 }
 ```
 
@@ -134,24 +134,24 @@ The simple way is still there, as the oracle: tick every device every cycle and 
 interrupt flag every step.
 
 ```ts
-	private stepEveryCycle(): Step {
-		// One IRQ line: the OR of every raised device flag. The ISA owns
-		// what an interrupt does; the backplane only carries the wire.
-		let irq = false;
-		// …
-		const result: Step = this.cpu.power === false ? { halt: true } : this.cpu.step();
-		if (result.iot) {
-			const reply = this.dispatch(result.iot);
-			this.cpu.ac = reply.ac;
-			if (reply.skip) this.cpu.skip();
-		}
-		for (let i = 0; i < devices.length; i += 1) {
-			const d = devices[i]!;
-			if (d.power !== false) d.tick?.(1, this.cycles);
-		}
-		this.cycles += 1;
-		return result;
-	}
+private stepEveryCycle(): Step {
+    // One IRQ line: the OR of every raised device flag. The ISA owns
+    // what an interrupt does; the backplane only carries the wire.
+    let irq = false;
+    // …
+    const result: Step = this.cpu.power === false ? { halt: true } : this.cpu.step();
+    if (result.iot) {
+        const reply = this.dispatch(result.iot);
+        this.cpu.ac = reply.ac;
+        if (reply.skip) this.cpu.skip();
+    }
+    for (let i = 0; i < devices.length; i += 1) {
+        const d = devices[i]!;
+        if (d.power !== false) d.tick?.(1, this.cycles);
+    }
+    this.cycles += 1;
+    return result;
+}
 ```
 
 The fast way is **event-driven**. Each device says when its next event is due, and the backplane
@@ -161,19 +161,19 @@ until someone sends it an IOT. Before an IOT reaches a device, the backplane bri
 to the current cycle, so no one ever sees a device behind:
 
 ```ts
-	private dispatch(iot: Iot): IotReply {
-		// CAF 703302 — clear all flags. Backplane-level, like SIMH's reset_all.
-		if (iot.device === 0o33 && iot.pulse === 0o02) {
-			this.resetDevices();
-			return { ac: iot.ac };
-		}
-		const i = this.devices.findIndex((d) => d.iots.includes(iot.device));
-		if (i < 0) return { ac: iot.ac };
-		const box = this.devices[i]!;
-		if (!box.answersAhead?.(iot.device, iot.pulse)) this.syncUnit(i);
-		if (box.power === false) return box.offIot?.(iot) ?? { ac: iot.ac };
-		return box.iot(iot);
-	}
+private dispatch(iot: Iot): IotReply {
+    // CAF 703302 — clear all flags. Backplane-level, like SIMH's reset_all.
+    if (iot.device === 0o33 && iot.pulse === 0o02) {
+        this.resetDevices();
+        return { ac: iot.ac };
+    }
+    const i = this.devices.findIndex((d) => d.iots.includes(iot.device));
+    if (i < 0) return { ac: iot.ac };
+    const box = this.devices[i]!;
+    if (!box.answersAhead?.(iot.device, iot.pulse)) this.syncUnit(i);
+    if (box.power === false) return box.offIot?.(iot) ?? { ac: iot.ac };
+    return box.iot(iot);
+}
 ```
 
 The hard part is a device that answers `nextEvent` by **running ahead**, as the Type 340 display
@@ -182,17 +182,17 @@ cycles". If the CPU then writes a core word the display already read while it wa
 the display is wrong. So the backplane asks every running-ahead device before each core write:
 
 ```ts
-	/** Ahead of each core write: bring back any unit that has read the word too far ahead. */
-	private readonly beforeWrite = (addr: number): void => {
-		const w = this.watchers;
-		const by = this.ticking;
-		for (let k = 0; k < w.length; k += 1) {
-			const i = w[k]!;
-			if (i === by) continue;
-			const point = by >= 0 && i < by ? this.cycles + 1 : this.cycles;
-			if (this.devices[i]!.coreWrite!(addr, point)) this.syncTo(i, point);
-		}
-	};
+/** Ahead of each core write: bring back any unit that has read the word too far ahead. */
+private readonly beforeWrite = (addr: number): void => {
+    const w = this.watchers;
+    const by = this.ticking;
+    for (let k = 0; k < w.length; k += 1) {
+        const i = w[k]!;
+        if (i === by) continue;
+        const point = by >= 0 && i < by ? this.cycles + 1 : this.cycles;
+        if (this.devices[i]!.coreWrite!(addr, point)) this.syncTo(i, point);
+    }
+};
 ```
 
 Look at `point`. Within one cycle the CPU runs first, then the devices in order. A write by device
@@ -250,8 +250,8 @@ anything an instruction can't name directly.
 word when a condition holds. So "if AC is zero, go to DONE" is written as two words:
 
 ```
-	sna		" skip if AC is not zero
-	jmp done	" so this runs only when AC is zero
+sna             " skip if AC is not zero
+jmp done        " so this runs only when AC is zero
 ```
 
 ### The machine itself
@@ -274,7 +274,7 @@ jump changes banks:
 ```ts
 /** PC + 1 wraps within its 8K bank; only a jump changes banks. */
 export function incr(pc: number): number {
-	return (pc & BANK) | ((pc + 1) & ADDR);
+    return (pc & BANK) | ((pc + 1) & ADDR);
 }
 ```
 
@@ -306,17 +306,17 @@ memory one word at a time, which is how the PDP-7 walks an array or a stack. The
 machine's index registers, and they're ordinary memory words:
 
 ```ts
-	protected resolveIndirect(ma: number, jmp: boolean): number {
-		let t: number;
-		if ((ma & ADDR & ~0o7) === 0o10) {
-			t = (this.read(ma) + 1) & WMASK;
-			this.write(ma, t);
-		} else {
-			t = this.read(ma);
-		}
-		// …
-		return this.extend ? t & XADDR : (ma & BANK) | (t & ADDR);
-	}
+protected resolveIndirect(ma: number, jmp: boolean): number {
+    let t: number;
+    if ((ma & ADDR & ~0o7) === 0o10) {
+        t = (this.read(ma) + 1) & WMASK;
+        this.write(ma, t);
+    } else {
+        t = this.read(ma);
+    }
+    // …
+    return this.extend ? t & XADDR : (ma & BANK) | (t & ADDR);
+}
 ```
 
 **Subroutines without a stack.** A modern CPU pushes a return address on a stack. The PDP-7 has no
@@ -326,9 +326,9 @@ first word. (That's why a PDP-7 subroutine can't call itself: the second call wo
 first one's return address.) The stored word also carries the link and the extend-mode flag:
 
 ```ts
-	protected jmsWord(): number {
-		return ((this.link & 1) << 17) | (this.extend ? EXTEND_BIT : 0) | (this.pc & XADDR);
-	}
+protected jmsWord(): number {
+    return ((this.link & 1) << 17) | (this.extend ? EXTEND_BIT : 0) | (this.pc & XADDR);
+}
 ```
 
 `**CAL`, a call to a fixed place.** `CAL` does exactly what `JMS 20` would (20 octal, location
@@ -364,22 +364,22 @@ them together:
 The code decodes each group of bits with its own switch:
 
 ```ts
-		switch ((ir >> 6) & 0o17) { // skip group, IR<8:11>
-			case 0o00: break;
-			case 0o01: skp = (lac & SIGN) !== 0; break; // SMA
-			case 0o02: skp = (lac & WMASK) === 0; break; // SZA
-			// …
-		}
+switch ((ir >> 6) & 0o17) { // skip group, IR<8:11>
+    case 0o00: break;
+    case 0o01: skp = (lac & SIGN) !== 0; break; // SMA
+    case 0o02: skp = (lac & WMASK) === 0; break; // SZA
+    // …
+}
 
-		switch (((ir >> 9) & 0o14) | (ir & 0o3)) { // CLA/CLL/CMA/CML, IR<5:6,16:17>
-			// …
-		}
+switch (((ir >> 9) & 0o14) | (ir & 0o3)) { // CLA/CLL/CMA/CML, IR<5:6,16:17>
+    // …
+}
 
-		if (ir & 0o4) lac |= this.switches; // OAS; LAS is CLA OAS
+if (ir & 0o4) lac |= this.switches; // OAS; LAS is CLA OAS
 
-		switch (((ir >> 8) & 0o4) | ((ir >> 3) & 0o3)) { // rotates, IR<7,13:14>
-			// …
-		}
+switch (((ir >> 8) & 0o4) | ((ir >> 3) & 0o3)) { // rotates, IR<7,13:14>
+    // …
+}
 ```
 
 (`IR<8:11>` is DEC's way of naming bits 8 to 11 of the instruction register. DEC numbers bits from
@@ -427,21 +427,21 @@ its next interrupt by storing a negative number in location 7, and SYMELEC does 
 how fast its cursor blinks:
 
 ```ts
-	tick(cycles: number): void {
-		this.accum += cycles;
-		while (this.accum >= this.cyclesPerTick) {
-			this.accum -= this.cyclesPerTick;
-			if (!this.on) continue;
-			const n = (this.cpu.read(0o7) + 1) & 0o777777;
-			this.cpu.write(0o7, n);
-			if (n === 0) this.flag = true;
-		}
-	}
+tick(cycles: number): void {
+    this.accum += cycles;
+    while (this.accum >= this.cyclesPerTick) {
+        this.accum -= this.cyclesPerTick;
+        if (!this.on) continue;
+        const n = (this.cpu.read(0o7) + 1) & 0o777777;
+        this.cpu.write(0o7, n);
+        if (n === 0) this.flag = true;
+    }
+}
 
-	/** The next tick of the line clock bumps location 7; stopped, nothing happens until CLON. */
-	nextEvent(): number {
-		return this.on ? this.cyclesPerTick - this.accum : Infinity;
-	}
+/** The next tick of the line clock bumps location 7; stopped, nothing happens until CLON. */
+nextEvent(): number {
+    return this.on ? this.cyclesPerTick - this.accum : Infinity;
+}
 ```
 
 At 1.75 µs a cycle, a sixtieth of a second is about 9,524 cycles; the default is 9,500.
@@ -466,25 +466,25 @@ snapshot, draws ahead up to `lead` cycles, and keeps a note of the cycle at whic
 display address:
 
 ```ts
-	nextEvent(lead = 1): number {
-		if (!this.enabled || this.status !== 0) return Infinity;
-		if (lead <= 1 || this.wordsPerTick !== 1) return 1;
-		const max = Math.min(lead, LEAD);
-		this.ahead = this.snapshot();
-		let k = 0;
-		while (k < max && !this.storesNext()) {
-			this.ownClock += 1;
-			this.cycle();
-			this.time += 1;
-			k += 1;
-			if (this.status !== 0) break;
-		}
-		// …
-	}
+nextEvent(lead = 1): number {
+    if (!this.enabled || this.status !== 0) return Infinity;
+    if (lead <= 1 || this.wordsPerTick !== 1) return 1;
+    const max = Math.min(lead, LEAD);
+    this.ahead = this.snapshot();
+    let k = 0;
+    while (k < max && !this.storesNext()) {
+        this.ownClock += 1;
+        this.cycle();
+        this.time += 1;
+        k += 1;
+        if (this.status !== 0) break;
+    }
+    // …
+}
 
-	coreWrite(addr: number, _point: number): boolean {
-		return this.ahead !== null && this.readAt[addr & ADDR]! >= this.ahead.time;
-	}
+coreWrite(addr: number, _point: number): boolean {
+    return this.ahead !== null && this.readAt[addr & ADDR]! >= this.ahead.time;
+}
 ```
 
 If the CPU writes a word the 340 read ahead, `coreWrite` says so, and the backplane rolls the 340
@@ -647,9 +647,9 @@ address, and `NEXT` jumps through it. In Mitch's, each cell is a PDP-7 instructi
 it. Here's the whole inner interpreter, three instructions:
 
 ```
-next:	xct i 010	" pre-increment IP, execute the thread cell
-	dac i 012	" push AC (only reached by constant/variable cells)
-	jmp next
+next:   xct i 010       " pre-increment IP, execute the thread cell
+        dac i 012       " push AC (only reached by constant/variable cells)
+        jmp next
 ```
 
 Reading it word by word needs two PDP-7 features from Port 3.
@@ -704,13 +704,13 @@ in the opcode, and opcode zero is CAL. So when `XCT` runs a colon definition's c
 in IP, which still points at the cell that ran:
 
 ```
-nest:	lac 010		" IP -> the CAL cell just executed
-	dac i 011	" push it on the return stack
-	dac t
-	lac i t		" cell = body address (tag 00, "CAL -- bare address")
-	tad m1		" back up one for NEXT's pre-increment
-	dac 010
-	jmp next
+nest:   lac 010         " IP -> the CAL cell just executed
+        dac i 011       " push it on the return stack
+        dac t
+        lac i t         " cell = body address (tag 00, "CAL -- bare address")
+        tad m1          " back up one for NEXT's pre-increment
+        dac 010
+        jmp next
 ```
 
 In words:
@@ -750,15 +750,15 @@ instruction, **ISZ**, "increment and skip if zero": it adds 1 to a word in memor
 is zero, it skips the next instruction. The end of every loop, `(LOOP)`, is a primitive:
 
 ```
-xloop:	lac 011
-	dac t2
-	isz i t2	" counter++; skips when it reaches 0
-	jmp bran	" not done: loop back
-	lac 011
-	tad m2
-	dac 011		" drop limit and counter
-	isz 010		" step over the inline cell
-	jmp next
+xloop:  lac 011
+        dac t2
+        isz i t2        " counter++; skips when it reaches 0
+        jmp bran        " not done: loop back
+        lac 011
+        tad m2
+        dac 011         " drop limit and counter
+        isz 010         " step over the inline cell
+        jmp next
 ```
 
 In words:
@@ -796,10 +796,10 @@ unconstrained:
 
 ```ts
 export type Dim = {
-	readonly name: string;
-	readonly width: number;
-	/** Enum members, in value order. A guard may name them. */
-	readonly names?: readonly string[];
+    readonly name: string;
+    readonly width: number;
+    /** Enum members, in value order. A guard may name them. */
+    readonly names?: readonly string[];
 };
 
 /** A number, an enum member's name, a mask and match, or a span. A list is their union. */
@@ -843,13 +843,13 @@ dimension. That's the entire rule, and it's a subset test:
 
 ```ts
 function subset(a: DimSet, b: DimSet): boolean {
-	if (b === null) return true;
-	if (a === null) return false;
-	return a.every((w, i) => (w & ~b[i]!) === 0);
+    if (b === null) return true;
+    if (a === null) return false;
+    return a.every((w, i) => (w & ~b[i]!) === 0);
 }
 
 function le<C>(a: Slot<C>, b: Slot<C>): boolean {
-	return a.sets.every((s, d) => subset(s, b.sets[d]!));
+    return a.sets.every((s, d) => subset(s, b.sets[d]!));
 }
 ```
 
@@ -864,22 +864,22 @@ most specific, and so on, and each slot decides whether to call `next` and run t
 the guards instead of by whoever loaded last:
 
 ```ts
-	chain(selector: string, c: C): Slot<C>[] {
-		const matching = (this.bySelector.get(selector) ?? []).filter((s) => this.matches(s, c));
-		const out: Slot<C>[] = [];
-		for (const layer of LAYERS) {
-			let rest = matching.filter((s) => s.layer === layer);
-			let first = true;
-			while (rest.length) {
-				const min = rest.find((m) => rest.every((o) => o === m || le(m, o)));
-				// …
-				out.push(min);
-				rest = rest.filter((s) => s !== min);
-				first = false;
-			}
-		}
-		return out;
-	}
+chain(selector: string, c: C): Slot<C>[] {
+    const matching = (this.bySelector.get(selector) ?? []).filter((s) => this.matches(s, c));
+    const out: Slot<C>[] = [];
+    for (const layer of LAYERS) {
+        let rest = matching.filter((s) => s.layer === layer);
+        let first = true;
+        while (rest.length) {
+            const min = rest.find((m) => rest.every((o) => o === m || le(m, o)));
+            // …
+            out.push(min);
+            rest = rest.filter((s) => s !== min);
+            first = false;
+        }
+    }
+    return out;
+}
 ```
 
 **The interpreter.** `dispatch` computes the chain and calls it. It's slow and obviously right,
@@ -892,8 +892,8 @@ the overlap, and if it fails, it puts the sea back as it was and throws an error
 two slots and the point. Installing is a transaction:
 
 ```ts
-	/** Add slots as one transaction: all of them, or none and an AmbiguityError naming the conflict. */
-	install(specs: readonly SlotSpec<C>[]): Slot<C>[] {
+/** Add slots as one transaction: all of them, or none and an AmbiguityError naming the conflict. */
+install(specs: readonly SlotSpec<C>[]): Slot<C>[] {
 ```
 
 **Resolution.** Here's the idea that makes it fast. For one selector, only the dimensions some of
@@ -903,16 +903,16 @@ the chain at every point ahead of time, and the call becomes a table lookup. Equ
 has 4,096 entries and four distinct chains:
 
 ```ts
-	resolve(selector: string, limit = TABLE_LIMIT): Resolved<C> | null {
-		const plan = this.plan(selector, limit);
-		if (plan === null) return null;
-		const { rel, kinds, size } = plan;
-		const compressed = kinds.some((k) => k !== null);
-		const point = Object.fromEntries(this.dims.map((d) => [d.name, 0])) as Record<string, number>;
-		const interned = new Map<string, Entry<C>>();
-		const table = new Array<Entry<C>>(size);
-		for (let i = 0; i < size; i += 1) {
-			// …
+resolve(selector: string, limit = TABLE_LIMIT): Resolved<C> | null {
+    const plan = this.plan(selector, limit);
+    if (plan === null) return null;
+    const { rel, kinds, size } = plan;
+    const compressed = kinds.some((k) => k !== null);
+    const point = Object.fromEntries(this.dims.map((d) => [d.name, 0])) as Record<string, number>;
+    const interned = new Map<string, Entry<C>>();
+    const table = new Array<Entry<C>>(size);
+    for (let i = 0; i < size; i += 1) {
+        // …
 ```
 
 `plan` decides which dimensions the table ranges over and how big it is, and returns null when
@@ -931,17 +931,17 @@ each value to its kind, and the table ranges over kinds:
 ```ts
 /** Values are one kind when every slot's set on dimension `d` holds all of them or none. Null past 65,536 kinds. */
 function kindsOf<C>(slots: readonly Slot<C>[], d: number, width: number): Kinds | null {
-	const sets = slots.map((s) => s.sets[d]!).filter((s) => s !== null);
-	const map = new Uint16Array(1 << width);
-	const reps: number[] = [];
-	const ids = new Map<string, number>();
-	for (let v = 0; v < 1 << width; v += 1) {
-		let key = "";
-		for (const s of sets) key += has(s, v) ? "1" : "0";
-		// …
-		map[v] = id;
-	}
-	return { map, reps };
+    const sets = slots.map((s) => s.sets[d]!).filter((s) => s !== null);
+    const map = new Uint16Array(1 << width);
+    const reps: number[] = [];
+    const ids = new Map<string, number>();
+    for (let v = 0; v < 1 << width; v += 1) {
+        let key = "";
+        for (const s of sets) key += has(s, v) ? "1" : "0";
+        // …
+        map[v] = id;
+    }
+    return { map, reps };
 }
 ```
 
@@ -971,10 +971,10 @@ Here's the code that writes a generated method. `${expr}` is the index expressio
 `${name}` is the selector's name:
 
 ```ts
-		m = new Function(`return function korz_${name}(c) {
-	const e = this[${JSON.stringify(tableKey(selector))}][${expr}];
-	const v = e.k === null ? e.r(c, e.p) : e.r(c, () => e.k(c));
-	return v === undefined ? 0 : v;
+m = new Function(`return function korz_${name}(c) {
+    const e = this[${JSON.stringify(tableKey(selector))}][${expr}];
+    const v = e.k === null ? e.r(c, e.p) : e.r(c, () => e.k(c));
+    return v === undefined ? 0 : v;
 };
 //# sourceURL=korz/${name}.js`)() as (c: never) => number;
 ```
@@ -1027,13 +1027,13 @@ whether the table is out of date. A placeholder that checked and then rebuilt wo
 function seen by the same call site, which would make the site megamorphic for good:
 
 ```ts
-	/**
-	 * Point each named field of `target` at its selector's resolved dispatch, with no check per call.
-	 * Each install or remove rebuilds the tables of the selectors it touched before it returns, so a
-	 * call site only ever sees the shared generated methods: a stub called once through a site V8 has
-	 * specialized on one target would make that site megamorphic for good.
-	 */
-	bind<K extends string>(target: Dispatchers<C, K>, selectors: readonly K[], limit?: number): void {
+/**
+ * Point each named field of `target` at its selector's resolved dispatch, with no check per call.
+ * Each install or remove rebuilds the tables of the selectors it touched before it returns, so a
+ * call site only ever sees the shared generated methods: a stub called once through a site V8 has
+ * specialized on one target would make that site megamorphic for good.
+ */
+bind<K extends string>(target: Dispatchers<C, K>, selectors: readonly K[], limit?: number): void {
 ```
 
 **Asking why.** `why(selector, context)` lists every slot of a selector, whether it matched, and why
@@ -1050,24 +1050,24 @@ fact about the access:
 
 ```ts
 export const PDP7_DIMS: readonly Dim[] = [
-	{ name: "op", width: 4 },
-	{ name: "ind", width: 1 },
-	/** OPR skip group, IR<8:11>. */
-	{ name: "skp", width: 4 },
-	/** OPR CLA/CLL/CMA/CML, IR<5:6,16:17>. */
-	{ name: "cc", width: 4 },
-	/** OPR rotates, IR<7,13:14>. */
-	{ name: "rot", width: 3 },
-	{ name: "addr", width: 15 },
-	{ name: "who", width: 2, names: ["cpu", "device", "debugger"] },
-	/** A read is a data read or an instruction fetch; a watch on fetches guards `access: "fetch"`. */
-	{ name: "access", width: 1, names: ["read", "fetch"] },
-	{ name: "device", width: 6 },
-	{ name: "pulse", width: 6 },
-	/** Pulse bits 060: the group a device splits its codes into. */
-	{ name: "sub", width: 2 },
-	/** The timed pulse being fired: IOP1, IOP2 or IOP4. */
-	{ name: "iop", width: 3 },
+    { name: "op", width: 4 },
+    { name: "ind", width: 1 },
+    /** OPR skip group, IR<8:11>. */
+    { name: "skp", width: 4 },
+    /** OPR CLA/CLL/CMA/CML, IR<5:6,16:17>. */
+    { name: "cc", width: 4 },
+    /** OPR rotates, IR<7,13:14>. */
+    { name: "rot", width: 3 },
+    { name: "addr", width: 15 },
+    { name: "who", width: 2, names: ["cpu", "device", "debugger"] },
+    /** A read is a data read or an instruction fetch; a watch on fetches guards `access: "fetch"`. */
+    { name: "access", width: 1, names: ["read", "fetch"] },
+    { name: "device", width: 6 },
+    { name: "pulse", width: 6 },
+    /** Pulse bits 060: the group a device splits its codes into. */
+    { name: "sub", width: 2 },
+    /** The timed pulse being fired: IOP1, IOP2 or IOP4. */
+    { name: "iop", width: 3 },
 ];
 ```
 
@@ -1081,10 +1081,10 @@ the process. A slot gets its machine as `c.cpu`, so one set of slot functions se
 machine:
 
 ```ts
-			op("lac", (c) => { const m = c.cpu; m.ac = m.read(c.ea); }),
-			op("xor", (c) => { const m = c.cpu; m.ac = (m.ac ^ m.read(c.ea)) & WMASK; }),
-			// …
-			op("jmp", (c) => { c.cpu.pc = c.ea; }),
+op("lac", (c) => { const m = c.cpu; m.ac = m.read(c.ea); }),
+op("xor", (c) => { const m = c.cpu; m.ac = (m.ac ^ m.read(c.ea)) & WMASK; }),
+// …
+op("jmp", (c) => { c.cpu.pc = c.ea; }),
 ```
 
 **Effective addresses are where specificity shines.** The base case is a direct address.
@@ -1092,12 +1092,12 @@ Indirect overrides it for the memory-reference opcodes, `JMP I` overrides that (
 mode's EMIR), and `CAL` overrides direct addressing:
 
 ```ts
-			{ selector: "ea", by: "direct: the address field in this word's bank", run: direct, emit: T7.direct },
-			{ selector: "ea", guard: { ind: 1, op: span(0, OP.jmp + 1) }, by: "indirect, auto-indexing 10-17",
-				run: (c) => c.cpu.resolveIndirect(direct(c), false), emit: T7.indirect },
-			{ selector: "ea", guard: { ind: 1, op: OP.jmp }, by: "JMP I: indirect, EMIR restores extend mode",
-				run: (c) => c.cpu.resolveIndirect(direct(c), true), emit: T7.jmpIndirect },
-			{ selector: "ea", guard: { op: OP.cal, ind: 0 }, by: "CAL: 20, absolute in extend mode", run: (c) => cal(c.cpu), emit: T7.calEa },
+{ selector: "ea", by: "direct: the address field in this word's bank", run: direct, emit: T7.direct },
+{ selector: "ea", guard: { ind: 1, op: span(0, OP.jmp + 1) }, by: "indirect, auto-indexing 10-17",
+    run: (c) => c.cpu.resolveIndirect(direct(c), false), emit: T7.indirect },
+{ selector: "ea", guard: { ind: 1, op: OP.jmp }, by: "JMP I: indirect, EMIR restores extend mode",
+    run: (c) => c.cpu.resolveIndirect(direct(c), true), emit: T7.jmpIndirect },
+{ selector: "ea", guard: { op: OP.cal, ind: 0 }, by: "CAL: 20, absolute in extend mode", run: (c) => cal(c.cpu), emit: T7.calEa },
 ```
 
 Read the guards as a lattice: `{}` is above `{ ind: 1, op: 0-14 }`, which is above
@@ -1108,19 +1108,19 @@ The `by` strings are what `why` shows you.
 selector, with sixteen, sixteen, and eight slots, and the `OPR` slot calls all three:
 
 ```ts
-	private operate(c: K7): void {
-		const ir = c.ir;
-		c.lac = this.lac();
-		c.skp = (ir >> 6) & 0o17;
-		const skp = this.go.skip(c);
-		c.cc = ((ir >> 9) & 0o14) | (ir & 0o3);
-		c.lac = this.go.cc(c);
-		if (ir & 0o4) c.lac |= this.switches; // OAS; LAS is CLA OAS
-		c.rot = ((ir >> 8) & 0o4) | ((ir >> 3) & 0o3);
-		this.setLac(this.go.rot(c));
-		if (ir & 0o40) this.halted = true; // HLT
-		if (skp) this.pc = incr(this.pc);
-	}
+private operate(c: K7): void {
+    const ir = c.ir;
+    c.lac = this.lac();
+    c.skp = (ir >> 6) & 0o17;
+    const skp = this.go.skip(c);
+    c.cc = ((ir >> 9) & 0o14) | (ir & 0o3);
+    c.lac = this.go.cc(c);
+    if (ir & 0o4) c.lac |= this.switches; // OAS; LAS is CLA OAS
+    c.rot = ((ir >> 8) & 0o4) | ((ir >> 3) & 0o3);
+    this.setLac(this.go.rot(c));
+    if (ir & 0o40) this.halted = true; // HLT
+    if (skp) this.pc = incr(this.pc);
+}
 ```
 
 **The CPU's own IOTs are on the same bus as the devices.** `IOF`, `ION`, and memory extension
@@ -1130,13 +1130,13 @@ each device either installs its own slots or answers through `iot()`. Each devic
 **patch-layer** slot that answers for the device while its power is off:
 
 ```ts
-		...box.devices.flatMap((d): SlotSpec<K7>[] => [
-			...d.iots.map((device): SlotSpec<K7> =>
-				({ selector: "iot", guard: { device }, layer: "patch", by: `power: ${d.name} off`, run: off(d) })),
-			...(isKorzDevice(d)
-				? d.korzSlots(cpu)
-				: d.iots.map((device): SlotSpec<K7> => ({ selector: "iot", guard: { device }, by: `device ${d.name}: iot()`, run: call(d) }))),
-		]),
+...box.devices.flatMap((d): SlotSpec<K7>[] => [
+    ...d.iots.map((device): SlotSpec<K7> =>
+        ({ selector: "iot", guard: { device }, layer: "patch", by: `power: ${d.name} off`, run: off(d) })),
+    ...(isKorzDevice(d)
+        ? d.korzSlots(cpu)
+        : d.iots.map((device): SlotSpec<K7> => ({ selector: "iot", guard: { device }, by: `device ${d.name}: iot()`, run: call(d) }))),
+]),
 ```
 
 That's why the SLOTS panel shows "power: type340 off → 340 device 06: IOP1, IOP2, IOP4" for an
@@ -1146,12 +1146,12 @@ IOT to the display: the power slot runs first and calls `next` because the 340 i
 from Port 2, is one slot in the `observe` layer, installed only while some device runs ahead:
 
 ```ts
-		this.sea.install([{ selector: "write", layer: "observe", by: WATCH, emit: T7.watch, run: (c, next) => {
-			const { addr, value, who, access } = c;
-			before(addr);
-			// …
-			return next();
-		} }]);
+this.sea.install([{ selector: "write", layer: "observe", by: WATCH, emit: T7.watch, run: (c, next) => {
+    const { addr, value, who, access } = c;
+    before(addr);
+    // …
+    return next();
+} }]);
 ```
 
 ## Port 9: the I/O bus as slots
@@ -1163,24 +1163,24 @@ one of them. So most devices are one slot per gate, on a selector named `iop`:
 ```ts
 /** The device answers its code with timed pulses. */
 export const timed = (bus: IopBus, device: number, by: string): SlotSpec<Iop> =>
-	({ selector: "iot", guard: { device }, by: `${by}: IOP1, IOP2, IOP4`, run: (c) => bus.pulses(c) });
+    ({ selector: "iot", guard: { device }, by: `${by}: IOP1, IOP2, IOP4`, run: (c) => bus.pulses(c) });
 
 /** One gate: what the device does on one pulse of one code, optionally in one group. */
 export const gate = (device: number, iop: 1 | 2 | 4, by: string, run: Run<Iop>, sub?: number | readonly number[]): SlotSpec<Iop> =>
-	({ selector: "iop", guard: sub === undefined ? { device, iop } : { device, iop, sub }, by, run });
+    ({ selector: "iop", guard: sub === undefined ? { device, iop } : { device, iop, sub }, by, run });
 ```
 
 Here's the clock's whole instruction set, which reads like the page of the manual it came from:
 
 ```ts
-	korzSlots(bus: IopBus) {
-		return [
-			timed(bus, 0o00, "clock"),
-			skipIf(0o00, "clock CLSF: skip on tick", () => this.flag),
-			gate(0o00, 4, "clock CLOF: clear flag, stop", () => { this.flag = false; this.on = false; }, [0, 1]),
-			gate(0o00, 4, "clock CLON: clear flag, run", () => { this.flag = false; this.on = true; }, [2, 3]),
-		];
-	}
+korzSlots(bus: IopBus) {
+    return [
+        timed(bus, 0o00, "clock"),
+        skipIf(0o00, "clock CLSF: skip on tick", () => this.flag),
+        gate(0o00, 4, "clock CLOF: clear flag, stop", () => { this.flag = false; this.on = false; }, [0, 1]),
+        gate(0o00, 4, "clock CLON: clear flag, run", () => { this.flag = false; this.on = true; }, [2, 3]),
+    ];
+}
 ```
 
 A device that decodes the whole pulse in its own order, as the Turing engine's group 40 does (it
@@ -1203,10 +1203,10 @@ sea carries it and never looks at it. For the PDP-7, templates are functions fro
 condition, a jump target):
 
 ```ts
-	lac: ((g) => ({ code: `m.ac = ${g.read(g.ea)};` })) as Emit7,
-	sad: ((g) => ({ skip: `m.ac !== ${g.read(g.ea)}` })) as Emit7,
-	isz: ((g) => ({ code: `const n = (${g.read(g.ea)} + 1) & ${W}; ${g.write(g.ea, "n")}`, skip: "n === 0" })) as Emit7,
-	jmp: ((g) => ({ jump: g.ea })) as Emit7,
+lac: ((g) => ({ code: `m.ac = ${g.read(g.ea)};` })) as Emit7,
+sad: ((g) => ({ skip: `m.ac !== ${g.read(g.ea)}` })) as Emit7,
+isz: ((g) => ({ code: `const n = (${g.read(g.ea)} + 1) & ${W}; ${g.write(g.ea, "n")}`, skip: "n === 0" })) as Emit7,
+jmp: ((g) => ({ jump: g.ea })) as Emit7,
 ```
 
 **Chains become code.** The compiler asks the sea for each chain, with the coordinates it knows
@@ -1216,19 +1216,19 @@ calls it. So a slot you add without a template still works; it just isn't inline
 
 ```ts
 function compose(chain: readonly Slot<K7>[] | null, g: Gen7): Code7 | null {
-	if (chain === null) return null;
-	let code = "";
-	for (const s of chain) {
-		if (typeof s.emit !== "function") return null;
-		const c = (s.emit as Emit7)(g);
-		if (c === null) return null;
-		if (c.next === true) {
-			code += `${c.code ?? ""} `;
-			continue;
-		}
-		return code === "" ? c : { ...c, code: `${code}${c.code ?? ""}` };
-	}
-	return null;
+    if (chain === null) return null;
+    let code = "";
+    for (const s of chain) {
+        if (typeof s.emit !== "function") return null;
+        const c = (s.emit as Emit7)(g);
+        if (c === null) return null;
+        if (c.next === true) {
+            code += `${c.code ?? ""} `;
+            continue;
+        }
+        return code === "" ? c : { ...c, code: `${code}${c.code ?? ""}` };
+    }
+    return null;
 }
 ```
 
@@ -1241,7 +1241,7 @@ ends with a check that the next device event isn't due:
 
 ```ts
 const tick = (pc: number | string): string =>
-	`if (k.cycles + 1 >= k.next || k.cycles + 1 >= k.until) { m.pc = ${pc}; return 1; } k.cycles += 1;`;
+    `if (k.cycles + 1 >= k.next || k.cycles + 1 >= k.until) { m.pc = ${pc}; return 1; } k.cycles += 1;`;
 ```
 
 So compiled code stops on exactly the cycle the backplane would have stopped the interpreter on.
@@ -1252,18 +1252,18 @@ addresses. Each core word a block was compiled from is marked. A store to a mark
 every block built from it, and a block that stores checks it's still valid before going on:
 
 ```ts
-	touch(a: number): void {
-		const list = this.users[a];
-		this.marks[a] = 0;
-		this.users[a] = undefined;
-		if (list === undefined) return;
-		for (const b of list) {
-			if (!b.valid) continue;
-			b.valid = false;
-			this.invalidated += 1;
-			if (this.blocks[b.entry] === b) this.blocks[b.entry] = undefined;
-		}
-	}
+touch(a: number): void {
+    const list = this.users[a];
+    this.marks[a] = 0;
+    this.users[a] = undefined;
+    if (list === undefined) return;
+    for (const b of list) {
+        if (!b.valid) continue;
+        b.valid = false;
+        this.invalidated += 1;
+        if (this.blocks[b.entry] === b) this.blocks[b.entry] = undefined;
+    }
+}
 ```
 
 **XCT, and Forth's NEXT.** `xct i 010` executes a different word every time. The compiler can't
@@ -1271,15 +1271,15 @@ inline it, so each `XCT` keeps a little cache of the words it has executed, by a
 compiled as a one-instruction function, and checks that the word is still the one it compiled:
 
 ```ts
-	xct: ((g) => {
-		const cells = g.constant(new Map());
-		const e = typeof g.ea === "number" ? String(g.ea) : g.ea;
-		return {
-			code: `const w = ${g.read(g.ea)}; let x = ${cells}.get(${e}); if (x === undefined || x.w !== w) x = J.cell(${cells}, ${e}, w, ${g.next}); x.run(m);`,
-			jump: "m.pc",
-			recheck: true,
-		};
-	}) as Emit7,
+xct: ((g) => {
+    const cells = g.constant(new Map());
+    const e = typeof g.ea === "number" ? String(g.ea) : g.ea;
+    return {
+        code: `const w = ${g.read(g.ea)}; let x = ${cells}.get(${e}); if (x === undefined || x.w !== w) x = J.cell(${cells}, ${e}, w, ${g.next}); x.run(m);`,
+        jump: "m.pc",
+        recheck: true,
+    };
+}) as Emit7,
 ```
 
 **DMA gets compiled too.** The 340, the disk, and the Turing engine reach core through the
@@ -1302,21 +1302,21 @@ mode in vector and increment modes, X or Y in point mode, the jump type in subro
 
 ```ts
 export const DIMS_340: readonly Dim[] = [
-	{ name: "mode", width: 3, names: ["param", "point", "slave", "char", "vector", "vcont", "incr", "subr"] },
-	{ name: "top", width: 2 },
+    { name: "mode", width: 3, names: ["param", "point", "slave", "char", "vector", "vcont", "incr", "subr"] },
+    { name: "top", width: 2 },
 ];
 ```
 
 Fourteen slots cover it, and the resolved table has 32 entries:
 
 ```ts
-		{ selector: "word", guard: { mode: "subr", top: 2 }, by: "347 DJP: jump", run: (c) => {
-			const d = c.d;
-			d.mode = GETFIELD(c.word, 2, 4) as Mode;
-			d.dac = GETFIELD(c.word, 5, 17) & ADDR;
-			d.block = d.dac;
-			return 0;
-		} },
+{ selector: "word", guard: { mode: "subr", top: 2 }, by: "347 DJP: jump", run: (c) => {
+    const d = c.d;
+    d.mode = GETFIELD(c.word, 2, 4) as Mode;
+    d.dac = GETFIELD(c.word, 5, 17) & ADDR;
+    d.block = d.dac;
+    return 0;
+} },
 ```
 
 `KorzType340` overrides one method of `Type340`, `decode`, and leaves the original switch in place
@@ -1336,13 +1336,13 @@ argument I have for building a CPU out of slots. [FORTH-DEVICE.md](FORTH-DEVICE.
 It's two slots on `read`. One answers the CPU's fetch of `NEXT`'s first word:
 
 ```ts
-		const slots: SlotSpec<K7>[] = [{
-			selector: "read", guard: { addr: this.next, access: "fetch", who: "cpu" }, by: "forth device: NEXT",
-			run: (_c, next) => {
-				const w = next();
-				return w === XCT_NEXT && !cpu.extend ? this.inner(cpu) : w;
-			},
-		}];
+const slots: SlotSpec<K7>[] = [{
+    selector: "read", guard: { addr: this.next, access: "fetch", who: "cpu" }, by: "forth device: NEXT",
+    run: (_c, next) => {
+        const w = next();
+        return w === XCT_NEXT && !cpu.extend ? this.inner(cpu) : w;
+    },
+}];
 ```
 
 Instead of handing back `xct i 010`, the slot walks the thread itself, in TypeScript, on the same
@@ -1352,17 +1352,17 @@ other `JMP`, it hands the CPU a `JMP` to that code, and the PDP-7 runs it and co
 `NEXT` as always:
 
 ```ts
-			} else if (op === 0o30) {
-				// JMP: a primitive. Run it here, or hand its code to the CPU.
-				m.write(IP, ip);
-				const target = cell & A;
-				const run = this.code[target];
-				if (run === undefined || !run()) {
-					this.stats.cells += ran + 1;
-					this.stats.handoffs += 1;
-					return JMP | target;
-				}
-			} else break;
+} else if (op === 0o30) {
+    // JMP: a primitive. Run it here, or hand its code to the CPU.
+    m.write(IP, ip);
+    const target = cell & A;
+    const run = this.code[target];
+    if (run === undefined || !run()) {
+        this.stats.cells += ran + 1;
+        this.stats.handoffs += 1;
+        return JMP | target;
+    }
+} else break;
 ```
 
 When the device isn't sure, it declines and lets the CPU's own `NEXT` run: an interrupt waiting,
@@ -1387,20 +1387,20 @@ worth reading as a set, because they show how to test a system made of interchan
 seeds, at each Korz level:
 
 ```ts
-	for (let seed = 1; seed <= 300; seed += 1) {
-		const { a, b, r, coreWords } = cores(seed, korz);
-		for (let n = 0; n < 2000; n += 1) {
-			const irq = (r() & 7) === 0;
-			a.irqLine = b.irqLine = irq;
-			const sa = stepOf(a);
-			const sb = stepOf(b);
-			steps += 1;
-			assert.deepEqual(sb, sa, `seed ${seed} step ${n}`);
-			assert.equal(regs(b), regs(a), `seed ${seed} step ${n}`);
-			if (typeof sa === "string" || a.halted) break;
-		}
-		// …
-	}
+for (let seed = 1; seed <= 300; seed += 1) {
+    const { a, b, r, coreWords } = cores(seed, korz);
+    for (let n = 0; n < 2000; n += 1) {
+        const irq = (r() & 7) === 0;
+        a.irqLine = b.irqLine = irq;
+        const sa = stepOf(a);
+        const sb = stepOf(b);
+        steps += 1;
+        assert.deepEqual(sb, sa, `seed ${seed} step ${n}`);
+        assert.equal(regs(b), regs(a), `seed ${seed} step ${n}`);
+        if (typeof sa === "string" || a.halted) break;
+    }
+    // …
+}
 ```
 
 Random words aren't programs, and that's the point. They hit every opcode, every odd indirect
@@ -1455,7 +1455,7 @@ Count instruction fetches per 256-word page and draw a heat map. It's one slot:
 
 ```ts
 cpu.sea.install([{ selector: "read", layer: "observe", guard: { access: "fetch" }, by: "heat map",
-	run: (c, next) => { heat[c.addr >> 8] += 1; return next(); } }]);
+    run: (c, next) => { heat[c.addr >> 8] += 1; return next(); } }]);
 ```
 
 Now look at what it did to the compiler. A slot on `read` without a template stops fetches being
@@ -1626,23 +1626,23 @@ PDP-7 CODE words work unchanged. A parameter block in core gives the regions, so
 start the device or a software Forth:
 
 ```
-params:	state	" the interpreter's state block: HERE, LATEST, STATE, BASE, the input buffer's pointers
-	dict	" the dictionary's base, and its size in words
-	dsize
-	dstack	" the data stack's base and size
-	dssize
-	rstack	" the return stack's base and size
-	rssize
+params: state   " the interpreter's state block: HERE, LATEST, STATE, BASE, the input buffer's pointers
+        dict    " the dictionary's base, and its size in words
+        dsize
+        dstack  " the data stack's base and size
+        dssize
+        rstack  " the return stack's base and size
+        rssize
 ```
 
 Then the glue is a boot word and `NEXT`:
 
 ```
-boot:	law params
-	iot …		" the device's init IOT: read the block, set up the stacks, start the boot thread
-next:	xct i 010	" answered by the device, as now
-	dac i 012
-	jmp next
+boot:   law params
+        iot …           " the device's init IOT: read the block, set up the stacks, start the boot thread
+next:   xct i 010       " answered by the device, as now
+        dac i 012
+        jmp next
 ```
 
 The dictionary starts empty, right after the state block, and grows toward the end of its region.
