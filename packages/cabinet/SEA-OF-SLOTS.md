@@ -566,7 +566,11 @@ hand:
   Jefferson's optimistic simulation, inside one emulated cabinet.
 - **The Turing engine** on device 54 runs Turing machine transition tables stored in PDP-7 core,
   one 18-bit word per (state, symbol), the way the 340 runs display files. It writes its registers
-  back to a control block in core, so the PDP-7 reads them as memory-mapped registers. A Forth
+  back to a control block in core, so the PDP-7 reads them as memory-mapped registers. When the
+  head runs off the end of its window, the engine can page the tape itself, or raise a fault and
+  let the PDP-7 page it: a page fault raised by a coprocessor and serviced by its host, like
+  SPARC's window overflow traps or a GPU's replayable faults, which turns a few words of core into
+  a virtually infinite tape. A Forth
   called TM-Forth compiles high-level programs into its tables, the way Toffoli and Margolus used
   Forth to build CAM-6 rules.
 - **The DataHand**, device 57, is named after VPL's DataGlove (Thomas Zimmerman and Jaron Lanier).
