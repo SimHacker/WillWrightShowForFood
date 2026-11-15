@@ -2,8 +2,10 @@
 
 Don Hopkins, November 2026
 
-I have a PDP-7 running in a web page. It boots Ken Thompson's 1969 UNIX from the original binaries
-to the `@` prompt, runs Mitch Bradley's Forth, and draws on a DEC Type 340 vector display with a
+I have a PDP-7 running in a web page. It boots Ken Thompson and Dennis Ritchie's 1969 UNIX to the `@`
+prompt, rebuilt from the original listings by Warren Toomey's pdp7-unix project (Phil Budne, Tom
+Everett, Sebastian Rasmussen, Robert Swierczek and others, working from Norman Wilson's scans). It
+runs Mitch Bradley's PDP-7 Forth, and draws on a DEC Type 340 vector display with a
 light pen. It also has a Turing machine coprocessor plugged into its I/O bus, a DataHand that
 reads your hand through a webcam, and Marvin Minsky's Ultimate Machine, the box whose only
 function is to switch itself off. Claude Shannon built the real one. Ours is device 56.
@@ -15,7 +17,7 @@ PDP-7 with a Type 340 vector graphics display, linked to Cambridge's Titan mainf
 pen's tracking cross, which makes it one of the earliest known radial menus. I've been building
 pie menus since the 1980s, so when Heinz scanned his 1972 printout of SYMELEC, PIXIE's main
 program, 128 lineprinter pages of it, I wanted to see and feel those menus running again. I had no
-PDP-7 to run it on, so I built one. SYMELEC now reassembles word for word from the transcribed
+PDP-7 to run it on, so I built one, with Anthropic's Claude (no relation to Shannon) as my programming partner. SYMELEC now reassembles word for word from the transcribed
 listing and runs in the browser with its light pen and its radial menus. Heinz plans to use PIXIE
 again, for Bayesian network models of health care. PIXIE is on the program of an HCI session at
 CARS 2027 in Berlin on 29 June 2027, the 60th anniversary of his first Cambridge lecture.
@@ -249,7 +251,7 @@ compiler's generated code, and the tests caught 23 of them. The 24th turned out 
 
 My favorite bug came from the Ultimate Machine. The cabinet decided when a device would next need
 attention by looking at its power state before its tick, its periodic update. But the Ultimate Machine switches itself
-off during its tick. We needed a device that switches itself off to find that bug, and we had one!
+off during its tick. It took a device that switches itself off to find that bug, and we had one!
 Thank you, Minsky and Shannon.
 
 ## The compiler, and why Self is in the room
@@ -336,7 +338,8 @@ hand:
   registers back to a control block in core, so the PDP-7 reads them as memory-mapped registers. A
   Forth called TM-Forth compiles high-level programs into its tables, the way Toffoli and Margolus
   used Forth to build CAM-6 rules.
-- **The DataHand**, device 57, turns a webcam's view of your hand into 18-bit registers in the
+- **The DataHand**, device 57, named after VPL's DataGlove (Thomas Zimmerman and Jaron Lanier),
+  uses Google's MediaPipe in the browser to turn a webcam's view of your hand into 18-bit registers in the
   units PDP-7 Forth's turtle graphics already uses. A Forth program walks the 3D turtle through
   them and draws your hand on the 340, with no floating point of its own.
 
@@ -384,7 +387,7 @@ machine is answering. The Tiny Titan link already carries light-pen drawings fro
 
 The cabinet has a manifesto, and its first rule is that tribute, accessibility and fun beat realism.
 Realism is one way to reach them. The teletype wraps, scrolls, zooms, reads aloud and takes
-dictation, which no Teletype Model 33 ever did. HILO, a guessing game from a machine with no screen,
+dictation, which no Teletype Model 33 ever did. HILO, a guessing game Claude and I wrote for a machine with no screen,
 takes "ninety nine" by voice. Listings credit the people who wrote the code, by name, even where the
 real machine had no logins.
 
@@ -451,15 +454,15 @@ TypeScript, it runs in Node and the browser, and it's free software.
 
 ## Try it
 
-Every demo runs in the browser, from the original binaries where there are any:
+Every demo runs in the browser, from the original code where it survives:
 
 - [UNIX v0](https://hyperties.org/cabinet/unix/): Ken Thompson's PDP-7 UNIX, booting from the RB09
   disk to the `@` prompt.
-- [Forth](https://hyperties.org/cabinet/forth/): Mitch Bradley's PDP-7 Forth, with turtle graphics
-  on the 340.
+- [Forth](https://hyperties.org/cabinet/forth/): Mitch Bradley's PDP-7 Forth, with his turtle
+  graphics on the 340, after Logo's turtle by Seymour Papert, Wally Feurzeig and Cynthia Solomon.
 - [SYMELEC](https://hyperties.org/cabinet/symelec/): PIXIE's main program, Heinz Lemke's 1972
   light-pen editor, with its radial menus. This is where the whole emulator started.
-- [DUEL](https://hyperties.org/cabinet/duel/): DECUS 7-40 (Cambridge, 1968), two ships on the
+- [DUEL](https://hyperties.org/cabinet/duel/): DECUS 7-40, by Peterson and Viner (Cambridge, 1968), two ships on the
   340, flown from the console switches by two players on one keyboard.
 - [Turing engine](https://hyperties.org/cabinet/turing/): the Turing machine coprocessor on device
   54, driven from Forth.
