@@ -956,19 +956,68 @@ This is the compressed dispatch table that Eric Amiel, Olivier Gruber, and Eric 
 for multimethods in 1994. Tables that fit stay indexed by value, so compressing never costs a table
 that didn't need it.
 
-**Generated methods, shared by every machine.** Something has to compute that index and call the
-chain it finds, every time the CPU asks the sea a question. That something is a small JavaScript
-function that Korz writes itself, as text, and turns into code with `new Function`. It's called a
-**generated method**, and there's one for each selector, such as `exec`, `read`, or `iot`.
+**Following one instruction through the sea.** That's a lot of machinery, so here's one
+instruction going through all of it, with real output from the cabinet. Core location 100 holds
+201234, which is `LAC 1234`, "load AC from 1234", and location 1234 holds 5.
 
-How the CPU calls it: `KorzPdp7` keeps an object called `go`, with one field per selector. When
-it needs to run an instruction it calls `this.go.exec(x)`, and to read memory, `this.go.read(...)`.
-Korz's `bind`, below, puts a generated method in each of those fields. So `go.exec` is the
-generated method for `exec`, and `go` also holds the table it reads, in a field named for the
-selector with a `$` after it, like `exec$`.
+*Step 1: the CPU builds the context.* `KorzPdp7` fetches the word and cuts the fields Korz needs
+out of it. The opcode is the top four bits, which for LAC is 4. (The assembler's octal 20 that
+starts `201234` is the opcode and the indirect bit together: 4 shifted left once, plus 0.) The
+indirect bit is 0. Then it asks the sea twice, once for the effective address, the address the
+instruction will actually use, and once to run it:
 
-Here's the code that writes a generated method. `${expr}` is the index expression above, and
-`${name}` is the selector's name:
+```ts
+x.op = (ir >> 14) & 0o17;
+x.ind = (ir >> 13) & 1;
+x.ea = this.go.ea(x);
+this.go.exec(x);
+```
+
+`go` is an object `KorzPdp7` keeps, with one field per selector: `go.ea`, `go.exec`, `go.read`,
+`go.write`, `go.iot`, and so on. Each field holds a small function that answers that selector's
+question.
+
+*Step 2: `go.exec` looks up the table.* Here's what's in `go.exec`, printed from a running
+machine:
+
+```js
+function korz_exec(c) {
+    const e = this["exec$"][(c["op"] & 15) << 1 | (c["ind"] & 1)];
+    const v = e.k === null ? e.r(c, e.p) : e.r(c, () => e.k(c));
+    return v === undefined ? 0 : v;
+}
+```
+
+Nobody wrote that function. Korz wrote it, as text, when the machine was built, because the only
+slots on `exec` are guarded on `op` and `ind`, so those are the only two dimensions that can change
+which slot runs. `op` has 16 values and `ind` has 2, so the table, kept in `go` as `exec$`, has 32
+entries. Only 17 of them are different: indirect doesn't change what most instructions do, so
+those pairs share one entry, interned. For our LAC, the index is 4 shifted left once, or'd with 0,
+which is 8.
+
+*Step 3: the entry runs the chain.* Entry 8 holds LAC's slot. `e.r` is the slot's function, and
+`e.k` is null, because the chain is one slot long. So `korz_exec` calls the slot, and the slot
+loads AC:
+
+```ts
+op("lac", (c) => { const m = c.cpu; m.ac = m.read(c.ea); }),
+```
+
+`c.ea` is 1234, which `go.ea` worked out in step 1 the same way, by its own table. AC is now 5.
+One table load, one call.
+
+In the generated function, line by line:
+
+1. `this["exec$"][...]` reads the table at the index. `this` is `go`, because the CPU called it as
+   `this.go.exec(x)`.
+2. If the chain is one slot (`e.k === null`), it calls that slot with `e.p` as its `next`. `e.p`
+   was made once, when the table was built, and throws an error naming the slot if it's called,
+   since there's nothing after it. Otherwise it calls the first slot with a small new function
+   that runs the rest of the chain.
+3. A slot that returns nothing counts as returning 0.
+
+Here's the code in `korz.ts` that writes it. `${name}` is the selector, and `${expr}` is the index
+expression:
 
 ```ts
 m = new Function(`return function korz_${name}(c) {
@@ -979,52 +1028,61 @@ m = new Function(`return function korz_${name}(c) {
 //# sourceURL=korz/${name}.js`)() as (c: never) => number;
 ```
 
-For the `exec` selector, that's a function named `korz_exec`. Line by line:
+The last line is a comment browsers understand. Code made with `new Function` has no file, so the
+debugger would list it under a made-up name. With that comment, it shows up as a file called
+`korz/exec.js`, and you can open it and put a breakpoint on the table lookup, to stop the machine
+inside the sea and look around.
 
-1. `this[...][${expr}]`: `this` is the `go` object it was called on, so this reads `go.exec$`,
-   the table, at the computed index. The result `e` is the table entry for this point.
-2. Each entry holds the chain in a form that's quick to call: `e.r` is the first slot's function,
-   and `e.k` runs the rest of the chain, or is null when the chain is just one slot. The second
-   line calls the first slot, handing it `next`, the function that runs the rest. For a chain of
-   one slot, `next` is `e.p`, made once when the table was built, which throws an error naming the
-   slot if it's called, since there's nothing after it. Most chains are one slot, so most calls
-   create nothing. A longer chain gets a small new `next` function on each call.
-3. A slot that returns nothing counts as returning 0.
+**Changing the machine while it runs.** Now install a slot that counts LACs, while the machine is
+running:
 
-The last line, `//# sourceURL=korz/exec.js`, is a comment browsers understand. Code made with
-`new Function` has no file, so the browser's debugger would list it under a made-up name. With that
-comment, it shows up as a file called `korz/exec.js`, and you can open it and set breakpoints in it
-as in any other file. That's how you watch the sea dispatch an instruction.
+```ts
+let count = 0;
+cpu.sea.install([{ selector: "exec", layer: "observe", guard: { op: 4 }, by: "count LACs",
+    run: (c, next) => { count += 1; return next(); } }]);
+```
 
-**Why it's written this way.** This is the part for TypeScript programmers, and it's about V8, the
-JavaScript engine in Chrome and Node, which turns JavaScript into machine code as it runs.
+Then run the same instruction again. AC is 5 and `count` is 1: the new slot ran first, called
+`next`, and LAC ran after it. Here's what changed inside `go`:
 
-A line of code that calls a function, such as `this.go.exec(x)`, is a **call site**. V8 makes
-call sites fast by remembering, at each one, which function it called last time, and assuming the
-next call goes to the same one. That memory is called an **inline cache**. A site that always calls
-the same function is **monomorphic** ("one shape"), and V8 can make it nearly free, even copying
-the function's body into the caller. A site that sees many different functions becomes
-**megamorphic** ("many shapes"), and V8 gives up on it and does a slow general lookup every time.
-V8 also remembers the layout of the objects it sees, which it calls their **hidden class**, so
-objects built with the same fields in the same order are fastest.
+- `go.exec$` is a new table. Entry 8 now holds a chain of two slots, count LACs, then LAC.
+- `go.exec` is the very same function as before.
 
-Korz is written to keep the CPU's call sites monomorphic:
+That's `bind`'s job. `install` ends by calling it for the selectors the new slots touched, here
+only `exec`. It builds the new table and puts it in `go.exec$`. The index expression didn't
+change, since the new slot guards `op`, which the table already ranges over, so the function stays
+the same. A slot guarded on a new dimension would change the expression, and `bind` would put a
+different function in `go.exec`. Either way, by the time `install` returns, `go` is up to date,
+and nothing checks on each call whether the table is stale.
 
-- **One function for every machine.** If each PDP-7 got its own generated function, two PDP-7s on
-  one page would send `this.go.exec(x)` to two different functions, and the site would stop
-  being monomorphic. So the methods are kept in one place for the whole program, one per selector
-  and index expression, and every machine gets the same function object.
-- **The table lives on `this`.** A function that kept its table in a variable of its own (a
-  closure) would need a separate copy of the function for each table. Reading the table from
-  `this` instead lets one function serve every machine, each with its own table in its own `go`.
-- **Every table entry has the same fields** (`r`, `k`, and `p`), so every entry has one hidden
-  class.
+**Why that matters: V8 and call sites.** This is the part for TypeScript programmers. V8 is the
+JavaScript engine in Chrome and Node, and it turns JavaScript into machine code as it runs.
 
-`bind` is the step that puts the generated methods in `go`. It runs once when the machine is
-built, and again after every install or remove, for just the selectors that changed, before
-`install` returns. That means `go.exec` is always current, and nothing has to check on each call
-whether the table is out of date. A placeholder that checked and then rebuilt would be a second
-function seen by the same call site, which would make the site megamorphic for good:
+The line `this.go.exec(x)` in `KorzPdp7` is a **call site**, a place in the code that calls a
+function. V8 makes a call site fast by remembering which function it called last time, and betting
+the next call goes to the same one. That memory is the site's **inline cache**. A site that always
+calls the same function is **monomorphic** ("one shape"), and V8 can make the call nearly free,
+even copying the function's body into the caller. A site that sees many different functions
+becomes **megamorphic** ("many shapes"). V8 gives up on it, does a slow general lookup every time,
+and doesn't go back. V8 also learns the layout of the objects it sees, which it calls their
+**hidden class**, and code runs fastest when the objects it handles all have the same one.
+
+So every choice above is about keeping `this.go.exec(x)` calling one function:
+
+- **No checking stub.** A simpler design would put a stub in `go.exec` that checks whether the
+  table is stale, rebuilds it, and then swaps in the real function. But that stub would be a
+  second function seen by the same call site, and one call through it would make the site
+  megamorphic for good. So `bind` rebuilds before `install` returns.
+- **One function for every machine.** Two PDP-7s on one page each have their own `go`, but Korz
+  keeps one generated function per selector and index expression for the whole program, and gives
+  both machines the same one. So the call site in `KorzPdp7` sees one function, however many
+  machines there are.
+- **The table lives on `this`.** That's what makes sharing possible. If the function kept its table
+  in a variable of its own (a closure), each table would need its own copy of the function. It
+  reads `this["exec$"]` instead, so each machine's own `go` brings its own table.
+- **Every entry has the same fields**, `r`, `k`, and `p`, so every entry has one hidden class.
+
+Here's `bind`, with its comment:
 
 ```ts
 /**
@@ -1036,9 +1094,33 @@ function seen by the same call site, which would make the site megamorphic for g
 bind<K extends string>(target: Dispatchers<C, K>, selectors: readonly K[], limit?: number): void {
 ```
 
-**Asking why.** `why(selector, context)` lists every slot of a selector, whether it matched, and why
-it ran, where it sits in the chain, or the first dimension that rules it out. That's what the SLOTS
-panel shows. `view(query)` answers questions like "every slot that touches page 7".
+`target` is `go`, and `selectors` is the list of fields to keep filled.
+
+**Asking why.** With slots coming from the CPU, the devices, and you, it's easy to lose track of
+what runs. `why(selector, context)` answers for one context: for every slot of the selector,
+whether it matched, and either where it sits in the chain or the first dimension that rules it
+out. Here's `why` for our LAC, after the counting slot went in (most of the non-matching slots
+left out):
+
+```
+exec
+  ✓ observe | count LACs | runs first
+  ✓ machine | LAC        | runs if "count LACs" calls next
+    machine | DAC        | doesn't match on op = 4
+    machine | JMP        | doesn't match on op = 4
+    …
+ea
+  ✓ machine | direct: the address field in this word's bank | runs first
+    machine | indirect, auto-indexing 10-17                  | doesn't match on ind = 0
+    machine | JMP I: indirect, EMIR restores extend mode     | doesn't match on op = 4
+    …
+```
+
+The names are each slot's `by` string, written by whoever wrote the slot. That's what the SLOTS
+panel on the page shows for the instruction at the PC.
+
+`view(query)` asks the other way round: not "what runs for this context?" but "what could run
+anywhere in this region?" `view({ op: 4 }, "exec")` returns LAC and count LACs.
 
 ## Port 8: the PDP-7 as a sea
 
