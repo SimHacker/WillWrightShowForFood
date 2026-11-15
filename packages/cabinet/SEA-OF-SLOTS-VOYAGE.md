@@ -11,11 +11,11 @@ them, by reading the code: a 1965 computer, its devices, and the dispatch and co
 of a dynamic language, each small enough to hold in your head. So this tour is for:
 
 - **TypeScript programmers** who want to see what you can get out of V8 by generating code with
-  `new Function` and keeping your objects in one shape.
+`new Function` and keeping your objects in one shape.
 - **Programming language enthusiasts** who want to see multiple dispatch, layered method
-  combination, ahead-of-time dispatch tables, and a template compiler, all in about 1,200 lines.
+combination, ahead-of-time dispatch tables, and a template compiler, all in about 1,200 lines.
 - **Retrocomputing enthusiasts** who want to see a 1965 computer's instruction set, its I/O bus, and
-  its vector display written down as code you can run, read, and change.
+its vector display written down as code you can run, read, and change.
 - **Me.** Walking the code port by port, and quoting it, is how I review it.
 
 Every excerpt below is copied from the source as it stands. Paths are relative to
@@ -65,14 +65,14 @@ The cabinet is a ladder of oracles, each rung checking the next:
 
 - SIMH's C code is the oracle for `Pdp7`, the CPU as switch statements.
 - `Pdp7` is the oracle for the Korz interpreter, the interpreter for the Korz resolver, and the
-  resolver for the Korz compiler.
+resolver for the Korz compiler.
 - `Type340` decodes display words with a switch statement, ported nearly line by line from Phil
-  Budne's `display/type340.c` in SIMH. It's the oracle for `KorzType340`, which decodes them with
-  slots.
+Budne's `display/type340.c` in SIMH. It's the oracle for `KorzType340`, which decodes them with
+slots.
 - Each device's `iot()` method is the oracle for the same device's slots.
 - The backplane that ticks every device every cycle is the oracle for the event-driven one.
 - Mitch's Forth kernel running by itself is the oracle for the same kernel with the Forth device
-  plugged in.
+plugged in.
 
 ## Port 1: the bus
 
@@ -219,9 +219,9 @@ of the machine's own bookkeeping.
 **Registers** are a few words inside the CPU itself. The PDP-7 has very few:
 
 - The **accumulator**, AC: the one word arithmetic happens in. To add two numbers, you load one
-  into AC, add the other to it, and store AC back into memory.
+into AC, add the other to it, and store AC back into memory.
 - The **link**: one extra bit beside AC that catches the carry out of an addition, and takes part
-  in shifts.
+in shifts.
 - The **program counter**, PC: the address of the next instruction.
 
 The CPU does one thing forever: read the word at PC, add one to PC, and do what the word says.
@@ -331,7 +331,7 @@ first one's return address.) The stored word also carries the link and the exten
 	}
 ```
 
-**`CAL`, a call to a fixed place.** `CAL` does exactly what `JMS 20` would (20 octal, location
+`**CAL`, a call to a fixed place.** `CAL` does exactly what `JMS 20` would (20 octal, location
 16): it stores the return address in location 20 and starts running at 21. Its own address field
 plays no part, so the program can put anything there. Whatever sits at 21 is the one routine every
 `CAL` reaches. It finds the `CAL` that called it one word before the return address in 20, and it
@@ -502,120 +502,120 @@ fired, so a program written now can tell them apart.
 - [`papertape.ts`](src/plugins/papertape.ts): the paper tape reader that loads programs.
 - [`rb09.ts`](src/plugins/rb09.ts): the RB09 fixed-head disk UNIX boots from.
 - [`turing.ts`](src/plugins/turing.ts): a Turing machine coprocessor on device 54. It runs
-  transition tables out of core, the way the 340 runs display files, and it comes in three layers:
-  the engine knows nothing about PDP-7s, `TuringDevice` puts it on the bus, and `TuringCpu` makes
-  it a whole cabinet by itself.
+transition tables out of core, the way the 340 runs display files, and it comes in three layers:
+the engine knows nothing about PDP-7s, `TuringDevice` puts it on the bus, and `TuringCpu` makes
+it a whole cabinet by itself.
 - [`ultimate.ts`](src/plugins/ultimate.ts): Marvin Minsky's Ultimate Machine, the box whose only
-  function is to switch itself off, on devices 55 and 56. It turns its own power off with the
-  backplane's power switch, and a limit switch keeps it ticking until its arm is home.
+function is to switch itself off, on devices 55 and 56. It turns its own power off with the
+backplane's power switch, and a limit switch keeps it ticking until its arm is home.
 - [`hand.ts`](src/plugins/hand.ts) and [`datahand.ts`](src/plugins/datahand.ts): a hand from a
-  webcam, as numbers a PDP-7 can use. The 21 points a hand tracker reports become a palm frame and
-  twenty bones in turtle moves: yaw, pitch, and length in the 340's pixels. Video never reaches the
-  machine.
+webcam, as numbers a PDP-7 can use. The 21 points a hand tracker reports become a palm frame and
+twenty bones in turtle moves: yaw, pitch, and length in the 340's pixels. Video never reaches the
+machine.
 - [`tiny-titan.ts`](src/plugins/tiny-titan.ts) and [`titan-files.ts`](src/plugins/titan-files.ts):
-  the far end of PIXIE's link to Cambridge's Titan mainframe, and a file service beside it. The
-  PDP-7 polls for the link in a loop, and as the source puts it, "the 1969 polling loop IS the
-  await". An in-process host answers at once, and a remote one sits behind a buffer.
+the far end of PIXIE's link to Cambridge's Titan mainframe, and a file service beside it. The
+PDP-7 polls for the link in a loop, and as the source puts it, "the 1969 polling loop IS the
+await". An in-process host answers at once, and a remote one sits behind a buffer.
 
 ## Port 5: the tools
 
 A tour of an emulator usually skips the tools. Here they're half the fun.
 
 - **Assemblers.** An assembler turns the mnemonics a person writes into the words the machine
-  runs: `lac 1234` into 201234. Different groups wrote their own assembly languages for the same
-  machine, called dialects, with their own spellings for labels, comments, and numbers. The cabinet
-  reads three, because its programs come in three:
+runs: `lac 1234` into 201234. Different groups wrote their own assembly languages for the same
+machine, called dialects, with their own spellings for labels, comments, and numbers. The cabinet
+reads three, because its programs come in three:
   - [`asm/as7.ts`](src/asm/as7.ts) is Ken Thompson's `as`, the assembler PDP-7 UNIX was written
-    in, and Mitch's Forth too. It's written from the language, with the Perl `as7` from Warren
-    Toomey's pdp7-unix project as its oracle.
+  in, and Mitch's Forth too. It's written from the language, with the Perl `as7` from Warren
+  Toomey's pdp7-unix project as its oracle.
   - [`asm/dec.ts`](src/asm/dec.ts) is one assembler for two dialects of one language. `DEC_1964`
-    is DEC's, the dialect of its 1964 program library listings. `CAMBRIDGE_1972` is the Cambridge
-    University CAD Group's, which built PIXIE on Titan in 1972. No copy of that assembler
-    survives, so this one is rebuilt from Heinz Lemke's listing of SYMELEC. It adds what that
-    listing uses: `,` inside an operand for the current address (`JMP , 3` jumps three words
-    ahead), labels like `name=JMS,`, and `DISP` and `VEC` for writing the Type 340's display words.
-    The test: SYMELEC's transcribed source assembles to the printed listing's words, word for word.
+  is DEC's, the dialect of its 1964 program library listings. `CAMBRIDGE_1972` is the Cambridge
+  University CAD Group's, which built PIXIE on Titan in 1972. No copy of that assembler
+  survives, so this one is rebuilt from Heinz Lemke's listing of SYMELEC. It adds what that
+  listing uses: `,` inside an operand for the current address (`JMP , 3` jumps three words
+  ahead), labels like `name=JMS,`, and `DISP` and `VEC` for writing the Type 340's display words.
+  The test: SYMELEC's transcribed source assembles to the printed listing's words, word for word.
   - [`asm/cambridge-as7.ts`](src/asm/cambridge-as7.ts) translates Cambridge source into `as7`
-    source, so RSPPIX, Cambridge's ring library, can be assembled into Mitch's Forth. It keeps each
-    word's expression rather than its number, and the translation counts only if `as7` assembles
-    it back to exactly the Cambridge words.
+  source, so RSPPIX, Cambridge's ring library, can be assembled into Mitch's Forth. It keeps each
+  word's expression rather than its number, and the translation counts only if `as7` assembles
+  it back to exactly the Cambridge words.
 
   All three share one back end, [`asm/core.ts`](src/asm/core.ts).
 - **The disassembler** ([`disasm.ts`](src/disasm.ts)) goes the other way, from a word in core to
-  text. `disassemble` writes the word as assembly, `lac i 123` or `cla!cll`, in DEC and Cambridge
-  syntax or in `as7`'s. The tests disassemble all 262,144 possible words and assemble each one back,
-  in both syntaxes, and every one comes back the same. `explain` writes the word in English, for
-  people who don't read assembly: 220123 is "load AC from the address held in 123", and 754000 is
-  "clear AC, clear the link". `explainDisplay` does the same for a Type 340 display word, which
-  means something different in each of the display's modes, so it needs the mode the 340 was in
-  when it read the word: 600170 in vector mode is "draw 120, 0, then back to parameter mode". The
-  page's code view shows these as comments when its **explain** button is on.
+text. `disassemble` writes the word as assembly, `lac i 123` or `cla!cll`, in DEC and Cambridge
+syntax or in `as7`'s. The tests disassemble all 262,144 possible words and assemble each one back,
+in both syntaxes, and every one comes back the same. `explain` writes the word in English, for
+people who don't read assembly: 220123 is "load AC from the address held in 123", and 754000 is
+"clear AC, clear the link". `explainDisplay` does the same for a Type 340 display word, which
+means something different in each of the display's modes, so it needs the mode the 340 was in
+when it read the word: 600170 in vector mode is "draw 120, 0, then back to parameter mode". The
+page's code view shows these as comments when its **explain** button is on.
 
   Every word decodes as something, but whether it's an instruction at all, the word can't say.
   The same 18 bits could be data, a display word, or a return address. That's the source map's job.
 - **Source maps** ([`source.ts`](src/source.ts)): which source line assembled each core address,
-  and what the assembler put there. So the page can show you where core no longer holds what the
-  source says: patches, variables, return addresses, code that rewrites itself. One image can have
-  several maps over the same words, such as SYMELEC's 1972 listing and its regenerated `as7` source.
+and what the assembler put there. So the page can show you where core no longer holds what the
+source says: patches, variables, return addresses, code that rewrites itself. One image can have
+several maps over the same words, such as SYMELEC's 1972 listing and its regenerated `as7` source.
 - **Traces** ([`trace.ts`](src/trace.ts)): a ring of the last instructions fetched, with the AC
-  each one found.
+each one found.
 - **Recorded sessions** ([`session.ts`](src/session.ts)) record a run so it can be played back
-  exactly. Everything that reaches the machine from outside is written down with the cycle it
-  arrived on: the console switches, the light pen, keys typed on the teletype, and pokes (words
-  stored into core from outside, as a debugger does). Nothing else can change what the machine does,
-  because the emulator only moves forward a cycle at a time and has no clock of its own. So the same
-  inputs on the same cycles replay the same run, at any speed, in a browser or in Node with no
-  screen at all (headless), which is how the tests replay a session.
+exactly. Everything that reaches the machine from outside is written down with the cycle it
+arrived on: the console switches, the light pen, keys typed on the teletype, and pokes (words
+stored into core from outside, as a debugger does). Nothing else can change what the machine does,
+because the emulator only moves forward a cycle at a time and has no clock of its own. So the same
+inputs on the same cycles replay the same run, at any speed, in a browser or in Node with no
+screen at all (headless), which is how the tests replay a session.
 - **Hover and tags** ([`hover.ts`](src/hover.ts), [`tags.ts`](src/tags.ts)) answer "what's under
-  the mouse?" The 340 knows only lines and points, but it drew each one from a word of a display
-  file, sometimes inside a subroutine. `hover.ts` finds the line nearest the mouse and gathers
-  every line drawn from the same place, so the group is the thing a person points at: a menu
-  button, a word of text, a line of the drawing. A program can say more with a **tag**: DTG, a
-  display instruction the cabinet adds to the 340, marks everything drawn after it with the
-  address of a record in core. `tags.ts` reads that record, a title and maybe a URL, and the page
-  shows it.
+the mouse?" The 340 knows only lines and points, but it drew each one from a word of a display
+file, sometimes inside a subroutine. `hover.ts` finds the line nearest the mouse and gathers
+every line drawn from the same place, so the group is the thing a person points at: a menu
+button, a word of text, a line of the drawing. A program can say more with a **tag**: DTG, a
+display instruction the cabinet adds to the 340, marks everything drawn after it with the
+address of a record in core. `tags.ts` reads that record, a title and maybe a URL, and the page
+shows it.
 - **Core files** ([`core.ts`](src/core.ts)) save and load all of memory, in three forms: raw
-  (four bytes a word, exactly what the emulator holds), JSON, or YAML in rows of eight octal words,
-  which you can read and edit by hand.
+(four bytes a word, exactly what the emulator holds), JSON, or YAML in rows of eight octal words,
+which you can read and edit by hand.
 - **Rings** ([`packages/pixie`](../pixie/src/index.ts)) read and write PIXIE's data structure in
-  core. PIXIE kept its drawing in rings: linked lists of two-word cells, built by RSPPIX, where the
-  last cell of a ring points back to the first. `photograph` copies the ring area straight out of
-  the running machine's memory, and `implant` writes one back into it, with the free list and
-  root names set up the way RSPPIX sets them up, so the program finds the new structure as if it had
-  built it. In 1972 rings traveled between the PDP-7 and Titan over a link; these tools reach into
-  core directly, and also read and write that link's format. `graphToRing` and `ringToGraph` turn
-  any graph document, nodes with properties and links written as JSON or YAML, into rings and back,
-  so Colossal Cave's map can live in PDP-7 core. The page's RINGS panel draws the structure in 3D,
-  lights up the cells that change, and saves and loads ring files. In Mitch's Forth with RSPPIX,
-  LOAD puts a file into the running machine.
+core. PIXIE kept its drawing in rings: linked lists of two-word cells, built by RSPPIX, where the
+last cell of a ring points back to the first. `photograph` copies the ring area straight out of
+the running machine's memory, and `implant` writes one back into it, with the free list and
+root names set up the way RSPPIX sets them up, so the program finds the new structure as if it had
+built it. In 1972 rings traveled between the PDP-7 and Titan over a link; these tools reach into
+core directly, and also read and write that link's format. `graphToRing` and `ringToGraph` turn
+any graph document, nodes with properties and links written as JSON or YAML, into rings and back,
+so Colossal Cave's map can live in PDP-7 core. The page's RINGS panel draws the structure in 3D,
+lights up the cells that change, and saves and loads ring files. In Mitch's Forth with RSPPIX,
+LOAD puts a file into the running machine.
 - **Pictures** ([`media.ts`](src/media.ts), [`preview340.ts`](src/preview340.ts)). The 340's
-  output is a stream of line segments. Each segment ([`Segment`](src/plugins/type340.ts)) is more
-  than its two ends. It remembers how it was drawn:
+output is a stream of line segments. Each segment ([`Segment`](src/plugins/type340.ts)) is more
+than its two ends. It remembers how it was drawn:
   - **When:** the machine cycle it was drawn on, and which refresh frame. A cycle is a place in
-    machine time you can seek to and replay from.
+  machine time you can seek to and replay from.
   - **Which instruction:** the address of the display-file word that drew it, the block of the
-    display file that word sits in, and the display subroutine it was drawn inside, with where that
-    subroutine returns to. The 340 can only nest one subroutine deep, so that's the whole call
-    chain. It also remembers the POINT words that last set the beam's x and y, which are what
-    placed it on the screen.
+  display file that word sits in, and the display subroutine it was drawn inside, with where that
+  subroutine returns to. The 340 can only nest one subroutine deep, so that's the whole call
+  chain. It also remembers the POINT words that last set the beam's x and y, which are what
+  placed it on the screen.
   - **How it looked:** its kind (point, vector, increment, or character), whether the beam was on
-    or just moving, its brightness (intensity), and its scale.
+  or just moving, its brightness (intensity), and its scale.
   - **What it means:** for a character, which character and which letter of the frame it belongs
-    to; whether the light pen could hit it; and its display tag, if the program set one.
+  to; whether the light pen could hit it; and its display tag, if the program set one.
 
   The screen, the video, the glow of the phosphor, the light pen, and hovering all read that one
   stream. There are two ways to get a picture:
   - From the running display: `toSvg` writes any stream of segments as SVG, a vector image like
-    the 340's own picture, with each display subroutine as a group and each line carrying the
-    address of the word that drew it. `printScreen` is `toSvg` of the last whole frame, and it's
-    what the page's print-screen button downloads. The copy-screen button puts the screen on the
-    clipboard as a PNG, and `toYaml` writes a frame as data.
+  the 340's own picture, with each display subroutine as a group and each line carrying the
+  address of the word that drew it. `printScreen` is `toSvg` of the last whole frame, and it's
+  what the page's print-screen button downloads. The copy-screen button puts the screen on the
+  clipboard as a PNG, and `toYaml` writes a frame as data.
   - From any display list in core: `preview340` hands a chunk of core to a throwaway 340 and gets
-    back one pass of the picture it draws, starting at any address, without running the CPU or
-    disturbing the real display. Feed the segments to `toSvg` for a file. The page uses it to drag a
-    line's corners and see the change at once, and to learn which mode the 340 reads each word in
-    for the code view's comments. [`scripts/boot-picture.mjs`](scripts/boot-picture.mjs) uses
-    `toSvg` in Node, headless, to save SYMELEC's boot picture.
+  back one pass of the picture it draws, starting at any address, without running the CPU or
+  disturbing the real display. Feed the segments to `toSvg` for a file. The page uses it to drag a
+  line's corners and see the change at once, and to learn which mode the 340 reads each word in
+  for the code view's comments. [`scripts/boot-picture.mjs`](scripts/boot-picture.mjs) uses
+  `toSvg` in Node, headless, to save SYMELEC's boot picture.
 
 ## Port 6: the software
 
@@ -673,9 +673,11 @@ Both stacks grow upward in memory: pushing adds 1 to the pointer, then stores at
 Now the three lines:
 
 1. `xct i 010` is **XCT**, "execute": it runs the word at an address as if it were the next
+
    instruction, then carries on after the `XCT`, unless that word jumped somewhere. With `i 010`,
-   it adds 1 to IP and runs the cell IP now points at.
+    it adds 1 to IP and runs the cell IP now points at.
 2. `dac i 012` is **DAC**, "deposit AC": it stores the **accumulator** (AC), the CPU's one
+
    working register, into memory. With `i 012`, it adds 1 to SP and stores AC there: a push.
 3. `jmp next` is **JMP**, "jump": it goes back to the top for the next cell.
 
@@ -717,9 +719,9 @@ In words:
 - `dac i 011` pushes IP onto the return stack. That's where this word will come back to.
 - `dac t` saves IP in a scratch word, `t`.
 - `lac i t` loads the word `t` points at, which is the cell itself. CAL ignored the cell's address
-  field, but `nest` reads it again, and it's the address of the body.
+field, but `nest` reads it again, and it's the address of the body.
 - **TAD**, "two's complement add", adds a word to AC, and `m1` holds −1. So `tad m1` backs up one,
-  because `NEXT` will add 1 before it reads.
+because `NEXT` will add 1 before it reads.
 - `dac 010` points IP at the body.
 - `jmp next` runs the body's first cell.
 
@@ -762,15 +764,15 @@ xloop:	lac 011
 In words:
 
 - `lac 011` and `dac t2` copy RP, the address of the counter on top of the return stack, into a
-  scratch word, `t2`. Location 11 can't be used for this itself, because going indirect through it
-  would add 1 to it first.
+scratch word, `t2`. Location 11 can't be used for this itself, because going indirect through it
+would add 1 to it first.
 - `isz i t2` adds 1 to the counter. While it's still negative, ISZ doesn't skip, and `jmp bran`
-  goes to `BRANCH`'s code, which jumps the thread back to the top of the loop. The address to
-  jump to is in the cell after `(LOOP)` in the thread.
+goes to `BRANCH`'s code, which jumps the thread back to the top of the loop. The address to
+jump to is in the cell after `(LOOP)` in the thread.
 - When the counter reaches zero, ISZ skips the `jmp bran`. Then `lac 011`, `tad m2` (`m2` holds
-  −2), and `dac 011` take 2 off RP, which drops the counter and the limit from the return stack.
+−2), and `dac 011` take 2 off RP, which drops the counter and the limit from the return stack.
 - `isz 010` adds 1 to IP, to step over the cell that holds the loop's address. Here ISZ is used
-  only for its add, because IP is never zero.
+only for its add, because IP is never zero.
 - `jmp next` carries on with whatever follows the loop.
 
 `I`, the word that gives the loop's index, adds the limit back to the counter.
@@ -814,14 +816,14 @@ comes from. Other kinds of value fit by being numbered:
 
 - **A boolean** is a dimension one bit wide: 0 or 1, like `ind`, the indirect bit.
 - **A small set of strings** is an **enum**: the dimension lists `names`, and the name's position is
-  its number. `who` is `["cpu", "device", "debugger"]`, so a guard can say `who: "cpu"` while the
-  context holds 0. The names are for people; the context only ever holds numbers.
+its number. `who` is `["cpu", "device", "debugger"]`, so a guard can say `who: "cpu"` while the
+context holds 0. The names are for people; the context only ever holds numbers.
 - **An open-ended set of strings**, like any word a player might type, has to be numbered first,
-  with a table from each string to a number, the same trick, called interning, that the
-  resolver uses for chains below. Zork's verbs and objects would go in that way.
+with a table from each string to a number, the same trick, called interning, that the
+resolver uses for chains below. Zork's verbs and objects would go in that way.
 - **A float or an object** doesn't fit at all. A guard on one would need a test, not a set, and
-  the sea has no way to build a table over tests. You turn it into a number that says what you'd
-  test, such as a size class, and guard on that.
+the sea has no way to build a table over tests. You turn it into a number that says what you'd
+test, such as a size class, and guard on that.
 
 A dimension is between 1 and 20 bits wide, so it has at most about a million values. A context
 field that's missing counts as 0. It's up to the caller to keep each value in range, and
@@ -911,11 +913,11 @@ has 4,096 entries and four distinct chains:
 A point where the interpreter would throw gets an entry that throws the same error when it's
 called, so the table agrees with the interpreter even about failures.
 
-**Kinds, when the table is too big.** A wide dimension can blow the table up. A slot guarded on
-one address makes `read`'s table range over all 32,768 addresses, times `who`, times `access`:
-262,144 entries, most of them the same chain. Past 65,536 entries, `plan` replaces the widest
-dimensions, one at a time, by their **kinds**. Two values are the same kind when every slot's guard
-on that dimension holds both or neither, so they always get the same chain. A lookup array maps
+**Kinds, when the table is too big.** A wide dimension can blow the table up. A slot guarded on  
+one address makes `read`'s table range over all 32,768 addresses, times `who`, times `access`:  
+262,144 entries, most of them the same chain. Past 65,536 entries, `plan` replaces the widest  
+dimensions, one at a time, by their **kinds**. Two values are the same kind when every slot's guard  
+on that dimension holds both or neither, so they always get the same chain. A lookup array maps  
 each value to its kind, and the table ranges over kinds:
 
 ```ts
@@ -1388,8 +1390,8 @@ device with a register or two: a random number generator, a bell, or a second te
 - Then `korzSlots()`, one `gate` per pulse, from [`iop.ts`](src/korz/iop.ts).
 - If it does something on its own, give it `tick` and `nextEvent`. Return `Infinity` when idle.
 - Test it the way [`src/korz/devices.test.ts`](src/korz/devices.test.ts) tests the clock and
-  teletype: the same program on `Pdp7` with `iot()` and on `KorzPdp7` with slots, compared in
-  lockstep, on the event-driven and every-cycle backplanes.
+teletype: the same program on `Pdp7` with `iot()` and on `KorzPdp7` with slots, compared in
+lockstep, on the event-driven and every-cycle backplanes.
 
 Then open SLOTS and watch your slots answer.
 
@@ -1442,12 +1444,50 @@ Port 7's kinds are one way to keep a table small. Try others in [`korz.ts`](src/
 measure them against it:
 
 - A two-level table: split the wide dimension into a high part and a low part, and share the
-  second-level tables that are all the same chain.
+second-level tables that are all the same chain.
 - A small map from the few special values to their chains, in front of one entry for everything
   else. That's the idea behind Self's polymorphic inline caches, which Urs Hölzle, Craig Chambers,
   and David Ungar described in 1991.
 - Kinds over two dimensions at once, when they only matter together, as `who` and `access` do for
   the Forth device's slots.
+
+Two designs worth building first:
+
+**A sparse kind map.** When only a few values are special, kinds already make the table tiny: one
+slot on one address gives three kinds and a 24-entry table. The waste is in the kind map that
+feeds it. It's a `Uint16Array` with an entry for every value, 64 KB for a 15-bit address and 2 MB
+for a 20-bit dimension, and `kindsOf` rebuilds it by visiting every value, so setting one
+breakpoint walks all 32,768 addresses again.
+
+- When every guard on the dimension names only a few values, keep a `Map` from those values to
+  their kinds, and give every other value kind 0.
+- The index expression changes from `this["read$addr"][(c["addr"] & 32767)]` to
+  `(this["read$addr"].get(c["addr"]) ?? 0)`: a hash lookup instead of an array load, through the same
+  one target, so the call site stays fast.
+- The rule: count the values the guards name on that dimension, and go sparse below some number you
+  measure. A guard written as a span or a mask can cover thousands of values, so those stay dense.
+- Use a `Map`, not a plain object with number keys. V8 turns a sparse object or an array with holes
+  into a hash table anyway, so a `Map` costs no more and says what it is.
+
+Installing then costs time in proportion to the guards instead of the dimension's width. Measure
+both: install time with a hundred breakpoints, and ns per step on the Forth device's `read`.
+
+**A lazy table, before giving up.** When even the kinds multiply past the limit, `plan` returns
+null and the selector runs the interpreter on every call. That happens with many slots on several
+wide dimensions at once, like thousands of watchpoints by address times device times pulse, or with
+more than 65,536 kinds on one dimension. In between the full table and the interpreter, there's
+room for a table filled on demand:
+
+- Key a `Map` by the point's index, computed the same way as today's table index.
+- On a miss, compute the chain with the interpreter's `chain`, intern it, and store the entry.
+- On every install or remove that touches the selector, clear the map.
+
+Memory grows with the points a program actually visits, which for a running machine is a small
+part of the whole space. The interpreter still computes every chain, so it stays the oracle. A
+point where the interpreter throws gets an entry that throws, as the full table does.
+
+For both: run the random-seas test with a small limit, so that every sea goes sparse or lazy, and
+add a test that installs and removes slots between calls, so a stale map shows up.
 
 The oracle is the interpreter, as always: run the random-seas test in
 [`src/korz/korz.test.ts`](src/korz/korz.test.ts) with a small limit.
@@ -1467,10 +1507,10 @@ comparing instead of by trying every value. So:
 - Let a dimension be a float dimension, and let guards give ranges on it.
 - At install, collect the boundaries, sort them, and number the intervals between them.
 - In the generated method, put comparisons where the mask goes, so the index expression turns
-  `c.x` into its interval itself: `(c.x < 0 ? 0 : c.x < 1 ? 1 : 2)`. With many boundaries, a binary
-  search instead.
+`c.x` into its interval itself: `(c.x < 0 ? 0 : c.x < 1 ? 1 : 2)`. With many boundaries, a binary
+search instead.
 - `bind` regenerates the method on every install, so a slot that adds a boundary renumbers the
-  intervals, and no caller ever holds an old numbering.
+intervals, and no caller ever holds an old numbering.
 
 Decide what NaN does (its own interval is the honest answer), and whether a boundary belongs to
 the interval below it or above.
@@ -1508,8 +1548,8 @@ instructions to the machine it runs on:
 
 - From TypeScript: `forthDevice.define("STAR", (m) => { … })`.
 - From Forth: a defining word that takes a JavaScript body, built with `new Function`, the way
-  `korz.ts` builds its generated methods. This is like Snap!'s JavaScript function blocks, by Jens
-  Mönig and Brian Harvey.
+`korz.ts` builds its generated methods. This is like Snap!'s JavaScript function blocks, by Jens
+Mönig and Brian Harvey.
 
 Such a word has no body in PDP-7 core. Its header and its cell are in the dictionary like any
 primitive's, but the cell's `JMP` goes to an address that only the device knows how to run: the word
