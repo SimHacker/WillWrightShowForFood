@@ -243,10 +243,11 @@ unless you give the generic function a different `:argument-precedence-order`. C
 from the Self group, made his language Cecil compare the arguments pointwise instead, and call a
 tie ambiguous. That's the rule Korz uses.
 
-ScriptX, the multimedia language I worked on at Kaleida Labs, called methods through generic
-functions too. But a ScriptX generic always took the target object as its first argument, so it
-was single dispatch in generic clothing. It did let you specialize methods on individual objects,
-the way Self does.
+ScriptX, the multimedia language I worked on at Kaleida Labs, was class-based, not prototype-based,
+and its generic functions worked the CLOS way. Each method declared the class its first argument,
+`self`, had to be, and you could use the same syntax to declare classes for any of the other
+arguments, so dispatch looked at the class of each argument. What it didn't have, as far as I
+remember, was a guard like "this argument equals this" or "is in this range."
 
 #### Changing the rules of dispatch
 
