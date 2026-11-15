@@ -28,6 +28,12 @@ const EVENT = 2;
  * cycle, so the CPU, the UI and the other units never see it behind. A unit's `irq` is asked
  * again only after something happened to it.
  *
+ * A unit may answer `nextEvent` by running ahead, as the 340 does. Within a cycle the CPU runs
+ * first and then the units in order, so a core write by the CPU at cycle s must be seen by every
+ * unit from cycle s, and one by unit j at cycle s by the units after j from cycle s and by those
+ * before it from s + 1. A unit with `coreWrite` that read the word too far ahead is brought back
+ * to that point before the write lands.
+ *
  * Placement: the one place where time passes. One thread steps the CPU and ticks every
  * device's bus side; `cycles` is the clock that ports stamp events with. A far side in a worker or
  * on another host sends events to be applied at a stated cycle and receives output through the
@@ -51,6 +57,16 @@ export class Cabinet {
 	/** The earliest `due`. */
 	private next = 0;
 	private byCode: number[] = new Array(64).fill(-1);
+	/** The unit being ticked, or -1 while the CPU runs. */
+	private ticking = -1;
+	/** Units with `coreWrite`, which may have run ahead. */
+	private watchers: number[] = [];
+	private leads: boolean[] = [];
+	private watching = false;
+	/** A unit was brought back during `service`, which must look at it again. */
+	private pulledBack = false;
+	/** The cycle the current run stops at; no unit is asked to look past it. */
+	private until = 0;
 
 	constructor(opts: CabinetOpts) {
 		this.cpu = opts.cpu;
@@ -70,6 +86,7 @@ export class Cabinet {
 
 	step(): Step {
 		if (this.everyCycle) return this.stepEveryCycle();
+		this.until = this.cycles + 1;
 		this.resync();
 		const result = this.advance();
 		this.flush();
@@ -85,6 +102,7 @@ export class Cabinet {
 			}
 			return last;
 		}
+		this.until = this.cycles + max;
 		this.resync();
 		for (let i = 0; i < max; i += 1) {
 			last = this.advance();
@@ -113,9 +131,9 @@ export class Cabinet {
 		if (on && !was) d.reset?.();
 	}
 
-	sync(code: number): void {
+	sync(code: number, pulse: number): void {
 		const i = this.byCode[code & 0o77]!;
-		if (i >= 0) this.syncUnit(i);
+		if (i >= 0 && !this.devices[i]!.answersAhead?.(code, pulse)) this.syncUnit(i);
 	}
 
 	private stepEveryCycle(): Step {
@@ -137,7 +155,7 @@ export class Cabinet {
 		}
 		for (let i = 0; i < devices.length; i += 1) {
 			const d = devices[i]!;
-			if (d.power !== false) d.tick?.(1);
+			if (d.power !== false) d.tick?.(1, this.cycles);
 		}
 		this.cycles += 1;
 		return result;
@@ -158,22 +176,40 @@ export class Cabinet {
 		return result;
 	}
 
-	/** Tick every unit due by `end` up to it, then ask it again for its next event and its irq. */
+	/**
+	 * Tick every unit due by `end` up to it, then ask it again for its next event and its irq. A
+	 * core write in one unit's tick can send an earlier unit back to be ticked again, hence the loop.
+	 */
 	private service(end: number): void {
 		const devices = this.devices;
-		let next = Infinity;
-		for (let i = 0; i < devices.length; i += 1) {
-			let due = this.due[i]!;
-			if (due <= end) {
-				const d = devices[i]!;
-				if (d.power !== false && this.synced[i]! < end) d.tick?.(end - this.synced[i]!);
-				this.synced[i] = end;
-				// A unit can switch itself off in its own tick, as the Ultimate Machine does.
-				due = this.schedule(i, d, d.power !== false, end);
+		for (;;) {
+			this.pulledBack = false;
+			let next = Infinity;
+			for (let i = 0; i < devices.length; i += 1) {
+				let due = this.due[i]!;
+				if (due <= end) {
+					const d = devices[i]!;
+					this.tickTo(i, d, end);
+					// A unit can switch itself off in its own tick, as the Ultimate Machine does.
+					due = this.schedule(i, d, d.power !== false, end);
+				}
+				if (due < next) next = due;
 			}
-			if (due < next) next = due;
+			if (this.pulledBack) for (let i = 0; i < devices.length; i += 1) if (this.due[i]! < next) next = this.due[i]!;
+			this.next = next;
+			if (next > end) return;
 		}
-		this.next = next;
+	}
+
+	private tickTo(i: number, d: Device, to: number): void {
+		const from = this.synced[i]!;
+		if (to < from) throw new Error(`${d.name}: asked back to cycle ${to} from ${from}`);
+		if (d.power !== false && (from < to || this.leads[i])) {
+			this.ticking = i;
+			d.tick?.(to - from, from);
+			this.ticking = -1;
+		}
+		this.synced[i] = to;
 	}
 
 	private schedule(i: number, d: Device, on: boolean, now: number): number {
@@ -186,7 +222,7 @@ export class Cabinet {
 		let due = Infinity;
 		if (kind === EVERY) due = now + 1;
 		else if (kind === EVENT && on) {
-			const k = d.nextEvent!();
+			const k = d.nextEvent!(this.watching ? Math.max(1, this.until - now) : 1);
 			due = now + (k >= 1 ? k : 1);
 		}
 		this.due[i] = due;
@@ -195,14 +231,30 @@ export class Cabinet {
 
 	/** Bring one unit up to the current cycle and have it rescheduled at the end of this step. */
 	private syncUnit(i: number): void {
-		if (this.everyCycle) return;
-		const d = this.devices[i]!;
-		const now = this.cycles;
-		if (d.power !== false && this.synced[i]! < now) d.tick?.(now - this.synced[i]!);
-		this.synced[i] = now;
-		this.due[i] = now + 1;
-		if (now + 1 < this.next) this.next = now + 1;
+		this.syncTo(i, this.cycles);
 	}
+
+	/** Bring one unit to `point`, back from ahead if need be, and have it rescheduled at the end of this step. */
+	private syncTo(i: number, point: number): void {
+		if (this.everyCycle) return;
+		this.tickTo(i, this.devices[i]!, point);
+		const due = this.cycles + 1;
+		this.due[i] = due;
+		if (due < this.next) this.next = due;
+		this.pulledBack = true;
+	}
+
+	/** Ahead of each core write: bring back any unit that has read the word too far ahead. */
+	private readonly beforeWrite = (addr: number): void => {
+		const w = this.watchers;
+		const by = this.ticking;
+		for (let k = 0; k < w.length; k += 1) {
+			const i = w[k]!;
+			if (i === by) continue;
+			const point = by >= 0 && i < by ? this.cycles + 1 : this.cycles;
+			if (this.devices[i]!.coreWrite!(addr, point)) this.syncTo(i, point);
+		}
+	};
 
 	/** Take the units as they are now: anything outside the machine may have touched them since the last run. */
 	private resync(): void {
@@ -216,11 +268,24 @@ export class Cabinet {
 		}
 		this.byCode.fill(-1);
 		this.raisedCount = 0;
+		this.watchers = [];
+		this.leads = new Array(n).fill(false);
 		let next = Infinity;
 		for (let i = 0; i < n; i += 1) {
 			const d = devices[i]!;
 			for (const code of d.iots) this.byCode[code & 0o77] = i;
 			this.kind[i] = !d.tick ? NO_TICK : d.nextEvent ? EVENT : EVERY;
+			if (d.coreWrite) this.watchers.push(i);
+		}
+		// coreWrite takes 15-bit addresses; below 8K a 13-bit display address can alias one it never sees.
+		const watch = this.watchers.length > 0 && this.cpu.watchWrites !== undefined && this.cpu.coreWords >= 8192;
+		if (watch) for (const i of this.watchers) this.leads[i] = true;
+		if (watch !== this.watching) {
+			this.cpu.watchWrites?.(watch ? this.beforeWrite : null);
+			this.watching = watch;
+		}
+		for (let i = 0; i < n; i += 1) {
+			const d = devices[i]!;
 			this.synced[i] = this.cycles;
 			this.raised[i] = false;
 			const due = this.schedule(i, d, d.power !== false, this.cycles);
@@ -233,11 +298,7 @@ export class Cabinet {
 	private flush(): void {
 		const devices = this.devices;
 		for (let i = 0; i < devices.length; i += 1) {
-			if (this.synced[i]! < this.cycles) {
-				const d = devices[i]!;
-				if (d.power !== false) d.tick?.(this.cycles - this.synced[i]!);
-				this.synced[i] = this.cycles;
-			}
+			if (this.synced[i]! < this.cycles || this.leads[i]) this.tickTo(i, devices[i]!, this.cycles);
 		}
 	}
 
@@ -249,8 +310,8 @@ export class Cabinet {
 		}
 		const i = this.devices.findIndex((d) => d.iots.includes(iot.device));
 		if (i < 0) return { ac: iot.ac };
-		this.syncUnit(i);
 		const box = this.devices[i]!;
+		if (!box.answersAhead?.(iot.device, iot.pulse)) this.syncUnit(i);
 		if (box.power === false) return box.offIot?.(iot) ?? { ac: iot.ac };
 		return box.iot(iot);
 	}

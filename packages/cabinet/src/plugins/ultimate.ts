@@ -55,6 +55,9 @@ export const UM_MAX = 1000;
 const move = (pos: number, dir: 1 | -1, len: number, dt: number): number =>
 	len === 0 ? (dir > 0 ? UM_MAX : 0) : Math.min(UM_MAX, Math.max(0, pos + (dir * dt * UM_MAX) / len));
 
+/** Fewest steps a move of `len` steps per full travel needs to cover `gap`, less two for rounding. */
+const untilArrival = (gap: number, len: number): number => Math.max(1, Math.floor((gap * len) / UM_MAX) - 2);
+
 /** Steps per unit of a UMLT timing word. */
 export const UM_TICK = 64;
 
@@ -98,7 +101,7 @@ const CLOSE = 6;
 const REST = 7;
 
 /**
- * Placement: the phases, lever and arm are all bus side, ticked every step. The far side only
+ * Placement: the phases, lever and arm are all bus side, ticked at each phase change. The far side only
  * draws `pose()` (the front panel, the 340 picture) or would drive a real servo and read a real
  * lever, sending lever changes in at a stated cycle. DESIGN.md, "Placement: what can run where".
  */
@@ -211,6 +214,35 @@ export class UltimateMachine implements Device, KorzDevice {
 
 	switchOff(): boolean {
 		return this.setLever(false);
+	}
+
+	/**
+	 * A bound lever is someone else's switch and is watched every step. Otherwise the lever moves
+	 * only through `setLever`, so the next event is the end of a timed phase or, moving, a lower
+	 * bound on when the lid or arm arrives. `tick` still moves them one step at a time.
+	 */
+	nextEvent(): number {
+		if (this.bindings.length > 0) return 1;
+		const name = UM_PHASES[this.phase];
+		if (!name || name === "off") return Infinity;
+		const len = this.timing[name];
+		if (len === 0) return 1;
+		switch (this.phase) {
+			case WAIT:
+			case PRESS:
+			case REST:
+				return Math.max(1, len - this.t);
+			case REACH:
+				if (this.manualPress && this.arm >= UM_MAX) return Infinity;
+				return untilArrival(UM_MAX - this.arm, len);
+			case RETURN:
+				return untilArrival(this.arm, len);
+			case OPEN:
+				return untilArrival(UM_MAX - this.lid, len);
+			case CLOSE:
+				return untilArrival(this.lid, len);
+		}
+		return 1;
 	}
 
 	tick(cycles = 1): void {

@@ -64,6 +64,7 @@ export type KorzPdp7Opts = Pdp7Opts & { korz?: "interpret" | "resolve" };
 
 /** Shared results, so a step allocates nothing. */
 const RAN: Step = Object.freeze({});
+const WATCH = "backplane: units that read core hear of a write before it lands";
 const HALTED: Step = Object.freeze({ halt: true });
 
 const k7 = (cpu: KorzPdp7): K7 => ({ cpu, op: 0, ind: 0, skp: 0, cc: 0, rot: 0, addr: 0, who: 0, access: 0, device: 0, pulse: 0, sub: 0, iop: 0, skip: 0,
@@ -145,6 +146,25 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 		this.mem.who = 0;
 		this.mem.value = word;
 		this.go.write(this.mem);
+	}
+
+	/**
+	 * An observe-layer slot on `write`: the backplane hears of each write before it lands. Hearing
+	 * it can run a unit that reads core through this CPU's memory context, so the slot puts the
+	 * write's coordinates back before it goes on.
+	 */
+	override watchWrites(before: ((addr: number) => void) | null): void {
+		this.sea.remove(WATCH);
+		if (!before) return;
+		this.sea.install([{ selector: "write", layer: "observe", by: WATCH, run: (c, next) => {
+			const { addr, value, who, access } = c;
+			before(addr);
+			c.addr = addr;
+			c.value = value;
+			c.who = who;
+			c.access = access;
+			return next();
+		} }]);
 	}
 
 	private execute(ir: number, at: number, xct: number): void {
@@ -229,7 +249,7 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 				io.skip = 0;
 				if (c.ir & 0o10) m.ac = 0;
 				io.ac = m.ac;
-				m.box?.sync(io.device);
+				m.box?.sync(io.device, io.pulse);
 				m.go.iot(io);
 				m.ac = io.ac;
 				if (io.skip) m.pc = incr(m.pc);

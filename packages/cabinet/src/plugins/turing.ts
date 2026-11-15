@@ -601,21 +601,32 @@ export class TuringDevice implements Device, KorzDevice {
 		];
 	}
 
-	tick(): void {
-		if (!this.engine.running) return;
-		this.accum += this.rate;
-		while (this.accum >= 1 && this.engine.running) {
-			this.accum -= 1;
-			this.engine.step();
-			this.onStep?.(this.engine);
-			if (this.engine.emitted) this.onEmit?.(this.engine.lastEmit, this.engine);
+	tick(cycles = 1): void {
+		for (let n = 0; n < cycles && this.engine.running; n += 1) {
+			this.accum += this.rate;
+			while (this.accum >= 1 && this.engine.running) {
+				this.accum -= 1;
+				this.engine.step();
+				this.onStep?.(this.engine);
+				if (this.engine.emitted) this.onEmit?.(this.engine.lastEmit, this.engine);
+			}
+			if (!this.engine.running) this.accum = 0;
 		}
-		if (!this.engine.running) this.accum = 0;
 	}
 
-	/** Running, the engine works on core every cycle; stopped, nothing happens until TMLA or TMGO. */
+	/**
+	 * Running, the engine touches core and its flags only on a transition, when `accum` reaches 1:
+	 * found by the same additions `tick` makes, up to 64 cycles. Stopped, nothing happens until
+	 * TMLA or TMGO.
+	 */
 	nextEvent(): number {
-		return this.engine.running ? 1 : Infinity;
+		if (!this.engine.running) return Infinity;
+		let a = this.accum;
+		for (let k = 1; k <= 64; k += 1) {
+			a += this.rate;
+			if (a >= 1) return k;
+		}
+		return 64;
 	}
 
 	irq(): boolean {

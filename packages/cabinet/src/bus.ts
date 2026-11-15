@@ -23,7 +23,8 @@ export interface Device {
 	/** Device-select codes this box claims. Unclaimed IOTs no-op. */
 	readonly iots: readonly number[];
 	iot(req: Iot): IotReply;
-	tick?(cycles: number): void;
+	/** Run `cycles` cycles; `at`, when the backplane knows it, is the number of the first. */
+	tick?(cycles: number, at?: number): void;
 	/**
 	 * Cycles until this unit next does something anyone can see: raises a flag, changes `irq`,
 	 * writes core, or produces output. The backplane may then make one `tick(n)` for up to that
@@ -31,8 +32,24 @@ export interface Device {
 	 * IOT, a reset, or something outside the machine touches the unit; the backplane brings it up
 	 * to date before each of those. Absent, a unit with `tick` is ticked every cycle. Its power may
 	 * then change only through `Cabinet.setPower`.
+	 *
+	 * `lead` is how many cycles the backplane may skip at most. A unit that computes its future to
+	 * answer (the 340 runs ahead) must not look further, and must have `coreWrite` if what it
+	 * computed depends on core.
 	 */
-	nextEvent?(): number;
+	nextEvent?(lead: number): number;
+	/**
+	 * Core word `addr` is about to be written, at a point where this unit should have run exactly
+	 * the cycles before `point`. True if what the unit computed ahead depends on that word: the
+	 * backplane then brings it back to `point` with `tick(0)` or more before the write lands.
+	 */
+	coreWrite?(addr: number, point: number): boolean;
+	/**
+	 * True if this IOT reads only state that running ahead leaves as it was at the backplane's
+	 * cycle, so the backplane need not bring the unit up to date first. The unit answers it from
+	 * that state.
+	 */
+	answersAhead?(code: number, pulse: number): boolean;
 	/** True while this device requests an interrupt (its flag is up). */
 	irq?(): boolean;
 	/** Clear flags. Invoked by CAF and by Cabinet.reset(). */
@@ -62,7 +79,7 @@ export type Backplane = {
 	readonly devices: readonly Device[];
 	resetDevices(): void;
 	/** Bring the unit on this IOT code up to the current cycle; a CPU that dispatches its own IOTs calls it before each. */
-	sync(code: number): void;
+	sync(code: number, pulse: number): void;
 };
 
 export interface Cpu {
@@ -82,4 +99,6 @@ export interface Cpu {
 	read(addr: number): number;
 	write(addr: number, word: number): void;
 	deposit(addr: number, words: readonly number[]): void;
+	/** Call `before` with the address ahead of every core write, by the CPU or through `write`; null stops. */
+	watchWrites?(before: ((addr: number) => void) | null): void;
 }

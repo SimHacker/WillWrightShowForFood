@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
+import type { Device, Iot, IotReply } from "../bus.js";
 import { Cabinet } from "../cabinet.js";
 import { assembleForthKernel, bootForth, compileForth, type ForthImage } from "../forth.js";
 import { Clock } from "../plugins/clock.js";
@@ -34,10 +35,11 @@ const regs = (c: Pdp7) => [c.pc, c.ac, c.link, c.mq, c.sc, c.ion, c.ionDefer, c.
 
 const SLICE = 5000;
 
-function pair(build: (make: Make, every: boolean) => Rig, korz: "interpret" | "resolve") {
+/** `pdp7` runs `Pdp7` on both sides: the event-driven backplane against the oracle, the CPU the same. */
+function pair(build: (make: Make, every: boolean) => Rig, korz: "interpret" | "resolve" | "pdp7") {
 	const a = build((o) => new Pdp7(o), true);
-	const b = build((o) => new KorzPdp7({ ...o, korz }), false);
-	assert.ok(b.cpu instanceof KorzPdp7);
+	const b = build((o) => (korz === "pdp7" ? new Pdp7(o) : new KorzPdp7({ ...o, korz })), false);
+	assert.ok(korz === "pdp7" || b.cpu instanceof KorzPdp7);
 	/** Registers as each step begins: the state every earlier step, and every tick, left behind. */
 	const logged = (r: Rig): string[] => {
 		const log: string[] = [];
@@ -214,6 +216,110 @@ function readerIrq(make: Make, every = false) {
  *   1 JMP 300;  100 LAW 1; 101 IE; 102 ION; 103 JMP 103
  *   300 clear flag; 301 ISZ 21; 302 JMP 304; 303 HLT; 304 ION; 305 JMP I 0
  */
+/**
+ * The Ultimate Machine's phase changes by interrupt, each acknowledged at once, with odd phase
+ * lengths, so a phase that ends a cycle late interrupts a step late. Seven interrupt: the eighth
+ * change, home, switches the box off, and the backplane ignores the flags of a unit that is off.
+ *   1 JMP 300;  100 LAW 1; 101 UMIE; 102 UMON; 103 ION; 104 JMP 104
+ *   300 UMCF; 301 ISZ 21; 302 JMP 304; 303 HLT; 304 ION; 305 JMP I 0
+ */
+function ultimateIrq(make: Make, every = false) {
+	const cpu = make({ coreWords: 8192 });
+	cpu.write(0o1, 0o600300);
+	[0o760001, 0o705664, 0o705604, 0o700042, 0o600104].forEach((w, i) => cpu.write(0o100 + i, w));
+	[0o705644, 0o440021, 0o600304, 0o740040, 0o700042, 0o620000].forEach((w, i) => cpu.write(0o300 + i, w));
+	cpu.write(0o21, 0o777771);
+	const u = new UltimateMachine({ wait: 997, open: 1013, reach: 1201, press: 503, return: 1999, close: 811, rest: 617 });
+	const tty = new Teletype();
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [tty, u] });
+	cpu.pc = 0o100;
+	return { cpu, box, tty, paper: () => "", state: () => `${u.phase} ${u.presses} ${u.lid} ${u.arm} ${cpu.read(0o21)}` };
+}
+
+/** A unit that writes one core word every `period` cycles, as a DMA device would: `word(n)` the nth time. */
+class Poke implements Device {
+	readonly iots: number[] = [];
+	n = 0;
+	private left: number;
+	constructor(
+		readonly name: string,
+		private readonly cpu: Pdp7,
+		private readonly addr: number,
+		private readonly period: number,
+		private readonly word = (n: number) => 0o020000 | ((n * 13) & 0o777),
+	) {
+		this.left = period;
+	}
+	iot(req: Iot): IotReply {
+		return { ac: req.ac };
+	}
+	tick(cycles = 1): void {
+		for (let i = 0; i < cycles; i += 1) {
+			this.left -= 1;
+			if (this.left > 0) continue;
+			this.left = this.period;
+			this.n += 1;
+			this.cpu.write(this.addr, this.word(this.n));
+		}
+	}
+	nextEvent(): number {
+		return this.left;
+	}
+}
+
+/**
+ * The CPU and two DMA units racing the 340 through one display file, for a 340 that runs ahead.
+ * The file starts with a DDS into word 30 and draws twenty points. The CPU clears 30, starts the
+ * display, reads 30 in each of the next three cycles, then until the display stops keeps
+ * rewriting the last point's x, which the 340 reads late in the frame, in a loop whose length
+ * changes by a cycle each time round, so the race never repeats. One unit before the 340 in
+ * order and one after it rewrite two more x words every 7 and 11 cycles, and a third, also before
+ * it, rewrites the stop word every 13 with a new intensity for the next frame: the last word the 340 reads before
+ * it stops, where running ahead ends.
+ *   100 DZM 30; 101 LAW 1000; 102 IDLA; 103 LAC 30; 104 TAD 30; 105 TAD 30; 106 DAC 23
+ *   107 ISZ 20; 110 LAC 20; 111 AND 24; 112 SZA; 113 ISZ 25
+ *   114 LAC 20; 115 AND 21; 116 TAD 22; 117 DAC 1050; 120 LAC 30; 121 DAC 26
+ *   122 IDSI; 123 JMP 107; 124 JMP 100
+ */
+function displayRace(make: Make, every = false) {
+	const cpu = make({ coreWords: 8192 });
+	[
+		0o140030, 0o761000, 0o700606, 0o200030, 0o340030, 0o340030, 0o040023,
+		0o440020, 0o200020, 0o500024, 0o740200, 0o440025,
+		0o200020, 0o500021, 0o340022, 0o041050, 0o200030, 0o040026,
+		0o700601, 0o600107, 0o600100,
+	].forEach((w, i) => cpu.write(0o100 + i, w));
+	cpu.write(0o21, 0o777);
+	cpu.write(0o22, 0o020000);
+	cpu.write(0o24, 1);
+	cpu.write(0o25, 1);
+	const file = [0o160000, 0o220030];
+	for (let i = 0; i < 20; i += 1) file.push(0o020000 | (i * 37), (i === 19 ? 0o202000 : 0o222000) | (i * 29));
+	file.push(0o002000);
+	file.forEach((w, i) => cpu.write(0o1000 + i, w));
+	let segs = 0;
+	let sum = 0;
+	const t = new Type340({
+		fetch: (a) => cpu.read(a),
+		store: (a, w) => cpu.write(a, w),
+		onSegment: (s) => {
+			segs += 1;
+			sum = (sum * 31 + s.cycle * 7 + s.x1 * 3 + s.y1 + s.intensity * 1031) % 1_000_000_007;
+		},
+	});
+	const before = new Poke("poke-before", cpu, 0o1026, 7);
+	const after = new Poke("poke-after", cpu, 0o1040, 11);
+	const stop = new Poke("poke-stop", cpu, 0o1052, 13, (n) => 0o002010 | (n & 7));
+	const tty = new Teletype();
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [before, stop, t, after, tty] });
+	t.clock = () => box.cycles;
+	cpu.pc = 0o100;
+	return {
+		cpu, box, tty, paper: () => "",
+		state: () => `${frame(t)} ${segs} ${sum} ${before.n} ${after.n} ${stop.n} ${[0o23, 0o26, 0o30].map((a) => cpu.read(a).toString(8))}`,
+	};
+}
+
 function handIrq(make: Make, every = false) {
 	const cpu = make({ coreWords: 8192 });
 	cpu.write(0o1, 0o600300);
@@ -295,6 +401,23 @@ test("korz devices: the paper tape reader by interrupt, each frame in the interr
 	assert.equal(p.a.cpu.read(0o1004), 0o215);
 	p.same();
 });
+
+test("korz devices: the Ultimate Machine's phase changes by interrupt", () => {
+	const p = pair(ultimateIrq, "resolve");
+	for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
+	assert.equal(p.a.cpu.halted, true);
+	assert.equal(p.a.cpu.read(0o21), 0);
+	p.same();
+});
+
+for (const level of ["resolve", "pdp7"] as const) {
+	test(`korz devices: the CPU and two DMA units racing the 340 through its display file (${level})`, () => {
+		const p = pair(displayRace, level);
+		p.run(200_000);
+		assert.equal(p.a.cpu.read(0o30), 0o400000);
+		p.same();
+	});
+}
 
 test("korz devices: DataHand frames by interrupt", () => {
 	const p = pair(handIrq, "resolve");

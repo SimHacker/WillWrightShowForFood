@@ -117,7 +117,7 @@ Each device keeps its old `iot()` method as the oracle for its slots.
 Mutation checks confirm the tests notice when one gate is broken. Breaking IDSI, TMSS, TMSR, TMGO,
 UMSI, LSF, LLB18, RSB, DBSF, DBLM, RAL or the ION delay each makes a test fail. One gate, TMLA,
 survives: the Forth code always follows it with TMST, so no program here can see it. We report
-that rather than paper over it. The whole package has 272 passing tests.
+that rather than paper over it. The whole package has 275 passing tests.
 
 **Speed.** UNIX v0 boot, 3 million steps, a new machine each round, Node 26 on an M4 Max. All three
 levels end at the same PC.
@@ -142,6 +142,16 @@ took the resolver from 46 to 29 ns and `Pdp7` from 30 to 15 ns. The old loop, ev
 cycle, stays as the oracle, run in lockstep against the new one. Moving from Node 20 to 26 then took
 `Pdp7` to 11 ns and left the resolver where it was. Even the interpreter, the oracle, runs UNIX at
 about four times a real PDP-7.
+
+The 340 can't be left behind that way: drawing, it reads core every cycle and can raise a flag on
+any of them. So it runs ahead instead, from a snapshot, holding back what it draws, until it
+raises a flag, reaches its one store into core, or is called back. Every core write, from the CPU
+or another unit, is announced first; in `KorzPdp7` that is one more slot, an observer on `write`.
+A write to a word the 340 read ahead sends it back to the snapshot to replay up to the write. The
+`ULTIMATE-HAND` workload (Forth, the 3D turtle, the 340, the DataHand and the Ultimate Machine)
+went from 75 to 23 ns a step in `Pdp7` and from 102 to 43 ns in the resolver. It is optimistic
+execution with rollback, Time Warp's idea, inside one emulated cabinet, checked against the
+every-cycle loop by a rig built to race the 340.
 
 **The second machine, and what V8 keys on.** In one Node process, a second `KorzPdp7` ran 71–80 ns
 a step against the first one's 55. Same code, same program, same tables. V8 doesn't specialize on
@@ -205,9 +215,8 @@ snapshots).
 
 Our predictions:
 - 200–400 M PDP-7 instructions per second for the CPU alone, at about 65% confidence.
-- Event-driven devices (`nextEvent`) are built, so on UNIX the cabinet no longer caps it. On
-  workloads with the 340 drawing it still does, until the 340 can lag behind and catch up before
-  the CPU writes core it may read.
+- Event-driven devices (`nextEvent`) are built, with the 340 running ahead of the CPU and
+  brought back when a write touches a word it read, so the cabinet no longer caps it.
 - After that, idle-loop skipping and block chaining.
 
 The point is not only speed. The compiler is the third level of an oracle ladder, and every level

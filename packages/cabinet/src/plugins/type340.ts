@@ -104,6 +104,41 @@ type PendingVector = {
 	addr: number;
 };
 
+/** How many cycles the 340 may run ahead of the backplane. */
+const LEAD = 256;
+
+/** Everything a display word can change, saved where running ahead starts. */
+type Snapshot = {
+	time: number;
+	ownClock: number;
+	segments: number;
+	dac: number;
+	status: number;
+	x: number;
+	y: number;
+	mode: Mode;
+	lpEna: boolean;
+	scale: number;
+	intensity: number;
+	shift: number;
+	asr: number;
+	saveFF: boolean;
+	tag: number;
+	savedTag: number;
+	penX: number;
+	penY: number;
+	lastHit: Segment | null;
+	lastHitPen: PenInput | null;
+	subr: number;
+	block: number;
+	ddsBlock: boolean;
+	ch: number;
+	glyphs: number;
+	xAt: number;
+	yAt: number;
+	pending: PendingVector | null;
+};
+
 export type Frame = {
 	index: number;
 	cycleStart: number;
@@ -220,6 +255,13 @@ export class Type340 implements Device, KorzDevice {
 	private ownClock = 0;
 	/** The rest of a vector the pen stopped; IDRS draws it before the next word. */
 	private pending: PendingVector | null = null;
+	/** The number of the next cycle this 340 runs, once the backplane has said (`timed`). */
+	private time = 0;
+	private timed = false;
+	/** Where running ahead started, or null when the 340 is where the backplane thinks it is. */
+	private ahead: Snapshot | null = null;
+	/** The cycle each display address was last read at while running ahead. */
+	private readonly readAt = new Float64Array(ADDR + 1).fill(-1);
 
 	constructor(opts: Type340Opts) {
 		this.fetch = opts.fetch;
@@ -231,19 +273,143 @@ export class Type340 implements Device, KorzDevice {
 		this.wordsPerTick = opts.wordsPerTick ?? 1;
 	}
 
-	/** Drawing, the 340 fetches from core every cycle; stopped, only its clock runs until an IOT starts it. */
-	nextEvent(): number {
-		return this.enabled ? 1 : Infinity;
+	/**
+	 * Stopped, frozen by a flag, or not yet started, nothing happens until an IOT. Drawing, the 340
+	 * runs ahead from a snapshot, up to `lead` cycles: until it raises a flag or stops, which is its
+	 * next event, or until the next word is a DDS, its one store into core, which runs live at its
+	 * own cycle. What it draws ahead goes to `onSegment` when time reaches it. Each word it reads is
+	 * stamped with the cycle it read it at, so `coreWrite` can tell when a write touches one; the
+	 * backplane then brings it back to the write, and it replays from the snapshot.
+	 */
+	nextEvent(lead = 1): number {
+		if (!this.enabled || this.status !== 0) return Infinity;
+		if (lead <= 1 || this.wordsPerTick !== 1) return 1;
+		const max = Math.min(lead, LEAD);
+		this.ahead = this.snapshot();
+		let k = 0;
+		while (k < max && !this.storesNext()) {
+			this.ownClock += 1;
+			this.cycle();
+			this.time += 1;
+			k += 1;
+			if (this.status !== 0) break;
+		}
+		if (k === 0) {
+			this.ahead = null;
+			return 1;
+		}
+		return this.status === 0 && k < max ? k + 1 : k;
 	}
 
-	tick(cycles = 1): void {
-		this.ownClock += cycles;
-		if (!this.enabled) return;
+	/**
+	 * Any word read since the snapshot, not only one read at `point` or later: replaying to some
+	 * later point must read every word as it was, so the 340 comes back before any of them changes.
+	 */
+	coreWrite(addr: number, _point: number): boolean {
+		return this.ahead !== null && this.readAt[addr & ADDR]! >= this.ahead.time;
+	}
+
+	tick(cycles = 1, at?: number): void {
+		if (at !== undefined) this.timed = true;
+		const to = (at ?? this.time) + cycles;
+		if (this.ahead) {
+			if (to >= this.time) this.commit();
+			else this.rollback();
+		}
+		while (this.time < to) {
+			if (!this.enabled) {
+				this.ownClock += to - this.time;
+				this.time = to;
+				return;
+			}
+			this.ownClock += 1;
+			this.cycle();
+			this.time += 1;
+		}
+	}
+
+	/**
+	 * A skip alone (pulse 1, on any of the 340's codes) reads only the status and the pen that last
+	 * hit, which running ahead leaves alone until the cycle it stops at, so it is answered from the
+	 * snapshot without bringing the 340 back.
+	 */
+	answersAhead(_code: number, pulse: number): boolean {
+		return (pulse & 0o67) === 1;
+	}
+
+	/** The status as of the backplane's cycle: running ahead changes it only on the cycle it stops. */
+	private statusNow(): number {
+		return this.ahead ? this.ahead.status : this.status;
+	}
+
+	private penNow(): PenInput | null {
+		return this.ahead ? this.ahead.lastHitPen : this.lastHitPen;
+	}
+
+	/** The next word is a DDS, which writes core. */
+	private storesNext(): boolean {
+		return this.pending === null && this.mode === MODE.SUBR && GETFIELD(this.fetch(this.dac), 0, 1) === DDS;
+	}
+
+	private snapshot(): Snapshot {
+		return {
+			time: this.time, ownClock: this.ownClock, segments: this.segments.length,
+			dac: this.dac, status: this.status, x: this.x, y: this.y, mode: this.mode, lpEna: this.lpEna,
+			scale: this.scale, intensity: this.intensity, shift: this.shift, asr: this.asr, saveFF: this.saveFF,
+			tag: this.tag, savedTag: this.savedTag, penX: this.penX, penY: this.penY, lastHit: this.lastHit,
+			lastHitPen: this.lastHitPen, subr: this.subr, block: this.block, ddsBlock: this.ddsBlock, ch: this.ch,
+			glyphs: this.glyphs, xAt: this.xAt, yAt: this.yAt, pending: this.pending,
+		};
+	}
+
+	/** Time has reached what the 340 drew ahead: hand it over. */
+	private commit(): void {
+		const from = this.ahead!.segments;
+		this.ahead = null;
+		const on = this.onSegment;
+		if (on) for (let i = from; i < this.segments.length; i += 1) on(this.segments[i]!);
+	}
+
+	private rollback(): void {
+		const s = this.ahead!;
+		this.ahead = null;
+		this.time = s.time;
+		this.ownClock = s.ownClock;
+		this.segments.length = s.segments;
+		this.dac = s.dac;
+		this.status = s.status;
+		this.x = s.x;
+		this.y = s.y;
+		this.mode = s.mode;
+		this.lpEna = s.lpEna;
+		this.scale = s.scale;
+		this.intensity = s.intensity;
+		this.shift = s.shift;
+		this.asr = s.asr;
+		this.saveFF = s.saveFF;
+		this.tag = s.tag;
+		this.savedTag = s.savedTag;
+		this.penX = s.penX;
+		this.penY = s.penY;
+		this.lastHit = s.lastHit;
+		this.lastHitPen = s.lastHitPen;
+		this.subr = s.subr;
+		this.block = s.block;
+		this.ddsBlock = s.ddsBlock;
+		this.ch = s.ch;
+		this.glyphs = s.glyphs;
+		this.xAt = s.xAt;
+		this.yAt = s.yAt;
+		this.pending = s.pending;
+	}
+
+	private cycle(): void {
 		if (this.pending && this.status === 0) {
 			this.drawVector(this.pending);
 			return;
 		}
 		for (let i = 0; i < this.wordsPerTick && this.status === 0; i += 1) {
+			if (this.ahead) this.readAt[this.dac] = this.time;
 			const word = this.fetch(this.dac);
 			const addr = this.dac;
 			this.dac = (this.dac + 1) & ADDR;
@@ -277,7 +443,7 @@ export class Type340 implements Device, KorzDevice {
 		let skip = false;
 		switch (req.device) {
 			case 0o05: /* IDVE 700501 skip on v-edge · IDRS 700504 resume */
-				if (req.pulse & 0o1) skip = (this.status & ST340_VEDGE) !== 0;
+				if (req.pulse & 0o1) skip = (this.statusNow() & ST340_VEDGE) !== 0;
 				if (req.pulse & 0o2) ac |= this.dac;
 				if (req.pulse & 0o4) {
 					/* IDRS: resume in place. Clears the freeze causes a resume can
@@ -288,7 +454,7 @@ export class Type340 implements Device, KorzDevice {
 				}
 				break;
 			case 0o06: /* IDSI 700601 skip on stop · IDLA 700606 load address and go */
-				if (req.pulse & 0o1) skip = (this.status & ST340_STOPPED) !== 0;
+				if (req.pulse & 0o1) skip = (this.statusNow() & ST340_STOPPED) !== 0;
 				if (req.pulse & 0o4) {
 					/* IDLA is a restart: SYMELEC's PEN3, EDGEV, and EDGEH all
 					   recover with LAW LB; IDLA. SIMH's glue cleared only
@@ -306,7 +472,7 @@ export class Type340 implements Device, KorzDevice {
 				}
 				break;
 			case 0o07: /* IDSP 700701 skip on pen · IDRC 700712 read beam coords */
-				if (req.pulse & 0o1) skip = (this.status & ST340_LPHIT) !== 0;
+				if (req.pulse & 0o1) skip = (this.statusNow() & ST340_LPHIT) !== 0;
 				if (req.pulse & 0o2) {
 					/* The packing TRCR (listing 5467-5501) unrotates:
 					   IDRC; CLL+RAL; AND 1776 -> TEMPY   (y, LSB dropped)
@@ -329,11 +495,11 @@ export class Type340 implements Device, KorzDevice {
 				}
 				break;
 			case 0o10: /* IDHE 701001 skip on h-edge */
-				if (req.pulse & 0o1) skip = (this.status & ST340_HEDGE) !== 0;
+				if (req.pulse & 0o1) skip = (this.statusNow() & ST340_HEDGE) !== 0;
 				if (req.pulse & 0o2) ac |= this.asr;
 				break;
 			case 0o11: /* IDPN 701112 — cabinet extension: which pen fired? */
-				if (req.pulse & 0o1) skip = this.lastHitPen !== null;
+				if (req.pulse & 0o1) skip = this.penNow() !== null;
 				if (req.pulse & 0o2) {
 					const n = this.lastHitPen ? this.pens.indexOf(this.lastHitPen) + 1 : 0;
 					if (req.pulse & 0o10) ac = n;
@@ -351,14 +517,14 @@ export class Type340 implements Device, KorzDevice {
 	korzSlots(bus: IopBus) {
 		return [
 			timed(bus, 0o05, "340 device 05"),
-			skipIf(0o05, "340 IDVE: skip on vertical edge", () => (this.status & ST340_VEDGE) !== 0),
+			skipIf(0o05, "340 IDVE: skip on vertical edge", () => (this.statusNow() & ST340_VEDGE) !== 0),
 			gate(0o05, 2, "340: DAC into AC", (c) => { c.ac |= this.dac; }),
 			gate(0o05, 4, "340 IDRS: resume in place", () => {
 				this.status &= ~(ST340_LPHIT | ST340_VEDGE | ST340_HEDGE);
 				this.enabled = true;
 			}),
 			timed(bus, 0o06, "340 device 06"),
-			skipIf(0o06, "340 IDSI: skip on stop", () => (this.status & ST340_STOPPED) !== 0),
+			skipIf(0o06, "340 IDSI: skip on stop", () => (this.statusNow() & ST340_STOPPED) !== 0),
 			gate(0o06, 2, "340: clear DAC", () => this.setDac(0)),
 			gate(0o06, 4, "340 IDLA: AC into DAC, clear flags, start", (c) => {
 				this.setDac(c.ac & ADDR);
@@ -370,7 +536,7 @@ export class Type340 implements Device, KorzDevice {
 				this.closeFrame();
 			}),
 			timed(bus, 0o07, "340 device 07"),
-			skipIf(0o07, "340 IDSP: skip on light pen", () => (this.status & ST340_LPHIT) !== 0),
+			skipIf(0o07, "340 IDSP: skip on light pen", () => (this.statusNow() & ST340_LPHIT) !== 0),
 			gate(0o07, 2, "340 IDRC: beam coordinates into AC", (c) => {
 				c.ac |= (((this.penX >> 1) & 0o777) << 9) | ((this.penY >> 1) & 0o777);
 			}),
@@ -379,10 +545,10 @@ export class Type340 implements Device, KorzDevice {
 				this.enabled = false;
 			}),
 			timed(bus, 0o10, "340 device 10"),
-			skipIf(0o10, "340 IDHE: skip on horizontal edge", () => (this.status & ST340_HEDGE) !== 0),
+			skipIf(0o10, "340 IDHE: skip on horizontal edge", () => (this.statusNow() & ST340_HEDGE) !== 0),
 			gate(0o10, 2, "340: ASR into AC", (c) => { c.ac |= this.asr; }),
 			timed(bus, 0o11, "cabinet IDPN"),
-			skipIf(0o11, "cabinet IDPN: skip on a pen hit", () => this.lastHitPen !== null),
+			skipIf(0o11, "cabinet IDPN: skip on a pen hit", () => this.penNow() !== null),
 			gate(0o11, 2, "cabinet IDPN: which pen into AC", (c) => {
 				c.ac |= this.lastHitPen ? this.pens.indexOf(this.lastHitPen) + 1 : 0;
 			}),
@@ -753,7 +919,7 @@ export class Type340 implements Device, KorzDevice {
 			intensify,
 			kind,
 			addr,
-			cycle: this.clock(),
+			cycle: this.timed ? this.time : this.clock(),
 			frame: this.frame,
 			subr: this.subr,
 			ret: this.saveFF ? this.asr : -1,
@@ -768,7 +934,7 @@ export class Type340 implements Device, KorzDevice {
 			tag: this.tag,
 		};
 		this.segments.push(seg);
-		this.onSegment?.(seg);
+		if (!this.ahead) this.onSegment?.(seg);
 		if (penTest && intensify && this.lpEna) {
 			for (const pen of this.pens) {
 				if (!pen.enabled) continue;

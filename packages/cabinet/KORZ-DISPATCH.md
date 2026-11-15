@@ -454,9 +454,9 @@ three levels end with the same PC, press count, frames latched and frames drawn.
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 13.3 M | 75 ns |
-| `KorzPdp7`, resolver | 9.8 M | 102 ns |
-| `KorzPdp7`, interpreter | 1.2 M | 810 ns |
+| `Pdp7` | 43 M | 23 ns |
+| `KorzPdp7`, resolver | 23 M | 43 ns |
+| `KorzPdp7`, interpreter | 1.3 M | 780 ns |
 
 The third is the Turing engine on device 54 running BCOUNT free (`0 SPEED`) at one transition every
 three cycles, while Forth draws its tape on the 340 (`node scripts/korz-bench.mjs turing`), 5
@@ -464,14 +464,13 @@ million steps. All three levels end with the same PC, transition count, state an
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 14.0 M | 71 ns |
-| `KorzPdp7`, resolver | 8.2 M | 122 ns |
-| `KorzPdp7`, interpreter | 0.87 M | 1.15 µs |
+| `Pdp7` | 15 M | 66 ns |
+| `KorzPdp7`, resolver | 8.5 M | 117 ns |
+| `KorzPdp7`, interpreter | 0.81 M | 1.24 µs |
 
-In these two the devices dominate: the 340 drawing, the engine running and the Ultimate Machine
-watching its lever must each be ticked every cycle. Each workload and level runs in its own
-process, since call sites shared between workloads (the cabinet's device loop) see each other's
-devices; repeated runs differ by up to 8%. Node 20 ran `Pdp7` at 15 ns on UNIX and 149 ns on the
+Here the engine dominates: each transition reads its rule from core, rewrites a tape cell, and
+writes its registers back to its control block in core. Each workload and level runs in its own process, since call sites shared between
+workloads (the cabinet's device loop) see each other's devices; repeated runs differ by up to 8%. Node 20 ran `Pdp7` at 15 ns on UNIX and 149 ns on the
 Turing workload; the resolver's 29 ns on UNIX is the same on both, so the gap the compiler has to
 close grew to 2.6 times.
 `--record` appends results to [`bench-results/korz.jsonl`](bench-results/korz.jsonl) with the
@@ -530,25 +529,66 @@ and leaves it alone in between. It brings a device up to date before an IOT that
 Korz CPU's `iot` slot calls `Backplane.sync`), before CAF, before a power change, and at the end of
 every `step` and `run`, so code outside a run always sees every device current. Anything changed
 from outside between runs, a key typed or a tape mounted, is picked up at the start of the next
-one. A device without `nextEvent` is ticked every cycle, as before; the 340 while drawing and the
-Turing engine while running report one cycle.
+one. A device without `nextEvent` is ticked every cycle, as before. The Turing engine reports its
+next transition, found by the same float additions its `tick` makes; the Ultimate Machine the end
+of its timed phase, or a lower bound on when its lid or arm arrives; the 340 is below.
 
 The old loop stays as the `everyCycle` option, and it is the oracle. The lockstep tests run `Pdp7`
 ticking every device every cycle against `KorzPdp7` event-driven and compare registers at every
-step: UNIX, the Forth rigs, and two rigs that take paper tape and DataHand frames by interrupt.
-The interrupt rigs matter because bringing a device up to date before each IOT hides a late event
-from a program that polls, but not from one that waits for the interrupt. Nine planted schedule
-errors each fail a test: five devices reporting their next event one cycle late, the Turing engine
-and the 340 ticked every other cycle, the Korz CPU skipping its sync before an IOT, and the cabinet
+step: UNIX, the Forth rigs, and rigs that take paper tape, DataHand frames and the Ultimate
+Machine's phase changes by interrupt. The interrupt rigs matter because bringing a device up to
+date before each IOT hides a late event from a program that polls, but not from one that waits
+for the interrupt. Ten planted schedule errors each fail a test: seven devices reporting their
+next event a cycle or two late, the Korz CPU skipping its sync before an IOT, and the cabinet
 deciding a device's next turn from its power before its tick instead of after. The last was a real
 bug, caught by the Ultimate Machine test: the machine switches itself off during its own tick.
 
 On UNIX, where the devices are idle most of the time, this took `Pdp7` from 30 to 15 ns a step
-and the resolver from 46 to 29 ns, on Node 20. On the hand workload it moved `Pdp7` 5% and the
-resolver not at all: the 340 and the Ultimate Machine still need the cabinet every cycle. Taking the
-340 off that path means letting it lag behind and catching it up before the CPU writes core it may
-be reading, a watch on `write`, which is the dependency the compiler's per-word invalidation needs
-anyway.
+and the resolver from 46 to 29 ns, on Node 20. The Ultimate Machine's events took the hand workload
+from 75 to 54 ns for `Pdp7` and from 102 to 77 for the resolver; the 340 took it the rest of the way.
+
+**The 340 runs ahead.** Drawing, the 340 reads a display word every cycle and can raise a flag on
+any of them, so it can't simply be left behind: its flags would rise late, and a CPU that read
+core it should already have written would see it unwritten. Instead, asked for its next event, it
+saves its state and runs ahead, holding back what it draws, until one of four things:
+- it raises a flag or stops: that cycle is its next event, so the interrupt rises on time;
+- the next word is a DDS, its one store into core: the store runs live, at its own cycle;
+- 256 cycles, or the end of the run (`nextEvent(lead)`: the cabinet says how far it may look);
+- the cabinet brings it back.
+
+Each word it reads ahead is stamped with the cycle it read it. The cabinet hears of every core
+write before it lands, from the CPU or from another unit: `Cpu.watchWrites`, a field test in
+`Pdp7`, and in `KorzPdp7` an observe-layer slot on `write`, installed only while some unit reads
+ahead. If the 340 has read that word anywhere in its window, the cabinet brings it back to the
+write's point: within a cycle the CPU runs first and then the units in order, so a write by the
+CPU at cycle s, or by a unit before the 340, must be seen from cycle s, and one by a unit after
+it from s + 1. Bringing it back restores the saved state and replays to that point, reading core
+as it is, which is why any word read in the window counts and not only words read after the
+write: a later replay would otherwise read a word written since. An IOT brings it back too, except
+a skip alone (IDSI, IDSP, the edge skips): the status can't change until the cycle running ahead
+stops at, so those are answered from the saved state. That one matters most. Forth waits for the
+display to stop by polling IDSI about twice a frame, and before it was answered ahead, every poll
+threw away what the 340 had drawn. What it drew goes to `onSegment` when time reaches it, with the
+cycle it was drawn at.
+
+The oracle is the same every-cycle loop. A rig races the 340 on purpose: the display file starts
+with a DDS into a word the CPU reads in each of the next three cycles; the CPU keeps rewriting the
+x of the frame's last point, in a loop whose length changes by a cycle each time round; and three
+DMA units, two before the 340 in order and one after, rewrite two more x words and the stop word
+every 7, 11 and 13 cycles. Seventeen planted errors in running ahead each fail it or another rig:
+no conflict check, conflicts from the write's point on only, the first read in the window missed,
+running through a DDS, every IOT answered ahead, a skip reading the status from ahead, a rollback
+that forgets x, a commit that drops segments, segments sent while ahead, a flag reported a cycle
+late, a commit one cycle early, reads not stamped, the CPU's write point a cycle late, unit order
+ignored, no second pass when a unit's write brings the 340 back mid-service, the Korz watch slot
+clobbering the write it watches, and `Pdp7` calling the hook after the store. The second
+was a real bug in the first version: a later replay read a word written since it was first read.
+
+On the benchmarks no write has ever conflicted; every rollback was an IDSI poll, and now there are
+none. The hand workload runs at 23 ns a step in `Pdp7` and 43 in the resolver, from 54 and 77, and
+ends where it did. A unit that reads ahead assumes at least 8K of core, since a 13-bit display
+address on a smaller core aliases a word the 340 never sees written; below that the cabinet asks
+it to look no further than a cycle.
 
 **Prediction for the compiler.** The resolver still makes five to eight indirect calls a step,
 through a context object. The compiler folds them into each block's code, which should bring it to

@@ -103,7 +103,14 @@ export class Pdp7 implements Cpu {
 	}
 
 	write(addr: number, word: number): void {
+		if (this.beforeWrite !== null) this.beforeWrite(addr & 0o77777);
 		this.core[addr & (this.coreWords - 1)] = maskWord(word, WORD);
+	}
+
+	protected beforeWrite: ((addr: number) => void) | null = null;
+
+	watchWrites(before: ((addr: number) => void) | null): void {
+		this.beforeWrite = before;
 	}
 
 	deposit(addr: number, words: readonly number[]): void {
