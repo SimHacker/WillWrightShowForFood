@@ -1,4 +1,5 @@
 import type { Cpu, Device, Iot, IotReply, Step } from "../bus.js";
+import { gate, type Iop, type IopBus, type KorzDevice, skipIf, timed } from "../korz/iop.js";
 
 /**
  * A Turing machine engine: a co-processor that runs transition tables out of shared memory, the
@@ -500,7 +501,7 @@ export type TuringDeviceOpts = {
  * The flag is the interrupt request, as the 340's is: halt and fault arrive on the PDP-7's one
  * level, and the handler finds the engine on its skip chain with TMSF.
  */
-export class TuringDevice implements Device {
+export class TuringDevice implements Device, KorzDevice {
 	readonly name = "turing";
 	readonly iots = [0o54];
 	readonly engine: TuringEngine;
@@ -558,6 +559,41 @@ export class TuringDevice implements Device {
 			if (req.pulse & 0o2) ac = (clear ? 0 : ac) | e.lastEmit;
 		}
 		return { ac, skip };
+	}
+
+	/**
+	 * Groups 00, 20 and 60 are gates in IOP order. Group 40 sets the mode on IOP2 before it steps on
+	 * IOP1, and steps instead of stopping when both are set, so it decodes the whole pulse.
+	 */
+	korzSlots(bus: IopBus) {
+		const e = this.engine;
+		return [
+			timed(bus, 0o54, "turing"),
+			skipIf(0o54, "turing TMSF: skip on a flag", () => (e.status & TM_FLAGS) !== 0, 0),
+			gate(0o54, 2, "turing TMRS: status into AC", (c) => { c.ac |= e.status; }, 0),
+			gate(0o54, 4, "turing TMLA: AC is the TCB, run", (c) => { e.load(c.ac); e.go(); }, 0),
+			skipIf(0o54, "turing TMSR: skip while running", () => e.running, 1),
+			gate(0o54, 2, "turing TMRQ: state into AC", (c) => { c.ac |= e.state; }, 1),
+			gate(0o54, 4, "turing TMGO: reload the TCB, run", () => { e.load(e.tcb); e.go(); }, 1),
+			{ selector: "iot", guard: { device: 0o54, sub: 2 }, by: "turing TMLM, TMSS, TMST: mode, then step or stop",
+				run: (c: Iop) => {
+					if (c.pulse & 0o2) {
+						const mode = c.ac;
+						e.hostPaging = (mode & TM_MODE_HOST) !== 0;
+						e.emitting = (mode & TM_MODE_EMIT) !== 0;
+						e.emitStop = e.emitting && (mode & TM_MODE_EMIT_STOP) !== 0;
+						if (mode & TM_MODE_FORGET) e.forget();
+					}
+					if (c.pulse & 0o1) {
+						e.load(e.tcb);
+						e.go(true);
+					} else if (c.pulse & 0o4) {
+						e.stop();
+						e.clearFlags();
+					}
+				} },
+			gate(0o54, 2, "turing TMRE: last emitted character into AC", (c) => { c.ac |= e.lastEmit; }, 3),
+		];
 	}
 
 	tick(): void {

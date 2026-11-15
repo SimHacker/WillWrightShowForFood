@@ -1,4 +1,5 @@
 import type { Device, Iot, IotReply } from "../bus.js";
+import { gate, type IopBus, type KorzDevice, skipIf, timed } from "../korz/iop.js";
 
 export type TeletypeOpts = {
 	/** Cycles from TLS to done-flag. Real KSR-33 ≈ 100ms ≈ 57000 cycles. */
@@ -13,7 +14,7 @@ export type TeletypeOpts = {
  * Semantics from SIMH pdp18b_stddev.c tti()/tto(): pulse&1 skip-on-flag,
  * pulse&2 clear flag (keyboard also ORs buffer into AC), pulse&4 load & print.
  */
-export class Teletype implements Device {
+export class Teletype implements Device, KorzDevice {
 	readonly name = "teletype";
 	readonly iots = [0o03, 0o04];
 
@@ -69,6 +70,25 @@ export class Teletype implements Device {
 			}
 		}
 		return { ac, skip };
+	}
+
+	korzSlots(bus: IopBus) {
+		return [
+			timed(bus, 0o03, "keyboard"),
+			skipIf(0o03, "keyboard KSF: skip on a key", () => this.kbdFlag),
+			gate(0o03, 2, "keyboard KRB: the key into AC, take the next", (c) => {
+				this.kbdFlag = false;
+				c.ac |= this.kbdBuf;
+				this.deliver();
+			}),
+			timed(bus, 0o04, "teleprinter"),
+			skipIf(0o04, "teleprinter TSF: skip when done", () => this.ttoFlag),
+			gate(0o04, 2, "teleprinter TCF: clear done", () => { this.ttoFlag = false; }),
+			gate(0o04, 4, "teleprinter TLS: print AC", (c) => {
+				this.printBuf = c.ac & 0o377;
+				this.printing = this.printCycles;
+			}),
+		];
 	}
 
 	tick(cycles: number): void {

@@ -1,4 +1,5 @@
 import type { Device, Iot, IotReply } from "../bus.js";
+import { gate, type IopBus, type KorzDevice, skipIf, timed } from "../korz/iop.js";
 
 /**
  * DEC Type 340 Precision Incremental CRT — as a display processor.
@@ -148,7 +149,7 @@ export type Type340Opts = {
 	wordsPerTick?: number;
 };
 
-export class Type340 implements Device {
+export class Type340 implements Device, KorzDevice {
 	readonly name = "type340";
 	readonly iots = [0o05, 0o06, 0o07, 0o10, 0o11];
 
@@ -327,6 +328,51 @@ export class Type340 implements Device {
 				break;
 		}
 		return { ac, skip };
+	}
+
+	/**
+	 * One slot per gate, fired IOP1, IOP2, IOP4. IDLA (700606) is IOP2 then IOP4: clear the
+	 * address, then load it from AC and start. IDPN on device 11 is the cabinet's, not DEC's.
+	 */
+	korzSlots(bus: IopBus) {
+		return [
+			timed(bus, 0o05, "340 device 05"),
+			skipIf(0o05, "340 IDVE: skip on vertical edge", () => (this.status & ST340_VEDGE) !== 0),
+			gate(0o05, 2, "340: DAC into AC", (c) => { c.ac |= this.dac; }),
+			gate(0o05, 4, "340 IDRS: resume in place", () => {
+				this.status &= ~(ST340_LPHIT | ST340_VEDGE | ST340_HEDGE);
+				this.enabled = true;
+			}),
+			timed(bus, 0o06, "340 device 06"),
+			skipIf(0o06, "340 IDSI: skip on stop", () => (this.status & ST340_STOPPED) !== 0),
+			gate(0o06, 2, "340: clear DAC", () => this.setDac(0)),
+			gate(0o06, 4, "340 IDLA: AC into DAC, clear flags, start", (c) => {
+				this.setDac(c.ac & ADDR);
+				this.tag = 0;
+				this.startAddr = this.dac;
+				this.pending = null;
+				this.status = 0;
+				this.enabled = true;
+				this.closeFrame();
+			}),
+			timed(bus, 0o07, "340 device 07"),
+			skipIf(0o07, "340 IDSP: skip on light pen", () => (this.status & ST340_LPHIT) !== 0),
+			gate(0o07, 2, "340 IDRC: beam coordinates into AC", (c) => {
+				c.ac |= (((this.penX >> 1) & 0o777) << 9) | ((this.penY >> 1) & 0o777);
+			}),
+			gate(0o07, 4, "340 700704: clear every flag, hold", () => {
+				this.status = 0;
+				this.enabled = false;
+			}),
+			timed(bus, 0o10, "340 device 10"),
+			skipIf(0o10, "340 IDHE: skip on horizontal edge", () => (this.status & ST340_HEDGE) !== 0),
+			gate(0o10, 2, "340: ASR into AC", (c) => { c.ac |= this.asr; }),
+			timed(bus, 0o11, "cabinet IDPN"),
+			skipIf(0o11, "cabinet IDPN: skip on a pen hit", () => this.lastHitPen !== null),
+			gate(0o11, 2, "cabinet IDPN: which pen into AC", (c) => {
+				c.ac |= this.lastHitPen ? this.pens.indexOf(this.lastHitPen) + 1 : 0;
+			}),
+		];
 	}
 
 	private setDac(addr: number): void {

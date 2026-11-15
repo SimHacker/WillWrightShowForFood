@@ -1,4 +1,5 @@
 import type { Device, Iot, IotReply, SwitchBinding } from "../bus.js";
+import { decode, gate, type IopBus, type KorzDevice, skipIf, timed } from "../korz/iop.js";
 
 /**
  * Minsky's Ultimate Machine (1952; Shannon built it at Bell Labs): a box with one switch. Switch
@@ -92,7 +93,7 @@ const RETURN = 5;
 const CLOSE = 6;
 const REST = 7;
 
-export class UltimateMachine implements Device {
+export class UltimateMachine implements Device, KorzDevice {
 	readonly name = "ultimate";
 	readonly iots = [0o55, 0o56];
 
@@ -251,6 +252,35 @@ export class UltimateMachine implements Device {
 				break;
 		}
 		return { ac, skip };
+	}
+
+	/** Device 56 is gates in IOP order. Device 55 picks the bound switch on IOP4 before it reads or skips, so it decodes the whole pulse. */
+	korzSlots(bus: IopBus) {
+		return [
+			decode(0o55, "ultimate 55: pick the bound switch, then read and skip", (c) => {
+				if (c.pulse & 0o4) {
+					const index = c.ac & 0o777777;
+					if (this.phase !== OFF || index >= this.bindings.length) return;
+					this.bindingIndex = index;
+					this.observedLever = false;
+				}
+				if (c.pulse & 0o2) c.ac |= this.bindingIndex;
+				if (c.pulse & 0o1 && this.bindingIndex < this.bindings.length) c.skip = 1;
+			}),
+			timed(bus, 0o56, "ultimate 56"),
+			skipIf(0o56, "ultimate UMSF: skip if the lever is on", () => this.lever, 0),
+			gate(0o56, 2, "ultimate UMRC: press count into AC", (c) => { c.ac |= this.presses & 0o777777; }, 0),
+			gate(0o56, 4, "ultimate UMON: lever on", () => { this.setLever(true); }, 0),
+			skipIf(0o56, "ultimate UMSB: skip if busy", () => this.phase !== OFF, 1),
+			gate(0o56, 2, "ultimate UMRP: phase into AC", (c) => { c.ac |= this.phase; }, 1),
+			gate(0o56, 4, "ultimate UMOF: lever off", () => { this.setLever(false); }, 1),
+			skipIf(0o56, "ultimate UMSI: skip on phase change", () => this.flag, 2),
+			gate(0o56, 2, "ultimate UMRL: lid into AC", (c) => { c.ac |= Math.round(this.lid); }, 2),
+			gate(0o56, 4, "ultimate UMCF: clear the phase-change flag", () => { this.flag = false; }, 2),
+			gate(0o56, 1, "ultimate UMLT: load a timing", (c) => this.loadTiming(c.ac), 3),
+			gate(0o56, 2, "ultimate UMRA: arm into AC", (c) => { c.ac |= Math.round(this.arm); }, 3),
+			gate(0o56, 4, "ultimate UMIE: interrupt on phase change iff AC<17>", (c) => { this.ie = (c.ac & 1) !== 0; }, 3),
+		];
 	}
 
 	offIot(req: Iot): IotReply {

@@ -1,4 +1,5 @@
 import type { Device, Iot, IotReply } from "../bus.js";
+import { decode, type KorzDevice } from "../korz/iop.js";
 
 const WMASK = 0o777777;
 
@@ -155,7 +156,7 @@ export type TinyTitanOpts = {
  * Robust-first: with no port attached, LSF and LSA always skip, so a
  * TITAN command against an empty socket cannot wedge the machine.
  */
-export class TinyTitan implements Device {
+export class TinyTitan implements Device, KorzDevice {
 	readonly name = "tiny-titan";
 	readonly iots = [0o22, 0o23];
 
@@ -205,6 +206,39 @@ export class TinyTitan implements Device {
 			}
 		}
 		return { ac, skip };
+	}
+
+	/** The link decodes exact pulse codes, not timed gates: every other pulse on 22 and 23 does nothing. */
+	korzSlots() {
+		return [
+			decode(0o22, "tiny titan 22: other pulses do nothing", () => {}),
+			decode(0o22, "tiny titan LSF: skip when the link is ready", (c) => { if (this.linkReady()) c.skip = 1; }, 0o01),
+			decode(0o22, "tiny titan LCF: clear the flag", () => { this.flag = false; }, 0o22),
+			decode(0o22, "tiny titan LRB18: a word from the link into AC", (c) => {
+				c.ac |= this.port?.recv() ?? 0;
+				this.flag = true;
+			}, [0o42, 0o66]),
+			decode(0o22, "tiny titan LLB18: AC to the link", (c) => {
+				this.port?.send(c.ac & WMASK);
+				this.flag = true;
+			}, 0o64),
+			decode(0o23, "tiny titan 23: other pulses do nothing", () => {}),
+			decode(0o23, "tiny titan LSA: skip when the link is ready", (c) => { if (this.linkReady()) c.skip = 1; }, 0o01),
+			decode(0o23, "tiny titan LKD: disconnect", () => {
+				this.port?.disconnect();
+				this.enabled = false;
+				this.flag = false;
+			}, 0o22),
+			decode(0o23, "tiny titan LLB6: AC<12:17> to the link as control", (c) => {
+				this.port?.control(c.ac & 0o77);
+				this.flag = true;
+			}, 0o44),
+			decode(0o23, "tiny titan LKE LLB6: enable, then control", (c) => {
+				this.enabled = true;
+				this.port?.control(c.ac & 0o77);
+				this.flag = true;
+			}, 0o64),
+		];
 	}
 
 	reset(): void {

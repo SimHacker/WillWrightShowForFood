@@ -440,8 +440,8 @@ million steps, best of three, Node 20 on an M4 Max. All three end at the same PC
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 34 M | 30 ns |
-| `KorzPdp7`, resolver | 18 M | 56 ns |
+| `Pdp7` | 33 M | 30 ns |
+| `KorzPdp7`, resolver | 17 M | 60 ns |
 | `KorzPdp7`, interpreter | 1.1 M | 890 ns |
 | A real PDP-7 | about 0.3 M | 1.75 µs memory cycle |
 
@@ -452,7 +452,7 @@ it is fast enough to boot UNIX in a test.
 
 **The resolver** (`Sea.resolve`, `Sea.bind`) turns each selector into an array indexed by the
 dimensions its slots constrain, and drops the rest: `exec` and `ea` have 32 entries, `skip` and `cc`
-16, `rot` 8, `iot` 4,096 (device × pulse), and `read` one entry, since no slot guards on `addr` or
+16, `rot` 8, `iot` 4,096 (device × pulse), `iop` 2,048 (device × sub × IOP pulse), and `read` one entry, since no slot guards on `addr` or
 `access` until a watch is installed. Equal chains share one entry. Each selector gets one generated
 function (`korz/<selector>.js` in the debugger) that computes the index, loads the entry and calls
 the chain's first slot; a chain of one slot gets a `next` that allocates nothing. `bind` writes these
@@ -463,7 +463,8 @@ resolve on their next call, so there is no check per dispatch. A watch on one 15
 Getting from 105 ns to 56 ns a step took three changes, each found with `node --cpu-prof`: the index
 computation and table load moved into the generated function, so V8 inlines all of it; the per-call
 generation check became `bind`; and an instruction fetch became `access: "fetch"` on `read` instead
-of a second selector that called the first. At 56 ns, about 20 ns a step is the cabinet ticking four
+of a second selector that called the first. Moving the clock and teletype onto the IOP bus, behind
+the power slots, added 4 ns. At 60 ns, about 20 ns a step is the cabinet ticking four
 devices, the same cost `Pdp7` pays; the rest is writing coordinates into context objects and five
 to eight inlined dispatches.
 
@@ -512,37 +513,46 @@ The 340 has two seas' worth of behavior: its IOTs on the PDP-7's bus, and its ow
 which it fetches from PDP-7 core by DMA.
 
 **IOTs as timed pulses.** A PDP-7 IOT does not deliver a pulse mask. It fires IOP1, IOP2 and IOP4 in
-that order, for the bits that are set, and each device gate answers one pulse. `type340.ts` reads
-the whole mask and needs `if … else if` to get the order right. With one dimension for the device
-code and one for the pulse, the order is the backplane's and every gate is a slot:
+that order, for the bits that are set, and each device gate answers one pulse. `Type340.iot()` reads
+the whole mask and needs `if … else if` to get the order right. On the IOP bus the order is the
+CPU's, and every gate is a slot. From `Type340.korzSlots` (bodies abridged):
 
 ```ts
-const iop = (device: number, pulse: 1 | 2 | 4, by: string, run: Run<Io>): SlotSpec<Io> =>
-  ({ selector: "iop", guard: { device, iop: pulse }, by: `340 ${by}`, run });
-
-export const type340Iots = (d: Type340): SlotSpec<Io>[] => [
-  iop(0o05, 1, "IDVE: skip on vertical edge",  (c) => c.skip(d.status & ST340_VEDGE)),
-  iop(0o05, 2, "DAC into AC",                  (c) => { c.ac |= d.dac; }),
-  iop(0o05, 4, "IDRS: resume in place",        () => d.resume()),
-  iop(0o06, 1, "IDSI: skip on stop",           (c) => c.skip(d.status & ST340_STOPPED)),
-  iop(0o06, 2, "clear DAC",                    () => d.setDac(0)),
-  iop(0o06, 4, "IDLA: AC into DAC, start",     (c) => { d.setDac(d.dac | (c.ac & ADDR)); d.restart(); }),
-  iop(0o07, 1, "IDSP: skip on light pen",      (c) => c.skip(d.status & ST340_LPHIT)),
-  iop(0o07, 2, "IDRC: beam coordinates",       (c) => { c.ac |= d.penWord(); }),
-  iop(0o07, 4, "clear flags, hold",            () => d.clearFlags()),
-  iop(0o10, 1, "IDHE: skip on horizontal edge", (c) => c.skip(d.status & ST340_HEDGE)),
-  iop(0o10, 2, "ASR into AC",                  (c) => { c.ac |= d.asr; }),
-  { selector: "iop", guard: { device: 0o11, iop: 1 }, by: "cabinet: IDPN, skip on a pen hit", run: (c) => c.skip(d.lastHitPen) },
-  { selector: "iop", guard: { device: 0o11, iop: 2 }, by: "cabinet: IDPN, which pen", run: (c) => { c.ac |= d.penNumber(); } },
-];
+timed(bus, 0o05, "340 device 05"),
+skipIf(0o05, "340 IDVE: skip on vertical edge", () => (this.status & ST340_VEDGE) !== 0),
+gate(0o05, 2, "340: DAC into AC", (c) => { c.ac |= this.dac; }),
+gate(0o05, 4, "340 IDRS: resume in place", () => { /* clear edge and pen flags, resume */ }),
+timed(bus, 0o06, "340 device 06"),
+skipIf(0o06, "340 IDSI: skip on stop", () => (this.status & ST340_STOPPED) !== 0),
+gate(0o06, 2, "340: clear DAC", () => this.setDac(0)),
+gate(0o06, 4, "340 IDLA: AC into DAC, clear flags, start", (c) => { this.setDac(c.ac & ADDR); /* … */ }),
 ```
 
-IDLA (700606) is IOP2 then IOP4: clear the address register, then OR the AC into it. That is a load
-built from two gates, as the hardware builds it, and the special case in `type340.ts` disappears.
-700604 alone ORs into a DAC that is not cleared, which the current code treats as a load; the
-differential test against `Type340` and SIMH decides which is right before this replaces it. IDPN is
-the cabinet's extension, not DEC's, and its `by` says so: `view` on `by` lists every behavior DEC
-did not build.
+IDLA (700606) is IOP2 then IOP4: clear the address register, then load it from the AC. The IOP4
+gate loads rather than ORs, which is what `iot()` does, so 700604 alone also loads. Whether the
+hardware ORs into an uncleared DAC is still open, to be settled against SIMH or the 340 manual.
+IDPN (device 011) is the cabinet's extension, not DEC's, and its `by` says so: `view` on `by` lists
+every behavior DEC did not build.
+
+**The device bus as built.** [`src/korz/iop.ts`](src/korz/iop.ts) has four helpers. `timed` is the
+device's `iot` slot: it fires IOP1, IOP2 and IOP4 through the `iop` selector. `gate` answers one
+pulse, optionally for one `sub` value (pulse bits 060, which split a device code into four groups).
+`skipIf` is a `gate` on IOP1 that sets the skip. `decode` is an `iot` slot for a whole pulse
+pattern, for devices whose pulses are not independent gates. Being more specific than `timed`, it
+wins for its pattern and the rest of the device stays timed. The clock, teletype, 340 and most of
+the Turing engine are timed. The Ultimate machine's device 055, the Turing mode group (sub 2) and
+both Tiny Titan codes decode whole pulses, because their gates read each other's results.
+
+The backplane adds one patch-layer slot per device code that answers with `offIot` while the device
+is off, so `why` on a dead IOT names the power switch. Devices without `korzSlots` get one slot per
+code that calls `iot()`.
+
+Each device keeps `iot()` as the oracle. [`src/korz/devices.test.ts`](src/korz/devices.test.ts) runs
+a `Pdp7` cabinet and a `KorzPdp7` cabinet in lockstep, comparing registers every step and
+teletype output and device state at the end. It runs SYMELEC on the 340, teletype, clock and Tiny
+Titan, a drawn line sent over the Titan link, the Turing engine stepped and free-running, and the
+Ultimate machine's phase interrupts. Breaking IDSI, UMSI, TMSS, TMSR, TMGO, LSF or LLB18 makes it
+fail. Breaking TMLA does not: the Forth code always follows TMLA with TMST, which hides it.
 
 **The display processor as a sea.** The 340 decodes each word by its mode register, and in some
 modes by the top two bits (DEC bits 0 and 1). Those are the dimensions:
@@ -639,9 +649,13 @@ word in core.
    bitsets per dimension ([`src/korz/korz.ts`](src/korz/korz.ts)).
 2. **Built.** The PDP-7 on the interpreter, against `Pdp7`: random programs and UNIX v0 in lockstep
    ([`src/korz/pdp7.ts`](src/korz/pdp7.ts)).
-3. The IOT bus as timed IOP pulses; the Type 340 and the Turing engine as slots, against the current
-   plugins and SIMH.
-4. **Built.** The resolver on the PDP-7: per-selector tables, 9.5 M steps per second.
+3. **Built.** The IOT bus as timed IOP pulses; the clock, teletype, Type 340, Turing engine,
+   Ultimate machine and Tiny Titan as slots, in lockstep against their `iot()` methods
+   ([`src/korz/iop.ts`](src/korz/iop.ts), [`src/korz/devices.test.ts`](src/korz/devices.test.ts)).
+   Paper tape, the RB09, titan-files and the DataHand still answer through `iot()` wrapped in one
+   slot per device code.
+4. **Built.** The resolver on the PDP-7: per-selector tables, 17 M steps per second with the
+   devices on the IOP bus.
 5. Page-set normal forms with the brute-force tests; the Apple bus on the interpreter, against
    microM8 ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2).
 6. The resolver for the Apple: table sets, page kinds, interned chains, the opcode table,

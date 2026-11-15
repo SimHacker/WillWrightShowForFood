@@ -1,4 +1,5 @@
 import type { Cpu, Device, Iot, IotReply } from "../bus.js";
+import { gate, type IopBus, type KorzDevice, skipIf, timed } from "../korz/iop.js";
 
 export type ClockOpts = {
 	cpu: Cpu;
@@ -14,7 +15,7 @@ export type ClockOpts = {
  * raises the flag. The counter living in core is the period detail programs
  * exploit: SYMELEC presets 7 to control the blink rate.
  */
-export class Clock implements Device {
+export class Clock implements Device, KorzDevice {
 	readonly name = "clock";
 	readonly iots = [0o00];
 
@@ -38,6 +39,16 @@ export class Clock implements Device {
 			this.on = (req.pulse & 0o40) !== 0; // CLON / CLOF
 		}
 		return { ac: req.ac, skip };
+	}
+
+	/** CLSF on IOP1; IOP4 clears the flag and sets the clock on or off by pulse bit 040. */
+	korzSlots(bus: IopBus) {
+		return [
+			timed(bus, 0o00, "clock"),
+			skipIf(0o00, "clock CLSF: skip on tick", () => this.flag),
+			gate(0o00, 4, "clock CLOF: clear flag, stop", () => { this.flag = false; this.on = false; }, [0, 1]),
+			gate(0o00, 4, "clock CLON: clear flag, run", () => { this.flag = false; this.on = true; }, [2, 3]),
+		];
 	}
 
 	tick(cycles: number): void {

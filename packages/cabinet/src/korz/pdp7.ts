@@ -1,6 +1,7 @@
 import type { Backplane, Device, Iot, Step } from "../bus.js";
 import { incr, Pdp7, type Pdp7Opts } from "../plugins/pdp7.js";
 import { maskWord } from "../word.js";
+import { type Iop, type IopBus, isKorzDevice } from "./iop.js";
 import { type Dim, type Dispatchers, Sea, span, type SlotSpec } from "./korz.js";
 
 /**
@@ -37,16 +38,20 @@ export const PDP7_DIMS: readonly Dim[] = [
 	{ name: "access", width: 1, names: ["read", "fetch"] },
 	{ name: "device", width: 6 },
 	{ name: "pulse", width: 6 },
+	/** Pulse bits 060: the group a device splits its codes into. */
+	{ name: "sub", width: 2 },
+	/** The timed pulse being fired: IOP1, IOP2 or IOP4. */
+	{ name: "iop", width: 3 },
 ];
 
 /** One shape for every context, so V8 keeps one hidden class. Fields named for dimensions are coordinates. */
 export type K7 = {
 	op: number; ind: number; skp: number; cc: number; rot: number;
-	addr: number; who: number; access: number; device: number; pulse: number;
+	addr: number; who: number; access: number; device: number; pulse: number; sub: number; iop: number; skip: number;
 	ir: number; at: number; xct: number; ea: number; lac: number; value: number; ac: number;
 };
 
-const SELECTORS = ["read", "write", "ea", "exec", "skip", "cc", "rot", "iot"] as const;
+const SELECTORS = ["read", "write", "ea", "exec", "skip", "cc", "rot", "iot", "iop"] as const;
 type Selector = (typeof SELECTORS)[number];
 
 /** `resolve` dispatches through tables rebuilt after each install; `interpret` searches the sea every time. */
@@ -56,10 +61,10 @@ export type KorzPdp7Opts = Pdp7Opts & { korz?: "interpret" | "resolve" };
 const RAN: Step = Object.freeze({});
 const HALTED: Step = Object.freeze({ halt: true });
 
-const k7 = (): K7 => ({ op: 0, ind: 0, skp: 0, cc: 0, rot: 0, addr: 0, who: 0, access: 0, device: 0, pulse: 0,
+const k7 = (): K7 => ({ op: 0, ind: 0, skp: 0, cc: 0, rot: 0, addr: 0, who: 0, access: 0, device: 0, pulse: 0, sub: 0, iop: 0, skip: 0,
 	ir: 0, at: 0, xct: 0, ea: 0, lac: 0, value: 0, ac: 0 });
 
-export class KorzPdp7 extends Pdp7 {
+export class KorzPdp7 extends Pdp7 implements IopBus {
 	readonly sea = new Sea<K7>(PDP7_DIMS);
 	/** Instructions, memory and IOTs nest, so each gets its own context. */
 	private readonly ix = k7();
@@ -76,7 +81,16 @@ export class KorzPdp7 extends Pdp7 {
 		else this.sea.bind(this.go, SELECTORS);
 	}
 
-	/** The backplane's slots go into this CPU's sea: unclaimed codes, CAF, and one slot per device code. */
+	/** IOP1, IOP2, IOP4 in order, for the bits of the pulse; each goes to the `iop` selector. */
+	pulses(c: Iop): void {
+		const p = c.pulse;
+		const k = c as K7;
+		if (p & 1) { k.iop = 1; this.go.iop(k); }
+		if (p & 2) { k.iop = 2; this.go.iop(k); }
+		if (p & 4) { k.iop = 4; this.go.iop(k); }
+	}
+
+	/** The backplane's slots go into this CPU's sea: unclaimed codes, CAF, and every device's codes. */
 	attach(box: Backplane): void {
 		this.sea.remove("cpu: no backplane, hand the IOT out");
 		this.sea.install(backplaneSlots(this, box));
@@ -196,9 +210,13 @@ export class KorzPdp7 extends Pdp7 {
 				const io = this.io;
 				io.device = (c.ir >> 6) & 0o77;
 				io.pulse = c.ir & 0o67;
+				io.sub = (io.pulse >> 4) & 0o3;
+				io.skip = 0;
 				if (c.ir & 0o10) this.ac = 0;
 				io.ac = this.ac;
-				this.ac = this.go.iot(io);
+				this.go.iot(io);
+				this.ac = io.ac;
+				if (io.skip) this.pc = incr(this.pc);
 			}),
 			{ selector: "exec", guard: { op: OP.opr, ind: 0 }, by: "OPR: skip, then clear and complement, OAS, rotate, HLT",
 				run: (c) => this.operate(c) },
@@ -261,36 +279,50 @@ export class KorzPdp7 extends Pdp7 {
 	private iotSlots(): SlotSpec<K7>[] {
 		return [
 			{ selector: "iot", by: "cpu: no backplane, hand the IOT out",
-				run: (c) => { this.pendingIot = { device: c.device, pulse: c.pulse, ac: c.ac }; return c.ac; } },
-			{ selector: "iot", guard: { device: 0, pulse: 0o02 }, by: "IOF", run: (c) => { this.ion = false; return c.ac; } },
+				run: (c) => { this.pendingIot = { device: c.device, pulse: c.pulse, ac: c.ac }; } },
+			{ selector: "iot", guard: { device: 0, pulse: 0o02 }, by: "IOF", run: () => { this.ion = false; } },
 			{ selector: "iot", guard: { device: 0, pulse: 0o42 }, by: "ION, after one more instruction",
-				run: (c) => { this.ion = true; this.ionDefer = 1; return c.ac; } },
+				run: () => { this.ion = true; this.ionDefer = 1; } },
 			{ selector: "iot", guard: { device: 0o77 }, by: "memory extension: SEM, EEM, EMIR, LEM",
 				run: (c) => {
-					if (this.coreWords <= 0o20000) return c.ac;
-					if (c.pulse === 0o01 && this.extend) this.pc = incr(this.pc);
+					if (this.coreWords <= 0o20000) return;
+					if (c.pulse === 0o01 && this.extend) c.skip = 1;
 					else if (c.pulse === 0o02) this.extend = true;
 					else if (c.pulse === 0o42) this.extend = this.emirPending = true;
 					else if (c.pulse === 0o04) this.extend = false;
-					return c.ac;
 				} },
 		];
 	}
 }
 
-/** The backplane as slots: an unclaimed code does nothing, CAF clears every flag, each device answers its codes. */
+/**
+ * The backplane as slots. An unclaimed code and an unanswered pulse do nothing; CAF clears every
+ * flag; a device with `korzSlots` installs them, and any other device answers through `iot()`. A
+ * patch-layer slot per device code answers with `offIot` while the device's power is off.
+ */
 export function backplaneSlots(cpu: KorzPdp7, box: Backplane): SlotSpec<K7>[] {
-	const call = (d: Device) => (c: K7): number => {
-		const req = { device: c.device, pulse: c.pulse, ac: c.ac };
-		const reply = d.power === false ? d.offIot?.(req) ?? { ac: c.ac } : d.iot(req);
-		if (reply.skip) cpu.skip();
-		return reply.ac;
+	const call = (d: Device) => (c: K7): void => {
+		const reply = d.iot({ device: c.device, pulse: c.pulse, ac: c.ac });
+		c.ac = reply.ac;
+		if (reply.skip) c.skip = 1;
+	};
+	const off = (d: Device) => (c: K7, next: () => number): number | void => {
+		if (d.power !== false) return next();
+		const reply = d.offIot?.({ device: c.device, pulse: c.pulse, ac: c.ac }) ?? { ac: c.ac };
+		c.ac = reply.ac;
+		if (reply.skip) c.skip = 1;
 	};
 	return [
-		{ selector: "iot", by: "backplane: unclaimed IOTs do nothing", run: (c) => c.ac },
+		{ selector: "iot", by: "backplane: unclaimed IOTs do nothing", run: () => {} },
+		{ selector: "iop", by: "backplane: no gate answers this pulse", run: () => {} },
 		{ selector: "iot", guard: { device: 0o33, pulse: 0o02 }, by: "backplane: CAF clears every flag",
-			run: (c) => { box.resetDevices(); return c.ac; } },
-		...box.devices.flatMap((d) => d.iots.map((device): SlotSpec<K7> =>
-			({ selector: "iot", guard: { device }, by: `device ${d.name}`, run: call(d) }))),
+			run: () => box.resetDevices() },
+		...box.devices.flatMap((d): SlotSpec<K7>[] => [
+			...d.iots.map((device): SlotSpec<K7> =>
+				({ selector: "iot", guard: { device }, layer: "patch", by: `power: ${d.name} off`, run: off(d) })),
+			...(isKorzDevice(d)
+				? d.korzSlots(cpu)
+				: d.iots.map((device): SlotSpec<K7> => ({ selector: "iot", guard: { device }, by: `device ${d.name}: iot()`, run: call(d) }))),
+		]),
 	];
 }
