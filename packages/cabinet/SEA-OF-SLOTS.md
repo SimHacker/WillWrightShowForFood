@@ -162,6 +162,10 @@ Z-machine in 1979! Say "ROBOT, PUSH BUTTON" in Zork II, and `WINNER` becomes the
 same object, different dispatch. The Sims, which I worked on at Maxis, did the same with two
 dimensions: `me` and `stackObject`.
 
+David Ungar assures me that Korz is only accidentally an anagram of Zork. I believe him, but
+Korzybski would have loved it. Every Zork player drew a map on graph paper of a territory they could
+only reach through words, and an anagram is a map of a word: same letters, different territory.
+
 **Cellular automata.** A cell's rule dispatches on its neighborhood. Every neighbor is a dimension:
 five for von Neumann, nine for Moore. Toffoli and Margolus's CAM-6 compiled rules written as Forth
 words into a lookup table, by running the rule for every possible neighborhood and storing the
