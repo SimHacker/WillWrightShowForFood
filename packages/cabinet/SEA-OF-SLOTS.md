@@ -802,6 +802,28 @@ That split between cheap guards on sets and arbitrary code in the scores is deli
 the library can tell when one guard is more specific than another and build tables ahead of time.
 With arbitrary functions, it couldn't do either.
 
+#### Back into The Sims
+
+JavaScript isn't the only target. Objects in The Sims are programmed in SimAntics, a visual
+language whose behavior trees are stored as `BHAV` resources inside each object's file. A table in
+the same file lists the object's interactions, the tree that tests whether each one is available,
+the tree that performs it, and the needs it advertises to satisfy.
+
+That's the same shape as a MOOLLM advertisement: a guard, an action, and a score. So the compiler
+that writes `guard_js` and `score_if_js` can also write SimAntics.
+
+[SimObliterator Suite](https://github.com/DnfJeff/SimObliterator_Suite), Dnf_Jeff's open source
+toolkit for The Sims 1 files, can already disassemble behavior trees and inject new ones into an
+object, through checked transactions it can roll back. Put the compiler in front of it, and a Sims
+player could describe what an object should do in plain English and get a working object.
+
+The language model wouldn't write raw bytecode from scratch. It would fill in templates: known-good
+trees for "test a need," "walk to the object," "play an animation," and "change a need," with the
+blanks filled from the prose. That's how the cabinet's own compiler works, with templates for
+PDP-7 instructions instead of Sims behaviors. The templates keep the generated objects from
+crashing the game, and the prose stays attached, so the next player can read what the object was
+meant to do.
+
 ### Korz's turn
 
 Self's ideas went into the engine under every web page. Korz's ideas have barely been tried.
