@@ -1,6 +1,6 @@
 # Korz for machines: a note asking for feedback
 
-For David Ungar, Randall Smith, and others whose work this rests on. A draft: corrections welcome
+For David Ungar, Randall Smith, Alan Kay, Dan Ingalls, and others whose work this rests on. A draft: corrections welcome
 at any level, from "that's not what Korz means" to "you'll regret that data structure".
 
 ## The idea
@@ -117,7 +117,7 @@ Each device keeps its old `iot()` method as the oracle for its slots.
 Mutation checks confirm the tests notice when one gate is broken. Breaking IDSI, TMSS, TMSR, TMGO,
 UMSI, LSF, LLB18, RSB, DBSF, DBLM, RAL or the ION delay each makes a test fail. One gate, TMLA,
 survives: the Forth code always follows it with TMST, so no program here can see it. We report
-that rather than paper over it. The whole package has 269 tests.
+that rather than paper over it. The whole package has 270 passing tests.
 
 **Speed.** UNIX v0 boot, 3 million steps, a new machine each round, Node 20 on an M4 Max. All three
 levels end at the same PC.
@@ -138,6 +138,54 @@ Profiling took the resolver from 105 ns to 46 ns. Four changes did it:
 
 About 20 ns of each step is the cabinet ticking its devices, a cost `Pdp7` pays too. Even the
 interpreter, the oracle, runs UNIX at about 3.7 times a real PDP-7.
+
+**The second machine, and what V8 keys on.** In one Node process, a second `KorzPdp7` ran 71–80 ns
+a step against the first one's 55. Same code, same program, same tables. V8 doesn't specialize on
+data; it specializes on the hidden classes of the objects a site touches and on the functions a call
+site has called. A call site that has seen one function inlines it. One that sees a second is
+megamorphic for good: for calls, V8 keeps one target or gives up, with no small polymorphic set as
+Self's PICs keep for receiver maps.
+
+Every machine had its own slots, as JavaScript closures over `this`, its own generated dispatch
+functions, and its own stubs that resolved a table on first call. Behavior lived in each instance.
+The code V8 optimized while machine 0 ran had machine 0's functions inlined. Machine 1 brought
+identical code in different function objects.
+
+The evidence, in order:
+- Timing a fresh machine per round showed the drop.
+- `--trace-deopt` showed nearly every deoptimization at machine 1's construction as "wrong call
+  target", in `step`, `execute`, `operate`, `read`, `write` and the generated dispatchers.
+- `--print-bytecode` mapped the offsets to the calls into the dispatchers and, through them, into
+  the slots.
+- `--trace-turbo-inlining` showed machine 0 inlining dispatchers into `step` and slots into
+  dispatchers, which machine 1 lost.
+
+Fixing one layer at a time showed all three were needed:
+
+| Shared across machines | Later machines, ns/step |
+|---|---|
+| nothing | 71–80 |
+| generated dispatchers | 71–80 |
+| and the CPU's slots | 62–71 |
+| and no stubs: install rebuilds eagerly | 41–46 |
+
+The fix is the split Smalltalk and Self make between shared behavior and per-receiver state. Slot
+functions are built once per process. A slot reaches its machine as `c.cpu`, a field of the
+context, the same way it reaches the opcode or the device code. Behavior became shareable the
+moment the machine became one more coordinate.
+
+The costs:
+- A burst of separate installs now rebuilds once per install instead of once at the next call.
+- A slot pays one extra load to reach its machine.
+- A CPU slot may not close over a machine.
+
+Later machines are now faster than the first, which pays for warm-up.
+
+Vanessa Freudenberg built SqueakJS on the same bet: "I'd much rather make the SqueakJS JIT produce
+code that the JavaScript JIT can optimize well." This is the discipline that bet requires. A
+generator has to emit the identities and shapes the host JIT keys on, not only the right code. The
+host here descends in part from the Self work: maps became hidden classes, and inline caches and
+deoptimization came with them.
 
 ## Where it goes
 
@@ -242,6 +290,14 @@ doing if profiling shows the CPU loop, not the devices, is the limit.
 7. **Where does this break?** x86 decode, the Apple's floating bus, cycle-exact video, DMA that
    interleaves with the CPU mid-instruction. Which of these would you expect to defeat
    most-specific-slot dispatch, and which only look like they do?
+8. **Identity versus behavior, on a host JIT.** For Alan and Dan in particular. The second-machine
+   slowdown came from behavior with identity: each machine's slots were its own closures, so the
+   host JIT treated identical code as different code. Smalltalk's answer, methods in the class and
+   `self` passed in, fixed it. Korz has no classes, so the receiver became a coordinate. When a
+   late-bound system runs on someone else's JIT, which of its identities should the host see, and
+   which should it never see? And how much of what Smalltalk's VMs learned, from the Deutsch and
+   Schiffman inline caches to SqueakJS, should the emulator assume of its host instead of
+   rediscovering it under a profiler?
 
 Don Hopkins, November 2026.
 
@@ -259,6 +315,12 @@ Don Hopkins, November 2026.
   Languages with Polymorphic Inline Caches*. ECOOP 1991.
 - Urs Hölzle, Craig Chambers and David Ungar. *Debugging Optimized Code with Dynamic
   Deoptimization*. PLDI 1992.
+- L. Peter Deutsch and Allan M. Schiffman. *Efficient Implementation of the Smalltalk-80 System*.
+  POPL 1984.
+- Vanessa Freudenberg, Dan Ingalls, Tim Felgentreff, Tobias Pape and Robert Hirschfeld. *SqueakJS:
+  A Modern and Practical Smalltalk That Runs in Any Browser*. DLS 2014.
+- Vanessa Freudenberg, on generating JavaScript for the host JIT,
+  [Hacker News 38774277](https://news.ycombinator.com/item?id=38774277), December 2023.
 - Craig Chambers and Weimin Chen. *Efficient Multiple and Predicate Dispatching*. OOPSLA 1999.
 - Michael Ernst, Craig Kaplan and Craig Chambers. *Predicate Dispatching: A Unified Theory of
   Dispatch*. ECOOP 1998.
