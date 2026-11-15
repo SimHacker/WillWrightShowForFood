@@ -808,6 +808,25 @@ export type GuardSpec = Readonly<Record<string, Coord | readonly Coord[]>>;
 So `{ op: 0o17, ind: 0 }` is a guard, `{ who: "cpu", access: "fetch" }` is a guard, and
 `{ top: bits(2, 2) }` matches every value with bit 1 set.
 
+Why only integers? Because every dimension's values are numbered from 0 up to a fixed size, the
+sea can store a set of them as a row of bits and index a table by them, which is where its speed
+comes from. Other kinds of value fit by being numbered:
+
+- **A boolean** is a dimension one bit wide: 0 or 1, like `ind`, the indirect bit.
+- **A small set of strings** is an **enum**: the dimension lists `names`, and the name's position is
+  its number. `who` is `["cpu", "device", "debugger"]`, so a guard can say `who: "cpu"` while the
+  context holds 0. The names are for people; the context only ever holds numbers.
+- **An open-ended set of strings**, like any word a player might type, has to be numbered first,
+  with a table from each string to a number, the same trick, called interning, that the
+  resolver uses for chains below. Zork's verbs and objects would go in that way.
+- **A float or an object** doesn't fit at all. A guard on one would need a test, not a set, and
+  the sea has no way to build a table over tests. You turn it into a number that says what you'd
+  test, such as a size class, and guard on that.
+
+A dimension is between 1 and 20 bits wide, so it has at most about a million values. A context
+field that's missing counts as 0. It's up to the caller to keep each value in range, and
+`KorzPdp7` does, because it cuts each field out of the instruction word with a mask.
+
 **Sets as bitsets.** Each guard becomes, per dimension, a set of values stored as a bitset in a
 `Uint32Array`, with `null` meaning the whole domain. A dimension is at most 20 bits wide, so its
 largest set is 32,768 words:
