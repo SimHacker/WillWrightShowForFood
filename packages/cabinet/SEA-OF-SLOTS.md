@@ -62,8 +62,8 @@ tables, and as a compiler, each one checked instruction by instruction against t
 ### What this article is about
 
 Korz is a language almost nobody has heard of. It runs here on a JavaScript JIT that exists
-because of a language almost nobody uses any more. This article is about those two languages, Self
-and Korz, and why they turn out to be exactly the right tools for building emulators you can take
+because of a language almost nobody uses any more called Self. This article is about those two
+languages, and why they turn out to be exactly the right tools for building emulators you can take
 apart while they run.
 
 ## Self, and the JIT in your browser
