@@ -714,6 +714,72 @@ prime": the same slots with two ways to pick one. When the guards can decide, or
 dispatch runs them, compiled and exact. When the player does something no guard covers, a language
 model improvises. As the design doc puts it: "Korz compiles; Zork improvises."
 
+### Sims advertisements, on the same Korz library
+
+In Will Wright's The Sims, which I worked on at Maxis, the people aren't smart: the objects are.
+Each object advertises what it can do, and how much each action would satisfy a Sim's needs. The
+fridge advertises food to a hungry Sim, and the bed advertises sleep to a tired one. A Sim looks
+at what's advertised nearby and picks something.
+
+MOOLLM borrows this for every object. Its
+[advertisement skill](https://github.com/SimHacker/moollm/blob/main/skills/advertisement/SKILL.md)
+gives each object in a room a map of advertisements, and each one can carry a guard and a score.
+I want to run them on the very Korz library that runs the PDP-7. None of this is built yet.
+
+#### Can you, and would you want to?
+
+An advertisement asks two questions. The guard asks "can you?": an advertisement whose guard
+fails isn't offered at all. The score asks "would you want to?": how much this actor, right now,
+wants this action.
+
+In Korz, the guard is a guard. An advertisement becomes a slot whose guard constrains the actor
+asking, the object offering, the room, and the object's state, each as its own dimension. Any of
+them can be pinned to one value ("is that"), a group of values ("a kind of that"), or a range
+("in that range"). That's the multiple dispatch from earlier, on every argument at once.
+
+The score is a method on that slot, and it can compute anything: the actor's hunger, how far away
+the fridge is, whether the stove has set the house on fire lately.
+
+#### An auction, not a send
+
+Here Korz's own rule has to bend. A Korz send runs the one most specific slot, and a tie is an
+error. Advertisements want the opposite: every slot that applies, all bidding at once.
+
+So asking "what can I do here?" isn't a send. It's a view. The library already has one: `view`
+returns every slot whose guard matches a query, which is how the PDP-7 debugger asks for
+"everything that touches page 07." For advertisements, the query is the actor's context, the
+result is the list of offers, and each offer's score method runs to set its bid.
+
+#### Behavior dithering
+
+The Sims didn't always take the highest bid. It picked at random among the top few, which made
+Sims feel alive instead of predictable. MOOLLM's
+[auction design](https://github.com/SimHacker/moollm/blob/main/designs/ADVERTISEMENT-AUCTION.md)
+gives the reasons: bids are sales pitches, not truths; random picks among good options find ways
+out of dead ends; and a character who never surprises you can't be taught.
+
+Two parts of that fit Korz exactly. The random number generator's seed goes in the log, so a
+replay makes the same choices. That's the same determinism that lets the emulator's four levels be
+checked against each other.
+And how much to dither, the temperature, is a context value, set once by a room or a scene and
+inherited by every choice inside it. In Korz, that's just another dimension.
+
+#### Turning conditions into guards
+
+MOOLLM's advertisements start as prose, like "the actor has materials and the crafting skill."
+Its adventure compiler has a language model turn that prose into a JavaScript function. When
+enough of those functions share a shape, the shape graduates into a standard key like
+`requires_items`, `when_state`, or `requires_lighting: { min, max }`.
+
+Those graduated keys are Korz guards: a set of items, a state value, a range. Graduating a
+condition moves it out of code and into dispatch, where the library can check it for ambiguity,
+precompute it into tables, and compile it. A condition that can't graduate, like "the actor is
+tired," stays in the score method, where any code can run.
+
+That split between cheap guards on sets and arbitrary code in the scores is deliberate. With sets,
+the library can tell when one guard is more specific than another and build tables ahead of time.
+With arbitrary functions, it couldn't do either.
+
 ### Korz's turn
 
 Self's ideas went into the engine under every web page. Korz's ideas have barely been tried.
