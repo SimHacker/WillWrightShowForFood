@@ -39,7 +39,7 @@ to 32K.
   in that color until the next one, IDLA resets it, and DJS saves and restores it. Segments carry
   `color` beside `intensity`, and `toSvg`, the phosphor, and the video draw it. Candidates for the
   bits: PARAM bits 9 and 10, which no program the tests run has ever set (TAGS-AND-PIES.md §1), or
-  a color word in the DTG tag record. Old programs stay green.
+  a color word in the DTG tag record. Old programs never set it, so they look as they do now.
 - **Full-names Forth**: the cabinet's Forth now; next, the PRs to Mitch and the Open Firmware name words ([VARIANTS.yml](tapes/pdp7forth/VARIANTS.yml)).
 - **DUEL game panel**: ship records at 1471 and 1514, torpedoes 1537–1544.
 - **Instruction editor:** grab POINT words and whole strings; skip dark vectors when picking.
