@@ -234,8 +234,7 @@ values of all the arguments, not just the first one.
 In Common Lisp's object system, CLOS, methods belong to generic functions, not to classes.
 `(defmethod collide ((a asteroid) (b ship)) ...)` is a method on `collide` for an asteroid hitting
 a ship, and neither the asteroid nor the ship owns it. A parameter can be specialized on a class
-("is a kind of that"), or, with an `eql` specializer, on one exact object ("is that"). Dylan, Apple's
-descendant of CLOS, kept multiple dispatch.
+("is a kind of that"), or, with an `eql` specializer, on one exact object ("is that"). Dylan, Apple's descendant of CLOS, kept multiple dispatch.
 
 So is the receiver still special? Mostly not, but not completely. When two methods both apply,
 CLOS compares their parameters left to right, so the first argument still gets the first say,
