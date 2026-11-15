@@ -11,7 +11,7 @@ function is to switch itself off. Claude Shannon built the real one. Ours is dev
 All of that grew out of one program and its menus. In 1969 at the Cambridge University
 Mathematical Laboratory, Heinz Lemke, with Neil Wiseman and John Hiles, published PIXIE, a
 light-pen editor for graph models such as electronic circuits and control systems. It ran on a
-PDP-7 with a Type 340, linked to Cambridge's Titan mainframe. Its menu pops up around the light
+PDP-7 with a Type 340 vector graphics display, linked to Cambridge's Titan mainframe. Its menu pops up around the light
 pen's tracking cross, which makes it one of the earliest known radial menus. I've been building
 pie menus since the 1980s, so when Heinz scanned his 1972 printout of SYMELEC, PIXIE's main
 program, 128 lineprinter pages of it, I wanted to see and feel those menus running again. There was no
