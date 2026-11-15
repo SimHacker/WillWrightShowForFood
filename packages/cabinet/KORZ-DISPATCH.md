@@ -446,6 +446,23 @@ million steps, best of three, Node 20 on an M4 Max. All three end at the same PC
 | `KorzPdp7`, interpreter | 1.1 M | 890 ns |
 | A real PDP-7 | about 0.3 M | 1.75 µs memory cycle |
 
+The second workload is `ULTIMATE-HAND` in Forth, with a procedural hand in place of the camera
+(`node scripts/korz-bench.mjs hand`): the Forth inner interpreter, the 3D turtle, the 340, the
+DataHand and the Ultimate Machine at once, 10 million steps through one press of the switch. All
+three levels end with the same PC, press count, frames latched and frames drawn.
+
+| CPU | Steps per second | Time per step |
+|---|---|---|
+| `Pdp7` | 11.6 M | 86 ns |
+| `KorzPdp7`, resolver | 9.1 M | 110 ns |
+| `KorzPdp7`, interpreter | 1.1 M | 900 ns |
+
+Here the devices dominate: in `Pdp7`, the cabinet's per-step loop over `irq`, `power` and `tick`
+is about two thirds of the time and the CPU about a fifth. Each workload and level runs in its own
+process, since V8's feedback from one slows the next; repeated runs differ by up to 8%.
+`--record` appends results to [`bench-results/korz.jsonl`](bench-results/korz.jsonl) with the
+commit, Node version and machine.
+
 A step makes five to eight dispatches (fetch, its read, `ea`, `exec`, operand reads and writes,
 three more for OPR), and each filters the selector's slots and sorts the matches: about 150 ns a
 dispatch. The interpreter is the oracle and the engine behind `why`, and at 3.7 times a real PDP-7

@@ -5,7 +5,7 @@ import { Cabinet } from "../cabinet.js";
 import { assembleForthKernel, bootForth, compileForth, type ForthImage } from "../forth.js";
 import { Clock } from "../plugins/clock.js";
 import { DataHand } from "../plugins/datahand.js";
-import { wavingHand } from "../plugins/hand.js";
+import { type HandFrame, syntheticHand, wavingHand } from "../plugins/hand.js";
 import { PaperTape } from "../plugins/papertape.js";
 import { MemoryMount, TitanFiles } from "../plugins/titan-files.js";
 import { LightPen } from "../plugins/lightpen.js";
@@ -175,6 +175,29 @@ function hand(make: Make): Rig {
 	return { cpu, box, tty, paper: () => paper, state: () => `${frame(t)} ${dh.latches} ${dh.frames}` };
 }
 
+const pose = (curls: number[]) => ({ ...syntheticHand({ curls, x: 0.5, y: 0.8, size: 0.3, handedness: "right" }), aspect: 4 / 3 });
+/** The benchmark's session, faster: the demo's ghost, your fist, the middle finger up to press, gone. */
+function session(t: number): HandFrame | null {
+	const s = t % 8;
+	if (s < 0.5) return null;
+	if (s < 1.5) return { ...wavingHand(t), synthetic: true };
+	if (s < 3) return pose([1, 1, 1, 1, 1]);
+	if (s < 6.5) return pose([1, 1, 0, 1, 1]);
+	return null;
+}
+
+function ultimateHand(make: Make) {
+	const cpu = make({ coreWords: 8192 });
+	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
+	const tty = new Teletype({ printCycles: 1000 });
+	const dh = new DataHand({ source: session });
+	const um = new UltimateMachine({ wait: 40_000, open: 60_000, reach: 100_000, press: 40_000, return: 80_000, close: 60_000, rest: 200_000 });
+	const box = new Cabinet({ cpu, devices: [t, tty, dh, um] });
+	t.clock = () => box.cycles;
+	bootForth(cpu, forth("clip.fs turtle3d.fs datahand.fs ultimate-hand.fs", "kernel-names-full.s", "tags.fs"));
+	return { cpu, box, tty, um, paper: () => "", state: () => `${frame(t)} ${dh.latches} ${um.presses} ${um.aborts} ${um.phase} ${um.arm}` };
+}
+
 function files(make: Make) {
 	const cpu = make({ coreWords: 32768 });
 	let paper = "";
@@ -207,6 +230,15 @@ test("korz devices: the DataHand latches frames for the 3D turtle", () => {
 	p.type("DATAHAND\n");
 	p.run(3_000_000);
 	assert.ok(Number(p.a.state().split(" ").at(-2)) >= 2, "frames latched");
+	p.same();
+});
+
+test("korz devices: ULTIMATE-HAND, a procedural hand pressing the switch", () => {
+	const p = pair(ultimateHand, "resolve");
+	p.run(300_000);
+	p.type("ULTIMATE-HAND\n");
+	p.run(6_000_000);
+	assert.ok((p.a as ReturnType<typeof ultimateHand>).um.presses >= 1, "the hand pressed the switch");
 	p.same();
 });
 
