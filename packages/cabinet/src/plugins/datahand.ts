@@ -1,4 +1,5 @@
 import type { Device, Iot, IotReply } from "../bus.js";
+import { gate, type IopBus, type KorzDevice, skipIf, timed } from "../korz/iop.js";
 import { flexes, type HandFrame, ONE } from "./hand.js";
 
 /**
@@ -124,7 +125,7 @@ export type DataHandOpts = {
 	mirror?: boolean;
 };
 
-export class DataHand implements Device {
+export class DataHand implements KorzDevice {
 	readonly name = "datahand";
 	readonly iots = [HAND_DEVICE];
 	source: ((t: number) => HandFrame | null) | null;
@@ -190,6 +191,28 @@ export class DataHand implements Device {
 		if (this.untilFrame > 0) return;
 		this.untilFrame += this.framePeriod;
 		this.feed(this.source(this.steps / this.stepsPerSecond));
+	}
+
+	korzSlots(bus: IopBus) {
+		const d = HAND_DEVICE;
+		return [
+			timed(bus, d, "datahand"),
+			skipIf(d, "datahand: skip on frame", () => this.flag, 0),
+			gate(d, 2, "datahand: latched status into AC", (c) => { c.ac |= this.latched[HAND_REG.status] ?? 0; }, 0),
+			gate(d, 4, "datahand: latch the newest frame, clear flag", () => {
+				this.latched = this.pending;
+				this.flag = false;
+				this.latches += 1;
+			}, 0),
+			skipIf(d, "datahand: skip on a tracked hand", () => this.latched[HAND_REG.status] !== 0, 1),
+			gate(d, 2, "datahand: next register into AC", (c) => {
+				c.ac |= (this.latched[this.index] ?? 0) & 0o777777;
+				this.index = (this.index + 1) % HAND_REG.size;
+			}, 1),
+			gate(d, 4, "datahand: select register", (c) => { this.index = (c.ac & 0o777777) % HAND_REG.size; }, 1),
+			gate(d, 4, "datahand: clear flag", () => { this.flag = false; }, 2),
+			gate(d, 4, "datahand: interrupt enable", (c) => { this.ie = (c.ac & 1) !== 0; }, 3),
+		];
 	}
 
 	iot(req: Iot): IotReply {

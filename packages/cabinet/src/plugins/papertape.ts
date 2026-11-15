@@ -1,4 +1,5 @@
 import type { Cpu, Device, Iot, IotReply } from "../bus.js";
+import { gate, type IopBus, type KorzDevice, skipIf, timed } from "../korz/iop.js";
 
 export type PaperTapeOpts = {
 	tape?: Uint8Array;
@@ -12,7 +13,7 @@ export type PaperTapeOpts = {
  * reads one frame, RSB assembles three frames with channel 8 punched,
  * six bits each, skipping the rest. Not part of SYMELEC; DUEL loads from it.
  */
-export class PaperTape implements Device {
+export class PaperTape implements KorzDevice {
 	readonly name = "papertape";
 	readonly iots = [0o01];
 
@@ -51,6 +52,22 @@ export class PaperTape implements Device {
 			this.wait = this.frameCycles;
 		}
 		return { ac, skip };
+	}
+
+	korzSlots(bus: IopBus) {
+		const start = (state: number) => () => {
+			this.state = state;
+			this.flag = false;
+			this.buf = 0;
+			this.wait = this.frameCycles;
+		};
+		return [
+			timed(bus, 0o01, "paper tape reader"),
+			skipIf(0o01, "reader RSF: skip on frame", () => this.flag),
+			gate(0o01, 2, "reader RRB: buffer into AC, clear flag", (c) => { this.flag = false; c.ac |= this.buf; }),
+			gate(0o01, 4, "reader RSA: read one frame", start(0), [0, 1]),
+			gate(0o01, 4, "reader RSB: read three binary frames", start(18), [2, 3]),
+		];
 	}
 
 	tick(cycles: number): void {

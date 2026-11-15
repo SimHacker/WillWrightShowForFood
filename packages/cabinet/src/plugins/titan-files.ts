@@ -1,4 +1,5 @@
 import type { Device, Iot, IotReply } from "../bus.js";
+import { decode, gate, type Iop, type IopBus, type KorzDevice, timed } from "../korz/iop.js";
 
 const WMASK = 0o777777;
 
@@ -184,7 +185,7 @@ export type TitanFilesOpts = {
 };
 
 /** The device: a request block, a flag, and the host doing the transfer. */
-export class TitanFiles implements Device {
+export class TitanFiles implements KorzDevice {
 	readonly name = "titan-files";
 	readonly iots = [FILES_DEVICE];
 
@@ -208,6 +209,19 @@ export class TitanFiles implements Device {
 			if (path.startsWith(pre.endsWith("/") ? pre : `${pre}/`)) return [m, path.slice(pre.length).replace(/^\/+/, "")];
 		}
 		return undefined;
+	}
+
+	korzSlots(bus: IopBus) {
+		return [
+			timed(bus, FILES_DEVICE, "titan-files"),
+			decode(FILES_DEVICE, "titan-files FSF, FRD, FST: start takes the AC as the IOT found it", (c: Iop) => {
+				const ac = c.ac;
+				if (c.pulse & 1 && this.flag) c.skip = 1;
+				if (c.pulse & 2) c.ac |= this.result & WMASK;
+				if (c.pulse & 4) this.start(ac & 0o77777);
+			}, [1, 2, 3, 4, 5, 6, 7]),
+			gate(FILES_DEVICE, 4, "titan-files: clear flag", () => { this.flag = false; }, 2),
+		];
 	}
 
 	iot(req: Iot): IotReply {

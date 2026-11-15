@@ -1,4 +1,5 @@
 import type { Cpu, Device, Iot, IotReply } from "../bus.js";
+import { gate, type Iop, type IopBus, type KorzDevice, skipIf } from "../korz/iop.js";
 
 export const RB_WORDS_PER_SECTOR = 64;
 export const RB_SECTORS = 80;
@@ -37,7 +38,7 @@ export type Rb09Opts = {
  * rotational latency and burst transfer: the whole block moves at once when
  * the first sector comes under the heads, then DONE.
  */
-export class Rb09 implements Device {
+export class Rb09 implements KorzDevice {
 	readonly name = "rb09";
 	readonly iots = [0o71];
 
@@ -95,6 +96,27 @@ export class Rb09 implements Device {
 		}
 		this.update(0);
 		return { ac, skip };
+	}
+
+	korzSlots(bus: IopBus) {
+		const err = STA_ERR | STA_EFLGS | STA_DON;
+		return [
+			{ selector: "iot", guard: { device: 0o71 }, by: "rb09: IOP1, IOP2, IOP4, then status", run: (c: Iop) => { bus.pulses(c); this.update(0); } },
+			gate(0o71, 1, "rb09 DBCF: clear error and done", () => { this.sta &= ~err; }, 0),
+			skipIf(0o71, "rb09 DBSF: skip on error or done", () => (this.sta & (STA_ERR | STA_DON)) !== 0, 1),
+			gate(0o71, 1, "rb09 DBCS: clear status", () => { this.sta = 0; }, 2),
+			gate(0o71, 2, "rb09 DBRD: BCD track and sector into AC", (c) => { c.ac |= bcdAddress(this.da); }, 0),
+			gate(0o71, 2, "rb09 DBRS: status into AC", (c) => { c.ac |= this.sta; }, 1),
+			gate(0o71, 2, "rb09 DBLM: load memory address", (c) => { this.ma = c.ac & 0o77777; }, 2),
+			gate(0o71, 4, "rb09 DBLD: load disk address", (c) => { this.da = this.setAddress(c.ac); }, 0),
+			gate(0o71, 4, "rb09 DBLW: load word count", (c) => { this.wc = c.ac & 0o177777; }, 1),
+			gate(0o71, 4, "rb09 DBLS: load status, start or stop", (c) => {
+				this.sta = (this.sta & STA_XOR) ^ (c.ac & ~STA_MBZ);
+				if (this.sta & STA_BSY) {
+					if (this.due < 0) this.due = this.now + this.latency();
+				} else this.due = -1;
+			}, 2),
+		];
 	}
 
 	tick(cycles: number): void {

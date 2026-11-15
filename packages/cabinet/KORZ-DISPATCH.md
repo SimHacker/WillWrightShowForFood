@@ -441,7 +441,7 @@ million steps, best of three, Node 20 on an M4 Max. All three end at the same PC
 | CPU | Steps per second | Time per step |
 |---|---|---|
 | `Pdp7` | 33 M | 30 ns |
-| `KorzPdp7`, resolver | 17 M | 60 ns |
+| `KorzPdp7`, resolver | 17 M | 57 ns |
 | `KorzPdp7`, interpreter | 1.1 M | 890 ns |
 | A real PDP-7 | about 0.3 M | 1.75 µs memory cycle |
 
@@ -463,9 +463,8 @@ resolve on their next call, so there is no check per dispatch. A watch on one 15
 Getting from 105 ns to 56 ns a step took three changes, each found with `node --cpu-prof`: the index
 computation and table load moved into the generated function, so V8 inlines all of it; the per-call
 generation check became `bind`; and an instruction fetch became `access: "fetch"` on `read` instead
-of a second selector that called the first. Moving the clock and teletype onto the IOP bus, behind
-the power slots, added 4 ns. At 60 ns, about 20 ns a step is the cabinet ticking four
-devices, the same cost `Pdp7` pays; the rest is writing coordinates into context objects and five
+of a second selector that called the first. With every device on the IOP bus behind its power slot,
+a step is 57 ns. Of that, about 20 ns is the cabinet ticking four devices, the same cost `Pdp7` pays; the rest is writing coordinates into context objects and five
 to eight inlined dispatches.
 
 **Prediction for the compiler.** The resolver still makes five to eight indirect calls a step,
@@ -539,20 +538,24 @@ device's `iot` slot: it fires IOP1, IOP2 and IOP4 through the `iop` selector. `g
 pulse, optionally for one `sub` value (pulse bits 060, which split a device code into four groups).
 `skipIf` is a `gate` on IOP1 that sets the skip. `decode` is an `iot` slot for a whole pulse
 pattern, for devices whose pulses are not independent gates. Being more specific than `timed`, it
-wins for its pattern and the rest of the device stays timed. The clock, teletype, 340 and most of
-the Turing engine are timed. The Ultimate machine's device 055, the Turing mode group (sub 2) and
-both Tiny Titan codes decode whole pulses, because their gates read each other's results.
+wins for its pattern and the rest of the device stays timed. The clock, teletype, paper tape, RB09,
+340, DataHand and most of the Turing engine are timed; the RB09's `iot` slot recomputes its status
+after the pulses. The Ultimate machine's device 055, the Turing mode group (sub 2), both Tiny Titan
+codes and titan-files' group 0 decode whole pulses, because their gates read each other's results
+or the AC as it was before IOP2.
 
 The backplane adds one patch-layer slot per device code that answers with `offIot` while the device
-is off, so `why` on a dead IOT names the power switch. Devices without `korzSlots` get one slot per
-code that calls `iot()`.
+is off, so `why` on a dead IOT names the power switch. A device without `korzSlots` gets one slot
+per code that calls `iot()`; none in the cabinet needs it now.
 
 Each device keeps `iot()` as the oracle. [`src/korz/devices.test.ts`](src/korz/devices.test.ts) runs
 a `Pdp7` cabinet and a `KorzPdp7` cabinet in lockstep, comparing registers every step and
 teletype output and device state at the end. It runs SYMELEC on the 340, teletype, clock and Tiny
-Titan, a drawn line sent over the Titan link, the Turing engine stepped and free-running, and the
-Ultimate machine's phase interrupts. Breaking IDSI, UMSI, TMSS, TMSR, TMGO, LSF or LLB18 makes it
-fail. Breaking TMLA does not: the Forth code always follows TMLA with TMST, which hides it.
+Titan, a drawn line sent over the Titan link, the Turing engine stepped and free-running, the
+Ultimate machine's phase interrupts, a hand-assembled paper tape reader loop (RSA and RSB), the
+DataHand feeding the 3D turtle, and titan-files writing and reading words by name; the UNIX v0
+lockstep in `pdp7.test.ts` covers the RB09. Breaking IDSI, UMSI, TMSS, TMSR, TMGO, LSF, LLB18, RSB,
+DBSF, DBLM, FSF, FST's AC or the DataHand's register index makes it fail. Breaking TMLA does not: the Forth code always follows TMLA with TMST, which hides it.
 
 **The display processor as a sea.** The 340 decodes each word by its mode register, and in some
 modes by the top two bits (DEC bits 0 and 1). Those are the dimensions:
@@ -649,11 +652,10 @@ word in core.
    bitsets per dimension ([`src/korz/korz.ts`](src/korz/korz.ts)).
 2. **Built.** The PDP-7 on the interpreter, against `Pdp7`: random programs and UNIX v0 in lockstep
    ([`src/korz/pdp7.ts`](src/korz/pdp7.ts)).
-3. **Built.** The IOT bus as timed IOP pulses; the clock, teletype, Type 340, Turing engine,
-   Ultimate machine and Tiny Titan as slots, in lockstep against their `iot()` methods
+3. **Built.** The IOT bus as timed IOP pulses; every device in the cabinet as slots (clock,
+   teletype, paper tape, RB09, Type 340, Turing engine, Ultimate machine, Tiny Titan, titan-files,
+   DataHand), in lockstep against their `iot()` methods
    ([`src/korz/iop.ts`](src/korz/iop.ts), [`src/korz/devices.test.ts`](src/korz/devices.test.ts)).
-   Paper tape, the RB09, titan-files and the DataHand still answer through `iot()` wrapped in one
-   slot per device code.
 4. **Built.** The resolver on the PDP-7: per-selector tables, 17 M steps per second with the
    devices on the IOP bus.
 5. Page-set normal forms with the brute-force tests; the Apple bus on the interpreter, against
