@@ -442,8 +442,8 @@ by instruction, comparing registers every step:
 2. **The Korz interpreter.** For every dispatch, it filters the selector's slots, sorts the matches
    by specificity, and calls the chain. Slow, obvious, and correct. It boots UNIX at about four
    times the speed of a real PDP-7.
-3. **The resolver.** The tables above, with one generated JavaScript function per selector.
-4. **The compiler**, which turns runs of PDP-7 instructions into JavaScript functions.
+3. **The Korz resolver.** The tables above, with one generated JavaScript function per selector.
+4. **The Korz compiler.** It turns runs of PDP-7 instructions into JavaScript functions.
 
 ### The tests
 
