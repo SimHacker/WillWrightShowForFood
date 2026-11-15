@@ -589,9 +589,22 @@ A tour of an emulator usually skips the tools. Here they're half the fun.
   lights up the cells that change, and saves and loads ring files. In Mitch's Forth with RSPPIX,
   LOAD puts a file into the running machine.
 - **Pictures** ([`media.ts`](src/media.ts), [`preview340.ts`](src/preview340.ts)). The 340's
-  output is a stream of line segments, each one remembering the display-file word that drew it.
-  The screen, the video, the glow of the phosphor, and the light pen all read that one stream.
-  There are two ways to get a picture:
+  output is a stream of line segments. Each segment ([`Segment`](src/plugins/type340.ts)) is more
+  than its two ends. It remembers how it was drawn:
+  - **When:** the machine cycle it was drawn on, and which refresh frame. A cycle is a place in
+    machine time you can seek to and replay from.
+  - **Which instruction:** the address of the display-file word that drew it, the block of the
+    display file that word sits in, and the display subroutine it was drawn inside, with where that
+    subroutine returns to. The 340 can only nest one subroutine deep, so that's the whole call
+    chain. It also remembers the POINT words that last set the beam's x and y, which are what
+    placed it on the screen.
+  - **How it looked:** its kind (point, vector, increment, or character), whether the beam was on
+    or just moving, its brightness (intensity), and its scale.
+  - **What it means:** for a character, which character and which letter of the frame it belongs
+    to; whether the light pen could hit it; and its display tag, if the program set one.
+
+  The screen, the video, the glow of the phosphor, the light pen, and hovering all read that one
+  stream. There are two ways to get a picture:
   - From the running display: `toSvg` writes any stream of segments as SVG, a vector image like
     the 340's own picture, with each display subroutine as a group and each line carrying the
     address of the word that drew it. `printScreen` is `toSvg` of the last whole frame, and it's
