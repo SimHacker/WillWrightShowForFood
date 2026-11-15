@@ -208,7 +208,7 @@ I kept every level of the implementation, and each one is tested against the one
 instruction by instruction, comparing registers every step:
 
 1. **`Pdp7`**, plain switch statements, the TypeScript port of SIMH's PDP-7, with Phil Budne's
-   Type 340 ported nearly line by line. This is the reference.
+   and Lars Brinkhoff's Type 340 code ported nearly line by line. This is the reference.
 2. **The Korz interpreter.** For every dispatch, it filters the selector's slots, sorts the matches
    by specificity, and calls the chain. Slow, obvious and correct. It boots UNIX at about four
    times the speed of a real PDP-7.
