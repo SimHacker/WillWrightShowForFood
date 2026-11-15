@@ -740,6 +740,29 @@ them can be pinned to one value ("is that"), a group of values ("a kind of that"
 The score is a method on that slot, and it can compute anything: the actor's hunger, how far away
 the fridge is, whether the stove has set the house on fire lately.
 
+#### Scores written in prose, compiled by a language model
+
+Nobody has to write those score methods by hand. In MOOLLM, an advertisement's `score_if` is
+prose, like "the actor is tired." The adventure compiler hands that prose, along with the schema of
+the actors and objects it may read, to a language model, which writes a short JavaScript function
+and stores it next to the prose as `score_if_js`:
+
+```yaml
+BREW:
+  score: 65
+  score_if: "the actor is tired"
+  score_if_js: "(actor) => actor.needs.energy < 30"
+```
+
+A function that returns true or false switches the bid between `score` and 0. A function that
+returns a number is the bid, which is how a bid grows with a need:
+`(actor) => 100 - actor.needs.energy`.
+
+That function becomes the slot's score method. The language model runs once, when the world is
+compiled, not every time a Sim gets hungry. What runs during the game is ordinary JavaScript, on
+the same JIT as everything else, and the prose stays beside it so a person can read what it was
+supposed to do and regenerate it if it's wrong.
+
 #### An auction, not a send
 
 Here Korz's own rule has to bend. A Korz send runs the one most specific slot, and a tie is an
@@ -766,15 +789,14 @@ inherited by every choice inside it. In Korz, that's just another dimension.
 
 #### Turning conditions into guards
 
-MOOLLM's advertisements start as prose, like "the actor has materials and the crafting skill."
-Its adventure compiler has a language model turn that prose into a JavaScript function. When
-enough of those functions share a shape, the shape graduates into a standard key like
+Guards go through the same compiler. "The actor has materials and the crafting skill" becomes a
+`guard_js` function. When enough of those functions share a shape, the shape graduates into a standard key like
 `requires_items`, `when_state`, or `requires_lighting: { min, max }`.
 
 Those graduated keys are Korz guards: a set of items, a state value, a range. Graduating a
 condition moves it out of code and into dispatch, where the library can check it for ambiguity,
 precompute it into tables, and compile it. A condition that can't graduate, like "the actor is
-tired," stays in the score method, where any code can run.
+tired," stays in a generated score function, where any code can run.
 
 That split between cheap guards on sets and arbitrary code in the scores is deliberate. With sets,
 the library can tell when one guard is more specific than another and build tables ahead of time.
