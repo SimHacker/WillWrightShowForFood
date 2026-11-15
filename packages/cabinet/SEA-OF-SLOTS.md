@@ -447,9 +447,18 @@ by instruction, comparing registers every step:
 
 ### The tests
 
-The tests run 300 random core images, UNIX booting to its prompt, and every device setup: SYMELEC
-on the 340, the Turing engine, drawings made with the light pen and sent over the Titan link, and
-DataHand frames by interrupt.
+Every Korz level runs in lockstep with `Pdp7`, and they have to agree.
+
+The first test is garbage on purpose. It fills core with random words, starts the PC somewhere
+random, raises interrupts at random, and runs both CPUs for up to 2,000 steps, comparing every
+register after every step and all of core at the end. Then it does that 299 more times. Real
+programs use a few well-worn paths through the instruction set. Random words hit every opcode,
+every odd indirect chain, code that overwrites itself, and IOTs nobody calls. When the two CPUs
+disagree, the test names the seed and the step, so the failure replays exactly. This is called
+[fuzzing](https://en.wikipedia.org/wiki/Fuzzing).
+
+Then real programs: UNIX booting to its prompt, SYMELEC on the 340, the Turing engine, drawings
+made with the light pen and sent over the Titan link, and DataHand frames by interrupt.
 
 Then I break things on purpose to check the tests notice. I planted 24 errors in the compiler's
 generated code, and the tests caught 23 of them. The 24th turned out to change nothing.
