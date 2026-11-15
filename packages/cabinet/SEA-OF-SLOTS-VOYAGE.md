@@ -652,7 +652,7 @@ next:	xct i 010	" pre-increment IP, execute the thread cell
 	jmp next
 ```
 
-Reading it word by word needs two PDP-7 features from Port 1.
+Reading it word by word needs two PDP-7 features from Port 3.
 
 The first is the `i` after an instruction, which means **indirect**: the instruction's address
 names a location that holds the address to use, like a pointer. The second is the **auto-index
