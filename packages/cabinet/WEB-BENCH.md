@@ -129,6 +129,31 @@ ROMs are Apple's: load them from the user, as microM8 and the others do, never c
    SharedArrayBuffer ever if we can help it (it drags COOP/COEP header
    requirements into every deployment). OffscreenCanvas + worker is a
    dimensional control for later, not a foundation.
+
+   **The cut line, kept without building it.** The machine (cabinet, CPU,
+   devices, the Korz sea) may later move into a worker, with the page
+   keeping the canvas and panels. Nothing wraps it today; new UI code keeps
+   to these rules so the cut stays cheap:
+
+   - **Commands are plain calls with plain arguments**: `box.run(n)`,
+     `box.step()`, `tty.type(code)`, setting switches, PC and halt, pen
+     position. Each becomes one message.
+   - **Computations over core take `read` and `write` functions, never the
+     CPU**: `preview340`, `cornerAt`, `moveCorner`, `readTag`, `implant`, the
+     RSPPIX heap walk. They run beside the machine and return plain results
+     (segments, pokes, words), so they move with it unchanged. A PIXIE drag
+     sends the pointer and gets pokes back; it never reads core word by
+     word across the line.
+   - **Display state is read once per frame**: cycles, registers, the
+     340's frame and registers, the memory page. Read them in one place per
+     frame, into plain values, rather than from the live objects in many
+     places; that place becomes the snapshot message.
+   - **Device output arrives through callbacks with plain data**: `onFrame`
+     segments, `onPrint` characters, trace records. They become posted
+     messages; segments can travel as typed arrays.
+   - **Slots installed from the UI live in modules, named, with their
+     guard and `by`**, not as closures over UI state. A function can't be
+     posted to a worker; a module name and its arguments can.
 3. **Persistence: OPFS** (`navigator.storage.getDirectory()`) — baseline in
    all engines since March 2023, secure-context only, **no permission
    prompt**, file-shaped like our Titan filestore. Store: tapes, ring files,

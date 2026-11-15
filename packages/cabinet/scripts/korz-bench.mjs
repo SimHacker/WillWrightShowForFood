@@ -1,6 +1,6 @@
 // The PDP-7 at every Korz level, on the same workloads: Pdp7 (switch statements), KorzPdp7 with the
 // resolver's tables, and KorzPdp7 searching the sea. Run `npm run build` first.
-//   node scripts/korz-bench.mjs [workload...] [--steps N] [--level pdp7|resolve|interpret] [--record]
+//   node scripts/korz-bench.mjs [workload...] [--steps N] [--rounds N] [--level pdp7|resolve|interpret] [--mixed] [--record]
 // Workloads: unix (UNIX v0 boot), hand (ULTIMATE-HAND in Forth: DataHand, 340, Ultimate Machine).
 // --record appends one JSON line per level and workload to bench-results/korz.jsonl.
 import { execSync, spawnSync } from "node:child_process";
@@ -26,7 +26,7 @@ const opt = (name) => {
 	const i = args.indexOf(name);
 	return i < 0 ? undefined : Number(args[i + 1]);
 };
-const named = args.filter((a, i) => !a.startsWith("--") && args[i - 1] !== "--steps" && args[i - 1] !== "--level");
+const named = args.filter((a, i) => !a.startsWith("--") && !["--steps", "--level", "--rounds"].includes(args[i - 1] ?? ""));
 const only = args.includes("--level") ? args[args.indexOf("--level") + 1] : undefined;
 if (only && !["pdp7", "resolve", "interpret"].includes(only)) throw new Error(`--level pdp7, resolve or interpret, not ${only}`);
 
@@ -108,35 +108,60 @@ const commit = (() => {
 const machine = cpus()[0]?.model ?? "unknown";
 
 // Each workload and level runs in its own process, so V8's feedback from one doesn't slow another.
+// Round 1 is cold: its first tenth shows the cost before V8 has tiered up. The steady figure is the
+// best of the later rounds. --mixed first runs every workload at every level for a while in the same
+// process, the way a page with several machines in it does.
 const child = flag("--child");
+const rounds = Math.max(2, opt("--rounds") ?? 5);
+const mixed = flag("--mixed");
+const ns = (ms, n) => (ms * 1e6) / n;
+const col = (v) => v.toFixed(0).padStart(5);
 for (const name of named.length ? named : Object.keys(workloads)) {
 	const w = workloads[name];
 	if (!w) throw new Error(`no workload ${name}: ${Object.keys(workloads).join(", ")}`);
 	const steps = opt("--steps") ?? w.steps;
-	if (!child) console.log(`${w.title}, ${steps.toLocaleString()} steps, Node ${process.version}, ${machine}, best of 3, one process each`);
+	if (!child) {
+		console.log(`${w.title}, ${steps.toLocaleString()} steps, Node ${process.version}, ${machine}, ${rounds} rounds, one process each${mixed ? ", mixed" : ""}`);
+		console.log(`  ${"".padEnd(20)} ${"M steps/s".padStart(9)}  ns/step: steady first-tenth round-1`);
+	}
 	for (const [key, level, cpu] of levels) {
 		if (only && key !== only) continue;
 		if (!child) {
-			const pass = ["--steps", String(steps), ...(flag("--record") ? ["--record"] : [])];
+			const pass = ["--steps", String(steps), "--rounds", String(rounds), ...(flag("--record") ? ["--record"] : []), ...(mixed ? ["--mixed"] : [])];
 			const r = spawnSync(process.execPath, [...process.execArgv, fileURLToPath(import.meta.url), name, "--level", key, "--child", ...pass], { stdio: "inherit" });
 			if (r.status !== 0) process.exit(r.status ?? 1);
 			continue;
 		}
+		if (mixed) {
+			for (const other of Object.values(workloads)) for (const [, , c] of levels) other.build(c).box.run(500_000);
+		}
+		let first = 0;
+		let tenth = 0;
 		let best = Infinity;
 		let result = "";
-		for (let round = 0; round < 3; round += 1) {
+		for (let round = 0; round < rounds; round += 1) {
 			const m = w.build(cpu);
-			const t = performance.now();
-			m.box.run(steps);
-			best = Math.min(best, performance.now() - t);
+			if (round === 0) {
+				const t0 = performance.now();
+				m.box.run(Math.floor(steps / 10));
+				tenth = performance.now() - t0;
+				m.box.run(steps - Math.floor(steps / 10));
+				first = performance.now() - t0;
+			} else {
+				const t = performance.now();
+				m.box.run(steps);
+				best = Math.min(best, performance.now() - t);
+			}
 			result = m.result();
 		}
 		const mps = steps / best / 1000;
-		const ns = (best * 1e6) / steps;
-		console.log(`  ${level.padEnd(20)} ${mps.toFixed(2).padStart(7)} M steps/s ${ns.toFixed(0).padStart(5)} ns/step  ${result}`);
+		console.log(`  ${level.padEnd(20)} ${mps.toFixed(2).padStart(9)}  ${col(ns(best, steps))}  ${col(ns(tenth, Math.floor(steps / 10)))}  ${col(ns(first, steps))}  ${result}`);
 		if (flag("--record")) {
 			mkdirSync(new URL("../bench-results/", import.meta.url), { recursive: true });
-			const line = { date: new Date().toISOString(), commit, node: process.version, machine, workload: name, level, steps, mps: +mps.toFixed(3), ns: +ns.toFixed(1), result };
+			const line = {
+				date: new Date().toISOString(), commit, node: process.version, machine, workload: name, level, steps, rounds, mixed,
+				mps: +mps.toFixed(3), ns: +ns(best, steps).toFixed(1), coldTenthNs: +ns(tenth, Math.floor(steps / 10)).toFixed(1), round1Ns: +ns(first, steps).toFixed(1), result,
+			};
 			appendFileSync(new URL("../bench-results/korz.jsonl", import.meta.url), `${JSON.stringify(line)}\n`);
 		}
 	}
