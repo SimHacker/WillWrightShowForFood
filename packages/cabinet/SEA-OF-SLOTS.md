@@ -2,6 +2,25 @@
 
 Don Hopkins, November 2026
 
+**Watch it first.**
+
+[![PIXIE and FORTH on PDP-7 Cabinet Emulator with Type 340 Vector Graphics Display](https://img.youtube.com/vi/lo8kdY-5i6c/maxresdefault.jpg)](https://www.youtube.com/watch?v=lo8kdY-5i6c)
+
+[PIXIE and FORTH on PDP-7 Cabinet Emulator with Type 340 Vector Graphics Display](https://www.youtube.com/watch?v=lo8kdY-5i6c)
+(23 minutes) opens with Heinz Lemke at his PDP-7 on film, then runs his program in the browser: its
+radial menus driven by the light pen, the display list edited live in core, every instruction
+traced back to the scanned 1972 listing, then DUEL, Lunar Lander, Mitch Bradley's Forth drawing
+with a turtle, and UNIX logging in as `ken`. That's the plain emulator, before any of the Korz in
+this article. It's the shallow end of the deep end.
+
+**Then try it.** [Hold your hand up to your webcam](https://hyperties.org/cabinet/ultimate-hand/).
+A PDP-7 running Forth draws your hand on its vector display, and your hand becomes the hand of
+Marvin Minsky's Ultimate Machine, the box whose only function is to switch itself off. Show it your
+hand and the box switches itself on, its arm carries your hand out to the switch, and you switch it
+off with a fingertip.
+
+Keep it open while you read. Every part of that page is explained below.
+
 ## A PDP-7 in a web page
 
 ### What it runs
