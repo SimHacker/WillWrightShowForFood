@@ -904,11 +904,19 @@ has 4,096 entries and four distinct chains:
 
 ```ts
 	resolve(selector: string, limit = TABLE_LIMIT): Resolved<C> | null {
-		const slots = this.bySelector.get(selector) ?? [];
-		const rel = [...new Set(slots.flatMap((s) => s.constrained))].sort((a, b) => a - b);
-		const bits = rel.reduce((n, d) => n + this.dims[d]!.width, 0);
-		if (2 ** bits > limit) return null;
+		const plan = this.plan(selector, limit);
+		if (plan === null) return null;
+		const { rel, kinds, size } = plan;
+		const compressed = kinds.some((k) => k !== null);
+		const point = Object.fromEntries(this.dims.map((d) => [d.name, 0])) as Record<string, number>;
+		const interned = new Map<string, Entry<C>>();
+		const table = new Array<Entry<C>>(size);
+		for (let i = 0; i < size; i += 1) {
+			// …
 ```
+
+`plan` decides which dimensions the table ranges over and how big it is, and returns null when
+it's too big, below.
 
 A point where the interpreter would throw gets an entry that throws the same error when it's
 called, so the table agrees with the interpreter even about failures.
@@ -948,8 +956,19 @@ This is the compressed dispatch table that Eric Amiel, Olivier Gruber, and Eric 
 for multimethods in 1994. Tables that fit stay indexed by value, so compressing never costs a table
 that didn't need it.
 
-**Generated methods, shared by every machine.** The index expression is generated as JavaScript
-and compiled once per selector and expression, for the whole process:
+**Generated methods, shared by every machine.** Something has to compute that index and call the
+chain it finds, every time the CPU asks the sea a question. That something is a small JavaScript
+function that Korz writes itself, as text, and turns into code with `new Function`. It's called a
+**generated method**, and there's one for each selector, such as `exec`, `read`, or `iot`.
+
+How the CPU calls it: `KorzPdp7` keeps an object called `go`, with one field per selector. When
+it needs to run an instruction it calls `this.go.exec(x)`, and to read memory, `this.go.read(...)`.
+Korz's `bind`, below, puts a generated method in each of those fields. So `go.exec` is the
+generated method for `exec`, and `go` also holds the table it reads, in a field named for the
+selector with a `$` after it, like `exec$`.
+
+Here's the code that writes a generated method. `${expr}` is the index expression above, and
+`${name}` is the selector's name:
 
 ```ts
 		m = new Function(`return function korz_${name}(c) {
@@ -960,17 +979,52 @@ and compiled once per selector and expression, for the whole process:
 //# sourceURL=korz/${name}.js`)() as (c: never) => number;
 ```
 
-This is the part for TypeScript programmers. V8 makes a call fast with an **inline cache**: each
-call site remembers the target and the object shape (its **hidden class**) it saw last. A site
-that sees one is **monomorphic** and fast. A site that sees many becomes **megamorphic** and stays
-slow. So the generated method reads its table from `this` instead of closing over it, and every
-machine in the process shares the same function object. Two PDP-7s on one page have the same call
-targets, and V8 specializes the sites once. The `sourceURL` comment makes each generated function
-show up in the browser's debugger as `korz/exec.js`, and you can set breakpoints in it.
+For the `exec` selector, that's a function named `korz_exec`. Line by line:
 
-`bind` points an object's fields at those methods and rebuilds just the touched selectors after
-every install or remove, before `install` returns. A call site never sees a stub that checks
-whether its table is stale:
+1. `this[...][${expr}]`: `this` is the `go` object it was called on, so this reads `go.exec$`,
+   the table, at the computed index. The result `e` is the table entry for this point.
+2. Each entry holds the chain in a form that's quick to call: `e.r` is the first slot's function,
+   and `e.k` runs the rest of the chain, or is null when the chain is just one slot. The second
+   line calls the first slot, handing it `next`, the function that runs the rest. For a chain of
+   one slot, `next` is `e.p`, made once when the table was built, which throws an error naming the
+   slot if it's called, since there's nothing after it. Most chains are one slot, so most calls
+   create nothing. A longer chain gets a small new `next` function on each call.
+3. A slot that returns nothing counts as returning 0.
+
+The last line, `//# sourceURL=korz/exec.js`, is a comment browsers understand. Code made with
+`new Function` has no file, so the browser's debugger would list it under a made-up name. With that
+comment, it shows up as a file called `korz/exec.js`, and you can open it and set breakpoints in it
+as in any other file. That's how you watch the sea dispatch an instruction.
+
+**Why it's written this way.** This is the part for TypeScript programmers, and it's about V8, the
+JavaScript engine in Chrome and Node, which turns JavaScript into machine code as it runs.
+
+A line of code that calls a function, such as `this.go.exec(x)`, is a **call site**. V8 makes
+call sites fast by remembering, at each one, which function it called last time, and assuming the
+next call goes to the same one. That memory is called an **inline cache**. A site that always calls
+the same function is **monomorphic** ("one shape"), and V8 can make it nearly free, even copying
+the function's body into the caller. A site that sees many different functions becomes
+**megamorphic** ("many shapes"), and V8 gives up on it and does a slow general lookup every time.
+V8 also remembers the layout of the objects it sees, which it calls their **hidden class**, so
+objects built with the same fields in the same order are fastest.
+
+Korz is written to keep the CPU's call sites monomorphic:
+
+- **One function for every machine.** If each PDP-7 got its own generated function, two PDP-7s on
+  one page would send `this.go.exec(x)` to two different functions, and the site would stop
+  being monomorphic. So the methods are kept in one place for the whole program, one per selector
+  and index expression, and every machine gets the same function object.
+- **The table lives on `this`.** A function that kept its table in a variable of its own (a
+  closure) would need a separate copy of the function for each table. Reading the table from
+  `this` instead lets one function serve every machine, each with its own table in its own `go`.
+- **Every table entry has the same fields** (`r`, `k`, and `p`), so every entry has one hidden
+  class.
+
+`bind` is the step that puts the generated methods in `go`. It runs once when the machine is
+built, and again after every install or remove, for just the selectors that changed, before
+`install` returns. That means `go.exec` is always current, and nothing has to check on each call
+whether the table is out of date. A placeholder that checked and then rebuilt would be a second
+function seen by the same call site, which would make the site megamorphic for good:
 
 ```ts
 	/**
