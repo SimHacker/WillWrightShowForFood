@@ -8,6 +8,18 @@ light pen. It also has a Turing machine coprocessor plugged into its I/O bus, a 
 reads your hand through a webcam, and Marvin Minsky's Ultimate Machine, the box whose only
 function is to switch itself off. Claude Shannon built the real one. Ours is device 56.
 
+All of that grew out of one program and its menus. In 1969 at the Cambridge University
+Mathematical Laboratory, Heinz Lemke, with Neil Wiseman and John Hiles, published PIXIE, a
+light-pen editor for graph models such as electronic circuits and control systems. It ran on a
+PDP-7 with a Type 340, linked to Cambridge's Titan mainframe. Its menu pops up around the light
+pen's tracking cross, which makes it one of the earliest known radial menus. I've been building
+pie menus since the 1980s, so when Heinz scanned his 1972 printout of SYMELEC, PIXIE's main
+program, 128 lineprinter pages of it, I wanted to see those menus running again. There was no
+PDP-7 to run it on, so I built one. SYMELEC now reassembles word for word from the transcribed
+listing and runs in the browser with its light pen and its radial menus. Heinz plans to use PIXIE
+again, for Bayesian network models of health care. PIXIE is on the program of an HCI session at
+CARS 2027 in Berlin on 29 June 2027, the 60th anniversary of his first Cambridge lecture.
+
 Underneath, the whole machine is a Korz program, in TypeScript: the design of a language almost
 nobody has heard of, running on a JavaScript JIT that exists because of a language almost nobody
 uses any more. This article is about those two languages, Self and Korz, and why they turn out to be exactly
@@ -313,8 +325,8 @@ Every demo runs in the browser, from the original binaries where there are any:
   disk to the `@` prompt.
 - [Forth](https://hyperties.org/cabinet/forth/): Mitch Bradley's PDP-7 Forth, with turtle graphics
   on the 340.
-- [SYMELEC](https://hyperties.org/cabinet/symelec/): Heinz Lemke's light-pen drawing program for
-  the 340.
+- [SYMELEC](https://hyperties.org/cabinet/symelec/): PIXIE's main program, Heinz Lemke's 1972
+  light-pen editor, with its radial menus. This is where the whole emulator started.
 - [DUEL](https://hyperties.org/cabinet/duel/): DECUS 7-40 (Cambridge, 1968), two ships on the
   340, flown from the console switches by two players on one keyboard.
 - [Turing engine](https://hyperties.org/cabinet/turing/): the Turing machine coprocessor on device
@@ -355,6 +367,8 @@ All TypeScript, in [packages/cabinet](https://github.com/SimHacker/WillWrightSho
 - [KORZ-COMPILER.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/KORZ-COMPILER.md): the compiler, its tests, its planted errors and its
   numbers
 - [MANIFESTO.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MANIFESTO.md): the cabinet manifesto
+- [PIXIE-RESTORATION.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md): restoring PIXIE from a 1972 printout to a
+  tool its author uses
 - [TURING-ENGINE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TURING-ENGINE.md): the Turing engine, the Ultimate Machine and TM-Forth
 - [DEVICES.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/DEVICES.md): how a device reaches a machine, and the DataHand layer by layer
 - [UNIX-V0.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/UNIX-V0.md): PDP-7 UNIX in the cabinet
