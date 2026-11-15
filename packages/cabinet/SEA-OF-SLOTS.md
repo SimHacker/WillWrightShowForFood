@@ -630,6 +630,29 @@ expansion slot will add all its Korz slots in one transaction.
 Then the PDP-10 and PDP-11, each bringing its own dimensions: processor mode, page registers,
 addressing modes. A Turing engine on an Apple ][ will be the same slots on a different bus.
 
+### The rest of the family
+
+The PDP-7 has siblings. In Bob Supnik's words, in SIMH's source, the PDP-4, PDP-7, PDP-9, and
+PDP-15 are "upward compatible", with each new variant adding "distinct architectural features and
+incompatibilities". The PDP-7 has extend mode, the PDP-9 adds user mode and a bounds register,
+and the PDP-15 adds bank mode and a relocation register.
+
+SIMH covers all four in one simulator, but picks the model when it's compiled. Its header says
+"only one should be defined", and the source has 194 conditional compilation lines. Four
+models, four builds.
+
+In Korz, the model is a dimension. The slots the whole family shares don't mention it. A slot
+that only one model has is guarded on that model, and a feature that arrived with the PDP-9 and
+stayed is guarded on the set of the PDP-9 and the PDP-15. That's the assertions example from the
+Korz paper again: the variation is a new axis, and nothing in the middle mentions it.
+
+So one sea could be all four machines, and four machines could run side by side in one page, on the
+same program, with `why` showing exactly which slots make them differ. And there's real hardware
+to check the PDP-9 against: Tergav's homebrew PDP-9 clone,
+[RDP-9](https://github.com/tergav17/RDP-9), which
+[runs Mitch Bradley's PDP-7 Forth](https://www.youtube.com/watch?v=oNwXu50hZ44) without
+modification.
+
 ### Machines sharing memory
 
 And then machines sharing memory with each other. MIT's AI Lab had a Rubin 10/11 interface that let
