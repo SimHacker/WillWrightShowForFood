@@ -687,11 +687,36 @@ You can have a scrupulously accurate PDP-7, and a PDP-7 with a Turing machine, a
 
 ## Where this is going
 
-### The compiler, and the Apple ][
+### The compiler
 
 The PDP-7 was the warm-up. Next on the compiler: keeping registers in JavaScript locals across a
 block, blocks that call each other directly, and compiling ahead of time for ROMs and a fixed Forth
 kernel.
+
+#### Virtual machines on top of virtual machines
+
+Mitch's Forth is a virtual machine one layer up. Every cell of a Forth definition is itself a
+PDP-7 instruction: a call to another definition, a jump to a primitive, a constant, or a
+variable's address. Forth's inner interpreter, NEXT, is one instruction, `XCT I 10`: execute the
+cell that register 10 points at, and advance it.
+
+Today the compiler compiles each cell, but leaves its block for the dispatch loop once per Forth
+word. The next step is to compile a whole Forth definition as one block: follow the thread, inline
+each cell, and stop at a branch or a return. Ian Piumarta and Fabio Riccardi's selective inlining
+(PLDI 1998), and Anton Ertl and David Gregg's dynamic superinstructions, turn threaded code into
+straight-line native code the same way. Here the native code is JavaScript, and V8 takes it from
+there.
+
+The Apple ][ has the same layering. Steve Wozniak's Sweet 16, in the Integer BASIC ROM, is a
+16-bit machine with sixteen registers, interpreted by 6502 code. Infocom's Z-machine and UCSD
+Pascal's p-code are more of the same.
+
+In Korz, a virtual machine on a real one is just more slots. Whoever loads the Forth installs a
+slot that says `XCT I 10` is a step through a thread, and the compiler follows threads. Leave it
+out, and XCT is just XCT. Sweet 16's opcodes would be slots the same way. The compiler never needs
+to know that Forth or Sweet 16 exists. None of this is built yet.
+
+### The Apple ][
 
 Then the Apple ][, with the microM8 emulator as its reference, and its software library as the
 test suite.

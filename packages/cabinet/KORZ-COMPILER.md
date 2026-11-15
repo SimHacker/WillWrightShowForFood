@@ -158,6 +158,30 @@ cell the XCT compares the word in core with the cell's word and rebuilds the cel
 so cells need no invalidation. An XCT of an XCT goes through `execute`, which counts the chain
 against the PDP-7's limit.
 
+## Threaded code (planned)
+
+Not built. Mitch's Forth makes every thread cell a PDP-7 instruction (`CAL` for a colon word,
+`JMP` for a primitive, `LAC` for a constant, `LAW` for a variable), and NEXT is `XCT I 10`. So a
+colon definition is a run of instructions reached through register 10 instead of `pc`, and the
+compiler can treat it as a block:
+
+- **A thread slot.** The Forth loader installs a slot on `exec`, guarded on the word `XCT I 10`,
+  whose template marks the instruction as a thread step. With it installed, the compiler follows
+  threads; without it, XCT compiles as it does now. The compiler knows nothing about Forth.
+- **Thread blocks.** Starting at the cell register 10 points at, compile each cell inline, with
+  register 10's advance as a constant per cell, and end at a cell that changes control: a branch,
+  `EXIT`, or a `CAL` into another colon word. Register 10 is stored when the block leaves.
+- **Calls between thread blocks** are the same item as blocks calling each other directly.
+- **Invalidation** is per word, as for any block: a store into a thread's cells throws its block
+  away.
+- **Ahead of time.** A kernel that never rewrites itself can be compiled at load time.
+- **Prior art.** Piumarta and Riccardi, "Optimizing direct threaded code by selective inlining"
+  (PLDI 1998); Ertl and Gregg's dynamic superinstructions.
+
+It waits on a measurement, like everything in this section: in ULTIMATE-HAND, NEXT leaving its
+block once per Forth word is the cost to measure first. The same slot shape covers Sweet 16 on
+the Apple ][: its opcodes as slots, installed by whoever enters it.
+
 ## The accessors
 
 The devices' DMA, the cabinet and the tests reach core through `m.read` and `m.write`. The
