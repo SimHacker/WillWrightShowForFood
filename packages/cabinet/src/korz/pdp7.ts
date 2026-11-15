@@ -1,7 +1,7 @@
 import type { Backplane, Device, Iot, Step } from "../bus.js";
 import { incr, Pdp7, type Pdp7Opts } from "../plugins/pdp7.js";
 import { maskWord } from "../word.js";
-import { type Dim, Sea, span, type SlotSpec } from "./korz.js";
+import { type Dim, type Dispatchers, Sea, span, type SlotSpec } from "./korz.js";
 
 /**
  * The PDP-7 as a sea of slots (KORZ-DISPATCH.md, step 1). Registers and the EAE's arithmetic come
@@ -33,6 +33,8 @@ export const PDP7_DIMS: readonly Dim[] = [
 	{ name: "rot", width: 3 },
 	{ name: "addr", width: 15 },
 	{ name: "who", width: 2, names: ["cpu", "device", "debugger"] },
+	/** A read is a data read or an instruction fetch; a watch on fetches guards `access: "fetch"`. */
+	{ name: "access", width: 1, names: ["read", "fetch"] },
 	{ name: "device", width: 6 },
 	{ name: "pulse", width: 6 },
 ];
@@ -40,17 +42,21 @@ export const PDP7_DIMS: readonly Dim[] = [
 /** One shape for every context, so V8 keeps one hidden class. Fields named for dimensions are coordinates. */
 export type K7 = {
 	op: number; ind: number; skp: number; cc: number; rot: number;
-	addr: number; who: number; device: number; pulse: number;
+	addr: number; who: number; access: number; device: number; pulse: number;
 	ir: number; at: number; xct: number; ea: number; lac: number; value: number; ac: number;
 };
 
-const SELECTORS = ["fetch", "read", "write", "ea", "exec", "skip", "cc", "rot", "iot"] as const;
+const SELECTORS = ["read", "write", "ea", "exec", "skip", "cc", "rot", "iot"] as const;
 type Selector = (typeof SELECTORS)[number];
 
 /** `resolve` dispatches through tables rebuilt after each install; `interpret` searches the sea every time. */
 export type KorzPdp7Opts = Pdp7Opts & { korz?: "interpret" | "resolve" };
 
-const k7 = (): K7 => ({ op: 0, ind: 0, skp: 0, cc: 0, rot: 0, addr: 0, who: 0, device: 0, pulse: 0,
+/** Shared results, so a step allocates nothing. */
+const RAN: Step = Object.freeze({});
+const HALTED: Step = Object.freeze({ halt: true });
+
+const k7 = (): K7 => ({ op: 0, ind: 0, skp: 0, cc: 0, rot: 0, addr: 0, who: 0, access: 0, device: 0, pulse: 0,
 	ir: 0, at: 0, xct: 0, ea: 0, lac: 0, value: 0, ac: 0 });
 
 export class KorzPdp7 extends Pdp7 {
@@ -60,15 +66,14 @@ export class KorzPdp7 extends Pdp7 {
 	private readonly mem = k7();
 	private readonly io = k7();
 	private pendingIot: Iot | null = null;
-	private readonly go: Readonly<Record<Selector, (c: K7) => number>>;
+	private readonly go = {} as Dispatchers<K7, Selector>;
 
 	constructor(opts: KorzPdp7Opts = {}) {
 		super(opts);
 		this.sea.install([...this.memorySlots(), ...this.addressingSlots(), ...this.instructionSlots(),
 			...this.operateSlots(), ...this.iotSlots()]);
-		const interpret = opts.korz === "interpret";
-		this.go = Object.fromEntries(SELECTORS.map((s) =>
-			[s, interpret ? (c: K7) => this.sea.dispatch(s, c) : this.sea.dispatcher(s)])) as Record<Selector, (c: K7) => number>;
+		if (opts.korz === "interpret") for (const s of SELECTORS) this.go[s] = (c) => this.sea.dispatch(s, c);
+		else this.sea.bind(this.go, SELECTORS);
 	}
 
 	/** The backplane's slots go into this CPU's sea: unclaimed codes, CAF, and one slot per device code. */
@@ -78,7 +83,7 @@ export class KorzPdp7 extends Pdp7 {
 	}
 
 	override step(): Step {
-		if (this.halted) return { halt: true };
+		if (this.halted) return HALTED;
 		if (this.irqLine && this.ion && this.ionDefer === 0) {
 			this.write(0, this.jmsWord());
 			this.ion = false;
@@ -89,19 +94,21 @@ export class KorzPdp7 extends Pdp7 {
 		const at = this.pc;
 		this.mem.addr = at;
 		this.mem.who = 0;
-		const ir = this.go.fetch(this.mem);
+		this.mem.access = 1;
+		const ir = this.go.read(this.mem);
 		this.trace?.record(at, ir, this.ac);
 		this.pc = incr(this.pc);
 		if (this.ionDefer > 0) this.ionDefer -= 1;
 		this.pendingIot = null;
 		this.execute(ir, at, 0);
 		if (this.pendingIot) return { iot: this.pendingIot };
-		return this.halted ? { halt: true } : {};
+		return this.halted ? HALTED : RAN;
 	}
 
 	override read(addr: number): number {
 		this.mem.addr = addr & 0o77777;
 		this.mem.who = 0;
+		this.mem.access = 0;
 		return this.go.read(this.mem);
 	}
 
@@ -128,7 +135,6 @@ export class KorzPdp7 extends Pdp7 {
 		return [
 			{ selector: "read", by: "core", run: (c) => this.core[c.addr & mask] ?? 0 },
 			{ selector: "write", by: "core", run: (c) => { this.core[c.addr & mask] = maskWord(c.value, 18); } },
-			{ selector: "fetch", by: "core: a fetch is a read", run: (c) => this.read(c.addr) },
 		];
 	}
 

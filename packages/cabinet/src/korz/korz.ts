@@ -73,11 +73,24 @@ export type Resolved<C> = {
 	readonly size: number;
 	/** Distinct chains after interning. */
 	readonly chains: number;
-	readonly index: (c: C) => number;
-	readonly table: readonly ((c: C) => number)[];
-	/** Index, then the entry. Coordinates must be inside their dimensions' domains. */
+	readonly table: readonly Entry<C>[];
+	/** Generated: index, entry, first slot. Coordinates must be inside their dimensions' domains. */
 	readonly call: (c: C) => number;
 };
+
+/**
+ * A table entry: the chain's first slot, and the rest of the chain as one function, or null when
+ * the chain is one slot long and `next` is `past`, which allocates nothing. Every entry has this
+ * shape, so the generated dispatch sees one hidden class.
+ */
+export type Entry<C> = {
+	readonly r: Run<C>;
+	readonly k: ((c: C) => number) | null;
+	readonly p: Next;
+};
+
+/** An object whose function-valued fields `bind` keeps pointed at the current resolved dispatch. */
+export type Dispatchers<C, K extends string> = Record<K, (c: C) => number>;
 
 export type WhyLine = {
 	slot: string;
@@ -97,6 +110,7 @@ export class Sea<C extends object> {
 	readonly unchecked: string[] = [];
 	private readonly index = new Map<string, number>();
 	private readonly bySelector = new Map<string, Slot<C>[]>();
+	private readonly bound: (() => void)[] = [];
 
 	constructor(dims: readonly Dim[]) {
 		this.dims = dims;
@@ -133,7 +147,7 @@ export class Sea<C extends object> {
 			for (const [k, v] of saved) this.bySelector.set(k, v);
 			throw e;
 		}
-		this.generation += 1;
+		this.changed();
 		return made;
 	}
 
@@ -145,7 +159,7 @@ export class Sea<C extends object> {
 			n += list.length - keep.length;
 			this.bySelector.set(k, keep);
 		}
-		if (n) this.generation += 1;
+		if (n) this.changed();
 		return n;
 	}
 
@@ -175,8 +189,8 @@ export class Sea<C extends object> {
 		if (2 ** bits > limit) return null;
 		const size = 1 << bits;
 		const point = Object.fromEntries(this.dims.map((d) => [d.name, 0])) as Record<string, number>;
-		const interned = new Map<string, (c: C) => number>();
-		const table = new Array<(c: C) => number>(size);
+		const interned = new Map<string, Entry<C>>();
+		const table = new Array<Entry<C>>(size);
 		for (let i = 0; i < size; i += 1) {
 			let rest = i;
 			for (let k = rel.length - 1; k >= 0; k -= 1) {
@@ -185,24 +199,24 @@ export class Sea<C extends object> {
 				rest >>>= d.width;
 			}
 			let key: string;
-			let make: () => (c: C) => number;
+			let make: () => Entry<C>;
 			try {
 				const chain = this.chain(selector, point as C);
 				if (chain.length === 0) {
 					const msg = `${selector}: no slot matches ${this.describe(point as C)}`;
 					key = `none ${msg}`;
-					make = () => () => { throw new Error(msg); };
+					make = () => thrower(new Error(msg));
 				} else {
 					key = chain.map((s) => s.id).join(" ");
-					make = () => compileChain(selector, chain);
+					make = () => entry(selector, chain);
 				}
 			} catch (e) {
 				key = `throws ${(e as Error).message}`;
-				make = () => () => { throw e; };
+				make = () => thrower(e);
 			}
-			let f = interned.get(key);
-			if (!f) interned.set(key, (f = make()));
-			table[i] = f;
+			let e = interned.get(key);
+			if (!e) interned.set(key, (e = make()));
+			table[i] = e;
 		}
 		let expr = "0";
 		let shift = bits;
@@ -212,17 +226,21 @@ export class Sea<C extends object> {
 			const term = `(c[${JSON.stringify(dim.name)}] & ${(1 << dim.width) - 1})`;
 			expr = expr === "0" ? (shift ? `${term} << ${shift}` : term) : `${expr} | ${shift ? `${term} << ${shift}` : term}`;
 		}
-		const index = new Function("c", `return ${expr};\n//# sourceURL=korz/${selector}.index.js`) as (c: C) => number;
-		const only = table[0]!;
+		const name = selector.replace(/\W/g, "_");
+		const call = new Function("T", `return function korz_${name}(c) {
+	const e = T[${expr}];
+	const v = e.k === null ? e.r(c, e.p) : e.r(c, () => e.k(c));
+	return v === undefined ? 0 : v;
+};
+//# sourceURL=korz/${name}.js`)(table) as (c: C) => number;
 		return {
 			selector,
 			generation: this.generation,
 			dims: rel.map((d) => this.dims[d]!.name),
 			size,
 			chains: interned.size,
-			index,
 			table,
-			call: size === 1 ? only : (c) => table[index(c)]!(c),
+			call,
 		};
 	}
 
@@ -232,12 +250,32 @@ export class Sea<C extends object> {
 		let call: (c: C) => number = () => 0;
 		return (c) => {
 			if (generation !== this.generation) {
-				const r = this.resolve(selector, limit);
-				call = r ? r.call : (x) => this.dispatch(selector, x);
+				call = this.compiled(selector, limit);
 				generation = this.generation;
 			}
 			return call(c);
 		};
+	}
+
+	/**
+	 * Point each named field of `target` at its selector's resolved dispatch, with no check per call:
+	 * an install or remove swaps every bound field back to a stub that resolves on its next call.
+	 */
+	bind<K extends string>(target: Dispatchers<C, K>, selectors: readonly K[], limit?: number): void {
+		const stub = (s: K) => (c: C): number => {
+			target[s] = this.compiled(s, limit);
+			return target[s](c);
+		};
+		const reset = (): void => {
+			for (const s of selectors) target[s] = stub(s);
+		};
+		this.bound.push(reset);
+		reset();
+	}
+
+	private compiled(selector: string, limit?: number): (c: C) => number {
+		const r = this.resolve(selector, limit);
+		return r ? r.call : (x) => this.dispatch(selector, x);
 	}
 
 	/** The slots that would run, in order. A layer whose matches have no single most specific slot throws. */
@@ -293,6 +331,11 @@ export class Sea<C extends object> {
 	view(query: GuardSpec, selector?: string): Slot<C>[] {
 		const q = this.normalize(query);
 		return this.slots(selector).filter((s) => s.sets.every((set, d) => !isEmpty(intersect(set, q[d]!))));
+	}
+
+	private changed(): void {
+		this.generation += 1;
+		for (const reset of this.bound) reset();
 	}
 
 	private make(spec: SlotSpec<C>): Slot<C> {
@@ -366,19 +409,26 @@ export class Sea<C extends object> {
 	}
 }
 
-/** One function per interned chain. A chain of one, the common case, passes a `next` that allocates nothing. */
-function compileChain<C>(selector: string, chain: readonly Slot<C>[]): (c: C) => number {
+function entry<C>(selector: string, chain: readonly Slot<C>[]): Entry<C> {
 	const last = chain[chain.length - 1]!;
 	const past = (): number => {
 		throw new Error(`${selector}: next() past the last slot, from "${last.by}"`);
 	};
+	if (chain.length === 1) return { r: last.run, k: null, p: past };
 	let f: (c: C) => number = (c) => last.run(c, past) ?? 0;
-	for (let i = chain.length - 2; i >= 0; i -= 1) {
+	for (let i = chain.length - 2; i >= 1; i -= 1) {
 		const run = chain[i]!.run;
 		const rest = f;
 		f = (c) => run(c, () => rest(c)) ?? 0;
 	}
-	return f;
+	return { r: chain[0]!.run, k: f, p: past };
+}
+
+function thrower<C>(e: unknown): Entry<C> {
+	const p = (): number => {
+		throw e;
+	};
+	return { r: p, k: null, p };
 }
 
 function addCoord(set: Uint32Array, d: Dim, coord: Coord): void {

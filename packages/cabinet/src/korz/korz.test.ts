@@ -128,3 +128,22 @@ test("korz: a dispatcher rebuilds its table after an install, and drops irreleva
 	assert.equal(r.size, 256);
 	assert.equal(r.chains, 2);
 });
+
+test("korz: bind swaps in new tables after install and remove; too large a table falls back to the interpreter", () => {
+	const sea = new Sea<C>(dims);
+	sea.install([{ selector: "read", by: "ram", run: () => 0 }]);
+	const go = {} as { read: (c: C) => number };
+	sea.bind(go, ["read"]);
+	assert.equal(go.read(ctx(5)), 0);
+	const [watch] = sea.install([{ selector: "read", guard: { addr: 5 }, layer: "observe", by: "watch", run: (_, n) => n() + 100 }]);
+	assert.equal(go.read(ctx(5)), 100);
+	assert.equal(go.read(ctx(6)), 0);
+	sea.remove(watch!);
+	assert.equal(go.read(ctx(5)), 0);
+	assert.equal(sea.resolve("read", 1)!.size, 1, "no slot guards addr now");
+	sea.install([{ selector: "read", guard: { addr: 5 }, by: "rom", run: () => 7 }]);
+	assert.equal(sea.resolve("read", 1), null);
+	const small = {} as { read: (c: C) => number };
+	sea.bind(small, ["read"], 1);
+	assert.equal(small.read(ctx(5)), 7);
+});

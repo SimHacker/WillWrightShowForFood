@@ -35,7 +35,13 @@ export class Cabinet {
 	step(): Step {
 		// One IRQ line: the OR of every raised device flag. The ISA owns
 		// what an interrupt does; the backplane only carries the wire.
-		this.cpu.irqLine = this.devices.some((d) => d.power !== false && (d.irq?.() ?? false));
+		let irq = false;
+		const devices = this.devices;
+		for (let i = 0; i < devices.length && !irq; i += 1) {
+			const d = devices[i]!;
+			irq = d.power !== false && (d.irq?.() ?? false);
+		}
+		this.cpu.irqLine = irq;
 
 		const result: Step = this.cpu.power === false ? { halt: true } : this.cpu.step();
 		if (result.iot) {
@@ -43,7 +49,10 @@ export class Cabinet {
 			this.cpu.ac = reply.ac;
 			if (reply.skip) this.cpu.skip();
 		}
-		for (const d of this.devices) if (d.power !== false) d.tick?.(1);
+		for (let i = 0; i < devices.length; i += 1) {
+			const d = devices[i]!;
+			if (d.power !== false) d.tick?.(1);
+		}
 		this.cycles += 1;
 		return result;
 	}

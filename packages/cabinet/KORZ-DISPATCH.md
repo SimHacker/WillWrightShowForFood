@@ -404,7 +404,7 @@ arithmetic, and moves every decision into one sea per machine:
 
 | Selector | Dimensions | Slots |
 |---|---|---|
-| `fetch`, `read`, `write` | `addr` (15 bits), `who` (cpu, device, debugger) | core; a fetch is a read |
+| `read`, `write` | `addr` (15 bits), `who` (cpu, device, debugger), `access` (read, fetch) | core |
 | `ea` | `op`, `ind` | direct is the base case; indirect with auto-indexing, JMP I with EMIR, CAL, CAL I |
 | `exec` | `op`, `ind` | one per opcode; OPR and LAW split on `ind` |
 | `skip`, `cc`, `rot` | the three OPR fields | 16 skip conditions, 16 clear/complement combinations, 4 rotates, the undefined rotates, no rotate |
@@ -440,9 +440,9 @@ million steps, best of three, Node 20 on an M4 Max. All three end at the same PC
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 33 M | 30 ns |
-| `KorzPdp7`, resolver | 9.5 M | 105 ns |
-| `KorzPdp7`, interpreter | 1.0 M | 970 ns |
+| `Pdp7` | 34 M | 30 ns |
+| `KorzPdp7`, resolver | 18 M | 56 ns |
+| `KorzPdp7`, interpreter | 1.1 M | 890 ns |
 | A real PDP-7 | about 0.3 M | 1.75 µs memory cycle |
 
 A step makes five to eight dispatches (fetch, its read, `ea`, `exec`, operand reads and writes,
@@ -450,15 +450,22 @@ three more for OPR), and each filters the selector's slots and sorts the matches
 dispatch. The interpreter is the oracle and the engine behind `why`, and at 3.7 times a real PDP-7
 it is fast enough to boot UNIX in a test.
 
-**The resolver** (`Sea.resolve`, `Sea.dispatcher`) turns each selector into an array indexed by the
+**The resolver** (`Sea.resolve`, `Sea.bind`) turns each selector into an array indexed by the
 dimensions its slots constrain, and drops the rest: `exec` and `ea` have 32 entries, `skip` and `cc`
-16, `rot` 8, `iot` 4,096 (device × pulse), and memory one entry, since no slot guards on `addr` until
-a watch is installed. Equal chains are interned into one function; a chain of one slot calls it with
-a `next` that allocates nothing. The index function is generated (`korz/<selector>.index.js` in the
-debugger). A dispatcher compares the sea's generation on every call and rebuilds its table after
-any install or remove, so installing a watch costs one rebuild, and a 15-bit `addr` table has
-32,768 entries. At 105 ns a step, a dispatch now costs about 15 ns, the 10–14 ns a separate
-benchmark of table dispatch predicted.
+16, `rot` 8, `iot` 4,096 (device × pulse), and `read` one entry, since no slot guards on `addr` or
+`access` until a watch is installed. Equal chains share one entry. Each selector gets one generated
+function (`korz/<selector>.js` in the debugger) that computes the index, loads the entry and calls
+the chain's first slot; a chain of one slot gets a `next` that allocates nothing. `bind` writes these
+functions into the CPU's dispatch object, and an install or remove swaps them back to stubs that
+resolve on their next call, so there is no check per dispatch. A watch on one 15-bit address makes
+`read` a 32,768-entry table, built once.
+
+Getting from 105 ns to 56 ns a step took three changes, each found with `node --cpu-prof`: the index
+computation and table load moved into the generated function, so V8 inlines all of it; the per-call
+generation check became `bind`; and an instruction fetch became `access: "fetch"` on `read` instead
+of a second selector that called the first. At 56 ns, about 20 ns a step is the cabinet ticking four
+devices, the same cost `Pdp7` pays; the rest is writing coordinates into context objects and five
+to eight inlined dispatches.
 
 **Prediction for the compiler.** The resolver still makes five to eight indirect calls a step,
 through a context object. The compiler folds them into each block's code, which should bring it to

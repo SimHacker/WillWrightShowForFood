@@ -89,7 +89,12 @@ test(`korz pdp7, ${korz}: UNIX v0 boots in lockstep with Pdp7 to the shell promp
 			assert.equal(regs(b.cpu), regs(a.cpu));
 		}
 	};
+	let fetches = 0;
+	const [watch] = b.cpu instanceof KorzPdp7 ? b.cpu.sea.install([{ selector: "read", guard: { access: "fetch", addr: 0o1065 },
+		layer: "observe", by: "test: count fetches of 1065", run: (_, next) => { fetches += 1; return next(); } }]) : [];
 	lockstep("login: ", 5_000_000);
+	assert.ok(fetches > 0, "the watch saw fetches");
+	if (b.cpu instanceof KorzPdp7) b.cpu.sea.remove(watch!);
 	key("ken\r");
 	lockstep("password: ", 5_000_000);
 	key("ken\r");
