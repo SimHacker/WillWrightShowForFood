@@ -307,6 +307,12 @@ a feature that isn't installed isn't in the tables and isn't in the compiled cod
 - **Monitoring.** An observe slot sees every access to a region, then calls `next` to let the
   access through. The 340 display uses exactly this to hear about writes into memory it has already
   read.
+- **Instrumentation.** The same kind of observe slot can count reads, writes and instruction
+  fetches for every word, to make a heat map of where a program spends its time. It can also record
+  who last wrote each word, at what program counter and on what cycle, so a corrupted word can tell
+  you whodunit. That's what Valgrind and AddressSanitizer do for native code, and here it comes free
+  because we own the machine. These are designed and next in line, and like everything else on this
+  list, they cost nothing until you add them.
 - **Fault injection.** A patch slot can make a word read-only, a sector bad, a device slow.
 - **Live coding.** Add and remove slots while the machine runs. The resolver rebuilds the tables
   it touched before the change returns, and the compiler throws away the blocks it affects. The machine keeps
@@ -336,6 +342,22 @@ hand:
 
 Every one of those devices adds instructions to the PDP-7. That's what IOTs are: a device code is a
 new opcode space. With a Turing engine on the bus, the PDP-7 has Turing machine instructions.
+
+That makes writing a device short work. A device is its own state plus a list of slots on its
+device codes, one line each, each labeled with its mnemonic. The Ultimate Machine's whole instruction
+set is 15 slots: `UMON` turns the lever on, `UMRL` reads the lid angle into the accumulator, `UMSB`
+skips if the machine is busy, and so on. Nothing in the CPU knows the device exists. The resolver
+puts its slots in the I/O tables, and the compiler handles its IOTs like any other instruction.
+
+Displays plug in the same way, from the other side. A display is a view projected out of memory:
+it reads some range of a machine's memory and turns it into something to look at. The Type 340
+works that way today. It turns its display file into one stream of line segments, which the page
+draws on a canvas and can also export as SVG, with each display subroutine as an SVG group. And it
+hears about changes through an observe slot on `write`, like any other monitor. The same design
+covers the next ones: the Apple ]['s text and hi-res screens as raster frame buffers, a heat map of
+memory drawn as a picture, a hex dump drawn as tiles, and a WebGPU simulation of the 340's glowing
+phosphor. Any number of views can read the same memory at once, and the program can't tell it's
+being watched.
 
 Next come other CPUs, built on the same framework, with the same devices plugged in through
 adaptors. First the Apple ][. Its language card, a RAM card that can stand in for the ROM, will win by
