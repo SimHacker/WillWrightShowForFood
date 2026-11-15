@@ -33,7 +33,8 @@ the right tools for building emulators you can take apart while they run.
 In 1986 at Xerox PARC, David Ungar and Randall Smith designed Self by taking Smalltalk and removing
 things. Smalltalk said everything is an object, but an object got its behavior from its class, a
 separate thing above it. Self threw out classes. An object is a set of slots, and it inherits by
-pointing at another object, its parent. Want a new kind of point? Copy a point and change it. Even
+pointing at another object, its parent. Want a teletype that reads aloud? Copy a teletype and give the copy
+a new `print` slot. Even
 reading a variable is a message send, so there is no difference between a stored value and a
 computed one. "Self: The Power of Simplicity" (OOPSLA 1987) is still one of the best-titled papers
 in computing.
