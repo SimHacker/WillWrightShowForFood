@@ -353,7 +353,16 @@ Displays plug in the same way, from the other side. A display is a view projecte
 it reads some range of a machine's memory and turns it into something to look at. The Type 340
 works that way today. It turns its display file into one stream of line segments, which the page
 draws on a canvas and can also export as SVG, with each display subroutine as an SVG group. And it
-hears about changes through an observe slot on `write`, like any other monitor. The same design
+hears about changes through an observe slot on `write`, like any other monitor.
+
+The PIXIE ring view is another one that already runs. PIXIE keeps its circuits in ring structures,
+linked lists of 18-bit words in core, the data structure Sketchpad made famous. The RINGS panel
+draws those rings in 3D, live from the running PDP-7's core, and lights up the cells that just
+changed. Point at a cell to read it, and click to open it in the memory panel. Today it reads
+core directly. Moving it onto observe slots is just repackaging, and then it costs nothing when
+the panel is closed and only redraws when a ring actually changes.
+
+The same design
 covers the next ones: the Apple ]['s text and hi-res screens as raster frame buffers, a heat map of
 memory drawn as a picture, a hex dump drawn as tiles, and a WebGPU simulation of the 340's glowing
 phosphor. Any number of views can read the same memory at once, and the program can't tell it's
