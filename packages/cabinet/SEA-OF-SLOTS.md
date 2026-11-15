@@ -316,7 +316,7 @@ In Korz, every one of those things is a slot:
 So I built it. A PDP-7 is a good first machine, because it's small: 18-bit words, 16 instructions,
 up to 32K of core, and I/O by IOT instructions, which send timed pulses to a numbered device.
 
-I call the whole emulated system, the CPU, its memory and its devices, the cabinet. The cabinet
+I call the whole emulated system, the CPU, its memory, and its devices, the cabinet. The cabinet
 that runs UNIX is 99 slots, on these selectors:
 
 - `read` and `write`, for memory;
