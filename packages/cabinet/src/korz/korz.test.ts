@@ -82,3 +82,49 @@ test("korz: why says which slot ran and what ruled the others out; view finds sl
 	assert.deepEqual(sea.view({ addr: 0xc8 }).map((s) => s.by), ["ram", "soft switches", "peek"]);
 	assert.deepEqual(sea.view({ addr: 0x08, who: 0 }).map((s) => s.by), ["ram"]);
 });
+
+test("korz: the resolved table gives the interpreter's answer, errors included, on random seas", () => {
+	let seed = 7;
+	const r = (n: number): number => {
+		seed = (Math.imul(seed, 1103515245) + 12345) >>> 0;
+		return (seed >>> 8) % n;
+	};
+	const run = (by: string) => (c: C, next: () => number): number => (c.addr & 3) === 0 ? next() * 3 + by.length : by.length;
+	for (let trial = 0; trial < 60; trial += 1) {
+		const sea = new Sea<C>(dims);
+		sea.install([{ selector: "read", by: "base", run: () => 1 }]);
+		for (let k = 0; k < 12; k += 1) {
+			const guard = r(3) === 0 ? { addr: bits(0xf0, r(16) << 4), who: r(3) } : r(2) ? { addr: span(r(200), 1 + r(56)) } : { addr: r(256) };
+			const layer = (["observe", "patch", "machine"] as const)[r(3)]!;
+			try {
+				sea.install([{ selector: "read", guard, layer, by: `s${trial}.${k}`, run: run(`s${trial}.${k}`) }]);
+			} catch {
+				// ambiguous at install: skip it
+			}
+		}
+		const resolved = sea.resolve("read")!;
+		for (let addr = 0; addr < 256; addr += 1)
+			for (let who = 0; who < 3; who += 1) {
+				const c = ctx(addr, who);
+				let a: string;
+				let b: string;
+				try { a = String(sea.dispatch("read", c)); } catch (e) { a = (e as Error).message; }
+				try { b = String(resolved.call(c)); } catch (e) { b = (e as Error).message; }
+				if (a !== b) assert.equal(b, a, `trial ${trial} at ${addr} ${who}`);
+			}
+	}
+});
+
+test("korz: a dispatcher rebuilds its table after an install, and drops irrelevant dimensions", () => {
+	const sea = new Sea<C>(dims);
+	sea.install([{ selector: "read", by: "ram", run: () => 0 }]);
+	const read = sea.dispatcher("read");
+	assert.equal(read(ctx(0xc0)), 0);
+	assert.equal(sea.resolve("read")!.size, 1);
+	sea.install([{ selector: "read", guard: { addr: 0xc0 }, by: "keyboard", run: () => 0x41 }]);
+	assert.equal(read(ctx(0xc0)), 0x41);
+	const r = sea.resolve("read")!;
+	assert.deepEqual(r.dims, ["addr"]);
+	assert.equal(r.size, 256);
+	assert.equal(r.chains, 2);
+});

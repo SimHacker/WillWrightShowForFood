@@ -1,8 +1,9 @@
 # Korz dispatch for emulators, in TypeScript
 
-Step 1 is built, for the PDP-7: the interpreter in [`src/korz/korz.ts`](src/korz/korz.ts) and the
-PDP-7 on it in [`src/korz/pdp7.ts`](src/korz/pdp7.ts), tested against `Pdp7`
-([the PDP-7 first](#the-pdp-7-first)). The rest is design.
+Steps 1 and 2 are built, for the PDP-7: the interpreter and the resolver in
+[`src/korz/korz.ts`](src/korz/korz.ts), and the PDP-7 on them in
+[`src/korz/pdp7.ts`](src/korz/pdp7.ts), which runs either way and is tested both ways against
+`Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The compiler is design.
 
 Everything a machine does on its bus is a lookup on a few small bit fields: which address, read or
 write, who is asking, which memory configuration, which opcode. Emulators usually spread that
@@ -428,12 +429,20 @@ claiming one code is an install-time error instead of `devices.find` picking the
 Both tests fail when one slot is wrong: rotating RAL by two fails at step 4 of seed 3; deferring ION
 by two instructions fails at step 51,210 of the boot.
 
-**Speed.** UNIX v0, 3 million steps, Node 20 on an M4 Max:
+**Every level stays.** `new KorzPdp7({ korz: "interpret" })` searches the sea on every dispatch;
+`korz: "resolve"`, the default, dispatches through the resolver's tables. Both run the same
+differential tests against `Pdp7`, and [`src/korz/korz.test.ts`](src/korz/korz.test.ts) checks the
+resolver against the interpreter on random seas, errors included. Each level is the oracle for the
+one above it, and the compiler joins as a third mode.
+
+**Speed.** `npm run bench:korz` ([`scripts/korz-bench.mjs`](scripts/korz-bench.mjs)): UNIX v0, 3
+million steps, best of three, Node 20 on an M4 Max. All three end at the same PC.
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 22–28 M | 35–45 ns |
-| `KorzPdp7`, interpreter | 1.1 M | 880–915 ns |
+| `Pdp7` | 33 M | 30 ns |
+| `KorzPdp7`, resolver | 9.5 M | 105 ns |
+| `KorzPdp7`, interpreter | 1.0 M | 970 ns |
 | A real PDP-7 | about 0.3 M | 1.75 µs memory cycle |
 
 A step makes five to eight dispatches (fetch, its read, `ea`, `exec`, operand reads and writes,
@@ -441,12 +450,20 @@ three more for OPR), and each filters the selector's slots and sorts the matches
 dispatch. The interpreter is the oracle and the engine behind `why`, and at 3.7 times a real PDP-7
 it is fast enough to boot UNIX in a test.
 
-**Predictions for the next steps.** The resolver turns each selector into an array: `exec` and `ea`
-have 32 entries, the OPR fields 16 each, `iot` 64 × 64, memory one entry per 256-word page. A
-separate benchmark of resolved table dispatch measured 10–14 ns a call, so the resolved PDP-7 should
-run near 10–15 M steps per second. The compiler then folds the dispatches into each block's code,
-which should bring it to `Pdp7`'s speed or past it, since `Pdp7` decodes every instruction every
-time and a compiled block decodes once.
+**The resolver** (`Sea.resolve`, `Sea.dispatcher`) turns each selector into an array indexed by the
+dimensions its slots constrain, and drops the rest: `exec` and `ea` have 32 entries, `skip` and `cc`
+16, `rot` 8, `iot` 4,096 (device × pulse), and memory one entry, since no slot guards on `addr` until
+a watch is installed. Equal chains are interned into one function; a chain of one slot calls it with
+a `next` that allocates nothing. The index function is generated (`korz/<selector>.index.js` in the
+debugger). A dispatcher compares the sea's generation on every call and rebuilds its table after
+any install or remove, so installing a watch costs one rebuild, and a 15-bit `addr` table has
+32,768 entries. At 105 ns a step, a dispatch now costs about 15 ns, the 10–14 ns a separate
+benchmark of table dispatch predicted.
+
+**Prediction for the compiler.** The resolver still makes five to eight indirect calls a step,
+through a context object. The compiler folds them into each block's code, which should bring it to
+`Pdp7`'s speed or past it, since `Pdp7` decodes every instruction every time and a compiled block
+decodes once.
 
 **Per-word invalidation.** PDP-7 code writes into itself as a matter of course: JMS stores the return
 address in the subroutine's first word, auto-index registers sit in the same core as the code, and
@@ -617,8 +634,7 @@ word in core.
    ([`src/korz/pdp7.ts`](src/korz/pdp7.ts)).
 3. The IOT bus as timed IOP pulses; the Type 340 and the Turing engine as slots, against the current
    plugins and SIMH.
-4. The resolver on the PDP-7: per-selector tables, then the measured speed against the 10–15 M steps
-   per second predicted above.
+4. **Built.** The resolver on the PDP-7: per-selector tables, 9.5 M steps per second.
 5. Page-set normal forms with the brute-force tests; the Apple bus on the interpreter, against
    microM8 ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2).
 6. The resolver for the Apple: table sets, page kinds, interned chains, the opcode table,

@@ -44,7 +44,11 @@ export type SlotSpec<C> = {
 /** A set over one dimension's domain, as a bitset; `null` is the whole domain. */
 type DimSet = Uint32Array | null;
 
+let nextSlotId = 0;
+
 export class Slot<C> {
+	/** Identity for interning chains: two table entries with the same slots in the same order share one function. */
+	readonly id = nextSlotId++;
 	constructor(
 		readonly selector: string,
 		readonly layer: Layer,
@@ -58,6 +62,22 @@ export class Slot<C> {
 }
 
 export class AmbiguityError extends Error {}
+
+/** A selector's chains as a table, indexed by the dimensions its slots constrain. */
+export type Resolved<C> = {
+	readonly selector: string;
+	readonly generation: number;
+	/** The relevant dimensions, most significant first; the rest cannot change the answer. */
+	readonly dims: readonly string[];
+	/** Table entries: the product of the relevant dimensions' domains. */
+	readonly size: number;
+	/** Distinct chains after interning. */
+	readonly chains: number;
+	readonly index: (c: C) => number;
+	readonly table: readonly ((c: C) => number)[];
+	/** Index, then the entry. Coordinates must be inside their dimensions' domains. */
+	readonly call: (c: C) => number;
+};
 
 export type WhyLine = {
 	slot: string;
@@ -139,6 +159,85 @@ export class Sea<C extends object> {
 			return s.run(c, () => call(i + 1)) ?? 0;
 		};
 		return call(0);
+	}
+
+	/**
+	 * Step 2: the interpreter's answer for every context, computed in advance. Only the dimensions
+	 * some slot of this selector constrains are table dimensions; every point of their product gets
+	 * its chain from `chain`, and equal chains share one function. A point where `chain` throws gets
+	 * an entry that throws the same error when it is dispatched, as the interpreter would. Returns
+	 * null when the table would exceed `limit` entries; the caller keeps the interpreter.
+	 */
+	resolve(selector: string, limit = 1 << 16): Resolved<C> | null {
+		const slots = this.bySelector.get(selector) ?? [];
+		const rel = [...new Set(slots.flatMap((s) => s.constrained))].sort((a, b) => a - b);
+		const bits = rel.reduce((n, d) => n + this.dims[d]!.width, 0);
+		if (2 ** bits > limit) return null;
+		const size = 1 << bits;
+		const point = Object.fromEntries(this.dims.map((d) => [d.name, 0])) as Record<string, number>;
+		const interned = new Map<string, (c: C) => number>();
+		const table = new Array<(c: C) => number>(size);
+		for (let i = 0; i < size; i += 1) {
+			let rest = i;
+			for (let k = rel.length - 1; k >= 0; k -= 1) {
+				const d = this.dims[rel[k]!]!;
+				point[d.name] = rest & ((1 << d.width) - 1);
+				rest >>>= d.width;
+			}
+			let key: string;
+			let make: () => (c: C) => number;
+			try {
+				const chain = this.chain(selector, point as C);
+				if (chain.length === 0) {
+					const msg = `${selector}: no slot matches ${this.describe(point as C)}`;
+					key = `none ${msg}`;
+					make = () => () => { throw new Error(msg); };
+				} else {
+					key = chain.map((s) => s.id).join(" ");
+					make = () => compileChain(selector, chain);
+				}
+			} catch (e) {
+				key = `throws ${(e as Error).message}`;
+				make = () => () => { throw e; };
+			}
+			let f = interned.get(key);
+			if (!f) interned.set(key, (f = make()));
+			table[i] = f;
+		}
+		let expr = "0";
+		let shift = bits;
+		for (const d of rel) {
+			const dim = this.dims[d]!;
+			shift -= dim.width;
+			const term = `(c[${JSON.stringify(dim.name)}] & ${(1 << dim.width) - 1})`;
+			expr = expr === "0" ? (shift ? `${term} << ${shift}` : term) : `${expr} | ${shift ? `${term} << ${shift}` : term}`;
+		}
+		const index = new Function("c", `return ${expr};\n//# sourceURL=korz/${selector}.index.js`) as (c: C) => number;
+		const only = table[0]!;
+		return {
+			selector,
+			generation: this.generation,
+			dims: rel.map((d) => this.dims[d]!.name),
+			size,
+			chains: interned.size,
+			index,
+			table,
+			call: size === 1 ? only : (c) => table[index(c)]!(c),
+		};
+	}
+
+	/** A function that dispatches through the resolved table, rebuilding it after any install or remove. */
+	dispatcher(selector: string, limit?: number): (c: C) => number {
+		let generation = -1;
+		let call: (c: C) => number = () => 0;
+		return (c) => {
+			if (generation !== this.generation) {
+				const r = this.resolve(selector, limit);
+				call = r ? r.call : (x) => this.dispatch(selector, x);
+				generation = this.generation;
+			}
+			return call(c);
+		};
 	}
 
 	/** The slots that would run, in order. A layer whose matches have no single most specific slot throws. */
@@ -265,6 +364,21 @@ export class Sea<C extends object> {
 			walk(0);
 		}
 	}
+}
+
+/** One function per interned chain. A chain of one, the common case, passes a `next` that allocates nothing. */
+function compileChain<C>(selector: string, chain: readonly Slot<C>[]): (c: C) => number {
+	const last = chain[chain.length - 1]!;
+	const past = (): number => {
+		throw new Error(`${selector}: next() past the last slot, from "${last.by}"`);
+	};
+	let f: (c: C) => number = (c) => last.run(c, past) ?? 0;
+	for (let i = chain.length - 2; i >= 0; i -= 1) {
+		const run = chain[i]!.run;
+		const rest = f;
+		f = (c) => run(c, () => rest(c)) ?? 0;
+	}
+	return f;
 }
 
 function addCoord(set: Uint32Array, d: Dim, coord: Coord): void {

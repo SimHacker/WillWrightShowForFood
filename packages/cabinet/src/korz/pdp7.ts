@@ -44,6 +44,12 @@ export type K7 = {
 	ir: number; at: number; xct: number; ea: number; lac: number; value: number; ac: number;
 };
 
+const SELECTORS = ["fetch", "read", "write", "ea", "exec", "skip", "cc", "rot", "iot"] as const;
+type Selector = (typeof SELECTORS)[number];
+
+/** `resolve` dispatches through tables rebuilt after each install; `interpret` searches the sea every time. */
+export type KorzPdp7Opts = Pdp7Opts & { korz?: "interpret" | "resolve" };
+
 const k7 = (): K7 => ({ op: 0, ind: 0, skp: 0, cc: 0, rot: 0, addr: 0, who: 0, device: 0, pulse: 0,
 	ir: 0, at: 0, xct: 0, ea: 0, lac: 0, value: 0, ac: 0 });
 
@@ -54,11 +60,15 @@ export class KorzPdp7 extends Pdp7 {
 	private readonly mem = k7();
 	private readonly io = k7();
 	private pendingIot: Iot | null = null;
+	private readonly go: Readonly<Record<Selector, (c: K7) => number>>;
 
-	constructor(opts: Pdp7Opts = {}) {
+	constructor(opts: KorzPdp7Opts = {}) {
 		super(opts);
 		this.sea.install([...this.memorySlots(), ...this.addressingSlots(), ...this.instructionSlots(),
 			...this.operateSlots(), ...this.iotSlots()]);
+		const interpret = opts.korz === "interpret";
+		this.go = Object.fromEntries(SELECTORS.map((s) =>
+			[s, interpret ? (c: K7) => this.sea.dispatch(s, c) : this.sea.dispatcher(s)])) as Record<Selector, (c: K7) => number>;
 	}
 
 	/** The backplane's slots go into this CPU's sea: unclaimed codes, CAF, and one slot per device code. */
@@ -79,7 +89,7 @@ export class KorzPdp7 extends Pdp7 {
 		const at = this.pc;
 		this.mem.addr = at;
 		this.mem.who = 0;
-		const ir = this.sea.dispatch("fetch", this.mem);
+		const ir = this.go.fetch(this.mem);
 		this.trace?.record(at, ir, this.ac);
 		this.pc = incr(this.pc);
 		if (this.ionDefer > 0) this.ionDefer -= 1;
@@ -92,14 +102,14 @@ export class KorzPdp7 extends Pdp7 {
 	override read(addr: number): number {
 		this.mem.addr = addr & 0o77777;
 		this.mem.who = 0;
-		return this.sea.dispatch("read", this.mem);
+		return this.go.read(this.mem);
 	}
 
 	override write(addr: number, word: number): void {
 		this.mem.addr = addr & 0o77777;
 		this.mem.who = 0;
 		this.mem.value = word;
-		this.sea.dispatch("write", this.mem);
+		this.go.write(this.mem);
 	}
 
 	private execute(ir: number, at: number, xct: number): void {
@@ -109,8 +119,8 @@ export class KorzPdp7 extends Pdp7 {
 		x.xct = xct;
 		x.op = (ir >> 14) & 0o17;
 		x.ind = (ir >> 13) & 1;
-		x.ea = this.sea.dispatch("ea", x);
-		this.sea.dispatch("exec", x);
+		x.ea = this.go.ea(x);
+		this.go.exec(x);
 	}
 
 	private memorySlots(): SlotSpec<K7>[] {
@@ -182,7 +192,7 @@ export class KorzPdp7 extends Pdp7 {
 				io.pulse = c.ir & 0o67;
 				if (c.ir & 0o10) this.ac = 0;
 				io.ac = this.ac;
-				this.ac = this.sea.dispatch("iot", io);
+				this.ac = this.go.iot(io);
 			}),
 			{ selector: "exec", guard: { op: OP.opr, ind: 0 }, by: "OPR: skip, then clear and complement, OAS, rotate, HLT",
 				run: (c) => this.operate(c) },
@@ -196,12 +206,12 @@ export class KorzPdp7 extends Pdp7 {
 		const ir = c.ir;
 		c.lac = this.lac();
 		c.skp = (ir >> 6) & 0o17;
-		const skp = this.sea.dispatch("skip", c);
+		const skp = this.go.skip(c);
 		c.cc = ((ir >> 9) & 0o14) | (ir & 0o3);
-		c.lac = this.sea.dispatch("cc", c);
+		c.lac = this.go.cc(c);
 		if (ir & 0o4) c.lac |= this.switches; // OAS; LAS is CLA OAS
 		c.rot = ((ir >> 8) & 0o4) | ((ir >> 3) & 0o3);
-		this.setLac(this.sea.dispatch("rot", c));
+		this.setLac(this.go.rot(c));
 		if (ir & 0o40) this.halted = true; // HLT
 		if (skp) this.pc = incr(this.pc);
 	}

@@ -30,13 +30,14 @@ function stepOf(c: Pdp7): Step | string {
 	}
 }
 
-test("korz pdp7: random programs, every opcode and IOT, match Pdp7 step for step", () => {
+for (const korz of ["interpret", "resolve"] as const) {
+test(`korz pdp7, ${korz}: random programs, every opcode and IOT, match Pdp7 step for step`, () => {
 	let steps = 0;
 	for (let seed = 1; seed <= 300; seed += 1) {
 		const r = rng(seed);
 		const coreWords = seed % 3 === 0 ? 0o100000 : 0o20000;
 		const a = new Pdp7({ coreWords });
-		const b = new KorzPdp7({ coreWords });
+		const b = new KorzPdp7({ coreWords, korz });
 		for (let i = 0; i < coreWords; i += 1) {
 			const w = r() & 0o777777;
 			a.write(i, w);
@@ -62,11 +63,11 @@ test("korz pdp7: random programs, every opcode and IOT, match Pdp7 step for step
 	assert.ok(steps > 1000, `${steps} steps`);
 });
 
-test("korz pdp7: UNIX v0 boots in lockstep with Pdp7 to the shell prompt", () => {
+test(`korz pdp7, ${korz}: UNIX v0 boots in lockstep with Pdp7 to the shell prompt`, () => {
 	const platter = gunzipSync(readFileSync(new URL("../../tapes/unixv0/image.fs.gz", import.meta.url)));
 	const bootTape = readFileSync(new URL("../../tapes/unixv0/boot.rim", import.meta.url));
 	const a = bootUnixV0({ image: parseRbImage(platter), bootTape });
-	const b = bootUnixV0({ image: parseRbImage(platter), bootTape, cpu: (o) => new KorzPdp7(o) });
+	const b = bootUnixV0({ image: parseRbImage(platter), bootTape, cpu: (o) => new KorzPdp7({ ...o, korz }) });
 	assert.ok(b.cpu instanceof KorzPdp7);
 	const lockstep = (until: string, max: number): number => {
 		for (let n = 0; n < max; n += 1) {
@@ -96,3 +97,4 @@ test("korz pdp7: UNIX v0 boots in lockstep with Pdp7 to the shell prompt", () =>
 	assert.equal(b.paper(), a.paper());
 	for (let i = 0; i < 0o20000; i += 1) if (a.cpu.read(i) !== b.cpu.read(i)) assert.fail(`core ${i.toString(8)}`);
 });
+}
