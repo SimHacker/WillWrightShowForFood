@@ -437,12 +437,13 @@ resolver against the interpreter on random seas, errors included. Each level is 
 one above it, and the compiler joins as a third mode.
 
 **Speed.** `npm run bench:korz` ([`scripts/korz-bench.mjs`](scripts/korz-bench.mjs)): UNIX v0, 3
-million steps, best of three, Node 20 on an M4 Max. All three end at the same PC.
+million steps, a new machine each round, best of rounds 2 to 5, Node 20 on an M4 Max. All three
+end at the same PC.
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
 | `Pdp7` | 33 M | 30 ns |
-| `KorzPdp7`, resolver | 17 M | 57 ns |
+| `KorzPdp7`, resolver | 21.6 M | 46 ns |
 | `KorzPdp7`, interpreter | 1.1 M | 890 ns |
 | A real PDP-7 | about 0.3 M | 1.75 µs memory cycle |
 
@@ -453,13 +454,14 @@ three levels end with the same PC, press count, frames latched and frames drawn.
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 11.6 M | 86 ns |
-| `KorzPdp7`, resolver | 9.1 M | 110 ns |
+| `Pdp7` | 11.3 M | 88 ns |
+| `KorzPdp7`, resolver | 9.2 M | 109 ns |
 | `KorzPdp7`, interpreter | 1.1 M | 900 ns |
 
 Here the devices dominate: in `Pdp7`, the cabinet's per-step loop over `irq`, `power` and `tick`
 is about two thirds of the time and the CPU about a fifth. Each workload and level runs in its own
-process, since V8's feedback from one slows the next; repeated runs differ by up to 8%.
+process, since call sites shared between workloads (the cabinet's device loop) see each other's
+devices; repeated runs differ by up to 8%.
 `--record` appends results to [`bench-results/korz.jsonl`](bench-results/korz.jsonl) with the
 commit, Node version and machine.
 
@@ -474,16 +476,36 @@ dimensions its slots constrain, and drops the rest: `exec` and `ea` have 32 entr
 `access` until a watch is installed. Equal chains share one entry. Each selector gets one generated
 function (`korz/<selector>.js` in the debugger) that computes the index, loads the entry and calls
 the chain's first slot; a chain of one slot gets a `next` that allocates nothing. `bind` writes these
-functions into the CPU's dispatch object, and an install or remove swaps them back to stubs that
-resolve on their next call, so there is no check per dispatch. A watch on one 15-bit address makes
-`read` a 32,768-entry table, built once.
+functions into the CPU's dispatch object, and an install or remove rebuilds the tables of the
+selectors it touched before it returns, so there is no check per dispatch. A watch on one 15-bit
+address makes `read` a 32,768-entry table, built once.
 
 Getting from 105 ns to 56 ns a step took three changes, each found with `node --cpu-prof`: the index
 computation and table load moved into the generated function, so V8 inlines all of it; the per-call
 generation check became `bind`; and an instruction fetch became `access: "fetch"` on `read` instead
 of a second selector that called the first. With every device on the IOP bus behind its power slot,
-a step is 57 ns. Of that, about 20 ns is the cabinet ticking four devices, the same cost `Pdp7` pays; the rest is writing coordinates into context objects and five
-to eight inlined dispatches.
+a step was 57 ns in a fresh process and about 70 ns for every machine after the first.
+
+**Every machine the same to V8.** V8 specializes optimized code on the functions a call site has
+seen and the hidden classes of the objects it touches, not on addresses or data. Each `KorzPdp7`
+had its own slot closures over `this`, its own generated dispatch functions, and stubs that
+resolved on first call. The second machine's first `write` called its own stub through a site
+optimized for the first machine's `korz_write`: `--trace-deopt` showed "wrong call target" in
+`step`, `execute`, `operate`, `read` and `write`, and `--trace-turbo-inlining` showed the
+dispatchers no longer inlined. A call site's feedback is one target or megamorphic, so one strange
+target is permanent. Three changes made every machine look the same:
+- one generated method per selector and index expression for the whole process, reading its table
+  from a field beside it in the dispatch object, declared when `bind` creates the object;
+- the CPU's slots built once, reaching their machine as `c.cpu` in the context;
+- no stubs: an install or remove rebuilds the tables it touched before it returns.
+
+A later machine now runs UNIX at 46 ns a step, faster than the first, which pays for warm-up.
+Device slots are still closures over their devices; the hand workload, where devices dominate,
+shows no difference between first and later machines, so they stay as they are until a
+measurement says otherwise. The benchmark builds a new machine every round and says so when later
+machines run more than 10% slower than the first. Of the 46 ns, about 20 ns is the cabinet ticking
+four devices, the same cost `Pdp7` pays; the rest is writing coordinates into context objects and
+five to eight inlined dispatches.
 
 **Prediction for the compiler.** The resolver still makes five to eight indirect calls a step,
 through a context object. The compiler folds them into each block's code, which should bring it to

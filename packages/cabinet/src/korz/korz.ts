@@ -74,6 +74,8 @@ export type Resolved<C> = {
 	/** Distinct chains after interning. */
 	readonly chains: number;
 	readonly table: readonly Entry<C>[];
+	/** The table index, as a JavaScript expression over the context `c`. */
+	readonly expr: string;
 	/** Generated: index, entry, first slot. Coordinates must be inside their dimensions' domains. */
 	readonly call: (c: C) => number;
 };
@@ -110,7 +112,7 @@ export class Sea<C extends object> {
 	readonly unchecked: string[] = [];
 	private readonly index = new Map<string, number>();
 	private readonly bySelector = new Map<string, Slot<C>[]>();
-	private readonly bound: (() => void)[] = [];
+	private readonly bound: ((touched: ReadonlySet<string> | null) => void)[] = [];
 
 	constructor(dims: readonly Dim[]) {
 		this.dims = dims;
@@ -147,19 +149,22 @@ export class Sea<C extends object> {
 			for (const [k, v] of saved) this.bySelector.set(k, v);
 			throw e;
 		}
-		this.changed();
+		this.changed(new Set(made.map((s) => s.selector)));
 		return made;
 	}
 
 	/** Remove slots by identity or by `by`. Returns how many went. */
 	remove(which: Slot<C> | string): number {
 		let n = 0;
+		const touched = new Set<string>();
 		for (const [k, list] of this.bySelector) {
 			const keep = list.filter((s) => (typeof which === "string" ? s.by !== which : s !== which));
+			if (keep.length === list.length) continue;
 			n += list.length - keep.length;
+			touched.add(k);
 			this.bySelector.set(k, keep);
 		}
-		if (n) this.changed();
+		if (n) this.changed(touched);
 		return n;
 	}
 
@@ -226,13 +231,8 @@ export class Sea<C extends object> {
 			const term = `(c[${JSON.stringify(dim.name)}] & ${(1 << dim.width) - 1})`;
 			expr = expr === "0" ? (shift ? `${term} << ${shift}` : term) : `${expr} | ${shift ? `${term} << ${shift}` : term}`;
 		}
-		const name = selector.replace(/\W/g, "_");
-		const call = new Function("T", `return function korz_${name}(c) {
-	const e = T[${expr}];
-	const v = e.k === null ? e.r(c, e.p) : e.r(c, () => e.k(c));
-	return v === undefined ? 0 : v;
-};
-//# sourceURL=korz/${name}.js`)(table) as (c: C) => number;
+		const method = shared<C>(selector, expr);
+		const holder = { [tableKey(selector)]: table };
 		return {
 			selector,
 			generation: this.generation,
@@ -240,7 +240,8 @@ export class Sea<C extends object> {
 			size,
 			chains: interned.size,
 			table,
-			call,
+			expr,
+			call: (c) => method.call(holder, c),
 		};
 	}
 
@@ -258,19 +259,29 @@ export class Sea<C extends object> {
 	}
 
 	/**
-	 * Point each named field of `target` at its selector's resolved dispatch, with no check per call:
-	 * an install or remove swaps every bound field back to a stub that resolves on its next call.
+	 * Point each named field of `target` at its selector's resolved dispatch, with no check per call.
+	 * Each install or remove rebuilds the tables of the selectors it touched before it returns, so a
+	 * call site only ever sees the shared generated methods: a stub called once through a site V8 has
+	 * specialized on one target would make that site megamorphic for good.
 	 */
 	bind<K extends string>(target: Dispatchers<C, K>, selectors: readonly K[], limit?: number): void {
-		const stub = (s: K) => (c: C): number => {
-			target[s] = this.compiled(s, limit);
-			return target[s](c);
+		const tables = target as unknown as Record<string, readonly Entry<C>[]>;
+		for (const s of selectors) {
+			target[s] = NO_DISPATCH;
+			tables[tableKey(s)] = NO_TABLE as readonly Entry<C>[];
+		}
+		const rebind = (touched: ReadonlySet<string> | null): void => {
+			for (const s of selectors) {
+				if (touched && !touched.has(s)) continue;
+				const r = this.resolve(s, limit);
+				if (r) {
+					tables[tableKey(s)] = r.table;
+					target[s] = shared<C>(s, r.expr);
+				} else target[s] = (x) => this.dispatch(s, x);
+			}
 		};
-		const reset = (): void => {
-			for (const s of selectors) target[s] = stub(s);
-		};
-		this.bound.push(reset);
-		reset();
+		this.bound.push(rebind);
+		rebind(null);
 	}
 
 	private compiled(selector: string, limit?: number): (c: C) => number {
@@ -333,9 +344,9 @@ export class Sea<C extends object> {
 		return this.slots(selector).filter((s) => s.sets.every((set, d) => !isEmpty(intersect(set, q[d]!))));
 	}
 
-	private changed(): void {
+	private changed(touched: ReadonlySet<string>): void {
 		this.generation += 1;
-		for (const reset of this.bound) reset();
+		for (const rebind of this.bound) rebind(touched);
 	}
 
 	private make(spec: SlotSpec<C>): Slot<C> {
@@ -422,6 +433,32 @@ function entry<C>(selector: string, chain: readonly Slot<C>[]): Entry<C> {
 		f = (c) => run(c, () => rest(c)) ?? 0;
 	}
 	return { r: chain[0]!.run, k: f, p: past };
+}
+
+const tableKey = (selector: string): string => `${selector}$`;
+const NO_TABLE: readonly unknown[] = [];
+const NO_DISPATCH = (): number => 0;
+
+/**
+ * One generated dispatch method per selector and index expression, shared by every sea that
+ * resolves to the same shape, so every machine's call sites see the same function. It reads its
+ * table from the object it is called on (`bind` keeps it in the field beside the method).
+ */
+const methods = new Map<string, (c: never) => number>();
+function shared<C>(selector: string, expr: string): (c: C) => number {
+	const key = `${selector} ${expr}`;
+	let m = methods.get(key);
+	if (!m) {
+		const name = selector.replace(/\W/g, "_");
+		m = new Function(`return function korz_${name}(c) {
+	const e = this[${JSON.stringify(tableKey(selector))}][${expr}];
+	const v = e.k === null ? e.r(c, e.p) : e.r(c, () => e.k(c));
+	return v === undefined ? 0 : v;
+};
+//# sourceURL=korz/${name}.js`)() as (c: never) => number;
+		methods.set(key, m);
+	}
+	return m as (c: C) => number;
 }
 
 function thrower<C>(e: unknown): Entry<C> {

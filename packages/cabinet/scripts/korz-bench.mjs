@@ -156,6 +156,9 @@ for (const name of named.length ? named : Object.keys(workloads)) {
 		}
 		const mps = steps / best / 1000;
 		console.log(`  ${level.padEnd(20)} ${mps.toFixed(2).padStart(9)}  ${col(ns(best, steps))}  ${col(ns(tenth, Math.floor(steps / 10)))}  ${col(ns(first, steps))}  ${result}`);
+		// Every round is a new machine. The first pays for warm-up, so a later machine slower than it
+		// means V8 specialized on the first machine's objects and is paying to generalize.
+		if (best > first * 1.1) console.log(`  ${"".padEnd(20)} later machines run ${((best / first - 1) * 100).toFixed(0)}% slower than the first`);
 		if (flag("--record")) {
 			mkdirSync(new URL("../bench-results/", import.meta.url), { recursive: true });
 			const line = {

@@ -58,9 +58,12 @@ cuts: everything on device 05, everything a given `by` installed, everything DEC
    - Equal chains are interned as entries that all have one V8 hidden class.
    - One function per selector is generated with `new Function` (`korz/exec.js` in the debugger),
      with the index computation inlined.
-   - `bind` writes those functions into the CPU's dispatch object. An install or remove swaps
-     them back to stubs that rebuild on their next call, so there is no generation check per
+   - `bind` writes those functions into the CPU's dispatch object. An install or remove rebuilds
+     the tables of the selectors it touched before it returns, so there is no generation check per
      dispatch.
+   - The generated functions and the CPU's slots are shared by every machine in the process; a
+     slot reaches its machine through the context. V8 specializes on call targets and hidden
+     classes, so a second machine with its own closures ran 25% slower than the first.
 
    A watch on one 15-bit address turns `read` from a 1-entry table into a 32,768-entry one, and
    removing the watch turns it back.
@@ -116,20 +119,22 @@ UMSI, LSF, LLB18, RSB, DBSF, DBLM, RAL or the ION delay each makes a test fail. 
 survives: the Forth code always follows it with TMST, so no program here can see it. We report
 that rather than paper over it. The whole package has 269 tests.
 
-**Speed.** UNIX v0 boot, 3 million steps, Node 20 on an M4 Max, best of three. All three levels end
-at the same PC.
+**Speed.** UNIX v0 boot, 3 million steps, a new machine each round, Node 20 on an M4 Max. All three
+levels end at the same PC.
 
 | Level | Steps/s | ns/step |
 |---|---|---|
 | `Pdp7` (switch statements) | 33 M | 30 |
-| Korz resolver | 17.5 M | 57 |
+| Korz resolver | 21.6 M | 46 |
 | Korz interpreter | 1.1 M | 900 |
 | A real PDP-7 | about 0.3 M | 1.75 µs core cycle |
 
-Profiling took the resolver from 105 ns to 57 ns. Three changes did it:
+Profiling took the resolver from 105 ns to 46 ns. Four changes did it:
 - The index computation moved into generated code that V8 inlines.
 - `bind` replaced the per-call generation check.
 - Fetch became a coordinate on `read` instead of a second selector.
+- Every machine shares the generated functions and the CPU's slots, so V8 sees one set of call
+  targets however many machines run.
 
 About 20 ns of each step is the cabinet ticking its devices, a cost `Pdp7` pays too. Even the
 interpreter, the oracle, runs UNIX at about 3.7 times a real PDP-7.

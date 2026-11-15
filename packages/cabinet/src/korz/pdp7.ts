@@ -44,8 +44,13 @@ export const PDP7_DIMS: readonly Dim[] = [
 	{ name: "iop", width: 3 },
 ];
 
-/** One shape for every context, so V8 keeps one hidden class. Fields named for dimensions are coordinates. */
+/**
+ * One shape for every context, so V8 keeps one hidden class. Fields named for dimensions are
+ * coordinates. `cpu` is the machine the context belongs to: slots reach their machine through the
+ * context, so one slot function serves every machine and V8 sees the same call targets in all of them.
+ */
 export type K7 = {
+	cpu: KorzPdp7;
 	op: number; ind: number; skp: number; cc: number; rot: number;
 	addr: number; who: number; access: number; device: number; pulse: number; sub: number; iop: number; skip: number;
 	ir: number; at: number; xct: number; ea: number; lac: number; value: number; ac: number;
@@ -61,28 +66,29 @@ export type KorzPdp7Opts = Pdp7Opts & { korz?: "interpret" | "resolve" };
 const RAN: Step = Object.freeze({});
 const HALTED: Step = Object.freeze({ halt: true });
 
-const k7 = (): K7 => ({ op: 0, ind: 0, skp: 0, cc: 0, rot: 0, addr: 0, who: 0, access: 0, device: 0, pulse: 0, sub: 0, iop: 0, skip: 0,
+const k7 = (cpu: KorzPdp7): K7 => ({ cpu, op: 0, ind: 0, skp: 0, cc: 0, rot: 0, addr: 0, who: 0, access: 0, device: 0, pulse: 0, sub: 0, iop: 0, skip: 0,
 	ir: 0, at: 0, xct: 0, ea: 0, lac: 0, value: 0, ac: 0 });
 
 /**
- * Placement: the sea lives with the CPU and its slots are closures over this CPU and its devices'
- * bus sides. A function can't be posted, so a slot installed from another worker or host arrives as
- * a module name and arguments and is built here. The generated dispatch functions are per process.
+ * Placement: the sea lives with the CPU. The CPU's slots are shared by every machine in the process
+ * and reach their machine as `c.cpu`; device slots are still closures over their devices' bus
+ * sides. A function can't be posted, so a slot installed from another worker or host arrives as a
+ * module name and arguments and is built here. The generated dispatch functions are per process.
  * DESIGN.md, "Placement: what can run where".
  */
 export class KorzPdp7 extends Pdp7 implements IopBus {
 	readonly sea = new Sea<K7>(PDP7_DIMS);
 	/** Instructions, memory and IOTs nest, so each gets its own context. */
-	private readonly ix = k7();
-	private readonly mem = k7();
-	private readonly io = k7();
+	private readonly ix = k7(this);
+	private readonly mem = k7(this);
+	private readonly io = k7(this);
 	private pendingIot: Iot | null = null;
 	private readonly go = {} as Dispatchers<K7, Selector>;
+	private readonly coreMask = this.coreWords - 1;
 
 	constructor(opts: KorzPdp7Opts = {}) {
 		super(opts);
-		this.sea.install([...this.memorySlots(), ...this.addressingSlots(), ...this.instructionSlots(),
-			...this.operateSlots(), ...this.iotSlots()]);
+		this.sea.install(KorzPdp7.SLOTS);
 		if (opts.korz === "interpret") for (const s of SELECTORS) this.go[s] = (c) => this.sea.dispatch(s, c);
 		else this.sea.bind(this.go, SELECTORS);
 	}
@@ -150,84 +156,149 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 		this.go.exec(x);
 	}
 
-	private memorySlots(): SlotSpec<K7>[] {
-		const mask = this.coreWords - 1;
-		return [
-			{ selector: "read", by: "core", run: (c) => this.core[c.addr & mask] ?? 0 },
-			{ selector: "write", by: "core", run: (c) => { this.core[c.addr & mask] = maskWord(c.value, 18); } },
-		];
-	}
+	/** Every CPU slot, built once for every machine: each reaches its machine as `c.cpu`. */
+	private static readonly SLOTS: readonly SlotSpec<K7>[] = KorzPdp7.slots();
 
-	/** Effective address. Direct is the base case; indirect, auto-indexing, JMP I's extend restore and CAL override it. */
-	private addressingSlots(): SlotSpec<K7>[] {
+	private static slots(): SlotSpec<K7>[] {
 		const direct = (c: K7): number => (c.at & BANK) | (c.ir & ADDR);
-		const cal = (): number => (this.extend ? 0o20 : (this.pc & BANK) | 0o20);
-		return [
-			{ selector: "ea", by: "direct: the address field in this word's bank", run: direct },
-			{ selector: "ea", guard: { ind: 1, op: span(0, OP.jmp + 1) }, by: "indirect, auto-indexing 10-17",
-				run: (c) => this.resolveIndirect(direct(c), false) },
-			{ selector: "ea", guard: { ind: 1, op: OP.jmp }, by: "JMP I: indirect, EMIR restores extend mode",
-				run: (c) => this.resolveIndirect(direct(c), true) },
-			{ selector: "ea", guard: { op: OP.cal, ind: 0 }, by: "CAL: 20, absolute in extend mode", run: cal },
-			{ selector: "ea", guard: { op: OP.cal, ind: 1 }, by: "CAL I: indirect through 20",
-				run: () => this.resolveIndirect(cal(), false) },
-		];
-	}
-
-	private instructionSlots(): SlotSpec<K7>[] {
+		const cal = (m: KorzPdp7): number => (m.extend ? 0o20 : (m.pc & BANK) | 0o20);
+		const jms = (m: KorzPdp7, ea: number): void => {
+			m.write(ea, m.jmsWord());
+			m.pc = incr(ea);
+		};
 		const op = (name: keyof typeof OP, run: (c: K7) => void): SlotSpec<K7> =>
 			({ selector: "exec", guard: { op: OP[name] }, by: name.toUpperCase(), run });
-		const jms = (ea: number): void => {
-			this.write(ea, this.jmsWord());
-			this.pc = incr(ea);
-		};
+		const skip = (skp: number, by: string, run: (c: K7) => number): SlotSpec<K7> => ({ selector: "skip", guard: { skp }, by, run });
+		const cc = (cc: number, by: string, run: (c: K7) => number): SlotSpec<K7> => ({ selector: "cc", guard: { cc }, by, run });
+		const rot = (rot: number, by: string, run: (c: K7) => number): SlotSpec<K7> => ({ selector: "rot", guard: { rot }, by, run });
 		return [
-			op("cal", (c) => jms(c.ea)),
-			op("dac", (c) => this.write(c.ea, this.ac)),
-			op("jms", (c) => jms(c.ea)),
-			op("dzm", (c) => this.write(c.ea, 0)),
-			op("lac", (c) => { this.ac = this.read(c.ea); }),
-			op("xor", (c) => { this.ac = (this.ac ^ this.read(c.ea)) & WMASK; }),
+			{ selector: "read", by: "core", run: (c) => c.cpu.core[c.addr & c.cpu.coreMask] ?? 0 },
+			{ selector: "write", by: "core", run: (c) => { c.cpu.core[c.addr & c.cpu.coreMask] = maskWord(c.value, 18); } },
+
+			// Effective address. Direct is the base case; indirect, auto-indexing, JMP I's extend restore and CAL override it.
+			{ selector: "ea", by: "direct: the address field in this word's bank", run: direct },
+			{ selector: "ea", guard: { ind: 1, op: span(0, OP.jmp + 1) }, by: "indirect, auto-indexing 10-17",
+				run: (c) => c.cpu.resolveIndirect(direct(c), false) },
+			{ selector: "ea", guard: { ind: 1, op: OP.jmp }, by: "JMP I: indirect, EMIR restores extend mode",
+				run: (c) => c.cpu.resolveIndirect(direct(c), true) },
+			{ selector: "ea", guard: { op: OP.cal, ind: 0 }, by: "CAL: 20, absolute in extend mode", run: (c) => cal(c.cpu) },
+			{ selector: "ea", guard: { op: OP.cal, ind: 1 }, by: "CAL I: indirect through 20",
+				run: (c) => c.cpu.resolveIndirect(cal(c.cpu), false) },
+
+			op("cal", (c) => jms(c.cpu, c.ea)),
+			op("dac", (c) => c.cpu.write(c.ea, c.cpu.ac)),
+			op("jms", (c) => jms(c.cpu, c.ea)),
+			op("dzm", (c) => c.cpu.write(c.ea, 0)),
+			op("lac", (c) => { const m = c.cpu; m.ac = m.read(c.ea); }),
+			op("xor", (c) => { const m = c.cpu; m.ac = (m.ac ^ m.read(c.ea)) & WMASK; }),
 			op("add", (c) => {
-				const mb = this.read(c.ea);
-				let t = (this.ac & WMASK) + mb;
+				const m = c.cpu;
+				const mb = m.read(c.ea);
+				let t = (m.ac & WMASK) + mb;
 				if (t > WMASK) t = (t + 1) & WMASK;
-				if (((~this.ac ^ mb) & (this.ac ^ t)) & SIGN) this.link = 1;
-				this.ac = t;
+				if (((~m.ac ^ mb) & (m.ac ^ t)) & SIGN) m.link = 1;
+				m.ac = t;
 			}),
-			op("tad", (c) => this.setLac((this.lac() + this.read(c.ea)) & LACMASK)),
+			op("tad", (c) => { const m = c.cpu; m.setLac((m.lac() + m.read(c.ea)) & LACMASK); }),
 			op("xct", (c) => {
+				const m = c.cpu;
 				if (c.xct >= XCT_MAX) {
-					this.halted = true;
-					throw new Error(`XCT chain exceeds ${XCT_MAX} at pc=${this.pc.toString(8)}`);
+					m.halted = true;
+					throw new Error(`XCT chain exceeds ${XCT_MAX} at pc=${m.pc.toString(8)}`);
 				}
-				this.execute(this.read(c.ea), c.ea, c.xct + 1);
+				m.execute(m.read(c.ea), c.ea, c.xct + 1);
 			}),
 			op("isz", (c) => {
-				const n = (this.read(c.ea) + 1) & WMASK;
-				this.write(c.ea, n);
-				if (n === 0) this.pc = incr(this.pc);
+				const m = c.cpu;
+				const n = (m.read(c.ea) + 1) & WMASK;
+				m.write(c.ea, n);
+				if (n === 0) m.pc = incr(m.pc);
 			}),
-			op("and", (c) => { this.ac = this.ac & this.read(c.ea) & WMASK; }),
-			op("sad", (c) => { if (this.ac !== this.read(c.ea)) this.pc = incr(this.pc); }),
-			op("jmp", (c) => { this.pc = c.ea; }),
-			op("eae", (c) => this.eae(c.ir)),
+			op("and", (c) => { const m = c.cpu; m.ac = m.ac & m.read(c.ea) & WMASK; }),
+			op("sad", (c) => { const m = c.cpu; if (m.ac !== m.read(c.ea)) m.pc = incr(m.pc); }),
+			op("jmp", (c) => { c.cpu.pc = c.ea; }),
+			op("eae", (c) => c.cpu.eae(c.ir)),
 			op("iot", (c) => {
-				const io = this.io;
+				const m = c.cpu;
+				const io = m.io;
 				io.device = (c.ir >> 6) & 0o77;
 				io.pulse = c.ir & 0o67;
 				io.sub = (io.pulse >> 4) & 0o3;
 				io.skip = 0;
-				if (c.ir & 0o10) this.ac = 0;
-				io.ac = this.ac;
-				this.go.iot(io);
-				this.ac = io.ac;
-				if (io.skip) this.pc = incr(this.pc);
+				if (c.ir & 0o10) m.ac = 0;
+				io.ac = m.ac;
+				m.go.iot(io);
+				m.ac = io.ac;
+				if (io.skip) m.pc = incr(m.pc);
 			}),
 			{ selector: "exec", guard: { op: OP.opr, ind: 0 }, by: "OPR: skip, then clear and complement, OAS, rotate, HLT",
-				run: (c) => this.operate(c) },
+				run: (c) => c.cpu.operate(c) },
 			{ selector: "exec", guard: { op: OP.opr, ind: 1 }, by: "LAW: AC is the instruction word",
-				run: (c) => { this.ac = c.ir & WMASK; } },
+				run: (c) => { c.cpu.ac = c.ir & WMASK; } },
+
+			// The operate group's skip field, IR<8:11>.
+			skip(0o00, "none", () => 0),
+			skip(0o01, "SMA", (c) => +((c.lac & SIGN) !== 0)),
+			skip(0o02, "SZA", (c) => +((c.lac & WMASK) === 0)),
+			skip(0o03, "SZA SMA", (c) => +((c.lac & WMASK) === 0 || (c.lac & SIGN) !== 0)),
+			skip(0o04, "SNL", (c) => +(c.lac >= LINKBIT)),
+			skip(0o05, "SNL SMA", (c) => +(c.lac >= SIGN)),
+			skip(0o06, "SNL SZA", (c) => +(c.lac >= LINKBIT || c.lac === 0)),
+			skip(0o07, "SNL SZA SMA", (c) => +(c.lac >= SIGN || c.lac === 0)),
+			skip(0o10, "SKP", () => 1),
+			skip(0o11, "SPA", (c) => +((c.lac & SIGN) === 0)),
+			skip(0o12, "SNA", (c) => +((c.lac & WMASK) !== 0)),
+			skip(0o13, "SNA SPA", (c) => +((c.lac & WMASK) !== 0 && (c.lac & SIGN) === 0)),
+			skip(0o14, "SZL", (c) => +(c.lac < LINKBIT)),
+			skip(0o15, "SZL SPA", (c) => +(c.lac < SIGN)),
+			skip(0o16, "SZL SNA", (c) => +(c.lac < LINKBIT && c.lac !== 0)),
+			skip(0o17, "SZL SNA SPA", (c) => +(c.lac < SIGN && c.lac !== 0)),
+
+			// CLA, CLL, CMA, CML, IR<5:6,16:17>.
+			cc(0o00, "none", (c) => c.lac),
+			cc(0o01, "CMA", (c) => c.lac ^ WMASK),
+			cc(0o02, "CML", (c) => c.lac ^ LINKBIT),
+			cc(0o03, "CML CMA", (c) => c.lac ^ LACMASK),
+			cc(0o04, "CLL", (c) => c.lac & WMASK),
+			cc(0o05, "CLL CMA", (c) => (c.lac & WMASK) ^ WMASK),
+			cc(0o06, "STL", (c) => c.lac | LINKBIT),
+			cc(0o07, "CLL CML CMA", (c) => (c.lac | LINKBIT) ^ WMASK),
+			cc(0o10, "CLA", (c) => c.lac & LINKBIT),
+			cc(0o11, "STA", (c) => c.lac | WMASK),
+			cc(0o12, "CLA CML", (c) => (c.lac & LINKBIT) ^ LINKBIT),
+			cc(0o13, "CLA CML CMA", (c) => (c.lac | WMASK) ^ LINKBIT),
+			cc(0o14, "CLA CLL", () => 0),
+			cc(0o15, "CLA CLL CMA", () => WMASK),
+			cc(0o16, "CLA CLL CML", () => LINKBIT),
+			cc(0o17, "CLA CLL CML CMA", () => LACMASK),
+
+			// Rotates, IR<7,13:14>.
+			{ selector: "rot", by: "no rotate", run: (c) => c.lac },
+			rot(0o1, "RAL", (c) => ((c.lac << 1) | (c.lac >> 18)) & LACMASK),
+			rot(0o2, "RAR", (c) => ((c.lac >> 1) | (c.lac << 18)) & LACMASK),
+			rot(0o5, "RTL", (c) => ((c.lac << 2) | (c.lac >> 17)) & LACMASK),
+			rot(0o6, "RTR", (c) => ((c.lac >> 2) | (c.lac << 17)) & LACMASK),
+			{ selector: "rot", guard: { rot: [0o3, 0o7] }, by: "undefined rotate",
+				run: (c) => {
+					c.cpu.halted = true;
+					throw new Error(`undefined PDP-7 rotate combination ${c.ir.toString(8)}`);
+				} },
+
+			// The CPU's own IOTs are slots on the same bus as the devices, more specific than the clock's device 0.
+			{ selector: "iot", by: "cpu: no backplane, hand the IOT out",
+				run: (c) => { c.cpu.pendingIot = { device: c.device, pulse: c.pulse, ac: c.ac }; } },
+			{ selector: "iot", guard: { device: 0, pulse: 0o02 }, by: "IOF", run: (c) => { c.cpu.ion = false; } },
+			{ selector: "iot", guard: { device: 0, pulse: 0o42 }, by: "ION, after one more instruction",
+				run: (c) => { c.cpu.ion = true; c.cpu.ionDefer = 1; } },
+			{ selector: "iot", guard: { device: 0o77 }, by: "memory extension: SEM, EEM, EMIR, LEM",
+				run: (c) => {
+					const m = c.cpu;
+					if (m.coreWords <= 0o20000) return;
+					if (c.pulse === 0o01 && m.extend) c.skip = 1;
+					else if (c.pulse === 0o02) m.extend = true;
+					else if (c.pulse === 0o42) m.extend = m.emirPending = true;
+					else if (c.pulse === 0o04) m.extend = false;
+				} },
 		];
 	}
 
@@ -244,60 +315,6 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 		this.setLac(this.go.rot(c));
 		if (ir & 0o40) this.halted = true; // HLT
 		if (skp) this.pc = incr(this.pc);
-	}
-
-	private operateSlots(): SlotSpec<K7>[] {
-		const skips: [string, (l: number) => boolean][] = [
-			["none", () => false], ["SMA", (l) => (l & SIGN) !== 0], ["SZA", (l) => (l & WMASK) === 0],
-			["SZA SMA", (l) => (l & WMASK) === 0 || (l & SIGN) !== 0], ["SNL", (l) => l >= LINKBIT],
-			["SNL SMA", (l) => l >= SIGN], ["SNL SZA", (l) => l >= LINKBIT || l === 0],
-			["SNL SZA SMA", (l) => l >= SIGN || l === 0], ["SKP", () => true], ["SPA", (l) => (l & SIGN) === 0],
-			["SNA", (l) => (l & WMASK) !== 0], ["SNA SPA", (l) => (l & WMASK) !== 0 && (l & SIGN) === 0],
-			["SZL", (l) => l < LINKBIT], ["SZL SPA", (l) => l < SIGN], ["SZL SNA", (l) => l < LINKBIT && l !== 0],
-			["SZL SNA SPA", (l) => l < SIGN && l !== 0],
-		];
-		const clears: [string, (l: number) => number][] = [
-			["none", (l) => l], ["CMA", (l) => l ^ WMASK], ["CML", (l) => l ^ LINKBIT], ["CML CMA", (l) => l ^ LACMASK],
-			["CLL", (l) => l & WMASK], ["CLL CMA", (l) => (l & WMASK) ^ WMASK], ["STL", (l) => l | LINKBIT],
-			["CLL CML CMA", (l) => (l | LINKBIT) ^ WMASK], ["CLA", (l) => l & LINKBIT], ["STA", (l) => l | WMASK],
-			["CLA CML", (l) => (l & LINKBIT) ^ LINKBIT], ["CLA CML CMA", (l) => (l | WMASK) ^ LINKBIT],
-			["CLA CLL", () => 0], ["CLA CLL CMA", () => WMASK], ["CLA CLL CML", () => LINKBIT], ["CLA CLL CML CMA", () => LACMASK],
-		];
-		const rotate = (name: string, rot: number, f: (l: number) => number): SlotSpec<K7> =>
-			({ selector: "rot", guard: { rot }, by: name, run: (c) => f(c.lac) & LACMASK });
-		return [
-			...skips.map(([name, f], skp): SlotSpec<K7> => ({ selector: "skip", guard: { skp }, by: name, run: (c) => +f(c.lac) })),
-			...clears.map(([name, f], cc): SlotSpec<K7> => ({ selector: "cc", guard: { cc }, by: name, run: (c) => f(c.lac) })),
-			{ selector: "rot", by: "no rotate", run: (c) => c.lac },
-			rotate("RAL", 0o1, (l) => (l << 1) | (l >> 18)),
-			rotate("RAR", 0o2, (l) => (l >> 1) | (l << 18)),
-			rotate("RTL", 0o5, (l) => (l << 2) | (l >> 17)),
-			rotate("RTR", 0o6, (l) => (l >> 2) | (l << 17)),
-			{ selector: "rot", guard: { rot: [0o3, 0o7] }, by: "undefined rotate",
-				run: (c) => {
-					this.halted = true;
-					throw new Error(`undefined PDP-7 rotate combination ${c.ir.toString(8)}`);
-				} },
-		];
-	}
-
-	/** The CPU's own IOTs are slots on the same bus as the devices, more specific than the clock's device 0. */
-	private iotSlots(): SlotSpec<K7>[] {
-		return [
-			{ selector: "iot", by: "cpu: no backplane, hand the IOT out",
-				run: (c) => { this.pendingIot = { device: c.device, pulse: c.pulse, ac: c.ac }; } },
-			{ selector: "iot", guard: { device: 0, pulse: 0o02 }, by: "IOF", run: () => { this.ion = false; } },
-			{ selector: "iot", guard: { device: 0, pulse: 0o42 }, by: "ION, after one more instruction",
-				run: () => { this.ion = true; this.ionDefer = 1; } },
-			{ selector: "iot", guard: { device: 0o77 }, by: "memory extension: SEM, EEM, EMIR, LEM",
-				run: (c) => {
-					if (this.coreWords <= 0o20000) return;
-					if (c.pulse === 0o01 && this.extend) c.skip = 1;
-					else if (c.pulse === 0o02) this.extend = true;
-					else if (c.pulse === 0o42) this.extend = this.emirPending = true;
-					else if (c.pulse === 0o04) this.extend = false;
-				} },
-		];
 	}
 }
 

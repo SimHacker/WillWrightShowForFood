@@ -870,11 +870,11 @@ is 4K, and PIXIE's window 12000–17777 would leave a program only
 
 The same cabinets run in two places. **Local:** everything in the tab, as
 now. **Remote:** any number of VMs on a cloud instance under Node (they
-already run headless in the tests), with the tab as a terminal. The 340's
-display list goes down and device events come up: interaction local,
+already run headless in the tests), with the tab as a terminal. What the
+340 drew goes down and device events come up: interaction local,
 computation remote, the split the 1967 Cambridge system analysis drew.
 
-- **Down: the display list.** Each frame as the segment rows
+- **Down: the drawing.** Each frame as the segment rows
   [`toYaml`](src/media.ts) already writes (`[addr, kind, x0, y0, x1, y1,
   int, scale, subr, cycle]`), or the JSONL the `Recorder` writes. The
   provenance travels with it, so hover, the inspector and linked brushing
@@ -890,11 +890,12 @@ computation remote, the split the 1967 Cambridge system analysis drew.
   outruns SYMELEC's tracking, so the tab draws its own pointer locally
   and the hand never lags. The cabinet's 340 takes several pens, so two
   people in two places can each hold one.
-- **Later: ship the 340's program instead.** The 340 is a computer, so
-  the server could send display-file words and let the tab run the 340,
-  the way NeWS sent PostScript rather than pixels. Smaller, and the
-  phosphor timing is exact locally, but pen hits must then travel back
-  into machine time. Segments first.
+- **The wire carries what the 340 drew, never its program.** Display-file
+  words and 340 instructions stay in the machine with the 340 that
+  executes them. What crosses the network is their result: the drawing
+  calls of the phosphor simulator's interface, the `Segment` stream that
+  `onSegment` and `onFrame` already deliver. The phosphor simulator
+  renders them wherever it runs and never decodes a 340 instruction.
 - **Watchers and pens.** A VM's frames broadcast to every viewer; who
   holds a pen is floor control, handed out by tiny-its.
 - **Pacing.** The server runs each machine at 1969 speed or faster; the
@@ -932,8 +933,7 @@ through a port.
 
 So "the display in its own worker" means the far side: a renderer worker
 fed segments, with `OffscreenCanvas`. The 340 itself stays with the core it
-fetches from. Moving it would mean shipping it a copy of the display file
-(the NeWS idea above), with pen hits returning in machine time.
+fetches from, and its display file never leaves that core.
 
 **Ports carry plain data stamped with machine time.** Down: segments,
 characters, device state. Up: keys, pen positions, hand frames, switches,
