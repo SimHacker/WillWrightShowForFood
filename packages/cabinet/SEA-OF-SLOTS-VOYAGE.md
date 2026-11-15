@@ -1476,9 +1476,9 @@ Decide what NaN does (its own interval is the honest answer), and whether a boun
 the interval below it or above.
 
 **Objects, as ids.** Dispatching on an object's class is dispatching on a number, once each class
-has one. A static id on the class is the cheap way to get it: reading `c.obj.constructor.id` costs
-about as much as reading a field. A `WeakMap` from object to id works for any object, but it costs
-more than the table lookup it feeds. Adding an id property to an object after it's made changes its
+has one. A static id on the class is the cheap way to get it: `c.obj.constructor.id` is two property
+reads. A `WeakMap` from object to id works for any object, but it's a hash lookup, likely slower
+than the table lookup it feeds; measure it. Adding an id property to an object after it's made changes its
 hidden class, which is what the generated methods are trying to keep stable.
 
 A guard can also name one particular object, as CLOS's EQL specializers do. That's where kinds
