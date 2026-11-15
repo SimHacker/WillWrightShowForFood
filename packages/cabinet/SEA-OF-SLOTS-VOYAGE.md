@@ -1452,7 +1452,54 @@ measure them against it:
 The oracle is the interpreter, as always: run the random-seas test in
 [`src/korz/korz.test.ts`](src/korz/korz.test.ts) with a small limit.
 
-### 8. Forth words written in TypeScript, from Forth
+### 8. Dimensions for floats and objects
+
+A Korz dimension holds small integers (Port 7). That's no limit for a PDP-7, whose every field is
+bits of a word, but code that isn't an emulator passes floats and objects. Both can get into the sea
+without giving up its tables, if the generated method does the numbering, so callers pass ordinary
+JavaScript values.
+
+**Floats, as intervals.** Nobody guards on `x === 0.1`. Float guards are ranges, like `x < 0` or
+`0 <= x < 1`. Every boundary some guard mentions cuts the number line into intervals, and every
+float in one interval gets the same chain. Those intervals are kinds, as in Port 7, found by
+comparing instead of by trying every value. So:
+
+- Let a dimension be a float dimension, and let guards give ranges on it.
+- At install, collect the boundaries, sort them, and number the intervals between them.
+- In the generated method, put comparisons where the mask goes, so the index expression turns
+  `c.x` into its interval itself: `(c.x < 0 ? 0 : c.x < 1 ? 1 : 2)`. With many boundaries, a binary
+  search instead.
+- `bind` regenerates the method on every install, so a slot that adds a boundary renumbers the
+  intervals, and no caller ever holds an old numbering.
+
+Decide what NaN does (its own interval is the honest answer), and whether a boundary belongs to
+the interval below it or above.
+
+**Objects, as ids.** Dispatching on an object's class is dispatching on a number, once each class
+has one. A static id on the class is the cheap way to get it: reading `c.obj.constructor.id` costs
+about as much as reading a field. A `WeakMap` from object to id works for any object, but it costs
+more than the table lookup it feeds. Adding an id property to an object after it's made changes its
+hidden class, which is what the generated methods are trying to keep stable.
+
+A guard can also name one particular object, as CLOS's EQL specializers do. That's where kinds
+earn their keep: if the guards name three objects, every other object is the fourth kind, and the
+table stays small however many ids there are.
+
+**What to leave out.** A guard that's any test, like `(c) => c.x * c.y > 10`, is predicate
+dispatch, which Michael Ernst, Craig Kaplan, and Craig Chambers described in 1998. Craig Chambers
+and Weimin Chen made it fast in 1999 with dispatch trees, which test values in a good order
+instead of indexing a table. It's more general, but the sea would lose its two strengths: install
+checks for ambiguity by walking sets, and a call is one table lookup. A test you can turn into
+"which interval" or "which id" belongs in the sea. For anything else, compute a number and guard
+on that.
+
+**How you'll know it works.** Extend the random-seas test in
+[`src/korz/korz.test.ts`](src/korz/korz.test.ts) with random float ranges and random objects, and
+compare the interpreter's chains with the table's at random points, including on the boundaries,
+at NaN, and at -0. Then build something small that isn't an emulator, such as collision
+responses guarded on two shapes' classes and the speed they hit at.
+
+### 9. Forth words written in TypeScript, from Forth
 
 The Forth device's 30 primitives are a fixed list in
 [`forth-device.ts`](src/korz/forth-device.ts), matched by the labels in Mitch's kernel. The table
@@ -1474,7 +1521,7 @@ into core.
 PDP-7 CODE words, written with [`code.fs`](tapes/pdp7forth/code.fs), still work beside them, and the
 device hands those to the CPU as it does now.
 
-### 9. A Forth cartridge without the kernel
+### 10. A Forth cartridge without the kernel
 
 Today the device accelerates Mitch's whole kernel, which is all there in core. A cartridge that
 requires the device could leave the kernel out and bring only a little glue, with the Forth machine
@@ -1515,7 +1562,7 @@ that has to wait, like `KEY` with no key yet, can step IP back to its own cell a
 so the CPU spins in `NEXT` and interrupts still get taken. That's a design question to settle by
 building it.
 
-### 10. Another machine on the same library
+### 11. Another machine on the same library
 
 `korz.ts` knows nothing about PDP-7s. Build something else on it: a cellular automaton whose
 rule is a sea over the neighborhood, an adventure game's verbs over actor, verb, and object (SEA
