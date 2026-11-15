@@ -55,12 +55,25 @@ invented are the ones running in your browser right now:
 
 Then some of the Self people started Animorphic Systems and built Strongtalk, a fast Smalltalk on
 that technology. Sun bought Animorphic in 1997, and the Strongtalk VM became the basis of Java's
-HotSpot. Lars
-Bak, who had worked on Self and Strongtalk and led HotSpot, went to Google and led the team in
-Aarhus that built V8 for Chrome in 2008. V8's "hidden classes" are Self's maps. Inside V8 they are
-still called maps. Its inline caches, its speculative optimization, its deoptimization when a
-guess goes wrong: Self, all of it. Brendan Eich named Self as one of JavaScript's parents, for its
-prototypes, so the language and the engine both came from the same place.
+HotSpot. Lars Bak, who had worked on Self and Strongtalk and led HotSpot, went to Google and led
+the team in Aarhus that built V8 for Chrome in 2008. V8's "hidden classes" are Self's maps. Inside
+V8 they are still called maps. Its inline caches, its speculative optimization, its deoptimization
+when a guess goes wrong: Self, all of it.
+
+Brendan Eich says Self inspired JavaScript's prototypes, and every time someone repeats it, I
+cringe. JavaScript missed the whole point of Self, which is right there in the title of the paper:
+the power of simplicity. Self has nothing but objects with slots, all the way down. A Self object
+can inherit from any number of parents, with well-defined priorities, and it can change its parents
+at run time, which Self programmers do as an everyday technique and the VM handles efficiently.
+JavaScript gave each object one prototype, made changing it something
+[MDN warns you against](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
+because it's slow, and bolted on functions that double as constructors and misbehave if you call
+them without `new`. That's stolen valor: Self's name on the box, and none of its simplicity inside.
+Eich's misunderstanding of the meaning of equality shows up in JavaScript's
+[`==` table](https://dorey.github.io/JavaScript-Equality-Table/), and in his
+[donation against marriage equality](https://www.theguardian.com/commentisfree/2014/apr/07/brendan-eich-has-the-right-to-fight-gay-rights-but-not-to-be-mozillas-ceo).
+And yet Self's JIT technology was so good that it made JavaScript fast anyway, and made up for a
+lot of lackluster design decisions.
 
 Few people program in Self today. Every Chrome tab and every Node process runs its ideas.
 
