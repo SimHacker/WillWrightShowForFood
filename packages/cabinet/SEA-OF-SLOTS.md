@@ -19,9 +19,13 @@ mainframe. Its menu pops up around the light pen's tracking cross, which makes i
 pie menus since the 1980s, so when Heinz scanned his 1972 printout of SYMELEC, PIXIE's main
 program, 128 lineprinter pages of it, I wanted to see and feel those menus running again. I had no
 PDP-7 to run it on, so I built one. Anthropic's Claude (no relation to Shannon) was my programming
-partner, and [MOOLLM](https://github.com/SimHacker/moollm) was where we worked: my open-source
-system that treats a git repository as a world people and language models share, like a text
-adventure, with the model's know-how written down as skills, plain text it reads and follows. SYMELEC now
+partner, and [MOOLLM](https://github.com/SimHacker/moollm) was where we worked. MOOLLM is my open-source
+collection of 156 skills in Anthropic's Agent Skills format: folders of plain-text instructions, in
+Markdown and YAML, that a model loads and follows when a task calls for them. It extends that format
+so the file system works like Self's object system, with directories as objects that inherit from
+prototype directories, and the language model filling in whatever the files leave open. And it
+treats the whole git repository as a world people and language models share, like a text
+adventure. SYMELEC now
 reassembles word for word from the transcribed listing and runs in the browser with its light pen and its radial menus. Heinz plans to use PIXIE
 again, for Bayesian network models of health care. PIXIE is on the program of an HCI session at
 CARS 2027 in Berlin on 29 June 2027, the 60th anniversary of his first Cambridge lecture.
