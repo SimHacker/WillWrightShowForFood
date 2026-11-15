@@ -521,29 +521,88 @@ fired, so a program written now can tell them apart.
 
 A tour of an emulator usually skips the tools. Here they're half the fun.
 
-- **Assemblers.** [`asm/as7.ts`](src/asm/as7.ts) is Ken Thompson's `as`, the PDP-7 UNIX assembler,
-  written from the language, with the Perl `as7` from Warren Toomey's pdp7-unix project as its oracle.
-  [`asm/dec.ts`](src/asm/dec.ts) is DEC's 1964 assembler language, the dialect of the program
-  library listings. Both share one back end, [`asm/core.ts`](src/asm/core.ts).
-- **The disassembler** ([`disasm.ts`](src/disasm.ts)). Every word decodes as something, and its
-  output assembles back to the same word in either dialect; the tests check every word. Whether a
-  word is an instruction at all, the word can't say. That's the source map's job.
+- **Assemblers.** An assembler turns the mnemonics a person writes into the words the machine
+  runs: `lac 1234` into 201234. Different groups wrote their own assembly languages for the same
+  machine, called dialects, with their own spellings for labels, comments, and numbers. The cabinet
+  reads three, because its programs come in three:
+  - [`asm/as7.ts`](src/asm/as7.ts) is Ken Thompson's `as`, the assembler PDP-7 UNIX was written
+    in, and Mitch's Forth too. It's written from the language, with the Perl `as7` from Warren
+    Toomey's pdp7-unix project as its oracle.
+  - [`asm/dec.ts`](src/asm/dec.ts) is one assembler for two dialects of one language. `DEC_1964`
+    is DEC's, the dialect of its 1964 program library listings. `CAMBRIDGE_1972` is the Cambridge
+    University CAD Group's, which built PIXIE on Titan in 1972. No copy of that assembler
+    survives, so this one is rebuilt from Heinz Lemke's listing of SYMELEC. It adds what that
+    listing uses: `,` inside an operand for the current address (`JMP , 3` jumps three words
+    ahead), labels like `name=JMS,`, and `DISP` and `VEC` for writing the Type 340's display words.
+    The test: SYMELEC's transcribed source assembles to the printed listing's words, word for word.
+  - [`asm/cambridge-as7.ts`](src/asm/cambridge-as7.ts) translates Cambridge source into `as7`
+    source, so RSPPIX, Cambridge's ring library, can be assembled into Mitch's Forth. It keeps each
+    word's expression rather than its number, and the translation counts only if `as7` assembles
+    it back to exactly the Cambridge words.
+
+  All three share one back end, [`asm/core.ts`](src/asm/core.ts).
+- **The disassembler** ([`disasm.ts`](src/disasm.ts)) goes the other way, from a word in core to
+  text. `disassemble` writes the word as assembly, `lac i 123` or `cla!cll`, in DEC and Cambridge
+  syntax or in `as7`'s. The tests disassemble all 262,144 possible words and assemble each one back,
+  in both syntaxes, and every one comes back the same. `explain` writes the word in English, for
+  people who don't read assembly: 220123 is "load AC from the address held in 123", and 754000 is
+  "clear AC, clear the link". `explainDisplay` does the same for a Type 340 display word, which
+  means something different in each of the display's modes, so it needs the mode the 340 was in
+  when it read the word: 600170 in vector mode is "draw 120, 0, then back to parameter mode". The
+  page's code view shows these as comments when its **explain** button is on.
+
+  Every word decodes as something, but whether it's an instruction at all, the word can't say.
+  The same 18 bits could be data, a display word, or a return address. That's the source map's job.
 - **Source maps** ([`source.ts`](src/source.ts)): which source line assembled each core address,
   and what the assembler put there. So the page can show you where core no longer holds what the
   source says: patches, variables, return addresses, code that rewrites itself. One image can have
   several maps over the same words, such as SYMELEC's 1972 listing and its regenerated `as7` source.
 - **Traces** ([`trace.ts`](src/trace.ts)): a ring of the last instructions fetched, with the AC
   each one found.
-- **Recorded sessions** ([`session.ts`](src/session.ts)). Everything that reaches the machine from
-  outside (switches, pen, keys, pokes) is stamped with the machine cycle it arrived at. The
-  emulator only advances by cycles, so the same inputs at the same cycles replay the same run, at
-  any speed, in a browser or headless in Node.
-- **Hover and tags** ([`hover.ts`](src/hover.ts), [`tags.ts`](src/tags.ts)): what's under the
-  cursor, read off the display list, and what the record a DTG tag points at says about it.
-- **Core files** ([`core.ts`](src/core.ts)): all of core as raw words, JSON, or YAML in rows of
-  eight octal words.
-- **Media** ([`media.ts`](src/media.ts)): exports of the stream of line segments, which the
-  screenshot, the video, the phosphor, and the light pen all consume.
+- **Recorded sessions** ([`session.ts`](src/session.ts)) record a run so it can be played back
+  exactly. Everything that reaches the machine from outside is written down with the cycle it
+  arrived on: the console switches, the light pen, keys typed on the teletype, and pokes (words
+  stored into core from outside, as a debugger does). Nothing else can change what the machine does,
+  because the emulator only moves forward a cycle at a time and has no clock of its own. So the same
+  inputs on the same cycles replay the same run, at any speed, in a browser or in Node with no
+  screen at all (headless), which is how the tests replay a session.
+- **Hover and tags** ([`hover.ts`](src/hover.ts), [`tags.ts`](src/tags.ts)) answer "what's under
+  the mouse?" The 340 knows only lines and points, but it drew each one from a word of a display
+  file, sometimes inside a subroutine. `hover.ts` finds the line nearest the mouse and gathers
+  every line drawn from the same place, so the group is the thing a person points at: a menu
+  button, a word of text, a line of the drawing. A program can say more with a **tag**: DTG, a
+  display instruction the cabinet adds to the 340, marks everything drawn after it with the
+  address of a record in core. `tags.ts` reads that record, a title and maybe a URL, and the page
+  shows it.
+- **Core files** ([`core.ts`](src/core.ts)) save and load all of memory, in three forms: raw
+  (four bytes a word, exactly what the emulator holds), JSON, or YAML in rows of eight octal words,
+  which you can read and edit by hand.
+- **Rings** ([`packages/pixie`](../pixie/src/index.ts)) read and write PIXIE's data structure in
+  core. PIXIE kept its drawing in rings: linked lists of two-word cells, built by RSPPIX, where the
+  last cell of a ring points back to the first. `photograph` copies the ring area straight out of
+  the running machine's memory, and `implant` writes one back into it, with the free list and
+  root names set up the way RSPPIX sets them up, so the program finds the new structure as if it had
+  built it. In 1972 rings traveled between the PDP-7 and Titan over a link; these tools reach into
+  core directly, and also read and write that link's format. `graphToRing` and `ringToGraph` turn
+  any graph document, nodes with properties and links written as JSON or YAML, into rings and back,
+  so Colossal Cave's map can live in PDP-7 core. The page's RINGS panel draws the structure in 3D,
+  lights up the cells that change, and saves and loads ring files. In Mitch's Forth with RSPPIX,
+  LOAD puts a file into the running machine.
+- **Pictures** ([`media.ts`](src/media.ts), [`preview340.ts`](src/preview340.ts)). The 340's
+  output is a stream of line segments, each one remembering the display-file word that drew it.
+  The screen, the video, the glow of the phosphor, and the light pen all read that one stream.
+  There are two ways to get a picture:
+  - From the running display: `toSvg` writes any stream of segments as SVG, a vector image like
+    the 340's own picture, with each display subroutine as a group and each line carrying the
+    address of the word that drew it. `printScreen` is `toSvg` of the last whole frame, and it's
+    what the page's print-screen button downloads. The copy-screen button puts the screen on the
+    clipboard as a PNG, and `toYaml` writes a frame as data.
+  - From any display list in core: `preview340` hands a chunk of core to a throwaway 340 and gets
+    back one pass of the picture it draws, starting at any address, without running the CPU or
+    disturbing the real display. Feed the segments to `toSvg` for a file. The page uses it to drag a
+    line's corners and see the change at once, and to learn which mode the 340 reads each word in
+    for the code view's comments. [`scripts/boot-picture.mjs`](scripts/boot-picture.mjs) uses
+    `toSvg` in Node, headless, to save SYMELEC's boot picture.
 
 ## Port 6: the software
 
