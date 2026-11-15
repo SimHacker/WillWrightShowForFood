@@ -502,8 +502,14 @@ UNIX twice as fast as the hand-written switch statements. On the Turing workload
 the Turing engine needs attention every three cycles, and the cabinet's loop costs the same either
 way.
 
-The live demos run `Pdp7` today. Next, each demo gets a menu to switch the CPU between all four
-levels while it runs, on the same page.
+The live demos run on the Korz compiler. Every one has a CPU menu next to its program menu, so you
+can reboot it on any of the four levels and watch the same program run on each. The address
+remembers your choice: here's UNIX on the
+[switch statements](https://hyperties.org/cabinet/unix/?cpu=pdp7), the
+[Korz interpreter](https://hyperties.org/cabinet/unix/?cpu=interpret), the
+[Korz tables](https://hyperties.org/cabinet/unix/?cpu=resolve), and the
+[Korz compiler](https://hyperties.org/cabinet/unix/?cpu=compile). Next, the menu will switch levels
+while the program keeps running, without rebooting.
 
 ### Two machines, one process
 

@@ -5,6 +5,7 @@
 	 */
 	import { onMount, tick, untrack } from 'svelte';
 	import { asset } from '$app/paths';
+	import { goto } from '$app/navigation';
 	import { createBeeper } from './beeper.js';
 	import {
 		Pdp7,
@@ -69,16 +70,18 @@
 	let switches = $state(0);
 
 	// Four implementations of one PDP-7, each tested against the one before (SEA-OF-SLOTS.md).
-	// `?cpu=interpret` in the page's address picks one, so a link can say which.
+	// `spec.cpu` picks one; without it, `?cpu=interpret` in the page's address does, so a link can
+	// say which. The spec wins because a client-side navigation creates this before the address changes.
 	const CPUS = [
 		{ id: 'pdp7', label: 'switch statements, after SIMH', title: 'Pdp7: the TypeScript port of SIMH, the reference' },
 		{ id: 'interpret', label: 'Korz interpreter', title: 'Searches the sea of slots on every dispatch' },
 		{ id: 'resolve', label: 'Korz tables', title: 'Dispatches through tables resolved from the slots' },
 		{ id: 'compile', label: 'Korz compiler', title: 'Compiles runs of instructions into JavaScript functions' }
 	];
+	const CPU_DEFAULT = 'compile';
 	const cpuFromPage = () => {
-		const want = globalThis.location ? new URL(globalThis.location.href).searchParams.get('cpu') : null;
-		return CPUS.some((c) => c.id === want) ? want : (spec.cpu ?? 'pdp7');
+		const want = spec.cpu ?? (globalThis.location ? new URL(globalThis.location.href).searchParams.get('cpu') : null);
+		return CPUS.some((c) => c.id === want) ? want : CPU_DEFAULT;
 	};
 	let cpuLevel = $state(untrack(cpuFromPage));
 
@@ -2493,9 +2496,9 @@
 	function onCpu(event) {
 		cpuLevel = event.currentTarget.value;
 		const url = new URL(location.href);
-		if (cpuLevel === 'pdp7') url.searchParams.delete('cpu');
+		if (cpuLevel === CPU_DEFAULT) url.searchParams.delete('cpu');
 		else url.searchParams.set('cpu', cpuLevel);
-		history.replaceState(history.state, '', url);
+		goto(url, { replaceState: true, noScroll: true, keepFocus: true });
 		onReset();
 	}
 
