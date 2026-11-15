@@ -14,7 +14,7 @@ light-pen editor for graph models such as electronic circuits and control system
 PDP-7 with a Type 340, linked to Cambridge's Titan mainframe. Its menu pops up around the light
 pen's tracking cross, which makes it one of the earliest known radial menus. I've been building
 pie menus since the 1980s, so when Heinz scanned his 1972 printout of SYMELEC, PIXIE's main
-program, 128 lineprinter pages of it, I wanted to see those menus running again. There was no
+program, 128 lineprinter pages of it, I wanted to see and feel those menus running again. There was no
 PDP-7 to run it on, so I built one. SYMELEC now reassembles word for word from the transcribed
 listing and runs in the browser with its light pen and its radial menus. Heinz plans to use PIXIE
 again, for Bayesian network models of health care. PIXIE is on the program of an HCI session at
