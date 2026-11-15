@@ -293,11 +293,23 @@ doing if profiling shows the CPU loop, not the devices, is the limit.
 8. **Identity versus behavior, on a host JIT.** For Alan and Dan in particular. The second-machine
    slowdown came from behavior with identity: each machine's slots were its own closures, so the
    host JIT treated identical code as different code. Smalltalk's answer, methods in the class and
-   `self` passed in, fixed it. Korz has no classes, so the receiver became a coordinate. When a
-   late-bound system runs on someone else's JIT, which of its identities should the host see, and
-   which should it never see? And how much of what Smalltalk's VMs learned, from the Deutsch and
-   Schiffman inline caches to SqueakJS, should the emulator assume of its host instead of
-   rediscovering it under a profiler?
+   `self` passed in, fixed it. Korz has no classes, so the receiver became a coordinate.
+
+   SqueakJS did the same thing with memory that this does with dispatch. Squeak objects are plain
+   JavaScript objects, and a hybrid scheme "delegat[es] as much work as possible to the JavaScript
+   GC". SqueakJS keeps only what the host can't give it, enumeration for `firstInstance` and
+   `nextInstance`, in an old-space linked list of survivors rebuilt at full GC. New objects stay
+   off the list, so the host collects them alone. What the host sees decides what the host can do:
+   listed objects it can't collect, unlisted ones it collects for free.
+
+   Korz hands dispatch to V8's JIT the same way, and keeps for itself what V8 can't give: layers,
+   `why`, install-time ambiguity, invalidation. The bug was the dispatch version of putting every
+   new object on the list: per-machine closures showed V8 identities it should never have seen.
+
+   When a late-bound system runs on someone else's JIT and someone else's collector, which of its
+   identities should the host see, and which should it never see? And how much of what Smalltalk's
+   VMs learned, from the Deutsch and Schiffman inline caches to SqueakJS, should the emulator
+   assume of its host instead of rediscovering it under a profiler?
 
 Don Hopkins, November 2026.
 
@@ -318,7 +330,9 @@ Don Hopkins, November 2026.
 - L. Peter Deutsch and Allan M. Schiffman. *Efficient Implementation of the Smalltalk-80 System*.
   POPL 1984.
 - Vanessa Freudenberg, Dan Ingalls, Tim Felgentreff, Tobias Pape and Robert Hirschfeld. *SqueakJS:
-  A Modern and Practical Smalltalk That Runs in Any Browser*. DLS 2014.
+  A Modern and Practical Smalltalk That Runs in Any Browser*. DLS 2014; DLS Most Notable Paper,
+  2024. Section 2.3 is the hybrid GC.
+  ([memorial edition](../../characters/vanessa-freudenberg/sources/Freudenberg-2014-SqueakJS-memorial-edition.pdf))
 - Vanessa Freudenberg, on generating JavaScript for the host JIT,
   [Hacker News 38774277](https://news.ycombinator.com/item?id=38774277), December 2023.
 - Craig Chambers and Weimin Chen. *Efficient Multiple and Predicate Dispatching*. OOPSLA 1999.
