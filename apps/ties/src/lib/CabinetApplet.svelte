@@ -85,6 +85,19 @@
 	};
 	let cpuLevel = $state(untrack(cpuFromPage));
 
+	// Forth cartridges: Mitch's kernel runs its own threads, or the Forth device runs them
+	// (FORTH-DEVICE.md). Same image either way. The device is slots, so it needs a Korz CPU.
+	const FORTHS = [
+		{ id: 'software', label: 'software', title: "Mitch's kernel runs NEXT and the primitives on the PDP-7" },
+		{ id: 'hardware', label: 'hardware', title: 'The Forth device runs NEXT, the primitives and FIND itself, a word per memory cycle' }
+	];
+	const FORTH_DEFAULT = 'software';
+	const forthFromPage = () => {
+		const want = spec.forth ?? (globalThis.location ? new URL(globalThis.location.href).searchParams.get('forth') : null);
+		return FORTHS.some((f) => f.id === want) ? want : FORTH_DEFAULT;
+	};
+	let forthLevel = $state(untrack(forthFromPage));
+
 	let canvasEl = $state(null);
 	let figureEl = $state(null);
 	let captionEl = $state(null);
@@ -2304,7 +2317,7 @@
 		});
 		t340.clock = () => box.cycles;
 		batch = [];
-		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined });
+		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined, forth: forthLevel });
 		if (ttyCols) program.onTtyResize?.({ cpu, cols: ttyCols });
 		if (typeAhead && program.typeAhead) demoType(program.typeAhead);
 		symbols = program.symbols?.() ?? [];
@@ -2498,6 +2511,16 @@
 		const url = new URL(location.href);
 		if (cpuLevel === CPU_DEFAULT) url.searchParams.delete('cpu');
 		else url.searchParams.set('cpu', cpuLevel);
+		goto(url, { replaceState: true, noScroll: true, keepFocus: true });
+		onReset();
+	}
+
+	/** Reboot the Forth with the device plugged in or out, and keep the choice in the address. */
+	function onForth(event) {
+		forthLevel = event.currentTarget.value;
+		const url = new URL(location.href);
+		if (forthLevel === FORTH_DEFAULT) url.searchParams.delete('forth');
+		else url.searchParams.set('forth', forthLevel);
 		goto(url, { replaceState: true, noScroll: true, keepFocus: true });
 		onReset();
 	}
@@ -2814,6 +2837,20 @@
 				<option value={c.id} title={c.title}>CPU: {c.label}</option>
 			{/each}
 		</select>
+		{#if program?.forthDevice}
+			<select
+				class="program cpu"
+				aria-label="Forth implementation"
+				title={cpuLevel === 'pdp7' ? 'The Forth device is Korz slots: pick a Korz CPU to plug it in' : FORTHS.find((f) => f.id === forthLevel)?.title}
+				value={cpuLevel === 'pdp7' ? 'software' : forthLevel}
+				disabled={status === 'booting' || demoOn}
+				onchange={onForth}
+			>
+				{#each FORTHS as f (f.id)}
+					<option value={f.id} title={f.title} disabled={f.id === 'hardware' && cpuLevel === 'pdp7'}>Forth: {f.label}</option>
+				{/each}
+			</select>
+		{/if}
 		{#if fault}
 			<span class="fault" title={fault}>fault: {fault}</span>
 		{:else}

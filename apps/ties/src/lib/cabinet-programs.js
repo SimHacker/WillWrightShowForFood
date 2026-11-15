@@ -33,6 +33,7 @@ import {
 	compileForth,
 	assembleForthKernel,
 	bootForth,
+	ForthDevice,
 	setForthColumns,
 	forthDemo,
 	ultimateDemo,
@@ -270,8 +271,12 @@ function forthProgram({ id, label, kernelFile, extras = [], pixie: withRings = t
 			const ringWords = withRings ? [pixie.default] : [];
 			built.image = compileForth({ kernel: built.kernel, sources: [prelude.default, does.default, turtle.default, ...ringWords, ...added.map((m) => m.default)] });
 		},
-		boot({ cpu }) {
+		// The Forth device runs this image's threads itself (FORTH-DEVICE.md): same core, so it needs
+		// only the kernel's labels. It plugs into a Korz CPU's sea; the SIMH-style CPU has none.
+		forthDevice: true,
+		boot({ cpu, forth }) {
 			bootForth(cpu, built.image);
+			if (forth === 'hardware' && cpu.sea) new ForthDevice(built.image.labels).install(cpu);
 		},
 		status() {
 			return '';

@@ -6,6 +6,8 @@ export { Pdp7, pdp7 } from "./plugins/pdp7.js";
 export type { Pdp7Opts } from "./plugins/pdp7.js";
 export { KorzPdp7 } from "./korz/pdp7.js";
 export type { KorzPdp7Opts } from "./korz/pdp7.js";
+export { ForthDevice } from "./korz/forth-device.js";
+export type { ForthDeviceOpts, ForthDeviceStats } from "./korz/forth-device.js";
 export { Monitor } from "./monitor.js";
 export type { Memory, MonitorOpts, SymbolEntry, Where } from "./monitor.js";
 export { hoverAt, strokeAt, strokeText } from "./hover.js";

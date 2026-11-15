@@ -423,7 +423,9 @@ Makefile, and the test harness changes would go to him as pull requests.
 machine. The plan is a device that is this Forth word for word, with primitives as IOT
 instructions and the dictionary in ROM in bank 1, booting to `ok` with one instruction and
 taking almost no core. Then Forth can live in SYMELEC's PDP-7 and control it, with a ring
-library for its own rings in high memory. Design in [FORTH-DEVICE.md](../FORTH-DEVICE.md).
+library for its own rings in high memory. Design in [FORTH-DEVICE.md](../FORTH-DEVICE.md). Its
+first form runs now: **Forth: hardware** on any Forth cartridge runs NEXT, the primitives and FIND
+in the device, on the same image.
 
 **Compiling threads.** The Korz compiler could compile whole Forth definitions, not one cell at a
 time, and a second target could emit threaded code into core instead of JavaScript.

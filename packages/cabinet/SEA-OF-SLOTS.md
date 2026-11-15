@@ -718,8 +718,26 @@ to know that Forth or Sweet 16 exists. None of this is built yet.
 
 ### The Apple ][
 
-Then the Apple ][, with the microM8 emulator as its reference, and its software library as the
-test suite.
+Then the Apple ][. Its reference won't be one emulator but several, and the more the better: every
+emulator that runs the same program is one more oracle to run in lockstep against. And the Apple
+]['s software library is the test suite.
+
+[microM8](https://paleotronic.com/software/microm8/), April and Melody Ayres-Griffiths's
+emulator, comes first. It's the cabinet's inspiration, it's MIT-licensed, and its Go core already
+runs in our page as WebAssembly. Will Scullin's [apple2js](https://github.com/whscullin/apple2js)
+and Chris Torrence's [Apple2TS](https://github.com/ct6502/apple2ts) are written in TypeScript, as
+the cabinet is, and are MIT-licensed too. [SingleStepTests](https://github.com/SingleStepTests)
+checks a 6502 one instruction at a time.
+
+Each has its cost. microM8 does the most: 3D graphics, live rewind, an MCP server. But in the
+browser it's a 41 MB module, the browser's debugger can't see into it, and it runs at about 1.7
+MHz. The TypeScript emulators run in the language the cabinet does, so the browser's tools can
+step through them. We surveyed the field in
+[WEB-BENCH.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/WEB-BENCH.md#the-field),
+explain why we're rebuilding microM8's Apple ][ in TypeScript, as slots, in
+[microm8/STACK.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/microm8/STACK.md),
+and weigh what each language gives the job in
+[GO-AND-TYPESCRIPT.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/microm8/GO-AND-TYPESCRIPT.md).
 
 ### Slots proposed by a language model
 
@@ -870,12 +888,15 @@ Guards go through the same compiler. "The actor has materials and the crafting s
 
 Those graduated keys are Korz guards: a set of items, a state value, a range. Graduating a
 condition moves it out of code and into dispatch, where the library can check it for ambiguity,
-precompute it into tables, and compile it. A condition that can't graduate, like "the actor is
-tired," stays in a generated score function, where any code can run.
+precompute it into tables, and compile it.
 
-That split between cheap guards on sets and arbitrary code in the scores is deliberate. With sets,
-the library can tell when one guard is more specific than another and build tables ahead of time.
-With arbitrary functions, it couldn't do either.
+Not every condition fits those shapes. "The actor is tired" isn't a set of items, a state, or a
+range. It's a judgment, maybe `energy < 30` weighed against other needs. So it stays in the score
+function the language model wrote. That function can run any JavaScript, which is why the library
+can't check it, precompute it, or compile it the way it does a guard.
+
+That split is deliberate. Dispatch has to know when one guard is more specific than another, and
+only sets can tell it. A score only has to come out as a number, so it can afford to be any code.
 
 #### Back into The Sims
 
