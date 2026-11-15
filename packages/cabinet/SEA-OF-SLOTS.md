@@ -519,7 +519,7 @@ can reboot it on any of the four levels and watch the same program run on each. 
 remembers your choice: here's UNIX on the
 [switch statements](https://hyperties.org/cabinet/unix/?cpu=pdp7), the
 [Korz interpreter](https://hyperties.org/cabinet/unix/?cpu=interpret), the
-[Korz tables](https://hyperties.org/cabinet/unix/?cpu=resolve), and the
+[Korz resolver](https://hyperties.org/cabinet/unix/?cpu=resolve), and the
 [Korz compiler](https://hyperties.org/cabinet/unix/?cpu=compile). Next, the menu will switch levels
 while the program keeps running, without rebooting.
 
@@ -670,6 +670,14 @@ The Type 340 works that way today. It turns its display file into one stream of 
 The page draws them on a canvas, and can also export them as SVG, with each display subroutine as
 an SVG group. The 340 hears about changes through an observe slot on `write`, like any other
 monitor.
+
+The 340 is also a processor with its own instruction set, and that's slots too. It decodes each
+word by its mode register and the word's top two bits, so those are its two dimensions: 14 slots,
+one for each thing a word can do, in a table of 32 entries. "Draw a vector" is one slot, and "draw
+a vector, then escape" is a more specific one, where the original code had an `if`. Ask `why` of
+any display word and it names the slot that decodes it. The original switch statement is the
+oracle: random display files run on both, cycle for cycle, with a light pen wandering over the
+screen. On the Korz levels the page uses the slots, and they cost nothing measurable.
 
 #### The PIXIE ring view
 

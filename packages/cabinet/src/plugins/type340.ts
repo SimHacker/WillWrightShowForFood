@@ -38,19 +38,19 @@ export type Mode = (typeof MODE)[keyof typeof MODE];
 
 /* Type 347 jump types (bits 0-1 of a SUBR-mode word). 00 was never defined
    by DEC; the cabinet makes it DTG, display tag (TAGS-AND-PIES.md). */
-const DTG = 0;
-const DJP = 2;
-const DJS = 3;
-const DDS = 1;
+export const DTG = 0;
+export const DJP = 2;
+export const DJS = 3;
+export const DDS = 1;
 
 /* 13-bit display addresses. SIMH wraps DAC at 07777; SYMELEC cannot run
    that way: PEN3 IDLAs the compiled picture (PERMDF) at DFB = 12301, in
    the upper 4K of an 8K PDP-7, and the 347 target field is bits 5-17. */
-const ADDR = 0o17777;
+export const ADDR = 0o17777;
 
 /* DEC bit numbering: bit 0 is the MSB. Keep it verbatim; it is where the bugs live. */
-const TESTBIT = (w: number, b: number): boolean => (w & (1 << (17 - b))) !== 0;
-const GETFIELD = (w: number, start: number, end: number): number =>
+export const TESTBIT = (w: number, b: number): boolean => (w & (1 << (17 - b))) !== 0;
+export const GETFIELD = (w: number, start: number, end: number): number =>
 	(w >> (17 - end)) & ((1 << (end - start + 1)) - 1);
 
 export type SegmentKind = "point" | "vector" | "incr" | "char";
@@ -216,7 +216,7 @@ export class Type340 implements Device, KorzDevice {
 	/** DTG: the tag record address everything drawn now carries, 0 = none. */
 	tag = 0;
 	/** The caller's tag, saved by DJS and restored by its return. */
-	private savedTag = 0;
+	protected savedTag = 0;
 
 	/** No cycling until the program says IDLA. SIMH gets this from sim_activate. */
 	enabled = false;
@@ -243,15 +243,15 @@ export class Type340 implements Device, KorzDevice {
 	onSegment: ((s: Segment) => void) | undefined;
 	onFrame: ((f: Frame) => void) | undefined;
 	private readonly fetch: (addr: number) => number;
-	private readonly store: (addr: number, word: number) => void;
+	protected readonly store: (addr: number, word: number) => void;
 	private readonly wordsPerTick: number;
-	private subr = -1;
-	private block = 0;
-	private ddsBlock = false;
+	protected subr = -1;
+	protected block = 0;
+	protected ddsBlock = false;
 	private ch = -1;
 	private glyphs = 0;
-	private xAt = -1;
-	private yAt = -1;
+	protected xAt = -1;
+	protected yAt = -1;
 	private ownClock = 0;
 	/** The rest of a vector the pen stopped; IDRS draws it before the next word. */
 	private pending: PendingVector | null = null;
@@ -587,8 +587,33 @@ export class Type340 implements Device, KorzDevice {
 		this.status &= ~(ST340_HEDGE | ST340_VEDGE);
 		if (this.status & ST340_STOPPED) return;
 
-		let escape = false;
 		const inChars = this.mode === MODE.CHAR;
+		const escape = this.decode(inst, addr);
+
+		if (escape) {
+			this.mode = MODE.PARAM;
+			if (this.saveFF) {
+				this.dac = this.asr;
+				this.tag = this.savedTag;
+				this.saveFF = false;
+				this.subr = -1;
+			} else if (this.ddsBlock && inChars) {
+				/* A lightbutton is DDS, its letters, and the stop code. What
+				   falls through after that (PIXIE's name into WAREA's box) is
+				   not the button. Vector escapes don't end it: the tracking
+				   cross is one DDS block drawn with VEC ES. */
+				this.subr = -1;
+				this.ddsBlock = false;
+			}
+		}
+	}
+
+	/**
+	 * Decode one word by the mode register and run it; true if it escapes to parameter mode.
+	 * `KorzType340` answers this from slots instead, with this switch as its oracle.
+	 */
+	protected decode(inst: number, addr: number): boolean {
+		let escape = false;
 		switch (this.mode) {
 			case MODE.PARAM: {
 				this.mode = GETFIELD(inst, 2, 4) as Mode;
@@ -720,23 +745,7 @@ export class Type340 implements Device, KorzDevice {
 				break;
 			}
 		}
-
-		if (escape) {
-			this.mode = MODE.PARAM;
-			if (this.saveFF) {
-				this.dac = this.asr;
-				this.tag = this.savedTag;
-				this.saveFF = false;
-				this.subr = -1;
-			} else if (this.ddsBlock && inChars) {
-				/* A lightbutton is DDS, its letters, and the stop code. What
-				   falls through after that (PIXIE's name into WAREA's box) is
-				   not the button. Vector escapes don't end it: the tracking
-				   cross is one DDS block drawn with VEC ES. */
-				this.subr = -1;
-				this.ddsBlock = false;
-			}
-		}
+		return escape;
 	}
 
 	/**
@@ -746,7 +755,7 @@ export class Type340 implements Device, KorzDevice {
 	 * point() sets the opposite flags. The 1972 software is the authority:
 	 * x violation -> HEDGE, y violation -> VEDGE, everywhere.
 	 */
-	private vector(
+	protected vector(
 		intensify: boolean,
 		sy: boolean,
 		dy: number,
@@ -817,7 +826,7 @@ export class Type340 implements Device, KorzDevice {
 		return v.flags !== 0;
 	}
 
-	private ipoint(intensify: boolean, byte: number, addr: number): boolean {
+	protected ipoint(intensify: boolean, byte: number, addr: number): boolean {
 		if (byte & 0o10) {
 			this.x += byte & 0o4 ? -this.scale : this.scale;
 			if (this.x < 0 || this.x > 1023) {
@@ -838,7 +847,7 @@ export class Type340 implements Device, KorzDevice {
 		return false;
 	}
 
-	private character(c: number, addr: number): boolean {
+	protected character(c: number, addr: number): boolean {
 		const s = this.scale;
 		const glyph = CHARS[c | this.shift] ?? CHARS[0]!;
 		const flags = glyph[5] ?? 0;
@@ -901,7 +910,7 @@ export class Type340 implements Device, KorzDevice {
 		return false;
 	}
 
-	private emit(
+	protected emit(
 		x0: number,
 		y0: number,
 		x1: number,

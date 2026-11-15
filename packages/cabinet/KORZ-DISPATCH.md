@@ -622,8 +622,10 @@ is a selector with dimensions:
   follow.
 - **The backplane** is the `iot` selector itself, plus CAF, the power switches (a powered-off device
   is a slot that answers with `offIot`), and the order of IOP pulses within one IOT.
-- **Buses and DMA.** The 340 and the RB09 read and write core with `who: device`. An observe slot on
-  `{ who: "device" }` lights the words the display processor is fetching in the memory panel.
+- **Buses and DMA.** The 340, the Turing engine and the RB09 read and write core through the CPU's
+  `read` and `write`, so watches and the memory panel see their traffic, but today as `who: cpu`.
+  Planned: they say `who: device`, and an observe slot on `{ who: "device" }` lights the words the
+  display processor is fetching in the memory panel.
 - **Storage.** The RB09's dimensions are track and sector. A bad sector, a write-protected track or a
   platter swapped mid-run is a patch slot on those coordinates, and `why` names it.
 - **Networks.** A link between two machines in the cabinet's array carries messages with a port and
@@ -689,42 +691,63 @@ DataHand feeding the 3D turtle, and titan-files writing and reading words by nam
 lockstep in `pdp7.test.ts` covers the RB09. Breaking IDSI, UMSI, TMSS, TMSR, TMGO, LSF, LLB18, RSB,
 DBSF, DBLM, FSF, FST's AC or the DataHand's register index makes it fail. Breaking TMLA does not: the Forth code always follows TMLA with TMST, which hides it.
 
-**The display processor as a sea.** The 340 decodes each word by its mode register, and in some
-modes by the top two bits (DEC bits 0 and 1). Those are the dimensions:
+**The display processor as a sea: built.** [`src/korz/type340.ts`](src/korz/type340.ts). The 340
+decodes each word by its mode register, and in some modes by the top two bits (DEC bits 0 and 1).
+Those are the dimensions, and `KorzType340` puts one slot on `word` for each thing a word can do:
 
 ```ts
-const dims340 = [
+export const DIMS_340 = [
   { name: "mode", width: 3, names: ["param", "point", "slave", "char", "vector", "vcont", "incr", "subr"] },
-  { name: "top", width: 2 },   // DEC bits 0-1: escape and intensify in vector mode, the jump type in subr
+  { name: "top", width: 2 },   // DEC bits 0-1: escape and intensify, Y or X in point mode, the jump type in subr
 ];
-
-export const type340Words = (d: Type340): SlotSpec<Word>[] => [
-  { selector: "word", guard: { mode: "param" },  by: "340 parameter: mode, scale, intensity, stop", run: (w) => d.param(w.word) },
-  { selector: "word", guard: { mode: "point" },  by: "340 point: load X or Y, maybe intensify", run: (w) => d.point(w.word, w.addr) },
-  { selector: "word", guard: { mode: "slave" },  by: "340 slave: no Type 343, stop", run: (w) => d.slave(w.word) },
-  { selector: "word", guard: { mode: "char" },   by: "340 three characters", run: (w) => d.chars(w.word, w.addr) },
-  { selector: "word", guard: { mode: "vector" }, by: "340 vector", run: (w) => d.vector(w.word, w.addr) },
-  { selector: "word", guard: { mode: "vector", top: bits(2, 2) }, by: "340 vector, escape after", run: (w) => { d.vector(w.word, w.addr); d.escape(); } },
-  { selector: "word", guard: { mode: "vcont" },  by: "340 vector to the edge", run: (w) => d.vcont(w.word, w.addr) },
-  { selector: "word", guard: { mode: "incr" },   by: "340 four increments", run: (w) => d.incr(w.word, w.addr) },
-  { selector: "word", guard: { mode: "subr", top: 0 }, by: "cabinet: DTG, tag what follows", run: (w) => d.tag(w.word) },
-  { selector: "word", guard: { mode: "subr", top: 1 }, by: "347 DDS", run: (w) => d.dds(w.word) },
-  { selector: "word", guard: { mode: "subr", top: 2 }, by: "347 DJP: jump", run: (w) => d.djp(w.word) },
-  { selector: "word", guard: { mode: "subr", top: 3 }, by: "347 DJS: jump and save", run: (w) => d.djs(w.word) },
-];
+const ESC = bits(2, 2);
+// by, and guard (bodies abridged):
+//   "340 parameter: mode, pen, scale, intensity, stop"   { mode: "param" }
+//   "340 point: load X"                                  { mode: "point" }
+//   "340 point: load Y"                                  { mode: "point", top: bits(1, 1) }
+//   "340 slave: no Type 343, stop"                       { mode: "slave" }
+//   "342 three characters"                               { mode: "char" }
+//   "340 vector"                                         { mode: "vector" }
+//   "340 vector, escape after"                           { mode: "vector", top: ESC }
+//   "340 vector continue: repeat to the edge"            { mode: "vcont" }
+//   "340 four increments"                                { mode: "incr" }
+//   "340 four increments, escape after"                  { mode: "incr", top: ESC }
+//   "cabinet DTG: tag what follows (not DEC's)"          { mode: "subr", top: 0 }
+//   "347 DDS: deposit a jump back, start a lightbutton"  { mode: "subr", top: 1 }
+//   "347 DJP: jump"                                      { mode: "subr", top: 2 }
+//   "347 DJS: jump and save"                             { mode: "subr", top: 3 }
 ```
 
-The 340 fetches its word with `read` on the PDP-7's sea, `who: device`, so the memory panel, the
-watches and the source map see display-file fetches the same way they see CPU fetches. Teaching
-uses follow from the slots, not from extra code:
+Where `Type340` tests the escape bit or the Y bit with an `if`, the sea has a more specific slot.
+The common tail of every word (edge flags cleared on fetch, the escape back through the 347's
+save register) stays in `Type340.instruction`, as the CPU's fetch stays in `step`, and `Type340`'s
+`switch`, now its `decode` method, is the oracle. The slot bodies are written afresh from the same
+structure; the beam (`vector`, `ipoint`, `character`, `emit`) is shared. Resolved, `word` is an
+8 × 4 table of 32 entries; `why(word, mode)` names the slot that decodes a word and why the others
+don't. The page uses `KorzType340` whenever the CPU menu picks a Korz level.
+
+**Tested.** [`src/korz/type340.test.ts`](src/korz/type340.test.ts) runs 200 random display files on
+each level, each 340 on its own copy of the same random core with a light pen wandering over the
+screen, restarting both with the same IDRS or IDLA whenever they stop: registers and the newest
+segment after every cycle, every segment and core at the end, 600,000 cycles. Planting a DDS that
+keeps the save register, an increment escape that doesn't escape, or a Y point that forgets its
+address each fails it within 150 cycles. The cabinet lockstep rigs in `devices.test.ts` (SYMELEC,
+the light pen over the Titan link, the display race, the Turing tape, the Forth hand) run
+`KorzType340` on the Korz side against `Type340` on the reference side.
+
+**Cost: none measured.** `node scripts/korz-bench.mjs hand --display slots` against the default:
+13 ns a step compiled, 43 resolved, against 13 and 42, with the same end state.
+
+**Planned.** The 340 fetches its words through the CPU's `read` as `who: cpu`; saying `who: device`
+lets the memory panel and the watches tell display fetches from CPU reads. Teaching uses then
+follow from the slots, not from extra code:
 
 - An observe slot on `{ mode: "vector" }` draws each vector into the slow-motion beam view as it is
   decoded, with the display-file address it came from.
-- `why` on any word says which mode decoded it and which bits mattered: "subr, top 3: 347 DJS".
 - The edge and light-pen flags are what make SYMELEC interactive. A patch slot on `{ mode: "point" }`
   can inject a pen hit at a chosen point, so a test drives the pen menus without a mouse.
-- The resolved form is an 8 × 4 table, 32 entries; the compiler can then compile a display file
-  that does not change into one function that emits its segments.
+- The compiler can compile a display file that does not change into one function that emits its
+  segments.
 
 ### Showcase: the Turing machine
 
@@ -735,7 +758,7 @@ transition table out of PDP-7 core: one word per (state, symbol), `[move:2][writ
 running, read, resume), mode (single step, set the mode, stop) and the last emitted character. On
 the `iop` selector that is a `sub` dimension beside `device` and `iop`, and ten slots.
 
-The table itself is where Korz fits best. A transition table is a rule table, like CAM-6's: a
+The table itself is where Korz fits best. This part is planned; the engine runs tables written as words today. A transition table is a rule table, like CAM-6's: a
 function of a few small fields, stored as its graph. Written by hand it is a grid of words with
 holes; written as a sea it is a few rules with defaults, and the resolver writes the grid. A binary
 incrementer, with the head starting on the number's first digit:
@@ -788,6 +811,9 @@ word in core.
    teletype, paper tape, RB09, Type 340, Turing engine, Ultimate machine, Tiny Titan, titan-files,
    DataHand), in lockstep against their `iot()` methods
    ([`src/korz/iop.ts`](src/korz/iop.ts), [`src/korz/devices.test.ts`](src/korz/devices.test.ts)).
+   **Built:** the 340's own instruction set as slots, against `Type340`'s switch
+   ([`src/korz/type340.ts`](src/korz/type340.ts)). Not yet: the Turing engine's tables and the Forth
+   device's primitives as slots, and device memory traffic as `who: device`.
 4. **Built.** The resolver on the PDP-7: per-selector tables, 34 M steps per second on UNIX with
    the devices on the IOP bus and event-driven.
 5. Page-set normal forms with the brute-force tests; the Apple bus on the interpreter, against

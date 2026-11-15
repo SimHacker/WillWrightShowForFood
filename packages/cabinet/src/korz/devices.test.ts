@@ -14,10 +14,11 @@ import { Pdp7, type Pdp7Opts } from "../plugins/pdp7.js";
 import { Teletype } from "../plugins/teletype.js";
 import { BlockletHost, TinyTitan } from "../plugins/tiny-titan.js";
 import { TuringDevice } from "../plugins/turing.js";
-import { Type340 } from "../plugins/type340.js";
+import { Type340, type Type340Opts } from "../plugins/type340.js";
 import { UltimateMachine } from "../plugins/ultimate.js";
 import { loadSymelec } from "../symelec-fixtures.js";
 import { KorzPdp7 } from "./pdp7.js";
+import { KorzType340 } from "./type340.js";
 
 /**
  * The devices' Korz slots against their `iot()`, and the event-driven backplane against ticking
@@ -122,12 +123,15 @@ function forth(last: string, kernel = "kernel-names-full.s", first = "interrupt.
 	return img;
 }
 
+/** The Korz cabinet's 340 decodes its words from slots; the reference cabinet's runs `Type340`'s switch. */
+const display = (cpu: Pdp7, opts: Type340Opts): Type340 => (cpu instanceof KorzPdp7 ? new KorzType340(opts) : new Type340(opts));
+
 const frame = (t: Type340): string => JSON.stringify(t.lastFrame?.segments ?? []);
 
 function symelec(make: Make, every = false): Rig {
 	const cpu = make({ coreWords: 8192 });
 	loadSymelec(cpu, ["core8k"]);
-	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
+	const t = display(cpu, { fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000 });
 	const clock = new Clock({ cpu });
 	const titan = new TinyTitan();
@@ -142,7 +146,7 @@ function symelecTitan(make: Make, every = false) {
 	loadSymelec(cpu);
 	const host = new BlockletHost([0o24]);
 	const pen = new LightPen({ aperture: 12, name: "pointer", enabled: false });
-	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), pens: [pen] });
+	const t = display(cpu, { fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), pens: [pen] });
 	const tty = new Teletype({ printCycles: 200 });
 	const titan = new TinyTitan({ port: host });
 	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, new Clock({ cpu }), titan] });
@@ -155,7 +159,7 @@ function symelecTitan(make: Make, every = false) {
 function turing(make: Make, every = false): Rig {
 	const cpu = make({ coreWords: 8192 });
 	let paper = "";
-	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
+	const t = display(cpu, { fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
 	const tm = new TuringDevice({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), rate: 1 / 3 });
 	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, tm] });
@@ -168,7 +172,7 @@ function turing(make: Make, every = false): Rig {
 function ultimate(make: Make, every = false): Rig {
 	const cpu = make({ coreWords: 8192 });
 	let paper = "";
-	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
+	const t = display(cpu, { fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
 	const u = new UltimateMachine({ wait: 10, open: 10, reach: 10, press: 10, return: 10, close: 10, rest: 10 });
 	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, u] });
@@ -313,7 +317,7 @@ function displayRace(make: Make, every = false) {
 	file.forEach((w, i) => cpu.write(0o1000 + i, w));
 	let segs = 0;
 	let sum = 0;
-	const t = new Type340({
+	const t = display(cpu, {
 		fetch: (a) => cpu.read(a),
 		store: (a, w) => cpu.write(a, w),
 		onSegment: (s) => {
@@ -350,7 +354,7 @@ function handIrq(make: Make, every = false) {
 function hand(make: Make, every = false): Rig {
 	const cpu = make({ coreWords: 8192 });
 	let paper = "";
-	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
+	const t = display(cpu, { fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
 	const dh = new DataHand({ source: wavingHand, framePeriod: 200_000 });
 	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, dh] });
@@ -372,7 +376,7 @@ function session(t: number): HandFrame | null {
 
 function ultimateHand(make: Make, every = false) {
 	const cpu = make({ coreWords: 8192 });
-	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
+	const t = display(cpu, { fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000 });
 	const dh = new DataHand({ source: session });
 	const um = new UltimateMachine({ wait: 40_000, open: 60_000, reach: 100_000, press: 40_000, return: 80_000, close: 60_000, rest: 200_000 });

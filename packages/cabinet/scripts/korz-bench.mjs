@@ -1,8 +1,10 @@
 // The PDP-7 at every Korz level, on the same workloads: Pdp7 (switch statements), KorzPdp7 compiled,
 // KorzPdp7 with the resolver's tables, and KorzPdp7 searching the sea. Run `npm run build` first.
-//   node scripts/korz-bench.mjs [workload...] [--steps N] [--rounds N] [--level pdp7|compile|resolve|interpret] [--mixed] [--record] [--check]
+//   node scripts/korz-bench.mjs [workload...] [--steps N] [--rounds N] [--level pdp7|compile|resolve|interpret] [--display switch|slots] [--mixed] [--record] [--check]
 // Workloads: unix (UNIX v0 boot), hand (ULTIMATE-HAND in Forth: DataHand, 340, Ultimate Machine),
 // turing (the Turing engine running BCOUNT free while Forth draws its tape on the 340).
+// --display slots gives the Korz levels a 340 that decodes its words from slots (KorzType340);
+// the default is Type340's switch on every level.
 // --record appends one JSON line per level and workload to bench-results/korz.jsonl.
 // --check compares with the last recorded run on the same machine, Node, workload, level and step count,
 // and exits 1 if the result changed or the steady figure is more than 10% slower.
@@ -14,6 +16,7 @@ import { gunzipSync } from "node:zlib";
 import { Cabinet } from "../dist/cabinet.js";
 import { assembleForthKernel, bootForth, compileForth } from "../dist/forth.js";
 import { KorzPdp7 } from "../dist/korz/pdp7.js";
+import { KorzType340 } from "../dist/korz/type340.js";
 import { DataHand } from "../dist/plugins/datahand.js";
 import { syntheticHand, wavingHand } from "../dist/plugins/hand.js";
 import { Pdp7 } from "../dist/plugins/pdp7.js";
@@ -30,7 +33,10 @@ const opt = (name) => {
 	const i = args.indexOf(name);
 	return i < 0 ? undefined : Number(args[i + 1]);
 };
-const named = args.filter((a, i) => !a.startsWith("--") && !["--steps", "--level", "--rounds"].includes(args[i - 1] ?? ""));
+const named = args.filter((a, i) => !a.startsWith("--") && !["--steps", "--level", "--rounds", "--display"].includes(args[i - 1] ?? ""));
+const displayKind = args.includes("--display") ? args[args.indexOf("--display") + 1] : "switch";
+if (!["switch", "slots"].includes(displayKind)) throw new Error(`--display switch or slots, not ${displayKind}`);
+const display = (cpu, o) => (displayKind === "slots" && cpu instanceof KorzPdp7 ? new KorzType340(o) : new Type340(o));
 const only = args.includes("--level") ? args[args.indexOf("--level") + 1] : undefined;
 if (only && !["pdp7", "compile", "resolve", "interpret"].includes(only)) throw new Error(`--level pdp7, compile, resolve or interpret, not ${only}`);
 
@@ -73,7 +79,7 @@ function hand(make) {
 	});
 	const cpu = make({ coreWords: 8192 });
 	let frames = 0;
-	const t340 = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), onFrame: () => (frames += 1) });
+	const t340 = display(cpu, { fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), onFrame: () => (frames += 1) });
 	const tty = new Teletype({ printCycles: 1000 });
 	const dh = new DataHand({ source: session });
 	const um = new UltimateMachine({ wait: 40_000, open: 60_000, reach: 100_000, press: 40_000, return: 80_000, close: 60_000, rest: 200_000 });
@@ -107,7 +113,7 @@ function turing(make) {
 	});
 	const cpu = make({ coreWords: 8192 });
 	let paper = "";
-	const t340 = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
+	const t340 = display(cpu, { fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
 	const tm = new TuringDevice({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), rate: 1 / 3 });
 	const box = new Cabinet({ cpu, devices: [t340, tty, tm] });
@@ -165,13 +171,13 @@ for (const name of named.length ? named : Object.keys(workloads)) {
 	if (!w) throw new Error(`no workload ${name}: ${Object.keys(workloads).join(", ")}`);
 	const steps = opt("--steps") ?? w.steps;
 	if (!child) {
-		console.log(`${w.title}, ${steps.toLocaleString()} steps, Node ${process.version}, ${machine}, ${rounds} rounds, one process each${mixed ? ", mixed" : ""}`);
+		console.log(`${w.title}, ${steps.toLocaleString()} steps, Node ${process.version}, ${machine}, ${rounds} rounds, one process each${mixed ? ", mixed" : ""}, 340 ${displayKind}`);
 		console.log(`  ${"".padEnd(20)} ${"M steps/s".padStart(9)}  ns/step: steady first-tenth round-1`);
 	}
 	for (const [key, level, cpu] of levels) {
 		if (only && key !== only) continue;
 		if (!child) {
-			const pass = ["--steps", String(steps), "--rounds", String(rounds), ...(flag("--record") ? ["--record"] : []), ...(flag("--check") ? ["--check"] : []), ...(mixed ? ["--mixed"] : [])];
+			const pass = ["--steps", String(steps), "--rounds", String(rounds), ...(flag("--record") ? ["--record"] : []), ...(flag("--check") ? ["--check"] : []), ...(mixed ? ["--mixed"] : []), "--display", displayKind];
 			const r = spawnSync(process.execPath, [...process.execArgv, fileURLToPath(import.meta.url), name, "--level", key, "--child", ...pass], { stdio: "inherit" });
 			if (r.status !== 0) process.exitCode = r.status ?? 1;
 			continue;
@@ -205,7 +211,7 @@ for (const name of named.length ? named : Object.keys(workloads)) {
 		if (best > first * 1.1) console.log(`  ${"".padEnd(20)} later machines run ${((best / first - 1) * 100).toFixed(0)}% slower than the first`);
 		if (flag("--check")) {
 			const last = recorded().findLast(
-				(r) => r.machine === machine && r.node === process.version && r.workload === name && r.level === level && r.steps === steps && r.mixed === mixed,
+				(r) => r.machine === machine && r.node === process.version && r.workload === name && r.level === level && r.steps === steps && r.mixed === mixed && (r.display ?? "switch") === displayKind,
 			);
 			const now = ns(best, steps);
 			if (!last) console.log(`  ${"".padEnd(20)} nothing recorded for this machine and Node to check against`);
@@ -224,6 +230,7 @@ for (const name of named.length ? named : Object.keys(workloads)) {
 			mkdirSync(new URL("../bench-results/", import.meta.url), { recursive: true });
 			const line = {
 				date: new Date().toISOString(), commit, node: process.version, machine, workload: name, level, steps, rounds, mixed,
+				...(displayKind === "slots" ? { display: "slots" } : {}),
 				mps: +mps.toFixed(3), ns: +ns(best, steps).toFixed(1), coldTenthNs: +ns(tenth, Math.floor(steps / 10)).toFixed(1), round1Ns: +ns(first, steps).toFixed(1), result,
 			};
 			appendFileSync(recordFile, `${JSON.stringify(line)}\n`);

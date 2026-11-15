@@ -11,6 +11,7 @@
 		Pdp7,
 		KorzPdp7,
 		Type340,
+		KorzType340,
 		LightPen,
 		PEN_COLORS,
 		Clock,
@@ -75,7 +76,7 @@
 	const CPUS = [
 		{ id: 'pdp7', label: 'switch statements, after SIMH', title: 'Pdp7: the TypeScript port of SIMH, the reference' },
 		{ id: 'interpret', label: 'Korz interpreter', title: 'Searches the sea of slots on every dispatch' },
-		{ id: 'resolve', label: 'Korz tables', title: 'Dispatches through tables resolved from the slots' },
+		{ id: 'resolve', label: 'Korz resolver', title: 'Dispatches through tables resolved from the slots' },
 		{ id: 'compile', label: 'Korz compiler', title: 'Compiles runs of instructions into JavaScript functions' }
 	];
 	const CPU_DEFAULT = 'compile';
@@ -2294,12 +2295,16 @@
 		traceBack = 0;
 		pen = new LightPen({ aperture: 12, name: 'pointer', index: tool === 'edit' ? 0 : tool, enabled: false });
 		press = null;
-		t340 = new Type340({
-			fetch: (a) => cpu.read(a),
-			store: (a, w) => cpu.write(a, w),
+		const display = {
+			fetch: (/** @type {number} */ a) => cpu.read(a),
+			store: (/** @type {number} */ a, /** @type {number} */ w) => cpu.write(a, w),
 			pens: [pen],
 			onFrame: collectFrame
-		});
+		};
+		t340 =
+			cpuLevel === 'pdp7'
+				? new Type340(display)
+				: new KorzType340({ ...display, korz: cpuLevel === 'interpret' ? 'interpret' : 'resolve' });
 		const extra = program.peripherals?.({ cpu }) ?? [];
 		ttyReset();
 		ttyRecAt = -1;
