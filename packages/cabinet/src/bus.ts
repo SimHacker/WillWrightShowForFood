@@ -82,8 +82,18 @@ export type Backplane = {
 	sync(code: number, pulse: number): void;
 };
 
+/** The backplane's clock as a CPU running a batch sees it: the cycle now, the earliest unit's due cycle, the run's end. */
+export type Clock = { cycles: number; readonly next: number; readonly until: number };
+
 export interface Cpu {
 	power?: boolean;
+	/**
+	 * Run instructions from `clock.cycles` while nothing outside the CPU is due: after each, if it
+	 * halted, handed out an IOT, or brought `cycles + 1` to `next` or `until`, return its result with
+	 * its cycle uncounted, for the backplane to finish as it finishes a `step()`; otherwise count
+	 * it and go on. `next` can come closer during the batch. Absent, the backplane steps.
+	 */
+	runBatch?(clock: Clock): Step;
 	/** Called once by the backplane, so a CPU that dispatches IOTs itself can see the devices. */
 	attach?(box: Backplane): void;
 	readonly wordBits: number;

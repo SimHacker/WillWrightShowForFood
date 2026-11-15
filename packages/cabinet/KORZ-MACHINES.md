@@ -48,7 +48,7 @@ The design document is [KORZ-DISPATCH.md](KORZ-DISPATCH.md).
 `why` returns the chain for a context. `view` gathers slots by guard, which gives the subjective
 cuts: everything on device 05, everything a given `by` installed, everything DEC didn't build.
 
-**Three dispatch levels, all kept, each tested against the one below:**
+**Four dispatch levels, all kept, each tested against the one below:**
 
 1. **`Pdp7`** is switch statements, a TypeScript port of SIMH's PDP-7. It is the reference.
 2. **The Korz interpreter** filters a selector's slots, sorts the matches, and calls the chain.
@@ -67,6 +67,13 @@ cuts: everything on device 05, everything a given `by` installed, everything DEC
 
    A watch on one 15-bit address turns `read` from a 1-entry table into a 32,768-entry one, and
    removing the watch turns it back.
+4. **The compiler** ([KORZ-COMPILER.md](KORZ-COMPILER.md)).
+   - Slots carry JavaScript templates. For each instruction word it asks the sea for the chains,
+     once, and composes their templates into a basic block built with `new Function`.
+   - A chain with a slot that has no template is called through the resolver's dispatcher, so
+     every watch and patch keeps working.
+   - The cabinet hands it a batch of instructions up to the next device event.
+   - A store into a word a block was compiled from invalidates that block.
 
 **The PDP-7 as a sea.** UNIX v0's cabinet has 99 slots. The selectors are `read` and `write`
 (with `access` read or fetch), `ea`, `exec`, `skip`, `cc`, `rot`, `iot` and `iop`. Resolved table
@@ -117,16 +124,20 @@ Each device keeps its old `iot()` method as the oracle for its slots.
 Mutation checks confirm the tests notice when one gate is broken. Breaking IDSI, TMSS, TMSR, TMGO,
 UMSI, LSF, LLB18, RSB, DBSF, DBLM, RAL or the ION delay each makes a test fail. One gate, TMLA,
 survives: the Forth code always follows it with TMST, so no program here can see it. We report
-that rather than paper over it. The whole package has 275 passing tests.
+that rather than paper over it. The compiler gets the same treatment: 24 errors planted in its
+generated code, of which 23 are caught, one of them by hanging every rig, and the 24th changes
+nothing. The whole package has 294
+passing tests.
 
-**Speed.** UNIX v0 boot, 3 million steps, a new machine each round, Node 26 on an M4 Max. All three
+**Speed.** UNIX v0 boot, 3 million steps, a new machine each round, Node 26 on an M4 Max. All four
 levels end at the same PC.
 
 | Level | Steps/s | ns/step |
 |---|---|---|
-| `Pdp7` (switch statements) | 91 M | 11 |
-| Korz resolver | 34 M | 29 |
-| Korz interpreter | 1.3 M | 800 |
+| `Pdp7` (switch statements) | 92 M | 11 |
+| Korz compiler | 189 M | 5 |
+| Korz resolver | 34 M | 30 |
+| Korz interpreter | 1.3 M | 777 |
 | A real PDP-7 | about 0.3 M | 1.75 µs core cycle |
 
 Profiling took the resolver from 105 ns to 46 ns. Four changes did it:
@@ -152,6 +163,10 @@ A write to a word the 340 read ahead sends it back to the snapshot to replay up 
 went from 75 to 23 ns a step in `Pdp7` and from 102 to 43 ns in the resolver. It is optimistic
 execution with rollback, Time Warp's idea, inside one emulated cabinet, checked against the
 every-cycle loop by a rig built to race the 340.
+
+Then the compiler: 5 ns a step on UNIX and 13 on `ULTIMATE-HAND`, against `Pdp7`'s 11 and 21. On
+the Turing engine, a unit due every three cycles, it ties `Pdp7` at about 70 ns, because the
+batches are three instructions long.
 
 **The second machine, and what V8 keys on.** In one Node process, a second `KorzPdp7` ran 71–80 ns
 a step against the first one's 55. Same code, same program, same tables. V8 doesn't specialize on
@@ -203,23 +218,21 @@ deoptimization came with them.
 
 ## Where it goes
 
-**Step 3, a compiler.** It generates JavaScript basic blocks from the resolved tables:
-- The `exec`, `ea` and `skip` chains for each instruction word are folded in as constants.
-- Each compiled block depends on the words it was compiled from. A `write` to a compiled word
-  invalidates the blocks that depend on it, which is Self's dependency-driven recompilation at the
-  granularity of core words.
-- An install or remove that changes a resolved chain invalidates every block that used it.
+**Step 3, the compiler, is built** for the PDP-7. Each compiled block depends on the words it was
+compiled from, and a `write` to one of them invalidates the blocks that depend on it: Self's
+dependency-driven recompilation at the granularity of core words. Any install or remove
+invalidates every block.
 
-The same templates serve the JIT (hot blocks at run time) and AOT (ROMs, a fixed Forth kernel,
-snapshots).
+We predicted 200–400 M PDP-7 instructions per second for the CPU alone, at about 65% confidence.
+UNIX boots at 189 M a second with the cabinet included; the CPU alone was not measured separately.
 
-Our predictions:
-- 200–400 M PDP-7 instructions per second for the CPU alone, at about 65% confidence.
-- Event-driven devices (`nextEvent`) are built, with the 340 running ahead of the CPU and
-  brought back when a write touches a word it read, so the cabinet no longer caps it.
-- After that, idle-loop skipping and block chaining.
+Next:
+- Registers in JavaScript locals across a block, and blocks that call each other without the
+  dispatch loop.
+- The same templates compiled ahead of time, for ROMs, a fixed Forth kernel and snapshots.
+- Idle-loop skipping.
 
-The point is not only speed. The compiler is the third level of an oracle ladder, and every level
+The point is not only speed. The compiler is the top rung of an oracle ladder, and every level
 stays.
 
 **Machines.** The PDP-7 was chosen because it is small.

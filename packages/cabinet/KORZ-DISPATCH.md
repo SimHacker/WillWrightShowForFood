@@ -1,9 +1,11 @@
 # Korz dispatch for emulators, in TypeScript
 
-Steps 1 and 2 are built, for the PDP-7: the interpreter and the resolver in
-[`src/korz/korz.ts`](src/korz/korz.ts), and the PDP-7 on them in
-[`src/korz/pdp7.ts`](src/korz/pdp7.ts), which runs either way and is tested both ways against
-`Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The compiler is design. A short summary of results
+Steps 1, 2 and 3 are built, for the PDP-7: the interpreter and the resolver in
+[`src/korz/korz.ts`](src/korz/korz.ts), the PDP-7 on them in
+[`src/korz/pdp7.ts`](src/korz/pdp7.ts), and the compiler in
+[`src/korz/compile7.ts`](src/korz/compile7.ts), designed and measured in
+[KORZ-COMPILER.md](KORZ-COMPILER.md). The PDP-7 runs at each level and is tested at each against
+`Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The Apple's bus and its compiled blocks are design. A short summary of results
 and open questions, for readers who know Korz and Self, is [KORZ-MACHINES.md](KORZ-MACHINES.md).
 
 Everything a machine does on its bus is a lookup on a few small bit fields: which address, read or
@@ -434,41 +436,46 @@ by two instructions fails at step 51,210 of the boot.
 `korz: "resolve"`, the default, dispatches through the resolver's tables. Both run the same
 differential tests against `Pdp7`, and [`src/korz/korz.test.ts`](src/korz/korz.test.ts) checks the
 resolver against the interpreter on random seas, errors included. Each level is the oracle for the
-one above it, and the compiler joins as a third mode.
+one above it. `korz: "compile"` runs compiled blocks over the resolver and is tested against `Pdp7`
+the same way, in batches of random length ([KORZ-COMPILER.md](KORZ-COMPILER.md)).
 
 **Speed.** `npm run bench:korz` ([`scripts/korz-bench.mjs`](scripts/korz-bench.mjs)): UNIX v0, 3
 million steps, a new machine each round, best of rounds 2 to 5, Node 26 on an M4 Max, devices
-event-driven. All three end at the same PC.
+event-driven. All four end at the same PC.
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 91 M | 11 ns |
-| `KorzPdp7`, resolver | 34 M | 29 ns |
-| `KorzPdp7`, interpreter | 1.3 M | 800 ns |
+| `Pdp7` | 92 M | 11 ns |
+| `KorzPdp7`, compiled | 189 M | 5 ns |
+| `KorzPdp7`, resolver | 34 M | 30 ns |
+| `KorzPdp7`, interpreter | 1.3 M | 777 ns |
 | A real PDP-7 | about 0.3 M | 1.75 µs memory cycle |
 
 The second workload is `ULTIMATE-HAND` in Forth, with a procedural hand in place of the camera
 (`node scripts/korz-bench.mjs hand`): the Forth inner interpreter, the 3D turtle, the 340, the
 DataHand and the Ultimate Machine at once, 10 million steps through one press of the switch. All
-three levels end with the same PC, press count, frames latched and frames drawn.
+four end with the same PC, press count, frames latched and frames drawn.
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 43 M | 23 ns |
-| `KorzPdp7`, resolver | 23 M | 43 ns |
-| `KorzPdp7`, interpreter | 1.3 M | 780 ns |
+| `Pdp7` | 47 M | 21 ns |
+| `KorzPdp7`, compiled | 74 M | 13 ns |
+| `KorzPdp7`, resolver | 23 M | 44 ns |
+| `KorzPdp7`, interpreter | 1.3 M | 763 ns |
 
 The third is the Turing engine on device 54 running BCOUNT free (`0 SPEED`) at one transition every
 three cycles, while Forth draws its tape on the 340 (`node scripts/korz-bench.mjs turing`), 5
-million steps. All three levels end with the same PC, transition count, state and head.
+million steps. All four end with the same PC, transition count, state and head.
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 15 M | 66 ns |
-| `KorzPdp7`, resolver | 8.5 M | 117 ns |
-| `KorzPdp7`, interpreter | 0.81 M | 1.24 µs |
+| `Pdp7` | 15 M | 67 ns |
+| `KorzPdp7`, compiled | 14 M | 71 ns |
+| `KorzPdp7`, resolver | 8.5 M | 118 ns |
+| `KorzPdp7`, interpreter | 0.83 M | 1.21 µs |
 
-Here the engine dominates: each transition reads its rule from core, rewrites a tape cell, and
+Here the engine dominates, and the compiled CPU gets batches of 3 instructions between its
+transitions: each transition reads its rule from core, rewrites a tape cell, and
 writes its registers back to its control block in core. Each workload and level runs in its own process, since call sites shared between
 workloads (the cabinet's device loop) see each other's devices; repeated runs differ by up to 8%. Node 20 ran `Pdp7` at 15 ns on UNIX and 149 ns on the
 Turing workload; the resolver's 29 ns on UNIX is the same on both, so the gap the compiler has to
@@ -590,10 +597,12 @@ ends where it did. A unit that reads ahead assumes at least 8K of core, since a 
 address on a smaller core aliases a word the 340 never sees written; below that the cabinet asks
 it to look no further than a cycle.
 
-**Prediction for the compiler.** The resolver still makes five to eight indirect calls a step,
-through a context object. The compiler folds them into each block's code, which should bring it to
-`Pdp7`'s speed or past it, since `Pdp7` decodes every instruction every time and a compiled block
-decodes once.
+**The compiler.** The resolver still makes five to eight indirect calls a step, through a context
+object. The compiler folds them into each block's code, and the cabinet hands it a batch of
+instructions up to the next device event instead of one cycle at a time. It runs UNIX at 5 ns a
+step and the hand at 13, against `Pdp7`'s 11 and 21, since `Pdp7` decodes every instruction every
+time and a compiled block decodes once; on the Turing workload it ties `Pdp7`
+([KORZ-COMPILER.md](KORZ-COMPILER.md)).
 
 **Per-word invalidation.** PDP-7 code writes into itself as a matter of course: JMS stores the return
 address in the subroutine's first word, auto-index registers sit in the same core as the code, and
@@ -602,7 +611,7 @@ A compiled block therefore depends on the exact words it was compiled from, not 
 Invalidating by page would recompile every subroutine on every call, because its link word sits next
 to its code. JMS's link word is never executed, so a block starts at `ea + 1` and the store at `ea`
 invalidates nothing; a store into a word that a block was compiled from clears that block's `valid`
-flag, which the block checks at entry, as the 6502 blocks below do.
+flag and drops it from the table, and a block checks its own flag after each of its stores.
 
 ## The whole machine
 
@@ -786,7 +795,8 @@ word in core.
 6. The resolver for the Apple: table sets, page kinds, interned chains, the opcode table,
    invalidation.
 7. Standard slots, and compiled page dispatch.
-8. Compiled blocks: PDP-7 first, with per-word invalidation, then 6502 (microM8 plan step 14).
+8. Compiled blocks: **built** for the PDP-7, with per-word invalidation
+   ([KORZ-COMPILER.md](KORZ-COMPILER.md)); then 6502 (microM8 plan step 14).
 
 Each step is done when it agrees with the step before it on every test, and its speed and table
 counts are written down.

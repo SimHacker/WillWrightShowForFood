@@ -39,6 +39,11 @@ export type SlotSpec<C> = {
 	/** Who installed it. A slot installed again with the same selector, layer, guard and `by` replaces the old one. */
 	readonly by: string;
 	readonly run: Run<C>;
+	/**
+	 * The slot's behavior as a code template, for a compiler that knows this machine's templates
+	 * (KORZ-COMPILER.md). The sea carries it and never looks at it.
+	 */
+	readonly emit?: unknown;
 };
 
 /** A set over one dimension's domain, as a bitset; `null` is the whole domain. */
@@ -58,6 +63,7 @@ export class Slot<C> {
 		readonly sets: readonly DimSet[],
 		/** Indices of the dimensions this slot constrains. */
 		readonly constrained: readonly number[],
+		readonly emit: unknown = undefined,
 	) {}
 }
 
@@ -284,6 +290,13 @@ export class Sea<C extends object> {
 		rebind(null);
 	}
 
+	/** Call `fn` after every install and remove, with the selectors it touched. */
+	onChange(fn: (touched: ReadonlySet<string>) => void): void {
+		this.bound.push((touched) => {
+			if (touched) fn(touched);
+		});
+	}
+
 	private compiled(selector: string, limit?: number): (c: C) => number {
 		const r = this.resolve(selector, limit);
 		return r ? r.call : (x) => this.dispatch(selector, x);
@@ -352,7 +365,7 @@ export class Sea<C extends object> {
 	private make(spec: SlotSpec<C>): Slot<C> {
 		const sets = this.normalize(spec.guard ?? {});
 		const constrained = sets.flatMap((s, i) => (s === null ? [] : [i]));
-		return new Slot(spec.selector, spec.layer ?? "machine", spec.by, spec.run, sets, constrained);
+		return new Slot(spec.selector, spec.layer ?? "machine", spec.by, spec.run, sets, constrained, spec.emit);
 	}
 
 	private normalize(guard: GuardSpec): DimSet[] {

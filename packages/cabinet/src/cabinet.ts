@@ -1,4 +1,4 @@
-import type { Cpu, Device, Iot, IotReply, Step, SwitchBinding } from "./bus.js";
+import type { Clock, Cpu, Device, Iot, IotReply, Step, SwitchBinding } from "./bus.js";
 
 export type CabinetOpts = {
 	cpu: Cpu;
@@ -41,7 +41,7 @@ const EVENT = 2;
  * stamped event uses the same schedule as `nextEvent`.
  * DESIGN.md, "Placement: what can run where".
  */
-export class Cabinet {
+export class Cabinet implements Clock {
 	readonly cpu: Cpu;
 	readonly devices: Device[];
 	cycles = 0;
@@ -54,8 +54,8 @@ export class Cabinet {
 	private due: number[] = [];
 	private raised: boolean[] = [];
 	private raisedCount = 0;
-	/** The earliest `due`. */
-	private next = 0;
+	/** The earliest `due`; a CPU running a batch stops before it. */
+	next = 0;
 	private byCode: number[] = new Array(64).fill(-1);
 	/** The unit being ticked, or -1 while the CPU runs. */
 	private ticking = -1;
@@ -66,7 +66,9 @@ export class Cabinet {
 	/** A unit was brought back during `service`, which must look at it again. */
 	private pulledBack = false;
 	/** The cycle the current run stops at; no unit is asked to look past it. */
-	private until = 0;
+	until = 0;
+	/** The CPU runs batches (`runBatch`) instead of single steps. */
+	private batch = false;
 
 	constructor(opts: CabinetOpts) {
 		this.cpu = opts.cpu;
@@ -104,7 +106,7 @@ export class Cabinet {
 		}
 		this.until = this.cycles + max;
 		this.resync();
-		for (let i = 0; i < max; i += 1) {
+		while (this.cycles < this.until) {
 			last = this.advance();
 			if (last.halt) break;
 		}
@@ -161,10 +163,14 @@ export class Cabinet {
 		return result;
 	}
 
-	/** One CPU step; units whose events fall due are ticked before the cycle count moves on. */
+	/**
+	 * One CPU step, or a batch whose last step is finished here; units whose events fall due are
+	 * ticked before the cycle count moves on.
+	 */
 	private advance(): Step {
-		this.cpu.irqLine = this.raisedCount > 0;
-		const result: Step = this.cpu.power === false ? { halt: true } : this.cpu.step();
+		const cpu = this.cpu;
+		cpu.irqLine = this.raisedCount > 0;
+		const result: Step = cpu.power === false ? { halt: true } : this.batch ? cpu.runBatch!(this) : cpu.step();
 		if (result.iot) {
 			const reply = this.dispatch(result.iot);
 			this.cpu.ac = reply.ac;
@@ -267,6 +273,7 @@ export class Cabinet {
 			this.raised = new Array(n);
 		}
 		this.byCode.fill(-1);
+		this.batch = this.cpu.runBatch !== undefined;
 		this.raisedCount = 0;
 		this.watchers = [];
 		this.leads = new Array(n).fill(false);

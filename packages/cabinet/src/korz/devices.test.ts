@@ -35,11 +35,23 @@ const regs = (c: Pdp7) => [c.pc, c.ac, c.link, c.mq, c.sc, c.ion, c.ionDefer, c.
 
 const SLICE = 5000;
 
-/** `pdp7` runs `Pdp7` on both sides: the event-driven backplane against the oracle, the CPU the same. */
-function pair(build: (make: Make, every: boolean) => Rig, korz: "interpret" | "resolve" | "pdp7") {
+type Level = "interpret" | "resolve" | "compile" | "pdp7";
+
+/**
+ * `pdp7` runs `Pdp7` on both sides: the event-driven backplane against the oracle, the CPU the
+ * same. A compiled CPU runs batches, not steps, so it is compared at the ends of slices of random
+ * length, which also end its batches at random places.
+ */
+function pair(build: (make: Make, every: boolean) => Rig, korz: Level) {
 	const a = build((o) => new Pdp7(o), true);
 	const b = build((o) => (korz === "pdp7" ? new Pdp7(o) : new KorzPdp7({ ...o, korz })), false);
 	assert.ok(korz === "pdp7" || b.cpu instanceof KorzPdp7);
+	const perStep = korz !== "compile";
+	let seed = 0x5eed;
+	const random = (n: number): number => {
+		seed = (Math.imul(seed, 1103515245) + 12345) >>> 0;
+		return 1 + ((seed >>> 8) % n);
+	};
 	/** Registers as each step begins: the state every earlier step, and every tick, left behind. */
 	const logged = (r: Rig): string[] => {
 		const log: string[] = [];
@@ -50,20 +62,22 @@ function pair(build: (make: Make, every: boolean) => Rig, korz: "interpret" | "r
 		};
 		return log;
 	};
-	const logA = logged(a);
-	const logB = logged(b);
+	const logA = perStep ? logged(a) : [];
+	const logB = perStep ? logged(b) : [];
 	let steps = 0;
 	const run = (n: number): void => {
-		for (let left = n; left > 0; left -= SLICE) {
-			const k = Math.min(left, SLICE);
+		for (let left = n; left > 0;) {
+			const k = Math.min(left, perStep ? SLICE : random(SLICE));
+			left -= k;
 			a.box.run(k);
 			b.box.run(k);
 			for (let i = 0; i < logA.length; i += 1) {
 				if (logA[i] !== logB[i]) assert.equal(logB[i], logA[i], `step ${steps + i}`);
 			}
 			assert.equal(logB.length, logA.length, `steps run by step ${steps}`);
-			assert.equal(regs(b.cpu), regs(a.cpu), `after step ${steps + logA.length}`);
-			steps += logA.length;
+			assert.equal(b.box.cycles, a.box.cycles);
+			assert.equal(regs(b.cpu), regs(a.cpu), `after cycle ${a.box.cycles}`);
+			steps += perStep ? logA.length : k;
 			logA.length = 0;
 			logB.length = 0;
 		}
@@ -378,7 +392,7 @@ function files(make: Make, every = false) {
 	return { cpu, box, tty, fs, paper: () => paper, state: () => `${fs.flag} ${fs.result}` };
 }
 
-for (const korz of ["interpret", "resolve"] as const) {
+for (const korz of ["interpret", "resolve", "compile"] as const) {
 	test(`korz devices, ${korz}: SYMELEC on the 340, teletype, clock and Tiny Titan`, () => {
 		const p = pair(symelec, korz);
 		p.run(korz === "interpret" ? 1_000_000 : 4_000_000);
@@ -386,32 +400,8 @@ for (const korz of ["interpret", "resolve"] as const) {
 	});
 }
 
-test("korz devices: the paper tape reader, alphanumeric and binary", () => {
-	const p = pair(reader, "resolve");
-	for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
-	assert.equal(p.a.cpu.halted, true);
-	assert.equal(p.a.cpu.read(0o1002), 0o377);
-	p.same();
-});
-
-test("korz devices: the paper tape reader by interrupt, each frame in the interrupt routine", () => {
-	const p = pair(readerIrq, "resolve");
-	for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
-	assert.equal(p.a.cpu.halted, true);
-	assert.equal(p.a.cpu.read(0o1004), 0o215);
-	p.same();
-});
-
-test("korz devices: the Ultimate Machine's phase changes by interrupt", () => {
-	const p = pair(ultimateIrq, "resolve");
-	for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
-	assert.equal(p.a.cpu.halted, true);
-	assert.equal(p.a.cpu.read(0o21), 0);
-	p.same();
-});
-
-for (const level of ["resolve", "pdp7"] as const) {
-	test(`korz devices: the CPU and two DMA units racing the 340 through its display file (${level})`, () => {
+for (const level of ["resolve", "compile", "pdp7"] as const) {
+	test(`korz devices, ${level}: the CPU and two DMA units racing the 340 through its display file`, () => {
 		const p = pair(displayRace, level);
 		p.run(200_000);
 		assert.equal(p.a.cpu.read(0o30), 0o400000);
@@ -419,126 +409,153 @@ for (const level of ["resolve", "pdp7"] as const) {
 	});
 }
 
-test("korz devices: DataHand frames by interrupt", () => {
-	const p = pair(handIrq, "resolve");
-	for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
-	assert.equal(p.a.cpu.halted, true);
-	p.same();
-});
+for (const level of ["resolve", "compile"] as const) {
+	test(`korz devices, ${level}: the paper tape reader, alphanumeric and binary`, () => {
+		const p = pair(reader, level);
+		for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
+		assert.equal(p.a.cpu.halted, true);
+		assert.equal(p.a.cpu.read(0o1002), 0o377);
+		p.same();
+	});
 
-test("korz devices: the DataHand latches frames for the 3D turtle", () => {
-	const p = pair(hand, "resolve");
-	p.run(300_000);
-	p.type("DATAHAND\n");
-	p.run(3_000_000);
-	assert.ok(Number(p.a.state().split(" ").at(-2)) >= 2, "frames latched");
-	p.same();
-});
+	test(`korz devices, ${level}: the paper tape reader by interrupt, each frame in the interrupt routine`, () => {
+		const p = pair(readerIrq, level);
+		for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
+		assert.equal(p.a.cpu.halted, true);
+		assert.equal(p.a.cpu.read(0o1004), 0o215);
+		p.same();
+	});
 
-test("korz devices: ULTIMATE-HAND, a procedural hand pressing the switch", () => {
-	const p = pair(ultimateHand, "resolve");
-	p.run(300_000);
-	p.type("ULTIMATE-HAND\n");
-	p.run(6_000_000);
-	assert.ok((p.a as ReturnType<typeof ultimateHand>).um.presses >= 1, "the hand pressed the switch");
-	p.same();
-});
+	test(`korz devices, ${level}: the Ultimate Machine's phase changes by interrupt`, () => {
+		const p = pair(ultimateIrq, level);
+		for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
+		assert.equal(p.a.cpu.halted, true);
+		assert.equal(p.a.cpu.read(0o21), 0);
+		p.same();
+	});
 
-test("korz devices: titan-files writes words by name and reads them back", async () => {
-	const p = pair(files, "resolve");
-	const rigs = [p.a, p.b] as ReturnType<typeof files>[];
-	p.run(300_000);
-	const line = async (text: string): Promise<string> => {
-		const from = p.a.paper().length;
-		p.type(`${text}\n`);
-		for (let n = 0; n < 400 && !/ok\r\n$|\?\r\n$/.test(p.a.paper().slice(from)); n += 1) {
+
+	test(`korz devices, ${level}: DataHand frames by interrupt`, () => {
+		const p = pair(handIrq, level);
+		for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
+		assert.equal(p.a.cpu.halted, true);
+		p.same();
+	});
+
+	test(`korz devices, ${level}: the DataHand latches frames for the 3D turtle`, () => {
+		const p = pair(hand, level);
+		p.run(300_000);
+		p.type("DATAHAND\n");
+		p.run(3_000_000);
+		assert.ok(Number(p.a.state().split(" ").at(-2)) >= 2, "frames latched");
+		p.same();
+	});
+
+	test(`korz devices, ${level}: ULTIMATE-HAND, a procedural hand pressing the switch`, () => {
+		const p = pair(ultimateHand, level);
+		p.run(300_000);
+		p.type("ULTIMATE-HAND\n");
+		p.run(6_000_000);
+		assert.ok((p.a as ReturnType<typeof ultimateHand>).um.presses >= 1, "the hand pressed the switch");
+		p.same();
+	});
+
+	test(`korz devices, ${level}: titan-files writes words by name and reads them back`, async () => {
+		const p = pair(files, level);
+		const rigs = [p.a, p.b] as ReturnType<typeof files>[];
+		p.run(300_000);
+		const line = async (text: string): Promise<string> => {
+			const from = p.a.paper().length;
+			p.type(`${text}\n`);
+			for (let n = 0; n < 400 && !/ok\r\n$|\?\r\n$/.test(p.a.paper().slice(from)); n += 1) {
+				p.run(20_000);
+				for (const r of rigs) await r.fs.pending;
+				await new Promise((r) => setImmediate(r));
+			}
+			return p.a.paper().slice(from);
+		};
+		await line("CREATE POSE 5 ALLOT  CREATE BACK 5 ALLOT");
+		await line(": FILL 5 0 DO I 100 * 7 + POSE I + ! LOOP ;  FILL");
+		assert.match(await line('S" /tmp/pose" POSE 5 0 WRITE-WORDS .'), / 5\s+ok/);
+		assert.match(await line('S" /tmp/pose" BACK 9 3 READ-WORDS . BACK @ .'), / 2 307\s+ok/);
+		assert.match(await line('S" /nowhere" BACK 1 0 READ-WORDS .'), /-?\d+\s+ok/);
+		p.same();
+	});
+
+	test(`korz devices, ${level}: SYMELEC sends a drawn line over the Tiny Titan link`, () => {
+		const p = pair(symelecTitan, level);
+		const rigs = [p.a, p.b] as ReturnType<typeof symelecTitan>[];
+		const cross = (): [number, number] => [p.a.cpu.read(0o5641) & 0o1777, p.a.cpu.read(0o5640) & 0o1777];
+		const pen = (x: number, y: number, on: boolean): void => {
+			for (const r of rigs) {
+				r.pen.point(x, y);
+				r.pen.enabled = on;
+			}
+		};
+		p.run(3_000_000);
+		const pressS = (): void => {
+			const [x, y] = cross();
+			pen(x - 50, y + 32, true);
 			p.run(20_000);
-			for (const r of rigs) await r.fs.pending;
-			await new Promise((r) => setImmediate(r));
-		}
-		return p.a.paper().slice(from);
-	};
-	await line("CREATE POSE 5 ALLOT  CREATE BACK 5 ALLOT");
-	await line(": FILL 5 0 DO I 100 * 7 + POSE I + ! LOOP ;  FILL");
-	assert.match(await line('S" /tmp/pose" POSE 5 0 WRITE-WORDS .'), / 5\s+ok/);
-	assert.match(await line('S" /tmp/pose" BACK 9 3 READ-WORDS . BACK @ .'), / 2 307\s+ok/);
-	assert.match(await line('S" /nowhere" BACK 1 0 READ-WORDS .'), /-?\d+\s+ok/);
-	p.same();
-});
-
-test("korz devices: SYMELEC sends a drawn line over the Tiny Titan link", () => {
-	const p = pair(symelecTitan, "resolve");
-	const rigs = [p.a, p.b] as ReturnType<typeof symelecTitan>[];
-	const cross = (): [number, number] => [p.a.cpu.read(0o5641) & 0o1777, p.a.cpu.read(0o5640) & 0o1777];
-	const pen = (x: number, y: number, on: boolean): void => {
+			pen(x - 50, y + 32, false);
+			p.run(20_000);
+		};
+		const drag = (x1: number, y1: number): void => {
+			const [x, y] = cross();
+			for (let i = 1; i <= 40; i += 1) {
+				pen(Math.round(x + ((x1 - x) * i) / 40), Math.round(y + ((y1 - y) * i) / 40), true);
+				p.run(6_000);
+			}
+			pen(x1, y1, false);
+			p.run(20_000);
+		};
+		pressS();
+		drag(400, 300);
+		drag(400, 400);
+		pressS();
 		for (const r of rigs) {
-			r.pen.point(x, y);
-			r.pen.enabled = on;
+			for (const ch of "TITAN") r.tty.type(ch.charCodeAt(0) | 0o200);
+			r.tty.type(0o215);
 		}
-	};
-	p.run(3_000_000);
-	const pressS = (): void => {
-		const [x, y] = cross();
-		pen(x - 50, y + 32, true);
-		p.run(20_000);
-		pen(x - 50, y + 32, false);
-		p.run(20_000);
-	};
-	const drag = (x1: number, y1: number): void => {
-		const [x, y] = cross();
-		for (let i = 1; i <= 40; i += 1) {
-			pen(Math.round(x + ((x1 - x) * i) / 40), Math.round(y + ((y1 - y) * i) / 40), true);
-			p.run(6_000);
-		}
-		pen(x1, y1, false);
-		p.run(20_000);
-	};
-	pressS();
-	drag(400, 300);
-	drag(400, 400);
-	pressS();
-	for (const r of rigs) {
-		for (const ch of "TITAN") r.tty.type(ch.charCodeAt(0) | 0o200);
-		r.tty.type(0o215);
-	}
-	p.run(3_000_000);
-	assert.equal(rigs[0]!.host.received.length, 0o24, "the picture went over the link");
-	assert.equal(rigs[0]!.host.disconnected, true);
-	p.same();
-});
+		p.run(3_000_000);
+		assert.equal(rigs[0]!.host.received.length, 0o24, "the picture went over the link");
+		assert.equal(rigs[0]!.host.disconnected, true);
+		p.same();
+	});
 
-test("korz devices: the Turing engine runs BUSY2 on the 340 from Forth", () => {
-	const p = pair(turing, "resolve");
-	p.run(300_000);
-	p.line("BUSY2");
-	p.line("STEP");
-	p.line("RUN");
-	assert.match(p.a.paper(), /ok/);
-	p.same();
-});
+	test(`korz devices, ${level}: the Turing engine runs BUSY2 on the 340 from Forth`, () => {
+		const p = pair(turing, level);
+		p.run(300_000);
+		p.line("BUSY2");
+		p.line("STEP");
+		p.line("RUN");
+		assert.match(p.a.paper(), /ok/);
+		p.same();
+	});
 
-test("korz devices: the Turing engine runs free at 0 SPEED until a key", () => {
-	const p = pair(turing, "resolve");
-	p.run(300_000);
-	p.line("BCOUNT");
-	p.line("0 SPEED");
-	p.type("RUN\n");
-	p.run(3_000_000);
-	assert.equal(p.line("X"), " ok\r\n  ok\r\n");
-	p.same();
-});
+	test(`korz devices, ${level}: the Turing engine runs free at 0 SPEED until a key`, () => {
+		const p = pair(turing, level);
+		p.run(300_000);
+		p.line("BCOUNT");
+		p.line("0 SPEED");
+		p.type("RUN\n");
+		p.run(3_000_000);
+		assert.equal(p.line("X"), " ok\r\n  ok\r\n");
+		p.same();
+	});
 
-test("korz devices: the Ultimate Machine, its phase interrupts, and powering itself off", () => {
-	const p = pair(ultimate, "resolve");
-	p.run(300_000);
-	p.line("8000 PH-WAIT UM-TIME!");
-	assert.match(p.line("77 UM-ON UM-ON? . UM-PHASE . ."), / -1 1 77\s+ok/);
-	p.line("UM-OFF");
-	p.line(": SPIN BEGIN UM-BUSY? 0= UNTIL ;");
-	p.line("30 PH-WAIT UM-TIME! 30 PH-OPEN UM-TIME! 30 PH-REACH UM-TIME!");
-	p.line("30 PH-PRESS UM-TIME! 30 PH-RETURN UM-TIME!");
-	p.line("30 PH-CLOSE UM-TIME! 30 PH-REST UM-TIME!");
-	p.line("' ON-INTERRUPT INTERRUPT-VECTOR ! -1 UM-IE! INTERRUPTS-ON");
-	assert.match(p.line("77 0 CHANGES ! UM-ON SPIN 100 0 DO LOOP INTERRUPTS-OFF CHANGES @ . ."), / 7 77\s+ok/);
-	p.same();
-});
+	test(`korz devices, ${level}: the Ultimate Machine, its phase interrupts, and powering itself off`, () => {
+		const p = pair(ultimate, level);
+		p.run(300_000);
+		p.line("8000 PH-WAIT UM-TIME!");
+		assert.match(p.line("77 UM-ON UM-ON? . UM-PHASE . ."), / -1 1 77\s+ok/);
+		p.line("UM-OFF");
+		p.line(": SPIN BEGIN UM-BUSY? 0= UNTIL ;");
+		p.line("30 PH-WAIT UM-TIME! 30 PH-OPEN UM-TIME! 30 PH-REACH UM-TIME!");
+		p.line("30 PH-PRESS UM-TIME! 30 PH-RETURN UM-TIME!");
+		p.line("30 PH-CLOSE UM-TIME! 30 PH-REST UM-TIME!");
+		p.line("' ON-INTERRUPT INTERRUPT-VECTOR ! -1 UM-IE! INTERRUPTS-ON");
+		assert.match(p.line("77 0 CHANGES ! UM-ON SPIN 100 0 DO LOOP INTERRUPTS-OFF CHANGES @ . ."), / 7 77\s+ok/);
+		p.same();
+	});
+}

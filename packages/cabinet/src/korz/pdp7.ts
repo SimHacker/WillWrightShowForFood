@@ -1,6 +1,7 @@
-import type { Backplane, Device, Iot, Step } from "../bus.js";
+import type { Backplane, Clock, Device, Iot, Step } from "../bus.js";
 import { incr, Pdp7, type Pdp7Opts } from "../plugins/pdp7.js";
 import { maskWord } from "../word.js";
+import { Compiler7, T7 } from "./compile7.js";
 import { type Iop, type IopBus, isKorzDevice } from "./iop.js";
 import { type Dim, type Dispatchers, Sea, span, type SlotSpec } from "./korz.js";
 
@@ -59,8 +60,12 @@ export type K7 = {
 const SELECTORS = ["read", "write", "ea", "exec", "skip", "cc", "rot", "iot", "iop"] as const;
 type Selector = (typeof SELECTORS)[number];
 
-/** `resolve` dispatches through tables rebuilt after each install; `interpret` searches the sea every time. */
-export type KorzPdp7Opts = Pdp7Opts & { korz?: "interpret" | "resolve" };
+/**
+ * `resolve` dispatches through tables rebuilt after each install; `interpret` searches the sea
+ * every time; `compile` runs compiled blocks in batches, with the resolver beneath
+ * (KORZ-COMPILER.md).
+ */
+export type KorzPdp7Opts = Pdp7Opts & { korz?: "interpret" | "resolve" | "compile" };
 
 /** Shared results, so a step allocates nothing. */
 const RAN: Step = Object.freeze({});
@@ -87,12 +92,30 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 	private box: Backplane | null = null;
 	private readonly go = {} as Dispatchers<K7, Selector>;
 	private readonly coreMask = this.coreWords - 1;
+	/** With `korz: "compile"`. */
+	compiler: Compiler7 | null = null;
+	/** The backplane's write watch, which compiled stores call directly. */
+	writeWatch: ((addr: number) => void) | null = null;
+	declare runBatch?: (clock: Clock) => Step;
 
 	constructor(opts: KorzPdp7Opts = {}) {
 		super(opts);
 		this.sea.install(KorzPdp7.SLOTS);
 		if (opts.korz === "interpret") for (const s of SELECTORS) this.go[s] = (c) => this.sea.dispatch(s, c);
 		else this.sea.bind(this.go, SELECTORS);
+		if (opts.korz === "compile") {
+			const once = KorzPdp7.prototype.step;
+			const j = new Compiler7(this, () => once.call(this), { read: KorzPdp7.prototype.read, write: KorzPdp7.prototype.write });
+			this.compiler = j;
+			this.sea.install([KorzPdp7.COMPILED_WRITE]);
+			this.step = () => j.step();
+			this.runBatch = (k) => j.run(k);
+		}
+	}
+
+	override reset(): void {
+		super.reset();
+		this.compiler?.flush();
 	}
 
 	/** IOP1, IOP2, IOP4 in order, for the bits of the pulse; each goes to the `iop` selector. */
@@ -155,8 +178,9 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 	 */
 	override watchWrites(before: ((addr: number) => void) | null): void {
 		this.sea.remove(WATCH);
+		this.writeWatch = before;
 		if (!before) return;
-		this.sea.install([{ selector: "write", layer: "observe", by: WATCH, run: (c, next) => {
+		this.sea.install([{ selector: "write", layer: "observe", by: WATCH, emit: T7.watch, run: (c, next) => {
 			const { addr, value, who, access } = c;
 			before(addr);
 			c.addr = addr;
@@ -178,6 +202,15 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 		this.go.exec(x);
 	}
 
+	/** With `korz: "compile"`, the store into core also forgets the blocks compiled from the word. */
+	private static readonly COMPILED_WRITE: SlotSpec<K7> = { selector: "write", by: "core", emit: T7.coreWrite, run: (c) => {
+		const m = c.cpu;
+		const a = c.addr & m.coreMask;
+		m.core[a] = maskWord(c.value, 18);
+		const j = m.compiler!;
+		if (j.marks[a] !== 0) j.touch(a);
+	} };
+
 	/** Every CPU slot, built once for every machine: each reaches its machine as `c.cpu`. */
 	private static readonly SLOTS: readonly SlotSpec<K7>[] = KorzPdp7.slots();
 
@@ -189,23 +222,26 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 			m.pc = incr(ea);
 		};
 		const op = (name: keyof typeof OP, run: (c: K7) => void): SlotSpec<K7> =>
-			({ selector: "exec", guard: { op: OP[name] }, by: name.toUpperCase(), run });
-		const skip = (skp: number, by: string, run: (c: K7) => number): SlotSpec<K7> => ({ selector: "skip", guard: { skp }, by, run });
-		const cc = (cc: number, by: string, run: (c: K7) => number): SlotSpec<K7> => ({ selector: "cc", guard: { cc }, by, run });
-		const rot = (rot: number, by: string, run: (c: K7) => number): SlotSpec<K7> => ({ selector: "rot", guard: { rot }, by, run });
+			({ selector: "exec", guard: { op: OP[name] }, by: name.toUpperCase(), run, emit: (T7 as Record<string, unknown>)[name] });
+		const skip = (skp: number, by: string, run: (c: K7) => number): SlotSpec<K7> =>
+			({ selector: "skip", guard: { skp }, by, run, emit: T7.skip(skp) });
+		const cc = (cc: number, by: string, run: (c: K7) => number): SlotSpec<K7> =>
+			({ selector: "cc", guard: { cc }, by, run, emit: T7.cc(cc) });
+		const rot = (rot: number, by: string, run: (c: K7) => number): SlotSpec<K7> =>
+			({ selector: "rot", guard: { rot }, by, run, emit: T7.rot(rot) });
 		return [
-			{ selector: "read", by: "core", run: (c) => c.cpu.core[c.addr & c.cpu.coreMask] ?? 0 },
+			{ selector: "read", by: "core", emit: T7.coreRead, run: (c) => c.cpu.core[c.addr & c.cpu.coreMask] ?? 0 },
 			{ selector: "write", by: "core", run: (c) => { c.cpu.core[c.addr & c.cpu.coreMask] = maskWord(c.value, 18); } },
 
 			// Effective address. Direct is the base case; indirect, auto-indexing, JMP I's extend restore and CAL override it.
-			{ selector: "ea", by: "direct: the address field in this word's bank", run: direct },
+			{ selector: "ea", by: "direct: the address field in this word's bank", run: direct, emit: T7.direct },
 			{ selector: "ea", guard: { ind: 1, op: span(0, OP.jmp + 1) }, by: "indirect, auto-indexing 10-17",
-				run: (c) => c.cpu.resolveIndirect(direct(c), false) },
+				run: (c) => c.cpu.resolveIndirect(direct(c), false), emit: T7.indirect },
 			{ selector: "ea", guard: { ind: 1, op: OP.jmp }, by: "JMP I: indirect, EMIR restores extend mode",
-				run: (c) => c.cpu.resolveIndirect(direct(c), true) },
-			{ selector: "ea", guard: { op: OP.cal, ind: 0 }, by: "CAL: 20, absolute in extend mode", run: (c) => cal(c.cpu) },
+				run: (c) => c.cpu.resolveIndirect(direct(c), true), emit: T7.jmpIndirect },
+			{ selector: "ea", guard: { op: OP.cal, ind: 0 }, by: "CAL: 20, absolute in extend mode", run: (c) => cal(c.cpu), emit: T7.calEa },
 			{ selector: "ea", guard: { op: OP.cal, ind: 1 }, by: "CAL I: indirect through 20",
-				run: (c) => c.cpu.resolveIndirect(cal(c.cpu), false) },
+				run: (c) => c.cpu.resolveIndirect(cal(c.cpu), false), emit: T7.calIndirect },
 
 			op("cal", (c) => jms(c.cpu, c.ea)),
 			op("dac", (c) => c.cpu.write(c.ea, c.cpu.ac)),
@@ -255,9 +291,9 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 				if (io.skip) m.pc = incr(m.pc);
 			}),
 			{ selector: "exec", guard: { op: OP.opr, ind: 0 }, by: "OPR: skip, then clear and complement, OAS, rotate, HLT",
-				run: (c) => c.cpu.operate(c) },
+				run: (c) => c.cpu.operate(c), emit: T7.opr },
 			{ selector: "exec", guard: { op: OP.opr, ind: 1 }, by: "LAW: AC is the instruction word",
-				run: (c) => { c.cpu.ac = c.ir & WMASK; } },
+				run: (c) => { c.cpu.ac = c.ir & WMASK; }, emit: T7.law },
 
 			// The operate group's skip field, IR<8:11>.
 			skip(0o00, "none", () => 0),
@@ -296,7 +332,7 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 			cc(0o17, "CLA CLL CML CMA", () => LACMASK),
 
 			// Rotates, IR<7,13:14>.
-			{ selector: "rot", by: "no rotate", run: (c) => c.lac },
+			{ selector: "rot", by: "no rotate", run: (c) => c.lac, emit: T7.rot(0) },
 			rot(0o1, "RAL", (c) => ((c.lac << 1) | (c.lac >> 18)) & LACMASK),
 			rot(0o2, "RAR", (c) => ((c.lac >> 1) | (c.lac << 18)) & LACMASK),
 			rot(0o5, "RTL", (c) => ((c.lac << 2) | (c.lac >> 17)) & LACMASK),

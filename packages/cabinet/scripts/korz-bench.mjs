@@ -1,6 +1,6 @@
-// The PDP-7 at every Korz level, on the same workloads: Pdp7 (switch statements), KorzPdp7 with the
-// resolver's tables, and KorzPdp7 searching the sea. Run `npm run build` first.
-//   node scripts/korz-bench.mjs [workload...] [--steps N] [--rounds N] [--level pdp7|resolve|interpret] [--mixed] [--record] [--check]
+// The PDP-7 at every Korz level, on the same workloads: Pdp7 (switch statements), KorzPdp7 compiled,
+// KorzPdp7 with the resolver's tables, and KorzPdp7 searching the sea. Run `npm run build` first.
+//   node scripts/korz-bench.mjs [workload...] [--steps N] [--rounds N] [--level pdp7|compile|resolve|interpret] [--mixed] [--record] [--check]
 // Workloads: unix (UNIX v0 boot), hand (ULTIMATE-HAND in Forth: DataHand, 340, Ultimate Machine),
 // turing (the Turing engine running BCOUNT free while Forth draws its tape on the 340).
 // --record appends one JSON line per level and workload to bench-results/korz.jsonl.
@@ -32,7 +32,7 @@ const opt = (name) => {
 };
 const named = args.filter((a, i) => !a.startsWith("--") && !["--steps", "--level", "--rounds"].includes(args[i - 1] ?? ""));
 const only = args.includes("--level") ? args[args.indexOf("--level") + 1] : undefined;
-if (only && !["pdp7", "resolve", "interpret"].includes(only)) throw new Error(`--level pdp7, resolve or interpret, not ${only}`);
+if (only && !["pdp7", "compile", "resolve", "interpret"].includes(only)) throw new Error(`--level pdp7, compile, resolve or interpret, not ${only}`);
 
 const tapes = new URL("../tapes/", import.meta.url);
 const text = (f) => readFileSync(new URL(f, tapes), "utf8");
@@ -135,6 +135,7 @@ const workloads = {
 
 const levels = [
 	["pdp7", "Pdp7", undefined],
+	["compile", "KorzPdp7 compile", (o) => new KorzPdp7({ ...o, korz: "compile" })],
 	["resolve", "KorzPdp7 resolve", (o) => new KorzPdp7({ ...o, korz: "resolve" })],
 	["interpret", "KorzPdp7 interpret", (o) => new KorzPdp7({ ...o, korz: "interpret" })],
 ];
