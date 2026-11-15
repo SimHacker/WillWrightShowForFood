@@ -249,7 +249,7 @@ instruction by instruction, comparing registers every step:
 4. **The compiler**, which turns runs of PDP-7 instructions into JavaScript functions.
 
 The tests run 300 random core images, UNIX booting to its prompt, and every device setup: SYMELEC
-on the 340, the Turing engine, light-pen drawings sent over the Titan link, DataHand frames by
+on the 340, the Turing engine, drawings made with the light pen and sent over the Titan link, DataHand frames by
 interrupt. Then I break things on purpose to check the tests notice. I planted 24 errors in the
 compiler's generated code, and the tests caught 23 of them. The 24th turned out to change nothing.
 
@@ -385,7 +385,7 @@ slots on a different bus.
 And then machines sharing memory with each other. MIT's AI Lab had a Rubin 10/11 interface that
 let the PDP-10 map a PDP-11's memory and device registers into its own address space. In the
 cabinet, two machines will share memory through slots that say so, and `why` will tell you which
-machine is answering. The Tiny Titan link already carries light-pen drawings from one machine to another.
+machine is answering. The Tiny Titan link already carries drawings made with the light pen from one machine to another.
 
 ## Fun before realism, and still exact
 
@@ -473,7 +473,7 @@ Every demo runs in the browser, from the original code where it survives:
 - [Forth](https://hyperties.org/cabinet/forth/): Mitch Bradley's PDP-7 Forth, with his turtle
   graphics on the 340, after Logo's turtle by Seymour Papert, Wally Feurzeig and Cynthia Solomon.
 - [SYMELEC](https://hyperties.org/cabinet/symelec/): PIXIE's main program, Heinz Lemke's 1972
-  light-pen editor, with its radial menus. This is where the whole emulator started.
+  editor, driven by the light pen, with its radial menus. This is where the whole emulator started.
 - [DUEL](https://hyperties.org/cabinet/duel/): DECUS 7-40, by Peterson and Viner (Cambridge, 1968), two ships on the
   340, flown from the console switches by two players on one keyboard.
 - [Turing engine](https://hyperties.org/cabinet/turing/): the Turing machine coprocessor on device
