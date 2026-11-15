@@ -20,9 +20,12 @@ listing and runs in the browser with its light pen and its radial menus. Heinz p
 again, for Bayesian network models of health care. PIXIE is on the program of an HCI session at
 CARS 2027 in Berlin on 29 June 2027, the 60th anniversary of his first Cambridge lecture.
 
-Underneath, the whole machine is a Korz program, in TypeScript: the design of a language almost
-nobody has heard of, running on a JavaScript JIT that exists because of a language almost nobody
-uses any more. This article is about those two languages, Self and Korz, and why they turn out to be exactly
+My first implementation was a straight port to TypeScript of SIMH's PDP-7 simulator, by Bob
+Supnik, and SIMH's Type 340 display, by Phil Budne. Once that worked, I used it as the oracle for
+three tiers of a Korz rearchitecture: an interpreter, a resolver and a compiler, each checked
+instruction by instruction against the tier below. Korz is a language almost nobody has heard of,
+and it runs here on a JavaScript JIT that exists because of a language almost nobody uses any
+more. This article is about those two languages, Self and Korz, and why they turn out to be exactly
 the right tools for building emulators you can take apart while they run.
 
 ## Self, and the JIT in your browser
@@ -171,8 +174,8 @@ a dead device names the power switch.
 I kept every level of the implementation, and each one is tested against the one below it,
 instruction by instruction, comparing registers every step:
 
-1. **`Pdp7`**, plain switch statements, a TypeScript port of Bob Supnik's SIMH PDP-7 simulator. This
-   is the reference.
+1. **`Pdp7`**, plain switch statements, the TypeScript port of SIMH's PDP-7, with Phil Budne's
+   Type 340 ported nearly line by line. This is the reference.
 2. **The Korz interpreter.** For every dispatch, it filters the selector's slots, sorts the matches
    by specificity, and calls the chain. Slow, obvious and correct. It boots UNIX at about four
    times the speed of a real PDP-7.
