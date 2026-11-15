@@ -904,6 +904,63 @@ One seam serves both modes, as `TitanPort` already does for the link: a
 display port and an event port, in-process when local, a WebSocket when
 remote.
 
+### Placement: what can run where
+
+Local and remote are two points in a wider space. A tab, its workers, a
+Node server and remote servers each can hold any part of a cabinet, and many
+CPUs can talk over tiny-titan, serial lines, modems and networks. Placement
+is configuration, not a rewrite, because of one rule about devices.
+
+**Every device has a bus side and a far side.** The bus side is what the
+CPU's instruction timing reaches. It holds the registers and flags an IOT
+reads and answers within the instruction (a skip is decided before the
+next fetch), and any DMA into core at memory speed. It runs where the core
+is, in the CPU's thread, and it is what the device's Korz slots and `tick`
+are. The far side is everything else: the phosphor, the window, the
+camera, the speaker, the human. It runs anywhere and talks to the bus side
+through a port.
+
+| Device | Bus side, with the CPU | Far side, anywhere |
+|---|---|---|
+| Type 340 | display processor, DMA from core, DAC and flags, light-pen hit tests in beam time | phosphor rendering from segments, the canvas or WebGL |
+| Light pen | the hit test, inside the 340 | where the pen is: pointer, Pencil, a remote viewer's cursor |
+| Teletype | buffers, flags, character timing | keyboard, paper, a terminal on another machine |
+| DataHand | latched registers, frame flag | camera and hand tracker |
+| Ultimate Machine | phases, lever, IOT gates | the animated box, a real servo |
+| RB09, paper tape | controller state, word timing, DMA | the platter or tape image, its storage |
+| Tiny Titan | link registers and flags | the other end: another machine, a hub, a service |
+
+So "the display in its own worker" means the far side: a renderer worker
+fed segments, with `OffscreenCanvas`. The 340 itself stays with the core it
+fetches from. Moving it would mean shipping it a copy of the display file
+(the NeWS idea above), with pen hits returning in machine time.
+
+**Ports carry plain data stamped with machine time.** Down: segments,
+characters, device state. Up: keys, pen positions, hand frames, switches,
+each applied at a stated cycle of the receiving machine. That stamp is what
+keeps replay, the session log and lockstep testing exact wherever the far
+side is. A port is a function call when both ends share a thread, a
+`postMessage` between workers, and a WebSocket between hosts. The bus side
+never knows which.
+
+**Machines are sites with their own clocks.** Two CPUs talk only through
+links (tiny-titan, serial, modem, network), each with a latency in cycles,
+and a message carries the cycle it was sent at. Free-running is the
+default: each machine runs at its own pace, and arrival is whenever it
+arrives. When a run must be reproducible, a machine may run ahead of its
+peers only by the link latency, so no message can arrive in its past. That
+is conservative parallel discrete-event simulation (Chandy, Misra and
+Bryant), with the link's own latency as the lookahead. A 110-baud serial
+line gives a long lookahead and almost no waiting. A shared-memory link
+has none, which is why shared memory between sites needs the rules in
+[CORE-LINKS.md](CORE-LINKS.md#modes).
+
+**What is built today** is the in-process case of all of it: devices
+already expose their far sides as callbacks and ports (`onFrame`,
+`onPrint`, `type`, pens, `source` and `feed`, `TitanPort`). No transport
+layer is built until a placement needs it; each one, when it comes, is a
+port implementation, not a change to a device.
+
 **On a shared server** the emulated code cannot leave the emulator, but
 the server still trusts nothing from a tab: validate every message
 against its schema, cap VMs and CPU per user, rate-limit events, cap

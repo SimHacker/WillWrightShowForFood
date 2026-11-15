@@ -51,8 +51,13 @@ lossy codec says so in the debugger.
 ## Modes
 
 - **Shared.** Both sides see the same words. A read on either side goes through the codec to the
-  owner's storage. Because every machine steps in one thread on one backplane clock, there is no
-  coherence problem: a write is visible to the other side on the next cycle it runs.
+  owner's storage. When both machines step in one thread on one backplane clock, there is no
+  coherence problem: a write is visible to the other side on the next cycle it runs. Between
+  workers or hosts ([DESIGN.md](DESIGN.md#placement-what-can-run-where)) there is no shared clock,
+  so a shared range needs a protocol. Either one site owns it and the others send reads and writes
+  to it (exact, and as slow as the round trip), or each site keeps a copy and writes travel as a
+  stream of stamped updates, applied at agreed points such as a lock hand-off. An observe slot on
+  the range's `write` selector produces that stream without touching the CPU.
 - **Exclusive.** One side owns the range at a time; the other's reads and writes wait or fault until
   ownership passes, by a lock word (ITS's `AOSE` convention or the PDP-7's `ISZ` on `777777`,
   [MAPPING.md](MAPPING.md#locks)) or by an explicit hand-off. Disk buffers and display lists that a
