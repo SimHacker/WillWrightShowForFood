@@ -437,14 +437,14 @@ resolver against the interpreter on random seas, errors included. Each level is 
 one above it, and the compiler joins as a third mode.
 
 **Speed.** `npm run bench:korz` ([`scripts/korz-bench.mjs`](scripts/korz-bench.mjs)): UNIX v0, 3
-million steps, a new machine each round, best of rounds 2 to 5, Node 20 on an M4 Max. All three
-end at the same PC.
+million steps, a new machine each round, best of rounds 2 to 5, Node 26 on an M4 Max, devices
+event-driven. All three end at the same PC.
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 33 M | 30 ns |
-| `KorzPdp7`, resolver | 21.6 M | 46 ns |
-| `KorzPdp7`, interpreter | 1.1 M | 890 ns |
+| `Pdp7` | 91 M | 11 ns |
+| `KorzPdp7`, resolver | 34 M | 29 ns |
+| `KorzPdp7`, interpreter | 1.3 M | 800 ns |
 | A real PDP-7 | about 0.3 M | 1.75 µs memory cycle |
 
 The second workload is `ULTIMATE-HAND` in Forth, with a procedural hand in place of the camera
@@ -454,21 +454,35 @@ three levels end with the same PC, press count, frames latched and frames drawn.
 
 | CPU | Steps per second | Time per step |
 |---|---|---|
-| `Pdp7` | 11.3 M | 88 ns |
-| `KorzPdp7`, resolver | 9.2 M | 109 ns |
-| `KorzPdp7`, interpreter | 1.1 M | 900 ns |
+| `Pdp7` | 13.3 M | 75 ns |
+| `KorzPdp7`, resolver | 9.8 M | 102 ns |
+| `KorzPdp7`, interpreter | 1.2 M | 810 ns |
 
-Here the devices dominate: in `Pdp7`, the cabinet's per-step loop over `irq`, `power` and `tick`
-is about two thirds of the time and the CPU about a fifth. Each workload and level runs in its own
+The third is the Turing engine on device 54 running BCOUNT free (`0 SPEED`) at one transition every
+three cycles, while Forth draws its tape on the 340 (`node scripts/korz-bench.mjs turing`), 5
+million steps. All three levels end with the same PC, transition count, state and head.
+
+| CPU | Steps per second | Time per step |
+|---|---|---|
+| `Pdp7` | 14.0 M | 71 ns |
+| `KorzPdp7`, resolver | 8.2 M | 122 ns |
+| `KorzPdp7`, interpreter | 0.87 M | 1.15 µs |
+
+In these two the devices dominate: the 340 drawing, the engine running and the Ultimate Machine
+watching its lever must each be ticked every cycle. Each workload and level runs in its own
 process, since call sites shared between workloads (the cabinet's device loop) see each other's
-devices; repeated runs differ by up to 8%.
+devices; repeated runs differ by up to 8%. Node 20 ran `Pdp7` at 15 ns on UNIX and 149 ns on the
+Turing workload; the resolver's 29 ns on UNIX is the same on both, so the gap the compiler has to
+close grew to 2.6 times.
 `--record` appends results to [`bench-results/korz.jsonl`](bench-results/korz.jsonl) with the
-commit, Node version and machine.
+commit, Node version and machine. `--check` compares each result with the last one recorded on the
+same machine, Node version, workload, level and step count, and exits 1 if the end state changed
+or the steady time per step is more than 10% slower.
 
 A step makes five to eight dispatches (fetch, its read, `ea`, `exec`, operand reads and writes,
 three more for OPR), and each filters the selector's slots and sorts the matches: about 150 ns a
-dispatch. The interpreter is the oracle and the engine behind `why`, and at 3.7 times a real PDP-7
-it is fast enough to boot UNIX in a test.
+dispatch. The interpreter is the oracle and the engine behind `why`, and at about four times a real
+PDP-7 it is fast enough to boot UNIX in a test.
 
 **The resolver** (`Sea.resolve`, `Sea.bind`) turns each selector into an array indexed by the
 dimensions its slots constrain, and drops the rest: `exec` and `ea` have 32 entries, `skip` and `cc`
@@ -499,13 +513,42 @@ target is permanent. Three changes made every machine look the same:
 - the CPU's slots built once, reaching their machine as `c.cpu` in the context;
 - no stubs: an install or remove rebuilds the tables it touched before it returns.
 
-A later machine now runs UNIX at 46 ns a step, faster than the first, which pays for warm-up.
+A later machine then ran UNIX at 46 ns a step, faster than the first, which pays for warm-up.
 Device slots are still closures over their devices; the hand workload, where devices dominate,
 shows no difference between first and later machines, so they stay as they are until a
 measurement says otherwise. The benchmark builds a new machine every round and says so when later
-machines run more than 10% slower than the first. Of the 46 ns, about 20 ns is the cabinet ticking
-four devices, the same cost `Pdp7` pays; the rest is writing coordinates into context objects and
-five to eight inlined dispatches.
+machines run more than 10% slower than the first. About 17 ns of the 46 was the cabinet calling
+`irq`, `power` and `tick` on four devices every step, the same cost `Pdp7` paid.
+
+**Event-driven devices.** A device with `nextEvent()` tells the cabinet how many cycles remain
+before it does anything the CPU or the outside world can see: the clock's next tick, the teletype
+finishing a character, the paper tape's next frame, the RB09's next word, the DataHand's next
+camera frame. `Infinity` means idle until an IOT, a reset or something external. The contract: for
+any n up to that count, `tick(n)` leaves the device exactly as n calls of `tick(1)` would. The
+cabinet keeps, for each device, the cycle it was last brought up to and the cycle it is next due,
+and leaves it alone in between. It brings a device up to date before an IOT that addresses it (the
+Korz CPU's `iot` slot calls `Backplane.sync`), before CAF, before a power change, and at the end of
+every `step` and `run`, so code outside a run always sees every device current. Anything changed
+from outside between runs, a key typed or a tape mounted, is picked up at the start of the next
+one. A device without `nextEvent` is ticked every cycle, as before; the 340 while drawing and the
+Turing engine while running report one cycle.
+
+The old loop stays as the `everyCycle` option, and it is the oracle. The lockstep tests run `Pdp7`
+ticking every device every cycle against `KorzPdp7` event-driven and compare registers at every
+step: UNIX, the Forth rigs, and two rigs that take paper tape and DataHand frames by interrupt.
+The interrupt rigs matter because bringing a device up to date before each IOT hides a late event
+from a program that polls, but not from one that waits for the interrupt. Nine planted schedule
+errors each fail a test: five devices reporting their next event one cycle late, the Turing engine
+and the 340 ticked every other cycle, the Korz CPU skipping its sync before an IOT, and the cabinet
+deciding a device's next turn from its power before its tick instead of after. The last was a real
+bug, caught by the Ultimate Machine test: the machine switches itself off during its own tick.
+
+On UNIX, where the devices are idle most of the time, this took `Pdp7` from 30 to 15 ns a step
+and the resolver from 46 to 29 ns, on Node 20. On the hand workload it moved `Pdp7` 5% and the
+resolver not at all: the 340 and the Ultimate Machine still need the cabinet every cycle. Taking the
+340 off that path means letting it lag behind and catching it up before the CPU writes core it may
+be reading, a watch on `write`, which is the dependency the compiler's per-word invalidation needs
+anyway.
 
 **Prediction for the compiler.** The resolver still makes five to eight indirect calls a step,
 through a context object. The compiler folds them into each block's code, which should bring it to
@@ -696,8 +739,8 @@ word in core.
    teletype, paper tape, RB09, Type 340, Turing engine, Ultimate machine, Tiny Titan, titan-files,
    DataHand), in lockstep against their `iot()` methods
    ([`src/korz/iop.ts`](src/korz/iop.ts), [`src/korz/devices.test.ts`](src/korz/devices.test.ts)).
-4. **Built.** The resolver on the PDP-7: per-selector tables, 17 M steps per second with the
-   devices on the IOP bus.
+4. **Built.** The resolver on the PDP-7: per-selector tables, 34 M steps per second on UNIX with
+   the devices on the IOP bus and event-driven.
 5. Page-set normal forms with the brute-force tests; the Apple bus on the interpreter, against
    microM8 ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2).
 6. The resolver for the Apple: table sets, page kinds, interned chains, the opcode table,

@@ -132,6 +132,11 @@ export class Rb09 implements KorzDevice {
 		}
 	}
 
+	/** The transfer under way completes, by DMA; idle, nothing happens until DBLS. */
+	nextEvent(): number {
+		return this.due < 0 ? Infinity : this.due - this.now;
+	}
+
 	irq(): boolean {
 		return (this.sta & (STA_ERR | STA_DON)) !== 0 && (this.sta & STA_IE) !== 0;
 	}

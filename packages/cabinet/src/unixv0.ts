@@ -18,6 +18,8 @@ export type UnixV0Opts = {
 	onPaper?: (char: string) => void;
 	/** Build the CPU: `Pdp7` by default, `KorzPdp7` for the differential tests. */
 	cpu?: (opts: Pdp7Opts) => Pdp7;
+	/** Tick every unit every cycle, the oracle for the event-driven backplane. */
+	everyCycle?: boolean;
 };
 
 /**
@@ -36,7 +38,7 @@ export function bootUnixV0(opts: UnixV0Opts) {
 	};
 	const tty = new Teletype({ onPrint: print });
 	const disk = new Rb09({ cpu, image: opts.image });
-	const box = new Cabinet({ cpu, devices: [new Clock({ cpu }), tty, new PaperTape(), disk] });
+	const box = new Cabinet({ cpu, everyCycle: opts.everyCycle ?? false, devices: [new Clock({ cpu }), tty, new PaperTape(), disk] });
 	const start = readInAndGo(cpu, opts.bootTape, UNIXV0_BOOT_ORIGIN);
 	if (start === null) throw new Error("boot.rim ends in HLT, not a JMP");
 	cpu.pc = start;

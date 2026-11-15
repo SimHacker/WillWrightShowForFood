@@ -186,6 +186,11 @@ export class DataHand implements KorzDevice {
 		this.index = 0;
 	}
 
+	/** The next frame from the source; without one, frames come only from `feed`. */
+	nextEvent(): number {
+		return this.source ? this.untilFrame : Infinity;
+	}
+
 	irq(): boolean {
 		return this.flag && this.ie;
 	}

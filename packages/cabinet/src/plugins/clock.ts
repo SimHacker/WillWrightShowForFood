@@ -66,6 +66,11 @@ export class Clock implements Device, KorzDevice {
 		}
 	}
 
+	/** The next tick of the line clock bumps location 7; stopped, nothing happens until CLON. */
+	nextEvent(): number {
+		return this.on ? this.cyclesPerTick - this.accum : Infinity;
+	}
+
 	irq(): boolean {
 		return this.flag;
 	}

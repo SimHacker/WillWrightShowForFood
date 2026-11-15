@@ -117,16 +117,16 @@ Each device keeps its old `iot()` method as the oracle for its slots.
 Mutation checks confirm the tests notice when one gate is broken. Breaking IDSI, TMSS, TMSR, TMGO,
 UMSI, LSF, LLB18, RSB, DBSF, DBLM, RAL or the ION delay each makes a test fail. One gate, TMLA,
 survives: the Forth code always follows it with TMST, so no program here can see it. We report
-that rather than paper over it. The whole package has 270 passing tests.
+that rather than paper over it. The whole package has 272 passing tests.
 
-**Speed.** UNIX v0 boot, 3 million steps, a new machine each round, Node 20 on an M4 Max. All three
+**Speed.** UNIX v0 boot, 3 million steps, a new machine each round, Node 26 on an M4 Max. All three
 levels end at the same PC.
 
 | Level | Steps/s | ns/step |
 |---|---|---|
-| `Pdp7` (switch statements) | 33 M | 30 |
-| Korz resolver | 21.6 M | 46 |
-| Korz interpreter | 1.1 M | 900 |
+| `Pdp7` (switch statements) | 91 M | 11 |
+| Korz resolver | 34 M | 29 |
+| Korz interpreter | 1.3 M | 800 |
 | A real PDP-7 | about 0.3 M | 1.75 µs core cycle |
 
 Profiling took the resolver from 105 ns to 46 ns. Four changes did it:
@@ -136,8 +136,12 @@ Profiling took the resolver from 105 ns to 46 ns. Four changes did it:
 - Every machine shares the generated functions and the CPU's slots, so V8 sees one set of call
   targets however many machines run.
 
-About 20 ns of each step is the cabinet ticking its devices, a cost `Pdp7` pays too. Even the
-interpreter, the oracle, runs UNIX at about 3.7 times a real PDP-7.
+Then the devices became event-driven. Each one reports how many cycles remain before it does
+anything visible, and the cabinet leaves it alone until then, or until an IOT addresses it. That
+took the resolver from 46 to 29 ns and `Pdp7` from 30 to 15 ns. The old loop, every device every
+cycle, stays as the oracle, run in lockstep against the new one. Moving from Node 20 to 26 then took
+`Pdp7` to 11 ns and left the resolver where it was. Even the interpreter, the oracle, runs UNIX at
+about four times a real PDP-7.
 
 **The second machine, and what V8 keys on.** In one Node process, a second `KorzPdp7` ran 71–80 ns
 a step against the first one's 55. Same code, same program, same tables. V8 doesn't specialize on
@@ -201,8 +205,9 @@ snapshots).
 
 Our predictions:
 - 200–400 M PDP-7 instructions per second for the CPU alone, at about 65% confidence.
-- Capped near 40 M while devices tick every step, which is why event-driven devices (`nextEvent`)
-  come first.
+- Event-driven devices (`nextEvent`) are built, so on UNIX the cabinet no longer caps it. On
+  workloads with the 340 drawing it still does, until the 340 can lag behind and catch up before
+  the CPU writes core it may read.
 - After that, idle-loop skipping and block chaining.
 
 The point is not only speed. The compiler is the third level of an oracle ladder, and every level

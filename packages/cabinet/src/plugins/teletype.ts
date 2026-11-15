@@ -106,6 +106,11 @@ export class Teletype implements Device, KorzDevice {
 		}
 	}
 
+	/** The character being printed finishes; idle, nothing happens until TLS or a key. */
+	nextEvent(): number {
+		return this.printing < 0 ? Infinity : this.printing + 1;
+	}
+
 	irq(): boolean {
 		return this.kbdFlag || this.ttoFlag;
 	}

@@ -1,10 +1,13 @@
 // The PDP-7 at every Korz level, on the same workloads: Pdp7 (switch statements), KorzPdp7 with the
 // resolver's tables, and KorzPdp7 searching the sea. Run `npm run build` first.
-//   node scripts/korz-bench.mjs [workload...] [--steps N] [--rounds N] [--level pdp7|resolve|interpret] [--mixed] [--record]
-// Workloads: unix (UNIX v0 boot), hand (ULTIMATE-HAND in Forth: DataHand, 340, Ultimate Machine).
+//   node scripts/korz-bench.mjs [workload...] [--steps N] [--rounds N] [--level pdp7|resolve|interpret] [--mixed] [--record] [--check]
+// Workloads: unix (UNIX v0 boot), hand (ULTIMATE-HAND in Forth: DataHand, 340, Ultimate Machine),
+// turing (the Turing engine running BCOUNT free while Forth draws its tape on the 340).
 // --record appends one JSON line per level and workload to bench-results/korz.jsonl.
+// --check compares with the last recorded run on the same machine, Node, workload, level and step count,
+// and exits 1 if the result changed or the steady figure is more than 10% slower.
 import { execSync, spawnSync } from "node:child_process";
-import { appendFileSync, mkdirSync, readFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync } from "node:fs";
 import { cpus } from "node:os";
 import { fileURLToPath } from "node:url";
 import { gunzipSync } from "node:zlib";
@@ -16,6 +19,7 @@ import { syntheticHand, wavingHand } from "../dist/plugins/hand.js";
 import { Pdp7 } from "../dist/plugins/pdp7.js";
 import { parseRbImage } from "../dist/plugins/rb09.js";
 import { Teletype } from "../dist/plugins/teletype.js";
+import { TuringDevice } from "../dist/plugins/turing.js";
 import { Type340 } from "../dist/plugins/type340.js";
 import { UltimateMachine } from "../dist/plugins/ultimate.js";
 import { bootUnixV0 } from "../dist/unixv0.js";
@@ -87,9 +91,46 @@ function hand(make) {
 	};
 }
 
+let turingImage = null;
+/** The Turing engine running BCOUNT free (0 SPEED), drawing its tape on the 340 while Forth waits for a key. */
+function turing(make) {
+	turingImage ??= compileForth({
+		kernel: assembleForthKernel({
+			sop: text("pdp7unix/sop.s"),
+			kernel: text("pdp7forth/kernel-names-full.s"),
+			end: text("pdp7forth/end.s"),
+			kernelName: "kernel-names-full.s",
+		}),
+		sources: ["prelude.fs", "does.fs", "turtle.fs", "code.fs", "interrupt.fs", "tags.fs", "turing.fs", "pcomp-tm.fs"].map(
+			(f) => text(`pdp7forth/${f}`),
+		),
+	});
+	const cpu = make({ coreWords: 8192 });
+	let paper = "";
+	const t340 = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
+	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
+	const tm = new TuringDevice({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), rate: 1 / 3 });
+	const box = new Cabinet({ cpu, devices: [t340, tty, tm] });
+	t340.clock = () => box.cycles;
+	bootForth(cpu, turingImage);
+	box.run(300_000);
+	const line = (s) => {
+		const from = paper.length;
+		for (const ch of `${s}\r`) tty.type(ch.charCodeAt(0) | 0o200);
+		for (let n = 0; n < 100 && !/ok\r\n$/.test(paper.slice(from)); n += 1) box.run(50_000);
+	};
+	line("BCOUNT");
+	line("0 SPEED");
+	for (const ch of "RUN\r") tty.type(ch.charCodeAt(0) | 0o200);
+	box.run(200_000);
+	const e = tm.engine;
+	return { box, cpu, result: () => `pc ${cpu.pc.toString(8)} transitions ${e.count} state ${e.state} head ${e.head}` };
+}
+
 const workloads = {
 	unix: { title: "UNIX v0 boot", steps: 3_000_000, build: (cpu) => unix(cpu) },
 	hand: { title: "ULTIMATE-HAND, procedural hand", steps: 10_000_000, build: (cpu) => hand(cpu ?? ((o) => new Pdp7(o))) },
+	turing: { title: "Turing engine, BCOUNT running free", steps: 5_000_000, build: (cpu) => turing(cpu ?? ((o) => new Pdp7(o))) },
 };
 
 const levels = [
@@ -106,6 +147,8 @@ const commit = (() => {
 	}
 })();
 const machine = cpus()[0]?.model ?? "unknown";
+const recordFile = new URL("../bench-results/korz.jsonl", import.meta.url);
+const recorded = () => (existsSync(recordFile) ? readFileSync(recordFile, "utf8").split("\n").filter(Boolean).map((l) => JSON.parse(l)) : []);
 
 // Each workload and level runs in its own process, so V8's feedback from one doesn't slow another.
 // Round 1 is cold: its first tenth shows the cost before V8 has tiered up. The steady figure is the
@@ -127,9 +170,9 @@ for (const name of named.length ? named : Object.keys(workloads)) {
 	for (const [key, level, cpu] of levels) {
 		if (only && key !== only) continue;
 		if (!child) {
-			const pass = ["--steps", String(steps), "--rounds", String(rounds), ...(flag("--record") ? ["--record"] : []), ...(mixed ? ["--mixed"] : [])];
+			const pass = ["--steps", String(steps), "--rounds", String(rounds), ...(flag("--record") ? ["--record"] : []), ...(flag("--check") ? ["--check"] : []), ...(mixed ? ["--mixed"] : [])];
 			const r = spawnSync(process.execPath, [...process.execArgv, fileURLToPath(import.meta.url), name, "--level", key, "--child", ...pass], { stdio: "inherit" });
-			if (r.status !== 0) process.exit(r.status ?? 1);
+			if (r.status !== 0) process.exitCode = r.status ?? 1;
 			continue;
 		}
 		if (mixed) {
@@ -159,13 +202,30 @@ for (const name of named.length ? named : Object.keys(workloads)) {
 		// Every round is a new machine. The first pays for warm-up, so a later machine slower than it
 		// means V8 specialized on the first machine's objects and is paying to generalize.
 		if (best > first * 1.1) console.log(`  ${"".padEnd(20)} later machines run ${((best / first - 1) * 100).toFixed(0)}% slower than the first`);
+		if (flag("--check")) {
+			const last = recorded().findLast(
+				(r) => r.machine === machine && r.node === process.version && r.workload === name && r.level === level && r.steps === steps && r.mixed === mixed,
+			);
+			const now = ns(best, steps);
+			if (!last) console.log(`  ${"".padEnd(20)} nothing recorded for this machine and Node to check against`);
+			else {
+				if (last.result !== result) {
+					console.log(`  ${"".padEnd(20)} RESULT CHANGED from "${last.result}" (${last.commit})`);
+					process.exitCode = 1;
+				}
+				if (now > last.ns * 1.1) {
+					console.log(`  ${"".padEnd(20)} SLOWER: ${now.toFixed(1)} ns against ${last.ns} ns at ${last.commit}`);
+					process.exitCode = 1;
+				} else console.log(`  ${"".padEnd(20)} ${((now / last.ns - 1) * 100).toFixed(0)}% against ${last.ns} ns at ${last.commit}`);
+			}
+		}
 		if (flag("--record")) {
 			mkdirSync(new URL("../bench-results/", import.meta.url), { recursive: true });
 			const line = {
 				date: new Date().toISOString(), commit, node: process.version, machine, workload: name, level, steps, rounds, mixed,
 				mps: +mps.toFixed(3), ns: +ns(best, steps).toFixed(1), coldTenthNs: +ns(tenth, Math.floor(steps / 10)).toFixed(1), round1Ns: +ns(first, steps).toFixed(1), result,
 			};
-			appendFileSync(new URL("../bench-results/korz.jsonl", import.meta.url), `${JSON.stringify(line)}\n`);
+			appendFileSync(recordFile, `${JSON.stringify(line)}\n`);
 		}
 	}
 }

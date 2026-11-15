@@ -24,6 +24,15 @@ export interface Device {
 	readonly iots: readonly number[];
 	iot(req: Iot): IotReply;
 	tick?(cycles: number): void;
+	/**
+	 * Cycles until this unit next does something anyone can see: raises a flag, changes `irq`,
+	 * writes core, or produces output. The backplane may then make one `tick(n)` for up to that
+	 * many cycles instead of n `tick(1)`s, so the two must agree. Infinity: nothing happens until an
+	 * IOT, a reset, or something outside the machine touches the unit; the backplane brings it up
+	 * to date before each of those. Absent, a unit with `tick` is ticked every cycle. Its power may
+	 * then change only through `Cabinet.setPower`.
+	 */
+	nextEvent?(): number;
 	/** True while this device requests an interrupt (its flag is up). */
 	irq?(): boolean;
 	/** Clear flags. Invoked by CAF and by Cabinet.reset(). */
@@ -52,6 +61,8 @@ export type Step = {
 export type Backplane = {
 	readonly devices: readonly Device[];
 	resetDevices(): void;
+	/** Bring the unit on this IOT code up to the current cycle; a CPU that dispatches its own IOTs calls it before each. */
+	sync(code: number): void;
 };
 
 export interface Cpu {

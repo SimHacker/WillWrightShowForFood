@@ -613,6 +613,11 @@ export class TuringDevice implements Device, KorzDevice {
 		if (!this.engine.running) this.accum = 0;
 	}
 
+	/** Running, the engine works on core every cycle; stopped, nothing happens until TMLA or TMGO. */
+	nextEvent(): number {
+		return this.engine.running ? 1 : Infinity;
+	}
+
 	irq(): boolean {
 		return (this.engine.status & TM_FLAGS) !== 0;
 	}

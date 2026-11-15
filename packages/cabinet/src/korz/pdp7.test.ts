@@ -66,27 +66,44 @@ test(`korz pdp7, ${korz}: random programs, every opcode and IOT, match Pdp7 step
 test(`korz pdp7, ${korz}: UNIX v0 boots in lockstep with Pdp7 to the shell prompt`, () => {
 	const platter = gunzipSync(readFileSync(new URL("../../tapes/unixv0/image.fs.gz", import.meta.url)));
 	const bootTape = readFileSync(new URL("../../tapes/unixv0/boot.rim", import.meta.url));
-	const a = bootUnixV0({ image: parseRbImage(platter), bootTape });
+	// The oracle ticks every unit every cycle; the Korz side runs on the event-driven backplane.
+	const a = bootUnixV0({ image: parseRbImage(platter), bootTape, everyCycle: true });
 	const b = bootUnixV0({ image: parseRbImage(platter), bootTape, cpu: (o) => new KorzPdp7({ ...o, korz }) });
 	assert.ok(b.cpu instanceof KorzPdp7);
-	const lockstep = (until: string, max: number): number => {
-		for (let n = 0; n < max; n += 1) {
-			a.box.step();
-			b.box.step();
-			if (regs(a.cpu) !== regs(b.cpu)) assert.equal(regs(b.cpu), regs(a.cpu), `step ${n}`);
-			if (n % 1000 === 0 && a.paper().endsWith(until)) return n;
+	const logged = (cpu: Pdp7): string[] => {
+		const log: string[] = [];
+		const step = cpu.step.bind(cpu);
+		cpu.step = () => {
+			log.push(regs(cpu));
+			return step();
+		};
+		return log;
+	};
+	const logA = logged(a.cpu);
+	const logB = logged(b.cpu);
+	let steps = 0;
+	const slice = (k: number): void => {
+		a.box.run(k);
+		b.box.run(k);
+		for (let i = 0; i < logA.length; i += 1) if (logA[i] !== logB[i]) assert.equal(logB[i], logA[i], `step ${steps + i}`);
+		assert.equal(logB.length, logA.length);
+		assert.equal(regs(b.cpu), regs(a.cpu), `after step ${steps + logA.length}`);
+		steps += logA.length;
+		logA.length = 0;
+		logB.length = 0;
+	};
+	const lockstep = (until: string, max: number): void => {
+		for (let n = 0; n < max; n += 1000) {
+			slice(1000);
+			if (a.paper().endsWith(until)) return;
 		}
-		return assert.fail(`no "${until}" in ${max} steps: ${a.paper()}`);
+		assert.fail(`no "${until}" in ${max} steps: ${a.paper()}`);
 	};
 	const key = (text: string): void => {
 		for (const ch of text) {
 			a.key(ch);
 			b.key(ch);
-			for (let n = 0; n < 20_000; n += 1) {
-				a.box.step();
-				b.box.step();
-			}
-			assert.equal(regs(b.cpu), regs(a.cpu));
+			for (let n = 0; n < 20_000; n += 1000) slice(1000);
 		}
 	};
 	let fetches = 0;

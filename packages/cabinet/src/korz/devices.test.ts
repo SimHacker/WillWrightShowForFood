@@ -19,9 +19,12 @@ import { loadSymelec } from "../symelec-fixtures.js";
 import { KorzPdp7 } from "./pdp7.js";
 
 /**
- * The devices' Korz slots against their `iot()`: two cabinets built alike, one a `Pdp7` whose
- * backplane calls `iot()`, one a `KorzPdp7` whose sea holds the devices' slots, fed the same keys at
- * the same step. Registers must match at every step, and paper and device state at the end.
+ * The devices' Korz slots against their `iot()`, and the event-driven backplane against ticking
+ * every unit every cycle: two cabinets built alike, one a `Pdp7` whose backplane calls `iot()` and
+ * ticks every cycle, one a `KorzPdp7` whose sea holds the devices' slots on a backplane that ticks
+ * each unit at its `nextEvent`, fed the same keys at the same step. Both run in slices, so units
+ * are caught up and rescheduled at slice boundaries as they are in use. Registers must match at
+ * every step, and paper and device state at the end.
  */
 
 type Make = (opts: Pdp7Opts) => Pdp7;
@@ -29,17 +32,38 @@ type Rig = { cpu: Pdp7; box: Cabinet; tty: Teletype; paper: () => string; state:
 
 const regs = (c: Pdp7) => [c.pc, c.ac, c.link, c.mq, c.sc, c.ion, c.ionDefer, c.extend, c.halted].join(" ");
 
-function pair(build: (make: Make) => Rig, korz: "interpret" | "resolve") {
-	const a = build((o) => new Pdp7(o));
-	const b = build((o) => new KorzPdp7({ ...o, korz }));
+const SLICE = 5000;
+
+function pair(build: (make: Make, every: boolean) => Rig, korz: "interpret" | "resolve") {
+	const a = build((o) => new Pdp7(o), true);
+	const b = build((o) => new KorzPdp7({ ...o, korz }), false);
 	assert.ok(b.cpu instanceof KorzPdp7);
+	/** Registers as each step begins: the state every earlier step, and every tick, left behind. */
+	const logged = (r: Rig): string[] => {
+		const log: string[] = [];
+		const step = r.cpu.step.bind(r.cpu);
+		r.cpu.step = () => {
+			log.push(regs(r.cpu));
+			return step();
+		};
+		return log;
+	};
+	const logA = logged(a);
+	const logB = logged(b);
 	let steps = 0;
 	const run = (n: number): void => {
-		for (let i = 0; i < n; i += 1) {
-			a.box.step();
-			b.box.step();
-			steps += 1;
-			if (regs(a.cpu) !== regs(b.cpu)) assert.equal(regs(b.cpu), regs(a.cpu), `step ${steps}`);
+		for (let left = n; left > 0; left -= SLICE) {
+			const k = Math.min(left, SLICE);
+			a.box.run(k);
+			b.box.run(k);
+			for (let i = 0; i < logA.length; i += 1) {
+				if (logA[i] !== logB[i]) assert.equal(logB[i], logA[i], `step ${steps + i}`);
+			}
+			assert.equal(logB.length, logA.length, `steps run by step ${steps}`);
+			assert.equal(regs(b.cpu), regs(a.cpu), `after step ${steps + logA.length}`);
+			steps += logA.length;
+			logA.length = 0;
+			logB.length = 0;
 		}
 	};
 	const type = (text: string): void => {
@@ -84,20 +108,20 @@ function forth(last: string, kernel = "kernel-names-full.s", first = "interrupt.
 
 const frame = (t: Type340): string => JSON.stringify(t.lastFrame?.segments ?? []);
 
-function symelec(make: Make): Rig {
+function symelec(make: Make, every = false): Rig {
 	const cpu = make({ coreWords: 8192 });
 	loadSymelec(cpu, ["core8k"]);
 	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000 });
 	const clock = new Clock({ cpu });
 	const titan = new TinyTitan();
-	const box = new Cabinet({ cpu, devices: [t, tty, clock, titan] });
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, clock, titan] });
 	t.clock = () => box.cycles;
 	cpu.pc = 0o22;
 	return { cpu, box, tty, paper: () => "", state: () => `${frame(t)} ${clock.flag} ${titan.flag}` };
 }
 
-function symelecTitan(make: Make) {
+function symelecTitan(make: Make, every = false) {
 	const cpu = make({ coreWords: 8192 });
 	loadSymelec(cpu);
 	const host = new BlockletHost([0o24]);
@@ -105,33 +129,33 @@ function symelecTitan(make: Make) {
 	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), pens: [pen] });
 	const tty = new Teletype({ printCycles: 200 });
 	const titan = new TinyTitan({ port: host });
-	const box = new Cabinet({ cpu, devices: [t, tty, new Clock({ cpu }), titan] });
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, new Clock({ cpu }), titan] });
 	t.clock = () => box.cycles;
 	cpu.pc = 0o22;
 	const state = () => `${frame(t)} ${host.received.join(",")} ${host.controls.join(",")} ${host.disconnected}`;
 	return { cpu, box, tty, pen, host, paper: () => tty.printed(), state };
 }
 
-function turing(make: Make): Rig {
+function turing(make: Make, every = false): Rig {
 	const cpu = make({ coreWords: 8192 });
 	let paper = "";
 	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
 	const tm = new TuringDevice({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), rate: 1 / 3 });
-	const box = new Cabinet({ cpu, devices: [t, tty, tm] });
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, tm] });
 	t.clock = () => box.cycles;
 	bootForth(cpu, forth("turing.fs pcomp-tm.fs"));
 	const e = tm.engine;
 	return { cpu, box, tty, paper: () => paper, state: () => `${frame(t)} ${e.status} ${e.state} ${e.count} ${e.head}` };
 }
 
-function ultimate(make: Make): Rig {
+function ultimate(make: Make, every = false): Rig {
 	const cpu = make({ coreWords: 8192 });
 	let paper = "";
 	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
 	const u = new UltimateMachine({ wait: 10, open: 10, reach: 10, press: 10, return: 10, close: 10, rest: 10 });
-	const box = new Cabinet({ cpu, devices: [t, tty, u] });
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, u] });
 	t.clock = () => box.cycles;
 	bootForth(cpu, forth("ultimate.fs"));
 	return { cpu, box, tty, paper: () => paper, state: () => `${frame(t)} ${u.presses} ${u.phase} ${u.ons} ${u.lever}` };
@@ -142,7 +166,7 @@ function ultimate(make: Make): Rig {
  *   100 RSA; 101 RSF; 102 JMP 101; 103 RRB; 104 DAC I 10; 105 ISZ 20; 106 JMP 100
  *   107 RSB; 110 RSF; 111 JMP 110; 112 RRB; 113 DAC I 11; 114 ISZ 21; 115 JMP 107; 116 HLT
  */
-function reader(make: Make) {
+function reader(make: Make, every = false) {
 	const cpu = make({ coreWords: 8192 });
 	const code = [
 		0o700104, 0o700101, 0o600101, 0o700112, 0o060010, 0o440020, 0o600100,
@@ -157,19 +181,59 @@ function reader(make: Make) {
 	for (let i = 0; i < 9; i += 1) frames.push(0o200 | ((i * 0o13 + 0o5) & 0o77));
 	const pt = new PaperTape({ tape: Uint8Array.from(frames), frameCycles: 30 });
 	const tty = new Teletype();
-	const box = new Cabinet({ cpu, devices: [tty, pt] });
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [tty, pt] });
 	cpu.pc = 0o100;
 	const words = (a: number, n: number) => Array.from({ length: n }, (_, i) => cpu.read(a + i).toString(8));
 	return { cpu, box, tty, paper: () => "", state: () => `${words(0o1000, 5)} ${words(0o2000, 3)} ${pt.pos} ${pt.flag} ${pt.buf}` };
 }
 
-function hand(make: Make): Rig {
+/**
+ * The same five frames, read by interrupt: the program spins, and the interrupt routine takes each
+ * frame and starts the next, so a frame that comes a cycle late interrupts a step late.
+ *   1 JMP 200;  100 RSA; 101 ION; 102 JMP 102
+ *   200 RRB; 201 DAC I 10; 202 ISZ 20; 203 JMP 205; 204 HLT; 205 RSA; 206 ION; 207 JMP I 0
+ */
+function readerIrq(make: Make, every = false) {
+	const cpu = make({ coreWords: 8192 });
+	cpu.write(0o1, 0o600200);
+	[0o700104, 0o700042, 0o600102].forEach((w, i) => cpu.write(0o100 + i, w));
+	[0o700112, 0o060010, 0o440020, 0o600205, 0o740040, 0o700104, 0o700042, 0o620000].forEach((w, i) => cpu.write(0o200 + i, w));
+	cpu.write(0o10, 0o777);
+	cpu.write(0o20, 0o777773);
+	const pt = new PaperTape({ tape: Uint8Array.from([0o101, 0o102, 0o377, 0o000, 0o215]), frameCycles: 30 });
+	const tty = new Teletype();
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [tty, pt] });
+	cpu.pc = 0o100;
+	const words = Array.from({ length: 5 }, (_, i) => 0o1000 + i);
+	return { cpu, box, tty, paper: () => "", state: () => `${words.map((a) => cpu.read(a).toString(8))} ${pt.pos} ${pt.flag}` };
+}
+
+/**
+ * DataHand frames by interrupt: enable its interrupt, spin, and count twenty frames in the
+ * interrupt routine, which clears the flag. A frame a cycle late interrupts a step late.
+ *   1 JMP 300;  100 LAW 1; 101 IE; 102 ION; 103 JMP 103
+ *   300 clear flag; 301 ISZ 21; 302 JMP 304; 303 HLT; 304 ION; 305 JMP I 0
+ */
+function handIrq(make: Make, every = false) {
+	const cpu = make({ coreWords: 8192 });
+	cpu.write(0o1, 0o600300);
+	[0o760001, 0o705764, 0o700042, 0o600103].forEach((w, i) => cpu.write(0o100 + i, w));
+	[0o705744, 0o440021, 0o600304, 0o740040, 0o700042, 0o620000].forEach((w, i) => cpu.write(0o300 + i, w));
+	cpu.write(0o21, 0o777754);
+	const dh = new DataHand({ source: wavingHand, framePeriod: 997 });
+	const tty = new Teletype();
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [tty, dh] });
+	cpu.pc = 0o100;
+	return { cpu, box, tty, paper: () => "", state: () => `${dh.frames} ${dh.latches} ${cpu.read(0o21)}` };
+}
+
+function hand(make: Make, every = false): Rig {
 	const cpu = make({ coreWords: 8192 });
 	let paper = "";
 	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
 	const dh = new DataHand({ source: wavingHand, framePeriod: 200_000 });
-	const box = new Cabinet({ cpu, devices: [t, tty, dh] });
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, dh] });
 	t.clock = () => box.cycles;
 	bootForth(cpu, forth("clip.fs turtle3d.fs datahand.fs", "kernel-names-full.s", "tags.fs"));
 	return { cpu, box, tty, paper: () => paper, state: () => `${frame(t)} ${dh.latches} ${dh.frames}` };
@@ -186,24 +250,24 @@ function session(t: number): HandFrame | null {
 	return null;
 }
 
-function ultimateHand(make: Make) {
+function ultimateHand(make: Make, every = false) {
 	const cpu = make({ coreWords: 8192 });
 	const t = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w) });
 	const tty = new Teletype({ printCycles: 1000 });
 	const dh = new DataHand({ source: session });
 	const um = new UltimateMachine({ wait: 40_000, open: 60_000, reach: 100_000, press: 40_000, return: 80_000, close: 60_000, rest: 200_000 });
-	const box = new Cabinet({ cpu, devices: [t, tty, dh, um] });
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [t, tty, dh, um] });
 	t.clock = () => box.cycles;
 	bootForth(cpu, forth("clip.fs turtle3d.fs datahand.fs ultimate-hand.fs", "kernel-names-full.s", "tags.fs"));
 	return { cpu, box, tty, um, paper: () => "", state: () => `${frame(t)} ${dh.latches} ${um.presses} ${um.aborts} ${um.phase} ${um.arm}` };
 }
 
-function files(make: Make) {
+function files(make: Make, every = false) {
 	const cpu = make({ coreWords: 32768 });
 	let paper = "";
 	const tty = new Teletype({ printCycles: 100, onPrint: (c) => (paper += String.fromCharCode(c & 0o177)) });
 	const fs = new TitanFiles({ core: cpu, mounts: { "/tmp": new MemoryMount() } });
-	const box = new Cabinet({ cpu, devices: [tty, fs] });
+	const box = new Cabinet({ cpu, everyCycle: every, devices: [tty, fs] });
 	bootForth(cpu, forth("files.fs", "kernel-names-full-extended.s", "xmem-extended.fs"));
 	return { cpu, box, tty, fs, paper: () => paper, state: () => `${fs.flag} ${fs.result}` };
 }
@@ -221,6 +285,21 @@ test("korz devices: the paper tape reader, alphanumeric and binary", () => {
 	for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
 	assert.equal(p.a.cpu.halted, true);
 	assert.equal(p.a.cpu.read(0o1002), 0o377);
+	p.same();
+});
+
+test("korz devices: the paper tape reader by interrupt, each frame in the interrupt routine", () => {
+	const p = pair(readerIrq, "resolve");
+	for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
+	assert.equal(p.a.cpu.halted, true);
+	assert.equal(p.a.cpu.read(0o1004), 0o215);
+	p.same();
+});
+
+test("korz devices: DataHand frames by interrupt", () => {
+	const p = pair(handIrq, "resolve");
+	for (let n = 0; n < 100 && !p.a.cpu.halted; n += 1) p.run(1000);
+	assert.equal(p.a.cpu.halted, true);
 	p.same();
 });
 

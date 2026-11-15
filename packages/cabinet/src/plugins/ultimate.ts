@@ -51,6 +51,10 @@ import { decode, gate, type IopBus, type KorzDevice, skipIf, timed } from "../ko
 /** Full travel of the lid and the arm, in register units. */
 export const UM_MAX = 1000;
 
+/** Lid or arm position after `dt` steps of a `len`-step move in direction `dir`; a zero-length move jumps to the end. */
+const move = (pos: number, dir: 1 | -1, len: number, dt: number): number =>
+	len === 0 ? (dir > 0 ? UM_MAX : 0) : Math.min(UM_MAX, Math.max(0, pos + (dir * dt * UM_MAX) / len));
+
 /** Steps per unit of a UMLT timing word. */
 export const UM_TICK = 64;
 
@@ -325,24 +329,18 @@ export class UltimateMachine implements Device, KorzDevice {
 			const name = UM_PHASES[this.phase];
 			if (!name || name === "off") return;
 			const len = this.timing[name];
-			const done = (): boolean => {
-				if (len === 0) return true;
-				this.t += dt;
-				return this.t >= len;
-			};
-			const move = (pos: number, dir: 1 | -1): number => (len === 0 ? (dir > 0 ? UM_MAX : 0) : Math.min(UM_MAX, Math.max(0, pos + (dir * dt * UM_MAX) / len)));
 			switch (this.phase) {
 				case WAIT:
-					if (!done()) return;
+					if (!this.done(len, dt)) return;
 					this.enter(OPEN);
 					break;
 				case OPEN:
-					this.lid = move(this.lid, 1);
+					this.lid = move(this.lid, 1, len, dt);
 					if (this.lid < UM_MAX) return;
 					this.enter(REACH);
 					break;
 				case REACH:
-					this.arm = move(this.arm, 1);
+					this.arm = move(this.arm, 1, len, dt);
 					if (this.arm < UM_MAX) return;
 					if (this.manualPress) return;
 					this.lever = false;
@@ -351,25 +349,32 @@ export class UltimateMachine implements Device, KorzDevice {
 					this.enter(PRESS);
 					break;
 				case PRESS:
-					if (!done()) return;
+					if (!this.done(len, dt)) return;
 					this.enter(RETURN);
 					break;
 				case RETURN:
-					this.arm = move(this.arm, -1);
+					this.arm = move(this.arm, -1, len, dt);
 					if (this.arm > 0) return;
 					this.enter(this.lever ? REACH : CLOSE);
 					break;
 				case CLOSE:
-					this.lid = move(this.lid, -1);
+					this.lid = move(this.lid, -1, len, dt);
 					if (this.lid > 0) return;
 					this.enter(REST);
 					break;
 				case REST:
-					if (!done()) return;
+					if (!this.done(len, dt)) return;
 					this.enter(this.lever ? WAIT : OFF);
 					break;
 			}
 			dt = 0;
 		}
+	}
+
+	/** A timed phase: true once `t` reaches its length; a zero-length phase is done at once. */
+	private done(len: number, dt: number): boolean {
+		if (len === 0) return true;
+		this.t += dt;
+		return this.t >= len;
 	}
 }

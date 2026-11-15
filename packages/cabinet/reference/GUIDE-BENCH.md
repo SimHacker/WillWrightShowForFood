@@ -4,7 +4,7 @@ From the hardware up to the page. All TypeScript and Svelte; nothing below JavaS
 
 | Layer | Where | What it is |
 |---|---|---|
-| Runtime | Node 22 for tests, the browser for the page | ES modules; `tsc` then `node --test`; no DOM in the emulator |
+| Runtime | Node 26 for tests, the browser for the page | ES modules; `tsc` then `node --test`; no DOM in the emulator |
 | Backplane | `packages/cabinet/src/cabinet.ts`, `bus.ts` | `Cabinet.step()`: OR every device's `irq()` onto one line, step the CPU, hand any IOT to the device that claims its code, `tick` every device. Devices never see each other |
 | CPU | `plugins/pdp7.ts` | 18-bit words in a `Uint32Array`, 4K to 32K in 8K banks with extend mode, one interrupt level (PC to 0, jump to 1), auto-index 10–17, `XCT`, the EAE ops programs use. Ported from SIMH's `pdp18b_cpu.c` |
 | Display | `plugins/type340.ts` | The 340 as a processor: fetches display words from core, runs PARAM, POINT, VECTOR, VCONT, INCR, CHAR (Type 342 glyphs from SIMH), SUBR (Type 347 `DJS`/`DJP`/`DDS`, one save register). Emits **segments** with provenance (display address, cycle, frame, subroutine, pen bit, glyph); a frame closes at each `IDLA`. Owns the pen IOTs (dev 07) because the hardware did, plus the `IDPN` extension (dev 11) |

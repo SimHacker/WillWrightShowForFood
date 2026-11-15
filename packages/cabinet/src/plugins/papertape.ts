@@ -97,6 +97,11 @@ export class PaperTape implements KorzDevice {
 		}
 	}
 
+	/** The next frame passes the read head; stopped, nothing happens until RSA or RSB. */
+	nextEvent(): number {
+		return this.wait < 0 ? Infinity : this.wait + 1;
+	}
+
 	irq(): boolean {
 		return this.flag;
 	}

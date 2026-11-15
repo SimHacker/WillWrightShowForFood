@@ -231,8 +231,13 @@ export class Type340 implements Device, KorzDevice {
 		this.wordsPerTick = opts.wordsPerTick ?? 1;
 	}
 
-	tick(): void {
-		this.ownClock += 1;
+	/** Drawing, the 340 fetches from core every cycle; stopped, only its clock runs until an IOT starts it. */
+	nextEvent(): number {
+		return this.enabled ? 1 : Infinity;
+	}
+
+	tick(cycles = 1): void {
+		this.ownClock += cycles;
 		if (!this.enabled) return;
 		if (this.pending && this.status === 0) {
 			this.drawVector(this.pending);

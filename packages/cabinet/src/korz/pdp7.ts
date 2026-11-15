@@ -83,6 +83,7 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 	private readonly mem = k7(this);
 	private readonly io = k7(this);
 	private pendingIot: Iot | null = null;
+	private box: Backplane | null = null;
 	private readonly go = {} as Dispatchers<K7, Selector>;
 	private readonly coreMask = this.coreWords - 1;
 
@@ -104,6 +105,7 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 
 	/** The backplane's slots go into this CPU's sea: unclaimed codes, CAF, and every device's codes. */
 	attach(box: Backplane): void {
+		this.box = box;
 		this.sea.remove("cpu: no backplane, hand the IOT out");
 		this.sea.install(backplaneSlots(this, box));
 	}
@@ -227,6 +229,7 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 				io.skip = 0;
 				if (c.ir & 0o10) m.ac = 0;
 				io.ac = m.ac;
+				m.box?.sync(io.device);
 				m.go.iot(io);
 				m.ac = io.ac;
 				if (io.skip) m.pc = incr(m.pc);

@@ -166,7 +166,7 @@ sources they compile in and which devices they plug in.
 
 | File | Unit | IOT device |
 |---|---|---|
-| [cabinet.ts](src/cabinet.ts) | the backplane: steps the CPU, ticks every device, routes IOTs | |
+| [cabinet.ts](src/cabinet.ts) | the backplane: steps the CPU, ticks each device when its next event is due, routes IOTs | |
 | [bus.ts](src/bus.ts) | what a CPU puts on the I/O bus; devices never see the ISA | |
 | [pdp7.ts](src/plugins/pdp7.ts) | [`Pdp7`](src/plugins/pdp7.ts#L49), the CPU, ported from Open SIMH | |
 | [type340.ts](src/plugins/type340.ts) | [`Type340`](src/plugins/type340.ts#L151): the display processor. [`tick`](src/plugins/type340.ts#L224) fetches and runs a display word, [`iot`](src/plugins/type340.ts#L260) answers the PDP-7, [DJS](src/plugins/type340.ts#L464) calls a display subroutine | 05, 06, 07 |
