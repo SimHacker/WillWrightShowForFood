@@ -134,6 +134,15 @@ being true. It is more specific, so it wins whenever the context says `assertion
 `this` flows in an object-oriented language. No code in between mentions assertions at all. You
 added a new axis of variation to a running design without touching the middle.
 
+Aspect-oriented programming fights the same war with knives. It names the problem "crosscutting
+concerns", code scattered across modules and tangled together, then cuts in with pointcuts and
+weaves advice back through the program. Ossher had been there before Korz. With Peri Tarr, William
+Harrison and Stanley Sutton he wrote
+["N Degrees of Separation"](https://dl.acm.org/doi/10.1145/302405.302457) (ICSE 1999), which
+sliced programs into overlapping "hyperslices" along many dimensions and composed them back
+together. Korz gives you the slices without the knives. A concern is just a dimension, and its slots
+sit in the sea next to everything else. Nothing gets cut and nothing gets woven.
+
 And objects come back, as a point of view. Gather the slots by `rcvr` and you see objects. Gather
 them by `assertions` and you see the checking layer. Gather them by `user` and you see one person's
 view of the system. Same sea, different cuts. That's the "subjective" in the title, and the name
