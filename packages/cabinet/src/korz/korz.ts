@@ -89,7 +89,7 @@ export type Resolved<C> = {
 	readonly kinds: Readonly<Record<string, number>>;
 	/** The lookup arrays `expr` reads from `this`, by field name: each maps a value to its kind. */
 	readonly fields: Readonly<Record<string, Uint16Array>>;
-	/** Generated: index, entry, first slot. Coordinates must be inside their dimensions' domains. */
+	/** Generated: index, entry, first slot. A coordinate is cut to its dimension's width, as the interpreter cuts it. */
 	readonly call: (c: C) => number;
 };
 
@@ -478,7 +478,8 @@ export class Sea<C extends object> {
 	}
 
 	private coord(c: C, d: number): number {
-		return (c as Record<string, number>)[this.dims[d]!.name] ?? 0;
+		const dim = this.dims[d]!;
+		return ((c as Record<string, number>)[dim.name] ?? 0) & ((1 << dim.width) - 1);
 	}
 
 	private describe(c: C): string {

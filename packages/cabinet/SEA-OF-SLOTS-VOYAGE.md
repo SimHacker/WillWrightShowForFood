@@ -826,8 +826,8 @@ the sea has no way to build a table over tests. You turn it into a number that s
 test, such as a size class, and guard on that.
 
 A dimension is between 1 and 20 bits wide, so it has at most about a million values. A context
-field that's missing counts as 0. It's up to the caller to keep each value in range, and
-`KorzPdp7` does, because it cuts each field out of the instruction word with a mask.
+field that's missing counts as 0, and a value too big for its dimension is cut to the dimension's
+width, keeping only its low bits, the same way at every level: 261 in an 8-bit dimension is 5.
 
 **Sets as bitsets.** Each guard becomes, per dimension, a set of values stored as a bitset in a
 `Uint32Array`, with `null` meaning the whole domain. A dimension is at most 20 bits wide, so its

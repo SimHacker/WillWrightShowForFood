@@ -139,6 +139,22 @@ test("korz: a wide dimension with a few special values is indexed by kind", () =
 	assert.equal(go.read(ctx(0o7777)), 1);
 });
 
+test("korz: a value past its dimension's width is cut to the width by the interpreter and the table alike", () => {
+	const sea = new Sea<C>(dims);
+	sea.install([
+		{ selector: "read", by: "ram", run: () => 1 },
+		{ selector: "read", guard: { addr: 0x05 }, by: "five", run: () => 5 },
+		{ selector: "read", guard: { who: "debugger" }, layer: "observe", by: "peek", run: (_, next) => 1000 + next() },
+	]);
+	const table = sea.resolve("read")!;
+	for (const c of [ctx(0x105), ctx(-251), ctx(0x305, 2), ctx(0x05, 6), ctx(0x205, -2)]) {
+		assert.equal(sea.dispatch("read", c), table.call(c), `${c.addr} ${c.who}`);
+	}
+	assert.equal(sea.dispatch("read", ctx(0x105)), 5);
+	assert.equal(sea.dispatch("read", ctx(0x05, 6)), 1005);
+	assert.match(sea.why("read", ctx(0x106))[1]!.reason, /addr = 6$/);
+});
+
 test("korz: a dispatcher rebuilds its table after an install, and drops irrelevant dimensions", () => {
 	const sea = new Sea<C>(dims);
 	sea.install([{ selector: "read", by: "ram", run: () => 0 }]);
