@@ -8,6 +8,7 @@
 	import { createBeeper } from './beeper.js';
 	import {
 		Pdp7,
+		KorzPdp7,
 		Type340,
 		LightPen,
 		PEN_COLORS,
@@ -66,6 +67,20 @@
 	// Each program opens the 340 or not (display: false); the reader can open or close it any time.
 	let displayOpen = $state(untrack(() => programById(programId)?.display !== false));
 	let switches = $state(0);
+
+	// Four implementations of one PDP-7, each tested against the one before (SEA-OF-SLOTS.md).
+	// `?cpu=interpret` in the page's address picks one, so a link can say which.
+	const CPUS = [
+		{ id: 'pdp7', label: 'switch statements, after SIMH', title: 'Pdp7: the TypeScript port of SIMH, the reference' },
+		{ id: 'interpret', label: 'Korz interpreter', title: 'Searches the sea of slots on every dispatch' },
+		{ id: 'resolve', label: 'Korz tables', title: 'Dispatches through tables resolved from the slots' },
+		{ id: 'compile', label: 'Korz compiler', title: 'Compiles runs of instructions into JavaScript functions' }
+	];
+	const cpuFromPage = () => {
+		const want = globalThis.location ? new URL(globalThis.location.href).searchParams.get('cpu') : null;
+		return CPUS.some((c) => c.id === want) ? want : (spec.cpu ?? 'pdp7');
+	};
+	let cpuLevel = $state(untrack(cpuFromPage));
 
 	let canvasEl = $state(null);
 	let figureEl = $state(null);
@@ -2256,7 +2271,8 @@
 	 * The program's typeAhead is typed at the teletype first, unless a scripted demo will do its own typing.
 	 */
 	function bootMachine({ typeAhead = true } = {}) {
-		cpu = new Pdp7({ coreWords: program.coreWords ?? 8192 });
+		const coreWords = program.coreWords ?? 8192;
+		cpu = cpuLevel === 'pdp7' ? new Pdp7({ coreWords }) : new KorzPdp7({ coreWords, korz: cpuLevel });
 		displayStarts = new Set();
 		cpu.trace = trace = new Trace();
 		traceBack = 0;
@@ -2471,6 +2487,16 @@
 		for (const t of program?.toggles ?? []) if (toggleOn[t.id] && !t.on) t.set(false).catch((e) => console.error('cabinet toggle cleanup', e));
 		toggleOn = {};
 		toggleNote = '';
+	}
+
+	/** Reboot the program on another implementation of the CPU, and keep the choice in the address. */
+	function onCpu(event) {
+		cpuLevel = event.currentTarget.value;
+		const url = new URL(location.href);
+		if (cpuLevel === 'pdp7') url.searchParams.delete('cpu');
+		else url.searchParams.set('cpu', cpuLevel);
+		history.replaceState(history.state, '', url);
+		onReset();
 	}
 
 	function onProgram(event) {
@@ -2771,6 +2797,18 @@
 		>
 			{#each PROGRAMS as p (p.id)}
 				<option value={p.id}>{p.label}</option>
+			{/each}
+		</select>
+		<select
+			class="program cpu"
+			aria-label="CPU implementation"
+			title={CPUS.find((c) => c.id === cpuLevel)?.title}
+			value={cpuLevel}
+			disabled={status === 'booting' || demoOn}
+			onchange={onCpu}
+		>
+			{#each CPUS as c (c.id)}
+				<option value={c.id} title={c.title}>CPU: {c.label}</option>
 			{/each}
 		</select>
 		{#if fault}

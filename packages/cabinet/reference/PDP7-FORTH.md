@@ -358,6 +358,22 @@ SYMELEC, and draws the live structure in 3D with printnames spelled out. Running
 runs the 1972 garbage collector. The turtle draws as before with all of this loaded. The
 whole story is in [FORTH-RINGS.md](../FORTH-RINGS.md).
 
+## On real hardware: a homebrew PDP-9
+
+Two weeks after Mitch released it, this Forth ran on hardware. Tergav
+([tergav17](https://github.com/tergav17)) has spent about a year building
+[RDP-9](https://github.com/tergav17/RDP-9), a homebrew clone of the DEC PDP-9, a later machine in
+the same 18-bit family. The CPU and some simple I/O work, but there's no paper tape reader yet. Once
+he found a way to get Forth into memory, it ran without modification.
+
+His video, [Running FORTH on a DEC PDP-9 Clone](https://www.youtube.com/watch?v=oNwXu50hZ44)
+(12 October 2026), loads a loader, then Forth, patches high memory, and
+runs a demo that calculates prime numbers. Under Don's
+[video of the cabinet](https://www.youtube.com/watch?v=lo8kdY-5i6c) he wrote: "Also that FORTH
+implementation is sick. I got it working on my semi-real hardware."
+
+[![Running FORTH on a DEC PDP-9 Clone, by Tergav](https://img.youtube.com/vi/oNwXu50hZ44/hqdefault.jpg)](https://www.youtube.com/watch?v=oNwXu50hZ44)
+
 ## Next
 
 **Aligning with Open Firmware.** The intent is to make this Forth a small Open Firmware, not a

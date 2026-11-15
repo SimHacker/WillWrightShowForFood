@@ -16,9 +16,11 @@
 
 	const program = $derived(String(entry.runs?.program ?? ''));
 	const size = untrack(() => values.size);
+	const cpu = untrack(() => values.cpu);
 	const spec = $derived({
 		...cabinetSpec(new URLSearchParams(), program),
-		...(typeof size === 'number' ? { size } : {})
+		...(typeof size === 'number' ? { size } : {}),
+		...(typeof cpu === 'string' ? { cpu } : {})
 	});
 
 	/** @param {string} id */
