@@ -3,7 +3,7 @@ import { incr, Pdp7, type Pdp7Opts } from "../plugins/pdp7.js";
 import { maskWord } from "../word.js";
 import { Compiler7, T7 } from "./compile7.js";
 import { type Iop, type IopBus, isKorzDevice } from "./iop.js";
-import { type Dim, type Dispatchers, Sea, span, type SlotSpec } from "./korz.js";
+import { type Dim, type Dispatchers, Sea, span, type SlotSpec, type WhyLine } from "./korz.js";
 
 /**
  * The PDP-7 as a sea of slots (KORZ-DISPATCH.md, step 1). Registers and the EAE's arithmetic come
@@ -132,6 +132,32 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 		this.box = box;
 		this.sea.remove("cpu: no backplane, hand the IOT out");
 		this.sea.install(backplaneSlots(this, box));
+	}
+
+	/**
+	 * For the instruction in core at `addr`, without running it: which slot each selector would run
+	 * (`exec` and `ea`, then the operate group's three fields or the IOT), and why the others don't.
+	 */
+	whyAt(addr: number): { selector: string; lines: WhyLine[] }[] {
+		const ir = this.core[addr & this.coreMask] ?? 0;
+		const c = k7(this);
+		c.ir = ir;
+		c.at = addr;
+		c.op = (ir >> 14) & 0o17;
+		c.ind = (ir >> 13) & 1;
+		const out = [{ selector: "exec", lines: this.sea.why("exec", c) }];
+		if (c.op === OP.opr && c.ind === 0) {
+			c.skp = (ir >> 6) & 0o17;
+			c.cc = ((ir >> 9) & 0o14) | (ir & 0o3);
+			c.rot = ((ir >> 8) & 0o4) | ((ir >> 3) & 0o3);
+			for (const s of ["skip", "cc", "rot"]) out.push({ selector: s, lines: this.sea.why(s, c) });
+		} else if (c.op === OP.iot) {
+			c.device = (ir >> 6) & 0o77;
+			c.pulse = ir & 0o67;
+			c.sub = (c.pulse >> 4) & 0o3;
+			out.push({ selector: "iot", lines: this.sea.why("iot", c) });
+		} else if (c.op !== OP.opr && c.op !== OP.eae) out.splice(0, 0, { selector: "ea", lines: this.sea.why("ea", c) });
+		return out;
 	}
 
 	override step(): Step {

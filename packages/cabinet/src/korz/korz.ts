@@ -357,6 +357,23 @@ export class Sea<C extends object> {
 		return this.slots(selector).filter((s) => s.sets.every((set, d) => !isEmpty(intersect(set, q[d]!))));
 	}
 
+	/** The selectors that have slots, in the order they were first installed. */
+	selectors(): string[] {
+		return [...this.bySelector.keys()].filter((k) => this.bySelector.get(k)!.length > 0);
+	}
+
+	/** The dimensions a resolved table for this selector is indexed by, and its size, without building it. */
+	shape(selector: string): { dims: string[]; size: number } {
+		const rel = [...new Set((this.bySelector.get(selector) ?? []).flatMap((s) => s.constrained))].sort((a, b) => a - b);
+		return { dims: rel.map((d) => this.dims[d]!.name), size: 2 ** rel.reduce((n, d) => n + this.dims[d]!.width, 0) };
+	}
+
+	/** A slot's guard as text: `mode=subr top=2-3`, octal numbers, `any` for a base case. */
+	guardText(s: Slot<C>): string {
+		if (s.constrained.length === 0) return "any";
+		return s.constrained.map((d) => `${this.dims[d]!.name}=${setText(s.sets[d]!, this.dims[d]!)}`).join(" ");
+	}
+
 	private changed(touched: ReadonlySet<string>): void {
 		this.generation += 1;
 		for (const rebind of this.bound) rebind(touched);
@@ -536,4 +553,18 @@ function elements(set: DimSet, width: number): number[] {
 	const out: number[] = [];
 	for (let v = 0; v < 1 << width; v += 1) if (has(set, v)) out.push(v);
 	return out;
+}
+
+/** Members by name, or runs of octal numbers; past four runs, a count. */
+function setText(set: DimSet, d: Dim): string {
+	const vs = elements(set, d.width);
+	if (d.names) return vs.map((v) => d.names![v] ?? v.toString(8)).join("|");
+	const runs: string[] = [];
+	for (let i = 0; i < vs.length;) {
+		let j = i;
+		while (j + 1 < vs.length && vs[j + 1] === vs[j]! + 1) j += 1;
+		runs.push(i === j ? vs[i]!.toString(8) : `${vs[i]!.toString(8)}-${vs[j]!.toString(8)}`);
+		i = j + 1;
+	}
+	return runs.length > 4 ? `${vs.length} values` : runs.join(",");
 }

@@ -307,6 +307,8 @@
 
 	let box = null;
 	let cpu = null;
+	/** The Forth device, when the program plugged one in. */
+	let forthDev = null;
 	let t340 = null;
 	let pen = null;
 	let pressedId = null;
@@ -869,10 +871,18 @@
 	let fault = $state(null);
 	let lastReadout = 0;
 	let cyclesAtReadout = 0;
+	/** Wall time spent in the machine, and the cycles it ran, since the last readout. */
+	let runMs = 0;
+	let runCycles = 0;
+	let perf = $state.raw(null);
 
 	function updateReadout(now) {
 		if (now - lastReadout < 250) return;
-		const rate = ((box.cycles - cyclesAtReadout) * 1000) / (now - lastReadout || 1);
+		const wall = now - lastReadout || 1;
+		const rate = ((box.cycles - cyclesAtReadout) * 1000) / wall;
+		perf = { real: rate / (CYCLES_PER_MS * 1000), busy: Math.min(1, runMs / wall), ns: runCycles > 0 ? (runMs * 1e6) / runCycles : null };
+		runMs = 0;
+		runCycles = 0;
 		lastReadout = now;
 		cyclesAtReadout = box.cycles;
 		const extra = program?.status(cpu);
@@ -880,8 +890,17 @@
 		penDown = pen.enabled;
 		readoutExtra = extra ?? '';
 		halted = cpu.halted;
+		syncTrace();
 		refreshMem();
 		refreshRegs();
+		refreshSlots();
+	}
+
+	// The Korz compiler steps one instruction at a time while a trace records, so the trace
+	// records only while its view is showing.
+	function syncTrace() {
+		const want = memOpen && memView === 'trace' ? trace : null;
+		if (cpu && cpu.trace !== want) cpu.trace = want;
 	}
 
 	// Core browser, four views of MEM_LINES lines: octal (MEM_COLS words a line), code (a
@@ -909,6 +928,7 @@
 	let ttyOpen = $state(panelsStored.includes('tty') || !!untrack(() => programById(programId)?.tty));
 	let configOpen = $state(panelsStored.includes('config'));
 	let ringsOpen = $state(panelsStored.includes('rings'));
+	let slotsOpen = $state(panelsStored.includes('slots'));
 	// A program's own panel (program.panel: the DataHand's), with its buttons, sliders and a canvas it draws.
 	let progOpen = $state(panelsStored.includes('prog') || !!untrack(() => programById(programId)?.panel));
 	let progCanvas = $state(null);
@@ -917,7 +937,7 @@
 	let progHint = $state('');
 	const hasProgPanel = $derived(!!program?.panel);
 	function storePanels() {
-		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen };
+		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen };
 		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
 	}
 	// The last opened of these takes the figure's spare height; the others keep their size.
@@ -935,7 +955,7 @@
 		if (HUNGRY.includes(id)) panelOrder = [...panelOrder.filter((k) => k !== id), id];
 	}
 	function togglePanel(id, e) {
-		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen };
+		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen };
 		if (e.shiftKey) for (const k in open) open[k] = k === id;
 		else open[id] = !open[id];
 		if (open[id]) opened(id);
@@ -945,9 +965,11 @@
 		memOpen = open.mem;
 		ringsOpen = open.rings;
 		configOpen = open.config;
+		slotsOpen = open.slots;
 		progOpen = open.prog;
 		storePanels();
 		refreshRegs();
+		refreshSlots();
 	}
 	function openMemAt(addr, view) {
 		if (!memOpen) {
@@ -1061,6 +1083,48 @@
 			tto: !!tty?.ttoFlag,
 			clkOn: !!clock?.on,
 			clkFlag: !!clock?.flag
+		};
+	}
+	// SLOTS: each sea's slots by selector, which slots decide the next instruction and the next
+	// display word, and what the emulator costs. The lists are rebuilt only when a sea changes.
+	let slotsView = $state.raw(null);
+	let slotsKey = '';
+	let slotsCpu = null;
+	function seaList(sea) {
+		return sea.selectors().map((selector) => {
+			const shape = sea.shape(selector);
+			const slots = sea.slots(selector).map((s) => ({ by: s.by, layer: s.layer, guard: sea.guardText(s) }));
+			return { selector, dims: shape.dims, size: shape.size, slots };
+		});
+	}
+	function whyRows(selector, lines) {
+		const chain = lines.filter((l) => l.order >= 0).sort((a, b) => a.order - b.order);
+		const others = lines.filter((l) => l.order < 0);
+		const why = others.slice(0, 40).map((l) => `${l.slot}: ${l.reason}`).join('\n');
+		return { selector, chain, others: others.length, why: others.length > 40 ? `${why}\n…` : why };
+	}
+	function refreshSlots() {
+		if (!slotsOpen || !cpu || !box) return;
+		const seas = [];
+		if (cpu.sea) seas.push(['PDP-7 CPU', cpu.sea]);
+		if (t340?.sea) seas.push(['Type 340 display', t340.sea]);
+		const key = seas.map(([, s]) => s.generation).join(' ');
+		const lists =
+			slotsCpu === cpu && slotsKey === key && slotsView
+				? slotsView.lists
+				: seas.map(([name, sea]) => ({ name, total: sea.slots().length, selectors: seaList(sea) }));
+		slotsCpu = cpu;
+		slotsKey = key;
+		const d = t340?.nextWhy?.() ?? null;
+		slotsView = {
+			lists,
+			pc: cpu.pc,
+			ir: cpu.whyAt ? cpu.read(cpu.pc) : 0,
+			cpuWhy: cpu.whyAt ? cpu.whyAt(cpu.pc).map((s) => whyRows(s.selector, s.lines)) : null,
+			d340: d && { addr: d.addr, word: d.word, mode: MODE_NAME[d.mode] ?? String(d.mode), ...whyRows('word', d.lines) },
+			pending: !!t340?.sea && !d,
+			compiler: cpu.compiler ? { built: cpu.compiler.built, invalidated: cpu.compiler.invalidated } : null,
+			forth: forthDev ? { ...forthDev.stats } : null
 		};
 	}
 	/** Keep the PC in view (code, source, octal) or the newest instruction (trace). */
@@ -1896,7 +1960,7 @@
 	let panelH = $state(
 		untrack(() =>
 			Object.fromEntries(
-				['regs', 'front', 'play', 'config', 'scan', 'prog'].map((id) => [id, Number(globalThis.localStorage?.getItem(PANEL_H_KEY(id))) || PANEL_DEFAULT_H[id] || 0])
+				['regs', 'front', 'play', 'config', 'scan', 'prog', 'slots'].map((id) => [id, Number(globalThis.localStorage?.getItem(PANEL_H_KEY(id))) || PANEL_DEFAULT_H[id] || 0])
 			)
 		)
 	);
@@ -2183,6 +2247,8 @@
 		owed = Math.min(owed - cycles, MAX_CYCLES_PER_FRAME);
 		try {
 			if (cycles > 0) {
+				const t0 = performance.now();
+				const c0 = box.cycles;
 				if (player) {
 					player.advance((n) => box.run(n), cycles);
 					demoCaption = player.caption;
@@ -2191,6 +2257,8 @@
 				} else {
 					runMachine(cycles);
 				}
+				runMs += performance.now() - t0;
+				runCycles += box.cycles - c0;
 				noteHalt();
 			}
 			drawFrame();
@@ -2291,7 +2359,8 @@
 		const coreWords = program.coreWords ?? 8192;
 		cpu = cpuLevel === 'pdp7' ? new Pdp7({ coreWords }) : new KorzPdp7({ coreWords, korz: cpuLevel });
 		displayStarts = new Set();
-		cpu.trace = trace = new Trace();
+		trace = new Trace();
+		syncTrace();
 		traceBack = 0;
 		pen = new LightPen({ aperture: 12, name: 'pointer', index: tool === 'edit' ? 0 : tool, enabled: false });
 		press = null;
@@ -2322,7 +2391,7 @@
 		});
 		t340.clock = () => box.cycles;
 		batch = [];
-		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined, forth: forthLevel });
+		forthDev = program.boot({ cpu, box, extra, patches: spec.patches ?? undefined, forth: forthLevel })?.forthDevice ?? null;
 		if (ttyCols) program.onTtyResize?.({ cpu, cols: ttyCols });
 		if (typeAhead && program.typeAhead) demoType(program.typeAhead);
 		symbols = program.symbols?.() ?? [];
@@ -2860,7 +2929,7 @@
 			<span class="fault" title={fault}>fault: {fault}</span>
 		{:else}
 			<span class="readout">
-				{#if paused}stopped{:else}<span title="Memory cycles per second">{readout}</span>{/if}{#if !paused && readoutExtra}<span title="Read from the program's variables in core">{readoutExtra}</span>{/if}
+				{#if paused}stopped{:else}<span title="Simulated memory cycles per second. A PDP-7 instruction takes one memory cycle of 1.75 µs, or two or more when it reads or writes core.">{readout}</span>{#if perf}<span title="Speed against a real PDP-7, which runs about 571,000 memory cycles a second. The speed slider sets this; 1× is real time.">{perf.real < 10 ? perf.real.toFixed(2) : perf.real.toFixed(1)}× real</span><span title="Share of the last quarter second the browser spent running the machine (CPU and devices). The rest went to drawing, the page, and waiting for the next frame.">{Math.round(perf.busy * 100)}% busy</span>{/if}{/if}{#if !paused && readoutExtra}<span title="Read from the program's variables in core">{readoutExtra}</span>{/if}
 			</span>
 			{#if displayOpen}{@render toolMenu()}{/if}
 		{/if}
@@ -3121,6 +3190,14 @@
 					<button
 						type="button"
 						class="chip"
+						class:on={slotsOpen}
+						aria-pressed={slotsOpen}
+						title="Slots: the Korz seas behind the CPU and the 340, which slot decides the next instruction and display word, and what the emulator costs. Shift-click: this panel alone."
+						onclick={(e) => togglePanel('slots', e)}>SLOTS</button
+					>
+					<button
+						type="button"
+						class="chip"
 						class:on={configOpen}
 						aria-pressed={configOpen}
 						title="Settings for the teletype and more. Each program sets them for you when you choose it. Shift-click: this panel alone."
@@ -3291,6 +3368,82 @@
 			</div>
 			{@render grip('regs', 'registers')}
 		{/if}
+		{#if slotsOpen && slotsView}
+			<div class="row app regs slots sized" role="group" aria-label="Slots" style:height={panelH.slots ? `${panelH.slots}px` : null}>
+				<div class="reg-line">
+					<span class="reg-dev wide">COST</span>
+					{#if perf}
+						<span class="reg" title="Wall-clock nanoseconds the emulator spent per simulated memory cycle, CPU and devices together, over the last quarter second. A real PDP-7 takes 1,750.">ns/cycle <b>{perf.ns === null ? '–' : perf.ns.toFixed(1)}</b></span>
+						<span class="reg" title="How fast the emulator could run if it did nothing else: 1,750 ns divided by its time per cycle. The page caps a frame at 100,000 cycles, about 10× real time at 60 frames a second.">could run <b>{perf.ns ? `${Math.round(1750 / perf.ns).toLocaleString()}×` : '–'}</b></span>
+						<span class="reg" title="Share of the last quarter second the browser spent running the machine (CPU and devices). The rest went to drawing, the page, and waiting for the next frame.">busy <b>{Math.round(perf.busy * 100)}%</b></span>
+					{/if}
+					{#if slotsView.compiler}
+						<span class="reg-dev wide" title="The Korz compiler: runs of PDP-7 instructions compiled to JavaScript">JIT</span>
+						<span class="reg" title="Runs of PDP-7 instructions the Korz compiler has turned into JavaScript functions since boot.">blocks <b>{slotsView.compiler.built.toLocaleString()}</b></span>
+						<span class="reg" title="Compiled blocks thrown away because a store changed a word they were compiled from. PDP-7 code writes into itself all the time: JMS stores its return address in the subroutine's first word.">invalidated <b>{slotsView.compiler.invalidated.toLocaleString()}</b></span>
+					{/if}
+					{#if slotsView.forth}
+						<span class="reg-dev wide" title="The Forth device: PDP-7 Forth's inner interpreter and dictionary lookup as slots">FORTH</span>
+						<span class="reg" title="Forth thread cells the Forth device ran itself, without the PDP-7 executing NEXT.">cells <b>{slotsView.forth.cells.toLocaleString()}</b></span>
+						<span class="reg" title="Code words the device handed back to the PDP-7 to run as instructions: EMIT, a 340 IOT, a CODE word you wrote.">to CPU <b>{slotsView.forth.handoffs.toLocaleString()}</b></span>
+						<span class="reg" title="Times the device stepped aside and let Mitch's code run: NEXT patched, extend mode on, an interrupt waiting, or a cell it doesn't recognize.">declined <b>{slotsView.forth.declined.toLocaleString()}</b></span>
+						<span class="reg" title="Dictionary lookups the device answered from its own table, checked against the header in core.">FIND <b>{slotsView.forth.finds.toLocaleString()}</b></span>
+						<span class="reg" title="Lookups that found the word.">hits <b>{slotsView.forth.hits.toLocaleString()}</b></span>
+					{/if}
+				</div>
+				{#if !slotsView.cpuWhy}
+					<div class="reg-line"><span class="reg dim">The switch-statement CPU and its 340 have no slots. Pick a Korz level in the CPU menu to see them.</span></div>
+				{:else}
+					<div class="reg-line">
+						<span class="reg-dev wide">CPU</span>
+						<button type="button" class="reg" title="The instruction at the PC, the next one the CPU runs. Show it in memory." onclick={() => openMemAt(slotsView.pc, 'code')}
+							>PC <b>{oct(slotsView.pc, 5)}</b> <b>{oct(slotsView.ir, 6)}</b></button
+						>
+					</div>
+					{#each slotsView.cpuWhy as s (s.selector)}
+						{@render whyLine(s)}
+					{/each}
+					{#if slotsView.d340}
+						<div class="reg-line">
+							<span class="reg-dev wide">340</span>
+							<button type="button" class="reg" title="The display word at DAC, the next one the 340 decodes, in its current mode. Show it in memory." onclick={() => openMemAt(slotsView.d340.addr, 'octal')}
+								>DAC <b>{oct(slotsView.d340.addr, 5)}</b> <b>{oct(slotsView.d340.word, 6)}</b> mode <b>{slotsView.d340.mode}</b></button
+							>
+						</div>
+						{@render whyLine(slotsView.d340)}
+					{:else if slotsView.pending}
+						<div class="reg-line"><span class="reg-dev wide">340</span><span class="reg dim">finishing a vector the light pen stopped</span></div>
+					{/if}
+					{#each slotsView.lists as sea (sea.name)}
+						<details class="sea">
+							<summary title="Every slot in this sea, by selector. A selector is one kind of question the machine asks, such as which code runs this opcode.">{sea.name}: {sea.total} slots, {sea.selectors.length} {sea.selectors.length === 1 ? 'selector' : 'selectors'}</summary>
+							{#each sea.selectors as sel (sel.selector)}
+								<details class="sea-sel">
+									<summary title="Resolved, this selector is a table indexed by these dimensions: one entry per combination, each the chain of slots that answers there."
+										><b>{sel.selector}</b> {sel.slots.length} slots · table {sel.size.toLocaleString()} over {sel.dims.join(' × ') || 'nothing'}</summary
+									>
+									{#each sel.slots as slot, i (i)}
+										<div class="slot-row">
+											<span class="slot-guard" title="The guard: the coordinates this slot answers for. A more specific guard wins.">{slot.guard}</span>
+											{#if slot.layer !== 'machine'}<span class="slot-layer" title="Observe and patch slots run before the machine's own, and can pass on to it with next().">{slot.layer}</span>{/if}
+											<span class="slot-by" title="Who installed it, and what it does">{slot.by}</span>
+										</div>
+									{/each}
+								</details>
+							{/each}
+						</details>
+					{/each}
+				{/if}
+			</div>
+			{@render grip('slots', 'slots')}
+		{/if}
+		{#snippet whyLine(s)}
+			<div class="reg-line why-line">
+				<span class="why-sel" title="The selector: the question being asked">{s.selector}</span>
+				{#each s.chain as l (l.order)}<b class="why-ran" title={l.reason}>{l.slot}</b>{/each}
+				{#if s.others}<span class="reg dim" title={s.why}>{s.others} others ruled out</span>{/if}
+			</div>
+		{/snippet}
 		{#snippet ttyRow()}
 			{@const last = ttyPaper[ttyPaper.length - 1] ?? ''}
 			<div class="row app tty">
@@ -4401,6 +4554,46 @@
 	}
 	.reg.dim {
 		opacity: 0.45;
+	}
+	.reg-dev.wide {
+		width: 5ch;
+	}
+	.why-line {
+		padding-left: 5.9ch;
+	}
+	.why-sel {
+		opacity: 0.55;
+		min-width: 4ch;
+	}
+	.why-ran {
+		font-weight: normal;
+		color: #d8ffd8;
+	}
+	.why-ran + .why-ran::before {
+		content: '→ ';
+		opacity: 0.5;
+	}
+	.slots details {
+		margin-left: 6ch;
+	}
+	.slots details.sea-sel {
+		margin-left: 2ch;
+	}
+	.slots summary {
+		cursor: pointer;
+		opacity: 0.85;
+	}
+	.slot-row {
+		display: flex;
+		gap: 1ch;
+		margin-left: 2ch;
+	}
+	.slot-guard {
+		min-width: 22ch;
+		opacity: 0.6;
+	}
+	.slot-layer {
+		color: #ffd27a;
 	}
 	/* Fixed widths for every field whose text changes, so a line always wraps in the same place. */
 	.reg-sym,

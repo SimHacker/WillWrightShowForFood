@@ -61,6 +61,16 @@ export class KorzType340 extends Type340 {
 		return this.sea.why("word", { d: this, mode, top: (word >>> 16) & 3, word, addr: 0 });
 	}
 
+	/**
+	 * The word the 340 decodes next, at DAC, and why each slot does or doesn't decode it; null while
+	 * it finishes a vector the light pen stopped, which is not a new word.
+	 */
+	nextWhy(): { addr: number; word: number; mode: Mode; lines: WhyLine[] } | null {
+		if (this.pending) return null;
+		const word = this.fetch(this.dac);
+		return { addr: this.dac, word, mode: this.mode, lines: this.why(word) };
+	}
+
 	private static readonly slots: readonly SlotSpec<W340>[] = [
 		{ selector: "word", guard: { mode: "param" }, by: "340 parameter: mode, pen, scale, intensity, stop", run: (c) => {
 			const d = c.d;

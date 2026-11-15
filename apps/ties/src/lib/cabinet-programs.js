@@ -276,7 +276,7 @@ function forthProgram({ id, label, kernelFile, extras = [], pixie: withRings = t
 		forthDevice: true,
 		boot({ cpu, forth }) {
 			bootForth(cpu, built.image);
-			if (forth === 'hardware' && cpu.sea) new ForthDevice(built.image.labels).install(cpu);
+			if (forth === 'hardware' && cpu.sea) return { forthDevice: new ForthDevice(built.image.labels).install(cpu) };
 		},
 		status() {
 			return '';

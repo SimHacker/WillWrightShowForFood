@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { LightPen } from "../plugins/lightpen.js";
-import { type Segment, Type340 } from "../plugins/type340.js";
+import { MODE, type Segment, Type340 } from "../plugins/type340.js";
 import { KorzType340 } from "./type340.js";
 
 /**
@@ -93,4 +93,21 @@ test("korz 340: every word in every mode has exactly one slot, and why names it"
 	assert.equal(ran(0o200000, 4), "340 vector");
 	assert.equal(ran(0o200000, 1), "340 point: load Y");
 	assert.equal(ran(0o000000, 7), "cabinet DTG: tag what follows (not DEC's)");
+});
+
+test("korz 340: guards read as text, and nextWhy names the slot for the word at DAC", () => {
+	const core = new Int32Array(0o20000);
+	core[0o100] = 0o600200;
+	const t = new KorzType340({ fetch: (a) => core[a]!, store: () => {} });
+	const text = (by: string) => t.sea.guardText(t.sea.slots("word").find((s) => s.by === by)!);
+	assert.equal(text("347 DJS: jump and save"), "mode=subr top=3");
+	assert.equal(text("340 vector, escape after"), "mode=vector top=2-3");
+	assert.deepEqual(t.sea.shape("word"), { dims: ["mode", "top"], size: 32 });
+	t.iot({ device: 0o06, pulse: 0o04, ac: 0o100 });
+	const next = t.nextWhy();
+	assert.ok(next);
+	assert.equal(next.addr, 0o100);
+	assert.equal(next.word, 0o600200);
+	assert.equal(next.lines.find((l) => l.order === 0)?.slot, "340 parameter: mode, pen, scale, intensity, stop");
+	assert.equal(t.why(0o600200, MODE.SUBR).find((l) => l.order === 0)?.slot, "347 DJS: jump and save");
 });

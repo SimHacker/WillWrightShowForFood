@@ -242,7 +242,7 @@ export class Type340 implements Device, KorzDevice {
 	clock: () => number;
 	onSegment: ((s: Segment) => void) | undefined;
 	onFrame: ((f: Frame) => void) | undefined;
-	private readonly fetch: (addr: number) => number;
+	protected readonly fetch: (addr: number) => number;
 	protected readonly store: (addr: number, word: number) => void;
 	private readonly wordsPerTick: number;
 	protected subr = -1;
@@ -254,7 +254,7 @@ export class Type340 implements Device, KorzDevice {
 	protected yAt = -1;
 	private ownClock = 0;
 	/** The rest of a vector the pen stopped; IDRS draws it before the next word. */
-	private pending: PendingVector | null = null;
+	protected pending: PendingVector | null = null;
 	/** The number of the next cycle this 340 runs, once the backplane has said (`timed`). */
 	private time = 0;
 	private timed = false;

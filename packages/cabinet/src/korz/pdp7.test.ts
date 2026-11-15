@@ -304,3 +304,16 @@ test("korz pdp7, compile: EMIR leaves extend mode at the next indirect JMP unles
 		}, false);
 	}
 });
+
+test("korz pdp7: whyAt names the slot each selector runs for an instruction in core", () => {
+	const cpu = new KorzPdp7({ coreWords: 0o20000 });
+	cpu.write(0o100, 0o220150);
+	cpu.write(0o101, 0o750000);
+	cpu.write(0o102, 0o700042);
+	const ran = (addr: number) =>
+		Object.fromEntries(cpu.whyAt(addr).map((s) => [s.selector, s.lines.find((l) => l.order === 0)?.slot]));
+	assert.deepEqual(ran(0o100), { ea: "indirect, auto-indexing 10-17", exec: "LAC" });
+	assert.deepEqual(ran(0o101), { exec: "OPR: skip, then clear and complement, OAS, rotate, HLT", skip: "none", cc: "CLA", rot: "no rotate" });
+	assert.deepEqual(ran(0o102), { exec: "IOT", iot: "ION, after one more instruction" });
+	assert.equal(cpu.sea.guardText(cpu.sea.slots("iot").find((s) => s.by === "ION, after one more instruction")!), "device=0 pulse=42");
+});
