@@ -2,6 +2,12 @@
 
 Status: design, nothing built. Written 15 November 2026 from a conversation with Don.
 
+The device is PDP-7 Forth in Korz. There is no hardware to design: it is a set of slots. One slot
+per primitive on the device's IOT codes, doing in JavaScript what Mitch's assembly does; `read`
+slots over an address range in bank 1, answering from an image of his dictionary; and one IOT
+that sets the registers and enters `QUIT`. It is Mitch's Forth written as slots instead of PDP-7
+code, as the Korz CPU is SIMH's switch statements written as slots.
+
 ## Why: SYMELEC has no room
 
 SYMELEC fills the PDP-7. In Heinz Lemke's words, its 5000 instructions build up models that "had
