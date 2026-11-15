@@ -1675,17 +1675,21 @@ compare the interpreter's chains with the table's at random points, including on
 at NaN, and at -0. Then build something small that isn't an emulator, such as collision
 responses guarded on two shapes' classes and the speed they hit at.
 
-### 9. Forth words written in TypeScript, from Forth
+### 9. Forth words written in JavaScript, from Forth
 
 The Forth device's 30 primitives are a fixed list in
 [`forth-device.ts`](src/korz/forth-device.ts), matched by the labels in Mitch's kernel. The table
-behind them maps a code address to a TypeScript function. Open it up, so a Forth program can add
-instructions to the machine it runs on:
+behind them maps a code address to a function. Open it up, so a Forth program can add instructions
+to the machine it runs on.
 
-- From TypeScript: `forthDevice.define("STAR", (m) => { … })`.
-- From Forth: a defining word that takes a JavaScript body, built with `new Function`, the way
-`korz.ts` builds its generated methods. This is like Snap!'s JavaScript function blocks, by Jens
-Mönig and Brian Harvey.
+The new words are JavaScript, not TypeScript. The cabinet is written in TypeScript, but that's
+compiled to JavaScript before it ever reaches the browser, and the page has no TypeScript compiler
+in it. JavaScript is what a browser can turn into code while it runs, with `new Function`, the way
+`korz.ts` builds its generated methods. So:
+
+- From the page's own code: `forthDevice.define("STAR", (m) => { … })`, with any function.
+- From Forth: a defining word that takes a JavaScript body as text and builds it with
+  `new Function`. This is like Snap!'s JavaScript function blocks, by Jens Mönig and Brian Harvey.
 
 Such a word has no body in PDP-7 core. Its header and its cell are in the dictionary like any
 primitive's, but the cell's `JMP` goes to an address that only the device knows how to run: the word
@@ -1733,7 +1737,7 @@ words. Separate regions with sizes also let the device check for stack overflow 
 dictionary, which Mitch's kernel doesn't do.
 
 Whether IP ever needs to point into the device: if the outer interpreter is a short thread in core
-(`BEGIN REFILL INTERPRET AGAIN`) whose words are TypeScript, then IP always points into core. A word
+(`BEGIN REFILL INTERPRET AGAIN`) whose words all run in the device, then IP always points into core. A word
 that has to wait, like `KEY` with no key yet, can step IP back to its own cell and return to `NEXT`,
 so the CPU spins in `NEXT` and interrupts still get taken. That's a design question to settle by
 building it.
