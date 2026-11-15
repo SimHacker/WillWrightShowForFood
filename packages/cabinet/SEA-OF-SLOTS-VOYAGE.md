@@ -57,6 +57,12 @@ with. The cabinet is a ladder of them. SIMH's C code is the oracle for `Pdp7`, t
 CPU. `Pdp7` is the oracle for the Korz interpreter, the interpreter for the resolver, and the
 resolver for the compiler.
 
+The display has two versions too. `Type340` decodes display words with a switch statement. It's
+ported nearly line by line from Phil Budne's `display/type340.c` in SIMH, and it's the oracle for `KorzType340`, which decodes them with
+slots, on the interpreter and on the resolver. Two more pairs work the same way. The backplane
+that ticks every device every cycle is the oracle for the event-driven one. Mitch's Forth kernel
+running by itself is the oracle for the same kernel with the Forth device plugged in.
+
 ## Port 1: the bus
 
 [`src/bus.ts`](src/bus.ts) is the smallest file on the tour and the one everything else agrees on.
@@ -581,6 +587,41 @@ has 4,096 entries and four distinct chains:
 A point where the interpreter would throw gets an entry that throws the same error when it's
 called, so the table agrees with the interpreter even about failures.
 
+**Kinds, when the table is too big.** A wide dimension can blow the table up. A slot guarded on
+one address makes `read`'s table range over all 32,768 addresses, times `who`, times `access`:
+262,144 entries, most of them the same chain. Past 65,536 entries, `plan` replaces the widest
+dimensions, one at a time, by their **kinds**. Two values are the same kind when every slot's guard
+on that dimension holds both or neither, so they always get the same chain. A lookup array maps
+each value to its kind, and the table ranges over kinds:
+
+```ts
+/** Values are one kind when every slot's set on dimension `d` holds all of them or none. Null past 65,536 kinds. */
+function kindsOf<C>(slots: readonly Slot<C>[], d: number, width: number): Kinds | null {
+	const sets = slots.map((s) => s.sets[d]!).filter((s) => s !== null);
+	const map = new Uint16Array(1 << width);
+	const reps: number[] = [];
+	const ids = new Map<string, number>();
+	for (let v = 0; v < 1 << width; v += 1) {
+		let key = "";
+		for (const s of sets) key += has(s, v) ? "1" : "0";
+		// …
+		map[v] = id;
+	}
+	return { map, reps };
+}
+```
+
+With the Forth device plugged in (Port 12), `read`'s addresses come in three kinds: `NEXT`, `find`,
+and everything else. The table has 24 entries, and the index costs one more array load:
+
+```js
+this["read$"][this["read$addr"][(c["addr"] & 32767)] * 8 + (c["who"] & 3) * 2 + (c["access"] & 1)]
+```
+
+This is the compressed dispatch table that Eric Amiel, Olivier Gruber, and Eric Simon described
+for multimethods in 1994. Tables that fit stay indexed by value, so compressing never costs a table
+that didn't need it.
+
 **Generated methods, shared by every machine.** The index expression is generated as JavaScript
 and compiled once per selector and expression, for the whole process:
 
@@ -1071,26 +1112,21 @@ straight-line JavaScript. [`plugins/turing.ts`](src/plugins/turing.ts) is the or
 [`tm.ts`](src/tm.ts) has the format. This is the most direct case on the tour of a program
 that's literally a sea.
 
-### 7. When the table is too big
+### 7. Other ways to shrink a table
 
-`resolve` won't build a table past 65,536 entries; past that, a selector stays on the
-interpreter. The Forth device runs into this. Its slots guard `read` on an address, and the table
-over `addr`, `who`, and `access` would have 262,144 entries, so the SLOTS panel shows `read` as
-interpreted. The compiler still inlines a read wherever it knows the address when it compiles, but
-a read through a pointer searches the slots.
-
-Fix that in [`korz.ts`](src/korz/korz.ts). Most of those 262,144 entries hold the same chain, and
-only a few addresses are special. Some designs to try:
+Port 7's kinds are one way to keep a table small. Try others in [`korz.ts`](src/korz/korz.ts) and
+measure them against it:
 
 - A two-level table: split the wide dimension into a high part and a low part, and share the
   second-level tables that are all the same chain.
 - A small map from the few special values to their chains, in front of one entry for everything
   else. That's the idea behind Self's polymorphic inline caches, which Urs Hölzle, Craig Chambers,
   and David Ungar described in 1991.
-- Guard on a dimension the compiler can test once per block instead of once per read.
+- Kinds over two dimensions at once, when they only matter together, as `who` and `access` do for
+  the Forth device's slots.
 
-The oracle is the interpreter, as always, and the Forth device test in
-[`src/korz/forth-device.test.ts`](src/korz/forth-device.test.ts) will show you the speed.
+The oracle is the interpreter, as always: run the random-seas test in
+[`src/korz/korz.test.ts`](src/korz/korz.test.ts) with a small limit.
 
 ### 8. Forth words written in TypeScript, from Forth
 

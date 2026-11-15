@@ -85,6 +85,10 @@ export type Resolved<C> = {
 	readonly table: readonly Entry<C>[];
 	/** The table index, as a JavaScript expression over the context `c`. */
 	readonly expr: string;
+	/** Dimensions indexed by kind instead of by value, with how many kinds each has. */
+	readonly kinds: Readonly<Record<string, number>>;
+	/** The lookup arrays `expr` reads from `this`, by field name: each maps a value to its kind. */
+	readonly fields: Readonly<Record<string, Uint16Array>>;
 	/** Generated: index, entry, first slot. Coordinates must be inside their dimensions' domains. */
 	readonly call: (c: C) => number;
 };
@@ -197,11 +201,10 @@ export class Sea<C extends object> {
 	 * null when the table would exceed `limit` entries; the caller keeps the interpreter.
 	 */
 	resolve(selector: string, limit = TABLE_LIMIT): Resolved<C> | null {
-		const slots = this.bySelector.get(selector) ?? [];
-		const rel = [...new Set(slots.flatMap((s) => s.constrained))].sort((a, b) => a - b);
-		const bits = rel.reduce((n, d) => n + this.dims[d]!.width, 0);
-		if (2 ** bits > limit) return null;
-		const size = 1 << bits;
+		const plan = this.plan(selector, limit);
+		if (plan === null) return null;
+		const { rel, kinds, size } = plan;
+		const compressed = kinds.some((k) => k !== null);
 		const point = Object.fromEntries(this.dims.map((d) => [d.name, 0])) as Record<string, number>;
 		const interned = new Map<string, Entry<C>>();
 		const table = new Array<Entry<C>>(size);
@@ -209,8 +212,10 @@ export class Sea<C extends object> {
 			let rest = i;
 			for (let k = rel.length - 1; k >= 0; k -= 1) {
 				const d = this.dims[rel[k]!]!;
-				point[d.name] = rest & ((1 << d.width) - 1);
-				rest >>>= d.width;
+				const kind = kinds[k];
+				const n = kind ? kind.reps.length : 1 << d.width;
+				point[d.name] = kind ? kind.reps[rest % n]! : rest % n;
+				rest = Math.floor(rest / n);
 			}
 			let key: string;
 			let make: () => Entry<C>;
@@ -228,20 +233,42 @@ export class Sea<C extends object> {
 				key = `throws ${(e as Error).message}`;
 				make = () => thrower(e);
 			}
+			// A kind's error would name its representative, not the point dispatched: the interpreter names it.
+			if (compressed && key.startsWith("none ")) key = "none";
+			if (compressed && (key === "none" || key.startsWith("throws "))) make = () => this.interpreted(selector);
 			let e = interned.get(key);
 			if (!e) interned.set(key, (e = make()));
 			table[i] = e;
 		}
+		const fields: Record<string, Uint16Array> = {};
 		let expr = "0";
-		let shift = bits;
-		for (const d of rel) {
-			const dim = this.dims[d]!;
-			shift -= dim.width;
-			const term = `(c[${JSON.stringify(dim.name)}] & ${(1 << dim.width) - 1})`;
-			expr = expr === "0" ? (shift ? `${term} << ${shift}` : term) : `${expr} | ${shift ? `${term} << ${shift}` : term}`;
+		if (!compressed) {
+			let shift = rel.reduce((n, d) => n + this.dims[d]!.width, 0);
+			for (const d of rel) {
+				const dim = this.dims[d]!;
+				shift -= dim.width;
+				const term = `(c[${JSON.stringify(dim.name)}] & ${(1 << dim.width) - 1})`;
+				expr = expr === "0" ? (shift ? `${term} << ${shift}` : term) : `${expr} | ${shift ? `${term} << ${shift}` : term}`;
+			}
+		} else {
+			let stride = size;
+			const terms: string[] = [];
+			rel.forEach((d, k) => {
+				const dim = this.dims[d]!;
+				const kind = kinds[k];
+				stride /= kind ? kind.reps.length : 1 << dim.width;
+				let term = `(c[${JSON.stringify(dim.name)}] & ${(1 << dim.width) - 1})`;
+				if (kind) {
+					const field = kindKey(selector, dim.name);
+					fields[field] = kind.map;
+					term = `this[${JSON.stringify(field)}][${term}]`;
+				}
+				terms.push(stride === 1 ? term : `${term} * ${stride}`);
+			});
+			expr = terms.join(" + ");
 		}
 		const method = shared<C>(selector, expr);
-		const holder = { [tableKey(selector)]: table };
+		const holder = { [tableKey(selector)]: table, ...fields };
 		return {
 			selector,
 			generation: this.generation,
@@ -250,8 +277,41 @@ export class Sea<C extends object> {
 			chains: interned.size,
 			table,
 			expr,
+			kinds: Object.fromEntries(rel.flatMap((d, k) => (kinds[k] ? [[this.dims[d]!.name, kinds[k]!.reps.length]] : []))),
+			fields,
 			call: (c) => method.call(holder, c),
 		};
+	}
+
+	/**
+	 * A selector's table dimensions, and its size. Past `limit`, the widest dimensions are replaced,
+	 * one at a time, by their kinds: values that every slot's guard treats alike are one kind, and
+	 * a lookup array maps each value to its kind. Null if the table is still past `limit`.
+	 */
+	private plan(selector: string, limit: number): { rel: number[]; kinds: (Kinds | null)[]; size: number } | null {
+		const slots = this.bySelector.get(selector) ?? [];
+		const rel = [...new Set(slots.flatMap((s) => s.constrained))].sort((a, b) => a - b);
+		const counts = rel.map((d) => 2 ** this.dims[d]!.width);
+		const kinds: (Kinds | null)[] = rel.map(() => null);
+		let size = counts.reduce((n, c) => n * c, 1);
+		const widest = rel.map((_, k) => k).sort((a, b) => counts[b]! - counts[a]!);
+		for (const k of widest) {
+			if (size <= limit) break;
+			const kind = kindsOf(slots, rel[k]!, this.dims[rel[k]!]!.width);
+			if (kind === null) continue;
+			size = (size / counts[k]!) * kind.reps.length;
+			counts[k] = kind.reps.length;
+			kinds[k] = kind;
+		}
+		return size <= limit ? { rel, kinds, size } : null;
+	}
+
+	/** An entry that runs the interpreter, for the points where it throws. */
+	private interpreted(selector: string): Entry<C> {
+		const p = (): number => {
+			throw new Error(`${selector}: next() past the last slot`);
+		};
+		return { r: (c) => this.dispatch(selector, c), k: null, p };
 	}
 
 	/** A function that dispatches through the resolved table, rebuilding it after any install or remove. */
@@ -285,6 +345,7 @@ export class Sea<C extends object> {
 				const r = this.resolve(s, limit);
 				if (r) {
 					tables[tableKey(s)] = r.table;
+					Object.assign(target, r.fields);
 					target[s] = shared<C>(s, r.expr);
 				} else target[s] = (x) => this.dispatch(s, x);
 			}
@@ -366,13 +427,19 @@ export class Sea<C extends object> {
 	}
 
 	/**
-	 * The dimensions a resolved table for this selector is indexed by, and its size, without building
-	 * it. `table` is false when the size is past `limit`, where `bind` leaves the selector to the interpreter.
+	 * The dimensions a resolved table for this selector is indexed by, its size, and the dimensions
+	 * indexed by kind, without building it. `table` is false when even by kinds it is past `limit`,
+	 * where `bind` leaves the selector to the interpreter; `size` is then the table by values.
 	 */
-	shape(selector: string, limit = TABLE_LIMIT): { dims: string[]; size: number; table: boolean } {
-		const rel = [...new Set((this.bySelector.get(selector) ?? []).flatMap((s) => s.constrained))].sort((a, b) => a - b);
-		const size = 2 ** rel.reduce((n, d) => n + this.dims[d]!.width, 0);
-		return { dims: rel.map((d) => this.dims[d]!.name), size, table: size <= limit };
+	shape(selector: string, limit = TABLE_LIMIT): { dims: string[]; size: number; table: boolean; kinds: Record<string, number> } {
+		const plan = this.plan(selector, limit);
+		if (plan === null) {
+			const rel = [...new Set((this.bySelector.get(selector) ?? []).flatMap((s) => s.constrained))].sort((a, b) => a - b);
+			const size = 2 ** rel.reduce((n, d) => n + this.dims[d]!.width, 0);
+			return { dims: rel.map((d) => this.dims[d]!.name), size, table: false, kinds: {} };
+		}
+		const kinds = Object.fromEntries(plan.rel.flatMap((d, k) => (plan.kinds[k] ? [[this.dims[d]!.name, plan.kinds[k]!.reps.length]] : [])));
+		return { dims: plan.rel.map((d) => this.dims[d]!.name), size: plan.size, table: true, kinds };
 	}
 
 	/** A slot's guard as text: `mode=subr top=2-3`, octal numbers, `any` for a base case. */
@@ -473,6 +540,31 @@ function entry<C>(selector: string, chain: readonly Slot<C>[]): Entry<C> {
 }
 
 const tableKey = (selector: string): string => `${selector}$`;
+const kindKey = (selector: string, dim: string): string => `${selector}$${dim}`;
+
+/** A dimension's values by kind: `map` from value to kind, and one value of each kind. */
+type Kinds = { readonly map: Uint16Array; readonly reps: readonly number[] };
+
+/** Values are one kind when every slot's set on dimension `d` holds all of them or none. Null past 65,536 kinds. */
+function kindsOf<C>(slots: readonly Slot<C>[], d: number, width: number): Kinds | null {
+	const sets = slots.map((s) => s.sets[d]!).filter((s) => s !== null);
+	const map = new Uint16Array(1 << width);
+	const reps: number[] = [];
+	const ids = new Map<string, number>();
+	for (let v = 0; v < 1 << width; v += 1) {
+		let key = "";
+		for (const s of sets) key += has(s, v) ? "1" : "0";
+		let id = ids.get(key);
+		if (id === undefined) {
+			if (reps.length > 0xffff) return null;
+			id = reps.length;
+			ids.set(key, id);
+			reps.push(v);
+		}
+		map[v] = id;
+	}
+	return { map, reps };
+}
 const NO_TABLE: readonly unknown[] = [];
 const NO_DISPATCH = (): number => 0;
 

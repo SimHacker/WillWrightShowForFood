@@ -109,6 +109,8 @@ test("forth device: a loop of primitives takes fewer PDP-7 cycles", () => {
 
 test("forth device: unplugged, the CPU runs NEXT itself again", () => {
 	const m = machine("resolve", true);
+	const shape = (m.cpu as KorzPdp7).sea.shape("read");
+	assert.deepEqual(shape, { dims: ["addr", "who", "access"], size: 24, table: true, kinds: { addr: 3 } }, "NEXT, find, and every other address");
 	m.line("1 2 + .");
 	const cells = m.dev!.stats.cells;
 	m.dev!.remove();

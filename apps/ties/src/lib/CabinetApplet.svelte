@@ -1094,7 +1094,8 @@
 		return sea.selectors().map((selector) => {
 			const shape = sea.shape(selector);
 			const slots = sea.slots(selector).map((s) => ({ by: s.by, layer: s.layer, guard: sea.guardText(s) }));
-			return { selector, dims: shape.dims, size: shape.size, table: shape.table, slots };
+			const dims = shape.dims.map((d) => (shape.kinds[d] ? `${d} (${shape.kinds[d]} kinds)` : d));
+			return { selector, dims, size: shape.size, table: shape.table, slots };
 		});
 	}
 	function whyRows(selector, lines) {
@@ -3421,7 +3422,7 @@
 								<details class="sea-sel">
 									<summary
 										title={sel.table
-											? 'Resolved, this selector is a table indexed by these dimensions: one entry per combination, each the chain of slots that answers there.'
+											? 'Resolved, this selector is a table indexed by these dimensions: one entry per combination, each the chain of slots that answers there. A dimension with kinds is indexed by kind: values every slot treats alike are one kind.'
 											: 'A table over these dimensions would be too big to build, so the resolver and the compiler leave this selector to the interpreter, which searches its slots on every call. The compiler still inlines the chain wherever it knows the coordinates when it compiles.'}
 										><b>{sel.selector}</b> {sel.slots.length} slots · {sel.table ? 'table' : 'interpreted, a table would be'} {sel.size.toLocaleString()} over {sel.dims.join(' × ') || 'nothing'}</summary
 									>

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { AmbiguityError, bits, Sea, span } from "./korz.js";
+import { AmbiguityError, bits, Sea, span, TABLE_LIMIT } from "./korz.js";
 
 type C = { addr: number; who: number; value: number };
 const dims = [{ name: "addr", width: 8 }, { name: "who", width: 2, names: ["cpu", "device", "debugger"] }];
@@ -83,8 +83,10 @@ test("korz: why says which slot ran and what ruled the others out; view finds sl
 	assert.deepEqual(sea.view({ addr: 0x08, who: 0 }).map((s) => s.by), ["ram"]);
 });
 
-test("korz: the resolved table gives the interpreter's answer, errors included, on random seas", () => {
+for (const limit of [TABLE_LIMIT, 160])
+test(`korz: the resolved table gives the interpreter's answer, errors included, on random seas, limit ${limit}`, () => {
 	let seed = 7;
+	let byKind = 0;
 	const r = (n: number): number => {
 		seed = (Math.imul(seed, 1103515245) + 12345) >>> 0;
 		return (seed >>> 8) % n;
@@ -102,7 +104,9 @@ test("korz: the resolved table gives the interpreter's answer, errors included, 
 				// ambiguous at install: skip it
 			}
 		}
-		const resolved = sea.resolve("read")!;
+		const resolved = sea.resolve("read", limit);
+		if (resolved === null) continue;
+		if (Object.keys(resolved.kinds).length > 0) byKind += 1;
 		for (let addr = 0; addr < 256; addr += 1)
 			for (let who = 0; who < 3; who += 1) {
 				const c = ctx(addr, who);
@@ -113,6 +117,26 @@ test("korz: the resolved table gives the interpreter's answer, errors included, 
 				if (a !== b) assert.equal(b, a, `trial ${trial} at ${addr} ${who}`);
 			}
 	}
+	if (limit < TABLE_LIMIT) assert.ok(byKind >= 30, `${byKind} tables by kind`);
+});
+
+test("korz: a wide dimension with a few special values is indexed by kind", () => {
+	const sea = new Sea<C>([{ name: "addr", width: 18 }, ...dims.slice(1)]);
+	sea.install([
+		{ selector: "read", by: "ram", run: () => 1 },
+		{ selector: "read", guard: { addr: 0o1234, who: "cpu" }, by: "watch", run: (_, next) => 10 + next() },
+		{ selector: "read", guard: { addr: [0o1234, 0o4321] }, layer: "observe", by: "count", run: (_, next) => 100 + next() },
+	]);
+	const r = sea.resolve("read")!;
+	assert.deepEqual(r.kinds, { addr: 3 });
+	assert.equal(r.size, 12);
+	assert.deepEqual(sea.shape("read"), { dims: ["addr", "who"], size: 12, table: true, kinds: { addr: 3 } });
+	const go = {} as { read: (c: C) => number };
+	sea.bind(go, ["read"]);
+	assert.equal(go.read(ctx(0o1234)), 111);
+	assert.equal(go.read(ctx(0o1234, 1)), 101);
+	assert.equal(go.read(ctx(0o4321)), 101);
+	assert.equal(go.read(ctx(0o7777)), 1);
 });
 
 test("korz: a dispatcher rebuilds its table after an install, and drops irrelevant dimensions", () => {
