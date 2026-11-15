@@ -35,6 +35,11 @@ to 32K.
 - **Forth pen words** `pen?`, `pen@`, `resume`, `tag@`, and Forth interrupt handlers
   ([ROADMAP §14](ROADMAP.md#14-small-items)).
 - **RGB pen colors**, watch the beam, Prefab-style controls for PIXIE (ROADMAP §14).
+- **A display instruction that sets the color**, as DTG sets the tag: everything drawn after it is
+  in that color until the next one, IDLA resets it, and DJS saves and restores it. Segments carry
+  `color` beside `intensity`, and `toSvg`, the phosphor, and the video draw it. Candidates for the
+  bits: PARAM bits 9 and 10, which no program the tests run has ever set (TAGS-AND-PIES.md §1), or
+  a color word in the DTG tag record. Old programs stay green.
 - **Full-names Forth**: the cabinet's Forth now; next, the PRs to Mitch and the Open Firmware name words ([VARIANTS.yml](tapes/pdp7forth/VARIANTS.yml)).
 - **DUEL game panel**: ship records at 1471 and 1514, torpedoes 1537–1544.
 - **Instruction editor:** grab POINT words and whole strings; skip dark vectors when picking.
