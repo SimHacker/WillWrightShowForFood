@@ -21,7 +21,8 @@ again, for Bayesian network models of health care. PIXIE is on the program of an
 CARS 2027 in Berlin on 29 June 2027, the 60th anniversary of his first Cambridge lecture.
 
 My first implementation was a straight port to TypeScript of SIMH's PDP-7 simulator, by Bob
-Supnik, and SIMH's Type 340 display, by Phil Budne. Once that worked, I used it as the oracle for
+Supnik, and SIMH's Type 340 display, by Phil Budne, with Lars Brinkhoff's PDP-7 display interface
+and the 340 character shapes he recovered from MIT AI Lab film footage and the Knight TV font. Once that worked, I used it as the oracle for
 three tiers of a Korz rearchitecture: an interpreter, a resolver and a compiler, each checked
 instruction by instruction against the tier below. Korz is a language almost nobody has heard of,
 and it runs here on a JavaScript JIT that exists because of a language almost nobody uses any
@@ -66,7 +67,15 @@ caches, and both bail out of optimized code when a speculation fails. Dart's VM 
 and Kasper Lund, after V8. GraalVM's Truffle makes deoptimization the center of its design. PyPy
 gives Python objects maps, Ruby 3.2 gave its objects shapes, CPython 3.11 added inline caches to
 its interpreter, and Eliot Miranda's Cog VM for Squeak and Pharo uses polymorphic inline caches.
-The same speculate, guard and fall back move drives trace compilers like LuaJIT.
+Microsoft's CLR now switches running methods from quick code to optimized code by on-stack
+replacement, and the .NET runtime's
+[design doc](https://github.com/dotnet/runtime/blob/main/docs/design/features/OnStackReplacement.md)
+says OSR "was pioneered in Self", citing the 1992 deoptimization paper. Mike Pall announced
+"adaptive deoptimization support" in LuaJIT 1.1.0 in 2006, using Self as his example of code that
+needs aggressive inlining. For LuaJIT 2's trace compiler he credited Gal and Franz and HP's Dynamo,
+and
+[noted](http://lua-users.org/lists/lua-l/2008-02/msg00051.html) that "the technique originated in
+system emulators doing on-the-fly binary-to-binary translation." Emulators, again.
 
 Brendan Eich says Self inspired JavaScript's prototypes, and every time someone repeats it, I
 cringe. JavaScript missed the whole point of Self, which is right there in the title of the paper:
