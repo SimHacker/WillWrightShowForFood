@@ -16,7 +16,6 @@ lineage:
     method: "Working engineer attends postmodern conference; builds parody from real jargon; learns the field is epistemologically challenged but not empty"
   ashford_homage:
     title: "How to Deconstruct Almost Anything, Including Myself"
-    first_edition_title: "How to Incarnate Almost Anything"
     url: "https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md"
     cube_section: "https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md#the-cube-and-the-cow"
     persona: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/personas/captain-ashford.yml"

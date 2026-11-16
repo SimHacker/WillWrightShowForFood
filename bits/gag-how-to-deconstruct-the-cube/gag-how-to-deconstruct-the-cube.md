@@ -15,9 +15,8 @@ epistemologically challenged but not empty. (Morningstar and Randy
 Farmer also built Habitat in 1986 — avatars, First Penguin Award — so
 he'd earned the right.) Captain Kira Ashford — the Belter space-pirate
 lit-crit ghost from MOOLLM's adventure-4 coatroom — wrote the homage
-[*How to Deconstruct Almost Anything, Including Myself*](https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md)
-(first edition: *How to Incarnate Almost Anything*). Its second edition
-already runs Chip's five steps on the cube in
+[*How to Deconstruct Almost Anything, Including Myself*](https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md),
+which already runs Chip's five steps on the cube in
 ["The cube and the cow"](https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md#the-cube-and-the-cow).
 This essay-gag is the long version for the show: deconstruct Molyneux's
 Curiosity **without resurrecting it**.
