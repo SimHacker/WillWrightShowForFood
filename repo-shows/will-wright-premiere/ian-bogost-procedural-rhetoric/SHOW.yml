@@ -33,7 +33,7 @@ discussion_prompts:
   - "Federation publishing (Soul City) — procedural rhetoric as infrastructure, not one object at a time"
   - "Deconstruct Curiosity (2012) without resurrecting it — Cow Clicker (2010) already argued on purpose; Molyneux argued by accident"
   - "Chip Morningstar's engineer deconstruction vs. procedural rhetoric — same immune system, different vocabulary?"
-  - "Captain Ashford's homage essay How to Incarnate Almost Anything — invite a live read of How to Deconstruct the Cube"
+  - "Captain Ashford's homage essay How to Deconstruct Almost Anything, Including Myself — invite a live read of How to Deconstruct the Cube"
   - "Roles, not characters — read Bogost 2015 essay SimCity passages on air; B. Dalton/Dark Castle response beat; Micropolis roles demo; Will April 2009 narcissism quote as table centerpiece — see roles-not-characters-beat.md"
 
 roles_not_characters_beat:
@@ -53,7 +53,8 @@ curiosity_deconstruction:
   morningstar: "http://www.fudco.com/chip/deconstr.html"
   ashford:
     persona: "Captain Kira Ashford — Belter space pirate, Expanse aesthetic — MOOLLM adventure-4"
-    homage: "How to Incarnate Almost Anything — designs/postmodern-deconstruction.md"
+    homage: "How to Deconstruct Almost Anything, Including Myself"
+    url: "https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md#the-cube-and-the-cow"
     reincarnate: "Wear captain-ashford.yml from adventure-4 coatroom; or read from pub Palm Nook study"
 
 ties_to:

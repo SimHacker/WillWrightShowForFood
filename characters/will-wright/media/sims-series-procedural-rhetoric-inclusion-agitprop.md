@@ -38,7 +38,7 @@ Ask Bogost to react to:
    - [Curiosity + Cow Clicker parody](../../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml) — keep real Curiosity dead; center is Bogost's cow (or Berkeley horse — "that's a cow")
    - [Morningstar → Ashford → Bogost chain](../../../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml) — engineer deconstruction meets procedural rhetoric
    - **Chip Morningstar**, ["How to Deconstruct Almost Anything"](http://www.fudco.com/chip/deconstr.html) (1993) — working builder survives postmodern conference
-   - **Captain Kira Ashford** (MOOLLM adventure-4 Belter pirate, Expanse aesthetic) — homage *How to Incarnate Almost Anything*; reincarnate from `captain-ashford.yml`
+   - **Captain Kira Ashford** (MOOLLM adventure-4 Belter pirate, Expanse aesthetic) — homage [*How to Deconstruct Almost Anything, Including Myself*](https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md#the-cube-and-the-cow), which already runs Chip's five steps on the cube; reincarnate from `captain-ashford.yml`
    - Ask: Is distressed-moo click audio procedural rhetoric or cruelty with reverb? When Cow Clicker got popular anyway, is *that* the second joke?
 
 Related: [sims-series-micropolis-publishing-vision.md](sims-series-micropolis-publishing-vision.md) · [inclusivity-paper-draft.md](sims-series-inclusivity-paper-draft.md)

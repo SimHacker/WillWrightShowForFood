@@ -55,7 +55,8 @@ sources:
     title: "How to Deconstruct Almost Anything (1993)"
   ashford_homage:
     persona: "Captain Kira Ashford — Belter space pirate, The Expanse aesthetic (MOOLLM adventure-4)"
-    essay: "How to Incarnate Almost Anything — moollm/designs/postmodern-deconstruction.md"
+    essay: "How to Deconstruct Almost Anything, Including Myself"
+    url: "https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md#the-cube-and-the-cow"
     reincarnate: "examples/adventure-4/personas/captain-ashford.yml — WEAR from coatroom"
   berkeley_cows_in_berkeley:
     title: "Cows In Berkeley? Moooo"

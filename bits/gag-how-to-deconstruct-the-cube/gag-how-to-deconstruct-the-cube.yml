@@ -15,9 +15,11 @@ lineage:
     year: 1993
     method: "Working engineer attends postmodern conference; builds parody from real jargon; learns the field is epistemologically challenged but not empty"
   ashford_homage:
-    title: "How to Incarnate Almost Anything"
-    moollm: "../../../../git/moollm/designs/postmodern-deconstruction.md"
-    persona: "../../../../git/moollm/examples/adventure-4/personas/captain-ashford.yml"
+    title: "How to Deconstruct Almost Anything, Including Myself"
+    first_edition_title: "How to Incarnate Almost Anything"
+    url: "https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md"
+    cube_section: "https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md#the-cube-and-the-cow"
+    persona: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/personas/captain-ashford.yml"
     note: "Captain Kira Ashford — Belter captain, Expanse aesthetic — still wearable in adventure-4 coatroom"
   reincarnation: |
     Ashford lives in git: adventure-4 personas, Palm Nook study, attic Sims1 screenshot,
@@ -50,7 +52,7 @@ morningstar_three_part_test:
 bogost_invite_hook: |
   **Ian:** You coined *procedural rhetoric*. Chip Morningstar wrote the engineer's field guide
   to surviving postmodern jargon. Captain Ashford (our Belter pirate lit-crit ghost) wrote the
-  homage *How to Incarnate Almost Anything*. We'd like a fourth voice on the show:
+  homage *How to Deconstruct Almost Anything, Including Myself*, which already runs Chip's five steps on the cube. We'd like a fourth voice on the show:
 
   **Deconstruct Curiosity without resurrecting it.** Cow Clicker already made the argument on
   purpose (2010). Molyneux made the addiction by accident (2012). Don trolled Peter at Unite
