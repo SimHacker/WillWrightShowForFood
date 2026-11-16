@@ -4,7 +4,7 @@ Don Hopkins, November 2026
 
 [A sea of slots](SEA-OF-SLOTS.md) tells why I built a PDP-7 out of Korz slots and what it does.
 This is the long way round: a tour of the source code of the whole cabinet, port by port, from the
-backplane to the compiler, for people who want to read the code itself.
+CPU to the compiler, for people who want to read the code itself.
 
 The cabinet is meant to be read. The point of it is to learn how these things work, and to teach
 them, by reading the code: a 1965 computer, its devices, and the dispatch and compiling machinery
@@ -37,6 +37,20 @@ At the end there's a workshop: projects to try, each with the files to start fro
 what you build.
 
 ## The chart
+
+An **emulator** is a program that behaves like another computer, closely enough to run that
+computer's programs unchanged. This one emulates the DEC PDP-7, a minicomputer from 1965. The **cabinet** is my name for the emulator as a whole: like the real machine's
+cabinet, it holds a CPU and devices plugged into a backplane, the board that connects them.
+
+A few names come up throughout:
+
+- **SIMH** is Bob Supnik's open-source simulator of historic computers, written in C. The
+  cabinet's plain PDP-7 is ported from it.
+- **V8** is the JavaScript engine in Chrome and Node. It turns JavaScript into machine code while
+  it runs, and much of the cabinet is written so that V8 can make it fast.
+- **Svelte** is the framework the web page is written in.
+- **Core** means memory. The PDP-7's memory was made of tiny magnetic rings called cores, one per
+  bit, and the word stuck.
 
 The cabinet is a TypeScript library with no dependencies at run time. A Svelte page drives it in
 the browser, and the tests drive it in Node. The layers, from the bottom:
@@ -74,135 +88,7 @@ slots.
 - Mitch's Forth kernel running by itself is the oracle for the same kernel with the Forth device
 plugged in.
 
-## Port 1: the bus
-
-[`src/bus.ts`](src/bus.ts) is the smallest file on the tour and the one everything else agrees on.
-Its first line is a rule:
-
-```ts
-/** What a CPU puts on the I/O bus. Devices do not see the ISA. */
-export type Iot = {
-    device: number;
-    pulse: number;
-    ac: number;
-};
-```
-
-An **IOT** (input/output transfer) is the PDP-7's one I/O instruction. Its word names a device code
-(6 bits, so 64 devices) and a set of pulse bits, and the accumulator (AC) goes along for the ride.
-The device answers with a new AC and, optionally, "skip the next instruction". That's how a
-PDP-7 program asks a question: `KSF` means "skip if a key is waiting", and the instruction after it
-is usually a jump back to ask again.
-
-A device is anything with a name, a list of the codes it answers, and an `iot` method. The rest is
-optional:
-
-```ts
-export interface Device {
-    readonly name: string;
-    /** Device-select codes this box claims. Unclaimed IOTs no-op. */
-    readonly iots: readonly number[];
-    iot(req: Iot): IotReply;
-    /** Run `cycles` cycles; `at`, when the backplane knows it, is the number of the first. */
-    tick?(cycles: number, at?: number): void;
-    // …
-    nextEvent?(lead: number): number;
-    coreWrite?(addr: number, point: number): boolean;
-    answersAhead?(code: number, pulse: number): boolean;
-    irq?(): boolean;
-    reset?(): void;
-    power?: boolean;
-    offIot?(req: Iot): IotReply;
-    bindSwitches?(bindings: readonly SwitchBinding[]): void;
-}
-```
-
-`nextEvent` is the interesting one. It asks the device: how many cycles until you next do
-something anyone could see? Raise a flag, write core, print a character. Port 2 is what the
-backplane does with the answer.
-
-The CPU side is just as plain: `step()`, `read`, `write`, `skip`, `reset`, and a `pc` and `ac`. A
-CPU that can run many instructions between device events implements `runBatch`, and that's the
-door the compiler comes in by, at Port 10.
-
-## Port 2: the backplane, and time
-
-[`src/cabinet.ts`](src/cabinet.ts) holds one CPU and a list of devices, and it is "the one place
-where time passes". There are two ways to run it.
-
-The simple way is still there, as the oracle: tick every device every cycle and poll every
-interrupt flag every step.
-
-```ts
-private stepEveryCycle(): Step {
-    // One IRQ line: the OR of every raised device flag. The ISA owns
-    // what an interrupt does; the backplane only carries the wire.
-    let irq = false;
-    // …
-    const result: Step = this.cpu.power === false ? { halt: true } : this.cpu.step();
-    if (result.iot) {
-        const reply = this.dispatch(result.iot);
-        this.cpu.ac = reply.ac;
-        if (reply.skip) this.cpu.skip();
-    }
-    for (let i = 0; i < devices.length; i += 1) {
-        const d = devices[i]!;
-        if (d.power !== false) d.tick?.(1, this.cycles);
-    }
-    this.cycles += 1;
-    return result;
-}
-```
-
-The fast way is **event-driven**. Each device says when its next event is due, and the backplane
-ticks it only then, once, for all the cycles since its last tick. A teletype that's printing a
-character answers "in 900 cycles". An idle one answers `Infinity`, which means it can't change
-until someone sends it an IOT. Before an IOT reaches a device, the backplane brings that device up
-to the current cycle, so no one ever sees a device behind:
-
-```ts
-private dispatch(iot: Iot): IotReply {
-    // CAF 703302 — clear all flags. Backplane-level, like SIMH's reset_all.
-    if (iot.device === 0o33 && iot.pulse === 0o02) {
-        this.resetDevices();
-        return { ac: iot.ac };
-    }
-    const i = this.devices.findIndex((d) => d.iots.includes(iot.device));
-    if (i < 0) return { ac: iot.ac };
-    const box = this.devices[i]!;
-    if (!box.answersAhead?.(iot.device, iot.pulse)) this.syncUnit(i);
-    if (box.power === false) return box.offIot?.(iot) ?? { ac: iot.ac };
-    return box.iot(iot);
-}
-```
-
-The hard part is a device that answers `nextEvent` by **running ahead**, as the Type 340 display
-does (Port 4). It draws up to 256 cycles into the future, then says "my next event is in k
-cycles". If the CPU then writes a core word the display already read while it was running ahead,
-the display is wrong. So the backplane asks every running-ahead device before each core write:
-
-```ts
-/** Ahead of each core write: bring back any unit that has read the word too far ahead. */
-private readonly beforeWrite = (addr: number): void => {
-    const w = this.watchers;
-    const by = this.ticking;
-    for (let k = 0; k < w.length; k += 1) {
-        const i = w[k]!;
-        if (i === by) continue;
-        const point = by >= 0 && i < by ? this.cycles + 1 : this.cycles;
-        if (this.devices[i]!.coreWrite!(addr, point)) this.syncTo(i, point);
-    }
-};
-```
-
-Look at `point`. Within one cycle the CPU runs first, then the devices in order. A write by device
-j at cycle s must be seen by the devices after j from cycle s, and by those before j from s + 1.
-That one line is the whole ordering rule.
-
-Every test that runs a real program checks the event-driven backplane against `everyCycle: true`.
-Both must agree on every register at every step.
-
-## Port 3: the PDP-7
+## Port 1: the PDP-7
 
 [`src/plugins/pdp7.ts`](src/plugins/pdp7.ts) is the PDP-7 written as switch statements, ported from
 Bob Supnik's [SIMH](https://github.com/open-simh/simh) (`PDP18B/pdp18b_cpu.c`). It's 495 lines, and
@@ -214,7 +100,8 @@ with the next few paragraphs; if you have, skip to "Memory in banks".
 **Memory** is a long row of numbered boxes called **words**. On the PDP-7 each word holds 18
 bits, and there are 8,192 of them in the basic machine (up to 32,768 with more memory). A word's
 number is its **address**. Everything lives in those words: the program, its data, and some
-of the machine's own bookkeeping.
+of the machine's own bookkeeping. Memory is also called **core**, after the magnetic cores it was
+made of.
 
 **Registers** are a few words inside the CPU itself. The PDP-7 has very few:
 
@@ -331,7 +218,7 @@ protected jmsWord(): number {
 }
 ```
 
-`**CAL`, a call to a fixed place.** `CAL` does exactly what `JMS 20` would (20 octal, location
+**`CAL`, a call to a fixed place.** `CAL` does exactly what `JMS 20` would (20 octal, location
 16): it stores the return address in location 20 and starts running at 21. Its own address field
 plays no part, so the program can put anything there. Whatever sits at 21 is the one routine every
 `CAL` reaches. It finds the `CAL` that called it one word before the return address in 20, and it
@@ -340,11 +227,14 @@ argument. In extend mode it goes to location 20 of bank 0; without it, to locati
 current bank. `CAL I` is `JMS I 20`, a call through whatever pointer 20 holds. Port 6 shows what
 Forth does with it.
 
-**Interrupts.** A device that needs attention, a key pressed say, raises a flag. If interrupts
-are on, the CPU stops what it's doing between instructions and does what `JMS 0` would: it saves
-the address it was about to run in location 0 and starts running at location 1. Every device shares that one
-interrupt, so the program at 1 has to ask each device in turn whether it was the one. The instruction `ION` turns interrupts on, after one more instruction, so a handler can turn
-them on and return before the next interrupt arrives.
+**Interrupts.** A device that needs attention, a key pressed say, raises its **flag**, one bit in
+the device that means "something happened". A program can ask about the flag with a skip
+instruction, or let the flag interrupt it. If interrupts are on, the CPU stops what it's doing
+between instructions and does what `JMS 0` would: it saves the address it was about to run in
+location 0 and starts running at location 1. Every device shares that one interrupt, so the
+program at 1 has to ask each device in turn whether it was the one. The instruction `ION` turns
+interrupts on, after one more instruction, so a handler can turn them on and return before the
+next interrupt arrives.
 
 **The operate group.** Words starting with 74 aren't one instruction. The low bits of the word are
 switches for several small steps that all run in one instruction: first a skip test on AC and the
@@ -411,6 +301,147 @@ A few IOTs never leave the CPU. Device 0 is the interrupt system: 700042 is `ION
 `IOF`, interrupts on and off. Device 77 controls extend mode. Every other IOT goes out on the I/O
 bus to whatever device is plugged in at that number, and if nothing is, it does nothing.
 
+## Port 2: the bus
+
+[`src/bus.ts`](src/bus.ts) is the smallest file on the tour and the one everything else agrees on.
+Its first line is a rule:
+
+```ts
+/** What a CPU puts on the I/O bus. Devices do not see the ISA. */
+export type Iot = {
+    device: number;
+    pulse: number;
+    ac: number;
+};
+```
+
+The **ISA**, instruction set architecture, is the CPU's instruction set: what each instruction
+word means. The rule says a device never decodes instructions. It sees only the three numbers in
+an `Iot`, so the same device could sit beside a different CPU.
+
+Port 1 took `KRB` apart. On the bus, an IOT is just those three numbers: the device code, the
+pulse bits, and AC, which goes along for the ride. The device answers with a new AC and,
+optionally, "skip the next instruction", which is how `KSF` asks whether a key is waiting.
+
+A device is anything with a name, a list of the codes it answers, and an `iot` method. The rest is
+optional:
+
+```ts
+export interface Device {
+    readonly name: string;
+    /** Device-select codes this box claims. Unclaimed IOTs no-op. */
+    readonly iots: readonly number[];
+    iot(req: Iot): IotReply;
+    /** Run `cycles` cycles; `at`, when the backplane knows it, is the number of the first. */
+    tick?(cycles: number, at?: number): void;
+    // …
+    nextEvent?(lead: number): number;
+    coreWrite?(addr: number, point: number): boolean;
+    answersAhead?(code: number, pulse: number): boolean;
+    irq?(): boolean;
+    reset?(): void;
+    power?: boolean;
+    offIot?(req: Iot): IotReply;
+    bindSwitches?(bindings: readonly SwitchBinding[]): void;
+}
+```
+
+`nextEvent` is the interesting one. It asks the device: how many cycles until you next do
+something anyone could see? Raise a flag, write core, print a character. Port 3 is what the
+backplane does with the answer.
+
+The CPU side is just as plain: `step()`, `read`, `write`, `skip`, `reset`, and a `pc` and `ac`. A
+CPU that can run many instructions between device events implements `runBatch`, and that's the
+door the compiler comes in by, at Port 10.
+
+## Port 3: the backplane, and time
+
+[`src/cabinet.ts`](src/cabinet.ts) holds one CPU and a list of devices, and it is "the one place
+where time passes". There are two ways to run it.
+
+First, time. The cabinet counts time in **cycles**, one per instruction the CPU runs, and a real
+PDP-7 cycle is 1.75 µs. A device that does something on its own, like a clock or a printer, gets
+**ticked**: told how many cycles have passed, so it can catch up.
+
+The simple way is still there, as the oracle: tick every device every cycle, and before every
+instruction ask every device whether it wants an interrupt. That's **polling**, asking each one in
+turn. A wanted interrupt is an **IRQ**, interrupt request, and the PDP-7 has one IRQ line that
+any device can raise.
+
+```ts
+private stepEveryCycle(): Step {
+    // One IRQ line: the OR of every raised device flag. The ISA owns
+    // what an interrupt does; the backplane only carries the wire.
+    let irq = false;
+    // …
+    const result: Step = this.cpu.power === false ? { halt: true } : this.cpu.step();
+    if (result.iot) {
+        const reply = this.dispatch(result.iot);
+        this.cpu.ac = reply.ac;
+        if (reply.skip) this.cpu.skip();
+    }
+    for (let i = 0; i < devices.length; i += 1) {
+        const d = devices[i]!;
+        if (d.power !== false) d.tick?.(1, this.cycles);
+    }
+    this.cycles += 1;
+    return result;
+}
+```
+
+The fast way is **event-driven**. Each device says when its next event is due, and the backplane
+ticks it only then, once, for all the cycles since its last tick. A teletype that's printing a
+character answers "in 900 cycles". An idle one answers `Infinity`, which means it can't change
+until someone sends it an IOT. Before an IOT reaches a device, the backplane brings that device up
+to the current cycle, so no one ever sees a device behind:
+
+```ts
+private dispatch(iot: Iot): IotReply {
+    // CAF 703302 — clear all flags. Backplane-level, like SIMH's reset_all.
+    if (iot.device === 0o33 && iot.pulse === 0o02) {
+        this.resetDevices();
+        return { ac: iot.ac };
+    }
+    const i = this.devices.findIndex((d) => d.iots.includes(iot.device));
+    if (i < 0) return { ac: iot.ac };
+    const box = this.devices[i]!;
+    if (!box.answersAhead?.(iot.device, iot.pulse)) this.syncUnit(i);
+    if (box.power === false) return box.offIot?.(iot) ?? { ac: iot.ac };
+    return box.iot(iot);
+}
+```
+
+CAF, "clear all flags", resets every device at once, so the backplane answers it itself. For
+anything else, it finds the device that claims the code, brings it up to date unless the device
+says it can answer from where it is, and hands it the IOT. A device with its power off answers
+through `offIot`, or not at all. An unclaimed code does nothing.
+
+The hard part is a device that answers `nextEvent` by **running ahead**, as the Type 340 display
+does (Port 4). It draws up to 256 cycles into the future, then says "my next event is in k
+cycles". If the CPU then writes a core word the display already read while it was running ahead,
+the display is wrong. So the backplane asks every running-ahead device before each core write:
+
+```ts
+/** Ahead of each core write: bring back any unit that has read the word too far ahead. */
+private readonly beforeWrite = (addr: number): void => {
+    const w = this.watchers;
+    const by = this.ticking;
+    for (let k = 0; k < w.length; k += 1) {
+        const i = w[k]!;
+        if (i === by) continue;
+        const point = by >= 0 && i < by ? this.cycles + 1 : this.cycles;
+        if (this.devices[i]!.coreWrite!(addr, point)) this.syncTo(i, point);
+    }
+};
+```
+
+Look at `point`. Within one cycle the CPU runs first, then the devices in order. A write by device
+j at cycle s must be seen by the devices after j from cycle s, and by those before j from s + 1.
+That one line is the whole ordering rule.
+
+Every test that runs a real program checks the event-driven backplane against `everyCycle: true`.
+Both must agree on every register at every step.
+
 ## Port 4: the devices
 
 Each device is a class implementing `Device`, in [`src/plugins/`](src/plugins). Each answers its
@@ -452,8 +483,10 @@ pulse 2 clears it (and the keyboard ORs its character into the AC), pulse 4 load
 
 **The Type 340** ([`type340.ts`](src/plugins/type340.ts)) is the biggest device and the one this
 whole project grew from. It's a display processor: it reads its own program, a display file, out
-of the PDP-7's core by direct memory access (DMA), and draws lines on a CRT, while the PDP-7 gets
-on with something else. Its instruction set has modes. A parameter word sets the mode, scale, and
+of the PDP-7's core by direct memory access (DMA), reading memory itself without asking the CPU.
+It draws lines on a CRT, a cathode-ray tube, by steering an electron beam across the glowing
+screen, while the PDP-7 gets on with something else. There are no pixels: the beam goes where the
+display file tells it, which is called a vector display. Its instruction set has modes. A parameter word sets the mode, scale, and
 intensity. Point mode moves the beam. Vector mode draws a line from a word's dx and dy. Increment
 mode draws four short steps in a word, character mode draws three characters from the 342
 character generator, and vector-continue draws to the edge of the screen. The 347 subroutine
@@ -492,8 +525,10 @@ back to the snapshot and replays it to the write. A program that edits its displ
 340 draws it, which is what PIXIE does all day, sees exactly what it would have seen on the real
 machine.
 
-**The light pen** ([`lightpen.ts`](src/plugins/lightpen.ts)) is tested against every line as it's
-drawn. The 340 takes any number of pens, ORed onto its one pen input, as photocell amplifiers would
+**The light pen** ([`lightpen.ts`](src/plugins/lightpen.ts)) is how you pointed at a 1960s
+screen: a pen with a light sensor in its tip. When the beam draws something under the pen, the pen
+sees the flash, and the 340 stops and raises its flag, so the program knows which line you're
+pointing at. The emulated pen is tested against every line as it's drawn. The 340 takes any number of pens, ORed onto its one pen input, as photocell amplifiers would
 have been. 1972 programs can't tell. A cabinet IOT on the free device code 11, IDPN, says which pen
 fired, so a program written now can tell them apart.
 
@@ -501,8 +536,9 @@ fired, so a program written now can tell them apart.
 
 - [`papertape.ts`](src/plugins/papertape.ts): the paper tape reader that loads programs.
 - [`rb09.ts`](src/plugins/rb09.ts): the RB09 fixed-head disk UNIX boots from.
-- [`turing.ts`](src/plugins/turing.ts): a Turing machine coprocessor on device 54. It runs
-transition tables out of core, the way the 340 runs display files, and it comes in three layers:
+- [`turing.ts`](src/plugins/turing.ts): a Turing machine coprocessor on device 54. A Turing
+machine is the simplest computer in theory: a head that reads and writes symbols on a tape,
+following a table of rules called a transition table. This device runs transition tables out of core, the way the 340 runs display files, and it comes in three layers:
 the engine knows nothing about PDP-7s, `TuringDevice` puts it on the bus, and `TuringCpu` makes
 it a whole cabinet by itself.
 - [`ultimate.ts`](src/plugins/ultimate.ts): Marvin Minsky's Ultimate Machine, the box whose only
@@ -652,7 +688,7 @@ next:   xct i 010       " pre-increment IP, execute the thread cell
         jmp next
 ```
 
-Reading it word by word needs two PDP-7 features from Port 3.
+Reading it word by word needs two PDP-7 features from Port 1.
 
 The first is the `i` after an instruction, which means **indirect**: the instruction's address
 names a location that holds the address to use, like a pointer. The second is the **auto-index
@@ -784,11 +820,37 @@ kernel with something new.
 
 ## Port 7: Korz
 
-Now the sea. [Korz](https://doi.org/10.1145/2661136.2661147) is David Ungar, Harold
-Ossher, and Doug Kimelman's 2014 language: Self without the objects. A method is a **slot**
-with a **guard**, a condition on the **context** of a call, and every call looks up the most
-specific slot whose guard matches. [`src/korz/korz.ts`](src/korz/korz.ts) is my implementation
-for emulators. It's 570 lines, and it knows nothing about PDP-7s.
+Now the sea. Start with the problem it solves.
+
+An emulator answers the same few questions over and over: what does reading this address give?
+What does this instruction do? What does this IOT do? `Pdp7` answers each with a switch
+statement. That's fast and easy to read, but every new answer means editing the switch. Suppose
+you want a breakpoint, or a device that watches one address, or a debugger read that shouldn't
+count as the CPU's. Each is a new case, in someone else's code, and they get in each other's way.
+
+Korz answers each question by looking it up instead. Every answer is a separate small function,
+called a **slot**, with a **guard** that says when it applies: "any address", "address 1234 when
+the CPU fetches an instruction", "any read by the debugger". Asking a question means looking for
+the slots whose guards match, and when several match, the most specific one wins. Adding a
+breakpoint is adding a slot, and taking it away is removing it, while the machine runs. Nobody
+edits anyone's switch.
+
+The words, once, with the read example:
+
+| Word | Means | In the example |
+| --- | --- | --- |
+| **selector** | the name of the question | `read` |
+| **context** | the facts about this one call | address 1234, read by the CPU, an instruction fetch |
+| **dimension** | one kind of fact a context has | `addr`, `who`, `access` |
+| **guard** | which values of which dimensions a slot applies to | `{ addr: 1234, access: "fetch" }` |
+| **slot** | a guard, plus the function that runs when it matches | the Forth device's answer for `NEXT` |
+| **sea** | all the slots of a machine, for every selector | |
+
+[Korz](https://doi.org/10.1145/2661136.2661147) is David Ungar, Harold Ossher, and Doug Kimelman's
+2014 language. Ungar and Randall Smith designed Self, a language made of objects whose methods are looked up by
+name, and Korz keeps Self's slots but drops the objects: a call looks up its slot by its whole
+context instead of by one object. [`src/korz/korz.ts`](src/korz/korz.ts) is my implementation for
+emulators. It's 670 lines, and it knows nothing about PDP-7s.
 
 **Dimensions and guards.** A context is a point in a space of named integer **dimensions**. A
 guard constrains some dimensions to sets of values, and a dimension it doesn't mention is
@@ -829,17 +891,23 @@ A dimension is between 1 and 20 bits wide, so it has at most about a million val
 field that's missing counts as 0, and a value too big for its dimension is cut to the dimension's
 width, keeping only its low bits, the same way at every level: 261 in an 8-bit dimension is 5.
 
-**Sets as bitsets.** Each guard becomes, per dimension, a set of values stored as a bitset in a
-`Uint32Array`, with `null` meaning the whole domain. A dimension is at most 20 bits wide, so its
-largest set is 32,768 words:
+**Sets as bitsets.** Each guard becomes, per dimension, a set of values. A set is stored as a
+**bitset**: a row of bits, one per possible value, where bit v is 1 if v is in the set. For the
+4-bit `op` dimension, the set "LAC or DAC" (op 4 or op 1) is the 16 bits with only bits 1 and 4
+set. The bits are packed 32 to a number in a `Uint32Array`, and `null` means "every value", for a
+dimension the guard doesn't mention. A dimension is at most 20 bits wide, so its largest set is
+32,768 numbers:
 
 ```ts
 /** A set over one dimension's domain, as a bitset; `null` is the whole domain. */
 type DimSet = Uint32Array | null;
 ```
 
-**Specificity.** Slot A is at least as specific as slot B when A's set is inside B's on every
-dimension. That's the entire rule, and it's a subset test:
+**Specificity.** When several slots match, which one wins? Slot A is at least as specific as
+slot B when A's set is inside B's on every dimension: everywhere A applies, B applies too, so A is
+the special case. A slot for "address 1234" is more specific than one for "any address", and one
+for "address 1234, fetched by the CPU" is more specific than both. That's the entire rule, and with
+bitsets it's a few `&` operations:
 
 ```ts
 function subset(a: DimSet, b: DimSet): boolean {
@@ -853,15 +921,29 @@ function le<C>(a: Slot<C>, b: Slot<C>): boolean {
 }
 ```
 
-There's no class hierarchy and no ordering of arguments. A slot that guards on more, or on less of
-a dimension, is more specific, on every dimension at once. That's **multiple dispatch**, choosing
-code by more than one argument, done as geometry.
+`subset` checks that every bit set in `a` is set in `b`, 32 values at a time. `le` ("less or
+equal") checks that on every dimension.
 
-**Layers, chains, and `next`.** Slots come in three layers, outermost first: `observe`, `patch`,
-and `machine`. A call runs a chain: the most specific matching slot of each layer, then the next
-most specific, and so on, and each slot decides whether to call `next` and run the rest. That's
-**method combination** in the sense of CLOS's `:around` methods, or aspects, with the order fixed by
-the guards instead of by whoever loaded last:
+In most object-oriented languages, the method that runs is chosen by one thing, the class of the
+object you call it on, and classes are ranked by inheritance. Here there are no classes. A slot
+that guards on more dimensions, or on fewer values of a dimension, is more specific, on every
+dimension at once. Choosing code by more than one fact about a call is called **multiple
+dispatch**, and this is multiple dispatch done as geometry: each guard is a box in the space of
+contexts, and the smallest box around the point wins.
+
+**Layers, chains, and `next`.** Sometimes you want more than one slot to run. A counter should
+count every read and then let the read happen. So slots come in three layers, run outermost first:
+
+- **observe** slots watch: they count, trace, or log, and then let the call go on.
+- **patch** slots change behavior for a while: a breakpoint, a device whose power is off.
+- **machine** slots are the machine's own behavior: what LAC does, what a read returns.
+
+A call runs a **chain**: the most specific matching slot of each layer, outermost layer first, then
+the next most specific, and so on. Each slot gets a function called `next`, and decides whether to
+call it and run the rest of the chain. A counter calls `next`. A breakpoint might not. Lisp's CLOS
+calls this **method combination**, with its `:around` methods, and aspect-oriented programming has
+the same idea. The difference here is that the order comes from the guards, not from whoever
+loaded their code last:
 
 ```ts
 chain(selector: string, c: C): Slot<C>[] {
@@ -882,12 +964,15 @@ chain(selector: string, c: C): Slot<C>[] {
 }
 ```
 
-**The interpreter.** `dispatch` computes the chain and calls it. It's slow and obviously right,
-and that's its job: it's the oracle for everything faster.
+**The interpreter.** `dispatch(selector, context)` does all of that on every call: it filters
+the slots whose guards match, sorts them into a chain, and runs the chain. It's slow and obviously
+right, and that's its job: it's the oracle for everything faster.
 
 **Ambiguity when you install, not when you crash.** Two slots can overlap with neither more
-specific, like a slot for `ind: 1` and one for `op: 0o14`. That's fine only if every point in the
-overlap has a third slot more specific than both. `install` checks that by walking the points of
+specific. Take a slot for every indirect instruction, `ind: 1`, and one for every JMP, `op: 0o14`
+(JMP's word starts with 60, which is op 14 in the four-bit opcode field). A `JMP I` matches both,
+and neither guard is inside the other, so neither wins. That's allowed only if every point in the
+overlap has a third slot more specific than both, here a slot for `JMP I` itself. `install` checks that by walking the points of
 the overlap, and if it fails, it puts the sea back as it was and throws an error that names the
 two slots and the point. Installing is a transaction:
 
@@ -897,10 +982,13 @@ install(specs: readonly SlotSpec<C>[]): Slot<C>[] {
 ```
 
 **Resolution.** Here's the idea that makes it fast. For one selector, only the dimensions some of
-its slots constrain can change the answer. Take the product of those dimensions' domains, compute
-the chain at every point ahead of time, and the call becomes a table lookup. Equal chains are
-**interned** (stored once and shared). On a PDP-7 with no devices plugged in, the `iot` table
-has 4,096 entries and four distinct chains:
+its slots guard can change the answer. `exec`'s slots guard only `op` and `ind`, so whatever else
+is in the context, those two decide which slots run. There are 16 × 2 = 32 combinations, called
+**points**. So work out the chain for every point ahead of time, once, and store them in a table
+indexed by the point. Then a call is a table lookup instead of a search. Many points get the same
+chain, so each different chain is stored once and shared, which is called **interning**. On a
+PDP-7 with no devices plugged in, the `iot` table has 4,096 entries, one for each device code
+times each pulse, and only four different chains:
 
 ```ts
 resolve(selector: string, limit = TABLE_LIMIT): Resolved<C> | null {
@@ -921,11 +1009,11 @@ it's too big, below.
 A point where the interpreter would throw gets an entry that throws the same error when it's
 called, so the table agrees with the interpreter even about failures.
 
-**Kinds, when the table is too big.** A wide dimension can blow the table up. A slot guarded on  
-one address makes `read`'s table range over all 32,768 addresses, times `who`, times `access`:  
-262,144 entries, most of them the same chain. Past 65,536 entries, `plan` replaces the widest  
-dimensions, one at a time, by their **kinds**. Two values are the same kind when every slot's guard  
-on that dimension holds both or neither, so they always get the same chain. A lookup array maps  
+**Kinds, when the table is too big.** A wide dimension can blow the table up. A slot guarded on
+one address makes `read`'s table range over all 32,768 addresses, times `who`, times `access`:
+262,144 entries, most of them the same chain. Past 65,536 entries, `plan` replaces the widest
+dimensions, one at a time, by their **kinds**. Two values are the same kind when every slot's guard
+on that dimension holds both or neither, so they always get the same chain. A lookup array maps
 each value to its kind, and the table ranges over kinds:
 
 ```ts
@@ -1124,8 +1212,16 @@ anywhere in this region?" `view({ op: 4 }, "exec")` returns LAC and count LACs.
 
 ## Port 8: the PDP-7 as a sea
 
-[`src/korz/pdp7.ts`](src/korz/pdp7.ts) is `KorzPdp7`. It inherits the registers and the EAE's
-arithmetic from `Pdp7`, and makes everything that decides what runs into a slot.
+[`src/korz/pdp7.ts`](src/korz/pdp7.ts) is `KorzPdp7`, the PDP-7 built on the sea. It's a subclass
+of `Pdp7`, so it keeps the registers and the EAE's arithmetic, and replaces the switch statements,
+everything that decides what runs, with slots. It runs at three levels, which you pick with
+`?cpu=` on the page:
+
+- **interpret**: every question goes to Korz's interpreter, which searches the slots each time.
+- **resolve**: every question goes through a resolved table (Port 7).
+- **compile**: runs of instructions are compiled into JavaScript functions (Port 10).
+
+`Pdp7` itself, the switch statements, is `?cpu=pdp7`, and it's the oracle for all three.
 
 **The dimensions are the instruction format.** Each one is a field of the instruction word or a
 fact about the access:
@@ -1153,14 +1249,34 @@ export const PDP7_DIMS: readonly Dim[] = [
 ];
 ```
 
-**One shape for every context.** A context is a plain object, `K7`, with every field present
-from the start, so V8 gives every context one hidden class. Instructions, memory accesses, and IOTs
-nest (an instruction reads memory, which can run a device), so the CPU keeps three contexts, `ix`,
-`mem`, and `io`, and fills in fields instead of allocating. A step allocates nothing.
+In words:
 
-**Slots reach their machine through the context.** The CPU's slots are static, built once for
-the process. A slot gets its machine as `c.cpu`, so one set of slot functions serves every
-machine:
+| Dimension | Bits | What it is |
+| --- | --- | --- |
+| `op` | 4 | the opcode, the top four bits of the instruction: LAC is 4, JMP is 14 |
+| `ind` | 1 | the indirect bit |
+| `skp`, `cc`, `rot` | 4, 4, 3 | the three groups of switches in an operate-group word (Port 1): skip tests, clear and complement, rotates |
+| `addr` | 15 | the memory address being read or written |
+| `who` | 2 | who's reading or writing: the CPU, a device, or the debugger |
+| `access` | 1 | a plain read, or the fetch of an instruction |
+| `device`, `pulse` | 6, 6 | an IOT's device code and pulse bits |
+| `sub` | 2 | two of the pulse bits, which some devices use to split their codes into groups |
+| `iop` | 3 | which of an IOT's three timed pulses is firing (Port 9) |
+
+That's twelve dimensions. Each question uses only a few of them: `exec` looks at `op` and
+`ind`, and `read`, once a device watches an address, at `addr`, `who`, and `access`.
+
+**One shape for every context.** A context is a plain object, `K7`, with every field present
+from the start, so every context has the same hidden class (Port 7) and V8 can keep the slots that
+read it fast. Instructions, memory accesses, and IOTs nest: an instruction reads memory, and the
+read can reach a device. So the CPU keeps three contexts, `ix`, `mem`, and `io`, made once, and
+fills in their fields on each step instead of making new objects. Making objects costs time, and
+throwing them away costs more later, when the garbage collector cleans up. A step makes none.
+
+**Slots reach their machine through the context.** The CPU's slots are made once, when the code
+loads, and every PDP-7 on the page shares them. So a slot can't hold on to one machine. It finds its
+machine in the context, as `c.cpu`, the same way the generated methods find their table in
+`this`, and for the same reason (Port 7):
 
 ```ts
 op("lac", (c) => { const m = c.cpu; m.ac = m.read(c.ea); }),
@@ -1169,9 +1285,18 @@ op("xor", (c) => { const m = c.cpu; m.ac = (m.ac ^ m.read(c.ea)) & WMASK; }),
 op("jmp", (c) => { c.cpu.pc = c.ea; }),
 ```
 
-**Effective addresses are where specificity shines.** The base case is a direct address.
-Indirect overrides it for the memory-reference opcodes, `JMP I` overrides that (because of extend
-mode's EMIR), and `CAL` overrides direct addressing:
+**Effective addresses are where specificity shines.** An instruction's **effective address** is
+the address it ends up using, after indirection. `LAC 1234` uses 1234. `LAC I 1234` uses whatever
+address is stored in 1234, and if 1234 were an auto-index register it would add 1 first. Working
+that out is the `ea` selector, and it's four rules, each a special case of the one before:
+
+- The base case: the address in the word, in the current 8K bank.
+- Indirect, for the instructions that take an address (op 0 to 14): go through the pointer.
+- `JMP I`, op 14 with the indirect bit: indirect too, and also the moment extend mode comes back
+  after an interrupt, which the PDP-7 calls EMIR. So it gets its own slot.
+- `CAL` (op 0, not indirect): always location 20, whatever the address field says.
+
+As slots:
 
 ```ts
 { selector: "ea", by: "direct: the address field in this word's bank", run: direct, emit: T7.direct },
@@ -1182,12 +1307,15 @@ mode's EMIR), and `CAL` overrides direct addressing:
 { selector: "ea", guard: { op: OP.cal, ind: 0 }, by: "CAL: 20, absolute in extend mode", run: (c) => cal(c.cpu), emit: T7.calEa },
 ```
 
-Read the guards as a lattice: `{}` is above `{ ind: 1, op: 0-14 }`, which is above
-`{ ind: 1, op: 14 }`. Nobody wrote an `if` to make `JMP I` win. It's more specific, so it wins.
-The `by` strings are what `why` shows you.
+Each guard sits inside the one before it: `{}` (no guard, every instruction) contains
+`{ ind: 1, op: 0-14 }`, which contains `{ ind: 1, op: 14 }`. Nobody wrote an `if` to make `JMP I`
+win over plain indirect. Its guard is smaller, so it's more specific, so it wins. The `by` strings
+are the names `why` shows you.
 
-**The operate group is three selectors.** Its three fields are independent, so each is its own
-selector, with sixteen, sixteen, and eight slots, and the `OPR` slot calls all three:
+**The operate group is three selectors.** An operate-group word's three groups of switches,
+skips, clear and complement, and rotates, don't affect each other. So each group is its own
+selector, with 16, 16, and 6 slots, one per setting of its bits that does something, and the slot
+for `OPR` asks all three in order:
 
 ```ts
 private operate(c: K7): void {
@@ -1205,11 +1333,16 @@ private operate(c: K7): void {
 }
 ```
 
-**The CPU's own IOTs are on the same bus as the devices.** `IOF`, `ION`, and memory extension
-are `iot` slots more specific than the clock's, which shares device 0. When the CPU is plugged into
-a backplane, `backplaneSlots` adds the rest. Unclaimed codes do nothing, CAF clears every flag, and
-each device either installs its own slots or answers through `iot()`. Each device code also gets a
-**patch-layer** slot that answers for the device while its power is off:
+**The CPU's own IOTs are on the same bus as the devices.** A few IOTs never leave the CPU:
+`ION` and `IOF` turn interrupts on and off, and device 77 controls extend mode. In `Pdp7` they're
+cases in a switch. Here they're `iot` slots like any device's. `ION` and `IOF` share device 0 with
+the clock, so their slots guard the exact pulse as well as the device, which makes them more
+specific than the clock's, and they win for their codes.
+
+When the CPU is plugged into a backplane, `backplaneSlots` adds everything else: unclaimed codes
+do nothing, CAF clears every flag, and each device either installs its own slots (Port 9) or gets
+one slot that calls its `iot()` method. Each device code also gets a slot in the **patch** layer
+that answers for the device while its power is off, and otherwise calls `next`:
 
 ```ts
 ...box.devices.flatMap((d): SlotSpec<K7>[] => [
@@ -1222,10 +1355,13 @@ each device either installs its own slots or answers through `iot()`. Each devic
 ```
 
 That's why the SLOTS panel shows "power: type340 off → 340 device 06: IOP1, IOP2, IOP4" for an
-IOT to the display: the power slot runs first and calls `next` because the 340 is on.
+IOT to the display. The arrow is `next`: the power slot runs first, sees the 340 is on, and calls
+`next`, which runs the 340's own slot.
 
-**Watching writes is an observe slot.** The backplane's "tell me before a core write lands",
-from Port 2, is one slot in the `observe` layer, installed only while some device runs ahead:
+**Watching writes is an observe slot.** Port 3's backplane has to check before every core write
+whether a device that ran ahead has already read that word. In `KorzPdp7`, that check is one slot
+in the `observe` layer on `write`, installed only while some device is running ahead, and removed
+when none is, so writes cost nothing extra the rest of the time:
 
 ```ts
 this.sea.install([{ selector: "write", layer: "observe", by: WATCH, emit: T7.watch, run: (c, next) => {
@@ -1238,9 +1374,19 @@ this.sea.install([{ selector: "write", layer: "observe", by: WATCH, emit: T7.wat
 
 ## Port 9: the I/O bus as slots
 
-[`src/korz/iop.ts`](src/korz/iop.ts) is short, and it models a real piece of the PDP-7. An IOT's
-pulse bits fire as three timed pulses, IOP1, IOP2, and IOP4, in that order. A device gate answers
-one of them. So most devices are one slot per gate, on a selector named `iop`:
+[`src/korz/iop.ts`](src/korz/iop.ts) is short, and it models a real piece of the PDP-7's hardware.
+
+Port 1 took `KRB`, 700312, apart: device 03, and pulse bits 12. The last digit's three bits, 1, 2,
+and 4, aren't one command. On the real machine, each bit that's set sends an electrical pulse
+down the I/O cable to the device, one after another, in a fixed order: **IOP1** first, then
+**IOP2**, then **IOP4**. A device has a **gate** for each pulse it understands: a circuit that
+does one thing when its pulse arrives. So an IOT with bits 1 and 2 set does the device's IOP1 thing,
+then its IOP2 thing, in one instruction. That's why the pulses are numbered 1, 2, and 4, and why
+programmers combined them freely: `KSF` is just pulse 1, skip if a key is waiting, and `KRB` is
+pulse 2 with the "clear AC first" bit.
+
+So most devices are written as one slot per gate, on a selector named `iop`. A `timed` slot on
+`iot` fires the pulses in order, and each pulse looks up its gate:
 
 ```ts
 /** The device answers its code with timed pulses. */
@@ -1252,7 +1398,10 @@ export const gate = (device: number, iop: 1 | 2 | 4, by: string, run: Run<Iop>, 
     ({ selector: "iop", guard: sub === undefined ? { device, iop } : { device, iop, sub }, by, run });
 ```
 
-Here's the clock's whole instruction set, which reads like the page of the manual it came from:
+Here's the clock's whole instruction set, which reads like the page of the manual it came from.
+`CLSF`, pulse 1, skips if the clock has ticked. `CLOF` and `CLON` are both pulse 4, and they're told
+apart by the group bits (`sub`, the 20 and 40 bits of the pulse): one stops the clock, the other
+starts it, and both clear the flag:
 
 ```ts
 korzSlots(bus: IopBus) {
@@ -1270,19 +1419,63 @@ sets the mode on IOP2 before it steps on IOP1), installs an `iot` slot guarded o
 `sub`. That's more specific than its `timed` slot, so it wins.
 
 Because the devices' slots go into the CPU's sea, the resolver builds one I/O table for the whole
-machine: 4,096 entries over device and pulse. An IOT costs one table lookup no matter how many
-devices are plugged in.
+machine: 4,096 entries, one for each device code and pulse. An IOT costs one table lookup no matter
+how many devices are plugged in, where a backplane that asked each device in turn would get slower
+with each one.
 
 ## Port 10: the compiler
 
-[`src/korz/compile7.ts`](src/korz/compile7.ts) is the fourth level. It compiles runs of PDP-7
-instructions into JavaScript functions, from the chains the sea gives each instruction, and runs
-them in batches between device events. [KORZ-COMPILER.md](KORZ-COMPILER.md) is its design.
+[`src/korz/compile7.ts`](src/korz/compile7.ts) is the `compile` level, and the fastest. Even with
+tables, every PDP-7 instruction costs a few lookups and calls. A compiler can do better: take a
+run of PDP-7 instructions, write one JavaScript function that does what they all do, and let V8
+turn that function into machine code. Then the run costs about what the JavaScript costs.
+[KORZ-COMPILER.md](KORZ-COMPILER.md) is its design.
 
-**Templates.** A slot can carry an `emit`, a template that writes its behavior as code. The
-sea carries it and never looks at it. For the PDP-7, templates are functions from a `Gen7`
-(the instruction, and the compiler's view of memory) to a `Code7` (statements, a value, a skip
-condition, a jump target):
+Here's what it makes of four instructions at location 100:
+
+```
+100     lac 1234        " load AC from 1234
+101     sza cla         " skip if AC is zero, then clear AC
+102     dac 1235        " store AC into 1235
+103     jmp 100         " and again
+```
+
+The compiler turns that into this JavaScript function, printed from a running machine (the
+numbers in it are decimal, so 668 is 1234 octal, and 64 is 100):
+
+```js
+return function korz7_blk_100(m, k) {
+for (;;) {
+{ m.ac = M[668];
+if (k.cycles + 1 >= k.next || k.cycles + 1 >= k.until) { m.pc = 65; return 1; } k.cycles += 1;
+}
+{ let l = ((m.link & 1) << 18) | (m.ac & 0o777777); const sk = (l & 0o777777) === 0; l = (l & 0o1000000); m.link = (l >> 18) & 1; m.ac = l & 0o777777;
+const q = sk;
+if (k.cycles + 1 >= k.next || k.cycles + 1 >= k.until) { m.pc = q ? 67 : 66; return 1; } k.cycles += 1;
+if (!q) { M[669] = (m.ac) & 0o777777; if (C[669] !== 0) J.touch(669);
+if (k.cycles + 1 >= k.next || k.cycles + 1 >= k.until) { m.pc = 67; return 1; } k.cycles += 1;
+if (!b.valid) { m.pc = 67; return 0; }
+} }
+{
+if (k.cycles + 1 >= k.next || k.cycles + 1 >= k.until) { m.pc = 64; return 1; } k.cycles += 1;
+}
+continue;
+}
+};
+```
+
+Reading it: `m` is the machine and `M` is core, so `LAC 1234` became `m.ac = M[668]`. `SZA CLA`
+became a test of AC saved in `sk`, then clearing AC, keeping the link. The `DAC` is under
+`if (!q)`, because the skip jumps over it. The `JMP 100` became `continue`, back to the top of the
+loop, so the loop runs as a JavaScript loop. The rest, the lines with `k.cycles`, are the clock and
+the safety checks, coming up.
+
+**Templates.** Where does that code come from? From the slots. A slot can carry an `emit`, a
+**template**: a function that writes the slot's behavior as JavaScript text instead of doing it.
+The sea carries it and never looks at it. The compiler calls it. For the PDP-7, a template takes
+a `Gen7`, which holds the instruction and helpers for writing code that reads and writes core, and
+returns a `Code7`: the statements to run, and if the instruction skips or jumps, the condition or
+the target:
 
 ```ts
 lac: ((g) => ({ code: `m.ac = ${g.read(g.ea)};` })) as Emit7,
@@ -1291,10 +1484,15 @@ isz: ((g) => ({ code: `const n = (${g.read(g.ea)} + 1) & ${W}; ${g.write(g.ea, "
 jmp: ((g) => ({ jump: g.ea })) as Emit7,
 ```
 
-**Chains become code.** The compiler asks the sea for each chain, with the coordinates it knows
-when it compiles. A chain where every slot has a template is composed into one piece of code:
-observe slots first, then the slot that answers. Anything else is called the way the resolver
-calls it. So a slot you add without a template still works; it just isn't inlined:
+So `lac`'s template writes `m.ac = ` and whatever `g.read` writes for reading the effective
+address, which for a plain address is `M[668]`.
+
+**Chains become code.** For each instruction, the compiler asks the sea for its chain, using what
+it knows at compile time: the opcode, the indirect bit, the address. If every slot in the chain
+has a template, their code is joined into one piece: observe slots first, then the slot that
+answers. If any slot has no template, the compiler writes a call to the chain instead, the way the
+resolver would. So a slot you add without a template still works; it just isn't **inlined**,
+written straight into the function:
 
 ```ts
 function compose(chain: readonly Slot<K7>[] | null, g: Gen7): Code7 | null {
@@ -1314,12 +1512,18 @@ function compose(chain: readonly Slot<K7>[] | null, g: Gen7): Code7 | null {
 }
 ```
 
-For an operate-group instruction, the `opr` template asks for its three fields' chains and
-writes straight-line code with only the steps that word uses. `CLA CLL` compiles to `l = 0`.
+For an operate-group instruction, the `opr` template asks for its three groups' chains and
+writes only the steps that word uses, as `SZA CLA` did above.
 
-**Blocks, and time.** A block follows the instructions from its entry until a jump it can't
-follow, at most 64 instructions, compiling a skip's next word under an `if`. Every instruction
-ends with a check that the next device event isn't due:
+**Blocks, and time.** The compiler works in **blocks**: starting from one address, it follows the
+instructions until a jump it can't follow, at most 64 instructions, putting the word after a skip
+under an `if`. Each block becomes one function, compiled the first time the CPU gets there and kept
+for next time.
+
+Compiled code must not run past the moment a device needs attention: the clock's tick, the
+teletype finishing a character. The backplane tells the block when the next device event is due
+(`k.next`), and every instruction ends with a check. If the next cycle would reach it, the block
+stores where it stopped in `m.pc` and returns:
 
 ```ts
 const tick = (pc: number | string): string =>
@@ -1329,9 +1533,12 @@ const tick = (pc: number | string): string =>
 So compiled code stops on exactly the cycle the backplane would have stopped the interpreter on.
 
 **Code that rewrites itself.** PDP-7 programs store into their own instructions all the time:
-`JMS` writes the return address into the subroutine's first word, and loops patch their own
-addresses. Each core word a block was compiled from is marked. A store to a marked word invalidates
-every block built from it, and a block that stores checks it's still valid before going on:
+`JMS` writes the return address into the subroutine's first word, and loops change the addresses in
+their own instructions. A compiled block that kept running after its instructions changed would
+do the old thing. So every core word a block was compiled from is marked (`C`, above, holds the
+marks), and a store to a marked word calls `touch`, which throws away every block built from it.
+A block that stores also checks, right after, that it's still valid itself (`b.valid`), and stops
+if not:
 
 ```ts
 touch(a: number): void {
@@ -1348,9 +1555,11 @@ touch(a: number): void {
 }
 ```
 
-**XCT, and Forth's NEXT.** `xct i 010` executes a different word every time. The compiler can't
-inline it, so each `XCT` keeps a little cache of the words it has executed, by address, each
-compiled as a one-instruction function, and checks that the word is still the one it compiled:
+**XCT, and Forth's NEXT.** `xct i 010`, the heart of Forth's `NEXT` (Port 6), runs a different
+word every time, whichever cell IP points at. The compiler can't write that word's code into the
+block, because it doesn't know which word it will be. So each `XCT` keeps a small **cache**: a map
+from address to that word compiled as a one-instruction function. Each time, it looks up the
+address, checks that the word there is still the one it compiled, and runs it:
 
 ```ts
 xct: ((g) => {
@@ -1364,14 +1573,16 @@ xct: ((g) => {
 }) as Emit7,
 ```
 
-**DMA gets compiled too.** The 340, the disk, and the Turing engine reach core through the
-CPU's `read` and `write`. When no slot guards those on an address, the compiler generates them
-as well, from the same chains, so a device's call into `cpu.read` is a single array access.
+**DMA gets compiled too.** The 340, the disk, and the Turing engine read and write core through
+the CPU's `read` and `write` methods. When no slot guards those on an address, the compiler
+writes them as JavaScript too, from the same chains, so when the 340 reads a display word, it costs
+a single array access.
 
-**When it steps instead.** The compiler runs blocks only while nothing can interrupt the run:
-no interrupt pending, `ION`'s one-instruction delay over, the CPU not halted, and no trace
-recording. Otherwise it steps one instruction at a time with the resolver. That's why the page
-records a trace only while the memory panel's trace view is open.
+**When it steps instead.** The compiler runs blocks only while nothing can break into the middle
+of a run: no interrupt waiting, `ION`'s one-instruction delay over, the CPU not halted, and no
+trace recording, since a trace has to see every instruction one at a time. Otherwise it runs one
+instruction at a time through the resolved tables. That's why the page records a trace only while
+the memory panel's trace view is open: an open trace would turn the compiler off.
 
 ## Port 11: the 340 as a sea
 
@@ -1402,8 +1613,9 @@ Fourteen slots cover it, and the resolved table has 32 entries:
 ```
 
 `KorzType340` overrides one method of `Type340`, `decode`, and leaves the original switch in place
-as the oracle. A fuzz test runs 200 random display files on both, with a light pen and random
-restarts, and compares every register and every line drawn. On the hand workload the 340 on slots
+as the oracle. A **fuzz test**, one that feeds in random input to find the cases nobody thought
+to write, runs 200 random display files on both, with a light pen and random restarts, and
+compares every register and every line drawn. On the hand workload the 340 on slots
 costs the same as the switch, within a nanosecond a step.
 
 You can pick the CPU's level and the 340's separately. The page uses the switch 340 with the
@@ -1415,7 +1627,16 @@ switch CPU and the slots 340 with every Korz level, and the benchmark takes `--d
 [`src/korz/forth-device.ts`](src/korz/forth-device.ts) is the payoff for Port 6, and the strongest
 argument I have for building a CPU out of slots. [FORTH-DEVICE.md](FORTH-DEVICE.md) is its design.
 
-It's two slots on `read`. One answers the CPU's fetch of `NEXT`'s first word:
+Port 6 showed `NEXT`, Forth's three-instruction inner interpreter, running every word of every
+Forth program on the PDP-7, one cell at a time. The Forth device is an accelerator: it runs the
+same threads in TypeScript instead, on the same stacks in core, one cell each time the CPU fetches
+`NEXT`, which is one machine cycle. That's a Forth word per cycle, as Chuck Moore's Novix chip ran
+Forth. A loop of primitives takes about an eighth of the cycles: 30,000 passes of `I +` take
+890,000 cycles in software and 107,000 with the device. And it plugs in without changing a line of
+the CPU.
+
+It's two slots on `read`. One answers when the CPU fetches the first instruction of `NEXT`, the
+`xct i 010` at the address labeled `next`:
 
 ```ts
 const slots: SlotSpec<K7>[] = [{
@@ -1427,11 +1648,14 @@ const slots: SlotSpec<K7>[] = [{
 }];
 ```
 
-Instead of handing back `xct i 010`, the slot walks the thread itself, in TypeScript, on the same
-stacks in the same core words Mitch's code uses. It decodes each cell the way `XCT` would: a bare
-address nests, `LAC` and `LAW` push, and a `JMP` to one of 30 known primitives runs here. For any
-other `JMP`, it hands the CPU a `JMP` to that code, and the PDP-7 runs it and comes back through
-`NEXT` as always:
+Its guard is the address of `next`, an instruction fetch, by the CPU. It calls `next()` (Korz's
+`next`, which runs core's own read) to get the word, and if it's still `xct i 010` and extend mode
+is off, it runs `inner` instead of handing the word back. `inner` walks the thread itself, in
+TypeScript, on the same stacks in the same core words Mitch's code uses. It decodes each cell the
+way `XCT` would (Port 6): a bare address nests, `LAC` and `LAW` push, and a `JMP` to one of 30
+known primitives runs here, in TypeScript. For any other `JMP`, a CODE word written in PDP-7
+instructions, it gives the CPU a `JMP` to that code as the word it fetched. The PDP-7 runs it and
+comes back through `NEXT` as always:
 
 ```ts
 } else if (op === 0o30) {
@@ -1447,13 +1671,15 @@ other `JMP`, it hands the CPU a `JMP` to that code, and the PDP-7 runs it and co
 } else break;
 ```
 
-When the device isn't sure, it declines and lets the CPU's own `NEXT` run: an interrupt waiting,
-an unknown kind of cell, or someone having patched `NEXT`. A primitive can decline too: `/` returns
+When the device isn't sure, it declines, handing back the real `xct i 010`, and the CPU's own
+`NEXT` runs: an interrupt waiting, an unknown kind of cell, or someone having changed `NEXT`. A primitive can decline too: `/` returns
 false on a divide by zero, before changing anything, and the PDP-7 code does whatever Mitch's code
 does. Nothing in core changes, so the oracle is the same image with the device unplugged.
 
-The second slot answers the fetch of `find`'s first word, from a table of names kept beside the
-dictionary, so looking up a word doesn't walk the dictionary's linked list in core.
+The second slot answers the fetch of `find`'s first word. `find` is the kernel's code that looks
+up a word's name in the dictionary, by walking the dictionary from the newest word to the oldest,
+comparing names. The device keeps a table of names beside it, so a lookup is one step instead of a
+walk.
 
 Nothing in `KorzPdp7` knows the device exists. It's two slots more specific than core's `read`. The
 SLOTS panel's FORTH line counts what it does: cells run, code words handed to the CPU, fetches it
@@ -1465,8 +1691,10 @@ The tests live beside the code, in `*.test.ts` files, run by Node's built-in tes
 worth reading as a set, because they show how to test a system made of interchangeable levels.
 
 **Fuzzing with random cores.** The first PDP-7 test fills core with random words and runs `Pdp7` and
-`KorzPdp7` side by side, comparing registers after every step and all of core at the end, for 300
-seeds, at each Korz level:
+`KorzPdp7` side by side, comparing registers after every step and all of core at the end, at each
+Korz level. The random numbers come from a generator started from a number called a **seed**, so
+seed 17 always gives the same core, and the test runs seeds 1 to 300. It also raises the interrupt
+line at random, the same on both machines:
 
 ```ts
 for (let seed = 1; seed <= 300; seed += 1) {
@@ -1485,23 +1713,28 @@ for (let seed = 1; seed <= 300; seed += 1) {
 }
 ```
 
-Random words aren't programs, and that's the point. They hit every opcode, every odd indirect
-chain, every undefined rotate, and code that writes over itself. A failure names its seed and
-step, and replays exactly.
+Random words aren't programs, and that's the point. They hit every opcode, every odd chain of
+pointers, every strange combination of operate bits, and code that writes over itself, which no
+hand-written test would think of. A failure names its seed and step, so you can replay it exactly.
 
-**Lockstep on real programs.** UNIX boots on the event-driven Korz side and on the every-cycle
-switch side at once, compared at every step (or, for the compiler, which runs in batches, at the
-ends of slices of random length). Forth draws, SYMELEC edits, the Turing engine runs, and the
-DataHand interrupts, and each is compared the same way.
+**Lockstep on real programs.** Two machines run in **lockstep** when they take each step together
+and are compared after each one. UNIX boots on two cabinets at once, one with `KorzPdp7` and the
+event-driven backplane, one with `Pdp7` and the every-cycle backplane, compared at every step. The
+compiler runs in batches, so it's compared at the ends of slices of random length instead. Forth
+draws, SYMELEC edits, the Turing engine runs, and the DataHand interrupts, and each is compared
+the same way.
 
-**Planted mutations.** To check the tests can fail, I planted errors in the compiler's generated
-code and in the 340's slots, and checked each one was caught.
+**Planted mutations.** A test that can't fail proves nothing. To check these can, I planted errors
+in the compiler's generated code and in the 340's slots, one at a time, and checked that each one
+was caught.
 
 ## Port 14: the page
 
 [`CabinetApplet.svelte`](../../apps/ties/src/lib/CabinetApplet.svelte) is the page, in Svelte 5. It
-builds a cabinet for the program you pick, and runs it from `requestAnimationFrame` at the real
-PDP-7's speed, 1.75 µs a cycle, or as fast as it can go. Its menus pick the program, the CPU level
+builds a cabinet for the program you pick, and runs it from `requestAnimationFrame`, the
+browser's call before it draws each frame of the screen, usually sixty times a second. Each frame
+runs as many cycles as the real PDP-7 would have run in that time, at 1.75 µs a cycle, or as many
+as it can, if you ask for full speed. Its menus pick the program, the CPU level
 (`?cpu=pdp7`, `interpret`, `resolve`, or `compile`), and for Forth, `?forth=software` or
 `?forth=hardware`. The address remembers your choices.
 
@@ -1533,22 +1766,26 @@ Then open SLOTS and watch your slots answer.
 
 ### 2. Add an observe slot
 
-Count instruction fetches per 256-word page and draw a heat map. It's one slot:
+Count instruction fetches per 256-word page of core and draw a **heat map**, a picture where each
+page's color says how often the CPU ran code there, so you can see where a program spends its
+time. It's one slot:
 
 ```ts
 cpu.sea.install([{ selector: "read", layer: "observe", guard: { access: "fetch" }, by: "heat map",
     run: (c, next) => { heat[c.addr >> 8] += 1; return next(); } }]);
 ```
 
-Now look at what it did to the compiler. A slot on `read` without a template stops fetches being
-inlined. Give it an `emit` that writes `H[${g.addr} >> 8]++` (with `H` passed in through
+Now look at what it did to the compiler (Port 10). A slot on `read` without a template stops
+fetches being inlined: every compiled fetch becomes a call to the chain. Give it an `emit` that writes `H[${g.addr} >> 8]++` (with `H` passed in through
 `g.constant`) and compiled blocks keep their speed. Check the counts match with and without the
 template.
 
 ### 3. A breakpoint is a patch slot
 
-Write a debugger breakpoint as a `patch`-layer slot on `exec`, guarded on the opcode you care about,
-that checks `c.at` and halts or calls `next`. Then a watchpoint on `write`, guarded on `addr`. Then
+A **breakpoint** stops the machine when it reaches a chosen instruction, so you can look around.
+Write one as a `patch`-layer slot on `exec`, guarded on the opcode you care about, that checks
+`c.at`, the instruction's address, and halts or calls `next`. Then a **watchpoint**, which stops
+the machine when a chosen word of core is written: a slot on `write`, guarded on `addr`. Then
 make the SLOTS panel list them, and turn them on and off from the page. Notice that the table for
 `write` grows when you guard on `addr`, and read Project 7.
 
