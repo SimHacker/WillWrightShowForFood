@@ -92,7 +92,7 @@
 		{ id: 'software', label: 'software', title: "Mitch's kernel runs NEXT and the primitives on the PDP-7" },
 		{ id: 'hardware', label: 'hardware', title: 'The Forth device runs NEXT, the primitives and FIND itself, a word per memory cycle' }
 	];
-	const FORTH_DEFAULT = 'software';
+	const FORTH_DEFAULT = 'hardware';
 	const forthFromPage = () => {
 		const want = spec.forth ?? (globalThis.location ? new URL(globalThis.location.href).searchParams.get('forth') : null);
 		return FORTHS.some((f) => f.id === want) ? want : FORTH_DEFAULT;
@@ -867,6 +867,8 @@
 
 	let readout = $state('');
 	let readoutExtra = $state('');
+	/** The widest status this boot, so the menu row doesn't reflow as its numbers change. */
+	let extraCh = $state(0);
 	let penDown = $state(false);
 	let fault = $state(null);
 	let lastReadout = 0;
@@ -875,6 +877,9 @@
 	let runMs = 0;
 	let runCycles = 0;
 	let perf = $state.raw(null);
+
+	/** Three significant figures in four characters, so the readout holds its width: 0.57, 5.71, 57.1, 571. */
+	const sig3 = (x) => (x < 9.995 ? x.toFixed(2) : x < 99.95 ? x.toFixed(1) : x.toFixed(0));
 
 	function updateReadout(now) {
 		if (now - lastReadout < 250) return;
@@ -886,9 +891,10 @@
 		lastReadout = now;
 		cyclesAtReadout = box.cycles;
 		const extra = program?.status(cpu);
-		readout = `${(rate / 1e6).toFixed(2)}M/s`;
+		readout = `${sig3(rate / 1e6)}M/s`;
 		penDown = pen.enabled;
 		readoutExtra = extra ?? '';
+		extraCh = Math.max(extraCh, readoutExtra.length);
 		halted = cpu.halted;
 		syncTrace();
 		refreshMem();
@@ -2376,6 +2382,7 @@
 				? new Type340(display)
 				: new KorzType340({ ...display, korz: cpuLevel === 'interpret' ? 'interpret' : 'resolve' });
 		const extra = program.peripherals?.({ cpu }) ?? [];
+		extraCh = 0;
 		ttyReset();
 		ttyRecAt = -1;
 		tty = new Teletype({
@@ -2930,7 +2937,7 @@
 			<span class="fault" title={fault}>fault: {fault}</span>
 		{:else}
 			<span class="readout">
-				{#if paused}stopped{:else}<span title="Simulated memory cycles per second. A PDP-7 instruction takes one memory cycle of 1.75 µs, or two or more when it reads or writes core.">{readout}</span>{#if perf}<span title="Speed against a real PDP-7, which runs about 571,000 memory cycles a second. The speed slider sets this; 1× is real time.">{perf.real < 10 ? perf.real.toFixed(2) : perf.real.toFixed(1)}× real</span><span title="Share of the last quarter second the browser spent running the machine (CPU and devices). The rest went to drawing, the page, and waiting for the next frame.">{Math.round(perf.busy * 100)}% busy</span>{/if}{/if}{#if !paused && readoutExtra}<span title="Read from the program's variables in core">{readoutExtra}</span>{/if}
+				{#if paused}stopped{:else}<span class="fig rate" title="Simulated memory cycles per second. A PDP-7 instruction takes one memory cycle of 1.75 µs, or two or more when it reads or writes core.">{readout}</span>{#if perf}<span class="fig real" title="Speed against a real PDP-7, which runs about 571,000 memory cycles a second. The speed slider sets this; 1× is real time.">{sig3(perf.real)}× real</span><span class="fig busy" title="Share of the last quarter second the browser spent running the machine (CPU and devices). The rest went to drawing, the page, and waiting for the next frame.">{Math.round(perf.busy * 100)}% busy</span>{/if}{/if}{#if !paused && readoutExtra}<span title="Read from the program's variables in core" style:min-width={`${extraCh}ch`}>{readoutExtra}</span>{/if}
 			</span>
 			{#if displayOpen}{@render toolMenu()}{/if}
 		{/if}
@@ -3374,9 +3381,9 @@
 				<div class="reg-line">
 					<span class="reg-dev wide">COST</span>
 					{#if perf}
-						<span class="reg" title="Wall-clock nanoseconds the emulator spent per simulated memory cycle, CPU and devices together, over the last quarter second. A real PDP-7 takes 1,750.">ns/cycle <b>{perf.ns === null ? '–' : perf.ns.toFixed(1)}</b></span>
-						<span class="reg" title="How fast the emulator could run if it did nothing else: 1,750 ns divided by its time per cycle. The page caps a frame at 100,000 cycles, about 10× real time at 60 frames a second.">could run <b>{perf.ns ? `${Math.round(1750 / perf.ns).toLocaleString()}×` : '–'}</b></span>
-						<span class="reg" title="Share of the last quarter second the browser spent running the machine (CPU and devices). The rest went to drawing, the page, and waiting for the next frame.">busy <b>{Math.round(perf.busy * 100)}%</b></span>
+						<span class="reg" title="Wall-clock nanoseconds the emulator spent per simulated memory cycle, CPU and devices together, over the last quarter second. A real PDP-7 takes 1,750.">ns/cycle <b class="fig ns">{perf.ns === null ? '–' : perf.ns.toFixed(1)}</b></span>
+						<span class="reg" title="How fast the emulator could run if it did nothing else: 1,750 ns divided by its time per cycle. The page caps a frame at 100,000 cycles, about 10× real time at 60 frames a second.">could run <b class="fig times">{perf.ns ? `${Math.round(1750 / perf.ns).toLocaleString()}×` : '–'}</b></span>
+						<span class="reg" title="Share of the last quarter second the browser spent running the machine (CPU and devices). The rest went to drawing, the page, and waiting for the next frame.">busy <b class="fig pct">{Math.round(perf.busy * 100)}%</b></span>
 					{/if}
 					{#if slotsView.compiler}
 						<span class="reg-dev wide" title="The Korz compiler: runs of PDP-7 instructions compiled to JavaScript">JIT</span>
@@ -4481,6 +4488,32 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 0.6em;
+	}
+	/* Fixed slots: a digit coming or going would otherwise reflow the whole menu row. */
+	.fig {
+		text-align: right;
+		font-variant-numeric: tabular-nums;
+	}
+	.fig.rate {
+		min-width: 7ch;
+	}
+	.fig.real {
+		min-width: 10ch;
+	}
+	.fig.busy {
+		min-width: 9ch;
+	}
+	b.fig {
+		display: inline-block;
+	}
+	.fig.ns {
+		min-width: 5ch;
+	}
+	.fig.times {
+		min-width: 6ch;
+	}
+	.fig.pct {
+		min-width: 4ch;
 	}
 	.row.mem {
 		font-family: ui-monospace, monospace;

@@ -6,9 +6,10 @@ and SYMELEC are still design. Written 15 November 2026 from a conversation with 
 
 ## Built: the device on the same image
 
-Every Forth cartridge has a menu, **Forth: software / hardware**, beside the CPU menu, and
-`?forth=hardware` in the address picks it. Switching reboots, as switching CPUs does. The device
-is slots, so it needs a Korz CPU; with the SIMH-style CPU the hardware choice is disabled.
+Every Forth cartridge has a menu, **Forth: software / hardware**, beside the CPU menu. Hardware is
+the default; `?forth=software` in the address runs Mitch's kernel instead. Switching reboots, as
+switching CPUs does. The device is slots, so it needs a Korz CPU; with the SIMH-style CPU the
+hardware choice is disabled and the kernel runs it all.
 
 **How the machine tells software from hardware: it doesn't have to.** The image in core is the same
 either way. The device is told the kernel's labels when the cartridge boots it (where NEXT, `find`

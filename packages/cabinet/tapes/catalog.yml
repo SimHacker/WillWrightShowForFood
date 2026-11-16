@@ -10,7 +10,7 @@ defaults:
   inputs:
     size: { type: integer, min: 256, max: 2048, default: 640, title: Tube Size }
     cpu: { type: string, values: [compile, resolve, interpret, pdp7], default: compile, title: CPU }
-    forth: { type: string, values: [software, hardware], default: software, title: Forth }
+    forth: { type: string, values: [hardware, software], default: hardware, title: Forth }
 entries:
   - id: symelec
     title: PIXIE / SYMELEC
