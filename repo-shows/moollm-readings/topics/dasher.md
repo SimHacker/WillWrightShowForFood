@@ -1,7 +1,8 @@
 # Dasher — David MacKay (deferred topic)
 
 Introduced in MOOLLM Reading episode 3; full show TBD.  
-Machine index: [`dasher.yml`](dasher.yml)
+Machine index: [`dasher.yml`](dasher.yml)  
+The full essay: [Dasher: driving a language model](https://github.com/SimHacker/moollm/blob/main/designs/DASHER.md)
 
 **Status:** introduced_not_exhausted
 

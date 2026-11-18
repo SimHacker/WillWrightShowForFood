@@ -3,6 +3,12 @@
 The teletype should offer [Dasher](https://en.wikipedia.org/wiki/Dasher_(software))-style text
 entry, steered by the grammar of whatever program is running on the machine.
 
+The general design, apart from the cabinet, is in moollm:
+[Dasher: driving a language model](https://github.com/SimHacker/moollm/blob/main/designs/DASHER.md#what-id-build)
+and [Dasher at every level](https://github.com/SimHacker/moollm/blob/main/designs/webtop/LINK-PUMPS.md#dasher-at-every-level).
+This document is the cabinet's part: which programs, where their grammars live in memory, and the
+order of work.
+
 Dasher, from David MacKay's Inference Group at Cambridge (1998 on), lays every possible
 continuation of what you've typed along a column of boxes, each as tall as it is likely, and you
 write by steering into them: with a mouse, a finger, your eyes, your head, or one switch. Likely
