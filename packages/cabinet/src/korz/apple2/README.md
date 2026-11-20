@@ -19,7 +19,7 @@ played at the Apple's own speed. A fast stretch adds none.
 The machine being built here is the ][+. Eighty columns is the Videx card. The screen angel's
 looks are cut from the frame this page paints, so they match the Korz picture. microM8 stays
 in the menu as the oracle and comes last. The menu is the compiler, the resolver, the
-interpreter, the switch, and microM8, and it opens on the compiler. Text is the motherboard
-character generator: the ][+ one, read from microM8 and not copied into the tree. A cartridge
-names another ROM with `chargen`, 64 glyphs of 8 bytes, the low 7 bits, bit 0 at the left.
+interpreter, the switch, and microM8, and it opens on the compiler. Text is the motherboard character generator, `roms/apple2/chargen.rom`. The motherboard
+ROM and the Disk II ROM are the other two files there. A cartridge names another character
+ROM with `chargen`, 64 glyphs of 8 bytes, the low 7 bits, bit 0 at the left.
 Hi-res color is the ][+ rule.

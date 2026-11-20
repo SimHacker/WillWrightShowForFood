@@ -1,8 +1,8 @@
 /**
  * The motherboard character generator socket. A ROM is 64 glyphs of 8 rows. A row is
  * the low 7 bits, bit 0 at the left. The eighth row is the gap under the letter.
- * The emulator's own default is the ][+ generator, read from microM8. A cartridge
- * passes a ROM in this layout and it replaces that default.
+ * The emulator's own default is roms/apple2/chargen.rom. A cartridge passes a ROM
+ * in this layout and it replaces that default.
  */
 export const CHARGEN_GLYPHS = 64;
 export const CHARGEN_ROWS = 8;

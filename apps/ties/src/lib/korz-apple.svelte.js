@@ -1,7 +1,7 @@
-// The Apple ][+ on a Korz rung. The ROM and the Disk II card ROM are read from microM8's
-// apple2-plus profile; the Go machine is then left at warp 0. A rung change rebuilds the
+// The Apple ][+ on a Korz rung. The motherboard ROM, the Disk II ROM, and the character
+// generator are the files in packages/cabinet/roms/apple2. A rung change rebuilds the
 // board and resets, which is the reboot a swap does until an Apple snapshot exists.
-// Text is the motherboard character generator, read from microM8. A cartridge's ROM replaces it.
+// A cartridge's chargen ROM replaces the character generator.
 // Hi-res color is the ][+ rule: a lit dot
 // takes its hue from where it sits on the line and from bit 7, two lit dots in a row are
 // white, and a dark dot between two of the same kind keeps the color beside it.
@@ -9,7 +9,9 @@
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { Apple2Plus, DiskII, Korz6502, M6502, glyphsFromRom } from '@wwsff/cabinet/korz/apple2';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, appleKey } from '@wwsff/cabinet/microm8';
-import { microM8 } from './microm8.svelte.js';
+import plusRomUrl from '../../../../packages/cabinet/roms/apple2/apple2plus.rom?url';
+import diskRomUrl from '../../../../packages/cabinet/roms/apple2/diskii.rom?url';
+import chargenRomUrl from '../../../../packages/cabinet/roms/apple2/chargen.rom?url';
 
 const BLACK = [0, 0, 0];
 const WHITE = [0xf0, 0xf0, 0xf0];
@@ -104,7 +106,8 @@ function paint(ram, mode, face, into, flash) {
 				}
 			} else {
 				const inverse = byte < 0x40 || (byte < 0x80 && flash);
-				let bits = face[(byte & 0x3f) * 8 + (y & 7)] ?? 0;
+				const raw = face[(byte & 0x3f) * 8 + (y & 7)] ?? 0;
+				let bits = raw;
 				if (inverse) bits ^= 0x7f;
 				for (let b = 0; b < 7; b++) {
 					const on = (bits >> b) & 1;
@@ -114,6 +117,18 @@ function paint(ram, mode, face, into, flash) {
 						into[at] = color[0];
 						into[at + 1] = color[1];
 						into[at + 2] = color[2];
+						into[at + 3] = 255;
+					}
+				}
+				// A cursor is the inverse of a blank glyph, a solid block. The character ROM
+				// leaves the rightmost dot of every glyph dark, so the block reaches back
+				// one dot and meets the character before it.
+				if (inverse && raw === 0 && col > 0) {
+					for (let d = 1; d <= 2; d++) {
+						const at = x0 - d * 4;
+						into[at] = WHITE[0];
+						into[at + 1] = WHITE[1];
+						into[at + 2] = WHITE[2];
 						into[at + 3] = 255;
 					}
 				}
@@ -158,6 +173,18 @@ function paintHires(y, into) {
 		into[at + 2] = into[at + 6] = color[2];
 		into[at + 3] = into[at + 7] = 255;
 	}
+}
+
+/**
+ * @param {string} url
+ * @param {number} bytes
+ */
+async function romFile(url, bytes) {
+	const res = await fetch(url);
+	if (!res.ok) throw new Error(`could not read ${url}`);
+	const rom = new Uint8Array(await res.arrayBuffer());
+	if (rom.length !== bytes) throw new Error(`${url} is ${rom.length} bytes; it is ${bytes}`);
+	return rom;
 }
 
 /** @typedef {{ name: string, bytes: Uint8Array, drive: number, protect?: boolean }} DiskIn */
@@ -214,7 +241,9 @@ class KorzApple {
 	}
 
 	async #ensureRom() {
-		this.#rom ??= await microM8.apple2PlusRom();
+		if (this.#rom) return;
+		const [rom, slot, chargen] = await Promise.all([romFile(plusRomUrl, 0x3000), romFile(diskRomUrl, 0x100), romFile(chargenRomUrl, 64 * 8)]);
+		this.#rom = { rom, slot, chargen: glyphsFromRom(chargen) };
 	}
 
 	/**
@@ -281,13 +310,16 @@ class KorzApple {
 		this.#pump();
 	}
 
-	/** @param {number} now */
-	#run(now) {
+	/** @param {number} [_now] */
+	#run(_now) {
 		const board = this.#board;
 		if (!board) return;
-		const budget = now + 12;
-		const dt = this.#last ? Math.min(50, now - this.#last) : 1000 / 60;
-		this.#last = now;
+		// The frame's own timestamp is already late by the time this runs, and a budget
+		// measured from it does no work at all. Measure the slice from now.
+		const start = performance.now();
+		const budget = start + 12;
+		const dt = this.#last ? Math.min(50, start - this.#last) : 1000 / 60;
+		this.#last = start;
 		if (this.picturesPerSecond > 0) {
 			const span = APPLE_HZ / this.picturesPerSecond;
 			if (this.#mark <= board.cycles) this.#mark = board.cycles + span;
@@ -323,6 +355,14 @@ class KorzApple {
 			for (const e of entries) this.#images[e.drive] = e;
 			this.drives = [this.#images[0]?.name ?? '', this.#images[1]?.name ?? ''];
 			this.#build();
+			// No disk: run the monitor's opening delay here, so the first picture is the
+			// Applesoft banner rather than the power-on screen of inverse @.
+			if (!this.#images[0] && !this.#images[1] && this.#board) {
+				const deadline = performance.now() + 800;
+				const goal = this.#board.cycles + 200_000;
+				while (performance.now() < deadline && this.#board.cycles < goal) this.#step(goal);
+				this.#paint();
+			}
 			this.phase = 'running';
 		} catch (e) {
 			this.error = e instanceof Error ? e.message : String(e);

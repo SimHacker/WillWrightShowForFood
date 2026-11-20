@@ -92,12 +92,19 @@ export function picture(ram: Uint8Array, mode: ScanMode, glyphs?: Uint8Array, fl
 				out.fill(color, x0, x0 + 14);
 			} else if (glyphs) {
 				const inverse = byte < 0x40 || (byte < 0x80 && flash);
-				let bits = glyphs[(byte & 0x3f) * 8 + (y & 7)] ?? 0;
+				const raw = glyphs[(byte & 0x3f) * 8 + (y & 7)] ?? 0;
+				let bits = raw;
 				if (inverse) bits ^= 0x7f;
 				for (let b = 0; b < 7; b += 1) {
 					const on = (bits >> b) & 1;
 					out[x0 + b * 2] = on;
 					out[x0 + b * 2 + 1] = on;
+				}
+				// A cursor is the inverse of a blank glyph. The rightmost dot of every
+				// glyph is dark, so the block reaches back one dot and meets the character.
+				if (inverse && raw === 0 && col > 0) {
+					out[x0 - 1] = 1;
+					out[x0 - 2] = 1;
 				}
 			}
 		}
