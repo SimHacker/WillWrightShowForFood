@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 
-/** The Apple page lives at /apple2. microM8 is an engine on that page, chosen with ?cpu=microm8. */
-export function load({ url }) {
-	redirect(308, `/apple2${url.search}`);
+// Prerender cannot read the query string. /microm8/ is the old address of this page;
+// microM8 the engine is /apple2/?cpu=microm8.
+export function load() {
+	redirect(308, '/apple2/');
 }
