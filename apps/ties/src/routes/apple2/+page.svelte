@@ -1,16 +1,16 @@
 <script>
-	// microM8's Apple II running in the page as WebAssembly, with every Apple disk in the catalog.
+	// The Apple II page. microM8 is one engine in the menu, not the address of the machine.
 	import MicroM8 from '$lib/MicroM8.svelte';
 	import { appleDisks } from '$lib/catalog.js';
 </script>
 
 <svelte:head>
-	<title>microM8 Apple II</title>
+	<title>Apple II</title>
 </svelte:head>
 
 <main>
-	<h1>microM8 Apple II</h1>
-	<MicroM8 disks={appleDisks} />
+	<h1>Apple II</h1>
+	<MicroM8 disks={appleDisks} defaultCpu="compile" />
 </main>
 
 <style>
