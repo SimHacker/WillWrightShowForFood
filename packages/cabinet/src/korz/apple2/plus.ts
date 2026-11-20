@@ -43,6 +43,8 @@ export class Apple2Plus implements Bus {
 	/** The speaker's phase, flipped by every access to `$C030`. */
 	speaker = 0;
 	speakerClicks = 0;
+	/** Cycles of those flips, drained by the page when it builds samples. */
+	private speakerLog: number[] = [];
 	/** Annunciators 0–3 in bits 0–3. */
 	annunciators = 0;
 	/** The last byte a device or a memory actually drove. */
@@ -72,6 +74,13 @@ export class Apple2Plus implements Bus {
 		if (slot < 1 || slot > 7) throw new Error(`expansion slot ${slot} is not 1–7`);
 		this.cards[slot] = card;
 		if (!card && this.expansion === slot) this.expansion = 0;
+	}
+
+	/** The speaker flips since the last call, in cycle order. */
+	takeSpeaker(): number[] {
+		const log = this.speakerLog;
+		this.speakerLog = [];
+		return log;
 	}
 
 	mode(): ScanMode {
@@ -201,6 +210,7 @@ export class Apple2Plus implements Bus {
 		else if (a >= 0x30 && a < 0x40) {
 			this.speaker ^= 1;
 			this.speakerClicks += 1;
+			this.speakerLog.push(this.cycles);
 		} else if (a === 0x50) this.graphics = true;
 		else if (a === 0x51) this.graphics = false;
 		else if (a === 0x52) this.mixed = false;

@@ -138,6 +138,7 @@ class AppleEngine {
 
 	listen() {
 		if (this.id === 'microm8') microM8.listen();
+		else korzApple.listen();
 	}
 
 	start() {

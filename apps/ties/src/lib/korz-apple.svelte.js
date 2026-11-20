@@ -7,7 +7,7 @@
 // white, and a dark dot between two of the same kind keeps the color beside it.
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
-import { Apple2Plus, DiskII, Korz6502, M6502, glyphsFromRom } from '@wwsff/cabinet/korz/apple2';
+import { Apple2Plus, DiskII, Korz6502, M6502, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, appleKey } from '@wwsff/cabinet/microm8';
 import plusRomUrl from '../../../../packages/cabinet/roms/apple2/apple2plus.rom?url';
 import diskRomUrl from '../../../../packages/cabinet/roms/apple2/diskii.rom?url';
@@ -15,17 +15,6 @@ import chargenRomUrl from '../../../../packages/cabinet/roms/apple2/chargen.rom?
 
 const BLACK = [0, 0, 0];
 const WHITE = [0xf0, 0xf0, 0xf0];
-/** Even byte, then odd byte. Each is bit 7 clear, then set; each of those is an even dot, then an odd one. */
-const HUE = [
-	[
-		[2, 1],
-		[6, 5]
-	],
-	[
-		[1, 2],
-		[5, 6]
-	]
-];
 /** 0 black, 1 green, 2 violet, 5 orange, 6 blue, 7 white. 3 and 4 are the second black and white. */
 const HGR = [
 	[0, 0, 0],
@@ -38,8 +27,6 @@ const HGR = [
 	[0xff, 0xff, 0xff]
 ];
 const hiresByte = new Uint8Array(40);
-const hiresMono = new Uint8Array(280);
-const hiresHue = new Uint8Array(280);
 const LORES = [
 	[0, 0, 0],
 	[148, 12, 125],
@@ -138,35 +125,12 @@ function paint(ram, mode, face, into, flash) {
 	}
 }
 
-/** One hi-res scan line, 280 dots doubled to 560. A lit dot's hue depends on the byte's parity, bit 7, and the dot's parity, so the phase continues across the seven-dot bytes. Two lit dots in a row are white. A dark dot with the same kind of dot on both sides keeps the color to its left, which is how a 10101010 run becomes a solid color. */
+/** One hi-res scan line, 280 dots doubled to 560. The colors are `hiresLine`. */
 function paintHires(y, into) {
-	for (let j = 0; j < 40; j++) {
-		let abyte = hiresByte[j] ?? 0;
-		const which = (abyte & 0x80) >> 7;
-		const hue = HUE[j & 1][which];
-		for (let k = 0; k < 7; k++) {
-			const x = j * 7 + k;
-			const on = abyte & 1;
-			hiresMono[x] = on;
-			hiresHue[x] = on ? hue[k & 1] : 0;
-			if (x % 14 === 6 && j < 39) {
-				const next = hiresByte[j + 1] ?? 0;
-				if (hiresHue[x] === 2 && next & 0x80 && (next & 1) === 0) hiresHue[x] = 6;
-			}
-			abyte >>= 1;
-		}
-	}
+	const colors = hiresLine(hiresByte);
 	const row = y * FRAME_WIDTH * 4;
-	let prev = 0;
 	for (let k = 0; k < 280; k++) {
-		let c = hiresHue[k];
-		const on = hiresMono[k];
-		const left = k > 0 ? hiresMono[k - 1] : 0;
-		const right = k < 279 ? hiresMono[k + 1] : 0;
-		if (on && (left || right)) c = 7;
-		else if (!on && left === right) c = prev;
-		prev = c;
-		const color = HGR[c] ?? BLACK;
+		const color = HGR[colors[k]] ?? BLACK;
 		const at = row + k * 8;
 		into[at] = into[at + 4] = color[0];
 		into[at + 1] = into[at + 5] = color[1];
@@ -229,6 +193,11 @@ class KorzApple {
 	#pixels = new Uint8ClampedArray(FRAME_BYTES);
 	#mark = 0;
 	#last = 0;
+	/** Cycle the speaker samples have been generated up to. */
+	#heard = 0;
+	/** @type {{ ctx: AudioContext, out: AudioNode, next: number } | null} */
+	#audio = null;
+	#samples = new Float32Array(44100);
 	/** @type {Promise<void> | null} */
 	#booting = null;
 
@@ -281,6 +250,8 @@ class KorzApple {
 		this.#cpu = cpu;
 		this.#disk = disk;
 		this.#mark = board.cycles;
+		this.#heard = board.cycles;
+		board.takeSpeaker();
 		this.#paint();
 		this.status = { pc: cpu.pc, modes: modes(board) };
 		this.annunciators = board.annunciators;
@@ -328,11 +299,70 @@ class KorzApple {
 				this.#paint();
 				this.#mark += span;
 			}
+			this.#speak();
 			return;
 		}
 		const end = board.cycles + Math.round((APPLE_HZ * Math.max(this.warp, 0) * dt) / 1000);
 		while (performance.now() < budget && board.cycles < end) this.#step(end);
 		this.#paint();
+		this.#speak();
+	}
+
+	/**
+	 * Open the page's audio. Browsers start sound only after a click or key.
+	 */
+	listen() {
+		if (this.#audio) {
+			if (this.#audio.ctx.state === 'suspended') this.#audio.ctx.resume();
+			return;
+		}
+		if (typeof AudioContext === 'undefined') return;
+		const ctx = new AudioContext();
+		const highpass = ctx.createBiquadFilter();
+		highpass.type = 'highpass';
+		highpass.frequency.value = 20;
+		const gain = ctx.createGain();
+		gain.gain.value = 0.3;
+		highpass.connect(gain).connect(ctx.destination);
+		this.#audio = { ctx, out: highpass, next: 0 };
+	}
+
+	/** Turn the speaker flips since last time into samples and queue them. */
+	#speak() {
+		const board = this.#board;
+		if (!board) return;
+		const flips = board.takeSpeaker();
+		const end = board.cycles;
+		const start = this.#heard;
+		this.#heard = end;
+		const audio = this.#audio;
+		if (!this.sound || !audio || end <= start) return;
+		const rate = 44100;
+		const n = Math.min(this.#samples.length, Math.max(1, Math.round(((end - start) * rate) / APPLE_HZ)));
+		let level = board.speaker & 1;
+		for (let i = flips.length - 1; i >= 0; i--) if ((flips[i] ?? 0) > start) level ^= 1;
+		let fi = 0;
+		while (fi < flips.length && (flips[fi] ?? 0) <= start) fi++;
+		const span = end - start;
+		const samples = this.#samples;
+		for (let s = 0; s < n; s++) {
+			const cycle = start + ((s + 0.5) * span) / n;
+			while (fi < flips.length && (flips[fi] ?? 0) <= cycle) {
+				level ^= 1;
+				fi++;
+			}
+			samples[s] = level ? 1 : -1;
+		}
+		const now = audio.ctx.currentTime;
+		if (audio.next < now + 0.02) audio.next = now + 0.05;
+		if (audio.next > now + 0.3) return;
+		const buffer = audio.ctx.createBuffer(1, n, rate);
+		buffer.copyToChannel(samples.subarray(0, n), 0);
+		const src = audio.ctx.createBufferSource();
+		src.buffer = buffer;
+		src.connect(audio.out);
+		src.start(audio.next);
+		audio.next += n / rate;
 	}
 
 	/**
@@ -439,8 +469,6 @@ class KorzApple {
 	saved(drive = 0) {
 		return this.#disk?.image(/** @type {1 | 2} */ (drive + 1)) ?? null;
 	}
-
-	listen() {}
 
 	/** @param {HTMLCanvasElement} canvas */
 	attach(canvas) {

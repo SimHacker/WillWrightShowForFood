@@ -23,6 +23,18 @@ export const HBL_CYCLES = 25;
 export const FRAME_WIDTH = 560;
 export const FRAME_HEIGHT = 192;
 
+/** Even byte, then odd byte. Each is bit 7 clear, then set; each of those is an even dot, then an odd one. 1 green, 2 violet, 5 orange, 6 blue. */
+const HUE = [
+	[
+		[2, 1],
+		[6, 5]
+	],
+	[
+		[1, 2],
+		[5, 6]
+	]
+];
+
 export type ScanMode = {
 	graphics: boolean;
 	mixed: boolean;
@@ -108,6 +120,45 @@ export function picture(ram: Uint8Array, mode: ScanMode, glyphs?: Uint8Array, fl
 				}
 			}
 		}
+	}
+	return out;
+}
+
+/**
+ * 280 color indices for one hi-res scan line of 40 bytes. A lit dot beside
+ * another lit dot is white (7). A dark dot whose two neighbors match takes the
+ * unprocessed color of the dot on its left: a one-dot gap in a white run stays
+ * that color, which is how the letters in a white bar remain visible, and a
+ * 10101010 run becomes one solid color.
+ */
+export function hiresLine(bytes: Uint8Array): Uint8Array {
+	const raw = new Uint8Array(280);
+	const mono = new Uint8Array(280);
+	for (let j = 0; j < 40; j += 1) {
+		let abyte = bytes[j] ?? 0;
+		const hue = HUE[j & 1]?.[(abyte >> 7) & 1] ?? [0, 0];
+		for (let k = 0; k < 7; k += 1) {
+			const x = j * 7 + k;
+			const on = abyte & 1;
+			mono[x] = on;
+			raw[x] = on ? hue[k & 1] ?? 0 : 0;
+			if (x % 14 === 6 && j < 39) {
+				const next = bytes[j + 1] ?? 0;
+				if (raw[x] === 2 && next & 0x80 && (next & 1) === 0) raw[x] = 6;
+			}
+			abyte >>= 1;
+		}
+	}
+	const out = new Uint8Array(280);
+	for (let k = 0; k < 280; k += 1) {
+		const on = mono[k];
+		const left = k > 0 ? mono[k - 1] : 0;
+		const right = k < 279 ? mono[k + 1] : 0;
+		if (k === 0) out[k] = on && mono[1] ? 7 : raw[0] ?? 0;
+		else if (k === 279) out[k] = on && mono[278] ? 7 : raw[279] ?? 0;
+		else if (on && (left || right)) out[k] = 7;
+		else if (!on && left === right) out[k] = raw[k - 1] ?? 0;
+		else out[k] = raw[k] ?? 0;
 	}
 	return out;
 }

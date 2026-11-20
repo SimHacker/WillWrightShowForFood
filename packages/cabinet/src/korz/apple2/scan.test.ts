@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { CYCLES_PER_LINE, HBL_CYCLES, picture, scanAddress, type ScanMode } from "./scan.js";
+import { CYCLES_PER_LINE, HBL_CYCLES, hiresLine, picture, scanAddress, type ScanMode } from "./scan.js";
 
 const TEXT: ScanMode = { graphics: false, mixed: false, page2: false, hires: false };
 const HIRES: ScanMode = { graphics: true, mixed: false, page2: false, hires: true };
@@ -52,4 +52,17 @@ test("scanner: the reference picture samples those addresses", () => {
 	const mixed = picture(ram, { ...HIRES, mixed: true });
 	assert.equal(mixed[0], 1);
 	assert.equal(mixed[160 * 560], 0);
+});
+
+test("hi-res: a one-dot gap in white stays a color, and 10101010 is one solid color", () => {
+	const white = new Uint8Array(40).fill(0x7f);
+	white[0] = 0x77;
+	const gap = hiresLine(white);
+	assert.notEqual(gap[3], 7, "the missing dot is the letter, not more white");
+	assert.notEqual(gap[3], 0);
+	const orange = new Uint8Array(40).fill(0xaa);
+	const solid = hiresLine(orange);
+	assert.equal(solid[1], solid[2]);
+	assert.equal(solid[2], solid[3]);
+	assert.ok(solid[1] === 5 || solid[1] === 6);
 });
