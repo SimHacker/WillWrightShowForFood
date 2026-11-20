@@ -13,9 +13,14 @@ faster than either browser build will be.
 - **That concurrency causes trouble in the page.** The CPU's `RequestSuspend` busy-waits with
   `time.Sleep(5ms)`; our boot waits a number of scheduler turns rather than seconds, because hidden
   tabs throttle timers; frames cross into JavaScript by copy (`CopyBytesToJS`).
-- **Native Go has real threads, but one Apple can't use them.** The CPU and every device advance
-  together, cycle by cycle. Threads help with several machines, rendering, audio and the network,
-  not with the inner loop.
+- **Go's speed is its threads, and the Wasm port cannot say that.** A native Go program is swift
+  because goroutines run on real threads. `GOARCH=wasm` has no Wasm threads, so the same
+  goroutines take turns on one thread. They cost a scheduler and buy no parallelism. There is no
+  faster browser build of this Go program waiting to be unlocked. It waits in line behind the Korz
+  rungs ([below](#the-wasm-build-waits)).
+- **One Apple could not spend those threads on its inner loop anyway.** The CPU and every device
+  advance together, cycle by cycle. Threads help with several machines, rendering, audio and the
+  network.
 - **TypeScript gets parallelism the browser's way**: a machine per Web Worker, sound in an
   AudioWorklet, video on the GPU ([STACK.md](STACK.md#video-on-the-gpu)), shared banks through
   `SharedArrayBuffer` with cross-origin isolation.
@@ -28,15 +33,72 @@ faster than either browser build will be.
 
 - **Measured for Go**: the module is 41,316,183 bytes; the wrapper's comments put the browser's top
   speed near 1.7 MHz; patch 0004 found reads below `$10000` allocating, because the value pointer
-  escapes into listener interfaces ([FORK.yml](FORK.yml)).
-- **Expected for TypeScript, to be measured**: a 6502 with byte banks, a page table, a 256-entry
-  dispatch table and no allocation in the loop should run many times faster than a 1 MHz Apple. We
-  are about 85% confident of that; [PLAN.md](PLAN.md) measures it against apple2js's MIT-licensed
-  core and the Go build on the same workloads.
+  escapes into listener interfaces ([FORK.yml](FORK.yml)). At warp 100, on the same three
+  workloads as the Korz rungs, the Wasm Apple runs at 2.5× to 2.9× a real Apple ][+
+  ([below](#the-wasm-build-waits)).
+- **Measured for the Korz rungs**: a 6502 with byte banks and no allocation in the loop does run
+  many times a real Apple. The switch leads on a DOS boot and on Applesoft. The compiler leads on
+  a two-instruction loop. The numbers are below.
 - **TypeScript's risks**: deoptimization when a call site sees too many shapes, garbage-collection
   pauses if the hot loop allocates, and no fast 64-bit integers (`BigInt` is slow). None of these
   matter to an 8-bit machine that keeps 8-bit banks and 32-bit planes.
-- **Native Go beats both on the desktop.**
+- **Native Go beats both on the desktop.** That lead stays on the desktop. The browser does not
+  get it by recompiling the same program to Wasm.
+
+## The Wasm build waits
+
+The page's fast engine is the Korz compiler. microM8 stays the oracle: the same floppies, its own
+picture, a large download. This is a comparison of the two engines as they run. No Go is being
+written. A fast wait, such as Little
+Computer People moving in, runs on the compiler: one picture a game second, the speaker left as a
+phase and a click count ([../src/korz/apple2/README.md](../src/korz/apple2/README.md#a-fast-wait)).
+
+Times a real Apple ][+, whose clock is 1.020 MHz. Node 20.19, Apple M4 Max. The Korz figures are
+the quicker round after a cold one (`scripts/apple-bench.mjs`). microM8 is warp 100, two seconds
+of its cycle counter once the program is spinning, and the whole boot for DOS.
+
+| Workload | switch | compile | resolve | microM8 | interpret |
+|---|---:|---:|---:|---:|---:|
+| DEX / JMP in RAM | 128× | 150× | 88× | 2.9× | 1.7× |
+| DOS 3.3 boot to `]` | 80× | 38× | 70× | 2.5× | 1.9× |
+| Applesoft `10 GOTO 10` | 93× | 78× | 68× | 2.9× | 2.1× |
+
+On the tight loop the Wasm Apple is ahead of the Korz interpreter and far behind the switch. The
+language is not a fifty-fold tax. A heavy interpreter in Go, compiled to Wasm, lands next to a
+heavy interpreter in JavaScript.
+
+What the 2.9× is paying for, each on the way from a guest instruction to a finished cycle:
+
+- **The picture is built inside the instruction.** Every byte fetched calls `Apple2IOChip.Increment`,
+  and that calls `CaptureMem` whenever the beam moves, which is nearly every cycle. The speaker,
+  the cassette and every card are ticked in the same call. The Korz switch also computes the beam
+  address on each bus cycle, and it still runs near 130 million cycles a second, because that
+  address is a few arithmetic operations and a RAM read. microM8 stores pixels on those cycles.
+  The measurement never asked JavaScript for a frame. The frame was built anyway.
+- **The 6502 is an interpreter with interfaces.** `FetchExecute` calls out through Go interfaces
+  for memory and devices. An interface call stays indirect. Reads below `$10000` were allocating,
+  because a pointer escaped into a listener. The Korz switch is one function, numeric fields, and
+  no allocation in the loop.
+- **The Go runtime is inside the Wasm module, on one thread.** The scheduler, the garbage
+  collector and the goroutine launches all interleave there. The CPU loop calls `time.Since` every
+  hundred iterations and returns to JavaScript every 500 ms of wall time. `wasm_exec.js` is the
+  other side of that return, and a call across it is not inlined.
+- **The module is the whole desktop program**, about 41 MB. The hot loop is a small part of a
+  program that also contains the debugger, the disk and the recorder.
+
+V8 compiles JavaScript and Wasm through different front ends, and both can lower into TurboFan.
+Wasm also has Liftoff, and hot functions are tiered up from how often they run. That optimizer
+sees the emulator. Wasm types are already concrete integers, so there is less to speculate about
+than in JavaScript, where V8 learns the shape of one cpu object and keeps a field in a register.
+The guest program counter is a value in memory. TurboFan can tighten `FetchExecute`. It cannot
+turn "the Apple is spinning at `$0800`" into a native loop, because those opcode bytes are data.
+The Korz compiler does that step itself: it writes a JavaScript function for the hot block, and
+V8 specializes that function. That is the optimization the Wasm module does not get to invent.
+
+The switch is ahead of the compiler on the DOS boot and on Applesoft, which is the shape of a
+program full of calls. The compiler is ahead when a block stays in RAM and repeats. The page
+still runs the compiler. Those two numbers say where the compiler has work left. They are not a
+reason to go back and speed up the Wasm build.
 
 ## Expressiveness and understanding
 

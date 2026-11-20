@@ -1,15 +1,14 @@
 <script>
 	/**
-	 * An Apple app (packages/cabinet/disks/apple2/APPS.yml) around microM8's screen: its starts,
-	 * its disks by what they are for, and its moves as buttons. Everything a screen angel could
-	 * do for the player is here for the player to do: put a disk in a drive, turn a disk over
-	 * and press the key the program asked for, read the characters off the disk.
+	 * An Apple app (packages/cabinet/disks/apple2/APPS.yml) around the Apple screen: its starts,
+	 * its disks by what they are for, and its moves as buttons. The screen opens on the Korz
+	 * compiler. The menu there also has the switch, the resolver, the interpreter, and microM8.
 	 */
 	import { onMount } from 'svelte';
 	import { driveIndex } from '@wwsff/cabinet/disk-catalog';
 	import MicroM8 from '../MicroM8.svelte';
 	import ScreenAngel from './ScreenAngel.svelte';
-	import { microM8 } from '../microm8.svelte.js';
+	import { apple } from '../apple.svelte.js';
 	import { diskUrl } from '../catalog.js';
 
 	/** @typedef {import('@wwsff/cabinet/disk-catalog').AppleApp} AppleApp */
@@ -62,35 +61,31 @@
 	function start(i = 0) {
 		const s = app.starts[i];
 		if (!s) return;
-		if (microM8.phase !== 'idle' && microM8.profile !== profile) {
+		if (apple.id === 'microm8' && apple.phase !== 'idle' && apple.profile !== profile) {
 			sessionStorage.setItem(STARTING, `${app.id}#${i}`);
 			location.reload();
 			return;
 		}
-		// Switched on at once, while the disks download, so the screen never waits for a click.
-		if (microM8.phase === 'idle') {
-			microM8.profile = profile;
-			microM8.start();
-		}
 		return doing(s.label, async () => {
 			const images = await Promise.all(s.drives.map(bytes));
 			const files = s.drives.map((id) => app.disks[id]?.file ?? id);
-			for (let d = files.length - 1; d >= 0; d--) await microM8.insert(files[d], images[d], d, profile, locked(s.drives[d]));
-			microM8.reboot();
+			if (apple.id === 'microm8' && apple.phase === 'idle') apple.profile = profile;
+			const entries = files.map((name, d) => ({ name, bytes: images[d], drive: d, protect: locked(s.drives[d]) }));
+			await apple.boot(entries);
 		});
 	}
 
 	/** @param {string} id @param {number} drive */
 	const insert = (id, drive) =>
 		doing(app.disks[id]?.label ?? id, async () => {
-			await microM8.insert(app.disks[id]?.file ?? id, await bytes(id), drive, profile, locked(id));
+			await apple.insert(app.disks[id]?.file ?? id, await bytes(id), drive, profile, locked(id));
 		});
 
 	/** @param {AppAction} a */
 	const act = (a) =>
 		doing(a.label, async () => {
-			for (const [drive, id] of Object.entries(a.insert ?? {})) await microM8.insert(app.disks[id]?.file ?? id, await bytes(id), driveIndex(drive), profile, locked(id));
-			if (a.keys) microM8.type(a.keys);
+			for (const [drive, id] of Object.entries(a.insert ?? {})) await apple.insert(app.disks[id]?.file ?? id, await bytes(id), driveIndex(drive), profile, locked(id));
+			if (a.keys) apple.type(a.keys);
 		});
 
 	/** The moves the screen angel says work now, or null for all of them. @type {string[] | null} */
@@ -104,7 +99,7 @@
 	}
 
 	/** @param {string} id @param {number} drive */
-	const inDrive = (id, drive) => microM8.drives[drive] === app.disks[id]?.file;
+	const inDrive = (id, drive) => apple.drives[drive] === app.disks[id]?.file;
 
 	/** @type {{ name: string, file: string, text: string }[]} */
 	let people = $state([]);
@@ -116,7 +111,7 @@
 			const ids = app.people?.disks ?? [];
 			const drive = [0, 1].find((d) => ids.some((id) => inDrive(id, d)));
 			if (drive === undefined) throw new Error(`put ${ids.map((id) => app.disks[id]?.label).join(' or ')} in a drive first`);
-			const image = microM8.saved(drive);
+			const image = apple.saved(drive);
 			if (!image) throw new Error('the disk could not be read back');
 			const { BRIDGES } = await import('@wwsff/cabinet/apple2/games');
 			const bridge = BRIDGES[app.people?.bridge ?? ''];
@@ -125,7 +120,7 @@
 			people = [...files]
 				.filter(([path]) => /^characters\/[^/]+\/CHARACTER\.yml$/.test(path))
 				.map(([path, text]) => ({ name: path.split('/')[1] ?? path, file: path, text }));
-			peopleFrom = labelOf(microM8.drives[drive] ?? '');
+			peopleFrom = labelOf(apple.drives[drive] ?? '');
 		});
 
 	/** @param {string} file */
@@ -141,14 +136,14 @@
 	}
 
 	onMount(() => {
-		microM8.listen();
+		apple.listen();
 		const flag = sessionStorage.getItem(STARTING);
 		if (flag?.startsWith(`${app.id}#`)) sessionStorage.removeItem(STARTING);
 		start(flag?.startsWith(`${app.id}#`) ? Number(flag.slice(app.id.length + 1)) || 0 : 0);
 	});
 </script>
 
-<MicroM8 {disks} begin={() => start(0)} beginLabel={app.starts[0]?.label ?? app.title} />
+<MicroM8 {disks} defaultCpu="compile" begin={() => start(0)} beginLabel={app.starts[0]?.label ?? app.title} />
 
 {#if app.angel}<ScreenAngel path={app.angel} move={moveNamed} bind:moves={allowed} />{/if}
 

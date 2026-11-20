@@ -1,5 +1,5 @@
-# Screen angel for Little Computer People (Activision, 1985), Apple //e.
-# Looks are cut from the 560x192 frame microM8 draws (scripts/angel-cut.mjs).
+# Screen angel for Little Computer People (Activision, 1985).
+# Looks are cut from the 560x192 frame the Korz page paints (scripts/angel-cut.mjs).
 # The guestbook's black message box is x 69-338, y 136-167: four text lines 8 pixels apart.
 
 title: Little Computer People
@@ -17,14 +17,14 @@ looks:
         png: looks/name.png
         at: [69, 136]
         looks:
-          - id: name-empty # the line the name is typed on, still black
+          - id: name-empty # the line the name is typed on, still black. The blinking cursor is transparent.
             png: looks/name-empty.png
             at: [69, 160]
       - id: date           # "Enter Date: MM/DD/YY / Example: 09/30/88"
         png: looks/date.png
         at: [69, 136]
         looks:
-          - id: date-empty # the line the date is typed on, still black
+          - id: date-empty # the line the date is typed on, still black. The blinking cursor is transparent.
             png: looks/date-empty.png
             at: [69, 152]
       - id: signed         # "RESEARCHER" over the name, session and date
@@ -44,6 +44,8 @@ looks:
 
 states:
   - id: loading
+    speed: 100
+    frames: 1
     say: The Apple is reading the guestbook side of the disk.
 
   - id: flip

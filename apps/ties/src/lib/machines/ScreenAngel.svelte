@@ -1,13 +1,13 @@
 <script>
 	/**
-	 * A screen angel beside microM8: it watches the machine's own 560x192 pixels, keeps the
+	 * A screen angel beside the Apple: it watches the machine's own 560x192 pixels, keeps the
 	 * game's state from what it sees, says what the game wants, makes the moves it can make
 	 * alone and asks for typed answers in a page field while the machine's keyboard is off.
 	 * Turned off, the player has the machine and every move to themselves.
 	 */
 	import { onMount, tick } from 'svelte';
 	import { askKeys, fillNow } from '@wwsff/cabinet/angel';
-	import { microM8 } from '../microm8.svelte.js';
+	import { apple } from '../apple.svelte.js';
 	import { loadAngel } from '../angels.js';
 
 	/** @typedef {import('@wwsff/cabinet/angel').StateSpec} StateSpec */
@@ -48,7 +48,7 @@
 		moves = on && state ? (state.moves ?? []) : null;
 	});
 	$effect(() => {
-		microM8.locked = on && state?.lock ? LOCKED : '';
+		apple.locked = on && state?.lock ? LOCKED : '';
 	});
 
 	const hush = () => typeof speechSynthesis !== 'undefined' && speechSynthesis.cancel();
@@ -81,7 +81,7 @@
 		value = s.ask?.default ? fillNow(s.ask.default) : '';
 		owed = '';
 		say(s.speak ?? s.ask?.speak ?? '');
-		if (s.speed) microM8.speed(s.speed);
+		if (s.speed) apple.speed(s.speed, s.frames ?? 0);
 		if (s.ask) {
 			await tick();
 			field?.focus();
@@ -90,14 +90,14 @@
 	}
 
 	function step() {
-		if (!on || !angel || microM8.phase !== 'running') return;
-		const seconds = microM8.seconds();
+		if (!on || !angel || apple.phase !== 'running') return;
+		const seconds = apple.seconds();
 		if (seconds + 1 < last) {
 			angel.reset(seconds);
 			enter(angel.state);
 		}
 		last = seconds;
-		const next = angel.step(microM8.picture, seconds);
+		const next = angel.step(apple.picture, seconds);
 		if (next) enter(next);
 		held = seconds - angel.since;
 		if (state?.auto && !autoDone && seconds - angel.since >= 1) {
@@ -113,7 +113,7 @@
 		if (!a) return;
 		const v = a.upper ? value.toUpperCase() : value;
 		say(v);
-		microM8.type(askKeys(a, v));
+		apple.type(askKeys(a, v));
 		if (a.keep) value = '';
 		else answered = true;
 	}
@@ -129,7 +129,7 @@
 		on = v;
 		localStorage.setItem(ON, v ? 'on' : 'off');
 		if (v && angel) {
-			angel.reset(microM8.seconds());
+			angel.reset(apple.seconds());
 			enter(angel.state);
 		} else hush();
 	}
@@ -157,7 +157,7 @@
 		return () => {
 			gone = true;
 			clearInterval(timer);
-			microM8.locked = '';
+			apple.locked = '';
 			moves = null;
 		};
 	});

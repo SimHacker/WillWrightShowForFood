@@ -201,6 +201,11 @@ export class DiskII implements Card {
 		slot.dirty = false;
 	}
 
+	/** The write-protect tab on drive 1 or 2. */
+	protect(drive: 1 | 2, on: boolean): void {
+		this.drives[drive - 1]!.protected = on;
+	}
+
 	/** The image in the order it was inserted, after any sectors the drive has written. */
 	image(drive: 1 | 2 = 1): Uint8Array | null {
 		const slot = this.drives[drive - 1]!;

@@ -16,7 +16,9 @@ switch. One picture per game second is the rate, from the angel's `frames`. The 
 the last picture. The speaker stays `speaker` and `speakerClicks`. Samples are made for time
 played at the Apple's own speed. A fast stretch adds none.
 
-The machine being built here is the ][+. Eighty columns is the Videx card. The //e is the profile
-the screen angel's looks were cut from, and those looks stay with microM8 until a ][+ picture is
-colored the same way. Hi-res needs no glyph table. A character ROM is peeked, the way the
-motherboard ROM is, and it is not copied into the tree.
+The machine being built here is the ][+. Eighty columns is the Videx card. The screen angel's
+looks are cut from the frame this page paints, so they match the Korz picture. microM8 stays
+in the menu as the oracle and comes last. The menu is the compiler, the resolver, the
+interpreter, the switch, and microM8, and it opens on the compiler. Text on that page is a
+browser font, not the character ROM. Hi-res color is the ][+ rule. A character ROM is peeked,
+the way the motherboard ROM is, and it is not copied into the tree.

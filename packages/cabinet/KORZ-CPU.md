@@ -36,11 +36,13 @@ Apple ][ adds the switch, `M6502`, and one more above the compiler: microM8, the
 machine. Another oracle, when it earns a place, is another rung of that CPU.
 
 microM8 is the Apple's oracle, and it is a large download. It boots the same floppies and shows
-its own picture. A feature the compiler can already do stays on the compiler. The page's fast
-wait is one, and its goal is to finish the move-in as soon as the machine can. The rung is
-whichever finishes that stretch soonest. On program-shaped work that is the switch. `picture()`
-is called at the rate the angel names, one picture a game second while he moves in, and the
-speaker stays a phase and a click count until the page asks for sound
+its own picture. The Apple page lists every rung in one menu: the Korz compiler, the switch,
+the resolver, the interpreter, and microM8. It opens on the compiler. Choosing another Korz
+rung reboots onto the same floppies. Choosing microM8, or leaving it, reloads the page, because
+that engine is the Go program and it keeps the profile it was switched on with. A fast wait
+paints one picture a game second and leaves the speaker quiet. The switch still finishes a DOS
+boot and an Applesoft loop sooner than the compiler; those numbers are in
+[microm8/GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md). The menu is how the page picks
 ([src/korz/apple2/README.md](src/korz/apple2/README.md#a-fast-wait)).
 
 The rung is chosen when the CPU is built. A swap is a new CPU on the same machine, with the saved

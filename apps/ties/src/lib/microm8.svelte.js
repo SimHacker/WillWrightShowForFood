@@ -60,6 +60,8 @@ class MicroM8Machine {
 
 	/** @type {import('@wwsff/cabinet/microm8').MicroM8 | null} */
 	#m = null;
+	/** @type {{ rom: Uint8Array, slot: Uint8Array } | null} */
+	#rom = null;
 	/** @type {Promise<void> | null} */
 	#starting = null;
 	#pixels = new Uint8ClampedArray(FRAME_BYTES);
@@ -288,6 +290,39 @@ class MicroM8Machine {
 			m.insertDisk(name, bytes, drive, writeProtect);
 		}
 		this.drives[drive] = name;
+	}
+
+	/**
+	 * The Apple ][+ ROM and the Disk II card ROM, read from microM8's apple2-plus profile.
+	 * The Go machine is then left at warp 0 so a Korz rung can run. One wasm instance per page:
+	 * a //e already running cannot be asked for this ROM.
+	 * @returns {Promise<{ rom: Uint8Array, slot: Uint8Array }>}
+	 */
+	async apple2PlusRom() {
+		if (this.#rom) return this.#rom;
+		if (this.phase !== 'idle' && this.profile !== 'apple2-plus') {
+			throw new Error('microM8 is already on as another machine; reload to read the ][+ ROM');
+		}
+		if (this.phase === 'idle') this.profile = 'apple2-plus';
+		await this.start();
+		const deadline = performance.now() + 20000;
+		while (performance.now() < deadline) {
+			const m = this.#m;
+			if (m) {
+				const s = m.status();
+				this.status = s;
+				if (s.pureBoot && m.peek(0xfbb3, 1)[0] === 0xea) {
+					const rom = m.peek(0xd000, 0x3000);
+					const slot = m.peek(0xc600, 0x100);
+					this.speed(0);
+					this.sound = false;
+					this.#rom = { rom, slot };
+					return this.#rom;
+				}
+			}
+			await new Promise((r) => setTimeout(r, 50));
+		}
+		throw new Error('the Apple ][+ ROM did not appear in microM8');
 	}
 
 	/** Power cycle, booting what is in drive 1. */
