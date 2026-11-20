@@ -53,7 +53,6 @@ states:
     say: >-
       The game wants the disk turned over to the house side. The screen angel turns it for
       you; on a real Apple you would flip the floppy and press a key.
-    speak: Turning the disk over.
     auto: Turn the Disk Over
     moves: [Turn the Disk Over]
 
@@ -126,10 +125,10 @@ states:
   - id: moving-in
     when: house
     from: [loading, flip, name, signing, date, first-visit]
-    speed: 4
-    # One picture per game second. The wait runs on the rung that finishes it soonest.
+    speed: 100
+    # One picture per game second. The max button. The wait runs flat out.
     frames: 1
     speak: He is moving in. Running fast until he is home.
     say: >-
       He is moving in. The game ignores the keyboard until he has, so there is nothing to do
-      but watch. The screen angel runs the Apple at 4× until he is home, then back to 1×.
+      but watch. The screen angel runs the Apple at max until he is home, then back to 1×.

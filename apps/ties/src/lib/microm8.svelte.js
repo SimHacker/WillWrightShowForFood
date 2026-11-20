@@ -20,6 +20,28 @@ function loadScript(src) {
 	});
 }
 
+/**
+ * The 64 glyphs on the text page, read out of a 560×192 picture. Null when the A
+ * has not been drawn yet. Bit 0 of a row is the left dot.
+ * @param {Uint8Array} px
+ */
+function chargenFromPicture(px) {
+	const out = new Uint8Array(64 * 8);
+	for (let i = 0; i < 64; i++) {
+		const col = i % 40;
+		const row = (i / 40) | 0;
+		for (let y = 0; y < 8; y++) {
+			let bits = 0;
+			for (let b = 0; b < 7; b++) {
+				const at = ((row * 8 + y) * FRAME_WIDTH + col * 14 + b * 2) * 4;
+				if ((px[at] ?? 0) + (px[at + 1] ?? 0) + (px[at + 2] ?? 0) > 200) bits |= 1 << b;
+			}
+			out[i * 8 + y] = bits;
+		}
+	}
+	return out[8] || out[9] ? out : null;
+}
+
 class MicroM8Machine {
 	/** @type {'idle' | 'loading' | 'running' | 'error'} */
 	phase = $state('idle');
@@ -60,7 +82,7 @@ class MicroM8Machine {
 
 	/** @type {import('@wwsff/cabinet/microm8').MicroM8 | null} */
 	#m = null;
-	/** @type {{ rom: Uint8Array, slot: Uint8Array } | null} */
+	/** @type {{ rom: Uint8Array, slot: Uint8Array, chargen: Uint8Array } | null} */
 	#rom = null;
 	/** @type {Promise<void> | null} */
 	#starting = null;
@@ -293,10 +315,12 @@ class MicroM8Machine {
 	}
 
 	/**
-	 * The Apple ][+ ROM and the Disk II card ROM, read from microM8's apple2-plus profile.
-	 * The Go machine is then left at warp 0 so a Korz rung can run. One wasm instance per page:
-	 * a //e already running cannot be asked for this ROM.
-	 * @returns {Promise<{ rom: Uint8Array, slot: Uint8Array }>}
+	 * The Apple ][+ ROM, the Disk II card ROM, and the motherboard character generator,
+	 * read from microM8's apple2-plus profile. The character generator is the 64 glyphs
+	 * that machine draws, one byte a row, bit 0 at the left. The Go machine is then left
+	 * at warp 0 so a Korz rung can run. One wasm instance per page: a //e already running
+	 * cannot be asked for this ROM.
+	 * @returns {Promise<{ rom: Uint8Array, slot: Uint8Array, chargen: Uint8Array }>}
 	 */
 	async apple2PlusRom() {
 		if (this.#rom) return this.#rom;
@@ -314,15 +338,43 @@ class MicroM8Machine {
 				if (s.pureBoot && m.peek(0xfbb3, 1)[0] === 0xea) {
 					const rom = m.peek(0xd000, 0x3000);
 					const slot = m.peek(0xc600, 0x100);
+					const chargen = await this.#readChargen(m);
 					this.speed(0);
 					this.sound = false;
-					this.#rom = { rom, slot };
+					this.#rom = { rom, slot, chargen };
 					return this.#rom;
 				}
 			}
 			await new Promise((r) => setTimeout(r, 50));
 		}
 		throw new Error('the Apple ][+ ROM did not appear in microM8');
+	}
+
+	/**
+	 * Draw the 64 text glyphs on microM8's text page and read them back out of its picture.
+	 * @param {import('@wwsff/cabinet/microm8').MicroM8} m
+	 */
+	async #readChargen(m) {
+		m.poke(0xc051, [0]);
+		m.poke(0xc054, [0]);
+		m.poke(0xc056, [0]);
+		const page = new Uint8Array(0x400);
+		page.fill(0xa0);
+		for (let i = 0; i < 64; i++) {
+			const col = i % 40;
+			const row = (i / 40) | 0;
+			page[(row & 7) * 0x80 + (row >> 3) * 0x28 + col] = 0x80 | i;
+		}
+		m.poke(0x400, page);
+		const px = new Uint8Array(FRAME_BYTES);
+		const deadline = performance.now() + 2000;
+		while (performance.now() < deadline) {
+			m.frame(px);
+			const glyphs = chargenFromPicture(px);
+			if (glyphs) return glyphs;
+			await new Promise((r) => setTimeout(r, 50));
+		}
+		throw new Error('the Apple ][+ character generator did not appear in microM8');
 	}
 
 	/** Power cycle, booting what is in drive 1. */

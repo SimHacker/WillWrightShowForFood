@@ -1,12 +1,13 @@
 // The Apple ][+ on a Korz rung. The ROM and the Disk II card ROM are read from microM8's
 // apple2-plus profile; the Go machine is then left at warp 0. A rung change rebuilds the
 // board and resets, which is the reboot a swap does until an Apple snapshot exists.
-// Text is a browser font, not the character ROM. Hi-res color is the ][+ rule: a lit dot
+// Text is the motherboard character generator, read from microM8. A cartridge's ROM replaces it.
+// Hi-res color is the ][+ rule: a lit dot
 // takes its hue from where it sits on the line and from bit 7, two lit dots in a row are
 // white, and a dark dot between two of the same kind keeps the color beside it.
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
-import { Apple2Plus, DiskII, Korz6502, M6502 } from '@wwsff/cabinet/korz/apple2';
+import { Apple2Plus, DiskII, Korz6502, M6502, glyphsFromRom } from '@wwsff/cabinet/korz/apple2';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, appleKey } from '@wwsff/cabinet/microm8';
 import { microM8 } from './microm8.svelte.js';
 
@@ -64,32 +65,6 @@ function modes(board) {
 	else if (m.hires) out.push(m.page2 ? 'HGR2' : 'HGR');
 	else out.push(m.page2 ? 'GR2' : 'GR');
 	if (m.mixed) out.push('MIXED');
-	return out;
-}
-
-/** 64 glyphs, 8 rows, low 7 bits, bit 0 at the left. Drawn once from a browser font. */
-function glyphs() {
-	const canvas = document.createElement('canvas');
-	canvas.width = 7;
-	canvas.height = 8;
-	const g = canvas.getContext('2d', { willReadFrequently: true });
-	const out = new Uint8Array(64 * 8);
-	if (!g) return out;
-	g.font = '8px ui-monospace, monospace';
-	g.textBaseline = 'top';
-	for (let i = 0; i < 64; i++) {
-		const ch = String.fromCharCode(i < 0x20 ? i + 0x40 : i);
-		g.fillStyle = '#000';
-		g.fillRect(0, 0, 7, 8);
-		g.fillStyle = '#fff';
-		g.fillText(ch, 0, 0);
-		const data = g.getImageData(0, 0, 7, 8).data;
-		for (let y = 0; y < 8; y++) {
-			let bits = 0;
-			for (let x = 0; x < 7; x++) if ((data[(y * 7 + x) * 4] ?? 0) > 128) bits |= 1 << x;
-			out[i * 8 + y] = bits;
-		}
-	}
 	return out;
 }
 
@@ -215,15 +190,16 @@ class KorzApple {
 	#cpu = null;
 	/** @type {import('@wwsff/cabinet/korz/apple2').DiskII | null} */
 	#disk = null;
-	/** @type {{ rom: Uint8Array, slot: Uint8Array } | null} */
+	/** @type {{ rom: Uint8Array, slot: Uint8Array, chargen: Uint8Array } | null} */
 	#rom = null;
+	/** A cartridge's character ROM, in the motherboard socket's layout. Null uses the ][+ generator. */
+	/** @type {Uint8Array | null} */
+	#chargen = null;
 	/** @type {(DiskIn | null)[]} */
 	#images = [null, null];
 	/** @type {number[]} */
 	#keys = [];
 	#pixels = new Uint8ClampedArray(FRAME_BYTES);
-	/** @type {Uint8Array | null} */
-	#glyphs = null;
 	#mark = 0;
 	#last = 0;
 	/** @type {Promise<void> | null} */
@@ -239,6 +215,15 @@ class KorzApple {
 
 	async #ensureRom() {
 		this.#rom ??= await microM8.apple2PlusRom();
+	}
+
+	/**
+	 * Plug a character ROM into the motherboard socket, or pass null for the emulator's
+	 * ][+ generator. `rom` is 64 glyphs of 8 bytes, low 7 bits, bit 0 at the left.
+	 * @param {Uint8Array | null} rom
+	 */
+	set chargen(rom) {
+		this.#chargen = rom ? glyphsFromRom(rom) : null;
 	}
 
 	/** Keep what the drives have written, then build a new board on `rung` and reset. */
@@ -274,10 +259,10 @@ class KorzApple {
 
 	#paint() {
 		const board = this.#board;
-		if (!board) return;
-		this.#glyphs ??= glyphs();
+		const face = this.#chargen ?? this.#rom?.chargen;
+		if (!board || !face) return;
 		const flash = ((Date.now() / 500) | 0) % 2 === 0;
-		paint(board.ram, board.mode(), this.#glyphs, this.#pixels, flash);
+		paint(board.ram, board.mode(), face, this.#pixels, flash);
 	}
 
 	#pump() {

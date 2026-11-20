@@ -9,6 +9,8 @@
 #   from the screen; a screen angel watching for it takes the same action the button does.
 # people: the disks a character bridge (src/apple2/games.ts) can read people off and write back.
 # profile: the microM8 machine, when it is not the //e.
+# chargen: a motherboard character ROM under disks/apple2, when it is not the ][+ generator.
+#   64 glyphs, 8 bytes each, the low 7 bits, bit 0 at the left.
 apps:
   - id: wizardry
     title: "Wizardry: Proving Grounds of the Mad Overlord"

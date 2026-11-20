@@ -284,7 +284,7 @@
 			onclick={() => ((apple.sound = !apple.sound), apple.listen(), canvas?.focus())}>Sound</button
 		>
 		<span class="speeds" role="group" aria-label="Speed">
-			{#each [1, 2, 4, 100] as w (w)}
+			{#each [1, 2, 4, 8, 16, 100] as w (w)}
 				<button class={{ on: apple.warp === w }} aria-pressed={apple.warp === w} onclick={() => (apple.speed(w), canvas?.focus())}
 					>{w === 100 ? 'max' : `${w}×`}</button
 				>
@@ -311,9 +311,9 @@
 			{apple.error}
 		{:else if apple.status}
 			<span class="num">PC ${hex(apple.status.pc, 4)}</span>
-			<span class="num">{apple.mhz.toFixed(2)} MHz</span>
-			{#if apple.pace}<span>{apple.pace}/s</span>{/if}
-			<span>{apple.status.modes.join(' ')}</span>
+			<span class="num mhz">{apple.mhz.toFixed(2)} MHz</span>
+			<span class="pace">{apple.pace ? `${apple.pace}/s` : ''}</span>
+			<span class="mode">{apple.status.modes.join(' ')}</span>
 			<span class="lamps" title="Annunciators AN0-AN3">
 				{#each [0, 1, 2, 3] as n (n)}
 					<span class={['lamp', { lit: !!(apple.annunciators & (1 << n)) }]}>{n}</span>
@@ -415,6 +415,20 @@
 	}
 	.state .num {
 		font-variant-numeric: tabular-nums;
+	}
+	.state .mhz,
+	.state .pace,
+	.state .mode {
+		flex-shrink: 0;
+	}
+	.state .mhz {
+		width: 10ch;
+	}
+	.state .pace {
+		width: 4ch;
+	}
+	.state .mode {
+		width: 11ch;
 	}
 	.lamps {
 		display: inline-flex;

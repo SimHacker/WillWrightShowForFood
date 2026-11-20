@@ -51,26 +51,29 @@
 		apple.locked = on && state?.lock ? LOCKED : '';
 	});
 
-	const hush = () => typeof speechSynthesis !== 'undefined' && speechSynthesis.cancel();
+	const hush = () => {
+		owed = [];
+		if (typeof speechSynthesis !== 'undefined') speechSynthesis.cancel();
+	};
 
-	/** Said before the page had a click or key, which browsers keep quiet: said on the first. */
-	let owed = '';
+	/** Lines said before the page had a click or key, which browsers keep quiet until the first. */
+	/** @type {string[]} */
+	let owed = [];
 
 	/** @param {string} text */
 	function say(text) {
 		if (!speaking || !text || typeof speechSynthesis === 'undefined') return;
 		if (navigator.userActivation && !navigator.userActivation.hasBeenActive) {
-			owed = text;
+			owed.push(text);
 			return;
 		}
-		speechSynthesis.cancel();
 		speechSynthesis.speak(new SpeechSynthesisUtterance(text));
 	}
 
 	function payOwed() {
-		const text = owed;
-		owed = '';
-		if (text && on) say(text);
+		const lines = owed;
+		owed = [];
+		if (on) for (const text of lines) say(text);
 	}
 
 	/** @param {StateSpec} s */
@@ -79,7 +82,6 @@
 		answered = false;
 		autoDone = false;
 		value = s.ask?.default ? fillNow(s.ask.default) : '';
-		owed = '';
 		say(s.speak ?? s.ask?.speak ?? '');
 		if (s.speed) apple.speed(s.speed, s.frames ?? 0);
 		if (s.ask) {
@@ -111,7 +113,8 @@
 		ev.preventDefault();
 		const a = state?.ask;
 		if (!a) return;
-		const v = a.upper ? value.toUpperCase() : value;
+		const v = (a.upper ? value.toUpperCase() : value).trim();
+		if (state?.id === 'name' && !v) return;
 		say(v);
 		apple.type(askKeys(a, v));
 		if (a.keep) value = '';
@@ -179,7 +182,7 @@
 					<span>{ask.label}</span>
 					<input bind:this={field} bind:value maxlength={ask.maxlength} autocomplete="off" spellcheck="false" class={{ upper: ask.upper }} />
 				</label>
-				<button type="submit">OK</button>
+				<button type="submit" disabled={state?.id === 'name' && !value.trim()}>OK</button>
 				{#if ask.hint}<small>{ask.hint}</small>{/if}
 				{#if ask.examples?.length}
 					<p class="examples">

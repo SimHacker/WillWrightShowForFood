@@ -145,6 +145,15 @@ class AppleEngine {
 	}
 
 	/**
+	 * The motherboard character ROM. Null is the emulator's ][+ generator. A cartridge
+	 * passes its own: 64 glyphs, 8 bytes each, low 7 bits, bit 0 at the left.
+	 * @param {Uint8Array | null} rom
+	 */
+	set chargen(rom) {
+		korzApple.chargen = rom;
+	}
+
+	/**
 	 * @param {string} name
 	 * @param {Uint8Array} bytes
 	 * @param {number} [drive]
@@ -194,9 +203,10 @@ class AppleEngine {
 		if (warp >= 4) {
 			this.#hush = true;
 			this.sound = false;
-		} else if (warp <= 1 && this.#hush) {
+		} else if (this.#hush) {
 			this.#hush = false;
 			this.sound = true;
+			this.listen();
 		}
 	}
 

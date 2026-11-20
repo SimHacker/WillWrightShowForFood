@@ -9,7 +9,7 @@
 	import MicroM8 from '../MicroM8.svelte';
 	import ScreenAngel from './ScreenAngel.svelte';
 	import { apple } from '../apple.svelte.js';
-	import { diskUrl } from '../catalog.js';
+	import { chargenUrl, diskUrl } from '../catalog.js';
 
 	/** @typedef {import('@wwsff/cabinet/disk-catalog').AppleApp} AppleApp */
 	/** @typedef {import('@wwsff/cabinet/disk-catalog').AppAction} AppAction */
@@ -67,6 +67,11 @@
 			return;
 		}
 		return doing(s.label, async () => {
+			if (app.chargen) {
+				const res = await fetch(await chargenUrl(app.chargen));
+				if (!res.ok) throw new Error(`could not read ${app.chargen}`);
+				apple.chargen = new Uint8Array(await res.arrayBuffer());
+			} else apple.chargen = null;
 			const images = await Promise.all(s.drives.map(bytes));
 			const files = s.drives.map((id) => app.disks[id]?.file ?? id);
 			if (apple.id === 'microm8' && apple.phase === 'idle') apple.profile = profile;

@@ -46,8 +46,8 @@ with every move shown; untick **Speak** to keep it quiet.
 
 **The keyboard does nothing until he has moved in.** That is the game, not the emulator: the
 manual says keyboard commands do not work during the move-in. The screen angel runs the Apple
-at 4× while he moves in and puts it back to 1× when he is home. Without the angel, press **4×**
-or **max** under the screen, and **1×** once he is home. He only has to move in once: after
+at max while he moves in and puts it back to 1× when he is home. Without the angel, press **max**
+under the screen, and **1×** once he is home. He only has to move in once: after
 that he is there every time you boot the disk.
 
 ## Being a good host

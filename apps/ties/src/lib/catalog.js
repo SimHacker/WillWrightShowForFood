@@ -20,6 +20,10 @@ const files = import.meta.glob(['../../../../packages/cabinet/**/catalog.yml', '
 });
 
 const DISK_ROOT = '../../../../packages/cabinet/disks/apple2/';
+const roms = import.meta.glob(['../../../../packages/cabinet/disks/apple2/**/*.{rom,bin}'], {
+	query: '?url',
+	import: 'default'
+});
 const images = import.meta.glob(['../../../../packages/cabinet/disks/apple2/**/*.{dsk,do,po,nib,woz,2mg,hdv}'], {
 	query: '?url',
 	import: 'default'
@@ -58,6 +62,13 @@ export const appleApps = new Map(built.apps.map((a) => [a.id, a]));
 export async function diskUrl(/** @type {string} */ file) {
 	const load = images[DISK_ROOT + file];
 	if (!load) throw new Error(`no disk image ${file}`);
+	return String(await load());
+}
+
+/** The URL of a cartridge character ROM, by its path under disks/apple2. */
+export async function chargenUrl(/** @type {string} */ file) {
+	const load = roms[DISK_ROOT + file];
+	if (!load) throw new Error(`no character ROM ${file}`);
 	return String(await load());
 }
 

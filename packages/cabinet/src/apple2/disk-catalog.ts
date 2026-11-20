@@ -41,6 +41,11 @@ export interface AppleApp {
 	guide?: string;
 	/** A screen angel's ANGEL.yml, by its path from the repo root. */
 	angel?: string;
+	/**
+	 * A motherboard character ROM, by its path under disks/apple2. Absent, the emulator
+	 * uses the ][+ generator. 64 glyphs, 8 bytes each, low 7 bits, bit 0 at the left.
+	 */
+	chargen?: string;
 	tags?: Record<string, unknown>;
 	profile?: string;
 	/** How many drives the app uses, 1 or 2; the panel offers only those. 2 by default. */
