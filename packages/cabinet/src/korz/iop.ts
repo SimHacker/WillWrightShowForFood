@@ -2,7 +2,7 @@ import type { Device } from "../bus.js";
 import type { Run, SlotSpec } from "./korz.js";
 
 /**
- * Devices on the PDP-7's IOT bus as Korz slots. An IOT names a device (IR<6:11>) and pulse bits
+ * The PDP-7 pulse protocol, one user of the device kit in `device.ts`. An IOT names a device (IR<6:11>) and pulse bits
  * (IR & 067). The PDP-7 fires IOP1, IOP2 and IOP4 in that order for the bits set; a device gate
  * answers one of them, so most devices are one slot per gate: `iop` selector, guarded on `device`,
  * `iop` (1, 2 or 4) and, for devices that split their pulses into groups, `sub` (pulse bits 060).

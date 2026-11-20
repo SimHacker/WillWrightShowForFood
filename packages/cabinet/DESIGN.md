@@ -1021,7 +1021,7 @@ devices, what to load and from where, how to build it, how its keys map, which p
 help and its demo. Emulators have names for parts of this. SIMH has the `.do` script, MAME has
 drivers and software lists, and Docker's *container* means an isolated running process, which
 this is not. We call the file a **cartridge**: a thing you plug into the cabinet that carries
-everything needed to run one program. A **profile** is a named overlay on a cartridge (trace on,
+what the program requires and how it maps onto the cabinet's devices. The devices are configured once, on the cabinet. The image of a run is a snapshot, and one cartridge can have many. A **profile** is a named overlay on a cartridge (trace on,
 the memory panel open in source view, speed 10×), and several can stack. Everything the cabinet
 knows about a program lives in its cartridge or is referred to by it.
 

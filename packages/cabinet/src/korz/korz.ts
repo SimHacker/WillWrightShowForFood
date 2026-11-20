@@ -3,11 +3,16 @@
  * step 1, the interpreter. Every dispatch searches the selector's slots, so it is slow and
  * obviously right, and it is the oracle the resolver and compiler are tested against.
  *
- * A dimension is a named coordinate over 0 .. 2^width - 1. A guard constrains some dimensions to
- * sets; an unmentioned dimension is its whole domain. A context is a point: an object whose fields
- * named for the dimensions hold numbers. Slot A is at least as specific as B when A's set is inside
- * B's on every dimension. A dispatch runs the most specific matching slot of each layer, outermost
- * layer first; `next` runs the rest of the chain.
+ * A dimension here is a named coordinate over 0 .. 2^width - 1. That range is this stack's choice,
+ * so a guard can be a bitset and a dispatch can be an index. The Korz paper's coordinate is any
+ * element of a partial order: an object, a person, true. Object and float dimensions, which would
+ * keep that order and stay a search beside these tables, are described in KORZ-DISPATCH.md and are
+ * not implemented here.
+ *
+ * A guard constrains some dimensions to sets; an unmentioned dimension is its whole domain. A
+ * context is a point: an object whose fields named for the dimensions hold numbers. Slot A is at
+ * least as specific as B when A's set is inside B's on every dimension. A dispatch runs the most
+ * specific matching slot of each layer, outermost layer first; `next` runs the rest of the chain.
  */
 
 export type Bits = { readonly mask: number; readonly match: number };

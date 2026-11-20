@@ -114,6 +114,22 @@ export function handRegisters(f: HandFrame | null, mirror = true): number[] {
 	return r;
 }
 
+/** A paused DataHand. The tracker itself is wiring, not state. */
+export type DataHandState = {
+	pending: number[];
+	latched: number[];
+	index: number;
+	flag: boolean;
+	ie: boolean;
+	steps: number;
+	untilFrame: number;
+	frames: number;
+	latches: number;
+	framePeriod: number;
+	stepsPerSecond: number;
+	mirror: boolean;
+};
+
 export type DataHandOpts = {
 	/** A hand at `t` seconds of machine time, sampled every `framePeriod` steps: a demo, a test. */
 	source?: (t: number) => HandFrame | null;
@@ -178,6 +194,42 @@ export class DataHand implements KorzDevice {
 	/** The latched registers, signed: what the program sees. */
 	registers(): readonly number[] {
 		return this.latched;
+	}
+
+	/** The registers the next GRD reads, and how long until the next frame. */
+	capture(): DataHandState {
+		return {
+			pending: this.pending.slice(),
+			latched: this.latched.slice(),
+			index: this.index,
+			flag: this.flag,
+			ie: this.ie,
+			steps: this.steps,
+			untilFrame: this.untilFrame,
+			frames: this.frames,
+			latches: this.latches,
+			framePeriod: this.framePeriod,
+			stepsPerSecond: this.stepsPerSecond,
+			mirror: this.mirror,
+		};
+	}
+
+	restore(s: DataHandState): void {
+		if (s.framePeriod !== this.framePeriod || s.stepsPerSecond !== this.stepsPerSecond || s.mirror !== this.mirror) {
+			throw new Error("datahand timing differs");
+		}
+		if (s.latched.length !== HAND_REG.size || s.pending.length !== HAND_REG.size) {
+			throw new Error("datahand register file is the wrong size");
+		}
+		this.pending = s.pending.slice();
+		this.latched = s.latched.slice();
+		this.index = s.index;
+		this.flag = s.flag;
+		this.ie = s.ie;
+		this.steps = s.steps;
+		this.untilFrame = s.untilFrame;
+		this.frames = s.frames;
+		this.latches = s.latches;
 	}
 
 	reset(): void {

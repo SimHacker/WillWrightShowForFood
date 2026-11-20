@@ -852,9 +852,9 @@ name, and Korz keeps Self's slots but drops the objects: a call looks up its slo
 context instead of by one object. [`src/korz/korz.ts`](src/korz/korz.ts) is my implementation for
 emulators. It's 670 lines, and it knows nothing about PDP-7s.
 
-**Dimensions and guards.** A context is a point in a space of named integer **dimensions**. A
-guard constrains some dimensions to sets of values, and a dimension it doesn't mention is
-unconstrained:
+**Dimensions and guards.** In this implementation a context is a point in a space of named integer
+**dimensions**. A guard constrains some dimensions to sets of values, and a dimension it doesn't
+mention is unconstrained:
 
 ```ts
 export type Dim = {
@@ -872,20 +872,35 @@ export type GuardSpec = Readonly<Record<string, Coord | readonly Coord[]>>;
 So `{ op: 0o17, ind: 0 }` is a guard, `{ who: "cpu", access: "fetch" }` is a guard, and
 `{ top: bits(2, 2) }` matches every value with bit 1 set.
 
-Why only integers? Because every dimension's values are numbered from 0 up to a fixed size, the
-sea can store a set of them as a row of bits and index a table by them, which is where its speed
-comes from. Other kinds of value fit by being numbered:
+Korz itself does not number its coordinates. In the Onward! 2014 paper a dimension is a partial
+order, and a coordinate is whatever lives on it: an object, a person, `true`. This sea numbers
+them anyway. Every dimension's values run from 0 up to a fixed size, so a set of them is a row of
+bits and a dispatch is an index into a table. That is where the speed comes from, and it is a
+choice of this implementation. The emulator's coordinates really are those integers, which is why
+the choice fits the machines.
+
+Values whose order is already the integer order get numbers, and the names are labels:
 
 - **A boolean** is a dimension one bit wide: 0 or 1, like `ind`, the indirect bit.
 - **A small set of strings** is an **enum**: the dimension lists `names`, and the name's position is
 its number. `who` is `["cpu", "device", "debugger"]`, so a guard can say `who: "cpu"` while the
 context holds 0. The names are for people; the context only ever holds numbers.
-- **An open-ended set of strings**, like any word a player might type, has to be numbered first,
-with a table from each string to a number, the same trick, called interning, that the
-resolver uses for chains below. Zork's verbs and objects would go in that way.
-- **A float or an object** doesn't fit at all. A guard on one would need a test, not a set, and
-the sea has no way to build a table over tests. You turn it into a number that says what you'd
-test, such as a size class, and guard on that.
+- **An open-ended set of strings**, like any word a player might type, is interned: a table from
+each string to a number, the same trick the resolver uses for chains below. Zork's verbs would go
+in that way. Interning picks out particular words. It does not give them an order beyond "this
+word or that word."
+
+An object and a float keep their own order, and the idea for supporting them is written in
+[KORZ-DISPATCH.md](KORZ-DISPATCH.md#objects-floats-and-other-orders). A guard on an object matches
+that object, or anything more specific along a relation declared for the dimension: a prototype
+chain, or "this person, or anyone acting for them." A guard on a float is a threshold, such as
+`isKnown ≥ 0.8`. Neither is a bit in a set, and neither is hashed into a width, because that
+would invent an order the value does not have. The integer dimensions still index a table, and
+the object or the float is a test in front of the chain. The same shape already exists for a
+watch on a bus byte the address table could not absorb. Turning a float into a size class, or an
+object into a hash, remains available for the case where the summary is what the guard meant.
+`korz.ts` does not implement either kind yet. `Dim` is a width, and the integer sea stays the
+oracle for the machines.
 
 A dimension is between 1 and 20 bits wide, so it has at most about a million values. A context
 field that's missing counts as 0, and a value too big for its dimension is cut to the dimension's

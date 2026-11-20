@@ -1,7 +1,16 @@
 # Korz for machines: a note asking for feedback
 
-For David Ungar, Randall Smith, Alan Kay, Dan Ingalls, and others whose work this rests on. A draft: corrections welcome
-at any level, from "that's not what Korz means" to "you'll regret that data structure".
+For David Ungar, Randall Smith, Alan Kay, Dan Ingalls, Lars Brinkhoff, Bob Supnik, Philip Budne,
+and the others whose work this rests on. A draft: corrections welcome at any level, from "that's
+not what Korz means" to "you'll regret that data structure".
+
+The big ticket is where it runs. The same TypeScript runs in Node and in the browser, and the page
+you can open is the machine: [hyperties.org/cabinet/unix/](https://hyperties.org/cabinet/unix/).
+There is no native build to fetch and no WebAssembly module to squint at. A slot is a JavaScript
+function. V8 compiles the generated JavaScript, and V8's own lineage runs back through Self, which
+is why this note is addressed where it is. JavaScript is not a host we are putting up with until
+a real language is ready. It is the reason a person can read the emulator, change one slot, and
+watch the PDP-7 change.
 
 ## The idea
 
@@ -12,8 +21,13 @@ address has to find the right place to patch it, and a debugger that wants to wa
 built into the emulator.
 
 We put every handler, mapping, opcode, IOT gate, trap, watch, fault and accelerator into one Korz
-sea of guarded slots, and dispatch each access to the most specific match. Because the domains are
-finite and every context is complete, two things Korz in general cannot do become possible:
+sea of guarded slots, and dispatch each access to the most specific match. The paper's coordinate
+is any element of a partial order, an object or a person as easily as a bit, and a send searches.
+This stack numbers every coordinate, `0 .. 2^width − 1`, so the answer can be an index. The
+machines' coordinates really are small integers, which is why the fit is honest. A later
+dimension whose order is objects or floats would stay a search beside these tables;
+[KORZ-DISPATCH.md](KORZ-DISPATCH.md) says how. Because these domains are finite and every context
+is complete, two things Korz in general cannot do become possible:
 
 - **Ambiguity is decided at install time**, by set arithmetic on the guards. Installs are
   transactional, so a card can bring the slot that resolves its own overlaps.
@@ -25,18 +39,33 @@ and taking it further than SIMH can. SIMH and its ports serve as the oracle. Ins
 extension and optimization are all the same operation: install a slot. `why` on any access names
 the slots that answered it and who installed them.
 
+That is also how the cabinet's [manifesto](MANIFESTO.md) becomes enforceable instead of hoped for.
+The manifesto says the machine in the page is ours, all of it at once, and that tribute,
+accessibility and fun may bend the rules while the 1960s machine stays honest. Korz is the
+mechanism. The faithful PDP-7 is the slots of the machine layer, checked in lockstep against the
+switch-statement port of SIMH. A watch, a host service, a coprocessor, a louder teletype, a slot
+installed by a person with their name on it: each is another slot, in a layer `why` can name, and
+removing it puts the honest machine back. Nothing is sealed off, because a sealed-off part would
+be a dispatch the sea does not own. The same sea is what lets one machine read another, which is
+the manifesto's federation: shared memory is a slot that says which machine answers.
+
 ## What is built
 
 All of this is in TypeScript in this package, and runs in Node and the browser:
 
-- [`src/korz/korz.ts`](src/korz/korz.ts), 490 lines: the sea.
-- [`src/korz/pdp7.ts`](src/korz/pdp7.ts), 330 lines: the PDP-7 as slots.
-- [`src/korz/iop.ts`](src/korz/iop.ts): the device bus.
+- [`src/korz/korz.ts`](src/korz/korz.ts): the sea. It does not know a CPU, a device, a cell, or a tape.
+- [`src/korz/cpu.ts`](src/korz/cpu.ts): the CPU host. A CPU file brings dimensions, slots, the decode, and the poll.
+- [`src/korz/device.ts`](src/korz/device.ts): a device plugs in as slots, or as the function it already has, and a patch slot answers while its power is off.
+- [`src/korz/ca.ts`](src/korz/ca.ts): Life, neighbor bits and a derived count.
+- [`src/korz/tm.ts`](src/korz/tm.ts): a Turing rule as slots. It steps a tape, or writes the words the PDP-7 engine reads.
+- [`src/korz/pdp7.ts`](src/korz/pdp7.ts): the PDP-7 instruction set, on that host.
+- [`src/korz/iop.ts`](src/korz/iop.ts): the PDP-7 pulse protocol.
 
 The design document is [KORZ-DISPATCH.md](KORZ-DISPATCH.md).
 
 **The sea.**
-- **Dimensions** are finite and stored as bitsets per dimension.
+- **Dimensions** in this stack are finite integer ranges, stored as bitsets. The paper's dimensions
+  are partial orders, and a coordinate there need not be an integer.
 - **Guards** per dimension are a value, a name, `bits(mask, match)`, `span(start, length)`, or a
   list of these, normalized at install.
 - **Specificity** is the product order of per-dimension set inclusion.
@@ -235,9 +264,30 @@ Next:
 The point is not only speed. The compiler is the top rung of an oracle ladder, and every level
 stays.
 
+**The 18-bit line.** The PDP-7 was not built alone. In Bob Supnik's words, in the SIMH source, the
+PDP-4, PDP-7, PDP-9 and PDP-15 are upward compatible: each new model adds architectural features
+and, with them, incompatibilities. The PDP-7 has extend mode. The PDP-9 adds user mode and a
+bounds register. The PDP-15 adds bank mode and a relocation register. SIMH covers the four in one
+simulator, `PDP18B`, and picks the model at compile time. The header says only one should be
+defined. The source has 194 conditional-compilation lines. Four models, four builds.
+
+In Korz the model is a dimension. Slots the whole line shares do not mention it. A slot only one
+model has is guarded on that model, and a feature that arrived with the PDP-9 and stayed is
+guarded on the PDP-9 and the PDP-15 together. That is the assertions example from the Korz paper:
+a new axis, and the code in the middle never mentions it. One sea can be all four machines, and
+four of them can run side by side in one browser tab, on the same program, with `why` naming the
+slots that make them differ. There is hardware to check the PDP-9 against: Gavin Tersteeg's
+homebrew clone, [RDP-9](https://github.com/tergav17/RDP-9), which runs Mitch Bradley's PDP-7 Forth
+unchanged.
+
+The PDP-1 is the ancestor and not a member of that dimension. It shares the 18-bit one's-complement
+word. Supnik's account is that the PDP-4 cut the instruction set in half, and the PDP-7 inherited
+the cut. The PDP-1 keeps its own slots, its Type 30 display and its sequence break. It is not a
+guard value on the PDP-7's sea.
+
 **Machines.** The PDP-7 was chosen because it is small.
 
-- **The Apple II** is the real test, already designed in [microm8/PLAN.md](microm8/PLAN.md):
+- **apple2** is the real test, the sibling of pdp-7 at `src/korz/apple2`, already designed in [microm8/PLAN.md](microm8/PLAN.md). apple1 comes later.
   - Memory configuration as a cube of soft-switch fields.
   - The language card's mapping wins over ROM by being more specific, not by being first.
   - A card in an expansion slot as one transactional set of slots, which is how a Videx, a Saturn
@@ -267,17 +317,39 @@ stays.
 `why` answers for every one of them.
 
 **Korz′, the LLM as a second dispatcher.** This is the speculative part, designed in
-[moollm/designs/korz](https://github.com/SimHacker/moollm/tree/main/designs/korz):
+[moollm/designs/korz](https://github.com/SimHacker/moollm/tree/main/designs/korz). The profiler
+measures the guest. Korz′ asks a model to accelerate one hot subroutine at a time, on a 6502, a
+PDP-7, or whichever processor fetched it.
 
-- A language model proposes slots for regions the profiler finds hot: an accelerator for UNIX's
-  idle loop, or for the Forth inner interpreter.
-- A proposal goes into a candidate layer under its own `by` and runs in lockstep against the
-  oracle on recorded traces.
-- If it agrees, it is promoted; on any disagreement, it is removed.
+- The proposal is a TypeScript function that edits emulator state. It reads the registers and
+  memory the call would have read, writes back the registers, flags, and memory the call would
+  have left, and returns the exit PC and the cycles the routine took. That is an accelerator's
+  `Exit` ([microm8/STACK.md](microm8/STACK.md#accelerators-typescript-in-place-of-a-6502-routine)).
+  SWEET16, an Applesoft floating-point routine, the Forth inner interpreter, and a UNIX idle loop
+  are the same shape of call.
+- It goes into a candidate layer under its own `by` and runs in lockstep against the interpreter
+  on recorded traces. The byte hash of the routine guards it, so a patched routine never takes
+  the slot.
+- If it agrees, it is promoted and the next hottest call can be asked for. On any disagreement,
+  it is removed and the interpreter runs that call.
 
-This is crystallization and deoptimization, with meanings in place of types. The model is never on
-the hot path, and lockstep raises confidence without proving equivalence, which is why such slots
-stay labeled and removable.
+A promoted accelerator is a machine of its own, and Korz′ can measure that machine. The SWEET16
+device executes each bytecode as one edit of R0–R15 and memory, in lockstep with the 6502
+interpreter at `$F689`. Its program counter is R15. A hot `BS` target in that bytecode is the
+next call: Korz′ writes one TypeScript edit of those registers and the memory the bytecode
+touches, guarded by the hash of the bytecode, and lockstep runs it against the device. Agreement
+promotes it. A mismatch interprets that call as bytecode again. The 6502 remains the oracle
+under the device.
+
+The compiler can paste that next call into a block only when the slot carries an `emit` template
+and a guard that the bytes are still the ones compiled. That rule is the CPU kit's, and it is the
+same on a PDP-7 and a 6502: [KORZ-CPU.md](KORZ-CPU.md#stacking-instruction-sets). XCT is the one
+instruction it already pastes. An IOT stays a call.
+
+The compiled basic block is the other accelerator: the compiler derives it, one instruction at a
+time. Korz′ writes the coarser one, a whole call whose meaning the model states. Measurement
+decides which calls are worth that. The model is never on the hot path, and lockstep raises
+confidence without proving equivalence, which is why such slots stay labeled and removable.
 
 **JavaScript, not Wasm, for now.** Vanessa Freudenberg's SqueakJS argument holds here: generate
 code that V8's JIT optimizes, and V8 inlines it with the rest of the emulator and the devices.
@@ -365,4 +437,14 @@ Don Hopkins, November 2026.
 - Craig Chambers and Weimin Chen. *Efficient Multiple and Predicate Dispatching*. OOPSLA 1999.
 - Michael Ernst, Craig Kaplan and Craig Chambers. *Predicate Dispatching: A Unified Theory of
   Dispatch*. ECOOP 1998.
-- Bob Supnik et al. SIMH, the PDP-7 simulator (`PDP18B`).
+- Bob Supnik and the Open SIMH authors. SIMH, and the 18-bit family in `PDP18B`
+  (`pdp18b_cpu.c`), one simulator compiled four ways. The PDP-7 CPU semantics here are ported
+  from that file. *Writing a Simulator for the SIMH System* records the MIMIC lineage: Len
+  Fehskens, Mike McCarthy and Supnik.
+- Lars Brinkhoff. The PDP-7 Type 340 glue (`PDP18B/pdp18b_dpy.c`), and the Type 342 glyph table
+  in `display/type340.c`, recovered frame by frame from MIT AI Lab film, with gaps filled from
+  the Knight TV font. When PIXIE draws text, those are the strokes.
+- Philip Budne and Douglas Gwyn. The XY display core (`display/`), where a light pen hits if it
+  is near the last intensified point.
+- April and Melody Ayres-Griffiths. microM8, whose "upcycling" is the attitude of the
+  [manifesto](MANIFESTO.md): run the machine faithfully, then give it what it never had.

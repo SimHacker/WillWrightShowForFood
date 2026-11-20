@@ -77,8 +77,12 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
 - [KORZ-DISPATCH.md: one sea of guarded slots](KORZ-DISPATCH.md): built for the PDP-7, planned for
   the Apple. Every handler, mapping, soft switch, opcode, trap and watch as a Korz slot, dispatched
   to the most specific match; an interpreter, then resolved tables, then generated JavaScript
-  ([KORZ-COMPILER.md](KORZ-COMPILER.md)), each tested against the one below.
-  [KORZ-MACHINES.md](KORZ-MACHINES.md) summarizes it.
+  ([KORZ-COMPILER.md](KORZ-COMPILER.md)), each tested against the one below. What every processor
+  shares, including a second instruction set stacked on the first, is
+  [KORZ-CPU.md](KORZ-CPU.md).
+  [KORZ-MACHINES.md](KORZ-MACHINES.md) is the note to send: David Ungar, Randall Smith, Alan Kay,
+  Lars Brinkhoff, Bob Supnik and the others it is addressed to. The same TypeScript runs in Node
+  and in the browser, and that is the point.
 - [MAPPING.md: shared memory between machines](MAPPING.md): planned, after MIT's Rubin 10/11
   interface, which let the AI Lab's PDP-10 map PDP-11 memory and device registers into its own
   address space. [CORE-LINKS.md](CORE-LINKS.md) extends it to machines that disagree on word

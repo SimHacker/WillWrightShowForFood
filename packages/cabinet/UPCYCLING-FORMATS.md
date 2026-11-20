@@ -144,6 +144,9 @@ Rules that keep it honest:
   `presentation.depth`," and a tool can write either from the other, but both stay.
 - **Nest freely.** A cartridge can contain a PAK; a PAK can be generated from a cartridge; a scene
   can hold cartridges for several machines that talk over [core links](CORE-LINKS.md).
+- **A snapshot is an organelle too.** The cabinet's `state.yml` and microM8's freeze are two
+  files of one moment. Each rung writes its own, and a missing one still boots the same floppies
+  ([SAVE-FILES.md](SAVE-FILES.md#a-rung-keeps-its-own-snapshot)).
 
 ## Upcycling metadata: a shared vocabulary
 

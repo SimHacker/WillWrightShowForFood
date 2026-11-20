@@ -7,8 +7,14 @@ from a different question: what is the smallest, testable machine contract
 that lets this software live again, and what should remain replaceable around
 it?
 
-The cabinet is the reusable platform and backplane; the **cartridge configures
-the machine**. A cartridge chooses a CPU, memory, devices, instruction and I/O
+The cabinet is the reusable platform and backplane: the container that has
+CPUs and devices installed, a cartridge inserted, and a state. Reset returns
+that state to the cartridge's initial boot. A snapshot is a copy of the state,
+and many snapshots may name one cartridge. The cartridge does not carry the
+image, and it does not repeat the device inventory. It states requirements and
+mappings. The devices are configured once, on the cabinet.
+
+A cartridge chooses memory, instruction and I/O
 connections, timing and interrupt lines, host-facing input and rendering, plus
 the program, build steps and panels. The PDP-7 executes its own instruction
 set. The Type 340 executes a second, display-specific instruction stream from
@@ -307,6 +313,14 @@ panels stop special-casing the 340.
 driving the 340 and the teletype through their device calls. As a unit controlled by another
 processor it is a device: the PDP-7 sends it requests and Snap! answers them. Same wrapper, two
 wirings, and the cartridge picks which.
+
+**A card can nest a processor.** An Apple ][ expansion card can carry a Z-80, as the Microsoft
+SoftCard does, or a 6809, as Stellation Two's Mill does. On that machine the 6502 remains the
+cabinet's processor. The co-processor is part of the card: its stepper is a module the card
+plugin uses, and its saved registers and private RAM sit inside the card's directory
+([SAVE-FILES.md](SAVE-FILES.md#a-device-exists-on-its-own)). The card does not register that
+processor on the `cpus/` shelf. The same 6809 module can later be the processor of a Radio Shack
+Color Computer, where the cabinet names it directly and the state lives with that processor.
 
 ## Devices can travel farther than CPUs
 

@@ -39,6 +39,21 @@ export type Pdp7Opts = {
 	coreWords?: number;
 };
 
+/** Registers that change what the next instruction does. Core is not here. */
+export type Pdp7Registers = {
+	pc: number;
+	ac: number;
+	link: number;
+	mq: number;
+	sc: number;
+	ion: boolean;
+	ionDefer: number;
+	extend: boolean;
+	emirPending: boolean;
+	halted: boolean;
+	switches: number;
+};
+
 /**
  * PDP-7 instruction-set plugin. Semantics ported from Open SIMH
  * PDP18B/pdp18b_cpu.c (Bob Supnik), the reference oracle — see SIMH-MAP.md.
@@ -113,8 +128,43 @@ export class Pdp7 implements Cpu {
 		this.beforeWrite = before;
 	}
 
-	deposit(addr: number, words: readonly number[]): void {
+	deposit(addr: number, words: ArrayLike<number>): void {
 		for (let i = 0; i < words.length; i += 1) this.write(addr + i, words[i] ?? 0);
+	}
+
+	/**
+	 * The registers a snapshot keeps. `irqLine` is the backplane's wire, set again before the next
+	 * instruction. The trace and the write watch are host tools. Core is separate: restoring it
+	 * goes through `write`, so a Korz machine forgets blocks compiled from the old words.
+	 */
+	registers(): Pdp7Registers {
+		return {
+			pc: this.pc,
+			ac: this.ac,
+			link: this.link,
+			mq: this.mq,
+			sc: this.sc,
+			ion: this.ion,
+			ionDefer: this.ionDefer,
+			extend: this.extend,
+			emirPending: this.emirPending,
+			halted: this.halted,
+			switches: this.switches,
+		};
+	}
+
+	restoreRegisters(s: Pdp7Registers): void {
+		this.pc = s.pc;
+		this.ac = s.ac;
+		this.link = s.link;
+		this.mq = s.mq;
+		this.sc = s.sc;
+		this.ion = s.ion;
+		this.ionDefer = s.ionDefer;
+		this.extend = s.extend;
+		this.emirPending = s.emirPending;
+		this.halted = s.halted;
+		this.switches = s.switches;
 	}
 
 	step(): Step {

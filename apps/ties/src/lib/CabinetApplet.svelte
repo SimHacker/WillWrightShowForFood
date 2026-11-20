@@ -41,7 +41,10 @@
 		ST340_STOPPED,
 		ST340_LPHIT,
 		ST340_HEDGE,
-		ST340_VEDGE
+		ST340_VEDGE,
+		SnapshotLibrary,
+		ByteShelf,
+		openOpfsShelf
 	} from '@wwsff/cabinet';
 	import { implant } from '@wwsff/pixie';
 	import { PROGRAMS, DEFAULT_PROGRAM } from './cabinet-programs.js';
@@ -880,6 +883,22 @@
 
 	/** Three significant figures in four characters, so the readout holds its width: 0.57, 5.71, 57.1, 571. */
 	const sig3 = (x) => (x < 9.995 ? x.toFixed(2) : x < 99.95 ? x.toFixed(1) : x.toFixed(0));
+	// These sit on numbers that change four times a second. A native title never finishes
+	// its delay, so the explanation is a tooltip of our own (class gloss).
+	const TIP_RATE = 'Millions of PDP-7 memory cycles per second. A real machine is 0.57: one cycle is 1.75 microseconds, and an instruction usually takes one. Not megabytes.';
+	const TIP_REAL = 'How this compares with a real PDP-7, about 571,000 memory cycles a second. The speed slider sets it. 1× is real time.';
+	const TIP_BUSY = 'Of the last quarter second, the share spent running the processor and its devices. The rest was drawing and waiting for the next frame.';
+	const TIP_STOPPED = 'The processor is paused. Run continues from here, and the speed comes back.';
+
+	/** A native title gives up when the text under it changes, and it takes a second when it doesn't. Keep the words and show them ourselves. */
+	function showGloss(e) {
+		const el = e.target instanceof Element ? e.target.closest('[title]') : null;
+		if (!el || !figureEl?.contains(el)) return;
+		const tip = el.getAttribute('title');
+		if (!tip) return;
+		el.dataset.tip = tip;
+		el.removeAttribute('title');
+	}
 
 	function updateReadout(now) {
 		if (now - lastReadout < 250) return;
@@ -935,6 +954,7 @@
 	let configOpen = $state(panelsStored.includes('config'));
 	let ringsOpen = $state(panelsStored.includes('rings'));
 	let slotsOpen = $state(panelsStored.includes('slots'));
+	let snapsOpen = $state(panelsStored.includes('snaps'));
 	// A program's own panel (program.panel: the DataHand's), with its buttons, sliders and a canvas it draws.
 	let progOpen = $state(panelsStored.includes('prog') || !!untrack(() => programById(programId)?.panel));
 	let progCanvas = $state(null);
@@ -943,7 +963,7 @@
 	let progHint = $state('');
 	const hasProgPanel = $derived(!!program?.panel);
 	function storePanels() {
-		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen };
+		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen, snaps: snapsOpen };
 		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
 	}
 	// The last opened of these takes the figure's spare height; the others keep their size.
@@ -961,7 +981,7 @@
 		if (HUNGRY.includes(id)) panelOrder = [...panelOrder.filter((k) => k !== id), id];
 	}
 	function togglePanel(id, e) {
-		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen };
+		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen, snaps: snapsOpen };
 		if (e.shiftKey) for (const k in open) open[k] = k === id;
 		else open[id] = !open[id];
 		if (open[id]) opened(id);
@@ -972,6 +992,7 @@
 		ringsOpen = open.rings;
 		configOpen = open.config;
 		slotsOpen = open.slots;
+		snapsOpen = open.snaps;
 		progOpen = open.prog;
 		storePanels();
 		refreshRegs();
@@ -1490,25 +1511,41 @@
 		ttyDirty = false;
 	}
 
-	function ttyPrint(code) {
+	function ttyApply(code) {
 		const c = code & 0o177;
 		if (c === 0o15) ttyCol = 0;
 		else if (c === 0o10) ttyCol = Math.max(0, ttyCol - 1);
 		else if (c === 0o12) {
 			ttyLines.push('');
 			if (ttyLines.length > TTY_KEEP) ttyLines.splice(0, ttyLines.length - TTY_KEEP);
-		} else if (c === 0o07) {
-			ttyBell = true;
-			setTimeout(() => (ttyBell = false), 200);
-			beep();
 		} else if (c >= 0o40 && c < 0o177) {
 			const i = ttyLines.length - 1;
 			const line = ttyLines[i].padEnd(ttyCol);
 			ttyLines[i] = line.slice(0, ttyCol) + String.fromCharCode(c) + line.slice(ttyCol + 1);
 			ttyCol += 1;
-		} else return;
+		} else return false;
+		return true;
+	}
+
+	function ttyPrint(code) {
+		const c = code & 0o177;
+		if (c === 0o07) {
+			ttyBell = true;
+			setTimeout(() => (ttyBell = false), 200);
+			beep();
+			return;
+		}
+		if (!ttyApply(c)) return;
 		ttyDirty = true;
 		if (!ttyOpen) ttyUnread += 1;
+	}
+
+	/** The teletype's saved paper, without ringing the bell again. */
+	function showPrinted(text) {
+		ttyReset();
+		for (const ch of text) ttyApply(ch.charCodeAt(0));
+		ttyDirty = true;
+		ttyFlush();
 	}
 
 	/**
@@ -2543,6 +2580,178 @@
 		URL.revokeObjectURL(url);
 	}
 
+	// Snapshots of the selected program. The origin private file system holds them; local storage
+	// is the fallback. A zip is the same directory, downloaded or uploaded.
+	let snaps = $state([]);
+	let snapName = $state('');
+	let snapSel = $state('');
+	let snapNote = $state('');
+	let snapWhere = $state('');
+	let snapFile = $state(null);
+	/** @type {Promise<SnapshotLibrary> | null} */
+	let shelfPromise = null;
+
+	function shelf() {
+		if (!shelfPromise) {
+			shelfPromise = (async () => {
+				try {
+					const lib = new SnapshotLibrary(await openOpfsShelf());
+					snapWhere = 'Kept in this browser.';
+					return lib;
+				} catch {
+					const lib = new SnapshotLibrary(new ByteShelf(localStorage));
+					snapWhere = 'Kept in this browser, in local storage.';
+					return lib;
+				}
+			})();
+		}
+		return shelfPromise;
+	}
+
+	function snapWhen(ms) {
+		return ms ? new Date(ms).toLocaleString() : '';
+	}
+
+	async function refreshSnaps() {
+		const id = programId;
+		try {
+			const rows = await (await shelf()).list(id);
+			if (programId !== id) return;
+			snaps = rows;
+			if (!rows.some((row) => row.slug === snapSel)) snapSel = rows[0]?.slug ?? '';
+		} catch (e) {
+			snapNote = e?.message ?? String(e);
+		}
+	}
+
+	$effect(() => {
+		const id = programId;
+		if (!snapsOpen) return;
+		untrack(() => {
+			void id;
+			refreshSnaps();
+		});
+	});
+
+	function pickSnap(row) {
+		snapSel = row.slug;
+		snapName = row.name;
+		snapNote = '';
+	}
+
+	async function onSnapSave() {
+		if (demoOn) {
+			snapNote = 'Stop the demo first.';
+			return;
+		}
+		if (status !== 'live' || !box) return;
+		paused = true;
+		try {
+			const info = await (await shelf()).create(box, { name: snapName || program?.label || 'snapshot', cartridge: programId });
+			snapSel = info.slug;
+			snapName = info.name;
+			snapNote = `Saved ${info.name}.`;
+			await refreshSnaps();
+		} catch (e) {
+			snapNote = e?.message ?? String(e);
+		}
+	}
+
+	async function onSnapLoad() {
+		if (!snapSel || !box || status !== 'live') return;
+		if (demoOn) {
+			snapNote = 'Stop the demo first.';
+			return;
+		}
+		paused = true;
+		try {
+			const info = await (await shelf()).load(snapSel, box);
+			switches = cpu.switches;
+			halted = cpu.halted;
+			showPrinted(tty.printed());
+			refreshMem();
+			refreshRegs();
+			snapNote = `Loaded ${info.name}.`;
+		} catch (e) {
+			snapNote = e?.message ?? String(e);
+		}
+	}
+
+	async function onSnapRename() {
+		if (!snapSel) return;
+		try {
+			const info = await (await shelf()).rename(snapSel, snapName);
+			snapSel = info.slug;
+			snapName = info.name;
+			snapNote = `Renamed to ${info.name}.`;
+			await refreshSnaps();
+		} catch (e) {
+			snapNote = e?.message ?? String(e);
+		}
+	}
+
+	async function onSnapReplace() {
+		if (!snapSel || status !== 'live' || !box) return;
+		if (demoOn) {
+			snapNote = 'Stop the demo first.';
+			return;
+		}
+		paused = true;
+		try {
+			const info = await (await shelf()).replace(snapSel, box);
+			snapNote = `Replaced ${info.name}.`;
+			await refreshSnaps();
+		} catch (e) {
+			snapNote = e?.message ?? String(e);
+		}
+	}
+
+	async function onSnapDelete() {
+		const row = snaps.find((s) => s.slug === snapSel);
+		if (!row) return;
+		if (!confirm(`Delete snapshot “${row.name}”?`)) return;
+		try {
+			await (await shelf()).remove(row.slug);
+			snapNote = `Deleted ${row.name}.`;
+			await refreshSnaps();
+		} catch (e) {
+			snapNote = e?.message ?? String(e);
+		}
+	}
+
+	async function onSnapDownload() {
+		if (!snapSel) return;
+		try {
+			const file = await (await shelf()).exportZip(snapSel);
+			const blob = new Blob([file.bytes], { type: 'application/zip' });
+			const url = URL.createObjectURL(blob);
+			const a = document.createElement('a');
+			a.href = url;
+			a.download = file.name;
+			a.click();
+			URL.revokeObjectURL(url);
+			snapNote = `Downloaded ${file.name}.`;
+		} catch (e) {
+			snapNote = e?.message ?? String(e);
+		}
+	}
+
+	async function onSnapUpload(event) {
+		const input = event.currentTarget;
+		const file = input.files?.[0];
+		input.value = '';
+		if (!file) return;
+		try {
+			const info = await (await shelf()).importZip(new Uint8Array(await file.arrayBuffer()), programId);
+			snapSel = info.slug;
+			snapName = info.name;
+			snapNote = info.cartridge === programId ? `Uploaded ${info.name}.` : `Uploaded ${info.name} for ${info.cartridge}.`;
+			await refreshSnaps();
+		} catch (e) {
+			snapNote = e?.message ?? String(e);
+		}
+	}
+
 	/** Load the program's tapes, boot it, and keep the machine running. */
 	async function boot() {
 		status = 'booting';
@@ -2892,7 +3101,7 @@
 		onkeydown={(e) => onEdgeKey(e, edge)}
 	></div>
 {/snippet}
-<figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} bind:clientWidth={figW} style:min-height={figHeight ? `${figHeight}px` : null}>
+<figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} bind:clientWidth={figW} style:min-height={figHeight ? `${figHeight}px` : null} onpointerover={showGloss} onfocusin={showGloss}>
 	<!-- The program comes first, so opening or closing the display never moves the menu. -->
 	<div class="row menu top">
 		<select
@@ -2937,7 +3146,18 @@
 			<span class="fault" title={fault}>fault: {fault}</span>
 		{:else}
 			<span class="readout">
-				{#if paused}stopped{:else}<span class="fig rate" title="Simulated memory cycles per second. A PDP-7 instruction takes one memory cycle of 1.75 µs, or two or more when it reads or writes core.">{readout}</span>{#if perf}<span class="fig real" title="Speed against a real PDP-7, which runs about 571,000 memory cycles a second. The speed slider sets this; 1× is real time.">{sig3(perf.real)}× real</span><span class="fig busy" title="Share of the last quarter second the browser spent running the machine (CPU and devices). The rest went to drawing, the page, and waiting for the next frame.">{Math.round(perf.busy * 100)}% busy</span>{/if}{/if}{#if !paused && readoutExtra}<span title="Read from the program's variables in core" style:min-width={`${extraCh}ch`}>{readoutExtra}</span>{/if}
+				{#if paused}
+					<span class="gloss" data-tip={TIP_STOPPED}>stopped</span>
+				{:else}
+					<span class="fig rate gloss" data-tip={TIP_RATE}>{readout}</span>
+					{#if perf}
+						<span class="fig real gloss" data-tip={TIP_REAL}>{sig3(perf.real)}× real</span>
+						<span class="fig busy gloss" data-tip={TIP_BUSY}>{Math.round(perf.busy * 100)}% busy</span>
+					{/if}
+				{/if}
+				{#if !paused && readoutExtra}
+					<span class="fig extra gloss" data-tip={program?.statusTitle ?? 'A reading from this program’s own variables.'} style:min-width={`${extraCh}ch`}>{readoutExtra}</span>
+				{/if}
 			</span>
 			{#if displayOpen}{@render toolMenu()}{/if}
 		{/if}
@@ -3211,6 +3431,14 @@
 						title="Settings for the teletype and more. Each program sets them for you when you choose it. Shift-click: this panel alone."
 						onclick={(e) => togglePanel('config', e)}>CONFIG</button
 					>
+					<button
+						type="button"
+						class="chip"
+						class:on={snapsOpen}
+						aria-pressed={snapsOpen}
+						title="Snapshots of this program: save, load, rename, delete, download, upload. Shift-click: this panel alone."
+						onclick={(e) => togglePanel('snaps', e)}>SNAPSHOTS</button
+					>
 				</span>
 				<button
 					type="button"
@@ -3381,9 +3609,9 @@
 				<div class="reg-line">
 					<span class="reg-dev wide">COST</span>
 					{#if perf}
-						<span class="reg" title="Wall-clock nanoseconds the emulator spent per simulated memory cycle, CPU and devices together, over the last quarter second. A real PDP-7 takes 1,750.">ns/cycle <b class="fig ns">{perf.ns === null ? '–' : perf.ns.toFixed(1)}</b></span>
-						<span class="reg" title="How fast the emulator could run if it did nothing else: 1,750 ns divided by its time per cycle. The page caps a frame at 100,000 cycles, about 10× real time at 60 frames a second.">could run <b class="fig times">{perf.ns ? `${Math.round(1750 / perf.ns).toLocaleString()}×` : '–'}</b></span>
-						<span class="reg" title="Share of the last quarter second the browser spent running the machine (CPU and devices). The rest went to drawing, the page, and waiting for the next frame.">busy <b class="fig pct">{Math.round(perf.busy * 100)}%</b></span>
+						<span class="reg gloss" data-tip="Nanoseconds the emulator spent per simulated memory cycle, processor and devices together, over the last quarter second. A real PDP-7 takes 1,750.">ns/cycle <b class="fig ns">{perf.ns === null ? '–' : perf.ns.toFixed(1)}</b></span>
+						<span class="reg gloss" data-tip="How fast the emulator could run if it did nothing else: 1,750 ns divided by its time per cycle. The page caps a frame at 100,000 cycles, about 10× real time at 60 frames a second.">could run <b class="fig times">{perf.ns ? `${Math.round(1750 / perf.ns).toLocaleString()}×` : '–'}</b></span>
+						<span class="reg gloss" data-tip="Of the last quarter second, the share spent running the processor and its devices. The rest was drawing and waiting for the next frame.">busy <b class="fig pct">{Math.round(perf.busy * 100)}%</b></span>
 					{/if}
 					{#if slotsView.compiler}
 						<span class="reg-dev wide" title="The Korz compiler: runs of PDP-7 instructions compiled to JavaScript">JIT</span>
@@ -3734,6 +3962,33 @@
 					onpointerdown={(e) => gripDrag(e, () => ringsHeight, ringsSet)}
 					onkeydown={(e) => gripKey(e, () => ringsHeight, ringsSet, 20)}
 				></button>
+			</div>
+		{/if}
+		{#if snapsOpen}
+			<div class="row app snaps" role="group" aria-label="Snapshots">
+				<div class="snap-bar">
+					<input class="snap-name" bind:value={snapName} placeholder="Name" aria-label="Snapshot name" disabled={status !== 'live'} />
+					<button type="button" class="chip" title="Save the machine now as a new snapshot" disabled={status !== 'live'} onclick={onSnapSave}>Save</button>
+					<button type="button" class="chip" title="Load the selected snapshot into this machine" disabled={!snapSel || status !== 'live'} onclick={onSnapLoad}>Load</button>
+					<button type="button" class="chip" title="Rename the selected snapshot" disabled={!snapSel} onclick={onSnapRename}>Rename</button>
+					<button type="button" class="chip" title="Overwrite the selected snapshot with the machine now" disabled={!snapSel || status !== 'live'} onclick={onSnapReplace}>Replace</button>
+					<button type="button" class="chip" title="Delete the selected snapshot" disabled={!snapSel} onclick={onSnapDelete}>Delete</button>
+					<button type="button" class="chip" title="Download the selected snapshot as a zip" disabled={!snapSel} onclick={onSnapDownload}>Download</button>
+					<button type="button" class="chip" title="Upload a snapshot zip" onclick={() => snapFile?.click()}>Upload</button>
+					<input bind:this={snapFile} class="snap-file" type="file" accept=".zip,application/zip" onchange={onSnapUpload} />
+				</div>
+				<p class="mem-hint">{snapWhere}{snapNote ? ` ${snapNote}` : ''}</p>
+				<ul class="snap-list">
+					{#each snaps as row (row.slug)}
+						<li>
+							<button type="button" class="snap" class:on={snapSel === row.slug} onclick={() => pickSnap(row)}>
+								<span class="snap-title">{row.name}</span>
+								<span class="snap-meta">{row.slug} · {snapWhen(row.time)} · {row.cycles} cycles</span>
+							</button>
+						</li>
+					{/each}
+					{#if snaps.length === 0}<li class="mem-hint">No snapshots of {program?.label ?? 'this program'} yet.</li>{/if}
+				</ul>
 			</div>
 		{/if}
 		{#if configOpen}
@@ -4134,6 +4389,7 @@
 	}
 	.row.menu {
 		justify-content: space-between;
+		align-items: baseline;
 	}
 	/* Wraps between octal digits, never inside one. */
 	.row.panel {
@@ -4233,6 +4489,7 @@
 	.tool-menu {
 		position: relative;
 		display: inline-flex;
+		align-self: center;
 		margin-left: 0.4rem;
 	}
 	.tool-button {
@@ -4477,17 +4734,57 @@
 	.readout,
 	.fault {
 		font-family: ui-monospace, monospace;
-		font-size: 0.7rem;
+		font-size: 0.62rem;
 		opacity: 0.8;
 		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
 	}
 	.readout {
 		flex-shrink: 0;
 		display: inline-flex;
-		align-items: center;
-		gap: 0.6em;
+		align-items: baseline;
+		gap: 0.7em;
+	}
+	/* The number underneath changes constantly, which dismisses a native title before it appears. */
+	.gloss {
+		cursor: help;
+	}
+	.cabinet-applet [data-tip]:not(.edge) {
+		position: relative;
+	}
+	.cabinet-applet [data-tip]:hover::after,
+	.cabinet-applet [data-tip]:focus-visible::after {
+		content: attr(data-tip);
+		position: absolute;
+		z-index: 30;
+		top: calc(100% + 6px);
+		left: 0;
+		width: max-content;
+		max-width: 18rem;
+		padding: 0.35rem 0.5rem;
+		background: #16120c;
+		color: #fff4d6;
+		border: 1px solid #8a6424;
+		border-radius: 4px;
+		box-shadow: 0 4px 14px rgb(0 0 0 / 0.55);
+		font-family: system-ui, sans-serif;
+		font-size: 0.75rem;
+		font-weight: 450;
+		line-height: 1.35;
+		letter-spacing: 0;
+		text-align: left;
+		text-transform: none;
+		white-space: normal;
+		pointer-events: none;
+	}
+	.readout .gloss:hover::after,
+	.readout .gloss:focus-visible::after {
+		left: auto;
+		right: 0;
+	}
+	.row:has([data-tip]:hover),
+	.row:has([data-tip]:focus-visible) {
+		position: relative;
+		z-index: 6;
 	}
 	/* Fixed slots: a digit coming or going would otherwise reflow the whole menu row. */
 	.fig {
@@ -4562,6 +4859,55 @@
 		border-radius: 0.6em;
 		background: #ffe680;
 		color: #000;
+	}
+	.snap-bar {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.3em;
+		align-items: baseline;
+		margin-bottom: 0.3em;
+	}
+	.snap-name {
+		box-sizing: border-box;
+		min-width: 8em;
+		flex: 1;
+		margin: 0;
+		padding: 0.15rem 0.45rem;
+		border: 1px solid #9fe8a0;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		font-size: 0.62rem;
+		line-height: normal;
+	}
+	.snap-file {
+		display: none;
+	}
+	.snap-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.snap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.2em 0.8em;
+		width: 100%;
+		text-align: left;
+		padding: 0.15em 0.4em;
+		border-color: transparent;
+		background: transparent;
+	}
+	.snap.on {
+		background: #9fe8a0;
+		color: #000;
+	}
+	.snap-title {
+		font-weight: 600;
+	}
+	.snap-meta {
+		opacity: 0.75;
 	}
 	.row.regs {
 		font-family: ui-monospace, monospace;

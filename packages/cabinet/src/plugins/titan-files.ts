@@ -178,6 +178,14 @@ export class StorageMount implements FileMount {
 /** Core, as the device reaches it: 15-bit addresses, any bank. */
 export type CoreAccess = { read(addr: number): number; write(addr: number, word: number): void };
 
+/** A paused file device. `blobs` are the file bodies; the YAML names them. */
+export type TitanFilesState = {
+	flag: boolean;
+	result: number;
+	mounts: { prefix: string; files: { path: string; file: string }[] }[];
+	blobs: { file: string; words: Uint32Array }[];
+};
+
 export type TitanFilesOpts = {
 	core: CoreAccess;
 	/** Path prefix to mount, longest prefix first; "/tmp" etc. Paths are relative to the mount. */
@@ -207,6 +215,47 @@ export class TitanFiles implements KorzDevice {
 	constructor(opts: TitanFilesOpts) {
 		this.core = opts.core;
 		this.mounts = Object.entries(opts.mounts ?? { "/tmp": new MemoryMount() }).sort((a, b) => b[0].length - a[0].length);
+	}
+
+	/**
+	 * Flag, result, and every MemoryMount's files. A transfer still in flight has no settled
+	 * result, so it is not a snapshot.
+	 */
+	capture(): TitanFilesState {
+		if (this.pending) throw new Error("titan-files transfer still in flight");
+		const mounts: TitanFilesState["mounts"] = [];
+		const blobs: TitanFilesState["blobs"] = [];
+		for (const [prefix, mount] of this.mounts) {
+			if (!(mount instanceof MemoryMount)) throw new Error(`no snapshot for mount ${prefix}`);
+			const files: { path: string; file: string }[] = [];
+			for (const path of [...mount.files.keys()].sort()) {
+				const file = `${blobs.length}.bin`;
+				files.push({ path, file });
+				blobs.push({ file, words: mount.files.get(path)! });
+			}
+			mounts.push({ prefix, files });
+		}
+		return { flag: this.flag, result: this.result, mounts, blobs };
+	}
+
+	restore(s: TitanFilesState): void {
+		if (this.pending) throw new Error("titan-files transfer still in flight");
+		if (s.mounts.length !== this.mounts.length) throw new Error("titan-files mounts differ");
+		const byName = new Map(s.blobs.map((b) => [b.file, b.words]));
+		for (let i = 0; i < s.mounts.length; i += 1) {
+			const saved = s.mounts[i]!;
+			const [prefix, mount] = this.mounts[i]!;
+			if (saved.prefix !== prefix) throw new Error(`titan-files mount ${saved.prefix} is not ${prefix}`);
+			if (!(mount instanceof MemoryMount)) throw new Error(`no snapshot for mount ${prefix}`);
+			mount.files.clear();
+			for (const f of saved.files) {
+				const words = byName.get(f.file);
+				if (!words) throw new Error(`titan-files snapshot has no ${f.file}`);
+				mount.files.set(f.path, words.slice());
+			}
+		}
+		this.flag = s.flag;
+		this.result = s.result;
 	}
 
 	/** Which mount, and the path within it. */

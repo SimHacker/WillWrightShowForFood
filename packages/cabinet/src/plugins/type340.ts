@@ -90,7 +90,48 @@ export type Segment = {
 	tag: number;
 };
 
-type PendingVector = {
+/** A paused 340. `ahead` is empty: the cabinet is flushed before this is taken. */
+export type Type340State = {
+	dac: number;
+	status: number;
+	x: number;
+	y: number;
+	mode: Mode;
+	lpEna: boolean;
+	scale: number;
+	intensity: number;
+	shift: number;
+	width: number;
+	height: number;
+	asr: number;
+	saveFF: boolean;
+	tag: number;
+	savedTag: number;
+	enabled: boolean;
+	segments: Segment[];
+	lastFrame: Frame | null;
+	frame: number;
+	frameStart: number;
+	penX: number;
+	penY: number;
+	lastHit: number;
+	lastHitPen: string | null;
+	startAddr: number;
+	subr: number;
+	block: number;
+	ddsBlock: boolean;
+	ch: number;
+	glyphs: number;
+	xAt: number;
+	yAt: number;
+	pending: PendingVector | null;
+	time: number;
+	ownClock: number;
+	wordsPerTick: number;
+	pens: { x: number; y: number; enabled: boolean; aperture: number; name?: string }[];
+};
+
+export type PendingVector = {
 	x0: number;
 	y0: number;
 	x1: number;
@@ -436,6 +477,100 @@ export class Type340 implements Device, KorzDevice {
 		this.pending = null;
 		this.tag = 0;
 		this.savedTag = 0;
+	}
+
+	/** The beam, the unfinished vector, and the strokes already drawn. A running-ahead pass is dropped first. */
+	capture(): Type340State {
+		if (this.ahead) this.rollback();
+		return {
+			dac: this.dac,
+			status: this.status,
+			x: this.x,
+			y: this.y,
+			mode: this.mode,
+			lpEna: this.lpEna,
+			scale: this.scale,
+			intensity: this.intensity,
+			shift: this.shift,
+			width: this.width,
+			height: this.height,
+			asr: this.asr,
+			saveFF: this.saveFF,
+			tag: this.tag,
+			savedTag: this.savedTag,
+			enabled: this.enabled,
+			segments: this.segments.map((s) => ({ ...s })),
+			lastFrame: this.lastFrame ? { ...this.lastFrame, segments: this.lastFrame.segments.map((s) => ({ ...s })) } : null,
+			frame: this.frame,
+			frameStart: this.frameStart,
+			penX: this.penX,
+			penY: this.penY,
+			lastHit: this.lastHit ? this.segments.indexOf(this.lastHit) : -1,
+			lastHitPen: this.lastHitPen?.name ?? null,
+			startAddr: this.startAddr,
+			subr: this.subr,
+			block: this.block,
+			ddsBlock: this.ddsBlock,
+			ch: this.ch,
+			glyphs: this.glyphs,
+			xAt: this.xAt,
+			yAt: this.yAt,
+			pending: this.pending ? { ...this.pending } : null,
+			time: this.time,
+			ownClock: this.ownClock,
+			wordsPerTick: this.wordsPerTick,
+			pens: this.pens.map((p) => ({ x: p.x, y: p.y, enabled: p.enabled, aperture: p.aperture, ...(p.name ? { name: p.name } : {}) })),
+		};
+	}
+
+	restore(s: Type340State): void {
+		if (s.wordsPerTick !== this.wordsPerTick) throw new Error(`340 words per tick is ${s.wordsPerTick}, this one is ${this.wordsPerTick}`);
+		if (s.width !== this.width || s.height !== this.height) throw new Error("340 character size differs");
+		if (s.pens.length !== this.pens.length) throw new Error(`340 has ${s.pens.length} pens, this one has ${this.pens.length}`);
+		for (let i = 0; i < s.pens.length; i += 1) {
+			if (s.pens[i]!.aperture !== this.pens[i]!.aperture) throw new Error(`340 pen ${i} aperture differs`);
+		}
+		this.ahead = null;
+		this.dac = s.dac;
+		this.status = s.status;
+		this.x = s.x;
+		this.y = s.y;
+		this.mode = s.mode;
+		this.lpEna = s.lpEna;
+		this.scale = s.scale;
+		this.intensity = s.intensity;
+		this.shift = s.shift;
+		this.asr = s.asr;
+		this.saveFF = s.saveFF;
+		this.tag = s.tag;
+		this.savedTag = s.savedTag;
+		this.enabled = s.enabled;
+		this.segments = s.segments.map((seg) => ({ ...seg }));
+		this.lastFrame = s.lastFrame ? { ...s.lastFrame, segments: s.lastFrame.segments.map((seg) => ({ ...seg })) } : null;
+		this.frame = s.frame;
+		this.frameStart = s.frameStart;
+		this.penX = s.penX;
+		this.penY = s.penY;
+		this.lastHit = s.lastHit >= 0 ? this.segments[s.lastHit] ?? null : null;
+		this.lastHitPen = s.lastHitPen ? this.pens.find((p) => p.name === s.lastHitPen) ?? null : null;
+		this.startAddr = s.startAddr;
+		this.subr = s.subr;
+		this.block = s.block;
+		this.ddsBlock = s.ddsBlock;
+		this.ch = s.ch;
+		this.glyphs = s.glyphs;
+		this.xAt = s.xAt;
+		this.yAt = s.yAt;
+		this.pending = s.pending ? { ...s.pending } : null;
+		this.time = s.time;
+		this.ownClock = s.ownClock;
+		for (let i = 0; i < s.pens.length; i += 1) {
+			const pen = this.pens[i]!;
+			const saved = s.pens[i]!;
+			pen.x = saved.x;
+			pen.y = saved.y;
+			pen.enabled = saved.enabled;
+		}
 	}
 
 	iot(req: Iot): IotReply {

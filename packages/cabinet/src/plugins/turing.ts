@@ -327,6 +327,67 @@ export class TuringEngine {
 		this.emitted = false;
 	}
 
+	/** Registers and the spilled tape. Core holds the window and the table. */
+	capture(): TuringEngineState {
+		return {
+			wordBits: this.shape.wordBits,
+			tcb: this.tcb,
+			state: this.state,
+			head: this.head,
+			origin: this.origin,
+			window: this.window,
+			wlen: this.wlen,
+			table: this.table,
+			nsym: this.nsym,
+			alpha: this.alpha,
+			count: this.count,
+			emitting: this.emitting,
+			emitStop: this.emitStop,
+			emitTable: this.emitTable,
+			emits: this.emits,
+			lastEmit: this.lastEmit,
+			emitCell: this.emitCell,
+			emitted: this.emitted,
+			status: this.status,
+			hostPaging: this.hostPaging,
+			pages: this.pages,
+			scanned: this.scanned,
+			entryAddr: this.entryAddr,
+			stepOnce: this.stepOnce,
+			spillBlank: this.spill.blank,
+			spill: this.spill.runs.map((r) => ({ ...r })),
+		};
+	}
+
+	restore(s: TuringEngineState): void {
+		if (s.wordBits !== this.shape.wordBits) throw new Error(`turing word is ${s.wordBits} bits, this one is ${this.shape.wordBits}`);
+		this.tcb = s.tcb;
+		this.state = s.state;
+		this.head = s.head;
+		this.origin = s.origin;
+		this.window = s.window;
+		this.wlen = s.wlen;
+		this.table = s.table;
+		this.nsym = s.nsym;
+		this.alpha = s.alpha;
+		this.count = s.count;
+		this.emitting = s.emitting;
+		this.emitStop = s.emitStop;
+		this.emitTable = s.emitTable;
+		this.emits = s.emits;
+		this.lastEmit = s.lastEmit;
+		this.emitCell = s.emitCell;
+		this.emitted = s.emitted;
+		this.status = s.status;
+		this.hostPaging = s.hostPaging;
+		this.pages = s.pages;
+		this.scanned = s.scanned;
+		this.entryAddr = s.entryAddr;
+		this.stepOnce = s.stepOnce;
+		this.spill.blank = s.spillBlank;
+		this.spill.runs = s.spill.map((r) => ({ ...r }));
+	}
+
 	/** One transition. Returns why it stopped, or null if it is still running. */
 	step(): StopReason | null {
 		this.emitted = false;
@@ -468,6 +529,41 @@ export class TuringEngine {
 		return w >= half ? w - (this.wmask + 1) : w;
 	}
 }
+
+export type TuringEngineState = {
+	wordBits: number;
+	tcb: number;
+	state: number;
+	head: number;
+	origin: number;
+	window: number;
+	wlen: number;
+	table: number;
+	nsym: number;
+	alpha: number;
+	count: number;
+	emitting: boolean;
+	emitStop: boolean;
+	emitTable: number;
+	emits: number;
+	lastEmit: number;
+	emitCell: number;
+	emitted: boolean;
+	status: number;
+	hostPaging: boolean;
+	pages: number;
+	scanned: number;
+	entryAddr: number;
+	stepOnce: boolean;
+	spillBlank: number;
+	spill: { start: number; length: number; code: number }[];
+};
+
+export type TuringState = {
+	rate: number;
+	accum: number;
+	engine: TuringEngineState;
+};
 
 export type TuringDeviceOpts = {
 	/** Shared core, as the 340 has it: wire to the CPU's read and write. */
@@ -637,6 +733,17 @@ export class TuringDevice implements Device, KorzDevice {
 		this.engine.reset();
 		this.engine.hostPaging = false;
 		this.accum = 0;
+	}
+
+	/** The fraction toward the next transition, and the engine registers the transition reads. */
+	capture(): TuringState {
+		return { rate: this.rate, accum: this.accum, engine: this.engine.capture() };
+	}
+
+	restore(s: TuringState): void {
+		if (s.rate !== this.rate) throw new Error(`turing rate is ${s.rate}, this one is ${this.rate}`);
+		this.accum = s.accum;
+		this.engine.restore(s.engine);
 	}
 }
 

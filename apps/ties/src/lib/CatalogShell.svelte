@@ -700,7 +700,7 @@
 		outline-offset: 1px;
 	}
 	header {
-		padding: 0.5rem 1rem 0.25rem;
+		padding: 0.5rem 1rem 0;
 	}
 	.guide {
 		margin-top: 1rem;
@@ -758,9 +758,18 @@
 		margin: 0;
 	}
 	.about,
-	.tags,
 	.ignored {
 		margin: 0.25rem 0;
+	}
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.2rem 0.35rem;
+		margin: 0.25rem 0 0;
+	}
+	.tags .chip {
+		margin: 0;
 	}
 	.about {
 		max-width: 50rem;
@@ -771,6 +780,9 @@
 	}
 	.machine {
 		padding: 0.25rem 1rem 1rem;
+	}
+	.machine :global(.cabinet-applet) {
+		margin-top: 0;
 	}
 	.wait {
 		margin: 0;

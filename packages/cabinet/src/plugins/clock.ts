@@ -80,4 +80,20 @@ export class Clock implements Device, KorzDevice {
 		this.on = false;
 		this.accum = 0;
 	}
+
+	/** `cyclesPerTick` is how this clock was built. A snapshot checks it and restores the rest. */
+	capture(): ClockState {
+		return { flag: this.flag, on: this.on, accum: this.accum, cyclesPerTick: this.cyclesPerTick };
+	}
+
+	restore(s: ClockState): void {
+		if (s.cyclesPerTick !== this.cyclesPerTick) {
+			throw new Error(`clock period is ${s.cyclesPerTick}, this one is ${this.cyclesPerTick}`);
+		}
+		this.flag = s.flag;
+		this.on = s.on;
+		this.accum = s.accum;
+	}
 }
+
+export type ClockState = { flag: boolean; on: boolean; accum: number; cyclesPerTick: number };

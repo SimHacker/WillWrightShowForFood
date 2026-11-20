@@ -18,6 +18,19 @@ transparent until it is checked against the oracles.
 - **The ROMs and the printed listings**: the bytes the machine boots, and what Woz printed
   ([TRANSPARENCY.md](TRANSPARENCY.md#down-from-a-byte-in-rom-to-the-printed-page)).
 
+## How a run is checked
+
+A check writes a save ([SAVE-FILES.md](../SAVE-FILES.md)), runs a stretch, and writes the save again.
+The stretch is a count of ticks or one video frame. The two directories are compared module by
+module. A miss names the module, the stretch is halved, and the run is repeated from the earlier
+save until the window is small enough to read. Our own machine steps inside that window.
+
+SingleStepTests stays per instruction: each case is already one instruction. The whole machine,
+including a run beside microM8, is compared at the ends of stretches. microM8 keeps the API it has.
+`status`, `readMemory`, `frame` and `videxRAM` are the oracle for the registers, the bytes on the
+bus and the picture. The save holds the rest: a switched-out language-card bank, a card's private
+RAM, a UI module's breakpoints.
+
 ## Steps
 
 ### 0. The baseline
@@ -43,10 +56,10 @@ functional and decimal tests pass for both variants.
 Byte banks, read and write page tables, the soft-switch table, the language card, ROMs from a
 microM8 profile.
 
-**Done when** the machine boots to the Monitor and to Applesoft, and a differential run against
-microM8 (same ROM, same keys at the same cycles) gives the same 64K at every vertical blank for a
-minute of scripted input. Where the Go build can't report its memory per frame, the patch that adds
-it goes into [FORK.yml](FORK.yml).
+**Done when** the machine boots to the Monitor and to Applesoft, and a checkpointed run against
+microM8 (same ROM, same keys, compared at each vertical blank through `status`, `readMemory` and
+`frame`) agrees for a minute of scripted input. Our own levels agree on the full save tree at the
+same blanks.
 
 ### 3. Video on the GPU
 
@@ -118,6 +131,8 @@ gives the same trace as running with it off.
 
 Applesoft first, then SWEET 16, Integer BASIC, Pascal and Forth
 ([TRANSPARENCY.md](TRANSPARENCY.md#up-from-the-6502-to-the-program-it-is-interpreting)).
+The ROM is the language. Korz accelerates the hot calls and the TypeScript of those slots is the
+thing we show, explain, and share. microM8's Go dialect is not the implementation.
 
 **Done when** a breakpoint on a BASIC line stops there; the profiler charges a BASIC program's
 cycles to its lines, and the totals equal the 6502's.

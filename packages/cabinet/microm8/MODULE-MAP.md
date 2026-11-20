@@ -10,6 +10,7 @@ Verdicts:
 - **redesign**: keep what it does, build it differently, use the Go as the oracle.
 - **replace**: the browser or Node already does this; use their API.
 - **keep in Go**: leave it in the WebAssembly build, linked as a peer, until it is worth porting.
+- **run from ROM**: the TypeScript machine executes the real ROM. Korz accelerates it, and the TypeScript of those slots is what we show, explain, and share. The Go dialect stays microM8's.
 - **drop**: not needed in the cabinet.
 
 ## The machine
@@ -72,8 +73,8 @@ Verdicts:
 
 | Package | Lines | What it is | Verdict | Goes to |
 |---|---:|---|---|---|
-| `core/dialect/applesoft` | 16,239 | Applesoft, in Go | keep in Go | the WebAssembly peer; real Applesoft runs from ROM on the TypeScript machine |
-| `core/dialect/appleinteger` | 4,594 | Integer BASIC, in Go | keep in Go | the same, with Woz's ROM on the TypeScript machine |
+| `core/dialect/applesoft` | 16,239 | Applesoft, in Go | run from ROM | the TypeScript 6502 runs the ROM; Korz accelerates, explains, and shares that code |
+| `core/dialect/appleinteger` | 4,594 | Integer BASIC, in Go | run from ROM | the same, Woz's ROM, SWEET16 included |
 | `core/dialect/logo` | 22,189 | microM8's Logo | keep in Go | the WebAssembly peer; a TypeScript Logo is its own project |
 | `core/dialect/plus` | 25,997 | the `@` commands and extensions | redesign | services and console commands with the same names |
 | `core/dialect/shell`, `parcel`, `dialect` root, `octalyzer/tokenizer` | 8,048 | microM8's shell, parsing, tokeniser | keep in Go | with the dialects |
@@ -98,9 +99,9 @@ Verdicts:
 
 About 41,000 lines make up the Apple: the 6502, memory, the I/O chip and soft switches, video and
 the hires decoders, the speaker, Disk II and WOZ, the cards, the chips, recording and freeze. That is
-the first translation ([PLAN.md](PLAN.md)). About 51,000 lines of interpreters (Applesoft, Integer
-BASIC, Logo and the shell) stay in Go, and the 26,000 lines of `@` commands are redesigned as
-services. About 55,000 lines (GL bindings, the Ogg decoder, glumby, file providers, the editor) are
+the first translation ([PLAN.md](PLAN.md)). Applesoft and Integer BASIC run from their ROMs on that
+machine. Korz is how they get faster, and how the TypeScript that does it is shown and shared. Logo
+and the shell stay in Go. The 26,000 lines of `@` commands are redesigned as services. About 55,000 lines (GL bindings, the Ogg decoder, glumby, file providers, the editor) are
 replaced by what the browser and Node already provide.
 
 ↑ [STACK](STACK.md) · [PLAN](PLAN.md) · [README](README.md)

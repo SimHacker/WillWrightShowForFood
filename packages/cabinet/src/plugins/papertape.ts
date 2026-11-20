@@ -7,6 +7,16 @@ export type PaperTapeOpts = {
 	frameCycles?: number;
 };
 
+export type PaperTapeState = {
+	flag: boolean;
+	buf: number;
+	pos: number;
+	state: number;
+	wait: number;
+	frameCycles: number;
+	tape: Uint8Array;
+};
+
 /**
  * Paper tape reader, device 01: RSF 700101, RRB 700112, RSA 700104,
  * RSB 700144. Semantics from SIMH pdp18b_stddev.c ptr()/ptr_svc(): RSA
@@ -111,6 +121,31 @@ export class PaperTape implements KorzDevice {
 		this.buf = 0;
 		this.state = 0;
 		this.wait = -1;
+	}
+
+	/** `state` is the bits still to assemble. `frameCycles` is how this reader was built. */
+	capture(): PaperTapeState {
+		return {
+			flag: this.flag,
+			buf: this.buf,
+			pos: this.pos,
+			state: this.state,
+			wait: this.wait,
+			frameCycles: this.frameCycles,
+			tape: this.tape.slice(),
+		};
+	}
+
+	restore(s: PaperTapeState): void {
+		if (s.frameCycles !== this.frameCycles) {
+			throw new Error(`paper tape frame time is ${s.frameCycles}, this one is ${this.frameCycles}`);
+		}
+		this.flag = s.flag;
+		this.buf = s.buf;
+		this.pos = s.pos;
+		this.state = s.state;
+		this.wait = s.wait;
+		this.tape = s.tape.slice();
 	}
 }
 

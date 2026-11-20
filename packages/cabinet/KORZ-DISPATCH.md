@@ -4,8 +4,12 @@ Steps 1, 2 and 3 are built, for the PDP-7: the interpreter and the resolver in
 [`src/korz/korz.ts`](src/korz/korz.ts), the PDP-7 on them in
 [`src/korz/pdp7.ts`](src/korz/pdp7.ts), and the compiler in
 [`src/korz/compile7.ts`](src/korz/compile7.ts), designed and measured in
-[KORZ-COMPILER.md](KORZ-COMPILER.md). The PDP-7 runs at each level and is tested at each against
-`Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The Apple's bus and its compiled blocks are design. A short summary of results
+[KORZ-COMPILER.md](KORZ-COMPILER.md). The sea stays domain-free. Four kits sit on it:
+the CPU host ([`src/korz/cpu.ts`](src/korz/cpu.ts)), the device adapter
+([`src/korz/device.ts`](src/korz/device.ts)), Life ([`src/korz/ca.ts`](src/korz/ca.ts)),
+and a Turing rule ([`src/korz/tm.ts`](src/korz/tm.ts)). [Domain kits](#domain-kits) says how they
+divide. The PDP-7 runs at each level and is tested at each against
+`Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The apple2 bus and its compiled blocks are design. A short summary of results
 and open questions, for readers who know Korz and Self, is [KORZ-MACHINES.md](KORZ-MACHINES.md).
 
 Everything a machine does on its bus is a lookup on a few small bit fields: which address, read or
@@ -17,9 +21,22 @@ soft switch, opcode, trap, accelerator and watch into one sea of guarded slots, 
 Context-Oriented Programming*, Onward! 2014), and dispatches each access to the most specific slot
 that matches.
 
-The domains are finite and small (16 address bits, 8 opcode bits, a few enums, a configuration word),
-so unlike Korz in general, the whole dispatch can be resolved ahead of time into the arrays a fast
-emulator would use anyway, and then compiled to JavaScript. The order of work:
+The Onward! 2014 paper defines a dimension as a partial order of coordinates, written `≤`. A
+coordinate is whatever that order contains: an object, a person, `true`. A guard says "this
+coordinate or anything more specific," or it names the coordinate and binds it, or it leaves the
+dimension alone. A send searches for the unique most specific slot. Ambiguity is an error when the
+send happens. Nothing in that account says a coordinate is an integer, that a domain is finite, or
+that the answer is an index into a table.
+
+This stack makes a narrower choice, so the sea can be compiled. Every dimension here is the
+integers `0 .. 2^width − 1`. A guard is a bitset over that range: one number, a named enum member,
+a mask, a span, or a union of those. Specificity is set inclusion. Because every context is a
+point in a finite product of those ranges, the resolver can number the points and store the chain
+at that index, and the compiler can paste the chain into a function. Install-time ambiguity and
+ahead-of-time tables follow from that choice. They are available here because the emulator's
+coordinates really are small integers: 16 address bits, 8 opcode bits, a few enums, a
+configuration word. An object or a float would keep the paper's order.
+[Objects, floats, and other orders](#objects-floats-and-other-orders) says how. The order of work:
 
 1. **An interpreter.** Linear search over the sea, the specificity rule, the ambiguity check. Slow
    and obviously right. It stays as the oracle and as the engine behind `why`.
@@ -43,11 +60,55 @@ slots**, always written that way, in prose and in code (`expansionSlots[6]`, a p
 machines. microM8's eight "VM slots" and its identifiers (`SlotCard`, `SW_SLOTC3ROM`) are named only
 when describing microM8.
 
+**Names.** The Korz machines are sibling directories: [`src/korz/pdp-7`](src/korz/pdp-7/) and
+[`src/korz/apple2`](src/korz/apple2/). `apple2` is the ][ and the //e. `apple1` is later, for
+the historical machine. The running PDP-7 is still [`pdp7.ts`](src/korz/pdp7.ts),
+[`compile7.ts`](src/korz/compile7.ts), and [`plugins/pdp7.ts`](src/plugins/pdp7.ts); those files
+move into `pdp-7` when a change touches them. [`src/apple2/`](src/apple2/) stays the disk and world
+layer the wasm Apple already uses.
+
+## Domain kits
+
+`korz.ts` is the sea. It guards, scores specificity, layers, and resolves. It does not know a
+CPU, a device, a cell, or a tape. A domain is a kit beside it: dimensions, selectors, the slot
+patterns that domain uses, and the step loop that domain needs. Kits do not import each other.
+A cabinet composes them. An Apple is a CPU kit plus device slots. A CAM-6 is the automata kit
+alone. A Turing machine can be a device on the PDP-7 or a machine of its own, and both are the
+same slots.
+
+- **cpu**, [`src/korz/cpu.ts`](src/korz/cpu.ts). The host every CPU was about to copy out of
+  `KorzPdp7`: one sea, the rung (`interpret`, `resolve`, or `compile`), and one reused context
+  per nesting. What the host owns, what a CPU file owns, how the rungs swap, and how a second
+  instruction set stacks on the first are [KORZ-CPU.md](KORZ-CPU.md). `compile7.ts` and
+  `compile65.ts` are the two compilers. Slots reach their machine as `c.cpu`.
+- **device**, [`src/korz/device.ts`](src/korz/device.ts). A device that has slots installs them.
+  Any other device gets one slot per code that calls the function it already has. A patch-layer
+  slot per code answers while power is off, and calls `next` while power is on, so `why` on a
+  dead code names the switch. Power is read when the slot runs. The kit does not know a pulse
+  protocol. [`iop.ts`](src/korz/iop.ts) is the PDP-7's: `timed`, `gate`, `skipIf`, and `decode`.
+  `backplaneSlots` is that protocol plugged into the kit, including the unclaimed-code slot and
+  CAF.
+- **cellular automata**, [`src/korz/ca.ts`](src/korz/ca.ts). Dimensions are the center, the eight
+  neighbor bits, and a count derived from those bits. The stepper fills the count when it builds
+  the context. Life is B3/S23, one slot for a birth, one for a survival, and a default that leaves
+  the cell dead. The resolver's `cell` table is the rule table. A rule that cares which neighbor
+  is alive guards a bit of `nb` and wins over a rule that only counted.
+- **turing**, [`src/korz/tm.ts`](src/korz/tm.ts). Dimensions are state and symbol. `door` returns
+  the transition word. `emit` is a second selector over the same two dimensions, and 0 is silent.
+  The default door is no transition. `TmTape` steps an unbounded tape. `tabulate` writes the words
+  the PDP-7 engine reads, one per (state, symbol), in the engine's layout. The engine in
+  [`plugins/turing.ts`](src/plugins/turing.ts) is still the device on IOT 054. Its IOTs are the
+  device kit. Its table can now be this sea.
+
+A bitmask scored per bit, for asserts, logging, and bounds, would be a kit any of these can add.
+It is a dimension the interpreter understands as bits. It is not built yet.
+
 ## The model
 
-- A **dimension** is a named coordinate with a finite domain: `addr` (0–`$FFFF`), `access` (read,
-  write, fetch), `who` (cpu, video, dma, debugger), `op` (0–255), `machine`, `variant`, the fields of
-  the configuration word, and `value` (the byte on the bus).
+- A **dimension**, in this stack, is a named coordinate over `0 .. 2^width − 1`: `addr` (0–`$FFFF`),
+  `access` (read, write, fetch), `who` (cpu, video, dma, debugger), `op` (0–255), `machine`,
+  `variant`, the fields of the configuration word, and `value` (the byte on the bus). The paper's
+  dimension is a partial order, and a coordinate there need not be one of these integers.
 - A **context** is a point: one value for every dimension. An emulator always knows every
   coordinate of an access, so contexts are complete. Korz's bare-name guard stance ("present, any
   value") is the same as unmentioned here.
@@ -96,6 +157,51 @@ by page, and full or empty pages short-circuit. The worst case, a mask that igno
 A configuration guard is a single cube, not a union. Inclusion of cubes is a field comparison, while
 inclusion of unions of cubes is a satisfiability problem. A slot that needs two configurations is two
 slots.
+
+### Objects, floats, and other orders
+
+The integer range is how this stack gets lookup tables, caches, indexes, masks and spans. It is
+the shape of a bus. It is not the shape of every coordinate worth dispatching on.
+
+Three kinds of value already fit, because their order is the integer order and the names are only
+labels on the numbers:
+
+- A boolean is one bit.
+- A small closed set of names is an enum. The name's position is the number, and the context holds
+  the number.
+- An open set of names, such as Zork's verbs, is interned: a table from each string to a number,
+  the same trick the resolver uses for chains. Interning picks out particular values. It does not
+  give the names an order of their own.
+
+An object and a float stay what they are. Stuffing either into `0 .. 2^width − 1` would invent an
+order they do not have, and a guard written against that number would mean something else.
+
+**An object** is a coordinate whose order is the paper's. A guard matches that object, or anything
+more specific than it. "More specific" is the relation declared for that dimension: delegation
+along a prototype chain, or "this person, or anyone acting for them." The test walks the relation.
+Two objects that are not ordered against each other are incomparable, and a send that matches two
+such slots is ambiguous. That is the paper's rule, and it is a search, not a bit test.
+
+**A float** is a coordinate on the number line, and `≤` is numeric. A guard is a threshold or a
+range, such as `isKnown ≥ 0.8`, the graded presence in the moollm notes. The domain is infinite,
+so it is never enumerated and never a bitset. When every installed guard on that dimension is a
+threshold, the cut points are finite and the float falls into one bucket between them. The bucket
+is an integer, and that integer can index a table. The bucket is a cache of the thresholds
+currently installed. It is not the meaning of the coordinate. A guard that is not a threshold
+stays a test.
+
+**How the two would share a selector.** A selector whose dimensions are all integers keeps the
+tables it has now. A dimension whose order is objects or floats is residual: the integer
+dimensions still pick a chain, and the chain's first step tests the object or the float, the way
+a watch on `value` is already a short test in front of a slot the address table could not absorb.
+A selector with no integer dimensions has no table. The interpreter's search is the
+implementation, which is what `korz.ts` already is for the integer sea, and what the paper's send
+always was.
+
+None of this is in [`src/korz/korz.ts`](src/korz/korz.ts). `Dim` is a width. The machines this
+package is building have integer coordinates, and the integer sea stays their oracle. Object and
+float dimensions are the extension for a sea whose coordinates are not bus bits: a purpose, a
+person, a graded `isKnown`.
 
 ### Specificity
 
@@ -395,7 +501,10 @@ when the context is built, they have finite domains, and the resolver tabulates 
 
 So one dispatcher serves both. A CA rule sea, resolved with the neighbor bits as table dimensions
 and nothing left over, is a CAM-6 rule table; `CAM6.js` is its oracle the way microM8 is the
-Apple's. The cabinet's cell renderer and a CAM-6 profile
+Apple's. Life is that sea in [`src/korz/ca.ts`](src/korz/ca.ts): B3/S23 on every center and every
+neighbor count, a blinker, and a still block, with the interpreter and the resolver agreeing.
+A byte-for-byte compare with `CAM6.js`'s `ruleTableBytes` waits on a rule written in CAM-6's
+neighborhood encoding. The cabinet's cell renderer and a CAM-6 profile
 ([TODO.md](TODO.md)) get rules from the same place the Apple gets its soft switches.
 
 ## The PDP-7 first
@@ -680,7 +789,9 @@ or the AC as it was before IOP2.
 
 The backplane adds one patch-layer slot per device code that answers with `offIot` while the device
 is off, so `why` on a dead IOT names the power switch. A device without `korzSlots` gets one slot
-per code that calls `iot()`; none in the cabinet needs it now.
+per code that calls `iot()`; none in the cabinet needs it now. Both come from the device kit
+([`src/korz/device.ts`](src/korz/device.ts)). `backplaneSlots` passes the IOT request and reply,
+the unclaimed-code slot, and CAF. [`iop.ts`](src/korz/iop.ts) stays the pulse protocol.
 
 Each device keeps `iot()` as the oracle. [`src/korz/devices.test.ts`](src/korz/devices.test.ts) runs
 a `Pdp7` cabinet and a `KorzPdp7` cabinet in lockstep, comparing registers every step and
@@ -747,7 +858,9 @@ follow from the slots, not from extra code:
 - The edge and light-pen flags are what make SYMELEC interactive. A patch slot on `{ mode: "point" }`
   can inject a pen hit at a chosen point, so a test drives the pen menus without a mouse.
 - The compiler can compile a display file that does not change into one function that emits its
-  segments.
+  segments. That is the display's own `emit`, the CPU kit's stacking rule
+  ([KORZ-CPU.md](KORZ-CPU.md#stacking-instruction-sets)). The PDP-7 compiler does not do it today:
+  a 340 IOT becomes a call to `m.go.iot` with the device and the pulse filled in.
 
 ### Showcase: the Turing machine
 
@@ -758,7 +871,9 @@ transition table out of PDP-7 core: one word per (state, symbol), `[move:2][writ
 running, read, resume), mode (single step, set the mode, stop) and the last emitted character. On
 the `iop` selector that is a `sub` dimension beside `device` and `iop`, and ten slots.
 
-The table itself is where Korz fits best. This part is planned; the engine runs tables written as words today. A transition table is a rule table, like CAM-6's: a
+The table itself is where Korz fits best. The engine still runs tables written as words. The sea
+that writes those words, and that steps the tape itself, is [`src/korz/tm.ts`](src/korz/tm.ts).
+A transition table is a rule table, like CAM-6's: a
 function of a few small fields, stored as its graph. Written by hand it is a grid of words with
 holes; written as a sea it is a few rules with defaults, and the resolver writes the grid. A binary
 incrementer, with the head starting on the number's first digit:
@@ -782,8 +897,9 @@ for (let q = 0; q < 3; q += 1)
     cpu.write(TABLE + q * NSYM + s, tm.dispatch("door", { state: q, sym: s }));
 ```
 
-The loop is the resolver by hand: it tabulates the sea into the words the engine reads, exactly as
-`compileRule` fills CAM-6's table. State 0's row comes out zero, which the engine reads as halt.
+The loop is `TmSea.tabulate`: the same sea, written into the words the engine reads, exactly as
+`compileRule` fills CAM-6's table. `binaryIncrementer()` is this sea, and `TmTape` runs it with no
+PDP-7 in the room: `"1"` becomes `"10"`, `"11"` becomes `"100"`. State 0's row comes out zero, which the engine reads as halt.
 Rules with a wildcard symbol ("in state 1, any digit") cannot be written in the table, which has one
 word per pair; in the sea they are one slot each, and the more specific slot for the blank overrides
 them without an `if`. An `emit` selector over the same two dimensions fills the emit table: one
@@ -812,17 +928,24 @@ word in core.
    DataHand), in lockstep against their `iot()` methods
    ([`src/korz/iop.ts`](src/korz/iop.ts), [`src/korz/devices.test.ts`](src/korz/devices.test.ts)).
    **Built:** the 340's own instruction set as slots, against `Type340`'s switch
-   ([`src/korz/type340.ts`](src/korz/type340.ts)). Not yet: the Turing engine's tables and the Forth
-   device's primitives as slots, and device memory traffic as `who: device`.
+   ([`src/korz/type340.ts`](src/korz/type340.ts)). **Built:** domain kits on the one sea
+   ([domain kits](#domain-kits)): the CPU host, the device adapter, Life, and the Turing rule sea,
+   which steps a tape and tabulates the words the engine reads
+   ([`src/korz/domains.test.ts`](src/korz/domains.test.ts)). The engine still fetches those words
+   from core. Not yet: the Forth device's primitives as slots, and device memory traffic as
+   `who: device`.
 4. **Built.** The resolver on the PDP-7: per-selector tables, 34 M steps per second on UNIX with
    the devices on the IOP bus and event-driven.
-5. Page-set normal forms with the brute-force tests; the Apple bus on the interpreter, against
-   microM8 ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2).
-6. The resolver for the Apple: table sets, page kinds, interned chains, the opcode table,
+5. Page-set normal forms with the brute-force tests; the apple2 bus on the interpreter, against
+   microM8 ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2), in [`src/korz/apple2`](src/korz/apple2/).
+6. The resolver for apple2: table sets, page kinds, interned chains, the opcode table,
    invalidation.
 7. Standard slots, and compiled page dispatch.
 8. Compiled blocks: **built** for the PDP-7, with per-word invalidation
-   ([KORZ-COMPILER.md](KORZ-COMPILER.md)); then 6502 (microM8 plan step 14).
+   ([KORZ-COMPILER.md](KORZ-COMPILER.md)). **Built** for the 6502 as straight-line blocks that call
+   the switch for everything else ([`src/korz/compile65.ts`](src/korz/compile65.ts)). Not yet: a
+   fetch slot whose `emit` continues the block through a second instruction set
+   ([KORZ-CPU.md](KORZ-CPU.md#stacking-instruction-sets)).
 
 Each step is done when it agrees with the step before it on every test, and its speed and table
 counts are written down.

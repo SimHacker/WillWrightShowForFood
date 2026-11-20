@@ -17,7 +17,7 @@
 	"scripts": {
 		"build": "tsc -p tsconfig.json",
 		"bench:korz": "tsc -p tsconfig.json && node scripts/korz-bench.mjs",
-		"test": "tsc -p tsconfig.json && node --test dist/*.test.js dist/apple2/*.test.js dist/c64/*.test.js dist/microm8/*.test.js dist/korz/*.test.js"
+		"test": "tsc -p tsconfig.json && node --test dist/*.test.js dist/apple2/*.test.js dist/c64/*.test.js dist/m6502/*.test.js dist/microm8/*.test.js dist/korz/*.test.js dist/korz/apple2/*.test.js dist/save/*.test.js"
 	},
 	"dependencies": {
 		"@wwsff/bridge": "workspace:*",

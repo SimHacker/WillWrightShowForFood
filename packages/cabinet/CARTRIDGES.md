@@ -15,6 +15,14 @@ is one way to run it. The two are kept separate so that the same cartridge can r
 in SIMH, in microM8 natively or compiled to WebAssembly, or in an emulator nobody has written yet,
 and so that it outlives any of them.
 
+## A cartridge boots from empty
+
+A cartridge says what a program requires and how that maps onto a cabinet. It does not list the devices. Those are installed once on the cabinet, from `devices/` and `cpus/`. UNIX requires a paper-tape reader and an RB09. Forth requires a teletype and a 340. The same PDP-7 cabinet satisfies both. The cartridge's build and boot steps bring the installed devices from empty to the program's initial state: assemble, read in a tape, mount the platter it names. That initial state is computed. The cartridge does not carry a machine image.
+
+The image of a run is a snapshot ([SAVE-FILES.md](SAVE-FILES.md)). Reset throws the cabinet's state away and boots the cartridge again. That is the robust-first path, in Dave Ackley's sense ([ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md)). One cartridge has as many snapshots as there are saved runs, each with its own state. A snapshot names the cabinet and the cartridge it requires, and may override either, as any selfish object may. The cartridge does not contain the snapshots.
+
+The running state, the player state, belongs to the cabinet while that cartridge is inserted. The SNAPSHOTS tab lists the snapshots of the cartridge that is selected, and creates, renames, and deletes them by name, slug, and time.
+
 - **The model: the Internet Archive.** Its software library already has three layers: the
   content is an archive item (a disk or tape image), the emulators are separate (MAME, DOSBox and
   others compiled for the browser, started by the Emularity loader), and a few metadata fields on
@@ -69,8 +77,10 @@ Every cartridge in `cabinet-programs.js` already does one of the things below by
 
 ## 1. A cartridge is a directory
 
+Cartridges live in `cartridges/`, one directory per cartridge. That plural is the array of cartridges, the same layout as `cabinets/`, `devices/` and `cpus/` in [SAVE-FILES.md](SAVE-FILES.md#the-layout).
+
 ```
-tapes/forth-flowers/
+cartridges/forth-flowers/
   cartridge.yml        what it is, what it carries, how to build it
   flowers.fs           its own files, any kind
   README.md            the help article; HyperTIES renders it beside the machine

@@ -8,6 +8,17 @@ export type TeletypeOpts = {
 	onPrint?: (char: number) => void;
 };
 
+export type TeletypeState = {
+	kbdFlag: boolean;
+	kbdBuf: number;
+	ttoFlag: boolean;
+	printing: number;
+	printBuf: number;
+	pending: number[];
+	output: number[];
+	printCycles: number;
+};
+
 /**
  * Keyboard (device 03: KSF 700301, KRB 700312) and teleprinter
  * (device 04: TSF 700401, TCF 700402, TLS 700406) as one box, the KSR-33.
@@ -119,6 +130,33 @@ export class Teletype implements Device, KorzDevice {
 		this.kbdFlag = false;
 		this.ttoFlag = false;
 		this.printing = -1;
+	}
+
+	/** The paper and the keys still waiting are part of the device. `printCycles` is how it was built. */
+	capture(): TeletypeState {
+		return {
+			kbdFlag: this.kbdFlag,
+			kbdBuf: this.kbdBuf,
+			ttoFlag: this.ttoFlag,
+			printing: this.printing,
+			printBuf: this.printBuf,
+			pending: this.pending.slice(),
+			output: this.output.slice(),
+			printCycles: this.printCycles,
+		};
+	}
+
+	restore(s: TeletypeState): void {
+		if (s.printCycles !== this.printCycles) {
+			throw new Error(`teletype print time is ${s.printCycles}, this one is ${this.printCycles}`);
+		}
+		this.kbdFlag = s.kbdFlag;
+		this.kbdBuf = s.kbdBuf;
+		this.ttoFlag = s.ttoFlag;
+		this.printing = s.printing;
+		this.printBuf = s.printBuf;
+		this.pending = s.pending.slice();
+		this.output = s.output.slice();
 	}
 
 	/** Printed output as a string (7-bit, high bit stripped). */

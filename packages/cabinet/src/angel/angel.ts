@@ -23,7 +23,8 @@ import { type Picture, decodePng } from "./png.js";
  *     auto            a move the angel makes for you when it enters the state
  *     ask             a field the page asks for instead of the machine: its value is typed in
  *     lock            the machine's keyboard is off, so typing goes to the page
- *     speed           the machine's speed from entering the state on: 4 to wait out a cutscene
+ *     speed           the machine's speed from entering the state on, on the oracle
+ *     frames          pictures per game second while this state is a fast-forward
  */
 
 /** A look matches exactly unless it says how fuzzy it may be. */
@@ -70,6 +71,8 @@ export interface StateSpec {
 	lock?: boolean;
 	/** The machine's speed on entering the state, as its speed buttons set it; kept after. */
 	speed?: number;
+	/** Pictures per game second during a fast-forward. One finishes the stretch soonest. */
+	frames?: number;
 }
 
 export interface AngelSpec {

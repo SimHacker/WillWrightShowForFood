@@ -125,6 +125,8 @@ states:
     when: house
     from: [loading, flip, name, signing, date, first-visit]
     speed: 4
+    # One picture per game second. The wait runs on the rung that finishes it soonest.
+    frames: 1
     speak: He is moving in. Running fast until he is home.
     say: >-
       He is moving in. The game ignores the keyboard until he has, so there is nothing to do

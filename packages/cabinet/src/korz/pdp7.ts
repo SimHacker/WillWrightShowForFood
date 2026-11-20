@@ -2,8 +2,10 @@ import type { Backplane, Clock, Device, Iot, Step } from "../bus.js";
 import { incr, Pdp7, type Pdp7Opts } from "../plugins/pdp7.js";
 import { maskWord } from "../word.js";
 import { Compiler7, T7 } from "./compile7.js";
+import { CpuHost } from "./cpu.js";
+import { deviceSlots, type Unit } from "./device.js";
 import { type Iop, type IopBus, isKorzDevice } from "./iop.js";
-import { type Dim, type Dispatchers, Sea, span, type SlotSpec, type WhyLine } from "./korz.js";
+import { type Dim, type Dispatchers, type Sea, span, type SlotSpec, type WhyLine } from "./korz.js";
 
 /**
  * The PDP-7 as a sea of slots (KORZ-DISPATCH.md, step 1). Registers and the EAE's arithmetic come
@@ -83,14 +85,16 @@ const k7 = (cpu: KorzPdp7): K7 => ({ cpu, op: 0, ind: 0, skp: 0, cc: 0, rot: 0, 
  * DESIGN.md, "Placement: what can run where".
  */
 export class KorzPdp7 extends Pdp7 implements IopBus {
-	readonly sea = new Sea<K7>(PDP7_DIMS);
+	/** The sea, the rung, and one context per nesting. The instruction set stays in this file. */
+	readonly host: CpuHost<K7, Selector, "ix" | "mem" | "io">;
+	readonly sea: Sea<K7>;
 	/** Instructions, memory and IOTs nest, so each gets its own context. */
-	private readonly ix = k7(this);
-	private readonly mem = k7(this);
-	private readonly io = k7(this);
+	private readonly ix: K7;
+	private readonly mem: K7;
+	private readonly io: K7;
 	private pendingIot: Iot | null = null;
 	private box: Backplane | null = null;
-	private readonly go = {} as Dispatchers<K7, Selector>;
+	private readonly go: Dispatchers<K7, Selector>;
 	private readonly coreMask = this.coreWords - 1;
 	/** With `korz: "compile"`. */
 	compiler: Compiler7 | null = null;
@@ -100,9 +104,20 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
 
 	constructor(opts: KorzPdp7Opts = {}) {
 		super(opts);
-		this.sea.install(KorzPdp7.SLOTS);
-		if (opts.korz === "interpret") for (const s of SELECTORS) this.go[s] = (c) => this.sea.dispatch(s, c);
-		else this.sea.bind(this.go, SELECTORS);
+		const host = new CpuHost<K7, Selector, "ix" | "mem" | "io">({
+			dims: PDP7_DIMS,
+			selectors: SELECTORS,
+			slots: KorzPdp7.SLOTS,
+			context: () => k7(this),
+			nests: ["ix", "mem", "io"],
+			rung: opts.korz ?? "resolve",
+		});
+		this.host = host;
+		this.sea = host.sea;
+		this.ix = host.nest.ix;
+		this.mem = host.nest.mem;
+		this.io = host.nest.io;
+		this.go = host.go;
 		if (opts.korz === "compile") {
 			const once = KorzPdp7.prototype.step;
 			const j = new Compiler7(this, () => once.call(this), { read: KorzPdp7.prototype.read, write: KorzPdp7.prototype.write });
@@ -408,29 +423,40 @@ export class KorzPdp7 extends Pdp7 implements IopBus {
  * flag; a device with `korzSlots` installs them, and any other device answers through `iot()`. A
  * patch-layer slot per device code answers with `offIot` while the device's power is off.
  */
+const iotRequest = (c: K7): Iot => ({ device: c.device, pulse: c.pulse, ac: c.ac });
+const iotReply = (c: K7, reply: { ac: number; skip?: boolean }): void => {
+	c.ac = reply.ac;
+	if (reply.skip) c.skip = 1;
+};
+
+/** One backplane device as a unit of the device kit. Power is read when the slot runs. */
+function unitOf(d: Device): Unit<K7, IopBus, Iot, { ac: number; skip?: boolean }> {
+	const unit: Unit<K7, IopBus, Iot, { ac: number; skip?: boolean }> = {
+		name: d.name,
+		codes: d.iots,
+		get power() { return d.power; },
+		call: (req) => d.iot(req),
+		off: (req) => d.offIot?.(req) ?? { ac: req.ac },
+	};
+	if (isKorzDevice(d)) unit.slots = (bus) => d.korzSlots(bus);
+	return unit;
+}
+
 export function backplaneSlots(cpu: KorzPdp7, box: Backplane): SlotSpec<K7>[] {
-	const call = (d: Device) => (c: K7): void => {
-		const reply = d.iot({ device: c.device, pulse: c.pulse, ac: c.ac });
-		c.ac = reply.ac;
-		if (reply.skip) c.skip = 1;
-	};
-	const off = (d: Device) => (c: K7, next: () => number): number | void => {
-		if (d.power !== false) return next();
-		const reply = d.offIot?.({ device: c.device, pulse: c.pulse, ac: c.ac }) ?? { ac: c.ac };
-		c.ac = reply.ac;
-		if (reply.skip) c.skip = 1;
-	};
-	return [
-		{ selector: "iot", by: "backplane: unclaimed IOTs do nothing", run: () => {} },
-		{ selector: "iop", by: "backplane: no gate answers this pulse", run: () => {} },
-		{ selector: "iot", guard: { device: 0o33, pulse: 0o02 }, by: "backplane: CAF clears every flag",
-			run: () => box.resetDevices() },
-		...box.devices.flatMap((d): SlotSpec<K7>[] => [
-			...d.iots.map((device): SlotSpec<K7> =>
-				({ selector: "iot", guard: { device }, layer: "patch", by: `power: ${d.name} off`, run: off(d) })),
-			...(isKorzDevice(d)
-				? d.korzSlots(cpu)
-				: d.iots.map((device): SlotSpec<K7> => ({ selector: "iot", guard: { device }, by: `device ${d.name}: iot()`, run: call(d) }))),
-		]),
-	];
+	return deviceSlots({
+		selector: "iot",
+		code: "device",
+		bus: cpu,
+		units: box.devices.map(unitOf),
+		request: iotRequest,
+		reply: iotReply,
+		silent: (c) => ({ ac: c.ac }),
+		plainBy: (name) => `device ${name}: iot()`,
+		busSlots: [
+			{ selector: "iot", by: "backplane: unclaimed IOTs do nothing", run: () => {} },
+			{ selector: "iop", by: "backplane: no gate answers this pulse", run: () => {} },
+			{ selector: "iot", guard: { device: 0o33, pulse: 0o02 }, by: "backplane: CAF clears every flag",
+				run: () => box.resetDevices() },
+		],
+	});
 }

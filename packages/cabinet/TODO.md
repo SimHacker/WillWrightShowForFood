@@ -58,6 +58,38 @@ to 32K.
 Done: **the Apple ][ in the cabinet**, microM8 compiled to WebAssembly and running in the page
 ([MICROM8.md](MICROM8.md)), good enough for now. ROADMAP §13's mash-ups have a machine.
 
+- **Character ROMs are media, and a burner writes them.** An EEPROM is a medium the way a floppy
+  is ([SAVE-FILES.md](SAVE-FILES.md)): the burner is a reader/writer, the chip is what it writes,
+  and a socket is where that chip plugs in. Two sockets on the ][+, and they are not the same
+  part. The motherboard character generator is 40×24, a 7×8 cell on the 560×192 raster, 64
+  glyphs, one byte per scan line, the low 7 bits, bit 0 at the left. The Videx Videoterm is
+  80×24, its own 6845 timing, 9 dots by 9 lines (720×216), 128 glyphs of 16 bytes, bit 7 at the
+  left ([reference/apple2/videx/SPEC.md](reference/apple2/videx/SPEC.md)). A font burned for one
+  socket does not drop into the other; the medium names the socket and the geometry. The source
+  the burner reads is a hires character-generator font on a virtual floppy, the same industry of
+  fonts people already have on disk. The //e 80-column card is later.
+
+- **][+ devices and accelerators still to build.** The motherboard, the language card, and the Disk II
+  sector path are already in. The rest, in the order they earn their place
+  ([microm8/STACK.md](microm8/STACK.md)):
+  - **Character ROMs**, both sockets, as media. The burner reads a hires font off a floppy and
+    writes the EEPROM.
+  - **Videx Videoterm**, slot 3. The 6845, 2K of screen RAM, and its own character ROM.
+  - **Saturn 128K**, slot 0. The language card, eight times. The Legend S'Card is the same kind of
+    card; its bank switches wait for the manual.
+  - **Serial.** The 2651 card we already wrote for microM8, then the Super Serial Card's 6551.
+  - **A hard disk**, as a ProDOS block device. The blocks are the medium. The card is registers
+    or a firmware entry, not a //e part.
+  - **Audio.** The speaker's clicks become samples. A Mockingboard is the later card, a 6522 and
+    an AY-3-8910.
+  - **Accelerators**, a fetch in place of a routine, declining when the bytes have changed or a
+    breakpoint sits inside ([microm8/STACK.md](microm8/STACK.md#accelerators-typescript-in-place-of-a-6502-routine)).
+    `WAIT` at `$FCA8`, then `MOVE` at `$FE2C`, the memory blit. DOS 3.3 RWTS at `$BD00`: a read
+    or a write is a blit of the sector, and the cycle count is what the 6502 routine would have
+    spent. The Disk II sequencer still runs when RWTS declines. ProDOS block calls are that same
+    blit for the hard disk. After those, Applesoft's floating point and its garbage collector,
+    the hires line and fill, and a game's own inner loop installed by its cartridge.
+
 ## Could
 
 - **Longer term: expose more of microM8's Go to the TypeScript wrapper**, as patches on our branch: its memory

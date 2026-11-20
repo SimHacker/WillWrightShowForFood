@@ -52,6 +52,14 @@ export class EchoPort implements TitanPort {
 	disconnect(): void {
 		this.disconnected = true;
 	}
+	capture(): EchoPortState {
+		return { kind: "echo", queue: this.queue.slice(), controls: this.controls.slice(), disconnected: this.disconnected };
+	}
+	restore(s: EchoPortState): void {
+		this.queue = s.queue.slice();
+		this.controls = s.controls.slice();
+		this.disconnected = s.disconnected;
+	}
 }
 
 /**
@@ -126,7 +134,57 @@ export class BlockletHost implements TitanPort {
 	disconnect(): void {
 		this.disconnected = true;
 	}
+
+	capture(): BlockletState {
+		return {
+			kind: "blocklet",
+			counts: this.counts.slice(),
+			controls: this.controls.slice(),
+			blocklets: this.blocklets.map((b) => b.slice()),
+			disconnected: this.disconnected,
+			out: this.out.slice(),
+			expect: this.expect,
+			cks: this.cks,
+			blocklet: this.blocklet,
+		};
+	}
+
+	restore(s: BlockletState): void {
+		if (s.counts.length !== this.counts.length || s.counts.some((n, i) => n !== this.counts[i])) {
+			throw new Error("blocklet counts differ");
+		}
+		this.controls = s.controls.slice();
+		this.blocklets = s.blocklets.map((b) => b.slice());
+		this.disconnected = s.disconnected;
+		this.out = s.out.slice();
+		this.expect = s.expect;
+		this.cks = s.cks;
+		this.blocklet = s.blocklet;
+	}
 }
+
+export type EchoPortState = { kind: "echo"; queue: number[]; controls: number[]; disconnected: boolean };
+
+export type BlockletState = {
+	kind: "blocklet";
+	counts: number[];
+	controls: number[];
+	blocklets: number[][];
+	disconnected: boolean;
+	out: number[];
+	expect: number;
+	cks: number;
+	blocklet: number;
+};
+
+export type TinyTitanPortState = { kind: "none" } | EchoPortState | BlockletState;
+
+/** A paused link. The queued words and the running checksum are what the next LRB18 reads. */
+export type TinyTitanState = {
+	flag: boolean;
+	enabled: boolean;
+	port: TinyTitanPortState;
+};
 
 export type TinyTitanOpts = {
 	/** No port = the rung-1 stub: LSF always skips, nothing wedges. */
@@ -171,6 +229,37 @@ export class TinyTitan implements Device, KorzDevice {
 
 	constructor(opts: TinyTitanOpts = {}) {
 		this.port = opts.port;
+	}
+
+	capture(): TinyTitanState {
+		return { flag: this.flag, enabled: this.enabled, port: this.portState() };
+	}
+
+	restore(s: TinyTitanState): void {
+		this.restorePort(s.port);
+		this.flag = s.flag;
+		this.enabled = s.enabled;
+	}
+
+	private portState(): TinyTitanPortState {
+		if (!this.port) return { kind: "none" };
+		if (this.port instanceof EchoPort) return this.port.capture();
+		if (this.port instanceof BlockletHost) return this.port.capture();
+		throw new Error("no snapshot for this titan port");
+	}
+
+	private restorePort(s: TinyTitanPortState): void {
+		if (s.kind === "none") {
+			if (this.port) throw new Error("tiny-titan port differs");
+			return;
+		}
+		if (s.kind === "echo") {
+			if (!(this.port instanceof EchoPort)) throw new Error("tiny-titan port differs");
+			this.port.restore(s);
+			return;
+		}
+		if (!(this.port instanceof BlockletHost)) throw new Error("tiny-titan port differs");
+		this.port.restore(s);
 	}
 
 	private linkReady(): boolean {

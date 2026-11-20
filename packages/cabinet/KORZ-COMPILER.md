@@ -179,8 +179,26 @@ compiler can treat it as a block:
   (PLDI 1998); Ertl and Gregg's dynamic superinstructions.
 
 It waits on a measurement, like everything in this section: in ULTIMATE-HAND, NEXT leaving its
-block once per Forth word is the cost to measure first. The same slot shape covers Sweet 16 on
-the Apple ][: its opcodes as slots, installed by whoever enters it.
+block once per Forth word is the cost to measure first. SWEET16 and the other stacked instruction
+sets are the same shape on another processor. The rule is the CPU kit's
+([KORZ-CPU.md](KORZ-CPU.md#stacking-instruction-sets)).
+
+## Stacking, on the PDP-7
+
+The cross-processor rule, and the Apple layers that use it, are in
+[KORZ-CPU.md](KORZ-CPU.md#stacking-instruction-sets). What this compiler does today:
+
+- An IOT is compiled with `device` and `pulse` as constants, then `m.go.iot`. The 340's gates, the
+  DataHand's and the Turing engine's are that call. The template does not contain a vector, a hand
+  sample, or a tape step. On the Turing engine a unit is due every three cycles, so a compiled
+  batch is three instructions long and the compiler ties the switch, at about 70 ns
+  ([KORZ-MACHINES.md](KORZ-MACHINES.md)). The device is the work.
+- Forth's NEXT is `XCT I 10`. It compiles the one word it finds and checks the word before running
+  it ([XCT](#xct)). An XCT of an XCT goes through `execute`. A colon definition does not become one
+  fused block. The Forth device runs one thread cell per fetch of NEXT and is not inlined. The
+  thread slot above is how it would be.
+- The 340's display words are their own sea ([`src/korz/type340.ts`](src/korz/type340.ts)),
+  lockstepped against `Type340`. This compiler does not fuse them into a PDP-7 block.
 
 **A second target: threaded code in core.** Also planned. A slot could carry a thread template
 beside its JavaScript one, saying what cells to emit (`JMP` to a primitive, `LAC` for a constant,

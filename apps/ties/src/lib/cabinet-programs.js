@@ -342,7 +342,8 @@ export const PROGRAMS = [
 		},
 		status(cpu) {
 			return `${cpu.read(0o5641) & 0o1777},${cpu.read(0o5640) & 0o1777}`;
-		}
+		},
+		statusTitle: 'Light pen crosshair, X then Y, from SYMELEC’s own XCROSS and YCROSS. Each number is the low 10 bits of that word.'
 	},
 	{
 		id: 'lp370',
@@ -367,7 +368,8 @@ export const PROGRAMS = [
 		status(cpu) {
 			const v = (n) => cpu.read(lp370Program.symbols.get(n));
 			return `${octal(v('xpt'))},${octal(v('ypt'))} seen ${v('lpct')}`;
-		}
+		},
+		statusTitle: 'Light pen position, X then Y in octal, then how many times the pen has been seen.'
 	},
 	{
 		id: 'duel',
@@ -453,7 +455,8 @@ export const PROGRAMS = [
 		},
 		status(cpu) {
 			return `guesses ${cpu.read(hiloProgram.symbols.get('tries'))}`;
-		}
+		},
+		statusTitle: 'Guesses so far, the program’s own tries counter.'
 	},
 	{
 		id: 'lander',
@@ -485,7 +488,8 @@ export const PROGRAMS = [
 				return w & 0o400000 ? w - 0o1000000 : w;
 			};
 			return `alt ${v('h2') / 2} vel ${v('v')} fuel ${v('fuel')}`;
-		}
+		},
+		statusTitle: 'Altitude, velocity, and fuel left, read from the program’s own variables.'
 	},
 	forthProgram({ id: 'forth', label: 'Forth + Turtle (2026)', kernelFile: 'kernel-names-full.s' }),
 	forthProgram({

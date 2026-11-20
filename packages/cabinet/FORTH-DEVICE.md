@@ -28,6 +28,10 @@ and each primitive's code are), and it watches two instruction fetches:
   under it) rebuilds it from the headers in core. A hit is checked against its header in core
   before it's believed.
 
+The compiler's view of this device, and of stacking another instruction set on top of it, is
+[KORZ-CPU.md](KORZ-CPU.md#stacking-instruction-sets). What is built here is one cell per
+fetch of NEXT. The inlined thread block is not.
+
 It declines, and the CPU runs Mitch's code, whenever the code isn't what it expects: NEXT patched
 (as `interrupt.fs` patches it), extend mode on, a cell it doesn't know, a divide by zero, an
 interrupt waiting. So a program never has to know the device is there, and the device needs no

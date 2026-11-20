@@ -31,6 +31,19 @@ export type Rb09Opts = {
 	writeLock?: number;
 };
 
+export type Rb09State = {
+	sta: number;
+	da: number;
+	ma: number;
+	wc: number;
+	due: number;
+	now: number;
+	dirty: boolean;
+	writeLock: number;
+	wordCycles: number;
+	image: Uint32Array | null;
+};
+
 /**
  * RB09, the Burroughs fixed-head disk on the Bell Labs PDP-7 that UNIX was
  * written on: 200 tracks of 80 sectors of 64 words, addressed in BCD, device
@@ -148,6 +161,44 @@ export class Rb09 implements KorzDevice {
 		this.wc = 0;
 		this.due = -1;
 		this.update(0);
+	}
+
+	/**
+	 * The wait before a burst. The whole block moves in one tick when `due` arrives, so a snapshot
+	 * keeps the addresses and the word count of the block still pending. `wordCycles` is how this
+	 * drive was built. The platter is written back into the array already mounted here.
+	 */
+	capture(): Rb09State {
+		return {
+			sta: this.sta,
+			da: this.da,
+			ma: this.ma,
+			wc: this.wc,
+			due: this.due,
+			now: this.now,
+			dirty: this.dirty,
+			writeLock: this.writeLock,
+			wordCycles: this.wordCycles,
+			image: this.image ? this.image.slice() : null,
+		};
+	}
+
+	restore(s: Rb09State): void {
+		if (s.wordCycles !== this.wordCycles) throw new Error(`rb09 word time is ${s.wordCycles}, this one is ${this.wordCycles}`);
+		if (s.writeLock !== this.writeLock) throw new Error(`rb09 write lock is ${s.writeLock}, this one is ${this.writeLock}`);
+		this.sta = s.sta;
+		this.da = s.da;
+		this.ma = s.ma;
+		this.wc = s.wc;
+		this.due = s.due;
+		this.now = s.now;
+		this.dirty = s.dirty;
+		if (s.image) {
+			if (!this.image || this.image.length !== s.image.length) {
+				throw new Error(`rb09 platter is ${s.image.length} words, this one is ${this.image?.length ?? 0}`);
+			}
+			this.image.set(s.image);
+		}
 	}
 
 	/** Cycles until the addressed word comes round, SIMH GET_POS. */

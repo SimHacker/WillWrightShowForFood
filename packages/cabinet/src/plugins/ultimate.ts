@@ -89,6 +89,24 @@ export type UltimatePose = {
 	arm: number;
 };
 
+/** A paused Ultimate Machine. `observedLever` is what the next tick compares against. */
+export type UltimateState = {
+	localLever: boolean;
+	observedLever: boolean;
+	bindingIndex: number;
+	phase: number;
+	t: number;
+	lid: number;
+	arm: number;
+	presses: number;
+	aborts: number;
+	ons: number;
+	manualPress: boolean;
+	flag: boolean;
+	ie: boolean;
+	timing: UltimateTiming;
+};
+
 export type UltimateOpts = Partial<UltimateTiming>;
 
 const OFF = 0;
@@ -168,6 +186,47 @@ export class UltimateMachine implements Device, KorzDevice {
 	reset(): void {
 		this.flag = false;
 		this.ie = false;
+	}
+
+	/** Phase, positions, and the lever the next tick observes. A bound lever is someone else's switch. */
+	capture(): UltimateState {
+		if (this.bindings.length > 0) throw new Error("a bound ultimate lever is not in the snapshot");
+		return {
+			localLever: this.localLever,
+			observedLever: this.observedLever,
+			bindingIndex: this.bindingIndex,
+			phase: this.phase,
+			t: this.t,
+			lid: this.lid,
+			arm: this.arm,
+			presses: this.presses,
+			aborts: this.aborts,
+			ons: this.ons,
+			manualPress: this.manualPress,
+			flag: this.flag,
+			ie: this.ie,
+			timing: { ...this.timing },
+		};
+	}
+
+	restore(s: UltimateState): void {
+		if (this.bindings.length > 0) throw new Error("a bound ultimate lever is not in the snapshot");
+		for (const k of Object.keys(this.timing) as Array<keyof UltimateTiming>) {
+			if (s.timing[k] !== this.timing[k]) throw new Error(`ultimate ${k} timing differs`);
+		}
+		this.localLever = s.localLever;
+		this.observedLever = s.observedLever;
+		this.bindingIndex = s.bindingIndex;
+		this.phase = s.phase;
+		this.t = s.t;
+		this.lid = s.lid;
+		this.arm = s.arm;
+		this.presses = s.presses;
+		this.aborts = s.aborts;
+		this.ons = s.ons;
+		this.manualPress = s.manualPress;
+		this.flag = s.flag;
+		this.ie = s.ie;
 	}
 
 	irq(): boolean {
