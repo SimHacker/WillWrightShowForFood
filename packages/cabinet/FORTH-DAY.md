@@ -16,17 +16,15 @@ minutes on how this Forth got written. This is the half hour after that.
 
 ## Introducing CADroid and CForth with Mitch at Sun
 
-I know him from a summer. In 1987 I was his intern at Sun, and we put his CForth into CADroid, a
-schematic editor from Lucasfilm that Sun used internally. The editor stayed the editor. A language
-written in Forth made it scriptable, and programmable by demonstration. That is the job I still
-want Forth to do.
+In 1987 I was Mitch Bradley's summer intern at Sun. We integrated his CForth into CADroid, a
+schematic editor from Lucasfilm that Sun used internally, so a higher-level language implemented
+in Forth could make the editor scriptable and programmable by demonstration.
 
 ## Chuck Moore
 
-It is an honor to meet Chuck Moore and to speak with him on this Zoom. Peter Conn and Coco Conn hired
-him at HOMER & Associates. Their console mixed pictures live, sixteen slide projectors and four
-film projectors, and he programmed its host in PolyForth, in 32K. Atomic Dog and Flying Logos
-came out of that shop. I think that is one of the most amazing things anyone has done with Forth.
+Chuck Moore is on this Zoom. Peter Conn and Coco Conn hired him at HOMER & Associates. Their
+console mixed pictures live, sixteen slide projectors and four film projectors, and he programmed
+its host in PolyForth, in 32K. Atomic Dog and Flying Logos came out of that shop.
 
 Peter Milford has just talked about Lean in Forth. Yesterday
 [Levent Alpöge](https://alpo.ge/remark.pdf) posted a proof of the Riemann hypothesis written in
@@ -39,19 +37,18 @@ have that language on a Forth machine.
 
 ## PIXIE's radial menus, and why this PDP-7 exists
 
-The machine on the screen is here because of an older editor, and its menus. PIXIE is Heinz
-Lemke's graphical editor, written at Cambridge in 1969 with Neil Wiseman and John Hiles. You
-drive it with a light pen, and the menu pops up around the pen's tracking cross. That is one of
-the earliest radial menus. I have been building pie menus since the 1980s, so when Heinz scanned
-his 1972 listing, 128 pages of SYMELEC, I wanted to point at those menus again. I had no PDP-7,
-so I built one. It runs in the browser, light pen and all.
+PIXIE is Heinz Lemke's graphical editor, written at Cambridge in 1969 with Neil Wiseman and John
+Hiles. You drive it with a light pen, and the menu is drawn around the pen's tracking cross. It
+is one of the earliest radial menus. I have been building pie menus since the 1980s. Heinz scanned
+his 1972 listing, 128 pages of SYMELEC, and I wanted to try those menus. I did not have a PDP-7,
+so I wrote one. It runs in the browser, and the light pen works.
 
 ## PIXIE and Titan, a distributed CAD system
 
 PIXIE was already a distributed CAD system. The PDP-7 was not a terminal. About 5000 words of it
 talked to you and built the model, and the model had to fit in the 3000 words left in 8K. The
 model then went over Neil Wiseman's link to Cambridge's Titan mainframe, which ran the
-simulation. You drew on the PDP-7. Titan did the computing.
+simulation. Drawing was done on the PDP-7. The simulation ran on Titan.
 
 ### The document between the interface and the computation
 
@@ -74,7 +71,7 @@ What is not built yet is at the end.
 
 ### Two compilers, in one breath
 
-A few host words, once. TypeScript is a superset of JavaScript, and it compiles to JavaScript.
+TypeScript is a superset of JavaScript, and it compiles to JavaScript.
 The emulator, and Korz, are written in TypeScript. There are two just-in-time compilers. Korz
 compiles the emulated machine into JavaScript. V8, inside Chrome and Node, compiles that
 JavaScript into the processor's own instructions, because JavaScript is what the browser and
@@ -141,8 +138,7 @@ one instruction at a time.
 
 ### You compile into the core the display reads
 
-That is also why Forth is a good way to poke at this machine. You compile into the same core the
-display is reading. A loop typed at the prompt runs when the loop closes, without a definition
+You compile into the same core the display is reading. A loop typed at the prompt runs when the loop closes, without a definition
 around it, which is an idea of Mitch's from Open Firmware. A routine from a 1972 assembly listing
 becomes a Forth word with a wrapper about three instructions long: pop, `jms`, `jmp next`.
 
@@ -224,8 +220,7 @@ SYMELEC walks the same ring area. A panel reads three cells out of live core and
 ring in 3D while you append to it. One 1969 structure, the assembly library and the Forth,
 one block of core. The same image can be written out as JSON or YAML and read back into Forth,
 and the 1972 wire format was the rings themselves. The value you type, the value the panel
-draws, and the value you would send across the link are one structure. That is why the library
-is worth having in this Forth. The demo is
+draws, and the value you would send across the link are one structure. The demo is
 [PIXIE and FORTH on the PDP-7](https://www.youtube.com/watch?v=lo8kdY-5i6c).
 
 ### The library is in Forth; PIXIE is not driven by it yet
