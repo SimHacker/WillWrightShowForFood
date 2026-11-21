@@ -93,7 +93,7 @@ instructions the turtle assembled, and the 340 is the processor that executes th
 The same edit can be done from the prompt. The tooltip gives the address of the word under
 the pointer, and `!` stores a new one. The editor is that store, done with the mouse.
 
-### Names, and rings
+### Names
 
 Two things were added on top of his kernel. Neither one changes NEXT.
 
@@ -111,12 +111,14 @@ The copy is made from his source by a script. [FORTH-RINGS.md](FORTH-RINGS.md) h
 layout, and [does.fs](tapes/pdp7forth/does.fs) is the fifteen lines. Moving the names out of the
 8K bank is not done. That is below, with the macro that would build every layout from one source.
 
-The dynamic data is older than the Forth. PIXIE, Heinz Lemke's editor at Cambridge, kept its
-models as rings: circular structures, graphs rather than trees, the same role as an s-expression
-or a JSON value. The ring processor in the 1972 listing is called RSPPIX. It is assembled into
-this Forth unchanged, moved up by exactly 014000 octal so the listing's address arithmetic still
-adds, and each of its routines is a Forth word. The words you type are ordinary Forth on top of
-that.
+### The PIXIE ring library, in Forth
+
+The dynamic data is the 1972 library, linked in, not rewritten. PIXIE, Heinz Lemke's editor at
+Cambridge, kept its models as rings: circular structures, graphs rather than trees, the same
+role as an s-expression or a JSON value. The processor in the listing is RSPPIX. It assembles
+into this Forth word for word, moved up by exactly 014000 octal so the listing's address
+arithmetic still adds. Each of its routines is a Forth word, most of them three instructions:
+pop, `jms`, `jmp next`. The words you type sit on top of those.
 
 ```
 RSAVINS S" SQUARE" NAMED
@@ -125,9 +127,10 @@ RSAVINS S" HEX" NAMED
 RSAVINS .RING            \ HEX TRIANGLE SQUARE  ok
 ```
 
-The same ring area is what SYMELEC walks, and a panel reads those three cells out of live core and
-draws the ring in 3D while you append to it. One 1969 structure, two languages, one block of core.
-The demo is [PIXIE and FORTH on the PDP-7](https://www.youtube.com/watch?v=lo8kdY-5i6c).
+SYMELEC walks the same ring area. A panel reads three cells out of live core and draws the
+ring in 3D while you append to it. One 1969 structure, the assembly library and the Forth,
+one block of core. The demo is
+[PIXIE and FORTH on the PDP-7](https://www.youtube.com/watch?v=lo8kdY-5i6c).
 
 ## The emulator
 
@@ -223,6 +226,17 @@ because a better inner interpreter is expected.
 The accelerator still jumps to primitives that live in core. A dictionary answered from outside
 the 8K bank, so that Forth could sit in SYMELEC's own machine and call its rings, is the reason
 the device exists. SYMELEC already fills the machine. That ROM dictionary is not built.
+
+### tiny-ITS, in Forth
+
+The larger goal is a Forth that does for this room what Open Firmware did for a workstation.
+Mitch already worked those ideas out: a command line whose words are the commands, completion,
+help, a device tree, keys bound to words, an editor with Emacs bindings. tiny-ITS is those
+ideas again, in this Forth, pointed at every emulator. One command line for the machines,
+their memory maps, and their devices. Completion, help, and the arguments of a command written
+down where the command is. A device tree you can walk. An editor in the Emacs style. People
+type at it, and so can a program on the PDP-7. The design is
+[TINY-ITS.md](TINY-ITS.md). It is not the image you can boot today.
 
 ### The Apple ][, once the emulator is settled
 
