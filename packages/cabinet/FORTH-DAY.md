@@ -5,7 +5,8 @@ has just spent ten minutes on how this Forth got written. This is the half hour 
 links go to work in progress: people's pages, the machines, and design notes in this repository
 and in [MOOLLM](https://github.com/SimHacker/moollm).
 
-**Video:** <a href="https://youtu.be/I-Rf3XP_D0g" target="_blank" rel="noopener">the demo, recorded before the talk</a>.
+**Video:** <a href="https://youtu.be/I-Rf3XP_D0g" target="_blank" rel="noopener">the demo, recorded before the talk</a>,
+and [its transcript](FORTH-DAY-DEMO.md).
 
 - [Introducing CADroid and CForth with Mitch at Sun](#introducing-cadroid-and-cforth-with-mitch-at-sun)
 - [Chuck Moore](#chuck-moore)
