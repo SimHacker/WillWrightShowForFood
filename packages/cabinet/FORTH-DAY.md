@@ -290,8 +290,9 @@ that last one. A menu reboots the same disk on any of the four. (source
 
 On UNIX boot, that compiled form is about twice as fast as the hand-written switch: 5 nanoseconds
 an instruction against 11, on an M4 Max under Node 26. A real PDP-7 did about 0.3 million
-instructions a second. The compiled emulator, on that boot, does about 189 million. The table and
-the sessions are in [the essay](SEA-OF-SLOTS.md#the-numbers).
+instructions a second. The compiled emulator, on that boot, does about 189 million. Every
+benchmark for the PDP-7 and the Apple ][, with how each one was run and what changed the numbers,
+is in [BENCHMARKS.md](BENCHMARKS.md).
 
 ### The accelerator, already plugged in
 
@@ -346,11 +347,24 @@ device. It sees the JavaScript function Korz emitted.
 
 ### Korz emits the kind of function V8 keeps
 
+The design comes from [Vanessa Freudenberg](../../characters/vanessa-freudenberg/README.md).
+She wrote [SqueakJS](https://squeak.js.org/), a Smalltalk virtual machine in JavaScript that
+runs decades-old Squeak images in any browser. Squeak objects are plain JavaScript objects, and
+her garbage collector leaves as much work as it can to JavaScript's. Her
+[paper](../../characters/vanessa-freudenberg/sources/Freudenberg-2014-SqueakJS-memorial-edition.pdf)
+(DLS 2014, with Dan Ingalls, Tim Felgentreff, Tobias Pape and Robert Hirschfeld) won the Most
+Notable Paper award ten years later. On WebAssembly she wrote that she would rather make the
+SqueakJS JIT produce code the JavaScript JIT can optimize well, because that could be faster
+than WASM. Don't fight the host. That is the bet Korz is built on
+([her philosophy, in MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md);
+[the essay](SEA-OF-SLOTS.md#vanessas-bet)). Vanessa died in 2025.
+
 A compiler on a compiler works here because the upper one is written to please the lower one.
 Korz emits one stable function for a run of the machine, the kind V8 compiles once and keeps.
 A fresh function every cycle, or a call whose target V8 cannot see, stays interpreted. A store
 into a word the function was compiled from throws the function away, because PDP-7 code
-rewrites itself. `JMS` stores its return address in the first word of the routine.
+rewrites itself. `JMS` stores its return address in the first word of the routine. What each of
+those choices was worth, in nanoseconds, is in [BENCHMARKS.md](BENCHMARKS.md#how-it-got-there).
 
 The essay's name for the table of device behaviors is a sea of slots. You can read that
 later. Nothing in the half hour depends on the name.
