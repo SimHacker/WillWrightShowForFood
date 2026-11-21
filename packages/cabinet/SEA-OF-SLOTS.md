@@ -270,6 +270,13 @@ and its generic functions worked the CLOS way. Each method declared the class it
 arguments, so dispatch looked at the class of each argument. What it didn't have, as far as I
 remember, was a guard like "this argument equals this" or "is in this range."
 
+[Clojure](https://clojure.org/) is another one, and it is the multiple dispatch most people meet
+now. A protocol is an interface you can extend onto a type you do not own, so the operation does
+not live in a class. A multimethod dispatches on whatever one function returns, often a vector of
+types, and `derive` adds to that hierarchy later. What is particular to Clojure is that single
+dispatch function. The method does not specialize each argument, and nothing but the value it
+returned travels with the call.
+
 #### Changing the rules of dispatch
 
 [Gregor Kiczales](https://en.wikipedia.org/wiki/Gregor_Kiczales), Jim des Rivières, and [Daniel Bobrow](https://en.wikipedia.org/wiki/Daniel_G._Bobrow) wrote [*The Art of the Metaobject Protocol*](https://en.wikipedia.org/wiki/The_Art_of_the_Metaobject_Protocol)
@@ -444,6 +451,9 @@ by instruction, comparing registers every step:
    times the speed of a real PDP-7.
 3. **The Korz resolver.** The tables above, with one generated JavaScript function per selector.
 4. **The Korz compiler.** It turns runs of PDP-7 instructions into JavaScript functions.
+
+The Apple ][ has the same four rungs on the 6502. Which layer the compiler rolls into the block,
+and which layer stays a call, is [below](#virtual-machines-on-top-of-virtual-machines).
 
 ### The tests
 
@@ -657,6 +667,8 @@ the same image, with or without the slots. Try
 [Forth with the accelerator](https://hyperties.org/cabinet/forth/?forth=hardware). The design,
 including the ROM dictionary and a ring library in high memory, is in
 [FORTH-DEVICE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/FORTH-DEVICE.md).
+The note for Forth Day, written for a room that already knows NEXT, is
+[FORTH-DAY.md](FORTH-DAY.md).
 
 ### Displays as views of memory
 
@@ -763,36 +775,63 @@ You can have a scrupulously accurate PDP-7, and a PDP-7 with a Turing machine, a
 
 ### The compiler
 
-The PDP-7 was the warm-up. Next on the compiler: keeping registers in JavaScript locals across a
-block, blocks that call each other directly, and compiling ahead of time for ROMs and a fixed Forth
-kernel.
+The PDP-7 compiler and the 6502 compiler are both running. Still ahead: keeping registers in
+JavaScript locals across a block, blocks that call each other directly, and compiling ahead of
+time for ROMs and a fixed Forth kernel.
 
 #### Virtual machines on top of virtual machines
 
-Mitch's Forth is a virtual machine one layer up. Every cell of a Forth definition is itself a
-PDP-7 instruction: a call to another definition, a jump to a primitive, a constant, or a
-variable's address. NEXT executes them one at a time, as the Forth accelerator above does.
+A second instruction set is a device. The processor underneath stays the cabinet's processor. The
+device engages when the host fetches bytes that still match, and it declines when they do not. The
+compiler pastes that device into the block only when the slot carries a template and a guard that
+those bytes are still the ones it compiled. A slot with only a run stays a call, and the host JIT
+stops at the call. Stacking still runs. It does not, by itself, get optimized across.
 
-Today the compiler compiles each cell, but leaves its block for the dispatch loop once per Forth
-word. The next step is to compile a whole Forth definition as one block: follow the thread, inline
-each cell, and stop at a branch or a return. [Ian Piumarta](https://www.piumarta.com/) and Fabio Riccardi's [selective inlining](https://doi.org/10.1145/277650.277743)
+Mitch's Forth is that device on the PDP-7, and it is built. It runs one thread cell each time the
+CPU fetches NEXT, as the accelerator above does. Separately, when the compiler itself sees
+`XCT I 10`, it compiles the one word that cell names and checks the word before running it. An XCT
+of an XCT falls back. A whole colon definition is not yet one block. That is the roll-up still to
+do: follow the thread, inline each cell, and stop at a branch or a return.
+[Ian Piumarta](https://www.piumarta.com/) and Fabio Riccardi's [selective inlining](https://doi.org/10.1145/277650.277743)
 (PLDI 1998), and [Anton Ertl](https://www.complang.tuwien.ac.at/anton/) and David Gregg's [dynamic superinstructions](https://doi.org/10.1145/780822.781162), turn threaded code into
 straight-line native code the same way. Here the native code is JavaScript, and V8 takes it from
-there.
+there. Those two compilers are already stacked. Korz is written in TypeScript, the same language
+as the PDP-7 emulator, and it emits the JavaScript. V8 compiles that JavaScript to the processor.
+Forth is in the upper layer, as Mitch's threads and as the accelerator on NEXT. The Forth Day
+note keeps what is running separate from what might come next:
+[FORTH-DAY.md](FORTH-DAY.md).
 
-The Apple ][ has the same layering. [Steve Wozniak](https://en.wikipedia.org/wiki/Steve_Wozniak)'s [Sweet 16](https://en.wikipedia.org/wiki/SWEET16), in the Integer BASIC ROM, is a
-16-bit machine with sixteen registers, interpreted by 6502 code. Infocom's Z-machine and [UCSD
-Pascal](https://en.wikipedia.org/wiki/UCSD_Pascal)'s p-code are more of the same.
+The 6502 compiler is built too. It inlines a straight-line subset and calls the switch for the
+rest. A fetch that would enter a second instruction set ends the block. Nothing above the 6502 is
+built yet. Each of the following is the same shape of device, and the 6502 underneath is the
+oracle.
 
-In Korz, a virtual machine on a real one is just more slots. Whoever loads the Forth installs a
-slot that says `XCT I 10` is a step through a thread, and the compiler follows threads. Leave it
-out, and XCT is just XCT. Sweet 16's opcodes would be slots the same way. The compiler never needs
-to know that Forth or Sweet 16 exists. None of this is built yet. The Forth accelerator above
-runs threads in slots at run time; this would compile them.
+[Sweet 16](https://en.wikipedia.org/wiki/SWEET16) is [Steve Wozniak](https://en.wikipedia.org/wiki/Steve_Wozniak)'s 16-bit machine in the Integer BASIC ROM. It would engage at
+`$F689`, keep its sixteen registers in page zero, and return to the 6502 on RTN. One bytecode is
+one edit of those registers and of memory. Integer BASIC calls Sweet 16 for some of its
+arithmetic, so Integer sits on the Sweet 16 coprocessor, and the 6502 sits under both.
+
+Applesoft does not call Sweet 16. It runs from its own ROM on the 6502, which is what runs today.
+The same device shape can stand in for one hot floating-point routine: one edit of the registers
+and the five-byte floats, checked against that ROM. A whole Applesoft that takes the prompt would
+be a larger device of that kind.
+
+[UCSD Pascal](https://en.wikipedia.org/wiki/UCSD_Pascal)'s p-machine is a third coprocessor on the same 6502. Its program counter is the
+p-machine's, and each p-code is one edit, the way a Sweet 16 bytecode is. It does not sit on Sweet
+16 or on Applesoft.
+
+So it is not one tower. The 6502 is the floor. Sweet 16 is a coprocessor on that floor, and
+Integer BASIC is a language that calls down into it. Applesoft is a language on the floor, with
+its float routines as a coprocessor of their own. The p-machine is another coprocessor beside
+those two. The compiler rolls any of them into a block only when that layer's slots carry a
+template. Until then, crossing into the layer is a call, and the 6502 JIT stops at the call. The
+compiler never has to know the name of the language. Leave the slots out, and a JSR to `$F689` is
+just a JSR.
 
 ### The Apple ][
 
-Then the Apple ][. Its reference won't be one emulator but several, and the more the better: every
+The Apple ][ is running on those four 6502 rungs. The page opens on the compiler. Its reference
+won't be one emulator but several, and the more the better: every
 emulator that runs the same program is one more oracle to run in lockstep against. And the Apple
 ]['s software library is the test suite.
 
@@ -1061,6 +1100,7 @@ tours all of it, port by port, with the code quoted and projects to try at the e
 - [PIXIE-RESTORATION.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md): restoring PIXIE from a 1972 printout to a
   tool its author uses
 - [TURING-ENGINE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TURING-ENGINE.md): the Turing engine, the Ultimate Machine, and TM-Forth
+- [FORTH-DAY.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/FORTH-DAY.md): the Forth Day note, PDP-7 Forth first, the two compilers under it, and what is not built yet
 - [DEVICES.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/DEVICES.md): how a device reaches a machine, and the DataHand layer by layer
 - [UNIX-V0.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/UNIX-V0.md): PDP-7 UNIX in the cabinet
 - [MAPPING.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MAPPING.md): one machine's memory mapped into another's, after the Rubin 10/11
