@@ -25,12 +25,14 @@ could make the editor scriptable and programmable by demonstration.
 
 ## Chuck Moore
 
-[Chuck Moore](../../characters/charles-moore/README.md) is on this Zoom.
+[Chuck Moore](../../characters/charles-moore/README.md) is on this Zoom. My friends
 [Peter Conn](../../characters/peter-conn/README.md) and [Coco Conn](../../characters/coco-conn/README.md)
-hired him at [HOMER & Associates](../../characters/coco-conn/homer-forth-flying-logos.md). Their
-console mixed pictures live, sixteen slide projectors and four film projectors, and he programmed
-its host in PolyForth, in 32K, with [Paul Rother](../../characters/paul-rother/README.md) beside
-him. <a href="https://www.youtube.com/watch?v=LMVZ36VA0wg" target="_blank" rel="noopener">Atomic Dog</a>
+had the honor of working with him. They hired him at
+[HOMER & Associates](../../characters/coco-conn/homer-forth-flying-logos.md), their studio in
+Hollywood. HOMER was their console for mixing pictures live, sixteen slide projectors and four
+film projectors, and Chuck programmed its host in PolyForth, in 32K, with
+[Paul Rother](../../characters/paul-rother/README.md) beside him. They used it for music
+videos, commercials and effects for feature films. <a href="https://www.youtube.com/watch?v=LMVZ36VA0wg" target="_blank" rel="noopener">Atomic Dog</a>
 and <a href="https://www.youtube.com/watch?v=9hIOfEiy4lc" target="_blank" rel="noopener">Flying Logos</a>
 came out of that shop.
 
