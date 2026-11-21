@@ -8,7 +8,6 @@ minutes on how this Forth got written. This is the half hour after that.
 - [PIXIE and Titan](#pixie-and-titan)
 - [The document between them](#the-document-between-them)
 - [Chuck Moore](#chuck-moore)
-- [Peter Milford](#peter-milford)
 - [The Forth](#the-forth)
 - [The demo](#the-demo)
 - [The emulator](#the-emulator)
@@ -56,8 +55,6 @@ It is an honor to meet Chuck Moore and to speak with him on this Zoom. Peter Con
 him at HOMER & Associates. Their console mixed pictures live, sixteen slide projectors and four
 film projectors, and he programmed its host in PolyForth, in 32K. Atomic Dog and Flying Logos
 came out of that shop. I think that is one of the most amazing things anyone has done with Forth.
-
-## Peter Milford
 
 Peter Milford has just talked about Lean in Forth. Yesterday
 [Levent Alpöge](https://alpo.ge/remark.pdf) posted a proof of the Riemann hypothesis written in
