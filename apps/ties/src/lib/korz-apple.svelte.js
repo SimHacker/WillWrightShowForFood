@@ -2,12 +2,12 @@
 // generator are the files in packages/cabinet/roms/apple2. A rung change rebuilds the
 // board and resets, which is the reboot a swap does until an Apple snapshot exists.
 // A cartridge's chargen ROM replaces the character generator.
-// Hi-res color is the ][+ rule: a lit dot
-// takes its hue from where it sits on the line and from bit 7, two lit dots in a row are
-// white, and a dark dot between two of the same kind keeps the color beside it.
+// Hi-res color is one pixel per 14 MHz clock. Each of the seven bits lasts two
+// clocks, and bit 7 delays that byte by one clock, so the two halves of a bit
+// can be different colors. The palette is the scan renderer's.
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
-import { Apple2Plus, DiskII, Korz6502, M6502, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
+import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, appleKey } from '@wwsff/cabinet/microm8';
 import plusRomUrl from '../../../../packages/cabinet/roms/apple2/apple2plus.rom?url';
 import diskRomUrl from '../../../../packages/cabinet/roms/apple2/diskii.rom?url';
@@ -15,17 +15,6 @@ import chargenRomUrl from '../../../../packages/cabinet/roms/apple2/chargen.rom?
 
 const BLACK = [0, 0, 0];
 const WHITE = [0xf0, 0xf0, 0xf0];
-/** 0 black, 1 green, 2 violet, 5 orange, 6 blue, 7 white. 3 and 4 are the second black and white. */
-const HGR = [
-	[0, 0, 0],
-	[0x14, 0xf5, 0x3c],
-	[0xff, 0x44, 0xfd],
-	[0xff, 0xff, 0xff],
-	[0, 0, 0],
-	[0xff, 0x6a, 0x3c],
-	[0x14, 0xcf, 0xfd],
-	[0xff, 0xff, 0xff]
-];
 const hiresByte = new Uint8Array(40);
 const LORES = [
 	[0, 0, 0],
@@ -125,17 +114,17 @@ function paint(ram, mode, face, into, flash) {
 	}
 }
 
-/** One hi-res scan line, 280 dots doubled to 560. The colors are `hiresLine`. */
+/** One hi-res scan line, 560 pixels. The colors are `hiresLine`. */
 function paintHires(y, into) {
 	const colors = hiresLine(hiresByte);
 	const row = y * FRAME_WIDTH * 4;
-	for (let k = 0; k < 280; k++) {
-		const color = HGR[colors[k]] ?? BLACK;
-		const at = row + k * 8;
-		into[at] = into[at + 4] = color[0];
-		into[at + 1] = into[at + 5] = color[1];
-		into[at + 2] = into[at + 6] = color[2];
-		into[at + 3] = into[at + 7] = 255;
+	for (let x = 0; x < FRAME_WIDTH; x++) {
+		const color = HIRES_PALETTE[colors[x]] ?? BLACK;
+		const at = row + x * 4;
+		into[at] = color[0];
+		into[at + 1] = color[1];
+		into[at + 2] = color[2];
+		into[at + 3] = 255;
 	}
 }
 
