@@ -15,31 +15,27 @@
 	// `boot` is a disk to boot: on the first click while the Apple is off, at once (inserted,
 	// then a reboot) when it is already running, or at once after a relaunch. `begin` does an
 	// app's own start on the first click instead (AppleApp.svelte), named by `beginLabel`.
-	// A disk's `label` names it in the menu and the drive lamps.
+	// A disk's `label` names it in the menu and the I/O panel.
+	// `panels` puts the CPU, I/O and KORZ tabs under the screen; a page that wants them
+	// elsewhere (AppleApp, under its disks) passes false and places ApplePanels itself.
 	import { onMount } from 'svelte';
 	import { FRAME_HEIGHT, FRAME_WIDTH, VIDEX_HEIGHT, VIDEX_WIDTH } from '@wwsff/cabinet/microm8';
 	import { ENGINES, apple } from './apple.svelte.js';
-	import KorzBrowser from './KorzBrowser.svelte';
+	import ApplePanels from './ApplePanels.svelte';
 
 	/** @typedef {{ name: string, label?: string, profile?: string, url: () => Promise<string> }} Disk */
-	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string }} */
+	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, panels?: boolean }} */
 	let {
 		disks = [],
 		boot = undefined,
 		relaunch = (disk) => `?disk=${encodeURIComponent(disk.name)}`,
 		begin = undefined,
 		beginLabel = '',
-		defaultCpu = 'microm8'
+		defaultCpu = 'microm8',
+		panels = true
 	} = $props();
 
 	const RELAUNCHED = 'microm8-relaunched';
-	const KORZ_KEY = 'apple-korz-open';
-	let korzOpen = $state(globalThis.localStorage?.getItem(KORZ_KEY) === 'on');
-	/** @param {boolean} on */
-	function setKorz(on) {
-		korzOpen = on;
-		globalThis.localStorage?.setItem(KORZ_KEY, on ? 'on' : '');
-	}
 	/** The disk `boot` names, waiting for the first click while the Apple is off. */
 	/** @type {Disk | undefined} */
 	let pending = $state();
@@ -207,7 +203,6 @@
 		URL.revokeObjectURL(a.href);
 	}
 
-	const hex = (/** @type {number} */ n, /** @type {number} */ w) => n.toString(16).toUpperCase().padStart(w, '0');
 	const baseName = (/** @type {string} */ path) => path.slice(path.lastIndexOf('/') + 1);
 	const labelOf = (/** @type {string} */ name) => disks.find((d) => d.name === name)?.label ?? baseName(name);
 </script>
@@ -308,42 +303,20 @@
 			>Save disk</button
 		>
 	</div>
-	<p class="state">
-		{#if apple.phase === 'idle' && (pending || beginLabel)}
-			click the screen to start {pending ? (pending.label ?? pending.name) : beginLabel}{apple.id === 'microm8' ? ' (loads 41 MB, 10 MB compressed)' : ''}
-		{:else if apple.phase === 'idle'}
-			click the screen to switch on{apple.id === 'microm8' ? ' (loads 41 MB, 10 MB compressed)' : ''}
-		{:else if apple.phase === 'loading'}
-			{apple.id === 'microm8' ? 'loading microM8…' : 'reading the Apple ][+ ROM…'}
-		{:else if apple.phase === 'error'}
-			{apple.error}
-		{:else if apple.status}
-			<span class="num">PC ${hex(apple.status.pc, 4)}</span>
-			<span class="num mhz">{apple.mhz.toFixed(2)} MHz</span>
-			<span class="pace">{apple.pace ? `${apple.pace}/s` : ''}</span>
-			<span class="mode">{apple.status.modes.join(' ')}</span>
-			<span class="lamps" title="Annunciators AN0-AN3">
-				{#each [0, 1, 2, 3] as n (n)}
-					<span class={['lamp', { lit: !!(apple.annunciators & (1 << n)) }]}>{n}</span>
-				{/each}
-			</span>
-			{#if apple.gamepad}<span class="drive" title={apple.gamepad}>pad</span>{/if}
-			{#each apple.drives as name, d (d)}
-				<span class="drive" title={name || 'empty'}>{d + 1}: {name ? labelOf(name) : 'empty'}</span>
-			{/each}
-		{/if}
-	</p>
-	<div class="tabs" role="group" aria-label="Panels">
-		<button
-			class={{ on: korzOpen }}
-			aria-pressed={korzOpen}
-			title="Korz: browse the 6502's sea, its slots, and the JavaScript the compiler made from the Apple's code. Read-only."
-			onclick={() => setKorz(!korzOpen)}>KORZ</button
-		>
-	</div>
-	{#if korzOpen}
-		<KorzBrowser roots={() => apple.korzRoots()} follow={() => apple.korzFollow()} />
+	{#if apple.phase !== 'running'}
+		<p class={['state', { failed: apple.phase === 'error' }]}>
+			{#if apple.phase === 'idle' && (pending || beginLabel)}
+				click the screen to start {pending ? (pending.label ?? pending.name) : beginLabel}{apple.id === 'microm8' ? ' (loads 41 MB, 10 MB compressed)' : ''}
+			{:else if apple.phase === 'idle'}
+				click the screen to switch on{apple.id === 'microm8' ? ' (loads 41 MB, 10 MB compressed)' : ''}
+			{:else if apple.phase === 'loading'}
+				{apple.id === 'microm8' ? 'loading microM8…' : 'reading the Apple ][+ ROM…'}
+			{:else if apple.phase === 'error'}
+				{apple.error}
+			{/if}
+		</p>
 	{/if}
+	{#if panels}<ApplePanels {labelOf} />{/if}
 </div>
 
 <style>
@@ -416,16 +389,6 @@
 		display: inline-flex;
 		gap: 2px;
 	}
-	.tabs {
-		display: flex;
-		gap: 2px;
-		font: 0.75rem ui-monospace, monospace;
-		text-transform: uppercase;
-	}
-	.tabs button {
-		font: inherit;
-		padding: 0.1em 0.5em;
-	}
 	.file input {
 		display: none;
 	}
@@ -434,49 +397,13 @@
 		text-decoration: underline;
 	}
 	.state {
-		display: flex;
-		gap: 1.2em;
 		margin: 0;
-		font: 0.8rem ui-monospace, monospace;
+		font: 0.85rem system-ui, sans-serif;
 		opacity: 0.8;
-		white-space: nowrap;
-		overflow: hidden;
 	}
-	.state .num {
-		font-variant-numeric: tabular-nums;
-	}
-	.state .mhz,
-	.state .pace,
-	.state .mode {
-		flex-shrink: 0;
-	}
-	.state .mhz {
-		width: 10ch;
-	}
-	.state .pace {
-		width: 4ch;
-	}
-	.state .mode {
-		width: 11ch;
-	}
-	.lamps {
-		display: inline-flex;
-		gap: 3px;
-	}
-	.lamp {
-		width: 1.2em;
-		text-align: center;
-		border-radius: 3px;
-		background: #333;
-		color: #888;
-	}
-	.lamp.lit {
-		background: #f80;
-		color: #000;
-	}
-	.state .drive {
-		min-width: 0;
-		overflow: hidden;
-		text-overflow: ellipsis;
+	.state.failed {
+		color: #e8a070;
+		opacity: 1;
+		white-space: pre-wrap;
 	}
 </style>

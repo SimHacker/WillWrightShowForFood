@@ -48,6 +48,15 @@ function modes(board) {
 }
 
 /**
+ * What the CPU and I/O panels show: the 6502's registers and the board's soft switches.
+ * @param {import('@wwsff/cabinet/korz/apple2').M6502} cpu
+ * @param {import('@wwsff/cabinet/korz/apple2').Apple2Plus} board
+ */
+function snapshot(cpu, board) {
+	return { pc: cpu.pc, a: cpu.a, x: cpu.x, y: cpu.y, sp: cpu.s, p: cpu.p, cycles: board.cycles, modes: modes(board), switches: board.mode() };
+}
+
+/**
  * @param {Uint8Array} ram
  * @param {ReturnType<import('@wwsff/cabinet/korz/apple2').Apple2Plus['mode']>} mode
  * @param {Uint8Array} face
@@ -150,7 +159,7 @@ class KorzApple {
 	annunciators = $state(0);
 	videxShowing = $state(false);
 	mhz = $state(0);
-	/** @type {{ pc: number, modes: string[] } | null} */
+	/** @type {ReturnType<typeof snapshot> | null} */
 	status = $state(null);
 
 	/** @type {import('@wwsff/cabinet/korz/apple2').Apple2Plus | null} */
@@ -250,7 +259,7 @@ class KorzApple {
 		this.#heard = board.cycles;
 		board.takeSpeaker();
 		this.#paint();
-		this.status = { pc: cpu.pc, modes: modes(board) };
+		this.status = snapshot(cpu, board);
 		this.annunciators = board.annunciators;
 	}
 
@@ -504,7 +513,7 @@ class KorzApple {
 				if (polled) this.mhz = (cycles - lastCycles) / (now - polled) / 1000;
 				polled = now;
 				lastCycles = cycles;
-				this.status = { pc: this.#cpu.pc, modes: modes(this.#board) };
+				this.status = snapshot(this.#cpu, this.#board);
 				this.annunciators = this.#board.annunciators;
 			}
 		};

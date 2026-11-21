@@ -7,6 +7,7 @@
 	import { onMount } from 'svelte';
 	import { driveIndex } from '@wwsff/cabinet/disk-catalog';
 	import MicroM8 from '../MicroM8.svelte';
+	import ApplePanels from '../ApplePanels.svelte';
 	import ScreenAngel from './ScreenAngel.svelte';
 	import { apple } from '../apple.svelte.js';
 	import { chargenUrl, diskUrl } from '../catalog.js';
@@ -159,7 +160,7 @@
 	});
 </script>
 
-<MicroM8 {disks} defaultCpu="compile" begin={() => start(0)} beginLabel={app.starts[0]?.label ?? app.title} />
+<MicroM8 {disks} defaultCpu="compile" begin={() => start(0)} beginLabel={app.starts[0]?.label ?? app.title} panels={false} />
 
 {#snippet movesRow()}
 	{#if actions.length}
@@ -218,6 +219,7 @@
 	</details>
 	{#if busy}<p class="note">{busy}…</p>{/if}
 	{#if failed}<p class="note failed">{failed}</p>{/if}
+	<ApplePanels {labelOf} />
 </section>
 
 <style>
