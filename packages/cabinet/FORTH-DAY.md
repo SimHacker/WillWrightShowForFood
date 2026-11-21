@@ -1,7 +1,9 @@
 # Forth and the PDP-7
 
-Forth Day, Silicon Valley FIG, 21 November 2026, 14:10 to 14:40. Mitch Bradley has just spent ten
-minutes on how this Forth got written. This is the half hour after that.
+Forth Day, Silicon Valley FIG, 21 November 2026, 14:10 to 14:40. [Mitch Bradley](../../characters/mitch-bradley/README.md)
+has just spent ten minutes on how this Forth got written. This is the half hour after that. The
+links go to work in progress: people's pages, the machines, and design notes in this repository
+and in [MOOLLM](https://github.com/SimHacker/moollm).
 
 - [Introducing CADroid and CForth with Mitch at Sun](#introducing-cadroid-and-cforth-with-mitch-at-sun)
 - [Chuck Moore](#chuck-moore)
@@ -16,47 +18,64 @@ minutes on how this Forth got written. This is the half hour after that.
 
 ## Introducing CADroid and CForth with Mitch at Sun
 
-In 1987 I was Mitch Bradley's summer intern at Sun. We integrated his CForth into CADroid, a
-schematic editor from Lucasfilm that Sun used internally, so a higher-level language implemented
-in Forth could make the editor scriptable and programmable by demonstration.
+In 1987 I was [Mitch Bradley](../../characters/mitch-bradley/README.md)'s summer intern at Sun.
+We integrated his [CForth](https://github.com/MitchBradley/cforth) into CADroid, a schematic
+editor from Lucasfilm that Sun used internally, so a higher-level language implemented in Forth
+could make the editor scriptable and programmable by demonstration.
 
 ## Chuck Moore
 
-Chuck Moore is on this Zoom. Peter Conn and Coco Conn hired him at HOMER & Associates. Their
+[Chuck Moore](../../characters/charles-moore/README.md) is on this Zoom.
+[Peter Conn](../../characters/peter-conn/README.md) and [Coco Conn](../../characters/coco-conn/README.md)
+hired him at [HOMER & Associates](../../characters/coco-conn/homer-forth-flying-logos.md). Their
 console mixed pictures live, sixteen slide projectors and four film projectors, and he programmed
-its host in PolyForth, in 32K. <a href="https://www.youtube.com/watch?v=LMVZ36VA0wg" target="_blank" rel="noopener">Atomic Dog</a> and <a href="https://www.youtube.com/watch?v=9hIOfEiy4lc" target="_blank" rel="noopener">Flying Logos</a> came out of that shop.
+its host in PolyForth, in 32K, with [Paul Rother](../../characters/paul-rother/README.md) beside
+him. <a href="https://www.youtube.com/watch?v=LMVZ36VA0wg" target="_blank" rel="noopener">Atomic Dog</a>
+and <a href="https://www.youtube.com/watch?v=9hIOfEiy4lc" target="_blank" rel="noopener">Flying Logos</a>
+came out of that shop.
 
-Peter Milford has just talked about Lean in Forth. Yesterday
-[Levent Alpöge](https://alpo.ge/remark.pdf) posted a proof of the Riemann hypothesis written in
-Lean with Claude, about 175,000 modules, depending only on Lean's three ordinary axioms.
-[Andrew Sutherland](https://math.mit.edu/~drew/grh/) and others have been replaying it through
-Lean's own kernel and through independent ones, and it has been accepting. The last check, that
-the Lean statement is really the Riemann hypothesis and not a quietly redefined one, was still
-running when this was written. That is why Lean is in the news this weekend. Peter's idea is to
-have that language on a Forth machine.
+Peter Milford has just talked about Lean in Forth. Lean is in the news this weekend:
+[Levent Alpöge](https://alpo.ge/remark.pdf) posted a Lean proof of the Riemann hypothesis,
+written with Claude, and [Andrew Sutherland](https://math.mit.edu/~drew/grh/) and others are
+still checking it.
 
 ## PIXIE's radial menus, and why this PDP-7 exists
 
-PIXIE is Heinz Lemke's graphical editor, written at Cambridge in 1969 with Neil Wiseman and John
-Hiles. You drive it with a light pen, and the menu is drawn around the pen's tracking cross. It
-is one of the earliest radial menus. I have been building pie menus since the 1980s. Heinz scanned
-his 1972 listing, 128 pages of SYMELEC, and I wanted to try those menus. I did not have a PDP-7,
-so I wrote one. It runs in the browser, and the light pen works.
+PIXIE is [Heinz Lemke](../../characters/heinz-lemke/README.md)'s graphical editor, written at
+Cambridge in 1969 with [Neil Wiseman](../../characters/neil-wiseman/README.md) and
+[John Hiles](../../characters/john-hiles/README.md). You drive it with a
+[light pen](reference/GUIDE-LIGHTPEN.md), and the menu is drawn around the pen's tracking cross.
+It is one of the earliest radial menus. I have been building
+[pie menus](../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md) since the 1980s
+([more in MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/PUMPING-UP-PIE-MENUS.md)).
+Heinz [scanned his 1972 listing](../../characters/heinz-lemke/pixie-source-recovery.md), 128 pages
+of [SYMELEC](reference/GUIDE-SYMELEC.md), and I wanted to try those menus. I did not have a PDP-7,
+so I [wrote one](PIXIE-RESTORATION.md). It runs in the browser, and the light pen works.
 
 ## PIXIE and Titan, a distributed CAD system
 
 PIXIE was already a distributed CAD system. The PDP-7 was not a terminal. About 5000 words of it
 talked to you and built the model, and the model had to fit in the 3000 words left in 8K. The
-model then went over Neil Wiseman's link to Cambridge's Titan mainframe, which ran the
-simulation. Drawing was done on the PDP-7. The simulation ran on Titan.
+model then went over [Neil Wiseman's link](reference/TITAN-LINK-PROTOCOL.md) to Cambridge's
+[Titan](reference/GUIDE-TITAN.md) mainframe, which ran the simulation. Drawing was done on the
+PDP-7. The simulation ran on Titan. The [hardware](../../characters/heinz-lemke/pixie-hardware.md)
+is written up, and so are [David Rosenthal](../../characters/david-rosenthal/README.md)'s
+[memories of the Cambridge PDP-7](../../characters/david-rosenthal/pdp7-cambridge-memories.md). The Titan code does not survive. [tiny-titan](TINY-TITAN.md) is a stand-in
+for that end of the link.
 
 ### The document between the interface and the computation
 
 What crossed Wiseman's link was the model, not a drawing of the screen. That is the split
 between a user interface and a computation. They live in different places, and a document
 goes between them. In X11, and in NeWS, the application is the client and the window system
-is the server. NeWS sends PostScript into the window server, which draws and answers the
-pen, and sends back only the events that matter. On the web the word server switches sides.
+is the server ([David Rosenthal](../../characters/david-rosenthal/README.md) on
+[that standards war](../../characters/david-rosenthal/04-nfs-news-x11-standards-war.md);
+[James Gosling](../../characters/james-gosling/README.md)'s
+[window-systems lineage](../../characters/james-gosling/window-systems-lineage.md)). NeWS sends
+PostScript into the window server, which draws and answers the pen, and sends back only the events
+that matter ([send code, not commands](../../characters/don-hopkins/axis-of-eval-send-code-not-commands.md);
+[SimCity on NeWS and HyperLook](../../characters/don-hopkins/hyperlook-news-postscript-simcity.md);
+[NeWS in MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/eval/EVAL-INCARNATE-FRAMEWORK.md#7-news-james-gosling-sun-1986)). On the web the word server switches sides.
 The browser is the client, the application is the server, and the document is XML, then
 JSON, then YAML. PIXIE's document was the rings. The same split is what the Forth device is
 for, once Forth is small enough to share that core. What of that is running, and what is
@@ -64,7 +83,8 @@ not, is below.
 
 ## What this half hour covers
 
-The long essay, [A sea of slots](SEA-OF-SLOTS.md), is about Korz, a way of writing the emulator.
+The long essay, [A sea of slots](SEA-OF-SLOTS.md), is about
+[Korz](https://github.com/SimHacker/moollm/tree/main/designs/korz), a way of writing the emulator.
 This note is the Forth. It says what is running, in the order a Forth programmer can check: the
 PDP-7 Forth itself, the emulator it runs in, and the two compilers under that emulator.
 What is not built yet is at the end.
@@ -80,8 +100,8 @@ Node actually run. You do not need Lisp, and you do not need the Apple ][, to fo
 ## The Forth
 
 Mitch's system is [pdp7forth](https://github.com/MitchBradley/pdp7forth). It is a small Forth in
-8K words of 18-bit core, on the machine UNIX was written on, drawing with a turtle on a DEC Type
-340. The exchange, the header layout, and the turtle are written up in
+8K words of 18-bit core, on the [machine](reference/GUIDE-PDP7.md) [UNIX](UNIX-V0.md) was written
+on, drawing with a [turtle](LOGO-TURTLE.md) on a DEC [Type 340](reference/GUIDE-340.md). The exchange, the header layout, and the turtle are written up in
 [PDP7-FORTH.md](reference/PDP7-FORTH.md).
 
 The PDP-7 is a good Forth machine because a thread cell can be a real instruction, and the opcode
@@ -139,7 +159,7 @@ one instruction at a time.
 ### You compile into the core the display reads
 
 You compile into the same core the display is reading. A loop typed at the prompt runs when the loop closes, without a definition
-around it, which is an idea of Mitch's from Open Firmware. A routine from a 1972 assembly listing
+around it, which is an idea of Mitch's from [Open Firmware](../../characters/mitch-bradley/README.md). A routine from a 1972 assembly listing
 becomes a Forth word with a wrapper about three instructions long: pop, `jms`, `jmp next`.
 
 ### The Type 340
@@ -251,7 +271,8 @@ on the 340. Try it at [hyperties.org/cabinet/forth](https://hyperties.org/cabine
 
 The core image does not change when the way of running it changes. There are four of those ways,
 and each one is checked against the one below it on the same bytes. The bottom is a straight port
-of Bob Supnik's SIMH PDP-7, a switch on the opcode. Above that, the same instruction set is written
+of [Bob Supnik](../../characters/bob-supnik/README.md)'s [SIMH PDP-7](SIMH-MAP.md), a switch on the
+opcode. Above that, the same instruction set is written
 as a table of small behaviors. Above that, the table is compiled into one function per operation.
 Above that, a run of instructions is pasted into one JavaScript function. The live pages open on
 that last one. A menu reboots the same disk on any of the four.
@@ -276,8 +297,9 @@ The image is Mitch's either way. The menu on the Forth page says **Forth: softwa
 Hardware is this device. If NEXT has been patched, if extend mode is on, if a cell is not one it
 knows, it declines, and the three instructions run. A program never has to know the device is
 there. Thirty thousand passes of `I +` take 890,000 cycles in the kernel and 107,000 with the
-device. At eight cells a cycle, 29,000. That is the same shape as Chuck Moore's Novix: one Forth
-word in the time of one memory cycle. The writeup is [FORTH-DEVICE.md](FORTH-DEVICE.md).
+device. At eight cells a cycle, 29,000. That is the same shape as
+[Chuck Moore](../../characters/charles-moore/README.md)'s Novix: one Forth word in the time of one
+memory cycle. The writeup is [FORTH-DEVICE.md](FORTH-DEVICE.md).
 
 ## The compiler under that
 
@@ -285,7 +307,10 @@ Two just-in-time compilers, one running on the other.
 
 ### Korz compiles the machine into JavaScript
 
-The upper one is Korz, written in TypeScript, the same language as the emulators. It compiles
+The upper one is Korz, written in TypeScript, the same language as the emulators. The PDP-7 side
+is [KORZ-COMPILER.md](KORZ-COMPILER.md), the 6502 side is [KORZ-CPU.md](KORZ-CPU.md), and
+[David Ungar](../../characters/david-ungar/README.md)'s Korz, the idea it is named for, is
+[in MOOLLM](https://github.com/SimHacker/moollm/tree/main/designs/korz). It compiles
 a PDP-7, or a 6502, into JavaScript. A straight run of instructions becomes one function. The
 same compiler takes the device definitions: the hardware, and a coprocessor, are slots that
 can carry their behavior as a JavaScript template. When they do, that template is pasted into
@@ -301,7 +326,10 @@ The lower one is V8. It does not translate a whole program and then run it. It r
 JavaScript, notices which functions are hot, and compiles those to the processor. It
 remembers what kinds of values a function has been seeing. When a value of a different kind
 shows up, it throws the compiled code away and continues, with the stack still making sense.
-That guess, and the retreat from a wrong guess, came from the Self language.
+That guess, and the retreat from a wrong guess, came from the Self language
+([David Ungar](../../characters/david-ungar/README.md),
+[reflecting on Self](../../characters/david-ungar/reflecting-on-self.md),
+[Self in MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/SELF-ISH-INFLUENCES.md)).
 [The essay](SEA-OF-SLOTS.md#from-self-to-v8) is the history. V8 never sees a thread cell or a
 device. It sees the JavaScript function Korz emitted.
 
@@ -379,7 +407,7 @@ disk still boots. The banner says 1985. What I lost is the source that built the
 macro assembly, and the Forth around it. Some blocks of Forth are still on the disk. The build is
 not.
 
-When the Apple ][ emulator is far enough along, I want the same kind of stack the PDP-7 already
+When the [Apple ][ emulator](APPLE2.md) is far enough along, I want the same kind of stack the PDP-7 already
 has, running entirely in the browser. A 6502 macro assembler and a disassembler, in TypeScript.
 Beside them, a reader and a writer for Apple ][ threaded Forth and for 6502 assembly, so a screen
 of code and a block of memory are the same object from either side.
@@ -393,7 +421,7 @@ start from the image, produce source that builds that image again, and only then
 change. The new source is the thing I can edit. The metacompiler targets the Apple ][ first, then
 other 6502 machines, and after that other processors. Same guest, a new code field.
 
-That stack does not exist yet. The disk, the Videx card it prints on, and the note of what is on
+That stack does not exist yet. The disk, the [Videx card](VIDEX.md) it prints on, and the note of what is on
 the disk are the part that does:
 [Apple2Forth](../../characters/don-hopkins/artifacts/Apple2Forth/README.md).
 
