@@ -596,6 +596,14 @@ function shared<C>(selector: string, expr: string): (c: C) => number {
 	return m as (c: C) => number;
 }
 
+/** Every dispatch method generated so far, by selector and index expression, with its source. */
+export function generatedDispatch(): { selector: string; expr: string; source: string }[] {
+	return [...methods].map(([key, m]) => {
+		const at = key.indexOf(" ");
+		return { selector: key.slice(0, at), expr: key.slice(at + 1), source: String(m) };
+	});
+}
+
 function thrower<C>(e: unknown): Entry<C> {
 	const p = (): number => {
 		throw e;

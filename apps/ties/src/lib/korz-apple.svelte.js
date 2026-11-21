@@ -8,6 +8,7 @@
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
+import { block65Node, compiler65Node, dispatchNode, seaNode } from '@wwsff/cabinet/korz/inspect';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, appleKey } from '@wwsff/cabinet/microm8';
 import plusRomUrl from '../../../../packages/cabinet/roms/apple2/apple2plus.rom?url';
 import diskRomUrl from '../../../../packages/cabinet/roms/apple2/diskii.rom?url';
@@ -184,6 +185,25 @@ class KorzApple {
 
 	seconds() {
 		return (this.#board?.cycles ?? 0) / APPLE_HZ;
+	}
+
+	/** The KORZ panel's tree: the 6502's compiled blocks, its sea, and the dispatch methods. */
+	korzRoots() {
+		const cpu = this.#cpu;
+		const out = [];
+		if (cpu && 'compiler' in cpu && cpu.compiler) out.push(compiler65Node(cpu.compiler));
+		if (cpu && 'sea' in cpu) out.push(seaNode('cpu', '6502 sea', cpu.sea));
+		if (out.length) out.push(dispatchNode());
+		else out.push({ id: 'none', label: 'No Korz structures', note: 'the switch-statement 6502 has none; pick a Korz level in the CPU menu' });
+		return out;
+	}
+
+	/** The compiled block that starts at the PC, if there is one. */
+	korzFollow() {
+		const cpu = this.#cpu;
+		if (!cpu || !('compiler' in cpu) || !cpu.compiler) return null;
+		const b = cpu.compiler.list().find((x) => x.entry === (cpu.pc & 0xffff));
+		return b ? block65Node(b) : null;
 	}
 
 	async #ensureRom() {

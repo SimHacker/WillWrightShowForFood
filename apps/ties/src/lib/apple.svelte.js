@@ -34,6 +34,15 @@ class AppleEngine {
 		return this.id === 'microm8' ? microM8 : korzApple;
 	}
 
+	/** The KORZ panel's tree; microM8 is Go compiled to WebAssembly and has none. */
+	korzRoots() {
+		if (this.id === 'microm8') return [{ id: 'none', label: 'No Korz structures', note: 'microM8 is not built on Korz; pick a Korz level in the menu' }];
+		return korzApple.korzRoots();
+	}
+	korzFollow() {
+		return this.id === 'microm8' ? null : korzApple.korzFollow();
+	}
+
 	get phase() {
 		return this.active.phase;
 	}

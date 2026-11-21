@@ -225,6 +225,10 @@ type Block = {
 	source: string;
 };
 
+/** A block as a browser sees it. */
+export type BlockInfo = { readonly entry: number; readonly size: number; readonly words: readonly number[]; readonly source: string };
+const info = (b: Block): BlockInfo => ({ entry: b.entry, size: b.size, words: b.words, source: b.source });
+
 /** One instruction, compiled or not. */
 type Ins = {
 	readonly at: number;
@@ -252,6 +256,9 @@ const UNBUILT = (): number => {
  * as `this`: a device's call site into `cpu.read` then sees one target in every machine.
  */
 const ACCESSORS = new Map<string, unknown>();
+
+/** The source of every generated `read` and `write`. */
+export const generatedAccessors = (): string[] => [...ACCESSORS.keys()];
 
 /** Longest block, in instructions. */
 const MAX = 64;
@@ -384,6 +391,19 @@ export class Compiler7 {
 	/** The generated source of the block at `pc`, for the debugger. */
 	source(pc: number): string | null {
 		return this.blocks[pc]?.source ?? null;
+	}
+
+	/** The blocks in use, by entry address, for a browser. */
+	list(): BlockInfo[] {
+		const out: BlockInfo[] = [];
+		for (const b of this.blocks) if (b) out.push(info(b));
+		return out;
+	}
+
+	/** The valid blocks compiled from core word `addr`, the entry's first. */
+	containing(addr: number): BlockInfo[] {
+		const list = this.users[addr & this.m.coreMask] ?? [];
+		return list.filter((b) => b.valid).sort((a, b) => (a.entry === addr ? -1 : b.entry === addr ? 1 : 0)).map(info);
 	}
 
 	/** @internal The chain the interpreter would run at these coordinates; null where it would throw. */

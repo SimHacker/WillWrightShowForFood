@@ -19,6 +19,7 @@
 	import { onMount } from 'svelte';
 	import { FRAME_HEIGHT, FRAME_WIDTH, VIDEX_HEIGHT, VIDEX_WIDTH } from '@wwsff/cabinet/microm8';
 	import { ENGINES, apple } from './apple.svelte.js';
+	import KorzBrowser from './KorzBrowser.svelte';
 
 	/** @typedef {{ name: string, label?: string, profile?: string, url: () => Promise<string> }} Disk */
 	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string }} */
@@ -32,6 +33,13 @@
 	} = $props();
 
 	const RELAUNCHED = 'microm8-relaunched';
+	const KORZ_KEY = 'apple-korz-open';
+	let korzOpen = $state(globalThis.localStorage?.getItem(KORZ_KEY) === 'on');
+	/** @param {boolean} on */
+	function setKorz(on) {
+		korzOpen = on;
+		globalThis.localStorage?.setItem(KORZ_KEY, on ? 'on' : '');
+	}
 	/** The disk `boot` names, waiting for the first click while the Apple is off. */
 	/** @type {Disk | undefined} */
 	let pending = $state();
@@ -325,6 +333,17 @@
 			{/each}
 		{/if}
 	</p>
+	<div class="tabs" role="group" aria-label="Panels">
+		<button
+			class={{ on: korzOpen }}
+			aria-pressed={korzOpen}
+			title="Korz: browse the 6502's sea, its slots, and the JavaScript the compiler made from the Apple's code. Read-only."
+			onclick={() => setKorz(!korzOpen)}>KORZ</button
+		>
+	</div>
+	{#if korzOpen}
+		<KorzBrowser roots={() => apple.korzRoots()} follow={() => apple.korzFollow()} />
+	{/if}
 </div>
 
 <style>
@@ -396,6 +415,16 @@
 	.speeds {
 		display: inline-flex;
 		gap: 2px;
+	}
+	.tabs {
+		display: flex;
+		gap: 2px;
+		font: 0.75rem ui-monospace, monospace;
+		text-transform: uppercase;
+	}
+	.tabs button {
+		font: inherit;
+		padding: 0.1em 0.5em;
 	}
 	.file input {
 		display: none;

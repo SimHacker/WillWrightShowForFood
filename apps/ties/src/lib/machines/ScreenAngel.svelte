@@ -200,12 +200,14 @@
 					</p>
 				{/if}
 				{#each ask.groups ?? [] as g (g.label)}
-					<p class="examples">
-						<span class="group">{g.label}</span>
-						{#each g.examples as e (e)}
-							<button type="button" class="example" title="Put this in the field" onclick={() => use(e)}>{e}</button>
-						{/each}
-					</p>
+					<div class="group">
+						<h4>{g.label}</h4>
+						<p class="examples">
+							{#each g.examples as e (e)}
+								<button type="button" class="example" title="Put this in the field" onclick={() => use(e)}>{e}</button>
+							{/each}
+						</p>
+					</div>
 				{/each}
 			</form>
 		{/if}
@@ -265,20 +267,28 @@
 		flex-basis: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.2rem 1rem;
+		gap: 0.15rem 1rem;
 		margin: 0;
 	}
-	.examples .group {
-		min-width: 11rem;
+	.group {
+		flex-basis: 100%;
+		margin-top: 0.35rem;
+	}
+	.group h4 {
+		margin: 0 0 0.1rem;
 		font-size: 0.8rem;
+		font-weight: 600;
 		opacity: 0.75;
 	}
 	.example {
+		max-width: 100%;
 		padding: 0;
 		border: 0;
 		background: none;
 		color: #8fd88f;
 		font: 0.85rem ui-monospace, monospace;
+		line-height: 1.35;
+		text-align: left;
 		text-decoration: underline;
 		cursor: pointer;
 	}

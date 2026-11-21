@@ -146,15 +146,28 @@ function pollAt(at: number): string {
 	return `if(m.nmi&&!m.nmiPrev)m.nmiPending=true;m.nmiPrev=m.nmi;{const delayed=m.irqDelay;m.irqDelay=false;if(m.nmiPending){m.nmiPending=false;m.pc=${at};interrupt(m,0xfffa);return n+1;}if(!delayed&&m.irq&&(m.p&4)===0){m.pc=${at};interrupt(m,0xfffe);return n+1;}}`;
 }
 
+/** A block as a browser sees it: where it starts, its opcodes, and its source. */
+export type Block65 = { readonly entry: number; readonly size: number; readonly source: string };
+
 export class Compiler65 {
+	/** Blocks built and blocks dropped because an opcode under them changed, since the machine was made. */
+	built = 0;
+	invalidated = 0;
 	private readonly blocks = new Map<number, Gen>();
+	private readonly sources = new Map<number, Block65>();
 	private hotPc = -1;
 	private hotFn: Gen | null = null;
 
 	constructor(private readonly cpu: Compilable) {}
 
+	/** The blocks in use, by entry address. */
+	list(): Block65[] {
+		return [...this.sources.values()].sort((a, b) => a.entry - b.entry);
+	}
+
 	flush(): void {
 		this.blocks.clear();
+		this.sources.clear();
 		this.hotPc = -1;
 		this.hotFn = null;
 	}
@@ -174,6 +187,8 @@ export class Compiler65 {
 		const n = fn(this.cpu, cpuPerform, cpuInterrupt);
 		if (n < 0) {
 			this.blocks.delete(pc);
+			this.sources.delete(pc);
+			this.invalidated += 1;
 			this.hotPc = -1;
 			this.hotFn = null;
 			this.cpu.one();
@@ -192,7 +207,10 @@ export class Compiler65 {
 			this.blocks.set(pc, fn);
 			if (this.blocks.size > 1024) {
 				const oldest = this.blocks.keys().next().value;
-				if (oldest !== undefined) this.blocks.delete(oldest);
+				if (oldest !== undefined) {
+					this.blocks.delete(oldest);
+					this.sources.delete(oldest);
+				}
 			}
 		}
 		this.hotPc = pc;
@@ -217,8 +235,11 @@ export class Compiler65 {
 			at = (at + tmpl.len) & 0xffff;
 			if (tmpl.stop) break;
 		}
-		const source = `"use strict";let n=0;if(${guards.join("||")})return -1;const entry=m.pc;for(let spins=0;spins<${STAY};spins++){\n${parts.join("\n")}\nif(m.pc!==entry)return n;}\nreturn n;`;
+		const hex = entry.toString(16).padStart(4, "0");
+		const source = `"use strict";let n=0;if(${guards.join("||")})return -1;const entry=m.pc;for(let spins=0;spins<${STAY};spins++){\n${parts.join("\n")}\nif(m.pc!==entry)return n;}\nreturn n;\n//# sourceURL=korz65/blk-${hex}.js`;
 		const fn = new Function("m", "perform", "interrupt", source) as Gen;
+		this.sources.set(entry, { entry, size: parts.length, source });
+		this.built += 1;
 		return fn;
 	}
 }

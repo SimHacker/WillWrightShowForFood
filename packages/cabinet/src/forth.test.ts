@@ -234,11 +234,17 @@ test("forth, PIXIE rings: the turtle still draws with the rings loaded", () => {
 });
 
 test("forth: the scripted demo runs to the end and Forth accepts every line", () => {
-	const m = machine();
-	for (const step of forthDemo({ type: m.type })) {
+	const m = machine(rings);
+	const shown: string[] = [];
+	for (const step of forthDemo({ type: m.type, show: (p) => shown.push(p) })) {
 		if (typeof step === "number") m.box.run(step);
 	}
+	assert.deepEqual(shown, ["rings"]);
 	assert.doesNotMatch(m.paper(), /\?/);
-	assert.match(m.paper(), /STAR HT\s+ok/);
-	assert.equal(m.lit(), 80);
+	assert.match(m.paper(), /HELLO WORLD FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
+	assert.match(m.paper(), / 8\s+ok/);
+	assert.match(m.paper(), /\.RING FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
+	assert.match(m.paper(), /HELLO SVFIG FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
+	assert.match(m.paper(), /CS DAISY HT\s+ok/);
+	assert.equal(m.lit(), 216);
 });

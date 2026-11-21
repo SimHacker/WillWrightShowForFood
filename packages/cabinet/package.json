@@ -12,6 +12,7 @@
 		"./disk-catalog": "./dist/apple2/disk-catalog.js",
 		"./apple2/games": "./dist/apple2/games.js",
 		"./korz/apple2": "./dist/korz/apple2/index.js",
+		"./korz/inspect": "./dist/korz/inspect.js",
 		"./angel": "./dist/angel/angel.js",
 		"./angel/png": "./dist/angel/png.js"
 	},

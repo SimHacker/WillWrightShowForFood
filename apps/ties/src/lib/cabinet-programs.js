@@ -242,7 +242,7 @@ function forthProgram({ id, label, kernelFile, extras = [], pixie: withRings = t
 		// 8K is all of core the PDP-7 addresses without the memory extension, which the cabinet lacks.
 		coreWords: 8192,
 		demo: (h) => forthDemo(h),
-		demoTitle: 'Reboot and type the pdp7forth README: arithmetic, a square, a flower, a star',
+		demoTitle: 'Reboot and type: arithmetic, the HELLO WORLD ring taken apart and rebuilt, then a square, a flower, a squiral, a snowflake and a daisy to edit',
 		switches: 0,
 		switchLabels: null,
 		// Forth echoes what it reads, and reads a line at a time; the width goes into WORDS.

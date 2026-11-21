@@ -153,9 +153,16 @@ export function setForthColumns(cpu: Pdp7, image: ForthImage, cols: number): boo
 export interface ForthHost {
 	/** Type a line on the teletype; Forth echoes it itself. */
 	type: (text: string) => void;
+	/** Open one of the page's panels by id, such as "rings", if the page has it. */
+	show?: (panel: string) => void;
 }
 
-/** A scripted session: arithmetic at the prompt, then the turtle, the way the pdp7forth README walks it. */
+/**
+ * A scripted session: arithmetic, then the PIXIE ring it boots with, taken apart and put back
+ * together with RSPPIX's routines, then the turtle, from the pdp7forth README's square and
+ * flower to drawings made of short strokes. Every stroke is one vector word in the display
+ * list, so every corner can be dragged with the edit tool.
+ */
 export function* forthDemo(h: ForthHost): DemoScript {
 	const say = function* (caption: string, line: string, cycles: number): DemoScript {
 		yield caption;
@@ -165,14 +172,27 @@ export function* forthDemo(h: ForthHost): DemoScript {
 	yield "Mitch Bradley's PDP-7 Forth prints its banner and waits at the teletype";
 	yield* wait(600_000);
 	yield* say("Arithmetic at the prompt: two, three, add, print", "2 3 + .", 1_000_000);
-	yield* say("A loop right at the prompt draws a square with the turtle", "4 0 DO 200 FD 90 RT LOOP", 2_000_000);
+	h.show?.("rings");
+	yield* say("It booted with a PIXIE ring in core, one element per word. .RING goes round it and prints the names", "RSAVINS .RING", 1_200_000);
+	yield* say("SAYS appends an element for each word. The RINGS panel shows them join the ring", `S" AND PIXIE RINGS" SAYS RSAVINS .RING`, 1_500_000);
+	yield* say("RCOUNT goes round the ring and counts", "RSAVINS RCOUNT .", 1_000_000);
+	yield* say("DROP1 unlinks the first element with RSPPIX's RDELB; the 1972 garbage collector takes it back", ": DROP1 ( ring -- ) RFIRST RX RCAR RX RDELB ;", 1_000_000);
+	yield* say("Drop HELLO and WORLD", "RSAVINS DROP1 RSAVINS DROP1 RSAVINS .RING", 1_500_000);
+	yield* say("NAMED puts a new element at the front of the ring", `RSAVINS S" SVFIG" NAMED RSAVINS S" HELLO" NAMED RSAVINS .RING`, 1_800_000);
+	yield* say("A loop right at the prompt draws a square with the turtle", "CS 4 0 DO 200 FD 90 RT LOOP", 2_000_000);
 	yield* say("Name it: a colon definition", ": SQ 4 0 DO 200 FD 90 RT LOOP ;", 1_000_000);
 	yield* say("A flower is eight squares, each turned 45 degrees", ": FLOWER 8 0 DO SQ 45 RT LOOP ;", 1_000_000);
-	yield* say("Clear the screen and draw it", "CS FLOWER", 3_000_000);
-	yield* say("A star: five strokes, turning 144 degrees", ": STAR 5 0 DO 400 FD 144 RT LOOP ;", 1_000_000);
-	yield* say("Pen up, step aside, pen down, and draw the star", "CS PU 200 BK 90 LT 200 FD 90 RT PD STAR", 2_500_000);
-	yield* say("Both together, and hide the turtle", "CS FLOWER PU 450 BK PD STAR HT", 4_000_000);
-	yield "Your turn: click the paper and type. WORDS lists every word; FD BK RT LT PU PD CS HOME draw";
+	yield* say("Clear the screen and draw it", "CS FLOWER HT", 3_000_000);
+	yield* say("A squiral: each side a little longer, each turn a little short of square", ": SQUIRAL 60 0 DO I 7 * FD 89 RT LOOP ;", 1_000_000);
+	yield* say("Draw it", "CS SQUIRAL HT", 1_500_000);
+	yield* say("Koch's snowflake, one level per word: K1 is four K0 strokes with a bump", ": K0 15 FD ; : K1 K0 60 LT K0 120 RT K0 60 LT K0 ;", 1_000_000);
+	yield* say("K2 is four K1s, K3 is four K2s", ": K2 K1 60 LT K1 120 RT K1 60 LT K1 ; : K3 K2 60 LT K2 120 RT K2 60 LT K2 ;", 1_200_000);
+	yield* say("Three K3 sides make the flake: 192 strokes", ": FLAKE 3 0 DO K3 120 RT LOOP ;", 1_000_000);
+	yield* say("Step to a corner and draw it", "CS PU 117 BK 90 LT 202 FD 90 RT PD 30 RT FLAKE HT", 2_500_000);
+	yield* say("An arc: nine short strokes, turning 10 degrees each", ": ARC 9 0 DO 34 FD 10 RT LOOP ;", 1_000_000);
+	yield* say("A petal is two arcs; a daisy is twelve petals", ": PETAL ARC 90 RT ARC 90 RT ; : DAISY 12 0 DO PETAL 30 RT LOOP ;", 1_200_000);
+	yield* say("216 strokes, each one vector word in the display list", "CS DAISY HT", 6_500_000);
+	yield "Your turn: pick the edit tool and drag any corner of the daisy; it rewrites the two vector words that meet there";
 	yield* wait(1_000_000);
 }
 
