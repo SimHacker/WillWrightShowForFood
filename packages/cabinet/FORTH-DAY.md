@@ -3,7 +3,7 @@
 Forth Day, Silicon Valley FIG, 21 November 2026, 14:10 to 14:40. Mitch Bradley has just spent ten
 minutes on how this Forth got written. This is the half hour after that.
 
-It is an honor to meet Chuck Moore and to speak in the same room. Peter Conn and Coco Conn hired
+It is an honor to meet Chuck Moore and to speak with him on this Zoom. Peter Conn and Coco Conn hired
 him at HOMER & Associates. Their console mixed pictures live, sixteen slide projectors and four
 film projectors, and he programmed its host in PolyForth, in 32K. Atomic Dog and Flying Logos
 came out of that shop. I think that is one of the most amazing things anyone has done with Forth.
