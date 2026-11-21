@@ -14,7 +14,8 @@ import { type Picture, decodePng } from "./png.js";
  *                     so a dialog can be seen whether or not its field is filled in. A look
  *                     matches exactly; `tolerance` and `channel` make it fuzzy.
  *   states:           tried in order on every step; the first whose conditions hold is the state.
- *                     When none holds the angel stays where it is.
+ *                     When none holds the angel stays where it is. Two states may share an id,
+ *                     to reach one state two ways; YAML merge keys (<<: *anchor) copy the rest.
  *     when / unless   looks that must be seen / must not be
  *     from            states it may be entered from (itself always counts)
  *     after           seconds of machine time spent in the current state before it may be entered
@@ -142,7 +143,7 @@ export function recognize(screen: Picture, looks: Look[], seen = new Set<string>
 }
 
 export function parseAngel(text: string): AngelSpec {
-	const spec = parse(text) as AngelSpec;
+	const spec = parse(text, { merge: true }) as AngelSpec;
 	if (!spec || !Array.isArray(spec.states)) throw new Error("ANGEL.yml needs states");
 	spec.looks ??= [];
 	return spec;

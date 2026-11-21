@@ -49,8 +49,18 @@ apps:
     disks:
       guestbook: { file: little-computer-people/lcp-4am-side-a.dsk, label: "Guestbook Side" }
       house: { file: little-computer-people/lcp-4am-side-b.dsk, label: "House Side" }
+      rob-guestbook: { file: little-computer-people/rob-guestbook.dsk, label: "Rob's Guestbook Side" }
+      rob-house: { file: little-computer-people/rob-house.dsk, label: "Rob's House Side" }
+      ivan-guestbook: { file: little-computer-people/ivan-guestbook.dsk, label: "Ivan's Guestbook Side" }
+      ivan-house: { file: little-computer-people/ivan-house.dsk, label: "Ivan's House Side" }
+      fritz-guestbook: { file: little-computer-people/fritz-guestbook.dsk, label: "Fritz's Guestbook Side" }
+      fritz-house: { file: little-computer-people/fritz-house.dsk, label: "Fritz's House Side" }
     starts:
       - { label: "Move In", drives: [guestbook] }
+      # Already moved in; the house number came from a Commodore 64 copy.
+      - { label: "Visit Rob", drives: [rob-guestbook], use: { house: rob-house } }
+      - { label: "Visit Ivan", drives: [ivan-guestbook], use: { house: ivan-house } }
+      - { label: "Visit Fritz", drives: [fritz-guestbook], use: { house: fritz-house } }
     actions:
       - label: "Turn the Disk Over"
         prompt: "Please turn over HOUSE-ON-A-DISK and press a key"

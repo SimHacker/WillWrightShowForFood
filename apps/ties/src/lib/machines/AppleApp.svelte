@@ -57,10 +57,14 @@
 	/** @param {string} id */
 	const locked = (id) => app.disks[id]?.write_protected === true;
 
+	/** The start last booted; its `use` swaps the disks the actions name. */
+	let started = $state(0);
+
 	/** Put each of a start's disks in its drive and boot drive 1. */
 	function start(i = 0) {
 		const s = app.starts[i];
 		if (!s) return;
+		started = i;
 		if (apple.id === 'microm8' && apple.phase !== 'idle' && apple.profile !== profile) {
 			sessionStorage.setItem(STARTING, `${app.id}#${i}`);
 			location.reload();
@@ -89,7 +93,11 @@
 	/** @param {AppAction} a */
 	const act = (a) =>
 		doing(a.label, async () => {
-			for (const [drive, id] of Object.entries(a.insert ?? {})) await apple.insert(app.disks[id]?.file ?? id, await bytes(id), driveIndex(drive), profile, locked(id));
+			const use = app.starts[started]?.use ?? {};
+			for (const [drive, named] of Object.entries(a.insert ?? {})) {
+				const id = use[named] ?? named;
+				await apple.insert(app.disks[id]?.file ?? id, await bytes(id), driveIndex(drive), profile, locked(id));
+			}
 			if (a.keys) apple.type(a.keys);
 		});
 

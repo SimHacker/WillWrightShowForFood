@@ -16,6 +16,32 @@ disks:
     bytes: 143360
     sha1: c486880355f57bce67c0948b0973a8d4007cb1b4
     source: "disk images/collections/4am collection/littlecomputerpeople4amcrack/little computer people (4am crack) side b.dsk"
+  # The people of three Commodore 64 copies on 4am's Apple crack, by scripts/lcp-apple-house.mjs:
+  # each Guestbook side carries his house number, each House side has him moved in on 11/21/26.
+  - file: little-computer-people/rob-guestbook.dsk
+    bytes: 143360
+    sha1: 86a4286618c4fbadaba89eb0770f87f122bd2751
+    source: "lcp-4am-side-a.dsk with house number =8336>76 from worlds/little-computer-people/stephen-and-rob"
+  - file: little-computer-people/rob-house.dsk
+    bytes: 143360
+    sha1: d94a16a87b6f9ab390a8f881ba92a087895202f8
+    source: "lcp-4am-side-b.dsk after Rob moved in, researcher Stephen"
+  - file: little-computer-people/ivan-guestbook.dsk
+    bytes: 143360
+    sha1: 028bd061ccc8e09942dfa125bab2a4e6ae22aa55
+    source: "lcp-4am-side-a.dsk with house number 00000615 from worlds/little-computer-people/sphinx-ivan"
+  - file: little-computer-people/ivan-house.dsk
+    bytes: 143360
+    sha1: e22bfa6b9badce94bdb060f3651b4051a711986e
+    source: "lcp-4am-side-b.dsk after Ivan moved in, researcher Rainer Huhn"
+  - file: little-computer-people/fritz-guestbook.dsk
+    bytes: 143360
+    sha1: 955ed886e3df02e1f5b447570c2b9deeccfed4e8
+    source: "lcp-4am-side-a.dsk with house number 00000334 from worlds/little-computer-people/sca-fritz"
+  - file: little-computer-people/fritz-house.dsk
+    bytes: 143360
+    sha1: e88dcd895e2d577966f5bb085ec897ee6f4e0de8
+    source: "lcp-4am-side-b.dsk after Fritz moved in, researcher Sca Cracks All"
   - file: mind-mirror/mind-mirror-4am-playable.dsk
     bytes: 143360
     sha1: bde3a53c7fc6b0e2ca57f3e864f685f5a21538a6

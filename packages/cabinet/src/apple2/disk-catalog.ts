@@ -19,6 +19,8 @@ export interface AppStart {
 	label: string;
 	/** Disk ids for drive 1 and drive 2. */
 	drives: string[];
+	/** Disks to use instead of the ones the actions name, after this start: { house: rob-house }. */
+	use?: Record<string, string>;
 }
 
 export interface AppAction {
@@ -77,7 +79,13 @@ export function appEntries(catalog: { apps?: AppleApp[] }, disks: { disks?: { fi
 		};
 		for (const [id, d] of Object.entries(app.disks)) if (!listed.has(d.file)) problems.push(`${app.id}: ${id} is ${d.file}, not in DISKS.yml`);
 		if (!app.starts?.length) problems.push(`${app.id}: no start`);
-		for (const s of app.starts ?? []) for (const id of s.drives) need(id, `start ${s.label}`);
+		for (const s of app.starts ?? []) {
+			for (const id of s.drives) need(id, `start ${s.label}`);
+			for (const [from, to] of Object.entries(s.use ?? {})) {
+				need(from, `start ${s.label}`);
+				need(to, `start ${s.label}`);
+			}
+		}
 		for (const a of app.actions ?? []) {
 			for (const [drive, id] of Object.entries(a.insert ?? {})) {
 				if (![0, 1].includes(driveIndex(drive))) problems.push(`${app.id}: action ${a.label} names ${drive}`);

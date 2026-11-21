@@ -5,6 +5,9 @@
 // change and every 20 s after the first minute: the frames looks are cut from.
 //
 //   node scripts/lcp-angel.mjs [out dir] [seconds]      (after npm run build)
+//     --side-a FILE --side-b FILE   the two sides; 4am's crack by default
+//     --name NAME --date MMDDYY     what is typed when the guestbook asks
+//     --save-b FILE                 the House side as the game has written it, at the end
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -17,8 +20,20 @@ const { Angel, parseAngel, loadLooks, APPLE_HZ } = await import(join(cab, "dist/
 
 const yml = join(cab, "angels/little-computer-people/ANGEL.yml");
 const disks = join(cab, "disks/apple2/little-computer-people");
-const out = process.argv[2] ?? "/tmp/lcp-angel";
-const until = Number(process.argv[3] ?? 600);
+const args = process.argv.slice(2);
+const opt = (k, d) => {
+	const i = args.indexOf(k);
+	if (i < 0) return d;
+	const [, v] = args.splice(i, 2);
+	return v;
+};
+const sideA = opt("--side-a", join(disks, "lcp-4am-side-a.dsk"));
+const sideB = opt("--side-b", join(disks, "lcp-4am-side-b.dsk"));
+const who = opt("--name", "A");
+const when = opt("--date", "010186");
+const saveB = opt("--save-b");
+const out = args[0] ?? "/tmp/lcp-angel";
+const until = Number(args[1] ?? 600);
 mkdirSync(out, { recursive: true });
 const spec = parseAngel(readFileSync(yml, "utf8"));
 const angel = new Angel(spec, await loadLooks(spec.looks, async (p) => new Uint8Array(readFileSync(join(dirname(yml), p)))));
@@ -28,7 +43,7 @@ const BLACK = [0, 0, 0], WHITE = [0xf0, 0xf0, 0xf0];
 const board = new Apple2Plus(new Uint8Array(readFileSync(join(cab, "roms/apple2/apple2plus.rom"))));
 board.installLanguageCard();
 const disk = new DiskII(new Uint8Array(readFileSync(join(cab, "roms/apple2/diskii.rom"))));
-disk.insert(1, new Uint8Array(readFileSync(join(disks, "lcp-4am-side-a.dsk"))), "side-a.dsk");
+disk.insert(1, new Uint8Array(readFileSync(sideA)), "side-a.dsk");
 board.plug(6, disk);
 const cpu = new Korz6502(board, { korz: "compile" });
 cpu.reset();
@@ -96,12 +111,12 @@ while (seconds() < until) {
 		console.log(`${t.toFixed(1)}s ${changed.id} [${[...angel.seen].join(" ")}]`);
 		await shot(`t${t.toFixed(1).padStart(6, "0")}-${changed.id}.png`);
 		if (changed.id === "flip") flipAt = t;
-		if (changed.id === "name") type("A\r");
-		if (changed.id === "date") type("010186\r");
+		if (changed.id === "name") type(`${who}\r`);
+		if (changed.id === "date") type(`${when}\r`);
 	}
 	if (flipAt >= 0 && t - flipAt >= 1) {
 		flipAt = -1;
-		disk.insert(1, new Uint8Array(readFileSync(join(disks, "lcp-4am-side-b.dsk"))), "side-b.dsk");
+		disk.insert(1, new Uint8Array(readFileSync(sideB)), "side-b.dsk");
 		keys.push(0x20);
 	}
 	if (t > 60 && Math.floor(t / 20) !== lastShot) {
@@ -110,3 +125,4 @@ while (seconds() < until) {
 	}
 }
 console.log(`end ${seconds().toFixed(1)}s ${angel.state.id} [${[...angel.seen].join(" ")}]`);
+if (saveB) writeFileSync(saveB, disk.image(1));

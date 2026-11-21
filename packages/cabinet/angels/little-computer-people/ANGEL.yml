@@ -31,13 +31,18 @@ looks:
         png: looks/signed.png
         at: [69, 136]
         looks:
-          - id: session    # "SESSION ", drawn a moment after the name
+          - id: session    # "SESSION:", drawn a moment after the name
             png: looks/session.png
             at: [69, 152]
+            # Hi-res color at a dot depends on its neighbors, so a look's last few columns,
+            # beside the number that follows, are transparent.
             looks:
               - id: session-1  # first visit: he has not moved in yet
                 png: looks/session-1.png
                 at: [69, 152]
+              - id: dated      # "Date:", drawn after the session number
+                png: looks/dated.png
+                at: [69, 160]
   - id: house              # attic floor left of the stairs; he never stands on it
     png: looks/house.png
     at: [0, 56]
@@ -96,12 +101,18 @@ states:
     speak: Hang on while someone moves in and gets settled.
 
   - id: return-visit
-    when: [guestbook, signed, session]
-    say: Signed. The Apple is loading the house. He is home.
+    when: [guestbook, signed, session, dated]
+    unless: session-1
+    frames: 1
+    say: >-
+      Signed. The Apple is loading the house. He comes in the front door and goes about his
+      business; the game ignores the keyboard until he has, so the angel runs it at max.
+    speak: Welcome back. He is coming home.
 
-  - id: home
+  - &home
+    id: home
     when: house
-    from: [moving-in, return-visit]
+    from: [moving-in]
     # Nothing on screen marks the end of the move-in. In one run (scripts/angel-run.mjs, a
     # request typed every 60 s) the house appeared at 173 s, a request at 480 s was ignored
     # and the one at 540 s was echoed: settled 307-367 s in.
@@ -134,3 +145,10 @@ states:
     say: >-
       He is moving in. The game ignores the keyboard until he has, so there is nothing to do
       but watch. The screen angel runs the Apple at max until he is home, then back to 1×.
+
+  # A man who already lives on the House side has nothing to move, but he walks in first. On
+  # Rob's House side (scripts/lcp-apple-house.mjs) the signed page came up at 29.6 s, a request
+  # typed at 67 s was ignored and one at 68 s was echoed.
+  - <<: *home
+    from: [return-visit]
+    after: 40
