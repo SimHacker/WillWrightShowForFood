@@ -130,6 +130,8 @@ next:  xct i 10       / step IP, execute that cell as an instruction
        jmp next
 ```
 
+(source [kernel.s](tapes/pdp7forth/kernel.s#L60))
+
 ### Auto-index 10, 11, and 12
 
 Locations 10 through 17 are not registers. They are words in low memory that auto-increment
@@ -143,7 +145,7 @@ A pop is done by hand, in the other direction.
 return address, and `nest` at 21 does the work. It does not use that return. Every `CAL`
 would overwrite it. `nest` reads the cell `XCT` just executed, and the address field of that
 cell is the body of the colon word. So a colon call is a bare address, and the machine
-already knows that a bare address means "call."
+already knows that a bare address means "call." (source [kernel.s](tapes/pdp7forth/kernel.s#L47))
 
 ### Constants, variables, and literals
 
@@ -152,6 +154,7 @@ sitting in the thread. `LAC` loads the value. `LAW` loads the address. Either on
 the push. A literal is the same trick, not the usual `(LIT)` followed by an inline cell. The
 compiler searches a pool at the top of memory, growing down, and equal values share one
 entry. The compiled cell is an `LAC` of that entry. Running it is a constant push.
+(source [kernel.s](tapes/pdp7forth/kernel.s#L464))
 
 Location 10 is a second program counter. The PDP-7 runs NEXT, and NEXT runs the Forth program
 one instruction at a time.
@@ -168,7 +171,8 @@ The Type 340 is the other processor in the box. It fetches its own display list 
 core, the way NEXT fetches a thread. The turtle does not draw lines itself. It appends 340
 instructions to that list, and it writes the new terminator before it overwrites the old one,
 because the display may be running the list while Forth is extending it. Mitch showed that
-picture. The cabinet runs the same turtle.
+picture. The cabinet runs the same turtle. (source [turtle.fs](tapes/pdp7forth/turtle.fs#L33),
+[type340.ts](src/plugins/type340.ts))
 
 ## The demo
 
@@ -227,7 +231,8 @@ share references, and YAML can name an anchor, but a ring is already words in th
 Forth is using. You do not parse it. You walk it. The processor in the listing is RSPPIX. It assembles
 into this Forth word for word, moved up by exactly 014000 octal so the listing's address
 arithmetic still adds. Each of its routines is a Forth word, most of them three instructions:
-pop, `jms`, `jmp next`. The words you type sit on top of those.
+pop, `jms`, `jmp next`. The words you type sit on top of those. (source [rsppix.s](tapes/pdp7forth/rsppix.s),
+[pixie.s](tapes/pdp7forth/pixie.s), [pixie.fs](tapes/pdp7forth/pixie.fs))
 
 ```
 RSAVINS S" SQUARE" NAMED
@@ -240,7 +245,8 @@ SYMELEC walks the same ring area. A panel reads three cells out of live core and
 ring in 3D while you append to it. One 1969 structure, the assembly library and the Forth,
 one block of core. The same image can be written out as JSON or YAML and read back into Forth,
 and the 1972 wire format was the rings themselves. The value you type, the value the panel
-draws, and the value you would send across the link are one structure. The demo is
+draws, and the value you would send across the link are one structure. (source
+[scene.ts](../pixie/src/scene.ts#L293), [image.ts](../pixie/src/image.ts#L150)) The demo is
 [PIXIE and FORTH on the PDP-7](https://www.youtube.com/watch?v=lo8kdY-5i6c).
 
 ### The library is in Forth; PIXIE is not driven by it yet
@@ -256,7 +262,7 @@ The Forth device is his PDP-7 Forth as emulated hardware, and it is running. The
 software or hardware, and hardware runs NEXT, on the same image. It does not yet make that
 image smaller. The kernel is still in core. Fitting it into the core PIXIE leaves free is
 two more steps, and only the first of those has started. `X@`, `X!`, and `XMOVE` can already
-reach past 8K, which is what a header stored in the next bank needs. The headers are not
+reach past 8K, which is what a header stored in the next bank needs (source [xmem.fs](tapes/pdp7forth/xmem.fs)). The headers are not
 stored there yet. The assembler has no macros, and that macro is the piece in progress. A
 dictionary answered from outside the 8K, so Forth can sit in SYMELEC's own machine and be
 the control language, is the step after that. It is not built. The plan is at the end.
@@ -275,7 +281,8 @@ of [Bob Supnik](../../characters/bob-supnik/README.md)'s [SIMH PDP-7](SIMH-MAP.m
 opcode. Above that, the same instruction set is written
 as a table of small behaviors. Above that, the table is compiled into one function per operation.
 Above that, a run of instructions is pasted into one JavaScript function. The live pages open on
-that last one. A menu reboots the same disk on any of the four.
+that last one. A menu reboots the same disk on any of the four. (source
+[plugins/pdp7.ts](src/plugins/pdp7.ts), [korz/pdp7.ts](src/korz/pdp7.ts), [compile7.ts](src/korz/compile7.ts))
 
 ### Twice the switch, on the same bytes
 
@@ -299,7 +306,8 @@ knows, it declines, and the three instructions run. A program never has to know 
 there. Thirty thousand passes of `I +` take 890,000 cycles in the kernel and 107,000 with the
 device. At eight cells a cycle, 29,000. That is the same shape as
 [Chuck Moore](../../characters/charles-moore/README.md)'s Novix: one Forth word in the time of one
-memory cycle. The writeup is [FORTH-DEVICE.md](FORTH-DEVICE.md).
+memory cycle. The writeup is [FORTH-DEVICE.md](FORTH-DEVICE.md). (source
+[forth-device.ts](src/korz/forth-device.ts))
 
 ## The compiler under that
 
@@ -318,7 +326,8 @@ the function too. A coprocessor is not a special case. It is another device. Whe
 fetches `xct i 10`, Korz also compiles the one Forth word that cell names, and it checks the
 word before running it. An `XCT` of an `XCT` falls back. The Forth accelerator is the other
 way the guest is mixed in: on the fetch of NEXT it runs one cell itself, on Mitch's stacks.
-Forth is not the language Korz is written in. Forth is in the machine being compiled.
+Forth is not the language Korz is written in. Forth is in the machine being compiled. (source
+[compile7.ts](src/korz/compile7.ts), [compile65.ts](src/korz/compile65.ts))
 
 ### V8 compiles that JavaScript
 
