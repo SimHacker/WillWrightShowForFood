@@ -65,7 +65,8 @@ states:
     ask:
       label: Your name
       hint: Type it here and press OK. The Apple only has capitals; Return is pressed for you.
-      speak: Enter your name.
+      speak: Welcome, researcher, to Little Computer People. Please enter your name.
+      reply: Welcome, {value}.
       keys: "{value}\r"
       upper: true
       maxlength: 30
@@ -84,13 +85,15 @@ states:
       label: Today's date
       hint: Month, day, year as MM/DD/YY.
       default: "{MM}/{DD}/{YY}"
-      speak: Enter the date.
+      speak: Please enter the date.
+      reply: Wow, I can't believe it's {value}! If you say so.
       keys: "{value}\r"
       maxlength: 8
 
   - id: first-visit
     when: [guestbook, signed, session-1]
     say: Signed for session 1. The Apple is loading the house; someone is about to move in.
+    speak: Hang on while someone moves in and gets settled.
 
   - id: return-visit
     when: [guestbook, signed, session]
@@ -128,7 +131,6 @@ states:
     speed: 100
     # One picture per game second. The max button. The wait runs flat out.
     frames: 1
-    speak: He is moving in. Running fast until he is home.
     say: >-
       He is moving in. The game ignores the keyboard until he has, so there is nothing to do
       but watch. The screen angel runs the Apple at max until he is home, then back to 1×.

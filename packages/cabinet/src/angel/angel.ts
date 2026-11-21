@@ -48,6 +48,8 @@ export interface AskSpec {
 	/** Typed into the machine on OK; {value} is what was entered. */
 	keys: string;
 	speak?: string;
+	/** Said on OK instead of the value; {value} is what was entered, as typed. */
+	reply?: string;
 	/** Upper-case the value, for machines that only have capitals. */
 	upper?: boolean;
 	maxlength?: number;

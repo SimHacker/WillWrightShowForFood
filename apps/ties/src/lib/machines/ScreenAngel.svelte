@@ -113,9 +113,10 @@
 		ev.preventDefault();
 		const a = state?.ask;
 		if (!a) return;
-		const v = (a.upper ? value.toUpperCase() : value).trim();
+		const typed = value.trim();
+		const v = a.upper ? typed.toUpperCase() : typed;
 		if (state?.id === 'name' && !v) return;
-		say(v);
+		say(a.reply ? a.reply.split('{value}').join(typed) : v);
 		apple.type(askKeys(a, v));
 		if (a.keep) value = '';
 		else answered = true;
