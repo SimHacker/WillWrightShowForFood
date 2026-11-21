@@ -18,9 +18,17 @@ so I built one. It runs in the browser, light pen and all.
 PIXIE was already a distributed CAD system. The PDP-7 was not a terminal. About 5000 words of it
 talked to you and built the model, and the model had to fit in the 3000 words left in 8K. The
 model then went over Neil Wiseman's link to Cambridge's Titan mainframe, which ran the
-simulation. You drew on the PDP-7. Titan did the computing. The same split is what the Forth
-device is for, once Forth is small enough to share that core. What of that is running, and what
-is not, is below.
+simulation. You drew on the PDP-7. Titan did the computing.
+
+What crossed Wiseman's link was the model, not a drawing of the screen. That is the split
+between a user interface and a computation. They live in different places, and a document
+goes between them. In X11, and in NeWS, the application is the client and the window system
+is the server. NeWS sends PostScript into the window server, which draws and answers the
+pen, and sends back only the events that matter. On the web the word server switches sides.
+The browser is the client, the application is the server, and the document is XML, then
+JSON, then YAML. PIXIE's document was the rings. The same split is what the Forth device is
+for, once Forth is small enough to share that core. What of that is running, and what is
+not, is below.
 
 It is an honor to meet Chuck Moore and to speak with him on this Zoom. Peter Conn and Coco Conn hired
 him at HOMER & Associates. Their console mixed pictures live, sixteen slide projectors and four
@@ -150,8 +158,12 @@ layout, and [does.fs](tapes/pdp7forth/does.fs) is the fifteen lines. Moving the 
 ### The PIXIE ring library, in Forth
 
 The dynamic data is the 1972 library, linked in, not rewritten. PIXIE, Heinz Lemke's editor at
-Cambridge, kept its models as rings: circular structures, graphs rather than trees, the same
-role as an s-expression or a JSON value. The processor in the listing is RSPPIX. It assembles
+Cambridge, kept its models as rings: circular structures, graphs rather than trees. A ring does
+the job JSON does. It is the value that goes from the part you touch to the part that computes.
+JSON is a tree, one thing inside another. A circuit is not. A node sits on several rings at
+once, a branch joins two nodes, and the list comes back around to its owner. PostScript can
+share references, and YAML can name an anchor, but a ring is already words in the core this
+Forth is using. You do not parse it. You walk it. The processor in the listing is RSPPIX. It assembles
 into this Forth word for word, moved up by exactly 014000 octal so the listing's address
 arithmetic still adds. Each of its routines is a Forth word, most of them three instructions:
 pop, `jms`, `jmp next`. The words you type sit on top of those.
@@ -165,7 +177,10 @@ RSAVINS .RING            \ HEX TRIANGLE SQUARE  ok
 
 SYMELEC walks the same ring area. A panel reads three cells out of live core and draws the
 ring in 3D while you append to it. One 1969 structure, the assembly library and the Forth,
-one block of core. The demo is
+one block of core. The same image can be written out as JSON or YAML and read back into Forth,
+and the 1972 wire format was the rings themselves. The value you type, the value the panel
+draws, and the value you would send across the link are one structure. That is why the library
+is worth having in this Forth. The demo is
 [PIXIE and FORTH on the PDP-7](https://www.youtube.com/watch?v=lo8kdY-5i6c).
 
 That ring library is the piece PIXIE calls, and it is in Forth now. PIXIE itself is not being
