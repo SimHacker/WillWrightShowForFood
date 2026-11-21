@@ -4,10 +4,10 @@ Forth Day, Silicon Valley FIG, 21 November 2026, 14:10 to 14:40. Mitch Bradley h
 minutes on how this Forth got written. This is the half hour after that.
 
 - [With Mitch, at Sun](#with-mitch-at-sun)
+- [Chuck Moore](#chuck-moore)
 - [PIXIE's radial menus](#pixies-radial-menus)
 - [PIXIE and Titan](#pixie-and-titan)
 - [The document between them](#the-document-between-them)
-- [Chuck Moore](#chuck-moore)
 - [The Forth](#the-forth)
 - [The demo](#the-demo)
 - [The emulator](#the-emulator)
@@ -20,6 +20,22 @@ I know him from a summer. In 1987 I was his intern at Sun, and we put his CForth
 schematic editor from Lucasfilm that Sun used internally. The editor stayed the editor. A language
 written in Forth made it scriptable, and programmable by demonstration. That is the job I still
 want Forth to do.
+
+## Chuck Moore
+
+It is an honor to meet Chuck Moore and to speak with him on this Zoom. Peter Conn and Coco Conn hired
+him at HOMER & Associates. Their console mixed pictures live, sixteen slide projectors and four
+film projectors, and he programmed its host in PolyForth, in 32K. Atomic Dog and Flying Logos
+came out of that shop. I think that is one of the most amazing things anyone has done with Forth.
+
+Peter Milford has just talked about Lean in Forth. Yesterday
+[Levent Alpöge](https://alpo.ge/remark.pdf) posted a proof of the Riemann hypothesis written in
+Lean with Claude, about 175,000 modules, depending only on Lean's three ordinary axioms.
+[Andrew Sutherland](https://math.mit.edu/~drew/grh/) and others have been replaying it through
+Lean's own kernel and through independent ones, and it has been accepting. The last check, that
+the Lean statement is really the Riemann hypothesis and not a quietly redefined one, was still
+running when this was written. That is why Lean is in the news this weekend. Peter's idea is to
+have that language on a Forth machine.
 
 ## PIXIE's radial menus
 
@@ -48,22 +64,6 @@ The browser is the client, the application is the server, and the document is XM
 JSON, then YAML. PIXIE's document was the rings. The same split is what the Forth device is
 for, once Forth is small enough to share that core. What of that is running, and what is
 not, is below.
-
-## Chuck Moore
-
-It is an honor to meet Chuck Moore and to speak with him on this Zoom. Peter Conn and Coco Conn hired
-him at HOMER & Associates. Their console mixed pictures live, sixteen slide projectors and four
-film projectors, and he programmed its host in PolyForth, in 32K. Atomic Dog and Flying Logos
-came out of that shop. I think that is one of the most amazing things anyone has done with Forth.
-
-Peter Milford has just talked about Lean in Forth. Yesterday
-[Levent Alpöge](https://alpo.ge/remark.pdf) posted a proof of the Riemann hypothesis written in
-Lean with Claude, about 175,000 modules, depending only on Lean's three ordinary axioms.
-[Andrew Sutherland](https://math.mit.edu/~drew/grh/) and others have been replaying it through
-Lean's own kernel and through independent ones, and it has been accepting. The last check, that
-the Lean statement is really the Riemann hypothesis and not a quietly redefined one, was still
-running when this was written. That is why Lean is in the news this weekend. Peter's idea is to
-have that language on a Forth machine.
 
 ## What this half hour covers
 
