@@ -3,6 +3,11 @@
 Forth Day, Silicon Valley FIG, 21 November 2026, 14:10 to 14:40. Mitch Bradley has just spent ten
 minutes on how this Forth got written. This is the half hour after that.
 
+It is an honor to meet Chuck Moore and to speak in the same room. Peter Conn and Coco Conn hired
+him at HOMER & Associates. Their console mixed pictures live, sixteen slide projectors and four
+film projectors, and he programmed its host in PolyForth, in 32K. Atomic Dog and Flying Logos
+came out of that shop. I think that is one of the most amazing things anyone has done with Forth.
+
 The long essay, [A sea of slots](SEA-OF-SLOTS.md), is about Korz, a way of writing the emulator.
 This note is the Forth. It says what is running, in the order a Forth programmer can check: the
 PDP-7 Forth itself, the emulator it runs in, and the browser compiler underneath that emulator.
@@ -59,15 +64,21 @@ picture. The cabinet runs the same turtle.
 
 ### Names, and rings
 
-Two changes are in the image today.
+Two things were added on top of his kernel. Neither one changes NEXT.
 
-The cabinet's copy keeps the whole name, up to 31 characters, three SIXBIT characters to a word.
-The layout is the Open Firmware one: name, header, body. The execution token is still the header
-address. Links still run from header to header. The copy is made from Mitch's kernel by a script,
-and his kernel stays beside it as the reference the tests compare against.
-[FORTH-RINGS.md](FORTH-RINGS.md) has the layout. Moving those names out of the 8K bank is not done.
-The words that can already fetch and store past 8K are, and they are below, under what is not
-built yet.
+The names are kept whole, up to 31 characters, three SIXBIT characters to a word. The layout is
+Open Firmware's: name, then header, then body. The execution token is still the header address.
+His own kernel, with the three-character headers, stays beside it, and the tests still compare
+the two. `CREATE` `DOES>` is fifteen lines of Forth on that copy. A created word is a colon word
+with one empty slot, and `DOES>` fills the slot with the code that follows it.
+
+```
+: konst  create ,  does> @ ;      42 konst answer
+```
+
+The copy is made from his source by a script. [FORTH-RINGS.md](FORTH-RINGS.md) has the name
+layout, and [does.fs](tapes/pdp7forth/does.fs) is the fifteen lines. Moving the names out of the
+8K bank is not done. That is below, with the macro that would build every layout from one source.
 
 The dynamic data is older than the Forth. PIXIE, Heinz Lemke's editor at Cambridge, kept its
 models as rings: circular structures, graphs rather than trees, the same role as an s-expression
@@ -166,12 +177,17 @@ not in the image today.
 
 Three smaller things are in the same state.
 
-The fetches past 8K are real: `X@`, `X!`, and `XMOVE`, on the Type 148 extension, extend mode on
-only for the duration of the word. Hand poses and tables already go there.
-[FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md) is the mechanism. The dictionary's names are still in
-bank 0. Putting the name string in bank 1, and leaving the header and the body where NEXT already
-finds them, is designed and not built. Nothing that runs a word reads a name, so NEXT would not
-change.
+The fetches past 8K are real: `X@`, `X!`, and `XMOVE`. Hand poses and tables already go there.
+The names do not. The plan is one kernel source and one header macro, with an assignment at the
+top that picks the layout. The same words recompile as Mitch's three-character headers, as the
+full names running today, as names kept in the next bank with a pointer in the header, or as
+headerless code. Nothing that runs a word reads a name, so NEXT stays put. The macro assembler
+is the missing piece. The cabinet's assembler has no macros yet.
+[FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md) is the expansion.
+
+The same switch can build other threading models, so they can be measured against this one.
+`XCT` threading is already the right fit for the PDP-7. The experiment is there to compare, not
+because a better inner interpreter is expected.
 
 The accelerator still jumps to primitives that live in core. A dictionary answered from outside
 the 8K bank, so that Forth could sit in SYMELEC's own machine and call its rings, is the reason
