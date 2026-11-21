@@ -87,6 +87,16 @@ not, is below.
 
 The long essay, [A sea of slots](SEA-OF-SLOTS.md), is about
 [Korz](https://github.com/SimHacker/moollm/tree/main/designs/korz), a way of writing the emulator.
+Korz is [David Ungar](../../characters/david-ungar/README.md), Harold Ossher and Doug Kimelman's
+language ([Onward! 2014](../../characters/david-ungar/sources/korz-2014-onward.pdf)): no objects,
+only a sea of slots, each guarded by coordinates, and a message goes to the most specific slot
+that matches. The name comes from [Alfred Korzybski](https://en.wikipedia.org/wiki/Alfred_Korzybski),
+who founded general semantics. His *[Science and Sanity](https://en.wikipedia.org/wiki/Science_and_Sanity)*
+(1933) is about how much a point of view shapes what one sees, and it has his best-known line:
+"[A map is not the territory](https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation) it
+represents, but, if correct, it has a similar structure to the territory, which accounts for its
+usefulness." An emulator is that kind of map of a machine.
+
 This note is the Forth. It says what is running, in the order a Forth programmer can check: the
 PDP-7 Forth itself, the emulator it runs in, and the two compilers under that emulator.
 What is not built yet is at the end.

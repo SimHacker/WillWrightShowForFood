@@ -14,6 +14,16 @@ watch the PDP-7 change.
 
 ## The idea
 
+Korz is [David Ungar](../../characters/david-ungar/README.md), Harold Ossher and Doug Kimelman's
+language of subjective, context-oriented programming
+([Onward! 2014](../../characters/david-ungar/sources/korz-2014-onward.pdf)). The name comes from
+[Alfred Korzybski](https://en.wikipedia.org/wiki/Alfred_Korzybski), the founder of general
+semantics, whose *[Science and Sanity](https://en.wikipedia.org/wiki/Science_and_Sanity)* (1933)
+is about how much a point of view shapes what one sees. It has his best-known line:
+"[A map is not the territory](https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation) it
+represents, but, if correct, it has a similar structure to the territory, which accounts for its
+usefulness." An emulator is that kind of map of a machine, and the slots below are its structure.
+
 An emulator is a dispatcher with small, finite, fully known coordinates: address, read or write or
 fetch, who is on the bus, opcode bits, device code, IOT pulse, memory configuration. Emulators
 encode that dispatch by hand in switch statements and page tables. A plugin that wants to change one

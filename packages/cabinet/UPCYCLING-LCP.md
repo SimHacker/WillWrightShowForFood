@@ -76,7 +76,11 @@ Each piece is there because the goal needs it.
    the 16K language card ([lang.ts](src/korz/apple2/lang.ts)), the Disk II with its ROM in slot 6
    ([disk2.ts](src/korz/apple2/disk2.ts)), and the character generator ROM for text
    ([chargen.ts](src/korz/apple2/chargen.ts)). The guestbook side needs the language card.
-4. **Korz, to make it fast.** The same 6502 at four rungs: a switch statement, an interpreter, a
+4. **Korz, to make it fast.** Korz is
+   [David Ungar](../../characters/david-ungar/README.md)'s language of slots, dispatched on
+   coordinates, named for [Alfred Korzybski](https://en.wikipedia.org/wiki/Alfred_Korzybski) and
+   his "[a map is not the territory](https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation)".
+   Here it is the same 6502 at four rungs: a switch statement, an interpreter, a
    resolver, and a compiler that turns the machine's code into JavaScript that V8 compiles again
    ([compile65.ts](src/korz/compile65.ts), [KORZ-MACHINES.md](KORZ-MACHINES.md)). The page opens
    on the compiler. The idea of generating JavaScript the host's JIT likes is Vanessa
