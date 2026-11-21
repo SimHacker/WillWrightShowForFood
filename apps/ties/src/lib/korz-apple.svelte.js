@@ -96,18 +96,6 @@ function paint(ram, mode, face, into, flash) {
 						into[at + 3] = 255;
 					}
 				}
-				// A cursor is the inverse of a blank glyph, a solid block. The character ROM
-				// leaves the rightmost dot of every glyph dark, so the block reaches back
-				// one dot and meets the character before it.
-				if (inverse && raw === 0 && col > 0) {
-					for (let d = 1; d <= 2; d++) {
-						const at = x0 - d * 4;
-						into[at] = WHITE[0];
-						into[at + 1] = WHITE[1];
-						into[at + 2] = WHITE[2];
-						into[at + 3] = 255;
-					}
-				}
 			}
 		}
 		if (hires) paintHires(y, into);

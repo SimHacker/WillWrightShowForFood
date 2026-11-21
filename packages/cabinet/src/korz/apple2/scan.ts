@@ -189,12 +189,6 @@ export function picture(ram: Uint8Array, mode: ScanMode, glyphs?: Uint8Array, fl
 					out[x0 + b * 2] = on;
 					out[x0 + b * 2 + 1] = on;
 				}
-				// A cursor is the inverse of a blank glyph. The rightmost dot of every
-				// glyph is dark, so the block reaches back one dot and meets the character.
-				if (inverse && raw === 0 && col > 0) {
-					out[x0 - 1] = 1;
-					out[x0 - 2] = 1;
-				}
 			}
 		}
 	}

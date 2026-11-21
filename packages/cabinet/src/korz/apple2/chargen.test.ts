@@ -28,8 +28,9 @@ test("the ][+ character ROM draws an inverse @, and a bare boot shows APPLE ][",
 	prompt[0x401] = 0x20;
 	const cursor = picture(prompt, { graphics: false, mixed: false, page2: false, hires: false }, glyphs, false);
 	assert.equal(cursor[6], 1, "the A's top pixel is the third dot");
-	assert.equal(cursor[12], 1, "the cursor meets the character before it");
-	assert.equal(cursor[13], 1);
+	assert.equal(cursor[12], 0, "the A's blank right column stays dark beside the cursor");
+	assert.equal(cursor[13], 0);
+	assert.equal(cursor[14], 1, "the cursor is its own cell");
 	const ram = new Uint8Array(0x800);
 	const inverse = picture(ram, { graphics: false, mixed: false, page2: false, hires: false }, glyphs, false);
 	let on = 0;
