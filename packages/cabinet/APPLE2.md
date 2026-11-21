@@ -1,7 +1,11 @@
 # The Apple ][ section
 
-The cabinet's first machine that isn't DEC's. It runs on microM8, compiled to WebAssembly
-([MICROM8.md](MICROM8.md)), and boots real disks.
+The cabinet's first machine that isn't DEC's. It boots real disks on the Korz Apple ][+: a 6502
+at four rungs, from a switch statement to a compiler into JavaScript, with the language card, the
+Disk II and microM8's 14 MHz hi-res scan ([src/korz/apple2](src/korz/apple2/README.md),
+[BENCHMARKS.md](BENCHMARKS.md#apple-)). microM8, compiled to WebAssembly
+([MICROM8.md](MICROM8.md)), is in the same menu as the oracle. The first game it upcycles all the
+way is Little Computer People: [UPCYCLING-LCP.md](UPCYCLING-LCP.md).
 
 | Where | What |
 |---|---|

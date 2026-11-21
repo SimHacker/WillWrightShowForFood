@@ -66,6 +66,10 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
 - [MANIFESTO.md: a federation of emulators](MANIFESTO.md#a-federation-of-emulators-after-microm8):
   other emulators join as peers that trade messages and memory, not as ports into this one.
   The attitude comes from microM8, which "upcycles" the Apple ][.
+- [UPCYCLING-LCP.md: Little Computer People, upcycled](UPCYCLING-LCP.md): the first Apple game
+  made easy to play all the way. The Korz Apple runs the move-in in seconds, the screen angel
+  turns the disk over and asks for the name and date in a field, buttons replace the control
+  keys, and the game guide sits beside it. The game is not patched.
 - [WEB-BENCH.md: the Apple \]\[ is microM8](WEB-BENCH.md#decisions-for-the-cabinets-browser-bench): browser emulators compared, and
   microM8's MIT-licensed Go compiled to WebAssembly, built and running.
   [MICROM8.md](MICROM8.md) covers what microM8 exposes: an HTTP API, an MCP server and a debugger.

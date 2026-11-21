@@ -1,18 +1,25 @@
 # Little Computer People
 
-Activision, 1985. A little man moves into the three-story house on your disk, with his dog, and
-lives there: he cooks, reads the paper, watches television, plays the piano, and now and then
-writes you a letter about how he feels. There is nothing to win. Every copy of the game made its
-own person, with his own name and temperament, so no two houses play the same.
+[Activision](https://en.wikipedia.org/wiki/Activision), 1985. A little man moves into the
+three-story house on your disk, with his dog, and lives there: he cooks, reads the paper, watches
+television, plays the piano, and now and then writes you a letter about how he feels. There is
+nothing to win. Every copy of the game made its own person, with his own name and temperament, so
+no two houses play the same.
 
-Rich Gold had the idea: a Pet Person, in the spirit of the Pet Rock, that you would boot and
-watch. David Crane took it on at Activision and rewrote it so the person answers you, and argued
-with Gold about whether he should. Both positions shipped: Little Computer People is watched more
-than played, and The Sims, fifteen years later, is played.
+[Rich Gold](../../../characters/rich-gold/README.md) had the idea: a Pet Person, in the spirit of
+the [Pet Rock](https://en.wikipedia.org/wiki/Pet_Rock), that you would boot and watch.
+[David Crane](../../../characters/david-crane/README.md), who had made
+[Pitfall!](https://en.wikipedia.org/wiki/Pitfall!), took it on at Activision and rewrote it so the
+person answers you, and argued with Gold about whether he should. Both positions shipped: Little
+Computer People is watched more than played, and The Sims, fifteen years later, is played.
+
+This is the [Apple ][+](https://en.wikipedia.org/wiki/Apple_II_Plus) version, running on the
+cabinet's own Apple emulator. How the page makes it easy to play, and why, is in
+[Upcycling Little Computer People](../UPCYCLING-LCP.md).
 
 ## One of the roots of The Sims
 
-[Will Wright](https://en.wikipedia.org/wiki/Will_Wright_(game_designer)), who designed
+[Will Wright](../../../characters/will-wright/README.md), who designed
 [The Sims](https://en.wikipedia.org/wiki/The_Sims_(video_game)), has said he played Little
 Computer People, and that Rich Gold gave him feedback while he was making The Sims. A person with
 needs and moods, living in a house you look into from the side, getting on with life whether you
@@ -21,6 +28,22 @@ first baby steps toward the simulation genre" when he made the person interactiv
 [Wikipedia's history of the game](https://en.wikipedia.org/wiki/Little_Computer_People), with
 their sources.
 
+The sequel never came. Producer Sam Nelson prototyped an apartment building of Little Computer
+People, where you would watch the people meet and look after several homes at once, and it was
+dropped ([the Little Computer People show](../../../repo-shows/little-computer-people/README.md)).
+
+## Moving him to Soul City
+
+Little Computer People is one of the first bridges for
+[Soul City](../../../catalogs/soul-city/README.md), where a character from one game can move to
+another and back ([soul bridges](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-BRIDGES.md)).
+Each house keeps its person in 256 bytes that the disk drive rewrote as he lived. On the
+Commodore 64 that record is read and written already: the people on three played disks, Rob, Ivan
+and Fritz, are [characters you can read](../worlds/little-computer-people/README.md),
+and any of them can move into another copy of the game. The Apple record is on track 8 and is not
+decoded yet. His first new home is meant to be [Tiny Life](https://tinylifegame.com/), by
+[Ell](../../../characters/ellpeck/README.md), where he would have neighbors for the first time.
+
 ## The screen angel
 
 Under the screen, the **screen angel** watches what the Apple shows and tells you what the game
@@ -28,14 +51,15 @@ wants. When the game asks for something typed, it asks you in a field on the pag
 it aloud, and types your answer into the Apple with the Return. While it asks, the Apple's own
 keyboard is off, so nothing you type goes astray. The moves under the screen are only the ones
 that work at that moment. Untick **Screen angel** to do it all yourself on the Apple keyboard,
-with every move shown; untick **Speak** to keep it quiet.
+with every move shown; untick **Speak** to keep it quiet. How it sees the screen is in
+[The screen angel](../UPCYCLING-LCP.md#the-screen-angel).
 
 ## Moving in
 
 1. **Turn the disk over.** The game boots the Guestbook side and says *Please turn over
    HOUSE-ON-A-DISK and press a key*. The screen angel does it for you: it puts the House side in
-   the drive and presses the key, as you would have done with the floppy. Without the angel, press
-   **Turn the Disk Over** under the screen.
+   the [Disk II](https://en.wikipedia.org/wiki/Disk_II) drive and presses the key, as you would
+   have done with the floppy. Without the angel, press **Turn the Disk Over** under the screen.
 2. **Sign the guestbook.** It asks for the *name of the researcher*, first name then last: that
    is you. Type it in the field and press OK. Then the date, already filled in with today, as
    MM/DD/YY. Without the angel, click the screen so the keys go to the Apple, type the name and
@@ -46,9 +70,10 @@ with every move shown; untick **Speak** to keep it quiet.
 
 **The keyboard does nothing until he has moved in.** That is the game, not the emulator: the
 manual says keyboard commands do not work during the move-in. The screen angel runs the Apple
-at max while he moves in and puts it back to 1× when he is home. Without the angel, press **max**
-under the screen, and **1×** once he is home. He only has to move in once: after
-that he is there every time you boot the disk.
+at max while he moves in and puts it back to 1× when he is home, so the wait takes seconds, not
+minutes ([benchmarks](../BENCHMARKS.md#apple-)). Without the angel, press **max** under the
+screen, and **1×** once he is home. He only has to move in once: after that he is there every
+time you boot the disk.
 
 ## Being a good host
 
@@ -70,7 +95,8 @@ Keep an eye on his food and water: hungry or thirsty for too long, he turns gree
 bed. He would rather not sleep too much; he would rather have your attention.
 
 **Talk to him.** Type a sentence in the screen angel's *Say something to him* field and press OK,
-or press one of the request buttons. He has manners and likes yours, so say *please*:
+press one of the request buttons, or click a request under the field to fill it in. He has manners and likes yours, so say
+*please*:
 
 - PLEASE PLAY THE PIANO
 - PLEASE PLAY ANOTHER SONG
@@ -92,6 +118,12 @@ again with **Insert file…** to pick up where you left off.
 
 ## Going deeper
 
+- [Upcycling Little Computer People](../UPCYCLING-LCP.md): why the page does what it does, and
+  the pieces it took: the Korz Apple emulator, the screen angel, the buttons and this guide.
+- [The cabinet manifesto](../MANIFESTO.md#tribute-accessibility-and-fun-beat-realism): tribute,
+  accessibility and fun beat realism.
+- [microM8](https://paleotronic.com/software/microm8/), April and Melody Ayres-Griffiths's Apple ][
+  emulator, whose word for this is "upcycling"; it is also in the emulator menu under the screen.
 - [The Little Computer People show](../../../repo-shows/little-computer-people/README.md): reading
   the first computer person off a 1985 floppy and giving him neighbors, by moving him into
   [Tiny Life](https://tinylifegame.com/).

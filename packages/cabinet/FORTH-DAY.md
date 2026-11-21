@@ -461,3 +461,8 @@ the first half of
 The Type 340 and the ring picture are under
 [Displays as views of memory](SEA-OF-SLOTS.md#displays-as-views-of-memory). The rest of that essay
 is Korz, and it can wait.
+
+The same Korz compiler runs an Apple ][+, fast enough that the little man in Activision's
+[Little Computer People](https://hyperties.org/cabinet/games/little-computer-people/) moves in
+while you watch. A screen angel reads the Apple's pixels, turns the disk over, and asks for your
+name and the date in a field: [Upcycling Little Computer People](UPCYCLING-LCP.md).
