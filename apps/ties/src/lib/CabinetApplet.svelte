@@ -4930,9 +4930,9 @@
 		display: flex;
 		flex-shrink: 0;
 		gap: 2px;
-		text-transform: uppercase;
 	}
 	.chip {
+		text-transform: uppercase;
 		height: 1.4rem;
 		padding: 0 0.4em;
 		white-space: nowrap;

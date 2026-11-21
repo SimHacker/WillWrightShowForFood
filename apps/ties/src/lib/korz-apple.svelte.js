@@ -173,7 +173,7 @@ class KorzApple {
 	#last = 0;
 	/** Cycle the speaker samples have been generated up to. */
 	#heard = 0;
-	/** @type {{ ctx: AudioContext, out: AudioNode, next: number } | null} */
+	/** @type {{ ctx: AudioContext, out: AudioNode, gain: GainNode, next: number } | null} */
 	#audio = null;
 	#samples = new Float32Array(44100);
 	/** @type {Promise<void> | null} */
@@ -319,9 +319,19 @@ class KorzApple {
 		highpass.type = 'highpass';
 		highpass.frequency.value = 20;
 		const gain = ctx.createGain();
-		gain.gain.value = 0.3;
+		gain.gain.value = 0.3 * this.#volume;
 		highpass.connect(gain).connect(ctx.destination);
-		this.#audio = { ctx, out: highpass, next: 0 };
+		this.#audio = { ctx, out: highpass, gain, next: 0 };
+	}
+
+	#volume = 1;
+	/** The speaker's loudness, 0 to 1, on top of the page's own level. */
+	get volume() {
+		return this.#volume;
+	}
+	set volume(v) {
+		this.#volume = v;
+		if (this.#audio) this.#audio.gain.gain.value = 0.3 * v;
 	}
 
 	/** Turn the speaker flips since last time into samples and queue them. */

@@ -52,7 +52,7 @@ class MicroM8Machine {
 	#sent = [false, false, false];
 	/** @type {number[]} */
 	#padAxes = [];
-	/** @type {{ ctx: AudioContext, out: AudioNode, next: number } | null} */
+	/** @type {{ ctx: AudioContext, out: AudioNode, gain: GainNode, next: number } | null} */
 	#audio = null;
 	#samples = new Float32Array(48000);
 	/** Switched on without a disk, the //e spins its empty drive; Ctrl-Reset lands it in Applesoft. */
@@ -158,9 +158,19 @@ class MicroM8Machine {
 		highpass.type = 'highpass';
 		highpass.frequency.value = 20;
 		const gain = ctx.createGain();
-		gain.gain.value = 0.3;
+		gain.gain.value = 0.3 * this.#volume;
 		highpass.connect(gain).connect(ctx.destination);
-		this.#audio = { ctx, out: highpass, next: 0 };
+		this.#audio = { ctx, out: highpass, gain, next: 0 };
+	}
+
+	#volume = 1;
+	/** The speaker's loudness, 0 to 1, on top of the page's own level. */
+	get volume() {
+		return this.#volume;
+	}
+	set volume(v) {
+		this.#volume = v;
+		if (this.#audio) this.#audio.gain.gain.value = 0.3 * v;
 	}
 
 	/**
