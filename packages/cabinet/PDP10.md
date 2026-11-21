@@ -449,6 +449,32 @@ house, and the people in it can be the cabinet's characters.
 mounts, the drawing store, the services, the clocks, and the map. Each machine reaches it through
 a door in its own idiom, with the request block in its own word size.
 
+## MacLisp, fast and in view
+
+A goal, not built. MacLisp is part of the ITS build in [PDP-10/its](https://github.com/PDP-10/its),
+so it comes with phase 5. Two things make it a good test of this design:
+
+- **It runs on half-words.** A cons is one word, CAR in the left half and CDR in the right, so
+  `CAR` is `HLRZ` and `CDR` is `HRRZ`, and NIL tests are jumps on a half. Lists are walked with
+  `PUSHJ`, `POPJ`, `PUSH` and `POP` on a stack pointer that is itself a count and an address in
+  halves. Those are the instructions the two-array memory does in one load or store, and the ones
+  the compiler should make fastest. MacLisp's own compiler already open-codes fixnum and flonum
+  arithmetic, so compiled MacLisp runs mostly straight-line code with few traps.
+- **Its types are in its memory map.** MacLisp keeps each type in its own segments (BIBOP, a big
+  bag of pages) and looks a word's type up in a segment table by address. The table is in core,
+  so the cabinet can read it too, and knows without guessing whether a word is a cons, a fixnum,
+  a flonum, a symbol or an array.
+
+That is what a viewer needs, and [RingView](../../apps/ties/src/lib/RingView.svelte) already does
+the same for PIXIE: it reads core live, lays the structure out in 3D, lights the cells that
+changed, and opens a cell in the memory panel when clicked. A MacLisp view reads the segment table
+for types and walks conses from roots: the obarray of interned symbols, their property lists and
+values, and the stack. The planes add what core alone can't show. The writer plane shows which
+function last did a `RPLACA` or `RPLACD` on a cell, the heat plane shows which lists are being
+walked, and the age of each write shows the free list being used up and refilled by the garbage
+collector. The segment size, the table's layout and the roots' addresses come from the MacLisp
+sources, which are still to read.
+
 ## Phases
 
 0. **36-bit hygiene.** Fix the `& wmask` masks in [turing.ts](src/plugins/turing.ts) and test the
@@ -477,6 +503,9 @@ a door in its own idiom, with the request block in its own word size.
 10. **The ninth floor.** A PDP-11 on the Korz kit running tv.147, the status register, then the
     elevator, the door, the tourists and the hackers. Acceptance: `:ESCE 9` at an ITS terminal and
     Escape D on a Knight TV both bring a tourist in.
+11. **MacLisp, fast and in view.** Benchmarks of interpreted and compiled MacLisp on the Korz
+    KA10, then the cons viewer over the segment table and the planes
+    ([MacLisp, fast and in view](#maclisp-fast-and-in-view)).
 
 ## Sources
 
