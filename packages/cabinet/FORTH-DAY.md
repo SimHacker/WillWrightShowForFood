@@ -71,6 +71,28 @@ instructions to that list, and it writes the new terminator before it overwrites
 because the display may be running the list while Forth is extending it. Mitch showed that
 picture. The cabinet runs the same turtle.
 
+## The demo
+
+This is the part to show. Have [the Forth page](https://hyperties.org/cabinet/forth/) up, and
+draw a square:
+
+```
+4 0 DO 200 FD 90 RT LOOP
+```
+
+Those four moves are vector words in the display list. A vector word holds a step of at most
+127 in each direction. A longer move is several words. Open the tool menu on the tube and
+choose **Edit 340 instructions**. Point at a corner and drag it.
+
+The corner moves, and the rest of the picture stays. The drag writes two words in core: the
+vector that arrives at the corner takes the new end, and the vector that leaves absorbs the
+difference. A step the 7-bit field cannot hold is refused, and the box on the screen is that
+limit. Forth does not hear the drag. The light pen is put away. You are editing the
+instructions the turtle assembled, and the 340 is the processor that executes them.
+
+The same edit can be done from the prompt. The tooltip gives the address of the word under
+the pointer, and `!` stores a new one. The editor is that store, done with the mouse.
+
 ### Names, and rings
 
 Two things were added on top of his kernel. Neither one changes NEXT.
