@@ -9,6 +9,7 @@
 
 import type { WorldFiles } from "@wwsff/bridge";
 import { Dos33Volume } from "./dos33.js";
+import { exportHouseSide, importHouseSide } from "./lcp.js";
 import { exportDisk, importDisk } from "./mind-mirror.js";
 import { PascalVolume } from "./pascal.js";
 import { Scenario } from "./wizardry.js";
@@ -73,7 +74,13 @@ const mindMirrorBridge: CharacterBridge = {
 };
 
 /** The bridges by the id an app's `people.bridge` names (disks/apple2/APPS.yml). */
-export const BRIDGES: Record<string, CharacterBridge> = { wizardry: wizardryBridge, "mind-mirror": mindMirrorBridge };
+const lcpBridge: CharacterBridge = { export: (image) => exportHouseSide(image), import: importHouseSide };
+
+export const BRIDGES: Record<string, CharacterBridge> = {
+	wizardry: wizardryBridge,
+	"mind-mirror": mindMirrorBridge,
+	"little-computer-people": lcpBridge,
+};
 
 export const WIZARDRY_I: AppleGame = {
 	id: "wizardry-i",

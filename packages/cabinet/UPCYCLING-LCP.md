@@ -42,6 +42,8 @@ The game is gentle once he lives in the house. Getting there, and looking after 
 | Control keys from the manual | Buttons: Food, Water, Dog Food, Ring the Alarm, Ring the Phone, Pat Him, A Record, A Book |
 | Guess a request | A field for typing to him, and requests to click: PLEASE PLAY THE PIANO, PLEASE DANCE, … |
 | Keep the floppy | **Save disk** downloads the House side as it is now; **Insert file…** puts it back |
+| One floppy, one person | **Visit Rob**, **Visit Ivan** and **Visit Fritz** boot disks someone already lives on |
+| Nothing tells you who lives there | **Read from Disk** shows the person on the House side as a `CHARACTER.yml` |
 
 Every one of these is optional. Untick **Screen angel** and the keyboard goes to the Apple, every
 move is shown as a button, and the game is the 1985 game. Untick **Speak** to keep it quiet.
@@ -51,14 +53,16 @@ to move him in and look after him, where the game came from, and how it led to T
 
 ## Why the emulator has to be fast
 
-Nothing on the screen says he has finished moving in. In one run he settled between 307 and 367
-seconds of Apple time after the house first appeared, so the screen angel waits 370. At 1× that
-is more than six minutes of watching. microM8's WebAssembly build runs the Apple at about 2.5 to
-2.9 times real speed, which still leaves more than two minutes
+Nothing on the screen says he has finished moving in until the game is asked. Press Return once
+it reads the keyboard and it opens its input line, an empty white bar across the top of the
+house; before that the key does nothing. So while he moves in, the screen angel presses Return
+every 5 seconds of Apple time, and he is home when the bar is there. In the replay below that
+was 300 seconds after the house first appeared: at 1×, five minutes of watching. A man coming
+home to a disk he already lives on walks in and takes about 35 seconds. microM8's WebAssembly
+build runs the Apple at about 2.5 to 2.9 times real speed, which still leaves two minutes
 ([BENCHMARKS.md](BENCHMARKS.md#apple-)). The Korz Apple, at max in Chrome, read 88 MHz while the
 guestbook side loaded and 30 to 35 MHz in the house, about 30 times real speed, so the whole
-move-in takes seconds. Under Node, 420 seconds of Apple time, from power on to home, take 11
-seconds.
+move-in takes seconds. Under Node, 420 seconds of Apple time take 11 seconds.
 
 So the speed is part of the accessibility. A wait nobody will sit through is a wall.
 
@@ -68,7 +72,8 @@ Each piece is there because the goal needs it.
 
 1. **The disks.** 4am's crack of the Research Project disk, Guestbook side and House side
    ([APPS.yml](disks/apple2/APPS.yml#L41), [the crack](https://archive.org/details/LittleComputerPeople4amCrack)).
-   The game runs from them unchanged.
+   The game runs from them unchanged. Three more pairs carry people already moved in
+   ([below](#soul-city-carrying-him-out)).
 2. **A 6502 that is exactly right.** The switch CPU ([m6502.ts](src/m6502/m6502.ts)) passes the
    SingleStepTests `6502/v1` suite, every bus cycle included. A game that times its own disk reads
    and draws its own screens needs that.
@@ -106,7 +111,7 @@ Each piece is there because the goal needs it.
     image.
 12. **Reading the disk as files.** DOS 3.3, ProDOS and Apple Pascal in TypeScript
     ([dos33.ts](src/apple2/dos33.ts), [APPLE2.md](APPLE2.md#disk-images)), the bottom of any
-    bridge.
+    bridge, and the person on the House side as YAML ([lcp.ts](src/apple2/lcp.ts)).
 13. **microM8, as the oracle.** Still in the page's menu. When the Korz Apple and microM8 disagree,
     microM8 is the one to check against.
 
@@ -122,8 +127,9 @@ It is data in [ANGEL.yml](angels/little-computer-people/ANGEL.yml) and code in
 
 **Looks** are PNGs cut from the screen, each with the place it sits. They form a tree: a look's
 own looks are only tried while it is seen. A look matches exactly. Transparent pixels are not
-compared, so the name prompt is seen with the blinking cursor on or off. Little Computer People
-has ten:
+compared, so the name prompt is seen with the blinking cursor on or off. Hi-res color at a dot
+depends on the dots beside it, so a look that ends beside text that changes, like the session
+number, has its last few columns transparent. Little Computer People has twelve:
 
 | Look | What it is |
 |---|---|
@@ -131,8 +137,10 @@ has ten:
 | `flip` | *Please turn over HOUSE-ON-A-DISK and press a key* |
 | `name`, `name-empty` | the name prompt, and its line still empty |
 | `date`, `date-empty` | the date prompt, and its line still empty |
-| `signed`, `session`, `session-1` | the signed page, and *SESSION 1* on a first visit |
+| `signed`, `session`, `session-1` | the signed page, and *SESSION: 1* on a first visit |
+| `dated` | *Date:* under the session, drawn after its number |
 | `house` | the attic floor left of the stairs, where he never stands |
+| `field` | the game's input line, open and empty: two white text rows across the top |
 
 The house look is 240 by 16 pixels. Its top three rows are transparent, because his feet cross
 them when he walks the attic. Over 900 seconds of play those were the only rows that changed.
@@ -150,6 +158,7 @@ the state:
 | `lock` | the Apple's keyboard is off, so typing goes to the field |
 | `moves`, `auto` | the buttons that work now, and one the angel presses itself |
 | `speed`, `frames` | the Apple's speed from here on, and pictures per game second while it runs fast |
+| `probe` | keys typed every few seconds while in the state, for a game that shows when it starts to listen |
 
 Little Computer People's states, from the replay below:
 
@@ -160,11 +169,14 @@ Little Computer People's states, from the replay below:
 | 31.4 s | `name` | the name field, said aloud |
 | 31.6 s | `signing` | the name is being written |
 | 32.0 s | `date` | the date field, with today in it |
-| 32.6 s | `first-visit` | *SESSION 1*: *Hang on while someone moves in and gets settled.* |
-| 39.6 s | `moving-in` | the house is on the screen; max, one picture a second |
-| 409.6 s | `home` | 1×, the buttons, and the field for talking to him |
+| 32.6 s | `first-visit` | *SESSION: 1*: *Hang on while someone moves in and gets settled.* |
+| 39.6 s | `moving-in` | the house is on the screen; max, one picture a second, Return every 5 s |
+| 339.8 s | `home` | the input bar is open: 1×, the buttons, and the field for talking to him |
 
-A disk he already lives in goes from `signed` and `session` to `return-visit`, and straight home.
+A disk he already lives on skips the name. On Rob's: `flip` at 26.4 s, `date` at 28.8 s,
+`return-visit` at 29.6 s (*SESSION: 2*, *Welcome back*), `coming-home` at 36.4 s, when the
+house appears and the Return presses start, and `home` at 71.6 s. The angel presses nothing on
+the guestbook pages, where Return would answer a question.
 
 **Checking the looks.** [lcp-angel.mjs](scripts/lcp-angel.mjs) plays the game headless on the
 Korz Apple with the real screen angel and prints each state as it enters it. It paints the way
@@ -174,6 +186,8 @@ the page paints and saves a PNG at each change, which is what new looks are cut 
 ```sh
 npm run build
 node scripts/lcp-angel.mjs /tmp/lcp-angel 420
+node scripts/lcp-angel.mjs /tmp/lcp-rob 90 --side-a disks/apple2/little-computer-people/rob-guestbook.dsk \
+  --side-b disks/apple2/little-computer-people/rob-house.dsk
 node scripts/angel-cut.mjs /tmp/lcp-angel/t0026.6-flip.png 69 136 270 24 angels/little-computer-people/looks/flip.png
 ```
 
@@ -213,8 +227,19 @@ he lived.
   [lcp-world.mjs](scripts/lcp-world.mjs) export the person on a C64 disk as a character directory
   and import him into any copy of the game. Three lived-in houses are in
   [worlds](worlds/little-computer-people/README.md): Rob, Ivan and Fritz.
-- **Not built, on the Apple.** The same template is on track 8 of the Apple disks, and its layout
-  is not decoded yet. The Apple disks here were never played. This page is how they get played.
+- **Built, on the Apple.** The House side keeps him in track 14 sector 15: his name, the date he
+  moved in, the sessions, the last visit and the researcher, at offsets listed in
+  [lcp.ts](src/apple2/lcp.ts). The rest of the record is his state and is not decoded; it
+  travels as hex rows. **Read from Disk** on the page shows him as a `CHARACTER.yml`, and the same
+  bridge writes an edited one back. The Guestbook side names him: its house number, mod 256,
+  picks one of 256 names in a table on its track 8.
+- **The Commodore people, on Apple floppies.** Rob, Ivan and Fritz were born on Commodore 64
+  copies. Their house numbers on 4am's Guestbook side give the Apple the same three names, so
+  [lcp-apple-house.mjs](scripts/lcp-apple-house.mjs) writes each number onto a Guestbook side
+  and plays the move-in on the Korz Apple with his researcher's name, which leaves him living on
+  his own House side. They are **Visit Rob**, **Visit Ivan** and **Visit Fritz** on the page.
+  Only the house number and the names crossed over; the rest of his Commodore state is not
+  decoded on either machine, so each one moved in fresh.
 - **Where he goes.** [Tiny Life](https://tinylifegame.com/), by
   [Ell](../../characters/ellpeck/README.md), a game in the spirit of The Sims with household
   export: [the Little Computer People show](../../repo-shows/little-computer-people/README.md) and

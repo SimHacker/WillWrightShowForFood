@@ -46,6 +46,10 @@ looks:
   - id: house              # attic floor left of the stairs; he never stands on it
     png: looks/house.png
     at: [0, 56]
+    looks:
+      - id: field          # the game's input line, open and empty: two white text rows
+        png: looks/field.png
+        at: [0, 0]
 
 states:
   - id: loading
@@ -91,7 +95,7 @@ states:
       hint: Month, day, year as MM/DD/YY.
       default: "{MM}/{DD}/{YY}"
       speak: Please enter the date.
-      reply: Wow, I can't believe it's {value}! If you say so.
+      reply: Wow, I can't believe it's {when}! If you say so.
       keys: "{value}\r"
       maxlength: 8
 
@@ -103,20 +107,13 @@ states:
   - id: return-visit
     when: [guestbook, signed, session, dated]
     unless: session-1
-    frames: 1
-    say: >-
-      Signed. The Apple is loading the house. He comes in the front door and goes about his
-      business; the game ignores the keyboard until he has, so the angel runs it at max.
+    say: Signed. The Apple is loading the house.
     speak: Welcome back. He is coming home.
 
-  - &home
-    id: home
-    when: house
-    from: [moving-in]
-    # Nothing on screen marks the end of the move-in. In one run (scripts/angel-run.mjs, a
-    # request typed every 60 s) the house appeared at 173 s, a request at 480 s was ignored
-    # and the one at 540 s was echoed: settled 307-367 s in.
-    after: 370
+  # Before moving-in and coming-home: they hold whenever the house is seen.
+  - id: home
+    when: [house, field]
+    from: [moving-in, coming-home]
     speed: 1
     speak: He is home. Take care of him with the buttons, or ask him something.
     say: >-
@@ -135,20 +132,50 @@ states:
       keep: true
       examples: [PLEASE PLAY THE PIANO, PLEASE PLAY ANOTHER SONG, PLEASE BUILD A FIRE, PLEASE DANCE,
         PLEASE TYPE A LETTER TO ME, PLEASE PLAY WITH ME]
+      # Made from the words his parser knows: the vocabulary on the Guestbook side, file sectors
+      # 466-469 of 4am's crack, in synonym groups (PIANO IVORIES SONG TUNE SERENADE JAZZ BOOGIE,
+      # FIRE FIREPLACE LOG, NAP BED, ...). Whether he does a thing is up to his mood.
+      groups:
+        - label: Music
+          examples: [PLEASE TICKLE THE IVORIES, PLEASE PLAY SOME JAZZ, PLEASE PLAY SOME BOOGIE,
+            PLEASE PLAY A SERENADE, PLEASE PLAY A RECORD, PLEASE LISTEN TO MUSIC]
+        - label: Games
+          examples: [PLEASE PLAY A GAME, PLEASE PLAY POKER, PLEASE PLAY CARD WAR, PLEASE PLAY ANAGRAMS]
+        - label: Around the house
+          examples: [PLEASE LIGHT A FIRE, PLEASE TAKE A SHOWER, PLEASE BRUSH YOUR TEETH,
+            PLEASE TAKE A NAP, PLEASE GO TO BED, PLEASE RELAX, PLEASE WORK, PLEASE GO UPSTAIRS]
+        - label: Food and the dog
+          examples: [PLEASE EAT SOMETHING, PLEASE HAVE A SNACK, PLEASE DRINK SOME WATER,
+            PLEASE FEED THE DOG, PLEASE FILL THE DOG BOWL]
+        - label: Writing and the computer
+          examples: [PLEASE WRITE ME A NOTE, PLEASE TELL ME YOUR NAME, PLEASE LOGON TO YOUR COMPUTER]
+        - label: Asking how he is
+          examples: [HELLO, EXCUSE ME, "ARE YOU HUNGRY?", "ARE YOU TIRED?", "ARE YOU BORED?",
+            "ARE YOU COLD?", "WHAT IS THE MATTER?", "WHAT IS YOUR PROBLEM?", PLEASE TALK TO ME]
+        - label: Holidays
+          examples: [MERRY CHRISTMAS, HAPPY HOLIDAYS, THANK YOU]
 
+  # Nothing on screen says the game has started to listen until it is asked. Return opens the
+  # game's input line, an empty white bar across the top, once it reads the keyboard; before
+  # that the key is ignored. So while he moves in or comes home the angel presses Return now
+  # and then, and he is home when the bar is there. Not on the guestbook, where Return answers.
   - id: moving-in
     when: house
     from: [loading, flip, name, signing, date, first-visit]
     speed: 100
     # One picture per game second. The max button. The wait runs flat out.
     frames: 1
+    probe: { keys: "\r", every: 5 }
     say: >-
       He is moving in. The game ignores the keyboard until he has, so there is nothing to do
       but watch. The screen angel runs the Apple at max until he is home, then back to 1×.
 
-  # A man who already lives on the House side has nothing to move, but he walks in first. On
-  # Rob's House side (scripts/lcp-apple-house.mjs) the signed page came up at 29.6 s, a request
-  # typed at 67 s was ignored and one at 68 s was echoed.
-  - <<: *home
+  - id: coming-home
+    when: house
     from: [return-visit]
-    after: 40
+    speed: 100
+    frames: 1
+    probe: { keys: "\r", every: 5 }
+    say: >-
+      He comes in the front door and goes about his business. The game ignores the keyboard
+      until he has, so the screen angel runs the Apple at max until he is home.

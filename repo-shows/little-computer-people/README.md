@@ -28,8 +28,9 @@ This show builds that sequel from outside, forty years late.
 
 1. **Boot it.** A real serialized disk in a browser emulator, running.
 2. **Find the brain.** Read the persistent block and put the little person's state on screen as
-   editable text. Crane documented the C64 layout; **the Apple ][ layout is undocumented**, and
-   finding it is a live question for the guest.
+   editable text. Crane documented the C64 layout. The Apple ][ names, dates, sessions and
+   researcher are now found ([the Apple record](../../packages/cabinet/worlds/little-computer-people/README.md#on-the-apple-ii));
+   the rest of his state, on either machine, is a live question for the guest.
 3. **The argument.** Gold wanted a fishbowl you watch; Crane rewrote half the program so you could
    interact. Both shipped, fifteen years apart, as LCP and The Sims. Run the argument again with the
    person who won it.

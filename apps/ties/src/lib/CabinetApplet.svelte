@@ -50,6 +50,8 @@
 	import { PROGRAMS, DEFAULT_PROGRAM } from './cabinet-programs.js';
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
+	import VoicePicker from './VoicePicker.svelte';
+	import { currentVoice } from './voice.svelte.js';
 
 	// `onprogram`, when given, owns the program menu: a pick is passed to it (the catalog page
 	// navigates to that program's entry), and the applet switches when `spec.program` changes.
@@ -1575,16 +1577,12 @@
 	const TTY_SPEAK_KEY = 'cabinet-tty-speak';
 	let ttySpeak = $state(untrack(() => globalThis.localStorage?.getItem(TTY_SPEAK_KEY) === '1'));
 	let speech = null;
-	let speechVoice = null;
 	async function speechReady() {
 		if (!globalThis.speechSynthesis) return null;
 		if (!speech) {
 			const { SpeechSystem } = await import('./speech.js');
 			speech = new SpeechSystem();
 			await speech.ready;
-			const rank = (v) => (/\((Enhanced|Premium)\)/i.test(v.name) ? 0 : 1);
-			const en = [...speech.getEnglishVoices(true), ...speech.getEnglishVoices(false)].map((m) => m.voice);
-			speechVoice = en.sort((a, b) => rank(a) - rank(b))[0] ?? null;
 		}
 		return speech;
 	}
@@ -1610,6 +1608,7 @@
 			}
 		}, 1000);
 		const opts = { rate: 1.1, onEnd: done, onError: done };
+		const speechVoice = currentVoice();
 		if (speechVoice) s.speakWithVoice(text, speechVoice, opts);
 		else s.speak(text, { voiceType: 'male', language: 'en', ...opts });
 	}
@@ -4017,6 +4016,10 @@
 							<button type="button" class="chip" class:on={ttySpeak === value} aria-pressed={ttySpeak === value} title="Read what the machine prints aloud, for when no screen reader is on" onclick={() => setSpeak(value)}>{text}</button>
 						{/each}
 					</span>
+					{#if globalThis.speechSynthesis}
+						<span class="tty-cfg-label">Voice</span>
+						<span class="tty-cfg-row"><VoicePicker /></span>
+					{/if}
 					<span class="tty-cfg-label">Bell</span>
 					<span class="tty-cfg-row">
 						{#each [[false, 'ON'], [true, 'MUTE']] as [value, text] (text)}

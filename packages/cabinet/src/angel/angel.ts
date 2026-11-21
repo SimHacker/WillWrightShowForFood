@@ -14,8 +14,7 @@ import { type Picture, decodePng } from "./png.js";
  *                     so a dialog can be seen whether or not its field is filled in. A look
  *                     matches exactly; `tolerance` and `channel` make it fuzzy.
  *   states:           tried in order on every step; the first whose conditions hold is the state.
- *                     When none holds the angel stays where it is. Two states may share an id,
- *                     to reach one state two ways; YAML merge keys (<<: *anchor) copy the rest.
+ *                     When none holds the angel stays where it is.
  *     when / unless   looks that must be seen / must not be
  *     from            states it may be entered from (itself always counts)
  *     after           seconds of machine time spent in the current state before it may be entered
@@ -26,6 +25,8 @@ import { type Picture, decodePng } from "./png.js";
  *     lock            the machine's keyboard is off, so typing goes to the page
  *     speed           the machine's speed from entering the state on, on the oracle
  *     frames          pictures per game second while this state is a fast-forward
+ *     probe           keys typed every few seconds while in the state, for a game that shows
+ *                     on screen when it starts to listen: the next state looks for that
  */
 
 /** A look matches exactly unless it says how fuzzy it may be. */
@@ -49,7 +50,7 @@ export interface AskSpec {
 	/** Typed into the machine on OK; {value} is what was entered. */
 	keys: string;
 	speak?: string;
-	/** Said on OK instead of the value; {value} is what was entered, as typed. */
+	/** Said on OK instead of the value; {value} is what was entered, as typed, and {when} the same as a spoken date. */
 	reply?: string;
 	/** Upper-case the value, for machines that only have capitals. */
 	upper?: boolean;
@@ -58,6 +59,8 @@ export interface AskSpec {
 	keep?: boolean;
 	/** Things to enter, offered as links that fill the field without pressing OK. */
 	examples?: string[];
+	/** More of them, under headings. */
+	groups?: { label: string; examples: string[] }[];
 }
 
 export interface StateSpec {
@@ -76,6 +79,13 @@ export interface StateSpec {
 	speed?: number;
 	/** Pictures per game second during a fast-forward. One finishes the stretch soonest. */
 	frames?: number;
+	probe?: ProbeSpec;
+}
+
+export interface ProbeSpec {
+	keys: string;
+	/** Seconds of machine time between one typing and the next. */
+	every: number;
 }
 
 export interface AngelSpec {
@@ -143,7 +153,7 @@ export function recognize(screen: Picture, looks: Look[], seen = new Set<string>
 }
 
 export function parseAngel(text: string): AngelSpec {
-	const spec = parse(text, { merge: true }) as AngelSpec;
+	const spec = parse(text) as AngelSpec;
 	if (!spec || !Array.isArray(spec.states)) throw new Error("ANGEL.yml needs states");
 	spec.looks ??= [];
 	return spec;
@@ -171,6 +181,24 @@ export function fillNow(text: string, now = new Date()): string {
 	return text.replace(/\{(MM|DD|YY|hh|mm|AP)\}/g, (_, k: string) => fields[k]!);
 }
 
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+/** MM/DD/YY (or MMDDYY) as "Saturday, November 21, 2026"; undefined when it is not a real day. YY under 50 is 20YY. */
+export function sayDate(text: string): string | undefined {
+	const m = /^(\d\d)\/?(\d\d)\/?(\d\d)$/.exec(text.trim());
+	if (!m) return undefined;
+	const [month, day, yy] = [Number(m[1]), Number(m[2]), Number(m[3])];
+	const year = yy < 50 ? 2000 + yy : 1900 + yy;
+	const d = new Date(year, month - 1, day);
+	if (d.getMonth() !== month - 1 || d.getDate() !== day) return undefined;
+	return `${WEEKDAYS[d.getDay()]}, ${MONTHS[month - 1]} ${day}, ${year}`;
+}
+
+/** An ask's reply for what was entered: {value} as typed, {when} as a spoken date when it is one. */
+export const fillReply = (reply: string, value: string): string =>
+	reply.split("{value}").join(value).split("{when}").join(sayDate(value) ?? value);
+
 /** The keys an ask types for a value. */
 export const askKeys = (ask: AskSpec, value: string): string => ask.keys.split("{value}").join(ask.upper ? value.toUpperCase() : value);
 
@@ -181,6 +209,8 @@ export class Angel {
 	/** Machine seconds when the current state was entered. */
 	since = 0;
 	seen = new Set<string>();
+	/** Machine seconds of the last probe. */
+	probed = -Infinity;
 
 	constructor(spec: AngelSpec, looks: Look[]) {
 		this.spec = spec;
@@ -209,7 +239,16 @@ export class Angel {
 		if (!next || next.id === this.state.id) return null;
 		this.state = next;
 		this.since = seconds;
+		this.probed = -Infinity;
 		return next;
+	}
+
+	/** The current state's probe keys when they are due at `seconds`, or null. */
+	probe(seconds: number): string | null {
+		const p = this.state.probe;
+		if (!p || seconds - this.probed < p.every) return null;
+		this.probed = seconds;
+		return p.keys;
 	}
 
 	/** Start over, as after a reboot. */
@@ -217,6 +256,7 @@ export class Angel {
 		this.state = this.spec.states.find((s) => !s.when) ?? this.spec.states[0]!;
 		this.since = seconds;
 		this.seen = new Set();
+		this.probed = -Infinity;
 	}
 }
 

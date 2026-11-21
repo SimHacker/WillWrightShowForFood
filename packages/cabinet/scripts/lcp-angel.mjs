@@ -114,6 +114,8 @@ while (seconds() < until) {
 		if (changed.id === "name") type(`${who}\r`);
 		if (changed.id === "date") type(`${when}\r`);
 	}
+	const probe = angel.probe(t);
+	if (probe) type(probe);
 	if (flipAt >= 0 && t - flipAt >= 1) {
 		flipAt = -1;
 		disk.insert(1, new Uint8Array(readFileSync(sideB)), "side-b.dsk");

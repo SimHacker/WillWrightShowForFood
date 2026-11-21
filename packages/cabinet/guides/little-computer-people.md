@@ -37,11 +37,20 @@ dropped ([the Little Computer People show](../../../repo-shows/little-computer-p
 Little Computer People is one of the first bridges for
 [Soul City](../../../catalogs/soul-city/README.md), where a character from one game can move to
 another and back ([soul bridges](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-BRIDGES.md)).
-Each house keeps its person in 256 bytes that the disk drive rewrote as he lived. On the
-Commodore 64 that record is read and written already: the people on three played disks, Rob, Ivan
-and Fritz, are [characters you can read](../worlds/little-computer-people/README.md),
-and any of them can move into another copy of the game. The Apple record is on track 8 and is not
-decoded yet. His first new home is meant to be [Tiny Life](https://tinylifegame.com/), by
+Each house keeps its person in 256 bytes that the disk drive rewrote as he lived. On this Apple
+disk the record is on the House side. Press **Read from Disk** under the screen once he is home,
+and the page shows him as a character file you can download: his name, his researcher (you), the
+day he moved in, how many sessions you have spent with him, and the rest of the record as hex,
+which nobody has decoded yet ([lcp.ts](../src/apple2/lcp.ts)).
+
+Three people are already living on floppies here. Rob, Ivan and Fritz were born on Commodore 64
+copies of the game ([their houses](../worlds/little-computer-people/README.md)), and the house
+number each copy made gives the Apple the same name, so each has his own Apple Guestbook and
+House sides. Press **Visit Rob**, **Visit Ivan** or **Visit Fritz** to boot one. The guestbook
+skips the name, since you have signed it before, and he walks in the front door. Only the names
+came over from the Commodore; each moved into his Apple house fresh.
+
+His first new home outside the game is meant to be [Tiny Life](https://tinylifegame.com/), by
 [Ell](../../../characters/ellpeck/README.md), where he would have neighbors for the first time.
 
 ## The screen angel
@@ -70,8 +79,10 @@ with every move shown; untick **Speak** to keep it quiet. How it sees the screen
 
 **The keyboard does nothing until he has moved in.** That is the game, not the emulator: the
 manual says keyboard commands do not work during the move-in. The screen angel runs the Apple
-at max while he moves in and puts it back to 1× when he is home, so the wait takes seconds, not
-minutes ([benchmarks](../BENCHMARKS.md#apple-)). Without the angel, press **max** under the
+at max while he moves in and presses Return now and then. When the game starts listening, Return
+opens its input line, a white bar across the top of the screen; then he is home, and the angel
+puts the Apple back to 1×. The wait takes seconds, not minutes
+([benchmarks](../BENCHMARKS.md#apple-)). Without the angel, press **max** under the
 screen, and **1×** once he is home. He only has to move in once: after that he is there every
 time you boot the disk.
 
@@ -128,8 +139,8 @@ again with **Insert file…** to pick up where you left off.
   the first computer person off a 1985 floppy and giving him neighbors, by moving him into
   [Tiny Life](https://tinylifegame.com/).
 - [What a house remembers](../worlds/little-computer-people/README.md): the house number and the
-  256-byte research record, decoded from the Commodore 64 disks, and where the same template sits
-  on the Apple disks.
+  256-byte research record on the Commodore 64 disks, and where the Apple disks keep the same
+  things.
 - [David Crane](../../../characters/david-crane/README.md) and
   [Rich Gold](../../../characters/rich-gold/README.md), the two people who made it.
 - [The manual](https://www.lemon64.com/doc/little-computer-people/353), from the Commodore 64

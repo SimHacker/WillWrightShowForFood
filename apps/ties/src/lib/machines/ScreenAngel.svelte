@@ -6,9 +6,11 @@
 	 * Turned off, the player has the machine and every move to themselves.
 	 */
 	import { onMount, tick } from 'svelte';
-	import { askKeys, fillNow } from '@wwsff/cabinet/angel';
+	import { askKeys, fillNow, fillReply } from '@wwsff/cabinet/angel';
 	import { apple } from '../apple.svelte.js';
 	import { loadAngel } from '../angels.js';
+	import VoicePicker from '../VoicePicker.svelte';
+	import { utterance } from '../voice.svelte.js';
 
 	/** @typedef {import('@wwsff/cabinet/angel').StateSpec} StateSpec */
 
@@ -17,9 +19,10 @@
 	 *   path: string,
 	 *   move: (label: string) => void,
 	 *   moves?: string[] | null,
+	 *   controls?: import('svelte').Snippet,
 	 * }}
 	 */
-	let { path, move, moves = $bindable(null) } = $props();
+	let { path, move, moves = $bindable(null), controls } = $props();
 
 	const ON = 'screen-angel';
 	const SPEAK = 'screen-angel-speak';
@@ -67,7 +70,7 @@
 			owed.push(text);
 			return;
 		}
-		speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+		speechSynthesis.speak(utterance(text));
 	}
 
 	function payOwed() {
@@ -106,6 +109,8 @@
 			autoDone = true;
 			move(state.auto);
 		}
+		const keys = angel.probe(seconds);
+		if (keys) apple.type(keys);
 	}
 
 	/** @param {SubmitEvent} ev */
@@ -116,7 +121,7 @@
 		const typed = value.trim();
 		const v = a.upper ? typed.toUpperCase() : typed;
 		if (state?.id === 'name' && !v) return;
-		say(a.reply ? a.reply.split('{value}').join(typed) : v);
+		say(a.reply ? fillReply(a.reply, typed) : v);
 		apple.type(askKeys(a, v));
 		if (a.keep) value = '';
 		else answered = true;
@@ -173,10 +178,12 @@
 	<div class="bar">
 		<label><input type="checkbox" checked={on} onchange={(e) => setOn(e.currentTarget.checked)} /> Screen angel</label>
 		<label><input type="checkbox" checked={speaking} disabled={!on} onchange={(e) => setSpeaking(e.currentTarget.checked)} /> Speak</label>
+		{#if on && speaking}<VoicePicker />{/if}
 		{#if on && state}<span class="where" title="The screen angel's state, and Apple time spent in it">{state.id} · {Math.floor(held / 60)}:{String(Math.floor(held % 60)).padStart(2, '0')}</span>{/if}
 	</div>
 	{#if on}
 		<p class="say" aria-live="polite">{state?.say ?? 'Watching the screen.'}</p>
+		{@render controls?.()}
 		{#if ask}
 			<form onsubmit={answer}>
 				<label>
@@ -192,10 +199,19 @@
 						{/each}
 					</p>
 				{/if}
+				{#each ask.groups ?? [] as g (g.label)}
+					<p class="examples">
+						<span class="group">{g.label}</span>
+						{#each g.examples as e (e)}
+							<button type="button" class="example" title="Put this in the field" onclick={() => use(e)}>{e}</button>
+						{/each}
+					</p>
+				{/each}
 			</form>
 		{/if}
 	{:else}
 		<p class="say">Off: the keyboard goes to the Apple and every move is shown.</p>
+		{@render controls?.()}
 	{/if}
 	{#if failed}<p class="say failed">{failed}</p>{/if}
 </section>
@@ -251,6 +267,11 @@
 		flex-wrap: wrap;
 		gap: 0.2rem 1rem;
 		margin: 0;
+	}
+	.examples .group {
+		min-width: 11rem;
+		font-size: 0.8rem;
+		opacity: 0.75;
 	}
 	.example {
 		padding: 0;

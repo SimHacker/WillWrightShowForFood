@@ -139,6 +139,9 @@
 	/** @param {string} file */
 	const labelOf = (file) => Object.values(app.disks).find((d) => d.file === file)?.label ?? file;
 
+	/** What is in each drive, for the folded disks list. */
+	const mounted = $derived(drives.map((d) => `drive ${d + 1}: ${apple.drives[d] ? labelOf(apple.drives[d]) : 'empty'}`).join(' · '));
+
 	/** @param {{ name: string, text: string }} p */
 	function download(p) {
 		const a = document.createElement('a');
@@ -158,9 +161,24 @@
 
 <MicroM8 {disks} defaultCpu="compile" begin={() => start(0)} beginLabel={app.starts[0]?.label ?? app.title} />
 
-{#if app.angel}<ScreenAngel path={app.angel} move={moveNamed} bind:moves={allowed} />{/if}
+{#snippet movesRow()}
+	{#if actions.length}
+		<div class="row moves">
+			<span class="head">Moves</span>
+			{#each actions as a (a.label)}
+				<span class="move">
+					{#if a.prompt}<span class="prompt">When the screen says “{a.prompt}”, press</span>{/if}
+					<button onclick={() => act(a)} disabled={!!busy} title={a.prompt ? `Press when the screen says “${a.prompt}”` : a.label}>{a.label}</button>
+				</span>
+			{/each}
+		</div>
+	{/if}
+{/snippet}
+
+{#if app.angel}<ScreenAngel path={app.angel} move={moveNamed} bind:moves={allowed} controls={movesRow} />{/if}
 
 <section class="app" aria-label="{app.title} controls">
+	{#if !app.angel}{@render movesRow()}{/if}
 	<div class="row">
 		<span class="head">Start</span>
 		{#each app.starts as s, i (s.label)}
@@ -169,8 +187,18 @@
 			>
 		{/each}
 	</div>
-	<div class="row">
-		<span class="head">Disks</span>
+	{#if app.people}
+		<div class="row">
+			<span class="head">Characters</span>
+			<button onclick={readPeople} disabled={!!busy} title="Read the characters off the disk as the game has written it">Read from Disk</button>
+			{#if peopleFrom}<span class="prompt">{people.length} on {peopleFrom}</span>{/if}
+			{#each people as p (p.file)}
+				<button class="person" onclick={() => download(p)} title="Download {p.name}'s CHARACTER.yml">{p.name}</button>
+			{/each}
+		</div>
+	{/if}
+	<details class="disks-box">
+		<summary><span class="head">Disks</span> {mounted}</summary>
 		<ul class="disks" style:--drives={drives.length}>
 			{#each Object.entries(app.disks) as [id, d] (id)}
 				<li>
@@ -187,28 +215,7 @@
 				</li>
 			{/each}
 		</ul>
-	</div>
-	{#if actions.length}
-		<div class="row">
-			<span class="head">Moves</span>
-			{#each actions as a (a.label)}
-				<span class="move">
-					{#if a.prompt}<span class="prompt">When the screen says “{a.prompt}”, press</span>{/if}
-					<button onclick={() => act(a)} disabled={!!busy} title={a.prompt ? `Press when the screen says “${a.prompt}”` : a.label}>{a.label}</button>
-				</span>
-			{/each}
-		</div>
-	{/if}
-	{#if app.people}
-		<div class="row">
-			<span class="head">Characters</span>
-			<button onclick={readPeople} disabled={!!busy} title="Read the characters off the disk as the game has written it">Read from Disk</button>
-			{#if peopleFrom}<span class="prompt">{people.length} on {peopleFrom}</span>{/if}
-			{#each people as p (p.file)}
-				<button class="person" onclick={() => download(p)} title="Download {p.name}'s CHARACTER.yml">{p.name}</button>
-			{/each}
-		</div>
-	{/if}
+	</details>
 	{#if busy}<p class="note">{busy}…</p>{/if}
 	{#if failed}<p class="note failed">{failed}</p>{/if}
 </section>
@@ -230,6 +237,18 @@
 	.head {
 		min-width: 5.5rem;
 		font-weight: 600;
+	}
+	.moves {
+		margin-top: 0.5rem;
+	}
+	.disks-box summary {
+		cursor: pointer;
+	}
+	.disks-box[open] summary {
+		margin-bottom: 0.4rem;
+	}
+	.disks-box .disks {
+		margin-left: 5.9rem;
 	}
 	.move {
 		display: inline-flex;

@@ -79,13 +79,34 @@ console).
 
 ## Words: 36 bits in a 53-bit number
 
-JavaScript numbers hold integers exactly up to 2^53, so a 36-bit word is an ordinary `number`,
-and `+`, `-`, `*` with `% 2 ** 36` are exact. The bitwise operators are not: `&`, `|`, `^`, `<<`
-and `>>` work on 32 bits and silently drop the top four.
+JavaScript has one kind of number, a 64-bit float, and it holds every integer up to 2^53 exactly.
+V8 keeps small integers (31 bits in 64-bit Chrome) as integers, and in optimized code keeps
+larger ones as raw doubles in registers, so the floating point mostly compiles away. A 36-bit
+word in a variable is an ordinary `number`: `+` and `-` are exact, and `% 2 ** 36` wraps. Three
+things are not:
 
-- **Memory** is a `Uint32Array` of two 18-bit halves per word, left then right. Half-word
-  instructions (`HLL`, `HRR`, `HRLZ`, … a quarter of the instruction set) touch one element, and
+- **The bitwise operators** work on 32 bits: `&`, `|`, `^`, `<<` and `>>` silently drop the top
+  four. Logic goes through halves (below).
+- **Products.** Two 36-bit words multiply to as many as 72 bits, past 2^53, so `MUL`, `IMUL`,
+  `DIV`, `IDIV` and the double-word shifts work in 18-bit pieces.
+- **Arrays.** There is no fast 36-bit or 64-bit integer array, and a 36-bit value stored outside
+  a compiled block becomes a heap number. So memory is not kept as numbers at all ([Memory](#memory)).
+
+Then:
+
+- **Memory** is two parallel `Uint32Array`s of 18-bit halves, `left` and `right`. Half-word
+  instructions (`HLL`, `HRR`, `HRLZ`, … a quarter of the instruction set) touch one of them, and
   byte pointers address within a half or across both.
+- **Half-words cost nothing.** Because the split falls where the PDP-10 splits its own words,
+  `HRRZ` is one load of `right[a]`, `HLRZ` one load of `left[a]`, and `HRRM` or `HLLM` one
+  store, with no shift and no mask. Packing 36 bits any other way would charge every one of them a
+  shift and a mask, and they are the instructions Lisp runs on: CAR and CDR are the two halves of
+  a word, and so are a stack pointer's count and address. The cost moves to the instructions that
+  cross the middle: a full-word `ADD` carries out of `right` into `left`; `AOBJN` and `PUSH` add
+  `1,,1`, which is two increments plus that same carry when the right half is 777777; `LSH`,
+  `ROT`, a full-word compare, and a byte that straddles bit 18 read both halves. Tags kept in the
+  14 spare bits of each half would put a mask back on every read, so tags that are read often go
+  in a parallel plane instead ([Room beside every word](#room-beside-every-word)).
 - **Registers and bus values** are `number`s below 2^36. `Cpu.read`, `Cpu.write` and `ac` in
   [bus.ts](src/bus.ts) already take `number`, so the CPU contract does not change.
 - **Logic** goes through a small `w36` module that splits into halves: `and`, `or`, `xor`, `not`,
@@ -116,6 +137,26 @@ the box added one, later two, address bits, and "there is no simple answer". The
 
 Fast memory, the sixteen accumulators, sits at addresses 0–17, as on the real machine: a
 reference to 0–17 is a register reference.
+
+### Room beside every word
+
+An 18-bit half in a 32-bit element leaves 14 bits over, and memory is cheap: a million words is
+4 MB an array. Both are room for knowing what the running code does:
+
+- **The high bits** carry tags on a half: a word the compiler has code for (so a store knows to
+  invalidate it), a breakpoint, a word written since the last snapshot. A read masks them off,
+  one `&` with `0o777777`.
+- **Parallel arrays**, planes by address as [microM8's stack design](microm8/STACK.md) calls
+  them: an execution count per word for a heat map, and the last reader, writer and executor of
+  each word, its PC and which machine. [DRAWING-CONSTRAINTS.md](DRAWING-CONSTRAINTS.md) asks for
+  those three for the PDP-7 already. With the 10/11 map in, the last writer of a word can be the
+  PDP-7.
+
+Korz is what makes this free when it is off. Each plane is a set of slots on the `read`, `write`
+and `exec` selectors, in a `watch` dimension. With `watch` off, the resolver never picks them
+and the compiler emits a plain load or store. With it on, the compiler puts the count or the
+stamp inline in the compiled block, for the span of addresses being watched and nowhere else.
+Nothing is decided by an `if` in the hot path.
 
 ## The KA10 as a sea
 
@@ -366,6 +407,44 @@ The PDP-7 is one of the machines on the far end. Its 18-bit words pack two to a 
   The backplane steps both machines in one thread, so a shared lock's increment and test stay
   indivisible ([MAPPING.md](MAPPING.md#locks)).
 
+## The ninth floor: the TV-11, the door, the elevator and the tourists
+
+MIT-AI reached the building through the same interface. The TV-11, the PDP-11 that ran the
+Knight TVs, had spare bits in its keyboard multiplexer status register, Unibus `764050`, wired
+to the elevator call buttons for floors 8 and 9 (bits 8 and 9, held about ⅓ s) and the
+ninth-floor door buzzer (bit 11, held 3 s). Three roads set them: Escape D and Escape E on a
+Knight TV, which the TV-11 handled itself; Terminal-D and Terminal-E on a Lisp Machine; and
+`:ESCE` at an ITS terminal. The last two went over Chaosnet to the `DOOR` server on AI, which
+mapped the register into its own address space with `T11MP`, set the bit, waited and cleared it
+([Call me an elevator](../../characters/kent-pitman/elevator-and-door.md),
+[MAPPING.md](MAPPING.md#the-door-and-the-elevator)).
+
+Running that needs machines the cabinet does not have yet, and simulators of things that were
+never computers. None of it is built:
+
+| Piece | Real or imagined | In the cabinet |
+|---|---|---|
+| TV-11 | a real PDP-11 | a PDP-11 on the Korz CPU kit, running the TV-11's own program, [tv.147](https://github.com/PDP-10/its/blob/master/src/system/tv.147). Its Unibus memory is what `T11MP` maps |
+| Knight TV | real | a frame buffer in TV-11 memory, shown the way the 340 viewer shows the 340, with its keyboard on the multiplexer |
+| The status register | real | a device-kit register at `764050`, with observe slots on bits 8, 9 and 11 that tell the building |
+| Elevator | simulated | cars and floors on machine time; bit 8 or 9 held is a hall call on that floor |
+| Ninth-floor door | simulated | locked, and released while bit 11 is held; it hears knocking |
+| Tourists | imagined | people who arrive in the lobby at random times, call the elevator, ride to nine and knock |
+| Hackers | imagined | people at the terminals who, after a while of knocking, buzz the door, or don't |
+| Lisp Machine | a real CADR | a CADR emulator beside the cabinet, on the same Chaosnet |
+| Terminal | real | an ITS login on the cabinet's teletype |
+
+A run goes the way Don's did as an urchin: a tourist comes up in the elevator and pounds on the
+door until someone at a Knight TV types Escape D. A player at a simulated Knight TV can be the
+one who buzzes. Once in, the tourist sits at a free Knight TV, Lisp Machine or terminal, logs in
+under the [tourist policy](../../characters/don-hopkins/mit-ai-lab-tourist-policy.md), and plays.
+
+The building keeps machine time from the backplane like every other device, so a buzz held for
+3 s of KA10 time holds the door for 3 s, and the whole floor runs fast or slow with the
+machines. Its random numbers are seeded, so a run replays. Drawn as a cutaway, floors stacked
+with the elevator in its shaft, it is the same kind of picture as Little Computer People's
+house, and the people in it can be the cabinet's characters.
+
 [tiny-titan](TINY-TITAN.md#one-titan-for-every-machine) is where both machines meet: the file
 mounts, the drawing store, the services, the clocks, and the map. Each machine reaches it through
 a door in its own idiom, with the request block in its own word size.
@@ -395,6 +474,9 @@ a door in its own idiom, with the request block in its own word size.
    `LPM`. Benchmarks beside the PDP-7's and the Apple's in [BENCHMARKS.md](BENCHMARKS.md).
 9. **The 10/11 map** ([MAPPING.md](MAPPING.md)): the PDP-7, the Turing tape, or a PDP-11 when we
    have one, appearing in a PDP-10 job's address space through `T11MP`.
+10. **The ninth floor.** A PDP-11 on the Korz kit running tv.147, the status register, then the
+    elevator, the door, the tourists and the hackers. Acceptance: `:ESCE 9` at an ITS terminal and
+    Escape D on a Knight TV both bring a tourist in.
 
 ## Sources
 
