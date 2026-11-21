@@ -3,6 +3,25 @@
 Forth Day, Silicon Valley FIG, 21 November 2026, 14:10 to 14:40. Mitch Bradley has just spent ten
 minutes on how this Forth got written. This is the half hour after that.
 
+I know him from a summer. In 1987 I was his intern at Sun, and we put his CForth into CADroid, a
+schematic editor from Lucasfilm that Sun used internally. The editor stayed the editor. A language
+written in Forth made it scriptable, and programmable by demonstration. That is the job I still
+want Forth to do.
+
+The machine on the screen is here because of an older editor, and its menus. PIXIE is Heinz
+Lemke's graphical editor, written at Cambridge in 1969 with Neil Wiseman and John Hiles. You
+drive it with a light pen, and the menu pops up around the pen's tracking cross. That is one of
+the earliest radial menus. I have been building pie menus since the 1980s, so when Heinz scanned
+his 1972 listing, 128 pages of SYMELEC, I wanted to point at those menus again. I had no PDP-7,
+so I built one. It runs in the browser, light pen and all.
+
+PIXIE was already a distributed CAD system. The PDP-7 was not a terminal. About 5000 words of it
+talked to you and built the model, and the model had to fit in the 3000 words left in 8K. The
+model then went over Neil Wiseman's link to Cambridge's Titan mainframe, which ran the
+simulation. You drew on the PDP-7. Titan did the computing. The same split is what the Forth
+device is for, once Forth is small enough to share that core. What of that is running, and what
+is not, is below.
+
 It is an honor to meet Chuck Moore and to speak with him on this Zoom. Peter Conn and Coco Conn hired
 him at HOMER & Associates. Their console mixed pictures live, sixteen slide projectors and four
 film projectors, and he programmed its host in PolyForth, in 32K. Atomic Dog and Flying Logos
@@ -149,13 +168,10 @@ ring in 3D while you append to it. One 1969 structure, the assembly library and 
 one block of core. The demo is
 [PIXIE and FORTH on the PDP-7](https://www.youtube.com/watch?v=lo8kdY-5i6c).
 
-The reason to put Forth in that machine, and not only beside it, is an old one. In the summer
-of 1987 I was Mitch's intern at Sun. We put his CForth into CADroid, a schematic editor from
-Lucasfilm, so a language written in Forth could script it and program it by demonstration.
-PIXIE is that kind of editor. Heinz Lemke's program calls this same ring library, and the
-library is in Forth now. That part is done. PIXIE itself is not being driven by Forth.
-SYMELEC already fills the 8K of 18-bit core, and Mitch's Forth wants most of an 8K machine
-of its own, so the two do not both fit as programs.
+That ring library is the piece PIXIE calls, and it is in Forth now. PIXIE itself is not being
+driven by Forth. SYMELEC already fills the 8K of 18-bit core, and Mitch's Forth wants most of
+an 8K machine of its own, so the two do not both fit as programs. CADroid had room for CForth.
+This machine does not, yet.
 
 The Forth device is his PDP-7 Forth as emulated hardware, and it is running. The menu says
 software or hardware, and hardware runs NEXT, on the same image. It does not yet make that
