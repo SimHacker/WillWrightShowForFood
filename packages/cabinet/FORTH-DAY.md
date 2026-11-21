@@ -8,6 +8,15 @@ him at HOMER & Associates. Their console mixed pictures live, sixteen slide proj
 film projectors, and he programmed its host in PolyForth, in 32K. Atomic Dog and Flying Logos
 came out of that shop. I think that is one of the most amazing things anyone has done with Forth.
 
+Peter Milford has just talked about Lean in Forth. Yesterday
+[Levent Alpöge](https://alpo.ge/remark.pdf) posted a proof of the Riemann hypothesis written in
+Lean with Claude, about 175,000 modules, depending only on Lean's three ordinary axioms.
+[Andrew Sutherland](https://math.mit.edu/~drew/grh/) and others have been replaying it through
+Lean's own kernel and through independent ones, and it has been accepting. The last check, that
+the Lean statement is really the Riemann hypothesis and not a quietly redefined one, was still
+running when this was written. That is why Lean is in the news this weekend. Peter's idea is to
+have that language on a Forth machine.
+
 The long essay, [A sea of slots](SEA-OF-SLOTS.md), is about Korz, a way of writing the emulator.
 This note is the Forth. It says what is running, in the order a Forth programmer can check: the
 PDP-7 Forth itself, the emulator it runs in, and the browser compiler underneath that emulator.
