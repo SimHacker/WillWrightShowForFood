@@ -3,18 +3,18 @@
 Forth Day, Silicon Valley FIG, 21 November 2026, 14:10 to 14:40. Mitch Bradley has just spent ten
 minutes on how this Forth got written. This is the half hour after that.
 
-- [With Mitch, at Sun](#with-mitch-at-sun)
+- [Introducing CADroid and CForth with Mitch at Sun](#introducing-cadroid-and-cforth-with-mitch-at-sun)
 - [Chuck Moore](#chuck-moore)
-- [PIXIE's radial menus](#pixies-radial-menus)
-- [PIXIE and Titan](#pixie-and-titan)
-- [The document between them](#the-document-between-them)
+- [PIXIE's radial menus, and why this PDP-7 exists](#pixies-radial-menus-and-why-this-pdp-7-exists)
+- [PIXIE and Titan, a distributed CAD system](#pixie-and-titan-a-distributed-cad-system)
+- [The document between the interface and the computation](#the-document-between-the-interface-and-the-computation)
 - [The Forth](#the-forth)
 - [The demo](#the-demo)
 - [The emulator](#the-emulator)
 - [The compiler under that](#the-compiler-under-that)
 - [What is not built yet](#what-is-not-built-yet)
 
-## With Mitch, at Sun
+## Introducing CADroid and CForth with Mitch at Sun
 
 I know him from a summer. In 1987 I was his intern at Sun, and we put his CForth into CADroid, a
 schematic editor from Lucasfilm that Sun used internally. The editor stayed the editor. A language
@@ -37,7 +37,7 @@ the Lean statement is really the Riemann hypothesis and not a quietly redefined 
 running when this was written. That is why Lean is in the news this weekend. Peter's idea is to
 have that language on a Forth machine.
 
-## PIXIE's radial menus
+## PIXIE's radial menus, and why this PDP-7 exists
 
 The machine on the screen is here because of an older editor, and its menus. PIXIE is Heinz
 Lemke's graphical editor, written at Cambridge in 1969 with Neil Wiseman and John Hiles. You
@@ -46,14 +46,14 @@ the earliest radial menus. I have been building pie menus since the 1980s, so wh
 his 1972 listing, 128 pages of SYMELEC, I wanted to point at those menus again. I had no PDP-7,
 so I built one. It runs in the browser, light pen and all.
 
-## PIXIE and Titan
+## PIXIE and Titan, a distributed CAD system
 
 PIXIE was already a distributed CAD system. The PDP-7 was not a terminal. About 5000 words of it
 talked to you and built the model, and the model had to fit in the 3000 words left in 8K. The
 model then went over Neil Wiseman's link to Cambridge's Titan mainframe, which ran the
 simulation. You drew on the PDP-7. Titan did the computing.
 
-### The document between them
+### The document between the interface and the computation
 
 What crossed Wiseman's link was the model, not a drawing of the screen. That is the split
 between a user interface and a computation. They live in different places, and a document
@@ -90,7 +90,7 @@ Mitch's system is [pdp7forth](https://github.com/MitchBradley/pdp7forth). It is 
 The PDP-7 is a good Forth machine because a thread cell can be a real instruction, and the opcode
 is the word's kind.
 
-### A cell is an instruction
+### A thread cell is a real instruction
 
 | Cell | What it is | What executing it does |
 |---|---|---|
@@ -139,7 +139,7 @@ entry. The compiled cell is an `LAC` of that entry. Running it is a constant pus
 Location 10 is a second program counter. The PDP-7 runs NEXT, and NEXT runs the Forth program
 one instruction at a time.
 
-### Poking the machine
+### You compile into the core the display reads
 
 That is also why Forth is a good way to poke at this machine. You compile into the same core the
 display is reading. A loop typed at the prompt runs when the loop closes, without a definition
@@ -163,7 +163,7 @@ draw a square:
 4 0 DO 200 FD 90 RT LOOP
 ```
 
-### Drag a corner
+### Drag a corner of the square
 
 Those four moves are vector words in the display list. A vector word holds a step of at most
 127 in each direction. A longer move is several words. Open the tool menu on the tube and
@@ -196,12 +196,12 @@ The copy is made from his source by a script. [FORTH-RINGS.md](FORTH-RINGS.md) h
 layout, and [does.fs](tapes/pdp7forth/does.fs) is the fifteen lines. Moving the names out of the
 8K bank is not done. That is below, with the macro that would build every layout from one source.
 
-### The PIXIE ring library, in Forth
+### The 1972 ring library, linked into Forth
 
 The dynamic data is the 1972 library, linked in, not rewritten. PIXIE, Heinz Lemke's editor at
 Cambridge, kept its models as rings: circular structures, graphs rather than trees.
 
-### A ring does JSON's job
+### A ring does the job JSON does
 
 A ring does the job JSON does. It is the value that goes from the part you touch to the part
 that computes.
@@ -228,14 +228,14 @@ draws, and the value you would send across the link are one structure. That is w
 is worth having in this Forth. The demo is
 [PIXIE and FORTH on the PDP-7](https://www.youtube.com/watch?v=lo8kdY-5i6c).
 
-### What fits in 8K
+### The library is in Forth; PIXIE is not driven by it yet
 
 That ring library is the piece PIXIE calls, and it is in Forth now. PIXIE itself is not being
 driven by Forth. SYMELEC already fills the 8K of 18-bit core, and Mitch's Forth wants most of
 an 8K machine of its own, so the two do not both fit as programs. CADroid had room for CForth.
 This machine does not, yet.
 
-### The Forth device
+### The Forth device runs, and does not shrink the image yet
 
 The Forth device is his PDP-7 Forth as emulated hardware, and it is running. The menu says
 software or hardware, and hardware runs NEXT, on the same image. It does not yet make that
@@ -261,7 +261,7 @@ as a table of small behaviors. Above that, the table is compiled into one functi
 Above that, a run of instructions is pasted into one JavaScript function. The live pages open on
 that last one. A menu reboots the same disk on any of the four.
 
-### How fast
+### Twice the switch, on the same bytes
 
 On UNIX boot, that compiled form is about twice as fast as the hand-written switch: 5 nanoseconds
 an instruction against 11, on an M4 Max under Node 26. A real PDP-7 did about 0.3 million
@@ -288,7 +288,7 @@ word in the time of one memory cycle. The writeup is [FORTH-DEVICE.md](FORTH-DEV
 
 Two just-in-time compilers, one running on the other.
 
-### Korz, the upper one
+### Korz compiles the machine into JavaScript
 
 The upper one is Korz, written in TypeScript, the same language as the emulators. It compiles
 a PDP-7, or a 6502, into JavaScript. A straight run of instructions becomes one function. The
@@ -300,7 +300,7 @@ word before running it. An `XCT` of an `XCT` falls back. The Forth accelerator i
 way the guest is mixed in: on the fetch of NEXT it runs one cell itself, on Mitch's stacks.
 Forth is not the language Korz is written in. Forth is in the machine being compiled.
 
-### V8, the lower one
+### V8 compiles that JavaScript
 
 The lower one is V8. It does not translate a whole program and then run it. It runs
 JavaScript, notices which functions are hot, and compiles those to the processor. It
@@ -310,7 +310,7 @@ That guess, and the retreat from a wrong guess, came from the Self language.
 [The essay](SEA-OF-SLOTS.md#from-self-to-v8) is the history. V8 never sees a thread cell or a
 device. It sees the JavaScript function Korz emitted.
 
-### Written for the one below
+### Korz emits the kind of function V8 keeps
 
 A compiler on a compiler works here because the upper one is written to please the lower one.
 Korz emits one stable function for a run of the machine, the kind V8 compiles once and keeps.
@@ -353,7 +353,7 @@ The same switch can build other threading models, so they can be measured agains
 `XCT` threading is already the right fit for the PDP-7. The experiment is there to compare, not
 because a better inner interpreter is expected.
 
-### A dictionary outside the 8K
+### A dictionary outside the 8K, so Forth can sit with PIXIE
 
 The accelerator still jumps to primitives that live in core. A dictionary answered from outside
 the 8K bank, so that Forth could sit in SYMELEC's own machine and call its rings, is the reason
