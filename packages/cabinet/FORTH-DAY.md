@@ -24,7 +24,7 @@ in Forth could make the editor scriptable and programmable by demonstration.
 
 Chuck Moore is on this Zoom. Peter Conn and Coco Conn hired him at HOMER & Associates. Their
 console mixed pictures live, sixteen slide projectors and four film projectors, and he programmed
-its host in PolyForth, in 32K. Atomic Dog and Flying Logos came out of that shop.
+its host in PolyForth, in 32K. <a href="https://www.youtube.com/watch?v=LMVZ36VA0wg" target="_blank" rel="noopener">Atomic Dog</a> and <a href="https://www.youtube.com/watch?v=9hIOfEiy4lc" target="_blank" rel="noopener">Flying Logos</a> came out of that shop.
 
 Peter Milford has just talked about Lean in Forth. Yesterday
 [Levent Alpöge](https://alpo.ge/remark.pdf) posted a proof of the Riemann hypothesis written in
