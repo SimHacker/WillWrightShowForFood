@@ -40,26 +40,42 @@ is the word's kind.
 
 | Cell | What it is | What executing it does |
 |---|---|---|
-| colon word | a bare address, `CAL` | `CAL` is always `JMS 20`. `nest` at 21 pushes the interpreter pointer and enters the thread |
+| colon word | a bare address, `CAL` | hardwired `JMS 20`. `nest` at 21 pushes the return and enters the thread |
 | primitive | `JMP code` | machine code, ending in `jmp next` |
 | constant | `LAC body` | loads the value |
 | variable | `LAW body` | loads the address |
+| literal | `LAC` of a pool entry | the same push as a constant |
 
-NEXT is three instructions. Register 10 is the interpreter pointer, register 12 is the data stack,
-and both are auto-index registers, so a push or a step is the addressing mode and not a separate
-add.
+Four things in the hardware do the inner interpreter's work.
+
+`XCT` fetches a word and executes it in place. The program counter stays on NEXT. A cell that
+jumps never comes back for the push. A cell that only loads the accumulator falls into it.
 
 ```
 next:  xct i 10       / step IP, execute that cell as an instruction
-       dac i 12       / push AC; only a constant or a variable gets here
+       dac i 12       / push AC; only a load gets here
        jmp next
 ```
 
-`XCT` fetches a word and executes it in place. The program counter stays on NEXT. A cell that
-jumps, a colon word or a primitive, never comes back for the push. A cell that only loads the
-accumulator falls into `dac i 12`. Constants and variables have no code of their own. Location 10
-is a second program counter: the PDP-7 runs NEXT, and NEXT runs the Forth program one instruction
-at a time.
+Locations 10 through 17 are not registers. They are words in low memory that auto-increment
+when you address them indirectly. Forth keeps the interpreter pointer in 10, the return stack
+in 11, and the data stack in 12. A push is `dac i 12`: the increment is the addressing mode.
+A pop is done by hand, in the other direction.
+
+`CAL` is hardwired. Whatever address it carries, it is a `JMS 20`. Location 20 catches the
+return address, and `nest` at 21 does the work. It does not use that return. Every `CAL`
+would overwrite it. `nest` reads the cell `XCT` just executed, and the address field of that
+cell is the body of the colon word. So a colon call is a bare address, and the machine
+already knows that a bare address means "call."
+
+Constants and variables are not special words in the inner loop. They are PDP-7 instructions
+sitting in the thread. `LAC` loads the value. `LAW` loads the address. Either one falls into
+the push. A literal is the same trick, not the usual `(LIT)` followed by an inline cell. The
+compiler searches a pool at the top of memory, growing down, and equal values share one
+entry. The compiled cell is an `LAC` of that entry. Running it is a constant push.
+
+Location 10 is a second program counter. The PDP-7 runs NEXT, and NEXT runs the Forth program
+one instruction at a time.
 
 That is also why Forth is a good way to poke at this machine. You compile into the same core the
 display is reading. A loop typed at the prompt runs when the loop closes, without a definition
