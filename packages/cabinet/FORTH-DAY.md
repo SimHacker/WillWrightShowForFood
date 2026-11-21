@@ -22,10 +22,11 @@ This note is the Forth. It says what is running, in the order a Forth programmer
 PDP-7 Forth itself, the emulator it runs in, and the browser compiler underneath that emulator.
 What is not built yet is at the end.
 
-A few host words, once. **TypeScript** is the language the emulator is written in. **JavaScript**
-is what the browser actually runs; the compiler in the emulator emits it. **V8** is the compiler
-inside Chrome and Node. It turns hot JavaScript into the processor's own instructions while the
-program is running. You do not need Lisp, and you do not need the Apple ][, to follow any of this.
+A few host words, once. TypeScript is a superset of JavaScript, and it compiles to JavaScript.
+The emulator, and Korz, are written in TypeScript. JavaScript is what the browser and Node
+actually run, so it is the language their just-in-time compiler sees. V8, inside Chrome and
+Node, turns hot JavaScript into the processor's own instructions while the program is running.
+You do not need Lisp, and you do not need the Apple ][, to follow any of this.
 
 ## The Forth
 
