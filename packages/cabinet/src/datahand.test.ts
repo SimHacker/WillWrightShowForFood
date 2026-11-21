@@ -6,6 +6,8 @@ import { Cabinet } from "./cabinet.js";
 import { assembleForthKernel, bootForth, compileForth, type ForthImage } from "./forth.js";
 import { DataHand, HAND_BONES, HAND_REG, handRegisters, toScreen } from "./plugins/datahand.js";
 import { flexes, GESTURES, ONE, syntheticHand, wavingHand } from "./plugins/hand.js";
+import { ForthDevice } from "./korz/forth-device.js";
+import { KorzPdp7 } from "./korz/pdp7.js";
 import { Pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
 import { type Segment, Type340 } from "./plugins/type340.js";
@@ -105,8 +107,8 @@ function handImage(): ForthImage {
 	return image;
 }
 
-function forthMachine(datahand: DataHand) {
-	const cpu = new Pdp7({ coreWords: 8192 });
+function forthMachine(datahand: DataHand, { forthDevice = false, onFrame = (_lit: Segment[]) => {} } = {}) {
+	const cpu = forthDevice ? new KorzPdp7({ coreWords: 8192, korz: "compile" }) : new Pdp7({ coreWords: 8192 });
 	let paper = "";
 	let last: Segment[] = [];
 	const t340 = new Type340({
@@ -114,6 +116,7 @@ function forthMachine(datahand: DataHand) {
 		store: (a, w) => cpu.write(a, w),
 		onFrame: (f) => {
 			const lit = f.segments.filter((s) => s.intensify);
+			onFrame(lit);
 			if (lit.length > 0) last = lit;
 		},
 	});
@@ -121,6 +124,7 @@ function forthMachine(datahand: DataHand) {
 	const box = new Cabinet({ cpu, devices: [t340, tty, datahand] });
 	t340.clock = () => box.cycles;
 	bootForth(cpu, handImage());
+	if (cpu instanceof KorzPdp7) new ForthDevice(handImage().labels).install(cpu);
 	box.run(300_000);
 	const type = (text: string) => {
 		for (const ch of text) tty.type((ch === "\n" ? 0o15 : ch.toUpperCase().charCodeAt(0)) | 0o200);
@@ -255,4 +259,23 @@ test("forth: DATAHAND draws the waving hand and its flex meters until a key", ()
 	assert.ok(segs.some((s) => s.y0 > 300 && s.y1 > 300), "a hand above the meters");
 	assert.ok(segs.some((s) => s.y0 < 210 && s.x0 === s.x1), "meter levels");
 	assert.match(m.line(""), /ok/, "a key stops it");
+});
+
+test("forth: with the Forth device, DATAHAND's frames come as fast as the 340 draws, and every one has the hand", () => {
+	// The page's setup. A frame rebuilt while the 340 was still drawing ended the list at the
+	// backdrop, and with frames this fast the 340 met that end nearly every time.
+	const datahand = new DataHand({ source: wavingHand });
+	const passes: number[] = [];
+	const m = forthMachine(datahand, {
+		forthDevice: true,
+		// Passes with the backdrop (409 strokes) in them: before DATAHAND runs, the boot list's turtle.
+		onFrame: (lit) => lit.length >= 400 && passes.push(lit.filter((s) => Math.max(s.y0, s.y1) > 230).length),
+	});
+	m.type("DATAHAND\n");
+	m.box.run(10_000_000);
+	// The first pass is started before the first hand is latched.
+	const drawn = passes.slice(1);
+	assert.ok(drawn.length > 50, `passes: ${drawn.length}`);
+	const bare = drawn.filter((n) => n < 50).length;
+	assert.equal(bare, 0, `passes with no hand: ${bare} of ${drawn.length}`);
 });

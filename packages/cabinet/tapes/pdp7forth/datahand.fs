@@ -130,8 +130,13 @@ variable spinning
   hand-seen? if placed hand captions else s" NO HAND" 512 600 centered then
   tag" Flex" 5 0 do i level loop  notag ;
 : show ( -- ) dsp-stopped? if dlist dsp-start then ;
+\ A new frame is built while the 340 is stopped. REWIND ends the list at
+\ the backdrop until the hand is written, and a 340 that got there in
+\ between would show the backdrop alone; with the Forth device a frame
+\ comes as often as the 340 can draw one, so it nearly always would.
+: drawn ( -- ) begin dsp-stopped? key? or until ;
 
 \ DATAHAND ( -- )  until a key is typed.
 : datahand ( -- )
   3 vnum !  4 vden !  128 vox !  240 voy !
-  backdrop  begin show hand-new? if hand-latch frame then key? until ;
+  backdrop  begin show hand-new? if drawn hand-latch frame then key? until ;
