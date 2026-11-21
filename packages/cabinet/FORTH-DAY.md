@@ -149,6 +149,23 @@ ring in 3D while you append to it. One 1969 structure, the assembly library and 
 one block of core. The demo is
 [PIXIE and FORTH on the PDP-7](https://www.youtube.com/watch?v=lo8kdY-5i6c).
 
+The reason to put Forth in that machine, and not only beside it, is an old one. In the summer
+of 1987 I was Mitch's intern at Sun. We put his CForth into CADroid, a schematic editor from
+Lucasfilm, so a language written in Forth could script it and program it by demonstration.
+PIXIE is that kind of editor. Heinz Lemke's program calls this same ring library, and the
+library is in Forth now. That part is done. PIXIE itself is not being driven by Forth.
+SYMELEC already fills the 8K of 18-bit core, and Mitch's Forth wants most of an 8K machine
+of its own, so the two do not both fit as programs.
+
+The Forth device is his PDP-7 Forth as emulated hardware, and it is running. The menu says
+software or hardware, and hardware runs NEXT, on the same image. It does not yet make that
+image smaller. The kernel is still in core. Fitting it into the core PIXIE leaves free is
+two more steps, and only the first of those has started. `X@`, `X!`, and `XMOVE` can already
+reach past 8K, which is what a header stored in the next bank needs. The headers are not
+stored there yet. The assembler has no macros, and that macro is the piece in progress. A
+dictionary answered from outside the 8K, so Forth can sit in SYMELEC's own machine and be
+the control language, is the step after that. It is not built. The plan is at the end.
+
 ## The emulator
 
 The emulator is a [TypeScript program](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet)
