@@ -3,10 +3,26 @@
 Forth Day, Silicon Valley FIG, 21 November 2026, 14:10 to 14:40. Mitch Bradley has just spent ten
 minutes on how this Forth got written. This is the half hour after that.
 
+- [With Mitch, at Sun](#with-mitch-at-sun)
+- [PIXIE's radial menus](#pixies-radial-menus)
+- [PIXIE and Titan](#pixie-and-titan)
+- [The document between them](#the-document-between-them)
+- [Chuck Moore](#chuck-moore)
+- [Peter Milford](#peter-milford)
+- [The Forth](#the-forth)
+- [The demo](#the-demo)
+- [The emulator](#the-emulator)
+- [The compiler under that](#the-compiler-under-that)
+- [What is not built yet](#what-is-not-built-yet)
+
+## With Mitch, at Sun
+
 I know him from a summer. In 1987 I was his intern at Sun, and we put his CForth into CADroid, a
 schematic editor from Lucasfilm that Sun used internally. The editor stayed the editor. A language
 written in Forth made it scriptable, and programmable by demonstration. That is the job I still
 want Forth to do.
+
+## PIXIE's radial menus
 
 The machine on the screen is here because of an older editor, and its menus. PIXIE is Heinz
 Lemke's graphical editor, written at Cambridge in 1969 with Neil Wiseman and John Hiles. You
@@ -15,10 +31,14 @@ the earliest radial menus. I have been building pie menus since the 1980s, so wh
 his 1972 listing, 128 pages of SYMELEC, I wanted to point at those menus again. I had no PDP-7,
 so I built one. It runs in the browser, light pen and all.
 
+## PIXIE and Titan
+
 PIXIE was already a distributed CAD system. The PDP-7 was not a terminal. About 5000 words of it
 talked to you and built the model, and the model had to fit in the 3000 words left in 8K. The
 model then went over Neil Wiseman's link to Cambridge's Titan mainframe, which ran the
 simulation. You drew on the PDP-7. Titan did the computing.
+
+### The document between them
 
 What crossed Wiseman's link was the model, not a drawing of the screen. That is the split
 between a user interface and a computation. They live in different places, and a document
@@ -30,10 +50,14 @@ JSON, then YAML. PIXIE's document was the rings. The same split is what the Fort
 for, once Forth is small enough to share that core. What of that is running, and what is
 not, is below.
 
+## Chuck Moore
+
 It is an honor to meet Chuck Moore and to speak with him on this Zoom. Peter Conn and Coco Conn hired
 him at HOMER & Associates. Their console mixed pictures live, sixteen slide projectors and four
 film projectors, and he programmed its host in PolyForth, in 32K. Atomic Dog and Flying Logos
 came out of that shop. I think that is one of the most amazing things anyone has done with Forth.
+
+## Peter Milford
 
 Peter Milford has just talked about Lean in Forth. Yesterday
 [Levent Alpöge](https://alpo.ge/remark.pdf) posted a proof of the Riemann hypothesis written in
@@ -44,10 +68,14 @@ the Lean statement is really the Riemann hypothesis and not a quietly redefined 
 running when this was written. That is why Lean is in the news this weekend. Peter's idea is to
 have that language on a Forth machine.
 
+## What this half hour covers
+
 The long essay, [A sea of slots](SEA-OF-SLOTS.md), is about Korz, a way of writing the emulator.
 This note is the Forth. It says what is running, in the order a Forth programmer can check: the
 PDP-7 Forth itself, the emulator it runs in, and the two compilers under that emulator.
 What is not built yet is at the end.
+
+### Two compilers, in one breath
 
 A few host words, once. TypeScript is a superset of JavaScript, and it compiles to JavaScript.
 The emulator, and Korz, are written in TypeScript. There are two just-in-time compilers. Korz
@@ -65,6 +93,8 @@ Mitch's system is [pdp7forth](https://github.com/MitchBradley/pdp7forth). It is 
 The PDP-7 is a good Forth machine because a thread cell can be a real instruction, and the opcode
 is the word's kind.
 
+### A cell is an instruction
+
 | Cell | What it is | What executing it does |
 |---|---|---|
 | colon word | a bare address, `CAL` | hardwired `JMS 20`. `nest` at 21 pushes the return and enters the thread |
@@ -75,6 +105,8 @@ is the word's kind.
 
 Four things in the hardware do the inner interpreter's work.
 
+### XCT
+
 `XCT` fetches a word and executes it in place. The program counter stays on NEXT. A cell that
 jumps never comes back for the push. A cell that only loads the accumulator falls into it.
 
@@ -84,16 +116,22 @@ next:  xct i 10       / step IP, execute that cell as an instruction
        jmp next
 ```
 
+### Auto-index 10, 11, and 12
+
 Locations 10 through 17 are not registers. They are words in low memory that auto-increment
 when you address them indirectly. Forth keeps the interpreter pointer in 10, the return stack
 in 11, and the data stack in 12. A push is `dac i 12`: the increment is the addressing mode.
 A pop is done by hand, in the other direction.
+
+### CAL
 
 `CAL` is hardwired. Whatever address it carries, it is a `JMS 20`. Location 20 catches the
 return address, and `nest` at 21 does the work. It does not use that return. Every `CAL`
 would overwrite it. `nest` reads the cell `XCT` just executed, and the address field of that
 cell is the body of the colon word. So a colon call is a bare address, and the machine
 already knows that a bare address means "call."
+
+### Constants, variables, and literals
 
 Constants and variables are not special words in the inner loop. They are PDP-7 instructions
 sitting in the thread. `LAC` loads the value. `LAW` loads the address. Either one falls into
@@ -104,10 +142,14 @@ entry. The compiled cell is an `LAC` of that entry. Running it is a constant pus
 Location 10 is a second program counter. The PDP-7 runs NEXT, and NEXT runs the Forth program
 one instruction at a time.
 
+### Poking the machine
+
 That is also why Forth is a good way to poke at this machine. You compile into the same core the
 display is reading. A loop typed at the prompt runs when the loop closes, without a definition
 around it, which is an idea of Mitch's from Open Firmware. A routine from a 1972 assembly listing
 becomes a Forth word with a wrapper about three instructions long: pop, `jms`, `jmp next`.
+
+### The Type 340
 
 The Type 340 is the other processor in the box. It fetches its own display list out of the same
 core, the way NEXT fetches a thread. The turtle does not draw lines itself. It appends 340
@@ -124,6 +166,8 @@ draw a square:
 4 0 DO 200 FD 90 RT LOOP
 ```
 
+### Drag a corner
+
 Those four moves are vector words in the display list. A vector word holds a step of at most
 127 in each direction. A longer move is several words. Open the tool menu on the tube and
 choose **Edit 340 instructions**. Point at a corner and drag it.
@@ -137,7 +181,7 @@ instructions the turtle assembled, and the 340 is the processor that executes th
 The same edit can be done from the prompt. The tooltip gives the address of the word under
 the pointer, and `!` stores a new one. The editor is that store, done with the mouse.
 
-### Names
+### Names and CREATE DOES>
 
 Two things were added on top of his kernel. Neither one changes NEXT.
 
@@ -158,8 +202,12 @@ layout, and [does.fs](tapes/pdp7forth/does.fs) is the fifteen lines. Moving the 
 ### The PIXIE ring library, in Forth
 
 The dynamic data is the 1972 library, linked in, not rewritten. PIXIE, Heinz Lemke's editor at
-Cambridge, kept its models as rings: circular structures, graphs rather than trees. A ring does
-the job JSON does. It is the value that goes from the part you touch to the part that computes.
+Cambridge, kept its models as rings: circular structures, graphs rather than trees.
+
+### A ring does JSON's job
+
+A ring does the job JSON does. It is the value that goes from the part you touch to the part
+that computes.
 JSON is a tree, one thing inside another. A circuit is not. A node sits on several rings at
 once, a branch joins two nodes, and the list comes back around to its owner. PostScript can
 share references, and YAML can name an anchor, but a ring is already words in the core this
@@ -183,10 +231,14 @@ draws, and the value you would send across the link are one structure. That is w
 is worth having in this Forth. The demo is
 [PIXIE and FORTH on the PDP-7](https://www.youtube.com/watch?v=lo8kdY-5i6c).
 
+### What fits in 8K
+
 That ring library is the piece PIXIE calls, and it is in Forth now. PIXIE itself is not being
 driven by Forth. SYMELEC already fills the 8K of 18-bit core, and Mitch's Forth wants most of
 an 8K machine of its own, so the two do not both fit as programs. CADroid had room for CForth.
 This machine does not, yet.
+
+### The Forth device
 
 The Forth device is his PDP-7 Forth as emulated hardware, and it is running. The menu says
 software or hardware, and hardware runs NEXT, on the same image. It does not yet make that
@@ -203,12 +255,16 @@ The emulator is a [TypeScript program](https://github.com/SimHacker/WillWrightSh
 that runs in the browser. The machine you talk to is the same one: teletype in, `ok` back, turtle
 on the 340. Try it at [hyperties.org/cabinet/forth](https://hyperties.org/cabinet/forth/).
 
+### Four rungs, one image
+
 The core image does not change when the way of running it changes. There are four of those ways,
 and each one is checked against the one below it on the same bytes. The bottom is a straight port
 of Bob Supnik's SIMH PDP-7, a switch on the opcode. Above that, the same instruction set is written
 as a table of small behaviors. Above that, the table is compiled into one function per operation.
 Above that, a run of instructions is pasted into one JavaScript function. The live pages open on
 that last one. A menu reboots the same disk on any of the four.
+
+### How fast
 
 On UNIX boot, that compiled form is about twice as fast as the hand-written switch: 5 nanoseconds
 an instruction against 11, on an M4 Max under Node 26. A real PDP-7 did about 0.3 million
@@ -235,6 +291,8 @@ word in the time of one memory cycle. The writeup is [FORTH-DEVICE.md](FORTH-DEV
 
 Two just-in-time compilers, one running on the other.
 
+### Korz, the upper one
+
 The upper one is Korz, written in TypeScript, the same language as the emulators. It compiles
 a PDP-7, or a 6502, into JavaScript. A straight run of instructions becomes one function. The
 same compiler takes the device definitions: the hardware, and a coprocessor, are slots that
@@ -245,6 +303,8 @@ word before running it. An `XCT` of an `XCT` falls back. The Forth accelerator i
 way the guest is mixed in: on the fetch of NEXT it runs one cell itself, on Mitch's stacks.
 Forth is not the language Korz is written in. Forth is in the machine being compiled.
 
+### V8, the lower one
+
 The lower one is V8. It does not translate a whole program and then run it. It runs
 JavaScript, notices which functions are hot, and compiles those to the processor. It
 remembers what kinds of values a function has been seeing. When a value of a different kind
@@ -252,6 +312,8 @@ shows up, it throws the compiled code away and continues, with the stack still m
 That guess, and the retreat from a wrong guess, came from the Self language.
 [The essay](SEA-OF-SLOTS.md#from-self-to-v8) is the history. V8 never sees a thread cell or a
 device. It sees the JavaScript function Korz emitted.
+
+### Written for the one below
 
 A compiler on a compiler works here because the upper one is written to please the lower one.
 Korz emits one stable function for a run of the machine, the kind V8 compiles once and keeps.
@@ -263,6 +325,8 @@ The essay's name for the table of device behaviors is a sea of slots. You can re
 later. Nothing in the half hour depends on the name.
 
 ## What is not built yet
+
+### A whole colon definition, as one function
 
 The upper compiler stops at one word. A colon definition is still a series of calls back to the
 dispatch loop, one cell at a time, whether the accelerator or the `XCT` path is doing it. The step
@@ -276,6 +340,8 @@ not in the image today.
 
 Three smaller things are in the same state.
 
+### Headers in high memory
+
 The fetches past 8K are real: `X@`, `X!`, and `XMOVE`. Hand poses and tables already go there.
 The names do not. The plan is one kernel source and one header macro, with an assignment at the
 top that picks the layout. The same words recompile as Mitch's three-character headers, as the
@@ -284,9 +350,13 @@ headerless code. Nothing that runs a word reads a name, so NEXT stays put. The m
 is the missing piece. The cabinet's assembler has no macros yet.
 [FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md) is the expansion.
 
+### Other threading models, to measure
+
 The same switch can build other threading models, so they can be measured against this one.
 `XCT` threading is already the right fit for the PDP-7. The experiment is there to compare, not
 because a better inner interpreter is expected.
+
+### A dictionary outside the 8K
 
 The accelerator still jumps to primitives that live in core. A dictionary answered from outside
 the 8K bank, so that Forth could sit in SYMELEC's own machine and call its rings, is the reason
@@ -307,6 +377,8 @@ type at it, and so can a program on the PDP-7. The design is
 
 The PDP-7 system is the one this hour is about. The Apple is the same kind of job, later.
 
+### fig-FORTH, and Bill Ragsdale
+
 In 1985 I wrote a fig-FORTH for the Apple ][ under ProDOS, and an H19 terminal on top of it.
 fig-FORTH is the 6502 model the Forth Interest Group published. Bill Ragsdale led that model
 and wrote its installation manual, and my kernel starts there. The ProDOS layer, the terminal,
@@ -319,6 +391,8 @@ When the Apple ][ emulator is far enough along, I want the same kind of stack th
 has, running entirely in the browser. A 6502 macro assembler and a disassembler, in TypeScript.
 Beside them, a reader and a writer for Apple ][ threaded Forth and for 6502 assembly, so a screen
 of code and a block of memory are the same object from either side.
+
+### From the image back to source
 
 Then the recovery. Read the surviving image back into two texts: the kernel as 6502 macro
 assembly, and the rest as Forth. Mitch's metacompiler runs the other way. He wrote the kernel,
