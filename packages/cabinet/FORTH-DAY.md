@@ -19,14 +19,14 @@ have that language on a Forth machine.
 
 The long essay, [A sea of slots](SEA-OF-SLOTS.md), is about Korz, a way of writing the emulator.
 This note is the Forth. It says what is running, in the order a Forth programmer can check: the
-PDP-7 Forth itself, the emulator it runs in, and the browser compiler underneath that emulator.
+PDP-7 Forth itself, the emulator it runs in, and the two compilers under that emulator.
 What is not built yet is at the end.
 
 A few host words, once. TypeScript is a superset of JavaScript, and it compiles to JavaScript.
-The emulator, and Korz, are written in TypeScript. JavaScript is what the browser and Node
-actually run, so it is the language their just-in-time compiler sees. V8, inside Chrome and
-Node, turns hot JavaScript into the processor's own instructions while the program is running.
-You do not need Lisp, and you do not need the Apple ][, to follow any of this.
+The emulator, and Korz, are written in TypeScript. There are two just-in-time compilers. Korz
+compiles the emulated machine into JavaScript. V8, inside Chrome and Node, compiles that
+JavaScript into the processor's own instructions, because JavaScript is what the browser and
+Node actually run. You do not need Lisp, and you do not need the Apple ][, to follow any of this.
 
 ## The Forth
 
@@ -169,34 +169,34 @@ word in the time of one memory cycle. The writeup is [FORTH-DEVICE.md](FORTH-DEV
 
 ## The compiler under that
 
-V8 is a just-in-time compiler. It does not translate the whole program and then run it. It runs
-JavaScript, notices which functions are hot, and compiles those to the processor's own
-instructions. It remembers what kinds of values a function has been seeing, and it compiles for
-those. When a value of a different kind shows up, it throws the compiled code away and continues
-in the interpreter, with the stack still making sense. That guess, and the orderly retreat from a
-wrong guess, came from the Self language. [The essay](SEA-OF-SLOTS.md#from-self-to-v8) is the
-history. The part that matters here is the consequence: a stable function, called the same way,
-gets compiled once and then runs at the speed of the machine. A fresh function every cycle, or a
-call whose target V8 cannot see, stays interpreted.
+Two just-in-time compilers, one running on the other.
 
-There are two compilers, and Forth is mixed into the upper one.
+The upper one is Korz, written in TypeScript, the same language as the emulators. It compiles
+a PDP-7, or a 6502, into JavaScript. A straight run of instructions becomes one function. The
+same compiler takes the device definitions: the hardware, and a coprocessor, are slots that
+can carry their behavior as a JavaScript template. When they do, that template is pasted into
+the function too. A coprocessor is not a special case. It is another device. Where a PDP-7 run
+fetches `xct i 10`, Korz also compiles the one Forth word that cell names, and it checks the
+word before running it. An `XCT` of an `XCT` falls back. The Forth accelerator is the other
+way the guest is mixed in: on the fetch of NEXT it runs one cell itself, on Mitch's stacks.
+Forth is not the language Korz is written in. Forth is in the machine being compiled.
 
-The upper one is Korz, written in TypeScript, the same language as the PDP-7 emulator. It pastes a
-straight run of PDP-7 instructions into one JavaScript function. Where that run fetches
-`xct i 10`, it also compiles the one Forth word that cell names, and it checks the word before
-running it. An `XCT` of an `XCT` falls back to the interpreter. The accelerator is the other way
-Forth is mixed in: on the fetch of NEXT it executes one cell itself, in TypeScript, on Mitch's
-stacks. Both of those are running.
+The lower one is V8. It does not translate a whole program and then run it. It runs
+JavaScript, notices which functions are hot, and compiles those to the processor. It
+remembers what kinds of values a function has been seeing. When a value of a different kind
+shows up, it throws the compiled code away and continues, with the stack still making sense.
+That guess, and the retreat from a wrong guess, came from the Self language.
+[The essay](SEA-OF-SLOTS.md#from-self-to-v8) is the history. V8 never sees a thread cell or a
+device. It sees the JavaScript function Korz emitted.
 
-The lower compiler is V8. It never sees a thread cell. It sees the JavaScript function the upper
-compiler emitted, and it compiles that to the processor. The upper compiler's job is to hand V8 a
-function V8 can keep. A store into a word the function was compiled from throws the function away,
-because PDP-7 code rewrites itself. `JMS` stores its return address in the first word of the
-routine.
+A compiler on a compiler works here because the upper one is written to please the lower one.
+Korz emits one stable function for a run of the machine, the kind V8 compiles once and keeps.
+A fresh function every cycle, or a call whose target V8 cannot see, stays interpreted. A store
+into a word the function was compiled from throws the function away, because PDP-7 code
+rewrites itself. `JMS` stores its return address in the first word of the routine.
 
-Korz is not written in Forth. Forth is the guest. The accelerator is a device beside the guest,
-answering one fetch. The essay's name for the table of behaviors is a sea of slots. You can read
-that later. Nothing in the half hour depends on the name.
+The essay's name for the table of device behaviors is a sea of slots. You can read that
+later. Nothing in the half hour depends on the name.
 
 ## What is not built yet
 
