@@ -197,7 +197,10 @@ the device exists. SYMELEC already fills the machine. That ROM dictionary is not
 
 The PDP-7 system is the one this hour is about. The Apple is the same kind of job, later.
 
-In 1985 I wrote a fig-FORTH for the Apple ][ under ProDOS, and an H19 terminal on top of it. The
+In 1985 I wrote a fig-FORTH for the Apple ][ under ProDOS, and an H19 terminal on top of it.
+fig-FORTH is the 6502 model the Forth Interest Group published. Bill Ragsdale led that model
+and wrote its installation manual, and my kernel starts there. The ProDOS layer, the terminal,
+and the assembler are mine. A tip of the hat to him. The
 disk still boots. The banner says 1985. What I lost is the source that built the kernel: the 6502
 macro assembly, and the Forth around it. Some blocks of Forth are still on the disk. The build is
 not.
