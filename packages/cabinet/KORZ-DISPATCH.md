@@ -11,7 +11,7 @@ and a Turing rule ([`src/korz/tm.ts`](src/korz/tm.ts)). [Domain kits](#domain-ki
 divide. The PDP-7 runs at each level and is tested at each against
 `Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The 6502 runs on the same three levels, in
 [`src/korz/m6502.ts`](src/korz/m6502.ts) and [`src/korz/compile65.ts`](src/korz/compile65.ts), and
-runs the Apple ][+ page ([the Apple ][](#the-apple-)). The apple2 bus as its own sea is design. A short summary of results
+runs the Apple ][+ page ([the Apple \]\[](#the-apple-)). The apple2 bus as its own sea is design. A short summary of results
 and open questions, for readers who know Korz and Self, is [KORZ-MACHINES.md](KORZ-MACHINES.md).
 
 Everything a machine does on its bus is a lookup on a few small bit fields: which address, read or
@@ -987,7 +987,7 @@ word in core.
 4. **Built.** The resolver on the PDP-7: per-selector tables, 34 M steps per second on UNIX with
    the devices on the IOP bus and event-driven.
 5. **Built:** the 6502 as a sea of 256 opcode slots, on the interpreter, the resolver and the
-   compiler, against the switch ([the Apple ][](#the-apple-)). Not yet: page-set normal forms with
+   compiler, against the switch ([the Apple \]\[](#the-apple-)). Not yet: page-set normal forms with
    the brute-force tests, and the apple2 bus on the interpreter, against microM8
    ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2), in [`src/korz/apple2`](src/korz/apple2/).
 6. The resolver for apple2: table sets, page kinds, interned chains, the opcode table,
