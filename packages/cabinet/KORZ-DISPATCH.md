@@ -9,7 +9,9 @@ the CPU host ([`src/korz/cpu.ts`](src/korz/cpu.ts)), the device adapter
 ([`src/korz/device.ts`](src/korz/device.ts)), Life ([`src/korz/ca.ts`](src/korz/ca.ts)),
 and a Turing rule ([`src/korz/tm.ts`](src/korz/tm.ts)). [Domain kits](#domain-kits) says how they
 divide. The PDP-7 runs at each level and is tested at each against
-`Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The apple2 bus and its compiled blocks are design. A short summary of results
+`Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The 6502 runs on the same three levels, in
+[`src/korz/m6502.ts`](src/korz/m6502.ts) and [`src/korz/compile65.ts`](src/korz/compile65.ts), and
+runs the Apple ][+ page ([the Apple ][](#the-apple-)). The apple2 bus as its own sea is design. A short summary of results
 and open questions, for readers who know Korz and Self, is [KORZ-MACHINES.md](KORZ-MACHINES.md).
 
 Everything a machine does on its bus is a lookup on a few small bit fields: which address, read or
@@ -722,6 +724,54 @@ to its code. JMS's link word is never executed, so a block starts at `ea + 1` an
 invalidates nothing; a store into a word that a block was compiled from clears that block's `valid`
 flag and drops it from the table, and a block checks its own flag after each of its stores.
 
+## The Apple ][
+
+The second CPU on the kit is the 6502, `Korz6502` in [`src/korz/m6502.ts`](src/korz/m6502.ts). An
+opcode is one coordinate, `op`, and each of its 256 values is an exact slot whose body is that
+opcode in the switch, [`src/m6502/m6502.ts`](src/m6502/m6502.ts). The switch is the oracle, and it
+passes SingleStepTests `6502/v1` including every bus cycle. `interpret` searches the sea, `resolve`
+is the table, and `compile` is [`src/korz/compile65.ts`](src/korz/compile65.ts): a straight-line
+block of loads, stores, logic, compares, transfers, increments, flag ops, branches and absolute
+`JMP`, with every bus cycle still written out as a read or a write, so the scanner and the Disk II
+see it. Anything else is one call to the switch. A store ends the block, so a write onto the next
+instruction is compiled after it lands. The motherboard, the language card, the Disk II and the
+scanner are TypeScript under that CPU ([`src/korz/apple2`](src/korz/apple2/README.md)). They are not
+slots yet: that is steps 5 and 6.
+
+**Speed.** `scripts/apple-bench.mjs`, Node 20.19 on an M4 Max, in multiples of a real Apple ][+
+(1.020 MHz). The Korz figures are the quicker round after a cold one. microM8 is the cabinet's
+oracle Apple, written in Go and compiled to WebAssembly, run at warp 100 for two seconds of its own
+cycle counter once the program is spinning, and over the whole boot for DOS
+([BENCHMARKS.md](BENCHMARKS.md#apple-)).
+
+| Workload | switch | compiler | resolver | microM8 (Wasm) | interpreter |
+|---|---:|---:|---:|---:|---:|
+| `DEX` / `JMP` in RAM | 128× | 150× | 88× | 2.9× | 1.7× |
+| DOS 3.3 boot to `]` | 80× | 38× | 70× | 2.5× | 1.9× |
+| Applesoft `10 GOTO 10` | 93× | 78× | 68× | 2.9× | 2.1× |
+
+The compiler runs the tight loop at about 153 million Apple cycles a second, 52 times microM8. On
+the DOS boot it is 15 times microM8 and on Applesoft 27 times; the switch is 32 times on both.
+In Chrome on the same machine, the Apple page's status line read 88 MHz while Little Computer
+People loaded its guestbook side and 30 MHz in the house, painting one picture a game second
+([a fast wait](src/korz/apple2/README.md#a-fast-wait)). Those are readings of a live page, not a
+benchmark.
+
+**What the numbers say.** The gap to microM8 is mostly not WebAssembly. microM8 builds its picture
+inside every instruction, reaches memory and devices through Go interfaces, and shares one thread
+with the Go scheduler and garbage collector in a 41 MB module; it lands next to the Korz
+interpreter ([GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-waits)). The Korz
+switch computes the beam address on every bus cycle and still runs near 130 million cycles a second,
+because it is one function over numeric fields with no allocation in the loop. That is the PDP-7's
+lesson again: generate code V8 can keep monomorphic, and V8 does the rest.
+
+The compiler leads only where a block stays in RAM and repeats, which is the one optimization a
+Wasm module cannot do for itself: the guest's opcode bytes are data to it, and the Korz compiler
+turns them into a function V8 then specializes. On the DOS boot and Applesoft the switch leads,
+since those are programs full of calls, `JSR` and `RTS` and indirect jumps, which end a block and
+go back to the switch. Those two rows are the compiler's open work. On the PDP-7 the compiler is
+ahead of `Pdp7` on UNIX and on the hand; on the 6502 it is not ahead yet on a program that calls.
+
 ## The whole machine
 
 The CPU is the first client, not the only one. Every part of a cabinet that answers to coordinates
@@ -936,8 +986,10 @@ word in core.
    `who: device`.
 4. **Built.** The resolver on the PDP-7: per-selector tables, 34 M steps per second on UNIX with
    the devices on the IOP bus and event-driven.
-5. Page-set normal forms with the brute-force tests; the apple2 bus on the interpreter, against
-   microM8 ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2), in [`src/korz/apple2`](src/korz/apple2/).
+5. **Built:** the 6502 as a sea of 256 opcode slots, on the interpreter, the resolver and the
+   compiler, against the switch ([the Apple ][](#the-apple-)). Not yet: page-set normal forms with
+   the brute-force tests, and the apple2 bus on the interpreter, against microM8
+   ([microm8/PLAN.md](microm8/PLAN.md), steps 1–2), in [`src/korz/apple2`](src/korz/apple2/).
 6. The resolver for apple2: table sets, page kinds, interned chains, the opcode table,
    invalidation.
 7. Standard slots, and compiled page dispatch.
