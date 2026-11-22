@@ -5,8 +5,10 @@ and the others whose work this rests on. A draft: corrections welcome at any lev
 not what Korz means" to "you'll regret that data structure".
 
 The big ticket is where it runs. The same TypeScript runs in Node and in the browser, and the page
-you can open is the machine: [hyperties.org/cabinet/unix/](https://hyperties.org/cabinet/unix/).
-There is no native build to fetch and no WebAssembly module to squint at. A slot is a JavaScript
+you can open is the machine: [PDP-7 UNIX](https://hyperties.org/cabinet/systems/pdp-7-unix/), and
+an [Apple \]\[+](https://hyperties.org/cabinet/machines/apple-ii/) on the same kit. There is no native build to
+fetch, and the only WebAssembly module is microM8, kept on the Apple page as the oracle to
+measure against. A slot is a JavaScript
 function. V8 compiles the generated JavaScript, and V8's own lineage runs back through Self, which
 is why this note is addressed where it is. JavaScript is not a host we are putting up with until
 a real language is ready. It is the reason a person can read the emulator, change one slot, and
@@ -69,9 +71,16 @@ All of this is in TypeScript in this package, and runs in Node and the browser:
 - [`src/korz/ca.ts`](src/korz/ca.ts): Life, neighbor bits and a derived count.
 - [`src/korz/tm.ts`](src/korz/tm.ts): a Turing rule as slots. It steps a tape, or writes the words the PDP-7 engine reads.
 - [`src/korz/pdp7.ts`](src/korz/pdp7.ts): the PDP-7 instruction set, on that host.
+- [`src/korz/compile7.ts`](src/korz/compile7.ts): the PDP-7 compiler.
 - [`src/korz/iop.ts`](src/korz/iop.ts): the PDP-7 pulse protocol.
+- [`src/korz/type340.ts`](src/korz/type340.ts): the Type 340's own instruction set as slots.
+- [`src/korz/forth-device.ts`](src/korz/forth-device.ts): Mitch's Forth inner interpreter, 30 primitives and FIND as a device on the same image.
+- [`src/korz/m6502.ts`](src/korz/m6502.ts) and [`src/korz/compile65.ts`](src/korz/compile65.ts): the 6502 on the same host, and its compiler.
+- [`src/korz/apple2/`](src/korz/apple2/README.md): the Apple ][+ motherboard, language card, Disk II and scanner under it.
+- [`src/korz/inspect.ts`](src/korz/inspect.ts): every sea, selector, slot, generated dispatcher and compiled block as one tree, for the page's KORZ browser.
 
-The design document is [KORZ-DISPATCH.md](KORZ-DISPATCH.md).
+The design document is [KORZ-DISPATCH.md](KORZ-DISPATCH.md). A tour of the source, port by port,
+with workshop projects, is [SEA-OF-SLOTS-VOYAGE.md](SEA-OF-SLOTS-VOYAGE.md).
 
 **The sea.**
 - **Dimensions** in this stack are finite integer ranges, stored as bitsets. The paper's dimensions
@@ -165,8 +174,8 @@ UMSI, LSF, LLB18, RSB, DBSF, DBLM, RAL or the ION delay each makes a test fail. 
 survives: the Forth code always follows it with TMST, so no program here can see it. We report
 that rather than paper over it. The compiler gets the same treatment: 24 errors planted in its
 generated code, of which 23 are caught, one of them by hanging every rig, and the 24th changes
-nothing. The whole package has 294
-passing tests.
+nothing. The whole package has 355
+passing tests, and 2 skipped.
 
 **Speed.** UNIX v0 boot, 3 million steps, a new machine each round, Node 26 on an M4 Max. All four
 levels end at the same PC.
@@ -206,6 +215,47 @@ every-cycle loop by a rig built to race the 340.
 Then the compiler: 5 ns a step on UNIX and 13 on `ULTIMATE-HAND`, against `Pdp7`'s 11 and 21. On
 the Turing engine, a unit due every three cycles, it ties `Pdp7` at about 70 ns, because the
 batches are three instructions long.
+
+**Two more instruction sets in the PDP-7's cabinet.** The 340 fetches its own instructions from
+PDP-7 core, and `KorzType340` decodes them as slots on two dimensions, the mode register and the
+word's top two bits: one slot for each thing a word can do, resolved to a table of 32 entries,
+tested against `Type340`'s switch on 200 random display files with a light pen wandering over
+them. On the hand workload it measured no slower than the switch. Mitch's Forth is the other. The Forth device watches two
+instruction fetches on the same image in core: at NEXT it runs the thread itself, colon calls,
+constants and 30 primitives on the stacks where the kernel keeps them; at `find` it answers from
+a table of names that follows `latest`. A code word it does not know goes back to the CPU as an
+instruction. 30,000 passes of `I +` take 890,000 PDP-7 cycles in Mitch's kernel and 107,000 with
+the device ([FORTH-DEVICE.md](FORTH-DEVICE.md)). It is differential-tested against the kernel,
+and a menu on the page switches between the two.
+
+The device's `read` slot guards the 18-bit address, which would have made a table of 262,144
+entries. The resolver now builds a table that large by kinds: values that every guard treats
+alike share one entry, and the table has 24.
+
+**The Apple ][.** The 6502 is the second CPU on the host, `Korz6502`: an opcode is one coordinate,
+and each of the 256 values is an exact slot whose body is that opcode in the switch, which passes
+SingleStepTests `6502/v1` including every bus cycle. `compile65.ts` compiles straight-line blocks
+that still write out every bus cycle, so the scanner and the Disk II see them. The motherboard,
+language card, Disk II and scanner run under it in TypeScript; they are not slots yet. In
+multiples of a real Apple ][+, Node 20.19 on the same M4 Max, against microM8, a Go emulator
+compiled to WebAssembly and the Apple's oracle:
+
+| Workload | switch | compiler | resolver | microM8 (Wasm) | interpreter |
+|---|---:|---:|---:|---:|---:|
+| `DEX` / `JMP` in RAM | 128× | 150× | 88× | 2.9× | 1.7× |
+| DOS 3.3 boot to `]` | 80× | 38× | 70× | 2.5× | 1.9× |
+| Applesoft `10 GOTO 10` | 93× | 78× | 68× | 2.9× | 2.1× |
+
+The gap to microM8 is mostly not WebAssembly. microM8 builds its picture inside every
+instruction, reaches memory through Go interfaces, and shares one thread with the Go scheduler and
+collector; it lands beside the Korz interpreter
+([GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-waits)). The Korz switch runs
+near 130 million Apple cycles a second because it is one function over numeric fields with no
+allocation in the loop. The compiler leads only where a block stays in RAM and repeats; on the DOS
+boot and Applesoft, which are full of `JSR`, `RTS` and indirect jumps that end a block, the switch
+leads. The PDP-7 compiler is ahead of its switch; the 6502 compiler is not yet, on a program that
+calls ([KORZ-DISPATCH.md](KORZ-DISPATCH.md#the-apple-)). Little Computer People moves in at max
+speed and one picture a game second, which read 88 MHz in Chrome while it loaded.
 
 **The second machine, and what V8 keys on.** In one Node process, a second `KorzPdp7` ran 71–80 ns
 a step against the first one's 55. Same code, same program, same tables. V8 doesn't specialize on
@@ -257,7 +307,8 @@ deoptimization came with them.
 
 ## Where it goes
 
-**Step 3, the compiler, is built** for the PDP-7. Each compiled block depends on the words it was
+**Step 3, the compiler, is built** for the PDP-7, and for the 6502 as straight-line blocks.
+On the PDP-7, each compiled block depends on the words it was
 compiled from, and a `write` to one of them invalidates the blocks that depend on it: Self's
 dependency-driven recompilation at the granularity of core words. Any install or remove
 invalidates every block.
@@ -297,7 +348,9 @@ guard value on the PDP-7's sea.
 
 **Machines.** The PDP-7 was chosen because it is small.
 
-- **apple2** is the real test, the sibling of pdp-7 at `src/korz/apple2`, already designed in [microm8/PLAN.md](microm8/PLAN.md). apple1 comes later.
+- **apple2** is the real test, the sibling of pdp-7 at `src/korz/apple2`. Its 6502 runs on every
+  level and the page runs on the compiler (above). Its bus as a sea is designed in
+  [microm8/PLAN.md](microm8/PLAN.md) and not built. apple1 comes later.
   - Memory configuration as a cube of soft-switch fields.
   - The language card's mapping wins over ROM by being more specific, not by being first.
   - A card in an expansion slot as one transactional set of slots, which is how a Videx, a Saturn
@@ -363,6 +416,9 @@ confidence without proving equivalence, which is why such slots stay labeled and
 
 **JavaScript, not Wasm, for now.** Vanessa Freudenberg's SqueakJS argument holds here: generate
 code that V8's JIT optimizes, and V8 inlines it with the rest of the emulator and the devices.
+The one measurement so far is the Apple above, and it is not a fair test of Wasm: a heavy Go
+program compiled to Wasm landed beside the Korz interpreter, and a careful switch in JavaScript
+ran 32 to 44 times faster than it.
 
 The profile that matters is the guest program's: block counts, branch bias, chains that have only
 ever had one shape. Our layers collect that profile and specialize code from it. That could later
@@ -391,11 +447,13 @@ doing if profiling shows the CPU loop, not the devices, is the limit.
    record instead of allocating one, and slots write their results (`ac`, `skip`) into it too. Is
    there a semantic hazard here we haven't hit yet, for example a slot that captures its context, or
    a nested send that rebinds a coordinate its caller still reads?
-6. **Seeing the sea.** `why` and `view` are text. For Randall in particular: the Alternate Reality
-   Kit made a simulation's laws into objects you could pick up and change while it ran, and a
-   patch slot on a running machine feels like that. What would a direct-manipulation view of a
-   machine's sea look like, Morphic- or Kansas-style, where you grab a slot and the PDP-7 changes
-   under you?
+6. **Seeing the sea.** `why` and `view` are text. The page now has two views that only look: SLOTS
+   shows the slots behind the next instruction and the next display word, and every sea's slots;
+   KORZ is a tree of every sea, selector, slot, generated dispatcher and compiled block, each with
+   the JavaScript it became. For Randall in particular: the Alternate Reality Kit made a
+   simulation's laws into objects you could pick up and change while it ran, and a patch slot on a
+   running machine feels like that. What would a direct-manipulation view of a machine's sea look
+   like, Morphic- or Kansas-style, where you grab a slot and the PDP-7 changes under you?
 7. **Where does this break?** x86 decode, the Apple's floating bus, cycle-exact video, DMA that
    interleaves with the CPU mid-instruction. Which of these would you expect to defeat
    most-specific-slot dispatch, and which only look like they do?
