@@ -1020,7 +1020,7 @@ counts are written down.
   Modeling*. MIT Press, 1987.
 - James Gosling. [*Ace: a syntax-driven C preprocessor*](https://swtch.com/gosling89ace.pdf). July
   1989. Rules rewrite C syntax trees; X/NeWS 2.0's SHAPES graphics library needs Ace to build its
-  device-dependent part ([HN](https://news.ycombinator.com/item?id=43594513)). More in
+  device-dependent part ([HN](https://news.ycombinator.com/item?id=43482234)). More in
   [moollm's notes](https://github.com/SimHacker/moollm/blob/main/designs/cellular-automata/cam-construction-set.md#ace-gosling-already-built-stage-2-for-exactly-this-problem).
 - Jeff Bezanson, Jiahao Chen, Ben Chung, Stefan Karpinski, Viral Shah, Jan Vitek and Lionel Zoubritzky.
   *Julia: Dynamism and Performance Reconciled by Design*. OOPSLA 2018. World age.
