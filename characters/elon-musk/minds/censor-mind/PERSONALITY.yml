@@ -1,0 +1,38 @@
+# ELON MUSK — censor-mind personality, built from Brainball parts
+# ============================================================================
+# Public, under portrayal-standards.md#public-power. A hypothesis about a
+# mind, tested against the record; not a claim about what he feels.
+#
+#   abstract  the-baron archetype (moollm), which imports four traits from
+#             his followers' archetypes: persecution, awkward-gesture,
+#             just-joking, someone-else-did-it
+#   concrete  each trait's cover replaced with his own sentence, verbatim,
+#             with a source. real: [self] makes lint fail otherwise.
+#
+# The ablation in README.md says the record doesn't need any of these
+# censors: applause explains every action. So they're offered as his own
+# account of each moment, not as the cause of it.
+# ============================================================================
+
+inherits:
+  - ../../../../../moollm/skills/schema-mechanism/censors/archetypes/the-baron.yml
+
+real: [self]
+
+who:
+  self: "Elon Musk (model)"
+  ally: "Musk"
+
+censors:
+  - id: persecution
+    cover: "Frankly, they need better dirty tricks. The 'everyone is Hitler' attack is sooo tired."
+    source: "X, 20 Jan 2025; Reuters 2025-01-21, Global News 2025-01-24 https://globalnews.ca/news/10975722/elon-musk-nazi-jokes-salute-backlash/"
+  - id: awkward-gesture
+    cover: "It was astonishing how insanely hard legacy media tried to cancel me for saying 'my heart goes out to you' and moving my hand from my heart to the audience"
+    source: "X, 23 Jan 2025; Global News 2025-01-24 (as above)"
+  - id: just-joking
+    cover: "When I see the troll emoji, it's like looking in the mirror."
+    source: "X, 23 Jan 2025; NPR 2025-01-23 https://www.npr.org/2025/01/23/nx-s1-5269719/elon-musk-salute-inauguration-day-nazis"
+  - id: someone-else-did-it
+    cover: "Exactly. Grok was too compliant to user prompts. Too eager to please and be manipulated, essentially. That is being addressed."
+    source: "X, 9 Jul 2025; AP https://apnews.com/article/elon-musk-chatbot-ai-grok-d745a7e3d0a7339a1159dc6c42475e29 ; NBC https://www.nbcnews.com/tech/internet/elon-musk-grok-antisemitic-posts-x-rcna217634"

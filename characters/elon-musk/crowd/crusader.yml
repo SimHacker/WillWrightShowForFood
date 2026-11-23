@@ -1,0 +1,6 @@
+# A crusader in Elon Musk's crowd: the public archetype, on the real record.
+# The follower is an archetype, not a person.
+
+inherits:
+  - ../../../../moollm/skills/schema-mechanism/censors/examples/baron/crusader.yml
+  - ../record.yml

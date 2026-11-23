@@ -98,11 +98,37 @@ those facts; the first that holds applies.
 | **Memorial** | they have died | Reverence; legacy and artifacts only; no invented inner life |
 | **Self-authored** | they write their own directory (Don Hopkins) | They control it |
 | **Consented** | they said yes, and we have the message that shows it | Within what they agreed to; they can withdraw |
+| **Public power** | they hold political office, or run a mass platform, and use it on the public | Modeled from the public record, verbatim and sourced. See [below](#public-power) |
 | **Public figure** | they have a public role or published work | Public work + tradition/K-line; no impersonation |
 | **Private** | none of the above | A fictional character inspired by them, at most |
 
 What happened when we asked is recorded as one of: not asked, asked, granted, declined,
 revoked. Being a friend, or a warm conversation, is noted but is not consent.
+
+## Public power {#public-power}
+
+Guests are invited; their drafts stay in the workshop until they've seen them. People who hold
+office or run a mass platform, and use it on the public, are a different case. What they say
+and do in public is the public's business, and it's fair to model it the way we model anyone:
+in the open, from the record.
+
+- **The record is verbatim and sourced.** Every quote is their exact words with a citation.
+  Every deed has a source. Paraphrase is labeled as paraphrase. `censor_sim.py lint` fails on
+  any event about them that has no source.
+- **Hypotheses are labeled as ours.** A censor or a weight is a guess about a mind, tested
+  against the record (`ablate`, `sweep`). When the record can't decide between two readings,
+  we show both.
+- **They're invited like anyone.** They can correct, add to, or argue with their model, and
+  ask for it to be deleted. Their own words go in with attribution. Requests are answered
+  in good faith and in public.
+- **Facts change with evidence.** We'll correct any factual mistake that is shown with
+  evidence and citations, and we'll say what we corrected. A denial without evidence doesn't
+  change the record. Neither does a Gish gallop: a flood of claims that takes longer to
+  answer than to make. We don't argue it point by point. We document it beside the record,
+  with whatever sources it came with, and the reader can compare.
+
+Their followers are modeled as archetypes and composites, not as individuals. A private
+person is never put in a public model without their consent.
 
 ## Memorial mode {#memorial-mode}
 

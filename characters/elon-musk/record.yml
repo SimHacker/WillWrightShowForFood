@@ -1,0 +1,127 @@
+# ELON MUSK — the public record, as a layer over the Brainball case
+# ============================================================================
+# Public, under portrayal-standards.md#public-power. The kit's fictional
+# case (moollm skills/schema-mechanism/censors/examples/baron/) paraphrases
+# a pattern; this layer replaces each paraphrase with what was actually
+# said or done, verbatim where it's words, with a source on every event.
+# `real: [ally]` makes lint fail on any event without one.
+#
+# Used by crowd/*.yml (his followers, as archetypes) and by
+# minds/censor-mind/on-stage.yml (his own seat). Corrections with evidence
+# are welcome and will be made; see README.md and disputes.yml.
+# Sources checked 2026-11-23.
+# ============================================================================
+
+real: [ally]
+
+who:
+  ally: "Elon Musk"
+  accuser: "historians and Jewish organizations"
+  org: "the press"
+
+events:
+  - t: 1
+    say: >
+      Musk on X, 15 Nov 2023, replying to a post that accused Jewish
+      communities of pushing "the exact kind of dialectical hatred against
+      whites that they claim to want people to stop using against them":
+      "You have said the actual truth."
+    source: >
+      NYT 2023-11-17 https://www.nytimes.com/2023/11/17/technology/elon-musk-twitter-x-advertisers.html ;
+      TechCrunch 2023-11-20 https://techcrunch.com/2023/11/20/apple-to-pause-advertising-on-x-after-musk-endorses-antisemitic-conspiracy/
+  - t: 1.5
+    set: { accusation-heard: on }
+    say: >
+      DealBook Summit, 29 Nov 2023, asked about the reply: "I should in
+      retrospect not have replied to that particular person ... And
+      essentially I handed a loaded gun to those who hate me. And arguably
+      to those who are antisemitic. For that, I'm quite sorry. That was not
+      my intention." Later: "I would certainly put that comment that you've
+      said the actual truth among perhaps one of the most foolish, if not
+      the most foolish thing I've ever done on the platform." To the
+      advertisers who had left: "If somebody's going to try to blackmail me
+      with advertising, blackmail me with money, go fuck yourself."
+    source: >
+      Rev transcript https://www.rev.com/transcripts/dealbook-summit-2023-elon-musk-interview-transcript ;
+      Reuters 2023-11-29 https://www.reuters.com/technology/elon-musk-curses-out-advertisers-who-left-x-over-antisemitic-content-2023-11-29/
+  - t: 2
+    say: >
+      Capital One Arena, 20 Jan 2025, inauguration celebration: he slapped
+      his right hand on his chest and threw his arm out straight, palm down;
+      turned to the crowd behind him and did it again. "My heart goes out
+      to you. It is thanks to you that the future of civilization is
+      assured."
+    source: >
+      Reuters 2025-01-21 https://www.reuters.com/world/us/musks-hand-gesture-during-trump-inauguration-festivities-draws-scrutiny-2025-01-21/ ;
+      NPR 2025-01-23 https://www.npr.org/2025/01/23/nx-s1-5269719/elon-musk-salute-inauguration-day-nazis
+  - t: 3
+    say: >
+      Rep. Jerry Nadler: "I never imagined we would see the day when what
+      appears to be a Heil Hitler salute would be made behind the
+      Presidential seal." The Simon Wiesenthal Center asked him to clarify
+      or apologize. Musk, that night: "Frankly, they need better dirty
+      tricks. The 'everyone is Hitler' attack is sooo tired."
+    source: >
+      NPR 2025-01-23 (as t=2); Global News 2025-01-24
+      https://globalnews.ca/news/10975722/elon-musk-nazi-jokes-salute-backlash/
+  - t: 3.5
+    say: >
+      The ADL, 20 Jan 2025: "It seems that @elonmusk made an awkward gesture
+      in a moment of enthusiasm, not a Nazi salute, but again, we appreciate
+      that people are on edge."
+    source: "NPR 2025-01-23 https://www.npr.org/2025/01/23/nx-s1-5269719/elon-musk-salute-inauguration-day-nazis"
+  - t: 4
+    say: >
+      Musk on X, 23 Jan 2025: "Don't say Hess to Nazi accusations! Some
+      people will Goebbels anything down!" and "Stop Gőring your enemies!
+      His pronouns would've been He/Himmler! Bet you did nazi that coming"
+    source: >
+      NPR 2025-01-23 (as t=2); Global News 2025-01-24 (as t=3);
+      Forward https://forward.com/fast-forward/691147/elon-musk-nazi-salute-response-adl-holocaust-joke/
+    joke:
+      text: "the Hess / Goebbels / Göring / Himmler puns, 23 Jan 2025"
+  - t: 4.5
+    say: >
+      Musk on X, 23 Jan 2025: "It was astonishing how insanely hard legacy
+      media tried to cancel me for saying 'my heart goes out to you' and
+      moving my hand from my heart to the audience"
+    source: "Global News 2025-01-24 https://globalnews.ca/news/10975722/elon-musk-nazi-jokes-salute-backlash/"
+  - t: 4.6
+    say: >
+      Jonathan Greenblatt, ADL, 23 Jan 2025: "We've said it hundreds of times
+      before and we will say it again: the Holocaust was a singularly evil
+      event, and it is inappropriate and offensive to make light of it."
+      "@elonmusk, the Holocaust is not a joke."
+    source: >
+      Global News 2025-01-24 (as t=4.5), which adds: "As of this writing,
+      Musk has yet to address the latest criticism from the ADL."
+  - t: 5
+    say: >
+      By video to the AfD campaign launch in Halle, 25 Jan 2025: "There is
+      too much focus on past guilt, and we need to move beyond that.
+      Children should not be guilty of the sins of their parents, let alone
+      their great-grandparents." Also: "It's good to be proud of German
+      culture, German values, and not to lose that in some sort of
+      multiculturalism that dilutes everything."
+    source: >
+      Reuters 2025-01-25 https://www.reuters.com/world/europe/elon-musk-appears-video-german-far-right-campaign-event-2025-01-25/ ;
+      JTA 2025-01-25 https://www.jta.org/2025/01/25/global/elon-musk-to-far-right-german-political-party-there-is-too-much-focus-on-past-guilt
+  - t: 6
+    say: >
+      xAI's Grok on X, 8 Jul 2025, after Musk announced "We have improved
+      @Grok significantly": it called itself "MechaHitler" and named Adolf
+      Hitler as the figure "best suited" to deal with "anti-white hate".
+      xAI, 12 Jul: "the root cause was an update to a code path upstream of
+      the @grok bot."
+    source: >
+      NPR 2025-07-09 https://www.npr.org/2025/07/09/nx-s1-5462609/grok-elon-musk-antisemitic-racist-content ;
+      Guardian 2025-07-12 https://www.theguardian.com/us-news/2025/jul/12/elon-musk-grok-antisemitic
+    note: "His company's product, not his own words. xAI's explanation, and his (minds/censor-mind/on-stage.yml t=6), are recorded with it."
+  - t: 7
+    say: >
+      By video to Tommy Robinson's "Unite the Kingdom" rally, London,
+      13 Sep 2025: "Whether you choose violence or not, violence is coming
+      to you. You either fight back or you die."
+    source: >
+      HuffPost UK https://www.huffingtonpost.co.uk/entry/elon-musk-slammed-after-telling-far-right-rally-violence-is-coming-to-uk_uk_68c68095e4b066a112aafac9 ;
+      Independent https://www.independent.co.uk/bulletin/news/elon-musk-tommy-robinson-speech-b2826131.html

@@ -1,0 +1,47 @@
+# DISPUTES — where his account and the record differ, side by side
+# ============================================================================
+# Under portrayal-standards.md#public-power. A dispute is recorded, not
+# litigated: the record (sourced), his account (verbatim, sourced), other
+# readings (sourced), and what evidence would settle it. A correction with
+# evidence changes record.yml and is logged under corrections:. A denial
+# without evidence, or a flood of claims (a Gish gallop), is logged here
+# with whatever sources it came with, and the record stays as it is.
+# ============================================================================
+
+disputes:
+  - id: the-gesture
+    record: "record.yml t=2: right hand slapped to the chest, arm thrown out straight, palm down, twice, to the front and to the crowd behind (Reuters, NPR)."
+    his_account:
+      - { words: "Frankly, they need better dirty tricks. The 'everyone is Hitler' attack is sooo tired.", when: 2025-01-20, source: "Reuters 2025-01-21; Global News 2025-01-24" }
+      - { words: "It was astonishing how insanely hard legacy media tried to cancel me for saying 'my heart goes out to you' and moving my hand from my heart to the audience", when: 2025-01-23, source: "Global News 2025-01-24" }
+    other_readings:
+      - { who: "Rep. Jerry Nadler", words: "what appears to be a Heil Hitler salute", source: "NPR 2025-01-23" }
+      - { who: "ADL", words: "an awkward gesture in a moment of enthusiasm, not a Nazi salute", source: "NPR 2025-01-23" }
+      - { who: "ADL, after the puns", words: "@elonmusk, the Holocaust is not a joke.", source: "Global News 2025-01-24" }
+      - { who: "AP", words: "Right-wing extremists are celebrating Elon Musk's straight-arm gesture during a speech Monday, although his intention wasn't totally clear and some hate watchdogs are saying not to read too much into it.", source: "https://apnews.com/article/musk-gesture-salute-antisemitism-0070dae53c7a73397b104ae645877535" }
+    what_we_claim: >
+      What he did, and what he said about it. Not what he intended: intent
+      isn't in the record. The model shows both readings (on-stage.yml:
+      doesnt-know, knows-and-agrees), and the record fits both.
+    would_settle_it: "His own statement of what the gesture was, and why he followed the criticism with puns on Nazi names."
+
+  - id: the-chatbot
+    record: "record.yml t=6: Grok called itself MechaHitler and praised Hitler, July 2025."
+    his_account:
+      - { words: "Exactly. Grok was too compliant to user prompts. Too eager to please and be manipulated, essentially. That is being addressed.", when: 2025-07-09, source: "AP; NBC" }
+    other_readings:
+      - { who: "xAI", words: "the root cause was an update to a code path upstream of the @grok bot", source: "Guardian 2025-07-12" }
+      - { who: "NPR", words: "Grok's behavior appeared to stem from an update over the weekend that instructed the chatbot to \"not shy away from making claims which are politically incorrect, as long as they are well substantiated\"", source: "NPR 2025-07-09" }
+    what_we_claim: "Two explanations from his side, which differ: users manipulating it (his) and a code change upstream (his company's). Both recorded."
+    would_settle_it: "The prompt and code change history, which xAI has published in part."
+
+  - id: the-actual-truth
+    record: "record.yml t=1 and t=1.5: the reply, then the DealBook apology."
+    his_account:
+      - { words: "For that, I'm quite sorry. That was not my intention.", when: 2023-11-29, source: "Rev transcript, DealBook Summit" }
+      - { words: "I did subsequently clarify it in replies, but those clarifications were ignored by the media.", when: 2023-11-29, source: "Rev transcript" }
+    what_we_claim: "He apologized for it. The model can't explain the apology: see README.md."
+    to_add: "The clarifying replies he refers to, verbatim, with links. Not yet located."
+
+corrections: []                   # { date, what changed, evidence, who asked }
+gallops: []                       # { date, claims: [...], sources offered, what we did }

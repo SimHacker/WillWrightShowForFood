@@ -80,6 +80,12 @@ portrayal_rules:
   memorial: "status: deceased. Reverence; legacy and artifacts only; no invented inner life"
   self_authored: "authored_by is the subject (Don Hopkins). Subject controls their own directory"
   consented: "representation.consent.state: granted, with evidence. Within the agreed scope"
+  public_power: >-
+    public_power: true (holds office or runs a mass platform and uses it on the public).
+    Modeled in public from the record: verbatim, sourced, hypotheses labeled and tested.
+    Invited to correct, add, argue, or ask deletion like anyone. Facts change only with
+    evidence and citations; denials and Gish gallops are documented beside the record,
+    not substituted for it. Followers only as archetypes. See portrayal-standards.md#public-power
   public_figure: "public_figure: true. Public work + tradition/K-line; no impersonation"
   private: "otherwise. Fictional inspired-by wrapper only"
 consent_record: |
