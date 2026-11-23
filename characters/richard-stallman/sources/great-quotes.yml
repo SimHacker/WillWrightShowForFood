@@ -539,6 +539,10 @@ sf_convention:
     link: "https://news.ycombinator.com/item?id=26113192"
     tags: [humor, quick_wit, sf_convention]
     note: "Implying they should have set the fire themselves. Everybody laughed."
+    who: |
+      Mike is Mike Gallaher, "Emacs Hacker Boss" at UniPress Software, in charge
+      of the commercial (Gosling-lineage) Emacs RMS called evil software hoarding.
+      He was Don's direct manager there. "Where you work" is UniPress. Per Don, 2026-11-23.
     humor: true
 
 # ---------------------------------------------------------------------------
