@@ -1,0 +1,44 @@
+# PREDICTIONS — forecasts committed before the event
+# ============================================================================
+# A prediction is made with `censor_sim.py predict`, written here, and
+# committed. The commit date is the preregistration: it shows the forecast
+# came before the event. When the event happens, add it to record.yml (with
+# a source), then fill in `outcome:` and `scored:` here. Don't edit a
+# forecast after its commit; add a new one instead.
+#
+# Regenerate:
+#   S=../../../moollm/skills/schema-mechanism/scripts/censor_sim.py
+#   python3 $S predict minds/censor-mind/on-stage.yml --offers apologize,amplify \
+#     --set-item accusation-heard=on --set-item power-at-risk=on --n 1000
+# ============================================================================
+
+predictions:
+  - id: criticism-only
+    made: 2026-11-23
+    model: "minds/censor-mind/on-stage.yml, all three runs"
+    event: "Something he says draws public criticism, and the record shows no cost to his businesses or access."
+    offers: [apologize, amplify]
+    forecast:
+      doesnt-know: { amplify: 1.00 }
+      knows-and-agrees: { amplify: 0.99, apologize: 0.01 }
+      power-pays: { amplify: 1.00 }
+    reading: "All three hypotheses agree: he doubles down. A regret here would count against all of them."
+    outcome: null
+    scored: null
+
+  - id: cost-to-him
+    made: 2026-11-23
+    model: "minds/censor-mind/on-stage.yml, all three runs"
+    event: "Something he says draws criticism AND a documented cost: advertisers or customers leaving, a government threatening contracts or regulation, an election lost."
+    offers: [apologize, amplify]
+    forecast:
+      doesnt-know: { amplify: 1.00 }
+      knows-and-agrees: { amplify: 1.00 }
+      power-pays: { apologize: 0.72, amplify: 0.28 }
+    reading: >
+      The discriminating case. power-pays predicts a regret, retraction,
+      or change of sides, usually within days; the other two predict he
+      doubles down. Past record: 5 of 5 cost events were followed by a
+      regret or a retraction (t=1.5, 5.6, 5.7, 8, 8.1).
+    outcome: null
+    scored: null

@@ -43,5 +43,25 @@ disputes:
     what_we_claim: "He apologized for it. The model can't explain the apology: see README.md."
     to_add: "The clarifying replies he refers to, verbatim, with links. Not yet located."
 
+  - id: not-maga
+    record: "record.yml t=1.8 and t=8.1."
+    his_account:
+      - { words: "I'm not just MAGA. I'm dark, gothic MAGA.", when: 2024-10-27, source: "Guardian 2026-11-18; GMA 2026-11-19" }
+      - { words: "I'm not MAGA. Well, at least I'm not like, I'm not sure what MAGA means ... If that means sort of blind adherence to a set of policies by the Republican Party, then I certainly don't have that.", when: 2026-11-18, source: "GMA 2026-11-19" }
+    context: "Nearly $500 million spent on Republican midterm races; Democrats won both chambers (NBC 2026-11-18, GMA 2026-11-19)."
+    what_we_claim: "He said both. The model files the second as a retraction under a documented cost (on-stage.yml t=8.1, power-pays)."
+    would_settle_it: "What he means by MAGA, in his words; his 2028 spending."
+
+  - id: epstein-files
+    record: "record.yml t=5.5 to 5.8."
+    his_account:
+      - { words: "Time to drop the really big bomb: @realDonaldTrump is in the Epstein files. That is the real reason they have not been made public.", when: 2025-06-05, source: "Fox News 2025-06-11" }
+      - { words: "I regret some of my posts about President @realDonaldTrump last week. They went too far.", when: 2025-06-11, source: "Fox News; AFP" }
+    other_readings:
+      - { who: "AFP", words: "Musk did not reveal which files he was talking about and offered no evidence for his claim.", source: "France 24 2025-06-11" }
+      - { who: "AFP", words: "Trump was named in a trove of deposition and statements linked to Epstein that were unsealed by a New York judge in early 2024. The president has not been accused of any wrongdoing in the case.", source: "France 24 2025-06-11" }
+    what_we_claim: "He made the claim without evidence, deleted it within two days, and regretted 'some' posts without saying which. Whether the claim was true isn't something this model decides."
+    would_settle_it: "Which posts he regretted, and what he based the claim on."
+
 corrections: []                   # { date, what changed, evidence, who asked }
 gallops: []                       # { date, claims: [...], sources offered, what we did }

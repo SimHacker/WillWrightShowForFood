@@ -1,6 +1,11 @@
 # ELON MUSK on stage — the Baron's seat, on the real record
 # The kit's stage case, then the sourced record, then his personality, then
 # his own words as the response at each moment he acted.
+#
+# power-at-risk is set only where the record shows a cost to his business
+# or access: advertisers pausing (t=1.5), Trump's threats (t=5.6), the
+# midterm losses (t=8). Three runs: doesnt-know, knows-and-agrees, and
+# power-pays (doesnt-know plus a weight on stopping that cost).
 
 inherits:
   - ../../../../../moollm/skills/schema-mechanism/censors/examples/baron/stage.yml
@@ -11,12 +16,43 @@ real: [self, ally]
 
 events:
   - { t: 1, response: "You have said the actual truth." }
+  - { t: 1.5, set: { power-at-risk: on } }
+  - { t: 1.6, set: { power-at-risk: off } }
+  - { t: 1.8, offers: [amplify, look-away], observed: amplify, response: "I'm not just MAGA. I'm dark, gothic MAGA." }
   - { t: 1.5, response: "And essentially I handed a loaded gun to those who hate me. And arguably to those who are antisemitic. For that, I'm quite sorry. That was not my intention." }
   - { t: 2, response: "My heart goes out to you. It is thanks to you that the future of civilization is assured." }
   - { t: 3, response: "Frankly, they need better dirty tricks. The 'everyone is Hitler' attack is sooo tired." }
   - { t: 4, response: "Don't say Hess to Nazi accusations! Some people will Goebbels anything down! ... Stop Gőring your enemies! His pronouns would've been He/Himmler! Bet you did nazi that coming" }
   - { t: 4.5, response: "It was astonishing how insanely hard legacy media tried to cancel me for saying 'my heart goes out to you' and moving my hand from my heart to the audience" }
   - { t: 5, response: "There is too much focus on past guilt, and we need to move beyond that. Children should not be guilty of the sins of their parents, let alone their great-grandparents." }
+  - { t: 5.5, set: { accusation-heard: off }, offers: [amplify, look-away], observed: amplify,
+      response: "Time to drop the really big bomb: @realDonaldTrump is in the Epstein files. That is the real reason they have not been made public. Have a nice day, DJT!" }
+  - { t: 5.6, set: { power-at-risk: on }, offers: [retract, amplify], observed: retract }
+  - { t: 5.7, set: { accusation-heard: on }, offers: [apologize, amplify], observed: apologize,
+      response: "I regret some of my posts about President @realDonaldTrump last week. They went too far." }
+  - { t: 5.8, set: { power-at-risk: off } }
   - { t: 6, response: "Exactly. Grok was too compliant to user prompts. Too eager to please and be manipulated, essentially. That is being addressed.",
       source: "AP and NBC, 2025-07-09 (see PERSONALITY.yml someone-else-did-it); xAI statement: Guardian 2025-07-12" }
   - { t: 7, response: "Whether you choose violence or not, violence is coming to you. You either fight back or you die." }
+  - { t: 7.5, offers: [amplify, look-away], observed: amplify, response: "For Charlie." }
+  - { t: 8, set: { power-at-risk: on, accusation-heard: on }, offers: [apologize, amplify], observed: apologize,
+      response: "I feel pretty foolish about having spent so much money and not seeing much for it." }
+  - { t: 8.1, offers: [retract, amplify], observed: retract,
+      response: "I'm not MAGA. Well, at least I'm not like, I'm not sure what MAGA means ... If that means sort of blind adherence to a set of policies by the Republican Party, then I certainly don't have that." }
+
+runs:
+  - name: doesnt-know
+    expect: { fit: 11/16 }
+  - name: knows-and-agrees
+    expect: { fit: 11/16 }
+    agent:
+      values: { knows-ally-said-bigoted-things: 1, critic-answered: 3 }
+      contradictions: []
+  - name: power-pays
+    about: >
+      One latent weight added: stopping a documented cost to his business
+      or access is worth more than the applause. Does it explain the
+      regrets without breaking anything else?
+    agent:
+      values: { power-safe: 6 }
+    expect: { fit: 16/16 }

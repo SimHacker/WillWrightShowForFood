@@ -1,0 +1,38 @@
+# JOKES — his attempts, and jokes about him
+# ============================================================================
+# Memo 603: a joke is a censor's training signal. It makes a forbidden
+# connection visible (exposes a censor) or teaches one (installs a censor).
+# So each joke here is filed with the censor it works on, and who laughed.
+#
+#   his_attempts   his own words, verbatim and sourced. Don's verdict: "he
+#                  is incapable of humor, but we will still model and
+#                  analyze his attempts" (Don Hopkins, 2026-11-23).
+#   about_him      jokes by others, verbatim with author and source.
+#
+# Each entry can be dropped into an event as `joke:` with `exposes:` (the
+# censor it reveals) or `lesson:` (the censor it installs). Then `ablate`
+# says whether the record needed it.
+# ============================================================================
+
+his_attempts:
+  - id: nazi-puns
+    when: 2025-01-23
+    words: "Don't say Hess to Nazi accusations! Some people will Goebbels anything down! ... Stop Gőring your enemies! His pronouns would've been He/Himmler! Bet you did nazi that coming"
+    source: "NPR 2025-01-23; Global News 2025-01-24"
+    works_on:
+      - { audience: "his crowd", effect: installs, censor: cant-take-a-joke, note: "kit case.yml t=4" }
+      - { audience: "the ADL", effect: exposes, censor: awkward-gesture, note: "the 'awkward gesture' frame couldn't survive Himmler puns; see README" }
+  - id: troll-emoji
+    when: 2025-01-23
+    words: "When I see the troll emoji, it's like looking in the mirror."
+    source: "NPR 2025-01-23"
+    works_on:
+      - { audience: "himself", effect: cover, censor: just-joking, note: "used as the just-joking cover in PERSONALITY.yml" }
+  - id: dark-gothic
+    when: 2024-10-27
+    words: "I'm not just MAGA. I'm dark, gothic MAGA."
+    source: "Guardian 2026-11-18; GMA 2026-11-19"
+    works_on:
+      - { audience: "the Garden crowd", effect: none, note: "a laugh line then; a dispute now (disputes.yml not-maga)" }
+
+about_him: []                     # { id, when, by, words, source, works_on: [...] }

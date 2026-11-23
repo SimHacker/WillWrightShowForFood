@@ -44,6 +44,11 @@ events:
     source: >
       Rev transcript https://www.rev.com/transcripts/dealbook-summit-2023-elon-musk-interview-transcript ;
       Reuters 2023-11-29 https://www.reuters.com/technology/elon-musk-curses-out-advertisers-who-left-x-over-antisemitic-content-2023-11-29/
+  - t: 1.8
+    say: >
+      Madison Square Garden, Trump rally, 27 Oct 2024: "I'm not just MAGA.
+      I'm dark, gothic MAGA."
+    source: "Guardian 2026-11-18 https://www.theguardian.com/us-news/2026/nov/18/elon-musk-maga-trump ; GMA 2026-11-19 https://www.goodmorningamerica.com/news/story/musk-regrets-500-million-midterm-elections-spending-hes-138270985"
   - t: 2
     say: >
       Capital One Arena, 20 Jan 2025, inauguration celebration: he slapped
@@ -106,6 +111,31 @@ events:
     source: >
       Reuters 2025-01-25 https://www.reuters.com/world/europe/elon-musk-appears-video-german-far-right-campaign-event-2025-01-25/ ;
       JTA 2025-01-25 https://www.jta.org/2025/01/25/global/elon-musk-to-far-right-german-political-party-there-is-too-much-focus-on-past-guilt
+  - t: 5.5
+    say: >
+      Musk on X, 5 Jun 2025, in the feud over the spending bill: "Time to
+      drop the really big bomb: @realDonaldTrump is in the Epstein files.
+      That is the real reason they have not been made public. Have a nice
+      day, DJT!" Then: "Mark this post for the future. The truth will come
+      out." No evidence offered.
+    source: "Fox News 2025-06-11 https://www.foxnews.com/politics/musk-says-he-regrets-social-media-posts-targeting-trump-they-went-too-far ; Independent timeline https://www.independent.co.uk/news/world/americas/us-politics/trump-musk-feud-timeline-twitter-truth-social-b2780187.html"
+  - t: 5.6
+    say: >
+      Already on 5 Jun Trump had posted that cutting billions in subsidies
+      and contracts to Musk's companies would be the "easiest way" to save
+      money (about $18 billion, per US media). On 6 Jun both inched back:
+      Trump, "I just wish him well"; Musk, "Likewise." By Saturday morning,
+      7 Jun, the Epstein posts appeared to be deleted. Trump told NBC that
+      day: "He'll have to pay very serious consequences if he does that."
+    source: "AFP via France 24 2025-06-11 https://www.france24.com/en/live-news/20250611-musk-regrets-some-of-his-trump-criticisms-says-they-went-too-far ; ABC 2025-06-11 https://www.abc.net.au/news/2025-06-11/elon-musk-regrets-donald-trump-posts/105405488"
+  - t: 5.7
+    say: >
+      Musk on X, 11 Jun 2025: "I regret some of my posts about President
+      @realDonaldTrump last week. They went too far." He didn't say which.
+    source: "Fox News 2025-06-11; AFP via France 24 2025-06-11 (as t=5.5, 5.6)"
+  - t: 5.8
+    say: "Trump, to the New York Post: it was \"very nice that he did that\"."
+    source: "ABC 2025-06-11 (as t=5.6)"
   - t: 6
     say: >
       xAI's Grok on X, 8 Jul 2025, after Musk announced "We have improved
@@ -125,3 +155,22 @@ events:
     source: >
       HuffPost UK https://www.huffingtonpost.co.uk/entry/elon-musk-slammed-after-telling-far-right-rally-violence-is-coming-to-uk_uk_68c68095e4b066a112aafac9 ;
       Independent https://www.independent.co.uk/bulletin/news/elon-musk-tommy-robinson-speech-b2826131.html
+  - t: 7.5
+    say: >
+      Charlie Kirk's memorial, Glendale, 21 Sep 2025: Musk slides into the
+      seat beside Trump; they shake hands and talk. Musk posts the photo:
+      "For Charlie."
+    source: "Axios 2025-09-21 https://www.axios.com/2025/09/21/musk-trump-kirk-memorial"
+  - t: 8
+    say: >
+      DealBook Summit, 18 Nov 2026, after Republicans lost both chambers in
+      the midterms he spent nearly $500 million on: "I feel pretty foolish
+      about having spent so much money and not seeing much for it."
+    source: "NBC 2026-11-18 https://www.nbcnews.com/politics/2026-election/elon-musk-says-not-maga-spending-millions-trump-allies-rcna610129 ; GMA 2026-11-19 (as t=1.8)"
+  - t: 8.1
+    say: >
+      Same interview: "I'm not MAGA. Well, at least I'm not like, I'm not
+      sure what MAGA means ... If that means sort of blind adherence to a
+      set of policies by the Republican Party, then I certainly don't have
+      that."
+    source: "GMA 2026-11-19 (as t=1.8); Guardian 2026-11-18 (as t=1.8)"

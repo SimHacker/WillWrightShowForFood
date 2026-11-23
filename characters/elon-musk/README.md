@@ -47,22 +47,47 @@ python3 $S run     minds/censor-mind/on-stage.yml --format md
 | 5 | 25 Jan 2025 | AfD, Halle: "too much focus on past guilt" |
 | 6 | 8–12 Jul 2025 | Grok's "MechaHitler"; his and xAI's explanations, which differ |
 | 7 | 13 Sep 2025 | Unite the Kingdom: "You either fight back or you die" |
+| 1.8 | 27 Oct 2024 | Madison Square Garden: "I'm not just MAGA. I'm dark, gothic MAGA." |
+| 5.5 | 5 Jun 2025 | in the feud over the spending bill: "@realDonaldTrump is in the Epstein files"; no evidence offered |
+| 5.6 | 5–7 Jun 2025 | Trump: cutting Musk's subsidies and contracts is the "easiest way" to save money; the posts deleted by 7 June |
+| 5.7 | 11 Jun 2025 | "I regret some of my posts about President @realDonaldTrump last week. They went too far." |
+| 7.5 | 21 Sep 2025 | beside Trump at Charlie Kirk's memorial: "For Charlie." |
+| 8 | 18 Nov 2026 | DealBook, after nearly $500M on midterms Republicans lost: "I feel pretty foolish" |
+| 8.1 | 18 Nov 2026 | same interview: "I'm not MAGA. Well, at least I'm not like, I'm not sure what MAGA means" |
+
+The t numbers order the moments the model uses; they're not all in date order in this table,
+because the later rows were added as events came in. [`record.yml`](record.yml) has the
+sources.
 
 ## What the model says
 
-**From his seat, applause explains every action but one.** [`on-stage.yml`](minds/censor-mind/on-stage.yml)
-fits 8 of his 9 choices, and the `doesnt-know` run fits them in all 1,000 random weightings. The ablation says none of the four
-censors is needed. Like Andersen's Emperor, he doesn't have to repress anything to act as he did:
-the crowd pays for each move. His four sentences are his account of those moments, not their
-cause.
+**From his seat, applause explains every action except the regrets.** In
+[`on-stage.yml`](minds/censor-mind/on-stage.yml), applause alone fits 11 of his 16 choices, in all
+1,000 random weightings. The ablation says none of the four censors is needed. Like Andersen's
+Emperor, he doesn't have to repress anything to act as he did: the crowd pays for each move. His
+four sentences are his account of those moments, not their cause.
 
-**The one miss is the apology.** At DealBook he said he was sorry, and nothing in the model pays
-for an apology. That makes it the most informative line in the run: whatever moved him there
-wasn't applause, and isn't in the model. In the same interview he told the advertisers who'd left
-to go fuck themselves, so the apology and the defiance arrived together.
+**The five misses are the regrets and retractions, and one weight explains them all.** Applause
+pays for the DealBook apology, the deleted Epstein posts, the "went too far" regret, "pretty
+foolish", and "I'm not MAGA" with nothing. Each one followed a documented cost to his business or
+access: advertisers leaving (2023), a president threatening $18 billion in contracts (2025), a
+lost midterm (2026). The `power-pays` run adds one latent value, stopping that cost, and fits all
+16 choices, in 72% of random weightings. Criticism alone never moved him; criticism plus a cost
+did, every time. In the same interview where he said sorry he told the advertisers to go fuck
+themselves, which fits the hypothesis: the apology was for the power, not the critics.
+
+**It makes a forecast you can check.** [`predictions.yml`](predictions.yml) was committed before
+the next event. If something he says draws criticism and nothing else, all three runs say he
+doubles down. If it also costs him, `power-pays` predicts a regret, a retraction, or a change of
+sides (72%), and the other two say he doubles down. The commit date shows the forecast came
+first.
+
+**His attempts at humor** are in [`jokes.yml`](jokes.yml), each filed with the censor it works on.
+Don's verdict is that he's "incapable of humor"; the model files the puns as installing a censor
+in his crowd and exposing one in the ADL's.
 
 **The record can't say whether he knows.** Two runs: `doesnt-know` (his traits re-file each deed)
-and `knows-and-agrees` (nothing to re-file). Both fit the same 8 of 9. That's not evasion; it's
+and `knows-and-agrees` (nothing to re-file). Both fit the same 11 of 16. That's not evasion; it's
 the result. Intent isn't in the record, so we don't claim it. [`disputes.yml`](disputes.yml) says
 what evidence would settle it.
 
