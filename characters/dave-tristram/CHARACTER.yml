@@ -87,7 +87,8 @@ sources:
   web:
     - "https://www.wired.com/1994/06/raster-masters/"
     - "https://www.wired.com/1995/08/hear-it-with-your-eyes/"
-    - "https://news.ycombinator.com/item?id=33105030   # Don — Dead/tapers thread: Raster Masters mega-comment (Oct 2022)"
+    - "https://news.ycombinator.com/item?id=33105621   # Don — Raster Masters mega-comment (6 Oct 2022)"
+    - "https://news.ycombinator.com/item?id=33105030   # deepnet — parent: Barlow, BBS, FidoNet, Deadhead Usenet"
     - "https://news.ycombinator.com/item?id=42804566   # David Tristram + Don — Psychedelic Graphics (Jan 2025)"
     - "https://news.ycombinator.com/item?id=7700340    # Electroportis decompilation; i_am_ralpht OpenGL port at SGI"
     - "https://donhopkins.com/home/code/igl_0.1.8/     # Don mirror — IGL + Electropaint + mslider source"
@@ -104,6 +105,7 @@ sources:
 
 see_also:
   - { path: raster-masters-panel-library.md, why: "USENIX Monterey 1989 meetup (Panel Library + PSIBER); Raster Masters; Electropaint — Don's firsthand" }
+  - { path: sources/2022-10-06-hn-grateful-dead-tapers.md, why: "Receipt: Don is 33105621, deepnet/Barlow is 33105030" }
   - { path: sources/live-canvas-effects-stub.md, why: "Adobe pre-release beta — public stub only; private digest gitignored" }
   - { path: ../don-hopkins/visual-programming-excel-and-dimensionality.md, why: "PSIBER Space Deck — Don's paper from same USENIX workshop" }
   - { path: CARD.yml, why: "Invokable abilities for show segments" }

@@ -176,6 +176,19 @@ Index and method note: [articles/README.md](articles/README.md)
 | [Svelte 5 Runes, Heir of OpenLaszlo](articles/svelte-runes-openlaszlo-heir.md) | React repeats, it doesn't react; runes beyond the DOM; MicropolisCore wasm bridge as proof |
 | [Pie Menus and Window Management](articles/pie-menus-window-management.md) | Kando + macOS-snapping + Prolog-WM threads smooshed: uwm → OWM → piewm → Kando lineage, XCalc easter egg, overlay window manager idea |
 
+## HN receipts filed 22 Nov 2026
+
+The comments live in the room of the person they are about. This row is the index.
+
+| Comment | Room |
+|---------|------|
+| Grateful Dead tapers — Don [33105621](https://news.ycombinator.com/item?id=33105621), deepnet/Barlow [33105030](https://news.ycombinator.com/item?id=33105030) | [Dave Tristram](../../dave-tristram/sources/2022-10-06-hn-grateful-dead-tapers.md) |
+| Convolvotron / KPT Convolver — [42553847](https://news.ycombinator.com/item?id=42553847) | [Ron Reisman](../../ron-reisman/sources/2024-12-30-hn-convolvotron.md) |
+| Naimark other senses, Iwata Food Simulator — [20672856](https://news.ycombinator.com/item?id=20672856) | [here](2019-08-12-hn-naimark-iwata-haptics.md) (no Naimark or Iwata room yet; also [gesture-space](../gesture-space.md)) |
+| SUPDUP line saving + Gosling redisplay — [29144157](https://news.ycombinator.com/item?id=29144157) | [James Gosling](../../james-gosling/sources/2021-11-07-hn-supdup-line-saving.md) |
+| Computer Lib / Xanadu drop — [22176317](https://news.ycombinator.com/item?id=22176317) | [Ted Nelson](../../ted-nelson/sources/2020-01-29-hn-computer-lib-and-xanadu.md) |
+| Alan Kay AMA — [11939851](https://news.ycombinator.com/item?id=11939851) | [Alan Kay](../../alan-kay/sources/2016-06-20-hn-ama.md) · Sugar reply [here](2016-06-20-hn-kay-ama-olpc-sugar.md) |
+
 ## Other sources in this folder
 
 | File | Topic |

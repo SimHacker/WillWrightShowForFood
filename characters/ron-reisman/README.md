@@ -8,6 +8,6 @@
 Don Hopkins's **late friend**. **Coco Conn**, **David Levitt**, and many in the Ames / VR orbit
 **knew and loved him**.
 
-[Memorial](memorial.md) · [HN sources](sources/hacker-news-memorial.md) · [CHARACTER.yml](CHARACTER.yml)
+[Memorial](memorial.md) · [HN sources](sources/hacker-news-memorial.md) · [Convolvotron, 30 Dec 2024](sources/2024-12-30-hn-convolvotron.md) · [CHARACTER.yml](CHARACTER.yml)
 
 We represent and discuss his documented public work; we do not speak as him.

@@ -33,12 +33,8 @@ Don's framing: *To answer "What is AI?" you first have to answer "What is I?"*
 
 ## Convolvotron / Ames tour — convolvatron user (Dec 2024)
 
-Thread: [Apple M5 unified memory](https://news.ycombinator.com/item?id=24266722)
-
-Don asks **convolvatron** if their username refers to the Ames **Convolvotron**; links NASA spinoff
-and JASA paper; invites tour of Ron's VR/flight-sim/ATC lab; **Vertical Motion Simulator** and
-Minsky video.
-
-- [NASA Spinoff — Convolvotron](https://spinoff.nasa.gov/node/8965)
-- [Body Electric + Convolvotron — Don HN comment](https://news.ycombinator.com/item?id=24266722)
-- [Vertical Motion Simulator](https://www.youtube.com/watch?v=5-lHcv_olkE)
+Receipt: [`2024-12-30-hn-convolvotron.md`](2024-12-30-hn-convolvotron.md). Don's comment is
+[42553847](https://news.ycombinator.com/item?id=42553847), on the Apple M5 thread. The username
+does **not** mean the Ames hardware: convolvatron named it for a CM-2 / Hubble convolution paper.
+[24266722](https://news.ycombinator.com/item?id=24266722) is the Body Electric thread Don linked from there.
+Follow-up in the same thread: KPT Convolver.

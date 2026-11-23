@@ -29,7 +29,15 @@ export type Dim = {
 	readonly width: number;
 	/** Enum members, in value order. A guard may name them. */
 	readonly names?: readonly string[];
+	/** How guards and `why` print a coordinate. Default 8, the PDP-7's. */
+	readonly radix?: 8 | 10 | 16;
 };
+
+/** A coordinate the way its dimension prints: octal bare, hex with `$`. */
+export function coordText(d: Dim, v: number): string {
+	const radix = d.radix ?? 8;
+	return radix === 16 ? `$${v.toString(16)}` : v.toString(radix);
+}
 
 export const LAYERS = ["observe", "patch", "machine"] as const;
 export type Layer = (typeof LAYERS)[number];
@@ -49,6 +57,8 @@ export type SlotSpec<C> = {
 	 * (KORZ-COMPILER.md). The sea carries it and never looks at it.
 	 */
 	readonly emit?: unknown;
+	/** What the slot does, in a sentence, for a browser. Dispatch never reads it. */
+	readonly doc?: string;
 };
 
 /** A set over one dimension's domain, as a bitset; `null` is the whole domain. */
@@ -69,6 +79,7 @@ export class Slot<C> {
 		/** Indices of the dimensions this slot constrains. */
 		readonly constrained: readonly number[],
 		readonly emit: unknown = undefined,
+		readonly doc: string | undefined = undefined,
 	) {}
 }
 
@@ -412,7 +423,7 @@ export class Sea<C extends object> {
 			const order = chain.indexOf(s);
 			const miss = s.constrained.find((d) => !has(s.sets[d]!, this.coord(c, d)));
 			let reason: string;
-			if (miss !== undefined) reason = `doesn't match on ${this.dims[miss]!.name} = ${this.coord(c, miss).toString(8)}`;
+			if (miss !== undefined) reason = `doesn't match on ${this.dims[miss]!.name} = ${this.coordName(c, miss)}`;
 			else if (order === 0) reason = "runs first";
 			else if (order > 0) reason = `runs if "${chain[order - 1]!.by}" calls next`;
 			else reason = "matches, but no single most specific slot";
@@ -461,7 +472,7 @@ export class Sea<C extends object> {
 	private make(spec: SlotSpec<C>): Slot<C> {
 		const sets = this.normalize(spec.guard ?? {});
 		const constrained = sets.flatMap((s, i) => (s === null ? [] : [i]));
-		return new Slot(spec.selector, spec.layer ?? "machine", spec.by, spec.run, sets, constrained, spec.emit);
+		return new Slot(spec.selector, spec.layer ?? "machine", spec.by, spec.run, sets, constrained, spec.emit, spec.doc);
 	}
 
 	private normalize(guard: GuardSpec): DimSet[] {
@@ -488,7 +499,14 @@ export class Sea<C extends object> {
 	}
 
 	private describe(c: C): string {
-		return this.dims.map((d, i) => `${d.name}=${this.coord(c, i).toString(8)}`).join(" ");
+		return this.dims.map((d, i) => `${d.name}=${this.coordName(c, i)}`).join(" ");
+	}
+
+	/** A context's coordinate on one dimension, by member name when it has one. */
+	coordName(c: C, d: number): string {
+		const dim = this.dims[d]!;
+		const v = this.coord(c, d);
+		return dim.names?.[v] ?? coordText(dim, v);
 	}
 
 	/**
@@ -515,7 +533,7 @@ export class Sea<C extends object> {
 			const walk = (k: number): void => {
 				if (k === dims.length) {
 					if (!below.some((u) => u.constrained.every((d) => has(u.sets[d]!, point[d]!)))) {
-						const at = dims.map((d) => `${this.dims[d]!.name}=${point[d]!.toString(8)}`).join(" ");
+						const at = dims.map((d) => `${this.dims[d]!.name}=${coordText(this.dims[d]!, point[d]!)}`).join(" ");
 						throw new AmbiguityError(`${s.selector}: "${s.by}" and "${t.by}" are ambiguous at ${at}`);
 					}
 					return;
@@ -668,15 +686,15 @@ function elements(set: DimSet, width: number): number[] {
 	return out;
 }
 
-/** Members by name, or runs of octal numbers; past four runs, a count. */
+/** Members by name, or runs of numbers in the dimension's radix; past four runs, a count. */
 function setText(set: DimSet, d: Dim): string {
 	const vs = elements(set, d.width);
-	if (d.names) return vs.map((v) => d.names![v] ?? v.toString(8)).join("|");
+	if (d.names) return vs.map((v) => d.names![v] ?? coordText(d, v)).join("|");
 	const runs: string[] = [];
 	for (let i = 0; i < vs.length;) {
 		let j = i;
 		while (j + 1 < vs.length && vs[j + 1] === vs[j]! + 1) j += 1;
-		runs.push(i === j ? vs[i]!.toString(8) : `${vs[i]!.toString(8)}-${vs[j]!.toString(8)}`);
+		runs.push(i === j ? coordText(d, vs[i]!) : `${coordText(d, vs[i]!)}-${coordText(d, vs[j]!)}`);
 		i = j + 1;
 	}
 	return runs.length > 4 ? `${vs.length} values` : runs.join(",");

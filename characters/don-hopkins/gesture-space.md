@@ -90,7 +90,7 @@ Guest candidate: Bill Buxton (room not yet created) or haptics researchers circl
 
 - **hammer.js** — Don built a pie-menu recognizer; mouse "track while button up" was awkward on touch-first APIs ([browser support minefield](http://hammerjs.github.io/browser-support/))
 - **Daniel Vogel** — [Pinch-to-Zoom Plus](https://www.youtube.com/watch?v=x-hFyzdwoL8); [foot menu](https://www.youtube.com/watch?v=pqycjWHoI2w) for exercise while coding
-- **Michael Naimark** — VR/AR fundamentals series on touch and input ([part 3](https://medium.com/@michaelnaimark/vr-ar-fundamentals-3-other-senses-touch-smell-taste-mind-f2d5d959aa4d), [part 4](https://medium.com/@michaelnaimark/vr-ar-fundamentals-4-input-interactivity-792e6757a985))
+- **Michael Naimark** — VR/AR fundamentals series on touch and input ([part 3](https://medium.com/@michaelnaimark/vr-ar-fundamentals-3-other-senses-touch-smell-taste-mind-f2d5d959aa4d), [part 4](https://medium.com/@michaelnaimark/vr-ar-fundamentals-4-input-interactivity-792e6757a985)). Don's 12 Aug 2019 comment, with the Food Simulator links: [`sources/2019-08-12-hn-naimark-iwata-haptics.md`](sources/2019-08-12-hn-naimark-iwata-haptics.md)
 
 ## Show seeds
 

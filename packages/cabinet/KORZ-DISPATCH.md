@@ -727,8 +727,10 @@ flag and drops it from the table, and a block checks its own flag after each of 
 ## The Apple ][
 
 The second CPU on the kit is the 6502, `Korz6502` in [`src/korz/m6502.ts`](src/korz/m6502.ts). An
-opcode is one coordinate, `op`, and each of its 256 values is an exact slot whose body is that
-opcode in the switch, [`src/m6502/m6502.ts`](src/m6502/m6502.ts). The switch is the oracle, and it
+opcode is three coordinates, the fields `aaa`, `bbb` and `cc`. The `exec` selector's slots are the
+operations, as columns, rows and exact cells, and the `mode` selector's are the addressing modes;
+their bodies are the cycles and ALU of the switch, [`src/m6502/m6502.ts`](src/m6502/m6502.ts)
+([KORZ-INSPECT.md](KORZ-INSPECT.md)). The switch is the oracle, and it
 passes SingleStepTests `6502/v1` including every bus cycle. `interpret` searches the sea, `resolve`
 is the table, and `compile` is [`src/korz/compile65.ts`](src/korz/compile65.ts): a straight-line
 block of loads, stores, logic, compares, transfers, increments, flag ops, branches and absolute

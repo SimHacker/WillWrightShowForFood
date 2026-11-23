@@ -15,6 +15,7 @@ Private mail + Quora digests live in `characters/alan-kay/`.
 | [46557204](https://news.ycombinator.com/item?id=46557204) | Vanessa / Craig / Ungar / Ingalls / Kay — live objects insights |
 | [46981538](https://news.ycombinator.com/item?id=46981538) | Micropolis / OLPC — Papert + Kay constructionism |
 | [48333143](https://news.ycombinator.com/item?id=48333143) | Points at Kay Quora on AI command line vs GUI |
+| [11939851](https://news.ycombinator.com/item?id=11939851) | AMA, 20 Jun 2016. Room map: [`../../characters/alan-kay/sources/2016-06-20-hn-ama.md`](../../characters/alan-kay/sources/2016-06-20-hn-ama.md). Don's OLPC/Sugar reply: [`../../characters/don-hopkins/sources/2016-06-20-hn-kay-ama-olpc-sugar.md`](../../characters/don-hopkins/sources/2016-06-20-hn-kay-ama-olpc-sugar.md) |
 
 ## Room
 

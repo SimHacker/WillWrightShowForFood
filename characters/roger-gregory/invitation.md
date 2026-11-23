@@ -77,7 +77,8 @@ sent him the whole lineage is
 [here](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/sources/2022-01-13-hyperties-computer-lib.md),
 and he has [a room in this repo](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ben-shneiderman)
 too. My 2020 Hacker News post that manually transcluded that exchange is
-[item 22176317](https://news.ycombinator.com/item?id=22176317).
+[item 22176317](https://news.ycombinator.com/item?id=22176317)
+([the receipt](../ted-nelson/sources/2020-01-29-hn-computer-lib-and-xanadu.md)).
 
 ## My own opinion, for the record
 

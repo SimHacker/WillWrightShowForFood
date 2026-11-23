@@ -78,7 +78,7 @@ test("korz: why says which slot ran and what ruled the others out; view finds sl
 	]);
 	const why = sea.why("read", ctx(0xc3));
 	assert.deepEqual(why.map((w) => [w.slot, w.order]), [["ram", 1], ["soft switches", 0], ["peek", -1]]);
-	assert.match(why[2]!.reason, /who = 0/);
+	assert.match(why[2]!.reason, /who = cpu/);
 	assert.deepEqual(sea.view({ addr: 0xc8 }).map((s) => s.by), ["ram", "soft switches", "peek"]);
 	assert.deepEqual(sea.view({ addr: 0x08, who: 0 }).map((s) => s.by), ["ram"]);
 });

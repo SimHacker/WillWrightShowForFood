@@ -49,7 +49,7 @@ Don jokes he often accidentally calls them **"Grateful Dead Conferences"** — s
 Free Software / conference-circuit** people he knew (Fen, Gilmore, Barlow, etc.) showed up at Dead
 shows when **"the hippies were in charge, before the frat bros took over."** At one show a concert-goer
 on shrooms pointed at the screen in awe; Don (sober) could see the same thing. *(Don's public HN
-comment, Oct 2022 — [`item?id=33105030`](https://news.ycombinator.com/item?id=33105030).)*
+comment, 6 Oct 2022 — [`33105621`](https://news.ycombinator.com/item?id=33105621); parent is deepnet at [`33105030`](https://news.ycombinator.com/item?id=33105030). Receipt: [`sources/2022-10-06-hn-grateful-dead-tapers.md`](sources/2022-10-06-hn-grateful-dead-tapers.md).)*
 
 ## Dead scene ↔ open source (cultural parallel)
 
@@ -192,9 +192,8 @@ Draves](../scott-draves/)** ("Spot"): **Fractal Flame**, **Electric Sheep**, evo
 
 ### Don Hopkins (HN — public comments)
 
-- [Recording the Grateful Dead / tapers — Raster Masters mega-comment (Oct 2022)](https://news.ycombinator.com/item?id=33105030)
+- [Recording the Grateful Dead / tapers — Don's comment is 33105621](sources/2022-10-06-hn-grateful-dead-tapers.md) (deepnet's parent, Barlow and FidoNet, is [33105030](https://news.ycombinator.com/item?id=33105030))
 - [Psychedelic Graphics — links + melt.ps / Dave thread (Jan 2025)](https://news.ycombinator.com/item?id=42804566)
-- [Cross-post of Dead comment on Psychedelic Graphics thread](https://news.ycombinator.com/item?id=33105030) (via item 42804566 thread)
 
 ### David Tristram (HN)
 

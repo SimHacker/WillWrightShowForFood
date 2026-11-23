@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { compiler7Node, dispatchNode, seaNode, type KorzNode } from "./inspect.js";
+import { compiler65Node, compiler7Node, dispatchNode, lister65, sea65Node, seaNode, type KorzNode } from "./inspect.js";
+import { Korz6502 } from "./m6502.js";
 import { KorzPdp7 } from "./pdp7.js";
 
 const kids = (n: KorzNode): KorzNode[] => n.children?.() ?? [];
@@ -46,4 +47,47 @@ test("inspect: a sea's selectors, their table and slots, and the dispatch method
 		assert.ok(slots.every((k) => /\/\/ run:/.test(k.text ?? "")), s.id);
 	}
 	assert.ok(kids(dispatchNode()).some((k) => /^korz_/.test(k.label)));
+});
+
+class Ram {
+	readonly mem = new Uint8Array(0x10000);
+	read(a: number): number {
+		return this.mem[a & 0xffff]!;
+	}
+	write(a: number, v: number): void {
+		this.mem[a & 0xffff] = v & 0xff;
+	}
+	peek(a: number): number {
+		return this.read(a);
+	}
+}
+
+test("inspect: the 6502 sea names its slots' wins as opcodes, and says why for the next one", () => {
+	const ram = new Ram();
+	ram.mem.set([0xa2, 0x0a, 0xca, 0xd0, 0xfd, 0x4c, 0x00, 0x08], 0x800);
+	const cpu = new Korz6502(ram, { korz: "compile" });
+	cpu.pc = 0x800;
+	for (let i = 0; i < 100 && cpu.pc !== 0x805; i++) cpu.step();
+	const root = sea65Node(cpu);
+	const exec = find(kids(root), "exec");
+	const lda = kids(exec).find((k) => k.label === "LDA")!;
+	assert.match(lda.note ?? "", /wins 8/);
+	assert.match(lda.text ?? "", /A5 LDA zp/);
+	const tya = kids(exec).find((k) => k.label === "TYA")!;
+	assert.match(tya.text ?? "", /shadows \(they run only if it calls next\): flags/);
+	const next = find(kids(root), "next");
+	assert.match(next.label, /^next, at \$0805: 4C JMP abs/);
+	assert.match(next.text ?? "", /runs\s+JMP abs/);
+	const row = find(kids(find(kids(root), "opcodes")), "row 10");
+	assert.match(row.note ?? "", /^LDY LDA LDX LAX/);
+
+	const compiler = compiler65Node(cpu.compiler!, lister65(cpu));
+	const blk = find(kids(find(kids(compiler), "blocks")), "$0800");
+	assert.match(blk.text ?? "", /\$0800  A2 0A\s+LDX #imm/);
+	assert.match(blk.note ?? "", /ran [1-9]/);
+	ram.mem[0x800] = 0xa0;
+	cpu.pc = 0x800;
+	cpu.step();
+	const dropped = kids(find(kids(compiler), "dropped"));
+	assert.match(dropped[0]?.note ?? "", /\$0800 was A2 LDX #imm, now A0 LDY #imm/);
 });

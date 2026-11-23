@@ -232,9 +232,13 @@ The device's `read` slot guards the 18-bit address, which would have made a tabl
 entries. The resolver now builds a table that large by kinds: values that every guard treats
 alike share one entry, and the table has 24.
 
-**The Apple ][.** The 6502 is the second CPU on the host, `Korz6502`: an opcode is one coordinate,
-and each of the 256 values is an exact slot whose body is that opcode in the switch, which passes
-SingleStepTests `6502/v1` including every bus cycle. `compile65.ts` compiles straight-line blocks
+**The Apple ][.** The 6502 is the second CPU on the host, `Korz6502`: an opcode is three
+coordinates, the datasheet's fields `aaa`, `bbb` and `cc`. `exec` holds the operations, a column
+per regular one ("LDA" is `cc=alu aaa=5`), a row where the chip decodes by row (the branches, the
+flags), and an exact cell for each opcode the fields do not explain; `mode` holds the addressing
+cycles and returns the address. The bodies are the switch's own cycles and ALU, and a test runs
+every opcode in every flavor against the switch, bus cycle for bus cycle; the switch passes
+SingleStepTests `6502/v1` including every bus cycle ([KORZ-INSPECT.md](KORZ-INSPECT.md)). `compile65.ts` compiles straight-line blocks
 that still write out every bus cycle, so the scanner and the Disk II see them. The motherboard,
 language card, Disk II and scanner run under it in TypeScript; they are not slots yet. In
 multiples of a real Apple ][+, Node 20.19 on the same M4 Max, against microM8, a Go emulator

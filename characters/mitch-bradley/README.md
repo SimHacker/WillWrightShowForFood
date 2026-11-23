@@ -23,7 +23,7 @@ Forthware on X3J14, the ANS Forth committee, as acting Vice-Chair. He founded
 [FirmWorks](http://firmworks.com/) to support Open Firmware on other platforms.
 
 In 2006 he joined One Laptop per Child and wrote the XO's firmware, replacing LinuxBIOS with Open
-Firmware, a register initialization table and about fifty lines of assembly
+Firmware, a register initialization table and about fifty lines of assembly. Don's 2016 HN reply on Kay's AMA names that firmware, with Mary Lou Jepsen's display, as the OLPC work that was ahead of its time: [`../don-hopkins/sources/2016-06-20-hn-kay-ama-olpc-sugar.md`](../don-hopkins/sources/2016-06-20-hn-kay-ama-olpc-sugar.md).
 ([2008 interview](https://web.archive.org/web/20120118132847/http://howsoftwareisbuilt.com/2008/03/27/interview-with-mitch-bradley-firmware-olpc/)).
 His [Open Firmware](https://github.com/MitchBradley/openfirmware) and
 [CForth](https://github.com/MitchBradley/cforth) are on GitHub, and he is the top contributor to

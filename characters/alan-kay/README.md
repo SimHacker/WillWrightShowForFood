@@ -19,6 +19,7 @@ messaging / late binding; constructionist microworlds; Turing Award 2003. Long c
 | **MOOLLM × trust** | [moollm-trust-and-teaching-guess.md](moollm-trust-and-teaching-guess.md) |
 | **Quora recaps** | [media/quora-recaps/](media/quora-recaps/) · [Why London](media/quora-recaps/why-alan-kay-moved-to-london.md) |
 | **HN (reviewed IDs)** | [../../process/hn-harvest/alan-kay.md](../../process/hn-harvest/alan-kay.md) |
+| **AMA, 20 Jun 2016** | [sources/2016-06-20-hn-ama.md](sources/2016-06-20-hn-ama.md) — map, not a dump. Don's Sugar reply: [../don-hopkins/sources/2016-06-20-hn-kay-ama-olpc-sugar.md](../don-hopkins/sources/2016-06-20-hn-kay-ama-olpc-sugar.md) |
 | **Recent digests** | [sources/](sources/) — PIXIE, Wilkes/PARC/London, Wes Clark |
 | **Morphic lineage map** | [sources/morphic-lineage.md](sources/morphic-lineage.md) — Self → Squeak → LK → Snap! → SqueakJS |
 | **MVC / Morphic / watchers** | [media/discussions/hn-mvc-morphic-watchers-2015.md](media/discussions/hn-mvc-morphic-watchers-2015.md) |

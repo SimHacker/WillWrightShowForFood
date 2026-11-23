@@ -1799,3 +1799,19 @@ function rowF(cpu: M6502, op: number): void {
 		default: return jam(cpu);
 	}
 }
+
+/**
+ * The switch's own cycles and ALU, for the Korz sea in `src/korz/m6502.ts`. Its slots are these
+ * pieces arranged by opcode field, so the sea and the switch cannot disagree about a bus cycle
+ * except in how they pick the pieces.
+ */
+export const parts = {
+	read, write, next, implied, setNZ, push, pull,
+	zp, zpXY, absolute, absoluteXY, indirectX, indirectY, indirect,
+	adc, sbc, cmp, bit, asl, lsr, rol, ror, ora, and, eor, lda, ldx, ldy, lax,
+	aslMem, lsrMem, rolMem, rorMem, incMem, decMem, slo, rla, sre, rra, dcp, isc, unstableStore,
+	branch, brk, jsr, rts, rti, php, plp, pha, pla, jam, nop, flag,
+	anc, alr, arr, sbx, ane, lxa, las,
+} as const;
+
+export const FLAGS = { C, Z, I, D, B, U, V, N } as const;

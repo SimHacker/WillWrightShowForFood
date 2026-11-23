@@ -62,7 +62,7 @@ class AppleEngine {
 		return this.active.annunciators;
 	}
 	get videxShowing() {
-		return this.id === 'microm8' && microM8.videxShowing;
+		return this.id === 'microm8' ? microM8.videxShowing : korzApple.videxShowing;
 	}
 	get gamepad() {
 		return this.id === 'microm8' ? microM8.gamepad : '';
@@ -260,7 +260,7 @@ class AppleEngine {
 	 */
 	attach(canvas, videx = null) {
 		if (this.id === 'microm8') return microM8.attach(canvas, videx);
-		return korzApple.attach(canvas);
+		return korzApple.attach(canvas, videx);
 	}
 }
 

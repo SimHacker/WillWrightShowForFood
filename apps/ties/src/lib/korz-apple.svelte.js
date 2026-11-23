@@ -2,17 +2,22 @@
 // generator are the files in packages/cabinet/roms/apple2. A rung change rebuilds the
 // board and resets, which is the reboot a swap does until an Apple snapshot exists.
 // A cartridge's chargen ROM replaces the character generator.
+// A disk whose profile names the Videx (Don's ProDOS Forth) puts a Videx Videoterm in slot 3
+// for the rest of the session; its 80 columns show on the page's second canvas while
+// annunciator 0 is on and the Apple is in text mode.
 // Hi-res color is one pixel per 14 MHz clock. Each of the seven bits lasts two
 // clocks, and bit 7 delays that byte by one clock, so the two halves of a bit
 // can be different colors. The palette is the scan renderer's.
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
-import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
-import { block65Node, compiler65Node, dispatchNode, seaNode } from '@wwsff/cabinet/korz/inspect';
+import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
+import { block65Node, compiler65Node, dispatchNode, lister65, sea65Node } from '@wwsff/cabinet/korz/inspect';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, appleKey } from '@wwsff/cabinet/microm8';
 import plusRomUrl from '../../../../packages/cabinet/roms/apple2/apple2plus.rom?url';
 import diskRomUrl from '../../../../packages/cabinet/roms/apple2/diskii.rom?url';
 import chargenRomUrl from '../../../../packages/cabinet/roms/apple2/chargen.rom?url';
+import videxFirmwareUrl from '../../../../packages/cabinet/roms/apple2/videx-fw24.rom?url';
+import videxCharsUrl from '../../../../packages/cabinet/roms/apple2/videx-chr.rom?url';
 
 const BLACK = [0, 0, 0];
 const WHITE = [0xf0, 0xf0, 0xf0];
@@ -138,7 +143,7 @@ async function romFile(url, bytes) {
 	return rom;
 }
 
-/** @typedef {{ name: string, bytes: Uint8Array, drive: number, protect?: boolean }} DiskIn */
+/** @typedef {{ name: string, bytes: Uint8Array, drive: number, protect?: boolean, profile?: string }} DiskIn */
 
 class KorzApple {
 	/** @type {'compile' | 'switch' | 'resolve' | 'interpret'} */
@@ -168,8 +173,14 @@ class KorzApple {
 	#cpu = null;
 	/** @type {import('@wwsff/cabinet/korz/apple2').DiskII | null} */
 	#disk = null;
-	/** @type {{ rom: Uint8Array, slot: Uint8Array, chargen: Uint8Array } | null} */
+	/** @type {{ rom: Uint8Array, slot: Uint8Array, chargen: Uint8Array, videxFirmware: Uint8Array, videxChars: Uint8Array } | null} */
 	#rom = null;
+	/** Set by a disk that wants the Videx; the card stays in slot 3 from then on. */
+	#wantVidex = false;
+	/** @type {import('@wwsff/cabinet/korz/apple2').Videx | null} */
+	#videx = null;
+	#videxPixels = new Uint8ClampedArray(VIDEX_PICTURE_WIDTH * VIDEX_PICTURE_HEIGHT * 4);
+	#fields = 0;
 	/** A cartridge's character ROM, in the motherboard socket's layout. Null uses the ][+ generator. */
 	/** @type {Uint8Array | null} */
 	#chargen = null;
@@ -200,8 +211,9 @@ class KorzApple {
 	korzRoots() {
 		const cpu = this.#cpu;
 		const out = [];
-		if (cpu && 'compiler' in cpu && cpu.compiler) out.push(compiler65Node(cpu.compiler));
-		if (cpu && 'sea' in cpu) out.push(seaNode('cpu', '6502 sea', cpu.sea));
+		const korz = cpu instanceof Korz6502 ? cpu : null;
+		if (korz?.compiler) out.push(compiler65Node(korz.compiler, lister65(korz)));
+		if (korz) out.push(sea65Node(korz));
 		if (out.length) out.push(dispatchNode());
 		else out.push({ id: 'none', label: 'No Korz structures', note: 'the switch-statement 6502 has none; pick a Korz level in the CPU menu' });
 		return out;
@@ -210,15 +222,21 @@ class KorzApple {
 	/** The compiled block that starts at the PC, if there is one. */
 	korzFollow() {
 		const cpu = this.#cpu;
-		if (!cpu || !('compiler' in cpu) || !cpu.compiler) return null;
+		if (!(cpu instanceof Korz6502) || !cpu.compiler) return null;
 		const b = cpu.compiler.list().find((x) => x.entry === (cpu.pc & 0xffff));
-		return b ? block65Node(b) : null;
+		return b ? block65Node(b, lister65(cpu)) : null;
 	}
 
 	async #ensureRom() {
 		if (this.#rom) return;
-		const [rom, slot, chargen] = await Promise.all([romFile(plusRomUrl, 0x3000), romFile(diskRomUrl, 0x100), romFile(chargenRomUrl, 64 * 8)]);
-		this.#rom = { rom, slot, chargen: glyphsFromRom(chargen) };
+		const [rom, slot, chargen, videxFirmware, videxChars] = await Promise.all([
+			romFile(plusRomUrl, 0x3000),
+			romFile(diskRomUrl, 0x100),
+			romFile(chargenRomUrl, 64 * 8),
+			romFile(videxFirmwareUrl, 0x400),
+			romFile(videxCharsUrl, 0x800)
+		]);
+		this.#rom = { rom, slot, chargen: glyphsFromRom(chargen), videxFirmware, videxChars };
 	}
 
 	/**
@@ -250,6 +268,8 @@ class KorzApple {
 			if (image.protect) disk.protect(/** @type {1 | 2} */ (image.drive + 1), true);
 		}
 		board.plug(6, disk);
+		this.#videx = null;
+		if (this.#wantVidex) this.#plugVidex(board);
 		const cpu = this.rung === 'switch' ? new M6502(board) : new Korz6502(board, { korz: this.rung });
 		cpu.reset();
 		this.#board = board;
@@ -263,12 +283,23 @@ class KorzApple {
 		this.annunciators = board.annunciators;
 	}
 
+	/** @param {import('@wwsff/cabinet/korz/apple2').Apple2Plus} board */
+	#plugVidex(board) {
+		const rom = this.#rom;
+		if (!rom) return;
+		this.#videx = new Videx(rom.videxFirmware, rom.videxChars);
+		board.plug(3, this.#videx);
+	}
+
 	#paint() {
 		const board = this.#board;
 		const face = this.#chargen ?? this.#rom?.chargen;
 		if (!board || !face) return;
 		const flash = ((Date.now() / 500) | 0) % 2 === 0;
 		paint(board.ram, board.mode(), face, this.#pixels, flash);
+		const showing = !!this.#videx && Videx.showing(board.annunciators, board.graphics);
+		if (showing) this.#videx?.paint(this.#videxPixels, this.#fields++, WHITE, BLACK);
+		if (this.videxShowing !== showing) this.videxShowing = showing;
 	}
 
 	#pump() {
@@ -433,11 +464,15 @@ class KorzApple {
 	 * @param {string} name
 	 * @param {Uint8Array} bytes
 	 * @param {number} drive
-	 * @param {string} [_profile]
+	 * @param {string} [profile]
 	 * @param {boolean} [protect]
 	 */
-	async insert(name, bytes, drive = 0, _profile = '', protect = false) {
-		const entry = { name, bytes, drive, protect };
+	async insert(name, bytes, drive = 0, profile = '', protect = false) {
+		const entry = { name, bytes, drive, protect, profile };
+		if (profile.includes('videx')) {
+			this.#wantVidex = true;
+			if (this.#board && !this.#videx) this.#plugVidex(this.#board);
+		}
 		if (this.phase !== 'running') {
 			const next = [...this.#images];
 			next[drive] = entry;
@@ -486,12 +521,14 @@ class KorzApple {
 		return this.#disk?.image(/** @type {1 | 2} */ (drive + 1)) ?? null;
 	}
 
-	/** @param {HTMLCanvasElement} canvas */
-	attach(canvas) {
+	/** @param {HTMLCanvasElement} canvas @param {HTMLCanvasElement | null} [videxCanvas] */
+	attach(canvas, videxCanvas = null) {
 		const ctx = canvas.getContext('2d');
 		if (!ctx) return () => {};
 		ctx.imageSmoothingEnabled = false;
 		const image = new ImageData(this.#pixels, FRAME_WIDTH, FRAME_HEIGHT);
+		const vctx = videxCanvas?.getContext('2d') ?? null;
+		const videxImage = new ImageData(this.#videxPixels, VIDEX_PICTURE_WIDTH, VIDEX_PICTURE_HEIGHT);
 		let raf = 0;
 		let polled = 0;
 		let lastCycles = 0;
@@ -508,6 +545,7 @@ class KorzApple {
 				return;
 			}
 			ctx.putImageData(image, 0, 0);
+			if (vctx && this.videxShowing) vctx.putImageData(videxImage, 0, 0);
 			if (now - polled > 250) {
 				const cycles = this.#board.cycles;
 				if (polled) this.mhz = (cycles - lastCycles) / (now - polled) / 1000;

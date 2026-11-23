@@ -69,7 +69,7 @@ Public stub only: [`sources/live-canvas-effects-stub.md`](sources/live-canvas-ef
 - [`CHARACTER.yml`](CHARACTER.yml)
 - [Wired — Raster Masters (1994)](https://www.wired.com/1994/06/raster-masters/)
 - [Wired — Hear It With Your Eyes / Herbie Hancock (1995)](https://www.wired.com/1995/08/hear-it-with-your-eyes/)
-- [HN — Dead/tapers — Don's Raster Masters comment (2022)](https://news.ycombinator.com/item?id=33105030)
+- [HN — Dead/tapers — Don is 33105621, deepnet/Barlow is 33105030](sources/2022-10-06-hn-grateful-dead-tapers.md)
 - [HN — Psychedelic Graphics — David + Don (2025)](https://news.ycombinator.com/item?id=42804566)
 - [Infrared Roses — YouTube](https://www.youtube.com/watch?v=gkhr23asO-M)
 - Show seed: [`repo-shows/dave-tristram/`](../../repo-shows/dave-tristram/)

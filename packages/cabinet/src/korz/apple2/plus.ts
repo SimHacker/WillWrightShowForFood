@@ -23,6 +23,9 @@ export type Card = {
 	rom?: Uint8Array;
 	/** `$C800`–`$CFFF` while this slot is selected. */
 	expansion?: Uint8Array;
+	/** RAM in the `$C800` space, offset from `$C800`. Null leaves the byte to `expansion`. No side effects: `peek` calls it. */
+	expansionRead?(offset: number): number | null;
+	expansionWrite?(offset: number, value: number): void;
 	readSwitch?(offset: number, cycles: number): number | null;
 	writeSwitch?(offset: number, value: number, cycles: number): void;
 };
@@ -125,8 +128,11 @@ export class Apple2Plus implements Bus {
 			return rom ? rom[addr & 0xff] ?? 0 : 0;
 		}
 		if (addr >= 0xc800 && addr <= 0xcfff && this.expansion) {
-			const rom = this.cards[this.expansion]?.expansion;
+			const card = this.cards[this.expansion];
 			const offset = addr - 0xc800;
+			const ram = card?.expansionRead?.(offset);
+			if (ram !== undefined && ram !== null) return ram;
+			const rom = card?.expansion;
 			if (rom && offset < rom.length) return rom[offset] ?? 0;
 		}
 		return 0;
@@ -155,7 +161,9 @@ export class Apple2Plus implements Bus {
 		const page = addr >> 8;
 		if (page === 0xc0) this.writeSwitch(addr & 0xff);
 		else if (addr === 0xcfff) this.expansion = 0;
-		else this.touchSlot(addr);
+		else if (addr >= 0xc800) {
+			if (this.expansion) this.cards[this.expansion]?.expansionWrite?.(addr - 0xc800, this.floating);
+		} else this.touchSlot(addr);
 	}
 
 	private readSwitch(a: number, scanned: number): number {
@@ -199,7 +207,10 @@ export class Apple2Plus implements Bus {
 	}
 
 	private expansionByte(offset: number, scanned: number): number {
-		const rom = this.expansion ? this.cards[this.expansion]?.expansion : undefined;
+		const card = this.expansion ? this.cards[this.expansion] : undefined;
+		const ram = card?.expansionRead?.(offset);
+		if (ram !== undefined && ram !== null) return this.drive(ram);
+		const rom = card?.expansion;
 		if (!rom || offset >= rom.length) return this.drive(scanned);
 		return this.drive(rom[offset] ?? 0);
 	}

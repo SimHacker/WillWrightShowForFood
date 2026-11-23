@@ -14,7 +14,7 @@ Curated paste from Don's HN comments — parent thread: [42804566](https://news.
 
 ## Raster Masters @ Grateful Dead ("Grateful Dead Conferences")
 
-Don's mega-comment on [HN 33105030](https://news.ycombinator.com/item?id=33105030) (Oct 2022, reposted 2025):
+Don's mega-comment is [HN 33105621](https://news.ycombinator.com/item?id=33105621) (6 Oct 2022). [33105030](https://news.ycombinator.com/item?id=33105030) is deepnet's parent: Barlow, BBS, FidoNet. Receipt: [`../../dave-tristram/sources/2022-10-06-hn-grateful-dead-tapers.md`](../../dave-tristram/sources/2022-10-06-hn-grateful-dead-tapers.md).
 
 - **Raster Masters** lugged **million-dollar SGI Onyx** rigs from HQ across **North Shoreline Blvd** to **Shoreline Amphitheater** — sometimes toured with the Dead
 - Live improvisational psychedelic graphics behind the band — **Electropaint**, **Panel Library** (NASA Ames lineage)

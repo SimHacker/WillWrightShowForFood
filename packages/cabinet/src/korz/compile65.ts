@@ -146,17 +146,38 @@ function pollAt(at: number): string {
 	return `if(m.nmi&&!m.nmiPrev)m.nmiPending=true;m.nmiPrev=m.nmi;{const delayed=m.irqDelay;m.irqDelay=false;if(m.nmiPending){m.nmiPending=false;m.pc=${at};interrupt(m,0xfffa);return n+1;}if(!delayed&&m.irq&&(m.p&4)===0){m.pc=${at};interrupt(m,0xfffe);return n+1;}}`;
 }
 
-/** A block as a browser sees it: where it starts, its opcodes, and its source. */
-export type Block65 = { readonly entry: number; readonly size: number; readonly source: string };
+/** One opcode a block was compiled from. `inlined` is false for the switch call a block can start with. */
+export type BlockOp65 = { readonly at: number; readonly op: number; readonly inlined: boolean };
+
+/** A block as a browser sees it: where it starts, its opcodes, its source, and how much it has run. */
+export type Block65 = {
+	readonly entry: number;
+	readonly size: number;
+	readonly source: string;
+	readonly ops: readonly BlockOp65[];
+	/** Calls into the block, and the instructions those calls retired, a loop's repeats included. */
+	runs: number;
+	retired: number;
+	/** The machine's cycle count when it was built. */
+	readonly builtAt: number;
+};
+
+/** A block thrown away because an opcode under it changed. */
+export type Dropped65 = { readonly entry: number; readonly size: number; readonly runs: number; readonly at: number; readonly was: number; readonly now: number; readonly cycles: number };
+
+const DROP_LOG = 32;
 
 export class Compiler65 {
 	/** Blocks built and blocks dropped because an opcode under them changed, since the machine was made. */
 	built = 0;
 	invalidated = 0;
+	/** The last few drops, newest last. */
+	readonly dropped: Dropped65[] = [];
 	private readonly blocks = new Map<number, Gen>();
 	private readonly sources = new Map<number, Block65>();
 	private hotPc = -1;
 	private hotFn: Gen | null = null;
+	private hotInfo: Block65 | null = null;
 
 	constructor(private readonly cpu: Compilable) {}
 
@@ -170,6 +191,7 @@ export class Compiler65 {
 		this.sources.clear();
 		this.hotPc = -1;
 		this.hotFn = null;
+		this.hotInfo = null;
 	}
 
 	/**
@@ -185,16 +207,30 @@ export class Compiler65 {
 			return this.cpu.lastRun;
 		}
 		const n = fn(this.cpu, cpuPerform, cpuInterrupt);
+		const info = this.hotInfo;
 		if (n < 0) {
+			if (info) this.logDrop(info);
 			this.blocks.delete(pc);
 			this.sources.delete(pc);
 			this.invalidated += 1;
 			this.hotPc = -1;
 			this.hotFn = null;
+			this.hotInfo = null;
 			this.cpu.one();
 			return this.cpu.lastRun;
 		}
+		if (info) {
+			info.runs += 1;
+			info.retired += n;
+		}
 		return n;
+	}
+
+	private logDrop(b: Block65): void {
+		const peek = this.cpu.bus.peek?.bind(this.cpu.bus);
+		const changed = b.ops.find((o) => peek && peek(o.at) !== o.op) ?? b.ops[0]!;
+		this.dropped.push({ entry: b.entry, size: b.size, runs: b.runs, at: changed.at, was: changed.op, now: peek ? peek(changed.at) : -1, cycles: this.cpu.cycles });
+		if (this.dropped.length > DROP_LOG) this.dropped.shift();
 	}
 
 	private block(pc: number): Gen | null {
@@ -215,12 +251,14 @@ export class Compiler65 {
 		}
 		this.hotPc = pc;
 		this.hotFn = fn;
+		this.hotInfo = this.sources.get(pc) ?? null;
 		return fn;
 	}
 
 	private compile(entry: number, peek: (addr: number) => number): Gen {
 		const guards: string[] = [];
 		const parts: string[] = [];
+		const ops: BlockOp65[] = [];
 		let at = entry & 0xffff;
 		for (let i = 0; i < MAX_INSNS; i++) {
 			const opcode = peek(at) ?? 0;
@@ -228,17 +266,21 @@ export class Compiler65 {
 			const tmpl = TEMPLATES[opcode];
 			const poll = pollAt(at);
 			if (!tmpl) {
-				if (i === 0) parts.push(`{${poll}${nextInto("op")}perform(m,op);n++;}`);
+				if (i === 0) {
+					parts.push(`{${poll}${nextInto("op")}perform(m,op);n++;}`);
+					ops.push({ at, op: opcode, inlined: false });
+				}
 				break;
 			}
 			parts.push(`{${poll}${tmpl.body}n++;}`);
+			ops.push({ at, op: opcode, inlined: true });
 			at = (at + tmpl.len) & 0xffff;
 			if (tmpl.stop) break;
 		}
 		const hex = entry.toString(16).padStart(4, "0");
 		const source = `"use strict";let n=0;if(${guards.join("||")})return -1;const entry=m.pc;for(let spins=0;spins<${STAY};spins++){\n${parts.join("\n")}\nif(m.pc!==entry)return n;}\nreturn n;\n//# sourceURL=korz65/blk-${hex}.js`;
 		const fn = new Function("m", "perform", "interrupt", source) as Gen;
-		this.sources.set(entry, { entry, size: parts.length, source });
+		this.sources.set(entry, { entry, size: parts.length, source, ops, runs: 0, retired: 0, builtAt: this.cpu.cycles });
 		this.built += 1;
 		return fn;
 	}

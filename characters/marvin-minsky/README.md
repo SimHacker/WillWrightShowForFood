@@ -43,6 +43,8 @@ implementation bridge.
 [`sources/2022-12-23-hn-society-of-mind.md`](sources/2022-12-23-hn-society-of-mind.md) ·
 [`ideas.md`](ideas.md) · HN IDs: [`../../process/hn-harvest/marvin-minsky.md`](../../process/hn-harvest/marvin-minsky.md)
 
+The Ames flight-simulator video — Marvin in the goggles — is cited again from Don's 30 Dec 2024 Convolvotron comment: [`../ron-reisman/sources/2024-12-30-hn-convolvotron.md`](../ron-reisman/sources/2024-12-30-hn-convolvotron.md).
+
 ## Villain of the LaRouche movement (2001)
 
 The Schiller Institute's *Fidelio* cast Marvin as high priest of "The

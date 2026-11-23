@@ -13,4 +13,6 @@ in [VISION.md § Documented seed](../../process/vision-and-ambition.md#documente
 
 [Invitation](invitation.md) · [Show seed](../../repo-shows/walter-bender-olpc/README.md)
 
+Don's 2016 public retrospective, written into Alan Kay's AMA when Kay was asked about Sugar: Stone Soup, the GPL, Jepsen's display, Mitch Bradley's firmware, and why the SimCity activity was a thin wrapper. [`../don-hopkins/sources/2016-06-20-hn-kay-ama-olpc-sugar.md`](../don-hopkins/sources/2016-06-20-hn-kay-ama-olpc-sugar.md).
+
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

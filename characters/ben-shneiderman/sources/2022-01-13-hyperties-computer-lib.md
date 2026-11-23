@@ -33,7 +33,7 @@ https://www.w3.org/History/1989/proposal.html · https://en.wikipedia.org/wiki/H
 
 ## Don's HN commentary (Jan 2020, forwarded to Ben)
 
-**Computer Lib / Ted critique:** [HN 22176317](https://news.ycombinator.com/item?id=22176317)
+**Computer Lib / Ted critique:** [HN 22176317](https://news.ycombinator.com/item?id=22176317) — receipt in Ted's room: [`../../ted-nelson/sources/2020-01-29-hn-computer-lib-and-xanadu.md`](../../ted-nelson/sources/2020-01-29-hn-computer-lib-and-xanadu.md)
 
 **Xanadu open source (1999):** [HN 16224154](https://news.ycombinator.com/item?id=16224154) — Smalltalk→C++ compiler output "unreadable and practically useless"; Register factoid: Computer Lib once **Microsoft Press**.
 

@@ -32,7 +32,7 @@ Full compendium (Raster Masters, CALab, Micropolis CA): [`../../don-hopkins/sour
 
 | Thread | Topic |
 |--------|-------|
-| [33105030](https://news.ycombinator.com/item?id=33105030) | Grateful Dead tapers — **Raster Masters** at Shoreline (SGI across the street) |
+| [33105621](https://news.ycombinator.com/item?id=33105621) | Don — Raster Masters at Shoreline. Parent [33105030](https://news.ycombinator.com/item?id=33105030) is deepnet (Barlow, FidoNet). Receipt: [`../../dave-tristram/sources/2022-10-06-hn-grateful-dead-tapers.md`](../../dave-tristram/sources/2022-10-06-hn-grateful-dead-tapers.md) |
 | [39300605](https://news.ycombinator.com/item?id=39300605) | John Walker — **Rudy Rucker CALab**, Josh Gordon **CHAOS** software |
 | [37035627](https://news.ycombinator.com/item?id=37035627) | Don's **CAM-6** demo inspired by Toffoli/Margolus book |
 

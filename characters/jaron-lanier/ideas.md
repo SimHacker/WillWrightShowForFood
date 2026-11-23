@@ -20,6 +20,9 @@ work on that with Sun.) Then Levity commercial Mac development with Don. Per the
 ### 3. Visual programming design (bounce-notes thread)
 Archived discussion with Don on language design — see [bounce-notes.txt](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt).
 
+### 3b. Convolvotron (HN 42553847, 30 Dec 2024)
+Don asked whether the HN username **convolvatron** meant the Ames 3D-audio hardware Body Electric drove. It didn't — a CM-2 / Hubble paper — but the comment is the public receipt that Body Electric supported the Convolvotron, and it points at Ron's lab and Minsky in the Vertical Motion Simulator. [`../ron-reisman/sources/2024-12-30-hn-convolvotron.md`](../ron-reisman/sources/2024-12-30-hn-convolvotron.md). Naimark's other-senses chapter and Iwata's Food Simulator, from a 2019 comment: [`../don-hopkins/sources/2019-08-12-hn-naimark-iwata-haptics.md`](../don-hopkins/sources/2019-08-12-hn-naimark-iwata-haptics.md).
+
 ### 4. Social media / attention (HN 24265876)
 Separate thread — optional show segment on calm vs addictive design; cross-link [`../mark-weiser/ideas.md`](../mark-weiser/ideas.md).
 

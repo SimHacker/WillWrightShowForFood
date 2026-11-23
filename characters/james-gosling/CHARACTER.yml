@@ -48,6 +48,7 @@ show_suggestions:
 
 see_also:
   - { path: window-systems-lineage.md, why: "SunDew + Andrew at Alvey 1985; Teitelman arc" }
+  - { path: sources/2021-11-07-hn-supdup-line-saving.md, why: "HN 29144157 — SUPDUP line saving; points at the 2020 redisplay receipt" }
   - { path: media/gosling-hobees-lunch.yml, why: "Hobee's lunch — James + Gilmore shoulder (face out)" }
   - { path: media/gosling-young-pdp8-hotrod.yml, why: "Young Gosling + PDP-8 hotrod — sidecar analysis" }
   - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }

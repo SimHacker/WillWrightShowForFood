@@ -69,6 +69,14 @@ is button 1, held while the other key types as itself: right Option-F enters For
 `forth/forth-ok.po` is the same disk with `term` blanked out of block 4; it stops at the Forth
 prompt. Both are in [DISKS.yml](../../../../packages/cabinet/disks/apple2/DISKS.yml).
 
+`forth-ok.po` also runs on the Korz Apple, on every rung (switch, resolver, compiler), with the
+cabinet's own TypeScript Videx in slot 3 (`src/korz/apple2/videx.ts`; the test is `videx.test.ts`).
+It boots to the banner and the prompt, and `: SQ DUP * ; 12 SQ .` prints 144. The KORZ panel shows
+the inner interpreter as the compiler sees it: fig-FORTH's `NEXT` at `$089B`-`$08B1` and the
+`JMP (W)` at `$000D`, whose operand bytes `$0E`-`$0F` are W itself, written by `NEXT`
+([KORZ-INSPECT.md](../../../../packages/cabinet/KORZ-INSPECT.md)). The Korz Apple has no serial
+card yet, so `forth.po`'s terminal stays in microM8.
+
 ## The serial driver and the modem
 
 `INIT-MODEM` sends nothing to the modem. It installs the interrupt vector at `$3FE` and runs
