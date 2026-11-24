@@ -188,6 +188,31 @@ that it wins every benchmark. It is choosing a substrate where the emulator,
 its debugger, and its user interface can be developed together—and where the
 host JIT is a shared platform resource.
 
+Bernhardt's punchline showed up in November 2026, about nine years early.
+Farid Zakaria's [*2035 came early*](https://fzakaria.com/2026/11/23/2035-came-early)
+([HN discussion](https://news.ycombinator.com/item?id=50624497)) runs Firefox
+on Linux inside a Firefox tab at [trynix.dev](https://trynix.dev), loads
+trynix.dev in that inner Firefox, and boots Firefox again inside it. That's
+the talk's browser-in-a-browser joke, made real. The nested render took more
+than an hour; the single level runs X11 and Wayland windows on the page, GL
+through WebGL2, ALSA sound, and TCP over WebSockets. What made it practical
+was a change of boundary, not a faster emulator. Pooya Parsa's
+[unkernel](https://unkernel.dev) compiles the Linux kernel itself to
+WebAssembly and emulates only user programs. On first runs, where kernel
+work dominates, that was 2x to 32x faster than emulating the whole machine
+with qemu-wasm.
+
+Two points from that discussion bear on Cabinet. First, where the boundary
+sits matters more than how fast the emulator is. unkernel stopped emulating
+the part it could compile; Cabinet keeps the CPU and each device a separate
+plugin for the same reason, so each piece can be specialized, or replaced,
+on its own. Second, the HN thread argued over whether WebAssembly counts as
+"JavaScript" for the talk's prediction. One side said the goalpost had
+moved; the other said nobody distinguishes asm.js from WASM, and that WASM
+is still glued in with generated JavaScript. That argument supports the
+position above: the language people write keeps changing, and the
+platform, with its JIT, devtools and APIs, is what lasts.
+
 The browser need not be the final substrate. Cabinet already treats the
 Type 340's segment stream as a boundary consumed by Canvas, snapshots, and
 recording; WebGPU or another renderer can join without changing the PDP-7's
