@@ -1,0 +1,78 @@
+# KIM JONG UN — the public record, with what he did at each moment
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each event: what happened, with a source; `offers` are the moves open to
+# him, `observed` the one he made, `response` his words (or, where noted in
+# `say`, the words of someone speaking for him).
+
+real:
+- ally
+who:
+  self: Kim Jong Un (model)
+  ally: Kim
+  accuser: the United States
+  org: the United States
+events:
+- t: 1
+  set:
+    deal-on-table: 'on'
+  say: '2018, before and after the Singapore summit: letters to Trump, which Trump called "beautiful letters".
+    John Bolton: they read as if written by the Party''s agitprop bureau.'
+  offers:
+  - flatter
+  - escalate
+  observed: flatter
+  source: Deadline 2018-12-24 https://deadline.com/2018/12/gobsmack-iest-donald-trump-moments-of-2018-1202524119/
+    ; Bolton in In the Room with Peter Bergen ep. 14 https://www.audible.com/blog/in-the-room-with-peter-bergen-transcript-episode-14
+- t: 1.1
+  set:
+    deal-on-table: 'off'
+- t: 2
+  say: To the Supreme People's Assembly, September 2025.
+  offers:
+  - escalate
+  - concede
+  observed: escalate
+  response: The concept of 'denuclearisation' has already lost its meaning. We have become a nuclear state.
+    I say 'denuclearisation' is the last, last thing to expect from us.
+  source: BBC 2026-02-26 https://www.bbc.com/news/articles/c0q3747jvnwo
+- t: 3
+  set:
+    accusation-heard: 'on'
+  say: Ninth Party Congress, 26 Feb 2026, on relations with the US.
+  offers:
+  - blame-other-side
+  - concede
+  observed: blame-other-side
+  response: Whether it's peaceful coexistence or permanent confrontation, we are ready for either, and
+    the choice is not ours to make.
+  source: BBC (as t=2); Euronews 2026-02-26 https://www.euronews.com/2026/02/26/north-korea-shuns-relations-with-south-as-kim-jong-un-says-it-could-get-along-with-us
+- t: 4
+  say: Same speech.
+  offers:
+  - escalate
+  - concede
+  observed: escalate
+  response: We will focus on projects to increase the number of nuclear weapons and expand nuclear operational
+    means.
+  source: BBC (as t=2)
+- t: 5
+  set:
+    deal-on-table: 'on'
+  say: 20 Aug 2026, after Trump said Kim had answered his requests to talk. His sister, Kim Yo Jong, through
+    KCNA, speaking for the state.
+  offers:
+  - flatter
+  - escalate
+  observed: flatter
+  response: The relationship between the two leaders remains excellent. However, the US's hostile policies
+    toward the Democratic People's Republic of Korea haven't changed.
+  source: Bloomberg Government 2026-08-20 https://news.bgov.com/bloomberg-government-news/north-korea-says-no-trump-kim-talks-still-sees-us-as-hostile
+    ; Reuters 2026-08-21 https://www.reuters.com/business/aerospace-defense/trump-wants-new-meeting-with-kim-jong-un-north-korea-says-not-so-fast-2026-08-21/

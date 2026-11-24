@@ -1,0 +1,69 @@
+# VLADIMIR PUTIN — the public record, with what he did at each moment
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each event: what happened, with a source; `offers` are the moves open to
+# him, `observed` the one he made, `response` his words (or, where noted in
+# `say`, the words of someone speaking for him).
+
+real:
+- ally
+who:
+  self: Vladimir Putin (model)
+  ally: Putin
+  accuser: the Western press
+  org: the West
+events:
+- t: 1
+  say: 'Annual address to the Federal Assembly, 25 Apr 2005: "the collapse of the Soviet Union was a major
+    geopolitical disaster of the century" (Kremlin translation; usually rendered "the greatest geopolitical
+    catastrophe of the century").'
+  source: Russia Matters 2022-06-16 https://www.russiamatters.org/analysis/accepting-nato-aspirations-denazifying-20-years-putins-changing-views-ukraine
+    ; FRAME (as defensive-war)
+- t: 2
+  say: Helsinki, 16 Jul 2018, handing Trump a World Cup ball.
+  offers:
+  - flatter
+  - look-away
+  observed: flatter
+  response: Mr. President, I will give this ball to you and now the ball is in your court.
+  source: CNN transcript 2020-09-07 https://transcripts.cnn.com/show/se/date/2020-09-07/segment/04
+- t: 3
+  say: Televised address, 24 Feb 2022, as the full-scale invasion of Ukraine began.
+  offers:
+  - escalate
+  - concede
+  observed: escalate
+  response: We will seek to demilitarize and denazify Ukraine, as well as bring to trial those who perpetrated
+    numerous bloody crimes against civilians, including against citizens of the Russian Federation. It
+    is not our plan to occupy the Ukrainian territory. We do not intend to impose anything on anyone by
+    force.
+  source: Kremlin address 2022-02-24, quoted in Russia Matters (as t=1)
+- t: 4
+  set:
+    accusation-heard: 'on'
+  say: 'Shenzhen press conference, 19 Nov 2026. The BBC''s Steve Rosenberg: Russia continues to strike
+    Ukraine; is he prepared to end the war?'
+  offers:
+  - blame-other-side
+  - concede
+  observed: blame-other-side
+  response: I assure you, we have no desire to continue this armed conflict. However, the issue today
+    does not lie solely – or perhaps even primarily – with us; it lies with the Ukrainian side.
+  source: Kremlin transcript 2026-11-19 http://en.kremlin.ru/events/president/transcripts/copy/81305
+- t: 5
+  say: Same answer, on the territory Ukraine still holds.
+  offers:
+  - escalate
+  - concede
+  observed: escalate
+  response: 'Ukraine says: we will hold the remaining 10 percent of Donetsk [People''s Republic] territory
+    for some time. But even if they manage to hold it for a while, only to eventually lose it anyway,
+    is there any point in clinging to that 10 percent at all costs?'
+  source: Kremlin transcript (as t=4)

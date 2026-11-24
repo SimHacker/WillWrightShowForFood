@@ -1,0 +1,19 @@
+# STEPHEN MILLER — disputes: where accounts differ, beside the record
+# Corrections with evidence change the record; denials without it are filed here.
+
+disputes:
+- id: white-nationalism
+  record: record.yml t=1 to t=5
+  his_account: []
+  other_readings:
+  - who: SPLC Hatewatch
+    words: Stephen Miller's Affinity for White Nationalism Revealed in Leaked Emails
+  - who: White House press secretary Stephanie Grisham, 2019
+    words: utterly discredited, long-debunked far-left smear organization
+  - who: VDARE founder Peter Brimelow, per AP
+    words: denied that his website is white nationalist
+  what_we_claim: The emails and speeches are quoted as published. The corpus hasn't been released in full,
+    so the quotes rest on SPLC's reproduction. Don's word for him is Don's.
+  would_settle_it: His own answer to what he wrote; the full email corpus.
+corrections: []
+gallops: []

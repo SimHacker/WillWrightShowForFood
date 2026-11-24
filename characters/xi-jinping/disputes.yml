@@ -1,0 +1,17 @@
+# XI JINPING — disputes: where accounts differ, beside the record
+# Corrections with evidence change the record; denials without it are filed here.
+
+disputes:
+- id: alice-huang
+  record: record.yml t=4
+  his_account: []
+  other_readings:
+  - who: China's foreign ministry, per Newsweek
+    words: China has denied the espionage allegations, describing them as unsubstantiated.
+  - who: US officials, per NYT and Reuters
+    words: more likely an intelligence asset who shared information than a fully trained spy
+  what_we_claim: Nothing about the truth of it. The model codes his government's denial as his seat's
+    move.
+  would_settle_it: Evidence made public by either government.
+corrections: []
+gallops: []

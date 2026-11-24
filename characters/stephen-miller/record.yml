@@ -1,0 +1,83 @@
+# STEPHEN MILLER — the public record, with what he did at each moment
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each event: what happened, with a source; `offers` are the moves open to
+# him, `observed` the one he made, `response` his words (or, where noted in
+# `say`, the words of someone speaking for him).
+
+real:
+- ally
+who:
+  self: Stephen Miller (model)
+  ally: Miller
+  accuser: the Southern Poverty Law Center
+  org: the press
+events:
+- t: 1
+  say: Email to Breitbart editor Katie McHugh, 6 Sep 2015, on the Pope's remarks on migration.
+  offers:
+  - amplify
+  - look-away
+  observed: amplify
+  response: On the education angle? Makes sense. Also, you see the Pope saying west must, in effect, get
+    rid of borders. Someone should point out the parallels to Camp of the Saints.
+  source: SPLC Hatewatch 2019-11-12 https://www.splcenter.org/resources/hatewatch/stephen-millers-affinity-white-nationalism-revealed-leaked-emails/
+- t: 2
+  say: Email to McHugh, 23 Oct 2015, on Hurricane Patricia and refugees. Nineteen minutes later he sent
+    her a link to a VDARE article by Steve Sailer.
+  offers:
+  - amplify
+  - look-away
+  observed: amplify
+  response: 100 percent. And they will all get TPS. And all the ones here will get TPS too. That needs
+    to be the weekend's BIG story. TPS is everything.
+  source: SPLC Hatewatch (as t=1)
+- t: 3
+  set:
+    accusation-heard: 'on'
+    accuser-is-watchdog: 'on'
+    accuser-is-witness: 'on'
+  say: '12 Nov 2019: the SPLC publishes its review of more than 900 of his emails to Breitbart. The White
+    House answers for him; press secretary Stephanie Grisham calls the SPLC an "utterly discredited, long-debunked
+    far-left smear organization". It didn''t address what he wrote.'
+  offers:
+  - hear-accuser-out
+  - apologize
+  - pile-on-accuser
+  observed: pile-on-accuser
+  source: SPLC Hatewatch (as t=1); Wikipedia, Stephen Miller (political advisor), citing the Washington
+    Post 2019-11-13 https://en.wikipedia.org/wiki/Stephen_Miller_(political_advisor)
+- t: 3.1
+  set:
+    accusation-heard: 'off'
+    accuser-is-watchdog: 'off'
+    accuser-is-witness: 'off'
+- t: 4
+  say: Trump rally, Madison Square Garden, 27 Oct 2024.
+  offers:
+  - amplify
+  - look-away
+  observed: amplify
+  response: America is for Americans and Americans only!
+  source: Democracy Now 2024-11-12 https://www.democracynow.org/2024/11/12/headlines ; Wikipedia (as t=3)
+- t: 5
+  say: White House gaggle, 30 May 2025, asked about new visa screening.
+  offers:
+  - amplify
+  - look-away
+  observed: amplify
+  response: Like, why would any society, why would any civilization that actually wants to preserve itself
+    allow for any migration that is negative to the country as a whole?
+  source: Ash Talks 2026-11-08 (as civilization-frame; secondary)
+- t: 6
+  say: 6 Nov 2026, after the midterm losses, Trump names him the 33rd White House chief of staff, replacing
+    Susie Wiles. He starts on 9 Nov.
+  source: White House 2026-11-06 https://www.whitehouse.gov/releases/2026/11/president-trump-names-stephen-miller-as-33rd-white-house-chief-of-staff/
+    ; Guardian 2026-11-09 https://www.theguardian.com/us-news/2026/nov/09/stephen-miller-white-house-chief-of-staff

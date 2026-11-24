@@ -1,0 +1,20 @@
+# XI JINPING — on stage: his seat, on the real record
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+
+inherits:
+- PERSONALITY.yml
+- ../../record.yml
+real:
+- self
+- ally
+runs:
+- name: face
+  expect:
+    fit: 4/4

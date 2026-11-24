@@ -1,0 +1,32 @@
+# VLADIMIR PUTIN — censor-mind personality, the the-restorer archetype
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each trait's template cover is replaced with his own sentence and a
+# source. `real: [self]` makes lint fail on any cover left as a template.
+
+inherits:
+- ../../../../../moollm/skills/schema-mechanism/censors/archetypes/the-restorer.yml
+real:
+- self
+who:
+  self: Vladimir Putin (model)
+  ally: Putin
+  accuser: the Western press
+  org: the West
+censors:
+- id: defensive-war
+  cover: The purpose of this operation is to protect people who, for eight years now, have been facing
+    humiliation and genocide perpetrated by the Kiev regime.
+  source: Address, 2022-02-24, official English text en.kremlin.ru/events/president/news/67843, via FRAME
+    https://propagandaarchive.org/quotes/vladimir-putin/
+- id: the-other-side-chooses
+  cover: However, the issue today does not lie solely – or perhaps even primarily – with us; it lies with
+    the Ukrainian side.
+  source: Press conference, Shenzhen, 2026-11-19 http://en.kremlin.ru/events/president/transcripts/copy/81305

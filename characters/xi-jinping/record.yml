@@ -1,0 +1,62 @@
+# XI JINPING — the public record, with what he did at each moment
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each event: what happened, with a source; `offers` are the moves open to
+# him, `observed` the one he made, `response` his words (or, where noted in
+# `say`, the words of someone speaking for him).
+
+real:
+- ally
+who:
+  self: Xi Jinping (model)
+  ally: Xi
+  accuser: US officials
+  org: the United States
+events:
+- t: 1
+  say: 'Meeting with Trump, May 2026: ABC reports he warned that China and the US could "come into conflict"
+    if Taiwan is handled "improperly".'
+  offers:
+  - escalate
+  - concede
+  observed: escalate
+  source: ABC News 2026-11-19 https://abcnews.com/International/xi-tells-trump-us-thing-taiwan-avoid-great/story?id=138283818
+- t: 2
+  set:
+    deal-on-table: 'on'
+  say: Shenzhen, 19 Nov 2026, bilateral meeting with Trump, per China's readout.
+  offers:
+  - flatter
+  - look-away
+  observed: flatter
+  response: I look forward to working with President Trump to continue taking the helm of China-U.S. relations,
+    and ensure that this giant ship always stays on the right course and forge ahead at full sail.
+  source: PRC Ministry of Foreign Affairs readout (as harmony-script)
+- t: 3
+  say: Same meeting, on Taiwan.
+  offers:
+  - escalate
+  - concede
+  observed: escalate
+  response: On the question of Taiwan, the U.S. side should keep doing the right thing and avoid major
+    setbacks in China-U.S. relations.
+  source: PRC Ministry of Foreign Affairs readout (as harmony-script)
+- t: 4
+  set:
+    accusation-heard: 'on'
+  say: 'November 2026: US officials say Alice Huang, who had an affair with Nvidia''s CEO, worked with
+    China''s Ministry of State Security. His government, not he, answers: China''s foreign ministry rejected
+    the allegation and called it unsubstantiated.'
+  offers:
+  - deny
+  - confess-all
+  observed: deny
+  source: WIRED 2026-11 https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/
+    ; Newsweek 2026-11-16 https://www.newsweek.com/trump-nvidia-jensen-huang-china-spy-xi-talks-12721302

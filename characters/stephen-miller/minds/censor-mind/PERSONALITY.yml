@@ -1,0 +1,33 @@
+# STEPHEN MILLER — censor-mind personality, the the-ideologue archetype
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each trait's template cover is replaced with his own sentence and a
+# source. `real: [self]` makes lint fail on any cover left as a template.
+
+inherits:
+- ../../../../../moollm/skills/schema-mechanism/censors/archetypes/the-ideologue.yml
+real:
+- self
+who:
+  self: Stephen Miller (model)
+  ally: Miller
+  accuser: the Southern Poverty Law Center
+  org: the press
+censors:
+- id: civilization-frame
+  cover: Like, why would any society, why would any civilization that actually wants to preserve itself
+    allow for any migration that is negative to the country as a whole?
+  source: White House gaggle, 2025-05-30, as quoted in Ash Talks 2026-11-08 https://ashtalks.substack.com/p/stephen-miller-has-spent-a-decade
+    (secondary; primary transcript wanted)
+- id: smear-the-watchdog
+  cover: ''
+  source: ''
+  note: No words of his own. The White House answered for him (record.yml t=3); a spokesperson's words
+    aren't his cover.

@@ -1,0 +1,27 @@
+# XI JINPING — censor-mind personality, the the-helmsman archetype
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each trait's template cover is replaced with his own sentence and a
+# source. `real: [self]` makes lint fail on any cover left as a template.
+
+inherits:
+- ../../../../../moollm/skills/schema-mechanism/censors/archetypes/the-helmsman.yml
+real:
+- self
+who:
+  self: Xi Jinping (model)
+  ally: Xi
+  accuser: US officials
+  org: the United States
+censors:
+- id: harmony-script
+  cover: Differences that cannot be resolved for the time being should be managed in a constructive way,
+    and escalation should be prevented.
+  source: Meeting with Trump, Shenzhen, 2026-11-19, PRC Ministry of Foreign Affairs readout https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202611/t20261119_12063139.html

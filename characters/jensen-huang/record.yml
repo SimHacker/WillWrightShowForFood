@@ -1,0 +1,89 @@
+# JENSEN HUANG — the public record, with what he did at each moment
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each event: what happened, with a source; `offers` are the moves open to
+# him, `observed` the one he made, `response` his words (or, where noted in
+# `say`, the words of someone speaking for him).
+
+real:
+- ally
+who:
+  self: Jensen Huang (model)
+  ally: Huang
+  accuser: the press and Nvidia's board
+  org: Nvidia's board
+events:
+- t: 1
+  set:
+    accusation-heard: 'on'
+  say: 'October 2025, after the NYT reported Nvidia''s unusually close business with Megaspeed, where
+    Alice Huang worked: board members asked him about her. Per two people familiar with the board''s discussions,
+    he denied any inappropriate relationship.'
+  offers:
+  - deny
+  - confess-all
+  observed: deny
+  source: WIRED 2026-11 https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/
+- t: 2
+  say: 29 Oct 2026, the NYT reports the relationship. Nvidia's spokesperson, John Rizzo, answers for him.
+  offers:
+  - deny
+  - confess-all
+  observed: deny
+  response: Jensen's interactions with Ms. Huang are not unusual or unexpected. Meetings with customers
+    are part of a CEO's job; Jensen talks with thousands of customer executives every year.
+  source: TechCrunch timeline 2026-11-19 https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/
+- t: 3
+  set:
+    power-at-risk: 'on'
+    intel-warning: 'on'
+  say: '8 Nov 2026: the board opens an independent investigation into reports that he "has been the target
+    of a foreign intelligence effort". He writes to employees the same day.'
+  offers:
+  - confess-part
+  - confess-all
+  - deny
+  observed: confess-part
+  response: I was unfaithful to my wife. My actions hurt her and our children. There is no excuse for
+    what I did. I am deeply sorry. ... Regarding the national security concerns raised in news reports,
+    NVIDIA's Board of Directors has initiated an independent investigation. I support the investigation
+    and will cooperate fully.
+  source: CNBC 2026-11-08 (as the-smaller-sin)
+- t: 4
+  say: '11 Nov 2026: the NYT reports an affair with Kimberly Powell, a vice president who reports to him,
+    and reaches him by phone.'
+  offers:
+  - confess-all
+  - deflect
+  observed: deflect
+  response: I don't think you should be talking to me directly
+  source: TechCrunch timeline (as t=2)
+- t: 5
+  say: '12 Nov 2026: he resigns as CEO and leaves the board. Reuters reports a third affair. WIRED, citing
+    people close to the board: "what could be determined was [Huang''s] lying, and that spanned a year".'
+  source: TechCrunch timeline (as t=2); WIRED (as t=1)
+- t: 6
+  set:
+    accusation-heard: 'off'
+    power-at-risk: 'off'
+  say: 17 Nov 2026, his first public statement since the letter.
+  offers:
+  - seek-return
+  - stay-away
+  observed: seek-return
+  response: If the Board of Directors decides that my return is in the best interest of our shareholders,
+    our employees, the company, and America, I would be honored to answer these calls and return as CEO.
+  source: TechCrunch timeline (as t=2)
+- t: 7
+  say: '23 Nov 2026: the board reinstates him unanimously, saying it is satisfied with his candor and
+    sees no national security risk after input from senior US officials. Semafor reports Trump called
+    into the board meeting.'
+  source: Reuters 2026-11-23 via Investing.com https://www.investing.com/news/stock-market-news/how-nvidia-ceo-jensen-huang-got-entangled-in-a-china-chip-and-spy-scandal-5046015
+    ; TechCrunch (as t=2)

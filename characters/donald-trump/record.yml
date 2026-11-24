@@ -1,0 +1,131 @@
+# DONALD TRUMP — the public record, with what he did at each moment
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each event: what happened, with a source; `offers` are the moves open to
+# him, `observed` the one he made, `response` his words (or, where noted in
+# `say`, the words of someone speaking for him).
+
+real:
+- ally
+who:
+  self: Donald Trump (model)
+  ally: Trump
+  accuser: his own officials and the press
+  org: the press
+events:
+- t: 1
+  set:
+    friend-accused: 'on'
+    intel-warning: 'on'
+  say: Helsinki, 16 Jul 2018, beside Putin, asked whether he believed US intelligence or Putin on interference
+    in the 2016 election.
+  offers:
+  - heed-intel
+  - believe-friend
+  observed: believe-friend
+  response: 'My people came to me. Dan Coats came to me, and some others. They said they think it''s Russia.
+    I have President Putin. He just said it''s not Russia. I will say this: I don''t see any reason why
+    it would be.'
+  source: Washington Post 2018-10-16 https://www.washingtonpost.com/news/opinions/wp/2018/10/16/trump-is-brutal-authoritarians-best-advocate/
+    ; Deadline 2018-12-24 https://deadline.com/2018/12/gobsmack-iest-donald-trump-moments-of-2018-1202524119/
+- t: 1.1
+  set:
+    friend-accused: 'off'
+    intel-warning: 'off'
+- t: 2
+  set:
+    power-at-risk: 'on'
+    accusation-heard: 'on'
+  say: The next day, after criticism from Republicans as well as Democrats (Newt Gingrich called it "a
+    mistake"), he told reporters he had meant to say "wouldn't", not "would".
+  offers:
+  - retract
+  - amplify
+  observed: retract
+  source: Deadline 2018-12-24 (as t=1)
+- t: 2.1
+  set:
+    power-at-risk: 'off'
+    accusation-heard: 'off'
+- t: 3
+  say: Rally in Wheeling, West Virginia, 29 Sep 2018, on Kim Jong Un.
+  offers:
+  - praise-friend
+  - look-away
+  observed: praise-friend
+  response: And we would go back and forth. And then we fell in love, ok? No really. He wrote me beautiful
+    letters. And they're great letters. And then we fell in love.
+  source: Deadline 2018-12-24 (as t=1); CNN transcript 2020-09-07 https://transcripts.cnn.com/show/se/date/2020-09-07/segment/04
+- t: 4
+  set:
+    friend-accused: 'on'
+    intel-warning: 'on'
+  say: '8 Nov 2026: Jensen Huang admits an affair; US officials suspect the woman, Alice Huang, of working
+    for Chinese intelligence. The NYT reported Trump had been briefed on that intelligence in late 2025.'
+  offers:
+  - heed-intel
+  - praise-friend
+  observed: praise-friend
+  response: I have not spoken to him about it. I just know he's a fine person, but you never know what's
+    going on.
+  source: TechCrunch timeline 2026-11-19 https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/
+- t: 5
+  say: 16 Nov 2026, asked whether he trusted the intelligence on Alice Huang.
+  offers:
+  - heed-intel
+  - believe-friend
+  observed: believe-friend
+  response: Usually what happens with that is that any woman coming to the country that's a beautiful
+    woman that comes from China, they say she's a spy.
+  source: Newsweek 2026-11-16 https://www.newsweek.com/trump-nvidia-jensen-huang-china-spy-xi-talks-12721302
+- t: 5.1
+  set:
+    friend-accused: 'off'
+    intel-warning: 'off'
+- t: 6
+  set:
+    deal-on-table: 'on'
+  say: Shenzhen, 19 Nov 2026, bilateral meeting with Xi Jinping, per China's readout; the US had not released
+    its own.
+  offers:
+  - concede
+  - escalate
+  observed: concede
+  response: The United States does not support "Taiwan Independence."
+  source: PRC Ministry of Foreign Affairs 2026-11-19 https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202611/t20261119_12063139.html
+    ; SCMP 2026-11-20 https://www.scmp.com/news/china/diplomacy/article/3375260/xi-presses-trump-do-right-thing-taiwan-where-does-leave-us-arms-sales
+- t: 7
+  say: White House briefing, 20 Nov 2026, on Huang.
+  offers:
+  - praise-friend
+  - look-away
+  observed: praise-friend
+  response: I would love to see Jensen be given a second chance. You know we're a country of second chances.
+  source: Lianhe Zaobao 2026-11-21 https://www.zaobao.com.sg/en/news/world/trump-publicly-calls-jensen-huang-return-nvidia-chief
+    ; Mediaite https://www.mediaite.com/media/news/we-have-to-protect-our-brilliant-people-trump-defends-jensen-huang-and-encourages-a-second-chance/
+- t: 8
+  set:
+    friend-accused: 'on'
+    intel-warning: 'on'
+  say: 'Same briefing: Russia''s deputy foreign minister had just rejected the NATO-style guarantee for
+    Ukraine that Kushner said the Russians were "comfortable with".'
+  offers:
+  - heed-intel
+  - believe-friend
+  observed: believe-friend
+  response: Look, our side put out things because it's also a public relations war. And we'll say things,
+    and they'll say things. I can only tell you that President Putin would like to get this settled, and
+    that's with surety.
+  source: Reuters 2026-11-20 via Investing.com https://www.investing.com/news/world-news/trump-says-he-putin-had-very-good-talks-on-ukraine-5042416
+- t: 9
+  say: '23 Nov 2026: Semafor reports he called into Nvidia''s board meeting to push for Huang''s return;
+    he posts that "the United States government has no reason to believe that Jensen''s return to Nvidia
+    poses any risk to national security." The board reinstates Huang.'
+  source: TechCrunch timeline (as t=4)

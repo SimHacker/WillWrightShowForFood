@@ -1,0 +1,21 @@
+# JENSEN HUANG — disputes: where accounts differ, beside the record
+# Corrections with evidence change the record; denials without it are filed here.
+
+disputes:
+- id: candor
+  record: record.yml t=1 to t=7
+  his_account:
+  - words: I take full responsibility for what I did and the hurt I caused, and I accept the criticism
+      that comes with it.
+    when: '2026-11-08'
+  other_readings:
+  - who: people close to the board, per WIRED
+    words: what could be determined was [Huang's] lying, and that spanned a year, from October 2025 through
+      recent events
+  - who: Nvidia's board, 23 Nov, per Reuters
+    words: satisfied with his candor and leadership
+  what_we_claim: The board said both, two weeks apart. The model doesn't decide what he knew about Alice
+    Huang's work; no public evidence shows he knowingly helped Chinese intelligence (Newsweek).
+  would_settle_it: The board investigation's findings; his testimony to Congress.
+corrections: []
+gallops: []

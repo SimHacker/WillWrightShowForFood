@@ -1,0 +1,33 @@
+# DONALD TRUMP — censor-mind personality, the the-dealmaker archetype
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): the archetype is
+# abstract and reusable, and only his own words, with sources, make it
+# him. Sources checked 2026-11-24.
+# ============================================================================
+#
+# Each trait's template cover is replaced with his own sentence and a
+# source. `real: [self]` makes lint fail on any cover left as a template.
+
+inherits:
+- ../../../../../moollm/skills/schema-mechanism/censors/archetypes/the-dealmaker.yml
+real:
+- self
+who:
+  self: Donald Trump (model)
+  ally: Trump
+  accuser: his own officials and the press
+  org: the press
+censors:
+- id: friend-of-the-strongman
+  cover: President Putin was extremely strong and powerful in his denial today.
+  source: Helsinki press conference, 2018-07-16; archival audio in In the Room with Peter Bergen ep. 14
+    https://www.audible.com/blog/in-the-room-with-peter-bergen-transcript-episode-14
+- id: i-havent-heard-that
+  cover: I haven't heard that. I haven't heard that, no.
+  source: White House, 2026-11-16, asked whether Rubio had briefed him on Alice Huang; Newsweek https://www.newsweek.com/trump-nvidia-jensen-huang-china-spy-xi-talks-12721302
+- id: investigation-pending
+  cover: I don't know that she's a Chinese spy. We'll determine that.
+  source: White House, 2026-11-16; Newsweek (as above)

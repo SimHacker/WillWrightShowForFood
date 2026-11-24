@@ -1,0 +1,27 @@
+id: stephen-miller
+name: Stephen Miller
+type: person
+layer: model
+status: living
+signifier: 🗂️
+real_being: true
+field: White House Chief of Staff (from 9 Nov 2026); before that deputy chief of staff for policy
+home: characters/stephen-miller/
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#public-power
+  public_power: true
+  public_figure: true
+  consent:
+    state: not_asked
+  authored_by: don-hopkins
+invitation:
+  status: not_invited
+  note: Not a show guest. Modeled from the public record under the public-power rule. Welcome to correct,
+    add to, or argue with any of it, or to ask for its deletion, like anyone; see README.md.
+model:
+  kit: https://github.com/SimHacker/moollm/blob/main/skills/schema-mechanism/censors/BRAINBALL.md
+  archetype: the-ideologue
+  record: record.yml
+  minds:
+    censor-mind: minds/censor-mind/
+  disputes: disputes.yml

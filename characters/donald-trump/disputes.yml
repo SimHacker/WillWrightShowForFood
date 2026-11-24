@@ -1,0 +1,27 @@
+# DONALD TRUMP — disputes: where accounts differ, beside the record
+# Corrections with evidence change the record; denials without it are filed here.
+
+disputes:
+- id: helsinki-would
+  record: record.yml t=1, t=2
+  his_account:
+  - words: I don't see any reason why it would be.
+    when: '2018-07-16'
+  - words: (the next day) he had meant to say "wouldn't"
+    when: '2018-07-17'
+  what_we_claim: He said both. The model files the second as a retraction after a documented cost.
+  would_settle_it: Nothing further; both are on the record.
+- id: alice-huang-briefing
+  record: record.yml t=4, t=5
+  his_account:
+  - words: I haven't heard that. I haven't heard that, no.
+    when: '2026-11-16'
+  other_readings:
+  - who: NYT, per TechCrunch
+    words: Trump was briefed in late 2025 on intelligence that Alice Huang had formed a close relationship
+      with Jensen Huang.
+  what_we_claim: The briefing is reported, not confirmed by him. The model codes his answer as not heeding
+    the warning, either way.
+  would_settle_it: The briefing record; his own account of it.
+corrections: []
+gallops: []
