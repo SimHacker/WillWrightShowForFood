@@ -62,7 +62,7 @@ sources.
 ## What the model says
 
 **From his seat, applause explains every action except the regrets.** In
-[`on-stage.yml`](minds/censor-mind/on-stage.yml), applause alone fits 11 of his 16 choices, in all
+[`on-stage.yml`](minds/censor-mind/on-stage.yml), applause alone fits 11 of his 16 choices, in 997 of
 1,000 random weightings. The ablation says none of the four censors is needed. Like Andersen's
 Emperor, he doesn't have to repress anything to act as he did: the crowd pays for each move. His
 four sentences are his account of those moments, not their cause.
@@ -72,7 +72,7 @@ pays for the DealBook apology, the deleted Epstein posts, the "went too far" reg
 foolish", and "I'm not MAGA" with nothing. Each one followed a documented cost to his business or
 access: advertisers leaving (2023), a president threatening $18 billion in contracts (2025), a
 lost midterm (2026). The `power-pays` run adds one latent value, stopping that cost, and fits all
-16 choices, in 72% of random weightings. Criticism alone never moved him; criticism plus a cost
+16 choices, in 67% of random weightings. Criticism alone never moved him; criticism plus a cost
 did, every time. In the same interview where he said sorry he told the advertisers to go fuck
 themselves, which fits the hypothesis: the apology was for the power, not the critics.
 
@@ -82,7 +82,7 @@ amplified 0 of 5 times when a cost was documented and 7 of 7 when none was. In D
 that's an overriding condition: something that stops an action that otherwise always works. In
 Minsky's, it's a censor. `induce --patch` writes it as one, and the `learned-censor` run uses it
 with his own cover, "They went too far." It adds no value, only the censor, and it fits all 16
-choices in 100% of weightings.
+choices in 997 of 1,000 weightings.
 
 **Two accounts fit everything, and they differ on one kind of event.** `power-pays` says the
 apology buys him something; `learned-censor` says the cost only stops him doubling down. Every cost
@@ -101,8 +101,8 @@ first.
 lists five hypothetical kinds of case, and `argue` simulates each before his next choice, from a
 calm start, under every run. Criticism, a case built from his own posts by a witness, and a joke
 that exposes the persecution frame each get an apology 0 to 1% of the time. A documented cost
-gets one 71% of the time under `power-pays` and 100% under `learned-censor` when the choice is
-apologize or amplify; offered a way to go quiet, 48% and 0%. Naming the frame adds nothing even
+gets one 65% of the time under `power-pays` and 100% under `learned-censor` when the choice is
+apologize or amplify; offered a way to go quiet, 49% and 0%. Naming the frame adds nothing even
 to the cost, because the frame was never what held him: the weights already did, so the frame was
 the account, not the cause. In the sim, an argument is a way of changing his situation, and only
 the cost changes it.

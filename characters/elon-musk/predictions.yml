@@ -11,6 +11,14 @@
 #   python3 $S predict minds/censor-mind/on-stage.yml --offers apologize,amplify \
 #     --set-item accusation-heard=on --set-item power-at-risk=on --n 1000
 # ============================================================================
+#
+# ENGINE NOTE, 2026-11-24: from this date the sweep also perturbs weights a
+# run sets itself (power-pays' power-safe). The forecasts below stay as
+# committed. Regenerated today they'd read cost-to-him power-pays apologize
+# 0.68 (was 0.72) and cost-and-a-way-out power-pays apologize 0.50, look-away
+# 0.31, amplify 0.19 (was 0.51, 0.38, 0.11). Same direction, same reading.
+# Score them as committed; new forecasts use the new engine.
+# ============================================================================
 
 predictions:
   - id: criticism-only

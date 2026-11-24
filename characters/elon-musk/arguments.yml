@@ -13,15 +13,17 @@
 #     --offers apologize,look-away,amplify --goal apologize \
 #     --set-item accusation-heard=off --set-item power-at-risk=off
 #
-# Result, 2026-11-24 (300 weightings, ±50%), P(apologize) per run:
+# Result, 2026-11-24, rerun after the engine began perturbing each run's own
+# weights (power-safe included); before, power-pays read 71% (48%).
+# 300 weightings, ±50%, P(apologize) per run:
 #
 #   argument         doesnt-know  knows-and-agrees  power-pays    learned-censor
 #   (none)                0%           0%            0%             0%
 #   moral-case            0%           1%            0%             0%
 #   his-own-words         0%           1%            0%             0%
 #   name-the-frame        0%           1%            0%             0%
-#   documented-cost       0%           0%           71% (48%)     100% (0%)
-#   cost-and-frame        0%           0%           71% (48%)     100% (0%)
+#   documented-cost       0%           0%           65% (49%)     100% (0%)
+#   cost-and-frame        0%           0%           65% (49%)     100% (0%)
 #
 # (In parentheses: with look-away also offered.) Only the cost moves him,
 # and only under the two runs that fit the whole record. Naming the frame
