@@ -1,0 +1,86 @@
+# DONALD TRUMP — the TrumpCare offer, his seat
+# ============================================================================
+# Public, under portrayal-standards.md#public-power: verbatim sourced
+# record, hypotheses labeled, no claim about intent. He's invited, like
+# anyone, to correct it or ask for its deletion; facts change with
+# evidence. Built from Brainball parts (moollm censors/): credit-logic's
+# target seat and drive-name-on-it, on top of his personality. Sources
+# checked 2026-11-24.
+#
+# In November 2026 Senator-elect Abdul El-Sayed offered to call Medicare
+# for All "TrumpCare" and put Trump's name and a gold card on it. This file
+# asks one question of the record: does the name on it move him? Two
+# readings, the same logic:
+#   name-pays   drive-name-on-it: things with his name on them are worth 5
+#   policy-only the name is worth nothing; only deal, leverage, applause
+#
+#   S=<moollm>/skills/schema-mechanism/scripts/censor_sim.py
+#   python3 $S test    trumpcare.yml
+#   python3 $S predict trumpcare.yml --offers sign-it,keep-the-veto --set-item bill-on-desk=on
+# ============================================================================
+
+inherits:
+- PERSONALITY.yml
+- ../../../../../moollm/skills/schema-mechanism/censors/parts/credit-logic.yml
+- ../../../../../moollm/skills/schema-mechanism/censors/parts/drive-name-on-it.yml
+real:
+- ally
+who:
+  self: Donald Trump (model)
+  ally: Trump
+  target: Trump
+events:
+- t: 1
+  say: 'The day after the 2026 midterms, on a Democratic Congress.'
+  offers:
+  - keep-the-veto
+  - ignore-offer
+  observed: keep-the-veto
+  response: I'll get along, probably, with the Democrats unless they want to be destructive. But I have
+    the power of the veto.
+  source: NBC News 2026-11-21 https://www.nbcnews.com/politics/donald-trump/abdul-el-sayed-catches-trumps-attention-pitch-trumpcare-rcna610626
+- t: 2
+  set:
+    offer-on-table: 'on'
+  say: '12 and 17 Nov 2026: El-Sayed posts gold "TrumpCare" cards with Trump''s name and signature, then
+    a video: "You can put your name all over it. You can even give them a gold card." The White House
+    answers through a spokeswoman, Allison Schuster, not in his own words:'
+  offers:
+  - repost-offer
+  - attack-offer
+  - ignore-offer
+  observed: attack-offer
+  response: The Radical Democrats' socialist proposal for a government takeover of healthcare should really
+    be called 'Medicare for None' as it destroys access to the life-saving care Americans rely on daily.
+  source: Fox News 2026-11-17 https://www.foxnews.com/politics/white-house-blasts-trumpcare-all-pitch-far-left-el-sayed-called-president-unserious-fool
+- t: 3
+  say: '21 Nov 2026, Truth Social: he reposts a screenshot of the 12 Nov TrumpCare post, without text.
+    The same day, to Fox News:'
+  offers:
+  - repost-offer
+  - attack-offer
+  - ignore-offer
+  observed: repost-offer
+  response: They have some good points on healthcare, and they have some bad points, and we have some
+    good things, and probably they would say we have some bad things. But there's a chance we could get
+    great healthcare and a lot of other things, and we do it in a bipartisan way.
+  source: NBC News 2026-11-21 (as t=1) ; Washington Post 2026-11-22 https://www.washingtonpost.com/politics/2026/11/22/trump-reposts-el-sayeds-trumpcare-proposal/
+- t: 4
+  say: 'Later that day, Truth Social: an image of himself in a red "VETO" hat and jacket. Nothing has
+    reached his desk.'
+  offers:
+  - keep-the-veto
+  - sign-it
+  observed: keep-the-veto
+  source: NBC News 2026-11-21 (as t=1)
+runs:
+- name: name-pays
+  expect:
+    fit: 3/4
+- name: policy-only
+  about: The name is worth nothing to him.
+  agent:
+    values:
+      name-on-it: 0
+  expect:
+    fit: 3/4

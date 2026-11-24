@@ -50,6 +50,19 @@ China, they say she's a spy". In the model those are two precursor censors and a
 ablation says the values alone already pick the friend, so the censors are his account of those
 moments rather than their cause.
 
+**The TrumpCare offer: does the name on it move him?** In November 2026 Senator-elect Abdul
+El-Sayed offered to call Medicare for All "TrumpCare": "You can put your name all over it. You can
+even give them a gold card." [`trumpcare.yml`](minds/censor-mind/trumpcare.yml) adds the public
+[`credit-logic`](https://github.com/SimHacker/moollm/blob/main/skills/schema-mechanism/censors/parts/credit-logic.yml)
+and [`drive-name-on-it`](https://github.com/SimHacker/moollm/blob/main/skills/schema-mechanism/censors/parts/drive-name-on-it.yml)
+parts to his personality and runs four moves. Two readings each fit three, and they miss different
+ones. The White House's answer, through a spokeswoman ("should really be called 'Medicare for
+None'"), fits the reading where the name is worth nothing. His own answer four days later (he
+reposted the offer without comment, and told Fox "there's a chance we could get great healthcare")
+fits the reading where it's worth something. Both readings fit the VETO hat the same evening, since
+nothing had reached his desk. If a bill does, `predict` gives sign 75% if the name pays, and veto
+87% if it doesn't (2,000 weightings, ±50%). This is a forecast, committed before the event.
+
 Run it: `python3 censor_sim.py test minds/censor-mind/on-stage.yml` (and `sweep`, `ablate`,
 `induce`, `predict`) with the moollm kit's `scripts/censor_sim.py`.
 
