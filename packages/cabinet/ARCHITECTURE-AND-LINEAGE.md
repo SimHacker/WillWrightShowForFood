@@ -172,11 +172,20 @@ lineage, not a claim that V8 is simply Self reincarnated; see also the
 [Vanessa memorial sources](../../characters/vanessa-freudenberg/README.md) and
 [David Ungar's room](../../characters/david-ungar/README.md).
 
-Cabinet's position is related, but narrower. TypeScript compiles to
-JavaScript, and the browser JIT optimizes the emulator's host code. Cabinet
-does **not** currently compile PDP-7 programs into JavaScript; it interprets
-guest instructions and tests their behavior. SqueakJS's guest-language JIT is
-a useful precedent, not a feature Cabinet already has.
+Cabinet makes the same bet. TypeScript compiles to JavaScript, and the
+browser JIT optimizes the emulator's host code. Above that, Korz compiles the
+guest machine itself into JavaScript: a straight run of PDP-7 or 6502
+instructions becomes one generated function, device behaviors are pasted in
+as JavaScript templates, and a store into a compiled word throws the function
+away, because PDP-7 code rewrites itself. V8 then compiles those functions
+to the processor. It is two JITs, one running on the other, and the upper one
+is written to emit the kind of stable function the lower one keeps. Each
+rung is checked against a straight port of SIMH on the same bytes, and the
+live pages run on the compiled rung (see [KORZ-COMPILER.md](KORZ-COMPILER.md),
+[KORZ-CPU.md](KORZ-CPU.md), [BENCHMARKS.md](BENCHMARKS.md) and
+[FORTH-DAY.md](FORTH-DAY.md#the-compiler-under-that)). What it doesn't do yet
+is compile a whole Forth colon definition into one function; it stops at a
+run of machine instructions and one Forth word.
 
 Likewise, WebAssembly is not inherently “no JIT”: browser engines can compile
 WASM in tiers and optimize hot functions. The distinction is the working
