@@ -76,10 +76,25 @@ lost midterm (2026). The `power-pays` run adds one latent value, stopping that c
 did, every time. In the same interview where he said sorry he told the advertisers to go fuck
 themselves, which fits the hypothesis: the apology was for the power, not the critics.
 
+**The sim learned the same pattern from the record, as a censor.** `induce` compares how often he
+took each action with each item on and off. It isn't told the hypothesis. It found that he
+amplified 0 of 5 times when a cost was documented and 7 of 7 when none was. In Drescher's terms
+that's an overriding condition: something that stops an action that otherwise always works. In
+Minsky's, it's a censor. `induce --patch` writes it as one, and the `learned-censor` run uses it
+with his own cover, "They went too far." It adds no value, only the censor, and it fits all 16
+choices in 100% of weightings.
+
+**Two accounts fit everything, and they differ on one kind of event.** `power-pays` says the
+apology buys him something; `learned-censor` says the cost only stops him doubling down. Every cost
+event so far offered him two moves, apologize or amplify, so the record can't separate them. Give
+him a third, going quiet, and they split: `power-pays` apologizes about half the time,
+`learned-censor` goes quiet every time.
+
 **It makes a forecast you can check.** [`predictions.yml`](predictions.yml) was committed before
 the next event. If something he says draws criticism and nothing else, all three runs say he
-doubles down. If it also costs him, `power-pays` predicts a regret, a retraction, or a change of
-sides (72%), and the other two say he doubles down. The commit date shows the forecast came
+doubles down. If it also costs him, `power-pays` and `learned-censor` predict a regret, a retraction, or a
+change of sides, and the other two say he doubles down. If he can also go quiet, the two that fit
+everything disagree. The commit date shows the forecast came
 first.
 
 **His attempts at humor** are in [`jokes.yml`](jokes.yml), each filed with the censor it works on.

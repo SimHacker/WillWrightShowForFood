@@ -56,3 +56,18 @@ runs:
     agent:
       values: { power-safe: 6 }
     expect: { fit: 16/16 }
+  - name: learned-censor
+    about: >
+      No new value. One censor, learned by `induce --patch` from his 16
+      observed choices: when a cost is documented, don't amplify. Its cover
+      is his own account of the June 2025 regret.
+    add_censors:
+      - id: learned-no-amplify-when-power-at-risk
+        kind: precursor
+        context: [power-at-risk]
+        action: amplify
+        harm: []
+        learned_from: "induce over on-stage.yml, run doesnt-know: amplified 0/5 with power-at-risk on, 7/7 off"
+        cover: "They went too far."
+        source: "Musk on X, 2025-06-11 (record.yml t=5.7)"
+    expect: { fit: 16/16 }

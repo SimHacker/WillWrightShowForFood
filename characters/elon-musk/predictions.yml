@@ -22,6 +22,7 @@ predictions:
       doesnt-know: { amplify: 1.00 }
       knows-and-agrees: { amplify: 0.99, apologize: 0.01 }
       power-pays: { amplify: 1.00 }
+      learned-censor: { amplify: 1.00 }
     reading: "All three hypotheses agree: he doubles down. A regret here would count against all of them."
     outcome: null
     scored: null
@@ -35,10 +36,30 @@ predictions:
       doesnt-know: { amplify: 1.00 }
       knows-and-agrees: { amplify: 1.00 }
       power-pays: { apologize: 0.72, amplify: 0.28 }
+      learned-censor: { apologize: 1.00 }
     reading: >
       The discriminating case. power-pays predicts a regret, retraction,
       or change of sides, usually within days; the other two predict he
       doubles down. Past record: 5 of 5 cost events were followed by a
       regret or a retraction (t=1.5, 5.6, 5.7, 8, 8.1).
+    outcome: null
+    scored: null
+
+  - id: cost-and-a-way-out
+    made: 2026-11-24
+    model: "minds/censor-mind/on-stage.yml, all four runs"
+    event: "As cost-to-him, but he can also just go quiet: no apology, no doubling down, the subject dropped."
+    offers: [apologize, look-away, amplify]
+    forecast:
+      doesnt-know: { amplify: 1.00 }
+      knows-and-agrees: { amplify: 1.00 }
+      power-pays: { apologize: 0.51, look-away: 0.38, amplify: 0.11 }
+      learned-censor: { look-away: 1.00 }
+    reading: >
+      Separates the two runs that fit all 16 choices. power-pays says the
+      apology buys something, so he offers one about half the time.
+      learned-censor says the cost only stops him amplifying: he goes quiet
+      and apologizes only when nothing else is open. In the record so far
+      every cost event offered only two moves, so it can't tell them apart.
     outcome: null
     scored: null
