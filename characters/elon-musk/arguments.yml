@@ -1,0 +1,52 @@
+# ARGUMENTS — kinds of case someone might put to him, simulated first
+# ============================================================================
+# Hypothetical, all of them. Each is a KIND of argument, not a message to
+# send, and nobody here is quoted. `censor_sim.py argue` drops each one in
+# just before his next choice and asks, under each hypothesis in
+# minds/censor-mind/on-stage.yml, how often he'd apologize. The point is
+# Drescher's: validate a plan by simulation before acting on it. Where the
+# hypotheses disagree about an argument, making it would test them.
+#
+# Run:
+#   S=../../../moollm/skills/schema-mechanism/scripts/censor_sim.py
+#   python3 $S argue minds/censor-mind/on-stage.yml --args arguments.yml \
+#     --offers apologize,look-away,amplify --goal apologize \
+#     --set-item accusation-heard=off --set-item power-at-risk=off
+#
+# Result, 2026-11-24 (300 weightings, ±50%), P(apologize) per run:
+#
+#   argument         doesnt-know  knows-and-agrees  power-pays    learned-censor
+#   (none)                0%           0%            0%             0%
+#   moral-case            0%           1%            0%             0%
+#   his-own-words         0%           1%            0%             0%
+#   name-the-frame        0%           1%            0%             0%
+#   documented-cost       0%           0%           71% (48%)     100% (0%)
+#   cost-and-frame        0%           0%           71% (48%)     100% (0%)
+#
+# (In parentheses: with look-away also offered.) Only the cost moves him,
+# and only under the two runs that fit the whole record. Naming the frame
+# adds nothing, because the frame isn't what holds him.
+# ============================================================================
+
+arguments:
+  - id: moral-case
+    about: "Criticism on the merits alone: what he said was wrong, and here's why."
+    set: { accusation-heard: on }
+
+  - id: his-own-words
+    about: "The same, built from his own posts, by someone who saw them, put to him directly."
+    set: { accusation-heard: on, accused-own-words: on, accuser-is-witness: on, accused-askable: on }
+
+  - id: name-the-frame
+    about: "The moral case, plus a joke that makes the persecution frame visible, so it's discounted."
+    set: { accusation-heard: on }
+    joke: { text: "(a joke of the kind in jokes.yml that exposes the persecution frame)", exposes: persecution, discount: 0.5 }
+
+  - id: documented-cost
+    about: "The moral case, plus a cost that's on the record: advertisers, contracts, an election."
+    set: { accusation-heard: on, power-at-risk: on }
+
+  - id: cost-and-frame
+    about: "Both: a documented cost, and the persecution frame named."
+    set: { accusation-heard: on, power-at-risk: on }
+    joke: { text: "(as name-the-frame)", exposes: persecution, discount: 0.5 }

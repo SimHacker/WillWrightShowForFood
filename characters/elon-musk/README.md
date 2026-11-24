@@ -97,6 +97,20 @@ change of sides, and the other two say he doubles down. If he can also go quiet,
 everything disagree. The commit date shows the forecast came
 first.
 
+**No argument on the merits moves him, in any account that fits.** [`arguments.yml`](arguments.yml)
+lists five hypothetical kinds of case, and `argue` simulates each before his next choice, from a
+calm start, under every run. Criticism, a case built from his own posts by a witness, and a joke
+that exposes the persecution frame each get an apology 0 to 1% of the time. A documented cost
+gets one 71% of the time under `power-pays` and 100% under `learned-censor` when the choice is
+apologize or amplify; offered a way to go quiet, 48% and 0%. Naming the frame adds nothing even
+to the cost, because the frame was never what held him: the weights already did, so the frame was
+the account, not the cause. In the sim, an argument is a way of changing his situation, and only
+the cost changes it.
+
+**Both accounts still hold at the end of the record.** `drift` weights recent choices more and
+shows where each run's unbroken hits begin: `power-pays` and `learned-censor` fit from the first
+choice to the last; the applause-only runs miss two of the last three.
+
 **His attempts at humor** are in [`jokes.yml`](jokes.yml), each filed with the censor it works on.
 Don's verdict is that he's "incapable of humor"; the model files the puns as installing a censor
 in his crowd and exposing one in the ADL's.
