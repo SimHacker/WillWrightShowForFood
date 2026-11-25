@@ -3,8 +3,9 @@
 	import { STYLES } from './bus-dance.svelte.js';
 	import { TEMPOS } from './dance-player.js';
 
-	/** @type {{ dance: import('./bus-dance.svelte.js').BusDance, chip?: boolean, listen?: boolean }} */
-	let { dance, chip = false, listen = false } = $props();
+	/** twist: show what the front panel's switches are doing, on a line of its own. */
+	/** @type {{ dance: import('./bus-dance.svelte.js').BusDance, chip?: boolean, listen?: boolean, twist?: boolean }} */
+	let { dance, chip = false, listen = false, twist = false } = $props();
 
 	const rates = TEMPOS.map((bpm) => ({ label: String(bpm), title: `${bpm} beats a minute, sixteenths ${Math.round(15000 / bpm)} ms apart` }));
 	const tempoIndex = $derived(Math.max(0, TEMPOS.indexOf(dance.bpm)));
@@ -39,10 +40,12 @@
 		onkeydown={(e) => e.stopPropagation()}
 	/>
 {/if}
-{#if dance.twist}
-	<span class="twist" title="The front panel's switches twist the music: their word is hashed, so every combination skews, phases and picks its own effects. All off is the plain dance.">{dance.twist}</span>
-{/if}
 <RateSlider label="Dance tempo, slowest to fastest" {rates} index={tempoIndex} onpick={(i) => (dance.bpm = TEMPOS[i] ?? 120)} />
+{#if twist}
+	<span class="twist" title="The front panel's switches twist the music: their word is hashed, so every combination skews, phases and picks its own effects. All off is the plain dance."
+		>switches: {dance.twist || 'all off, plain'}</span
+	>
+{/if}
 
 <style>
 	/* Each page scopes its own button look; these match the PDP-7's chips and the Apple's buttons. */
@@ -65,9 +68,14 @@
 		cursor: pointer;
 	}
 	.twist {
+		flex-basis: 100%;
+		height: 1rem;
+		line-height: 1rem;
 		font-size: 0.62rem;
 		opacity: 0.75;
 		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.chip.on {
 		background: #9fe8a0;

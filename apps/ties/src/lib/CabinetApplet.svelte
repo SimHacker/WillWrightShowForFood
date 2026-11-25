@@ -3642,9 +3642,6 @@
 					title="The bus dance: hear the PDP-7, the 340 and the Forth device work, each its own instrument, over a saucer hum that rises with the speed"
 					onclick={() => dance.toggle()}>DANCE</button
 				>
-				{#if dance.on}
-					<DanceControls {dance} chip listen />
-				{/if}
 				<span class="reset-pull">
 					{#if resetPull >= 0}
 						<span class="reset-track" style:height="{RESET_PULL}px" aria-hidden="true"
@@ -3685,6 +3682,12 @@
 					>
 				</span>
 		</div>
+		{#if dance.on}
+			<div class="row dance-row" data-panel="dance" role="group" aria-label="VM Radio: the bus dance">
+				<span class="dance-title" title="VM Radio: AM radio's idea, tuned straight into the emulator and the program running on it (AM-RADIO.md)">VM RADIO</span>
+				<DanceControls {dance} chip listen twist />
+			</div>
+		{/if}
 		{#if playOpen}
 			{@render playRow()}
 		{/if}
@@ -4972,6 +4975,19 @@
 	}
 	.row.ctl .buttons {
 		margin-left: auto;
+	}
+	/* Its own row, and the switches' readout its own fixed line, so nothing above moves as it changes. */
+	.row.dance-row {
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		padding-top: 0.4rem;
+		padding-bottom: 0.4rem;
+		font-family: ui-monospace, monospace;
+	}
+	.dance-title {
+		font-size: 0.62rem;
+		letter-spacing: 0.08em;
+		color: #9fe8a0;
 	}
 	.chips {
 		display: flex;
