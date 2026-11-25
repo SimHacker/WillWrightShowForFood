@@ -28,3 +28,28 @@
 	onclick={() => dance.toggleLoops()}>{chip ? 'ENO' : 'Eno'}</button
 >
 <RateSlider label="Dance tempo, slowest to fastest" {rates} index={tempoIndex} onpick={(i) => (dance.bpm = TEMPOS[i] ?? 120)} />
+
+<style>
+	/* Each page scopes its own button look; these match the PDP-7's chips and the Apple's buttons. */
+	button.on {
+		background: #cfc;
+		color: #000;
+	}
+	.chip,
+	select:has(+ .chip) {
+		font: inherit;
+		font-size: 0.62rem;
+		height: 1.4rem;
+		padding: 0 0.4em;
+		border: 1px solid #555;
+		background: transparent;
+		color: inherit;
+	}
+	.chip {
+		cursor: pointer;
+	}
+	.chip.on {
+		background: #9fe8a0;
+		border-color: #9fe8a0;
+	}
+</style>
