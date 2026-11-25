@@ -47,7 +47,7 @@ function drivePen(pen: PenInput, videxShowing: boolean) {
 `videxShowing` is the monitor switch (`status().videxShowing` in [VIDEX.md](VIDEX.md) step 7):
 annunciator 0 on, and text mode. The picture on the canvas is the tube the pen is held against,
 so the other driver is idle. A program flips the switch with `$C059`/`$C058` and the driver
-follows on the next frame. No menu.
+follows on the next frame. There is no menu setting.
 
 ## Forth
 
@@ -101,7 +101,7 @@ strobes.
 
 A probe has to stay on the screen until the browser has drawn a frame. The paddle value is
 updated once per browser frame from that frame, not mid-scan. An `HPLOT` of half a hires screen
-takes longer than a frame, so Applesoft stumbles into the right timing. A tight loop that paints
+takes longer than a frame, so Applesoft gets the right timing by accident. A tight loop that paints
 and reads inside one frame will read the previous picture. Wait on something slow, or spin, before
 the `PDL`. Run these tests at 1×: at warp many Apple frames pass per browser frame and the paddle
 stays stale.

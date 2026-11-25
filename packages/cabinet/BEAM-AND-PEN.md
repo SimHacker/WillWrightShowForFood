@@ -26,7 +26,7 @@ interrupt, handler, display file, beam, phosphor, and the pen again.
 - **Slow mode, as an idea.** A time-dilation knob so the beam crawls the display file
   ([PORTRAIT.md](PORTRAIT.md#slow-mode-watch-the-beam-work)).
 
-## First, the honest limit
+## First, the current limit
 
 Today the cabinet loses the cross too easily, and that is our bug. The pointer is sampled once per
 browser frame, so the pen sits still for about 47 of the 340's refreshes and then jumps, and
@@ -45,8 +45,8 @@ fastest drag  ≈  SRAST net reach per refresh  ×  refreshes per second
 
 and refreshes per second depends on how much the display file draws. A cross on an empty screen is
 nearly impossible to outrun; a busy circuit diagram on the same screen refreshes more slowly, and the
-same hand loses the cross at a lower speed. That is the experiment worth showing: same pen, same
-code, more picture, earlier loss. The numbers above are from ROADMAP's measurement and are
+same hand loses the cross at a lower speed. That is the experiment to show: with the same pen and
+the same code, a bigger picture loses the cross sooner. The numbers above are from ROADMAP's measurement and are
 approximate until the timing is real (see the order of work).
 
 ## What to build
@@ -100,7 +100,7 @@ domains matter here: hand, PDP-7 cycles, 340 operations, and rendering
 - at the hit: the 340 freezing, the pen flag, the interrupt, `TRCR` reading the coordinates and
   depositing into `YCROSS` and `XCROSS`, each step linked to its source line and scanned listing
   page, as in [CAUSE-AND-EFFECT.md](CAUSE-AND-EFFECT.md);
-- `SRAST` brightening while tracking is hot and dimming between hits;
+- `SRAST` brightening while the pen is hitting it and dimming between hits;
 - a time scale that spans microseconds of beam to seconds of hand, with zoom on the dial.
 
 Recorded walks through it are tours: authored, shareable, and steerable by anyone else.

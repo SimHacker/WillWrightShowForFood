@@ -26,12 +26,12 @@ host the same views.
 ## What drives it
 
 A 3D view of the machine, driven by the emulator's existing outputs. It adds no emulator
-features; the emulator doesn't know it's there.
+features, and the emulator does not depend on it.
 
 | Portrait element | What drives it |
 |---|---|
 | console lamps | declared registers (AC, PC, MB, MQ, IR, run/defer flags) |
-| CRT picture | the segment log — the one stream ([DESIGN](DESIGN.md), Media) |
+| CRT picture | the segment log, the single display stream ([DESIGN](DESIGN.md), Media) |
 | ASR-33 chatter | `Teletype.onPrint` |
 | light pen | pointer events → the same `LightPen` hit-test |
 | avatar's hands | the automation frame's EXPECT/SEND script |
@@ -39,13 +39,13 @@ features; the emulator doesn't know it's there.
 
 In [frame-manager](https://github.com/SimHacker/moollm/blob/main/designs/webtop/FRAMES.md)
 terms: the portrait is one more view of the same machine, mounted beside
-the 2D bench, wrapped by the same frames. Flip a view and the machine
-does not notice.
+the 2D bench, wrapped by the same frames. Switching views does not
+affect the machine.
 
 ## Lamp physics: duty cycle, not boolean
 
 A browser frame sees ~9,500 emulated instructions. A lamp that renders
-`bit ? on : off` at 60Hz strobes garbage. Real console lamps integrated:
+`bit ? on : off` at 60Hz flickers meaninglessly. Real console lamps integrated:
 a bit that is up 30% of cycles glows at 30%. So the run loop accumulates
 per-bit set-counts (one AND and one add per register per step, in the
 loop we already run), and the portrait normalizes per frame:
@@ -65,7 +65,7 @@ Render-to-texture, Three.js, no WASM ([WEB-BENCH](WEB-BENCH.md) rules
 hold). The Type 340 was its own cabinet with a round tube; model it
 beside the processor, as on Heinz's floor. Pen hits compute in screen
 space of the *texture*, so the 3D projection cannot introduce aim
-error. The glass is chrome; the hit-test is the plugin's.
+error. The glass is only visual; the hit-test is done by the plugin.
 
 **The reflection shot.** A preset camera over Heinz's shoulder, framed on the
 tube, with his face reflected in the glass over the picture, as in the photographs
@@ -75,21 +75,20 @@ to 1, fades his face in and out of the glass.
 
 ## Slow mode: watch the beam work
 
-For later, but cheap and wonderful: a time-dilation knob on the
+For later, and cheap to build: a time-dilation knob on the
 cabinet's cycle clock. The 340 is a display *processor* executing words
 at documented point-plot speeds, and the phosphor pass renders the
 segment stream in order, so at 1/1000 speed you *see* the beam crawl
 the display file, each vector sweeping tip-first as a blue flash with
 the yellow-green persistence behind it. Nothing is animated; the
 emulator is just running slowly while the phosphor decays in real time.
-It is the same knob the debugger frame wants for single-step, opened
-all the way up.
+The debugger frame needs the same knob for single-step, at the other
+end of its range.
 
-## The DECtape eyes
+## The DECtape reels
 
-Idle animation: the reels spin when the machine runs, stop on HLT.
-Free and honest (they are reading `Cabinet.cycles`), and they keep the
-face alive. The portrait is of a machine that looks back.
+Idle animation: the reels spin when the machine runs and stop on HLT.
+They show real state: they read `Cabinet.cycles`.
 
 ## Heinz at the console
 
@@ -162,7 +161,7 @@ body. The same recording plays through a stick figure or a finished
 Heinz, and upgrading the body never invalidates a demo. Because many
 blend weights put the tip in the same place, slow noise among
 alternative whole-body poses gives idle breathing while the tip stays
-pinned. That is Ken Perlin's trick from Improv (Perlin and Goldberg,
+pinned. That is Ken Perlin's technique from Improv (Perlin and Goldberg,
 SIGGRAPH 96): weighted layers of action on a skeleton, with coherent
 noise so an actor is never still. Don built The Sims 1 character
 animation system inspired by Improv. The early demo uses a canned whole-body clip, with the tip
@@ -197,8 +196,8 @@ handles on a 3D mesh seen through a perspective camera, and a glTF
 loader that turns morph targets and poses into examples.
 
 The avatar portrays Heinz Lemke operating his own program, made with
-his participation: he sent the 128-page listing this whole machine
-exists to run. His character dir is the source of grounding; anything
+his participation: he sent the 128-page listing this emulator was
+built to run. His character dir is the source of grounding; anything
 beyond "operator demonstrating PIXIE" needs his say.
 
 ## Scene player: bodies, devices and connected time scales
@@ -316,7 +315,7 @@ The PDP-7 has a face from photographs. Every other engine the cabinet wraps
 ([ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md)) gets one designed
 for it, in the same rule as the PDP-7's: **every lamp, dial and switch is bound to
 real state**, through the same seams (declared registers, device properties,
-events). Nothing on a panel is decoration that lies. They share a design kit so they
+events). No panel element is decoration showing false state. They share a design kit so they
 sit together in one room, and each stays recognizably its own machine.
 
 **The shared kit.** A 19-inch rack frame in brushed aluminum with a colored front,
@@ -419,8 +418,8 @@ the gong that switches off the stream ([TURING-ENGINE.md](TURING-ENGINE.md#the-u
 
 ### Movable Feast Machine: tiles, not a cabinet
 
-Ackley's machine is tiles and grows by adding them, so instead of a box it's blinking-light
-Borg Lego: square tiles that snap together edge to edge, modeled on his real
+Ackley's machine is tiles and grows by adding them, so instead of a box it is a set of
+square tiles that snap together edge to edge, modeled on his real
 [T2 tiles](https://t2tile.com/), each with its own small screen of sites and LEDs pulsing out of
 step with the others. Drag a tile in to grow the machine; pull one out and the computation routes
 around the hole. The engine is Andrew Walpole's
@@ -465,21 +464,21 @@ touch or a demo session moves them, and the scene shows the device moving.
 moves when the engine does, checked by driving the engine headless and comparing the
 panel's readings with its state.
 
-## Falsifiable milestones, in the pretty-pass lane
+## Falsifiable milestones for phosphor rendering
 
 Portrait work is never a blocker on the rungs in
-[DESIGN.md](DESIGN.md); it rides behind them:
+[DESIGN.md](DESIGN.md); it follows them:
 
 1. **Lamps:** the SYMELEC boot's duty-cycle signature on the address
    and AC rows: recognizable, reproducible, diffable as numbers.
 2. **Tube:** the IDLA picture matches the 2D bench pixel-for-pixel
-   *before* curvature is applied (same texture, so this is a seam
-   check, not a hope).
+   *before* curvature is applied. It is the same texture, so this
+   checks the seam directly.
 3. **Hands:** the avatar types a character; the echo comes back
    through the emulated Teletype and prints on the modeled ASR-33.
 4. **Pen:** the tip's projected point stops the display, the tracking
-   cross settles under it, radial lightbuttons appear: the film frame,
-   in the round. Yank the script target across the tube and the cross
-   is lost, honestly.
+   cross settles under it, radial lightbuttons appear, as in the film
+   frame, in 3D. Moving the script target quickly across the tube makes
+   PIXIE's tracking lose the cross, without scripting the loss.
 
 ↑ [README](README.md) · [DESIGN](DESIGN.md) · [WEB-BENCH](WEB-BENCH.md)

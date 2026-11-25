@@ -3,11 +3,11 @@
 A light pen reports *when* it sees light, never *where it is*. That
 asymmetry splits its two uses:
 
-- **Pointing at existing content is free.** The pen sees the lightbutton
-  or line being drawn beneath it; the hit freezes the display and the
-  display-file address identifies the item. The IDSP/location-3 dispatch
-  machinery, no scan required.
-- **Drawing needs a position source where nothing exists yet** — so
+- **Pointing at existing content needs no extra machinery.** The pen sees
+  the lightbutton or line being drawn beneath it; the hit freezes the
+  display and the display-file address identifies the item. This is the
+  IDSP/location-3 dispatch machinery, and it needs no scan.
+- **Drawing needs a position source where nothing exists yet**, so
   software displays something *for the pen to see* and moves it wherever
   the pen goes. That is the tracking cross, and the machinery around it
   is the subject of this note. All of it is in SYMELEC's 1972 listing,
@@ -28,30 +28,30 @@ core locations, followed by tiny stroke vectors forming the cross:
   370    5642/    400           VEC 0 1
 ```
 
-Moving the cross means depositing new coordinates into `YCROSS`/`XCROSS`
-— the CPU patches the display processor's running program in place.
+Moving the cross means depositing new coordinates into `YCROSS`/`XCROSS`:
+the CPU patches the display processor's running program in place.
 
 **`TRCR` (0o5466) recenters on every hit.** The pen interrupt reads the
-packed hit coordinates with `IDRC` twice — one left rotate for Y, four
+packed hit coordinates with `IDRC` twice: one left rotate for Y, four
 right rotates (a shift of 8) for X, each masked with `1776`. That
 unpack confirms the cabinet's packing formula
 `(x>>1)<<9 | (y>>1)`, and the unit test asserts the round trip. Then
 `POSCR` adds the position-word opcode bases and deposits into
-`YCROSS`/`XCROSS` — and ANDs with `GRID`, so the logical point SYMELEC
+`YCROSS`/`XCROSS`, and ANDs with `GRID`, so the logical point SYMELEC
 stores is grid-snapped while the cross follows the pen smoothly.
 
-**`SRAST` (0o5656) is the reacquisition net — local, not full-screen.**
+**`SRAST` (0o5656) is a local reacquisition net, not a full-screen scan.**
 Immediately after the cross in the display file sits an 11-word "SMALL
 RASTER": an expanding zigzag of vectors at scale 3 (8–32 grid units per
 stroke) swept around the cross position. If the pen slipped off the
 cross arms between frames, the wider net catches it and the next hit
-recenters. The interrupt handlers modulate its parameter word — the pen
-interrupt deposits `100177` ("HIGH INTENSITY"), the stop-code interrupt
-deposits `100170` ("LOW INTENSITY") — brightening the net while
-tracking is hot, dimming it between.
+recenters. The interrupt handlers modulate its parameter word: the pen
+interrupt deposits `100177` ("HIGH INTENSITY") and the stop-code
+interrupt deposits `100170` ("LOW INTENSITY"), so the net is bright
+while the pen is hitting it and dim between hits.
 
-**Edges and dispatch.** `EDGEV`/`EDGEH` — the edge-violation interrupts
-— clamp the cross back on-screen when a drag hits the boundary. And the
+**Edges and dispatch.** `EDGEV`/`EDGEH`, the edge-violation interrupts,
+clamp the cross back on-screen when a drag hits the boundary. And the
 cross carries its own pen-dispatch identity: the display file deposits
 a `JMP STRCR` linkage before jumping to `TRACK`, so a hit anywhere on
 the cross or raster routes to `TRCR` with no mode setup:
@@ -65,38 +65,37 @@ the cross or raster routes to `TRCR` with no mode setup:
    90    5311/ 405637           DJP TRACK                  /TO TRACKING CROSS
 ```
 
-## Acquisition without a scan: the Promethean handoff
+## Acquisition without a scan
 
 SYMELEC never rasters the whole screen to find the pen. Initial
 acquisition is "put the pen on something already lit": the cross parks
-at a known start position (`TEMPX, 400` — the center-left of the grid),
+at a known start position (`TEMPX, 400`, the center-left of the grid),
 and `ENDPOI` ("PUT CROSS ON ENDPOINT OF LINE") warps the cross to a
 picked line's endpoint, where the pen is already sitting. Pointing
 hands off to tracking with no search. The full-screen locate scan of
 light-pen folklore exists on other systems; PIXIE's design makes it
 unnecessary.
 
-Name the pattern for what it is. A pen with no fire of its own must be
-lit from something already burning — and the lightbutton is the hearth
-that never goes out. Touch the pen to a button and the hit hands the
-flame to the tracking cross, which from then on travels with the pen
-tip as its own portable light. **That is why the menu can get out of
-the way while you draw**, as the 1969 film shows: the button's job was
-ignition, not steering. Once the flame is handed off, steering belongs
-to the cross-and-raster loop, and the drawing surface is all yours.
-Pie menus inherit the principle directly — flare up at the press, hand
-the selection its fire, retreat.
+A pen emits no light, so it can only start tracking from something the
+display is already drawing, and the lightbuttons are always drawn.
+Touching the pen to a button produces a hit, and the hit hands off to
+the tracking cross, which from then on moves with the pen tip and
+supplies the light the pen sees. **That is why the menu can get out of
+the way while you draw**, as the 1969 film shows: the button only
+starts tracking and does not steer. After the handoff, the
+cross-and-raster loop does the steering, and the whole drawing surface
+is free. Pie menus follow the same principle: they appear at the press,
+pass on the selection, and disappear.
 
-The retreat is not total, and the residue is the interesting part: the
-*control* lightbuttons ride with the cross — `LBD` is commented
-`/LB'S AT CROSS`, its single-letter buttons positioned by small vector
-offsets (`PSD/PAD/PRD/PCD/PLD/PXD`) around the tracking position. The
-big menu retreats; a small radial menu of in-flight verbs follows the
-pen. 1972.
+Some of the menu stays: the *control* lightbuttons move with the cross.
+`LBD` is commented `/LB'S AT CROSS`, and its single-letter buttons are
+positioned by small vector offsets (`PSD/PAD/PRD/PCD/PLD/PXD`) around
+the tracking position. The big menu disappears, and a small radial menu
+of the verbs used while drawing follows the pen. This was in 1972.
 
 ## How complex
 
-Small — roughly **50 CPU instructions plus ~27 display words**:
+Small: roughly **50 CPU instructions plus ~27 display words**:
 
 | Piece | Size |
 |---|---|
@@ -107,8 +106,8 @@ Small — roughly **50 CPU instructions plus ~27 display words**:
 | `SRAST` raster | 11 display words |
 | dispatch fragment + mode flags | a handful |
 
-The display processor carries the real load: the cross redraws itself
-every refresh with no CPU work, and the CPU runs only on interrupts.
+The display processor does most of the work: it redraws the cross every
+refresh with no CPU work, and the CPU runs only on interrupts.
 
 ## No trigger
 
@@ -117,12 +116,13 @@ at (0o400, 0o400) with the `JMP STRCR` linkage already deposited, the
 pen interrupt is wired at boot, and the first hit recenters. The
 acceptance test checks it in three steps:
 
-1. **Acquire** — park the virtual pen on the parked cross; hits
+1. **Acquire**: park the virtual pen on the parked cross; hits
    recenter it in place.
-2. **Drag** — 25 small steps; `TRCR` → `POSCR` patch `XCROSS`/`YCROSS`
+2. **Drag**: 25 small steps; `TRCR` → `POSCR` patch `XCROSS`/`YCROSS`
    in core and the cross follows to within a raster-net radius.
-3. **Lose** — teleport the pen far beyond the `SRAST` net; no hits, the
-   cross stays behind. The authentic failure mode, asserted.
+3. **Lose**: teleport the pen far beyond the `SRAST` net; there are no
+   hits and the cross stays behind. This is the original failure mode,
+   and the test asserts it.
 
 No emulator surface was added for this: interrupts, `IDRC` packing,
 `IDRS` resume, edge flags, and `DDS` linkage were already the contract.
@@ -130,7 +130,7 @@ The 1972 software does the tracking.
 
 ## On the web bench
 
-The pointer is secretly a true position source, which sets up the
+Unlike a light pen, the browser pointer is a true position source, which sets up the
 `honest`/`assist` dial in [DESIGN.md](DESIGN.md): honest mode feeds the
 pointer to the pen input and lets this machinery track, and lose the
 cross the way it was lost. The true limit is the `SRAST` net's reach per
@@ -138,8 +138,8 @@ refresh times the refresh rate; today the pointer is sampled once per
 browser frame, so the cabinet loses the cross far sooner than 1969 did
 ([ROADMAP §1](ROADMAP.md#1-tracking-the-pen-is-sampled-once-per-browser-frame)).
 Watching it happen in slow motion, beam by beam:
-[BEAM-AND-PEN.md](BEAM-AND-PEN.md). Assist mode
-teleports. The demo is honest mode, because the point of the cabinet is
-that the cross follows the mouse *because 1972 software tracks it*.
+[BEAM-AND-PEN.md](BEAM-AND-PEN.md). Assist mode moves the cross
+directly to the pointer. The demo uses honest mode, so that the cross
+follows the mouse *because 1972 software tracks it*.
 
 ↑ [README](README.md) · [DESIGN](DESIGN.md) · [SIMH-MAP](SIMH-MAP.md)

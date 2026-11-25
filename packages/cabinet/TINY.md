@@ -5,17 +5,17 @@ enough to use everywhere, and shaped so a bigger version can replace one, or nev
 In the other direction, a tiny piece can replace the big design that inspired it.
 
 Richard Gabriel's [Worse is Better](https://www.dreamsongs.com/WorseIsBetter.html) says worse
-won by being simple to implement at the cost of being incomplete. Tiny keeps the simplicity and
-stays complete.
+won by being simple to implement at the cost of being incomplete. The tiny pieces aim to be
+simple and also complete.
 
 The worked example is Flite. At CMU, Alan Black and Kevin Lenzo rewrote Edinburgh's Festival
 synthesizer (C++ with a Scheme interpreter) as small, fast C, and made it read the same voice
 data. The runtime shipped in phones and, commercially, as Cepstral. Voice building stayed in
 FestVox, the Scheme tools, which kept improving. Data compatibility let the small engine run in
-production while the big one stayed in the workshop. The tiny pieces aim for the same split:
+production while the big one stayed in use for building voices. The tiny pieces aim for the same split:
 shared formats, so the small and the big version can trade places.
 
-## The ensemble
+## The pieces
 
 | piece | what it is | swaps with |
 | --- | --- | --- |

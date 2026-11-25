@@ -1,6 +1,6 @@
 # tiny-mabell, tiny-tip and tiny-arpa: dialing in to a network that's gone
 
-Design only. Three small services that put the cabinet's machines on a 1970s network the way
+This is a design only. Three small services that put the cabinet's machines on a 1970s network the way
 people reached it: a modem, a phone number, a Terminal IMP, a host name. The first caller is
 Don's own Apple ][ terminal, an H19 emulator he wrote in his Forth in 1986
 ([Apple2Forth](../../characters/don-hopkins/artifacts/Apple2Forth/README.md)), which is how he
@@ -17,8 +17,8 @@ A modem device for any machine's serial port, and a phone network between them.
 - **The modem** speaks the Hayes command set at the serial port: `AT`, `ATDT` and `ATDP` with a
   number, `ATA`, `ATH`, `ATS0=n` to auto-answer, `+++` with guard time to escape, and the result
   codes `CONNECT 300`/`1200`/`2400`, `RING`, `BUSY`, `NO CARRIER`, `NO ANSWER`. Carrier detect
-  and ring drive the card's status lines. Bytes cross the line at the connected rate, so 300 baud
-  feels like 300 baud. An acoustic coupler mode skips the AT commands: the line is up when the
+  and ring drive the card's status lines. Bytes cross the line at the connected rate, so a 300 baud
+  line is as slow as a real one. An acoustic coupler mode skips the AT commands: the line is up when the
   handset is down.
 - **The exchange** maps phone numbers to endpoints. An endpoint is another machine in the same
   page, a machine in another tab (`BroadcastChannel`), a machine on another computer (through
@@ -26,7 +26,7 @@ A modem device for any machine's serial port, and a phone network between them.
 - **The directory** lives on tiny-titan's server: register a number for an endpoint, look one up,
   list who answers. Numbers have area codes, so each deployment can be its own exchange and long
   distance is another server. A machine that sets auto-answer registers itself.
-- **Sound**, as one of the machine's senses: dial tone, DTMF or pulse clicks, ringback, busy, and
+- **Sound**: dial tone, DTMF or pulse clicks, ringback, busy, and
   the modem handshake, played as the call proceeds and skippable.
 - **Limits**: dialing out of the simulation to real internet hosts goes through a telnet bridge
   on the server, to a list the operator sets; never an open relay. Calls are rate limited.
@@ -63,8 +63,8 @@ BBN mailed Don a copy for the asking, free, to his home address, with no questio
   another user on the same TIP, between the `@` and the command, ran the command on their
   session.
 
-tiny-tip implements the commands from the manual, not from memory, and both tricks: the second
-is a lesson in what the network trusted.
+tiny-tip implements the commands from the manual, not from memory, and both tricks. The second
+shows how much the network trusted its users.
 
 In [*The Americans*](https://en.wikipedia.org/wiki/Arpanet_(The_Americans)) the Soviet spies kill
 a man to get onto the ARPANET. A teenager in Maryland did it with a phone number from a BBS: a
@@ -96,8 +96,8 @@ The stream is plain telnet-style bytes first; SUPDUP later, for ITS's display te
 1. The browser Apple boots the H19 disk on the `apple2-plus-videx` profile, with the 2651 serial
    card in expansion slot 4. The card's other end, `microM8.serialSend` and `serialTake`, connects to a
    tiny-mabell modem.
-2. Before ITS exists anywhere in reach: the Apple dials a number that answers with the PDP-7
-   UNIX in the same page, and logs in as `dmr`. One page, two machines, a phone line between
+2. Before an ITS is reachable, the Apple dials a number that answers with the PDP-7 UNIX in
+   the same page, and logs in as `dmr`: two machines in one page, with a phone line between
    them.
 3. Then `ATDT 3019483850`, NBS-TIP answers, `@L 236`, and an ITS login on MC, first on SIMH
    behind the bridge and later on the cabinet's own PDP-10.

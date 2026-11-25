@@ -8,7 +8,7 @@ character profile, write a program, or go in yourself and improvise one
 with your hand.
 
 The pilot is Minsky's Ultimate Machine, the box whose only act is to switch
-itself off ([PORTRAIT.md](../../packages/cabinet/PORTRAIT.md#whos-in-the-box)).
+itself off ([PORTRAIT.md](../../packages/cabinet/PORTRAIT.md#minskys-ultimate-machine)).
 The format works with any box.
 
 ## Precedents
@@ -89,7 +89,7 @@ performances attached.
 | tell | The giveaway that leaks when it impersonates someone else |
 | author | Who made it. Always shown at the reveal. |
 
-The pilot roster is in [PORTRAIT.md](../../packages/cabinet/PORTRAIT.md#whos-in-the-box):
+The pilot roster:
 Shannon, Minsky, Nobody, a homunculus robot, Trurl, Klapaucius and the
 Sims robot maid. The roster is open.
 

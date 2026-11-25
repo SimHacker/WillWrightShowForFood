@@ -102,8 +102,8 @@ so the cross follows the mouse because the 1969 software tracks it. The radial
 lightbuttons (`LBD`, `PSD/PAD/PRD/PCD/PLD/PXD`) are PIXIE's display file.
 **The cabinet does not implement radial menus; it implements the pen
 faithfully, and PIXIE draws the radial menus.** The full tracking machinery
-(cross, `TRCR`, `POSCR`, the `SRAST` reacquisition raster, the Promethean
-acquisition handoff) is walked through against the listing in
+(cross, `TRCR`, `POSCR`, the `SRAST` reacquisition raster, and acquisition
+without a scan) is walked through against the listing in
 [TRACKING.md](TRACKING.md) and tested by the tracking acceptance test.
 
 Two pen modes:

@@ -32,7 +32,7 @@ kinds:
   box_puppet:
     name: whos-in-the-box
     what: "A hand from inside a box, driven by a hidden occupant (card, program, recording, or a webcam-tracked live hand) through the box's device registers. The game is guessing who."
-    pilot: "Minsky's Ultimate Machine — ../../packages/cabinet/PORTRAIT.md#whos-in-the-box"
+    pilot: "Minsky's Ultimate Machine: ../../packages/cabinet/PORTRAIT.md#minskys-ultimate-machine"
     design: ../../designs/whos-in-the-box/README.md
 
 consent: |

@@ -11,7 +11,7 @@ what the one surviving caller, SYMELEC's `LTPX`, dialed.
 
 ## What it is, and isn't
 
-**Not a Titan emulator, and not a simulator.** It has none of the Atlas 2: no 48-bit words, no
+tiny-titan does not emulate or simulate the Titan. It has none of the Atlas 2: no 48-bit words, no
 extracodes, no supervisor, no discs. By the cabinet's definitions
 ([README](README.md#simulation-vs-emulation): emulation reproduces an interface so the original
 program runs; simulation models a process), it is two things:
@@ -66,14 +66,14 @@ decoded in [TITAN-LINK-PROTOCOL.md](reference/TITAN-LINK-PROTOCOL.md). It:
   caught live;
 - accumulates the same running 18-bit checksum as the PDP's `RW` routine, and answers with it so
   `SAD CKS` matches;
-- says goodbye with a zero-count header.
+- ends the session with a zero-count header.
 
 The acceptance test (`type TITAN and SYMELEC phones tiny-titan` in
 [cabinet.test.ts](src/cabinet.test.ts)) boots SYMELEC, types `TITAN` on the emulated KSR-33, and
 records the transfer. `MESIN` hashes the first three characters to `271424` and dispatches to
 `LTPX`. The first word on the wire is `PXID`, `767676`, PIXIE's magic stream heading. Then come
-`DSBEG`, `DSEND`, `SAVINS`, and the live ring words from core, checksummed, matched,
-disconnected. The five-command teletype language that gets you there (`LABEL`, `UNLABEL`,
+`DSBEG`, `DSEND`, `SAVINS`, and the live ring words from core, then the checksum, which
+matches, and the disconnect. The five-command teletype language that gets you there (`LABEL`, `UNLABEL`,
 `TITAN`, `GRID`, `START`) is in [DESIGN.md](DESIGN.md#tiny-titan).
 
 Two wire details:
@@ -137,7 +137,7 @@ software never change.
 
 ### One Titan for every machine
 
-The name outgrew Cambridge's Titan. tiny-titan is one small file, and the host behind every
+The name now covers more than Cambridge's Titan. tiny-titan is one small file, and the host behind every
 machine in the room: the PDP-7s, the Apple ][, the PDP-10 and the PDP-11. There is one per realm
 (a browser tab, a node process), reachable as a global, so any device gets to it directly
 instead of through a CPU:
@@ -149,8 +149,8 @@ This is the one exception to the backplane rule that plugins never see each othe
 still don't see each other: they see Titan, and anything between them goes through it. Titan
 holds what is shared: the file mounts, the memory map (domains and links,
 [CORE-LINKS.md](CORE-LINKS.md)), the drawing store, the service registry, the machines' clocks,
-and the realm's end of tiny-bus. Because every machine meets there, it is where time and space
-are managed. Each machine's cycle count runs at its own speed and can be kept in step or replayed
+and the realm's end of tiny-bus. Because every machine connects to it, Titan manages time and
+memory across machines. Each machine's cycle count runs at its own speed and can be kept in step or replayed
 (`clock`, tiny-tape). Each machine's memory can be mapped into another's.
 
 Each machine reaches Titan through a door in its own idiom. Behind every door is the same CALL
@@ -171,7 +171,7 @@ Serial lines, modems and network interfaces stay ordinary devices on their own m
 their own registers, so period software drives them unchanged. Titan can be what is on the
 other end of one: a serial line's far end can be a Titan port.
 
-Singular per realm, not alone. Two tabs or a tab and a server are two Titans joined over
+There is one Titan per realm, and realms can be joined. Two tabs or a tab and a server are two Titans joined over
 tiny-bus, each the host for its own machines. A test makes its own with `new Titan()`, so tests
 don't share state. Robust-first, as the stub is now: with no Titan, every door answers "not
 here" and no machine wedges.
@@ -331,7 +331,7 @@ things to fix when it is rebuilt:
 ### Filestore through the link
 
 Named slots for ring files: `localStorage` or OPFS in the browser, the filesystem on node. This
-was Titan's actual job: PIXIE drew, Titan remembered. Save a drawing by typing `TITAN`, reload
+was Titan's actual job: storing PIXIE's drawings. Save a drawing by typing `TITAN`, reload
 the page, type `TITAN` again, and the drawing comes back through the same handshake it used in
 1972. Device 24 ([above](#files-by-name-device-24)) already has the mounts to store it in.
 
@@ -342,8 +342,8 @@ process serving many emulated PDP-7s. Two browser tabs sharing one filestore are
 one Titan, so two people can work on the same drawings.
 
 Remote control of the cabinet needs no console protocol. The Cabinet is a TS object, and step,
-examine and deposit ride the same socket in a dozen lines. The link carries drawings. The bench
-carries the machine.
+examine and deposit ride the same socket in a dozen lines. The link carries drawings, and the
+bench's socket carries control of the machine.
 
 ### tiny-bus: the backplane between machines
 
@@ -361,7 +361,7 @@ small enough to read in one sitting and complete enough to use everywhere
   remote watcher, a recording.
 - **Sinks** take them off: the applet, the recorder, the definition window, a screen reader
   announcer, `waitFor`, another node.
-- **Three reaches, one envelope.** Intra-tab (direct calls), intra-node (a `BroadcastChannel`
+- **Three scopes, one message format.** Intra-tab (direct calls), intra-node (a `BroadcastChannel`
   between tabs), inter-node (the WebSocket server, and tiny-its forwarding between servers). The
   same command or event crosses all three unchanged.
 - **Policy** travels with the command, `reversible` or `destructive`, so an LLM proposes and a
@@ -373,8 +373,8 @@ formats carry it.
 
 ### Messages, not just drawings
 
-The link has three session verbs and no application verbs: the stuff, and where it goes, say
-what to do. Keep that rule and add a second stream type beside `PXID`. A message is a ring whose
+The link has three session verbs and no application verbs: the data and its destination
+determine what to do. Keep that rule and add a second stream type beside `PXID`. A message is a ring whose
 head names its handler (a printname atom), carried in the same blocklets with the same checksums
 and relocation. PIXIE only ever receives `PXID` drawings, since it rejects anything else ("not
 PIXIE data"). Our own VMs accept both.
@@ -431,7 +431,7 @@ endpoint:
 - `services`: what is offered, discovery included.
 - `who`: the PDP-7s on the bus, what each is running, its PC, running or halted, the windows it
   maps, who is watching it.
-- `peek`: read another machine's core. The live ring view, remotely.
+- `peek`: read another machine's core, for the live ring view from elsewhere.
 - `send`: deliver a message or a device event to a machine or a handler.
 - `filestore`: named ring files (above).
 - `lock`, `unlock`, `barrier`: the host handles one request at a time, so it also serves as
@@ -463,7 +463,7 @@ server. Visitors get `who` and `peek`. Anything that writes (`poke`, device even
 
 ### Rings instead of JSON
 
-Tiny Titan's storage and services speak PIXIE rings, not JSON. A ring is the PDP-7's own data
+Tiny Titan's storage and services use PIXIE rings rather than JSON. A ring is the PDP-7's own data
 structure, so the minicomputer reads what the mainframe stores without a parser. The same
 structure serves every layer:
 
@@ -484,13 +484,13 @@ ring structure in a running SYMELEC's core, or in a file, with changed cells lit
 
 ### The hub for every emulator
 
-The same seam that carries Wiseman's link can carry anything. tiny-titan becomes the switchboard
+The seam that carries Wiseman's link can carry other protocols too. tiny-titan becomes the switchboard
 for a federation of emulators ([MANIFESTO](MANIFESTO.md#a-federation-of-emulators-after-microm8)):
 
 - **Registration.** Each emulator instance, the cabinet's own or another program's, announces
   itself with a `services` ring: its machine, its operating system, and what it can be asked to
   do.
-- **Peers outside the page.** A peer is reached over whatever it speaks. For microM8 that is its
+- **Peers outside the page.** A peer is reached over whatever protocol it supports. For microM8 that is its
   MCP server (stdio or SSE) or its HTTP API. For a FujiNet-style device, its network protocol.
   For another browser, a WebSocket.
 - **Translation.** Rings are the hub's own form. A translator per peer turns a ring into the

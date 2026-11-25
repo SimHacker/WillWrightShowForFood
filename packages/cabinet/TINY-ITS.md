@@ -12,8 +12,8 @@ PDP-7 programs. It needs only a serial teletype line.
 ring structure built with it is a **pixie**, lower case: Heinz's own manual says the
 representation "is also referred to as the PIXIE data structure"
 ([appendix 4](../../characters/heinz-lemke/sources/phd-thesis-1972/annotated/07-appendix-4-pixie-user-manual.md)).
-PIXIE in capitals stays the name of his program. Live pixies travel between worlds. (Ask
-Heinz if he minds.) A ring in a pixie is a **pixie ring**.
+PIXIE in capitals stays the name of his program. Live pixies can move between VMs. (To do:
+ask Heinz whether he minds the name.) A ring in a pixie is a **pixie ring**.
 
 ## Pixie rings are pie menus
 
@@ -36,7 +36,7 @@ a pie menu.
   deep as you look. So the PSIBER view on a second tube
   ([fun list](../../process/crazy-idea-jam.md#-pdp-7-fun-list), two tubes, one heap) is
   that projector pointed at live pixies, and the pie at point is its first level.
-- **The folklore is documentation:**
+- **The folklore maps onto the design:**
   - Step into a pixie ring and you dance until someone outside pulls you out. Walk a ring
     past its closing link and you go round forever, so `EACH` stops at the link back to
     the owner, and the rescuer outside is the emulator or another tiny-its.
@@ -55,7 +55,7 @@ The editing model is Emacs's and the world model is a MUD's, which is MOOLLM's w
 directories:
 
 - **Point** is the element you are standing on; **mark** is another you set. Between them,
-  along a ring, is the region, to copy, kill or yank. The kill ring is, of course, a ring.
+  along a ring, is the region, to copy, kill or yank. The kill ring is an RSP ring too.
 - **Rooms and exits.** An element is a room; its rings are its exits and its contents.
   `LOOK` shows where you are, `GO` follows a ring, `BACK` returns. Because an element can
   sit on many rings, one room can open onto many places at once, which a MUD's single
@@ -80,7 +80,7 @@ printnames and blocks, by name where the schema gives names) is what the pen doe
 - **Demonstrated:** do it once by hand, and tiny-its turns the session log into a script,
   programming by demonstration in the line of Allen Cypher's *Watch What I Do*. You name
   the parts that should vary (this element, that VM) and they become parameters.
-- **`SAVE-EXCURSION`** from Emacs: go off on a local jaunt, do something, hop back.
+- **`SAVE-EXCURSION`** from Emacs: move elsewhere, do something, and return.
   Emacs's saves point and the current buffer; ours saves point, mark and the current VM,
   and restores them when the body finishes, even if it fails.
 
@@ -92,16 +92,15 @@ SAVE-EXCURSION
 END
 ```
 
-## The opposite of HACTRN, and still a hacker's tool
+## Discoverable commands, with HACTRN's power
 
-ITS's DDT was terse to the point of glyph soup: `$G`, `^Z`, `addr/`, and incantations you
-learned from someone who already knew them. It was powerful, and you could not discover
-it by using it. tiny-its goes the other way on discovery and keeps the power: every command
-reachable by asking, and nothing HACTRN could do taken away.
+ITS's DDT was very terse: `$G`, `^Z`, `addr/`, and commands you learned from someone who
+already knew them. It was powerful, and you could not discover it by using it. In tiny-its
+every command can be found by asking, and everything HACTRN could do is kept.
 
 The models are Mitch's Open Firmware, which already has most of this worked out
 ([below](#start-from-open-firmware)), and DEC's TOPS-20. HACTRN never used TOPS-20's
-command parser, the `COMND` monitor call, but it has ideas worth stealing shamelessly:
+command parser, the `COMND` monitor call, but it has ideas worth copying:
 
 - **`?` anywhere** lists what may come next, with a line of help each.
 - **ESC completes** a keyword and types the **guide words**, the noise words in parentheses
@@ -111,8 +110,8 @@ command parser, the `COMND` monitor call, but it has ideas worth stealing shamel
 - **Line editing** is the teletype's: DELETE rubs out a character, `^W` a word, `^U` the
   line, `^R` retypes it.
 - **It is table-driven.** `COMND` parsed field by field from chained descriptor blocks: a
-  keyword table, a number, a file name, with alternatives. Commands were data. That is the
-  property that lets tiny-its live on a PDP-7 and grow new commands without new code.
+  keyword table, a number, a file name, with alternatives. Commands were data, which lets
+  tiny-its run on a PDP-7 and add new commands without new code.
 
 A session sketch (guide words in parentheses are what ESC would have typed; typing them is
 optional):
@@ -136,7 +135,7 @@ tiny-its> EDIT (SOURCE OF) PIXIE FLST
   [opened in the cabinet's source view]
 ```
 
-**Still a hacker's tool.** HACTRN syntax works as a second vocabulary (`FLST/` opens a word
+**HACTRN syntax.** HACTRN syntax works as a second vocabulary (`FLST/` opens a word
 the way `EXAMINE` does) for anyone whose fingers know it. Numbers are octal unless marked,
 addresses are expressions over the VM's symbols (`FLST+3`, `OP 6`), and `ASSEMBLE` takes
 assembly source line by line, echoing each as a listing line, until a line holding only `.`
@@ -149,8 +148,8 @@ them in the target machine's dialect and returns the words and listing, which ti
 tiny-its does not edit text. The emulator's interface is the IDE: it has the source view,
 the octal view, the disassembler and the symbol dropdown already, and it gets a graph
 editor (below). `EDIT` asks the IDE to open a source, a ring or a config at a name; the IDE
-sends the result back as an ordinary command (`ASSEMBLE`, `DEPOSIT`, `LOAD`). So no Emacs in
-PDP-7 assembly or in Forth. Yet.
+sends the result back as an ordinary command (`ASSEMBLE`, `DEPOSIT`, `LOAD`). So there is no Emacs
+in PDP-7 assembly or in Forth, for now.
 
 ## Designed for an LLM user
 
@@ -190,9 +189,8 @@ And the [player at the gate](../../process/crazy-idea-jam.md#-the-player-at-the-
 human stays in the middle of every transformation. A deployment can put any verb in
 **propose** mode for any user: the command is queued, not run, with its `EXPLAIN`, and a
 person approves, edits or cancels it. The queue is visible and cancellable, like the Sims'
-action queue. The natural membranes are writes to another node, device events and resets,
-splices into someone else's pixies, and anything leaving the deployment. AI proposes, you
-dispose.
+action queue. The obvious candidates for propose mode are writes to another node, device
+events and resets, splices into someone else's pixies, and anything leaving the deployment.
 
 ## Commands are data: ring structures
 
@@ -231,9 +229,9 @@ command defined on the PDP-7 and one defined in a YAML file are the same thing.
 
 The emulator can wire one VM's teletype output to another's input, and tiny-its manages
 the wires: `LINK (TELETYPE OF) FORTH (TO) PIXIE`, `UNLINK`, `LINKS`, and a pipe line,
-`PIPE FORTH | PIXIE | LOG`. No program changes; each still thinks it has a KSR-33.
+`PIPE FORTH | PIXIE | LOG`. No program changes; each still sees an ordinary KSR-33.
 
-- **Back-pressure for free.** A character leaves A only when B has taken the last one: the
+- **Back-pressure.** A character leaves A only when B has taken the last one: the
   emulator holds A's printer flag until B's program reads its keyboard. A's program
   already waits on that flag, so nothing is lost and nothing needs flow control.
 - **Translation per link,** such as Unix's CR to NL (SIMH's `set tti unix`).
@@ -266,7 +264,7 @@ live-coding showcase, because you can work on it at three levels at once:
    data, disassembled, and against the source line that made them, with the trace stepping
    through it.
 
-Of course. A command line is what Forth's outer interpreter already is: read a line, parse
+A command line is what Forth's outer interpreter already is: read a line, parse
 a word, find it, run it. Mitch's kernel builds that loop from exposed parts (`(QUERY)`,
 `(PARSE)`, `(FIND)`, `(NUMBER)`, `(OK)`, `(ERR)`), so tiny-its builds its own loop from the
 same parts and runs on a PDP-7 VM with a teletype.
@@ -285,7 +283,8 @@ same parts and runs on a PDP-7 VM with a teletype.
   what fits.
 - **Full names and help live in RSP rings.** Mitch's headers keep a length and the first
   three characters, which can't tell `EXAMINE` from `EXAMPLE` (the cabinet's copy keeps whole names). So the ring command table
-  holds full names, help, guide words and the word to run: Forth runs, rings describe.
+  holds full names, help, guide words and the word to run. Forth runs the commands and the
+  rings describe them.
 - **Forth underneath, for hacking.** Anything that isn't a tiny-its command falls through
   to Forth. Newcomers and LLMs stay in the commands; hackers drop a level.
 - **Host services by message.** Other VMs' memory, maps, locks, files: tiny-its asks
@@ -305,8 +304,8 @@ Bradley's IEEE 1275 firmware, built at Sun and then Firmworks (local clone
 `~/GroundUp/git/OpenFirmware`): Forth as the command language, and a tree you walk. Its
 `dev`, `pwd`, `ls`, `show-devs`, `.properties` and `select-dev` are in
 `ofw/core/ofwcore.fth`, and `see` decompiles any word (`forth/lib/decomp.fth`). And FCode:
-a plug-in card carried its own driver as tokenized Forth, so the firmware learned about the
-hardware from the hardware.
+a plug-in card carried its own driver as tokenized Forth, so the firmware got the driver
+from the card.
 
 | Open Firmware | tiny-its |
 |---|---|
@@ -316,7 +315,7 @@ hardware from the hardware.
 | `see` | disassemble PDP-7 code, decompile Forth words |
 | client interface, an OS calling firmware | programs on VMs calling tiny-its and tiny-titan services by message |
 
-TOPS-20's manners go on top. And the Forth it runs on is Mitch's too.
+TOPS-20's command conventions go on top. The Forth it runs on is also Mitch's.
 
 ## It debugs itself
 
@@ -326,14 +325,14 @@ walk its own pixies. PSIBER did this for NeWS: the Space Deck was written in NeW
 PostScript and could open up the server's objects, its own included, but only from inside
 the same server. tiny-its does it from anywhere tiny-titan reaches.
 
-The one trap is stopping yourself, since a stopped tiny-its can't type `CONTINUE`. Three
-ways out, all of them already in the design:
+The one problem is a tiny-its stopping itself, since a stopped tiny-its can't type
+`CONTINUE`. The design already has three ways out:
 
 - **Another tiny-its** on another VM or node is the debugger, as one ITS job ran DDT on
   another.
 - **The host catches you.** When the Forth tiny-its halts, the TypeScript tiny-its takes
   over the teletype until it runs again.
-- **The emulator never stops watching.** Breakpoints, watches and shadow memory live
+- **The emulator keeps the state.** Breakpoints, watches and shadow memory live
   outside the machine, so the state of a stopped tiny-its is all still there to read.
 
 ## Start from Open Firmware
@@ -397,8 +396,8 @@ needed.
 
 That makes a **pixie space**: Linda's tuple space, with pixies instead of tuples. `OUT`
 puts a pixie into a shared segment, `RD` finds one that matches a template pixie, `IN`
-finds one and takes it, waiting at a lock until one arrives. Across VMs, across nodes,
-between worlds.
+finds one and takes it, waiting at a lock until one arrives. This works across VMs and
+across nodes.
 
 ## Deploying: docker-compose with a command line
 
@@ -431,8 +430,8 @@ you walk it.
 
 Frontier leaned into trees: UserLand's object database and scripts were outlines, and that
 made a whole system out of one data shape. PIXIE's rings go one step further. An element
-can sit on many rings at once, so sharing, cycles and many-to-many links are first-class,
-where a tree (an outline, JSON, XML) has to fake them with IDs. So:
+can sit on many rings at once, so sharing, cycles and many-to-many links are represented
+directly, where a tree (an outline, JSON, XML) has to represent them with IDs. So:
 
 - tiny-its's command tables, macros, handlers, configs and scripts are rings;
 - PIXIE's drawings are rings;
@@ -440,7 +439,7 @@ where a tree (an outline, JSON, XML) has to fake them with IDs. So:
 - and the IDE edits all of them the same way: as a graph, drawn, or as round-trippable text
   (the lossless address table, or the sexpr and YAML projections with labels for sharing).
 
-Code as data, the way Lisp has it, but a graph, not a tree.
+This is code as data, as in Lisp, but in a graph rather than a tree.
 
 ## What it manages
 
