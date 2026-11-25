@@ -474,7 +474,8 @@ reader takes the one it understands:
 - **340 display list segments:** the words themselves, with their symbols and source map, ready
   to paste into another machine's core or into an editor.
 
-This follows HyperLook, Don's HyperCard-like environment on NeWS. In his words
+This follows HyperLook, the user-configurable GUI system for NeWS that Don developed with Arthur
+van Hoff at the Turing Institute, and on which he ported SimCity to Unix. In Don's words
 ([1999 thread](../../characters/gwern/sources/1999-userland-xanadu-thread.md)), a user could "flip a
 stack into edit mode, then rearrange, cut, copy, paste, and edit components, properties,
 graphics and scripts of any component on the stack", "copy its image as structured graphics onto
