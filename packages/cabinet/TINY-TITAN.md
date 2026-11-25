@@ -229,7 +229,7 @@ The command set, by the same big-endian ids as tiny-bus:
 - **`map.*`**: segments (`map.segment.create`, `resize`, `delete`, `snapshot`, `copy`), `map`,
   `unmap` and `map.list` ([TINY-ITS.md](TINY-ITS.md#what-it-manages)). The host's memory map
   is the per-VM sharing config in
-  [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module). The YAML is the
+  [DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module). The YAML is the
   saved form, and these calls edit it live.
 - **`lock.*`**, **`vm.*`** (list, boot, stop, continue, reset), **`sym.*`** (export and look up
   symbol tables): the rest of what tiny-its manages.
@@ -312,7 +312,7 @@ service's formats.
 
 Direction bit `200000` in the header turns the queue around. Titan streams, the PDP reads,
 relocates pointers by `RELCON`, and displays the received drawing. This is the test-model
-pipeline in [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module): build a
+pipeline in [DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module): build a
 drawing as a TS object graph, encode it to ring words, hand it to 1969 PIXIE over the link, and
 watch the tube. The codec's format truth is the wire envelope in
 [TITAN-LINK-PROTOCOL.md](reference/TITAN-LINK-PROTOCOL.md): atoms with the top 5 bits zero, NIL

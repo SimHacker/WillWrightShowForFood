@@ -328,7 +328,7 @@ The trick is to leave PIXIE alone and share where it already keeps its data, the
 emulator is the lock: the others run only while PIXIE sits in its idle loop, where nothing is
 half-built. Our own programs can lock with the PDP-7's `ISZ`.
 
-Details, with addresses: [DESIGN.md](../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module),
+Details, with addresses: [DESIGN.md](../packages/cabinet/DESIGN.md#the-application-layer-packagespixie-separate-module),
 "Sharing PIXIE's own window".
 
 <a id="two-tubes-one-heap"></a>
@@ -425,7 +425,7 @@ at either end. PDP-7 Unix never had pipes; now its machines do.
 Count every read and write, then draw all of memory on a Hilbert curve (8K words as two 64×64
 squares end to end), so neighbouring addresses stay neighbours on screen. Watch PIXIE's free
 list churn and its garbage collector sweep.
-[DESIGN.md](../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module)
+[DESIGN.md](../packages/cabinet/DESIGN.md#the-application-layer-packagespixie-separate-module)
 
 <a id="pixie-space"></a>
 

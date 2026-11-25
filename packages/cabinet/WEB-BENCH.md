@@ -1,8 +1,9 @@
 # Web bench: what working browser emulators teach us
 
 A survey of the emulators that work in browsers (22 Sep 2026), and the
-browser features the cabinet should use. No WASM anywhere in our plan; the
-closest precedents for the cabinet never needed it either. Companion to
+browser features the cabinet should use. The PDP-7 cabinet uses no WASM, and its closest
+precedents didn't either. The Apple ][ is the exception: it runs microM8 compiled to
+WebAssembly ([below](#the-field)). Companion to
 [SIMH-MAP.md](SIMH-MAP.md) and [DESIGN.md](DESIGN.md).
 
 ## The field

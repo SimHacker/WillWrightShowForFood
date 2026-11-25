@@ -224,7 +224,7 @@ Not built:
 - 340 DMA
 - Wiseman's link in the Titan → PDP direction (serving drawings back). The codec and a
   diagnostic are ready in `packages/pixie`; `BlockletHost.serving` is what's missing
-  ([DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module))
+  ([DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module))
 
 ### The rungs climbed so far
 
@@ -275,11 +275,11 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
   PDP-7: C came on the PDP-11, and B was Thompson's cut-down BCPL. A problem for shared
   windows: Unix swaps whole user processes (010000 up) to disk, so a window in user
   space would be swapped with them. The fix follows Unix's own display-buffer swap:
-  [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module),
+  [DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module),
   "Shared segments under Unix".
 - A live view and editor of PIXIE's ring structures, in core while it
   runs and in tiny-titan's stored files, side by side
-  ([DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)).
+  ([DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module)).
 - An AM radio beside the cabinet, so it plays munching tunes the way the LCM's PDP-7 did,
   and Munching Squares to play them: [AM-RADIO.md](AM-RADIO.md). It needs memory-cycle
   timing first; today every instruction counts as one cycle.

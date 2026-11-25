@@ -73,7 +73,7 @@ u.type("ken\r");
   `PDP18B/pdp18b_g2tty.c` only goes as far as a telnet text terminal, the console keyboard and
   its character output (G2IN, G2OUT); the vector display itself is not in SIMH.
 - The display-buffer swap and shared segments, as planned in
-  [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module).
+  [DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module).
 - B: `bi.s`, `bl.s` and Robert Swierczek's rebuilt compiler are on the image. Run a B program
   under the cabinet's trace.
 

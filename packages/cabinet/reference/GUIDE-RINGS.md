@@ -60,7 +60,7 @@ pass on arrival: [TITAN-LINK-PROTOCOL.md](TITAN-LINK-PROTOCOL.md)). The nearest 
 what Titan programs generated *from* the structure: netlists for the LADAN and CANOTRAN
 analysers, CONN/CONNMAP. Today the repo's `.oct` files (`addr word` lines) are the de
 facto text form. The plan for a viewer, an editor and text formats is in the cabinet's
-[DESIGN.md](../DESIGN.md#the-application-layer--packagespixie-separate-module);
+[DESIGN.md](../DESIGN.md#the-application-layer-packagespixie-separate-module);
 a Forth vocabulary for rings is in [FORTH-TURTLE-340.md](FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type).
 
 ## Names are `JMS` words

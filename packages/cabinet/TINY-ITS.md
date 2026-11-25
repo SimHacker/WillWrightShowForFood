@@ -206,7 +206,7 @@ PDP-7 and commands are added by adding data:
   send).
 
 The host implementation reads the same table from its text form, YAML or the flat address
-table in [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module). So a
+table in [DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module). So a
 command defined on the PDP-7 and one defined in a YAML file are the same thing.
 
 ## Macros, handlers, nodes, users
@@ -214,7 +214,7 @@ command defined on the PDP-7 and one defined in a YAML file are the same thing.
 - **Macros:** `DEFINE (MACRO) name` takes a sequence of commands with parameters.
 - **Handlers:** `ON (MESSAGE) name (FROM) node (DO) macro`, and likewise `ON (EVENT) pen`,
   `ON (HALT)`, `ON (LOCK WAIT)`. A handler is a macro bound to a message name, the handler
-  list from [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module).
+  list from [DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module).
 - **Many tiny-its:** each deployment runs its own, and they talk. A name can carry its
   node (`EXAMINE CAMBRIDGE:PIXIE FLST`), and a command can be sent to another tiny-its to
   run there, with its reply routed back. Programming happens at that level too: a macro on
@@ -387,7 +387,7 @@ needed.
 - **Reading** walks live state as rings: the VM's devices, its segments and locks, its
   symbol table, `who`, the message queue.
 - **Writing** acts: splice an element into the "stop" ring, change a lock's section, post
-  a message. Write-watch tags in [shadow memory](DESIGN.md#the-application-layer--packagespixie-separate-module)
+  a message. Write-watch tags in [shadow memory](DESIGN.md#the-application-layer-packagespixie-separate-module)
   tell the emulator which word changed, and it acts at the next safe point.
 - **Rings need stable addresses,** so the emulator rewrites the segment at safe points or
   when the VM rings a doorbell word, not on every read.
@@ -416,7 +416,7 @@ links:
 ```
 
 Plus the segments, maps and locks from
-[DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module), and the
+[DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module), and the
 scripts and handlers above. `UP` and `DOWN` start and stop the lot; `WHO` is `ps`.
 
 **Hot mounting.** `MOUNT (DEVICE) 340 (ON) FORTH` plugs a device into a running VM, and
@@ -484,7 +484,7 @@ be another job, a disk file, a page of physical memory (`%JSABS`), or the TV vid
 access. tiny-its makes the cross-machine map a command.
 
 **Shared memory and locks.** The per-VM sharing config and the implicit locks in
-[DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module) are the state that
+[DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module) are the state that
 tiny-its commands edit. The YAML is the saved form. Every command reaches the host as one CALL
 on device 24, a command name plus raw numeric arguments
 ([TINY-TITAN.md](TINY-TITAN.md#one-call-for-the-host-call-on-device-24)), so the Forth tiny-its

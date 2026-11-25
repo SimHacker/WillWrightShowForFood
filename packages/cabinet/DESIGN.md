@@ -229,7 +229,7 @@ Remote control needs no console protocol, because the Cabinet is a TS
 object: examine, deposit and step go over the same WebSocket in about a
 dozen lines.
 
-## The application layer — `packages/pixie` (separate module)
+## The application layer: `packages/pixie` (separate module)
 
 The cabinet is the machine; PIXIE's ring structures are an application format
 and live beside it, not inside it, as SYMELEC sat on the PDP-7.

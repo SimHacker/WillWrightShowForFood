@@ -360,13 +360,13 @@ address → ring name so a pen hit returns the element (the tag table of §6); a
 PIXIE's own element format, so a Forth drawing saved to tiny-titan loads into SYMELEC and
 is edited with the pen, and Forth-drawn symbols become subpictures PIXIE places. The plan
 and what is measured so far: the cabinet's
-[DESIGN.md](../DESIGN.md#the-application-layer--packagespixie-separate-module),
+[DESIGN.md](../DESIGN.md#the-application-layer-packagespixie-separate-module),
 "a Forth turtle with two back ends".
 
 **The turtle's display list is ring data.** Store each polyline as an RSP block (raw
 coordinates the relocation pass leaves alone) named from a picture list, and let `DOWN`
 compile it. The TypeScript twin of this plan is in the cabinet's
-[DESIGN.md](../DESIGN.md#the-application-layer--packagespixie-separate-module),
+[DESIGN.md](../DESIGN.md#the-application-layer-packagespixie-separate-module),
 sharing `graftal.ts`'s display-word emitter; both should produce the same words.
 
 **Acceptance.** `TITAN-SEND` / `TITAN-RECEIVE` words speak to tiny-titan. A Forth-built

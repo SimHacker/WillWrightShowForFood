@@ -259,7 +259,7 @@ one of its devices.
 | C `LINK` device in SIMH | `TinyTitan`, a cabinet device on devs 22–23 ([`tiny-titan.ts`](../src/plugins/tiny-titan.ts)) | built; portless stub in the browser applet, so `TITAN` can't wedge the machine |
 | wire adapters (tcp / ws / in-proc) | `TitanPort`: `control / send / recv / ready / disconnect` | in-process only (`EchoPort`, `BlockletHost`); WebSocket not built |
 | blocklet codec + session state machine | `BlockletHost` | PDP → Titan: built and accepted against SYMELEC's live transfer. Titan → PDP: not in the source (see [TINY-TITAN.md](../TINY-TITAN.md)) |
-| ring codec | [`packages/pixie`](../../pixie/src/words.ts): word classes, cells, encode/decode, relocation | decode verified word for word against SYMELEC's transfer; the package's build files need restoring ([DESIGN.md](../DESIGN.md#the-application-layer--packagespixie-separate-module)) |
+| ring codec | [`packages/pixie`](../../pixie/src/words.ts): word classes, cells, encode/decode, relocation | decode verified word for word against SYMELEC's transfer; the package's build files need restoring ([DESIGN.md](../DESIGN.md#the-application-layer-packagespixie-separate-module)) |
 | `TitanApplication`, filestore, echo app, circuit stub | — | not built |
 | SvelteKit `titan/` service, ring viewer, blocklet wireshark | — | not built; the ring viewer is planned in the cabinet's DESIGN.md |
 

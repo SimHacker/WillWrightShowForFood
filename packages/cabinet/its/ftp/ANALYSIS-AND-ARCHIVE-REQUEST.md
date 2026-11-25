@@ -12,10 +12,10 @@ How we read the binary is covered in the [README](README.md).
   [PDP-10/its-vault `files/humor/ts.ftp`](https://github.com/PDP-10/its-vault/blob/master/files/humor/ts.ftp)
   (244,579 bytes, ITS five-bytes-per-word).
 - **A full disassembly:** [`ts.ftp.dis`](ts.ftp.dis). The file is an ITS PDUMP with start `JRST 167`, and its
-  pure pages come from `SYS: PURQIO 2138`. It is a dumped MacLisp; its own loser message names Lisp version 4132.
+  pure pages come from `SYS: PURQIO 2138`. It is a dumped MacLisp; its own error message names Lisp version 4132.
 - **1,015 strings:** [`pnames.txt`](pnames.txt), rebuilt from MacLisp print-name chains. They include:
   - every command name and its documentation string
-  - every `FORMAT` control string, including the protocol joke messages
+  - every `FORMAT` control string, including the parody protocol messages
   - about 120 restaurant site names, with addresses, phone numbers, hours, notes and menus
 
 ## What the binary says about its own history
@@ -121,14 +121,14 @@ father's files. If Kent prefers to ask directly, the finding aid says original c
 files, and `KMP;` is his directory.
 
 ```
-Subject: ToTS scoped requests — Marvin Minsky (TECO Turing machine) and Kent Pitman (Food Transfer Protocol)
+Subject: ToTS scoped requests: Marvin Minsky (TECO Turing machine) and Kent Pitman (Food Transfer Protocol)
 
-Hello —
+Hello,
 
 Two scoped searches of the Tapes of Tech Square collection, both
 listings plus named files, not whole directories.
 
-1. Marvin Minsky, AI:MINSKY; and MC:MINSKY; — his TECO Universal
+1. Marvin Minsky, AI:MINSKY; and MC:MINSKY;: his TECO Universal
    Turing Machine (11 March 1981 *BBOARD mail "Re: too-short
    programs") and AI Memo 33 drafts. Details and search strings in the
    attached tots-request page.

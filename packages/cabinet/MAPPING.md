@@ -261,7 +261,7 @@ registers as map targets; locks shared across machines.
 Why the 10/11 as the model: the tiny-titan design already called for
 segments, maps (a segment mapped into a VM at an address, read-write or
 read-only) and locks ([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do)),
-and [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)
+and [DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module)
 says the PDP-7 needs "a window map in `Pdp7.read`/`write`". The 10/11
 interface is a worked, documented answer to the questions those plans
 left open: what a map entry holds, how two word sizes share a word, how
@@ -324,7 +324,7 @@ on, and watch the arm come out and turn it off, with a store and a load.
 
 Both machines lock the same way. ITS's convention is a word holding −1
 when free, taken with `AOSE` (add one, skip if the result is zero); the
-PDP-7 locks in [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)
+PDP-7 locks in [DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module)
 use `ISZ` on `777777`, the same idea in 18 bits. Across a packing rule
 the words differ in width, so a shared lock will live in one machine's
 word. The backplane steps machines in one thread, so it can keep the

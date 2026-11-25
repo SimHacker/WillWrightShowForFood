@@ -15,7 +15,7 @@ node scripts/wizardry-world.mjs maze DISK LEVEL
 ```
 
 Export merges into files that are already there: comments, key order and keys the exporter
-doesn't write (`notes:`, anything a soul adds) stay. Import writes only what the files say,
+doesn't write (`notes:`, anything someone adds) stay. Import writes only what the files say,
 over the base disk, so a directory holding just `characters/` moves those characters onto
 another disk. The original Proving Grounds disk has an empty roster; importing
 `proving-grounds/characters/` onto

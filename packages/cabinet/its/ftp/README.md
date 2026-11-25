@@ -1,4 +1,4 @@
-# AI:HUMOR;TS FTP — the Food Transfer Protocol
+# AI:HUMOR;TS FTP: the Food Transfer Protocol
 
 An ITS executable from [PDP-10/its-vault `files/humor/ts.ftp`](https://github.com/PDP-10/its-vault/blob/master/files/humor/ts.ftp):
 a MacLisp program that parodies FTP. You `CONNECT` to a restaurant, set the `BITE` size, read its `MENU`, check
@@ -24,7 +24,7 @@ restaurants near MIT.
 - **Banner:** `FTP.~A (Food Transfer Protocol) - Type "?" for a list of commands.`
 - **Commands:** CONNECT, DISCONNECT, BITE, MENU, STATUS, SITES, TIME, HELP, QUIT, and NETWORK (ADD, REMOVE, SET,
   SHOW, HELP), plus network filters.
-- **The protocol joke, in its format strings:** "Connection open to ~A. Bite size is ~A.", "Host not responding.
+- **Parody protocol messages, from its format strings:** "Connection open to ~A. Bite size is ~A.", "Host not responding.
   Still trying...", "Host unavailable due to scheduled down.", "Attempt to open connection to server timed out.",
   "Will use ~A transfer mode. (BITE command can change this)", "Warning: Site being debugged.", "Unexpected error
   packet seen. Connection to ~A being closed."
