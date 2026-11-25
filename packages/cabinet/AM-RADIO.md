@@ -148,9 +148,38 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        throbbing faster with load, its filter opening with Applesoft's free memory (`FRE(0)`'s
        STREND to FRETOP over TXTTAB to HIMEM).
      - Every voice has its own gain (`fade(voice, level, seconds)`), the bus a cross-fader,
-       an [ECG](../ecg/README.md) or any program, can drive. Not yet: the listener slots, a
-       mixer on the page, more gauges (free core, the 340's duty cycle, interrupts per second),
-       and the time stretch below.
+       an [ECG](../ecg/README.md) or any program, can drive.
+     - Harmony: a chord a bar, I vi IV V straight and ii7 V7 Imaj7 vi7 in jazz, stated by a
+       soft pad when it changes. Every voice's notes are the chord's tones, so the machine's
+       activity picks which tone and the progression decides which are on offer.
+     - The person at the console bends it rather than playing it, the way computers answer
+       in films: in time, in key, a beat or two later.
+       - A key shifts the rim click's phase by a step and queues a three-note "beep boop bop"
+         on the next offbeats, its notes from the chord and the key's code.
+       - A light pen stroke is tension and release. Pressing and dragging builds tension by
+         how far the pen travels; past 0.4 the harmony leaves the progression for the dominant,
+         past 0.8 takes its flat ninth, and the hats and the engine are pushed. Lifting the pen
+         resolves to the tonic on the next beat with a kick, and the progression starts over.
+         A light touch fades back without resolving.
+       - On the Apple, the mouse on the screen stands in for the pen.
+     - KEES: [Kees van Prooijen](https://www.kees.cc/music/scale13/scale13.html)'s 13 equal
+       steps of the 3:1 tritave, which he found in the seventies about when Heinz Bohlen and
+       John Pierce did (the [Bohlen-Pierce scale](https://www.huygens-fokker.org/bpsite/scales.html)).
+       His major mode is built as just major is, from triads on the tonic, dominant and
+       subdominant, with 3:5:7 in place of 4:5:6 ([his modes](https://www.huygens-fokker.org/bpsite/modes.html)):
+       1, 35/27, 7/5, 5/3, 9/5, 7/3, 25/9, steps 0 3 4 6 7 10 12. The dance plays his I IV V I
+       cadence (I is 1 : 5/3 : 7/3, his dominant sits on 5/3), in bars of 13 sixteenths grouped
+       4+3+3+3, on odd-harmonic waves, and the pen's tension pulls to his dominant.
+     - ENO: tape loops after Brian Eno's *Music for Airports*, one facet among the others.
+       Five loops of 23, 29, 31, 37 and 41 sixteenths each sound one tone of the chord in
+       force; the lengths are primes, so they drift against each other and the bar.
+     - Tempo from 40 to 200 beats a minute, and the machine speed slider in 1-2-5 steps
+       from .001× to MAX, so a slowed machine can be heard as phrases and a fast one as texture.
+     - Not yet: the listener slots, a mixer on the page, more gauges (free core, the 340's
+       duty cycle, interrupts per second), the time stretch below, and **front panels**: user
+       definable panels of blinking lights and buttons that show the dance's state (the chord,
+       the tension, the loops' phases, each voice's level) and that you press and play to change
+       the music, the PDP-7's own console lights and switches among them.
 
 ## A receiver to borrow
 

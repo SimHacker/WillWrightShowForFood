@@ -51,6 +51,7 @@
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
 	import RateSlider from './RateSlider.svelte';
+	import DanceControls from './DanceControls.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
 	import { Deltas, PDP7_VOICES, Tally } from '@wwsff/cabinet/dance';
 	import KorzBrowser from './KorzBrowser.svelte';
@@ -251,7 +252,7 @@
 	// as fast as this computer goes and the page still draws 60 times a second.
 	const CHUNK_CYCLES = 25_000;
 	const FRAME_BUDGET_MS = 10;
-	const SPEEDS = [0.001, 0.01, 0.1, 1, 3, 10, 30, 100, Infinity];
+	const SPEEDS = [0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 3, 5, 10, 20, 30, 50, 100, Infinity];
 	let speed = $state(untrack(() => programById(programId)?.speed ?? 1));
 	// An instruction is one cycle (operate, IOT) or two (memory reference), three when
 	// indirect: 1× is 190,000 to 570,000 instructions a second, and even .001× is a blur.
@@ -337,6 +338,8 @@
 	const danceStrokes = new Tally();
 	const danceForth = new Deltas();
 	let danceAt = { cycles: 0, ms: 0 };
+	/** Where the pen was last, in 340 points, while it is down: its drags build the dance's tension. */
+	let danceGrab = null;
 	function danceHits() {
 		const forth = forthDev?.stats;
 		return {
@@ -1883,6 +1886,7 @@
 	function ttySend(c) {
 		const k = program?.ttyKey?.(c) ?? { send: c | 0o200, echo: c };
 		tty.type(k.send);
+		dance.touch({ kind: 'key', code: c });
 		// A bare CR, as the KSR-33 prints it: SYMELEC sends the LF after a line.
 		if (ttyLocal && k.echo !== null) {
 			ttyPrint(k.echo);
@@ -2390,6 +2394,8 @@
 		if (!pen || !canvasEl || event.button !== 0 || player) return;
 		event.preventDefault();
 		event.stopPropagation();
+		danceGrab = gridFromEvent(event);
+		dance.touch({ kind: 'press' });
 		if (editOn) return editDown(event);
 		rest = null;
 		notePenAt(event);
@@ -2409,6 +2415,11 @@
 	}
 
 	function onPointerMove(event) {
+		if (danceGrab) {
+			const g = gridFromEvent(event);
+			dance.touch({ kind: 'drag', distance: Math.hypot(g.x - danceGrab.x, g.y - danceGrab.y) });
+			danceGrab = g;
+		}
 		if (editOn && t340) return editMove(event);
 		onHoverMove(event);
 		if (!pen || event.pointerId !== pressedId) return;
@@ -2424,6 +2435,10 @@
 	}
 
 	function onPointerUp(event) {
+		if (danceGrab) {
+			danceGrab = null;
+			dance.touch({ kind: 'release' });
+		}
 		if (editOn) return editUp(event);
 		if (event.pointerId !== pressedId) return;
 		pressedId = null;
@@ -3529,14 +3544,7 @@
 					onclick={() => dance.toggle()}>DANCE</button
 				>
 				{#if dance.on}
-					<button
-						type="button"
-						class="chip"
-						class:on={dance.style === 'jazz'}
-						aria-pressed={dance.style === 'jazz'}
-						title="Systat jazz: the blues scale, swung, with a ride cymbal in place of the hi-hats"
-						onclick={() => dance.toggleJazz()}>JAZZ</button
-					>
+					<DanceControls {dance} chip />
 				{/if}
 				<span class="reset-pull">
 					{#if resetPull >= 0}

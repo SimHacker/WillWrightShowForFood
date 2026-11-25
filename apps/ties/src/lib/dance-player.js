@@ -4,8 +4,10 @@
 
 /** @typedef {import('@wwsff/cabinet/dance').Note} Note */
 
-/** Milliseconds between beats: sixteenths at 120 bpm. */
-export const BEAT_MS = 125;
+/** Tempos to choose from, in beats (quarter notes) a minute; the dance plays sixteenths. */
+export const TEMPOS = [40, 60, 72, 84, 96, 108, 120, 132, 144, 160, 180, 200];
+/** Milliseconds a sixteenth lasts at `bpm`. */
+export const sixteenth = (/** @type {number} */ bpm) => 15000 / bpm;
 const STRUM = 0.018;
 
 /** @param {number} midi */
@@ -154,12 +156,12 @@ export class DancePlayer {
 		return g;
 	}
 
-	/** @param {readonly Note[]} notes */
-	play(notes) {
+	/** @param {readonly Note[]} notes @param {number} stepMs how long a sixteenth lasts */
+	play(notes, stepMs) {
 		const ctx = this.#ctx;
 		if (!ctx || ctx.state !== 'running') return;
 		const now = ctx.currentTime + 0.02;
-		for (const n of notes) this.#note(ctx, n, now + n.order * STRUM + ((n.late ?? 0) * BEAT_MS) / 1000);
+		for (const n of notes) this.#note(ctx, n, now + n.order * STRUM + ((n.late ?? 0) * stepMs) / 1000);
 	}
 
 	/** @type {AudioBuffer | null} */
@@ -221,7 +223,20 @@ export class DancePlayer {
 				lp.frequency.setValueAtTime(3200, t);
 				lp.frequency.exponentialRampToValueAtTime(500, t + 0.16);
 				lp.connect(env);
-				osc('sawtooth', f, lp, shape(0.22 * v, 0.003, 0.2));
+				osc(n.odd ? 'square' : 'sawtooth', f, lp, shape((n.odd ? 0.16 : 0.22) * v, 0.003, 0.2));
+				break;
+			}
+			case 'beep': {
+				osc('square', f, env, shape(0.12 * v, 0.002, 0.09));
+				break;
+			}
+			case 'glass': {
+				const end = shape(0.12 * v, 0.03, 3.5);
+				osc(n.odd ? 'triangle' : 'sine', f, env, end);
+				const over = ctx.createGain();
+				over.gain.value = 0.2;
+				over.connect(env);
+				osc('sine', f * (n.odd ? 3 : 2), over, end);
 				break;
 			}
 			case 'chime': {
@@ -234,7 +249,7 @@ export class DancePlayer {
 				break;
 			}
 			case 'pad': {
-				osc('sine', f, env, shape(0.25 * v, 0.06, 0.6));
+				osc(n.odd ? 'triangle' : 'sine', f, env, shape(0.25 * v, 0.06, 0.6));
 				break;
 			}
 			case 'kick': {

@@ -23,13 +23,14 @@
 	import { ENGINES, apple } from './apple.svelte.js';
 	import ApplePanels from './ApplePanels.svelte';
 	import RateSlider from './RateSlider.svelte';
+	import DanceControls from './DanceControls.svelte';
 	import { APPLE_HZ } from '@wwsff/cabinet/angel';
 
 	/** @typedef {{ name: string, label?: string, profile?: string, url: () => Promise<string> }} Disk */
 	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, panels?: boolean }} */
 	// Slowest first. 100 is MAX: as fast as this computer goes, a picture each game second.
 	// microM8's Go core starts at 1x; the slower notches are the Korz Apple's.
-	const SPEEDS = [0.001, 0.01, 0.1, 1, 2, 4, 8, 16, 100];
+	const SPEEDS = [0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 1.5, 2, 3, 4, 6, 8, 12, 16, 100];
 	const rates = $derived(
 		SPEEDS.filter((w) => w >= 1 || apple.id !== 'microm8').map((w) => ({
 			speed: w,
@@ -162,7 +163,10 @@
 		if (ev.key === 'Alt') {
 			apple.button('key', ev.location === 2 ? 1 : 0, true);
 			ev.preventDefault();
-		} else if (apple.press(ev)) ev.preventDefault();
+		} else if (apple.press(ev)) {
+			ev.preventDefault();
+			apple.dance?.touch({ kind: 'key', code: ev.key.length === 1 ? ev.key.charCodeAt(0) : ev.keyCode });
+		}
 	}
 
 	/** @param {KeyboardEvent} ev */
@@ -174,6 +178,30 @@
 		for (const n of [0, 1, 2]) {
 			apple.button('key', n, false);
 			apple.button('mouse', n, false);
+		}
+	}
+
+	/** Where the pointer was, in 1024ths of the screen, while a button is down: drags build the dance's tension. */
+	/** @type {{ x: number, y: number } | null} */
+	let grab = null;
+	/** @param {PointerEvent} ev */
+	const grid = (ev) => {
+		const r = /** @type {HTMLCanvasElement} */ (canvas).getBoundingClientRect();
+		return { x: ((ev.clientX - r.left) / r.width) * 1024, y: ((ev.clientY - r.top) / r.height) * 1024 };
+	};
+	/** @param {PointerEvent} ev @param {'press' | 'drag' | 'release'} kind */
+	function danceTouch(ev, kind) {
+		if (!canvas || !apple.dance) return;
+		if (kind === 'press') {
+			grab = grid(ev);
+			apple.dance.touch({ kind });
+		} else if (grab && kind === 'drag') {
+			const g = grid(ev);
+			apple.dance.touch({ kind, distance: Math.hypot(g.x - grab.x, g.y - grab.y) });
+			grab = g;
+		} else if (grab) {
+			grab = null;
+			apple.dance.touch({ kind: 'release' });
 		}
 	}
 
@@ -239,9 +267,9 @@
 			tabindex="0"
 			class={{ covered: apple.videxShowing }}
 			aria-label="Apple II screen"
-			onpointerdown={(ev) => (engage(), stick(ev), stickButton(ev, true))}
-			onpointermove={stick}
-			onpointerup={(ev) => stickButton(ev, false)}
+			onpointerdown={(ev) => (engage(), stick(ev), stickButton(ev, true), danceTouch(ev, 'press'))}
+			onpointermove={(ev) => (stick(ev), danceTouch(ev, 'drag'))}
+			onpointerup={(ev) => (stickButton(ev, false), danceTouch(ev, 'release'))}
 			oncontextmenu={(ev) => apple.mouseStick && ev.preventDefault()}
 			ondragover={(ev) => {
 				ev.preventDefault();
@@ -316,12 +344,7 @@
 				onclick={() => dance.toggle()}>Dance</button
 			>
 			{#if dance.on}
-				<button
-					class={{ on: dance.style === 'jazz' }}
-					aria-pressed={dance.style === 'jazz'}
-					title="Systat jazz: the blues scale, swung, with a ride cymbal in place of the hi-hats"
-					onclick={() => dance.toggleJazz()}>Jazz</button
-				>
+				<DanceControls {dance} />
 			{/if}
 		{/if}
 		<RateSlider rates={rates} index={rateIndex} onpick={(i) => apple.speed(rates[i].speed)} />
