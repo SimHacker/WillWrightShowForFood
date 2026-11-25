@@ -476,6 +476,17 @@ rendering" ([Rosenthal 2015, §2.3.2](../../characters/david-rosenthal/sources/r
 5. Granular time stretch.
 6. The calibration test tape; compare with the three recordings, then ask SDF to record it.
 7. Stunts: System Bus Radio, a real radio at the show.
+8. VM Radio at a crawl: instruments that change with the speed. At speed the dance polls once a
+   beat: the Korz compiler's block counts, named words, the devices. Thousands of accesses blur
+   into texture there, and that is right. Very slow, below about 0.05x and while stepping or
+   tracing, single events can be heard, and a hook on every access costs nothing that matters:
+   at 0.01x the PDP-7 runs about 5,700 instructions a second. There, observe-layer watch slots go
+   into the Korz sea (KORZ-DISPATCH.md): a fetch at a labelled routine (UNIX's `putchar`, HILO's
+   `right`) is a hit, a write to a watched word sings its new value on that cycle, and `who`
+   gives DMA and the 340's display-list reads voices of their own. The two cross-fade with the
+   speed, so slowing down lets single events step out of the texture and speeding up melts them
+   back in, as the Apple's speaker now clicks at any slow speed. Only the Korz rungs have slots;
+   the plain interpreters and microM8 keep the polling.
 
 See also [Don's proposal to Lars](../../characters/lars-brinkhoff/am-radio-simulator-proposal.md),
 from July 2026, and [their correspondence](../../characters/lars-brinkhoff/correspondence.md),
