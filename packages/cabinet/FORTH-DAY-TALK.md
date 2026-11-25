@@ -467,9 +467,9 @@ it, there's a chat, but I can't remember all that.
 When you boot this, watch: it says "Please insert a disk", and then "Please flip the disk over".
 You don't even see it. A normal Apple II user would have to put another disk in, flip it and hit a
 key. This can look at the screen and see it, and now it just says "Please enter your name". So I have
-an easy place to type my name. Don. "Please enter the date": the browser knows what the date is
-and puts it in, so I just hit Return. "Wow, I can't believe it's Saturday, November 21st, 2026." If
-you say so. "Hang on while someone moves in and gets settled."
+an easy place to type my name. [Don types "Don Don".] "Please enter the date": the browser knows
+what the date is and puts it in, so I just hit Return. "Wow, I can't believe it's Saturday,
+November 21st, 2026! If you say so." "Hang on while someone moves in and gets settled."
 
 [33:18](https://youtu.be/k2pwJ294r8o?t=1998) Here's the really hard thing about bringing Little
 Computer People up so kids these days can do it: it takes about a minute and a half while this guy
