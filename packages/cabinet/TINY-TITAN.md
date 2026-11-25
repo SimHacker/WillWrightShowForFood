@@ -535,7 +535,10 @@ dynamically updated icon"); then open four others in a grid.
 - **One pen for all of them.** The pen, emulated with the mouse or driven by a script, is mapped
   back through the window under it into that machine's coordinates, and the pen event goes to
   that machine. The cabinet already takes several pens at once (`PenInput`, named "mouse",
-  "sim-heinz" and so on), so a person and a script can work in different windows together.
+  "sim-heinz" and so on), so a person and a script can work in different windows together. The
+  pens have colors, and `IDPN` tells the program which pen touched, so a Forth drawing program
+  can switch color when you switch pens
+  ([TAGS-AND-PIES.md](TAGS-AND-PIES.md#style-color-and-intensity-planned)).
 - **Data flow between them.** Dragging a capture from one window to another, or wiring one
   window's output to another's input (the driver role above), moves data between machines that
   were never built to talk to each other.

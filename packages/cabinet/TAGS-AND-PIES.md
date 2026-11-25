@@ -124,6 +124,19 @@ PLAIN           \ back to the default: green, as drawn
 So a turtle program can draw a red roof and a green hedge, blink the selected item, or fade a
 figure in, and a program that never says `COLOR` looks the way it always did.
 
+**A color drawing program: switch pens to switch color (planned).** The cabinet already has
+eight light pens in eight colors (`PEN_COLORS` in
+[lightpen.ts](src/plugins/lightpen.ts)), and the program can ask which one touched: `IDPN`
+(device 11, a cabinet extension no 1972 program issues) puts the pen's number in the AC. So a
+Forth drawing program needs no menu for color. On each pen hit it reads `IDPN`, looks the pen up
+in a table of the same eight colors, says `COLOR`, and draws. Pick up the cyan pen and you draw
+in cyan; hand the red pen to someone else and you are both drawing, in two colors, at once. The
+pens' colors live in the host today, so the table is generated from `PEN_COLORS` when the Forth
+source is built, and the two stay the same.
+
+It is a hat tip to Chuck Moore's colorForth, where the color of each word in the source tells
+Forth what to do with it. Here the color is in the hand.
+
 The words below, for full records with links and ids, are not built yet.
 
 Forth cells are 18 bits, so an id is two numbers on the stack, low then high. These are
