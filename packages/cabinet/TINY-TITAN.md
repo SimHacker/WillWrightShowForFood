@@ -456,6 +456,32 @@ the network the same way:
 
 Writing is scoped as everywhere else: to the machine's owner and the people they invite.
 
+**Refresh rates.** Each view has its own: every 340 frame, a few times a second for a ring view,
+on change, or on demand. A slow client or a watcher across the network asks for less.
+
+**Capture to a clipboard, in many formats.** A view can capture what it shows into a clipboard,
+which is a configuration namespace rather than one system buffer: named entries that other
+views, editors and cabinets can read. Each capture is stored in several types at once, and the
+reader takes the one it understands:
+
+- **SVG with subroutine groups.** Built: `toSvg` in [media.ts](src/media.ts) makes each `DJS`
+  subroutine an SVG `<g>`, so PIXIE's subpicture hierarchy is the export's hierarchy, and each
+  stroke carries the display-file address that drew it.
+- **PNG.** Built: the applet copies the tube to the system clipboard as a PNG.
+- **PIXIE rings.** Built in [`@wwsff/pixie`](../pixie/src/index.ts): `readRings` and `packWords`
+  read and write ring images as YAML, JSON or the binary `PXID` transfer stream.
+- **YAML and JSON** of a frame's segments (`toYaml`, built) and of any segment's words.
+- **340 display list segments:** the words themselves, with their symbols and source map, ready
+  to paste into another machine's core or into an editor.
+
+This follows HyperLook, Don's HyperCard-like environment on NeWS. In his words
+([1999 thread](../../characters/gwern/sources/1999-userland-xanadu-thread.md)), a user could "flip a
+stack into edit mode, then rearrange, cut, copy, paste, and edit components, properties,
+graphics and scripts of any component on the stack", "copy its image as structured graphics onto
+the clipboard, paste it into the graphics editor". Copying a 340-Window works the same way: what
+you paste is editable structure, not a picture, so a SYMELEC lightbutton or a Forth turtle drawing
+can be taken apart and reused in another drawing or another program's user interface.
+
 **Whole frames, not partial ones.** The server sends a frame at an `IDLA`, the start of a
 refresh, so a client never runs a display list half rewritten. A real 340 did read lists while
 the CPU rewrote them, and programs like SYMELEC live with it. For new programs, a lock and
