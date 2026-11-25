@@ -3,8 +3,8 @@
 *Public-work profile and invitation draft. This is not a simulation or an
 assumption of consent.*
 
-Philip L. Budne is a Unix systems programmer, consultant, and long-running
-tools-and-languages builder. His public resume records work at DEC on the
+Philip L. Budne is a Unix systems programmer, consultant, and builder of
+language tools. His public resume records work at DEC on the
 FORTRAN-10/20 compiler and runtime and advanced SAFE RISC work; systems
 programming at Boston University's Distributed Systems Group; firmware and
 networking at Shiva; and independent consulting from 1993 onward. His recent
@@ -13,8 +13,19 @@ performance-sensitive Unix/Linux software.
 
 ## The display work
 
-Budne's connection to PIXIE is not the PDP-7 CPU or its PDP-7-specific Type 340
-I/O interface. It is the reusable display machinery between them:
+[Cabinet](../../packages/cabinet/README.md) is Don's PDP-7 emulator in TypeScript, running in the
+browser ([live](https://hyperties.org/cabinet/), [source](../../packages/cabinet/src/)). It was
+built to run [PIXIE](../../packages/cabinet/PIXIE-RESTORATION.md#what-pixie-is), the light-pen
+graph editor [Heinz Lemke](../heinz-lemke/README.md), Neil Wiseman and John Hiles wrote at
+Cambridge for a PDP-7 with a Type 340 vector display (published 1969). The program that survives
+is SYMELEC, PIXIE's circuit-drawing program, from a listing assembled in 1972
+([live](https://hyperties.org/cabinet/symelec/),
+[how it works](../../packages/cabinet/reference/GUIDE-SYMELEC.md)).
+
+Cabinet's Type 340 is based on Phil's work. Its display model,
+[`src/plugins/type340.ts`](../../packages/cabinet/src/plugins/type340.ts), is ported nearly line
+by line from his `type340.c` in SIMH, including the Type 342 character glyphs. Three pieces of
+SIMH are involved, and Phil wrote the first two:
 
 - [`display/type340.c`](https://github.com/open-simh/simh/blob/master/display/type340.c)
   is Budne's simulator-independent model of the Type 340's own instruction set.
@@ -29,14 +40,34 @@ I/O interface. It is the reusable display machinery between them:
   emulator, `vc8e.c`.
 - [`PDP18B/pdp18b_dpy.c`](https://github.com/open-simh/simh/blob/master/PDP18B/pdp18b_dpy.c)
   is the machine-specific layer: Lars Brinkhoff added the PDP-7's Type 340/341
-  interface and options. Budne's model and Brinkhoff's glue are different jobs.
+  interface and options.
 
-In a 2020 email, Brinkhoff put the collaboration plainly: Budne had done most
-of the display-emulator work for the PDP-6/10, and Brinkhoff had added the
-PDP-7 parts. That distinction is central to the PIXIE port. Cabinet's PDP-7
-CPU is ported from Bob Supnik's `pdp18b_cpu.c`; its Type 340 semantics descend
-from Budne's display model; SIMH's PDP-7 IOT integration is Brinkhoff's layer;
-the target behavior comes from Heinz Lemke's PIXIE materials.
+In a 2020 email, Brinkhoff wrote that Budne had done most of the display
+emulator work for the PDP-6/10, and that he had added the PDP-7 parts
+([correspondence](../lars-brinkhoff/correspondence.md)). Cabinet credits each part to its author
+([SIMH-MAP.md](../../packages/cabinet/SIMH-MAP.md#credit)):
+
+- The PDP-7 CPU, [`src/plugins/pdp7.ts`](../../packages/cabinet/src/plugins/pdp7.ts), is ported
+  from [Bob Supnik](../bob-supnik/README.md)'s `pdp18b_cpu.c`
+  ([PDP-7 guide](../../packages/cabinet/reference/GUIDE-PDP7.md)).
+- The Type 340, [`src/plugins/type340.ts`](../../packages/cabinet/src/plugins/type340.ts), is
+  ported from Budne's `type340.c` ([Type 340 guide](../../packages/cabinet/reference/GUIDE-340.md),
+  [phosphor](../../packages/cabinet/reference/GUIDE-PHOSPHOR.md),
+  [light pen](../../packages/cabinet/reference/GUIDE-LIGHTPEN.md)).
+- The PDP-7 side of the display, the IOTs that connect the 340 to the CPU, is specified by
+  SYMELEC's own listing. Brinkhoff's `pdp18b_dpy.c` matches its IOT map word for word, but its
+  light pen and edge paths were stubs
+  ([SIMH-MAP.md](../../packages/cabinet/SIMH-MAP.md#map-port-with-credit)).
+- What PIXIE should do comes from Heinz Lemke's 1972 listing and his own accounts
+  ([PIXIE-RESTORATION.md](../../packages/cabinet/PIXIE-RESTORATION.md)).
+
+Cabinet also has a compiler that turns PDP-7 code into JavaScript
+([KORZ-MACHINES.md](../../packages/cabinet/KORZ-MACHINES.md), [source](../../packages/cabinet/src/korz/)),
+and runs PDP-7 UNIX ([live](https://hyperties.org/cabinet/unix/),
+[UNIX-V0.md](../../packages/cabinet/UNIX-V0.md)) from the pdp7-unix project below. A PDP-10 KA10
+running ITS is planned next ([PDP10.md](../../packages/cabinet/PDP10.md)), and it will use the
+same Type 340 model on the KA10. The PDP-6 and PDP-10 are where Phil did most of SIMH's display
+work.
 
 ## Beyond the 340
 
@@ -50,26 +81,22 @@ from scans of its original assembly sources; it is not his solo project.
 His language work includes the maintained C port of Bell Labs' Macro SNOBOL4
 ([`csnobol4`](https://github.com/philbudne/csnobol4)) and JavaScript's
 [`spipatjs`](https://github.com/philbudne/spipatjs), an implementation of
-SNOBOL/SPITBOL pattern matching. The common thread is practical systems craft:
-recover a model or tool, make it portable, and keep the interfaces legible.
+SNOBOL/SPITBOL pattern matching.
 
 ## A personal and technical thread
 
 Don knew Phil through Usenet and the mailing lists. A 1986 FIGIL/Usenet
 exchange preserves Budne asking for Forth recommendations for an Apple IIe
 experiment-control project; in 1990 Phil passed Don Rick Adams's FTP, and
-asked to forward PizzaTool. See [correspondence](correspondence.md). Their professional overlap and online exchanges
-make Budne a direct participant in this story, not a name added only from a
-source-file header.
+asked to forward PizzaTool. See [correspondence](correspondence.md).
 
 In March 2020, Don contacted Lars Brinkhoff about Open SIMH's new PDP-7 Type
-340 support. Brinkhoff clarified the Budne/Brinkhoff split. Don then sketched a
-browser direction: compile the modular emulator with Emscripten, integrate it
+340 support, and Brinkhoff explained who wrote which part. Don proposed a
+browser version: compile the modular emulator with Emscripten, integrate it
 with JavaScript and Canvas, and model Type 340 phosphor with a WebGL shader,
-even imagining RFI from the Type 347 as an optional experience. That was a
-proposal, not the implementation that shipped. Cabinet later took a focused
-TypeScript-port route, with explicit PIXIE provenance and a browser-native
-interaction model.
+even imagining RFI from the Type 347 as an optional experience. Cabinet was
+built differently: SIMH's C was ported to TypeScript, and the display draws on a canvas
+([DESIGN.md](../../packages/cabinet/DESIGN.md)).
 
 ## His home page
 
