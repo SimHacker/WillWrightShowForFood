@@ -16,6 +16,8 @@ export interface Ignored {
 	param: string;
 	value: string;
 	reason: string;
+	/** A parameter the entry doesn't take at all, like a tracker's `fbclid`; the page doesn't show these. */
+	unknown?: boolean;
 }
 
 export interface Launch {
@@ -106,7 +108,7 @@ export function parseLaunch(
 	for (const [param, value] of params) {
 		if (PAGE_PARAMS.has(param)) continue;
 		if (!entry) {
-			launch.ignored.push({ param, value, reason: "a folder takes no parameters" });
+			launch.ignored.push({ param, value, reason: "a folder takes no parameters", unknown: true });
 			continue;
 		}
 		if (param === "with") {
@@ -118,7 +120,7 @@ export function parseLaunch(
 		}
 		const input = inputFor(entry, param);
 		if (!input) {
-			launch.ignored.push({ param, value, reason: `not an input of ${entry.id}` });
+			launch.ignored.push({ param, value, reason: `not an input of ${entry.id}`, unknown: true });
 			continue;
 		}
 		const got = coerce(input, value);

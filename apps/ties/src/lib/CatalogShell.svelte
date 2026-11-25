@@ -67,6 +67,8 @@
 	});
 
 	const launch = $derived(parseLaunch(catalog, path, search, { base: '' }));
+	/** Parameters the entry takes but whose values didn't fit. Unknown ones go unmentioned. */
+	const badValues = $derived(launch?.ignored.filter((i) => !i.unknown) ?? []);
 	const entry = $derived(launch?.entry);
 	const folder = $derived(entry ? undefined : catalog.tree(path));
 	const values = $derived(entry ? effectiveValues(entry, launch?.values) : {});
@@ -400,9 +402,9 @@
 				<p class="about">{entry?.description ?? folder?.folder?.description}</p>
 			{/if}
 			{#if entry && !solo}{@render chips(entry)}{/if}
-			{#if launch?.ignored.length}
+			{#if badValues.length}
 				<p class="ignored">
-					Ignored: {#each launch.ignored as i, n (n)}<code>{i.param}={i.value}</code> ({i.reason}){n < launch.ignored.length - 1 ? ', ' : ''}{/each}
+					Ignored: {#each badValues as i, n (n)}<code>{i.param}={i.value}</code> ({i.reason}){n < badValues.length - 1 ? ', ' : ''}{/each}
 				</p>
 			{/if}
 		</header>
