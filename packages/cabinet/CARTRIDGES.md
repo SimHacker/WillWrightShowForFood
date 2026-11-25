@@ -37,8 +37,8 @@ The running state, the player state, belongs to the cabinet while that cartridge
   emulation, is the person to ask what metadata it should carry.
 - **Why.** Emulators come and go, and a program's preservation shouldn't depend on one of them.
   Each emulator already has its own package format: microM8's microPAK, SIMH's `.ini` scripts,
-  MAME's software lists. Writing a program up once, and letting each emulator read what applies
-  to it, means writing it up only once. It also lets museums and archives keep the package
+  MAME's software lists. A cartridge describes a program once, and each emulator reads the parts
+  that apply to it. It also lets museums and archives keep the package
   without keeping our code ([FOR-MUSEUMS.md](FOR-MUSEUMS.md)).
 - **How: endosymbiosis.** Borrowed from MOOLLM's
   [character endosymbiosis](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/CHARACTER-ENDOSYMBIOSIS.md),
@@ -90,10 +90,10 @@ cartridges/forth-flowers/
 What it says should make sense to any emulator of the machine. Anything only one emulator can
 use goes in that emulator's organelle folder (`cabinet/`, `simh/`, `micropak/`), as described in
 [the goal](#the-goal-the-package-is-not-the-emulator) above.
-The design target is broader: the cartridge also declares the machine configuration—CPU,
+The design target is broader: the cartridge also declares the machine configuration: CPU,
 memory, devices, ports, mappings, timing, interrupts, and host-facing adapters. Today the
 cartridges are still JavaScript objects in `cabinet-programs.js`; the YAML below is a sketch of
-the file format, not a claim that every machine field is parsed and wired already.
+the file format, and not every machine field is parsed and wired yet.
 
 ```yaml
 id: forth-flowers
@@ -113,8 +113,8 @@ help: README.md
 ```
 
 The parent `forth` cartridge can supply the machine wiring, so this child only needs to declare
-the program-specific additions. A machine declaration is a **wiring plan**, not a claim that all
-CPUs share one bus:
+the program-specific additions. A machine declaration is a **wiring plan** for the selected CPU.
+It does not assume that all CPUs share one bus:
 
 - **CPU and memory** identify the instruction-set plugin, word/address dimensions, memory banks,
   and regions or devices visible in the address space.
@@ -134,11 +134,11 @@ CPUs share one bus:
   constrained declarative vocabulary, and adapter code needs an explicit trust/capability boundary.
 
 The layers a device is split into, from the person's hand to the emulator, are in
-[DEVICES.md](DEVICES.md). This separation lets one device travel across unlike machines. For example, a mouse/keyset
+[DEVICES.md](DEVICES.md). This separation lets one device plug into unlike machines. For example, a mouse/keyset
 instrument can become a PDP-7 light pen plus teletype input, or Apple II paddle values, pushbuttons,
 and keyboard events. Only the cartridge's adapter changes; each machine keeps its own I/O. The configuration itself is inspectable and testable, so wiring
-errors—overlapping addresses, unclaimed ports, invalid opcode bindings, or an interrupt with no
-CPU route—can fail before a program starts.
+errors (overlapping addresses, unclaimed ports, invalid opcode bindings, or an interrupt with no
+CPU route) can fail before a program starts.
 
 **Resource kinds** are open-ended, and each one names who reads it:
 
@@ -166,7 +166,8 @@ CPU route—can fail before a program starts.
 | `scene` *(planned)* | where models and characters stand, which device is bound to which model, and what each animation listens for | the scene view |
 
 An unknown kind is carried and ignored, the way an older page plays a session with new event
-kinds. A cartridge from tomorrow still loads today; it just can't do the new thing.
+kinds. A cartridge that uses a newer kind still loads in an older page, without that kind's
+feature.
 
 **Panels are opted into.** A cartridge lists the panels it needs, and a panel's chip appears
 only when the running cartridge asks for it. RINGS already works this way: it shows only for
@@ -227,7 +228,7 @@ over one CAM base, and for SYMELEC with different saved drawings.
 ## 4. Live decoding: from a binary back to source
 
 The disassembler already runs in the page ([disasm.ts](src/disasm.ts)), and the assemblers do
-too. So decoding needn't be a script run once on a desk: it is a panel, and a step.
+too. So decoding runs in the page, as a panel and as a build step.
 
 1. **Load the binary** the way the cartridge always did (DUEL: RIM, FunnyFormat, patches after).
    Record which words the loader wrote.
@@ -342,8 +343,8 @@ came from, carrying only what changed, with a name, a label and who made it. It 
 visible object (the cabinet's menu, the rack), unhatched until it goes somewhere. This is
 Screen Angel's egg ([EGGS.yml](https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/EGGS.yml)), "a promise
 with a location": the pending thing is the publication, and the egg shows where that has got to
-(§7). Hatching is the merge and deploy. An egg can also just be downloaded as a zip and never
-hatch anywhere, and that's fine.
+(§7). Hatching is the merge and deploy. An egg can also be downloaded as a zip and never
+hatched.
 
 **Clone** is laying an egg from a cartridge without changing anything, to start from it.
 
@@ -454,7 +455,7 @@ entry's `was:` redirects to its new home. The query adds run-time configuration:
 - **The address follows the machine.** Changing the speed or plugging in a card rewrites the URL
   with `replaceState`, so the address always reproduces what is on screen, and **save as entry**
   turns it into a catalog file of your own (an egg, [§6](#6-live-coding-saving-and-laying-eggs)).
-- **One shape in three places.** An entry (`parents`, `with`, values), a URL (path, `with=`,
+- **Entries, URLs and fences convert to each other.** An entry (`parents`, `with`, values), a URL (path, `with=`,
   values) and an article's `yaml cabinet` fence say the same things, and each converts to the
   others. [`cabinet-url.js`](../../apps/ties/src/lib/cabinet-url.js) already makes a URL into the
   fence's spec; the catalog generalizes it.

@@ -356,9 +356,10 @@ plugin uses, and its saved registers and private RAM sit inside the card's direc
 processor on the `cpus/` shelf. The same 6809 module can later be the processor of a Radio Shack
 Color Computer, where the cabinet names it directly and the state lives with that processor.
 
-## Devices can travel farther than CPUs
+## Devices are reusable across CPUs
 
-A device should travel with its own abstract interface: methods, properties,
+Devices are more modular than CPUs: one device can plug into different CPUs, backplanes and
+architectures. Each device has its own abstract interface: methods, properties,
 status flags, events, and any memory regions it exposes. A cartridge binds
 that interface to a selected CPU and memory system. It can map methods to
 instruction definitions, IOT pulses, MMIO registers, or channels; map
@@ -366,8 +367,8 @@ properties and buffers to addresses and layouts; and map device events to
 CPU-specific flags and interrupt lines. A machine-specific adapter can
 convert protocols between the stable device contract and the guest's actual
 hardware conventions. Today Cabinet's `Device.iot` is the PDP-7-facing port;
-an Apple II or PDP-10 cartridge needs its own adapter, not a fiction that all
-machines share one IOT bus.
+an Apple II or PDP-10 cartridge needs its own adapter, because those machines
+don't have an IOT bus.
 
 The same separation can apply to instruction extensions. A device package may
 describe an abstract operation—its operands, effects, timing needs, and
@@ -384,7 +385,7 @@ authority on what its instruction words mean.
 The cartridge can also provide a smart adapter in JavaScript: translate a
 device's abstract methods and properties into a CPU's instruction encodings,
 IOT pulses, MMIO registers, channels, interrupt requests and flags. A device
-can travel with a stable interface while each cartridge supplies the wiring
+keeps one stable interface while each cartridge supplies the wiring
 and protocol converter appropriate to its machine. The PDP-7 cartridge might
 map a request to IOT plus AC bits; an Apple II cartridge might map the same
 request to soft switches and paddle timers. The device contract stays put;

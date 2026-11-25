@@ -406,7 +406,7 @@ CAM-6 is designed but not built yet. Everything above it on this page runs today
 - **Alan:** the machine is live and inspectable down to the core word. Devices are objects that
   answer messages (IOTs), and the 340 sits where Sketchpad's lineage and the wheel of
   reincarnation cross. [ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md) is the
-  longer argument, including why a device's contract travels farther than any CPU.
+  longer argument, including why a device's interface can be reused across CPUs and backplanes.
 - **Heinz:** PIXIE's 1972 answers are under all of this. Display files are compiled from
   structures, the light pen finds its owner, and rings hold the data
   ([PIXIE-RESTORATION.md](PIXIE-RESTORATION.md)). [reference/FORTH-TURTLE-340.md](reference/FORTH-TURTLE-340.md)
