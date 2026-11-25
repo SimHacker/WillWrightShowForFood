@@ -114,6 +114,11 @@ class AppleEngine {
 		microM8.mouseStick = v;
 		korzApple.mouseStick = v;
 	}
+	/** The bus dance, on the Korz Apples: microM8's Go core has no blocks to listen to. */
+	get dance() {
+		return this.id === 'microm8' ? null : korzApple.dance;
+	}
+
 	get warp() {
 		return this.#warp;
 	}

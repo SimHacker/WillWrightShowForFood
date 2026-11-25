@@ -51,6 +51,8 @@
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
 	import RateSlider from './RateSlider.svelte';
+	import { BusDance, speedLoad } from './bus-dance.svelte.js';
+	import { Deltas, PDP7_VOICES, Tally } from '@wwsff/cabinet/dance';
 	import KorzBrowser from './KorzBrowser.svelte';
 	import { block7Node, compiler7Node, dispatchNode, seaNode } from '@wwsff/cabinet/korz/inspect';
 	import VoicePicker from './VoicePicker.svelte';
@@ -327,7 +329,32 @@
 	const PHOSPHOR_FRAMES = 48;
 	let batch = [];
 
+	// The bus dance: each beat, what the CPU ran, which display blocks the 340 drew, and what the
+	// Forth device did. Without a compiler the CPU is heard by where its PC was between runs.
+	const dance = new BusDance(PDP7_VOICES, 'saucer');
+	const danceBlocks = new Deltas();
+	const dancePcs = new Tally();
+	const danceStrokes = new Tally();
+	const danceForth = new Deltas();
+	let danceAt = { cycles: 0, ms: 0 };
+	function danceHits() {
+		const forth = forthDev?.stats;
+		return {
+			cpu: cpu?.compiler ? danceBlocks.step(cpu.compiler.list().map((b) => [b.entry, b.retired])) : dancePcs.take(),
+			340: danceStrokes.take(),
+			forth: forth ? danceForth.step([[0, forth.cells], [1, forth.handoffs], [2, forth.finds], [3, forth.hits]]) : []
+		};
+	}
+	function danceGauges() {
+		const ms = performance.now();
+		const cycles = box?.cycles ?? 0;
+		const ratio = paused ? 0 : (cycles - danceAt.cycles) / Math.max(1, ms - danceAt.ms) / CYCLES_PER_MS;
+		danceAt = { cycles, ms };
+		return { load: speedLoad(ratio), fill: (t340?.lastFrame?.segments.length ?? 0) / 1500 };
+	}
+
 	function collectFrame(f) {
+		if (dance.on) for (const s of f.segments) if (s.intensify) danceStrokes.add(s.block);
 		batch.push(f);
 		if (batch.length > PHOSPHOR_FRAMES) batch.shift();
 	}
@@ -2221,6 +2248,7 @@
 		while (left > 0) {
 			const n = Math.max(1, Math.min(left, penDeadline() - box.cycles));
 			box.run(n);
+			if (dance.on && !cpu.compiler) dancePcs.add(cpu.pc, n);
 			left -= n;
 			penRules();
 		}
@@ -2230,6 +2258,7 @@
 	function traceStep() {
 		if (!player) {
 			box.step();
+			if (dance.on && !cpu.compiler) dancePcs.add(cpu.pc);
 			penRules();
 			return;
 		}
@@ -2274,6 +2303,7 @@
 			owed = 0;
 			drawFrame();
 			updateReadout(now);
+			dance.frame(now, danceHits, danceGauges);
 			return;
 		}
 		if (traceMs) {
@@ -2294,6 +2324,7 @@
 				}
 				drawFrame();
 				updateReadout(now);
+				dance.frame(now, danceHits, danceGauges);
 				fault = null;
 			} catch (e) {
 				fault = e instanceof Error ? e.message : String(e);
@@ -2329,6 +2360,7 @@
 			}
 			drawFrame();
 			updateReadout(now);
+			dance.frame(now, danceHits, danceGauges);
 			fault = null;
 		} catch (e) {
 			fault = e instanceof Error ? e.message : String(e);
@@ -2995,6 +3027,7 @@
 			cancelled = true;
 			running = false;
 			if (raf) cancelAnimationFrame(raf);
+			dance.player.stop();
 			document.removeEventListener('visibilitychange', onVisibility);
 		};
 	});
@@ -3487,6 +3520,24 @@
 					onclick={onStep}>⏭️</button
 				>
 				<RateSlider rates={RATES} index={rateIndex} onpick={setRate} />
+				<button
+					type="button"
+					class="chip"
+					class:on={dance.on}
+					aria-pressed={dance.on}
+					title="The bus dance: hear the PDP-7, the 340 and the Forth device work, each its own instrument, over a saucer hum that rises with the speed"
+					onclick={() => dance.toggle()}>DANCE</button
+				>
+				{#if dance.on}
+					<button
+						type="button"
+						class="chip"
+						class:on={dance.style === 'jazz'}
+						aria-pressed={dance.style === 'jazz'}
+						title="Systat jazz: the blues scale, swung, with a ride cymbal in place of the hi-hats"
+						onclick={() => dance.toggleJazz()}>JAZZ</button
+					>
+				{/if}
 				<span class="reset-pull">
 					{#if resetPull >= 0}
 						<span class="reset-track" style:height="{RESET_PULL}px" aria-hidden="true"

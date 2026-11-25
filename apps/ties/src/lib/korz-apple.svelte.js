@@ -11,6 +11,8 @@
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
+import { APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
+import { BusDance, speedLoad } from './bus-dance.svelte.js';
 import { block65Node, compiler65Node, dispatchNode, lister65, sea65Node } from '@wwsff/cabinet/korz/inspect';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, appleKey } from '@wwsff/cabinet/microm8';
 import plusRomUrl from '../../../../packages/cabinet/roms/apple2/apple2plus.rom?url';
@@ -315,7 +317,46 @@ class KorzApple {
 		if (!cpu || !board || board.cycles >= limit) return;
 		if ('compiler' in cpu && cpu.compiler && limit - board.cycles <= 80) cpu.one();
 		else cpu.step();
+		if (this.dance.on && !('compiler' in cpu && cpu.compiler)) this.#dancePcs.add(cpu.pc);
 		this.#pump();
+	}
+
+	/**
+	 * The bus dance: the 6502's blocks (or, without a compiler, where its PC was), the Disk II's
+	 * head while the motor runs, and the speaker's click rate, over a diesel engine that throbs
+	 * faster with the speed and opens up with Applesoft's free memory.
+	 */
+	dance = new BusDance(APPLE2_VOICES, 'diesel');
+	#danceBlocks = new Deltas();
+	#dancePcs = new Tally();
+	#danceHead = -1;
+	#danceClicks = 0;
+	#danceAt = { cycles: 0, ms: 0 };
+
+	#danceHits() {
+		const cpu = this.#cpu;
+		const board = this.#board;
+		const disk = this.#disk;
+		const compiler = cpu && 'compiler' in cpu ? cpu.compiler : null;
+		const head = disk?.head ?? 0;
+		const moved = head !== this.#danceHead;
+		this.#danceHead = head;
+		const clicks = (board?.speakerClicks ?? 0) - this.#danceClicks;
+		this.#danceClicks = board?.speakerClicks ?? 0;
+		return {
+			'6502': compiler ? this.#danceBlocks.step(compiler.list().map((b) => /** @type {[number, number]} */ ([b.entry, b.retired]))) : this.#dancePcs.take(),
+			disk: disk?.motor ? [{ key: head, weight: moved ? 4 : 1 }] : [],
+			speaker: clicks > 0 ? [{ key: Math.round(Math.log2(clicks)), weight: clicks }] : []
+		};
+	}
+
+	#danceGauges() {
+		const board = this.#board;
+		const ms = performance.now();
+		const cycles = board?.cycles ?? 0;
+		const ratio = (cycles - this.#danceAt.cycles) / Math.max(1, ms - this.#danceAt.ms) / (APPLE_HZ / 1000);
+		this.#danceAt = { cycles, ms };
+		return { load: speedLoad(ratio), fill: board ? applesoftFree(board.ram) : 0 };
 	}
 
 	/** @param {number} [_now] */
@@ -545,6 +586,7 @@ class KorzApple {
 				cancelAnimationFrame(raf);
 				return;
 			}
+			this.dance.frame(now, () => this.#danceHits(), () => this.#danceGauges());
 			ctx.putImageData(image, 0, 0);
 			if (vctx && this.videxShowing) vctx.putImageData(videxImage, 0, 0);
 			if (now - polled > 250) {
@@ -558,8 +600,28 @@ class KorzApple {
 		};
 		raf = requestAnimationFrame(tick);
 		if (this.#board) ctx.putImageData(image, 0, 0);
-		return () => cancelAnimationFrame(raf);
+		return () => {
+			cancelAnimationFrame(raf);
+			this.dance.player.stop();
+			this.dance.on = false;
+		};
 	}
+}
+
+/**
+ * Applesoft's free memory as a fraction of its whole, what FRE(0) counts: from the end of the
+ * arrays (STREND, $6D) up to the strings (FRETOP, $6F), over program start (TXTTAB, $67) to
+ * HIMEM ($73). 0 when the pointers don't look like Applesoft's.
+ * @param {Uint8Array} ram
+ */
+function applesoftFree(ram) {
+	const word = (/** @type {number} */ a) => (ram[a] ?? 0) | ((ram[a + 1] ?? 0) << 8);
+	const start = word(0x67);
+	const strend = word(0x6d);
+	const fretop = word(0x6f);
+	const himem = word(0x73);
+	if (!(start >= 0x800 && start < strend && strend <= fretop && fretop <= himem && himem <= 0xc000)) return 0;
+	return (fretop - strend) / (himem - start);
 }
 
 export const korzApple = new KorzApple();

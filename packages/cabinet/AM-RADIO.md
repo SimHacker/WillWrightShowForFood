@@ -127,6 +127,30 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
      address, opcode or vector direction choose the note within the key and the timing stays
      musical. That gives up accuracy to be legible, the opposite trade from approach 1, and both
      use the same probe.
+   - **Built, first cut** (November 2026). [dance.ts](src/dance.ts) scores, in node with tests;
+     `dance-player.js` and `bus-dance.svelte.js` in the app play it with Web Audio. A DANCE
+     button on the PDP-7 and on the Korz Apple ][ turns it on. Built without the listener slots:
+     the sources are counts the machines already keep, read each sixteenth (125 ms).
+     - PDP-7: a bass from each compiled block's growth in instructions retired (from the PC
+       between runs when the CPU is not compiling), a pluck from the 340's strokes by display
+       block, a bell from the Forth device's counters.
+     - Apple ][: a pluck from the 6502's blocks, a tick keyed to the Disk II's head while the
+       motor runs, so a ProDOS or Forth boot plays the head stepping across the tracks, and a
+       bell whose pitch follows the speaker's click rate.
+     - Drums: four on the floor, hats thickening with the load, and a rim click every n
+       steps, where n is the ratio of the two hottest blocks' work: a loop run three times per
+       pass of its caller clicks three against the bar's four.
+     - JAZZ: the blues scale, the second eighth of each beat a triplet late, a ride's
+       spang-a-lang, a feathered kick.
+     - An engine under it all, from two smoothed gauges: load is the emulated speed (.01× is
+       none, 1× half, 100× full), fill a level. The PDP-7's is a saucer, two detuned sines
+       rising with load, the warble widening with the 340's stroke count; the Apple's a diesel
+       throbbing faster with load, its filter opening with Applesoft's free memory (`FRE(0)`'s
+       STREND to FRETOP over TXTTAB to HIMEM).
+     - Every voice has its own gain (`fade(voice, level, seconds)`), the bus a cross-fader,
+       an [ECG](../ecg/README.md) or any program, can drive. Not yet: the listener slots, a
+       mixer on the page, more gauges (free core, the 340's duty cycle, interrupts per second),
+       and the time stretch below.
 
 ## A receiver to borrow
 

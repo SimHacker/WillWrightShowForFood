@@ -307,6 +307,23 @@
 			title="The Apple's speaker"
 			onclick={() => ((apple.sound = !apple.sound), apple.listen(), canvas?.focus())}>Sound</button
 		>
+		{#if apple.dance}
+			{@const dance = apple.dance}
+			<button
+				class={{ on: dance.on }}
+				aria-pressed={dance.on}
+				title="The bus dance: hear the 6502, the Disk II's head and the speaker work, each its own instrument, over a diesel engine that throbs with the speed and Applesoft's free memory"
+				onclick={() => dance.toggle()}>Dance</button
+			>
+			{#if dance.on}
+				<button
+					class={{ on: dance.style === 'jazz' }}
+					aria-pressed={dance.style === 'jazz'}
+					title="Systat jazz: the blues scale, swung, with a ride cymbal in place of the hi-hats"
+					onclick={() => dance.toggleJazz()}>Jazz</button
+				>
+			{/if}
+		{/if}
 		<RateSlider rates={rates} index={rateIndex} onpick={(i) => apple.speed(rates[i].speed)} />
 		<button
 			class={{ on: apple.mouseStick }}

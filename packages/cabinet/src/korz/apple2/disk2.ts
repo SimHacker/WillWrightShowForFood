@@ -182,6 +182,11 @@ export class DiskII implements Card {
 	private skip = 0;
 	private readonly drives: [Drive, Drive] = [emptyDrive(), emptyDrive()];
 
+	/** Where the selected drive's arm is, in the quarter or half steps it moves by. */
+	get head(): number {
+		return this.drives[this.drive - 1]?.arm ?? 0;
+	}
+
 	constructor(rom: Uint8Array) {
 		if (rom.length !== 0x100) throw new Error(`Disk II ROM is ${rom.length} bytes; the card takes 256`);
 		this.rom = rom.slice();
