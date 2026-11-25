@@ -9,6 +9,8 @@
 	 * now (the block at the PC), shown when Follow is on. onOpen(addr) opens memory there.
 	 * @type {{ roots: () => import('@wwsff/cabinet/korz/inspect').KorzNode[], follow?: (() => import('@wwsff/cabinet/korz/inspect').KorzNode | null) | null, onOpen?: ((addr: number) => void) | null, height?: string }}
 	 */
+	import { onMount } from 'svelte';
+
 	let { roots, follow = null, onOpen = null, height = '22rem' } = $props();
 
 	/** Shown at most per branch; the rest are counted. */
@@ -71,6 +73,88 @@
 		tick;
 		return open.has(path) ? (n.children?.() ?? []) : [];
 	}
+
+	// The tree's width and the panel's height, dragged by the divider and the bottom grip and
+	// kept across visits. Null is the stylesheet's default.
+	const TREE_W = 'korz-browser-tree-width';
+	const PANEL_H = 'korz-browser-height';
+	const TREE_MIN = 120;
+	const VIEW_MIN = 160;
+	const PANEL_MIN = 160;
+	/** @type {number | null} */
+	let treeW = $state(null);
+	/** @type {number | null} */
+	let panelH = $state(null);
+	/** @type {HTMLDivElement | undefined} */
+	let panes = $state();
+	/** @type {HTMLDivElement | undefined} */
+	let panel = $state();
+	/** @type {{ axis: 'x' | 'y', from: number, size: number } | null} */
+	let drag = $state(null);
+
+	onMount(() => {
+		treeW = Number(localStorage.getItem(TREE_W)) || null;
+		panelH = Number(localStorage.getItem(PANEL_H)) || null;
+	});
+
+	/** @param {number} w */
+	const clampW = (w) => Math.max(TREE_MIN, Math.min(w, (panes?.clientWidth ?? 800) - VIEW_MIN));
+	/** @param {number} h */
+	const clampH = (h) => Math.max(PANEL_MIN, Math.min(h, window.innerHeight * 0.95));
+
+	/** @param {PointerEvent} ev @param {'x' | 'y'} axis */
+	function grab(ev, axis) {
+		const tree = panes?.firstElementChild;
+		const size = axis === 'x' ? (tree?.getBoundingClientRect().width ?? 0) : (panel?.getBoundingClientRect().height ?? 0);
+		drag = { axis, from: axis === 'x' ? ev.clientX : ev.clientY, size };
+		try {
+			/** @type {HTMLElement} */ (ev.currentTarget).setPointerCapture(ev.pointerId);
+		} catch {
+			/* A pointer the browser does not know, from a script: drag without capture. */
+		}
+		ev.preventDefault();
+	}
+
+	/** @param {PointerEvent} ev */
+	function move(ev) {
+		if (!drag) return;
+		if (drag.axis === 'x') treeW = clampW(drag.size + ev.clientX - drag.from);
+		else panelH = clampH(drag.size + ev.clientY - drag.from);
+	}
+
+	function drop() {
+		if (!drag) return;
+		if (drag.axis === 'x' && treeW) localStorage.setItem(TREE_W, String(Math.round(treeW)));
+		if (drag.axis === 'y' && panelH) localStorage.setItem(PANEL_H, String(Math.round(panelH)));
+		drag = null;
+	}
+
+	/** @param {KeyboardEvent} ev @param {'x' | 'y'} axis */
+	function nudge(ev, axis) {
+		const step = ev.shiftKey ? 64 : 16;
+		const keys = axis === 'x' ? { ArrowLeft: -step, ArrowRight: step } : { ArrowUp: -step, ArrowDown: step };
+		const by = keys[/** @type {keyof typeof keys} */ (ev.key)];
+		if (!by) return;
+		ev.preventDefault();
+		if (axis === 'x') {
+			treeW = clampW((treeW ?? panes?.firstElementChild?.getBoundingClientRect().width ?? 0) + by);
+			localStorage.setItem(TREE_W, String(Math.round(treeW)));
+		} else {
+			panelH = clampH((panelH ?? panel?.getBoundingClientRect().height ?? 0) + by);
+			localStorage.setItem(PANEL_H, String(Math.round(panelH)));
+		}
+	}
+
+	/** Double-click a handle to go back to the default size. @param {'x' | 'y'} axis */
+	function unset(axis) {
+		if (axis === 'x') {
+			treeW = null;
+			localStorage.removeItem(TREE_W);
+		} else {
+			panelH = null;
+			localStorage.removeItem(PANEL_H);
+		}
+	}
 </script>
 
 {#snippet branch(list, parent, depth)}
@@ -98,7 +182,7 @@
 	{/if}
 {/snippet}
 
-<div class="korz" style:height>
+<div class={['korz', drag && `dragging-${drag.axis}`]} style:height={panelH ? `${panelH}px` : height} bind:this={panel}>
 	<div class="bar">
 		<label title="Reread the open branches once a second"><input type="checkbox" bind:checked={live} /> Live</label>
 		{#if follow}
@@ -106,8 +190,20 @@
 		{/if}
 		<span class="hint">Read-only. Open a branch with ▸; pick a name to see its code.</span>
 	</div>
-	<div class="panes">
+	<div class="panes" bind:this={panes} style:--tree={treeW ? `${treeW}px` : null}>
 		<ul class="tree" aria-label="Korz structures">{@render branch(top, '', 0)}</ul>
+		<button
+			type="button"
+			class="divider"
+			aria-label="Resize the tree and the code"
+			title="Drag to resize; double-click for the default"
+			onpointerdown={(ev) => grab(ev, 'x')}
+			onpointermove={move}
+			onpointerup={drop}
+			onpointercancel={drop}
+			onkeydown={(ev) => nudge(ev, 'x')}
+			ondblclick={() => unset('x')}
+		></button>
 		<div class="view">
 			{#if shown}
 				<div class="head">
@@ -123,6 +219,18 @@
 			{/if}
 		</div>
 	</div>
+	<button
+		type="button"
+		class="grip"
+		aria-label="Resize the panel's height"
+		title="Drag to resize; double-click for the default"
+		onpointerdown={(ev) => grab(ev, 'y')}
+		onpointermove={move}
+		onpointerup={drop}
+		onpointercancel={drop}
+		onkeydown={(ev) => nudge(ev, 'y')}
+		ondblclick={() => unset('y')}
+	></button>
 </div>
 
 <style>
@@ -151,13 +259,63 @@
 		flex: 1;
 		min-height: 0;
 		display: grid;
-		grid-template-columns: minmax(14rem, 2fr) 3fr;
-		gap: 0.5rem;
+		grid-template-columns: var(--tree, minmax(14rem, 2fr)) 0.5rem minmax(0, 3fr);
+	}
+	.divider,
+	.grip {
+		touch-action: none;
+		background: transparent;
+	}
+	.divider {
+		cursor: col-resize;
+		position: relative;
+	}
+	.divider::after {
+		content: '';
+		position: absolute;
+		inset: 0 calc(50% - 1px);
+		background: #333;
+	}
+	.grip {
+		flex: none;
+		display: block;
+		width: 100%;
+		height: 0.5rem;
+		margin-top: 0.15rem;
+		cursor: row-resize;
+		background: linear-gradient(#333, #333) center / 2.5rem 3px no-repeat;
+	}
+	.divider:hover::after,
+	.divider:focus-visible::after,
+	.dragging-x .divider::after {
+		background: #6a6;
+	}
+	.grip:hover,
+	.grip:focus-visible,
+	.dragging-y .grip {
+		background-image: linear-gradient(#6a6, #6a6);
+		background-size: 100% 3px;
+	}
+	.divider:focus-visible,
+	.grip:focus-visible {
+		outline: none;
+	}
+	.dragging-x {
+		cursor: col-resize;
+		user-select: none;
+	}
+	.dragging-y {
+		cursor: row-resize;
+		user-select: none;
 	}
 	@media (max-width: 640px) {
 		.panes {
 			grid-template-columns: 1fr;
 			grid-template-rows: 1fr 1fr;
+			gap: 0.5rem;
+		}
+		.divider {
+			display: none;
 		}
 	}
 	.tree,
