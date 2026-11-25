@@ -256,6 +256,11 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        swapped. All off is the plain dance, and the console shows what the switches are doing
        next to the dance controls. Programs that read the switches as controls, DUEL's ships,
        Spacewar's, change the music as they are played.
+     - The dance remembers (bus-dance.svelte.js, in the browser's storage): whether it is on,
+       for every machine, so going from the PDP-7 to the Apple keeps dancing; and the style,
+       tempo and loops chosen, for each machine. It starts off, so nobody is blown away by a
+       first visit, and a page that comes back on starts its sound at the first click or key,
+       as browsers require. A program's words to listen to stay the program's.
      - Riffs (`Riff` in dance.ts): a mode can bring a bar that plays itself, bass, drums and a
        hook in the progression's chord, heard even while the machine only waits for a key. The
        Apple's prompts each have one, on an instrument no other track uses: Applesoft's `]` is

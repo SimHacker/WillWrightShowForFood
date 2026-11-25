@@ -4,7 +4,7 @@
 // person at the console does. See AM-RADIO.md, approach 8.
 
 import { Dance, Regions, twistLabel } from '@wwsff/cabinet/dance';
-import { DancePlayer, sixteenth } from './dance-player.js';
+import { DancePlayer, TEMPOS, sixteenth } from './dance-player.js';
 
 /** @typedef {import('@wwsff/cabinet/dance').Voice} Voice */
 /** @typedef {import('@wwsff/cabinet/dance').Hit} Hit */
@@ -31,12 +31,30 @@ export const STYLES = [
 	}
 ];
 
+/** Whether the dance is on, for every machine and page; off until someone turns it on. */
+const ON = 'dance-on';
+/** @param {string} key */
+const kept = (key) => {
+	try {
+		return JSON.parse(globalThis.localStorage?.getItem(key) ?? 'null');
+	} catch {
+		return null;
+	}
+};
+
 export class BusDance {
 	on = $state(false);
 	/** @type {Style} */
 	style = $state('straight');
 	loops = $state(false);
-	bpm = $state(120);
+	#bpm = $state(120);
+	get bpm() {
+		return this.#bpm;
+	}
+	set bpm(v) {
+		this.#bpm = v;
+		this.#save();
+	}
 	/** Names of words in core to listen to, space separated; the machine resolves them. */
 	listen = $state('');
 	/** What the front panel's switches are doing to the music, in a few words; "" when they are all off. */
@@ -51,6 +69,42 @@ export class BusDance {
 		this.voices = voices;
 		this.#dance = new Dance(voices);
 		this.#engine = engine;
+		const was = kept(`dance-${engine}`);
+		if (STYLES.some((s) => s.id === was?.style)) this.setStyle(was.style);
+		if (TEMPOS.includes(was?.bpm)) this.#bpm = was.bpm;
+		if (typeof was?.loops === 'boolean' && was.loops !== this.loops) this.toggleLoops();
+		if (kept(ON) === true) this.#wake();
+	}
+
+	/** On from last time: sound starts at the first click or key, as browsers require. */
+	#wake() {
+		if (typeof window === 'undefined') return;
+		this.on = true;
+		const go = () => {
+			window.removeEventListener('pointerdown', go, true);
+			window.removeEventListener('keydown', go, true);
+			if (!this.on) return;
+			this.player.start();
+			this.player.engine(this.#engine);
+		};
+		window.addEventListener('pointerdown', go, true);
+		window.addEventListener('keydown', go, true);
+	}
+
+	/** The choices a person makes are kept: on or off for every machine, style, tempo and loops for each engine's. */
+	#save() {
+		try {
+			globalThis.localStorage?.setItem(ON, JSON.stringify(this.on));
+			globalThis.localStorage?.setItem(`dance-${this.#engine}`, JSON.stringify({ style: this.style, bpm: this.#bpm, loops: this.loops }));
+		} catch {
+			/* Storage full or forbidden: the dance just forgets. */
+		}
+	}
+
+	/** The page let go of the machine: silence, but stay on, to sound again at the next click or key. */
+	rest() {
+		this.player.stop();
+		if (this.on) this.#wake();
 	}
 
 	/** From a click: browsers start sound only then. */
@@ -60,17 +114,20 @@ export class BusDance {
 			this.player.start();
 			this.player.engine(this.#engine);
 		} else this.player.stop();
+		this.#save();
 	}
 
 	/** @param {Style} style */
 	setStyle(style) {
 		this.style = style;
 		this.#dance.style = style;
+		this.#save();
 	}
 
 	toggleLoops() {
 		this.loops = !this.loops;
 		this.#dance.loops = this.loops;
+		this.#save();
 	}
 
 	/** Memory's named regions; the first voice's hits warm them, and each warm one hums. @param {readonly Region[]} list */

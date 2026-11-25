@@ -632,8 +632,7 @@ class KorzApple {
 		if (this.#board) ctx.putImageData(image, 0, 0);
 		return () => {
 			cancelAnimationFrame(raf);
-			this.dance.player.stop();
-			this.dance.on = false;
+			this.dance.rest();
 		};
 	}
 }
