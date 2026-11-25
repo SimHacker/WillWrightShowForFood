@@ -114,3 +114,35 @@ cache keeps 1,024 blocks and evicts the oldest: 6,597 built for 1,024 kept, the 
    terminal run there too.
 
 V8's own tiering of a block (interpreted, baseline, optimized) is not visible from a page.
+
+## The Korz IDE in the paper, and what it takes here
+
+Ungar, Ossher and Kimelman's Onward! 2014 paper
+([PDF](../../characters/david-ungar/sources/korz-2014-onward.pdf)) describes a prototype
+interpreter, debugger and "partial interactive development environment", implemented "using the
+Self language, virtual machine and environment". The paper doesn't name the UI framework; Self's
+environment is Morphic. What the IDE does, from section 5.1, Figures 4 to 7 and appendices C and D,
+and what each needs in the cabinet:
+
+| In the paper | Here now | To build |
+|---|---|---|
+| **A slot view** (Figure 4, green box): the guard, `method { rcvr ≤ screenParent, location ≤ southernHemi } drawPixel(x, y, c)`, with the body folded to an ellipsis and a button to open it | The KORZ tree shows each slot's doc, guard, layer, body and `emit`, read-only | Fold and unfold the body; edit the guard and body in place (the first editable panel) |
+| **Objects are views** (Figure 4, blue boxes): for each coordinate in a slot's guard, the slots that share that coordinate in that dimension, shown as an object. The same slot appears in `screenParent` and in `southernHemi` | `Sea.view`, and the "wins" standings | Plan item 3, projections: gather by a dimension, one object per coordinate |
+| **Navigation by dimension**: each slot inside an object shows its other dimensions as buttons; `location => southernHemi` opens that coordinate as an object | Nothing | A button per guard binding that opens a projection on it; back and forward |
+| **The slot space** (Figure 5): one axis per dimension with its coordinate hierarchy and a don't-care position, each slot placed by its guard | The 6502 opcode matrix, 16 by 16, is already one plane of it: `aaa` and `bbb` against `cc` | Axes for any two or three dimensions of any sea; the PDP-7's `device` against `pulse`; slots placed, don't-care shown |
+| **Subjective cuts** (Figures 6 and 7): `screenParent` as an object for display work, the locations as objects for location work, `isColorblind ≤ true` filtered for accessibility | Nothing | Save a cut (the dimensions gathered, the ones fixed, a filter) as a named view, like a 340-Window's configuration |
+| **One slot, many views**: "A data slot modified via one view will manifest the new value in other views also" | The tree rereads open branches once a second | Views derive from the sea reactively, so an edit shows everywhere at once |
+| **Execution requests and the debugger**: `(context, expression)` from a read-eval-print loop or the IDE; when lookup fails or is ambiguous, "bringing up the debugger" | `why` lines in the tree | Plan item 2, the why browser: a context, taken from the machine "now" or set by hand, showing the chain that runs. On a failed or ambiguous dispatch, stop the machine and open it there |
+| **Analyses** (D.1, D.3): the dimensions and coordinates in use; the slots in the don't-care position of a dimension, "worthy of examination"; selectors with no variant for a coordinate others have; completion in guards | Shadowing, wins, the opcodes no field explains | A per-dimension report: coordinates used, don't-care slots, gaps; hit counts (plan item 4) to show which slots ever ran |
+| **Merging spaces** (D.2): dimension names are global; rename dimensions and map coordinates when two spaces meet | Nothing | Needed when seas share a backplane: the PDP-7, the 6502 and their devices all have a `device`-like dimension |
+| **The implied dimension** (C.2): the same code shown with a different dimension in place of `rcvr` | Not applicable yet | Later, when a sea has a dimension that reads better as the receiver |
+
+**Dragging is editing a guard.** In a Morphic-style outliner, moving a slot from the
+`screenParent` object to the `southernHemi` object changes its guard; copying it there adds a
+slot with the new binding. Our views are Svelte, not Morphic, but the same rule makes the
+projections editable without a guard editor: the view a slot is dropped into says which binding
+changes. That is the step after the why browser, and like it waits for the layout layer.
+
+**Order:** fold and unfold slots in the tree; the why browser, opened by a failed dispatch;
+projections with navigation buttons; the slot-space plane for any two dimensions; saved cuts;
+the per-dimension report with hit counts; editing by drag; renaming for merged seas.
