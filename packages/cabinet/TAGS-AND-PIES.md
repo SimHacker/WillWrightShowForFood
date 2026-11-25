@@ -134,6 +134,15 @@ in cyan; hand the red pen to someone else and you are both drawing, in two color
 pens' colors live in the host today, so the table is generated from `PEN_COLORS` when the Forth
 source is built, and the two stay the same.
 
+**A pen that sees only its own color (planned).** A pen can be set to a mode where it sees only
+strokes of its own color, or near it, like a colored filter over the photocell. The 340 tests
+each pen against each stroke as it is drawn; in this mode the test also compares the stroke's
+color from its style record with the pen's, within a tolerance the pen sets. The cyan pen then
+picks only cyan drawing, so two people working on one picture can't grab each other's strokes,
+and a layer can be edited where it overlaps others. Strokes with no style are green phosphor, so
+a pen filtered to green sees the 1972 drawing and nothing added over it. The setting is another
+field of `PenInput`, off by default, so every pen sees everything, as the real one did.
+
 It is a hat tip to Chuck Moore's colorForth, where the color of each word in the source tells
 Forth what to do with it. Here the color is in the hand.
 
