@@ -522,6 +522,11 @@ dynamically updated icon"); then open four others in a grid.
   what. The default, and the look of the whole display, is green phosphor. The SVG export already
   takes a stroke color (`SvgOpts.stroke` in [media.ts](src/media.ts), green by default); the
   renderer needs the same setting per window.
+- **An intensity per window, over time.** Each window also has an intensity, applied on top of
+  the intensity each stroke already has from its display code (`Segment.intensity`, the 340's own
+  levels, which SYMELEC uses to blink the selected item). Varied over time, it fades a window in
+  or out, dims the ones in the background, marks the one that needs attention, blinks or
+  flickers. The display code doesn't change; the client's renderer does it.
 - **One pen for all of them.** The pen, emulated with the mouse or driven by a script, is mapped
   back through the window under it into that machine's coordinates, and the pen event goes to
   that machine. The cabinet already takes several pens at once (`PenInput`, named "mouse",
