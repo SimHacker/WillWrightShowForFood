@@ -573,6 +573,44 @@ system: the [`type` service](#services) types it into the client's Forth a line 
   old compiled code, the way Self recompiled and deoptimized when a method changed under a
   running program.
 
+**A view is a memory mapping.** Put together, a remote view is mostly configuration: a list of
+segments mapped into the view's core, each at any address the view chooses.
+
+```yaml
+view: symelec-picture
+map:
+  - at: 0o1000                       # Forth libraries, read-only, fetched once by URL
+    source: https://example.org/forth/turtle-color.fs
+    as: forth
+  - at: 0o4000                       # live, from the server's SYMELEC
+    from: cambridge:symelec
+    segment: PERMDF .. PERMDF+size   # expressions over SYMELEC's symbol table
+    refresh: frame
+    transform: relocate              # 340 jumps are absolute: retarget DJP, DJS, DDS
+  - at: 0o6000
+    from: cambridge:symelec
+    segment: LB .. WAREA
+    refresh: change
+pen:   { handler: on-pen }           # Forth words, run locally
+start: 0o4000                        # where the view's 340 begins
+```
+
+- **Formulas, not numbers.** Addresses, sizes, refresh rates and colors are expressions over the
+  program's symbol table, the view's configuration and the running environment, kept up to date
+  as reactive constraints: when a value they read changes, they are recomputed, as attributes
+  bound with `${...}` constraints were in OpenLaszlo and as `$derived` values are in Svelte.
+- **Libraries are segments too.** Forth source fetched by URL, compiled once and mapped read-only.
+- **Transformations on the way in.** Relocation, because 340 jumps are absolute 13-bit addresses
+  and a segment mapped elsewhere needs its `DJP`, `DJS` and `DDS` targets moved; also scaling,
+  color and filtering.
+- **Handlers are Forth.** The pen and command handlers are Forth words that run in the view and
+  send messages back to edit the real memory, such as dragging a vector's endpoint in the 340
+  machine language editor, which becomes `poke`s on the server.
+
+Forth is enough for the front end's event handlers, reactive handlers and message senders and
+receivers. That is NeWS's design: code sent to the display, handling input there and talking
+to the program over the network.
+
 **The display terminal: core, a 340 and a Forth CPU.** The smallest client that can run a view's
 code has no PDP-7 at all. It has core memory, a 340, and a Forth CPU device that executes
 threaded Forth code in core directly. Today's [Forth device](FORTH-DEVICE.md) runs beside a PDP-7
