@@ -48,18 +48,19 @@ plugged into the UNIBUS. [TUHS digest vol. 126, issue 5](https://www.tuhs.org/pi
 
 ## November 2026: Facebook
 
-Don and Phil became Facebook friends on 25 November 2026. Don's first message is
-[drafted](2026-11-facebook-dm.md) for him to send. It opens by answering Phil's 1986 Apple II
+Don and Phil became Facebook friends on 25 November 2026. Don sent his first message
+([draft](2026-11-facebook-dm.md)) that day. It opens by answering Phil's 1986 Apple II
 Forth question with Don's ProDOS Forth (fig-FORTH for the 6502, extended to Forth-83), and recalls
 PizzaTool. Then it covers the browser PDP-7 and Type 340, whose 340 engine is ported from Phil's
 `type340.c` and `display.c`, along with the Ultimate Hand, the Forth Day talk and demo, and
 PDP-7 UNIX. It ends with the KA10 that will run ITS like MIT-AI, linking its plan
 ([PDP10.md](../../packages/cabinet/PDP10.md)), and with how Korz works.
 
-A second message is [drafted](2026-11-assemblers-dm.md). It asks for his advice on assemblers:
-porting MIDAS's macros to the cabinet's three PDP-7 assemblers so one Forth source can build
-different header formats, a MIDAS front end for the PDP-7 and the PDP-10, a shared core
-independent of the instruction set, what he learned writing pdp7-unix's assembler, and which other
-tools to build ([ASSEMBLERS.md](../../packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool)).
+A follow-up is [drafted](2026-11-assemblers-dm.md). It asks for his advice on the programming
+environment: a tool core independent of the instruction set, MIDAS's macros on the PDP-7
+([ASSEMBLERS.md](../../packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool)),
+a 6502 macro assembler to get Don's Apple ][ Forth source back
+([plan](../don-hopkins/artifacts/Apple2Forth/README.md#plan-getting-the-source-back)), which PDP-10
+assemblers and tools to study, and what to avoid.
 
 ↑ [Phil Budne](README.md)

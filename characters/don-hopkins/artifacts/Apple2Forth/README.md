@@ -119,15 +119,44 @@ for the terminal to play again.
 - Decode `von` and `voff`.
 - Replay blocks 32 to 37 through the H19 emulator (`31 load`, then `term`) and record what the
   screen shows.
-- The same dictionary and disassembler views the cabinet's PDP-7 Forth has, reading this Forth's
-  dictionary out of the emulated Apple's memory.
-- Decompile the whole system, `H19.SYSTEM` and the source in `BLOCKS.4TH`, into source a
-  metacompiler can rebuild: the Forth kernel's 6502 code, the threaded definitions, and the
-  dictionary headers. Then the image can be rebuilt, changed and documented word by word, the way
-  [Mitch Bradley's PDP-7 Forth](../../../../packages/cabinet/tapes/pdp7forth/README.md) is built
-  from source in the cabinet. The source is written for a 6502 macro assembler in TypeScript, with
-  the headers as macros
-  ([ASSEMBLERS.md](../../../../packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool)).
-- A full manual for this Forth-83 dialect.
-- An Apple ][ Forth coprocessor card in the emulator, like the PDP-7's
+- Get the source back: [the plan below](#plan-getting-the-source-back).
+
+## Plan: getting the source back
+
+The source of most of the system, the kernel and the H19 terminal among it, is lost. What
+survives is the saved image `H19.SYSTEM` and the 48 blocks of `BLOCKS.4TH`. The goal is source
+that rebuilds `H19.SYSTEM` byte for byte, then can be changed, rebuilt and documented word by
+word, the way [Mitch Bradley's PDP-7 Forth](../../../../packages/cabinet/tapes/pdp7forth/README.md)
+is built from source in the cabinet.
+
+1. **Extract the files.** Read `H19.SYSTEM` and `BLOCKS.4TH` off `forth.dsk` with the cabinet's
+   ProDOS reader ([`src/apple2/prodos.ts`](../../../../packages/cabinet/src/apple2/prodos.ts)), and
+   find the image's load address.
+2. **Walk the dictionary.** fig-FORTH headers are a count byte, the name with its last character's
+   high bit set, a link field, a code field and the body. Follow the links from the last word to
+   the first and list every word with its address. The names are already visible in the image
+   (`PCL-DIGIT`, `ERROR-SOUND`, `KEYCMDS`).
+3. **Classify each word by its code field**: colon definition, constant, variable, user
+   variable, `DOES>` word, or code word, whose code field points at its own body.
+4. **Decompile the colon definitions** to Forth: each cell is a word's code field address, so
+   print its name, and handle the words that carry inline data (`LIT`, `BRANCH`, `0BRANCH`,
+   `(LOOP)`, `(.")` and the rest).
+5. **Disassemble the code words** to 6502 source with the recovered names as symbols. This needs
+   a 6502 disassembler on the cabinet's shared assembler core.
+6. **Write it as macro source** for a 6502 macro assembler in TypeScript on the same core, with
+   each header as a macro
+   ([ASSEMBLERS.md](../../../../packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool)).
+   The header macro bumps the dictionary pointer by one when a code field would land at `$xxFF`,
+   because the 6502's `JMP (addr)` takes the high byte from `$xx00` there, and the inner
+   interpreter jumps through the code field with `JMP (W)`.
+7. **Rebuild and compare** with `H19.SYSTEM` byte for byte, and with `BLOCKS.4TH` where it has the
+   source of a word. Every difference is a decompiler bug or a fact about how the image was built.
+8. **Use it live.** The dictionary and disassembler views the cabinet's PDP-7 Forth has, reading
+   this Forth's dictionary out of the emulated Apple's memory as it runs.
+
+Then, with the headers as macros:
+
+- Try other header formats, threading models, and headers and metadata kept out of band.
+- Generate documentation from the same source, and write a full manual for this Forth-83 dialect.
+- Build an Apple ][ Forth coprocessor card in the emulator, like the PDP-7's
   ([FORTH-DEVICE.md](../../../../packages/cabinet/FORTH-DEVICE.md)).
