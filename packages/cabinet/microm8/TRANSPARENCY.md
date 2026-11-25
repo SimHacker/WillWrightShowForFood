@@ -102,7 +102,7 @@ TypeScript and the JavaScript light up together; click a hires pixel and the byt
 wrote it, the shader line that drew it and the video circuit's figure do the same. Time is the
 extra axis: every map is taken at a cycle, and rewind moves all of them together.
 
-**The gaps are stated, not hidden.** Browsers don't expose native code or the GPU's instruction
+**Where the chain stops.** Browsers don't expose native code or the GPU's instruction
 set, so in the browser the chain stops at JavaScript and WGSL. A layer without a map (a program
 with no source, a ROM with no printed listing) shows as unmapped, with the address range it covers.
 
@@ -180,8 +180,8 @@ interpreter.
 
 ### Up: from the 6502 to the program it is interpreting
 
-Most of the time an Apple is running somebody's interpreter, and the question is not "which 6502
-instruction?" but "which line of my program?". Each interpreter has a register that says where it
+Most of the time an Apple is running somebody's interpreter, so the question a user asks is
+usually "which line of my program?" rather than "which 6502 instruction?". Each interpreter has a register that says where it
 is in its own program, and a way to decode that program from memory. An **interpreter layer** is a
 declaration of both:
 
@@ -227,7 +227,7 @@ The memory panel already offers, per program, the views it has maps for: octal, 
 in each dialect, and the scan. For the Apple the views are hex, disassembly, the listing as printed,
 the scan with its rectangle highlighted, and the interpreter layer's program, all following the PC.
 The Red Book's schematics are a layer too: the video generator figure (S-11) is where the hires
-decoder's shader explains itself, which is the view Don asked Melody about in 2018
+decoder's shader is explained, which is the view Don asked Melody about in 2018
 ([CAUSE-AND-EFFECT.md](../CAUSE-AND-EFFECT.md#along-time-from-a-hand-to-the-phosphor-and-back)).
 
 ## Time: rewind without recording everything

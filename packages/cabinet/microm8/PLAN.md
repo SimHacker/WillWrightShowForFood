@@ -131,7 +131,7 @@ gives the same trace as running with it off.
 
 Applesoft first, then SWEET 16, Integer BASIC, Pascal and Forth
 ([TRANSPARENCY.md](TRANSPARENCY.md#up-from-the-6502-to-the-program-it-is-interpreting)).
-The ROM is the language. Korz accelerates the hot calls and the TypeScript of those slots is the
+Each language runs from its ROM. Korz accelerates the hot calls and the TypeScript of those slots is the
 thing we show, explain, and share. microM8's Go dialect is not the implementation.
 
 **Done when** a breakpoint on a BASIC line stops there; the profiler charges a BASIC program's

@@ -22,7 +22,7 @@ The Go build in the page today: one 41 MB module; one machine per JavaScript rea
 no inspection and no profiling of the Go from the browser's tools; every new hook a Go change and a
 rebuild; frames copied out through `syscall/js`; about 1.7 MHz in the browser
 ([`src/microm8/microm8.ts`](../src/microm8/microm8.ts)). The cabinet's
-[manifesto](../MANIFESTO.md) wants every register, byte and device of every machine reachable from
+[manifesto](../MANIFESTO.md) requires every register, byte and device of every machine reachable from
 the page.
 
 Requirements:
@@ -44,7 +44,7 @@ Requirements:
 
 ## The rules
 
-**Re-cut along the cabinet's seams, not microM8's.** microM8's structure grew around one desktop
+**Follow the cabinet's structure, not microM8's.** microM8's structure grew around one desktop
 program: `Interpretable` is one Go interface of about 355 methods, the `settings` package holds 102
 global arrays indexed by VM slot (158 files reach into it), and machine state lives at fixed
 addresses in a 1 MB space per VM slot. Translating that line by line would carry those problems into
@@ -141,7 +141,7 @@ that aren't the instruction's own access:
 On the Apple these matter, because the soft switches react to any access. The language card's
 write enable needs two reads in a row; `STA $C0xx,X` on an NMOS part reads the switch before it writes
 it, so the switch sees two accesses; the Disk II's write sequence depends on the exact cycle of each access. SingleStepTests
-records the bus activity of every opcode, so all of this is tested, not hoped for ([PLAN.md](PLAN.md)).
+records the bus activity of every opcode, so all of this is tested ([PLAN.md](PLAN.md)).
 
 **Variants.** The NMOS table holds all 256 entries, including the stable undocumented opcodes
 (`LAX`, `SAX`, `DCP`, `ISC`, `SLO`, `RLA`, `SRE`, `RRA`, `ANC`, `ALR`, `ARR`, `SBX`) and the `JAM`s. The
@@ -322,7 +322,7 @@ overrides part of it, and any address nobody claims returns what the video scann
 bus. That leftover byte is what Don Lancaster turned into his vapor lock (*Enhancing Your Apple II*,
 volume 1, 1984): plant a marker byte in screen memory, poll an unclaimed address until the marker
 comes back, and the program knows where the beam is to the cycle, so it can switch modes at any
-scanline. This one line is where an emulator keeps or breaks that trick, so `floatingBus()` returns
+scanline. Vapor lock works in an emulator only if this line is exact, so `floatingBus()` returns
 the byte the scanner fetches on this exact cycle, from the same address function as the shaders
 ([video](#video-on-the-gpu)), and a vapor-lock program is one of the tests ([PLAN.md](PLAN.md)).
 

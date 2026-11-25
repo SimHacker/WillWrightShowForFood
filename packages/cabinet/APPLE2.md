@@ -1,6 +1,6 @@
 # The Apple ][ section
 
-The cabinet's first machine that isn't DEC's. It boots real disks on the Korz Apple ][+: a 6502
+The Apple ][ is the cabinet's first machine not made by DEC. The cabinet boots real disks on the Korz Apple ][+: a 6502
 at four rungs, from a switch statement to a compiler into JavaScript, with the language card, the
 Disk II and microM8's 14 MHz hi-res scan ([src/korz/apple2](src/korz/apple2/README.md),
 [BENCHMARKS.md](BENCHMARKS.md#apple-)). microM8, compiled to WebAssembly
@@ -99,7 +99,7 @@ Little Computer People disks was played.
 
 ## Disk images
 
-The three Apple II file systems, read and written in TypeScript, so the same code runs at build
+The three Apple II file systems are read and written in TypeScript, so the same code runs at build
 time under Node and in the page next to the emulator. That is how files get onto a disk before
 it boots: a saved person into a game's save disk, a block of Forth source onto Don's disk.
 

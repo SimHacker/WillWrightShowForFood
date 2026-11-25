@@ -33,7 +33,7 @@ Each layer can be swapped without touching the others:
 ## The DataHand, layer by layer
 
 The DataHand shows what each layer is for. The top is cross-platform and in floating point; the
-bottom is one machine's, and is written in collusion with that machine's software.
+bottom is one machine's, and is written to fit that machine's software.
 
 - **Instrument (built).** A webcam and MediaPipe in the browser give 21 hand landmarks a frame,
   in floating point. A synthetic waving hand or finger sliders stand in when no hand is seen.
@@ -52,7 +52,7 @@ bottom is one machine's, and is written in collusion with that machine's softwar
   error is made up by the next and never adds up along a finger
   ([HAND-TRACKING.md](HAND-TRACKING.md#units-the-pdp-7s-not-the-browsers)).
 
-The adaptor is smart so the PDP-7 doesn't have to be. A Forth program draws the hand by
+The adaptor does the conversion, so the PDP-7 program stays simple. A Forth program draws the hand by
 reading registers and walking the turtle through them, with no floating point and no
 trigonometry of its own. Then it can turn the picture with `60 VIEW DATAHAND`, spin it, or ask
 `BIRD?` ([datahand.fs](tapes/pdp7forth/datahand.fs)). Binding a device to a machine

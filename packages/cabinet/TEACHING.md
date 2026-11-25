@@ -23,8 +23,8 @@ IOT instructions: plugging in a device literally added instructions to the machi
 display is a second processor. It has its own program counter and fetches its own instruction
 stream, the display file, from the same core the PDP-7 uses. It runs subroutines in that stream
 (DJS) and interrupts the PDP-7 when it stops or the light pen sees something. The PDP-7 writes
-a program; the 340 runs it. Everything in this cabinet grows out of that arrangement.
-[reference/GUIDE.md](reference/GUIDE.md) is the student's tour of the iron.
+a program; the 340 runs it.
+[reference/GUIDE.md](reference/GUIDE.md) is the student's tour of the hardware.
 
 ## Seven themes
 
@@ -37,7 +37,7 @@ dividers once, then calls it every frame with a single DJS. The labels are store
 strings, and each costs four display words to draw.
 
 This is Myer and Sutherland's **wheel of reincarnation** (1968), which puts the 340 at the
-"cardinal point" where a display processor turns into a computer. The cabinet doesn't hide this.
+"cardinal point" where a display processor turns into a computer.
 The memory panel disassembles the 340's display words next to the PDP-7's own instructions.
 [ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md#the-wheel-of-reincarnation) follows the
 wheel through NeWS, AJAX and GPUs.
@@ -79,8 +79,8 @@ backplane has a power switch the unit itself can flip
 The Turing engine's tape window holds 6-bit cells, three to a word. That is exactly the 340's
 character-mode format, so the tape *is* a display list. Minsky's alphabet `0 1 y A` is chosen
 from Type 342 codes (60, 61, 31, 01) for that reason. `turing.fs` copies 13 words of the window
-into each frame. It never converts them: the 342 draws the engine's own cells. When two
-processors agree on a memory format, the interface is the memory.
+into each frame. It never converts them: the 342 draws the engine's own cells. The two
+processors exchange the tape through core with no conversion step.
 
 ### 5. Forth as a compiler for other machines' tables
 
@@ -97,22 +97,22 @@ machine compiles its own tables, is the next step.
 
 ### 6. Inspectable all the way down
 
-Nothing is a black box. Forth itself is compiled the way Mitch compiles it under SIMH: the kernel
+Forth itself is compiled the way Mitch compiles it under SIMH: the kernel
 boots, reads its sources from the paper-tape reader, and the core image is kept
 ([forth.ts](src/forth.ts)). Every part a program draws can carry a **tag**, a 340 word saying
 what is being drawn. Hovering it with the pen names it, and the plan is for a pie menu to offer
 what can be done to it ([TAGS-AND-PIES.md](TAGS-AND-PIES.md)). Heinz's 1972 ring structures run
 inside Forth unchanged, and a panel draws them as they grow
-([FORTH-RINGS.md](FORTH-RINGS.md)). The [MANIFESTO.md](MANIFESTO.md) states the attitude: the
-1960s machine stays honest, and everything around it is ours to make better.
+([FORTH-RINGS.md](FORTH-RINGS.md)). [MANIFESTO.md](MANIFESTO.md) states the rule: the
+1960s machine is emulated as it was, and the tools around it may be improved.
 
 ### 7. Small machines make costs visible
 
-8K words is a budget you can feel. The Turing view and the nine machines did not fit until the
+8K words is a hard limit. The Turing view and the nine machines did not fit until the
 strings were packed three characters to a word, a trick PDP-7 programmers knew well. Forth
 reads 80 columns, and so the generator keeps its lines short. The Ultimate Machine's animation
-speed is a question of how many frames Forth draws while the hand moves. Each limit is a lesson
-in representation, and students hit them for real, not in an exercise.
+speed is a question of how many frames Forth draws while the hand moves. Each limit is a problem
+in data representation that students meet in a working program.
 
 ## Anatomy: every layer, and the file it lives in
 
@@ -258,7 +258,7 @@ Every layer of it fits on one screen:
   plus [constants for the register ranges](tapes/pdp7forth/ultimate.fs#L47) (`um-max`,
   `ph-max`), so the drawing code scales positions instead of hard-coding them.
 - **The view** reads `um-lid`, `um-arm` and `um-phase` each frame and draws the lid, the arm and
-  the lamps from them. The device never knows it is drawn.
+  the lamps from them. The device has no drawing code.
 - **The interrupt handler** [`on-interrupt`](tapes/pdp7forth/ultimate.fs#L219) is a skip chain,
   as on a real PDP-7: pen hit? box changed? teletype done?
 - **The cartridge** [ULTIMATE](../../apps/ties/src/lib/cabinet-programs.js#L382) plugs it in
@@ -362,12 +362,12 @@ touch at [`ULTIMATE_SWITCH`](src/forth.ts#L180).
 ## Minsky's machines, as lessons
 
 - **The Ultimate Machine**: a unit whose function is to turn itself off. It raises lifecycle,
-  reset and who owns the power switch, and it is funny, which helps.
+  reset and who owns the power switch.
 - **The universal Turing machine**: AI Memo 33's 7-state, 4-symbol UTM, recovered from Minsky's
   TECO program. Students can watch one machine run another written on its own tape, and the
   display shows the rule that fires at each step.
 - **The busy beavers**: BB5 takes 11,798,826 steps to halt. Watching it run free while the engine
-  pages its tape thousands of cells away is a feel for the halting problem no proof gives.
+  pages its tape thousands of cells away gives students an intuition for the halting problem.
 
 ## Where CAM-6 fits
 
@@ -378,9 +378,9 @@ CAM-6 is the third co-processor on the same contract, and the one these ideas or
   cells. It runs off-the-shelf CAM-6 rules.
 - **The language.** Toffoli and Margolus's rule compiler is ported into Mitch's PDP-7 Forth. Don
   cloned it in Mitch's Forth decades ago, and his [CAM6](https://github.com/SimHacker/CAM6)
-  simulator (CAM6.js with jsforth) runs the same rules in the browser today. TM-Forth was the
-  rehearsal.
-- **The picture.** Cells want pixels and the 340 draws vectors, so the plan adds two raster
+  simulator (CAM6.js with jsforth) runs the same rules in the browser today. TM-Forth was built
+  first, as practice for it.
+- **The picture.** Cells need pixels and the 340 draws vectors, so the plan adds two raster
   devices that also read core directly: a cell renderer (state through a color map) and a
   framebuffer described by a byte pointer and strides
   ([DESIGN.md](DESIGN.md#raster-a-vanilla-virtual-video-display-and-a-cell-renderer)). The 340
@@ -397,7 +397,7 @@ CAM-6 is designed but not built yet. Everything above it on this page runs today
 
 ## For particular readers
 
-- **Mitch:** your Forth is the spine of all of this. The cabinet runs
+- **Mitch:** all of this runs on your Forth. The cabinet runs
   [kernel-names-full.s](tapes/pdp7forth/kernel-names-full.s), a version that keeps names whole
   ([FORTH-RINGS.md](FORTH-RINGS.md)), and compiles it on the emulated machine from paper tape, as
   your prelude.py does. [code.fs](tapes/pdp7forth/code.fs), [interrupt.fs](tapes/pdp7forth/interrupt.fs),
@@ -407,7 +407,7 @@ CAM-6 is designed but not built yet. Everything above it on this page runs today
   answer messages (IOTs), and the 340 sits where Sketchpad's lineage and the wheel of
   reincarnation cross. [ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md) is the
   longer argument, including why a device's interface can be reused across CPUs and backplanes.
-- **Heinz:** PIXIE's 1972 answers are under all of this. Display files are compiled from
+- **Heinz:** this is built on PIXIE's 1972 design. Display files are compiled from
   structures, the light pen finds its owner, and rings hold the data
   ([PIXIE-RESTORATION.md](PIXIE-RESTORATION.md)). [reference/FORTH-TURTLE-340.md](reference/FORTH-TURTLE-340.md)
   shows students building the same things in Forth and then reading how you did them.
@@ -435,7 +435,7 @@ CAM-6 is designed but not built yet. Everything above it on this page runs today
 
 | If you want | Read |
 |---|---|
-| the iron, for students | [reference/GUIDE.md](reference/GUIDE.md), [reference/GUIDE-340.md](reference/GUIDE-340.md) |
+| the hardware, for students | [reference/GUIDE.md](reference/GUIDE.md), [reference/GUIDE-340.md](reference/GUIDE-340.md) |
 | Forth, turtles and light pens as a course | [reference/FORTH-TURTLE-340.md](reference/FORTH-TURTLE-340.md) |
 | co-processors, devices, lineage | [ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md) |
 | the Turing engine, the Ultimate Machine, TM-Forth | [TURING-ENGINE.md](TURING-ENGINE.md) |

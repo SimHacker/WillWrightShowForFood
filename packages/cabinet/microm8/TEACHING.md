@@ -174,7 +174,7 @@ color subcarrier as a wave the dots ride against, and at the end the screen, dra
 pixels. Signals are cables carrying their live values. Clicking any part opens its figure, its code,
 and the memory it is reading.
 
-**The work is the netlist**: which chip feeds which, signal by signal, transcribed from the figures.
+**The main work is the netlist**: which chip feeds which, signal by signal, transcribed from the figures.
 Check: a chip-level simulation of the transcribed netlist, run for one frame, produces the same dots
 as the reference decoder for every test screen. It is slow and only runs for that check and for the
 slow-motion view.

@@ -106,7 +106,7 @@ These are cycles of the emulated machine, not host time.
 Times a real Apple ][+. Node 20.19, Apple M4 Max. The Korz figures are the quicker round after a
 cold one. microM8 is its WebAssembly build at warp 100: two seconds of its cycle counter once the
 program is spinning, and the whole boot for DOS. From
-[GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-waits).
+[GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-compared-with-the-korz-engines).
 
 | Workload | switch | compiler | resolver | microM8 (Wasm) | interpreter |
 |---|---:|---:|---:|---:|---:|
@@ -119,7 +119,7 @@ two-instruction loop. The Korz switch computes the beam address on every bus cyc
 near 130 million cycles a second. microM8's Wasm module is 41,316,183 bytes, and the Go runtime,
 the scheduler and the garbage collector share its one thread with the CPU loop. Why it lands next
 to the Korz interpreter is written up in
-[GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-waits).
+[GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-compared-with-the-korz-engines).
 
 ### A fast wait
 

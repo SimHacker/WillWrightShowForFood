@@ -3,7 +3,7 @@
 The plan for adding a Videx Videoterm 80-column card to microM8, written to be carried out step by
 step. The card is what Don's 1985 ProDOS Forth and its H19 terminal print on
 ([Apple2Forth](../../characters/don-hopkins/artifacts/Apple2Forth/README.md)); without it the
-terminal draws into nothing. The firmware and character ROMs are already in the fork (patch 0002);
+terminal's output is not displayed. The firmware and character ROMs are already in the fork (patch 0002);
 everything else is here.
 
 Read first:

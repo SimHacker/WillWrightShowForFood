@@ -38,7 +38,7 @@ intensity, either one per 256-byte page of the 64K, or one per byte within a cho
 or aux memory (`core/memory/mmu.go`, `HeatMapRead`/`HeatMapWrite`). There is also a combined execute mode,
 instruction tracing, and settings for full CPU recording, to the debugger or to a file
 (`DebugFullCPURecord`, `FileFullCPURecord`). Memory writes are already recorded in real time for the rewind, and the 100% mode records
-everything. What's missing is less the data than the views: a per-address map of reads, writes and
+everything. Most of the data is already captured; what's missing are the views: a per-address map of reads, writes and
 executes over a whole recording, and an access history you can browse by address.
 
 ## What turtleSpaces exposes
@@ -174,7 +174,7 @@ UI components and the WebGPU tile renderer
   one reactive class whose fields are runes, so any component that reads them updates by itself
   ([`MicropolisReactive.svelte.ts`](https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/src/lib/MicropolisReactive.svelte.ts),
   with integration, simulation and poke tests beside it).
-- **The trap it found**: when the module's memory grows (loading a city), the old views detach and
+- **Memory growth**: when the module's memory grows (loading a city), the old views detach and
   read nothing; `syncMapViews()` makes new ones. Go's WebAssembly memory grows too, so microM8's
   views of RAM, framebuffer and audio need the same re-binding, keyed to a generation counter the
   module bumps when memory moves.
@@ -188,7 +188,7 @@ Embind, a `MicroM8Reactive.svelte.ts` holding the machine's registers, run state
 access-log counts as runes, and the cabinet's panels and display devices reading RAM through views.
 The cabinet's own machines and microM8's would then look the same to every component.
 
-**Costs to be honest about.** Go's WebAssembly output is large, often tens of megabytes before
+**Costs.** Go's WebAssembly output is large, often tens of megabytes before
 compression; TinyGo is smaller but may not compile everything microM8 uses. Go's runtime in the
 browser is single-threaded, so the Apple runs on the cabinet's clock or in a worker that posts
 frames. None of that matters much for a 1 MHz 6502.
