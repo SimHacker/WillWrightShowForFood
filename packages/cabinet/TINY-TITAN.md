@@ -573,6 +573,17 @@ system: the [`type` service](#services) types it into the client's Forth a line 
   old compiled code, the way Self recompiled and deoptimized when a method changed under a
   running program.
 
+**The display terminal: core, a 340 and a Forth CPU.** The smallest client that can run a view's
+code has no PDP-7 at all. It has core memory, a 340, and a Forth CPU device that executes
+threaded Forth code in core directly. Today's [Forth device](FORTH-DEVICE.md) runs beside a PDP-7
+and takes over when the PDP-7 fetches `NEXT`; this one is the whole processor. The Forth system
+itself isn't in the terminal's memory either. The compiler, from Forth source to threaded code, is
+TypeScript running outside the emulator: the
+[metacompiler on Korz](ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool). It
+reads the source the view brought, looks in at the terminal's core, and pokes in the compiled
+words. The dictionary, the names and the outer interpreter stay on the TypeScript side, so core
+holds only the code that runs and the display lists it draws.
+
 **Embedded remote apps.** Put the two together and an app can be embedded in any client as a
 remote view of memory plus a few CPU instructions of glue. The display segments come from the
 app's machine. The glue runs on the client's CPU and does only what has to be local: the pen
