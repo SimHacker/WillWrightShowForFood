@@ -57,6 +57,35 @@ craft, and what the lists did for people working in public.
 ShivOS carried AppleTalk, IP, IPX, DECnet and SLIP in one firmware. How he layered it, and what
 he'd keep.
 
+### 7a. ITS tourists
+
+He was BUDD on ITS, "a typo that stuck"; Don was A2DEH on MC. His finger page keeps MC's last
+days ("The ITS machines are being shut down"). Finger, Fido, WHOIS: the small, friendly town
+the net was, and what the ITS tools taught Unix. With Lars, who boots ITS again.
+
+### 7b. SAFE, PRISM, Alpha
+
+He wrote the code scheduler for VAST, the VAX to SAFE Translator, on Alan Kotok's 64-bit RISC
+project, before it became PRISM and, some say, Alpha ("Almost eXactly Prism"). Kotok signed
+his 36-bit anniversary booklet. The PDP-1 and Spacewar connect Kotok to the 340.
+
+### 7c. One display simulator, three displays
+
+`display.c` drives the PDP-1 Type 30, the VT11 and the 340. Cabinet ported the 340 path. Would
+the Type 30 and Spacewar be the next thing to bring to the browser?
+
+### 8. Lost causes
+
+His home page files XY display simulation, SNOBOL4, LIL, Finger and the PDP-10 under "The
+outmoded, the ill-fated, the overlooked, the doomed, and other lost causes", next to airships
+and flying boats. Cabinet is a museum of lost causes that run. Ask him which one he'd bring
+back next, and whether Cabinet's terminals should click like his VT52 sound file.
+
+### 9. The Apple II Forth he asked for in 1986
+
+Don's own Apple II Forth boots in Cabinet. Forty years late, here's an answer to the FIGIL
+request.
+
 ## Format
 
 Async suits him as it suits Lars: a recorded walk through Cabinet's 340 with comments on the

@@ -21,7 +21,9 @@ I/O interface. It is the reusable display machinery between them:
   The source says it began in 2003, came from the VT11 simulator, and models the
   340 proper rather than a particular host interface.
 - [`display/display.c`](https://github.com/open-simh/simh/blob/master/display/display.c)
-  is his host- and operating-system-independent XY display model, including
+  is his host- and operating-system-independent XY display model
+  ([his page for it](https://www.regressive.org/phil/xy/): PDP-1 Type 30, PDP-11 VT11, and the
+  340 on the PDP-6, on X11, MacOS and Win32), including
   phosphor persistence and point rendering. Its header credits revisions by
   Douglas A. Gwyn and says it started from Douglas W. Jones's PDP-8/E display
   emulator, `vc8e.c`.
@@ -69,7 +71,33 @@ proposal, not the implementation that shipped. Cabinet later took a focused
 TypeScript-port route, with explicit PIXIE provenance and a browser-native
 interaction model.
 
+## His home page
+
+[regressive.org/phil](https://www.regressive.org/phil/), "This Page is Lynx Friendly!", lists
+his "Personal Fascinations" under the heading "The outmoded, the ill-fated, the overlooked,
+the doomed, and other lost causes": computer software archeology, XY display simulation,
+SNOBOL4, LIL (the Little Implementation Language), Finger, the PDP-10; and outmoded
+transport: Evinrude and Johnson boats, steam power, airships, flying boats, the China Clipper,
+the Martin Mars. His goal: "To someday, do six impossible things before breakfast." His
+specialty: "wading into swamps that make most people turn and run."
+
+It also collects his favorite keyboards ("Now with VT52 keyclick/buzzer sound file!!"),
+classics such as DECWRL's *Measured Capacity of an Ethernet* and Spencer and Collyer's
+*#ifdef Considered Harmful*, recipes, music, and the non-profit sites he built and maintains.
+He has volunteered as a Jewish Big Brother: "It's the experience of two lifetimes!"
+
+His [PDP-10 page](https://www.regressive.org/phil/pdp10/), [finger page](https://www.regressive.org/phil/finger.html)
+and the rest are summarized in [sources/home-pages.md](sources/home-pages.md): the high-school
+KA10 over an acoustic coupler, ITS as BUDD ("a typo that stuck"), BU's 2060 until October
+1986, SAFE and VAST under Alan Kotok, and his ITS-style finger.
+
 ## Conversation hooks
+
+- XY display simulation is on his own list of lost causes, and it's how Cabinet's 340 exists.
+  What would he still change about it?
+- LIL and Finger: what draws him to the small, overlooked tools?
+- His VT52 keyclick file: should Cabinet's terminals (the Videx on the Apple II, the 340's
+  keyboard) click?
 
 - How did the Type 340 emulator's boundary between processor semantics,
   phosphor/display behavior, and host glue make the code useful across several

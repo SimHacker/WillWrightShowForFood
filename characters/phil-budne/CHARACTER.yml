@@ -29,12 +29,23 @@ invitation:
 bio:
   summary: |
     **Phil Budne**, Unix systems programmer and consultant in Arlington, Massachusetts
-    (Ultimate.COM). He wrote SIMH's simulator-independent Type 340 display processor
-    (`display/type340.c`) and maintained its XY display model (`display/display.c`), the
-    display heart of Cabinet's browser PDP-7. He helped bring PDP-7 UNIX back from scanned
+    (Ultimate.COM). He wrote SIMH's calligraphic XY display simulator (`display/display.c`,
+    with phosphor decay, for the PDP-1 Type 30, PDP-11 VT11 and the Type 340 on the PDP-6)
+    and its simulator-independent Type 340 display processor (`display/type340.c`), the
+    display heart of Cabinet's browser PDP-7. An ITS tourist as BUDD ("a typo that stuck"),
+    he grew up on PDP-10s and wrote a Unix finger inspired by ITS and TOPS-20. He helped bring PDP-7 UNIX back from scanned
     listings, resurrected the TMG compiler-compiler, and maintains CSNOBOL4, the portable C
     port of Bell Labs' Macro SNOBOL4. His resume's own words for the work: "Wading into, and
     draining swamps" and "Doing the nasty, gnarly stuff other people don't want to do".
+
+fascinations:
+  # His home page's own list, under "The outmoded, the ill-fated, the overlooked, the doomed,
+  # and other lost causes"
+  computing: [computer software archeology, XY display simulation, SNOBOL4, "LIL, the Little Implementation Language", Finger, the PDP-10]
+  outmoded_transport: [Evinrude and Johnson boats, steam power, airships, flying boats, China Clipper, Martin Mars]
+  other: [the Romanovs, reality]
+  goal: "To someday, do six impossible things before breakfast."
+  keyboards: "Favorite keyboards page, with a VT52 keyclick/buzzer sound file"
 
 career:
   # From his public resume, http://www.ultimate.com/phil/resume.html
@@ -54,12 +65,18 @@ works:
   - { name: "XY display model", url: "https://github.com/open-simh/simh/blob/master/display/display.c", note: "phosphor persistence; revisions by Douglas A. Gwyn; roots in Douglas W. Jones's vc8e.c" }
   - { name: "pdp7-unix (collaborative)", url: "https://github.com/philbudne/pdp7-unix", note: "typed in the kernel, helped debug and comment it, found the disk layout, wrote a shell, ls and bootstrap in PDP-7 assembler" }
   - { name: "TMG", note: "resurrected the compiler-compiler for PDP-7 UNIX" }
+  - { name: "DEC XY Display Simulator", url: "https://www.regressive.org/phil/xy/", note: "PDP-1 Type 30, PDP-11 VT11, Type 340; X11, MacOS, Win32" }
+  - { name: "Phil's Finger Program", url: "https://www.regressive.org/phil/finger.html", note: "ITS/TOPS-20 style finger for Unix; comp.sources.unix vol. 25" }
+  - { name: "TMG in TMG, and a B compiler in TMG", url: "https://github.com/philbudne/pdp7-unix/blob/tmg/misc/tmg-notes.txt" }
+  - { name: "pbsh.s", url: "https://github.com/DoctorWkt/pdp7-unix/blob/master/src/other/pbsh.s", note: "replacement shell for PDP-7 UNIX" }
+  - { name: "XXL", url: "https://github.com/philbudne/xxl", note: "eXperimental eXtensible Language, 2021 on" }
   - { name: "CSNOBOL4", url: "https://github.com/philbudne/csnobol4" }
   - { name: "spipatjs", url: "https://github.com/philbudne/spipatjs", note: "SNOBOL/SPITBOL patterns in JavaScript" }
 
 with_don:
   # Corrected 2026-11-25: Phil was never at Sun. Don and Phil knew each other through
   # Usenet, mailing lists and email; in 1990 Don was at Sun and Phil at Shiva.
+  - "Both were on MIT-MC: Phil as tourist BUDD, Don as A2DEH; Phil's finger page keeps MC's shutdown notice from May 1990"
   - "1986: Phil's FIGIL request for an Apple IIe Forth reached Don at MIT-MC"
   - "1990: Phil passed Don Rick Adams's FTP; asked to forward Don's PizzaTool post"
   - "2020: Lars Brinkhoff to Don: 'Phil Budne did most of the work' on the Type 340"
@@ -68,6 +85,7 @@ with_don:
 sources:
   wikipedia: null
   web:
+    - https://www.regressive.org/phil/
     - http://www.ultimate.com/phil/resume.html
     - http://www.ultimate.com/phil/reschron.html
     - https://github.com/philbudne
@@ -76,6 +94,7 @@ sources:
     - https://github.com/open-simh/simh/blob/master/display/type340.c
     - https://github.com/open-simh/simh/blob/master/display/display.c
     - https://github.com/open-simh/simh/blob/master/PDP18B/pdp18b_dpy.c
+  own_pages: sources/home-pages.md
   mailing_lists:
     - sources/1986-09-figil-apple-forth.md
     - sources/2026-05-tuhs-toy-clock.md
