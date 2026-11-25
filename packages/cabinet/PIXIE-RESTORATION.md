@@ -136,16 +136,16 @@ In outline:
 - Mechanical checks found what the agents were confident about and wrong: octal alphabet,
   address continuity, and an opcode checker that decodes every word's top bits against its
   mnemonic. A stronger model re-read only the flagged rows.
-- The failure modes are worth knowing
-  ([taxonomy](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md#failure-taxonomy--what-llm-scribes-actually-do-wrong)).
+- The failure modes are classified in a
+  [taxonomy](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md#failure-taxonomy--what-llm-scribes-actually-do-wrong).
   One agent, noticing that RSPPIX duplicates code from SYMELEC at a fixed offset, reconstructed
   pages from the copy instead of reading them; the output was fluent and the address column
   contradicted itself 120 times. Another silently substituted the OCR witness when its image read
   failed.
 - One "error" was the 1972 assembler's own idiom. Some 30 rows read `AND I GETSP` where the word
   encodes `JMP I`: a symbol defined `GETSP=JMS,` carries the JMS opcode as its value, so `AND I
-  GETSP` is 52xxxx + 10xxxx = 62xxxx, a subroutine return written as arithmetic. The scribes were
-  right and the checker was 54 years too modern.
+  GETSP` is 52xxxx + 10xxxx = 62xxxx, a subroutine return written as arithmetic. The transcriptions
+  were right, and the checker did not know the idiom.
 
 Shape checks pass any misread that turns one valid instruction into another. Those were found by
 running it.
@@ -167,7 +167,7 @@ What it adds is visibility, because the machine is in the page with everything e
   The same core can be shown against the Cambridge source, the listing, or the as7 translation.
 - **The display list is in core,** beside the code, since the 340 is a second processor sharing
   memory. It disassembles as 340 instructions, can be edited live, and every stroke on the tube
-  knows the display word and the code that drew it.
+  is linked to the display word and the code that drew it.
 - **Eight light pens,** the pen being the input device the whole program is built around.
 - **Assemblers** for the Cambridge dialect, DEC's 1964 syntax and UNIX's as7, and a translator
   from Cambridge to as7 that must reproduce the Cambridge image word for word
@@ -176,8 +176,8 @@ What it adds is visibility, because the machine is in the page with everything e
 
 ## Test programs as test equipment
 
-SYMELEC was the only program that had ever exercised the light pen, so the pen was exactly as
-right as SYMELEC needed. Each program below was brought in to test one part of the machine
+SYMELEC was the only program that had ever exercised the light pen, so the pen had only been
+tested as far as SYMELEC uses it. Each program below was brought in to test one part of the machine
 against something other than PIXIE:
 
 - **DEC's 370 Light Pen Diagnostic** (DEC-4-45-M, C. Stein, 1964) tests sensitivity, follow and
@@ -206,7 +206,7 @@ that settled it, and classifies each as ours (the emulator), the transcription's
   forever. Settled by the listing's literal pool pages.
 - **`ISZ BSZ`.** The Titan host expected `count + 1` words per blocklet; at 1734 to 1735 the
   listing complements the count and increments it as part of the end-of-transfer test, so a
-  blocklet carries exactly `count` words. The 1972 code NAK'd the 2026 host for bad arithmetic,
+  blocklet carries exactly `count` words. The 1972 code NAK'd the 2026 host's wrong count,
   as designed ([OFF-BY-ONE.md](OFF-BY-ONE.md#isz-bsz-the-star-of-the-show)).
 - **The octal image itself was wrong in places.** 3753 and 3761 were transcribed `777777 LAW`
   for a printed `764767 LAW X`, so the image being booted ran different code from what Heinz
@@ -265,7 +265,7 @@ So the device was reconstructed from how SYMELEC drives it: `LSF`, `LCF`, `LRB18
 complement, blocklets of `count` words, an 18-bit running checksum, `PXID` (767676) as the stream
 heading. Tiny Titan stands in for the far end: the unmodified 1972 code, given the `TITAN`
 command, uploads its ring structure to it, checksummed and acknowledged. Serving drawings back
-is the next rung.
+is the next step.
 
 ## Rings, and Forth
 

@@ -11,7 +11,7 @@ Don Hopkins, November 2026
 radial menus driven by the light pen, the display list edited live in core, every instruction
 traced back to the scanned 1972 listing, then DUEL, Lunar Lander, Mitch Bradley's Forth drawing
 with a turtle, and UNIX logging in as `ken`. That's the plain emulator, before any of the Korz in
-this article. It's the shallow end of the deep end.
+this article.
 
 **Then try it.** [Hold your hand up to your webcam](https://hyperties.org/cabinet/ultimate-hand/).
 A PDP-7 running Forth draws your hand on its vector display, and your hand becomes the hand of
@@ -83,8 +83,7 @@ tables, and as a compiler, each one checked instruction by instruction against t
 
 [Korz](https://doi.org/10.1145/2661136.2661147) is a language almost nobody has heard of. It runs here on a JavaScript JIT that exists
 because of a language almost nobody uses any more called [Self](https://selflanguage.org/). This article is about those two
-languages, and why they turn out to be exactly the right tools for building emulators you can take
-apart while they run.
+languages, and how they are used here to build emulators you can take apart while they run.
 
 ## Self, and the JIT in your browser
 
@@ -129,7 +128,7 @@ that technology. Sun bought Animorphic in 1997, and the Strongtalk VM became the
 [Lars Bak](https://en.wikipedia.org/wiki/Lars_Bak_(computer_programmer)), who had worked on Self and Strongtalk and led HotSpot, went to Google. There he led the
 team in Aarhus that built V8 for Chrome in 2008. V8's "hidden classes" are Self's maps, and inside
 V8 they are [still called maps](https://v8.dev/blog/fast-properties). Its inline caches, its speculative optimization, its deoptimization
-when a guess goes wrong: Self, all of it.
+when a guess goes wrong all come from Self.
 
 ### Everywhere else
 
@@ -193,30 +192,30 @@ Most Notable Paper award ten years later.
 Squeak objects are plain JavaScript objects. Her hybrid garbage collector hands as much work as
 possible to the JavaScript collector, keeping for itself only what JavaScript can't give her.
 
-### Don't fight the host
+### Generating code the host JIT optimizes
 
 Talking about WebAssembly [on Hacker News in December 2023](https://news.ycombinator.com/item?id=38774277), she wrote:
 
 > I'd much rather make the SqueakJS JIT produce code that the JavaScript JIT can optimize well.
 > That would potentially give us more speed than even WASM.
 
-That is the bet this whole emulator is built on. Don't fight the host. Generate JavaScript that V8
-recognizes: objects that always have the same fields in the same order, and call sites that always
-call the same function. Then V8 does what Self taught it to do: inline everything, speculate, and
-deoptimize safely when you change your mind.
+This emulator follows that approach. It generates JavaScript that V8 recognizes: objects that
+always have the same fields in the same order, and call sites that always call the same function.
+V8 then applies the techniques that came from Self: it inlines, speculates, and deoptimizes safely
+when the code changes.
 
-Vanessa died in 2025. Every fast path in this emulator is built on her bet.
+Vanessa died in 2025. Every fast path in this emulator follows her approach.
 
 ## Korz: Self without the objects
 
 ### Slots, guards, and contexts
 
-In 2014, Ungar, with Harold Ossher and Doug Kimelman at IBM Research, took the next subtraction.
+In 2014, Ungar, with Harold Ossher and Doug Kimelman at IBM Research, removed one more thing.
 Self removed classes. Korz (["Korz: Simple, Symmetric, Subjective, Context-Oriented Programming"](https://doi.org/10.1145/2661136.2661147),
 Onward! 2014) removes objects. Ossher's [FOOL 2014 talk](https://2014.splashcon.org/details/fool2014/4/A-Simple-Symmetric-Subjective-Foundation-for-Object-Aspect-and-Context-Oriented-)
 has the slides.
 
-The behavior stays. What goes is the rule that every piece of behavior belongs to exactly one
+Korz keeps the behavior and drops the rule that every piece of behavior belongs to exactly one
 object. In Korz, a program is a flat "sea" of slots that belong to nothing.
 
 A Korz slot is a Self slot cut loose from its object. It has a message name (its selector, like
@@ -304,28 +303,28 @@ Korz's dimensions go one step further. They aren't only the arguments you pass; 
 context carried implicitly down every call. In the cabinet, the resolver turns them into tables,
 and the compiler turns the tables into code.
 
-### Aspects without the knives
+### Aspects
 
-[Aspect-oriented programming](https://www.cs.ubc.ca/~gregor/papers/kiczales-ECOOP1997-AOP.pdf), which Kiczales's group at Xerox PARC introduced in 1997, fights the
-same war with knives. It names the problem "crosscutting
+[Aspect-oriented programming](https://www.cs.ubc.ca/~gregor/papers/kiczales-ECOOP1997-AOP.pdf), which Kiczales's group at Xerox PARC introduced in 1997, addresses the
+same problem. It calls it "crosscutting
 concerns": code like logging or checking that ends up scattered across modules and tangled
-together. Then it cuts in with pointcuts, patterns that pick out places in the program, and a
-compiler weaves advice, the code to run at those places, back through it.
+together. It uses pointcuts, patterns that pick out places in the program, and a compiler weaves
+advice, the code to run at those places, back through it.
 
 Ossher had been there before Korz. With [Peri Tarr](https://en.wikipedia.org/wiki/Peri_Tarr), William Harrison, and Stanley Sutton he wrote
 ["N Degrees of Separation"](https://dl.acm.org/doi/10.1145/302405.302457) (ICSE 1999). It sliced
 programs into overlapping "hyperslices" along many dimensions, and composed them back together.
 
-Korz gives you the slices without the knives. A concern is just a dimension, and its slots sit in
-the sea next to everything else. Nothing gets cut and nothing gets woven.
+Korz has the slices without pointcuts or weaving. A concern is a dimension, and its slots sit in
+the sea next to everything else.
 
 ### Objects as a point of view
 
-And objects come back, as a point of view. Gather the slots by `rcvr` and you see objects. Gather
+Objects come back as a point of view. Gather the slots by `rcvr` and you see objects. Gather
 them by `assertions` and you see all the assertion checking. Gather them by `user` and you see one
 person's view of the system.
 
-Same sea, different cuts. That's the "subjective" in the title, and the name comes from [Alfred
+That's the "subjective" in the title, and the name comes from [Alfred
 Korzybski](https://en.wikipedia.org/wiki/Alfred_Korzybski): [the map is not the territory](https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation).
 
 The Korz prototype was written in Self, on the Self VM. Korz appeared in three papers and a talk in
@@ -343,7 +342,7 @@ indirect object (`PRSI`), the character acting (`WINNER`), and the room (`HERE`)
 room gets first crack, then the objects, then the verb's default.
 
 That's Korz dispatch: five dimensions, carried implicitly, with the most specific handler winning,
-shipped on Infocom's [Z-machine](https://en.wikipedia.org/wiki/Z-machine) virtual machine in 1979! Say "ROBOT, PUSH BUTTON" in Zork II, and
+shipped on Infocom's [Z-machine](https://en.wikipedia.org/wiki/Z-machine) virtual machine in 1979. Say "ROBOT, PUSH BUTTON" in Zork II, and
 `WINNER` becomes the robot: same verb, same object, different dispatch.
 
 [The Sims](https://en.wikipedia.org/wiki/The_Sims_(video_game)), which I worked on at Maxis, did the same with two dimensions: `me`, the person acting,
@@ -351,10 +350,7 @@ and `stackObject`, the thing being acted on.
 
 #### Korz, Zork, and Korzybski
 
-David Ungar assures me that Korz is only accidentally an anagram of Zork. I believe him, but
-Korzybski would have loved it. Every Zork player drew a map on graph paper of a territory they
-could only reach through words, and an anagram is a map of a word: same letters, different
-territory.
+David Ungar assures me that Korz is only accidentally an anagram of Zork.
 
 ### Cellular automata
 
@@ -367,8 +363,7 @@ table, by running the rule for every possible neighborhood and storing the answe
 does the same compile in the browser.)
 
 The [Margolus neighborhood](https://en.wikipedia.org/wiki/Block_cellular_automaton) has no center cell at all: a 2×2 block where all four cells update
-together, and none of them is "the receiver". Object-oriented programming is "this". A cellular
-automaton is "us".
+together, and none of them is "the receiver".
 
 ### Emulators
 
@@ -427,7 +422,8 @@ resolver builds a table over only the dimensions some slot actually constrains.
 address, until you install a watch on one address. Then `read` becomes a 32,768-entry table, and
 when you remove the watch it shrinks back to one.
 
-This is the CAM-6 move pointed at a bus: run the rules for every input and keep the answers.
+This is what CAM-6 did with its rules, applied to a bus: run the rules for every input and keep
+the answers.
 
 ### Asking `why`
 
@@ -452,14 +448,14 @@ by instruction, comparing registers every step:
 3. **The Korz resolver.** The tables above, with one generated JavaScript function per selector.
 4. **The Korz compiler.** It turns runs of PDP-7 instructions into JavaScript functions.
 
-The Apple ][ has the same four rungs on the 6502. Which layer the compiler rolls into the block,
+The Apple ][ has the same four levels on the 6502. Which layer the compiler rolls into the block,
 and which layer stays a call, is [below](#virtual-machines-on-top-of-virtual-machines).
 
 ### The tests
 
 Every Korz level runs in lockstep with `Pdp7`, and they have to agree.
 
-The first test is garbage on purpose. It fills core with random words, starts the PC somewhere
+The first test runs random words on purpose. It fills core with random words, starts the PC somewhere
 random, raises interrupts at random, and runs both CPUs for up to 2,000 steps, comparing every
 register after every step and all of core at the end. Then it does that 299 more times. Real
 programs use a few well-worn paths through the instruction set. Random words hit every opcode,
@@ -475,19 +471,17 @@ generated code, and the tests caught 23 of them. The 24th turned out to change n
 
 ### The Ultimate Machine's bug
 
-My favorite bug came from the Ultimate Machine. The cabinet decided when a device would next need
-attention by looking at its power state before its tick, its periodic update. But the Ultimate
-Machine switches itself off during its tick.
+One bug came from the Ultimate Machine. The scheduler computed when a device would next need
+attention from its power state before its tick, its periodic update. But the Ultimate Machine
+switches itself off during its tick, so only a device that switches itself off could expose the
+bug.
 
-It took a device that switches itself off to find that bug, and we had one! Thank you, Minsky and
-Shannon.
-
-## The compiler, and why Self is in the room
+## The Korz compiler
 
 ### Templates
 
-Slots can carry a template: their behavior as a snippet of JavaScript source. The sea carries it
-and never looks at it.
+Slots can carry a template: their behavior as a snippet of JavaScript source. The sea stores the
+template but does not use it.
 
 The compiler builds blocks, runs of instructions compiled into one JavaScript function. For each
 instruction, it asks the sea once for the chain of slots at that instruction's coordinates.
@@ -535,9 +529,9 @@ while the program keeps running, without rebooting.
 
 ### Two machines, one process
 
-Keeping that speed took Vanessa's discipline. The first time I ran two machines in one process, the
+Keeping that speed meant following Vanessa's approach. The first time I ran two machines in one process, the
 second one was much slower than the first: same code, same program, same tables. V8's
-`--trace-deopt` said "wrong call target", over and over.
+`--trace-deopt` reported "wrong call target" repeatedly.
 
 Each machine had its own slots as its own closures, so V8 saw the same code as different
 functions. Every call site that had inlined machine 0's function gave up when machine 1 showed up.
@@ -563,8 +557,8 @@ isn't in the tables and isn't in the compiled code. It costs nothing.
   already read.
 - **Instrumentation.** The same kind of observe slot can count reads, writes, and instruction fetches for every word, to make a heat map of where a program spends its time. It can also
   record who last wrote each word, at what program counter and on what cycle, so a corrupted word
-  can tell you whodunit. That's what [Valgrind](https://valgrind.org/) and [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) do for native code, and here it
-  comes free because we own the machine. These are designed and next in line, and they cost
+  can tell you who wrote it. That's what [Valgrind](https://valgrind.org/) and [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) do for native code. Here
+  it needs no binary instrumentation, because the emulator handles every access. These are designed and next in line, and they cost
   nothing until you add them.
 - **Fault injection.** A patch slot can make a word read-only, a sector bad, a device slow.
 - **Live coding.** Add and remove slots while the machine runs. The resolver rebuilds the tables
@@ -572,15 +566,15 @@ isn't in the tables and isn't in the compiled code. It costs nothing.
   machine keeps running, with the new behavior, on the next instruction.
 - **Explanations.** `why` on any access, any time.
 
-None of this needed to be designed into the CPU. It's what you get by putting the CPU in the sea.
+None of this is designed into the CPU. It all follows from the CPU being slots in the sea.
 
-## Plug anything into anything
+## Devices and machines
 
 ### Devices that share memory
 
-On real iron, a device belongs to one machine's bus. In the cabinet, a device is a set of slots
-plus a little state. The PDP-7 already shares its core with two other processors, and talks to a
-hand:
+On real hardware, a device belongs to one machine's bus. In the cabinet, a device is a set of slots
+plus a little state. The PDP-7 already shares its core with two other processors, and reads a hand
+through a webcam:
 
 - **The Type 340 display** reads its display file out of PDP-7 core by DMA, drawing vectors. In
   the emulator it runs ahead of the CPU from a snapshot, optimistically. If the CPU writes a word
@@ -659,8 +653,8 @@ Why build it? Three reasons.
   CPU and on all three Korz levels, with and without the accelerator. They must print the same
   Teletype output and draw the same picture on the 340.
 - **Price.** A coprocessor is just more slots. Unplug it and they're gone, and the PDP-7 runs at
-  the speed it did before. That's what Korz buys: an accelerator is a context, and when you leave
-  that context it costs nothing.
+  the speed it did before. In Korz an accelerator is a context, and outside that context it costs
+  nothing.
 
 The Forth page has a menu, **Forth: software / hardware**, beside the CPU menu. Switching reboots
 the same image, with or without the slots. Try
@@ -726,8 +720,8 @@ incompatibilities". The PDP-7 has extend mode, the PDP-9 adds user mode and a bo
 and the PDP-15 adds bank mode and a relocation register.
 
 SIMH covers all four in one simulator, but picks the model when it's compiled. Its header says
-"only one should be defined", and the source has 194 conditional compilation lines. Four
-models, four builds.
+"only one should be defined", and the source has 194 conditional compilation lines. Each model
+is a separate build.
 
 In Korz, the model is a dimension. The slots the whole family shares don't mention it. A slot
 that only one model has is guarded on that model, and a feature that arrived with the PDP-9 and
@@ -763,10 +757,10 @@ had no logins.
 
 ### And still exact
 
-What stays honest is what makes it the machine. Every instruction does exactly what the PDP-7 did,
+The machine itself stays exact. Every instruction does exactly what the PDP-7 did,
 old binaries run unchanged, and the switch-statement reference checks it at every level.
 
-That's the deal Korz makes possible. The faithful machine is the 99 slots, and everything we add is
+Korz keeps the two apart. The faithful machine is the 99 slots, and everything we add is
 more slots, labeled with who added them, removable, and visible to `why`.
 
 You can have a scrupulously accurate PDP-7, and a PDP-7 with a Turing machine, a camera hand, and a self-switching-off box. It's the same machine with a different set of slots installed.
@@ -830,7 +824,7 @@ just a JSR.
 
 ### The Apple ][
 
-The Apple ][ is running on those four 6502 rungs. The page opens on the compiler. Its reference
+The Apple ][ is running on those four 6502 levels. The page opens on the compiler. Its reference
 won't be one emulator but several, and the more the better: every
 emulator that runs the same program is one more oracle to run in lockstep against. And the Apple
 ]['s software library is the test suite.
@@ -854,19 +848,18 @@ and weigh what each language gives the job in
 
 ### Slots proposed by a language model
 
-And one speculative step I can't resist. A language model can propose slots: an accelerator for
+One more step is speculative. A language model can propose slots: an accelerator for
 UNIX's idle loop, or for a word in Forth that the Forth accelerator doesn't know yet.
 
 The proposed slots go in labeled with who proposed them, and run in lockstep against the reference
-machine on recorded traces. If they agree, they stay. If they ever disagree, out they go. That's
+machine on recorded traces. If they agree, they stay. If they ever disagree, they are removed. That's
 Self's speculate-and-deoptimize, with meanings in place of types.
 
-### Back to the cave
+### Adventure and Zork
 
-#### The territory
+#### The source code
 
-The maps we drew on graph paper were never the game. The source code is the territory, and now all
-of it is out in the open:
+The source code of these games is now public:
 
 - [Will Crowther](https://en.wikipedia.org/wiki/Will_Crowther)'s original FORTRAN Adventure, recovered in 2005 from [Don Woods](https://en.wikipedia.org/wiki/Don_Woods_(programmer))'s own account on the
   Stanford backup tapes, and examined by Dennis Jerz in
@@ -889,11 +882,11 @@ I want to rebuild both games in Korz, a piece at a time: the dwarves, the lamp r
 the thief, the troll, the parser rebinding `WINNER`.
 
 Each translated piece gets checked against the original game, the way SIMH checked the PDP-7, with
-forty-five years of players as extra testers. Knuth's commentary rides along as comments beside the
+forty-five years of players as extra testers. Knuth's commentary is kept as comments beside the
 slots it explains. The plan is in
 [Zorkizing Adventure](https://github.com/SimHacker/moollm/blob/main/designs/korz/case-zork.md).
 
-### MOOLLM, where the threads meet
+### MOOLLM
 
 In MOOLLM, directories are rooms, files are the objects in them, and characters are files that a
 person or a model can play. So a MOOLLM repository is already an adventure game.
@@ -971,8 +964,8 @@ supposed to do and regenerate it if it's wrong.
 
 #### An auction, not a send
 
-Here Korz's own rule has to bend. A Korz send runs the one most specific slot, and a tie is an
-error. Advertisements want the opposite: every slot that applies, all bidding at once.
+Here Korz's rule does not fit. A Korz send runs the one most specific slot, and a tie is an
+error. Advertisements need the opposite: every slot that applies, all bidding at once.
 
 So asking "what can I do here?" isn't a send. It's a view. The library already has one: `view`
 returns every slot whose guard matches a query, which is how the PDP-7 debugger asks for
@@ -1033,7 +1026,7 @@ PDP-7 instructions instead of Sims behaviors. The templates keep the generated o
 crashing the game, and the prose stays attached, so the next player can read what the object was
 meant to do.
 
-### Korz's turn
+### Where Korz fits
 
 Self's ideas went into the engine under every web page. Korz's ideas have barely been tried.
 

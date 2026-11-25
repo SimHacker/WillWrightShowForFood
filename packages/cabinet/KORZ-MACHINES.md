@@ -4,15 +4,14 @@ For David Ungar, Randall Smith, Alan Kay, Dan Ingalls, Lars Brinkhoff, Bob Supni
 and the others whose work this rests on. A draft: corrections welcome at any level, from "that's
 not what Korz means" to "you'll regret that data structure".
 
-The big ticket is where it runs. The same TypeScript runs in Node and in the browser, and the page
-you can open is the machine: [PDP-7 UNIX](https://hyperties.org/cabinet/systems/pdp-7-unix/), and
+The same TypeScript runs in Node and in the browser, and each machine runs in a page you can
+open: [PDP-7 UNIX](https://hyperties.org/cabinet/systems/pdp-7-unix/), and
 an [Apple \]\[+](https://hyperties.org/cabinet/machines/apple-ii/) on the same kit. There is no native build to
 fetch, and the only WebAssembly module is microM8, kept on the Apple page as the oracle to
 measure against. A slot is a JavaScript
 function. V8 compiles the generated JavaScript, and V8's own lineage runs back through Self, which
-is why this note is addressed where it is. JavaScript is not a host we are putting up with until
-a real language is ready. It is the reason a person can read the emulator, change one slot, and
-watch the PDP-7 change.
+is why this note is addressed where it is. Because the emulator is JavaScript in the page, a
+person can read it, change one slot, and watch the PDP-7 change.
 
 ## The idea
 
@@ -36,7 +35,7 @@ We put every handler, mapping, opcode, IOT gate, trap, watch, fault and accelera
 sea of guarded slots, and dispatch each access to the most specific match. The paper's coordinate
 is any element of a partial order, an object or a person as easily as a bit, and a send searches.
 This stack numbers every coordinate, `0 .. 2^width − 1`, so the answer can be an index. The
-machines' coordinates really are small integers, which is why the fit is honest. A later
+machines' coordinates really are small integers, so numbering them loses nothing. A later
 dimension whose order is objects or floats would stay a search beside these tables;
 [KORZ-DISPATCH.md](KORZ-DISPATCH.md) says how. Because these domains are finite and every context
 is complete, two things Korz in general cannot do become possible:
@@ -51,13 +50,13 @@ and taking it further than SIMH can. SIMH and its ports serve as the oracle. Ins
 extension and optimization are all the same operation: install a slot. `why` on any access names
 the slots that answered it and who installed them.
 
-That is also how the cabinet's [manifesto](MANIFESTO.md) becomes enforceable instead of hoped for.
+This is also how the cabinet enforces its [manifesto](MANIFESTO.md).
 The manifesto says the machine in the page is ours, all of it at once, and that tribute,
 accessibility and fun may bend the rules while the 1960s machine stays honest. Korz is the
 mechanism. The faithful PDP-7 is the slots of the machine layer, checked in lockstep against the
 switch-statement port of SIMH. A watch, a host service, a coprocessor, a louder teletype, a slot
 installed by a person with their name on it: each is another slot, in a layer `why` can name, and
-removing it puts the honest machine back. Nothing is sealed off, because a sealed-off part would
+removing it restores the faithful machine. Nothing is sealed off, because a sealed-off part would
 be a dispatch the sea does not own. The same sea is what lets one machine read another, which is
 the manifesto's federation: shared memory is a slot that says which machine answers.
 
@@ -171,8 +170,7 @@ Each device keeps its old `iot()` method as the oracle for its slots.
 
 Mutation checks confirm the tests notice when one gate is broken. Breaking IDSI, TMSS, TMSR, TMGO,
 UMSI, LSF, LLB18, RSB, DBSF, DBLM, RAL or the ION delay each makes a test fail. One gate, TMLA,
-survives: the Forth code always follows it with TMST, so no program here can see it. We report
-that rather than paper over it. The compiler gets the same treatment: 24 errors planted in its
+survives: the Forth code always follows it with TMST, so no program here can see it. The compiler gets the same treatment: 24 errors planted in its
 generated code, of which 23 are caught, one of them by hanging every rig, and the 24th changes
 nothing. The whole package has 355
 passing tests, and 2 skipped.
@@ -253,16 +251,16 @@ compiled to WebAssembly and the Apple's oracle:
 The gap to microM8 is mostly not WebAssembly. microM8 builds its picture inside every
 instruction, reaches memory through Go interfaces, and shares one thread with the Go scheduler and
 collector; it lands beside the Korz interpreter
-([GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-waits)). The Korz switch runs
+([GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-compared-with-the-korz-engines)). The Korz switch runs
 near 130 million Apple cycles a second because it is one function over numeric fields with no
 allocation in the loop. The compiler leads only where a block stays in RAM and repeats; on the DOS
 boot and Applesoft, which are full of `JSR`, `RTS` and indirect jumps that end a block, the switch
 leads. The PDP-7 compiler is ahead of its switch; the 6502 compiler is not yet, on a program that
-calls ([KORZ-DISPATCH.md](KORZ-DISPATCH.md#the-apple-)). Little Computer People moves in at max
-speed and one picture a game second, which read 88 MHz in Chrome while it loaded.
+calls ([KORZ-DISPATCH.md](KORZ-DISPATCH.md#the-apple-)). Little Computer People, at max speed
+and one picture per game second, measured 88 MHz in Chrome while it loaded.
 
 **The second machine, and what V8 keys on.** In one Node process, a second `KorzPdp7` ran 71–80 ns
-a step against the first one's 55. Same code, same program, same tables. V8 doesn't specialize on
+a step against the first one's 55, with the same code, program and tables. V8 doesn't specialize on
 data; it specializes on the hidden classes of the objects a site touches and on the functions a call
 site has called. A call site that has seen one function inlines it. One that sees a second is
 megamorphic for good: for calls, V8 keeps one target or gives up, with no small polymorphic set as
@@ -293,8 +291,8 @@ Fixing one layer at a time showed all three were needed:
 
 The fix is the split Smalltalk and Self make between shared behavior and per-receiver state. Slot
 functions are built once per process. A slot reaches its machine as `c.cpu`, a field of the
-context, the same way it reaches the opcode or the device code. Behavior became shareable the
-moment the machine became one more coordinate.
+context, the same way it reaches the opcode or the device code. With the machine as one more
+coordinate, the behavior can be shared.
 
 The costs:
 - A burst of separate installs now rebuilds once per install instead of once at the next call.
@@ -303,9 +301,9 @@ The costs:
 
 Later machines are now faster than the first, which pays for warm-up.
 
-Vanessa Freudenberg built SqueakJS on the same bet: "I'd much rather make the SqueakJS JIT produce
-code that the JavaScript JIT can optimize well." This is the discipline that bet requires. A
-generator has to emit the identities and shapes the host JIT keys on, not only the right code. The
+Vanessa Freudenberg built SqueakJS on the same approach: "I'd much rather make the SqueakJS JIT produce
+code that the JavaScript JIT can optimize well." The approach requires that a
+generator emit the identities and shapes the host JIT keys on, not only the right code. The
 host here descends in part from the Self work: maps became hidden classes, and inline caches and
 deoptimization came with them.
 
@@ -326,14 +324,15 @@ Next:
 - The same templates compiled ahead of time, for ROMs, a fixed Forth kernel and snapshots.
 - Idle-loop skipping.
 
-The compiler is also the top rung of an oracle ladder, and every level stays.
+The compiler is the top of the four levels, each checked against the one below, and all four are
+kept.
 
-**The 18-bit line.** The PDP-7 was not built alone. In Bob Supnik's words, in the SIMH source, the
+**The 18-bit line.** The PDP-7 has siblings. In Bob Supnik's words, in the SIMH source, the
 PDP-4, PDP-7, PDP-9 and PDP-15 are upward compatible: each new model adds architectural features
 and, with them, incompatibilities. The PDP-7 has extend mode. The PDP-9 adds user mode and a
 bounds register. The PDP-15 adds bank mode and a relocation register. SIMH covers the four in one
 simulator, `PDP18B`, and picks the model at compile time. The header says only one should be
-defined. The source has 194 conditional-compilation lines. Four models, four builds.
+defined. The source has 194 conditional-compilation lines, and each model is a separate build.
 
 In Korz the model is a dimension. Slots the whole line shares do not mention it. A slot only one
 model has is guarded on that model, and a feature that arrived with the PDP-9 and stayed is
@@ -470,7 +469,7 @@ doing if profiling shows the CPU loop, not the devices, is the limit.
    GC". SqueakJS keeps only what the host can't give it, enumeration for `firstInstance` and
    `nextInstance`, in an old-space linked list of survivors rebuilt at full GC. New objects stay
    off the list, so the host collects them alone. What the host sees decides what the host can do:
-   listed objects it can't collect, unlisted ones it collects for free.
+   listed objects it can't collect, and unlisted ones it collects on its own.
 
    Korz hands dispatch to V8's JIT the same way, and keeps for itself what V8 can't give: layers,
    `why`, install-time ambiguity, invalidation. The bug was the dispatch version of putting every
