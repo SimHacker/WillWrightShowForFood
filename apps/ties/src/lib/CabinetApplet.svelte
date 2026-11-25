@@ -50,6 +50,7 @@
 	import { PROGRAMS, DEFAULT_PROGRAM } from './cabinet-programs.js';
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
+	import RateSlider from './RateSlider.svelte';
 	import KorzBrowser from './KorzBrowser.svelte';
 	import { block7Node, compiler7Node, dispatchNode, seaNode } from '@wwsff/cabinet/korz/inspect';
 	import VoicePicker from './VoicePicker.svelte';
@@ -275,12 +276,9 @@
 						: `${s}× a real PDP-7: ${Math.round(571_429 * s).toLocaleString()} cycles a second${s > 10 ? ', if this computer keeps up' : ''}`
 		}))
 	];
-	const RATE_NOTCH = 14;
-	const RATE_PUCK = 40;
 	const rateIndex = $derived(
 		traceMs ? RATES.findIndex((r) => r.trace === traceMs) : RATES.findIndex((r) => r.speed === speed)
 	);
-	let rateDrag = $state(false);
 
 	function setRate(i) {
 		const r = RATES[Math.max(0, Math.min(RATES.length - 1, i))];
@@ -288,30 +286,6 @@
 		else setSpeed(r.speed);
 	}
 
-	function rateAt(e) {
-		const x = e.clientX - e.currentTarget.getBoundingClientRect().left;
-		return Math.round((x - RATE_PUCK / 2) / RATE_NOTCH);
-	}
-
-	function onRateDown(e) {
-		if (e.button !== 0) return;
-		rateDrag = true;
-		try {
-			e.currentTarget.setPointerCapture(e.pointerId);
-		} catch {}
-		setRate(rateAt(e));
-	}
-
-	function onRateMove(e) {
-		if (rateDrag) setRate(rateAt(e));
-	}
-
-	function onRateKey(e) {
-		const to = { ArrowLeft: rateIndex - 1, ArrowDown: rateIndex - 1, ArrowRight: rateIndex + 1, ArrowUp: rateIndex + 1, Home: 0, End: RATES.length - 1 }[e.key];
-		if (to === undefined) return;
-		e.preventDefault();
-		setRate(to);
-	}
 	let lastNow = null;
 	let owed = 0;
 
@@ -3512,39 +3486,7 @@
 					title="Step: stop, then execute one instruction"
 					onclick={onStep}>⏭️</button
 				>
-				<span
-					class="rate"
-					class:dragging={rateDrag}
-					role="slider"
-					tabindex="0"
-					data-keep-focus
-					aria-label="Speed, slowest to fastest"
-					aria-valuemin="0"
-					aria-valuemax={RATES.length - 1}
-					aria-valuenow={rateIndex}
-					aria-valuetext={RATES[rateIndex]?.title}
-					title="{RATES[rateIndex]?.title}. Drag, or use the arrow keys."
-					style:width="{(RATES.length - 1) * RATE_NOTCH + RATE_PUCK}px"
-					onpointerdown={onRateDown}
-					onpointermove={onRateMove}
-					onpointerup={() => (rateDrag = false)}
-					onpointercancel={() => (rateDrag = false)}
-					onkeydown={onRateKey}
-				>
-					{#each RATES as r, i (i)}
-						<span
-							class="rate-notch"
-							class:trace={r.trace}
-							style:left="{i * RATE_NOTCH + RATE_PUCK / 2}px"
-						></span>
-					{/each}
-					<span
-						class="rate-puck"
-						class:trace={traceMs}
-						style:left="{rateIndex * RATE_NOTCH}px"
-						style:width="{RATE_PUCK}px">{RATES[rateIndex]?.label}</span
-					>
-				</span>
+				<RateSlider rates={RATES} index={rateIndex} onpick={setRate} />
 				<span class="reset-pull">
 					{#if resetPull >= 0}
 						<span class="reset-track" style:height="{RESET_PULL}px" aria-hidden="true"
@@ -4675,59 +4617,6 @@
 		white-space: normal;
 	}
 	/* A notched slot; the puck snaps from notch to notch and shows only its own label. */
-	.rate {
-		position: relative;
-		flex-shrink: 0;
-		height: 1.4rem;
-		cursor: ew-resize;
-		touch-action: none;
-		user-select: none;
-		-webkit-user-select: none;
-	}
-	/* The pointer would sit on the label it is choosing: shrink it to a dot. */
-	.rate.dragging {
-		cursor:
-			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23f33'/%3E%3C/svg%3E") 2 2,
-			none;
-	}
-	.rate::before {
-		content: '';
-		position: absolute;
-		left: 20px;
-		right: 20px;
-		top: 50%;
-		border-top: 1px solid #555;
-	}
-	.rate-notch {
-		position: absolute;
-		top: 30%;
-		height: 40%;
-		border-left: 1px solid #9fe8a0;
-	}
-	.rate-notch.trace {
-		border-left-color: #e8c89f;
-	}
-	.rate-puck {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		box-sizing: border-box;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-family: ui-monospace, monospace;
-		font-size: 0.62rem;
-		background: #9fe8a0;
-		color: #000;
-		border-radius: 2px;
-	}
-	.rate-puck.trace {
-		background: #e8c89f;
-	}
-	.rate:focus-visible {
-		outline: 1px solid #9fe8a0;
-		outline-offset: 2px;
-	}
 	.reset-pull {
 		position: relative;
 		display: inline-flex;

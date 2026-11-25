@@ -22,9 +22,30 @@
 	import { FRAME_HEIGHT, FRAME_WIDTH, VIDEX_HEIGHT, VIDEX_WIDTH } from '@wwsff/cabinet/microm8';
 	import { ENGINES, apple } from './apple.svelte.js';
 	import ApplePanels from './ApplePanels.svelte';
+	import RateSlider from './RateSlider.svelte';
+	import { APPLE_HZ } from '@wwsff/cabinet/angel';
 
 	/** @typedef {{ name: string, label?: string, profile?: string, url: () => Promise<string> }} Disk */
 	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, panels?: boolean }} */
+	// Slowest first. 100 is MAX: as fast as this computer goes, a picture each game second.
+	// microM8's Go core starts at 1x; the slower notches are the Korz Apple's.
+	const SPEEDS = [0.001, 0.01, 0.1, 1, 2, 4, 8, 16, 100];
+	const rates = $derived(
+		SPEEDS.filter((w) => w >= 1 || apple.id !== 'microm8').map((w) => ({
+			speed: w,
+			label: w === 100 ? 'MAX' : `${String(w).replace(/^0/, '')}×`,
+			title:
+				w === 100
+					? 'As fast as this computer can go, showing a picture each Apple second'
+					: w === 1
+						? `1× is a real Apple ][: ${APPLE_HZ.toLocaleString('en-US')} cycles a second`
+						: `${w}× an Apple ][: ${Math.round(APPLE_HZ * w).toLocaleString('en-US')} cycles a second${w > 8 || w < 1 ? ', and the speaker is off' : ''}`
+		}))
+	);
+	const rateIndex = $derived(
+		rates.reduce((best, r, i) => (Math.abs(Math.log(r.speed / apple.warp)) < Math.abs(Math.log(rates[best].speed / apple.warp)) ? i : best), 0)
+	);
+
 	let {
 		disks = [],
 		boot = undefined,
@@ -136,7 +157,7 @@
 
 	/** @param {KeyboardEvent} ev */
 	function onkeydown(ev) {
-		if (!engaged || isField(ev.target)) return;
+		if (!engaged || ev.defaultPrevented || isField(ev.target)) return;
 		apple.listen();
 		if (ev.key === 'Alt') {
 			apple.button('key', ev.location === 2 ? 1 : 0, true);
@@ -286,13 +307,7 @@
 			title="The Apple's speaker"
 			onclick={() => ((apple.sound = !apple.sound), apple.listen(), canvas?.focus())}>Sound</button
 		>
-		<span class="speeds" role="group" aria-label="Speed">
-			{#each [1, 2, 4, 8, 16, 100] as w (w)}
-				<button class={{ on: apple.warp === w }} aria-pressed={apple.warp === w} onclick={() => (apple.speed(w), canvas?.focus())}
-					>{w === 100 ? 'max' : `${w}×`}</button
-				>
-			{/each}
-		</span>
+		<RateSlider rates={rates} index={rateIndex} onpick={(i) => apple.speed(rates[i].speed)} />
 		<button
 			class={{ on: apple.mouseStick }}
 			aria-pressed={apple.mouseStick}
