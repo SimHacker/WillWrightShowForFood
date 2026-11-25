@@ -271,4 +271,6 @@ test("forth: a word's cell found by name from outside, kernel labels and Forth v
 	m.line("100 fd");
 	assert.ok(m.cpu.read(dl) > at, "dl> advances as the drawing grows");
 	assert.equal(forthCell(read, image.labels, "no-such-word"), -1);
+	assert.equal(forthCell(read, image.labels, "rp"), 0o11, "the return stack's pointer, in its auto-index cell");
+	assert.equal(forthCell(read, image.labels, "100"), 0o100, "an octal number is that address");
 });

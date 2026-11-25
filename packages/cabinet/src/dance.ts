@@ -440,8 +440,9 @@ export class Dance {
 	 * Watched words' tracks, one beat loop each, three to seven sixteenths long by the name. A
 	 * loop measures its word against its own typical change, so a turtle heading moving by
 	 * degrees and a dictionary pointer moving by words both count steps of the same size: each
-	 * typical change moves the loop's phase by a step and its note one chord tone up. While the
-	 * word is changing the loop plays twice as often and louder; the word's size, by powers of
+	 * typical change moves the loop's phase by a step and its note one chord tone, up as the
+	 * word grows and down as it shrinks, so a nested call climbs and its return comes back
+	 * down. While the word is changing the loop plays twice as often and louder; the word's size, by powers of
 	 * 64, sets the octave.
 	 */
 	private listen(watched: readonly Watched[], tones: readonly number[], t: Tuning): Note[] {
@@ -457,10 +458,11 @@ export class Dance {
 				w = { len: 3 + (h % 5), at: (h >>> 3) % 7, timbre: WATCH_TIMBRES[(h >>> 6) % WATCH_TIMBRES.length]!, pan: (((h >>> 9) % 9) - 4) / 5, last: v, typical: 0, progress: 0, stirred: 0 };
 				this.watches.set(name, w);
 			}
-			const delta = Math.abs(signed18(v - w.last));
+			const delta = signed18(v - w.last);
+			const size = Math.abs(delta);
 			w.last = v;
-			if (delta > 0) {
-				w.typical = w.typical ? 0.9 * w.typical + 0.1 * delta : delta;
+			if (size > 0) {
+				w.typical = w.typical ? 0.9 * w.typical + 0.1 * size : size;
 				w.progress += delta / w.typical;
 				w.stirred = STIRRED;
 			} else if (w.stirred > 0) w.stirred -= 1;
@@ -468,7 +470,7 @@ export class Dance {
 			const phase = Math.floor(w.progress);
 			if ((this.step + w.at + phase) % every !== 0) continue;
 			const octave = Math.min(2, Math.floor(Math.log2(Math.abs(v) + 1) / 6));
-			const d = phase % (2 * n);
+			const d = ((phase % (2 * n)) + 2 * n) % (2 * n);
 			notes.push({ voice: `watch:${name}`, timbre: w.timbre, midi: midiAt(60 + 12 * octave, (tones[d % n] ?? 0) + Math.floor(d / n) * t.steps, t), velocity: w.stirred > 0 ? 0.4 : 0.15, pan: w.pan, order: 0 });
 		}
 		return notes;

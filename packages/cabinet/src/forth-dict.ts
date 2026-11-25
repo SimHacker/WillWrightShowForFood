@@ -44,13 +44,28 @@ export function forthWords(read: (addr: number) => number, labels: ReadonlyMap<s
 }
 
 /**
- * The address to watch for `name`: a kernel label is its own cell (`dp`, `rfree`); a Forth
- * VARIABLE is its body's cell (`tx`, `dl>`); a CONSTANT that names a cell, as RFREE
- * and RBEG do, is the cell it names. Upper or lower case. -1 if there is no such word.
+ * The PDP-7 has no stack, but Mitch's Forth keeps its interpreter pointer and both stacks'
+ * pointers in the auto-index cells, and both stacks grow up: RP's value is how deep the
+ * words are nested, SP's how full the data stack is.
+ */
+const REGISTERS: ReadonlyMap<string, number> = new Map([
+	["ip", 0o10],
+	["rp", 0o11],
+	["sp", 0o12],
+]);
+
+/**
+ * The address to watch for `name`: a kernel label is its own cell (`dp`, `rfree`); `ip`, `rp`
+ * and `sp` are the auto-index cells; a Forth VARIABLE is its body's cell (`tx`, `dl>`); a
+ * CONSTANT that names a cell, as RFREE and RBEG do, is the cell it names; an octal number is
+ * that address. Upper or lower case. -1 if there is no such word.
  */
 export function forthCell(read: (addr: number) => number, labels: ReadonlyMap<string, number>, name: string): number {
 	const label = labels.get(name) ?? labels.get(name.toLowerCase());
 	if (label !== undefined) return label;
+	if (/^[0-7]+$/.test(name)) return Number.parseInt(name, 8) & A;
+	const register = labels.has("latest") ? REGISTERS.get(name.toLowerCase()) : undefined;
+	if (register !== undefined) return register;
 	const want = name.toUpperCase();
 	const w = forthWords(read, labels).find((w) => w.length === want.length && want.startsWith(w.name));
 	if (!w) return -1;

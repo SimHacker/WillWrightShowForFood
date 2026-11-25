@@ -247,3 +247,12 @@ test("depth doubles the pad an octave down, then two", () => {
 	};
 	assert.ok(pads(0) < pads(0.5) && pads(0.5) < pads(1));
 });
+
+test("a watched word that shrinks comes back down", () => {
+	const d = new Dance(PDP7_VOICES);
+	const heard: number[] = [];
+	for (const value of [100, 101, 102, 103, 104, 103, 102, 101, 100].flatMap((v) => Array(8).fill(v) as number[]))
+		for (const n of d.beat({}, undefined, [{ name: "rp", value }])) if (n.voice === "watch:rp") heard.push(n.midi);
+	assert.ok(Math.max(...heard) > heard[0]!, "it climbs as the stack fills");
+	assert.equal(heard.at(-1), heard[0], "and is home again when it empties");
+});
