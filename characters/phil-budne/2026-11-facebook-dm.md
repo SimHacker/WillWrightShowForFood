@@ -31,7 +31,9 @@ and here's the demo I recorded the day before:
 https://youtu.be/I-Rf3XP_D0g
 
 Next on my playlist is a world-class PDP-10 emulator: a KA10 that runs ITS and acts like MIT-AI,
-with the same 340 plugged in, and that runs Zork too, all in the browser.
+with the same 340 plugged in, and that runs Zork too, all in the browser. Here's the plan, and
+I'd love your eyes on it:
+https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PDP10.md
 
 The emulator technology is the fun part. It's built on Korz, David Ungar's successor to Self
 (with Harold Ossher and Doug Kimelman). Korz throws out objects and keeps the slots: a "sea of

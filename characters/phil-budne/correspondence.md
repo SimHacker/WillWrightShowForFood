@@ -53,6 +53,7 @@ Don and Phil became Facebook friends on 25 November 2026. Don's first message is
 Forth question with Don's ProDOS Forth (fig-FORTH for the 6502, extended to Forth-83), and recalls
 PizzaTool. Then it covers the browser PDP-7 and Type 340, whose 340 engine is ported from Phil's
 `type340.c` and `display.c`, along with the Ultimate Hand, the Forth Day talk and demo, and
-PDP-7 UNIX. It ends with the KA10 that will run ITS like MIT-AI, and with how Korz works.
+PDP-7 UNIX. It ends with the KA10 that will run ITS like MIT-AI, linking its plan
+([PDP10.md](../../packages/cabinet/PDP10.md)), and with how Korz works.
 
 ↑ [Phil Budne](README.md)
