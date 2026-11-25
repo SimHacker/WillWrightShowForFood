@@ -305,6 +305,9 @@
 	let player = null;
 	let demoCaption = $state('');
 	let demoOn = $state(false);
+	/** The demo is waiting where the person took over: a click or key paused it, PLAY goes on from there. */
+	let demoHeld = $state(false);
+	const demoDriving = $derived(demoOn && !demoHeld);
 	// The program's own switches (program.toggles: the DataHand's camera): which are on, and the last complaint.
 	let toggleOn = $state({});
 	let toggleNote = $state('');
@@ -517,7 +520,7 @@
 		const seen = integrate(frames);
 		drawSegments(ctx, seen, frames.length);
 		batch = [];
-		const showPen = !editOn && (player || pressedId !== null);
+		const showPen = !editOn && ((player && !demoHeld) || pressedId !== null);
 		if (showPen) sensePen(seen, frames.length);
 		const hovered = editOn ? null : hoverTip();
 		if (hovered && outlineOn) drawHover(ctx, hovered);
@@ -1160,7 +1163,7 @@
 			restart: said ? spec.restart : undefined,
 			at
 		};
-		if (said?.score && !player) {
+		if (said?.score && (!player || demoHeld)) {
 			scores = { ...scores, [said.score]: (scores[said.score] ?? 0) + 1 };
 			try {
 				localStorage.setItem(scoresKey(programId), JSON.stringify(scores));
@@ -2354,7 +2357,7 @@
 
 	/** One instruction; a demo or replay still gets its events at their cycles. */
 	function traceStep() {
-		if (!player) {
+		if (!player || demoHeld) {
 			box.step();
 			if (dance.on && !cpu.compiler) dancePcs.add(cpu.pc);
 			penRules();
@@ -2437,7 +2440,7 @@
 			for (let first = true; owed >= 1 && (first || (performance.now() - t0 < FRAME_BUDGET_MS && !cpu.halted)); first = false) {
 				const cycles = Math.min(Math.floor(owed), CHUNK_CYCLES);
 				owed -= cycles;
-				if (player) {
+				if (player && !demoHeld) {
 					player.advance((n) => box.run(n), cycles);
 					demoCaption = player.caption;
 					switches = cpu.switches;
@@ -2485,7 +2488,8 @@
 	function onPointerDown(event) {
 		// The tube takes the keyboard when touched, for programs played from the console.
 		canvasEl?.focus({ preventScroll: true });
-		if (!pen || !canvasEl || event.button !== 0 || player) return;
+		if (!pen || !canvasEl || event.button !== 0) return;
+		if (player && !demoHeld) holdDemo();
 		event.preventDefault();
 		event.stopPropagation();
 		danceGrab = gridFromEvent(event);
@@ -2566,6 +2570,7 @@
 	 * The program's typeAhead is typed at the teletype first, unless a scripted demo will do its own typing.
 	 */
 	function bootMachine({ typeAhead = true } = {}) {
+		stopDemo();
 		const coreWords = program.coreWords ?? 8192;
 		cpu = cpuLevel === 'pdp7' ? new Pdp7({ coreWords }) : new KorzPdp7({ coreWords, korz: cpuLevel });
 		displayStarts = new Set();
@@ -2677,7 +2682,23 @@
 	function stopDemo() {
 		player = null;
 		demoOn = false;
+		demoHeld = false;
 		if (pen) pen.enabled = false;
+	}
+
+	/** The person reached in: the demo waits where it is, and the pen, keys and editor are theirs. */
+	function holdDemo() {
+		demoHeld = true;
+		if (pen) pen.enabled = false;
+	}
+
+	/** PLAY: the demo picks up where it was held; the pen is its own again. */
+	function resumeDemo() {
+		pressedId = null;
+		penHeld = false;
+		press = null;
+		if (pen) pen.enabled = false;
+		demoHeld = false;
 	}
 
 	// A recorded session per program, kept in this browser.
@@ -2809,8 +2830,8 @@
 	}
 
 	async function onSnapSave() {
-		if (demoOn) {
-			snapNote = 'Stop the demo first.';
+		if (demoDriving) {
+			snapNote = 'Pause the demo first.';
 			return;
 		}
 		if (status !== 'live' || !box) return;
@@ -2828,12 +2849,13 @@
 
 	async function onSnapLoad() {
 		if (!snapSel || !box || status !== 'live') return;
-		if (demoOn) {
-			snapNote = 'Stop the demo first.';
+		if (demoDriving) {
+			snapNote = 'Pause the demo first.';
 			return;
 		}
 		paused = true;
 		try {
+			stopDemo();
 			const info = await (await shelf()).load(snapSel, box);
 			switches = cpu.switches;
 			halted = cpu.halted;
@@ -2861,8 +2883,8 @@
 
 	async function onSnapReplace() {
 		if (!snapSel || status !== 'live' || !box) return;
-		if (demoOn) {
-			snapNote = 'Stop the demo first.';
+		if (demoDriving) {
+			snapNote = 'Pause the demo first.';
 			return;
 		}
 		paused = true;
@@ -3067,7 +3089,8 @@
 
 	function onKey(event, down) {
 		const key = program?.keys?.[event.code];
-		if (!key || !cpu || player) return;
+		if (!key || !cpu) return;
+		if (player && !demoHeld) holdDemo();
 		event.preventDefault();
 		if (down === held.has(event.code)) return;
 		if (down) held.add(event.code);
@@ -3085,7 +3108,8 @@
 
 	function onDemo(replay = false) {
 		if (player) {
-			stopDemo();
+			if (demoHeld) resumeDemo();
+			else holdDemo();
 			return;
 		}
 		if (replay ? !session : !canDemo) return;
@@ -3279,7 +3303,7 @@
 			aria-label="Program"
 			title={program?.title}
 			value={programId}
-			disabled={status === 'booting' || demoOn}
+			disabled={status === 'booting' || demoDriving}
 			onchange={onProgram}
 		>
 			{#each PROGRAMS as p (p.id)}
@@ -3291,7 +3315,7 @@
 			aria-label="CPU implementation"
 			title={CPUS.find((c) => c.id === cpuLevel)?.title}
 			value={cpuLevel}
-			disabled={status === 'booting' || demoOn}
+			disabled={status === 'booting' || demoDriving}
 			onchange={onCpu}
 		>
 			{#each CPUS as c (c.id)}
@@ -3304,7 +3328,7 @@
 				aria-label="Forth implementation"
 				title={cpuLevel === 'pdp7' ? 'The Forth device is Korz slots: pick a Korz CPU to plug it in' : FORTHS.find((f) => f.id === forthLevel)?.title}
 				value={cpuLevel === 'pdp7' ? 'software' : forthLevel}
-				disabled={status === 'booting' || demoOn}
+				disabled={status === 'booting' || demoDriving}
 				onchange={onForth}
 			>
 				{#each FORTHS as f (f.id)}
@@ -3452,8 +3476,8 @@
 					type="button"
 					class="demo"
 					disabled={status !== 'live' || (demoOn ? false : recording)}
-					title={demoOn ? 'Stop' : program.demoTitle}
-					onclick={() => onDemo(false)}>{demoOn ? 'STOP' : 'DEMO'}</button
+					title={demoHeld ? 'Play: the demo goes on from where you took over' : demoOn ? 'Pause the demo here; a click on the screen or a key does too' : program.demoTitle}
+					onclick={() => onDemo(false)}>{demoHeld ? 'PLAY' : demoOn ? 'PAUSE' : 'DEMO'}</button
 				>
 			{/if}
 			<button
@@ -3464,16 +3488,16 @@
 				title={recording
 					? 'Stop recording and keep it'
 					: 'Record: reboot, then record switches, keys and pen until pressed again'}
-				disabled={status !== 'live' || demoOn}
+				disabled={status !== 'live' || demoDriving}
 				onclick={onRecord}>⏺️</button
 			>
 			<button
 				type="button"
 				class="icon"
-				aria-label={demoOn ? 'Stop' : 'Replay recording'}
-				title={demoOn ? 'Stop' : 'Replay the recording from a fresh boot'}
+				aria-label={demoHeld ? 'Play' : demoOn ? 'Pause' : 'Replay recording'}
+				title={demoHeld ? 'Play: go on from where you took over' : demoOn ? 'Pause here; a click on the screen or a key does too' : 'Replay the recording from a fresh boot'}
 				disabled={status !== 'live' || recording || (!demoOn && !session)}
-				onclick={() => onDemo(true)}>{demoOn ? '⏹️' : '📼'}</button
+				onclick={() => onDemo(true)}>{demoHeld ? '▶️' : demoOn ? '⏸️' : '📼'}</button
 			>
 			<button
 				type="button"
@@ -3484,7 +3508,7 @@
 				onclick={onDownloadSession}>⬇️</button
 			>
 			{#if demoOn || recording}
-				<span class="demo-caption" aria-live="polite">{demoOn ? demoCaption : 'Recording. ⏺ again to stop.'}</span>
+				<span class="demo-caption" aria-live="polite">{demoHeld ? 'Paused: yours now. PLAY goes on from here; Reset ends it.' : demoOn ? demoCaption : 'Recording. ⏺ again to stop.'}</span>
 			{/if}
 		</div>
 		{@render grip('play', 'play')}
@@ -3631,7 +3655,7 @@
 					type="button"
 					class="icon"
 					aria-label="Step"
-					disabled={status !== 'live' || demoOn}
+					disabled={status !== 'live' || demoDriving}
 					title="Step: stop, then execute one instruction"
 					onclick={onStep}>⏭️</button
 				>
@@ -3654,7 +3678,7 @@
 						type="button"
 						class="icon"
 						aria-label="Reset: pull down to confirm"
-						disabled={status === 'booting' || demoOn}
+						disabled={status === 'booting' || demoDriving}
 						title="Reset: drag down and let go to clear core and boot {program?.label ?? 'the program'} again. Keys: arrow down."
 						style:transform={resetPull > 0 ? `translateY(${resetPull}px)` : undefined}
 						onpointerdown={onResetDown}
