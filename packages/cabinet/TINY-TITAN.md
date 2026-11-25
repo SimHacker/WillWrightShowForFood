@@ -474,6 +474,18 @@ reader takes the one it understands:
 - **340 display list segments:** the words themselves, with their symbols and source map, ready
   to paste into another machine's core or into an editor.
 
+**Flat display lists: recording a 340 like a movie.** NeWS and HyperLook could capture
+PostScript drawing by running a program against the drawing operators and keeping what came out:
+procedures, loops and conditionals unwrapped, leaving flat drawing commands. The 340 can do the
+same. However a picture was produced (subroutines, jumps, a CPU rewriting words between frames,
+a Forth turtle, a remote server), what the 340 drew in a frame is a sequence of strokes, and the
+`Recorder` in [media.ts](src/media.ts) already keeps them, frame by frame, as YAML or JSONL. To
+add: write each frame back out as a pure flat 340 display list, with points, vectors and
+parameter words and no jumps, no subroutines and no CPU, so any 340, including a CPU-less
+terminal, plays it like a recorded movie, on the phosphor renderer or the canvas. It compresses
+well: most of a frame repeats the last one, so a frame can be stored as the words that changed,
+and the words themselves are few distinct values.
+
 This follows HyperLook, the user-configurable GUI system for NeWS that Don developed with Arthur
 van Hoff at the Turing Institute, and on which he ported SimCity to Unix. In Don's words
 ([1999 thread](../../characters/gwern/sources/1999-userland-xanadu-thread.md)), a user could "flip a
