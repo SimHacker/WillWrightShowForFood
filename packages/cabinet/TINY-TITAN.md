@@ -347,6 +347,12 @@ bench's socket carries control of the machine.
 
 ### 340-Windows: a 340 without a CPU, as a remote display server
 
+340-Windows is a way to spy on segments of memory and render local views of them. The segments
+are named by symbols from the program's own symbol table; the view runs on the watcher's side, so
+the program being watched needs no change. A 340-Window renders its segments as display code on
+the watcher's own 340; other views render them differently, as the RINGS panel renders PIXIE's
+rings.
+
 The Type 340 doesn't need the PDP-7 to draw. It fetches its display list from core and runs it;
 the CPU only writes the list and starts it with an IOT. If the [multi-dialect
 assembler](ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool) treats 340 display
