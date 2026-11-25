@@ -92,7 +92,7 @@ whose start-up asks which device packages to load:
 The memo also says why a program can be written without the device: "It is not necessary that
 you have the 340 display scope, or the GT40 display, to do just defining and editing. You can
 even run the procedure if you do not mind not being able to see what the procedure does." The
-cabinet's version of that sentence: every device is there, so you can see it.
+cabinet emulates every device, so you can see what the procedure does.
 
 Each one fits [DEVICES.md](DEVICES.md)'s layers. The pots are axes, so a data hand or a mouse can
 turn LLOGO's `DIALS`; the music box is a character stream, so the same box plays from 11LOGO on
@@ -179,14 +179,14 @@ who keeps ITS running. Seymour Papert and Marvin Minsky are remembered in their
 
 ## Where the line goes on: the escalator to turtleSpaces
 
-The turtle didn't stop in 1975. Apple Logo II carried it into schools, and
+Turtle graphics continued after 1975. Apple Logo II carried it into schools, and
 [turtleSpaces](https://turtlespaces.org/), by [April](../../characters/april-ayres-griffiths/README.md) and
 [Melody](../../characters/melody-ayres-griffiths/README.md) Ayres-Griffiths, carries Apple Logo II into
 three dimensions, in a browser and on the desktop, with a gallery to publish and remix in.
 
-The cabinet doesn't build a modern Logo of its own. The 1970s ITS turtle is the historical end of
-the escalator; turtleSpaces is the modern end, and anyone the old turtle hooks gets sent there. That
-is also the most direct way to help its authors make a living from it.
+The cabinet doesn't build a modern Logo of its own. It recreates the 1970s ITS turtle and sends
+anyone who wants a modern Logo to turtleSpaces. That is also the most direct way to help its
+authors make a living from it.
 
 **The `turtle.62` stream can drive a turtleSpaces turtle.** turtleSpaces has a socket API: the
 `api` primitive opens port 1967, which you can reach with telnet or from another program, and each
@@ -205,7 +205,7 @@ characters ITS Logo sends down the Teletype line and writes turtleSpaces Logo:
 Runs of the same character collapse into one command (`CCCCC` becomes `forward 5`). The browser
 can't open a TCP socket, so the bytes go through tiny-titan's host side, or a few lines of Node, to
 port 1967 on the desktop app. The same 1975 program then draws on the 1970s floor in the cabinet and
-in turtleSpaces at once, and the second window is where a learner keeps going.
+in turtleSpaces at once, and a learner can continue in turtleSpaces.
 
 Their Apple ][ emulator, microM8, runs Apple Logo with 3D modes added, and is the target of the
 cabinet's first cross-emulator demo: Forth on the PDP-7 sends a figure through

@@ -12,7 +12,7 @@ as it changes.
     RSAVINS .RING            HEX TRIANGLE SQUARE  ok
     RSAVINS RCOUNT .         3  ok
 
-Three things came together to make that possible, and each is worth something on its own.
+Three pieces make that possible.
 
 ## 1. A Forth whose names are whole
 
@@ -24,9 +24,9 @@ to 31 characters, three SIXBIT characters to a word.
 Each word is laid out the way Open Firmware lays one out: the name, then the header, then
 the body. The execution token is still the header's address, and links still run from header
 to header. The body is at xt+1. Only `mkcell` knows where the body is, so nothing above it
-cares about the layout.
+depends on the layout.
 
-This matters for what follows. A ring library has many words with similar names: `RFINDS`,
+A ring library has many words with similar names: `RFINDS`,
 `RFINDN` and `RFINDP`, or `RINIT` and `RINSRT`. The 1972 names can be used as they are, and
 `WORDS` prints them as they are.
 
@@ -124,7 +124,7 @@ transfer stream (`PXID`, `DSBEG`, `DSEND`, `SAVINS`, then the words) carries the
 parser on either end. Forth is now a second program that writes that structure, and the
 first that can be typed at.
 
-**The 1972 code is used, not imitated.** The garbage collector, insertion, and the walk round
+**The 1972 code runs as written.** The garbage collector, insertion, and the walk round
 a ring to its start are Cambridge's own instructions on an emulated PDP-7. When Forth builds
 a ring, it builds one SYMELEC's code could walk, because it is SYMELEC's code doing the
 building.
@@ -183,14 +183,14 @@ What each step needs:
   coordinates need it.
 - **SYMELEC's drawing schema.** For SYMELEC to accept a drawing, Forth has to build what
   SYMELEC builds: the instance ring at `SAVINS`, `SUBP` and `INST`, line and point blocks,
-  and the catalog. This is the research step. Its oracle is easy, though: draw something
+  and the catalog. This is the research step. It can be checked directly: draw something
   in SYMELEC, photograph the structure with the RINGS panel, and make Forth build the same
   structure.
 - **`CREATE DOES>`** is in ([`does.fs`](tapes/pdp7forth/does.fs)), so ring types can be
   defining words: `: LINE-TYPE CREATE ... DOES> ... ;`.
 
 The order that gets there soonest: serve-back and the filestore first. A round trip of
-SYMELEC to Titan and back to SYMELEC is the referee for everything after it. Then Forth
+SYMELEC to Titan and back to SYMELEC is the test for everything after it. Then Forth
 receives what SYMELEC sent and walks it. Then Forth sends. Last, the turtle writes PIXIE
 drawings that SYMELEC can edit.
 

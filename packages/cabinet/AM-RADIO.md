@@ -1,9 +1,10 @@
 # AM radio: hearing the cabinet
 
-Hackers at MIT and the museums set a transistor radio on the PDP-7 and listened to it think.
+Hackers at MIT and the museums set a transistor radio on the PDP-7 and listened to the
+interference it picked up from the running machine.
 This is a proposal, for [Lars Brinkhoff](../../characters/lars-brinkhoff/README.md), SDF Vintage
 Systems, the Computer History Museum and anyone else with a PDP-7, a Type 340 or a SIMH build: how
-to get that sound back in an emulator, what we need from the real machine to do it honestly, and
+to get that sound back in an emulator, what we need from the real machine to do it accurately, and
 which programs are worth listening to. The emulator is the cabinet, a PDP-7 and Type 340 that run
 in a web page ([README](README.md)).
 
@@ -86,7 +87,7 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
    AGC, static and a small speaker. Turning the dial changes the timbre the way the real one did.
 2. **A full IQ receiver.** The same stream as complex baseband through mixer, filter and AM
    detector, like [GNU Radio's AM example](https://wiki.gnuradio.org/index.php/Simulation_example:_AM_transmitter_and_receiver),
-   in an AudioWorklet or offline in node. Honest enough to compare with a recording, and at
+   in an AudioWorklet or offline in node. Accurate enough to compare with a recording, and at
    baseband no heavier than 1: Matt Kline's receiver ([below](#a-receiver-to-borrow)) is this
    design, so 1 and 2 become one.
 3. **Real RFI from your own laptop.** [System Bus Radio](https://github.com/fulldecent/system-bus-radio)
@@ -94,19 +95,19 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
    Drive it with the emulated PDP-7's activity envelope and an actual radio next to the laptop
    plays munching tunes. Weak and hardware-dependent (1580 kHz on the author's MacBook Air): a
    show stunt, not the default.
-4. **Event sonification.** Not physics: each 340 display word is a grain (a point clicks, a
+4. **Event sonification.** This is not a physical model. Each 340 display word is a grain (a point clicks, a
    vector chirps with length as duration and direction as pitch, a character is a formant), IOTs
    tick, interrupts thump, a light pen hit pings. Legible, and correct at any speed.
 5. **Loop pitch.** Find the hot loop from the PC trace (its back edge, or autocorrelation), play
-   571,428 / N Hz with a timbre from its instruction mix. The radio reduced to its essence,
-   computed from cycle counts, so it holds at any emulator speed.
+   571,428 / N Hz with a timbre from its instruction mix. This is a simplified radio model,
+   computed from cycle counts, so it is correct at any emulator speed.
 6. **Bytebeat.** Treat a register as a DAC: sample the AC, a chosen word, or the 340's x and y at
    each IOT or loop pass. Munching Squares' counter is already a bytebeat. The precedents are
    old: Peter Samson's PDP-1 music, CSIRAC in 1951, and Steve Dompier's Altair playing "Fool on
    the Hill" into an AM radio at the Homebrew Computer Club in 1975. A virtual speaker bit is a
    new device programs can drive on purpose, and Mitch's Forth can live-code it.
 7. **Learned.** With calibration recordings, fit approach 1's weights, or a small model, from the
-   bus-feature stream to the recorded spectrum. The same move as matching the P7 phosphor.
+   bus-feature stream to the recorded spectrum, the same method as matching the P7 phosphor.
 
 ## A receiver to borrow
 
@@ -157,19 +158,19 @@ What it changes here:
 
 The applet runs the machine in bursts per animation frame, at speeds from 0.001× to unthrottled.
 At 1× a frame produces about 16.7 ms of emission, posted to an AudioWorklet with a ~50 ms jitter
-buffer (postMessage; WEB-BENCH rules out SharedArrayBuffer). At other speeds there are two honest
+buffer (postMessage; WEB-BENCH rules out SharedArrayBuffer). At other speeds there are two
 choices:
 
 - **Tape speed.** Pitch follows speed, like a tape played fast or slow. At 10× munching tunes go
   ultrasonic; at 0.1× they drop to a rumble.
 - **Time stretch.** Granular synthesis: cut the 1× audio into 20–50 ms Hann-windowed grains and
   overlap-add them at the playback rate, aligning grains by autocorrelation (WSOLA) so tones do
-  not warble. Slow speeds repeat grains, so a machine you are single-stepping still sings the loop
-  it is in. Fast speeds skip them. A stall or dropped frame is filled with the current texture
+  not warble. Slow speeds repeat grains, so a machine you are single-stepping still plays the
+  sound of the loop it is in. Fast speeds skip them. A stall or dropped frame is filled with the current texture
   instead of a click or silence.
 
-Paused, the last grain cloud decays slowly: sonic phosphor, the ear's version of the P7 afterglow
-the tube already shows.
+When the machine is paused, the last grains decay slowly, the audio counterpart of the P7
+afterglow the tube already shows.
 
 ## Shape in the code
 
@@ -198,7 +199,7 @@ the tube already shows.
 - **DUEL** (1968), already on the cabinet: hear the torpedoes.
 - **HILO and LANDER** on the teletype: slow, bursty loops; a good test of the granular stretch.
 - **Music on purpose**: a virtual speaker bit, and bytebeat live-coded in Mitch's Forth.
-- **Sound studies, written to explore the radio.** A tape is a score: the AM radio hears the
+- **Sound studies, written to explore the radio.** The AM radio picks up the
   rhythm of memory cycles, so a loop of n cycles is a pitch, how long it runs is a duration, and
   what it touches is a timbre. A set of small programs maps the space:
   - **Pitch**: loops of exact cycle counts, a scale and a sweep, one note per second.
@@ -217,27 +218,27 @@ the tube already shows.
 
 ## Discussion: which approach, and when
 
-The approaches are not rivals. They answer different questions and can share one probe.
+The approaches answer different questions and can share one probe.
 
-- **Faithful or legible.** The radio (1, 2) is the only one that could sound like the recordings,
-  and the only one we can be wrong about in an interesting way. Sonification (4) and loop pitch
+- **Faithful or legible.** The radio (1, 2) is the only one that could sound like the recordings.
+  Sonification (4) and loop pitch
   (5) are easier to hear things in: you can tell a vector from a point, or the inner loop from the
   outer one, which RFI smears together. A museum exhibit wants the first; a debugger wants the
   second. Build the probe once and offer both.
 - **Physics we don't have.** How strongly each bus line and the 347's deflection drivers radiate
   is unknown. Approach 1 turns that into a few weights and a dial; 7 fits them to recordings. The
-  honest order is to build 1 with guessed weights, hear it beside the recordings, then ask for
-  measurements rather than guess harder.
+  order is to build 1 with guessed weights, compare it with the recordings, then ask for
+  measurements.
 - **Time.** Anything computed from memory cycles (1, 2, 5) is only right once the timing is right,
   and is independent of how fast the host runs. Anything computed from wall-clock bursts is wrong
-  at every speed but 1×. Granular stretch is how the cycle-exact audio survives the speed slider.
+  at every speed but 1×. Granular stretch keeps the cycle-exact audio usable at other speeds.
 - **The same design fits SIMH.** SIMH's CPU loop can call the probe at each memory cycle, and its
   SDL layer already opens an audio device for the bell. `radio.c` would be `radio.ts` in C, fed
   from `PDP18B/pdp18b_cpu.c` and `display/type340.c`. We would rather share one model than grow two.
 
 ## What we would ask of museums with a running machine
 
-One careful recording is worth more than any amount of modeling. For SDF's sn 129, or any
+The model's weights can only be set from recordings of a real machine. For SDF's sn 129, or any
 PDP-7, PDP-9 or PDP-10 with a 340:
 
 1. **A known program.** Munching Squares with its switch settings written down, or better, a
@@ -248,7 +249,7 @@ PDP-7, PDP-9 or PDP-10 with a 340:
    including where it crosses a broadcast station.
 3. **Good audio.** The radio's headphone or line output into a recorder at 48 kHz, not a phone
    microphone across the room. A second track from a mic is welcome too.
-4. **Optional, for the brave.** An SDR (an RTL-SDR with an upconverter covers 500 kHz to
+4. **Optional.** An SDR (an RTL-SDR with an upconverter covers 500 kHz to
    1.8 MHz) recording IQ near the machine. That would show the harmonics directly and settle the
    weights in approach 1.
 

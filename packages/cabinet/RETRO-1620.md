@@ -136,8 +136,8 @@ tapes (Bach, the Star Spangled Banner, and Michigan fight songs).
 - It will test instructions and options SYMELEC never uses. We emulate
   only what SYMELEC uses, so expect failures there; write down which
   tests are out of scope and why, and fix only real bugs in what we do
-  emulate. That list is useful on its own: it says exactly what our
-  PDP-7 is.
+  emulate. That list also documents exactly what our PDP-7
+  implements.
 - Read the pen-follow source for TRACKING.md before touching the
   tracking code again.
 
@@ -202,7 +202,7 @@ the first failing run.
 - **Power-up and Emergency Off.** Power-up takes 4.5 seconds while the
   "DC supplies" come up, and Emergency Off takes a double click and
   plays a siren ([`emergencyOffClick`](https://github.com/pkimpel/retro-1620/blob/2cb4ed7/webUI/ControlPanel.js#L875-L888)).
-  Good theater, but nothing the PDP-7 did.
+  The PDP-7 had nothing like it.
 
 ## People
 
@@ -213,8 +213,8 @@ the first failing run.
 - **David Moews** found the IPL-V listing in the Feigenbaum collection
   at the Stanford Digital Repository (SC0340, box 46, folder 52). IPL
   was Newell, Shaw and Simon's list language, the one Lisp replaced.
-  The pattern is the same as the PIXIE film: an archive, and one person
-  who went and asked.
+  As with the PIXIE film, the material was in an archive and was found
+  because one person went and asked for it.
 
 ## Order
 

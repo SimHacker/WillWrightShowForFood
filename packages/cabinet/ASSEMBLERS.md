@@ -129,7 +129,7 @@ twice, 5013 and 5040: it is assigned twice. The table also settled names in the 
 ## RSPPIX and SYMELEC reassemble
 
 `rsppix.asm`, unchanged, assembles at origin 22 to `rsppix.oct` word for word
-(`src/rsppix.test.ts`). `CAMBRIDGE_1972` learned its 1972 spellings to get there:
+(`src/rsppix.test.ts`). That required `CAMBRIDGE_1972` to accept these 1972 spellings:
 
 - `JMP I SETUP=JMS` in an operand means SETUP−JMS, and the label `FINDP-JMS,` means `FINDP=JMS,`.
 - `DZM #GDM` is DZM GDM.
@@ -140,7 +140,7 @@ twice, 5013 and 5040: it is assigned twice. The table also settled names in the 
   are checked against the allocation, not assembled.
 
 `symelec.asm` assembles to `symelec.oct` and its literal pool word for word
-(`src/cambridge-as7.test.ts`). SYMELEC taught the dialect four more things:
+(`src/cambridge-as7.test.ts`). SYMELEC required four more dialect rules:
 
 - A forward reference to a name assigned twice (`SUMB = STSTAK 44`, then `STSTAK 71`) gets the
   first value.
@@ -154,7 +154,7 @@ listing text and `symelec.oct` together: names (`WRLTO`, not `WRLTD`; `ERAST`; `
 `OP-5` for `OP+5`, `LAM` read as `LAW`, `SAD (257` read as `SAD 13`, `772016` read as `772015`
 at 7633 (the scan's 6 has a speckled top), the variable block after the
 last PAUSE, and Heinz's pencilled `201130` for PIX, which Titan had rejected as `201128`.
-`scripts/compare-symelec.mjs` lists any word where source and image part.
+`scripts/compare-symelec.mjs` lists any word where source and image differ.
 
 ## Cambridge to as7
 
@@ -177,7 +177,7 @@ form; the cabinet's assembler can make the same decisions with macros (`fword` i
 and with transformations over the source rather than over its text, in the spirit of James
 Gosling's Ace, a C macro processor that rewrote code by its structure.
 
-What's new is where the decisions come from. The emulator measures the running program exactly,
+Here the decisions come from measurement. The emulator measures the running program exactly,
 from outside: how often each instruction runs, each Forth word is called, each call site is taken,
 each memory word is read or written, with no instrumentation inside the program and no change to
 its timing. Those profiles go back into the next build:

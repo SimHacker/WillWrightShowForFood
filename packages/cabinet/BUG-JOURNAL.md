@@ -1,14 +1,14 @@
 # Bug journal
 
 Every bug the cabinet has met, in the order it met them, with the
-evidence that settled each one. The referee is always the 1972
+evidence that settled each one. The reference is always the 1972
 listing: when the machine and the listing disagree, one of them is
 wrong, and the job is finding out which. Three kinds turn up:
 
-- **ours** — the emulator, the loader, or the web page got it wrong;
-- **the transcription's** — the listing was read off a scan, and the
+- **ours**: the emulator, the loader, or the web page got it wrong;
+- **the transcription's**: the listing was read off a scan, and the
   scan was right;
-- **1972's** — the listing itself is wrong, and the emulator should
+- **1972's**: the listing itself is wrong, and the emulator should
   faithfully reproduce the mistake.
 
 ## Rungs 1–4: boot, display, tracking, the Titan link
@@ -68,7 +68,7 @@ vanished and reappeared.
 **Cause.** Two things multiplied. First, 1972: when the pen hits the
 cross, the display stops at the hit, `TRCR` recenters the cross, and
 the refresh starts over. Nothing after the cross in the display file
-is drawn in that refresh — not the search raster, not the ring. With
+is drawn in that refresh: not the search raster, not the ring. With
 the pen parked on the cross the ring measures 0 dots against 90 with
 the pen up. On the real tube this happened hundreds of times a second
 and the phosphor blended it into a dimmer ring.
@@ -104,8 +104,8 @@ interrupt deposits `100177` into `SRAST` ("HIGH INTENSITY"), and the
 stop-code interrupt deposits `100170` ("LOW INTENSITY").
 
 **Fix.** Strokes are drawn at their 340 intensity. The raster now
-flares whenever the pen is hitting something — a lightbutton
-included — and fades when it stops. That flare is the "glitch" that
+flares whenever the pen is hitting something (a lightbutton
+included) and fades when it stops. That flare is the "glitch" that
 appeared while holding a button down and vanished on release. It is
 1972 feedback that the pen sees light. **Kind:** ours.
 
@@ -124,7 +124,7 @@ one exception anywhere would have stopped it for good, silently.
 shown in the applet's status line instead of freezing the tube. The
 status line also shows cycles per second, pen up or down, and the
 cross position, so a stall is visible at a glance. **Kind:**
-unresolved, made loud.
+unresolved, now reported.
 
 ### The + was not in the middle of the menu
 
@@ -147,7 +147,7 @@ vector itself: a zero-length stroke, drawn as an 8×8 square.
 
 Which half of the line is wrong? The assembler cannot have produced
 `200200` from `VEC ON -2 0`: the operands assemble to `200202`. The
-raw OCR of scan page 060 reads `209202` — the OCR's usual 0-for-9
+raw OCR of scan page 060 reads `209202`: the OCR's usual 0-for-9
 confusion, but the last digit is a 2. Scan and source agree; the
 transcription dropped the 2.
 
@@ -162,7 +162,7 @@ had been checked. Only running the program exposed this one.
 
 **Fix.** `200202` in `symelec.oct` and `symelec-listing.txt`. Then a
 new check: decode every `VEC` line in the listing and compare it with
-its operands. One other line differed, `VEC ON -170` at 5300 — a false
+its operands. One other line differed, `VEC ON -170` at 5300, a false
 alarm from the checker's guess about one-operand vectors; that word
 closes the working-area box and matches the geometry. No other
 display word disagrees with its source.
@@ -170,7 +170,7 @@ display word disagrees with its source.
 
 ### F halted the machine
 
-**Symptom.** Draw a line — S, drag, drag — and press F to finish it.
+**Symptom.** Draw a line (S, drag, drag) and press F to finish it.
 The status line drops to `0.00M/s` and nothing moves again. The CPU
 has halted.
 
@@ -197,7 +197,7 @@ OCR read `69237` and the transcription settled on a 5.
 
 **Fix.** `602377` in `symelec.oct` and `symelec-listing.txt`. Then a
 new check, the same idea as the `VEC` check: recompute every
-`.`-relative operand in the listing — `JMP .-5`, `JMP . 4` — and compare
+`.`-relative operand in the listing (`JMP .-5`, `JMP . 4`) and compare
 it with the assembled word. Every other one agrees. The machine now
 survives F and 20 rounds of random drags and ring presses.
 **Kind:** the transcription's.
@@ -239,7 +239,7 @@ image.)
 
 More crops, with what each reader saw:
 [exhibits](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/README.md).
-**Kind:** 1972's, fixed the way Heinz would have: one word, by hand.
+**Kind:** 1972's, fixed as Heinz's pencil note says: one word.
 
 ### The PDP-7 ran at the speed of your monitor
 
@@ -410,7 +410,7 @@ lines if not S". Then, after trying the rest of the ring:
 before, and SYMELEC had answered `?`. A program waiting on the keyboard
 could plausibly stop polling the pen. A Node probe booted SYMELEC, typed
 at it, and then tapped S: S turned to F every time. The teletype was
-innocent.
+not the cause.
 
 **The probe that found it.** Two more Node runs. A hit map pressed the
 pen at every point around S and read location 55 afterwards, which showed
@@ -516,7 +516,7 @@ has an answer. What the first run found:
 The goal: `symelec.asm` through the Cambridge assembler gives
 `symelec.oct` and its literal pool exactly, and every line of the
 listing and every row of the printed symbol table agrees with that
-assembly. The rule, learned the hard way: where source, listing and
+assembly. The rule: where source, listing and
 image disagree, one of them is a misread, and the scan says which.
 Nothing is kept as a historical exception until the scan has been read
 at a size where a 5 and a 6 cannot be confused.
@@ -626,7 +626,6 @@ assembler's own parser, values and pool, so the two cannot disagree
 about a line. `tapes/symelec/symelec.s` and `tapes/pdp7forth/rsppix.s`
 are its output; they assemble to the same words as the Cambridge
 sources, and the tests check that and that the files are current.
-Three views of one program, one set of words.
 
 ## Not the machine
 

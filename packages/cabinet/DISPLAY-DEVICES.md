@@ -2,7 +2,7 @@
 
 A display device is a plug-in on the backplane that reads a range of some machine's memory through a
 read-only [core link](CORE-LINKS.md) and turns it into something to look at: compact RGBA, indexed
-color, tiles from an atlas, or vectors. The machine doesn't know it's being watched. Each device is
+color, tiles from an atlas, or vectors. Reading the memory does not affect the machine. Each device is
 configured for a size, a layout, a shape and a view, and several can read the same memory at once.
 Design only, apart from the Type 340, which runs.
 
@@ -56,7 +56,7 @@ A display device declares, in its cartridge or profile:
 
 ## Derived displays
 
-Because a display is just a codec over memory, the instructive ones are free:
+Because a display is a codec over memory, these need no new machinery:
 
 - **The memory as a picture**: all 64K of the Apple, or a PDP-7 bank, a pixel per byte or word,
   colored by value or by what last touched it.

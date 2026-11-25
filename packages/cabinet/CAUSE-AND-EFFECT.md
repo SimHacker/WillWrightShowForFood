@@ -69,8 +69,8 @@ replayed, stepped and scrubbed. That record is the scene player's history in
 links of [DESIGN.md](DESIGN.md#source-maps-as-transclusion-layers-spans-links) attached to every
 event that executes code.
 
-The same chain runs through any machine the cabinet hosts. On an Apple ][ the most beautiful
-stretch is layers 10 to 12: the video circuitry reading screen memory and turning it into NTSC, with
+The same chain runs through any machine the cabinet hosts. On an Apple ][, layers 10 to 12
+are the video circuitry reading screen memory and turning it into NTSC, with
 Woz's tricks for color and timing. Don proposed showing exactly that in a November 2018 letter to
 Paleotronic's editor, Melody Ayres-Griffiths, after seeing microM8 draw pixels in 3D: "a 3d diagram
 representing of all the logic and circuitry behind the pixels, reading from video memory and mutating

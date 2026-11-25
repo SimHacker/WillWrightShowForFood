@@ -67,8 +67,8 @@ Integer BASIC and Logo get their own readers, declared like any other type of me
 
 A program running on real hardware can't be asked what it would accept next without being changed.
 The cabinet reads core, so it can walk Forth's dictionary or PIXIE's command table while the
-program waits for input, and the program never knows. This is the manifesto's "push the driver out
-into the host" applied to input, the same move as the SIGWINCH constant written into Forth from
+program waits for input, without affecting the program. This is the manifesto's "push the driver out
+into the host" applied to input, the same approach as the SIGWINCH constant written into Forth from
 outside ([MANIFESTO](MANIFESTO.md#push-the-driver-out-into-the-host)).
 
 ## How it fits the teletype

@@ -6,8 +6,7 @@ tagged stroke captions it with the tag's title (`src/tags.ts`, `readTag`), and
 draws. The latch, IDPN pulse 4, focus and the pies (§2 onward) are still design. Worked out
 in conversation with Don on 2 October 2026.
 The gesture details are guesses. This note picks the parts that can be decided now and
-builds the rest as a playground with knobs, so we can find out what feels right by
-trying it rather than by arguing in our heads.
+builds the rest as a playground with settings, so the choices can be made by trying them.
 
 ## The idea in one paragraph
 
@@ -76,7 +75,7 @@ The 340 never interprets it.
 **Built, and a second shape (12 October 2026).** If the first word at the tag address is
 below 128, it is a Forth counted string: the count, then one ASCII character per word,
 which is exactly what `S"` compiles into a definition. So a tag can point straight at a
-string that is already in core and costs nothing more. A record's title pointer is never
+string that is already in core, with no extra memory. A record's title pointer is never
 that low: it would be in the PDP-7's own low locations.
 
 ### In Forth
@@ -204,7 +203,7 @@ SYMELEC's tracking cross needs taps on empty screen.
   relative to the tapped item so a macro works wherever the item is. Playback uses
   `DemoPlayer` from `src/symelec-demo.ts`, which already times in machine cycles and
   shows captions. Every step goes in through the same path as live input, so the
-  program sees a user, not a back door.
+  program cannot tell playback from a user.
 - **Deposit a code** in the program's mailbox, read by an IOT, so the program carries
   out its own menu items.
 - **Run JS** with `peek` and `poke` on 18-bit core, `packages/pixie` bound to live core
@@ -270,7 +269,7 @@ replace the other.
 
 ## 10. Building to find out: the playground
 
-This cannot be designed in our heads. The gesture layer is built so every guess is a
+The gesture layer is built so every guess is a
 setting, changed live from a panel beside the tube and saved per user:
 
 - double-tap timeout and distance;

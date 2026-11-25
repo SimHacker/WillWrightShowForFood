@@ -207,7 +207,7 @@ that settled it, and classifies each as ours (the emulator), the transcription's
 - **`ISZ BSZ`.** The Titan host expected `count + 1` words per blocklet; at 1734 to 1735 the
   listing complements the count and increments it as part of the end-of-transfer test, so a
   blocklet carries exactly `count` words. The 1972 code NAK'd the 2026 host's wrong count,
-  as designed ([OFF-BY-ONE.md](OFF-BY-ONE.md#isz-bsz-the-star-of-the-show)).
+  as designed ([OFF-BY-ONE.md](OFF-BY-ONE.md#isz-bsz-the-blocklet-word-count)).
 - **The octal image itself was wrong in places.** 3753 and 3761 were transcribed `777777 LAW`
   for a printed `764767 LAW X`, so the image being booted ran different code from what Heinz
   printed. 7633, `772016 LAW POINT`, had been transcribed with a 5; it was first written off as a

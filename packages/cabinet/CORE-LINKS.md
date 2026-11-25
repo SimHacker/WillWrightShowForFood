@@ -1,7 +1,7 @@
 # Core links: shared memory and DMA between unlike machines
 
-How memory moves between machines on the cabinet's backplane when they don't agree on anything:
-word size, byte order, character set, number format, or what an address means. It extends
+How memory moves between machines on the cabinet's backplane when they differ in word size, byte
+order, character set, number format, or what an address means. It extends
 [MAPPING.md](MAPPING.md), which gives the map entry, the packing rules between word widths, the
 `MemoryPort` adapter and locks, from MIT's Rubin 10/11 interface. This page adds conversions beyond
 width, what a write can trigger, exclusive and shared ownership, DMA, and links to devices and to

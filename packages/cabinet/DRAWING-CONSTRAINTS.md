@@ -3,8 +3,8 @@
 **Status: longer term, optional, to be decided.** None of this is needed for the first universal
 editor ([DESIGN.md, A universal 340 editor](DESIGN.md#a-universal-340-editor)), which pauses the
 machine, edits, and writes back only where the cartridge says it's safe. This file collects the
-harder questions so they aren't lost. Every section is an invitation: students and hackers who
-want a real problem with a real 1972 program to test it on, pick one and say so.
+harder questions so they aren't lost. Students and hackers who want a problem to work on, with a
+real 1972 program to test it against, can pick a section and say so.
 
 Legend: **done** · **next** (about to do) · **will** (planned) · **could** (open, wants a
 volunteer) · **won't** (decided against, with the reason).
@@ -87,7 +87,7 @@ rebuilds it; edit the source data instead), `rewritten` (named words the program
 
 For each memory word, keep the last read, write and execute, separately for the PDP-7, the
 340, and Forth's instruction pointer (location 010: Forth's `next` is `xct i 010`, so IP says
-which Forth cell ran), each with the PC that did it, plus counts. Not a log: one record per
+which Forth cell ran), each with the PC that did it, plus counts. This is not a log: one record per
 word per processor, cheap enough to leave on. Full history is the trace's job. The memory
 panel can tint words by who touched them last, and a display word can say which instruction
 wrote it.

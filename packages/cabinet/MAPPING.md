@@ -1,6 +1,6 @@
 # Mapping one machine's memory into another's
 
-The cabinet's promise is that "every machine can see every other
+The cabinet's design goal is that "every machine can see every other
 machine" ([MANIFESTO.md](MANIFESTO.md#every-machine-can-see-every-other-machine)):
 segments, maps and locks managed by tiny-titan
 ([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do)). MIT's AI Lab built
@@ -71,7 +71,7 @@ SIMH: `data = word0 << 20 | word1 << 4`, from PDP-11 address
 - **Bytes come out in the order 1, 0, 3, 2.** A PDP-10 byte pointer reads
   left to right; a PDP-11 keeps the low-addressed byte in the low half of
   each word. So `ILDB` with 8-bit bytes works, and `_calls` documents
-  the order rather than hiding it.
+  the order.
 
 ### What was on the other end
 
@@ -140,7 +140,7 @@ again ([PDP-10/its#620](https://github.com/PDP-10/its/issues/620)).
 
 ### The door and the elevator
 
-The best-documented use. On a Lisp Machine, Terminal-D buzzed the
+This is the best-documented use. On a Lisp Machine, Terminal-D buzzed the
 ninth-floor door of 545 Technology Square and Terminal-E called the
 elevator. The whole path survives:
 

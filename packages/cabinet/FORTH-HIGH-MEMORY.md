@@ -191,12 +191,12 @@ his tools never see it. Whether his `as7` and loader place words above 8K is sti
 
 Putting the threaded code itself in high banks would free most of bank 0, but `NEXT` would have
 to run in extend mode or translate every cell, slowing every word, and auto-index pointers,
-interrupts and the 512-word link limit all get harder. Not worth it.
+interrupts and the 512-word link limit all get harder. That cost is too high.
 
 Overlays instead: keep the kernel, the prelude and the turtle in bank 0, and keep each cartridge
 (turing.fs, ultimate.fs, datahand.fs, ultimate-hand.fs) compiled for a fixed overlay area of
 bank 0, stored in a high bank. Choosing a program copies its overlay down with `XMOVE` and
-patches the dictionary link to it. Every cartridge on one machine, with no recompiling.
+patches the dictionary link to it. That puts every cartridge on one machine, with no recompiling.
 
 ## Tapes
 

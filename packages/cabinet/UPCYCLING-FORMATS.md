@@ -1,8 +1,8 @@
 # Upcycling formats: microPAK, cartridges, and what an old program needs to travel
 
 A discussion paper for the [emulation roundtable](../../repo-shows/emulation-roundtable/README.md):
-how microM8's microPAK and the cabinet's cartridges package an old program with everything that
-makes it better than it was, how they compare with other emulators' configuration files and with a
+how microM8's microPAK and the cabinet's cartridges package an old program with everything added
+to it, how they compare with other emulators' configuration files and with a
 git repository, how one can nest inside another without either being flattened, and what tools and
 shared vocabulary would let them travel between emulators. Facts about microPAK are from
 Paleotronic's [microPAK help page](https://paleotronic.com/software/microm8/help/micropak/) and
@@ -72,9 +72,9 @@ colour-remapping, 3D pixel shifting, music, backdrops, overlays, memory cheats, 
 | Diff and merge | as a ZIP, no | line by line in git |
 | Runs today | yes, for years | partly; the format is the target |
 
-They meet in the middle. microPAK leads on presentation (3D, palettes, cameras, overlays, music)
-and on in-machine control programs, and it already works. The cartridge leads on build, provenance
-and git. Neither is wrong; they're organelles of the same cell.
+microPAK leads on presentation (3D, palettes, cameras, overlays, music) and on in-machine control
+programs, and it already works. The cartridge leads on build, provenance and git. One can hold the
+other ([below](#organelles-nesting-without-flattening)).
 
 ## Others in the field
 
@@ -95,14 +95,14 @@ and git. Neither is wrong; they're organelles of the same cell.
 
 ## A git repo as the canonical form
 
-A ZIP is a good way to carry a program and a poor way to work on one. The cabinet's answer
+A ZIP is easy to carry but cannot be diffed or merged. The cabinet's approach
 ([PRESERVATION.md](PRESERVATION.md)) is to unpack everything into a git tree that packs back exactly:
 
 - A PAK unzips into a directory, and that directory, with a `cartridge.yml` beside the original
   `.cfg` files, is a cartridge. Zipping it back gives the same PAK.
 - Disk images inside unpack too (a ProDOS or DOS 3.3 disk into its files, with the layout recorded so
   it repacks), so a change to one BASIC program is one line in a diff, not a new binary.
-- History, blame, branches and pull requests come free, and so does a public home where anyone can
+- Git provides history, blame, branches and pull requests, and a public host where anyone can
   propose a better palette for Karateka.
 
 ## Organelles: nesting without flattening
@@ -131,7 +131,7 @@ karateka/
   simh/ mame/            other emulators' organelles, when there are any
 ```
 
-Rules that keep it honest:
+Rules:
 
 - **No organelle is privileged**, the cabinet's included. Its loaders, helpers and views sit in
   `cabinet/` beside microM8's and SIMH's, so removing any one emulator's folder leaves a cartridge
@@ -197,7 +197,7 @@ Paleotronic's [“Upcycling” Pong](https://paleotronic.com/2018/07/07/upcyclin
 
 Both ship as microPAKs (the game plus `control.apl`) in microM8's `micropaks` folder.
 
-The flipper is where the cabinet's approach would add something. Instead of adding `POKE`s to the
+The cabinet's approach would change the flipper. Instead of adding `POKE`s to the
 game, a watch from outside can see the ball's direction change in the game's own variables (an
 Integer BASIC variable, or a memory location found with `@scan.sequence`), and fire the same control
 program, so the original program runs untouched. Both ways are worth keeping: a cooperative mailbox

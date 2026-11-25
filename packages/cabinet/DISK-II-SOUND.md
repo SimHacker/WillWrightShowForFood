@@ -1,14 +1,14 @@
 # The Disk II's sound
 
+Steve Wozniak, [interviewed by Paleotronic](https://paleotronic.com/2018/05/19/steve-wozniak-talks-disk/), 2018:
+
 > The disk drives in those days, when they went from track one to track twenty, you'd hear
 > "ennnnnnnnnnnh" – this horrible sound like a buzz-saw. Mine went "shew, shew, shew." Beautiful
 > sounding, and it did it twice as fast.
->
-> — Steve Wozniak, [interviewed by Paleotronic](https://paleotronic.com/2018/05/19/steve-wozniak-talks-disk/), 2018
 
-The emulator has to make that sound, and make it for the right reason: not a recording played on
-every seek, but the sound of the head moving the way the software moved it. Then Woz's seek sounds
-like "shew" because of Woz's code, and anything that steps the head another way sounds different.
+The emulator should make that sound from the motion of the head as the software moved it, not by
+playing a recording on every seek. Then Woz's seek sounds like "shew" because of Woz's code, and
+anything that steps the head another way sounds different.
 
 ## Why it sounds that way
 
@@ -25,7 +25,7 @@ and Woz timed them like pushing a heavy wagon:
 
 DOS 3.3's disk routines keep that acceleration as a pair of timing tables, one for how long each
 phase stays on and one for the gap after it, indexed by how far the seek has gone and has left to
-go. The sound is that schedule, heard.
+go. The sound is that schedule made audible.
 
 ## Making it from the events
 
@@ -41,7 +41,7 @@ a known cycle. That is enough to make the sound:
    step rate. Accelerating and decelerating steps make the rising and falling "shew"; constant
    fifteen-millisecond steps make the buzz-saw.
 4. **Add the rest of the drive**: the spindle motor's hum while the motor soft switch is on, the
-   head load, the disk turning, and the famous clatter at boot, when DOS steps the head outward far
+   head load, the disk turning, and the clatter at boot, when DOS steps the head outward far
    more times than there are tracks to be sure it's at track zero, and it bangs against the stop.
 
 The sound comes out of the same backplane clock as everything else, so in slow motion it slows down
@@ -56,8 +56,8 @@ moved the head for each click.
   patterns; they sound different, and the sound tells you something is going on.
 - **Teach the drive.** A view of the four phases, the rotor and the head, driven by the same events,
   beside the code that switched them.
-- **Fidelity where it's cheap.** microM8 and other Apple emulators play drive sounds; this one
-  derives them, which is the point of an emulator that sees every cycle.
+- **Sound from events.** microM8 and other Apple emulators play drive sounds; this one
+  derives them from the phase changes it sees at every cycle.
 
 The same approach fits every mechanical device the cabinet emulates: the Teletype's print head and
 carriage return, the paper tape reader, the DECtape's reels, all sounded from the events that move

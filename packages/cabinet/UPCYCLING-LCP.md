@@ -64,11 +64,9 @@ build runs the Apple at about 2.5 to 2.9 times real speed, which still leaves tw
 guestbook side loaded and 30 to 35 MHz in the house, about 30 times real speed, so the whole
 move-in takes seconds. Under Node, 420 seconds of Apple time take 11 seconds.
 
-So the speed is part of the accessibility. A wait nobody will sit through is a wall.
+So the emulator's speed is part of the accessibility: it removes a wait of several minutes.
 
 ## The pieces
-
-Each piece is there because the goal needs it.
 
 1. **The disks.** 4am's crack of the Research Project disk, Guestbook side and House side
    ([APPS.yml](disks/apple2/APPS.yml#L41), [the crack](https://archive.org/details/LittleComputerPeople4amCrack)).
@@ -96,7 +94,7 @@ Each piece is there because the goal needs it.
 6. **A picture that is exactly right.** Hi-res color is a port of microM8's 14 MHz scan, with the
    half-dot shift ([hiresLine](src/korz/apple2/scan.ts#L209)). Text is the ][+ character ROM, each
    dot doubled, and the cursor stays in its own cell. The screen angel compares pixels exactly, so
-   the painter it was cut from is the painter it watches.
+   its looks are cut from the output of the same renderer it watches.
 7. **The screen angel.** Watches those pixels and keeps the game's state
    ([below](#the-screen-angel)).
 8. **Moves as buttons.** The app's actions are data: a label and the keys it types, or a disk it
@@ -110,7 +108,7 @@ Each piece is there because the goal needs it.
 11. **Saving the house.** The Disk II keeps what the game writes, and **Save disk** downloads the
     image.
 12. **Reading the disk as files.** DOS 3.3, ProDOS and Apple Pascal in TypeScript
-    ([dos33.ts](src/apple2/dos33.ts), [APPLE2.md](APPLE2.md#disk-images)), the bottom of any
+    ([dos33.ts](src/apple2/dos33.ts), [APPLE2.md](APPLE2.md#disk-images)), the lowest layer of any
     bridge, and the person on the House side as YAML ([lcp.ts](src/apple2/lcp.ts)).
 13. **microM8, as the oracle.** Still in the page's menu. When the Korz Apple and microM8 disagree,
     microM8 is the one to check against.
@@ -207,13 +205,13 @@ and a state machine in YAML.
 The cabinet's [manifesto](MANIFESTO.md#tribute-accessibility-and-fun-beat-realism) says tribute,
 accessibility and fun beat realism, and that
 [the emulator is an advocate](MANIFESTO.md#cartridges-and-one-description-of-everything) for both
-the running program and the person using it. The emulator is ours, so it does the work. The game
-is not patched. Nothing in its code was changed to add a field, a button or a voice. The page
+the running program and the person using it. The additions are all in the emulator and the page.
+The game is not patched. Nothing in its code was changed to add a field, a button or a voice. The page
 reads the screen the game already draws, types the keys the game already takes, and inserts the
 disk the game already asks for.
 
-What stays honest is the game. Every instruction runs as it did on the Apple, the disk is the
-disk, and with the screen angel off the player has the 1985 game, keyboard and all.
+Every instruction runs as it did on the Apple, the disk image is unmodified, and with the screen
+angel off the player has the 1985 game, keyboard and all.
 
 ## Soul City: carrying him out
 
@@ -251,6 +249,6 @@ he lived.
 watch. [David Crane](../../characters/david-crane/README.md) made it at Activision and made the
 person answer. [Will Wright](../../characters/will-wright/README.md) has said he played it, and Rich
 Gold gave him feedback while he made The Sims. 4am preserved the disk. April and Melody
-Ayres-Griffiths showed what an emulator owes the people using it.
+Ayres-Griffiths's microM8 is the model for the upcycling.
 
 ↑ [README](README.md) · [APPLE2](APPLE2.md) · [guide](guides/little-computer-people.md) · [BENCHMARKS](BENCHMARKS.md) · [MANIFESTO](MANIFESTO.md)

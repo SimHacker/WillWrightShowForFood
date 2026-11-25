@@ -1,50 +1,48 @@
-# Web bench — what working browser emulators teach us
+# Web bench: what working browser emulators teach us
 
-Survey of the emulators that actually work in browsers (22 Sep 2026), and the
-browser features the cabinet should use. No WASM anywhere in our plan — the
-interesting finding is that the best precedents for *us* never needed it
-either. Companion to [SIMH-MAP.md](SIMH-MAP.md) and [DESIGN.md](DESIGN.md).
+A survey of the emulators that work in browsers (22 Sep 2026), and the
+browser features the cabinet should use. No WASM anywhere in our plan; the
+closest precedents for the cabinet never needed it either. Companion to
+[SIMH-MAP.md](SIMH-MAP.md) and [DESIGN.md](DESIGN.md).
 
 ## The field
 
-**PCjs** (Jeff Parsons, pcjs.org) — the existence proof for this whole bench.
+**PCjs** (Jeff Parsons, pcjs.org) shows that this approach works.
 Pure JavaScript, no WASM, no plugins; IBM PC, PDP-11, PDP-10 and more; runs
 "with or without a web server." Its main ideas:
 
 - **Machines are declarative documents.** A page embeds a machine as config
-  (XML v1, JSON v2) listing components wired by id — CPU, RAM, ROM, video,
-  debugger. Our cabinet manifest (YAML jazz) is the same move.
+  (XML v1, JSON v2) listing components wired by id: CPU, RAM, ROM, video,
+  debugger. Our cabinet manifest (YAML) does the same.
 - **Predefined state files**: a page can open a machine *already booted into
   a demo*. For us: a URL that opens SYMELEC mid-drawing.
-- **`autoType` / `autoMount`**: scripted keyboard input and media at boot —
-  the browser twin of SIMH's EXPECT/SEND, and our TTY test harness.
-- **The debugger is just another component** you enable in config.
+- **`autoType` / `autoMount`**: scripted keyboard input and media at boot,
+  the browser equivalent of SIMH's EXPECT/SEND, and of our TTY test harness.
+- **The debugger is a component** you enable in config.
 
-**masswerk Spacewar!** (Norbert Landsteiner) — pure-JS PDP-1 with the Type 30
-CRT done *right*: dual P7 phosphor (bright blue flash under the beam, long
+**masswerk Spacewar!** (Norbert Landsteiner): a pure-JS PDP-1 with an accurate
+Type 30 CRT: dual P7 phosphor (bright blue flash under the beam, long
 yellow-green afterglow), seven intensities as spot sizes, internal 1024²
-rendered with sub-pixel spots, on **canvas 2D at full frame rate**. Direct
-prior art for our 340 — same tube family (16ADP7), same phosphor, one
-machine generation earlier. Proves the pretty-pass needs no WebGPU in v1.
-Also a taste lesson: he deliberately runs fixed frame pacing instead of
-reproducing the original's frame-rate jitter — choose which fidelity matters.
+rendered with sub-pixel spots, on **canvas 2D at full frame rate**. It is direct
+prior art for our 340: same tube family (16ADP7), same phosphor, one
+machine generation earlier. It shows the phosphor rendering needs no WebGPU in v1.
+He deliberately runs fixed frame pacing instead of reproducing the original's
+frame-rate jitter, a choice about which kind of fidelity to keep.
 
-**Internet Archive (Emularity)** — loader UX over emscripten MAME/DOSBox
-(WASM, so architecture not applicable; lessons are all operational):
+**Internet Archive (Emularity)**: loader UX over emscripten MAME/DOSBox
+(WASM, so its architecture does not apply; the lessons are operational):
 click-to-play with progress; media fetched per item; a read-only ZIP overlaid
-with a writable in-memory FS, persisted to IndexedDB. And one cautionary
-tale we adopt as a rule: **MAME's binary save states were not portable even
-between builds of the same emulator.** Snapshots must be portable by
-construction.
+with a writable in-memory FS, persisted to IndexedDB. One lesson we adopt as
+a rule: **MAME's binary save states were not portable even between builds of
+the same emulator.** Snapshots must be portable by construction.
 
-**EmulatorJS / RomM (2025–26)** — WASM RetroArch cores; still two lessons:
-save/state flows through browser storage with change listeners and optional
-server sync (shape of our filestore sync later), and a bug note worth
-framing: reading state from a running threaded core races the worker and
-yields torn buffers — **pause, then serialize.** Single-threaded TS makes
-this free.
+**EmulatorJS / RomM (2025–26)**: WASM RetroArch cores, with two lessons.
+Save state flows through browser storage with change listeners and optional
+server sync (the shape of our filestore sync later). And reading state from a
+running threaded core races the worker and yields torn buffers, so **pause,
+then serialize.** Single-threaded TypeScript avoids the race.
 
-**v86, jslinux** — WASM/asm.js x86. Wrong lineage for us; skipped.
+**v86, jslinux**: WASM/asm.js x86. Not relevant to the cabinet; skipped.
 
 **Apple ][ in TypeScript, two of them, both MIT** (checked 4 Oct 2026):
 
@@ -54,16 +52,16 @@ this free.
 - **[Apple2TS](https://github.com/ct6502/apple2ts)** (Chris Torrence and contributors): //e
   in TypeScript, Vite, expansion cards (Mockingboard, mouse card, Z-80 SoftCard, Disk II, SmartPort),
   a debugger with a memory heat map, save states, Internet Archive and DemoZoo loaders, and an
-  AI agent that reads registers, the screen and memory and sets breakpoints. Closest in spirit
-  to the cabinet.
+  AI agent that reads registers, the screen and memory and sets breakpoints. It is the closest
+  of these to the cabinet.
 
 **[microM8](https://paleotronic.com/software/microm8/)** (Paleotronic: [April](../../characters/april-ayres-griffiths/README.md) and
 [Melody](../../characters/melody-ayres-griffiths/README.md) Ayres-Griffiths; designed and programmed by
 April; free, for Windows, macOS
 and Linux, with a WebAssembly subset, cyanIIde; Go source under the MIT license since September 2025,
-[microm8-cln](https://github.com/paleotronic/microm8-cln)) — not a browser emulator, but the clearest
-example of what an emulator owes the person using it, and the inspiration the
-[MANIFESTO](MANIFESTO.md#a-federation-of-emulators-after-microm8) credits. Its MCP server and HTTP
+[microm8-cln](https://github.com/paleotronic/microm8-cln)). It is not a browser emulator. It is
+the model for the features the cabinet adds for the person using it, as the
+[MANIFESTO](MANIFESTO.md#a-federation-of-emulators-after-microm8) says. Its MCP server and HTTP
 API make it the first peer for the tiny-titan federation.
 
 It runs the Apple ][, ][+ and //e with Mockingboard, mouse, Disk II,
@@ -81,8 +79,8 @@ Done: its Go core (the 6502 is `paleotronic.com/core/hardware/cpu/mos6502`; the 
 hardware is under `paleotronic.com/core/hardware`) builds with `GOOS=js GOARCH=wasm` from our
 branch and patches ([microm8/](microm8/README.md)), runs headless in the cabinet's page and in
 Node, and draws through the cabinet's canvas instead of its desktop renderer
-([MICROM8.md](MICROM8.md#microm8-as-a-webassembly-module-called-directly)). Good enough for now.
-Still to do, longer term: put its memory on the backplane's memory map and its CPU behind the
+([MICROM8.md](MICROM8.md#microm8-as-a-webassembly-module-called-directly)). That is sufficient for
+now. Still to do, longer term: put its memory on the backplane's memory map and its CPU behind the
 `Cpu` interface by exposing more of its Go to the TypeScript wrapper, and perhaps translate the
 Go to TypeScript. Anything for upstream goes to April first; she wrote it
 ([emulation roundtable](../../repo-shows/emulation-roundtable/README.md)).
@@ -119,21 +117,21 @@ ROMs are Apple's: load them from the user, as microM8 and the others do, never c
 ## Decisions for the cabinet's browser bench
 
 1. **Main loop:** fixed-timestep accumulator under `requestAnimationFrame`;
-   clamp the measured delta (~250 ms) so a stall is a hiccup, not a debt;
-   on `visibilitychange` reset the timestamp — never simulate the backlog.
-   Background tab = machine pauses (correct for an interactive CAD station;
-   a worker-tick "keep running" toggle is a later option, not v1).
+   clamp the measured delta (~250 ms) so a stall skips time instead of
+   piling up cycles to run; on `visibilitychange` reset the timestamp and
+   never simulate the backlog. A background tab pauses the machine (correct
+   for an interactive CAD station; a worker-tick "keep running" toggle is a
+   later option, not v1).
 2. **Threading: none.** The PDP-7 ran ~571K cycles/s; one 2026 core emulates
    that with two orders of magnitude to spare, and masswerk runs a PDP-1
-   cycle-accurately on the main thread. No Web Workers in v1, no
-   SharedArrayBuffer ever if we can help it (it drags COOP/COEP header
-   requirements into every deployment). OffscreenCanvas + worker is a
-   dimensional control for later, not a foundation.
+   cycle-accurately on the main thread. No Web Workers in v1, and no
+   SharedArrayBuffer if we can avoid it (it requires COOP/COEP headers on
+   every deployment). OffscreenCanvas with a worker is an option for later.
 
-   **The cut line, kept without building it.** The machine (cabinet, CPU,
+   **The worker boundary, planned but not built.** The machine (cabinet, CPU,
    devices, the Korz sea) may later move into a worker, with the page
    keeping the canvas and panels. Nothing wraps it today; new UI code keeps
-   to these rules so the cut stays cheap:
+   to these rules so the move stays cheap:
 
    - **Commands are plain calls with plain arguments**: `box.run(n)`,
      `box.step()`, `tty.type(code)`, setting switches, PC and halt, pen
@@ -143,7 +141,7 @@ ROMs are Apple's: load them from the user, as microM8 and the others do, never c
      RSPPIX heap walk. They run beside the machine and return plain results
      (segments, pokes, words), so they move with it unchanged. A PIXIE drag
      sends the pointer and gets pokes back; it never reads core word by
-     word across the line.
+     word across the boundary.
    - **Display state is read once per frame**: cycles, registers, the
      340's frame and registers, the memory page. Read them in one place per
      frame, into plain values, rather than from the live objects in many
@@ -154,48 +152,47 @@ ROMs are Apple's: load them from the user, as microM8 and the others do, never c
    - **Slots installed from the UI live in modules, named, with their
      guard and `by`**, not as closures over UI state. A function can't be
      posted to a worker; a module name and its arguments can.
-3. **Persistence: OPFS** (`navigator.storage.getDirectory()`) — baseline in
+3. **Persistence: OPFS** (`navigator.storage.getDirectory()`): baseline in
    all engines since March 2023, secure-context only, **no permission
    prompt**, file-shaped like our Titan filestore. Store: tapes, ring files,
    snapshots, segment-log recordings. Call `navigator.storage.persist()` and
    check the result. One store; skip IndexedDB entirely.
 4. **User-visible files:** the File System Access pickers are
    Chromium-desktop-only (Firefox/Safari ship OPFS but refuse the pickers),
-   so the universal path is **drag-and-drop in, blob download out** —
-   which is also the right UX for "feed it a paper tape."
+   so the universal path is **drag-and-drop in, blob download out**, which
+   also suits loading a paper tape.
 5. **Snapshots: versioned JSON**, portable by construction (the MAME
    lesson), pause-then-serialize (the RomM lesson), plus PCjs-style
    **boot-state URLs**: a link opens a cabinet already running a chosen
    demo state. Demo states are repo files, not just user storage.
-6. **Input: Pointer Events only** — one API unifies mouse, touch, stylus.
-   `pointerType === "pen"` means an Apple Pencil on an iPad is *literally a
-   light pen on a tilted drawing board* — Heinz's draftsman setup, back.
-   Finger gets a wider aperture than mouse; that is the whole device table.
+6. **Input: Pointer Events only**: one API covers mouse, touch and stylus.
+   With `pointerType === "pen"`, an Apple Pencil on an iPad is a light pen
+   on a tilted drawing board, like Heinz's draftsman setup.
+   A finger gets a wider aperture than a mouse; that is the whole device table.
    **Every pointer is a pen, and the 340 takes any number** (pens OR onto
    the one LPHIT line; see the Type340 plugin). `setPointerCapture(pointerId)`
-   per contact + `touch-action: none` on the tube canvas: drags survive
-   leaving the canvas, and one multitouch tablet is already several local
-   pens. Remote pens ride a presence channel over the bench's WebSocket —
-   the Cursor Party pattern (Matt Webb / PartyKit: multiplayer cursors,
-   cursor chat, quiet mode, one script tag) with the cursors landing on
-   the tube as pens. PIXIE has exactly one tracking cross, so the
-   multi-user etiquette is period-emergent: whoever captures the cross
-   drags it; everyone else pokes lightbuttons. (Pointer *Lock* is the
-   other API — hidden-cursor relative motion; maybe right for seizing
-   sim-Heinz's wrist in the portrait, never for the tube.)
+   per contact and `touch-action: none` on the tube canvas keep drags going
+   when they leave the canvas, and one multitouch tablet is already several
+   local pens. Remote pens use a presence channel over the bench's WebSocket,
+   following the Cursor Party pattern (Matt Webb / PartyKit: multiplayer
+   cursors, cursor chat, quiet mode, one script tag), with the cursors
+   arriving on the tube as pens. PIXIE has exactly one tracking cross, so
+   with several users, whoever captures the cross drags it and everyone else
+   pokes lightbuttons. (Pointer *Lock* is the other API, for hidden-cursor
+   relative motion; possibly right for grabbing sim-Heinz's wrist in the
+   portrait, never for the tube.)
 7. **Video out:** the segment log is primary (deterministic replay); live
    capture via `canvas.captureStream()` + MediaRecorder → WebM when wanted.
-8. **Embedding:** a cabinet manifest per page, PCjs-style — so a HyperTIES
+8. **Embedding:** a cabinet manifest per page, PCjs-style, so a HyperTIES
    storyboard can transclude a *running* PDP-7 the way it transcludes demos.
 9. **Offline/PWA:** service worker later; nothing in v1 depends on it.
 
 ## Credit
 
-Jeff Parsons (PCjs) proved the no-WASM multi-machine museum. Norbert
-Landsteiner (masswerk) proved the dual-phosphor point display on canvas and
-set the bar for period fidelity with taste. Jason Scott, db48x and the
-Internet Archive normalized click-to-play emulation at library scale.
-Their scars about state portability and serialization races are adopted
-above as rules.
+Jeff Parsons (PCjs) showed a multi-machine emulator museum without WASM. Norbert
+Landsteiner (masswerk) showed the dual-phosphor point display on canvas.
+Jason Scott, db48x and the Internet Archive made click-to-play emulation
+common at library scale. Their findings on state portability and
+serialization races are adopted above as rules.
 
 ↑ [SIMH-MAP.md](SIMH-MAP.md) · [DESIGN.md](DESIGN.md) · [README](README.md)

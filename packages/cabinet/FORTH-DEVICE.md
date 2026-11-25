@@ -11,7 +11,7 @@ the default; `?forth=software` in the address runs Mitch's kernel instead. Switc
 switching CPUs does. The device is slots, so it needs a Korz CPU; with the SIMH-style CPU the
 hardware choice is disabled and the kernel runs it all.
 
-**How the machine tells software from hardware: it doesn't have to.** The image in core is the same
+**The machine does not need to tell software from hardware.** The image in core is the same
 either way. The device is told the kernel's labels when the cartridge boots it (where NEXT, `find`
 and each primitive's code are), and it watches two instruction fetches:
 
@@ -26,7 +26,7 @@ and each primitive's code are), and it watches two instruction fetches:
   names, keyed by the count and name words `find` compares, and returns with `jmp i find`. The
   table follows `latest`: words defined since are added, and anything else (a dictionary rewritten
   under it) rebuilds it from the headers in core. A hit is checked against its header in core
-  before it's believed.
+  before it is used.
 
 The compiler's view of this device, and of stacking another instruction set on top of it, is
 [KORZ-CPU.md](KORZ-CPU.md#stacking-instruction-sets). What is built here is one cell per
@@ -119,11 +119,11 @@ SYMELEC's main loop owns the PDP-7. Forth needs turns.
    interrupt and waits, the way the Turing engine's faults go to the host. SYMELEC keeps running
    between those calls.
 
-The first comes first. The second is what makes Forth run in parallel.
+The first is built first. Only the second runs Forth in parallel with SYMELEC.
 
 ## A ring library in high memory
 
-Forth already speaks PIXIE rings: `pixie.s` wraps RSPPIX from the 1972 listing, and `pixie.fs`
+Forth already works with PIXIE rings: `pixie.s` wraps RSPPIX from the 1972 listing, and `pixie.fs`
 is the layer you type at ([FORTH-RINGS.md](FORTH-RINGS.md)). Beside SYMELEC there are two kinds
 of ring:
 
@@ -139,11 +139,11 @@ Moving a drawing from Forth's rings into SYMELEC's is the Titan load path withou
 the block from bank 1 into SYMELEC's ring area with `XMOVE`, and run SYMELEC's own 1972
 relocation pass, which adds `RELCON` to every pointer. Then you edit it with the light pen.
 
-## Keeping it honest
+## Checking it
 
 - Mitch's kernel in core stays the reference. The same Forth programs run on both, and the
-  Teletype output and stacks are compared after each line, the four levels' discipline applied
-  to one more implementation.
+  Teletype output and stacks are compared after each line, as the four Korz levels are compared
+  with each other.
 - A program that uses only core words still runs on SIMH, and on Tergav's
   [RDP-9](https://github.com/tergav17/RDP-9). One that uses the device needs the device, as one
   that draws needs the 340.

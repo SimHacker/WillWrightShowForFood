@@ -1,4 +1,4 @@
-# SIMH → Cabinet — actual and aspirational alignment
+# SIMH → Cabinet: actual and aspirational alignment
 
 This comparison uses two references with different scope. The attached
 *Writing a Simulator for the SIMH System* describes SIMH V3.8-1 (2008); it is
@@ -42,7 +42,7 @@ The compact contracts live in [`src/bus.ts`](src/bus.ts), the backplane in
 These are the important SIMH ideas for comparison; their presence in SIMH
 does not mean Cabinet has implemented the corresponding general framework:
 
-1. **The device schema** (`sim_defs.h`): every device is a `DEVICE` record —
+1. **The device schema** (`sim_defs.h`): every device is a `DEVICE` record:
    name, `UNIT[]`, `REG[]` (registers with named `BITFIELD`s), `MTAB`
     modifiers (SET/SHOW verbs), examine/deposit hooks, reset/boot/attach/
     detach lifecycle, `DEBTAB` debug channels. Because devices are declared,
@@ -60,16 +60,16 @@ does not mean Cabinet has implemented the corresponding general framework:
    switchable at runtime.
 6. **The display stack** (`display/`): `type340.c` (Budne 2003–2018, wired
    for the PDP-7 by Brinkhoff 2019/2026) is a **host-independent 340 state
-   machine** behind five callbacks — `ty340_fetch`/`ty340_store` (memory),
+   machine** behind five callbacks: `ty340_fetch`/`ty340_store` (memory),
    `ty340_lp_int` (pen), `ty340_rfd`, `sense`/`clear` (flags). Below it,
    `display.c` ages phosphor points and computes pen-on-beam hits by radius
    against `ws_lp_x/y`; `ws.h` is a nine-function window-system seam.
 
-## Map — port with credit
+## Map: port with credit
 
 | SIMH | Cabinet | Notes |
 |------|---------|-------|
-| `ty340_instruction()` decode | `Type340` display processor | Port nearly line-by-line: PARAM/POINT/SLAVE/CHAR/VECTOR/VCONT/INCR/SUBR modes, per-word `lp_ena`, stop + stop-interrupt, h/v edge, scale/intensity, 347 DJS/DJP **with return linkage stored to core** — exactly the locations 3/5 PIXIE reads. Keep DEC bit numbering (MSB = bit 0) verbatim; it is where the bugs live. Validate the decode against the listing's own octal+mnemonic pairs. |
+| `ty340_instruction()` decode | `Type340` display processor | Port nearly line-by-line: PARAM/POINT/SLAVE/CHAR/VECTOR/VCONT/INCR/SUBR modes, per-word `lp_ena`, stop + stop-interrupt, h/v edge, scale/intensity, 347 DJS/DJP **with return linkage stored to core**, at exactly the locations 3/5 PIXIE reads. Keep DEC bit numbering (MSB = bit 0) verbatim; most decode bugs are in bit numbering. Validate the decode against the listing's own octal+mnemonic pairs. |
 | `pdp18b_dpy.c` device split | display IOT dispatch | Lars's dpy05/06/07/10 match the SYMELEC IOT map word for word. In `dpy07`, IDRC's X/Y readback is stubbed as `dat |= 0; // X, Y`. Cabinet packs the latched pen coordinates into AC using the bit layout exercised by SYMELEC's TRCR routine. |
 | pen hit radius (`display.c`) | `LightPen.aperture` | Distance-squared against fresh intensification. Same idea, ours carries provenance. |
 | `stop_inst = 0` | unknown IOT = no-op | Already shipped. |
@@ -86,23 +86,23 @@ does not mean Cabinet has implemented the corresponding general framework:
 
 Read in full before rung 2. **Lift:** the mode-machine bit fields, the
 status-word-as-stop-mechanism (`status == 0` means running, so
-stop/resume falls out free), edge clip semantics, scale-as-multiplier
-(1/2/4/8), the 347 jump encodings, and the 342 `chars[]` table — the
-display-word codec cross-check we wanted beside the H-340 manual.
-**Pen semantics co-signed:** `display_point` returns hit iff the mouse
-is within radius of the point being intensified *right now* — the blue
-flash, never the afterglow, same sentence as DESIGN. **Keep different:**
+stop/resume needs nothing more), edge clip semantics, scale-as-multiplier
+(1/2/4/8), the 347 jump encodings, and the 342 `chars[]` table, which is
+the display-word codec cross-check we wanted beside the H-340 manual.
+**Pen semantics agree:** `display_point` returns hit iff the mouse
+is within radius of the point being intensified *right now*: the blue
+flash, never the afterglow, as DESIGN.md also specifies. **Keep different:**
 SIMH draws pixels and pen-tests pixels; we emit segments with
 provenance and pen-test segments, because PIXIE needs to know *what*
 was hit and the portrait needs the segment log as its one stream.
 **The differential test for rung 2:** same display file through
 `ty340_instruction` and through our `Type340`, diff the points. **The
-open sockets in the glue** (empty `ty340_lp_int`, `dat |= 0; // X, Y`
+gaps in the glue code** (empty `ty340_lp_int`, `dat |= 0; // X, Y`
 readback): our IDRC packing fills them; candidate upstream patch.
 
 ## Cabinet-specific work already implemented
 
-- **Light pen as a first-class input API.** SIMH smuggles the pen through
+- **Light pen as an input API.** SIMH passes the pen through
   two globals (`ws_lp_x/y`) set by the window backend; no touch, no per-
   program aperture, tip switch only on the 377A model. Ours: pointer/touch
   events → pen state `{x, y, aimed, aperture}`, hits computed against
@@ -110,14 +110,14 @@ readback): our IDRC packing fills them; candidate upstream patch.
   honest/assist tracking modes (DESIGN.md).
 - **The web UI.** Canvas renderer consuming the segment log; front-panel
   run/pause/step and AC/PC display; teletype, memory/source views, and pointer
-  input. Touch input is a natural light-pen adapter.
+  input. Touch input maps directly onto the light pen.
 - **The segment stream.** SIMH's display layer renders and ages points.
   Cabinet exposes segments with provenance to renderers and tools, including
   SVG/PNG export, video capture, phosphor treatment, and pen hit-testing. This
   is a display-event stream, distinct from the input `Session` replay log.
 - **Mini-Titan.** Blocklet codec, `TitanApplication` plug-in surface, ring
-  codec (`packages/pixie`, planned). SIMH has nothing here — g2tty is a
-  dumb pipe, which is the right *lower* layer and nothing more.
+  codec (`packages/pixie`, planned). SIMH has no equivalent; g2tty is a
+  plain byte pipe, which is the right *lower* layer.
 - **Media modules.** Lineprinter lister (diffable against the 1972 listing
   itself), SVG/PNG snapshots, recorder. DESIGN.md § Media.
 
@@ -171,8 +171,8 @@ Bob Supnik built the architecture and the 18-bit family. Philip Budne and
 Douglas Gwyn wrote the display core and the 340 state machine. Lars Brinkhoff
 wired the 340 to the PDP-7 (2019, 2026) and mirrored the manual shelf. The
 Open SIMH project keeps it alive. Where our stepped instruction or display
-word disagrees with theirs, they are right until a DEC manual says otherwise
-— and anything we fix that they stubbed (the pen readback) goes back as a
+word disagrees with theirs, they are right until a DEC manual says otherwise,
+and anything we fix that they stubbed (the pen readback) goes back as a
 patch offer.
 
 ↑ [DESIGN.md](DESIGN.md) · [README](README.md) · [emulation plan](reference/EMULATION-PLAN.md)

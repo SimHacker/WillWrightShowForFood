@@ -70,7 +70,7 @@ Done: **the Apple ][ in the cabinet**, microM8 compiled to WebAssembly and runni
   fonts people already have on disk. The //e 80-column card is later.
 
 - **][+ devices and accelerators still to build.** The motherboard, the language card, and the Disk II
-  sector path are already in. The rest, in the order they earn their place
+  sector path are already in. The rest, in order of priority
   ([microm8/STACK.md](microm8/STACK.md)):
   - **Character ROMs**, both sockets, as media. The burner reads a hires font off a floppy and
     writes the EEPROM.

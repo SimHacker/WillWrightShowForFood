@@ -144,7 +144,7 @@ single-step API or a full-state export.
 
 The switch and the Korz rungs of one CPU share a snapshot. They are one processor, and `state()`
 is the registers, the pins, and the cycle count. microM8 is another rung of the Apple, and it is
-an organelle: its freeze stays a freeze. Registers, compressed memory, memory and video modes,
+an organelle: its freeze file is kept in its own format. Registers, compressed memory, memory and video modes,
 disks by name, and blobs (`freeze/freeze.go`) sit beside `cpus/apple2/state.yml`. Neither file is
 rewritten into the other in order to be kept. That is the same rule as a cartridge's organelles
 ([UPCYCLING-FORMATS.md](UPCYCLING-FORMATS.md#organelles-nesting-without-flattening)).
