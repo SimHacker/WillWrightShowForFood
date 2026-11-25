@@ -242,6 +242,16 @@ Apple ][. A device's instruction set is then a front end like any other, so the 
 code can be assembled alongside the code of whichever CPU drives it, the PDP-7 or the KA10,
 without the 340 being built into either architecture.
 
+**Mitch's metacompiler, in TypeScript, on Korz.** Mitch's Forths, from Sun Forth and Forthmacs
+to Open Firmware and CForth, descend from Laxen and Perry's F83, and they build themselves with a
+metacompiler: Forth code that compiles a new Forth image for a target machine. The plan is to
+reimplement that metacompiler in TypeScript on Korz, the same model that defines the cabinet's
+CPU, backplane and JIT-compiled instructions, so it knows each target from the same machine
+description the emulator runs. Korz is not only an instruction set emulator: it is a JIT
+compiler that outputs JavaScript shaped for the browser's and Node's own JIT to compile to native
+code, so the metacompiler can also decide which words become [device
+instructions](FORTH-DEVICE.md#primitives-as-instructions) the JIT-compiled code calls directly.
+
 **A 6502 macro assembler**, on the same core, is how Don's Apple ][ Forth gets its source back
 ([Apple2Forth](../../characters/don-hopkins/artifacts/Apple2Forth/README.md)): disassemble and
 decompile `H19.SYSTEM`, then write it as macro source that reassembles to the same bytes. The

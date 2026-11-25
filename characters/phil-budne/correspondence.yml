@@ -35,8 +35,9 @@ threads:
     source: sources/2026-05-tuhs-toy-clock.md
   facebook:
     date: "2026-11-25"
-    what: "Facebook friends. First DM drafted: Cabinet's 340 from his code, Ultimate Hand, Forth Day video, PDP-7 UNIX in Cabinet."
-    sent: false
+    what: "Facebook friends. First DM: Cabinet's 340 from his code, Ultimate Hand, Forth Day video, PDP-7 UNIX in Cabinet. Follow-ups: the tools core and MIDAS macros; Cambridge-to-as7 translation and a multi-dialect assembler; Mitch's metacompiler in TypeScript on Korz."
+    sent: true
+    drafts: [2026-11-facebook-dm.md, 2026-11-assemblers-dm.md]
 
 correction:
   date: "2026-11-25"

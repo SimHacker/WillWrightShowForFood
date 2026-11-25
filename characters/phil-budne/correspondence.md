@@ -56,11 +56,16 @@ PizzaTool. Then it covers the browser PDP-7 and Type 340, whose 340 engine is po
 PDP-7 UNIX. It ends with the KA10 that will run ITS like MIT-AI, linking its plan
 ([PDP10.md](../../packages/cabinet/PDP10.md)), and with how Korz works.
 
-A follow-up is [drafted](2026-11-assemblers-dm.md). It asks for his advice on the programming
+Don sent [follow-ups](2026-11-assemblers-dm.md) the same day. The first asks for his advice on the programming
 environment: a tool core independent of the instruction set, MIDAS's macros on the PDP-7
 ([ASSEMBLERS.md](../../packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool)),
 a 6502 macro assembler to get Don's Apple ][ Forth source back
 ([plan](../don-hopkins/artifacts/Apple2Forth/README.md#plan-getting-the-source-back)), which PDP-10
-assemblers and tools to study, and what to avoid.
+assemblers and tools to study, and what to avoid. The second explains how SYMELEC and RSPPIX,
+in Cambridge's dialect, were translated to `as7` to assemble with Mitch's Forth, and proposes one
+assembler for several dialects and instruction sets. Don then proposed reimplementing Mitch's
+metacompiler (Open Firmware, CForth, Forthmacs, Sun Forth, all from Laxen and Perry's F83) in
+TypeScript on Korz, and added that Korz is a JIT compiler to JavaScript, not only an instruction
+set emulator.
 
 ↑ [Phil Budne](README.md)

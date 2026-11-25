@@ -1,7 +1,7 @@
-# Draft: follow-up about the tools, to Phil (November 2026)
+# Follow-ups about the tools, to Phil (November 2026)
 
-Plain text for Facebook Messenger, a follow-up to the [first message](2026-11-facebook-dm.md).
-Don sends it by hand. The details are in the linked docs.
+Plain text for Facebook Messenger, follow-ups to the [first message](2026-11-facebook-dm.md).
+Don sent them by hand on 25 November 2026. The details are in the linked docs.
 
 ```
 Phil, a follow-up about tools, where I'd like your advice.
@@ -26,3 +26,17 @@ The next step is an assembler that takes files in different dialects and instruc
 
 https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool
 ```
+
+Don then added, as sent (his words; "Langton" is Laxen, of Laxen and Perry's F83):
+
+```
+Mitch's OpenFirmware and other Forths (CForth, Forthmacs, Sun Forth, different incarnations and reimplementations, based on Langton and Perry Forth) has a metacompiler. I propose reimplementing the metacompiler in TypeScript, with Korz, the underlying model used to define the CPU, backplane, and JIT compiled instructions).
+```
+
+And edited it to add:
+
+```
+It's not just an instruction set emulator, it's a just-in-time compiler, that outputs JavaScript, tuned to the browser's/node's JavaScript => native code JIT!
+```
+
+The plan: [ASSEMBLERS.md](../../packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool), "Mitch's metacompiler, in TypeScript, on Korz".
