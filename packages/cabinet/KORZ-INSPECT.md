@@ -57,9 +57,17 @@ dimension's `radix` (8 by default, 16 with `$`).
 **Compiled blocks** (`src/korz/compile65.ts`): each block keeps the opcodes it was compiled from and
 whether each was inlined, how many times it ran, how many instructions it retired, and the cycle it
 was built at. The tree lists a block as a disassembly (`$0800  A2 0A  LDX #imm`, named by the sea)
-above its JavaScript, with its source size and its DevTools name (`korz65/blk-0800.js`); a
-"Hottest" list by instructions retired; and a "Dropped" log of the last 32 blocks thrown away, each
-with the address whose opcode changed, the old and new opcode, and the cycle.
+above its JavaScript, with its source size and its DevTools name (`korz65/blk-0800.js`), and a
+"Dropped" log of the last 32 blocks thrown away, each with the address whose opcode changed, the
+old and new opcode, and the cycle.
+
+The PDP-7 compiler (`src/korz/compile7.ts`) keeps the same counts per block (calls, instructions
+retired, and the order it was built in) and its own Dropped log. Both compilers list their blocks
+in six orders, each labelled by its first listing line so a list reads like memory: by address,
+hottest (instructions retired), most called, longest per call (retired over calls), newest, and
+largest (generated JavaScript). Counting costs the PDP-7 about 2% on the Turing bench, inside the
+noise. Time per block is not counted; each block is a named function, so the browser's Performance
+panel attributes time to it by name.
 
 ## What Don's Forth showed
 

@@ -318,8 +318,8 @@ file, line number, scan page and rectangles on the scan (`ScanPlace`). To add:
   in `sourcesContent`. Two cautions: `new Function` puts a header before the body, which
   shifts line numbers and must be tested in each browser; and the debugger shows text, so the
   scan rectangles stay in the cabinet's own views. Off by default because each map costs
-  encoding time and memory on every block compiled. `compile65.ts` needs the same, starting
-  with a `sourceURL`.
+  encoding time and memory on every block compiled. `compile65.ts` already names its blocks
+  (`korz65/blk-<hex>.js`) and needs the same map.
 
 ### The compiler can be a device in the build
 

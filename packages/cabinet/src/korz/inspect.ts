@@ -149,6 +149,41 @@ function selectorNode<C extends object>(sea: Sea<C>, selector: string, opts: Sea
 	};
 }
 
+/** What every compiled block counts, whichever compiler built it. */
+type Counted = { readonly size: number; readonly runs: number; readonly retired: number; readonly source: string };
+
+const TOP = 32;
+
+/**
+ * One compiler's blocks in the orders worth reading them in: by address first, as they sit in
+ * memory, then the top few by instructions retired, calls, instructions per call, age and size.
+ * `blocks` comes sorted by address; `age` is larger for newer blocks.
+ */
+function blockOrders<B extends Counted>(blocks: readonly B[], node: (b: B) => KorzNode, age: (b: B) => number): KorzNode[] {
+	const top = (id: string, label: string, note: string, key: (b: B) => number): KorzNode => ({
+		id,
+		label,
+		note,
+		children: () =>
+			blocks
+				.filter((b) => key(b) > 0)
+				.sort((a, b) => key(b) - key(a))
+				.slice(0, TOP)
+				.map(node),
+	});
+	return [
+		{ id: "blocks", label: "By address", note: `${blocks.length} in use, lowest address first`, children: () => blocks.map(node) },
+		top("hot", "Hottest", "by instructions retired", (b) => b.retired),
+		top("called", "Most called", "by calls into the block", (b) => b.runs),
+		top("long", "Longest per call", "by instructions retired per call", (b) => (b.runs ? b.retired / b.runs : 0)),
+		top("newest", "Newest", "most recently built first", age),
+		top("largest", "Largest", "by characters of JavaScript", (b) => b.source.length),
+	];
+}
+
+const DURATION =
+	" Time per block is not measured here: the browser's Performance panel attributes time to each block by its function name.";
+
 /**
  * The PDP-7 compiler: its blocks by entry address, each with the PDP-7 words it was compiled from
  * (`show` turns an address into a listing line) and its JavaScript; and the generated `read` and
@@ -159,15 +194,28 @@ export function compiler7Node(j: Compiler7, show: (addr: number) => string = (a)
 		id: "compiler",
 		label: "Compiler",
 		note: `${count(j.built)} built, ${count(j.invalidated)} dropped`,
-		text: "Runs of PDP-7 instructions compiled to JavaScript functions. A store into a word a block was compiled from throws the block away; it is compiled again the next time control reaches it.",
+		text:
+			"Runs of PDP-7 instructions compiled to JavaScript functions. A store into a word a block was compiled from throws the block away; it is compiled again the next time control reaches it." +
+			DURATION,
 		children: () => {
 			const blocks = j.list();
 			return [
+				...blockOrders(blocks, (b) => block7Node(b, show), (b) => b.seq),
 				{
-					id: "blocks",
-					label: "Blocks",
-					note: `${blocks.length} in use`,
-					children: () => blocks.map((b) => block7Node(b, show)),
+					id: "dropped",
+					label: "Dropped",
+					note: `last ${j.dropped.length}`,
+					children: () =>
+						j.dropped
+							.slice()
+							.reverse()
+							.map((d, i) => ({
+								id: String(i),
+								label: oct(d.entry),
+								note: `store into ${oct(d.at)}`,
+								addr: d.at,
+								text: `Block ${oct(d.entry)}, ${d.size} instructions, ran ${count(d.runs)} times, dropped by a store into ${oct(d.at)}, a word it was compiled from. Self-modifying code, a loader or a variable kept among instructions does this.`,
+							})),
 				},
 				{
 					id: "accessors",
@@ -184,10 +232,17 @@ export function compiler7Node(j: Compiler7, show: (addr: number) => string = (a)
 export function block7Node(b: BlockInfo, show: (addr: number) => string = (a) => oct(a)): KorzNode {
 	return {
 		id: oct(b.entry),
-		label: `blk ${oct(b.entry)}`,
-		note: `${b.size} ${b.size === 1 ? "instruction" : "instructions"}`,
+		label: show(b.entry),
+		note: `${b.size} ${b.size === 1 ? "instruction" : "instructions"} · ran ${count(b.runs)} · retired ${count(b.retired)}`,
 		addr: b.entry,
-		text: `${b.words.map((a) => `// ${show(a)}`).join("\n")}\n\n${b.source}`,
+		text: [
+			...b.words.map((a) => `// ${show(a)}`),
+			"//",
+			`// block number ${count(b.seq)} built; ran ${count(b.runs)} times, ${count(b.retired)} instructions${b.runs ? `, ${(b.retired / b.runs).toFixed(1)} a call` : ""}`,
+			`// ${count(b.source.length)} characters of JavaScript; in DevTools, Sources lists it as korz7/blk-${oct(b.entry)}.js`,
+			"",
+			b.source,
+		].join("\n"),
 	};
 }
 
@@ -218,13 +273,13 @@ export function compiler65Node(j: Compiler65, l?: Lister65): KorzNode {
 		id: "compiler",
 		label: "Compiler",
 		note: `${count(j.built)} built, ${count(j.invalidated)} dropped`,
-		text: "Straight-line runs of 6502 opcodes compiled to JavaScript. Each block checks its opcode bytes on entry and is dropped when one has changed; operand bytes are read as the block runs, so they are not checked. At most 1,024 are kept.",
+		text:
+			"Straight-line runs of 6502 opcodes compiled to JavaScript. Each block checks its opcode bytes on entry and is dropped when one has changed; operand bytes are read as the block runs, so they are not checked. At most 1,024 are kept." +
+			DURATION,
 		children: () => {
 			const blocks = j.list();
-			const hot = [...blocks].sort((a, b) => b.retired - a.retired);
 			return [
-				{ id: "blocks", label: "Blocks", note: `${blocks.length} in use, by address`, children: () => blocks.map((b) => block65Node(b, l)) },
-				{ id: "hot", label: "Hottest", note: "by instructions retired", children: () => hot.slice(0, 32).map((b) => block65Node(b, l)) },
+				...blockOrders(blocks, (b) => block65Node(b, l), (b) => b.builtAt),
 				{
 					id: "dropped",
 					label: "Dropped",
@@ -235,7 +290,7 @@ export function compiler65Node(j: Compiler65, l?: Lister65): KorzNode {
 							.reverse()
 							.map((d, i) => ({
 								id: String(i),
-								label: `blk ${hex(d.entry)}`,
+								label: hex(d.entry),
 								note: `${hex(d.at)} was ${hex2(d.was)}${l ? ` ${l.name(d.was)}` : ""}, now ${d.now < 0 ? "?" : `${hex2(d.now)}${l ? ` ${l.name(d.now)}` : ""}`}`,
 								addr: d.at,
 								text: `Block ${hex(d.entry)}, ${d.size} opcodes, ran ${count(d.runs)} times, dropped at cycle ${count(d.cycles)}: the opcode at ${hex(d.at)} changed. Self-modifying code, a loader, or a bank switch puts a different byte under a compiled block.`,
@@ -254,7 +309,7 @@ export function block65Node(b: Block65, l?: Lister65): KorzNode {
 	const name = `korz65/blk-${b.entry.toString(16).padStart(4, "0")}.js`;
 	return {
 		id: hex(b.entry),
-		label: `blk ${hex(b.entry)}`,
+		label: l ? line65(b.entry, b.ops[0]?.op ?? 0, l) : hex(b.entry),
 		note: `${b.size} ${b.size === 1 ? "opcode" : "opcodes"} · ran ${count(b.runs)} · retired ${count(b.retired)}`,
 		addr: b.entry,
 		text: [

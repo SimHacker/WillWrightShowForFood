@@ -223,11 +223,29 @@ type Block = {
 	/** Instructions compiled into it, the next word of a skip included. */
 	size: number;
 	source: string;
+	/** Calls into the block, and the instructions those calls retired, a loop's repeats included. */
+	runs: number;
+	retired: number;
+	/** Its place in the order blocks were built, from 1. */
+	readonly seq: number;
 };
 
 /** A block as a browser sees it. */
-export type BlockInfo = { readonly entry: number; readonly size: number; readonly words: readonly number[]; readonly source: string };
-const info = (b: Block): BlockInfo => ({ entry: b.entry, size: b.size, words: b.words, source: b.source });
+export type BlockInfo = {
+	readonly entry: number;
+	readonly size: number;
+	readonly words: readonly number[];
+	readonly source: string;
+	readonly runs: number;
+	readonly retired: number;
+	readonly seq: number;
+};
+const info = (b: Block): BlockInfo => ({ entry: b.entry, size: b.size, words: b.words, source: b.source, runs: b.runs, retired: b.retired, seq: b.seq });
+
+/** A block thrown away because a store hit a word it was compiled from. */
+export type Dropped7 = { readonly entry: number; readonly size: number; readonly runs: number; readonly at: number };
+
+const DROP_LOG = 32;
 
 /** One instruction, compiled or not. */
 type Ins = {
@@ -317,6 +335,8 @@ export class Compiler7 {
 	/** Blocks built and blocks invalidated by a store, since the machine was made. */
 	built = 0;
 	invalidated = 0;
+	/** The last blocks thrown away, oldest first. */
+	readonly dropped: Dropped7[] = [];
 	private readonly m: Machine7;
 	/** By entry address; null: the resolver steps this address (its fetch is watched). */
 	private readonly blocks: (Block | null | undefined)[] = new Array(0o100000);
@@ -352,7 +372,11 @@ export class Compiler7 {
 				let b = this.blocks[m.pc];
 				if (b === undefined) b = this.compile(m.pc);
 				if (b !== null) {
-					if (b.run(m, k) === 0) continue;
+					const before = k.cycles;
+					b.runs += 1;
+					const done = b.run(m, k);
+					b.retired += k.cycles - before;
+					if (done === 0) continue;
 					if (m.pendingIot !== null) return { iot: m.pendingIot };
 					return m.halted ? HALTED : RAN;
 				}
@@ -373,6 +397,8 @@ export class Compiler7 {
 			if (!b.valid) continue;
 			b.valid = false;
 			this.invalidated += 1;
+			this.dropped.push({ entry: b.entry, size: b.size, runs: b.runs, at: a });
+			if (this.dropped.length > DROP_LOG) this.dropped.shift();
 			if (this.blocks[b.entry] === b) this.blocks[b.entry] = undefined;
 		}
 	}
@@ -534,7 +560,7 @@ export class Compiler7 {
 			this.blocks[entry] = null;
 			return null;
 		}
-		const block: Block = { entry, valid: true, run: UNBUILT, words: [], size: 0, source: "" };
+		const block: Block = { entry, valid: true, run: UNBUILT, words: [], size: 0, source: "", runs: 0, retired: 0, seq: this.built + 1 };
 		const out: string[] = [];
 		const seen = new Set<number>();
 		let loops = false;
