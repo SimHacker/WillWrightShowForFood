@@ -375,6 +375,47 @@ This is how displays work across browsers with one server in Node, shared by sev
   pen events to a machine is scoped to its owner and the people they invite
   ([Services](#services)).
 
+#### What a 340-Window has to carry
+
+The server is a PDP-7 running an ordinary program; clients open 340-Windows on parts of its core,
+and the server feeds each one to the client's 340. A display list is rarely one block of memory.
+SYMELEC's ([GUIDE-SYMELEC](reference/GUIDE-SYMELEC.md)) is several, at different addresses:
+
+- **Several display files, chained.** `LB` (the lightbuttons), `WAREA` (the frame), `TEMPDF` (the
+  element being drawn) and `PERMDF` at `DFB` (the finished picture, at 12301 in the upper 4K),
+  joined by `DJP` jumps.
+- **Subroutines.** The Type 347 adds `DJS`, a display subroutine call. It has one save register,
+  so one level of call. PIXIE's display file compiler plants `DJS` words for subpictures.
+- **Words the CPU rewrites while the 340 runs.** The tracking cross's position words, `XCROSS` and
+  `YCROSS`, change every time the pen moves.
+- **Words the 340 writes.** `DDS` deposits a jump into core location 3, and SYMELEC's pen handler
+  reads 3 and 5 to find out what was hit. So the 340 writes CPU memory, and the pen dispatch
+  depends on it.
+
+So a 340-Window is a list of segments and how to run them:
+
+- **Segments by symbol.** Each segment is a range named by symbols and expressions in the
+  running program's symbol table (`PERMDF`, `LB`, `DFB+200`), evaluated by the assembler core.
+  The server already has SYMELEC's symbols, so SYMELEC needs no change.
+- **Entry points.** Where the 340 starts (the `IDLA` address) and which jumps to follow. The
+  server can also find the segments by watching what its own 340 fetches: every stroke already
+  records the address that drew it, the block it was in and the `DJS` it was called from.
+- **Write-back.** Which locations the client's 340 writes (`DDS` targets) are sent back, so the
+  server's pen dispatch still works.
+- **Only what you need.** A client gets the segments it names, not the whole machine.
+
+**Whole frames, not partial ones.** The server sends a frame at an `IDLA`, the start of a
+refresh, so a client never runs a display list half rewritten. A real 340 did read lists while
+the CPU rewrote them, and programs like SYMELEC live with it. For new programs, a lock and
+commit message (as in [Services](#services)) marks a list as ready to send.
+
+**A CPU in the client too.** A 340-Window can also carry PDP-7 or PDP-10 code to run beside the
+display list, so the client is a CPU and a 340, not only a 340: code that moves the tracking cross
+or handles the pen locally without a round trip to the server. The code goes as assembled words,
+or as source with its type declared, for the client's assembler core. That is NeWS, James
+Gosling's window system at Sun, where clients sent PostScript programs for the server to run,
+with 340 code and PDP-7 or PDP-10 code in place of PostScript.
+
 ### tiny-bus: the backplane between machines
 
 tiny-titan grows into tiny-bus: the bus that every command, event, source and sink in the bench
