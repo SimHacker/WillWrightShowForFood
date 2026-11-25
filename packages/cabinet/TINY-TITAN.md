@@ -527,6 +527,11 @@ dynamically updated icon"); then open four others in a grid.
   levels, which SYMELEC uses to blink the selected item). Varied over time, it fades a window in
   or out, dims the ones in the background, marks the one that needs attention, blinks or
   flickers. The display code doesn't change; the client's renderer does it.
+- **Style from the program, too.** A program can set color and intensity in its own display
+  code, with an extension of the display tag word that no 1972 program uses
+  ([TAGS-AND-PIES.md](TAGS-AND-PIES.md#style-color-and-intensity-planned)), and the Forth turtle
+  gets `COLOR`, `DIM` and `BLINK`. The default stays true to the original: green phosphor, drawn
+  as the program drew it.
 - **One pen for all of them.** The pen, emulated with the mouse or driven by a script, is mapped
   back through the window under it into that machine's coordinates, and the pen event goes to
   that machine. The cabinet already takes several pens at once (`PenInput`, named "mouse",

@@ -78,6 +78,26 @@ which is exactly what `S"` compiles into a definition. So a tag can point straig
 string that is already in core, with no extra memory. A record's title pointer is never
 that low: it would be in the PDP-7's own low locations.
 
+### Style: color and intensity (planned)
+
+The same tag record can carry style for what follows it. Two of the five flag bits are free:
+
+| flag | word | contents |
+|---|---|---|
+| bit 1 | 4 | color, 6 bits each of red, green and blue |
+| bit 0 | 5 | intensity scale in bits 0–5 (63 = as drawn), effect in bits 6–8 (none, blink, fade in, fade out, flicker), rate in bits 9–17 |
+
+A DTG to a record with either bit set changes the current style; a record with neither, or a
+counted-string tag, leaves it alone. DJS saves the style with the tag and the return restores
+it, so a subroutine can color its own drawing. `IDLA` restores the default. The style multiplies
+what the display code already says: the 340's intensity levels and SYMELEC's blinking still
+apply, and the window's own color and intensity
+([TINY-TITAN.md](TINY-TITAN.md#the-340-as-compositor)) apply on top.
+
+**The default is the original.** No 1972 program issues a DTG, so SYMELEC, LP370 and Mitch's
+turtle draw exactly as they did, in green phosphor. Color and the effects are there for programs
+that ask for them, and for a person who sets a window's color in the viewer.
+
 ### In Forth
 
 **Built** in [tags.fs](tapes/pdp7forth/tags.fs), not `turtle.fs`, which stays Mitch's:
@@ -90,6 +110,19 @@ that low: it would be in the PDP-7's own low locations.
 vector mode, a PARAM word for SUBR mode, then the DTG back to vectors) pointing at its
 count. `TAGGED ( c-addr u -- )` does the same for a string from anywhere that stays put,
 `TAG-AT ( addr -- )` for any address such as a full record, and `NOTAG` is `0 TAG-AT`.
+
+**Turtle color (planned),** in a new file beside `tags.fs`, so `turtle.fs` stays Mitch's. Each
+word builds a style record and lays down a DTG to it:
+
+```forth
+10 63 20 COLOR  ( r g b -- )  \ 0 to 63 each
+32 DIM          ( n -- )      \ intensity scale, 63 = as drawn
+8 BLINK         ( rate -- )
+PLAIN           \ back to the default: green, as drawn
+```
+
+So a turtle program can draw a red roof and a green hedge, blink the selected item, or fade a
+figure in, and a program that never says `COLOR` looks the way it always did.
 
 The words below, for full records with links and ids, are not built yet.
 
