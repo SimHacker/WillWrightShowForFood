@@ -136,8 +136,7 @@ CPUs share one bus:
 The layers a device is split into, from the person's hand to the emulator, are in
 [DEVICES.md](DEVICES.md). This separation lets one device travel across unlike machines. For example, a mouse/keyset
 instrument can become a PDP-7 light pen plus teletype input, or Apple II paddle values, pushbuttons,
-and keyboard events. Only the cartridge's adapter changes; neither machine needs to pretend its
-I/O architecture is the other's. The configuration itself is inspectable and testable, so wiring
+and keyboard events. Only the cartridge's adapter changes; each machine keeps its own I/O. The configuration itself is inspectable and testable, so wiring
 errors—overlapping addresses, unclaimed ports, invalid opcode bindings, or an interrupt with no
 CPU route—can fail before a program starts.
 
@@ -173,7 +172,7 @@ kinds. A cartridge from tomorrow still loads today; it just can't do the new thi
 only when the running cartridge asks for it. RINGS already works this way: it shows only for
 a program that says where its ring structure lives (`rings: { beg, end, roots }`), today only
 SYMELEC. A Forth cartridge built on the base that adds `rsp.fs` and names its ring area gets
-the 3D ring viewer for free, live on the rings the Forth is building, the same viewer PIXIE's
+the 3D ring viewer, live on the rings the Forth is building, the same viewer PIXIE's
 rings use. DUEL's game panel, read from core through its symbols, is the next opt-in panel.
 
 ## 2. Build steps, and the cache

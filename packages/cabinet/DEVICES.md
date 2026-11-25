@@ -25,8 +25,8 @@ Each layer can be swapped without touching the others:
 - **Any instrument, any interpreter.** A person who can't use a mouse picks a different
   instrument and interpreter, and the program sees the same pointer. Accessibility lives in
   layers 1 and 2, so it works for every machine at once, including programs written in 1968.
-- **Any abstract device, any machine.** The binding is the only per-architecture code. The
-  machine doesn't have to pretend to be another machine's I/O.
+- **Any abstract device, any machine.** The binding is the only per-architecture code, and
+  each machine keeps its own I/O.
 - **Any machine, any emulator.** The same Apple ][ binding of a pointer is paddles and
   pushbuttons whether the Apple ][ is microM8 or something else; only layer 5 changes.
 

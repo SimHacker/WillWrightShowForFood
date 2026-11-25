@@ -326,8 +326,7 @@ Next:
 - The same templates compiled ahead of time, for ROMs, a fixed Forth kernel and snapshots.
 - Idle-loop skipping.
 
-The point is not only speed. The compiler is the top rung of an oracle ladder, and every level
-stays.
+The compiler is also the top rung of an oracle ladder, and every level stays.
 
 **The 18-bit line.** The PDP-7 was not built alone. In Bob Supnik's words, in the SIMH source, the
 PDP-4, PDP-7, PDP-9 and PDP-15 are upward compatible: each new model adds architectural features

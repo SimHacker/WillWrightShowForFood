@@ -549,9 +549,9 @@ more coordinate, like the opcode or the device code.
 In Korz that's natural, because there was never a privileged receiver to close over. Now later
 machines are faster than the first.
 
-## What you get for free when you're not using it
+## Debugging features cost nothing when they're off
 
-This is my favorite part. In a normal emulator, a debugging feature costs you even when it's off: a
+In a normal emulator, a debugging feature costs you even when it's off: a
 check on every memory access, a flag tested every instruction. Here, a feature that isn't installed
 isn't in the tables and isn't in the compiled code. It costs nothing.
 

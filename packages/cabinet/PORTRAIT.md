@@ -260,7 +260,7 @@ Signed explanations are authored or reviewed by fluent signers.
 
 Don remembers watching a VHS lecture by Ben Shneiderman about touchscreens
 and lift-off selection decades ago. On fast-forward, Ben's expressive gestures
-were delightfully funny, and their spatial explanation stayed legible without
+were funny, and their spatial explanation stayed legible without
 the sound. That suggests a player feature: speed up the recorded motion and
 let the humor emerge. It works for any recorded speaker.
 

@@ -104,7 +104,7 @@ diagnostic](src/lp370.test.ts), [DUEL](src/cabinet.test.ts),
 [Forth and turtle](src/forth.test.ts), [HILO](src/hilo.test.ts),
 [LANDER](src/lander.test.ts), and [spoken TTY input](src/spoken.test.ts).
 
-This is also where the cabinet metaphor earns its keep. DEC's cabinet held a
+This is also where the cabinet name comes from. DEC's cabinet held a
 processor and its devices; a plug-in added IOT behavior to the backplane.
 Cabinet keeps that tangible idea as software, while the cartridge says which
 parts are installed and how they are wired. The PDP-7 and 340 meet through
@@ -426,8 +426,8 @@ At a higher level, [tiny-its](TINY-ITS.md) takes inspiration from Open
 Firmware's discoverable Forth command environment and ITS DDT. It is intended
 to inspect, configure, and operate a room of unlike machines and devices from
 a teletype-like command surface. That control language is above the guest
-instruction sets: commands can be added to the tool without pretending the
-PDP-7, Apple II, PDP-10, MIX, or Turing machine share opcodes.
+instruction sets: commands can be added to the tool without giving the
+PDP-7, Apple II, PDP-10, MIX, or Turing machine shared opcodes.
 
 The Engelbart mouse and chorded keyset make this tangible. On the PDP-7, a
 mouse can be adapted as a Type 340 light pen, while keyset chords become
@@ -551,8 +551,7 @@ when a real program, corpus, artifact, or teaching goal makes the need
 concrete.” The plugin should state its visible contract, cite its primary
 evidence, expose inspectable state, and earn an acceptance test. A shared
 instrument can have several adapters; a shared renderer can consume several
-machine formats. Neither requires pretending the underlying machines are the
-same.
+machine formats. Neither treats the underlying machines as the same.
 
 That is the practical escape from both wheels: do not rebuild SIMH's entire
 scope to run PIXIE, and do not turn the display processor into another general

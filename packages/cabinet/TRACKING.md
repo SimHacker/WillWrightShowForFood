@@ -108,14 +108,14 @@ Small — roughly **50 CPU instructions plus ~27 display words**:
 | dispatch fragment + mode flags | a handful |
 
 The display processor carries the real load: the cross redraws itself
-every refresh for free, and the CPU runs only on interrupts.
+every refresh with no CPU work, and the CPU runs only on interrupts.
 
-## It just happens
+## No trigger
 
 Tracking needs no trigger. The boot display file draws the cross parked
 at (0o400, 0o400) with the `JMP STRCR` linkage already deposited, the
 pen interrupt is wired at boot, and the first hit recenters. The
-acceptance test proves it in three movements:
+acceptance test checks it in three steps:
 
 1. **Acquire** — park the virtual pen on the parked cross; hits
    recenter it in place.

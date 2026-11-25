@@ -240,8 +240,8 @@ sense of their moving body help, but they are not force feedback.
 This connects to **interfaces to agency, not agents instead of interfaces**.
 The design question is whether computation gives a person's capabilities
 more reach, or substitutes an opaque actor for the person exercising them.
-The point is not to prohibit automation, but to make its relationship to
-human intention legible and steerable. The synthetic attract hand invites
+The aim is to make automation's relationship to human intention legible
+and steerable, not to prohibit it. The synthetic attract hand invites
 participation; when a real hand appears, it yields control. It waves you in,
 then gets out of your way.
 

@@ -494,7 +494,7 @@ option adds jumps and one level of subroutine call (DJP, DJS), and DDS, which PI
 its lightbuttons. The cabinet adds a tag word, DTG, so every line it draws can say which record
 in core it came from.
 
-The 340 is also where the backplane's running ahead earns its keep. Its `nextEvent` takes a
+The 340 is also where the backplane's running ahead matters most. Its `nextEvent` takes a
 snapshot, draws ahead up to `lead` cycles, and keeps a note of the cycle at which it read each
 display address:
 

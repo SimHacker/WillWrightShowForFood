@@ -434,8 +434,8 @@ endpoint:
 - `peek`: read another machine's core. The live ring view, remotely.
 - `send`: deliver a message or a device event to a machine or a handler.
 - `filestore`: named ring files (above).
-- `lock`, `unlock`, `barrier`: the host handles one request at a time, so it is a lock manager
-  for free.
+- `lock`, `unlock`, `barrier`: the host handles one request at a time, so it also serves as
+  a lock manager.
 - `clock`: the cycle count, for runs kept in step.
 - `build`: the cabinet's toolchain, run on the host for any machine on the bus. Assemble in any
   dialect (`as7`, DEC, Cambridge), translate Cambridge to as7, disassemble, link several files
