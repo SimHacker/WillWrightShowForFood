@@ -437,6 +437,25 @@ that span of core. Two steps make it remote:
 - **Read through `peek`.** Capture the span through the [`peek` service](#services) instead of
   `cpu.read`, so the RINGS panel in any browser watches a SYMELEC running on the server.
 
+**Remote editors poke.** A view that can read a segment can write it back, so editors work over
+the network the same way:
+
+- **The 340 display editor.** [edit340.ts](src/edit340.ts) moves a corner between two vector
+  words by rewriting both words in core; the next refresh draws the edit, with no help from the
+  program. Remote, the two writes go through `poke`, and every 340-Window on that segment
+  sees the change at its next frame. As locally, a program that rebuilds its display file
+  (SYMELEC, on finishing an element) replaces the edit; one that only appends (the Forth turtle)
+  keeps it.
+- **The pens.** Each pen's settings (enabled, position, aperture, name: `PenInput` in
+  [type340.ts](src/plugins/type340.ts)) are device configuration, so a remote client can add a
+  pen, move it or change its aperture.
+- **The pen callbacks.** SYMELEC's callbacks are in core: each lightbutton's `DDS` word writes its
+  handler's address into location 3, and the pen interrupt jumps through it. A view can show
+  which handler each stroke calls, by symbol, and an editor can repoint one by poking the `DDS`
+  word's target.
+
+Writing is scoped as everywhere else: to the machine's owner and the people they invite.
+
 **Whole frames, not partial ones.** The server sends a frame at an `IDLA`, the start of a
 refresh, so a client never runs a display list half rewritten. A real 340 did read lists while
 the CPU rewrote them, and programs like SYMELEC live with it. For new programs, a lock and
