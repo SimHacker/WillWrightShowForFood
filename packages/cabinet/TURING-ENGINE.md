@@ -61,7 +61,7 @@ as the Forth version. They then run the disk's own numbers:
 
 The 340 is a processor that happens to be wired as a device. It has its own PC, fetches its own
 instruction stream from core, and interrupts the PDP-7 when it stops. The PDP-7 starts it with
-IDLA (`AC` = display file address) and finds it on the skip chain with IDSI and friends
+IDLA (`AC` = display file address) and finds it on the skip chain with IDSI and the other skip IOTs
 ([ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md#cpus-are-devices)).
 
 The Turing engine copies that arrangement exactly:
@@ -179,8 +179,8 @@ BB5's 11.8 million transitions take about 2.4 s.
 
 **The host pages.** With TMLM bit 17 set, the engine instead stops after the transition that left
 the window. It raises FAULT (and LEFT for the left end), and leaves HEAD at -1 or WLEN. The host
-then fixes the window and says TMGO, which reloads the TCB. This is the natural PDP-7 arrangement,
-the same as the 340's edge interrupts. [utm-driver.s](tapes/turing/utm-driver.s) is a complete
+then fixes the window and says TMGO, which reloads the TCB. This is the same arrangement as the
+340's edge interrupts. [utm-driver.s](tapes/turing/utm-driver.s) is a complete
 driver:
 
 ```text
@@ -444,8 +444,8 @@ steps it, runs it to HALTED with four ones, and checks that free running stops w
 typed.
 
 **Next:** the same vocabulary in the cabinet's own PDP-7 Forth ([forth.ts](src/forth.ts)), so the
-PDP-7 compiles TM tables into its own core and starts the engine with TMLA. The CAM-6 arrangement
-again, a Forth host generating tables for a co-processor, on 1960s iron.
+PDP-7 compiles TM tables into its own core and starts the engine with TMLA. That is the CAM-6
+arrangement, a Forth host generating tables for a co-processor, on a 1960s machine.
 
 ## The Ultimate Machine
 
@@ -471,7 +471,7 @@ In code, the switch *is* the unit's power switch (`Device.power`):
 `pose()` gives the panel the phase, and how far the lid and the arm have come; the animation
 follows the device, never the reverse.
 
-A PDP-7 program can argue with it:
+A PDP-7 program can keep switching it back on:
 
 ```text
 fight, umrc        / how many times has it won?
@@ -482,9 +482,8 @@ fight, umrc        / how many times has it won?
        jmp fight
 ```
 
-The test shows how that ends. The fifth press lands after the PDP-7 read the count, so the PDP-7
-switches it on a sixth time and halts. A hundred cycles later, with the PDP-7 halted, the box
-switches itself off: it gets the last word.
+In the test, the fifth press lands after the PDP-7 read the count, so the PDP-7 switches it on a
+sixth time and halts. A hundred cycles later, with the PDP-7 halted, the box switches itself off.
 
 ### Running it: ULTIMATE MACHINE on the menu
 

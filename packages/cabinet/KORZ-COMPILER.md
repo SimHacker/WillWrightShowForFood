@@ -1,6 +1,6 @@
 # Compiling the PDP-7's sea
 
-The fourth dispatch level. `new KorzPdp7({ korz: "compile" })` turns runs of PDP-7 instructions
+This is the fourth dispatch level. `new KorzPdp7({ korz: "compile" })` turns runs of PDP-7 instructions
 into JavaScript functions, built from the same sea of slots the resolver and the interpreter
 dispatch through, and runs them until a device is due. The levels below it stay, and each is the
 oracle for the one above:
@@ -24,7 +24,7 @@ slot of its selector, so V8 inlines none of them. `Pdp7` decodes every instructi
 runs it. A compiled block decodes once, when it is built, and its code contains no dispatch at all
 where the sea has nothing to say.
 
-Then there is the backplane. `Cabinet.run` calls `cpu.step()` once per cycle, sets the interrupt
+`Cabinet.run` calls `cpu.step()` once per cycle, sets the interrupt
 line, checks whether a device is due, and counts the cycle, and `Pdp7`'s 11 ns include that loop.
 A compiled CPU has to run many instructions per call or the loop limits it as it limits `Pdp7`.
 
@@ -160,7 +160,7 @@ against the PDP-7's limit.
 
 ## Threaded code (planned)
 
-Not built. Mitch's Forth makes every thread cell a PDP-7 instruction (`CAL` for a colon word,
+This is not built. Mitch's Forth makes every thread cell a PDP-7 instruction (`CAL` for a colon word,
 `JMP` for a primitive, `LAC` for a constant, `LAW` for a variable), and NEXT is `XCT I 10`. So a
 colon definition is a run of instructions reached through register 10 instead of `pc`, and the
 compiler can treat it as a block:
@@ -192,15 +192,15 @@ The cross-processor rule, and the Apple layers that use it, are in
   DataHand's and the Turing engine's are that call. The template does not contain a vector, a hand
   sample, or a tape step. On the Turing engine a unit is due every three cycles, so a compiled
   batch is three instructions long and the compiler ties the switch, at about 70 ns
-  ([KORZ-MACHINES.md](KORZ-MACHINES.md)). The device is the work.
+  ([KORZ-MACHINES.md](KORZ-MACHINES.md)). Most of the time is spent in the device.
 - Forth's NEXT is `XCT I 10`. It compiles the one word it finds and checks the word before running
   it ([XCT](#xct)). An XCT of an XCT goes through `execute`. A colon definition does not become one
   fused block. The Forth device runs one thread cell per fetch of NEXT and is not inlined. The
-  thread slot above is how it would be.
+  thread slot above would inline it.
 - The 340's display words are their own sea ([`src/korz/type340.ts`](src/korz/type340.ts)),
   lockstepped against `Type340`. This compiler does not fuse them into a PDP-7 block.
 
-**A second target: threaded code in core.** Also planned. A slot could carry a thread template
+**A second target: threaded code in core.** This is also planned. A slot could carry a thread template
 beside its JavaScript one, saying what cells to emit (`JMP` to a primitive, `LAC` for a constant,
 `CAL` for a call), and the compiler would write them, with a header, into the running Forth's
 dictionary through `cpu.write`, so watchers and `why` see it. Only slots that run on the machine

@@ -109,9 +109,9 @@ an intermittent bit on the wire-wrapped backplane. A cabinet console that runs t
 DEPOSIT and EXAMINE sequences shows what a healthy sn 129 should light up
 ([TODO](TODO.md), the PDP-7 operator console).
 
-That options list is the cabinet. SYMELEC, DUEL and the AM radio all assume exactly that machine,
-and now so does UNIX. So the ask goes to the ICM and SDF, to the people who did the 2019 work, and
-to the pdp7-unix list.
+The cabinet emulates that configuration. SYMELEC, DUEL and the AM radio all assume exactly that
+machine, and now so does UNIX. So the questions go to the ICM and SDF, to the people who did the
+2019 work, and to the pdp7-unix list.
 
 ### What sn 129 looks like now
 
@@ -132,7 +132,8 @@ collection's machines but not the 340, so this photo is the one to cite for the 
 
 ### Who to ask
 
-The Living Computer Museum was Paul Allen's, and it is gone, so the ask goes to its people.
+The Living Computer Museum was Paul Allen's, and it is gone, so the questions go to the people who
+worked there.
 
 | Who | Why | Route |
 |---|---|---|
@@ -147,8 +148,8 @@ The Living Computer Museum was Paul Allen's, and it is gone, so the ask goes to 
 | **Marc Etkind**, CHM | President and CEO since May 2025 | through Marc Weber |
 | **Ben Shneiderman** | Offered his "good connections to the Computer History Museum and Charles Babbage Institute" (January 2022) | direct |
 
-The CHM question is its own letter: is its PDP-7 complete, and does it have a 340? A second
-machine to record for the AM radio, and a second witness for the display, would be worth a lot.
+The CHM question is its own letter: is its PDP-7 complete, and does it have a 340? It would
+be a second machine to record for the AM radio and a second reference for the display.
 
 ### Draft letter (not sent)
 

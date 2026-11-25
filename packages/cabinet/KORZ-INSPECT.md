@@ -65,7 +65,7 @@ with the address whose opcode changed, the old and new opcode, and the cycle.
 
 Don's ProDOS Forth (`forth-ok.po`) runs on the Korz Apple with the cabinet's Videx in slot 3
 (`src/korz/apple2/videx.ts`), on every rung. With it at the prompt, the Hottest list is almost all
-one-opcode blocks, and the listings say why:
+one-opcode blocks, and the listings show why:
 
 ```
 $089B  A0 01     LDY #imm
@@ -86,7 +86,7 @@ $000D  6C 5C 0D  JMP (ind)    (not inlined)
 That is fig-FORTH's `NEXT`: fetch the cell at IP (`$0B`) into W, add 2 to IP, and `JMP (W)`, where
 the `JMP (ind)` sits in zero page at `$000D` and its operand bytes `$0E`-`$0F` are W, written by the
 two `STA`s. The compiler has no template for `(zp),Y`, `ADC` or `JMP (ind)`, and it ends a block
-at every store, so one `NEXT` is eleven block calls and four calls to the switch. And the block
+at every store, so one `NEXT` is eleven block calls and four calls to the switch. The block
 cache keeps 1,024 blocks and evicts the oldest: 6,597 built for 1,024 kept, the hot ones rebuilt.
 
 ## Plan

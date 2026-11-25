@@ -11,7 +11,7 @@ and a Turing rule ([`src/korz/tm.ts`](src/korz/tm.ts)). [Domain kits](#domain-ki
 divide. The PDP-7 runs at each level and is tested at each against
 `Pdp7` ([the PDP-7 first](#the-pdp-7-first)). The 6502 runs on the same three levels, in
 [`src/korz/m6502.ts`](src/korz/m6502.ts) and [`src/korz/compile65.ts`](src/korz/compile65.ts), and
-runs the Apple ][+ page ([the Apple \]\[](#the-apple-)). The apple2 bus as its own sea is design. A short summary of results
+runs the Apple ][+ page ([the Apple \]\[](#the-apple-)). The apple2 bus as its own sea is designed but not built. A short summary of results
 and open questions, for readers who know Korz and Self, is [KORZ-MACHINES.md](KORZ-MACHINES.md).
 
 Everything a machine does on its bus is a lookup on a few small bit fields: which address, read or
@@ -40,8 +40,8 @@ coordinates really are small integers: 16 address bits, 8 opcode bits, a few enu
 configuration word. An object or a float would keep the paper's order.
 [Objects, floats, and other orders](#objects-floats-and-other-orders) says how. The order of work:
 
-1. **An interpreter.** Linear search over the sea, the specificity rule, the ambiguity check. Slow
-   and obviously right. It stays as the oracle and as the engine behind `why`.
+1. **An interpreter.** Linear search over the sea, the specificity rule, the ambiguity check. It
+   is slow and obviously right. It stays as the oracle and as the engine behind `why`.
 2. **A resolver.** The same answers as tables: page tables, 256-entry handler arrays, opcode
    tables, cached per configuration. No code generation.
 3. **A compiler.** JavaScript generated from the resolved tables: per-page dispatch functions first,
@@ -53,7 +53,7 @@ the language card, the Saturn 128K and the Videx, are in
 itself, and on what Self's and Julia's compilers suggest for it, are in
 [moollm/designs/korz](https://github.com/SimHacker/moollm/blob/main/designs/korz/korz-notes.md).
 
-No language, parser or virtual machine: slots are TypeScript objects, handlers are TypeScript
+There is no language, parser or virtual machine: slots are TypeScript objects, handlers are TypeScript
 functions, and the generated code is plain JavaScript.
 
 **Words.** "Slot" alone always means a Korz slot. The Apple's eight card connectors are **expansion
@@ -162,8 +162,8 @@ slots.
 
 ### Objects, floats, and other orders
 
-The integer range is how this stack gets lookup tables, caches, indexes, masks and spans. It is
-the shape of a bus. It is not the shape of every coordinate worth dispatching on.
+The integer range is how this stack gets lookup tables, caches, indexes, masks and spans. A bus's
+coordinates are bounded integers. Other coordinates worth dispatching on are not.
 
 Three kinds of value already fit, because their order is the integer order and the names are only
 labels on the numbers:
@@ -172,7 +172,7 @@ labels on the numbers:
 - A small closed set of names is an enum. The name's position is the number, and the context holds
   the number.
 - An open set of names, such as Zork's verbs, is interned: a table from each string to a number,
-  the same trick the resolver uses for chains. Interning picks out particular values. It does not
+  as the resolver does for chains. Interning picks out particular values. It does not
   give the names an order of their own.
 
 An object and a float stay what they are. Stuffing either into `0 .. 2^width − 1` would invent an
@@ -435,8 +435,8 @@ A compiled block is also an accelerator whose `Exit` the compiler derives
 
 - **Hidden classes** (Self's maps): stable shapes for the context, slots, state and table entries.
 - **Inline caches** are per call site, so generated code with one site per handler gets monomorphic
-  caches for free. Polymorphic inline caches (Hölzle, Chambers and Ungar, ECOOP 1991) are V8's, not
-  ours to build.
+  caches with no further work. Polymorphic inline caches (Hölzle, Chambers and Ungar, ECOOP 1991)
+  are built into V8.
 - **Customization** (Chambers and Ungar, PLDI 1989): table sets and blocks per configuration are
   code customized to a context, keyed on the configuration as Self keyed on the receiver's map.
 - **Deoptimization**: the entry flag above, and the interpreter as the place to fall back to.
@@ -462,14 +462,14 @@ is a scan of the guards at resolve time.
 
 ## The same move as CAM-6's rule tables
 
-The resolver is the CAM-6 rule compiler pointed at a bus. CAM-6 rules were Forth words over named
+The resolver does for a bus what the CAM-6 rule compiler did for a neighborhood. CAM-6 rules were Forth words over named
 neighbor bits (Tommaso Toffoli and Norman Margolus, *Cellular Automata Machines*, MIT Press 1987).
 Loading a rule ran the word for every value of the neighborhood and stored the answers in the
 lookup table the board indexes each cell with. Don's `CAM6.js` does the same in `compileRule`, which
 fills `ruleTableBytes`, and its neighborhood functions gather the index bits for each cell. The
 analysis in moollm's
 [CAM construction set](https://github.com/SimHacker/moollm/blob/main/designs/cellular-automata/cam-construction-set.md#the-move-has-a-name-partial-evaluation-and-one-more-thing)
-applies here line for line:
+applies here:
 
 - **The same binding-time division.** For CAM-6 the rule and its parameters are static and the
   neighborhood is dynamic. Here machine, variant and configuration are static, and address, access
@@ -487,7 +487,7 @@ applies here line for line:
   Compiled page dispatch and compiled blocks are that kind of generator, with the standard slots'
   templates in place of Ace's rules.
 
-It works for both because the hardware was tables already. The Disk II controller is a state latch
+Tabulation fits both because the hardware was built from tables. The Disk II controller is a state latch
 and a 256-byte PROM indexed by state and inputs: a rule table. Address decoders, the character
 generator and the video timing are fixed functions of a few bits. An emulator that resolves to
 tables reproduces how the hardware was built, and the teaching graph's `models` links can say so.
@@ -543,7 +543,7 @@ claiming one code is an install-time error instead of `devices.find` picking the
 Both tests fail when one slot is wrong: rotating RAL by two fails at step 4 of seed 3; deferring ION
 by two instructions fails at step 51,210 of the boot.
 
-**Every level stays.** `new KorzPdp7({ korz: "interpret" })` searches the sea on every dispatch;
+**All levels are kept.** `new KorzPdp7({ korz: "interpret" })` searches the sea on every dispatch;
 `korz: "resolve"`, the default, dispatches through the resolver's tables. Both run the same
 differential tests against `Pdp7`, and [`src/korz/korz.test.ts`](src/korz/korz.test.ts) checks the
 resolver against the interpreter on random seas, errors included. Each level is the oracle for the
@@ -617,7 +617,7 @@ generation check became `bind`; and an instruction fetch became `access: "fetch"
 of a second selector that called the first. With every device on the IOP bus behind its power slot,
 a step was 57 ns in a fresh process and about 70 ns for every machine after the first.
 
-**Every machine the same to V8.** V8 specializes optimized code on the functions a call site has
+**Making every machine look the same to V8.** V8 specializes optimized code on the functions a call site has
 seen and the hidden classes of the objects it touches, not on addresses or data. Each `KorzPdp7`
 had its own slot closures over `this`, its own generated dispatch functions, and stubs that
 resolved on first call. The second machine's first `write` called its own stub through a site
@@ -684,9 +684,9 @@ it from s + 1. Bringing it back restores the saved state and replays to that poi
 as it is, which is why any word read in the window counts and not only words read after the
 write: a later replay would otherwise read a word written since. An IOT brings it back too, except
 a skip alone (IDSI, IDSP, the edge skips): the status can't change until the cycle running ahead
-stops at, so those are answered from the saved state. That one matters most. Forth waits for the
-display to stop by polling IDSI about twice a frame, and before it was answered ahead, every poll
-threw away what the 340 had drawn. What it drew goes to `onSegment` when time reaches it, with the
+stops at, so those are answered from the saved state. Forth waits for the display to stop by polling IDSI
+about twice a frame, and before skips were answered ahead, every poll threw away what the 340 had
+drawn. What it drew goes to `onSegment` when time reaches it, with the
 cycle it was drawn at.
 
 The oracle is the same every-cycle loop. A rig races the 340 on purpose: the display file starts
@@ -762,10 +762,10 @@ benchmark.
 **What the numbers say.** The gap to microM8 is mostly not WebAssembly. microM8 builds its picture
 inside every instruction, reaches memory and devices through Go interfaces, and shares one thread
 with the Go scheduler and garbage collector in a 41 MB module; it lands next to the Korz
-interpreter ([GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-waits)). The Korz
+interpreter ([GO-AND-TYPESCRIPT.md](microm8/GO-AND-TYPESCRIPT.md#the-wasm-build-compared-with-the-korz-engines)). The Korz
 switch computes the beam address on every bus cycle and still runs near 130 million cycles a second,
-because it is one function over numeric fields with no allocation in the loop. That is the PDP-7's
-lesson again: generate code V8 can keep monomorphic, and V8 does the rest.
+because it is one function over numeric fields with no allocation in the loop. The PDP-7 showed the
+same: generated code that V8 can keep monomorphic runs fast.
 
 The compiler leads only where a block stays in RAM and repeats, which is the one optimization a
 Wasm module cannot do for itself: the guest's opcode bytes are data to it, and the Korz compiler
@@ -776,7 +776,7 @@ ahead of `Pdp7` on UNIX and on the hand; on the 6502 it is not ahead yet on a pr
 
 ## The whole machine
 
-The CPU is the first client, not the only one. Every part of a cabinet that answers to coordinates
+The CPU is the first client of the sea. Every other part of a cabinet that answers to coordinates
 is a selector with dimensions:
 
 - **Devices** are slots on the IOT bus, guarded on device code and pulse bits. The two showcases
@@ -950,14 +950,14 @@ for (let q = 0; q < 3; q += 1)
 ```
 
 The loop is `TmSea.tabulate`: the same sea, written into the words the engine reads, exactly as
-`compileRule` fills CAM-6's table. `binaryIncrementer()` is this sea, and `TmTape` runs it with no
-PDP-7 in the room: `"1"` becomes `"10"`, `"11"` becomes `"100"`. State 0's row comes out zero, which the engine reads as halt.
+`compileRule` fills CAM-6's table. `binaryIncrementer()` is this sea, and `TmTape` runs it without a
+PDP-7: `"1"` becomes `"10"`, `"11"` becomes `"100"`. State 0's row comes out zero, which the engine reads as halt.
 Rules with a wildcard symbol ("in state 1, any digit") cannot be written in the table, which has one
 word per pair; in the sea they are one slot each, and the more specific slot for the blank overrides
 them without an `if`. An `emit` selector over the same two dimensions fills the emit table: one
 slot `{ state: 2, sym: ONE }` returning BEL beeps on every carry.
 
-`why` closes the loop for teaching. When the engine stops on an undefined transition, `why("door",
+For teaching, `why` maps the engine's behavior back to the rules. When the engine stops on an undefined transition, `why("door",
 { state, sym })` names the rule that should have answered and the dimension it missed on. When it
 takes a transition, the trace record carries the table address, the address maps back to (state,
 symbol), and (state, symbol) maps back to the slot and its `by`: the rule in the program, not the

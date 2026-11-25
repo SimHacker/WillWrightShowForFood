@@ -33,7 +33,7 @@ The kit's three are `interpret`, which searches the sea on every dispatch, `reso
 default, which binds the tables, and `compile`, which binds those same tables while the CPU file
 replaces `step` with its compiler. The PDP-7 adds the switch, `Pdp7`, under those three. The
 Apple ][ adds the switch, `M6502`, and one more above the compiler: microM8, the WebAssembly
-machine. Another oracle, when it earns a place, is another rung of that CPU.
+machine. Another oracle, if one is added, is another rung of that CPU.
 
 microM8 is the Apple's oracle, and it is a large download. It boots the same floppies and shows
 its own picture. The Apple page lists every rung in one menu: the Korz compiler, the switch,
@@ -54,7 +54,7 @@ the CPU resets. The PDP-7 menu already reboots this way.
 
 The words are cabinet, organelle, and rung. A cabinet is the architecture, the backplane, the
 devices, and the processor state. An organelle is a whole machine nested inside, with its own
-snapshot. A rung is who steps. Several rungs share one cabinet. microM8 is a rung and an organelle.
+snapshot. A rung is the engine that steps the processor. Several rungs share one cabinet. microM8 is a rung and an organelle.
 
 A CPU's own rungs agree where their pictures of the machine overlap. The kit's three agree
 between instructions. A compiled block may retire many. The rung below is stepped once per
@@ -71,24 +71,26 @@ whose bytes still hash, and it declines when they do not, or when a watch or a b
 the bytes it stood in for.
 
 The compiler pastes that device into a block only when its slots carry `emit`, and a guard that
-the bytes are still the ones compiled. A slot with only `run` stays a call, and the host JIT stops
-at the call. Stacking still runs. It does not, by itself, get optimized across.
+the bytes are still the ones compiled. A slot with only `run` stays a call, and the host JIT does
+not optimize across the call. A stacked instruction set without `emit` still runs, but only as
+calls.
 
 A fetch slot with no `emit` ends the block. The block's exit calls it. A fetch slot with an
 `emit` is how the block continues through the next instruction set, with the hash of those bytes
 as the guard.
 
 The rung under a layer is its oracle. A stacked device is checked against the interpreter of the
-layer it replaced, on the same bytes. Korz′ may write the coarser edit, one change of state for a
-whole call, and it is never on the hot path. Lockstep decides whether the edit stays. Measurement
-decides which layer is worth an `emit`. A short block that only calls out is left to the rung
+layer it replaced, on the same bytes. Korz′, the proposed LLM dispatcher in
+[KORZ-MACHINES.md](KORZ-MACHINES.md), may write the coarser edit, one change of state for a whole
+call, and it is never on the hot path. The edit is kept only if it passes in lockstep. A layer
+gets an `emit` only when measurement shows it is worth one. A short block that only calls out is left to the rung
 below.
 
 A float, or any other order that is not a small integer, does not become a new width in the
 tables. It stays a residual test beside them
 ([KORZ-DISPATCH.md](KORZ-DISPATCH.md#objects-floats-and-other-orders)).
 
-## Two machines, one rule
+## Layers on the PDP-7 and the Apple
 
 | Layer | What is built | What the compiler does with it |
 |---|---|---|
