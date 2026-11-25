@@ -579,7 +579,7 @@ segments mapped into the view's core, each at any address the view chooses.
 ```yaml
 view: symelec-picture
 map:
-  - at: 0o1000                       # Forth libraries, read-only, fetched once by URL
+  - at: HERE                         # a Forth library: fetched by URL, compiled here, DP moves past it
     source: https://example.org/forth/turtle-color.fs
     as: forth
   - at: 0o4000                       # live, from the server's SYMELEC
@@ -606,7 +606,13 @@ start: 0o4000                        # where the view's 340 begins
   snapshots, and copies only what is written afterwards, on either side. Opening a snapshot is
   opening a view; editing one doesn't disturb the machine it came from, and comparing two is
   comparing two views.
-- **Libraries are segments too.** Forth source fetched by URL, compiled once and mapped read-only.
+- **Libraries are segments too.** A Forth source library is fetched by URL and compiled locally
+  into a segment of whatever size it needs, placed in core, and relocated if it lands somewhere
+  other than where it was compiled for, as 340 segments are. Then `DP` is advanced past it, so
+  `HERE` is at its end and the next segment goes after it. Place, relocate, advance `DP`, repeat:
+  that is the main loop of the [multi-source assembler and
+  linker](ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool), whatever each
+  segment's dialect or instruction set. A library's segment is read-only once it is placed.
 - **Transformations on the way in.** Relocation, because 340 jumps are absolute 13-bit addresses
   and a segment mapped elsewhere needs its `DJP`, `DJS` and `DDS` targets moved; also scaling,
   color and filtering.
