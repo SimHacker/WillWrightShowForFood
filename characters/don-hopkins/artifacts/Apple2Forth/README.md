@@ -1,6 +1,7 @@
 # Don's ProDOS Forth and H19 terminal, Apple ][
 
-A Forth Don wrote for the Apple ][ under ProDOS, starting from fig-FORTH, with an H19 terminal
+A Forth Don wrote for the Apple ][ under ProDOS, starting from fig-FORTH for the 6502 and extending
+it to Forth-83, with an H19 terminal
 emulator built on it in its own RPN 6502 assembler. The terminal is how he reached the ARPANET
 and the ITS machines, MIT-MC above all, where he hung out all day and all night
 ([lineage](../../career/lineage.yml)). MC itself survives, at the
