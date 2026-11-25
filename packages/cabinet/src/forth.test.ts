@@ -189,9 +189,9 @@ test("forth, PIXIE rings: elements named in Forth go round RSAVINS, and RSPPIX f
 	const m = machine(rings);
 	m.box.run(300_000);
 	// It boots saying hello in the ring: the RINGS panel as a 3D teletype.
-	assert.match(m.line("RSAVINS .RING"), /HELLO WORLD FROM PDP-7 FORTH\s+ok/);
-	assert.match(m.line(`S" AND PIXIE RINGS" SAYS RSAVINS .RING`), /HELLO WORLD FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
-	assert.match(m.line("HELLO RSAVINS RCOUNT ."), / 5\s+ok/);
+	assert.match(m.line("RSAVINS .RING"), /\.RING PIXIE\s+ok/);
+	assert.match(m.line(`S" HELLO WORLD FROM PDP-7 FORTH" SAYS RSAVINS .RING`), /PIXIE HELLO WORLD FROM PDP-7 FORTH\s+ok/);
+	assert.match(m.line("HELLO RSAVINS RCOUNT ."), / 1\s+ok/);
 	assert.match(m.line("RINGS RSAVINS RCOUNT ."), / 0\s+ok/);
 	for (const name of ["SQUARE", "TRIANGLE", "HEX"]) assert.match(m.line(`RSAVINS S" ${name}" NAMED`), /ok/);
 	assert.match(m.line("RSAVINS RCOUNT ."), / 3\s+ok/);
@@ -241,10 +241,10 @@ test("forth: the scripted demo runs to the end and Forth accepts every line", ()
 	}
 	assert.deepEqual(shown, ["tty", "rings", "display"], "the teletype it types on, the ring it takes apart, the tube the turtle draws on");
 	assert.doesNotMatch(m.paper(), /\?/);
-	assert.match(m.paper(), /HELLO WORLD FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
-	assert.match(m.paper(), / 8\s+ok/);
-	assert.match(m.paper(), /\.RING FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
-	assert.match(m.paper(), /HELLO SVFIG FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
+	assert.match(m.paper(), /PIXIE HELLO WORLD FROM PDP-7 FORTH\s+ok/);
+	assert.match(m.paper(), / 6\s+ok/);
+	assert.match(m.paper(), /\.RING WORLD FROM PDP-7 FORTH\s+ok/);
+	assert.match(m.paper(), /HELLO SVFIG WORLD FROM PDP-7 FORTH\s+ok/);
 	assert.match(m.paper(), /CS DAISY HT\s+ok/);
 	assert.equal(m.lit(), 216);
 });

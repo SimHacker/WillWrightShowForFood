@@ -234,7 +234,7 @@ test("Forth's PIXIE rings: save to a file, wipe, load it back into core, and For
 	assert.match(line(": MANY 0 DO RSAVINS S\" AB\" NAMED LOOP ; 40 MANY RSAVINS RCOUNT ."), / 43\s+ok/);
 });
 
-test("Forth's PIXIE rings: it boots saying HELLO WORLD FROM PDP-7 FORTH, one ring element a word, in the RINGS scene", async () => {
+test("Forth's PIXIE rings: it boots with one ring element, PIXIE, in the RINGS scene", async () => {
 	const { ringToScene } = await import("./scene.js");
 	const { cpu, image } = await forthRings();
 	const at = (n: string) => cpu.read(image.labels.get(n) as number);
@@ -245,5 +245,5 @@ test("Forth's PIXIE rings: it boots saying HELLO WORLD FROM PDP-7 FORTH, one rin
 	for (let a = beg; a < end; a += 1) words.push(cpu.read(a) & 0o777777);
 	const scene = ringToScene({ beg, end, savins, words }, [savins]);
 	const texts = scene.chains.map((c) => c.text).filter((t): t is string => t !== undefined);
-	assert.deepEqual(texts.sort(), ["FORTH", "FROM", "HELLO", "PDP-7", "WORLD"]);
+	assert.deepEqual(texts, ["PIXIE"]);
 });

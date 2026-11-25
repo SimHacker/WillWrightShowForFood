@@ -245,7 +245,7 @@ function forthProgram({ id, label, kernelFile, extras = [], pixie: withRings = t
 		// The bus dance's watches: the turtle, its display list growing, the dictionary and the
 		// ring space filling, and how deep the words are nested on the return stack.
 		listen: 'tx ty th dl> dp rfree rp',
-		demoTitle: 'Reboot and type: arithmetic, the HELLO WORLD ring taken apart and rebuilt, then a square, a flower, a squiral, a snowflake and a daisy to edit',
+		demoTitle: 'Reboot and type: arithmetic, a PIXIE ring grown, taken apart and rebuilt, then a square, a flower, a squiral, a snowflake and a daisy to edit',
 		switches: 0,
 		switchLabels: null,
 		// Forth echoes what it reads, and reads a line at a time; the width goes into WORDS.

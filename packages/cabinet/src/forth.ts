@@ -172,11 +172,11 @@ export function* forthDemo(h: ForthHost): DemoScript {
 	yield* wait(600_000);
 	yield* say("Arithmetic at the prompt: two, three, add, print", "2 3 + .", 1_000_000);
 	h.show?.("rings");
-	yield* say("It booted with a PIXIE ring in core, one element per word. .RING goes round it and prints the names", "RSAVINS .RING", 1_200_000);
-	yield* say("SAYS appends an element for each word. The RINGS panel shows them join the ring", `S" AND PIXIE RINGS" SAYS RSAVINS .RING`, 1_500_000);
+	yield* say("It booted with a PIXIE ring in core, one element. .RING goes round it and prints the names", "RSAVINS .RING", 1_200_000);
+	yield* say("SAYS appends an element for each word. The RINGS panel shows them join the ring", `S" HELLO WORLD FROM PDP-7 FORTH" SAYS RSAVINS .RING`, 1_800_000);
 	yield* say("RCOUNT goes round the ring and counts", "RSAVINS RCOUNT .", 1_000_000);
 	yield* say("DROP1 unlinks the first element with RSPPIX's RDELB; the 1972 garbage collector takes it back", ": DROP1 ( ring -- ) RFIRST RX RCAR RX RDELB ;", 1_000_000);
-	yield* say("Drop HELLO and WORLD", "RSAVINS DROP1 RSAVINS DROP1 RSAVINS .RING", 1_500_000);
+	yield* say("Drop PIXIE and HELLO", "RSAVINS DROP1 RSAVINS DROP1 RSAVINS .RING", 1_500_000);
 	yield* say("NAMED puts a new element at the front of the ring", `RSAVINS S" SVFIG" NAMED RSAVINS S" HELLO" NAMED RSAVINS .RING`, 1_800_000);
 	h.show?.("display");
 	yield* say("A loop right at the prompt draws a square with the turtle", "CS 4 0 DO 200 FD 90 RT LOOP", 2_000_000);

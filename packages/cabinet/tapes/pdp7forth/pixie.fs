@@ -50,6 +50,6 @@ variable wl
     over c@ bl = if 1- swap 1+ swap else
       2dup wordlen >r  over r@ say  r@ - swap r> + swap then
   repeat 2drop ;
-: hello ( -- ) rings  s" HELLO WORLD FROM PDP-7 FORTH" says ;
+: hello ( -- ) rings  s" PIXIE" says ;
 
 hello
