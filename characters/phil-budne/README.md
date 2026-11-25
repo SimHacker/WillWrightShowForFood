@@ -85,8 +85,8 @@ What exists ([ASSEMBLERS.md](../../packages/cabinet/ASSEMBLERS.md), [source](../
 - Listings printed in the 1972 house style, and a source map, so the memory view shows each word
   beside the source line that made it.
 - A disassembler ([`src/disasm.ts`](../../packages/cabinet/src/disasm.ts)), and a direct editor
-  for the 340's display list ([`src/edit340.ts`](../../packages/cabinet/src/edit340.ts)): drag a
-  corner on the screen and it rewrites the vector words in core.
+  for the 340's display list ([`src/edit340.ts`](../../packages/cabinet/src/edit340.ts)), which
+  moves a corner of a drawing by rewriting the two vector words in core.
 
 Next ([ASSEMBLERS.md](../../packages/cabinet/ASSEMBLERS.md#next)): build Forth in the page from
 `kernel.s` and its Forth sources, then a live coding panel to edit Forth's kernel or any
