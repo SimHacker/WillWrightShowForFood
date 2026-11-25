@@ -507,6 +507,25 @@ several jobs:
 - **A DJ and VJ booth.** All of the above, live, in front of an audience: windows on several
   machines, mixed, blended and scrubbed by hand.
 
+**One display, many machines.** One client's 340 can show, operate and connect several machines
+at once, local and remote: PDP-7s, a PDP-10, and Apple ][s, whose memory can be viewed and poked
+the same way, whether a 6502 program writes 340 display lists into its own memory or a view
+renders its screen memory. The base case is one app full screen. Iconify it into a corner and it
+keeps running there as a small live view, as HyperLook's iconified stacks did ("a miniature
+dynamically updated icon"); then open four others in a grid.
+
+- **Placement is a transform when drawing.** The 340's scale settings only enlarge, so a
+  window's position and size are applied by the client's renderer to that window's segments, not
+  written into the display code. The app's own display list stays exactly as its program wrote
+  it.
+- **One pen for all of them.** The pen, emulated with the mouse or driven by a script, is mapped
+  back through the window under it into that machine's coordinates, and the pen event goes to
+  that machine. The cabinet already takes several pens at once (`PenInput`, named "mouse",
+  "sim-heinz" and so on), so a person and a script can work in different windows together.
+- **Data flow between them.** Dragging a capture from one window to another, or wiring one
+  window's output to another's input (the driver role above), moves data between machines that
+  were never built to talk to each other.
+
 The clipboard ties it together. An entry can contain other entries, and a window can show a
 clipboard entry as well as live memory, so captures nest: a window of windows, each of which is a
 capture or a live segment. Laid out by its nesting, the clipboard is a map of everything captured,
