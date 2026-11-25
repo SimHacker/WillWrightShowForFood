@@ -231,6 +231,17 @@ by every assembler and every tool, for every machine:
   ([`src/source.ts`](src/source.ts), `ScanRect`), and through shared addresses to translations of
   the same program, such as the Cambridge source translated to `as7`.
 
+**Several dialects and instruction sets in one build.** Today, mixing dialects means translating
+first: SYMELEC (5,341 source lines) and RSPPIX, PIXIE's separate ring structure processor (727
+lines), are in the Cambridge dialect, so [Cambridge to as7](#cambridge-to-as7) translates them to
+`as7` and RSPPIX is assembled together with Mitch's `kernel.s` in one `as7` run. The plan is an
+assembler that takes files of different kinds in one run, picks each file's front end from its
+type, and assembles them into one image with one symbol table and one source map: the PDP-7
+dialects, the Type 340's display instructions, the 6502, and Forth source for the PDP-7 and the
+Apple ][. A device's instruction set is then a front end like any other, so the 340's display
+code can be assembled alongside the code of whichever CPU drives it, the PDP-7 or the KA10,
+without the 340 being built into either architecture.
+
 **A 6502 macro assembler**, on the same core, is how Don's Apple ][ Forth gets its source back
 ([Apple2Forth](../../characters/don-hopkins/artifacts/Apple2Forth/README.md)): disassemble and
 decompile `H19.SYSTEM`, then write it as macro source that reassembles to the same bytes. The

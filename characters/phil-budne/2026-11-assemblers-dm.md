@@ -16,3 +16,13 @@ https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopk
 
 Which PDP-10 assemblers and tools should I study besides MIDAS, MACRO-10 and FAIL, and where are the best manuals and sources? What other tools should a cabinet have? And is there anything you'd steer me away from?
 ```
+
+A second follow-up, about mixing dialects:
+
+```
+One more about the assemblers. Heinz Lemke's PIXIE survives as a 1972 listing in Cambridge's PDP-7 assembly dialect: SYMELEC, the main program (5,341 lines), and RSPPIX, a separate ring structure processor that builds and edits PIXIE's rings (727 lines). Mitch's Forth is in as7. So I used the TypeScript assembler's Cambridge parser to translate SYMELEC and RSPPIX into as7, checked that they assemble to the same words, and assembled RSPPIX together with the Forth kernel as one program, so Forth can call PIXIE's ring routines.
+
+The next step is an assembler that takes files in different dialects and instruction sets in one run (PDP-7 dialects, Type 340 display code, 6502, and Forth for the PDP-7 and the Apple ][) and builds one image with one symbol table and source map. Then a device like the 340 is its own front end, and its code assembles alongside whichever CPU drives it, PDP-7 or PDP-10, without wiring the 340 into either architecture:
+
+https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool
+```
