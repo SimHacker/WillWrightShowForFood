@@ -365,15 +365,37 @@
 				.map((name) => ({ name, addr: forthCell(read, labels, name.toLowerCase()) }))
 				.filter((c) => c.addr >= 0);
 			danceLookup = { text: dance.listen, at: ms };
+			danceSpots = forthCell(read, labels, 'spots');
 		}
 		return danceCells.map((c) => ({ name: c.name, value: cpu.read(c.addr) }));
 	}
-	/** The strokes of the last frame under the pointer, nearest first, and how far along each it is. */
+	const signed18 = (w) => (w & 0o400000 ? (w & 0o777777) - 0o1000000 : w & 0o777777);
+	/** Where the pointer is on the tube, in 340 points, and whether its button is down; null off the tube. */
+	let dancePointer = null;
+	/** Forth's SPOTS, where a drawn hand's landmarks are, once found: fingertips are 4 8 12 16 20. */
+	let danceSpots = -1;
 	function dancePen(event, down) {
 		if (!dance.on || !canvasEl) return;
-		const { x, y } = gridFromEvent(event);
+		dancePointer = { ...gridFromEvent(event), down };
+		dancePenNow();
+	}
+	/**
+	 * The strokes of the last frame under the pointer, nearest first, how far along each it is and
+	 * its tag; and the fingertip it is on. Every frame too, so a hand moving under a still pointer
+	 * strums it.
+	 */
+	function dancePenNow() {
+		if (!dance.on || !dancePointer) return;
+		const { x, y, down } = dancePointer;
 		const segs = t340?.lastFrame?.segments ?? [];
-		const reach = 14;
+		const reach = 24;
+		const read = cpu ? (a) => cpu.read(a) : null;
+		const titles = new Map();
+		const title = (tag) => {
+			if (!tag || !read) return undefined;
+			if (!titles.has(tag)) titles.set(tag, readTag(read, tag)?.title || undefined);
+			return titles.get(tag);
+		};
 		const under = [];
 		segs.forEach((s, i) => {
 			if (!s.intensify) return;
@@ -382,10 +404,22 @@
 			const len2 = dx * dx + dy * dy;
 			const along = len2 ? Math.max(0, Math.min(1, ((x - s.x0) * dx + (y - s.y0) * dy) / len2)) : 0;
 			const d2 = (x - s.x0 - along * dx) ** 2 + (y - s.y0 - along * dy) ** 2;
-			if (d2 <= reach * reach) under.push({ addr: s.addr, along, scan: i / segs.length, d2 });
+			if (d2 <= reach * reach) under.push({ addr: s.addr, along, scan: i / segs.length, tag: title(s.tag), d2 });
 		});
 		under.sort((a, b) => a.d2 - b.d2);
-		dance.pen({ x, y, down, under: under.slice(0, 3) });
+		let tip = -1;
+		if (read && danceSpots >= 0)
+			for (let f = 0; f < 5 && tip < 0; f += 1) {
+				const at = danceSpots + 2 * (4 * f + 4);
+				const sx = signed18(read(at));
+				const sy = signed18(read(at + 1));
+				if ((sx || sy) && Math.hypot(x - sx, y - sy) <= reach) tip = f;
+			}
+		dance.pen({ x, y, down, under: under.slice(0, 3), tip });
+	}
+	function danceFrame(now) {
+		dance.frame(now, danceHits, danceGauges, danceWatched);
+		dancePenNow();
 	}
 	function danceGauges() {
 		const ms = performance.now();
@@ -833,6 +867,7 @@
 
 	function onHoverLeave() {
 		rest = null;
+		dancePointer = null;
 		dance.pen(null);
 		if (pressedId === null) fadeTip();
 	}
@@ -2359,7 +2394,7 @@
 			owed = 0;
 			drawFrame();
 			updateReadout(now);
-			dance.frame(now, danceHits, danceGauges, danceWatched);
+			danceFrame(now);
 			return;
 		}
 		if (traceMs) {
@@ -2380,7 +2415,7 @@
 				}
 				drawFrame();
 				updateReadout(now);
-				dance.frame(now, danceHits, danceGauges, danceWatched);
+				danceFrame(now);
 				fault = null;
 			} catch (e) {
 				fault = e instanceof Error ? e.message : String(e);
@@ -2416,7 +2451,7 @@
 			}
 			drawFrame();
 			updateReadout(now);
-			dance.frame(now, danceHits, danceGauges, danceWatched);
+			danceFrame(now);
 			fault = null;
 		} catch (e) {
 			fault = e instanceof Error ? e.message : String(e);

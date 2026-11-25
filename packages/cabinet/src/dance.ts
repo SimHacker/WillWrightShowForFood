@@ -250,11 +250,27 @@ export type Touch =
 	| { readonly kind: "drag"; readonly distance: number }
 	| { readonly kind: "release" };
 
-/** A stroke under the light pen: its display-list word, how far along it the pen is, and when in the frame it was drawn. */
-export type Under = { readonly addr: number; readonly along: number; readonly scan: number };
+/**
+ * A stroke under the light pen: its display-list word, how far along it the pen is, when in
+ * the frame it was drawn, and the title of the tag it was drawn under, if any ("Thumb").
+ */
+export type Under = { readonly addr: number; readonly along: number; readonly scan: number; readonly tag?: string };
 
-/** Where the light pen is, on the 340's grid, whether it's down, and the strokes under it, nearest first. */
-export type PenAt = { readonly x: number; readonly y: number; readonly down: boolean; readonly under: readonly Under[] };
+/**
+ * Where the light pen is, on the 340's grid, whether it's down, the strokes under it, nearest
+ * first, and the fingertip it is on, 0 the thumb to 4 the little finger, if a hand is drawn.
+ */
+export type PenAt = { readonly x: number; readonly y: number; readonly down: boolean; readonly under: readonly Under[]; readonly tip?: number };
+
+/** A hand's tags as strings of a harp, thumb lowest. */
+const STRINGS: ReadonlyMap<string, number> = new Map([
+	["Thumb", 0],
+	["Index finger", 1],
+	["Middle finger", 2],
+	["Ring finger", 3],
+	["Little finger", 4],
+	["Knuckles", 5],
+]);
 
 /**
  * A mode of the music, as a screen angel's state sets it on entry: the style, the tempo, the
@@ -354,6 +370,7 @@ export class Dance {
 	private last: Chord | null = null;
 	private replies: { at: number; key: number; i: number }[] = [];
 	private penDown = false;
+	private penTip = -1;
 	private sounding = new Map<number, number>();
 	private watches = new Map<string, Watch>();
 	/** 0 to 1: how deep the harmony goes. Past a third the pad doubles an octave down, past two thirds two. */
@@ -413,11 +430,14 @@ export class Dance {
 	}
 
 	/**
-	 * The light pen's own quiet tracks, played at once rather than on the beat. Every stroke under
-	 * the pen sounds a rising arpeggio of the chord as the pen moves along it, start to end, two
-	 * octaves, so dragging along a line climbs and the next stroke starts low again; strokes drawn
-	 * later in the frame start higher, so a drawing's scan order is heard too. Hovering is a faint
-	 * glass, a held pen a beep. Setting the pen down chimes at its height, lifting it at its x.
+	 * The light pen's own tracks, played at once rather than on the beat, so the picture is an
+	 * instrument. Every stroke under the pen sounds a rising arpeggio of the chord as the pen
+	 * moves along it, start to end, two octaves, so stroking along a line climbs and the next
+	 * stroke starts low again. Untagged strokes drawn later in the frame start higher, so a
+	 * turtle's spiral is a harp; a hand's strokes start by finger, each a string a step above
+	 * the last. Hovering plucks; holding the button down beeps, brighter, while the press
+	 * builds tension, until it is lifted. Setting the pen down chimes at its height, lifting it
+	 * at its x, and touching a fingertip lands a kick with a chime for that finger.
 	 */
 	pen(p: PenAt | null): Note[] {
 		const notes: Note[] = [];
@@ -435,12 +455,20 @@ export class Dance {
 			notes.push({ voice: "pen", timbre: "chime", midi: at(p.down ? 72 : 60, Math.max(0, d)), velocity: 0.5, pan, order: 0 });
 			this.penDown = p.down;
 		}
+		const tip = p.tip ?? -1;
+		if (tip >= 0 && tip !== this.penTip) {
+			notes.push({ voice: "pen", timbre: "kick", midi: DRUM_MIDI.kick, velocity: 0.95, pan, order: 0 });
+			notes.push({ voice: "pen", timbre: "chime", midi: at(72, tip * 2), velocity: 0.8, pan, order: 1 });
+		}
+		this.penTip = tip;
 		const now = new Map<number, number>();
 		p.under.slice(0, 3).forEach((u, i) => {
-			const d = Math.floor(Math.max(0, Math.min(0.999, u.along)) * 2 * n) + Math.floor(u.scan * n);
+			const string = u.tag === undefined ? undefined : (STRINGS.get(u.tag) ?? hashName(u.tag) % 6);
+			const from = string === undefined ? Math.floor(u.scan * n) : string * 2;
+			const d = Math.floor(Math.max(0, Math.min(0.999, u.along)) * 2 * n) + from;
 			now.set(u.addr, d);
 			if (this.sounding.get(u.addr) !== d)
-				notes.push({ voice: "pen", timbre: p.down ? "beep" : "glass", midi: at(60, d), velocity: (p.down ? 0.45 : 0.15) * (1 - 0.25 * i), pan, order: i });
+				notes.push({ voice: "pen", timbre: p.down ? "beep" : "pluck", midi: at(60, d), velocity: (p.down ? 0.6 : 0.5) * (1 - 0.2 * i), pan, order: i });
 		});
 		this.sounding = now;
 		return notes.filter(this.heard);

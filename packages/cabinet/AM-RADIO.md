@@ -199,11 +199,18 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        - LANDER: `h2 v fuel secs`;
        - HILO: `secret guess`, which gives the number away. That is the joke: hearing it is
          one more channel.
-     - The pen's own tracks, played at once rather than on the beat. Every stroke of the last
-       frame under the pointer sounds a rising arpeggio of the chord as the pen moves along it,
-       0 to 1, so dragging along a line climbs, and the next stroke starts low again. Strokes
-       drawn later in the frame start higher, so the scan order is heard. Hovering is a faint
-       glass, a pen held down a beep; setting it down chimes at its height, lifting it at its x.
+     - The pen's own tracks, played at once rather than on the beat, so the picture is an
+       instrument you play by stroking it, button up. Every stroke of the last frame within 24
+       points of the pointer sounds a rising arpeggio of the chord as the pen moves along it,
+       0 to 1, so stroking along a line climbs and the next stroke starts low again. Untagged
+       strokes drawn later in the frame start higher, so a turtle's spiral is a harp. Hovering
+       plucks; holding the button beeps, brighter, while the press builds tension, until it is
+       lifted. Setting the pen down chimes at its height, lifting it at its x.
+     - The hand is a harp too. A stroke's display tag (tags.fs) names its finger, "Thumb" to
+       "Little finger", and each finger is a string a step above the last. Forth's SPOTS holds
+       where the landmarks were drawn; on a fingertip (landmarks 4, 8, 12, 16, 20) the pen lands
+       a kick with a chime for that finger. The tracks are checked every frame, not only when
+       the pointer moves, so moving your fingers under a still cursor strums them.
      - Screen angel modes: a state in ANGEL.yml can carry `music: { style, bpm, loops, listen,
        mute }`, set on entering it. Little Computer People boots to the 6502 and the disk with
        no chords, asks your name over a soft jazz ride, the date in Bohlen-Pierce, waits for

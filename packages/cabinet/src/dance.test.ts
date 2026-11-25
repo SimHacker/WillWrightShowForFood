@@ -271,3 +271,17 @@ test("lydian keeps the tritone over the tonic, and jazz's full tension is the tr
 	assert.equal(j.chord.name, "bII7");
 	assert.equal((j.chord.root + 12 - 7) % 12, 6, "a tritone from the dominant it stands for");
 });
+
+test("a hand is a harp: each finger's string starts a step above the last, and a fingertip lands a kick", () => {
+	const d = new Dance(PDP7_VOICES);
+	const start = (tag: string, addr: number) => d.pen({ x: 0, y: 0, down: false, under: [{ addr, along: 0, scan: 0.5, tag }] })[0]!;
+	const thumb = start("Thumb", 1);
+	const index = start("Index finger", 2);
+	const little = start("Little finger", 3);
+	assert.equal(thumb.timbre, "pluck", "hovering plucks");
+	assert.ok(thumb.midi < index.midi && index.midi < little.midi);
+	const tip = d.pen({ x: 0, y: 0, down: false, under: [], tip: 1 });
+	assert.deepEqual(tip.map((n) => n.timbre), ["kick", "chime"]);
+	assert.deepEqual(d.pen({ x: 0, y: 0, down: false, under: [], tip: 1 }), [], "staying on the tip plays it once");
+	assert.equal(d.pen({ x: 0, y: 0, down: true, under: [{ addr: 9, along: 0.5, scan: 0 }] }).find((n) => n.voice === "pen" && n.timbre !== "chime")?.timbre, "beep", "the button switches instrument");
+});
