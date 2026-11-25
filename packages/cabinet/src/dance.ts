@@ -13,7 +13,8 @@
  */
 
 export type Drum = "kick" | "snare" | "hat" | "ride" | "rim";
-export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | Drum;
+/** The pen's own instruments, `harp` `lead` `bell` `tom`, are never the machine's, so playing the picture stands apart from what plays itself. */
+export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "harp" | "lead" | "bell" | "tom" | Drum;
 
 export type Voice = {
 	readonly id: string;
@@ -435,9 +436,10 @@ export class Dance {
 	 * moves along it, start to end, two octaves, so stroking along a line climbs and the next
 	 * stroke starts low again. Untagged strokes drawn later in the frame start higher, so a
 	 * turtle's spiral is a harp; a hand's strokes start by finger, each a string a step above
-	 * the last. Hovering plucks; holding the button down beeps, brighter, while the press
-	 * builds tension, until it is lifted. Setting the pen down chimes at its height, lifting it
-	 * at its x, and touching a fingertip lands a kick with a chime for that finger.
+	 * the last. Hovering plays a harp; holding the button down a resonant lead, brighter, while
+	 * the press builds tension, until it is lifted. Setting the pen down rings a bell at its
+	 * height, lifting it at its x, and touching a fingertip lands a tom with a bell for that
+	 * finger. None of these is an instrument the machine plays itself.
 	 */
 	pen(p: PenAt | null): Note[] {
 		const notes: Note[] = [];
@@ -452,13 +454,13 @@ export class Dance {
 		const pan = Math.max(-1, Math.min(1, p.x / 512 - 1));
 		if (p.down !== this.penDown) {
 			const d = Math.floor(((p.down ? p.y : p.x) / 1024) * 2 * n);
-			notes.push({ voice: "pen", timbre: "chime", midi: at(p.down ? 72 : 60, Math.max(0, d)), velocity: 0.5, pan, order: 0 });
+			notes.push({ voice: "pen", timbre: "bell", midi: at(p.down ? 72 : 60, Math.max(0, d)), velocity: 0.5, pan, order: 0 });
 			this.penDown = p.down;
 		}
 		const tip = p.tip ?? -1;
 		if (tip >= 0 && tip !== this.penTip) {
-			notes.push({ voice: "pen", timbre: "kick", midi: DRUM_MIDI.kick, velocity: 0.95, pan, order: 0 });
-			notes.push({ voice: "pen", timbre: "chime", midi: at(72, tip * 2), velocity: 0.8, pan, order: 1 });
+			notes.push({ voice: "pen", timbre: "tom", midi: at(48, tip * 2), velocity: 0.95, pan, order: 0 });
+			notes.push({ voice: "pen", timbre: "bell", midi: at(72, tip * 2), velocity: 0.8, pan, order: 1 });
 		}
 		this.penTip = tip;
 		const now = new Map<number, number>();
@@ -468,7 +470,7 @@ export class Dance {
 			const d = Math.floor(Math.max(0, Math.min(0.999, u.along)) * 2 * n) + from;
 			now.set(u.addr, d);
 			if (this.sounding.get(u.addr) !== d)
-				notes.push({ voice: "pen", timbre: p.down ? "beep" : "pluck", midi: at(60, d), velocity: (p.down ? 0.6 : 0.5) * (1 - 0.2 * i), pan, order: i });
+				notes.push({ voice: "pen", timbre: p.down ? "lead" : "harp", midi: at(60, d), velocity: (p.down ? 0.6 : 0.5) * (1 - 0.2 * i), pan, order: i });
 		});
 		this.sounding = now;
 		return notes.filter(this.heard);

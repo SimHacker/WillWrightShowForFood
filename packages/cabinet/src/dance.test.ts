@@ -185,8 +185,8 @@ test("the pen plays a rising run along each stroke, and starts low again on the 
 	const next = along(0o101, 0)[0]!;
 	assert.equal(next.midi, run[0], "the next stroke starts where the last one did");
 	assert.deepEqual(along(0o101, 0.01), [], "a move that stays on the same note plays nothing");
-	assert.ok(along(0o101, 0.01, true).some((n) => n.timbre === "chime"), "setting the pen down chimes");
-	assert.equal(d.pen({ x: 0, y: 0, down: false, under: [] })[0]!.timbre, "chime", "and so does lifting it");
+	assert.ok(along(0o101, 0.01, true).some((n) => n.timbre === "bell"), "setting the pen down rings a bell");
+	assert.equal(d.pen({ x: 0, y: 0, down: false, under: [] })[0]!.timbre, "bell", "and so does lifting it");
 });
 
 test("later strokes in the frame start their runs higher", () => {
@@ -278,10 +278,23 @@ test("a hand is a harp: each finger's string starts a step above the last, and a
 	const thumb = start("Thumb", 1);
 	const index = start("Index finger", 2);
 	const little = start("Little finger", 3);
-	assert.equal(thumb.timbre, "pluck", "hovering plucks");
+	assert.equal(thumb.timbre, "harp", "hovering plays the harp");
 	assert.ok(thumb.midi < index.midi && index.midi < little.midi);
 	const tip = d.pen({ x: 0, y: 0, down: false, under: [], tip: 1 });
-	assert.deepEqual(tip.map((n) => n.timbre), ["kick", "chime"]);
+	assert.deepEqual(tip.map((n) => n.timbre), ["tom", "bell"]);
 	assert.deepEqual(d.pen({ x: 0, y: 0, down: false, under: [], tip: 1 }), [], "staying on the tip plays it once");
-	assert.equal(d.pen({ x: 0, y: 0, down: true, under: [{ addr: 9, along: 0.5, scan: 0 }] }).find((n) => n.voice === "pen" && n.timbre !== "chime")?.timbre, "beep", "the button switches instrument");
+	assert.equal(d.pen({ x: 0, y: 0, down: true, under: [{ addr: 9, along: 0.5, scan: 0 }] }).find((n) => n.voice === "pen" && n.timbre !== "bell")?.timbre, "lead", "the button switches instrument");
+});
+
+test("the pen never plays an instrument the machine plays itself", () => {
+	const d = new Dance(PDP7_VOICES);
+	d.loops = true;
+	const own = new Set(["harp", "lead", "bell", "tom"]);
+	const pen = [
+		...d.pen({ x: 100, y: 100, down: false, under: [{ addr: 1, along: 0.5, scan: 0 }], tip: 2 }),
+		...d.pen({ x: 100, y: 100, down: true, under: [{ addr: 2, along: 0.9, scan: 0 }] }),
+	];
+	assert.ok(pen.length > 0 && pen.every((n) => own.has(n.timbre)), pen.map((n) => n.timbre).join());
+	const auto = Array.from({ length: 64 }, (_, s) => d.beat({ cpu: [{ key: s, weight: 3 }], 340: [{ key: s * 7, weight: 2 }], forth: [{ key: 1, weight: 1 }] }, 0.8, [{ name: "dp", value: s }])).flat();
+	assert.ok(auto.every((n) => !own.has(n.timbre)), auto.map((n) => n.timbre).filter((t) => own.has(t)).join());
 });

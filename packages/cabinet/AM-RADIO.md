@@ -203,13 +203,15 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        instrument you play by stroking it, button up. Every stroke of the last frame within 24
        points of the pointer sounds a rising arpeggio of the chord as the pen moves along it,
        0 to 1, so stroking along a line climbs and the next stroke starts low again. Untagged
-       strokes drawn later in the frame start higher, so a turtle's spiral is a harp. Hovering
-       plucks; holding the button beeps, brighter, while the press builds tension, until it is
-       lifted. Setting the pen down chimes at its height, lifting it at its x.
+       strokes drawn later in the frame start higher, so a turtle's spiral is a harp. The pen
+       has instruments of its own that nothing automatic plays, so it stands apart from the
+       melody and the drums: hovering is a harp; holding the button a resonant sawtooth lead,
+       its filter opening, while the press builds tension, until it is lifted. Setting the pen
+       down rings an FM bell at its height, lifting it at its x.
      - The hand is a harp too. A stroke's display tag (tags.fs) names its finger, "Thumb" to
        "Little finger", and each finger is a string a step above the last. Forth's SPOTS holds
        where the landmarks were drawn; on a fingertip (landmarks 4, 8, 12, 16, 20) the pen lands
-       a kick with a chime for that finger. The tracks are checked every frame, not only when
+       a tom with a tick on top and a bell for that finger. The tracks are checked every frame, not only when
        the pointer moves, so moving your fingers under a still cursor strums them.
      - Screen angel modes: a state in ANGEL.yml can carry `music: { style, bpm, loops, listen,
        mute }`, set on entering it. Little Computer People boots to the 6502 and the disk with

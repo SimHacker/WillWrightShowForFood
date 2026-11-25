@@ -286,6 +286,56 @@ export class DancePlayer {
 				osc('square', 850, bp, shape(0.5 * v, 0.001, 0.025));
 				break;
 			}
+			// The pen's own: harp, lead, bell and tom are never the machine's instruments.
+			case 'harp': {
+				const end = shape(0.3 * v, 0.002, 1.4);
+				osc('triangle', f, env, end);
+				const over = ctx.createGain();
+				over.gain.value = 0.25;
+				over.connect(env);
+				osc('sine', f * 2, over, t + 0.5);
+				break;
+			}
+			case 'lead': {
+				const lp = ctx.createBiquadFilter();
+				lp.type = 'lowpass';
+				lp.Q.value = 9;
+				lp.frequency.setValueAtTime(500, t);
+				lp.frequency.exponentialRampToValueAtTime(3500, t + 0.18);
+				lp.connect(env);
+				const end = shape(0.14 * v, 0.01, 0.4);
+				osc('sawtooth', f, lp, end);
+				osc('sawtooth', f * 1.006, lp, end);
+				break;
+			}
+			case 'bell': {
+				const end = shape(0.22 * v, 0.002, 1.3);
+				const carrier = ctx.createOscillator();
+				carrier.frequency.value = f;
+				const mod = ctx.createOscillator();
+				mod.frequency.value = f * 3.5;
+				const depth = ctx.createGain();
+				depth.gain.setValueAtTime(f * 2.5, t);
+				depth.gain.exponentialRampToValueAtTime(f * 0.1, t + 1);
+				mod.connect(depth).connect(carrier.frequency);
+				carrier.connect(env);
+				for (const o of [carrier, mod]) {
+					o.start(t);
+					o.stop(end);
+				}
+				break;
+			}
+			case 'tom': {
+				const o = ctx.createOscillator();
+				o.frequency.setValueAtTime(f * 2, t);
+				o.frequency.exponentialRampToValueAtTime(f, t + 0.1);
+				o.connect(env);
+				o.start(t);
+				const end = shape(0.8 * v, 0.001, 0.35);
+				o.stop(end);
+				this.#noise(ctx, 'highpass', 4000, env, t, t + 0.015);
+				break;
+			}
 			case 'tick': {
 				const bp = ctx.createBiquadFilter();
 				bp.type = 'bandpass';
