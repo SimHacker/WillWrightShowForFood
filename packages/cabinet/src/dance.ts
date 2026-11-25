@@ -12,7 +12,7 @@
  * Pure: the page owns the clock and the audio.
  */
 
-export type Drum = "kick" | "snare" | "hat" | "ride" | "rim";
+export type Drum = "kick" | "snare" | "hat" | "ride" | "rim" | "crash";
 /** The pen's own instruments, `harp` `lead` `bell` `tom`, are never the machine's, so playing the picture stands apart from what plays itself. */
 export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "brass" | "keys" | "organ" | "acid" | "anvil" | "sing" | "whistle" | "harp" | "lead" | "bell" | "tom" | Drum;
 
@@ -191,7 +191,7 @@ export function thirteen(step: number, load: number, every: number, phase = 0): 
 /** The swung sixteenths: the second eighth of each beat. */
 const swung = (step: number) => ((step % 4) + 4) % 4 === 2;
 
-const DRUM_MIDI: Record<Drum, number> = { kick: 36, snare: 38, hat: 42, ride: 51, rim: 37 };
+const DRUM_MIDI: Record<Drum, number> = { kick: 36, snare: 38, hat: 42, ride: 51, rim: 37, crash: 49 };
 
 /** A chord as its root and the pitch classes it holds, above the key's tonic. */
 export type Chord = { readonly name: string; readonly root: number; readonly tones: readonly number[] };
@@ -490,6 +490,38 @@ export class Dance {
 		if ((word & 0o777777) !== this.switchWord) this.twist = twist((this.switchWord = word & 0o777777));
 	}
 	private switchWord = 0;
+
+	/** The routines called since the last beat, as `CallSound` says each one sounds. */
+	private answer(called: readonly Called[], now: Chord, t: Tuning): Note[] {
+		const out: Note[] = [];
+		const tones = now.tones;
+		const n = Math.max(1, tones.length);
+		for (const c of called) {
+			if (c.calls <= 0) continue;
+			const voice = `call:${c.name}`;
+			const s = c.sound;
+			const note = (timbre: Timbre, midi: number, velocity: number, pan = 0, order = 0, late = 0): Note => ({ voice, timbre, midi, velocity, pan, order, ...(late ? { late } : {}) });
+			if (s.kind === "hit") {
+				if (s.sound === "bell") out.push(note("beep", 83, 0.6, 0.2));
+				else if (s.sound === "crash") out.push(note("crash", DRUM_MIDI.crash, 0.7, -0.2));
+				else if (s.sound === "scroll") {
+					this.phase += 1;
+					out.push(note("kick", DRUM_MIDI.kick, 0.5));
+				} else if (s.sound === "error") [63, 62, 61, 60].forEach((m, i) => out.push(note("brass", m - 12, 0.5 - 0.05 * i, 0, 0, i * 2)));
+				else out.push(...[0, 1, 7].map((k, i) => note("pad", 30 + k, 0.4, 0, i)));
+			} else if (s.param === "type") {
+				const many = Math.min(3, Math.ceil(Math.log2(1 + c.calls)));
+				for (let i = 0; i < many; i += 1) {
+					const d = (c.calls + i * 2) % (2 * n);
+					out.push(note("keys", midiAt(72, (tones[d % n] ?? 0) + Math.floor(d / n) * t.steps, t), 0.25, 0.25, i));
+				}
+			} else if (s.param === "sparkle") {
+				const many = Math.min(4, Math.ceil(Math.log2(1 + c.calls) / 2));
+				for (let i = 0; i < many; i += 1) out.push(note("glass", midiAt(84, (tones[(c.calls + i) % n] ?? 0) + (i % 2) * t.steps, t), 0.3, i % 2 ? 0.5 : -0.5, i));
+			}
+		}
+		return out;
+	}
 
 	/** The riff playing under everything, or null. */
 	riff: Riff | null = null;
@@ -804,15 +836,17 @@ export class Dance {
 	 * One sixteenth. With `load`, the drums play too, their rim click at the period of the
 	 * first voice's two heaviest hits; a machine doing nothing plays no drums, but still answers.
 	 */
-	beat(hits: Readonly<Record<string, readonly Hit[] | undefined>>, load?: number, watched: readonly Watched[] = []): Note[] {
+	beat(hits: Readonly<Record<string, readonly Hit[] | undefined>>, load?: number, watched: readonly Watched[] = [], called: readonly Called[] = []): Note[] {
 		const step = this.step;
+		const drove = called.filter((c) => c.sound.kind === "rate" && c.sound.param === "drive").reduce((n, c) => n + c.calls, 0);
+		if (drove > 0) load = Math.max(load ?? 0, Math.min(1, Math.log2(1 + drove) / 8));
 		const jazz = this.style === "jazz";
 		const late = jazz && swung(step) ? SWING : 0;
 		const now = this.chord;
 		const tones = now.tones;
 		const t = this.tuning;
 		const notes: Note[] = this.voices.flatMap((v) => score(v, hits[v.id] ?? [], tones, t));
-		notes.push(...this.listen(watched, tones, t), ...this.hooray(), ...this.teletype(tones, t), ...this.riffed(step, now, t));
+		notes.push(...this.listen(watched, tones, t), ...this.hooray(), ...this.teletype(tones, t), ...this.riffed(step, now, t), ...this.answer(called, now, t));
 		const map = this.regions;
 		if (map) {
 			map.step(hits[this.voices[0]?.id ?? ""] ?? []);
@@ -903,6 +937,33 @@ export const APPLE2_REGIONS: readonly Region[] = [
 	{ name: "slot ROMs", from: 0xc000, to: 0xcfff },
 	{ name: "Applesoft", from: 0xd000, to: 0xf7ff },
 	{ name: "Monitor", from: 0xf800, to: 0xffff },
+];
+
+/**
+ * What calling a routine does to the music. A `hit` sounds once in a beat the routine was
+ * called in: `bell` the Apple's own beep, about 1 kHz; `crash` a cymbal; `scroll` a kick that
+ * turns the drums a step, as the teletype's line feed does; `error` a sad trombone; `rumble` a
+ * low cluster. A `rate` follows how often it was called: `drive` pushes the drums as if the
+ * machine were working harder; `type` plays chord tones on the keys, a few for a lot; `sparkle`
+ * glints high, more of them the more it plots.
+ */
+export type CallSound = { readonly kind: "hit"; readonly sound: "bell" | "crash" | "scroll" | "error" | "rumble" } | { readonly kind: "rate"; readonly param: "drive" | "type" | "sparkle" };
+/** A routine to listen for, by its entry address. */
+export type CallAt = { readonly name: string; readonly addr: number; readonly sound: CallSound };
+/** How many times a routine was entered since the last beat. */
+export type Called = { readonly name: string; readonly calls: number; readonly sound: CallSound };
+
+/** The Apple ]['s documented entry points, the Monitor's and Applesoft's, and what each one sounds like when called. */
+export const APPLE2_CALLS: readonly CallAt[] = [
+	{ name: "BELL1", addr: 0xfbdd, sound: { kind: "hit", sound: "bell" } },
+	{ name: "HOME", addr: 0xfc58, sound: { kind: "hit", sound: "crash" } },
+	{ name: "SCROLL", addr: 0xfc70, sound: { kind: "hit", sound: "scroll" } },
+	{ name: "ERROR", addr: 0xd412, sound: { kind: "hit", sound: "error" } },
+	{ name: "GARBAG", addr: 0xe484, sound: { kind: "hit", sound: "rumble" } },
+	{ name: "NEWSTT", addr: 0xd7d2, sound: { kind: "rate", param: "drive" } },
+	{ name: "COUT", addr: 0xfded, sound: { kind: "rate", param: "type" } },
+	{ name: "HPLOT", addr: 0xf457, sound: { kind: "rate", param: "sparkle" } },
+	{ name: "PLOT", addr: 0xf800, sound: { kind: "rate", param: "sparkle" } },
 ];
 
 /** The Apple ]['s voices: the 6502, the Disk II's head, and the speaker. */

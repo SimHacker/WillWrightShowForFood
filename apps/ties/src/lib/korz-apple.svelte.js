@@ -12,7 +12,10 @@
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { hushWhenHidden } from './hidden-hush.js';
 import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
-import { APPLE2_REGIONS, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
+import { APPLE2_CALLS, APPLE2_REGIONS, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
+
+/** The ROM routines the dance listens for, by entry address. */
+const CALLS = new Map(APPLE2_CALLS.map((c) => [c.addr, c]));
 import { BusDance, speedLoad } from './bus-dance.svelte.js';
 import { block65Node, compiler65Node, dispatchNode, lister65, sea65Node } from '@wwsff/cabinet/korz/inspect';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, appleKey } from '@wwsff/cabinet/microm8';
@@ -318,7 +321,10 @@ class KorzApple {
 		if (!cpu || !board || board.cycles >= limit) return;
 		if ('compiler' in cpu && cpu.compiler && limit - board.cycles <= 80) cpu.one();
 		else cpu.step();
-		if (this.dance.on && !('compiler' in cpu && cpu.compiler)) this.#dancePcs.add(cpu.pc);
+		if (this.dance.on && !('compiler' in cpu && cpu.compiler)) {
+			this.#dancePcs.add(cpu.pc);
+			if (CALLS.has(cpu.pc)) this.#callPcs.add(cpu.pc);
+		}
 		this.#pump();
 	}
 
@@ -332,6 +338,9 @@ class KorzApple {
 		this.dance.regions = APPLE2_REGIONS;
 	}
 	#danceBlocks = new Deltas();
+	#callBlocks = new Deltas();
+	#callPcs = new Tally();
+	#callsAt = -Infinity;
 	#dancePcs = new Tally();
 	#danceHead = -1;
 	#danceClicks = 0;
@@ -356,6 +365,28 @@ class KorzApple {
 		if (at.mode === null) return [];
 		this.dance.depth = at.mode === 'monitor' ? 1 : Math.log2(Math.max(1, at.length / 32)) / 7;
 		return at.mode === 'monitor' ? [] : [{ name: 'program', value: at.length }];
+	}
+
+	/**
+	 * The ROM routines entered since the last beat (APPLE2_CALLS). Compiled, a call is a run of
+	 * the block that starts at the routine, since a JSR's target starts a block; stepped, it is
+	 * the PC landing on the entry.
+	 */
+	#danceCalls() {
+		const cpu = this.#cpu;
+		const compiler = cpu && 'compiler' in cpu ? cpu.compiler : null;
+		const hits = compiler
+			? this.#callBlocks.step(compiler.list().flatMap((b) => (CALLS.has(b.entry) ? [/** @type {[number, number]} */ ([b.entry, b.runs])] : [])))
+			: this.#callPcs.take();
+		// After a gap (the dance just turned on, the tab came back) the counts are history, not news.
+		const ms = performance.now();
+		const fresh = ms - this.#callsAt > 1000;
+		this.#callsAt = ms;
+		if (fresh) return [];
+		return hits.flatMap((h) => {
+			const c = CALLS.get(h.key);
+			return c ? [{ name: c.name, calls: h.weight, sound: c.sound }] : [];
+		});
 	}
 
 	#danceHits() {
@@ -616,7 +647,7 @@ class KorzApple {
 				cancelAnimationFrame(raf);
 				return;
 			}
-			this.dance.frame(now, () => this.#danceHits(), () => this.#danceGauges(), () => this.#danceWatched());
+			this.dance.frame(now, () => this.#danceHits(), () => this.#danceGauges(), () => this.#danceWatched(), () => this.#danceCalls());
 			ctx.putImageData(image, 0, 0);
 			if (vctx && this.videxShowing) vctx.putImageData(videxImage, 0, 0);
 			if (now - polled > 250) {

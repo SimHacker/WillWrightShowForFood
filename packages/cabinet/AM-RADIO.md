@@ -256,6 +256,16 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        swapped. All off is the plain dance, and the console shows what the switches are doing
        next to the dance controls. Programs that read the switches as controls, DUEL's ships,
        Spacewar's, change the music as they are played.
+     - Routines called (`APPLE2_CALLS` in dance.ts): the Apple's documented Monitor and
+       Applesoft entry points, each with a sound, checked against the ][+ ROM's bytes. Hits,
+       once in a beat the routine was entered: BELL1 ($FBDD) beeps at about 1 kHz like the
+       Apple, HOME ($FC58) crashes a cymbal, SCROLL ($FC70) kicks and turns the drums a step
+       (the screen's line feed), Applesoft's ERROR ($D412) is a sad trombone, GARBAG ($E484),
+       the garbage collector, rumbles. Rates, by calls a beat: NEWSTT ($D7D2), a statement run,
+       drives the drums; COUT ($FDED) types on the keys; HPLOT ($F457) and PLOT ($F800)
+       sparkle. Compiled, a call is a run of the block starting at the routine, since a JSR's
+       target starts a block, so it costs nothing; stepped, it is the PC landing on the entry.
+       After a gap the counts are history and the first reading is dropped.
      - The dance remembers (bus-dance.svelte.js, in the browser's storage): whether it is on,
        for every machine, so going from the PDP-7 to the Apple keeps dancing; and the style,
        tempo and loops chosen, for each machine. It starts off, so nobody is blown away by a

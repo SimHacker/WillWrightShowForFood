@@ -280,6 +280,13 @@ export class DancePlayer {
 				osc('square', 2350, env, t + 0.02);
 				break;
 			}
+			case 'crash': {
+				const end = shape(0.3 * v, 0.002, 1.3);
+				this.#noise(ctx, 'highpass', 4000, env, t, end);
+				osc('square', 1530, env, t + 0.4);
+				osc('square', 2270, env, t + 0.3);
+				break;
+			}
 			case 'rim': {
 				const bp = ctx.createBiquadFilter();
 				bp.type = 'bandpass';

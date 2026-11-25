@@ -12,6 +12,7 @@ import { DancePlayer, TEMPOS, sixteenth } from './dance-player.js';
 /** @typedef {import('@wwsff/cabinet/dance').Touch} Touch */
 /** @typedef {import('@wwsff/cabinet/dance').PenAt} PenAt */
 /** @typedef {import('@wwsff/cabinet/dance').Watched} Watched */
+/** @typedef {import('@wwsff/cabinet/dance').Called} Called */
 /** @typedef {import('@wwsff/cabinet/dance').Music} Music */
 /** @typedef {import('@wwsff/cabinet/dance').Region} Region */
 
@@ -181,13 +182,14 @@ export class BusDance {
 	 * @param {() => Record<string, Hit[]>} hits
 	 * @param {() => { load: number, fill: number }} gauges
 	 * @param {() => Watched[]} [watched] the listened-to words' values now
+	 * @param {() => Called[]} [called] the routines entered since the last beat
 	 */
-	frame(now, hits, gauges, watched) {
+	frame(now, hits, gauges, watched, called) {
 		const ms = sixteenth(this.bpm);
 		if (!this.on || now - this.#last < ms) return;
 		this.#last = now - Math.min(ms, (now - this.#last) % ms);
 		const g = gauges();
-		this.player.play(this.#dance.beat(hits(), g.load, watched?.() ?? []), ms);
+		this.player.play(this.#dance.beat(hits(), g.load, watched?.() ?? [], called?.() ?? []), ms);
 		this.player.drive(g.load, Math.max(g.fill, this.#dance.tension));
 	}
 }

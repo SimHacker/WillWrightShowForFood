@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
+import { APPLE2_CALLS, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -389,4 +389,24 @@ test("a sung word plays its value as a pitch: a guess at once, the secret now an
 	const later = Array.from({ length: 64 }, () => sung(37)).flat();
 	assert.ok(later.filter((n) => n.timbre === "sing").length >= 3, "the guess again each bar");
 	assert.equal(later.filter((n) => n.timbre === "whistle").length, 1, "the secret every fourth bar");
+});
+
+test("routines called are heard: the bell beeps, HOME crashes, SCROLL kicks, NEWSTT drives the drums, COUT types", () => {
+	const at = (name: string) => APPLE2_CALLS.find((c) => c.name === name)!;
+	const d = new Dance(PDP7_VOICES);
+	const once = (name: string, calls = 1) => d.beat({}, undefined, [], [{ name, calls, sound: at(name).sound }]).filter((n) => n.voice === `call:${name}`);
+	assert.equal(once("BELL1")[0]!.timbre, "beep");
+	assert.equal(once("HOME")[0]!.timbre, "crash");
+	const phase = d.phase;
+	assert.equal(once("SCROLL")[0]!.timbre, "kick");
+	assert.equal(d.phase, phase + 1, "a scroll turns the drums");
+	assert.equal(once("ERROR").length, 4, "a sad trombone, four notes down");
+	assert.ok(once("COUT", 40).length > once("COUT", 1).length, "more printing, more keys");
+	assert.equal(once("BELL1", 0).length, 0, "not called, not heard");
+	const drums = (calls: number) => {
+		const e = new Dance(PDP7_VOICES);
+		return Array.from({ length: 16 }, () => e.beat({}, 0, [], [{ name: "NEWSTT", calls, sound: at("NEWSTT").sound }])).flat().filter((n) => n.voice === "drums").length;
+	};
+	assert.equal(drums(0), 0);
+	assert.ok(drums(500) > 0, "a running program drives the drums");
 });
