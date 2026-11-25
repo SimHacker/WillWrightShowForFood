@@ -428,6 +428,7 @@ class KorzApple {
 		this.error = '';
 		try {
 			await this.#ensureRom();
+			if (entries.some((e) => e.profile?.includes('videx'))) this.#wantVidex = true;
 			this.#images = [null, null];
 			for (const e of entries) this.#images[e.drive] = e;
 			this.drives = [this.#images[0]?.name ?? '', this.#images[1]?.name ?? ''];

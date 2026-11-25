@@ -6,6 +6,10 @@ at Silicon Valley FIG's Forth Day. This is YouTube's automatic transcript, clean
 filler are cut, and misheard words are fixed, for example "fourth" to Forth, "cores" to Korz,
 "light pin" to light pen and "touring" to Turing. The times link to that point in the video.
 
+The talk itself, with [Mitch Bradley](../../characters/mitch-bradley/README.md) on how his PDP-7
+Forth works and then this cabinet, is [transcribed here](FORTH-DAY-TALK.md). Every program shown
+runs at [hyperties.org/cabinet](https://hyperties.org/cabinet/).
+
 - [The cabinet](#the-cabinet)
 - [Forth on the TTY, and PIXIE rings](#forth-on-the-tty-and-pixie-rings)
 - [Editing the 340's instructions with the light pen](#editing-the-340s-instructions-with-the-light-pen)
@@ -26,6 +30,9 @@ filler are cut, and misheard words are fixed, for example "fourth" to Forth, "co
 This is an emulator that runs in the web browser. It includes an Apple II emulator and a PDP-7
 emulator. Its original purpose was to run PIXIE / SYMELEC, from a 1971 listing, and we recreated
 it here. The same code from back then is running. There's another demo of that.
+([PIXIE / SYMELEC](https://hyperties.org/cabinet/applications/pixie-symelec/),
+[PIXIE-RESTORATION.md](PIXIE-RESTORATION.md), [Heinz Lemke](../../characters/heinz-lemke/README.md),
+[APPLE2.md](APPLE2.md), [the other demo](https://www.youtube.com/watch?v=lo8kdY-5i6c))
 
 ## Forth on the TTY, and PIXIE rings
 
@@ -39,11 +46,16 @@ The cool thing about it is that it has turtle graphics. I hit the demo button, a
 got some PIXIE rings in core. Let's show them right now: there are RINGS, SLOTS and KORZ panels,
 and I'll open RINGS. Forth made these structures. It's using the same PDP-7 library, in assembly
 language, that PIXIE uses, so we have dynamic memory allocation.
+([Forth and the turtle](https://hyperties.org/cabinet/languages/forth-turtle/),
+[PDP7-FORTH.md](reference/PDP7-FORTH.md), [FORTH-RINGS.md](FORTH-RINGS.md),
+[TELETYPE-DASHER.md](TELETYPE-DASHER.md))
 
 [1:33](https://youtu.be/I-Rf3XP_D0g?t=93) You can write Logo-like programs in Forth that drive
 the turtle. The way it works is that the 340 vector graphics display is actually another
 processor. It runs in the same memory that Forth runs in, and it has its own instruction set for
 drawing. Forth assembles 340 display opcodes in memory.
+([LOGO-TURTLE.md](LOGO-TURTLE.md), [GUIDE-340.md](reference/GUIDE-340.md),
+[Seymour Papert](../../characters/seymour-papert/README.md)'s Logo)
 
 ## Editing the 340's instructions with the light pen
 
@@ -57,6 +69,7 @@ to me.
 The light pen here does something a real one doesn't: it's an editable view of the instructions
 for the 340's processor. At first I got nothing to grab, just little dots, because I'd edited the
 opcodes while it was paused. Set the speed slow and run, and there it goes.
+([LIGHTPEN.md](LIGHTPEN.md), [BEAM-AND-PEN.md](BEAM-AND-PEN.md))
 
 [3:44](https://youtu.be/I-Rf3XP_D0g?t=224) The PDP-7 is one processor running its code, and the
 vector graphics display is its own processor. Now that it's running, I can drag a corner. These
@@ -65,7 +78,8 @@ between the incoming and the outgoing vector, like a little dog that can only ge
 
 It's two processors sharing the same memory. Forth is great at having an assembler for whatever
 native instruction set you have, and here you've got two instruction sets. The Forth assembler
-assembles drawings as well as code.
+assembles drawings as well as code. ([DRAWING-CONSTRAINTS.md](DRAWING-CONSTRAINTS.md),
+[ASSEMBLERS.md](ASSEMBLERS.md), [DISPLAY-DEVICES.md](DISPLAY-DEVICES.md))
 
 ## Tracing, and the source map
 
@@ -82,7 +96,8 @@ open the TTY and hit Return, it outputs. I typed `WORDS` and Return. We can spee
 type-ahead.
 
 This is the view of the PDP-7 running. I don't have a dedicated view of the display processor
-yet.
+yet. ([KORZ-INSPECT.md](KORZ-INSPECT.md), [CORE-LINKS.md](CORE-LINKS.md),
+[GUIDE-PDP7.md](reference/GUIDE-PDP7.md))
 
 ## Korz: a compiler on top of the browser's compiler
 
@@ -96,7 +111,10 @@ basic thing is that it decomposes the definition of a CPU into little JavaScript
 So this is a just-in-time compiler running on top of the just-in-time compiler in the web
 browser. The instructions get compiled into little snippets of code. If I pause and look at the
 memory, this opcode gets compiled into this JavaScript. It runs much faster than a normal
-emulator that switches on every opcode.
+emulator that switches on every opcode. ([Korz](https://doi.org/10.1145/2661136.2661147), by
+[David Ungar](../../characters/david-ungar/README.md), Harold Ossher and Doug Kimelman;
+[SEA-OF-SLOTS.md](SEA-OF-SLOTS.md), [KORZ-COMPILER.md](KORZ-COMPILER.md),
+[SIMH-MAP.md](SIMH-MAP.md), [Bob Supnik](../../characters/bob-supnik/README.md)'s SIMH)
 
 [7:54](https://youtu.be/I-Rf3XP_D0g?t=474) There are different levels of acceleration here:
 
@@ -108,27 +126,33 @@ emulator that switches on every opcode.
 This is generated from the PDP-7 code that's running. Here we got four instructions in a row
 slurped up into one function that edits the virtual machine. The browser's just-in-time compiler
 is very good at optimizing this kind of code, so we layer one compiler on top of another on
-purpose, and feed the lower one exactly what it thrives on.
+purpose, and feed the lower one exactly what it thrives on. ([BENCHMARKS.md](BENCHMARKS.md),
+[WEB-BENCH.md](WEB-BENCH.md))
 
 [9:08](https://youtu.be/I-Rf3XP_D0g?t=548) These are the memory references, and this is the CPU
 model. It generates the code that executes the code. These are the instructions of the CPU, and
 this is the JavaScript that does an exclusive or, and here's an add. The whole CPU is decomposed
 into these little slots. There's a skip instruction, and these are the skip instructions and the
 code that implements them. I declare the slots at a high, convenient level, and it writes the code
-to emulate the CPU.
+to emulate the CPU. ([KORZ-CPU.md](KORZ-CPU.md))
 
 [10:09](https://youtu.be/I-Rf3XP_D0g?t=609) These are devices. Devices plug in as instructions
 and memory mapping, so these are slots that define new instructions, the way the 340 plugs in.
 This is the glue to the device. Then there are dispatch methods, and Korz rewrite. It's a
 crystalline way to organize the definition of the CPU and the bus and the whole thing without
 repeating yourself, and it runs really fast because we're stacking two just-in-time compilers.
+([DEVICES.md](DEVICES.md), [KORZ-DISPATCH.md](KORZ-DISPATCH.md),
+[KORZ-MACHINES.md](KORZ-MACHINES.md), [SEA-OF-SLOTS-VOYAGE.md](SEA-OF-SLOTS-VOYAGE.md))
 
 ## Little Computer People on the Apple II
 
 [10:59](https://youtu.be/I-Rf3XP_D0g?t=659)
 
 Now let's go way back to the Apple II, and something that inspired The Sims: *Little Computer
-People*.
+People*. ([Play it](https://hyperties.org/cabinet/games/little-computer-people/);
+[David Crane](../../characters/david-crane/README.md) made it, and
+[Will Wright](../../characters/will-wright/README.md) made The Sims;
+[UPCYCLING-LCP.md](UPCYCLING-LCP.md), [the guide](guides/little-computer-people.md))
 
 > Welcome, researcher, to Little Computer People. Please enter your name.
 
@@ -158,7 +182,8 @@ dance."
 [13:16](https://youtu.be/I-Rf3XP_D0g?t=796) That speech synthesizer is in the layer above, which
 I call ScreenAngel. It's like someone looking over your shoulder, integrating the game with a
 modern user interface. It can look at the screen and know what state the game is in, then present
-a user interface for that state.
+a user interface for that state. ([CAUSE-AND-EFFECT.md](CAUSE-AND-EFFECT.md),
+[MAPPING.md](MAPPING.md))
 
 I ask him to play the piano, and go faster, really fast. Then ask him to dance, the really fast
 dance. Asking for a letter is great: "Please write a letter to me." This is going to be too fast.
@@ -180,6 +205,7 @@ whole startup.
 
 [15:20](https://youtu.be/I-Rf3XP_D0g?t=920) This is also Korz. We've got floppy disks full of
 our other friends, Fritz, Ivan and Rob. The web browser has full visibility into the save file.
+([The houses](worlds/little-computer-people/README.md), [SAVE-FILES.md](SAVE-FILES.md))
 This is the code that's being compiled to run this particular program. If it were UCSD Pascal or
 something else, the workload would be a very different set of things.
 
@@ -187,7 +213,7 @@ something else, the workload would be a very different set of things.
 instructions. It's a little simpler. There's I/O and the CPU. This is a platform for emulators
 that share a lot. Korz breaks things down into slots, and not just the CPU: the devices are Korz
 too, and they can plug in deeply. It's hard to explain, but the end result is that you can easily
-do 16x. And there are some stats.
+do 16x. And there are some stats. ([MICROM8.md](MICROM8.md), [VIDEX.md](VIDEX.md))
 
 ## The light pen test from 1964
 
@@ -200,6 +226,8 @@ test the light pen, but everything has a demo, so Play Demo takes it through the
 
 I actually had to use this to find bugs in the emulator. It was fortunate that DEC had this
 program to help you see whether your light pen was busted.
+([Light pen test](https://hyperties.org/cabinet/devices/light-pen-test/),
+[GUIDE-LIGHTPEN.md](reference/GUIDE-LIGHTPEN.md), [the 1964 manual](reference/DIGITAL-7-78-M_370LightPenDiag_Apr64.pdf))
 
 ## The Ultimate Machine
 
@@ -208,6 +236,9 @@ program to help you see whether your light pen was busted.
 Next, higher up: the Ultimate Machine. Marvin Minsky and Claude Shannon had this crazy idea of a
 machine that just turns itself off. There's a switch, a hand comes out and turns it off, and then
 it goes back. It goes through these cycles and sits in the off state. I'll slow it down a little.
+([The Ultimate Machine](https://hyperties.org/cabinet/devices/ultimate-machine/),
+[Marvin Minsky](../../characters/marvin-minsky/README.md),
+[the useless machine](https://en.wikipedia.org/wiki/Useless_machine))
 
 [18:17](https://youtu.be/I-Rf3XP_D0g?t=1097) You might notice we have tooltips over the vector
 graphics, because we can tell what drew them. It can even say "I'm drawing the lever," and then
@@ -226,7 +257,7 @@ own instructions, which it adds to the PDP-7, and Forth can talk to it.
 [19:59](https://youtu.be/I-Rf3XP_D0g?t=1199) At max, this is with the just-in-time compiler. It's
 compiling this code, including the Forth system itself and all the code it's drawing with, so we
 can run much faster than merely 30 times. This is a demo of one device, and all that device does
-is turn itself off.
+is turn itself off. ([FORTH-DEVICE.md](FORTH-DEVICE.md))
 
 ## DataHand
 
@@ -239,6 +270,8 @@ It says what it's drawing: when it draws a finger, it says "I'm the thumb." The 
 the light pen cursor, and the light pen detects the finger under it: the index finger, the
 little finger. You can make the hand big and small by moving in and out. Think of it as just an
 input device. It plugs into the PDP-7 and converts the hand into PDP-7 coordinates.
+([DataHand](https://hyperties.org/cabinet/devices/datahand/), [HAND-TRACKING.md](HAND-TRACKING.md),
+[TRACKING.md](TRACKING.md), [Jaron Lanier](../../characters/jaron-lanier/README.md)'s VPL)
 
 ## The Ultimate Hand
 
@@ -258,6 +291,8 @@ Watch: as you get bigger, you reach it.
 
 This is what Forth is great for. Forth is running the show here, assembling the instructions that
 control the devices. Forth just fits the PDP-7 so nicely.
+([The Ultimate Hand](https://hyperties.org/cabinet/devices/ultimate-hand/),
+[source](tapes/pdp7forth/ultimate-hand.fs))
 
 ## A Turing machine as a coprocessor
 
@@ -271,7 +306,9 @@ The tape of a Turing machine has to be infinite, so it has something like virtua
 faults. The Turing machine device can only see a window of the tape. When the program decides it
 needs to go left and there's no more tape to the left, it sends an interrupt to the PDP-7, which
 says "oh, you need more tape to the left" and uncompresses it. So there's a virtual infinite tape
-going on.
+going on. ([Turing machine](https://hyperties.org/cabinet/devices/turing-machine/),
+[TURING-ENGINE.md](TURING-ENGINE.md),
+[Christopher Cherniak](../../characters/christopher-cherniak/README.md)'s courseware)
 
 ## PDP-7 Unix
 
@@ -292,3 +329,10 @@ able to improve the experience like this.
 
 We're in Unix. I don't think we have the source maps for Unix, but we can certainly trace it. It
 works; that's the whole point. That's enough for now.
+([PDP-7 Unix](https://hyperties.org/cabinet/systems/pdp-7-unix/), [UNIX-V0.md](UNIX-V0.md),
+[the pdp7-unix project](https://github.com/DoctorWkt/pdp7-unix))
+
+---
+
+↑ [Forth and the PDP-7](FORTH-DAY.md) · [The talk transcript](FORTH-DAY-TALK.md) ·
+[Cabinet](README.md)

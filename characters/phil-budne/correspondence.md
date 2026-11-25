@@ -48,9 +48,11 @@ plugged into the UNIBUS. [TUHS digest vol. 126, issue 5](https://www.tuhs.org/pi
 
 ## November 2026: Facebook
 
-Don and Phil became Facebook friends on 25 November 2026. Don's first message is drafted for
-him to send: the browser PDP-7 and Type 340, whose 340 engine is ported from Phil's
-`type340.c` and `display.c`; the Ultimate Hand demo; the Forth Day video; and PDP-7 UNIX from
-the `pdp7-unix` restoration running in the same emulator.
+Don and Phil became Facebook friends on 25 November 2026. Don's first message is
+[drafted](2026-11-facebook-dm.md) for him to send. It opens by answering Phil's 1986 Apple II
+Forth question with Don's ProDOS Forth (fig-FORTH for the 6502, extended to Forth-83), and recalls
+PizzaTool. Then it covers the browser PDP-7 and Type 340, whose 340 engine is ported from Phil's
+`type340.c` and `display.c`, along with the Ultimate Hand, the Forth Day talk and demo, and
+PDP-7 UNIX. It ends with the KA10 that will run ITS like MIT-AI, and with how Korz works.
 
 ↑ [Phil Budne](README.md)

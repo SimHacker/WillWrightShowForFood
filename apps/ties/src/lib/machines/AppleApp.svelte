@@ -80,7 +80,7 @@
 			const images = await Promise.all(s.drives.map(bytes));
 			const files = s.drives.map((id) => app.disks[id]?.file ?? id);
 			if (apple.id === 'microm8' && apple.phase === 'idle') apple.profile = profile;
-			const entries = files.map((name, d) => ({ name, bytes: images[d], drive: d, protect: locked(s.drives[d]) }));
+			const entries = files.map((name, d) => ({ name, bytes: images[d], drive: d, protect: locked(s.drives[d]), profile }));
 			await apple.boot(entries);
 		});
 	}

@@ -108,11 +108,11 @@ apps:
     tags: { by: don-hopkins, language: forth }
     profile: apple2-plus-videx
     disks:
-      terminal: { file: forth/forth.po, label: "Forth, Starting the Terminal" }
       prompt: { file: forth/forth-ok.po, label: "Forth, Starting at the Prompt" }
+      terminal: { file: forth/forth.po, label: "Forth, Starting the Terminal" }
     starts:
-      - { label: "Terminal", drives: [terminal] }
       - { label: "Forth Prompt", drives: [prompt] }
+      - { label: "Terminal", drives: [terminal] }
 
   - id: apple-logo-ii
     title: Apple Logo II
