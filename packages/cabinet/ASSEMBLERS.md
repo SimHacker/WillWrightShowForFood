@@ -271,6 +271,21 @@ has to output more than it does:
 - **Entry points.** The start address, the 340's display start, the handlers a view names.
 - **A memory map.** What went where, its symbols and its source map, readable by the debugger,
   the views and the linker for the next segment.
+- **Source maps of several types, in tiers.** A map takes an address to a place, and places chain:
+  address → file, line and column → the line's scan image and bounding box → the page in the
+  archive. Built in [source.ts](src/source.ts): several maps over one image (`listing`, `source`,
+  `translation`, `intermediate`, `doc`), joined through the addresses they share, and each line's
+  file, line number, scan page and rectangles on the scan (`ScanPlace`). To add:
+  - **Columns,** so a map points at the operand or the symbol, not only the line.
+  - **Tiers of generation.** A word assembled from a macro expansion maps to the expansion, the
+    macro's definition and the line that called it; a translated line maps to its `as7` and to
+    its Cambridge original; a Forth word maps to its source and to the threaded code it compiled to.
+  - **Other targets.** A 340 stroke maps to the display word that drew it (built: every
+    `Segment` has its `addr`), then on through the tiers; a transcription line maps to its OCR
+    passes; a word in a snapshot maps to the cycle that wrote it.
+  - **JavaScript source maps for the JIT.** Korz compiles PDP-7 code to JavaScript; emitting
+    standard source maps with that JavaScript would let the browser's own debugger step through
+    the generated code and show the PDP-7 source line, or the scan, it came from.
 - **Load formats.** One in-memory object, written out as each machine loads: `.oct` (read
   today, `loader.ts`), RIM paper tape, ProDOS files for the Apple ][, ITS `SBLK` for the PDP-10.
 
