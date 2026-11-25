@@ -483,6 +483,35 @@ the clipboard, paste it into the graphics editor". Copying a 340-Window works th
 you paste is editable structure, not a picture, so a SYMELEC lightbutton or a Forth turtle drawing
 can be taken apart and reused in another drawing or another program's user interface.
 
+#### The 340 as compositor
+
+A client's 340 runs whatever display lists it is given, from wherever, so the same machinery does
+several jobs:
+
+- **Compositor and window manager.** Several 340-Windows on one screen, each a set of segments
+  from some machine, placed, scaled (the 340's own scale settings) and stacked. Arranging them is
+  editing the client's top-level display list, which jumps to each window's segments in turn.
+- **Mixer and composer.** Each window's providers are channels with their own intensity and
+  refresh rate, faded, muted and combined, live from running machines or from clipboard entries.
+- **Driver.** A view's output can be another view's input: a Forth turtle on one machine writing
+  the segments a SYMELEC window on another displays.
+- **Scrubber.** Strokes are stamped with the backplane cycle that drew them, and session events
+  with the cycle they arrived, so any window can be played back, stepped and scrubbed through
+  machine time.
+- **Interpolator.** Display lists with the same structure differ only in their vector words,
+  which are numbers. Put example drawings at the corners of a simplex and [ECG](../ecg/README.md)
+  blends them; drag a corner with the 340 display editor and ECG solves for the weights that put
+  it under the pen. [VIEW-BLENDING.md](../ecg/VIEW-BLENDING.md) does the same for whole window
+  arrangements. A vector word moves at most 127 each way, so blends are checked against that
+  limit as edits are.
+- **A DJ and VJ booth.** All of the above, live, in front of an audience: windows on several
+  machines, mixed, blended and scrubbed by hand.
+
+The clipboard ties it together. An entry can contain other entries, and a window can show a
+clipboard entry as well as live memory, so captures nest: a window of windows, each of which is a
+capture or a live segment. Laid out by its nesting, the clipboard is a map of everything captured,
+and any node in it can be opened as a 340-Window, edited or pasted.
+
 **Whole frames, not partial ones.** The server sends a frame at an `IDLA`, the start of a
 refresh, so a client never runs a display list half rewritten. A real 340 did read lists while
 the CPU rewrote them, and programs like SYMELEC live with it. For new programs, a lock and
