@@ -184,11 +184,12 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        count steps of the same size. Each step moves the loop's phase and its note one chord
        tone, up as the word grows and down as it shrinks. While the word changes, the loop plays twice as often; its size, by powers of
        64, sets the octave. Each program names its own:
-       - Forth: `tx ty th dl> dp rfree rp`, the turtle, its display list growing, the
-         dictionary and the ring space filling, and the return stack. The PDP-7 has no stack
+       - Forth: `tx ty th dl> dp rfree rp sp`, the turtle, its display list growing, the
+         dictionary and the ring space filling, and both stacks' depths. The PDP-7 has no stack
          in its instruction set (JMS stores the return address in the subroutine's first
          word), but Forth keeps one: `ip`, `rp` and `sp` name the auto-index cells 010-012
-         it keeps its pointers in, so a nested call climbs and its return comes back down.
+         it keeps its pointers in, so a nested call climbs and its return comes back down,
+         and `2 3 +` goes up two pushes and down one.
          An octal number watches that address;
        - LANDER: `h2 v fuel secs`;
        - HILO: `secret guess`, which gives the number away. That is the joke: hearing it is

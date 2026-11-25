@@ -243,8 +243,9 @@ function forthProgram({ id, label, kernelFile, extras = [], pixie: withRings = t
 		coreWords: 8192,
 		demo: (h) => forthDemo(h),
 		// The bus dance's watches: the turtle, its display list growing, the dictionary and the
-		// ring space filling, and how deep the words are nested on the return stack.
-		listen: 'tx ty th dl> dp rfree rp',
+		// ring space filling, how deep the words are nested on the return stack, and how full
+		// the data stack is.
+		listen: 'tx ty th dl> dp rfree rp sp',
 		demoTitle: 'Reboot and type: arithmetic, a PIXIE ring grown, taken apart and rebuilt, then a square, a flower, a squiral, a snowflake and a daisy to edit',
 		switches: 0,
 		switchLabels: null,
@@ -515,7 +516,7 @@ export const PROGRAMS = [
 		},
 		typeAhead: 'DEMO\n',
 		demo: (h) => turingDemo(h),
-		listen: 'dp rfree rp',
+		listen: 'dp rfree rp sp',
 		demoTitle: 'Reboot, list the machines, step and run BUSY2, run the UTM, let BCOUNT run free',
 		// A transition every three cycles when it runs free; Forth draws a frame every 100,000 or so.
 		peripherals: ({ cpu }) => [new TuringDevice({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), rate: 1 / 3 })]
@@ -537,7 +538,7 @@ export const PROGRAMS = [
 		pen: true,
 		typeAhead: 'ULTIMATE\n',
 		demo: (h) => ultimateDemo(h),
-		listen: 'dp rfree rp',
+		listen: 'dp rfree rp sp',
 		demoTitle: 'Reboot, type ULTIMATE, and touch the switch with the light pen',
 		// Four times the device's own timing: about 7 seconds a round at 1x. The Forth loop draws
 		// flat out, a frame per 100,000 cycles or so, so that is about 40 frames a round.
