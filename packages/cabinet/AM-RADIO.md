@@ -8,6 +8,13 @@ to get that sound back in an emulator, what we need from the real machine to do 
 which programs are worth listening to. The emulator is the cabinet, a PDP-7 and Type 340 that run
 in a web page ([README](README.md)).
 
+What grew out of it Don calls VM Radio, or EM Radio, for emulator: inspired by AM radio, but
+tuned straight into the virtual machine and the programs running on it. It doesn't pick up
+interference; it reads what the emulator knows. That means the program counter, the display
+list, named words in core, the light pen, the front panel switches, and a game's state. Each
+program gets its own soundscape. The bus dance below (approach 8, and "Built, first cut") is
+VM Radio's first receiver.
+
 ## The recordings
 
 The Living Computer Museum's YouTube channel is gone, and its PDP-7 videos went with it. These
