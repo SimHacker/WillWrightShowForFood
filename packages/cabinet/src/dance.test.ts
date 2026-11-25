@@ -351,3 +351,24 @@ test("the teletype is a sequencer: a tune line plays as written, a character a s
 	assert.ok(TUNE_LINE.test("'d-----g-----e-----c-----a-b-c-d---e-d---------"));
 	assert.ok(!TUNE_LINE.test("cat sys.rc") && !TUNE_LINE.test("a"), "commands are not tunes");
 });
+
+test("each riff is its own bar: sunny skanks, techno is four on the floor, industrial breaks in 13", () => {
+	const bar = (riff: "sunny" | "techno" | "industrial" | "walk", style: "straight" | "bp" | "jazz" = "straight") => {
+		const d = new Dance(PDP7_VOICES);
+		d.style = style;
+		d.riff = riff;
+		return Array.from({ length: d.bar }, () => d.beat({}).filter((n) => n.voice === "riff"));
+	};
+	const kicks = (b: ReturnType<typeof bar>) => b.flatMap((s, i) => (s.some((n) => n.timbre === "kick") ? [i] : []));
+	assert.deepEqual(kicks(bar("techno")), [0, 4, 8, 12]);
+	assert.deepEqual(kicks(bar("sunny")), [0, 8]);
+	const industrial = bar("industrial", "bp");
+	assert.equal(industrial.length, 13);
+	assert.deepEqual(kicks(industrial), [0, 5, 8]);
+	assert.ok(industrial.flat().some((n) => n.timbre === "anvil"));
+	assert.ok(bar("sunny").flat().some((n) => n.timbre === "organ"));
+	assert.equal(bar("techno").flat().filter((n) => n.timbre === "acid").length, 12);
+	assert.equal(bar("walk", "jazz").flat().filter((n) => n.timbre === "bass").length, 4);
+	const d = new Dance(PDP7_VOICES);
+	assert.equal(d.beat({}).filter((n) => n.voice === "riff").length, 0, "no riff unless a mode asks");
+});

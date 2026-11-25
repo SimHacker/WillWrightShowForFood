@@ -253,6 +253,14 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        swapped. All off is the plain dance, and the console shows what the switches are doing
        next to the dance controls. Programs that read the switches as controls, DUEL's ships,
        Spacewar's, change the music as they are played.
+     - Riffs (`Riff` in dance.ts): a mode can bring a bar that plays itself, bass, drums and a
+       hook in the progression's chord, heard even while the machine only waits for a key. The
+       Apple's prompts each have one, on an instrument no other track uses: Applesoft's `]` is
+       sunny, a bouncing bass under an organ skank on the off-beats; a running Applesoft
+       program walks a jazz bass; Integer BASIC's `>` is techno, four on the floor under a
+       sixteenth acid line; the Monitor's `*` is industrial, a broken kick and anvils in bars of
+       13. Away from the prompts the riff stops. The dance and the Apple's speaker go quiet
+       while the page's tab is hidden, and come back with it.
      - The teletype is a sequencer (`printed` in dance.ts): what it prints, and keys' echo on
        the paper, plays a character a sixteenth. A line feed kicks and turns the drums'
        pattern a step, the UNIX shell's `@` is a snare, spaces are hats, and other characters

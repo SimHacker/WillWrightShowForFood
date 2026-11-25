@@ -14,7 +14,7 @@
 
 export type Drum = "kick" | "snare" | "hat" | "ride" | "rim";
 /** The pen's own instruments, `harp` `lead` `bell` `tom`, are never the machine's, so playing the picture stands apart from what plays itself. */
-export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "brass" | "keys" | "harp" | "lead" | "bell" | "tom" | Drum;
+export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "brass" | "keys" | "organ" | "acid" | "anvil" | "harp" | "lead" | "bell" | "tom" | Drum;
 
 export type Voice = {
 	readonly id: string;
@@ -277,9 +277,21 @@ const STRINGS: ReadonlyMap<string, number> = new Map([
  * A mode of the music, as a screen angel's state sets it on entry: the style, the tempo, the
  * tape loops, the words to listen to, and the tracks to leave out, by voice ("drums",
  * "harmony", "loops", "reply", "pen", a machine's voice id, or "watch" for every watched word).
- * What a mode leaves unsaid stays as it was.
+ * and a riff (`Riff`), or null for none. What a mode leaves unsaid stays as it was.
  */
-export type Music = { readonly style?: Style; readonly bpm?: number; readonly loops?: boolean; readonly listen?: string; readonly mute?: readonly string[] };
+export type Music = { readonly style?: Style; readonly bpm?: number; readonly loops?: boolean; readonly listen?: string; readonly mute?: readonly string[]; readonly riff?: Riff | null };
+
+/**
+ * A riff: a bar that plays itself, bass, drums and a hook, in whatever chord the progression is
+ * on, whether or not the machine is busy, so a mode is heard even while it waits for a key.
+ * `sunny` is a bouncing bass under an organ skank on the off-beats; `techno` four on the floor
+ * under a sixteenth acid line; `industrial` a broken kick and anvils in bars of 13, the
+ * Bohlen-Pierce bar; `walk` a walking bass, root, third, fifth and a step into the next chord.
+ */
+export type Riff = "sunny" | "techno" | "industrial" | "walk";
+
+/** Techno's acid line, a sixteenth each: 0 the root, 1 its octave, 2 and 3 the chord's third and fifth, up an octave; -1 rests. */
+const ACID = [0, -1, 1, 0, 3, -1, 1, 2, 0, -1, 1, 0, 2, -1, 3, 1] as const;
 
 /** A named stretch of memory, from and to inclusive, as a source map names a program's parts. */
 export type Region = { readonly name: string; readonly from: number; readonly to: number };
@@ -463,6 +475,64 @@ export class Dance {
 		if ((word & 0o777777) !== this.switchWord) this.twist = twist((this.switchWord = word & 0o777777));
 	}
 	private switchWord = 0;
+
+	/** The riff playing under everything, or null. */
+	riff: Riff | null = null;
+
+	private riffed(step: number, now: Chord, t: Tuning): Note[] {
+		const r = this.riff;
+		if (!r) return [];
+		const i = (((step - this.home) % this.bar) + this.bar) % this.bar;
+		const tones = now.tones;
+		const tone = (k: number) => tones[k % tones.length] ?? 0;
+		const at = (base: number, deg: number): number => midiAt(base, deg, t);
+		const out: Note[] = [];
+		const drum = (d: Drum, velocity: number, pan = 0) => out.push({ voice: "riff", timbre: d, midi: DRUM_MIDI[d], velocity, pan, order: 0 });
+		const play = (timbre: Timbre, midi: number, velocity: number, pan = 0, order = 0) => out.push({ voice: "riff", timbre, midi, velocity, pan, order });
+		switch (r) {
+			case "sunny": {
+				if (i === 0 || i === 8) drum("kick", 0.7);
+				if (i === 4 || i === 12) drum("snare", 0.45);
+				if (i % 4 === 2) {
+					drum("hat", 0.3, 0.3);
+					tones.slice(0, 3).forEach((k, n) => play("organ", at(67, k), 0.22, -0.25, n));
+				}
+				const walk: Record<number, number> = { 0: 0, 3: 7, 6: 12, 8: 0, 11: 7, 14: 9 };
+				if (walk[i] !== undefined) play("bass", at(36, now.root + walk[i]!), 0.55, -0.1);
+				break;
+			}
+			case "techno": {
+				if (i % 4 === 0) drum("kick", 0.95);
+				if (i % 4 === 2) drum("hat", 0.45, 0.25);
+				if (i === 4 || i === 12) drum("snare", 0.3, -0.15);
+				const a = ACID[i % ACID.length]!;
+				if (a >= 0) {
+					const deg = a === 0 ? now.root : a === 1 ? now.root + t.steps : tone(a - 1) + t.steps;
+					play("acid", at(36, deg), i % 4 === 3 ? 0.75 : 0.5, 0.1);
+				}
+				break;
+			}
+			case "industrial": {
+				if (i === 0 || i === 5 || i === 8) drum("kick", i === 0 ? 1 : 0.7);
+				if (i === 4 || i === 10) play("anvil", at(48, tone(i === 4 ? 1 : 2)), 0.7, i === 4 ? -0.4 : 0.4);
+				if (i === 12) play("anvil", at(60, tone(0)), 0.35, 0);
+				if (i === 6 || i === 11) drum("snare", 0.55);
+				if (i === 0) play("bass", at(24, now.root), 0.8);
+				break;
+			}
+			case "walk": {
+				if (i % 4 === 0) {
+					const p = this.progression;
+					const next = p[(Math.floor((step - this.home) / this.bar) + 1) % p.length]!;
+					const beat = i / 4;
+					const deg = beat === 3 ? next.root - 1 : beat === 0 ? now.root : tone(beat);
+					play("bass", at(36, deg), 0.6, -0.1);
+				}
+				break;
+			}
+		}
+		return out;
+	}
 
 	/** The teletype's paper still to play, a character a sixteenth. */
 	private paper: number[] = [];
@@ -707,7 +777,7 @@ export class Dance {
 		const tones = now.tones;
 		const t = this.tuning;
 		const notes: Note[] = this.voices.flatMap((v) => score(v, hits[v.id] ?? [], tones, t));
-		notes.push(...this.listen(watched, tones, t), ...this.hooray(), ...this.teletype(tones, t));
+		notes.push(...this.listen(watched, tones, t), ...this.hooray(), ...this.teletype(tones, t), ...this.riffed(step, now, t));
 		const map = this.regions;
 		if (map) {
 			map.step(hits[this.voices[0]?.id ?? ""] ?? []);

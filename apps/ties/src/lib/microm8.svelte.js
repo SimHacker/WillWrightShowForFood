@@ -8,6 +8,7 @@
 import { asset } from '$app/paths';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, VIDEX_BYTES, VIDEX_HEIGHT, VIDEX_WIDTH, startMicroM8 } from '@wwsff/cabinet/microm8';
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
+import { hushWhenHidden } from './hidden-hush.js';
 
 /** @param {string} src */
 function loadScript(src) {
@@ -153,6 +154,7 @@ class MicroM8Machine {
 		}
 		if (typeof AudioContext === 'undefined') return;
 		const ctx = new AudioContext();
+		hushWhenHidden(ctx);
 		// The speaker is a one-bit cone pushed one way; take off the offset it leaves.
 		const highpass = ctx.createBiquadFilter();
 		highpass.type = 'highpass';

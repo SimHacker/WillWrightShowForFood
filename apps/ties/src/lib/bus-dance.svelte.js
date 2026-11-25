@@ -100,6 +100,7 @@ export class BusDance {
 		if (m.loops !== undefined && m.loops !== this.loops) this.toggleLoops();
 		if (m.listen !== undefined) this.listen = m.listen;
 		if (m.mute) this.#dance.mute = new Set(m.mute);
+		if (m.riff !== undefined) this.#dance.riff = m.riff;
 	}
 
 	/** What the person did: it bends the music on the next beats rather than sounding at once. @param {Touch} t */

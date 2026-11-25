@@ -2,6 +2,8 @@
 // has its own gain, so a voice can be faded against the others: `fade` glides there, which is
 // what anything driving the mix (a slider, the ECG, a program) calls.
 
+import { hushWhenHidden } from './hidden-hush.js';
+
 /** @typedef {import('@wwsff/cabinet/dance').Note} Note */
 
 /** Tempos to choose from, in beats (quarter notes) a minute; the dance plays sixteenths. */
@@ -31,6 +33,7 @@ export class DancePlayer {
 		}
 		if (typeof AudioContext === 'undefined') return;
 		const ctx = new AudioContext();
+		hushWhenHidden(ctx);
 		const limit = ctx.createDynamicsCompressor();
 		limit.threshold.value = -12;
 		limit.ratio.value = 8;
@@ -309,6 +312,34 @@ export class DancePlayer {
 				tine.connect(env);
 				osc('sine', f * 4, tine, t + 0.2);
 				osc('triangle', f / 2, env, end);
+				break;
+			}
+			// The riffs' own (Riff in dance.ts): sunny's organ, techno's acid line, industrial's anvil.
+			case 'organ': {
+				const end = shape(0.12 * v, 0.004, 0.16);
+				osc('square', f, env, end);
+				osc('square', f * 2, env, end);
+				osc('sine', f / 2, env, end);
+				break;
+			}
+			case 'acid': {
+				const lp = ctx.createBiquadFilter();
+				lp.type = 'lowpass';
+				lp.Q.value = 14;
+				lp.frequency.setValueAtTime(300 + 2400 * v, t);
+				lp.frequency.exponentialRampToValueAtTime(220, t + 0.14);
+				lp.connect(env);
+				osc('sawtooth', f, lp, shape(0.3 * v, 0.002, 0.16));
+				break;
+			}
+			case 'anvil': {
+				const end = shape(0.32 * v, 0.001, 0.9);
+				for (const ratio of [1, 2.76, 5.4, 8.93]) osc('square', f * ratio, env, end);
+				const ring = ctx.createBiquadFilter();
+				ring.type = 'highpass';
+				ring.frequency.value = f * 3;
+				ring.connect(env);
+				osc('sawtooth', f * 1.414, ring, t + 0.25);
 				break;
 			}
 			// The pen's own: harp, lead, bell and tom are never the machine's instruments.
