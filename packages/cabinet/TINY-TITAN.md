@@ -415,6 +415,22 @@ So a 340-Window is a list of segments and how to run them:
   server's pen dispatch still works.
 - **Only what you need.** A client gets the segments it names, not the whole machine.
 
+**The server doesn't have to know.** Everything a view needs comes from outside the program: the
+assembler writes the symbol table from SYMELEC's source, the emulator reads it, and cabinet,
+device and view configurations name addresses by symbol and do arithmetic on them. SYMELEC runs
+unchanged and never learns it is being watched. The same goes for views that aren't 340 code.
+The RINGS panel, the TypeScript visualizer of PIXIE's ring structure, already works this way on
+the local machine: its configuration names the cells that hold the ring area's start and end and
+the root names, by SYMELEC label or octal address (`ringAddr` in
+[CabinetApplet.svelte](../../apps/ties/src/lib/CabinetApplet.svelte)), and `captureRings` reads
+that span of core. Two steps make it remote:
+
+- **Expressions, not only labels.** Evaluate each field with the assembler core's expression
+  evaluator against the program's symbol table, so `DFB+200` or `SAVINS+1` work wherever a
+  label does now.
+- **Read through `peek`.** Capture the span through the [`peek` service](#services) instead of
+  `cpu.read`, so the RINGS panel in any browser watches a SYMELEC running on the server.
+
 **Whole frames, not partial ones.** The server sends a frame at an `IDLA`, the start of a
 refresh, so a client never runs a display list half rewritten. A real 340 did read lists while
 the CPU rewrote them, and programs like SYMELEC live with it. For new programs, a lock and
