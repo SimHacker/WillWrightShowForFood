@@ -40,7 +40,7 @@
 					? 'As fast as this computer can go, showing a picture each Apple second'
 					: w === 1
 						? `1× is a real Apple ][: ${APPLE_HZ.toLocaleString('en-US')} cycles a second`
-						: `${w}× an Apple ][: ${Math.round(APPLE_HZ * w).toLocaleString('en-US')} cycles a second${w > 8 || w < 1 ? ', and the speaker is off' : ''}`
+						: `${w}× an Apple ][: ${Math.round(APPLE_HZ * w).toLocaleString('en-US')} cycles a second${w > 8 ? ', and the speaker is off' : w < 1 ? ', and the speaker clicks as slowly' : ''}`
 		}))
 	);
 	const rateIndex = $derived(

@@ -216,12 +216,12 @@ class AppleEngine {
 		korzApple.warp = warp;
 		if (this.id === 'microm8') microM8.speed(warp);
 		// Faster than the Apple, the speaker plays game time in snatches: quieter as it gets
-		// choppier, and off past 8x, where it is only clicks. Slower, it would play a frame's
-		// few samples with gaps between them, so it is off until a time stretch fills them.
+		// choppier, and off past 8x, where it is only clicks. Slower, each speaker stretches its
+		// samples to the time that passes, so every click is heard when it comes.
 		const volume = warp >= 8 ? 0.25 : warp >= 4 ? 0.6 : 1;
 		microM8.volume = volume;
 		korzApple.volume = volume;
-		if (warp > 8 || warp < 1) {
+		if (warp > 8) {
 			this.#hush = true;
 			this.sound = false;
 		} else if (this.#hush) {

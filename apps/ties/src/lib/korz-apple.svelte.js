@@ -437,7 +437,10 @@ class KorzApple {
 		if (this.#audio) this.#audio.gain.gain.value = 0.3 * v;
 	}
 
-	/** Turn the speaker flips since last time into samples and queue them. */
+	/**
+	 * Turn the speaker flips since last time into samples and queue them. Slower than the Apple,
+	 * the samples are stretched to the time that passed, so each flip is a click when it comes.
+	 */
 	#speak() {
 		const board = this.#board;
 		if (!board) return;
@@ -448,7 +451,8 @@ class KorzApple {
 		const audio = this.#audio;
 		if (!this.sound || !audio || end <= start) return;
 		const rate = 44100;
-		const n = Math.min(this.#samples.length, Math.max(1, Math.round(((end - start) * rate) / APPLE_HZ)));
+		const stretch = this.warp > 0 && this.warp < 1 ? 1 / this.warp : 1;
+		const n = Math.min(this.#samples.length, Math.max(1, Math.round(((end - start) * rate * stretch) / APPLE_HZ)));
 		let level = board.speaker & 1;
 		for (let i = flips.length - 1; i >= 0; i--) if ((flips[i] ?? 0) > start) level ^= 1;
 		let fi = 0;

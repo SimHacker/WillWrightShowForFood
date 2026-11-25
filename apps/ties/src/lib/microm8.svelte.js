@@ -175,7 +175,8 @@ class MicroM8Machine {
 
 	/**
 	 * Queue the speaker's new samples right after the last ones. Running faster than the Apple
-	 * makes more sound than time passes; what would queue too far ahead is dropped.
+	 * makes more sound than time passes; what would queue too far ahead is dropped. Slower, it is
+	 * played slowed by as much, so the clicks come when they would and nothing is left as gaps.
 	 * @param {import('@wwsff/cabinet/microm8').MicroM8} m
 	 */
 	#play(m) {
@@ -190,9 +191,11 @@ class MicroM8Machine {
 		buffer.copyToChannel(this.#samples.subarray(0, n), 0);
 		const src = a.ctx.createBufferSource();
 		src.buffer = buffer;
+		const slow = this.warp > 0 && this.warp < 1 ? this.warp : 1;
+		src.playbackRate.value = slow;
 		src.connect(a.out);
 		src.start(a.next);
-		a.next += n / rate;
+		a.next += n / rate / slow;
 	}
 
 	/**
