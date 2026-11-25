@@ -125,4 +125,9 @@ for the terminal to play again.
   metacompiler can rebuild: the Forth kernel's 6502 code, the threaded definitions, and the
   dictionary headers. Then the image can be rebuilt, changed and documented word by word, the way
   [Mitch Bradley's PDP-7 Forth](../../../../packages/cabinet/tapes/pdp7forth/README.md) is built
-  from source in the cabinet.
+  from source in the cabinet. The source is written for a 6502 macro assembler in TypeScript, with
+  the headers as macros
+  ([ASSEMBLERS.md](../../../../packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool)).
+- A full manual for this Forth-83 dialect.
+- An Apple ][ Forth coprocessor card in the emulator, like the PDP-7's
+  ([FORTH-DEVICE.md](../../../../packages/cabinet/FORTH-DEVICE.md)).

@@ -231,6 +231,15 @@ by every assembler and every tool, for every machine:
   ([`src/source.ts`](src/source.ts), `ScanRect`), and through shared addresses to translations of
   the same program, such as the Cambridge source translated to `as7`.
 
+**A 6502 macro assembler**, on the same core, is how Don's Apple ][ Forth gets its source back
+([Apple2Forth](../../characters/don-hopkins/artifacts/Apple2Forth/README.md)): disassemble and
+decompile `H19.SYSTEM`, then write it as macro source that reassembles to the same bytes. The
+header macros have to handle the 6502's indirect jump bug: `JMP (addr)` with `addr` at `$xxFF`
+takes the high byte from `$xx00`, so when a code field would land at the end of a page the macro
+bumps the dictionary pointer by one first. With the headers as macros, the header format, the
+threading model, headers and metadata kept out of band, and documentation from the same source
+can each be changed and tried.
+
 The disassembler, a decompiler for threaded Forth images (the Apple ][ Forth's `H19.SYSTEM`
 first), the metacompiler, the debugger's views and the 6502 front end then get the source map,
 symbols and listings without each building its own.

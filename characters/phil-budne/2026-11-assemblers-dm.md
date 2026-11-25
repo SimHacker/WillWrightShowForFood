@@ -3,7 +3,9 @@
 Plain text for Facebook Messenger. Don sends it by hand.
 
 ```
-Phil, a question about assemblers, and an ask for advice.
+Phil, I'd like your advice on the programming environment I'm building around the emulators. I'm designing a generic one, an assembler and tool core that doesn't depend on the instruction set, and implementing specific parts of it for the PDP-7, the PDP-10 with MIDAS, and the Apple ][.
+
+For the Apple ][ I want a good 6502 macro assembler in TypeScript, so I can reverse engineer my own Apple ][ Forth back into source. Its saved image survived but the source for much of it didn't. The assembler would do the header macros, including bumping the dictionary pointer by one when a code field would land at the end of a page, because the 6502's JMP (addr) fetches the high byte from the wrong place when addr ends in FF. Then I can try different header formats, threading models, headers and metadata kept out of band, and documentation generated from the same source. I also want to write a full manual for my Forth-83 dialect, and maybe make an Apple ][ Forth coprocessor card in the emulator, like the PDP-7 one.
 
 All of the cabinet's development tools are in TypeScript, next to the emulators, so they run in the browser and in Node and you can edit, reassemble and rerun a program in the running machine. There are three PDP-7 assemblers so far, DEC's 1964 one, the Cambridge CAD Group's 1972 one (which reassembles Heinz Lemke's PIXIE from his listing), and UNIX's as7 (which builds Mitch Bradley's PDP-7 Forth). Inside they are one assembler with three parsers. They share the symbol table, literal pools, listings and a source map that goes from each word in core to its source line, its listing line, and the rectangle of that line on the scanned printout:
 
