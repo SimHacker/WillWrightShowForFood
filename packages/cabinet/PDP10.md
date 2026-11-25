@@ -6,14 +6,14 @@ display, and a cable to eight PDP-11s through which any user program could map a
 memory into its own address space. That last part has its own document,
 [MAPPING.md](MAPPING.md). This one is the CPU, its bus, and the devices it shares with the PDP-7.
 
-**The point is the sharing.** The PDP-7 in the page already has a Korz CPU, a Korz Type 340, a
-light pen, a teletype, a paper tape reader, a Turing machine coprocessor, an Ultimate Machine, a
-DataHand, a link to tiny-titan, and a file service. Each one is written once. A KA10 should not
-get its own copies. It should get its own CPU and its own bus, and plug the same devices in, each
-through a binding for the KA10's I/O instructions ([DEVICES.md](DEVICES.md#the-layers)). Then
-ITS's 340 programs draw on the same 340 the PDP-7's PIXIE draws on, the same hand turns LLOGO's
-dials and Forth's turtle, and a PDP-10 job can map the PDP-7's core into its address space and
-read PIXIE's rings with half-word instructions.
+The KA10 shares devices with the PDP-7. The PDP-7 has a Korz CPU, a Korz Type 340, a light pen,
+a teletype, a paper tape reader, a Turing machine coprocessor, an Ultimate Machine, a DataHand, a
+link to tiny-titan, and a file service. The KA10 gets its own CPU and bus and uses the same
+device code, each device through a binding for the KA10's I/O instructions
+([DEVICES.md](DEVICES.md#the-layers)). So ITS's 340 programs draw on the same 340 code that
+PIXIE draws on, the DataHand drives LLOGO's dials as it drives Forth's turtle, and a PDP-10 job
+can map the PDP-7's core into its address space and read PIXIE's rings with half-word
+instructions.
 
 **Korz** is [David Ungar](../../characters/david-ungar/README.md), Harold Ossher and Doug
 Kimelman's language of slots, dispatched on coordinates
@@ -26,16 +26,15 @@ usefulness." How the cabinet uses it for machines, and what is built, is
 [KORZ-MACHINES.md](KORZ-MACHINES.md). The PDP-7 and the Apple ][ run on it today.
 
 Status: planned in [README.md](README.md) ("A PDP-10 that runs ITS") and in
-[ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md#different-processors-one-cabinet), which
-already decided that "a PDP-10 should not pretend its channels are PDP-7 IOTs". Nothing of the
-KA10 is built.
+[ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md#different-processors-one-cabinet). Each
+CPU keeps its own I/O instructions: PDP-10 I/O is not modeled as PDP-7 IOTs. Nothing of the KA10
+is built.
 
 **TypeScript, on the same kits as the PDP-7.** The KA10 is written in TypeScript on the cabinet's
 Korz CPU kit and device kit ([KORZ-CPU.md](KORZ-CPU.md)), so it shares the sea, the rungs, the
 devices, the memory map and the panels with the PDP-7, and with a PDP-11 written the same way for
 the GT40's and the Knight TV's 11/05. SIMH is not compiled to WebAssembly for this: it is a large
-program, and a module built from it would be a sealed box beside the cabinet instead of machines
-sharing code. The one public attempt, OhmGeek's
+program, and a WebAssembly build couldn't share device code with the cabinet's other machines. The one public attempt, OhmGeek's
 [SIMH-WebAssembly](https://github.com/OhmGeek/SIMH-WebAssembly) (2022), got the VAX-11/780 started
 under Node and left the browser side unfinished. SIMH stays native, on the desk, as the oracle
 ([Phases](#phases)).
@@ -52,19 +51,19 @@ build the **KA10**, for three reasons:
   built a paging box in 1970 as a separate bay of TTL wire-wrap boards beside the processor
   ([David Moon](https://github.com/PDP-10/its/wiki/Hardware-info-from-David-Moon)). The processor
   put a virtual address on the memory bus, the box mapped it, and "the processor doesn't know that
-  it isn't talking directly to the memories". That is a device on a bus, the shape the cabinet
-  already has.
+  it isn't talking directly to the memories". So the pager can be modeled as a device on the
+  memory bus.
 - **SIMH has it.** `PDP10/kx10_cpu.c` with the `ka10_*` devices models the MIT machines, Rubin
   interface and all, and the [PDP-10/its](https://github.com/PDP-10/its) project builds a bootable
-  ITS for it with `make EMULATOR=pdp10-ka`. That is the oracle and the acceptance test in one. Its
-  start script turns the 340 on with `type340` and the Spacewar consoles with `wcnsls`.
+  ITS for it with `make EMULATOR=pdp10-ka`. We compare the cabinet against it, and booting that
+  ITS image is the test. Its start script turns the 340 on with `type340` and the Spacewar consoles with `wcnsls`.
 
-The KL10 is the counterexample worth writing down. MIT-MC had no separate paging box: Richard
+The KL10 did it differently. MIT-MC had no separate paging box: Richard
 Greenblatt's memo
 [Running ITS on the KL-10](https://gunkies.org/wiki/Running_ITS_(the_Incompatible_Timesharing_System)_on_the_KL-10)
 proposed doing ITS paging in modified KL10 microcode over DEC's own paging hardware. ITS pages
-are 1024 words and the KL's are 512, so each ITS page loads as two hardware entries. Same
-contract, different implementation: the cabinet's pager should be swappable for the same reason.
+are 1024 words and the KL's are 512, so each ITS page loads as two hardware entries. ITS sees
+the same paging either way, so the cabinet's pager is swappable too.
 
 MC itself survives: KL10 serial 1038, in service at MIT from 1975 to 1988, is at the
 [Interim Computer Museum](https://icm.museum/blog/?p=38). Their page has the KL-UDGE, the
@@ -97,7 +96,7 @@ Then:
 - **Memory** is two parallel `Uint32Array`s of 18-bit halves, `left` and `right`. Half-word
   instructions (`HLL`, `HRR`, `HRLZ`, … a quarter of the instruction set) touch one of them, and
   byte pointers address within a half or across both.
-- **Half-words cost nothing.** Because the split falls where the PDP-10 splits its own words,
+- **Half-words need no shifts or masks.** Because the split falls where the PDP-10 splits its own words,
   `HRRZ` is one load of `right[a]`, `HLRZ` one load of `left[a]`, and `HRRM` or `HLLM` one
   store, with no shift and no mask. Packing 36 bits any other way would charge every one of them a
   shift and a mask, and they are the instructions Lisp runs on: CAR and CDR are the two halves of
@@ -117,10 +116,10 @@ Then:
 - **What V8 keeps.** A 36-bit value does not fit V8's small integers, so it lives where V8 holds a
   raw number: a typed array, or a local in a compiled block. The sixteen accumulators can be a
   `Float64Array`, or two halves like memory. Both get measured, the way the PDP-7's rungs were
-  ([BENCHMARKS.md](BENCHMARKS.md)). That is Vanessa Freudenberg's rule from SqueakJS: emit what
-  the host JIT optimizes ([SEA-OF-SLOTS.md](SEA-OF-SLOTS.md#vanessas-bet)).
+  ([BENCHMARKS.md](BENCHMARKS.md)). This follows Vanessa Freudenberg's approach in SqueakJS:
+  generate code the host JIT optimizes well ([SEA-OF-SLOTS.md](SEA-OF-SLOTS.md#vanessas-bet)).
 
-The same trap is already in the tree: [turing.ts](src/plugins/turing.ts) masks words with
+The cabinet already has this bug in one place: [turing.ts](src/plugins/turing.ts) masks words with
 `& this.wmask`, so the `{36, 6, 4, 18}` PDP-10 shape that [TURING-ENGINE.md](TURING-ENGINE.md)
 lists would lose the top four bits of every word. Its cell arithmetic already uses division; the
 masks need the same. That fix is phase 0 below.
@@ -140,8 +139,8 @@ reference to 0–17 is a register reference.
 
 ### Room beside every word
 
-An 18-bit half in a 32-bit element leaves 14 bits over, and memory is cheap: a million words is
-4 MB an array. Both are room for knowing what the running code does:
+An 18-bit half in a 32-bit element leaves 14 bits over, and a million words is 4 MB an array.
+That leaves room to record what the running code does:
 
 - **The high bits** carry tags on a half: a word the compiler has code for (so a store knows to
   invalidate it), a breakpoint, a word written since the last snapshot. A read masks them off,
@@ -152,11 +151,11 @@ An 18-bit half in a 32-bit element leaves 14 bits over, and memory is cheap: a m
   those three for the PDP-7 already. With the 10/11 map in, the last writer of a word can be the
   PDP-7.
 
-Korz is what makes this free when it is off. Each plane is a set of slots on the `read`, `write`
-and `exec` selectors, in a `watch` dimension. With `watch` off, the resolver never picks them
-and the compiler emits a plain load or store. With it on, the compiler puts the count or the
-stamp inline in the compiled block, for the span of addresses being watched and nowhere else.
-Nothing is decided by an `if` in the hot path.
+When this is off it costs nothing. Each plane is a set of slots on the `read`, `write` and `exec`
+selectors, in a `watch` dimension. With `watch` off, the resolver never picks them and the
+compiler emits a plain load or store. With it on, the compiler puts the count or the stamp inline
+in the compiled block, only for the addresses being watched. There's no run-time `if` checking
+whether watching is on.
 
 ## The KA10 as a sea
 
@@ -190,7 +189,7 @@ slots that make an opcode do what it does.
 | `ea` | indirect bit, index register | effective address, with the KA10's indirect chain |
 | `exec` | the family dimensions above | the instruction |
 | `skip`, `jump` | the condition | the compare and test families |
-| `io` | device (7 bits), function (3 bits) | the I/O bus ([below](#the-io-bus-is-not-the-pdp-7s)) |
+| `io` | device (7 bits), function (3 bits) | the I/O bus ([below](#the-ka10s-io-bus)) |
 | `uuo` | opcode `000`–`077` | unimplemented user operations, which ITS uses for its system calls |
 
 **More dimensions.** The processor mode, user or exec, is a dimension, as KORZ-MACHINES.md says
@@ -217,12 +216,11 @@ SIMH's `pdp10-ka`, native, sits under all four as the oracle, through recorded i
 **The second machine.** A KA10 and a PDP-7 in one tab are two seas, and their generated
 functions are their own. Their devices are not. The PDP-7's Type 340 and the KA10's Type 340 are
 two instances of one class, and their slots reach their machine as `c.cpu`, so the code V8
-optimized for one is the code the other runs. That is the rule that made the PDP-7's second
-machine faster than its first
-([KORZ-MACHINES.md](KORZ-MACHINES.md#what-is-built), "The second machine"), applied across two
-architectures.
+optimized for one is the code the other runs. The PDP-7's second machine got faster than its
+first this way ([KORZ-MACHINES.md](KORZ-MACHINES.md#what-is-built), "The second machine"); here
+it applies across two architectures.
 
-## The I/O bus is not the PDP-7's
+## The KA10's I/O bus
 
 A PDP-7 `IOT` names a device and fires timed pulses, IOP1, IOP2 and IOP4, each answered by a gate
 slot ([iop.ts](src/korz/iop.ts)). A PDP-10 I/O instruction names a device (seven bits, written in
@@ -262,8 +260,7 @@ priority. Moon called it the **channel 1 multiplex feature** and recommends it t
 many devices. The plugin implements it as an option (`pi.multiplex`) because ITS for AI expects
 it.
 
-A PI request is a reduction, not a dispatch: each channel is the wired OR of every device
-assigned to it. The backplane computes it over the devices' requests, as the PDP-7's interrupt
+Each PI channel is the wired OR of every device assigned to it. The backplane computes it over the devices' requests, as the PDP-7's interrupt
 line is computed, and `why` on a channel lists who is pulling it
 ([KORZ-DISPATCH.md](KORZ-DISPATCH.md#the-whole-machine)). Devices are event-driven, as on the
 PDP-7: each says how many cycles remain before it raises a request, and the compiler hands the
@@ -272,7 +269,7 @@ CPU a batch up to the next one.
 ## The pager is a device
 
 ITS knows several pagers; Moon: "even the format of page-table entries is parameterized, since it
-has been different on every machine ITS has run on". So the plugin does the same. A pager is a
+has been different on every machine ITS has run on". The plugin has several too. A pager is a
 set of slots on `read` and `write`, guarded on the processor mode and on which pager is fitted,
 between the processor and core:
 
@@ -288,7 +285,7 @@ between the processor and core:
 
 Loading the pager's registers is an install. A compiled block depends on the translations it was
 compiled under, so `LPM` invalidates the blocks of the job it switches away from. `kx10_cpu.c` is
-the reference for the exact bit layouts; Moon's account and Greenblatt's memo are the why.
+the reference for the exact bit layouts; Moon's account and Greenblatt's memo explain the design.
 
 ## The devices the PDP-7 already has
 
@@ -316,7 +313,7 @@ Some of these are DEC's or MIT's, and some are the cabinet's own. Every slot say
 | Files and host calls | the cabinet's | IOT 24, CALL ([TINY-TITAN.md](TINY-TITAN.md#one-call-for-the-host-call-on-device-24)) | `DATAO` the block's address, `CONO` to start, `CONSO` on the done flag ([TINY-TITAN.md](TINY-TITAN.md#one-titan-for-every-machine)) |
 | Forth device | the cabinet's | stacked on the PDP-7's NEXT ([FORTH-DEVICE.md](FORTH-DEVICE.md)) | not shared: it is a PDP-7 instruction-level device |
 
-The host side comes along with each device, because it was never in the binding. The teletype
+The host side of each device isn't in the binding, so it works on the KA10 unchanged. The teletype
 wraps, scrolls, zooms, reads aloud and takes dictation ([MANIFESTO.md](MANIFESTO.md#push-the-driver-out-into-the-host))
 for ITS as for UNIX. The 340's segments go to the same phosphor, the same recorder and the same
 print-screen. The pens are the same `PenInput` list, with the same mouse, the same simulated
@@ -337,7 +334,7 @@ the beam code is the same, and `why(word, mode)` answers the same on ITS's displ
 PIXIE's. The cabinet's DTG slot, which tags what follows so a pen hit can say what it hit, is
 there too, and says it is not DEC's.
 
-**What changes is the binding.** On the PDP-7 the 340 fetches its own words from core by DMA. On
+**The binding changes.** On the PDP-7 the 340 fetches its own words from core by DMA. On
 the PDP-6 and KA10 at MIT it sat behind the **Type 344 interface**, which the processor fed: each
 `DATAO` to device `130` sends one 36-bit word, two 18-bit display instructions, left half then
 right ([kx10_dpy.c](https://github.com/simh/simh/blob/master/PDP10/kx10_dpy.c), Philip Budne,
@@ -356,7 +353,7 @@ out of words raises done on the data channel, and the `BLKO` at its interrupt lo
 next word. Edges, stops and pen hits raise the special channel. Half-word mode and no-ink mode
 get settled against SIMH's model and against ITS's own display code.
 
-**It is easier to run fast than on the PDP-7.** The PDP-7's 340 reads core every cycle while it
+**It is simpler to run fast than on the PDP-7.** The PDP-7's 340 reads core every cycle while it
 draws, so it runs ahead from a snapshot and rolls back when the CPU writes a word it already read
 ([KORZ-MACHINES.md](KORZ-MACHINES.md#what-is-built), Time Warp's idea). Behind a 344 the 340 cannot
 see PDP-10 memory at all. It holds at most one word, and its next event is a number it can
@@ -377,12 +374,11 @@ for the 344, run in SIMH and in the cabinet, frame for frame.
 
 **One 340 or two.** MIT-AI had one 340, on the KA10. The cabinet can give each machine its own, or
 put one 340 between them with a switch that says which machine drives it. That switch is a patch
-slot, so `why` on the display says who has it. This is a choice to make in the cartridge, not in
-the code.
+slot, so `why` on the display says who has it. The cartridge picks which setup to use.
 
 ## Machines that see each other
 
-The other half of the point. MIT's 10/11 interface let a PDP-10 job map a PDP-11's memory into
+MIT's 10/11 interface let a PDP-10 job map a PDP-11's memory into
 its own address space with one system call, `T11MP` ([MAPPING.md](MAPPING.md#the-rubin-1011-interface)).
 In Korz a mapping is a slot: a `read` and a `write` slot on a span of PDP-10 physical addresses
 that answer from another machine's memory, through a packing rule
@@ -452,7 +448,7 @@ a door in its own idiom, with the request block in its own word size.
 ## MacLisp, fast and in view
 
 A goal, not built. MacLisp is part of the ITS build in [PDP-10/its](https://github.com/PDP-10/its),
-so it comes with phase 5. Two things make it a good test of this design:
+so it comes with phase 5. It tests this design in two ways:
 
 - **It runs on half-words.** A cons is one word, CAR in the left half and CDR in the right, so
   `CAR` is `HLRZ` and `CDR` is `HRRZ`, and NIL tests are jumps on a half. Lists are walked with
@@ -465,7 +461,7 @@ so it comes with phase 5. Two things make it a good test of this design:
   so the cabinet can read it too, and knows without guessing whether a word is a cons, a fixnum,
   a flonum, a symbol or an array.
 
-That is what a viewer needs, and [RingView](../../apps/ties/src/lib/RingView.svelte) already does
+A viewer can use both. [RingView](../../apps/ties/src/lib/RingView.svelte) already does
 the same for PIXIE: it reads core live, lays the structure out in 3D, lights the cells that
 changed, and opens a cell in the memory panel when clicked. A MacLisp view reads the segment table
 for types and walks conses from roots: the obarray of interned symbols, their property lists and

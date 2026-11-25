@@ -296,12 +296,12 @@ from memory, and it steps in cycles so device timing stays honest. It has no ins
 so the disassembler has nothing to show. Its source map is the TypeScript itself: from the step
 or device call that wrote a word, to the line of TypeScript that made it.
 
-These are not six skins over one processor. Their differences are exactly
-why the CPU contract stays small: a plugin owns its stepping, word/memory
-semantics, and machine-specific I/O boundary. Shared cabinet services—run,
-stop, inspection, recording, debugger, and host presentation—sit outside that
-boundary. A PDP-10 should not pretend its channels are PDP-7 IOTs; an Apple
-II should not pretend its soft switches are IOT pulses, nor MIX its `IN`/`OUT` blocks.
+These processors differ, so the CPU contract stays small: a plugin owns its
+stepping, its word and memory semantics, and its own I/O instructions. Shared
+cabinet services (run, stop, inspection, recording, the debugger, and host
+presentation) sit outside it. Each CPU keeps its own I/O: PDP-10 I/O
+instructions, Apple II soft switches and MIX's `IN`/`OUT` blocks are each
+modeled as themselves, not as PDP-7 IOTs.
 
 ## CPUs are devices
 
