@@ -14,7 +14,8 @@ https://hyperties.org/cabinet/languages/don-hopkins-prodos-forth/
 
 Four years after that you asked "Mind if I forward this?" about my PizzaTool post, Ben Stoltz's
 tool for faxing orders to Tony & Alba's. Everybody wanted a copy, and I had to forward the whole
-pile to Ben. Me and my big mouth!
+pile to Ben. Me and my big mouth! Ben and his wife just visited me in Amsterdam, and we had an
+epic canal boat safari. You're welcome to visit too, of course!
 
 Here's why I'm really writing. Your `type340.c` and `display.c` from SIMH are the heart of a
 browser PDP-7 with a Type 340 that I've been building, called Cabinet. Lars told me you did most
