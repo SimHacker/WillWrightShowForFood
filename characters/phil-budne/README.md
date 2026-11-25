@@ -69,6 +69,31 @@ running ITS is planned next ([PDP10.md](../../packages/cabinet/PDP10.md)), and i
 same Type 340 model on the KA10. The PDP-6 and PDP-10 are where Phil did most of SIMH's display
 work.
 
+## The tools are in TypeScript too
+
+Don's plan is to write each machine's whole development stack in TypeScript, next to its
+emulator, so the same code runs in the browser and in Node. That makes live coding possible:
+edit a program's source, reassemble it and run it in the machine that is already running, with
+no native tools in between. The same tools serve every cabinet, the set of machines and devices
+one page or installation runs.
+
+What exists ([ASSEMBLERS.md](../../packages/cabinet/ASSEMBLERS.md), [source](../../packages/cabinet/src/asm/)):
+
+- PDP-7 assemblers for three dialects on one back end: DEC's 1964 assembler, the Cambridge CAD
+  Group's 1972 one, which reassembles SYMELEC and RSPPIX from Heinz Lemke's listing, and UNIX's
+  `as7`, which builds Mitch Bradley's PDP-7 Forth from his source (`sop.s`, `kernel.s`, `end.s`).
+- Listings printed in the 1972 house style, and a source map, so the memory view shows each word
+  beside the source line that made it.
+- A disassembler ([`src/disasm.ts`](../../packages/cabinet/src/disasm.ts)), and a direct editor
+  for the 340's display list ([`src/edit340.ts`](../../packages/cabinet/src/edit340.ts)): drag a
+  corner on the screen and it rewrites the vector words in core.
+
+Next ([ASSEMBLERS.md](../../packages/cabinet/ASSEMBLERS.md#next)): build Forth in the page from
+`kernel.s` and its Forth sources, then a live coding panel to edit Forth's kernel or any
+program's source, rebuild it and rerun it in the running machine, with the trace stepping through
+the source. A 6502 front end on the same back end comes later, for the Apple ][, and with it a
+metacompiler to rebuild Don's Apple ][ Forth from the source decompiled out of its saved image.
+
 ## Beyond the 340
 
 Budne has also contributed to PDP-7 UNIX restoration. His resume describes
