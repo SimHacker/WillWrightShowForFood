@@ -2,7 +2,9 @@
 
 Status: the first form is built: same image, the device running NEXT, the primitives and FIND
 ([src/korz/forth-device.ts](src/korz/forth-device.ts)). The ROM dictionary, the IOT primitives,
-and SYMELEC are still design. Written 15 November 2026 from a conversation with Don.
+Forth beside SYMELEC, and emulators of other Forth chips ([below](#other-forth-hardware)) are
+still design. Written 15 November 2026 from a conversation with Don, updated 25 November after
+[Forth Day](FORTH-DAY.md).
 
 ## Built: the device on the same image
 
@@ -95,8 +97,8 @@ codes, with their subdevice and pulse bits, cover the primitive set.
 
 - **ROM is read slots.** The device answers reads for an address range from its own image, with no
   core behind it: the headers, the names, and the precompiled high-level words of the prelude and
-  the outer interpreter. In Korz that is slots on `read` guarded on an address range, the shape
-  the Apple ]['s language card will have.
+  the outer interpreter. In Korz that is slots on `read` guarded on an address range, as the
+  Apple ]['s language card will be.
 - **In bank 1.** Bank 0 is untouched. It is the same placement as the names in bank 1
   ([FORTH-HIGH-MEMORY.md](FORTH-HIGH-MEMORY.md#step-2-the-names-in-bank-1)), so `FIND` and `WORDS`
   need one change, extended reads, for both.
@@ -108,11 +110,11 @@ codes, with their subdevice and pulse bits, cover the primitive set.
 
 ## Two ways to share the CPU with SYMELEC
 
-SYMELEC's main loop owns the PDP-7. Forth needs turns.
+SYMELEC's main loop runs the PDP-7 all the time, so Forth has to be given turns.
 
 1. **Forth on interrupts.** The device raises its flag (on a clock, or when the host has a line
    typed for it), and SYMELEC's interrupt path, patched as `interrupt.fs` patches NEXT, runs Forth
-   until it yields. Simple, and everything runs on the PDP-7.
+   until it yields. This is simpler, and everything runs on the PDP-7.
 2. **Forth as a coprocessor.** The device runs NEXT itself, fetching threads from core by DMA as
    the 340 fetches display lists, and runs ROM primitives itself. When it reaches a word whose
    code is in core, such as a call into SYMELEC's RSPPIX, it hands that word to the PDP-7 by
@@ -150,6 +152,38 @@ relocation pass, which adds `RELCON` to every pointer. Then you edit it with the
 - Precedent for Forth primitives as instructions: Chuck Moore's Novix NC4016 and the Harris
   RTX2000. For a Forth in ROM that is there at power-on: Mitch's Open Firmware.
 
+## Other Forth hardware
+
+The Forth device is a Forth processor added to a machine that wasn't designed for one. The real
+Forth processors are next: each is its own CPU plugin, with its instruction set as Korz slots,
+on the same backplane, devices and compiler as the PDP-7 and the Apple ][, and checked against
+its published instruction set and the software that ran on it.
+
+- **Novix NC4016** (Chuck Moore, 1985). 16-bit, with the data and return stacks in their own
+  memories off the chip, so most primitives take one cycle and several can share one instruction
+  word. Chuck wrote cmForth for it. This device runs one thread cell per memory cycle because the
+  Novix did, so the Novix is the first chip to emulate, and the PDP-7 device's cycle counts can be
+  compared with it. The Harris RTX2000, which flew in spacecraft, came from the Novix design.
+- **ShBoom** (Chuck Moore and Russell Fish), later the PSC1000. 32-bit, with several instructions
+  packed in each word.
+- **MuP21** (Chuck Moore) and **F21** (Jeff Fox's UltraTechnology, with Chuck). 20-bit words,
+  four 5-bit instructions per word, and a video coprocessor on the chip. Jeff's software for them,
+  including his Aha compiler, and the UltraTechnology archives are among what people in the Forth
+  community are now trying to rescue, with C. H. Ting's Offete Enterprises.
+- **GreenArrays GA144**, which Chuck talked about at [Forth Day](FORTH-DAY.md) 2026. 144 F18A
+  cores, each with its own small RAM and ROM of 18-bit words, up to four instructions per word,
+  passing words to its neighbours through ports that wait until the other side is ready. In the
+  cabinet each core is a small machine and each port is a channel on the backplane, so the
+  inspectors can show every core's stacks and every port at once. On the real chip that state is hard to see.
+  Its software is arrayForth and polyFORTH from GreenArrays. IntellaSys's SEAforth chips are the
+  earlier designs in the same line.
+
+The same goes for Forth software that ran on other machines, such as Ting's eForth: if the
+documents and code survive, the cabinet can run them and keep them runnable.
+
+Each of these needs its instruction set documents, and a dump or listing of real software to test
+against. Where those are missing, finding them comes first.
+
 ## Order of work
 
 1. ~~The device on the same image: NEXT, the primitives and FIND; compare against the kernel.~~ Done.
@@ -158,3 +192,7 @@ relocation pass, which adds `RELCON` to every pointer. Then you edit it with the
 3. Forth beside SYMELEC on interrupts: read and write its variables, call RSPPIX on its rings.
 4. The high-memory ring library, and moving drawings into SYMELEC with its relocation pass.
 5. The coprocessor, if the interrupt version is too slow or too intrusive.
+6. A Novix NC4016 CPU plugin running cmForth, once its instruction set documents and a cmForth
+   image are in hand.
+7. A GA144: one F18A plugin, 144 instances, and the ports as backplane channels, running
+   GreenArrays' arrayForth.
