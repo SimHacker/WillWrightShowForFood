@@ -13,7 +13,7 @@ show_seed: repo-shows/phil-budne/
 
 **Ask:** Phil, would you join a Repo Show conversation about the Type 340, the PDP-7, SIMH, and the people and interfaces that let us bring PIXIE into a browser?
 
-We have a real personal thread: I worked with you at Sun and knew you through Usenet. I still have the 1986 Forth exchange where you were looking for a faster route for Apple II experiment control, and I remember our later systems conversations.
+We have a real personal thread from Usenet and email. I still have the 1986 FIGIL mailing where you were looking for a faster route for Apple II experiment control, and in 1990 you passed me Rick Adams's FTP and asked to forward PizzaTool.
 
 The current project gives us a concrete reason to revisit it. Your simulator-independent Type 340 model and XY phosphor implementation are the display heart; Lars Brinkhoff added the PDP-7 integration, while Bob Supnik's PDP-7 CPU model supplies the host processor semantics. In 2020, Lars explained that division in our email thread, and I was already imagining a browser build with Emscripten, JavaScript/Canvas, and a WebGL phosphor model. Cabinet has since taken a more focused TypeScript path to PIXIE. I'd love to compare what we preserved, what we changed, and what we should still bring back.
 

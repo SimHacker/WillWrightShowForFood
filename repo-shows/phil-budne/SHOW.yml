@@ -1,0 +1,35 @@
+# SHOW — Phil Budne (the Type 340, and PDP-7 UNIX, in a browser)
+
+show:
+  id: phil-budne
+  title: "A Repo Show with Phil Budne — the Display Is Its Own Machine"
+  type: solo_or_pair
+  host: Don Hopkins
+  guests: ["Phil Budne"]
+  character: characters/phil-budne/
+  topic: "SIMH's Type 340 model, ported to TypeScript in Cabinet; PDP-7 UNIX restored from listings and booted in the browser"
+  status: seed
+
+why_him:
+  type340: "Wrote the simulator-independent 340 model Cabinet's display engine is ported from"
+  pdp7_unix: "Typed in and debugged the kernel, found the disk layout, wrote a shell; the restoration boots in Cabinet"
+  languages: "TMG resurrected; CSNOBOL4 and spipatjs maintained"
+  history_with_don: "FIGIL 1986, FTP and PizzaTool 1990"
+
+threads:
+  review_the_port: "Phil reviews Cabinet's 340 against his C: what's faithful, what's wrong, what's missing"
+  boot_unix: "Boot PDP-7 UNIX in Cabinet, log in as ken; Phil narrates what the listings didn't say"
+  tmg_next: "Could TMG run in Cabinet beside Mitch's Forth?"
+  snobol_patterns: "One pattern in SNOBOL4, C and JavaScript"
+  dec_lcg: "FORTRAN-10/20 and SAFE → PRISM → Alpha, first hand"
+
+format:
+  live: false
+  async: "Recorded walk-through or written exchange on the SIMH source map; intercut with Lars and Bob segments"
+  short_form: "Each thread is its own clip"
+
+links:
+  cabinet_340: https://hyperties.org/cabinet/devices/ultimate-hand/
+  pdp7_unix: https://hyperties.org/cabinet/systems/pdp-7-unix/
+  forth_day_demo: https://youtu.be/I-Rf3XP_D0g
+  simh_map: ../../packages/cabinet/SIMH-MAP.md

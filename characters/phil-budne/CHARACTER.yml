@@ -1,3 +1,6 @@
+# Philip L. Budne: invitation portrayal. NOT Phil Budne.
+# Standards: ../../schemas/portrayal-standards.md
+
 id: phil-budne
 name: "Philip L. Budne"
 type: person
@@ -19,10 +22,48 @@ representation:
 invitation:
   status: draft
   document: invitation.md
+  correspondence: correspondence.yml
   show_seed: repo-shows/phil-budne/
+  first_contact_2026: "Facebook friends 2026-11-25; first DM drafted for Don (see correspondence.md)"
 
 bio:
-  summary: "Unix systems programmer, consultant, and software preservation contributor. He wrote SIMH's simulator-independent Type 340 display processor and XY display model, and contributed to the PDP-7 UNIX resurrection."
+  summary: |
+    **Phil Budne**, Unix systems programmer and consultant in Arlington, Massachusetts
+    (Ultimate.COM). He wrote SIMH's simulator-independent Type 340 display processor
+    (`display/type340.c`) and maintained its XY display model (`display/display.c`), the
+    display heart of Cabinet's browser PDP-7. He helped bring PDP-7 UNIX back from scanned
+    listings, resurrected the TMG compiler-compiler, and maintains CSNOBOL4, the portable C
+    port of Bell Labs' Macro SNOBOL4. His resume's own words for the work: "Wading into, and
+    draining swamps" and "Doing the nasty, gnarly stuff other people don't want to do".
+
+career:
+  # From his public resume, http://www.ultimate.com/phil/resume.html
+  - { years: "1981-11/1985-08", where: "Digital Equipment Corporation, Large Computer Group, Marlborough MA",
+      what: "FORTRAN-10/20 compiler and runtime for TOPS-10/20 (extended addressing, nested includes); advanced development on SAFE, the 64-bit RISC machine that begat PRISM, which begat Alpha: instruction scheduler for a VAX-to-RISC translator" }
+  - { years: "1985-09/1990-07", where: "Boston University, Distributed Systems Group",
+      what: "Unix systems programming and management (Sun, VAX/BSD, Encore, AT&T); TOPS-20; drivers ported to 4.3BSD; campus account management; DNS tools; AppleTalk/IP; site DDN technical contact" }
+  - { years: "1990-08/1993-11", where: "Shiva Corporation",
+      what: "FastPath 5 AppleTalk/IP router project leader; principal architect of the ShivOS multiprotocol firmware; LanRover 2.0 firmware lead; nine IETF meetings" }
+  - { years: "1993-12/present", where: "Independent consulting",
+      what: "Linux and BSD systems, VoIP/SIP, embedded Linux, AWS back ends; Alcatel-Lucent 2004-2014 (Bell Labs Teamwork Award, 2009)" }
+
+education: "BA in Psychology, Boston University, 1986; graduate courses in computer architecture, operating systems, compilers"
+
+works:
+  - { name: "Type 340 display processor model", url: "https://github.com/open-simh/simh/blob/master/display/type340.c", note: "began 2003, from the VT11 simulator; models the 340 itself, not one host's interface" }
+  - { name: "XY display model", url: "https://github.com/open-simh/simh/blob/master/display/display.c", note: "phosphor persistence; revisions by Douglas A. Gwyn; roots in Douglas W. Jones's vc8e.c" }
+  - { name: "pdp7-unix (collaborative)", url: "https://github.com/philbudne/pdp7-unix", note: "typed in the kernel, helped debug and comment it, found the disk layout, wrote a shell, ls and bootstrap in PDP-7 assembler" }
+  - { name: "TMG", note: "resurrected the compiler-compiler for PDP-7 UNIX" }
+  - { name: "CSNOBOL4", url: "https://github.com/philbudne/csnobol4" }
+  - { name: "spipatjs", url: "https://github.com/philbudne/spipatjs", note: "SNOBOL/SPITBOL patterns in JavaScript" }
+
+with_don:
+  # Corrected 2026-11-25: Phil was never at Sun. Don and Phil knew each other through
+  # Usenet, mailing lists and email; in 1990 Don was at Sun and Phil at Shiva.
+  - "1986: Phil's FIGIL request for an Apple IIe Forth reached Don at MIT-MC"
+  - "1990: Phil passed Don Rick Adams's FTP; asked to forward Don's PizzaTool post"
+  - "2020: Lars Brinkhoff to Don: 'Phil Budne did most of the work' on the Type 340"
+  - "2026: Cabinet's 340 engine is ported from his type340.c and display.c"
 
 sources:
   wikipedia: null
@@ -35,10 +76,26 @@ sources:
     - https://github.com/open-simh/simh/blob/master/display/type340.c
     - https://github.com/open-simh/simh/blob/master/display/display.c
     - https://github.com/open-simh/simh/blob/master/PDP18B/pdp18b_dpy.c
+  mailing_lists:
+    - sources/1986-09-figil-apple-forth.md
+    - sources/2026-05-tuhs-toy-clock.md
   papers: []
   blogs: []
 
+ties_to:
+  - { path: ../lars-brinkhoff/, why: "Added the PDP-7 interface to Phil's 340 model; 2020 thread with Don" }
+  - { path: ../bob-supnik/, why: "SIMH and the PDP-7 CPU model Cabinet ports" }
+  - { path: ../heinz-lemke/, why: "PIXIE, the PDP-7/340 program that made the 340 matter here" }
+  - { path: ../mitch-bradley/, why: "PDP-7 Forth running on the 340 Phil modeled" }
+  - { path: ../david-rosenthal/, why: "Cambridge PDP-7 stack, PIXIE revival" }
+  - { path: ../../packages/cabinet/SIMH-MAP.md, why: "Source-to-port ledger" }
+  - { path: ../../packages/cabinet/reference/GUIDE-340.md, why: "Type 340 guide" }
+
 see_also:
-  - { path: CARD.yml, why: "Compact public-work capability card" }
+  - { path: README.md, why: "Profile and technical lineage" }
+  - { path: GLANCE.md, why: "One line" }
+  - { path: CARD.yml, why: "Public-work capability card" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: correspondence.md, why: "Shared history, public-safe" }
   - { path: invitation.md, why: "Draft Repo Show invitation" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Guest portrayal standards and subject rights" }

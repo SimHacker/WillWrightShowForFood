@@ -53,9 +53,10 @@ recover a model or tool, make it portable, and keep the interfaces legible.
 
 ## A personal and technical thread
 
-Don worked with Phil at Sun and knew him through Usenet. A 1986 FIGIL/Usenet
+Don knew Phil through Usenet and the mailing lists. A 1986 FIGIL/Usenet
 exchange preserves Budne asking for Forth recommendations for an Apple IIe
-experiment-control project. Their professional overlap and online exchanges
+experiment-control project; in 1990 Phil passed Don Rick Adams's FTP, and
+asked to forward PizzaTool. See [correspondence](correspondence.md). Their professional overlap and online exchanges
 make Budne a direct participant in this story, not a name added only from a
 source-file header.
 
@@ -75,8 +76,8 @@ interaction model.
   DEC machines?
 - What did the PDP-7 UNIX recovery teach about reconstructing software from
   scanned listings, and how do its goals differ from a machine emulator?
-- What was the Sun work like, and what did the Usenet/Forth community make
-  possible for systems programmers working in public?
+- What did the Usenet and FIGIL Forth community make possible for systems
+  programmers working in public?
 - Which parts of the 2020 browser proposal still feel right, and what changed
   when the project became a PIXIE-specific TypeScript emulator?
 
@@ -95,4 +96,4 @@ interaction model.
   [Type 340 guide](../../packages/cabinet/reference/GUIDE-340.md).
 - 2020 correspondence and the Type 340/PDP-7 attribution: [Lars Brinkhoff correspondence](../lars-brinkhoff/correspondence.md).
 
-↑ [Characters](../README.md) · [Invitation](invitation.md) · [Cabinet](../../packages/cabinet/README.md)
+↑ [Characters](../README.md) · [Correspondence](correspondence.md) · [Invitation](invitation.md) · [Cabinet](../../packages/cabinet/README.md)

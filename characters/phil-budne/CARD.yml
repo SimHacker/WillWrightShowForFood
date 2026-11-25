@@ -9,19 +9,32 @@ room:
 meta:
   schema: ../../schemas/guest-skills-card.yml
   governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
 
 card:
   name: "Philip L. Budne"
-  title: "Display processor and systems-software builder"
-  rarity: uncommon
+  title: "Display processor modeler · swamp drainer"
+  rarity: rare
   signifier: "🖥️"
-  flavor: "One display model, many machines; keep the boundary clean."
+  flavor: "One display model, many machines; keep the boundary clean. No job too small, no mess too large."
+
+relationships:
+  - { with: lars-brinkhoff, kinds: [emulator, collaborator], why: "Phil's 340 model, Lars's PDP-7 glue in pdp18b_dpy.c" }
+  - { with: bob-supnik, kinds: [emulator], why: "SIMH; Cabinet's PDP-7 CPU comes from Supnik's pdp18b_cpu.c" }
+  - { with: heinz-lemke, kinds: [program_evidence], why: "PIXIE says which 340 behaviors matter" }
+  - { with: mitch-bradley, kinds: [forth], why: "Mitch's PDP-7 Forth draws on the 340; Phil asked FIGIL for a Forth in 1986" }
+  - { with: don-hopkins, kinds: [usenet, email], why: "FIGIL 1986; Rick Adams's FTP and PizzaTool 1990; Facebook 2026" }
+
+places:
+  - { id: open-simh-display, name: "Open SIMH display/", url: "https://github.com/open-simh/simh/tree/master/display" }
+  - { id: pdp7-unix, name: "pdp7-unix", url: "https://github.com/philbudne/pdp7-unix" }
+  - { id: ultimate-com, name: "Ultimate.COM", url: "http://www.ultimate.com/phil/" }
 
 abilities:
   - id: MODEL-THE-DISPLAY
     name: "Model the Display"
     type: activated
-    mana: "{1}"
+    mana: "{1}{U}"
     conditions:
       - topic_matches_public_work: true
     advertisement:
@@ -34,6 +47,70 @@ abilities:
     verifiable: "Open SIMH display/type340.c and display/display.c; PDP-7 interface in PDP18B/pdp18b_dpy.c"
     combos_with: [bob-supnik, lars-brinkhoff, heinz-lemke]
 
+  - id: TYPE-IN-UNIX
+    name: "Type In UNIX"
+    type: activated
+    mana: "{U}{U}"
+    conditions:
+      - segment_topic_in: [pdp7, unix, tuhs, restoration]
+    advertisement:
+      method: typeInUnix
+      signature: "scanned listings → kernel, as, ed, shell, disk layout → bootable PDP-7 UNIX"
+      score_when:
+        - trigger: audience_boots_pdp7_unix_in_cabinet
+          weight: 0.92
+    effect: "Rebuild a lost system from paper: type it in, find the disk layout, write what's missing in PDP-7 assembler."
+    verifiable: "github.com/philbudne/pdp7-unix; resume ('Helped resurect PDP-7 UNIX'); Cabinet systems/pdp-7-unix"
+    combos_with: [MODEL-THE-DISPLAY]
+
+  - id: RESURRECT-TMG
+    name: "Resurrect TMG"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - segment_topic_in: [compilers, tmg, b-language, unix-history]
+    advertisement:
+      method: resurrectTmg
+      signature: "TMG compiler-compiler → runnable on PDP-7 UNIX"
+      score_when:
+        - trigger: audience_learns_something_true
+          weight: 0.85
+    effect: "Bring back the tool early UNIX languages were built with."
+    verifiable: "Resume"
+    combos_with: [TYPE-IN-UNIX]
+
+  - id: PORTABLE-SNOBOL
+    name: "Portable SNOBOL4"
+    type: activated
+    mana: "{U}"
+    conditions:
+      - segment_topic_in: [snobol, patterns, languages]
+    advertisement:
+      method: portableSnobol
+      signature: "Bell Labs Macro SNOBOL4 → C → Unix, Linux, Win32/64, VMS; patterns → JavaScript"
+      score_when:
+        - trigger: audience_learns_something_true
+          weight: 0.85
+    effect: "Keep a language alive by making it run everywhere."
+    verifiable: "github.com/philbudne/csnobol4; github.com/philbudne/spipatjs"
+    combos_with: []
+
+  - id: DRAIN-THE-SWAMP
+    name: "Drain the Swamp"
+    type: static
+    mana: "{G}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: drainTheSwamp
+      signature: "existing gnarly code → respected, adapted, working"
+      score_when:
+        - trigger: legacy_code_on_screen
+          weight: 0.8
+    effect: "His resume's phrase: 'Wading into, and draining swamps', 'Respecting and adapting existing code'."
+    verifiable: "Resume, specialties"
+    combos_with: []
+
 invoke_rules:
   consent: not_asked
   simulation: false
@@ -41,4 +118,5 @@ invoke_rules:
 see_also:
   - { path: CHARACTER.yml, why: "Canonical bio and source record" }
   - { path: README.md, why: "Profile and technical lineage" }
+  - { path: ideas.md, why: "Conversation hooks" }
   - { path: invitation.md, why: "Public invitation draft" }

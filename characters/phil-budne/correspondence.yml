@@ -1,0 +1,43 @@
+# Phil Budne × Don Hopkins — correspondence summary (public-safe)
+# NOT the full threads. Standards: ../../schemas/portrayal-standards.md
+
+meta:
+  with: phil-budne
+  curated_by: don-hopkins
+  consent: not_asked
+  span: "1986-09 — FIGIL; 1990 — FTP, PizzaTool; 2020 — via Lars; 2026 — TUHS, Facebook"
+  provenance: "FIGIL and TUHS are public lists; 1990 items are Don's mail, summarized; third parties unnamed"
+  human_readable: correspondence.md
+
+threads:
+  figil_apple_forth:
+    date: "1986-09-06/1986-10-02"
+    public: true
+    what: "Phil (BU Distributed Systems) asked FIGIL for an Apple IIe Forth or BASIC compiler for a friend's experiment control. Replies: Mountain View Press, GraForth, UNIFORTH Sampler (from its author, Lee Brotzman)."
+    source: sources/1986-09-figil-apple-forth.md
+  rick_adams_ftp:
+    date: "1990-03-16"
+    public: false
+    what: "Don, at UMD, told uunet he got Rick Adams's FTP from Phil and was running it on tumtum."
+  pizzatool:
+    date: "1990-10-24"
+    public: false
+    what: "Don (Sun) posted about Ben Stoltz's PizzaTool; Phil (Shiva) replied 'Mind if I forward this?'"
+  type340_via_lars:
+    date: "2020-03-17"
+    public: false
+    what: "Lars to Don: 'Actually Phil Budne did most of the work. He wrote the emulator for the PDP-6/10. I added the PDP-7 parts.'"
+    see: ../lars-brinkhoff/correspondence.yml
+  tuhs_toy_clock:
+    date: "2026-05-06"
+    public: true
+    what: "Phil asked TUHS whether the VAX-11/780 was the first DEC system with an RTC/TOY clock out of the box."
+    source: sources/2026-05-tuhs-toy-clock.md
+  facebook:
+    date: "2026-11-25"
+    what: "Facebook friends. First DM drafted: Cabinet's 340 from his code, Ultimate Hand, Forth Day video, PDP-7 UNIX in Cabinet."
+    sent: false
+
+correction:
+  date: "2026-11-25"
+  what: "Earlier drafts said Don worked with Phil at Sun. His resume has no Sun; in 1990 Phil was at Shiva and Don at Sun."
