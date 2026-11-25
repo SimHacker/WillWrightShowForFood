@@ -254,6 +254,37 @@ compiler that outputs JavaScript shaped for the browser's and Node's own JIT to 
 code, so the metacompiler can also decide which words become [device
 instructions](FORTH-DEVICE.md#primitives-as-instructions) the JIT-compiled code calls directly.
 
+**A linker, and one object format, after BFD.** The multi-source build's main loop is: place a
+segment at `HERE`, relocate it, advance `DP` past it, repeat. For that the assembler core
+(`AsmResult` in [core.ts](src/asm/core.ts): words, symbols, literals, variables, listing, start)
+has to output more than it does:
+
+- **A relocation list.** Every word that holds an address, and which kind of field it is, so a
+  segment can be moved: a PDP-7 memory-reference address field, a 340 `DJP`/`DJS`/`DDS` target
+  (bits 5–17), a whole word (a Forth thread cell, a `.word`), a 6502 16-bit little-endian address
+  or its low or high byte alone, a PDP-10 left or right half word.
+- **Exports and imports.** Which symbols a segment defines for others, and which it needs; the
+  linker resolves imports across segments of any dialect, and reports what is left undefined.
+- **Segment attributes.** Code, data, display list or library; read-only or writable; where it
+  may go (a bank, under the 340's 13-bit reach, inside Mitch's 512-word header link limit).
+- **Libraries on demand.** Pull in a library segment only if something imports from it.
+- **Entry points.** The start address, the 340's display start, the handlers a view names.
+- **A memory map.** What went where, its symbols and its source map, readable by the debugger,
+  the views and the linker for the next segment.
+- **Load formats.** One in-memory object, written out as each machine loads: `.oct` (read
+  today, `loader.ts`), RIM paper tape, ProDOS files for the Apple ][, ITS `SBLK` for the PDP-10.
+
+GNU's BFD (Binary File Descriptor library) is the model: one in-memory form for object files and
+one back end per file format, so the linker, `objdump` and the debugger don't care which format
+a file came from. Here the in-memory form is the assembler core's object, and the back ends are
+the load formats and the machines' memories.
+
+**The compiler can be a device in the build.** A cartridge's build can mount a Forth device and
+use it to compile Forth source into a segment, or mount a PDP-7 CPU and run a PDP-7 program
+that writes one, as `tape-compile` already compiles Forth on the emulated machine
+([CARTRIDGES.md](CARTRIDGES.md#2-build-steps-and-the-cache)). Either way the output is the same
+object: words, symbols, relocations, source map.
+
 **A 6502 macro assembler**, on the same core, is how Don's Apple ][ Forth gets its source back
 ([Apple2Forth](../../characters/don-hopkins/artifacts/Apple2Forth/README.md)): disassemble and
 decompile `H19.SYSTEM`, then write it as macro source that reassembles to the same bytes. The

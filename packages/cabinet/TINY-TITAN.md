@@ -612,7 +612,9 @@ start: 0o4000                        # where the view's 340 begins
   `HERE` is at its end and the next segment goes after it. Place, relocate, advance `DP`, repeat:
   that is the main loop of the [multi-source assembler and
   linker](ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool), whatever each
-  segment's dialect or instruction set. A library's segment is read-only once it is placed.
+  segment's dialect or instruction set. A library's segment is read-only once it is placed. The
+  assembler's relocation list and the rest of what a linker needs are planned in
+  [ASSEMBLERS.md](ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool).
 - **Transformations on the way in.** Relocation, because 340 jumps are absolute 13-bit addresses
   and a segment mapped elsewhere needs its `DJP`, `DJS` and `DDS` targets moved; also scaling,
   color and filtering.
