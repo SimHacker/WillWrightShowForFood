@@ -584,7 +584,7 @@ map:
     as: forth
   - at: 0o4000                       # live, from the server's SYMELEC
     from: cambridge:symelec
-    segment: PERMDF .. PERMDF+size   # expressions over SYMELEC's symbol table
+    segment: "@DFB .. @DFE"          # the picture: DFB and DFE hold its bounds
     refresh: frame
     transform: relocate              # 340 jumps are absolute: retarget DJP, DJS, DDS
   - at: 0o6000
@@ -599,6 +599,13 @@ start: 0o4000                        # where the view's 340 begins
   program's symbol table, the view's configuration and the running environment, kept up to date
   as reactive constraints: when a value they read changes, they are recomputed, as attributes
   bound with `${...}` constraints were in OpenLaszlo and as `$derived` values are in Svelte.
+- **Indirection.** `@DFB` is the word stored at `DFB`, as `LAC I DFB` reads it: SYMELEC keeps the
+  picture's bounds in `DFB` and `DFE`, so the segment follows the picture as it grows.
+- **Snapshots are views of saved segments.** A snapshot maps saved copies instead of live
+  memory, copy on write: it shares every unchanged word with the live machine and with other
+  snapshots, and copies only what is written afterwards, on either side. Opening a snapshot is
+  opening a view; editing one doesn't disturb the machine it came from, and comparing two is
+  comparing two views.
 - **Libraries are segments too.** Forth source fetched by URL, compiled once and mapped read-only.
 - **Transformations on the way in.** Relocation, because 340 jumps are absolute 13-bit addresses
   and a segment mapped elsewhere needs its `DJP`, `DJS` and `DDS` targets moved; also scaling,
