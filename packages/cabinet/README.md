@@ -29,8 +29,8 @@ hand tracking.
   [DEVICES.md](DEVICES.md#how-a-device-reaches-a-machine).
 - More CPUs in TypeScript, sharing the PDP-7's framework, devices and memory map: a KA10
   running ITS ([PDP10.md](PDP10.md)) and a PDP-11 for the GT40 and the Knight TV, joined by
-  MIT-AI's 10/11 shared memory ([MAPPING.md](MAPPING.md)). One CPU at a time, with SIMH as the
-  oracle, not one big port of SIMH to WebAssembly.
+  MIT-AI's 10/11 shared memory ([MAPPING.md](MAPPING.md)). They are written one CPU at a time
+  and checked against SIMH, rather than by porting all of SIMH to WebAssembly.
 - microM8, already compiled to WebAssembly and running in the cabinet's page, the way the
   Micropolis engine runs in MicropolisCore
   ([MICROM8.md](MICROM8.md#microm8-as-a-webassembly-module-called-directly)), integrated less
@@ -38,8 +38,9 @@ hand tracking.
   wrapper: memory mapped between machines, per-address heat maps, causality tracing, and rewind
   across all of it ([MICROM8.md](MICROM8.md#a-branch-of-microm8)). More ambitious still:
   translate the Go to TypeScript.
-  The traffic goes both ways: what microM8 already does, its live rewind, full CPU recording,
-  heat map, debugger and MCP server, can be built for the PDP-7 or for every CPU in the cabinet.
+  Features can also move the other way: what microM8 already has (live rewind, full CPU
+  recording, a heat map, a debugger and an MCP server) can be built for the PDP-7 or for every
+  CPU in the cabinet.
 - A time machine: git as the machine's history. Snapshots and recordings are commits, a branch
   is a different future from the same moment, and rewinding is checking out an earlier commit.
 
@@ -84,9 +85,9 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
   ([KORZ-COMPILER.md](KORZ-COMPILER.md)), each tested against the one below. What every processor
   shares, including a second instruction set stacked on the first, is
   [KORZ-CPU.md](KORZ-CPU.md).
-  [KORZ-MACHINES.md](KORZ-MACHINES.md) is the note to send: David Ungar, Randall Smith, Alan Kay,
-  Lars Brinkhoff, Bob Supnik and the others it is addressed to. The same TypeScript runs in Node
-  and in the browser, and that is the point.
+  [KORZ-MACHINES.md](KORZ-MACHINES.md) is a note addressed to David Ungar, Randall Smith, Alan
+  Kay, Lars Brinkhoff, Bob Supnik and others. The same TypeScript runs in Node and in the
+  browser.
 - [MAPPING.md: shared memory between machines](MAPPING.md): planned, after MIT's Rubin 10/11
   interface, which let the AI Lab's PDP-10 map PDP-11 memory and device registers into its own
   address space. [CORE-LINKS.md](CORE-LINKS.md) extends it to machines that disagree on word
@@ -119,12 +120,13 @@ box.step();
 ## Simulation vs emulation
 
 **Emulation** reproduces the *interface* of a machine so software written
-for the iron runs. The test is: does Heinz's listing behave. The guest
-does not care that the accumulator is a JavaScript number.
+for the hardware runs. The test is whether Heinz's listing behaves as
+it did. The guest program cannot tell that the accumulator is a
+JavaScript number.
 
-**Simulation** models a *process* at a chosen fidelity. Weather, traffic,
-phosphor decay. It can be looser or more physical than the original
-program ever saw.
+**Simulation** models a *process* at a chosen fidelity: weather, traffic,
+phosphor decay. It can be looser or more physical than anything the
+original program saw.
 
 SIMH, Bob Supnik's Computer History Simulation project, calls itself a
 simulator. What it mostly does is emulate instruction sets so historic
@@ -134,20 +136,20 @@ of the name: SIMH already uses it, and in this repo it also means SimCity.
 
 ## Why cabinet
 
-DEC sold instruction sets in cabinets. Plug in a device, its IOTs start
-existing; unplug it, they become no-ops. That *is* the extension point.
-A later ISA is another cabinet on the same backplane, not a fork.
+DEC sold instruction sets in cabinets. Plugging in a device adds its IOTs;
+unplugging it turns them into no-ops. This is the package's extension point.
+A later ISA is added as another cabinet on the same backplane, not as a fork.
 
 Runners-up we did not pick: *backplane* (the wiring, not the thing on
-the floor), *afterglow* (the tube, not the CPU), *understudy* (Repo Show
-cute, opaque on npm).
+the floor), *afterglow* (the tube, not the CPU), *understudy* (a Repo Show
+reference, opaque on npm).
 
-## The iron has a face
+## The PDP-7 the bezel is drawn from
 
 ![PDP-7A serial 113, Paul G. Allen collection](reference/iron/pdp7a-allen-collection-christies.jpg)
 
-Read the two DECtape 555 reels as eyes, the console's bit rows as a mouth and the maintenance
-panel's lights as a brow. This is
+The portrait reads the two DECtape 555 reels as eyes, the console's bit rows as a mouth and the
+maintenance panel's lights as a brow. This is
 [serial no. 113](https://onlineonly.christies.com/s/firsts-history-computing-paul-g-allen-collection/pdp-7a-minicomputer-117/230055),
 which did isotope analysis at the University of Oregon's nuclear physics accelerator lab for
 five decades before the Allen collection bought it. Provenance is in
@@ -190,13 +192,13 @@ glyph: `Source: AI film 75`, `Source: AI film 104`, `Source: Knight TV`. When PI
 on the 342, the cabinet's stroke tables come from that table. This repo does the same with
 OCR'd listings and 1969 films.
 
-We shed the rest: SDL / X11 / Win32 / Carbon backends, remote telnet
+The cabinet leaves out the rest of SIMH: SDL / X11 / Win32 / Carbon backends, remote telnet
 console, one tree for fifty architectures, pthreads, `dlopen`, every
-DEC option PIXIE never had. Graphic-2 is the wrong tube. Unknown IOT
-= no-op, as SIMH's `stop_inst = 0` already does — that one we keep.
+DEC option PIXIE never had. SIMH's Graphic-2 display is left out because PIXIE used the 340.
+One SIMH behaviour is kept: an unknown IOT is a no-op, as with SIMH's `stop_inst = 0`.
 
-When a stepped instruction disagrees, SIMH is right until a DEC manual
-says otherwise.
+When the cabinet and SIMH disagree on a stepped instruction, SIMH is taken as correct unless
+a DEC manual says otherwise.
 
 ## Extension points (do not grow them until a plugin needs them)
 
@@ -213,7 +215,7 @@ says otherwise.
 A plugin must not mention another plugin's architecture. The CPU
 issues `{ device, pulse, ac }`. The 340 returns segments. The pen
 reads segments and a pointer. tiny-titan claims devs 22–23 and talks
-to a `TitanPort`. That is the whole backplane.
+to a `TitanPort`. Those are the only interfaces between plugins.
 
 ## What this is not yet
 
@@ -270,7 +272,7 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
   Swierczek rebuilt it in 2016 as `src/other/b.b`, bootstrapped by `tools/b.c`. A B
   program is `bl.s`, its own `.s` and `bi.s` assembled together, the same way RSP would
   join a program. No C and no BCPL on the
-  PDP-7: C came on the PDP-11, and B was Thompson's cut-down BCPL. Catch for shared
+  PDP-7: C came on the PDP-11, and B was Thompson's cut-down BCPL. A problem for shared
   windows: Unix swaps whole user processes (010000 up) to disk, so a window in user
   space would be swapped with them. The fix follows Unix's own display-buffer swap:
   [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module),
@@ -287,7 +289,7 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
   room, driven by the period's own Logo from ITS: [LOGO-TURTLE.md](LOGO-TURTLE.md). What preservation asks of the cabinet,
   after David Rosenthal's 2015 report: [PRESERVATION.md](PRESERVATION.md). Slow motion
   down to the beam and the light pen's photocell: [BEAM-AND-PEN.md](BEAM-AND-PEN.md).
-- SIMH stays on the desk as the oracle.
+- SIMH remains the oracle that the cabinet is checked against.
 - Later, not yet: more DEC machines in the cabinet, each written in TypeScript
   from its SIMH counterpart, CPU by CPU, sharing the PDP-7's framework, devices
   and memory map. SIMH itself is not compiled to WebAssembly: it is large, and

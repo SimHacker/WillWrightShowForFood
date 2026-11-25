@@ -36,7 +36,7 @@ devices, the memory map and the panels with the PDP-7, and with a PDP-11 written
 the GT40's and the Knight TV's 11/05. SIMH is not compiled to WebAssembly for this: it is a large
 program, and a WebAssembly build couldn't share device code with the cabinet's other machines. The one public attempt, OhmGeek's
 [SIMH-WebAssembly](https://github.com/OhmGeek/SIMH-WebAssembly) (2022), got the VAX-11/780 started
-under Node and left the browser side unfinished. SIMH stays native, on the desk, as the oracle
+under Node and left the browser side unfinished. SIMH stays native and serves as the oracle
 ([Phases](#phases)).
 
 ## Which machine
@@ -424,7 +424,7 @@ never computers. None of it is built:
 | Knight TV | real | a frame buffer in TV-11 memory, shown the way the 340 viewer shows the 340, with its keyboard on the multiplexer |
 | The status register | real | a device-kit register at `764050`, with observe slots on bits 8, 9 and 11 that tell the building |
 | Elevator | simulated | cars and floors on machine time; bit 8 or 9 held is a hall call on that floor |
-| Ninth-floor door | simulated | locked, and released while bit 11 is held; it hears knocking |
+| Ninth-floor door | simulated | locked, and released while bit 11 is held; it registers knocking |
 | Tourists | imagined | people who arrive in the lobby at random times, call the elevator, ride to nine and knock |
 | Hackers | imagined | people at the terminals who, after a while of knocking, buzz the door, or don't |
 | Lisp Machine | a real CADR | a CADR emulator beside the cabinet, on the same Chaosnet |
@@ -443,7 +443,7 @@ house, and the people in it can be the cabinet's characters.
 
 [tiny-titan](TINY-TITAN.md#one-titan-for-every-machine) is where both machines meet: the file
 mounts, the drawing store, the services, the clocks, and the map. Each machine reaches it through
-a door in its own idiom, with the request block in its own word size.
+its own kind of I/O instruction, with the request block in its own word size.
 
 ## MacLisp, fast and in view
 
@@ -458,7 +458,7 @@ so it comes with phase 5. It tests this design in two ways:
   arithmetic, so compiled MacLisp runs mostly straight-line code with few traps.
 - **Its types are in its memory map.** MacLisp keeps each type in its own segments (BIBOP, a big
   bag of pages) and looks a word's type up in a segment table by address. The table is in core,
-  so the cabinet can read it too, and knows without guessing whether a word is a cons, a fixnum,
+  so the cabinet can read it too, and can tell whether a word is a cons, a fixnum,
   a flonum, a symbol or an array.
 
 A viewer can use both. [RingView](../../apps/ties/src/lib/RingView.svelte) already does

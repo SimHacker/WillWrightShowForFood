@@ -37,7 +37,7 @@ His eight tasks (§6), with what the cabinet has, what is planned, and what is m
 On his shared concerns (§2.4): **execution fidelity** is checked by tests, by SIMH and by DEC's 1964
 light pen diagnostic; **experiential fidelity** is the subject of the AM radio, the photocell pen in
 [BEAM-AND-PEN.md](BEAM-AND-PEN.md), the [portrait](PORTRAIT.md) and
-[CAUSE-AND-EFFECT.md](CAUSE-AND-EFFECT.md), all planned. Two honest gaps: every instruction counts as
+[CAUSE-AND-EFFECT.md](CAUSE-AND-EFFECT.md), all planned. Two known gaps: every instruction counts as
 one cycle, and the pen is sampled once per browser frame. **Load** is the Internet Archive's model:
 the reader's browser does the work, so serving costs almost nothing. **Curation cost** has not been
 measured, though the AI model bills for the PIXIE restoration, in the thousands of dollars a month,
@@ -72,7 +72,7 @@ a repository that anyone can read and walk through, and the raw layer is still t
 What this gives preservation:
 
 - **Git does the hard parts.** History, diffs, review, branches, and many copies, which is
-  LOCKSS's principle, come free. A change to one file in a disk image is a one-line diff, not a new
+  LOCKSS's principle, come with git. A change to one file in a disk image is a one-line diff, not a new
   multi-gigabyte blob.
 - **People and LLMs can read it.** Search, edit and annotate at the level where things have names;
   the binary is generated, not hand-edited.
@@ -113,7 +113,7 @@ structures and files, working at every layer:
 
 Each tool feeds the others: the assembler checks the translation, the translation puts the 1969
 code into Forth, Forth builds rings, the ring viewer reads them out of core, and the source maps tie
-every word back to the paper. It is one web of preservation, emulation, recreation and play.
+every word back to the paper.
 
 For an Apple ][ in the cabinet, with its Z-80 card, 80-column card and the rest of its expansion slots
 emulated too, it means the tools outside the emulator become universal file converters. One Apple ][ ran many operating systems, each with its own disk format: DOS 3.2's
@@ -125,13 +125,12 @@ outside, without a copy program running inside the emulated machine. Open tools 
 AppleCommander already read and write these formats, and are the blueprints for doing it as small
 command line tools in the cabinet's build.
 
-The other half is what the emulator owes the person using it. Running the program correctly is the
-floor. Paleotronic's [microM8](https://paleotronic.com/software/microm8/), designed and programmed by
+An emulator also has to serve the person using it. Running the program correctly is the minimum. Paleotronic's [microM8](https://paleotronic.com/software/microm8/), designed and programmed by
 April Ayres-Griffiths, shows how much further an emulator can go, as a work of love: it renders Apple
 ][ games in 3D with cameras you can move, rewinds them live, lets programs that expected a joystick be driven
 by a mouse, and packages a new presentation for an old game as one file,
-microPAK, without changing the game. That is accessibility in the full sense: an emulator that
-meets today's player halfway and still runs the original. The cabinet's cartridges, its photocell
+microPAK, without changing the game. This is accessibility in a broad sense: the emulator adapts
+to today's player and still runs the original. The cabinet's cartridges, its photocell
 pen and its portrait are meant in the same spirit ([MANIFESTO.md](MANIFESTO.md)).
 
 ## The criticism to take seriously
@@ -157,7 +156,7 @@ The answer is to make the cartridge the thing that is preserved, and the cabinet
 ## Where this leads, and why
 
 - **Teaching supplies the fan base scholarship lacks.** Games are preserved because people want to
-  play them. A PDP-7 is preserved if people want to learn from it. The cabinet's bet is that showing
+  play them. A PDP-7 is preserved if people want to learn from it. The cabinet assumes that showing
   how a machine works, from the hand on the light pen to the line in the scanned listing, gives
   teachers, students, museum visitors and the audience of a Repo Show a reason to come back. In his
   report the Blue Ribbon Task Force is quoted: "the only real justification for preservation is to
@@ -167,8 +166,8 @@ The answer is to make the cartridge the thing that is preserved, and the cabinet
   the letter will be immediately intelligible 50 years from now"
   ([*Scientific American* 272(1), January 1995](https://doi.org/10.1038/scientificamerican0195-42); [preview](https://web.archive.org/web/20110426062417/http://www.sciamdigital.com/index.cfm?fa=Products.ViewIssuePreview&ARTICLEID_CHAR=07FBACA7-7185-43C8-B9E7-E07B5343F87)).
   The cabinet's letters are the listings, scans, manuals and films. They are readable with no
-  machinery, and the source maps tie every word in core back to them, so the paper explains the
-  machine and the machine checks the paper.
+  machinery, and the source maps tie every word in core back to them, so the documents explain
+  the machine and running the machine checks the documents.
 
   Don's story [The Uplift](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/THE-UPLIFT.md)
   plays Rothenberg's scenario forward. A lonely Sim, saved on a novelty USB stick around 2001,
@@ -177,7 +176,7 @@ The answer is to make the cartridge the thing that is preserved, and the cabinet
   Soul City who remembers fragments of a house and a kitchen, makes friends and has adventures,
   and can be written back into The Sims, changed. There the letter and the disk become one
   thing: the unpacked YAML is the letter, readable by anyone, and it still packs back into the bytes the game loads.
-- **Running the document checks the document.** The PIXIE listing was corrected by assembling it and
+- **Running a listing verifies it.** The PIXIE listing was corrected by assembling it and
   running it. That turns an emulator into a tool for verifying a scan, which is work libraries
   already value, and it is cheap once the machine exists.
 - **Curation can be measured.** Ingest dominates the cost of preservation. AI-assisted restoration
@@ -192,7 +191,7 @@ The answer is to make the cartridge the thing that is preserved, and the cabinet
   ([slides](https://www.digitalpreservation.gov/multimedia/documents/rosenthal_slides072709.pdf)).
   The cabinet is open source, and the emulator is itself the renderer for the cartridges: keeping
   both open is the most durable thing the project can do.
-- **The law is the hard part, and here it is avoided.** By choosing software whose authors agree or
+- **The cabinet avoids the legal barrier.** By choosing software whose authors agree or
   whose license allows it, the cabinet can show the whole path, from scan to running machine to
   archive item, without the legal barrier that stops most collections. It is a clean example for the
   cases that are harder.
@@ -209,7 +208,7 @@ The answer is to make the cartridge the thing that is preserved, and the cabinet
   teaching Forth, assembly, graphics, operating systems or the history of interfaces
   ([TEACHING.md](TEACHING.md)).
 - **Historians.** Of graphics and of interfaces: PIXIE's radial menus came two decades before pie
-  menus, and the evidence now runs.
+  menus, and the evidence can now be run.
 - **Emulator developers.** SIMH, through tested contributions; anyone who wants a browser front end
   with source maps down to the scanned page.
 - **The people who made the software, and their families.** Heinz Lemke, who ran PIXIE in the 1969
@@ -247,7 +246,7 @@ institution willing to be named as a partner.
    requests.
 6. **Unpackers for the cabinet's media**: the PDP-7 UNIX file system into directories and files,
    tapes into records, listings into pages and lines, each with a byte-exact repacker and a test.
-7. **Memory-cycle timing**, which the radio, the photocell pen and honest fidelity all wait on.
+7. **Memory-cycle timing**, which the radio, the photocell pen and timing fidelity all depend on.
 8. **A partner**: one museum, library or university willing to host cartridges and apply with the
    project.
 9. **An NLnet application**, once 1 and 2 are done.

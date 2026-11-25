@@ -55,12 +55,12 @@ as much as a lab manual. My earlier CAM-6 simulator is at
 Around the emulator: assemblers for the DEC, Cambridge, and UNIX dialects, source maps from every word in core
 to its source line and its scanned page, a front panel and register view, an editable display
 list, recording and replay of demos, eight light pens, and a 3D view of data structures in live
-core ([MANIFESTO.md](MANIFESTO.md) explains the attitude).
+core ([MANIFESTO.md](MANIFESTO.md) explains the design principles).
 
 All of it is free software, in public git, built to be taken apart and changed. **It is yours to
 use.** Put it on your own web site; make it a web twin of a machine you have, so visitors can use
-it while the real one rests or is being restored; use it to check a tape or a disk image before it
-goes near the iron; teach with it. You don't have to ask, and you don't have to pay.
+it while the real one is switched off or being restored; use it to check a tape or a disk image
+before it is loaded on the real machine; teach with it. You don't have to ask, and you don't have to pay.
 
 ## For UNIX historians
 
@@ -69,14 +69,14 @@ the cabinet from an emulated RB09 disk: log in as ken, then ls, cp and date. The
 Open SIMH's, and the boot follows Phil Budne's bootstrap ([UNIX-V0.md](UNIX-V0.md)). This may be of
 interest to The Unix Heritage Society and the pdp7-unix list (Warren Toomey, Phil Budne and the
 others who did the restoration): a browser twin that anyone can log in to, and a way to check
-images before they go near a real machine. Corrections and test cases from people who know this
+images before they are loaded on a real machine. Corrections and test cases from people who know this
 code are very welcome.
 
 ## For libraries and archives
 
 The cabinet keeps a program and its documents together: every word in core maps to its source
 line and to the scanned page of the listing it came from, so a reader can go from the running
-machine to the paper and back. Two examples of why this matters:
+machine to the paper and back. Two examples:
 
 - **Cambridge.** The two 1969 PIXIE films were found and digitized in 2019 and 2020 through David
   Chapman at Cambridge University Library ([the story](../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)).

@@ -106,7 +106,7 @@ This note is the Forth. It says what is running, in the order a Forth programmer
 PDP-7 Forth itself, the emulator it runs in, and the two compilers under that emulator.
 What is not built yet is at the end.
 
-### Two compilers, in one breath
+### The two compilers
 
 TypeScript is a superset of JavaScript, and it compiles to JavaScript.
 The emulator, and Korz, are written in TypeScript. There are two just-in-time compilers. Korz
@@ -168,7 +168,7 @@ already knows that a bare address means "call." (source [kernel.s](tapes/pdp7for
 
 Constants and variables are not special words in the inner loop. They are PDP-7 instructions
 sitting in the thread. `LAC` loads the value. `LAW` loads the address. Either one falls into
-the push. A literal is the same trick, not the usual `(LIT)` followed by an inline cell. The
+the push. A literal works the same way, not as the usual `(LIT)` followed by an inline cell. The
 compiler searches a pool at the top of memory, growing down, and equal values share one
 entry. The compiled cell is an `LAC` of that entry. Running it is a constant push.
 (source [kernel.s](tapes/pdp7forth/kernel.s#L464))
@@ -259,8 +259,8 @@ RSAVINS .RING            \ HEX TRIANGLE SQUARE  ok
 ```
 
 SYMELEC walks the same ring area. A panel reads three cells out of live core and draws the
-ring in 3D while you append to it. One 1969 structure, the assembly library and the Forth,
-one block of core. The same image can be written out as JSON or YAML and read back into Forth,
+ring in 3D while you append to it. The 1969 structure, the assembly library and the Forth
+share one block of core. The same image can be written out as JSON or YAML and read back into Forth,
 and the 1972 wire format was the rings themselves. The value you type, the value the panel
 draws, and the value you would send across the link are one structure. (source
 [scene.ts](../pixie/src/scene.ts#L293), [image.ts](../pixie/src/image.ts#L150)) The demo is
@@ -290,7 +290,7 @@ The emulator is a [TypeScript program](https://github.com/SimHacker/WillWrightSh
 that runs in the browser. The machine you talk to is the same one: teletype in, `ok` back, turtle
 on the 340. Try it at [hyperties.org/cabinet/forth](https://hyperties.org/cabinet/forth/).
 
-### Four rungs, one image
+### Four ways to run one image
 
 The core image does not change when the way of running it changes. There are four of those ways,
 and each one is checked against the one below it on the same bytes. The bottom is a straight port
@@ -301,7 +301,7 @@ Above that, a run of instructions is pasted into one JavaScript function. The li
 that last one. A menu reboots the same disk on any of the four. (source
 [plugins/pdp7.ts](src/plugins/pdp7.ts), [korz/pdp7.ts](src/korz/pdp7.ts), [compile7.ts](src/korz/compile7.ts))
 
-### Twice the switch, on the same bytes
+### Speed
 
 On UNIX boot, that compiled form is about twice as fast as the hand-written switch: 5 nanoseconds
 an instruction against 11, on an M4 Max under Node 26. A real PDP-7 did about 0.3 million
@@ -309,19 +309,19 @@ instructions a second. The compiled emulator, on that boot, does about 189 milli
 benchmark for the PDP-7 and the Apple ][, with how each one was run and what changed the numbers,
 is in [BENCHMARKS.md](BENCHMARKS.md).
 
-### The accelerator, already plugged in
+### The Forth accelerator
 
-Forth spends its life in NEXT and in a handful of primitives. A device sits on the fetch. When the
+Forth spends most of its time in NEXT and in a handful of primitives. A device sits on the fetch. When the
 CPU fetches `xct i 10`, the device runs the cell itself. A colon word is a call on the return
 stack. A constant or a variable is a push. One of about 30 primitives runs on the same stacks, in
 the same auto-index registers, in the same core words. `EMIT`, a 340 instruction, or a `CODE` word
 you wrote is handed back as a jump, and the PDP-7 runs it. `FIND` is answered from a table of the
-names in core, and every hit is checked against the header before it is believed.
+names in core, and every hit is checked against the header before it is used.
 
 The image is Mitch's either way. The menu on the Forth page says **Forth: software / hardware**.
 Hardware is this device. If NEXT has been patched, if extend mode is on, if a cell is not one it
-knows, it declines, and the three instructions run. A program never has to know the device is
-there. Thirty thousand passes of `I +` take 890,000 cycles in the kernel and 107,000 with the
+knows, it declines, and the three instructions run. A program behaves the same with or without
+the device. Thirty thousand passes of `I +` take 890,000 cycles in the kernel and 107,000 with the
 device. At eight cells a cycle, 29,000. That is the same shape as
 [Chuck Moore](../../characters/charles-moore/README.md)'s Novix: one Forth word in the time of one
 memory cycle. The writeup is [FORTH-DEVICE.md](FORTH-DEVICE.md). (source
@@ -370,11 +370,11 @@ her garbage collector leaves as much work as it can to JavaScript's. Her
 (DLS 2014, with Dan Ingalls, Tim Felgentreff, Tobias Pape and Robert Hirschfeld) won the Most
 Notable Paper award ten years later. On WebAssembly she wrote that she would rather make the
 SqueakJS JIT produce code the JavaScript JIT can optimize well, because that could be faster
-than WASM. Don't fight the host. That is the bet Korz is built on
+than WASM. Korz is built on the same approach: emit code that the host's JIT optimizes well
 ([her philosophy, in MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md);
 [the essay](SEA-OF-SLOTS.md#vanessas-bet)). Vanessa died in 2025.
 
-A compiler on a compiler works here because the upper one is written to please the lower one.
+A compiler on a compiler works here because the upper one emits code the lower one optimizes well.
 Korz emits one stable function for a run of the machine, the kind V8 compiles once and keeps.
 A fresh function every cycle, or a call whose target V8 cannot see, stays interpreted. A store
 into a word the function was compiled from throws the function away, because PDP-7 code
@@ -459,7 +459,8 @@ assembly, and the rest as Forth. Mitch's metacompiler runs the other way. He wro
 assembled it, and let the running Forth compile the high-level words into the image. Mine has to
 start from the image, produce source that builds that image again, and only then be free to
 change. The new source is the thing I can edit. The metacompiler targets the Apple ][ first, then
-other 6502 machines, and after that other processors. Same guest, a new code field.
+other 6502 machines, and after that other processors, keeping the same Forth with a new code
+field for each.
 
 That stack does not exist yet. The disk, the [Videx card](VIDEX.md) it prints on, and the note of what is on
 the disk are the part that does:

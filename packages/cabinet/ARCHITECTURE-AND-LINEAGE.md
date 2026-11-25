@@ -1,11 +1,10 @@
 # Cabinet: Architecture and Lineage
 
-Cabinet is a small, opinionated emulator for a particular historical world:
-Heinz Lemke's PDP-7, Type 340 display, and the programs that ran on them. It is
-not an attempt to put every SIMH machine in a browser. Its architecture starts
-from a different question: what is the smallest, testable machine contract
-that lets this software live again, and what should remain replaceable around
-it?
+Cabinet is a small emulator for Heinz Lemke's PDP-7, Type 340 display, and the
+programs that ran on them. It does not try to put every SIMH machine in a
+browser. Its design starts from two questions: what is the smallest testable
+machine contract that lets this software run again, and what around it should
+stay replaceable?
 
 The cabinet is the reusable platform and backplane: the container that has
 CPUs and devices installed, a cartridge inserted, and a state. Reset returns
@@ -20,11 +19,11 @@ the program, build steps and panels. The PDP-7 executes its own instruction
 set. The Type 340 executes a second, display-specific instruction stream from
 core. Devices expose contracts; the cartridge wires those contracts to the
 selected machine. The browser host provides the console, rendering, input,
-inspection, and distribution. The seams preserve what the guest program can
-observe while letting the host be something the original designers could not
-have imagined.
+inspection, and distribution. The interfaces between these parts preserve what
+the guest program can observe, while the host side is free to differ from the
+original hardware.
 
-The current TypeScript backplane is the first simple wiring harness: one CPU,
+The current TypeScript backplane is the first, simple version: one CPU,
 a list of devices claiming IOT select codes, an OR-combined interrupt line,
 and per-cycle device ticks. The CPU owns the memory interface today, and the
 current program configurations are still partly hard-coded in the app. The
@@ -40,10 +39,10 @@ CPU instruction set ── memory/bus ── device ports ── display/input a
 	└── interrupt line ┴── clock ──────┴──── host renderer / controls
 ```
 
-## Preserve the contract, not the implementation
+## The machine-visible contract
 
 An emulator succeeds when software written for the old machine behaves as it
-expects. For PIXIE, the strongest specification is not the full PDP-7
+did on that machine. For PIXIE, the strongest specification is not the full PDP-7
 handbook: it is the recovered listing, its display files, and the devices
 those programs actually exercise. The DEC manuals explain ambiguous behavior;
 SIMH provides a working reference model and a differential oracle. The corpus
@@ -52,18 +51,17 @@ sets the scope.
 This is why Cabinet can be exact about the PDP-7's word arithmetic and the
 340's display instructions without reproducing every transistor, every DEC
 option, or every host operating system. A browser number can hold the
-accumulator. The guest cannot tell. Cycle budgets can pace the animation
-without making an old program depend on monitor refresh rate. That is
-emulation: preserve the machine-visible contract, then make deliberate,
-documented choices outside it.
+accumulator without the guest program being able to tell. Cycle budgets can
+pace the animation without making an old program depend on monitor refresh
+rate. Emulation here means preserving the machine-visible contract and making
+deliberate, documented choices outside it.
 
 Nor does one successful PDP-7 imply a universal simulator. A new processor
-earns a plugin when a program, corpus, or preservation goal needs it. A new
-device earns an IOT when a program issues one. Each addition should bring its
+gets a plugin when a program, corpus, or preservation goal needs it. A new
+device gets an IOT when a program issues one. Each addition should bring its
 own source evidence and acceptance test. Unknown IOTs remain no-ops unless the
-program or machine evidence requires another behavior. The architecture is
-open to more processors and devices precisely because it does not require
-building them in advance.
+program or machine evidence requires another behavior. The architecture allows
+more processors and devices without requiring them to be built in advance.
 
 ## MIMIC, SIMH, Cabinet
 
@@ -78,7 +76,7 @@ grew into a portable family of emulators with a shared device model,
 scheduler, debugging and control surface, and many historically significant
 machines.
 
-**Cabinet** takes that work seriously without taking all of SIMH along. The
+**Cabinet** uses parts of that work without taking all of SIMH along. The
 PDP-7 CPU semantics are ported from Supnik's `pdp18b_cpu.c`. The Type 340
 instruction engine is ported from Philip Budne's simulator-independent
 `type340.c`. The XY display model and phosphor history come from Budne's
@@ -106,7 +104,7 @@ diagnostic](src/lp370.test.ts), [DUEL](src/cabinet.test.ts),
 
 This is also where the cabinet name comes from. DEC's cabinet held a
 processor and its devices; a plug-in added IOT behavior to the backplane.
-Cabinet keeps that tangible idea as software, while the cartridge says which
+Cabinet keeps that idea in software, while the cartridge says which
 parts are installed and how they are wired. The PDP-7 and 340 meet through
 memory and device calls, not by reaching into each other's implementation.
 Another CPU can have another word width. Another display can emit another
@@ -132,7 +130,7 @@ turning the 340 into an all-purpose UI computer. The browser does provide the
 outer application, but the guest machine still sees its own CPU, IOTs, display
 words, and light-pen behavior.
 
-Forth's turtle makes that boundary tangible: Forth computes in the PDP-7,
+Forth's turtle shows that boundary: Forth computes in the PDP-7,
 builds vector words in the Type 340 display list, and leaves the 340 to execute
 and refresh that display program.
 
@@ -140,13 +138,13 @@ The same placement question reappears in later systems, without a simple
 descent from one to the next. NeWS moved executable PostScript and window
 behavior into a programmable display server. AJAX put more interaction code
 in the browser and used asynchronous requests for server data. WebGL and
-WebGPU move graphics work—and, increasingly, compute—to a specialized GPU.
+WebGPU move graphics work, and increasingly compute, to a specialized GPU.
 Each trades communication, latency, programmability, and complexity at a
 different boundary. Cabinet is another answer: run a complete, inspectable
 machine model close to the user, but keep its CPU and devices specialized and
 composable.
 
-## JavaScript as a living substrate
+## JavaScript as the substrate
 
 Gary Bernhardt's [*The Birth & Death of JavaScript*](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript)
 offers another useful frame. Its speculative “death” is JavaScript ceasing to
@@ -154,7 +152,7 @@ be the language programmers write everything in, while remaining an
 important browser execution target. The source language can change; the
 platform and its accumulated engineering remain.
 
-Vanessa Freudenberg made a closely related, very practical choice in SqueakJS.
+Vanessa Freudenberg made a related, practical choice in SqueakJS.
 Her [JIT notes](../../characters/vanessa-freudenberg/sources/jit-notes/jit.md)
 describe generating JavaScript from Smalltalk bytecodes in forms that the
 browser's own JIT can optimize: arguments and local variables instead of a
@@ -170,9 +168,9 @@ ideas and people influenced later dynamic-language VMs, including the engine
 lineages that made JavaScript fast. This is an intellectual and engineering
 lineage, not a claim that V8 is simply Self reincarnated; see also the
 [Vanessa memorial sources](../../characters/vanessa-freudenberg/README.md) and
-[David Ungar's room](../../characters/david-ungar/README.md).
+[David Ungar's page](../../characters/david-ungar/README.md).
 
-Cabinet makes the same bet. TypeScript compiles to JavaScript, and the
+Cabinet takes the same approach. TypeScript compiles to JavaScript, and the
 browser JIT optimizes the emulator's host code. Above that, Korz compiles the
 guest machine itself into JavaScript: a straight run of PDP-7 or 6502
 instructions becomes one generated function, device behaviors are pasted in
@@ -192,17 +190,18 @@ WASM in tiers and optimize hot functions. The distinction is the working
 surface and feedback path. A conventional C-to-WASM toolchain emits a
 statically shaped module; JS's dynamic objects, generated functions, devtools,
 and runtime feedback make a different set of optimizations and live-debugging
-practices natural. For Cabinet, choosing TypeScript/JavaScript is not a claim
-that it wins every benchmark. It is choosing a substrate where the emulator,
-its debugger, and its user interface can be developed together—and where the
-host JIT is a shared platform resource.
+practices natural. Cabinet uses TypeScript/JavaScript because the emulator,
+its debugger, and its user interface can be developed together in it, and
+because the host JIT is a shared platform resource. It does not claim to win
+every benchmark.
 
-Bernhardt's punchline showed up in November 2026, about nine years early.
+Part of Bernhardt's talk came true in November 2026, about nine years before
+its 2035 date.
 Farid Zakaria's [*2035 came early*](https://fzakaria.com/2026/11/23/2035-came-early)
 ([HN discussion](https://news.ycombinator.com/item?id=50624497)) runs Firefox
 on Linux inside a Firefox tab at [trynix.dev](https://trynix.dev), loads
-trynix.dev in that inner Firefox, and boots Firefox again inside it. That's
-the talk's browser-in-a-browser joke, made real. The nested render took more
+trynix.dev in that inner Firefox, and boots Firefox again inside it. This is
+the browser-in-a-browser joke from the talk. The nested render took more
 than an hour; the single level runs X11 and Wayland windows on the page, GL
 through WebGL2, ALSA sound, and TCP over WebSockets. What made it practical
 was a change of boundary, not a faster emulator. Pooya Parsa's
@@ -240,12 +239,12 @@ display model, and I/O architecture:
 | Apple ][ | 6502 and 8-bit memory, memory-mapped soft switches, raster video, game-port paddles and buttons | A planned CPU plugin; ROMs come from the user. It is not a PDP-7 variant and should not inherit the PDP-7's IOT assumptions. |
 | PDP-10 / KA10 | 36-bit words, byte pointers, ITS and its own device/channel conventions | A later plugin for ITS; word arithmetic, memory and I/O all need their own contracts ([PDP10.md](PDP10.md)). MIT-AI's 10/11 interface, which mapped eight PDP-11s into PDP-10 jobs, is the precedent for the cabinet's shared memory ([MAPPING.md](MAPPING.md)). |
 | PDP-1 | 18-bit ones'-complement words, the 18-bit family's ancestor (Supnik: the PDP-4 cut its instruction set in half); Type 30 point-plotting display with light pen, no display processor; sequence break instead of interrupts; FIODEC tape and typewriter | A planned plugin from SIMH's `PDP1/`, which is the oracle and already includes Spacewar! (`PDP1/spacewar1/`). It shares the 18-bit memory representation, but not the PDP-7's IOT set or its 340. Its showcase is L Peter Deutsch's PDP-1 Lisp, with source maps to his own scanned listings and documentation. Its front could be a CC BY 3D model of the machine ([ROADMAP.md §14](ROADMAP.md#14-small-items)). |
-| Knuth's MIX | A sign and five bytes per word, where a byte may be binary (at least 64 values) or decimal (100); field specs `(L:R)`; registers A, X, I1–I6 and J; 4000 words; block I/O to tapes, disks, card reader and punch, line printer, typewriter and paper tape; timing in units *u* | A planned plugin whose acceptance is TAOCP's own programs giving the results and timings Knuth prints, with GNU MDK (GPL) as oracle only. A correct MIX program must not care what size a byte is, so the plugin runs both byte sizes and the tests run everything twice. Its I/O units are blocks on unit numbers, not IOTs: the line printer goes to the lineprinter viewer, the typewriter to the teletype. |
+| Knuth's MIX | A sign and five bytes per word, where a byte may be binary (at least 64 values) or decimal (100); field specs `(L:R)`; registers A, X, I1–I6 and J; 4000 words; block I/O to tapes, disks, card reader and punch, line printer, typewriter and paper tape; timing in units *u* | A planned plugin whose acceptance is TAOCP's own programs giving the results and timings Knuth prints, with GNU MDK (GPL) as oracle only. A correct MIX program must not depend on the size of a byte, so the plugin runs both byte sizes and the tests run everything twice. Its I/O units are blocks on unit numbers, not IOTs: the line printer goes to the lineprinter viewer, the typewriter to the teletype. |
 | Turing machine | A transition table and a tape, rather than a conventional instruction set | The Turing-machine toolkit already exists separately. It could be a one-transition CPU plugin, or a shared-memory transition engine attached as a device to a von Neumann host; the latter is the cabinet-composition experiment described below. |
 
-**A native CPU: the app is the processor.** A CPU plugin doesn't have to simulate an
+**A native CPU.** A CPU plugin doesn't have to simulate an
 instruction set. The contract is small: `step()`, `read`/`write` of core, a PC, an interrupt line.
-So a TypeScript program can fill it and *be* the processor. It drives the cabinet's devices
+So a TypeScript program can implement it and act as the processor. It drives the cabinet's devices
 directly through their native APIs (pulses to the 340, characters to the teletype, words into core
 for the display to fetch) with no guest code and no instruction decoding between the intent and
 the device. This is what emulators call high-level emulation (HLE), done on purpose: UltraHLE
@@ -255,10 +254,10 @@ and console BIOS HLE replace guest code with native host routines.
 of Wiseman's link, is not emulated at all. There are no 48-bit words, no extracodes, no
 supervisor. It's one TypeScript file that answers the PDP-7's link IOTs and plays the Titan side
 of the `/LTPIX` session (`BlockletHost`), so SYMELEC's unmodified `LTPX` runs against it.
-"Emulate the conversation, not the computer" is the native CPU rule, and tiny-titan is a whole
-mainframe done that way. Today it is wired as a `Device`; under [CPUs are devices](#cpus-are-devices)
-it is a processor whose program is TypeScript, and if an Atlas 2 emulator ever exists it docks
-behind `TitanPort` without the PDP-7 noticing. Uses:
+It emulates the link conversation rather than the computer, which is how a native CPU works.
+Today it is wired as a `Device`; under [CPUs are devices](#cpus-are-devices)
+it is a processor whose program is TypeScript, and if an Atlas 2 emulator ever exists it can be
+attached behind `TitanPort` with no change on the PDP-7 side. Uses:
 
 - **Bespoke CPUs**: a special-purpose machine that never existed, built for one job. The Turing
   machine row above is one; a cellular-automaton stepper is another.
@@ -267,7 +266,7 @@ behind `TitanPort` without the PDP-7 noticing. Uses:
 - **Reference implementations**: the JavaScript leg of the CAM-off
   ([DESIGN.md](DESIGN.md#cam-on-the-pdp-7-a-cam-off)) runs as a native CPU beside the PDP-7
   assembly and the Forth, on the same devices.
-- **Apps that just want the devices**: a 340 drawing tool, or a teletype game, written straight to
+- **Apps that only need the devices**: a 340 drawing tool, or a teletype game, written straight to
   the device APIs, which still gets the cabinet's run, stop, trace, recording and panels.
 
 **Wrapping engines that already exist.** A native CPU or a device can be a thin wrapper around a
@@ -292,7 +291,7 @@ Snap! sees: one block library per engine, with commands, reporters and hat block
 wrapper ([snap-logo-brian-jens](../../repo-shows/snap-logo-brian-jens/README.md)).
 
 A native CPU still has core when its devices need it, since the 340 fetches its display list
-from memory, and it steps in cycles so device timing stays honest. It has no instruction words,
+from memory, and it steps in cycles so device timing stays correct. It has no instruction words,
 so the disassembler has nothing to show. Its source map is the TypeScript itself: from the step
 or device call that wrote a word, to the line of TypeScript that made it.
 
@@ -330,7 +329,7 @@ So the general rule is the one the 340 already follows:
 - **Memory** is a unit too, shared by whoever is wired to it: the 340 and the PDP-7 share core
   today.
 
-**Several processors in one cabinet** then follows naturally: a list of units, each ticked at
+**Several processors in one cabinet** follow from this: a list of units, each ticked at
 its own rate on one clock, wired by memory ports and request ports. The PDP-7, the 340, a CAM-6
 stepping its planes, a raster display with layers and a tile and sprite engine, and a Turing
 engine reading a transition table out of shared memory (§ below) can all sit on one backplane.
@@ -345,8 +344,8 @@ panels stop special-casing the 340.
 
 **Snap!, then, can be either.** As a bus master it is a native CPU whose program is blocks,
 driving the 340 and the teletype through their device calls. As a unit controlled by another
-processor it is a device: the PDP-7 sends it requests and Snap! answers them. Same wrapper, two
-wirings, and the cartridge picks which.
+processor it is a device: the PDP-7 sends it requests and Snap! answers them. The wrapper is the
+same in both wirings, and the cartridge picks which one to use.
 
 **A card can nest a processor.** An Apple ][ expansion card can carry a Z-80, as the Microsoft
 SoftCard does, or a 6809, as Stellation Two's Mill does. On that machine the 6502 remains the
@@ -371,8 +370,8 @@ an Apple II or PDP-10 cartridge needs its own adapter, because those machines
 don't have an IOT bus.
 
 The same separation can apply to instruction extensions. A device package may
-describe an abstract operation—its operands, effects, timing needs, and
-device-facing semantics—and optionally provide instruction definitions for
+describe an abstract operation (its operands, effects, timing needs, and
+device-facing semantics) and optionally provide instruction definitions for
 machines that can expose those operations in their instruction stream. The
 selected CPU plugin must explicitly bind those definitions to available
 encodings and implement their architectural effects. If the guest CPU has a
@@ -394,7 +393,7 @@ the machine-specific glue moves with the cartridge.
 This is a design direction, not the current script mechanism. URL-loaded
 cartridge scripts are constrained declarative data, not arbitrary JavaScript.
 Executable adapters should be explicitly trusted modules or granted
-capabilities with declared interfaces—not unrestricted code silently run
+capabilities with declared interfaces, not unrestricted code run silently
 from a cartridge URL. The cartridge owns the choice and wiring; the host owns
 the trust boundary.
 
@@ -412,7 +411,7 @@ memory-mapped, or channel service. The PCI FCode image layout and loader path ar
 [OpenFirmware workspace](../../../OpenFirmware/ofw/tokenizer/readme.pci) and
 [its FCode loader](../../../OpenFirmware/ofw/core/dlfcode.fth).
 
-Mitch Bradley's PDP-7 Forth is another part of this story: the same language
+Mitch Bradley's PDP-7 Forth is another example: the same language
 can be implemented over a very different processor when its primitives and
 threaded representation are mapped to that machine. His new PDP-7 system
 boots on the emulated CPU and draws through the Type 340; it is a concrete
@@ -430,13 +429,13 @@ a teletype-like command surface. That control language is above the guest
 instruction sets: commands can be added to the tool without giving the
 PDP-7, Apple II, PDP-10, MIX, or Turing machine shared opcodes.
 
-The Engelbart mouse and chorded keyset make this tangible. On the PDP-7, a
+The Engelbart mouse and chorded keyset are an example. On the PDP-7, a
 mouse can be adapted as a Type 340 light pen, while keyset chords become
 teletype characters. On the Apple II, the same mouse's x/y become PDL(0) and
 PDL(1), with its three buttons mapped to PB0-PB2; the chorded keyset becomes
 keyboard input. Those are proposed emulation mash-ups, not claims that an
 Engelbart device historically shipped with an Apple II. The instrument stays
-the same; the adapters make it legible to each guest. See
+the same; the adapters translate it for each guest. See
 [`ROADMAP.md`'s mash-ups](ROADMAP.md#13-emulation-mash-ups).
 
 The raster plan applies the same composition rule to graphics:
@@ -452,14 +451,14 @@ is the raster display's primitive mechanism; cell, tile, and sprite engines
 are optional producers or accelerators connected to it, much as character
 generation enriches the 340 without replacing its vector core.
 
-- A **dumb framebuffer** is a descriptor over memory—base pointer, dimensions,
+- A **dumb framebuffer** is a descriptor over memory: base pointer, dimensions,
 	strides and pixel format. A program writes pixels; a host renderer shows
 	them.
 - A **smart cell/tile renderer** interprets cell state through a color map
 	or tile table and writes a raster image. A cellular-automaton rule changes
 	the cells; the renderer decides how those states look.
-- **Sprites** are composited records—position, shape or pixel pointer, and
-	transparency—moved by changing data rather than teaching the CPU a new
+- **Sprites** are composited records (position, shape or pixel pointer, and
+	transparency), moved by changing data rather than teaching the CPU a new
 	graphics instruction set.
 - **CAM6** can be a cellular-automata device with rule tables and planes, or
 	an independently stepped machine for side-by-side comparison against the
@@ -547,17 +546,17 @@ the host-visible device contract. See the [`packages/turing` schema](../turing/S
 
 ## Add the next machine when it is needed
 
-The design is not “never add another processor or device.” It is “add one
-when a real program, corpus, artifact, or teaching goal makes the need
-concrete.” The plugin should state its visible contract, cite its primary
-evidence, expose inspectable state, and earn an acceptance test. A shared
+The rule is to add a processor or device when a real program, corpus,
+artifact, or teaching goal makes the need concrete. The plugin should state
+its visible contract, cite its primary evidence, expose inspectable state,
+and have an acceptance test. A shared
 instrument can have several adapters; a shared renderer can consume several
 machine formats. Neither treats the underlying machines as the same.
 
-That is the practical escape from both wheels: do not rebuild SIMH's entire
-scope to run PIXIE, and do not turn the display processor into another general
-computer. Preserve historically meaningful guest behavior, borrow proven host
-ideas, and let the next useful processor or device arrive on demand.
+In practice: do not rebuild SIMH's entire scope to run PIXIE, and do not turn
+the display processor into another general computer. Preserve historically
+meaningful guest behavior, borrow proven host ideas, and add the next processor
+or device when it is needed.
 
 ## Reading and sources
 
