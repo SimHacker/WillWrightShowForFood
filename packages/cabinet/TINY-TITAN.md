@@ -518,6 +518,10 @@ dynamically updated icon"); then open four others in a grid.
   window's position and size are applied by the client's renderer to that window's segments, not
   written into the display code. The app's own display list stays exactly as its program wrote
   it.
+- **A color per window.** Each window can have a main color, so you can tell which machine drew
+  what. The default, and the look of the whole display, is green phosphor. The SVG export already
+  takes a stroke color (`SvgOpts.stroke` in [media.ts](src/media.ts), green by default); the
+  renderer needs the same setting per window.
 - **One pen for all of them.** The pen, emulated with the mouse or driven by a script, is mapped
   back through the window under it into that machine's coordinates, and the pen event goes to
   that machine. The cabinet already takes several pens at once (`PenInput`, named "mouse",
