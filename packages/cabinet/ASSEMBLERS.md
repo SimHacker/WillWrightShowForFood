@@ -199,6 +199,42 @@ every register and every word of core, and the program and its timing are untouc
 that the loop is slower: measure, rebuild, reload, rather than recompile on the fly. For a 1960s
 machine, rebuilding takes a fraction of a second.
 
+## Plan: macros from MIDAS, and one core for every tool
+
+**One Forth source, several builds.** The goal is a single PDP-7 assembly source for Forth in
+which every word is defined by a macro, and the macro's implementation is a separate file you
+choose at build time. One implementation file lays down Mitch's headers (three characters and a
+count), another full names, another names in bank 1, another no headers at all. Other files can
+turn the same definitions into other things a metacompiler does: Forth words that call PDP-7
+library routines natively, such as RSPPIX's ring routines, or wrappers that make an existing PDP-7
+library callable from Forth.
+
+**Macros from a bigger assembler.** The PDP-7's own assemblers had little or no macro facility.
+MIDAS, the PDP-10 assembler ITS was written in, has a full one: `DEFINE` … `TERMIN`, repeats,
+`IRP` over argument lists, and conditionals. The plan is to bring those macros back to the PDP-7,
+in the shared layer, so all three front ends (DEC 1964, Cambridge 1972 and `as7`) get them at once,
+since the three are already one assembler inside. A MIDAS front end for the PDP-7 follows, and the
+KA10 plugin ([PDP10.md](PDP10.md)) needs MIDAS for the PDP-10 anyway, to assemble ITS programs
+from source in the page. MIDAS's source and manual are public in the ITS repository:
+[`src/midas/`](https://github.com/PDP-10/its/tree/master/src/midas) (`midas.458` and older
+versions), [`doc/info/midas.26`](https://github.com/PDP-10/its/blob/master/doc/info/midas.26), and
+[`doc/hello-midas.md`](https://github.com/PDP-10/its/blob/master/doc/hello-midas.md). DEC's MACRO-10
+and Stanford's FAIL are the other PDP-10 assemblers to study.
+
+**One core, independent of the instruction set.** Everything above the parser should be shared
+by every assembler and every tool, for every machine:
+
+- the machine description: word size, address size, radix, opcodes and operand fields;
+- expressions, the symbol table, literal pools, macros and conditionals;
+- listings, and the source map: each memory address to the source line that made it, to the
+  listing line, and to the rectangles of that line on a scanned page of the original printout
+  ([`src/source.ts`](src/source.ts), `ScanRect`), and through shared addresses to translations of
+  the same program, such as the Cambridge source translated to `as7`.
+
+The disassembler, a decompiler for threaded Forth images (the Apple ][ Forth's `H19.SYSTEM`
+first), the metacompiler, the debugger's views and the 6502 front end then get the source map,
+symbols and listings without each building its own.
+
 ## Next
 
 1. **Forth with RSPPIX, built in the page**: `kernel.s` and `rsppix.s` in one as7 run, one symbol

@@ -56,4 +56,10 @@ PizzaTool. Then it covers the browser PDP-7 and Type 340, whose 340 engine is po
 PDP-7 UNIX. It ends with the KA10 that will run ITS like MIT-AI, linking its plan
 ([PDP10.md](../../packages/cabinet/PDP10.md)), and with how Korz works.
 
+A second message is [drafted](2026-11-assemblers-dm.md). It asks for his advice on assemblers:
+porting MIDAS's macros to the cabinet's three PDP-7 assemblers so one Forth source can build
+different header formats, a MIDAS front end for the PDP-7 and the PDP-10, a shared core
+independent of the instruction set, what he learned writing pdp7-unix's assembler, and which other
+tools to build ([ASSEMBLERS.md](../../packages/cabinet/ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool)).
+
 ↑ [Phil Budne](README.md)
