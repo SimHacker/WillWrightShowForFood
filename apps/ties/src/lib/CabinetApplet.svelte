@@ -353,8 +353,13 @@
 	// Looked up again every couple of seconds, since a Forth program can define one at any time.
 	let danceCells = [];
 	let danceLookup = { text: '', at: -Infinity };
+	// A program's finish (program.finish: HILO's play-again, DUEL's halt) heard once, as it comes.
+	let danceFinished = false;
 	function danceWatched() {
 		if (!cpu) return [];
+		const done = program?.finish?.(cpu) ?? null;
+		if (done && !danceFinished) dance.celebrate(done.score, done.pan ?? 0);
+		danceFinished = !!done;
 		const ms = performance.now();
 		if (danceLookup.text !== dance.listen || ms - danceLookup.at > 2000) {
 			const labels = new Map(symbols.map((s) => [s.name.toLowerCase(), s.addr]));

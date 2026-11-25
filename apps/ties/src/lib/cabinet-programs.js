@@ -10,10 +10,12 @@ import {
 	duelResult,
 	DUEL_START,
 	DUEL_SWITCHES,
+	DUEL_SYMBOLS,
 	assembleLp370,
 	bootLp370,
 	lp370Demo,
 	assembleHilo,
+	hiloFinished,
 	bootHilo,
 	hiloDemo,
 	assembleLander,
@@ -300,6 +302,9 @@ function forthProgram({ id, label, kernelFile, extras = [], pixie: withRings = t
  * typeAhead is typed at the teletype as each boot starts, as if from the
  * keyboard ("\n" is Return); the scripted demo boots without it.
  * symbols() lists { name, addr } for the Memory drawer, after boot.
+ * listen names the words the bus dance watches, space separated; finish(cpu)
+ * is { score, pan? } while a game or round is over, score 0 to 1, else null,
+ * and the dance plays a hooray as it comes (AM-RADIO.md).
  * source() resolves to a SourceMap (source.ts) for the code and source views;
  * sources() instead resolves to several, each with meta { id, label, kind,
  * dialect }, and the memory panel offers a choice between them.
@@ -416,6 +421,13 @@ export const PROGRAMS = [
 			if (!bootDuel(box, cpu, extra[0], this.tapes.rim, this.tapes.duel)) throw new Error('DUEL did not load to 646');
 			cpu.switches = this.switches;
 		},
+		// Found by experiment (DUEL_SYMBOLS): a duet, each ship's words panned to its side.
+		symbols: () => DUEL_SYMBOLS.map(([name, addr]) => ({ name, addr })),
+		listen: 'left-x left-y left-heading left-vx left-vy right-x right-y right-heading right-vx right-vy left-torpedo right-torpedo',
+		finish(cpu) {
+			const r = cpu.halted ? duelResult(cpu) : null;
+			return r === null ? null : { score: r === 'draw' ? 0.4 : 1, pan: r === 'left' ? -0.6 : r === 'right' ? 0.6 : 0 };
+		},
 		// DUEL halts at 721 when a round ends and leaves the outcome in 1157 (tapes/duel/README.md).
 		halt: {
 			restart: DUEL_START,
@@ -450,6 +462,8 @@ export const PROGRAMS = [
 		demo: (h) => hiloDemo(h, hiloProgram),
 		// Yes, the dance gives the number away.
 		listen: 'secret guess',
+		// Play again? The fewer guesses it took, the bigger the hooray.
+		finish: (cpu) => (hiloProgram ? hiloFinished(cpu, hiloProgram) : null),
 		demoTitle: 'Reboot and let a scripted operator play one game by halving',
 		switches: 0,
 		switchLabels: null,

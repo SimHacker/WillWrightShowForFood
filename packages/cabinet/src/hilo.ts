@@ -23,6 +23,26 @@ export function bootHilo(cpu: Pdp7, program: AsmResult): void {
 	cpu.pc = program.start ?? 0o100;
 }
 
+/**
+ * The round is won: "RIGHT. GUESSES: n." is printed and HILO waits for Return to play again.
+ * Read from core, as the halt explainers read DUEL's: getc's return address (JMS leaves it in
+ * the first word) points back into waitcr, and waitcr's points at the JMP GAME after RIGHT,
+ * not at GAME, where the first wait, before any round, returns. Null otherwise; the score is
+ * how few guesses it took, 1 for one, 0 for seven, the most halving ever needs.
+ */
+export function hiloFinished(cpu: Pdp7, program: AsmResult): { tries: number; score: number } | null {
+	const at = (name: string) => program.symbols.get(name);
+	const getc = at("getc");
+	const waitcr = at("waitcr");
+	const game = at("game");
+	const tries = at("tries");
+	if (getc === undefined || waitcr === undefined || game === undefined || tries === undefined) return null;
+	const back = cpu.read(waitcr) & 0o17777;
+	if ((cpu.read(getc) & 0o17777) !== waitcr + 2 || back === 0 || back === game) return null;
+	const n = cpu.read(tries) & 0o777777;
+	return { tries: n, score: Math.max(0, Math.min(1, 1 - (n - 1) / 6)) };
+}
+
 export interface TeletypeHost extends Focus {
 	cpu: Pdp7;
 	/** Type on the keyboard, as the operator would: the paper shows it with local copy. */

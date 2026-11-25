@@ -298,3 +298,26 @@ test("the pen never plays an instrument the machine plays itself", () => {
 	const auto = Array.from({ length: 64 }, (_, s) => d.beat({ cpu: [{ key: s, weight: 3 }], 340: [{ key: s * 7, weight: 2 }], forth: [{ key: 1, weight: 1 }] }, 0.8, [{ name: "dp", value: s }])).flat();
 	assert.ok(auto.every((n) => !own.has(n.timbre)), auto.map((n) => n.timbre).filter((t) => own.has(t)).join());
 });
+
+test("a hooray climbs the home chord, longer and louder the better the score", () => {
+	const hooray = (score: number) => {
+		const d = new Dance(PDP7_VOICES);
+		d.celebrate(score, -0.5);
+		const notes = Array.from({ length: 24 }, () => d.beat({})).flat().filter((n) => n.voice === "hooray" && n.timbre === "brass");
+		return notes;
+	};
+	const best = hooray(1);
+	const meh = hooray(0.1);
+	assert.ok(best.length > meh.length);
+	assert.ok(Math.max(...best.map((n) => n.midi)) > Math.max(...meh.map((n) => n.midi)));
+	assert.ok(best[0]!.velocity > meh[0]!.velocity);
+	assert.equal(best[0]!.pan, -0.5, "toward whoever won");
+	for (let i = 1; i < best.length; i += 1) assert.ok(best[i]!.midi > best[i - 1]!.midi, "it climbs");
+});
+
+test("two players' words are a duet, left and right", () => {
+	const d = new Dance(PDP7_VOICES);
+	const notes = Array.from({ length: 32 }, (_, s) => d.beat({}, undefined, [{ name: "left-x", value: s * 40 }, { name: "right-x", value: s * 40 }])).flat();
+	assert.ok(notes.some((n) => n.voice === "watch:left-x" && n.pan < 0));
+	assert.ok(notes.some((n) => n.voice === "watch:right-x" && n.pan > 0));
+});

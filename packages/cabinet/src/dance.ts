@@ -14,7 +14,7 @@
 
 export type Drum = "kick" | "snare" | "hat" | "ride" | "rim";
 /** The pen's own instruments, `harp` `lead` `bell` `tom`, are never the machine's, so playing the picture stands apart from what plays itself. */
-export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "harp" | "lead" | "bell" | "tom" | Drum;
+export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "brass" | "harp" | "lead" | "bell" | "tom" | Drum;
 
 export type Voice = {
 	readonly id: string;
@@ -370,6 +370,7 @@ export class Dance {
 	private home = 0;
 	private last: Chord | null = null;
 	private replies: { at: number; key: number; i: number }[] = [];
+	private fanfare: { at: number; score: number; pan: number } | null = null;
 	private penDown = false;
 	private penTip = -1;
 	private sounding = new Map<number, number>();
@@ -398,14 +399,50 @@ export class Dance {
 		return this.style === "bp" ? 13 : 16;
 	}
 
+	/** Home: the chord the progression resolves to. */
+	get tonic(): Chord {
+		return this.style === "bp" ? BP_I : this.progression[this.style === "jazz" ? 2 : 0]!;
+	}
+
 	/** The chord the next beat plays over. */
 	get chord(): Chord {
 		const bp = this.style === "bp";
-		if (this.resolving) return bp ? BP_I : this.progression[this.style === "jazz" ? 2 : 0]!;
+		if (this.fanfare || this.resolving) return this.tonic;
 		if (this.tension >= 0.8) return bp ? BP_V : this.style === "jazz" ? TRITONE_SUB : DOMINANT_B9;
 		if (this.tension >= 0.4) return bp ? BP_V : DOMINANT;
 		const p = this.progression;
 		return p[Math.floor((this.step - this.home) / this.bar) % p.length]!;
+	}
+
+	/**
+	 * The program has finished a game or a round, as a halt or a "play again?" says: a hooray,
+	 * by how well it went, 0 barely to 1 best, panned toward whoever won. A brass arpeggio of
+	 * the home chord climbs, one note a sixteenth, more of them and higher and louder the better
+	 * the score, over a kick on the beat; past 0.8 a snare roll takes it to the top.
+	 */
+	celebrate(score: number, pan = 0): void {
+		this.fanfare = { at: this.step, score: Math.max(0, Math.min(1, score)), pan };
+		this.tension = 0;
+		this.resolving = true;
+	}
+
+	private hooray(): Note[] {
+		const f = this.fanfare;
+		if (!f) return [];
+		const i = this.step - f.at;
+		const length = 4 + Math.round(f.score * 12);
+		if (i >= length) {
+			this.fanfare = null;
+			return [];
+		}
+		const tones = this.tonic.tones;
+		const t = this.tuning;
+		const n = tones.length;
+		const notes: Note[] = [{ voice: "hooray", timbre: "brass", midi: midiAt(60, (tones[i % n] ?? 0) + Math.floor(i / n) * t.steps, t), velocity: 0.45 + 0.45 * f.score, pan: f.pan, order: 0 }];
+		if (i % 4 === 0) notes.push({ voice: "hooray", timbre: "kick", midi: DRUM_MIDI.kick, velocity: 0.6 + 0.4 * f.score, pan: 0, order: 0 });
+		if (f.score > 0.8 && i >= length - 4) notes.push({ voice: "hooray", timbre: "snare", midi: DRUM_MIDI.snare, velocity: 0.5 + 0.1 * (i - length + 4), pan: 0, order: 0 });
+		if (i === length - 1) tones.forEach((tone, k) => notes.push({ voice: "hooray", timbre: "pad", midi: midiAt(60, tone, t), velocity: 0.5 + 0.4 * f.score, pan: f.pan, order: k }));
+		return notes;
 	}
 
 	touch(t: Touch): void {
@@ -482,8 +519,9 @@ export class Dance {
 	 * degrees and a dictionary pointer moving by words both count steps of the same size: each
 	 * typical change moves the loop's phase by a step and its note one chord tone, up as the
 	 * word grows and down as it shrinks, so a nested call climbs and its return comes back
-	 * down. While the word is changing the loop plays twice as often and louder; the word's size, by powers of
-	 * 64, sets the octave.
+	 * down. While the word is changing the loop plays twice as often and louder; the word's
+	 * size, by powers of 64, sets the octave. A name beginning "left" or "right" is panned that
+	 * way, so two players' words are a duet.
 	 */
 	private listen(watched: readonly Watched[], tones: readonly number[], t: Tuning): Note[] {
 		const notes: Note[] = [];
@@ -495,7 +533,8 @@ export class Dance {
 			const v = signed18(value);
 			if (!w) {
 				const h = hashName(name);
-				w = { len: 3 + (h % 5), at: (h >>> 3) % 7, timbre: WATCH_TIMBRES[(h >>> 6) % WATCH_TIMBRES.length]!, pan: (((h >>> 9) % 9) - 4) / 5, last: v, typical: 0, progress: 0, stirred: 0 };
+				const side = name.startsWith("left") ? -0.7 : name.startsWith("right") ? 0.7 : (((h >>> 9) % 9) - 4) / 5;
+				w = { len: 3 + (h % 5), at: (h >>> 3) % 7, timbre: WATCH_TIMBRES[(h >>> 6) % WATCH_TIMBRES.length]!, pan: side, last: v, typical: 0, progress: 0, stirred: 0 };
 				this.watches.set(name, w);
 			}
 			const delta = signed18(v - w.last);
@@ -528,7 +567,7 @@ export class Dance {
 		const tones = now.tones;
 		const t = this.tuning;
 		const notes: Note[] = this.voices.flatMap((v) => score(v, hits[v.id] ?? [], tones, t));
-		notes.push(...this.listen(watched, tones, t));
+		notes.push(...this.listen(watched, tones, t), ...this.hooray());
 		const map = this.regions;
 		if (map) {
 			map.step(hits[this.voices[0]?.id ?? ""] ?? []);

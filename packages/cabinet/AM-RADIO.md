@@ -230,6 +230,17 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        its share of the CPU's hits and cooling over a few seconds. Each warm region hums a
        chord tone of its own on the bar, as loud as it is warm, so where the machine spends
        its time crossfades slowly instead of flickering with every block.
+     - Finishes: a program can say when a game or round is over (`finish` in
+       cabinet-programs.js), with a score 0 to 1, and the dance plays a hooray: a brass
+       arpeggio climbing the home chord over a kick, more notes, higher and louder the better
+       the score, a snare roll past 0.8, panned toward whoever won. HILO's play-again wait is
+       read from core (`hiloFinished`: getc's return address in waitcr, waitcr's at the JMP
+       GAME after RIGHT), and the fewer the guesses, the bigger the hooray. DUEL's halt, as
+       the halt explainer reads it, is a win to one side or a smaller one for a collision.
+     - DUEL as a duet: no listing survives, so its ships' words were found by holding each
+       control and diffing core (tapes/duel/README.md, `DUEL_SYMBOLS`): position, heading,
+       velocity and torpedoes for each ship. A watched name beginning `left` or `right` pans
+       that way.
      - The Forth demo has DELAY ( n -- ), a loop inside a loop whose number sets how often
        the inner one runs, and a slow squiral that waits `I 1 + DELAY` after each stroke:
        slow the machine down and hear the pauses grow with the spiral.

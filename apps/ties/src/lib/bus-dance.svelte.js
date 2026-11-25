@@ -75,6 +75,11 @@ export class BusDance {
 		this.#dance.regions = new Regions(list);
 	}
 
+	/** A game or round is over: a hooray, 0 barely to 1 best, panned toward the winner. @param {number} score @param {number} [pan] */
+	celebrate(score, pan = 0) {
+		if (this.on) this.#dance.celebrate(score, pan);
+	}
+
 	/** How deep the harmony goes, 0 to 1. @param {number} d */
 	set depth(d) {
 		this.#dance.depth = Math.max(0, Math.min(1, d));

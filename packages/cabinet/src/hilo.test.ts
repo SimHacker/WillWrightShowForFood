@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { assemble } from "./asm.js";
 import { Cabinet } from "./cabinet.js";
-import { assembleHilo, bootHilo, hiloDemo } from "./hilo.js";
+import { assembleHilo, bootHilo, hiloDemo, hiloFinished } from "./hilo.js";
 import { Pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
 import { DemoPlayer } from "./symelec-demo.js";
@@ -126,7 +126,17 @@ test("hilo demo: the scripted operator finds the number", () => {
 	bootHilo(cpu, program);
 	const player = new DemoPlayer(hiloDemo({ cpu, type: (s) => { for (const c of s) tty.type(c.charCodeAt(0) | 0o200); } }, program));
 	let spent = 0;
-	while (!player.done && spent < 20_000_000) spent += player.advance((n) => box.run(n), 20_000);
+	let finished: ReturnType<typeof hiloFinished> = null;
+	let early = false;
+	while (!player.done && spent < 20_000_000) {
+		spent += player.advance((n) => box.run(n), 20_000);
+		const f = hiloFinished(cpu, program);
+		if (f && !/RIGHT/.test(tty.printed())) early = true;
+		finished ??= f;
+	}
 	assert.ok(player.done);
-	assert.match(tty.printed(), /RIGHT\. GUESSES: [1-7]\.\r\n/);
+	const m = /RIGHT\. GUESSES: ([1-7])\.\r\n/.exec(tty.printed());
+	assert.ok(m);
+	assert.ok(!early, "not finished before RIGHT, not at the first wait nor while guessing");
+	assert.equal(finished?.tries, Number(m[1]), "the play-again wait is seen, with the guesses it took");
 });

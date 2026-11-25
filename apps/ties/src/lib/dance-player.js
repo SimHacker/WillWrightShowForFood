@@ -286,6 +286,19 @@ export class DancePlayer {
 				osc('square', 850, bp, shape(0.5 * v, 0.001, 0.025));
 				break;
 			}
+			case 'brass': {
+				const lp = ctx.createBiquadFilter();
+				lp.type = 'lowpass';
+				lp.Q.value = 2;
+				lp.frequency.setValueAtTime(700, t);
+				lp.frequency.linearRampToValueAtTime(2600, t + 0.06);
+				lp.connect(env);
+				const end = shape(0.16 * v, 0.03, 0.45);
+				osc('sawtooth', f, lp, end);
+				osc('sawtooth', f * 1.004, lp, end);
+				osc('square', f / 2, lp, end);
+				break;
+			}
 			// The pen's own: harp, lead, bell and tom are never the machine's instruments.
 			case 'harp': {
 				const end = shape(0.3 * v, 0.002, 1.4);

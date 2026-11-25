@@ -57,4 +57,26 @@ disassembly:
 The cabinet reads it at the halt and puts the result, a running tally
 and a Play again button over the tube, without touching the program.
 
+## Symbols, found by experiment
+
+There is no listing, so the cabinet found the ships' words the way you
+would with a front panel: boot, run a while, hold one control down, and
+compare core with a run that held nothing. What moves is that control's.
+Turning first and then thrusting found the y velocities. `DUEL_SYMBOLS`
+in `src/duel.ts` names them; the memory panel shows the names and the bus
+dance plays them as a duet, each ship's words panned to its side.
+
+| Left ship | Right ship | What moves it |
+|---|---|---|
+| 1471 `left-x`, 1472 `left-y` | 1514 `right-x`, 1515 `right-y` | thrust |
+| 1664 `left-heading` | 1662 `right-heading` | turning, by one a step |
+| 1511, 1512 | 1534, 1535 | turning: the heading as a direction pair |
+| 1673 `left-vx`, 1675 `left-vy` | 1667 `right-vx`, 1671 `right-vy` | thrust, with 1656/1657 and 1654/1655 moving alongside, likely the fractions |
+| 1142 `left-torpedo` | 1144 `right-torpedo` | fire |
+
+Fire also writes the shared torpedo list at 1537/1540 through the pointer
+at 1146 (`torpedo-next`). These are names for what the words do, read off
+their behavior; a disassembly with comments, reassembled to the same
+words, would confirm them and name the rest.
+
 ↑ [cabinet README](../../README.md)

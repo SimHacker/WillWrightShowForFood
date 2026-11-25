@@ -21,6 +21,27 @@ export const DUEL_START = 0o4000;
 /** The round-over flag: 717 halts at 721 once it is nonzero. */
 export const DUEL_HIT = 0o1157;
 
+/**
+ * Symbols found by experiment, not from a listing (there is none): hold one control down,
+ * diff core against a run without it, and see which words move (tapes/duel/README.md).
+ */
+export const DUEL_SYMBOLS: readonly (readonly [string, number])[] = [
+	["left-x", 0o1471],
+	["left-y", 0o1472],
+	["left-heading", 0o1664],
+	["left-vx", 0o1673],
+	["left-vy", 0o1675],
+	["right-x", 0o1514],
+	["right-y", 0o1515],
+	["right-heading", 0o1662],
+	["right-vx", 0o1667],
+	["right-vy", 0o1671],
+	["left-torpedo", 0o1142],
+	["right-torpedo", 0o1144],
+	["torpedo-next", 0o1146],
+	["hit", DUEL_HIT],
+];
+
 export type DuelResult = "left" | "right" | "draw";
 
 /** Who won the round, read from the flag the program left behind; null if no round has ended. */
