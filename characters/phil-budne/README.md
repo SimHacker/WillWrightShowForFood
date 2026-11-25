@@ -123,8 +123,14 @@ KA10 over an acoustic coupler, ITS as BUDD ("a typo that stuck"), BU's 2060 unti
 - XY display simulation is on his own list of lost causes, and it's how Cabinet's 340 exists.
   What would he still change about it?
 - LIL and Finger: what draws him to the small, overlooked tools?
-- His VT52 keyclick file: should Cabinet's terminals (the Videx on the Apple II, the 340's
-  keyboard) click?
+- His VT52 keyclick and buzzer sound file. Don's 1986 H19 terminal for the Apple ][, written in
+  his ProDOS Forth, plays a different sound for each kind of key (Escape, space, Delete, control
+  characters, digits, capitals, lowercase, the rest), so you can hear what you are typing. It
+  runs in the browser: the **Terminal** start of
+  [Don's ProDOS Forth](https://hyperties.org/cabinet/languages/don-hopkins-prodos-forth/)
+  ([how it works](../don-hopkins/artifacts/Apple2Forth/README.md)). The source for those words is
+  lost, and Don plans to decompile the saved image back into Forth. Should Cabinet's other
+  terminals, the PDP-7 Teletype and the Apple's Videx 80-column screen, have the VT52's click?
 
 - How did the Type 340 emulator's boundary between processor semantics,
   phosphor/display behavior, and host glue make the code useful across several

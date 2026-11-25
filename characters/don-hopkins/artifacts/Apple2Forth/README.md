@@ -53,6 +53,17 @@ with it held goes out with bit 7 set. Button 1 (`$C062`) is the command shift: t
 | Space | `UNDER-CUR` |
 | arrows (Ctrl-H, J, K, U) | `LEFT`, `DOWN`, `UP`, `RIGHT` |
 
+**Key sounds.** The terminal plays a different sound on the Apple's speaker for each kind of
+character you type, so you can hear what you are typing. `PCL` picks the sound by the
+character's range: `PCL-ESC` for Escape, `PCL-BL` for space, `PCL-DEL` for Delete, `PCL-CTRL` for
+other control characters, `PCL-DIGIT` for `0`-`9`, `PCL-CAPA` for `A`-`Z`, `PCL-LC` for `a`-`z`,
+and `PCL-OTHER` for the rest. `ON-SOUND` and `OFF-SOUND` turn it on and off, `BOOL-SOUND` holds the
+setting, and `ERROR-SOUND` is the sound for an undefined command key. These words are only in the
+saved `H19.SYSTEM` image: their source is not in `BLOCKS.4TH`, and the rest of the terminal's
+source is lost too. The plan is to disassemble and decompile `H19.SYSTEM` back into Forth source.
+It runs in the cabinet: the [Don's ProDOS Forth](https://hyperties.org/cabinet/languages/don-hopkins-prodos-forth/)
+cartridge's **Terminal** start boots into the terminal, and typing plays the sounds.
+
 Block 23's simpler terminal `t` quits on Ctrl-\ (character 28); `term` sends Ctrl-\ down the
 line. The Videx Soft Video Switch follows annunciator 0
 unless a graphics mode is on: a reference to `$C059` shows the Videx's 80 columns, `$C058` the
