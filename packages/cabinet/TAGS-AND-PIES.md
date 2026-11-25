@@ -92,7 +92,7 @@ counted-string tag, leaves it alone. DJS saves the style with the tag and the re
 it, so a subroutine can color its own drawing. `IDLA` restores the default. The style multiplies
 what the display code already says: the 340's intensity levels and SYMELEC's blinking still
 apply, and the window's own color and intensity
-([TINY-TITAN.md](TINY-TITAN.md#the-340-as-compositor)) apply on top.
+([how 340-Windows combine several machines on one screen](340-WINDOWS.md#one-340-for-many-machines)) apply on top.
 
 **The default is the original.** No 1972 program issues a DTG, so SYMELEC, LP370 and Mitch's
 turtle draw exactly as they did, in green phosphor. Color and the effects are there for programs

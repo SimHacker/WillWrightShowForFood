@@ -1,7 +1,8 @@
 # Roadmap: what the bench needs next, in order
 
 Everything designed in the 2026-10-02 session with Heinz's feedback in hand, sorted and
-deduplicated. Where a design already has a home it is linked, not repeated:
+deduplicated, and the November 2026 plans for the tools, Forth hardware and 340-Windows (rows 19
+to 25). Where a design already has a home it is linked, not repeated:
 [TAGS-AND-PIES.md](TAGS-AND-PIES.md) owns the tag word, focus and pies;
 [TINY-ITS.md](TINY-ITS.md) owns the command language; [TRACKING.md](TRACKING.md) owns the
 1972 tracking machinery. This file owns the order, and the designs that had no home.
@@ -28,6 +29,13 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 16 | Forth turtle with a 340 and a PIXIE back end; Forth symbols as subpictures; drag a vertex on the tube | Forth drawings PIXIE can edit; needs serve-back and the element decode | [DESIGN.md](DESIGN.md#the-application-layer-packagespixie-separate-module) |
 | 17 | Cartridges as files: build cache, `parents` and mixins, eggs, live decode, GitHub commits and PRs, CI | many programs from one Forth; edits that end up deployed | [CARTRIDGES.md](CARTRIDGES.md#8-order-of-work) |
 | 18 | Turtle programming by demonstration, after CADroid's `?[ ][ ]` | drag and key the turtle, get Forth; loops and branches by acting out the first pass | [§16](#16-programming-the-turtle-by-demonstration) |
+| 19 | The assembler core: MIDAS macros, relocations, a linker across dialects, the 340 as a front end, source maps with columns and tiers | every tool below shares it | [ASSEMBLERS.md, Next](ASSEMBLERS.md#next) |
+| 20 | Don's Apple ][ Forth, decompiled back to source with a 6502 macro assembler | the source is lost; only the saved image survives | [Apple2Forth: getting the source back](../../characters/don-hopkins/artifacts/Apple2Forth/README.md#plan-getting-the-source-back) |
+| 21 | 340-Windows: views of a machine's memory, drawn by your own 340, local first, then over tiny-titan | remote displays, shared screens, embedded apps | [340-WINDOWS.md, order of work](340-WINDOWS.md#what-is-built-and-the-order-of-work) |
+| 22 | Color on the 340: a style extension to the tag word, Forth `COLOR`, a drawing program where switching pens switches color | needs the tag word from row 10; the default stays green | [TAGS-AND-PIES.md, style](TAGS-AND-PIES.md#style-color-and-intensity-planned) |
+| 23 | The Korz IDE from the Onward! 2014 paper: slot views, objects as projections, navigation by dimension, the why browser | the inspector is read-only today | [KORZ-INSPECT.md, the Korz IDE](KORZ-INSPECT.md#the-korz-ide-in-the-paper-and-what-it-takes-here) |
+| 24 | Mitch's metacompiler in TypeScript on Korz; a Forth CPU device for the display terminal | after the linker (row 19) | [ASSEMBLERS.md, the metacompiler](ASSEMBLERS.md#mitchs-metacompiler-in-typescript-on-korz) |
+| 25 | Other Forth hardware: a Novix NC4016 running cmForth, a GA144 running arrayForth | after the Forth device is stable | [FORTH-DEVICE.md, other Forth hardware](FORTH-DEVICE.md#other-forth-hardware) |
 
 Odds and ends are in [§14](#14-small-items).
 

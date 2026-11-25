@@ -88,6 +88,17 @@ few metadata fields connect them. The cabinet's package is called a cartridge.
   [KORZ-MACHINES.md](KORZ-MACHINES.md) is a note addressed to David Ungar, Randall Smith, Alan
   Kay, Lars Brinkhoff, Bob Supnik and others. The same TypeScript runs in Node and in the
   browser.
+- [ASSEMBLERS.md: three PDP-7 assemblers on one core](ASSEMBLERS.md): built for the DEC, Cambridge
+  and `as7` dialects, with listings and source maps down to the scanned printout. Planned: MIDAS's
+  macros, a linker across dialects and instruction sets, Mitch's metacompiler on Korz, and a 6502
+  macro assembler to recover Don's Apple ][ Forth.
+- [340-WINDOWS.md: views of a machine's memory, drawn by your own 340](340-WINDOWS.md): planned.
+  Map another machine's display segments into your own core by symbol, run them on your own
+  Type 340, handle the pen locally in Forth, write edits back, and show several machines on one
+  screen.
+- [KORZ-INSPECT.md: inspecting Korz](KORZ-INSPECT.md): the read-only tree of seas, slots and
+  compiled blocks that is built, and a plan for the IDE that Ungar, Ossher and Kimelman describe
+  in their 2014 Korz paper.
 - [MAPPING.md: shared memory between machines](MAPPING.md): planned, after MIT's Rubin 10/11
   interface, which let the AI Lab's PDP-10 map PDP-11 memory and device registers into its own
   address space. [CORE-LINKS.md](CORE-LINKS.md) extends it to machines that disagree on word

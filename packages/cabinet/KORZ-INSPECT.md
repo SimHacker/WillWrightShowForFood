@@ -105,7 +105,7 @@ cache keeps 1,024 blocks and evicts the oldest: 6,597 built for 1,024 kept, the 
    object per coordinate value with its slots as methods. `Sea.view` and the standings computed for
    "wins" are the pieces; what is missing is choosing the dimensions, which also waits for layout.
 4. **Hit counts.** An observe-layer slot installed on demand counts dispatches per table entry and
-   keeps the last context; removed, it costs nothing. It sees the sea's dispatches, which under the
+   keeps the last context; removed, it adds no work to dispatch. It sees the sea's dispatches, which under the
    compiler are only the blocks it could not build, so blocks keep their own counts.
 5. **More per block.** Exits by successor address (a Map update per call, so on demand), why a
    block ended (store, untemplated opcode, branch, length), and the guest instruction beside each

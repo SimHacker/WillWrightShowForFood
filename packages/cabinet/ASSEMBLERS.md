@@ -2,9 +2,11 @@
 
 Several assemblers share one back end, as GNU's BFD shares one object library between many
 front ends. What is shared is everything after parsing: the assembled words, the symbol table,
-the source map, the loaders and the listings. Each language keeps its own parser. The plan and its
-reasons are in [DESIGN.md](DESIGN.md#assemblers-several-front-ends-one-back-end); this page is
-what exists.
+the source map, the loaders and the listings. Each language keeps its own parser. The reasons are
+in [DESIGN.md](DESIGN.md#assemblers-several-front-ends-one-back-end). This page describes what
+exists, then the plan for the tools still to build: [macros from MIDAS, a linker, source maps and
+one core for every tool](#plan-macros-from-midas-and-one-core-for-every-tool), and the order of
+work in [Next](#next).
 
 ```
             front ends                    back end                    writers
@@ -12,7 +14,7 @@ what exists.
   │ asm/dec.ts               │     │ asm/core.ts         │     │ asm/listing.ts       │
   │   DEC_1964 (1964)        │ ──▶ │   AsmResult         │ ──▶ │   1972 house style   │
   │   CAMBRIDGE_1972 (1972)  │     │   Machine           │     │ source.ts            │
-  │ as7 (next)               │     │   loadAsm           │     │   memory panel views │
+  │ asm/as7.ts               │     │   loadAsm           │     │   memory panel views │
   │ 6502 (later)             │     │ asm/pdp7.ts         │     │ formatListing        │
   └──────────────────────────┘     │   PDP7 + opcodes    │     │   plain              │
                                    └─────────────────────┘     └──────────────────────┘
@@ -201,7 +203,9 @@ machine, rebuilding takes a fraction of a second.
 
 ## Plan: macros from MIDAS, and one core for every tool
 
-**One Forth source, several builds.** The goal is a single PDP-7 assembly source for Forth in
+### One Forth source, several builds
+
+The goal is a single PDP-7 assembly source for Forth in
 which every word is defined by a macro, and the macro's implementation is a separate file you
 choose at build time. One implementation file lays down Mitch's headers (three characters and a
 count), another full names, another names in bank 1, another no headers at all. Other files can
@@ -209,7 +213,9 @@ turn the same definitions into other things a metacompiler does: Forth words tha
 library routines natively, such as RSPPIX's ring routines, or wrappers that make an existing PDP-7
 library callable from Forth.
 
-**Macros from a bigger assembler.** The PDP-7's own assemblers had little or no macro facility.
+### Macros from MIDAS
+
+The PDP-7's own assemblers had little or no macro facility.
 MIDAS, the PDP-10 assembler ITS was written in, has a full one: `DEFINE` … `TERMIN`, repeats,
 `IRP` over argument lists, and conditionals. The plan is to bring those macros back to the PDP-7,
 in the shared layer, so all three front ends (DEC 1964, Cambridge 1972 and `as7`) get them at once,
@@ -221,17 +227,20 @@ versions), [`doc/info/midas.26`](https://github.com/PDP-10/its/blob/master/doc/i
 [`doc/hello-midas.md`](https://github.com/PDP-10/its/blob/master/doc/hello-midas.md). DEC's MACRO-10
 and Stanford's FAIL are the other PDP-10 assemblers to study.
 
-**One core, independent of the instruction set.** Everything above the parser should be shared
+### One core, independent of the instruction set
+
+Everything above the parser should be shared
 by every assembler and every tool, for every machine:
 
 - the machine description: word size, address size, radix, opcodes and operand fields;
 - expressions, the symbol table, literal pools, macros and conditionals;
-- listings, and the source map: each memory address to the source line that made it, to the
-  listing line, and to the rectangles of that line on a scanned page of the original printout
-  ([`src/source.ts`](src/source.ts), `ScanRect`), and through shared addresses to translations of
-  the same program, such as the Cambridge source translated to `as7`.
+- listings, and the source maps from each memory address to the lines that made it, the
+  listing, and the scanned printout ([Source maps of several types, in
+  tiers](#source-maps-of-several-types-in-tiers)).
 
-**Several dialects and instruction sets in one build.** Today, mixing dialects means translating
+### Several dialects and instruction sets in one build
+
+Today, mixing dialects means translating
 first: SYMELEC (5,341 source lines) and RSPPIX, PIXIE's separate ring structure processor (727
 lines), are in the Cambridge dialect, so [Cambridge to as7](#cambridge-to-as7) translates them to
 `as7` and RSPPIX is assembled together with Mitch's `kernel.s` in one `as7` run. The plan is an
@@ -241,10 +250,12 @@ dialects, the Type 340's display instructions, the 6502, and Forth source for th
 Apple ][. A device's instruction set is then a front end like any other, so the 340's display
 code can be assembled alongside the code of whichever CPU drives it, the PDP-7 or the KA10,
 without the 340 being built into either architecture. With no CPU at all, a cabinet of memory, a
-340 and a tiny-titan port is a remote display server, serving 340-Windows
-([TINY-TITAN.md](TINY-TITAN.md#340-windows-a-340-without-a-cpu-as-a-remote-display-server)).
+340 and a tiny-titan port is a display server
+([340-WINDOWS.md: views of a machine's memory, drawn by your own 340](340-WINDOWS.md)).
 
-**Mitch's metacompiler, in TypeScript, on Korz.** Mitch's Forths, from Sun Forth and Forthmacs
+### Mitch's metacompiler, in TypeScript, on Korz
+
+Mitch's Forths, from Sun Forth and Forthmacs
 to Open Firmware and CForth, descend from Laxen and Perry's F83, and they build themselves with a
 metacompiler: Forth code that compiles a new Forth image for a target machine. The plan is to
 reimplement that metacompiler in TypeScript on Korz, the same model that defines the cabinet's
@@ -254,7 +265,9 @@ compiler that outputs JavaScript shaped for the browser's and Node's own JIT to 
 code, so the metacompiler can also decide which words become [device
 instructions](FORTH-DEVICE.md#primitives-as-instructions) the JIT-compiled code calls directly.
 
-**A linker, and one object format, after BFD.** The multi-source build's main loop is: place a
+### A linker, and one object format, after BFD
+
+The multi-source build's main loop is: place a
 segment at `HERE`, relocate it, advance `DP` past it, repeat. For that the assembler core
 (`AsmResult` in [core.ts](src/asm/core.ts): words, symbols, literals, variables, listing, start)
 has to output more than it does:
@@ -271,31 +284,6 @@ has to output more than it does:
 - **Entry points.** The start address, the 340's display start, the handlers a view names.
 - **A memory map.** What went where, its symbols and its source map, readable by the debugger,
   the views and the linker for the next segment.
-- **Source maps of several types, in tiers.** A map takes an address to a place, and places chain:
-  address → file, line and column → the line's scan image and bounding box → the page in the
-  archive. Built in [source.ts](src/source.ts): several maps over one image (`listing`, `source`,
-  `translation`, `intermediate`, `doc`), joined through the addresses they share, and each line's
-  file, line number, scan page and rectangles on the scan (`ScanPlace`). To add:
-  - **Columns,** so a map points at the operand or the symbol, not only the line.
-  - **Tiers of generation.** A word assembled from a macro expansion maps to the expansion, the
-    macro's definition and the line that called it; a translated line maps to its `as7` and to
-    its Cambridge original; a Forth word maps to its source and to the threaded code it compiled to.
-  - **Other targets.** A 340 stroke maps to the display word that drew it (built: every
-    `Segment` has its `addr`), then on through the tiers; a transcription line maps to its OCR
-    passes; a word in a snapshot maps to the cycle that wrote it.
-  - **JavaScript source maps for the JIT, as an option, off by default.** Korz compiles PDP-7
-    code to JavaScript; with standard source maps the browser's own debugger can step through a
-    compiled block and show the PDP-7 source line each part came from. Most of it is there:
-    each block is already a named function (`//# sourceURL=korz7/blk-<octal>.js` in
-    [compile7.ts](src/korz/compile7.ts)) that keeps its text in `block.source`; the compiler
-    emits each instruction's code as its own lines and knows the instruction's address while it
-    does; and `source.ts` maps an address to its line. To add: record address per generated line,
-    encode the map (VLQ, about 30 lines, no dependency) and append it inline with the source text
-    in `sourcesContent`. Two cautions: `new Function` puts a header before the body, which
-    shifts line numbers and must be tested in each browser; and the debugger shows text, so the
-    scan rectangles stay in the cabinet's own views. Off by default because each map costs
-    encoding time and memory on every block compiled. `compile65.ts` needs the same, starting
-    with a `sourceURL`.
 - **Load formats.** One in-memory object, written out as each machine loads: `.oct` (read
   today, `loader.ts`), RIM paper tape, ProDOS files for the Apple ][, ITS `SBLK` for the PDP-10.
 
@@ -304,13 +292,46 @@ one back end per file format, so the linker, `objdump` and the debugger don't ca
 a file came from. Here the in-memory form is the assembler core's object, and the back ends are
 the load formats and the machines' memories.
 
-**The compiler can be a device in the build.** A cartridge's build can mount a Forth device and
+### Source maps of several types, in tiers
+
+A map takes an address to a place, and places chain:
+address → file, line and column → the line's scan image and bounding box → the page in the
+archive. Built in [source.ts](src/source.ts): several maps over one image (`listing`, `source`,
+`translation`, `intermediate`, `doc`), joined through the addresses they share, and each line's
+file, line number, scan page and rectangles on the scan (`ScanPlace`). To add:
+
+- **Columns,** so a map points at the operand or the symbol, not only the line.
+- **Tiers of generation.** A word assembled from a macro expansion maps to the expansion, the
+  macro's definition and the line that called it; a translated line maps to its `as7` and to
+  its Cambridge original; a Forth word maps to its source and to the threaded code it compiled to.
+- **Other targets.** A 340 stroke maps to the display word that drew it (built: every
+  `Segment` has its `addr`), then on through the tiers; a transcription line maps to its OCR
+  passes; a word in a snapshot maps to the cycle that wrote it.
+- **JavaScript source maps for the JIT, as an option, off by default.** Korz compiles PDP-7
+  code to JavaScript; with standard source maps the browser's own debugger can step through a
+  compiled block and show the PDP-7 source line each part came from. Most of it is there:
+  each block is already a named function (`//# sourceURL=korz7/blk-<octal>.js` in
+  [compile7.ts](src/korz/compile7.ts)) that keeps its text in `block.source`; the compiler
+  emits each instruction's code as its own lines and knows the instruction's address while it
+  does; and `source.ts` maps an address to its line. To add: record address per generated line,
+  encode the map (VLQ, about 30 lines, no dependency) and append it inline with the source text
+  in `sourcesContent`. Two cautions: `new Function` puts a header before the body, which
+  shifts line numbers and must be tested in each browser; and the debugger shows text, so the
+  scan rectangles stay in the cabinet's own views. Off by default because each map costs
+  encoding time and memory on every block compiled. `compile65.ts` needs the same, starting
+  with a `sourceURL`.
+
+### The compiler can be a device in the build
+
+A cartridge's build can mount a Forth device and
 use it to compile Forth source into a segment, or mount a PDP-7 CPU and run a PDP-7 program
 that writes one, as `tape-compile` already compiles Forth on the emulated machine
 ([CARTRIDGES.md](CARTRIDGES.md#2-build-steps-and-the-cache)). Either way the output is the same
 object: words, symbols, relocations, source map.
 
-**A 6502 macro assembler**, on the same core, is how Don's Apple ][ Forth gets its source back
+### A 6502 macro assembler
+
+A 6502 macro assembler on the same core is how Don's Apple ][ Forth gets its source back
 ([Apple2Forth](../../characters/don-hopkins/artifacts/Apple2Forth/README.md)): disassemble and
 decompile `H19.SYSTEM`, then write it as macro source that reassembles to the same bytes. The
 header macros have to handle the 6502's indirect jump bug: `JMP (addr)` with `addr` at `$xxFF`
@@ -348,3 +369,17 @@ symbols and listings without each building its own.
 8. **Profiles into the build**: per-instruction and per-word counts from the emulator, written
    next to the source, and the first transformations that read them (inlining, headerless words)
    ([Macrology driven by measurement](#macrology-driven-by-measurement)).
+9. **MIDAS's macros in the shared layer**, for all three PDP-7 front ends
+   ([Macros from MIDAS](#macros-from-midas)), then a MIDAS front end.
+10. **Relocations, imports and exports in `AsmResult`**, and the place-relocate-advance loop
+    across files of different dialects ([A linker, and one object format, after
+    BFD](#a-linker-and-one-object-format-after-bfd);
+    [Several dialects and instruction sets in one build](#several-dialects-and-instruction-sets-in-one-build)).
+11. **The 340's display instructions as a front end**, so display code assembles beside the CPU's
+    and [340-Windows](340-WINDOWS.md) can relocate it.
+12. **Columns and generation tiers in the source maps**, then JIT source maps as an option
+    ([Source maps of several types, in tiers](#source-maps-of-several-types-in-tiers)).
+13. **The 6502 macro assembler and the decompiler**, to get Don's Apple ][ Forth source back
+    ([the plan for getting the source back](../../characters/don-hopkins/artifacts/Apple2Forth/README.md#plan-getting-the-source-back)).
+14. **The metacompiler on Korz**, after the linker exists
+    ([Mitch's metacompiler, in TypeScript, on Korz](#mitchs-metacompiler-in-typescript-on-korz)).
