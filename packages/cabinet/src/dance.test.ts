@@ -256,3 +256,18 @@ test("a watched word that shrinks comes back down", () => {
 	assert.ok(Math.max(...heard) > heard[0]!, "it climbs as the stack fills");
 	assert.equal(heard.at(-1), heard[0], "and is home again when it empties");
 });
+
+test("lydian keeps the tritone over the tonic, and jazz's full tension is the tritone substitution", () => {
+	const d = new Dance(PDP7_VOICES);
+	d.style = "lydian";
+	for (let bar = 0; bar < 4; bar += 1) {
+		assert.ok(d.chord.tones.includes(6), `${d.chord.name} has the raised fourth`);
+		for (let s = 0; s < 16; s += 1) d.beat({});
+	}
+	const j = new Dance(PDP7_VOICES);
+	j.style = "jazz";
+	j.touch({ kind: "press" });
+	j.touch({ kind: "drag", distance: 3000 });
+	assert.equal(j.chord.name, "bII7");
+	assert.equal((j.chord.root + 12 - 7) % 12, 6, "a tritone from the dominant it stands for");
+});

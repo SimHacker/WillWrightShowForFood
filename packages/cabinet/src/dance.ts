@@ -46,10 +46,11 @@ export type Note = {
 };
 
 /**
- * `straight` is triads in even sixteenths; `jazz` is seventh chords, swung, on a ride; `bp` is
+ * `straight` is triads in even sixteenths; `jazz` is seventh chords, swung, on a ride;
+ * `lydian` rocks between I and II with the tritone over the tonic; `bp` is
  * Bohlen-Pierce: 13 steps of the tritave, odd harmonics, in bars of 13.
  */
-export type Style = "straight" | "jazz" | "bp";
+export type Style = "straight" | "jazz" | "lydian" | "bp";
 
 /** A tuning: `steps` equal steps of the interval `period` (2, the octave; 3, the tritave). */
 export type Tuning = { readonly steps: number; readonly period: number };
@@ -205,6 +206,15 @@ export const TURNAROUND: readonly Chord[] = [chord("ii7", 2, 5, 9, 12), chord("V
 /** Where tension takes the harmony: the dominant, then the dominant with its seventh and flat ninth. */
 export const DOMINANT = chord("V7", 7, 11, 14, 17);
 export const DOMINANT_B9 = chord("V7b9", 7, 11, 14, 17, 20);
+/**
+ * The devil's interval, the tritone, six semitones. Lydian is major with its fourth raised a
+ * tritone above the tonic, the bright, slightly wrong-footed sound of the Simpsons theme. The
+ * vamp rocks between I, its raised fourth added, and II major, whose third is that fourth.
+ */
+export const LYDIAN_I = chord("I#11", 0, 4, 6, 7, 11);
+export const LYDIAN: readonly Chord[] = [LYDIAN_I, chord("II", 2, 6, 9), LYDIAN_I, chord("II7", 2, 6, 9, 12)];
+/** Jazz's tritone substitution: D flat 7 for G7, its root a tritone away, sliding down a half step home. */
+export const TRITONE_SUB = chord("bII7", 1, 5, 8, 11);
 
 /**
  * Kees van Prooijen's major, in steps of BP13: built as just major is from triads on the tonic,
@@ -358,7 +368,7 @@ export class Dance {
 	constructor(readonly voices: readonly Voice[]) {}
 
 	get progression(): readonly Chord[] {
-		return this.style === "jazz" ? TURNAROUND : this.style === "bp" ? BP_CADENCE : POP;
+		return this.style === "jazz" ? TURNAROUND : this.style === "lydian" ? LYDIAN : this.style === "bp" ? BP_CADENCE : POP;
 	}
 
 	get tuning(): Tuning {
@@ -374,7 +384,7 @@ export class Dance {
 	get chord(): Chord {
 		const bp = this.style === "bp";
 		if (this.resolving) return bp ? BP_I : this.progression[this.style === "jazz" ? 2 : 0]!;
-		if (this.tension >= 0.8) return bp ? BP_V : DOMINANT_B9;
+		if (this.tension >= 0.8) return bp ? BP_V : this.style === "jazz" ? TRITONE_SUB : DOMINANT_B9;
 		if (this.tension >= 0.4) return bp ? BP_V : DOMINANT;
 		const p = this.progression;
 		return p[Math.floor((this.step - this.home) / this.bar) % p.length]!;

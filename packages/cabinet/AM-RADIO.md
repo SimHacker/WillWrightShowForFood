@@ -162,6 +162,11 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
          resolves to the tonic on the next beat with a kick, and the progression starts over.
          A light touch fades back without resolving.
        - On the Apple, the mouse on the screen stands in for the pen.
+     - LYDIAN, the devil's interval: major with its fourth raised a tritone above the tonic,
+       the mode of the Simpsons theme. The vamp rocks between I with the raised fourth added
+       and II major, whose third is that fourth, then II7. In JAZZ, full pen tension now takes
+       the tritone substitution, D flat 7 for G7, and lifting the pen slides it down a half
+       step home.
      - BOHLEN-PIERCE: 13 equal steps of the 3:1 tritave, which [Kees van
        Prooijen](https://www.kees.cc/music/scale13/scale13.html) ("13 tones in the 3rd
        harmonic") found in the seventies about when Heinz Bohlen and John Pierce did; it is
