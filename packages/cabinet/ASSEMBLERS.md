@@ -240,7 +240,9 @@ type, and assembles them into one image with one symbol table and one source map
 dialects, the Type 340's display instructions, the 6502, and Forth source for the PDP-7 and the
 Apple ][. A device's instruction set is then a front end like any other, so the 340's display
 code can be assembled alongside the code of whichever CPU drives it, the PDP-7 or the KA10,
-without the 340 being built into either architecture.
+without the 340 being built into either architecture. With no CPU at all, a cabinet of memory, a
+340 and a tiny-titan port is a remote display server
+([TINY-TITAN.md](TINY-TITAN.md#a-340-without-a-cpu-a-remote-display-server)).
 
 **Mitch's metacompiler, in TypeScript, on Korz.** Mitch's Forths, from Sun Forth and Forthmacs
 to Open Firmware and CForth, descend from Laxen and Perry's F83, and they build themselves with a

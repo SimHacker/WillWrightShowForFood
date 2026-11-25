@@ -345,6 +345,35 @@ Remote control of the cabinet needs no console protocol. The Cabinet is a TS obj
 examine and deposit ride the same socket in a dozen lines. The link carries drawings, and the
 bench's socket carries control of the machine.
 
+### A 340 without a CPU: a remote display server
+
+The Type 340 doesn't need the PDP-7 to draw. It fetches its display list from core and runs it;
+the CPU only writes the list and starts it with an IOT. If the [multi-dialect
+assembler](ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool) treats 340 display
+code as its own instruction set, a cabinet can be configured with no CPU at all: some memory, a
+340 and a tiny-titan port. Display code arrives over the link, already assembled or as source for
+the 340 front end, is deposited in core, and the link starts the display. That is a headless
+display server: it draws whatever it is sent.
+
+The light pen goes the other way. A pen event from a client (the `pen` session event above) moves
+the pen; when the 340 hits it, the hit (the display address and the beam position) goes back
+over the link to whoever asked, as a message, so the program that sent the display list handles
+the pen without being on the same machine.
+
+This is how displays work across browsers with one server in Node, shared by several people:
+
+- **A view is a 340 pointed at memory.** Anyone can open a remote 340 view on any region of a
+  machine's core, or on a list of display lists, the way the real 340 could be started at any
+  address. Several people can watch the same display, or different parts of one machine.
+- **Views compose.** A view can draw from several providers at once: display lists from different
+  machines, from a running SYMELEC and a Forth turtle, from a recording, each a stream of 340
+  instructions the view interleaves.
+- **The source map comes along.** Display code assembled by the shared core carries its source
+  map, so a view can show which line of which file drew each stroke.
+- **Writing follows the same rule as everything else.** Watching is open; sending display code or
+  pen events to a machine is scoped to its owner and the people they invite
+  ([Services](#services)).
+
 ### tiny-bus: the backplane between machines
 
 tiny-titan grows into tiny-bus: the bus that every command, event, source and sink in the bench
