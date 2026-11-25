@@ -6,8 +6,8 @@ Don Hopkins, November 2026
 This is the long way round: a tour of the source code of the whole cabinet, port by port, from the
 CPU to the compiler, for people who want to read the code itself.
 
-The cabinet is meant to be read. The point of it is to learn how these things work, and to teach
-them, by reading the code: a 1965 computer, its devices, and the dispatch and compiling machinery
+The cabinet is meant to be read. It is for learning and teaching how these things work by reading
+the code: a 1965 computer, its devices, and the dispatch and compiling machinery
 of a dynamic language, each small enough to hold in your head. So this tour is for:
 
 - **TypeScript programmers** who want to see what you can get out of V8 by generating code with
@@ -70,12 +70,11 @@ the browser, and the tests drive it in Node. The layers, from the bottom:
 can check by reading it beside the manual, and a fast or clever version you can't check that way.
 The tests run both on the same input, side by side, and stop at the first instruction where they
 disagree, naming it. The simple version is called the **oracle**: the one whose answer counts.
-This is why you can trust a compiler that generates JavaScript on the fly. It isn't trusted
-because it looks right; it's checked against something that obviously is, millions of
-instructions at a time. And when you change something, the oracle tells you within seconds what
+That is how a compiler that generates JavaScript on the fly is checked: against something that is
+obviously right, millions of instructions at a time. And when you change something, the oracle tells you within seconds what
 you broke and where.
 
-The cabinet is a ladder of oracles, each rung checking the next:
+The cabinet has a chain of oracles, each checking the next:
 
 - SIMH's C code is the oracle for `Pdp7`, the CPU as switch statements.
 - `Pdp7` is the oracle for the Korz interpreter, the interpreter for the Korz resolver, and the
@@ -303,8 +302,8 @@ bus to whatever device is plugged in at that number, and if nothing is, it does 
 
 ## Port 2: the bus
 
-[`src/bus.ts`](src/bus.ts) is the smallest file on the tour and the one everything else agrees on.
-Its first line is a rule:
+[`src/bus.ts`](src/bus.ts) is the smallest file on the tour, and every other part is written
+against it. Its first line is a rule:
 
 ```ts
 /** What a CPU puts on the I/O bus. Devices do not see the ISA. */
@@ -320,7 +319,7 @@ word means. The rule says a device never decodes instructions. It sees only the 
 an `Iot`, so the same device could sit beside a different CPU.
 
 Port 1 took `KRB` apart. On the bus, an IOT is just those three numbers: the device code, the
-pulse bits, and AC, which goes along for the ride. The device answers with a new AC and,
+pulse bits, and AC. The device answers with a new AC and,
 optionally, "skip the next instruction", which is how `KSF` asks whether a key is waiting.
 
 A device is anything with a name, a list of the codes it answers, and an `iot` method. The rest is
@@ -346,13 +345,13 @@ export interface Device {
 }
 ```
 
-`nextEvent` is the interesting one. It asks the device: how many cycles until you next do
+`nextEvent` asks the device: how many cycles until you next do
 something anyone could see? Raise a flag, write core, print a character. Port 3 is what the
 backplane does with the answer.
 
 The CPU side is just as plain: `step()`, `read`, `write`, `skip`, `reset`, and a `pc` and `ac`. A
-CPU that can run many instructions between device events implements `runBatch`, and that's the
-door the compiler comes in by, at Port 10.
+CPU that can run many instructions between device events implements `runBatch`, which is how the
+compiler (Port 10) plugs in.
 
 ## Port 3: the backplane, and time
 
@@ -437,7 +436,7 @@ private readonly beforeWrite = (addr: number): void => {
 
 Look at `point`. Within one cycle the CPU runs first, then the devices in order. A write by device
 j at cycle s must be seen by the devices after j from cycle s, and by those before j from s + 1.
-That one line is the whole ordering rule.
+The `point` line implements that ordering rule.
 
 Every test that runs a real program checks the event-driven backplane against `everyCycle: true`.
 Both must agree on every register at every step.
@@ -451,7 +450,7 @@ up, inspect, and compile. Both are kept, so the tests can run a program once thr
 once through the slots, and fail at the first IOT where the two disagree. If you write a device,
 write `iot()` first: it's short, and it tells you when your slots are wrong.
 
-**The clock** ([`clock.ts`](src/plugins/clock.ts)) shows how much of the PDP-7's personality lives in
+**The clock** ([`clock.ts`](src/plugins/clock.ts)) shows how much of the PDP-7's state lives in
 core. The line clock doesn't keep a counter of its own. Each tick, sixty times a second, it adds
 one to location 7, and raises its flag when that overflows to zero. So a program sets the period of
 its next interrupt by storing a negative number in location 7, and SYMELEC does exactly that to set
@@ -522,7 +521,7 @@ coreWrite(addr: number, _point: number): boolean {
 
 If the CPU writes a word the 340 read ahead, `coreWrite` says so, and the backplane rolls the 340
 back to the snapshot and replays it to the write. A program that edits its display file while the
-340 draws it, which is what PIXIE does all day, sees exactly what it would have seen on the real
+340 draws it, as PIXIE does, sees exactly what it would have seen on the real
 machine.
 
 **The light pen** ([`lightpen.ts`](src/plugins/lightpen.ts)) is how you pointed at a 1960s
@@ -532,7 +531,7 @@ pointing at. The emulated pen is tested against every line as it's drawn. The 34
 have been. 1972 programs can't tell. A cabinet IOT on the free device code 11, IDPN, says which pen
 fired, so a program written now can tell them apart.
 
-**The rest of the fleet:**
+**The other devices:**
 
 - [`papertape.ts`](src/plugins/papertape.ts): the paper tape reader that loads programs.
 - [`rb09.ts`](src/plugins/rb09.ts): the RB09 fixed-head disk UNIX boots from.
@@ -554,8 +553,6 @@ PDP-7 polls for the link in a loop, and as the source puts it, "the 1969 polling
 await". An in-process host answers at once, and a remote one sits behind a buffer.
 
 ## Port 5: the tools
-
-A tour of an emulator usually skips the tools. Here they're half the fun.
 
 - **Assemblers.** An assembler turns the mnemonics a person writes into the words the machine
 runs: `lac 1234` into 201234. Different groups wrote their own assembly languages for the same
@@ -655,14 +652,15 @@ than its two ends. It remembers how it was drawn:
 
 ## Port 6: the software
 
-Three programs carry most of the weight: UNIX, SYMELEC, and Forth. UNIX
+The three main programs are UNIX, SYMELEC, and Forth. UNIX
 ([`unixv0.ts`](src/unixv0.ts)) boots Ken Thompson and Dennis Ritchie's 1969 system from the RB09 disk
 with Phil Budne's bootstrap. SYMELEC ([`symelec-demo.ts`](src/symelec-demo.ts)) is PIXIE's main
 program, driven by a scripted light pen whose time is machine cycles, so the same script draws the
 same picture at any speed.
 
 Mitch Bradley's Forth ([`tapes/pdp7forth/kernel-names-full.s`](tapes/pdp7forth/kernel-names-full.s))
-is the best demonstration of the PDP-7 I know, because it makes its odd features do the work.
+is the best demonstration of the PDP-7 I know, because it is built on the machine's unusual
+features.
 
 **Forth in two minutes.** A Forth program is a series of **words**, separated by spaces. Words
 pass values to each other on a **stack**, a pile where the last value put on (**pushed**) is the
@@ -820,7 +818,7 @@ kernel with something new.
 
 ## Port 7: Korz
 
-Now the sea. Start with the problem it solves.
+This port covers the sea of slots, starting with the problem it solves.
 
 An emulator answers the same few questions over and over: what does reading this address give?
 What does this instruction do? What does this IOT do? `Pdp7` answers each with a switch
@@ -832,10 +830,10 @@ Korz answers each question by looking it up instead. Every answer is a separate 
 called a **slot**, with a **guard** that says when it applies: "any address", "address 1234 when
 the CPU fetches an instruction", "any read by the debugger". Asking a question means looking for
 the slots whose guards match, and when several match, the most specific one wins. Adding a
-breakpoint is adding a slot, and taking it away is removing it, while the machine runs. Nobody
-edits anyone's switch.
+breakpoint is adding a slot, and taking it away is removing it, while the machine runs. No switch
+statement has to be edited.
 
-The words, once, with the read example:
+The terms, with the read example:
 
 | Word | Means | In the example |
 | --- | --- | --- |
@@ -886,7 +884,7 @@ Values whose order is already the integer order get numbers, and the names are l
 its number. `who` is `["cpu", "device", "debugger"]`, so a guard can say `who: "cpu"` while the
 context holds 0. The names are for people; the context only ever holds numbers.
 - **An open-ended set of strings**, like any word a player might type, is interned: a table from
-each string to a number, the same trick the resolver uses for chains below. Zork's verbs would go
+each string to a number, the same technique the resolver uses for chains below. Zork's verbs would go
 in that way. Interning picks out particular words. It does not give them an order beyond "this
 word or that word."
 
@@ -981,9 +979,9 @@ chain(selector: string, c: C): Slot<C>[] {
 
 **The interpreter.** `dispatch(selector, context)` does all of that on every call: it filters
 the slots whose guards match, sorts them into a chain, and runs the chain. It's slow and obviously
-right, and that's its job: it's the oracle for everything faster.
+right, and it's the oracle for everything faster.
 
-**Ambiguity when you install, not when you crash.** Two slots can overlap with neither more
+**Ambiguity is caught at install time.** Two slots can overlap with neither more
 specific. Take a slot for every indirect instruction, `ind: 1`, and one for every JMP, `op: 0o14`
 (JMP's word starts with 60, which is op 14 in the four-bit opcode field). A `JMP I` matches both,
 and neither guard is inside the other, so neither wins. That's allowed only if every point in the
@@ -996,7 +994,7 @@ two slots and the point. Installing is a transaction:
 install(specs: readonly SlotSpec<C>[]): Slot<C>[] {
 ```
 
-**Resolution.** Here's the idea that makes it fast. For one selector, only the dimensions some of
+**Resolution.** For one selector, only the dimensions some of
 its slots guard can change the answer. `exec`'s slots guard only `op` and `ind`, so whatever else
 is in the context, those two decide which slots run. There are 16 × 2 = 32 combinations, called
 **points**. So work out the chain for every point ahead of time, once, and store them in a table
@@ -1059,8 +1057,8 @@ This is the compressed dispatch table that Eric Amiel, Olivier Gruber, and Eric 
 for multimethods in 1994. Tables that fit stay indexed by value, so compressing never costs a table
 that didn't need it.
 
-**Following one instruction through the sea.** That's a lot of machinery, so here's one
-instruction going through all of it, with real output from the cabinet. Core location 100 holds
+**Following one instruction through the sea.** Here is one instruction going through all of
+that, with real output from the cabinet. Core location 100 holds
 201234, which is `LAC 1234`, "load AC from 1234", and location 1234 holds 5.
 
 *Step 1: the CPU builds the context.* `KorzPdp7` fetches the word and cuts the fields Korz needs
@@ -1091,7 +1089,7 @@ function korz_exec(c) {
 }
 ```
 
-Nobody wrote that function. Korz wrote it, as text, when the machine was built, because the only
+Korz generated that function as text when the machine was built. It has this form because the only
 slots on `exec` are guarded on `op` and `ind`, so those are the only two dimensions that can change
 which slot runs. `op` has 16 values and `ind` has 2, so the table, kept in `go` as `exec$`, has 32
 entries. Only 17 of them are different: indirect doesn't change what most instructions do, so
@@ -1107,7 +1105,7 @@ op("lac", (c) => { const m = c.cpu; m.ac = m.read(c.ea); }),
 ```
 
 `c.ea` is 1234, which `go.ea` worked out in step 1 the same way, by its own table. AC is now 5.
-One table load, one call.
+That is one table load and one call.
 
 In the generated function, line by line:
 
@@ -1151,14 +1149,14 @@ Then run the same instruction again. AC is 5 and `count` is 1: the new slot ran 
 - `go.exec$` is a new table. Entry 8 now holds a chain of two slots, count LACs, then LAC.
 - `go.exec` is the very same function as before.
 
-That's `bind`'s job. `install` ends by calling it for the selectors the new slots touched, here
+`bind` does this. `install` ends by calling it for the selectors the new slots touched, here
 only `exec`. It builds the new table and puts it in `go.exec$`. The index expression didn't
 change, since the new slot guards `op`, which the table already ranges over, so the function stays
 the same. A slot guarded on a new dimension would change the expression, and `bind` would put a
 different function in `go.exec`. Either way, by the time `install` returns, `go` is up to date,
 and nothing checks on each call whether the table is stale.
 
-**Why that matters: V8 and call sites.** This is the part for TypeScript programmers. V8 is the
+**V8 and call sites.** This part is for TypeScript programmers. V8 is the
 JavaScript engine in Chrome and Node, and it turns JavaScript into machine code as it runs.
 
 The line `this.go.exec(x)` in `KorzPdp7` is a **call site**, a place in the code that calls a
@@ -1300,7 +1298,7 @@ op("xor", (c) => { const m = c.cpu; m.ac = (m.ac ^ m.read(c.ea)) & WMASK; }),
 op("jmp", (c) => { c.cpu.pc = c.ea; }),
 ```
 
-**Effective addresses are where specificity shines.** An instruction's **effective address** is
+**Effective addresses by specificity.** An instruction's **effective address** is
 the address it ends up using, after indirection. `LAC 1234` uses 1234. `LAC I 1234` uses whatever
 address is stored in 1234, and if 1234 were an auto-index register it would add 1 first. Working
 that out is the `ea` selector, and it's four rules, each a special case of the one before:
@@ -1323,8 +1321,8 @@ As slots:
 ```
 
 Each guard sits inside the one before it: `{}` (no guard, every instruction) contains
-`{ ind: 1, op: 0-14 }`, which contains `{ ind: 1, op: 14 }`. Nobody wrote an `if` to make `JMP I`
-win over plain indirect. Its guard is smaller, so it's more specific, so it wins. The `by` strings
+`{ ind: 1, op: 0-14 }`, which contains `{ ind: 1, op: 14 }`. No `if` makes `JMP I` win over plain
+indirect: its guard is smaller, so it's more specific, so it wins. The `by` strings
 are the names `why` shows you.
 
 **The operate group is three selectors.** An operate-group word's three groups of switches,
@@ -1570,7 +1568,7 @@ touch(a: number): void {
 }
 ```
 
-**XCT, and Forth's NEXT.** `xct i 010`, the heart of Forth's `NEXT` (Port 6), runs a different
+**XCT, and Forth's NEXT.** `xct i 010`, the first instruction of Forth's `NEXT` (Port 6), runs a different
 word every time, whichever cell IP points at. The compiler can't write that word's code into the
 block, because it doesn't know which word it will be. So each `XCT` keeps a small **cache**: a map
 from address to that word compiled as a one-instruction function. Each time, it looks up the
@@ -1602,7 +1600,7 @@ the memory panel's trace view is open: an open trace would turn the compiler off
 ## Port 11: the 340 as a sea
 
 [`src/korz/type340.ts`](src/korz/type340.ts) puts the display processor's own instruction set in a
-sea. Its tradeoffs are the opposite of the CPU's, and that's what makes it worth reading.
+sea. Its tradeoffs are the opposite of the CPU's.
 
 The CPU has twelve dimensions and over a hundred slots. The 340 needs two dimensions: its mode,
 and the top two bits of the word, which choose what happens in some modes (escape back to parameter
@@ -1639,7 +1637,7 @@ switch CPU and the slots 340 with every Korz level, and the benchmark takes `--d
 
 ## Port 12: the Forth device
 
-[`src/korz/forth-device.ts`](src/korz/forth-device.ts) is the payoff for Port 6, and the strongest
+[`src/korz/forth-device.ts`](src/korz/forth-device.ts) builds on Port 6, and is the strongest
 argument I have for building a CPU out of slots. [FORTH-DEVICE.md](FORTH-DEVICE.md) is its design.
 
 Port 6 showed `NEXT`, Forth's three-instruction inner interpreter, running every word of every
@@ -1696,7 +1694,7 @@ up a word's name in the dictionary, by walking the dictionary from the newest wo
 comparing names. The device keeps a table of names beside it, so a lookup is one step instead of a
 walk.
 
-Nothing in `KorzPdp7` knows the device exists. It's two slots more specific than core's `read`. The
+`KorzPdp7` has no code for the device. The device is two slots more specific than core's `read`. The
 SLOTS panel's FORTH line counts what it does: cells run, code words handed to the CPU, fetches it
 declined, and `FIND` lookups.
 
@@ -1728,7 +1726,7 @@ for (let seed = 1; seed <= 300; seed += 1) {
 }
 ```
 
-Random words aren't programs, and that's the point. They hit every opcode, every odd chain of
+Random words aren't programs, so they hit every opcode, every odd chain of
 pointers, every strange combination of operate bits, and code that writes over itself, which no
 hand-written test would think of. A failure names its seed and step, so you can replay it exactly.
 
@@ -1739,7 +1737,7 @@ compiler runs in batches, so it's compared at the ends of slices of random lengt
 draws, SYMELEC edits, the Turing engine runs, and the DataHand interrupts, and each is compared
 the same way.
 
-**Planted mutations.** A test that can't fail proves nothing. To check these can, I planted errors
+**Planted mutations.** To check that these tests can fail, I planted errors
 in the compiler's generated code and in the 340's slots, one at a time, and checked that each one
 was caught.
 
@@ -1900,7 +1898,7 @@ search instead.
 - `bind` regenerates the method on every install, so a slot that adds a boundary renumbers the
 intervals, and no caller ever holds an old numbering.
 
-Decide what NaN does (its own interval is the honest answer), and whether a boundary belongs to
+Decide what NaN does (it should get its own interval), and whether a boundary belongs to
 the interval below it or above.
 
 **Objects, as ids.** Dispatching on an object's class is dispatching on a number, once each class
@@ -1909,8 +1907,8 @@ reads. A `WeakMap` from object to id works for any object, but it's a hash looku
 than the table lookup it feeds; measure it. Adding an id property to an object after it's made changes its
 hidden class, which is what the generated methods are trying to keep stable.
 
-A guard can also name one particular object, as CLOS's EQL specializers do. That's where kinds
-earn their keep: if the guards name three objects, every other object is the fourth kind, and the
+A guard can also name one particular object, as CLOS's EQL specializers do. Kinds handle this
+case: if the guards name three objects, every other object is the fourth kind, and the
 table stays small however many ids there are.
 
 **What to leave out.** A guard that's any test, like `(c) => c.x * c.y > 10`, is predicate
@@ -1946,9 +1944,9 @@ in it. JavaScript is what a browser can turn into code while it runs, with `new 
 Such a word has no body in PDP-7 core. Its header and its cell are in the dictionary like any
 primitive's, but the cell's `JMP` goes to an address that only the device knows how to run: the word
 is a new instruction, running in the emulator with the machine's registers, core, and stacks to work
-on. It works only with the device plugged in, and that's the idea. The word the cell jumps to can
-hold something that stops loudly, so a machine without the device says why instead of running off
-into core.
+on. It works only with the device plugged in, by design. The word the cell jumps to can hold code
+that halts and reports why, so a machine without the device stops instead of running off into
+core.
 
 PDP-7 CODE words, written with [`code.fs`](tapes/pdp7forth/code.fs), still work beside them, and the
 device hands those to the CPU as it does now.
