@@ -108,6 +108,25 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
    new device programs can drive on purpose, and Mitch's Forth can live-code it.
 7. **Learned.** With calibration recordings, fit approach 1's weights, or a small model, from the
    bus-feature stream to the recorded spectrum, the same method as matching the P7 phosphor.
+8. **The bus dance.** Approach 4 played as music rather than as clicks. Each processor on the
+   backplane is a voice with its own register, timbre and scale: the PDP-7 low and percussive,
+   the 340 a bright pluck, the [Forth device](FORTH-DEVICE.md) a chime, an Apple ][ its own
+   instrument. You hear the CPU start the display, the display run its list while the CPU computes,
+   and Forth chime in when it pokes memory: who is doing what, and who is waiting on whom.
+   - **Where the sounds come from: Korz.** A listener is a slot installed in a layer above the
+     ones it hears, as a patch is ([KORZ-INSPECT.md](KORZ-INSPECT.md)): it emits a grain and calls
+     `next`, so the machine does exactly what it did before. Which slots it covers picks the
+     activity: every memory-reference instruction, only IOTs to device 06, only the 340's vector
+     mode. Installing or removing one recompiles the blocks it touches, as any patch does, and
+     with no listener there is nothing to remove.
+   - **Histograms, not only events.** Per audio frame, the counts the compilers already keep
+     (each block's calls and instructions retired) become a chord: the hottest blocks are the
+     loudest notes, so a program settling into its inner loop is heard as a drone, and a phase
+     change as a chord change.
+   - **Tuned, not discordant.** Pitches are quantized to a scale and grains to a beat grid, so
+     address, opcode or vector direction choose the note within the key and the timing stays
+     musical. That gives up accuracy to be legible, the opposite trade from approach 1, and both
+     use the same probe.
 
 ## A receiver to borrow
 
