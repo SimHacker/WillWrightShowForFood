@@ -283,9 +283,19 @@ has to output more than it does:
   - **Other targets.** A 340 stroke maps to the display word that drew it (built: every
     `Segment` has its `addr`), then on through the tiers; a transcription line maps to its OCR
     passes; a word in a snapshot maps to the cycle that wrote it.
-  - **JavaScript source maps for the JIT.** Korz compiles PDP-7 code to JavaScript; emitting
-    standard source maps with that JavaScript would let the browser's own debugger step through
-    the generated code and show the PDP-7 source line, or the scan, it came from.
+  - **JavaScript source maps for the JIT, as an option, off by default.** Korz compiles PDP-7
+    code to JavaScript; with standard source maps the browser's own debugger can step through a
+    compiled block and show the PDP-7 source line each part came from. Most of it is there:
+    each block is already a named function (`//# sourceURL=korz7/blk-<octal>.js` in
+    [compile7.ts](src/korz/compile7.ts)) that keeps its text in `block.source`; the compiler
+    emits each instruction's code as its own lines and knows the instruction's address while it
+    does; and `source.ts` maps an address to its line. To add: record address per generated line,
+    encode the map (VLQ, about 30 lines, no dependency) and append it inline with the source text
+    in `sourcesContent`. Two cautions: `new Function` puts a header before the body, which
+    shifts line numbers and must be tested in each browser; and the debugger shows text, so the
+    scan rectangles stay in the cabinet's own views. Off by default because each map costs
+    encoding time and memory on every block compiled. `compile65.ts` needs the same, starting
+    with a `sourceURL`.
 - **Load formats.** One in-memory object, written out as each machine loads: `.oct` (read
   today, `loader.ts`), RIM paper tape, ProDOS files for the Apple ][, ITS `SBLK` for the PDP-10.
 
