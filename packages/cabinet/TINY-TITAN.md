@@ -560,6 +560,19 @@ or as source with its type declared, for the client's assembler core. That is Ne
 Gosling's window system at Sun, where clients sent PostScript programs for the server to run,
 with 340 code and PDP-7 or PDP-10 code in place of PostScript.
 
+**Forth source is the best format for that code.** It is more universal than PDP-7 or PDP-10
+machine code: the same source compiles on Mitch's PDP-7 Forth, on Don's Apple ][ Forth, and on
+whatever Forth the client has, down to one compiled by Korz straight to JavaScript. It is small,
+it is readable by the person watching, and the client can already take it in with no file
+system: the [`type` service](#services) types it into the client's Forth a line at a time.
+
+- **Send it once.** A view's code goes with the view the first time, then is identified by its
+  hash; the client keeps what it has compiled and the server sends the source again only when it
+  changes.
+- **It may change.** When it does, the client recompiles the words that changed and drops the
+  old compiled code, the way Self recompiled and deoptimized when a method changed under a
+  running program.
+
 **Embedded remote apps.** Put the two together and an app can be embedded in any client as a
 remote view of memory plus a few CPU instructions of glue. The display segments come from the
 app's machine. The glue runs on the client's CPU and does only what has to be local: the pen
