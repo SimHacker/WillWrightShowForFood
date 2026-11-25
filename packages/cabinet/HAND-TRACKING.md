@@ -86,7 +86,7 @@ A survey of what runs in a browser, as of October 2026, with versions from npm:
 
 MediaPipe wins on accuracy, speed, size and license, and it gives 3D points
 with a stable numbering that everything else (kalidokit, fingerpose, WebXR
-mappings) already speaks. The applet imports it lazily, so nobody downloads
+mappings) already uses. The applet imports it lazily, so nobody downloads
 it until they select DATAHAND.
 
 One trap: MediaPipe names hands *as if the picture were mirrored*. A webcam's
@@ -95,8 +95,8 @@ raw video is not mirrored, so its "Left" is the person's own right hand.
 
 ## Units: the PDP-7's, not the browser's
 
-The PDP-7 has no floating point, so the port speaks only in units it already
-uses:
+The PDP-7 has no floating point, so the port uses only units the PDP-7
+programs already use:
 
 - **Positions** are 340 screen pixels, 0 to 1023, x right, y up, z toward the
   viewer. The picture is mirrored, as people expect a webcam to be.
@@ -107,9 +107,9 @@ uses:
 
 ## The hand as turtle moves
 
-Most trackers hand you points. A program on a 1965 computer would rather be
-told how to *draw* the hand, so the port reports it the way a 3D turtle walks
-it:
+Most trackers report points. A program on a 1965 computer is simpler if it is
+given the moves that *draw* the hand, so the port reports the hand as the
+moves a 3D turtle makes to walk it:
 
 1. **The palm frame.** H runs from the wrist toward the middle knuckle.
    U = H × (index knuckle − pinky knuckle), the back of the hand.
@@ -144,7 +144,7 @@ Read with `GRD` at the index loaded with `GLI`; `GRD` steps the index.
 ### IOTs, device 57
 
 A cabinet extension on a free device code, marked "not 1972" in
-[DESIGN.md](DESIGN.md#device-contract--every-iot-symelec-issues). Pulses group
+[DESIGN.md](DESIGN.md#device-contract-every-iot-symelec-issues). Pulses group
 by 060 like the 340's; bit 010 is the CPU's own clear-AC.
 
 | IOT | Name | Does |
@@ -197,7 +197,7 @@ and the finger names), then loops until a key:
 - Fill each meter to its finger's flex.
 - Caption RIGHT or LEFT, PINCH when thumb and index touch, and THE BIRD when
   the middle finger stands alone (`BIRD?`, from the flex registers). The demo
-  hand gives it too: no gesture vocabulary is complete without it.
+  hand also makes this gesture.
 
 At the teletype, after a key stops it:
 
@@ -206,9 +206,9 @@ At the teletype, after a key stops it:
     0 SPINNING ! 0 VIEW DATAHAND
     4 SPOT . .               \ where the thumb tip was drawn: y, then x
 
-It's slow, honestly: about 600,000 steps a frame, so about one frame a second
+It is slow: about 600,000 steps a frame, so about one frame a second
 at the real PDP-7's speed. The cost is the software multiply and divide in
-`*/`, done for every vector component the turtle turns or moves. Turn the speed up and it keeps up with the camera.
+`*/`, done for every vector component the turtle turns or moves. With the speed turned up it keeps up with the camera.
 
 ## Hands, tools, and human agency
 
@@ -227,8 +227,7 @@ by doing it. Moving a hand toward the camera makes its displayed counterpart
 bigger, letting the fingers reach the switch. The arm supplies gross
 positioning; the fingers supply the expressive finish. A person can poke,
 flourish, hesitate, or withdraw. Withdrawing the real hand cancels the cycle
-and retracts the mechanism. Movement has consequences; it is not just an
-animation decorating a command.
+and retracts the mechanism.
 
 But **camera tracking restores some manipulation, not touch**. The person
 does not feel the switch's resistance or snap, the box, or the weight of the
@@ -237,13 +236,11 @@ sensations. DATAHAND is an experiment in embodied visual interaction, not a
 solution to Victor's whole critique. Visual feedback and the person's own
 sense of their moving body help, but they are not force feedback.
 
-This connects to **interfaces to agency, not agents instead of interfaces**.
-The design question is whether computation gives a person's capabilities
-more reach, or substitutes an opaque actor for the person exercising them.
-The aim is to make automation's relationship to human intention legible
-and steerable, not to prohibit it. The synthetic attract hand invites
-participation; when a real hand appears, it yields control. It waves you in,
-then gets out of your way.
+The related design question is whether computation gives a person's
+capabilities more reach, or substitutes an opaque actor for the person
+exercising them. The aim is to make automation's relationship to human
+intention legible and steerable, not to prohibit it. The synthetic attract
+hand invites participation, and gives up control when a real hand appears.
 
 ### Directions to explore
 
@@ -268,13 +265,13 @@ These are project directions, not claims of implemented features:
   purpose and alternatives for people with different ranges of movement;
   requiring more movement is not automatically a better interface.
 
-The future interface is a design choice, not an inevitable sequence of
-devices. The useful test is not how futuristic the tracking looks, but what
-it enables a person to feel, understand, express, and do.
+Each direction should be judged by what it enables a person to feel,
+understand, express, and do.
 
 ## Design: Hand Turtle, then Hand-Driven Spacewar
 
-**Design only. Start with HAND TURTLE: one person, one hand, one turtle.**
+**This section is a design only. Start with HAND TURTLE: one person, one
+hand, one turtle.**
 Use gestures to drive the familiar `PU`, `PD`, `RT`, `LT`, `FD`, and `BK`
 words before introducing ships, inertia, weapons, or another player. The
 turtle's trail makes the mapping visible and leaves a record of what the
@@ -533,8 +530,8 @@ input stage. The turtle walk is the skeleton. `VIEW` at ±3 degrees on two
 - **Two-rig VR.** Two people, two DataGloves, one world, rendered per eye. Either
   more CPU types in the cabinet, or a direct emulation of the applications:
   a tiny-Isaac that answers Body Electric's UDP the way
-  [tiny-titan](src/plugins/tiny-titan.ts) answers the Titan link. That is,
-  emulate the conversation, not the computer.
+  [tiny-titan](src/plugins/tiny-titan.ts) answers the Titan link, emulating
+  the network messages rather than the computer.
 - **WebXR Hand Input** as a second camera: 25 joints from a headset, mapped
   onto the same 21-point instrument.
 - **The pinch as a light pen**, so PIXIE programs draw with a hand unchanged

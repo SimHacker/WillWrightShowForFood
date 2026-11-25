@@ -17,12 +17,12 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 5 | Forth `wait` and `say"` | Forth programs that draw while they speak | [§5](#5-forth-that-draws-and-speaks) |
 | 6 | Round screen | the 25 cm question, historically framed | [§6](#6-round-screen) |
 | 7 | The UI driver, on tiny-bus; tests become driver scripts | everything below drives the bench through it | [§8](#8-driving-the-ui) |
-| 8 | The Engelbart Cursor Party: several pens, several users, the LP370 test as the show | promised in DESIGN.md; the first multi-pen script | [§7](#7-several-pens-the-engelbart-cursor-party) |
+| 8 | The Engelbart Cursor Party: several pens, several users, the LP370 test as the demo | promised in DESIGN.md; the first multi-pen script | [§7](#7-several-pens-the-engelbart-cursor-party) |
 | 9 | One transport, and a demo library | demos, sessions, the PC and macros share one set of controls | [§11](#11-one-transport-and-a-demo-library) |
 | 10 | Tags, focus, the first pie (Target/Pie/Slice/Item, NeWS 1.1 skin, callbacks, tiny-cursor, in HyperTIES) | [TAGS-AND-PIES §12](TAGS-AND-PIES.md#12-order-of-work) steps 2–7 | [§9](#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin) |
 | 11 | Info goes upstairs: the definition window | PIXIE embedded in HyperTIES, the showcase | [§10](#10-info-goes-upstairs-the-definition-window) |
 | 12 | The Engelbart mouse and chorded keyset | simulated first; digital twins of Don's pair | [§12](#12-the-engelbart-mouse-and-chorded-keyset) |
-| 13 | Emulation mash-ups: virtual devices in machines they never met | the keyset and the glove, on the PDP-7 and the Apple ][ | [§13](#13-emulation-mash-ups) |
+| 13 | Emulation mash-ups: virtual devices on machines they were never built for | the keyset and the glove, on the PDP-7 and the Apple ][ | [§13](#13-emulation-mash-ups) |
 | 14 | The big dive | TAGS-AND-PIES §12 steps 8–10, mostly MicropolisCore | — |
 | 15 | DUEL from tape to source, proven by round trip | a showpiece, not a blocker: DUEL already runs and explains its halt | [§15](#15-duel-from-tape-to-source) |
 | 16 | Forth turtle with a 340 and a PIXIE back end; Forth symbols as subpictures; drag a vertex on the tube | Forth drawings PIXIE can edit; needs serve-back and the element decode | [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module) |
@@ -65,7 +65,7 @@ position to the new one, so every refresh sees a small step.
   which was really our sampling rate; add a fast-drag test to `cabinet.test.ts`.
 
 **Accept:** a test drags 128 units per 9,500 cycles and the cross follows; the
-existing "lose" test still loses when the pen teleports with no path.
+existing "lose" test still loses when the pen jumps with no path.
 
 ## 2. Contrast: display knobs in CONFIG
 
@@ -100,7 +100,7 @@ it never talks over a screen reader.
 - Each frame's distinct titles form a tab strip, a live table of contents. Hovering a
   tab lights that object's strokes; opening it shows its tip in a window beside it, as
   gwern.net popups do.
-- The pushpin follows OPEN LOOK honestly: pressed in only while the pointer is over
+- The pushpin follows OPEN LOOK exactly: pressed in only while the pointer is over
   it with the button down, popping back out if you drag off; release over it commits;
   a second press pulls it out and closes the window.
 
@@ -118,8 +118,8 @@ it never talks over a screen reader.
 
 ## 5. Forth that draws and speaks
 
-The turtle in [turtle.fs](tapes/pdp7forth/turtle.fs) already draws. Two words make it
-perform:
+The turtle in [turtle.fs](tapes/pdp7forth/turtle.fs) already draws. Two words let it draw
+at a set pace and speak:
 
 - **`wait ( n -- )`**: let the 340 refresh for n sixtieths of a second before the next
   stroke, timed in machine cycles from the clock, so a drawing unfolds at a pace you
@@ -134,7 +134,7 @@ say" and a star" 5 0 do 300 fd 30 wait 144 rt loop
 ```
 
 Later, with tags, `title"` announces what is drawn and `talk` makes `fd` and `rt`
-narrate themselves ([TAGS-AND-PIES §1](TAGS-AND-PIES.md#in-forth)).
+announce each move ([TAGS-AND-PIES §1](TAGS-AND-PIES.md#in-forth)).
 
 **To do: turtle shapes, as in Logo's `SETSHAPE`.** `hideturtle` and `showturtle` (`ht`, `st`)
 are already in turtle.fs; the turtle itself is a fixed triangle built by `redraw`. Let it wear
@@ -147,7 +147,7 @@ bug wear   200 fd   90 rt   200 fd
 
 - `shape: … ;shape` records the moves into a shape (the emitter seam,
   [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)), as relative
-  steps, so it draws wherever the turtle is. The same thing as a tile or a symbol.
+  steps, so it draws wherever the turtle is. It is the same thing as a tile or a symbol.
 - `wear ( shape -- )` makes the turtle draw as that shape, rotated to the heading. The 340
   can't rotate a subroutine, so we rotate its words ourselves:
   - **The ideal shape** is kept unrotated, as absolute points in the turtle's 1/64-pixel fixed
@@ -205,7 +205,7 @@ can share the screen:
 coral grows from a seed. On the 340 it is a demo for the tube and the slow phosphor.
 
 - **The walkers are sprites**, each wearing a small shape and wandering by `random rt 4 fd`, so
-  the dance is visible. A few dozen at a time, launched on a circle just outside the cluster and
+  their paths are visible. A few dozen at a time, launched on a circle just outside the cluster and
   dropped if they wander too far, as the classic speedups do.
 - **The cluster is a grid of bits**, 64 by 64 in 128 words of core, for the stuck test, and a
   display list that only grows. A walker that sticks stamps its shape (or a point) into it at
@@ -215,7 +215,7 @@ coral grows from a seed. On the 340 it is a demo for the tube and the slow phosp
 - **Forth needs `random`.** Neither the kernel nor turtle.fs has one; HILO counts a seed while it
   waits for a key. A 17-bit linear feedback shift register in a few words of Forth is enough,
   seeded the same way, or from the clock.
-- **It is a CA cousin.** The stuck grid is the CA machinery's two-layer cell array, the stamps
+- **It is close to a cellular automaton.** The stuck grid is the CA machinery's two-layer cell array, the stamps
   are its tiles, and the same rule-cartridge shape holds it.
 
 **Memory: Forth already has all of it.** The FORTH cartridge runs with 8K, every word a PDP-7
@@ -241,9 +241,9 @@ PARAM word at the head of the slot (`intensity`, 0–7, the 340's own eight leve
 flashing and a hit's flare are one poke, no recompile.
 
 **And on the slow phosphor.** A spinning, growing ship leaves its own trail on a P7 tube, the
-fast blue flash fading into the long yellow-green: the pretty-pass of DESIGN.md order of work
-item 6, the dual-phosphor simulation. Intensity steps show up as the trail's brightness, so an
-explosion is a few frames of rising intensity and scale, then the phosphor does the rest.
+fast blue flash fading into the long yellow-green: the phosphor rendering of DESIGN.md order of
+work item 6, the dual-phosphor simulation. Intensity steps show up as the trail's brightness, so an
+explosion is a few frames of rising intensity and scale, followed by the phosphor's decay.
 - `shapes` lists them; `triangle wear` puts the old turtle back.
 - With the round screen and tags, a worn shape can carry a title, so pointing at the turtle
   says what it is.
@@ -260,42 +260,42 @@ The 340's tube is round, about 10 inches across, with the square drawing area in
 
 ## 7. Several pens: the Engelbart Cursor Party
 
-*A multi-user click and drag show.* In 1968 Engelbart and Bill Paxton shared one NLS
+A multi-user click and drag demo. In 1968 Engelbart and Bill Paxton shared one NLS
 screen from two cities, each with a cursor (Engelbart's a bug, Paxton's a dot). The
-cabinet's 340 takes any number of pens, so the party is the same thing on 1964 iron.
+cabinet's 340 takes any number of pens, so it can do the same on 1964 hardware.
 
 **What is built.** The 340 takes a list of pens, all sharing the one LPHIT flag, as
 on the real hardware. IDPN (device 011, a cabinet extension) reports which pen fired
 ([DESIGN.md](DESIGN.md), IOT table). Pens have colors (`PEN_COLORS`, pen 0 amber).
 The applet drives one pen from one pointer (`pressedId`).
 
-**Guests.**
+**Who holds a pen.**
 
 - **Every pointer is a pen.** Each `pointerId` (mouse, each finger, each stylus) gets
   its own `LightPen`, colored and labeled, created on press and kept while it
   hovers. Two hands on a touch screen are two pens.
 - **Every user is a pen.** A watcher on another node ([DESIGN.md](DESIGN.md),
   watchers and pens) sends pen events over tiny-its; the host adds a pen for them.
-  Who may hold a pen is the host's call: watch only, one pen, or open party.
+  Who may hold a pen is the host's choice: watch only, one pen, or open to all.
 - **Every script is a pen.** A driver script (§8) takes `pen: n`, so a test or demo can
   play several users at once, and a recording stores which pen did what.
 - **Each pen is a vehicle** ([TAGS-AND-PIES §8](TAGS-AND-PIES.md#8-cursors-are-vehicles)):
   a cursor in its color with its owner's name, and its own coverage and hit feedback.
 
-**The show.** The LP370 diagnostic is the dance floor:
+**The demo.** It runs on the LP370 diagnostic:
 
 - Upgrade the LP370 program so each hit is drawn in the color of the pen that made
   it (read with IDPN), with a per-pen hit count; stock LP370 still runs unchanged.
-- A party demo: three scripted guests at once. One drags the box corner, one sweeps
+- A demo with three scripted users at once. One drags the box corner, one sweeps
   the lines, one holds still on a dot, so you see three trackers and three colors
   sharing one flag, and where 1964's single flag makes them collide.
 - Then the Engelbart tributes from DESIGN.md: two pens drag two corners of one
-  rectangle; two pies open at once; a quiver of eight wands.
-- **With the AM radio** ([AM-RADIO.md](AM-RADIO.md)): every guest's pen moves the
-  program, the program's loops sing on the radio, so the party is heard as well as
-  seen. Three pens at once is a trio, and you can hear when they collide.
+  rectangle; two pies open at once; up to eight pens.
+- **With the AM radio** ([AM-RADIO.md](AM-RADIO.md)): each user's pen changes what the
+  program does, and the program's loops are audible on the radio, so collisions between
+  pens can be heard as well as seen.
 
-**Tests are party scripts.** The light pen tests move onto the driver (§8): find the
+**Tests are multi-pen scripts.** The light pen tests move onto the driver (§8): find the
 box, `dragAlong` it with pen 1 while pen 2 taps a line, and assert on the
 `cabinet.pen.hit` events, each with its pen number. The same script, with a caption
 per step, is the demo; the same script, recorded, is the replay.
@@ -352,7 +352,7 @@ box and their strokes. Symbol names come from the assembler's symbol table.
 All of them are `async`, timed in machine cycles like `DemoPlayer` in
 [symelec-demo.ts](src/symelec-demo.ts), which this generalizes: its `tap`, `drag`,
 `glide` and `tapMenu` become calls on the driver, with `find` replacing hard-coded
-coordinates. So a script survives the picture moving.
+coordinates. So a script still works when the picture moves.
 
 **Who calls it.**
 
@@ -391,8 +391,8 @@ classes, ids or wire formats carry it.
 - **Across nodes.** tiny-its forwards commands and events between buses, so a macro on
   one node drives the pen on another, and the same log replays on either.
 
-Tiny is better than worse (a rejoinder to Gabriel's Worse is Better; see
-[TINY-TITAN.md](TINY-TITAN.md#tiny-bus-the-backplane-between-machines)): tiny-bus is ours, small, and stays. If the bus in the
+tiny-bus is ours, small, and stays (the reasoning, a reply to Gabriel's Worse is Better, is in
+[TINY-TITAN.md](TINY-TITAN.md#tiny-bus-the-backplane-between-machines)). If the bus in the
 MicropolisCore repo is ever lifted into a package, an adapter maps one envelope onto
 the other at the edge (TAGS-AND-PIES §12 step 8).
 
@@ -425,14 +425,14 @@ in shape and in names, exactly:
   slice keeps its wedge and selects nothing. Several items per slice, and pull-out
   strips, come in the next iteration without moving any other slice.
 - **Advertisers** (TAGS-AND-PIES §6) only fill slices with items. They never see the
-  geometry, the skin or the event code. That is the whole contract, and it is why the
-  cabinet swaps to MicropolisCore's pie and cursor packages, when they exist, with no
+  geometry, the skin or the event code. That is the only contract, so the
+  cabinet can swap to MicropolisCore's pie and cursor packages, when they exist, with no
   change to any advertiser (TAGS-AND-PIES §12 step 8).
-- **Placement policies (later; brace for it).** A slice, or a whole pie, may carry
+- **Placement policies (later).** A slice, or a whole pie, may carry
   a policy that decides where an incoming item lands: by tag, by kind, by command id
   prefix, by score. Throw an item at the root of a nested pie and it falls through to
   the most fitting submenu, as a room in a map editor takes the exit that matches.
-  Advertisers stay ignorant of the policy; they offer, the pie places.
+  Advertisers don't see the policy; they offer items and the pie places them.
 - **Direct-manipulation editor (later).** Users grab an item and drag it to another
   slice, into a submenu or out to another pie; dragging a submenu onto a slice links
   it there, like kissing two rooms together in a map editor. The edit is a
@@ -470,8 +470,8 @@ pointer grab, warp, park, hide, per-pen ownership and nesting rides
 ([TAGS-AND-PIES §8](TAGS-AND-PIES.md#8-cursors-are-vehicles)). Pointer Lock gives
 raw motion when a ride needs it. Same approach as tiny-bus: minimal but complete,
 ready to grow, alongside the bigger virtual cursor design in the MicropolisCore repo
-with the same shape, so either can replace the other, or the tiny one simply wins.
-LLMs make blending two versions cheap; we lean into that.
+with the same shape, so either can replace the other, or the tiny one is kept.
+Merging two versions with an LLM is cheap, and the plan relies on that.
 
 **The NeWS 1.1 skin.** Black and white, stencil and paint, specified from Don's
 `SimplePieMenu` in
@@ -531,9 +531,9 @@ flashes; and a HyperTIES link pops a pie whose items dispatch command-bus ids.
 Plan only. PIXIE embedded in HyperTIES is the showcase, so the tube keeps its
 phosphor and the information goes to the frame.
 
-Popping text up at the cursor is shouting: it covers the picture you are pointing
-at. A light pen already gives coverage and hit feedback on the glass in real time;
-what the thing *is* belongs out of the way, upstairs, in the HyperTIES definition
+Popping text up at the cursor covers the picture you are pointing at. A light pen
+already gives coverage and hit feedback on the glass in real time; what the thing
+*is* belongs out of the way, in the HyperTIES definition
 window at the bottom of the screen, as in the LispM's mouse documentation line and
 the Emacs mode line.
 
@@ -606,7 +606,7 @@ type Demo = {
   export and import as JSON (and YAML). Built-ins are read only; duplicate to edit.
 - Stored in localStorage per program, replacing the single `cabinet-session-${id}`,
   which migrates in as the first user demo.
-- The party demo (§7) and Heinz's walkthroughs ship as built-ins.
+- The multi-pen demo (§7) and Heinz's walkthroughs ship as built-ins.
 
 **Apple ][ apps get demos too.** An app in `disks/apple2/APPS.yml` carries a `demos` list,
 written as steps instead of a generator, so the YAML is the demo:
@@ -666,7 +666,7 @@ Don has an actual pair. Simulated in the bench first, then digital twins.
 - **A teaching toy.** The keyset shows the chord it is reading and the character, so
   you learn the code by watching, and a practice mode drills it.
 - **One more input device on the bus.** Chords become `cabinet.key.type` commands
-  (§8), so scripts, recordings and the party treat the keyset like any keyboard.
+  (§8), so scripts, recordings and the multi-pen demo (§7) treat the keyset like any keyboard.
 - **Digital twins.** Measured from Don's pair: 3D models, printable shells, a maker
   kit, and finished Bluetooth HID devices that work with the simulator and with any
   computer. The hardware project gets its own home when it starts; this bench is its
@@ -677,7 +677,7 @@ Don has an actual pair. Simulated in the bench first, then digital twins.
 
 ## 13. Emulation mash-ups
 
-Plug virtual devices into virtual machines that never met: a VPL DataGlove on a
+Plug virtual devices into virtual machines they were never built for: a VPL DataGlove on a
 PDP-7, tracking your real hand with computer vision; an Engelbart mouse and keyset on
 the PDP-7, or on an Apple ][ as PDL(0), PDL(1) and three buttons.
 
@@ -689,8 +689,8 @@ instrument and the machine, and what's built: [DEVICES.md](DEVICES.md).
 - **The instrument**: what the hand does, machine-free. Mouse: relative x, y and
   three buttons. Keyset: five keys. Glove: per-finger flex, hand position and
   orientation. Fed by real hardware, a simulation on screen, a recording, or a
-  driver script (§8), so every instrument can be scripted, recorded and partied with
-  (§7).
+  driver script (§8), so every instrument can be scripted, recorded and used in the
+  multi-pen demo (§7).
 - **The port**: how one machine sees it. On the PDP-7, a `Device` on the IOT bus
   ([bus.ts](src/bus.ts)). On the Apple ][, the game port: paddle timers read through
   `$C070`/`$C064`–`$C067` (`PDL(n)` in BASIC) and pushbuttons at `$C061`–`$C063`.
@@ -803,7 +803,7 @@ than the computer, as tiny-titan does
   Spacewar! 45th anniversary tournament at Living Computers: Museum + Labs in October 2017. The
   model has 6.5k triangles. Its round face is the place to show phosphor: the winner's last
   frame, or a live Spacewar! once the PDP-1 runs. It could also be the prize for a DUEL or
-  Spacewar! tournament in the cabinet (two pads, §14, and the party, §7). It is not in the repo
+  Spacewar! tournament in the cabinet (two pads, §14, and several pens, §7). It is not in the repo
   yet. Download it as the PDP-1 above, and check in its credit with it.
 - **Interrupts in Forth.** An assembly thunk at location 1 saves AC, link, MQ and the Forth
   registers (IP at 010, the stack pointers at 011 and 012), points IP at a handler word's body
@@ -840,7 +840,7 @@ teletype shows every step as it happens:
 | Shift-Rubout | redo it |
 
 Undo replays: the recording is the history, so undo is "clear the screen and run the recording
-without its last word". Turtle programs are cheap to rerun, which is what makes this honest.
+without its last word". Turtle programs are cheap to rerun, which is what makes this practical.
 Shneiderman's direct manipulation, rapid, incremental and reversible, with the program as its
 log.
 
@@ -848,15 +848,15 @@ log.
 compiles. ⏹ ends it with `;`. The new word is in the dictionary, listed by `WORDS`, and its text
 is kept as source for LIVE CODING.
 
-**Moves are relative, so loops just work.** CADroid's first rule: `fd`, `rt` and `lt` are
+**Moves are relative, so loops need no adjustment.** CADroid's first rule: `fd`, `rt` and `lt` are
 deltas from wherever the turtle is, so a recorded body repeated n times walks on, just as one
 recorded wire became 32.
 
 **Four ways into a loop.** All four make the same Forth, so they can be mixed and edited between:
 
 1. **Count first.** Say how many, act out one pass, close. `4 [`, then drag a side and turn,
-   then `]`: the first pass ran as you did it, and on `]` the other three fire at once, whomp
-   whomp whomp. This is `?[ ][ ]` as it was.
+   then `]`: the first pass ran as you did it, and on `]` the other three run at once. This is
+   `?[ ][ ]` as it was.
 2. **Begin first, count after.** Press *begin*, act out a pass, then *loop 3 more*. The body is
    already compiled, so it runs three more times.
 3. **Repeat by pressing.** Act out a pass, then press *repeat* five times: each press runs the

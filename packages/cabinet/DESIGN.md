@@ -1,13 +1,13 @@
-# Cabinet design — what PIXIE actually demands
+# Cabinet design: what PIXIE requires
 
 Extracted from the transcribed listing
 ([`symelec-listing.txt`](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt),
 zero transcription findings), not from DEC manuals alone. The rule throughout:
-**instance first** — hardwire what SYMELEC needs, comment where the abstraction
-would go, generate it lazily when a second instance demands it. Stated in full
-as the porting method — *work backwards from the software you want to run* —
-in the [TinyTeco runbook](../tiny-teco/FULL-ITS-TECO.md), where it was
-discovered the first time the same week.
+**instance first**: hardwire what SYMELEC needs, comment where the abstraction
+would go, generate it lazily when a second instance needs it. The
+[TinyTeco runbook](../tiny-teco/FULL-ITS-TECO.md) states this in full as the
+porting method, *work backwards from the software you want to run*; it was
+first worked out there, the same week.
 
 ## Memory representation (decided)
 
@@ -15,7 +15,7 @@ One word per typed-array element. `Uint32Array` for word sizes ≤ 32 bits.
 Never bit-pack: the whole PDP-7 core is 32KB unpacked and indexed typed-array
 access is one machine load; packed access is multi-byte reconstruction in the
 hottest loop. JS bitwise ops truncate at 32 bits, so a future wide-word cabinet
-(36-bit PDP-10, 48-bit Titan) picks its own representation per plugin —
+(36-bit PDP-10, 48-bit Titan) picks its own representation per plugin:
 hi/lo pairs or plain numbers with arithmetic (safe to 2^53). **Word storage is
 a plugin choice, not a backplane abstraction.** The backplane promises only:
 a word is a JS number.
@@ -24,11 +24,11 @@ a word is a JS number.
 
 - Load `symelec.oct` alone. It is self-contained: 0o21–0o11741 (17–5089 words),
   fits 8K. Boot: start at 0o22 (`JMP BEGRTP`).
-- `rsppix.oct` overlays the same addresses with different contents — a separate
-  standalone program, not a co-resident module. (688 shared addresses, 687
+- `rsppix.oct` overlays the same addresses with different contents: it is a
+  separate standalone program, not a co-resident module. (688 shared addresses, 687
   differ. Measured 22 Sep 2026; closes the EMULATION-PLAN layout question.)
 
-## Device contract — every IOT SYMELEC issues
+## Device contract: every IOT SYMELEC issues
 
 | dev | IOTs (octal) | box |
 |-----|--------------|-----|
@@ -39,7 +39,7 @@ a word is a JS number.
 | 06 | IDSI 700601 · IDLA 700606 | display: stop-code skip, load addr & go |
 | 07 | IDSP 700701 · IDRC 700712 | display: pen skip, read beam coords |
 | 10 | IDHE 701001 | display: h-edge skip |
-| 11 | IDPN 701101 skip · 701112 read | **cabinet extension, not 1972**: which pen fired (1–8, 0 = none). Free device code; no PIXIE binary issues it, so stock software is unaffected. Reassemble PIXIE to use it — multiple pens, Engelbart tribute: drag two corners of a rectangle, two radial menus at once, a quiver of eight wands. |
+| 11 | IDPN 701101 skip · 701112 read | **cabinet extension, not 1972**: which pen fired (1–8, 0 = none). Free device code; no PIXIE binary issues it, so stock software is unaffected. Reassemble PIXIE to use it for multiple pens, after Engelbart: drag two corners of a rectangle, or use two radial menus at once, with up to eight pens. |
 | 12 | MSF · MRB · MRC · MRS (planned) | **cabinet extension, not 1972**: the pointer as events, x, y and buttons, for programs that drag ([pointer devices](#the-application-layer--packagespixie-separate-module)). |
 | 22–23 | LSF 702201 · LCF 702222 · LRB18 702252 · LLB18!LLAM 702264 · LRB18!LLAM 702276 · LSA 702301 · LKD 702322 · LLB6 702344 · LKE!LLB6 702364 | Titan link |
 | 33 | CAF 703302 | clear all flags |
@@ -49,19 +49,19 @@ a word is a JS number.
 
 Everything else: no-op (already the backplane default).
 
-## Interrupts — the one missing bus concept
+## Interrupts: the one missing bus concept
 
 PIXIE is interrupt-driven. `BEGRTP` deposits `JMP INT` at location 1, `ION`.
 The PDP-7 facility: on request with interrupts enabled, save PC (link in the
 sign bit) at 0, jump to 1, interrupts off; `ION` re-enables (one-instruction
-delay); handler returns `LAC INT1; ION; JMP I 0`. One level, no vectors —
-the handler identifies the device by skip-chain:
+delay); handler returns `LAC INT1; ION; JMP I 0`. There is one level and no
+vectors; the handler identifies the device by skip-chain:
 
     INT: IDSP→PEN · IDSI→STPCD · IDVE→EDGEV · IDHE→EDGEH · TSF→OUT · KSF→INP · CLSF→CLOCK
 
 Backplane addition: a single IRQ line devices can raise; the CPU plugin
-samples it and owns what an interrupt *does*. Roy's SIMH `GO` blanks for
-exactly this reason — no device ever fires.
+samples it and decides what an interrupt *does*. Roy's SIMH `GO` blanks for
+this reason: no device ever raises an interrupt.
 
 ## The Type 340 is a display processor, not a segment sink
 
@@ -72,46 +72,44 @@ Contract decoded from `INT`/`PEN`/`TRCR`/`STPCD` (listing 5320–5533):
    `// abstract to a DMA port when a second DMA device exists`
 2. **Stoppable and resumable mid-file.** Pen hit or stop code freezes the
    display PC; `IDRS` resumes in place.
-3. **Segments carry provenance** — the display-file address that drew them.
+3. **Segments carry provenance**: the display-file address that drew them.
    PIXIE identifies *what* was hit via Type 347 `DJS` return linkage in low
    core (it reads locations 3 and 5 to tell lightbutton from drawing).
 4. **`IDRC` returns packed beam coordinates**, read twice: rotate-1 +
    `AND 1776` → TEMPY, rotate-8 + `AND 1776` → TEMPX. Hardwire that exact
    packing; it satisfies the only program that reads it.
 5. **Edge flags** (IDVE/IDHE) when the beam runs off the 1024×1024 grid.
-6. **Stop codes** raise IDSI — frame boundaries; the clock handler flips
+6. **Stop codes** raise IDSI at frame boundaries; the clock handler flips
    intensity bits in the display file for blink.
 
 Display-word codec: the Cambridge assembler's `DISP` encodings are
-undocumented but recoverable — thousands of octal+mnemonic pairs in the
+undocumented but recoverable from thousands of octal+mnemonic pairs in the
 listing (`PAR SB`=160000 · `VEC ES -34 14`=406234 · `DJP TEMPDF`=404441 ·
 `DDS SB 3`=360003), cross-checked against the mirrored H-340 manual.
 **Decode only the words SYMELEC contains**; unknown display word = log and
 skip (robust-first). No Type 342 character generator until a character word
-appears in the file — and when one does, the glyph shapes come from the
+appears in the file. When one does, the glyph shapes come from the
 `chars[]` table in SIMH's `display/type340.c`, where **Lars Brinkhoff
 recovered the letterforms from AI lab film footage** (annotated per glyph:
-`AI film 75`, `AI film 104`, Knight TV fills). The shapes question is
-already answered, on celluloid.
+`AI film 75`, `AI film 104`, Knight TV fills).
 
 ## The light pen
 
 Pen hit = pointer within aperture of a *freshly intensified* segment during
 display execution (the real pen saw the blue flash, never the afterglow).
-The hit stops the display; PIXIE's own `TRCR` moves the tracking cross —
-the cross follows the mouse because 1969 software tracks it. The radial
-lightbuttons (`LBD`, `PSD/PAD/PRD/PCD/PLD/PXD`) are PIXIE's display file:
-**we do not implement radial menus; we implement the pen honestly and the
-radial menus appear.** The full tracking machinery — cross, `TRCR`,
-`POSCR`, the `SRAST` reacquisition raster, the Promethean acquisition
-handoff — is walked through against the listing in
-[TRACKING.md](TRACKING.md), and proven live by the tracking acceptance
-test.
+The hit stops the display; PIXIE's own `TRCR` moves the tracking cross,
+so the cross follows the mouse because the 1969 software tracks it. The radial
+lightbuttons (`LBD`, `PSD/PAD/PRD/PCD/PLD/PXD`) are PIXIE's display file.
+**The cabinet does not implement radial menus; it implements the pen
+faithfully, and PIXIE draws the radial menus.** The full tracking machinery
+(cross, `TRCR`, `POSCR`, the `SRAST` reacquisition raster, the Promethean
+acquisition handoff) is walked through against the listing in
+[TRACKING.md](TRACKING.md) and tested by the tracking acceptance test.
 
-Two pen modes as a dimensional control:
-- `honest` — PIXIE's incremental tracking; can lose the cross on fast
+Two pen modes:
+- `honest`: PIXIE's incremental tracking; can lose the cross on fast
   motion, which is period-correct. The demo mode.
-- `assist` — teleport the cross to the pointer. For kiosks and impatience.
+- `assist`: move the cross directly to the pointer. For kiosks and casual use.
 
 **How a program knows what was hit: `DDS`.** The 340 only reports *that* the pen fired and
 where the beam was. The display list says who owns what is drawn next, before drawing it:
@@ -135,8 +133,8 @@ the latch, and `IDPN` (dev 11) says which pen it was. Every 1972 program works u
 pens can't hit two buttons in the same frame: the first hit freezes the display. *Separate*
 (will, a cabinet setting): each pen gets its own hit flag, coordinates and tag latch, read
 through new IOTs by pen number, and a hit no longer freezes the display for the others. Old
-programs can't use it and needn't: the cabinet chooses the mode, so the fun of eight people at
-one tube never breaks a stock program. It is more circuitry than DEC ever built; it's marked as
+programs can't use it and needn't: the cabinet chooses the mode, so separate pens never break a
+stock program. It is more circuitry than DEC ever built; it's marked as
 an extension.
 
 **Pens in Forth** (will). Kernel words: `pen? ( -- f )`, `pen@ ( -- x y n )`, `resume`, and with
@@ -145,7 +143,7 @@ assembly thunk ([ROADMAP §14](ROADMAP.md#14-small-items)): `pen-hit ( x y n tag
 title can be Forth to run when it's hit, once the kernel has `EVALUATE`; it runs in the machine,
 never as JavaScript in the page.
 
-## CPU plugin — verified gaps against the source
+## CPU plugin: verified gaps against the source
 
 | Gap | Evidence | Cost of skipping |
 |-----|----------|------------------|
@@ -158,38 +156,38 @@ never as JavaScript in the page.
 
 ## tiny-titan
 
-Per [`TITAN-LINK-PROTOCOL.md`](reference/TITAN-LINK-PROTOCOL.md)
-— the codec and plug-in surface are designed there; the module is
+The codec and plug-in surface are designed in
+[`TITAN-LINK-PROTOCOL.md`](reference/TITAN-LINK-PROTOCOL.md); the module is
 [`src/plugins/tiny-titan.ts`](src/plugins/tiny-titan.ts), and
-[TINY-TITAN.md](TINY-TITAN.md) is its own page — what it does now,
+[TINY-TITAN.md](TINY-TITAN.md) is its own page: what it does now,
 what it could do, and where the name comes from. Two layers,
 split so the far side is repackageable:
 
 - **`TinyTitan`** is the cabinet device, claiming devs 22–23. Its pulses
   are what the CPU delivers after stripping bit `010` (clear-AC): `LSF`
   arrives as pulse 01, `LRB18` as 42, `LRB18!LLAM` as 66, `LLB18!LLAM`
-  as 64; on dev 23, `LLB6` as 44, `LKE!LLB6` as 64 — and the NAK
+  as 64; on dev 23, `LLB6` as 44, `LKE!LLB6` as 64. The NAK
   spelling `LLB6 10` reaches the device as control 0 with AC
   pre-cleared, the `010` being the clear-AC bit itself. The link ran
   with interrupts off, so the device raises no IRQ.
 - **`TitanPort`** is the seam: `control / send / recv / ready /
-  disconnect`, five calls a transport can carry anywhere. The PDP-7
-  polls `LSF` in `WAITLK` — the 1969 polling loop *is* the await — so
-  an in-process port answers instantly and a remote one (WebSocket,
-  fetch) just buffers arrivals behind `ready()`. Same host class,
-  three deployments: in the browser beside the emulator, in-process on
-  node, or a real server streaming frames. Repackaging is lifting the
+  disconnect`, five calls any transport can carry. The PDP-7
+  polls `LSF` in `WAITLK`, and that 1969 polling loop serves as the
+  await, so an in-process port answers instantly and a remote one
+  (WebSocket, fetch) buffers arrivals behind `ready()`. The same host
+  class runs in three places: in the browser beside the emulator,
+  in-process on node, or on a real server streaming frames. Repackaging is lifting the
   file into its own package; it imports only the bus types.
 - **`BlockletHost`** implements the session state machine from the
   `/LTPIX` listing: serves the 4-word redundantly-checked headers
   (`(w1^w2)+(w3^w4)` must be all-ones), sets the count per blocklet
-  (a blocklet carries exactly `count` RW words — the end test's
+  (a blocklet carries exactly `count` RW words, because the end test's
   `ISZ BSZ` pre-increments the complemented count), accumulates RW's
-  running 18-bit checksum, answers it for `SAD CKS`, and says goodbye
+  running 18-bit checksum, answers it for `SAD CKS`, and ends the session
   with a zero-count header.
 
 Ladder: **stub met** (portless `TinyTitan`: `LSF` always skips, the
-`TITAN` command cannot wedge the machine) and **echo met** — the
+`TITAN` command cannot wedge the machine) and **echo met**: the
 acceptance test boots SYMELEC, types `TITAN` on the teletype, and the
 recorded transfer opens with `PXID` followed by `DSBEG`/`DSEND`/
 `SAVINS` and the live ring words from core. **Decode met** in
@@ -205,14 +203,14 @@ queue running the other way.
 
 SYMELEC's teletype language is five commands and two message forms.
 `INP` buffers a line (mark-parity ASCII, CR = `215` ends it); `MESIN`
-hashes the **first three characters** — `SUMB = (SUMB<<6) + char` —
+hashes the **first three characters** (`SUMB = (SUMB<<6) + char`)
 against the `MESL` table and `XCT`s the matching entry:
 
 | typed | hash | does |
 |---|---|---|
-| `LABEL` | `170402` | `ISZ RLABEL` — name elements as you draw |
-| `UNLABEL` | `302114` | `DZM RLABEL` — stop |
-| `TITAN` | `271424` | `JMS LTPX` — phone the filestore |
+| `LABEL` | `170402` | `ISZ RLABEL`: name elements as you draw |
+| `UNLABEL` | `302114` | `DZM RLABEL`: stop naming |
+| `TITAN` | `271424` | `JMS LTPX`: connect to the filestore |
 | `GRID` | `122511` | coarsen the snap grid to 16 units |
 | `START` | `262701` | reinitialize |
 
@@ -223,28 +221,29 @@ blinking. When something is blinking, the line describes it instead
 the text that subpicture's type; Return alone lists the instance's
 name, its data lines and `:type`; any other text renames the instance.
 A blinking line is refused with Note 6. `TITAN`'s four-way skip
-return maps to typed error notes — checksum fail, not PIXIE data,
-data won't fit — and on success SYMELEC rebuilds its name list and
+return maps to typed error notes (checksum fail, not PIXIE data,
+data won't fit), and on success SYMELEC rebuilds its name list and
 puts the received picture on the tube.
 
-Remote control is not a console protocol: the Cabinet is a TS object.
-Examine/deposit/step over the same WebSocket, a dozen lines.
+Remote control needs no console protocol, because the Cabinet is a TS
+object: examine, deposit and step go over the same WebSocket in about a
+dozen lines.
 
 ## The application layer — `packages/pixie` (separate module)
 
 The cabinet is the machine; PIXIE's ring structures are an application format
-and live beside it, not inside it — the way SYMELEC sat on the PDP-7.
+and live beside it, not inside it, as SYMELEC sat on the PDP-7.
 
 **Ring codec, wire-compatible.** The blocklet transfer ships the
 data-structure core area verbatim (stream heading `PXID`/`DSBEG`/`DSEND`/
 `SAVINS`, raw words, pointers relocated on receive), so one codec covers
 everything: decode 18-bit words → TS object graph (nodes, branches, rings,
-subpictures), encode back. Not RAM-byte-compatible — wire-compatible; the
-graph representation is ours.
+subpictures), encode back. It is wire-compatible, not RAM-byte-compatible;
+the graph representation is ours.
 
 Format truth, in order:
-1. Wire envelope: [`TITAN-LINK-PROTOCOL.md`](reference/TITAN-LINK-PROTOCOL.md)
-   — atoms (top 5 bits zero), NIL = the `JMS` opcode value, block headers
+1. Wire envelope: [`TITAN-LINK-PROTOCOL.md`](reference/TITAN-LINK-PROTOCOL.md):
+   atoms (top 5 bits zero), NIL = the `JMS` opcode value, block headers
    `20000` + 13-bit length, `RELCON` relocation.
 2. Semantics: RSPPIX itself (the Ring Structure Processor, transcribed clean),
    thesis §5, Heinz's data-structures paper.
@@ -252,7 +251,7 @@ Format truth, in order:
 One codec, three consumers: the mini-Titan filestore; **test-model
 generation** (build a drawing in TS, feed it to 1969 PIXIE over the link,
 watch it render); **extraction** (pull out what the user drew with the pen).
-Acceptance test for free: encode → link → PIXIE → link → decode → deep-equal.
+The same codec gives an acceptance test: encode → link → PIXIE → link → decode → deep-equal.
 
 Built in `packages/pixie` (16 tests pass, 3 Oct 2026):
 
@@ -298,24 +297,24 @@ close, and a way to show Heinz his 1969 data structures running.
 
 Panes, all linked, all driven by the running cabinet:
 
-1. **Tube** — the live 340, as now.
-2. **Core strip** — `BEG..END` as a bar, one tick per word, colored by
+1. **Tube**: the live 340, as now.
+2. **Core strip**: `BEG..END` as a bar, one tick per word, colored by
    class (atom, name, NIL, block, nonitem, free list, GC mark). Watch it
    fill as the pen draws and watch the collector sweep. A second layout:
    all of core on a Hilbert curve (8K words as two 64×64 squares end to
    end), so neighboring addresses stay neighbors on screen with no
    jumps, colored by class, or by read and write heat from shadow
    memory.
-3. **Ring graph** — elements as nodes, pointers as edges, rings drawn as
+3. **Ring graph**: elements as nodes, pointers as edges, rings drawn as
    literal circles; printnames shown as strings, blocks as arrays.
-4. **Inspector** — a selected cell's octal word, class, `CAR`/`CDR`, who
+4. **Inspector**: a selected cell's octal word, class, `CAR`/`CDR`, who
    points at it (reverse pointers, computed), and which display-file
    words it compiled to.
-5. **Linked brushing** — hover a stroke and its ring element lights; hover
+5. **Linked brushing**: hover a stroke and its ring element lights; hover
    an element and its strokes light, through segment provenance plus a
    display-address → ring-name map recorded by the DOWN compiler. Selecting
    an element can make PIXIE blink it, as pointing mode does.
-6. **Text pane** — an editable projection that round-trips (below).
+6. **Text pane**: an editable projection that round-trips (below).
 
 Two levels, like any structured-data viewer: the cell level is universal,
 because every word carries its own tag; the element level (branch between
@@ -406,8 +405,8 @@ mode the tube is drawn by a shadow 340: a throwaway one, over a read-only view o
 where the program last issued IDLA (`Type340.startAddr`) and run for one pass. It drops stores,
 has no pens and never touches the real 340 or the CPU, so a drag redraws at pointer rate at any
 speed, paused included (tested: 0 CPU cycles, frame corner moved). The real 340 is not ticked
-on its own, which would be the madness: SYMELEC's display interrupts would fire with no CPU to
-answer them. The shadow reads; the machine stays exactly as it was. Every corner gets a handle,
+on its own, because SYMELEC's display interrupts would then fire with no CPU to answer them.
+The shadow 340 only reads, so the machine state does not change. Every corner gets a handle,
 and the nearest within 40 grid units is picked, so pointing need not be precise.
 
 **To do: a tool palette, so editing never takes the light pen away.** The ✋ button becomes a
@@ -431,7 +430,7 @@ route: tools the program writes for itself.
 
 **To do: a clock per machine.** The CPU, the 340 and every other executable part of a cabinet
 (a Turing machine, the CAM, a raster framebuffer, the Titan link's far end) gets its own run,
-stop and speed, under one master. Rules, so this stays sane:
+stop and speed, under one master control. Rules:
 
 - **Time is one clock.** Each part is stepped in cycles of the one backplane clock, at its own
   ratio. A part that is stopped doesn't advance, and the cycles it didn't use are not banked.
@@ -575,7 +574,7 @@ second, larger outline where it can reach after the compiler re-encodes it; the 
 compiled result against the space available; and, when a move changes encoding (a vector becomes
 an absolute jump, a string splits), a note saying so. Nothing is refused silently.
 
-**The ideal form is the hub.** Like Atlanta's airport, every trip changes planes here. Each format
+**The ideal form is the hub.** Every conversion goes through it. Each format
 gets a pair of routes to the ideal form and back, never one straight to another format, so n
 formats need 2n translators, not n².
 
@@ -640,16 +639,16 @@ the pointer, both cabinet extensions on free device codes, neither touching stoc
 - **A pointer pen**: a pen that needs no light. It latches every time the program asks,
   wherever the beam is, so `IDSP` skips and `IDRC` reads the pointer, not the beam. Programs
   written for the light pen (Forth's pen words, SYMELEC with no change) can drag at any
-  point, not just on lit strokes. It is the light pen's API with the physics turned off:
-  cheap, and it can't tell the program which display word is under it.
+  point, not just on lit strokes. It uses the light pen's IOTs without the photocell test:
+  it is cheap to build, but it can't tell the program which display word is under it.
 - **A MOUSE device** (dev 12): `MSF` skips on a new event, `MRB` reads x, `MRC` reads y,
   `MRS` reads buttons, raising the interrupt like the keyboard. Events, not polling, so
   press, drag and release are never missed between refreshes, and the program pairs them
   with the 340's own provenance: the hit address from the frame (IDPN pulse 4 in
   [TAGS-AND-PIES.md](TAGS-AND-PIES.md)) says what is under the press.
 
-Both, in that order: the pointer pen is an afternoon and lights up pen programs at once;
-MOUSE is what a Forth editor wants. In Forth: `mouse ( -- x y buttons )`, `pick ( x y --
+Both, in that order: the pointer pen is about an afternoon's work and existing pen programs
+can use it at once; MOUSE is what a Forth editor needs. In Forth: `mouse ( -- x y buttons )`, `pick ( x y --
 addr )`, and a drag loop of a few lines that reads a vector word, decodes it, and `!`s it
 back, written by whoever wants it, at the Forth prompt, with the same decode as
 `edit340.ts`. The emulator only delivers events and draws; the tool lives in the machine.
@@ -672,7 +671,7 @@ Background for all of this: the ring-structures section of the
 [turist guide](reference/GUIDE-RINGS.md).
 
 **To do: the RSP library, extracted from PIXIE and shared by every VM.**
-One format, two halves.
+One format, with a PDP-7 half and a TypeScript half.
 
 **Layers, each optional above the first.** Lift Heinz's code verbatim, beautified and commented
 with attribution; change only packaging and calling conventions. The PDP-7 side stays flat and
@@ -764,8 +763,8 @@ locks:
   rings: { segment: rings, held-in: [[SETUP, GARB2]], free-in: [WAITLK] }
 ```
 
-**Magic implicit locks, enforced by the emulator.** We own the emulator,
-so a lock can belong to the machine instead of the program. A lock
+**Implicit locks, enforced by the emulator.** Because the emulator is ours,
+a lock can be held by the machine instead of the program. A lock
 section is a start and length taken from the symbol table, named in the
 config by symbol so a reassembly moves the lock with the code. Examples:
 RSPPIX, which was assembled as one block, or just its collector, `LIM`
@@ -780,8 +779,8 @@ everywhere except `WAITLK`. Cost: one byte per word of core, a lock
 number per address, looked up on each fetch. What it can't see: a store
 to shared memory from outside every section. The emulator can watch the
 window and flag those. It can also see deadlock (two VMs each stalled on
-the other's lock) and report it instead of hanging. The unmodified
-program never knows.
+the other's lock) and report it instead of hanging. None of this
+requires changing the program.
 
 **Shadow memory: bits only the emulator sees.** Core is a `Uint32Array`
 holding 18-bit words, so every word has 14 spare bits, and `write` masks
@@ -814,7 +813,8 @@ bits goes in shadow arrays of any width, indexed like core and attached
 to the segment: last writer (VM, PC, cycle) for every word, read and
 write counts for a heat map, the source line or message a word came
 from, a short history per word. That is the shape of Valgrind's memcheck
-and AddressSanitizer, here for free because we own the machine. It
+and AddressSanitizer, possible here because the emulator sees every
+memory access. It
 covers all memory, not only shared segments, and it feeds the panels:
 break on a word, show who last wrote it and from which source line, and
 color the core strip by heat or coverage.
@@ -941,7 +941,7 @@ each applied at a stated cycle of the receiving machine. That stamp is what
 keeps replay, the session log and lockstep testing exact wherever the far
 side is. A port is a function call when both ends share a thread, a
 `postMessage` between workers, and a WebSocket between hosts. The bus side
-never knows which.
+is the same code in every case.
 
 **Machines are sites with their own clocks.** Two CPUs talk only through
 links (tiny-titan, serial, modem, network), each with a latency in cycles,
@@ -968,20 +968,20 @@ segments per frame (a runaway display file makes huge frames), require
 ownership or an invitation for any write (the tiny-its rule), and give
 VMs no host files beyond their scoped filestore.
 
-## Media — what the machine eats and excretes
+## Media: what the machine reads and writes
 
-SYMELEC issues **no reader or punch IOTs** — paper tape was how code arrived
+SYMELEC issues **no reader or punch IOTs**. Paper tape was how code arrived
 (hardware read-in mode), not a device the program touches. So tape is a
 loader-side module, not a Device.
 
 | Module | In | Out | Validation |
 |--------|----|----|------------|
 | tape | `.oct`, `.rim` → core | core → `.rim` | diff against Roy's converter output |
-| lister | core / `.oct` | 1972 Cambridge lineprinter column format | **diff clean against the 1972 listing itself** — second full-corpus check of transcription and decoder at once |
-| assembler | transcribed Cambridge-dialect source | core / `.oct` | **round-trip bit-identical against `symelec.oct`** — the lister's inverse. SYMELEC was assembled on Titan (`BY HL1470`, 12 Feb 72) in a dialect no surviving assembler speaks: `(literal` pools, `JMP , n` relative, and the `DISP` display-word mnemonics, which share the 340 codec built for rung 2. `as7` from pdp7-unix is the cross-platform precedent; the DEC assembler on the emulated iron is the period-authentic stunt. Once the round-trip is clean, PIXIE is editable — patch, reassemble, boot, and diff the segment log against the original to see exactly what changed. |
+| lister | core / `.oct` | 1972 Cambridge lineprinter column format | **diff clean against the 1972 listing itself**: a second full-corpus check of transcription and decoder at once |
+| assembler | transcribed Cambridge-dialect source | core / `.oct` | **round-trip bit-identical against `symelec.oct`** (the lister's inverse). SYMELEC was assembled on Titan (`BY HL1470`, 12 Feb 72) in a dialect no surviving assembler speaks: `(literal` pools, `JMP , n` relative, and the `DISP` display-word mnemonics, which share the 340 codec built for rung 2. `as7` from pdp7-unix is the cross-platform precedent; running the DEC assembler on the emulated PDP-7 is the period-authentic option. Once the round-trip is clean, PIXIE is editable: patch, reassemble, boot, and diff the segment log against the original to see exactly what changed. |
 | snapshot | segment stream | SVG (provenance as data attributes), PNG | eyeball vs 1969 film frames |
 | recorder | segment stream | timestamped segment log (JSONL); WebM via `captureStream` | deterministic replay |
-| phosphor | segment stream | canvas fade; WebGPU dual-phosphor later | the pretty-pass, never a blocker |
+| phosphor | segment stream | canvas fade; WebGPU dual-phosphor later | visual only, never a blocker |
 
 **The segment log is the one stream.** Snapshot, video, phosphor and the pen all
 consume it. Recording and replaying it makes every display bug reproducible, and
@@ -989,27 +989,25 @@ comparing with the films becomes a diff.
 Media files carry YAML-jazz sidecars (source, date, provenance), repo style.
 
 The SVG snapshot is vector-to-vector with no rasterization between: a 340
-display file is already closer to SVG than to pixels. Structure survives —
+display file is already closer to SVG than to pixels. Structure is kept:
 **a 347 `DJS` subroutine call becomes an SVG `<g>` group**, so PIXIE's
-subpicture hierarchy is the export's hierarchy, and provenance rides as
+subpicture hierarchy is the export's hierarchy, and provenance is stored as
 `data-` attributes: click a stroke in the browser inspector and read the
-display-file address that drew it in 1972. A dead vector format translated
-into the living one, structure intact.
+display-file address that drew it in 1972.
 
-**Provenance is a timestamp too — the drawing maps back to machine state.**
+**Provenance is also a timestamp, so the drawing maps back to machine state.**
 Each segment carries the display-file address that drew it *and* the
 backplane cycle it was drawn on, plus the 340's state at that instant
 (display PC, mode, scale, intensity, `lp_ena`). Because execution is
 deterministic from a snapshot plus the input log, a cycle stamp is a
-**seekable address into machine time**: click a stroke — in the live canvas,
-the SVG export, or the portrait's tube — and the debugger frame re-runs to
-that cycle and lands with the whole machine posed: CPU registers, the 340
+**seekable address into machine time**: click a stroke (in the live canvas,
+the SVG export, or the portrait's tube) and the debugger frame re-runs to
+that cycle and stops with the whole machine in that state: CPU registers, the 340
 mid-file, the console lamps' duty cycles. The pen already needs
 freshly-intensified segments, so recency is in the record anyway; the
-debugger just reads the same field. Slow mode is this scrubbed
-continuously; single-step is this at grain one. Nothing new to build in the
-emulator — it is the segment log, the snapshot, and the frame manager
-composing.
+debugger reads the same field. Slow mode is this scrubbed
+continuously; single-step is this at a grain of one. It needs nothing new in the
+emulator: it combines the segment log, the snapshot and the frame manager.
 
 ## Cartridges and live coding
 
@@ -1133,7 +1131,7 @@ student needs to write:
 - **Rounds**: numbers to be guessed in order, each with the message you win by finding it. With no
   rounds, the number is random, as now.
 
-It's ELIZA crossed with guess-the-number, reading your numerology. The remarks are printed, so a
+It combines ELIZA-style remarks with guess-the-number. The remarks are printed, so a
 screen reader speaks them, and a teletype setting reads them aloud for everyone. A talk tape is
 just source: upload one, or paste someone else's into the LIVE CODING panel, and the page assembles
 it with the engine and runs it.
@@ -1141,16 +1139,14 @@ it with the engine and runs it.
 **Animal, in Forth.** The classic guess-the-animal game, which learns a question each time it
 loses. Its save file is a Forth program: loading it builds the tree of questions and animals in
 memory, and playing adds to the tree. SAVE prints the new tree as source again, so the game you
-share is readable, diffable text, not a binary image (though an image can be saved too). We work in
-source-code space.
+share is readable, diffable text, not a binary image (though an image can be saved too).
 
 **To do: Animal's tree as pixie rings.** The tree is a ring structure: each question is an
 element with a yes ring and a no ring, and each animal is an atom leaf. Learning a question is RSP
 `INSRT`, splicing a new element in where the wrong guess stood. Playing is a walk with `FINDN`, and
 the recursion (SAVE printing the tree as source) lives in Forth over `rsp.fs`, not in `rsp.s`. The
 same rings can be drawn on the 340 as a live tree, sent whole over `net.fs` so two machines share
-one animal brain, and shown in the ring editor above. PIXIE built drawings out of rings; this
-builds a mind out of them.
+one tree, and shown in the ring editor above.
 
 **To do: Animal on the 340, played with the pen.** The tree is drawn on the screen: each question
 and each animal is a box with its title in 342 characters and its id beside it, joined by yes and
@@ -1207,13 +1203,13 @@ Scripts are data, a short list of steps from a fixed vocabulary: read core, look
 type on the teletype, set a register or a panel, call another script, and a conditional. No loops
 and no eval: cartridges arrive by URL and get pasted into LIVE CODING, so a script must not be
 able to run arbitrary JavaScript in the page. Anything that wants a loop belongs in Forth or
-assembler on the machine, where the cabinet can show it. Yes, this will get out of hand; the
-fixed vocabulary is where it stops.
+assembler on the machine, where the cabinet can show it. The fixed vocabulary is the limit on
+how far scripts can grow.
 
 **Sources as linguistic motherboard cards.** Each of these sources carries a header of what it is:
 title, description, prompt and style. With that, a program is a card that can be regenerated in
-another language or style: the same animal database as Forth, as Lisp, as a talk tape. MOOLLM's
-cards, for code.
+another language or style: the same animal database as Forth, as Lisp, as a talk tape. These are
+MOOLLM's cards, applied to code.
 
 **TODO: cellular automata, and a tile engine under them.** A cellular automata library that many
 small programs can be made from, the same kind of personal, user-made games as the talk tapes.
@@ -1262,9 +1258,9 @@ Forth with Don's rule compiler.
 - once on the CAM6 device, from its Forth definition;
 - once as plain PDP-7 assembly on the bare CPU.
 
-The trace counts the cycles each takes per generation, and the page shows them as they run. The
-two play music together as they go, realistic (the AM radio) or interpretive, from what the cells
-are doing. Brian Eno would love it (`characters/brian-eno/speculative-jams.md`).
+The trace counts the cycles each takes per generation, and the page shows them as they run. Both
+also generate music from what the cells are doing, either realistic (the AM radio) or
+interpretive (see `characters/brian-eno/speculative-jams.md`).
 
 **The layers, shown.** The page can show every layer at once:
 
@@ -1277,9 +1273,9 @@ Each layer has its own source map and its own panel, and a click goes down a lay
 
 ### Raster: a vanilla virtual video display, and a cell renderer
 
-The 340 draws vectors; cells want pixels. Two more cabinet devices, both marked as extensions,
-both reading core directly as the 340 does, so the PDP-7 program only writes memory and never
-sees how pixels are pulled out. All the cleverness is on the TypeScript side.
+The 340 draws vectors; cells are better shown as pixels. Two more cabinet devices, both marked as
+extensions, both reading core directly as the 340 does, so the PDP-7 program only writes memory and
+never sees how pixels are pulled out. The pixel extraction is all done in TypeScript.
 
 **The pipeline:**
 
@@ -1314,16 +1310,16 @@ machine can show eight views at once: the same cells as monochrome, indexed and 
 window, a mirror, a color plane alone. Any pen can point at any display. On a raster, a pen hit
 needs no beam: the device reports which display, the pixel, and the byte pointer of the word and
 bits under it, so a program knows exactly which cell it touched, through the same pen IOTs and
-`IDPN`. Eight people, eight pens, eight screens, one PDP-7.
+`IDPN`.
 
 **Tile renderer.** Each cell state picks a *tile*, a small picture from a tile table in core, so
-cells tessellate into a pattern: a fluffy, textured color map. A color map is the special case
+cells tessellate into a pattern: a textured color map. A color map is the special case
 of 1×1 tiles, so there is one renderer, not two: cells × tile size = image. 16² cells of 16²
 tiles make a 256² image; 256² cells of 1×1 tiles are the same image as a color-mapped screen;
 anything between trades cell resolution for texture. Tiles are framebuffer descriptors too, so a tile can be
 indexed through its own color map, and animating either the tiles or the map restyles a running
-automaton without touching a cell. The raster twin of the 340's tiles-as-subroutines below, and
-of CAM6.js's tile views. Tile selection can also use the neighbors (a cell's state plus which
+automaton without touching a cell. This is the raster counterpart of the 340's
+tiles-as-subroutines below, and of CAM6.js's tile views. Tile selection can also use the neighbors (a cell's state plus which
 neighbors are alive picks the tile), so edges join up into continuous shapes, Wang-tile style.
 
 **Sprites** (later): a short list of descriptors (position, size, byte pointer, transparent
@@ -1360,7 +1356,7 @@ only a different edge copy.
   neighbor offsets from row cells land on `L` and `R`.
 - `L` and `R` are the border cells. The beam draws them too, as a one-cell frame outside the grid.
 - The frame shows the wrap. The edge copy writes border calls to a dim twin of each tile, one
-  address bit apart, and the rule masks that bit, so the frame is a ghost of the far edges and
+  address bit apart, and the rule masks that bit, so the frame shows dim copies of the far edges and
   clamp or reflect is visible as it runs.
 
 **Tiles as numbers.** Tiles sit at `T + state * size` with `size` a power of two, so a neighbor's
@@ -1385,7 +1381,8 @@ eight bits of state and its own modified bit.
 
 - **A parity word says which layer is now.** A step reads the neighbors' now layer and writes
   each cell's other layer, then flips parity. Neighbors' now layers are never written during
-  the step, so one array is safe where one buffer of whole states was not. No swap, no copy.
+  the step, so one array is safe where one buffer of whole states was not. There is no swap and
+  no copy.
 - **One rule for everyone else: now is what you see and what you edit.** The tile engine
   renders the now layer; the pen, the map editor and scripts write the now layer; the next step
   reads it. All three ask the parity word which layer that is.
@@ -1402,7 +1399,7 @@ eight bits of state and its own modified bit.
   and a refresh never sees a cell half done. Memory comes out the same as two buffers (1,190
   state words plus 1,190 display words for 32 by 32), but a cell has 256 states, not as many as
   there are tiles.
-- **Reversible rules come free.** Fredkin's second-order rules compute
+- **Reversible rules need no extra storage.** Fredkin's second-order rules compute
   `next = f(neighbors now) XOR past`, and the past is the very layer being overwritten, in
   the same word. Flip parity once without stepping and the same rule runs backward:
   Toffoli and Margolus's reversible CAM-6 rules, run forward and back on a PDP-7, with
@@ -1577,7 +1574,7 @@ Every one of those acts makes layers and links in the same bundle the assembler 
 - **Testing**: `tested-by` links say which tests cover which words, and which words no test
   touches.
 - **Generation**: a layer generated from another (as7 from Cambridge, glue from a Forth word list)
-  carries its `translated-from` links for free.
+  carries its `translated-from` links from the build.
 - **Refactoring**: renaming or moving follows every link, across dialects and into the docs.
 - **Debugging**: the trace, the memory panel and the debugger follow links from the PC up through
   the dialects to the scan and the design doc.
@@ -1626,7 +1623,7 @@ engine's entries, the Cambridge link, any cabinet device's IOTs) are tables: mne
 fields as bit ranges with encodings (plain, two's complement, sign-magnitude for the 340,
 enumerations, addresses, SIXBIT), and a `says` template per entry, `{field}` filled in through
 the symbol table. OPR and EAE microinstructions are entries that combine, each with its phrase
-and its order. Whole-word names beat field decoding. **Data types** are record layouts, tables
+and its order. Whole-word names take precedence over field decoding. **Data types** are record layouts, tables
 too where they can be, with code where they can't: decode, encode and a view.
 
 Everything reads the declaration: every assembler (as7, DEC and Cambridge, MACRO-9's `.ISA`),
@@ -1644,7 +1641,7 @@ maps over the same addresses (previous section):
 3. The running machine: the shadow 340 knows which words it fetched in which mode; devices know
    their own buffers (the Turing engine's tape and table, the DataHand's registers).
 4. The program declaring itself: `TYPE-REGION ( addr n type -- )`, through a cabinet device, so a
-   running program says "this is a hand pose". The live coding hook.
+   running program says "this is a hand pose". This is the hook for live coding.
 5. The person: select words in the MEMORY panel and name their type; kept with the session.
 
 It lives in the thicker layers above: a parallel array of region ids, indexed like core, and a
@@ -1663,19 +1660,19 @@ the MEMORY panel. 4: data types (`pixie/ring`, `hand/pose`, `tm/tape`, `forth/he
 `cam6/table`) and conversions. 5: `TYPE-REGION` and typing by hand. 6: the MACRO-9 front end
 with `.ISA` and `.TYPE`.
 
-## Order of work — each step falsifiable
+## Order of work: each step falsifiable
 
 1. CPU completion + interrupts + `.oct` loader + console + clock.
    **Accept:** SYMELEC boots and issues `IDLA` (no display needed to verify).
 2. 340 display processor → segments with provenance → canvas.
    **Accept:** tracking cross + radial lightbuttons match the 1969 film frame.
 3. Pen synthesis from pointer → `TRCR` runs → cross follows mouse.
-   **Accept: met at the emulator level** — the tracking acceptance test
+   **Accept: met at the emulator level**: the tracking acceptance test
    acquires, drags, and loses the cross ([TRACKING.md](TRACKING.md));
    the browser pointer wiring lands with the web bench.
 4. Draw with the S/L/F lightbuttons. Radial menu question answered live.
 5. Link stub → echo → filestore.
-6. Phosphor pretty-pass: canvas 2D fade first; WebGPU dual-phosphor
+6. Phosphor rendering: canvas 2D fade first; WebGPU dual-phosphor
    (fast blue flash for the pen, slow green for the human) is a stretch,
    never a blocker. **Calibrated against the real tube**: test-pattern tapes for sn 129
    (each intensity, a timed single flash, refresh rates down to flicker, a moving dot), filmed
@@ -1689,8 +1686,8 @@ with `.ISA` and `.TYPE`.
    soundtrack. With the AM radio ([AM-RADIO.md](AM-RADIO.md)) the machine can play its own part.
 7. The portrait ([PORTRAIT.md](PORTRAIT.md)): 3D cabinet with
    duty-cycle lamps, the phosphor texture on curved glass, and
-   sim-Heinz — whose pen tip drives the LightPen plugin. Rides the
-   pretty-pass lane; consumes only existing seams.
+   a simulated Heinz whose pen tip drives the LightPen plugin. It belongs
+   with the phosphor rendering work and uses only existing seams.
 8. Tags, focus and pies ([TAGS-AND-PIES.md](TAGS-AND-PIES.md)): the
    undefined SUBR jump type 00 becomes DTG, which tags what follows with a
    title, link and 36-bit id; a pen tap latches and focuses it.
@@ -1704,6 +1701,6 @@ that speaks, the round screen, several pens, the UI driver) is ordered in
 
 Discipline: **differential trace vs SIMH.** One line format (`addr ir ac link`)
 emitted by both benches over the same `.oct`; diff. Roy already steps the
-binary natively — the oracle made mechanical.
+binary natively in SIMH, and the trace diff makes that comparison mechanical.
 
 ↑ [README](README.md) · [SCHEMA](SCHEMA.yml) · [emulation plan](reference/EMULATION-PLAN.md)
