@@ -63,6 +63,21 @@ u.type("ken\r");
 
 `u.disk.dirty` says the platter changed; `rbImageBytes(u.disk.image)` saves it.
 
+## UNIX assembles itself, and names its own symbols
+
+Ken's directory on the platter holds the kernel's source, `sop.s` and `s1.s` to `s8.s`, and
+`sys.rc`, the commands he rebuilt it with. Typing its last line, `as sop.s s1.s s2.s s3.s s4.s
+s5.s s6.s s7.s s8.s`, assembles the kernel on the emulated machine in about 82 million cycles,
+two and a half minutes at the PDP-7's speed. `as` leaves the namelist in `n.out`, and `nm n.out`
+prints it: 263 symbols. [scripts/unix-nm.mjs](scripts/unix-nm.mjs) does exactly that and keeps
+the paper as [tapes/unixv0/kernel.nm](tapes/unixv0/kernel.nm), so the memory panel and the bus
+dance know the running kernel's names. They match the kernel that boots: a subroutine called
+with JMS leaves its return address in its first word, and for `iget`, `iput`, `putchar`,
+`getchar` and `wakeup` the word before that address is a JMS to the label.
+
+The demo ends with the same build, then `nm n.out`. Before it, the demo writes Daisy Bell with
+`ed` and prints it with `cat`, for the bus dance to play off the paper (AM-RADIO.md).
+
 ## Next
 
 - The platter in IndexedDB, and **Save disk** and **Load disk** buttons that read and write SIMH's

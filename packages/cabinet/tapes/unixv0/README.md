@@ -6,6 +6,8 @@ Built from [DoctorWkt/pdp7-unix](https://github.com/DoctorWkt/pdp7-unix), commit
 - `image.fs.gz`: the RB09 platter `image.fs`, gzipped (4,096,000 bytes to 136 KB). It is in SIMH's
   attach format, one little-endian int32 per 18-bit word, 200 tracks × 80 sectors × 64 words.
   It holds the kernel on track 180 and the file system with ken's and dmr's files.
+- `kernel.nm`: the kernel's symbols, as `nm n.out` printed them after UNIX assembled its own
+  kernel on the cabinet ([../../scripts/unix-nm.mjs](../../scripts/unix-nm.mjs)).
 - `boot.rim`: Phil Budne's paper-tape bootstrap, read in at 010000. It reads the system from
   track 180 and jumps to it.
 

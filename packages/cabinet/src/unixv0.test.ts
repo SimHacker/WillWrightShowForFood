@@ -5,7 +5,8 @@ import { gunzipSync } from "node:zlib";
 import { Cabinet } from "./cabinet.js";
 import { Pdp7, pdp7 } from "./plugins/pdp7.js";
 import { parseRbImage, Rb09, rbImageBytes, RB_SIZE } from "./plugins/rb09.js";
-import { bootUnixV0, unixKey } from "./unixv0.js";
+import { bootUnixV0, DAISY, unixKey } from "./unixv0.js";
+import { TUNE_LINE } from "./dance.js";
 
 const TAPES = new URL("../tapes/unixv0/", import.meta.url);
 const platter = gunzipSync(readFileSync(new URL("image.fs.gz", TAPES)));
@@ -98,4 +99,26 @@ test("unix v0: a file written survives a reboot from the same platter", () => {
 	second.type("cat kept\r");
 	assert.ok(second.runUntil("@ ", 40_000_000), second.paper());
 	assert.match(second.paper(), /as sop\.s s1\.s/);
+});
+
+test("unix v0: the demo's song, written with ed, comes back from cat as tune lines", () => {
+	for (const line of DAISY) assert.match(line, TUNE_LINE);
+	const u = bootUnixV0({ image: parseRbImage(platter), bootTape });
+	assert.ok(u.runUntil("login: ", 5_000_000));
+	u.type("ken\r");
+	assert.ok(u.runUntil("password: ", 5_000_000));
+	u.type("ken\r");
+	assert.ok(u.runUntil("@ ", 10_000_000));
+	for (const line of ["ed daisy", "a", ...DAISY, "."]) {
+		u.type(`${line}\r`);
+		u.box.run(line === "ed daisy" ? 3_000_000 : 1_000_000);
+	}
+	u.type("w daisy\r");
+	assert.ok(u.runUntil(`${DAISY.join("\n").length + 1}`, 10_000_000), u.paper());
+	u.type("q\r");
+	assert.ok(u.runUntil("@ ", 10_000_000));
+	u.type("cat daisy\r");
+	assert.ok(u.runUntil("@ ", 20_000_000));
+	const printed = u.paper().replace(/\r/g, "");
+	assert.ok(printed.includes(`cat daisy\n${DAISY.join("\n")}\n@ `), printed.slice(-400));
 });

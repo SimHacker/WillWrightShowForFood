@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
+import { TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -337,4 +337,17 @@ test("the switches twist the music by a hash: all off is plain, and every one-sw
 	const plain = JSON.stringify(play(0));
 	for (const w of words) assert.notEqual(JSON.stringify(play(w)), plain, `switches ${w.toString(8)} change something`);
 	assert.equal(JSON.stringify(play(0o123)), JSON.stringify(play(0o123)), "and the same switches, the same twist");
+});
+
+test("the teletype is a sequencer: a tune line plays as written, a character a step, and a line feed kicks", () => {
+	const d = new Dance(PDP7_VOICES);
+	for (const c of "g-e-c-g-a-b-'d-\n@ ls\n") d.printed(c.charCodeAt(0));
+	const steps = Array.from({ length: 24 }, () => d.beat({}).filter((n) => n.voice === "teletype"));
+	const tune = steps.slice(0, 15).flat().filter((n) => n.timbre === "keys").map((n) => n.midi - 12);
+	assert.deepEqual(tune, [67, 64, 60, 55, 57, 59, 62], "nearest octave each time, the mark sends d up");
+	assert.equal(steps[0]!.length, 1, "one character a step");
+	assert.equal(steps[15]![0]!.timbre, "kick", "the line feed");
+	assert.equal(steps[16]![0]!.timbre, "snare", "the shell's prompt");
+	assert.ok(TUNE_LINE.test("'d-----g-----e-----c-----a-b-c-d---e-d---------"));
+	assert.ok(!TUNE_LINE.test("cat sys.rc") && !TUNE_LINE.test("a"), "commands are not tunes");
 });

@@ -1984,6 +1984,7 @@
 		if (ttyLocal && k.echo !== null) {
 			ttyPrint(k.echo);
 			ttyHear(k.echo, true);
+			dance.printed(k.echo);
 		}
 	}
 
@@ -2592,6 +2593,7 @@
 			onPrint: (c) => {
 				ttyPrint(c);
 				ttyHear(c);
+				dance.printed(c);
 			}
 		});
 		clock = new Clock({ cpu });

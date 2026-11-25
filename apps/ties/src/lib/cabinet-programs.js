@@ -76,6 +76,8 @@ async function gunzip(data) {
 // One platter per page: files written in UNIX survive a reboot, until the page reloads.
 let unixPlatter = null;
 let unixBootTape = null;
+/** The kernel's namelist, as nm printed it after UNIX assembled itself (scripts/unix-nm.mjs). */
+let unixSymbols = [];
 
 const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 
@@ -627,14 +629,24 @@ export const PROGRAMS = [
 		switches: 0,
 		switchLabels: null,
 		ttyKey: (c) => ({ send: unixKey(c), echo: unixEcho(c) }),
+		symbols: () => unixSymbols,
+		// The bus dance's watches: processes made so far, which one runs, whether it is in a
+		// system call, its directory, its time slice, and the disk's free blocks.
+		listen: 'uniqpid u.pid .insys u.cdir uquant s.nfblks',
 		// ALT MODE is UNIX v0's interrupt; ^C is where a hand expects it.
 		ttyConfig: { duplex: 'half', bindings: { 'Ctrl-C': { send: 0o33, label: 'ALT MODE, interrupt' } } },
 		async load() {
 			if (unixPlatter) return;
-			const [{ default: imageUrl }, { default: rimUrl }] = await Promise.all([
+			const [{ default: imageUrl }, { default: rimUrl }, { default: nm }] = await Promise.all([
 				import('../../../../packages/cabinet/tapes/unixv0/image.fs.gz?url'),
-				import('../../../../packages/cabinet/tapes/unixv0/boot.rim?url&inline')
+				import('../../../../packages/cabinet/tapes/unixv0/boot.rim?url&inline'),
+				import('../../../../packages/cabinet/tapes/unixv0/kernel.nm?raw')
 			]);
+			unixSymbols = nm
+				.split('\n')
+				.map((l) => l.trim().split(/\s+/))
+				.filter(([name, addr]) => name && /^[0-7]+$/.test(addr ?? ''))
+				.map(([name, addr]) => ({ name, addr: parseInt(addr, 8) }));
 			unixPlatter = parseRbImage(await gunzip(await bytes(imageUrl)));
 			unixBootTape = await bytes(rimUrl);
 		},

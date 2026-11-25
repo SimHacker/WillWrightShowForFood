@@ -253,6 +253,15 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        swapped. All off is the plain dance, and the console shows what the switches are doing
        next to the dance controls. Programs that read the switches as controls, DUEL's ships,
        Spacewar's, change the music as they are played.
+     - The teletype is a sequencer (`printed` in dance.ts): what it prints, and keys' echo on
+       the paper, plays a character a sixteenth. A line feed kicks and turns the drums'
+       pattern a step, the UNIX shell's `@` is a snare, spaces are hats, and other characters
+       play chord tones on a tine piano of its own. Text that floods in plays several to a step
+       to catch up. A line of nothing but note names a to g, `-` holds and spaces (`'` and `,`
+       jump an octave) is a tune: it plays as written over the home chord. The UNIX demo writes
+       Daisy Bell with `ed`, the song the IBM 7094 sang at Bell Labs in 1961, and `cat` plays
+       it; then UNIX assembles its own kernel and `nm` prints the symbols the dance watches:
+       `uniqpid` climbing with every command, `u.pid`, `.insys` while in a system call.
      - DUEL as a duet: no listing survives, so its ships' words were found by holding each
        control and diffing core (tapes/duel/README.md, `DUEL_SYMBOLS`): position, heading,
        velocity and torpedoes for each ship. A watched name beginning `left` or `right` pans

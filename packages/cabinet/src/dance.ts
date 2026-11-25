@@ -14,7 +14,7 @@
 
 export type Drum = "kick" | "snare" | "hat" | "ride" | "rim";
 /** The pen's own instruments, `harp` `lead` `bell` `tom`, are never the machine's, so playing the picture stands apart from what plays itself. */
-export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "brass" | "harp" | "lead" | "bell" | "tom" | Drum;
+export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "brass" | "keys" | "harp" | "lead" | "bell" | "tom" | Drum;
 
 export type Voice = {
 	readonly id: string;
@@ -344,6 +344,18 @@ export type Twist = {
 	readonly mirror: boolean;
 };
 export const PLAIN: Twist = { skew: 0, shift: 0, gate: 0xffff, echo: 0, ratchet: false, octave: false, turn: 0, mirror: false };
+/**
+ * A tune on the teletype's paper: a line of nothing but note names a to g, `-` holding a step,
+ * spaces resting, and `'` or `,` before a letter sending it up or down from the last note. Any
+ * other letter goes to whichever octave is nearest the last note. Lower case, as UNIX keeps it.
+ */
+export const TUNE_LINE = /^(?=.*[a-g].*[a-g])[a-g',\- ]{4,}$/;
+const NOTE_NAMES: Readonly<Record<string, number>> = { c: 0, d: 2, e: 4, f: 5, g: 7, a: 9, b: 11 };
+/** The most of the paper still to play; past it, what is printed is not heard. */
+const PAPER = 320;
+/** Past this much waiting, plain text plays several characters a step to catch up; tunes never do. */
+const BACKLOG = 32;
+
 /** The instruments `turn` hands round, the machine's own. */
 export const TURNS: readonly Timbre[] = ["bass", "pluck", "chime", "glass", "beep"];
 const ECHOES = [0, 2, 3, 6] as const;
@@ -452,6 +464,63 @@ export class Dance {
 	}
 	private switchWord = 0;
 
+	/** The teletype's paper still to play, a character a sixteenth. */
+	private paper: number[] = [];
+	private lineStart = true;
+	private tuneLine = false;
+	private tuneAt = 67;
+	private tuneMark = 0;
+
+	/**
+	 * A character the teletype printed, the machine's or a key's echo. The paper plays a
+	 * character a sixteenth, so the teletype is a sequencer: each line feed kicks and turns the
+	 * drums' pattern a step, the shell's `@` is a snare, spaces are hats, and every other
+	 * character plays a chord tone on the keys. A tune line (`TUNE_LINE`) plays its notes as
+	 * written, over the home chord.
+	 */
+	printed(code: number): void {
+		const c = code & 0o177;
+		if (c === 0o15 || c === 0 || c === 0o177 || this.paper.length >= PAPER) return;
+		this.paper.push(c);
+	}
+
+	private teletype(tones: readonly number[], t: Tuning): Note[] {
+		const notes: Note[] = [];
+		const n = Math.max(1, tones.length);
+		for (let k = 0; k < 4 && this.paper.length; k += 1) {
+			if (this.lineStart) {
+				const end = this.paper.indexOf(0o12);
+				this.tuneLine = TUNE_LINE.test(String.fromCharCode(...this.paper.slice(0, end < 0 ? this.paper.length : end)));
+				this.lineStart = false;
+			}
+			const c = this.paper.shift()!;
+			const ch = String.fromCharCode(c).toLowerCase();
+			if (c === 0o12) {
+				this.lineStart = true;
+				this.phase += 1;
+				notes.push({ voice: "teletype", timbre: "kick", midi: DRUM_MIDI.kick, velocity: 0.7, pan: 0, order: 0 });
+			} else if (this.tuneLine) {
+				const pc = NOTE_NAMES[ch];
+				if (ch === "'") this.tuneMark = 1;
+				else if (ch === ",") this.tuneMark = -1;
+				else if (pc !== undefined) {
+					const below = this.tuneAt - ((((this.tuneAt - pc) % 12) + 12) % 12);
+					const m = this.tuneMark > 0 ? below + 12 : this.tuneMark < 0 ? (below < this.tuneAt ? below : below - 12) : this.tuneAt - below <= 6 ? below : below + 12;
+					this.tuneAt = Math.max(43, Math.min(91, m));
+					this.tuneMark = 0;
+					notes.push({ voice: "teletype", timbre: "keys", midi: this.tuneAt + 12, velocity: 0.75, pan: 0.15, order: 0 });
+				}
+			} else if (c === 0o40) notes.push({ voice: "teletype", timbre: "hat", midi: DRUM_MIDI.hat, velocity: 0.2, pan: 0.3, order: 0 });
+			else if (ch === "@") notes.push({ voice: "teletype", timbre: "snare", midi: DRUM_MIDI.snare, velocity: 0.55, pan: 0, order: 0 });
+			else if (c > 0o40) {
+				const d = c % (2 * n);
+				notes.push({ voice: "teletype", timbre: "keys", midi: midiAt(72, (tones[d % n] ?? 0) + Math.floor(d / n) * t.steps, t), velocity: 0.3, pan: 0.15, order: k });
+			}
+			if (this.tuneLine || this.paper.length <= BACKLOG || this.lineStart) break;
+		}
+		return notes;
+	}
+
 	/** Where the first voice's hits land, if the machine has a map: each warm region hums. */
 	regions: Regions | null = null;
 
@@ -478,7 +547,7 @@ export class Dance {
 	/** The chord the next beat plays over. */
 	get chord(): Chord {
 		const bp = this.style === "bp";
-		if (this.fanfare || this.resolving) return this.tonic;
+		if (this.fanfare || this.resolving || this.tuneLine) return this.tonic;
 		if (this.tension >= 0.8) return bp ? BP_V : this.style === "jazz" ? TRITONE_SUB : DOMINANT_B9;
 		if (this.tension >= 0.4) return bp ? BP_V : DOMINANT;
 		const p = this.progression;
@@ -638,7 +707,7 @@ export class Dance {
 		const tones = now.tones;
 		const t = this.tuning;
 		const notes: Note[] = this.voices.flatMap((v) => score(v, hits[v.id] ?? [], tones, t));
-		notes.push(...this.listen(watched, tones, t), ...this.hooray());
+		notes.push(...this.listen(watched, tones, t), ...this.hooray(), ...this.teletype(tones, t));
 		const map = this.regions;
 		if (map) {
 			map.step(hits[this.voices[0]?.id ?? ""] ?? []);

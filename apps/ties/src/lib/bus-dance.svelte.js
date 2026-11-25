@@ -107,6 +107,11 @@ export class BusDance {
 		if (this.on) this.#dance.touch(t);
 	}
 
+	/** A character the teletype printed, or a key's echo on the paper: it plays a step at a time. @param {number} code */
+	printed(code) {
+		if (this.on) this.#dance.printed(code);
+	}
+
 	/** The light pen, hovering or down, and the strokes under it; null when it leaves the tube. Sounds at once. @param {PenAt | null} p */
 	pen(p) {
 		if (this.on) this.player.play(this.#dance.pen(p), sixteenth(this.bpm));

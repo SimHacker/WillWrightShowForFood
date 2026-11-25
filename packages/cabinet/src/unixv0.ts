@@ -100,7 +100,26 @@ export interface UnixHost extends Focus {
 	type: (text: string) => void;
 }
 
-/** Log in as ken and look around: ls, the date the clock thinks it is, and a file of ken's. */
+/**
+ * Daisy Bell (Harry Dacre, 1892), the song an IBM 7094 sang at Bell Labs in 1961, as a tune
+ * the bus dance plays off the paper (TUNE_LINE in dance.ts): a letter a step, `-` holding,
+ * `'` and `,` before a note sending it up or down. A quarter note is two steps, a bar of 3/4 six.
+ */
+export const DAISY: readonly string[] = [
+	"g-----e-----c-----g-----a-b-c-a---c-g---------",
+	"'d-----g-----e-----c-----a-b-c-d---e-d---------",
+	"e-f-e-d-g---e-d-c-----d-e---c-a---c-a-g-------",
+	"g-c---e-d---,g-c---e-d---e-f-g-e-c-d---,g-c-----------",
+];
+
+/** Cycles a sixteenth of the dance takes at 120 beats a minute and the PDP-7's own speed. */
+const STEP = 72_000;
+
+/**
+ * Log in as ken and look around: ls, the date the clock thinks it is, and a file of ken's. Then
+ * write Daisy Bell with ed and cat it, for the dance to play off the paper, and let UNIX
+ * assemble its own kernel from ken's sources, as his sys.rc does, and print the symbols.
+ */
 export function* unixDemo(h: UnixHost): DemoScript {
 	const say = function* (caption: string, line: string, cycles: number): DemoScript {
 		yield caption;
@@ -116,6 +135,15 @@ export function* unixDemo(h: UnixHost): DemoScript {
 	yield* say("The clock starts at the epoch, 1 January 1970", "date", 5_000_000);
 	yield* say("sys.rc: how ken rebuilt the kernel, with as", "cat sys.rc", 8_000_000);
 	yield* say("The commands, in ken's system directory", "ls system", 16_000_000);
+	yield* say("With DANCE on, the paper is a sequencer: a character a step, a kick at each line feed. Now a song, written with ed", "ed daisy", 3_000_000);
+	yield* say("a appends lines. Each is a tune: note names, - holds, ' and , jump an octave", "a", 1_000_000);
+	for (const line of DAISY) yield* say("Daisy Bell, 1892. An IBM 7094 sang it at Bell Labs in 1961", line, line.length * STEP + 1_000_000);
+	yield* say("A dot alone ends the text; w writes it to the disk", ".", 1_000_000);
+	yield* say("w writes the file; ed prints how many characters", "w daisy", 6_000_000);
+	yield* say("q quits ed", "q", 2_000_000);
+	yield* say("cat prints the file, and the teletype plays it", "cat daisy", (DAISY.join("").length + 8) * STEP + 2_000_000);
+	yield* say("UNIX assembles itself: ken's kernel, s1.s to s8.s, the way his sys.rc did. Two and a half minutes at the PDP-7's speed; speed up to hurry it", "as sop.s s1.s s2.s s3.s s4.s s5.s s6.s s7.s s8.s", 90_000_000);
+	yield* say("nm prints the kernel's symbols, from n.out. The dance listens to some of them, uniqpid and u.pid among them", "nm n.out", 8_000_000);
 	yield "Your turn: click the paper and type. Files you write stay on the disk until you reload the page";
 	yield* wait(1_000_000);
 }

@@ -299,6 +299,18 @@ export class DancePlayer {
 				osc('square', f / 2, lp, end);
 				break;
 			}
+			// The teletype's: a tine piano, a sine with a bell-like overtone that dies first.
+			case 'keys': {
+				const end = shape(0.34 * v, 0.003, 0.7);
+				osc('sine', f, env, end);
+				const tine = ctx.createGain();
+				tine.gain.setValueAtTime(0.5, t);
+				tine.gain.exponentialRampToValueAtTime(0.001, t + 0.18);
+				tine.connect(env);
+				osc('sine', f * 4, tine, t + 0.2);
+				osc('triangle', f / 2, env, end);
+				break;
+			}
 			// The pen's own: harp, lead, bell and tom are never the machine's instruments.
 			case 'harp': {
 				const end = shape(0.3 * v, 0.002, 1.4);
