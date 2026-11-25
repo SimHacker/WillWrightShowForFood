@@ -259,10 +259,12 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
      - Riffs (`Riff` in dance.ts): a mode can bring a bar that plays itself, bass, drums and a
        hook in the progression's chord, heard even while the machine only waits for a key. The
        Apple's prompts each have one, on an instrument no other track uses: Applesoft's `]` is
-       sunny, a bouncing bass under an organ skank on the off-beats; a running Applesoft
-       program walks a jazz bass; Integer BASIC's `>` is techno, four on the floor under a
-       sixteenth acid line; the Monitor's `*` is industrial, a broken kick and anvils in bars of
-       13. Away from the prompts the riff stops. The dance and the Apple's speaker go quiet
+       sunny, a bouncing bass under an organ skank on the off-beats, in C major; a running
+       Applesoft program walks a jazz bass; Integer BASIC's `>` is techno, four on the floor
+       under a sixteenth acid line, in C minor round the Aeolian loop; the Monitor's `*` is
+       industrial, a broken kick and anvils in bars of 13. The two BASICs share a tempo, 112, so
+       they differ by sound, not speed, and while a riff plays it is the only drums. Away from
+       the prompts the riff stops. The dance and the Apple's speaker go quiet
        while the page's tab is hidden, and come back with it.
      - The teletype is a sequencer (`printed` in dance.ts): what it prints, and keys' echo on
        the paper, plays a character a sixteenth. A line feed kicks and turns the drums'

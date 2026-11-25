@@ -48,10 +48,11 @@ export type Note = {
 
 /**
  * `straight` is triads in even sixteenths; `jazz` is seventh chords, swung, on a ride;
- * `lydian` rocks between I and II with the tritone over the tonic; `bp` is
+ * `lydian` rocks between I and II with the tritone over the tonic; `minor` walks the
+ * Aeolian loop, i bVI bIII bVII; `bp` is
  * Bohlen-Pierce: 13 steps of the tritave, odd harmonics, in bars of 13.
  */
-export type Style = "straight" | "jazz" | "lydian" | "bp";
+export type Style = "straight" | "jazz" | "lydian" | "minor" | "bp";
 
 /** A tuning: `steps` equal steps of the interval `period` (2, the octave; 3, the tritave). */
 export type Tuning = { readonly steps: number; readonly period: number };
@@ -215,6 +216,8 @@ export const DOMINANT_B9 = chord("V7b9", 7, 11, 14, 17, 20);
 export const LYDIAN_I = chord("I#11", 0, 4, 6, 7, 11);
 export const LYDIAN: readonly Chord[] = [LYDIAN_I, chord("II", 2, 6, 9), LYDIAN_I, chord("II7", 2, 6, 9, 12)];
 /** Jazz's tritone substitution: D flat 7 for G7, its root a tritone away, sliding down a half step home. */
+/** The Aeolian loop, i bVI bIII bVII, in C minor. */
+export const AEOLIAN: readonly Chord[] = [chord("i", 0, 3, 7), chord("bVI", 8, 12, 15), chord("bIII", 3, 7, 10), chord("bVII", 10, 14, 17)];
 export const TRITONE_SUB = chord("bII7", 1, 5, 8, 11);
 
 /**
@@ -507,7 +510,7 @@ export class Dance {
 				if (i === 4 || i === 12) drum("snare", 0.45);
 				if (i % 4 === 2) {
 					drum("hat", 0.3, 0.3);
-					tones.slice(0, 3).forEach((k, n) => play("organ", at(67, k), 0.22, -0.25, n));
+					tones.slice(0, 3).forEach((k, n) => play("organ", at(67, k), 0.32, -0.25, n));
 				}
 				const walk: Record<number, number> = { 0: 0, 3: 7, 6: 12, 8: 0, 11: 7, 14: 9 };
 				if (walk[i] !== undefined) play("bass", at(36, now.root + walk[i]!), 0.55, -0.1);
@@ -520,7 +523,7 @@ export class Dance {
 				const a = ACID[i % ACID.length]!;
 				if (a >= 0) {
 					const deg = a === 0 ? now.root : a === 1 ? now.root + t.steps : tone(a - 1) + t.steps;
-					play("acid", at(36, deg), i % 4 === 3 ? 0.75 : 0.5, 0.1);
+					play("acid", at(36, deg), i % 4 === 3 ? 0.9 : 0.6, 0.1);
 				}
 				break;
 			}
@@ -609,7 +612,7 @@ export class Dance {
 	constructor(readonly voices: readonly Voice[]) {}
 
 	get progression(): readonly Chord[] {
-		return this.style === "jazz" ? TURNAROUND : this.style === "lydian" ? LYDIAN : this.style === "bp" ? BP_CADENCE : POP;
+		return this.style === "jazz" ? TURNAROUND : this.style === "lydian" ? LYDIAN : this.style === "minor" ? AEOLIAN : this.style === "bp" ? BP_CADENCE : POP;
 	}
 
 	get tuning(): Tuning {

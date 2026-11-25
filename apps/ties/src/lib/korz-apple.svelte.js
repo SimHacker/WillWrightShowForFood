@@ -341,8 +341,9 @@ class KorzApple {
 
 	/**
 	 * Each prompt has its own song: Applesoft's sunny, another while an Applesoft program runs,
-	 * Integer BASIC's techno, and the Monitor's (CALL -151) dark and industrial, each with its own
-	 * riff, which goes when the Apple leaves its prompts for a program of its own. A BASIC
+	 * Integer BASIC's techno in C minor, and the Monitor's (CALL -151) dark and industrial, each
+	 * with its own riff and drums, which go when the Apple leaves its prompts for a program of
+	 * its own. The two BASICs keep one tempo: they differ in key, riff and instruments. A BASIC
 	 * program's length is a watched track and the harmony's depth: as it gets longer, the pad
 	 * reaches an octave down, then two. The Monitor is as deep as it goes.
 	 */
@@ -657,10 +658,10 @@ function applesoftFree(ram) {
 
 /** @type {Record<Prompt, import('@wwsff/cabinet/dance').Music>} */
 const PROMPT_MUSIC = {
-	applesoft: { style: 'straight', bpm: 96, loops: true, mute: [], riff: 'sunny' },
-	running: { style: 'jazz', bpm: 132, loops: false, mute: [], riff: 'walk' },
-	integer: { style: 'straight', bpm: 132, loops: false, mute: ['loops'], riff: 'techno' },
-	monitor: { style: 'bp', bpm: 72, loops: false, mute: ['loops', 'reply'], riff: 'industrial' }
+	applesoft: { style: 'straight', bpm: 112, loops: true, mute: ['drums'], riff: 'sunny' },
+	running: { style: 'jazz', bpm: 120, loops: false, mute: [], riff: 'walk' },
+	integer: { style: 'minor', bpm: 112, loops: false, mute: ['loops', 'drums'], riff: 'techno' },
+	monitor: { style: 'bp', bpm: 72, loops: false, mute: ['loops', 'reply', 'drums'], riff: 'industrial' }
 };
 
 /**

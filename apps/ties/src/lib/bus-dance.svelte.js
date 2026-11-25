@@ -22,6 +22,7 @@ export const speedLoad = (/** @type {number} */ ratio) => (ratio > 0 ? Math.max(
 export const STYLES = [
 	{ id: 'straight', label: 'Straight', title: 'Triads, I vi IV V, in even sixteenths' },
 	{ id: 'jazz', label: 'Jazz', title: 'Systat jazz: seventh chords round the ii V I turnaround, swung, on a ride cymbal; full pen tension takes the tritone substitution' },
+	{ id: 'minor', label: 'Minor', title: 'The Aeolian loop, i bVI bIII bVII: C minor, A flat, E flat, B flat' },
 	{ id: 'lydian', label: 'Lydian', title: "The devil's interval: major with its fourth raised a tritone, the Simpsons theme's mode, rocking between I and II" },
 	{
 		id: 'bp',
