@@ -3,8 +3,8 @@
 	import { STYLES } from './bus-dance.svelte.js';
 	import { TEMPOS } from './dance-player.js';
 
-	/** @type {{ dance: import('./bus-dance.svelte.js').BusDance, chip?: boolean }} */
-	let { dance, chip = false } = $props();
+	/** @type {{ dance: import('./bus-dance.svelte.js').BusDance, chip?: boolean, listen?: boolean }} */
+	let { dance, chip = false, listen = false } = $props();
 
 	const rates = TEMPOS.map((bpm) => ({ label: String(bpm), title: `${bpm} beats a minute, sixteenths ${Math.round(15000 / bpm)} ms apart` }));
 	const tempoIndex = $derived(Math.max(0, TEMPOS.indexOf(dance.bpm)));
@@ -27,6 +27,18 @@
 	title="Tape loops after Brian Eno's Music for Airports: five loops of prime lengths, each sounding one tone of the chord, drifting against each other"
 	onclick={() => dance.toggleLoops()}>{chip ? 'ENO' : 'Eno'}</button
 >
+{#if listen}
+	<input
+		class="listen"
+		aria-label="Words to listen to"
+		title="Words in core the dance listens to, by name: labels, or Forth variables and constants. Each one gets its own quiet loop that steps along as its value changes."
+		placeholder="listen to…"
+		size="16"
+		value={dance.listen}
+		onchange={(e) => (dance.listen = e.currentTarget.value)}
+		onkeydown={(e) => e.stopPropagation()}
+	/>
+{/if}
 <RateSlider label="Dance tempo, slowest to fastest" {rates} index={tempoIndex} onpick={(i) => (dance.bpm = TEMPOS[i] ?? 120)} />
 
 <style>
@@ -36,6 +48,7 @@
 		color: #000;
 	}
 	.chip,
+	.listen,
 	select:has(+ .chip) {
 		font: inherit;
 		font-size: 0.62rem;

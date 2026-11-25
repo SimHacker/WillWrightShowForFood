@@ -82,6 +82,7 @@
 	/** @param {StateSpec} s */
 	async function enter(s) {
 		state = s;
+		if (s.music) apple.dance?.mode(s.music);
 		answered = false;
 		autoDone = false;
 		value = s.ask?.default ? fillNow(s.ask.default) : '';

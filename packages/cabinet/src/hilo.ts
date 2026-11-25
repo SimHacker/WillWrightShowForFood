@@ -1,6 +1,6 @@
 import { assemble, loadAsm, type AsmResult } from "./asm.js";
 import type { Pdp7 } from "./plugins/pdp7.js";
-import { type DemoScript, wait } from "./symelec-demo.js";
+import { type DemoScript, type Focus, wait } from "./symelec-demo.js";
 
 /**
  * HILO, a teletype number guessing game written for the cabinet
@@ -23,7 +23,7 @@ export function bootHilo(cpu: Pdp7, program: AsmResult): void {
 	cpu.pc = program.start ?? 0o100;
 }
 
-export interface TeletypeHost {
+export interface TeletypeHost extends Focus {
 	cpu: Pdp7;
 	/** Type on the keyboard, as the operator would: the paper shows it with local copy. */
 	type: (text: string) => void;
@@ -32,6 +32,7 @@ export interface TeletypeHost {
 /** An operator who halves the range each time. It reads the number from core only to know when to stop. */
 export function* hiloDemo(h: TeletypeHost, program: AsmResult): DemoScript {
 	const secret = () => h.cpu.read(program.symbols.get("secret") ?? 0) & 0o777777;
+	h.show?.("tty");
 	yield "HILO prints its banner, then waits for a key";
 	yield* wait(250_000);
 	yield "Return: the number is whatever the counter held when it was pressed";

@@ -1,4 +1,5 @@
 import { parse } from "yaml";
+import type { Music } from "../dance.js";
 import { type Picture, decodePng } from "./png.js";
 
 /**
@@ -80,6 +81,8 @@ export interface StateSpec {
 	/** Pictures per game second during a fast-forward. One finishes the stretch soonest. */
 	frames?: number;
 	probe?: ProbeSpec;
+	/** The bus dance's mode while in the state: style, tempo, loops, words to listen to, tracks muted. */
+	music?: Music;
 }
 
 export interface ProbeSpec {

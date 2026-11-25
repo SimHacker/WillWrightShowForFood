@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { LOOPS, KEES13, KEES_CADENCE, KEES_I, KEES_MAJOR, KEES_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
+import { APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -141,23 +141,23 @@ test("a light touch fades back without a resolution", () => {
 
 test("Kees van Prooijen's major: his ratios land on steps 0 3 4 6 7 10 12 of 13 in the tritave", () => {
 	const ratios = [1, 35 / 27, 7 / 5, 5 / 3, 9 / 5, 7 / 3, 25 / 9];
-	assert.deepEqual(ratios.map((r) => Math.round((13 * Math.log(r)) / Math.log(3))), [...KEES_MAJOR]);
-	assert.ok(Math.abs(midiAt(60, 13, KEES13) - (60 + 12 * Math.log2(3))) < 1e-9, "13 steps is a tritave");
-	for (const c of KEES_CADENCE) for (const tone of c.tones) assert.ok(KEES_MAJOR.includes(tone), `${c.name} ${tone}`);
+	assert.deepEqual(ratios.map((r) => Math.round((13 * Math.log(r)) / Math.log(3))), [...BP_MAJOR]);
+	assert.ok(Math.abs(midiAt(60, 13, BP13) - (60 + 12 * Math.log2(3))) < 1e-9, "13 steps is a tritave");
+	for (const c of BP_CADENCE) for (const tone of c.tones) assert.ok(BP_MAJOR.includes(tone), `${c.name} ${tone}`);
 });
 
-test("kees: bars of 13, the cadence a bar each, odd harmonics, tension to his dominant and home", () => {
+test("Bohlen-Pierce: bars of 13, the cadence a bar each, odd harmonics, tension to his dominant and home", () => {
 	const d = new Dance(PDP7_VOICES);
-	d.style = "kees";
+	d.style = "bp";
 	const pads = Array.from({ length: 52 }, () => d.beat({}, 0).filter((n) => n.timbre === "pad"));
 	assert.deepEqual(pads.map((p, s) => [s, p.length] as const).filter(([, n]) => n).map(([s]) => s), [0, 13, 26, 39]);
 	assert.ok(pads[0]!.every((n) => n.odd));
 	d.touch({ kind: "press" });
 	d.touch({ kind: "drag", distance: 3000 });
-	assert.equal(d.chord, KEES_V);
+	assert.equal(d.chord, BP_V);
 	d.touch({ kind: "release" });
 	d.beat({}, 0);
-	assert.equal(d.chord, KEES_I);
+	assert.equal(d.chord, BP_I);
 	assert.deepEqual(Array.from({ length: 13 }, (_, s) => s).filter((s) => thirteen(s, 0.5, 0).includes("kick")), [0, 7]);
 });
 
@@ -175,4 +175,75 @@ test("the tape loops: prime lengths, each on its own schedule, always in the cho
 	assert.equal(heard.filter((s) => s % 23 === 0).length >= 29, true);
 	assert.ok(LOOPS.every((l) => [2, 3, 5, 7, 11, 13, 17, 19].every((p) => l.length === p || l.length % p !== 0)));
 	assert.equal(new Dance(PDP7_VOICES).beat({}, 0).filter((n) => n.voice === "loops").length, 0);
+});
+
+test("the pen plays a rising run along each stroke, and starts low again on the next", () => {
+	const d = new Dance(PDP7_VOICES);
+	const along = (addr: number, a: number, down = false) => d.pen({ x: 512, y: 512, down, under: [{ addr, along: a, scan: 0 }] });
+	const run = [0, 0.2, 0.4, 0.6, 0.8, 0.99].flatMap((a) => along(0o100, a).map((n) => n.midi));
+	for (let i = 1; i < run.length; i += 1) assert.ok(run[i]! > run[i - 1]!, `run ${run}`);
+	const next = along(0o101, 0)[0]!;
+	assert.equal(next.midi, run[0], "the next stroke starts where the last one did");
+	assert.deepEqual(along(0o101, 0.01), [], "a move that stays on the same note plays nothing");
+	assert.ok(along(0o101, 0.01, true).some((n) => n.timbre === "chime"), "setting the pen down chimes");
+	assert.equal(d.pen({ x: 0, y: 0, down: false, under: [] })[0]!.timbre, "chime", "and so does lifting it");
+});
+
+test("later strokes in the frame start their runs higher", () => {
+	const d = new Dance(PDP7_VOICES);
+	const early = d.pen({ x: 0, y: 0, down: false, under: [{ addr: 1, along: 0, scan: 0 }] })[0]!.midi;
+	const late = d.pen({ x: 0, y: 0, down: false, under: [{ addr: 2, along: 0, scan: 0.9 }] })[0]!.midi;
+	assert.ok(late > early);
+});
+
+test("a watched word's loop moves a step for each typical change, whatever its size, and quickens while it changes", () => {
+	const notes = (unit: number) => {
+		const d = new Dance(PDP7_VOICES);
+		const out: number[] = [];
+		for (let s = 0; s < 64; s += 1) {
+			const value = s < 32 ? s * unit : 31 * unit;
+			for (const n of d.beat({}, undefined, [{ name: "dp", value }])) if (n.voice === "watch:dp") out.push(n.midi);
+		}
+		return out;
+	};
+	const words = notes(1);
+	const degrees = notes(45);
+	assert.ok(words.length > 0);
+	assert.equal(new Set(words).size > 1, true, "the note climbs as the word grows");
+	assert.equal(words.length, degrees.length, "a change of 45 counts the same as a change of 1 when it is the typical one");
+	const still = new Dance(PDP7_VOICES);
+	let quiet = 0;
+	for (let s = 0; s < 32; s += 1) quiet += still.beat({}, undefined, [{ name: "dp", value: 5 }]).filter((n) => n.voice === "watch:dp").length;
+	assert.ok(words.slice(0, 16).length >= quiet / 2, "a moving word plays at least as often as a still one");
+});
+
+test("a muted voice is left out, and watch mutes every watched word", () => {
+	const d = new Dance(PDP7_VOICES);
+	d.mute = new Set(["harmony", "watch"]);
+	for (let s = 0; s < 32; s += 1) for (const n of d.beat({}, undefined, [{ name: "dp", value: s }])) assert.ok(n.voice !== "harmony" && !n.voice.startsWith("watch:"), n.voice);
+	d.mute = new Set();
+	assert.ok(Array.from({ length: 16 }, () => d.beat({}, undefined, [{ name: "dp", value: 99 }])).flat().some((n) => n.voice === "watch:dp"));
+});
+
+test("the PC's heat map warms a region slowly, cools it slowly, and the warm one hums", () => {
+	const map = new Regions(APPLE2_REGIONS);
+	map.step([{ key: 0xfd1b, weight: 10 }]);
+	assert.ok(map.heat[5]! > 0 && map.heat[5]! < 0.1, "one beat in the Monitor barely warms it");
+	for (let i = 0; i < 200; i += 1) map.step([{ key: 0xfd1b, weight: 10 }]);
+	assert.equal(map.hottest, "Monitor");
+	for (let i = 0; i < 10; i += 1) map.step([{ key: 0xe000, weight: 10 }]);
+	assert.equal(map.hottest, "Monitor", "a moment in Applesoft doesn't take over");
+	const d = new Dance(PDP7_VOICES);
+	d.regions = new Regions(pages(8192));
+	const hums = Array.from({ length: 64 }, () => d.beat({ cpu: [{ key: 0o4000, weight: 5 }] })).flat().filter((n) => n.voice.startsWith("region:"));
+	assert.ok(hums.length > 0 && hums.every((n) => n.voice === "region:4000"), hums.map((n) => n.voice).join());
+});
+
+test("depth doubles the pad an octave down, then two", () => {
+	const pads = (depth: number) => {
+		const d = new Dance(PDP7_VOICES);
+		d.depth = depth;
+		return d.beat({}).filter((n) => n.timbre === "pad").length;
+	};
+	assert.ok(pads(0) < pads(0.5) && pads(0.5) < pads(1));
 });

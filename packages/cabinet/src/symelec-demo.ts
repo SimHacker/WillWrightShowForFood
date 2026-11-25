@@ -6,11 +6,21 @@ import type { LightPen } from "./plugins/lightpen.js";
  * runs the machine n cycles with the pen as it stands; `yield "text"`
  * posts a caption. Time is machine cycles, not wall clock, so the same
  * script draws the same picture at 1x, at max, and headless under Node.
+ * `h.show?.(panel)` points the page at what the script is about to use:
+ * the teletype it types on, the switches it sets, the tube it draws on.
  */
 export type DemoYield = number | string;
 export type DemoScript = Generator<DemoYield, void, void>;
 
-export interface DemoHost {
+/** The page's panels a script can point at; "display" is the tube. */
+export type Panel = "display" | "play" | "tty" | "regs" | "mem" | "rings" | "slots" | "korz" | "config" | "snaps" | "prog";
+
+export interface Focus {
+	/** Open a panel, if the page has it, and scroll it fully on screen, or as much as fits. */
+	show?: (panel: Panel) => void;
+}
+
+export interface DemoHost extends Focus {
 	cpu: Cpu;
 	pen: LightPen;
 }
@@ -166,6 +176,7 @@ function ring(cx: number, cy: number, r: number, sides: number): [number, number
  * about 730 words of display file against the 735 it gives.
  */
 export function* houseDemo(h: DemoHost): DemoScript {
+	h.show?.("display");
 	yield "The pen picks up the tracking cross and carries it";
 	yield* wait(200_000);
 	yield* drag(h, 360, 380);

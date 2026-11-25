@@ -78,6 +78,7 @@ export function* landerDemo(h: TeletypeHost, program: AsmResult): DemoScript {
 		const w = h.cpu.read(program.symbols.get(name) ?? 0) & 0o777777;
 		return w & 0o400000 ? w - 0o1000000 : w;
 	};
+	h.show?.("tty");
 	yield "LANDER prints its rules, then waits for Return";
 	yield* wait(400_000);
 	h.type("\r");

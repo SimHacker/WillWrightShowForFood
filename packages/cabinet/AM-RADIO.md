@@ -162,9 +162,12 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
          resolves to the tonic on the next beat with a kick, and the progression starts over.
          A light touch fades back without resolving.
        - On the Apple, the mouse on the screen stands in for the pen.
-     - KEES: [Kees van Prooijen](https://www.kees.cc/music/scale13/scale13.html)'s 13 equal
-       steps of the 3:1 tritave, which he found in the seventies about when Heinz Bohlen and
-       John Pierce did (the [Bohlen-Pierce scale](https://www.huygens-fokker.org/bpsite/scales.html)).
+     - BOHLEN-PIERCE: 13 equal steps of the 3:1 tritave, which [Kees van
+       Prooijen](https://www.kees.cc/music/scale13/scale13.html) ("13 tones in the 3rd
+       harmonic") found in the seventies about when Heinz Bohlen and John Pierce did; it is
+       known by their names, the [Bohlen-Pierce scale](https://www.huygens-fokker.org/bpsite/scales.html).
+       Kees's own named scale, the Yaphi (six tones in the golden ratio), would make another
+       style.
        His major mode is built as just major is, from triads on the tonic, dominant and
        subdominant, with 3:5:7 in place of 4:5:6 ([his modes](https://www.huygens-fokker.org/bpsite/modes.html)):
        1, 35/27, 7/5, 5/3, 9/5, 7/3, 25/9, steps 0 3 4 6 7 10 12. The dance plays his I IV V I
@@ -173,6 +176,44 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
      - ENO: tape loops after Brian Eno's *Music for Airports*, one facet among the others.
        Five loops of 23, 29, 31, 37 and 41 sixteenths each sound one tone of the chord in
        force; the lengths are primes, so they drift against each other and the bar.
+     - Watches: words in core heard as tracks, by name (the DANCE row's listen field). A name
+       is a label or a Forth variable or constant found in the dictionary
+       (`src/forth-dict.ts`, both kernels' header layouts). Each gets a quiet beat loop 3 to 7
+       sixteenths long, its timbre and pan from the name. The loop measures the word against
+       its own typical change, so a heading moving by degrees and a pointer moving by words
+       count steps of the same size. Each step moves the loop's phase and its note one chord
+       tone up. While the word changes, the loop plays twice as often; its size, by powers of
+       64, sets the octave. Each program names its own:
+       - Forth: `tx ty th dl> dp rfree`, the turtle, its display list growing, the dictionary
+         and the ring space filling;
+       - LANDER: `h2 v fuel secs`;
+       - HILO: `secret guess`, which gives the number away. That is the joke: hearing it is
+         one more channel.
+     - The pen's own tracks, played at once rather than on the beat. Every stroke of the last
+       frame under the pointer sounds a rising arpeggio of the chord as the pen moves along it,
+       0 to 1, so dragging along a line climbs, and the next stroke starts low again. Strokes
+       drawn later in the frame start higher, so the scan order is heard. Hovering is a faint
+       glass, a pen held down a beep; setting it down chimes at its height, lifting it at its x.
+     - Screen angel modes: a state in ANGEL.yml can carry `music: { style, bpm, loops, listen,
+       mute }`, set on entering it. Little Computer People boots to the 6502 and the disk with
+       no chords, asks your name over a soft jazz ride, the date in Bohlen-Pierce, waits for
+       him to move in on Eno's loops over the engine at max, and plays jazz once he is home.
+       Next: watches on the Apple, so a mode can listen to the game's own memory.
+     - Apple prompt songs, by the character in PROMPT ($33): Applesoft's `]` is sunny,
+       straight time at 96 with the Eno loops, and jazz at 132 while a program runs (CURLIN's
+       high byte, $76, not $FF). Integer BASIC's `>` is techno, straight at 132 without them.
+       The Monitor's `*` (CALL -151) is dark and industrial: Bohlen-Pierce on odd-harmonic
+       waves at 72, as deep as the harmony goes. A BASIC program's length (TXTTAB to VARTAB,
+       or PP to HIMEM) is a watched track and the depth: as it gets longer, the pad doubles
+       an octave down, then two.
+     - The PC's heat map, like a source map for sound: memory in named regions (the Apple's
+       program, DOS, slot ROMs, Applesoft and Monitor; the PDP-7's 1K pages), each warmed by
+       its share of the CPU's hits and cooling over a few seconds. Each warm region hums a
+       chord tone of its own on the bar, as loud as it is warm, so where the machine spends
+       its time crossfades slowly instead of flickering with every block.
+     - The Forth demo has DELAY ( n -- ), a loop inside a loop whose number sets how often
+       the inner one runs, and a slow squiral that waits `I 1 + DELAY` after each stroke:
+       slow the machine down and hear the pauses grow with the spiral.
      - Tempo from 40 to 200 beats a minute, and the machine speed slider in 1-2-5 steps
        from .001× to MAX, so a slowed machine can be heard as phrases and a fast one as texture.
      - Not yet: the listener slots, a mixer on the page, more gauges (free core, the 340's

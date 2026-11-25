@@ -4,7 +4,7 @@ import { PaperTape, readInAndGo } from "./plugins/papertape.js";
 import { Pdp7, type Pdp7Opts } from "./plugins/pdp7.js";
 import { Rb09 } from "./plugins/rb09.js";
 import { Teletype } from "./plugins/teletype.js";
-import { type DemoScript, wait } from "./symelec-demo.js";
+import { type DemoScript, type Focus, wait } from "./symelec-demo.js";
 
 /** Bell Labs loaded Phil Budne's bootstrap at the user origin; it reads the system from track 180. */
 export const UNIXV0_BOOT_ORIGIN = 0o10000;
@@ -95,7 +95,7 @@ export function unixEcho(c: number): number {
 	return k;
 }
 
-export interface UnixHost {
+export interface UnixHost extends Focus {
 	/** Type on the teletype, lower case as it comes; newline is Return. */
 	type: (text: string) => void;
 }
@@ -107,6 +107,7 @@ export function* unixDemo(h: UnixHost): DemoScript {
 		h.type(`${line}\n`);
 		yield* wait(cycles);
 	};
+	h.show?.("tty");
 	yield "The paper tape bootstrap has read UNIX off the RB09's track 180. It asks who you are";
 	yield* wait(2_500_000);
 	yield* say("Log in as ken, Ken Thompson", "ken", 2_000_000);

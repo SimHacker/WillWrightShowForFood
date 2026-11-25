@@ -53,11 +53,14 @@ looks:
 
 states:
   - id: loading
+    # Booting: the 6502 and the disk arm over the engine, no chords yet.
+    music: { style: straight, bpm: 84, loops: false, mute: [harmony] }
     speed: 100
     frames: 1
     say: The Apple is reading the guestbook side of the disk.
 
   - id: flip
+    music: { loops: true, bpm: 60, mute: [drums] }
     when: [guestbook, flip]
     say: >-
       The game wants the disk turned over to the house side. The screen angel turns it for
@@ -66,6 +69,8 @@ states:
     moves: [Turn the Disk Over]
 
   - id: name
+    # Asked a name: a soft jazz ride under the question.
+    music: { style: jazz, bpm: 96, loops: false, mute: [] }
     when: [guestbook, name, name-empty]
     say: >-
       Sign the guestbook. The game keeps your name as the researcher studying the little
@@ -87,6 +92,7 @@ states:
     lock: true
 
   - id: date
+    music: { style: bp, bpm: 84, mute: [drums] }
     when: [guestbook, date, date-empty]
     say: The guestbook dates each visit. Today is filled in; change it if you like.
     lock: true
@@ -100,6 +106,7 @@ states:
       maxlength: 8
 
   - id: first-visit
+    music: { style: straight, bpm: 72, loops: true, mute: [drums] }
     when: [guestbook, signed, session-1]
     say: Signed for session 1. The Apple is loading the house; someone is about to move in.
     speak: Hang on while someone moves in and gets settled.
@@ -112,6 +119,8 @@ states:
 
   # Before moving-in and coming-home: they hold whenever the house is seen.
   - id: home
+    # Playing: everything in.
+    music: { style: jazz, bpm: 120, loops: false, mute: [] }
     when: [house, field]
     from: [moving-in, coming-home]
     speed: 1
@@ -160,6 +169,8 @@ states:
   # that the key is ignored. So while he moves in or comes home the angel presses Return now
   # and then, and he is home when the bar is there. Not on the guestbook, where Return answers.
   - id: moving-in
+    # Waiting to move in: Eno's loops over the engine at max, no beat to wait on.
+    music: { style: straight, bpm: 60, loops: true, mute: [drums, harmony] }
     when: house
     from: [loading, flip, name, signing, date, first-visit]
     speed: 100
@@ -171,6 +182,7 @@ states:
       but watch. The screen angel runs the Apple at max until he is home, then back to 1×.
 
   - id: coming-home
+    music: { style: straight, bpm: 60, loops: true, mute: [drums, harmony] }
     when: house
     from: [return-visit]
     speed: 100

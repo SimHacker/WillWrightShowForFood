@@ -41,15 +41,15 @@ export type Note = {
 	readonly order: number;
 	/** How late it plays, as a fraction of a sixteenth: the swing. */
 	readonly late?: number;
-	/** Play it with odd harmonics only (square, triangle), as the Kees tuning wants. */
+	/** Play it with odd harmonics only (square, triangle), as the Bohlen-Pierce tuning wants. */
 	readonly odd?: boolean;
 };
 
 /**
- * `straight` is triads in even sixteenths; `jazz` is seventh chords, swung, on a ride; `kees` is
- * Kees van Prooijen's 13 steps of the tritave, odd harmonics, in bars of 13.
+ * `straight` is triads in even sixteenths; `jazz` is seventh chords, swung, on a ride; `bp` is
+ * Bohlen-Pierce: 13 steps of the tritave, odd harmonics, in bars of 13.
  */
-export type Style = "straight" | "jazz" | "kees";
+export type Style = "straight" | "jazz" | "bp";
 
 /** A tuning: `steps` equal steps of the interval `period` (2, the octave; 3, the tritave). */
 export type Tuning = { readonly steps: number; readonly period: number };
@@ -59,7 +59,7 @@ export const TET12: Tuning = { steps: 12, period: 2 };
  * it in the seventies, at about the time Heinz Bohlen and later John Pierce did; it is known as
  * the Bohlen-Pierce scale. https://www.kees.cc/music/scale13/scale13.html
  */
-export const KEES13: Tuning = { steps: 13, period: 3 };
+export const BP13: Tuning = { steps: 13, period: 3 };
 
 /** A MIDI note number, fractional off 12-TET: `step` steps of `t` above `base`. */
 export const midiAt = (base: number, step: number, t: Tuning = TET12): number => base + (12 * Math.log2(t.period) * step) / t.steps;
@@ -172,7 +172,7 @@ export function swing(step: number, load: number, every: number, phase = 0): Dru
 }
 
 /**
- * A bar of 13 sixteenths for the Kees tuning's 13 steps, grouped 4+3+3+3: the kick opens the
+ * A bar of 13 sixteenths for the Bohlen-Pierce tuning's 13 steps, grouped 4+3+3+3: the kick opens the
  * bar and the third group, the snare lands on the second and fourth, hats fill as load rises.
  */
 export function thirteen(step: number, load: number, every: number, phase = 0): Drum[] {
@@ -196,7 +196,7 @@ export type Chord = { readonly name: string; readonly root: number; readonly ton
 /** Tones from the root up; the root is the first. In steps of the tuning, `n` to its period. */
 const chordIn = (n: number) => (name: string, ...tones: number[]): Chord => ({ name, root: (tones[0] ?? 0) % n, tones: tones.map((t) => t % n).sort((x, y) => x - y) });
 const chord = chordIn(12);
-const kees = chordIn(13);
+const bp = chordIn(13);
 
 /** I vi IV V, a bar each. */
 export const POP: readonly Chord[] = [chord("I", 0, 4, 7), chord("vi", 9, 12, 16), chord("IV", 5, 9, 12), chord("V", 7, 11, 14)];
@@ -207,17 +207,17 @@ export const DOMINANT = chord("V7", 7, 11, 14, 17);
 export const DOMINANT_B9 = chord("V7b9", 7, 11, 14, 17, 20);
 
 /**
- * Kees van Prooijen's major, in steps of KEES13: built as just major is from triads on the tonic,
+ * Kees van Prooijen's major, in steps of BP13: built as just major is from triads on the tonic,
  * dominant and subdominant, with the 3:5:7 triad (1, 5/3, 7/3) in place of 4:5:6. The ratios
  * 1, 35/27, 7/5, 5/3, 9/5, 7/3, 25/9 fall on steps 0, 3, 4, 6, 7, 10, 12.
  */
-export const KEES_MAJOR: readonly number[] = [0, 3, 4, 6, 7, 10, 12];
+export const BP_MAJOR: readonly number[] = [0, 3, 4, 6, 7, 10, 12];
 /** Tonic 1 : 5/3 : 7/3; on 9/5 (9/5, 3, 21/5); on 5/3 (5/3, 25/9, 35/9), his dominant. */
-export const KEES_I = kees("I", 0, 6, 10);
-export const KEES_IV = kees("IV", 7, 13, 17);
-export const KEES_V = kees("V", 6, 12, 16);
+export const BP_I = bp("I", 0, 6, 10);
+export const BP_IV = bp("IV", 7, 13, 17);
+export const BP_V = bp("V", 6, 12, 16);
 /** I IV V I, a bar of 13 each. */
-export const KEES_CADENCE: readonly Chord[] = [KEES_I, KEES_IV, KEES_V, KEES_I];
+export const BP_CADENCE: readonly Chord[] = [BP_I, BP_IV, BP_V, BP_I];
 
 /**
  * Tape loops after Brian Eno's Music for Airports: each sounds one tone of the chord in force,
@@ -239,6 +239,73 @@ export type Touch =
 	| { readonly kind: "press" }
 	| { readonly kind: "drag"; readonly distance: number }
 	| { readonly kind: "release" };
+
+/** A stroke under the light pen: its display-list word, how far along it the pen is, and when in the frame it was drawn. */
+export type Under = { readonly addr: number; readonly along: number; readonly scan: number };
+
+/** Where the light pen is, on the 340's grid, whether it's down, and the strokes under it, nearest first. */
+export type PenAt = { readonly x: number; readonly y: number; readonly down: boolean; readonly under: readonly Under[] };
+
+/**
+ * A mode of the music, as a screen angel's state sets it on entry: the style, the tempo, the
+ * tape loops, the words to listen to, and the tracks to leave out, by voice ("drums",
+ * "harmony", "loops", "reply", "pen", a machine's voice id, or "watch" for every watched word).
+ * What a mode leaves unsaid stays as it was.
+ */
+export type Music = { readonly style?: Style; readonly bpm?: number; readonly loops?: boolean; readonly listen?: string; readonly mute?: readonly string[] };
+
+/** A named stretch of memory, from and to inclusive, as a source map names a program's parts. */
+export type Region = { readonly name: string; readonly from: number; readonly to: number };
+
+/** A region's share of recent hits, kept for about this many sixteenths: a few seconds. */
+const HEAT_SPAN = 32;
+
+/**
+ * A heat map of where the program counter has been, by region. Each beat's hits add to their
+ * regions, and each region's heat follows its share of the hits slowly, so a hot spot warms up
+ * and cools off over seconds instead of flickering with every block.
+ */
+export class Regions {
+	readonly heat: number[];
+	constructor(readonly regions: readonly Region[]) {
+		this.heat = regions.map(() => 0);
+	}
+	step(hits: readonly Hit[]): void {
+		const share = this.regions.map(() => 0);
+		let total = 0;
+		for (const h of hits) {
+			const i = this.regions.findIndex((r) => h.key >= r.from && h.key <= r.to);
+			if (i < 0) continue;
+			share[i]! += h.weight;
+			total += h.weight;
+		}
+		if (!total) return;
+		this.heat.forEach((h, i) => (this.heat[i] = h + (share[i]! / total - h) / HEAT_SPAN));
+	}
+	/** The hottest region's name, or null if nothing has run in any. */
+	get hottest(): string | null {
+		const top = Math.max(...this.heat);
+		return top > 0 ? this.regions[this.heat.indexOf(top)]!.name : null;
+	}
+}
+
+/** Even 1K pages of a core, named by their first address in octal: a heat map with no source map. */
+export const pages = (words: number, size = 1024): Region[] =>
+	Array.from({ length: Math.ceil(words / size) }, (_, i) => ({ name: (i * size).toString(8), from: i * size, to: (i + 1) * size - 1 }));
+
+/** A word in core the dance listens to: a variable's name and what it holds now, 18 bits. */
+export type Watched = { readonly name: string; readonly value: number };
+
+const hashName = (name: string) => [...name].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+const signed18 = (v: number) => {
+	const w = v & 0o777777;
+	return w & 0o400000 ? w - 0o1000000 : w;
+};
+const WATCH_TIMBRES: readonly Timbre[] = ["chime", "beep", "tick", "glass", "pluck"];
+/** A watch counts as moving for this many sixteenths after its value last changed. */
+const STIRRED = 8;
+
+type Watch = { len: number; at: number; timbre: Timbre; pan: number; last: number; typical: number; progress: number; stirred: number };
 
 /** A held pen's drag, in 340 points, that brings tension from none to full. */
 const DRAG_FULL = 3000;
@@ -276,28 +343,39 @@ export class Dance {
 	private home = 0;
 	private last: Chord | null = null;
 	private replies: { at: number; key: number; i: number }[] = [];
+	private penDown = false;
+	private sounding = new Map<number, number>();
+	private watches = new Map<string, Watch>();
+	/** 0 to 1: how deep the harmony goes. Past a third the pad doubles an octave down, past two thirds two. */
+	depth = 0;
+	/** Voices left out; "watch" leaves out every watched word. */
+	mute: ReadonlySet<string> = new Set();
+	private heard = (n: Note) => !this.mute.has(n.voice) && !this.mute.has(n.voice.split(":")[0]!);
+
+	/** Where the first voice's hits land, if the machine has a map: each warm region hums. */
+	regions: Regions | null = null;
 
 	constructor(readonly voices: readonly Voice[]) {}
 
 	get progression(): readonly Chord[] {
-		return this.style === "jazz" ? TURNAROUND : this.style === "kees" ? KEES_CADENCE : POP;
+		return this.style === "jazz" ? TURNAROUND : this.style === "bp" ? BP_CADENCE : POP;
 	}
 
 	get tuning(): Tuning {
-		return this.style === "kees" ? KEES13 : TET12;
+		return this.style === "bp" ? BP13 : TET12;
 	}
 
 	/** Sixteenths to the bar. */
 	get bar(): number {
-		return this.style === "kees" ? 13 : 16;
+		return this.style === "bp" ? 13 : 16;
 	}
 
 	/** The chord the next beat plays over. */
 	get chord(): Chord {
-		const kees = this.style === "kees";
-		if (this.resolving) return kees ? KEES_I : this.progression[this.style === "jazz" ? 2 : 0]!;
-		if (this.tension >= 0.8) return kees ? KEES_V : DOMINANT_B9;
-		if (this.tension >= 0.4) return kees ? KEES_V : DOMINANT;
+		const bp = this.style === "bp";
+		if (this.resolving) return bp ? BP_I : this.progression[this.style === "jazz" ? 2 : 0]!;
+		if (this.tension >= 0.8) return bp ? BP_V : DOMINANT_B9;
+		if (this.tension >= 0.4) return bp ? BP_V : DOMINANT;
 		const p = this.progression;
 		return p[Math.floor((this.step - this.home) / this.bar) % p.length]!;
 	}
@@ -325,10 +403,82 @@ export class Dance {
 	}
 
 	/**
+	 * The light pen's own quiet tracks, played at once rather than on the beat. Every stroke under
+	 * the pen sounds a rising arpeggio of the chord as the pen moves along it, start to end, two
+	 * octaves, so dragging along a line climbs and the next stroke starts low again; strokes drawn
+	 * later in the frame start higher, so a drawing's scan order is heard too. Hovering is a faint
+	 * glass, a held pen a beep. Setting the pen down chimes at its height, lifting it at its x.
+	 */
+	pen(p: PenAt | null): Note[] {
+		const notes: Note[] = [];
+		const tones = this.chord.tones;
+		const t = this.tuning;
+		const n = Math.max(1, tones.length);
+		const at = (root: number, d: number) => midiAt(root, (tones[d % n] ?? 0) + Math.floor(d / n) * t.steps, t);
+		if (!p) {
+			this.sounding.clear();
+			return notes;
+		}
+		const pan = Math.max(-1, Math.min(1, p.x / 512 - 1));
+		if (p.down !== this.penDown) {
+			const d = Math.floor(((p.down ? p.y : p.x) / 1024) * 2 * n);
+			notes.push({ voice: "pen", timbre: "chime", midi: at(p.down ? 72 : 60, Math.max(0, d)), velocity: 0.5, pan, order: 0 });
+			this.penDown = p.down;
+		}
+		const now = new Map<number, number>();
+		p.under.slice(0, 3).forEach((u, i) => {
+			const d = Math.floor(Math.max(0, Math.min(0.999, u.along)) * 2 * n) + Math.floor(u.scan * n);
+			now.set(u.addr, d);
+			if (this.sounding.get(u.addr) !== d)
+				notes.push({ voice: "pen", timbre: p.down ? "beep" : "glass", midi: at(60, d), velocity: (p.down ? 0.45 : 0.15) * (1 - 0.25 * i), pan, order: i });
+		});
+		this.sounding = now;
+		return notes.filter(this.heard);
+	}
+
+	/**
+	 * Watched words' tracks, one beat loop each, three to seven sixteenths long by the name. A
+	 * loop measures its word against its own typical change, so a turtle heading moving by
+	 * degrees and a dictionary pointer moving by words both count steps of the same size: each
+	 * typical change moves the loop's phase by a step and its note one chord tone up. While the
+	 * word is changing the loop plays twice as often and louder; the word's size, by powers of
+	 * 64, sets the octave.
+	 */
+	private listen(watched: readonly Watched[], tones: readonly number[], t: Tuning): Note[] {
+		const notes: Note[] = [];
+		const n = Math.max(1, tones.length);
+		const names = new Set(watched.map((w) => w.name));
+		for (const name of this.watches.keys()) if (!names.has(name)) this.watches.delete(name);
+		for (const { name, value } of watched) {
+			let w = this.watches.get(name);
+			const v = signed18(value);
+			if (!w) {
+				const h = hashName(name);
+				w = { len: 3 + (h % 5), at: (h >>> 3) % 7, timbre: WATCH_TIMBRES[(h >>> 6) % WATCH_TIMBRES.length]!, pan: (((h >>> 9) % 9) - 4) / 5, last: v, typical: 0, progress: 0, stirred: 0 };
+				this.watches.set(name, w);
+			}
+			const delta = Math.abs(signed18(v - w.last));
+			w.last = v;
+			if (delta > 0) {
+				w.typical = w.typical ? 0.9 * w.typical + 0.1 * delta : delta;
+				w.progress += delta / w.typical;
+				w.stirred = STIRRED;
+			} else if (w.stirred > 0) w.stirred -= 1;
+			const every = w.stirred > 0 ? Math.max(2, Math.ceil(w.len / 2)) : w.len;
+			const phase = Math.floor(w.progress);
+			if ((this.step + w.at + phase) % every !== 0) continue;
+			const octave = Math.min(2, Math.floor(Math.log2(Math.abs(v) + 1) / 6));
+			const d = phase % (2 * n);
+			notes.push({ voice: `watch:${name}`, timbre: w.timbre, midi: midiAt(60 + 12 * octave, (tones[d % n] ?? 0) + Math.floor(d / n) * t.steps, t), velocity: w.stirred > 0 ? 0.4 : 0.15, pan: w.pan, order: 0 });
+		}
+		return notes;
+	}
+
+	/**
 	 * One sixteenth. With `load`, the drums play too, their rim click at the period of the
 	 * first voice's two heaviest hits; a machine doing nothing plays no drums, but still answers.
 	 */
-	beat(hits: Readonly<Record<string, readonly Hit[] | undefined>>, load?: number): Note[] {
+	beat(hits: Readonly<Record<string, readonly Hit[] | undefined>>, load?: number, watched: readonly Watched[] = []): Note[] {
 		const step = this.step;
 		const jazz = this.style === "jazz";
 		const late = jazz && swung(step) ? SWING : 0;
@@ -336,10 +486,24 @@ export class Dance {
 		const tones = now.tones;
 		const t = this.tuning;
 		const notes: Note[] = this.voices.flatMap((v) => score(v, hits[v.id] ?? [], tones, t));
+		notes.push(...this.listen(watched, tones, t));
+		const map = this.regions;
+		if (map) {
+			map.step(hits[this.voices[0]?.id ?? ""] ?? []);
+			if (step % this.bar === 0)
+				map.heat.forEach((heat, i) => {
+					if (heat < 0.08) return;
+					const tone = (tones[i % tones.length] ?? 0) + Math.floor(i / tones.length) * t.steps;
+					notes.push({ voice: `region:${map.regions[i]!.name}`, timbre: "pad", midi: midiAt(48, tone, t), velocity: 0.08 + 0.3 * heat, pan: (i / Math.max(1, map.regions.length - 1)) * 1.2 - 0.6, order: i });
+				});
+		}
 		const resolved = this.resolving;
 		if (now !== this.last || resolved) {
 			const loud = resolved ? 0.9 : 0.35 + 0.3 * this.tension;
 			tones.forEach((tone, i) => notes.push({ voice: "harmony", timbre: "pad", midi: midiAt(60, tone, t), velocity: loud, pan: 0, order: i }));
+			for (const [below, from] of [[1, 1 / 3], [2, 2 / 3]] as const)
+				if (this.depth > from)
+					tones.forEach((tone, i) => notes.push({ voice: "harmony", timbre: "pad", midi: midiAt(60, tone - below * t.steps, t), velocity: loud * Math.min(1, (this.depth - from) * 3), pan: 0, order: i }));
 			notes.push({ voice: "harmony", timbre: "bass", midi: midiAt(36, now.root, t), velocity: loud, pan: 0, order: 0 });
 			this.last = now;
 		}
@@ -356,7 +520,7 @@ export class Dance {
 		if (drive > 0 && (load ?? 0) > 0) {
 			const lead = hits[this.voices[0]?.id ?? ""] ?? [];
 			const soft = (d: Drum) => (d === "hat" || d === "ride" ? 0.4 + 0.4 * drive : jazz && d === "kick" ? 0.35 : 0.8);
-			for (const d of (jazz ? swing : this.style === "kees" ? thirteen : groove)(step, drive, period(lead), this.phase))
+			for (const d of (jazz ? swing : this.style === "bp" ? thirteen : groove)(step, drive, period(lead), this.phase))
 				notes.push({ voice: "drums", timbre: d, midi: DRUM_MIDI[d], velocity: soft(d), pan: d === "hat" || d === "ride" ? 0.2 : d === "rim" ? -0.2 : 0, order: 0 });
 		}
 		if (resolved) {
@@ -366,8 +530,9 @@ export class Dance {
 			this.home = step - ((step - this.home) % this.bar);
 		} else if (!this.held) this.tension *= EASE;
 		this.step += 1;
-		const odd = this.style === "kees";
-		return late || odd ? notes.map((n) => ({ ...n, ...(late ? { late } : {}), ...(odd ? { odd } : {}) })) : notes;
+		const odd = this.style === "bp";
+		const kept = notes.filter(this.heard);
+		return late || odd ? kept.map((n) => ({ ...n, ...(late ? { late } : {}), ...(odd ? { odd } : {}) })) : kept;
 	}
 }
 
@@ -376,6 +541,16 @@ export const PDP7_VOICES: readonly Voice[] = [
 	{ id: "cpu", label: "PDP-7", timbre: "bass", root: 36, octaves: 2, pan: -0.3, most: 2 },
 	{ id: "340", label: "Type 340", timbre: "pluck", root: 60, octaves: 2, pan: 0.3, most: 3 },
 	{ id: "forth", label: "Forth device", timbre: "chime", root: 84, octaves: 1, pan: 0, most: 1 },
+];
+
+/** The Apple ]['s memory, as the 6502 runs it: where its PC is says what it is doing. */
+export const APPLE2_REGIONS: readonly Region[] = [
+	{ name: "low memory", from: 0x0000, to: 0x07ff },
+	{ name: "program", from: 0x0800, to: 0x95ff },
+	{ name: "DOS", from: 0x9600, to: 0xbfff },
+	{ name: "slot ROMs", from: 0xc000, to: 0xcfff },
+	{ name: "Applesoft", from: 0xd000, to: 0xf7ff },
+	{ name: "Monitor", from: 0xf800, to: 0xffff },
 ];
 
 /** The Apple ]['s voices: the 6502, the Disk II's head, and the speaker. */

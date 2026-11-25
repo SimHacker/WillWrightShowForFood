@@ -11,7 +11,7 @@
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
-import { APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
+import { APPLE2_REGIONS, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
 import { BusDance, speedLoad } from './bus-dance.svelte.js';
 import { block65Node, compiler65Node, dispatchNode, lister65, sea65Node } from '@wwsff/cabinet/korz/inspect';
 import { FRAME_BYTES, FRAME_HEIGHT, FRAME_WIDTH, appleKey } from '@wwsff/cabinet/microm8';
@@ -327,11 +327,33 @@ class KorzApple {
 	 * faster with the speed and opens up with Applesoft's free memory.
 	 */
 	dance = new BusDance(APPLE2_VOICES, 'diesel');
+	constructor() {
+		this.dance.regions = APPLE2_REGIONS;
+	}
 	#danceBlocks = new Deltas();
 	#dancePcs = new Tally();
 	#danceHead = -1;
 	#danceClicks = 0;
 	#danceAt = { cycles: 0, ms: 0 };
+	/** Which prompt the Apple was at, at the last frame, or null. */
+	#dancePrompt = /** @type {string | null} */ (null);
+
+	/**
+	 * Each prompt has its own song: Applesoft's sunny, another while an Applesoft program runs,
+	 * Integer BASIC's techno, and the Monitor's (CALL -151) dark and industrial. A BASIC
+	 * program's length is a watched track and the harmony's depth: as it gets longer, the pad
+	 * reaches an octave down, then two. The Monitor is as deep as it goes.
+	 */
+	#danceWatched() {
+		const board = this.#board;
+		if (!board) return [];
+		const at = prompt(board.ram);
+		if (at.mode !== this.#dancePrompt && at.mode) this.dance.mode(PROMPT_MUSIC[at.mode]);
+		this.#dancePrompt = at.mode;
+		if (at.mode === null) return [];
+		this.dance.depth = at.mode === 'monitor' ? 1 : Math.log2(Math.max(1, at.length / 32)) / 7;
+		return at.mode === 'monitor' ? [] : [{ name: 'program', value: at.length }];
+	}
 
 	#danceHits() {
 		const cpu = this.#cpu;
@@ -586,7 +608,7 @@ class KorzApple {
 				cancelAnimationFrame(raf);
 				return;
 			}
-			this.dance.frame(now, () => this.#danceHits(), () => this.#danceGauges());
+			this.dance.frame(now, () => this.#danceHits(), () => this.#danceGauges(), () => this.#danceWatched());
 			ctx.putImageData(image, 0, 0);
 			if (vctx && this.videxShowing) vctx.putImageData(videxImage, 0, 0);
 			if (now - polled > 250) {
@@ -622,6 +644,45 @@ function applesoftFree(ram) {
 	const himem = word(0x73);
 	if (!(start >= 0x800 && start < strend && strend <= fretop && fretop <= himem && himem <= 0xc000)) return 0;
 	return (fretop - strend) / (himem - start);
+}
+
+/** @typedef {'applesoft' | 'running' | 'integer' | 'monitor'} Prompt */
+
+/** @type {Record<Prompt, import('@wwsff/cabinet/dance').Music>} */
+const PROMPT_MUSIC = {
+	applesoft: { style: 'straight', bpm: 96, loops: true, mute: [] },
+	running: { style: 'jazz', bpm: 132, loops: false, mute: [] },
+	integer: { style: 'straight', bpm: 132, loops: false, mute: ['loops'] },
+	monitor: { style: 'bp', bpm: 72, loops: false, mute: ['loops', 'reply'] }
+};
+
+/**
+ * Which prompt the Apple is at, by the character in PROMPT ($33), and the BASIC program's
+ * length in bytes:
+ * - "]" Applesoft, from TXTTAB ($67) to VARTAB ($69); running a program when CURLIN's high
+ *   byte ($76) isn't $FF;
+ * - ">" Integer BASIC, whose program sits from PP ($CA) up to HIMEM ($4C);
+ * - "*" the Monitor.
+ * @param {Uint8Array} ram
+ * @returns {{ mode: Prompt | null, length: number }}
+ */
+function prompt(ram) {
+	const word = (/** @type {number} */ a) => (ram[a] ?? 0) | ((ram[a + 1] ?? 0) << 8);
+	const span = (/** @type {number} */ from, /** @type {number} */ to) => (from >= 0x800 && from <= to && to <= 0xc000 ? to - from : -1);
+	switch (ram[0x33]) {
+		case 0xdd: {
+			const length = span(word(0x67), word(0x69));
+			return length < 0 ? { mode: null, length: 0 } : { mode: ram[0x76] === 0xff ? 'applesoft' : 'running', length };
+		}
+		case 0xbe: {
+			const length = span(word(0xca), word(0x4c));
+			return length < 0 ? { mode: null, length: 0 } : { mode: 'integer', length };
+		}
+		case 0xaa:
+			return { mode: 'monitor', length: 0 };
+		default:
+			return { mode: null, length: 0 };
+	}
 }
 
 export const korzApple = new KorzApple();

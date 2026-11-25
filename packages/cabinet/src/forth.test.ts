@@ -239,7 +239,7 @@ test("forth: the scripted demo runs to the end and Forth accepts every line", ()
 	for (const step of forthDemo({ type: m.type, show: (p) => shown.push(p) })) {
 		if (typeof step === "number") m.box.run(step);
 	}
-	assert.deepEqual(shown, ["rings"]);
+	assert.deepEqual(shown, ["tty", "rings", "display"], "the teletype it types on, the ring it takes apart, the tube the turtle draws on");
 	assert.doesNotMatch(m.paper(), /\?/);
 	assert.match(m.paper(), /HELLO WORLD FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
 	assert.match(m.paper(), / 8\s+ok/);
@@ -247,4 +247,28 @@ test("forth: the scripted demo runs to the end and Forth accepts every line", ()
 	assert.match(m.paper(), /HELLO SVFIG FROM PDP-7 FORTH AND PIXIE RINGS\s+ok/);
 	assert.match(m.paper(), /CS DAISY HT\s+ok/);
 	assert.equal(m.lit(), 216);
+});
+
+test("forth: a word's cell found by name from outside, kernel labels and Forth variables alike", async () => {
+	const { forthCell, forthWords } = await import("./forth-dict.js");
+	const m = machine();
+	m.line("variable zork 1234 zork !");
+	const read = (a: number) => m.cpu.read(a);
+	const words = forthWords(read, image.labels);
+	assert.equal(words[0]!.name, "ZOR", "kernel.s keeps a name's first three characters");
+	assert.equal(words[0]!.length, 4);
+	assert.ok(words.some((w) => w.name === "DUP" && w.kind === "prim"));
+	assert.equal(m.cpu.read(forthCell(read, image.labels, "zork")), 1234);
+	const dp = forthCell(read, image.labels, "dp");
+	assert.equal(dp, image.labels.get("dp"));
+	const before = m.cpu.read(dp);
+	m.line(": tiny 1 2 + drop ;");
+	assert.ok(m.cpu.read(dp) > before, "dp advances as the dictionary grows");
+	m.line("cs 100 fd 90 rt");
+	assert.equal(m.cpu.read(forthCell(read, image.labels, "th")), 90);
+	const dl = forthCell(read, image.labels, "dl>");
+	const at = m.cpu.read(dl);
+	m.line("100 fd");
+	assert.ok(m.cpu.read(dl) > at, "dl> advances as the drawing grows");
+	assert.equal(forthCell(read, image.labels, "no-such-word"), -1);
 });

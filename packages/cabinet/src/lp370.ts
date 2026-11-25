@@ -67,6 +67,7 @@ export function* lp370Demo(h: DemoHost & { cpu: Pdp7 }, program: AsmResult): Dem
 	h.pen.aperture = 12;
 	h.pen.enabled = false;
 
+	h.show?.("regs");
 	yield "Test 1, sensitivity: switch 1 up. Eight lines, intensity 0 at the bottom to 7 at the top";
 	h.cpu.switches = SW.sensitivity;
 	yield* glide(h, 0o1200, 0o1200);

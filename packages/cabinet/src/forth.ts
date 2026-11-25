@@ -4,7 +4,7 @@ import { Cabinet } from "./cabinet.js";
 import { PaperTape } from "./plugins/papertape.js";
 import { Pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
-import { type DemoHost, type DemoScript, glide, wait } from "./symelec-demo.js";
+import { type DemoHost, type DemoScript, type Focus, glide, wait } from "./symelec-demo.js";
 
 /**
  * Mitch Bradley's PDP-7 Forth: its kernel, either as `as7` left it (the `addr: word` image and
@@ -150,11 +150,9 @@ export function setForthColumns(cpu: Pdp7, image: ForthImage, cols: number): boo
 	return true;
 }
 
-export interface ForthHost {
+export interface ForthHost extends Focus {
 	/** Type a line on the teletype; Forth echoes it itself. */
 	type: (text: string) => void;
-	/** Open one of the page's panels by id, such as "rings", if the page has it. */
-	show?: (panel: string) => void;
 }
 
 /**
@@ -169,6 +167,7 @@ export function* forthDemo(h: ForthHost): DemoScript {
 		h.type(`${line}\n`);
 		yield* wait(cycles);
 	};
+	h.show?.("tty");
 	yield "Mitch Bradley's PDP-7 Forth prints its banner and waits at the teletype";
 	yield* wait(600_000);
 	yield* say("Arithmetic at the prompt: two, three, add, print", "2 3 + .", 1_000_000);
@@ -179,12 +178,16 @@ export function* forthDemo(h: ForthHost): DemoScript {
 	yield* say("DROP1 unlinks the first element with RSPPIX's RDELB; the 1972 garbage collector takes it back", ": DROP1 ( ring -- ) RFIRST RX RCAR RX RDELB ;", 1_000_000);
 	yield* say("Drop HELLO and WORLD", "RSAVINS DROP1 RSAVINS DROP1 RSAVINS .RING", 1_500_000);
 	yield* say("NAMED puts a new element at the front of the ring", `RSAVINS S" SVFIG" NAMED RSAVINS S" HELLO" NAMED RSAVINS .RING`, 1_800_000);
+	h.show?.("display");
 	yield* say("A loop right at the prompt draws a square with the turtle", "CS 4 0 DO 200 FD 90 RT LOOP", 2_000_000);
 	yield* say("Name it: a colon definition", ": SQ 4 0 DO 200 FD 90 RT LOOP ;", 1_000_000);
 	yield* say("A flower is eight squares, each turned 45 degrees", ": FLOWER 8 0 DO SQ 45 RT LOOP ;", 1_000_000);
 	yield* say("Clear the screen and draw it", "CS FLOWER HT", 3_000_000);
 	yield* say("A squiral: each side a little longer, each turn a little short of square", ": SQUIRAL 60 0 DO I 7 * FD 89 RT LOOP ;", 1_000_000);
 	yield* say("Draw it", "CS SQUIRAL HT", 1_500_000);
+	yield* say("DELAY spins in a loop inside a loop; its number, never 0, sets how many times the inner one runs", ": DELAY ( n -- ) 0 DO 10 0 DO LOOP LOOP ;", 1_000_000);
+	yield* say("A slow squiral waits a little longer after every stroke. Slow the machine down and listen to it think", ": SLOWSQ 40 0 DO I 7 * FD 89 RT I 1 + DELAY LOOP ;", 1_000_000);
+	yield* say("Draw it", "CS SLOWSQ HT", 2_000_000);
 	yield* say("Koch's snowflake, one level per word: K1 is four K0 strokes with a bump", ": K0 15 FD ; : K1 K0 60 LT K0 120 RT K0 60 LT K0 ;", 1_000_000);
 	yield* say("K2 is four K1s, K3 is four K2s", ": K2 K1 60 LT K1 120 RT K1 60 LT K1 ; : K3 K2 60 LT K2 120 RT K2 60 LT K2 ;", 1_200_000);
 	yield* say("Three K3 sides make the flake: 192 strokes", ": FLAKE 3 0 DO K3 120 RT LOOP ;", 1_000_000);
@@ -210,8 +213,10 @@ export function* ultimateDemo(h: ForthHost & DemoHost): DemoScript {
 		yield 150_000;
 		h.pen.enabled = false;
 	};
+	h.show?.("tty");
 	yield "Forth prints its banner and waits at the teletype";
 	yield* wait(600_000);
+	h.show?.("display");
 	yield "ULTIMATE draws Minsky's box from device 56's registers";
 	h.type("ULTIMATE\n");
 	yield* wait(1_500_000);
@@ -233,6 +238,7 @@ export function* turingDemo(h: ForthHost): DemoScript {
 		h.type(`${line}\n`);
 		yield* wait(cycles);
 	};
+	h.show?.("tty");
 	yield "Forth prints its banner and waits at the teletype";
 	yield* wait(600_000);
 	yield* say("MACHINES lists the Turing machines compiled from pcomp.tmf", "MACHINES", 1_000_000);

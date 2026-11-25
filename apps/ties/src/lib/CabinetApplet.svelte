@@ -53,7 +53,8 @@
 	import RateSlider from './RateSlider.svelte';
 	import DanceControls from './DanceControls.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
-	import { Deltas, PDP7_VOICES, Tally } from '@wwsff/cabinet/dance';
+	import { Deltas, PDP7_VOICES, Tally, pages } from '@wwsff/cabinet/dance';
+	import { forthCell } from '@wwsff/cabinet/forth-dict';
 	import KorzBrowser from './KorzBrowser.svelte';
 	import { block7Node, compiler7Node, dispatchNode, seaNode } from '@wwsff/cabinet/korz/inspect';
 	import VoicePicker from './VoicePicker.svelte';
@@ -347,6 +348,44 @@
 			340: danceStrokes.take(),
 			forth: forth ? danceForth.step([[0, forth.cells], [1, forth.handoffs], [2, forth.finds], [3, forth.hits]]) : []
 		};
+	}
+	// The words the dance listens to, by name: a label, or a Forth variable found in the dictionary.
+	// Looked up again every couple of seconds, since a Forth program can define one at any time.
+	let danceCells = [];
+	let danceLookup = { text: '', at: -Infinity };
+	function danceWatched() {
+		if (!cpu) return [];
+		const ms = performance.now();
+		if (danceLookup.text !== dance.listen || ms - danceLookup.at > 2000) {
+			const labels = new Map(symbols.map((s) => [s.name.toLowerCase(), s.addr]));
+			const read = (a) => cpu.read(a);
+			danceCells = dance.listen
+				.split(/\s+/)
+				.filter(Boolean)
+				.map((name) => ({ name, addr: forthCell(read, labels, name.toLowerCase()) }))
+				.filter((c) => c.addr >= 0);
+			danceLookup = { text: dance.listen, at: ms };
+		}
+		return danceCells.map((c) => ({ name: c.name, value: cpu.read(c.addr) }));
+	}
+	/** The strokes of the last frame under the pointer, nearest first, and how far along each it is. */
+	function dancePen(event, down) {
+		if (!dance.on || !canvasEl) return;
+		const { x, y } = gridFromEvent(event);
+		const segs = t340?.lastFrame?.segments ?? [];
+		const reach = 14;
+		const under = [];
+		segs.forEach((s, i) => {
+			if (!s.intensify) return;
+			const dx = s.x1 - s.x0;
+			const dy = s.y1 - s.y0;
+			const len2 = dx * dx + dy * dy;
+			const along = len2 ? Math.max(0, Math.min(1, ((x - s.x0) * dx + (y - s.y0) * dy) / len2)) : 0;
+			const d2 = (x - s.x0 - along * dx) ** 2 + (y - s.y0 - along * dy) ** 2;
+			if (d2 <= reach * reach) under.push({ addr: s.addr, along, scan: i / segs.length, d2 });
+		});
+		under.sort((a, b) => a.d2 - b.d2);
+		dance.pen({ x, y, down, under: under.slice(0, 3) });
 	}
 	function danceGauges() {
 		const ms = performance.now();
@@ -794,6 +833,7 @@
 
 	function onHoverLeave() {
 		rest = null;
+		dance.pen(null);
 		if (pressedId === null) fadeTip();
 	}
 
@@ -1011,9 +1051,21 @@
 		refreshRegs();
 		refreshSlots();
 	}
-	/** A demo script asks for a panel; it opens it if the program has it, and never closes one. */
-	function showPanel(id) {
-		if (id === 'rings' && hasRings && !ringsOpen) togglePanel('rings', {});
+	/**
+	 * A demo script focuses a panel: it opens it if the program has it, never closes one, and
+	 * scrolls it on screen, all of it if it fits and its top if it doesn't. "display" is the tube.
+	 */
+	async function showPanel(id) {
+		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen, korz: korzOpen, snaps: snapsOpen };
+		if (id === 'display') displayOpen = true;
+		else if (id in open && !open[id] && (id !== 'rings' || hasRings) && (id !== 'prog' || hasProgPanel)) togglePanel(id, {});
+		await tick();
+		const els = [...(figureEl?.querySelectorAll(`[data-panel="${id}"]`) ?? [])].filter((el) => !el.hidden);
+		if (!els.length) return;
+		const last = els.at(-1);
+		const end = last.nextElementSibling?.classList.contains('tty-grip') ? last.nextElementSibling : last;
+		end.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+		els[0].scrollIntoView({ block: 'nearest', inline: 'nearest' });
 	}
 	function openMemAt(addr, view) {
 		if (!memOpen) {
@@ -2307,7 +2359,7 @@
 			owed = 0;
 			drawFrame();
 			updateReadout(now);
-			dance.frame(now, danceHits, danceGauges);
+			dance.frame(now, danceHits, danceGauges, danceWatched);
 			return;
 		}
 		if (traceMs) {
@@ -2328,7 +2380,7 @@
 				}
 				drawFrame();
 				updateReadout(now);
-				dance.frame(now, danceHits, danceGauges);
+				dance.frame(now, danceHits, danceGauges, danceWatched);
 				fault = null;
 			} catch (e) {
 				fault = e instanceof Error ? e.message : String(e);
@@ -2364,7 +2416,7 @@
 			}
 			drawFrame();
 			updateReadout(now);
-			dance.frame(now, danceHits, danceGauges);
+			dance.frame(now, danceHits, danceGauges, danceWatched);
 			fault = null;
 		} catch (e) {
 			fault = e instanceof Error ? e.message : String(e);
@@ -2396,6 +2448,7 @@
 		event.stopPropagation();
 		danceGrab = gridFromEvent(event);
 		dance.touch({ kind: 'press' });
+		dancePen(event, true);
 		if (editOn) return editDown(event);
 		rest = null;
 		notePenAt(event);
@@ -2420,6 +2473,7 @@
 			dance.touch({ kind: 'drag', distance: Math.hypot(g.x - danceGrab.x, g.y - danceGrab.y) });
 			danceGrab = g;
 		}
+		dancePen(event, pressedId !== null);
 		if (editOn && t340) return editMove(event);
 		onHoverMove(event);
 		if (!pen || event.pointerId !== pressedId) return;
@@ -2438,6 +2492,7 @@
 		if (danceGrab) {
 			danceGrab = null;
 			dance.touch({ kind: 'release' });
+			dancePen(event, false);
 		}
 		if (editOn) return editUp(event);
 		if (event.pointerId !== pressedId) return;
@@ -2509,6 +2564,8 @@
 		if (ttyCols) program.onTtyResize?.({ cpu, cols: ttyCols });
 		if (typeAhead && program.typeAhead) demoType(program.typeAhead);
 		symbols = program.symbols?.() ?? [];
+		dance.listen = program.listen ?? '';
+		dance.regions = pages(program.coreWords ?? CORE);
 		monitor = new Monitor({
 			memory: cpu,
 			symbols,
@@ -3235,6 +3292,7 @@
 	<button
 		type="button"
 		class="row display-bar"
+		data-panel="display"
 		aria-expanded={displayOpen}
 		aria-controls="cabinet-tube"
 		title={displayOpen ? 'Close the display' : 'Open the display'}
@@ -3248,7 +3306,7 @@
 	{#if !displayOpen && haltInfo && status === 'live'}
 		{@render haltPanel(true)}
 	{/if}
-	<div class="tube-wrap" id="cabinet-tube" style:width="{side}px" hidden={!displayOpen}>
+	<div class="tube-wrap" id="cabinet-tube" data-panel="display" style:width="{side}px" hidden={!displayOpen}>
 		<canvas
 			bind:this={canvasEl}
 			width="1024"
@@ -3320,7 +3378,7 @@
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
 		{/if}
 		{#snippet frontPanel()}
-		<div class="row panel sized" role="group" aria-label="PDP-7 console: AC switches, bit 0 on the left" style:height={panelH.front ? `${panelH.front}px` : null}>
+		<div class="row panel sized" data-panel="regs" role="group" aria-label="PDP-7 console: AC switches, bit 0 on the left" style:height={panelH.front ? `${panelH.front}px` : null}>
 			{#each { length: 6 } as _, g (g)}
 				<span class="sw-group">
 					{#each SWITCH_BITS.slice(g * 3, g * 3 + 3) as bit, j (j)}
@@ -3345,7 +3403,7 @@
 		{@render grip('front', 'console')}
 		{/snippet}
 		{#snippet playRow()}
-		<div class="row app demo-row sized" role="group" aria-label="Play" style:height={panelH.play ? `${panelH.play}px` : null}>
+		<div class="row app demo-row sized" data-panel="play" role="group" aria-label="Play" style:height={panelH.play ? `${panelH.play}px` : null}>
 			{#if program?.demo}
 				<button
 					type="button"
@@ -3389,7 +3447,7 @@
 		{@render grip('play', 'play')}
 		{/snippet}
 		{#snippet progRow()}
-		<div class="row app prog-row sized" role="group" aria-label={program.panel.label} style:height={panelH.prog ? `${panelH.prog}px` : null}>
+		<div class="row app prog-row sized" data-panel="prog" role="group" aria-label={program.panel.label} style:height={panelH.prog ? `${panelH.prog}px` : null}>
 			<div class="prog-controls">
 				{#each program?.toggles ?? [] as t (t.id)}
 					<button
@@ -3544,7 +3602,7 @@
 					onclick={() => dance.toggle()}>DANCE</button
 				>
 				{#if dance.on}
-					<DanceControls {dance} chip />
+					<DanceControls {dance} chip listen />
 				{/if}
 				<span class="reset-pull">
 					{#if resetPull >= 0}
@@ -3619,7 +3677,7 @@
 			></button>
 		{/snippet}
 		{#if regsOpen && regs}
-			<div class="row app regs sized" role="group" aria-label="Registers" style:height={panelH.regs ? `${panelH.regs}px` : null}>
+			<div class="row app regs sized" data-panel="regs" role="group" aria-label="Registers" style:height={panelH.regs ? `${panelH.regs}px` : null}>
 				<div class="reg-line">
 					<span class="reg-dev">CPU</span>
 					<button type="button" class="reg" title="Program counter. Show it in memory." onclick={() => openMemAt(regs.pc)}
@@ -3662,7 +3720,7 @@
 			{@render grip('regs', 'registers')}
 		{/if}
 		{#if slotsOpen && slotsView}
-			<div class="row app regs slots sized" role="group" aria-label="Slots" style:height={panelH.slots ? `${panelH.slots}px` : null}>
+			<div class="row app regs slots sized" data-panel="slots" role="group" aria-label="Slots" style:height={panelH.slots ? `${panelH.slots}px` : null}>
 				<details class="fold" bind:open={slotsFolds.cost}>
 					<summary>
 						<span class="reg-dev wide" title="What the emulator costs in real time">COST</span>
@@ -3762,7 +3820,7 @@
 			{@render grip('slots', 'slots')}
 		{/if}
 		{#if korzOpen}
-			<div class="row app korz-row" role="group" aria-label="Korz">
+			<div class="row app korz-row" data-panel="korz" role="group" aria-label="Korz">
 				<KorzBrowser roots={korzRoots} follow={korzFollow} onOpen={(a) => openMemAt(a, 'code')} />
 			</div>
 		{/if}
@@ -3781,7 +3839,7 @@
 		{/snippet}
 		{#snippet ttyRow()}
 			{@const last = ttyPaper[ttyPaper.length - 1] ?? ''}
-			<div class="row app tty">
+			<div class="row app tty" data-panel="tty">
 				{#if program?.help}
 					<p class="tty-help">
 						{program.help.text}
@@ -3880,7 +3938,7 @@
 			</div>
 		{/snippet}
 		{#if memOpen}
-		<div class="row app mem">
+		<div class="row app mem" data-panel="mem">
 			<div bind:this={memEl}>
 				<div class="mem-bar mem-views" role="group" aria-label="View">
 					{#each MEM_VIEWS as [id, label, hint] (id)}
@@ -4048,7 +4106,7 @@
 		</div>
 		{/if}
 		{#if ringsOpen && hasRings}
-			<div class="row app">
+			<div class="row app" data-panel="rings">
 				<RingView capture={captureRings} implant={canImplant ? implantRings : null} name={symbolic} height={ringsHeight + ringsExtra} onOpen={(a) => openMemAt(a)} />
 				<button
 					type="button"
@@ -4061,7 +4119,7 @@
 			</div>
 		{/if}
 		{#if snapsOpen}
-			<div class="row app snaps" role="group" aria-label="Snapshots">
+			<div class="row app snaps" data-panel="snaps" role="group" aria-label="Snapshots">
 				<div class="snap-bar">
 					<input class="snap-name" bind:value={snapName} placeholder="Name" aria-label="Snapshot name" disabled={status !== 'live'} />
 					<button type="button" class="chip" title="Save the machine now as a new snapshot" disabled={status !== 'live'} onclick={onSnapSave}>Save</button>
@@ -4088,7 +4146,7 @@
 			</div>
 		{/if}
 		{#if configOpen}
-			<div class="row app config sized" role="group" aria-label="Configuration" style:height={panelH.config ? `${panelH.config}px` : null}>
+			<div class="row app config sized" data-panel="config" role="group" aria-label="Configuration" style:height={panelH.config ? `${panelH.config}px` : null}>
 				<h4 class="config-head">Display</h4>
 				<label class="mem-hint" title="Hover or hold the pen still over something on the tube to see what drew it"
 					><input type="checkbox" checked={tipsOn} onchange={(e) => setTips(e.currentTarget.checked)} /> Tooltips on the tube</label
