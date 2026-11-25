@@ -70,11 +70,12 @@ export class BusDance {
 		this.voices = voices;
 		this.#dance = new Dance(voices);
 		this.#engine = engine;
+		const on = kept(ON) === true;
 		const was = kept(`dance-${engine}`);
-		if (STYLES.some((s) => s.id === was?.style)) this.setStyle(was.style);
+		if (STYLES.some((s) => s.id === was?.style)) this.style = this.#dance.style = was.style;
 		if (TEMPOS.includes(was?.bpm)) this.#bpm = was.bpm;
-		if (typeof was?.loops === 'boolean' && was.loops !== this.loops) this.toggleLoops();
-		if (kept(ON) === true) this.#wake();
+		if (typeof was?.loops === 'boolean') this.loops = this.#dance.loops = was.loops;
+		if (on) this.#wake();
 	}
 
 	/** On from last time: sound starts at the first click or key, as browsers require. */
@@ -154,9 +155,9 @@ export class BusDance {
 
 	/** Switch to a mode, as a screen angel's state asks; what it leaves out stays. @param {Music} m */
 	mode(m) {
-		if (m.style) this.setStyle(m.style);
-		if (m.bpm) this.bpm = m.bpm;
-		if (m.loops !== undefined && m.loops !== this.loops) this.toggleLoops();
+		if (m.style) this.style = this.#dance.style = m.style;
+		if (m.bpm) this.#bpm = m.bpm;
+		if (m.loops !== undefined) this.loops = this.#dance.loops = m.loops;
 		if (m.listen !== undefined) this.listen = m.listen;
 		if (m.mute) this.#dance.mute = new Set(m.mute);
 		if (m.riff !== undefined) this.#dance.riff = m.riff;
