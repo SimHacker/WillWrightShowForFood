@@ -423,6 +423,7 @@
 		dance.pen({ x, y, down, under: under.slice(0, 3), tip });
 	}
 	function danceFrame(now) {
+		dance.switches = switches;
 		dance.frame(now, danceHits, danceGauges, danceWatched);
 		dancePenNow();
 	}

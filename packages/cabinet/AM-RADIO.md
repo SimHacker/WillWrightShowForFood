@@ -237,6 +237,15 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        read from core (`hiloFinished`: getc's return address in waitcr, waitcr's at the JMP
        GAME after RIGHT), and the fewer the guesses, the bigger the hooray. DUEL's halt, as
        the halt explainer reads it, is a win to one side or a smaller one for a collision.
+     - The front panel's switches twist the music (`twist` in dance.ts). Not a knob a switch:
+       the 18-bit word is hashed, so any combination is its own and flipping one gives
+       another. The hash picks a skew of the off sixteenths and a phase turning the drums and
+       the gate round, then effects: a gate thinning the machine's voices to a pattern that
+       keeps every beat, an echo from the other side, a ratchet at the half, every other beat
+       up an octave (a tritave in Bohlen-Pierce), the instruments handed round, left and right
+       swapped. All off is the plain dance, and the console shows what the switches are doing
+       next to the dance controls. Programs that read the switches as controls, DUEL's ships,
+       Spacewar's, change the music as they are played.
      - DUEL as a duet: no listing survives, so its ships' words were found by holding each
        control and diffing core (tapes/duel/README.md, `DUEL_SYMBOLS`): position, heading,
        velocity and torpedoes for each ship. A watched name beginning `left` or `right` pans

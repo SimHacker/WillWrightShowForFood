@@ -323,6 +323,70 @@ export const pages = (words: number, size = 1024): Region[] =>
 /** A word in core the dance listens to: a variable's name and what it holds now, 18 bits. */
 export type Watched = { readonly name: string; readonly value: number };
 
+/**
+ * What a front panel's switches do to the music. Not a knob a switch: the word is hashed, so
+ * every combination is its own twist and flipping any one switch gives another. `skew` delays
+ * the off sixteenths by up to nearly half of one; `shift` turns the drums' pattern and the gate
+ * round by that many steps; `gate` is the steps of the bar the machine's own voices and the
+ * watched words get through, all of them or a pattern keeping every beat; `echo` repeats each
+ * of their notes that many sixteenths later, softer, from the other side; `ratchet` doubles it
+ * at the half; `octave` lifts every other beat by the tuning's period; `turn` hands each voice
+ * the next instrument round; `mirror` swaps left and right. All switches off is the plain dance.
+ */
+export type Twist = {
+	readonly skew: number;
+	readonly shift: number;
+	readonly gate: number;
+	readonly echo: number;
+	readonly ratchet: boolean;
+	readonly octave: boolean;
+	readonly turn: number;
+	readonly mirror: boolean;
+};
+export const PLAIN: Twist = { skew: 0, shift: 0, gate: 0xffff, echo: 0, ratchet: false, octave: false, turn: 0, mirror: false };
+/** The instruments `turn` hands round, the machine's own. */
+export const TURNS: readonly Timbre[] = ["bass", "pluck", "chime", "glass", "beep"];
+const ECHOES = [0, 2, 3, 6] as const;
+
+const mix32 = (x: number) => {
+	let h = Math.imul(x ^ 0x9e3779b9, 0x85ebca6b);
+	h ^= h >>> 13;
+	h = Math.imul(h, 0xc2b2ae35);
+	return (h ^ (h >>> 16)) >>> 0;
+};
+
+/** The twist an 18-bit switch word makes. */
+export function twist(word: number): Twist {
+	const w = word & 0o777777;
+	if (!w) return PLAIN;
+	const h = mix32(w);
+	const g = mix32(h);
+	const t = {
+		skew: ((h & 7) / 7) * 0.45,
+		shift: (h >>> 3) & 15,
+		gate: ((h >>> 7) & 3) === 0 ? (g & 0xffff) | 0x1111 : 0xffff,
+		echo: ECHOES[(h >>> 9) & 3]!,
+		ratchet: ((h >>> 11) & 3) === 0,
+		octave: ((h >>> 13) & 1) === 1,
+		turn: (h >>> 14) % TURNS.length,
+		mirror: ((h >>> 17) & 1) === 1,
+	};
+	return t.echo || t.ratchet || t.octave || t.turn || t.gate !== 0xffff ? t : { ...t, echo: 3 };
+}
+
+/** A twist in a few words, for the console: "" for the plain dance. */
+export function twistLabel(t: Twist): string {
+	if (t === PLAIN) return "";
+	const parts = [`skew ${Math.round((t.skew / 0.45) * 7)}`, `phase ${t.shift}`];
+	if (t.gate !== 0xffff) parts.push("gate");
+	if (t.echo) parts.push(`echo ${t.echo}`);
+	if (t.ratchet) parts.push("ratchet");
+	if (t.octave) parts.push("octave");
+	if (t.turn) parts.push(`turn ${t.turn}`);
+	if (t.mirror) parts.push("mirror");
+	return parts.join(" · ");
+}
+
 const hashName = (name: string) => [...name].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 const signed18 = (v: number) => {
 	const w = v & 0o777777;
@@ -380,6 +444,13 @@ export class Dance {
 	/** Voices left out; "watch" leaves out every watched word. */
 	mute: ReadonlySet<string> = new Set();
 	private heard = (n: Note) => !this.mute.has(n.voice) && !this.mute.has(n.voice.split(":")[0]!);
+
+	/** The front panel's twist (`twist`), set from its switch word. */
+	twist: Twist = PLAIN;
+	set switches(word: number) {
+		if ((word & 0o777777) !== this.switchWord) this.twist = twist((this.switchWord = word & 0o777777));
+	}
+	private switchWord = 0;
 
 	/** Where the first voice's hits land, if the machine has a map: each warm region hums. */
 	regions: Regions | null = null;
@@ -601,7 +672,7 @@ export class Dance {
 		if (drive > 0 && (load ?? 0) > 0) {
 			const lead = hits[this.voices[0]?.id ?? ""] ?? [];
 			const soft = (d: Drum) => (d === "hat" || d === "ride" ? 0.4 + 0.4 * drive : jazz && d === "kick" ? 0.35 : 0.8);
-			for (const d of (jazz ? swing : this.style === "bp" ? thirteen : groove)(step, drive, period(lead), this.phase))
+			for (const d of (jazz ? swing : this.style === "bp" ? thirteen : groove)(step, drive, period(lead), this.phase + this.twist.shift))
 				notes.push({ voice: "drums", timbre: d, midi: DRUM_MIDI[d], velocity: soft(d), pan: d === "hat" || d === "ride" ? 0.2 : d === "rim" ? -0.2 : 0, order: 0 });
 		}
 		if (resolved) {
@@ -612,8 +683,34 @@ export class Dance {
 		} else if (!this.held) this.tension *= EASE;
 		this.step += 1;
 		const odd = this.style === "bp";
-		const kept = notes.filter(this.heard);
-		return late || odd ? kept.map((n) => ({ ...n, ...(late ? { late } : {}), ...(odd ? { odd } : {}) })) : kept;
+		const lag = late + (step % 2 === 1 ? this.twist.skew : 0);
+		const kept = this.twisted(notes.filter(this.heard), step);
+		return lag || odd ? kept.map((n) => ({ ...n, ...(lag || n.late ? { late: (n.late ?? 0) + lag } : {}), ...(odd ? { odd } : {}) })) : kept;
+	}
+
+	/** The switches' twist on a beat's notes: the machine's voices and watches gated, lifted, handed round and echoed. */
+	private twisted(notes: Note[], step: number): Note[] {
+		const tw = this.twist;
+		if (tw === PLAIN) return notes;
+		const mine = new Set(this.voices.map((v) => v.id));
+		const at = step + tw.shift;
+		const open = ((tw.gate >>> (at % 16)) & 1) === 1;
+		const up = tw.octave && Math.floor(at / 4) % 2 === 1 ? 12 * Math.log2(this.tuning.period) : 0;
+		const out: Note[] = [];
+		for (const n of notes) {
+			const pan = tw.mirror ? -n.pan : n.pan;
+			if (!mine.has(n.voice) && !n.voice.startsWith("watch:")) {
+				out.push(tw.mirror ? { ...n, pan } : n);
+				continue;
+			}
+			if (!open) continue;
+			const i = TURNS.indexOf(n.timbre);
+			const m: Note = { ...n, midi: n.midi + up, pan, timbre: i >= 0 && tw.turn ? TURNS[(i + tw.turn) % TURNS.length]! : n.timbre };
+			out.push(m);
+			if (tw.ratchet) out.push({ ...m, late: (m.late ?? 0) + 0.5, velocity: m.velocity * 0.6 });
+			if (tw.echo) out.push({ ...m, late: (m.late ?? 0) + tw.echo, velocity: m.velocity * 0.4, pan: -m.pan });
+		}
+		return out;
 	}
 }
 

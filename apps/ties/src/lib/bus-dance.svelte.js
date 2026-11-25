@@ -3,7 +3,7 @@
 // working and how full it is; call `frame` from its animation loop, and `touch` with what the
 // person at the console does. See AM-RADIO.md, approach 8.
 
-import { Dance, Regions } from '@wwsff/cabinet/dance';
+import { Dance, Regions, twistLabel } from '@wwsff/cabinet/dance';
 import { DancePlayer, sixteenth } from './dance-player.js';
 
 /** @typedef {import('@wwsff/cabinet/dance').Voice} Voice */
@@ -38,6 +38,8 @@ export class BusDance {
 	bpm = $state(120);
 	/** Names of words in core to listen to, space separated; the machine resolves them. */
 	listen = $state('');
+	/** What the front panel's switches are doing to the music, in a few words; "" when they are all off. */
+	twist = $state('');
 	player = new DancePlayer();
 	#dance;
 	#engine;
@@ -78,6 +80,12 @@ export class BusDance {
 	/** A game or round is over: a hooray, 0 barely to 1 best, panned toward the winner. @param {number} score @param {number} [pan] */
 	celebrate(score, pan = 0) {
 		if (this.on) this.#dance.celebrate(score, pan);
+	}
+
+	/** The front panel's switch word: hashed into a twist of the music (twist in dance.ts). @param {number} word */
+	set switches(word) {
+		this.#dance.switches = word;
+		this.twist = twistLabel(this.#dance.twist);
 	}
 
 	/** How deep the harmony goes, 0 to 1. @param {number} d */

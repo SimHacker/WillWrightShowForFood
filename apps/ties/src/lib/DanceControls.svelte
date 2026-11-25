@@ -39,6 +39,9 @@
 		onkeydown={(e) => e.stopPropagation()}
 	/>
 {/if}
+{#if dance.twist}
+	<span class="twist" title="The front panel's switches twist the music: their word is hashed, so every combination skews, phases and picks its own effects. All off is the plain dance.">{dance.twist}</span>
+{/if}
 <RateSlider label="Dance tempo, slowest to fastest" {rates} index={tempoIndex} onpick={(i) => (dance.bpm = TEMPOS[i] ?? 120)} />
 
 <style>
@@ -60,6 +63,11 @@
 	}
 	.chip {
 		cursor: pointer;
+	}
+	.twist {
+		font-size: 0.62rem;
+		opacity: 0.75;
+		white-space: nowrap;
 	}
 	.chip.on {
 		background: #9fe8a0;

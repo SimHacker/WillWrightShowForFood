@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
+import { PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -320,4 +320,21 @@ test("two players' words are a duet, left and right", () => {
 	const notes = Array.from({ length: 32 }, (_, s) => d.beat({}, undefined, [{ name: "left-x", value: s * 40 }, { name: "right-x", value: s * 40 }])).flat();
 	assert.ok(notes.some((n) => n.voice === "watch:left-x" && n.pan < 0));
 	assert.ok(notes.some((n) => n.voice === "watch:right-x" && n.pan > 0));
+});
+
+test("the switches twist the music by a hash: all off is plain, and every one-switch flip is its own", () => {
+	assert.equal(twist(0), PLAIN);
+	assert.equal(twistLabel(PLAIN), "");
+	const words = [...Array.from({ length: 18 }, (_, b) => 1 << b), 0o777777, 0o525252];
+	const labels = new Set(words.map((w) => twistLabel(twist(w))));
+	assert.ok(labels.size >= words.length - 2, [...labels].join("\n"));
+	for (const w of words) assert.notEqual(twistLabel(twist(w)), "", "never plain");
+	const play = (word: number) => {
+		const d = new Dance(PDP7_VOICES);
+		d.switches = word;
+		return Array.from({ length: 32 }, (_, s) => d.beat({ cpu: [{ key: s % 5, weight: 3 }], 340: [{ key: s * 7, weight: 2 }] }, 0.8)).flat();
+	};
+	const plain = JSON.stringify(play(0));
+	for (const w of words) assert.notEqual(JSON.stringify(play(w)), plain, `switches ${w.toString(8)} change something`);
+	assert.equal(JSON.stringify(play(0o123)), JSON.stringify(play(0o123)), "and the same switches, the same twist");
 });
