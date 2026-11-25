@@ -375,6 +375,17 @@ This is how displays work across browsers with one server in Node, shared by sev
   pen events to a machine is scoped to its owner and the people they invite
   ([Services](#services)).
 
+ITS had two ways to watch someone else's screen. `:OS`, the output spy
+([os.93](https://github.com/PDP-10/its/blob/master/src/sysen2/os.93), "TTY OUTPUT SPY"), copies
+characters out of another terminal's output buffer onto yours. On the Knight TVs, Escape S
+("SELECT VIDEO CHANNEL" in the TV-11's
+[tv.147](https://github.com/PDP-10/its/blob/master/src/system/tv.147)) set a video switch
+(`VSW==164060`) that routed another console's frame buffer to your monitor. Every frame buffer
+was in the one TV-11's memory, so nothing had to be sent anywhere; the switch was electrical.
+A 340-Window is an output spy for vector display instructions: what is copied is the display
+list, which the watcher's own 340 runs, along with any machine code libraries that come with it,
+the way a web page brings its JavaScript.
+
 #### What a 340-Window has to carry
 
 The server is a PDP-7 running an ordinary program; clients open 340-Windows on parts of its core,
