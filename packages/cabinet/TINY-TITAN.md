@@ -524,6 +524,15 @@ or as source with its type declared, for the client's assembler core. That is Ne
 Gosling's window system at Sun, where clients sent PostScript programs for the server to run,
 with 340 code and PDP-7 or PDP-10 code in place of PostScript.
 
+**Embedded remote apps.** Put the two together and an app can be embedded in any client as a
+remote view of memory plus a few CPU instructions of glue. The display segments come from the
+app's machine. The glue runs on the client's CPU and does only what has to be local: the pen
+interrupt, and the dispatch SYMELEC already uses, where each lightbutton's `DDS` word leaves its
+handler's address in location 3 and the pen handler jumps through it. Here the handler doesn't do
+the work; it sends a command naming the lightbutton back to the app's machine, which runs it and
+rewrites the segments the client is watching. The app lives in one place, and any number of
+clients embed it.
+
 ### tiny-bus: the backplane between machines
 
 tiny-titan grows into tiny-bus: the bus that every command, event, source and sink in the bench
