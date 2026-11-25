@@ -345,7 +345,7 @@ Remote control of the cabinet needs no console protocol. The Cabinet is a TS obj
 examine and deposit ride the same socket in a dozen lines. The link carries drawings, and the
 bench's socket carries control of the machine.
 
-### A 340 without a CPU: a remote display server
+### 340-Windows: a 340 without a CPU, as a remote display server
 
 The Type 340 doesn't need the PDP-7 to draw. It fetches its display list from core and runs it;
 the CPU only writes the list and starts it with an IOT. If the [multi-dialect
@@ -353,7 +353,8 @@ assembler](ASSEMBLERS.md#plan-macros-from-midas-and-one-core-for-every-tool) tre
 code as its own instruction set, a cabinet can be configured with no CPU at all: some memory, a
 340 and a tiny-titan port. Display code arrives over the link, already assembled or as source for
 the 340 front end, is deposited in core, and the link starts the display. That is a headless
-display server: it draws whatever it is sent.
+display server: it draws whatever it is sent. Its views are 340-Windows, in the sense of the X
+Window System, where programs on other machines draw on a display server's screen.
 
 The light pen goes the other way. A pen event from a client (the `pen` session event above) moves
 the pen; when the 340 hits it, the hit (the display address and the beam position) goes back
@@ -362,10 +363,10 @@ the pen without being on the same machine.
 
 This is how displays work across browsers with one server in Node, shared by several people:
 
-- **A view is a 340 pointed at memory.** Anyone can open a remote 340 view on any region of a
+- **A 340-Window is a 340 pointed at memory.** Anyone can open a remote 340 view on any region of a
   machine's core, or on a list of display lists, the way the real 340 could be started at any
   address. Several people can watch the same display, or different parts of one machine.
-- **Views compose.** A view can draw from several providers at once: display lists from different
+- **340-Windows compose.** A 340-Window can draw from several providers at once: display lists from different
   machines, from a running SYMELEC and a Forth turtle, from a recording, each a stream of 340
   instructions the view interleaves.
 - **The source map comes along.** Display code assembled by the shared core carries its source
