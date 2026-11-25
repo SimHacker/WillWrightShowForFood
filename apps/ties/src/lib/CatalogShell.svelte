@@ -154,11 +154,13 @@
 	/** @param {CatalogNode} node */
 	const hrefOf = (node) => (node.entry ? launchUrl(node.entry, {}, { base: CATALOG_BASE }) : node.path ? `${CATALOG_BASE}${node.path}/` : CATALOG_BASE);
 
-	/** A link to an entry on another machine than the one running reloads the page. */
+	/** A link to an entry on another machine than the one running reloads the page, as does another entry on a machine that reboots for each. */
 	/** @param {Entry | undefined} target */
 	const reloads = (target) => {
 		const other = /** @type {string | undefined} */ (target?.runs?.machine);
-		return running !== undefined && other !== undefined && other !== running && machineFor(other)?.fresh === true;
+		if (running === undefined || other === undefined) return false;
+		const m = machineFor(other);
+		return other !== running ? m?.fresh === true : m?.reboot === true && target !== entry;
 	};
 
 	/**
