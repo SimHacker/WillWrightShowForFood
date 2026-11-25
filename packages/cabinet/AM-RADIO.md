@@ -204,8 +204,11 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
          and `2 3 +` goes up two pushes and down one.
          An octal number watches that address;
        - LANDER: `h2 v fuel secs`;
-       - HILO: `secret guess`, which gives the number away. That is the joke: hearing it is
-         one more channel.
+       - HILO: `guess!0-99 secret~0-99`, which gives the number away. That is the joke: hearing
+         it is one more channel. Both words are sung (`SUNG` in dance.ts), not looped: each
+         value is its own pitch, three octaves from 0 to 99, off the scale. Your last guess
+         sings at once and then once a bar; the secret is whistled every fourth bar. A right
+         guess is a unison.
      - The pen's own tracks, played at once rather than on the beat, so the picture is an
        instrument you play by stroking it, button up. Every stroke of the last frame within 24
        points of the pointer sounds a rising arpeggio of the chord as the pen moves along it,

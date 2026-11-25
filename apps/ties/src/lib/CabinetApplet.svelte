@@ -53,7 +53,7 @@
 	import RateSlider from './RateSlider.svelte';
 	import DanceControls from './DanceControls.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
-	import { Deltas, PDP7_VOICES, Tally, pages } from '@wwsff/cabinet/dance';
+	import { Deltas, PDP7_VOICES, Tally, pages, watchedName } from '@wwsff/cabinet/dance';
 	import { forthCell } from '@wwsff/cabinet/forth-dict';
 	import KorzBrowser from './KorzBrowser.svelte';
 	import { block7Node, compiler7Node, dispatchNode, seaNode } from '@wwsff/cabinet/korz/inspect';
@@ -367,7 +367,7 @@
 			danceCells = dance.listen
 				.split(/\s+/)
 				.filter(Boolean)
-				.map((name) => ({ name, addr: forthCell(read, labels, name.toLowerCase()) }))
+				.map((name) => ({ name, addr: forthCell(read, labels, watchedName(name).toLowerCase()) }))
 				.filter((c) => c.addr >= 0);
 			danceLookup = { text: dance.listen, at: ms };
 			danceSpots = forthCell(read, labels, 'spots');

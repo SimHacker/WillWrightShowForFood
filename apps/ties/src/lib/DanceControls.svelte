@@ -32,7 +32,7 @@
 	<input
 		class="listen"
 		aria-label="Words to listen to"
-		title="Words in core the dance listens to, by name: labels, or Forth variables and constants. Each one gets its own quiet loop that steps along as its value changes."
+		title="Words in core the dance listens to, by name: labels, or Forth variables and constants. Each one gets its own quiet loop that steps along as its value changes. name!0-99 sings its value as a pitch instead, at once when it changes; name~0-99 whistles it now and then."
 		placeholder="listen to…"
 		size="16"
 		value={dance.listen}

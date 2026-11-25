@@ -314,6 +314,52 @@ export class DancePlayer {
 				osc('triangle', f / 2, env, end);
 				break;
 			}
+			// Sung words (SUNG in dance.ts): a voice through two formants, and a whistle, both with vibrato.
+			case 'sing': {
+				const end = shape(0.3 * v, 0.03, 0.55);
+				const vib = ctx.createOscillator();
+				vib.frequency.value = 5.5;
+				const depth = ctx.createGain();
+				depth.gain.value = f * 0.012;
+				vib.connect(depth);
+				vib.start(t);
+				vib.stop(end);
+				for (const [formant, q] of [[700, 6], [1200, 8]]) {
+					const bp = ctx.createBiquadFilter();
+					bp.type = 'bandpass';
+					bp.frequency.value = formant;
+					bp.Q.value = q;
+					bp.connect(env);
+					const o = ctx.createOscillator();
+					o.type = 'sawtooth';
+					o.frequency.value = f;
+					depth.connect(o.frequency);
+					o.connect(bp);
+					o.start(t);
+					o.stop(end);
+				}
+				osc('sine', f, env, end);
+				break;
+			}
+			case 'whistle': {
+				const end = shape(0.22 * v, 0.06, 0.7);
+				const o = ctx.createOscillator();
+				o.type = 'sine';
+				o.frequency.setValueAtTime(f * 0.97, t);
+				o.frequency.exponentialRampToValueAtTime(f, t + 0.08);
+				const vib = ctx.createOscillator();
+				vib.frequency.value = 4;
+				const depth = ctx.createGain();
+				depth.gain.value = f * 0.008;
+				vib.connect(depth).connect(o.frequency);
+				o.connect(env);
+				for (const x of [o, vib]) {
+					x.start(t);
+					x.stop(end);
+				}
+				osc('sine', f * 2, env, t + 0.3);
+				break;
+			}
 			// The riffs' own (Riff in dance.ts): sunny's organ, techno's acid line, industrial's anvil.
 			case 'organ': {
 				const end = shape(0.12 * v, 0.004, 0.16);

@@ -14,7 +14,7 @@
 
 export type Drum = "kick" | "snare" | "hat" | "ride" | "rim";
 /** The pen's own instruments, `harp` `lead` `bell` `tom`, are never the machine's, so playing the picture stands apart from what plays itself. */
-export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "brass" | "keys" | "organ" | "acid" | "anvil" | "harp" | "lead" | "bell" | "tom" | Drum;
+export type Timbre = "bass" | "pluck" | "chime" | "pad" | "tick" | "beep" | "glass" | "brass" | "keys" | "organ" | "acid" | "anvil" | "sing" | "whistle" | "harp" | "lead" | "bell" | "tom" | Drum;
 
 export type Voice = {
 	readonly id: string;
@@ -336,6 +336,17 @@ export const pages = (words: number, size = 1024): Region[] =>
 export type Watched = { readonly name: string; readonly value: number };
 
 /**
+ * A watched name can ask to be sung instead of looped: `guess!0-99` sings the word's value as
+ * a pitch, low to high across three octaves from 0 to 99, not held to the scale, so every value
+ * is its own note: at once when it changes, then softly once a bar. `secret~0-99` whistles its
+ * value now and then, every fourth bar, and when it changes. Two words on the same range sing
+ * the same pitch for the same value, so a right guess is a unison. Without a range, 0 to 1023.
+ */
+export const SUNG = /^(.+?)([!~])(?:(-?\d+)-(-?\d+))?$/;
+/** The name to look a watched word up by, without a `SUNG` mark. */
+export const watchedName = (name: string): string => SUNG.exec(name)?.[1] ?? name;
+
+/**
  * What a front panel's switches do to the music. Not a knob a switch: the word is hashed, so
  * every combination is its own twist and flipping any one switch gives another. `skew` delays
  * the off sixteenths by up to nearly half of one; `shift` turns the drums' pattern and the gate
@@ -463,6 +474,7 @@ export class Dance {
 	private penTip = -1;
 	private sounding = new Map<number, number>();
 	private watches = new Map<string, Watch>();
+	private sungLast = new Map<string, number>();
 	/** 0 to 1: how deep the harmony goes. Past a third the pad doubles an octave down, past two thirds two. */
 	depth = 0;
 	/** Voices left out; "watch" leaves out every watched word. */
@@ -738,7 +750,13 @@ export class Dance {
 		const n = Math.max(1, tones.length);
 		const names = new Set(watched.map((w) => w.name));
 		for (const name of this.watches.keys()) if (!names.has(name)) this.watches.delete(name);
+		for (const name of this.sungLast.keys()) if (!names.has(name)) this.sungLast.delete(name);
 		for (const { name, value } of watched) {
+			const sung = SUNG.exec(name);
+			if (sung) {
+				notes.push(...this.sing(name, sung, value));
+				continue;
+			}
 			let w = this.watches.get(name);
 			const v = signed18(value);
 			if (!w) {
@@ -763,6 +781,20 @@ export class Dance {
 			notes.push({ voice: `watch:${name}`, timbre: w.timbre, midi: midiAt(60 + 12 * octave, (tones[d % n] ?? 0) + Math.floor(d / n) * t.steps, t), velocity: w.stirred > 0 ? 0.4 : 0.15, pan: w.pan, order: 0 });
 		}
 		return notes;
+	}
+
+	private sing(name: string, m: RegExpExecArray, value: number): Note[] {
+		const lo = m[3] === undefined ? 0 : Number(m[3]);
+		const hi = m[4] === undefined ? 1023 : Number(m[4]);
+		const v = signed18(value);
+		const changed = this.sungLast.get(name) !== v;
+		this.sungLast.set(name, v);
+		const whistle = m[2] === "~";
+		const bar = this.bar;
+		const due = changed || (whistle ? this.step % (4 * bar) === 2 * bar : this.step % bar === 0);
+		if (!due) return [];
+		const frac = Math.max(0, Math.min(1, (v - lo) / Math.max(1, hi - lo)));
+		return [{ voice: `watch:${name}`, timbre: whistle ? "whistle" : "sing", midi: 48 + 36 * frac, velocity: changed ? 0.8 : whistle ? 0.45 : 0.35, pan: whistle ? 0.35 : -0.2, order: 0 }];
 	}
 
 	/**

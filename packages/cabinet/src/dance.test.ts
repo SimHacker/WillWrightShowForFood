@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
+import { watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -371,4 +371,22 @@ test("each riff is its own bar: sunny skanks, techno is four on the floor, indus
 	assert.equal(bar("walk", "jazz").flat().filter((n) => n.timbre === "bass").length, 4);
 	const d = new Dance(PDP7_VOICES);
 	assert.equal(d.beat({}).filter((n) => n.voice === "riff").length, 0, "no riff unless a mode asks");
+});
+
+test("a sung word plays its value as a pitch: a guess at once, the secret now and then, a right guess in unison", () => {
+	assert.equal(watchedName("guess!0-99"), "guess");
+	assert.equal(watchedName("secret~0-99"), "secret");
+	assert.equal(watchedName("dp"), "dp");
+	const d = new Dance(PDP7_VOICES);
+	const sung = (guess: number) => d.beat({}, undefined, [{ name: "guess!0-99", value: guess }, { name: "secret~0-99", value: 37 }]).filter((n) => n.voice.startsWith("watch:"));
+	const first = sung(50);
+	const guess = first.find((n) => n.timbre === "sing")!;
+	const secret = first.find((n) => n.timbre === "whistle")!;
+	assert.ok(guess.midi > secret.midi, "50 sings above 37");
+	assert.equal(sung(50).length, 0, "nothing new, off the bar");
+	const right = sung(37).find((n) => n.timbre === "sing")!;
+	assert.equal(right.midi, secret.midi, "a right guess is the secret's pitch");
+	const later = Array.from({ length: 64 }, () => sung(37)).flat();
+	assert.ok(later.filter((n) => n.timbre === "sing").length >= 3, "the guess again each bar");
+	assert.equal(later.filter((n) => n.timbre === "whistle").length, 1, "the secret every fourth bar");
 });

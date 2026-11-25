@@ -462,8 +462,9 @@ export const PROGRAMS = [
 		ttyConfig: { duplex: 'full', input: 'raw', wrap: true, autoEnter: 900 },
 		spoken: spokenNumbers,
 		demo: (h) => hiloDemo(h, hiloProgram),
-		// Yes, the dance gives the number away.
-		listen: 'secret guess',
+		// Yes, the dance gives the number away: your last guess sung as a pitch, the secret whistled
+		// now and then on the same scale, so a right guess is a unison.
+		listen: 'guess!0-99 secret~0-99',
 		// Play again? The fewer guesses it took, the bigger the hooray.
 		finish: (cpu) => (hiloProgram ? hiloFinished(cpu, hiloProgram) : null),
 		demoTitle: 'Reboot and let a scripted operator play one game by halving',
