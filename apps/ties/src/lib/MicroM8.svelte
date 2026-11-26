@@ -182,7 +182,7 @@
 
 	/** @param {KeyboardEvent} ev */
 	function onkeydown(ev) {
-		if (!engaged || ev.defaultPrevented || isField(ev.target)) return;
+		if (!engaged || ev.defaultPrevented || isField(ev.target) || isField(document.activeElement)) return;
 		apple.listen();
 		if (ev.key === 'Alt') {
 			apple.button('key', ev.location === 2 ? 1 : 0, true);

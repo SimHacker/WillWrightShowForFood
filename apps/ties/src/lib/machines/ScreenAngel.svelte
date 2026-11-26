@@ -82,13 +82,18 @@
 		if (on) for (const text of lines) say(text);
 	}
 
-	/** @param {StateSpec} s */
-	async function enter(s) {
+	/** The game moved to `s`: follow it, whether or not the angel is on. @param {StateSpec} s */
+	function track(s) {
 		state = s;
-		if (s.music) apple.dance?.mode(s.music);
 		answered = false;
 		autoDone = false;
 		value = s.ask?.default ? fillNow(s.ask.default) : '';
+	}
+
+	/** The game moved to `s` while the angel is on: follow it and act on it. @param {StateSpec} s */
+	async function enter(s) {
+		track(s);
+		if (s.music) apple.dance?.mode(s.music);
 		say(s.speak ?? s.ask?.speak ?? '');
 		if (s.speed) apple.speed(s.speed, s.frames ?? 0);
 		if (s.ask) {
@@ -98,17 +103,20 @@
 		}
 	}
 
+	// The angel watches the screen on or off, so it always knows where the game is; off, it
+	// only stops speaking, typing and making moves.
 	function step() {
-		if (!on || !angel || apple.phase !== 'running') return;
+		if (!angel || apple.phase !== 'running') return;
 		const seconds = apple.seconds();
 		if (seconds + 1 < last) {
 			angel.reset(seconds);
-			enter(angel.state);
+			(on ? enter : track)(angel.state);
 		}
 		last = seconds;
 		const next = angel.step(apple.picture, seconds);
-		if (next) enter(next);
+		if (next) (on ? enter : track)(next);
 		held = seconds - angel.since;
+		if (!on) return;
 		if (state?.auto && !autoDone && seconds - angel.since >= 1) {
 			autoDone = true;
 			move(state.auto);
@@ -132,8 +140,19 @@
 		if (state?.id === 'name' && !v) return;
 		say(a.reply ? fillReply(a.reply, typed) : v);
 		apple.type(askKeys(a, v));
-		if (a.keep) value = '';
-		else answered = true;
+		if (a.keep) {
+			value = '';
+			field?.focus();
+		} else answered = true;
+	}
+
+	/** Typing outside any other field goes to the angel's field while it asks. @param {KeyboardEvent} ev */
+	function onkeydown(ev) {
+		if (!on || !ask || !field || ev.defaultPrevented || ev.ctrlKey || ev.metaKey || ev.altKey) return;
+		const t = /** @type {HTMLElement | null} */ (ev.target);
+		if (t === field || (t && (t.closest('input, textarea, select, [contenteditable]') || (t.tagName === 'BUTTON' && (ev.key === 'Enter' || ev.key === ' '))))) return;
+		if (ev.key.length !== 1 && ev.key !== 'Enter' && ev.key !== 'Backspace') return;
+		field.focus();
 	}
 
 	/** The last request clicked, and when: a second click on it soon after sends it. */
@@ -157,10 +176,12 @@
 	function setOn(v) {
 		on = v;
 		localStorage.setItem(ON, v ? 'on' : 'off');
-		if (v && angel) {
-			angel.reset(apple.seconds());
-			enter(angel.state);
-		} else hush();
+		// On again: the state is where the game is now, followed while off; no fresh start.
+		if (v && state) {
+			if (state.music) apple.dance?.mode(state.music);
+			if (state.speed) apple.speed(state.speed, state.frames ?? 0);
+			tick().then(() => field?.focus());
+		} else if (!v) hush();
 	}
 
 	/** @param {boolean} v */
@@ -192,7 +213,13 @@
 	});
 </script>
 
-<svelte:window onpointerdowncapture={payOwed} onkeydowncapture={payOwed} />
+<svelte:window
+	onpointerdowncapture={payOwed}
+	onkeydowncapture={(ev) => {
+		payOwed();
+		onkeydown(ev);
+	}}
+/>
 
 <section class="angel" aria-label="Screen angel">
 	<div class="bar">
