@@ -26,6 +26,9 @@
 
 	const ON = 'screen-angel';
 	const SPEAK = 'screen-angel-speak';
+	const REQUESTS = 'screen-angel-requests';
+	/** The requests under the field: open unless closed last time. */
+	let requestsOpen = $state(globalThis.localStorage?.getItem(REQUESTS) !== 'closed');
 	const LOCKED = 'Keys go to the field below the screen. Turn the screen angel off to type here.';
 
 	let on = $state(true);
@@ -198,23 +201,36 @@
 				</label>
 				<button type="submit" disabled={state?.id === 'name' && !value.trim()}>OK</button>
 				{#if ask.hint}<small>{ask.hint}</small>{/if}
-				{#if ask.examples?.length}
-					<p class="examples">
-						{#each ask.examples as e (e)}
-							<button type="button" class="example" title="Put this in the field" onclick={() => use(e)}>{e}</button>
+				{#if ask.examples?.length || ask.groups?.length}
+					{@const count = (ask.examples?.length ?? 0) + (ask.groups ?? []).reduce((n, g) => n + g.examples.length, 0)}
+					<details
+						class="requests"
+						open={requestsOpen}
+						ontoggle={(e) => {
+							requestsOpen = e.currentTarget.open;
+							globalThis.localStorage?.setItem(REQUESTS, requestsOpen ? 'open' : 'closed');
+						}}
+					>
+						<summary>{count} {count === 1 ? 'request' : 'requests'} to pick from</summary>
+						{#if ask.examples?.length}
+							<p class="examples">
+								{#each ask.examples as e (e)}
+									<button type="button" class="example" title="Put this in the field" onclick={() => use(e)}>{e}</button>
+								{/each}
+							</p>
+						{/if}
+						{#each ask.groups ?? [] as g (g.label)}
+							<div class="group">
+								<h4>{g.label}</h4>
+								<p class="examples">
+									{#each g.examples as e (e)}
+										<button type="button" class="example" title="Put this in the field" onclick={() => use(e)}>{e}</button>
+									{/each}
+								</p>
+							</div>
 						{/each}
-					</p>
+					</details>
 				{/if}
-				{#each ask.groups ?? [] as g (g.label)}
-					<div class="group">
-						<h4>{g.label}</h4>
-						<p class="examples">
-							{#each g.examples as e (e)}
-								<button type="button" class="example" title="Put this in the field" onclick={() => use(e)}>{e}</button>
-							{/each}
-						</p>
-					</div>
-				{/each}
 			</form>
 		{/if}
 	{:else}
@@ -268,6 +284,14 @@
 		flex: 1;
 		min-width: 12rem;
 		font: 1rem ui-monospace, monospace;
+	}
+	.requests {
+		flex-basis: 100%;
+	}
+	.requests summary {
+		cursor: pointer;
+		font-size: 0.8rem;
+		opacity: 0.75;
 	}
 	.examples {
 		flex-basis: 100%;
