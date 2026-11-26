@@ -322,6 +322,29 @@ export const LOOPS: readonly { readonly length: number; readonly at: number; rea
 	{ length: 41, at: 3, tone: 1, up: 1 },
 ];
 
+/** The Eno levels, EN0 to EN3: off, the loops, a drone under them, a sparkle over. */
+export type Eno = 0 | 1 | 2 | 3;
+
+/** EN2: two long loops an octave below the pad, after Discreet Music's slow tape delay. */
+export const DRONES: readonly { readonly length: number; readonly at: number; readonly tone: number }[] = [
+	{ length: 53, at: 5, tone: 0 },
+	{ length: 59, at: 31, tone: 2 },
+];
+
+/** EN3: three sparse chimes two octaves up (the bell is the light pen's), prime lengths again, so they drift with the rest. */
+export const SPARKLES: readonly { readonly length: number; readonly at: number; readonly tone: number }[] = [
+	{ length: 43, at: 11, tone: 1 },
+	{ length: 47, at: 23, tone: 2 },
+	{ length: 61, at: 41, tone: 0 },
+];
+
+/** A mode's `loops`, a level or the old on and off, as a level; on keeps a level already up. */
+export function enoLevel(loops: boolean | number | undefined, now: Eno = 0): Eno {
+	if (loops === true) return now > 0 ? now : 1;
+	if (!loops) return 0;
+	return Math.max(0, Math.min(3, Math.round(loops))) as Eno;
+}
+
 /** What the person at the console did, as the dance hears it. */
 export type Touch =
 	| { readonly kind: "key"; readonly code: number }
@@ -357,7 +380,7 @@ const STRINGS: ReadonlyMap<string, number> = new Map([
  * "harmony", "loops", "reply", "pen", a machine's voice id, or "watch" for every watched word).
  * and a riff (`Riff`), or null for none. What a mode leaves unsaid stays as it was.
  */
-export type Music = { readonly style?: Style; readonly bpm?: number; readonly loops?: boolean; readonly listen?: string; readonly mute?: readonly string[]; readonly riff?: Riff | null };
+export type Music = { readonly style?: Style; readonly bpm?: number; readonly loops?: boolean | Eno; readonly listen?: string; readonly mute?: readonly string[]; readonly riff?: Riff | null };
 
 /**
  * A riff: a bar that plays itself, bass, drums and a hook, in whatever chord the progression is
@@ -547,8 +570,8 @@ export class Dance {
 	/** Sixteenths since the dance began. */
 	step = 0;
 	style: Style = "straight";
-	/** Play the tape loops. */
-	loops = false;
+	/** The Eno level: 0 none, 1 the tape loops, 2 and a drone, 3 and a sparkle. */
+	loops: Eno = 0;
 	/** 0 to 1: how far the pen has pulled the harmony away from home. */
 	tension = 0;
 	/** The rim click's shift, in steps; each key moves it one. */
@@ -1016,12 +1039,19 @@ export class Dance {
 		for (const r of this.replies.filter((r) => r.at === step))
 			notes.push({ voice: "reply", timbre: "beep", midi: pitch({ id: "reply", label: "", timbre: "beep", root: 72, octaves: 2, pan: 0, most: 1 }, r.key, tones, t), velocity: 0.7 - 0.15 * r.i, pan: 0.5 - 0.5 * r.i, order: 0 });
 		this.replies = this.replies.filter((r) => r.at > step);
-		if (this.loops)
+		const toneOf = (i: number) => tones[i % tones.length] ?? 0;
+		if (this.loops >= 1)
 			for (const l of LOOPS)
-				if (step % l.length === l.at % l.length) {
-					const tone = tones[l.tone % tones.length] ?? 0;
-					notes.push({ voice: "loops", timbre: "glass", midi: midiAt(72, tone + l.up * t.steps, t), velocity: 0.5, pan: (l.length % 5) / 2 - 1, order: 0 });
-				}
+				if (step % l.length === l.at % l.length)
+					notes.push({ voice: "loops", timbre: "glass", midi: midiAt(72, toneOf(l.tone) + l.up * t.steps, t), velocity: 0.5, pan: (l.length % 5) / 2 - 1, order: 0 });
+		if (this.loops >= 2)
+			for (const l of DRONES)
+				if (step % l.length === l.at)
+					notes.push({ voice: "loops", timbre: "pad", midi: midiAt(48, toneOf(l.tone), t), velocity: 0.4, pan: l.tone ? 0.3 : -0.3, order: 0 });
+		if (this.loops >= 3)
+			for (const l of SPARKLES)
+				if (step % l.length === l.at)
+					notes.push({ voice: "loops", timbre: "chime", midi: midiAt(72, toneOf(l.tone) + 2 * t.steps, t), velocity: 0.25, pan: (l.length % 3) - 1, order: 0 });
 		const drive = Math.min(1, (load ?? 0) + 0.5 * this.tension);
 		if (drive > 0 && (load ?? 0) > 0) {
 			const lead = hits[this.voices[0]?.id ?? ""] ?? [];

@@ -3,7 +3,7 @@
 // working and how full it is; call `frame` from its animation loop, and `touch` with what the
 // person at the console does. See AM-RADIO.md, approach 8.
 
-import { Dance, Regions, twistLabel } from '@wwsff/cabinet/dance';
+import { Dance, Regions, enoLevel, twistLabel } from '@wwsff/cabinet/dance';
 import { DancePlayer, TEMPOS, sixteenth } from './dance-player.js';
 
 /** @typedef {import('@wwsff/cabinet/dance').Voice} Voice */
@@ -47,7 +47,8 @@ export class BusDance {
 	on = $state(false);
 	/** @type {Style} */
 	style = $state('straight');
-	loops = $state(false);
+	/** The Eno level, EN0 to EN3. @type {import('@wwsff/cabinet/dance').Eno} */
+	loops = $state(0);
 	#bpm = $state(120);
 	get bpm() {
 		return this.#bpm;
@@ -74,7 +75,7 @@ export class BusDance {
 		const was = kept(`dance-${engine}`);
 		if (STYLES.some((s) => s.id === was?.style)) this.style = this.#dance.style = was.style;
 		if (TEMPOS.includes(was?.bpm)) this.#bpm = was.bpm;
-		if (typeof was?.loops === 'boolean') this.loops = this.#dance.loops = was.loops;
+		if (typeof was?.loops === 'boolean' || typeof was?.loops === 'number') this.loops = this.#dance.loops = enoLevel(was.loops);
 		if (on) this.#wake();
 	}
 
@@ -126,9 +127,9 @@ export class BusDance {
 		this.#save();
 	}
 
-	toggleLoops() {
-		this.loops = !this.loops;
-		this.#dance.loops = this.loops;
+	/** @param {import('@wwsff/cabinet/dance').Eno} level */
+	setLoops(level) {
+		this.loops = this.#dance.loops = level;
 		this.#save();
 	}
 
@@ -157,7 +158,7 @@ export class BusDance {
 	mode(m) {
 		if (m.style) this.style = this.#dance.style = m.style;
 		if (m.bpm) this.#bpm = m.bpm;
-		if (m.loops !== undefined) this.loops = this.#dance.loops = m.loops;
+		if (m.loops !== undefined) this.loops = this.#dance.loops = enoLevel(m.loops, this.loops);
 		if (m.listen !== undefined) this.listen = m.listen;
 		if (m.mute) this.#dance.mute = new Set(m.mute);
 		if (m.riff !== undefined) this.#dance.riff = m.riff;

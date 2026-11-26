@@ -9,6 +9,13 @@
 
 	const rates = TEMPOS.map((bpm) => ({ label: String(bpm), title: `${bpm} beats a minute, sixteenths ${Math.round(15000 / bpm)} ms apart` }));
 	const tempoIndex = $derived(Math.max(0, TEMPOS.indexOf(dance.bpm)));
+	/** @type {{ level: import('@wwsff/cabinet/dance').Eno, title: string }[]} */
+	const ENO = [
+		{ level: 0, title: 'EN0: no tape loops' },
+		{ level: 1, title: "EN1: tape loops after Brian Eno's Music for Airports, five of prime lengths, each sounding one tone of the chord, drifting against each other" },
+		{ level: 2, title: "EN2: and a drone under them, two long loops an octave below, after Discreet Music's slow tape delay" },
+		{ level: 3, title: 'EN3: and a sparkle over them, three sparse chimes two octaves up' }
+	];
 </script>
 
 <select
@@ -21,13 +28,18 @@
 		<option value={s.id} title={s.title}>{s.label}</option>
 	{/each}
 </select>
-<button
-	type="button"
-	class={{ chip, on: dance.loops }}
-	aria-pressed={dance.loops}
-	title="Tape loops after Brian Eno's Music for Airports: five loops of prime lengths, each sounding one tone of the chord, drifting against each other"
-	onclick={() => dance.toggleLoops()}>{chip ? 'ENO' : 'Eno'}</button
->
+<span class="eno" role="radiogroup" aria-label="Eno: tape loops in layers">
+	{#each ENO as e (e.level)}
+		<button
+			type="button"
+			role="radio"
+			aria-checked={dance.loops === e.level}
+			class={{ chip, on: dance.loops === e.level && e.level > 0, under: e.level > 0 && e.level < dance.loops }}
+			title={e.title}
+			onclick={() => dance.setLoops(e.level)}>EN{e.level}</button
+		>
+	{/each}
+</span>
 {#if listen}
 	<input
 		class="listen"
@@ -55,7 +67,7 @@
 	}
 	.chip,
 	.listen,
-	select:has(+ .chip) {
+	select:has(+ .eno .chip) {
 		font: inherit;
 		font-size: 0.62rem;
 		height: 1.4rem;
@@ -79,6 +91,33 @@
 	}
 	.chip.on {
 		background: #9fe8a0;
+		border-color: #9fe8a0;
+	}
+	/* One row of joined buttons, the levels under the chosen one half lit: layers. */
+	.eno {
+		display: inline-flex;
+	}
+	.eno button {
+		margin: 0;
+	}
+	.eno button + button {
+		margin-left: -1px;
+	}
+	.eno button:first-child {
+		border-radius: 4px 0 0 4px;
+	}
+	.eno button:last-child {
+		border-radius: 0 4px 4px 0;
+	}
+	.eno button:not(:first-child):not(:last-child) {
+		border-radius: 0;
+	}
+	button.under {
+		background: #e3f5e3;
+		color: #000;
+	}
+	.chip.under {
+		background: rgba(159, 232, 160, 0.4);
 		border-color: #9fe8a0;
 	}
 </style>

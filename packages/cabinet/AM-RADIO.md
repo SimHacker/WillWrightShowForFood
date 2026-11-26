@@ -185,9 +185,13 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        1, 35/27, 7/5, 5/3, 9/5, 7/3, 25/9, steps 0 3 4 6 7 10 12. The dance plays his I IV V I
        cadence (I is 1 : 5/3 : 7/3, his dominant sits on 5/3), in bars of 13 sixteenths grouped
        4+3+3+3, on odd-harmonic waves, and the pen's tension pulls to his dominant.
-     - ENO: tape loops after Brian Eno's *Music for Airports*, one facet among the others.
-       Five loops of 23, 29, 31, 37 and 41 sixteenths each sound one tone of the chord in
-       force; the lengths are primes, so they drift against each other and the bar.
+     - EN0 to EN3: tape loops after Brian Eno's *Music for Airports*, in layers, four buttons
+       in a row on both the PDP-7's page and the Apple's. EN1 is five loops of 23, 29, 31, 37
+       and 41 sixteenths, each sounding one tone of the chord in force; the lengths are primes,
+       so they drift against each other and the bar. EN2 adds a drone under them, loops of 53
+       and 59 an octave below the pad, after *Discreet Music*'s slow tape delay. EN3 adds three
+       sparse chimes two octaves up, at 43, 47 and 61. Everything they play is in the chord. A
+       screen angel's mode may still say `loops: true`, which keeps a level already up.
      - Watches: words in core heard as tracks, by name (the DANCE row's listen field). A name
        is a label or a Forth variable or constant found in the dictionary
        (`src/forth-dict.ts`, both kernels' header layouts). Each gets a quiet beat loop 3 to 7
