@@ -413,6 +413,18 @@ export function twist(word: number): Twist {
 }
 
 /** A twist in a few words, for the console: "" for the plain dance. */
+/** Bytes of switches folded into the 18-bit word `twist` hashes: none set is 0, any set is not. */
+export function switchWord(bytes: ArrayLike<number>): number {
+	let h = 0x811c9dc5;
+	let any = false;
+	for (let i = 0; i < bytes.length; i++) {
+		const b = bytes[i]! & 0xff;
+		if (b) any = true;
+		h = Math.imul(h ^ b, 0x01000193) >>> 0;
+	}
+	return any ? (h % 0o777777) + 1 : 0;
+}
+
 export function twistLabel(t: Twist): string {
 	if (t === PLAIN) return "";
 	const parts = [`skew ${Math.round((t.skew / 0.45) * 7)}`, `phase ${t.shift}`];

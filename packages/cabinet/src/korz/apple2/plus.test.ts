@@ -1,9 +1,10 @@
 import assert from "node:assert/strict";
 import { describe, test } from "node:test";
 import { M6502 } from "../../m6502/m6502.js";
+import { Korz6502 } from "../m6502.js";
 import { textRows } from "../../microm8/microm8.js";
 import { haveMicroM8, startMicroM8Node } from "../../microm8/node.js";
-import { Apple2Plus } from "./plus.js";
+import { Apple2Plus, PANEL_BASE, PANEL_BYTES } from "./plus.js";
 import { scanAddress } from "./scan.js";
 
 /** A 12K ROM whose reset vector is `$F800`, with `code` planted there. */
@@ -85,4 +86,32 @@ describe("apple ][+ ROM", { skip: !haveMicroM8() && "microm8/dist not built" }, 
 			await m.stop();
 		}
 	});
+});
+
+test("apple ][+: the panel's bits at $C041-$C04F are lights the program sets and switches the person flips", () => {
+	const rom = romAtReset([
+		0xee, 0x41, 0xc0, // INC $C041   count on the lights
+		0xad, 0x4f, 0xc0, // LDA $C04F   the last byte's switches
+		0x8d, 0x00, 0x03, // STA $0300
+		0x4c, 0x00, 0xf8, // JMP $F800
+	]);
+	for (const make of [(b: Apple2Plus) => new M6502(b), (b: Apple2Plus) => new Korz6502(b, { korz: "compile" })]) {
+		const board = new Apple2Plus(rom);
+		const cpu = make(board);
+		cpu.reset();
+		board.flip(PANEL_BYTES * 8 - 1);
+		for (let round = 0; round < 4; ) {
+			cpu.step();
+			if (cpu.pc === 0xf800) round += 1;
+		}
+		assert.equal(board.panel[0], 4, "four times round, four counts");
+		assert.equal(board.ram[0x300], 0x80, "the program sees the person's switch");
+		assert.equal(board.peek(PANEL_BASE + PANEL_BYTES - 1), 0x80);
+		assert.equal(board.read(PANEL_BASE), 4, "reading changes nothing");
+		assert.equal(board.read(PANEL_BASE), 4);
+	}
+	const board = new Apple2Plus(rom);
+	board.write(0xc040, 0xff);
+	board.write(0xc041, 0x12);
+	assert.deepEqual([...board.panel], [0x12, ...new Array(PANEL_BYTES - 1).fill(0)], "$C040 is the strobe, not a panel byte");
 });

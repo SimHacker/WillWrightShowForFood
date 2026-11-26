@@ -344,7 +344,7 @@
 				onclick={() => dance.toggle()}>Dance</button
 			>
 			{#if dance.on}
-				<DanceControls {dance} />
+				<DanceControls {dance} twist={!!apple.panel} />
 			{/if}
 		{/if}
 		<RateSlider rates={rates} index={rateIndex} onpick={(i) => apple.speed(rates[i].speed)} />

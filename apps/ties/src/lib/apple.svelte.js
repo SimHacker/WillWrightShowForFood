@@ -61,6 +61,14 @@ class AppleEngine {
 	get annunciators() {
 		return this.active.annunciators;
 	}
+	/** The cabinet's panel bits at `$C041`–`$C04F`, on the Korz Apples; microM8 has none. */
+	get panel() {
+		return this.id === 'microm8' ? null : korzApple.panel;
+	}
+	/** @param {number} n */
+	flip(n) {
+		if (this.id !== 'microm8') korzApple.flip(n);
+	}
 	get videxShowing() {
 		return this.id === 'microm8' ? microM8.videxShowing : korzApple.videxShowing;
 	}

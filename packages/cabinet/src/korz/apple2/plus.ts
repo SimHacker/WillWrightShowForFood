@@ -15,6 +15,10 @@ import { scanAddress, type ScanMode } from "./scan.js";
  * `$C0n0`, and a read of its page selects its `$C800`–`$CFFF` ROM until `$CFFF`. The language
  * card is `installLanguageCard`: slot 0's `$C080`, banking its own RAM over `$D000`.
  *
+ * The cabinet adds a panel no Apple had: `$C041`–`$C04F`, fifteen bytes of bits that both the
+ * program and the person can flip, extended annunciators that need no slot. A read drives the
+ * byte and changes nothing; a write latches the data bus. `$C040` stays the game port's strobe.
+ *
  * The ROM is the caller's. microM8's `apple2-plus` profile is the oracle, read at `$D000`.
  */
 
@@ -33,6 +37,9 @@ export type Card = {
 export type VideoEvent = ScanMode & { cycle: number };
 
 const ROM_BYTES = 0x3000;
+/** The panel's first address and its length: `$C041`–`$C04F`, 120 bits. */
+export const PANEL_BASE = 0xc041;
+export const PANEL_BYTES = 15;
 
 export class Apple2Plus implements Bus {
 	readonly ram = new Uint8Array(0xc000);
@@ -50,6 +57,8 @@ export class Apple2Plus implements Bus {
 	private speakerLog: number[] = [];
 	/** Annunciators 0–3 in bits 0–3. */
 	annunciators = 0;
+	/** The panel's bytes, `$C041` first. Bit `n` is byte `n >> 3`, bit `n & 7`. */
+	readonly panel = new Uint8Array(PANEL_BYTES);
 	/** The last byte a device or a memory actually drove. */
 	floating = 0;
 	/** Bus cycles since power-on. Cycle 0 is the first blanking cycle of scan line 0. */
@@ -77,6 +86,12 @@ export class Apple2Plus implements Bus {
 		if (slot < 1 || slot > 7) throw new Error(`expansion slot ${slot} is not 1–7`);
 		this.cards[slot] = card;
 		if (!card && this.expansion === slot) this.expansion = 0;
+	}
+
+	/** The person flips panel bit `n`, 0–119. */
+	flip(n: number): void {
+		if (n < 0 || n >= PANEL_BYTES * 8) return;
+		this.panel[n >> 3]! ^= 1 << (n & 7);
 	}
 
 	/** The speaker flips since the last call, in cycle order. */
@@ -123,6 +138,7 @@ export class Apple2Plus implements Bus {
 			if (banked !== undefined && banked !== null) return banked;
 			return this.rom[addr - 0xd000] ?? 0;
 		}
+		if (addr >= PANEL_BASE && addr < PANEL_BASE + PANEL_BYTES) return this.panel[addr - PANEL_BASE]!;
 		if (addr >= 0xc100 && addr <= 0xc7ff) {
 			const rom = this.cards[(addr >> 8) & 7]?.rom;
 			return rom ? rom[addr & 0xff] ?? 0 : 0;
@@ -169,6 +185,7 @@ export class Apple2Plus implements Bus {
 	private readSwitch(a: number, scanned: number): number {
 		this.touch(a);
 		if (a < 0x20) return this.drive(this.key);
+		if (a >= 0x41 && a <= 0x4f) return this.drive(this.panel[a - 0x41]!);
 		if (a >= 0x60 && a < 0x70) return this.drive(scanned & 0x7f);
 		if (a >= 0x80) {
 			const slot = (a >> 4) & 7;
@@ -180,6 +197,7 @@ export class Apple2Plus implements Bus {
 
 	private writeSwitch(a: number): void {
 		this.touch(a);
+		if (a >= 0x41 && a <= 0x4f) this.panel[a - 0x41] = this.floating;
 		if (a < 0x80) return;
 		const slot = (a >> 4) & 7;
 		if (slot >= 1) this.cards[slot]?.writeSwitch?.(a & 0xf, this.floating, this.cycles);

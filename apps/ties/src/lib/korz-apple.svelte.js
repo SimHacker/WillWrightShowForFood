@@ -12,7 +12,7 @@
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { hushWhenHidden } from './hidden-hush.js';
 import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
-import { APPLE2_CALLS, APPLE2_REGIONS, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
+import { APPLE2_CALLS, APPLE2_REGIONS, switchWord, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
 
 /** The ROM routines the dance listens for, by entry address. */
 const CALLS = new Map(APPLE2_CALLS.map((c) => [c.addr, c]));
@@ -168,6 +168,8 @@ class KorzApple {
 	mouseStick = $state(false);
 	gamepad = $state('');
 	annunciators = $state(0);
+	/** The panel's bytes at `$C041`–`$C04F`, as last read: what the program and the person have set. */
+	panel = $state(/** @type {number[]} */ ([]));
 	videxShowing = $state(false);
 	mhz = $state(0);
 	/** @type {ReturnType<typeof snapshot> | null} */
@@ -266,6 +268,8 @@ class KorzApple {
 			}
 		}
 		const board = new Apple2Plus(rom.rom);
+		// Switches stay where they were flipped, as on a front panel: a reboot leaves them.
+		if (this.#board) board.panel.set(this.#board.panel);
 		board.installLanguageCard();
 		const disk = new DiskII(rom.slot);
 		for (const image of this.#images) {
@@ -287,6 +291,21 @@ class KorzApple {
 		this.#paint();
 		this.status = snapshot(cpu, board);
 		this.annunciators = board.annunciators;
+		this.#readPanel();
+	}
+
+	/** Bring `panel` and the dance's twist up to date with the board's bits. */
+	#readPanel() {
+		const bits = this.#board?.panel;
+		if (!bits) return;
+		if (bits.some((b, i) => b !== this.panel[i])) this.panel = [...bits];
+		this.dance.switches = switchWord(bits);
+	}
+
+	/** The person flips panel bit `n`, 0 to 119: `$C041` holds bits 0–7, bit 0 its low bit. @param {number} n */
+	flip(n) {
+		this.#board?.flip(n);
+		this.#readPanel();
 	}
 
 	/** @param {import('@wwsff/cabinet/korz/apple2').Apple2Plus} board */
@@ -657,6 +676,7 @@ class KorzApple {
 				lastCycles = cycles;
 				this.status = snapshot(this.#cpu, this.#board);
 				this.annunciators = this.#board.annunciators;
+				this.#readPanel();
 			}
 		};
 		raf = requestAnimationFrame(tick);

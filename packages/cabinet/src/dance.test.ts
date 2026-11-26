@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { APPLE2_CALLS, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
+import { APPLE2_CALLS, switchWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -409,4 +409,11 @@ test("routines called are heard: the bell beeps, HOME crashes, SCROLL kicks, NEW
 	};
 	assert.equal(drums(0), 0);
 	assert.ok(drums(500) > 0, "a running program drives the drums");
+});
+
+test("a panel of switch bytes folds into a word that is 0 only when every switch is off", () => {
+	assert.equal(switchWord(new Uint8Array(15)), 0);
+	const a = switchWord(Uint8Array.of(1, 0, 0));
+	const b = switchWord(Uint8Array.of(0, 1, 0));
+	assert.ok(a > 0 && b > 0 && a !== b && a <= 0o777777 && b <= 0o777777);
 });

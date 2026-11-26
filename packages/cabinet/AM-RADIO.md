@@ -247,6 +247,9 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        read from core (`hiloFinished`: getc's return address in waitcr, waitcr's at the JMP
        GAME after RIGHT), and the fewer the guesses, the bigger the hooray. DUEL's halt, as
        the halt explainer reads it, is a win to one side or a smaller one for a collision.
+     - The Apple's panel, `$C041`–`$C04F` (korz/apple2/README.md), twists the music the
+       same way: its 120 bits are folded into one 18-bit word (`switchWord`). The program can
+       set them too, so a program can turn the twist itself.
      - The front panel's switches twist the music (`twist` in dance.ts). Not a knob a switch:
        the 18-bit word is hashed, so any combination is its own and flipping one gives
        another. The hash picks a skew of the off sixteenths and a phase turning the drums and

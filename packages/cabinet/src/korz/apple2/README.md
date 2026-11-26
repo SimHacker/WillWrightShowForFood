@@ -6,6 +6,19 @@ The switch chip is [src/m6502](../../m6502/m6502.ts). It is the NMOS 6502, with 
 
 Catalogs, WOZ, Wizardry, and Mind Mirror stay in [src/apple2](../../apple2/).
 
+## The panel at $C041
+
+The Apple has no front panel, so the cabinet adds one that needs no slot: `$C041`–`$C04F`, fifteen bytes, 120 bits. Every bit is both a switch and a light. The program sets bits with `STA` or `POKE -16319,n` and reads them with `LDA` or `PEEK(-16319)`; the person flips one with a click in the CPU panel; either sees what the other did. On a ][ or ][+ nothing answers there but `$C040`, the game port's strobe, which stays the strobe, and an undriven read only returned the scanner's byte, so no program can have counted on these addresses. A //c has its mouse at `$C048` and a IIgs its interrupts and mouse at `$C041`–`$C047`, so this is the cabinet's ][+, not a standard.
+
+| Address | BASIC | Bits |
+|---|---|---|
+| `$C041` | `-16319` | 0–7 |
+| `$C042` | `-16318` | 8–15 |
+| … | … | … |
+| `$C04F` | `-16305` | 112–119 |
+
+A read drives the byte and changes nothing, so a 6502's dummy reads of an indexed `STA` are harmless. A write latches the data bus. `INC` counts on the lights and `ROL` chases them; the NMOS double write of a read-modify-write shows the old byte for one cycle. A program that reads a byte, changes one bit and writes it back can undo a click that lands between its read and its write; a few cycles, at the speed of a person's hand. The bits stay through a reboot, as switches would. The bus dance folds all 120 into the word the PDP-7's switches give it (`switchWord` in dance.ts), so any bit set twists the music. Later the bits are the pins for wires and breadboards.
+
 ## A fast wait
 
 `picture` paints the RAM as it is. The beam address is computed when an undriven read needs it.

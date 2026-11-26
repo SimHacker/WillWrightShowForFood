@@ -11,7 +11,7 @@
 
 	const KEY = 'apple-panels';
 	const TABS = [
-		{ id: 'cpu', label: 'CPU', title: "The 6502: its registers and flags, the cycles it has run, and how fast it is going" },
+		{ id: 'cpu', label: 'CPU', title: "The 6502: its registers and flags, the panel's bits, the cycles it has run, and how fast it is going" },
 		{ id: 'io', label: 'I/O', title: 'The video soft switches, the annunciators, the drives and the game port' },
 		{ id: 'korz', label: 'KORZ', title: "Korz: browse the 6502's sea, its slots, and the JavaScript the compiler made from the Apple's code. Read-only." }
 	];
@@ -36,6 +36,7 @@
 		['C', 'carry']
 	];
 	const s = $derived(apple.status);
+	const BITS = [7, 6, 5, 4, 3, 2, 1, 0];
 	const switches = $derived(s && 'switches' in s ? s.switches : null);
 	const engine = $derived(ENGINES.find((e) => e.id === apple.id)?.label ?? apple.id);
 	const running = $derived(apple.phase === 'running' && !!s);
@@ -72,6 +73,27 @@
 								<span class={['lamp', { lit: !!(s.p & (0x80 >> i)) }]} title={name}>{letter}</span>
 							{/each}
 						</dd>
+						{#if apple.panel?.length}
+							<dt title="$C041–$C04F, a panel no Apple had: 120 bits that the program sets with STA or POKE and reads with LDA or PEEK, and that a click here flips. The dance hears them as the PDP-7 hears its switches.">panel</dt>
+							<dd class="panel-bits">
+								{#each apple.panel as byte, i (i)}
+									{@const addr = 0xc041 + i}
+									<span class="byte" title="${hex(addr, 4)}: PEEK({addr - 65536}), POKE {addr - 65536},n">
+										<span class="addr">{hex(addr, 4)}</span>
+										{#each BITS as b (b)}
+											<button
+												type="button"
+												class={['lamp', 'bit', { lit: !!(byte & (1 << b)) }]}
+												aria-pressed={!!(byte & (1 << b))}
+												aria-label="${hex(addr, 4)} bit {b}"
+												onclick={() => apple.flip(i * 8 + b)}>{b}</button
+											>
+										{/each}
+										<b>{hex(byte, 2)}</b>
+									</span>
+								{/each}
+							</dd>
+						{/if}
 						<dt>cycles</dt>
 						<dd><b>{s.cycles.toLocaleString('en-US')}</b>, {(s.cycles / APPLE_HZ).toFixed(1)} s of Apple time</dd>
 						<dt>speed</dt>
@@ -184,6 +206,29 @@
 		border-radius: 3px;
 		background: #333;
 		color: #999;
+	}
+	.panel-bits {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.2rem 1.6ch;
+	}
+	.byte {
+		display: inline-flex;
+		align-items: center;
+		gap: 2px;
+	}
+	.byte .addr {
+		opacity: 0.65;
+		margin-right: 0.4ch;
+	}
+	.byte b {
+		margin-left: 0.4ch;
+	}
+	.lamp.bit {
+		font: inherit;
+		min-width: 1.5em;
+		border: 0;
+		cursor: pointer;
 	}
 	.lamp.word {
 		min-width: 9ch;
