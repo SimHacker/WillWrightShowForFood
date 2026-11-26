@@ -51,7 +51,7 @@
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
 	import RateSlider from './RateSlider.svelte';
-	import { EMULATOR_KEYS_HELP, emulatorKey, nextTempo } from './emulator-keys.js';
+	import { EMULATOR_KEYS_HELP, EMULATOR_KEYS_LIST, emulatorKey, nextTempo } from './emulator-keys.js';
 	import DanceControls from './DanceControls.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
 	import { Deltas, PDP7_VOICES, Tally, pages, watchedName } from '@wwsff/cabinet/dance';
@@ -2022,6 +2022,30 @@
 			if (c >= 0) ttySend(c);
 		}
 	}
+
+	/** Every key the teletype knows, from this program's bindings: the help under the paper. */
+	const ttyKeys = $derived.by(() => {
+		/** @type {[string, string][]} */
+		const rows = [
+			['Return', 'CR'],
+			['Backspace', 'RUBOUT'],
+			['Escape', 'ALT MODE (033)'],
+			['Ctrl-letter', 'the control code']
+		];
+		if (ttyCfg.input === 'line') rows.push(['Ctrl-U', 'erase the line being typed'], ['Return', 'send the line']);
+		/** @type {Record<string, string>} */
+		const does = { stop: 'stop the machine', go: 'run it again', prefix: "the emulator's prefix: the next key is a command (below)" };
+		for (const [key, b] of Object.entries(ttyCfg.bindings)) {
+			if (b && typeof b === 'object') rows.push([key, `sends ${b.send.toString(8).padStart(3, '0')}`]);
+			else if (does[b]) rows.push([key, does[b]]);
+		}
+		const prefix = Object.entries(ttyCfg.bindings).find(([, b]) => b === 'prefix')?.[0];
+		/** @type {[string, string][]} */
+		const commands = prefix
+			? [...EMULATOR_KEYS_LIST.map(([k, d]) => /** @type {[string, string]} */ ([`${prefix} ${k}`, d])), [`${prefix} ?`, 'list these'], [`${prefix} ${prefix}`, `send a real ${prefix}`]]
+			: [];
+		return { rows, commands };
+	});
 
 	/** The ^] prefix is waiting for its command. */
 	let ttyPrefix = $state(false);
@@ -4026,7 +4050,25 @@
 					onpaste={onTtyPaste}
 					onblur={() => ttyPrefix && ((ttyPrefix = false), echo(''))}
 				><pre>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-line-edit">{ttyLine}</span><span class="tty-caret" aria-hidden="true">{ttyLine ? ' ' : (last[ttyCaret] ?? ' ')}</span>{ttyLine ? '' : last.slice(ttyCaret + 1)}</pre></div>
-				<p class="tty-echo" aria-live="polite" title="^] then a key: the emulator's commands. ^] ? lists them.">{ttyEcho || ' '}</p>
+				<div class="tty-echo-row">
+					<p class="tty-echo" aria-live="polite">{ttyEcho || ' '}</p>
+					<button type="button" class="tty-keys" aria-describedby="tty-keys-help">⌨️ Keys
+						<span class="tty-keys-help" id="tty-keys-help" role="tooltip">
+							<strong>On the paper</strong>
+							<span class="tty-keys-table">
+								{#each ttyKeys.rows as [key, does], i (i)}<kbd>{key}</kbd><span>{does}</span>{/each}
+							</span>
+							{#if ttyKeys.commands.length}
+								<strong>The emulator's commands</strong>
+								<span class="tty-keys-table">
+									{#each ttyKeys.commands as [key, does], i (i)}<kbd>{key}</kbd><span>{does}</span>{/each}
+								</span>
+							{/if}
+							<strong>Off the paper</strong>
+							<span>The same commands without the prefix, anywhere on the page but a field. Select text to copy it; paste types it in.</span>
+						</span>
+					</button>
+				</div>
 				<button
 					type="button"
 					class="tty-grip"
@@ -5406,7 +5448,14 @@
 	.tty-cli:focus {
 		outline: 1px solid #9fe8a0;
 	}
+	.tty-echo-row {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+	}
 	.tty-echo {
+		flex: 1;
+		min-width: 0;
 		margin: 0;
 		min-height: 1.3em;
 		font: 0.8rem/1.3 ui-monospace, monospace;
@@ -5414,6 +5463,52 @@
 		white-space: pre;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+	.tty-keys {
+		position: relative;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: inherit;
+		font: inherit;
+		text-align: left;
+		font-size: 0.75rem;
+		opacity: 0.8;
+		cursor: help;
+		white-space: nowrap;
+	}
+	.tty-keys-help {
+		display: none;
+		position: absolute;
+		right: 0;
+		bottom: 100%;
+		z-index: 20;
+		width: min(30rem, 90vw);
+		padding: 10px 12px;
+		border-radius: 6px;
+		background: #111;
+		color: #eee;
+		border: 1px solid #555;
+		box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+		font-size: 0.8rem;
+		line-height: 1.4;
+		white-space: normal;
+		cursor: auto;
+	}
+	.tty-keys:hover .tty-keys-help,
+	.tty-keys:focus .tty-keys-help,
+	.tty-keys:focus-within .tty-keys-help {
+		display: grid;
+		gap: 6px;
+	}
+	.tty-keys-table {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		gap: 2px 12px;
+	}
+	.tty-keys-help kbd {
+		font: 0.78rem ui-monospace, monospace;
+		color: #ffd27a;
 	}
 	.tty-help {
 		margin: 0 0 3px;

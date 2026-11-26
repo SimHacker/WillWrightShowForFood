@@ -18,6 +18,17 @@ const KEYS = {
 	'~': 'tempoUp'
 };
 
+/** Each key and what it does, for help. */
+export const EMULATOR_KEYS_LIST = [
+	['{', 'slower, a notch down the speed scale'],
+	['}', 'faster, a notch up'],
+	['|', 'back to 1×'],
+	['\\', 'stop or run'],
+	['[', 'one instruction'],
+	['`', 'dance tempo down'],
+	['~', 'dance tempo up']
+];
+
 export const EMULATOR_KEYS_HELP =
 	'Keys: { slower, } faster, | 1×, \\ pause, [ one instruction, ` dance tempo down, ~ up';
 
