@@ -337,7 +337,6 @@
 		display: flex;
 		align-items: baseline;
 		gap: 0.3em;
-		white-space: nowrap;
 		padding-right: 0.4rem;
 	}
 	.line.sel {
@@ -361,10 +360,16 @@
 	.name:hover {
 		text-decoration: underline;
 	}
+	.name {
+		flex-shrink: 0;
+		max-width: 100%;
+		overflow-wrap: anywhere;
+		text-align: left;
+	}
 	.note {
+		min-width: 0;
 		opacity: 0.55;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		overflow-wrap: anywhere;
 	}
 	.more {
 		opacity: 0.55;
@@ -391,6 +396,8 @@
 		margin: 0;
 		padding: 0.3rem 0.4rem;
 		overflow: auto;
+		white-space: pre-wrap;
+		overflow-wrap: anywhere;
 		color: #b8e8b8;
 		tab-size: 2;
 	}
