@@ -51,7 +51,7 @@
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
 	import RateSlider from './RateSlider.svelte';
-	import { EMULATOR_KEYS_HELP, EMULATOR_KEYS_LIST, emulatorKey, nextTempo } from './emulator-keys.js';
+	import { CHORD_KEYS_LIST, EMULATOR_KEYS_HELP, altKey, emulatorKey, nextTempo, prefixedKey } from './emulator-keys.js';
 	import DanceControls from './DanceControls.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
 	import { Deltas, PDP7_VOICES, Tally, pages, watchedName } from '@wwsff/cabinet/dance';
@@ -1572,16 +1572,17 @@
 	 * wrap false: long lines scroll sideways; true: they wrap at the right edge.
 	 * upcase true: typed, pasted and spoken text goes in upper case, as on a KSR-33.
 	 * bindings: { 'Ctrl-S': 'stop' | 'go' | 'prefix' | { send: code } }.
-	 * 'prefix' is the emulator's own Emacs-style prefix, ^] as in telnet: the key after it is a
-	 * command to the cabinet (EMULATOR_KEYS: { } speed, | 1×, \ pause, [ step, ` ~ dance tempo,
-	 * ? help), and ^] again sends a ^].
+	 * 'prefix' is the emulator's own Emacs-style prefix, ^\ (no PDP-7 program uses FS): the key
+	 * after it, unshifted, is a command to the cabinet (CHORD_KEYS_LIST: [ ] speed, \ 1×, Space
+	 * stop or run, . step, - = dance tempo, ? help), and ^\ again sends a ^\. Alt with the same
+	 * keys does the same without the prefix.
 	 */
 	const TTY_DEFAULTS = {
 		duplex: 'half',
 		input: 'raw',
 		wrap: false,
 		upcase: true,
-		bindings: { 'Ctrl-S': 'stop', 'Ctrl-Q': 'go', 'Ctrl-]': 'prefix' }
+		bindings: { 'Ctrl-S': 'stop', 'Ctrl-Q': 'go', 'Ctrl-\\': 'prefix' }
 	};
 	// TODO ^T, as on TOPS-20 and in the UMD hack to the Unix kernel's tty driver: print the
 	// system's status (program, PC, cycles, speed, load, what it waits on) on the paper without
@@ -2043,12 +2044,17 @@
 		const prefix = Object.entries(ttyCfg.bindings).find(([, b]) => b === 'prefix')?.[0];
 		/** @type {[string, string][]} */
 		const commands = prefix
-			? [...EMULATOR_KEYS_LIST.map(([k, d]) => /** @type {[string, string]} */ ([`${prefix} ${k}`, d])), [`${prefix} ?`, 'list these'], [`${prefix} ${prefix}`, `send a real ${prefix}`]]
+			? [
+					...CHORD_KEYS_LIST.map(([k, d]) => /** @type {[string, string]} */ ([`${prefix} ${k}`, d])),
+					[`${prefix} Return`, 'jiggle: flip a console switch at random'],
+					[`${prefix} ?`, 'list these'],
+					[`${prefix} ${prefix}`, `send a real ${prefix}`]
+				]
 			: [];
-		return { rows, commands };
+		return { rows, commands, alt: CHORD_KEYS_LIST.map(([k, d]) => /** @type {[string, string]} */ ([`Alt-${k.replace(' or ', ' or Alt-')}`, d])) };
 	});
 
-	/** The ^] prefix is waiting for its command. */
+	/** The prefix is waiting for its command. */
 	let ttyPrefix = $state(false);
 	/** One line under the paper, as in Emacs's echo area: the prefix, a command done, help. */
 	let ttyEcho = $state('');
@@ -2060,20 +2066,25 @@
 		if (ms) ttyEchoTimer = setTimeout(() => (ttyEcho = ''), ms);
 	}
 
-	/** The key after ^]. @param {KeyboardEvent} e */
+	const PREFIX = '^\\';
+
+	/** The key after the prefix. @param {KeyboardEvent} e */
 	function prefixKey(e) {
 		if (e.key === 'Shift' || e.key === 'Control' || e.key === 'Alt' || e.key === 'Meta') return;
 		ttyPrefix = false;
-		if (e.ctrlKey && e.key === ']') {
-			ttyType([0o35]);
+		if (e.ctrlKey && e.code === 'Backslash') {
+			ttyType([0o34]);
 			echo('');
-		} else if (e.key === '?') echo(`^] then ${EMULATOR_KEYS_HELP.replace(/^Keys: /, '')}`, 8000);
+		} else if (e.key === 'Enter') {
+			const i = jiggle();
+			echo(`${PREFIX} Return jiggled switch ${i}: ${(switches & SWITCH_BITS[i]) !== 0 ? 'up' : 'down'}`);
+		} else if (e.key === '?') echo(`${PREFIX} then ${CHORD_KEYS_LIST.map(([k, d]) => `${k} ${d.split(',')[0]}`).join('; ')}`, 8000);
 		else {
-			const cmd = emulatorKey(e);
+			const cmd = prefixedKey(e);
 			if (cmd) {
 				runCommand(cmd);
-				echo(`^] ${e.key} ${COMMAND_SAYS[cmd]()}`);
-			} else echo(`^] ${e.key} is undefined. ^] ? for help.`);
+				echo(`${PREFIX} ${e.key === ' ' ? 'Space' : e.key} ${COMMAND_SAYS[cmd]()}`);
+			} else echo(`${PREFIX} ${e.key} is undefined. ${PREFIX} ? for help.`);
 		}
 	}
 
@@ -2095,10 +2106,23 @@
 			prefixKey(e);
 			return;
 		}
+		const alt = altKey(e);
+		if (alt) {
+			e.preventDefault();
+			e.stopPropagation();
+			runCommand(alt);
+			echo(`Alt-${e.code.replace(/^(Key|Digit|Arrow)/, '')} ${COMMAND_SAYS[alt]()}`);
+			return;
+		}
 		// Copy wins over ^C when something on the paper is selected; ^V is always paste.
 		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'c' && String(globalThis.getSelection?.() ?? '')) return;
 		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'v') return;
-		const name = e.ctrlKey && !e.metaKey && !e.altKey && e.key.length === 1 ? `Ctrl-${e.key.toUpperCase()}` : e.key;
+		const name =
+			e.ctrlKey && !e.metaKey && !e.altKey && e.code === 'Backslash'
+				? 'Ctrl-\\'
+				: e.ctrlKey && !e.metaKey && !e.altKey && e.key.length === 1
+					? `Ctrl-${e.key.toUpperCase()}`
+					: e.key;
 		const bound = ttyCfg.bindings[name];
 		if (bound) {
 			e.preventDefault();
@@ -2107,7 +2131,7 @@
 			else if (bound === 'go') paused = false;
 			else if (bound === 'prefix') {
 				ttyPrefix = true;
-				echo('^]-', 0);
+				echo(`${PREFIX}-`, 0);
 			}
 			else if (typeof bound.send === 'number') ttyType([bound.send]);
 			return;
@@ -3172,6 +3196,13 @@
 		recorder?.record(box.cycles, 'sw', switches);
 	}
 
+	/** Flip one of the 18 switches at random, which twists the music; the switch's number. */
+	function jiggle() {
+		const i = Math.floor(Math.random() * SWITCH_BITS.length);
+		onSwitch(SWITCH_BITS[i]);
+		return i;
+	}
+
 	// Keys held right now, by KeyboardEvent.code. Two keys may share a switch.
 	const held = new Set();
 
@@ -3192,7 +3223,7 @@
 
 	/** The emulator's own keys, anywhere but a field or the teletype's paper. @param {KeyboardEvent} e */
 	function onCommandKey(e) {
-		const cmd = emulatorKey(e);
+		const cmd = emulatorKey(e) ?? altKey(e);
 		const t = /** @type {HTMLElement | null} */ (e.target);
 		if (!cmd || e.defaultPrevented || t?.closest?.('input, textarea, select, [contenteditable], [role="textbox"]')) return;
 		e.preventDefault();
@@ -3578,6 +3609,13 @@
 					{/each}
 				</span>
 			{/each}
+			<button
+				type="button"
+				class="switch jiggle"
+				title="Jiggle: flip one switch at random, which twists the music (^\\ Return on the teletype). A program that reads the switches as controls feels it too."
+				disabled={status !== 'live'}
+				onclick={jiggle}>🎲 JIGGLE</button
+			>
 			<span class="octal" title="AC switches, octal">{switches.toString(8).padStart(6, '0')}</span>
 		</div>
 		{@render grip('front', 'console')}
@@ -3824,7 +3862,7 @@
 		{#if dance.on}
 			<div class="row dance-row" data-panel="dance" role="group" aria-label="VM Radio: the bus dance">
 				<span class="dance-title" title="VM Radio: AM radio's idea, tuned straight into the emulator and the program running on it (AM-RADIO.md)">VM RADIO</span>
-				<DanceControls {dance} chip listen twist />
+				<DanceControls {dance} chip listen twist jiggle={status === 'live' ? jiggle : undefined} />
 			</div>
 		{/if}
 		{#if playOpen}
@@ -4065,8 +4103,12 @@
 									{#each ttyKeys.commands as [key, does], i (i)}<kbd>{key}</kbd><span>{does}</span>{/each}
 								</span>
 							{/if}
+							<strong>Or with Alt (Option), no prefix, anywhere on the page</strong>
+							<span class="tty-keys-table">
+								{#each ttyKeys.alt as [key, does], i (i)}<kbd>{key}</kbd><span>{does}</span>{/each}
+							</span>
 							<strong>Off the paper</strong>
-							<span>The same commands without the prefix, anywhere on the page but a field. Select text to copy it; paste types it in.</span>
+							<span>{EMULATOR_KEYS_HELP} Select text on the paper to copy it; paste types it in.</span>
 						</span>
 					</button>
 				</div>
@@ -4987,6 +5029,11 @@
 	.switch {
 		width: 1.35rem;
 		padding: 0.1rem 0;
+	}
+	.switch.jiggle {
+		width: auto;
+		margin-left: 6px;
+		padding: 0.1rem 0.4em;
 	}
 	.switch.dim {
 		border-color: #3a5a3a;

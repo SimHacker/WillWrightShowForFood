@@ -4,17 +4,18 @@
 	import { TEMPOS } from './dance-player.js';
 
 	/** twist: show what the front panel's switches are doing, on a line of its own. */
-	/** @type {{ dance: import('./bus-dance.svelte.js').BusDance, chip?: boolean, listen?: boolean, twist?: boolean }} */
-	let { dance, chip = false, listen = false, twist = false } = $props();
+	/** jiggle: flip one of the machine's switches at random, beside what the switches are doing. */
+	/** @type {{ dance: import('./bus-dance.svelte.js').BusDance, chip?: boolean, listen?: boolean, twist?: boolean, jiggle?: () => void }} */
+	let { dance, chip = false, listen = false, twist = false, jiggle } = $props();
 
 	const rates = TEMPOS.map((bpm) => ({ label: String(bpm), title: `${bpm} beats a minute, sixteenths ${Math.round(15000 / bpm)} ms apart` }));
 	const tempoIndex = $derived(Math.max(0, TEMPOS.indexOf(dance.bpm)));
-	/** @type {{ level: import('@wwsff/cabinet/dance').Eno, title: string }[]} */
+	// Four layers after Brian Eno, each on or off by itself, all in the chord in force.
 	const ENO = [
-		{ level: 0, title: 'EN0: no tape loops' },
-		{ level: 1, title: "EN1: tape loops after Brian Eno's Music for Airports, five of prime lengths, each sounding one tone of the chord, drifting against each other" },
-		{ level: 2, title: "EN2: and a drone under them, two long loops an octave below, after Discreet Music's slow tape delay" },
-		{ level: 3, title: 'EN3: and a sparkle over them, three sparse chimes two octaves up' }
+		{ bit: 1, title: "EN0: tape loops after Music for Airports, five of prime lengths, each sounding one tone of the chord, drifting against each other" },
+		{ bit: 2, title: "EN1: a drone, two long loops an octave below, after Discreet Music's slow tape delay" },
+		{ bit: 4, title: 'EN2: a sparkle, three sparse chimes two octaves up' },
+		{ bit: 8, title: 'EN3: voices, three singing a tone each, after Music for Airports 2/1' }
 	];
 </script>
 
@@ -28,15 +29,14 @@
 		<option value={s.id} title={s.title}>{s.label}</option>
 	{/each}
 </select>
-<span class="eno" role="radiogroup" aria-label="Eno: tape loops in layers">
-	{#each ENO as e (e.level)}
+<span class="eno" role="group" aria-label="Eno layers, each on or off">
+	{#each ENO as e, i (e.bit)}
 		<button
 			type="button"
-			role="radio"
-			aria-checked={dance.loops === e.level}
-			class={{ chip, on: dance.loops === e.level && e.level > 0, under: e.level > 0 && e.level < dance.loops }}
+			aria-pressed={(dance.loops & e.bit) !== 0}
+			class={{ chip, on: (dance.loops & e.bit) !== 0 }}
 			title={e.title}
-			onclick={() => dance.setLoops(e.level)}>EN{e.level}</button
+			onclick={() => dance.toggleLayer(e.bit)}>EN{i}</button
 		>
 	{/each}
 </span>
@@ -53,6 +53,15 @@
 	/>
 {/if}
 <RateSlider label="Dance tempo, slowest to fastest" keys="Keys: ` slower, ~ faster." {rates} index={tempoIndex} onpick={(i) => (dance.bpm = TEMPOS[i] ?? 120)} />
+{#if jiggle}
+	<button
+		type="button"
+		class={{ chip }}
+		title="Jiggle: flip one of the machine's switches at random, which twists the music. A program that reads them as controls feels it too."
+		onpointerdown={(e) => e.preventDefault()}
+		onclick={jiggle}>🎲 {chip ? 'JIGGLE' : 'Jiggle'}</button
+	>
+{/if}
 {#if twist}
 	<span class="twist" title="The front panel's switches twist the music: their word is hashed, so every combination skews, phases and picks its own effects. All off is the plain dance."
 		>switches: {dance.twist || 'all off, plain'}</span
@@ -93,12 +102,14 @@
 		background: #9fe8a0;
 		border-color: #9fe8a0;
 	}
-	/* One row of joined buttons, the levels under the chosen one half lit: layers. */
+	/* One row of joined buttons, a layer each. */
 	.eno {
 		display: inline-flex;
 	}
-	.eno button {
+	.eno button,
+	.eno button.on {
 		margin: 0;
+		border: 1px solid #777;
 	}
 	.eno button + button {
 		margin-left: -1px;
@@ -112,12 +123,5 @@
 	.eno button:not(:first-child):not(:last-child) {
 		border-radius: 0;
 	}
-	button.under {
-		background: #e3f5e3;
-		color: #000;
-	}
-	.chip.under {
-		background: rgba(159, 232, 160, 0.4);
-		border-color: #9fe8a0;
-	}
+
 </style>

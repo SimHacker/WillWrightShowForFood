@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { APPLE2_CALLS, switchWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, enoLevel, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
+import { APPLE2_CALLS, switchWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, enoLayers, EN0, EN1, EN2, EN3, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -177,28 +177,30 @@ test("the tape loops: prime lengths, each on its own schedule, always in the cho
 	assert.equal(new Dance(PDP7_VOICES).beat({}, 0).filter((n) => n.voice === "loops").length, 0);
 });
 
-test("EN2 adds a drone under the loops and EN3 a sparkle over, all in the chord", () => {
-	const heard = (level: 0 | 1 | 2 | 3) => {
+test("EN0 to EN3 are four layers, each on by itself, all in the chord", () => {
+	const heard = (layers: number) => {
 		const d = new Dance(PDP7_VOICES);
-		d.loops = level;
+		d.loops = layers;
 		const timbres = new Set<string>();
-		for (let s = 0; s < 61 * 2; s++) {
+		for (let s = 0; s < 73 * 2; s++) {
 			const chord = d.chord;
 			for (const n of d.beat({}, 0).filter((n) => n.voice === "loops")) {
 				timbres.add(n.timbre);
-				assert.ok(chord.tones.includes(Math.round(n.midi) % 12), `EN${level} step ${s}`);
+				assert.ok(chord.tones.includes(Math.round(n.midi) % 12), `layers ${layers} step ${s}`);
 			}
 		}
 		return [...timbres].sort().join(" ");
 	};
 	assert.equal(heard(0), "");
-	assert.equal(heard(1), "glass");
-	assert.equal(heard(2), "glass pad");
-	assert.equal(heard(3), "chime glass pad");
-	assert.equal(enoLevel(true, 0), 1);
-	assert.equal(enoLevel(true, 3), 3);
-	assert.equal(enoLevel(false, 3), 0);
-	assert.equal(enoLevel(2), 2);
+	assert.equal(heard(EN0), "glass");
+	assert.equal(heard(EN1), "pad");
+	assert.equal(heard(EN2), "chime");
+	assert.equal(heard(EN3), "sing");
+	assert.equal(heard(EN0 | EN2), "chime glass");
+	assert.equal(heard(15), "chime glass pad sing");
+	assert.equal(enoLayers(true, 0), EN0);
+	assert.equal(enoLayers(true, EN1 | EN3), EN1 | EN3);
+	assert.equal(enoLayers(false, 15), 0);
 });
 
 test("the pen plays a rising run along each stroke, and starts low again on the next", () => {
@@ -312,7 +314,7 @@ test("a hand is a harp: each finger's string starts a step above the last, and a
 
 test("the pen never plays an instrument the machine plays itself", () => {
 	const d = new Dance(PDP7_VOICES);
-	d.loops = 3;
+	d.loops = 15;
 	const own = new Set(["harp", "lead", "bell", "tom"]);
 	const pen = [
 		...d.pen({ x: 100, y: 100, down: false, under: [{ addr: 1, along: 0.5, scan: 0 }], tip: 2 }),

@@ -322,27 +322,38 @@ export const LOOPS: readonly { readonly length: number; readonly at: number; rea
 	{ length: 41, at: 3, tone: 1, up: 1 },
 ];
 
-/** The Eno levels, EN0 to EN3: off, the loops, a drone under them, a sparkle over. */
-export type Eno = 0 | 1 | 2 | 3;
+/**
+ * The Eno layers, four bits, each on or off by itself: EN0 the tape loops, EN1 a drone under
+ * them, EN2 a sparkle over, EN3 wordless voices. 0 is none, 15 all four.
+ */
+export type Eno = number;
+export const EN0 = 1, EN1 = 2, EN2 = 4, EN3 = 8;
 
-/** EN2: two long loops an octave below the pad, after Discreet Music's slow tape delay. */
+/** EN1: two long loops an octave below the pad, after Discreet Music's slow tape delay. */
 export const DRONES: readonly { readonly length: number; readonly at: number; readonly tone: number }[] = [
 	{ length: 53, at: 5, tone: 0 },
 	{ length: 59, at: 31, tone: 2 },
 ];
 
-/** EN3: three sparse chimes two octaves up (the bell is the light pen's), prime lengths again, so they drift with the rest. */
+/** EN2: three sparse chimes two octaves up (the bell is the light pen's), prime lengths again, so they drift with the rest. */
 export const SPARKLES: readonly { readonly length: number; readonly at: number; readonly tone: number }[] = [
 	{ length: 43, at: 11, tone: 1 },
 	{ length: 47, at: 23, tone: 2 },
 	{ length: 61, at: 41, tone: 0 },
 ];
 
-/** A mode's `loops`, a level or the old on and off, as a level; on keeps a level already up. */
-export function enoLevel(loops: boolean | number | undefined, now: Eno = 0): Eno {
-	if (loops === true) return now > 0 ? now : 1;
+/** EN3: three voices singing a tone each, after Music for Airports 2/1, slower still. */
+export const VOICES: readonly { readonly length: number; readonly at: number; readonly tone: number }[] = [
+	{ length: 67, at: 17, tone: 0 },
+	{ length: 71, at: 37, tone: 1 },
+	{ length: 73, at: 53, tone: 2 },
+];
+
+/** A mode's `loops`, layers or the old on and off, as layers; on keeps the layers already on. */
+export function enoLayers(loops: boolean | number | undefined, now: Eno = 0): Eno {
+	if (loops === true) return now || EN0;
 	if (!loops) return 0;
-	return Math.max(0, Math.min(3, Math.round(loops))) as Eno;
+	return Math.round(loops) & 15;
 }
 
 /** What the person at the console did, as the dance hears it. */
@@ -570,7 +581,7 @@ export class Dance {
 	/** Sixteenths since the dance began. */
 	step = 0;
 	style: Style = "straight";
-	/** The Eno level: 0 none, 1 the tape loops, 2 and a drone, 3 and a sparkle. */
+	/** The Eno layers on, as bits: EN0 the tape loops, EN1 the drone, EN2 the sparkle, EN3 the voices. */
 	loops: Eno = 0;
 	/** 0 to 1: how far the pen has pulled the harmony away from home. */
 	tension = 0;
@@ -1040,18 +1051,22 @@ export class Dance {
 			notes.push({ voice: "reply", timbre: "beep", midi: pitch({ id: "reply", label: "", timbre: "beep", root: 72, octaves: 2, pan: 0, most: 1 }, r.key, tones, t), velocity: 0.7 - 0.15 * r.i, pan: 0.5 - 0.5 * r.i, order: 0 });
 		this.replies = this.replies.filter((r) => r.at > step);
 		const toneOf = (i: number) => tones[i % tones.length] ?? 0;
-		if (this.loops >= 1)
+		if (this.loops & EN0)
 			for (const l of LOOPS)
 				if (step % l.length === l.at % l.length)
 					notes.push({ voice: "loops", timbre: "glass", midi: midiAt(72, toneOf(l.tone) + l.up * t.steps, t), velocity: 0.5, pan: (l.length % 5) / 2 - 1, order: 0 });
-		if (this.loops >= 2)
+		if (this.loops & EN1)
 			for (const l of DRONES)
 				if (step % l.length === l.at)
 					notes.push({ voice: "loops", timbre: "pad", midi: midiAt(48, toneOf(l.tone), t), velocity: 0.4, pan: l.tone ? 0.3 : -0.3, order: 0 });
-		if (this.loops >= 3)
+		if (this.loops & EN2)
 			for (const l of SPARKLES)
 				if (step % l.length === l.at)
 					notes.push({ voice: "loops", timbre: "chime", midi: midiAt(72, toneOf(l.tone) + 2 * t.steps, t), velocity: 0.25, pan: (l.length % 3) - 1, order: 0 });
+		if (this.loops & EN3)
+			for (const l of VOICES)
+				if (step % l.length === l.at)
+					notes.push({ voice: "loops", timbre: "sing", midi: midiAt(60, toneOf(l.tone), t), velocity: 0.3, pan: l.tone - 1, order: 0 });
 		const drive = Math.min(1, (load ?? 0) + 0.5 * this.tension);
 		if (drive > 0 && (load ?? 0) > 0) {
 			const lead = hits[this.voices[0]?.id ?? ""] ?? [];

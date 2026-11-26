@@ -388,7 +388,7 @@
 				onclick={() => dance.toggle()}>Dance</button
 			>
 			{#if dance.on}
-				<DanceControls {dance} twist={!!apple.panel} />
+				<DanceControls {dance} twist={!!apple.panel} jiggle={apple.panel ? () => apple.flip(Math.floor(Math.random() * 120)) : undefined} />
 			{/if}
 		{/if}
 		<RateSlider rates={rates} index={rateIndex} onpick={pickRate} keys={EMULATOR_KEYS_HELP} />
