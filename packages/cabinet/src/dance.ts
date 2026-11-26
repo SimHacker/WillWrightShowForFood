@@ -234,6 +234,81 @@ export const BP_V = bp("V", 6, 12, 16);
 export const BP_CADENCE: readonly Chord[] = [BP_I, BP_IV, BP_V, BP_I];
 
 /**
+ * A style's harmony as a graph: its chords, and for each the chords it may move to. The
+ * first phrase is the style's own loop; every phrase after is a walk through the graph,
+ * four bars long, chosen by a hash of what the machine has been running (`Dance.phrase`).
+ * Even phrases start at home; odd ones end on a chord that leads home, so the walk keeps
+ * cadencing however far it wanders.
+ */
+export type Harmony = { readonly first: readonly Chord[]; readonly home: Chord; readonly moves: ReadonlyMap<Chord, readonly Chord[]> };
+
+function harmony(first: readonly Chord[], home: Chord, extra: readonly Chord[], moves: Record<string, string>): Harmony {
+	const by = new Map<string, Chord>();
+	for (const c of [...first, home, ...extra]) if (!by.has(c.name)) by.set(c.name, c);
+	const get = (name: string) => {
+		const c = by.get(name);
+		if (!c) throw new Error(`harmony: no chord ${name}`);
+		return c;
+	};
+	const graph = new Map<Chord, readonly Chord[]>();
+	for (const [from, to] of Object.entries(moves)) graph.set(get(from), to.split(" ").map(get));
+	for (const c of by.values()) if (!graph.has(c)) throw new Error(`harmony: ${c.name} goes nowhere`);
+	return { first, home, moves: graph };
+}
+
+/** Major: the diatonic triads, with the flat seventh and the minor iv borrowed from minor. */
+export const MAJOR_WALK = harmony(POP, POP[0]!, [chord("ii", 2, 5, 9), chord("iii", 4, 7, 11), chord("bVII", 10, 14, 17), chord("iv", 5, 8, 12)], {
+	I: "IV V vi ii iii bVII",
+	ii: "V IV",
+	iii: "vi IV",
+	IV: "V I ii iv",
+	iv: "I",
+	V: "I vi",
+	vi: "ii IV V iii",
+	bVII: "IV I",
+});
+
+/** Jazz: sevenths, the secondary dominants VI7 and II7, the backdoor bVII7, and I7 into IV. */
+export const JAZZ_WALK = harmony(TURNAROUND, TURNAROUND[2]!, [chord("iii7", 4, 7, 11, 14), chord("IVmaj7", 5, 9, 12, 16), chord("VI7", 9, 13, 16, 19), chord("II7", 2, 6, 9, 12), chord("bVII7", 10, 14, 17, 20), chord("I7", 0, 4, 7, 10)], {
+	Imaj7: "vi7 VI7 iii7 IVmaj7 I7 ii7",
+	ii7: "V7 bVII7",
+	V7: "Imaj7 vi7",
+	vi7: "ii7 II7",
+	VI7: "ii7",
+	II7: "V7 ii7",
+	iii7: "vi7 VI7",
+	IVmaj7: "iii7 ii7 bVII7 V7",
+	bVII7: "Imaj7",
+	I7: "IVmaj7",
+});
+
+/** Minor: natural minor's chords, the half-diminished ii, and harmonic minor's major V. */
+export const MINOR_WALK = harmony(AEOLIAN, AEOLIAN[0]!, [chord("iiø", 2, 5, 8), chord("iv", 5, 8, 12), chord("v", 7, 10, 14), chord("V", 7, 11, 14)], {
+	i: "bVI iv bVII bIII v iiø",
+	iiø: "V",
+	bIII: "bVII bVI iv",
+	iv: "V i bVII v",
+	v: "bVI i",
+	V: "i bVI",
+	bVI: "bIII bVII iv V",
+	bVII: "bIII i bVI",
+});
+
+/** Lydian: the vamp's I and II, and the mode's iii, V, vi and vii. */
+export const LYDIAN_WALK = harmony(LYDIAN, LYDIAN_I, [chord("iii", 4, 7, 11), chord("V", 7, 11, 14), chord("vi", 9, 12, 16), chord("vii", 11, 14, 18)], {
+	"I#11": "II vii V iii",
+	II: "I#11 II7 vii",
+	II7: "I#11 V",
+	vii: "II I#11",
+	V: "II I#11",
+	iii: "II vi",
+	vi: "II vii",
+});
+
+/** Bohlen-Pierce: Kees van Prooijen's three, in any order that comes home. */
+export const BP_WALK = harmony(BP_CADENCE, BP_I, [], { I: "IV V", IV: "V I", V: "I IV" });
+
+/**
  * Tape loops after Brian Eno's Music for Airports: each sounds one tone of the chord in force,
  * once every `length` sixteenths, from `at`. The lengths are primes, so the loops drift against
  * each other and the bar and come round together only after their product, about 36 million
@@ -581,8 +656,7 @@ export class Dance {
 			}
 			case "walk": {
 				if (i % 4 === 0) {
-					const p = this.progression;
-					const next = p[(Math.floor((step - this.home) / this.bar) + 1) % p.length]!;
+					const next = this.chordOfBar(Math.floor((step - this.home) / this.bar) + 1);
 					const beat = i / 4;
 					const deg = beat === 3 ? next.root - 1 : beat === 0 ? now.root : tone(beat);
 					play("bass", at(36, deg), 0.6, -0.1);
@@ -655,8 +729,68 @@ export class Dance {
 
 	constructor(readonly voices: readonly Voice[]) {}
 
+	get harmony(): Harmony {
+		return this.style === "jazz" ? JAZZ_WALK : this.style === "lydian" ? LYDIAN_WALK : this.style === "minor" ? MINOR_WALK : this.style === "bp" ? BP_WALK : MAJOR_WALK;
+	}
+
+	/** What the machine has run, folded in beat by beat: the lead voice's keys, the code it ran. */
+	private stir = 0;
+	private phrases = new Map<number, readonly Chord[]>();
+	private phrasesFor: Harmony | null = null;
+	private phrasesHome = 0;
+
+	/**
+	 * Phrase `k`, four bars from home. Phrase 0 is the style's loop. Each one after is a walk
+	 * through the style's graph from where the last one ended, each move picked by a hash of
+	 * the stir, the phrase's number and the switch word: the same machine doing the same thing
+	 * plays the same changes, and code that runs differently takes the harmony somewhere else.
+	 */
+	phrase(k: number): readonly Chord[] {
+		const h = this.harmony;
+		if (h !== this.phrasesFor || this.home !== this.phrasesHome) {
+			this.phrases.clear();
+			this.phrasesFor = h;
+			this.phrasesHome = this.home;
+		}
+		if (k <= 0) return h.first;
+		const kept = this.phrases.get(k);
+		if (kept) return kept;
+		const before = this.phrases.get(k - 1) ?? (k === 1 ? h.first : [h.home]);
+		const seed = mix32(this.stir ^ mix32(k) ^ this.switchWord);
+		const moves = (c: Chord) => h.moves.get(c) ?? [h.home];
+		const firsts = k % 2 === 0 ? [h.home] : moves(before[before.length - 1]!);
+		const ends = (c: Chord) => k % 2 === 0 || (c !== h.home && moves(c).includes(h.home));
+		// Every four-bar walk that fits; a chord held for a second bar only when none does.
+		const walks = (hold: boolean): Chord[][] => {
+			const found: Chord[][] = [];
+			const go = (path: Chord[]) => {
+				if (path.length === 4) {
+					if (ends(path[3]!)) found.push(path);
+					return;
+				}
+				const at = path[path.length - 1]!;
+				for (const c of hold ? [...moves(at), at] : moves(at)) go([...path, c]);
+			};
+			for (const f of firsts) go([f]);
+			return found;
+		};
+		const fits = walks(false);
+		const all = fits.length ? fits : walks(true);
+		const out = all.length ? all[seed % all.length]! : [...h.first];
+		this.phrases.set(k, out);
+		for (const old of this.phrases.keys()) if (old < k - 2) this.phrases.delete(old);
+		return out;
+	}
+
+	/** The chord of bar `b` from home. */
+	private chordOfBar(b: number): Chord {
+		const p = this.phrase(Math.floor(b / 4));
+		return p[((b % 4) + 4) % 4]!;
+	}
+
+	/** The phrase playing now. */
 	get progression(): readonly Chord[] {
-		return this.style === "jazz" ? TURNAROUND : this.style === "lydian" ? LYDIAN : this.style === "minor" ? AEOLIAN : this.style === "bp" ? BP_CADENCE : POP;
+		return this.phrase(Math.floor((this.step - this.home) / this.bar / 4));
 	}
 
 	get tuning(): Tuning {
@@ -670,7 +804,7 @@ export class Dance {
 
 	/** Home: the chord the progression resolves to. */
 	get tonic(): Chord {
-		return this.style === "bp" ? BP_I : this.progression[this.style === "jazz" ? 2 : 0]!;
+		return this.harmony.home;
 	}
 
 	/** The chord the next beat plays over. */
@@ -679,8 +813,7 @@ export class Dance {
 		if (this.fanfare || this.resolving || this.tuneLine) return this.tonic;
 		if (this.tension >= 0.8) return bp ? BP_V : this.style === "jazz" ? TRITONE_SUB : DOMINANT_B9;
 		if (this.tension >= 0.4) return bp ? BP_V : DOMINANT;
-		const p = this.progression;
-		return p[Math.floor((this.step - this.home) / this.bar) % p.length]!;
+		return this.chordOfBar(Math.floor((this.step - this.home) / this.bar));
 	}
 
 	/**
@@ -857,6 +990,7 @@ export class Dance {
 		const now = this.chord;
 		const tones = now.tones;
 		const t = this.tuning;
+		for (const h of hits[this.voices[0]?.id ?? ""] ?? []) this.stir = mix32(this.stir ^ h.key);
 		const notes: Note[] = this.voices.flatMap((v) => score(v, hits[v.id] ?? [], tones, t));
 		notes.push(...this.listen(watched, tones, t), ...this.hooray(), ...this.teletype(tones, t), ...this.riffed(step, now, t), ...this.answer(called, now, t));
 		const map = this.regions;

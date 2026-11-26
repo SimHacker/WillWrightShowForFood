@@ -120,6 +120,11 @@
 		const a = state?.ask;
 		if (!a) return;
 		const typed = value.trim();
+		// Nothing said in the chat: Return flips one of the panel's 120 bits, which twists the dance.
+		if (a.keep && !typed) {
+			apple.flip(Math.floor(Math.random() * 120));
+			return;
+		}
 		const v = a.upper ? typed.toUpperCase() : typed;
 		if (state?.id === 'name' && !v) return;
 		say(a.reply ? fillReply(a.reply, typed) : v);

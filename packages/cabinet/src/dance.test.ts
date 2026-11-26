@@ -417,3 +417,39 @@ test("a panel of switch bytes folds into a word that is 0 only when every switch
 	const b = switchWord(Uint8Array.of(0, 1, 0));
 	assert.ok(a > 0 && b > 0 && a !== b && a <= 0o777777 && b <= 0o777777);
 });
+
+test("the harmony walks: the style's loop first, then phrases through its graph that the code run picks", () => {
+	const play = (keys: number[], style: "straight" | "jazz" | "minor" | "lydian" | "bp") => {
+		const d = new Dance(PDP7_VOICES);
+		d.style = style;
+		const names: string[] = [];
+		for (let s = 0; s < d.bar * 4 * 12; s++) {
+			if (s % d.bar === 0) names.push(d.chord.name);
+			d.beat({ [PDP7_VOICES[0]!.id]: keys.map((key) => ({ key: key + (s % 7), weight: 1 })) }, 0.5);
+		}
+		return { d, names };
+	};
+	for (const style of ["straight", "jazz", "minor", "lydian", "bp"] as const) {
+		const { d, names } = play([0o100, 0o2000], style);
+		const h = d.harmony;
+		assert.deepEqual(names.slice(0, 4), h.first.map((c) => c.name), `${style} opens with its loop`);
+		const byName = new Map([...h.moves.keys()].map((c) => [c.name, c]));
+		for (let i = 1; i < names.length; i++) {
+			const from = byName.get(names[i - 1]!)!;
+			const to = byName.get(names[i]!)!;
+			const inLoop = i < 4;
+			const phraseStart = i % 4 === 0 && (i / 4) % 2 === 0;
+			if (!inLoop && !phraseStart && i !== 4) assert.ok(h.moves.get(from)!.includes(to) || from === to, `${style}: ${from.name} to ${to.name} at bar ${i}`);
+			if (i >= 4 && (i / 4) % 2 === 0 && i % 4 === 0) assert.equal(names[i], h.home.name, `${style}: an even phrase starts home`);
+		}
+		for (let k = 1; k < 12; k += 2) {
+			const last = byName.get(names[k * 4 + 3]!)!;
+			assert.ok(h.moves.get(last)!.includes(h.home), `${style}: phrase ${k} ends leading home, on ${last.name}`);
+		}
+	}
+	const a = play([0o100, 0o2000], "straight").names.join(" ");
+	assert.equal(play([0o100, 0o2000], "straight").names.join(" "), a, "the same code plays the same changes");
+	const others = [[0o3000], [0o4321, 0o17], [0o7777]].map((k) => play(k, "straight").names.join(" "));
+	assert.ok(others.some((o) => o !== a), "other code takes the harmony elsewhere");
+	assert.ok(new Set(a.split(" ").slice(4)).size >= 4, `more than the loop's chords: ${a}`);
+});

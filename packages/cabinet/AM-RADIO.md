@@ -247,6 +247,19 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        read from core (`hiloFinished`: getc's return address in waitcr, waitcr's at the JMP
        GAME after RIGHT), and the fewer the guesses, the bigger the hooray. DUEL's halt, as
        the halt explainer reads it, is a win to one side or a smaller one for a collision.
+     - The harmony walks (`Harmony` and `Dance.phrase` in dance.ts). Each style is a graph of
+       chords and the moves between them: major with the flat seventh and the minor iv
+       borrowed, jazz with secondary dominants, the backdoor bVII7 and I7 into IV, minor with
+       the half-diminished ii and harmonic minor's V, Lydian's I, II, iii, V, vi and vii, and
+       Bohlen-Pierce's three. The first four bars are the style's own loop; every phrase after
+       is a four-bar walk through the graph, picked from every walk that fits by a hash of the
+       code the machine has run (the lead voice's keys, folded in beat by beat), the phrase's
+       number and the switch word. Even phrases start at home, odd ones end on a chord that
+       leads home, and a chord holds a second bar only when no walk fits. A resolve starts the
+       loop again. So the same machine doing the same thing plays the same changes, and code
+       that runs differently takes the harmony somewhere else.
+     - On the Apple, Return in the screen angel's empty chat field flips one of the panel's
+       120 bits at random, and so twists the dance.
      - The Apple's panel, `$C041`–`$C04F` (korz/apple2/README.md), twists the music the
        same way: its 120 bits are folded into one 18-bit word (`switchWord`). The program can
        set them too, so a program can turn the twist itself.
