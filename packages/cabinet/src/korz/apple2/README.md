@@ -19,6 +19,10 @@ The Apple has no front panel, so the cabinet adds one that needs no slot: `$C041
 
 A read drives the byte and changes nothing, so a 6502's dummy reads of an indexed `STA` are harmless. A write latches the data bus. `INC` counts on the lights and `ROL` chases them; the NMOS double write of a read-modify-write shows the old byte for one cycle. A program that reads a byte, changes one bit and writes it back can undo a click that lands between its read and its write; a few cycles, at the speed of a person's hand. The bits stay through a reboot, as switches would. The bus dance folds all 120 into the word the PDP-7's switches give it (`switchWord` in dance.ts), so any bit set twists the music. Later the bits are the pins for wires and breadboards.
 
+## Looking at memory
+
+The page's MEM panel is the PDP-7 memory panel's three views for the 6502: hex, eight bytes a line with their ASCII; code, an instruction a line from [disasm65.ts](../../m6502/disasm65.ts); and trace, the last instructions run with the A, X, Y, P and S each found ([trace65.ts](../../m6502/trace65.ts)). Addresses are named from [symbols.ts](symbols.ts): the Monitor's zero page, page 3's vectors, the soft switches, the panel, and the ROM's entry points, each checked to start a documented instruction in the ][+ ROM. The disassembler's 256 opcode lengths and its documented set are checked against the Korz sea's. The panel reads with `peek`, so looking never touches a soft switch. The trace records only while it shows; the compiler then runs one instruction at a time, as the PDP-7's does. Code arrives without source; source maps come with the 6502 assembler (ASSEMBLERS.md).
+
 ## A fast wait
 
 `picture` paints the RAM as it is. The beam address is computed when an undriven read needs it.

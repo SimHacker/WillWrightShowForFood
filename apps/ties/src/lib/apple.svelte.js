@@ -65,6 +65,10 @@ class AppleEngine {
 	get panel() {
 		return this.id === 'microm8' ? null : korzApple.panel;
 	}
+	/** The Korz Apple, for the memory panel; null on microM8, whose memory is behind the Go core. */
+	get korz() {
+		return this.id === 'microm8' ? null : korzApple;
+	}
 	/** @param {number} n */
 	flip(n) {
 		if (this.id !== 'microm8') korzApple.flip(n);

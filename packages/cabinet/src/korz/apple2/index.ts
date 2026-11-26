@@ -1,4 +1,7 @@
 export { Apple2Plus, PANEL_BASE, PANEL_BYTES } from "./plus.js";
+export { APPLE2_SYMBOLS, apple2Name } from "./symbols.js";
+export { OPS65, before65, disassemble65, hex2, hex4 } from "../../m6502/disasm65.js";
+export { Trace65 } from "../../m6502/trace65.js";
 export { DiskII } from "./disk2.js";
 export { Korz6502 } from "../m6502.js";
 export { M6502 } from "../../m6502/m6502.js";

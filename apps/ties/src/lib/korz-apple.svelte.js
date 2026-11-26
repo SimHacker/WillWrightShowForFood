@@ -11,7 +11,7 @@
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { hushWhenHidden } from './hidden-hush.js';
-import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
+import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, Trace65, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
 import { APPLE2_CALLS, APPLE2_REGIONS, switchWord, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
 
 /** The ROM routines the dance listens for, by entry address. */
@@ -333,12 +333,37 @@ class KorzApple {
 		board.press(this.#keys.shift() ?? 0);
 	}
 
+	/** The instructions run, while the memory panel's trace view shows them; null otherwise. */
+	#trace = /** @type {Trace65 | null} */ (null);
+	#ring = new Trace65();
+
+	/** The trace records only while asked: a compiled block runs as one step, so recording steps one instruction at a time. @param {boolean} on */
+	tracing(on) {
+		this.#trace = on ? this.#ring : null;
+	}
+	get trace() {
+		return this.#ring;
+	}
+	/** The byte at `addr` with no bus cycle: soft switches are not touched, the panel and RAM and ROM are read. @param {number} addr */
+	peek(addr) {
+		return this.#board?.peek(addr & 0xffff) ?? 0;
+	}
+	/** The 6502's PC now, or -1 before a board. */
+	get pc() {
+		return this.#cpu?.pc ?? -1;
+	}
+
 	/** @param {number} limit */
 	#step(limit) {
 		const cpu = this.#cpu;
 		const board = this.#board;
 		if (!cpu || !board || board.cycles >= limit) return;
-		if ('compiler' in cpu && cpu.compiler && limit - board.cycles <= 80) cpu.one();
+		const trace = this.#trace;
+		if (trace) {
+			const pc = cpu.pc;
+			trace.record(pc, board.peek(pc), board.peek((pc + 1) & 0xffff), board.peek((pc + 2) & 0xffff), cpu.a, cpu.x, cpu.y, cpu.p, cpu.s);
+		}
+		if ('compiler' in cpu && cpu.compiler && (trace || limit - board.cycles <= 80)) cpu.one();
 		else cpu.step();
 		if (this.dance.on && !('compiler' in cpu && cpu.compiler)) {
 			this.#dancePcs.add(cpu.pc);

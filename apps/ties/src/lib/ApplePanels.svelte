@@ -5,6 +5,7 @@
 	import { APPLE_HZ } from '@wwsff/cabinet/angel';
 	import { ENGINES, apple } from './apple.svelte.js';
 	import KorzBrowser from './KorzBrowser.svelte';
+	import AppleMemory from './AppleMemory.svelte';
 
 	/** @type {{ labelOf?: (file: string) => string }} */
 	let { labelOf = (file) => file.slice(file.lastIndexOf('/') + 1) } = $props();
@@ -12,6 +13,7 @@
 	const KEY = 'apple-panels';
 	const TABS = [
 		{ id: 'cpu', label: 'CPU', title: "The 6502: its registers and flags, the panel's bits, the cycles it has run, and how fast it is going" },
+		{ id: 'mem', label: 'MEM', title: "Memory as the PDP-7's panel shows core: hex, the 6502 code disassembled, and the trace of instructions run" },
 		{ id: 'io', label: 'I/O', title: 'The video soft switches, the annunciators, the drives and the game port' },
 		{ id: 'korz', label: 'KORZ', title: "Korz: browse the 6502's sea, its slots, and the JavaScript the compiler made from the Apple's code. Read-only." }
 	];
@@ -54,6 +56,14 @@
 			<div class="panel" role="group" aria-label={t.label}>
 				{#if t.id === 'korz'}
 					<KorzBrowser roots={() => apple.korzRoots()} follow={() => apple.korzFollow()} />
+				{:else if t.id === 'mem'}
+					{#if apple.korz && running}
+						<AppleMemory korz={apple.korz} />
+					{:else if !apple.korz}
+						<p class="off">microM8 keeps its memory inside its Go core; pick a Korz level in the menu to see it.</p>
+					{:else}
+						<p class="off">The Apple is not running yet.</p>
+					{/if}
 				{:else if !running || !s}
 					<p class="off">The Apple is not running yet.</p>
 				{:else if t.id === 'cpu'}
@@ -86,6 +96,7 @@
 												class={['lamp', 'bit', { lit: !!(byte & (1 << b)) }]}
 												aria-pressed={!!(byte & (1 << b))}
 												aria-label="${hex(addr, 4)} bit {b}"
+												onpointerdown={(e) => e.preventDefault()}
 												onclick={() => apple.flip(i * 8 + b)}>{b}</button
 											>
 										{/each}
