@@ -5474,7 +5474,7 @@
 		font: inherit;
 		text-align: left;
 		font-size: 0.75rem;
-		opacity: 0.8;
+		color: color-mix(in srgb, currentColor 80%, transparent);
 		cursor: help;
 		white-space: nowrap;
 	}
