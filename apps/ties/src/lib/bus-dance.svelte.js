@@ -3,7 +3,7 @@
 // working and how full it is; call `frame` from its animation loop, and `touch` with what the
 // person at the console does. See AM-RADIO.md, approach 8.
 
-import { Dance, ENO_TRACKS, Regions, enoLayers, twistLabel } from '@wwsff/cabinet/dance';
+import { Dance, ENO_TRACKS, Regions, enoLayers, enoTracks, twistLabel } from '@wwsff/cabinet/dance';
 import { DancePlayer, TEMPOS, sixteenth } from './dance-player.js';
 
 /** @typedef {import('@wwsff/cabinet/dance').Voice} Voice */
@@ -183,6 +183,10 @@ export class BusDance {
 	mode(m) {
 		if (m.style) this.style = this.#dance.style = m.style;
 		if (m.bpm) this.#bpm = m.bpm;
+		if (m.tracks) {
+			const list = enoTracks(m.tracks);
+			if (list.length) this.tracks = list;
+		}
 		if (m.loops !== undefined) this.loops = this.#dance.loops = enoLayers(m.loops, this.loops);
 		if (m.listen !== undefined) this.listen = m.listen;
 		if (m.mute) this.#dance.mute = new Set(m.mute);

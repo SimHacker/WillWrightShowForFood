@@ -29,8 +29,8 @@
 			type="button"
 			aria-pressed={on}
 			class={{ chip, on }}
-			title="{track.label ?? `EN${i}`}: {track.title}. On or off by itself."
-			onclick={() => dance.toggleLayer(1 << i)}>{track.label ?? `EN${i}`}</button
+			title="EN{i} {track.name}: {track.description}. {on ? 'On: click to turn it off' : 'Off: click to turn it on'}; each track is on or off by itself."
+			onclick={() => dance.toggleLayer(1 << i)}>EN{i}</button
 		>
 	{/each}
 </span>

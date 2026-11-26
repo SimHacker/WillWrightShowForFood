@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { APPLE2_CALLS, switchWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, ENO_TRACKS, enoLayers, EN0, EN1, EN2, EN3, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
+import { APPLE2_CALLS, switchWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, ENO_TRACKS, enoLayers, enoTracks, EN0, EN1, EN2, EN3, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -216,9 +216,21 @@ test("a machine kicks an Eno track from its own events, heard only while the tra
 	assert.ok(chord.tones.includes(Math.round(notes[0]?.midi ?? 0) % 12));
 	assert.equal(d.beat({}, 0).filter((n) => n.voice === "loops").length, 0, "a kick plays once");
 	const more = new Dance(PDP7_VOICES);
-	more.tracks = [...ENO_TRACKS, { id: "tick", title: "a fifth", timbre: "tick", root: 84, velocity: 0.2, loops: [{ length: 2, at: 0, tone: 0 }] }];
+	more.tracks = [...ENO_TRACKS, ...enoTracks([{ id: "tick", name: "Tick", description: "a fifth", timbre: "tick", root: 84, velocity: 0.2, loops: [{ length: 2, at: 0, tone: 0 }] }])];
 	more.loops = 1 << 4;
 	assert.ok(Array.from({ length: 4 }, () => more.beat({}, 0)).flat().some((n) => n.voice === "loops" && n.timbre === "tick"), "a fifth track is one more entry");
+});
+
+test("Eno tracks from configuration keep what makes sense and drop the rest", () => {
+	const got = enoTracks([
+		{ id: "ok", name: "Ok", description: "fine", timbre: "glass", root: 72, loops: [{ length: 7, at: 9, tone: 1 }, { length: 0 }] },
+		{ id: "bad", timbre: "kazoo", loops: [] },
+		"nonsense",
+	]);
+	assert.equal(got.length, 1);
+	assert.deepEqual(got[0]?.loops, [{ length: 7, at: 2, tone: 1, up: 0 }]);
+	assert.equal(got[0]?.velocity, 0.4);
+	assert.ok(ENO_TRACKS.every((t) => t.name && t.description));
 });
 
 test("the pen plays a rising run along each stroke, and starts low again on the next", () => {

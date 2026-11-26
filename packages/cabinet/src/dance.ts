@@ -320,8 +320,10 @@ export type EnoLoop = { readonly length: number; readonly at: number; readonly t
  */
 export type EnoTrack = {
 	readonly id: string;
-	readonly label?: string;
-	readonly title: string;
+	/** A word or two, shown after its EN number: "Airports". */
+	readonly name: string;
+	/** What it plays and after what, for the button's tooltip. */
+	readonly description: string;
 	readonly timbre: Timbre;
 	readonly root: number;
 	readonly velocity: number;
@@ -342,10 +344,19 @@ export const LOOPS: readonly EnoLoop[] = [
  * itself. More can be added, and a machine can bring its own list (`Dance.tracks`).
  */
 export const ENO_TRACKS: readonly EnoTrack[] = [
-	{ id: "airports", title: "tape loops after Music for Airports, five of prime lengths, each sounding one tone of the chord, drifting against each other", timbre: "glass", root: 72, velocity: 0.5, loops: LOOPS },
+	{
+		id: "airports",
+		name: "Airports",
+		description: "tape loops after Brian Eno's Music for Airports 1/1: five glass tones of prime lengths, 23 to 41 sixteenths, each a tone of the chord, drifting against each other",
+		timbre: "glass",
+		root: 72,
+		velocity: 0.5,
+		loops: LOOPS,
+	},
 	{
 		id: "drone",
-		title: "a drone, two long loops an octave below, after Discreet Music's slow tape delay",
+		name: "Drone",
+		description: "two long pad loops of 53 and 59 sixteenths an octave below the harmony, after Discreet Music's slow tape delay",
 		timbre: "pad",
 		root: 48,
 		velocity: 0.4,
@@ -357,7 +368,8 @@ export const ENO_TRACKS: readonly EnoTrack[] = [
 	{
 		// The bell is the light pen's, so the sparkle is chimes.
 		id: "sparkle",
-		title: "a sparkle, three sparse chimes two octaves up",
+		name: "Sparkle",
+		description: "three sparse chimes two octaves up, at 43, 47 and 61 sixteenths",
 		timbre: "chime",
 		root: 72,
 		velocity: 0.25,
@@ -369,7 +381,8 @@ export const ENO_TRACKS: readonly EnoTrack[] = [
 	},
 	{
 		id: "voices",
-		title: "voices, three singing a tone each, after Music for Airports 2/1",
+		name: "Voices",
+		description: "three wordless singers holding a tone of the chord each, at 67, 71 and 73 sixteenths, after Music for Airports 2/1",
 		timbre: "sing",
 		root: 60,
 		velocity: 0.3,
@@ -380,6 +393,40 @@ export const ENO_TRACKS: readonly EnoTrack[] = [
 		],
 	},
 ];
+
+const TIMBRES: ReadonlySet<string> = new Set(["bass", "pluck", "chime", "pad", "tick", "beep", "glass", "brass", "keys", "organ", "acid", "anvil", "sing", "whistle", "harp", "lead", "bell", "tom"]);
+
+/**
+ * Eno tracks from configuration data, an angel's YAML or a machine's own: the ones that make
+ * sense, each with an id, a name, a description, a known instrument and loops of whole
+ * positive lengths. Anything else is dropped, so a typo silences one track, not the dance.
+ */
+export function enoTracks(data: unknown): EnoTrack[] {
+	if (!Array.isArray(data)) return [];
+	const num = (v: unknown, d: number) => (typeof v === "number" && Number.isFinite(v) ? v : d);
+	return data.flatMap((t): EnoTrack[] => {
+		if (!t || typeof t !== "object") return [];
+		const r = t as Record<string, unknown>;
+		if (typeof r.id !== "string" || typeof r.timbre !== "string" || !TIMBRES.has(r.timbre) || !Array.isArray(r.loops)) return [];
+		const loops = r.loops.flatMap((l): EnoLoop[] => {
+			if (!l || typeof l !== "object") return [];
+			const o = l as Record<string, unknown>;
+			const length = Math.round(num(o.length, 0));
+			if (length < 1) return [];
+			const loop = { length, at: Math.round(num(o.at, 0)) % length, tone: Math.max(0, Math.round(num(o.tone, 0))), up: Math.round(num(o.up, 0)) };
+			return [typeof o.pan === "number" ? { ...loop, pan: Math.max(-1, Math.min(1, o.pan)) } : loop];
+		});
+		return [{
+			id: r.id,
+			name: typeof r.name === "string" ? r.name : r.id,
+			description: typeof r.description === "string" ? r.description : "",
+			timbre: r.timbre as Timbre,
+			root: Math.round(num(r.root, 60)),
+			velocity: Math.max(0, Math.min(1, num(r.velocity, 0.4))),
+			loops,
+		}];
+	});
+}
 
 /** The tracks on, as bits of `Dance.loops`: track n is bit n. */
 export type Eno = number;
@@ -427,7 +474,7 @@ const STRINGS: ReadonlyMap<string, number> = new Map([
  * "harmony", "loops", "reply", "pen", a machine's voice id, or "watch" for every watched word).
  * and a riff (`Riff`), or null for none. What a mode leaves unsaid stays as it was.
  */
-export type Music = { readonly style?: Style; readonly bpm?: number; readonly loops?: boolean | Eno; readonly listen?: string; readonly mute?: readonly string[]; readonly riff?: Riff | null };
+export type Music = { readonly style?: Style; readonly bpm?: number; readonly loops?: boolean | Eno; readonly tracks?: readonly EnoTrack[]; readonly listen?: string; readonly mute?: readonly string[]; readonly riff?: Riff | null };
 
 /**
  * A riff: a bar that plays itself, bass, drums and a hook, in whatever chord the progression is
