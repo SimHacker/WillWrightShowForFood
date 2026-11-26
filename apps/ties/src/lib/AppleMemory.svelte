@@ -36,7 +36,7 @@
 		return () => korz.tracing(false);
 	});
 	$effect(() => {
-		const id = setInterval(() => (tick += 1), 150);
+		const id = setInterval(() => (tick += 1), 40);
 		return () => clearInterval(id);
 	});
 

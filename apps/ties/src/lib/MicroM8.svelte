@@ -30,9 +30,20 @@
 	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, panels?: boolean }} */
 	// Slowest first. 100 is MAX: as fast as this computer goes, a picture each game second.
 	// microM8's Go core starts at 1x; the slower notches are the Korz Apple's.
-	const SPEEDS = [0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 1.5, 2, 3, 4, 6, 8, 12, 16, 100];
-	const rates = $derived(
-		SPEEDS.filter((w) => w >= 1 || apple.id !== 'microm8').map((w) => ({
+	// The PDP-7's scale: trace notches, an instruction every so many ms with the views following,
+	// then multiples of a real Apple.
+	const TRACES = [1000, 300, 100, 30];
+	const SPEEDS = [0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 3, 5, 10, 20, 30, 50, 100];
+	const rates = $derived([
+		...(apple.id === 'microm8'
+			? []
+			: TRACES.map((ms) => ({
+					trace: ms,
+					speed: 0,
+					label: ms >= 1000 ? `${ms / 1000} s` : `.${String(ms / 1000).slice(2)} s`,
+					title: `Trace: one instruction every ${ms >= 1000 ? `${ms / 1000} s` : `${ms} ms`}, the views following the PC`
+				}))),
+		...SPEEDS.filter((w) => w >= 1 || apple.id !== 'microm8').map((w) => ({
 			speed: w,
 			label: w === 100 ? 'MAX' : `${String(w).replace(/^0/, '')}×`,
 			title:
@@ -42,10 +53,23 @@
 						? `1× is a real Apple ][: ${APPLE_HZ.toLocaleString('en-US')} cycles a second`
 						: `${w}× an Apple ][: ${Math.round(APPLE_HZ * w).toLocaleString('en-US')} cycles a second${w > 8 ? ', and the speaker is off' : w < 1 ? ', and the speaker clicks as slowly' : ''}`
 		}))
-	);
-	const rateIndex = $derived(
-		rates.reduce((best, r, i) => (Math.abs(Math.log(r.speed / apple.warp)) < Math.abs(Math.log(rates[best].speed / apple.warp)) ? i : best), 0)
-	);
+	]);
+	const rateIndex = $derived.by(() => {
+		if (apple.traceMs) return Math.max(0, rates.findIndex((r) => 'trace' in r && r.trace === apple.traceMs));
+		let best = -1;
+		rates.forEach((r, i) => {
+			if ('trace' in r) return;
+			if (best < 0 || Math.abs(Math.log(r.speed / apple.warp)) < Math.abs(Math.log(rates[best].speed / apple.warp))) best = i;
+		});
+		return Math.max(0, best);
+	});
+	/** @param {number} i */
+	function pickRate(i) {
+		const r = rates[i];
+		if (!r) return;
+		if ('trace' in r && r.trace) apple.trace(r.trace);
+		else apple.speed(r.speed);
+	}
 
 	let {
 		disks = [],
@@ -347,7 +371,7 @@
 				<DanceControls {dance} twist={!!apple.panel} />
 			{/if}
 		{/if}
-		<RateSlider rates={rates} index={rateIndex} onpick={(i) => apple.speed(rates[i].speed)} />
+		<RateSlider rates={rates} index={rateIndex} onpick={pickRate} />
 		<button
 			class={{ on: apple.mouseStick }}
 			aria-pressed={apple.mouseStick}

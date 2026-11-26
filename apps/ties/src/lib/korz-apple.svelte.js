@@ -162,6 +162,9 @@ class KorzApple {
 	caps = $state(true);
 	sound = $state(true);
 	warp = $state(1);
+	/** Trace pace: one instruction every this many ms, the views following; 0 runs by `warp`. */
+	traceMs = 0;
+	#traceOwed = 0;
 	/** Pictures per game second while running flat out. 0 paints every animation frame. */
 	picturesPerSecond = 0;
 	locked = $state('');
@@ -469,6 +472,16 @@ class KorzApple {
 		const budget = start + 12;
 		const dt = this.#last ? Math.min(50, start - this.#last) : 1000 / 60;
 		this.#last = start;
+		if (this.traceMs > 0) {
+			this.#traceOwed = Math.min(this.#traceOwed + dt, 4 * this.traceMs);
+			while (this.#traceOwed >= this.traceMs) {
+				this.#traceOwed -= this.traceMs;
+				this.#step(board.cycles + 1);
+			}
+			this.#paint();
+			this.#speak();
+			return;
+		}
 		if (this.picturesPerSecond > 0) {
 			const span = APPLE_HZ / this.picturesPerSecond;
 			if (this.#mark <= board.cycles) this.#mark = board.cycles + span;
@@ -694,7 +707,7 @@ class KorzApple {
 			this.dance.frame(now, () => this.#danceHits(), () => this.#danceGauges(), () => this.#danceWatched(), () => this.#danceCalls());
 			ctx.putImageData(image, 0, 0);
 			if (vctx && this.videxShowing) vctx.putImageData(videxImage, 0, 0);
-			if (now - polled > 250) {
+			if (now - polled > (this.traceMs ? 40 : 250)) {
 				const cycles = this.#board.cycles;
 				if (polled) this.mhz = (cycles - lastCycles) / (now - polled) / 1000;
 				polled = now;

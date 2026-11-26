@@ -24,6 +24,7 @@ class AppleEngine {
 	#locked = $state('');
 	#mouseStick = $state(false);
 	#warp = $state(1);
+	#traceMs = $state(0);
 	#hush = false;
 
 	get engines() {
@@ -134,6 +135,17 @@ class AppleEngine {
 	get warp() {
 		return this.#warp;
 	}
+	/** One instruction every this many ms on the Korz Apple, as the PDP-7's trace notches; 0 when running by speed. */
+	get traceMs() {
+		return this.#traceMs;
+	}
+	/** @param {number} ms */
+	trace(ms) {
+		if (this.id === 'microm8') return;
+		this.speed(0.001);
+		this.#traceMs = ms;
+		korzApple.traceMs = ms;
+	}
 
 	/** @param {string} fallback the engine when the address has no `cpu` */
 	useDefault(fallback) {
@@ -223,6 +235,8 @@ class AppleEngine {
 	 */
 	speed(warp, pictures) {
 		this.#warp = warp;
+		this.#traceMs = 0;
+		korzApple.traceMs = 0;
 		const pace = pictures ?? (warp >= 100 ? 1 : 0);
 		korzApple.picturesPerSecond = pace;
 		korzApple.warp = warp;
