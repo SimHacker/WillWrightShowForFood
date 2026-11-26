@@ -26,6 +26,13 @@ import videxFirmwareUrl from '../../../../packages/cabinet/roms/apple2/videx-fw2
 import videxCharsUrl from '../../../../packages/cabinet/roms/apple2/videx-chr.rom?url';
 
 const BLACK = [0, 0, 0];
+/**
+ * The speeds the speaker plays at. Slower, its flips are a click per instruction, not a tone;
+ * faster, the samples outrun the page's audio. Outside, the dance and the ROM calls still play.
+ */
+const SPEAKER_SPEEDS = { min: 0.01, max: 4 };
+/** The speaker cone's pull back to rest, per sample: a level held still is silence. */
+const CONE = 0.995;
 const WHITE = [0xf0, 0xf0, 0xf0];
 const hiresByte = new Uint8Array(40);
 const LORES = [
@@ -204,6 +211,8 @@ class KorzApple {
 	#last = 0;
 	/** Cycle the speaker samples have been generated up to. */
 	#heard = 0;
+	/** The cone filter's last input and output, carried from one buffer to the next. */
+	#cone = { x: 0, y: 0 };
 	/** @type {{ ctx: AudioContext, out: AudioNode, gain: GainNode, next: number } | null} */
 	#audio = null;
 	#samples = new Float32Array(44100);
@@ -366,9 +375,12 @@ class KorzApple {
 			const pc = cpu.pc;
 			trace.record(pc, board.peek(pc), board.peek((pc + 1) & 0xffff), board.peek((pc + 2) & 0xffff), cpu.a, cpu.x, cpu.y, cpu.p, cpu.s);
 		}
-		if ('compiler' in cpu && cpu.compiler && (trace || limit - board.cycles <= 80)) cpu.one();
+		const compiled = 'compiler' in cpu && !!cpu.compiler;
+		const alone = compiled && (trace || this.traceMs > 0 || limit - board.cycles <= 80);
+		if (alone) cpu.one();
 		else cpu.step();
-		if (this.dance.on && !('compiler' in cpu && cpu.compiler)) {
+		// A lone instruction runs no block, so it counts where its PC lands.
+		if (this.dance.on && (!compiled || alone)) {
 			this.#dancePcs.add(cpu.pc);
 			if (CALLS.has(cpu.pc)) this.#callPcs.add(cpu.pc);
 		}
@@ -422,9 +434,10 @@ class KorzApple {
 	#danceCalls() {
 		const cpu = this.#cpu;
 		const compiler = cpu && 'compiler' in cpu ? cpu.compiler : null;
+		const pcs = this.#callPcs.take();
 		const hits = compiler
-			? this.#callBlocks.step(compiler.list().flatMap((b) => (CALLS.has(b.entry) ? [/** @type {[number, number]} */ ([b.entry, b.runs])] : [])))
-			: this.#callPcs.take();
+			? [...this.#callBlocks.step(compiler.list().flatMap((b) => (CALLS.has(b.entry) ? [/** @type {[number, number]} */ ([b.entry, b.runs])] : []))), ...pcs]
+			: pcs;
 		// After a gap (the dance just turned on, the tab came back) the counts are history, not news.
 		const ms = performance.now();
 		const fresh = ms - this.#callsAt > 1000;
@@ -447,7 +460,9 @@ class KorzApple {
 		const clicks = (board?.speakerClicks ?? 0) - this.#danceClicks;
 		this.#danceClicks = board?.speakerClicks ?? 0;
 		return {
-			'6502': compiler ? this.#danceBlocks.step(compiler.list().map((b) => /** @type {[number, number]} */ ([b.entry, b.retired]))) : this.#dancePcs.take(),
+			'6502': compiler
+				? [...this.#danceBlocks.step(compiler.list().map((b) => /** @type {[number, number]} */ ([b.entry, b.retired]))), ...this.#dancePcs.take()]
+				: this.#dancePcs.take(),
 			disk: disk?.motor ? [{ key: head, weight: moved ? 4 : 1 }] : [],
 			speaker: clicks > 0 ? [{ key: Math.round(Math.log2(clicks)), weight: clicks }] : []
 		};
@@ -542,6 +557,11 @@ class KorzApple {
 		this.#heard = end;
 		const audio = this.#audio;
 		if (!this.sound || !audio || end <= start) return;
+		const warp = this.traceMs > 0 ? 0 : this.warp;
+		if (warp < SPEAKER_SPEEDS.min || warp > SPEAKER_SPEEDS.max) {
+			this.#cone = { x: board.speaker & 1 ? 1 : -1, y: 0 };
+			return;
+		}
 		const rate = 44100;
 		const stretch = this.warp > 0 && this.warp < 1 ? 1 / this.warp : 1;
 		const n = Math.min(this.#samples.length, Math.max(1, Math.round(((end - start) * rate * stretch) / APPLE_HZ)));
@@ -551,14 +571,19 @@ class KorzApple {
 		while (fi < flips.length && (flips[fi] ?? 0) <= start) fi++;
 		const span = end - start;
 		const samples = this.#samples;
+		let { x, y } = this.#cone;
 		for (let s = 0; s < n; s++) {
 			const cycle = start + ((s + 0.5) * span) / n;
 			while (fi < flips.length && (flips[fi] ?? 0) <= cycle) {
 				level ^= 1;
 				fi++;
 			}
-			samples[s] = level ? 1 : -1;
+			const v = level ? 1 : -1;
+			y = v - x + CONE * y;
+			x = v;
+			samples[s] = 0.5 * y;
 		}
+		this.#cone = { x, y };
 		const now = audio.ctx.currentTime;
 		if (audio.next < now + 0.02) audio.next = now + 0.05;
 		if (audio.next > now + 0.3) return;

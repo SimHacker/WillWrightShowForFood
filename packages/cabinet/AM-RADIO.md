@@ -281,7 +281,14 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        drives the drums; COUT ($FDED) types on the keys; HPLOT ($F457) and PLOT ($F800)
        sparkle. Compiled, a call is a run of the block starting at the routine, since a JSR's
        target starts a block, so it costs nothing; stepped, it is the PC landing on the entry.
-       After a gap the counts are history and the first reading is dropped.
+       The slow trace speeds run one instruction at a time even with the compiler, and count
+       PCs, so the calls go on sounding as the code walks by line by line. After a gap the
+       counts are history and the first reading is dropped.
+     - Each sound has the speeds it plays at. The Apple's own speaker plays from 0.01× to 4×
+       (`SPEAKER_SPEEDS` in korz-apple.svelte.js): slower, its flips would be a click an
+       instruction, not a tone, so it goes quiet and the dance and the calls carry on. Its
+       samples go through a cone that comes back to rest, so a speaker the program leaves alone
+       is silence, and a gap between buffers makes no edge to click on.
      - The dance remembers (bus-dance.svelte.js, in the browser's storage): whether it is on,
        for every machine, so going from the PDP-7 to the Apple keeps dancing; and the style,
        tempo and loops chosen, for each machine. It starts off, so nobody is blown away by a
