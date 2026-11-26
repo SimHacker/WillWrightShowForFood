@@ -52,7 +52,7 @@ export type Note = {
  * Aeolian loop, i bVI bIII bVII; `bp` is
  * Bohlen-Pierce: 13 steps of the tritave, odd harmonics, in bars of 13.
  */
-export type Style = "straight" | "jazz" | "lydian" | "minor" | "bp";
+export type Style = "straight" | "jazz" | "lydian" | "minor" | "bp" | "dorian" | "mixolydian" | "phrygian" | "wholetone" | "octatonic" | "alpha";
 
 /** A tuning: `steps` equal steps of the interval `period` (2, the octave; 3, the tritave). */
 export type Tuning = { readonly steps: number; readonly period: number };
@@ -63,6 +63,12 @@ export const TET12: Tuning = { steps: 12, period: 2 };
  * the Bohlen-Pierce scale. https://www.kees.cc/music/scale13/scale13.html
  */
 export const BP13: Tuning = { steps: 13, period: 3 };
+/**
+ * Wendy Carlos's alpha: 9 equal steps of the 3:2 fifth, each about 78 cents, from her Beauty in
+ * the Beast (1986). It has no octave; its thirds are close to just, 5 steps the major (390
+ * cents for 386) and 4 the minor (312 for 316), so its triads ring.
+ */
+export const ALPHA: Tuning = { steps: 9, period: 3 / 2 };
 
 /** A MIDI note number, fractional off 12-TET: `step` steps of `t` above `base`. */
 export const midiAt = (base: number, step: number, t: Tuning = TET12): number => base + (12 * Math.log2(t.period) * step) / t.steps;
@@ -307,6 +313,100 @@ export const LYDIAN_WALK = harmony(LYDIAN, LYDIAN_I, [chord("iii", 4, 7, 11), ch
 
 /** Bohlen-Pierce: Kees van Prooijen's three, in any order that comes home. */
 export const BP_WALK = harmony(BP_CADENCE, BP_I, [], { I: "IV V", IV: "V I", V: "I IV" });
+
+/** Dorian: minor with a major sixth, the i7 IV7 vamp of So What and Oye Como Va, and the mode's other chords. */
+const DORIAN_I = chord("i7", 0, 3, 7, 10);
+const DORIAN_IV = chord("IV7", 5, 9, 12, 15);
+export const DORIAN_WALK = harmony([DORIAN_I, DORIAN_IV, DORIAN_I, DORIAN_IV], DORIAN_I, [chord("ii7", 2, 5, 9, 12), chord("bIIImaj7", 3, 7, 10, 14), chord("v7", 7, 10, 14, 17), chord("bVII", 10, 14, 17)], {
+	i7: "IV7 ii7 bVII bIIImaj7 v7",
+	IV7: "i7 bVII v7",
+	ii7: "IV7 i7",
+	bIIImaj7: "IV7 bVII ii7",
+	v7: "i7 IV7",
+	bVII: "i7 IV7 bIIImaj7",
+});
+
+/** Mixolydian: major with a flat seventh, rocking I bVII IV I, and never a major V. */
+const MIXO_I = chord("I", 0, 4, 7);
+export const MIXOLYDIAN_WALK = harmony([MIXO_I, chord("bVII", 10, 14, 17), chord("IV", 5, 9, 12), MIXO_I], MIXO_I, [chord("v", 7, 10, 14), chord("ii", 2, 5, 9), chord("vi", 9, 12, 16)], {
+	I: "bVII IV v ii vi",
+	bVII: "IV I v",
+	IV: "I bVII ii",
+	v: "IV I bVII",
+	ii: "v IV",
+	vi: "IV bVII",
+});
+
+/** Phrygian dominant, home on its major I: the Andalusian cadence iv bIII bII I, flamenco's. */
+const PHRYG_I = chord("I", 0, 4, 7);
+const PHRYG_BII = chord("bII", 1, 5, 8);
+export const PHRYGIAN_WALK = harmony([chord("iv", 5, 8, 12), chord("bIII", 3, 7, 10), PHRYG_BII, PHRYG_I], PHRYG_I, [chord("bvii", 10, 13, 17), chord("I7", 0, 4, 7, 10)], {
+	I: "bII iv bvii I7",
+	bII: "I bIII",
+	bIII: "bII",
+	iv: "bIII bII I",
+	bvii: "bII iv",
+	I7: "iv",
+});
+
+/** Whole tone, Debussy's: the two augmented triads, and the 7#5 and 7b5 chords the scale holds. No home is stronger than another. */
+const WT_I = chord("I+", 0, 4, 8);
+const WT_II = chord("II+", 2, 6, 10);
+export const WHOLETONE_WALK = harmony([WT_I, WT_II, WT_I, WT_II], WT_I, [chord("I7#5", 0, 4, 8, 10), chord("II7#5", 2, 6, 10, 12), chord("III7b5", 4, 8, 10, 14), chord("#IV7b5", 6, 10, 12, 16)], {
+	"I+": "II+ III7b5 #IV7b5 II7#5",
+	"II+": "I+ I7#5 III7b5",
+	"I7#5": "II+ #IV7b5",
+	"II7#5": "I+ III7b5",
+	III7b5: "I+ #IV7b5 II+",
+	"#IV7b5": "I+ II7#5",
+});
+
+/** Octatonic, half step and whole step in turn, Messiaen's second mode: major chords a minor third apart, their sevenths, the diminished seventh. */
+const OCT_I = chord("I", 0, 4, 7);
+export const OCTATONIC_WALK = harmony([OCT_I, chord("bIII", 3, 7, 10), chord("#IV", 6, 10, 13), chord("VI", 9, 13, 16)], OCT_I, [chord("I7", 0, 4, 7, 10), chord("bIII7", 3, 7, 10, 13), chord("#IV7", 6, 10, 13, 16), chord("VI7", 9, 13, 16, 19), chord("o7", 0, 3, 6, 9)], {
+	I: "bIII VI #IV o7 I7",
+	bIII: "#IV I bIII7",
+	"#IV": "VI I #IV7",
+	VI: "I bIII VI7",
+	I7: "#IV bIII",
+	bIII7: "VI I",
+	"#IV7": "I bIII",
+	VI7: "bIII #IV",
+	o7: "I #IV",
+});
+
+/** Alpha's chords, in its steps, not folded to a period: it has no octave to fold them into. */
+const alpha = (name: string, ...tones: number[]): Chord => ({ name, root: tones[0] ?? 0, tones });
+const ALPHA_I = alpha("I", 0, 5, 9);
+/** Carlos alpha: just-sounding triads moving by thirds, chromatic mediants, the way Beauty in the Beast does. */
+export const ALPHA_WALK = harmony([ALPHA_I, alpha("iii", 5, 9, 14), alpha("bVI", -5, 0, 4), ALPHA_I], ALPHA_I, [alpha("V", 9, 14, 18), alpha("bIII", 4, 9, 13), alpha("i", 0, 4, 9)], {
+	I: "iii bIII bVI V i",
+	iii: "V I bVI",
+	V: "I iii",
+	bIII: "bVI I i",
+	bVI: "I bIII V",
+	i: "bIII bVI I",
+});
+
+/** What makes a style: its harmony, its tuning, its bar, and the chords tension pulls to, at 0.4 and at 0.8. */
+export type StyleSpec = { readonly harmony: Harmony; readonly tuning: Tuning; readonly bar: number; readonly tense: Chord; readonly tenser: Chord };
+
+export const STYLE_SPECS: Readonly<Record<Style, StyleSpec>> = {
+	straight: { harmony: MAJOR_WALK, tuning: TET12, bar: 16, tense: DOMINANT, tenser: DOMINANT_B9 },
+	jazz: { harmony: JAZZ_WALK, tuning: TET12, bar: 16, tense: DOMINANT, tenser: TRITONE_SUB },
+	minor: { harmony: MINOR_WALK, tuning: TET12, bar: 16, tense: DOMINANT, tenser: DOMINANT_B9 },
+	lydian: { harmony: LYDIAN_WALK, tuning: TET12, bar: 16, tense: DOMINANT, tenser: DOMINANT_B9 },
+	bp: { harmony: BP_WALK, tuning: BP13, bar: 13, tense: BP_V, tenser: BP_V },
+	dorian: { harmony: DORIAN_WALK, tuning: TET12, bar: 16, tense: DOMINANT, tenser: DOMINANT_B9 },
+	mixolydian: { harmony: MIXOLYDIAN_WALK, tuning: TET12, bar: 16, tense: chord("v7", 7, 10, 14, 17), tenser: DOMINANT_B9 },
+	phrygian: { harmony: PHRYGIAN_WALK, tuning: TET12, bar: 16, tense: PHRYG_BII, tenser: TRITONE_SUB },
+	wholetone: { harmony: WHOLETONE_WALK, tuning: TET12, bar: 16, tense: chord("III7b5", 4, 8, 10, 14), tenser: chord("#IV7b5", 6, 10, 12, 16) },
+	octatonic: { harmony: OCTATONIC_WALK, tuning: TET12, bar: 16, tense: chord("o7", 0, 3, 6, 9), tenser: chord("VI7", 9, 13, 16, 19) },
+	alpha: { harmony: ALPHA_WALK, tuning: ALPHA, bar: 16, tense: alpha("V", 9, 14, 18), tenser: alpha("bIII", 4, 9, 13) },
+};
+
+/** Every style, in menu order. */
+export const STYLE_IDS = Object.keys(STYLE_SPECS) as Style[];
 
 /** One loop of an Eno track: a tone of the chord in force, once every `length` sixteenths from `at`, `up` octaves higher. */
 export type EnoLoop = { readonly length: number; readonly at: number; readonly tone: number; readonly up?: number; readonly pan?: number };
@@ -860,7 +960,7 @@ export class Dance {
 	constructor(readonly voices: readonly Voice[]) {}
 
 	get harmony(): Harmony {
-		return this.style === "jazz" ? JAZZ_WALK : this.style === "lydian" ? LYDIAN_WALK : this.style === "minor" ? MINOR_WALK : this.style === "bp" ? BP_WALK : MAJOR_WALK;
+		return STYLE_SPECS[this.style].harmony;
 	}
 
 	/** What the machine has run, folded in beat by beat: the lead voice's keys, the code it ran. */
@@ -924,12 +1024,12 @@ export class Dance {
 	}
 
 	get tuning(): Tuning {
-		return this.style === "bp" ? BP13 : TET12;
+		return STYLE_SPECS[this.style].tuning;
 	}
 
 	/** Sixteenths to the bar. */
 	get bar(): number {
-		return this.style === "bp" ? 13 : 16;
+		return STYLE_SPECS[this.style].bar;
 	}
 
 	/** Home: the chord the progression resolves to. */
@@ -939,10 +1039,10 @@ export class Dance {
 
 	/** The chord the next beat plays over. */
 	get chord(): Chord {
-		const bp = this.style === "bp";
+		const spec = STYLE_SPECS[this.style];
 		if (this.fanfare || this.resolving || this.tuneLine) return this.tonic;
-		if (this.tension >= 0.8) return bp ? BP_V : this.style === "jazz" ? TRITONE_SUB : DOMINANT_B9;
-		if (this.tension >= 0.4) return bp ? BP_V : DOMINANT;
+		if (this.tension >= 0.8) return spec.tenser;
+		if (this.tension >= 0.4) return spec.tense;
 		return this.chordOfBar(Math.floor((this.step - this.home) / this.bar));
 	}
 

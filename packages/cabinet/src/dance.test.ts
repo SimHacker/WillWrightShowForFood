@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { APPLE2_CALLS, switchWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, ENO_TRACKS, enoLayers, enoTracks, EN0, EN1, EN2, EN3, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing } from "./dance.js";
+import { APPLE2_CALLS, switchWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, ENO_TRACKS, enoLayers, enoTracks, EN0, EN1, EN2, EN3, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing, STYLE_IDS, ALPHA, STYLE_SPECS, type Style } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -475,7 +475,7 @@ test("a panel of switch bytes folds into a word that is 0 only when every switch
 });
 
 test("the harmony walks: the style's loop first, then phrases through its graph that the code run picks", () => {
-	const play = (keys: number[], style: "straight" | "jazz" | "minor" | "lydian" | "bp") => {
+	const play = (keys: number[], style: Style) => {
 		const d = new Dance(PDP7_VOICES);
 		d.style = style;
 		const names: string[] = [];
@@ -485,7 +485,7 @@ test("the harmony walks: the style's loop first, then phrases through its graph 
 		}
 		return { d, names };
 	};
-	for (const style of ["straight", "jazz", "minor", "lydian", "bp"] as const) {
+	for (const style of STYLE_IDS) {
 		const { d, names } = play([0o100, 0o2000], style);
 		const h = d.harmony;
 		assert.deepEqual(names.slice(0, 4), h.first.map((c) => c.name), `${style} opens with its loop`);
@@ -508,4 +508,15 @@ test("the harmony walks: the style's loop first, then phrases through its graph 
 	const others = [[0o3000], [0o4321, 0o17], [0o7777]].map((k) => play(k, "straight").names.join(" "));
 	assert.ok(others.some((o) => o !== a), "other code takes the harmony elsewhere");
 	assert.ok(new Set(a.split(" ").slice(4)).size >= 4, `more than the loop's chords: ${a}`);
+});
+
+test("every style's walk keeps to its tuning: twelve-tone styles on twelve, alpha on 9 steps of the fifth", () => {
+	assert.equal(STYLE_SPECS.alpha.tuning, ALPHA);
+	assert.ok(Math.abs(1200 * Math.log2(ALPHA.period) / ALPHA.steps - 78) < 0.1, "an alpha step is about 78 cents");
+	assert.ok(Math.abs(midiAt(60, 5, ALPHA) - (60 + 12 * Math.log2(5 / 4))) < 0.05, "five alpha steps make a just major third");
+	for (const style of STYLE_IDS) {
+		const s = STYLE_SPECS[style];
+		for (const c of [...s.harmony.moves.keys(), s.tense, s.tenser]) assert.ok(c.tones.length >= 3, `${style} ${c.name} is a chord`);
+		assert.ok(s.harmony.moves.get(s.harmony.home)!.length > 0, `${style} can leave home`);
+	}
 });

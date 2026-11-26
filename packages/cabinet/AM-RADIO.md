@@ -261,8 +261,13 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
      - The harmony walks (`Harmony` and `Dance.phrase` in dance.ts). Each style is a graph of
        chords and the moves between them: major with the flat seventh and the minor iv
        borrowed, jazz with secondary dominants, the backdoor bVII7 and I7 into IV, minor with
-       the half-diminished ii and harmonic minor's V, Lydian's I, II, iii, V, vi and vii, and
-       Bohlen-Pierce's three. The first four bars are the style's own loop; every phrase after
+       the half-diminished ii and harmonic minor's V, Lydian's I, II, iii, V, vi and vii,
+       Bohlen-Pierce's three, Dorian's i7 IV7 vamp, Mixolydian's I bVII IV I with no major V,
+       Phrygian dominant's Andalusian cadence iv bIII bII I, whole tone's two augmented
+       triads and its 7#5 and 7b5 chords, octatonic major chords a minor third apart with the
+       diminished seventh, and Carlos alpha (`ALPHA`: 9 equal steps of the 3:2 fifth, about 78
+       cents, no octave), whose just-sounding triads move by thirds. `STYLE_SPECS` holds each
+       style's graph, tuning, bar and the chords tension pulls to. The first four bars are the style's own loop; every phrase after
        is a four-bar walk through the graph, picked from every walk that fits by a hash of the
        code the machine has run (the lead voice's keys, folded in beat by beat), the phrase's
        number and the switch word. Even phrases start at home, odd ones end on a chord that

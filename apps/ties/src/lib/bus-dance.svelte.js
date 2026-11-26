@@ -29,6 +29,16 @@ export const STYLES = [
 		id: 'bp',
 		label: 'Bohlen–Pierce',
 		title: "13 steps of the tritave, found by Bohlen, Pierce and Kees van Prooijen (his '13 tones in the 3rd harmonic'): Kees's major cadence on the 3:5:7 triad, odd harmonics, bars of 13"
+	},
+	{ id: 'dorian', label: 'Dorian', title: 'Minor with a major sixth: the i7 IV7 vamp of So What and Oye Como Va' },
+	{ id: 'mixolydian', label: 'Mixolydian', title: 'Major with a flat seventh, rocking I bVII IV I, and never a major V' },
+	{ id: 'phrygian', label: 'Phrygian dominant', title: "Flamenco's Andalusian cadence, iv bIII bII I, home on a major chord with a flat second above it" },
+	{ id: 'wholetone', label: 'Whole tone', title: "Debussy's: all whole steps, so nothing is home; augmented triads and the 7#5 and 7b5 chords" },
+	{ id: 'octatonic', label: 'Octatonic', title: "Half step, whole step: Messiaen's second mode, major chords a minor third apart and the diminished seventh" },
+	{
+		id: 'alpha',
+		label: 'Carlos alpha',
+		title: "Wendy Carlos's alpha scale from Beauty in the Beast: 9 equal steps of the fifth, about 78 cents each, no octave at all, just-sounding thirds, triads moving by thirds"
 	}
 ];
 
