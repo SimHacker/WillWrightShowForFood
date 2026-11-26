@@ -637,7 +637,7 @@ demos:
       - do: "Food"
         say: "Control-F puts food at his front door"
       - wait: 30
-      - do: "Ask for the Piano"
+      - answer: "PLEASE PLAY THE PIANO"
 ```
 
 - **The moves are the demo's vocabulary.** `do` presses the same action button a player

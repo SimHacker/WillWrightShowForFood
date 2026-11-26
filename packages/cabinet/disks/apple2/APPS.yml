@@ -67,7 +67,8 @@ apps:
         prompt: "Please turn over HOUSE-ON-A-DISK and press a key"
         insert: { drive1: house }
         keys: " "
-      # Once he has moved in. Control keys from the manual; requests are typed lines.
+      # Once he has moved in: control keys from the manual. Requests are typed in the screen
+      # angel's field, or picked from its list, not buttons.
       - { label: "Food", keys: "\x06" }
       - { label: "Water", keys: "\x17" }
       - { label: "Dog Food", keys: "\x04" }
@@ -76,10 +77,6 @@ apps:
       - { label: "Pat Him", keys: "\x10" }
       - { label: "A Record", keys: "\x12" }
       - { label: "A Book", keys: "\x02" }
-      - { label: "Ask for the Piano", keys: "PLEASE PLAY THE PIANO\r" }
-      - { label: "Ask for a Fire", keys: "PLEASE BUILD A FIRE\r" }
-      - { label: "Ask Him to Dance", keys: "PLEASE DANCE\r" }
-      - { label: "Ask for a Letter", keys: "PLEASE TYPE A LETTER TO ME\r" }
 
   - id: mind-mirror
     title: Timothy Leary's Mind Mirror

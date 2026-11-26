@@ -26,6 +26,8 @@ class AppleEngine {
 	#warp = $state(1);
 	#traceMs = $state(0);
 	#hush = false;
+	/** The screen angel's field while it talks for the player: the screen's focus goes there. @type {HTMLInputElement | null} */
+	chat = $state(null);
 
 	get engines() {
 		return ENGINES;

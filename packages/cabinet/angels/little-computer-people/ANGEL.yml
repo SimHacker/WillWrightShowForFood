@@ -130,8 +130,7 @@ states:
       Control-W water, Control-D dog food, Control-A the alarm, Control-C the phone, Control-P
       a pat, Control-R a record and Control-B a book, but you don't need to type them, just
       press the buttons. Or ask him to do something in the field below.
-    moves: [Food, Water, Dog Food, Ring the Alarm, Ring the Phone, Pat Him, A Record, A Book,
-      Ask for the Piano, Ask for a Fire, Ask Him to Dance, Ask for a Letter]
+    moves: [Food, Water, Dog Food, Ring the Alarm, Ring the Phone, Pat Him, A Record, A Book]
     ask:
       label: Say something to him
       hint: A request, starting with PLEASE. Return is pressed for you.

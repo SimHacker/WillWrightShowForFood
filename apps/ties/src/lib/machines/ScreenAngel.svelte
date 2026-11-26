@@ -56,6 +56,10 @@
 	$effect(() => {
 		apple.locked = on && state?.lock ? LOCKED : '';
 	});
+	$effect(() => {
+		apple.chat = on && ask ? (field ?? null) : null;
+		return () => (apple.chat = null);
+	});
 
 	const hush = () => {
 		owed = [];

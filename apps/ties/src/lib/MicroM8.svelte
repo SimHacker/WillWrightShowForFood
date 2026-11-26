@@ -182,7 +182,10 @@
 
 	/** @param {KeyboardEvent} ev */
 	function onkeydown(ev) {
-		if (!engaged || ev.defaultPrevented || isField(ev.target) || isField(document.activeElement)) return;
+		// In the screen angel's field the game's control keys still reach the Apple.
+		const chat = !!apple.chat && document.activeElement === apple.chat;
+		if (!(engaged || chat) || ev.defaultPrevented) return;
+		if ((isField(ev.target) || isField(document.activeElement)) && !(chat && ev.ctrlKey)) return;
 		apple.listen();
 		if (ev.key === 'Alt') {
 			apple.button('key', ev.location === 2 ? 1 : 0, true);
@@ -288,7 +291,8 @@
 			{@attach mountGlass}
 			width={FRAME_WIDTH}
 			height={FRAME_HEIGHT}
-			tabindex="0"
+			tabindex={apple.chat ? -1 : 0}
+			onfocus={() => apple.chat?.focus()}
 			class={{ covered: apple.videxShowing }}
 			aria-label="Apple II screen"
 			onpointerdown={(ev) => (engage(), stick(ev), stickButton(ev, true), danceTouch(ev, 'press'))}
