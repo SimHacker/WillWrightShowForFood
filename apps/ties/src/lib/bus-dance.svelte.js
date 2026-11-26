@@ -129,6 +129,15 @@ export class BusDance {
 		this.#save();
 	}
 
+	/** Whether the dance is fading down under the machine's own music. */
+	ducked = $state(false);
+	/** Fade down under the machine's own music, or back up. @param {boolean} on */
+	duck(on) {
+		if (on === this.ducked) return;
+		this.ducked = on;
+		this.player.duck(on);
+	}
+
 	/** The Eno tracks, EN0 first, one button each. */
 	get tracks() {
 		return this.#tracks;

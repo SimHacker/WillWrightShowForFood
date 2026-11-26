@@ -31,6 +31,15 @@ const BLACK = [0, 0, 0];
  * faster, the samples outrun the page's audio. Outside, the dance and the ROM calls still play.
  */
 const SPEAKER_SPEEDS = { min: 0.01, max: 4 };
+/**
+ * The dance ducks under the speaker's own music: flips an Apple second, smoothed over about
+ * DUCK_TAU seconds, above DUCK_ON fades it down, and it comes back once below DUCK_OFF. A tone
+ * flips hundreds to thousands of times a second; footsteps and ticks are a few clicks, well
+ * under, so they never duck it. The gap between the two keeps it from flapping.
+ */
+const DUCK_ON = 500;
+const DUCK_OFF = 150;
+const DUCK_TAU = 0.3;
 /** The speaker cone's pull back to rest, per sample: a level held still is silence. */
 const CONE = 0.995;
 const WHITE = [0xf0, 0xf0, 0xf0];
@@ -213,6 +222,8 @@ class KorzApple {
 	#last = 0;
 	/** Cycle the speaker samples have been generated up to. */
 	#heard = 0;
+	/** The speaker's flips an Apple second, smoothed, and when it was last measured. */
+	#busy = { rate: 0, at: 0 };
 	/** The cone filter's last input and output, carried from one buffer to the next. */
 	#cone = { x: 0, y: 0 };
 	/** @type {{ ctx: AudioContext, out: AudioNode, gain: GainNode, next: number } | null} */
@@ -502,6 +513,7 @@ class KorzApple {
 		if (this.paused) {
 			this.#traceOwed = 0;
 			this.#heard = board.cycles;
+			this.#listenForMusic(0);
 			this.#paint();
 			return;
 		}
@@ -562,6 +574,16 @@ class KorzApple {
 		if (this.#audio) this.#audio.gain.gain.value = 0.3 * v;
 	}
 
+	/** Duck the dance while the speaker plays tones, not clicks. @param {number} rate flips an Apple second */
+	#listenForMusic(rate) {
+		const now = performance.now() / 1000;
+		const dt = Math.min(1, Math.max(0, now - this.#busy.at));
+		this.#busy.at = now;
+		this.#busy.rate += (rate - this.#busy.rate) * (1 - Math.exp(-dt / DUCK_TAU));
+		if (!this.dance.ducked && this.#busy.rate > DUCK_ON) this.dance.duck(true);
+		else if (this.dance.ducked && this.#busy.rate < DUCK_OFF) this.dance.duck(false);
+	}
+
 	/**
 	 * Turn the speaker flips since last time into samples and queue them. Slower than the Apple,
 	 * the samples are stretched to the time that passed, so each flip is a click when it comes.
@@ -574,8 +596,10 @@ class KorzApple {
 		const start = this.#heard;
 		this.#heard = end;
 		const audio = this.#audio;
-		if (!this.sound || !audio || end <= start) return;
 		const warp = this.traceMs > 0 ? 0 : this.warp;
+		const heard = this.sound && !!audio && warp >= SPEAKER_SPEEDS.min && warp <= SPEAKER_SPEEDS.max;
+		this.#listenForMusic(heard && end > start ? (flips.length * APPLE_HZ) / (end - start) : 0);
+		if (!this.sound || !audio || end <= start) return;
 		if (warp < SPEAKER_SPEEDS.min || warp > SPEAKER_SPEEDS.max) {
 			this.#cone = { x: board.speaker & 1 ? 1 : -1, y: 0 };
 			return;

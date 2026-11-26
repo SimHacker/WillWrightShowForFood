@@ -100,10 +100,17 @@
 	.eno {
 		display: inline-flex;
 	}
+	/* A fixed size, lit or not, so a row of them never shifts as they toggle. */
 	.eno button,
 	.eno button.on {
+		box-sizing: border-box;
+		width: 3.2em;
 		margin: 0;
+		padding: 0;
 		border: 1px solid #777;
+		font-weight: normal;
+		text-align: center;
+		font-variant-numeric: tabular-nums;
 	}
 	.eno button + button {
 		margin-left: -1px;

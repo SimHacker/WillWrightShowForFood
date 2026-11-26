@@ -15,11 +15,17 @@ const STRUM = 0.018;
 /** @param {number} midi */
 const hz = (midi) => 440 * 2 ** ((midi - 69) / 12);
 
+/** How loud the dance stays, ducked under the machine's own music: nearly gone. */
+const DUCKED = 0.08;
+
 export class DancePlayer {
 	/** @type {AudioContext | null} */
 	#ctx = null;
 	/** @type {GainNode | null} */
 	#master = null;
+	/** Between the master and the limiter: down while the machine makes its own music. @type {GainNode | null} */
+	#duck = null;
+	#ducked = false;
 	/** @type {Map<string, GainNode>} */
 	#voices = new Map();
 	/** @type {Map<string, number>} */
@@ -39,17 +45,32 @@ export class DancePlayer {
 		limit.ratio.value = 8;
 		const master = ctx.createGain();
 		master.gain.value = 0.35;
-		master.connect(limit).connect(ctx.destination);
+		const duck = ctx.createGain();
+		duck.gain.value = this.#ducked ? DUCKED : 1;
+		master.connect(duck).connect(limit).connect(ctx.destination);
 		this.#ctx = ctx;
 		this.#master = master;
+		this.#duck = duck;
 	}
 
 	stop() {
 		this.#ctx?.close();
 		this.#ctx = null;
 		this.#master = null;
+		this.#duck = null;
 		this.#voices.clear();
 		this.#engine = null;
+	}
+
+	/**
+	 * Fade the whole dance down while the machine plays music of its own, and back up when it
+	 * stops: down in about a quarter second, up over a second or so, so it breathes, not jumps.
+	 * @param {boolean} on
+	 */
+	duck(on) {
+		if (on === this.#ducked) return;
+		this.#ducked = on;
+		if (this.#duck && this.#ctx) this.#duck.gain.setTargetAtTime(on ? DUCKED : 1, this.#ctx.currentTime, on ? 0.08 : 0.4);
 	}
 
 	/** @type {{ kind: string, set: (load: number, fill: number) => void } | null} */

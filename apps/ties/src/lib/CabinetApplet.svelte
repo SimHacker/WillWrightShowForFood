@@ -2067,6 +2067,8 @@
 	}
 
 	const PREFIX = '^\\';
+	/** @type {Record<string, string>} */
+	const CODE_LABELS = { BracketLeft: '[', BracketRight: ']', Backslash: '\\', Minus: '-', Equal: '=', Period: '.', ArrowUp: '↑', ArrowDown: '↓' };
 
 	/** The key after the prefix. @param {KeyboardEvent} e */
 	function prefixKey(e) {
@@ -2111,7 +2113,7 @@
 			e.preventDefault();
 			e.stopPropagation();
 			runCommand(alt);
-			echo(`Alt-${e.code.replace(/^(Key|Digit|Arrow)/, '')} ${COMMAND_SAYS[alt]()}`);
+			echo(`Alt-${CODE_LABELS[e.code] ?? e.code.replace(/^(Key|Digit|Arrow)/, '')} ${COMMAND_SAYS[alt]()}`);
 			return;
 		}
 		// Copy wins over ^C when something on the paper is selected; ^V is always paste.
