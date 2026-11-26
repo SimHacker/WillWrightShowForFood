@@ -136,10 +136,21 @@
 		else answered = true;
 	}
 
-	/** @param {string} example */
+	/** The last request clicked, and when: a second click on it soon after sends it. */
+	let usedLast = { text: '', at: 0 };
+	const AGAIN_MS = 600;
+
+	/** One click puts the request in the field; the same one clicked again soon after sends it. @param {string} example */
 	function use(example) {
+		const now = performance.now();
+		const again = usedLast.text === example && value === example && now - usedLast.at < AGAIN_MS;
+		usedLast = { text: example, at: now };
 		value = example;
 		field?.focus();
+		if (again) {
+			usedLast = { text: '', at: 0 };
+			field?.form?.requestSubmit();
+		}
 	}
 
 	/** @param {boolean} v */
@@ -215,7 +226,7 @@
 						{#if ask.examples?.length}
 							<p class="examples">
 								{#each ask.examples as e (e)}
-									<button type="button" class="example" title="Put this in the field" onclick={() => use(e)}>{e}</button>
+									<button type="button" class="example" title="Put this in the field; click again to send it" onclick={() => use(e)}>{e}</button>
 								{/each}
 							</p>
 						{/if}
@@ -224,7 +235,7 @@
 								<h4>{g.label}</h4>
 								<p class="examples">
 									{#each g.examples as e (e)}
-										<button type="button" class="example" title="Put this in the field" onclick={() => use(e)}>{e}</button>
+										<button type="button" class="example" title="Put this in the field; click again to send it" onclick={() => use(e)}>{e}</button>
 									{/each}
 								</p>
 							</div>
