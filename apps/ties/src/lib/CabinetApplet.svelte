@@ -1588,7 +1588,8 @@
 	// the program's help, a binding whose action reads the cabinet, not the CPU. The OS a
 	// cartridge installs hooks in its own status, the way UNIX would show its process table and
 	// Forth its stacks. Rate-limit it to once a second or so: at UMD, holding ^T down on
-	// autorepeat bogged the system down and raised the very load it reported.
+	// autorepeat bogged the system down and raised the very load it reported. What it shows,
+	// light odometer and load averages included: packages/cabinet/LIGHT-ODOMETER.md.
 	let ttyCfg = $state(untrack(() => ttyConfigFor(programById(programId))));
 	let ttyFont = $state(untrack(() => globalThis.localStorage?.getItem(TTY_FONT_KEY) || 'm'));
 	let ttyHeight = $state(untrack(() => Number(globalThis.localStorage?.getItem(TTY_HEIGHT_KEY)) || 0));

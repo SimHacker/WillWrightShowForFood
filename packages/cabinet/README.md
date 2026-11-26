@@ -299,7 +299,9 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
 - The first Logo turtles, with the children, the Teletypes, the phone line to the AI Lab and the
   room, driven by the period's own Logo from ITS: [LOGO-TURTLE.md](LOGO-TURTLE.md). What preservation asks of the cabinet,
   after David Rosenthal's 2015 report: [PRESERVATION.md](PRESERVATION.md). Slow motion
-  down to the beam and the light pen's photocell: [BEAM-AND-PEN.md](BEAM-AND-PEN.md).
+  down to the beam and the light pen's photocell: [BEAM-AND-PEN.md](BEAM-AND-PEN.md). How much
+  light a program puts on the 340, with load averages and a burn map that ^T shows:
+  [LIGHT-ODOMETER.md](LIGHT-ODOMETER.md).
 - SIMH remains the oracle that the cabinet is checked against.
 - Later, not yet: more DEC machines in the cabinet, each written in TypeScript
   from its SIMH counterpart, CPU by CPU, sharing the PDP-7's framework, devices
