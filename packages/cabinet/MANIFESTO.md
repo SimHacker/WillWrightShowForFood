@@ -43,7 +43,9 @@ run on the host's side, where it is easier to write.
 - **Duplex, line or raw input, key bindings** belong to the teletype, not the program. Each
   cartridge sets them: UNIX is half duplex with SIMH's UNIX key mapping, and Forth is full
   duplex because it echoes itself. ^S and ^Q can stop and start the machine. ^C can send the
-  interrupt that UNIX calls ALT MODE.
+  interrupt that UNIX calls ALT MODE. ^] is the emulator's own prefix, as in telnet and Emacs:
+  the key after it talks to the cabinet, not the program (`^] {` slower, `^] }` faster, `^] ?`
+  the list), and ^] twice sends a ^]. ^T, the system's status, is next.
 - **SIGWINCH for a program that has never heard of it.** Mitch Bradley's Forth breaks the WORDS
   listing at 60 columns, from one constant, `dm60`. The assembler's symbol table tells the
   teletype where that constant is, so when the paper is resized, the teletype writes its width

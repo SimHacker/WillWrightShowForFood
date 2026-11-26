@@ -1571,12 +1571,24 @@
 	 * input raw: every key goes straight to the machine; line: the line is edited here, sent on Return.
 	 * wrap false: long lines scroll sideways; true: they wrap at the right edge.
 	 * upcase true: typed, pasted and spoken text goes in upper case, as on a KSR-33.
-	 * bindings: { 'Ctrl-S': 'stop' | 'go' | { send: code } }.
+	 * bindings: { 'Ctrl-S': 'stop' | 'go' | 'prefix' | { send: code } }.
+	 * 'prefix' is the emulator's own Emacs-style prefix, ^] as in telnet: the key after it is a
+	 * command to the cabinet (EMULATOR_KEYS: { } speed, | 1×, \ pause, [ step, ` ~ dance tempo,
+	 * ? help), and ^] again sends a ^].
 	 */
-	const TTY_DEFAULTS = { duplex: 'half', input: 'raw', wrap: false, upcase: true, bindings: { 'Ctrl-S': 'stop', 'Ctrl-Q': 'go' } };
-	// TODO ^T, as on TOPS-20: print the machine's status (program, PC, cycles, speed, what it waits
-	// on) on the paper without the program's help. The first job of a teletype driver that lives in
-	// the emulator, not in the machine: a binding whose action reads the cabinet, not the CPU.
+	const TTY_DEFAULTS = {
+		duplex: 'half',
+		input: 'raw',
+		wrap: false,
+		upcase: true,
+		bindings: { 'Ctrl-S': 'stop', 'Ctrl-Q': 'go', 'Ctrl-]': 'prefix' }
+	};
+	// TODO ^T, as on TOPS-20 and in the UMD hack to the Unix kernel's tty driver: print the
+	// system's status (program, PC, cycles, speed, load, what it waits on) on the paper without
+	// the program's help, a binding whose action reads the cabinet, not the CPU. The OS a
+	// cartridge installs hooks in its own status, the way UNIX would show its process table and
+	// Forth its stacks. Rate-limit it to once a second or so: at UMD, holding ^T down on
+	// autorepeat bogged the system down and raised the very load it reported.
 	let ttyCfg = $state(untrack(() => ttyConfigFor(programById(programId))));
 	let ttyFont = $state(untrack(() => globalThis.localStorage?.getItem(TTY_FONT_KEY) || 'm'));
 	let ttyHeight = $state(untrack(() => Number(globalThis.localStorage?.getItem(TTY_HEIGHT_KEY)) || 0));
@@ -2011,7 +2023,53 @@
 		}
 	}
 
+	/** The ^] prefix is waiting for its command. */
+	let ttyPrefix = $state(false);
+	/** One line under the paper, as in Emacs's echo area: the prefix, a command done, help. */
+	let ttyEcho = $state('');
+	let ttyEchoTimer = 0;
+	/** @param {string} text */
+	function echo(text, ms = 3000) {
+		ttyEcho = text;
+		clearTimeout(ttyEchoTimer);
+		if (ms) ttyEchoTimer = setTimeout(() => (ttyEcho = ''), ms);
+	}
+
+	/** The key after ^]. @param {KeyboardEvent} e */
+	function prefixKey(e) {
+		if (e.key === 'Shift' || e.key === 'Control' || e.key === 'Alt' || e.key === 'Meta') return;
+		ttyPrefix = false;
+		if (e.ctrlKey && e.key === ']') {
+			ttyType([0o35]);
+			echo('');
+		} else if (e.key === '?') echo(`^] then ${EMULATOR_KEYS_HELP.replace(/^Keys: /, '')}`, 8000);
+		else {
+			const cmd = emulatorKey(e);
+			if (cmd) {
+				runCommand(cmd);
+				echo(`^] ${e.key} ${COMMAND_SAYS[cmd]()}`);
+			} else echo(`^] ${e.key} is undefined. ^] ? for help.`);
+		}
+	}
+
+	/** @type {Record<import('./emulator-keys.js').EmulatorCommand, () => string>} */
+	const COMMAND_SAYS = {
+		slower: () => `slower: ${RATES[rateIndex]?.label ?? ''}`,
+		faster: () => `faster: ${RATES[rateIndex]?.label ?? ''}`,
+		normal: () => '1×',
+		pause: () => (paused ? 'stopped' : 'running'),
+		step: () => 'one instruction',
+		tempoDown: () => `dance ${dance.bpm} bpm`,
+		tempoUp: () => `dance ${dance.bpm} bpm`
+	};
+
 	function onTtyKey(e) {
+		if (ttyPrefix) {
+			e.preventDefault();
+			e.stopPropagation();
+			prefixKey(e);
+			return;
+		}
 		// Copy wins over ^C when something on the paper is selected; ^V is always paste.
 		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'c' && String(globalThis.getSelection?.() ?? '')) return;
 		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'v') return;
@@ -2022,6 +2080,10 @@
 			e.stopPropagation();
 			if (bound === 'stop') paused = true;
 			else if (bound === 'go') paused = false;
+			else if (bound === 'prefix') {
+				ttyPrefix = true;
+				echo('^]-', 0);
+			}
 			else if (typeof bound.send === 'number') ttyType([bound.send]);
 			return;
 		}
@@ -3109,6 +3171,11 @@
 		const t = /** @type {HTMLElement | null} */ (e.target);
 		if (!cmd || e.defaultPrevented || t?.closest?.('input, textarea, select, [contenteditable], [role="textbox"]')) return;
 		e.preventDefault();
+		runCommand(cmd);
+	}
+
+	/** @param {import('./emulator-keys.js').EmulatorCommand} cmd */
+	function runCommand(cmd) {
 		if (cmd === 'tempoDown' || cmd === 'tempoUp') {
 			dance.bpm = nextTempo(dance.bpm, cmd === 'tempoUp' ? 1 : -1);
 			return;
@@ -3957,7 +4024,9 @@
 					aria-label="Teletype. Click, then type. Return is CR, Backspace is RUBOUT. Select text to copy; paste types it."
 					onkeydown={onTtyKey}
 					onpaste={onTtyPaste}
+					onblur={() => ttyPrefix && ((ttyPrefix = false), echo(''))}
 				><pre>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-line-edit">{ttyLine}</span><span class="tty-caret" aria-hidden="true">{ttyLine ? ' ' : (last[ttyCaret] ?? ' ')}</span>{ttyLine ? '' : last.slice(ttyCaret + 1)}</pre></div>
+				<p class="tty-echo" aria-live="polite" title="^] then a key: the emulator's commands. ^] ? lists them.">{ttyEcho || ' '}</p>
 				<button
 					type="button"
 					class="tty-grip"
@@ -5336,6 +5405,15 @@
 	}
 	.tty-cli:focus {
 		outline: 1px solid #9fe8a0;
+	}
+	.tty-echo {
+		margin: 0;
+		min-height: 1.3em;
+		font: 0.8rem/1.3 ui-monospace, monospace;
+		opacity: 0.75;
+		white-space: pre;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.tty-help {
 		margin: 0 0 3px;
