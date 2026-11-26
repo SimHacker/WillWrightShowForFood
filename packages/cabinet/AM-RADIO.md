@@ -185,15 +185,20 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        1, 35/27, 7/5, 5/3, 9/5, 7/3, 25/9, steps 0 3 4 6 7 10 12. The dance plays his I IV V I
        cadence (I is 1 : 5/3 : 7/3, his dominant sits on 5/3), in bars of 13 sixteenths grouped
        4+3+3+3, on odd-harmonic waves, and the pen's tension pulls to his dominant.
-     - EN0 to EN3: four generative layers after Brian Eno, each a bit, on or off by itself, so
-       sixteen mixes; four buttons in a row on both the PDP-7's page and the Apple's. Each is a
-       different track at its own time scale, every note in the chord in force, the lengths
-       primes so nothing lines up with the bar or the others. EN0, *Music for Airports*' tape
-       loops: five of 23, 29, 31, 37 and 41 sixteenths, a tone of the chord each. EN1, a drone:
-       53 and 59, an octave below the pad, after *Discreet Music*'s slow tape delay. EN2, a
-       sparkle: chimes two octaves up at 43, 47 and 61. EN3, voices: three singers at 67, 71
-       and 73, after *Music for Airports* 2/1. A screen angel's mode may still say
-       `loops: true`, which keeps the layers already on, or EN0 if none are.
+     - EN0, EN1, EN2, EN3: Eno tracks (`ENO_TRACKS` and `EnoTrack` in dance.ts), one button
+       and one bit of `Dance.loops` each, so four start as sixteen mixes and a fifth track is one
+       more entry. A track is a generative layer with its own instrument, register, loudness
+       and time scale: loops of prime lengths, a tone of the chord in force each, so nothing
+       lines up with the bar or the other tracks. Every button turns its own track on; none of
+       them is "off". The four to start: EN0, *Music for Airports*' tape loops, five of 23, 29,
+       31, 37 and 41 sixteenths. EN1, a drone, 53 and 59, an octave below the pad, after
+       *Discreet Music*'s slow tape delay. EN2, a sparkle, chimes two octaves up at 43, 47 and
+       61. EN3, voices, three singers at 67, 71 and 73, after *Music for Airports* 2/1.
+     - Machines plug in. An app's adaptor can bring its own track list or parameterize the
+       defaults (`BusDance.tracks`), and can `kick` a track from its own events at its own time
+       scale, a ROM call, a disk seek, a pen hit: the track plays once on the next sixteenth, in
+       its voice and in the chord, and only while its button is on. A screen angel's mode may
+       still say `loops: true`, which keeps the tracks already on, or EN0 if none are.
      - Watches: words in core heard as tracks, by name (the DANCE row's listen field). A name
        is a label or a Forth variable or constant found in the dictionary
        (`src/forth-dict.ts`, both kernels' header layouts). Each gets a quiet beat loop 3 to 7

@@ -10,13 +10,6 @@
 
 	const rates = TEMPOS.map((bpm) => ({ label: String(bpm), title: `${bpm} beats a minute, sixteenths ${Math.round(15000 / bpm)} ms apart` }));
 	const tempoIndex = $derived(Math.max(0, TEMPOS.indexOf(dance.bpm)));
-	// Four layers after Brian Eno, each on or off by itself, all in the chord in force.
-	const ENO = [
-		{ bit: 1, title: "EN0: tape loops after Music for Airports, five of prime lengths, each sounding one tone of the chord, drifting against each other" },
-		{ bit: 2, title: "EN1: a drone, two long loops an octave below, after Discreet Music's slow tape delay" },
-		{ bit: 4, title: 'EN2: a sparkle, three sparse chimes two octaves up' },
-		{ bit: 8, title: 'EN3: voices, three singing a tone each, after Music for Airports 2/1' }
-	];
 </script>
 
 <select
@@ -29,14 +22,15 @@
 		<option value={s.id} title={s.title}>{s.label}</option>
 	{/each}
 </select>
-<span class="eno" role="group" aria-label="Eno layers, each on or off">
-	{#each ENO as e, i (e.bit)}
+<span class="eno" role="group" aria-label="Eno tracks, each on or off">
+	{#each dance.tracks as track, i (track.id)}
+		{@const on = (dance.loops & (1 << i)) !== 0}
 		<button
 			type="button"
-			aria-pressed={(dance.loops & e.bit) !== 0}
-			class={{ chip, on: (dance.loops & e.bit) !== 0 }}
-			title={e.title}
-			onclick={() => dance.toggleLayer(e.bit)}>EN{i}</button
+			aria-pressed={on}
+			class={{ chip, on }}
+			title="{track.label ?? `EN${i}`}: {track.title}. On or off by itself."
+			onclick={() => dance.toggleLayer(1 << i)}>{track.label ?? `EN${i}`}</button
 		>
 	{/each}
 </span>

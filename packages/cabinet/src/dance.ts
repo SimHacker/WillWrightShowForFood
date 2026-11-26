@@ -308,52 +308,88 @@ export const LYDIAN_WALK = harmony(LYDIAN, LYDIAN_I, [chord("iii", 4, 7, 11), ch
 /** Bohlen-Pierce: Kees van Prooijen's three, in any order that comes home. */
 export const BP_WALK = harmony(BP_CADENCE, BP_I, [], { I: "IV V", IV: "V I", V: "I IV" });
 
+/** One loop of an Eno track: a tone of the chord in force, once every `length` sixteenths from `at`, `up` octaves higher. */
+export type EnoLoop = { readonly length: number; readonly at: number; readonly tone: number; readonly up?: number; readonly pan?: number };
+
 /**
- * Tape loops after Brian Eno's Music for Airports: each sounds one tone of the chord in force,
- * once every `length` sixteenths, from `at`. The lengths are primes, so the loops drift against
- * each other and the bar and come round together only after their product, about 36 million
- * sixteenths; what they play is always in the harmony.
+ * An Eno track: a generative layer with its own instrument, register and time scale. Its loops
+ * play by themselves while it is on; a machine's adaptor can also `kick` it from its own events
+ * (a ROM call, a disk seek, a light-pen hit), and the kick plays in the track's voice, in the
+ * chord, on the next sixteenth. The lengths are primes, so loops drift against each other and
+ * the bar and come round together only after their product.
  */
-export const LOOPS: readonly { readonly length: number; readonly at: number; readonly tone: number; readonly up: number }[] = [
-	{ length: 23, at: 0, tone: 0, up: 0 },
-	{ length: 29, at: 7, tone: 1, up: 0 },
-	{ length: 31, at: 13, tone: 2, up: 0 },
+export type EnoTrack = {
+	readonly id: string;
+	readonly label?: string;
+	readonly title: string;
+	readonly timbre: Timbre;
+	readonly root: number;
+	readonly velocity: number;
+	readonly loops: readonly EnoLoop[];
+};
+
+/** Music for Airports' tape loops: five, about 36 million sixteenths before they line up again. */
+export const LOOPS: readonly EnoLoop[] = [
+	{ length: 23, at: 0, tone: 0 },
+	{ length: 29, at: 7, tone: 1 },
+	{ length: 31, at: 13, tone: 2 },
 	{ length: 37, at: 19, tone: 0, up: 1 },
 	{ length: 41, at: 3, tone: 1, up: 1 },
 ];
 
 /**
- * The Eno layers, four bits, each on or off by itself: EN0 the tape loops, EN1 a drone under
- * them, EN2 a sparkle over, EN3 wordless voices. 0 is none, 15 all four.
+ * The tracks every machine starts with, EN0 up: each a bit of `Dance.loops`, on or off by
+ * itself. More can be added, and a machine can bring its own list (`Dance.tracks`).
  */
+export const ENO_TRACKS: readonly EnoTrack[] = [
+	{ id: "airports", title: "tape loops after Music for Airports, five of prime lengths, each sounding one tone of the chord, drifting against each other", timbre: "glass", root: 72, velocity: 0.5, loops: LOOPS },
+	{
+		id: "drone",
+		title: "a drone, two long loops an octave below, after Discreet Music's slow tape delay",
+		timbre: "pad",
+		root: 48,
+		velocity: 0.4,
+		loops: [
+			{ length: 53, at: 5, tone: 0, pan: -0.3 },
+			{ length: 59, at: 31, tone: 2, pan: 0.3 },
+		],
+	},
+	{
+		// The bell is the light pen's, so the sparkle is chimes.
+		id: "sparkle",
+		title: "a sparkle, three sparse chimes two octaves up",
+		timbre: "chime",
+		root: 72,
+		velocity: 0.25,
+		loops: [
+			{ length: 43, at: 11, tone: 1, up: 2 },
+			{ length: 47, at: 23, tone: 2, up: 2 },
+			{ length: 61, at: 41, tone: 0, up: 2 },
+		],
+	},
+	{
+		id: "voices",
+		title: "voices, three singing a tone each, after Music for Airports 2/1",
+		timbre: "sing",
+		root: 60,
+		velocity: 0.3,
+		loops: [
+			{ length: 67, at: 17, tone: 0, pan: -1 },
+			{ length: 71, at: 37, tone: 1, pan: 0 },
+			{ length: 73, at: 53, tone: 2, pan: 1 },
+		],
+	},
+];
+
+/** The tracks on, as bits of `Dance.loops`: track n is bit n. */
 export type Eno = number;
 export const EN0 = 1, EN1 = 2, EN2 = 4, EN3 = 8;
 
-/** EN1: two long loops an octave below the pad, after Discreet Music's slow tape delay. */
-export const DRONES: readonly { readonly length: number; readonly at: number; readonly tone: number }[] = [
-	{ length: 53, at: 5, tone: 0 },
-	{ length: 59, at: 31, tone: 2 },
-];
-
-/** EN2: three sparse chimes two octaves up (the bell is the light pen's), prime lengths again, so they drift with the rest. */
-export const SPARKLES: readonly { readonly length: number; readonly at: number; readonly tone: number }[] = [
-	{ length: 43, at: 11, tone: 1 },
-	{ length: 47, at: 23, tone: 2 },
-	{ length: 61, at: 41, tone: 0 },
-];
-
-/** EN3: three voices singing a tone each, after Music for Airports 2/1, slower still. */
-export const VOICES: readonly { readonly length: number; readonly at: number; readonly tone: number }[] = [
-	{ length: 67, at: 17, tone: 0 },
-	{ length: 71, at: 37, tone: 1 },
-	{ length: 73, at: 53, tone: 2 },
-];
-
-/** A mode's `loops`, layers or the old on and off, as layers; on keeps the layers already on. */
+/** A mode's `loops`, tracks as bits or the old on and off; on keeps the tracks already on, or turns on EN0. */
 export function enoLayers(loops: boolean | number | undefined, now: Eno = 0): Eno {
 	if (loops === true) return now || EN0;
 	if (!loops) return 0;
-	return Math.round(loops) & 15;
+	return Math.round(loops) >>> 0;
 }
 
 /** What the person at the console did, as the dance hears it. */
@@ -581,8 +617,21 @@ export class Dance {
 	/** Sixteenths since the dance began. */
 	step = 0;
 	style: Style = "straight";
-	/** The Eno layers on, as bits: EN0 the tape loops, EN1 the drone, EN2 the sparkle, EN3 the voices. */
+	/** The Eno tracks on, as bits: track n of `tracks` is bit n. */
 	loops: Eno = 0;
+	/** The Eno tracks, EN0 first; a machine may bring its own. */
+	tracks: readonly EnoTrack[] = ENO_TRACKS;
+	/** Notes a machine has asked of a track since the last sixteenth. */
+	private kicks: { track: number; loop: EnoLoop; weight: number }[] = [];
+
+	/**
+	 * A machine's event plays track `track` once, on the next sixteenth, in the chord: `tone`
+	 * picks the chord's tone, `weight` scales the track's loudness. Heard only while the track is on.
+	 */
+	kick(track: number, tone = 0, weight = 1, up = 0, pan?: number): void {
+		if (!(this.loops & (1 << track)) || this.kicks.length >= 16) return;
+		this.kicks.push({ track, loop: pan === undefined ? { length: 0, at: 0, tone, up } : { length: 0, at: 0, tone, up, pan }, weight: Math.max(0, Math.min(1, weight)) });
+	}
 	/** 0 to 1: how far the pen has pulled the harmony away from home. */
 	tension = 0;
 	/** The rim click's shift, in steps; each key moves it one. */
@@ -1051,22 +1100,14 @@ export class Dance {
 			notes.push({ voice: "reply", timbre: "beep", midi: pitch({ id: "reply", label: "", timbre: "beep", root: 72, octaves: 2, pan: 0, most: 1 }, r.key, tones, t), velocity: 0.7 - 0.15 * r.i, pan: 0.5 - 0.5 * r.i, order: 0 });
 		this.replies = this.replies.filter((r) => r.at > step);
 		const toneOf = (i: number) => tones[i % tones.length] ?? 0;
-		if (this.loops & EN0)
-			for (const l of LOOPS)
-				if (step % l.length === l.at % l.length)
-					notes.push({ voice: "loops", timbre: "glass", midi: midiAt(72, toneOf(l.tone) + l.up * t.steps, t), velocity: 0.5, pan: (l.length % 5) / 2 - 1, order: 0 });
-		if (this.loops & EN1)
-			for (const l of DRONES)
-				if (step % l.length === l.at)
-					notes.push({ voice: "loops", timbre: "pad", midi: midiAt(48, toneOf(l.tone), t), velocity: 0.4, pan: l.tone ? 0.3 : -0.3, order: 0 });
-		if (this.loops & EN2)
-			for (const l of SPARKLES)
-				if (step % l.length === l.at)
-					notes.push({ voice: "loops", timbre: "chime", midi: midiAt(72, toneOf(l.tone) + 2 * t.steps, t), velocity: 0.25, pan: (l.length % 3) - 1, order: 0 });
-		if (this.loops & EN3)
-			for (const l of VOICES)
-				if (step % l.length === l.at)
-					notes.push({ voice: "loops", timbre: "sing", midi: midiAt(60, toneOf(l.tone), t), velocity: 0.3, pan: l.tone - 1, order: 0 });
+		this.tracks.forEach((track, n) => {
+			if (!(this.loops & (1 << n))) return;
+			const play = (l: EnoLoop, velocity: number) =>
+				notes.push({ voice: "loops", timbre: track.timbre, midi: midiAt(track.root, toneOf(l.tone) + (l.up ?? 0) * t.steps, t), velocity, pan: l.pan ?? (l.length ? (l.length % 5) / 2 - 1 : 0), order: 0 });
+			for (const l of track.loops) if (step % l.length === l.at % l.length) play(l, track.velocity);
+			for (const k of this.kicks.filter((k) => k.track === n)) play(k.loop, track.velocity * k.weight);
+		});
+		this.kicks = [];
 		const drive = Math.min(1, (load ?? 0) + 0.5 * this.tension);
 		if (drive > 0 && (load ?? 0) > 0) {
 			const lead = hits[this.voices[0]?.id ?? ""] ?? [];

@@ -3,7 +3,7 @@
 // working and how full it is; call `frame` from its animation loop, and `touch` with what the
 // person at the console does. See AM-RADIO.md, approach 8.
 
-import { Dance, Regions, enoLayers, twistLabel } from '@wwsff/cabinet/dance';
+import { Dance, ENO_TRACKS, Regions, enoLayers, twistLabel } from '@wwsff/cabinet/dance';
 import { DancePlayer, TEMPOS, sixteenth } from './dance-player.js';
 
 /** @typedef {import('@wwsff/cabinet/dance').Voice} Voice */
@@ -63,6 +63,8 @@ export class BusDance {
 	twist = $state('');
 	player = new DancePlayer();
 	#dance;
+	/** @type {readonly import('@wwsff/cabinet/dance').EnoTrack[]} */
+	#tracks = $state.raw(ENO_TRACKS);
 	#engine;
 	#last = 0;
 
@@ -127,7 +129,21 @@ export class BusDance {
 		this.#save();
 	}
 
-	/** Turn one Eno layer on or off. @param {number} bit */
+	/** The Eno tracks, EN0 first, one button each. */
+	get tracks() {
+		return this.#tracks;
+	}
+	/** A machine brings its own tracks, or parameterizes the defaults. @param {readonly import('@wwsff/cabinet/dance').EnoTrack[]} list */
+	set tracks(list) {
+		this.#tracks = list;
+		this.#dance.tracks = list;
+	}
+	/** A machine's event plays an Eno track once, in the chord, if the track is on. @param {number} track @param {number} [tone] @param {number} [weight] */
+	kick(track, tone = 0, weight = 1) {
+		this.#dance.kick(track, tone, weight);
+	}
+
+	/** Turn one Eno track on or off. @param {number} bit */
 	toggleLayer(bit) {
 		this.loops = this.#dance.loops = this.loops ^ bit;
 		this.#save();
