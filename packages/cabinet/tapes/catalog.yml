@@ -91,7 +91,7 @@ entries:
   - id: unix
     title: PDP-7 UNIX
     path: systems/pdp-7-unix
-    description: "PDP-7 UNIX, Thompson and Ritchie, from the pdp7-unix restoration: booted off an emulated RB09 disk. Log in as ken, password ken."
+    description: "PDP-7 UNIX, Thompson and Ritchie, from the pdp7-unix restoration: booted off an emulated RB09 disk. Log in as ken or dmr, the password the same."
     tags: { year: 1969, by: [ken-thompson, dennis-ritchie] }
     runs: { program: unix }
     was: [unix]

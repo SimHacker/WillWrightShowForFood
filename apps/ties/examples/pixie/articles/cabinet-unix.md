@@ -2,7 +2,7 @@
 title: UNIX v0 on the cabinet
 synonyms:
   - cabinet-unix
-definition: "PDP-7 UNIX, 1969, booting from an emulated RB09 disk in this page. Log in as ken, password ken."
+definition: "PDP-7 UNIX, 1969, booting from an emulated RB09 disk in this page. Log in as ken or dmr, the password the same."
 ---
 
 Thompson and Ritchie's first UNIX, as the pdp7-unix project rebuilt it from the listings, booted the way the Bell Labs machine booted it: a paper-tape bootstrap reads the system off track 180 of an RB09 fixed-head disk. See ~UNIX v0~ for how the disk was emulated.

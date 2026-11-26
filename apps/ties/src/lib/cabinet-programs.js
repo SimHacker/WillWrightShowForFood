@@ -613,9 +613,9 @@ export const PROGRAMS = [
 		id: 'unix',
 		label: 'PDP-7 UNIX (1969)',
 		listing: { user: 'ken' },
-		title: 'PDP-7 UNIX, Thompson and Ritchie, from the pdp7-unix restoration: booted off an emulated RB09 disk. Log in as ken, password ken.',
+		title: 'PDP-7 UNIX, Thompson and Ritchie, from the pdp7-unix restoration: booted off an emulated RB09 disk. Log in as ken or dmr, the password the same.',
 		help: {
-			text: 'Log in as ken, password ken, in lower case. Then try ls, ls system, date, cat sys.rc. ^C interrupts.',
+			text: 'Log in as ken, password ken, in lower case. Then try ls, ls system, date, cat sys.rc. Or log in as dmr, password dmr: his files are B. cat hello.b, then cat b_readme, which compiles it. ^C interrupts.',
 			links: [
 				{ label: 'more', href: `${CABINET}/UNIX-V0.md` },
 				{ label: 'pdp7-unix', href: 'https://github.com/DoctorWkt/pdp7-unix#readme' }
