@@ -2,9 +2,9 @@
 	/**
 	 * A notched speed slider: drag the puck, click a notch, or use the arrow keys.
 	 * `rates` runs slowest first; a rate with `trace` set is drawn in the trace color.
-	 * @type {{ rates: { label: string, title: string, trace?: unknown }[], index: number, onpick: (i: number) => void, label?: string }}
+	 * @type {{ rates: { label: string, title: string, trace?: unknown }[], index: number, onpick: (i: number) => void, label?: string, keys?: string }}
 	 */
-	let { rates, index, onpick, label = 'Speed, slowest to fastest' } = $props();
+	let { rates, index, onpick, label = 'Speed, slowest to fastest', keys = '' } = $props();
 
 	const NOTCH = 14;
 	const PUCK = 40;
@@ -52,7 +52,7 @@
 	aria-valuemax={rates.length - 1}
 	aria-valuenow={index}
 	aria-valuetext={rates[index]?.title}
-	title="{rates[index]?.title}. Drag, or use the arrow keys."
+	title="{rates[index]?.title}. Drag, or use the arrow keys.{keys ? ` ${keys}` : ''}"
 	style:width="{(rates.length - 1) * NOTCH + PUCK}px"
 	onpointerdown={down}
 	onpointermove={(e) => dragging && pick(at(e))}

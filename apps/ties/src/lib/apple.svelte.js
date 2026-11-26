@@ -141,6 +141,18 @@ class AppleEngine {
 	get traceMs() {
 		return this.#traceMs;
 	}
+	/** Held still, on the Korz Apple; microM8 has no pause. */
+	get paused() {
+		return this.id !== 'microm8' && korzApple.paused;
+	}
+	pause(v = !this.paused) {
+		if (this.id !== 'microm8') korzApple.paused = v;
+	}
+	/** One instruction, then held still. */
+	stepOne() {
+		if (this.id !== 'microm8') korzApple.stepOne();
+	}
+
 	/** @param {number} ms */
 	trace(ms) {
 		if (this.id === 'microm8') return;
@@ -245,7 +257,7 @@ class AppleEngine {
 		if (this.id === 'microm8') microM8.speed(warp);
 		// Faster than the Apple, the speaker plays game time in snatches: quieter as it gets
 		// choppier, and off past 8x, where it is only clicks. Slower, each speaker stretches its
-		// samples to the time that passes, so every click is heard when it comes.
+		// samples to the time that passes, down to the Korz speaker's slowest (SPEAKER_SPEEDS).
 		const volume = warp >= 8 ? 0.25 : warp >= 4 ? 0.6 : 1;
 		microM8.volume = volume;
 		korzApple.volume = volume;

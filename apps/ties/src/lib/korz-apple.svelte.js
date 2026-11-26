@@ -171,6 +171,8 @@ class KorzApple {
 	warp = $state(1);
 	/** Trace pace: one instruction every this many ms, the views following; 0 runs by `warp`. */
 	traceMs = 0;
+	/** Held still: the frames go on, the 6502 doesn't, but for `stepOne`. */
+	paused = $state(false);
 	#traceOwed = 0;
 	/** Pictures per game second while running flat out. 0 paints every animation frame. */
 	picturesPerSecond = 0;
@@ -477,6 +479,16 @@ class KorzApple {
 		return { load: speedLoad(ratio), fill: board ? applesoftFree(board.ram) : 0 };
 	}
 
+	/** One instruction, then held still. */
+	stepOne() {
+		const board = this.#board;
+		if (!board) return;
+		this.paused = true;
+		this.#step(board.cycles + 1);
+		this.#heard = board.cycles;
+		this.#paint();
+	}
+
 	/** @param {number} [_now] */
 	#run(_now) {
 		const board = this.#board;
@@ -487,6 +499,12 @@ class KorzApple {
 		const budget = start + 12;
 		const dt = this.#last ? Math.min(50, start - this.#last) : 1000 / 60;
 		this.#last = start;
+		if (this.paused) {
+			this.#traceOwed = 0;
+			this.#heard = board.cycles;
+			this.#paint();
+			return;
+		}
 		if (this.traceMs > 0) {
 			this.#traceOwed = Math.min(this.#traceOwed + dt, 4 * this.traceMs);
 			while (this.#traceOwed >= this.traceMs) {

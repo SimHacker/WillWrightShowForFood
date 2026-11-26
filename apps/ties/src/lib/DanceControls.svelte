@@ -40,7 +40,7 @@
 		onkeydown={(e) => e.stopPropagation()}
 	/>
 {/if}
-<RateSlider label="Dance tempo, slowest to fastest" {rates} index={tempoIndex} onpick={(i) => (dance.bpm = TEMPOS[i] ?? 120)} />
+<RateSlider label="Dance tempo, slowest to fastest" keys="Keys: ` slower, ~ faster." {rates} index={tempoIndex} onpick={(i) => (dance.bpm = TEMPOS[i] ?? 120)} />
 {#if twist}
 	<span class="twist" title="The front panel's switches twist the music: their word is hashed, so every combination skews, phases and picks its own effects. All off is the plain dance."
 		>switches: {dance.twist || 'all off, plain'}</span

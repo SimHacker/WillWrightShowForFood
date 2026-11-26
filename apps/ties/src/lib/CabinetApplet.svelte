@@ -51,6 +51,7 @@
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
 	import RateSlider from './RateSlider.svelte';
+	import { EMULATOR_KEYS_HELP, emulatorKey, nextTempo } from './emulator-keys.js';
 	import DanceControls from './DanceControls.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
 	import { Deltas, PDP7_VOICES, Tally, pages, watchedName } from '@wwsff/cabinet/dance';
@@ -3102,6 +3103,24 @@
 		recorder?.record(box.cycles, 'sw', switches);
 	}
 
+	/** The emulator's own keys, anywhere but a field or the teletype's paper. @param {KeyboardEvent} e */
+	function onCommandKey(e) {
+		const cmd = emulatorKey(e);
+		const t = /** @type {HTMLElement | null} */ (e.target);
+		if (!cmd || e.defaultPrevented || t?.closest?.('input, textarea, select, [contenteditable], [role="textbox"]')) return;
+		e.preventDefault();
+		if (cmd === 'tempoDown' || cmd === 'tempoUp') {
+			dance.bpm = nextTempo(dance.bpm, cmd === 'tempoUp' ? 1 : -1);
+			return;
+		}
+		if (status !== 'live') return;
+		if (player && !demoHeld) holdDemo();
+		if (cmd === 'slower' || cmd === 'faster') setRate(rateIndex + (cmd === 'faster' ? 1 : -1));
+		else if (cmd === 'normal') setSpeed(1);
+		else if (cmd === 'pause') paused = !paused;
+		else onStep();
+	}
+
 	function releaseKeys() {
 		for (const code of [...held]) onKey({ code, preventDefault() {} }, false);
 	}
@@ -3171,6 +3190,8 @@
 		};
 	});
 </script>
+
+<svelte:window onkeydown={onCommandKey} />
 
 {#if spec.title}
 	<p class="headline"><strong>{spec.title}</strong></p>
@@ -3648,7 +3669,7 @@
 					class="icon"
 					aria-label={paused ? 'Run' : 'Stop'}
 					disabled={status !== 'live'}
-					title={paused ? 'Run: continue from where the machine stopped' : 'Stop the processor'}
+					title={paused ? 'Run: continue from where the machine stopped (\\)' : 'Stop the processor (\\)'}
 					onclick={() => (paused = !paused)}>{paused ? '▶️' : '⏸️'}</button
 				>
 				<button
@@ -3656,10 +3677,10 @@
 					class="icon"
 					aria-label="Step"
 					disabled={status !== 'live' || demoDriving}
-					title="Step: stop, then execute one instruction"
+					title="Step: stop, then execute one instruction ([)"
 					onclick={onStep}>⏭️</button
 				>
-				<RateSlider rates={RATES} index={rateIndex} onpick={setRate} />
+				<RateSlider rates={RATES} index={rateIndex} onpick={setRate} keys={EMULATOR_KEYS_HELP} />
 				<button
 					type="button"
 					class="chip"

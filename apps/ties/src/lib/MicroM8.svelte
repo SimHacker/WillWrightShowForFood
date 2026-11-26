@@ -25,6 +25,7 @@
 	import RateSlider from './RateSlider.svelte';
 	import DanceControls from './DanceControls.svelte';
 	import { APPLE_HZ } from '@wwsff/cabinet/angel';
+	import { EMULATOR_KEYS_HELP, emulatorKey, nextTempo } from './emulator-keys.js';
 
 	/** @typedef {{ name: string, label?: string, profile?: string, url: () => Promise<string> }} Disk */
 	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, panels?: boolean }} */
@@ -51,7 +52,7 @@
 					? 'As fast as this computer can go, showing a picture each Apple second'
 					: w === 1
 						? `1× is a real Apple ][: ${APPLE_HZ.toLocaleString('en-US')} cycles a second`
-						: `${w}× an Apple ][: ${Math.round(APPLE_HZ * w).toLocaleString('en-US')} cycles a second${w > 8 ? ', and the speaker is off' : w < 1 ? ', and the speaker clicks as slowly' : ''}`
+						: `${w}× an Apple ][: ${Math.round(APPLE_HZ * w).toLocaleString('en-US')} cycles a second${w > 8 ? ', and the speaker is off' : w < 0.01 ? ', and the speaker is quiet' : w < 1 ? ', and the speaker clicks as slowly' : ''}`
 		}))
 	]);
 	const rateIndex = $derived.by(() => {
@@ -180,11 +181,26 @@
 		if (file) insert(file.name, await file.arrayBuffer());
 	}
 
+	/** @param {import('./emulator-keys.js').EmulatorCommand} cmd */
+	function command(cmd) {
+		if (cmd === 'slower' || cmd === 'faster') pickRate(Math.max(0, Math.min(rates.length - 1, rateIndex + (cmd === 'faster' ? 1 : -1))));
+		else if (cmd === 'normal') apple.speed(1);
+		else if (cmd === 'pause') apple.pause();
+		else if (cmd === 'step') apple.stepOne();
+		else if (apple.dance) apple.dance.bpm = nextTempo(apple.dance.bpm, cmd === 'tempoUp' ? 1 : -1);
+	}
+
 	/** @param {KeyboardEvent} ev */
 	function onkeydown(ev) {
 		// In the screen angel's field the game's control keys still reach the Apple.
 		const chat = !!apple.chat && document.activeElement === apple.chat;
 		if (!(engaged || chat) || ev.defaultPrevented) return;
+		const cmd = emulatorKey(ev);
+		if (cmd && (chat || !(isField(ev.target) || isField(document.activeElement)))) {
+			ev.preventDefault();
+			command(cmd);
+			return;
+		}
 		if ((isField(ev.target) || isField(document.activeElement)) && !(chat && ev.ctrlKey)) return;
 		apple.listen();
 		if (ev.key === 'Alt') {
@@ -375,7 +391,13 @@
 				<DanceControls {dance} twist={!!apple.panel} />
 			{/if}
 		{/if}
-		<RateSlider rates={rates} index={rateIndex} onpick={pickRate} />
+		<RateSlider rates={rates} index={rateIndex} onpick={pickRate} keys={EMULATOR_KEYS_HELP} />
+		{#if apple.id !== 'microm8'}
+			<button aria-pressed={apple.paused} title={apple.paused ? 'Go on (\\)' : 'Hold the 6502 still (\\)'} onclick={() => (apple.pause(), canvas?.focus())}
+				>{apple.paused ? '▶️' : '⏸️'}</button
+			>
+			<button title="One instruction, then hold ([)" onclick={() => (apple.stepOne(), canvas?.focus())}>⏭️</button>
+		{/if}
 		<button
 			class={{ on: apple.mouseStick }}
 			aria-pressed={apple.mouseStick}
