@@ -71,9 +71,19 @@ right end (the speed readout) sits under the screen's corner.
   reboot, Ctrl-Reset, pause, step, speed, mute, Caps Lock, joystick at the left; the speed
   readout at the right). A default the person's toolbar has never had (one added since they
   arranged it) joins it; one they took out stays out.
-- **Two ends.** The row has a left end and a right end, each a list in its own order. Dropping
-  an item on another moves it there, at that one's end; dropping it on an end's free space
-  puts it last there. While dragging, both ends show where a drop lands, an empty one too.
+- **Layouts, and dragging between them.** The row has a left end and a right end, each a list
+  in its own order, and the panels' column is a third: each is a layout, and a drop is a
+  layout and a place in it, so moving from one end to the other is the same move as along
+  one. A control lands on the end on the pointer's side of the row's middle (a little above
+  or below the row counts), a panel in the column.
+- **While dragging**, the lifted item dims where it was and a picture of it goes with the
+  pointer (of a panel, a small chip with its title, as the whole panel would hide where it is
+  going). Where it would land, room its size opens, dashed, and closes again as the pointer
+  moves on; where it already is, nothing opens. Places are found against where everything
+  stood when the drag began, with the open room counted in, so the room is part of its own
+  target (wider, easier to hit) and opening it never moves what the pointer is over: no
+  flicker between two places. The room opens and closes in 0.16 s, at once with reduced
+  motion. The ends show their outlines while a control is dragged, an empty end too.
 - **Handles, anchored.** Each item's handles float just above it, touching its top edge, over
   everything (the screen too, so nothing clips them), with a ring of ink and then paper so they
   show on any background. The ⠿ hangs from the top-left (drag to move; click to go home), the
@@ -148,6 +158,17 @@ catalog), paper on a light one (`/apple2/`). New panes use the same variables.
 
 ## To come
 
+- **The current target, and dragging the 📌.** Today there is one place that receives things,
+  the machine's toolbar, so it is the current target, and the 📌 and ⏏️ by a control or panel
+  in the outline know what they act on. A click on the 📌 is shorthand for dragging it to the
+  end of the current target's layout that takes its kind. Next, the 📌 itself drags: it
+  carries a new instance of the control from the warehouse to any place that can receive it,
+  with the same lifting, room opening and drop as moving an item within a layout. When there
+  are many places (more toolbars, containers, windows, pie menus), a way to choose the
+  current target comes with them, so the click keeps a meaning.
+- **More anchors on the item**: today `top-left` (⠿) and `top-right` (⏏️). The other corners
+  and the edges' middles take more handles; layouts anchored at points of a container (its
+  ends, its middle, its edges) take items, and a drag between any two is one move.
 - **Pie menus** layer onto this: the outline and the toolbar are the base they bring closer to
   the hand. A pie menu on a control or panel offers where to put it.
 - **Embeddings with their own view state.** Today an id is one control or panel, and the

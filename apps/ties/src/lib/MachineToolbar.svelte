@@ -13,6 +13,13 @@
 	 * the edges' middles) and more handles come later, and a ring of them is a pie menu.
 	 * ⌘-click (Ctrl-click off a Mac) on the item itself also goes to its home, as an editor's
 	 * ⌘-click goes to a definition.
+	 *
+	 * Dragging: the row's two ends and the panels' column are layouts, and a drop is a layout and
+	 * a place in it, so from one end to the other is the same move as along one. The lifted item
+	 * dims where it was and a picture of it (of a panel, a small chip) goes with the pointer;
+	 * where it would land a gap its size opens, and closes again as the pointer goes on. Places
+	 * are found against where everything stood when the drag began, with the open gap counted
+	 * in: its width is part of its target, and opening it never moves what the pointer is over.
 	 */
 	/** @type {{ bar: import('./toolbar.svelte.js').Toolbar, label: string }} */
 	let { bar, label } = $props();
@@ -53,43 +60,139 @@
 	}
 
 	const DRAG = 'text/x-toolbar-item';
-	/** The item a drag is over, to mark where it would go; or an end of the row. */
-	let over = $state('');
-	let dragging = $state(false);
+	/** @typedef {'left' | 'right' | 'panels'} Layout */
+	const lists = $derived({
+		left: left.map((c) => c.id),
+		right: right.map((c) => c.id),
+		panels: panels.map((c) => c.id)
+	});
 
-	/** @param {DragEvent} e @param {string} id */
-	function start(e, id) {
-		e.dataTransfer?.setData(DRAG, id);
-		if (e.dataTransfer) e.dataTransfer.effectAllowed = 'move';
-		dragging = true;
+	/**
+	 * The item being dragged: the layout it came from, its place there, its width, and the room
+	 * it takes with its spacing.
+	 * @type {{ id: string, from: Layout, at: number, width: number, room: number } | null}
+	 */
+	let lift = $state(null);
+	/** Where it would land: a layout, and a place in it counting the lifted one. @type {{ layout: Layout, at: number } | null} */
+	let spot = $state(null);
+	/** Where the layouts and their items stood when the drag began. @type {{ box: DOMRect, layouts: Record<string, { box: DOMRect, items: DOMRect[] }> } | null} */
+	let geo = null;
+	/** @type {HTMLElement | undefined} */
+	let root = $state();
+	/** @type {ReturnType<typeof setTimeout> | undefined} */
+	let lifting;
+
+	/** Whether a drop at this place moves the item: not where it already is. @param {Layout} layout @param {number} at */
+	function moves(layout, at) {
+		return !(lift && lift.from === layout && (at === lift.at || at === lift.at + 1));
+	}
+	/** @param {Layout} layout @param {number} at */
+	function open(layout, at) {
+		return !!spot && spot.layout === layout && spot.at === at && moves(layout, at);
+	}
+
+	function measure() {
+		/** @type {Record<string, { box: DOMRect, items: DOMRect[] }>} */
+		const layouts = {};
+		for (const el of /** @type {HTMLElement} */ (root).querySelectorAll('[data-layout]')) {
+			const items = [...el.querySelectorAll(':scope > [data-item]')].map((i) => i.getBoundingClientRect());
+			layouts[/** @type {string} */ (/** @type {HTMLElement} */ (el).dataset.layout)] = { box: el.getBoundingClientRect(), items };
+		}
+		return { box: /** @type {HTMLElement} */ (root).getBoundingClientRect(), layouts };
+	}
+
+	/**
+	 * The picture that goes with the pointer is taken as dragstart returns, so the item is dimmed
+	 * a moment later.
+	 * @param {DragEvent} e @param {string} id @param {Layout} layout
+	 */
+	function start(e, id, layout) {
+		const dt = e.dataTransfer;
+		if (!dt || !root) return;
+		dt.setData(DRAG, id);
+		dt.effectAllowed = 'move';
+		const item = /** @type {HTMLElement} */ (/** @type {HTMLElement} */ (e.currentTarget).closest('[data-item]'));
+		const box = item.getBoundingClientRect();
+		const proxy = layout === 'panels' ? item.querySelector('.proxy') : null;
+		if (proxy) dt.setDragImage(proxy, 12, 10);
+		else dt.setDragImage(item, Math.max(0, e.clientX - box.left), Math.max(0, e.clientY - box.top));
+		geo = measure();
+		const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+		const at = lists[layout].indexOf(id);
+		const room = layout === 'panels' ? 2.4 * rem : box.width + 0.4 * rem;
+		clearTimeout(lifting);
+		lifting = setTimeout(() => {
+			lift = { id, from: layout, at, width: box.width, room };
+			spot = { layout, at };
+		});
 	}
 	function end() {
-		dragging = false;
-		over = '';
+		clearTimeout(lifting);
+		lift = null;
+		spot = null;
+		geo = null;
 	}
-	/** @param {DragEvent} e @param {string} id */
-	function dragover(e, id) {
-		if (!e.dataTransfer?.types.includes(DRAG)) return;
+
+	/**
+	 * The place under the pointer, or none. A control lands on the end on the pointer's side of
+	 * the row's middle, a little above or below the row too; a panel in the column. Within a
+	 * layout, an item is before the pointer if its middle is, the open gap's room added to the
+	 * items it pushed along (on the right end those before it, pushed left).
+	 * @param {number} x @param {number} y @returns {{ layout: Layout, at: number } | null}
+	 */
+	function where(x, y) {
+		if (!geo || !lift) return null;
+		const slack = 32;
+		if (x < geo.box.left - slack || x > geo.box.right + slack) return null;
+		/** @type {Layout} */
+		let layout;
+		if (lift.from === 'panels') {
+			const col = geo.layouts.panels;
+			if (!col || y < col.box.top - slack || y > col.box.bottom + 2 * slack) return null;
+			layout = 'panels';
+		} else {
+			const l = geo.layouts.left.box;
+			const r = geo.layouts.right.box;
+			if (y < Math.min(l.top, r.top) - 1.5 * slack || y > Math.max(l.bottom, r.bottom) + slack) return null;
+			layout = x < (l.right + r.left) / 2 ? 'left' : 'right';
+		}
+		const gap = spot && spot.layout === layout && open(layout, spot.at) ? spot.at : -1;
+		const room = lift.room;
+		let at = 0;
+		geo.layouts[layout].items.forEach((b, i) => {
+			const shift = gap < 0 ? 0 : layout === 'right' ? (i < gap ? -room : 0) : i >= gap ? room : 0;
+			const cy = b.top + b.height / 2;
+			const before =
+				layout === 'panels'
+					? cy + shift < y
+					: Math.abs(cy - y) <= b.height / 2
+						? b.left + b.width / 2 + shift < x
+						: cy < y;
+			if (before) at = i + 1;
+		});
+		return { layout, at };
+	}
+
+	/** @param {DragEvent} e */
+	function track(e) {
+		if (!lift || !e.dataTransfer?.types.includes(DRAG)) return;
+		const s = where(e.clientX, e.clientY);
+		if (s?.layout !== spot?.layout || s?.at !== spot?.at) spot = s;
+		if (!s) return;
+		e.preventDefault();
+		e.dataTransfer.dropEffect = 'move';
+	}
+	/** A drop anywhere a place was found, over the screen too, caught before what is under it. @param {DragEvent} e */
+	function drop(e) {
+		if (!lift || !e.dataTransfer?.types.includes(DRAG)) return;
 		e.preventDefault();
 		e.stopPropagation();
-		over = id;
-	}
-	/** @param {DragEvent} e @param {string} id */
-	function drop(e, id) {
-		over = '';
-		const from = e.dataTransfer?.getData(DRAG);
-		e.stopPropagation();
-		if (!from || from === id) return;
-		e.preventDefault();
-		bar.move(from, id);
-	}
-	/** A drop on an end's free space puts it last at that end. @param {DragEvent} e @param {'left' | 'right'} side */
-	function dropAt(e, side) {
-		over = '';
-		const from = e.dataTransfer?.getData(DRAG);
-		if (!from) return;
-		e.preventDefault();
-		bar.toSide(from, side);
+		if (spot && moves(spot.layout, spot.at)) {
+			const before = lists[spot.layout][spot.at];
+			if (before) bar.move(lift.id, before);
+			else bar.toSide(lift.id, spot.layout === 'right' ? 'right' : 'left');
+		}
+		end();
 	}
 	/** @param {KeyboardEvent} e @param {string} id @param {'row' | 'column'} way */
 	function key(e, id, way) {
@@ -103,7 +206,8 @@
 	}
 </script>
 
-{#snippet handles(/** @type {{ id: string, label: string }} */ c, /** @type {'row' | 'column'} */ way)}
+{#snippet handles(/** @type {{ id: string, label: string }} */ c, /** @type {Layout} */ layout)}
+	{@const way = layout === 'panels' ? 'column' : 'row'}
 	{#each HANDLES as h (h.anchor)}
 		{#if h.handle === 'grip'}
 			<button
@@ -114,7 +218,7 @@
 				aria-label="Move {c.label}: drag it, or the arrow keys; press it to find {c.label} in the outline"
 				title="Drag to move {c.label}, or use the arrow keys on this. Click: find {c.label} in the outline ({SEEK} on it does too)."
 				onclick={() => bar.seek(c.id)}
-				ondragstart={(e) => start(e, c.id)}
+				ondragstart={(e) => start(e, c.id, layout)}
 				ondragend={end}
 				onkeydown={(e) => key(e, c.id, way)}>⠿</button
 			>
@@ -131,59 +235,65 @@
 	{/each}
 {/snippet}
 
-{#snippet slot(/** @type {{ id: string, label: string, render: import('svelte').Snippet<[boolean]> }} */ c)}
+{#snippet gap(/** @type {Layout} */ layout, /** @type {number} */ at)}
+	{#if lift && (layout === 'panels') === (lift.from === 'panels')}
+		<span class={['gap', { open: open(layout, at) }]} aria-hidden="true"></span>
+	{/if}
+{/snippet}
+
+{#snippet slot(/** @type {{ id: string, label: string, render: import('svelte').Snippet<[boolean]> }} */ c, /** @type {Layout} */ side)}
 	<span
-		class={['slot', { over: over === c.id }]}
+		class={['slot', { lifted: lift?.id === c.id }]}
+		data-item
 		role="group"
 		aria-label={c.label}
 		onpointerdowncapture={(e) => seekPress(e, c.id)}
 		onmousedowncapture={(e) => seekPress(e, c.id)}
 		onclickcapture={(e) => seekPress(e, c.id)}
-		ondragover={(e) => dragover(e, c.id)}
-		ondragleave={() => (over = '')}
-		ondrop={(e) => drop(e, c.id)}
 	>
-		{@render c.render(true)}{@render handles(c, 'row')}
+		{@render c.render(true)}{@render handles(c, side)}
 	</span>
 {/snippet}
 
-<div class="toolbar">
+<svelte:window ondragovercapture={track} ondropcapture={drop} />
+
+<div class="toolbar" bind:this={root} style:--lift={lift ? `${lift.width}px` : null}>
 	<div class="row" role="toolbar" aria-label={label}>
-		{#each ['left', 'right'] as side (side)}
+		{#each /** @type {const} */ (['left', 'right']) as side (side)}
 			{@const list = side === 'left' ? left : right}
 			<span
-				class={['end', side, { dragging, over: over === side }]}
+				class={['end', side, { dragging: lift && lift.from !== 'panels', over: spot?.layout === side }]}
+				data-layout={side}
 				role="group"
 				aria-label={side === 'left' ? 'Left end' : 'Right end'}
-				ondragover={(e) => {
-					if (!e.dataTransfer?.types.includes(DRAG)) return;
-					e.preventDefault();
-					over = side;
-				}}
-				ondragleave={() => (over = '')}
-				ondrop={(e) => dropAt(e, /** @type {'left' | 'right'} */ (side))}
 			>
-				{#each list as c (c.id)}{@render slot(c)}{/each}
+				{#each list as c, i (c.id)}{@render gap(side, i)}{@render slot(c, side)}{/each}
+				{@render gap(side, list.length)}
 				{#if side === 'left' && !controls.length}<span class="empty">Empty: a 📌 by a control in the outline puts it here.</span>{/if}
 			</span>
 		{/each}
 	</div>
-	{#each panels as c (c.id)}
-		<section
-			class={['panel', { over: over === c.id }]}
-			aria-label={c.label}
-			onpointerdowncapture={(e) => seekPress(e, c.id)}
-			onmousedowncapture={(e) => seekPress(e, c.id)}
-			onclickcapture={(e) => seekPress(e, c.id)}
-			ondragover={(e) => dragover(e, c.id)}
-			ondragleave={() => (over = '')}
-			ondrop={(e) => drop(e, c.id)}
-		>
-			{@render handles(c, 'column')}
-			<header><span class="title">{c.label}</span></header>
-			<div class="body">{@render c.render(true)}</div>
-		</section>
-	{/each}
+	{#if panels.length}
+		<div class="panels" data-layout="panels">
+			{#each panels as c, i (c.id)}
+				{@render gap('panels', i)}
+				<section
+					class={['panel', { lifted: lift?.id === c.id }]}
+					data-item
+					aria-label={c.label}
+					onpointerdowncapture={(e) => seekPress(e, c.id)}
+					onmousedowncapture={(e) => seekPress(e, c.id)}
+					onclickcapture={(e) => seekPress(e, c.id)}
+				>
+					{@render handles(c, 'panels')}
+					<span class="proxy" aria-hidden="true">⠿ {c.label}</span>
+					<header><span class="title">{c.label}</span></header>
+					<div class="body">{@render c.render(true)}</div>
+				</section>
+			{/each}
+			{@render gap('panels', panels.length)}
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -191,7 +301,7 @@
 		--handle: 1.4rem;
 		display: flex;
 		flex-direction: column;
-		gap: 0.4rem;
+		gap: 0.2rem;
 	}
 	.row {
 		display: flex;
@@ -203,7 +313,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		gap: 0.4rem;
 		min-height: 1.6rem;
 		border-radius: 4px;
 	}
@@ -219,13 +328,70 @@
 	.end.over {
 		outline-style: solid;
 	}
+	/* Spacing is the items' own margins, not the flex gap, so a closed gap takes no room. */
 	.slot {
 		position: relative;
 		display: inline-flex;
 		align-items: center;
+		margin-inline: 0.2rem;
 	}
-	.slot.over {
-		box-shadow: inset 2px 0 0 currentColor;
+	/* Where the lifted item would land: room its size, opening and closing. */
+	.gap {
+		flex: none;
+		width: 0;
+		height: 1.6rem;
+		border-radius: 4px;
+		transition:
+			width 0.16s ease-out,
+			height 0.16s ease-out,
+			margin 0.16s ease-out;
+	}
+	.gap.open {
+		outline: 1.5px dashed color-mix(in srgb, currentColor 55%, transparent);
+		outline-offset: -1.5px;
+		background: color-mix(in srgb, currentColor 8%, transparent);
+	}
+	.end > .gap.open {
+		width: var(--lift);
+		margin-inline: 0.2rem;
+	}
+	.panels {
+		display: flex;
+		flex-direction: column;
+	}
+	.panels > .gap {
+		display: block;
+		width: auto;
+		height: 0;
+	}
+	.panels > .gap.open {
+		height: 2rem;
+		margin-block: 0.2rem;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.gap {
+			transition: none;
+		}
+	}
+	.lifted {
+		opacity: 0.25;
+	}
+	.lifted > .handle {
+		visibility: hidden;
+	}
+	/* A panel's picture while it is dragged: a chip, kept out of sight until then. */
+	.proxy {
+		position: fixed;
+		top: -100px;
+		left: 0;
+		padding: 2px 8px;
+		border: 1px solid CanvasText;
+		border-radius: 4px;
+		background: Canvas;
+		color: CanvasText;
+		font: 600 0.8rem system-ui, sans-serif;
+		white-space: nowrap;
+		pointer-events: none;
 	}
 	.empty {
 		opacity: 0.6;
@@ -287,12 +453,10 @@
 	}
 	.panel {
 		position: relative;
+		margin-block: 0.2rem;
 		border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
 		border-radius: 3px;
 		font: 0.8rem ui-monospace, monospace;
-	}
-	.panel.over {
-		box-shadow: inset 0 2px 0 currentColor;
 	}
 	.panel header {
 		padding: 0 0.4rem;
