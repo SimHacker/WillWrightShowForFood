@@ -65,7 +65,9 @@ right end (the speed readout) sits under the screen's corner.
 - Its home places it: `<Pinnable {bar} id=… />` for a control, `pin={{ bar, id }}` on an
   `Outline` for a panel. The home has the 📌 or ⏏️, in the tab order.
 - State per machine in this browser (`toolbar-<machine>`): for each id, a bit (in the toolbar
-  or not) and an index (its place). Putting one in gives it the place after the last.
+  or not) and an index (its place). Putting one in gives it the place after the last, at the
+  left end, always, wherever it was before: the 📌 has one target, and the right end holds
+  only what the person drags there (and the defaults that start there, the speed readout).
   Dragging deals the places of its kind out again in the new order, so the other kind's
   order is untouched. Until the person changes anything, the machine's defaults (the Apple:
   reboot, Ctrl-Reset, pause, step, speed, mute, Caps Lock, joystick at the left; the speed

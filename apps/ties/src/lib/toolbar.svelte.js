@@ -86,14 +86,17 @@ export class Toolbar {
 		return !!this.places[id]?.on;
 	}
 
-	/** @param {string} id @param {Side} [side] where it goes; it keeps the end it had, or the default's */
-	#put(id, side) {
+	/** @param {string} id @param {Side} [side] */
+	#put(id, side = 'left') {
 		const last = Math.max(-1, ...Object.values(this.places).map((p) => p.at));
-		const end = side ?? this.places[id]?.side ?? (this.#defaults.right.includes(id) ? 'right' : 'left');
-		this.places[id] = { on: true, at: last + 1, ...(end === 'right' ? { side: end } : {}) };
+		this.places[id] = { on: true, at: last + 1, ...(side === 'right' ? { side } : {}) };
 	}
 
-	/** Put a control in the toolbar, last. @param {string} id */
+	/**
+	 * Put a control in the toolbar, last at the left end, always, wherever it was before: the 📌
+	 * has one target, and the right end is what the person drags there.
+	 * @param {string} id
+	 */
 	pin(id) {
 		this.#put(id);
 		this.#save();
