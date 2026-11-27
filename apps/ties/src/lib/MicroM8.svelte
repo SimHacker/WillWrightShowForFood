@@ -345,6 +345,7 @@
 			bar.offer('reboot', 'Reboot', reboot, 'control', CPU),
 			bar.offer('reset', 'Ctrl-Reset', reset, 'control', CPU),
 			bar.offer('speed', 'the speed', speed, 'control', CPU),
+			bar.offer('readout', 'the speed readout', speedReadout, 'control', CPU),
 			bar.offer('mute', 'Mute', mute, 'control', ['apple-sound']),
 			bar.offer('caps', 'Caps Lock', caps, 'control', ['apple-io']),
 			bar.offer('joystick', 'Joystick', joystick, 'control', ['apple-io']),
@@ -394,9 +395,9 @@
 		{#if apple.locked && engaged}<p class="locked" role="status">{apple.locked}</p>{/if}
 	</div>
 
-	<!-- As wide as the screen, so the speed at its end sits under the screen's corner. -->
+	<!-- As wide as the screen, so the toolbar's right end sits under the screen's corner. -->
 	<div class="under">
-		<MachineToolbar {bar} label="The Apple's toolbar" end={speedReadout} />
+		<MachineToolbar {bar} label="The Apple's toolbar" />
 	</div>
 	{#if apple.phase !== 'running'}
 		<p class={['state', { failed: apple.phase === 'error' }]}>
@@ -414,11 +415,13 @@
 	<ApplePanels {labelOf} {angel} {play} {playTitle} {appDisks} disks={driveControls} />
 </div>
 
-{#snippet speedReadout()}
+{#snippet speedReadout(compact = false)}
 	<!-- A button, not only a tooltip: a touch screen has no hover, so a tap opens the same
-	     numbers as a card. Not a live region; it changes every second. -->
-	<button class="speed" popovertarget="apple-speed" aria-label={apple.phase === 'running' ? `Speed: ${speedText} a real Apple ][+; more numbers` : 'Speed: the Apple is off'} title={speedTip}>{speedText}</button>
-	<div id="apple-speed" class="card" popover="auto">{speedTip}</div>
+	     numbers as a card. Not a live region; it changes every second. One card for each copy,
+	     the toolbar's and the outline's. -->
+	{@const card = compact ? 'apple-speed-bar' : 'apple-speed-home'}
+	<button class="speed" popovertarget={card} aria-label={apple.phase === 'running' ? `Speed: ${speedText} a real Apple ][+; more numbers` : 'Speed: the Apple is off'} title={speedTip}>{speedText}</button>
+	<div id={card} class="card" popover="auto">{speedTip}</div>
 {/snippet}
 
 {#snippet driveControls()}

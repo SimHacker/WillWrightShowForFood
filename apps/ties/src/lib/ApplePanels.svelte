@@ -10,6 +10,7 @@
 	import AppleMemory from './AppleMemory.svelte';
 	import DancePanel from './DancePanel.svelte';
 	import Outline from './Outline.svelte';
+	import PagePrefs from './PagePrefs.svelte';
 	import Pinnable from './Pinnable.svelte';
 	import { toolbar } from './toolbar.svelte.js';
 
@@ -27,7 +28,7 @@
 	 * the game wants, the game, its disks and sound,
 	 * the dance, then what is under the lid. A person can drag them into another order, kept here.
 	 */
-	const ORDER = ['apple-angel', 'apple-play', 'apple-disks', 'apple-sound', 'apple-dance', 'apple-cpu', 'apple-mem', 'apple-io', 'apple-korz'];
+	const ORDER = ['apple-angel', 'apple-play', 'apple-disks', 'apple-sound', 'apple-dance', 'apple-cpu', 'apple-mem', 'apple-io', 'apple-korz', 'apple-prefs'];
 	const ORDER_KEY = 'apple-outline-order';
 	/** @type {string[]} */
 	let order = $state(keptOrder());
@@ -101,6 +102,9 @@
 		return () => off.forEach((f) => f());
 	});
 
+	/** What this page keeps in this browser; the dance's on/off (dance-on) is every machine's, and stays. */
+	const PREF_KEYS = [/^toolbar-apple$/, /^apple-/, /^outline:apple-/, /^korz-browser-/, /^dance-diesel$/, /^screen-angel/];
+
 	const notRunning = 'not running yet';
 	const cpuSummary = $derived(running && s ? `PC $${hex(s.pc, 4)} · ${apple.mhz.toFixed(2)} MHz · ${engine}` : notRunning);
 	const ioSummary = $derived(
@@ -112,7 +116,7 @@
 	const disksSummary = $derived(apple.drives.map((name, d) => `${d + 1}: ${name ? labelOf(name) : 'empty'}`).join(' · '));
 	const memSummary = $derived(!apple.korz ? 'inside microM8' : running ? 'hex, the 6502 code, the trace' : notRunning);
 	/** @type {Record<string, () => ReturnType<import('svelte').Snippet>>} */
-	const NODES = $derived({ 'apple-angel': angelNode, 'apple-play': playNode, 'apple-disks': disksNode, 'apple-sound': soundNode, 'apple-dance': danceNode, 'apple-cpu': cpuNode, 'apple-mem': memNode, 'apple-io': ioNode, 'apple-korz': korzNode });
+	const NODES = $derived({ 'apple-angel': angelNode, 'apple-play': playNode, 'apple-disks': disksNode, 'apple-sound': soundNode, 'apple-dance': danceNode, 'apple-cpu': cpuNode, 'apple-mem': memNode, 'apple-io': ioNode, 'apple-korz': korzNode, 'apple-prefs': prefsNode });
 </script>
 
 {#snippet prompts(compact = false)}
@@ -317,7 +321,7 @@
 {#snippet cpuNode()}
 	<Outline id="apple-cpu" move={moveNode} title="CPU: the 6502" hint="The 6502: running it, its registers and flags, the panel's bits, the cycles it has run, and how fast it is going" summary={cpuSummary}>
 		<div class="row">
-			{#each ['reboot', 'reset', 'pause', 'step', 'speed'] as id (id)}<Pinnable {bar} {id} />{/each}
+			{#each ['reboot', 'reset', 'pause', 'step', 'speed', 'readout'] as id (id)}<Pinnable {bar} {id} />{/each}
 		</div>
 		<Outline id="apple-regs" title="Registers, flags, cycles" hint="The 6502's registers and flags, the cycles it has run, and how fast" opened pin={{ bar, id: 'cpu-regs' }}>
 			{@render regsPanel(false)}
@@ -362,6 +366,12 @@
 	<Outline id="apple-korz" move={moveNode} title="Korz: the emulator, the 6502's sea and the compiled code" hint="Which emulator runs the Apple, and the Korz structures: the 6502's sea, its slots, and the JavaScript the compiler made from the Apple's code. Read-only." summary={engine}>
 		<div class="row"><Pinnable {bar} id="engine" /></div>
 		<KorzBrowser roots={() => apple.korzRoots()} follow={() => apple.korzFollow()} />
+	</Outline>
+{/snippet}
+
+{#snippet prefsNode()}
+	<Outline id="apple-prefs" move={moveNode} title="Preferences" hint="Back to how this page first came: the toolbar, or everything the page keeps in this browser">
+		<PagePrefs {bar} keys={PREF_KEYS} kept="your saved music seeds" />
 	</Outline>
 {/snippet}
 

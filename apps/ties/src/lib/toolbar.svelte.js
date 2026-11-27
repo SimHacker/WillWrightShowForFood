@@ -7,6 +7,9 @@
 // goes in a column under the row. Each keeps a bit, in the toolbar or not, and an index, its
 // place. Putting one in gives it the place after the last; dragging it moves it among its
 // kind. Kept per machine in this browser; until the person changes it, a machine's DEFAULTS.
+// The row has two ends: most controls sit at its left, a readout (the speed) at its right, and
+// dragging one onto the other end's items moves it there. A default the person has never had
+// (one added since they arranged theirs) joins their toolbar; one they took out stays out.
 //
 // The component that owns a control or panel offers it (offer), as a snippet taking one
 // argument: true for the toolbar's compact look, false for its home. One whose owner is not
@@ -18,15 +21,17 @@ import { seekHome } from './outline-reveal.svelte.js';
 
 /** @typedef {import('svelte').Snippet<[boolean]>} Control */
 /** @typedef {'control' | 'panel'} Kind */
-/** @typedef {{ on: boolean, at: number }} Place */
+/** @typedef {'left' | 'right'} Side */
+/** @typedef {{ on: boolean, at: number, side?: Side }} Place */
 
-/** The toolbar a new player gets, by machine: the machine, time, then what reaches it. */
-const DEFAULTS = /** @type {Record<string, string[]>} */ ({
-	apple: ['reboot', 'reset', 'pause', 'step', 'speed', 'mute', 'caps', 'joystick']
+/** The toolbar a new player gets, by machine: the machine, time, then what reaches it; and how fast. */
+const DEFAULTS = /** @type {Record<string, { left: string[], right: string[] }>} */ ({
+	apple: { left: ['reboot', 'reset', 'pause', 'step', 'speed', 'mute', 'caps', 'joystick'], right: ['readout'] }
 });
 
 export class Toolbar {
 	#key;
+	#defaults;
 	/** @type {Record<string, Place>} */
 	places = $state({});
 	/** What is on the page now, by id. @type {SvelteMap<string, { label: string, render: Control, kind: Kind, home: string[] }>} */
@@ -44,6 +49,7 @@ export class Toolbar {
 	/** @param {string} machine */
 	constructor(machine) {
 		this.#key = `toolbar-${machine}`;
+		this.#defaults = DEFAULTS[machine] ?? { left: [], right: [] };
 		let kept = null;
 		try {
 			kept = JSON.parse(globalThis.localStorage?.getItem(this.#key) ?? 'null');
@@ -51,7 +57,28 @@ export class Toolbar {
 			/* Unreadable: the defaults. */
 		}
 		if (kept && typeof kept === 'object') this.places = kept;
-		else for (const id of DEFAULTS[machine] ?? []) this.#put(id);
+		this.#fill();
+	}
+
+	/** Put in the defaults the toolbar has never had a place for. */
+	#fill() {
+		for (const side of /** @type {Side[]} */ (['left', 'right'])) for (const id of this.#defaults[side]) if (!this.places[id]) this.#put(id, side);
+	}
+
+	/** Back to the machine's defaults, as a new player gets them. */
+	reset() {
+		this.places = {};
+		this.#fill();
+		try {
+			globalThis.localStorage?.removeItem(this.#key);
+		} catch {
+			/* Storage forbidden: nothing kept to forget. */
+		}
+	}
+
+	/** Which end of the row a control is at. @param {string} id @returns {Side} */
+	side(id) {
+		return this.places[id]?.side ?? 'left';
 	}
 
 	/** @param {string} id */
@@ -59,10 +86,11 @@ export class Toolbar {
 		return !!this.places[id]?.on;
 	}
 
-	/** @param {string} id */
-	#put(id) {
+	/** @param {string} id @param {Side} [side] where it goes; it keeps the end it had, or the default's */
+	#put(id, side) {
 		const last = Math.max(-1, ...Object.values(this.places).map((p) => p.at));
-		this.places[id] = { on: true, at: last + 1 };
+		const end = side ?? this.places[id]?.side ?? (this.#defaults.right.includes(id) ? 'right' : 'left');
+		this.places[id] = { on: true, at: last + 1, ...(end === 'right' ? { side: end } : {}) };
 	}
 
 	/** Put a control in the toolbar, last. @param {string} id */
@@ -86,22 +114,47 @@ export class Toolbar {
 	}
 
 	/**
-	 * Move `id` before `to`, or one place back (-1) or on (1), among the pinned of its kind.
-	 * Their places are dealt out again in the new order, so the other kind keeps its own.
+	 * Move `id` before `to` (and to `to`'s end of the row), or one place back (-1) or on (1)
+	 * among its neighbours at its end. The pinned of its kind have their places dealt out again
+	 * in the new order, so the other kind keeps its own.
 	 * @param {string} id @param {string | number} to
 	 */
 	move(id, to) {
 		const kind = this.controls.get(id)?.kind;
 		const list = this.pinned.filter((k) => this.controls.get(k)?.kind === kind);
-		const from = list.indexOf(id);
-		if (from < 0) return;
+		if (!list.includes(id)) return;
 		const rest = list.filter((k) => k !== id);
-		const at = typeof to === 'number' ? Math.max(0, Math.min(rest.length, from + to)) : rest.indexOf(to);
-		if (at < 0) return;
+		let at;
+		if (typeof to === 'number') {
+			const mine = list.filter((k) => this.side(k) === this.side(id));
+			const next = mine[mine.indexOf(id) + to];
+			if (!next) return;
+			at = rest.indexOf(next) + (to > 0 ? 1 : 0);
+		} else {
+			at = rest.indexOf(to);
+			if (at < 0) return;
+			this.#side(id, this.side(to));
+		}
 		rest.splice(at, 0, id);
 		const places = list.map((k) => this.places[k].at).sort((a, b) => a - b);
 		rest.forEach((k, i) => (this.places[k].at = places[i]));
 		this.#save();
+	}
+
+	/** Move a control to the end of the row's `side`, last there. @param {string} id @param {Side} side */
+	toSide(id, side) {
+		const p = this.places[id];
+		if (!p?.on) return;
+		this.#side(id, side);
+		p.at = Math.max(-1, ...Object.values(this.places).map((q) => q.at)) + 1;
+		this.#save();
+	}
+
+	/** @param {string} id @param {Side} side */
+	#side(id, side) {
+		const p = this.places[id];
+		if (side === 'right') p.side = side;
+		else delete p.side;
 	}
 
 	/**

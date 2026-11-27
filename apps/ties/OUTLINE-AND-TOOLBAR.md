@@ -40,8 +40,8 @@ node, open. What is under the lid (CPU, Memory, I/O, Korz) starts closed. Tags a
 on a page that runs a machine; they are in the catalog's lists.
 
 The screen's width is capped so its height leaves the toolbar in the window
-(`--screen` in `MicroM8.svelte`), and the toolbar is as wide as the screen, so the speed at
-its right end sits under the screen's corner.
+(`--screen` in `MicroM8.svelte`), and the toolbar is as wide as the screen, so what is at its
+right end (the speed readout) sits under the screen's corner.
 
 ## The outline (`Outline.svelte`)
 
@@ -68,18 +68,40 @@ its right end sits under the screen's corner.
   or not) and an index (its place). Putting one in gives it the place after the last.
   Dragging deals the places of its kind out again in the new order, so the other kind's
   order is untouched. Until the person changes anything, the machine's defaults (the Apple:
-  reboot, Ctrl-Reset, pause, step, speed, mute, Caps Lock, joystick).
-- In the toolbar each item has ⏏️ over ⠿ in a narrow column, small and shown on hover (always
-  where there is no hover), keeping its room so the row never shifts. On the row they skip
-  the tab order; panels' handles are in it, and the arrow keys on a ⠿ move it.
+  reboot, Ctrl-Reset, pause, step, speed, mute, Caps Lock, joystick at the left; the speed
+  readout at the right). A default the person's toolbar has never had (one added since they
+  arranged it) joins it; one they took out stays out.
+- **Two ends.** The row has a left end and a right end, each a list in its own order. Dropping
+  an item on another moves it there, at that one's end; dropping it on an end's free space
+  puts it last there. While dragging, both ends show where a drop lands, an empty one too.
+- **Handles, anchored.** Each item's handles float just above it, touching its top edge, over
+  everything (the screen too, so nothing clips them), with a ring of ink and then paper so they
+  show on any background. The ⠿ hangs from the top-left (drag to move; click to go home), the
+  ⏏️ from the top-right (take it out), far apart so a drag does not become an eject; on a narrow
+  item they meet at its middle. Shown while the pointer is on the item, always where there is
+  no hover (with room left above the row for them). Each has its own tooltip. On the row they
+  skip the tab order; panels' handles are in it, and the arrow keys on a ⠿ move it.
+- `HANDLES` in `MachineToolbar.svelte` lists them by anchor (`top-left`, `top-right`). More
+  anchors come later (the other corners, the middles of the edges) and more handles on them:
+  connection points with directions, for laying panels out against each other. A ring of
+  handles around a point is a pie menu; this is the base pie menus will layer onto.
 - **Back to the warehouse.** A click on an item's ⠿, or a ⌘-click (Ctrl-click off a Mac) on
   the item itself, goes to its original in the outline: the nodes it is under open (each
   offer names them, `home`), the original scrolls to the middle of the window, flashes, and
   takes the focus. The modifier press is caught before the control sees it, so a slider
   does not slide and Step does not step. As an editor's ⌘-click goes to a definition.
-- The speed at the right end is not an item: it is always there. It is a button, so a tap
-  opens its numbers as a card where there is no hover, and not a live region, as it changes
-  every second.
+- The speed readout is an item like the others (`readout`, at home in the CPU node beside the
+  speed slider). It is a button, so a tap opens its numbers as a card where there is no hover,
+  each copy with its own card; and not a live region, as it changes every second.
+
+## Preferences (`PagePrefs.svelte`)
+
+The last node of a machine page's outline, the way back to how the page first came. Reset the
+toolbar puts its defaults back at once. Reset everything on this page forgets what the page keeps
+in this browser (the outline's order and folds, panel sizes, views, volumes, the dance's style,
+the toolbar; each page lists its keys) and reloads, since each part reads what it keeps as it
+starts. What the person made rather than chose is kept: saved music seeds. These stay at home,
+out of the toolbar: administration, rarely wanted.
 
 ## Prototypes in the warehouse, instances at home
 

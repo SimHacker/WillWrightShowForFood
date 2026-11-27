@@ -688,6 +688,35 @@ lines that scroll off, which a real one could not. The console TTY is a glass te
 paper teletype's protocol on a screen; it stays for the console. The Knight TV, the ninth
 floor's bitmap terminals (above), comes later.
 
+## One ITS for everyone: the server and its backplane
+
+The KA10 runs in Node as it runs in the page (the ITS boot test is Node), so one ITS can run on
+the server, up for days, and people connect to it from a browser with nothing but a terminal and
+a network connection: a time-sharing system again, shared. The server's side is a backplane, the
+machine's lines carried over WebSockets; the browser's is a terminal, or a Knight TV.
+
+How terminals reach ITS on this configuration, from the PDP-10/its project's SIMH run script for
+the KA (`dl/pdp10-ka/run`):
+
+- **Hardwired lines**: the TK10 (port 10000 there) and the Morton box, MTY (10003, and lines on
+  10015-10018), which SIMH offers as telnet. Teletype lines; the simplest way in.
+- **Chaosnet**: `set ch enabled`, peered over UDP to a Chaosnet bridge. ITS's SUPDUP server
+  answers on Chaosnet, and it is how the project's own users SUPDUP in.
+- **TEN11** (10011): the bus link to the PDP-11 that runs the Knight TV system, the TV-11.
+- **The IMP** (`tap0`): TCP/IP. The largest, and not needed for any of the above.
+
+The order, each a step that works on its own:
+
+1. **MTY lines over WebSockets**: the Morton box in the emulator, each line a socket, a dumb
+   terminal in the browser. Several people on one ITS, typing.
+2. **CH10 Chaosnet**: the interface in the emulator, and the server speaking Chaosnet to it, so a
+   browser's SUPDUP terminal (with its saved lines) talks to ITS's real SUPDUP server.
+3. **TEN11 and the TV-11**: the PDP-11 emulated beside the KA10, its frame buffers sent to
+   browsers as Knight TV screens.
+
+Who may connect, how many, and what a guest can do to the shared machine (log in, or only watch)
+is decided before step 1 ships; none of this is built yet.
+
 ## Phases
 
 0. **36-bit hygiene.** Fix the `& wmask` masks in [turing.ts](src/plugins/turing.ts) and test the
