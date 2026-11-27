@@ -576,9 +576,20 @@ It integrates `1/(x^3+1)`, factors `x^12-1`, expands `sin(x)/x` as a Taylor seri
 **What the coprocessor still does.** Over the boot, the login and those MACSYMA commands,
 the instructions handed over were, most first: `LSHC` 844,456, `IDIV` 56,420, `ROTC` 23,527,
 `IMULI` 15,975, `CIRC` 11,406, `DIV` 9,295, `MUL` 8,292, `IMUL` 4,205. The floating
-instructions together came to about 300. So the double shifts and the integer multiply and
-divide are next, in that order: a loop with one `IMULI` in five instructions runs at 8 MIPS on
-every rung because of it.
+instructions together came to about 300.
+
+Those are now written in the halves switch too: `IMUL`, `MUL`, `IDIV`, `DIV`, `ROTC`, `LSHC`
+and `CIRC`, in plain numbers. `MUL`'s 70-bit product is built from 18-bit pieces. `IDIV` is a
+plain `Math.floor`, which is exact here: with both operands below 2^36, a double's quotient
+can't round up to the next integer. `DIV` is SIMH's bit-serial loop, and nothing in it passes
+2^38. [halves.test.ts](src/ka10/halves.test.ts) runs them in every mode against the SIMH port
+on random and edge-case words and shift counts: 30,000 cases each in the suite, 1.5 million
+each on a long run. Breaking one line of `IDIV`'s remainder makes it fail at once. An earlier
+mutation, on a correction for the quotient rounding up, survived, which is how that
+correction turned out to be dead code. Only `ASHC` is left on the coprocessor, because its
+overflow test leans on C's 64-bit shift wraparound: five of them in a whole MACSYMA session.
+MACSYMA's session now runs end to end, `factor(2^64-1)` included, in 3.8 s of wall time from
+boot.
 
 ## Floating point is a dimension
 
@@ -665,7 +676,7 @@ program exact, fuzz one routine, and compare, without touching the program or th
 The same plug carries the listening unit for VM Radio, so the error itself can be heard: noise
 as noise.
 
-**Next.** The double shifts and the integer multiply and divide in halves, then the Korz rungs.
+**Next.** MIT-AI in the browser: the halves switch in a worker, a teletype, the packs a block at a time over HTTP; then VM Radio, then the Korz rungs.
 
 ## Phases
 

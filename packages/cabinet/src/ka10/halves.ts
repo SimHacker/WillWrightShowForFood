@@ -76,11 +76,8 @@ class Coprocessor extends Ka10 {
 /** The floating instructions: 130 to 177 less the byte instructions. */
 const isFloat = (ir: number): boolean => ir >= 0o130 && ir <= 0o177 && (ir < 0o133 || ir > 0o137);
 
-/** Opcodes the halves switch still hands to the SIMH port: MUL, DIV, ASHC, ROTC, LSHC, CIRC, and floating point when no unit is plugged in. */
-function onCoprocessor(ir: number): boolean {
-	if (ir >= 0o220 && ir <= 0o237) return true;
-	return ir >= 0o244 && ir <= 0o247;
-}
+/** Opcodes the halves switch still hands to the SIMH port: ASHC, whose overflow test leans on C's 64-bit shifts, and floating point when no unit is plugged in. */
+const onCoprocessor = (ir: number): boolean => ir === 0o244;
 
 /**
  * A KA10 with MIT's pager and multiplex, written by hand in halves. It follows the SIMH port
@@ -1009,6 +1006,222 @@ export class Ka10Halves {
 		for (let i = 0; i < 16; i++) this.FM[i] = Number(c.FM[i]!);
 	}
 
+	/** IMUL and MUL: the 70-bit product of the magnitudes, exact from 18-bit pieces. */
+	private mul(): void {
+		switch (this.IR & 7) {
+			case 1:
+			case 5:
+				this.AR = this.AR & RM;
+				break;
+			case 0:
+			case 4:
+				if (this.memRead(0, 0, 0, 0)) return;
+				this.AR = this.MB;
+				break;
+			default:
+				if (this.memRead(0, 0, 0, 1)) return;
+				this.AR = this.MB;
+				break;
+		}
+		let flag3 = 0;
+		if (this.AR >= SMASK) {
+			this.AR = (CM(this.AR) + 1) % TWO36;
+			flag3 = 1;
+		}
+		if (this.BR >= SMASK) {
+			this.BR = (CM(this.BR) + 1) % TWO36;
+			flag3 ^= 1;
+		}
+		if (this.AR === 0 || this.BR === 0) {
+			this.AR = this.MQ = 0;
+		} else {
+			if (this.BR === SMASK) flag3 ^= 1;
+			const a1 = Math.floor(this.AR / TWO18);
+			const a0 = this.AR % TWO18;
+			const b1 = Math.floor(this.BR / TWO18);
+			const b0 = this.BR % TWO18;
+			const mid = a1 * b0 + a0 * b1;
+			const t = a0 * b0 + (mid % TWO18) * TWO18;
+			let hi = (a1 * b1 + Math.floor(mid / TWO18)) * 2 + Math.floor(t / TWO35);
+			let lo = t % TWO35;
+			if ((this.IR & 4) === 0) {
+				if (hi > flag3 && !this.pi_cycle) {
+					this.FLAGS |= OVR;
+					this.checkAprIrq();
+				}
+				if (flag3) {
+					const v = CMASK - lo + 1;
+					lo = v >= SMASK ? v : v + SMASK;
+				}
+				this.MQ = lo;
+				this.AR = lo;
+			} else {
+				if (hi >= SMASK && !this.pi_cycle) {
+					this.FLAGS |= OVR;
+					this.checkAprIrq();
+				}
+				if (flag3) {
+					hi = FMASK - hi;
+					lo = CMASK - lo + 1;
+					if (lo >= SMASK) {
+						hi += 1;
+						lo -= SMASK;
+					}
+				}
+				hi %= TWO36;
+				this.AR = hi;
+				this.MQ = lo + (hi >= SMASK ? SMASK : 0);
+				if (this.BR === SMASK && hi >= SMASK) {
+					this.FLAGS |= OVR;
+					this.checkAprIrq();
+				}
+			}
+		}
+		switch (this.IR & 7) {
+			case 7:
+				this.MB = this.AR;
+				if (this.memWrite(0, 0)) return;
+			// falls through
+			case 5:
+			case 4:
+				this.setReg(this.AC + 1, this.MQ);
+			// falls through
+			case 1:
+			case 0:
+				this.setReg(this.AC, this.AR);
+				return;
+			case 2:
+			case 6:
+				this.MB = this.AR;
+				this.memWrite(0, 0);
+				return;
+			case 3:
+				this.MB = this.AR;
+				if (this.memWrite(0, 0)) return;
+				this.setReg(this.AC, this.AR);
+				return;
+		}
+	}
+
+	/** The divisor into BR and the dividend into AR, for the four modes of IDIV and DIV. */
+	private divOperand(): boolean {
+		switch (this.IR & 3) {
+			case 0:
+				this.AR = this.BR;
+				if (this.memRead(0, 0, 0, 0)) return false;
+				this.BR = this.MB;
+				return true;
+			case 1:
+				this.MQ = this.AR & RM;
+				this.AR = this.BR;
+				this.BR = this.MQ;
+				return true;
+			default:
+				this.AR = this.BR;
+				if (this.memRead(0, 0, 0, 1)) return false;
+				this.BR = this.MB;
+				return true;
+		}
+	}
+
+	private divStore(): void {
+		switch (this.IR & 3) {
+			case 3:
+				this.MB = this.AR;
+				if (this.memWrite(0, 0)) return;
+			// falls through
+			case 1:
+			case 0:
+				this.setReg(this.AC, this.AR);
+				this.setReg(this.AC + 1, this.MQ);
+				return;
+			case 2:
+				this.MB = this.AR;
+				this.memWrite(0, 0);
+				return;
+		}
+	}
+
+	private idiv(): void {
+		if (!this.divOperand()) return;
+		let flag1 = 0;
+		let flag3 = 0;
+		if (this.BR >= SMASK) {
+			this.BR = (CM(this.BR) + 1) % TWO36;
+			flag1 = 1;
+		}
+		if (this.BR === 0 || (this.AR === SMASK && this.BR === 1)) {
+			this.FLAGS |= OVR | NODIV;
+			this.checkAprIrq();
+			return;
+		}
+		if (this.AR >= SMASK) {
+			this.AR = (CM(this.AR) + 1) % TWO36;
+			flag1 ^= 1;
+			flag3 = 1;
+		}
+		// Exact: with both below 2^36 the double quotient can't round up to the next integer.
+		const q = Math.floor(this.AR / this.BR);
+		const r = this.AR - q * this.BR;
+		this.MQ = r;
+		this.AR = q;
+		if (flag1) this.AR = (CM(this.AR) + 1) % TWO36;
+		if (flag3) this.MQ = (CM(this.MQ) + 1) % TWO36;
+		this.divStore();
+	}
+
+	/** DIV: the 72-bit AC,AC+1 by E, bit by bit as SIMH does it; nothing passes 2^38. */
+	private div(): void {
+		if (!this.divOperand()) return;
+		const bit35 = (x: number): boolean => Math.floor(x / TWO35) % 2 === 1;
+		this.MQ = this.getReg(this.AC + 1);
+		let flag1 = 0;
+		if (this.AR >= SMASK) {
+			this.AD = (CM(this.MQ) + 1) % TWO36;
+			this.MQ = this.AR;
+			this.AR = this.AD;
+			this.AD = CM(this.MQ);
+			this.MQ = this.AR;
+			this.AR = this.AD;
+			if (this.MQ % TWO35 === 0) this.AR = (this.AR + 1) % TWO36;
+			flag1 = 1;
+		}
+		const bneg = this.BR >= SMASK;
+		const ncb = CM(this.BR) + 1;
+		this.AD = (bneg ? this.AR + this.BR : this.AR + ncb) % TWO36;
+		this.MQ = (this.MQ % TWO35) * 2 + (this.AD >= SMASK ? 1 : 0);
+		this.SC = 35;
+		if (this.AD < SMASK) {
+			this.FLAGS |= OVR | NODIV;
+			this.checkAprIrq();
+			return;
+		}
+		while (this.SC !== 0) {
+			this.AD = bneg !== (this.MQ % 2 === 1) ? this.AR + ncb : this.AR + this.BR;
+			this.AR = ((this.AD * 2) % TWO36) + (this.MQ >= SMASK ? 1 : 0);
+			this.MQ = (this.MQ % TWO35) * 2 + (bit35(this.AD) ? 0 : 1);
+			this.SC--;
+		}
+		this.AD = bneg !== (this.MQ % 2 === 1) ? this.AR + ncb : this.AR + this.BR;
+		this.AR = this.AD % TWO36;
+		this.MQ = (this.MQ % TWO35) * 2 + (bit35(this.AD) ? 0 : 1);
+		if (this.AR >= SMASK) {
+			this.AD = (bneg ? this.AR + ncb : this.AR + this.BR) % TWO36;
+			this.AR = this.AD;
+		}
+		if (flag1) this.AR = (CM(this.AR) + 1) % TWO36;
+		if (flag1 !== (bneg ? 1 : 0)) {
+			this.AD = (CM(this.MQ) + 1) % TWO36;
+			this.MQ = this.AR;
+			this.AR = this.AD;
+		} else {
+			this.AD = this.MQ;
+			this.MQ = this.AR;
+			this.AR = this.AD;
+		}
+		this.divStore();
+	}
+
 	/** The floating instructions: fetch per mode, let the unit compute, store per mode. */
 	private floating(): void {
 		const u = this.float!;
@@ -1232,10 +1445,6 @@ export class Ka10Halves {
 			return;
 		}
 		if (onCoprocessor(IR) || isFloat(IR)) {
-			if (IR === 0o247 && !this.its) {
-				this.unasign();
-				return;
-			}
 			this.coprocess();
 			return;
 		}
@@ -1376,6 +1585,103 @@ export class Ka10Halves {
 				this.MB = this.AR;
 				if (this.memWrite(0, 0)) return;
 				if (this.AC !== 0) this.setReg(this.AC, this.AR);
+				return;
+			case 0o220:
+			case 0o221:
+			case 0o222:
+			case 0o223:
+			case 0o224:
+			case 0o225:
+			case 0o226:
+			case 0o227: /* IMUL, MUL */
+				this.mul();
+				return;
+			case 0o230:
+			case 0o231:
+			case 0o232:
+			case 0o233: /* IDIV */
+				this.idiv();
+				return;
+			case 0o234:
+			case 0o235:
+			case 0o236:
+			case 0o237: /* DIV */
+				this.div();
+				return;
+			case 0o245: /* ROTC */ {
+				this.AR = this.BR;
+				this.MQ = this.getReg(this.AC + 1);
+				this.SC = this.AB & RSIGN ? (this.AB & 0o377 ? ((0o377 ^ this.AB) + 1) & 0o377 : 0o400) : this.AB & 0o377;
+				if (this.SC === 0) return;
+				this.SC = this.SC % 72;
+				if (this.AB & RSIGN) this.SC = 72 - this.SC;
+				if (this.SC >= 36) {
+					const t = this.MQ;
+					this.MQ = this.AR;
+					this.AR = t;
+					this.SC -= 36;
+				}
+				const sc = this.SC;
+				this.AD = shl36(this.AR, sc) + shr(this.MQ, 36 - sc);
+				this.MQ = shl36(this.MQ, sc) + shr(this.AR, 36 - sc);
+				this.AR = this.AD;
+				this.setReg(this.AC, this.AR);
+				this.setReg(this.AC + 1, this.MQ);
+				return;
+			}
+			case 0o246: /* LSHC */
+				this.AR = this.BR;
+				this.MQ = this.getReg(this.AC + 1);
+				this.SC = (this.AB & RSIGN ? (0o377 ^ this.AB) + 1 : this.AB) & 0o377;
+				if (this.SC === 0) return;
+				if (this.SC > 71) {
+					this.AR = 0;
+					this.MQ = 0;
+				} else {
+					const right = (this.AB & RSIGN) !== 0;
+					if (this.SC > 36) {
+						if (right) {
+							this.MQ = this.AR;
+							this.AR = 0;
+						} else {
+							this.AR = this.MQ;
+							this.MQ = 0;
+						}
+						this.SC -= 36;
+					}
+					const sc = this.SC;
+					if (right) {
+						this.MQ = shr(this.MQ, sc) + shl36(this.AR, 36 - sc);
+						this.AR = shr(this.AR, sc);
+					} else {
+						this.AR = shl36(this.AR, sc) + shr(this.MQ, 36 - sc);
+						this.MQ = shl36(this.MQ, sc);
+					}
+				}
+				this.setReg(this.AC, this.AR);
+				this.setReg(this.AC + 1, this.MQ);
+				return;
+			case 0o247: /* ITS CIRC */
+				if (!this.its) {
+					this.unasign();
+					return;
+				}
+				this.BR = this.AR & RM;
+				this.AR = this.getReg(this.AC);
+				this.histMb(this.AR);
+				this.MQ = this.getReg(this.AC + 1);
+				this.SC = (this.AB & RSIGN ? (0o777 ^ this.AB) + 1 : this.AB) & 0o777;
+				if (this.SC === 0) return;
+				this.SC = this.SC % 72;
+				if (this.AB & RSIGN) this.SC = 72 - this.SC;
+				while (this.SC > 0) {
+					this.AD = (this.AR % TWO35) * 2 + (this.MQ % 2);
+					this.MQ = Math.floor(this.MQ / 2) + (this.AR >= SMASK ? SMASK : 0);
+					this.AR = this.AD;
+					this.SC--;
+				}
+				this.setReg(this.AC, this.AR);
+				this.setReg(this.AC + 1, this.MQ);
 				return;
 			case 0o240: /* ASH */ {
 				this.SC = (this.AB & RSIGN ? (0o377 ^ this.AB) + 1 : this.AB) & 0o377;
