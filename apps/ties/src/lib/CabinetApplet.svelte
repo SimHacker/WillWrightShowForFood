@@ -3694,11 +3694,12 @@
 							class:named={label !== ''}
 							class:dim={!!program?.switchLabels && label === ''}
 							aria-pressed={(switches & bit) !== 0}
-							title="switch {i}{label ? `: ${label}` : ''}. Press its top half to put it up, its bottom half down; drag across the switches to draw them that way."
+							aria-label="AC switch {i}{label ? `, ${label}` : ''}"
+							title="AC switch {i}{label ? `: ${label}` : ''}: {(switches & bit) !== 0 ? 'up' : 'down'}. Press its top half to put it up, its bottom half down; drag across the switches to draw them that way."
 							disabled={status !== 'live'}
 							data-switch={i}
 							onpointerdown={(e) => drawing.down(e, i)}
-							onclick={(e) => drawing.click(e, i)}>{i}</button
+							onclick={(e) => drawing.click(e, i)}></button
 						>
 					{/each}
 				</span>
@@ -4876,7 +4877,8 @@
 	}
 	.sw-group {
 		display: flex;
-		gap: 2px;
+		gap: 1px;
+		margin-right: 0.3rem;
 		touch-action: none;
 	}
 	.row.menu {
@@ -5101,22 +5103,24 @@
 		background: #000;
 		color: inherit;
 	}
-	.switch {
-		width: 1.35rem;
-		padding: 0.1rem 0;
+	/* A paddle, as on the PDP-10's page: its lit half is the half it is thrown to. */
+	.switch:not(.jiggle) {
+		width: 0.9rem;
+		height: 1.3rem;
+		padding: 0;
+		border: 1px solid #777;
+		border-radius: 2px;
+		background: linear-gradient(#ddd 50%, #888 50%);
 	}
-	.switch.jiggle {
-		width: auto;
-		margin-left: 6px;
-		padding: 0.1rem 0.4em;
+	.switch:not(.jiggle).on {
+		background: linear-gradient(#c90 50%, #ddd 50%);
 	}
-	.switch.dim {
-		border-color: #3a5a3a;
+	.switch:not(.jiggle).dim {
 		opacity: 0.55;
 	}
-	.switch.on {
-		background: #9fe8a0;
-		color: #000;
+	.switch.jiggle {
+		margin-left: 6px;
+		padding: 0.1rem 0.4em;
 	}
 	.keys {
 		font-size: 0.68rem;
