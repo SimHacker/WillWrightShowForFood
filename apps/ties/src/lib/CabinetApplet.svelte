@@ -54,7 +54,7 @@
 	import { CHORD_KEYS_LIST, EMULATOR_KEYS_HELP, altKey, emulatorKey, nextTempo, prefixedKey } from './emulator-keys.js';
 	import DanceControls from './DanceControls.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
-	import { Deltas, PDP7_VOICES, Tally, pages, watchedName } from '@wwsff/cabinet/dance';
+	import { Deltas, PDP7_VOICES, Tally, pages, switchesSeedText, switchesSeedWord, watchedName } from '@wwsff/cabinet/dance';
 	import { forthCell } from '@wwsff/cabinet/forth-dict';
 	import KorzBrowser from './KorzBrowser.svelte';
 	import { block7Node, compiler7Node, dispatchNode, seaNode } from '@wwsff/cabinet/korz/inspect';
@@ -3198,6 +3198,21 @@
 		recorder?.record(box.cycles, 'sw', switches);
 	}
 
+	/** The AC switches as a music seed, a program's `switches:` line in cabinet-programs.js. */
+	const switchesSeed = {
+		where: "a program's entry in apps/ties/src/lib/cabinet-programs.js",
+		text: () => `switches: ${switchesSeedText(switches)},`,
+		/** @param {string} text */
+		paste: (text) => {
+			const word = switchesSeedWord(text);
+			if (word === null || !cpu) return false;
+			switches = word;
+			cpu.switches = switches;
+			recorder?.record(box.cycles, 'sw', switches);
+			return true;
+		}
+	};
+
 	/** Flip one of the 18 switches at random, which twists the music; the switch's number. */
 	function jiggle() {
 		const i = Math.floor(Math.random() * SWITCH_BITS.length);
@@ -3864,7 +3879,7 @@
 		{#if dance.on}
 			<div class="row dance-row" data-panel="dance" role="group" aria-label="VM Radio: the bus dance">
 				<span class="dance-title" title="VM Radio: AM radio's idea, tuned straight into the emulator and the program running on it (AM-RADIO.md)">VM RADIO</span>
-				<DanceControls {dance} chip listen twist jiggle={status === 'live' ? jiggle : undefined} />
+				<DanceControls {dance} chip listen twist jiggle={status === 'live' ? jiggle : undefined} seed={status === 'live' ? switchesSeed : undefined} />
 			</div>
 		{/if}
 		{#if playOpen}

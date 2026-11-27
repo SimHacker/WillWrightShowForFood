@@ -704,7 +704,6 @@ export function twist(word: number): Twist {
 	return t.echo || t.ratchet || t.octave || t.turn || t.gate !== 0xffff ? t : { ...t, echo: 3 };
 }
 
-/** A twist in a few words, for the console: "" for the plain dance. */
 /** Bytes of switches folded into the 18-bit word `twist` hashes: none set is 0, any set is not. */
 export function switchWord(bytes: ArrayLike<number>): number {
 	let h = 0x811c9dc5;
@@ -717,6 +716,31 @@ export function switchWord(bytes: ArrayLike<number>): number {
 	return any ? (h % 0o777777) + 1 : 0;
 }
 
+/**
+ * A music seed is a machine's switches written out to copy into a cartridge's definition: the
+ * Apple's 15 panel bytes as 30 hex digits, `$C041` first (APPS.yml `panel`), and the PDP-7's
+ * 18 AC switches as six octal digits (cabinet-programs.js `switches`).
+ */
+export const PANEL_SEED = /^[0-9a-f]{30}$/i;
+
+export const panelSeedText = (bytes: ArrayLike<number>): string => Array.from(bytes, (b) => (b & 0xff).toString(16).padStart(2, "0")).join("");
+
+/** The 15 bytes a seed names. Pasted text may keep `panel:`, quotes and spaces; null if it names none. */
+export function panelSeedBytes(text: string): Uint8Array | null {
+	const hex = text.replace(/^\s*panel\s*:/i, "").replace(/["'\s]/g, "");
+	if (!PANEL_SEED.test(hex)) return null;
+	return Uint8Array.from(hex.match(/../g)!, (h) => parseInt(h, 16));
+}
+
+export const switchesSeedText = (word: number): string => `0o${(word & 0o777777).toString(8).padStart(6, "0")}`;
+
+/** The 18-bit word a pasted `0o123456`, `switches: 0o123456,` or plain octal names; null if none. */
+export function switchesSeedWord(text: string): number | null {
+	const m = /^\s*(?:switches\s*:)?\s*(?:0o)?([0-7]{1,6})\s*,?\s*$/i.exec(text);
+	return m ? parseInt(m[1]!, 8) : null;
+}
+
+/** A twist in a few words, for the console: "" for the plain dance. */
 export function twistLabel(t: Twist): string {
 	if (t === PLAIN) return "";
 	const parts = [`skew ${Math.round((t.skew / 0.45) * 7)}`, `phase ${t.shift}`];

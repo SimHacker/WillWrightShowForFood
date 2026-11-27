@@ -52,6 +52,12 @@ export interface AppleApp {
 	/** false: not working yet; its entry and disks are listed only with ?all. */
 	enabled?: boolean;
 	profile?: string;
+	/**
+	 * The music seed: the 15 bytes the cabinet's panel at `$C041`–`$C04F` holds at the start, as
+	 * 30 hex digits, `$C041` first. They twist the dance (switchWord, twist in dance.ts). With a
+	 * seed, the music does not follow the Apple's prompts unless the person turns that back on.
+	 */
+	panel?: string;
 	/** How many drives the app uses, 1 or 2; the panel offers only those. 2 by default. */
 	drives?: number;
 	disks: Record<string, AppDisk>;
@@ -81,6 +87,7 @@ export function appEntries(catalog: { apps?: AppleApp[] }, disks: { disks?: { fi
 		};
 		for (const [id, d] of Object.entries(app.disks)) if (!listed.has(d.file)) problems.push(`${app.id}: ${id} is ${d.file}, not in DISKS.yml`);
 		if (!app.starts?.length) problems.push(`${app.id}: no start`);
+		if (app.panel !== undefined && !/^[0-9a-f]{30}$/i.test(String(app.panel))) problems.push(`${app.id}: panel is not 30 hex digits, quoted`);
 		for (const s of app.starts ?? []) {
 			for (const id of s.drives) need(id, `start ${s.label}`);
 			for (const [from, to] of Object.entries(s.use ?? {})) {

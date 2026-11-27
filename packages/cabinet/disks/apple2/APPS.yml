@@ -10,9 +10,14 @@
 # people: the disks a character bridge (src/apple2/games.ts) can read people off and write back.
 # profile: the microM8 machine, when it is not the //e.
 # chargen: a motherboard character ROM under disks/apple2, when it is not the ][+ generator.
+#   64 glyphs, 8 bytes each, the low 7 bits, bit 0 at the left.
 # enabled: false for an app that does not work yet. It stays here and at its own address; the
 #   catalog's lists and the Apple page's disk menu show it only when the URL has ?all.
-#   64 glyphs, 8 bytes each, the low 7 bits, bit 0 at the left.
+# panel: the music seed, the 15 bytes of the cabinet's panel at $C041-$C04F as 30 hex digits
+#   in quotes, $C041 first. A start puts them in the panel, where they twist the dance, and
+#   turns off following the prompts (the Prompts button), so the game keeps its own music.
+#   Copy seed on the Apple page gives the line for whatever the panel holds; the games' seeds
+#   were picked at random to begin with.
 apps:
   - id: wizardry
     title: "Wizardry: Proving Grounds of the Mad Overlord"
@@ -20,6 +25,7 @@ apps:
     description: "Sir-Tech's dungeon crawl, 1981. Boot from the boot disk alone; after S)tart, the game asks for the scenario disk in drive 1."
     tags: { publisher: sir-tech, year: 1981 }
     enabled: false
+    panel: "dd6d18c1b70d49150525a15bf60179"
     # A //e's slot 3 firmware answers Pascal's console probe and switches on 80 columns, and
     # Wizardry then writes 40-column screens into main memory only: every other letter.
     profile: apple2-plus
@@ -46,6 +52,7 @@ apps:
     path: games/little-computer-people
     description: "A little person moves into the house on the disk and lives there. 4am's crack of Activision's Research Project disk: it boots the guestbook side, then asks for the disk to be turned over."
     tags: { publisher: activision, year: 1985, by: david-crane }
+    panel: "5e008f19aa647512d128e8e34d3f6e"
     guide: packages/cabinet/guides/little-computer-people.md
     angel: packages/cabinet/angels/little-computer-people/ANGEL.yml
     drives: 1
@@ -86,6 +93,7 @@ apps:
     path: games/mind-mirror
     description: "Map your own mind, or anyone's, then play out their life. 4am's crack of the program disk, with the Digital Gang crack's two simulation disks."
     tags: { publisher: electronic-arts, year: 1985, by: timothy-leary }
+    panel: "7bcc82db10f3c9e8a9747b0a6802c5"
     guide: packages/cabinet/guides/mind-mirror.md
     disks:
       game: { file: mind-mirror/mind-mirror-4am-playable.dsk, label: "Program" }

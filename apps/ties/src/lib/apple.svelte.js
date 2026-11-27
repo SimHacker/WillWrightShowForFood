@@ -76,6 +76,17 @@ class AppleEngine {
 	flip(n) {
 		if (this.id !== 'microm8') korzApple.flip(n);
 	}
+	/** Set the panel's 15 bytes, a music seed; microM8 has no panel and ignores it. @param {Uint8Array} bytes */
+	seedPanel(bytes) {
+		korzApple.seedPanel(bytes);
+	}
+	/** Whether the music follows the Apple's prompts, their styles and panel seeds; the Korz Apples only. */
+	get followPrompts() {
+		return korzApple.followPrompts;
+	}
+	set followPrompts(on) {
+		korzApple.followPrompts = on;
+	}
 	get videxShowing() {
 		return this.id === 'microm8' ? microM8.videxShowing : korzApple.videxShowing;
 	}

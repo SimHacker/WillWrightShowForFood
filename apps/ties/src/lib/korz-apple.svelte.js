@@ -12,7 +12,7 @@
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { hushWhenHidden } from './hidden-hush.js';
 import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, Trace65, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
-import { APPLE2_CALLS, APPLE2_REGIONS, switchWord, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
+import { APPLE2_CALLS, APPLE2_REGIONS, switchWord, panelSeedBytes, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
 
 /** The ROM routines the dance listens for, by entry address. */
 const CALLS = new Map(APPLE2_CALLS.map((c) => [c.addr, c]));
@@ -295,6 +295,8 @@ class KorzApple {
 		const board = new Apple2Plus(rom.rom);
 		// Switches stay where they were flipped, as on a front panel: a reboot leaves them.
 		if (this.#board) board.panel.set(this.#board.panel);
+		else if (this.#seed) board.panel.set(this.#seed);
+		this.#seed = null;
 		board.installLanguageCard();
 		const disk = new DiskII(rom.slot);
 		for (const image of this.#images) {
@@ -325,6 +327,20 @@ class KorzApple {
 		if (!bits) return;
 		if (bits.some((b, i) => b !== this.panel[i])) this.panel = [...bits];
 		this.dance.switches = switchWord(bits);
+	}
+
+	/** A music seed waiting for the first board. @type {Uint8Array | null} */
+	#seed = null;
+
+	/** Set all 15 panel bytes, a cartridge's or a pasted music seed, now or on the first board. @param {Uint8Array} bytes */
+	seedPanel(bytes) {
+		this.#panelBefore = null;
+		if (!this.#board) {
+			this.#seed = bytes.slice();
+			return;
+		}
+		this.#board.panel.set(bytes);
+		this.#readPanel();
 	}
 
 	/** The person flips panel bit `n`, 0 to 119: `$C041` holds bits 0–7, bit 0 its low bit. @param {number} n */
@@ -418,7 +434,40 @@ class KorzApple {
 	#danceClicks = 0;
 	#danceAt = { cycles: 0, ms: 0 };
 	/** Which prompt the Apple was at, at the last frame, or null. */
-	#dancePrompt = /** @type {string | null} */ (null);
+	#dancePrompt = /** @type {Prompt | null | undefined} */ (null);
+	#followPrompts = $state(true);
+	/** The panel as it was before a prompt's seed went in; null when no prompt's seed is in. */
+	#panelBefore = /** @type {Uint8Array | null} */ (null);
+
+	/**
+	 * Whether the music follows the Apple's prompts: each prompt's style, riff and panel seed
+	 * (PROMPT_MUSIC, PROMPT_PANELS). Off, they leave the music and the panel alone, for a game
+	 * that brings its own seed. Turned off, the panel gets back what the prompt's seed replaced.
+	 */
+	get followPrompts() {
+		return this.#followPrompts;
+	}
+	set followPrompts(on) {
+		if (on === this.#followPrompts) return;
+		this.#followPrompts = on;
+		if (on) this.#dancePrompt = undefined;
+		else this.#promptPanel(null);
+	}
+
+	/** Put prompt `mode`'s seed in the panel, or with null put back what it replaced. @param {Prompt | null} mode */
+	#promptPanel(mode) {
+		const board = this.#board;
+		if (!board) return;
+		const seed = mode ? panelSeedBytes(PROMPT_PANELS[mode]) : null;
+		if (seed) {
+			this.#panelBefore ??= board.panel.slice();
+			board.panel.set(seed);
+		} else if (this.#panelBefore) {
+			board.panel.set(this.#panelBefore);
+			this.#panelBefore = null;
+		}
+		this.#readPanel();
+	}
 
 	/**
 	 * Each prompt has its own song: Applesoft's sunny, another while an Applesoft program runs,
@@ -432,7 +481,10 @@ class KorzApple {
 		const board = this.#board;
 		if (!board) return [];
 		const at = prompt(board.ram);
-		if (at.mode !== this.#dancePrompt) this.dance.mode(at.mode ? PROMPT_MUSIC[at.mode] : { riff: null });
+		if (at.mode !== this.#dancePrompt && this.#followPrompts) {
+			this.dance.mode(at.mode ? PROMPT_MUSIC[at.mode] : { riff: null });
+			this.#promptPanel(at.mode);
+		}
 		this.#dancePrompt = at.mode;
 		if (at.mode === null) return [];
 		this.dance.depth = at.mode === 'monitor' ? 1 : Math.log2(Math.max(1, at.length / 32)) / 7;
@@ -810,6 +862,18 @@ function applesoftFree(ram) {
 }
 
 /** @typedef {'applesoft' | 'running' | 'integer' | 'monitor'} Prompt */
+
+/**
+ * Each prompt's music seed, the 15 panel bytes that go in while the Apple is at it, picked at
+ * random to start. The panel goes back to what it held when the Apple leaves its prompts.
+ * @type {Record<Prompt, string>}
+ */
+const PROMPT_PANELS = {
+	applesoft: '2bc002b9499777f5d15da3b9cff4b8',
+	running: '1bfa3841a72807da0c2d4b6d6aba91',
+	integer: '187d5a76b8ed21c35d2de4ea37d96b',
+	monitor: '7c4850969b3d612eb0d29c53bf88d0'
+};
 
 /** @type {Record<Prompt, import('@wwsff/cabinet/dance').Music>} */
 const PROMPT_MUSIC = {

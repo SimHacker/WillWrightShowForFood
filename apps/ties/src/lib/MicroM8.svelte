@@ -25,6 +25,7 @@
 	import ApplePanels from './ApplePanels.svelte';
 	import RateSlider from './RateSlider.svelte';
 	import DanceControls from './DanceControls.svelte';
+	import { panelSeedBytes, panelSeedText } from '@wwsff/cabinet/dance';
 	import { APPLE_HZ } from '@wwsff/cabinet/angel';
 	import { EMULATOR_KEYS_HELP, emulatorKey, nextTempo } from './emulator-keys.js';
 
@@ -88,6 +89,18 @@
 	const menu = $derived(all ? disks : disks.filter((d) => d.enabled !== false));
 
 	const RELAUNCHED = 'microm8-relaunched';
+
+	/** The panel's 15 bytes as a music seed, the `panel:` line of an app in APPS.yml. */
+	const panelSeed = {
+		where: "an app's entry in packages/cabinet/disks/apple2/APPS.yml",
+		text: () => `panel: "${panelSeedText(apple.panel ?? [])}"`,
+		/** @param {string} text */
+		paste: (text) => {
+			const bytes = panelSeedBytes(text);
+			if (bytes) apple.seedPanel(bytes);
+			return !!bytes;
+		}
+	};
 	/** The disk `boot` names, waiting for the first click while the Apple is off. */
 	/** @type {Disk | undefined} */
 	let pending = $state();
@@ -394,7 +407,20 @@
 				onclick={() => dance.toggle()}>Dance</button
 			>
 			{#if dance.on}
-				<DanceControls {dance} twist={!!apple.panel} jiggle={apple.panel ? () => apple.flip(Math.floor(Math.random() * 120)) : undefined} />
+				<DanceControls
+					{dance}
+					twist={!!apple.panel}
+					jiggle={apple.panel ? () => apple.flip(Math.floor(Math.random() * 120)) : undefined}
+					seed={apple.panel ? panelSeed : undefined}
+				/>
+				{#if apple.panel}
+					<button
+						class={{ on: apple.followPrompts }}
+						aria-pressed={apple.followPrompts}
+						title="Follow the prompts: Applesoft, a running BASIC program, Integer BASIC and the Monitor each set the dance's style and their own panel seed. A game with its own seed starts with this off, so they leave its music alone."
+						onclick={() => (apple.followPrompts = !apple.followPrompts)}>Prompts</button
+					>
+				{/if}
 			{/if}
 		{/if}
 		<RateSlider rates={rates} index={rateIndex} onpick={pickRate} keys={EMULATOR_KEYS_HELP} />
