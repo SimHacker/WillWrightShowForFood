@@ -72,6 +72,12 @@ sections:
             story of how they came back. The scans and transcriptions are in this project's
             repository on GitHub: a PDF opens in GitHub's viewer, a transcription reads as a page.
         entries:
+          - { id: pixie-lemke, name: Heinz U. Lemke, kind: person, url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke", for: "PIXIE's PDP-7 programmer, the hands on the light pen in the films, and the author of SYMELEC: his page, papers and letters" }
+          - { id: pixie-lemke-letters, name: Letters with Heinz, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/correspondence.md", for: "The public part of Don's correspondence with Heinz" }
+          - { id: flight-of-the-pixie, name: Flight of the PIXIE, kind: document, url: "https://www.youtube.com/watch?v=jDrqR9XssJI", for: "Don's edit of the films to Yuja Wang playing Flight of the Bumblebee, to show how fast the radial menus were" }
+          - { id: pixie-film-bw, name: "PIXIE, 1969 (black and white)", kind: document, url: "https://youtu.be/j9R63T2xGCA", for: "The black and white demonstration film, from the original telecine" }
+          - { id: pixie-film-color, name: "PIXIE, 1969 (colour)", kind: document, url: "https://youtu.be/lCrl5QmQ9aA", for: "The colour demonstration film, from the original telecine" }
+          - { id: pixie-cabinet-video, name: "PIXIE and Forth on the cabinet, 2026", kind: document, url: "https://www.youtube.com/watch?v=lo8kdY-5i6c", for: "Don's 23-minute walk through the cabinet, 9 October 2026: PIXIE drawing a circuit, its source down to Heinz's scanned listing, DUEL, UNIX, Forth's turtle, PIXIE's rings in 3D" }
           - id: pixie-people
             name: The people
             kind: person
@@ -128,9 +134,6 @@ sections:
             url: "https://www.cl.cam.ac.uk/library/archives.html"
             for: "PIXIE demonstrated in 1969, from the Computer Laboratory's archive"
             entries:
-              - { id: pixie-film-bw, name: "PIXIE, 1969 (black and white)", kind: document, url: "https://youtu.be/j9R63T2xGCA", for: "The black and white demonstration film, from the original telecine" }
-              - { id: pixie-film-color, name: "PIXIE, 1969 (colour)", kind: document, url: "https://youtu.be/lCrl5QmQ9aA", for: "The colour demonstration film, from the original telecine" }
-              - { id: flight-of-the-pixie, name: Flight of the PIXIE, kind: document, url: "https://www.youtube.com/watch?v=jDrqR9XssJI", for: "Don's edit of the films to Yuja Wang playing Flight of the Bumblebee, to show how fast the radial menus were" }
               - { id: flight-notes, name: How the films came back, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md", for: "From Bill Buxton's dead end to a librarian's detective work, and the edit" }
           - id: pixie-found
             name: Finding it again
