@@ -24,6 +24,14 @@ window manager comes out of it too rather than being built beside it: containers
 around panels and compose them, with edges, corners, title bars, tabs and controls, each
 itself something to take from the warehouse.
 
+The Korz CPU model and memory are the aisle where debugging things are made: go there to set
+a breakpoint on an address or a slot, a watch on a byte, a word or a named variable, or a
+view of a stretch of memory, and to monitor them. Each one made becomes something to take: a
+breakpoint a toggle for the toolbar's row, a watch or a view a live panel under it. So a
+person working on one routine keeps its breakpoints, the bytes it changes and its code next
+to the screen, and leaves the rest of the machine in the outline. (Breakpoints and watches
+are to come on the page; KORZ-CPU.md has the CPU device declining when one covers its bytes.)
+
 ## Page order
 
 Above the fold, for a new player: the › button, the title, the short description, the
