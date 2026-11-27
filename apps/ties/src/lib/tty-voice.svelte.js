@@ -1,14 +1,32 @@
 // A terminal that talks, as the PDP-7's teletype does (CabinetApplet.svelte): what the machine
 // prints is gathered until it pauses, then announced to screen readers and, with Speak on,
-// read aloud in the site's voice (voice.svelte.js), the newest output cutting off the old. The
-// echo of what the person typed is not read back; they heard it as they typed.
+// read aloud in the site's voice (voice.svelte.js). Output that comes in bursts is read in turn,
+// all of it; typing cuts the reading off, since the person has moved on. The echo of what the
+// person typed is not read back; they heard it as they typed.
 
 import { currentVoice } from './voice.svelte.js';
 
 /** How long the machine is quiet before what it printed is read. */
-const PAUSE_MS = 350;
-/** The most read at once: the end of a long listing, not all of it. */
-const MOST = 600;
+const PAUSE_MS = 500;
+/** The most read at once: the end of a listing that runs on for pages, not all of it. */
+const MOST = 6000;
+/** Chrome stops an utterance after about fifteen seconds, so long text goes as sentences up to this long. */
+const PIECE = 240;
+
+/** Text in pieces of whole sentences, each at most PIECE long unless one sentence is longer. @param {string} text */
+function pieces(text) {
+	const out = [];
+	let cur = '';
+	for (const s of text.match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) ?? [text]) {
+		if (cur && cur.length + s.length > PIECE) {
+			out.push(cur.trim());
+			cur = '';
+		}
+		cur += s;
+	}
+	if (cur.trim()) out.push(cur.trim());
+	return out;
+}
 
 export class TtyVoice {
 	/** On: read aloud. Kept under `key`. */
@@ -41,13 +59,14 @@ export class TtyVoice {
 		} catch {
 			/* Storage forbidden: until the page goes. */
 		}
+		this.#speech?.cancel();
 		if (on) this.#aloud('Speaking.');
-		else this.#speech?.cancel();
 	}
 
 	/** Keys the person typed: their echo is skipped. @param {string} text */
 	typed(text) {
 		this.#echo += text.replace(/[^\x20-\x7e]/g, '');
+		this.#speech?.cancel();
 	}
 
 	/** A character the machine printed. @param {number} code */
@@ -82,11 +101,12 @@ export class TtyVoice {
 			this.#speech = new SpeechSystem();
 			await this.#speech.ready;
 		}
-		this.#speech.cancel();
 		const opts = { rate: 1.1 };
 		const voice = currentVoice();
-		if (voice) this.#speech.speakWithVoice(text, voice, opts);
-		else this.#speech.speak(text, { voiceType: 'female', language: 'en', ...opts });
+		for (const piece of pieces(text)) {
+			if (voice) this.#speech.speakWithVoice(piece, voice, opts);
+			else this.#speech.speak(piece, { voiceType: 'female', language: 'en', ...opts });
+		}
 	}
 
 	stop() {

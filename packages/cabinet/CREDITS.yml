@@ -4,7 +4,8 @@
 #   about     what the Machine Room is, paragraph by paragraph
 #   sections  id, title, about (a line), entries
 #   entries   id (unique across the file), name, url, kind (person, project, place, document),
-#             for: what it gave the Machine Room, in a line
+#             for: what it gave the Machine Room, in a line; view: web to show the page in the
+#             panel under the toolbar (WebPanel.svelte), as YouTube links always are
 about:
   - >-
     The Machine Room runs old computers in the browser, and the programs people wrote for them:

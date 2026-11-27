@@ -1,7 +1,8 @@
 <script>
 	/**
 	 * One node of the About tree, offered to the toolbar: its name as a link that opens its page
-	 * in a new tab, and, when it has nodes under it, its panel. The panel shows its line, then
+	 * in a new tab (a YouTube link, or one with `view: web`, in the panel under the toolbar),
+	 * and, when it has nodes under it, its panel. The panel shows its line, then
 	 * each node under it: a name to pin, or an outline node whose content is that node's own
 	 * panel, pinnable in turn. Rendered for every node all the time, so a pinned name or panel
 	 * stays in the toolbar while its home in the outline is closed. Draws nothing itself.
@@ -27,6 +28,7 @@
 	<a
 		class={['credit', node.kind, { compact }]}
 		href={node.url}
+		data-view={node.view ? '' : undefined}
 		target="_blank"
 		rel="noopener noreferrer"
 		title="{node.name}{node.for ? `: ${node.for}` : ''}. Opens {node.url} in a new tab.">{ICONS[node.kind] ?? '🔗'} {node.name}</a

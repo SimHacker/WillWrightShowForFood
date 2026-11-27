@@ -6,7 +6,7 @@ import { load } from 'js-yaml';
 import creditsYaml from '../../../../packages/cabinet/CREDITS.yml?raw';
 
 /**
- * @typedef {{ id: string, name: string, url: string, kind: string, for: string, about: string[], entries: CreditNode[] }} CreditNode
+ * @typedef {{ id: string, name: string, url: string, kind: string, for: string, view: boolean, about: string[], entries: CreditNode[] }} CreditNode
  */
 
 /** @param {any} raw @param {string} fallbackId @returns {CreditNode} */
@@ -19,6 +19,7 @@ function node(raw, fallbackId) {
 		url: typeof raw?.url === 'string' ? raw.url : '',
 		kind: String(raw?.kind ?? 'section'),
 		for: typeof raw?.for === 'string' ? raw.for : '',
+		view: raw?.view === 'web',
 		about,
 		entries: (raw?.entries ?? raw?.sections ?? []).map((/** @type {any} */ e, /** @type {number} */ i) => node(e, `${id}-${i}`))
 	};

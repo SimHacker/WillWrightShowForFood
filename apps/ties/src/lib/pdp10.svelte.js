@@ -21,6 +21,7 @@ import { BusDance, speedLoad } from './bus-dance.svelte.js';
 import { GlassScreen } from './glass-screen.js';
 import { TtyVoice } from './tty-voice.svelte.js';
 import { programFor } from './its-programs.js';
+import { openWeb } from './web-panel.svelte.js';
 
 /** Where the packs are served (packages/cabinet/its/README.md), in the unit order of build.tcl. */
 const PACKS = ['rp03.2', 'rp03.3', 'rp03.0', 'rp03.1'].map((f) => `/packs/its/${f}`);
@@ -42,8 +43,7 @@ const GRUE_KEY = 'pdp10-grue_warning';
 export const GRUE = {
 	text: 'It is pitch black.  You are likely to be eaten by a grue.',
 	title: 'MC Frontalot, "It Is Pitch Dark"',
-	src: 'https://www.youtube-nocookie.com/embed/YeV0pLRyM7o?autoplay=1',
-	watch: 'https://www.youtube.com/watch?v=YeV0pLRyM7o'
+	url: 'https://www.youtube.com/watch?v=YeV0pLRyM7o'
 };
 const CALLS = new Map(ITS_CALLS.map((c) => [c.addr, c]));
 
@@ -112,8 +112,6 @@ class Pdp10 {
 	bellMuted = $state(keptFlag(BELL_KEY));
 	/** Whether the grue's video has played in this browser. */
 	grueWarned = $state(keptFlag(GRUE_KEY));
-	/** The video open under the toolbar, or null. @type {typeof GRUE | null} */
-	video = $state.raw(null);
 	/** The last of what ITS printed, as one line, for the watches. */
 	#tail = '';
 	/** Lit for a moment when the bell rings, muted or not. */
@@ -274,10 +272,6 @@ class Pdp10 {
 		keep(GRUE_KEY, '');
 	}
 
-	closeVideo() {
-		this.video = null;
-	}
-
 	/** @param {string} text */
 	#watch(text) {
 		this.#tail = (this.#tail + text.replace(/[\r\n\0]+/g, ' ')).slice(-2 * GRUE.text.length);
@@ -285,7 +279,10 @@ class Pdp10 {
 		this.grueWarned = true;
 		keep(GRUE_KEY, '1');
 		this.#tail = '';
-		this.video = GRUE;
+		openWeb(GRUE.url, {
+			title: GRUE.title,
+			buttons: [{ label: 'Ignore Warning', done: 'Warning ignored', title: 'Forget that you were warned, so the next grue plays this again', action: () => this.forgetGrue() }]
+		});
 	}
 
 	#ring() {

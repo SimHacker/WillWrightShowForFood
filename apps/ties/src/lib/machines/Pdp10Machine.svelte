@@ -15,6 +15,7 @@
 	import MachineToolbar from '../MachineToolbar.svelte';
 	import Outline from '../Outline.svelte';
 	import PagePrefs from '../PagePrefs.svelte';
+	import WebPanel from '../WebPanel.svelte';
 	import Pinnable from '../Pinnable.svelte';
 	import VoicePicker from '../VoicePicker.svelte';
 	import { toolbar } from '../toolbar.svelte.js';
@@ -592,16 +593,7 @@
 	</p>
 	{#if pdp10.error}<p class="status failed">{pdp10.error}</p>{/if}
 	<MachineToolbar {bar} label="The PDP-10's toolbar" />
-	{#if pdp10.video}
-		<div class="video" role="region" aria-label={pdp10.video.title}>
-			<div class="video-bar">
-				<span>{pdp10.video.title}</span>
-				<a href={pdp10.video.watch} target="_blank" rel="noopener">YouTube ↗</a>
-				<button type="button" title="Close the video" onclick={() => pdp10.closeVideo()}>✕</button>
-			</div>
-			<iframe src={pdp10.video.src} title={pdp10.video.title} allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
-		</div>
-	{/if}
+	<WebPanel />
 	<div class="outline" aria-label="The PDP-10's outline">
 		{#each order as key (key)}
 			{#if key === 'pdp10-programs'}{@render programsNode()}
@@ -695,34 +687,10 @@
 		max-width: 100%;
 		overflow-wrap: anywhere;
 	}
-	/* A video a watch opened, under the toolbar. */
-	.video {
-		margin: 0.4em 0;
-		border: 1px solid #555;
-		border-radius: 6px;
-		overflow: hidden;
-		background: #000;
-	}
-	.video-bar {
-		display: flex;
-		align-items: center;
-		gap: 0.6em;
-		padding: 0.25em 0.5em;
-		font-size: 0.9em;
-	}
-	.video-bar span {
-		flex: 1;
-	}
-	.video iframe {
-		display: block;
-		width: 100%;
-		aspect-ratio: 16 / 9;
-		border: 0;
-	}
 	/* A game's compass, laid out as one: the eight points round LOOK, up and down beside. */
 	.rose {
 		display: inline-grid;
-		grid-template-columns: repeat(3, 3.6em) 1em 4.4em;
+		grid-template-columns: repeat(3, 4.2em) 1em 4.6em;
 		grid-template-areas:
 			'nw n ne . up'
 			'w look e . .'
@@ -732,6 +700,7 @@
 	}
 	.rose .typed {
 		text-align: center;
+		white-space: nowrap;
 	}
 	.words {
 		display: flex;

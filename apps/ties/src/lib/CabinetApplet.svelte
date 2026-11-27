@@ -55,6 +55,7 @@
 	import { CHORD_KEYS_LIST, EMULATOR_KEYS_HELP, altKey, emulatorKey, nextTempo, prefixedKey } from './emulator-keys.js';
 	import DancePanel from './DancePanel.svelte';
 	import Outline from './Outline.svelte';
+	import WebPanel from './WebPanel.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
 	import { Deltas, PDP7_VOICES, Tally, pages, switchesSeedText, switchesSeedWord, watchedName } from '@wwsff/cabinet/dance';
 	import { forthCell } from '@wwsff/cabinet/forth-dict';
@@ -3864,6 +3865,7 @@
 			/>
 		</div>
 		<!-- The panels, as an outline: each node opens and closes on its own, and remembers. -->
+		<WebPanel />
 		<Outline id="pdp7-play" title="Play" hint="Demos, and recording and replaying what you do" bind:open={playOpen} summary={recording ? 'recording' : demoOn ? (demoHeld ? 'paused, yours now' : 'playing the demo') : ''}>
 			{@render playRow()}
 		</Outline>
