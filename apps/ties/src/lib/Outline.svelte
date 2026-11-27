@@ -96,7 +96,7 @@
 	}
 </script>
 
-<section class="node" aria-label={title} data-home={pin?.id}>
+<section class="node" aria-label={title} data-home={pin?.id} data-outline={id}>
 	<!-- The whole row opens and closes the node for a pointer, a target as wide as the page; the
 	     keyboard has the twisty button, so the row itself needs no key handler. -->
 	<div

@@ -3,6 +3,7 @@
 	 * A running machine inside an article — a PDP-7 and Type 340, pointer as light pen,
 	 * with a menu of programs (cabinet-programs.js). See apps/ties/CABINET-APPLET.md.
 	 */
+	import { OutlineOrder } from './outline-order.svelte.js';
 	import { onMount, tick, untrack } from 'svelte';
 	import { asset } from '$app/paths';
 	import { goto } from '$app/navigation';
@@ -74,6 +75,11 @@
 	let { spec, embedded = false, onprogram = undefined } = $props();
 	/** The page's toolbar, for now only what is pinned from About. */
 	const aboutBar = toolbar('pdp7');
+	/** The outline's top-level nodes, first to last; a person can drag them into another order, kept here. */
+	const ORDER = ['pdp7-viewer', 'pdp7-dance', 'pdp7-play', 'pdp7-prog', 'pdp7-tty', 'pdp7-regs', 'pdp7-mem', 'pdp7-rings', 'pdp7-debug', 'pdp7-snaps', 'pdp7-config', 'pdp7-about'];
+	const outline = new OutlineOrder('pdp7-outline-order', ORDER);
+	const order = $derived(outline.order);
+	const moveNode = outline.move;
 
 	const programs = PROGRAMS.map((p) => p.createInstance?.() ?? p);
 	const programById = (id) => programs.find((p) => p.id === id) ?? null;
@@ -3860,59 +3866,88 @@
 					>
 				</span>
 		</div>
-		<div class="row dance-row" data-panel="dance" role="group" aria-label="VM Radio: the bus dance">
-			<DancePanel
-				id="pdp7"
-				title="VM Radio: the bus dance"
-				{dance}
-				chip
-				listen
-				twist
-				jiggle={status === 'live' ? jiggle : undefined}
-				seed={status === 'live' ? switchesSeed : undefined}
-			/>
-		</div>
-		<!-- The panels, as an outline: each node opens and closes on its own, and remembers. -->
+		{#snippet viewerNode()}
+			<WebPanel id="pdp7-viewer" move={moveNode} />
+		{/snippet}
+		{#snippet danceNode()}
+			<div class="row dance-row" data-panel="dance" role="group" aria-label="VM Radio: the bus dance">
+				<DancePanel
+					id="pdp7"
+					move={moveNode}
+					title="VM Radio: the bus dance"
+					{dance}
+					chip
+					listen
+					twist
+					jiggle={status === 'live' ? jiggle : undefined}
+					seed={status === 'live' ? switchesSeed : undefined}
+				/>
+			</div>
+		{/snippet}
+		{#snippet playNode()}
+			<Outline id="pdp7-play" move={moveNode} title="Play" hint="Demos, and recording and replaying what you do" bind:open={playOpen} summary={recording ? 'recording' : demoOn ? (demoHeld ? 'paused, yours now' : 'playing the demo') : ''}>
+				{@render playRow()}
+			</Outline>
+		{/snippet}
+		{#snippet progNode()}
+			{#if hasProgPanel}
+				<Outline id="pdp7-prog" move={moveNode} title={program.panel.label} hint={program.panel.title} bind:open={progOpen}>
+					{@render progRow()}
+				</Outline>
+			{/if}
+		{/snippet}
+		{#snippet ttyNode()}
+			<Outline id="pdp7-tty" move={moveNode} title="Teletype" hint="What the program prints, and a keyboard" bind:open={ttyOpen} summary={ttyUnread ? `${ttyUnread > 999 ? '999+' : ttyUnread} new characters` : ''}>
+				{@render ttyRow()}
+			</Outline>
+		{/snippet}
+		{#snippet regsNode()}
+			<Outline id="pdp7-regs" move={moveNode} title="Front panel and registers" hint="The AC switches, the processor, the display and the device flags" bind:open={regsOpen} summary={halted ? 'Halted' : ''}>
+				{@render frontPanel()}
+				{#if regs}{@render regsBody()}{/if}
+			</Outline>
+		{/snippet}
+		{#snippet memNode()}
+			<Outline id="pdp7-mem" move={moveNode} title="Memory" hint="{CORE / 1024}K of 18-bit words" bind:open={memOpen}>
+				{@render memBody()}
+			</Outline>
+		{/snippet}
+		{#snippet ringsNode()}
+			{#if hasRings}
+				<Outline id="pdp7-rings" move={moveNode} title="PIXIE rings" hint="The live ring structure in core, or a file, in 3D" bind:open={ringsOpen}>
+					{@render ringsBody()}
+				</Outline>
+			{/if}
+		{/snippet}
+		{#snippet debugNode()}
+			<Outline id="pdp7-debug" move={moveNode} title="Debugging: the Korz seas" hint="The seas behind the CPU and the 340: which slot decides, what it costs, and the JavaScript generated" bind:open={debugOpen}>
+				<Outline id="pdp7-slots" title="Slots" hint="Which slot decides the next instruction and display word, and what the emulator costs" bind:open={slotsOpen}>
+					{@render slotsBody()}
+				</Outline>
+				<Outline id="pdp7-korz" title="Korz browser" hint="Browse the seas, their slots, and the JavaScript the resolver and the compiler generated. Read-only." bind:open={korzOpen}>
+					{@render korzBody()}
+				</Outline>
+			</Outline>
+		{/snippet}
+		{#snippet snapsNode()}
+			<Outline id="pdp7-snaps" move={moveNode} title="Snapshots" hint="Snapshots of this program: save, load, rename, delete, download, upload" bind:open={snapsOpen}>
+				{@render snapsBody()}
+			</Outline>
+		{/snippet}
+		{#snippet configNode()}
+			<Outline id="pdp7-config" move={moveNode} title="Settings" hint="Settings for the teletype and more. Each program sets them for you when you choose it." bind:open={configOpen}>
+				{@render configBody()}
+			</Outline>
+		{/snippet}
+		{#snippet aboutNode()}
+			{#if !embedded}<AboutPanel bar={aboutBar} machine="pdp7" move={moveNode} />{/if}
+		{/snippet}
+		<!-- The panels, as an outline: each node opens and closes on its own, and remembers; drag a grip to reorder. -->
 		{#if !embedded}<MachineToolbar bar={aboutBar} label="The PDP-7's toolbar" />{/if}
-		<WebPanel />
-		<Outline id="pdp7-play" title="Play" hint="Demos, and recording and replaying what you do" bind:open={playOpen} summary={recording ? 'recording' : demoOn ? (demoHeld ? 'paused, yours now' : 'playing the demo') : ''}>
-			{@render playRow()}
-		</Outline>
-		{#if hasProgPanel}
-			<Outline id="pdp7-prog" title={program.panel.label} hint={program.panel.title} bind:open={progOpen}>
-				{@render progRow()}
-			</Outline>
-		{/if}
-		<Outline id="pdp7-tty" title="Teletype" hint="What the program prints, and a keyboard" bind:open={ttyOpen} summary={ttyUnread ? `${ttyUnread > 999 ? '999+' : ttyUnread} new characters` : ''}>
-			{@render ttyRow()}
-		</Outline>
-		<Outline id="pdp7-regs" title="Front panel and registers" hint="The AC switches, the processor, the display and the device flags" bind:open={regsOpen} summary={halted ? 'Halted' : ''}>
-			{@render frontPanel()}
-			{#if regs}{@render regsBody()}{/if}
-		</Outline>
-		<Outline id="pdp7-mem" title="Memory" hint="{CORE / 1024}K of 18-bit words" bind:open={memOpen}>
-			{@render memBody()}
-		</Outline>
-		{#if hasRings}
-			<Outline id="pdp7-rings" title="PIXIE rings" hint="The live ring structure in core, or a file, in 3D" bind:open={ringsOpen}>
-				{@render ringsBody()}
-			</Outline>
-		{/if}
-		<Outline id="pdp7-debug" title="Debugging: the Korz seas" hint="The seas behind the CPU and the 340: which slot decides, what it costs, and the JavaScript generated" bind:open={debugOpen}>
-			<Outline id="pdp7-slots" title="Slots" hint="Which slot decides the next instruction and display word, and what the emulator costs" bind:open={slotsOpen}>
-				{@render slotsBody()}
-			</Outline>
-			<Outline id="pdp7-korz" title="Korz browser" hint="Browse the seas, their slots, and the JavaScript the resolver and the compiler generated. Read-only." bind:open={korzOpen}>
-				{@render korzBody()}
-			</Outline>
-		</Outline>
-		<Outline id="pdp7-snaps" title="Snapshots" hint="Snapshots of this program: save, load, rename, delete, download, upload" bind:open={snapsOpen}>
-			{@render snapsBody()}
-		</Outline>
-		<Outline id="pdp7-config" title="Settings" hint="Settings for the teletype and more. Each program sets them for you when you choose it." bind:open={configOpen}>
-			{@render configBody()}
-		</Outline>
-		{#if !embedded}<AboutPanel bar={aboutBar} machine="pdp7" />{/if}
+		{#each order as key (key)}
+			{@const NODES = { 'pdp7-viewer': viewerNode, 'pdp7-dance': danceNode, 'pdp7-play': playNode, 'pdp7-prog': progNode, 'pdp7-tty': ttyNode, 'pdp7-regs': regsNode, 'pdp7-mem': memNode, 'pdp7-rings': ringsNode, 'pdp7-debug': debugNode, 'pdp7-snaps': snapsNode, 'pdp7-config': configNode, 'pdp7-about': aboutNode }}
+			{@render NODES[key]()}
+		{/each}
 		{#snippet memGrip()}
 			<button
 				type="button"

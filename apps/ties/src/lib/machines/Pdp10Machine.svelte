@@ -7,6 +7,7 @@
 	 * how it runs (and the data switches), the bus dance, the packs, the tests, preferences and
 	 * About. Anything with a 📌 goes in the toolbar.
 	 */
+	import { OutlineOrder } from '../outline-order.svelte.js';
 	import { onMount, tick } from 'svelte';
 	import { launchUrl } from '@wwsff/catalog';
 	import { dataSwitchesSeedText, dataSwitchesSeedWord } from '@wwsff/cabinet/dance';
@@ -35,35 +36,9 @@
 	const its = catalog.entry('its');
 
 	const ORDER = ['pdp10-viewer', 'pdp10-programs', 'pdp10-console', 'pdp10-run', 'pdp10-dance', 'pdp10-disks', 'pdp10-tests', 'pdp10-prefs', 'pdp10-about'];
-	const ORDER_KEY = 'pdp10-outline-order';
-	/** @type {string[]} */
-	let order = $state(keptOrder());
-	function keptOrder() {
-		try {
-			const kept = JSON.parse(globalThis.localStorage?.getItem(ORDER_KEY) ?? '[]');
-			const known = Array.isArray(kept) ? kept.filter((k) => ORDER.includes(k)) : [];
-			// A node added since the order was kept goes after the one it follows in ORDER.
-			for (const [i, k] of ORDER.entries()) if (!known.includes(k)) known.splice(i ? known.indexOf(ORDER[i - 1]) + 1 : 0, 0, k);
-			return known;
-		} catch {
-			return [...ORDER];
-		}
-	}
-	/** Move node `id` before node `to`, or one place up (-1) or down (1). @param {string} id @param {string | number} to */
-	function moveNode(id, to) {
-		const from = order.indexOf(id);
-		if (from < 0) return;
-		const rest = order.filter((k) => k !== id);
-		const at = typeof to === 'number' ? Math.max(0, Math.min(rest.length, from + to)) : rest.indexOf(to);
-		if (at < 0) return;
-		rest.splice(at, 0, id);
-		order = rest;
-		try {
-			globalThis.localStorage?.setItem(ORDER_KEY, JSON.stringify(order));
-		} catch {
-			/* Storage forbidden: the order lasts until the page goes. */
-		}
-	}
+	const outline = new OutlineOrder('pdp10-outline-order', ORDER);
+	const order = $derived(outline.order);
+	const moveNode = outline.move;
 
 	const PREF_KEYS = [/^toolbar-pdp10$/, /^pdp10-/, /^outline:pdp10-/];
 	const PACK_NAMES = ['rp03.2', 'rp03.3', 'rp03.0', 'rp03.1'];

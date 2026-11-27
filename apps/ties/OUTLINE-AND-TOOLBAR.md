@@ -53,8 +53,10 @@ right end (the speed readout) sits under the screen's corner.
   keyboard has the twisty button.
 - Open and the content's height are kept per node id in this browser (`outline:<id>`). A
   resize bar (12px to grab, 4px to see) changes the height; a double click fits it again.
-- The top level's order is the person's (`apple-outline-order`); `opened` is how a node starts
-  the first time.
+- The top level's order is the person's, kept per page (`OutlineOrder` in
+  `outline-order.svelte.js`: `apple-outline-order`, `pdp10-outline-order`,
+  `pdp7-outline-order`). Alt+Up and Alt+Down step over nodes that show nothing now, such as
+  the viewer with nothing open. `opened` is how a node starts the first time.
 
 ## The toolbar (`toolbar.svelte.js`, `MachineToolbar.svelte`, `Pinnable.svelte`)
 
@@ -231,10 +233,10 @@ catalog), paper on a light one (`/apple2/`). New panes use the same variables.
   with the toolbar its author plays it with.
 - **Interpolating between views**, as between music seeds: settings that are numbers move
   smoothly from one view's to another's. Creating or deleting zooms or fades in or out.
-- **The PDP-7 page** moves to this outline and toolbar. It has the toolbar and About now, so
-  About's names and sections and the dance's controls (`DancePanel` with `id="pdp7"`) pin there;
-  still to come are draggable nodes (`move`, a kept page order with the viewer in it), its
-  own controls offered with 📌, the dance as a node, and Settings folded into Preferences.
+- **The PDP-7 page** moves to this outline and toolbar. It has the toolbar, About, and a kept
+  order of draggable nodes with the viewer and the dance among them, so About's names and
+  sections and the dance's controls (`DancePanel` with `id="pdp7"`) pin there. Still to come:
+  its own controls offered with 📌, and Settings folded into Preferences.
 - **One set of nodes on every machine**, in one order: viewer; what to do (play, the guide,
   the programs); the terminal or console; the CPU; memory; devices; the dance; the engine;
   snapshots; preferences; About. A node a machine has nothing for says so in a line. Missing

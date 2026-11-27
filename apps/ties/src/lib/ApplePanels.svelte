@@ -3,6 +3,7 @@
 	// cassette, the bus dance, then what is under the lid, closed until asked for: the 6502 with
 	// the cabinet's panel (CPU), memory, the soft switches, annunciators, drives and game port
 	// (I/O), and Korz, with the emulator menu.
+	import { OutlineOrder } from './outline-order.svelte.js';
 	import { APPLE_HZ } from '@wwsff/cabinet/angel';
 	import { panelSeedBytes, panelSeedText } from '@wwsff/cabinet/dance';
 	import { ENGINES, apple } from './apple.svelte.js';
@@ -31,35 +32,9 @@
 	 * the dance, then what is under the lid. A person can drag them into another order, kept here.
 	 */
 	const ORDER = ['apple-viewer', 'apple-angel', 'apple-play', 'apple-disks', 'apple-sound', 'apple-dance', 'apple-cpu', 'apple-mem', 'apple-io', 'apple-korz', 'apple-prefs', 'apple-about'];
-	const ORDER_KEY = 'apple-outline-order';
-	/** @type {string[]} */
-	let order = $state(keptOrder());
-	function keptOrder() {
-		try {
-			const kept = JSON.parse(globalThis.localStorage?.getItem(ORDER_KEY) ?? '[]');
-			const known = Array.isArray(kept) ? kept.filter((k) => ORDER.includes(k)) : [];
-			// A node added since the order was kept goes after the one it follows in ORDER.
-			for (const [i, k] of ORDER.entries()) if (!known.includes(k)) known.splice(i ? known.indexOf(ORDER[i - 1]) + 1 : 0, 0, k);
-			return known;
-		} catch {
-			return [...ORDER];
-		}
-	}
-	/** Move node `id` before node `to`, or one place up (-1) or down (1). @param {string} id @param {string | number} to */
-	function moveNode(id, to) {
-		const from = order.indexOf(id);
-		if (from < 0) return;
-		const rest = order.filter((k) => k !== id);
-		const at = typeof to === 'number' ? Math.max(0, Math.min(rest.length, from + to)) : rest.indexOf(to);
-		if (at < 0) return;
-		rest.splice(at, 0, id);
-		order = rest;
-		try {
-			globalThis.localStorage?.setItem(ORDER_KEY, JSON.stringify(order));
-		} catch {
-			/* Storage forbidden: the order lasts until the page goes. */
-		}
-	}
+	const outline = new OutlineOrder('apple-outline-order', ORDER);
+	const order = $derived(outline.order);
+	const moveNode = outline.move;
 
 	const hex = (/** @type {number} */ n, /** @type {number} */ w) => (n ?? 0).toString(16).toUpperCase().padStart(w, '0');
 	const FLAGS = [
