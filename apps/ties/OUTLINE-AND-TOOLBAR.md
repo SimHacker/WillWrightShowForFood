@@ -163,9 +163,11 @@ catalog), paper on a light one (`/apple2/`). New panes use the same variables.
   in the outline know what they act on. A click on the 📌 is shorthand for dragging it to the
   end of the current target's layout that takes its kind. Next, the 📌 itself drags: it
   carries a new instance of the control from the warehouse to any place that can receive it,
-  with the same lifting, room opening and drop as moving an item within a layout. When there
-  are many places (more toolbars, containers, windows, pie menus), a way to choose the
-  current target comes with them, so the click keeps a meaning.
+  with the same lifting, room opening and drop as moving an item within a layout. Dragging the
+  📌 waits for a second place to receive things; with one, the click says all a drag would.
+  When there are many places (more toolbars, containers, windows, pie menus), the current
+  target is the last one the person dragged something into or selected, so the click keeps
+  following where they are working.
 - **More anchors on the item**: today `top-left` (⠿) and `top-right` (⏏️). The other corners
   and the edges' middles take more handles; layouts anchored at points of a container (its
   ends, its middle, its edges) take items, and a drag between any two is one move.
