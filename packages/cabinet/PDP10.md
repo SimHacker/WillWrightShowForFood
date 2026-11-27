@@ -691,6 +691,24 @@ lines that scroll off, which a real one could not. The console TTY is a glass te
 paper teletype's protocol on a screen; it stays for the console. The Knight TV, the ninth
 floor's bitmap terminals (above), comes later.
 
+**A display on the console itself, without a network.** Not built. ITS has a terminal type for a
+terminal whose own software reads ITS's display codes: `%TNSFW`, the "software" TTY (`SYSTEM;
+BITS`, `TS3TTY`: "SOFTWARE TTY GETS THE CODES AS THEY APPEAR IN THE BUFFER"), chosen with
+`:TCTYP SOFTWARE` (`SYSENG; TCTYP`, 95 by 37 unless told the size). Those codes, `%TDMOV` 0200 to
+`%TDMAX` 0254, are the ones SUPDUP's output carries, so a page that reads them is the screen half
+of a SUPDUP terminal, on any line. Two things stand in the way on the console:
+
+1. The emulator's CTY keeps seven bits of each character it prints (`devices.ts`, `data & 0x7f`
+   and `& 0o177`), so the codes would arrive as control characters. It needs an eight-bit path,
+   at least while the page is a software terminal.
+2. The page needs the terminal: a screen of the size `:TCTYP` gave, the %TD codes (move, clear to
+   end of line and screen, insert and delete lines and characters), and the glass view's
+   scrolled-off lines kept.
+
+This does not wait on the TK10 stall; that is the hardwired lines, not the console. SUPDUP's
+other half, the connection's terminal options and size sent at login, is for the network and
+comes with Chaosnet below.
+
 ## One ITS for everyone: the server and its backplane
 
 The KA10 runs in Node as it runs in the page (the ITS boot test is Node), so one ITS can run on

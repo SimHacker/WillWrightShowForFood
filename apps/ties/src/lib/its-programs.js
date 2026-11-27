@@ -18,7 +18,7 @@
 /** @typedef {{ title: string, lines: ItsLine[] }} ItsWords */
 /** A page to open in the viewer beside the program: another machine's, or anything the viewer shows. */
 /** @typedef {{ label: string, url: string, title: string }} ItsSee */
-/** @typedef {{ id: string, title: string, about: string, start: ItsStep[], quit: ItsLine, lines: ItsLine[], words?: ItsWords[], compass?: boolean, see?: ItsSee[] }} ItsProgram */
+/** @typedef {{ id: string, title: string, about: string, start: ItsStep[], quit: ItsLine, lines: ItsLine[], words?: ItsWords[], compass?: boolean, see?: ItsSee[], baud?: number }} ItsProgram */
 
 /** The compass rose's directions, as Zork takes them, in the rose's reading order, with LOOK in the middle. */
 export const COMPASS = [
@@ -156,6 +156,8 @@ export const PROGRAMS = [
 		quit: { label: 'quit', title: 'Leave Zork for DDT, answering y when it asks', steps: [{ keys: 'quit\r', wait: 'affirmative):' }, { keys: 'y\r' }] },
 		lines: [],
 		compass: true,
+		// A story told at 120 characters a second, unless the person has picked a rate.
+		baud: 1200,
 		see: [
 			{
 				label: "Infocom's Zork on the Apple ][",

@@ -4,6 +4,24 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" href="data:," />
+		<script>
+			// ?reset forgets every setting the site keeps in this browser; ?reset=pdp10,toolbar only
+			// those whose names hold one of the words. It runs before the page's modules read them,
+			// and leaves the address without it, so a reload does not reset again.
+			(() => {
+				const url = new URL(location.href);
+				if (!url.searchParams.has('reset')) return;
+				const words = (url.searchParams.get('reset') ?? '').split(',').map((w) => w.trim()).filter(Boolean);
+				try {
+					for (const store of [localStorage, sessionStorage])
+						for (const k of Object.keys(store)) if (!words.length || words.some((w) => k.includes(w))) store.removeItem(k);
+				} catch {
+					/* Storage forbidden: nothing is kept to forget. */
+				}
+				url.searchParams.delete('reset');
+				history.replaceState(history.state, '', url);
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

@@ -6,9 +6,10 @@
 	 * Turned off, the player has the machine and every move to themselves.
 	 */
 	import { onMount, tick } from 'svelte';
-	import { askKeys, fillNow, fillReply } from '@wwsff/cabinet/angel';
+	import { askKeys, fillNow, fillReply, placeOf } from '@wwsff/cabinet/angel';
 	import { apple } from '../apple.svelte.js';
 	import { loadAngel } from '../angels.js';
+	import AdventurePad from './AdventurePad.svelte';
 	import VoicePicker from '../VoicePicker.svelte';
 	import VoiceTone from '../VoiceTone.svelte';
 	import { utterance } from '../voice.svelte.js';
@@ -50,6 +51,10 @@
 
 	/** @type {import('@wwsff/cabinet/angel').Angel | null} */
 	let angel = null;
+	/** The game the angel knows is running, for an angel with games. @type {import('@wwsff/cabinet/angel').GameSpec | null} */
+	let game = $state.raw(null);
+	/** Where that game says the player is. @type {string | undefined} */
+	let place = $state();
 	let last = 0;
 	let autoDone = false;
 
@@ -122,8 +127,18 @@
 			(on ? enter : track)(angel.state);
 		}
 		last = seconds;
-		const next = angel.step(apple.picture, seconds);
+		const rows = apple.text();
+		const next = angel.step(apple.picture, seconds, rows, apple.drives?.[0] ?? '');
 		if (next) (on ? enter : track)(next);
+		if (angel.game !== game) {
+			game = angel.game;
+			if (game && on) say(game.title);
+		}
+		const now = game ? placeOf(game, rows) : undefined;
+		if (now !== place) {
+			place = now;
+			if (now && on) say(now);
+		}
 		held = seconds - angel.since;
 		if (!on) return;
 		if (state?.auto && !autoDone && seconds - angel.since >= 1) {
@@ -240,6 +255,7 @@
 	{#if on}
 		<p class="say" aria-live="polite">{state?.say ?? 'Watching the screen.'}</p>
 		{@render controls?.()}
+		{#if game}<AdventurePad {game} {place} />{/if}
 		{#if ask}
 			<form onsubmit={answer}>
 				<label>
@@ -283,6 +299,7 @@
 	{:else}
 		<p class="say">Off: the keyboard goes to the Apple and every move is shown.</p>
 		{@render controls?.()}
+		{#if game}<AdventurePad {game} {place} />{/if}
 	{/if}
 	{#if failed}<p class="say failed">{failed}</p>{/if}
 	{#if guide}

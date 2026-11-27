@@ -13,7 +13,13 @@ import { type Picture, decodePng } from "./png.js";
  *   looks:            a tree. A look is a PNG and where it sits on the screen; its looks are
  *                     only tried while it is seen. Transparent pixels in a PNG are not compared,
  *                     so a dialog can be seen whether or not its field is filled in. A look
- *                     matches exactly; `tolerance` and `channel` make it fuzzy.
+ *                     matches exactly; `tolerance` and `channel` make it fuzzy. A look with
+ *                     `text` instead is a regular expression tried on the screen's text rows,
+ *                     one row to a line, so ^ and $ are a row's ends.
+ *   games:            for an angel that serves several games: each is known by the looks in its
+ *                     `when`, and stays the game until another one's are seen or the machine
+ *                     reboots. Its compass, the word in the rose's middle and its command groups
+ *                     are the buttons the page shows while it plays.
  *   states:           tried in order on every step; the first whose conditions hold is the state.
  *                     When none holds the angel stays where it is.
  *     when / unless   looks that must be seen / must not be
@@ -33,8 +39,10 @@ import { type Picture, decodePng } from "./png.js";
 /** A look matches exactly unless it says how fuzzy it may be. */
 export interface LookSpec {
 	id: string;
-	png: string;
-	at: [number, number];
+	png?: string;
+	at?: [number, number];
+	/** A regular expression tried on the text rows instead of a picture. */
+	text?: string;
 	/** Fraction of compared pixels allowed to differ; 0, the default, is every pixel. */
 	tolerance?: number;
 	/** How far a red, green or blue value may be from the template's and still be the same; default 0. */
@@ -91,17 +99,79 @@ export interface ProbeSpec {
 	every: number;
 }
 
+/** A button that types a word: with Return, or with a space when `then` says the game wants more after it. */
+export interface CommandSpec {
+	word: string;
+	/** The game's other words for it, shown in the button's tip. */
+	also?: string[];
+	/** Typed alone, the game asks what: the button types the word and a space, and the player finishes. */
+	then?: boolean;
+	/** The tip, when the word alone does not say what it does. */
+	tip?: string;
+}
+
+/** A plain string is a CommandSpec's word, typed with Return. */
+export type Command = string | CommandSpec;
+
+export interface PadGroup {
+	label: string;
+	words: Command[];
+	/** Shown open the first time; closed groups are a click away. */
+	open?: boolean;
+}
+
+/** The compass points a rose can have, in the order it is drawn, row by row. */
+export const COMPASS = ["nw", "n", "ne", "w", "e", "sw", "s", "se", "up", "down", "in", "out"] as const;
+export type CompassPoint = (typeof COMPASS)[number];
+
+export interface GameSpec {
+	id: string;
+	title: string;
+	when: string | string[];
+	/** The disks it boots from, by catalog path: in drive 1, it is the game before its banner is seen, or after the banner has gone. */
+	disks?: string[];
+	/** Where the player is: a regular expression tried on each text row, its first group the place. */
+	where?: string;
+	/** The rose: each point the game knows, and the word typed for it. */
+	compass?: Partial<Record<CompassPoint, Command>>;
+	/** The button in the middle of the rose. */
+	center?: Command;
+	groups?: PadGroup[];
+}
+
 export interface AngelSpec {
 	title?: string;
 	/** The screen size the looks were cut from. */
 	screen: [number, number];
 	looks: LookSpec[];
 	states: StateSpec[];
+	games?: GameSpec[];
 }
 
 export interface Look extends Omit<LookSpec, "looks"> {
-	image: Picture;
+	image?: Picture | undefined;
+	pattern?: RegExp | undefined;
 	looks: Look[];
+}
+
+/** A command as its word, its other words, whether it waits for more, and its tip. */
+export const commandSpec = (c: Command): CommandSpec => (typeof c === "string" ? { word: c } : c);
+
+/** The keys a command types. */
+export const commandKeys = (c: Command): string => {
+	const s = commandSpec(c);
+	return s.then ? `${s.word} ` : `${s.word}\r`;
+};
+
+/** Where a game says the player is, from its text rows; undefined when it does not say. */
+export function placeOf(game: GameSpec, rows: string[]): string | undefined {
+	if (!game.where) return undefined;
+	const re = new RegExp(game.where);
+	for (const row of rows) {
+		const m = re.exec(row);
+		if (m?.[1]) return m[1].trim();
+	}
+	return undefined;
 }
 
 const list = (v: string | string[] | undefined): string[] => (v === undefined ? [] : Array.isArray(v) ? v : [v]);
@@ -112,6 +182,7 @@ const list = (v: string | string[] | undefined): string[] => (v === undefined ? 
  */
 export function mismatch(screen: Picture, look: Pick<Look, "image" | "at" | "channel">, give = 1): number {
 	const { image, at } = look;
+	if (!image || !at) return 1;
 	const near = look.channel ?? 0;
 	const [x0, y0] = at;
 	if (x0 < 0 || y0 < 0 || x0 + image.width > screen.width || y0 + image.height > screen.height) return 1;
@@ -138,18 +209,19 @@ export function mismatch(screen: Picture, look: Pick<Look, "image" | "at" | "cha
 	return differ / opaque;
 }
 
-/** Whether a look is on the screen: exact by default, or within its tolerance and channel. */
-export const sees = (screen: Picture, look: Look): boolean => {
+/** Whether a look is on the screen: a text look in the rows, a picture exact by default, or within its tolerance and channel. */
+export const sees = (screen: Picture, look: Look, text = ""): boolean => {
+	if (look.pattern) return look.pattern.test(text);
 	const give = look.tolerance ?? 0;
 	return mismatch(screen, look, give) <= give;
 };
 
-/** The looks seen on a screen: a look's own looks are tried only when it is seen. */
-export function recognize(screen: Picture, looks: Look[], seen = new Set<string>()): Set<string> {
+/** The looks seen on a screen: a look's own looks are tried only when it is seen. `text` is the rows, one to a line. */
+export function recognize(screen: Picture, looks: Look[], seen = new Set<string>(), text = ""): Set<string> {
 	for (const look of looks) {
-		if (sees(screen, look)) {
+		if (sees(screen, look, text)) {
 			seen.add(look.id);
-			recognize(screen, look.looks, seen);
+			recognize(screen, look.looks, seen, text);
 		}
 	}
 	return seen;
@@ -159,13 +231,22 @@ export function parseAngel(text: string): AngelSpec {
 	const spec = parse(text) as AngelSpec;
 	if (!spec || !Array.isArray(spec.states)) throw new Error("ANGEL.yml needs states");
 	spec.looks ??= [];
+	spec.games ??= [];
 	return spec;
 }
 
-/** Read every look's PNG; `read` gets the path as written in ANGEL.yml. */
+/** Read every look's PNG, or compile its text; `read` gets the path as written in ANGEL.yml. */
 export async function loadLooks(specs: LookSpec[], read: (png: string) => Promise<Uint8Array>): Promise<Look[]> {
 	return Promise.all(
-		specs.map(async (s) => ({ ...s, image: await decodePng(await read(s.png)), looks: await loadLooks(s.looks ?? [], read) }))
+		specs.map(async (s) => {
+			if (s.text === undefined && !s.png) throw new Error(`look ${s.id} needs a png or a text`);
+			return {
+				...s,
+				image: s.png ? await decodePng(await read(s.png)) : undefined,
+				pattern: s.text !== undefined ? new RegExp(s.text, "m") : undefined,
+				looks: await loadLooks(s.looks ?? [], read),
+			};
+		})
 	);
 }
 
@@ -214,6 +295,8 @@ export class Angel {
 	seen = new Set<string>();
 	/** Machine seconds of the last probe. */
 	probed = -Infinity;
+	/** The game last recognized, for an angel with games; null until one is seen. */
+	game: GameSpec | null = null;
 
 	constructor(spec: AngelSpec, looks: Look[]) {
 		this.spec = spec;
@@ -235,9 +318,16 @@ export class Angel {
 		return true;
 	}
 
-	/** Look at a screen at `seconds` of machine time. Returns the new state when it changed. */
-	step(screen: Picture, seconds: number): StateSpec | null {
-		this.seen = recognize(screen, this.looks);
+	/**
+	 * Look at a screen and its text rows at `seconds` of machine time, with the disk in drive 1.
+	 * Returns the new state when it changed.
+	 */
+	step(screen: Picture, seconds: number, rows: string[] = [], disk = ""): StateSpec | null {
+		this.seen = recognize(screen, this.looks, new Set(), rows.join("\n"));
+		const games = this.spec.games ?? [];
+		const game = games.find((g) => list(g.when).every((id) => this.seen.has(id)));
+		if (game) this.game = game;
+		else if (disk && !this.game?.disks?.includes(disk)) this.game = games.find((g) => g.disks?.includes(disk)) ?? this.game;
 		const next = this.spec.states.find((s) => (s.when !== undefined || s.from !== undefined) && this.holds(s, seconds));
 		if (!next || next.id === this.state.id) return null;
 		this.state = next;
@@ -260,6 +350,7 @@ export class Angel {
 		this.since = seconds;
 		this.seen = new Set();
 		this.probed = -Infinity;
+		this.game = null;
 	}
 }
 

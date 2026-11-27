@@ -155,6 +155,11 @@
 	const isField = (t) =>
 		t instanceof HTMLInputElement || t instanceof HTMLSelectElement || t instanceof HTMLTextAreaElement || (t instanceof HTMLElement && t.isContentEditable);
 
+	apple.focusScreen = () => {
+		engaged = true;
+		canvas?.focus({ preventScroll: true });
+	};
+
 	function engage() {
 		engaged = true;
 		canvas?.focus({ preventScroll: true });

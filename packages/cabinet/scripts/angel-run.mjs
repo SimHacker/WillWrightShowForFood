@@ -96,7 +96,7 @@ for (;;) {
 	const screen = { width: W, height: H, data: px };
 	for (const k of keys) if (!k.done && t >= k.at) (k.done = true), m.type(k.text), console.log(`  keys at ${t.toFixed(1)}: ${JSON.stringify(k.text)}`);
 	for (const v of moves) if (!v.done && t >= v.at) (v.done = true), act(v.label);
-	const changed = angel?.step(screen, t);
+	const changed = angel?.step(screen, t, m.text());
 	if (changed) {
 		console.log(`${t.toFixed(1)}s ${changed.id} [${[...angel.seen].join(" ")}]`);
 		if (changed.auto) pending = { at: t + 1, run: () => act(changed.auto) };

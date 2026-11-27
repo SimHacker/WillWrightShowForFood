@@ -295,6 +295,15 @@ class KorzApple {
 		return { width: FRAME_WIDTH, height: FRAME_HEIGHT, data: this.#pixels };
 	}
 
+	/** The 24 text rows on show, trimmed; in graphics, only a mixed screen's last four. @returns {string[]} */
+	text() {
+		const board = this.#board;
+		if (!board) return [];
+		const m = board.mode();
+		const rows = textRows((a) => board.peek(a), m.page2 ? 0x800 : 0x400);
+		return m.graphics ? rows.map((r, i) => (m.mixed && i >= 20 ? r : '')) : rows;
+	}
+
 	seconds() {
 		return (this.#board?.cycles ?? 0) / APPLE_HZ;
 	}

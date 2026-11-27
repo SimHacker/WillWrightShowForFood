@@ -17,7 +17,7 @@ import warm from '../../../../packages/cabinet/its/warm.json';
 import { ITS_CALLS, PDP10_REGIONS, PDP10_VOICES, Tally, dataSwitchWord, dataSwitchesSeedText, dataSwitchesSeedWord } from '@wwsff/cabinet/dance';
 import { asset } from '$app/paths';
 import { createBeeper } from './beeper.js';
-import { BusDance, speedLoad } from './bus-dance.svelte.js';
+import { BusDance } from './bus-dance.svelte.js';
 import { GlassScreen } from './glass-screen.js';
 import { TtyVoice } from './tty-voice.svelte.js';
 import { programFor } from './its-programs.js';
@@ -79,6 +79,11 @@ export const VIEWS = /** @type {{ id: View, label: string, title: string }[]} */
 	{ id: 'glass', label: 'Glass', title: 'A glass teletype: 24 lines on a screen, scrolling; ITS erases rubouts and stops at --More-- for each screenful' }
 ]);
 
+/** What each thing a person notices adds to the dance's stir, and the most it holds. */
+const STIR = { key: 0.12, printed: 0.006, seek: 0.08, most: 1.2 };
+/** Milliseconds for the stir to fade by half. */
+const STIR_HALF = 1500;
+
 /** Characters a second: 11 bits a character at 110 baud, 10 above. @param {number} baud */
 const cps = (baud) => (baud === 110 ? 10 : baud / 10);
 
@@ -135,6 +140,16 @@ class Pdp10 {
 	/** @type {Map<number, number>} */
 	#calls = new Map();
 	#gauges = { load: 0, fill: 0 };
+	/**
+	 * How much is going on that a person would notice: keys typed, characters printed, disk
+	 * seeks. It drives the drums with the programs' share of the time, and fades by half every
+	 * STIR_HALF ms, so a game waiting for its next command goes quiet. ITS idling flat out would
+	 * otherwise keep the drums at full drive.
+	 */
+	#stir = 0;
+	#user = 0;
+	/** The program's own baud rate, set when it starts, for a person who has not picked one. */
+	#programBaud = 0;
 	#toldDance = false;
 
 	constructor() {
@@ -159,6 +174,7 @@ class Pdp10 {
 		const boot = runs.boot === 'tape' ? 'tape' : 'its';
 		const login = String(values.login ?? 'guest').replace(/[^A-Za-z0-9]/g, '').slice(0, 6) || 'guest';
 		const program = programFor(String(runs.program ?? 'ddt'));
+		this.#programBaud = program?.baud && !keptBaudChoice() ? program.baud : 0;
 		/** @type {{ keys?: string, wait?: string, idle?: number, phase?: string }[]} */
 		const steps =
 			boot === 'tape'
@@ -229,6 +245,7 @@ class Pdp10 {
 	type(text) {
 		this.#worker?.postMessage({ type: 'keys', text });
 		this.voice.typed(text);
+		this.#stirUp(STIR.key * text.length);
 		for (const ch of text) this.dance.touch({ kind: 'key', code: ch.charCodeAt(0) });
 	}
 
@@ -366,6 +383,8 @@ class Pdp10 {
 		this.#raf = requestAnimationFrame(this.#frame);
 		const dt = this.#then ? Math.min(250, now - this.#then) : 0;
 		this.#then = now;
+		this.#stir *= 0.5 ** (dt / STIR_HALF);
+		this.#gauges = { ...this.#gauges, load: this.#load() };
 		if (this.#pending) {
 			let n = this.#pending.length;
 			if (this.baud) {
@@ -421,6 +440,10 @@ class Pdp10 {
 		} else if (msg.type === 'dance') this.#danced(msg);
 		else if (msg.type === 'phase') {
 			if (!msg.text && this.phase && this.told === null) this.told = this.#bootView;
+			if (this.#programBaud && msg.text?.startsWith('Starting ')) {
+				this.baud = this.#programBaud;
+				this.#programBaud = 0;
+			}
 			this.phase = msg.text;
 		}
 		else if (msg.type === 'stats') this.stats = msg;
@@ -445,12 +468,25 @@ class Pdp10 {
 		for (const [k, w] of msg.cylinders) this.#hits.rp03.add(k, w);
 		for (const [k, w] of msg.interrupts) this.#hits.pi.add(k, w);
 		for (const [op, n] of msg.calls) if (CALLS.has(op)) this.#calls.set(op, (this.#calls.get(op) ?? 0) + n);
-		this.#gauges = { load: speedLoad(msg.rate), fill: Math.sqrt(Math.max(0, Math.min(1, msg.user))) };
+		for (const [, w] of msg.cylinders) this.#stirUp(STIR.seek * Math.min(1, w));
+		this.#user = Math.max(0, Math.min(1, msg.user));
+		this.#gauges = { load: this.#load(), fill: Math.sqrt(this.#user) };
+	}
+
+	/** @param {number} n */
+	#stirUp(n) {
+		this.#stir = Math.min(STIR.most, this.#stir + n);
+	}
+
+	/** The drums' drive: what a person notices, and what the programs are doing besides ITS. */
+	#load() {
+		return Math.min(1, this.#stir + 0.5 * this.#user);
 	}
 
 	/** What the teletype prints: Return goes to the left, Line Feed up a line in the same column. @param {string} text */
 	#print(text) {
 		this.#watch(text);
+		this.#stirUp(STIR.printed * text.length);
 		const lines = this.lines.slice();
 		let line = lines.pop() ?? '';
 		const bells = this.#glass.feed(text);
@@ -499,6 +535,15 @@ function keep(key, value) {
 		globalThis.localStorage?.setItem(key, value);
 	} catch {
 		/* Storage forbidden: it lasts until the page goes. */
+	}
+}
+
+/** Whether the person has picked a baud rate on this browser. */
+function keptBaudChoice() {
+	try {
+		return globalThis.localStorage?.getItem(BAUD_KEY) != null;
+	} catch {
+		return false;
 	}
 }
 

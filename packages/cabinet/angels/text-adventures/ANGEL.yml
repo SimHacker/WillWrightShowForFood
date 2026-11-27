@@ -1,0 +1,518 @@
+# Screen angel for text adventures on the Apple ][: Infocom's Zork I, II and III, and next the
+# Scott Adams adventures. One angel for all of them: it reads the screen's text, knows the game
+# by its banner, and keeps it until another game's banner shows or the Apple reboots. Each game
+# has its own buttons: a compass rose of the directions its parser knows, LOOK in the middle,
+# a few commands used all the time, and for Zork I, where most people start, every verb it has.
+#
+# The verbs are the games' own: scripts/zork-words.mjs reads each story's dictionary out of the
+# Apple's RAM, groups the synonyms by the parser's verb number, and types each verb alone to see
+# whether the game asks for more. Rerun it with --write after changing a disk.
+
+title: Text adventures
+screen: [560, 192]
+
+looks:
+  - id: zork-i
+    text: "^ZORK I: THE GREAT UNDERGROUND EMPIRE"
+  - id: zork-ii
+    text: "^ZORK II: THE WIZARD OF FROBOZZ"
+  - id: zork-iii
+    text: "^ZORK III: THE DUNGEON MASTER"
+  - id: columns            # Infocom's Apple interpreter, before the game starts
+    text: "80 COLUMNS\\? \\(Y/N\\):"
+  - id: more               # the screen is full: a key shows the rest
+    text: "\\[MORE\\]"
+  - id: prompt             # Infocom's prompt, waiting for a command
+    text: "^>.?$"
+
+states:
+  - id: loading
+    say: The Apple is loading the game.
+
+  - id: columns
+    when: columns
+    say: >-
+      The game asks whether to use 80 columns. The page answers 40 by itself, the width this
+      Apple shows best; 80 Columns is there for a //e with the card.
+    moves: [40 Columns, 80 Columns]
+
+  - id: more
+    when: more
+    say: The screen is full and there is more to read. Press More, or any key, to see the rest.
+    moves: [More]
+
+  - id: playing
+    when: prompt
+    unless: more
+    say: >-
+      The game is waiting for a command at the > prompt. Type one on the Apple, or press the
+      buttons: a direction to walk there, LOOK in the middle to look around, and the game's
+      other words below. A word with … after it wants something more: finish it on the Apple
+      and press Return.
+
+# Typed with Return, or with a space when `then` says the game asks what.
+often: &often
+  - INVENTORY
+  - { word: TAKE ALL, tip: Everything here you can carry }
+  - { word: DROP ALL, tip: Put down everything you carry }
+  - { word: TAKE, then: true }
+  - { word: DROP, then: true }
+  - { word: EXAMINE, then: true }
+  - { word: OPEN, then: true }
+  - { word: CLOSE, then: true }
+  - { word: READ, then: true }
+  - { word: PUT, then: true }
+  - { word: AGAIN, tip: Does the last command again }
+  - { word: WAIT, tip: Lets a turn go by }
+the-game: &the-game
+  - { word: SCORE, tip: Your score and rank }
+  - { word: DIAGNOSE, tip: How hurt you are }
+  - { word: VERBOSE, tip: Describe every place each time you come to it }
+  - { word: BRIEF, tip: Describe a place in full only the first time }
+  - { word: SAVE, tip: Save the game to a disk; the game asks for one }
+  - { word: RESTORE, tip: Go back to a saved game }
+
+# zork-words: begin
+zork-words:
+  zork-i:
+    compass: &zork-i-compass { down: DOWN, e: EAST, in: IN, n: NORTH, ne: NORTHEAST, nw: NORTHWEST, out: OUT, s: SOUTH, se: SOUTHEAST, sw: SOUTHWEST, up: UP, w: WEST }
+    verbs: &zork-i-verbs
+      - { word: "$VERIFY" }
+      - { word: ACTIVATE, then: true }
+      - { word: AGAIN, also: [G] }
+      - { word: ANSWER, also: [REPLY] }
+      - { word: APPLY, then: true }
+      - { word: ASK, then: true, also: [TELL] }
+      - { word: ATTACK, then: true, also: [FIGHT, HIT, HURT, INJURE] }
+      - { word: BACK }
+      - { word: BARF, also: [CHOMP, LOSE] }
+      - { word: BLAST }
+      - { word: BLOW, then: true }
+      - { word: BOARD, then: true }
+      - { word: BREAK, then: true, also: [BLOCK, DAMAGE, DESTROY, SMASH] }
+      - { word: BRIEF }
+      - { word: BRUSH, then: true, also: [CLEAN] }
+      - { word: BUG }
+      - { word: BURN, then: true, also: [IGNITE, INCINERATE] }
+      - { word: CLIMB, also: [SIT] }
+      - { word: CLOSE, then: true }
+      - { word: COMMAND, then: true }
+      - { word: COUNT, then: true }
+      - { word: CROSS, then: true, also: [FORD] }
+      - { word: CURSE, also: [DAMN] }
+      - { word: CUT, then: true, also: [PIERCE, SLICE] }
+      - { word: DEFLATE, then: true }
+      - { word: DIAGNOSE }
+      - { word: DIG, then: true }
+      - { word: DISEMBARK, then: true }
+      - { word: DISENCHANT, then: true }
+      - { word: DRINK, then: true, also: [IMBIBE, SWALLOW] }
+      - { word: DROP, then: true, also: [RELEASE] }
+      - { word: EAT, then: true, also: [BITE, CONSUME, TASTE] }
+      - { word: ECHO }
+      - { word: ENCHANT, then: true }
+      - { word: ENTER }
+      - { word: EXAMINE, then: true, also: [DESCRIBE, WHAT, WHATS] }
+      - { word: EXIT }
+      - { word: EXORCISE, then: true, also: [BANISH, BEGONE, CAST, DRIVE] }
+      - { word: EXTINGUISH, then: true, also: [DOUSE] }
+      - { word: FILL, then: true }
+      - { word: FIND, also: [SEE, SEEK, WHERE] }
+      - { word: FIX, then: true, also: [GLUE, PATCH, PLUG, REPAIR] }
+      - { word: FOLLOW, also: [CHASE, COME, PURSUE] }
+      - { word: FROBOZZ }
+      - { word: GIVE, then: true, also: [DONATE, FEED, OFFER] }
+      - { word: GO, then: true, also: [PROCEED, RUN, STEP, WALK] }
+      - { word: HAND, then: true }
+      - { word: HATCH, then: true }
+      - { word: HELLO, also: [HI] }
+      - { word: HOP, also: [SKIP] }
+      - { word: INCANT, also: [CHANT] }
+      - { word: INFLATE, then: true }
+      - { word: INVENTORY, also: [I] }
+      - { word: JUMP, also: [DIVE, LEAP] }
+      - { word: KICK, then: true, also: [TAUNT] }
+      - { word: KILL, then: true, also: [DISPATCH, MURDER, SLAY] }
+      - { word: KISS, then: true }
+      - { word: KNOCK, then: true, also: [RAP] }
+      - { word: LAUNCH, then: true }
+      - { word: LEAN, then: true }
+      - { word: LEAVE }
+      - { word: LIFT, then: true, also: [RAISE] }
+      - { word: LIGHT, then: true }
+      - { word: LISTEN, then: true }
+      - { word: LOCK, then: true }
+      - { word: LOOK, also: [GAZE, L, STARE] }
+      - { word: LOWER, then: true }
+      - { word: MAKE, then: true }
+      - { word: MELT, then: true, also: [LIQUIFY] }
+      - { word: MOVE, then: true }
+      - { word: MUMBLE, also: [SIGH] }
+      - { word: ODYSSEUS, also: [ULYSSES] }
+      - { word: OIL, then: true, also: [GREASE, LUBRICATE] }
+      - { word: OPEN, then: true }
+      - { word: PICK, then: true }
+      - { word: PLAY, then: true }
+      - { word: POKE, then: true }
+      - { word: POUR, then: true, also: [SPILL] }
+      - { word: PRAY }
+      - { word: PULL, then: true, also: [TUG, YANK] }
+      - { word: PUMP, then: true }
+      - { word: PUNCTURE, then: true }
+      - { word: PUSH, then: true, also: [PRESS] }
+      - { word: PUT, then: true, also: [HIDE, INSERT, PLACE, STUFF] }
+      - { word: QUIT, also: [Q] }
+      - { word: READ, then: true, also: [SKIM] }
+      - { word: REPENT }
+      - { word: RESTART }
+      - { word: RESTORE }
+      - { word: RING, then: true, also: [PEAL] }
+      - { word: ROLL, then: true }
+      - { word: SAVE }
+      - { word: SAY }
+      - { word: SCORE }
+      - { word: SCRIPT }
+      - { word: SEARCH, then: true }
+      - { word: SEND, then: true }
+      - { word: SHAKE, then: true }
+      - { word: SLIDE, then: true }
+      - { word: SMELL, then: true, also: [SNIFF] }
+      - { word: SPIN, then: true }
+      - { word: SPRAY, then: true }
+      - { word: SQUEEZE, then: true }
+      - { word: STAB, then: true }
+      - { word: STAND }
+      - { word: STAY }
+      - { word: STRIKE, then: true }
+      - { word: SUPERBRIEF, also: [SUPER] }
+      - { word: SWIM, also: [BATHE, WADE] }
+      - { word: SWING, then: true, also: [THRUST] }
+      - { word: TAKE, then: true, also: [CARRY, CATCH, GET, GRAB, HOLD, REMOVE] }
+      - { word: TALK, then: true }
+      - { word: TEMPLE, also: [TREASURE] }
+      - { word: THROW, then: true, also: [CHUCK, HURL, TOSS] }
+      - { word: TIE, then: true, also: [ATTACH, FASTEN, SECURE] }
+      - { word: TOUCH, then: true, also: [FEEL, PAT, PET, RUB] }
+      - { word: TURN, then: true, also: [FLIP, SET, SHUT] }
+      - { word: UNLOCK, then: true }
+      - { word: UNSCRIPT }
+      - { word: UNTIE, then: true, also: [FREE, UNATTACH, UNFASTEN, UNHOOK] }
+      - { word: VERBOSE }
+      - { word: VERSION }
+      - { word: WAIT, also: [Z] }
+      - { word: WAKE, then: true, also: [AWAKE, STARTLE, SURPRISE] }
+      - { word: WAVE, then: true, also: [BRANDISH] }
+      - { word: WEAR, then: true }
+      - { word: WIN, also: [WINNAGE] }
+      - { word: WIND, then: true }
+      - { word: WISH }
+      - { word: XYZZY, also: [PLUGH] }
+      - { word: YELL, also: [SCREAM, SHOUT] }
+      - { word: ZORK }
+  zork-ii:
+    compass: &zork-ii-compass { down: DOWN, e: EAST, in: IN, n: NORTH, ne: NORTHEAST, nw: NORTHWEST, out: OUT, s: SOUTH, se: SOUTHEAST, sw: SOUTHWEST, up: UP, w: WEST }
+    verbs: &zork-ii-verbs
+      - { word: "$VERIFY" }
+      - { word: ACTIVATE, then: true }
+      - { word: AGAIN, also: [G] }
+      - { word: ANSWER, also: [REPLY] }
+      - { word: APPLY, then: true }
+      - { word: ASK, then: true, also: [TELL] }
+      - { word: ATTACK, then: true, also: [FIGHT, HIT, HURT, INJURE] }
+      - { word: BACK }
+      - { word: BARF, also: [CHOMP, LOSE] }
+      - { word: BLAST }
+      - { word: BLOW, then: true }
+      - { word: BOARD, then: true }
+      - { word: BREAK, then: true, also: [BLOCK, DAMAGE, DESTROY, SMASH] }
+      - { word: BRIEF }
+      - { word: BRUSH, then: true, also: [CLEAN] }
+      - { word: BUG }
+      - { word: BURN, then: true, also: [IGNITE, INCINERATE] }
+      - { word: CLIMB, also: [SIT] }
+      - { word: CLOSE, then: true }
+      - { word: COMMAND, then: true }
+      - { word: COUNT, then: true }
+      - { word: CROSS, also: [FORD] }
+      - { word: CURSE, also: [DAMN] }
+      - { word: CUT, then: true, also: [PIERCE, SLICE] }
+      - { word: DEBUG }
+      - { word: DEFLATE, then: true }
+      - { word: DIAGNOSE }
+      - { word: DIG, then: true }
+      - { word: DISEMBARK, then: true }
+      - { word: DISENCHANT, then: true }
+      - { word: DRINK, then: true, also: [IMBIBE, SWALLOW] }
+      - { word: DROP, then: true, also: [RELEASE] }
+      - { word: EAT, then: true, also: [BITE, CONSUME, TASTE] }
+      - { word: ECHO }
+      - { word: ENCHANT, then: true }
+      - { word: ENTER }
+      - { word: EXAMINE, then: true, also: [DESCRIBE, WHAT, WHATS] }
+      - { word: EXIT }
+      - { word: EXORCISE, then: true, also: [BANISH, BEGONE, CAST, DRIVE] }
+      - { word: EXTINGUISH, then: true, also: [DOUSE] }
+      - { word: FILL, then: true }
+      - { word: FIND, also: [SEE, SEEK, WHERE] }
+      - { word: FIX, then: true, also: [GLUE, PATCH, PLUG, REPAIR] }
+      - { word: FOLLOW, also: [CHASE, COME, PURSUE] }
+      - { word: FROBOZZ, then: true }
+      - { word: GIVE, then: true, also: [DONATE, FEED, OFFER] }
+      - { word: GO, then: true, also: [PROCEED, RUN, STEP, WALK] }
+      - { word: HAND, then: true }
+      - { word: HATCH, then: true }
+      - { word: HELLO, also: [HI] }
+      - { word: HOP, also: [SKIP] }
+      - { word: INCANT, also: [CHANT] }
+      - { word: INFLATE, then: true }
+      - { word: INVENTORY, also: [I] }
+      - { word: JUMP, also: [DIVE, LEAP] }
+      - { word: KICK, then: true, also: [TAUNT] }
+      - { word: KILL, then: true, also: [DISPATCH, MURDER, SLAY] }
+      - { word: KISS, then: true }
+      - { word: KNOCK, then: true, also: [RAP] }
+      - { word: LAUNCH, then: true }
+      - { word: LEAN, then: true }
+      - { word: LEAVE }
+      - { word: LIFT, then: true, also: [RAISE] }
+      - { word: LIGHT, then: true }
+      - { word: LISTEN, then: true }
+      - { word: LOCK, then: true }
+      - { word: LOOK, also: [GAZE, L, STARE] }
+      - { word: LOWER, then: true }
+      - { word: MAKE, then: true }
+      - { word: MELT, then: true, also: [LIQUIFY] }
+      - { word: MOVE, then: true }
+      - { word: MUMBLE, also: [SIGH] }
+      - { word: ODYSSEUS, then: true, also: [ULYSSES] }
+      - { word: OIL, then: true, also: [GREASE, LUBRICATE] }
+      - { word: OPEN, then: true }
+      - { word: PICK, then: true }
+      - { word: PLAY, then: true }
+      - { word: POKE, then: true }
+      - { word: POUR, then: true, also: [SPILL] }
+      - { word: PRAY }
+      - { word: PULL, then: true, also: [TUG, YANK] }
+      - { word: PUMP, then: true }
+      - { word: PUNCTURE, then: true }
+      - { word: PUSH, then: true, also: [PRESS] }
+      - { word: PUT, then: true, also: [HIDE, INSERT, PLACE, STUFF] }
+      - { word: QUIT, also: [Q] }
+      - { word: READ, then: true, also: [SKIM] }
+      - { word: REPENT }
+      - { word: RESTART }
+      - { word: RESTORE }
+      - { word: RING, then: true, also: [PEAL] }
+      - { word: ROLL, then: true }
+      - { word: SAVE }
+      - { word: SAY }
+      - { word: SCORE }
+      - { word: SCRIPT }
+      - { word: SEARCH, then: true }
+      - { word: SEND, then: true }
+      - { word: SHAKE, then: true }
+      - { word: SLIDE, then: true }
+      - { word: SMELL, then: true, also: [SNIFF] }
+      - { word: SPIN, then: true }
+      - { word: SPRAY, then: true }
+      - { word: SQUEEZE, then: true }
+      - { word: STAB, then: true }
+      - { word: STAND }
+      - { word: STAY }
+      - { word: STRIKE, then: true }
+      - { word: SUPERBRIEF, also: [SUPER] }
+      - { word: SWIM, also: [BATHE, WADE] }
+      - { word: SWING, then: true, also: [THRUST] }
+      - { word: TAKE, then: true, also: [CARRY, CATCH, GET, GRAB, HOLD, REMOVE] }
+      - { word: TALK, then: true }
+      - { word: TEMPLE, also: [TREASURE] }
+      - { word: THROW, then: true, also: [CHUCK, HURL, TOSS] }
+      - { word: TIE, then: true, also: [ATTACH, FASTEN, SECURE] }
+      - { word: TOUCH, then: true, also: [FEEL, PAT, PET, RUB] }
+      - { word: TURN, then: true, also: [FLIP, SET, SHUT] }
+      - { word: UNLOCK, then: true }
+      - { word: UNSCRIPT }
+      - { word: UNTIE, then: true, also: [FREE, UNATTACH, UNFASTEN, UNHOOK] }
+      - { word: VERBOSE }
+      - { word: VERSION }
+      - { word: WAIT, also: [Z] }
+      - { word: WAKE, then: true, also: [AWAKE, STARTLE, SURPRISE] }
+      - { word: WAVE, then: true, also: [AIM, BRANDISH, POINT] }
+      - { word: WEAR, then: true }
+      - { word: WIN, also: [WINNAGE] }
+      - { word: WIND, then: true }
+      - { word: WISH }
+      - { word: XYZZY, also: [PLUGH] }
+      - { word: YELL, also: [SCREAM, SHOUT] }
+      - { word: ZORK }
+  zork-iii:
+    compass: &zork-iii-compass { down: DOWN, e: EAST, n: NORTH, ne: NORTHEAST, nw: NORTHWEST, out: OUT, s: SOUTH, se: SOUTHEAST, sw: SOUTHWEST, up: UP, w: WEST, in: ENTER }
+    verbs: &zork-iii-verbs
+      - { word: "$VERIFY" }
+      - { word: AGAIN, also: [G] }
+      - { word: ANSWER, also: [REPLY] }
+      - { word: APPLY, then: true }
+      - { word: ASK, then: true, also: [TELL] }
+      - { word: ATTACK, then: true, also: [FIGHT, HIT, HURT, INJURE] }
+      - { word: BACK }
+      - { word: BARF, also: [CHOMP, LOSE] }
+      - { word: BITE, then: true, also: [KICK, TAUNT] }
+      - { word: BLAST }
+      - { word: BLOW, then: true }
+      - { word: BOARD, then: true }
+      - { word: BREAK, then: true, also: [BLOCK, DAMAGE, DESTROY, SMASH] }
+      - { word: BRIEF }
+      - { word: BUG }
+      - { word: BURN, then: true, also: [IGNITE, INCINERATE] }
+      - { word: CLIMB, then: true, also: [SIT] }
+      - { word: CLOSE, then: true }
+      - { word: COUNT, then: true }
+      - { word: CROSS, then: true, also: [FORD] }
+      - { word: CURSE, also: [DAMN] }
+      - { word: CUT, then: true, also: [PIERCE, SLICE] }
+      - { word: DEFLATE, then: true }
+      - { word: DIAGNOSE }
+      - { word: DIG, then: true }
+      - { word: DISEMBARK, then: true }
+      - { word: DRINK, then: true, also: [IMBIBE, SWALLOW] }
+      - { word: DROP, then: true, also: [RELEASE] }
+      - { word: EAT, then: true, also: [CONSUME, TASTE] }
+      - { word: ENTER }
+      - { word: EXAMINE, then: true, also: [DESCRIBE, WHAT, WHATS] }
+      - { word: EXIT }
+      - { word: EXORCISE, then: true, also: [BANISH, BEGONE, CAST, DRIVE] }
+      - { word: EXTINGUISH, then: true, also: [DOUSE] }
+      - { word: FILL, then: true }
+      - { word: FIND, also: [SEE, SEEK, WHERE] }
+      - { word: FIX, then: true, also: [GLUE, PATCH, PLUG, REPAIR] }
+      - { word: FOLLOW, also: [CHASE, COME, PURSUE] }
+      - { word: GIVE, then: true, also: [DONATE, FEED, HAND, OFFER] }
+      - { word: GO, then: true, also: [PROCEED, RUN, STEP, WALK] }
+      - { word: HELLO, also: [HI] }
+      - { word: HOP, also: [SKIP] }
+      - { word: INCANT, also: [CHANT] }
+      - { word: INFLATE, then: true }
+      - { word: INVENTORY, also: [I] }
+      - { word: JUMP, also: [DIVE, LEAP] }
+      - { word: KILL, then: true, also: [DISPATCH, MURDER, SLAY, STAB] }
+      - { word: KISS, then: true }
+      - { word: KNOCK, then: true, also: [RAP] }
+      - { word: LAUNCH, then: true }
+      - { word: LEAN, then: true }
+      - { word: LEAVE }
+      - { word: LIFT, then: true, also: [RAISE] }
+      - { word: LIGHT, then: true }
+      - { word: LISTEN, then: true }
+      - { word: LOCK, then: true }
+      - { word: LOOK, also: [GAZE, L, STARE] }
+      - { word: LOWER, then: true }
+      - { word: MAKE, then: true }
+      - { word: MELT, then: true, also: [LIQUIFY] }
+      - { word: MOVE, then: true }
+      - { word: MUMBLE, also: [SIGH] }
+      - { word: OIL, then: true, also: [GREASE, LUBRICATE] }
+      - { word: OPEN, then: true }
+      - { word: PICK, then: true }
+      - { word: PLAY, then: true }
+      - { word: POKE, then: true, also: [BLIND, JAB] }
+      - { word: POUR, then: true, also: [SPILL] }
+      - { word: PRAY }
+      - { word: PULL, then: true, also: [TUG] }
+      - { word: PUMP, then: true }
+      - { word: PUSH, then: true, also: [PRESS] }
+      - { word: PUT, then: true, also: [HIDE, INSERT, PLACE, STUFF] }
+      - { word: QUIT, also: [Q] }
+      - { word: READ, then: true, also: [SKIM] }
+      - { word: REPENT }
+      - { word: RESTART }
+      - { word: RESTORE }
+      - { word: ROLL, then: true }
+      - { word: SAVE }
+      - { word: SAY, also: [TALK] }
+      - { word: SCORE }
+      - { word: SCRIPT }
+      - { word: SEARCH, then: true }
+      - { word: SEND, then: true }
+      - { word: SHAKE, then: true }
+      - { word: SLIDE, then: true }
+      - { word: SMELL, then: true, also: [SNIFF] }
+      - { word: SPIN, then: true }
+      - { word: SPRAY, then: true }
+      - { word: SQUEEZE, then: true }
+      - { word: STAND }
+      - { word: STAY }
+      - { word: STRIKE, then: true }
+      - { word: SUPERBRIEF, also: [SUPER] }
+      - { word: SWIM, also: [BATHE, WADE] }
+      - { word: SWING, then: true, also: [THRUST] }
+      - { word: TAKE, then: true, also: [CARRY, GET, GRAB, HOLD, REMOVE] }
+      - { word: THROW, then: true, also: [CHUCK, HURL, TOSS] }
+      - { word: TIE, then: true, also: [ATTACH, FASTEN, SECURE] }
+      - { word: TOUCH, then: true, also: [FEEL, PAT, PET, RUB] }
+      - { word: TURN, then: true, also: [FLIP, SET, SHUT] }
+      - { word: UNLOCK, then: true }
+      - { word: UNSCRIPT }
+      - { word: UNTIE, then: true, also: [FREE, UNATTACH, UNFASTEN, UNHOOK] }
+      - { word: VERBOSE }
+      - { word: VERSION }
+      - { word: WAIT, also: [Z] }
+      - { word: WAKE, then: true, also: [AWAKE, STARTLE, SURPRISE] }
+      - { word: WAVE, then: true, also: [BRANDISH] }
+      - { word: WEAR, then: true }
+      - { word: WIN, also: [WINNAGE] }
+      - { word: WIND, then: true }
+      - { word: XYZZY, also: [PLUGH] }
+      - { word: YELL, also: [SCREAM, SHOUT] }
+      - { word: ZORK, then: true }
+# zork-words: end
+
+games:
+  - id: zork-i
+    title: "Zork I: The Great Underground Empire"
+    when: zork-i
+    disks: [collection/infocom/zork-i-r88b-4am.dsk]
+    where: "^(\\S.*?)\\s{2,}SCORE:"
+    compass: *zork-i-compass
+    center: LOOK
+    groups:
+      # For someone who has never played, in the order the game meets them: the mailbox in the
+      # first room, the window round the back of the house, the lamp and the rug in the living
+      # room, the troll in the cellar. Whole commands, typed with Return.
+      - label: Getting started
+        open: true
+        words:
+          - { word: OPEN MAILBOX, tip: The mailbox at West of House }
+          - { word: READ LEAFLET, tip: What was in the mailbox }
+          - { word: OPEN WINDOW, tip: "Behind the house: the window is the way in" }
+          - { word: ENTER WINDOW, tip: Climb in through the open window }
+          - { word: TAKE LAMP, tip: The brass lantern in the living room }
+          - { word: TURN ON LAMP, tip: It is dark below; light the lantern first }
+          - { word: TURN OFF LAMP, tip: Save the lantern's batteries }
+          - { word: MOVE RUG, tip: "What is under the rug in the living room?" }
+          - { word: OPEN TRAP DOOR }
+          - { word: TAKE SWORD, tip: The elvish sword over the trophy case }
+          - { word: KILL TROLL WITH SWORD, tip: The troll guards the way on; it may take a few blows }
+          - { word: KILL TROLL WITH AXE, tip: "The axe is the troll's: see what the game says" }
+      - { label: Often, open: true, words: *often }
+      - { label: The game, words: *the-game }
+      - { label: Every Zork I verb, words: *zork-i-verbs }
+  - id: zork-ii
+    title: "Zork II: The Wizard of Frobozz"
+    when: zork-ii
+    disks: [collection/infocom/zork-ii-r48-4am.dsk]
+    where: "^(\\S.*?)\\s{2,}SCORE:"
+    compass: *zork-ii-compass
+    center: LOOK
+    groups:
+      - { label: Often, open: true, words: *often }
+      - { label: The game, words: *the-game }
+  - id: zork-iii
+    title: "Zork III: The Dungeon Master"
+    when: zork-iii
+    disks: [collection/infocom/zork-iii-r17-4am.dsk]
+    where: "^(\\S.*?)\\s{2,}SCORE:"
+    compass: *zork-iii-compass
+    center: LOOK
+    groups:
+      - { label: Often, open: true, words: *often }
+      - { label: The game, words: *the-game }

@@ -123,12 +123,16 @@ apps:
       - { label: "Zork I", drives: [zork-i] }
       - { label: "Zork II", drives: [zork-ii] }
       - { label: "Zork III", drives: [zork-iii] }
+    # Knows each Zork by its banner: a compass rose, LOOK, and the game's own verbs as buttons.
+    angel: packages/cabinet/angels/text-adventures/ANGEL.yml
     actions:
       - label: "40 Columns"
         prompt: "80 COLUMNS? (Y/N):"
         keys: "N"
       - label: "80 Columns"
         keys: "Y"
+      - label: "More"
+        keys: " "
 
   - id: hopkins-forth
     title: Don Hopkins's ProDOS Forth

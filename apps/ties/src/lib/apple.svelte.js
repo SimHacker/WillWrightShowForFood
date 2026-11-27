@@ -254,6 +254,14 @@ class AppleEngine {
 		return this.active.seconds();
 	}
 
+	/** The 24 text rows on show, trimmed. @returns {string[]} */
+	text() {
+		return this.active.text();
+	}
+
+	/** Give the keyboard back to the Apple's screen; the screen sets this when it mounts. */
+	focusScreen = () => {};
+
 	listen() {
 		if (this.id === 'microm8') microM8.listen();
 		else korzApple.listen();

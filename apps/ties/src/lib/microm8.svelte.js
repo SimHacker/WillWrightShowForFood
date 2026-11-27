@@ -270,6 +270,13 @@ class MicroM8Machine {
 		return { width: FRAME_WIDTH, height: FRAME_HEIGHT, data: this.#pixels };
 	}
 
+	/** The 24 text rows on show, trimmed: the Videx card's 80 columns while it shows, else text page 1. @returns {string[]} */
+	text() {
+		const m = this.#m;
+		if (!m) return [];
+		return (this.videxShowing ? m.videxText() : m.text()).map((r) => r.trimEnd());
+	}
+
 	/** Machine time in seconds, from the cycle counter. */
 	seconds() {
 		return (this.#m?.status().cycles ?? 0) / APPLE_HZ;
