@@ -38,8 +38,8 @@ export type RingPhrase = {
 	cells: number;
 	blocks: number;
 	chains: number;
-	/** The letters heard, in order: a new name, spelled. */
-	letters: string;
+	/** The printnames heard whole, in order: what was named. A name only relinked is not news. */
+	names: string[];
 	/** Tones left out to keep within `most`. */
 	skipped: number;
 };
@@ -83,15 +83,15 @@ export function ringPhrase(scene: Scene, only: Set<number> | null = null, limits
 	const r = scene.radius || 1;
 	const pan = (n: SceneNode) => Math.max(-1, Math.min(1, n.pos[0] / r));
 	const tones: RingTone[] = [];
-	let letters = "";
+	const names: string[] = [];
 	for (const [id, group] of byChain) {
 		const chain = scene.chains[id]!;
 		if (tones.length) tones.push({ kind: "rest", degree: 0, depth: chain.depth, weight: 0, pan: 0, addr: -1, label: "" });
 		const depth = Math.min(3, chain.depth);
+		if (chain.text && (!only || chain.cells.every((a) => only.has(a)))) names.push(chain.text);
 		for (const n of group) {
 			const at = Math.max(0, chain.cells.indexOf(n.addr));
 			const letter = letterOf(n);
-			if (letter) letters += letter;
 			const kind: ToneKind = letter ? "letter" : n.kind === "block" ? "block" : n.kind === "forward" ? "forward" : "cell";
 			const degree = letter ? letter.toUpperCase().charCodeAt(0) % SPELL : at % CLIMB;
 			const weight = kind === "block" ? Math.min(1, 0.3 + Math.log2((n.len ?? 0) + 1) / 6) : kind === "letter" ? 0.6 : kind === "forward" ? 0.4 : 0.5;
@@ -108,7 +108,7 @@ export function ringPhrase(scene: Scene, only: Set<number> | null = null, limits
 		cells: picked.filter((n) => n.kind === "cell").length,
 		blocks: picked.filter((n) => n.kind === "block").length,
 		chains: byChain.size,
-		letters,
+		names,
 		skipped: tones.length - kept.length,
 	};
 }
@@ -119,5 +119,5 @@ export function sayPhrase(p: RingPhrase): string {
 	const parts = [n(p.cells, "cell", "cells")];
 	if (p.blocks) parts.push(n(p.blocks, "block", "blocks"));
 	const what = `${parts.join(" and ")}${p.chains > 1 ? ` in ${p.chains} chains` : ""}`;
-	return p.letters.length >= 2 ? `${p.letters}: ${what}` : what;
+	return p.names.length ? `${p.names.join(", ")}: ${what}` : what;
 }

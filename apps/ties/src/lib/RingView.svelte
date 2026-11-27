@@ -221,7 +221,7 @@
 		<button type="button" class="chip" title="Save what's shown as the PIX transfer stream (.pix), what the Titan link carries" onclick={() => save('pix')}>&gt;PIX</button>
 		<button type="button" class="chip" title="Save what's shown as YAML (.yml), one octal word a line with its address" onclick={() => save('yaml')}>&gt;YAML</button>
 		<button type="button" class="chip" title="Save what's shown as JSON (.json), words in octal" onclick={() => save('json')}>&gt;JSON</button>
-		{#if hear}<button type="button" class="chip" title="Hear it: the whole structure played back from the root, a tone a cell, climbing along each chain, a bell a letter, a tom where a ring closes; then said. The dance plays each new drawing this way by itself." onclick={hearIt}>♪</button>{/if}
+		{#if hear}<button type="button" class="chip" aria-label="Hear the rings" title="Hear it: the whole structure played back from the root, a tone a cell, climbing along each chain, a bell a letter, a tom where a ring closes; then said. The dance plays each new drawing this way by itself." onclick={hearIt}>♪</button>{/if}
 		{#if source !== 'live'}<button type="button" class="chip" title="Back to the running machine's rings" onclick={() => ((source = 'live'), (scene = null), (last = null))}>LIVE</button>{/if}
 		<span class="mem-hint">{#if hover}{o(hover.addr)}{name(hover.addr) ? ` ${name(hover.addr)}` : ''} {hover.kind} {o(hover.word)}{#if hover.cdrWord !== undefined} . {o(hover.cdrWord)}{/if}{hover.label ? ` ${hover.label}` : ''}{:else}{note}{/if}</span>
 	</div>

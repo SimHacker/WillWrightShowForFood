@@ -258,6 +258,18 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
        read from core (`hiloFinished`: getc's return address in waitcr, waitcr's at the JMP
        GAME after RIGHT), and the fewer the guesses, the bigger the hooray. DUEL's halt, as
        the halt explainer reads it, is a win to one side or a smaller one for a collision.
+     - Flourishes: a drawing played back (`Dance.flourish`). A program with ring structure
+       (`rings` in cabinet-programs.js) is listened to: when its rings change and then hold
+       still, the new cells play one a sixteenth in the current chord and tuning: harp for
+       a cell, bell for a letter, the lead for a block, a tom where a ring closes, all
+       panned by where the cell sits in the 3D view. A soft pad chord ends it. The voices
+       "rings" and "say" mute each part. See FORTH-RINGS.md, "Hearing it".
+     - The speech track: a note may carry words (`Note.say`: text, an optional rate and
+       voice). The player speaks them at the note's time with the browser's speech
+       synthesis, in the site's chosen voice, pitched by the note (middle C is the voice's
+       own pitch) and as loud as the dance. A flourish ends by saying what was drawn. Only
+       flourishes speak so far; voice qualities per style, and spoken tracks in the styles
+       themselves, are to come.
      - The harmony walks (`Harmony` and `Dance.phrase` in dance.ts). Each style is a graph of
        chords and the moves between them: major with the flat seventh and the minor iv
        borrowed, jazz with secondary dominants, the backdoor bVII7 and I7 into IV, minor with

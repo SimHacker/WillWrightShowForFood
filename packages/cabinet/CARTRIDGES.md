@@ -171,8 +171,11 @@ feature.
 
 **Panels are opted into.** A cartridge lists the panels it needs, and a panel's chip appears
 only when the running cartridge asks for it. RINGS already works this way: it shows only for
-a program that says where its ring structure lives (`rings: { beg, end, roots }`), today only
-SYMELEC. A Forth cartridge built on the base that adds `rsp.fs` and names its ring area gets
+a program that says where its ring structure lives (`rings: { beg, end, roots }`), today
+SYMELEC and the Forth with `rsp.fs`. The same entry turns on hearing the rings in the dance;
+`rings.listen` tunes it (`{ quiet, most, say }`: how long the rings hold still before the
+dance plays them, how many tones at most, whether to say what was drawn) or turns it off
+with `false`. A Forth cartridge built on the base that adds `rsp.fs` and names its ring area gets
 the 3D ring viewer, live on the rings the Forth is building, the same viewer PIXIE's
 rings use. DUEL's game panel, read from core through its symbols, is the next opt-in panel.
 

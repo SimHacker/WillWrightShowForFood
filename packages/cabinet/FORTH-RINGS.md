@@ -117,6 +117,17 @@ walk and extend what it loaded straight away (`implant` in
 RSPPIX keeps a printname as a run of consecutive words, the way `CDR` steps through a list,
 not as two-word cells. The scene builder reads the run, so the panel spells `TRIANGLE`.
 
+**Hearing it.** While the dance plays, the panel's watcher also listens. When the ring area
+changes and then holds still for a moment (`rings.listen.quiet`, 700 ms), the dance plays
+back the cells that changed, in walk order from `RSAVINS`, and then says what was drawn:
+type `RSAVINS S" CIRCLE" NAMED` and it plays the new cells and says "CIRCLE: 12 cells in 5
+chains". A cell's tone climbs the chord along its chain, so a chain is a rising line. A
+printname's letters each have their own step, so a name always plays the same tune. A block
+is a lead note as loud as it is long, a ring closing is a tom and a bell, and the chains are
+separated by rests. A name is said only when all of its cells are new, not when it was just
+relinked. The ♪ chip plays the whole structure from the root the same way. The walk is
+`ringPhrase` in [`listen.ts`](../pixie/src/listen.ts); `Dance.flourish` plays it.
+
 ## Why it's worth having
 
 **One structure, several readers.** The PDP-7 builds rings, the browser draws them, and the

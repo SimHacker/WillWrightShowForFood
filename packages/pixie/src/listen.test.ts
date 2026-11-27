@@ -31,7 +31,7 @@ test("listen: the whole ring plays in walk order, climbing along the ring, closi
 	assert.deepEqual(p.tones.slice(0, 3).map((t) => t.degree), [0, 1, 2]);
 	assert.ok(kinds.includes("rest"), "a rest between chains");
 	assert.ok(kinds.includes("block"));
-	assert.equal(p.letters, "PIX");
+	assert.deepEqual(p.names, ["PIX"]);
 	assert.ok(p.tones.filter((t) => t.kind === "letter").every((t) => t.depth === 1), "the printname a level down");
 	assert.equal(sayPhrase(p), `PIX: ${p.cells} cells and 1 block in ${p.chains} chains`);
 });
@@ -41,7 +41,7 @@ test("listen: after a drawing, only what changed plays, and a name spells its ow
 	const after = ringToScene(drawing(true));
 	const only = changedNodes(after, before);
 	const p = ringPhrase(after, only);
-	assert.equal(p.letters, "HEX", "the new name, not the old one");
+	assert.deepEqual(p.names, ["HEX"], "the new name, not the old one");
 	assert.ok(!p.tones.some((t) => t.kind === "block"), "the untouched block is not heard");
 	const steps = p.tones.filter((t) => t.kind === "letter").map((t) => t.degree);
 	assert.deepEqual(steps, [..."HEX"].map((c) => c.charCodeAt(0) % 7), "a letter is always the same step");
