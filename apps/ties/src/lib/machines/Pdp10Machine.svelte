@@ -3,8 +3,9 @@
 	 * The PDP-10 running an entry of packages/cabinet/its/catalog.yml: ITS on the cabinet's KA10,
 	 * logged in and at the entry's program, or a RIM tape on the bare machine. The console
 	 * teletype is the screen; under it the toolbar, then the outline: the programs and what to
-	 * type into them, how it runs (the console's baud rate and its data switches too), the bus
-	 * dance, the packs, the tests, preferences and About. Anything with a 📌 goes in the toolbar.
+	 * type into them, the console (paper or a glass screen, its baud rate, speaking and its bell),
+	 * how it runs (and the data switches), the bus dance, the packs, the tests, preferences and
+	 * About. Anything with a 📌 goes in the toolbar.
 	 */
 	import { onMount, tick } from 'svelte';
 	import { launchUrl } from '@wwsff/catalog';
@@ -15,10 +16,11 @@
 	import Outline from '../Outline.svelte';
 	import PagePrefs from '../PagePrefs.svelte';
 	import Pinnable from '../Pinnable.svelte';
+	import VoicePicker from '../VoicePicker.svelte';
 	import { toolbar } from '../toolbar.svelte.js';
 	import { CATALOG_BASE, catalog } from '../catalog.js';
 	import { PROGRAMS } from '../its-programs.js';
-	import { BAUDS, SPEEDS, pdp10 } from '../pdp10.svelte.js';
+	import { BAUDS, SPEEDS, VIEWS, pdp10 } from '../pdp10.svelte.js';
 
 	/** @type {{ entry: import('@wwsff/catalog').Entry, values: Record<string, unknown> }} */
 	let { entry, values } = $props();
@@ -29,7 +31,7 @@
 	const hhtest = catalog.entry('hhtest');
 	const its = catalog.entry('its');
 
-	const ORDER = ['pdp10-programs', 'pdp10-run', 'pdp10-dance', 'pdp10-disks', 'pdp10-tests', 'pdp10-prefs', 'pdp10-about'];
+	const ORDER = ['pdp10-programs', 'pdp10-console', 'pdp10-run', 'pdp10-dance', 'pdp10-disks', 'pdp10-tests', 'pdp10-prefs', 'pdp10-about'];
 	const ORDER_KEY = 'pdp10-outline-order';
 	/** @type {string[]} */
 	let order = $state(keptOrder());
@@ -186,7 +188,10 @@
 		const off = [
 			bar.offer('restart', 'Start again', restartButton, 'control', ['pdp10-run']),
 			bar.offer('speed', 'Speed', speedMenu, 'control', ['pdp10-run']),
-			bar.offer('baud', "the console's baud rate", baudMenu, 'control', ['pdp10-run']),
+			bar.offer('baud', "the console's baud rate", baudMenu, 'control', ['pdp10-console']),
+			bar.offer('tty-view', 'Paper or glass', viewSwitch, 'control', ['pdp10-console']),
+			bar.offer('tty-speak', 'Speak', speakToggle, 'control', ['pdp10-console']),
+			bar.offer('tty-bell', 'The bell', bellToggle, 'control', ['pdp10-console']),
 			bar.offer('pdp10-switches', 'Data switches', switchesPanel, 'panel', ['pdp10-run']),
 			bar.offer('altmode', 'Altmode', altmodeKey, 'control', ['pdp10-programs', 'pdp10-prog-ddt']),
 			bar.offer('ctrl-z', 'Control-Z', ctrlZKey, 'control', ['pdp10-programs', 'pdp10-prog-ddt']),
@@ -257,6 +262,36 @@
 			>⏩ {pdp10.waiting.toLocaleString()}</button
 		>
 	{/if}
+{/snippet}
+
+{#snippet viewSwitch(compact = false)}
+	<span class="views" role="group" aria-label="The console: paper or glass">
+		{#each VIEWS as v (v.id)}
+			<button aria-pressed={pdp10.view === v.id} class={{ on: pdp10.view === v.id }} title={v.title} onclick={() => pdp10.setView(v.id)}
+				>{v.id === 'paper' ? '📜' : '🖥'}{compact ? '' : ` ${v.label}`}</button
+			>
+		{/each}
+	</span>
+{/snippet}
+
+{#snippet speakToggle(compact = false)}
+	<button
+		aria-pressed={pdp10.voice.speak}
+		class={{ on: pdp10.voice.speak }}
+		title={pdp10.voice.speak
+			? 'Speaking: what ITS prints is read aloud when it pauses, not the echo of what you type. Click to stop.'
+			: 'Speak: read aloud what ITS prints, when it pauses. Screen readers hear it either way.'}
+		onclick={() => pdp10.voice.setSpeak(!pdp10.voice.speak)}>{pdp10.voice.speak ? '🗣' : '🤐'}{compact ? '' : ' Speak'}</button
+	>
+{/snippet}
+
+{#snippet bellToggle(compact = false)}
+	<button
+		aria-pressed={!pdp10.bellMuted}
+		class={{ ringing: pdp10.ringing }}
+		title={pdp10.bellMuted ? 'The bell is muted: Control-G only flashes. Click to hear it.' : "The bell: Control-G rings a Model 33's bell. Click to mute it."}
+		onclick={() => pdp10.muteBell(!pdp10.bellMuted)}>{pdp10.bellMuted ? '🔕' : '🔔'}{compact ? '' : ' Bell'}</button
+	>
 {/snippet}
 
 {#snippet switchesPanel()}
@@ -365,7 +400,7 @@
 
 {#snippet runNode()}
 	<Outline id="pdp10-run" move={moveNode} title="Run: the KA10" hint="Starting again, how fast it runs, and what it has done" summary={runSummary} pin={{ bar, id: 'pdp10-stats' }}>
-		<div class="row"><Pinnable {bar} id="restart" /><Pinnable {bar} id="speed" /><Pinnable {bar} id="baud" /><Pinnable {bar} id="copy-paper" /><Pinnable {bar} id="readout" /></div>
+		<div class="row"><Pinnable {bar} id="restart" /><Pinnable {bar} id="speed" /><Pinnable {bar} id="copy-paper" /><Pinnable {bar} id="readout" /></div>
 		{@render statsPanel()}
 		<Outline id="pdp10-switches-node" title="Data switches" hint="The console's 36 data switches: a program reads them with .RDSW, and the bus dance's music turns on them" summary={dataSwitchesSeedText(pdp10.switches)} pin={{ bar, id: 'pdp10-switches' }}>
 			{@render switchesPanel()}
@@ -374,9 +409,33 @@
 			The cabinet's KA10 runs many times faster than a real one, and ITS spends most of a boot waiting out its own timeouts, so Auto runs flat out while the
 			console is busy and at a KA10's pace once it has been quiet, so an idle ITS doesn't keep a core busy.
 		</p>
+
+	</Outline>
+{/snippet}
+
+{#snippet consoleNode()}
+	<Outline
+		id="pdp10-console"
+		move={moveNode}
+		title="Console"
+		hint="The console teletype: paper or a glass screen, how fast it prints, speaking, the bell"
+		summary="{VIEWS.find((v) => v.id === pdp10.view)?.label} · {BAUDS.find((b) => b.baud === pdp10.baud)?.label}{pdp10.voice.speak ? ' · speaking' : ''}"
+	>
+		<div class="row"><Pinnable {bar} id="tty-view" /><Pinnable {bar} id="baud" /><Pinnable {bar} id="tty-speak" /><Pinnable {bar} id="tty-bell" /></div>
+		{#if pdp10.voice.speak}<div class="row"><VoicePicker /></div>{/if}
+		{#if pdp10.running && pdp10.told && pdp10.told !== pdp10.view}
+			<p class="note">
+				ITS still thinks the console is {pdp10.told === 'glass' ? 'glass' : 'paper'}.
+				<button title="Type :tctyp {pdp10.view === 'glass' ? 'glass' : 'printing'} at DDT, to tell ITS" onclick={() => pdp10.tell()}
+					>Tell ITS: :tctyp {pdp10.view === 'glass' ? 'glass' : 'printing'}</button
+				>
+				Type it at DDT's star, not inside a program.
+			</p>
+		{/if}
 		<p class="note">
-			The console's baud rate is the paper's, kept on this page's clock: ITS sends at the KA10's speed, and what it sent ahead waits to print. At Instant the
-			paper keeps up with the KA10.
+			ITS knows its console as a printing terminal. On glass the page tells it <code>:tctyp glass</code>, so rubouts erase and a long listing stops at
+			--More-- for each screenful of 24 lines: Space for more, Rubout to stop. The baud rate is the console's own, on this page's clock: ITS sends at the
+			KA10's speed and what it sent ahead waits to print. What prints is announced to screen readers, and with Speak on it is read aloud.
 		</p>
 	</Outline>
 {/snippet}
@@ -425,48 +484,75 @@
 
 <section class="pdp10" aria-label="The PDP-10">
 	<div class="console">
-		<div
-			class="paper"
-			style:height={height === null ? null : `${height}px`}
-			bind:this={paper}
-			tabindex="0"
-			role="textbox"
-			aria-multiline="true"
-			data-keep-focus
-			aria-label="The console teletype: click here and type"
-			title="The console teletype, which ITS treats as a printing terminal. Click and type: Return ends a line, Escape is Altmode, Backspace is Rubout, Control and a letter sends that control character, and a paste is typed in. Select text to copy it."
-			{onkeydown}
-			{onpaste}
-			{onpointerup}
-			onfocus={() => (focused = true)}
-			onblur={() => (focused = false)}
-		>
-			{#each pdp10.lines as line, i (i)}<div class="line">{line}{#if i === pdp10.lines.length - 1}<span class="cursor"></span>{/if}</div>{/each}
-		</div>
-		<button
-			type="button"
-			class={['grip', { sizing }]}
-			aria-label="The paper's height: drag, or the up and down arrow keys"
-			title="Drag to make the paper taller or shorter. Arrow keys: a line at a time, Shift for five. Double-click: back to the usual height."
-			onpointerdown={gripdown}
-			onpointermove={gripmove}
-			onpointerup={gripup}
-			onpointercancel={gripup}
-			onkeydown={gripkey}
-			ondblclick={() => {
-				resize(null);
-				keepHeight();
-			}}
-		></button>
+		{#if pdp10.view === 'glass'}
+			<div
+				class={['glass', { ringing: pdp10.ringing }]}
+				bind:this={paper}
+				tabindex="0"
+				role="textbox"
+				aria-multiline="true"
+				data-keep-focus
+				aria-label="The console as a glass teletype: click here and type"
+				title="The console as a glass teletype, 24 lines. Click and type: Return ends a line, Escape is Altmode, Backspace is Rubout, Control and a letter sends that control character, and a paste is typed in. At --More--, Space shows more."
+				{onkeydown}
+				{onpaste}
+				{onpointerup}
+				onfocus={() => (focused = true)}
+				onblur={() => (focused = false)}
+			>
+				{#each pdp10.glass.lines as line, r (r)}
+					{@const col = pdp10.glass.col}
+					<div class="line">
+						{#if r === pdp10.glass.row}{line.slice(0, col).padEnd(col)}<span class="cursor">{line[col] ?? ' '}</span>{line.slice(col + 1)}{:else}{line}{/if}
+					</div>
+				{/each}
+			</div>
+		{:else}
+			<div
+				class={['paper', { ringing: pdp10.ringing }]}
+				style:height={height === null ? null : `${height}px`}
+				bind:this={paper}
+				tabindex="0"
+				role="textbox"
+				aria-multiline="true"
+				data-keep-focus
+				aria-label="The console teletype: click here and type"
+				title="The console teletype, which ITS treats as a printing terminal. Click and type: Return ends a line, Escape is Altmode, Backspace is Rubout, Control and a letter sends that control character, and a paste is typed in. Select text to copy it."
+				{onkeydown}
+				{onpaste}
+				{onpointerup}
+				onfocus={() => (focused = true)}
+				onblur={() => (focused = false)}
+			>
+				{#each pdp10.lines as line, i (i)}<div class="line">{line}{#if i === pdp10.lines.length - 1}<span class="cursor"></span>{/if}</div>{/each}
+			</div>
+			<button
+				type="button"
+				class={['grip', { sizing }]}
+				aria-label="The paper's height: drag, or the up and down arrow keys"
+				title="Drag to make the paper taller or shorter. Arrow keys: a line at a time, Shift for five. Double-click: back to the usual height."
+				onpointerdown={gripdown}
+				onpointermove={gripmove}
+				onpointerup={gripup}
+				onpointercancel={gripup}
+				onkeydown={gripkey}
+				ondblclick={() => {
+					resize(null);
+					keepHeight();
+				}}
+			></button>
+		{/if}
 	</div>
+	<p class="sr" aria-live="polite">{pdp10.voice.announce}</p>
 	<p class="status">
-		{#if pdp10.phase}{pdp10.phase}…{:else if focused}Typing to ITS{:else}Click the paper, or just type, to type to ITS{/if}
+		{#if pdp10.phase}{pdp10.phase}…{:else if focused}Typing to ITS{:else}Click the {pdp10.view === 'glass' ? 'screen' : 'paper'}, or just type, to type to ITS{/if}
 	</p>
 	{#if pdp10.error}<p class="status failed">{pdp10.error}</p>{/if}
 	<MachineToolbar {bar} label="The PDP-10's toolbar" />
 	<div class="outline" aria-label="The PDP-10's outline">
 		{#each order as key (key)}
 			{#if key === 'pdp10-programs'}{@render programsNode()}
+			{:else if key === 'pdp10-console'}{@render consoleNode()}
 			{:else if key === 'pdp10-run'}{@render runNode()}
 			{:else if key === 'pdp10-dance'}{@render danceNode()}
 			{:else if key === 'pdp10-disks'}{@render disksNode()}
@@ -571,6 +657,57 @@
 		margin: 0.3rem 0;
 		opacity: 0.8;
 		font-family: system-ui, sans-serif;
+	}
+	/* A glass teletype: green on black, 24 lines, the type sized to fit 80 columns in the width. */
+	.glass {
+		container-type: inline-size;
+		box-sizing: border-box;
+		padding: 0.6em 0.8em;
+		background: #050805;
+		color: #9fe8a0;
+		border-radius: 6px;
+		cursor: text;
+		white-space: pre;
+		overflow: hidden;
+		text-shadow: 0 0 3px rgb(159 232 160 / 0.45);
+	}
+	.glass .line {
+		min-height: 1.2em;
+		font: calc(100cqw / 49.5) / 1.2 ui-monospace, 'SF Mono', Menlo, monospace;
+	}
+	.glass:focus {
+		outline: 2px solid #3a8a3a;
+	}
+	.glass .cursor {
+		display: inline;
+		width: auto;
+		height: auto;
+		background: none;
+		opacity: 1;
+	}
+	.glass:focus .cursor {
+		background: #9fe8a0;
+		color: #050805;
+		text-shadow: none;
+	}
+	.ringing {
+		filter: brightness(1.6);
+	}
+	.views {
+		display: inline-flex;
+	}
+	.views .on,
+	.on {
+		background: #cfc;
+		color: #000;
+	}
+	.sr {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
 	}
 	/* A KA10's console: the switches in threes, as its octal digits are. */
 	.switches {

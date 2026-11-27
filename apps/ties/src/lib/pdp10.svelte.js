@@ -5,12 +5,21 @@
 // KA10 runs at; what ITS sent ahead waits here. The bus dance hears what the worker reports
 // (its-worker.js), each character as it prints, and each key typed; its seed is the console's
 // 36 data switches, which a program reads with .RDSW.
+//
+// The console is shown as paper or as a glass teletype's screen (glass-screen.js); both are fed
+// the same characters, and on glass ITS is told the terminal is Glass (`:tctyp glass`), so it
+// erases rubouts and stops a long typeout with --More--. Either way the bell rings, and what
+// prints is announced to screen readers and, with Speak on, read aloud (tty-voice.svelte.js).
 
 import dskdmpUrl from '../../../../packages/cabinet/its/dskdmp.rim?url';
 import hhtestUrl from '../../../../packages/cabinet/its/hhtest.rim?url';
 import warm from '../../../../packages/cabinet/its/warm.json';
 import { ITS_CALLS, PDP10_REGIONS, PDP10_VOICES, Tally, dataSwitchWord, dataSwitchesSeedText, dataSwitchesSeedWord } from '@wwsff/cabinet/dance';
+import { asset } from '$app/paths';
+import { createBeeper } from './beeper.js';
 import { BusDance, speedLoad } from './bus-dance.svelte.js';
+import { GlassScreen } from './glass-screen.js';
+import { TtyVoice } from './tty-voice.svelte.js';
 import { programFor } from './its-programs.js';
 
 /** Where the packs are served (packages/cabinet/its/README.md), in the unit order of build.tcl. */
@@ -21,6 +30,8 @@ const PAPER = 2000;
 const SPEED_KEY = 'pdp10-speed';
 const BAUD_KEY = 'pdp10-baud';
 const SWITCHES_KEY = 'pdp10-switches';
+const VIEW_KEY = 'pdp10-view';
+const BELL_KEY = 'pdp10-bell-mute';
 const CALLS = new Map(ITS_CALLS.map((c) => [c.addr, c]));
 
 /** @typedef {'auto' | 'fast' | 'real'} Speed */
@@ -41,6 +52,12 @@ export const BAUDS = [
 	{ baud: 2400, label: '2400 baud', title: '240 characters a second' },
 	{ baud: 9600, label: '9600 baud', title: "960 characters a second, a glass terminal's fastest" }
 ];
+/** @typedef {'paper' | 'glass'} View */
+export const VIEWS = /** @type {{ id: View, label: string, title: string }[]} */ ([
+	{ id: 'paper', label: 'Paper', title: 'A printing teletype: everything printed stays on the paper, to scroll back through' },
+	{ id: 'glass', label: 'Glass', title: 'A glass teletype: 24 lines on a screen, scrolling; ITS erases rubouts and stops at --More-- for each screenful' }
+]);
+
 /** Characters a second: 11 bits a character at 110 baud, 10 above. @param {number} baud */
 const cps = (baud) => (baud === 110 ? 10 : baud / 10);
 
@@ -71,6 +88,20 @@ class Pdp10 {
 	/** The console's 36 data switches. */
 	switches = $state(keptSwitches());
 	dance = new BusDance(PDP10_VOICES, 'diesel', 'pdp10');
+	/** @type {View} */
+	view = $state(keptView());
+	#glass = new GlassScreen();
+	/** The glass screen's lines and cursor, as last printed. */
+	glass = $state.raw({ lines: /** @type {string[]} */ ([]), row: 0, col: 0 });
+	/** What ITS thinks the console is, as far as this page has told it: null before it is up. @type {View | null} */
+	told = $state(null);
+	voice = new TtyVoice('pdp10-speak');
+	bellMuted = $state(keptFlag(BELL_KEY));
+	/** Lit for a moment when the bell rings, muted or not. */
+	ringing = $state(false);
+	#beeper = createBeeper({ resolve: asset });
+	/** The view the boot script told ITS about. @type {View} */
+	#bootView = 'paper';
 	#hits = { ka10: new Tally(), rp03: new Tally(), pi: new Tally() };
 	/** @type {Map<number, number>} */
 	#calls = new Map();
@@ -80,6 +111,8 @@ class Pdp10 {
 	constructor() {
 		this.dance.regions = PDP10_REGIONS;
 		this.dance.switches = dataSwitchWord(this.switches);
+		this.#beeper.muted = this.bellMuted;
+		this.glass = { lines: this.#glass.lines(), row: 0, col: 0 };
 	}
 
 	/**
@@ -106,12 +139,18 @@ class Pdp10 {
 						{ idle: 1 },
 						{ keys: `:login ${login}\r`, wait: 'Happy hacking', phase: `Logging in as ${login.toUpperCase()}` },
 						{ idle: 2 },
+						...(this.view === 'glass' ? [{ keys: ':tctyp glass\r', wait: '*', phase: 'Telling ITS the console is glass' }, { idle: 1 }] : []),
 						...(program?.start ?? []).map((s, i) => ({ ...s, ...(i === 0 ? { phase: `Starting ${program?.title}` } : {}) }))
 					];
 		this.lines = [''];
 		this.#col = 0;
 		this.#pending = '';
 		this.waiting = 0;
+		this.#glass.clear();
+		this.glass = { lines: this.#glass.lines(), row: 0, col: 0 };
+		this.told = boot === 'its' ? null : this.view;
+		this.#bootView = this.view;
+		this.#beeper.preload();
 		this.phase = boot === 'tape' ? `Reading ${runs.tape} off paper tape` : 'Starting the worker';
 		this.error = '';
 		this.halt = null;
@@ -149,11 +188,13 @@ class Pdp10 {
 		this.running = false;
 		cancelAnimationFrame(this.#raf);
 		this.dance.rest();
+		this.voice.stop();
 	}
 
 	/** Keys to the console, as the teletype sends them. @param {string} text */
 	type(text) {
 		this.#worker?.postMessage({ type: 'keys', text });
+		this.voice.typed(text);
 		for (const ch of text) this.dance.touch({ kind: 'key', code: ch.charCodeAt(0) });
 	}
 
@@ -161,6 +202,41 @@ class Pdp10 {
 	setBaud(baud) {
 		this.baud = baud;
 		keep(BAUD_KEY, String(baud));
+	}
+
+	/**
+	 * Show the console as paper or glass, and tell ITS when it is at DDT's prompt, where typing
+	 * `:tctyp` interrupts nothing; anywhere else `tell` does it when the person says.
+	 * @param {View} v
+	 */
+	setView(v) {
+		this.view = v;
+		keep(VIEW_KEY, v);
+		if (this.atDdt) this.tell();
+	}
+
+	/** ITS is logged in and waiting at DDT's star, with nothing still to print. */
+	get atDdt() {
+		return this.running && !this.phase && !this.waiting && this.lines.at(-1) === '*';
+	}
+
+	/** Type the `:tctyp` that tells ITS what the console is now. */
+	tell() {
+		this.type(this.view === 'glass' ? ':tctyp glass\r' : ':tctyp printing\r');
+		this.told = this.view;
+	}
+
+	/** @param {boolean} on */
+	muteBell(on) {
+		this.bellMuted = on;
+		this.#beeper.muted = on;
+		keep(BELL_KEY, on ? '1' : '');
+	}
+
+	#ring() {
+		this.ringing = true;
+		setTimeout(() => (this.ringing = false), 200);
+		this.#beeper.ring();
 	}
 
 	/** Print everything that is waiting, now. */
@@ -248,7 +324,10 @@ class Pdp10 {
 			if (this.baud || this.#pending) this.#pending += msg.text;
 			else this.#print(msg.text);
 		} else if (msg.type === 'dance') this.#danced(msg);
-		else if (msg.type === 'phase') this.phase = msg.text;
+		else if (msg.type === 'phase') {
+			if (!msg.text && this.phase && this.told === null) this.told = this.#bootView;
+			this.phase = msg.text;
+		}
 		else if (msg.type === 'stats') this.stats = msg;
 		else if (msg.type === 'halt') {
 			this.halt = { pc: msg.pc, pass: msg.pass };
@@ -278,8 +357,12 @@ class Pdp10 {
 	#print(text) {
 		const lines = this.lines.slice();
 		let line = lines.pop() ?? '';
+		const bells = this.#glass.feed(text);
+		if (bells) this.#ring();
+		this.glass = { lines: this.#glass.lines(), row: this.#glass.row, col: this.#glass.col };
 		for (const ch of text) {
 			this.dance.printed(ch.charCodeAt(0));
+			this.voice.hear(ch.charCodeAt(0));
 			if (ch === '\r') this.#col = 0;
 			else if (ch === '\n') {
 				lines.push(line);
@@ -293,6 +376,24 @@ class Pdp10 {
 		}
 		lines.push(line);
 		this.lines = lines.length > PAPER ? lines.slice(-PAPER) : lines;
+	}
+}
+
+/** @returns {View} */
+function keptView() {
+	try {
+		return globalThis.localStorage?.getItem(VIEW_KEY) === 'glass' ? 'glass' : 'paper';
+	} catch {
+		return 'paper';
+	}
+}
+
+/** @param {string} key */
+function keptFlag(key) {
+	try {
+		return globalThis.localStorage?.getItem(key) === '1';
+	} catch {
+		return false;
 	}
 }
 

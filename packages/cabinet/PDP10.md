@@ -757,22 +757,46 @@ instructions. Booting and logging in, programs run 1.4% of the instructions; a `
 entry's `runs`, or `?seed=` in the address), as the PDP-7's 18 are six. ITS reads them only for a
 program that asks, with `.RDSW` (`.OPER 20`), so they twist the music without changing the system.
 
+### The console: paper or glass
+
+The console prints on paper or on a glass screen (Console, in the outline). ITS's TCTYP knows
+its console as `Printing`; on glass the boot types `:tctyp glass` before it hands over, and
+switching later types `:tctyp glass` or `:tctyp printing` if DDT is at its star (otherwise a
+button offers it). As glass, `%TNPRT` at 79 by 24 with no overprint (`SYSENG; TCTYP`), ITS
+erases a rubout with backspace, space, backspace, and stops long output at
+`--More-- (Space=yes, Rubout=no)`. The screen (`glass-screen.js`) is 80 by 24 and scrolls at the
+bottom: return, line feed, backspace and tab, nothing addressed. Both views share the bell
+(Control-G rings, or flashes when muted) and the speaking (`tty-voice.svelte.js`): what ITS
+prints, less the echo of what was typed, goes to an `aria-live` region when it pauses, and with
+Speak on it is read aloud in the chosen voice.
+
 ### Terminals, next
 
-The console is the only terminal so far. ITS's TCTYP knows it as `Printing`, and offers other
-types for a line; two matter here (`SYSENG; TCTYP`):
+**SUPDUP.** None of the display is built. ITS's `Software` type, `%TNSFW`, is the one a SUPDUP
+connection gets: ITS sends its own display codes (`%TD…`, `SYSTEM; BITS` 689–725: `%TDMV0` 217
+cursor move, `%TDCLR` 220 clear, `%TDEOL` 203 clear to end of line, insert and delete lines and
+characters, region scroll, the bell). Probed in Node with `:tctyp software` on the console, ITS
+sends them on a hardware line escaped: 0177, then the code less 0176 (`177 21 v h` for a move,
+`177 22` for a clear; the coordinates look offset by one, not yet checked against `SYSTEM; TS3TTY`
+near `TYOAS6`). So a SUPDUP-style display can run on the console or any hardwired line, with
+no network, once:
 
-- **Glass**, `%TNPRT` at 79 by 24 that can't overprint: a scrolling screen with no cursor
-  addressing, where rubout erases. The page would draw the CTY's output on a screen instead of
-  paper, with the PDP-7 teletype's speech, bell and screen reader announcements. The teletype's
-  code is inside `CabinetApplet.svelte`; sharing it means taking it out into a component both
-  machines use.
-- **Software**, `%TNSFW`, the type a SUPDUP connection gets: ITS sends its own display codes
-  (`%TD…`), which a SUPDUP terminal draws, cursor addressing and all. SUPDUP comes in over the
-  Chaosnet (CH10) or a STY, so it needs a network device, after more terminal lines.
+1. the CTY passes DEL and eight bits, as SIMH's `set cty 8b` does (ours masks to seven and drops
+   DEL, as its `7b` default);
+2. the escape is decoded per `TS3TTY`;
+3. a display draws the codes: cursor addressing, clears, inserts and deletes, scrolling a region.
 
-More lines need a multiplexer from SIMH on the KA10 (`ka10_mty.c` or `ka10_tk10.c`), each line a
-tab on the page.
+SUPDUP itself, the protocol with its TTYOPT words, comes in over Chaosnet (CH10) or the IMP to a
+STY, so it waits for a network device.
+
+**More lines.** AI's KA10 (`BUILD; CONFIG`, `MCOND AIKA`) had the console, 16 lines on the
+Knight Kludge (TK10, kept "so TTY#s don't change"), 9 on the Datapoint Kludge (DPK), 16 STYs for
+network and program terminals, and 16 TV terminals through the 10-11 interface, turned off
+("the 10-11 interface doesn't work"). The generic KA build on our packs has the CTY, TK10 16, MTY
+10, DPK 16, 8 STYs, 10 TVs and Chaosnet. Only the CTY has a device in the cabinet. A multiplexer
+from SIMH (`ka10_mty.c` or `ka10_tk10.c`) would give each line a byte stream, and any terminal
+(paper, glass, later a display) could sit on any line, each a tab on the page, its TCTYP telling
+ITS what is there.
 
 ## Phases
 
