@@ -24,7 +24,7 @@ turned out to be the backbone of a lot of what I've been doing lately. The Wayba
 Knuth's 2022 Adventure source, the Living Computer Museum's PDP-7 videos, and my own 2013 emails about
 what became Screen Angel. And I've built a PDP-7 and Type 340 emulator in the browser that I'd like to
 turn into proper Archive items, programs with their tapes and listings and scans
-([the cabinet](https://hyperties.org/cabinet/) ·
+([the cabinet](https://hyperties.org/machine/) ·
 [what that would take](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PRESERVATION.md)).
 I've written to Brewster too ([his page](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/README.md)).
 
@@ -50,7 +50,7 @@ Whenever suits you. No preparation needed.
 ## Everything else, if you want more
 
 - [Will Wright Show For Food](https://github.com/SimHacker/WillWrightShowForFood) ·
-  [the cabinet](https://hyperties.org/cabinet/) · [a 23-minute tour](https://www.youtube.com/watch?v=lo8kdY-5i6c)
+  [the cabinet](https://hyperties.org/machine/) · [a 23-minute tour](https://www.youtube.com/watch?v=lo8kdY-5i6c)
 - [Brewster Kahle](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/README.md) ·
   [Jason Scott](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jason-scott/README.md)
 - [Your page](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/art-medlar/README.md) — correct, extend or delete anything

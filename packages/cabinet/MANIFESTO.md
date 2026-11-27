@@ -144,7 +144,7 @@ Schneegans's [Kando](https://kando.menu/) lays pie menus over any desktop applic
 jQuery selects the DOM. Each one improves a program from outside without changing it. The cabinet
 does the same for PDP-7 programs. Unlike those tools, it is the machine, so it reads core instead
 of pixels. A URL is a cartridge plus profiles you can stack
-(`/cabinet/forth/?profile=trace`), and an article embeds exactly the same thing.
+(`/machine/forth/?profile=trace`), and an article embeds exactly the same thing.
 
 ## Live coding all the way down
 

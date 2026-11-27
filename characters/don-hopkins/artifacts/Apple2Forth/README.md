@@ -61,7 +61,7 @@ and `PCL-OTHER` for the rest. `ON-SOUND` and `OFF-SOUND` turn it on and off, `BO
 setting, and `ERROR-SOUND` is the sound for an undefined command key. These words are only in the
 saved `H19.SYSTEM` image: their source is not in `BLOCKS.4TH`, and the rest of the terminal's
 source is lost too. The plan is to disassemble and decompile `H19.SYSTEM` back into Forth source.
-It runs in the cabinet: the [Don's ProDOS Forth](https://hyperties.org/cabinet/languages/don-hopkins-prodos-forth/)
+It runs in the cabinet: the [Don's ProDOS Forth](https://hyperties.org/machine/languages/don-hopkins-prodos-forth/)
 cartridge's **Terminal** start boots into the terminal, and typing plays the sounds.
 
 Block 23's simpler terminal `t` quits on Ctrl-\ (character 28); `term` sends Ctrl-\ down the

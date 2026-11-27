@@ -62,7 +62,7 @@ catalog.byFacet("year");                  // a tree by one facet
 catalog.resolve("apple2/lcp");            // { entry, redirect: "games/simulations/..." }
 catalog.problems;                         // bad entries are left out and named here, never thrown
 
-const launch = parseLaunch(catalog, "/cabinet/games/simulations/little-computer-people/", "?speed=2&with=player/don");
+const launch = parseLaunch(catalog, "/machine/games/simulations/little-computer-people/", "?speed=2&with=player/don");
 // { entry, with: ["player/don"], values: { "machine.speed": 2 }, ignored: [] }
 nest(effectiveValues(launch.entry, launch.values));   // { machine: { speed: 2 } }
 launchUrl(launch.entry, launch);          // the canonical URL, defaults left out
@@ -75,7 +75,7 @@ entry doesn't declare is returned in `ignored` with the reason.
 
 ```
 catalog tree [path] | find [text] [facet=value ...] | facets | by <facet> | url <url>
-        --root <dir> (repeatable)  --base /cabinet/  --json
+        --root <dir> (repeatable)  --base /machine/  --json
 ```
 
 The cabinet's full catalog, with an entry per Apple disk, is

@@ -26,7 +26,7 @@ His eight tasks (§6), with what the cabinet has, what is planned, and what is m
 | Task | Today | Planned | Missing |
 |------|-------|---------|---------|
 | 6.1 Standard system images | The RB09 disk uses SIMH's attach format, so UNIX's `image.fs` moves between SIMH and the cabinet unchanged ([UNIX-V0.md](UNIX-V0.md)). HyperTIES articles are already unpacked into Markdown with YAML frontmatter ([FORMAT.md](../../apps/ties/FORMAT.md)) | Images unpacked into git trees of their files, with the metadata to repack them byte for byte ([below](#unpacked-images-an-escalator-not-a-blob)); a cartridge as a self-describing directory ([CARTRIDGES.md](CARTRIDGES.md) §1); portable JSON snapshots ([WEB-BENCH.md](WEB-BENCH.md)) | Cartridges are still entries in the applet's program table; no unpacker for the PDP-7 UNIX file system yet; packed images for qcow2-based frameworks are an export, not the format |
-| 6.2 Standard access | A stable URL per program, `/cabinet/<program>/` | Loading a cartridge from any repository ([CARTRIDGES.md](CARTRIDGES.md) §7) | A media type for a cartridge, so a link names the artifact, not the cabinet (see below) |
+| 6.2 Standard access | A stable URL per program, `/machine/<program>/` | Loading a cartridge from any repository ([CARTRIDGES.md](CARTRIDGES.md) §7) | A media type for a cartridge, so a link names the artifact, not the cabinet (see below) |
 | 6.3 Standard invoking | One device contract inside the cabinet, and one port for local or remote play | | Wrapping other emulators |
 | 6.4 Tools for images | The OCR'd PIXIE listing assembled and checked by running it; literal pools recovered by script ([PIXIE-RESTORATION.md](PIXIE-RESTORATION.md)) | A build cache, verify steps, decoding binaries back to verified source, CI that rebuilds every cartridge ([CARTRIDGES.md](CARTRIDGES.md) §§2, 4, 7) | Imaging physical media; identifying file systems |
 | 6.5 Metadata | Provenance READMEs for each tape; source maps from core to the scanned listing | Typed links between every layer, by hash ([DESIGN.md](DESIGN.md#source-maps-as-transclusion-layers-spans-links)) | PRONOM, PREMIS, any shared registry |
@@ -138,7 +138,7 @@ pen and its portrait are meant in the same spirit ([MANIFESTO.md](MANIFESTO.md))
 In 2016 he wrote that the frameworks' links "are to specific emulation instances. Over time
 emulation technology will improve, and these links will break." A page that wraps an image in one
 emulator "makes it accessible in the present, not preservable for the future." The cabinet's
-`/cabinet/symelec/` is exactly such a link: it names the cabinet, not PIXIE.
+`/machine/symelec/` is exactly such a link: it names the cabinet, not PIXIE.
 
 The answer is to make the cartridge the thing that is preserved, and the cabinet one way to play it:
 

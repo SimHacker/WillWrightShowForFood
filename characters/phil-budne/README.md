@@ -14,12 +14,12 @@ performance-sensitive Unix/Linux software.
 ## The display work
 
 [Cabinet](../../packages/cabinet/README.md) is Don's PDP-7 emulator in TypeScript, running in the
-browser ([live](https://hyperties.org/cabinet/), [source](../../packages/cabinet/src/)). It was
+browser ([live](https://hyperties.org/machine/), [source](../../packages/cabinet/src/)). It was
 built to run [PIXIE](../../packages/cabinet/PIXIE-RESTORATION.md#what-pixie-is), the light-pen
 graph editor [Heinz Lemke](../heinz-lemke/README.md), Neil Wiseman and John Hiles wrote at
 Cambridge for a PDP-7 with a Type 340 vector display (published 1969). The program that survives
 is SYMELEC, PIXIE's circuit-drawing program, from a listing assembled in 1972
-([live](https://hyperties.org/cabinet/symelec/),
+([live](https://hyperties.org/machine/symelec/),
 [how it works](../../packages/cabinet/reference/GUIDE-SYMELEC.md)).
 
 Cabinet's Type 340 is based on Phil's work. Its display model,
@@ -63,7 +63,7 @@ emulator work for the PDP-6/10, and that he had added the PDP-7 parts
 
 Cabinet also has a compiler that turns PDP-7 code into JavaScript
 ([KORZ-MACHINES.md](../../packages/cabinet/KORZ-MACHINES.md), [source](../../packages/cabinet/src/korz/)),
-and runs PDP-7 UNIX ([live](https://hyperties.org/cabinet/unix/),
+and runs PDP-7 UNIX ([live](https://hyperties.org/machine/unix/),
 [UNIX-V0.md](../../packages/cabinet/UNIX-V0.md)) from the pdp7-unix project below. A PDP-10 KA10
 running ITS is planned next ([PDP10.md](../../packages/cabinet/PDP10.md)), and it will use the
 same Type 340 model on the KA10. The PDP-6 and PDP-10 are where Phil did most of SIMH's display
@@ -152,7 +152,7 @@ KA10 over an acoustic coupler, ITS as BUDD ("a typo that stuck"), BU's 2060 unti
   his ProDOS Forth, plays a different sound for each kind of key (Escape, space, Delete, control
   characters, digits, capitals, lowercase, the rest), so you can hear what you are typing. It
   runs in the browser: the **Terminal** start of
-  [Don's ProDOS Forth](https://hyperties.org/cabinet/languages/don-hopkins-prodos-forth/)
+  [Don's ProDOS Forth](https://hyperties.org/machine/languages/don-hopkins-prodos-forth/)
   ([how it works](../don-hopkins/artifacts/Apple2Forth/README.md)). The source for those words is
   lost, and Don plans to decompile the saved image back into Forth. Should Cabinet's other
   terminals, the PDP-7 Teletype and the Apple's Videx 80-column screen, have the VT52's click?

@@ -7,13 +7,13 @@
 ```
 Hi Phil! A late answer to your FIGIL question from September 1986 about Forths for the Apple II: mine. It started as fig-FORTH for the 6502, and I extended it to be Forth-83 compliant. It runs under ProDOS with a Videx 80-column card, and you can run it in the browser here:
 
-https://hyperties.org/cabinet/languages/don-hopkins-prodos-forth/
+https://hyperties.org/machine/languages/don-hopkins-prodos-forth/
 
 In 1990 you asked if you could forward my PizzaTool post. Ben Stoltz, who wrote PizzaTool, and his wife just visited me in Amsterdam, and we had an epic canal boat safari. You're welcome to visit too!
 
 I've been building a PDP-7 and Type 340 emulator that runs in the browser, called Cabinet. The 340 is ported from your type340.c and display.c in SIMH; Lars told me you did most of the work on it. It runs PIXIE, Heinz Lemke's 1972 CAD system from Cambridge, which we recovered from the line printer listing. It also runs Mitch Bradley's new PDP-7 Forth with turtle graphics on the 340, and PDP-7 Unix from the pdp7-unix restoration. This demo uses Forth to drive a couple of made-up devices:
 
-https://hyperties.org/cabinet/devices/ultimate-hand/
+https://hyperties.org/machine/devices/ultimate-hand/
 
 Mitch and I gave a talk about it at Forth Day last week:
 

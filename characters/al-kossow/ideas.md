@@ -23,6 +23,6 @@ Possible threads for a conversation, if Al wants one. None of this is his until 
 - The bar reader and its test results on the tape he read.
 - The VideoPIX frame from the Turing Institute window, decoded and displayed, once its image format
   is worked out (it's on the tape as `lang/c/videopix/Z.img`).
-- The cabinet: [hyperties.org/cabinet](https://hyperties.org/cabinet/).
+- The cabinet: [hyperties.org/machine](https://hyperties.org/machine/).
 
 ↑ [Al Kossow](README.md)

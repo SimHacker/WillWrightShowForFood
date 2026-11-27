@@ -5,8 +5,8 @@ and the others whose work this rests on. A draft: corrections welcome at any lev
 not what Korz means" to "you'll regret that data structure".
 
 The same TypeScript runs in Node and in the browser, and each machine runs in a page you can
-open: [PDP-7 UNIX](https://hyperties.org/cabinet/systems/pdp-7-unix/), and
-an [Apple \]\[+](https://hyperties.org/cabinet/machines/apple-ii/) on the same kit. There is no native build to
+open: [PDP-7 UNIX](https://hyperties.org/machine/systems/pdp-7-unix/), and
+an [Apple \]\[+](https://hyperties.org/machine/machines/apple-ii/) on the same kit. There is no native build to
 fetch, and the only WebAssembly module is microM8, kept on the Apple page as the oracle to
 measure against. A slot is a JavaScript
 function. V8 compiles the generated JavaScript, and V8's own lineage runs back through Self, which

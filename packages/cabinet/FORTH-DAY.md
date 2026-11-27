@@ -193,7 +193,7 @@ picture. The cabinet runs the same turtle. (source [turtle.fs](tapes/pdp7forth/t
 
 ## The demo
 
-This is the part to show. Have [the Forth page](https://hyperties.org/cabinet/forth/) up, and
+This is the part to show. Have [the Forth page](https://hyperties.org/machine/forth/) up, and
 draw a square:
 
 ```
@@ -288,7 +288,7 @@ the control language, is the step after that. It is not built. The plan is at th
 
 The emulator is a [TypeScript program](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet)
 that runs in the browser. The machine you talk to is the same one: teletype in, `ok` back, turtle
-on the 340. Try it at [hyperties.org/cabinet/forth](https://hyperties.org/cabinet/forth/).
+on the 340. Try it at [hyperties.org/machine/forth](https://hyperties.org/machine/forth/).
 
 ### Four ways to run one image
 
@@ -468,7 +468,7 @@ the disk are the part that does:
 
 ## If you want the rest
 
-Open [the Forth page](https://hyperties.org/cabinet/forth/?forth=hardware), switch **software /
+Open [the Forth page](https://hyperties.org/machine/forth/?forth=hardware), switch **software /
 hardware**, and run something you can see on the 340.
 
 In the essay, the Forth parts are [A Forth accelerator](SEA-OF-SLOTS.md#a-forth-accelerator) and
@@ -479,6 +479,6 @@ The Type 340 and the ring picture are under
 is Korz, and it can wait.
 
 The same Korz compiler runs an Apple ][+, fast enough that the little man in Activision's
-[Little Computer People](https://hyperties.org/cabinet/games/little-computer-people/) moves in
+[Little Computer People](https://hyperties.org/machine/games/little-computer-people/) moves in
 while you watch. A screen angel reads the Apple's pixels, turns the disk over, and asks for your
 name and the date in a field: [Upcycling Little Computer People](UPCYCLING-LCP.md).

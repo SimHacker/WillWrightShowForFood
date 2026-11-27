@@ -409,9 +409,9 @@ switch in the cabinet, so the hand can reach out and turn off something else.
 
 [ultimate.fs](tapes/pdp7forth/ultimate.fs) draws the box on the 340 with the light pen on its
 switch: touch it to switch the machine on, or to switch it off before the hand gets there
-([live](https://hyperties.org/cabinet/ultimate/)).
+([live](https://hyperties.org/machine/ultimate/)).
 [ultimate-hand.fs](tapes/pdp7forth/ultimate-hand.fs) makes your webcam hand the machine's hand
-([live](https://hyperties.org/cabinet/ultimate-hand/)). Being the smallest complete device, it
+([live](https://hyperties.org/machine/ultimate-hand/)). Being the smallest complete device, it
 also tests the power-switch contract below. It belongs beside the repo's
 [Ultimate Machine bot](../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/CHARACTER.yml),
 the gong that switches off the stream ([TURING-ENGINE.md](TURING-ENGINE.md#the-ultimate-machine)).

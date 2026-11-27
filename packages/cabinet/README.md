@@ -11,12 +11,12 @@ by side and linked, the consoles and views that watch them, the tools to write a
 code while they run, and above all how people used them, in their own context and time. Seen
 close up, x-rayed (memory, the bus, the CPU's state), slowed down, hyperlinked to the listings
 and papers, followed by a camera on a hand, and played with music. The package and the site's
-`/cabinet/` addresses keep the older name.
+`/machine/` addresses keep the older name.
 
-Run it: [hyperties.org/cabinet/unix/](https://hyperties.org/cabinet/unix/),
-[forth](https://hyperties.org/cabinet/forth/), [symelec](https://hyperties.org/cabinet/symelec/),
-[duel](https://hyperties.org/cabinet/duel/), [ultimate](https://hyperties.org/cabinet/ultimate/),
-[turing](https://hyperties.org/cabinet/turing/). Design principles: [MANIFESTO.md](MANIFESTO.md).
+Run it: [hyperties.org/machine/unix/](https://hyperties.org/machine/unix/),
+[forth](https://hyperties.org/machine/forth/), [symelec](https://hyperties.org/machine/symelec/),
+[duel](https://hyperties.org/machine/duel/), [ultimate](https://hyperties.org/machine/ultimate/),
+[turing](https://hyperties.org/machine/turing/). Design principles: [MANIFESTO.md](MANIFESTO.md).
 The historical and philosophical architecture: [ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md).
 Forth, the 340 and co-processors from a teaching angle, and where CAM-6 fits: [TEACHING.md](TEACHING.md).
 
@@ -249,7 +249,7 @@ Not built:
 ### The rungs climbed so far
 
 Each rung has an acceptance test in `src/` (75 tests pass, 3 Oct 2026). Every program on the
-menu has its own page: `/cabinet/<program>/` on hyperties.org.
+menu has its own page: `/machine/<program>/` on hyperties.org.
 
 | Rung | What runs | Notes |
 |------|-----------|-------|
@@ -259,11 +259,11 @@ menu has its own page: `/cabinet/<program>/` on hyperties.org.
 | **4. Titan** | Type `TITAN` on the teletype and SYMELEC phones [tiny-titan](TINY-TITAN.md): headers, checksum, `PXID` first word on the wire, its own ring file streamed and recorded. | Command language and the transport-agnostic `TitanPort` seam: [DESIGN.md](DESIGN.md#tiny-titan) |
 | **5. Drawing** | Draw with the lightbuttons: S, drag, F, several lines, HV staircases and RU straight lines, all lit. | Needs the `core8k` patch: as printed, the display file holds one line. |
 | **6. Demo** | A scripted pen draws a house under a rising sun, a tree, a hedge, a flag, and a circuit with a resistor, battery and switch, headless or on the page's **Demo** button, with the pen drawn over the tube. | [src/symelec-demo.ts](src/symelec-demo.ts): time is machine cycles, so every speed draws the same picture. The picture fills memory and needs our `bigpic` patch ([BUG-JOURNAL](BUG-JOURNAL.md#the-big-picture-vanished)). [snapshots/symelec-house-demo.svg](snapshots/symelec-house-demo.svg) |
-| **7. DUEL** | A second program on the same cabinet: DUEL, DECUS 7-40 (Cambridge, 1968), from the Oslo paper tape. A RIM loader reads the tape's own FunnyFormat loader, which reads the game; the console switches fly the two ships. | Adds a paper tape reader and the switch register, neither of which SYMELEC uses. [tapes/duel/](tapes/duel/README.md), [snapshots/duel-circling.png](snapshots/duel-circling.png). In the browser at [/cabinet/duel/](https://hyperties.org/cabinet/duel/), two players on one keyboard; the cabinet reads the halt from core to say who won and keep a tally, without touching the program. |
-| **7a. Light pen test** | DEC's 1964 Type 370 light pen diagnostic (C. Stein, DEC-4-45-M): sensitivity, follow and field of view, [/cabinet/lp370/](https://hyperties.org/cabinet/lp370/). | Hand-transcribed and assembled by our DEC-dialect assembler; page 6 is missing from the scan and reconstructed. [tapes/lp370/](tapes/lp370/README.md) |
+| **7. DUEL** | A second program on the same cabinet: DUEL, DECUS 7-40 (Cambridge, 1968), from the Oslo paper tape. A RIM loader reads the tape's own FunnyFormat loader, which reads the game; the console switches fly the two ships. | Adds a paper tape reader and the switch register, neither of which SYMELEC uses. [tapes/duel/](tapes/duel/README.md), [snapshots/duel-circling.png](snapshots/duel-circling.png). In the browser at [/machine/duel/](https://hyperties.org/machine/duel/), two players on one keyboard; the cabinet reads the halt from core to say who won and keep a tally, without touching the program. |
+| **7a. Light pen test** | DEC's 1964 Type 370 light pen diagnostic (C. Stein, DEC-4-45-M): sensitivity, follow and field of view, [/machine/lp370/](https://hyperties.org/machine/lp370/). | Hand-transcribed and assembled by our DEC-dialect assembler; page 6 is missing from the scan and reconstructed. [tapes/lp370/](tapes/lp370/README.md) |
 | **7b. Teletype games** | HILO and LANDER, written for the cabinet in 2026, not period programs: typed or spoken numbers on the KSR-33. | They share the `READLN` line library, [tapes/lib/readln.s](tapes/lib/readln.s). [tapes/hilo/](tapes/hilo/README.md), [tapes/lander/](tapes/lander/README.md) |
-| **8. UNIX** | PDP-7 UNIX (1969) boots from an emulated RB09 fixed-head disk, from the pdp7-unix image: `login:`, ken, `ls`, `cp`, `date`, files kept across reboots. In the browser too: [/cabinet/unix/](https://hyperties.org/cabinet/unix/). | The RB09 is ported from SIMH's `pdp18b_rb.c`, and the keyboard follows SIMH's `set tti unix`. The platter is in [tapes/unixv0/](tapes/unixv0/README.md). [UNIX-V0.md](UNIX-V0.md), which also covers sn 129's JK09 and the letter to the museum. |
-| **9. Forth** | Mitch Bradley's PDP-7 Forth boots, compiles its prelude and turtle from paper tape, and the turtle draws on the 340: [/cabinet/forth/](https://hyperties.org/cabinet/forth/), with a demo. WORDS fits the paper, because the teletype writes its width into Forth (`setForthColumns`). | Mitch's kernel as his `as7` built it ([tapes/pdp7forth/](tapes/pdp7forth/README.md)). The SIMH step of his build, compiling the prelude, runs on the cabinet instead: [src/forth.ts](src/forth.ts). Why and how: [MANIFESTO.md](MANIFESTO.md). |
+| **8. UNIX** | PDP-7 UNIX (1969) boots from an emulated RB09 fixed-head disk, from the pdp7-unix image: `login:`, ken, `ls`, `cp`, `date`, files kept across reboots. In the browser too: [/machine/unix/](https://hyperties.org/machine/unix/). | The RB09 is ported from SIMH's `pdp18b_rb.c`, and the keyboard follows SIMH's `set tti unix`. The platter is in [tapes/unixv0/](tapes/unixv0/README.md). [UNIX-V0.md](UNIX-V0.md), which also covers sn 129's JK09 and the letter to the museum. |
+| **9. Forth** | Mitch Bradley's PDP-7 Forth boots, compiles its prelude and turtle from paper tape, and the turtle draws on the 340: [/machine/forth/](https://hyperties.org/machine/forth/), with a demo. WORDS fits the paper, because the teletype writes its width into Forth (`setForthColumns`). | Mitch's kernel as his `as7` built it ([tapes/pdp7forth/](tapes/pdp7forth/README.md)). The SIMH step of his build, compiling the prelude, runs on the cabinet instead: [src/forth.ts](src/forth.ts). Why and how: [MANIFESTO.md](MANIFESTO.md). |
 
 ### Next
 
@@ -278,8 +278,8 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
   panel. The plan: [DESIGN.md](DESIGN.md#cartridges-and-live-coding). The ring vocabulary
   in [FORTH-TURTLE-340.md](reference/FORTH-TURTLE-340.md)
   then has a real Forth to live in.
-- Every program has a link of its own, without the HyperTIES frame: `/cabinet/<program>/`,
-  or `/cabinet/?program=forth&size=768`.
+- Every program has a link of its own, without the HyperTIES frame: `/machine/<program>/`,
+  or `/machine/?program=forth&size=768`.
 - Cartridges as files: binaries and sources, built in the page and cached, extended by
   other cartridges, decoded back to verified source, saved as eggs, and committed to your
   own repo or sent as a pull request, with CI building and deploying them:

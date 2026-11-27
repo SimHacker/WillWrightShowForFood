@@ -76,7 +76,7 @@ test("the root resolves, declared or not, and features entries from anywhere", (
 	);
 	assert.equal(c.problems.length, 1, "a featured name that names nothing is a problem");
 	assert.ok(!root.children.some((n) => n.path === ""), "the root is not its own child");
-	assert.ok(parseLaunch(c, "/cabinet/")?.folder, "the bare address is the root folder");
+	assert.ok(parseLaunch(c, "/machine/")?.folder, "the bare address is the root folder");
 });
 
 test("the tree comes from the paths; folders are implied or declared", () => {
@@ -154,7 +154,7 @@ test("?all", () => {
 	assert.equal(showAll("?all=0"), false);
 	assert.equal(showAll("?all=no", true), false);
 	assert.equal(showAll("", true), true);
-	assert.deepEqual(parseLaunch(sample(), "/cabinet/games/simulations/little-computer-people/", "?all")?.ignored, [], "a page parameter, not the entry's");
+	assert.deepEqual(parseLaunch(sample(), "/machine/games/simulations/little-computer-people/", "?all")?.ignored, [], "a page parameter, not the entry's");
 });
 
 test("facets and the tree by one facet", () => {
@@ -177,7 +177,7 @@ test("problems are reported, not thrown", () => {
 
 test("a URL: path, mixins the entry allows, inputs by name or path, the rest ignored", () => {
 	const c = sample();
-	const l = parseLaunch(c, "/cabinet/languages/forth/apple-ii/", "with=forth-ok,player/don,rootkit&baud=19200&serial.baud=1200&speed=99&term=on&evil=1")!;
+	const l = parseLaunch(c, "/machine/languages/forth/apple-ii/", "with=forth-ok,player/don,rootkit&baud=19200&serial.baud=1200&speed=99&term=on&evil=1")!;
 	assert.equal(l.entry?.id, "apple-forth");
 	assert.deepEqual(l.with, ["forth-ok", "player/don"]);
 	assert.deepEqual(l.values, { "serial.baud": 1200, term: "on" });
@@ -189,18 +189,18 @@ test("a URL: path, mixins the entry allows, inputs by name or path, the rest ign
 });
 
 test("a URL through an old path says where the entry is now", () => {
-	const l = parseLaunch(sample(), "/cabinet/apple2/lcp", "speed=2")!;
+	const l = parseLaunch(sample(), "/machine/apple2/lcp", "speed=2")!;
 	assert.equal(l.redirect, "games/simulations/little-computer-people");
 	assert.deepEqual(l.values, { "machine.speed": 2 });
-	assert.equal(parseLaunch(sample(), "/cabinet/games", "speed=2")!.ignored[0]?.reason, "a folder takes no parameters");
-	assert.equal(parseLaunch(sample(), "/cabinet/no/such/thing"), undefined);
+	assert.equal(parseLaunch(sample(), "/machine/games", "speed=2")!.ignored[0]?.reason, "a folder takes no parameters");
+	assert.equal(parseLaunch(sample(), "/machine/no/such/thing"), undefined);
 });
 
 test("the canonical URL round-trips, and leaves out defaults", () => {
 	const c = sample();
 	const forth = c.entry("apple-forth")!;
 	const url = launchUrl(forth, { with: ["player/don", "nope"], values: { "serial.baud": 19200, "machine.speed": 1 } });
-	assert.equal(url, "/cabinet/languages/forth/apple-ii/?with=player/don&baud=19200");
+	assert.equal(url, "/machine/languages/forth/apple-ii/?with=player/don&baud=19200");
 	const u = new URL(url, "http://x");
 	const back = parseLaunch(c, u.pathname, u.search)!;
 	assert.deepEqual(back.with, ["player/don"]);

@@ -11,7 +11,7 @@ import disksYaml from '../../../../packages/cabinet/disks/apple2/DISKS.yml?raw';
 import appsYaml from '../../../../packages/cabinet/disks/apple2/APPS.yml?raw';
 
 /** Where the catalog is served; an entry's URL is this plus its path. */
-export const CATALOG_BASE = '/cabinet/';
+export const CATALOG_BASE = '/machine/';
 
 const files = import.meta.glob(['../../../../packages/cabinet/**/catalog.yml', '!**/node_modules/**', '!**/dist/**'], {
 	query: '?raw',

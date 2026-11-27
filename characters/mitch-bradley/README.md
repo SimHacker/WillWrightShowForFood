@@ -40,7 +40,7 @@ Mitch hired Don as a summer intern at Sun in 1987 to put pie menus and Forth int
 schematic editor from Lucasfilm. He suggested the name "pie menu." Don's pie menu experiments ran in
 a window manager whose main loop was rewritten in Mitch's Forth, HyperTIES at Maryland ran on it,
 and it compiled the rules for Don's CAM6 simulator. Don's memory allocator is still in Open
-Firmware. Mitch's PDP-7 Forth now runs in the [cabinet](https://hyperties.org/cabinet/forth/), on
+Firmware. Mitch's PDP-7 Forth now runs in the [cabinet](https://hyperties.org/machine/forth/), on
 the same kind of machine PIXIE and UNIX ran on.
 
 ## Cast neighbors

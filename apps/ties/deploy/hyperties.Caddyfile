@@ -32,6 +32,10 @@ hyperties.org {
 	root * /data/releases/hyperties/current
 	encode zstd gzip
 
+	# The machine pages were at /cabinet/ until 2026-11-27. Same path under /machine/, query kept.
+	@cabinet path_regexp cabinet ^/cabinet(/.*)?$
+	redir @cabinet /machine{re.cabinet.1}{?query} permanent
+
 	# Vite writes content-hashed filenames under _app/immutable, so those are safe to
 	# cache forever. Everything else is a document that can change on the next deploy.
 	#

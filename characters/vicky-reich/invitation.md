@@ -25,7 +25,7 @@ If you'd rather any of it be different, or not there, tell me and it will be.
 
 I've also been working on preservation, from the other end. David's story of the Cambridge PDP-7 led
 me to build an emulator of it that runs in a web page and to restore Heinz Lemke's 1969 PIXIE from its
-printed listing ([the cabinet](https://hyperties.org/cabinet/)). I wrote up what David's 2015 report
+printed listing ([the cabinet](https://hyperties.org/machine/)). I wrote up what David's 2015 report
 for the Mellon Foundation means for it, and the answer keeps coming back to LOCKSS's idea: many
 copies, kept by the people who care about them
 ([PRESERVATION.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PRESERVATION.md)).
@@ -53,7 +53,7 @@ Remote is fine. No preparation needed.
 - [Mark Weiser's memorial](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/mark-weiser/README.md) ·
   [Nijinsky and Pavlova](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/mark-weiser/media/ubiq-kittens-1995/README.md) ·
   [his SDI game](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/mark-weiser/software/README.md)
-- [The cabinet](https://hyperties.org/cabinet/) · [PRESERVATION.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PRESERVATION.md) ·
+- [The cabinet](https://hyperties.org/machine/) · [PRESERVATION.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PRESERVATION.md) ·
   [David's 2015 report, with notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/sources/rosenthal-emulation-2015.md)
 - [David Rosenthal](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/README.md) ·
   [Terry Winograd](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/terry-winograd/README.md)

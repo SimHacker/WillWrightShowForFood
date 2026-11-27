@@ -26,7 +26,7 @@ Use it, or tell me what's wrong with it.
 I've also been building on your scans. The 340 Display Programming Manual, the PDP-7 documents and
 the MACRO-9 manual from bitsavers are what let me write a PDP-7 and Type 340 emulator that runs in a
 web page, and restore Heinz Lemke's 1969 PIXIE from its printed listing:
-[the cabinet](https://hyperties.org/cabinet/) ·
+[the cabinet](https://hyperties.org/machine/) ·
 [how it was built](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/README.md).
 Thank you for that.
 

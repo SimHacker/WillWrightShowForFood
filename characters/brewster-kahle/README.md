@@ -45,7 +45,7 @@ Much of what this project has restored was found again through the Internet Arch
 
 And the Archive's emulation is the path the cabinet follows. The cabinet is a PDP-7 and Type 340
 emulator in the browser that runs Heinz Lemke's 1969 PIXIE, restored from its printed listing,
-along with PDP-7 UNIX and Mitch Bradley's Forth ([try it](https://hyperties.org/cabinet/)).
+along with PDP-7 UNIX and Mitch Bradley's Forth ([try it](https://hyperties.org/machine/)).
 HyperTIES, Ben Shneiderman's 1980s hypertext system, has been restored too, and its recovered books
 can be read again ([reading room](https://hyperties.org/archive/reading-room/)). David Rosenthal
 introduced Don to Jason Scott, the Archive's software curator, in October 2026, and the open question

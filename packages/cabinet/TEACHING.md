@@ -11,10 +11,10 @@ CAM-6 comes in. Each section links to the detailed page.
 
 | | |
 |---|---|
-| [Forth + Turtle](https://hyperties.org/cabinet/forth/) | Mitch's PDP-7 Forth drawing turtle graphics on the Type 340 |
-| [ULTIMATE MACHINE](https://hyperties.org/cabinet/ultimate/) | Minsky's box that switches itself off. Click its switch with the light pen |
-| [TURING MACHINE](https://hyperties.org/cabinet/turing/) | a Turing machine co-processor, its tape drawn by the 342 character generator: busy beavers, a binary counter, Minsky's universal machine |
-| [PIXIE SYMELEC](https://hyperties.org/cabinet/symelec/) | Heinz Lemke's 1972 interactive graphics editor, running from his listing |
+| [Forth + Turtle](https://hyperties.org/machine/forth/) | Mitch's PDP-7 Forth drawing turtle graphics on the Type 340 |
+| [ULTIMATE MACHINE](https://hyperties.org/machine/ultimate/) | Minsky's box that switches itself off. Click its switch with the light pen |
+| [TURING MACHINE](https://hyperties.org/machine/turing/) | a Turing machine co-processor, its tape drawn by the 342 character generator: busy beavers, a binary counter, Minsky's universal machine |
+| [PIXIE SYMELEC](https://hyperties.org/machine/symelec/) | Heinz Lemke's 1972 interactive graphics editor, running from his listing |
 
 ## The machine, in one paragraph
 
@@ -121,7 +121,7 @@ whole stack of the TURING MACHINE cartridge. The other Forth cartridges differ o
 sources they compile in and which devices they plug in.
 
 ```text
- the page        hyperties.org/cabinet/turing/          CatalogShell.svelte, CabinetApplet.svelte
+ the page        hyperties.org/machine/turing/          CatalogShell.svelte, CabinetApplet.svelte
    │
  cartridge       forthProgram({ id: 'turing', ... })    cabinet-programs.js  (JavaScript)
    │  picks: kernel, Forth sources, devices, typeAhead, demo script, help

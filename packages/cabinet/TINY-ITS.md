@@ -250,7 +250,7 @@ machines, on the PDP-7.
 
 **The first application.** After the turtle, tiny-its is the first real program for Mitch's
 PDP-7 Forth, and it runs in the page now that the Forth does
-([/cabinet/forth/](https://hyperties.org/cabinet/forth/)). It takes Open Firmware's command
+([/machine/forth/](https://hyperties.org/machine/forth/)). It takes Open Firmware's command
 line, key bindings, command system and device tree as its model (below). It is also the
 live-coding showcase, because you can work on it at three levels at once:
 

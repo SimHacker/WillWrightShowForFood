@@ -325,7 +325,7 @@ one Tiny Titan, a drawing made by Forth's turtle edited in PIXIE and walked agai
   rediscovering its data structures, with the CARS 2027 session as a target
   ([Roy](../../characters/roy-eagleson/README.md),
   [Sketchpad to PIXIE](../../characters/roy-eagleson/sketchpad-to-pixie-lineage.md)).
-- **Anyone,** in a browser: [the live emulator](https://hyperties.org/cabinet/symelec/), the
+- **Anyone,** in a browser: [the live emulator](https://hyperties.org/machine/symelec/), the
   [tutorial](https://hyperties.org/databases/pixie/pixie-tutorial/), and
   [Pixie Live](https://hyperties.org/databases/pixie/pixie-live/).
 
@@ -558,7 +558,7 @@ PIXIE to Spaceward's products is established by the sources collected here.
 
 **Outreach status, 16 October 2026:** Don reports sending Mike a direct
 message introducing the PIXIE restoration with Heinz, linking the
-[running emulator](https://hyperties.org/cabinet/symelec/), asking to talk
+[running emulator](https://hyperties.org/machine/symelec/), asking to talk
 and record and share his recollections, and asking whether he knew David
 S. H. Rosenthal. No reply or permission to record or publish an interview
 is recorded here. The private message-thread URL is not needed as a public
@@ -633,7 +633,7 @@ should not be used as historical evidence.
 | The 2026 demo, and its transcript | [video](https://www.youtube.com/watch?v=lo8kdY-5i6c), [transcript](../../characters/heinz-lemke/media/video-2026-10-09-pixie-forth-cabinet/transcript.md) |
 | The Old Farts thread | [2026-07-24-facebook-guessing-game.md](../../characters/heinz-lemke/sources/2026-07-24-facebook-guessing-game.md) |
 | Heinz, Roy, Lars, Bob, Neil | [heinz-lemke](../../characters/heinz-lemke/README.md), [roy-eagleson](../../characters/roy-eagleson/README.md), [lars-brinkhoff](../../characters/lars-brinkhoff/), [bob-supnik](../../characters/bob-supnik/), [neil-wiseman](../../characters/neil-wiseman/) |
-| Live | [the emulator](https://hyperties.org/cabinet/symelec/), [tutorial](https://hyperties.org/databases/pixie/pixie-tutorial/), [Pixie Live](https://hyperties.org/databases/pixie/pixie-live/), [Forth](https://hyperties.org/databases/pixie/cabinet-forth/) |
+| Live | [the emulator](https://hyperties.org/machine/symelec/), [tutorial](https://hyperties.org/databases/pixie/pixie-tutorial/), [Pixie Live](https://hyperties.org/databases/pixie/pixie-live/), [Forth](https://hyperties.org/databases/pixie/cabinet-forth/) |
 | Manifesto | [MANIFESTO.md](MANIFESTO.md) |
 
 ↑ [README](README.md) · [BUG-JOURNAL](BUG-JOURNAL.md) · [TINY-TITAN](TINY-TITAN.md) · [FORTH-RINGS](FORTH-RINGS.md)

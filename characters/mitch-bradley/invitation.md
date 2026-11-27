@@ -18,13 +18,13 @@ Mitch —
 Thank you again for the PDP-7 Forth. It runs in the cabinet now, drawing with the turtle on the
 Type 340, and it has become the language I use to put new devices on the machine:
 
-- [Your Forth, live, with the turtle](https://hyperties.org/cabinet/forth/)
-- [The Ultimate Machine](https://hyperties.org/cabinet/ultimate/), written in your Forth: a box
+- [Your Forth, live, with the turtle](https://hyperties.org/machine/forth/)
+- [The Ultimate Machine](https://hyperties.org/machine/ultimate/), written in your Forth: a box
   whose only function is to turn itself off
-- [ULTIMATE HAND](https://hyperties.org/cabinet/ultimate-hand/): your webcam hand becomes the
+- [ULTIMATE HAND](https://hyperties.org/machine/ultimate-hand/): your webcam hand becomes the
   Ultimate Machine's hand, through a DataHand device on the PDP-7
   ([ultimate-hand.fs](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/tapes/pdp7forth/ultimate-hand.fs))
-- [The Turing engine](https://hyperties.org/cabinet/turing/), running Minsky's universal machine
+- [The Turing engine](https://hyperties.org/machine/turing/), running Minsky's universal machine
   and Christopher Cherniak's busy beavers, driven from Forth
 - [PIXIE's ring structures built from Forth](https://hyperties.org/databases/pixie/cabinet-forth/)
 
@@ -60,7 +60,7 @@ preparation needed.
 
 **The cabinet**
 
-- [Everything in the cabinet](https://hyperties.org/cabinet/) ·
+- [Everything in the cabinet](https://hyperties.org/machine/) ·
   [source](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet) ·
   [your Forth, vendored](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet/tapes/pdp7forth)
 - [Forth turtle graphics on the 340](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/FORTH-TURTLE-340.md) ·

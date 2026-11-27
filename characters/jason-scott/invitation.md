@@ -44,17 +44,17 @@ SIMH and checked against it. It runs in a web page. Today it runs:
   [try it](https://hyperties.org/databases/pixie/pixie-live/) ·
   [the restoration story](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md)
 - **DUEL** (1968), spacewar for two, from its paper tape
-- **PDP-7 UNIX v0** from the pdp7-unix restoration: [log in as ken](https://hyperties.org/cabinet/unix/)
+- **PDP-7 UNIX v0** from the pdp7-unix restoration: [log in as ken](https://hyperties.org/machine/unix/)
 - **Mitch Bradley's PDP-7 Forth**, with turtle graphics on the 340
 - Devices no PDP-7 ever had: a Turing machine engine running Minsky's universal machine and
-  Christopher Cherniak's busy beavers ([live](https://hyperties.org/cabinet/turing/)), Minsky's
-  Ultimate Machine ([live](https://hyperties.org/cabinet/ultimate/)), and a DataHand that reports
+  Christopher Cherniak's busy beavers ([live](https://hyperties.org/machine/turing/)), Minsky's
+  Ultimate Machine ([live](https://hyperties.org/machine/ultimate/)), and a DataHand that reports
   your webcam hand to the PDP-7. In ULTIMATE HAND, written in Forth, you are the Ultimate Machine's
-  hand: [try the live demo](https://hyperties.org/cabinet/ultimate-hand/) with your webcam.
+  hand: [try the live demo](https://hyperties.org/machine/ultimate-hand/) with your webcam.
   [ultimate-hand.fs](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/tapes/pdp7forth/ultimate-hand.fs) is the top-level Forth file that ties it together: the Ultimate
   Machine, the DataHand, a 3D turtle and the Type 340.
 
-[Everything in the cabinet](https://hyperties.org/cabinet/) ·
+[Everything in the cabinet](https://hyperties.org/machine/) ·
 [source](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet)
 
 Every word in core maps to its source line and to the scanned page of the listing it came from,
@@ -63,7 +63,7 @@ so you can go from the running machine to the paper and back.
 **The quickest way in is a 23-minute tour:**
 [PIXIE and FORTH on the PDP-7 cabinet emulator, with Type 340 vector graphics](https://www.youtube.com/watch?v=lo8kdY-5i6c)
 (October 2026). It starts with Heinz in the 1969 film, then draws circuits in PIXIE in the
-emulator ([try it](https://hyperties.org/cabinet/symelec/)). The rest shows what an emulator can
+emulator ([try it](https://hyperties.org/machine/symelec/)). The rest shows what an emulator can
 do that the original machine could not:
 
 - Single-stepping PIXIE through source maps that go from core to the source line, in two assembler
@@ -178,7 +178,7 @@ are up to.
 **The PDP-7 and PIXIE**
 
 - [The 23-minute tour (video)](https://www.youtube.com/watch?v=lo8kdY-5i6c) ·
-  [PIXIE in the emulator](https://hyperties.org/cabinet/symelec/)
+  [PIXIE in the emulator](https://hyperties.org/machine/symelec/)
 - [David's PDP-7 story](https://blog.dshr.org/2026/07/my-introduction-to-computer-graphics.html) ·
   [PIXIE restoration](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md) ·
   [the Cambridge films](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)

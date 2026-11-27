@@ -1023,7 +1023,7 @@ what the program requires and how it maps onto the cabinet's devices. The device
 the memory panel open in source view, speed 10×), and several can stack. Everything the cabinet
 knows about a program lives in its cartridge or is referred to by it.
 
-**The URL is a cartridge plus profiles.** `/cabinet/<cartridge>/?profile=trace,wide&size=768`.
+**The URL is a cartridge plus profiles.** `/machine/<cartridge>/?profile=trace,wide&size=768`.
 A `yaml cabinet` fence in an article says the same things in the same words, so a link and a
 transclusion embed the same preconfigured machine. `src/lib/cabinet-url.js` in the ties app is the
 one parser; today it knows `program` and `size`. The query overrides the path, profiles apply left

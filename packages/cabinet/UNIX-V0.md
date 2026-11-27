@@ -6,7 +6,7 @@ RB09 fixed-head disk. From the paper-tape bootstrap to `login:` takes 1.25 milli
 60 ms in node. Then ken logs in, and `ls`, `cat`, `cp`, `date` and the rest run. Files written to
 the platter are still there after a reboot.
 
-**Run it in the browser:** [hyperties.org/cabinet/unix/](https://hyperties.org/cabinet/unix/), the
+**Run it in the browser:** [hyperties.org/machine/unix/](https://hyperties.org/machine/unix/), the
 machine alone, or the [UNIX v0 article](https://hyperties.org/databases/pixie/unix-v0/) with the
 machine in it. Log in as `ken`, password `ken`, in lower case. **Demo** logs in and looks around.
 
@@ -204,8 +204,8 @@ be a second machine to record for the AM radio and a second reference for the di
 >
 > And a live-coding system for the same machine, in the browser. Mitch Bradley's PDP-7 Forth
 > already runs in the page, with turtle graphics on the 340: type `4 0 DO 200 FD 90 RT LOOP` at the
-> teletype and watch it draw (https://hyperties.org/cabinet/forth/). UNIX runs the same way
-> (https://hyperties.org/cabinet/unix/). Our TypeScript PDP-7 assembler runs in the page too, and
+> teletype and watch it draw (https://hyperties.org/machine/forth/). UNIX runs the same way
+> (https://hyperties.org/machine/unix/). Our TypeScript PDP-7 assembler runs in the page too, and
 > the memory view shows each word beside the source line that made it. Next is a LIVE CODING
 > panel: edit Forth's kernel or any program's source, rebuild, and rerun it in the running machine,
 > with the trace stepping through the source. Whatever works in the page can then be punched to
@@ -285,7 +285,7 @@ be a second machine to record for the AM radio and a second reference for the di
 > For the pen, we can offer DEC's own test. We restored C. Stein's 1964 Type 370 light pen
 > diagnostic (DEC-4-45-M, issued for the PDP-7 as 7-78-M) from the bitsavers scan: hand
 > transcribed, page 6 missing from the scan and reconstructed from the test descriptions, marked
-> as ours. It runs in the cabinet now (https://hyperties.org/cabinet/lp370/): eight vectors at
+> as ours. It runs in the cabinet now (https://hyperties.org/machine/lp370/): eight vectors at
 > the eight intensities for pen sensitivity, a tracking cross that follows the pen, and a field
 > of view box that counts the points the pen saw. The cabinet also runs headless in Node, so a
 > Pi could run the emulated PDP-7 and this test with its points going out to the DACs and the

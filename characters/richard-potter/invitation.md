@@ -60,7 +60,7 @@ Remote is fine. No preparation needed.
   [RECOGNIZER.yml](https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/RECOGNIZER.yml) ·
   [RECORDER.yml](https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/RECORDER.yml) ·
   [the 2013 thread](https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/sources/2013-email-thread.md)
-- The cabinet: [everything in it](https://hyperties.org/cabinet/) ·
+- The cabinet: [everything in it](https://hyperties.org/machine/) ·
   [23-minute tour](https://www.youtube.com/watch?v=lo8kdY-5i6c) ·
   [manifesto](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MANIFESTO.md)
 - [An interface to agency](https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md):

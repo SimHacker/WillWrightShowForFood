@@ -9,7 +9,7 @@
  *   catalog url <url>              what a URL opens, its mixins, values and what was ignored
  *
  *   --root <dir>   where to look (repeatable; default: the current directory)
- *   --base <path>  the URL prefix (default /cabinet/)
+ *   --base <path>  the URL prefix (default /machine/)
  *   --json         machine-readable output
  */
 import { type Catalog, type CatalogNode } from "./catalog.js";
@@ -32,7 +32,7 @@ function report(catalog: Catalog): void {
 
 function main(argv: string[]): number {
 	const roots: string[] = [];
-	let base = "/cabinet/";
+	let base = "/machine/";
 	let json = false;
 	const args: string[] = [];
 	for (let i = 0; i < argv.length; i++) {

@@ -1,7 +1,7 @@
 # The Machine Room's part of the catalog tree (CARTRIDGES.md §7a): the folders everything else sits in.
 # Entries live beside what they describe: tapes/catalog.yml for the PDP-7 programs,
 # disks/apple2/APPS.yml for the Apple apps. Paths are slugs; titles are declared here once.
-# The root is the welcome at /cabinet/. `featured` is curated, not everything: the few worth
+# The root is the welcome at /machine/. `featured` is curated, not everything: the few worth
 # trying first, by entry id, each a link straight to it.
 root:
   title: Machine Room

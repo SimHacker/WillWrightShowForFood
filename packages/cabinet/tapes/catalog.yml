@@ -1,7 +1,7 @@
 # The PDP-7 programs, as catalog entries (CARTRIDGES.md §7a). `runs.program` is the id in
 # apps/ties/src/lib/cabinet-programs.js, which still holds how each one boots.
 # `size` is the tube's side in CSS pixels, as cabinet-url.js reads it. `was` keeps the old
-# /cabinet/<program>/ links working. `order` puts the Forth programs in the order they build on
+# /machine/<program>/ links working. `order` puts the Forth programs in the order they build on
 # each other: Forth and its turtle, the light pen, the Ultimate Machine the pen switches off, the
 # hand tracker, the hand that switches it off, then the Turing machines.
 defaults:

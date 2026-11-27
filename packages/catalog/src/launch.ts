@@ -1,7 +1,7 @@
 /**
  * URLs into the catalog: the path is the entry's path, the query configures it.
  *
- *   /cabinet/languages/forth/apple2?with=forth-ok,player/don&baud=19200&serial.parity=even
+ *   /machine/languages/forth/apple2?with=forth-ok,player/don&baud=19200&serial.parity=even
  *
  *   with=     mixins, added after the entry's own parents in order (later wins); repeatable
  *   name=     an input, by its name (an alias) or by its value path
@@ -101,7 +101,7 @@ export function parseLaunch(
 	catalog: Catalog,
 	pathname: string,
 	search: string | URLSearchParams = "",
-	{ base = "/cabinet/" }: UrlOptions = {}
+	{ base = "/machine/" }: UrlOptions = {}
 ): Launch | undefined {
 	let rest = pathname;
 	try {
@@ -177,7 +177,7 @@ const encode = (s: string) => encodeURIComponent(s).replace(/%2F/gi, "/").replac
 export function launchUrl(
 	entry: Entry,
 	{ with: mixins = [], values = {} }: { with?: readonly string[]; values?: Record<string, unknown> } = {},
-	{ base = "/cabinet/", slash = true }: UrlOptions = {}
+	{ base = "/machine/", slash = true }: UrlOptions = {}
 ): string {
 	const head = base.replace(/\/+$/, "") + "/" + entry.path + (slash ? "/" : "");
 	const parts: string[] = [];

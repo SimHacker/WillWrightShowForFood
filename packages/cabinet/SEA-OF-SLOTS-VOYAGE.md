@@ -28,7 +28,7 @@ node scripts/korz-bench.mjs hand          # times one workload on every level
 ```
 
 And keep a live machine open in another window:
-[Forth and the turtle](https://hyperties.org/cabinet/languages/forth-turtle/?cpu=compile&forth=hardware).
+[Forth and the turtle](https://hyperties.org/machine/languages/forth-turtle/?cpu=compile&forth=hardware).
 Press SLOTS under the display. That panel shows, as the machine runs, which slots answer the
 instruction the PDP-7 runs next and the word the display decodes next. Most stops on this tour
 show up there.

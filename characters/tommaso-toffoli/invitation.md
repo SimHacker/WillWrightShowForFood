@@ -39,7 +39,7 @@ him ([his page](https://github.com/SimHacker/WillWrightShowForFood/blob/main/cha
 I've also been building a PDP-7 and Type 340 emulator for the browser that runs Forth, early UNIX
 and the 1969 PIXIE graphics system, along with devices no PDP-7 had: a Turing machine engine
 running Minsky's universal machine and Christopher Cherniak's busy beavers
-([live](https://hyperties.org/cabinet/turing/)). A cellular automata machine is the obvious next
+([live](https://hyperties.org/machine/turing/)). A cellular automata machine is the obvious next
 device to give it.
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
@@ -77,7 +77,7 @@ needed.
 
 **The PDP-7 cabinet**
 
-- [Everything in the cabinet](https://hyperties.org/cabinet/) ·
+- [Everything in the cabinet](https://hyperties.org/machine/) ·
   [the Turing engine](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TURING-ENGINE.md) ·
   [23-minute tour (video)](https://www.youtube.com/watch?v=lo8kdY-5i6c)
 - [Open letter to museums, libraries, archives and retro computing enthusiasts](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/FOR-MUSEUMS.md)

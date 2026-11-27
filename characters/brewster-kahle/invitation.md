@@ -25,7 +25,7 @@ amount of it was found again through the Internet Archive.
 Cambridge as an undergraduate. The same machine ran Heinz Lemke's PIXIE in 1969, a graphics system
 with radial menus. To restore PIXIE from its printed listing I built a PDP-7 and 340 emulator that
 runs in a web page, and it now runs PIXIE, DUEL, PDP-7 UNIX, and Mitch Bradley's Forth:
-[the cabinet](https://hyperties.org/cabinet/) ·
+[the cabinet](https://hyperties.org/machine/) ·
 [a 23-minute tour](https://www.youtube.com/watch?v=lo8kdY-5i6c). Every word in core maps to its
 source line and to the scanned page of the listing, so you can go from the running machine to the
 paper and back. I've also restored HyperTIES, Ben Shneiderman's 1980s hypertext system, from its
@@ -81,7 +81,7 @@ No preparation needed.
 
 **What runs**
 
-- [The cabinet](https://hyperties.org/cabinet/) · [the tour](https://www.youtube.com/watch?v=lo8kdY-5i6c) ·
+- [The cabinet](https://hyperties.org/machine/) · [the tour](https://www.youtube.com/watch?v=lo8kdY-5i6c) ·
   [PIXIE in the emulator](https://hyperties.org/databases/pixie/pixie-live/) ·
   [the PIXIE restoration](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md)
 - [HyperTIES reading room](https://hyperties.org/archive/reading-room/) ·

@@ -28,7 +28,7 @@ store and forward, every copy complete, nobody's server in charge.
 The other thing I've been doing is old machines. David Rosenthal's story of the PDP-7 he used at
 Cambridge led me to build one that runs in a web page, with its Teletype and paper tape and vector
 display, and to restore a 1969 graphics program from its printed listing
-([the cabinet](https://hyperties.org/cabinet/) ·
+([the cabinet](https://hyperties.org/machine/) ·
 [a 23-minute tour](https://www.youtube.com/watch?v=lo8kdY-5i6c)). Your writing about obsolete
 technology and the social world it came from is the same interest from a different direction.
 
@@ -51,7 +51,7 @@ Remote is fine. No preparation needed.
 
 ## Everything else, if you want more
 
-- [Will Wright Show For Food](https://github.com/SimHacker/WillWrightShowForFood) · [the cabinet](https://hyperties.org/cabinet/)
+- [Will Wright Show For Food](https://github.com/SimHacker/WillWrightShowForFood) · [the cabinet](https://hyperties.org/machine/)
 - [The 1996 interview with Tim Pozar and Brewster Kahle about TLG](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/sources/chm-interview-1996.md)
 - [Jason Scott](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jason-scott/README.md) ·
   [Brewster Kahle](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/README.md)

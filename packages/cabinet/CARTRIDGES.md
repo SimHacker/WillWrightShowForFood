@@ -362,7 +362,7 @@ offers three destinations:
 The page decides which path from the repo's permissions, not from a setting: if you can push,
 it commits; if you can't, it forks and opens a PR, the same way everyone contributes to anything
 on GitHub. Writing to your own repo needs nothing from this one. A cartridge loads straight
-from any repo (`/cabinet/?cart=gh:you/your-carts/flowers@main`), built in your page, so your
+from any repo (`/machine/?cart=gh:you/your-carts/flowers@main`), built in your page, so your
 repo is already a published cartridge library, no CI needed.
 
 **Committing from the page.** GitHub's Git Data API writes blobs, a tree and a commit, and
@@ -436,11 +436,11 @@ folders:
   facet (by year, by machine). A folder entry with `query:` instead of children is a saved filter,
   like Steam's dynamic collections: `{ path: forths, query: { tags: { language: forth } } }`.
 
-**URLs use the same hierarchy.** `/cabinet/<path>` opens the entry at that path. A path in some
+**URLs use the same hierarchy.** `/machine/<path>` opens the entry at that path. A path in some
 entry's `was:` redirects to its new home. The query adds run-time configuration:
 
 ```
-/cabinet/languages/forth/apple-ii-forth/forth/?with=player/don&baud=19200&speed=4
+/machine/languages/forth/apple-ii-forth/forth/?with=player/don&baud=19200&speed=4
 ```
 
 - **`with=`** adds mixins after the entry's own parents, in order, so later ones win: the same rule
@@ -504,7 +504,7 @@ belongs to one program (RINGS, DUEL's game panel) also needs the entry to ask fo
 
 **Done:** [`@wwsff/catalog`](../catalog/README.md): entries, the tree, facets, search, and URLs
 with run-time mixins and inputs, with entries for every cabinet program and every Apple app.
-The shell at `/cabinet/<path>/` (`apps/ties/src/lib/CatalogShell.svelte`): the catalog as a tree,
+The shell at `/machine/<path>/` (`apps/ties/src/lib/CatalogShell.svelte`): the catalog as a tree,
 a list or by any facet, with search and tag chips, beside the entry it shows. Every catalog path
 and old program path is a prerendered page; old paths and `?program=` move to the entry's own
 path. Machine adapters (`machines.js`) are imported when an entry first needs one; a link to an
@@ -529,7 +529,7 @@ chosen by it, URL write-back for inputs, save as entry, then the steps below.
 0. **The catalog** ([§7a](#7a-the-catalog-one-browser-for-every-machine)): entries for every
    program and disk where they are, then one browser page over them; machine adapters for the
    PDP-7 and microM8 behind one shell, with panels chosen by what the machine implements; the
-   PDP-7 programs and microM8 imported lazily. Accept: `/cabinet/` and `/microm8/` boot
+   PDP-7 programs and microM8 imported lazily. Accept: `/machine/` and `/microm8/` boot
    everything they boot today, from one page.
 1. **Cartridges as files.** Move each object in `cabinet-programs.js` into
    `tapes/<id>/cartridge.yml`, with a loader that interprets the steps. Accept: every program

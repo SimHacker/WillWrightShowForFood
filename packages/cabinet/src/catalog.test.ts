@@ -54,10 +54,10 @@ test("the tree and the URLs work on the real catalog", () => {
 	assert.ok(catalog.tree("languages")!.children.every((n) => n.entry), "languages is one flat list");
 	assert.equal(catalog.tree("machines/pdp-7")!.children.length, catalog.find({ tags: { machine: "pdp7" } }).length);
 
-	const duel = parseLaunch(catalog, "/cabinet/games/duel/", "size=768&with=anything")!;
+	const duel = parseLaunch(catalog, "/machine/games/duel/", "size=768&with=anything")!;
 	assert.equal(duel.entry?.runs?.program, "duel");
 	assert.deepEqual(duel.values, { size: 768 });
 	assert.equal(duel.ignored[0]?.reason, "not a mixin duel accepts");
-	const forth = parseLaunch(catalog, "/cabinet/languages/don-hopkins-prodos-forth/")!;
+	const forth = parseLaunch(catalog, "/machine/languages/don-hopkins-prodos-forth/")!;
 	assert.deepEqual(forth.entry?.runs, { machine: "apple2", app: "hopkins-forth", profile: "apple2-plus-videx" });
 });

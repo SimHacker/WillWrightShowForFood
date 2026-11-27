@@ -50,7 +50,7 @@ colour-remapping, 3D pixel shifting, music, backdrops, overlays, memory cheats, 
   `assemble`, `tape-compile`, `patch`, `read-in`, with a cache.
 - **`parents`**: a child cartridge lists a base and any mixins and adds to them
   (`forth-flowers` has `parents: [forth]`), composed by [@wwsff/flavors](../flavors/README.md).
-- **Profiles** stacked in the URL (`/cabinet/forth/?profile=trace`), and **scenes** of several
+- **Profiles** stacked in the URL (`/machine/forth/?profile=trace`), and **scenes** of several
   machines with the room and the people at them.
 - **Live coding and git**: edits in the page are saved, become commits in your own repo, a pull
   request, CI, a deploy.

@@ -29,7 +29,7 @@ format:
   short_form: "Each thread is its own clip"
 
 links:
-  cabinet_340: https://hyperties.org/cabinet/devices/ultimate-hand/
-  pdp7_unix: https://hyperties.org/cabinet/systems/pdp-7-unix/
+  cabinet_340: https://hyperties.org/machine/devices/ultimate-hand/
+  pdp7_unix: https://hyperties.org/machine/systems/pdp-7-unix/
   forth_day_demo: https://youtu.be/I-Rf3XP_D0g
   simh_map: ../../packages/cabinet/SIMH-MAP.md

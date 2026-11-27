@@ -62,7 +62,7 @@ Ben could join, or it could be just the two of us. Remote is fine.
 **The PDP-7 and PIXIE**
 
 - [PIXIE in the emulator](https://hyperties.org/databases/pixie/pixie-live/) ·
-  [everything in the cabinet](https://hyperties.org/cabinet/) ·
+  [everything in the cabinet](https://hyperties.org/machine/) ·
   [the PIXIE restoration](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/PIXIE-RESTORATION.md)
 - [The film recovery](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/2019-2020-film-recovery-saga.md)
 

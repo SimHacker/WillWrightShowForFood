@@ -13,7 +13,7 @@ words are fixed: "fourth" to Forth, "cores" to Korz, "Coen" to colon, "light pin
 "touring" to Turing, "Hines Lima" to Heinz Lemke, "Jiren Laneir" to Jaron Lanier, "Tomagosi" to
 Tamagotchi. Notes in square brackets are the editor's. The times link to that point in the video.
 
-Every program shown runs at [hyperties.org/cabinet](https://hyperties.org/cabinet/).
+Every program shown runs at [hyperties.org/machine](https://hyperties.org/machine/).
 
 **Mitch Bradley: PDP-7 Forth**
 
@@ -150,7 +150,7 @@ The emulator emulates the same I/O that was on the real hardware: a Model 33
 [9:03](https://youtu.be/k2pwJ294r8o?t=543) There's [turtle graphics](LOGO-TURTLE.md) using the
 Type 340 emulation. It compiles the display list into the dedicated memory for the vector display,
 and the display just processes that list and draws on the screen. There are Forth words for turtle
-graphics, all Logo. ([Forth and the turtle](https://hyperties.org/cabinet/languages/forth-turtle/))
+graphics, all Logo. ([Forth and the turtle](https://hyperties.org/machine/languages/forth-turtle/))
 
 [9:35](https://youtu.be/k2pwJ294r8o?t=575) One of the highlights of my life was having dinner with
 [Seymour Papert](../../characters/seymour-papert/README.md), who invented Logo, just a few weeks
@@ -194,7 +194,7 @@ called CADroid, and put [CForth](https://github.com/MitchBradley/cforth) into th
 system. This is vector graphics driven by a [light pen](LIGHTPEN.md), and the demo is driving the
 pen as I would with the mouse. There's a speed control: I'm slowing it down so you can see the
 vector graphics being redrawn.
-([PIXIE / SYMELEC](https://hyperties.org/cabinet/applications/pixie-symelec/))
+([PIXIE / SYMELEC](https://hyperties.org/machine/applications/pixie-symelec/))
 
 [12:30](https://youtu.be/k2pwJ294r8o?t=750) This little round thing is a radial menu, where
 everything is right next to you. ([Pie menus](TAGS-AND-PIES.md)) PIXIE ran on this PDP-7 at
@@ -245,7 +245,7 @@ it's executing, but the actual scan. It's a source map all the way back to paper
 Mitch just threw this great Forth in my lap, so I'm like, what can I do with that? In the emulator
 you've got things like Spacewar. This is running in the emulator, and I'll try to kill one of these
 guys. Boom. Now I just hit a halt instruction, and the trace.
-([DUEL](https://hyperties.org/cabinet/games/duel/), DECUS 7-40)
+([DUEL](https://hyperties.org/machine/games/duel/), DECUS 7-40)
 
 ## Forth on the teletype
 
@@ -369,7 +369,7 @@ easy.
 The devices are made this way too, so the optimizer can work on them. This is from 1964: the light
 pen test DEC shipped in 1964. I actually needed it to debug the damn light pen. If I go `demo`, it
 goes through the 1964 light pen test.
-([Light pen test](https://hyperties.org/cabinet/devices/light-pen-test/), [LIGHTPEN.md](LIGHTPEN.md))
+([Light pen test](https://hyperties.org/machine/devices/light-pen-test/), [LIGHTPEN.md](LIGHTPEN.md))
 
 ## The Ultimate Machine
 
@@ -382,7 +382,7 @@ a hand comes out and turns it back off. This is
 [Marvin Minsky](../../characters/marvin-minsky/README.md)'s and Claude Shannon's
 [useless machine](https://en.wikipedia.org/wiki/Useless_machine), or Ultimate Machine. You can buy
 them at Spencer's Gifts.
-([The Ultimate Machine](https://hyperties.org/cabinet/devices/ultimate-machine/),
+([The Ultimate Machine](https://hyperties.org/machine/devices/ultimate-machine/),
 [FORTH-DEVICE.md](FORTH-DEVICE.md))
 
 [27:45](https://youtu.be/k2pwJ294r8o?t=1665) Let me make it really fast. This is a Forth program
@@ -398,7 +398,7 @@ Then I got a little more ambitious: VPL, virtual reality,
 [Jaron Lanier](../../characters/jaron-lanier/README.md), the DataGlove. This is a data glove as if
 they had one back in 1969. A device reports my finger angles, and if I take my hand off, it goes into
 demo mode. Forth is great at scripting these things.
-([DataHand](https://hyperties.org/cabinet/devices/datahand/), [HAND-TRACKING.md](HAND-TRACKING.md))
+([DataHand](https://hyperties.org/machine/devices/datahand/), [HAND-TRACKING.md](HAND-TRACKING.md))
 
 ## The Ultimate Hand
 
@@ -409,7 +409,7 @@ more Forth that composes them. What the hell is this? The Ultimate Hand. It uses
 once. I put my hand there; it detects a hand. Take your hand away. Put a hand there, and my hand
 goes up, and I go whoop. Or we'll do one for no kids in the room. That's the NSFW version. You can
 go, hey, hi, how you doing?
-([The Ultimate Hand](https://hyperties.org/cabinet/devices/ultimate-hand/),
+([The Ultimate Hand](https://hyperties.org/machine/devices/ultimate-hand/),
 [source](tapes/pdp7forth/ultimate-hand.fs))
 
 [29:49](https://youtu.be/k2pwJ294r8o?t=1789) This is what Forth is great at: driving devices and
@@ -434,7 +434,7 @@ Turing machine simulator on the IBM PC, and we had an assignment to write Turing
 his courseware and translated it to Forth. This is a universal Turing machine. We'll run a demo and
 make it faster. The Turing machine is another CPU sharing the same memory as the PDP-7 and the
 display.
-([Turing machine](https://hyperties.org/cabinet/devices/turing-machine/),
+([Turing machine](https://hyperties.org/machine/devices/turing-machine/),
 [TURING-ENGINE.md](TURING-ENGINE.md))
 
 ## Little Computer People on the Apple II
@@ -442,11 +442,11 @@ display.
 [31:18](https://youtu.be/k2pwJ294r8o?t=1878)
 
 When I was a kid in high school I had an Apple II, and I made a ProDOS Forth for it. I won't show
-that now ([Don's ProDOS Forth](https://hyperties.org/cabinet/languages/don-hopkins-prodos-forth/),
+that now ([Don's ProDOS Forth](https://hyperties.org/machine/languages/don-hopkins-prodos-forth/),
 [APPLE2.md](APPLE2.md)), but we have all these other things.
 
 [31:31](https://youtu.be/k2pwJ294r8o?t=1891) This is
-[Little Computer People](https://hyperties.org/cabinet/games/little-computer-people/): "Welcome,
+[Little Computer People](https://hyperties.org/machine/games/little-computer-people/): "Welcome,
 researcher, to Little Computer People. Please enter your name." I worked on
 [The Sims](../../characters/will-wright/README.md) years later, and this is one of the things that
 inspired it: [Will Wright](../../characters/will-wright/README.md) talked to the guy who made
@@ -531,12 +531,12 @@ half. So we run that part real fast, then watch: he's moved in. Back to speed on
 Here's some low-tech stuff: a lunar lander game that speaks. "Time is zero, altitude is 500, speed
 is minus 50, fuel is 60. Your burn?" 20. "Time is one. Altitude is 467.5. Speed is minus 15. Fuel
 is 40." 7. Well, you know how this ends. If we just hit Return... oh no. [laughter]
-([LANDER](https://hyperties.org/cabinet/games/lander/))
+([LANDER](https://hyperties.org/machine/games/lander/))
 
 [39:03](https://youtu.be/k2pwJ294r8o?t=2343) Another one, for the PDP-7 teletype: "I think of a
 number from 0 to 99. You guess it." It says it's not listening while the machine speaks; it's
 starting the microphone. 50. "Higher than 50."
-([HILO](https://hyperties.org/cabinet/games/hilo/), [TELETYPE-DASHER.md](TELETYPE-DASHER.md))
+([HILO](https://hyperties.org/machine/games/hilo/), [TELETYPE-DASHER.md](TELETYPE-DASHER.md))
 
 ## Wrapping up
 
@@ -546,14 +546,14 @@ starting the microphone. 50. "Higher than 50."
 
 **Don:** I think I've covered most of it. We can run
 [Timothy Leary](../../characters/timothy-leary/README.md)'s
-[Mind Mirror](https://hyperties.org/cabinet/games/mind-mirror/),
-[Wizardry](https://hyperties.org/cabinet/games/wizardry/), Forth, all this stuff,
-[Apple Logo](https://hyperties.org/cabinet/languages/apple-logo-ii/). We'll run that later.
+[Mind Mirror](https://hyperties.org/machine/games/mind-mirror/),
+[Wizardry](https://hyperties.org/machine/games/wizardry/), Forth, all this stuff,
+[Apple Logo](https://hyperties.org/machine/languages/apple-logo-ii/). We'll run that later.
 
 **Host:** We meet every month. Will you come back?
 
 **Don:** I'll come back. I just got the Apple II emulator working a day ago, so it'll be better in
-a month. [laughter] Oh, have you seen [Pascal](https://hyperties.org/cabinet/languages/apple-pascal/)?
+a month. [laughter] Oh, have you seen [Pascal](https://hyperties.org/machine/languages/apple-pascal/)?
 End of demo.
 
 [40:32](https://youtu.be/k2pwJ294r8o?t=2432) **Host:** Bob Armstrong, introduce yourself. [The

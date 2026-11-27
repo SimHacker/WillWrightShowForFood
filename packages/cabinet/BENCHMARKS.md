@@ -51,9 +51,9 @@ process. Repeated runs differ by up to 8%. From [KORZ-DISPATCH.md](KORZ-DISPATCH
 
 | Workload | switch | compiler | resolver | interpreter |
 |---|---:|---:|---:|---:|
-| UNIX v0 boot, 3M instructions ([live](https://hyperties.org/cabinet/unix/)) | 11 | 5 | 30 | 777 |
-| Forth with the 340, DataHand and Ultimate Machine, 10M ([live](https://hyperties.org/cabinet/ultimate-hand/)) | 21 | 13 | 44 | 763 |
-| Turing engine running free, 5M ([live](https://hyperties.org/cabinet/turing/)) | 67 | 71 | 118 | 1,210 |
+| UNIX v0 boot, 3M instructions ([live](https://hyperties.org/machine/unix/)) | 11 | 5 | 30 | 777 |
+| Forth with the 340, DataHand and Ultimate Machine, 10M ([live](https://hyperties.org/machine/ultimate-hand/)) | 21 | 13 | 44 | 763 |
+| Turing engine running free, 5M ([live](https://hyperties.org/machine/turing/)) | 67 | 71 | 118 | 1,210 |
 
 The same, in instructions a second:
 

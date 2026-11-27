@@ -8,7 +8,7 @@ filler are cut, and misheard words are fixed, for example "fourth" to Forth, "co
 
 The talk itself, with [Mitch Bradley](../../characters/mitch-bradley/README.md) on how his PDP-7
 Forth works and then this cabinet, is [transcribed here](FORTH-DAY-TALK.md). Every program shown
-runs at [hyperties.org/cabinet](https://hyperties.org/cabinet/).
+runs at [hyperties.org/machine](https://hyperties.org/machine/).
 
 - [The cabinet](#the-cabinet)
 - [Forth on the TTY, and PIXIE rings](#forth-on-the-tty-and-pixie-rings)
@@ -30,7 +30,7 @@ runs at [hyperties.org/cabinet](https://hyperties.org/cabinet/).
 This is an emulator that runs in the web browser. It includes an Apple II emulator and a PDP-7
 emulator. Its original purpose was to run PIXIE / SYMELEC, from a 1971 listing, and we recreated
 it here. The same code from back then is running. There's another demo of that.
-([PIXIE / SYMELEC](https://hyperties.org/cabinet/applications/pixie-symelec/),
+([PIXIE / SYMELEC](https://hyperties.org/machine/applications/pixie-symelec/),
 [PIXIE-RESTORATION.md](PIXIE-RESTORATION.md), [Heinz Lemke](../../characters/heinz-lemke/README.md),
 [APPLE2.md](APPLE2.md), [the other demo](https://www.youtube.com/watch?v=lo8kdY-5i6c))
 
@@ -46,7 +46,7 @@ The cool thing about it is that it has turtle graphics. I hit the demo button, a
 got some PIXIE rings in core. Let's show them right now: there are RINGS, SLOTS and KORZ panels,
 and I'll open RINGS. Forth made these structures. It's using the same PDP-7 library, in assembly
 language, that PIXIE uses, so we have dynamic memory allocation.
-([Forth and the turtle](https://hyperties.org/cabinet/languages/forth-turtle/),
+([Forth and the turtle](https://hyperties.org/machine/languages/forth-turtle/),
 [PDP7-FORTH.md](reference/PDP7-FORTH.md), [FORTH-RINGS.md](FORTH-RINGS.md),
 [TELETYPE-DASHER.md](TELETYPE-DASHER.md))
 
@@ -149,7 +149,7 @@ repeating yourself, and it runs really fast because we're stacking two just-in-t
 [10:59](https://youtu.be/I-Rf3XP_D0g?t=659)
 
 Now let's go way back to the Apple II, and something that inspired The Sims: *Little Computer
-People*. ([Play it](https://hyperties.org/cabinet/games/little-computer-people/);
+People*. ([Play it](https://hyperties.org/machine/games/little-computer-people/);
 [David Crane](../../characters/david-crane/README.md) made it, and
 [Will Wright](../../characters/will-wright/README.md) made The Sims;
 [UPCYCLING-LCP.md](UPCYCLING-LCP.md), [the guide](guides/little-computer-people.md))
@@ -226,7 +226,7 @@ test the light pen, but everything has a demo, so Play Demo takes it through the
 
 I actually had to use this to find bugs in the emulator. It was fortunate that DEC had this
 program to help you see whether your light pen was busted.
-([Light pen test](https://hyperties.org/cabinet/devices/light-pen-test/),
+([Light pen test](https://hyperties.org/machine/devices/light-pen-test/),
 [GUIDE-LIGHTPEN.md](reference/GUIDE-LIGHTPEN.md), [the 1964 manual](reference/DIGITAL-7-78-M_370LightPenDiag_Apr64.pdf))
 
 ## The Ultimate Machine
@@ -236,7 +236,7 @@ program to help you see whether your light pen was busted.
 Next, higher up: the Ultimate Machine. Marvin Minsky and Claude Shannon had this crazy idea of a
 machine that just turns itself off. There's a switch, a hand comes out and turns it off, and then
 it goes back. It goes through these cycles and sits in the off state. I'll slow it down a little.
-([The Ultimate Machine](https://hyperties.org/cabinet/devices/ultimate-machine/),
+([The Ultimate Machine](https://hyperties.org/machine/devices/ultimate-machine/),
 [Marvin Minsky](../../characters/marvin-minsky/README.md),
 [the useless machine](https://en.wikipedia.org/wiki/Useless_machine))
 
@@ -270,7 +270,7 @@ It says what it's drawing: when it draws a finger, it says "I'm the thumb." The 
 the light pen cursor, and the light pen detects the finger under it: the index finger, the
 little finger. You can make the hand big and small by moving in and out. Think of it as just an
 input device. It plugs into the PDP-7 and converts the hand into PDP-7 coordinates.
-([DataHand](https://hyperties.org/cabinet/devices/datahand/), [HAND-TRACKING.md](HAND-TRACKING.md),
+([DataHand](https://hyperties.org/machine/devices/datahand/), [HAND-TRACKING.md](HAND-TRACKING.md),
 [TRACKING.md](TRACKING.md), [Jaron Lanier](../../characters/jaron-lanier/README.md)'s VPL)
 
 ## The Ultimate Hand
@@ -291,7 +291,7 @@ Watch: as you get bigger, you reach it.
 
 This is what Forth is great for. Forth is running the show here, assembling the instructions that
 control the devices. Forth just fits the PDP-7 so nicely.
-([The Ultimate Hand](https://hyperties.org/cabinet/devices/ultimate-hand/),
+([The Ultimate Hand](https://hyperties.org/machine/devices/ultimate-hand/),
 [source](tapes/pdp7forth/ultimate-hand.fs))
 
 ## A Turing machine as a coprocessor
@@ -306,7 +306,7 @@ The tape of a Turing machine has to be infinite, so it has something like virtua
 faults. The Turing machine device can only see a window of the tape. When the program decides it
 needs to go left and there's no more tape to the left, it sends an interrupt to the PDP-7, which
 says "oh, you need more tape to the left" and uncompresses it. So there's a virtual infinite tape
-going on. ([Turing machine](https://hyperties.org/cabinet/devices/turing-machine/),
+going on. ([Turing machine](https://hyperties.org/machine/devices/turing-machine/),
 [TURING-ENGINE.md](TURING-ENGINE.md),
 [Christopher Cherniak](../../characters/christopher-cherniak/README.md)'s courseware)
 
@@ -329,7 +329,7 @@ able to improve the experience like this.
 
 We're in Unix. I don't think we have the source maps for Unix, but we can certainly trace it. It
 works; that's the whole point. That's enough for now.
-([PDP-7 Unix](https://hyperties.org/cabinet/systems/pdp-7-unix/), [UNIX-V0.md](UNIX-V0.md),
+([PDP-7 Unix](https://hyperties.org/machine/systems/pdp-7-unix/), [UNIX-V0.md](UNIX-V0.md),
 [the pdp7-unix project](https://github.com/DoctorWkt/pdp7-unix))
 
 ---

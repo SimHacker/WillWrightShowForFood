@@ -7,7 +7,7 @@ synonyms:
 definition: "A walkthrough of everything SYMELEC can do in the emulator, in an order you can follow while recording a screen demo."
 ---
 
-This tour covers ~Heinz Lemke~'s 1972 SYMELEC from start to finish, in the emulator at [hyperties.org/cabinet/symelec](https://hyperties.org/cabinet/symelec/). It follows his PIXIE user manual (thesis appendix 4), and every step below was checked against the running program. Each section is one take: what to do, then what to say.
+This tour covers ~Heinz Lemke~'s 1972 SYMELEC from start to finish, in the emulator at [hyperties.org/machine/symelec](https://hyperties.org/machine/symelec/). It follows his PIXIE user manual (thesis appendix 4), and every step below was checked against the running program. Each section is one take: what to do, then what to say.
 
 ## Before you record
 

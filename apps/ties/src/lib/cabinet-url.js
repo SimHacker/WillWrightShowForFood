@@ -3,8 +3,8 @@ import { programById, DEFAULT_PROGRAM } from './cabinet-programs.js';
 /**
  * A cabinet spec from a URL, the same shape an article's `yaml cabinet` fence gives the applet.
  * One place for every parameter, so a link and a fence can say the same things:
- *   /cabinet/unix/                 the program in the path
- *   /cabinet/?program=forth        or in the query; the query wins
+ *   /machine/unix/                 the program in the path
+ *   /machine/?program=forth        or in the query; the query wins
  *   &size=768                      the tube's side in CSS pixels
  */
 export function cabinetSpec(query, pathProgram = null) {

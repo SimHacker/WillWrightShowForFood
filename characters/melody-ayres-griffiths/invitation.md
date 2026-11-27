@@ -24,7 +24,7 @@ next, and I'd still love to play with one.
 Your microM8 emulator has become the inspiration for something I'm building: an emulator of the
 Cambridge PDP-7 and its Type 340 display that runs in a web page, where Mitch Bradley's recent
 PDP-7 Forth and Heinz Lemke's historical 1969 PIXIE run again
-([the cabinet](https://hyperties.org/cabinet/)). Its manifesto credits microM8 and your
+([the cabinet](https://hyperties.org/machine/)). Its manifesto credits microM8 and your
 philosophy of "upcycling", the idea that an emulator owes the people using it more fun and
 accessibility than just fidelity and accuracy
 ([MANIFESTO](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MANIFESTO.md#a-federation-of-emulators-after-microm8)).

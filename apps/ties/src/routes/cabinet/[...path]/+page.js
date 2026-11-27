@@ -1,24 +1,12 @@
-import { error } from '@sveltejs/kit';
-import { catalog } from '$lib/catalog.js';
+import { redirect } from '@sveltejs/kit';
 
-/** Every place in the catalog's tree, disabled entries too, and every old path, so each is a real file. */
-export function entries() {
-	const paths = new Set(['']);
-	/** @param {import('@wwsff/catalog').CatalogNode} node */
-	const walk = (node) => {
-		if (node.link) return;
-		if (node.path) paths.add(node.path);
-		for (const child of node.children) walk(child);
-	};
-	const root = catalog.tree('', { all: true });
-	if (root) walk(root);
-	for (const entry of catalog.entries) for (const old of entry.was) paths.add(old);
-	return [...paths].map((path) => ({ path }));
-}
+export { entries } from '../../machine/[...path]/+page.js';
 
+/**
+ * The machine pages' old address. Caddy answers it with a 301 (deploy/hyperties-node.Caddyfile),
+ * keeping the query; these prerendered pages are for wherever Caddy is not in front.
+ */
 export function load({ params }) {
-	const asked = params.path ?? '';
-	const at = catalog.resolve(asked);
-	if (!at) error(404, `nothing in the catalog at ${asked}`);
-	return { asked, path: at.path, redirect: asked ? (at.redirect ?? null) : null, home: !asked };
+	const path = (params.path ?? '').replace(/\/+$/, '');
+	redirect(308, `/machine/${path ? `${path}/` : ''}`);
 }

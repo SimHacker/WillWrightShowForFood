@@ -2,7 +2,7 @@
 
 The goal was to make Activision's Little Computer People (1985) easy and fun to play in a web
 page, on the Apple ][+, with the original disk running unchanged. Play it at
-[hyperties.org/cabinet/games/little-computer-people](https://hyperties.org/cabinet/games/little-computer-people/).
+[hyperties.org/machine/games/little-computer-people](https://hyperties.org/machine/games/little-computer-people/).
 
 "Upcycling" is microM8's word. [April](../../characters/april-ayres-griffiths/README.md) and
 [Melody Ayres-Griffiths](../../characters/melody-ayres-griffiths/README.md)'s

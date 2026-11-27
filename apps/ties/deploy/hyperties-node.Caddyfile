@@ -9,6 +9,10 @@
 hyperties.org {
 	encode zstd gzip
 
+	# The machine pages were at /cabinet/ until 2026-11-27. Same path under /machine/, query kept.
+	@cabinet path_regexp cabinet ^/cabinet(/.*)?$
+	redir @cabinet /machine{re.cabinet.1}{?query} permanent
+
 	@immutable path /_app/immutable/*
 	header @immutable Cache-Control "public, max-age=31536000, immutable"
 

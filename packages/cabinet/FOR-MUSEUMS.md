@@ -17,8 +17,8 @@ TypeScript and checked against Open SIMH, which it ports device by device
 - **PDP-7 UNIX v0**, from the pdp7-unix restoration: log in as ken.
 - **Mitch Bradley's PDP-7 Forth,** with turtle graphics on the 340 and PIXIE's ring structures.
 
-Try them at [hyperties.org/cabinet](https://hyperties.org/cabinet/); UNIX is at
-[hyperties.org/cabinet/unix](https://hyperties.org/cabinet/unix/).
+Try them at [hyperties.org/machine](https://hyperties.org/machine/); UNIX is at
+[hyperties.org/machine/unix](https://hyperties.org/machine/unix/).
 
 It also runs devices that no PDP-7 ever had. They sit on free device codes, are marked as cabinet
 extensions in [DESIGN.md](DESIGN.md), and stock software never touches them:
@@ -29,10 +29,10 @@ extensions in [DESIGN.md](DESIGN.md), and stock software never touches them:
   program, with PDP-7 code paging its tape through core. [turing.fs](tapes/pdp7forth/turing.fs)
   draws the tape on the 340 and runs the machines from Christopher Cherniak's PCOMP TM\*
   simulator, including the busy beavers. TM-Forth compiles Turing machines into the engine's
-  tables ([TURING-ENGINE.md](TURING-ENGINE.md)). [Live](https://hyperties.org/cabinet/turing/).
+  tables ([TURING-ENGINE.md](TURING-ENGINE.md)). [Live](https://hyperties.org/machine/turing/).
 - **Minsky's Ultimate Machine** (device 56, [ultimate.ts](src/plugins/ultimate.ts)), the box that
   Claude Shannon built at Bell Labs: switch it on and a hand comes out and switches it off.
-  [ultimate.fs](tapes/pdp7forth/ultimate.fs) draws it on the 340, with the light pen on its switch. [Live](https://hyperties.org/cabinet/ultimate/).
+  [ultimate.fs](tapes/pdp7forth/ultimate.fs) draws it on the 340, with the light pen on its switch. [Live](https://hyperties.org/machine/ultimate/).
 - **A DataHand** (device 57, [datahand.ts](src/plugins/datahand.ts)), after VPL's DataGlove: a
   webcam and a hand tracker in the browser report your hand as a palm frame and twenty bones. Only
   the numbers reach the PDP-7, never the video. [datahand.fs](tapes/pdp7forth/datahand.fs) draws
@@ -40,7 +40,7 @@ extensions in [DESIGN.md](DESIGN.md), and stock software never touches them:
 - **ULTIMATE HAND**, written in Forth ([ultimate-hand.fs](tapes/pdp7forth/ultimate-hand.fs)): you
   are the Ultimate Machine's hand. Show the camera your hand and the box switches itself on, its arm
   carries your hand out to the switch, and you switch it off with a fingertip.
-  [Try the live demo](https://hyperties.org/cabinet/ultimate-hand/) with your webcam.
+  [Try the live demo](https://hyperties.org/machine/ultimate-hand/) with your webcam.
   [ultimate-hand.fs](tapes/pdp7forth/ultimate-hand.fs) is the top-level Forth file that ties it
   together: the Ultimate Machine, the DataHand, a 3D turtle and the Type 340.
 

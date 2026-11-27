@@ -54,8 +54,8 @@ every other consumer: loader, run budget, segment log, pen input.
 
 ## Programs
 
-Every program also has a page of its own with no article around it: `/cabinet/<program>/`, for
-example `/cabinet/unix/` and `/cabinet/forth/`, or `/cabinet/?program=duel&size=768`.
+Every program also has a page of its own with no article around it: `/machine/<program>/`, for
+example `/machine/unix/` and `/machine/forth/`, or `/machine/?program=duel&size=768`.
 `src/lib/cabinet-url.js` turns the URL into the same spec a fence gives. The entries in
 `cabinet-programs.js` are becoming cartridge directories with a `cartridge.yml` each:
 [packages/cabinet/CARTRIDGES.md](../../packages/cabinet/CARTRIDGES.md) has the format, the

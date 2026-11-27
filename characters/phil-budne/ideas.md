@@ -26,7 +26,7 @@ Ultimate Hand, and ask what looks wrong.
 ### 2. PDP-7 UNIX, booted in a browser
 
 The `pdp7-unix` restoration boots in Cabinet off an emulated RB09 disk
-([systems/pdp-7-unix](https://hyperties.org/cabinet/systems/pdp-7-unix/)). Walk through it
+([systems/pdp-7-unix](https://hyperties.org/machine/systems/pdp-7-unix/)). Walk through it
 with one of the people who typed it in: what the listings got wrong, how the disk layout was
 found, what writing a shell for a system with no shell felt like.
 

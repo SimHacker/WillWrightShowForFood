@@ -17,8 +17,8 @@ These run in a browser with nothing to install.
 
 | What | Where |
 |------|-------|
-| A PDP-7 and Type 340 emulator running PIXIE (1969), DUEL, PDP-7 UNIX, Mitch Bradley's Forth, a Turing machine and Minsky's Ultimate Machine | [hyperties.org/cabinet](https://hyperties.org/cabinet/) · [23-minute tour](https://www.youtube.com/watch?v=lo8kdY-5i6c) · [source](packages/cabinet/README.md) |
-| ULTIMATE HAND: your webcam hand becomes the Ultimate Machine's hand, in Forth | [hyperties.org/cabinet/ultimate-hand](https://hyperties.org/cabinet/ultimate-hand/) |
+| A PDP-7 and Type 340 emulator running PIXIE (1969), DUEL, PDP-7 UNIX, Mitch Bradley's Forth, a Turing machine and Minsky's Ultimate Machine | [hyperties.org/machine](https://hyperties.org/machine/) · [23-minute tour](https://www.youtube.com/watch?v=lo8kdY-5i6c) · [source](packages/cabinet/README.md) |
+| ULTIMATE HAND: your webcam hand becomes the Ultimate Machine's hand, in Forth | [hyperties.org/machine/ultimate-hand](https://hyperties.org/machine/ultimate-hand/) |
 | HyperTIES, Ben Shneiderman's 1980s hypertext system, restored | [reading room](https://hyperties.org/archive/reading-room/) · [source](apps/ties/FORMAT.md) |
 | Character animation from The Sims 1 | [vitamoo.space](https://vitamoo.space) |
 | SimCity, open source as Micropolis | [micropolisweb.com](https://micropolisweb.com/) |

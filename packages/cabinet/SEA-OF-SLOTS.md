@@ -13,7 +13,7 @@ traced back to the scanned 1972 listing, then DUEL, Lunar Lander, Mitch Bradley'
 with a turtle, and UNIX logging in as `ken`. That's the plain emulator, before any of the Korz in
 this article.
 
-**Then try it.** [Hold your hand up to your webcam](https://hyperties.org/cabinet/ultimate-hand/).
+**Then try it.** [Hold your hand up to your webcam](https://hyperties.org/machine/ultimate-hand/).
 A PDP-7 running Forth draws your hand on its vector display, and your hand becomes the hand of
 [Marvin Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky)'s [Ultimate Machine](https://en.wikipedia.org/wiki/Useless_machine), the box whose only function is to switch itself off. Show it your
 hand and the box switches itself on, its arm carries your hand out to the switch, and you switch it
@@ -507,9 +507,9 @@ Max with Node 26:
 
 | Workload | Live demo | `Pdp7` switch | Korz compiled | Korz resolver | Korz interpreter |
 |---|---|---|---|---|---|
-| UNIX v0 boot, 3M instructions | [cabinet/unix](https://hyperties.org/cabinet/unix/) | 11 | 5 | 30 | 777 |
-| Forth with 340, DataHand, Ultimate Machine, 10M | [cabinet/ultimate-hand](https://hyperties.org/cabinet/ultimate-hand/) | 21 | 13 | 44 | 763 |
-| Turing engine running free, 5M | [cabinet/turing](https://hyperties.org/cabinet/turing/) | 67 | 71 | 118 | 1,211 |
+| UNIX v0 boot, 3M instructions | [cabinet/unix](https://hyperties.org/machine/unix/) | 11 | 5 | 30 | 777 |
+| Forth with 340, DataHand, Ultimate Machine, 10M | [cabinet/ultimate-hand](https://hyperties.org/machine/ultimate-hand/) | 21 | 13 | 44 | 763 |
+| Turing engine running free, 5M | [cabinet/turing](https://hyperties.org/machine/turing/) | 67 | 71 | 118 | 1,211 |
 
 In instructions per second, that's 92 million for `Pdp7` on UNIX, 189 million compiled, 34 million resolved, and 1.3 million interpreted. A real PDP-7 did about 0.3 million.
 
@@ -521,10 +521,10 @@ way.
 The live demos run on the Korz compiler. Every one has a CPU menu next to its program menu, so you
 can reboot it on any of the four levels and watch the same program run on each. The address
 remembers your choice: here's UNIX on the
-[switch statements](https://hyperties.org/cabinet/unix/?cpu=pdp7), the
-[Korz interpreter](https://hyperties.org/cabinet/unix/?cpu=interpret), the
-[Korz resolver](https://hyperties.org/cabinet/unix/?cpu=resolve), and the
-[Korz compiler](https://hyperties.org/cabinet/unix/?cpu=compile). Next, the menu will switch levels
+[switch statements](https://hyperties.org/machine/unix/?cpu=pdp7), the
+[Korz interpreter](https://hyperties.org/machine/unix/?cpu=interpret), the
+[Korz resolver](https://hyperties.org/machine/unix/?cpu=resolve), and the
+[Korz compiler](https://hyperties.org/machine/unix/?cpu=compile). Next, the menu will switch levels
 while the program keeps running, without rebooting.
 
 ### Two machines, one process
@@ -658,7 +658,7 @@ Why build it? Three reasons.
 
 The Forth page has a menu, **Forth: software / hardware**, beside the CPU menu. Switching reboots
 the same image, with or without the slots. Try
-[Forth with the accelerator](https://hyperties.org/cabinet/forth/?forth=hardware). The design,
+[Forth with the accelerator](https://hyperties.org/machine/forth/?forth=hardware). The design,
 including the ROM dictionary and a ring library in high memory, is in
 [FORTH-DEVICE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/FORTH-DEVICE.md).
 The note for Forth Day, written for a room that already knows NEXT, is
@@ -751,7 +751,7 @@ from one machine to another.
 The cabinet has a [manifesto](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/MANIFESTO.md), and its first rule is that tribute, accessibility, and fun beat realism. Realism is one way to reach them.
 
 The teletype wraps, scrolls, zooms, reads aloud, and takes dictation, which no [Teletype Model 33](https://en.wikipedia.org/wiki/Teletype_Model_33)
-ever did. [HILO](https://hyperties.org/cabinet/hilo/), a guessing game Claude and I wrote for a machine with no screen, takes "ninety
+ever did. [HILO](https://hyperties.org/machine/hilo/), a guessing game Claude and I wrote for a machine with no screen, takes "ninety
 nine" by voice. Listings credit the people who wrote the code, by name, even where the real machine
 had no logins.
 
@@ -1038,25 +1038,25 @@ code is all TypeScript, it runs in Node and the browser, and it's free software.
 
 Every demo runs in the browser, from the original code where it survives:
 
-- [UNIX v0](https://hyperties.org/cabinet/unix/): Thompson and Ritchie's PDP-7 UNIX, booting from the RB09
+- [UNIX v0](https://hyperties.org/machine/unix/): Thompson and Ritchie's PDP-7 UNIX, booting from the RB09
   disk to the `@` prompt.
-- [Forth](https://hyperties.org/cabinet/forth/): Mitch Bradley's PDP-7 Forth, with his turtle
+- [Forth](https://hyperties.org/machine/forth/): Mitch Bradley's PDP-7 Forth, with his turtle
   graphics on the 340, after Logo's turtle by [Seymour Papert](https://en.wikipedia.org/wiki/Seymour_Papert), [Wally Feurzeig](https://en.wikipedia.org/wiki/Wally_Feurzeig), and [Cynthia Solomon](https://en.wikipedia.org/wiki/Cynthia_Solomon).
-- [SYMELEC](https://hyperties.org/cabinet/symelec/): PIXIE's main program, Heinz Lemke's 1972
+- [SYMELEC](https://hyperties.org/machine/symelec/): PIXIE's main program, Heinz Lemke's 1972
   editor, driven by the light pen, with its radial menus. This is where the whole emulator started.
-- [DUEL](https://hyperties.org/cabinet/duel/): DECUS 7-40, by Peterson and Viner (Cambridge, 1968), two ships on the
+- [DUEL](https://hyperties.org/machine/duel/): DECUS 7-40, by Peterson and Viner (Cambridge, 1968), two ships on the
   340, flown from the console switches by two players on one keyboard.
-- [Turing engine](https://hyperties.org/cabinet/turing/): the Turing machine coprocessor on device
+- [Turing engine](https://hyperties.org/machine/turing/): the Turing machine coprocessor on device
   54, driven from PDP-7 Forth, with the tape drawn on the 340. It runs busy beavers, a binary
   counter, and Minsky's universal machine, written in
   [TM-Forth](https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TURING-ENGINE.md#tm-forth),
   a little Forth whose output is transition tables, the way Toffoli and Margolus used Forth to
   build CAM-6 rules.
-- [Ultimate Machine](https://hyperties.org/cabinet/ultimate/): switch it on and it switches itself
+- [Ultimate Machine](https://hyperties.org/machine/ultimate/): switch it on and it switches itself
   off.
-- [ULTIMATE-HAND](https://hyperties.org/cabinet/ultimate-hand/): your hand through the webcam,
+- [ULTIMATE-HAND](https://hyperties.org/machine/ultimate-hand/): your hand through the webcam,
   drawn by Forth on the 340, pressing the Ultimate Machine's switch.
-- [LP370](https://hyperties.org/cabinet/lp370/): DEC's 1964 Type 370 light pen diagnostic, by
+- [LP370](https://hyperties.org/machine/lp370/): DEC's 1964 Type 370 light pen diagnostic, by
   C. Stein.
 
 ## Source code
