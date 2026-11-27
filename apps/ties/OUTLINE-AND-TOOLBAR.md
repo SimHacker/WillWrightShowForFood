@@ -170,6 +170,13 @@ catalog), paper on a light one (`/apple2/`). New panes use the same variables.
   When there are many places (more toolbars, containers, windows, pie menus), the current
   target is the last one the person dragged something into or selected, so the click keeps
   following where they are working.
+- **A list of instances.** Today a control has at most one instance, in the one target, and
+  its home shows one ⏏️ for it. Later a control can have many, in many places, each with its
+  own view state, and its home lists them: one entry per instance, its tooltip saying where it
+  is. Taking one out is then one action among others on an instance (go there, show it, copy
+  it, take it out), offered by its pie menu, not the button itself; the entry's icon is the
+  instance's own emoji, the top of its MOOLLM semantic token pyramid (emoji, name, summary,
+  the whole), chosen by the person or by default. Built now: one instance, one target, one ⏏️.
 - **More anchors on the item**: today `top-left` (⠿) and `top-right` (⏏️). The other corners
   and the edges' middles take more handles; layouts anchored at points of a container (its
   ends, its middle, its edges) take items, and a drag between any two is one move.
