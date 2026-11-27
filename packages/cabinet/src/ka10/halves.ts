@@ -1,5 +1,6 @@
 import { BIT17_N, BYTI, CONI, CONO, CRY0, CRY1, DATAI, DATAO, FLTOVR, FLTUND, NODIV, ONEP, OVR, PURE, USER, USERIO, oct, type DevIo } from "./defs.js";
 import { Events, type Unit } from "./events.js";
+import { exactFloat, type FloatStore, type FloatUnit } from "./float.js";
 import { Ka10, type HistEntry, type Ka10State, type Stop } from "./ka10.js";
 
 /*
@@ -72,9 +73,11 @@ class Coprocessor extends Ka10 {
 	}
 }
 
-/** Opcodes the halves switch still hands to the SIMH port: floating point, MUL, DIV, ASHC, ROTC, LSHC, CIRC. */
+/** The floating instructions: 130 to 177 less the byte instructions. */
+const isFloat = (ir: number): boolean => ir >= 0o130 && ir <= 0o177 && (ir < 0o133 || ir > 0o137);
+
+/** Opcodes the halves switch still hands to the SIMH port: MUL, DIV, ASHC, ROTC, LSHC, CIRC, and floating point when no unit is plugged in. */
 function onCoprocessor(ir: number): boolean {
-	if (ir >= 0o130 && ir <= 0o177) return ir < 0o133 || ir > 0o137;
 	if (ir >= 0o220 && ir <= 0o237) return true;
 	return ir >= 0o244 && ir <= 0o247;
 }
@@ -99,6 +102,8 @@ export class Ka10Halves {
 	private readonly cop: Coprocessor;
 	/** Instructions handed to the coprocessor, by opcode. */
 	readonly coprocessed = new Float64Array(0o1000);
+	/** The floating point unit, a dimension of the machine: undefined hands floating instructions to the SIMH port. */
+	float: FloatUnit | undefined;
 
 	AR = 0;
 	MQ = 0;
@@ -198,7 +203,8 @@ export class Ka10Halves {
 	tmxrPoll = 0;
 	rtcTps = 60;
 
-	constructor(opts: { memWords?: number; its?: boolean; mpx?: boolean } = {}) {
+	constructor(opts: { memWords?: number; its?: boolean; mpx?: boolean; float?: FloatUnit | undefined } = {}) {
+		this.float = "float" in opts ? opts.float : exactFloat;
 		this.memWords = opts.memWords ?? 256 * 1024;
 		this.its = opts.its ?? true;
 		this.mpx = opts.mpx ?? this.its;
@@ -1003,6 +1009,105 @@ export class Ka10Halves {
 		for (let i = 0; i < 16; i++) this.FM[i] = Number(c.FM[i]!);
 	}
 
+	/** The floating instructions: fetch per mode, let the unit compute, store per mode. */
+	private floating(): void {
+		const u = this.float!;
+		const IR = this.IR;
+		let r: FloatStore;
+		if (IR === 0o131) {
+			this.dfn();
+			return;
+		}
+		if (IR === 0o132) {
+			this.BR = this.AR & RM;
+			this.AR = this.getReg(this.AC);
+			r = u.fsc(this, this.AB);
+		} else if (IR === 0o171) {
+			if (this.memRead(0, 0, 0, 0)) return;
+			this.AR = this.MB;
+			this.MQ = this.getReg(this.AC + 1);
+			r = u.fdvl(this);
+		} else {
+			if (!this.fpOperand()) return;
+			r = IR < 0o150 ? u.fad(this) : IR < 0o160 ? u.fsb(this) : IR < 0o170 ? u.fmp(this) : u.fdv(this);
+		}
+		switch (r) {
+			case "ac1":
+				this.setReg(this.AC + 1, this.AR);
+				return;
+			case "ac":
+				this.setReg(this.AC, this.AR);
+				return;
+			case "pair":
+				this.setReg(this.AC + 1, this.MQ);
+				this.setReg(this.AC, this.AR);
+				return;
+			case "store":
+				this.fpStore();
+				return;
+		}
+	}
+
+	/** The operand of a floating instruction by mode: immediate (5) is E in the left half. */
+	private fpOperand(): boolean {
+		switch (this.IR & 7) {
+			case 5:
+				this.AR = (this.AR & RM) * TWO18;
+				return true;
+			case 0:
+			case 1:
+			case 4:
+				if (this.memRead(0, 0, 0, 0)) return false;
+				this.AR = this.MB;
+				return true;
+			default:
+				if (this.memRead(0, 0, 0, 1)) return false;
+				this.AR = this.MB;
+				return true;
+		}
+	}
+
+	/** Mode 1 (long) also puts MQ in AC+1; 2 and 6 store to memory; 3 and 7 to both. */
+	private fpStore(): void {
+		switch (this.IR & 7) {
+			case 1:
+				this.setReg(this.AC + 1, this.MQ);
+			// falls through
+			case 5:
+			case 0:
+			case 4:
+				this.setReg(this.AC, this.AR);
+				return;
+			case 2:
+			case 6:
+				this.MB = this.AR;
+				this.memWrite(0, 0);
+				return;
+			default:
+				this.MB = this.AR;
+				if (this.memWrite(0, 0)) return;
+				this.setReg(this.AC, this.AR);
+		}
+	}
+
+	/** DFN: negate the double word AC (high) and E (low), keeping E's exponent. */
+	private dfn(): void {
+		if (this.memRead(0, 0, 0, 0)) return;
+		this.BR = this.MB;
+		this.AR = this.getReg(this.AC);
+		this.AD = (CM(this.BR) + 1) % TWO36;
+		this.SC = Math.floor(this.BR / 134217728) & 0o777;
+		this.BR = this.AR;
+		this.AR = this.AD;
+		this.AD = (CM(this.BR) + (this.AD % 134217728 === 0 ? 1 : 0)) % TWO36;
+		this.AR = (this.AR % 134217728) + (this.SC & 0o777) * 134217728;
+		this.BR = this.AR;
+		this.AR = this.AD;
+		this.MB = this.BR;
+		this.setReg(this.AC, this.AR);
+		this.memWrite(0, 0);
+	}
+
 	private ldbPtr(): void {
 		this.f_load_pc = 0;
 		this.f_inst_fetch = 0;
@@ -1122,7 +1227,11 @@ export class Ka10Halves {
 			this.uuo(IR === 0 || IR >= 0o40);
 			return;
 		}
-		if (onCoprocessor(IR)) {
+		if (isFloat(IR) && this.float) {
+			this.floating();
+			return;
+		}
+		if (onCoprocessor(IR) || isFloat(IR)) {
 			if (IR === 0o247 && !this.its) {
 				this.unasign();
 				return;

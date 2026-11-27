@@ -533,7 +533,92 @@ clock. SIMH's input comes from expect, so its keystrokes land at different times
 traces part after the `DSKDMP` prompt. Comparing ITS itself waits for a deterministic SIMH clock
 or for lockstep against the halves switch.
 
-**Next.** The halves switch, in lockstep with this one, then the Korz rungs.
+**Devices plug into any rung.** [bus.ts](src/ka10/bus.ts) is what a device sees of the
+processor, `Ka10Bus`: the event queue, `attachDevice` for a device code's CONO, CONI, DATAO
+and DATAI, `setInterrupt` and `clrInterrupt`, and core for the data channels. The devices in
+`devices.ts` import that interface and never a CPU, so the same console, tape, disk and clock
+serve the SIMH port, the halves switch and the Korz rungs. `Ka10Rung` adds what the cabinet
+drives (run, step, history, the save format), and [its.ts](src/ka10/its.ts) builds the ITS
+machine on whichever rung `rung: "simh" | "halves"` names.
+
+## The halves switch runs in lockstep
+
+[halves.ts](src/ka10/halves.ts), `Ka10Halves`, is the second switch: written by hand, words
+as numbers below 2^36, core as two `Uint32Array`s of 18-bit halves. It follows the SIMH port
+memory reference for memory reference. What it doesn't do yet it hands to the SIMH port as a
+coprocessor, and it counts those instructions by opcode.
+
+[lockstep.ts](src/ka10/lockstep.ts) steps two rungs one instruction at a time and stops at the
+first difference in the registers, the accumulators or the tick count, and in all of core
+every so often. [scripts/ka10-lockstep.mjs](scripts/ka10-lockstep.mjs) boots ITS on both, typing
+the same keys at the same instruction. Lockstep found three bugs in the halves switch's first
+run, each in a few seconds: the coprocessor's operand fetch from an accumulator didn't update
+`MB`, it started from a stale `MB`, and the UUO word packed the opcode one bit too high. Now
+the two agree for 40 million instructions, through `IN OPERATION` and the system job's
+logins, with core compared every 100,000.
+
+The halves switch boots ITS in 0.9 s of wall time, at about 21 MIPS against the SIMH port's 7.
+`--rung halves` runs it in `ka10-its.mjs`, and `--cmd TEXT --wait TEXT`, repeated, types
+at the logged-in console.
+
+**MACSYMA is on the packs.** The prebuilt `pdp10-ka` image includes MACSYMA 1001 (the
+PDP-10/its build makes it with `MACSYMA=yes`, from `build/macsyma.tcl`), and it runs on the
+halves switch:
+
+```
+node scripts/ka10-its.mjs ~/GroundUp/git/its/dl/pdp10-ka --rung halves --login DON \
+  --cmd :macsym --wait "(C1)" --cmd "integrate(1/(x^3+1),x);" --wait "(C2)"
+```
+
+It integrates `1/(x^3+1)`, factors `x^12-1`, expands `sin(x)/x` as a Taylor series, and sums
+`1/k^2` to 200 as 1.63994655, all in under three seconds of wall time from boot.
+
+**What the coprocessor still does.** Over the boot, the login and those MACSYMA commands,
+the instructions handed over were, most first: `LSHC` 844,456, `IDIV` 56,420, `ROTC` 23,527,
+`IMULI` 15,975, `CIRC` 11,406, `DIV` 9,295, `MUL` 8,292, `IMUL` 4,205. The floating
+instructions together came to about 300. So the double shifts and the integer multiply and
+divide are next, in that order: a loop with one `IMULI` in five instructions runs at 8 MIPS on
+every rung because of it.
+
+## Floating point is a dimension
+
+The KA10's floating point is integer work in the hardware: a sign, an 8-bit excess-128
+exponent and a 27-bit fraction, negatives as the two's complement of the whole word, no
+hidden bit. Add, subtract, multiply, divide and scale, truncating or rounding at one fixed bit,
+with the long forms keeping a second word. Sine, square root and arctangent were library
+subroutines built on those, so the instructions are all there is to get right.
+
+SIMH does it bit by bit in `uint64`: the fraction shifted left 34 into a 64-bit field, aligned,
+added, normalized one bit at a time and rounded at `FPRBIT2`, with a special case for a
+negative exact half. IEEE doubles can hold every KA10 float exactly, but their arithmetic
+rounds differently, has no unnormalized operands, and gives Infinity where the KA10 sets
+overflow and wraps the exponent. So doubles serve for looking at floats (the display, the
+music), not for computing them.
+
+[float.ts](src/ka10/float.ts) makes the floating unit a plug: a `FloatUnit` does `fad`, `fsb`,
+`fmp`, `fdv`, `fdvl` and `fsc` on the processor's registers, and the processor fetches by mode
+before and stores by mode after. It is the dimension a Korz rung will dispatch the floating
+instructions on. The first unit is `exact`, SIMH's algorithm in plain numbers:
+
+- the 64-bit field as two unsigned 32-bit halves;
+- the 54-bit product from two partial products below 2^53;
+- `FDV`'s `(BR << 28) / AR` as two 14-bit steps of long division, each exact;
+- `FDVL`'s 55-bit dividend as `hi·2^27 + lo`, where comparing and subtracting the shifted
+  divisor only ever touch `hi`.
+
+A randomized test runs every floating instruction in every mode, on normalized, unnormalized,
+random and edge-case operands, on the SIMH port and the halves switch, and compares the
+accumulators, memory, flags and PC: 60,000 cases in the suite, and 3 million on another seed
+agreed. A loop of `FADR`, `FSBR`, `FMPR` and `FDVR` runs at 16 MIPS with `exact`, 4 on the
+SIMH port's BigInts, and 2 through the coprocessor (`float: undefined`).
+
+More units plug in beside it. Native doubles would be an opt-in for speed, with a shadow unit
+that runs `exact` alongside and logs every disagreement, so you learn which programs notice.
+And `listening(unit, ear)` wraps any unit so every floating instruction reports its opcode,
+operands, result and flags. That's where VM Radio's floats come from: a MACSYMA `float()`
+or a MacLisp numeric loop sounding its own arithmetic, at no cost when nothing is listening.
+
+**Next.** The double shifts and the integer multiply and divide in halves, then the Korz rungs.
 
 ## Phases
 

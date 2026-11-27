@@ -2,7 +2,12 @@
 // Boot ITS on the cabinet's KA10, the way build/build.tcl boots it on SIMH's pdp10-ka:
 // `boot ptr` reads DSKDMP off paper tape, then `its` and Altmode G start the system.
 //
-//   node scripts/ka10-its.mjs [workdir] [--login NAME] [--history N] [--seconds S]
+//   node scripts/ka10-its.mjs [workdir] [--rung simh|halves] [--login NAME] [--history N] [--seconds S]
+//                             [--cmd TEXT --wait TEXT]...
+//
+// After logging in, each --cmd is typed with a Return and the console is run until it prints
+// the --wait that follows it, so `--cmd :macsym --wait "(C1)" --cmd "diff(x^3,x);" --wait "(C2)"`
+// drives MACSYMA. In TEXT, \e is Altmode and ^X is Control-X.
 //
 // workdir holds dskdmp.rim and the packs rp03.0 to rp03.3 from the PDP-10/its
 // project's prebuilt image (default ~/GroundUp/git/its/dl/work). The packs are
@@ -24,6 +29,14 @@ const login = flag("--login", "");
 const history = Number(flag("--history", "0"));
 const seconds = Number(flag("--seconds", "120"));
 const rung = flag("--rung", "simh");
+const cmds = [];
+for (let i = args.indexOf("--cmd"); i >= 0; i = args.indexOf("--cmd")) {
+	const unescape = (t) => t.replace(/\\e/g, "\x1b").replace(/\^([@-_])/g, (_, c) => String.fromCharCode(c.charCodeAt(0) - 64));
+	const text = unescape(args[i + 1] ?? "");
+	const w = args[i + 2] === "--wait" ? (args[i + 3] ?? "") : "";
+	args.splice(i, w ? 4 : 2);
+	cmds.push({ text, wait: w });
+}
 const dir = args[0] ?? join(homedir(), "GroundUp/git/its/dl/work");
 
 const BLOCK = 128 * 8;
@@ -111,7 +124,22 @@ if (ok) {
 		const t2 = cpu.events.now;
 		while (cpu.events.now < t2 + 2 * ticksPerSecond) cpu.run(10_000);
 		report("login");
+		for (const c of cmds) {
+			if (!ok) break;
+			mark = m.output.length;
+			m.cty.type(`${c.text}\r`);
+			if (c.wait) ok = runUntil(c.wait, mark);
+			else {
+				const t3 = cpu.events.now;
+				while (cpu.events.now < t3 + ticksPerSecond) cpu.run(10_000);
+			}
+			report(JSON.stringify(c.text));
+		}
 	}
+}
+if (cpu.coprocessed) {
+	const top = [...cpu.coprocessed.entries()].filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1]);
+	console.error(`[coprocessed: ${top.map(([op, n]) => `${op.toString(8)}×${n}`).join(" ") || "none"}]`);
 }
 if (!ok) dump();
 process.exit(ok ? 0 : 1);
