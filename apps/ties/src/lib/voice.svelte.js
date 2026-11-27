@@ -1,5 +1,5 @@
 /**
- * The cabinet's speaking voice, one for the whole site: the teletype's read-aloud and the screen
+ * The Machine Room's speaking voice, one for the whole site: the teletype's read-aloud and the screen
  * angel. The choice is kept in localStorage; empty means the best voice this browser has from a
  * list of clear, natural female English voices, best first.
  */

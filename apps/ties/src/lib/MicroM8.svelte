@@ -503,7 +503,7 @@
 {/snippet}
 
 {#snippet insertDisk(compact = false)}
-	<select bind:value={choice} onchange={insertChoice} aria-label="Put a cabinet disk in drive {drive + 1}" title="Put a cabinet disk in drive {drive + 1}">
+	<select bind:value={choice} onchange={insertChoice} aria-label="Put a disk from the Machine Room in drive {drive + 1}" title="Put a disk from the Machine Room in drive {drive + 1}">
 		<option value="">{compact ? '💾…' : 'Insert a disk…'}</option>
 		{#each menu as d (d.name)}
 			<option value={d.name}>{d.label ?? d.name}{d.profile && !d.label ? ` (${d.profile})` : ''}</option>

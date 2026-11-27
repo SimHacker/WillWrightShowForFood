@@ -78,7 +78,7 @@
 	const folder = $derived(entry ? undefined : catalog.tree(path, { all }));
 	const values = $derived(entry ? effectiveValues(entry, launch?.values) : {});
 	const machine = $derived(machineFor(/** @type {string | undefined} */ (entry?.runs?.machine)));
-	const title = $derived(entry?.title ?? (folder?.title || 'Cabinet'));
+	const title = $derived(entry?.title ?? (folder?.title || 'Machine Room'));
 
 	/** The machine this page has started; another one needs a fresh page. */
 	/** @type {string | undefined} */
@@ -219,7 +219,7 @@
 </script>
 
 <svelte:head>
-	<title>{path ? `${title} — Cabinet` : title}</title>
+	<title>{path ? `${title} — Machine Room` : title}</title>
 	<!-- Prerendered pages cannot see the query, so ?solo is applied by class until the script runs. -->
 	{@html `<script>if (/[?&]solo(?:[=&]|$)/.test(location.search)) document.documentElement.classList.add('solo')</script>`}
 </svelte:head>
@@ -333,7 +333,7 @@
 		></div>
 		<aside class={{ ghost }}>
 			<div class="bar">
-				<span class="brand">Cabinet:</span>
+				<span class="brand">Machine Room:</span>
 				<button class="toggle" onclick={() => (sidebar = false)} aria-expanded="true" title="Hide the catalog">‹</button>
 			</div>
 			<input type="search" placeholder="Search titles, tags, notes" bind:value={text} />
@@ -376,7 +376,7 @@
 				{:else if shown && view === 'tree'}
 					<ul class="tree">
 						<li class="root">
-							{@render anchor({ ...shown, title: shown.title || 'Cabinet' })}
+							{@render anchor({ ...shown, title: shown.title || 'Machine Room' })}
 							<ul>
 								{#each shown.children as child (child.path + (child.link ? '@' : ''))}
 									{@render branch(child)}
@@ -401,7 +401,7 @@
 			<div class="titlebar">
 				{#if !sidebar}
 					<button class="toggle" onclick={() => (sidebar = true)} aria-expanded="false" title="Show the catalog">›</button>
-					<a class="brand" href={keep(CATALOG_BASE)} title="Everything in the cabinet">Cabinet:</a>
+					<a class="brand" href={keep(CATALOG_BASE)} title="Everything in the Machine Room">Machine Room:</a>
 				{/if}
 				{#if crumbs.length > 1}
 					<span class="crumbs"

@@ -4,6 +4,15 @@ An emulator, written in TypeScript, that runs in the browser. It runs a PDP-7 wi
 display and light pen, and an Apple II. The PDP-7 was the first machine, built to run PIXIE, and
 its CPU is a port of SIMH's.
 
+**The Machine Room and its cabinets.** A cabinet is one machine: a backplane (the `Cabinet`
+class) with one CPU and the devices plugged into it. The Machine Room is the whole, and the
+step out of the cabinet into the room, where the people are: machines of different kinds side
+by side and linked, the consoles and views that watch them, the tools to write and change their
+code while they run, and above all how people used them, in their own context and time. Seen
+close up, x-rayed (memory, the bus, the CPU's state), slowed down, hyperlinked to the listings
+and papers, followed by a camera on a hand, and played with music. The package and the site's
+`/cabinet/` addresses keep the older name.
+
 Run it: [hyperties.org/cabinet/unix/](https://hyperties.org/cabinet/unix/),
 [forth](https://hyperties.org/cabinet/forth/), [symelec](https://hyperties.org/cabinet/symelec/),
 [duel](https://hyperties.org/cabinet/duel/), [ultimate](https://hyperties.org/cabinet/ultimate/),

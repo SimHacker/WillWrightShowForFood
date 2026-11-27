@@ -34,7 +34,7 @@ These run in a browser with nothing to install.
 | A Sims or SimCity player | [The premiere](repo-shows/will-wright-premiere/README.md) and [Will's 1996 Stanford talk](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | Watching a stream | [How a show runs](process/repo-show-format.md) |
 | A programmer | [SETUP.md](SETUP.md), then [packages/](packages/README.md) |
-| Into old machines | [The cabinet](packages/cabinet/README.md) and [the retro tour](process/entryways/retro.md) |
+| Into old machines | [The Machine Room](packages/cabinet/README.md) and [the retro tour](process/entryways/retro.md) |
 | A teacher | [The educator tour](process/entryways/educator.md) |
 | An archivist or historian | [The archivist tour](process/entryways/archivist.md) and [RIGHTS.md](RIGHTS.md) |
 | Planning your own show | [The repo-show skill](skills/repo-show/README.md) and [the show network](process/showmaker-network.yml) |

@@ -1,10 +1,10 @@
 <script>
-	/** The cabinet's speaking voice, for every page that speaks; kept across visits. */
+	/** The Machine Room's speaking voice, for every page that speaks; kept across visits. */
 	import { onMount } from 'svelte';
 	import { chooseVoice, defaultVoiceName, startVoices, utterance, voice } from './voice.svelte.js';
 
 	/** @type {{ sample?: string }} */
-	let { sample = 'This is how the cabinet will sound.' } = $props();
+	let { sample = 'This is how the Machine Room will sound.' } = $props();
 
 	onMount(startVoices);
 
@@ -20,7 +20,7 @@
 	<select
 		class="voice"
 		aria-label="Voice"
-		title="The voice the cabinet speaks with, on every page"
+		title="The voice the Machine Room speaks with, on every page"
 		value={voice.name}
 		onchange={(e) => pick(e.currentTarget.value)}
 	>
