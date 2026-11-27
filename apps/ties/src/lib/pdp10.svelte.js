@@ -64,8 +64,10 @@ export const VIEWS = /** @type {{ id: View, label: string, title: string }[]} */
 	{ id: 'glass', label: 'Glass', title: 'A glass teletype: 24 lines on a screen, scrolling; ITS erases rubouts and stops at --More-- for each screenful' }
 ]);
 
-/** What each thing a person notices adds to the dance's stir, and the most it holds. */
-const STIR = { key: 0.12, printed: 0.006, seek: 0.08, most: 1.2 };
+/** What each thing a person notices adds to the dance's stir, the most it holds, and below what it is quiet. */
+const STIR = { key: 0.12, printed: 0.006, seek: 0.08, most: 1.2, quiet: 0.05 };
+/** How far each report moves an interrupt level's usual count toward what it just was. */
+const PI_USUAL = 0.05;
 /** Milliseconds for the stir to fade by half. */
 const STIR_HALF = 1500;
 
@@ -129,6 +131,13 @@ class Pdp10 {
 	 */
 	#stir = 0;
 	#user = 0;
+	/**
+	 * Each interrupt level's usual count a report. The interrupts voice plays only what rises
+	 * above it, and only while there is a stir: the clock interrupts on its level at the same
+	 * rate all the time, and would ring the same note on every beat.
+	 * @type {number[]}
+	 */
+	#piUsual = [];
 	/** The program's own baud rate, set when it starts, for a person who has not picked one. */
 	#programBaud = 0;
 	#toldDance = false;
@@ -413,7 +422,11 @@ class Pdp10 {
 	#danced(msg) {
 		for (const [k, w] of msg.pcs) this.#hits.ka10.add(k, w);
 		for (const [k, w] of msg.cylinders) this.#hits.rp03.add(k, w);
-		for (const [k, w] of msg.interrupts) this.#hits.pi.add(k, w);
+		for (const [k, w] of msg.interrupts) {
+			const usual = this.#piUsual[k] ?? w;
+			this.#piUsual[k] = usual + PI_USUAL * (w - usual);
+			if (this.#stir > STIR.quiet && w > 1.5 * usual) this.#hits.pi.add(k, w - usual);
+		}
 		for (const [op, n] of msg.calls) if (CALLS.has(op)) this.#calls.set(op, (this.#calls.get(op) ?? 0) + n);
 		for (const [, w] of msg.cylinders) this.#stirUp(STIR.seek * Math.min(1, w));
 		this.#user = Math.max(0, Math.min(1, msg.user));
