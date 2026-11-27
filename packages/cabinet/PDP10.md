@@ -111,8 +111,8 @@ Then:
 - **Logic** goes through a small `w36` module that splits into halves: `and`, `or`, `xor`, `not`,
   `lsh`, `rot`, `ash`, `lh`, `rh`, `xwd`. All bitwise code in the plugin goes through it, and a
   lint rule against bare `&` in `src/plugins/ka10/` should keep it that way.
-- **Not BigInt, above the switch.** It is exact but allocates, and every instruction would make
-  garbage. The switch is the exception: it is the reference, and it keeps SIMH's `uint64`
+- **Not BigInt, above the SIMH port.** It is exact but allocates, and every instruction would
+  make garbage. The SIMH port is the exception: it is the reference, and it keeps SIMH's `uint64`
   registers as bigints so that its arithmetic, wraparound included, is SIMH's line for line. It
   still runs ITS at several million instructions a second, against the KA10's 0.35 million
   ([The switch boots ITS](#the-switch-boots-its)). The Korz rungs above it use numbers and halves.
@@ -206,15 +206,32 @@ MIT-AI kept as a slave beside the KA10, is then the same sea with another guard 
 **The rungs.** The same ladder as the PDP-7, every rung kept and run in lockstep with the one
 below it ([KORZ-CPU.md](KORZ-CPU.md#the-rungs)):
 
-1. **The switch**, `Ka10`: a TypeScript port of the KA10 paths of SIMH's `kx10_cpu.c`, as `Pdp7`
-   is a port of `pdp18b_cpu.c`. The reference.
-2. **The interpreter**, which searches the sea on every dispatch.
-3. **The resolver**, which writes the tables and one generated function per selector.
-4. **The compiler**, `compile10.ts`, which composes slot templates into one function per basic
+0. **SIMH**, `pdp10-ka` itself: native for now, through recorded instruction traces, and maybe
+   later compiled to WebAssembly and run in the page, as microM8 is for the Apple.
+1. **The SIMH port**, `Ka10`: a line-for-line TypeScript port of the KA10 and ITS paths of
+   `kx10_cpu.c`, as `Pdp7` is a port of `pdp18b_cpu.c`. Its registers are bigints, as SIMH's are
+   `uint64`, so it stays SIMH's code in another language. It is the reference, and it runs
+   in-process beside the rungs above it, so lockstep can compare every instruction and every
+   store, not only trace files.
+2. **The halves switch**: written by hand, with 36-bit words as two 18-bit halves in two
+   `Uint32Array`s, the layout the Korz rungs use ([Words](#words-36-bits-in-a-53-bit-number)). It
+   is the fast hand-written rung. It also works out the arithmetic in halves in plain code: the
+   carry from right to left, byte pointers across bit 18, multiply and divide in pieces. The
+   Korz slot templates then start from code that already agrees with the SIMH port.
+3. **The interpreter**, which searches the sea on every dispatch.
+4. **The resolver**, which writes the tables and one generated function per selector.
+5. **The compiler**, `compile10.ts`, which composes slot templates into one function per basic
    block, invalidated per word when a store lands in a word a block was compiled from
    ([KORZ-COMPILER.md](KORZ-COMPILER.md)).
 
-SIMH's `pdp10-ka`, native, sits under all four as the oracle, through recorded instruction traces.
+Each rung is checked against the one below it. No rung replaces another: more oracles are better.
+
+**One save format for all of them.** A rung's saved state is its registers, as
+[SAVE-FILES.md](SAVE-FILES.md) says for every CPU. Words are octal strings in the YAML, and core
+is a raw file in SIMH's own format: one little-endian `uint64` per word, as in SIMH's disk packs.
+The SIMH port saves and loads it unchanged, and the halves rungs split it on load. Swapping rungs
+converts once, a loop over the words, never per instruction. `Ka10.state()`, `saveMemory()`
+and `loadMemory()` are the SIMH port's side of it.
 
 **The second machine.** A KA10 and a PDP-7 in one tab are two seas, and their generated
 functions are their own. Their devices are not. The PDP-7's Type 340 and the KA10's Type 340 are
@@ -505,8 +522,18 @@ seconds, which is under 3 seconds of wall time, and `--login NAME` goes on to Co
 packs that a SIMH run wrote to and did not shut down cleanly make the salvager stop on
 `DIRECTORIES OUT OF PHASE`. A test does the same boot when the packs are present.
 
-**Next.** Instruction traces of the boot diffed against SIMH's `show history`. Then the Korz
-rungs on top, as phase 4 says, in lockstep with this one.
+**Against SIMH.** [scripts/ka10-trace.mjs](scripts/ka10-trace.mjs) prints the port's
+instruction history in the columns of SIMH's `show cpu history`, stopped at a breakpoint, and
+[scripts/ka10-tracediff.mjs](scripts/ka10-tracediff.mjs) finds the first difference from SIMH's.
+Booting DSKDMP, both stop at DSKDMP's first instruction (`break 776400`), 5,147,944 instructions
+in, and the last 300,000 instructions are the same in every column. That stretch is the RIM
+loader reading the tape, then DSKDMP's own loader, so the reader's timing agrees as well as the
+arithmetic. The flags column's clock bit is ignored, because SIMH's clock follows the wall
+clock. SIMH's input comes from expect, so its keystrokes land at different times, and the two
+traces part after the `DSKDMP` prompt. Comparing ITS itself waits for a deterministic SIMH clock
+or for lockstep against the halves switch.
+
+**Next.** The halves switch, in lockstep with this one, then the Korz rungs.
 
 ## Phases
 

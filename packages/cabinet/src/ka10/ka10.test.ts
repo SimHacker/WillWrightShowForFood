@@ -84,6 +84,24 @@ test("PUSHJ and POPJ through a stack", () => {
 	assert.equal(cpu.examine(0o17), 0o277n);
 });
 
+test("state and memory saved mid-program resume in a fresh CPU", () => {
+	// Sum 1..100 into AC1, counting AC2 down with SOJG.
+	const prog = [I(0o201, 2, 100), I(0o270, 1, 0, 0), I(0o271, 1, 0, 2), I(0o367, 2, 0o102), HALT];
+	const a = new Ka10({ memWords: 64 * 1024, its: true });
+	a.reset();
+	prog.forEach((w, i) => a.deposit(0o100 + i, w));
+	a.PC = 0o100;
+	a.step(57);
+	const b = new Ka10({ memWords: 64 * 1024, its: true });
+	b.reset();
+	b.setState(JSON.parse(JSON.stringify(a.state())));
+	b.loadMemory(a.saveMemory());
+	assert.equal(a.run(100_000), "halt");
+	assert.equal(b.run(100_000), "halt");
+	assert.equal(a.examine(1), 5050n);
+	assert.deepEqual(b.state(), a.state());
+});
+
 const dir = process.env.KA10_ITS ?? join(homedir(), "GroundUp/git/its/dl/pdp10-ka");
 
 class ReadOnlyPack implements BlockStore {

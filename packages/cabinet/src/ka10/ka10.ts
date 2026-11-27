@@ -79,6 +79,21 @@ export type Stop = "budget" | "halt" | "breakpoint";
 
 const HIST_PC2 = 0x80000000;
 
+/** Saved processor state, YAML-shaped: numbers, and 36-bit words as octal strings. */
+export type Ka10State = Record<string, number | string | number[] | string[]>;
+
+const STATE_WORDS = ["AR", "MQ", "BR", "AD", "MB", "SW", "MI", "opc", "mar"] as const;
+const STATE_NUMBERS = [
+	"AB", "PC", "IR", "AC", "FLAGS", "BYF5", "uuo_cycle", "SC", "SCAD", "FE", "last_addr",
+	"Pl", "Ph", "Rl", "Rh", "Pflag", "push_ovf", "mem_prot", "nxm_flag", "adr_flag", "clk_flg",
+	"ov_irq", "fov_irq", "IOB_PI", "PIR", "PIH", "PIE", "pi_cycle", "pi_enable", "parity_irq",
+	"pi_pending", "pi_enc", "apr_irq", "clk_en", "clk_irq", "pi_restore", "pi_hold", "modify",
+	"xct_flag", "pi_vect", "page_enable", "ac_stack", "pag_reload", "fault_data", "mpx_enable",
+	"dbr1", "dbr2", "dbr3", "jpc", "age", "fault_addr", "qua_time", "maoff",
+	"f_load_pc", "f_inst_fetch", "f_pc_inh", "pi_rq", "pi_ov", "one_p_arm", "IA", "nrf",
+	"fxu_hold_set", "flag1", "flag3", "f",
+] as const;
+
 /**
  * A KA10, the reference rung: a line-for-line TypeScript port of the KA10 and
  * ITS paths of SIMH's PDP10/kx10_cpu.c (Richard Cornwell), with MIT's paging
@@ -736,6 +751,52 @@ export class Ka10 {
 		if (addr >= this.memWords) return false;
 		this.M[addr] = v;
 		return true;
+	}
+
+	/** Core in SIMH's format, the KA10's save format for every rung: one little-endian uint64 per word. */
+	saveMemory(): Uint8Array {
+		const out = new Uint8Array(this.memWords * 8);
+		const view = new DataView(out.buffer);
+		for (let i = 0; i < this.memWords; i++) view.setBigUint64(i * 8, this.M[i]!, true);
+		return out;
+	}
+
+	loadMemory(bytes: Uint8Array): void {
+		const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+		const n = Math.min(this.memWords, Math.floor(bytes.byteLength / 8));
+		for (let i = 0; i < n; i++) this.M[i] = view.getBigUint64(i * 8, true) & FMASK;
+		this.M.fill(0n, n);
+	}
+
+	/** The processor's saved state: SIMH's globals, the loop's locals and the clock. Words are octal strings. */
+	state(): Ka10State {
+		const s: Ka10State = { now: this.events.now, instructions: this.instructions };
+		for (const k of STATE_NUMBERS) s[k] = this[k];
+		for (const k of STATE_WORDS) s[k] = this[k].toString(8);
+		s.FM = Array.from(this.FM, (w) => w.toString(8));
+		s.dev_irq = Array.from(this.dev_irq);
+		s.e_tlb = Array.from(this.e_tlb);
+		s.u_tlb = Array.from(this.u_tlb);
+		s.rtc = this.events.timeLeft(this.rtc);
+		s.qua = this.events.isActive(this.qua) ? this.events.timeLeft(this.qua) : -1;
+		return s;
+	}
+
+	setState(s: Ka10State): void {
+		for (const k of STATE_NUMBERS) if (typeof s[k] === "number") this[k] = s[k] as number;
+		for (const k of STATE_WORDS) if (typeof s[k] === "string") this[k] = BigInt(`0o${s[k] as string}`);
+		const words = (v: unknown): string[] => (Array.isArray(v) ? (v as string[]) : []);
+		const nums = (v: unknown): number[] => (Array.isArray(v) ? (v as number[]) : []);
+		words(s.FM).forEach((w, i) => (this.FM[i] = BigInt(`0o${w}`)));
+		nums(s.dev_irq).forEach((v, i) => (this.dev_irq[i] = v));
+		nums(s.e_tlb).forEach((v, i) => (this.e_tlb[i] = v));
+		nums(s.u_tlb).forEach((v, i) => (this.u_tlb[i] = v));
+		if (typeof s.now === "number") this.events.now = s.now;
+		if (typeof s.instructions === "number") this.instructions = s.instructions;
+		this.events.cancel(this.rtc);
+		this.events.activate(this.rtc, typeof s.rtc === "number" ? s.rtc : 1000);
+		this.events.cancel(this.qua);
+		if (typeof s.qua === "number" && s.qua >= 0) this.events.activate(this.qua, s.qua);
 	}
 
 	/** Watched addresses, as SIMH's `break -r` and `break -w`. */
