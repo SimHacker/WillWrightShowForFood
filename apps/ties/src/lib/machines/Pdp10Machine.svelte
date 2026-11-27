@@ -15,13 +15,12 @@
 	import MachineToolbar from '../MachineToolbar.svelte';
 	import Outline from '../Outline.svelte';
 	import PagePrefs from '../PagePrefs.svelte';
-	import WebPanel from '../WebPanel.svelte';
 	import Pinnable from '../Pinnable.svelte';
 	import VoicePicker from '../VoicePicker.svelte';
 	import { toolbar } from '../toolbar.svelte.js';
 	import { CATALOG_BASE, catalog } from '../catalog.js';
 	import { COMPASS, PROGRAMS, runLine } from '../its-programs.js';
-	import { BAUDS, SPEEDS, VIEWS, pdp10 } from '../pdp10.svelte.js';
+	import { BAUDS, GRUE_TIP, SPEEDS, VIEWS, pdp10 } from '../pdp10.svelte.js';
 
 	/** @type {{ entry: import('@wwsff/catalog').Entry, values: Record<string, unknown> }} */
 	let { entry, values } = $props();
@@ -508,13 +507,8 @@
 	<Outline id="pdp10-prefs" move={moveNode} title="Preferences" hint="Back to how this page first came: the toolbar, or everything the page keeps in this browser">
 		<PagePrefs {bar} keys={PREF_KEYS} />
 		<p class="note">
-			<b>grue_warning</b>
-			{#if pdp10.grueWarned}
-				met: the video has played.
-				<button type="button" title="Play the video again the next time Zork says you are likely to be eaten by a grue" onclick={() => pdp10.forgetGrue()}>Forget the grue</button>
-			{:else}
-				not yet met: the first time Zork says "You are likely to be eaten by a grue", a video opens under the toolbar.
-			{/if}
+			<label title={GRUE_TIP}><input type="checkbox" checked={pdp10.grueWarned} onchange={() => pdp10.toggleGrue()} /> Ignore Warning</label>
+			(grue_warning): unticked, the first time Zork says "You are likely to be eaten by a grue", a video opens under the toolbar, and this ticks itself.
 		</p>
 	</Outline>
 {/snippet}
@@ -593,7 +587,6 @@
 	</p>
 	{#if pdp10.error}<p class="status failed">{pdp10.error}</p>{/if}
 	<MachineToolbar {bar} label="The PDP-10's toolbar" />
-	<WebPanel />
 	<div class="outline" aria-label="The PDP-10's outline">
 		{#each order as key (key)}
 			{#if key === 'pdp10-programs'}{@render programsNode()}

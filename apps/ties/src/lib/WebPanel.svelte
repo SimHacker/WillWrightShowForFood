@@ -1,14 +1,13 @@
 <script>
 	/**
-	 * What web-panel.svelte.js has open, under the toolbar: a bar with its title, the opener's
-	 * buttons, a link out and a close box, over the video or page. It also catches plain clicks
+	 * What web-panel.svelte.js has open, first under the toolbar's row (MachineToolbar.svelte),
+	 * scrolled into view as it opens: a bar with its title, the opener's buttons, a link out and
+	 * a close box, over the video or page. It also catches plain clicks
 	 * on YouTube links and on links marked `data-view` anywhere on the page, and opens them here;
 	 * a click with a modifier key, or the middle button, still opens a new tab.
 	 */
 	import { closeWeb, openWeb, webPanel, youtube } from './web-panel.svelte.js';
 
-	/** The opener's buttons already pressed, and the view they were pressed in. */
-	let pressed = $state.raw({ view: /** @type {import('./web-panel.svelte.js').WebView | null} */ (null), labels: /** @type {string[]} */ ([]) });
 
 	/** @param {MouseEvent} e */
 	function caught(e) {
@@ -25,21 +24,16 @@
 
 {#if webPanel.view}
 	{@const v = webPanel.view}
-	<div class="web" role="region" aria-label={v.title}>
+	{#key v}
+	<div class="web" role="region" aria-label={v.title} {@attach (el) => el.scrollIntoView({ block: 'nearest', behavior: 'smooth' })}>
 		<div class="bar">
 			<span class="title">{v.title}</span>
 			{#each v.buttons as b (b.label)}
-				{@const done = pressed.view === v && pressed.labels.includes(b.label)}
-				<button
-					type="button"
-					class="mine"
-					title={b.title}
-					disabled={done && !!b.done}
-					onclick={() => {
-						b.action();
-						pressed = { view: v, labels: [...(pressed.view === v ? pressed.labels : []), b.label] };
-					}}>{done && b.done ? b.done : b.label}</button
-				>
+				{#if b.checked}
+					<label class="mine" title={b.title}><input type="checkbox" checked={b.checked()} onchange={b.action} /> {b.label}</label>
+				{:else}
+					<button type="button" class="mine" title={b.title} onclick={b.action}>{b.label}</button>
+				{/if}
 			{/each}
 			<a href={v.url} target="_blank" rel="noopener noreferrer" title="Open {v.url} in a new tab">{v.kind === 'youtube' ? 'YouTube' : 'New tab'} ↗</a>
 			<button type="button" title="Close" onclick={closeWeb}>✕</button>
@@ -51,6 +45,7 @@
 			<p class="note">A site that forbids being shown inside another page stays blank here; New tab ↗ opens it.</p>
 		{/if}
 	</div>
+	{/key}
 {/if}
 
 <style>
@@ -77,6 +72,12 @@
 	}
 	.mine {
 		font-weight: 600;
+	}
+	label.mine {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3em;
+		cursor: pointer;
 	}
 	iframe {
 		display: block;

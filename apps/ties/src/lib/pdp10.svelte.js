@@ -45,6 +45,10 @@ export const GRUE = {
 	title: 'MC Frontalot, "It Is Pitch Dark"',
 	url: 'https://www.youtube.com/watch?v=YeV0pLRyM7o'
 };
+
+/** What the Ignore Warning checkbox does, on the video and in the preferences. */
+export const GRUE_TIP =
+	'Turns the grue warning detector off and on. Ticked, you have been warned: the next grue stays quiet. Unticked, the next time Zork says you are likely to be eaten by a grue, this video plays again.';
 const CALLS = new Map(ITS_CALLS.map((c) => [c.addr, c]));
 
 /** @typedef {'auto' | 'fast' | 'real'} Speed */
@@ -272,6 +276,12 @@ class Pdp10 {
 		keep(GRUE_KEY, '');
 	}
 
+	/** Turn the grue warning detector on (the next grue plays the video) or off. */
+	toggleGrue() {
+		this.grueWarned = !this.grueWarned;
+		keep(GRUE_KEY, this.grueWarned ? '1' : '');
+	}
+
 	/** @param {string} text */
 	#watch(text) {
 		this.#tail = (this.#tail + text.replace(/[\r\n\0]+/g, ' ')).slice(-2 * GRUE.text.length);
@@ -281,7 +291,14 @@ class Pdp10 {
 		this.#tail = '';
 		openWeb(GRUE.url, {
 			title: GRUE.title,
-			buttons: [{ label: 'Ignore Warning', done: 'Warning ignored', title: 'Forget that you were warned, so the next grue plays this again', action: () => this.forgetGrue() }]
+			buttons: [
+				{
+					label: 'Ignore Warning',
+					title: GRUE_TIP,
+					checked: () => this.grueWarned,
+					action: () => this.toggleGrue()
+				}
+			]
 		});
 	}
 

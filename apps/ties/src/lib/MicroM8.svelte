@@ -25,7 +25,6 @@
 	import { ENGINES, apple } from './apple.svelte.js';
 	import ApplePanels from './ApplePanels.svelte';
 	import MachineToolbar from './MachineToolbar.svelte';
-	import WebPanel from './WebPanel.svelte';
 	import Pinnable from './Pinnable.svelte';
 	import { toolbar } from './toolbar.svelte.js';
 	import RateSlider from './RateSlider.svelte';
@@ -412,7 +411,6 @@
 	<div class="under">
 		<MachineToolbar {bar} label="The Apple's toolbar" />
 	</div>
-	<WebPanel />
 	{#if apple.phase !== 'running'}
 		<p class={['state', { failed: apple.phase === 'error' }]}>
 			{#if apple.phase === 'idle' && (pending || beginLabel)}

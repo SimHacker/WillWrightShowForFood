@@ -6,8 +6,9 @@
  */
 
 /**
- * A button the opener adds to the panel's bar. `done` replaces the label once pressed.
- * @typedef {{ label: string, title: string, action: () => void, done?: string }} WebButton
+ * A control the opener adds to the panel's bar: a button, or with `checked` a checkbox, ticked
+ * while that says so, that `action` flips.
+ * @typedef {{ label: string, title: string, action: () => void, checked?: () => boolean }} WebButton
  */
 /**
  * @typedef {{ kind: 'youtube' | 'web', url: string, src: string, title: string, buttons: WebButton[] }} WebView
