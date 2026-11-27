@@ -6,7 +6,7 @@
  */
 import { CONI, CONO, DATAI, DATAO, FMASK, RMASK } from "./defs.js";
 import type { Unit } from "./events.js";
-import { Ka10 } from "./ka10.js";
+import type { Ka10Bus } from "./bus.js";
 
 // ---- console teletype, device 120 ------------------------------------------
 
@@ -30,7 +30,7 @@ export class Cty {
 
 	/** Every character ITS types, as SIMH's 7B mode passes it: the high bit cleared. */
 	constructor(
-		private readonly cpu: Ka10,
+		private readonly cpu: Ka10Bus,
 		private readonly print: (ch: number) => void,
 	) {
 		cpu.attachDevice(CTY_DEVNUM, (dev, data) => this.io(dev, data), () => this.reset());
@@ -130,7 +130,7 @@ export class PaperTape {
 	readonly punch: Unit = { name: "ptp", svc: () => this.punchSvc() };
 	wait = 10000;
 
-	constructor(private readonly cpu: Ka10) {
+	constructor(private readonly cpu: Ka10Bus) {
 		cpu.attachDevice(PR_DEVNUM, (dev, data) => this.readerIo(dev, data), () => this.readerReset());
 		cpu.attachDevice(PP_DEVNUM, (dev, data) => this.punchIo(dev, data), () => this.punchReset());
 	}
@@ -308,7 +308,7 @@ export class Df10 {
 	readonly cshift = 18;
 
 	constructor(
-		private readonly cpu: Ka10,
+		private readonly cpu: Ka10Bus,
 		readonly devnum: number,
 		readonly nxmerr: number,
 	) {}
@@ -508,7 +508,7 @@ export class Rp10 {
 	reads = 0;
 	writes = 0;
 
-	constructor(private readonly cpu: Ka10) {
+	constructor(private readonly cpu: Ka10Bus) {
 		this.df10 = new Df10(cpu, DP_DEVNUM, 12);
 		this.units = Array.from({ length: NUM_UNITS_DP }, (_, i) => {
 			const u: DpUnit = { name: `dpa${i}`, svc: () => this.svc(u), CUR_CYL: 0, DATAPTR: 0, UFLAGS: 0, STATUS: 0, hwmark: EMPTY, pack: undefined };
@@ -818,7 +818,7 @@ export class PdClock {
 
 	/** `now` gives the wall-clock date; a fixed date makes a run repeatable. */
 	constructor(
-		private readonly cpu: Ka10,
+		private readonly cpu: Ka10Bus,
 		private readonly now: () => Date = () => new Date(),
 	) {
 		cpu.attachDevice(PD_DEVNUM, (dev, data) => this.io(dev, data));
@@ -859,32 +859,5 @@ export class PdClock {
 			this.pia |= CLK_IRQ;
 			this.cpu.setInterrupt(PD_DEVNUM, this.pia);
 		} else this.cpu.events.cancel(this.unit);
-	}
-}
-
-/** The ITS machine of the SIMH recipe: CPU with MIT paging and the multiplex, CTY, PTR/PTP, RP10, and the clock. */
-export class ItsMachine {
-	readonly cpu: Ka10;
-	readonly cty: Cty;
-	readonly pt: PaperTape;
-	readonly dp: Rp10;
-	readonly pd: PdClock;
-	output = "";
-
-	constructor(opts: { now?: () => Date; print?: (ch: number) => void } = {}) {
-		this.cpu = new Ka10({ memWords: 1024 * 1024, its: true, mpx: true });
-		this.cty = new Cty(this.cpu, (ch) => {
-			this.output += String.fromCharCode(ch);
-			opts.print?.(ch);
-		});
-		this.pt = new PaperTape(this.cpu);
-		this.dp = new Rp10(this.cpu);
-		this.pd = new PdClock(this.cpu, opts.now);
-	}
-
-	/** `boot ptr`: reset everything, then load DSKDMP's RIM loader from the tape. */
-	bootPtr(): void {
-		this.cpu.reset();
-		this.pt.boot();
 	}
 }

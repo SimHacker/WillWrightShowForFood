@@ -4,7 +4,8 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 import { test } from "node:test";
 import { CRY1, OVR } from "./defs.js";
-import { type BlockStore, ItsMachine } from "./devices.js";
+import type { BlockStore } from "./devices.js";
+import { ItsMachine } from "./its.js";
 import { Ka10, nlzero } from "./ka10.js";
 
 /** An instruction word: opcode, AC, indirect, index, address. */

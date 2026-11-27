@@ -1295,6 +1295,17 @@ export class Ka10 {
 		}
 	}
 
+	/**
+	 * Execute one instruction that another rung has already decoded: the caller sets AR, BR, MQ,
+	 * AB, IR, AC, FLAGS and the accumulators. This is how the halves switch hands this rung the
+	 * instructions it has not written in halves yet.
+	 */
+	executeDecoded(): void {
+		this.nrf = 0;
+		this.fxu_hold_set = 0;
+		this.execute();
+	}
+
 	private execute(): void {
 		const IR = this.IR;
 		switch (IR) {

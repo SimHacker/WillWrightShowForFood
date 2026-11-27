@@ -10,7 +10,7 @@
 import { openSync, readSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
-import { ItsMachine } from "../dist/ka10/devices.js";
+import { ItsMachine } from "../dist/ka10/its.js";
 
 const args = process.argv.slice(2);
 const flag = (name, dflt) => {
@@ -23,6 +23,7 @@ const flag = (name, dflt) => {
 const brk = flag("--break", "");
 const count = Number(flag("--count", "100000"));
 const hits = Number(flag("--hit", "1"));
+const rung = flag("--rung", "simh");
 const dir = args[0] ?? join(homedir(), "GroundUp/git/its/dl/pdp10-ka");
 
 class ReadOnlyPack {
@@ -43,7 +44,7 @@ class ReadOnlyPack {
 	}
 }
 
-const m = new ItsMachine();
+const m = new ItsMachine({ rung });
 const cpu = m.cpu;
 ["rp03.2", "rp03.3", "rp03.0", "rp03.1"].forEach((f, i) => m.dp.attach(i, new ReadOnlyPack(join(dir, f))));
 m.pt.attach(new Uint8Array(readFileSync(join(dir, "dskdmp.rim"))));

@@ -10,7 +10,7 @@
 import { openSync, readSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
-import { ItsMachine } from "../dist/ka10/devices.js";
+import { ItsMachine } from "../dist/ka10/its.js";
 
 const args = process.argv.slice(2);
 const flag = (name, dflt) => {
@@ -23,6 +23,7 @@ const flag = (name, dflt) => {
 const login = flag("--login", "");
 const history = Number(flag("--history", "0"));
 const seconds = Number(flag("--seconds", "120"));
+const rung = flag("--rung", "simh");
 const dir = args[0] ?? join(homedir(), "GroundUp/git/its/dl/work");
 
 const BLOCK = 128 * 8;
@@ -47,7 +48,7 @@ class FilePack {
 	}
 }
 
-const m = new ItsMachine({ print: (ch) => process.stdout.write(String.fromCharCode(ch)) });
+const m = new ItsMachine({ rung, print: (ch) => process.stdout.write(String.fromCharCode(ch)) });
 const cpu = m.cpu;
 if (history) cpu.setHistory(history);
 // The unit order of build/build.tcl: the system pack is the third one written.
