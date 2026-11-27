@@ -19,6 +19,7 @@
 	// `panels` puts the CPU, I/O and KORZ tabs under the screen; a page that wants them
 	// elsewhere (AppleApp, under its disks) passes false and places ApplePanels itself.
 	import { onMount } from 'svelte';
+	import { showAll } from '@wwsff/catalog';
 	import { FRAME_HEIGHT, FRAME_WIDTH, VIDEX_HEIGHT, VIDEX_WIDTH } from '@wwsff/cabinet/microm8';
 	import { ENGINES, apple } from './apple.svelte.js';
 	import ApplePanels from './ApplePanels.svelte';
@@ -27,7 +28,7 @@
 	import { APPLE_HZ } from '@wwsff/cabinet/angel';
 	import { EMULATOR_KEYS_HELP, emulatorKey, nextTempo } from './emulator-keys.js';
 
-	/** @typedef {{ name: string, label?: string, profile?: string, url: () => Promise<string> }} Disk */
+	/** @typedef {{ name: string, label?: string, profile?: string, enabled?: boolean, url: () => Promise<string> }} Disk */
 	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, panels?: boolean }} */
 	// Slowest first. 100 is MAX: as fast as this computer goes, a picture each game second.
 	// microM8's Go core starts at 1x; the slower notches are the Korz Apple's.
@@ -75,12 +76,16 @@
 	let {
 		disks = [],
 		boot = undefined,
-		relaunch = (disk) => `?disk=${encodeURIComponent(disk.name)}`,
+		relaunch = (disk) => `?disk=${encodeURIComponent(disk.name)}${all ? '&all' : ''}`,
 		begin = undefined,
 		beginLabel = '',
 		defaultCpu = 'microm8',
 		panels = true
 	} = $props();
+
+	/** ?all: the menu lists the disks of apps that are not enabled yet. A ?disk= link boots any of them. */
+	let all = $state(false);
+	const menu = $derived(all ? disks : disks.filter((d) => d.enabled !== false));
 
 	const RELAUNCHED = 'microm8-relaunched';
 	/** The disk `boot` names, waiting for the first click while the Apple is off. */
@@ -165,6 +170,7 @@
 	onMount(() => {
 		const relaunched = globalThis.sessionStorage?.getItem(RELAUNCHED) ?? null;
 		globalThis.sessionStorage?.removeItem(RELAUNCHED);
+		all = showAll(location.search);
 		const asked = new URLSearchParams(location.search).get('disk');
 		const name = boot ?? asked;
 		const disk = name ? disks.find((d) => d.name === name) : undefined;
@@ -353,10 +359,10 @@
 				>
 			{/each}
 		</span>
-		{#if disks.length}
+		{#if menu.length}
 			<select bind:value={choice} onchange={insertChoice} aria-label="Put a cabinet disk in the drive">
 				<option value="">Insert a disk…</option>
-				{#each disks as d (d.name)}
+				{#each menu as d (d.name)}
 					<option value={d.name}>{d.label ?? d.name}{d.profile && !d.label ? ` (${d.profile})` : ''}</option>
 				{/each}
 			</select>

@@ -8,7 +8,7 @@
 	import { untrack } from 'svelte';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { afterNavigate, goto } from '$app/navigation';
-	import { parseLaunch, effectiveValues, launchUrl } from '@wwsff/catalog';
+	import { parseLaunch, effectiveValues, launchUrl, showAll } from '@wwsff/catalog';
 	import { catalog, CATALOG_BASE, entryForProgram } from './catalog.js';
 	import { machineFor } from './machines.js';
 	import { loadRepoDoc, githubUrl } from './repo-docs.js';
@@ -66,11 +66,16 @@
 		}
 	});
 
+	/** `?all`: the lists show the entries that are not enabled yet, and the links keep the `?all`. */
+	const all = $derived(showAll(search));
+	/** @param {string} href */
+	const keep = (href) => (all ? `${href}${href.includes('?') ? '&' : '?'}all` : href);
+
 	const launch = $derived(parseLaunch(catalog, path, search, { base: '' }));
 	/** Parameters the entry takes but whose values didn't fit. Unknown ones go unmentioned. */
 	const badValues = $derived(launch?.ignored.filter((i) => !i.unknown) ?? []);
 	const entry = $derived(launch?.entry);
-	const folder = $derived(entry ? undefined : catalog.tree(path));
+	const folder = $derived(entry ? undefined : catalog.tree(path, { all }));
 	const values = $derived(entry ? effectiveValues(entry, launch?.values) : {});
 	const machine = $derived(machineFor(/** @type {string | undefined} */ (entry?.runs?.machine)));
 	const title = $derived(entry?.title ?? (folder?.title || 'Cabinet'));
@@ -134,11 +139,11 @@
 	}
 
 	const filtering = $derived(text.trim() !== '' || Object.keys(picked).length > 0);
-	const found = $derived(catalog.find({ text: text.trim() || undefined, tags: picked }));
+	const found = $derived(catalog.find({ text: text.trim() || undefined, tags: picked, all }));
 	const foundIds = $derived(new Set(found.map((e) => e.id)));
 	/** Every tag in the catalog, so the chips stay put while the counts follow the filter. */
-	const allFacets = catalog.facets();
-	const facetNames = Object.keys(allFacets).sort();
+	const allFacets = $derived(catalog.facets(catalog.find({ all })));
+	const facetNames = $derived(Object.keys(allFacets).sort());
 	const counts = $derived(catalog.facets(found));
 
 	/** The tree with only the branches that hold a found entry. */
@@ -148,11 +153,12 @@
 		const children = node.children.map(prune).filter((c) => c !== undefined);
 		return children.length || !filtering ? { ...node, children } : undefined;
 	}
-	const tree = $derived(view === 'facet' ? catalog.byFacet(facet, found) : catalog.tree());
+	const tree = $derived(view === 'facet' ? catalog.byFacet(facet, found) : catalog.tree('', { all }));
 	const shown = $derived(tree ? (filtering ? prune(tree) : tree) : undefined);
 
 	/** @param {CatalogNode} node */
-	const hrefOf = (node) => (node.entry ? launchUrl(node.entry, {}, { base: CATALOG_BASE }) : node.path ? `${CATALOG_BASE}${node.path}/` : CATALOG_BASE);
+	const hrefOf = (node) =>
+		keep(node.entry ? launchUrl(node.entry, {}, { base: CATALOG_BASE }) : node.path ? `${CATALOG_BASE}${node.path}/` : CATALOG_BASE);
 
 	/** A link to an entry on another machine than the one running reloads the page, as does another entry on a machine that reboots for each. */
 	/** @param {Entry | undefined} target */
@@ -250,6 +256,10 @@
 	</p>
 {/snippet}
 
+{#snippet notYet()}
+	<p class="ignored">Not working yet. The catalog lists it only when the address ends in <code>?all</code>.</p>
+{/snippet}
+
 {#snippet guideDoc(/** @type {string} */ at)}
 	{#key at}
 		{#await loadRepoDoc(at)}
@@ -266,7 +276,7 @@
 {/snippet}
 
 {#snippet contents(/** @type {CatalogNode} */ node)}
-	{@const picks = catalog.featured(node.folder)}
+	{@const picks = catalog.featured(node.folder, { all })}
 	{#if picks.length}
 		<h2 class="section">Start here</h2>
 		<ul class="contents featured">
@@ -391,11 +401,11 @@
 			<div class="titlebar">
 				{#if !sidebar}
 					<button class="toggle" onclick={() => (sidebar = true)} aria-expanded="false" title="Show the catalog">›</button>
-					<a class="brand" href={CATALOG_BASE} title="Everything in the cabinet">Cabinet:</a>
+					<a class="brand" href={keep(CATALOG_BASE)} title="Everything in the cabinet">Cabinet:</a>
 				{/if}
 				{#if crumbs.length > 1}
 					<span class="crumbs"
-						>{#each crumbs.slice(0, -1) as c, i (c.path)}{#if i}/{/if}<a href="{CATALOG_BASE}{c.path}/">{c.title}</a>{/each}:</span
+						>{#each crumbs.slice(0, -1) as c, i (c.path)}{#if i}/{/if}<a href={keep(`${CATALOG_BASE}${c.path}/`)}>{c.title}</a>{/each}:</span
 					>
 				{/if}
 				<h1>{title}</h1>
@@ -404,6 +414,7 @@
 				<p class="about">{entry?.description ?? folder?.folder?.description}</p>
 			{/if}
 			{#if entry && !solo}{@render chips(entry)}{/if}
+			{#if entry?.enabled === false}{@render notYet()}{/if}
 			{#if badValues.length}
 				<p class="ignored">
 					Ignored: {#each badValues as i, n (n)}<code>{i.param}={i.value}</code> ({i.reason}){n < badValues.length - 1 ? ', ' : ''}{/each}
@@ -454,6 +465,7 @@
 					{/if}
 					{#if p.entry}
 						{@render chips(p.entry)}
+						{#if p.entry.enabled === false}{@render notYet()}{/if}
 						{#if !peekHere}
 							<p class="runs">
 								{#if m}Runs on the {m.title}.{:else}No machine runs <code>{String(p.entry.runs?.machine ?? 'nothing')}</code> yet.{/if}

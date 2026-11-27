@@ -15,6 +15,8 @@
  *   tags     facets, each a list of values: { machine: [apple2], year: ["1985"] }
  *   mixins   what a URL may add to the entry at run time (names, or a prefix ending in *)
  *   inputs   the values a URL may set, each with a type, a value path and a default
+ *   enabled  false: kept in the catalog and at its own address, left out of the tree, `find`,
+ *            facets and `featured` unless they are asked with `all`. For what does not work yet.
  *
  * Input is liberal: a path may be written as titles ("Games/Little Computer People"), tags as a
  * map or as "facet:value" strings, a list as a single value. What is stored is the normal form.
@@ -50,6 +52,8 @@ export interface Entry {
 	runs?: Record<string, unknown>;
 	mixins: string[];
 	inputs: Record<string, Input>;
+	/** Set only when false: listed only when asked with `all`. */
+	enabled?: false;
 	/** The file or source the entry came from. */
 	source?: string;
 }
@@ -58,7 +62,16 @@ export interface Query {
 	text?: string;
 	tags?: Record<string, string | string[]>;
 	runnable?: boolean;
+	/** Include the entries that are not enabled. */
+	all?: boolean | undefined;
 }
+
+/** What a listing includes: `all` adds the entries that are not enabled. */
+export interface Listing {
+	all?: boolean | undefined;
+}
+
+const listed = (e: Entry, all: boolean | undefined) => all === true || e.enabled !== false;
 
 export interface Folder {
 	path: string;
@@ -292,6 +305,7 @@ export class Catalog {
 		if (typeof raw.description === "string") entry.description = raw.description;
 		if (typeof raw.order === "number") entry.order = raw.order;
 		if (typeof raw.guide === "string" && raw.guide) entry.guide = raw.guide.replace(/^\/+/, "");
+		if (raw.enabled === false) entry.enabled = false;
 		if (source) entry.source = source;
 		this.#entries.push(entry);
 		this.#byId.set(id, entry);
@@ -355,25 +369,34 @@ export class Catalog {
 	}
 
 	/** A folder's `featured` entries, in its order; any that name nothing go to `problems` once. */
-	featured(folder: Folder | undefined): Entry[] {
+	featured(folder: Folder | undefined, { all }: Listing = {}): Entry[] {
 		const found: Entry[] = [];
 		for (const name of folder?.featured ?? []) {
 			const e = this.entry(name);
-			if (e) found.push(e);
+			if (e) listed(e, all) && found.push(e);
 			else if (!this.problems.some((p) => p.message === `featured ${name} in ${folder?.path || "root"}: no such entry`))
 				this.problems.push({ source: folder?.source, message: `featured ${name} in ${folder?.path || "root"}: no such entry` });
 		}
 		return found;
 	}
 
-	/** The tree from a path down; the root by default. */
-	tree(path = ""): CatalogNode | undefined {
+	/**
+	 * The tree from a path down; the root by default. Without `all`, an entry that is not
+	 * enabled is left out, and so is a folder nobody declared that holds nothing else.
+	 */
+	tree(path = "", { all }: Listing = {}): CatalogNode | undefined {
 		const p = slugPath(path);
 		if (p && !this.#byPath.has(p) && !this.#folder(p)) return undefined;
-		return this.#node(p, false, undefined);
+		return this.#node(p, false, undefined, all);
 	}
 
-	#node(path: string, link: boolean, entry: Entry | undefined): CatalogNode {
+	/** A child node worth showing: an enabled entry, or a folder that is declared or holds one. */
+	#shows(node: CatalogNode, all: boolean | undefined): boolean {
+		if (node.entry && listed(node.entry, all)) return true;
+		return node.children.length > 0 || (!node.entry && this.#folders.has(node.path));
+	}
+
+	#node(path: string, link: boolean, entry: Entry | undefined, all?: boolean): CatalogNode {
 		const own = entry ?? this.#byPath.get(path);
 		const folder = this.#folder(path);
 		const node: CatalogNode = {
@@ -387,13 +410,16 @@ export class Catalog {
 		if (link) node.link = true;
 		if (link) return node;
 		if (folder?.query) {
-			node.children = this.find(folder.query)
+			node.children = this.find({ ...folder.query, all })
 				.map((e) => ({ path: e.path, slug: lastSegment(e.path), title: e.title, entry: e, link: true, children: [] }))
 				.sort(byHome(this.#folders));
 			return node;
 		}
-		for (const child of this.#children.get(path) ?? []) node.children.push(this.#node(child, false, undefined));
-		for (const e of this.#also.get(path) ?? []) node.children.push(this.#node(e.path, true, e));
+		for (const child of this.#children.get(path) ?? []) {
+			const n = this.#node(child, false, undefined, all);
+			if (this.#shows(n, all)) node.children.push(n);
+		}
+		for (const e of this.#also.get(path) ?? []) if (listed(e, all)) node.children.push(this.#node(e.path, true, e));
 		node.children.sort(byOrder(this.#folders));
 		return node;
 	}
@@ -403,6 +429,7 @@ export class Catalog {
 		const text = query.text?.trim().toLowerCase();
 		const want = Object.entries(normalizeTags(query.tags ?? {}));
 		return this.#entries.filter((e) => {
+			if (!listed(e, query.all)) return false;
 			if (query.runnable !== undefined && !!e.runs !== query.runnable) return false;
 			for (const [facet, values] of want) {
 				const have = (e.tags[facet] ?? []).map((v) => v.toLowerCase());
@@ -415,7 +442,7 @@ export class Catalog {
 	}
 
 	/** Each facet's values and how many entries carry them. */
-	facets(entries: readonly Entry[] = this.#entries): Record<string, Record<string, number>> {
+	facets(entries: readonly Entry[] = this.find()): Record<string, Record<string, number>> {
 		const out: Record<string, Record<string, number>> = {};
 		for (const e of entries)
 			for (const [facet, values] of Object.entries(e.tags)) {
@@ -426,7 +453,7 @@ export class Catalog {
 	}
 
 	/** A tree by one facet: a folder per value, the entries carrying it under each, as links. */
-	byFacet(facet: string, entries: readonly Entry[] = this.#entries): CatalogNode {
+	byFacet(facet: string, entries: readonly Entry[] = this.find()): CatalogNode {
 		const f = slug(facet);
 		const groups = new Map<string, Entry[]>();
 		for (const e of entries) for (const v of e.tags[f] ?? []) groups.set(v, [...(groups.get(v) ?? []), e]);

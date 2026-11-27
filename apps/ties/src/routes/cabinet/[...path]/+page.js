@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import { catalog } from '$lib/catalog.js';
 
-/** Every place in the catalog's tree, and every old path, so each is a real file. */
+/** Every place in the catalog's tree, disabled entries too, and every old path, so each is a real file. */
 export function entries() {
 	const paths = new Set(['']);
 	/** @param {import('@wwsff/catalog').CatalogNode} node */
@@ -10,7 +10,7 @@ export function entries() {
 		if (node.path) paths.add(node.path);
 		for (const child of node.children) walk(child);
 	};
-	const root = catalog.tree();
+	const root = catalog.tree('', { all: true });
 	if (root) walk(root);
 	for (const entry of catalog.entries) for (const old of entry.was) paths.add(old);
 	return [...paths].map((path) => ({ path }));

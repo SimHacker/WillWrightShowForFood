@@ -93,6 +93,16 @@ disks:
     bytes: 143360
     sha1: 78703c2a546129dc8adb31971bad2b5a44d3effe
     source: "disk images/collections/french touch/avril-mai (2) 2013/boite utilitaires 1/apple logo.dsk"
+  - file: logo/terrapin-logo-1.3-4am.dsk
+    bytes: 143360
+    sha1: 21a827d52cb3065476a355c9b6e74bfe22cf0e53
+    source: "disk images/collections/4am collection/terrapinlogo134amcrack/00playable.dsk"
+    note: "Terrapin Logo 1.3 (1982), MIT Logo by L. Klotz, P. Sobalvarro and S. Hain under H. Abelson; boots on a 64K II+"
+  - file: logo/terrapin-logo-3.0-4am.dsk
+    bytes: 143360
+    sha1: f89a54d192f5230503cdcd26d0dd67ab756a90a1
+    source: "disk images/collections/4am collection/terrapinlogo304amcrack/00playable.dsk"
+    note: "Terrapin Logo 3.00 - 64K (1985)"
   - file: dos33/dos-3.3-january-1983.dsk
     bytes: 143360
     sha1: 63392d078a159342b12667d0fdfea7a01a961978
@@ -113,6 +123,12 @@ disks:
     bytes: 143360
     sha1: 9170bdfc4bbfb4102211e468931cf8ee25278ec8
     source: "disk images/operating systems/apple prodos/disk images/2.0.3/prodos 8 v2.0.3.dsk"
+    note: "stops at REQUIRES ENHANCED APPLE IIE OR LATER on a II+ (the Korz Apple); boots on microM8's //e"
+  - file: prodos/prodos-1.1.1-users-disk.dsk
+    bytes: 143360
+    sha1: cff0059003616766e0813a0c8ad1534559e5cfab
+    source: "disk images/operating systems/apple prodos/disk images/1.1.1/prodos 1.1.1 - user's disk.dsk"
+    note: "the ProDOS User's Disk (1983): tutor, filer, DOS-ProDOS conversion, BASIC; boots on a 64K II+. The server sends it gzipped"
   - file: wizardry/wizardry-i-proving-grounds-disk-1.dsk
     bytes: 143360
     sha1: 06f1ed7820857e88f5270f91c755ff53e2fed5e4

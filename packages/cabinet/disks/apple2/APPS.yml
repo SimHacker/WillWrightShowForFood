@@ -10,6 +10,8 @@
 # people: the disks a character bridge (src/apple2/games.ts) can read people off and write back.
 # profile: the microM8 machine, when it is not the //e.
 # chargen: a motherboard character ROM under disks/apple2, when it is not the ][+ generator.
+# enabled: false for an app that does not work yet. It stays here and at its own address; the
+#   catalog's lists and the Apple page's disk menu show it only when the URL has ?all.
 #   64 glyphs, 8 bytes each, the low 7 bits, bit 0 at the left.
 apps:
   - id: wizardry
@@ -17,6 +19,7 @@ apps:
     path: games/wizardry
     description: "Sir-Tech's dungeon crawl, 1981. Boot from the boot disk alone; after S)tart, the game asks for the scenario disk in drive 1."
     tags: { publisher: sir-tech, year: 1981 }
+    enabled: false
     # A //e's slot 3 firmware answers Pascal's console probe and switches on 80 columns, and
     # Wizardry then writes 40-column screens into main memory only: every other letter.
     profile: apple2-plus
@@ -116,10 +119,25 @@ apps:
     path: languages/apple-logo-ii
     description: "Logo Computer Systems' Logo for the Apple //e (1984): turtle graphics and lists."
     tags: { language: logo, publisher: apple, year: 1984 }
+    # It asks for a /prefix/ and goes no further.
+    enabled: false
     disks:
       logo: { file: logo/apple-logo-ii.dsk, label: "Apple Logo II" }
     starts:
       - { label: "Start Logo", drives: [logo] }
+
+  - id: terrapin-logo
+    title: Terrapin Logo
+    path: languages/terrapin-logo
+    description: "MIT's Logo for the Apple ][ (1981), written by Leigh Klotz, Patrick Sobalvarro and Stephen Hain under Hal Abelson, sold by Terrapin. Turtle graphics on the hi-res screen with four lines of text below."
+    tags: { language: logo, publisher: terrapin, year: 1982, by: hal-abelson }
+    drives: 1
+    disks:
+      v1-3: { file: logo/terrapin-logo-1.3-4am.dsk, label: "Terrapin Logo 1.3" }
+      v3-0: { file: logo/terrapin-logo-3.0-4am.dsk, label: "Terrapin Logo 3.00" }
+    starts:
+      - { label: "Start Logo 1.3", drives: [v1-3] }
+      - { label: "Start Logo 3.00", drives: [v3-0] }
 
   - id: apple-pascal
     title: Apple Pascal
@@ -147,9 +165,11 @@ apps:
   - id: prodos
     title: ProDOS 8
     path: systems/prodos-8
-    description: "ProDOS 8 2.0.3 with BASIC.SYSTEM."
+    description: "Apple's ProDOS User's Disk (1.1.1, 1983), which boots on a ][+, and ProDOS 8 2.0.3 with BASIC.SYSTEM, which needs an enhanced //e: pick microM8 for it."
     tags: { publisher: apple }
     disks:
-      system: { file: prodos/prodos-8-2.0.3.dsk, label: "ProDOS 8 2.0.3" }
+      users: { file: prodos/prodos-1.1.1-users-disk.dsk, label: "ProDOS 1.1.1 User's Disk" }
+      system: { file: prodos/prodos-8-2.0.3.dsk, label: "ProDOS 8 2.0.3 (enhanced //e)" }
     starts:
-      - { label: "Boot", drives: [system] }
+      - { label: "Boot ProDOS 1.1.1", drives: [users] }
+      - { label: "Boot ProDOS 8 2.0.3", drives: [system] }

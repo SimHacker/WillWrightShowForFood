@@ -73,14 +73,16 @@ export async function chargenUrl(/** @type {string} */ file) {
 }
 
 /**
- * Every app's disks as MicroM8.svelte lists them, named by app and label.
- * @type {{ name: string, label: string, profile: string, url: () => Promise<string> }[]}
+ * Every app's disks as MicroM8.svelte lists them, named by app and label. A disabled app's
+ * disks are still here, for ?disk= links; the menu leaves them out unless the URL has ?all.
+ * @type {{ name: string, label: string, profile: string, enabled: boolean, url: () => Promise<string> }[]}
  */
 export const appleDisks = built.apps.flatMap((app) =>
 	Object.values(app.disks).map((d) => ({
 		name: d.file,
 		label: `${app.title}: ${d.label}`,
 		profile: app.profile ?? '',
+		enabled: app.enabled !== false,
 		url: () => diskUrl(d.file)
 	}))
 );

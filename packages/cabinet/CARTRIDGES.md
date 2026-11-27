@@ -516,6 +516,10 @@ press when the program asks, such as turning Little Computer People over), and a
 bridge (Wizardry) that reads the characters off the disk the game writes. `AppleApp.svelte` puts
 every one of these on a button, so a player does by hand what a screen angel would do for them;
 a start that needs another profile reloads and starts after. `/microm8/` lists every app's disks.
+An entry or app with `enabled: false` is one that does not work yet (in November 2026, Wizardry
+and Apple Logo II): it keeps its address, which says so, and the tree, list, facets, featured
+entries and the Apple page's disk menu leave it out unless the URL has `?all`. The default is
+`SHOW_ALL` in `@wwsff/catalog`, until a settings page lets a person choose.
 **Planned:** a screen angel that reads the screen and offers or performs an app's moves at the
 prompt it names; writing edited characters back to a disk; the capability registry and panels
 chosen by it, URL write-back for inputs, save as entry, then the steps below.

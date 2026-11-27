@@ -38,6 +38,10 @@ entries:
 | `tags` | facets, each a value or a list; `"facet:value"` strings also work |
 | `mixins` | names a URL's `with=` may add; `prefix/*` matches a prefix |
 | `inputs` | values a URL may set: `path`, `type` (string, integer, number, boolean), `default`, `min`, `max`, `values` |
+| `enabled` | `false` for what doesn't work yet: it keeps its address, and `tree`, `find`, `facets` and `featured` leave it out unless asked with `{ all: true }` |
+
+A page shows the entries that are not enabled when its URL has `?all` (`?all=0` hides them).
+`showAll(location.search)` reads it; `SHOW_ALL` is the default when the URL says nothing.
 
 A folder exists when a path passes through it; a `folders:` entry adds a title, a description,
 an `order`, or a `query` (a saved filter, whose children are the entries that match, grouped by
@@ -51,6 +55,7 @@ import { loadCatalog } from "@wwsff/catalog/node";   // every catalog.yml under 
 
 const catalog = new Catalog().add(yamlObject, "where/it/came/from.yml");
 catalog.tree("games");                    // nodes: folders, entries, links
+catalog.tree("games", { all: true });     // and the entries that are not enabled
 catalog.find({ text: "forth", tags: { machine: ["pdp7", "apple2"] }, runnable: true });
 catalog.facets();                         // { machine: { pdp7: 11, apple2: 60 }, ... }
 catalog.byFacet("year");                  // a tree by one facet

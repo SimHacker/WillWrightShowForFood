@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { Catalog, slug, slugPath, normalizeTags } from "./catalog.js";
-import { parseLaunch, launchUrl, effectiveValues, nest } from "./launch.js";
+import { parseLaunch, launchUrl, effectiveValues, nest, showAll, SHOW_ALL } from "./launch.js";
 
 const sample = () =>
 	new Catalog().add(
@@ -119,6 +119,42 @@ test("find: every facet must match, any value within a facet", () => {
 	assert.deepEqual(c.find({ tags: { language: "forth", by: ["don-hopkins", "nobody"] } }).map((e) => e.id), ["apple-forth"]);
 	assert.deepEqual(c.find({ text: "little people" }).map((e) => e.id), ["lcp"]);
 	assert.deepEqual(c.find({ tags: { language: "forth" }, runnable: true }).map((e) => e.id), ["apple-forth"]);
+});
+
+test("an entry that is not enabled stays at its address and out of the lists, unless asked with all", () => {
+	const c = sample().add(
+		{
+			root: { featured: ["broken", "lcp"] },
+			entries: [{ id: "broken", title: "Broken Game", path: "games/broken-game", tags: { language: "forth", year: 1985 }, runs: { machine: "apple2" }, enabled: false }]
+		},
+		"more.yml"
+	);
+	assert.deepEqual(c.problems, []);
+	assert.equal(c.entry("broken")?.enabled, false);
+	assert.equal(c.entry("lcp")?.enabled, undefined);
+	assert.equal(c.resolve("games/broken-game")?.entry?.id, "broken", "its own address still opens it");
+	const ids = (n: { children: { entry?: { id: string }; slug: string }[] } | undefined) => n?.children.map((k) => k.entry?.id ?? k.slug);
+	assert.deepEqual(ids(c.tree("games")), ["simulations"]);
+	assert.deepEqual(ids(c.tree("games", { all: true })), ["broken", "simulations"]);
+	assert.deepEqual(ids(c.tree("forths"))!.sort(), ["apple-forth", "notes"], "a query folder leaves it out");
+	assert.ok(ids(c.tree("forths", { all: true }))!.includes("broken"));
+	assert.deepEqual(c.find({ text: "broken" }), []);
+	assert.equal(c.find({ text: "broken", all: true }).length, 1);
+	assert.deepEqual(c.facets().year, { "1985": 1 });
+	assert.deepEqual(c.featured(c.tree()?.folder).map((e) => e.id), ["lcp"]);
+	assert.deepEqual(c.featured(c.tree()?.folder, { all: true }).map((e) => e.id), ["broken", "lcp"]);
+	const alone = new Catalog().add({ entries: [{ path: "games/odd/one", runs: {}, enabled: false }] });
+	assert.deepEqual(ids(alone.tree()), [], "an undeclared folder holding only that entry goes too");
+});
+
+test("?all", () => {
+	assert.equal(showAll(""), SHOW_ALL);
+	assert.equal(showAll("?all"), true);
+	assert.equal(showAll("?solo&all=1"), true);
+	assert.equal(showAll("?all=0"), false);
+	assert.equal(showAll("?all=no", true), false);
+	assert.equal(showAll("", true), true);
+	assert.deepEqual(parseLaunch(sample(), "/cabinet/games/simulations/little-computer-people/", "?all")?.ignored, [], "a page parameter, not the entry's");
 });
 
 test("facets and the tree by one facet", () => {

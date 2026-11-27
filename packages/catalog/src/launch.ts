@@ -42,8 +42,21 @@ export interface UrlOptions {
 
 const RESERVED = new Set(["with"]);
 
-/** Parameters the page around an entry reads, never the entry: `solo` shows the machine alone. */
-export const PAGE_PARAMS = new Set(["solo"]);
+/**
+ * Parameters the page around an entry reads, never the entry: `solo` shows the machine alone,
+ * `all` lists the entries that are not enabled yet.
+ */
+export const PAGE_PARAMS = new Set(["solo", "all"]);
+
+/** Whether the lists show the entries that are not enabled, when the URL does not say. */
+export const SHOW_ALL = false;
+
+/** `?all` or `?all=1` lists every entry, `?all=0` only the enabled ones; absent, `fallback`. */
+export function showAll(search: string, fallback = SHOW_ALL): boolean {
+	const q = new URLSearchParams(search);
+	if (!q.has("all")) return fallback;
+	return !["0", "false", "no", "off"].includes((q.get("all") ?? "").trim().toLowerCase());
+}
 
 /** Does the entry let a URL add this mixin? Names match exactly; `player/*` matches a prefix. */
 export function allowsMixin(entry: Entry, name: string): boolean {

@@ -13,6 +13,20 @@ export {
 	type InputType,
 	type Problem,
 	type Query,
+	type Listing,
 	type Resolved
 } from "./catalog.js";
-export { parseLaunch, launchUrl, effectiveValues, nest, allowsMixin, coerce, type Launch, type Ignored, type UrlOptions } from "./launch.js";
+export {
+	parseLaunch,
+	launchUrl,
+	effectiveValues,
+	nest,
+	allowsMixin,
+	coerce,
+	showAll,
+	SHOW_ALL,
+	PAGE_PARAMS,
+	type Launch,
+	type Ignored,
+	type UrlOptions
+} from "./launch.js";

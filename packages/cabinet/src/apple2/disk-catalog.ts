@@ -49,6 +49,8 @@ export interface AppleApp {
 	 */
 	chargen?: string;
 	tags?: Record<string, unknown>;
+	/** false: not working yet; its entry and disks are listed only with ?all. */
+	enabled?: boolean;
 	profile?: string;
 	/** How many drives the app uses, 1 or 2; the panel offers only those. 2 by default. */
 	drives?: number;
@@ -103,6 +105,7 @@ export function appEntries(catalog: { apps?: AppleApp[] }, disks: { disks?: { fi
 		if (app.description) entry.description = app.description;
 		if (typeof app.order === "number") entry.order = app.order;
 		if (typeof app.guide === "string") entry.guide = app.guide;
+		if (app.enabled === false) entry.enabled = false;
 		entries.push(entry);
 	}
 	return { apps, entries, problems };
