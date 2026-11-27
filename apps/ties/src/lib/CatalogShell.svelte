@@ -413,7 +413,8 @@
 			{#if !solo && (entry?.description ?? folder?.folder?.description)}
 				<p class="about">{entry?.description ?? folder?.folder?.description}</p>
 			{/if}
-			{#if entry && !solo}{@render chips(entry)}{/if}
+			<!-- A page that runs a machine keeps its height for the machine; the tags are in the catalog's lists. -->
+			{#if entry && !solo && !machine}{@render chips(entry)}{/if}
 			{#if entry?.enabled === false}{@render notYet()}{/if}
 			{#if badValues.length}
 				<p class="ignored">

@@ -11,7 +11,7 @@
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { hushWhenHidden } from './hidden-hush.js';
-import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, Trace65, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine } from '@wwsff/cabinet/korz/apple2';
+import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, Trace65, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine, parsePokes } from '@wwsff/cabinet/korz/apple2';
 import { APPLE2_CALLS, APPLE2_REGIONS, switchWord, panelSeedBytes, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
 
 /** The ROM routines the dance listens for, by entry address. */
@@ -248,7 +248,7 @@ class KorzApple {
 		if (korz?.compiler) out.push(compiler65Node(korz.compiler, lister65(korz)));
 		if (korz) out.push(sea65Node(korz));
 		if (out.length) out.push(dispatchNode());
-		else out.push({ id: 'none', label: 'No Korz structures', note: 'the switch-statement 6502 has none; pick a Korz level in the CPU menu' });
+		else out.push({ id: 'none', label: 'No Korz structures', note: 'the switch-statement 6502 has none; pick a Korz level in the Emulator menu above' });
 		return out;
 	}
 
@@ -295,7 +295,11 @@ class KorzApple {
 		const board = new Apple2Plus(rom.rom);
 		// Switches stay where they were flipped, as on a front panel: a reboot leaves them.
 		if (this.#board) board.panel.set(this.#board.panel);
-		else if (this.#seed) board.panel.set(this.#seed);
+		else {
+			const seed = urlSeed() ?? this.#seed;
+			if (seed) board.panel.set(seed);
+			for (const { addr, bytes } of urlPokes()) bytes.forEach((b, i) => board.poke(addr + i, b));
+		}
 		this.#seed = null;
 		board.installLanguageCard();
 		const disk = new DiskII(rom.slot);
@@ -616,6 +620,12 @@ class KorzApple {
 		this.#audio = { ctx, out: highpass, gain, next: 0 };
 	}
 
+	/**
+	 * Mix the cassette output (`$C020`, what SAVE writes) into the speaker, as a tape recorder's
+	 * monitor would. Recording to and playing from devices and files is still to come.
+	 */
+	hearTape = $state(false);
+
 	#volume = 1;
 	/** The speaker's loudness, 0 to 1, on top of the page's own level. */
 	get volume() {
@@ -644,6 +654,7 @@ class KorzApple {
 		const board = this.#board;
 		if (!board) return;
 		const flips = board.takeSpeaker();
+		const tapeFlips = board.takeTape();
 		const end = board.cycles;
 		const start = this.#heard;
 		this.#heard = end;
@@ -659,20 +670,14 @@ class KorzApple {
 		const rate = 44100;
 		const stretch = this.warp > 0 && this.warp < 1 ? 1 / this.warp : 1;
 		const n = Math.min(this.#samples.length, Math.max(1, Math.round(((end - start) * rate * stretch) / APPLE_HZ)));
-		let level = board.speaker & 1;
-		for (let i = flips.length - 1; i >= 0; i--) if ((flips[i] ?? 0) > start) level ^= 1;
-		let fi = 0;
-		while (fi < flips.length && (flips[fi] ?? 0) <= start) fi++;
+		const speaker = new Line(flips, board.speaker, start);
+		const tape = this.hearTape ? new Line(tapeFlips, board.tape, start) : null;
 		const span = end - start;
 		const samples = this.#samples;
 		let { x, y } = this.#cone;
 		for (let s = 0; s < n; s++) {
 			const cycle = start + ((s + 0.5) * span) / n;
-			while (fi < flips.length && (flips[fi] ?? 0) <= cycle) {
-				level ^= 1;
-				fi++;
-			}
-			const v = level ? 1 : -1;
+			const v = tape ? (speaker.at(cycle) + tape.at(cycle)) / 2 : speaker.at(cycle);
 			y = v - x + CONE * y;
 			x = v;
 			samples[s] = 0.5 * y;
@@ -911,5 +916,33 @@ function prompt(ram) {
 			return { mode: null, length: 0 };
 	}
 }
+
+/** A one-bit line, the speaker or the cassette output, as ±1 over the cycles one buffer covers. */
+class Line {
+	/** @param {number[]} flips cycles it flipped at, in order @param {number} now its level at the end @param {number} start */
+	constructor(flips, now, start) {
+		this.flips = flips;
+		this.level = now & 1;
+		for (let i = flips.length - 1; i >= 0; i--) if ((flips[i] ?? 0) > start) this.level ^= 1;
+		this.i = 0;
+		while (this.i < flips.length && (flips[this.i] ?? 0) <= start) this.i++;
+	}
+	/** The level at `cycle`, which only goes forward from call to call. @param {number} cycle */
+	at(cycle) {
+		while (this.i < this.flips.length && (this.flips[this.i] ?? 0) <= cycle) {
+			this.level ^= 1;
+			this.i++;
+		}
+		return this.level ? 1 : -1;
+	}
+}
+
+const urlParam = (/** @type {string} */ name) => (globalThis.location ? new URLSearchParams(globalThis.location.search).get(name) : null);
+
+/** The page URL's `?seed=`, 30 hex digits for the panel's 15 bytes; null when absent or not that. */
+export const urlSeed = () => panelSeedBytes(urlParam('seed') ?? '');
+
+/** The page URL's `?poke=c041:5e008f,0300:a9`, stored at power on into RAM and the panel. */
+const urlPokes = () => parsePokes(urlParam('poke') ?? '');
 
 export const korzApple = new KorzApple();

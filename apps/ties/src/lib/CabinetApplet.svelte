@@ -52,7 +52,7 @@
 	import RingView from './RingView.svelte';
 	import RateSlider from './RateSlider.svelte';
 	import { CHORD_KEYS_LIST, EMULATOR_KEYS_HELP, altKey, emulatorKey, nextTempo, prefixedKey } from './emulator-keys.js';
-	import DanceControls from './DanceControls.svelte';
+	import DancePanel from './DancePanel.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
 	import { Deltas, PDP7_VOICES, Tally, pages, switchesSeedText, switchesSeedWord, watchedName } from '@wwsff/cabinet/dance';
 	import { forthCell } from '@wwsff/cabinet/forth-dict';
@@ -2737,6 +2737,9 @@
 		// Inspector handle: $0.cabinet in devtools reaches the live machine; .monitor.poke('fuel', 777).
 		canvasEl.cabinet = { cpu, t340, pen, box, monitor, program: programId };
 		program.activate?.();
+		// The URL's ?seed=0o123456 overrides the program's own switches, even ones it reads as controls.
+		const seeded = globalThis.location ? switchesSeedWord(new URLSearchParams(globalThis.location.search).get('seed') ?? '') : null;
+		if (seeded !== null) cpu.switches = seeded;
 		switches = cpu.switches;
 		// An assembled program has no source until its first boot has assembled it.
 		if (sourceFor === programId && !sourceMaps.length) {
@@ -3200,8 +3203,10 @@
 
 	/** The AC switches as a music seed, a program's `switches:` line in cabinet-programs.js. */
 	const switchesSeed = {
+		machine: 'pdp7',
 		where: "a program's entry in apps/ties/src/lib/cabinet-programs.js",
 		text: () => `switches: ${switchesSeedText(switches)},`,
+		digits: () => switchesSeedText(switches),
 		/** @param {string} text */
 		paste: (text) => {
 			const word = switchesSeedWord(text);
@@ -3833,8 +3838,8 @@
 					class="chip"
 					class:on={dance.on}
 					aria-pressed={dance.on}
-					title="The bus dance: hear the PDP-7, the 340 and the Forth device work, each its own instrument, over a saucer hum that rises with the speed"
-					onclick={() => dance.toggle()}>DANCE</button
+					title="{dance.on ? 'Stop' : 'Play'} the bus dance: hear the PDP-7, the 340 and the Forth device work, each its own instrument, over a saucer hum that rises with the speed. Its controls are under VM Radio."
+					onclick={() => dance.toggle()}>{dance.on ? '⏹️' : '▶️'} DANCE</button
 				>
 				<span class="reset-pull">
 					{#if resetPull >= 0}
@@ -3876,12 +3881,18 @@
 					>
 				</span>
 		</div>
-		{#if dance.on}
-			<div class="row dance-row" data-panel="dance" role="group" aria-label="VM Radio: the bus dance">
-				<span class="dance-title" title="VM Radio: AM radio's idea, tuned straight into the emulator and the program running on it (AM-RADIO.md)">VM RADIO</span>
-				<DanceControls {dance} chip listen twist jiggle={status === 'live' ? jiggle : undefined} seed={status === 'live' ? switchesSeed : undefined} />
-			</div>
-		{/if}
+		<div class="row dance-row" data-panel="dance" role="group" aria-label="VM Radio: the bus dance">
+			<DancePanel
+				id="pdp7"
+				title="VM Radio: the bus dance"
+				{dance}
+				chip
+				listen
+				twist
+				jiggle={status === 'live' ? jiggle : undefined}
+				seed={status === 'live' ? switchesSeed : undefined}
+			/>
+		</div>
 		{#if playOpen}
 			{@render playRow()}
 		{/if}
@@ -5199,18 +5210,13 @@
 	.row.ctl .buttons {
 		margin-left: auto;
 	}
-	/* Its own row, and the switches' readout its own fixed line, so nothing above moves as it changes. */
+	/* The dance's outline node, the width of the figure. */
 	.row.dance-row {
-		flex-wrap: wrap;
-		gap: 0.35rem;
-		padding-top: 0.4rem;
-		padding-bottom: 0.4rem;
+		display: block;
+		padding-top: 0.2rem;
+		padding-bottom: 0.2rem;
 		font-family: ui-monospace, monospace;
-	}
-	.dance-title {
-		font-size: 0.62rem;
-		letter-spacing: 0.08em;
-		color: #9fe8a0;
+		font-size: 0.7rem;
 	}
 	.chips {
 		display: flex;

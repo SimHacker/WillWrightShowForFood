@@ -16,6 +16,12 @@ export const ENGINES = [
 
 const KORZ = new Set(['compile', 'switch', 'resolve', 'interpret']);
 
+const VOLUME_KEY = 'apple-speaker-volume';
+const keptVolume = () => {
+	const v = Number(globalThis.localStorage?.getItem(VOLUME_KEY) ?? 1);
+	return Number.isFinite(v) ? Math.max(0, Math.min(1, v)) : 1;
+};
+
 class AppleEngine {
 	id = $state('compile');
 	#fallback = 'compile';
@@ -114,6 +120,34 @@ class AppleEngine {
 		this.#caps = v;
 		microM8.caps = v;
 		korzApple.caps = v;
+	}
+	#warpVolume = 1;
+	#speakerVolume = $state(keptVolume());
+	/** The speaker's volume the person sets, 0 to 1, kept in this browser; faster speeds turn it down further. */
+	get speakerVolume() {
+		return this.#speakerVolume;
+	}
+	set speakerVolume(v) {
+		this.#speakerVolume = Math.max(0, Math.min(1, v));
+		try {
+			globalThis.localStorage?.setItem(VOLUME_KEY, String(this.#speakerVolume));
+		} catch {
+			/* Storage forbidden: the volume lasts until the page goes. */
+		}
+		this.#applyVolume();
+	}
+	constructor() {
+		this.#applyVolume();
+	}
+	#applyVolume() {
+		microM8.volume = korzApple.volume = this.#warpVolume * this.#speakerVolume;
+	}
+	/** The cassette output mixed into the speaker; the Korz Apples only. */
+	get hearTape() {
+		return korzApple.hearTape;
+	}
+	set hearTape(on) {
+		korzApple.hearTape = on;
 	}
 	get sound() {
 		return this.#sound;
@@ -269,9 +303,8 @@ class AppleEngine {
 		// Faster than the Apple, the speaker plays game time in snatches: quieter as it gets
 		// choppier, and off past 8x, where it is only clicks. Slower, each speaker stretches its
 		// samples to the time that passes, down to the Korz speaker's slowest (SPEAKER_SPEEDS).
-		const volume = warp >= 8 ? 0.25 : warp >= 4 ? 0.6 : 1;
-		microM8.volume = volume;
-		korzApple.volume = volume;
+		this.#warpVolume = warp >= 8 ? 0.25 : warp >= 4 ? 0.6 : 1;
+		this.#applyVolume();
 		if (warp > 8) {
 			this.#hush = true;
 			this.sound = false;

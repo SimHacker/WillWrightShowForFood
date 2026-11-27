@@ -16,21 +16,28 @@
 	// then a reboot) when it is already running, or at once after a relaunch. `begin` does an
 	// app's own start on the first click instead (AppleApp.svelte), named by `beginLabel`.
 	// A disk's `label` names it in the menu and the I/O panel.
-	// `panels` puts the CPU, I/O and KORZ tabs under the screen; a page that wants them
-	// elsewhere (AppleApp, under its disks) passes false and places ApplePanels itself.
+	// Under the screen: a row of the commands used most, as icons whose tooltips say what they
+	// do, with the speed on the right; then the outline (ApplePanels), whose Disks node holds
+	// the drives' controls from here.
 	import { onMount } from 'svelte';
 	import { showAll } from '@wwsff/catalog';
 	import { FRAME_HEIGHT, FRAME_WIDTH, VIDEX_HEIGHT, VIDEX_WIDTH } from '@wwsff/cabinet/microm8';
 	import { ENGINES, apple } from './apple.svelte.js';
 	import ApplePanels from './ApplePanels.svelte';
+	import MachineToolbar from './MachineToolbar.svelte';
+	import Pinnable from './Pinnable.svelte';
+	import { toolbar } from './toolbar.svelte.js';
 	import RateSlider from './RateSlider.svelte';
-	import DanceControls from './DanceControls.svelte';
-	import { panelSeedBytes, panelSeedText } from '@wwsff/cabinet/dance';
+	import { urlSeed } from './korz-apple.svelte.js';
 	import { APPLE_HZ } from '@wwsff/cabinet/angel';
 	import { EMULATOR_KEYS_HELP, emulatorKey, nextTempo } from './emulator-keys.js';
 
 	/** @typedef {{ name: string, label?: string, profile?: string, enabled?: boolean, url: () => Promise<string> }} Disk */
-	/** @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, panels?: boolean }} */
+	/**
+	 * angel, play, playTitle and appDisks go to the outline under the screen (ApplePanels): the
+	 * screen angel first, then the app's own controls and its disks.
+	 * @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, angel?: import('svelte').Snippet, play?: import('svelte').Snippet, playTitle?: string, appDisks?: import('svelte').Snippet }}
+	 */
 	// Slowest first. 100 is MAX: as fast as this computer goes, a picture each game second.
 	// microM8's Go core starts at 1x; the slower notches are the Korz Apple's.
 	// The PDP-7's scale: trace notches, an instruction every so many ms with the views following,
@@ -66,6 +73,29 @@
 		});
 		return Math.max(0, best);
 	});
+	// The toolbar's speed readout: how many times faster than a real Apple ][+ this one runs,
+	// measured from the cycles it got through, not the slider's setting (a slow computer, or the
+	// compiler warming up, falls short of it). The tooltip gives the measured clock, what the
+	// slider asked for, the engine, the cycles run as Apple time, and the PC.
+	const ratio = $derived(apple.mhz / (APPLE_HZ / 1e6));
+	const speedText = $derived(
+		apple.phase !== 'running' ? 'off' : apple.paused ? 'held' : `${ratio >= 10 ? ratio.toFixed(0) : ratio.toFixed(ratio >= 1 ? 1 : 2)}×`
+	);
+	const speedTip = $derived.by(() => {
+		if (apple.phase !== 'running') return 'How many times faster than a real Apple ][+ this one runs, once it is switched on.';
+		const s = apple.status;
+		const cycles = s && 'cycles' in s ? s.cycles : null;
+		return [
+			`${speedText}: this Apple runs ${ratio.toFixed(2)} times as fast as a real Apple ][+, measured.`,
+			`Clock: ${apple.mhz.toFixed(3)} MHz of 6502 cycles a second, against the real ${(APPLE_HZ / 1e6).toFixed(3)} MHz.`,
+			`Asked for: ${apple.traceMs ? `one instruction every ${apple.traceMs} ms (trace)` : apple.warp >= 100 ? 'as fast as this computer goes (MAX)' : `${apple.warp}×`}, on the speed slider.`,
+			`Engine: ${ENGINES.find((e) => e.id === apple.id)?.label ?? apple.id}.`,
+			...(cycles !== null ? [`Run so far: ${cycles.toLocaleString('en-US')} cycles, ${(cycles / APPLE_HZ).toFixed(1)} s of Apple time.`] : []),
+			...(apple.pace ? [`Pictures: ${apple.pace} a game second.`] : []),
+			...(s && 'pc' in s ? [`PC: $${s.pc.toString(16).toUpperCase().padStart(4, '0')}.`] : [])
+		].join('\n');
+	});
+
 	/** @param {number} i */
 	function pickRate(i) {
 		const r = rates[i];
@@ -81,7 +111,10 @@
 		begin = undefined,
 		beginLabel = '',
 		defaultCpu = 'microm8',
-		panels = true
+		angel = undefined,
+		play = undefined,
+		playTitle = undefined,
+		appDisks = undefined
 	} = $props();
 
 	/** ?all: the menu lists the disks of apps that are not enabled yet. A ?disk= link boots any of them. */
@@ -89,18 +122,6 @@
 	const menu = $derived(all ? disks : disks.filter((d) => d.enabled !== false));
 
 	const RELAUNCHED = 'microm8-relaunched';
-
-	/** The panel's 15 bytes as a music seed, the `panel:` line of an app in APPS.yml. */
-	const panelSeed = {
-		where: "an app's entry in packages/cabinet/disks/apple2/APPS.yml",
-		text: () => `panel: "${panelSeedText(apple.panel ?? [])}"`,
-		/** @param {string} text */
-		paste: (text) => {
-			const bytes = panelSeedBytes(text);
-			if (bytes) apple.seedPanel(bytes);
-			return !!bytes;
-		}
-	};
 	/** The disk `boot` names, waiting for the first click while the Apple is off. */
 	/** @type {Disk | undefined} */
 	let pending = $state();
@@ -184,6 +205,7 @@
 		const relaunched = globalThis.sessionStorage?.getItem(RELAUNCHED) ?? null;
 		globalThis.sessionStorage?.removeItem(RELAUNCHED);
 		all = showAll(location.search);
+		if (urlSeed()) apple.followPrompts = false;
 		const asked = new URLSearchParams(location.search).get('disk');
 		const name = boot ?? asked;
 		const disk = name ? disks.find((d) => d.name === name) : undefined;
@@ -314,6 +336,24 @@
 		URL.revokeObjectURL(a.href);
 	}
 
+	const bar = toolbar('apple');
+	$effect(() => {
+		const off = [
+			bar.offer('reboot', 'Reboot', reboot),
+			bar.offer('reset', 'Ctrl-Reset', reset),
+			bar.offer('speed', 'the speed', speed),
+			bar.offer('mute', 'Mute', mute),
+			bar.offer('caps', 'Caps Lock', caps),
+			bar.offer('joystick', 'Joystick', joystick),
+			bar.offer('insert-file', 'Insert file', fileInput),
+			bar.offer('save-disk', 'Save disk', saveDisk)
+		];
+		// microM8 runs its own 6502: no pause or step from here.
+		if (apple.id !== 'microm8') off.push(bar.offer('pause', 'Pause', pause), bar.offer('step', 'Step', step));
+		if (menu.length) off.push(bar.offer('insert-disk', 'Insert a disk', insertDisk));
+		return () => off.forEach((f) => f());
+	});
+
 	const baseName = (/** @type {string} */ path) => path.slice(path.lastIndexOf('/') + 1);
 	const labelOf = (/** @type {string} */ name) => disks.find((d) => d.name === name)?.label ?? baseName(name);
 </script>
@@ -351,94 +391,9 @@
 		{#if apple.locked && engaged}<p class="locked" role="status">{apple.locked}</p>{/if}
 	</div>
 
-	<div class="bar">
-		<select
-			aria-label="Emulator and rung"
-			title={ENGINES.find((e) => e.id === apple.id)?.title}
-			value={apple.id}
-			onchange={(e) => (apple.choose(e.currentTarget.value), canvas?.focus())}
-		>
-			{#each ENGINES as e (e.id)}
-				<option value={e.id} title={e.title}>{e.label}</option>
-			{/each}
-		</select>
-		<span class="speeds" role="group" aria-label="Drive">
-			{#each [0, 1] as d (d)}
-				<button
-					class={{ on: drive === d }}
-					aria-pressed={drive === d}
-					title={apple.drives[d] || 'empty'}
-					onclick={() => ((drive = d), canvas?.focus())}>drive {d + 1}</button
-				>
-			{/each}
-		</span>
-		{#if menu.length}
-			<select bind:value={choice} onchange={insertChoice} aria-label="Put a cabinet disk in the drive">
-				<option value="">Insert a disk…</option>
-				{#each menu as d (d.name)}
-					<option value={d.name}>{d.label ?? d.name}{d.profile && !d.label ? ` (${d.profile})` : ''}</option>
-				{/each}
-			</select>
-		{/if}
-		<label class="file">
-			Insert file…
-			<input type="file" accept=".dsk,.do,.po,.nib,.woz,.2mg,.hdv" onchange={(ev) => insertFile(ev.currentTarget.files?.[0])} />
-		</label>
-		<button onclick={() => (apple.reboot(), canvas?.focus())} title="Power cycle and boot drive 1">Reboot</button>
-		<button onclick={() => (apple.reset(), canvas?.focus())} title="Ctrl-Reset: stop the program, keep memory">Ctrl-Reset</button>
-		<button
-			class={{ on: apple.caps }}
-			aria-pressed={apple.caps}
-			title="Caps Lock: DOS 3.3 and Integer BASIC only know capitals"
-			onclick={() => ((apple.caps = !apple.caps), canvas?.focus())}>Caps Lock</button
-		>
-		<button
-			class={{ on: apple.sound }}
-			aria-pressed={apple.sound}
-			title="The Apple's speaker"
-			onclick={() => ((apple.sound = !apple.sound), apple.listen(), canvas?.focus())}>Sound</button
-		>
-		{#if apple.dance}
-			{@const dance = apple.dance}
-			<button
-				class={{ on: dance.on }}
-				aria-pressed={dance.on}
-				title="The bus dance: hear the 6502, the Disk II's head and the speaker work, each its own instrument, over a diesel engine that throbs with the speed and Applesoft's free memory"
-				onclick={() => dance.toggle()}>Dance</button
-			>
-			{#if dance.on}
-				<DanceControls
-					{dance}
-					twist={!!apple.panel}
-					jiggle={apple.panel ? () => apple.flip(Math.floor(Math.random() * 120)) : undefined}
-					seed={apple.panel ? panelSeed : undefined}
-				/>
-				{#if apple.panel}
-					<button
-						class={{ on: apple.followPrompts }}
-						aria-pressed={apple.followPrompts}
-						title="Follow the prompts: Applesoft, a running BASIC program, Integer BASIC and the Monitor each set the dance's style and their own panel seed. A game with its own seed starts with this off, so they leave its music alone."
-						onclick={() => (apple.followPrompts = !apple.followPrompts)}>Prompts</button
-					>
-				{/if}
-			{/if}
-		{/if}
-		<RateSlider rates={rates} index={rateIndex} onpick={pickRate} keys={EMULATOR_KEYS_HELP} />
-		{#if apple.id !== 'microm8'}
-			<button aria-pressed={apple.paused} title={apple.paused ? 'Go on (\\)' : 'Hold the 6502 still (\\)'} onclick={() => (apple.pause(), canvas?.focus())}
-				>{apple.paused ? '▶️' : '⏸️'}</button
-			>
-			<button title="One instruction, then hold ([)" onclick={() => (apple.stepOne(), canvas?.focus())}>⏭️</button>
-		{/if}
-		<button
-			class={{ on: apple.mouseStick }}
-			aria-pressed={apple.mouseStick}
-			title="Joystick: paddles 0 and 1 follow the pointer over the screen; left and right buttons are pushbuttons 0 and 1"
-			onclick={() => ((apple.mouseStick = !apple.mouseStick), canvas?.focus())}>Joystick</button
-		>
-		<button onclick={download} disabled={!apple.drives[drive]} title="Download the disk in the selected drive as the Apple has written it"
-			>Save disk</button
-		>
+	<!-- As wide as the screen, so the speed at its end sits under the screen's corner. -->
+	<div class="under">
+		<MachineToolbar {bar} label="The Apple's toolbar" end={speedReadout} />
 	</div>
 	{#if apple.phase !== 'running'}
 		<p class={['state', { failed: apple.phase === 'error' }]}>
@@ -453,11 +408,125 @@
 			{/if}
 		</p>
 	{/if}
-	{#if panels}<ApplePanels {labelOf} />{/if}
+	<ApplePanels {labelOf} {angel} {play} {playTitle} {appDisks} disks={driveControls} />
 </div>
+
+{#snippet speedReadout()}
+	<!-- A button, not only a tooltip: a touch screen has no hover, so a tap opens the same
+	     numbers as a card. Not a live region; it changes every second. -->
+	<button class="speed" popovertarget="apple-speed" aria-label={apple.phase === 'running' ? `Speed: ${speedText} a real Apple ][+; more numbers` : 'Speed: the Apple is off'} title={speedTip}>{speedText}</button>
+	<div id="apple-speed" class="card" popover="auto">{speedTip}</div>
+{/snippet}
+
+{#snippet driveControls()}
+	<div class="drives-bar">
+		<span class="speeds" role="group" aria-label="Drive">
+			{#each [0, 1] as d (d)}
+				<button
+					class={{ on: drive === d }}
+					aria-pressed={drive === d}
+					title="Put disks and files in drive {d + 1}, and save from it: {apple.drives[d] || 'empty'}"
+					onclick={() => (drive = d)}>drive {d + 1}</button
+				>
+			{/each}
+		</span>
+		<Pinnable {bar} id="insert-disk" />
+		<Pinnable {bar} id="insert-file" />
+		<Pinnable {bar} id="save-disk" />
+	</div>
+{/snippet}
+
+<!-- The controls this component owns, offered to the toolbar and placed at home in the
+     outline: compact is the toolbar's look, an icon whose tooltip says what it does. Each
+     gives the keyboard back to the Apple. -->
+{#snippet reboot(compact = false)}
+	<button class="icon" aria-label="Reboot" title="Reboot: power cycle and boot drive 1" onclick={() => (apple.reboot(), canvas?.focus())}>🔄{compact ? '' : ' Reboot'}</button>
+{/snippet}
+
+{#snippet reset(compact = false)}
+	<button class="icon" aria-label="Ctrl-Reset" title="Ctrl-Reset: stop the program and keep memory" onclick={() => (apple.reset(), canvas?.focus())}>⛔{compact ? '' : ' Ctrl-Reset'}</button>
+{/snippet}
+
+{#snippet pause(compact = false)}
+	<button
+		class="icon"
+		aria-label={apple.paused ? 'Go on' : 'Pause'}
+		aria-pressed={apple.paused}
+		aria-keyshortcuts="\\"
+		title={apple.paused ? 'Go on (key \\)' : 'Pause: hold the 6502 still (key \\)'}
+		onclick={() => (apple.pause(), canvas?.focus())}>{apple.paused ? '▶️' : '⏸️'}{compact ? '' : apple.paused ? ' Go on' : ' Pause'}</button
+	>
+{/snippet}
+
+{#snippet step(compact = false)}
+	<button class="icon" aria-label="Step" aria-keyshortcuts="[" title="Step: one instruction, then hold (key [)" onclick={() => (apple.stepOne(), canvas?.focus())}>⏭️{compact ? '' : ' Step'}</button>
+{/snippet}
+
+{#snippet speed()}
+	<RateSlider {rates} index={rateIndex} onpick={pickRate} keys={EMULATOR_KEYS_HELP} />
+{/snippet}
+
+{#snippet mute(compact = false)}
+	<button
+		class={['icon', { on: !apple.sound }]}
+		aria-label="Mute the speaker"
+		aria-pressed={!apple.sound}
+		title={apple.sound ? "Mute the Apple's speaker; the dance is separate" : "Unmute the Apple's speaker"}
+		onclick={() => ((apple.sound = !apple.sound), apple.listen(), canvas?.focus())}>{apple.sound ? '🔊' : '🔇'}{compact ? '' : apple.sound ? ' Mute' : ' Muted'}</button
+	>
+{/snippet}
+
+{#snippet caps(compact = false)}
+	<button
+		class={['icon', { on: apple.caps }]}
+		aria-label="Caps Lock"
+		aria-pressed={apple.caps}
+		title="Caps Lock: DOS 3.3 and Integer BASIC only know capitals"
+		onclick={() => ((apple.caps = !apple.caps), canvas?.focus())}>⇪{compact ? '' : ' Caps Lock'}</button
+	>
+{/snippet}
+
+{#snippet joystick(compact = false)}
+	<button
+		class={['icon', { on: apple.mouseStick }]}
+		aria-label="Joystick"
+		aria-pressed={apple.mouseStick}
+		title="Joystick: paddles 0 and 1 follow the pointer over the screen; left and right buttons are pushbuttons 0 and 1"
+		onclick={() => ((apple.mouseStick = !apple.mouseStick), canvas?.focus())}>🕹️{compact ? '' : ' Joystick'}</button
+	>
+{/snippet}
+
+{#snippet insertDisk(compact = false)}
+	<select bind:value={choice} onchange={insertChoice} aria-label="Put a cabinet disk in drive {drive + 1}" title="Put a cabinet disk in drive {drive + 1}">
+		<option value="">{compact ? '💾…' : 'Insert a disk…'}</option>
+		{#each menu as d (d.name)}
+			<option value={d.name}>{d.label ?? d.name}{d.profile && !d.label ? ` (${d.profile})` : ''}</option>
+		{/each}
+	</select>
+{/snippet}
+
+{#snippet fileInput(compact = false)}
+	<label class="file" title="Put a disk image from this computer in drive {drive + 1}; dropping one on the screen does the same">
+		{compact ? '📂' : 'Insert file…'}
+		<input type="file" accept=".dsk,.do,.po,.nib,.woz,.2mg,.hdv" onchange={(ev) => insertFile(ev.currentTarget.files?.[0])} />
+	</label>
+{/snippet}
+
+{#snippet saveDisk(compact = false)}
+	<button
+		class="icon"
+		aria-label="Save disk"
+		onclick={download}
+		disabled={!apple.drives[drive]}
+		title="Download the disk in drive {drive + 1} as the Apple has written it">{compact ? '📥' : 'Save disk'}</button
+	>
+{/snippet}
 
 <style>
 	.microm8 {
+		/* Short enough that the toolbar under the screen stays in the window: the window less
+		   the title, the description and the toolbar, never under 320px wide. */
+		--screen: max(320px, calc((100dvh - 9rem) * 560 / 384));
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
@@ -467,6 +536,7 @@
 		--bezel: 8px;
 		box-sizing: content-box;
 		width: calc(100% - 2 * var(--bezel));
+		max-width: var(--screen);
 		padding: var(--bezel);
 		aspect-ratio: 560 / 384;
 		position: relative;
@@ -511,16 +581,54 @@
 	.glass.dragging {
 		box-shadow: 0 0 0 3px #48f;
 	}
-	.bar {
+	button.on {
+		background: #cfc;
+		color: #000;
+	}
+	.under {
+		max-width: calc(var(--screen) + 16px);
+	}
+	.icon {
+		min-width: 2rem;
+		padding: 0.1rem 0.3rem;
+		font-size: 1rem;
+		line-height: 1.2;
+	}
+	.icon:focus-visible,
+	.speed:focus-visible {
+		outline: 2px solid #48f;
+		outline-offset: 1px;
+	}
+	/* The speed at the right end, wide enough for "0.50×" so the row never shifts. */
+	.speed {
+		margin-left: auto;
+		min-width: 6ch;
+		padding: 0.1rem 0.3rem;
+		border: none;
+		background: none;
+		color: inherit;
+		text-align: right;
+		font: 600 0.95rem ui-monospace, monospace;
+		font-variant-numeric: tabular-nums;
+		cursor: help;
+	}
+	.card {
+		max-width: 26rem;
+		padding: 0.6rem 0.8rem;
+		border: 1px solid var(--term-edge);
+		border-radius: 4px;
+		background: var(--term-bg);
+		color: var(--term-ink);
+		font: 0.8rem/1.45 system-ui, sans-serif;
+		white-space: pre-line;
+	}
+	.drives-bar {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		gap: 0.5rem;
+		margin: 0.2rem 0;
 		font: 0.85rem system-ui, sans-serif;
-	}
-	button.on {
-		background: #cfc;
-		color: #000;
 	}
 	.speeds {
 		display: inline-flex;

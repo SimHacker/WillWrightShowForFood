@@ -678,6 +678,16 @@ as noise.
 
 **Next.** MIT-AI in the browser: the halves switch in a worker, a teletype, the packs a block at a time over HTTP; then VM Radio, then the Korz rungs.
 
+## Terminals: SUPDUP first
+
+ITS was used from display terminals, and its terminal protocol is SUPDUP: the host sends
+cursor moves, clears and inserts as codes, and the terminal keeps the screen. A SUPDUP
+terminal is small to write in the page, and it is the right first terminal: ITS knows it,
+and no CRTSTY (ITS's translator for terminals that are not SUPDUP) is needed. It can save
+lines that scroll off, which a real one could not. The console TTY is a glass teletype, a
+paper teletype's protocol on a screen; it stays for the console. The Knight TV, the ninth
+floor's bitmap terminals (above), comes later.
+
 ## Phases
 
 0. **36-bit hygiene.** Fix the `& wmask` masks in [turing.ts](src/plugins/turing.ts) and test the

@@ -17,6 +17,8 @@ const hz = (midi) => 440 * 2 ** ((midi - 69) / 12);
 
 /** How loud the dance stays, ducked under the machine's own music: nearly gone. */
 const DUCKED = 0.08;
+/** The master gain at full volume. */
+const MASTER = 0.35;
 
 export class DancePlayer {
 	/** @type {AudioContext | null} */
@@ -31,6 +33,16 @@ export class DancePlayer {
 	/** @type {Map<string, number>} */
 	#levels = new Map();
 
+	#volume = 1;
+	/** The whole dance's loudness, 0 to 1; 1 is the level it was mixed at. */
+	get volume() {
+		return this.#volume;
+	}
+	set volume(v) {
+		this.#volume = Math.max(0, Math.min(1, v));
+		if (this.#master && this.#ctx) this.#master.gain.setTargetAtTime(MASTER * this.#volume, this.#ctx.currentTime, 0.05);
+	}
+
 	/** Open the audio. Call it from a click or key: browsers start sound only then. */
 	start() {
 		if (this.#ctx) {
@@ -44,7 +56,7 @@ export class DancePlayer {
 		limit.threshold.value = -12;
 		limit.ratio.value = 8;
 		const master = ctx.createGain();
-		master.gain.value = 0.35;
+		master.gain.value = MASTER * this.#volume;
 		const duck = ctx.createGain();
 		duck.gain.value = this.#ducked ? DUCKED : 1;
 		master.connect(duck).connect(limit).connect(ctx.destination);

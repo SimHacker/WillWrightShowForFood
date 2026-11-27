@@ -67,6 +67,26 @@ export class BusDance {
 		this.#bpm = v;
 		this.#save();
 	}
+	#volume = $state(1);
+	/** The dance's loudness, 0 to 1, kept with the style and tempo. */
+	get volume() {
+		return this.#volume;
+	}
+	set volume(v) {
+		this.#volume = Math.max(0, Math.min(1, v));
+		this.player.volume = this.#muted ? 0 : this.#volume;
+		this.#save();
+	}
+	#muted = $state(false);
+	/** Silent but still playing, so unmuting picks up where the dance is; kept with the volume. */
+	get muted() {
+		return this.#muted;
+	}
+	set muted(on) {
+		this.#muted = on;
+		this.player.volume = on ? 0 : this.#volume;
+		this.#save();
+	}
 	/** Names of words in core to listen to, space separated; the machine resolves them. */
 	listen = $state('');
 	/** What the front panel's switches are doing to the music, in a few words; "" when they are all off. */
@@ -87,6 +107,9 @@ export class BusDance {
 		const was = kept(`dance-${engine}`);
 		if (STYLES.some((s) => s.id === was?.style)) this.style = this.#dance.style = was.style;
 		if (TEMPOS.includes(was?.bpm)) this.#bpm = was.bpm;
+		if (typeof was?.volume === 'number') this.#volume = Math.max(0, Math.min(1, was.volume));
+		this.#muted = was?.muted === true;
+		this.player.volume = this.#muted ? 0 : this.#volume;
 		if (typeof was?.loops === 'boolean' || typeof was?.loops === 'number') this.loops = this.#dance.loops = enoLayers(was.loops);
 		if (on) this.#wake();
 	}
@@ -110,7 +133,7 @@ export class BusDance {
 	#save() {
 		try {
 			globalThis.localStorage?.setItem(ON, JSON.stringify(this.on));
-			globalThis.localStorage?.setItem(`dance-${this.#engine}`, JSON.stringify({ style: this.style, bpm: this.#bpm, loops: this.loops }));
+			globalThis.localStorage?.setItem(`dance-${this.#engine}`, JSON.stringify({ style: this.style, bpm: this.#bpm, loops: this.loops, volume: this.#volume, muted: this.#muted }));
 		} catch {
 			/* Storage full or forbidden: the dance just forgets. */
 		}

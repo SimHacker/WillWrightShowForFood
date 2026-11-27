@@ -41,6 +41,20 @@ const ROM_BYTES = 0x3000;
 export const PANEL_BASE = 0xc041;
 export const PANEL_BYTES = 15;
 
+/**
+ * A URL's `poke`: hex address, colon, hex bytes stored from there up, several separated by
+ * commas, as `c041:5e008f19,0300:a9`. A `$` before the address is allowed. Pieces that are not
+ * that shape are left out.
+ */
+export function parsePokes(text: string): { addr: number; bytes: Uint8Array }[] {
+	const out: { addr: number; bytes: Uint8Array }[] = [];
+	for (const piece of text.split(",")) {
+		const m = /^\s*\$?([0-9a-f]{1,4})\s*:\s*((?:[0-9a-f]{2})+)\s*$/i.exec(piece);
+		if (m) out.push({ addr: parseInt(m[1]!, 16), bytes: Uint8Array.from(m[2]!.match(/../g)!, (h) => parseInt(h, 16)) });
+	}
+	return out;
+}
+
 export class Apple2Plus implements Bus {
 	readonly ram = new Uint8Array(0xc000);
 	readonly rom: Uint8Array;
@@ -55,6 +69,15 @@ export class Apple2Plus implements Bus {
 	speakerClicks = 0;
 	/** Cycles of those flips, drained by the page when it builds samples. */
 	private speakerLog: number[] = [];
+	/** The cassette output's phase, flipped by every access to `$C020`, as SAVE writes a tape. */
+	tape = 0;
+	/** Cycles of those flips, drained like the speaker's. */
+	private tapeLog: number[] = [];
+	/**
+	 * The cassette input: the level on the tape at a cycle, 0 or 1, read as bit 7 of `$C060`
+	 * (LOAD's input). Null, nothing is plugged in and the bit reads 0.
+	 */
+	tapeIn: ((cycle: number) => number) | null = null;
 	/** Annunciators 0–3 in bits 0–3. */
 	annunciators = 0;
 	/** The panel's bytes, `$C041` first. Bit `n` is byte `n >> 3`, bit `n & 7`. */
@@ -101,6 +124,13 @@ export class Apple2Plus implements Bus {
 		return log;
 	}
 
+	/** The cassette output's flips since the last call, in cycle order. */
+	takeTape(): number[] {
+		const log = this.tapeLog;
+		this.tapeLog = [];
+		return log;
+	}
+
 	mode(): ScanMode {
 		return { graphics: this.graphics, mixed: this.mixed, page2: this.page2, hires: this.hires };
 	}
@@ -127,6 +157,18 @@ export class Apple2Plus implements Bus {
 		if (addr < 0xc000) this.ram[addr] = this.floating;
 		else if (addr < 0xd000) this.writeIo(addr);
 		else this.language?.store(addr, this.floating);
+	}
+
+	/**
+	 * Store a byte with no bus cycle, as a URL's `poke` does: main RAM below `$C000` and the
+	 * panel. Anywhere else, false and nothing changes.
+	 */
+	poke(addr: number, value: number): boolean {
+		addr &= 0xffff;
+		if (addr < 0xc000) this.ram[addr] = value & 0xff;
+		else if (addr >= PANEL_BASE && addr < PANEL_BASE + PANEL_BYTES) this.panel[addr - PANEL_BASE] = value & 0xff;
+		else return false;
+		return true;
 	}
 
 	/** The byte at `addr` with no bus cycle. The compiler reads opcodes through this. */
@@ -186,6 +228,7 @@ export class Apple2Plus implements Bus {
 		this.touch(a);
 		if (a < 0x20) return this.drive(this.key);
 		if (a >= 0x41 && a <= 0x4f) return this.drive(this.panel[a - 0x41]!);
+		if ((a === 0x60 || a === 0x68) && this.tapeIn) return this.drive((scanned & 0x7f) | (this.tapeIn(this.cycles) ? 0x80 : 0));
 		if (a >= 0x60 && a < 0x70) return this.drive(scanned & 0x7f);
 		if (a >= 0x80) {
 			const slot = (a >> 4) & 7;
@@ -236,7 +279,10 @@ export class Apple2Plus implements Bus {
 	/** What an access does, whether or not the switch drives the bus. */
 	private touch(a: number): void {
 		if (a >= 0x10 && a < 0x20) this.key &= 0x7f;
-		else if (a >= 0x30 && a < 0x40) {
+		else if (a >= 0x20 && a < 0x30) {
+			this.tape ^= 1;
+			this.tapeLog.push(this.cycles);
+		} else if (a >= 0x30 && a < 0x40) {
 			this.speaker ^= 1;
 			this.speakerClicks += 1;
 			this.speakerLog.push(this.cycles);

@@ -8,9 +8,9 @@
 	import { driveIndex } from '@wwsff/cabinet/disk-catalog';
 	import { panelSeedBytes } from '@wwsff/cabinet/dance';
 	import MicroM8 from '../MicroM8.svelte';
-	import ApplePanels from '../ApplePanels.svelte';
 	import ScreenAngel from './ScreenAngel.svelte';
 	import { apple } from '../apple.svelte.js';
+	import { urlSeed } from '../korz-apple.svelte.js';
 	import { chargenUrl, diskUrl } from '../catalog.js';
 
 	/** @typedef {import('@wwsff/cabinet/disk-catalog').AppleApp} AppleApp */
@@ -81,7 +81,7 @@
 			const images = await Promise.all(s.drives.map(bytes));
 			const files = s.drives.map((id) => app.disks[id]?.file ?? id);
 			if (apple.id === 'microm8' && apple.phase === 'idle') apple.profile = profile;
-			const seed = app.panel ? panelSeedBytes(app.panel) : null;
+			const seed = urlSeed() ?? (app.panel ? panelSeedBytes(app.panel) : null);
 			if (seed) apple.seedPanel(seed);
 			apple.followPrompts = !seed;
 			const entries = files.map((name, d) => ({ name, bytes: images[d], drive: d, protect: locked(s.drives[d]), profile }));
@@ -144,8 +144,6 @@
 	/** @param {string} file */
 	const labelOf = (file) => Object.values(app.disks).find((d) => d.file === file)?.label ?? file;
 
-	/** What is in each drive, for the folded disks list. */
-	const mounted = $derived(drives.map((d) => `drive ${d + 1}: ${apple.drives[d] ? labelOf(apple.drives[d]) : 'empty'}`).join(' · '));
 
 	/** @param {{ name: string, text: string }} p */
 	function download(p) {
@@ -164,8 +162,6 @@
 	});
 </script>
 
-<MicroM8 {disks} defaultCpu="compile" begin={() => start(0)} beginLabel={app.starts[0]?.label ?? app.title} panels={false} />
-
 {#snippet movesRow()}
 	{#if actions.length}
 		<div class="row moves">
@@ -180,58 +176,72 @@
 	{/if}
 {/snippet}
 
-{#if app.angel}<ScreenAngel path={app.angel} move={moveNamed} bind:moves={allowed} controls={movesRow} />{/if}
+{#snippet angel()}
+	<ScreenAngel path={app.angel ?? ''} move={moveNamed} bind:moves={allowed} controls={movesRow} />
+{/snippet}
 
-<section class="app" aria-label="{app.title} controls">
-	{#if !app.angel}{@render movesRow()}{/if}
-	<div class="row">
-		<span class="head">Start</span>
-		{#each app.starts as s, i (s.label)}
-			<button onclick={() => start(i)} disabled={!!busy} title="Put {s.drives.map((id) => app.disks[id]?.label).join(' and ')} in the drives and boot"
-				>{s.label}</button
-			>
-		{/each}
-	</div>
-	{#if app.people}
+{#snippet play()}
+	<section class="app" aria-label="{app.title} controls">
+		{#if !app.angel}{@render movesRow()}{/if}
 		<div class="row">
-			<span class="head">Characters</span>
-			<button onclick={readPeople} disabled={!!busy} title="Read the characters off the disk as the game has written it">Read from Disk</button>
-			{#if peopleFrom}<span class="prompt">{people.length} on {peopleFrom}</span>{/if}
-			{#each people as p (p.file)}
-				<button class="person" onclick={() => download(p)} title="Download {p.name}'s CHARACTER.yml">{p.name}</button>
+			<span class="head">Start</span>
+			{#each app.starts as s, i (s.label)}
+				<button onclick={() => start(i)} disabled={!!busy} title="Put {s.drives.map((id) => app.disks[id]?.label).join(' and ')} in the drives and boot"
+					>{s.label}</button
+				>
 			{/each}
 		</div>
-	{/if}
-	<details class="disks-box">
-		<summary><span class="head">Disks</span> {mounted}</summary>
-		<ul class="disks" style:--drives={drives.length}>
-			{#each Object.entries(app.disks) as [id, d] (id)}
-				<li>
-					<span class="label">{d.label}</span>
-					{#each drives as drive (drive)}
-						<button
-							class={{ on: inDrive(id, drive) }}
-							aria-pressed={inDrive(id, drive)}
-							disabled={!!busy}
-							title="Put {d.label} in drive {drive + 1}"
-							onclick={() => insert(id, drive)}>Drive {drive + 1}</button
-						>
-					{/each}
-				</li>
-			{/each}
-		</ul>
-	</details>
-	{#if busy}<p class="note">{busy}…</p>{/if}
-	{#if failed}<p class="note failed">{failed}</p>{/if}
-	<ApplePanels {labelOf} />
-</section>
+		{#if app.people}
+			<div class="row">
+				<span class="head">Characters</span>
+				<button onclick={readPeople} disabled={!!busy} title="Read the characters off the disk as the game has written it">Read from Disk</button>
+				{#if peopleFrom}<span class="prompt">{people.length} on {peopleFrom}</span>{/if}
+				{#each people as p (p.file)}
+					<button class="person" onclick={() => download(p)} title="Download {p.name}'s CHARACTER.yml">{p.name}</button>
+				{/each}
+			</div>
+		{/if}
+		{#if busy}<p class="note">{busy}…</p>{/if}
+		{#if failed}<p class="note failed">{failed}</p>{/if}
+	</section>
+{/snippet}
+
+{#snippet appDisks()}
+	<ul class="disks" style:--drives={drives.length} aria-label="{app.title}'s disks">
+		{#each Object.entries(app.disks) as [id, d] (id)}
+			<li>
+				<span class="label">{d.label}</span>
+				{#each drives as drive (drive)}
+					<button
+						class={{ on: inDrive(id, drive) }}
+						aria-pressed={inDrive(id, drive)}
+						disabled={!!busy}
+						title="Put {d.label} in drive {drive + 1}"
+						onclick={() => insert(id, drive)}>Drive {drive + 1}</button
+					>
+				{/each}
+			</li>
+		{/each}
+	</ul>
+{/snippet}
+
+<MicroM8
+	{disks}
+	defaultCpu="compile"
+	begin={() => start(0)}
+	beginLabel={app.starts[0]?.label ?? app.title}
+	angel={app.angel ? angel : undefined}
+	{play}
+	playTitle="Play {app.title}"
+	{appDisks}
+/>
 
 <style>
 	.app {
 		display: flex;
 		flex-direction: column;
 		gap: 0.4rem;
-		margin-top: 0.6rem;
+		margin: 0.2rem 0;
 		font: 0.85rem system-ui, sans-serif;
 	}
 	.row {
@@ -246,15 +256,6 @@
 	}
 	.moves {
 		margin-top: 0.5rem;
-	}
-	.disks-box summary {
-		cursor: pointer;
-	}
-	.disks-box[open] summary {
-		margin-bottom: 0.4rem;
-	}
-	.disks-box .disks {
-		margin-left: 5.9rem;
 	}
 	.move {
 		display: inline-flex;

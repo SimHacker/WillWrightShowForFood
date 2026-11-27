@@ -4,7 +4,7 @@ import { M6502 } from "../../m6502/m6502.js";
 import { Korz6502 } from "../m6502.js";
 import { textRows } from "../../microm8/microm8.js";
 import { haveMicroM8, startMicroM8Node } from "../../microm8/node.js";
-import { Apple2Plus, PANEL_BASE, PANEL_BYTES } from "./plus.js";
+import { Apple2Plus, PANEL_BASE, PANEL_BYTES, parsePokes } from "./plus.js";
 import { scanAddress } from "./scan.js";
 
 /** A 12K ROM whose reset vector is `$F800`, with `code` planted there. */
@@ -114,4 +114,32 @@ test("apple ][+: the panel's bits at $C041-$C04F are lights the program sets and
 	board.write(0xc040, 0xff);
 	board.write(0xc041, 0x12);
 	assert.deepEqual([...board.panel], [0x12, ...new Array(PANEL_BYTES - 1).fill(0)], "$C040 is the strobe, not a panel byte");
+});
+
+test("apple ][+: $C020 flips the cassette output and $C060's bit 7 reads the cassette input", () => {
+	const board = new Apple2Plus(new Uint8Array(0x3000));
+	board.read(0xc020);
+	board.write(0xc02f, 0);
+	board.read(0xc030);
+	assert.equal(board.tape, 0, "two flips, back where it was");
+	assert.equal(board.takeTape().length, 2);
+	assert.equal(board.takeSpeaker().length, 1, "the speaker is its own line");
+	assert.equal(board.read(0xc060) & 0x80, 0, "nothing plugged in reads 0");
+	board.tapeIn = (cycle) => cycle & 1;
+	const levels = [board.read(0xc060) & 0x80, board.read(0xc060) & 0x80];
+	assert.deepEqual([...levels].sort(), [0, 0x80], "the input follows the tape's level at each cycle");
+});
+
+test("apple ][+: a URL's pokes go into RAM and the panel, and nowhere else", () => {
+	const pokes = parsePokes("c041:5e008f, $0300:a9ff ,c000:01,nonsense,0400:1");
+	assert.deepEqual(pokes.map((p) => [p.addr, [...p.bytes]]), [
+		[0xc041, [0x5e, 0x00, 0x8f]],
+		[0x300, [0xa9, 0xff]],
+		[0xc000, [0x01]],
+	]);
+	const board = new Apple2Plus(new Uint8Array(0x3000));
+	const stored = pokes.flatMap(({ addr, bytes }) => [...bytes].map((b, i) => board.poke(addr + i, b)));
+	assert.deepEqual(stored, [true, true, true, true, true, false]);
+	assert.deepEqual([...board.panel.slice(0, 3)], [0x5e, 0x00, 0x8f]);
+	assert.deepEqual([board.peek(0x300), board.peek(0x301)], [0xa9, 0xff]);
 });

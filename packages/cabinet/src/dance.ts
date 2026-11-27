@@ -424,6 +424,8 @@ export type EnoTrack = {
 	readonly name: string;
 	/** What it plays and after what, for the button's tooltip. */
 	readonly description: string;
+	/** A few oblique lines for the top of the tooltip: a card to turn over while it plays. */
+	readonly card?: readonly string[];
 	readonly timbre: Timbre;
 	readonly root: number;
 	readonly velocity: number;
@@ -448,6 +450,7 @@ export const ENO_TRACKS: readonly EnoTrack[] = [
 		id: "airports",
 		name: "Airports",
 		description: "tape loops after Brian Eno's Music for Airports 1/1: five glass tones of prime lengths, 23 to 41 sixteenths, each a tone of the chord, drifting against each other",
+		card: ["Leave the gaps where they fall.", "The loops do not agree. Let them.", "A waiting room is also a room."],
 		timbre: "glass",
 		root: 72,
 		velocity: 0.5,
@@ -457,6 +460,7 @@ export const ENO_TRACKS: readonly EnoTrack[] = [
 		id: "drone",
 		name: "Drone",
 		description: "two long pad loops of 53 and 59 sixteenths an octave below the harmony, after Discreet Music's slow tape delay",
+		card: ["Hold the note longer than is polite.", "What is underneath is not below.", "Patience is a frequency."],
 		timbre: "pad",
 		root: 48,
 		velocity: 0.4,
@@ -470,6 +474,7 @@ export const ENO_TRACKS: readonly EnoTrack[] = [
 		id: "sparkle",
 		name: "Sparkle",
 		description: "three sparse chimes two octaves up, at 43, 47 and 61 sixteenths",
+		card: ["Fewer.", "Then fewer than that.", "The silence between them is the instrument."],
 		timbre: "chime",
 		root: 72,
 		velocity: 0.25,
@@ -483,6 +488,7 @@ export const ENO_TRACKS: readonly EnoTrack[] = [
 		id: "voices",
 		name: "Voices",
 		description: "three wordless singers holding a tone of the chord each, at 67, 71 and 73 sixteenths, after Music for Airports 2/1",
+		card: ["Nobody is singing words. Listen anyway.", "Three people who never meet, holding hands across a minute.", "Which voice did you stop hearing?"],
 		timbre: "sing",
 		root: 60,
 		velocity: 0.3,
@@ -520,6 +526,7 @@ export function enoTracks(data: unknown): EnoTrack[] {
 			id: r.id,
 			name: typeof r.name === "string" ? r.name : r.id,
 			description: typeof r.description === "string" ? r.description : "",
+			...(Array.isArray(r.card) ? { card: r.card.filter((l): l is string => typeof l === "string") } : {}),
 			timbre: r.timbre as Timbre,
 			root: Math.round(num(r.root, 60)),
 			velocity: Math.max(0, Math.min(1, num(r.velocity, 0.4))),

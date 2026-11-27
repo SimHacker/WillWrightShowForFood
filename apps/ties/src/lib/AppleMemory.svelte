@@ -249,9 +249,9 @@
 	.mem-addr {
 		width: 6ch;
 		font: inherit;
-		background: #000;
-		color: inherit;
-		border: 1px solid #555;
+		background: var(--term-bg);
+		color: var(--term-ink);
+		border: 1px solid var(--term-edge);
 		padding: 0 0.2em;
 	}
 	.mem-hint {
@@ -276,15 +276,15 @@
 	}
 	.mem-views .mem-pc-go {
 		margin-left: 0.5em;
-		border-color: #6a6a20;
-		color: #ffe680;
+		border-color: var(--term-pc-edge);
+		color: var(--term-pc-ink);
 	}
 	.mem-word {
 		all: unset;
 		cursor: pointer;
 	}
 	.mem-word:hover {
-		background: #333;
+		background: var(--term-hover);
 	}
 	.mem-word.sym {
 		text-decoration: underline dotted;
@@ -293,13 +293,13 @@
 	.mem-symbols {
 		font: inherit;
 		max-width: 12rem;
-		background: #000;
-		color: inherit;
-		border: 1px solid #555;
+		background: var(--term-bg);
+		color: var(--term-ink);
+		border: 1px solid var(--term-edge);
 	}
 	.mem-word.changed {
 		color: #000;
-		background: #9f9;
+		background: var(--term-changed);
 	}
 	.mem-word.focus,
 	.mem-line.focus {
@@ -307,21 +307,21 @@
 	}
 	.mem-word.pc,
 	.mem-line.pc {
-		background: #3a3a10;
-		color: #ffe680;
+		background: var(--term-pc-bg);
+		color: var(--term-pc-ink);
 	}
 	.mem-views .mem-view {
 		font: inherit;
 		text-transform: uppercase;
-		background: #000;
-		color: inherit;
-		border: 1px solid #555;
+		background: var(--term-bg);
+		color: var(--term-ink);
+		border: 1px solid var(--term-edge);
 		padding: 0 0.4em;
 		white-space: nowrap;
 		cursor: pointer;
 	}
 	.mem-views .mem-view.on {
-		background: #9fe8a0;
+		background: var(--term-lit);
 		color: #000;
 	}
 	.mem-label {
@@ -343,7 +343,7 @@
 		text-overflow: ellipsis;
 	}
 	.mem-op.undoc {
-		color: #ffb080;
+		color: var(--term-odd);
 	}
 	.mem-src {
 		flex: 1;

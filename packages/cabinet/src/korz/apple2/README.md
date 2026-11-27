@@ -41,3 +41,36 @@ interpreter, the switch, and microM8, and it opens on the compiler. Text is the 
 ROM and the Disk II ROM are the other two files there. A cartridge names another character
 ROM with `chargen`, 64 glyphs of 8 bytes, the low 7 bits, bit 0 at the left.
 Hi-res color follows the ][+ rule.
+
+## Music seeds, and the page's address
+
+The panel's 15 bytes are the Apple's music seed: the dance folds them into its twist (skew,
+phase, effects), and the style comes from the person's menu or the prompt. In the Dance node,
+Music seed copies them as a `panel:` line for an app in
+[APPS.yml](../../../disks/apple2/APPS.yml) (30 hex digits, quoted so YAML keeps them a
+string) or as a link, pastes one back, and keeps named favorites in this browser. Each app
+has its own seed, random for now, for its author to choose later.
+
+The page reads two parameters at power on (`PAGE_PARAMS` in the catalog's launch.ts):
+
+- `?seed=` the 30 hex digits, put in the panel before the first instruction. It wins over the
+  app's own seed.
+- `?poke=addr:bytes,addr:bytes` stores bytes before the first instruction: `?poke=c041:ff`,
+  `?poke=0300:a9008d30c0`. Hex, addresses up to four digits, two digits a byte. RAM below
+  `$C000` and the panel take them (`poke` in [plus.ts](plus.ts)); anything else is skipped.
+
+With "Following the prompts" on, Applesoft, a running BASIC program, Integer BASIC and the
+Monitor each set the style and their own seed as the prompt changes (`PROMPT_PANELS` in
+korz-apple.svelte.js). A game with its own seed starts with it off, so its music stays.
+
+## The cassette
+
+The board has both wires. `$C020` flips the cassette output, kept as a cycle log of flips
+(`takeTape`) as the speaker is. `$C060` bit 7 reads the cassette input from `tapeIn(cycle)`,
+a function the page plugs in. "Hear the tape" in the Sound node mixes the output with the
+speaker, as a recorder's monitor plays it.
+
+To come: the input from the microphone and from audio files (WAV, MP3, whatever the browser
+decodes), recording the output to a file, both in step with Apple time rather than the wall's,
+so a LOAD or SAVE can run as fast as the machine does instead of at the tape's speed; and a
+pure tape mode, the cassette alone, unmixed, in and out.

@@ -31,6 +31,22 @@
 		--flash: #00f0d8;
 		--panel: #ffffff;
 		color-scheme: light;
+		/* The machines' terminal panes (memory, Korz): black, as a monitor's, on a dark page,
+		   and paper on a light one. light-dark() picks by the color-scheme where it is used. */
+		--term-bg: light-dark(#fbfbf5, #000);
+		--term-ink: light-dark(#1b1b1b, #d8e8d8);
+		--term-code: light-dark(#1d5a1d, #b8e8b8);
+		--term-edge: light-dark(#b8b8b8, #555);
+		--term-rule: light-dark(#d4d4d4, #333);
+		--term-hover: light-dark(#e4e4e4, #333);
+		--term-sel: light-dark(#d4eed4, #1c3a1c);
+		--term-lit: light-dark(#b4e6b5, #9fe8a0);
+		--term-changed: light-dark(#8ee08e, #9f9);
+		--term-pc-bg: light-dark(#fff0a0, #3a3a10);
+		--term-pc-ink: light-dark(#4a3c00, #ffe680);
+		--term-pc-edge: light-dark(#b8a040, #6a6a20);
+		--term-odd: light-dark(#a04000, #ffb080);
+		--term-hot: light-dark(#3a8a3a, #6a6);
 	}
 	:global(html),
 	:global(body) {

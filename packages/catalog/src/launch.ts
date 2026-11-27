@@ -44,9 +44,11 @@ const RESERVED = new Set(["with"]);
 
 /**
  * Parameters the page around an entry reads, never the entry: `solo` shows the machine alone,
- * `all` lists the entries that are not enabled yet.
+ * `all` lists the entries that are not enabled yet, `seed` is the music seed the machine starts
+ * with (the Apple's 15 panel bytes in hex, the PDP-7's switches in octal), and `poke` stores
+ * bytes at power on (`c041:5e008f`, the Apple's RAM and panel).
  */
-export const PAGE_PARAMS = new Set(["solo", "all"]);
+export const PAGE_PARAMS = new Set(["solo", "all", "seed", "poke"]);
 
 /** Whether the lists show the entries that are not enabled, when the URL does not say. */
 export const SHOW_ALL = false;
