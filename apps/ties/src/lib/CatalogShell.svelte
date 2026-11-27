@@ -9,12 +9,15 @@
 	import { SvelteSet } from 'svelte/reactivity';
 	import { afterNavigate, goto } from '$app/navigation';
 	import { parseLaunch, effectiveValues, launchUrl, showAll } from '@wwsff/catalog';
-	import { catalog, CATALOG_BASE, entryForProgram } from './catalog.js';
+	import { appleApps, catalog, CATALOG_BASE, entryForProgram } from './catalog.js';
 	import { machineFor } from './machines.js';
-	import { loadRepoDoc, githubUrl } from './repo-docs.js';
+	import GuideDoc from './GuideDoc.svelte';
 
 	/** @typedef {import('@wwsff/catalog').CatalogNode} CatalogNode */
 	/** @typedef {import('@wwsff/catalog').Entry} Entry */
+
+	/** An Apple app with a screen angel shows its guide in the angel, under the screen. @param {Entry} e */
+	const guideInAngel = (e) => e.runs?.machine === 'apple2' && !!appleApps.get(String(e.runs?.app ?? ''))?.angel;
 
 	/** @type {{ path: string, redirect?: string | null, home?: boolean }} */
 	let { path, redirect = null, home = false } = $props();
@@ -260,21 +263,6 @@
 	<p class="ignored">Not working yet. The catalog lists it only when the address ends in <code>?all</code>.</p>
 {/snippet}
 
-{#snippet guideDoc(/** @type {string} */ at)}
-	{#key at}
-		{#await loadRepoDoc(at)}
-			<p class="wait">Loading the guide…</p>
-		{:then html}
-			{#if html}
-				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-				<div class="doc">{@html html}</div>
-			{:else}
-				<p class="wait"><a href={githubUrl(at)} target="_blank" rel="noopener">{at}</a></p>
-			{/if}
-		{/await}
-	{/key}
-{/snippet}
-
 {#snippet contents(/** @type {CatalogNode} */ node)}
 	{@const picks = catalog.featured(node.folder, { all })}
 	{#if picks.length}
@@ -435,10 +423,10 @@
 					{/await}
 				{/key}
 			</div>
-			{#if entry.guide}
+			{#if entry.guide && !guideInAngel(entry)}
 				<details class="guide" open>
 					<summary>Guide</summary>
-					{@render guideDoc(entry.guide)}
+					<GuideDoc at={entry.guide} />
 				</details>
 			{/if}
 		{:else if entry}
@@ -473,7 +461,7 @@
 								{#if reloads(p.entry)}Running it reloads the page, which stops what is running now.{:else if entry}Running it replaces what is running now.{/if}
 							</p>
 						{/if}
-						{#if p.entry.guide}{@render guideDoc(p.entry.guide)}{/if}
+						{#if p.entry.guide}<GuideDoc at={p.entry.guide} />{/if}
 					{:else if p.children.length}
 						{@render contents(p)}
 					{/if}
@@ -730,38 +718,6 @@
 	.guide > summary {
 		cursor: pointer;
 		font-weight: 600;
-	}
-	.doc {
-		line-height: 1.5;
-	}
-	.doc :global(h1),
-	.doc :global(h2),
-	.doc :global(h3) {
-		font-size: 1.05rem;
-		margin: 1.1rem 0 0.3rem;
-	}
-	.doc :global(h1) {
-		font-size: 1.2rem;
-	}
-	.doc :global(table) {
-		border-collapse: collapse;
-	}
-	.doc :global(th),
-	.doc :global(td) {
-		border: 1px solid #1f3a20;
-		padding: 0.15rem 0.5rem;
-		text-align: left;
-		vertical-align: top;
-	}
-	.doc :global(code),
-	.doc :global(kbd) {
-		font-family: ui-monospace, monospace;
-		background: #0c160c;
-		padding: 0 0.2rem;
-	}
-	.doc :global(img) {
-		max-width: 100%;
-		image-rendering: pixelated;
 	}
 	.titlebar {
 		display: flex;

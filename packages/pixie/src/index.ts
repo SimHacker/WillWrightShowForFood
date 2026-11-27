@@ -27,6 +27,8 @@ export {
 	unpackWords,
 } from "./image.js";
 export { changedCells, readRings, ringToScene } from "./scene.js";
+export { changedNodes, LISTEN_DEFAULTS, ringPhrase, sayPhrase } from "./listen.js";
+export type { ListenLimits, RingPhrase, RingTone, ToneKind } from "./listen.js";
 export type { Chain, ChainKind, EdgeKind, NodeKind, Scene, SceneEdge, SceneNode, Vec3 } from "./scene.js";
 export { DEFAULT_CAMERA, drawList, paint, PALETTE, pick, project } from "./view.js";
 export type { Camera, Mark, Pen } from "./view.js";

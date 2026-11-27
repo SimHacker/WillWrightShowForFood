@@ -371,6 +371,34 @@ test("a hooray climbs the home chord, longer and louder the better the score", (
 	for (let i = 1; i < best.length; i += 1) assert.ok(best[i]!.midi > best[i - 1]!.midi, "it climbs");
 });
 
+test("a flourish plays a drawing back a sixteenth a tone, in the chord, and ends by saying it", () => {
+	const d = new Dance(PDP7_VOICES);
+	d.beat({});
+	const tones = [
+		{ kind: "cell", degree: 0, depth: 0, weight: 0.5, pan: -0.5 },
+		{ kind: "cell", degree: 1, depth: 0, weight: 0.5, pan: 0 },
+		{ kind: "close", degree: 0, depth: 0, weight: 0.7, pan: 0.5 },
+		{ kind: "rest", degree: 0, depth: 1, weight: 0, pan: 0 },
+		{ kind: "letter", degree: 2, depth: 1, weight: 0.6, pan: 0 },
+		{ kind: "block", degree: 3, depth: 1, weight: 1, pan: 0 },
+	] as const;
+	d.flourish(tones, "HEX: 3 cells");
+	const beats = Array.from({ length: 10 }, () => d.beat({}).filter((n) => n.voice === "rings" || n.voice === "say"));
+	const own = beats.map((b) => b.filter((n) => n.timbre !== "pad").map((n) => n.timbre).join(" "));
+	assert.deepEqual(own.slice(0, 7), ["", "harp", "harp", "tom bell", "", "bell", "lead"], "from the next sixteenth, one tone each");
+	const harps = beats.flat().filter((n) => n.timbre === "harp");
+	assert.ok(harps[1]!.midi > harps[0]!.midi, "climbing along the chain");
+	assert.equal(harps[0]!.pan, -0.5, "where the ring view draws it");
+	const end = beats[7]!;
+	assert.ok(end.some((n) => n.timbre === "pad"), "the chord, softly");
+	assert.equal(end.find((n) => n.say)?.say?.text, "HEX: 3 cells");
+	assert.ok(beats.slice(8).every((b) => b.length === 0), "then it is over");
+	const muted = new Dance(PDP7_VOICES);
+	muted.mute = new Set(["rings", "say"]);
+	muted.flourish(tones, "quiet");
+	assert.ok(Array.from({ length: 10 }, () => muted.beat({})).flat().every((n) => n.voice !== "rings" && !n.say), "mutable as any voice");
+});
+
 test("two players' words are a duet, left and right", () => {
 	const d = new Dance(PDP7_VOICES);
 	const notes = Array.from({ length: 32 }, (_, s) => d.beat({}, undefined, [{ name: "left-x", value: s * 40 }, { name: "right-x", value: s * 40 }])).flat();

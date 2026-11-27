@@ -20,15 +20,19 @@
 	 *   move: (label: string) => void,
 	 *   moves?: string[] | null,
 	 *   controls?: import('svelte').Snippet,
+	 *   guide?: import('svelte').Snippet,
 	 * }}
 	 */
-	let { path, move, moves = $bindable(null), controls } = $props();
+	let { path, move, moves = $bindable(null), controls, guide } = $props();
 
 	const ON = 'screen-angel';
 	const SPEAK = 'screen-angel-speak';
 	const REQUESTS = 'screen-angel-requests';
 	/** The requests under the field: open unless closed last time. */
 	let requestsOpen = $state(globalThis.localStorage?.getItem(REQUESTS) !== 'closed');
+	const GUIDE = 'screen-angel-guide';
+	/** The game's guide, last in the angel: closed unless opened last time. */
+	let guideOpen = $state(globalThis.localStorage?.getItem(GUIDE) === 'open');
 	const LOCKED = 'Keys go to the field below the screen. Turn the screen angel off to type here.';
 
 	let on = $state(true);
@@ -280,9 +284,32 @@
 		{@render controls?.()}
 	{/if}
 	{#if failed}<p class="say failed">{failed}</p>{/if}
+	{#if guide}
+		<details
+			class="guide"
+			open={guideOpen}
+			ontoggle={(e) => {
+				guideOpen = e.currentTarget.open;
+				globalThis.localStorage?.setItem(GUIDE, guideOpen ? 'open' : 'closed');
+			}}
+		>
+			<summary>Guide</summary>
+			{@render guide()}
+		</details>
+	{/if}
 </section>
 
 <style>
+	.guide {
+		margin-top: 0.4rem;
+	}
+	.guide > summary {
+		cursor: pointer;
+		font-weight: 600;
+	}
+	.guide > :global(:not(summary)) {
+		max-width: 52rem;
+	}
 	.angel {
 		margin-top: 0.6rem;
 		padding: 0.5rem 0.7rem;

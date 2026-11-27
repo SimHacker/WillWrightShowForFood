@@ -44,6 +44,23 @@ export type Note = {
 	readonly late?: number;
 	/** Play it with odd harmonics only (square, triangle), as the Bohlen-Pierce tuning wants. */
 	readonly odd?: boolean;
+	/** Speak instead of sound: the words, at the note's pitch, in time with the music. */
+	readonly say?: Say;
+};
+
+/**
+ * Words for the speech track. The page's voice speaks them (the site's chosen voice unless
+ * `voice` names one this browser has); the note's `midi` is the pitch, 60 the voice's own.
+ */
+export type Say = { readonly text: string; readonly rate?: number; readonly voice?: string };
+
+/** A sound of a structure played back: what `@wwsff/pixie`'s ringPhrase makes of a ring. */
+export type FlourishTone = {
+	readonly kind: "cell" | "letter" | "block" | "forward" | "close" | "rest";
+	readonly degree: number;
+	readonly depth: number;
+	readonly weight: number;
+	readonly pan: number;
 };
 
 /**
@@ -821,6 +838,7 @@ export class Dance {
 	private last: Chord | null = null;
 	private replies: { at: number; key: number; i: number }[] = [];
 	private fanfare: { at: number; score: number; pan: number } | null = null;
+	private playback: { at: number; tones: readonly FlourishTone[]; say: string } | null = null;
 	private penDown = false;
 	private penTip = -1;
 	private sounding = new Map<number, number>();
@@ -1089,6 +1107,53 @@ export class Dance {
 		this.resolving = true;
 	}
 
+	/**
+	 * Something was just drawn or built: play it back, a tone a sixteenth from the next one, in
+	 * the chord as it is then, and end on that chord softly while `say` is spoken. A new
+	 * flourish replaces one still playing: the latest drawing is the one to hear.
+	 */
+	flourish(tones: readonly FlourishTone[], say = ""): void {
+		if (tones.length || say) this.playback = { at: this.step + 1, tones, say };
+	}
+
+	/**
+	 * The drawing's own instruments, as the pen's are: a harp along a chain, a bell for each
+	 * letter of a name, a lead as loud as a block is long, a tom with a bell where a ring closes
+	 * on its head. A chain's depth lifts it an octave a level, two at most.
+	 */
+	private flourished(tones: readonly number[], t: Tuning): Note[] {
+		const f = this.playback;
+		if (!f) return [];
+		const i = this.step - f.at;
+		if (i < 0) return [];
+		const n = Math.max(1, tones.length);
+		const at = (root: number, d: number, up: number) => midiAt(root, (tones[d % n] ?? 0) + (Math.floor(d / n) + up) * t.steps, t);
+		if (i >= f.tones.length) {
+			this.playback = null;
+			const notes: Note[] = tones.map((tone, k) => ({ voice: "rings", timbre: "pad", midi: midiAt(60, tone, t), velocity: 0.35, pan: 0, order: k }));
+			if (f.say) notes.push({ voice: "say", timbre: "sing", midi: 60, velocity: 0.9, pan: 0, order: 0, say: { text: f.say } });
+			return notes;
+		}
+		const x = f.tones[i]!;
+		const up = Math.min(2, x.depth);
+		const v = 0.3 + 0.6 * x.weight;
+		switch (x.kind) {
+			case "rest":
+				return [];
+			case "close":
+				return [
+					{ voice: "rings", timbre: "tom", midi: at(48, 0, 0), velocity: 0.8, pan: x.pan, order: 0 },
+					{ voice: "rings", timbre: "bell", midi: at(72, 0, up), velocity: 0.5, pan: x.pan, order: 1 },
+				];
+			case "letter":
+				return [{ voice: "rings", timbre: "bell", midi: at(72, x.degree, 0), velocity: v, pan: x.pan, order: 0 }];
+			case "block":
+				return [{ voice: "rings", timbre: "lead", midi: at(60, x.degree, up), velocity: v, pan: x.pan, order: 0 }];
+			default:
+				return [{ voice: "rings", timbre: "harp", midi: at(60, x.degree, up), velocity: x.kind === "forward" ? v * 0.6 : v, pan: x.pan, order: 0 }];
+		}
+	}
+
 	private hooray(): Note[] {
 		const f = this.fanfare;
 		if (!f) return [];
@@ -1253,7 +1318,7 @@ export class Dance {
 		const t = this.tuning;
 		for (const h of hits[this.voices[0]?.id ?? ""] ?? []) this.stir = mix32(this.stir ^ h.key);
 		const notes: Note[] = this.voices.flatMap((v) => score(v, hits[v.id] ?? [], tones, t));
-		notes.push(...this.listen(watched, tones, t), ...this.hooray(), ...this.teletype(tones, t), ...this.riffed(step, now, t), ...this.answer(called, now, t));
+		notes.push(...this.listen(watched, tones, t), ...this.hooray(), ...this.flourished(tones, t), ...this.teletype(tones, t), ...this.riffed(step, now, t), ...this.answer(called, now, t));
 		const map = this.regions;
 		if (map) {
 			map.step(hits[this.voices[0]?.id ?? ""] ?? []);

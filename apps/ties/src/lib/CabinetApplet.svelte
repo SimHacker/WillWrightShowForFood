@@ -46,7 +46,7 @@
 		ByteShelf,
 		openOpfsShelf
 	} from '@wwsff/cabinet';
-	import { implant } from '@wwsff/pixie';
+	import { changedNodes, implant, ringPhrase, ringToScene, sayPhrase } from '@wwsff/pixie';
 	import { PROGRAMS, DEFAULT_PROGRAM } from './cabinet-programs.js';
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
@@ -364,6 +364,7 @@
 		const done = program?.finish?.(cpu) ?? null;
 		if (done && !danceFinished) dance.celebrate(done.score, done.pan ?? 0);
 		danceFinished = !!done;
+		ringListen();
 		const ms = performance.now();
 		if (danceLookup.text !== dance.listen || ms - danceLookup.at > 2000) {
 			const labels = new Map(symbols.map((s) => [s.name.toLowerCase(), s.addr]));
@@ -377,6 +378,43 @@
 			danceSpots = forthCell(read, labels, 'spots');
 		}
 		return danceCells.map((c) => ({ name: c.name, value: cpu.read(c.addr) }));
+	}
+	/**
+	 * A drawing heard as it is finished. The ring area the RINGS view shows (program.rings, by
+	 * symbol) is looked at a few times a second while the dance plays; once it has changed and
+	 * then held still for `rings.listen.quiet` ms (a drawing sequence over), what changed since
+	 * it last held still is played back and said. What was there at first is not news.
+	 */
+	let ringHeard = { settled: null, last: null, changedAt: 0, at: -Infinity };
+	const sameRing = (a, b) => a.beg === b.beg && a.words.length === b.words.length && a.words.every((w, i) => w === b.words[i]);
+	function ringListen() {
+		const listen = program?.rings?.listen ?? {};
+		if (!program?.rings || listen === false) return;
+		const ms = performance.now();
+		if (ms - ringHeard.at < 250) return;
+		ringHeard.at = ms;
+		const shot = captureRings();
+		if (!shot.image) return;
+		const img = shot.image;
+		if (!ringHeard.settled) {
+			ringHeard = { ...ringHeard, settled: img, last: img };
+			return;
+		}
+		if (!sameRing(img, ringHeard.last)) {
+			ringHeard = { ...ringHeard, last: img, changedAt: ms };
+			return;
+		}
+		if (ringHeard.last === ringHeard.settled || ms - ringHeard.changedAt < (listen.quiet ?? 700)) return;
+		const scene = ringToScene(img, shot.roots);
+		const phrase = ringPhrase(scene, changedNodes(scene, ringHeard.settled), { most: listen.most ?? 48 });
+		ringHeard = { ...ringHeard, settled: img };
+		if (phrase.tones.length) dance.flourish(phrase.tones, listen.say === false ? '' : sayPhrase(phrase));
+	}
+	/** RINGS' ♪: the whole structure played back, from a click, so the dance starts if it was off. */
+	function hearRings(scene) {
+		if (!dance.on) dance.toggle();
+		const phrase = ringPhrase(scene, null, { most: program?.rings?.listen?.most ?? 48 });
+		dance.flourish(phrase.tones, sayPhrase(phrase));
 	}
 	const signed18 = (w) => (w & 0o400000 ? (w & 0o777777) - 0o1000000 : w & 0o777777);
 	/** Where the pointer is on the tube, in 340 points, and whether its button is down; null off the tube. */
@@ -1601,7 +1639,7 @@
 	// RINGS: labels or octal addresses of the cells holding the bounds and the root names.
 	let ringsCfg = $state(untrack(() => ringsConfigFor(programById(programId))));
 	function ringsConfigFor(p) {
-		const { implant: _, ...cells } = p?.rings ?? {};
+		const { implant: _, listen: __, ...cells } = p?.rings ?? {};
 		return { beg: '', end: '', roots: '', ...cells };
 	}
 	function ringAddr(text) {
@@ -3145,6 +3183,7 @@
 		programId = next.id;
 		ttyCfg = ttyConfigFor(next);
 		ringsCfg = ringsConfigFor(next);
+		ringHeard = { settled: null, last: null, changedAt: 0, at: -Infinity };
 		memView = memViewFor(next);
 		memFollow = true;
 		memShownBase = -1;
@@ -4380,7 +4419,7 @@
 		{/if}
 		{#if ringsOpen && hasRings}
 			<div class="row app" data-panel="rings">
-				<RingView capture={captureRings} implant={canImplant ? implantRings : null} name={symbolic} height={ringsHeight + ringsExtra} onOpen={(a) => openMemAt(a)} />
+				<RingView capture={captureRings} implant={canImplant ? implantRings : null} hear={hearRings} name={symbolic} height={ringsHeight + ringsExtra} onOpen={(a) => openMemAt(a)} />
 				<button
 					type="button"
 					class="tty-grip"

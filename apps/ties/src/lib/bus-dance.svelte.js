@@ -196,6 +196,15 @@ export class BusDance {
 		this.#dance.regions = new Regions(list);
 	}
 
+	/**
+	 * Something was just drawn or built: play it back, and say what it was at the end
+	 * (`@wwsff/pixie`'s ringPhrase and sayPhrase make both from a ring).
+	 * @param {readonly import('@wwsff/cabinet/dance').FlourishTone[]} tones @param {string} [say]
+	 */
+	flourish(tones, say = '') {
+		if (this.on) this.#dance.flourish(tones, say);
+	}
+
 	/** A game or round is over: a hooray, 0 barely to 1 best, panned toward the winner. @param {number} score @param {number} [pan] */
 	celebrate(score, pan = 0) {
 		if (this.on) this.#dance.celebrate(score, pan);

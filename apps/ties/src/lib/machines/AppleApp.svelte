@@ -9,6 +9,7 @@
 	import { panelSeedBytes } from '@wwsff/cabinet/dance';
 	import MicroM8 from '../MicroM8.svelte';
 	import ScreenAngel from './ScreenAngel.svelte';
+	import GuideDoc from '../GuideDoc.svelte';
 	import { apple } from '../apple.svelte.js';
 	import { urlSeed } from '../korz-apple.svelte.js';
 	import { chargenUrl, diskUrl } from '../catalog.js';
@@ -177,7 +178,11 @@
 {/snippet}
 
 {#snippet angel()}
-	<ScreenAngel path={app.angel ?? ''} move={moveNamed} bind:moves={allowed} controls={movesRow} />
+	<ScreenAngel path={app.angel ?? ''} move={moveNamed} bind:moves={allowed} controls={movesRow} guide={app.guide ? guideDoc : undefined} />
+{/snippet}
+
+{#snippet guideDoc()}
+	<GuideDoc at={app.guide ?? ''} />
 {/snippet}
 
 {#snippet play()}

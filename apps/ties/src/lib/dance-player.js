@@ -3,6 +3,7 @@
 // what anything driving the mix (a slider, the ECG, a program) calls.
 
 import { hushWhenHidden } from './hidden-hush.js';
+import { utterance } from './voice.svelte.js';
 
 /** @typedef {import('@wwsff/cabinet/dance').Note} Note */
 
@@ -197,7 +198,38 @@ export class DancePlayer {
 		const ctx = this.#ctx;
 		if (!ctx || ctx.state !== 'running') return;
 		const now = ctx.currentTime + 0.02;
-		for (const n of notes) this.#note(ctx, n, now + n.order * STRUM + ((n.late ?? 0) * stepMs) / 1000);
+		for (const n of notes) {
+			const t = now + n.order * STRUM + ((n.late ?? 0) * stepMs) / 1000;
+			if (n.say) this.#say(ctx, n, t);
+			else this.#note(ctx, n, t);
+		}
+	}
+
+	/**
+	 * The speech track: words spoken at their time in the music, by the site's voice or the one
+	 * the note names if this browser has it. The note's pitch is the voice's (60 its own, an
+	 * octave up twice as high), and the dance's volume and mute are the voice's too.
+	 * @param {AudioContext} ctx @param {Note} n @param {number} t
+	 */
+	#say(ctx, n, t) {
+		const synth = globalThis.speechSynthesis;
+		const say = n.say;
+		if (!synth || !say || this.#volume <= 0) return;
+		setTimeout(
+			() => {
+				const u = utterance(say.text);
+				const named = say.voice ? synth.getVoices().find((v) => v.name.startsWith(/** @type {string} */ (say.voice))) : undefined;
+				if (named) {
+					u.voice = named;
+					u.lang = named.lang;
+				}
+				u.pitch = Math.max(0.1, Math.min(2, 2 ** ((n.midi - 60) / 12)));
+				u.rate = say.rate ?? 1;
+				u.volume = Math.min(1, this.#volume * (this.#ducked ? DUCKED : 1) * (0.15 + 0.85 * n.velocity));
+				synth.speak(u);
+			},
+			Math.max(0, (t - ctx.currentTime) * 1000)
+		);
 	}
 
 	/** @type {AudioBuffer | null} */

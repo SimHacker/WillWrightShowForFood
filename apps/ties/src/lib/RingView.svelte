@@ -9,9 +9,10 @@
 	/**
 	 * capture() photographs core: { image, roots } or { error }. implant(image) puts a ring
 	 * image into core, or is null if the program can't take one. name(addr) gives a symbol.
-	 * @type {{ capture: (() => any) | null, implant?: ((image: any) => any) | null, name?: (addr: number) => string, onOpen?: (addr: number) => void, height?: number }}
+	 * hear(scene) plays what is shown back as music, or is absent where there is no music.
+	 * @type {{ capture: (() => any) | null, implant?: ((image: any) => any) | null, hear?: ((scene: any) => void) | null, name?: (addr: number) => string, onOpen?: (addr: number) => void, height?: number }}
 	 */
-	let { capture, implant = null, name = () => '', onOpen, height = 260 } = $props();
+	let { capture, implant = null, hear = null, name = () => '', onOpen, height = 260 } = $props();
 
 	let canvas = $state(null);
 	let width = $state(400);
@@ -206,6 +207,9 @@
 			''
 		].join('\n');
 
+	function hearIt() {
+		if (scene) hear?.(scene);
+	}
 </script>
 
 <div class="rings" bind:clientWidth={width}>
@@ -217,6 +221,7 @@
 		<button type="button" class="chip" title="Save what's shown as the PIX transfer stream (.pix), what the Titan link carries" onclick={() => save('pix')}>&gt;PIX</button>
 		<button type="button" class="chip" title="Save what's shown as YAML (.yml), one octal word a line with its address" onclick={() => save('yaml')}>&gt;YAML</button>
 		<button type="button" class="chip" title="Save what's shown as JSON (.json), words in octal" onclick={() => save('json')}>&gt;JSON</button>
+		{#if hear}<button type="button" class="chip" title="Hear it: the whole structure played back from the root, a tone a cell, climbing along each chain, a bell a letter, a tom where a ring closes; then said. The dance plays each new drawing this way by itself." onclick={hearIt}>♪</button>{/if}
 		{#if source !== 'live'}<button type="button" class="chip" title="Back to the running machine's rings" onclick={() => ((source = 'live'), (scene = null), (last = null))}>LIVE</button>{/if}
 		<span class="mem-hint">{#if hover}{o(hover.addr)}{name(hover.addr) ? ` ${name(hover.addr)}` : ''} {hover.kind} {o(hover.word)}{#if hover.cdrWord !== undefined} . {o(hover.cdrWord)}{/if}{hover.label ? ` ${hover.label}` : ''}{:else}{note}{/if}</span>
 	</div>
