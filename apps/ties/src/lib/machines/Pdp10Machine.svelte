@@ -17,6 +17,7 @@
 	import PagePrefs from '../PagePrefs.svelte';
 	import Pinnable from '../Pinnable.svelte';
 	import VoicePicker from '../VoicePicker.svelte';
+	import VoiceTone from '../VoiceTone.svelte';
 	import { toolbar } from '../toolbar.svelte.js';
 	import { CATALOG_BASE, catalog } from '../catalog.js';
 	import { COMPASS, PROGRAMS, runLine } from '../its-programs.js';
@@ -198,6 +199,7 @@
 			bar.offer('baud', "the console's baud rate", baudMenu, 'control', ['pdp10-console']),
 			bar.offer('tty-view', 'Paper or glass', viewSwitch, 'control', ['pdp10-console']),
 			bar.offer('tty-speak', 'Speak', speakToggle, 'control', ['pdp10-console']),
+			bar.offer('tty-hush', 'Hush', hushButton, 'control', ['pdp10-console']),
 			bar.offer('tty-bell', 'The bell', bellToggle, 'control', ['pdp10-console']),
 			bar.offer('pdp10-switches', 'Data switches', switchesPanel, 'panel', ['pdp10-run']),
 			bar.offer('altmode', 'Altmode', altmodeKey, 'control', ['pdp10-programs', 'pdp10-prog-ddt']),
@@ -265,11 +267,12 @@
 			{#each BAUDS as b (b.baud)}<option value={b.baud} title={b.title}>{b.label}</option>{/each}
 		</select>
 	</label>
-	{#if pdp10.waiting}
-		<button title="{pdp10.waiting.toLocaleString()} characters ITS has sent are waiting to print: print them all now" onclick={() => pdp10.flush()}
-			>⏩ {pdp10.waiting.toLocaleString()}</button
-		>
-	{/if}
+	<button
+		class="flush"
+		disabled={!pdp10.waiting}
+		title={pdp10.waiting ? `${pdp10.waiting.toLocaleString()} characters ITS has sent are waiting to print: print them all now` : 'Nothing is waiting to print'}
+		onclick={() => pdp10.flush()}>⏩</button
+	>
 {/snippet}
 
 {#snippet viewSwitch(compact = false)}
@@ -280,6 +283,10 @@
 			>
 		{/each}
 	</span>
+{/snippet}
+
+{#snippet hushButton(compact = false)}
+	<button title="Hush: stop talking now and drop what was waiting to be read. Speak stays on for what ITS prints next." onclick={() => pdp10.voice.hush()}>🤫{compact ? '' : ' Hush'}</button>
 {/snippet}
 
 {#snippet speakToggle(compact = false)}
@@ -454,8 +461,8 @@
 		hint="The console teletype: paper or a glass screen, how fast it prints, speaking, the bell"
 		summary="{VIEWS.find((v) => v.id === pdp10.view)?.label} · {BAUDS.find((b) => b.baud === pdp10.baud)?.label}{pdp10.voice.speak ? ' · speaking' : ''}"
 	>
-		<div class="row"><Pinnable {bar} id="tty-view" /><Pinnable {bar} id="baud" /><Pinnable {bar} id="tty-speak" /><Pinnable {bar} id="tty-bell" /></div>
-		{#if pdp10.voice.speak}<div class="row"><VoicePicker /></div>{/if}
+		<div class="row"><Pinnable {bar} id="tty-view" /><Pinnable {bar} id="baud" /><Pinnable {bar} id="tty-speak" /><Pinnable {bar} id="tty-hush" /><Pinnable {bar} id="tty-bell" /></div>
+		{#if pdp10.voice.speak}<div class="row"><VoicePicker /><VoiceTone /></div>{/if}
 		{#if pdp10.running && pdp10.told && pdp10.told !== pdp10.view}
 			<p class="note">
 				ITS still thinks the console is {pdp10.told === 'glass' ? 'glass' : 'paper'}.
@@ -858,7 +865,11 @@
 		padding: 0.1rem 0.8rem 0.1rem 0;
 		text-align: left;
 	}
+	/* Toolbar controls keep their size whatever they show, so nothing moves under the pointer. */
 	.readout {
+		display: inline-block;
+		min-width: 7.5em;
+		white-space: nowrap;
 		font-variant-numeric: tabular-nums;
 	}
 	.verdict {

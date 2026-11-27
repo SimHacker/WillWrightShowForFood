@@ -62,6 +62,7 @@
 	import KorzBrowser from './KorzBrowser.svelte';
 	import { block7Node, compiler7Node, dispatchNode, seaNode } from '@wwsff/cabinet/korz/inspect';
 	import VoicePicker from './VoicePicker.svelte';
+	import VoiceTone from './VoiceTone.svelte';
 	import { currentVoice } from './voice.svelte.js';
 
 	// `onprogram`, when given, owns the program menu: a pick is passed to it (the catalog page
@@ -4447,6 +4448,7 @@
 					{#if globalThis.speechSynthesis}
 						<span class="tty-cfg-label">Voice</span>
 						<span class="tty-cfg-row"><VoicePicker /></span>
+						<span class="tty-cfg-row"><VoiceTone /></span>
 					{/if}
 					<span class="tty-cfg-label">Bell</span>
 					<span class="tty-cfg-row">

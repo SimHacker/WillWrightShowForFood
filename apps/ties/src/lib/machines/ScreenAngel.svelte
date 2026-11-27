@@ -10,6 +10,7 @@
 	import { apple } from '../apple.svelte.js';
 	import { loadAngel } from '../angels.js';
 	import VoicePicker from '../VoicePicker.svelte';
+	import VoiceTone from '../VoiceTone.svelte';
 	import { utterance } from '../voice.svelte.js';
 
 	/** @typedef {import('@wwsff/cabinet/angel').StateSpec} StateSpec */
@@ -233,7 +234,7 @@
 	<div class="bar">
 		<label><input type="checkbox" checked={on} onchange={(e) => setOn(e.currentTarget.checked)} /> Screen angel</label>
 		<label><input type="checkbox" checked={speaking} disabled={!on} onchange={(e) => setSpeaking(e.currentTarget.checked)} /> Speak</label>
-		{#if on && speaking}<VoicePicker />{/if}
+		{#if on && speaking}<VoicePicker /><VoiceTone />{/if}
 		{#if on && state}<span class="where" title="The screen angel's state, and Apple time spent in it">{state.id} · {Math.floor(held / 60)}:{String(Math.floor(held % 60)).padStart(2, '0')}</span>{/if}
 	</div>
 	{#if on}

@@ -4,7 +4,7 @@
 // all of it; typing cuts the reading off, since the person has moved on. The echo of what the
 // person typed is not read back; they heard it as they typed.
 
-import { currentVoice } from './voice.svelte.js';
+import { currentVoice, tone } from './voice.svelte.js';
 
 /** How long the machine is quiet before what it printed is read. */
 const PAUSE_MS = 500;
@@ -101,7 +101,7 @@ export class TtyVoice {
 			this.#speech = new SpeechSystem();
 			await this.#speech.ready;
 		}
-		const opts = { rate: 1.1 };
+		const opts = tone();
 		const voice = currentVoice();
 		for (const piece of pieces(text)) {
 			if (voice) this.#speech.speakWithVoice(piece, voice, opts);
@@ -114,5 +114,13 @@ export class TtyVoice {
 		this.#said = '';
 		this.#echo = '';
 		this.#speech?.cancel();
+	}
+
+	/** Stop talking now, and drop what was waiting to be read; Speak stays on for what comes next. */
+	hush() {
+		clearTimeout(this.#timer);
+		this.#said = '';
+		this.#speech?.cancel();
+		globalThis.speechSynthesis?.cancel();
 	}
 }

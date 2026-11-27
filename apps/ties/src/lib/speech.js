@@ -685,9 +685,9 @@ class SpeechManager {
     }
     
     _applyOptions(utterance, config, voice) {
-        utterance.pitch = config.pitch || 1.0;
-        utterance.rate = config.rate || 1.0;
-        utterance.volume = config.volume || 1.0;
+        utterance.pitch = config.pitch ?? 1.0;
+        utterance.rate = config.rate ?? 1.0;
+        utterance.volume = config.volume ?? 1.0;
         
         utterance.onstart = (event) => {
             if (this.onSpeakStart) this.onSpeakStart(event, voice);

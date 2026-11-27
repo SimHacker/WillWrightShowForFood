@@ -2,7 +2,8 @@
  * The Machine Room's speaking voice, one for the whole site: the teletype's read-aloud and the screen
  * angel. The choice is kept in localStorage; empty means the best voice this browser has from a
  * list of clear, natural female English voices, best first. Your voice, for what you type while
- * an Apple reads aloud, is kept the same way.
+ * an Apple reads aloud, is kept the same way, and so are the volume, speed and pitch every
+ * voice speaks at.
  */
 
 const KEY = 'cabinet-voice';
@@ -45,6 +46,14 @@ const YOURS = [
 ];
 const YOURS_KEY = 'cabinet-voice-you';
 
+/** The volume, speed and pitch every utterance takes: SpeechSynthesisUtterance's own ranges, trimmed. */
+export const TONE = {
+	volume: { label: 'Volume', min: 0, max: 1, step: 0.05, normal: 1, key: 'cabinet-voice-volume' },
+	rate: { label: 'Speed', min: 0.5, max: 3, step: 0.05, normal: 1, key: 'cabinet-voice-rate' },
+	pitch: { label: 'Pitch', min: 0, max: 2, step: 0.05, normal: 1, key: 'cabinet-voice-pitch' }
+};
+/** @typedef {keyof typeof TONE} ToneName */
+
 export const voice = $state({
 	/** The chosen voice's name; empty for the default. */
 	name: '',
@@ -52,6 +61,9 @@ export const voice = $state({
 	you: '',
 	/** English voices, best first. @type {SpeechSynthesisVoice[]} */
 	voices: [],
+	volume: TONE.volume.normal,
+	rate: TONE.rate.normal,
+	pitch: TONE.pitch.normal,
 });
 
 let started = false;
@@ -67,8 +79,26 @@ export function startVoices() {
 	started = true;
 	voice.name = localStorage.getItem(KEY) ?? '';
 	voice.you = localStorage.getItem(YOURS_KEY) ?? '';
+	for (const [k, t] of Object.entries(TONE)) {
+		const n = Number(localStorage.getItem(t.key) ?? NaN);
+		voice[/** @type {ToneName} */ (k)] = Number.isFinite(n) ? Math.min(t.max, Math.max(t.min, n)) : t.normal;
+	}
 	refresh();
 	speechSynthesis.addEventListener('voiceschanged', refresh);
+}
+
+/** Set the volume, speed or pitch every voice speaks at. @param {ToneName} k @param {number} v */
+export function setTone(k, v) {
+	const t = TONE[k];
+	voice[k] = Math.min(t.max, Math.max(t.min, v));
+	if (voice[k] === t.normal) localStorage.removeItem(t.key);
+	else localStorage.setItem(t.key, String(voice[k]));
+}
+
+/** The volume, speed and pitch, as speech options. */
+export function tone() {
+	startVoices();
+	return { volume: voice.volume, rate: voice.rate, pitch: voice.pitch };
 }
 
 /** @param {string} name the voice's name, or empty for the default */
@@ -122,6 +152,7 @@ export function utterance(text, v = currentVoice()) {
 		u.voice = v;
 		u.lang = v.lang;
 	}
+	Object.assign(u, tone());
 	return u;
 }
 
