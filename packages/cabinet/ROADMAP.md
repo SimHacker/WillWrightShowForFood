@@ -120,7 +120,7 @@ it never talks over a screen reader.
 | 2 | contrast is low | half fixed | §2 |
 | 3 | 15 cm window, not 25 cm | the tube can be dragged larger; a true-size button needs the screen's pixels per cm | §6 |
 | 4 | what do the 17 switches do? | the console's ACCUMULATOR switches, read by `OAS`/`LAS`. SYMELEC never reads them; DUEL's players fly with them | label them per tape, and say so on SYMELEC's page |
-| 5 | a line printout of the house | 🖨️ saves the tube as SVG, with DJS subpictures as groups; `toYaml` gives the display list as text | add YAML and PNG to the button, and tell him |
+| 5 | a line printout of the house | 🖨️ opens the tube as SVG in a new tab, with DJS subpictures as groups; `toYaml` gives the display list as text | add YAML and PNG to the button, and tell him |
 | 6 | the RSP data of his Bayesian network | PIXIE exchange, [TAGS-AND-PIES §7](TAGS-AND-PIES.md#7-pixie-as-the-exchange-format) | walk the structure from core, export as YAML and `encodeTransfer`; a "save structure" button |
 | 7 | a lit line catches the cross | authentic 1972 behavior, and he agrees he'd now program it differently | none; it stays, documented in TRACKING.md |
 

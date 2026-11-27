@@ -124,7 +124,8 @@ row (program, readout), then the program's rows: Demo and the
 recorder, key help, then the control row and its panels. The control
 row holds three panel chips, REGS TTY MEMORY, then ⏸️/▶️ Stop/Run,
 ⏭️ Step (stop, then one instruction), the speed slider, 🔄 Reset, and at
-the right the outputs, 🖨️ SVG and 📷 PNG to the clipboard.
+the right the outputs, 🖨️ SVG and 📷 PNG, each opened in a new tab
+(Shift-click puts it on the clipboard, Option-click downloads it).
 
 The speed slider is one notched slot, slowest at the left. The puck
 shows only the notch it is on and snaps; arrow keys, Home and End move

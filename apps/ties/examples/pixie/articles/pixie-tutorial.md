@@ -169,7 +169,7 @@ Open **MEMORY** and choose the **source** view: the 1972 listing, with 👉 on t
 
 Time is counted in machine cycles, so a replay draws the same picture at any speed. A good way to film: record your session first, then replay it at 1× while the screen recorder runs.
 
-- Copy screen copies the tube to the clipboard as a PNG. Print screen saves it as SVG.
+- 📷 opens the tube as a PNG in a new tab, and 🖨️ opens it as SVG. Shift-click either to put it on the clipboard, Option-click to download it.
 
 ## A five-minute take
 

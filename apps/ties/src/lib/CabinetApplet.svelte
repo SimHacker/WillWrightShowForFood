@@ -8,7 +8,7 @@
 	import { asset } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { createBeeper } from './beeper.js';
-	import { savePicture } from './save-image.js';
+	import { canvasPng, savePicture } from './save-image.js';
 	import { switchDrawing } from './switch-drawing.js';
 	import {
 		Pdp7,
@@ -2735,8 +2735,8 @@
 	async function onPrintScreen(event) {
 		if (!t340) return;
 		const svg = new Blob([printScreen(t340, { size: 1024 })], { type: 'image/svg+xml' });
-		printed = await savePicture(event, Promise.resolve(svg), 'image/svg+xml', `${programId}-screen.svg`).then(
-			(how) => (how === 'saved' ? '' : '✅'),
+		printed = await savePicture(event, svg, 'image/svg+xml', `${programId}-screen.svg`).then(
+			(how) => (how.startsWith('copied') ? '✅' : ''),
 			(e) => (console.error('print screen', e), '❌')
 		);
 		if (printed) setTimeout(() => (printed = ''), 1200);
@@ -2928,10 +2928,8 @@
 	async function onCopyScreen(event) {
 		const canvas = canvasEl;
 		if (!canvas) return;
-		/** @type {Promise<Blob>} */
-		const png = new Promise((resolve, reject) => canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('no image'))), 'image/png'));
 		try {
-			shot = (await savePicture(event, png, 'image/png', `${programId}-screen.png`)) === 'saved' ? '' : '✅';
+			shot = (await savePicture(event, canvasPng(canvas), 'image/png', `${programId}-screen.png`)).startsWith('copied') ? '✅' : '';
 		} catch (e) {
 			shot = '❌';
 			console.error('copy screen', e);
@@ -3852,16 +3850,16 @@
 					<button
 						type="button"
 						class="icon"
-						aria-label="Save the tube as SVG"
-						title="Save the tube as SVG, its vectors as drawn. Shift-click: put it on the clipboard instead (as a picture in Chrome and Edge, as SVG text elsewhere)."
+						aria-label="Open the tube as SVG in a new tab"
+						title="Open the tube as SVG in a new tab, its vectors as drawn. Shift-click: put it on the clipboard (as a picture in Chrome and Edge, as SVG text elsewhere). Option-click: download it."
 						disabled={status !== 'live'}
 						onclick={onPrintScreen}>{printed || '🖨️'}</button
 					>
 					<button
 						type="button"
 						class="icon"
-						aria-label="Save the tube as PNG"
-						title="Save the tube as PNG, the picture as it glows. Shift-click: put it on the clipboard instead."
+						aria-label="Open the tube as PNG in a new tab"
+						title="Open the tube as PNG in a new tab, the picture as it glows. Shift-click: put it on the clipboard. Option-click: download it."
 						disabled={status !== 'live'}
 						onclick={onCopyScreen}>{shot || '📷'}</button
 					>
