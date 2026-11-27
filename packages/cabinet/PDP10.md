@@ -618,6 +618,53 @@ And `listening(unit, ear)` wraps any unit so every floating instruction reports 
 operands, result and flags. That's where VM Radio's floats come from: a MACSYMA `float()`
 or a MacLisp numeric loop sounding its own arithmetic, at no cost when nothing is listening.
 
+## Fuzzy floats
+
+[fuzzy.ts](src/ka10/fuzzy.ts) is a unit with numerical error on a dial. `fuzzy(unit, dial)`
+lets `unit` compute, then perturbs the result word by a shape, at a rate, on chosen operations,
+reproducibly from a seed:
+
+- `ulp=N`: plus or minus up to N in the last place;
+- `bias=N`: always N, a rounding that leans;
+- `bits=LO-HI`: one fraction bit flipped;
+- `chop=N`: the low N bits cleared, a machine with a shorter fraction;
+- `exponent=N`: the exponent off by up to N.
+
+It keeps a log of every result it changed, with the exact value beside the fuzzed one.
+
+**Testing the tests.** The randomized float test is run against fuzzy units of every shape at
+rates down to one result in a thousand, and it must catch each one at the first perturbation:
+it does, every time. The same test passes a fuzzy unit dialed to rate 0. A float test that
+can't tell one unit in the last place from exact wasn't testing floating point, and now
+that's checked.
+
+**Asking programs how much they care.** `--fuzz DIAL` on `ka10-its.mjs` runs the halves switch
+with a fuzzy unit, and MACSYMA answers:
+
+| dial | `float(sum(1/k^2,k,1,200))` | `sqrt(2.0)*atan(1.0)*4` | results changed |
+|---|---|---|---|
+| exact | 1.63994655 | 4.44288296 | — |
+| `ulp=1,rate=0.01` | 1.63994655 | 4.44288296 | 1 of 116 |
+| `ulp=100,rate=0.1` | 1.63994655 | 4.4428763 | 11 of 116 |
+| `chop=8` | 1.63994598 | 4.44285583 | 46 of 116 |
+| `chop=16` | 1.63867188 | 4.4375 | 51 of 116 |
+| `bias=1000` | 1.63996929 | 4.4434286 | 119 of 119 |
+
+The sum is computed in exact rationals and converted once, so scattered noise doesn't reach
+it, and only error in the final conversion does. The square root and arctangent are MACSYMA's
+own float subroutines, so the noise in them shows. With `bias=1000`, MACSYMA's
+`float(%e^%pi-%pi)` prints `%E^%PI - 0.9999851 %PI`: even the coefficient 1.0 it made
+along the way leans.
+
+**Why it's a Korz thing.** In the halves switch the unit is one field you assign. In a Korz
+rung the floating dimension is a slot table, and fuzz is a layer pushed on it. A layer can be
+scoped like any other: to one ITS job, by its page tables, to a range of PCs, to the next
+thousand instructions, or to `fmp` alone. `why` on a printed digit can then name the layer and
+the logged perturbations that produced it. And a layer pops off again, so you can run a
+program exact, fuzz one routine, and compare, without touching the program or the emulator.
+The same plug carries the listening unit for VM Radio, so the error itself can be heard: noise
+as noise.
+
 **Next.** The double shifts and the integer multiply and divide in halves, then the Korz rungs.
 
 ## Phases

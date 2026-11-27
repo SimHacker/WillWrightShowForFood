@@ -3,11 +3,12 @@
 // `boot ptr` reads DSKDMP off paper tape, then `its` and Altmode G start the system.
 //
 //   node scripts/ka10-its.mjs [workdir] [--rung simh|halves] [--login NAME] [--history N] [--seconds S]
-//                             [--cmd TEXT --wait TEXT]...
+//                             [--fuzz DIAL] [--cmd TEXT --wait TEXT]...
 //
 // After logging in, each --cmd is typed with a Return and the console is run until it prints
 // the --wait that follows it, so `--cmd :macsym --wait "(C1)" --cmd "diff(x^3,x);" --wait "(C2)"`
-// drives MACSYMA. In TEXT, \e is Altmode and ^X is Control-X.
+// drives MACSYMA. --fuzz puts the halves switch's floating point through fuzzy.ts with a dial
+// such as ulp=1,rate=0.01 or chop=8. In TEXT, \e is Altmode and ^X is Control-X.
 //
 // workdir holds dskdmp.rim and the packs rp03.0 to rp03.3 from the PDP-10/its
 // project's prebuilt image (default ~/GroundUp/git/its/dl/work). The packs are
@@ -15,6 +16,8 @@
 import { openSync, readSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
+import { exactFloat } from "../dist/ka10/float.js";
+import { fuzzy, parseDial } from "../dist/ka10/fuzzy.js";
 import { ItsMachine } from "../dist/ka10/its.js";
 
 const args = process.argv.slice(2);
@@ -29,6 +32,7 @@ const login = flag("--login", "");
 const history = Number(flag("--history", "0"));
 const seconds = Number(flag("--seconds", "120"));
 const rung = flag("--rung", "simh");
+const fuzz = flag("--fuzz", "");
 const cmds = [];
 for (let i = args.indexOf("--cmd"); i >= 0; i = args.indexOf("--cmd")) {
 	const unescape = (t) => t.replace(/\\e/g, "\x1b").replace(/\^([@-_])/g, (_, c) => String.fromCharCode(c.charCodeAt(0) - 64));
@@ -63,6 +67,10 @@ class FilePack {
 
 const m = new ItsMachine({ rung, print: (ch) => process.stdout.write(String.fromCharCode(ch)) });
 const cpu = m.cpu;
+if (fuzz) {
+	if (rung !== "halves") throw new Error("--fuzz needs --rung halves");
+	cpu.float = fuzzy(exactFloat, parseDial(fuzz));
+}
 if (history) cpu.setHistory(history);
 // The unit order of build/build.tcl: the system pack is the third one written.
 m.dp.attach(0, new FilePack(join(dir, "rp03.2")));
@@ -137,6 +145,7 @@ if (ok) {
 		}
 	}
 }
+if (fuzz) console.error(`[fuzz ${fuzz}: ${cpu.float.perturbed} of ${cpu.float.results} floating results changed]`);
 if (cpu.coprocessed) {
 	const top = [...cpu.coprocessed.entries()].filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1]);
 	console.error(`[coprocessed: ${top.map(([op, n]) => `${op.toString(8)}×${n}`).join(" ") || "none"}]`);

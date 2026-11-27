@@ -1,6 +1,7 @@
 import { strict as assert } from "node:assert";
 import { test } from "node:test";
-import { exactFloat, listening } from "./float.js";
+import { exactFloat, type FloatUnit, listening } from "./float.js";
+import { type FuzzDial, fuzzy, parseDial } from "./fuzzy.js";
 import { Ka10Halves } from "./halves.js";
 import { Ka10 } from "./ka10.js";
 
@@ -32,19 +33,23 @@ function word(r: () => number): bigint {
 	return r() < 0.5 ? pos : (FMASK + 1n - pos) & FMASK;
 }
 
-function machines(): [Ka10, Ka10Halves] {
+function machines(float: FloatUnit | undefined = exactFloat): [Ka10, Ka10Halves] {
 	const a = new Ka10({ memWords: 256 * 1024, its: false, mpx: false });
-	const b = new Ka10Halves({ memWords: 256 * 1024, its: false, mpx: false });
+	const b = new Ka10Halves({ memWords: 256 * 1024, its: false, mpx: false, float });
 	a.reset();
 	b.reset();
 	return [a, b];
 }
 
-test("the exact float unit agrees with the SIMH port on every floating instruction and mode", () => {
-	const [a, b] = machines();
-	const r = rng(Number(process.env.KA10_FLOAT_SEED ?? 1966));
-	const cases = Number(process.env.KA10_FLOAT_CASES ?? 60000);
-	const seen = new Set<string>();
+/**
+ * The oracle: random floating instructions in every mode on the SIMH port and on the halves
+ * switch with `unit`, comparing the accumulators, memory, flags and PC. Returns the first case
+ * that differs and how many cases it took, or undefined.
+ */
+function firstDisagreement(unit: FloatUnit, cases: number, seed: number): { n: number; what: string } | undefined {
+	const [a, b] = machines(unit);
+	const r = rng(seed);
+	const seen = new Set<number>();
 	for (let n = 0; n < cases; n++) {
 		const op = OPS[Math.floor(r() * OPS.length)]!;
 		const immediate = (op & 7) === 5 && op >= 0o140;
@@ -62,14 +67,54 @@ test("the exact float unit agrees with the SIMH port on every floating instructi
 			cpu.PC = 0o1000;
 			cpu.step(1);
 		}
-		const got = (cpu: Ka10 | Ka10Halves) => [cpu.examine(1), cpu.examine(2), cpu.examine(0o2000), cpu.FLAGS, cpu.PC];
+		const got = (cpu: Ka10 | Ka10Halves) => `${cpu.examine(1).toString(8)} ${cpu.examine(2).toString(8)} ${cpu.examine(0o2000).toString(8)} ${cpu.FLAGS.toString(8)} ${cpu.PC.toString(8)}`;
 		const ga = got(a);
 		const gb = got(b);
-		const what = `${op.toString(8)} AC=${ac.toString(8)} AC+1=${ac1.toString(8)} E=${(immediate || op === 0o132 ? BigInt(y) : mem).toString(8)}`;
-		assert.deepEqual(gb, ga, what);
-		seen.add(op.toString(8));
+		if (ga !== gb) {
+			const e = immediate || op === 0o132 ? BigInt(y) : mem;
+			return { n, what: `${op.toString(8)} AC=${ac.toString(8)} AC+1=${ac1.toString(8)} E=${e.toString(8)}: SIMH ${ga}, halves ${gb}` };
+		}
+		seen.add(op);
 	}
-	assert.equal(seen.size, OPS.length);
+	assert.equal(seen.size, OPS.length, "every floating opcode was tried");
+	return undefined;
+}
+
+test("the exact float unit agrees with the SIMH port on every floating instruction and mode", () => {
+	const d = firstDisagreement(exactFloat, Number(process.env.KA10_FLOAT_CASES ?? 60000), Number(process.env.KA10_FLOAT_SEED ?? 1966));
+	assert.equal(d, undefined, d?.what);
+});
+
+test("the oracle catches the first perturbation of every shape of fuzz, and passes fuzz dialed to zero", (t) => {
+	assert.equal(firstDisagreement(fuzzy(exactFloat, { shape: { kind: "ulp", size: 4 }, rate: 0 }), 20000, 7), undefined);
+	const dials: FuzzDial[] = [
+		{ shape: { kind: "ulp", size: 1 }, rate: 0.001 },
+		{ shape: { kind: "bias", size: 1 }, rate: 0.001 },
+		{ shape: { kind: "bits", low: 0, high: 0 }, rate: 0.001 },
+		{ shape: { kind: "chop", bits: 1 }, rate: 0.01 },
+		{ shape: { kind: "exponent", size: 1 }, rate: 0.001 },
+		{ shape: { kind: "ulp", size: 1 }, rate: 0.01, ops: ["fdvl"] },
+	];
+	for (const dial of dials) {
+		const u = fuzzy(exactFloat, { ...dial, seed: 3 });
+		const d = firstDisagreement(u, 60000, 1966);
+		assert.ok(d, `missed ${JSON.stringify(dial)}`);
+		assert.equal(u.perturbed, 1, "caught at the first perturbation");
+		t.diagnostic(`${JSON.stringify(dial)} caught after ${d.n + 1} cases`);
+	}
+});
+
+test("a fuzzy unit logs what it changed, and the same seed changes the same things", () => {
+	const run = () => {
+		const u = fuzzy(exactFloat, { shape: { kind: "chop", bits: 4 }, rate: 0.5, seed: 11 });
+		firstDisagreement(u, 2000, 5);
+		return u;
+	};
+	const u = run();
+	assert.ok(u.perturbed > 0);
+	assert.ok(u.log.every((p) => p.fuzzed % 16 === 0 && p.fuzzed !== p.exact));
+	assert.deepEqual(run().log, u.log);
+	assert.deepEqual(parseDial("bits=20-26,rate=0.01,seed=7,ops=fmp+fdv"), { shape: { kind: "bits", low: 20, high: 26 }, rate: 0.01, seed: 7, ops: ["fmp", "fdv"] });
 });
 
 test("FADR, FMPR and FDVR give the familiar answers", () => {
