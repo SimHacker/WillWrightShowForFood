@@ -13,6 +13,7 @@
 		"./apple2/games": "./dist/apple2/games.js",
 		"./korz/apple2": "./dist/korz/apple2/index.js",
 		"./korz/inspect": "./dist/korz/inspect.js",
+		"./ka10": "./dist/ka10/index.js",
 		"./dance": "./dist/dance.js",
 		"./forth-dict": "./dist/forth-dict.js",
 		"./angel": "./dist/angel/angel.js",

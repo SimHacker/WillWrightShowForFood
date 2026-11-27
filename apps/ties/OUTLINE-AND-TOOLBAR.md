@@ -139,7 +139,7 @@ catalog), paper on a light one (`/apple2/`). New panes use the same variables.
   for a link (as `?seed=` and `?poke=` are) or a cartridge's definition, so a game can ship
   with the toolbar its author plays it with.
 - **Interpolating between views**, as between music seeds: settings that are numbers move
-  smoothly from one view's to another's.
+  smoothly from one view's to another's. Creating or deleting zooms or fades in or out.
 - **The PDP-7 page** moves to this outline and toolbar; its dance panel already offers its
   controls (`DancePanel` with `id="pdp7"`), with no toolbar there yet to show them.
 - Reordering the toolbar's row from the keyboard (its handles skip the tab order now; a
