@@ -31,7 +31,7 @@ const CYLINDER = 200;
 const USER = 0o200;
 const USER_KEY = 0o1000000;
 
-/** @typedef {{ keys?: string, wait?: string, idle?: number, phase?: string }} Step */
+/** @typedef {{ keys?: string, wait?: string, prompt?: string, idle?: number, phase?: string }} Step */
 
 class RangePack {
 	/** @param {string} url @param {number} chunk bytes per fetch @param {number} unit its drive */
@@ -188,6 +188,7 @@ function script() {
 			if (s.idle) idleUntil = cpu.events.now + s.idle * tps;
 		}
 		if (s.wait && !since.includes(s.wait)) return;
+		if (s.prompt && !since.endsWith(s.prompt)) return;
 		if (s.idle && cpu.events.now < idleUntil) return;
 		steps.shift();
 		stepStarted = false;
@@ -314,6 +315,9 @@ onmessage = (e) => {
 		});
 	else if (msg.type === 'keys' && m) {
 		m.cty.type(msg.text);
+		lastActive = performance.now();
+	} else if (msg.type === 'steps' && m) {
+		steps.push(...msg.steps);
 		lastActive = performance.now();
 	} else if (msg.type === 'speed') {
 		mode = msg.mode;

@@ -10,7 +10,7 @@
 	import Pinnable from './Pinnable.svelte';
 	import { toolbar } from './toolbar.svelte.js';
 	import RateSlider from './RateSlider.svelte';
-	import { STYLES } from './bus-dance.svelte.js';
+	import { ENGINE_LEVELS, STYLES } from './bus-dance.svelte.js';
 	import { TEMPOS } from './dance-player.js';
 	import { seedFavorites } from './seed-favorites.svelte.js';
 	import { musicHistory } from './music-history.svelte.js';
@@ -40,6 +40,7 @@
 			bar.offer('dance-mute', 'Mute the dance', mute, 'control', here),
 			bar.offer('dance-volume', "the dance's volume", volume, 'control', here),
 			bar.offer('dance-style', "the dance's style", style, 'control', here),
+			bar.offer('dance-engine', "the engine under the dance", engine, 'control', here),
 			bar.offer('dance-tempo', "the dance's tempo", tempo, 'control', here),
 			bar.offer('eno', 'the Eno tracks', eno, 'control', here)
 		];
@@ -213,6 +214,17 @@
 	</select>
 {/snippet}
 
+{#snippet engine(compact = false)}
+	<label class="engine" title="The engine: a sound under the music that rises with how hard the machine works, as an electric car's does with its speed. Off unless you pick it.">
+		{compact ? '⚙️' : 'Engine'}
+		<select class={{ chip }} aria-label="The engine under the dance" value={String(dance.engineLevel)} onchange={(e) => (dance.engineLevel = Number(e.currentTarget.value))}>
+			{#each ENGINE_LEVELS as l (l.level)}
+				<option value={String(l.level)}>{l.label}</option>
+			{/each}
+		</select>
+	</label>
+{/snippet}
+
 {#snippet tempo()}
 	<RateSlider label="Dance tempo, slowest to fastest" keys="Keys: ` slower, ~ faster." {rates} index={tempoIndex} onpick={(i) => (dance.bpm = TEMPOS[i] ?? 120)} />
 {/snippet}
@@ -360,6 +372,7 @@
 		<Pinnable {bar} id="dance-style" />
 		<Pinnable {bar} id="eno" />
 		<Pinnable {bar} id="dance-tempo" />
+		<Pinnable {bar} id="dance-engine" />
 	</div>
 	{#if listen || extra}
 		<div class="row">

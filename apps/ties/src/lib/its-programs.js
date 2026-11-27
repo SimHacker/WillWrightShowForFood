@@ -1,69 +1,147 @@
 /**
  * What the PDP-10 page offers on ITS, by the `runs.program` of an entry in
- * packages/cabinet/its/catalog.yml: how each program is started after logging in, and lines
- * to type into it. Every line here was run on the cabinet's KA10 (packages/cabinet/its/README.md).
+ * packages/cabinet/its/catalog.yml: how each program is started after logging in, how to leave
+ * it, and lines to type into it, simple ones first and the long ones last. Each program's list was
+ * run in order, in one session, on the cabinet's KA10 (packages/cabinet/its/README.md).
  * In `keys`, \r is Return, \x1a is Control-Z and \x1b is Altmode.
+ *
+ * A line with `steps` is typed a step at a time: each step waits for its `wait` text, or for
+ * the output to end with its `prompt`, before the next is typed. Logo drops what is typed
+ * ahead of its prompt, so a procedure goes in a line at a time.
  */
 
-/** @typedef {{ label: string, keys: string, title: string }} ItsLine */
-/** @typedef {{ keys: string, wait?: string }} ItsStep */
-/** @typedef {{ id: string, title: string, about: string, start: ItsStep[], lines: ItsLine[] }} ItsProgram */
+/** @typedef {{ keys: string, wait?: string, prompt?: string }} ItsStep */
+/** @typedef {{ label: string, title: string, keys?: string, steps?: ItsStep[] }} ItsLine */
+/** @typedef {{ id: string, title: string, about: string, start: ItsStep[], quit: ItsLine, lines: ItsLine[] }} ItsProgram */
+
+/** @param {string} text @param {string} title @returns {ItsLine} */
+const line = (text, title) => ({ label: text, keys: `${text}\r`, title });
+
+/**
+ * A Logo procedure, typed a line at a time at Logo's > prompt.
+ * @param {string[]} body @param {string} title @returns {ItsLine}
+ */
+const procedure = (body, title) => ({
+	label: body.join('\n'),
+	title,
+	steps: body.map((text, i) => ({ keys: `${text}\r`, ...(i < body.length - 1 ? { prompt: '>' } : {}) }))
+});
 
 /** @type {ItsProgram[]} */
 export const PROGRAMS = [
 	{
 		id: 'ddt',
 		title: 'DDT',
-		about: "ITS's command line is DDT, the debugger, at its * prompt. A colon runs a program; Control-Z stops it and comes back here.",
+		about: "ITS's command line is DDT, the debugger, at its * prompt. A colon runs a program from SYS; Control-Z stops it and comes back here.",
 		start: [],
+		quit: line(':logout', 'Log out of ITS'),
 		lines: [
-			{ label: ':listf sys;', keys: ':listf sys;\r', title: 'List the SYS directory: the system programs' },
-			{ label: ':macsym', keys: ':macsym\r', title: 'Start MACSYMA' },
-			{ label: ':lisp', keys: ':lisp\r', title: 'Start MacLisp; it asks Alloc?, answer n' },
-			{ label: ':clogo', keys: ':clogo\r', title: 'Start Logo' },
-			{ label: ':kill', keys: ':kill\r', title: 'Kill the program Control-Z stopped' },
-			{ label: ':logout', keys: ':logout\r', title: 'Log out of ITS' }
+			line(':listf sys;', 'List the SYS directory: the system programs'),
+			line(':who', "Who's logged in, and on which terminal"),
+			line(':finger', "Who's logged in, with their names and where they sit"),
+			line(':users', 'The users logged in'),
+			line(':time', 'The time, and how long ITS has been up'),
+			line(':date', 'The date and time'),
+			line(':sstatus', 'How busy the system is, and your fair share'),
+			line(':tctyp', 'What ITS thinks this terminal is'),
+			line(':listf .info.;', 'List .INFO., the documentation'),
+			line(':help', "DDT's help"),
+			line(':kill', 'Kill the program Control-Z stopped')
 		]
 	},
 	{
 		id: 'macsyma',
 		title: 'MACSYMA',
-		about: 'MACSYMA numbers what you type (C1), (C2)… and its answers (D1), (D2)…. A line ends with a semicolon.',
+		about: 'MACSYMA numbers what you type (C1), (C2)… and its answers (D1), (D2)…. A line ends with a semicolon. Many commands load a package off the disk the first time.',
 		start: [{ keys: ':macsym\r', wait: '(C1)' }],
+		quit: line('quit();', 'Leave MACSYMA for DDT'),
 		lines: [
-			{ label: 'diff(x^3,x);', keys: 'diff(x^3,x);\r', title: 'Differentiate x cubed' },
-			{ label: 'factor(2^64-1);', keys: 'factor(2^64-1);\r', title: 'Factor 2^64 - 1' },
-			{ label: 'integrate(1/(1+x^2),x);', keys: 'integrate(1/(1+x^2),x);\r', title: 'Integrate 1/(1+x^2): ATAN(X)' },
-			{ label: 'quit();', keys: 'quit();\r', title: 'Leave MACSYMA for DDT' }
+			line('diff(x^3,x);', 'Differentiate x cubed'),
+			line('expand((x+y)^5);', 'Multiply out (x+y) to the fifth'),
+			line('factor(2^64-1);', 'Factor 2^64 - 1'),
+			line('ratsimp((x^2-1)/(x-1));', 'Simplify (x²-1)/(x-1) to x+1'),
+			line('determinant(matrix([a,b],[c,d]));', 'The determinant of a 2 by 2 matrix: AD - BC'),
+			line('100!;', '100 factorial, all 158 digits'),
+			line('integrate(1/(1+x^2),x);', 'Integrate 1/(1+x²): ATAN(X)'),
+			line('integrate(x*exp(x),x);', 'Integrate x eˣ, by Risch'),
+			line('taylor(sin(x),x,0,7);', 'The Taylor series of sin(x) to x⁷'),
+			line('laplace(sin(t),t,s);', 'The Laplace transform of sin(t)')
 		]
 	},
 	{
 		id: 'lisp',
 		title: 'MacLisp',
-		about: "MacLisp counts in octal until told otherwise, and its * and + are for fixnums: times and plus make bignums. Here it is set to decimal.",
+		about: 'MacLisp counts in octal until told otherwise, and its * and + are for fixnums: times and plus make bignums. Its start sets it to decimal.',
 		start: [
 			{ keys: ':lisp\r', wait: 'Alloc?' },
 			{ keys: 'n\r', wait: '*' },
 			{ keys: '(setq base 10. ibase 10. *nopoint t)\r', wait: 'T' }
 		],
+		quit: line('(quit)', 'Leave Lisp for DDT'),
 		lines: [
-			{ label: '(defun f (n) …)', keys: '(defun f (n) (cond ((zerop n) 1) (t (times n (f (sub1 n))))))\r', title: 'Define factorial with times, so it makes bignums' },
-			{ label: '(f 30)', keys: '(f 30)\r', title: '30 factorial' },
-			{ label: '(quit)', keys: '(quit)\r', title: 'Leave Lisp for DDT' }
+			line("(reverse '(1 2 3 4 5))", 'Reverse a list'),
+			line("(append '(a b) '(c d))", 'Join two lists'),
+			line("(length '(a b c d))", 'Count a list'),
+			line("(assq 'b '((a . 1) (b . 2)))", 'Look up B in an association list'),
+			line("(explode 'hello)", 'Take a symbol apart into characters'),
+			line("(implode '(h i))", 'Put characters together into a symbol'),
+			line('((lambda (x) (times x x)) 12345)', 'Call a lambda: 12345 squared'),
+			line('(expt 2 100)', '2 to the 100th, a bignum'),
+			line('(gcd 1071 462)', "Euclid's greatest common divisor"),
+			line("(sort (list 3 1 4 1 5 9 2 6) 'lessp)", 'Sort, loading SORT the first time'),
+			line('(status date)', 'The date, as Lisp sees it'),
+			line('(defun f (n) (cond ((zerop n) 1) (t (times n (f (sub1 n))))))', 'Define factorial with times, so it makes bignums'),
+			line('(f 30)', '30 factorial'),
+			line('(defun fib (n) (cond ((lessp n 2) n) (t (plus (fib (sub1 n)) (fib (difference n 2))))))', 'Define Fibonacci, the slow way'),
+			line("(mapcar 'fib '(1 2 3 4 5 6 7 8 9 10 11 12))", 'Map it over a list'),
+			line("(apply 'plus (mapcar (function (lambda (x) (times x x))) '(1 2 3 4 5 6 7 8 9 10)))", 'The sum of the first ten squares'),
+			line("(defun hanoi (n a b c) (cond ((zerop n) nil) (t (hanoi (sub1 n) a c b) (print (list 'move n 'from a 'to c)) (hanoi (sub1 n) b a c))))", 'Define the towers of Hanoi'),
+			line("(hanoi 3 'a 'b 'c)", 'Move three discs from A to C'),
+			line('(defun perms (l) (cond ((null l) (list nil)) (t (mapcan (function (lambda (x) (mapcar (function (lambda (p) (cons x p))) (perms (delete x (append l nil)))))) l))))', 'Define permutations'),
+			line("(perms '(a b c))", 'Every order of A, B and C'),
+			line("(defun deriv (e x) (cond ((atom e) (cond ((eq e x) 1) (t 0))) ((eq (car e) 'plus) (list 'plus (deriv (cadr e) x) (deriv (caddr e) x))) ((eq (car e) 'times) (list 'plus (list 'times (cadr e) (deriv (caddr e) x)) (list 'times (deriv (cadr e) x) (caddr e)))) (t 'unknown)))", 'Define symbolic differentiation, the first thing Lisp was for'),
+			line("(deriv '(plus (times x x) (times 3 x)) 'x)", 'Differentiate x² + 3x, unsimplified')
 		]
 	},
 	{
 		id: 'logo',
 		title: 'Logo',
-		about: 'CLOGO prompts with ?. A quoted word ends with a quote too: MAKE "X" 7.',
+		about: 'CLOGO prompts with ?, and with > inside a procedure, whose lines are numbered. A quoted word ends with a quote too: MAKE "X" 7. Logo drops what is typed ahead, so a procedure goes in a line at a time.',
 		start: [{ keys: ':clogo\r', wait: '?' }],
+		quit: line('GOODBYE', 'Leave Logo; this logs out'),
 		lines: [
-			{ label: 'MAKE "X" 7', keys: 'MAKE "X" 7\r', title: 'Give X the value 7' },
-			{ label: 'PRINT PRODUCT :X :X', keys: 'PRINT PRODUCT :X :X\r', title: 'Print X times X' },
-			{ label: 'GOODBYE', keys: 'GOODBYE\r', title: 'Leave Logo; this logs out' }
+			line('PRINT SUM 3 4', 'Add'),
+			line('MAKE "X" 7', 'Give X the value 7'),
+			line('PRINT PRODUCT :X :X', 'Print X times X'),
+			line('PRINT FIRST "HELLO"', 'The first letter of a word'),
+			line('PRINT BUTFIRST "HELLO"', 'All but the first letter'),
+			line('PRINT LAST "HELLO"', 'The last letter'),
+			line('PRINT SENTENCE "HELLO" "WORLD"', 'Two words into a sentence'),
+			line('PRINT WORD "SUN" "SHINE"', 'Two words into one'),
+			procedure(['TO SQUARE :N', '10 OUTPUT PRODUCT :N :N', 'END'], 'Define SQUARE'),
+			line('PRINT SQUARE 12', 'Square 12'),
+			procedure(['TO FACT :N', '10 IF :N = 0 OUTPUT 1', '20 OUTPUT PRODUCT :N FACT DIFFERENCE :N 1', 'END'], 'Define factorial, recursively'),
+			line('PRINT FACT 10', '10 factorial'),
+			procedure(['TO COUNTDOWN :N', '10 PRINT :N', '20 IF :N = 0 STOP', '30 COUNTDOWN DIFFERENCE :N 1', 'END'], 'Define a countdown'),
+			line('COUNTDOWN 5', 'Count down from 5'),
+			procedure(['TO REV :W', '10 IF EMPTYP :W OUTPUT :W', '20 OUTPUT WORD REV BUTFIRST :W FIRST :W', 'END'], 'Define reversing a word'),
+			line('PRINT REV "LOGO"', 'Reverse LOGO'),
+			procedure(['TO FIB :N', '10 IF :N < 2 OUTPUT :N', '20 OUTPUT SUM FIB DIFFERENCE :N 1 FIB DIFFERENCE :N 2', 'END'], 'Define Fibonacci'),
+			line('PRINT FIB 15', 'The 15th Fibonacci number'),
+			procedure(['TO PIG :W', '10 OUTPUT WORD BUTFIRST :W WORD FIRST :W "AY"', 'END'], 'Define Pig Latin for a word'),
+			procedure(['TO PIGS :S', '10 IF EMPTYP :S OUTPUT :S', '20 OUTPUT SENTENCE PIG FIRST :S PIGS BUTFIRST :S', 'END'], 'Define Pig Latin for a sentence'),
+			line('PRINT PIGS "THE QUICK BROWN FOX"', 'Pig Latin'),
+			line('LIST ALL', 'List every procedure defined')
 		]
 	}
 ];
 
 /** @param {string} id */
 export const programFor = (id) => PROGRAMS.find((p) => p.id === id);
+
+/**
+ * The line that starts a program from DDT: its start, typed step by step.
+ * @param {ItsProgram} p @returns {ItsLine | undefined}
+ */
+export const runLine = (p) =>
+	p.start.length ? { label: p.start.map((s) => s.keys.replace(/\r$/, '')).join('\n'), title: `Start ${p.title}`, steps: p.start } : undefined;

@@ -19,7 +19,7 @@
 	import VoicePicker from '../VoicePicker.svelte';
 	import { toolbar } from '../toolbar.svelte.js';
 	import { CATALOG_BASE, catalog } from '../catalog.js';
-	import { PROGRAMS } from '../its-programs.js';
+	import { PROGRAMS, runLine } from '../its-programs.js';
 	import { BAUDS, SPEEDS, VIEWS, pdp10 } from '../pdp10.svelte.js';
 
 	/** @type {{ entry: import('@wwsff/catalog').Entry, values: Record<string, unknown> }} */
@@ -165,6 +165,13 @@
 		paper?.focus();
 	}
 
+	/** @param {import('../its-programs.js').ItsLine} line */
+	function sendLine(line) {
+		if (line.steps) pdp10.typeSteps(line.steps);
+		else pdp10.type(line.keys ?? '');
+		paper?.focus();
+	}
+
 	async function copyPaper() {
 		await navigator.clipboard.writeText(pdp10.text);
 		copied = true;
@@ -228,7 +235,8 @@
 			return true;
 		}
 	};
-	const jiggle = () => pdp10.flip(Math.floor(Math.random() * 36));
+	// Never switch 0: ITS stops in DDT while it is up.
+	const jiggle = () => pdp10.flip(1 + Math.floor(Math.random() * 35));
 
 	onMount(() => {
 		pdp10.start(entry, values);
@@ -305,7 +313,9 @@
 						class={['switch', { on }]}
 						aria-pressed={on}
 						aria-label="Data switch {bit}"
-						title="Data switch {bit}: {on ? 'up' : 'down'}. A program reads the switches with .RDSW; the bus dance's music turns on them."
+						title={bit === 0
+							? `Data switch 0: ${on ? 'up' : 'down'}. ITS looks at it on every clock tick and, while it is up, stops in DDT (SWITCH 0 IS UP; put it down, then Altmode P goes on). The jiggle leaves it alone, and a boot puts it down.`
+							: `Data switch ${bit}: ${on ? 'up' : 'down'}. A program reads the switches with .RDSW; the bus dance's music turns on them.`}
 						onclick={() => pdp10.flip(bit)}
 					></button>
 				{/each}
@@ -371,14 +381,24 @@
 	{/if}
 {/snippet}
 
+{#snippet lineButton(/** @type {import('../its-programs.js').ItsLine} */ line)}
+	<button class="typed" title="Type {line.title.toLowerCase()}" onclick={() => sendLine(line)}>{line.label}</button>
+{/snippet}
+
 {#snippet programPanel(/** @type {import('../its-programs.js').ItsProgram} */ p)}
+	{@const run = runLine(p)}
 	<div class="program">
 		<p class="note">{p.about}</p>
-		<div class="row">
+		<dl class="ends">
+			{#if run}<dt>Start</dt><dd>{@render lineButton(run)}</dd>{/if}
+			<dt>{p.id === 'ddt' ? 'Log out' : 'Quit'}</dt>
+			<dd>{@render lineButton(p.quit)} <span class="what">{p.quit.title}</span></dd>
+		</dl>
+		<ol class="lines">
 			{#each p.lines as line (line.label)}
-				<button class="line" title="Type {line.title.toLowerCase()}" onclick={() => send(line.keys)}>{line.label}</button>
+				<li>{@render lineButton(line)} <span class="what">{line.title}</span></li>
 			{/each}
-		</div>
+		</ol>
 	</div>
 {/snippet}
 
@@ -487,6 +507,7 @@
 		{#if pdp10.view === 'glass'}
 			<div
 				class={['glass', { ringing: pdp10.ringing }]}
+				style:height={height === null ? null : `${height}px`}
 				bind:this={paper}
 				tabindex="0"
 				role="textbox"
@@ -526,22 +547,22 @@
 			>
 				{#each pdp10.lines as line, i (i)}<div class="line">{line}{#if i === pdp10.lines.length - 1}<span class="cursor"></span>{/if}</div>{/each}
 			</div>
-			<button
-				type="button"
-				class={['grip', { sizing }]}
-				aria-label="The paper's height: drag, or the up and down arrow keys"
-				title="Drag to make the paper taller or shorter. Arrow keys: a line at a time, Shift for five. Double-click: back to the usual height."
-				onpointerdown={gripdown}
-				onpointermove={gripmove}
-				onpointerup={gripup}
-				onpointercancel={gripup}
-				onkeydown={gripkey}
-				ondblclick={() => {
-					resize(null);
-					keepHeight();
-				}}
-			></button>
 		{/if}
+		<button
+			type="button"
+			class={['grip', { sizing }]}
+			aria-label="The console's height: drag, or the up and down arrow keys"
+			title="Drag to make the console taller or shorter, paper or glass alike. Arrow keys: a line at a time, Shift for five. Double-click: back to the usual height."
+			onpointerdown={gripdown}
+			onpointermove={gripmove}
+			onpointerup={gripup}
+			onpointercancel={gripup}
+			onkeydown={gripkey}
+			ondblclick={() => {
+				resize(null);
+				keepHeight();
+			}}
+		></button>
 	</div>
 	<p class="sr" aria-live="polite">{pdp10.voice.announce}</p>
 	<p class="status">
@@ -614,6 +635,38 @@
 	.line {
 		min-height: 1.25em;
 	}
+	/* A program's lines: each a button that types it, with what it does beside it. */
+	.ends {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		gap: 0.3em 0.6em;
+		align-items: baseline;
+		margin: 0.4em 0;
+	}
+	.ends dt {
+		font-weight: 600;
+	}
+	.ends dd {
+		margin: 0;
+	}
+	.lines {
+		margin: 0.4em 0;
+		padding-left: 2.2em;
+	}
+	.lines li {
+		margin: 0.25em 0;
+	}
+	.typed {
+		font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+		white-space: pre-wrap;
+		text-align: left;
+		max-width: 100%;
+		overflow-wrap: anywhere;
+	}
+	.what {
+		color: #888;
+		font-size: 0.9em;
+	}
 	.cursor {
 		display: inline-block;
 		width: 0.6em;
@@ -660,8 +713,12 @@
 	}
 	/* A glass teletype: green on black, 24 lines, the type sized to fit 80 columns in the width. */
 	.glass {
-		container-type: inline-size;
+		container-type: size;
 		box-sizing: border-box;
+		height: 28em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		padding: 0.6em 0.8em;
 		background: #050805;
 		color: #9fe8a0;
@@ -673,7 +730,7 @@
 	}
 	.glass .line {
 		min-height: 1.2em;
-		font: calc(100cqw / 49.5) / 1.2 ui-monospace, 'SF Mono', Menlo, monospace;
+		font: min(100cqw / 49.5, 100cqh / 29.5) / 1.2 ui-monospace, 'SF Mono', Menlo, monospace;
 	}
 	.glass:focus {
 		outline: 2px solid #3a8a3a;

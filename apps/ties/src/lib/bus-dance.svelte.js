@@ -53,6 +53,14 @@ const kept = (key) => {
 	}
 };
 
+/** How loud the engine under the music is; off unless the person picks it. */
+export const ENGINE_LEVELS = [
+	{ level: 0, label: 'Off' },
+	{ level: 0.25, label: 'Soft' },
+	{ level: 0.5, label: 'Medium' },
+	{ level: 1, label: 'Full' }
+];
+
 export class BusDance {
 	on = $state(false);
 	/** @type {Style} */
@@ -75,6 +83,19 @@ export class BusDance {
 	set volume(v) {
 		this.#volume = Math.max(0, Math.min(1, v));
 		this.player.volume = this.#muted ? 0 : this.#volume;
+		this.#save();
+	}
+	#engineLevel = $state(0);
+	/**
+	 * The engine under the music, which rises with how hard the machine works, as an electric
+	 * car's sound rises with its speed: 0 is off, the default, up to 1. Kept with the volume.
+	 */
+	get engineLevel() {
+		return this.#engineLevel;
+	}
+	set engineLevel(v) {
+		this.#engineLevel = Math.max(0, Math.min(1, v));
+		this.player.fade('engine', this.#engineLevel, 0.6);
 		this.#save();
 	}
 	#muted = $state(false);
@@ -114,6 +135,8 @@ export class BusDance {
 		if (TEMPOS.includes(was?.bpm)) this.#bpm = was.bpm;
 		if (typeof was?.volume === 'number') this.#volume = Math.max(0, Math.min(1, was.volume));
 		this.#muted = was?.muted === true;
+		if (typeof was?.engine === 'number') this.#engineLevel = Math.max(0, Math.min(1, was.engine));
+		this.player.fade('engine', this.#engineLevel, 0);
 		this.player.volume = this.#muted ? 0 : this.#volume;
 		if (typeof was?.loops === 'boolean' || typeof was?.loops === 'number') this.loops = this.#dance.loops = enoLayers(was.loops);
 		if (on) this.#wake();
@@ -138,7 +161,7 @@ export class BusDance {
 	#save() {
 		try {
 			globalThis.localStorage?.setItem(ON, JSON.stringify(this.on));
-			globalThis.localStorage?.setItem(this.#key, JSON.stringify({ style: this.style, bpm: this.#bpm, loops: this.loops, volume: this.#volume, muted: this.#muted }));
+			globalThis.localStorage?.setItem(this.#key, JSON.stringify({ style: this.style, bpm: this.#bpm, loops: this.loops, volume: this.#volume, muted: this.#muted, engine: this.#engineLevel }));
 		} catch {
 			/* Storage full or forbidden: the dance just forgets. */
 		}

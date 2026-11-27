@@ -124,6 +124,9 @@ class Pdp10 {
 		const runs = entry.runs ?? {};
 		const seeded = dataSwitchesSeedWord(new URLSearchParams(globalThis.location?.search ?? '').get('seed') ?? '') ?? (runs.switches === undefined ? null : dataSwitchesSeedWord(String(runs.switches)));
 		if (seeded !== null) this.setSwitches(seeded);
+		// ITS checks switch 0 on every clock tick and stops in DDT while it is up (BUG DDT,
+		// [SWITCH 0 IS UP], ITS 1652), so a boot starts with it down.
+		if (this.switchOn(0)) this.flip(0);
 		const boot = runs.boot === 'tape' ? 'tape' : 'its';
 		const login = String(values.login ?? 'guest').replace(/[^A-Za-z0-9]/g, '').slice(0, 6) || 'guest';
 		const program = programFor(String(runs.program ?? 'ddt'));
@@ -196,6 +199,19 @@ class Pdp10 {
 		this.#worker?.postMessage({ type: 'keys', text });
 		this.voice.typed(text);
 		for (const ch of text) this.dance.touch({ kind: 'key', code: ch.charCodeAt(0) });
+	}
+
+	/**
+	 * Keys typed a step at a time: each step waits for its `wait` text, or for the output to
+	 * end with its `prompt`, before the next is typed.
+	 * @param {{ keys: string, wait?: string, prompt?: string }[]} steps
+	 */
+	typeSteps(steps) {
+		this.#worker?.postMessage({ type: 'steps', steps: steps.map((s) => ({ ...s })) });
+		for (const s of steps) {
+			this.voice.typed(s.keys);
+			for (const ch of s.keys) this.dance.touch({ kind: 'key', code: ch.charCodeAt(0) });
+		}
 	}
 
 	/** @param {number} baud */

@@ -54,6 +54,7 @@
 	import RateSlider from './RateSlider.svelte';
 	import { CHORD_KEYS_LIST, EMULATOR_KEYS_HELP, altKey, emulatorKey, nextTempo, prefixedKey } from './emulator-keys.js';
 	import DancePanel from './DancePanel.svelte';
+	import Outline from './Outline.svelte';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
 	import { Deltas, PDP7_VOICES, Tally, pages, switchesSeedText, switchesSeedWord, watchedName } from '@wwsff/cabinet/dance';
 	import { forthCell } from '@wwsff/cabinet/forth-dict';
@@ -1076,8 +1077,7 @@
 	const memViewFor = (p) => (p?.source || p?.sources ? 'source' : 'code');
 	let memView = $state(untrack(() => memViewFor(programById(programId))));
 	const MEM_COLS = $derived(memView === 'octal' ? (figW >= 420 ? 8 : 4) : 1);
-	// Panels under the controls, toggled by the chips: any set of them open at once, stacked
-	// in one order. Shift-click shows one alone.
+	// Panels under the controls, as outline nodes: any set of them open at once, in one order.
 	const PANELS_KEY = 'cabinet-panels';
 	const panelsRaw = untrack(() => globalThis.localStorage?.getItem(PANELS_KEY) ?? null);
 	const panelsStored = (panelsRaw ?? 'play').split(' ');
@@ -1098,6 +1098,21 @@
 	let progPrompt = $state('');
 	let progHint = $state('');
 	const hasProgPanel = $derived(!!program?.panel);
+	// Slots and Korz sit in the Debugging node.
+	let debugOpen = $state(untrack(() => slotsOpen || korzOpen));
+	// Opened or closed in the outline: keep the set, let the newest hungry panel take the spare
+	// height, and read what the opened ones show.
+	let wasOpen = {};
+	$effect(() => {
+		const now = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen, korz: korzOpen, snaps: snapsOpen };
+		untrack(() => {
+			for (const k in now) if (now[k] && !wasOpen[k]) opened(k);
+			wasOpen = now;
+			storePanels();
+			refreshRegs();
+			refreshSlots();
+		});
+	});
 	function storePanels() {
 		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen, korz: korzOpen, snaps: snapsOpen };
 		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
@@ -1131,6 +1146,7 @@
 		korzOpen = open.korz;
 		snapsOpen = open.snaps;
 		progOpen = open.prog;
+		if (open.slots || open.korz) debugOpen = true;
 		storePanels();
 		refreshRegs();
 		refreshSlots();
@@ -3770,93 +3786,6 @@
 		{@render grip('prog', program.panel.label)}
 		{/snippet}
 		<div class="row ctl">
-				<span class="chips" role="group" aria-label="Panels. Shift-click shows one alone.">
-					<button
-						type="button"
-						class="chip"
-						class:on={playOpen}
-						aria-pressed={playOpen}
-						title="Play: demos, record and replay. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('play', e)}>PLAY{#if demoOn || recording}<span class="chip-lamp" class:hlt={recording} title={recording ? 'Recording' : 'Playing'}>●</span>{/if}</button
-					>
-					<button
-						type="button"
-						class="chip"
-						class:on={ttyOpen}
-						class:bell={ttyBell}
-						aria-pressed={ttyOpen}
-						title="Teletype: what the program prints, and a keyboard. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('tty', e)}>TTY{#if ttyUnread}<span class="chip-count" title="{ttyUnread} new characters">{ttyUnread > 999 ? '999+' : ttyUnread}</span>{/if}</button
-					>
-					<button
-						type="button"
-						class="chip"
-						class:on={regsOpen}
-						aria-pressed={regsOpen}
-						title="Registers: the front panel switches, processor, display, device flags. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('regs', e)}>REGS{#if halted}<span class="chip-lamp hlt" title="Halted">●</span>{/if}</button
-					>
-					<button
-						type="button"
-						class="chip"
-						class:on={memOpen}
-						aria-pressed={memOpen}
-						title="Memory: {CORE / 1024}K × 18-bit words. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('mem', e)}>MEMORY</button
-					>
-					{#if hasRings}
-					<button
-						type="button"
-						class="chip"
-						class:on={ringsOpen}
-						aria-pressed={ringsOpen}
-						title="PIXIE rings in 3D: the live ring structure in core, or a file. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('rings', e)}>RINGS</button
-					>
-					{/if}
-					{#if hasProgPanel}
-					<button
-						type="button"
-						class="chip"
-						class:on={progOpen}
-						aria-pressed={progOpen}
-						title="{program.panel.title} Shift-click: this panel alone."
-						onclick={(e) => togglePanel('prog', e)}>{program.panel.label}</button
-					>
-					{/if}
-					<button
-						type="button"
-						class="chip"
-						class:on={slotsOpen}
-						aria-pressed={slotsOpen}
-						title="Slots: the Korz seas behind the CPU and the 340, which slot decides the next instruction and display word, and what the emulator costs. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('slots', e)}>SLOTS</button
-					>
-					<button
-						type="button"
-						class="chip"
-						class:on={korzOpen}
-						aria-pressed={korzOpen}
-						title="Korz: browse the seas, their slots, and the JavaScript the resolver and the compiler generated. Read-only. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('korz', e)}>KORZ</button
-					>
-					<button
-						type="button"
-						class="chip"
-						class:on={configOpen}
-						aria-pressed={configOpen}
-						title="Settings for the teletype and more. Each program sets them for you when you choose it. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('config', e)}>CONFIG</button
-					>
-					<button
-						type="button"
-						class="chip"
-						class:on={snapsOpen}
-						aria-pressed={snapsOpen}
-						title="Snapshots of this program: save, load, rename, delete, download, upload. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('snaps', e)}>SNAPSHOTS</button
-					>
-				</span>
 				<button
 					type="button"
 					class="icon"
@@ -3934,18 +3863,44 @@
 				seed={status === 'live' ? switchesSeed : undefined}
 			/>
 		</div>
-		{#if playOpen}
+		<!-- The panels, as an outline: each node opens and closes on its own, and remembers. -->
+		<Outline id="pdp7-play" title="Play" hint="Demos, and recording and replaying what you do" bind:open={playOpen} summary={recording ? 'recording' : demoOn ? (demoHeld ? 'paused, yours now' : 'playing the demo') : ''}>
 			{@render playRow()}
+		</Outline>
+		{#if hasProgPanel}
+			<Outline id="pdp7-prog" title={program.panel.label} hint={program.panel.title} bind:open={progOpen}>
+				{@render progRow()}
+			</Outline>
 		{/if}
-		{#if progOpen && hasProgPanel}
-			{@render progRow()}
-		{/if}
-		{#if ttyOpen}
+		<Outline id="pdp7-tty" title="Teletype" hint="What the program prints, and a keyboard" bind:open={ttyOpen} summary={ttyUnread ? `${ttyUnread > 999 ? '999+' : ttyUnread} new characters` : ''}>
 			{@render ttyRow()}
-		{/if}
-		{#if regsOpen}
+		</Outline>
+		<Outline id="pdp7-regs" title="Front panel and registers" hint="The AC switches, the processor, the display and the device flags" bind:open={regsOpen} summary={halted ? 'Halted' : ''}>
 			{@render frontPanel()}
+			{#if regs}{@render regsBody()}{/if}
+		</Outline>
+		<Outline id="pdp7-mem" title="Memory" hint="{CORE / 1024}K of 18-bit words" bind:open={memOpen}>
+			{@render memBody()}
+		</Outline>
+		{#if hasRings}
+			<Outline id="pdp7-rings" title="PIXIE rings" hint="The live ring structure in core, or a file, in 3D" bind:open={ringsOpen}>
+				{@render ringsBody()}
+			</Outline>
 		{/if}
+		<Outline id="pdp7-debug" title="Debugging: the Korz seas" hint="The seas behind the CPU and the 340: which slot decides, what it costs, and the JavaScript generated" bind:open={debugOpen}>
+			<Outline id="pdp7-slots" title="Slots" hint="Which slot decides the next instruction and display word, and what the emulator costs" bind:open={slotsOpen}>
+				{@render slotsBody()}
+			</Outline>
+			<Outline id="pdp7-korz" title="Korz browser" hint="Browse the seas, their slots, and the JavaScript the resolver and the compiler generated. Read-only." bind:open={korzOpen}>
+				{@render korzBody()}
+			</Outline>
+		</Outline>
+		<Outline id="pdp7-snaps" title="Snapshots" hint="Snapshots of this program: save, load, rename, delete, download, upload" bind:open={snapsOpen}>
+			{@render snapsBody()}
+		</Outline>
+		<Outline id="pdp7-config" title="Settings" hint="Settings for the teletype and more. Each program sets them for you when you choose it." bind:open={configOpen}>
+			{@render configBody()}
+		</Outline>
 		{#snippet memGrip()}
 			<button
 				type="button"
@@ -3966,154 +3921,6 @@
 				onkeydown={(e) => panelGripKey(e, id)}
 			></button>
 		{/snippet}
-		{#if regsOpen && regs}
-			<div class="row app regs sized" data-panel="regs" role="group" aria-label="Registers" style:height={panelH.regs ? `${panelH.regs}px` : null}>
-				<div class="reg-line">
-					<span class="reg-dev">CPU</span>
-					<button type="button" class="reg" title="Program counter. Show it in memory." onclick={() => openMemAt(regs.pc)}
-						>PC <b>{oct(regs.pc, 5)}</b> <span class="reg-sym">{symbolic(regs.pc)}</span></button
-					>
-					<button type="button" class="reg" title="Accumulator. Go to the address in its low 13 bits." onclick={() => openMemAt(regs.ac & 0o17777)}
-						>AC <b>{oct(regs.ac, 6)}</b></button
-					>
-					<span class="reg" title="Link">L <b>{regs.link}</b></span>
-					<span class="reg" title="EAE multiplier-quotient">MQ <b>{oct(regs.mq, 6)}</b></span>
-					<span class="reg" title="EAE step counter">SC <b>{oct(regs.sc, 2)}</b></span>
-					<span class="lamp" class:on={regs.ion} title="Interrupts enabled">ION</span>
-					<span class="lamp" class:on={regs.irq} title="A device is asking for an interrupt">IRQ</span>
-					<span class="lamp red" class:on={regs.halted} title="Halted">HLT</span>
-					<span class="reg dim reg-count" title="Memory cycles since boot">{regs.cycles.toLocaleString()}</span>
-				</div>
-				<div class="reg-line">
-					<span class="reg-dev">340</span>
-					<button type="button" class="reg" title="Display address counter: the display's own PC. Show it in memory, as octal." onclick={() => openMemAt(regs.dac, 'octal')}
-						>DAC <b>{oct(regs.dac, 5)}</b> <span class="reg-sym">{symbolic(regs.dac)}</span></button
-					>
-					<span class="reg reg-mode" title="Display mode: how the next word is decoded"><b>{regs.mode}</b></span>
-					<span class="reg" title="Beam position">X <b>{oct(regs.x, 4)}</b> Y <b>{oct(regs.y, 4)}</b></span>
-					<span class="reg" title="Scale and intensity">S <b>{regs.scale}</b> I <b>{regs.intensity}</b></span>
-					<span class="lamp" class:on={regs.running} title="The display is cycling through its file">RUN</span>
-					<span class="lamp" class:on={regs.lp} title="Light pen enabled">LP</span>
-					<span class="lamp" class:on={regs.hit} title="Light pen hit">HIT</span>
-					<span class="lamp" class:on={regs.edge} title="The beam ran off the grid">EDGE</span>
-					<span class="reg dim" title="Refresh frames drawn">frame <span class="reg-count short">{regs.frame.toLocaleString()}</span></span>
-				</div>
-				<div class="reg-line">
-					<span class="reg-dev">TTY</span>
-					<span class="lamp" class:on={regs.kbd} title="A key is waiting for the program">KBD</span>
-					<span class="lamp" class:on={regs.tto} title="The printer is done and ready">TTO</span>
-					<span class="reg-dev">CLK</span>
-					<span class="lamp" class:on={regs.clkOn} title="Clock on">ON</span>
-					<span class="lamp" class:on={regs.clkFlag} title="Clock tick waiting">FLAG</span>
-				</div>
-			</div>
-			{@render grip('regs', 'registers')}
-		{/if}
-		{#if slotsOpen && slotsView}
-			<div class="row app regs slots sized" data-panel="slots" role="group" aria-label="Slots" style:height={panelH.slots ? `${panelH.slots}px` : null}>
-				<details class="fold" bind:open={slotsFolds.cost}>
-					<summary>
-						<span class="reg-dev wide" title="What the emulator costs in real time">COST</span>
-						{#if perf}
-							<span class="reg gloss" data-tip="Nanoseconds of real time per simulated memory cycle, processor and devices together, over the last quarter second. A real PDP-7 takes 1,750."><b class="fig ns">{perf.ns === null ? '–' : perf.ns.toFixed(1)}</b> ns</span>
-							<span class="reg gloss" data-tip="How many times faster than a real PDP-7 the emulator could run if it did nothing else: 1,750 ns divided by its time per cycle."><b class="fig times">{perf.ns ? `${Math.round(1750 / perf.ns).toLocaleString()}×` : '–'}</b> max</span>
-							<span class="reg gloss" data-tip="Of the last quarter second, the share spent running the processor and its devices. The rest was drawing and waiting for the next frame."><b class="fig pct">{Math.round(perf.busy * 100)}%</b> busy</span>
-						{/if}
-					</summary>
-					<p class="fold-text">Measured over the last quarter second. A real PDP-7 takes 1,750 ns a memory cycle. "Max" is what the emulator could do if it did nothing else; each frame gives the machine at most 10 ms, so at MAX on the slider it runs a little below that.</p>
-				</details>
-				{#if slotsView.compiler}
-					<details class="fold" bind:open={slotsFolds.jit}>
-						<summary>
-							<span class="reg-dev wide" title="The Korz compiler: runs of PDP-7 instructions compiled to JavaScript">JIT</span>
-							<span class="reg" title="Runs of PDP-7 instructions compiled to JavaScript functions since boot"><b>{slotsView.compiler.built.toLocaleString()}</b> built</span>
-							<span class="reg" title="Compiled blocks thrown away because a store changed a word they were compiled from"><b>{slotsView.compiler.invalidated.toLocaleString()}</b> dropped</span>
-						</summary>
-						<p class="fold-text">A block is a run of PDP-7 instructions compiled to one JavaScript function. A store into a word a block came from throws the block away, and it is compiled again the next time control gets there. PDP-7 code writes into itself all the time: JMS stores its return address in the subroutine's first word. The KORZ panel shows each block's JavaScript.</p>
-					</details>
-				{/if}
-				{#if slotsView.forth}
-					<details class="fold" bind:open={slotsFolds.forth}>
-						<summary>
-							<span class="reg-dev wide" title="The Forth device: PDP-7 Forth's inner interpreter and dictionary lookup as slots">FORTH</span>
-							<span class="reg" title="Forth thread cells the device ran itself, without the PDP-7 executing NEXT"><b>{slotsView.forth.cells.toLocaleString()}</b> cells</span>
-							<span class="reg" title="Code words handed back to the PDP-7 to run as instructions: EMIT, a 340 IOT, a CODE word you wrote"><b>{slotsView.forth.handoffs.toLocaleString()}</b> to CPU</span>
-							<span class="reg" title="Times the device stepped aside and let Mitch's code run"><b>{slotsView.forth.declined.toLocaleString()}</b> declined</span>
-							<span class="reg" title="Dictionary lookups answered from the device's own table, and how many found the word">FIND <b>{slotsView.forth.hits.toLocaleString()}/{slotsView.forth.finds.toLocaleString()}</b></span>
-						</summary>
-						<p class="fold-text">The device runs Forth's threads itself. It hands code words back to the PDP-7, and it declines when NEXT is patched, extend mode is on, an interrupt is waiting, or it meets a cell it doesn't recognize. Every FIND it answers is checked against the header in core.</p>
-					</details>
-				{/if}
-				{#if !slotsView.cpuWhy}
-					<div class="reg-line"><span class="reg dim">The switch-statement CPU and its 340 have no slots. Pick a Korz level in the CPU menu to see them.</span></div>
-				{:else}
-					<details class="fold" bind:open={slotsFolds.cpu}>
-						<summary>
-							<span class="reg-dev wide" title="The PDP-7 processor's sea of slots">CPU</span>
-							<button type="button" class="reg" title="The instruction at the PC, the next one the CPU runs. Click to show it in memory." onclick={(e) => (e.preventDefault(), openMemAt(slotsView.pc, 'code'))}
-								><b>{oct(slotsView.pc, 5)}</b> {oct(slotsView.ir, 6)} <b>{slotsView.irText}</b></button
-							>
-							{#each slotsView.cpuWhy as s (s.selector)}{@render whoRan(s)}{/each}
-						</summary>
-						<div class="why-box" style:height="{panelH['slots-cpu']}px">
-							{#each slotsView.cpuWhy as s (s.selector)}
-								{@render whyLine(s)}
-							{/each}
-						</div>
-						{@render grip('slots-cpu', 'CPU slots')}
-					</details>
-					{#if slotsView.d340 || slotsView.pending}
-						<details class="fold" bind:open={slotsFolds.d340}>
-							<summary>
-								<span class="reg-dev wide" title="The Type 340 display's sea of slots">340</span>
-								{#if slotsView.d340}
-									<button type="button" class="reg" title="The display word at DAC, the next one the 340 decodes, and its mode. Click to show it in memory." onclick={(e) => (e.preventDefault(), openMemAt(slotsView.d340.addr, 'octal'))}
-										><b>{oct(slotsView.d340.addr, 5)}</b> {oct(slotsView.d340.word, 6)} <b>{slotsView.d340.mode}</b></button
-									>
-									{@render whoRan(slotsView.d340)}
-								{:else}
-									<span class="reg dim" title="The light pen stopped the display in the middle of a vector">finishing a vector</span>
-								{/if}
-							</summary>
-							<div class="why-box" style:height="{panelH['slots-340']}px">
-								{#if slotsView.d340}{@render whyLine(slotsView.d340)}{/if}
-							</div>
-							{@render grip('slots-340', '340 slots')}
-						</details>
-					{/if}
-					{#each slotsView.lists as sea (sea.name)}
-						<details class="fold sea">
-							<summary title="Every slot in this sea, by selector. A selector is one kind of question the machine asks, such as which code runs this opcode."
-								><span class="reg-dev wide">SEA</span> {sea.name}: <b>{sea.total}</b> slots, <b>{sea.selectors.length}</b> {sea.selectors.length === 1 ? 'selector' : 'selectors'}</summary
-							>
-							{#each sea.selectors as sel (sel.selector)}
-								<details class="sea-sel">
-									<summary
-										title={sel.table
-											? 'Resolved, this selector is a table indexed by these dimensions: one entry per combination, each the chain of slots that answers there. A dimension with kinds is indexed by kind: values every slot treats alike are one kind.'
-											: 'A table over these dimensions would be too big to build, so the resolver and the compiler leave this selector to the interpreter, which searches its slots on every call. The compiler still inlines the chain wherever it knows the coordinates when it compiles.'}
-										><b>{sel.selector}</b> {sel.slots.length} slots · {sel.table ? 'table' : 'interpreted, a table would be'} {sel.size.toLocaleString()} over {sel.dims.join(' × ') || 'nothing'}</summary
-									>
-									{#each sel.slots as slot, i (i)}
-										<div class="slot-row">
-											<span class="slot-guard" title="The guard: the coordinates this slot answers for. A more specific guard wins.">{slot.guard}</span>
-											{#if slot.layer !== 'machine'}<span class="slot-layer" title="Observe and patch slots run before the machine's own, and can pass on to it with next().">{slot.layer}</span>{/if}
-											<span class="slot-by" title="Who installed it, and what it does">{slot.by}</span>
-										</div>
-									{/each}
-								</details>
-							{/each}
-						</details>
-					{/each}
-				{/if}
-			</div>
-			{@render grip('slots', 'slots')}
-		{/if}
-		{#if korzOpen}
-			<div class="row app korz-row" data-panel="korz" role="group" aria-label="Korz">
-				<KorzBrowser roots={korzRoots} follow={korzFollow} onOpen={(a) => openMemAt(a, 'code')} />
-			</div>
-		{/if}
 		{#snippet whoRan(s)}
 			<span class="who" title="{s.selector}: the question asked. {s.chain.map((l) => l.slot).join(' → ')} answered it.">
 				<span class="why-sel">{s.selector}</span>
@@ -4251,7 +4058,157 @@
 				</div>
 			</div>
 		{/snippet}
-		{#if memOpen}
+		{#snippet regsBody()}
+			<div class="row app regs sized" data-panel="regs" role="group" aria-label="Registers" style:height={panelH.regs ? `${panelH.regs}px` : null}>
+				<div class="reg-line">
+					<span class="reg-dev">CPU</span>
+					<button type="button" class="reg" title="Program counter. Show it in memory." onclick={() => openMemAt(regs.pc)}
+						>PC <b>{oct(regs.pc, 5)}</b> <span class="reg-sym">{symbolic(regs.pc)}</span></button
+					>
+					<button type="button" class="reg" title="Accumulator. Go to the address in its low 13 bits." onclick={() => openMemAt(regs.ac & 0o17777)}
+						>AC <b>{oct(regs.ac, 6)}</b></button
+					>
+					<span class="reg" title="Link">L <b>{regs.link}</b></span>
+					<span class="reg" title="EAE multiplier-quotient">MQ <b>{oct(regs.mq, 6)}</b></span>
+					<span class="reg" title="EAE step counter">SC <b>{oct(regs.sc, 2)}</b></span>
+					<span class="lamp" class:on={regs.ion} title="Interrupts enabled">ION</span>
+					<span class="lamp" class:on={regs.irq} title="A device is asking for an interrupt">IRQ</span>
+					<span class="lamp red" class:on={regs.halted} title="Halted">HLT</span>
+					<span class="reg dim reg-count" title="Memory cycles since boot">{regs.cycles.toLocaleString()}</span>
+				</div>
+				<div class="reg-line">
+					<span class="reg-dev">340</span>
+					<button type="button" class="reg" title="Display address counter: the display's own PC. Show it in memory, as octal." onclick={() => openMemAt(regs.dac, 'octal')}
+						>DAC <b>{oct(regs.dac, 5)}</b> <span class="reg-sym">{symbolic(regs.dac)}</span></button
+					>
+					<span class="reg reg-mode" title="Display mode: how the next word is decoded"><b>{regs.mode}</b></span>
+					<span class="reg" title="Beam position">X <b>{oct(regs.x, 4)}</b> Y <b>{oct(regs.y, 4)}</b></span>
+					<span class="reg" title="Scale and intensity">S <b>{regs.scale}</b> I <b>{regs.intensity}</b></span>
+					<span class="lamp" class:on={regs.running} title="The display is cycling through its file">RUN</span>
+					<span class="lamp" class:on={regs.lp} title="Light pen enabled">LP</span>
+					<span class="lamp" class:on={regs.hit} title="Light pen hit">HIT</span>
+					<span class="lamp" class:on={regs.edge} title="The beam ran off the grid">EDGE</span>
+					<span class="reg dim" title="Refresh frames drawn">frame <span class="reg-count short">{regs.frame.toLocaleString()}</span></span>
+				</div>
+				<div class="reg-line">
+					<span class="reg-dev">TTY</span>
+					<span class="lamp" class:on={regs.kbd} title="A key is waiting for the program">KBD</span>
+					<span class="lamp" class:on={regs.tto} title="The printer is done and ready">TTO</span>
+					<span class="reg-dev">CLK</span>
+					<span class="lamp" class:on={regs.clkOn} title="Clock on">ON</span>
+					<span class="lamp" class:on={regs.clkFlag} title="Clock tick waiting">FLAG</span>
+				</div>
+			</div>
+			{@render grip('regs', 'registers')}
+		{/snippet}
+		{#snippet slotsBody()}
+		{#if slotsView}
+			<div class="row app regs slots sized" data-panel="slots" role="group" aria-label="Slots" style:height={panelH.slots ? `${panelH.slots}px` : null}>
+				<details class="fold" bind:open={slotsFolds.cost}>
+					<summary>
+						<span class="reg-dev wide" title="What the emulator costs in real time">COST</span>
+						{#if perf}
+							<span class="reg gloss" data-tip="Nanoseconds of real time per simulated memory cycle, processor and devices together, over the last quarter second. A real PDP-7 takes 1,750."><b class="fig ns">{perf.ns === null ? '–' : perf.ns.toFixed(1)}</b> ns</span>
+							<span class="reg gloss" data-tip="How many times faster than a real PDP-7 the emulator could run if it did nothing else: 1,750 ns divided by its time per cycle."><b class="fig times">{perf.ns ? `${Math.round(1750 / perf.ns).toLocaleString()}×` : '–'}</b> max</span>
+							<span class="reg gloss" data-tip="Of the last quarter second, the share spent running the processor and its devices. The rest was drawing and waiting for the next frame."><b class="fig pct">{Math.round(perf.busy * 100)}%</b> busy</span>
+						{/if}
+					</summary>
+					<p class="fold-text">Measured over the last quarter second. A real PDP-7 takes 1,750 ns a memory cycle. "Max" is what the emulator could do if it did nothing else; each frame gives the machine at most 10 ms, so at MAX on the slider it runs a little below that.</p>
+				</details>
+				{#if slotsView.compiler}
+					<details class="fold" bind:open={slotsFolds.jit}>
+						<summary>
+							<span class="reg-dev wide" title="The Korz compiler: runs of PDP-7 instructions compiled to JavaScript">JIT</span>
+							<span class="reg" title="Runs of PDP-7 instructions compiled to JavaScript functions since boot"><b>{slotsView.compiler.built.toLocaleString()}</b> built</span>
+							<span class="reg" title="Compiled blocks thrown away because a store changed a word they were compiled from"><b>{slotsView.compiler.invalidated.toLocaleString()}</b> dropped</span>
+						</summary>
+						<p class="fold-text">A block is a run of PDP-7 instructions compiled to one JavaScript function. A store into a word a block came from throws the block away, and it is compiled again the next time control gets there. PDP-7 code writes into itself all the time: JMS stores its return address in the subroutine's first word. The KORZ panel shows each block's JavaScript.</p>
+					</details>
+				{/if}
+				{#if slotsView.forth}
+					<details class="fold" bind:open={slotsFolds.forth}>
+						<summary>
+							<span class="reg-dev wide" title="The Forth device: PDP-7 Forth's inner interpreter and dictionary lookup as slots">FORTH</span>
+							<span class="reg" title="Forth thread cells the device ran itself, without the PDP-7 executing NEXT"><b>{slotsView.forth.cells.toLocaleString()}</b> cells</span>
+							<span class="reg" title="Code words handed back to the PDP-7 to run as instructions: EMIT, a 340 IOT, a CODE word you wrote"><b>{slotsView.forth.handoffs.toLocaleString()}</b> to CPU</span>
+							<span class="reg" title="Times the device stepped aside and let Mitch's code run"><b>{slotsView.forth.declined.toLocaleString()}</b> declined</span>
+							<span class="reg" title="Dictionary lookups answered from the device's own table, and how many found the word">FIND <b>{slotsView.forth.hits.toLocaleString()}/{slotsView.forth.finds.toLocaleString()}</b></span>
+						</summary>
+						<p class="fold-text">The device runs Forth's threads itself. It hands code words back to the PDP-7, and it declines when NEXT is patched, extend mode is on, an interrupt is waiting, or it meets a cell it doesn't recognize. Every FIND it answers is checked against the header in core.</p>
+					</details>
+				{/if}
+				{#if !slotsView.cpuWhy}
+					<div class="reg-line"><span class="reg dim">The switch-statement CPU and its 340 have no slots. Pick a Korz level in the CPU menu to see them.</span></div>
+				{:else}
+					<details class="fold" bind:open={slotsFolds.cpu}>
+						<summary>
+							<span class="reg-dev wide" title="The PDP-7 processor's sea of slots">CPU</span>
+							<button type="button" class="reg" title="The instruction at the PC, the next one the CPU runs. Click to show it in memory." onclick={(e) => (e.preventDefault(), openMemAt(slotsView.pc, 'code'))}
+								><b>{oct(slotsView.pc, 5)}</b> {oct(slotsView.ir, 6)} <b>{slotsView.irText}</b></button
+							>
+							{#each slotsView.cpuWhy as s (s.selector)}{@render whoRan(s)}{/each}
+						</summary>
+						<div class="why-box" style:height="{panelH['slots-cpu']}px">
+							{#each slotsView.cpuWhy as s (s.selector)}
+								{@render whyLine(s)}
+							{/each}
+						</div>
+						{@render grip('slots-cpu', 'CPU slots')}
+					</details>
+					{#if slotsView.d340 || slotsView.pending}
+						<details class="fold" bind:open={slotsFolds.d340}>
+							<summary>
+								<span class="reg-dev wide" title="The Type 340 display's sea of slots">340</span>
+								{#if slotsView.d340}
+									<button type="button" class="reg" title="The display word at DAC, the next one the 340 decodes, and its mode. Click to show it in memory." onclick={(e) => (e.preventDefault(), openMemAt(slotsView.d340.addr, 'octal'))}
+										><b>{oct(slotsView.d340.addr, 5)}</b> {oct(slotsView.d340.word, 6)} <b>{slotsView.d340.mode}</b></button
+									>
+									{@render whoRan(slotsView.d340)}
+								{:else}
+									<span class="reg dim" title="The light pen stopped the display in the middle of a vector">finishing a vector</span>
+								{/if}
+							</summary>
+							<div class="why-box" style:height="{panelH['slots-340']}px">
+								{#if slotsView.d340}{@render whyLine(slotsView.d340)}{/if}
+							</div>
+							{@render grip('slots-340', '340 slots')}
+						</details>
+					{/if}
+					{#each slotsView.lists as sea (sea.name)}
+						<details class="fold sea">
+							<summary title="Every slot in this sea, by selector. A selector is one kind of question the machine asks, such as which code runs this opcode."
+								><span class="reg-dev wide">SEA</span> {sea.name}: <b>{sea.total}</b> slots, <b>{sea.selectors.length}</b> {sea.selectors.length === 1 ? 'selector' : 'selectors'}</summary
+							>
+							{#each sea.selectors as sel (sel.selector)}
+								<details class="sea-sel">
+									<summary
+										title={sel.table
+											? 'Resolved, this selector is a table indexed by these dimensions: one entry per combination, each the chain of slots that answers there. A dimension with kinds is indexed by kind: values every slot treats alike are one kind.'
+											: 'A table over these dimensions would be too big to build, so the resolver and the compiler leave this selector to the interpreter, which searches its slots on every call. The compiler still inlines the chain wherever it knows the coordinates when it compiles.'}
+										><b>{sel.selector}</b> {sel.slots.length} slots · {sel.table ? 'table' : 'interpreted, a table would be'} {sel.size.toLocaleString()} over {sel.dims.join(' × ') || 'nothing'}</summary
+									>
+									{#each sel.slots as slot, i (i)}
+										<div class="slot-row">
+											<span class="slot-guard" title="The guard: the coordinates this slot answers for. A more specific guard wins.">{slot.guard}</span>
+											{#if slot.layer !== 'machine'}<span class="slot-layer" title="Observe and patch slots run before the machine's own, and can pass on to it with next().">{slot.layer}</span>{/if}
+											<span class="slot-by" title="Who installed it, and what it does">{slot.by}</span>
+										</div>
+									{/each}
+								</details>
+							{/each}
+						</details>
+					{/each}
+				{/if}
+			</div>
+			{@render grip('slots', 'slots')}
+		{/if}
+		{/snippet}
+		{#snippet korzBody()}
+			<div class="row app korz-row" data-panel="korz" role="group" aria-label="Korz">
+				<KorzBrowser roots={korzRoots} follow={korzFollow} onOpen={(a) => openMemAt(a, 'code')} />
+			</div>
+		{/snippet}
+		{#snippet memBody()}
 		<div class="row app mem" data-panel="mem">
 			<div bind:this={memEl}>
 				<div class="mem-bar mem-views" role="group" aria-label="View">
@@ -4418,8 +4375,8 @@
 				{@render memGrip()}
 			{/if}
 		</div>
-		{/if}
-		{#if ringsOpen && hasRings}
+		{/snippet}
+		{#snippet ringsBody()}
 			<div class="row app" data-panel="rings">
 				<RingView capture={captureRings} implant={canImplant ? implantRings : null} hear={hearRings} name={symbolic} height={ringsHeight + ringsExtra} onOpen={(a) => openMemAt(a)} />
 				<button
@@ -4431,8 +4388,8 @@
 					onkeydown={(e) => gripKey(e, () => ringsHeight, ringsSet, 20)}
 				></button>
 			</div>
-		{/if}
-		{#if snapsOpen}
+		{/snippet}
+		{#snippet snapsBody()}
 			<div class="row app snaps" data-panel="snaps" role="group" aria-label="Snapshots">
 				<div class="snap-bar">
 					<input class="snap-name" bind:value={snapName} placeholder="Name" aria-label="Snapshot name" disabled={status !== 'live'} />
@@ -4458,8 +4415,8 @@
 					{#if snaps.length === 0}<li class="mem-hint">No snapshots of {program?.label ?? 'this program'} yet.</li>{/if}
 				</ul>
 			</div>
-		{/if}
-		{#if configOpen}
+		{/snippet}
+		{#snippet configBody()}
 			<div class="row app config sized" data-panel="config" role="group" aria-label="Configuration" style:height={panelH.config ? `${panelH.config}px` : null}>
 				<h4 class="config-head">Display</h4>
 				<label class="mem-hint" title="Hover or hold the pen still over something on the tube to see what drew it"
@@ -4527,7 +4484,7 @@
 				</div>
 			</div>
 			{@render grip('config', 'configuration')}
-		{/if}
+		{/snippet}
 	</figcaption>
 </figure>
 

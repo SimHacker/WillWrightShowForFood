@@ -793,10 +793,42 @@ STY, so it waits for a network device.
 Knight Kludge (TK10, kept "so TTY#s don't change"), 9 on the Datapoint Kludge (DPK), 16 STYs for
 network and program terminals, and 16 TV terminals through the 10-11 interface, turned off
 ("the 10-11 interface doesn't work"). The generic KA build on our packs has the CTY, TK10 16, MTY
-10, DPK 16, 8 STYs, 10 TVs and Chaosnet. Only the CTY has a device in the cabinet. A multiplexer
-from SIMH (`ka10_mty.c` or `ka10_tk10.c`) would give each line a byte stream, and any terminal
-(paper, glass, later a display) could sit on any line, each a tab on the page, its TCTYP telling
-ITS what is there.
+10, DPK 16, 8 STYs, 10 TVs and Chaosnet. Only the CTY has a device in the cabinet.
+
+### Terminals: the plan
+
+Each screen its own outline node, closable, on its own line, as the cartridge says what is
+plugged in where. To start: the paper console on the CTY, a glass teletype and two SUPDUP
+displays on TK10 lines, two so UNTALK can run between them.
+
+1. **The TK10**, ported from SIMH's `ka10_tk10.c` (323 lines; device 600, 16 lines, a round
+   robin scan for output done and input ready). ITS starts DDT on a free line at Control-Z.
+2. **Lines in core.** A JS module per line sets ITS's own variables for it, all at once and
+   whenever the terminal changes: `TCTYP`, `TTYOPT`, `TCMXV` (height), `TCMXH` (width + 1),
+   `TTYROL`, `TTYSMT`, and the speed codes in `TTYTYP` (`$TTOSP`, `$TTISP`: 2 = 110 baud, 4 =
+   300, 5 = 1200, 7 = 2400, 11 = 9600; `SYSDOC; ITSTTY` H/1/d). It finds them the way `.EVAL`
+   does: `DDT-2` holds an AOBJN pointer to exec DDT's symbol table, pairs of SQUOZE name (padded
+   to six) and value. Checked in Node: after `:tctyp timlac height 24 width 79` on the console,
+   TTY 0's `TCMXV` is 24, `TCMXH` 80, `TCTYP` 7 (`%TNSFW`) and `TTYOPT` Timlac's bits. The
+   writes follow `NCNSSET` in `SYSTEM; TS3TTY` (it clamps both pc pprs' cursors, `TTYIVP`,
+   `TTYIHP`, and recomputes `TTYEPP`), and happen between instructions while the KA10 is in user
+   mode with no interrupt in progress, where no system code is halfway through.
+3. **One baud rate**, the line's: the device paces its done flag by the wall clock, the module
+   tells ITS the speed, and the terminal draws what arrives, with no queue of its own. Typing is
+   paced too: ITS drops and rings at what it cannot buffer (a 230-character Lisp line, a long MDL
+   one), so input goes at the line's rate.
+4. **SUPDUP display.** `:tctyp timlac` is a software type with insert and delete of lines and
+   characters, lowercase, meta keys and the intelligent terminal protocol (`%TPCBS`). ITS sends
+   its display codes on a 7-bit line as 177 then the code less 176, cursor arguments plus 1
+   (`ITSTTY` K/1). The terminal answers `%TDORS` with `^\ ^P v h`, sends `^\ ^C` after a resize
+   so the program redraws, doubles a typed `^\`, and sends Meta as `^\ B x`.
+5. **The system log.** The system job writes `LOGIN`, `GUNNER` and the like to the TTY in `SYSCN`
+   (`SYSCON==0`, the console). Other lines never get them. `SUPPLG` -1 drops the login and logout
+   ones; `SYSCN` set to a spare line gives the log its own printer.
+
+Not on the cabinet yet: MDL long lines and Zork's long sessions are untested past a few
+commands. Zork (`:zork`), MDL (`:mdl`, Muddle 56; Altmode evaluates), Haunt (`:haunt`) and the
+three programs on the page run.
 
 ## Phases
 

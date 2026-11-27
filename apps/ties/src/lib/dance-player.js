@@ -153,7 +153,7 @@ export class DancePlayer {
 					glide(saw.frequency, 36 + 30 * load);
 					glide(beat.frequency, 3 + 16 * load);
 					glide(lp.frequency, 160 + 700 * load + 500 * fill);
-					glide(out.gain, 0.08 + 0.12 * load);
+					glide(out.gain, 0.04 + 0.06 * load);
 				}
 			};
 		}
