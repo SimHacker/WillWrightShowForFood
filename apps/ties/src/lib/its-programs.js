@@ -82,7 +82,7 @@ export const PROGRAMS = [
 	},
 	{
 		id: 'lisp',
-		title: 'MacLisp',
+		title: 'MACLISP',
 		about: 'MacLisp counts in octal until told otherwise, and its * and + are for fixnums: times and plus make bignums. Its start sets it to decimal.',
 		start: [
 			{ keys: ':lisp\r', wait: 'Alloc?' },
@@ -117,7 +117,7 @@ export const PROGRAMS = [
 	},
 	{
 		id: 'logo',
-		title: 'Logo',
+		title: 'LOGO',
 		about: 'CLOGO prompts with ?, and with > inside a procedure, whose lines are numbered. A quoted word ends with a quote too: MAKE "X" 7. Logo drops what is typed ahead, so a procedure goes in a line at a time.',
 		start: [{ keys: ':clogo\r', wait: '?' }],
 		quit: line('GOODBYE', 'Leave Logo; this logs out'),
@@ -148,7 +148,7 @@ export const PROGRAMS = [
 	},
 	{
 		id: 'zork',
-		title: 'Zork',
+		title: 'ZORK',
 		about: "Zork as MIT's Dynamic Modelling group wrote it in MDL from 1977, the whole game that Infocom later cut into Zork I, II and III. Start at West of House; the way in is round the back. A sentence ends with Return; only the first five letters of a word count.",
 		start: [{ keys: ':zork\r', wait: '\n>' }],
 		quit: { label: 'quit', title: 'Leave Zork for DDT, answering y when it asks', steps: [{ keys: 'quit\r', wait: 'affirmative):' }, { keys: 'y\r' }] },

@@ -174,6 +174,10 @@
 	>
 {/snippet}
 
+{#snippet actions()}
+	{@render play()}{#if dance.on && jiggle}{@render jiggler(true)}{/if}
+{/snippet}
+
 {#snippet mute(compact = false)}
 	<button
 		type="button"
@@ -234,9 +238,9 @@
 {#snippet jiggler(compact = false)}
 	<button
 		type="button"
-		class={{ chip }}
+		class={['die', { chip }]}
 		aria-label="Jiggle"
-		title="Jiggle: flip one of the machine's switches at random, which twists the music. A program that reads them as controls feels it too."
+		title="Jiggle: change the machine's switches at random, which twists the music. A program that reads them as controls feels it too."
 		onpointerdown={(e) => e.preventDefault()}
 		onclick={jiggle}>🎲{compact ? '' : ' Jiggle'}</button
 	>
@@ -325,6 +329,29 @@
 
 <!-- The music seed: jiggle, copy and paste, favorites. -->
 {#snippet seedPanel(compact = false)}
+		{#if seed}
+			<div class="row">
+				<label class="seed-edit" title="The music seed: the switches as digits. Type or paste one and press Return to set the switches; a link with ?seed= works too.">
+					Seed
+					<input
+						type="text"
+						spellcheck="false"
+						value={digits}
+						onkeydown={(e) => {
+							if (e.key === 'Enter') e.currentTarget.blur();
+						}}
+						onchange={(e) => {
+							const text = seedText(e.currentTarget.value).trim();
+							if (seed.paste(text)) say(`seed ${text}`);
+							else {
+								say(`not a seed: ${text}`);
+								e.currentTarget.value = seed.digits();
+							}
+						}}
+					/>
+				</label>
+			</div>
+		{/if}
 		<div class="row">
 			<Pinnable {bar} id="music-history" />
 		</div>
@@ -364,7 +391,7 @@
 		{#if said}<p class="said" role="status">{said}</p>{/if}
 {/snippet}
 
-<Outline id="{id}-dance" {title} hint="The bus dance: the machine's work as music" {summary} actions={play} {move} {opened}>
+<Outline id="{id}-dance" {title} hint="The bus dance: the machine's work as music" {summary} {actions} {move} {opened}>
 	<div class="row">
 		<Pinnable {bar} id="dance-play" />
 		<Pinnable {bar} id="dance-mute" />
@@ -401,6 +428,21 @@
 </Outline>
 
 <style>
+	.die {
+		background: #eee;
+		color: #000;
+		border: 1px solid #999;
+	}
+	.seed-edit {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4em;
+	}
+	.seed-edit input {
+		width: 17ch;
+		font: inherit;
+		font-family: ui-monospace, monospace;
+	}
 	.row {
 		display: flex;
 		flex-wrap: wrap;

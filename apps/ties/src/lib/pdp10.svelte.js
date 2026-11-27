@@ -35,6 +35,8 @@ const VIEW_KEY = 'pdp10-view';
 const BELL_KEY = 'pdp10-bell-mute';
 /** Set once Zork's grue warning has played its video; cleared in the preferences to play it again. */
 const GRUE_KEY = 'pdp10-grue_warning';
+/** Set when the system job's log (LOGIN, GUNNER, the time…) should type on the console, as ITS starts. */
+const SYSLOG_KEY = 'pdp10-system-log';
 
 /**
  * What the console watches for, and the video it opens the first time: MC Frontalot's "It Is
@@ -114,6 +116,8 @@ class Pdp10 {
 	told = $state(null);
 	voice = new TtyVoice('pdp10-speak');
 	bellMuted = $state(keptFlag(BELL_KEY));
+	/** Whether the system job types its log on the console; off, ITS sends it to the null device. */
+	systemLog = $state(keptFlag(SYSLOG_KEY));
 	/** Whether the grue's video has played in this browser. */
 	grueWarned = $state(keptFlag(GRUE_KEY));
 	/** The last of what ITS printed, as one line, for the watches. */
@@ -200,6 +204,7 @@ class Pdp10 {
 		});
 		w.postMessage({ type: 'speed', mode: this.speed });
 		w.postMessage({ type: 'switches', word: this.switches });
+		w.postMessage({ type: 'syslog', tty: this.systemLog ? 0 : -1 });
 		this.#toldDance = false;
 		if (this.dance.on) w.postMessage({ type: 'dance', on: (this.#toldDance = true) });
 		this.#then = 0;
@@ -270,6 +275,13 @@ class Pdp10 {
 		keep(BELL_KEY, on ? '1' : '');
 	}
 
+	/** Let the system job type its log on the console, or send it nowhere. @param {boolean} on */
+	setSystemLog(on) {
+		this.systemLog = on;
+		keep(SYSLOG_KEY, on ? '1' : '');
+		this.#worker?.postMessage({ type: 'syslog', tty: on ? 0 : -1 });
+	}
+
 	/** Forget that the grue has been met, so its video plays the next time. */
 	forgetGrue() {
 		this.grueWarned = false;
@@ -291,6 +303,7 @@ class Pdp10 {
 		this.#tail = '';
 		openWeb(GRUE.url, {
 			title: GRUE.title,
+			reveal: true,
 			buttons: [
 				{
 					label: 'Ignore Warning',

@@ -1,7 +1,7 @@
 <script>
 	/**
 	 * What web-panel.svelte.js has open, first under the toolbar's row (MachineToolbar.svelte),
-	 * scrolled into view as it opens: a bar with its title, the opener's buttons, a link out and
+	 * scrolled into view only when a watch opened it: a bar with its title, the opener's buttons, a link out and
 	 * a close box, over the video or page. It also catches plain clicks
 	 * on YouTube links and on links marked `data-view` anywhere on the page, and opens them here;
 	 * a click with a modifier key, or the middle button, still opens a new tab.
@@ -25,7 +25,7 @@
 {#if webPanel.view}
 	{@const v = webPanel.view}
 	{#key v}
-	<div class="web" role="region" aria-label={v.title} {@attach (el) => el.scrollIntoView({ block: 'nearest', behavior: 'smooth' })}>
+	<div class="web" role="region" aria-label={v.title} {@attach (el) => void (v.reveal && el.scrollIntoView({ block: 'nearest', behavior: 'smooth' }))}>
 		<div class="bar">
 			<span class="title">{v.title}</span>
 			{#each v.buttons as b (b.label)}

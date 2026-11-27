@@ -8,6 +8,7 @@
 	import { goto } from '$app/navigation';
 	import { createBeeper } from './beeper.js';
 	import { savePicture } from './save-image.js';
+	import { switchDrawing } from './switch-drawing.js';
 	import {
 		Pdp7,
 		KorzPdp7,
@@ -1161,13 +1162,6 @@
 		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen, prog: progOpen, slots: slotsOpen, korz: korzOpen, snaps: snapsOpen };
 		if (id === 'display') displayOpen = true;
 		else if (id in open && !open[id] && (id !== 'rings' || hasRings) && (id !== 'prog' || hasProgPanel)) togglePanel(id, {});
-		await tick();
-		const els = [...(figureEl?.querySelectorAll(`[data-panel="${id}"]`) ?? [])].filter((el) => !el.hidden);
-		if (!els.length) return;
-		const last = els.at(-1);
-		const end = last.nextElementSibling?.classList.contains('tty-grip') ? last.nextElementSibling : last;
-		end.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-		els[0].scrollIntoView({ block: 'nearest', inline: 'nearest' });
 	}
 	function openMemAt(addr, view) {
 		if (!memOpen) {
@@ -3260,6 +3254,12 @@
 		recorder?.record(box.cycles, 'sw', switches);
 	}
 
+	const drawing = switchDrawing({
+		on: (i) => (switches & SWITCH_BITS[i]) !== 0,
+		set: (i, on) => void (((switches & SWITCH_BITS[i]) !== 0) !== on && onSwitch(SWITCH_BITS[i])),
+		live: () => status === 'live'
+	});
+
 	/** The AC switches as a music seed, a program's `switches:` line in cabinet-programs.js. */
 	const switchesSeed = {
 		machine: 'pdp7',
@@ -3395,7 +3395,7 @@
 	});
 </script>
 
-<svelte:window onkeydown={onCommandKey} />
+<svelte:window onkeydown={onCommandKey} onpointermove={drawing.move} onpointerup={drawing.up} onpointercancel={drawing.up} />
 
 {#if spec.title}
 	<p class="headline"><strong>{spec.title}</strong></p>
@@ -3683,9 +3683,11 @@
 							class:named={label !== ''}
 							class:dim={!!program?.switchLabels && label === ''}
 							aria-pressed={(switches & bit) !== 0}
-							title="switch {i}{label ? `: ${label}` : ''}"
+							title="switch {i}{label ? `: ${label}` : ''}. Press and drag across the switches to draw them: the top half of each sets it up, the bottom half down."
 							disabled={status !== 'live'}
-							onclick={() => onSwitch(bit)}>{i}</button
+							data-switch={i}
+							onpointerdown={(e) => drawing.down(e, i)}
+							onclick={(e) => drawing.click(e, i)}>{i}</button
 						>
 					{/each}
 				</span>
@@ -4833,6 +4835,7 @@
 	.sw-group {
 		display: flex;
 		gap: 2px;
+		touch-action: none;
 	}
 	.row.menu {
 		flex-wrap: wrap;

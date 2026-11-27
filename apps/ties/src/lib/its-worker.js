@@ -17,8 +17,9 @@
 //
 // In: { type: 'start', ... }, { type: 'keys', text }, { type: 'speed', mode }, { type: 'dance', on },
 // { type: 'switches', word }.
-// Out: out (text), phase (what it is doing), stats, dance, halt, error.
-import { ItsMachine } from '@wwsff/cabinet/ka10';
+// Out: out (text), phase (what it is doing), stats, dance, halt, error. In also: syslog (where
+// the system job types its log: tty 0 for the console, -1 for nowhere).
+import { ItsMachine, setSystemLog } from '@wwsff/cabinet/ka10';
 
 const BLOCK = 1024;
 const QUIET_MS = 3000;
@@ -171,6 +172,13 @@ let tps = 1_000_000;
 /** The console's 36 data switches, which a program reads with .RDSW (.OPER 20). */
 let switches = 0;
 let fastNow = true;
+/** Where the system job types its log: 0 the console, -1 nowhere. Set once ITS is up, and again on change. */
+let sysLog = -1;
+/** @type {number | null} */
+let sysLogSet = null;
+/** ITS has said IN OPERATION: its symbols are in core, and writing them sticks. */
+let up = false;
+let tail = '';
 
 /** @param {Record<string, unknown>} msg */
 const post = (msg) => postMessage(msg);
@@ -250,6 +258,7 @@ function slice() {
 		stopped = true;
 		post({ type: 'error', message: e instanceof Error ? e.message : String(e) });
 	}
+	if (up && sysLogSet !== sysLog && setSystemLog(cpu, sysLog)) sysLogSet = sysLog;
 	if (out) {
 		post({ type: 'out', text: out });
 		out = '';
@@ -276,6 +285,7 @@ async function begin(start) {
 			const c = String.fromCharCode(ch);
 			out += c;
 			if (steps.length) since += c;
+			if (!up) up = (tail = (tail + c).slice(-12)) === 'IN OPERATION';
 			lastActive = performance.now();
 		}
 	});
@@ -325,6 +335,8 @@ onmessage = (e) => {
 	} else if (msg.type === 'dance') {
 		dancing = !!msg.on;
 		danceFrom(performance.now());
+	} else if (msg.type === 'syslog') {
+		sysLog = Number(msg.tty);
 	} else if (msg.type === 'switches') {
 		switches = Number(msg.word) || 0;
 		if (m) m.cpu.SW = switches;

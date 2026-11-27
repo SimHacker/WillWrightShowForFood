@@ -11,7 +11,7 @@
  * @typedef {{ label: string, title: string, action: () => void, checked?: () => boolean }} WebButton
  */
 /**
- * @typedef {{ kind: 'youtube' | 'web', url: string, src: string, title: string, buttons: WebButton[] }} WebView
+ * @typedef {{ kind: 'youtube' | 'web', url: string, src: string, title: string, buttons: WebButton[], reveal: boolean }} WebView
  */
 
 export const webPanel = $state({ /** @type {WebView | null} */ view: null });
@@ -37,13 +37,14 @@ export function youtube(url) {
 
 /**
  * Open a link in the panel: a YouTube video plays at once, anything else is shown as a page.
- * @param {string} url @param {{ title?: string, buttons?: WebButton[] }} [opts]
+ * `reveal` scrolls it into view, for a watch that opens it unasked; a click never scrolls.
+ * @param {string} url @param {{ title?: string, buttons?: WebButton[], reveal?: boolean }} [opts]
  */
 export function openWeb(url, opts = {}) {
 	const yt = youtube(url);
 	webPanel.view = yt
-		? { kind: 'youtube', url, src: `https://www.youtube-nocookie.com/embed/${yt.id}?autoplay=1${yt.start ? `&start=${yt.start}` : ''}`, title: opts.title ?? 'YouTube', buttons: opts.buttons ?? [] }
-		: { kind: 'web', url, src: url, title: opts.title ?? url, buttons: opts.buttons ?? [] };
+		? { kind: 'youtube', url, src: `https://www.youtube-nocookie.com/embed/${yt.id}?autoplay=1${yt.start ? `&start=${yt.start}` : ''}`, title: opts.title ?? 'YouTube', buttons: opts.buttons ?? [], reveal: !!opts.reveal }
+		: { kind: 'web', url, src: url, title: opts.title ?? url, buttons: opts.buttons ?? [], reveal: !!opts.reveal };
 }
 
 export function closeWeb() {

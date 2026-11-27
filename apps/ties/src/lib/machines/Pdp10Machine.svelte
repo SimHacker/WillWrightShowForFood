@@ -11,6 +11,7 @@
 	import { launchUrl } from '@wwsff/catalog';
 	import { dataSwitchesSeedText, dataSwitchesSeedWord } from '@wwsff/cabinet/dance';
 	import AboutPanel from '../AboutPanel.svelte';
+	import { switchDrawing } from '../switch-drawing.js';
 	import DancePanel from '../DancePanel.svelte';
 	import MachineToolbar from '../MachineToolbar.svelte';
 	import Outline from '../Outline.svelte';
@@ -163,14 +164,14 @@
 	/** @param {string} keys */
 	function send(keys) {
 		pdp10.type(keys);
-		paper?.focus();
+		paper?.focus({ preventScroll: true });
 	}
 
 	/** @param {import('../its-programs.js').ItsLine} line */
 	function sendLine(line) {
 		if (line.steps) pdp10.typeSteps(line.steps);
 		else pdp10.type(line.keys ?? '');
-		paper?.focus();
+		paper?.focus({ preventScroll: true });
 	}
 
 	async function copyPaper() {
@@ -193,6 +194,8 @@
 	$effect(() => {
 		/** @type {Record<string, import('svelte').Snippet<[boolean]>>} */
 		const panels = { ddt: ddtPanel, macsyma: macsymaPanel, lisp: lispPanel, logo: logoPanel, zork: zorkPanel };
+		/** @type {Record<string, import('svelte').Snippet>} */
+		const briefs = { ddt: ddtBrief, macsyma: macsymaBrief, lisp: lispBrief, logo: logoBrief, zork: zorkBrief };
 		const off = [
 			bar.offer('restart', 'Start again', restartButton, 'control', ['pdp10-run']),
 			bar.offer('speed', 'Speed', speedMenu, 'control', ['pdp10-run']),
@@ -201,15 +204,15 @@
 			bar.offer('tty-speak', 'Speak', speakToggle, 'control', ['pdp10-console']),
 			bar.offer('tty-hush', 'Hush', hushButton, 'control', ['pdp10-console']),
 			bar.offer('tty-bell', 'The bell', bellToggle, 'control', ['pdp10-console']),
-			bar.offer('pdp10-switches', 'Data switches', switchesPanel, 'panel', ['pdp10-run']),
+			bar.offer('pdp10-switches', 'Data switches', switchesPanel, 'panel', ['pdp10-run'], switchesBrief),
 			bar.offer('altmode', 'Altmode', altmodeKey, 'control', ['pdp10-programs', 'pdp10-prog-ddt']),
 			bar.offer('ctrl-z', 'Control-Z', ctrlZKey, 'control', ['pdp10-programs', 'pdp10-prog-ddt']),
 			bar.offer('ctrl-g', 'Control-G', ctrlGKey, 'control', ['pdp10-programs', 'pdp10-prog-ddt']),
 			bar.offer('copy-paper', 'Copy the paper', copyButton, 'control', ['pdp10-run']),
 			bar.offer('readout', 'the speed readout', readout, 'control', ['pdp10-run']),
-			bar.offer('pdp10-stats', 'Running', statsPanel, 'panel', ['pdp10-run']),
+			bar.offer('pdp10-stats', 'Running', statsPanel, 'panel', ['pdp10-run'], statsBrief),
 			bar.offer('pdp10-packs', 'The packs', packsPanel, 'panel', ['pdp10-disks']),
-			...PROGRAMS.map((p) => bar.offer(`prog-${p.id}`, p.title, panels[p.id], 'panel', ['pdp10-programs', `pdp10-prog-${p.id}`]))
+			...PROGRAMS.map((p) => bar.offer(`prog-${p.id}`, p.title, panels[p.id], 'panel', ['pdp10-programs', `pdp10-prog-${p.id}`], briefs[p.id]))
 		];
 		return () => off.forEach((f) => f());
 	});
@@ -238,11 +241,14 @@
 		}
 	};
 	// Never switch 0: ITS stops in DDT while it is up.
-	const jiggle = () => pdp10.flip(1 + Math.floor(Math.random() * 35));
+	/** Set the data switches at random, all but switch 0, which would stop ITS in DDT. */
+	const jiggle = () => pdp10.setSwitches(Math.floor(Math.random() * 2 ** 35));
+	const DRAW = ' Press and drag across the switches to draw them: the top half of each sets it up, the bottom half down.';
+	const drawing = switchDrawing({ on: (bit) => pdp10.switchOn(bit), set: (bit, on) => void (pdp10.switchOn(bit) !== on && pdp10.flip(bit)) });
 
 	onMount(() => {
 		pdp10.start(entry, values);
-		paper?.focus();
+		paper?.focus({ preventScroll: true });
 		return () => pdp10.stop();
 	});
 </script>
@@ -321,9 +327,11 @@
 						aria-pressed={on}
 						aria-label="Data switch {bit}"
 						title={bit === 0
-							? `Data switch 0: ${on ? 'up' : 'down'}. ITS looks at it on every clock tick and, while it is up, stops in DDT (SWITCH 0 IS UP; put it down, then Altmode P goes on). The jiggle leaves it alone, and a boot puts it down.`
-							: `Data switch ${bit}: ${on ? 'up' : 'down'}. A program reads the switches with .RDSW; the bus dance's music turns on them.`}
-						onclick={() => pdp10.flip(bit)}
+							? `Data switch 0: ${on ? 'up' : 'down'}. ITS looks at it on every clock tick and, while it is up, stops in DDT (SWITCH 0 IS UP; put it down, then Altmode P goes on). The jiggle leaves it alone, and a boot puts it down.${DRAW}`
+							: `Data switch ${bit}: ${on ? 'up' : 'down'}. A program reads the switches with .RDSW; the bus dance's music turns on them.${DRAW}`}
+						data-switch={bit}
+						onpointerdown={(e) => drawing.down(e, bit)}
+						onclick={(e) => drawing.click(e, bit)}
 					></button>
 				{/each}
 			</span>
@@ -421,6 +429,23 @@
 	</div>
 {/snippet}
 
+{#snippet programBrief(/** @type {import('../its-programs.js').ItsProgram} */ p)}
+	{@const run = runLine(p)}
+	{#if run}{@render lineButton(run)}{/if}{@render lineButton(p.quit)}
+{/snippet}
+{#snippet ddtBrief()}{@render programBrief(PROGRAMS[0])}{/snippet}
+{#snippet macsymaBrief()}{@render programBrief(PROGRAMS[1])}{/snippet}
+{#snippet lispBrief()}{@render programBrief(PROGRAMS[2])}{/snippet}
+{#snippet logoBrief()}{@render programBrief(PROGRAMS[3])}{/snippet}
+{#snippet zorkBrief()}{@render programBrief(PROGRAMS[4])}{/snippet}
+{#snippet switchesBrief()}
+	<code title="The data switches in octal, bit 0 first">{dataSwitchesSeedText(pdp10.switches).slice(2)}</code>
+	<button class="die" title="Jiggle: set the data switches at random, which twists the music" onclick={jiggle}>🎲</button>
+{/snippet}
+{#snippet statsBrief()}
+	<span>{pdp10.phase || (pdp10.running ? 'Running' : pdp10.halt ? 'Halted' : 'Stopped')}</span>{@render readout()}
+{/snippet}
+
 {#snippet ddtPanel()}{@render programPanel(PROGRAMS[0])}{/snippet}
 {#snippet macsymaPanel()}{@render programPanel(PROGRAMS[1])}{/snippet}
 {#snippet lispPanel()}{@render programPanel(PROGRAMS[2])}{/snippet}
@@ -462,6 +487,11 @@
 		summary="{VIEWS.find((v) => v.id === pdp10.view)?.label} · {BAUDS.find((b) => b.baud === pdp10.baud)?.label}{pdp10.voice.speak ? ' · speaking' : ''}"
 	>
 		<div class="row"><Pinnable {bar} id="tty-view" /><Pinnable {bar} id="baud" /><Pinnable {bar} id="tty-speak" /><Pinnable {bar} id="tty-hush" /><Pinnable {bar} id="tty-bell" /></div>
+		<p class="note">
+			<label title="ITS's system job types LOGIN, GUNNER, DRAGON, the time and the like on its console. Off, the page sets SYSCN to -1 once ITS is up, and the system job's log goes to the null device."
+				><input type="checkbox" checked={pdp10.systemLog} onchange={(e) => pdp10.setSystemLog(e.currentTarget.checked)} /> System log on the console</label
+			>
+		</p>
 		{#if pdp10.voice.speak}<div class="row"><VoicePicker /><VoiceTone /></div>{/if}
 		{#if pdp10.running && pdp10.told && pdp10.told !== pdp10.view}
 			<p class="note">
@@ -524,7 +554,7 @@
 	<AboutPanel {bar} machine="pdp10" move={moveNode} />
 {/snippet}
 
-<svelte:window onkeydown={onwindowkey} />
+<svelte:window onkeydown={onwindowkey} onpointermove={drawing.move} onpointerup={drawing.up} onpointercancel={drawing.up} />
 
 <section class="pdp10" aria-label="The PDP-10">
 	<div class="console">
@@ -822,6 +852,7 @@
 	.switches {
 		display: flex;
 		flex-wrap: wrap;
+		touch-action: none;
 		align-items: center;
 		gap: 0.3rem;
 	}
@@ -864,6 +895,11 @@
 	.packs td {
 		padding: 0.1rem 0.8rem 0.1rem 0;
 		text-align: left;
+	}
+	.die {
+		background: #eee;
+		color: #000;
+		border: 1px solid #999;
 	}
 	/* Toolbar controls keep their size whatever they show, so nothing moves under the pointer. */
 	.readout {

@@ -60,7 +60,7 @@
 		e.preventDefault();
 		move(id, e.key === 'ArrowUp' ? -1 : 1);
 		const el = /** @type {HTMLElement} */ (e.currentTarget);
-		requestAnimationFrame(() => el.focus());
+		requestAnimationFrame(() => el.focus({ preventScroll: true }));
 	}
 
 	/** @type {HTMLElement | null} */

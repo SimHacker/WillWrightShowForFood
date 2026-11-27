@@ -14,6 +14,8 @@
 // The component that owns a control or panel offers it (offer), as a snippet taking one
 // argument: true for the toolbar's compact look, false for its home. One whose owner is not
 // on the page (the dance before there is one) is left out of the toolbar until it comes back.
+// A pinned panel opens and closes; closed, it shows its `brief` beside its title, if it offered
+// one: a line of what matters and the buttons used most.
 
 import { untrack } from 'svelte';
 import { SvelteMap } from 'svelte/reactivity';
@@ -22,7 +24,8 @@ import { seekHome } from './outline-reveal.svelte.js';
 /** @typedef {import('svelte').Snippet<[boolean]>} Control */
 /** @typedef {'control' | 'panel'} Kind */
 /** @typedef {'left' | 'right'} Side */
-/** @typedef {{ on: boolean, at: number, side?: Side }} Place */
+/** @typedef {import('svelte').Snippet} Brief */
+/** @typedef {{ on: boolean, at: number, side?: Side, shut?: boolean }} Place */
 
 /** The toolbar a new player gets, by machine: the machine, time, then what reaches it; and how fast. */
 const DEFAULTS = /** @type {Record<string, { left: string[], right: string[] }>} */ ({
@@ -35,7 +38,7 @@ export class Toolbar {
 	#defaults;
 	/** @type {Record<string, Place>} */
 	places = $state({});
-	/** What is on the page now, by id. @type {SvelteMap<string, { label: string, render: Control, kind: Kind, home: string[] }>} */
+	/** What is on the page now, by id. @type {SvelteMap<string, { label: string, render: Control, kind: Kind, home: string[], brief?: Brief }>} */
 	controls = new SvelteMap();
 	/** How many toolbars show this one; with none, there is nowhere to put a control. */
 	live = $state(0);
@@ -111,6 +114,20 @@ export class Toolbar {
 		this.#save();
 	}
 
+	/** Whether a pinned panel is closed to its title and brief. @param {string} id */
+	isShut(id) {
+		return !!this.places[id]?.shut;
+	}
+
+	/** Open or close a pinned panel. @param {string} id */
+	toggleShut(id) {
+		const p = this.places[id];
+		if (!p) return;
+		if (p.shut) delete p.shut;
+		else p.shut = true;
+		this.#save();
+	}
+
 	/** @param {string} id */
 	toggle(id) {
 		if (this.has(id)) this.unpin(id);
@@ -167,10 +184,11 @@ export class Toolbar {
 	 * @param {string} id @param {string} label what the 📌 and ⏏️ tooltips call it @param {Control} render
 	 * @param {Kind} [kind] a control goes on the row, a panel under it
 	 * @param {string[]} [home] the outline nodes it is under, from the top down, opened to find it
+	 * @param {Brief} [brief] a panel's line when it is closed in the toolbar
 	 */
-	offer(id, label, render, kind = 'control', home = []) {
+	offer(id, label, render, kind = 'control', home = [], brief = undefined) {
 		// Untracked: the owner's $effect offers on what it reads, not on the registry it writes.
-		untrack(() => this.controls.set(id, { label, render, kind, home }));
+		untrack(() => this.controls.set(id, { label, render, kind, home, brief }));
 		return () =>
 			untrack(() => {
 				if (this.controls.get(id)?.render === render) this.controls.delete(id);

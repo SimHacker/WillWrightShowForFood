@@ -156,7 +156,7 @@
 
 	function engage() {
 		engaged = true;
-		canvas?.focus();
+		canvas?.focus({ preventScroll: true });
 		apple.listen();
 		const disk = pending;
 		pending = undefined;
@@ -186,7 +186,7 @@
 	/** @param {string} name @param {ArrayBuffer} data @param {string} [profile] */
 	async function insert(name, data, profile) {
 		engaged = true;
-		canvas?.focus();
+		canvas?.focus({ preventScroll: true });
 		await apple.insert(name, new Uint8Array(data), drive, profile);
 	}
 
@@ -209,7 +209,7 @@
 	function insertChoice() {
 		const disk = diskNamed(choice);
 		choice = '';
-		canvas?.focus();
+		canvas?.focus({ preventScroll: true });
 		if (disk) load(disk);
 	}
 
@@ -458,11 +458,11 @@
      outline: compact is the toolbar's look, an icon whose tooltip says what it does. Each
      gives the keyboard back to the Apple. -->
 {#snippet reboot(compact = false)}
-	<button class="icon" aria-label="Reboot" title="Reboot: power cycle and boot drive 1" onclick={() => (apple.reboot(), canvas?.focus())}>🔄{compact ? '' : ' Reboot'}</button>
+	<button class="icon" aria-label="Reboot" title="Reboot: power cycle and boot drive 1" onclick={() => (apple.reboot(), canvas?.focus({ preventScroll: true }))}>🔄{compact ? '' : ' Reboot'}</button>
 {/snippet}
 
 {#snippet reset(compact = false)}
-	<button class="icon" aria-label="Ctrl-Reset" title="Ctrl-Reset: stop the program and keep memory" onclick={() => (apple.reset(), canvas?.focus())}>⛔{compact ? '' : ' Ctrl-Reset'}</button>
+	<button class="icon" aria-label="Ctrl-Reset" title="Ctrl-Reset: stop the program and keep memory" onclick={() => (apple.reset(), canvas?.focus({ preventScroll: true }))}>⛔{compact ? '' : ' Ctrl-Reset'}</button>
 {/snippet}
 
 {#snippet pause(compact = false)}
@@ -472,12 +472,12 @@
 		aria-pressed={apple.paused}
 		aria-keyshortcuts="\\"
 		title={apple.paused ? 'Go on (key \\)' : 'Pause: hold the 6502 still (key \\)'}
-		onclick={() => (apple.pause(), canvas?.focus())}>{apple.paused ? '▶️' : '⏸️'}{compact ? '' : apple.paused ? ' Go on' : ' Pause'}</button
+		onclick={() => (apple.pause(), canvas?.focus({ preventScroll: true }))}>{apple.paused ? '▶️' : '⏸️'}{compact ? '' : apple.paused ? ' Go on' : ' Pause'}</button
 	>
 {/snippet}
 
 {#snippet step(compact = false)}
-	<button class="icon" aria-label="Step" aria-keyshortcuts="[" title="Step: one instruction, then hold (key [)" onclick={() => (apple.stepOne(), canvas?.focus())}>⏭️{compact ? '' : ' Step'}</button>
+	<button class="icon" aria-label="Step" aria-keyshortcuts="[" title="Step: one instruction, then hold (key [)" onclick={() => (apple.stepOne(), canvas?.focus({ preventScroll: true }))}>⏭️{compact ? '' : ' Step'}</button>
 {/snippet}
 
 {#snippet speed()}
@@ -490,7 +490,7 @@
 		aria-label="Mute the speaker"
 		aria-pressed={!apple.sound}
 		title={apple.sound ? "Mute the Apple's speaker; the dance is separate" : "Unmute the Apple's speaker"}
-		onclick={() => ((apple.sound = !apple.sound), apple.listen(), canvas?.focus())}>{apple.sound ? '🔊' : '🔇'}{compact ? '' : apple.sound ? ' Mute' : ' Muted'}</button
+		onclick={() => ((apple.sound = !apple.sound), apple.listen(), canvas?.focus({ preventScroll: true }))}>{apple.sound ? '🔊' : '🔇'}{compact ? '' : apple.sound ? ' Mute' : ' Muted'}</button
 	>
 {/snippet}
 
@@ -500,7 +500,7 @@
 		aria-label="Caps Lock"
 		aria-pressed={apple.caps}
 		title="Caps Lock: DOS 3.3 and Integer BASIC only know capitals"
-		onclick={() => ((apple.caps = !apple.caps), canvas?.focus())}>⇪{compact ? '' : ' Caps Lock'}</button
+		onclick={() => ((apple.caps = !apple.caps), canvas?.focus({ preventScroll: true }))}>⇪{compact ? '' : ' Caps Lock'}</button
 	>
 {/snippet}
 
@@ -510,7 +510,7 @@
 		aria-label="Joystick"
 		aria-pressed={apple.mouseStick}
 		title="Joystick: paddles 0 and 1 follow the pointer over the screen; left and right buttons are pushbuttons 0 and 1"
-		onclick={() => ((apple.mouseStick = !apple.mouseStick), canvas?.focus())}>🕹️{compact ? '' : ' Joystick'}</button
+		onclick={() => ((apple.mouseStick = !apple.mouseStick), canvas?.focus({ preventScroll: true }))}>🕹️{compact ? '' : ' Joystick'}</button
 	>
 {/snippet}
 

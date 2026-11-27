@@ -107,7 +107,7 @@
 		if (s.speed) apple.speed(s.speed, s.frames ?? 0);
 		if (s.ask) {
 			await tick();
-			field?.focus();
+			field?.focus({ preventScroll: true });
 			field?.select();
 		}
 	}
@@ -151,7 +151,7 @@
 		apple.type(askKeys(a, v));
 		if (a.keep) {
 			value = '';
-			field?.focus();
+			field?.focus({ preventScroll: true });
 		} else answered = true;
 	}
 
@@ -161,7 +161,7 @@
 		const t = /** @type {HTMLElement | null} */ (ev.target);
 		if (t === field || (t && (t.closest('input, textarea, select, [contenteditable]') || (t.tagName === 'BUTTON' && (ev.key === 'Enter' || ev.key === ' '))))) return;
 		if (ev.key.length !== 1 && ev.key !== 'Enter' && ev.key !== 'Backspace') return;
-		field.focus();
+		field.focus({ preventScroll: true });
 	}
 
 	/** The last request clicked, and when: a second click on it soon after sends it. */
@@ -174,7 +174,7 @@
 		const again = usedLast.text === example && value === example && now - usedLast.at < AGAIN_MS;
 		usedLast = { text: example, at: now };
 		value = example;
-		field?.focus();
+		field?.focus({ preventScroll: true });
 		if (again) {
 			usedLast = { text: '', at: 0 };
 			field?.form?.requestSubmit();
@@ -189,7 +189,7 @@
 		if (v && state) {
 			if (state.music) apple.dance?.mode(state.music);
 			if (state.speed) apple.speed(state.speed, state.frames ?? 0);
-			tick().then(() => field?.focus());
+			tick().then(() => field?.focus({ preventScroll: true }));
 		} else if (!v) hush();
 	}
 

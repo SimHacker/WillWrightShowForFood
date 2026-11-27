@@ -106,6 +106,22 @@ right end (the speed readout) sits under the screen's corner.
   speed slider). It is a button, so a tap opens its numbers as a card where there is no hover,
   each copy with its own card; and not a live region, as it changes every second.
 
+## Stable under the pointer
+
+Nothing moves out from under the person's pointer. Two rules, no exceptions:
+
+- **A control keeps its size whatever it shows.** A count, a speed, a label that changes: give
+  it a fixed width and tabular figures, or put the number in its tooltip. A control that only
+  sometimes applies stays where it is, disabled, instead of appearing and vanishing.
+- **Pressing a button never scrolls the page.** Focusing the screen so typing reaches the machine
+  is `focus({ preventScroll: true })`; opening a panel opens it where it is. The page scrolls
+  when the person scrolls, when they ask to go somewhere (to a pinned control's home in the outline),
+  or when something opens unasked that they must see (the grue's video, `reveal`).
+
+A pinned panel opens and closes in the toolbar (▾/▸, kept with its place). Closed, it shows its
+title and its `brief`, if its owner offered one: a line of what matters and the buttons used
+most, such as a program's Start and Quit.
+
 ## Preferences (`PagePrefs.svelte`)
 
 The last node of a machine page's outline, the way back to how the page first came. Reset the

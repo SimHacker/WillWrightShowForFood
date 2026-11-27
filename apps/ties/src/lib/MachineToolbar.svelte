@@ -196,6 +196,73 @@
 		}
 		end();
 	}
+	/**
+	 * Whose handles show: one item's at a time, like a Mac menu bar's submenus. Pointing at an
+	 * item shows its handles and takes any others down at once. Leaving it, they stay a moment,
+	 * so a pointer that cuts a corner does not lose them; and while the pointer heads for them
+	 * (inside the triangle from where it left to their top corners) another item it crosses
+	 * waits, taking over only when the pointer turns away or stops.
+	 * @type {string | null}
+	 */
+	let hot = $state(null);
+	/** The item the pointer crossed on its way to hot's handles. @type {string | null} */
+	let next = null;
+	/** Where the pointer left hot, and the box around hot's handles. @type {{ x: number, y: number, box: DOMRect } | null} */
+	let aim = null;
+	/** @type {ReturnType<typeof setTimeout> | undefined} */
+	let waiting;
+	const LINGER = 600;
+	const STOPPED = 250;
+
+	/** @param {string | null} id */
+	function settle(id) {
+		clearTimeout(waiting);
+		hot = id;
+		next = null;
+		aim = null;
+	}
+	/** @param {number} ms */
+	function later(ms) {
+		clearTimeout(waiting);
+		waiting = setTimeout(() => settle(next), ms);
+	}
+	/** Whether the pointer is heading for hot's handles. @param {number} x @param {number} y */
+	function aiming(x, y) {
+		if (!aim) return false;
+		const { box } = aim;
+		if (x >= box.left && x <= box.right && y >= box.top && y <= box.bottom) return true;
+		/** @param {number} ax @param {number} ay @param {number} bx @param {number} by */
+		const side = (ax, ay, bx, by) => (bx - ax) * (y - ay) - (by - ay) * (x - ax);
+		const a = side(aim.x, aim.y, box.left, box.top);
+		const b = side(box.left, box.top, box.right, box.top);
+		const c = side(box.right, box.top, aim.x, aim.y);
+		return (a >= 0 && b >= 0 && c >= 0) || (a <= 0 && b <= 0 && c <= 0);
+	}
+	/** @param {PointerEvent} e @param {string} id */
+	function enter(e, id) {
+		if (e.pointerType !== 'mouse' && e.pointerType !== 'pen') return;
+		if (id === hot || !hot || !aiming(e.clientX, e.clientY)) return settle(id);
+		next = id;
+		later(STOPPED);
+	}
+	/** @param {PointerEvent & { currentTarget: HTMLElement }} e @param {string} id */
+	function leave(e, id) {
+		if (id !== hot) {
+			if (id === next) next = null;
+			return;
+		}
+		const boxes = [...e.currentTarget.querySelectorAll(':scope > .handle')].map((h) => h.getBoundingClientRect());
+		aim = boxes.length
+			? { x: e.clientX, y: e.clientY, box: new DOMRect(Math.min(...boxes.map((b) => b.left)), Math.min(...boxes.map((b) => b.top)), Math.max(...boxes.map((b) => b.right)) - Math.min(...boxes.map((b) => b.left)), Math.max(...boxes.map((b) => b.bottom)) - Math.min(...boxes.map((b) => b.top))) }
+			: null;
+		next = null;
+		later(LINGER);
+	}
+	/** @param {PointerEvent} e */
+	function heading(e) {
+		if (next && !aiming(e.clientX, e.clientY)) settle(next);
+	}
+
 	/** @param {KeyboardEvent} e @param {string} id @param {'row' | 'column'} way */
 	function key(e, id, way) {
 		const back = way === 'row' ? 'ArrowLeft' : 'ArrowUp';
@@ -204,7 +271,7 @@
 		e.preventDefault();
 		bar.move(id, e.key === back ? -1 : 1);
 		const el = /** @type {HTMLElement} */ (e.currentTarget);
-		requestAnimationFrame(() => el.focus());
+		requestAnimationFrame(() => el.focus({ preventScroll: true }));
 	}
 </script>
 
@@ -245,10 +312,12 @@
 
 {#snippet slot(/** @type {{ id: string, label: string, render: import('svelte').Snippet<[boolean]> }} */ c, /** @type {Layout} */ side)}
 	<span
-		class={['slot', { lifted: lift?.id === c.id }]}
+		class={['slot', { lifted: lift?.id === c.id, hot: hot === c.id }]}
 		data-item
 		role="group"
 		aria-label={c.label}
+		onpointerenter={(e) => enter(e, c.id)}
+		onpointerleave={(e) => leave(e, c.id)}
 		onpointerdowncapture={(e) => seekPress(e, c.id)}
 		onmousedowncapture={(e) => seekPress(e, c.id)}
 		onclickcapture={(e) => seekPress(e, c.id)}
@@ -257,7 +326,7 @@
 	</span>
 {/snippet}
 
-<svelte:window ondragovercapture={track} ondropcapture={drop} />
+<svelte:window ondragovercapture={track} ondropcapture={drop} onpointermove={heading} />
 
 <div class="toolbar" bind:this={root} style:--lift={lift ? `${lift.width}px` : null}>
 	<div class="row" role="toolbar" aria-label={label}>
@@ -279,19 +348,26 @@
 	{#if panels.length}
 		<div class="panels" data-layout="panels">
 			{#each panels as c, i (c.id)}
+				{@const shut = bar.isShut(c.id)}
 				{@render gap('panels', i)}
 				<section
-					class={['panel', { lifted: lift?.id === c.id }]}
+					class={['panel', { lifted: lift?.id === c.id, hot: hot === c.id }]}
 					data-item
 					aria-label={c.label}
+					onpointerenter={(e) => enter(e, c.id)}
+					onpointerleave={(e) => leave(e, c.id)}
 					onpointerdowncapture={(e) => seekPress(e, c.id)}
 					onmousedowncapture={(e) => seekPress(e, c.id)}
 					onclickcapture={(e) => seekPress(e, c.id)}
 				>
 					{@render handles(c, 'panels')}
 					<span class="proxy" aria-hidden="true">⠿ {c.label}</span>
-					<header><span class="title">{c.label}</span></header>
-					<div class="body">{@render c.render(true)}</div>
+					<header>
+						<button type="button" class="fold" aria-expanded={!shut} title={shut ? `Open ${c.label}` : `Close ${c.label} to a line`} onclick={() => bar.toggleShut(c.id)}>{shut ? '▸' : '▾'}</button>
+						<span class="title">{c.label}</span>
+						{#if shut && c.brief}<span class="brief">{@render c.brief()}</span>{/if}
+					</header>
+					{#if !shut}<div class="body">{@render c.render(true)}</div>{/if}
 				</section>
 			{/each}
 			{@render gap('panels', panels.length)}
@@ -379,9 +455,6 @@
 	.lifted {
 		opacity: 0.25;
 	}
-	.lifted > .handle {
-		visibility: hidden;
-	}
 	/* A panel's picture while it is dragged: a chip, kept out of sight until then. */
 	.proxy {
 		position: fixed;
@@ -430,20 +503,23 @@
 	.handle.top-right {
 		right: min(0px, 50% - var(--handle) - 1px);
 	}
+	/* One item's at a time, by the pointer (hot, in the script), or by keyboard focus. */
 	@media (hover: hover) {
 		.handle {
 			opacity: 0;
-			pointer-events: none;
-			transition: opacity 0.12s 0.25s;
+			visibility: hidden;
 		}
-		.slot:hover > .handle,
-		.slot:focus-within > .handle,
-		.panel:hover > .handle,
-		.panel:focus-within > .handle {
+		.hot > .handle,
+		.slot:has(:focus-visible) > .handle,
+		.panel:has(:focus-visible) > .handle {
 			opacity: 1;
-			pointer-events: auto;
-			transition-delay: 0s;
+			visibility: visible;
+			transition: opacity 0.08s;
 		}
+	}
+	.slot.lifted > .handle,
+	.panel.lifted > .handle {
+		visibility: hidden;
 	}
 	/* Always shown where there is no hover: room above the row and each panel for them. */
 	@media (hover: none) {
@@ -462,8 +538,28 @@
 		font: 0.8rem ui-monospace, monospace;
 	}
 	.panel header {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.2rem 0.5rem;
 		padding: 0 0.4rem;
+	}
+	.panel header .title {
 		opacity: 0.75;
+	}
+	.fold {
+		padding: 0 0.2rem;
+		border: 0;
+		background: none;
+		color: inherit;
+		font: inherit;
+		cursor: pointer;
+	}
+	.brief {
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.2rem 0.4rem;
 	}
 	.panel .title {
 		font-weight: 600;
