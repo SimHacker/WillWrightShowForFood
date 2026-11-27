@@ -26,7 +26,8 @@ import { seekHome } from './outline-reveal.svelte.js';
 
 /** The toolbar a new player gets, by machine: the machine, time, then what reaches it; and how fast. */
 const DEFAULTS = /** @type {Record<string, { left: string[], right: string[] }>} */ ({
-	apple: { left: ['reboot', 'reset', 'pause', 'step', 'speed', 'mute', 'caps', 'joystick'], right: ['readout'] }
+	apple: { left: ['reboot', 'reset', 'pause', 'step', 'speed', 'mute', 'caps', 'joystick'], right: ['readout'] },
+	pdp10: { left: ['restart', 'speed', 'altmode', 'ctrl-z', 'ctrl-g', 'copy-paper'], right: ['readout'] }
 });
 
 export class Toolbar {

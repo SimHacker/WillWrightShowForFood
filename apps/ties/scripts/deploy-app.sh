@@ -84,6 +84,11 @@ if [[ ! -d "$STAGE" ]]; then
 fi
 
 mkdir -p "$(app_root "$APP")/releases"
+# The PDP-10's disk packs live once beside the releases (packages/cabinet/its/README.md). The
+# link is relative, so it resolves the same on the host and in Caddy's mount of /data/releases.
+if [[ -d "$(app_root "$APP")/packs" ]]; then
+	ln -sfn ../../packs "$STAGE/packs"
+fi
 publish_release "$APP" "$ID" >/dev/null
 activate_release "$APP" "$ID"
 prune_releases "$APP"

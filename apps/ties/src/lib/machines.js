@@ -10,6 +10,7 @@
  */
 export const MACHINES = {
 	pdp7: { name: 'pdp7', title: 'PDP-7', fresh: true, adapter: () => import('./machines/Pdp7Machine.svelte') },
+	pdp10: { name: 'pdp10', title: 'PDP-10', fresh: true, reboot: true, adapter: () => import('./machines/Pdp10Machine.svelte') },
 	apple2: { name: 'apple2', title: 'Apple II', fresh: true, reboot: true, adapter: () => import('./machines/Apple2Machine.svelte') }
 };
 

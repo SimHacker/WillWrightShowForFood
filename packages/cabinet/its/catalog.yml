@@ -1,0 +1,42 @@
+# The PDP-10's entries (CARTRIDGES.md §7a): MIT's ITS on the cabinet's KA10 (src/ka10), booted
+# the way the PDP-10/its project's build.tcl boots it on SIMH, and a program typed after logging
+# in. `runs.boot` is `its` (DSKDMP off paper tape, then the packs) or `tape` (a RIM tape run on
+# the bare machine until it halts). `runs.program` is an id in apps/ties/src/lib/its-programs.js.
+# README.md says where the tapes and packs come from and where the packs are served.
+defaults:
+  tags: { machine: pdp10 }
+  runs: { machine: pdp10, boot: its }
+  inputs:
+    login: { type: string, default: guest, title: Login Name }
+entries:
+  - id: its
+    title: ITS
+    path: systems/its
+    order: 1
+    description: "MIT's Incompatible Timesharing System on a KA10, from the PDP-10/its project's packs: boot, log in, and DDT's star prompt."
+    tags: { by: mit }
+    runs: { program: ddt }
+  - id: macsyma
+    title: MACSYMA
+    path: applications/macsyma
+    description: "Project MAC's symbolic algebra system, release 1001, on ITS: differentiate, factor, integrate."
+    tags: { by: mit }
+    runs: { program: macsyma }
+  - id: maclisp
+    title: MacLisp
+    path: languages/maclisp
+    description: "MIT's Lisp, the one MACSYMA is written in, at its star prompt on ITS."
+    tags: { by: mit }
+    runs: { program: lisp }
+  - id: logo
+    title: Logo
+    path: languages/logo
+    description: "CLOGO, the MIT AI Lab's Logo on ITS, at its question-mark prompt."
+    tags: { by: mit }
+    runs: { program: logo }
+  - id: hhtest
+    title: HHTEST
+    path: diagnostics/hhtest
+    description: "The ITS build's test of the \"hack hack\" for 340 display interrupts, punched on paper tape and run on the bare KA10. It passes by halting at 201."
+    tags: { by: mit }
+    runs: { boot: tape, tape: hhtest.rim, pass: "201" }

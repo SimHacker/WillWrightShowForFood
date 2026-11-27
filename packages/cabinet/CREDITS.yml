@@ -9,9 +9,10 @@ about:
   - >-
     The Machine Room runs old computers in the browser, and the programs people wrote for them:
     a DEC PDP-7 with its Type 340 display, light pen and teletype; an Apple ][+ with a Disk II, a
-    Videx card and a cabinet panel; and a PDP-10 running ITS, coming. Each machine is a Korz
-    machine: its CPU and devices are described once, then interpreted, resolved or compiled to
-    JavaScript, all checked against each other and against SIMH or microM8.
+    Videx card and a cabinet panel; and a PDP-10, a KA10 running MIT's ITS. The PDP-7 and the Apple are
+    Korz machines: the CPU and devices are described once, then interpreted, resolved or compiled
+    to JavaScript, all checked against each other and against SIMH or microM8. The KA10 is SIMH's
+    code ported, and a hand-written engine checked against it in lockstep, which the page runs.
   - >-
     The bus dance turns each machine's work into music, the way people once held an AM radio
     to a computer to hear it think. Screen angels watch the screen and explain what is going
@@ -35,9 +36,132 @@ sections:
       - { id: patreon, name: Don on Patreon, kind: place, url: "https://www.patreon.com/c/DonHopkins", for: "Supporting the work" }
 
   - id: pdp7
-    title: PDP-7
-    about: The machine, its display and pen, and the programs restored for it.
+    title: PDP-7 and PIXIE
+    about:
+      - >-
+        The Machine Room's first machine is a DEC PDP-7, the 18-bit computer of 1964, with the
+        Type 340 precision display, the Type 370 light pen and a teletype. The 340 is nearly a
+        computer of its own: it reads its display file straight out of the PDP-7's core, and the
+        PDP-7 talks to it with IOT instructions, so the display adds instructions to the machine.
+      - >-
+        It is here because of PIXIE. At the Cambridge University Mathematical Laboratory in 1969,
+        Neil Wiseman, Heinz Lemke and John Hiles built an interactive CAD system on a PDP-7 and 340
+        linked to Titan, Cambridge's Atlas 2. Circuits were drawn with the light pen, and the
+        commands were lightbuttons that travelled around the pen's tracking cross: among the
+        earliest radial menus known. The PDP-7 built the drawing's ring structure itself; Titan
+        analysed it over Wiseman's high-speed link.
+      - >-
+        Heinz Lemke's 1972 listing of SYMELEC, PIXIE's circuit editor, survived on lineprinter
+        paper. It was transcribed back into source and assembled, and SYMELEC runs on the cabinet
+        with the pointer as the light pen and tiny-titan at the far end of the link. The two 1969
+        demonstration films came back from the Cambridge Computer Laboratory's archive in 2019.
+        Beside PIXIE, the cabinet runs PDP-7 UNIX, DUEL from DECUS, Mitch Bradley's Forth with a
+        turtle on the 340, and devices built for it in Forth.
     entries:
+      - id: pixie
+        name: PIXIE
+        kind: project
+        url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke"
+        for: "Wiseman, Lemke and Hiles's interactive CAD system on a PDP-7 and Titan, 1969"
+        about:
+          - >-
+            PIXIE's people, Heinz Lemke's own papers and notes, the source code, the films, and the
+            story of how they came back. The scans and transcriptions are in this project's
+            repository on GitHub: a PDF opens in GitHub's viewer, a transcription reads as a page.
+        entries:
+          - id: pixie-people
+            name: The people
+            kind: person
+            url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke"
+            for: "Who made PIXIE, and who found it again"
+            entries:
+              - { id: heinz-lemke, name: Heinz U. Lemke, kind: person, url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke", for: "PIXIE's PDP-7 programmer, the hands on the light pen in the films, and the author of SYMELEC" }
+              - { id: neil-wiseman, name: Neil Wiseman, kind: person, url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/neil-wiseman", for: "Led Cambridge's Rainbow Group and designed the PDP-7 to Titan link" }
+              - { id: john-hiles, name: John Hiles, kind: person, url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/john-hiles", for: "PIXIE's third author, who wrote its circuit analysis application" }
+              - { id: david-chapman, name: David Chapman, kind: person, url: "https://www.cl.cam.ac.uk/library/archives.html", for: "Cambridge University Library's reference librarian, who found the PIXIE films and had them digitised" }
+              - { id: david-rosenthal, name: David Rosenthal, kind: person, url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-rosenthal", for: "A Cambridge student on the same PDP-7, 340 and Titan around 1970" }
+              - { id: titan, name: Titan, kind: project, url: "https://en.wikipedia.org/wiki/Titan_(computer)", for: "Cambridge's Atlas 2, at the far end of PIXIE's link; tiny-titan stands in for it" }
+          - id: pixie-heinz
+            name: In Heinz's own words
+            kind: document
+            url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke/sources"
+            for: "Heinz Lemke's memoir, notes and drawings, from 1960 to now"
+            entries:
+              - { id: back-to-the-roots, name: "Back to the Roots, Part 1", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/1967-back-to-the-roots-part1.md", for: "Heinz's memoir of 1967: his first talk, at Wilkes's invitation, and the PhD that followed" }
+              - { id: system-analysis-1967, name: "The 1967 design, handwritten", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/1967-03-10-system-analysis/PIXIE-System-Analysis-Original-HULEMKE.pdf", for: "Problems of Systems Analysis of Computer Aided Circuit Design with Display Unit: seven leaves in blue ink, 10 March 1967, before Cambridge" }
+              - { id: system-analysis-transcript, name: "The 1967 design, transcribed", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/1967-03-10-system-analysis/TRANSCRIPT.md", for: "The same pages as text" }
+              - { id: draftsman-template, name: "The draftsman's template", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/2026-08-23-draftsman-template-radial-menus.md", for: "Heinz on where PIXIE's radial menus came from: a symbol template in one hand, the pencil in the other" }
+              - { id: drawing-1960, name: "A technical drawing, 1960", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/media/drawing-1960/technical-drawing-wood-processing-plant-hulemke-1960.pdf", for: "Heinz's drawing of a wood processing plant, a metre by two and a half, from his years as a draftsman" }
+              - { id: us-lab-tour-1969, name: "A Greyhound summer, 1969", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/heinz-1969-us-lab-tour.md", for: "Heinz's tour of the American graphics labs" }
+              - { id: pixie-ideas, name: Questions for Heinz, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/ideas.md", for: "What Don would like to ask him, grounded in the papers and letters" }
+          - id: pixie-papers
+            name: The papers
+            kind: document
+            url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke/sources"
+            for: "What was written about PIXIE at the time"
+            entries:
+              - { id: pixie-paper, name: "PIXIE: a new approach to man-machine communication", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/media/from-mail/paper-pixie-a-new-approach-to-man-machine-communication.pdf", for: "The founding PIXIE paper, by Wiseman, Lemke and Hiles, 1969" }
+              - { id: wiseman-page-466, name: "The 1969 paper, pages 466 and 467", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/buxton-2008-wiseman-notes/wiseman-page-466.md", for: "The pages on the radial lightbuttons, transcribed by Bill Buxton" }
+              - { id: colloquium-1967, name: "Cambridge colloquium, 29 June 1967", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/media/from-mail/paper-univcambridge-colloquia-29th-june-1967-hulemke.pdf", for: "Heinz's first talk, the one that brought him to Cambridge" }
+              - { id: seminar-1970, name: "Cambridge seminar, 2 December 1970", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/media/from-mail/paper-univcambridge-seminar_2nd-dec-1970-hulemke.pdf", for: "His thesis work presented to the laboratory, Wilkes and Wiseman there" }
+              - { id: electronics-1969, name: "Electronics, 28 April 1969", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/media/from-mail/electronics-international-1969-04-28-pixie-pp158-159.pdf", for: "The trade press on PIXIE, with a photograph of Heinz light-writing" }
+              - { id: lemke-thesis-pdf, name: "Heinz's thesis, 1972", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/phd-thesis-1972/PIXIE-PhD-Thesis-HULEMKE-Interactive-Graphics-in-an-integrated-CAD-system-1972.pdf", for: "Interactive Graphics in an Integrated CAD System, the scan" }
+              - { id: lemke-thesis, name: "The thesis, annotated", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke/sources/phd-thesis-1972/annotated", for: "Transcribed in eight parts, with notes and links" }
+              - { id: pixie-manual, name: The PIXIE User Manual, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/phd-thesis-1972/annotated/07-appendix-4-pixie-user-manual.md", for: "The thesis's Appendix 4: how to work PIXIE" }
+          - id: pixie-source
+            name: The source code
+            kind: document
+            url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke/sources/pixie-assembler-listing-1972"
+            for: "SYMELEC's 1972 listing, from lineprinter paper to source the cabinet assembles"
+            entries:
+              - { id: pixie-listing-pdf, name: The listing, scanned, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/pixie-assembler-listing-1972/PIXIE-Assembler-Program-HULEMKE.pdf", for: "128 pages of PDP-7 assembler on lineprinter paper, as Heinz kept them (40 MB)" }
+              - { id: pixie-listing, name: The listing, recovered, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke/sources/pixie-assembler-listing-1972", for: "The transcription: aligned listings, clean source, and an octal memory image" }
+              - { id: pixie-listing-text, name: The listing as text, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/pixie-assembler-listing-1972/rsppix-listing.txt", for: "Every line, with its address and octal" }
+              - { id: transcription-report, name: How it was transcribed, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md", for: "Turning the scans into source with a swarm of language models and mechanical checks: what it cost and what broke" }
+              - { id: source-recovery, name: Heinz has the complete program, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/pixie-source-recovery.md", for: "July 2026, the email that said the whole listing survived" }
+          - id: pixie-films
+            name: The films
+            kind: document
+            url: "https://www.cl.cam.ac.uk/library/archives.html"
+            for: "PIXIE demonstrated in 1969, from the Computer Laboratory's archive"
+            entries:
+              - { id: pixie-film-bw, name: "PIXIE, 1969 (black and white)", kind: document, url: "https://youtu.be/j9R63T2xGCA", for: "The black and white demonstration film, from the original telecine" }
+              - { id: pixie-film-color, name: "PIXIE, 1969 (colour)", kind: document, url: "https://youtu.be/lCrl5QmQ9aA", for: "The colour demonstration film, from the original telecine" }
+              - { id: flight-of-the-pixie, name: Flight of the PIXIE, kind: document, url: "https://www.youtube.com/watch?v=jDrqR9XssJI", for: "Don's edit of the films to Yuja Wang playing Flight of the Bumblebee, to show how fast the radial menus were" }
+              - { id: flight-notes, name: How the films came back, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md", for: "From Bill Buxton's dead end to a librarian's detective work, and the edit" }
+          - id: pixie-found
+            name: Finding it again
+            kind: document
+            url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/2019-2020-film-recovery-saga.md"
+            for: "How PIXIE's films, notes and listing were found, 2008 to 2026"
+            entries:
+              - { id: film-recovery, name: The film recovery, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/2019-2020-film-recovery-saga.md", for: "2019 and 2020: the Cambridge ticket, the films in an office, the digitisation" }
+              - { id: wiseman-notes, name: "Wiseman's notes on radial menus", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/buxton-2008-wiseman-notes/wiseman-notes-on-radial-menus-in-pixie.md", for: "Bill Buxton's 2008 report from the Cambridge archive, transcribed" }
+              - { id: buxton-memory-lane, name: "Down memory lane with Bill Buxton", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/2008-bill-buxton-pixie-memory-lane.md", for: "Heinz's 2008 letter to Buxton about PIXIE" }
+              - { id: guessing-game, name: The guessing game, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/2026-07-24-facebook-guessing-game.md", for: "How Facebook's retrocomputing crowd identified the listing's mystery pages" }
+              - { id: at-the-controls, name: "At The Controls, 2023", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/2023-09-25-at-the-controls-pixie-post.md", for: "The photograph of Cambridge's PDP-7 whose caption the listing confirms" }
+          - id: pixie-guides
+            name: How it works
+            kind: document
+            url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/GUIDE.md"
+            for: "The cabinet's guides to PIXIE's machines and code"
+            entries:
+              - { id: guide-turist, name: The turist guide, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/GUIDE.md", for: "The PDP-7, the 340, Titan and the light pen, for visitors" }
+              - { id: guide-symelec, name: How SYMELEC works, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/GUIDE-SYMELEC.md", for: "SYMELEC end to end: the interrupt chain, the lightbuttons, tracking, display files" }
+              - { id: guide-lightpen, name: The light pen, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/GUIDE-LIGHTPEN.md", for: "How a pen hit finds its lightbutton, word by word" }
+              - { id: guide-rings, name: Ring structures, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/GUIDE-RINGS.md", for: "The data structure PIXIE's drawings are made of" }
+              - { id: guide-titan, name: Titan and its link, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/GUIDE-TITAN.md", for: "The machine at the other end, and tiny-titan" }
+      - id: dec-manuals
+        name: "DEC's manuals"
+        kind: document
+        url: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet/reference"
+        for: "The PDP-7 and 340 manuals the cabinet is built from, mirrored from bitsavers"
+        entries:
+          - { id: pdp7-handbook, name: PDP-7 User Handbook, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/F-75_PDP-7userHbk_Jun65.pdf", for: "DEC, June 1965: the machine, its instructions and its options" }
+          - { id: type340-manual, name: Type 340 Precision Incremental CRT System, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf", for: "DEC, November 1964: the display, its modes and its IOTs" }
+          - { id: type340-programming, name: 340 Display Programming Manual, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/7-13_340_Display_Programming_Manual.pdf", for: "Writing display files for the 340" }
+          - { id: lightpen-diag, name: Type 370 Light Pen Diagnostic, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/DIGITAL-7-78-M_370LightPenDiag_Apr64.pdf", for: "C. Stein's 1964 test, which the cabinet runs as Light Pen Test" }
+          - { id: pdp7-assembler, name: PDP-7 Assembler Manual, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/reference/PDP-7_AsmMan.pdf", for: "The assembler PIXIE's listing was made with" }
       - { id: pdp-7, name: DEC PDP-7, kind: project, url: "https://en.wikipedia.org/wiki/PDP-7", for: "The 18-bit computer of 1964 the cabinet's first machine is" }
       - { id: soemtron, name: soemtron.org, kind: place, url: "https://www.soemtron.org/pdp7no129systeminfo.html", for: "PDP-7 serial 129's documents, schematics and history" }
       - { id: icm-museum, name: Interactive Computer Museum, kind: place, url: "https://icm.museum/", for: "A PDP-7 being restored, and its blog" }
@@ -45,7 +169,6 @@ sections:
       - { id: ken-thompson, name: Ken Thompson, kind: person, url: "https://en.wikipedia.org/wiki/Ken_Thompson", for: "Wrote UNIX on a PDP-7 in 1969" }
       - { id: dennis-ritchie, name: Dennis Ritchie, kind: person, url: "https://en.wikipedia.org/wiki/Dennis_Ritchie", for: "UNIX with Thompson, then C" }
       - { id: lcm-unix-v0, name: Living Computers on UNIX v0, kind: document, url: "https://web.archive.org/web/20240424192104/https://livingcomputers.org/Blog/Restoring-UNIX-v0-on-a-PDP-7-A-look-behind-the-sce.aspx", for: "Running UNIX v0 on a real PDP-7" }
-      - { id: pixie-paper, name: "Heinz Lemke's PIXIE", kind: document, url: "https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf", for: "PIXIE, a new approach to man-machine communication: the circuit editor SYMELEC is built on" }
       - { id: open-firmware, name: Mitch Bradley's Forth, kind: project, url: "https://en.wikipedia.org/wiki/Open_Firmware", for: "Mitch Bradley, of Open Firmware, wrote the PDP-7 Forth the turtle runs on" }
       - { id: decus, name: DECUS, kind: project, url: "https://en.wikipedia.org/wiki/DECUS", for: "DEC's users' society, whose library kept DUEL, number 7-40" }
       - { id: munching, name: Munching squares on the 340, kind: document, url: "https://retrocomputingforum.com/t/munching-squares-and-spirograph-demo-pdp-7-and-type-340-display/4856", for: "Display hacks on a PDP-7 and Type 340" }
@@ -67,6 +190,7 @@ sections:
       - { id: aap-pdp6, name: Angelo Papenhoff's PDP-6, kind: project, url: "https://github.com/aap/pdp6", for: "A PDP-6 emulator and its schematics" }
       - { id: moon-hardware, name: "David Moon's hardware notes", kind: document, url: "https://github.com/PDP-10/its/wiki/Hardware-info-from-David-Moon", for: "What MIT's PDP-10s had that DEC's did not" }
       - { id: macsyma, name: MACSYMA, kind: project, url: "https://en.wikipedia.org/wiki/Macsyma", for: "MIT's computer algebra system, which runs on the cabinet's ITS" }
+      - { id: maclisp, name: MacLisp, kind: project, url: "https://en.wikipedia.org/wiki/Maclisp", for: "MIT's Lisp, which MACSYMA is written in, on the cabinet's ITS" }
       - { id: gunkies-its, name: Running ITS, kind: document, url: "https://gunkies.org/wiki/Running_ITS_(the_Incompatible_Timesharing_System)", for: "The Computer History wiki's guide to bringing up ITS" }
 
   - id: apple2

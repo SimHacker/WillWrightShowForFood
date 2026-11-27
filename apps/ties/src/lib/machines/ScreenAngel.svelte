@@ -257,11 +257,11 @@
 							globalThis.localStorage?.setItem(REQUESTS, requestsOpen ? 'open' : 'closed');
 						}}
 					>
-						<summary>{count} {count === 1 ? 'request' : 'requests'} to pick from</summary>
+						<summary>{count} {count === 1 ? 'request' : 'requests'} to pick from: click one to put it in the field, double-click to send it</summary>
 						{#if ask.examples?.length}
 							<p class="examples">
 								{#each ask.examples as e (e)}
-									<button type="button" class="example" title="Put this in the field; click again to send it" onclick={() => use(e)}>{e}</button>
+									<button type="button" class="example" title="Click to put this in the field; double-click to send it" onclick={() => use(e)}>{e}</button>
 								{/each}
 							</p>
 						{/if}
@@ -270,7 +270,7 @@
 								<h4>{g.label}</h4>
 								<p class="examples">
 									{#each g.examples as e (e)}
-										<button type="button" class="example" title="Put this in the field; click again to send it" onclick={() => use(e)}>{e}</button>
+										<button type="button" class="example" title="Click to put this in the field; double-click to send it" onclick={() => use(e)}>{e}</button>
 									{/each}
 								</p>
 							</div>

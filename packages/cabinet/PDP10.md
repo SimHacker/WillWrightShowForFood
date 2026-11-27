@@ -1,6 +1,6 @@
 # PDP-10: a Korz KA10 that runs ITS, beside the PDP-7
 
-A design, not yet code. The cabinet's second big CPU after the PDP-7 is the 36-bit PDP-10, as
+A design, partly built (Status, below). The cabinet's second big CPU after the PDP-7 is the 36-bit PDP-10, as
 MIT's AI Lab had it: a KA10 with the lab's own paging box, extra interrupt levels, a Type 340
 display, and a cable to eight PDP-11s through which any user program could map another machine's
 memory into its own address space. That last part has its own document,
@@ -27,8 +27,11 @@ usefulness." How the cabinet uses it for machines, and what is built, is
 
 Status: planned in [README.md](README.md) ("A PDP-10 that runs ITS") and in
 [ARCHITECTURE-AND-LINEAGE.md](ARCHITECTURE-AND-LINEAGE.md#different-processors-one-cabinet). Each
-CPU keeps its own I/O instructions: PDP-10 I/O is not modeled as PDP-7 IOTs. Nothing of the KA10
-is built.
+CPU keeps its own I/O instructions: PDP-10 I/O is not modeled as PDP-7 IOTs. Built so far: the
+KA10 in `src/ka10` (SIMH's code ported, and the hand-written halves engine checked against it),
+which boots ITS from the PDP-10/its packs ([The switch boots ITS](#the-switch-boots-its)), and the
+Machine Room's PDP-10 page, which runs it in the browser ([In the browser](#in-the-browser)). The
+Korz sea for the KA10 is not built.
 
 **TypeScript, on the same kits as the PDP-7.** The KA10 is written in TypeScript on the cabinet's
 Korz CPU kit and device kit ([KORZ-CPU.md](KORZ-CPU.md)), so it shares the sea, the rungs, the
@@ -716,6 +719,21 @@ The order, each a step that works on its own:
 
 Who may connect, how many, and what a guest can do to the shared machine (log in, or only watch)
 is decided before step 1 ships; none of this is built yet.
+
+## In the browser
+
+The Machine Room's PDP-10 entries are in [its/catalog.yml](its/catalog.yml): ITS at DDT's star
+prompt, MACSYMA, MacLisp and Logo, each logged in and started after the boot, and HHTEST on the
+bare machine. The page (`apps/ties/src/lib/machines/Pdp10Machine.svelte`) runs the halves engine
+in a Web Worker (`its-worker.js`) and shows the console teletype as paper. Its outline has the
+programs with lines to type into them, the run, the packs, the tests, preferences and About, and
+anything with a 📌 goes in the toolbar.
+
+The packs are 330 MB, so they are not in the page or in git: they are served from the data disk
+and read in 32 KB chunks with HTTP Range requests, the chunks a boot needs first
+([its/README.md](its/README.md)). A boot, a login and MACSYMA's first prompt fetch about 6.4 MB.
+What ITS writes stays in the tab. The worker runs flat out while the console is busy and at a
+KA10's pace once it has been quiet, unless told otherwise.
 
 ## Phases
 
