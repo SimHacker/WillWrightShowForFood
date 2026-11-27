@@ -388,7 +388,7 @@
 {#snippet logoPanel()}{@render programPanel(PROGRAMS[3])}{/snippet}
 
 {#snippet programsNode()}
-	<Outline id="pdp10-programs" move={moveNode} title="Programs: what to type" hint="ITS's programs and lines to type into them; a button types its line on the console" summary={PROGRAMS.find((p) => p.id === mine)?.title} opened={!tape}>
+	<Outline id="pdp10-programs" move={moveNode} title="ITS Commands and Programs: what to type" hint="ITS's commands, its programs and lines to type into them; a button types its line on the console" summary={PROGRAMS.find((p) => p.id === mine)?.title} opened={!tape}>
 		<div class="row keys"><Pinnable {bar} id="altmode" /><Pinnable {bar} id="ctrl-z" /><Pinnable {bar} id="ctrl-g" /></div>
 		{#each programs as p (p.id)}
 			<Outline id="pdp10-prog-{p.id}" title={p.title} hint={p.about} opened={p.id === mine} pin={{ bar, id: `prog-${p.id}` }}>
