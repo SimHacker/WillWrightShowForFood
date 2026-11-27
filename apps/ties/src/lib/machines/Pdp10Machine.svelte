@@ -64,6 +64,58 @@
 	let copied = $state(false);
 	let focused = $state(false);
 
+	/** The paper's height in pixels, the person's, kept; null is the default. */
+	const HEIGHT_KEY = 'pdp10-paper-height';
+	const MIN_HEIGHT = 100;
+	/** @type {number | null} */
+	let height = $state(readHeight());
+	/** @type {{ y: number, from: number } | null} */
+	let sizing = $state(null);
+
+	function readHeight() {
+		const n = Number(globalThis.localStorage?.getItem(HEIGHT_KEY));
+		return Number.isFinite(n) && n >= MIN_HEIGHT ? n : null;
+	}
+	/** Set the height, keeping the newest line in sight if it was. @param {number | null} to */
+	function resize(to) {
+		const el = paper;
+		const bottom = !!el && el.scrollHeight - el.scrollTop - el.clientHeight < 4;
+		height = to === null ? null : Math.round(Math.max(MIN_HEIGHT, to));
+		if (bottom) tick().then(() => el && (el.scrollTop = el.scrollHeight));
+	}
+	function keepHeight() {
+		try {
+			if (height === null) globalThis.localStorage?.removeItem(HEIGHT_KEY);
+			else globalThis.localStorage?.setItem(HEIGHT_KEY, String(height));
+		} catch {
+			/* Storage forbidden: the height lasts until the page goes. */
+		}
+	}
+	/** @param {PointerEvent} e */
+	function gripdown(e) {
+		if (e.button !== 0 || !paper) return;
+		e.preventDefault();
+		/** @type {HTMLElement} */ (e.currentTarget).setPointerCapture(e.pointerId);
+		sizing = { y: e.clientY, from: paper.offsetHeight };
+	}
+	/** @param {PointerEvent} e */
+	function gripmove(e) {
+		if (sizing) resize(sizing.from + e.clientY - sizing.y);
+	}
+	function gripup() {
+		if (!sizing) return;
+		sizing = null;
+		keepHeight();
+	}
+	/** A line at a time, five with Shift. @param {KeyboardEvent} e */
+	function gripkey(e) {
+		if (!paper || (e.key !== 'ArrowUp' && e.key !== 'ArrowDown')) return;
+		e.preventDefault();
+		const line = 1.25 * parseFloat(getComputedStyle(paper).fontSize);
+		resize(paper.offsetHeight + (e.key === 'ArrowDown' ? 1 : -1) * line * (e.shiftKey ? 5 : 1));
+		keepHeight();
+	}
+
 	/** A click on the paper is for typing, unless it was to select text to copy. */
 	function onpointerup() {
 		if (!globalThis.getSelection?.()?.toString()) paper?.focus({ preventScroll: true });
@@ -304,21 +356,40 @@
 <svelte:window onkeydown={onwindowkey} />
 
 <section class="pdp10" aria-label="The PDP-10">
-	<div
-		class="paper"
-		bind:this={paper}
-		tabindex="0"
-		role="textbox"
-		aria-multiline="true"
-		aria-label="The console teletype: click here and type"
-		title="The console teletype, which ITS treats as a printing terminal. Click and type: Return ends a line, Escape is Altmode, Backspace is Rubout, Control and a letter sends that control character, and a paste is typed in. Select text to copy it."
-		{onkeydown}
-		{onpaste}
-		{onpointerup}
-		onfocus={() => (focused = true)}
-		onblur={() => (focused = false)}
-	>
-		{#each pdp10.lines as line, i (i)}<div class="line">{line}{#if i === pdp10.lines.length - 1}<span class="cursor"></span>{/if}</div>{/each}
+	<div class="console">
+		<div
+			class="paper"
+			style:height={height === null ? null : `${height}px`}
+			bind:this={paper}
+			tabindex="0"
+			role="textbox"
+			aria-multiline="true"
+			data-keep-focus
+			aria-label="The console teletype: click here and type"
+			title="The console teletype, which ITS treats as a printing terminal. Click and type: Return ends a line, Escape is Altmode, Backspace is Rubout, Control and a letter sends that control character, and a paste is typed in. Select text to copy it."
+			{onkeydown}
+			{onpaste}
+			{onpointerup}
+			onfocus={() => (focused = true)}
+			onblur={() => (focused = false)}
+		>
+			{#each pdp10.lines as line, i (i)}<div class="line">{line}{#if i === pdp10.lines.length - 1}<span class="cursor"></span>{/if}</div>{/each}
+		</div>
+		<button
+			type="button"
+			class={['grip', { sizing }]}
+			aria-label="The paper's height: drag, or the up and down arrow keys"
+			title="Drag to make the paper taller or shorter. Arrow keys: a line at a time, Shift for five. Double-click: back to the usual height."
+			onpointerdown={gripdown}
+			onpointermove={gripmove}
+			onpointerup={gripup}
+			onpointercancel={gripup}
+			onkeydown={gripkey}
+			ondblclick={() => {
+				resize(null);
+				keepHeight();
+			}}
+		></button>
 	</div>
 	<p class="status">
 		{#if pdp10.phase}{pdp10.phase}…{:else if focused}Typing to ITS{:else}Click the paper, or just type, to type to ITS{/if}
@@ -344,9 +415,8 @@
 		gap: 0.4rem;
 	}
 	.paper {
+		box-sizing: border-box;
 		height: 28em;
-		min-height: 8em;
-		resize: vertical;
 		overflow: auto;
 		padding: 0.5em 0.7em;
 		background: #f4f0e2;
@@ -358,6 +428,33 @@
 	}
 	.paper:focus {
 		outline: 2px solid #c90;
+	}
+	/* Touching the paper's bottom edge, the width of it, so it reads as the paper's own. */
+	.grip {
+		display: grid;
+		width: 100%;
+		padding: 0;
+		border: none;
+		background: none;
+		color: inherit;
+		place-items: center;
+		height: 0.75rem;
+		cursor: ns-resize;
+		touch-action: none;
+		border-radius: 0 0 4px 4px;
+	}
+	.grip::before {
+		content: '';
+		width: 3rem;
+		height: 3px;
+		border-radius: 2px;
+		background: currentColor;
+		opacity: 0.3;
+	}
+	.grip:hover::before,
+	.grip:focus-visible::before,
+	.grip.sizing::before {
+		opacity: 0.8;
 	}
 	.line {
 		min-height: 1.25em;
