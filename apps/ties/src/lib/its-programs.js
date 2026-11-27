@@ -18,13 +18,13 @@
 /** @typedef {{ title: string, lines: ItsLine[] }} ItsWords */
 /** @typedef {{ id: string, title: string, about: string, start: ItsStep[], quit: ItsLine, lines: ItsLine[], words?: ItsWords[], compass?: boolean }} ItsProgram */
 
-/** The compass rose's directions, as Zork takes them, in the rose's reading order. */
+/** The compass rose's directions, as Zork takes them, in the rose's reading order, with LOOK in the middle. */
 export const COMPASS = [
 	['NW', 'nw', 'Northwest'], ['N', 'n', 'North'], ['NE', 'ne', 'Northeast'],
-	['W', 'w', 'West'], ['E', 'e', 'East'],
+	['W', 'w', 'West'], ['LOOK', 'look', ''], ['E', 'e', 'East'],
 	['SW', 'sw', 'Southwest'], ['S', 's', 'South'], ['SE', 'se', 'Southeast'],
 	['UP', 'u', 'Up'], ['DOWN', 'd', 'Down']
-].map(([label, word, title]) => ({ label, keys: `${word}\r`, title: `Go ${title.toLowerCase()}`, area: label.toLowerCase() }));
+].map(([label, word, title]) => ({ label, keys: `${word}\r`, title: title ? `Go ${title.toLowerCase()}` : 'Look around again', area: label.toLowerCase() }));
 
 /** @param {string} text @param {string} title @returns {ItsLine} */
 const line = (text, title) => ({ label: text, keys: `${text}\r`, title });
@@ -158,7 +158,6 @@ export const PROGRAMS = [
 			{
 				title: 'Around the house',
 				lines: [
-					line('look', 'Look around again'),
 					line('examine mailbox', 'Look at the mailbox'),
 					line('open mailbox', 'Open the mailbox'),
 					line('read leaflet', 'Read the leaflet inside'),
