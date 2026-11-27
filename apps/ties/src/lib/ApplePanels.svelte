@@ -7,6 +7,7 @@
 	import { panelSeedBytes, panelSeedText } from '@wwsff/cabinet/dance';
 	import { ENGINES, apple } from './apple.svelte.js';
 	import KorzBrowser from './KorzBrowser.svelte';
+	import WebPanel from './WebPanel.svelte';
 	import AppleMemory from './AppleMemory.svelte';
 	import DancePanel from './DancePanel.svelte';
 	import Outline from './Outline.svelte';
@@ -29,7 +30,7 @@
 	 * the game wants, the game, its disks and sound,
 	 * the dance, then what is under the lid. A person can drag them into another order, kept here.
 	 */
-	const ORDER = ['apple-angel', 'apple-play', 'apple-disks', 'apple-sound', 'apple-dance', 'apple-cpu', 'apple-mem', 'apple-io', 'apple-korz', 'apple-prefs', 'apple-about'];
+	const ORDER = ['apple-viewer', 'apple-angel', 'apple-play', 'apple-disks', 'apple-sound', 'apple-dance', 'apple-cpu', 'apple-mem', 'apple-io', 'apple-korz', 'apple-prefs', 'apple-about'];
 	const ORDER_KEY = 'apple-outline-order';
 	/** @type {string[]} */
 	let order = $state(keptOrder());
@@ -37,7 +38,9 @@
 		try {
 			const kept = JSON.parse(globalThis.localStorage?.getItem(ORDER_KEY) ?? '[]');
 			const known = Array.isArray(kept) ? kept.filter((k) => ORDER.includes(k)) : [];
-			return [...known, ...ORDER.filter((k) => !known.includes(k))];
+			// A node added since the order was kept goes after the one it follows in ORDER.
+			for (const [i, k] of ORDER.entries()) if (!known.includes(k)) known.splice(i ? known.indexOf(ORDER[i - 1]) + 1 : 0, 0, k);
+			return known;
 		} catch {
 			return [...ORDER];
 		}
@@ -117,7 +120,7 @@
 	const disksSummary = $derived(apple.drives.map((name, d) => `${d + 1}: ${name ? labelOf(name) : 'empty'}`).join(' · '));
 	const memSummary = $derived(!apple.korz ? 'inside microM8' : running ? 'hex, the 6502 code, the trace' : notRunning);
 	/** @type {Record<string, () => ReturnType<import('svelte').Snippet>>} */
-	const NODES = $derived({ 'apple-angel': angelNode, 'apple-play': playNode, 'apple-disks': disksNode, 'apple-sound': soundNode, 'apple-dance': danceNode, 'apple-cpu': cpuNode, 'apple-mem': memNode, 'apple-io': ioNode, 'apple-korz': korzNode, 'apple-prefs': prefsNode, 'apple-about': aboutNode });
+	const NODES = $derived({ 'apple-viewer': viewerNode, 'apple-angel': angelNode, 'apple-play': playNode, 'apple-disks': disksNode, 'apple-sound': soundNode, 'apple-dance': danceNode, 'apple-cpu': cpuNode, 'apple-mem': memNode, 'apple-io': ioNode, 'apple-korz': korzNode, 'apple-prefs': prefsNode, 'apple-about': aboutNode });
 </script>
 
 {#snippet prompts(compact = false)}
@@ -266,6 +269,10 @@
 			<dd>{apple.gamepad ? `gamepad: ${apple.gamepad}` : apple.mouseStick ? 'joystick: the pointer' : 'nothing plugged in'}</dd>
 		</dl>
 	{/if}
+{/snippet}
+
+{#snippet viewerNode()}
+	<WebPanel id="apple-viewer" move={moveNode} />
 {/snippet}
 
 {#snippet angelNode()}

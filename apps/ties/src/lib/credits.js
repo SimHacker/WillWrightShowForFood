@@ -19,7 +19,7 @@ function node(raw, fallbackId) {
 		url: typeof raw?.url === 'string' ? raw.url : '',
 		kind: String(raw?.kind ?? 'section'),
 		for: typeof raw?.for === 'string' ? raw.for : '',
-		view: raw?.view === 'web',
+		view: raw?.view !== 'tab',
 		about,
 		entries: (raw?.entries ?? raw?.sections ?? []).map((/** @type {any} */ e, /** @type {number} */ i) => node(e, `${id}-${i}`))
 	};

@@ -11,6 +11,7 @@
 	import { launchUrl } from '@wwsff/catalog';
 	import { dataSwitchesSeedText, dataSwitchesSeedWord } from '@wwsff/cabinet/dance';
 	import AboutPanel from '../AboutPanel.svelte';
+	import WebPanel from '../WebPanel.svelte';
 	import { switchDrawing } from '../switch-drawing.js';
 	import DancePanel from '../DancePanel.svelte';
 	import MachineToolbar from '../MachineToolbar.svelte';
@@ -33,7 +34,7 @@
 	const hhtest = catalog.entry('hhtest');
 	const its = catalog.entry('its');
 
-	const ORDER = ['pdp10-programs', 'pdp10-console', 'pdp10-run', 'pdp10-dance', 'pdp10-disks', 'pdp10-tests', 'pdp10-prefs', 'pdp10-about'];
+	const ORDER = ['pdp10-viewer', 'pdp10-programs', 'pdp10-console', 'pdp10-run', 'pdp10-dance', 'pdp10-disks', 'pdp10-tests', 'pdp10-prefs', 'pdp10-about'];
 	const ORDER_KEY = 'pdp10-outline-order';
 	/** @type {string[]} */
 	let order = $state(keptOrder());
@@ -626,7 +627,8 @@
 	<MachineToolbar {bar} label="The PDP-10's toolbar" />
 	<div class="outline" aria-label="The PDP-10's outline">
 		{#each order as key (key)}
-			{#if key === 'pdp10-programs'}{@render programsNode()}
+			{#if key === 'pdp10-viewer'}<WebPanel id="pdp10-viewer" move={moveNode} />
+			{:else if key === 'pdp10-programs'}{@render programsNode()}
 			{:else if key === 'pdp10-console'}{@render consoleNode()}
 			{:else if key === 'pdp10-run'}{@render runNode()}
 			{:else if key === 'pdp10-dance'}{@render danceNode()}

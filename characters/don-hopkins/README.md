@@ -8,222 +8,149 @@ backbone: career/*.yml
 
 # Don Hopkins
 
-*Sniff:* [`GLANCE.md`](GLANCE.md) · [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) · [`browse-the-bouquet.yml`](browse-the-bouquet.yml)
+User-interface designer and programmer. Pie menus, SimCity on Unix, The Sims, Micropolis,
+and this repository, including the [Machine Room](https://hyperties.org/machine/), whose
+old computers run in the browser. Lives in Amsterdam.
 
-👤 **Don Hopkins**, user-interface designer and programmer: pie menus, The Sims,
-Micropolis, Repo Show host. The facts live in YAML under
-[`career/`](career/INDEX.yml); this README is the narrative, showing how each
-project led to the next.
+Write to him by [opening an issue](https://github.com/SimHacker/WillWrightShowForFood/issues),
+or send a pull request. Photos are in [`media.md`](media.md), books in [`books/`](books/README.md),
+the short versions of this page in [`GLANCE.md`](GLANCE.md) and [`CARD.md`](CARD.md).
+How to support the work is in [`SUPPORT.md`](../../SUPPORT.md).
 
-**Want to talk?** [Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)
-or submit a PR. **Photos:** [`media.md`](media.md) · **Books:** [`books/`](books/README.md) ([Methodology of Window Management](books/methodology-of-window-management.md))
+## Work
 
----
+| Years | Where | What |
+|-------|-------|------|
+| 1985–1990 | University of Maryland, Human-Computer Interaction Lab | Pie menus (the CHI '88 paper with Callahan, Weiser and Shneiderman), HyperTIES, the PSIBER Space Deck |
+| 1987, 1990–1991 | Sun Microsystems | The NeWS Toolkit team under Warren Teitelman: PostScript user interfaces, pie menus, PizzaTool |
+| 1991–1992 | Turing Institute, Glasgow | HyperLook, with Arthur van Hoff, and SimCity built on it |
+| 1992–1993 | Carnegie Mellon | Garnet: Opal graphics, a pie-menu window manager |
+| 1993–1996 | Kaleida Labs | ScriptX, an object-oriented multimedia Lisp; DreamScape, shown at WWDC 1995 |
+| 1996–1997 | Interval Research | MediaFlow, Bounce, Director plug-ins |
+| 1997–2007 | Maxis and Electronic Arts | The Sims: character animation (VitaBoy), pie menus, Transmogrifier and the other modding tools; SimCity for the OLPC laptop, released under the GPL as Micropolis |
+| 2002–2003, 2009–2014 | Stupid Fun Club | Research programmer for Will Wright: robots, and films about how people treat them |
+| 2005– | NutritionQuest | Chief architect: TurboGears, SQLObject and Genshi, running a decade on |
+| 2007–2009 | TomTom, Amsterdam | Senior developer; iLoci, a memory-palace app, on the side |
+| 2014–2021 | Pantomime | Chief architect: networked AR and VR |
+| 2017– | Ground Up Software | His own company: PieCraft, Sims animation research |
+| 2021– | Leela AI | Senior software engineer |
+| 2022– | Gallium Studios | Consulting for Will Wright: procedural voxel worlds, cellular automata |
 
-## The thread
+The full résumé is in [`hire-me.md`](hire-me.md) and [`career/work-history.yml`](career/work-history.yml).
 
-Don started by hand-writing Forth on a 6502, then got onto the ARPANET and into Zork, and
-began designing pie menus for modeled worlds (pie menus go back to PIXIE in 1969; see the
-planned Heinz U. Lemke episode). PostScript gave those menus a language, and NeWS let
-clients send code to the window server. HyperLook SimCity, inspired by HyperCard, rebuilt
-the simulation with integrated scalable PostScript visualizations, a UI editor, and graphics
-editors, and let people paint and play across the network. At Maxis, the
-dollhouse became The Sims, and Transmogrifier let players make their own objects. The OLPC
-project led to the source release as Micropolis, and the same imaging model carries forward
-through Cairo, Canvas and WebGPU. Kaleida ScriptX was an object-oriented multimedia Lisp
-machine (*so much fun*), and DreamScape was an early memory palace. At Stupid Fun Club, the
-robots asked people for empathy. Constraint solvers (Garnet → Laszlo → Svelte)
-have kept declarative UI working across decades. Now the filesystem itself is the game
-board: `import self from self`, MOOLLM, Repo Show. Machine-readable version:
-[`CARD.yml`](CARD.yml) → `connections-index`.
+## How one thing led to another
 
-Each row below is a short description (about 24 words). The "Opens →" column gives the next file in reading order.
-
----
-
-## I — Identity
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`about-host.md`](about-host.md) | Resume as a repo room: a one-screen map of the career. | [`media.md`](media.md) |
-| [`hire-me.md`](hire-me.md) | Available for hire (2026): résumé page; references: Will Wright, Henry Minsky. | [`career/work-history.yml`](career/work-history.yml) |
-| [`media.md`](media.md) | Photos and screenshots: Queen's Day LISP shirt, Sims era, Micropolis demos. | [`career/lineage.yml`](career/lineage.yml) |
-| [`GLANCE.md`](GLANCE.md) · [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) · [`CHARACTER.yml`](CHARACTER.yml) | Sniff card, trading card, machine schema, host registry: the same profile at four levels of detail. | [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) |
-| [`browse-the-bouquet.yml`](browse-the-bouquet.yml) | Machine index of topic filenames (the filenames describe their contents); complements the reading order here. | Cluster II |
-| [`sync-sources.yml`](sync-sources.yml) | Upstream sync map and dedupe rules. | [`career/`](career/INDEX.yml) |
-
----
-
-## II — Gestural verbs (1988 · HCIL → the verb-picker)
-
-*Pie menus and Fitts's law: you select by direction, not by distance.*
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) | From PIXIE (1969) to the CHI'88 study; pie menus as the gestural verb-picker for SimCity, The Sims, MOOLLM. | [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) |
-| [`queer-oui-for-the-straight-gui.md`](queer-oui-for-the-straight-gui.md) | *Queer Oui* / *Put the SaS into SaaS*: a clinic for rescuing designs: keep the soul and skin, replace the hands; whiteboard with [Edd](../edd-coates/). | [`jojo-on-ui.md`](jojo-on-ui.md) |
-| [`jojo-on-ui.md`](jojo-on-ui.md) | Joseph Francis's UI satire (UNIX-HATERS mirror): POSEUR / XYmorph / boraX / XBorges; companion to Queer Oui. | [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) |
-| [`portrayal/presentations.yml`](portrayal/presentations.yml) | Verified papers and talks: CHI'88 links, BayCHI, DreamScape WWDC; sources for the claims in this section. | [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) |
-
----
-
-## III — Send code, not commands (1988–1995 · NeWS → PostScript motherboard)
-
-*NeWS: a window server programmed in PostScript, so clients send code rather than X11-style command streams.*
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) | NeWS: the *X-Windows Disaster* critique, Owen Densmore's OOPS, and the send-code idea the web later adopted. | [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) |
-| [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) | HyperLook SimCity, inspired by HyperCard: integrated PostScript visualization, UI editor, graphics editors; built at DUX. | [`porter-duff-postscript-to-webgpu.md`](porter-duff-postscript-to-webgpu.md) |
-| [`porter-duff-postscript-to-webgpu.md`](porter-duff-postscript-to-webgpu.md) | The Porter/Duff imaging model, from stencil-paint in the window server through Cairo and Canvas 2D to nested WebGPU compositing. | [`kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) |
-| [`kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) | Kaleida ScriptX, an OO multimedia Lisp machine; the DreamScape mirror world; WWDC 1995; live authoring. | [`interval-research-pluggers-and-mediaflow.md`](interval-research-pluggers-and-mediaflow.md) |
-
----
-
-## IV — Interval Research (1992–1999)
-
-*Paul Allen's lab studied how people use media: Pluggers, MediaFlow, Camelot.*
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`interval-research-pluggers-and-mediaflow.md`](interval-research-pluggers-and-mediaflow.md) | Interval Camelot: MediaFlow, Bounce, Director plug-ins, Tom Ngo's ECG; the pie menus talk Don gave before he was hired. | [`tom-ngo-embedded-constraint-graphics-at-interval.md`](tom-ngo-embedded-constraint-graphics-at-interval.md) |
-| [`tom-ngo-embedded-constraint-graphics-at-interval.md`](tom-ngo-embedded-constraint-graphics-at-interval.md) | ECG at Interval: simplicial complexes, Mouther, patent US5933150; Don's 2016 G9.js HN comment. | [`breakfast-simplex-barycentric-direct-manipulation.md`](breakfast-simplex-barycentric-direct-manipulation.md) |
-| [`breakfast-simplex-barycentric-direct-manipulation.md`](breakfast-simplex-barycentric-direct-manipulation.md) | Breakfast simplex: Dark Breakfast, barycentric coordinates and pie menus; 2025 HN essay. | [`mediaflow-design-comments.md`](mediaflow-design-comments.md) |
-| [`mediaflow-design-comments.md`](mediaflow-design-comments.md) | MediaFlow Design Comments: full Interval essay; Bongo dictionaries → [IFC vs Bongo](ifc-vs-bongo-comparison.md). | [`ifc-vs-bongo-comparison.md`](ifc-vs-bongo-comparison.md) |
-| [`ifc-vs-bongo-comparison.md`](ifc-vs-bongo-comparison.md) | IFC vs Bongo: Netscape vs Marimba; `getProperties` property sheets; Arthur van Hoff; the connection to yaml-jazz. | [`history/interval-research.yml`](history/interval-research.yml) |
-| [`history/interval-research.yml`](history/interval-research.yml) | The same Interval material as machine-readable YAML, for searching across repos. | [`history/README.md`](history/README.md) |
-| [`history/README.md`](history/README.md) | History index: public-safe summaries, one per period; no raw correspondence. | Cluster V |
-
----
-
-## V — SimCity, The Sims, and community tools (1991–2007)
-
-*SimCity, The Sims, and the tools that let players make their own content.*
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`career/simcity-lineage.yml`](career/simcity-lineage.yml) | SimCityNet → OLPC → WASM timeline; the YAML timeline the SimCity topic files link from. | [`open-sourcing-simcity-for-olpc.md`](open-sourcing-simcity-for-olpc.md) |
-| [`open-sourcing-simcity-for-olpc.md`](open-sourcing-simcity-for-olpc.md) | December 2006 pitch letter to Rod Humble, and the email that followed, which cleared SimCity for OLPC and the GPL Micropolis release. | [`career/contracts/README.md`](career/contracts/README.md) |
-| [`career/contracts/README.md`](career/contracts/README.md) | DUX ↔ Maxis ↔ EA ↔ OLPC contracts that made the open-source release legally possible. | [`../will-wright/primary-sources-evidence-room.md`](../will-wright/primary-sources-evidence-room.md) |
-| [`../will-wright/primary-sources-evidence-room.md`](../will-wright/primary-sources-evidence-room.md) | Map of Will Wright sources: the Winograd talk, Motive.c, Transmogrifier, the full OLPC email thread. | [`the-sims-transmogrifier-mod-tools.md`](the-sims-transmogrifier-mod-tools.md) |
-| [`the-sims-transmogrifier-mod-tools.md`](the-sims-transmogrifier-mod-tools.md) | Maxis modding tools: Transmogrifier, RugOMatic, SimShow, VitaBoy; objects that carry their own behavior, for community authors. | [`olpc-micropolis-python-pygtk.md`](olpc-micropolis-python-pygtk.md) |
-| [`olpc-micropolis-python-pygtk.md`](olpc-micropolis-python-pygtk.md) | Python Sugar adaptor: a PyGTK, Cairo and Pango shell wrapping Tcl/Tk SimCity for the XO laptop. | [`teaching-complicated-systems-without-a-manual.md`](teaching-complicated-systems-without-a-manual.md) |
-| [`teaching-complicated-systems-without-a-manual.md`](teaching-complicated-systems-without-a-manual.md) | Public essay (Aug 2026) answering Tade Mehl's emailed questions on teachable humanoid UI; SimCity → PBD → MOOLLM. | [`canon-cant-and-teachable-worlds.md`](canon-cant-and-teachable-worlds.md) |
-| [`canon-cant-and-teachable-worlds.md`](canon-cant-and-teachable-worlds.md) | Notes on Nick Tau's Canon MUD (Aug 2026): governance by topology, consent by state ontology, rate-limited LLM tutoring, language design that is deliberately hard to learn. | [`writing/INDEX.yml`](writing/INDEX.yml) |
-| [`writing/README.md`](writing/README.md) · [`writing/INDEX.yml`](writing/INDEX.yml) | Essay and primary-source index: Medium recreations, Will Wright source groups, donhopkins.com cross-links. | Cluster VI |
-
----
-
-## VI — Stupid Fun Club robots (2009–2014)
-
-*Will Wright's lab studied how people treat machines: a waiter robot, broken robots, one-minute films.*
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`career/stupid-fun-club.yml`](career/stupid-fun-club.yml) | SFC timeline in YAML: Slats, Dents, MediaGraph, networked AR; the work behind the robot films. | [`stupid-fun-club-empathy-and-servitude.md`](stupid-fun-club-empathy-and-servitude.md) |
-| [`stupid-fun-club-empathy-and-servitude.md`](stupid-fun-club-empathy-and-servitude.md) | *Servitude* and *Empathy*, one-minute movies about reviews, breakdowns, and performed feeling. | [`talks/empathy-and-servitude.yml`](talks/empathy-and-servitude.yml) |
-| [`talks/empathy-and-servitude.yml`](talks/empathy-and-servitude.yml) | Talk outline for the Empathy/Servitude show; links to Will Wright sources and to Slats. | [`../slats/`](../robots/slats/README.md) |
-| [`../slats/`](../robots/slats/README.md) | Slats, the waiter robot Don programmed; appears in this repo as a drag-race judge and show sidekick. | Cluster VII |
-
----
-
-## VII — Constraint solvers and platforms (1992–2020s)
-
-*Each GUI generation has had its own constraint system, keeping relationships in data instead of scattered through code.*
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`garnet-to-svelte-constraint-ui-lineage.md`](garnet-to-svelte-constraint-ui-lineage.md) | Garnet → OpenLaszlo → Svelte: from Brad Myers's KR constraints to `$derived`; how this shaped MOOLLM's YAML. | [`nutritionquest-turbogears-genshi-alive-pd.md`](nutritionquest-turbogears-genshi-alive-pd.md) |
-| [`nutritionquest-turbogears-genshi-alive-pd.md`](nutritionquest-turbogears-genshi-alive-pd.md) | Ten years of TurboGears at NutritionQuest: from Zope to SQLObject and Genshi; still running in production. | [`yoot-tower-open-source-and-alan-kay-interview.md`](yoot-tower-open-source-and-alan-kay-interview.md) |
-| [`yoot-tower-open-source-and-alan-kay-interview.md`](yoot-tower-open-source-and-alan-kay-interview.md) | Yoot Tower open-source work and the 1993 Alan Kay interview: preserving the tower game, and constructionist microworld history. | Cluster VIII |
-
----
-
-## VIII — Micropolis today (2006–now)
-
-*Since the GPL release, development has moved to the browser.*
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`micropoliscore-design-docs-packages-code-content.md`](micropoliscore-design-docs-packages-code-content.md) | MicropolisCore map: design docs, packages, WASM engine, PieCraft, content pipelines; the implementation repo. | [`career/project-threads.yml`](career/project-threads.yml) |
-| [`career/project-threads.yml`](career/project-threads.yml) | Diagram of how the projects connect: pie menus through The Sims, Micropolis, Repo Show. | Cluster IX |
-
----
-
-## IX — import self from self (now · MOOLLM, Repo Show, guests)
-
-*Directories as rooms, skills that inherit like Self objects, GitHub as the stage.*
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`import-self-from-self.md`](import-self-from-self.md) | MOOLLM constitution: `# import self from self`; directories as rooms, skills as prototypes, k-line naming as inheritance. | [`self-interest-narcissas-mirror-david-ungar.md`](self-interest-narcissas-mirror-david-ungar.md) |
-| [`self-interest-narcissas-mirror-david-ungar.md`](self-interest-narcissas-mirror-david-ungar.md) | Proposed Repo Show with David Ungar: Self puns, *Narcissa's Mirror*, and the representation-ethics rules for portraying him. | [`moollm-microworld-os-talk.md`](moollm-microworld-os-talk.md) |
-| [`moollm-microworld-os-talk.md`](moollm-microworld-os-talk.md) | Main talk, *The Sims for your filesystem*: the microworld OS idea in short form. | [`talks/moollm-microworld-os.yml`](talks/moollm-microworld-os.yml) |
-| [`talks/moollm-microworld-os.yml`](talks/moollm-microworld-os.yml) | Talk outline in YAML: slide order, demos, links to the lineage files and the MOOLLM repo; safe to export from Don's private archive. | [`repo-show-host-facet.md`](repo-show-host-facet.md) |
-| [`repo-show-host-facet.md`](repo-show-host-facet.md) | Don as Repo Show host: Repo Show, RTFR, GitHub as MMORPG; designing in public. | [`ideas.md`](ideas.md) |
-| [`ideas.md`](ideas.md) | Guests Don hopes to invite and show ideas: Will, Ungar, Bender, Adams, Yoot; episodes Don would like to build on air. | [`talks/INDEX.yml`](talks/INDEX.yml) |
-| [`talks/README.md`](talks/README.md) · [`talks/INDEX.yml`](talks/INDEX.yml) | Talk index: main talks, verified past talks, ideas to develop; see also portrayal presentations. | [`career/lineage.yml`](career/lineage.yml) |
-
----
-
-## X — YAML records and portrayal
-
-*The markdown above is the narrative; the YAML holds the facts and sources.*
-
-| File | What it is | Opens → |
-|------|------------|---------|
-| [`career/INDEX.yml`](career/INDEX.yml) | Career index: entry point for the YAML files below, easy to browse on GitHub. | [`career/lineage.yml`](career/lineage.yml) |
-| [`career/lineage.yml`](career/lineage.yml) | Lineage of ideas: MUD1, LambdaMOO, DreamScape, SimCity, The Sims, iLoci, LayAR, MOOLLM. | [`career/range.yml`](career/range.yml) |
-| [`career/range.yml`](career/range.yml) | Technical range: 6502 Forth through Rust/WASM/LLM; robots, computer vision, DevOps. | [`career/work-history.yml`](career/work-history.yml) |
-| [`career/work-history.yml`](career/work-history.yml) | Condensed employment timeline: public-safe dates and roles; see the contracts for the SimCity open-source details. | [`career/on-stream.yml`](career/on-stream.yml) |
-| [`career/on-stream.yml`](career/on-stream.yml) | Don on stream vs. the Don Philahue announcer character: which one speaks in docs and which on air. | [`../don-philahue/`](../don-philahue/README.md) |
-| [`career/README.md`](career/README.md) | Career folder readme: points to INDEX and contracts. | [`career/contracts/transmogrifier-distribution-license-notes.md`](career/contracts/transmogrifier-distribution-license-notes.md) |
-| [`career/contracts/transmogrifier-distribution-license-notes.md`](career/contracts/transmogrifier-distribution-license-notes.md) | Transmogrifier EA distribution terms: legal notes drawn from the renovation plan and Wayback Machine copies. | [`portrayal/voice.yml`](portrayal/voice.yml) |
-| [`portrayal/README.md`](portrayal/README.md) | Portrayal folder: voice, heroes, presentations; how Don writes and whom he credits. | [`portrayal/voice.yml`](portrayal/voice.yml) |
-| [`portrayal/voice.yml`](portrayal/voice.yml) | Writing style and frobisms, synced from moollm adventure-4. | [`portrayal/heroes.yml`](portrayal/heroes.yml) |
-| [`portrayal/heroes.yml`](portrayal/heroes.yml) | Mentors credited: Shneiderman, Weiser, Will Wright, Alan Kay, and the ideas Don took from them. | Cluster I (re-read any room) |
-
----
+He started out writing Forth on a 6502, got onto the ARPANET and into Zork, and began
+designing pie menus. He did not invent them: they go back to PIXIE in 1969. PostScript gave
+the menus a language, and NeWS, a window server programmed in PostScript, let a client send
+it code rather than commands. HyperLook, after HyperCard, ran SimCity in NeWS with scalable
+graphics, a user-interface editor and drawing editors, and people could play it together
+across the network. At Maxis the dollhouse became The Sims, and Transmogrifier let players
+make their own objects. The OLPC laptop brought SimCity's source out as Micropolis. ScriptX
+at Kaleida was a multimedia Lisp, and great fun; DreamScape was an early memory palace. At
+Stupid Fun Club the robots asked people for empathy. Constraint systems, from Garnet
+through OpenLaszlo to Svelte, have kept user interfaces declarative all along. Now the
+repository itself is the stage: MOOLLM, where directories are rooms, and the Repo Show.
 
 ## Now
 
-Porting Micropolis to the web with WASM and SvelteKit. Running Repo Show: live
-conversations held on a GitHub repo that follow through to working code. Building the
-Sims content tools in the browser (Transmogrifier, RugOMatic, WigFabrik lineage).
+Micropolis on the web, in WebAssembly and SvelteKit. The Repo Show: conversations held in a
+GitHub repository that end in working code. The Sims content tools rebuilt for the browser:
+Transmogrifier, RugOMatic, WigFabrik. And the Machine Room, whose Apple ][ disks carry his Forth and his H19
+terminal.
 
-## Threads at a glance
+## The files
 
-```mermaid
-flowchart LR
-  PieMenus[Pie Menus CHI88] --> NeWS[NeWS / HyperTIES]
-  NeWS --> SimCityUnix[SimCity Unix ports]
-  SimCityUnix --> Maxis[Maxis / The Sims]
-  Maxis --> SFC[Stupid Fun Club]
-  Maxis --> Micropolis[Micropolis GPL 2008]
-  Micropolis --> MicropolisCore[MicropolisCore WASM]
-  SFC --> RepoShow[Repo Show / MOOLLM]
-  RepoShow --> WWSFF[WillWrightShowForFood]
-```
+### About him
 
-## On stream vs on stage
+- [`about-host.md`](about-host.md): the career on one screen.
+- [`hire-me.md`](hire-me.md): available for hire, 2026; references Will Wright and Henry Minsky.
+- [`media.md`](media.md): photos and screenshots, from the Queen's Day Lisp shirt to Micropolis demos.
+- [`GLANCE.md`](GLANCE.md), [`CARD.md`](CARD.md), [`CARD.yml`](CARD.yml), [`CHARACTER.yml`](CHARACTER.yml): the same profile at four lengths.
+- [`browse-the-bouquet.yml`](browse-the-bouquet.yml): every topic file here, by name.
+- [`sync-sources.yml`](sync-sources.yml): where these files come from upstream.
 
-| Facet | Who |
-|-------|-----|
-| Don himself: interviews, implementation, chat | This character ([`career/on-stream.yml`](career/on-stream.yml)) |
-| AI announcer character, Q&A host | [Don Philahue](../don-philahue/README.md) |
+### Pie menus (1988)
 
-## Deeper
+- [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md): from PIXIE in 1969 to the CHI '88 study, then SimCity, The Sims and MOOLLM.
+- [`queer-oui-for-the-straight-gui.md`](queer-oui-for-the-straight-gui.md): rescuing a design by keeping its look and replacing how it is handled; with [Edd Coates](../edd-coates/).
+- [`jojo-on-ui.md`](jojo-on-ui.md): Joseph Francis's user-interface satire.
+- [`portrayal/presentations.yml`](portrayal/presentations.yml): papers and talks, with links.
+
+### NeWS, HyperLook and ScriptX (1988–1996)
+
+- [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md): NeWS, the X Windows critique, Owen Densmore's object system, and sending code instead of commands.
+- [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md): HyperLook SimCity.
+- [`porter-duff-postscript-to-webgpu.md`](porter-duff-postscript-to-webgpu.md): the Porter–Duff imaging model, from the window server through Cairo and Canvas to WebGPU.
+- [`kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md): ScriptX and DreamScape.
+
+### Interval Research (1996–1997)
+
+- [`interval-research-pluggers-and-mediaflow.md`](interval-research-pluggers-and-mediaflow.md): MediaFlow, Bounce, Director plug-ins, and the pie-menu talk he gave before he was hired.
+- [`tom-ngo-embedded-constraint-graphics-at-interval.md`](tom-ngo-embedded-constraint-graphics-at-interval.md): Tom Ngo's embedded constraint graphics.
+- [`breakfast-simplex-barycentric-direct-manipulation.md`](breakfast-simplex-barycentric-direct-manipulation.md): barycentric coordinates and pie menus.
+- [`mediaflow-design-comments.md`](mediaflow-design-comments.md): the MediaFlow design essay.
+- [`ifc-vs-bongo-comparison.md`](ifc-vs-bongo-comparison.md): Netscape's IFC against Marimba's Bongo.
+- [`history/interval-research.yml`](history/interval-research.yml) and [`history/README.md`](history/README.md): the same history as records.
+
+### SimCity and The Sims (1991–2007)
+
+- [`career/simcity-lineage.yml`](career/simcity-lineage.yml): SimCity from the network version to OLPC and WebAssembly.
+- [`open-sourcing-simcity-for-olpc.md`](open-sourcing-simcity-for-olpc.md): the December 2006 letter to Rod Humble that cleared SimCity for OLPC and the GPL.
+- [`career/contracts/README.md`](career/contracts/README.md): the contracts that made the release possible.
+- [`../will-wright/primary-sources-evidence-room.md`](../will-wright/primary-sources-evidence-room.md): Will Wright's sources.
+- [`the-sims-transmogrifier-mod-tools.md`](the-sims-transmogrifier-mod-tools.md): Transmogrifier, RugOMatic, SimShow and VitaBoy.
+- [`olpc-micropolis-python-pygtk.md`](olpc-micropolis-python-pygtk.md): SimCity on the XO laptop, in Python around the Tcl/Tk original.
+- [`teaching-complicated-systems-without-a-manual.md`](teaching-complicated-systems-without-a-manual.md): answering Tade Mehl on teaching a system without a manual.
+- [`canon-cant-and-teachable-worlds.md`](canon-cant-and-teachable-worlds.md): notes on Nick Tau's Canon MUD.
+- [`writing/README.md`](writing/README.md) and [`writing/INDEX.yml`](writing/INDEX.yml): his essays and sources.
+
+### Stupid Fun Club (2009–2014)
+
+- [`career/stupid-fun-club.yml`](career/stupid-fun-club.yml): what he built there.
+- [`stupid-fun-club-empathy-and-servitude.md`](stupid-fun-club-empathy-and-servitude.md): *Servitude* and *Empathy*, one-minute films about robots.
+- [`talks/empathy-and-servitude.yml`](talks/empathy-and-servitude.yml): the talk about them.
+- [Slats](../robots/slats/README.md): the waiter robot he programmed.
+
+### Constraints and platforms
+
+- [`garnet-to-svelte-constraint-ui-lineage.md`](garnet-to-svelte-constraint-ui-lineage.md): Garnet to OpenLaszlo to Svelte.
+- [`nutritionquest-turbogears-genshi-alive-pd.md`](nutritionquest-turbogears-genshi-alive-pd.md): ten years of TurboGears at NutritionQuest.
+- [`yoot-tower-open-source-and-alan-kay-interview.md`](yoot-tower-open-source-and-alan-kay-interview.md): Yoot Tower, and a 1993 interview with Alan Kay.
+
+### Micropolis today
+
+- [`micropoliscore-design-docs-packages-code-content.md`](micropoliscore-design-docs-packages-code-content.md): MicropolisCore, the WebAssembly engine and its tools.
+- [`career/project-threads.yml`](career/project-threads.yml): how the projects connect.
+
+### MOOLLM and the Repo Show
+
+- [`import-self-from-self.md`](import-self-from-self.md): MOOLLM, where directories are rooms and skills inherit like Self objects.
+- [`self-interest-narcissas-mirror-david-ungar.md`](self-interest-narcissas-mirror-david-ungar.md): a proposed show with David Ungar.
+- [`moollm-microworld-os-talk.md`](moollm-microworld-os-talk.md) and [`talks/moollm-microworld-os.yml`](talks/moollm-microworld-os.yml): the talk, *The Sims for your filesystem*.
+- [`repo-show-host-facet.md`](repo-show-host-facet.md): hosting the Repo Show.
+- [`ideas.md`](ideas.md): guests he would like to invite, and shows to build.
+- [`talks/README.md`](talks/README.md) and [`talks/INDEX.yml`](talks/INDEX.yml): all the talks.
+
+### Records
+
+- [`career/INDEX.yml`](career/INDEX.yml): where the records start.
+- [`career/lineage.yml`](career/lineage.yml): the ideas, from MUD1 and LambdaMOO to MOOLLM.
+- [`career/range.yml`](career/range.yml): what he can build, from 6502 Forth to Rust and WebAssembly.
+- [`career/work-history.yml`](career/work-history.yml): the work, by date.
+- [`career/on-stream.yml`](career/on-stream.yml): Don himself, as against [Don Philahue](../don-philahue/README.md), the announcer character.
+- [`career/README.md`](career/README.md) and [`career/contracts/transmogrifier-distribution-license-notes.md`](career/contracts/transmogrifier-distribution-license-notes.md): the career folder, and Transmogrifier's license terms.
+- [`portrayal/README.md`](portrayal/README.md), [`portrayal/voice.yml`](portrayal/voice.yml), [`portrayal/heroes.yml`](portrayal/heroes.yml): how he writes, and whom he learned from.
+
+## Elsewhere
 
 - [donhopkins.com](https://donhopkins.com)
 - [SimHacker/MicropolisCore](https://github.com/SimHacker/MicropolisCore)
 - [SimHacker/moollm](https://github.com/SimHacker/moollm)
-- [moollm adventure-4 Don Hopkins](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins)
+- [Don in moollm's adventure-4](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins)
 
-↑ [`../README.md`](../README.md) · [`CARD.yml`](CARD.yml) · [`../../process/cross-links.yml`](../../process/cross-links.yml)
+Shelved in Palmhoo under [Generative Art & Music](../../palmhoo/generative-art-and-music/README.md),
+[Concurrency & Messaging](../../palmhoo/concurrency-and-messaging/README.md) and
+[Packages](../../palmhoo/packages/README.md).
 
-🐒✋ *Shelved all over Palmhoo, but especially:
-[Generative Art & Music](../../palmhoo/generative-art-and-music/README.md) (the granular CA
-synth, net jamming), [Concurrency & Messaging](../../palmhoo/concurrency-and-messaging/README.md)
-(streams of streams; also the HN quip "just set the pile of C++ manuals on fire — no gophers
-needed"), and [Packages](../../palmhoo/packages/README.md) (the uplift doctrine is his cauldron
-with the lid on).*
+↑ [`../README.md`](../README.md) · [`../../process/cross-links.yml`](../../process/cross-links.yml)

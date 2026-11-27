@@ -824,7 +824,27 @@ displays on TK10 lines, two so UNTALK can run between them.
    so the program redraws, doubles a typed `^\`, and sends Meta as `^\ B x`.
 5. **The system log.** The system job writes `LOGIN`, `GUNNER` and the like to the TTY in `SYSCN`
    (`SYSCON==0`, the console). Other lines never get them. `SUPPLG` -1 drops the login and logout
-   ones; `SYSCN` set to a spare line gives the log its own printer.
+   ones; `SYSCN` set to a spare line gives the log its own printer. Done on the page: once ITS
+   prints IN OPERATION the worker sets `SYSCN` to -1 (`setSystemLog` in `ka10/its-symbols.ts`),
+   and the log goes to the null device unless the Console node's checkbox keeps it.
+
+**Where the TK10 stands (27 November 2026).** The device is in (`Tk10` in `ka10/devices.ts`),
+but no terminal is on the page yet. Probed in Node with line 0 (TTY 1) plugged in:
+
+- At boot ITS starts sending the line its setup string, `\e[4;18;20l\e[6;12h\e[1Q\e[>27;…l\e[>`,
+  and stops partway: after the last `\e[>` nothing more comes, ever.
+- ^Z typed on the line works: `TTYSTS` for TTY 1 goes from `400000,,777777` (free) to
+  `000001,,005544`, a job owns it, and `UTTYI`/`UTTYO` move on. `SYSDBG` and `DEDTIM` are 0, and
+  `TTYSTA`'s %TACFM is set, so ZFLAG lets it through.
+- But no output follows, so DDT's greeting never reaches the line.
+
+So the fault is output: the TK10's output-done flag stops reaching ITS. Next, compare against
+SIMH line by line: `tmxr_txdone_ln` reports 1 only on a change to ready, and for a line that is
+not connected SIMH paces it by `txnexttime` too; ours flags unconnected lines at once on every
+scan. Also check how ITS's NTY1 interrupt routine (`SYSTEM; TS3TTY`) answers an ODONE for a line
+with nothing to send (CONO STOP), and whether the scan's `return` after one flag starves the
+others. `/tmp/its-tty1.mjs` is the probe: it boots, dumps TTY 0 and 1's `TTYSTS`, `TTYSTA`,
+`TTYTYP`, `TTYOPT`, `TCTYP`, then types ^Z and dumps them again.
 
 Not on the cabinet yet: MDL long lines and Zork's long sessions are untested past a few
 commands. Zork (`:zork`), MDL (`:mdl`, Muddle 56; Altmode evaluates), Haunt (`:haunt`) and the

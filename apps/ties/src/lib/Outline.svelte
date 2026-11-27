@@ -5,7 +5,7 @@
 	 * One node of the machine pages' outline: a heading row that opens and closes the content
 	 * under it, and the content, which holds more nodes. The row shows a triangle, the title,
 	 * `summary` (open or closed, so the outline reads the same either way) and `actions`, buttons
-	 * that work without opening the node. Open and the content's height are kept per `id` in
+	 * that work without opening the node; `end`, more of them, at the row's right end. Open and the content's height are kept per `id` in
 	 * this browser. `resize` puts a bar under the content to drag its height; a double click on
 	 * the bar lets it take what it needs again. `opened` is how it starts the first time, before
 	 * the person has opened or closed it. `move` lets the person reorder nodes: drag the grip onto
@@ -13,8 +13,8 @@
 	 * the panel this node's content is offered to the toolbar as: its row gets the 📌 (or ⏏️).
 	 */
 	/** @typedef {import('svelte').Snippet} Snippet */
-	/** @type {{ id: string, title: string, hint?: string, summary?: string | Snippet, actions?: Snippet, resize?: boolean, open?: boolean, opened?: boolean, move?: (id: string, to: string | number) => void, pin?: { bar: import('./toolbar.svelte.js').Toolbar, id: string }, children: Snippet }} */
-	let { id, title, hint = '', summary, actions, resize = false, open = $bindable(), opened = false, move, pin, children } = $props();
+	/** @type {{ id: string, title: string, hint?: string, summary?: string | Snippet, actions?: Snippet, end?: Snippet, resize?: boolean, open?: boolean, opened?: boolean, move?: (id: string, to: string | number) => void, pin?: { bar: import('./toolbar.svelte.js').Toolbar, id: string }, children: Snippet }} */
+	let { id, title, hint = '', summary, actions, end, resize = false, open = $bindable(), opened = false, move, pin, children } = $props();
 	const pinned = $derived(!!pin && pin.bar.has(pin.id));
 	const pinLabel = $derived(pin ? (pin.bar.controls.get(pin.id)?.label ?? title) : '');
 
@@ -159,6 +159,7 @@
 		{:else if summary}
 			<span class="summary">{@render summary()}</span>
 		{/if}
+		{#if end}<span class="end">{@render end()}</span>{/if}
 	</div>
 	{#if open}
 		<div class="body" class:sized={height !== null} bind:this={body} style:height={height !== null ? `${height}px` : null}>
@@ -252,6 +253,13 @@
 		display: inline-flex;
 		gap: 0.3rem;
 		flex: none;
+	}
+	.end {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex: none;
+		margin-left: auto;
 	}
 	.summary {
 		flex: 1 1 0;

@@ -116,7 +116,7 @@ Nothing moves out from under the person's pointer. Two rules, no exceptions:
 - **Pressing a button never scrolls the page.** Focusing the screen so typing reaches the machine
   is `focus({ preventScroll: true })`; opening a panel opens it where it is. The page scrolls
   when the person scrolls, when they ask to go somewhere (to a pinned control's home in the outline),
-  or when something opens unasked that they must see (the grue's video, `reveal`).
+  when they click a link that opens in the viewer, or when something opens unasked that they must see (the grue's video); `reveal` in web-panel.svelte.js.
 
 A pinned panel opens and closes in the toolbar (▾/▸, kept with its place). Closed, it shows its
 title and its `brief`, if its owner offered one: a line of what matters and the buttons used

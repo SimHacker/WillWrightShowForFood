@@ -1,7 +1,7 @@
 <script>
 	/**
 	 * One node of the About tree, offered to the toolbar: its name as a link that opens its page
-	 * in a new tab (a YouTube link, or one with `view: web`, in the panel under the toolbar),
+	 * in the viewer at the top of the outline (a new tab with `view: tab`, or ⌘-click),
 	 * and, when it has nodes under it, its panel. The panel shows its line, then
 	 * each node under it: a name to pin, or an outline node whose content is that node's own
 	 * panel, pinnable in turn. Rendered for every node all the time, so a pinned name or panel
@@ -31,7 +31,7 @@
 		data-view={node.view ? '' : undefined}
 		target="_blank"
 		rel="noopener noreferrer"
-		title="{node.name}{node.for ? `: ${node.for}` : ''}. Opens {node.url} in a new tab.">{ICONS[node.kind] ?? '🔗'} {node.name}</a
+		title="{node.name}{node.for ? `: ${node.for}` : ''}. Opens {node.url} {node.view ? 'in the viewer at the top of the outline; ⌘-click for a new tab' : 'in a new tab'}.">{ICONS[node.kind] ?? '🔗'} {node.name}</a
 	>
 {/snippet}
 
@@ -89,7 +89,7 @@
 		opacity: 0.7;
 	}
 	.credit {
-		color: #9fe8a0;
+		color: light-dark(#1d6b1d, #9fe8a0);
 		text-decoration: none;
 		white-space: nowrap;
 	}
@@ -97,7 +97,21 @@
 	.credit:focus-visible {
 		text-decoration: underline;
 	}
+	/* In the toolbar a pinned name is a button among buttons, in the system's button colors. */
 	.credit.compact {
-		font-size: 0.75rem;
+		display: inline-flex;
+		align-items: center;
+		height: 1.6rem;
+		padding: 0 0.5em;
+		border: 1px solid ButtonBorder;
+		border-radius: 4px;
+		background: ButtonFace;
+		color: ButtonText;
+		font: 0.8rem system-ui, sans-serif;
+	}
+	.credit.compact:hover,
+	.credit.compact:focus-visible {
+		text-decoration: none;
+		filter: brightness(0.92);
 	}
 </style>

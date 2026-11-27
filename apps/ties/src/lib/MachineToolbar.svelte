@@ -21,7 +21,6 @@
 	 * are found against where everything stood when the drag began, with the open gap counted
 	 * in: its width is part of its target, and opening it never moves what the pointer is over.
 	 */
-	import WebPanel from './WebPanel.svelte';
 
 	/** @type {{ bar: import('./toolbar.svelte.js').Toolbar, label: string }} */
 	let { bar, label } = $props();
@@ -344,7 +343,6 @@
 			</span>
 		{/each}
 	</div>
-	<WebPanel />
 	{#if panels.length}
 		<div class="panels" data-layout="panels">
 			{#each panels as c, i (c.id)}

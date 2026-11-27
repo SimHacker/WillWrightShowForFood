@@ -4,8 +4,10 @@
 #   about     what the Machine Room is, paragraph by paragraph
 #   sections  id, title, about (a line), entries
 #   entries   id (unique across the file), name, url, kind (person, project, place, document),
-#             for: what it gave the Machine Room, in a line; view: web to show the page in the
-#             panel under the toolbar (WebPanel.svelte), as YouTube links always are
+#             for: what it gave the Machine Room, in a line. A click shows the page in the
+#             viewer at the top of the outline (WebPanel.svelte) and scrolls to it, a GitHub
+#             markdown file read in place; ⌘-click is the browser's new tab. view: tab sends a
+#             plain click to a tab as well, for a site that will not be shown in a frame
 about:
   - >-
     The Machine Room runs old computers in the browser, and the programs people wrote for them:
@@ -28,13 +30,13 @@ sections:
     title: This project
     about: Where the Machine Room comes from and what it is built with.
     entries:
-      - { id: don-hopkins, name: Don Hopkins, kind: person, url: "https://www.donhopkins.com/", for: "The Machine Room's author, and the Apple ][ Forth and H19 terminal on its disks" }
+      - { id: don-hopkins, name: Don Hopkins, kind: person, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/README.md", for: "The Machine Room's author, and the Apple ][ Forth and H19 terminal on its disks" }
       - { id: hyperties-org, name: hyperties.org, kind: place, url: "https://hyperties.org/", for: "Where the Machine Room lives" }
       - { id: ben-shneiderman, name: Ben Shneiderman, kind: person, url: "https://en.wikipedia.org/wiki/Ben_Shneiderman", for: "HyperTIES, the hypertext system at the University of Maryland that the site is named for" }
       - { id: moollm, name: MOOLLM, kind: project, url: "https://github.com/SimHacker/moollm", for: "Don's microworld for language models, where Korz was designed" }
       - { id: korz-design, name: Korz, kind: document, url: "https://github.com/SimHacker/moollm/tree/main/designs/korz", for: "The design of the machines as described once and run at several rungs" }
       - { id: korzybski, name: Alfred Korzybski, kind: person, url: "https://en.wikipedia.org/wiki/Alfred_Korzybski", for: "The map is not the territory: Korz is named for him" }
-      - { id: patreon, name: Don on Patreon, kind: place, url: "https://www.patreon.com/c/DonHopkins", for: "Supporting the work" }
+      - { id: patreon, name: Support Don, kind: place, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/SUPPORT.md", for: "Why the work needs paying for, and how: Patreon, hiring him, a version for your exhibit" }
 
   - id: pdp7
     title: PDP-7 and PIXIE
