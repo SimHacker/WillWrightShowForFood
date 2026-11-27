@@ -87,6 +87,35 @@ export const appleDisks = built.apps.flatMap((app) =>
 	}))
 );
 
+/** The shared collection's groups, by the folder under disks/apple2/collection/. */
+const GROUPS = {
+	'scott-adams': 'Scott Adams',
+	infocom: 'Infocom',
+	'microsoft-adventure': 'Microsoft',
+	arcade: 'Arcade',
+	classics: 'Classics'
+};
+
+/**
+ * The shared collection (DISKS.yml rows under collection/ with a title): every Apple
+ * configuration's disk menu offers these after its own disks.
+ * @type {{ name: string, label: string, group: string, note: string, url: () => Promise<string> }[]}
+ */
+export const collectionDisks = /** @type {{ file: string, title?: string, note?: string }[]} */ (
+	/** @type {any} */ (loadYaml(disksYaml)).disks ?? []
+)
+	.filter((d) => d.title && d.file.startsWith('collection/'))
+	.map((d) => {
+		const folder = d.file.split('/')[1] ?? '';
+		return {
+			name: d.file,
+			label: String(d.title),
+			group: GROUPS[/** @type {keyof typeof GROUPS} */ (folder)] ?? folder,
+			note: d.note ?? '',
+			url: () => diskUrl(d.file)
+		};
+	});
+
 /** The entry that runs an Apple app. */
 export function entryForApp(/** @type {string} */ id) {
 	return catalog.entry(`apple2:${id}`);

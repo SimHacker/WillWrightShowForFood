@@ -239,6 +239,7 @@
 	{play}
 	playTitle="Play {app.title}"
 	{appDisks}
+	ownLabel={app.title}
 />
 
 <style>

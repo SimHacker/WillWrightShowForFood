@@ -1,30 +1,44 @@
 <script>
-	/** The Machine Room's speaking voice, for every page that speaks; kept across visits. */
+	/**
+	 * The Machine Room's speaking voice, for every page that speaks; kept across visits. With
+	 * `yours`, your voice instead: what you type, when a machine reads aloud.
+	 */
 	import { onMount } from 'svelte';
-	import { chooseVoice, defaultVoiceName, startVoices, utterance, voice } from './voice.svelte.js';
+	import {
+		chooseVoice,
+		chooseYourVoice,
+		defaultVoiceName,
+		defaultYourVoiceName,
+		startVoices,
+		utterance,
+		voice,
+		yourUtterance
+	} from './voice.svelte.js';
 
-	/** @type {{ sample?: string }} */
-	let { sample = 'This is how the Machine Room will sound.' } = $props();
+	/** @type {{ sample?: string, yours?: boolean }} */
+	let { sample = '', yours = false } = $props();
 
 	onMount(startVoices);
 
 	/** @param {string} name */
 	function pick(name) {
-		chooseVoice(name);
+		if (yours) chooseYourVoice(name);
+		else chooseVoice(name);
 		speechSynthesis.cancel();
-		speechSynthesis.speak(utterance(sample));
+		const text = sample || (yours ? 'This is how you will sound.' : 'This is how the Machine Room will sound.');
+		speechSynthesis.speak(yours ? yourUtterance(text) : utterance(text));
 	}
 </script>
 
 {#if voice.voices.length}
 	<select
 		class="voice"
-		aria-label="Voice"
-		title="The voice the Machine Room speaks with, on every page"
-		value={voice.name}
+		aria-label={yours ? 'Your voice' : 'Voice'}
+		title={yours ? 'The voice that says what you type, when the machine reads aloud' : 'The voice the Machine Room speaks with, on every page'}
+		value={yours ? voice.you : voice.name}
 		onchange={(e) => pick(e.currentTarget.value)}
 	>
-		<option value="">Default ({defaultVoiceName()})</option>
+		<option value="">Default ({yours ? defaultYourVoiceName() : defaultVoiceName()})</option>
 		{#each voice.voices as v (v.voiceURI)}
 			<option value={v.name}>{v.name}{v.localService ? '' : ' (online)'}</option>
 		{/each}

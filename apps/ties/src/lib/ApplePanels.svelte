@@ -11,6 +11,7 @@
 	import DancePanel from './DancePanel.svelte';
 	import Outline from './Outline.svelte';
 	import PagePrefs from './PagePrefs.svelte';
+	import AboutPanel from './AboutPanel.svelte';
 	import Pinnable from './Pinnable.svelte';
 	import { toolbar } from './toolbar.svelte.js';
 
@@ -28,7 +29,7 @@
 	 * the game wants, the game, its disks and sound,
 	 * the dance, then what is under the lid. A person can drag them into another order, kept here.
 	 */
-	const ORDER = ['apple-angel', 'apple-play', 'apple-disks', 'apple-sound', 'apple-dance', 'apple-cpu', 'apple-mem', 'apple-io', 'apple-korz', 'apple-prefs'];
+	const ORDER = ['apple-angel', 'apple-play', 'apple-disks', 'apple-sound', 'apple-dance', 'apple-cpu', 'apple-mem', 'apple-io', 'apple-korz', 'apple-prefs', 'apple-about'];
 	const ORDER_KEY = 'apple-outline-order';
 	/** @type {string[]} */
 	let order = $state(keptOrder());
@@ -116,7 +117,7 @@
 	const disksSummary = $derived(apple.drives.map((name, d) => `${d + 1}: ${name ? labelOf(name) : 'empty'}`).join(' · '));
 	const memSummary = $derived(!apple.korz ? 'inside microM8' : running ? 'hex, the 6502 code, the trace' : notRunning);
 	/** @type {Record<string, () => ReturnType<import('svelte').Snippet>>} */
-	const NODES = $derived({ 'apple-angel': angelNode, 'apple-play': playNode, 'apple-disks': disksNode, 'apple-sound': soundNode, 'apple-dance': danceNode, 'apple-cpu': cpuNode, 'apple-mem': memNode, 'apple-io': ioNode, 'apple-korz': korzNode, 'apple-prefs': prefsNode });
+	const NODES = $derived({ 'apple-angel': angelNode, 'apple-play': playNode, 'apple-disks': disksNode, 'apple-sound': soundNode, 'apple-dance': danceNode, 'apple-cpu': cpuNode, 'apple-mem': memNode, 'apple-io': ioNode, 'apple-korz': korzNode, 'apple-prefs': prefsNode, 'apple-about': aboutNode });
 </script>
 
 {#snippet prompts(compact = false)}
@@ -124,9 +125,12 @@
 		class={{ on: apple.followPrompts }}
 		aria-pressed={apple.followPrompts}
 		aria-label="Follow the prompts"
-		title="Follow the prompts: Applesoft, a running BASIC program, Integer BASIC and the Monitor each set the dance's style and their own panel seed. A game with its own seed starts with this off, so they leave its music alone."
+		title="Follow the prompts: Applesoft, a running BASIC program, Integer BASIC, the Monitor and Forth's Ok. each set the dance's style and their own panel seed. Jiggle, paste or change the music at a prompt and it stays with that prompt. A game with its own seed starts with this off, so they leave its music alone."
 		onclick={() => (apple.followPrompts = !apple.followPrompts)}>{compact ? '🧭' : apple.followPrompts ? '🧭 Following the prompts' : '🧭 Not following the prompts'}</button
 	>
+	{#if !compact && apple.promptMusicKept}
+		<button title="Give every prompt back its own music, forgetting what was set at each" onclick={() => apple.forgetPromptMusic()}>↺ Prompts' own music</button>
+	{/if}
 {/snippet}
 
 {#snippet volume(compact = false)}
@@ -367,6 +371,10 @@
 		<div class="row"><Pinnable {bar} id="engine" /></div>
 		<KorzBrowser roots={() => apple.korzRoots()} follow={() => apple.korzFollow()} />
 	</Outline>
+{/snippet}
+
+{#snippet aboutNode()}
+	<AboutPanel {bar} machine="apple" move={moveNode} />
 {/snippet}
 
 {#snippet prefsNode()}

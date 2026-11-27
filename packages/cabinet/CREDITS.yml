@@ -1,0 +1,114 @@
+# The Machine Room's About panel: what this is, and the people and projects it stands on.
+# Every machine page's outline ends with it (apps/ties/src/lib/AboutPanel.svelte). Each
+# section is a panel, and each entry a link, that can be pinned to the toolbar.
+#   about     what the Machine Room is, paragraph by paragraph
+#   sections  id, title, about (a line), entries
+#   entries   id (unique across the file), name, url, kind (person, project, place, document),
+#             for: what it gave the Machine Room, in a line
+about:
+  - >-
+    The Machine Room runs old computers in the browser, and the programs people wrote for them:
+    a DEC PDP-7 with its Type 340 display, light pen and teletype; an Apple ][+ with a Disk II, a
+    Videx card and a cabinet panel; and a PDP-10 running ITS, coming. Each machine is a Korz
+    machine: its CPU and devices are described once, then interpreted, resolved or compiled to
+    JavaScript, all checked against each other and against SIMH or microM8.
+  - >-
+    The bus dance turns each machine's work into music, the way people once held an AM radio
+    to a computer to hear it think. Screen angels watch the screen and explain what is going
+    on. Cartridges wrap a program with its disks, its moves and its guide, over a shared
+    collection of disks every configuration can reach.
+  - >-
+    It is Don Hopkins's project, built in the open on hyperties.org, with Claude writing much of
+    the code. Pin any name below to keep it in the toolbar as a link to open later.
+
+sections:
+  - id: project
+    title: This project
+    about: Where the Machine Room comes from and what it is built with.
+    entries:
+      - { id: don-hopkins, name: Don Hopkins, kind: person, url: "https://www.donhopkins.com/", for: "The Machine Room's author, and the Apple ][ Forth and H19 terminal on its disks" }
+      - { id: hyperties-org, name: hyperties.org, kind: place, url: "https://hyperties.org/", for: "Where the Machine Room lives" }
+      - { id: ben-shneiderman, name: Ben Shneiderman, kind: person, url: "https://en.wikipedia.org/wiki/Ben_Shneiderman", for: "HyperTIES, the hypertext system at the University of Maryland that the site is named for" }
+      - { id: moollm, name: MOOLLM, kind: project, url: "https://github.com/SimHacker/moollm", for: "Don's microworld for language models, where Korz was designed" }
+      - { id: korz-design, name: Korz, kind: document, url: "https://github.com/SimHacker/moollm/tree/main/designs/korz", for: "The design of the machines as described once and run at several rungs" }
+      - { id: korzybski, name: Alfred Korzybski, kind: person, url: "https://en.wikipedia.org/wiki/Alfred_Korzybski", for: "The map is not the territory: Korz is named for him" }
+      - { id: patreon, name: Don on Patreon, kind: place, url: "https://www.patreon.com/c/DonHopkins", for: "Supporting the work" }
+
+  - id: pdp7
+    title: PDP-7
+    about: The machine, its display and pen, and the programs restored for it.
+    entries:
+      - { id: pdp-7, name: DEC PDP-7, kind: project, url: "https://en.wikipedia.org/wiki/PDP-7", for: "The 18-bit computer of 1964 the cabinet's first machine is" }
+      - { id: soemtron, name: soemtron.org, kind: place, url: "https://www.soemtron.org/pdp7no129systeminfo.html", for: "PDP-7 serial 129's documents, schematics and history" }
+      - { id: icm-museum, name: Interactive Computer Museum, kind: place, url: "https://icm.museum/", for: "A PDP-7 being restored, and its blog" }
+      - { id: pdp7-unix, name: pdp7-unix, kind: project, url: "https://github.com/DoctorWkt/pdp7-unix", for: "The restoration of PDP-7 UNIX from its listings, which the cabinet boots" }
+      - { id: ken-thompson, name: Ken Thompson, kind: person, url: "https://en.wikipedia.org/wiki/Ken_Thompson", for: "Wrote UNIX on a PDP-7 in 1969" }
+      - { id: dennis-ritchie, name: Dennis Ritchie, kind: person, url: "https://en.wikipedia.org/wiki/Dennis_Ritchie", for: "UNIX with Thompson, then C" }
+      - { id: lcm-unix-v0, name: Living Computers on UNIX v0, kind: document, url: "https://web.archive.org/web/20240424192104/https://livingcomputers.org/Blog/Restoring-UNIX-v0-on-a-PDP-7-A-look-behind-the-sce.aspx", for: "Running UNIX v0 on a real PDP-7" }
+      - { id: pixie-paper, name: "Heinz Lemke's PIXIE", kind: document, url: "https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf", for: "PIXIE, a new approach to man-machine communication: the circuit editor SYMELEC is built on" }
+      - { id: open-firmware, name: Mitch Bradley's Forth, kind: project, url: "https://en.wikipedia.org/wiki/Open_Firmware", for: "Mitch Bradley, of Open Firmware, wrote the PDP-7 Forth the turtle runs on" }
+      - { id: decus, name: DECUS, kind: project, url: "https://en.wikipedia.org/wiki/DECUS", for: "DEC's users' society, whose library kept DUEL, number 7-40" }
+      - { id: munching, name: Munching squares on the 340, kind: document, url: "https://retrocomputingforum.com/t/munching-squares-and-spirograph-demo-pdp-7-and-type-340-display/4856", for: "Display hacks on a PDP-7 and Type 340" }
+      - { id: minsky, name: Marvin Minsky, kind: person, url: "https://en.wikipedia.org/wiki/Marvin_Minsky", for: "The Ultimate Machine's idea, and the universal Turing machine the cabinet runs" }
+      - { id: shannon, name: Claude Shannon, kind: person, url: "https://en.wikipedia.org/wiki/Claude_Shannon", for: "Built the first Ultimate Machine" }
+      - { id: useless-machine, name: The Ultimate Machine, kind: document, url: "https://en.wikipedia.org/wiki/Useless_machine", for: "The box whose only job is to switch itself off" }
+      - { id: datahand, name: DataHand, kind: project, url: "https://en.wikipedia.org/wiki/DataHand", for: "The keyboard the cabinet's DataHand device is drawn after" }
+      - { id: mediapipe, name: MediaPipe Hands, kind: project, url: "https://www.npmjs.com/package/@mediapipe/tasks-vision", for: "The hand tracker behind Ultimate Hand" }
+
+  - id: pdp10
+    title: PDP-10 and ITS
+    about: The KA10 and the Incompatible Timesharing System it runs.
+    entries:
+      - { id: its, name: PDP-10/its, kind: project, url: "https://github.com/PDP-10/its", for: "Rebuilds MIT's ITS from source; the packs the KA10 boots come from its build" }
+      - { id: lars-brinkhoff, name: Lars Brinkhoff, kind: person, url: "https://github.com/larsbrinkhoff", for: "Leads the ITS restoration; terminal and CRT simulators" }
+      - { id: simh, name: SIMH, kind: project, url: "https://simh.trailing-edge.com/", for: "Bob Supnik's simulators, which the KA10 is ported from and checked against" }
+      - { id: open-simh, name: Open SIMH, kind: project, url: "https://github.com/open-simh/simh", for: "SIMH carried on in the open" }
+      - { id: rcornwell, name: Richard Cornwell, kind: person, url: "https://github.com/rcornwell/sims", for: "SIMH's KA10 and KI10, kx10_cpu.c" }
+      - { id: aap-pdp6, name: Angelo Papenhoff's PDP-6, kind: project, url: "https://github.com/aap/pdp6", for: "A PDP-6 emulator and its schematics" }
+      - { id: moon-hardware, name: "David Moon's hardware notes", kind: document, url: "https://github.com/PDP-10/its/wiki/Hardware-info-from-David-Moon", for: "What MIT's PDP-10s had that DEC's did not" }
+      - { id: macsyma, name: MACSYMA, kind: project, url: "https://en.wikipedia.org/wiki/Macsyma", for: "MIT's computer algebra system, which runs on the cabinet's ITS" }
+      - { id: gunkies-its, name: Running ITS, kind: document, url: "https://gunkies.org/wiki/Running_ITS_(the_Incompatible_Timesharing_System)", for: "The Computer History wiki's guide to bringing up ITS" }
+
+  - id: apple2
+    title: Apple ][
+    about: The emulators, the preservers who saved the disks, and the people who wrote them.
+    entries:
+      - { id: wozniak, name: Steve Wozniak, kind: person, url: "https://en.wikipedia.org/wiki/Steve_Wozniak", for: "Designed the Apple ][ and its Disk II" }
+      - { id: microm8, name: microM8, kind: project, url: "https://paleotronic.com/software/microm8/", for: "Paleotronic's Apple ][ emulator, the page's other engine and the Korz Apple's reference" }
+      - { id: paleotronic-github, name: Paleotronic on GitHub, kind: project, url: "https://github.com/paleotronic/microm8-gui", for: "microM8's sources" }
+      - { id: 4am, name: 4am, kind: person, url: "https://archive.org/details/apple_ii_library_4am", for: "Cracked and preserved hundreds of Apple ][ disks; many in the collection are 4am's" }
+      - { id: internet-archive, name: Internet Archive, kind: place, url: "https://archive.org/", for: "Keeps the disks, the flux captures and the manuals" }
+      - { id: ciderpress2, name: CiderPress II, kind: project, url: "https://github.com/fadden/CiderPress2", for: "Andy McFadden's tool for Apple ][ disk images" }
+      - { id: mame-videoterm, name: "MAME's Videoterm", kind: project, url: "https://github.com/mamedev/mame/blob/master/src/devices/bus/a2bus/a2videoterm.cpp", for: "The Videx Videoterm as MAME models it, which the card is checked against" }
+      - { id: scott-adams, name: Scott Adams, kind: person, url: "https://en.wikipedia.org/wiki/Scott_Adams_(game_designer)", for: "Adventureland and the adventures after it, on home computers from 1978" }
+      - { id: adventure-international, name: Adventure International, kind: project, url: "https://en.wikipedia.org/wiki/Adventure_International", for: "Scott and Alexis Adams's company" }
+      - { id: infocom, name: Infocom, kind: project, url: "https://en.wikipedia.org/wiki/Infocom", for: "Zork and the interactive fiction after it" }
+      - { id: lcp, name: Little Computer People, kind: project, url: "https://en.wikipedia.org/wiki/Little_Computer_People", for: "Activision's 1985 house on a disk, by David Crane and Rich Gold" }
+      - { id: david-crane, name: David Crane, kind: person, url: "https://en.wikipedia.org/wiki/David_Crane_(programmer)", for: "Programmed Little Computer People" }
+      - { id: rich-gold, name: Rich Gold, kind: person, url: "https://en.wikipedia.org/wiki/Rich_Gold", for: "Little Computer People's designer" }
+      - { id: timothy-leary, name: Timothy Leary, kind: person, url: "https://en.wikipedia.org/wiki/Timothy_Leary", for: "Mind Mirror, his 1985 program with Electronic Arts" }
+      - { id: wizardry, name: Wizardry, kind: project, url: "https://en.wikipedia.org/wiki/Wizardry:_Proving_Grounds_of_the_Mad_Overlord", for: "Andrew Greenberg and Robert Woodhead's Proving Grounds of the Mad Overlord" }
+      - { id: wizardry-code, name: Wizardry.Code, kind: project, url: "https://github.com/snafaru/Wizardry.Code", for: "Wizardry's Pascal sources, read for the character bridge" }
+      - { id: hal-abelson, name: Hal Abelson, kind: person, url: "https://en.wikipedia.org/wiki/Hal_Abelson", for: "Led MIT's Apple Logo, which Terrapin sold" }
+      - { id: ucsd-pascal, name: UCSD Pascal, kind: project, url: "https://en.wikipedia.org/wiki/UCSD_Pascal", for: "The p-System Apple Pascal is" }
+
+  - id: music
+    title: Music
+    about: Where the bus dance's styles, scales and idea come from.
+    entries:
+      - { id: system-bus-radio, name: System Bus Radio, kind: project, url: "https://github.com/fulldecent/system-bus-radio", for: "A computer's bus played as AM radio, the bus dance's starting point" }
+      - { id: brian-eno, name: Brian Eno, kind: person, url: "https://en.wikipedia.org/wiki/Brian_Eno", for: "Generative music, and the Eno tracks named for him" }
+      - { id: bohlen-pierce, name: Bohlen–Pierce scale, kind: document, url: "https://www.huygens-fokker.org/bpsite/scales.html", for: "13 steps of the tritave, the Monitor's style" }
+      - { id: kees, name: Kees van Prooijen, kind: person, url: "https://www.kees.cc/music/scale13/scale13.html", for: "13 tones in the 3rd harmonic, and its major cadence" }
+      - { id: wendy-carlos, name: Wendy Carlos, kind: person, url: "https://en.wikipedia.org/wiki/Alpha_scale", for: "The alpha scale of Beauty in the Beast" }
+      - { id: messiaen, name: Olivier Messiaen, kind: person, url: "https://en.wikipedia.org/wiki/Mode_of_limited_transposition", for: "The octatonic style, his second mode" }
+
+  - id: ideas
+    title: Ideas
+    about: People whose thinking runs through the Machine Room.
+    entries:
+      - { id: alan-kay, name: Alan Kay, kind: person, url: "https://en.wikipedia.org/wiki/Alan_Kay", for: "Smalltalk, and computers as a medium to think with" }
+      - { id: vanessa-freudenberg, name: Vanessa Freudenberg, kind: person, url: "https://squeak.js.org/", for: "SqueakJS: a whole old system running in a web page, done well" }
+      - { id: bret-victor, name: Bret Victor, kind: person, url: "https://worrydream.com/ABriefRantOnTheFutureOfInteractionDesign/", for: "Hands, and interfaces you can see into" }
+      - { id: dave-ackley, name: Dave Ackley, kind: person, url: "https://mfm.rocks/", for: "The Movable Feast Machine: robust-first computing" }
+      - { id: gary-bernhardt, name: Gary Bernhardt, kind: person, url: "https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript", for: "The Birth and Death of JavaScript: everything compiled to the browser" }

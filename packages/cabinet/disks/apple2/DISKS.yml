@@ -6,6 +6,9 @@
 # or an archive.org download URL.
 # note: what is on the disk, where it differs from its siblings.
 # profile: the microM8 machine the disk needs, when it is not the //e; the page restarts on it.
+# title: the disk's name in every Apple configuration's disk menu. collection/ holds the shared
+# collection: each configuration's menu lists its own disks (APPS.yml), then every titled disk
+# here, grouped by the folder under collection/.
 
 disks:
   - file: little-computer-people/lcp-4am-side-a.dsk
@@ -201,3 +204,225 @@ disks:
     bytes: 58074
     sha1: 59d20c922f73273724a41285c33a0be3489f894d
     source: "disk images/programming/apple pascal/technical notes/pascal _2523017 patch 2.0.pdf"
+
+  # The collection: every Apple configuration's disk menu offers these after its own disks.
+  # title names the disk in the menu; collection/<group>/ is the menu's group.
+  - file: collection/scott-adams/saga-1-adventureland-v2.0-4am.dsk
+    title: "Adventureland (SAGA, graphics)"
+    bytes: 143360
+    sha1: 03d517ff2cc847fd4526942cf562cd4d5e0b9579
+    source: "disk images/collections/4am collection/saga1adventureland_v20_4amcrack/00playable.dsk"
+  - file: collection/scott-adams/saga-2-pirate-adventure-4am.dsk
+    title: "Pirate Adventure (SAGA, graphics)"
+    bytes: 143360
+    sha1: 6eae73322e27d886a1623ace9551be39d9560e2c
+    source: "disk images/collections/4am collection/saga2pirateadventure4amcrack/00playable.dsk"
+  - file: collection/scott-adams/saga-5-the-count-4am.dsk
+    title: "The Count (SAGA, graphics)"
+    bytes: 143360
+    sha1: 8acdad69cf88304bee58813f80db5177efa7a932
+    source: "disk images/collections/4am collection/saga5thecount4amcrack/00playable.dsk"
+  - file: collection/scott-adams/saga-6-strange-odyssey-4am.dsk
+    title: "Strange Odyssey (SAGA, graphics)"
+    bytes: 143360
+    sha1: 813336ff19643aa0cb2fc9e48b8ce7e20d7a2912
+    source: "disk images/collections/4am collection/saga6strangeodyssey4amcrack/00playable.dsk"
+  - file: collection/scott-adams/adventures-1-5.dsk
+    title: "Scott Adams Adventures 1-5 (text)"
+    bytes: 143360
+    sha1: 225f189863c482f5d5cf0161820f3c34009890f9
+    source: "disk images/games/s/scott adams adventures 1-5.dsk"
+    note: "a menu: A Adventureland, B Pirate Adventure, C Mission Impossible, D The Count, E Voodoo Castle"
+  - file: collection/scott-adams/adventures-6-12.dsk
+    title: "Scott Adams Adventures 6-12 (text)"
+    bytes: 143360
+    sha1: d2ad7b8d8d441a1d352dfe5f256a31db5a0100eb
+    source: "disk images/games/s/scott adams adventures. 6-12.dsk"
+    note: "a menu: A Strange Odyssey, B Mystery Fun House, C Pyramid of Doom, D Ghost Town, E Golden Voyage. Savage Island 1 and 2 (10, 11) are not on it"
+  - file: collection/scott-adams/mission-impossible-1981.dsk
+    title: "Mission Impossible (1981)"
+    bytes: 143360
+    sha1: 6501cce083dff1d886812703cba508c820bec694
+    source: "disk images/games/m/mission impossible (1981)(adventure international).dsk"
+  - file: collection/scott-adams/voodoo-castle-1980.dsk
+    title: "Voodoo Castle (1980)"
+    bytes: 143360
+    sha1: 10885c566d30a06c53786c223474a7875286eaaa
+    source: "disk images/games/a/adventure 4 - voodoo castle (1980)(adventure international).dsk"
+  - file: collection/scott-adams/claymorgue-disk-1.dsk
+    title: "Sorcerer of Claymorgue Castle, disk 1"
+    bytes: 143360
+    sha1: 3e1996c07b079a415d6a5668b97f2ffe71582919
+    source: "disk images/games/s/sorcerer of claymorgue castle (1981)(adventure international)(disk 1 of 2)[cr zapman].dsk"
+  - file: collection/scott-adams/claymorgue-disk-2.dsk
+    title: "Sorcerer of Claymorgue Castle, disk 2"
+    bytes: 143360
+    sha1: 551cd659e58485e8a9098acc0fab65cd13d5118f
+    source: "disk images/games/s/sorcerer of claymorgue castle (1981)(adventure international)(disk 2 of 2)[cr zapman].dsk"
+  - file: collection/scott-adams/questprobe-1-hulk-4am.dsk
+    title: "Questprobe 1: The Hulk"
+    bytes: 143360
+    sha1: 654125d4e3a3c41723656d74b63f9ec7d89f02a5
+    source: "disk images/collections/4am collection/questprobefeaturingthehulk4amcrack/00playable.dsk"
+  - file: collection/scott-adams/questprobe-2-spider-man-side-a.dsk
+    title: "Questprobe 2: Spider-Man, side A"
+    bytes: 143360
+    sha1: 7a1fba09d1b59007e358813a61d31bb25b5a638c
+    source: "disk images/games/a/amazing spider-man, the v1.0 (1986)(green valley publishing)(side a).dsk"
+  - file: collection/scott-adams/questprobe-2-spider-man-side-b.dsk
+    title: "Questprobe 2: Spider-Man, side B"
+    bytes: 143360
+    sha1: dd278573f661d43a736cde2c30e15dcff66c50df
+    source: "disk images/games/a/amazing spider-man, the v1.0 (1986)(green valley publishing)(side b).dsk"
+  - file: collection/scott-adams/questprobe-3-fantastic-four-side-a.dsk
+    title: "Questprobe 3: The Fantastic Four, side A"
+    bytes: 143360
+    sha1: 80bf39a974c640ade1ac9c0b5ceb996ad7746231
+    source: "disk images/games/q/questprobe 3 - the fantastic four (1985)(adventure soft)(side a)[cr blade].dsk"
+  - file: collection/scott-adams/questprobe-3-fantastic-four-side-b.dsk
+    title: "Questprobe 3: The Fantastic Four, side B"
+    bytes: 143360
+    sha1: 4d9b99af8cda8ed3a70e0a7a134f7661be71ead0
+    source: "disk images/games/q/questprobe 3 - the fantastic four (1985)(adventure soft)(side b)[cr blade].dsk"
+  - file: collection/scott-adams/buckaroo-banzai-side-a.dsk
+    title: "The Adventures of Buckaroo Banzai, side A"
+    bytes: 143360
+    sha1: 9e625df4fdf3fcf6e1b854c47190617b111ff12f
+    source: "disk images/games/a/adventures of buckaroo banzai, the (19xx)(-)(disk 1 of 1 side a)[cr].dsk"
+  - file: collection/scott-adams/buckaroo-banzai-side-b.dsk
+    title: "The Adventures of Buckaroo Banzai, side B"
+    bytes: 143360
+    sha1: b7272c6ce519d1e8a51f27048b2adf6dcd179aef
+    source: "disk images/games/a/adventures of buckaroo banzai, the (19xx)(-)(disk 1 of 1 side b)[cr].dsk"
+  - file: collection/infocom/zork-i-r88b-4am.dsk
+    title: "Zork I (release 88)"
+    bytes: 143360
+    sha1: d795f4b3876320cade717fea88debf98093898c1
+    source: "disk images/collections/4am collection/zorki_r88b_4amcrack/00playable.dsk"
+  - file: collection/infocom/zork-ii-r48-4am.dsk
+    title: "Zork II (release 48)"
+    bytes: 143360
+    sha1: a8bb2511f434f173eff2ce5c2ebf681c0eca1ff9
+    source: "disk images/collections/4am collection/zorkii_r48_4amcrack/00playable.dsk"
+  - file: collection/infocom/zork-iii-r17-4am.dsk
+    title: "Zork III (release 17)"
+    bytes: 143360
+    sha1: 814b0ffba40fd63c8695cc61e531e8df7ea911cb
+    source: "disk images/collections/4am collection/zorkiii_r17_4amcrack/00playable.dsk"
+  - file: collection/infocom/zorkquest-4am.dsk
+    title: "ZorkQuest"
+    bytes: 143360
+    sha1: c5e4319bccd6588a007e1537c68bb1958b5cb35e
+    source: "disk images/collections/4am collection/zorkquest4amcrack/00playable.dsk"
+  - file: collection/infocom/mini-zork-i-1988.dsk
+    title: "Mini-Zork I (1988)"
+    bytes: 143360
+    sha1: 927c085952f37929372045f8e8572b29151b8af5
+    source: "disk images/games/m/mini-zork i - the great underground empire (1988)(infocom).dsk"
+  - file: collection/infocom/beyond-zork-side-a.dsk
+    title: "Beyond Zork, side A"
+    bytes: 143360
+    sha1: a0cddf788cce0eb72587d8b84ca0ffd1689783a5
+    source: "disk images/games/b/beyond zork (1987)(infocom)(side a).dsk"
+    note: "needs a 128K //e"
+  - file: collection/infocom/beyond-zork-side-b.nib
+    title: "Beyond Zork, side B"
+    bytes: 232960
+    sha1: 2d937985ea62e3f7204be36c06f3efbe00066a5d
+    source: "disk images/games/b/beyond zork (1987)(infocom)(side b)[nib].nib"
+    note: "a nibble image: microM8 only"
+  - file: collection/infocom/zork-zero-disk-1.dsk
+    title: "Zork Zero, disk 1"
+    bytes: 143360
+    sha1: 3da521e8ee3db80d94b9a64978699ca660bf0d78
+    source: "disk images/games/z/zork_zero_19xx_infocom_disk_1_of_4_fixed.dsk"
+    note: "needs a 128K //e"
+  - file: collection/infocom/zork-zero-disk-2.dsk
+    title: "Zork Zero, disk 2"
+    bytes: 143360
+    sha1: 27ec48a0e99ede51baab83a77d6a77062a8f65e4
+    source: "disk images/games/z/zork_zero_19xx_infocom_disk_2_of_4.dsk"
+  - file: collection/infocom/zork-zero-disk-3.dsk
+    title: "Zork Zero, disk 3"
+    bytes: 143360
+    sha1: 422393247e0abe97c70559c77c9e757c4975a916
+    source: "disk images/games/z/zork_zero_19xx_infocom_disk_3_of_4.dsk"
+  - file: collection/infocom/zork-zero-disk-4.dsk
+    title: "Zork Zero, disk 4"
+    bytes: 143360
+    sha1: d5143ef7c66932fc5173656c335b9410828973b6
+    source: "disk images/games/z/zork_zero_19xx_infocom_disk_4_of_4.dsk"
+  - file: collection/microsoft-adventure/microsoft-adventure.woz
+    title: "Microsoft Adventure (Colossal Cave)"
+    bytes: 233441
+    sha1: 59ce3d4bff0676de9fbe2edc489f05f3dbb7a1cd
+    source: "disk images/woz/games j-r/microsoft adventure (microsoft)/microsoft adventure - disk 1, side a.woz"
+    note: "a flux image: microM8 only"
+  - file: collection/arcade/hard-hat-mack-1983.dsk
+    title: "Hard Hat Mack (1983)"
+    bytes: 143360
+    sha1: 4384b1fc30eefcb1f963d3cf2d5e8b958d5bbdba
+    source: "disk images/games/h/hard hat mack (1983)(electronic arts)[cr mr. krac-man].dsk"
+  - file: collection/arcade/apple-invaders-and-friends.dsk
+    title: "Apple Invaders and friends"
+    bytes: 143360
+    sha1: 3ac58cc135a3ce3259a52bbb010d0cff82cf109d
+    source: "disk images/games/compilations/zzz-unk-[compil4] apple invaders - galaxy wars - invasion force - keyboard apple invaders - stellar invaders - super invader.dsk"
+    note: "Apple Invaders, Galaxy Wars, Invasion Force, Keyboard Apple Invaders, Stellar Invaders, Super Invader"
+  - file: collection/arcade/pac-man-atarisoft-4am.dsk
+    title: "Pac-Man (Atarisoft)"
+    bytes: 143360
+    sha1: 5eb20be8a79227715177b65cd0ea4a34be273629
+    source: "disk images/collections/4am collection/pacman4amcrack/00playable.dsk"
+  - file: collection/arcade/pac-man-datasoft-4am.dsk
+    title: "Pac-Man (Datasoft)"
+    bytes: 143360
+    sha1: dd4cec96fd37aba85f5bd2a5b75d0656904765d1
+    source: "disk images/collections/4am collection/pacmandatasoft4amcrack/playable.dsk"
+  - file: collection/arcade/pac-man-thunder-mountain-4am.dsk
+    title: "Pac-Man (Thunder Mountain)"
+    bytes: 143360
+    sha1: 9b3e1b9e78dcfb1f8f55925c9bf2f6161423004d
+    source: "disk images/collections/4am collection/pacmanthundermountain4amcrack/00playable.dsk"
+  - file: collection/classics/crush-crumble-and-chomp-4am.dsk
+    title: "Crush, Crumble and Chomp!"
+    bytes: 143360
+    sha1: 247d8154186c7a60e2df3f72972eb03023c7b4fe
+    source: "disk images/collections/4am collection/crushcrumbleandchomp4amcrack/00playable.dsk"
+  - file: collection/classics/the-prisoner-1980-dos33.dsk
+    title: "The Prisoner (1980)"
+    bytes: 143360
+    sha1: e242e769196102b6a47e0548ed980ad8b4befa97
+    source: "disk images/games/p/prisoner, the (1980)(edu-ware)[no boot].dsk, its DOS 3.3 rebuilt from the System Master"
+    note: "greeting program PR.BEGIN"
+  - file: collection/classics/prisoner-2-4am.dsk
+    title: "Prisoner 2"
+    bytes: 143360
+    sha1: 592465aefe1dd784a5109413ce40dc714ed4403e
+    source: "disk images/collections/4am collection/prisoner2_v101_4amcrack/00playable.dsk"
+  - file: collection/classics/fooblitzky.dsk
+    title: "Fooblitzky"
+    bytes: 143360
+    sha1: 9e002f72a2d877cc6568a37b8f843f26aef4cd2c
+    source: "disk images/collections/internet_archive/300_fooblitzky.dsk"
+  - file: collection/scott-adams/the-count-side-a.dsk
+    title: "The Count (French Touch), side A"
+    bytes: 143360
+    sha1: 06f604b394bca09e72f30baf73924c2aeb7d2b18
+    source: "disk images/collections/french touch/avril-mai (2) 2013/boite jeux 2/the count -a.dsk"
+  - file: collection/scott-adams/the-count-side-b.dsk
+    title: "The Count, side B"
+    bytes: 143360
+    sha1: 163a4ae69bbcf5c878883f402d3d85b2111ec110
+    source: "disk images/collections/french touch/avril-mai (2) 2013/boite jeux 2/the count -b.dsk"
+    note: "the side 4am's side A asks for when it says FLIP DISK OVER; with it, the game reaches its restore prompt"
+  - file: collection/scott-adams/questprobe-1-hulk-disk-1.dsk
+    title: "Questprobe 1: The Hulk (1981), disk 1"
+    bytes: 143360
+    sha1: 3cbb0d2d9564884f2212781117f1912872a9fb28
+    source: "disk images/games/h/hulk, the (1981)(scott adams)(disk 1 of 2)[cr syndicate - whip].dsk"
+  - file: collection/scott-adams/questprobe-1-hulk-disk-2.dsk
+    title: "Questprobe 1: The Hulk (1981), disk 2"
+    bytes: 143360
+    sha1: 9c7d8601a4b9718f68d1cac11789b84c65bff399
+    source: "disk images/games/h/hulk, the (1981)(scott adams)(disk 2 of 2)[cr syndicate - whip].dsk"

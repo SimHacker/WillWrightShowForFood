@@ -1,8 +1,9 @@
 // Named music seeds a person keeps, one list per machine, in this browser's localStorage.
 // A favorite's `seed` is the seed's digits (30 hex for the Apple's panel, 0o and six octal for
-// the PDP-7's switches), as Copy link puts in ?seed=.
+// the PDP-7's switches), as Copy link puts in ?seed=. A favorite kept since the music history
+// also has the dance's style, tempo and Eno tracks; one kept before has only the seed.
 
-/** @typedef {{ name: string, seed: string }} Favorite */
+/** @typedef {{ name: string, seed: string, style?: string, bpm?: number, loops?: number }} Favorite */
 
 export class SeedFavorites {
 	/** @type {Favorite[]} */
@@ -28,11 +29,22 @@ export class SeedFavorites {
 		}
 	}
 
-	/** @param {string} name @param {string} seed */
-	add(name, seed) {
-		this.list = [...this.list, { name, seed }];
+	/** @param {string} name @param {string} seed @param {{ style?: string, bpm?: number, loops?: number }} [music] */
+	add(name, seed, music = {}) {
+		this.list = [...this.list, { name, seed, ...music }];
 		this.#save();
 		return this.list.length - 1;
+	}
+
+	/**
+	 * The favorite a config is, by its seed and, where the favorite kept them, its style, tempo
+	 * and tracks; -1 for none.
+	 * @param {import('./music-history.svelte.js').MusicConfig} c
+	 */
+	named(c) {
+		return this.list.findIndex(
+			(f) => f.seed === c.seed && (f.style === undefined || f.style === c.style) && (f.bpm === undefined || f.bpm === c.bpm) && (f.loops === undefined || f.loops === c.loops)
+		);
 	}
 
 	/** @param {number} i @param {string} name */

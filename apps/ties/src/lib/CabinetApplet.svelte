@@ -7,6 +7,7 @@
 	import { asset } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { createBeeper } from './beeper.js';
+	import { savePicture } from './save-image.js';
 	import {
 		Pdp7,
 		KorzPdp7,
@@ -2705,16 +2706,17 @@
 		if (canvasEl?.hasPointerCapture(event.pointerId)) canvasEl.releasePointerCapture(event.pointerId);
 	}
 
-	function onPrintScreen() {
+	/** What the last print or copy did, on its button for a moment. */
+	let printed = $state('');
+	/** @param {MouseEvent} event */
+	async function onPrintScreen(event) {
 		if (!t340) return;
-		const svg = printScreen(t340, { size: 1024 });
-		const blob = new Blob([svg], { type: 'image/svg+xml' });
-		const url = URL.createObjectURL(blob);
-		const a = document.createElement('a');
-		a.href = url;
-		a.download = `${programId}-screen.svg`;
-		a.click();
-		URL.revokeObjectURL(url);
+		const svg = new Blob([printScreen(t340, { size: 1024 })], { type: 'image/svg+xml' });
+		printed = await savePicture(event, Promise.resolve(svg), 'image/svg+xml', `${programId}-screen.svg`).then(
+			(how) => (how === 'saved' ? '' : '✅'),
+			(e) => (console.error('print screen', e), '❌')
+		);
+		if (printed) setTimeout(() => (printed = ''), 1200);
 	}
 
 	/**
@@ -2899,19 +2901,19 @@
 
 	let shot = $state('');
 
-	async function onCopyScreen() {
-		if (!canvasEl) return;
+	/** @param {MouseEvent} event */
+	async function onCopyScreen(event) {
+		const canvas = canvasEl;
+		if (!canvas) return;
+		/** @type {Promise<Blob>} */
+		const png = new Promise((resolve, reject) => canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('no image'))), 'image/png'));
 		try {
-			const blob = await new Promise((resolve, reject) =>
-				canvasEl.toBlob((b) => (b ? resolve(b) : reject(new Error('no image'))), 'image/png')
-			);
-			await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
-			shot = '✅';
+			shot = (await savePicture(event, png, 'image/png', `${programId}-screen.png`)) === 'saved' ? '' : '✅';
 		} catch (e) {
 			shot = '❌';
 			console.error('copy screen', e);
 		}
-		setTimeout(() => (shot = ''), 1200);
+		if (shot) setTimeout(() => (shot = ''), 1200);
 	}
 
 	function onDownloadSession() {
@@ -3905,16 +3907,16 @@
 					<button
 						type="button"
 						class="icon"
-						aria-label="Print screen"
-						title="Print screen: save the tube as SVG"
+						aria-label="Save the tube as SVG"
+						title="Save the tube as SVG, its vectors as drawn. Shift-click: put it on the clipboard instead (as a picture in Chrome and Edge, as SVG text elsewhere)."
 						disabled={status !== 'live'}
-						onclick={onPrintScreen}>🖨️</button
+						onclick={onPrintScreen}>{printed || '🖨️'}</button
 					>
 					<button
 						type="button"
 						class="icon"
-						aria-label="Copy screen"
-						title="Copy the tube to the clipboard as a PNG"
+						aria-label="Save the tube as PNG"
+						title="Save the tube as PNG, the picture as it glows. Shift-click: put it on the clipboard instead."
 						disabled={status !== 'live'}
 						onclick={onCopyScreen}>{shot || '📷'}</button
 					>

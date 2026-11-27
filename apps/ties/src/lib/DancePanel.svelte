@@ -13,6 +13,7 @@
 	import { STYLES } from './bus-dance.svelte.js';
 	import { TEMPOS } from './dance-player.js';
 	import { seedFavorites } from './seed-favorites.svelte.js';
+	import { musicHistory } from './music-history.svelte.js';
 
 	/**
 	 * A machine's switches as a music seed. `text` is the line for a cartridge's definition,
@@ -44,7 +45,12 @@
 		];
 		if (seed || jiggle || twist) off.push(bar.offer('music-seed', 'Music seed', seedPanel, 'panel', inSeed));
 		if (jiggle) off.push(bar.offer('jiggle', 'Jiggle', jiggler, 'control', inSeed));
-		if (seed) off.push(bar.offer('seed-copy', 'Copy seed', copier, 'control', inSeed), bar.offer('seed-paste', 'Paste seed', paster, 'control', inSeed));
+		if (seed)
+			off.push(
+				bar.offer('seed-copy', 'Copy seed', copier, 'control', inSeed),
+				bar.offer('seed-paste', 'Paste seed', paster, 'control', inSeed),
+				bar.offer('music-history', 'Music history', stepper, 'control', inSeed)
+			);
 		return () => off.forEach((f) => f());
 	});
 
@@ -53,6 +59,29 @@
 	let picked = $state(-1);
 	/** The seed's digits as last read, for the seed node's summary. */
 	const digits = $derived(seed ? seed.digits() : '');
+
+	const history = $derived(seed ? musicHistory(seed.machine) : null);
+	/** How long the music holds still before it joins the history, so a slider's drag is one entry. */
+	const SETTLE_MS = 1200;
+	$effect(() => {
+		if (!history) return;
+		const c = { seed: digits, ...dance.settings };
+		const t = setTimeout(() => history.record(c), SETTLE_MS);
+		return () => clearTimeout(t);
+	});
+	/** @param {import('./music-history.svelte.js').Kept} c */
+	const historyName = (c) => {
+		const f = favorites?.list[favorites.named(c)];
+		return f ? f.name : `Unsaved #${c.n}`;
+	};
+	/** Play history entry `i`: its seed in the switches, its style, tempo and tracks. @param {number} i */
+	function goHistory(i) {
+		const c = history?.go(i);
+		if (!c || !seed) return;
+		seed.paste(c.seed);
+		dance.apply(c);
+		say(historyName(c));
+	}
 
 	/** What the last copy, paste or favorite did, for a moment. */
 	let said = $state('');
@@ -100,7 +129,7 @@
 		if (!favorites) return;
 		const name = window.prompt('Name this music seed:', `${document.title.replace(/ — .*$/, '')} ${favorites.list.length + 1}`);
 		if (!name?.trim()) return;
-		picked = favorites.add(name.trim(), s.digits());
+		picked = favorites.add(name.trim(), s.digits(), dance.settings);
 		say(`kept ${name.trim()}`);
 	}
 
@@ -109,7 +138,9 @@
 		const f = favorites?.list[i];
 		if (!f) return;
 		picked = i;
-		say(s.paste(f.seed) ? `${f.name}: ${f.seed}` : `${f.name} is not a seed for this machine`);
+		const ok = s.paste(f.seed);
+		if (ok) dance.apply(f);
+		say(ok ? `${f.name}: ${f.seed}` : `${f.name} is not a seed for this machine`);
 	}
 
 	function renameFavorite() {
@@ -238,8 +269,51 @@
 	</span>
 {/snippet}
 
+<!-- Back and forward through every config the music settled on, and the whole list by name. -->
+{#snippet stepper()}
+	{#if history}
+		{@const at = history.at}
+		{@const count = history.list.length}
+		<span class="stepper" role="group" aria-label="Music history">
+			<button
+				type="button"
+				class={{ chip }}
+				disabled={at <= 0}
+				aria-label="The music before"
+				title={at > 0 ? `Back to ${historyName(history.list[at - 1])}` : 'Nothing before this in the history'}
+				onpointerdown={(e) => e.preventDefault()}
+				onclick={() => goHistory(at - 1)}>‹</button
+			>
+			<select
+				class={{ chip }}
+				aria-label="Music history"
+				title="Every music config this browser has heard here, oldest first: the seed with the style, tempo and Eno tracks. Saved favorites go by their names. Pick one to play it."
+				value={String(at)}
+				onchange={(e) => goHistory(Number(e.currentTarget.value))}
+			>
+				{#if count === 0}<option value="-1">No history yet</option>{/if}
+				{#each history.list as c, i (c.n)}
+					<option value={String(i)}>{historyName(c)}</option>
+				{/each}
+			</select>
+			<button
+				type="button"
+				class={{ chip }}
+				disabled={at >= count - 1}
+				aria-label="The music after"
+				title={at < count - 1 ? `Forward to ${historyName(history.list[at + 1])}` : 'Nothing after this in the history'}
+				onpointerdown={(e) => e.preventDefault()}
+				onclick={() => goHistory(at + 1)}>›</button
+			>
+		</span>
+	{/if}
+{/snippet}
+
 <!-- The music seed: jiggle, copy and paste, favorites. -->
 {#snippet seedPanel(compact = false)}
+		<div class="row">
+			<Pinnable {bar} id="music-history" />
+		</div>
 		<div class="row">
 			<Pinnable {bar} id="jiggle" />
 			<Pinnable {bar} id="seed-copy" />
@@ -363,6 +437,21 @@
 	/* One row of joined buttons, a layer each. */
 	.eno {
 		display: inline-flex;
+	}
+	.stepper {
+		display: inline-flex;
+		align-items: stretch;
+	}
+	.stepper button {
+		min-width: 1.8em;
+		font-weight: bold;
+	}
+	.stepper button:disabled {
+		opacity: 0.3;
+	}
+	.stepper select {
+		max-width: 12rem;
+		margin: 0 -1px;
 	}
 	/* A fixed size, lit or not, so a row of them never shifts as they toggle: one border
 	   between neighbors (each overlaps the one before by its width), the same grey lit or

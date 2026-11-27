@@ -35,6 +35,28 @@ test("videx: $C0Bx latches the RAM page, $CC00 is that page, the 6845 cursor reg
 	assert.notEqual(board.peek(0xcc05), 0x41, "$CFFF gives the $C800 space back");
 });
 
+test("videx: PR#3 at the Applesoft prompt turns the card on, and BASIC prints in 80 columns", () => {
+	const board = new Apple2Plus(file("roms/apple2/apple2plus.rom"));
+	board.installLanguageCard();
+	const card = videx();
+	board.plug(3, card);
+	const cpu = new Korz6502(board, { korz: "compile" });
+	cpu.reset();
+	const run = (n: number): void => {
+		for (const end = board.cycles + n; board.cycles < end; ) cpu.step();
+	};
+	run(3e6);
+	for (const ch of "PR#3\rPRINT 6*7\r") {
+		while (board.key & 0x80) run(10_000);
+		board.press(ch.charCodeAt(0));
+		run(200_000);
+	}
+	run(5e6);
+	assert.ok(Videx.showing(board.annunciators, board.graphics), "annunciator 0 on: the monitor shows the Videx");
+	const rows = card.text().map((r) => r.trimEnd()).filter(Boolean);
+	assert.deepEqual(rows.slice(-3), ["]PRINT 6*7", "42", "]"]);
+});
+
 /** Don's ProDOS Forth, `forth-ok.po`: boot to the Forth prompt on the Videx, then type at it. */
 for (const rung of ["switch", "resolve", "compile"] as const) {
 	test(`videx: Don's ProDOS Forth boots and computes on the ${rung} rung`, { timeout: 120_000 }, () => {

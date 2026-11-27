@@ -90,8 +90,29 @@ class AppleEngine {
 	get followPrompts() {
 		return korzApple.followPrompts;
 	}
+	/** Whether a prompt has music the person set there, which forgetPromptMusic gives back. */
+	get promptMusicKept() {
+		return korzApple.promptMusicKept;
+	}
+	forgetPromptMusic() {
+		korzApple.forgetPromptMusic();
+	}
 	set followPrompts(on) {
 		korzApple.followPrompts = on;
+	}
+	/**
+	 * Reading aloud, on the Korz Apples: 'printed' (COUT1), 'screen' (the text rows), or 'off'.
+	 * microM8 reports 'off'; the choice waits for a Korz rung.
+	 */
+	get reading() {
+		return this.id === 'microm8' ? 'off' : korzApple.reading;
+	}
+	set reading(how) {
+		korzApple.reading = how;
+	}
+	/** @param {((h: import('@wwsff/cabinet/korz/apple2').Heard) => void) | null} fn */
+	set heard(fn) {
+		korzApple.heard = fn;
 	}
 	get videxShowing() {
 		return this.id === 'microm8' ? microM8.videxShowing : korzApple.videxShowing;

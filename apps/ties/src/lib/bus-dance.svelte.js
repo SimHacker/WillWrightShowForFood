@@ -191,6 +191,19 @@ export class BusDance {
 		this.#save();
 	}
 
+	/** The music as a person sets it here: the style, the tempo and the Eno tracks. */
+	get settings() {
+		return { style: this.style, bpm: this.#bpm, loops: this.loops };
+	}
+	/** Set what `settings` reads; what is missing or unknown stays. @param {{ style?: string, bpm?: number, loops?: number }} s */
+	apply(s) {
+		const style = STYLES.find((x) => x.id === s.style)?.id;
+		if (style) this.style = this.#dance.style = style;
+		if (typeof s.bpm === 'number' && s.bpm >= 20 && s.bpm <= 400) this.#bpm = s.bpm;
+		if (typeof s.loops === 'number') this.loops = this.#dance.loops = enoLayers(s.loops);
+		this.#save();
+	}
+
 	/** Memory's named regions; the first voice's hits warm them, and each warm one hums. @param {readonly Region[]} list */
 	set regions(list) {
 		this.#dance.regions = new Regions(list);

@@ -6,6 +6,9 @@
 //   node scripts/a2boot.mjs DISK --m8 e|PROFILE [--seconds 30] [--keys 'text\r'] [--drive2 DISK]
 //
 // --keys are typed after --cycles, one every 300,000 cycles, then the Apple runs --then more.
+// A | in --keys waits --gap cycles (20e6), for a disk to load between answers.
+// --talk cout also prints what went through COUT1, split into what was said and what was
+// typed; --talk screen reads the text screen instead, for a program that draws its own text.
 // --m8 boots on microM8 instead (the //e, or a profile such as apple2-plus), which also reads
 // nibble and WOZ images, for --seconds of real time at 8x; its keys go in after.
 import { readFileSync } from "node:fs";
@@ -13,6 +16,7 @@ import { join } from "node:path";
 import { Korz6502 } from "../dist/korz/m6502.js";
 import { Apple2Plus } from "../dist/korz/apple2/plus.js";
 import { DiskII } from "../dist/korz/apple2/disk2.js";
+import { COUT1, ScreenTalk, Talk, speakable, textRows } from "../dist/korz/apple2/talk.js";
 import { startMicroM8Node } from "../dist/microm8/node.js";
 
 const flags = new Map();
@@ -39,7 +43,8 @@ if (flags.has("m8")) {
 	const keys = (flags.get("keys") ?? "").replace(/\\r/g, "\n");
 	if (keys) {
 		for (const ch of keys) {
-			m.type(ch);
+			if (ch === "|") await sleep(2500);
+			else m.type(ch);
 			await sleep(150);
 		}
 		await sleep(10_000);
@@ -60,14 +65,38 @@ if (flags.has("drive2")) drives.insert(2, new Uint8Array(readFileSync(flags.get(
 board.plug(6, drives);
 const cpu = new Korz6502(board, { korz: "compile" });
 cpu.reset();
+const screen = flags.get("talk") === "screen";
+const talk = !flags.has("talk") ? null : screen ? new ScreenTalk() : new Talk();
+const heard = { said: [], typed: [] };
+const listen = () => {
+	const h = talk.take(board.cycles);
+	heard.said.push(...h.said);
+	heard.typed.push(...h.typed);
+};
 
 const run = (n) => {
-	for (const end = board.cycles + n; board.cycles < end; ) cpu.step();
+	let look = board.cycles;
+	for (const end = board.cycles + n; board.cycles < end; ) {
+		cpu.step();
+		if (!talk) continue;
+		if (!screen && cpu.pc === COUT1) talk.print(cpu.a, board.cycles, board.key >= 0x80);
+		if (board.cycles - look >= 100_000) {
+			look = board.cycles;
+			if (screen) talk.look(textRows((a) => board.peek(a)), board.cycles);
+			listen();
+		}
+	}
 };
 run(Number(flags.get("cycles") ?? 60e6));
 const keys = (flags.get("keys") ?? "").replace(/\\r/g, "\r");
 for (const ch of keys) {
+	if (ch === "|") {
+		run(Number(flags.get("gap") ?? 20e6));
+		continue;
+	}
 	board.press(ch.charCodeAt(0));
+	if (talk instanceof Talk) talk.key(ch.charCodeAt(0), board.cycles);
+	else talk?.key(ch.charCodeAt(0));
 	run(300_000);
 }
 if (keys) run(Number(flags.get("then") ?? 30e6));
@@ -92,3 +121,10 @@ console.log(
 	`graphics=${v.graphics} hires=${v.hires} mixed=${v.mixed} page2=${v.page2}; hi-res lit ${lit(0x2000)} / ${lit(0x4000)}; pc $${cpu.pc.toString(16)}`
 );
 console.log(rows.filter((r) => r.trim()).join("\n"));
+if (talk) {
+	if (screen) talk.look(textRows((a) => board.peek(a)), board.cycles);
+	const h = talk.take(board.cycles + 1e9);
+	const said = [...heard.said, ...h.said];
+	const typed = [...heard.typed, ...h.typed];
+	console.log(`--- said ${screen ? "from the screen" : "through COUT1"} (${said.length} lines)\n${said.map(speakable).join("\n")}\n--- typed\n${typed.join("\n")}`);
+}

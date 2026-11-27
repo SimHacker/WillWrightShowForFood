@@ -31,12 +31,13 @@
 	import { urlSeed } from './korz-apple.svelte.js';
 	import { APPLE_HZ } from '@wwsff/cabinet/angel';
 	import { EMULATOR_KEYS_HELP, emulatorKey, nextTempo } from './emulator-keys.js';
+	import { collectionDisks } from './catalog.js';
 
 	/** @typedef {{ name: string, label?: string, profile?: string, enabled?: boolean, url: () => Promise<string> }} Disk */
 	/**
 	 * angel, play, playTitle and appDisks go to the outline under the screen (ApplePanels): the
 	 * screen angel first, then the app's own controls and its disks.
-	 * @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, angel?: import('svelte').Snippet, play?: import('svelte').Snippet, playTitle?: string, appDisks?: import('svelte').Snippet }}
+	 * @type {{ disks?: Disk[], boot?: string, relaunch?: (disk: Disk) => string, begin?: () => unknown, beginLabel?: string, defaultCpu?: string, angel?: import('svelte').Snippet, play?: import('svelte').Snippet, playTitle?: string, appDisks?: import('svelte').Snippet, ownLabel?: string }}
 	 */
 	// Slowest first. 100 is MAX: as fast as this computer goes, a picture each game second.
 	// microM8's Go core starts at 1x; the slower notches are the Korz Apple's.
@@ -114,12 +115,23 @@
 		angel = undefined,
 		play = undefined,
 		playTitle = undefined,
-		appDisks = undefined
+		appDisks = undefined,
+		ownLabel = 'Machine Room'
 	} = $props();
 
 	/** ?all: the menu lists the disks of apps that are not enabled yet. A ?disk= link boots any of them. */
 	let all = $state(false);
 	const menu = $derived(all ? disks : disks.filter((d) => d.enabled !== false));
+	/** The shared collection after this configuration's own disks, by group, leaving out its own. */
+	const shared = $derived.by(() => {
+		const own = new Set(disks.map((d) => d.name));
+		/** @type {Map<string, Disk[]>} */
+		const groups = new Map();
+		for (const d of collectionDisks) if (!own.has(d.name)) groups.set(d.group, [...(groups.get(d.group) ?? []), d]);
+		return [...groups];
+	});
+	/** @param {string} name */
+	const diskNamed = (name) => disks.find((d) => d.name === name) ?? collectionDisks.find((d) => d.name === name);
 
 	const RELAUNCHED = 'microm8-relaunched';
 	/** The disk `boot` names, waiting for the first click while the Apple is off. */
@@ -195,7 +207,7 @@
 	// The menu is an action, not a setting: it resets, and the keyboard goes to the Apple at
 	// once, so typing never reaches the menu's type-ahead and swaps the disk.
 	function insertChoice() {
-		const disk = disks.find((d) => d.name === choice);
+		const disk = diskNamed(choice);
 		choice = '';
 		canvas?.focus();
 		if (disk) load(disk);
@@ -208,7 +220,7 @@
 		if (urlSeed()) apple.followPrompts = false;
 		const asked = new URLSearchParams(location.search).get('disk');
 		const name = boot ?? asked;
-		const disk = name ? disks.find((d) => d.name === name) : undefined;
+		const disk = name ? diskNamed(name) : undefined;
 		if (!disk) return;
 		drive = 0;
 		// Picked from a menu or relaunched for its machine: boot now. Opened from a link while
@@ -505,8 +517,19 @@
 {#snippet insertDisk(compact = false)}
 	<select bind:value={choice} onchange={insertChoice} aria-label="Put a disk from the Machine Room in drive {drive + 1}" title="Put a disk from the Machine Room in drive {drive + 1}">
 		<option value="">{compact ? '💾…' : 'Insert a disk…'}</option>
-		{#each menu as d (d.name)}
-			<option value={d.name}>{d.label ?? d.name}{d.profile && !d.label ? ` (${d.profile})` : ''}</option>
+		{#if menu.length}
+			<optgroup label={ownLabel}>
+				{#each menu as d (d.name)}
+					<option value={d.name}>{d.label ?? d.name}{d.profile && !d.label ? ` (${d.profile})` : ''}</option>
+				{/each}
+			</optgroup>
+		{/if}
+		{#each shared as [group, list] (group)}
+			<optgroup label="Collection: {group}">
+				{#each list as d (d.name)}
+					<option value={d.name}>{d.label}</option>
+				{/each}
+			</optgroup>
 		{/each}
 	</select>
 {/snippet}

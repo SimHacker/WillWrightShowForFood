@@ -2,17 +2,34 @@
 // generator are the files in packages/cabinet/roms/apple2. A rung change rebuilds the
 // board and resets, which is the reboot a swap does until an Apple snapshot exists.
 // A cartridge's chargen ROM replaces the character generator.
-// A disk whose profile names the Videx (Don's ProDOS Forth) puts a Videx Videoterm in slot 3
-// for the rest of the session; its 80 columns show on the page's second canvas while
-// annunciator 0 is on and the Apple is in text mode.
+// A Videx Videoterm sits in slot 3, as in Don's Apple: PR#3 turns it on. Its 80 columns show
+// on the page's second canvas while annunciator 0 is on and the Apple is in text mode.
 // Hi-res color is one pixel per 14 MHz clock. Each of the seven bits lasts two
 // clocks, and bit 7 delays that byte by one clock, so the two halves of a bit
 // can be different colors. The palette is the scan renderer's.
 
 import { APPLE_HZ } from '@wwsff/cabinet/angel';
 import { hushWhenHidden } from './hidden-hush.js';
-import { Apple2Plus, DiskII, HIRES_PALETTE, Korz6502, M6502, Trace65, VIDEX_PICTURE_HEIGHT, VIDEX_PICTURE_WIDTH, Videx, glyphsFromRom, hiresLine, parsePokes } from '@wwsff/cabinet/korz/apple2';
-import { APPLE2_CALLS, APPLE2_REGIONS, switchWord, panelSeedBytes, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
+import {
+	Apple2Plus,
+	COUT1,
+	DiskII,
+	HIRES_PALETTE,
+	Korz6502,
+	M6502,
+	ScreenTalk,
+	Talk,
+	Trace65,
+	VIDEX_COLUMNS,
+	VIDEX_PICTURE_HEIGHT,
+	VIDEX_PICTURE_WIDTH,
+	Videx,
+	glyphsFromRom,
+	hiresLine,
+	parsePokes,
+	textRows
+} from '@wwsff/cabinet/korz/apple2';
+import { APPLE2_CALLS, APPLE2_REGIONS, switchWord, panelSeedBytes, panelSeedText, enoLayers, APPLE2_VOICES, Deltas, Tally } from '@wwsff/cabinet/dance';
 
 /** The ROM routines the dance listens for, by entry address. */
 const CALLS = new Map(APPLE2_CALLS.map((c) => [c.addr, c]));
@@ -204,8 +221,8 @@ class KorzApple {
 	#disk = null;
 	/** @type {{ rom: Uint8Array, slot: Uint8Array, chargen: Uint8Array, videxFirmware: Uint8Array, videxChars: Uint8Array } | null} */
 	#rom = null;
-	/** Set by a disk that wants the Videx; the card stays in slot 3 from then on. */
-	#wantVidex = false;
+	/** The Videx sits in slot 3 of every board, so PR#3 gives 80 columns. */
+	#wantVidex = true;
 	/** @type {import('@wwsff/cabinet/korz/apple2').Videx | null} */
 	#videx = null;
 	#videxPixels = new Uint8ClampedArray(VIDEX_PICTURE_WIDTH * VIDEX_PICTURE_HEIGHT * 4);
@@ -231,6 +248,48 @@ class KorzApple {
 	#samples = new Float32Array(44100);
 	/** @type {Promise<void> | null} */
 	#booting = null;
+
+	/**
+	 * Reading aloud: 'printed' hears what passes COUT1, 'screen' reads the text rows showing,
+	 * for a program that draws its own text. Each batch goes to `heard` (apple-reader.js says it).
+	 * The step loop reads the plain field; the page reads the state.
+	 */
+	#reading = /** @type {'off' | 'printed' | 'screen'} */ ('off');
+	#readingShown = $state(/** @type {'off' | 'printed' | 'screen'} */ ('off'));
+	/** @type {((h: import('@wwsff/cabinet/korz/apple2').Heard) => void) | null} */
+	heard = null;
+	#talk = new Talk();
+	#screenTalk = new ScreenTalk();
+	#listenedAt = 0;
+
+	get reading() {
+		return this.#readingShown;
+	}
+	set reading(how) {
+		this.#reading = how;
+		this.#readingShown = how;
+		this.#talk.clear();
+		this.#screenTalk.clear();
+	}
+
+	/** @param {number} code a key that went to the Apple */
+	#keyed(code) {
+		if (this.#reading === 'printed') this.#talk.key(code, this.#board?.cycles ?? 0);
+		else if (this.#reading === 'screen') this.#screenTalk.key(code);
+	}
+
+	/** What reading aloud has heard since last time, to `heard`. */
+	#listen() {
+		const board = this.#board;
+		if (this.#reading === 'off' || !board) return;
+		if (this.#reading === 'screen') {
+			const m = board.mode();
+			const rows = textRows((a) => board.peek(a), m.page2 ? 0x800 : 0x400);
+			this.#screenTalk.look(m.graphics ? rows.map((r, i) => (m.mixed && i >= 20 ? r : '')) : rows, board.cycles);
+		}
+		const h = this.#reading === 'screen' ? this.#screenTalk.take(board.cycles) : this.#talk.take(board.cycles);
+		if (h.said.length || h.typed.length) this.heard?.(h);
+	}
 
 	get picture() {
 		return { width: FRAME_WIDTH, height: FRAME_HEIGHT, data: this.#pixels };
@@ -375,7 +434,9 @@ class KorzApple {
 	#pump() {
 		const board = this.#board;
 		if (!board || !this.#keys.length || board.key & 0x80) return;
-		board.press(this.#keys.shift() ?? 0);
+		const code = this.#keys.shift() ?? 0;
+		board.press(code);
+		this.#keyed(code);
 	}
 
 	/** The instructions run, while the memory panel's trace view shows them; null otherwise. */
@@ -412,6 +473,7 @@ class KorzApple {
 		const alone = compiled && (trace || this.traceMs > 0 || limit - board.cycles <= 80);
 		if (alone) cpu.one();
 		else cpu.step();
+		if (this.#reading === 'printed' && cpu.pc === COUT1) this.#talk.print(cpu.a, board.cycles, board.key >= 0x80);
 		// A lone instruction runs no block, so it counts where its PC lands.
 		if (this.dance.on && (!compiled || alone)) {
 			this.#dancePcs.add(cpu.pc);
@@ -458,11 +520,49 @@ class KorzApple {
 		else this.#promptPanel(null);
 	}
 
+	/**
+	 * What the person set at each prompt, kept as they leave it: the panel's seed and the dance's
+	 * style, tempo and tracks. Coming back to the prompt brings them back instead of its own.
+	 * @type {Partial<Record<Prompt, { seed: string, style: string, bpm: number, loops: number }>>}
+	 */
+	#promptKept = keptPromptMusic();
+
+	/** Whether any prompt has music the person set, which forgetPromptMusic gives back. */
+	promptMusicKept = $state(Object.keys(keptPromptMusic()).length > 0);
+
+	/** Leaving prompt `mode`: keep what is playing as its music, unless it is the prompt's own. @param {Prompt} mode */
+	#keepPromptMusic(mode) {
+		const board = this.#board;
+		if (!board) return;
+		const now = { seed: panelSeedText(board.panel), ...this.dance.settings };
+		const own = PROMPT_MUSIC[mode];
+		if (now.seed === PROMPT_PANELS[mode] && now.style === own.style && now.bpm === own.bpm && now.loops === enoLayers(own.loops)) delete this.#promptKept[mode];
+		else this.#promptKept[mode] = now;
+		this.#savePromptMusic();
+	}
+
+	#savePromptMusic() {
+		this.promptMusicKept = Object.keys(this.#promptKept).length > 0;
+		try {
+			if (this.promptMusicKept) localStorage.setItem(PROMPT_KEPT, JSON.stringify(this.#promptKept));
+			else localStorage.removeItem(PROMPT_KEPT);
+		} catch {
+			/* Storage forbidden: kept until the page goes. */
+		}
+	}
+
+	/** Every prompt back to its own music; the one the Apple is at changes now. */
+	forgetPromptMusic() {
+		this.#promptKept = {};
+		this.#savePromptMusic();
+		if (this.#followPrompts) this.#dancePrompt = undefined;
+	}
+
 	/** Put prompt `mode`'s seed in the panel, or with null put back what it replaced. @param {Prompt | null} mode */
 	#promptPanel(mode) {
 		const board = this.#board;
 		if (!board) return;
-		const seed = mode ? panelSeedBytes(PROMPT_PANELS[mode]) : null;
+		const seed = mode ? panelSeedBytes(this.#promptKept[mode]?.seed ?? PROMPT_PANELS[mode]) : null;
 		if (seed) {
 			this.#panelBefore ??= board.panel.slice();
 			board.panel.set(seed);
@@ -475,24 +575,47 @@ class KorzApple {
 
 	/**
 	 * Each prompt has its own song: Applesoft's sunny, another while an Applesoft program runs,
-	 * Integer BASIC's techno in C minor, and the Monitor's (CALL -151) dark and industrial, each
-	 * with its own riff and drums, which go when the Apple leaves its prompts for a program of
-	 * its own. The two BASICs keep one tempo: they differ in key, riff and instruments. A BASIC
-	 * program's length is a watched track and the harmony's depth: as it gets longer, the pad
-	 * reaches an octave down, then two. The Monitor is as deep as it goes.
+	 * Integer BASIC's techno in C minor, the Monitor's (CALL -151) dark and industrial, and
+	 * Forth's Dorian walk, each with its own riff and drums, which go when the Apple leaves its
+	 * prompts for a program of its own. The two BASICs keep one tempo: they differ in key, riff
+	 * and instruments. A BASIC program's length is a watched track and the harmony's depth: as it
+	 * gets longer, the pad reaches an octave down, then two. The Monitor is as deep as it goes.
+	 * What the person sets at a prompt stays with it (#promptKept).
 	 */
 	#danceWatched() {
 		const board = this.#board;
 		if (!board) return [];
-		const at = prompt(board.ram);
+		const at = this.#promptAt(board);
 		if (at.mode !== this.#dancePrompt && this.#followPrompts) {
+			if (this.#dancePrompt) this.#keepPromptMusic(this.#dancePrompt);
 			this.dance.mode(at.mode ? PROMPT_MUSIC[at.mode] : { riff: null });
+			const kept = at.mode ? this.#promptKept[at.mode] : undefined;
+			if (kept) this.dance.apply(kept);
 			this.#promptPanel(at.mode);
 		}
 		this.#dancePrompt = at.mode;
 		if (at.mode === null) return [];
-		this.dance.depth = at.mode === 'monitor' ? 1 : Math.log2(Math.max(1, at.length / 32)) / 7;
-		return at.mode === 'monitor' ? [] : [{ name: 'program', value: at.length }];
+		this.dance.depth = at.mode === 'monitor' ? 1 : at.mode === 'forth' ? 0.5 : Math.log2(Math.max(1, at.length / 32)) / 7;
+		return at.mode === 'monitor' || at.mode === 'forth' ? [] : [{ name: 'program', value: at.length }];
+	}
+
+	/**
+	 * The prompt, as `prompt` reads it from PROMPT ($33), or Forth's: on the Videx, the cursor's
+	 * row or the one above it ending in Forth's "Ok.". Forth holds while a word runs, until a
+	 * ROM prompt that $33 agrees with starts the cursor's row.
+	 * @param {Apple2Plus} board
+	 */
+	#promptAt(board) {
+		const rom = prompt(board.ram);
+		const card = this.#videx;
+		if (!card || !Videx.showing(board.annunciators, board.graphics)) return rom;
+		const rows = card.text();
+		const y = Math.floor(((card.cursor - card.start) & 0x7ff) / VIDEX_COLUMNS);
+		const row = (/** @type {number} */ i) => (rows[i] ?? '').trimEnd();
+		const mark = { applesoft: ']', running: ']', integer: '>', monitor: '*' };
+		if (rom.mode && row(y).startsWith(mark[rom.mode])) return rom;
+		if (/Ok\.$/.test(row(y)) || /Ok\.$/.test(row(y - 1)) || this.#dancePrompt === 'forth') return { mode: /** @type {Prompt} */ ('forth'), length: 0 };
+		return rom;
 	}
 
 	/**
@@ -774,6 +897,8 @@ class KorzApple {
 	reboot() {
 		if (!this.#rom) return;
 		this.#keys.length = 0;
+		this.#talk.clear();
+		this.#screenTalk.clear();
 		this.#build();
 		this.phase = 'running';
 	}
@@ -797,6 +922,7 @@ class KorzApple {
 		const code = appleKey(ev, this.caps);
 		if (code === null) return false;
 		this.#board.press(code);
+		this.#keyed(code);
 		return true;
 	}
 
@@ -829,6 +955,10 @@ class KorzApple {
 				return;
 			}
 			this.dance.frame(now, () => this.#danceHits(), () => this.#danceGauges(), () => this.#danceWatched(), () => this.#danceCalls());
+			if (now - this.#listenedAt > 100) {
+				this.#listenedAt = now;
+				this.#listen();
+			}
 			ctx.putImageData(image, 0, 0);
 			if (vctx && this.videxShowing) vctx.putImageData(videxImage, 0, 0);
 			if (now - polled > (this.traceMs ? 40 : 250)) {
@@ -866,7 +996,25 @@ function applesoftFree(ram) {
 	return (fretop - strend) / (himem - start);
 }
 
-/** @typedef {'applesoft' | 'running' | 'integer' | 'monitor'} Prompt */
+/** @typedef {'applesoft' | 'running' | 'integer' | 'monitor' | 'forth'} Prompt */
+
+/** Where the music the person set at each prompt is kept (KorzApple's #promptKept). */
+const PROMPT_KEPT = 'apple-prompt-music';
+const PROMPTS = ['applesoft', 'running', 'integer', 'monitor', 'forth'];
+
+/** @returns {Partial<Record<Prompt, { seed: string, style: string, bpm: number, loops: number }>>} */
+function keptPromptMusic() {
+	try {
+		const kept = JSON.parse(globalThis.localStorage?.getItem(PROMPT_KEPT) ?? '{}');
+		return Object.fromEntries(
+			Object.entries(kept ?? {}).filter(
+				([mode, m]) => PROMPTS.includes(mode) && /^[0-9a-f]{30}$/i.test(m?.seed) && typeof m.style === 'string' && typeof m.bpm === 'number' && typeof m.loops === 'number'
+			)
+		);
+	} catch {
+		return {};
+	}
+}
 
 /**
  * Each prompt's music seed, the 15 panel bytes that go in while the Apple is at it, picked at
@@ -877,7 +1025,8 @@ const PROMPT_PANELS = {
 	applesoft: '2bc002b9499777f5d15da3b9cff4b8',
 	running: '1bfa3841a72807da0c2d4b6d6aba91',
 	integer: '187d5a76b8ed21c35d2de4ea37d96b',
-	monitor: '7c4850969b3d612eb0d29c53bf88d0'
+	monitor: '7c4850969b3d612eb0d29c53bf88d0',
+	forth: '5e21c08fa4d93b7716ce02a9f45b3d'
 };
 
 /** @type {Record<Prompt, import('@wwsff/cabinet/dance').Music>} */
@@ -885,7 +1034,8 @@ const PROMPT_MUSIC = {
 	applesoft: { style: 'straight', bpm: 112, loops: true, mute: ['drums'], riff: 'sunny' },
 	running: { style: 'jazz', bpm: 120, loops: false, mute: [], riff: 'walk' },
 	integer: { style: 'minor', bpm: 112, loops: false, mute: ['loops', 'drums'], riff: 'techno' },
-	monitor: { style: 'bp', bpm: 72, loops: false, mute: ['loops', 'reply', 'drums'], riff: 'industrial' }
+	monitor: { style: 'bp', bpm: 72, loops: false, mute: ['loops', 'reply', 'drums'], riff: 'industrial' },
+	forth: { style: 'dorian', bpm: 96, loops: false, mute: ['drums'], riff: 'walk' }
 };
 
 /**
