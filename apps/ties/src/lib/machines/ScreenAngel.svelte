@@ -10,6 +10,7 @@
 	import { apple } from '../apple.svelte.js';
 	import { loadAngel } from '../angels.js';
 	import AdventurePad from './AdventurePad.svelte';
+	import { grue } from '../grue.svelte.js';
 	import VoicePicker from '../VoicePicker.svelte';
 	import VoiceTone from '../VoiceTone.svelte';
 	import { utterance } from '../voice.svelte.js';
@@ -61,7 +62,7 @@
 	const ask = $derived(on && !answered ? state?.ask : undefined);
 
 	$effect(() => {
-		moves = on && state ? (state.moves ?? []) : null;
+		moves = state ? (state.moves ?? []) : null;
 	});
 	$effect(() => {
 		apple.locked = on && state?.lock ? LOCKED : '';
@@ -128,6 +129,7 @@
 		}
 		last = seconds;
 		const rows = apple.text();
+		if (game) grue.saw(rows);
 		const next = angel.step(apple.picture, seconds, rows, apple.drives?.[0] ?? '');
 		if (next) (on ? enter : track)(next);
 		if (angel.game !== game) {
@@ -297,7 +299,7 @@
 			</form>
 		{/if}
 	{:else}
-		<p class="say">Off: the keyboard goes to the Apple and every move is shown.</p>
+		<p class="say">Off: the keyboard goes to the Apple; the moves that fit the screen are shown.</p>
 		{@render controls?.()}
 		{#if game}<AdventurePad {game} {place} />{/if}
 	{/if}

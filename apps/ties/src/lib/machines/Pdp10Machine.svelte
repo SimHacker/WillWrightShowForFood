@@ -24,7 +24,8 @@
 	import { toolbar } from '../toolbar.svelte.js';
 	import { CATALOG_BASE, catalog } from '../catalog.js';
 	import { COMPASS, PROGRAMS, runLine } from '../its-programs.js';
-	import { BAUDS, GRUE_TIP, SPEEDS, VIEWS, pdp10 } from '../pdp10.svelte.js';
+	import { BAUDS, SPEEDS, VIEWS, pdp10 } from '../pdp10.svelte.js';
+	import { GRUE_TIP, grue } from '../grue.svelte.js';
 
 	/** @type {{ entry: import('@wwsff/catalog').Entry, values: Record<string, unknown> }} */
 	let { entry, values } = $props();
@@ -40,7 +41,7 @@
 	const order = $derived(outline.order);
 	const moveNode = outline.move;
 
-	const PREF_KEYS = [/^toolbar-pdp10$/, /^pdp10-/, /^outline:pdp10-/];
+	const PREF_KEYS = [/^toolbar-pdp10$/, /^pdp10-/, /^outline:pdp10-/, /^grue_warning$/];
 	const PACK_NAMES = ['rp03.2', 'rp03.3', 'rp03.0', 'rp03.1'];
 
 	/** @type {HTMLElement | undefined} */
@@ -529,7 +530,7 @@
 	<Outline id="pdp10-prefs" move={moveNode} title="Preferences" hint="Back to how this page first came: the toolbar, or everything the page keeps in this browser">
 		<PagePrefs {bar} keys={PREF_KEYS} />
 		<p class="note">
-			<label title={GRUE_TIP}><input type="checkbox" checked={pdp10.grueWarned} onchange={() => pdp10.toggleGrue()} /> Ignore Warning</label>
+			<label title={GRUE_TIP}><input type="checkbox" checked={grue.warned} onchange={() => grue.toggle()} /> Ignore Warning</label>
 			(grue_warning): unticked, the first time Zork says "You are likely to be eaten by a grue", a video opens under the toolbar, and this ticks itself.
 		</p>
 	</Outline>

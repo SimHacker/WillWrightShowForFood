@@ -7,6 +7,7 @@
 	import { APPLE_HZ } from '@wwsff/cabinet/angel';
 	import { panelSeedBytes, panelSeedText } from '@wwsff/cabinet/dance';
 	import { ENGINES, apple } from './apple.svelte.js';
+	import { GRUE_TIP, grue } from './grue.svelte.js';
 	import KorzBrowser from './KorzBrowser.svelte';
 	import WebPanel from './WebPanel.svelte';
 	import AppleMemory from './AppleMemory.svelte';
@@ -82,7 +83,7 @@
 	});
 
 	/** What this page keeps in this browser; the dance's on/off (dance-on) is every machine's, and stays. */
-	const PREF_KEYS = [/^toolbar-apple$/, /^apple-/, /^outline:apple-/, /^korz-browser-/, /^dance-diesel$/, /^screen-angel/];
+	const PREF_KEYS = [/^toolbar-apple$/, /^apple-/, /^outline:apple-/, /^korz-browser-/, /^dance-diesel$/, /^screen-angel/, /^grue_warning$/];
 
 	const notRunning = 'not running yet';
 	const cpuSummary = $derived(running && s ? `PC $${hex(s.pc, 4)} · ${apple.mhz.toFixed(2)} MHz · ${engine}` : notRunning);
@@ -362,6 +363,10 @@
 {#snippet prefsNode()}
 	<Outline id="apple-prefs" move={moveNode} title="Preferences" hint="Back to how this page first came: the toolbar, or everything the page keeps in this browser">
 		<PagePrefs {bar} keys={PREF_KEYS} kept="your saved music seeds" />
+		<p class="note">
+			<label title={GRUE_TIP}><input type="checkbox" checked={grue.warned} onchange={() => grue.toggle()} /> Ignore Warning</label>
+			(grue_warning): unticked, the first time Zork says "You are likely to be eaten by a grue", a video opens under the toolbar, and this ticks itself.
+		</p>
 	</Outline>
 {/snippet}
 
@@ -477,5 +482,10 @@
 	.shows {
 		margin-left: 1ch;
 		opacity: 0.75;
+	}
+	.note {
+		margin: 0.3rem 0;
+		opacity: 0.8;
+		font-family: system-ui, sans-serif;
 	}
 </style>

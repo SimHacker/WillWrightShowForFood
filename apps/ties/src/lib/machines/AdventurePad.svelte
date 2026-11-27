@@ -14,6 +14,10 @@
 	/** @type {{ game: GameSpec, place?: string }} */
 	let { game, place } = $props();
 
+	const OPEN = 'screen-angel-pad';
+	/** The pad: open unless closed last time; closed, its line still names the game and the place. */
+	let open = $state(globalThis.localStorage?.getItem(OPEN) !== 'closed');
+
 	const ROSE = COMPASS.slice(0, 8);
 	const SIDE = COMPASS.slice(8);
 	/** @type {Record<string, string>} */
@@ -36,11 +40,16 @@
 	}
 </script>
 
-<section class="pad" aria-label="{game.title}: buttons">
-	<p class="title">
+<details
+	class="pad"
+	aria-label="{game.title}: buttons"
+	bind:open
+	ontoggle={(e) => globalThis.localStorage?.setItem(OPEN, e.currentTarget.open ? 'open' : 'closed')}
+>
+	<summary class="title">
 		<strong>{game.title}</strong>
 		<span class="place" aria-live="polite">{place ?? ''}</span>
-	</p>
+	</summary>
 	<div class="compass">
 		<div class="rose" role="group" aria-label="Compass">
 			{#each ROSE as p, i (p)}
@@ -82,7 +91,7 @@
 			</div>
 		</details>
 	{/each}
-</section>
+</details>
 
 <style>
 	.pad {
@@ -92,8 +101,23 @@
 	.title {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: baseline;
 		gap: 0.3rem 1rem;
-		margin: 0 0 0.4rem;
+		cursor: pointer;
+		list-style: none;
+	}
+	.title::-webkit-details-marker {
+		display: none;
+	}
+	.title::before {
+		content: '▸';
+		width: 0.8em;
+	}
+	.pad[open] > .title::before {
+		content: '▾';
+	}
+	.pad[open] > .title {
+		margin-bottom: 0.4rem;
 	}
 	.place {
 		font-variant: small-caps;

@@ -21,7 +21,7 @@ import { BusDance } from './bus-dance.svelte.js';
 import { GlassScreen } from './glass-screen.js';
 import { TtyVoice } from './tty-voice.svelte.js';
 import { programFor } from './its-programs.js';
-import { openWeb } from './web-panel.svelte.js';
+import { grue } from './grue.svelte.js';
 
 /** Where the packs are served (packages/cabinet/its/README.md), in the unit order of build.tcl. */
 const PACKS = ['rp03.2', 'rp03.3', 'rp03.0', 'rp03.1'].map((f) => `/packs/its/${f}`);
@@ -33,26 +33,11 @@ const BAUD_KEY = 'pdp10-baud';
 const SWITCHES_KEY = 'pdp10-switches';
 const VIEW_KEY = 'pdp10-view';
 const BELL_KEY = 'pdp10-bell-mute';
-/** Set once Zork's grue warning has played its video; cleared in the preferences to play it again. */
-const GRUE_KEY = 'pdp10-grue_warning';
 /** Set when the system job's log (LOGIN, GUNNER, the time…) should type on the console, as ITS starts. */
 const SYSLOG_KEY = 'pdp10-system-log';
 /** Set when GUNNER may log out an idle console, as it did at MIT. */
 const IDLE_KEY = 'pdp10-idle-logout';
 
-/**
- * What the console watches for, and the video it opens the first time: MC Frontalot's "It Is
- * Pitch Dark" (2007), directed by Jason Scott while filming Get Lamp.
- */
-export const GRUE = {
-	text: 'It is pitch black.  You are likely to be eaten by a grue.',
-	title: 'MC Frontalot, "It Is Pitch Dark"',
-	url: 'https://www.youtube.com/watch?v=YeV0pLRyM7o'
-};
-
-/** What the Ignore Warning checkbox does, on the video and in the preferences. */
-export const GRUE_TIP =
-	'Turns the grue warning detector off and on. Ticked, you have been warned: the next grue stays quiet. Unticked, the next time Zork says you are likely to be eaten by a grue, this video plays again.';
 const CALLS = new Map(ITS_CALLS.map((c) => [c.addr, c]));
 
 /** @typedef {'auto' | 'fast' | 'real'} Speed */
@@ -127,10 +112,6 @@ class Pdp10 {
 	systemLog = $state(keptFlag(SYSLOG_KEY));
 	/** Whether GUNNER may log out an idle console; off, the page keeps the console's last input time current. */
 	idleLogout = $state(keptFlag(IDLE_KEY));
-	/** Whether the grue's video has played in this browser. */
-	grueWarned = $state(keptFlag(GRUE_KEY));
-	/** The last of what ITS printed, as one line, for the watches. */
-	#tail = '';
 	/** Lit for a moment when the bell rings, muted or not. */
 	ringing = $state(false);
 	#beeper = createBeeper({ resolve: asset });
@@ -311,40 +292,6 @@ class Pdp10 {
 		this.#worker?.postMessage({ type: 'idle', logout: on });
 	}
 
-	/** Forget that the grue has been met, so its video plays the next time. */
-	forgetGrue() {
-		this.grueWarned = false;
-		keep(GRUE_KEY, '');
-	}
-
-	/** Turn the grue warning detector on (the next grue plays the video) or off. */
-	toggleGrue() {
-		this.grueWarned = !this.grueWarned;
-		keep(GRUE_KEY, this.grueWarned ? '1' : '');
-	}
-
-	/** @param {string} text */
-	#watch(text) {
-		this.#tail = (this.#tail + text.replace(/[\r\n\0]+/g, ' ')).slice(-2 * GRUE.text.length);
-		if (this.grueWarned || !this.#tail.includes(GRUE.text)) return;
-		this.grueWarned = true;
-		keep(GRUE_KEY, '1');
-		this.#tail = '';
-		openWeb(GRUE.url, {
-			title: GRUE.title,
-			reveal: true,
-			top: true,
-			buttons: [
-				{
-					label: 'Ignore Warning',
-					title: GRUE_TIP,
-					checked: () => this.grueWarned,
-					action: () => this.toggleGrue()
-				}
-			]
-		});
-	}
-
 	#ring() {
 		this.ringing = true;
 		setTimeout(() => (this.ringing = false), 200);
@@ -485,7 +432,7 @@ class Pdp10 {
 
 	/** What the teletype prints: Return goes to the left, Line Feed up a line in the same column. @param {string} text */
 	#print(text) {
-		this.#watch(text);
+		grue.heard(text);
 		this.#stirUp(STIR.printed * text.length);
 		const lines = this.lines.slice();
 		let line = lines.pop() ?? '';
