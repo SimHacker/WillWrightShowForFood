@@ -494,6 +494,30 @@ games:
           - { word: KILL TROLL WITH SWORD, tip: The troll guards the way on; it may take a few blows }
           - { word: KILL TROLL WITH AXE, tip: "The axe is the troll's: see what the game says" }
       - { label: Often, open: true, words: *often }
+      # The game's jokes, each tried on release 88: none hurts you, none gives a puzzle away.
+      # CRETIN is the parser's word for you.
+      - label: Just for fun
+        words:
+          - XYZZY
+          - PLUGH
+          - HELLO SAILOR
+          - ZORK
+          - WIN
+          - FROBOZZ
+          - ECHO
+          - BUG
+          - CURSE
+          - JUMP
+          - YELL
+          - WISH
+          - MUMBLE
+          - EXAMINE CRETIN
+          - EAT CRETIN
+          - SMELL CRETIN
+          - KISS MAILBOX
+          - { word: GIVE CRETIN TO TROLL, tip: In the troll room }
+          - { word: HELLO TROLL, tip: "In the troll room; he answers with his axe" }
+          - { word: LISTEN TO TROLL, tip: In the troll room }
       - { label: The game, words: *the-game }
       - { label: Every Zork I verb, words: *zork-i-verbs }
   - id: zork-ii
