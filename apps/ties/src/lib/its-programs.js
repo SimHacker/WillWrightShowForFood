@@ -8,11 +8,23 @@
  * A line with `steps` is typed a step at a time: each step waits for its `wait` text, or for
  * the output to end with its `prompt`, before the next is typed. Logo drops what is typed
  * ahead of its prompt, so a procedure goes in a line at a time.
+ *
+ * A game has short `words` instead, in paragraphs of buttons, and `compass` for a rose of the
+ * ten directions.
  */
 
 /** @typedef {{ keys: string, wait?: string, prompt?: string }} ItsStep */
 /** @typedef {{ label: string, title: string, keys?: string, steps?: ItsStep[] }} ItsLine */
-/** @typedef {{ id: string, title: string, about: string, start: ItsStep[], quit: ItsLine, lines: ItsLine[] }} ItsProgram */
+/** @typedef {{ title: string, lines: ItsLine[] }} ItsWords */
+/** @typedef {{ id: string, title: string, about: string, start: ItsStep[], quit: ItsLine, lines: ItsLine[], words?: ItsWords[], compass?: boolean }} ItsProgram */
+
+/** The compass rose's directions, as Zork takes them, in the rose's reading order. */
+export const COMPASS = [
+	['NW', 'nw', 'Northwest'], ['N', 'n', 'North'], ['NE', 'ne', 'Northeast'],
+	['W', 'w', 'West'], ['E', 'e', 'East'],
+	['SW', 'sw', 'Southwest'], ['S', 's', 'South'], ['SE', 'se', 'Southeast'],
+	['UP', 'u', 'Up'], ['DOWN', 'd', 'Down']
+].map(([label, word, title]) => ({ label, keys: `${word}\r`, title: `Go ${title.toLowerCase()}`, area: label.toLowerCase() }));
 
 /** @param {string} text @param {string} title @returns {ItsLine} */
 const line = (text, title) => ({ label: text, keys: `${text}\r`, title });
@@ -132,6 +144,60 @@ export const PROGRAMS = [
 			procedure(['TO PIGS :S', '10 IF EMPTYP :S OUTPUT :S', '20 OUTPUT SENTENCE PIG FIRST :S PIGS BUTFIRST :S', 'END'], 'Define Pig Latin for a sentence'),
 			line('PRINT PIGS "THE QUICK BROWN FOX"', 'Pig Latin'),
 			line('LIST ALL', 'List every procedure defined')
+		]
+	},
+	{
+		id: 'zork',
+		title: 'Zork',
+		about: "Zork as MIT's Dynamic Modelling group wrote it in MDL from 1977, the whole game that Infocom later cut into Zork I, II and III. Start at West of House; the way in is round the back. A sentence ends with Return; only the first five letters of a word count.",
+		start: [{ keys: ':zork\r', wait: '\n>' }],
+		quit: { label: 'quit', title: 'Leave Zork for DDT, answering y when it asks', steps: [{ keys: 'quit\r', wait: 'affirmative):' }, { keys: 'y\r' }] },
+		lines: [],
+		compass: true,
+		words: [
+			{
+				title: 'Around the house',
+				lines: [
+					line('look', 'Look around again'),
+					line('examine mailbox', 'Look at the mailbox'),
+					line('open mailbox', 'Open the mailbox'),
+					line('read leaflet', 'Read the leaflet inside'),
+					line('inventory', 'What you carry'),
+					line('open window', 'Open the window behind the house'),
+					line('in', 'Climb in'),
+					line('take all', 'Take everything here'),
+					line('take lamp', 'Take the brass lantern'),
+					line('turn on lamp', 'Light the lantern; it is dark below'),
+					line('take sword', 'Take the elvish sword'),
+					line('open case', 'Open the trophy case'),
+					line('move rug', 'Move the rug in the living room'),
+					line('open trap door', 'Open what is under the rug')
+				]
+			},
+			{
+				title: 'Magic words',
+				lines: [
+					line('hello sailor', 'An old password'),
+					line('xyzzy', "Adventure's magic word"),
+					line('plugh', "Adventure's other one"),
+					line('zork', 'Its own name'),
+					line('ulysses', 'Who blinded the cyclops')
+				]
+			},
+			{
+				title: 'The game',
+				lines: [
+					line('score', 'Your score and rank'),
+					line('diagnose', 'How healthy you are'),
+					line('wait', 'Let time pass'),
+					line('again', 'Do the last thing again'),
+					line('brief', 'Describe a room in full only the first time'),
+					line('verbose', 'Describe every room in full'),
+					line('superbrief', 'Only the names of rooms'),
+					line('info', 'What Zork is about'),
+					line('help', 'How to talk to it')
+				]
+			}
 		]
 	}
 ];

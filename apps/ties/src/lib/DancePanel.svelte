@@ -14,6 +14,7 @@
 	import { TEMPOS } from './dance-player.js';
 	import { seedFavorites } from './seed-favorites.svelte.js';
 	import { musicHistory } from './music-history.svelte.js';
+	import { seedText } from '@wwsff/cabinet/dance';
 
 	/**
 	 * A machine's switches as a music seed. `text` is the line for a cartridge's definition,
@@ -122,7 +123,8 @@
 			text = window.prompt('Paste a music seed:', '');
 		}
 		if (text === null) return;
-		say(s.paste(text) ? `pasted ${text.trim()}` : 'no seed on the clipboard');
+		const seed = seedText(text).trim();
+		say(s.paste(seed) ? `pasted ${seed}` : 'no seed on the clipboard');
 	}
 
 	/** @param {Seed} s */

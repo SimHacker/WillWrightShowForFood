@@ -747,6 +747,17 @@ export function switchWord(bytes: ArrayLike<number>): number {
  */
 export const PANEL_SEED = /^[0-9a-f]{30}$/i;
 
+/** A seed pasted bare or as a link: a URL's or query's `seed=`, decoded, else the text as it is. */
+export function seedText(text: string): string {
+	const m = /(?:^|[?&#\s])seed=([^&#\s]*)/i.exec(text);
+	if (!m) return text;
+	try {
+		return decodeURIComponent(m[1]!.replace(/\+/g, " "));
+	} catch {
+		return m[1]!;
+	}
+}
+
 export const panelSeedText = (bytes: ArrayLike<number>): string => Array.from(bytes, (b) => (b & 0xff).toString(16).padStart(2, "0")).join("");
 
 /** The 15 bytes a seed names. Pasted text may keep `panel:`, quotes and spaces; null if it names none. */

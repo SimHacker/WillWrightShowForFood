@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { dataSwitchesSeedText, dataSwitchesSeedWord, dataSwitchWord, ITS_CALLS, PDP10_REGIONS, PDP10_USER, PDP10_VOICES, APPLE2_CALLS, switchWord, PANEL_SEED, panelSeedBytes, panelSeedText, switchesSeedText, switchesSeedWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, ENO_TRACKS, enoLayers, enoTracks, EN0, EN1, EN2, EN3, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing, STYLE_IDS, ALPHA, STYLE_SPECS, type Style } from "./dance.js";
+import { dataSwitchesSeedText, dataSwitchesSeedWord, dataSwitchWord, ITS_CALLS, PDP10_REGIONS, PDP10_USER, PDP10_VOICES, APPLE2_CALLS, switchWord, PANEL_SEED, panelSeedBytes, panelSeedText, seedText, switchesSeedText, switchesSeedWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, ENO_TRACKS, enoLayers, enoTracks, EN0, EN1, EN2, EN3, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing, STYLE_IDS, ALPHA, STYLE_SPECS, type Style } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -515,6 +515,10 @@ test("music seeds copy out and paste back: the Apple's 15 panel bytes in hex, th
 	assert.equal(switchesSeedWord("  switches: 0o777777,"), 0o777777);
 	assert.equal(switchesSeedWord("777"), 0o777);
 	assert.equal(switchesSeedWord("0o8"), null);
+	assert.equal(switchesSeedWord(seedText("https://hyperties.org/machine/systems/pdp-7-unix/?program=space&seed=0o001234#top")), 0o1234);
+	assert.equal(switchesSeedWord(seedText("?seed=0o777777")), 0o777777);
+	assert.equal(seedText("seed=0o17"), "0o17");
+	assert.equal(seedText("  0o001234 "), "  0o001234 ");
 });
 
 test("the harmony walks: the style's loop first, then phrases through its graph that the code run picks", () => {

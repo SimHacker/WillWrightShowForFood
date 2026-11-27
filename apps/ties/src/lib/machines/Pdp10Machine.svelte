@@ -19,7 +19,7 @@
 	import VoicePicker from '../VoicePicker.svelte';
 	import { toolbar } from '../toolbar.svelte.js';
 	import { CATALOG_BASE, catalog } from '../catalog.js';
-	import { PROGRAMS, runLine } from '../its-programs.js';
+	import { COMPASS, PROGRAMS, runLine } from '../its-programs.js';
 	import { BAUDS, SPEEDS, VIEWS, pdp10 } from '../pdp10.svelte.js';
 
 	/** @type {{ entry: import('@wwsff/catalog').Entry, values: Record<string, unknown> }} */
@@ -191,7 +191,7 @@
 	const bar = toolbar('pdp10');
 	$effect(() => {
 		/** @type {Record<string, import('svelte').Snippet<[boolean]>>} */
-		const panels = { ddt: ddtPanel, macsyma: macsymaPanel, lisp: lispPanel, logo: logoPanel };
+		const panels = { ddt: ddtPanel, macsyma: macsymaPanel, lisp: lispPanel, logo: logoPanel, zork: zorkPanel };
 		const off = [
 			bar.offer('restart', 'Start again', restartButton, 'control', ['pdp10-run']),
 			bar.offer('speed', 'Speed', speedMenu, 'control', ['pdp10-run']),
@@ -394,11 +394,23 @@
 			<dt>{p.id === 'ddt' ? 'Log out' : 'Quit'}</dt>
 			<dd>{@render lineButton(p.quit)} <span class="what">{p.quit.title}</span></dd>
 		</dl>
-		<ol class="lines">
-			{#each p.lines as line (line.label)}
-				<li>{@render lineButton(line)} <span class="what">{line.title}</span></li>
-			{/each}
-		</ol>
+		{#if p.compass}
+			<div class="rose" role="group" aria-label="Directions">
+				{#each COMPASS as dir (dir.label)}
+					<button class="typed" style:grid-area={dir.area} title={dir.title} onclick={() => sendLine(dir)}>{dir.label}</button>
+				{/each}
+			</div>
+		{/if}
+		{#each p.words ?? [] as group (group.title)}
+			<p class="words"><b>{group.title}</b> {#each group.lines as line (line.label)}{@render lineButton(line)} {/each}</p>
+		{/each}
+		{#if p.lines.length}
+			<ol class="lines">
+				{#each p.lines as line (line.label)}
+					<li>{@render lineButton(line)} <span class="what">{line.title}</span></li>
+				{/each}
+			</ol>
+		{/if}
 	</div>
 {/snippet}
 
@@ -406,6 +418,7 @@
 {#snippet macsymaPanel()}{@render programPanel(PROGRAMS[1])}{/snippet}
 {#snippet lispPanel()}{@render programPanel(PROGRAMS[2])}{/snippet}
 {#snippet logoPanel()}{@render programPanel(PROGRAMS[3])}{/snippet}
+{#snippet zorkPanel()}{@render programPanel(PROGRAMS[4])}{/snippet}
 
 {#snippet programsNode()}
 	<Outline id="pdp10-programs" move={moveNode} title="ITS Commands and Programs: what to type" hint="ITS's commands, its programs and lines to type into them; a button types its line on the console" summary={PROGRAMS.find((p) => p.id === mine)?.title} opened={!tape}>
@@ -662,6 +675,33 @@
 		text-align: left;
 		max-width: 100%;
 		overflow-wrap: anywhere;
+	}
+	/* A game's compass, laid out as one: the eight points round the middle, up and down beside. */
+	.rose {
+		display: inline-grid;
+		grid-template-columns: repeat(3, 3.6em) 1em 4.4em;
+		grid-template-areas:
+			'nw n ne . up'
+			'w . e . .'
+			'sw s se . down';
+		gap: 0.25em;
+		margin: 0.4em 0;
+	}
+	.rose .typed {
+		text-align: center;
+	}
+	.words {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.4em 0.5em;
+		margin: 0.6em 0;
+	}
+	.words b {
+		margin-right: 0.2em;
+	}
+	.words .typed {
+		padding: 0.15em 0.55em;
 	}
 	.what {
 		color: #888;

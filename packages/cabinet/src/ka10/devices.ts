@@ -105,6 +105,151 @@ export class Cty {
 	}
 }
 
+// ---- Knight kludge, 16 terminal lines, device 600 (ka10_tk10.c) -----------
+
+const TK10_DEVNUM = 0o600;
+const TK10_LINES = 16;
+const TK10_PIA = 0o7;
+const TK10_RQINT = 0o10;
+const TK10_ODONE = 0o20;
+const TK10_STOP = 0o20;
+const TK10_IDONE = 0o40;
+const TK10_TYI = 0o7400;
+const TK10_TYO = 0o170000;
+const TK10_INT = 0o200000;
+const TK10_CLEAR = 0o200000;
+const TK10_SELECT = 0o400000;
+const TK10_CONI_BITS = TK10_PIA | TK10_INT | TK10_TYI | TK10_ODONE | TK10_IDONE;
+/** SIMH's tmxr_getc_ln marks a character as valid with bit 15; ITS masks it off. */
+const TMXR_VALID = 0o100000;
+
+/** One line: what is plugged in, its typeahead, and when its character in flight finishes. */
+type Tk10Line = { conn: boolean; keys: number[]; txdone: boolean; txNext: number; rxNext: number; charTicks: number };
+
+/**
+ * The TK10, ITS's TTYs 1 to 16 on AI's KA10. ITS selects a line, then reads or writes it; the
+ * scanner goes round the lines and interrupts for the first that finished a character or has one
+ * waiting. Each line runs at its own baud rate, in simulated time: a character takes ten bit
+ * times, out and in, so typing never runs ahead of the line.
+ */
+export class Tk10 {
+	private status = 0;
+	private scan = 0;
+	readonly lines: Tk10Line[] = Array.from({ length: TK10_LINES }, () => ({ conn: false, keys: [], txdone: false, txNext: 0, rxNext: 0, charTicks: 0 }));
+	readonly unit: Unit = { name: "tk10", svc: () => this.svc() };
+	/** SIMH's scan interval in ticks: about 480 scans a simulated second. */
+	interval = 2083;
+
+	/** Every character ITS sends a line, 7 bits as SIMH's 7B mode passes them, NULs included. */
+	constructor(
+		private readonly cpu: Ka10Bus,
+		private readonly print: (line: number, ch: number) => void,
+	) {
+		cpu.attachDevice(TK10_DEVNUM, (dev, data) => this.io(dev, data), () => this.reset());
+	}
+
+	/** Plug a terminal into line 0–15 (ITS's TTY 1–16), or pull it out; a pulled line drops its typeahead. */
+	connect(line: number, on = true): void {
+		const l = this.lines[line]!;
+		l.conn = on;
+		if (!on) l.keys.length = 0;
+	}
+
+	/** A line's speed in bits a second, 0 for as fast as ITS sends. */
+	setBaud(line: number, baud: number): void {
+		this.lines[line]!.charTicks = baud > 0 ? Math.round((10 * 1_000_000 * this.cpu.events.ticksPerUsec) / baud) : 0;
+	}
+
+	type(line: number, s: string): void {
+		const l = this.lines[line]!;
+		if (l.conn) for (const c of s) l.keys.push(c.charCodeAt(0) & 0o377);
+	}
+
+	typeahead(line: number): number {
+		return this.lines[line]!.keys.length;
+	}
+
+	private get port(): number {
+		return (this.status & TK10_TYO) >> 12;
+	}
+
+	private irq(): void {
+		if (this.status & TK10_INT) this.cpu.setInterrupt(TK10_DEVNUM, this.status & TK10_PIA);
+		else this.cpu.clrInterrupt(TK10_DEVNUM);
+	}
+
+	private io(dev: number, data: bigint): bigint {
+		switch (dev & 3) {
+			case CONI:
+				return BigInt(this.status & TK10_CONI_BITS);
+			case CONO: {
+				const d = Number(data & RMASK);
+				if (d & TK10_CLEAR) this.status &= ~TK10_INT;
+				if (d & TK10_STOP) {
+					this.status &= ~TK10_ODONE;
+					if (!(this.status & TK10_IDONE)) this.status &= ~TK10_INT;
+				}
+				if (d & TK10_RQINT) {
+					this.status &= ~TK10_TYI;
+					this.status |= ((this.status & TK10_TYO) >> 4) | TK10_ODONE | TK10_INT;
+				}
+				if (d & TK10_SELECT) this.status = (this.status & ~TK10_TYO) | (d & TK10_TYO);
+				this.status = (this.status & ~TK10_PIA) | (d & TK10_PIA);
+				this.irq();
+				return data;
+			}
+			case DATAO: {
+				const l = this.lines[this.port]!;
+				if (l.conn) this.print(this.port, Number(data & 0o177n));
+				l.txdone = false;
+				l.txNext = this.cpu.events.now + l.charTicks;
+				this.status &= ~TK10_ODONE;
+				if (!(this.status & TK10_IDONE)) this.status &= ~TK10_INT;
+				this.irq();
+				return data;
+			}
+			default: {
+				const l = this.lines[this.port]!;
+				const ch = l.keys.shift();
+				if (ch !== undefined) l.rxNext = this.cpu.events.now + l.charTicks;
+				this.status &= ~TK10_IDONE;
+				if (!(this.status & TK10_ODONE)) this.status &= ~TK10_INT;
+				this.irq();
+				return BigInt(ch === undefined ? 0 : ch | TMXR_VALID);
+			}
+		}
+	}
+
+	private flag(port: number, done: number): void {
+		this.status = (this.status & ~TK10_TYI) | (port << 8) | TK10_INT | done;
+		this.cpu.setInterrupt(TK10_DEVNUM, this.status & TK10_PIA);
+	}
+
+	private svc(): void {
+		this.cpu.events.activate(this.unit, this.interval);
+		const now = this.cpu.events.now;
+		for (let i = 0; i < TK10_LINES; i++) {
+			this.scan = (this.scan + 1) & 0o17;
+			const l = this.lines[this.scan]!;
+			if (!l.txdone && (!l.conn || l.txNext <= now)) {
+				l.txdone = true;
+				this.flag(this.scan, TK10_ODONE);
+				return;
+			}
+			if (l.conn && l.keys.length > 0 && l.rxNext <= now) {
+				this.flag(this.scan, TK10_IDONE);
+				return;
+			}
+		}
+	}
+
+	private reset(): void {
+		this.status = 0;
+		this.cpu.clrInterrupt(TK10_DEVNUM);
+		this.cpu.events.activate(this.unit, this.interval);
+	}
+}
+
 // ---- paper tape reader 104 and punch 100 -----------------------------------
 
 const PP_DEVNUM = 0o100;

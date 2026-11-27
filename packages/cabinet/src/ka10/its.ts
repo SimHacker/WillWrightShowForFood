@@ -1,5 +1,5 @@
 import type { Ka10Rung } from "./bus.js";
-import { Cty, PaperTape, PdClock, Rp10 } from "./devices.js";
+import { Cty, PaperTape, PdClock, Rp10, Tk10 } from "./devices.js";
 import { Ka10Halves } from "./halves.js";
 import { Ka10 } from "./ka10.js";
 
@@ -13,8 +13,8 @@ export function makeRung(rung: RungName): Ka10Rung {
 
 /**
  * The ITS machine of the PDP-10/its project's SIMH recipe: a KA10 with MIT's pager and
- * multiplex, the console, the paper tape reader and punch, the RP10 and the clock. The
- * network, the terminals and the displays come later.
+ * multiplex, the console (TTY 0), the TK10's sixteen lines (TTYs 1 to 16), the paper tape
+ * reader and punch, the RP10 and the clock. The network and the displays come later.
  */
 export class ItsMachine {
 	readonly cpu: Ka10Rung;
@@ -22,9 +22,11 @@ export class ItsMachine {
 	readonly pt: PaperTape;
 	readonly dp: Rp10;
 	readonly pd: PdClock;
+	readonly tk: Tk10;
 	output = "";
 
-	constructor(opts: { rung?: RungName; now?: () => Date; print?: (ch: number) => void } = {}) {
+	/** `print` gets the console's characters, `lineOut` the TK10's, with the line 0–15 (TTY 1–16). */
+	constructor(opts: { rung?: RungName; now?: () => Date; print?: (ch: number) => void; lineOut?: (line: number, ch: number) => void } = {}) {
 		this.cpu = makeRung(opts.rung ?? "simh");
 		this.cty = new Cty(this.cpu, (ch) => {
 			this.output += String.fromCharCode(ch);
@@ -33,6 +35,7 @@ export class ItsMachine {
 		this.pt = new PaperTape(this.cpu);
 		this.dp = new Rp10(this.cpu);
 		this.pd = new PdClock(this.cpu, opts.now);
+		this.tk = new Tk10(this.cpu, (line, ch) => opts.lineOut?.(line, ch));
 	}
 
 	/** `boot ptr`: reset everything, then load DSKDMP's RIM loader from the tape. */
