@@ -27,6 +27,30 @@ export function itsSymbol(bus: Ka10Bus, name: string, ddt = ITS_DDT): bigint | n
 	return null;
 }
 
+/** A SQUOZE name back to letters, trailing blanks dropped. */
+export function unsquoze(code: number): string {
+	let s = "";
+	for (let n = code, k = 0; k < 6; k++, n = Math.floor(n / 0o50)) s = SQUOZE[n % 0o50] + s;
+	return s.trimEnd();
+}
+
+/** One of DDT's symbols: its name, its value, and the four flag bits SQUOZE leaves on top. */
+export type ItsSym = { name: string; value: number; flags: number };
+
+/** Every symbol in exec DDT's table, in the table's order; empty before ITS has one. */
+export function itsSymbols(bus: Ka10Bus, ddt = ITS_DDT): ItsSym[] {
+	const ptr = bus.examine(ddt - 2);
+	const count = 0o1000000 - Number(ptr >> 18n);
+	const at = Number(ptr & 0o777777n);
+	if (count <= 0 || count > 0o200000 || at + count > bus.memWords) return [];
+	const out: ItsSym[] = [];
+	for (let i = 0; i + 1 < count; i += 2) {
+		const w = bus.examine(at + i);
+		out.push({ name: unsquoze(Number(w & 0xffffffffn)), value: Number(bus.examine(at + i + 1)), flags: Number(w >> 32n) });
+	}
+	return out;
+}
+
 /** A symbol's address, its value's right half: where a variable such as SYSCN lives. */
 export function itsAddress(bus: Ka10Bus, name: string, ddt = ITS_DDT): number | null {
 	const v = itsSymbol(bus, name, ddt);

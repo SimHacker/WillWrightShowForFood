@@ -18,5 +18,5 @@ export {
 	type Word10,
 } from "./disasm10.js";
 export { ItsMachine, makeRung, type RungName } from "./its.js";
-export { ITS_DDT, itsAddress, itsSymbol, keepTtyPresent, setSystemLog, squoze } from "./its-symbols.js";
+export { ITS_DDT, type ItsSym, itsAddress, itsSymbol, itsSymbols, keepTtyPresent, setSystemLog, squoze, unsquoze } from "./its-symbols.js";
 export { Ka10 } from "./ka10.js";

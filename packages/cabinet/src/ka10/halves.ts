@@ -708,6 +708,34 @@ export class Ka10Halves {
 		return true;
 	}
 
+	/**
+	 * The word at `addr` as ITS (exec) or the job running now (user) sees it, read through the
+	 * page tables without loading the pager or aging a page, so looking changes nothing. Null
+	 * where no page is there. 0-17 are the accumulators.
+	 */
+	look(addr: number, user: boolean): number | null {
+		addr &= RM;
+		if (addr < 0o20) return this.FM[addr]!;
+		const at = (a: number) => (a >= 0 && a < this.memWords ? this.L[a]! * TWO18 + this.R[a]! : null);
+		if (!this.its) {
+			if (!user) return at(addr);
+			if (addr <= this.Pl) return at((addr + this.Rl) & RM);
+			if (this.twoseg && (addr & 0o400000) !== 0 && addr <= this.Ph) return at((addr + this.Rh) & RM);
+			return null;
+		}
+		if (!this.page_enable) return at(addr);
+		const page = addr >> 10;
+		if (!user && ((page & 0o200) === 0 || (this.fault_data & 4) === 0)) return at(addr);
+		const reg = !user ? this.dbr3 : page & 0o200 ? this.dbr2 : this.dbr1;
+		const p = user && (page & 0o200) === 0 ? page : page - 0o200;
+		if (p >> 1 > ((reg >>> 19) & 0o177)) return null;
+		const entry = (reg & 0o1777777) + ((p & 0o377) >> 1);
+		if (entry >= this.memWords) return null;
+		const half = p & 1 ? this.R[entry]! : this.L[entry]!;
+		if (((half >> 16) & 3) === 0) return null;
+		return at(((half & 0o1777) << 10) + (addr & 0o1777));
+	}
+
 	examine(addr: number): bigint {
 		return BigInt(addr < 0o20 ? this.FM[addr]! : addr < this.memWords ? this.rd(addr) : 0);
 	}

@@ -81,6 +81,13 @@ class Pdp10 {
 	error = $state('');
 	/** @type {Stats | null} */
 	stats = $state.raw(null);
+	/**
+	 * The words the memory node last asked for, the PC and its mode, and the accumulators.
+	 * @type {{ from: number, user: boolean, words: (number | null)[], pc: number, pcUser: boolean, acs: number[] } | null}
+	 */
+	mem = $state.raw(null);
+	/** Exec DDT's symbols, once ITS is up. @type {import('@wwsff/cabinet/ka10').ItsSym[]} */
+	symbols = $state.raw([]);
 	/** @type {{ pc: string, pass: boolean | null } | null} */
 	halt = $state.raw(null);
 	/** @type {Speed} */
@@ -193,6 +200,8 @@ class Pdp10 {
 		this.error = '';
 		this.halt = null;
 		this.stats = null;
+		this.mem = null;
+		this.symbols = [];
 		this.title = entry.title;
 		this.running = true;
 		const w = new Worker(new URL('./its-worker.js', import.meta.url), { type: 'module' });
@@ -220,6 +229,11 @@ class Pdp10 {
 		if (this.dance.on) w.postMessage({ type: 'dance', on: (this.#toldDance = true) });
 		this.#then = 0;
 		this.#raf = requestAnimationFrame(this.#frame);
+	}
+
+	/** Ask for `count` words from `from`, as ITS sees them or, with `user`, the job running now; `mem` gets them. @param {number} from @param {number} count @param {boolean} user */
+	peek(from, count, user) {
+		this.#worker?.postMessage({ type: 'peek', from, count, user });
 	}
 
 	stop() {
@@ -403,6 +417,8 @@ class Pdp10 {
 			this.phase = msg.text;
 		}
 		else if (msg.type === 'stats') this.stats = msg;
+		else if (msg.type === 'mem') this.mem = msg;
+		else if (msg.type === 'symbols') this.symbols = msg.list;
 		else if (msg.type === 'halt') {
 			this.halt = { pc: msg.pc, pass: msg.pass };
 			this.phase = '';

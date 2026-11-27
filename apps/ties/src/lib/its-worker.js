@@ -20,7 +20,10 @@
 // Out: out (text), phase (what it is doing), stats, dance, halt, error. In also: syslog (where
 // the system job types its log: tty 0 for the console, -1 for nowhere), idle (whether GUNNER may
 // log out an idle console; if not, the console's last input time is kept current once a second).
-import { ItsMachine, keepTtyPresent, setSystemLog } from '@wwsff/cabinet/ka10';
+//
+// The memory node: peek ({ from, count, user }) answers mem, the words as ITS or the running job
+// sees them, with the PC and the accumulators; once ITS is up, symbols posts exec DDT's table.
+import { ItsMachine, itsSymbols, keepTtyPresent, setSystemLog } from '@wwsff/cabinet/ka10';
 
 const BLOCK = 1024;
 const QUIET_MS = 3000;
@@ -182,6 +185,7 @@ let presentAt = 0;
 /** ITS has said IN OPERATION: its symbols are in core, and writing them sticks. */
 let up = false;
 let tail = '';
+let symbolsSent = false;
 
 /** @param {Record<string, unknown>} msg */
 const post = (msg) => postMessage(msg);
@@ -263,6 +267,11 @@ function slice() {
 	}
 	if (up && sysLogSet !== sysLog && setSystemLog(cpu, sysLog)) sysLogSet = sysLog;
 	if (up && !idleLogout && t0 - presentAt > 1000 && keepTtyPresent(cpu, 0)) presentAt = t0;
+	if (up && !symbolsSent) {
+		const list = itsSymbols(cpu);
+		if (list.length) post({ type: 'symbols', list });
+		symbolsSent = list.length > 0;
+	}
 	if (out) {
 		post({ type: 'out', text: out });
 		out = '';
@@ -346,5 +355,12 @@ onmessage = (e) => {
 	} else if (msg.type === 'switches') {
 		switches = Number(msg.word) || 0;
 		if (m) m.cpu.SW = switches;
+	} else if (msg.type === 'peek' && m) {
+		const cpu = m.cpu;
+		const user = !!msg.user;
+		const count = Math.max(0, Math.min(256, Number(msg.count) || 0));
+		const at = (/** @type {number} */ i) => (msg.from + i) & 0o777777;
+		const words = Array.from({ length: count }, (_, i) => (cpu.look ? cpu.look(at(i), user) : Number(cpu.examine(at(i)))));
+		post({ type: 'mem', from: msg.from, user, words, pc: cpu.PC, pcUser: (cpu.FLAGS & USER) !== 0, acs: Array.from({ length: 16 }, (_, i) => Number(cpu.examine(i))) });
 	}
 };

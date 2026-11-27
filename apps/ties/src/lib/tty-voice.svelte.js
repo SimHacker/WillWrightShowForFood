@@ -28,6 +28,15 @@ function pieces(text) {
 	return out;
 }
 
+/**
+ * The page URL's `?speak`, as `?music` (bus-dance.svelte.js): true when it is there (`?speak`,
+ * `?speak=on`), false for `?speak=0` or `?speak=off`, null when absent. For this visit only.
+ */
+const urlSpeak = () => {
+	const v = globalThis.location ? new URLSearchParams(globalThis.location.search).get('speak') : null;
+	return v === null ? null : !/^(0|off|false|no)$/i.test(v);
+};
+
 export class TtyVoice {
 	/** On: read aloud. Kept under `key`. */
 	speak = $state(false);
@@ -40,6 +49,8 @@ export class TtyVoice {
 	#timer;
 	/** @type {any} */
 	#speech = null;
+	/** What was to be read before the person's first click or key. @type {string | null} */
+	#held = null;
 
 	/** @param {string} key */
 	constructor(key) {
@@ -49,6 +60,8 @@ export class TtyVoice {
 		} catch {
 			/* Storage forbidden: silent. */
 		}
+		const asked = urlSpeak();
+		if (asked !== null) this.speak = asked;
 	}
 
 	/** @param {boolean} on */
@@ -96,6 +109,7 @@ export class TtyVoice {
 	/** @param {string} text */
 	async #aloud(text) {
 		if (!globalThis.speechSynthesis) return;
+		if (globalThis.navigator?.userActivation && !navigator.userActivation.hasBeenActive) return this.#later(text);
 		if (!this.#speech) {
 			const { SpeechSystem } = await import('./speech.js');
 			this.#speech = new SpeechSystem();
@@ -107,6 +121,22 @@ export class TtyVoice {
 			if (voice) this.#speech.speakWithVoice(piece, voice, opts);
 			else this.#speech.speak(piece, { voiceType: 'female', language: 'en', ...opts });
 		}
+	}
+
+	/** Browsers speak only after the person has clicked or typed: what came before waits, and the last of it is read then. @param {string} text */
+	#later(text) {
+		const first = this.#held === null;
+		this.#held = `${this.#held ?? ''} ${text}`.slice(-MOST);
+		if (!first) return;
+		const go = () => {
+			window.removeEventListener('pointerdown', go, true);
+			window.removeEventListener('keydown', go, true);
+			const held = this.#held ?? '';
+			this.#held = null;
+			if (this.speak && held.trim()) this.#aloud(held.trim());
+		};
+		window.addEventListener('pointerdown', go, true);
+		window.addEventListener('keydown', go, true);
 	}
 
 	stop() {

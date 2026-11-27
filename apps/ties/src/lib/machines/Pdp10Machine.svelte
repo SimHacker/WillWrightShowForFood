@@ -16,6 +16,7 @@
 	import { switchDrawing } from '../switch-drawing.js';
 	import DancePanel from '../DancePanel.svelte';
 	import MachineToolbar from '../MachineToolbar.svelte';
+	import Pdp10Memory from '../Pdp10Memory.svelte';
 	import Outline from '../Outline.svelte';
 	import PagePrefs from '../PagePrefs.svelte';
 	import Pinnable from '../Pinnable.svelte';
@@ -36,7 +37,7 @@
 	const hhtest = catalog.entry('hhtest');
 	const its = catalog.entry('its');
 
-	const ORDER = ['pdp10-viewer', 'pdp10-programs', 'pdp10-console', 'pdp10-run', 'pdp10-dance', 'pdp10-disks', 'pdp10-tests', 'pdp10-prefs', 'pdp10-about'];
+	const ORDER = ['pdp10-viewer', 'pdp10-programs', 'pdp10-console', 'pdp10-run', 'pdp10-mem', 'pdp10-dance', 'pdp10-disks', 'pdp10-tests', 'pdp10-prefs', 'pdp10-about'];
 	const outline = new OutlineOrder('pdp10-outline-order', ORDER);
 	const order = $derived(outline.order);
 	const moveNode = outline.move;
@@ -460,6 +461,23 @@
 	</Outline>
 {/snippet}
 
+{#snippet memNode()}
+	<Outline
+		id="pdp10-mem"
+		move={moveNode}
+		title="Memory"
+		hint="The KA10's core as the Apple's memory node shows RAM: each word disassembled or as halves, SIXBIT and ASCII, named by ITS's symbols, and the accumulators"
+		summary={pdp10.mem ? `PC ${pdp10.mem.pc.toString(8).padStart(6, '0')}${pdp10.mem.pcUser ? ' (job)' : ''}` : pdp10.running ? '' : 'not running'}
+		resize
+	>
+		{#if pdp10.running}
+			<Pdp10Memory />
+		{:else}
+			<p class="note">The KA10 is not running.</p>
+		{/if}
+	</Outline>
+{/snippet}
+
 {#snippet consoleNode()}
 	<Outline
 		id="pdp10-console"
@@ -617,6 +635,7 @@
 			{:else if key === 'pdp10-programs'}{@render programsNode()}
 			{:else if key === 'pdp10-console'}{@render consoleNode()}
 			{:else if key === 'pdp10-run'}{@render runNode()}
+			{:else if key === 'pdp10-mem'}{@render memNode()}
 			{:else if key === 'pdp10-dance'}{@render danceNode()}
 			{:else if key === 'pdp10-disks'}{@render disksNode()}
 			{:else if key === 'pdp10-tests'}{@render testsNode()}

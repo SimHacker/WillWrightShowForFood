@@ -44,6 +44,8 @@ export interface Ka10Rung extends Ka10Bus {
 	showHistory(count?: number): string[];
 	state(): Ka10State;
 	setState(s: Ka10State): void;
+	/** A word as ITS (exec) or the running job (user) sees it, changing nothing; null where no page is (the halves rung has it). */
+	look?(addr: number, user: boolean): number | null;
 	saveMemory(): Uint8Array;
 	loadMemory(bytes: Uint8Array): void;
 }
