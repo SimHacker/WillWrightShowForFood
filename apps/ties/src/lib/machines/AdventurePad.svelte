@@ -31,7 +31,8 @@
 	function tip(c) {
 		const s = commandSpec(c);
 		const what = s.then ? `Types ${s.word} and a space: type what, on the Apple, then Return.` : `Types ${s.word} and Return.`;
-		return [s.tip, what, s.also?.length ? `The game also knows ${s.also.join(', ')}.` : ''].filter(Boolean).join(' ');
+		const said = s.tip && !/[.?!]$/.test(s.tip) ? `${s.tip}.` : s.tip;
+		return [said, what, s.also?.length ? `The game also knows ${s.also.join(', ')}.` : ''].filter(Boolean).join(' ');
 	}
 </script>
 
