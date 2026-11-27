@@ -12,7 +12,7 @@
 </script>
 
 {#if control}
-	<span class="pinnable">
+	<span class="pinnable" data-home={id}>
 		{@render control.render(false)}
 		{#if bar.live}
 			<button

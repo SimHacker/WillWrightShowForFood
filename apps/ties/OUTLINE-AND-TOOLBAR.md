@@ -72,9 +72,32 @@ its right end sits under the screen's corner.
 - In the toolbar each item has ⏏️ over ⠿ in a narrow column, small and shown on hover (always
   where there is no hover), keeping its room so the row never shifts. On the row they skip
   the tab order; panels' handles are in it, and the arrow keys on a ⠿ move it.
+- **Back to the warehouse.** A click on an item's ⠿, or a ⌘-click (Ctrl-click off a Mac) on
+  the item itself, goes to its original in the outline: the nodes it is under open (each
+  offer names them, `home`), the original scrolls to the middle of the window, flashes, and
+  takes the focus. The modifier press is caught before the control sees it, so a slider
+  does not slide and Step does not step. As an editor's ⌘-click goes to a definition.
 - The speed at the right end is not an item: it is always there. It is a button, so a tap
   opens its numbers as a card where there is no hover, and not a live region, as it changes
   every second.
+
+## Prototypes in the warehouse, instances at home
+
+The originals in the outline are prototypes, and what is taken from them are instances that
+inherit from them, as Self's objects delegate to their parents. A prototype keeps its own
+settings, the defaults of every instance: a slider's range and width, which of the panel's
+15 bytes a bit view shows, a watch's format, a map view's overlay. An instance overrides only
+what it says it does, and everything else follows the prototype. So a default is changed once,
+in the warehouse, for every instance that has not overridden it, and the toolbar keeps only
+what is used, with none of the administration that is rarely needed.
+
+Working down the outline is how the settings are found: drill into a prototype to tweak it,
+and on the way discover more there to push up into the toolbar. The outline is the place for
+depth, the toolbar for reach.
+
+Today an instance is the prototype itself, shown compact: the same snippet over the same
+machine state, with no settings of its own yet. The next step is the instance ids under "To
+come": each instance a record of its overrides, read through to its prototype's settings.
 
 ## Why not a scrolling outline under a fixed screen
 

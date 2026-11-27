@@ -337,20 +337,23 @@
 	}
 
 	const bar = toolbar('apple');
+	/** Where these controls live in the outline (ApplePanels). */
+	const CPU = ['apple-cpu'];
+	const DISKS = ['apple-disks'];
 	$effect(() => {
 		const off = [
-			bar.offer('reboot', 'Reboot', reboot),
-			bar.offer('reset', 'Ctrl-Reset', reset),
-			bar.offer('speed', 'the speed', speed),
-			bar.offer('mute', 'Mute', mute),
-			bar.offer('caps', 'Caps Lock', caps),
-			bar.offer('joystick', 'Joystick', joystick),
-			bar.offer('insert-file', 'Insert file', fileInput),
-			bar.offer('save-disk', 'Save disk', saveDisk)
+			bar.offer('reboot', 'Reboot', reboot, 'control', CPU),
+			bar.offer('reset', 'Ctrl-Reset', reset, 'control', CPU),
+			bar.offer('speed', 'the speed', speed, 'control', CPU),
+			bar.offer('mute', 'Mute', mute, 'control', ['apple-sound']),
+			bar.offer('caps', 'Caps Lock', caps, 'control', ['apple-io']),
+			bar.offer('joystick', 'Joystick', joystick, 'control', ['apple-io']),
+			bar.offer('insert-file', 'Insert file', fileInput, 'control', DISKS),
+			bar.offer('save-disk', 'Save disk', saveDisk, 'control', DISKS)
 		];
 		// microM8 runs its own 6502: no pause or step from here.
-		if (apple.id !== 'microm8') off.push(bar.offer('pause', 'Pause', pause), bar.offer('step', 'Step', step));
-		if (menu.length) off.push(bar.offer('insert-disk', 'Insert a disk', insertDisk));
+		if (apple.id !== 'microm8') off.push(bar.offer('pause', 'Pause', pause, 'control', CPU), bar.offer('step', 'Step', step, 'control', CPU));
+		if (menu.length) off.push(bar.offer('insert-disk', 'Insert a disk', insertDisk, 'control', DISKS));
 		return () => off.forEach((f) => f());
 	});
 

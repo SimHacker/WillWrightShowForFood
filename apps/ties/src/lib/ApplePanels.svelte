@@ -90,10 +90,14 @@
 	// The controls this outline owns, offered to the toolbar; MicroM8 offers the screen's.
 	const bar = toolbar('apple');
 	$effect(() => {
-		const off = [bar.offer('volume', "the speaker's volume", volume), bar.offer('engine', 'the emulator', engineMenu)];
-		if (apple.korz) off.push(bar.offer('tape', 'Hear the tape', tape));
-		off.push(bar.offer('cpu-regs', 'Registers', regsPanel, 'panel'), bar.offer('io-lamps', 'I/O', ioPanel, 'panel'));
-		if (apple.panel) off.push(bar.offer('prompts', 'Follow the prompts', prompts), bar.offer('panel-bits', 'Panel $C041–$C04F', bitsPanel, 'panel'));
+		const off = [bar.offer('volume', "the speaker's volume", volume, 'control', ['apple-sound']), bar.offer('engine', 'the emulator', engineMenu, 'control', ['apple-korz'])];
+		if (apple.korz) off.push(bar.offer('tape', 'Hear the tape', tape, 'control', ['apple-sound']));
+		off.push(bar.offer('cpu-regs', 'Registers', regsPanel, 'panel', ['apple-cpu', 'apple-regs']), bar.offer('io-lamps', 'I/O', ioPanel, 'panel', ['apple-io']));
+		if (apple.panel)
+			off.push(
+				bar.offer('prompts', 'Follow the prompts', prompts, 'control', ['apple-dance']),
+				bar.offer('panel-bits', 'Panel $C041–$C04F', bitsPanel, 'panel', ['apple-cpu', 'apple-panel'])
+			);
 		return () => off.forEach((f) => f());
 	});
 

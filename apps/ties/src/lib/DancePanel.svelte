@@ -32,17 +32,19 @@
 	// The dance's controls, offered to the machine's toolbar and placed at home here.
 	const bar = $derived(toolbar(id));
 	$effect(() => {
+		const here = [`${id}-dance`];
+		const inSeed = [`${id}-dance`, `${id}-dance-seed`];
 		const off = [
-			bar.offer('dance-play', 'Play the dance', play),
-			bar.offer('dance-mute', "Mute the dance", mute),
-			bar.offer('dance-volume', "the dance's volume", volume),
-			bar.offer('dance-style', "the dance's style", style),
-			bar.offer('dance-tempo', "the dance's tempo", tempo),
-			bar.offer('eno', 'the Eno tracks', eno)
+			bar.offer('dance-play', 'Play the dance', play, 'control', here),
+			bar.offer('dance-mute', 'Mute the dance', mute, 'control', here),
+			bar.offer('dance-volume', "the dance's volume", volume, 'control', here),
+			bar.offer('dance-style', "the dance's style", style, 'control', here),
+			bar.offer('dance-tempo', "the dance's tempo", tempo, 'control', here),
+			bar.offer('eno', 'the Eno tracks', eno, 'control', here)
 		];
-		if (seed || jiggle || twist) off.push(bar.offer('music-seed', 'Music seed', seedPanel, 'panel'));
-		if (jiggle) off.push(bar.offer('jiggle', 'Jiggle', jiggler));
-		if (seed) off.push(bar.offer('seed-copy', 'Copy seed', copier), bar.offer('seed-paste', 'Paste seed', paster));
+		if (seed || jiggle || twist) off.push(bar.offer('music-seed', 'Music seed', seedPanel, 'panel', inSeed));
+		if (jiggle) off.push(bar.offer('jiggle', 'Jiggle', jiggler, 'control', inSeed));
+		if (seed) off.push(bar.offer('seed-copy', 'Copy seed', copier, 'control', inSeed), bar.offer('seed-paste', 'Paste seed', paster, 'control', inSeed));
 		return () => off.forEach((f) => f());
 	});
 

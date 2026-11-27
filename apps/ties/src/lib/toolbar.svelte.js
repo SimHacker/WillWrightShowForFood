@@ -14,6 +14,7 @@
 
 import { untrack } from 'svelte';
 import { SvelteMap } from 'svelte/reactivity';
+import { seekHome } from './outline-reveal.svelte.js';
 
 /** @typedef {import('svelte').Snippet<[boolean]>} Control */
 /** @typedef {'control' | 'panel'} Kind */
@@ -28,7 +29,7 @@ export class Toolbar {
 	#key;
 	/** @type {Record<string, Place>} */
 	places = $state({});
-	/** What is on the page now, by id. @type {SvelteMap<string, { label: string, render: Control, kind: Kind }>} */
+	/** What is on the page now, by id. @type {SvelteMap<string, { label: string, render: Control, kind: Kind, home: string[] }>} */
 	controls = new SvelteMap();
 	/** How many toolbars show this one; with none, there is nowhere to put a control. */
 	live = $state(0);
@@ -108,14 +109,21 @@ export class Toolbar {
 	 * $effect's cleanup.
 	 * @param {string} id @param {string} label what the 📌 and ⏏️ tooltips call it @param {Control} render
 	 * @param {Kind} [kind] a control goes on the row, a panel under it
+	 * @param {string[]} [home] the outline nodes it is under, from the top down, opened to find it
 	 */
-	offer(id, label, render, kind = 'control') {
+	offer(id, label, render, kind = 'control', home = []) {
 		// Untracked: the owner's $effect offers on what it reads, not on the registry it writes.
-		untrack(() => this.controls.set(id, { label, render, kind }));
+		untrack(() => this.controls.set(id, { label, render, kind, home }));
 		return () =>
 			untrack(() => {
 				if (this.controls.get(id)?.render === render) this.controls.delete(id);
 			});
+	}
+
+	/** Go to a control or panel's home in the outline, opening the nodes it is under. @param {string} id */
+	seek(id) {
+		const c = this.controls.get(id);
+		if (c) seekHome(c.home, id);
 	}
 
 	/** A toolbar shows this one; returns its going, for an $effect's cleanup. */

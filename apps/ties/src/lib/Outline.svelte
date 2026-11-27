@@ -1,5 +1,6 @@
 <script>
 	import { untrack } from 'svelte';
+	import { reveal } from './outline-reveal.svelte.js';
 	/**
 	 * One node of the machine pages' outline: a heading row that opens and closes the content
 	 * under it, and the content, which holds more nodes. The row shows a triangle, the title,
@@ -36,6 +37,14 @@
 			/* Storage full or forbidden: the outline forgets. */
 		}
 	}
+
+	// Opened from outside: on the way to a control's home (outline-reveal.svelte.js).
+	$effect(() => {
+		if (reveal.n && reveal.ids.includes(id) && !untrack(() => open)) {
+			open = true;
+			save();
+		}
+	});
 
 	function toggle() {
 		open = !open;
@@ -87,7 +96,7 @@
 	}
 </script>
 
-<section class="node" aria-label={title}>
+<section class="node" aria-label={title} data-home={pin?.id}>
 	<!-- The whole row opens and closes the node for a pointer, a target as wide as the page; the
 	     keyboard has the twisty button, so the row itself needs no key handler. -->
 	<div
