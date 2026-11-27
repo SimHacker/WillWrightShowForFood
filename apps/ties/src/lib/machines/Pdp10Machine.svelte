@@ -3,12 +3,14 @@
 	 * The PDP-10 running an entry of packages/cabinet/its/catalog.yml: ITS on the cabinet's KA10,
 	 * logged in and at the entry's program, or a RIM tape on the bare machine. The console
 	 * teletype is the screen; under it the toolbar, then the outline: the programs and what to
-	 * type into them, how it runs, the packs, the tests, preferences and About. Anything with a
-	 * 📌 goes in the toolbar.
+	 * type into them, how it runs (the console's baud rate and its data switches too), the bus
+	 * dance, the packs, the tests, preferences and About. Anything with a 📌 goes in the toolbar.
 	 */
 	import { onMount, tick } from 'svelte';
 	import { launchUrl } from '@wwsff/catalog';
+	import { dataSwitchesSeedText, dataSwitchesSeedWord } from '@wwsff/cabinet/dance';
 	import AboutPanel from '../AboutPanel.svelte';
+	import DancePanel from '../DancePanel.svelte';
 	import MachineToolbar from '../MachineToolbar.svelte';
 	import Outline from '../Outline.svelte';
 	import PagePrefs from '../PagePrefs.svelte';
@@ -16,7 +18,7 @@
 	import { toolbar } from '../toolbar.svelte.js';
 	import { CATALOG_BASE, catalog } from '../catalog.js';
 	import { PROGRAMS } from '../its-programs.js';
-	import { SPEEDS, pdp10 } from '../pdp10.svelte.js';
+	import { BAUDS, SPEEDS, pdp10 } from '../pdp10.svelte.js';
 
 	/** @type {{ entry: import('@wwsff/catalog').Entry, values: Record<string, unknown> }} */
 	let { entry, values } = $props();
@@ -27,7 +29,7 @@
 	const hhtest = catalog.entry('hhtest');
 	const its = catalog.entry('its');
 
-	const ORDER = ['pdp10-programs', 'pdp10-run', 'pdp10-disks', 'pdp10-tests', 'pdp10-prefs', 'pdp10-about'];
+	const ORDER = ['pdp10-programs', 'pdp10-run', 'pdp10-dance', 'pdp10-disks', 'pdp10-tests', 'pdp10-prefs', 'pdp10-about'];
 	const ORDER_KEY = 'pdp10-outline-order';
 	/** @type {string[]} */
 	let order = $state(keptOrder());
@@ -35,7 +37,9 @@
 		try {
 			const kept = JSON.parse(globalThis.localStorage?.getItem(ORDER_KEY) ?? '[]');
 			const known = Array.isArray(kept) ? kept.filter((k) => ORDER.includes(k)) : [];
-			return [...known, ...ORDER.filter((k) => !known.includes(k))];
+			// A node added since the order was kept goes after the one it follows in ORDER.
+			for (const [i, k] of ORDER.entries()) if (!known.includes(k)) known.splice(i ? known.indexOf(ORDER[i - 1]) + 1 : 0, 0, k);
+			return known;
 		} catch {
 			return [...ORDER];
 		}
@@ -182,6 +186,8 @@
 		const off = [
 			bar.offer('restart', 'Start again', restartButton, 'control', ['pdp10-run']),
 			bar.offer('speed', 'Speed', speedMenu, 'control', ['pdp10-run']),
+			bar.offer('baud', "the console's baud rate", baudMenu, 'control', ['pdp10-run']),
+			bar.offer('pdp10-switches', 'Data switches', switchesPanel, 'panel', ['pdp10-run']),
 			bar.offer('altmode', 'Altmode', altmodeKey, 'control', ['pdp10-programs', 'pdp10-prog-ddt']),
 			bar.offer('ctrl-z', 'Control-Z', ctrlZKey, 'control', ['pdp10-programs', 'pdp10-prog-ddt']),
 			bar.offer('ctrl-g', 'Control-G', ctrlGKey, 'control', ['pdp10-programs', 'pdp10-prog-ddt']),
@@ -203,6 +209,22 @@
 		tape ? 'no packs: a tape on the bare machine' : s ? `${mb(s.packs.reduce((n, p) => n + p.bytes, 0))} fetched · ${s.packs.reduce((n, p) => n + p.dirty, 0)} blocks changed` : 'not read yet'
 	);
 
+	/** The data switches as a music seed, an entry's `switches:` in its/catalog.yml. */
+	const seed = {
+		machine: 'pdp10',
+		where: "an entry's runs in packages/cabinet/its/catalog.yml",
+		text: () => `switches: "${dataSwitchesSeedText(pdp10.switches)}"`,
+		digits: () => dataSwitchesSeedText(pdp10.switches),
+		/** @param {string} text */
+		paste: (text) => {
+			const word = dataSwitchesSeedWord(text);
+			if (word === null) return false;
+			pdp10.setSwitches(word);
+			return true;
+		}
+	};
+	const jiggle = () => pdp10.flip(Math.floor(Math.random() * 36));
+
 	onMount(() => {
 		pdp10.start(entry, values);
 		paper?.focus();
@@ -221,6 +243,41 @@
 			{#each SPEEDS as sp (sp.id)}<option value={sp.id} title={sp.title}>{sp.label}</option>{/each}
 		</select>
 	</label>
+{/snippet}
+
+{#snippet baudMenu(compact = false)}
+	<label title="How fast the console prints, on this page's clock, whatever speed the KA10 runs at. {BAUDS.find((b) => b.baud === pdp10.baud)?.title}.">
+		{compact ? '⌨' : 'Console'}
+		<select value={pdp10.baud} onchange={(e) => pdp10.setBaud(Number(e.currentTarget.value))}>
+			{#each BAUDS as b (b.baud)}<option value={b.baud} title={b.title}>{b.label}</option>{/each}
+		</select>
+	</label>
+	{#if pdp10.waiting}
+		<button title="{pdp10.waiting.toLocaleString()} characters ITS has sent are waiting to print: print them all now" onclick={() => pdp10.flush()}
+			>⏩ {pdp10.waiting.toLocaleString()}</button
+		>
+	{/if}
+{/snippet}
+
+{#snippet switchesPanel()}
+	<div class="switches" role="group" aria-label="The 36 data switches, bit 0 at the left">
+		{#each Array.from({ length: 12 }, (_, g) => g) as g (g)}
+			<span class="triad">
+				{#each [0, 1, 2] as k (k)}
+					{@const bit = g * 3 + k}
+					{@const on = pdp10.switchOn(bit)}
+					<button
+						class={['switch', { on }]}
+						aria-pressed={on}
+						aria-label="Data switch {bit}"
+						title="Data switch {bit}: {on ? 'up' : 'down'}. A program reads the switches with .RDSW; the bus dance's music turns on them."
+						onclick={() => pdp10.flip(bit)}
+					></button>
+				{/each}
+			</span>
+		{/each}
+		<code class="octal" title="The switches in octal, bit 0 first">{dataSwitchesSeedText(pdp10.switches).slice(2)}</code>
+	</div>
 {/snippet}
 
 {#snippet altmodeKey(compact = false)}
@@ -308,13 +365,24 @@
 
 {#snippet runNode()}
 	<Outline id="pdp10-run" move={moveNode} title="Run: the KA10" hint="Starting again, how fast it runs, and what it has done" summary={runSummary} pin={{ bar, id: 'pdp10-stats' }}>
-		<div class="row"><Pinnable {bar} id="restart" /><Pinnable {bar} id="speed" /><Pinnable {bar} id="copy-paper" /><Pinnable {bar} id="readout" /></div>
+		<div class="row"><Pinnable {bar} id="restart" /><Pinnable {bar} id="speed" /><Pinnable {bar} id="baud" /><Pinnable {bar} id="copy-paper" /><Pinnable {bar} id="readout" /></div>
 		{@render statsPanel()}
+		<Outline id="pdp10-switches-node" title="Data switches" hint="The console's 36 data switches: a program reads them with .RDSW, and the bus dance's music turns on them" summary={dataSwitchesSeedText(pdp10.switches)} pin={{ bar, id: 'pdp10-switches' }}>
+			{@render switchesPanel()}
+		</Outline>
 		<p class="note">
 			The cabinet's KA10 runs many times faster than a real one, and ITS spends most of a boot waiting out its own timeouts, so Auto runs flat out while the
 			console is busy and at a KA10's pace once it has been quiet, so an idle ITS doesn't keep a core busy.
 		</p>
+		<p class="note">
+			The console's baud rate is the paper's, kept on this page's clock: ITS sends at the KA10's speed, and what it sent ahead waits to print. At Instant the
+			paper keeps up with the KA10.
+		</p>
 	</Outline>
+{/snippet}
+
+{#snippet danceNode()}
+	<DancePanel id="pdp10" move={moveNode} dance={pdp10.dance} twist {jiggle} {seed} />
 {/snippet}
 
 {#snippet disksNode()}
@@ -400,6 +468,7 @@
 		{#each order as key (key)}
 			{#if key === 'pdp10-programs'}{@render programsNode()}
 			{:else if key === 'pdp10-run'}{@render runNode()}
+			{:else if key === 'pdp10-dance'}{@render danceNode()}
 			{:else if key === 'pdp10-disks'}{@render disksNode()}
 			{:else if key === 'pdp10-tests'}{@render testsNode()}
 			{:else if key === 'pdp10-prefs'}{@render prefsNode()}
@@ -502,6 +571,33 @@
 		margin: 0.3rem 0;
 		opacity: 0.8;
 		font-family: system-ui, sans-serif;
+	}
+	/* A KA10's console: the switches in threes, as its octal digits are. */
+	.switches {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.3rem;
+	}
+	.triad {
+		display: inline-flex;
+		gap: 1px;
+	}
+	.switch {
+		width: 0.9rem;
+		height: 1.3rem;
+		padding: 0;
+		border: 1px solid #777;
+		border-radius: 2px;
+		background: linear-gradient(#ddd 50%, #888 50%);
+		cursor: pointer;
+	}
+	.switch.on {
+		background: linear-gradient(#c90 50%, #ddd 50%);
+	}
+	.octal {
+		margin-left: 0.4rem;
+		font-size: 0.85rem;
 	}
 	.facts {
 		display: grid;

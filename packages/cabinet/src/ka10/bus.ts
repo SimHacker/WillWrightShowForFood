@@ -31,6 +31,10 @@ export interface Ka10Bus {
 /** A rung as the cabinet drives it. */
 export interface Ka10Rung extends Ka10Bus {
 	instructions: number;
+	/** What the bus dance listens to, where a rung counts it (the halves rung does). */
+	userInstructions?: number;
+	readonly uuos?: Float64Array;
+	readonly interrupts?: Float64Array;
 	halted: boolean;
 	readonly breakpoints: Set<number>;
 	reset(): void;

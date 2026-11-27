@@ -10,21 +10,34 @@
 // and `auto` runs flat out while the console is busy and at real time once it has been quiet
 // for QUIET_MS, so an idle ITS does not hold a core.
 //
-// In: { type: 'start', ... }, { type: 'keys', text }, { type: 'speed', mode }.
-// Out: out (text), phase (what it is doing), stats, halt, error.
+// The bus dance (bus-dance.svelte.js), while the page has it on: where the PC is after each run,
+// ITS's or a program's; the cylinders the packs are read and written at; and, from the KA10's
+// own counters, the interrupts by level, the system calls by opcode and the share of the
+// instructions run in user mode; all since the last DANCE_MS.
+//
+// In: { type: 'start', ... }, { type: 'keys', text }, { type: 'speed', mode }, { type: 'dance', on },
+// { type: 'switches', word }.
+// Out: out (text), phase (what it is doing), stats, dance, halt, error.
 import { ItsMachine } from '@wwsff/cabinet/ka10';
 
 const BLOCK = 1024;
 const QUIET_MS = 3000;
 const SLICE_MS = 25;
 const STATS_MS = 500;
+const DANCE_MS = 100;
+/** RP03 blocks per cylinder: 20 surfaces of 10 sectors. */
+const CYLINDER = 200;
+/** The KA10's user-mode flag (USER in ka10/defs.ts), and what a user PC is keyed above. */
+const USER = 0o200;
+const USER_KEY = 0o1000000;
 
 /** @typedef {{ keys?: string, wait?: string, idle?: number, phase?: string }} Step */
 
 class RangePack {
-	/** @param {string} url @param {number} chunk bytes per fetch */
-	constructor(url, chunk) {
+	/** @param {string} url @param {number} chunk bytes per fetch @param {number} unit its drive */
+	constructor(url, chunk, unit) {
 		this.url = url;
+		this.unit = unit;
 		this.chunk = chunk;
 		this.per = chunk / BLOCK;
 		/** @type {Map<number, Uint8Array>} */
@@ -67,6 +80,7 @@ class RangePack {
 
 	/** @param {number} block @param {BigUint64Array} into */
 	read(block, into) {
+		if (dancing) seek(this.unit, block);
 		const kept = this.dirty.get(block);
 		if (kept) return into.set(kept);
 		const c = Math.floor(block / this.per);
@@ -78,8 +92,57 @@ class RangePack {
 
 	/** @param {number} block @param {BigUint64Array} from */
 	write(block, from) {
+		if (dancing) seek(this.unit, block);
 		this.dirty.set(block, BigUint64Array.from(from));
 	}
+}
+
+let dancing = false;
+let lastDance = 0;
+/** @type {Map<number, number>} */
+const pcs = new Map();
+/** @type {Map<number, number>} */
+const cylinders = new Map();
+/** The KA10's dance counters as last posted. */
+let danced = { uuos: new Float64Array(0o100), interrupts: new Float64Array(8), user: 0, instructions: 0, sim: 0, wall: 0 };
+
+/** @param {Map<number, number>} map @param {number} key */
+const tally = (map, key) => map.set(key, (map.get(key) ?? 0) + 1);
+/** @param {number} unit @param {number} block */
+const seek = (unit, block) => tally(cylinders, unit * 1000 + Math.floor(block / CYLINDER));
+
+/** Where the PC is now, after a run: a program's address is keyed above ITS's. */
+function samplePc() {
+	const cpu = m?.cpu;
+	if (cpu) tally(pcs, cpu.PC + (cpu.FLAGS & USER ? USER_KEY : 0));
+}
+
+/** Start the dance's counts from now, so turning it on is not a burst of old news. */
+function danceFrom(now) {
+	const cpu = m?.cpu;
+	pcs.clear();
+	cylinders.clear();
+	lastDance = now;
+	if (cpu) danced = { uuos: Float64Array.from(cpu.uuos ?? []), interrupts: Float64Array.from(cpu.interrupts ?? []), user: cpu.userInstructions ?? 0, instructions: cpu.instructions, sim: cpu.events.now, wall: now };
+}
+
+/** @param {Float64Array | undefined} now @param {Float64Array} was @returns {[number, number][]} */
+const deltas = (now, was) => (now ? [...now].flatMap((n, i) => (n > (was[i] ?? 0) ? [/** @type {[number, number]} */ ([i, n - (was[i] ?? 0)])] : [])) : []);
+
+function dance(now) {
+	const cpu = m?.cpu;
+	if (!dancing || !cpu || now - lastDance < DANCE_MS) return;
+	const ran = cpu.instructions - danced.instructions;
+	post({
+		type: 'dance',
+		pcs: [...pcs],
+		cylinders: [...cylinders],
+		interrupts: deltas(cpu.interrupts, danced.interrupts),
+		calls: deltas(cpu.uuos, danced.uuos),
+		user: ran > 0 ? ((cpu.userInstructions ?? 0) - danced.user) / ran : 0,
+		rate: (cpu.events.now - danced.sim) / tps / Math.max(0.001, (now - danced.wall) / 1000)
+	});
+	danceFrom(now);
 }
 
 /** @type {ItsMachine | null} */
@@ -105,6 +168,8 @@ let lastStats = 0;
 let lastInstructions = 0;
 let lastStatsWall = 0;
 let tps = 1_000_000;
+/** The console's 36 data switches, which a program reads with .RDSW (.OPER 20). */
+let switches = 0;
 let fastNow = true;
 
 /** @param {Record<string, unknown>} msg */
@@ -167,7 +232,8 @@ function slice() {
 		if (fastNow) {
 			anchor = null;
 			while (performance.now() - t0 < SLICE_MS) {
-				if (halted(cpu.run(10_000))) break;
+				if (halted(cpu.run(dancing ? 2_000 : 10_000))) break;
+				if (dancing) samplePc();
 				script();
 			}
 		} else {
@@ -175,6 +241,7 @@ function slice() {
 			const target = anchor.sim + ((t0 - anchor.wall) / 1000) * tps;
 			while (cpu.events.now < target && performance.now() - t0 < SLICE_MS) {
 				if (halted(cpu.run(1_000))) break;
+				if (dancing) samplePc();
 				script();
 			}
 		}
@@ -187,6 +254,7 @@ function slice() {
 		out = '';
 	}
 	stats(performance.now());
+	dance(performance.now());
 	if (!stopped) setTimeout(slice, fastNow ? 0 : 10);
 }
 
@@ -213,7 +281,7 @@ async function begin(start) {
 	tps = 1_000_000 * m.cpu.events.ticksPerUsec;
 	passAt = start.pass ?? '';
 	if (start.boot === 'its') {
-		packs = start.packs.map((url) => new RangePack(url, start.warm.chunk));
+		packs = start.packs.map((url, unit) => new RangePack(url, start.warm.chunk, unit));
 		const todo = packs.flatMap((p) => (start.warm.packs[p.url.slice(p.url.lastIndexOf('/') + 1)] ?? []).map((c) => [p, c]));
 		let done = 0;
 		post({ type: 'phase', text: `Fetching the packs: 0 of ${todo.length} chunks` });
@@ -229,6 +297,8 @@ async function begin(start) {
 	}
 	m.pt.attach(await bytesOf(start.tape));
 	m.bootPtr();
+	m.cpu.SW = switches;
+	danceFrom(performance.now());
 	steps = start.steps;
 	lastActive = performance.now();
 	lastStatsWall = performance.now();
@@ -248,5 +318,11 @@ onmessage = (e) => {
 	} else if (msg.type === 'speed') {
 		mode = msg.mode;
 		anchor = null;
+	} else if (msg.type === 'dance') {
+		dancing = !!msg.on;
+		danceFrom(performance.now());
+	} else if (msg.type === 'switches') {
+		switches = Number(msg.word) || 0;
+		if (m) m.cpu.SW = switches;
 	}
 };

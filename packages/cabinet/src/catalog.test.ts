@@ -49,7 +49,7 @@ test("every Apple app has an entry, and every disk it names is there", () => {
 test("the tree and the URLs work on the real catalog", () => {
 	const { catalog } = cabinetCatalog();
 	const root = catalog.tree()!;
-	assert.deepEqual(root.children.map((n) => n.slug), ["games", "languages", "applications", "devices", "systems", "machines"]);
+	assert.deepEqual(root.children.map((n) => n.slug), ["games", "languages", "applications", "devices", "systems", "machines", "diagnostics"]);
 	assert.ok(catalog.tree("games")!.children.every((n) => n.entry), "games is one flat list");
 	assert.ok(catalog.tree("languages")!.children.every((n) => n.entry), "languages is one flat list");
 	assert.equal(catalog.tree("machines/pdp-7")!.children.length, catalog.find({ tags: { machine: "pdp7" } }).length);

@@ -189,6 +189,12 @@ export class Ka10Halves {
 
 	halted = false;
 	instructions = 0;
+	/** Of `instructions`, those run in user mode. Counters for the bus dance, never reset. */
+	userInstructions = 0;
+	/** UUOs executed in user mode, by opcode: ITS's system calls are 040 (.IOT) to 047 (.ACCESS). */
+	readonly uuos = new Float64Array(0o100);
+	/** Interrupts taken, by priority level, 1 to 7. */
+	readonly interrupts = new Float64Array(8);
 	readonly breakpoints = new Set<number>();
 	private broke = false;
 	private hist: HistEntry[] = [];
@@ -898,6 +904,7 @@ export class Ka10Halves {
 	}
 
 	private stPi(): void {
+		if (this.pi_enc < 8) this.interrupts[this.pi_enc]!++;
 		this.pi_cycle = 1;
 		this.pi_rq = 0;
 		this.pi_hold = 0;
@@ -947,7 +954,10 @@ export class Ka10Halves {
 			this.pi_restore = 0;
 		}
 		this.events.now++;
-		if (this.f_load_pc && !this.pi_cycle) this.instructions++;
+		if (this.f_load_pc && !this.pi_cycle) {
+			this.instructions++;
+			if (this.FLAGS & USER) this.userInstructions++;
+		}
 		return false;
 	}
 
@@ -1437,6 +1447,7 @@ export class Ka10Halves {
 	private execute(): void {
 		const IR = this.IR;
 		if (IR < 0o100) {
+			if (this.FLAGS & USER) this.uuos[IR]!++;
 			this.uuo(IR === 0 || IR >= 0o40);
 			return;
 		}

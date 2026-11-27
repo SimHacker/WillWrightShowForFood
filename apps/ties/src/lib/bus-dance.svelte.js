@@ -96,15 +96,20 @@ export class BusDance {
 	/** @type {readonly import('@wwsff/cabinet/dance').EnoTrack[]} */
 	#tracks = $state.raw(ENO_TRACKS);
 	#engine;
+	#key;
 	#last = 0;
 
-	/** @param {readonly Voice[]} voices @param {'saucer' | 'diesel'} engine */
-	constructor(voices, engine) {
+	/**
+	 * @param {readonly Voice[]} voices @param {'saucer' | 'diesel'} engine
+	 * @param {string} [key] what its style, tempo and loops are kept under: the engine's, shared, by default
+	 */
+	constructor(voices, engine, key = engine) {
 		this.voices = voices;
 		this.#dance = new Dance(voices);
 		this.#engine = engine;
+		this.#key = `dance-${key}`;
 		const on = kept(ON) === true;
-		const was = kept(`dance-${engine}`);
+		const was = kept(this.#key);
 		if (STYLES.some((s) => s.id === was?.style)) this.style = this.#dance.style = was.style;
 		if (TEMPOS.includes(was?.bpm)) this.#bpm = was.bpm;
 		if (typeof was?.volume === 'number') this.#volume = Math.max(0, Math.min(1, was.volume));
@@ -133,7 +138,7 @@ export class BusDance {
 	#save() {
 		try {
 			globalThis.localStorage?.setItem(ON, JSON.stringify(this.on));
-			globalThis.localStorage?.setItem(`dance-${this.#engine}`, JSON.stringify({ style: this.style, bpm: this.#bpm, loops: this.loops, volume: this.#volume, muted: this.#muted }));
+			globalThis.localStorage?.setItem(this.#key, JSON.stringify({ style: this.style, bpm: this.#bpm, loops: this.loops, volume: this.#volume, muted: this.#muted }));
 		} catch {
 			/* Storage full or forbidden: the dance just forgets. */
 		}

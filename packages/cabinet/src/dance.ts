@@ -764,6 +764,18 @@ export function switchesSeedWord(text: string): number | null {
 	return m ? parseInt(m[1]!, 8) : null;
 }
 
+/** The PDP-10's 36 data switches as a music seed: twelve octal digits (its/catalog.yml `switches`). */
+export const dataSwitchesSeedText = (word: number): string => `0o${Math.max(0, Math.floor(word)).toString(8).padStart(12, "0").slice(-12)}`;
+
+/** The 36-bit word a pasted `0o000000000017`, `switches: "0o…",` or plain octal names; null if none. */
+export function dataSwitchesSeedWord(text: string): number | null {
+	const m = /^\s*(?:switches\s*:)?\s*["']?(?:0o)?([0-7]{1,12})["']?\s*,?\s*$/i.exec(text);
+	return m ? parseInt(m[1]!, 8) : null;
+}
+
+/** The 36 data switches folded into the word `twist` hashes, as six 6-bit bytes: all off is 0. */
+export const dataSwitchWord = (word: number): number => switchWord(Array.from({ length: 6 }, (_, i) => Math.floor(word / 2 ** (6 * i)) & 0o77));
+
 /** A twist in a few words, for the console: "" for the plain dance. */
 export function twistLabel(t: Twist): string {
 	if (t === PLAIN) return "";
@@ -1446,4 +1458,38 @@ export const APPLE2_VOICES: readonly Voice[] = [
 	{ id: "6502", label: "6502", timbre: "pluck", root: 48, octaves: 2, pan: -0.2, most: 3 },
 	{ id: "disk", label: "Disk II", timbre: "tick", root: 40, octaves: 3, pan: 0.4, most: 1 },
 	{ id: "speaker", label: "Speaker", timbre: "chime", root: 79, octaves: 1, pan: 0, most: 1 },
+];
+
+/**
+ * The PDP-10's voices: the KA10, from where its PC is (ITS's own code or a program's); the RP03
+ * packs, by cylinder; the priority interrupts, by level.
+ */
+export const PDP10_VOICES: readonly Voice[] = [
+	{ id: "ka10", label: "KA10", timbre: "bass", root: 36, octaves: 2, pan: -0.25, most: 2 },
+	{ id: "rp03", label: "RP03 packs", timbre: "tick", root: 40, octaves: 3, pan: 0.4, most: 1 },
+	{ id: "pi", label: "Interrupts", timbre: "glass", root: 72, octaves: 1, pan: 0.15, most: 1 },
+];
+
+/** A KA10 hit's key is its PC, plus this in user mode, so the regions tell ITS from the programs. */
+export const PDP10_USER = 0o1000000;
+
+/** Where the KA10 is running: ITS in exec mode, or a program in user mode. */
+export const PDP10_REGIONS: readonly Region[] = [
+	{ name: "ITS", from: 0, to: PDP10_USER - 1 },
+	{ name: "programs", from: PDP10_USER, to: 2 * PDP10_USER - 1 },
+];
+
+/**
+ * ITS's system calls, the UUOs 040 to 047 a program executes in user mode (ITS; UUOMIN), and
+ * what each sounds like. `addr` is the opcode.
+ */
+export const ITS_CALLS: readonly CallAt[] = [
+	{ name: ".IOT", addr: 0o40, sound: { kind: "rate", param: "type" } },
+	{ name: ".OPEN", addr: 0o41, sound: { kind: "hit", sound: "crash" } },
+	{ name: ".OPER", addr: 0o42, sound: { kind: "rate", param: "sparkle" } },
+	{ name: ".CALL", addr: 0o43, sound: { kind: "rate", param: "drive" } },
+	{ name: ".USET", addr: 0o44, sound: { kind: "hit", sound: "scroll" } },
+	{ name: ".BREAK", addr: 0o45, sound: { kind: "hit", sound: "bell" } },
+	{ name: ".STATUS", addr: 0o46, sound: { kind: "hit", sound: "rumble" } },
+	{ name: ".ACCESS", addr: 0o47, sound: { kind: "hit", sound: "rumble" } },
 ];

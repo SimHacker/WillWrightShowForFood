@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { APPLE2_CALLS, switchWord, PANEL_SEED, panelSeedBytes, panelSeedText, switchesSeedText, switchesSeedWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, ENO_TRACKS, enoLayers, enoTracks, EN0, EN1, EN2, EN3, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing, STYLE_IDS, ALPHA, STYLE_SPECS, type Style } from "./dance.js";
+import { dataSwitchesSeedText, dataSwitchesSeedWord, dataSwitchWord, ITS_CALLS, PDP10_REGIONS, PDP10_USER, PDP10_VOICES, APPLE2_CALLS, switchWord, PANEL_SEED, panelSeedBytes, panelSeedText, switchesSeedText, switchesSeedWord, watchedName, TUNE_LINE, PLAIN, twist, twistLabel, APPLE2_REGIONS, Regions, pages, LOOPS, ENO_TRACKS, enoLayers, enoTracks, EN0, EN1, EN2, EN3, BP13, BP_CADENCE, BP_I, BP_MAJOR, BP_V, midiAt, thirteen, DOMINANT, DOMINANT_B9, Dance, Deltas, PDP7_VOICES, PENTATONIC, POP, SWING, TURNAROUND, Tally, groove, period, pitch, score, swing, STYLE_IDS, ALPHA, STYLE_SPECS, type Style } from "./dance.js";
 
 const cpu = PDP7_VOICES[0]!;
 
@@ -562,4 +562,26 @@ test("every style's walk keeps to its tuning: twelve-tone styles on twelve, alph
 		for (const c of [...s.harmony.moves.keys(), s.tense, s.tenser]) assert.ok(c.tones.length >= 3, `${style} ${c.name} is a chord`);
 		assert.ok(s.harmony.moves.get(s.harmony.home)!.length > 0, `${style} can leave home`);
 	}
+});
+
+test("the PDP-10's 36 data switches: a seed of twelve octal digits, round trip, and all off is plain", () => {
+	const word = 0o123456701234;
+	assert.equal(dataSwitchesSeedText(word), "0o123456701234");
+	assert.equal(dataSwitchesSeedWord(dataSwitchesSeedText(word)), word);
+	assert.equal(dataSwitchesSeedWord('switches: "0o17",'), 0o17);
+	assert.equal(dataSwitchesSeedWord("0o1234567012345"), null);
+	assert.equal(dataSwitchWord(0), 0);
+	assert.equal(twist(dataSwitchWord(0)), PLAIN);
+	assert.notEqual(dataSwitchWord(2 ** 35), 0);
+	assert.notEqual(dataSwitchWord(1), dataSwitchWord(2 ** 35));
+});
+
+test("the PDP-10's dance: ITS's system calls are the UUOs 040 to 047, and user-mode PCs warm the programs region", () => {
+	assert.deepEqual(ITS_CALLS.map((c) => c.addr), [0o40, 0o41, 0o42, 0o43, 0o44, 0o45, 0o46, 0o47]);
+	const d = new Dance(PDP10_VOICES);
+	d.regions = new Regions(PDP10_REGIONS);
+	const notes = d.beat({ ka10: [{ key: PDP10_USER + 0o1000, weight: 9 }], rp03: [{ key: 120, weight: 2 }], pi: [{ key: 1, weight: 60 }] }, 0.5);
+	assert.ok(notes.some((n) => n.voice === "ka10"));
+	assert.ok(notes.some((n) => n.voice === "rp03"));
+	assert.ok(notes.some((n) => n.voice === "pi"));
 });

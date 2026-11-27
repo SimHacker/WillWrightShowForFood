@@ -735,6 +735,45 @@ and read in 32 KB chunks with HTTP Range requests, the chunks a boot needs first
 What ITS writes stays in the tab. The worker runs flat out while the console is busy and at a
 KA10's pace once it has been quiet, unless told otherwise.
 
+The console prints at a baud rate the person picks, from Instant to 110 (a Model 33's 10
+characters a second), on the page's clock and not the KA10's. The CTY device itself takes 10,000
+simulated ticks a character, so on the machine's side printing speeds up and slows down with the
+emulator; the page holds what ITS sent ahead and prints it at the chosen rate, with a button that
+prints everything waiting.
+
+**The bus dance.** The halves rung keeps counters for it, never reset: `userInstructions`, the
+instructions run in user mode; `uuos`, the UUOs run in user mode by opcode, which on ITS are its
+system calls, 040 `.IOT` to 047 `.ACCESS` (`UUOMIN` in `SYSTEM; ITS`); and `interrupts`, by
+priority level. While the dance is on, the worker samples the PC after each run, ITS's or a
+program's, counts the cylinders the packs are read and written at, and every 100 ms posts what
+changed. The voices (`PDP10_VOICES` in [dance.ts](src/dance.ts)) are the KA10, the RP03 packs and
+the interrupts, over the regions ITS and programs; each system call has a sound
+(`ITS_CALLS`); the paper plays each character as it prints, and each key typed bends the music.
+The load is how fast simulated time runs against the wall's, the fill the programs' share of the
+instructions. Booting and logging in, programs run 1.4% of the instructions; a `:listf sys;` is
+19%, with 1,536 `.IOT`s, 1,181 `.CALL`s and 598 `.OPER`s.
+
+**The data switches** are the music seed, 36 of them as twelve octal digits (`switches:` in an
+entry's `runs`, or `?seed=` in the address), as the PDP-7's 18 are six. ITS reads them only for a
+program that asks, with `.RDSW` (`.OPER 20`), so they twist the music without changing the system.
+
+### Terminals, next
+
+The console is the only terminal so far. ITS's TCTYP knows it as `Printing`, and offers other
+types for a line; two matter here (`SYSENG; TCTYP`):
+
+- **Glass**, `%TNPRT` at 79 by 24 that can't overprint: a scrolling screen with no cursor
+  addressing, where rubout erases. The page would draw the CTY's output on a screen instead of
+  paper, with the PDP-7 teletype's speech, bell and screen reader announcements. The teletype's
+  code is inside `CabinetApplet.svelte`; sharing it means taking it out into a component both
+  machines use.
+- **Software**, `%TNSFW`, the type a SUPDUP connection gets: ITS sends its own display codes
+  (`%TD…`), which a SUPDUP terminal draws, cursor addressing and all. SUPDUP comes in over the
+  Chaosnet (CH10) or a STY, so it needs a network device, after more terminal lines.
+
+More lines need a multiplexer from SIMH on the KA10 (`ka10_mty.c` or `ka10_tk10.c`), each line a
+tab on the page.
+
 ## Phases
 
 0. **36-bit hygiene.** Fix the `& wmask` masks in [turing.ts](src/plugins/turing.ts) and test the
