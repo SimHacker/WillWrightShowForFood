@@ -318,11 +318,23 @@
 		border-radius: 4px;
 		font: 0.9rem system-ui, sans-serif;
 	}
+	/* Wraps rather than squeezing: each control keeps its own size, the labels stay on one line. */
 	.bar {
 		display: flex;
-		gap: 1rem;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.3rem 1rem;
 		font-size: 0.8rem;
 		opacity: 0.85;
+	}
+	.bar > label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		white-space: nowrap;
+	}
+	.bar > :global(*) {
+		flex: none;
 	}
 	.where {
 		margin-left: auto;

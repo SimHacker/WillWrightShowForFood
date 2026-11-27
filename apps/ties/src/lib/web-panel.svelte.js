@@ -1,7 +1,7 @@
 /**
  * The viewer at the top of a machine page's outline (WebPanel.svelte): a YouTube video, a
- * markdown file from GitHub read in place, or any other page in a frame. One at a time, for
- * the whole page. A plain click on a YouTube link, a GitHub markdown link or a link marked
+ * file from GitHub read in place, or any other page in a frame. One at a time, for the whole
+ * page. A plain click on a YouTube link, a GitHub file link or a link marked
  * `data-view` opens it here and scrolls to it; a click with ⌘ or Ctrl, or the middle button,
  * is the browser's, and opens a tab. A watch such as Zork's grue (pdp10.svelte.js) opens it
  * with buttons of its own.
@@ -13,8 +13,11 @@
  * @typedef {{ label: string, title: string, action: () => void, checked?: () => boolean }} WebButton
  */
 /**
- * `raw` is where a markdown file's text is fetched from; GitHub will not be shown in a frame.
- * @typedef {{ kind: 'youtube' | 'markdown' | 'web', url: string, src: string, raw: string, title: string, buttons: WebButton[], reveal: boolean }} WebView
+ * `raw` is where a GitHub file is fetched from, since GitHub will not be shown in a frame: read
+ * in place as `markdown` or `text`, or a `pdf` given to the browser's own reader. A `card` is a
+ * site that refuses frames: its name, `about` and the way out.
+ * @typedef {'youtube' | 'markdown' | 'text' | 'pdf' | 'web' | 'card'} ViewKind
+ * @typedef {{ kind: ViewKind, url: string, src: string, raw: string, title: string, about: string, buttons: WebButton[], reveal: boolean }} WebView
  */
 
 /**
@@ -42,12 +45,17 @@ export function youtube(url) {
 	return { id, start };
 }
 
+/** What the viewer makes of a GitHub file by its extension; anything else is GitHub's to show. */
+const TEXT = /\.(txt|s|asm|mac|c|cc|cpp|h|hpp|js|mjs|ts|py|rb|go|rs|lisp|lsp|el|fs|f|fth|sh|yml|yaml|json|tsv|csv|toml|ini|cfg)$/i;
+
 /**
- * Where a GitHub markdown link's text is, raw: a file's blob page, or a folder's tree page for
- * its README.md. Null for anything else.
+ * Where a GitHub link's file is, raw, and what it is: a file's blob page, a folder's tree page
+ * or a repository's front page for its README, a wiki page, a profile for its README. Null for
+ * anything else, and for files the viewer cannot show.
  * @param {string} url
+ * @returns {{ raw: string, as: 'markdown' | 'text' | 'pdf' } | null}
  */
-export function githubMarkdown(url) {
+export function githubRaw(url) {
 	let u;
 	try {
 		u = new URL(url, globalThis.location?.href);
@@ -55,23 +63,49 @@ export function githubMarkdown(url) {
 		return null;
 	}
 	if (u.hostname !== 'github.com') return null;
-	const m = /^\/([^/]+)\/([^/]+)\/(blob|tree)\/([^/]+)(\/.*)?$/.exec(u.pathname);
-	if (!m) return null;
-	const [, owner, repo, how, ref, path = ''] = m;
-	const file = how === 'tree' ? `${path.replace(/\/$/, '')}/README.md` : path;
-	if (!/\.(md|markdown)$/i.test(file)) return null;
-	return `https://raw.githubusercontent.com/${owner}/${repo}/${ref}${file}`;
+	const at = (/** @type {string} */ path) => `https://raw.githubusercontent.com/${path}`;
+	const parts = u.pathname.split('/').filter(Boolean).map(decodeURIComponent);
+	const [owner, repo, how, ref, ...rest] = parts;
+	if (!owner) return null;
+	if (parts.length === 1) return { raw: at(`${owner}/${owner}/HEAD/README.md`), as: 'markdown' };
+	if (parts.length === 2) return { raw: at(`${owner}/${repo}/HEAD/README.md`), as: 'markdown' };
+	if (how === 'wiki') return { raw: at(`wiki/${owner}/${repo}/${parts[3] ?? 'Home'}.md`), as: 'markdown' };
+	if ((how !== 'blob' && how !== 'tree') || !ref) return null;
+	const path = rest.join('/');
+	const base = `${owner}/${repo}/${ref}`;
+	if (how === 'tree') return { raw: at(`${base}/${path ? `${path}/` : ''}README.md`), as: 'markdown' };
+	if (/\.(md|markdown)$/i.test(path)) return { raw: at(`${base}/${path}`), as: 'markdown' };
+	if (/\.pdf$/i.test(path)) return { raw: at(`${base}/${path}`), as: 'pdf' };
+	if (TEXT.test(path)) return { raw: at(`${base}/${path}`), as: 'text' };
+	return null;
+}
+
+/**
+ * Sites that will not be shown inside another site's page (X-Frame-Options or a CSP
+ * frame-ancestors), found by asking each link About makes, 27 November 2026. The viewer shows
+ * a card for these, with the way out, rather than a blank frame.
+ */
+const REFUSES = ['github.com', 'patreon.com', 'retrocomputingforum.com', 'npmjs.com', 'destroyallsoftware.com', 'youtube.com', 'youtu.be'];
+
+/** Whether a link's site refuses to be shown in a frame, as far as is known. @param {string} url */
+export function refuses(url) {
+	try {
+		const host = new URL(url, globalThis.location?.href).hostname;
+		return REFUSES.some((h) => host === h || host.endsWith(`.${h}`));
+	} catch {
+		return false;
+	}
 }
 
 /** Whether the viewer shows this link, rather than leaving it to the browser. @param {string} url */
 export function viewable(url) {
-	return !!youtube(url) || !!githubMarkdown(url);
+	return !!youtube(url) || !!githubRaw(url);
 }
 
 /**
  * Open a link in the viewer and open its row. `reveal` scrolls to it: a link clicked, or a
  * watch that opens it unasked. What is open already stays as it is, and is scrolled to again.
- * @param {string} url @param {{ title?: string, buttons?: WebButton[], reveal?: boolean }} [opts]
+ * @param {string} url @param {{ title?: string, about?: string, buttons?: WebButton[], reveal?: boolean }} [opts]
  */
 export function openWeb(url, opts = {}) {
 	webPanel.open = true;
@@ -81,13 +115,13 @@ export function openWeb(url, opts = {}) {
 		return;
 	}
 	const yt = youtube(url);
-	const md = githubMarkdown(url);
-	const common = { url, buttons: opts.buttons ?? [], reveal: !!opts.reveal };
+	const gh = githubRaw(url);
+	const common = { url, buttons: opts.buttons ?? [], reveal: !!opts.reveal, about: opts.about ?? '' };
 	webPanel.view = yt
 		? { ...common, kind: 'youtube', src: `https://www.youtube-nocookie.com/embed/${yt.id}?autoplay=1${yt.start ? `&start=${yt.start}` : ''}`, raw: '', title: opts.title ?? 'YouTube' }
-		: md
-			? { ...common, kind: 'markdown', src: url, raw: md, title: opts.title ?? url }
-			: { ...common, kind: 'web', src: url, raw: '', title: opts.title ?? url };
+		: gh
+			? { ...common, kind: gh.as, src: url, raw: gh.raw, title: opts.title ?? url }
+			: { ...common, kind: refuses(url) ? 'card' : 'web', src: url, raw: '', title: opts.title ?? url };
 }
 
 export function closeWeb() {

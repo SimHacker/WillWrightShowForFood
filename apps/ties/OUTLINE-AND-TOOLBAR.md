@@ -106,6 +106,27 @@ right end (the speed readout) sits under the screen's corner.
   speed slider). It is a button, so a tap opens its numbers as a card where there is no hover,
   each copy with its own card; and not a live region, as it changes every second.
 
+## The viewer (`WebPanel.svelte`, `web-panel.svelte.js`)
+
+- One per page, a node of the outline like any other: first until it is dragged elsewhere
+  (`apple-viewer`, `pdp10-viewer` in the page order), closing to its title. Its row's right
+  end (`end` on `Outline`) has the opener's buttons, the link out and the ✕.
+- A plain click on a link the viewer can show opens it there, opens the node and scrolls to
+  it, even when it is open already; ⌘-click, Ctrl-click and the middle button are the
+  browser's and open a tab. Links in About (`CreditOffer.svelte`) carry `data-view`, and
+  their name and line as `data-name` and `data-about`.
+- What it shows: a YouTube video in its embed player; a GitHub file read from
+  raw.githubusercontent.com, which allows it where github.com forbids frames: markdown made a
+  page (a folder's, a repository's or a profile's README, a wiki page), text as it is, a PDF
+  handed to the browser's reader as a typed Blob; another page in a sandboxed frame. A site
+  known to refuse frames (`REFUSES`, found by asking every link in About, 27 November 2026)
+  gets a card with its name, its line and a new-tab button rather than a blank frame; so
+  does a GitHub file that cannot be read.
+- A link to `/machine/...` runs that machine inside this one, with its own outline and its
+  own viewer, so a tree of machines can be built: About's Yo Dawg section.
+- Its height is a grip under it, kept per kind (`web-panel-height-<kind>`): videos as big as
+  fits under 70% of the window, pages and files shorter, so the machine stays in sight.
+
 ## Stable under the pointer
 
 Nothing moves out from under the person's pointer. Two rules, no exceptions:
@@ -210,7 +231,19 @@ catalog), paper on a light one (`/apple2/`). New panes use the same variables.
   with the toolbar its author plays it with.
 - **Interpolating between views**, as between music seeds: settings that are numbers move
   smoothly from one view's to another's. Creating or deleting zooms or fades in or out.
-- **The PDP-7 page** moves to this outline and toolbar; its dance panel already offers its
-  controls (`DancePanel` with `id="pdp7"`), with no toolbar there yet to show them.
+- **The PDP-7 page** moves to this outline and toolbar. It has the toolbar and About now, so
+  About's names and sections and the dance's controls (`DancePanel` with `id="pdp7"`) pin there;
+  still to come are draggable nodes (`move`, a kept page order with the viewer in it), its
+  own controls offered with 📌, the dance as a node, and Settings folded into Preferences.
+- **One set of nodes on every machine**, in one order: viewer; what to do (play, the guide,
+  the programs); the terminal or console; the CPU; memory; devices; the dance; the engine;
+  snapshots; preferences; About. A node a machine has nothing for says so in a line. Missing
+  today: Memory and an Engine node on the PDP-10 (the SIMH port and the hand-written engine
+  checked against it), Slots and jump-to-memory in the Apple's Korz node, Snapshots on the
+  Apple and the PDP-10.
+- **Pinning a sub-tree as a clone in the outline.** Rather than a copy in the toolbar's
+  column, a pinned panel could become an outline node of its own at the top, a clone of its
+  home with a close box, reordered by its grip like any node; the toolbar keeps the row of
+  controls. The viewer is the first node made this way.
 - Reordering the toolbar's row from the keyboard (its handles skip the tab order now; a
   roving tab stop over the row would give them one).

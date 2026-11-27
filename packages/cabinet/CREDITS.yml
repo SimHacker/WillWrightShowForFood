@@ -5,9 +5,10 @@
 #   sections  id, title, about (a line), entries
 #   entries   id (unique across the file), name, url, kind (person, project, place, document),
 #             for: what it gave the Machine Room, in a line. A click shows the page in the
-#             viewer at the top of the outline (WebPanel.svelte) and scrolls to it, a GitHub
-#             markdown file read in place; ⌘-click is the browser's new tab. view: tab sends a
-#             plain click to a tab as well, for a site that will not be shown in a frame
+#             outline's viewer (WebPanel.svelte) and scrolls to it: a GitHub file read in place,
+#             a video, a page in a frame, or for a site that refuses frames a card with this line
+#             and a new-tab button. ⌘-click is the browser's new tab; view: tab makes a plain
+#             click one too. A url starting /machine/ runs that machine inside this one
 about:
   - >-
     The Machine Room runs old computers in the browser, and the programs people wrote for them:
@@ -22,8 +23,19 @@ about:
     on. Cartridges wrap a program with its disks, its moves and its guide, over a shared
     collection of disks every configuration can reach.
   - >-
-    It is Don Hopkins's project, built in the open on hyperties.org, with Claude writing much of
-    the code. Pin any name below to keep it in the toolbar as a link to open later.
+    It was made in MOOLLM, Don's microworld for language models, and it is for MOOLLM. MOOLLM
+    treats a git repository as a world that people and models share, like a text adventure:
+    directories are rooms, files are the things in them, and characters are files a person or a
+    model can play. This repository is one of those worlds. The Machine Room grew in it, written by
+    Don with Claude working in the same rooms, and Korz was designed in MOOLLM's own repository.
+  - >-
+    MOOLLM's characters will sit down at these machines, play the Apple ][ games and run MACSYMA.
+    Two designs point that way, neither built yet: Korz′, which asks a model to speed up a
+    machine's hottest code, and Dasher at the teletype, where the running program is the language
+    model and a model helps rank what comes next.
+  - >-
+    It is Don Hopkins's project, built in the open on hyperties.org. Pin any name below to keep it
+    in the toolbar as a link to open later.
 
 sections:
   - id: project
@@ -33,7 +45,11 @@ sections:
       - { id: don-hopkins, name: Don Hopkins, kind: person, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/README.md", for: "The Machine Room's author, and the Apple ][ Forth and H19 terminal on its disks" }
       - { id: hyperties-org, name: hyperties.org, kind: place, url: "https://hyperties.org/", for: "Where the Machine Room lives" }
       - { id: ben-shneiderman, name: Ben Shneiderman, kind: person, url: "https://en.wikipedia.org/wiki/Ben_Shneiderman", for: "HyperTIES, the hypertext system at the University of Maryland that the site is named for" }
-      - { id: moollm, name: MOOLLM, kind: project, url: "https://github.com/SimHacker/moollm", for: "Don's microworld for language models, where Korz was designed" }
+      - { id: moollm, name: MOOLLM, kind: project, url: "https://github.com/SimHacker/moollm", for: "The world the Machine Room was made in and for: a git repository as a world people and language models share, where Korz was designed" }
+      - { id: moollm-try, name: Try MOOLLM, kind: document, url: "https://github.com/SimHacker/moollm/blob/main/QUICKSTART.md", for: "Clone it, open it in Cursor or Claude Code, and type LOOK" }
+      - { id: moollm-adventure, name: The main MOOLLM world, kind: place, url: "https://github.com/SimHacker/moollm/tree/main/examples/adventure-4", for: "A pub, a street, a maze and 78 characters, to walk through on GitHub" }
+      - { id: korz-prime, name: "Korz′", kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/KORZ-MACHINES.md", for: "The design for a language model as the emulator's second dispatcher, speeding up hot code" }
+      - { id: teletype-dasher, name: Teletype Dasher, kind: document, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/packages/cabinet/TELETYPE-DASHER.md", for: "The design for Dasher at the teletype: the running program is the language model, steered by its own grammar" }
       - { id: korz-design, name: Korz, kind: document, url: "https://github.com/SimHacker/moollm/tree/main/designs/korz", for: "The design of the machines as described once and run at several rungs" }
       - { id: korzybski, name: Alfred Korzybski, kind: person, url: "https://en.wikipedia.org/wiki/Alfred_Korzybski", for: "The map is not the territory: Korz is named for him" }
       - { id: patreon, name: Support Don, kind: place, url: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/SUPPORT.md", for: "Why the work needs paying for, and how: Patreon, hiring him, a version for your exhibit" }
@@ -242,3 +258,21 @@ sections:
       - { id: bret-victor, name: Bret Victor, kind: person, url: "https://worrydream.com/ABriefRantOnTheFutureOfInteractionDesign/", for: "Hands, and interfaces you can see into" }
       - { id: dave-ackley, name: Dave Ackley, kind: person, url: "https://mfm.rocks/", for: "The Movable Feast Machine: robust-first computing" }
       - { id: gary-bernhardt, name: Gary Bernhardt, kind: person, url: "https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript", for: "The Birth and Death of JavaScript: everything compiled to the browser" }
+
+  - id: yo-dawg
+    title: Yo Dawg
+    about: >-
+      Yo dawg, we heard you like emulators, so we put a Machine Room in your Machine Room, so you
+      can emulate while you emulate. Each of these opens another machine's page in the viewer,
+      where it runs, its own outline and viewer and all. Each one is a whole emulator, so open
+      them one at a time.
+    entries:
+      - { id: yo-pixie, name: PIXIE / SYMELEC, kind: place, url: "/machine/applications/pixie-symelec/", for: "Heinz Lemke's circuit editor of 1972 on the PDP-7 and 340" }
+      - { id: yo-unix, name: PDP-7 UNIX, kind: place, url: "/machine/systems/pdp-7-unix/", for: "UNIX as it began, on the PDP-7" }
+      - { id: yo-duel, name: DUEL, kind: place, url: "/machine/games/duel/", for: "Spacewar for two on the 340" }
+      - { id: yo-forth, name: Forth and the turtle, kind: place, url: "/machine/languages/forth-turtle/", for: "Mitch Bradley's PDP-7 Forth, drawing on the 340" }
+      - { id: yo-lcp, name: Little Computer People, kind: place, url: "/machine/games/little-computer-people/", for: "A little person in a house on the Apple ][" }
+      - { id: yo-mind-mirror, name: Mind Mirror, kind: place, url: "/machine/games/mind-mirror/", for: "Timothy Leary's mind mapping game on the Apple ][" }
+      - { id: yo-forth-apple, name: "Don's ProDOS Forth", kind: place, url: "/machine/languages/don-hopkins-prodos-forth/", for: "Don's Forth and H19 terminal on the Apple ][" }
+      - { id: yo-its, name: ITS, kind: place, url: "/machine/systems/its/", for: "The Incompatible Timesharing System on the PDP-10" }
+      - { id: yo-macsyma, name: MACSYMA, kind: place, url: "/machine/applications/macsyma/", for: "Symbolic algebra under ITS" }

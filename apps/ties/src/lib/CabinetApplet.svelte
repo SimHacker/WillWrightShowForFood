@@ -57,6 +57,9 @@
 	import DancePanel from './DancePanel.svelte';
 	import Outline from './Outline.svelte';
 	import WebPanel from './WebPanel.svelte';
+	import AboutPanel from './AboutPanel.svelte';
+	import MachineToolbar from './MachineToolbar.svelte';
+	import { toolbar } from './toolbar.svelte.js';
 	import { BusDance, speedLoad } from './bus-dance.svelte.js';
 	import { Deltas, PDP7_VOICES, Tally, pages, switchesSeedText, switchesSeedWord, watchedName } from '@wwsff/cabinet/dance';
 	import { forthCell } from '@wwsff/cabinet/forth-dict';
@@ -69,6 +72,8 @@
 	// `onprogram`, when given, owns the program menu: a pick is passed to it (the catalog page
 	// navigates to that program's entry), and the applet switches when `spec.program` changes.
 	let { spec, embedded = false, onprogram = undefined } = $props();
+	/** The page's toolbar, for now only what is pinned from About. */
+	const aboutBar = toolbar('pdp7');
 
 	const programs = PROGRAMS.map((p) => p.createInstance?.() ?? p);
 	const programById = (id) => programs.find((p) => p.id === id) ?? null;
@@ -3868,6 +3873,7 @@
 			/>
 		</div>
 		<!-- The panels, as an outline: each node opens and closes on its own, and remembers. -->
+		{#if !embedded}<MachineToolbar bar={aboutBar} label="The PDP-7's toolbar" />{/if}
 		<WebPanel />
 		<Outline id="pdp7-play" title="Play" hint="Demos, and recording and replaying what you do" bind:open={playOpen} summary={recording ? 'recording' : demoOn ? (demoHeld ? 'paused, yours now' : 'playing the demo') : ''}>
 			{@render playRow()}
@@ -3906,6 +3912,7 @@
 		<Outline id="pdp7-config" title="Settings" hint="Settings for the teletype and more. Each program sets them for you when you choose it." bind:open={configOpen}>
 			{@render configBody()}
 		</Outline>
+		{#if !embedded}<AboutPanel bar={aboutBar} machine="pdp7" />{/if}
 		{#snippet memGrip()}
 			<button
 				type="button"

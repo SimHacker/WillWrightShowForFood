@@ -29,9 +29,11 @@
 		class={['credit', node.kind, { compact }]}
 		href={node.url}
 		data-view={node.view ? '' : undefined}
+		data-name={node.name}
+		data-about={node.for}
 		target="_blank"
 		rel="noopener noreferrer"
-		title="{node.name}{node.for ? `: ${node.for}` : ''}. Opens {node.url} {node.view ? 'in the viewer at the top of the outline; ⌘-click for a new tab' : 'in a new tab'}.">{ICONS[node.kind] ?? '🔗'} {node.name}</a
+		title="{node.name}{node.for ? `: ${node.for}` : ''}. Opens {node.url} {node.view ? 'in the viewer; ⌘-click for a new tab' : 'in a new tab'}.">{ICONS[node.kind] ?? '🔗'} {node.name}</a
 	>
 {/snippet}
 

@@ -339,7 +339,7 @@
 			>
 				{#each list as c, i (c.id)}{@render gap(side, i)}{@render slot(c, side)}{/each}
 				{@render gap(side, list.length)}
-				{#if side === 'left' && !controls.length}<span class="empty">Empty: a 📌 by a control in the outline puts it here.</span>{/if}
+				{#if side === 'left' && !controls.length}<span class="empty">Empty: a 📌 in the outline puts that here.</span>{/if}
 			</span>
 		{/each}
 	</div>
