@@ -53,6 +53,15 @@ const kept = (key) => {
 	}
 };
 
+/**
+ * The page URL's `?music`: true when it is there (`?music`, `?music=1`, `?music=on`), false for
+ * `?music=0` or `?music=off`, null when absent. It turns the dance on or off for this visit only.
+ */
+export const urlMusic = () => {
+	const v = globalThis.location ? new URLSearchParams(globalThis.location.search).get('music') : null;
+	return v === null ? null : !/^(0|off|false|no)$/i.test(v);
+};
+
 /** How loud the engine under the music is; off unless the person picks it. */
 export const ENGINE_LEVELS = [
 	{ level: 0, label: 'Off' },
@@ -61,8 +70,13 @@ export const ENGINE_LEVELS = [
 	{ level: 1, label: 'Full' }
 ];
 
+/** Every dance on the page, so the viewer can quiet them all under a video. @type {Set<BusDance>} */
+export const DANCES = new Set();
+
 export class BusDance {
 	on = $state(false);
+	/** On, but silent until the first click or key, which browsers require before sound. */
+	asleep = $state(false);
 	/** @type {Style} */
 	style = $state('straight');
 	/** The Eno layers on, EN0 to EN3 as bits 1, 2, 4 and 8. @type {import('@wwsff/cabinet/dance').Eno} */
@@ -125,11 +139,13 @@ export class BusDance {
 	 * @param {string} [key] what its style, tempo and loops are kept under: the engine's, shared, by default
 	 */
 	constructor(voices, engine, key = engine) {
+		DANCES.add(this);
 		this.voices = voices;
 		this.#dance = new Dance(voices);
 		this.#engine = engine;
 		this.#key = `dance-${key}`;
-		const on = kept(ON) === true;
+		const asked = urlMusic();
+		const on = asked ?? kept(ON) === true;
 		const was = kept(this.#key);
 		if (STYLES.some((s) => s.id === was?.style)) this.style = this.#dance.style = was.style;
 		if (TEMPOS.includes(was?.bpm)) this.#bpm = was.bpm;
@@ -146,9 +162,11 @@ export class BusDance {
 	#wake() {
 		if (typeof window === 'undefined') return;
 		this.on = true;
+		this.asleep = true;
 		const go = () => {
 			window.removeEventListener('pointerdown', go, true);
 			window.removeEventListener('keydown', go, true);
+			this.asleep = false;
 			if (!this.on) return;
 			this.player.start();
 			this.player.engine(this.#engine);
@@ -176,6 +194,7 @@ export class BusDance {
 	/** From a click: browsers start sound only then. */
 	toggle() {
 		this.on = !this.on;
+		this.asleep = false;
 		if (this.on) {
 			this.player.start();
 			this.player.engine(this.#engine);
@@ -196,7 +215,15 @@ export class BusDance {
 	duck(on) {
 		if (on === this.ducked) return;
 		this.ducked = on;
-		this.player.duck(on);
+		this.player.duck(on || this.quieted);
+	}
+
+	/** Whether the dance is fading down under a video in the viewer. */
+	quieted = $state(false);
+	/** Fade down under a video, or back up; separate from `duck`, which the machine drives. @param {boolean} on */
+	quiet(on) {
+		this.quieted = on;
+		this.player.duck(on || this.ducked);
 	}
 
 	/** The Eno tracks, EN0 first, one button each. */

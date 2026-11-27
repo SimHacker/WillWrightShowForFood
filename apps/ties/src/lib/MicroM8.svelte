@@ -25,6 +25,7 @@
 	import { ENGINES, apple } from './apple.svelte.js';
 	import ApplePanels from './ApplePanels.svelte';
 	import MachineToolbar from './MachineToolbar.svelte';
+	import WebPanel from './WebPanel.svelte';
 	import Pinnable from './Pinnable.svelte';
 	import { toolbar } from './toolbar.svelte.js';
 	import RateSlider from './RateSlider.svelte';
@@ -407,6 +408,7 @@
 		{#if apple.locked && engaged}<p class="locked" role="status">{apple.locked}</p>{/if}
 	</div>
 
+	<WebPanel id="apple-popup" top />
 	<!-- As wide as the screen, so the toolbar's right end sits under the screen's corner. -->
 	<div class="under">
 		<MachineToolbar {bar} label="The Apple's toolbar" />

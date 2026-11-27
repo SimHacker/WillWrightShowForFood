@@ -37,6 +37,8 @@ const BELL_KEY = 'pdp10-bell-mute';
 const GRUE_KEY = 'pdp10-grue_warning';
 /** Set when the system job's log (LOGIN, GUNNER, the time…) should type on the console, as ITS starts. */
 const SYSLOG_KEY = 'pdp10-system-log';
+/** Set when GUNNER may log out an idle console, as it did at MIT. */
+const IDLE_KEY = 'pdp10-idle-logout';
 
 /**
  * What the console watches for, and the video it opens the first time: MC Frontalot's "It Is
@@ -118,6 +120,8 @@ class Pdp10 {
 	bellMuted = $state(keptFlag(BELL_KEY));
 	/** Whether the system job types its log on the console; off, ITS sends it to the null device. */
 	systemLog = $state(keptFlag(SYSLOG_KEY));
+	/** Whether GUNNER may log out an idle console; off, the page keeps the console's last input time current. */
+	idleLogout = $state(keptFlag(IDLE_KEY));
 	/** Whether the grue's video has played in this browser. */
 	grueWarned = $state(keptFlag(GRUE_KEY));
 	/** The last of what ITS printed, as one line, for the watches. */
@@ -205,6 +209,7 @@ class Pdp10 {
 		w.postMessage({ type: 'speed', mode: this.speed });
 		w.postMessage({ type: 'switches', word: this.switches });
 		w.postMessage({ type: 'syslog', tty: this.systemLog ? 0 : -1 });
+		w.postMessage({ type: 'idle', logout: this.idleLogout });
 		this.#toldDance = false;
 		if (this.dance.on) w.postMessage({ type: 'dance', on: (this.#toldDance = true) });
 		this.#then = 0;
@@ -282,6 +287,13 @@ class Pdp10 {
 		this.#worker?.postMessage({ type: 'syslog', tty: on ? 0 : -1 });
 	}
 
+	/** Let GUNNER log out an idle console, or keep the console looking typed on. @param {boolean} on */
+	setIdleLogout(on) {
+		this.idleLogout = on;
+		keep(IDLE_KEY, on ? '1' : '');
+		this.#worker?.postMessage({ type: 'idle', logout: on });
+	}
+
 	/** Forget that the grue has been met, so its video plays the next time. */
 	forgetGrue() {
 		this.grueWarned = false;
@@ -304,6 +316,7 @@ class Pdp10 {
 		openWeb(GRUE.url, {
 			title: GRUE.title,
 			reveal: true,
+			top: true,
 			buttons: [
 				{
 					label: 'Ignore Warning',

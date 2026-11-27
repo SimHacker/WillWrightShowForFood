@@ -18,8 +18,9 @@
 // In: { type: 'start', ... }, { type: 'keys', text }, { type: 'speed', mode }, { type: 'dance', on },
 // { type: 'switches', word }.
 // Out: out (text), phase (what it is doing), stats, dance, halt, error. In also: syslog (where
-// the system job types its log: tty 0 for the console, -1 for nowhere).
-import { ItsMachine, setSystemLog } from '@wwsff/cabinet/ka10';
+// the system job types its log: tty 0 for the console, -1 for nowhere), idle (whether GUNNER may
+// log out an idle console; if not, the console's last input time is kept current once a second).
+import { ItsMachine, keepTtyPresent, setSystemLog } from '@wwsff/cabinet/ka10';
 
 const BLOCK = 1024;
 const QUIET_MS = 3000;
@@ -176,6 +177,8 @@ let fastNow = true;
 let sysLog = -1;
 /** @type {number | null} */
 let sysLogSet = null;
+let idleLogout = false;
+let presentAt = 0;
 /** ITS has said IN OPERATION: its symbols are in core, and writing them sticks. */
 let up = false;
 let tail = '';
@@ -259,6 +262,7 @@ function slice() {
 		post({ type: 'error', message: e instanceof Error ? e.message : String(e) });
 	}
 	if (up && sysLogSet !== sysLog && setSystemLog(cpu, sysLog)) sysLogSet = sysLog;
+	if (up && !idleLogout && t0 - presentAt > 1000 && keepTtyPresent(cpu, 0)) presentAt = t0;
 	if (out) {
 		post({ type: 'out', text: out });
 		out = '';
@@ -337,6 +341,8 @@ onmessage = (e) => {
 		danceFrom(performance.now());
 	} else if (msg.type === 'syslog') {
 		sysLog = Number(msg.tty);
+	} else if (msg.type === 'idle') {
+		idleLogout = !!msg.logout;
 	} else if (msg.type === 'switches') {
 		switches = Number(msg.word) || 0;
 		if (m) m.cpu.SW = switches;

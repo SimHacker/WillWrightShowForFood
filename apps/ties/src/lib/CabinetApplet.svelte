@@ -3942,6 +3942,7 @@
 			{#if !embedded}<AboutPanel bar={aboutBar} machine="pdp7" move={moveNode} />{/if}
 		{/snippet}
 		<!-- The panels, as an outline: each node opens and closes on its own, and remembers; drag a grip to reorder. -->
+		<WebPanel id="pdp7-popup" top />
 		{#if !embedded}<MachineToolbar bar={aboutBar} label="The PDP-7's toolbar" />{/if}
 		{#each order as key (key)}
 			{@const NODES = { 'pdp7-viewer': viewerNode, 'pdp7-dance': danceNode, 'pdp7-play': playNode, 'pdp7-prog': progNode, 'pdp7-tty': ttyNode, 'pdp7-regs': regsNode, 'pdp7-mem': memNode, 'pdp7-rings': ringsNode, 'pdp7-debug': debugNode, 'pdp7-snaps': snapsNode, 'pdp7-config': configNode, 'pdp7-about': aboutNode }}

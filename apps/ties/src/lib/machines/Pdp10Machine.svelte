@@ -380,6 +380,11 @@
 	{@const run = runLine(p)}
 	<div class="program">
 		<p class="note">{p.about}</p>
+		{#if p.see?.length}
+			<p class="note">
+				{#each p.see as s (s.url)}<a href={s.url} target="_blank" rel="noopener noreferrer" data-view data-name={s.label} data-about={s.title} title="{s.title}. Opens in the viewer; ⌘-click for a new tab.">📍 {s.label}</a> {/each}
+			</p>
+		{/if}
 		<dl class="ends">
 			{#if run}<dt>Start</dt><dd>{@render lineButton(run)}</dd>{/if}
 			<dt>{p.id === 'ddt' ? 'Log out' : 'Quit'}</dt>
@@ -466,6 +471,10 @@
 		<p class="note">
 			<label title="ITS's system job types LOGIN, GUNNER, DRAGON, the time and the like on its console. Off, the page sets SYSCN to -1 once ITS is up, and the system job's log goes to the null device."
 				><input type="checkbox" checked={pdp10.systemLog} onchange={(e) => pdp10.setSystemLog(e.currentTarget.checked)} /> System log on the console</label
+			>
+			<label
+				title="GUNNER, ITS's idle killer, warns and then logs out a user idle for 30 minutes of ITS's clock, which at full speed is seconds. Off, the page keeps the console's time of last input (TTITM) current once a second, so GUNNER never finds it idle."
+				><input type="checkbox" checked={pdp10.idleLogout} onchange={(e) => pdp10.setIdleLogout(e.currentTarget.checked)} /> GUNNER logs out an idle console</label
 			>
 		</p>
 		{#if pdp10.voice.speak}<div class="row"><VoicePicker /><VoiceTone /></div>{/if}
@@ -599,6 +608,7 @@
 		{#if pdp10.phase}{pdp10.phase}…{:else if focused}Typing to ITS{:else}Click the {pdp10.view === 'glass' ? 'screen' : 'paper'}, or just type, to type to ITS{/if}
 	</p>
 	{#if pdp10.error}<p class="status failed">{pdp10.error}</p>{/if}
+	<WebPanel id="pdp10-popup" top />
 	<MachineToolbar {bar} label="The PDP-10's toolbar" />
 	<div class="outline" aria-label="The PDP-10's outline">
 		{#each order as key (key)}

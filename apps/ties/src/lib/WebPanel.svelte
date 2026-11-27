@@ -11,13 +11,26 @@
 	import MarkdownIt from 'markdown-it';
 	import Outline from './Outline.svelte';
 	import { closeWeb, githubRaw, openWeb, viewable, webPanel } from './web-panel.svelte.js';
+	import { DANCES } from './bus-dance.svelte.js';
 
 	/**
 	 * `id` is its place in the page's outline order, and `move` lets it be dragged there like
-	 * any node; it opens where it was put.
-	 * @type {{ id?: string, move?: (id: string, to: string | number) => void }}
+	 * any node; it opens where it was put. With `top` it is the place above the whole outline
+	 * that shows only views opened with `top`, the ones that pop up unasked; the one without
+	 * shows the rest. A top view is not in the outline's order, so it has no grip, and its ✕
+	 * is large, since it is there to be dismissed.
+	 * @type {{ id?: string, move?: (id: string, to: string | number) => void, top?: boolean }}
 	 */
-	let { id = 'viewer', move } = $props();
+	let { id = 'viewer', move, top = false } = $props();
+
+	// A video open in the viewer is music of its own: the page's dances fade down under it.
+	$effect(() => {
+		if (webPanel.view?.top !== top || webPanel.view.kind !== 'youtube' || !webPanel.open) return;
+		for (const d of DANCES) d.quiet(true);
+		return () => {
+			for (const d of DANCES) d.quiet(false);
+		};
+	});
 
 	/** @typedef {import('./web-panel.svelte.js').ViewKind} Kind */
 	const MIN = 120;
@@ -143,7 +156,7 @@
 
 	/** @param {MouseEvent} e */
 	function caught(e) {
-		if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+		if (top || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 		const a = /** @type {Element | null} */ (e.target)?.closest?.('a[href]');
 		if (!(a instanceof HTMLAnchorElement) || a.closest('.web .links')) return;
 		if (!viewable(a.href) && !a.hasAttribute('data-view')) return;
@@ -168,7 +181,7 @@
 				{/if}
 			{/each}
 			<a class="out" href={v.url} target="_blank" rel="noopener noreferrer" title="Open {v.url} in a new tab">{v.kind === 'youtube' ? 'YouTube' : v.raw ? 'GitHub' : 'New tab'} ↗</a>
-			<button type="button" title="Close the viewer" aria-label="Close the viewer" onclick={closeWeb}>✕</button>
+			<button type="button" class={{ close: top }} title={top ? 'Close this, and go on' : 'Close the viewer'} aria-label={top ? `Close ${v.title}` : 'Close the viewer'} onclick={closeWeb}>✕</button>
 		</span>
 	{/if}
 {/snippet}
@@ -182,12 +195,12 @@
 	</div>
 {/snippet}
 
-{#if webPanel.view}
+{#if webPanel.view && webPanel.view.top === top}
 	{@const v = webPanel.view}
 	{@const h = heights[v.kind]}
 	{@const failed = doc?.url === v.url ? doc.failed : undefined}
-	<div class="web" {@attach (el) => void (webPanel.reveals && v.reveal && el.scrollIntoView({ block: 'nearest', behavior: 'smooth' }))}>
-		<Outline {id} {move} title={v.title.length > 64 ? `${v.title.slice(0, 63)}…` : v.title} hint="The viewer: {v.url}" end={links} bind:open={webPanel.open}>
+	<div class={['web', { top }]} {@attach (el) => void (webPanel.reveals && v.reveal && el.scrollIntoView({ block: 'nearest', behavior: 'smooth' }))}>
+		<Outline {id} move={top ? undefined : move} title={v.title.length > 64 ? `${v.title.slice(0, 63)}…` : v.title} hint="The viewer: {v.url}" end={links} bind:open={webPanel.open}>
 			{#key v.url}
 				{#if v.kind === 'youtube'}
 					<iframe
@@ -243,6 +256,26 @@
 {/if}
 
 <style>
+	/* Popped up unasked: marked off from the outline under it. */
+	.web.top {
+		padding: 0.2rem 0.4rem;
+		border: 1px solid #c90;
+		border-radius: 6px;
+	}
+	.close {
+		min-width: 2rem;
+		height: 1.8rem;
+		border: 1px solid #c90;
+		border-radius: 4px;
+		background: #c90;
+		color: #000;
+		font: 700 1.1rem/1 system-ui, sans-serif;
+		cursor: pointer;
+	}
+	.close:hover,
+	.close:focus-visible {
+		background: #fc3;
+	}
 	.links {
 		display: inline-flex;
 		align-items: center;

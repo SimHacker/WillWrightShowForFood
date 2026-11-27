@@ -44,3 +44,17 @@ export function setSystemLog(bus: Ka10Bus, tty: number): boolean {
 	bus.deposit(a, tty < 0 ? 0o777777777777n : BigInt(tty));
 	return true;
 }
+
+/**
+ * Marks a terminal as typed on just now: its time of last input (TTITM, which the system itself
+ * does not use) set to the system's clock (TIME, in 30ths of a second). GUNNER warns and then logs
+ * out a user idle past 30 minutes of that clock, which at full speed is seconds of wall time.
+ * False if ITS is not far enough up to have its symbols.
+ */
+export function keepTtyPresent(bus: Ka10Bus, tty: number): boolean {
+	const ttitm = itsAddress(bus, "TTITM");
+	const time = itsAddress(bus, "TIME");
+	if (ttitm === null || time === null) return false;
+	bus.deposit(ttitm + tty, bus.examine(time));
+	return true;
+}

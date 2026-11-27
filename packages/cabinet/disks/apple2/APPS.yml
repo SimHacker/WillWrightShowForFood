@@ -109,6 +109,27 @@ apps:
       - label: "Put the Program Disk Back"
         insert: { drive1: game }
 
+  - id: zork
+    title: "Zork I, II and III"
+    path: games/infocom/zork
+    description: "Infocom's Zork trilogy, cut from the MIT Zork that runs on the PDP-10's ITS, on 4am's cracks: one start for each game. Each asks whether to use 80 columns; the 40-column answer is given by itself."
+    tags: { publisher: infocom, year: 1981, by: infocom }
+    drives: 1
+    disks:
+      zork-i: { file: collection/infocom/zork-i-r88b-4am.dsk, label: "Zork I: The Great Underground Empire" }
+      zork-ii: { file: collection/infocom/zork-ii-r48-4am.dsk, label: "Zork II: The Wizard of Frobozz" }
+      zork-iii: { file: collection/infocom/zork-iii-r17-4am.dsk, label: "Zork III: The Dungeon Master" }
+    starts:
+      - { label: "Zork I", drives: [zork-i] }
+      - { label: "Zork II", drives: [zork-ii] }
+      - { label: "Zork III", drives: [zork-iii] }
+    actions:
+      - label: "40 Columns"
+        prompt: "80 COLUMNS? (Y/N):"
+        keys: "N"
+      - label: "80 Columns"
+        keys: "Y"
+
   - id: hopkins-forth
     title: Don Hopkins's ProDOS Forth
     path: languages/don-hopkins-prodos-forth

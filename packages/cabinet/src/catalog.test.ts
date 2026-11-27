@@ -50,7 +50,10 @@ test("the tree and the URLs work on the real catalog", () => {
 	const { catalog } = cabinetCatalog();
 	const root = catalog.tree()!;
 	assert.deepEqual(root.children.map((n) => n.slug), ["games", "languages", "applications", "devices", "systems", "machines", "diagnostics"]);
-	assert.ok(catalog.tree("games")!.children.every((n) => n.entry), "games is one flat list");
+	const infocom = catalog.tree("games")!.children.find((n) => n.slug === "infocom");
+	assert.equal(infocom?.title, "Infocom", "games holds the Infocom folder");
+	assert.equal(parseLaunch(catalog, "/machine/games/infocom/zork/")!.entry?.runs?.app, "zork");
+	assert.equal(parseLaunch(catalog, "/machine/games/zork/")!.entry?.runs?.program, "zork");
 	assert.ok(catalog.tree("languages")!.children.every((n) => n.entry), "languages is one flat list");
 	assert.equal(catalog.tree("machines/pdp-7")!.children.length, catalog.find({ tags: { machine: "pdp7" } }).length);
 

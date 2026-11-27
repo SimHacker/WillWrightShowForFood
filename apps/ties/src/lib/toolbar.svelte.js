@@ -27,10 +27,11 @@ import { seekHome } from './outline-reveal.svelte.js';
 /** @typedef {import('svelte').Snippet} Brief */
 /** @typedef {{ on: boolean, at: number, side?: Side, shut?: boolean }} Place */
 
-/** The toolbar a new player gets, by machine: the machine, time, then what reaches it; and how fast. */
+/** The toolbar a new player gets, by machine: the machine, time, then what reaches it, the music; and how fast. */
 const DEFAULTS = /** @type {Record<string, { left: string[], right: string[] }>} */ ({
-	apple: { left: ['reboot', 'reset', 'pause', 'step', 'speed', 'mute', 'caps', 'joystick'], right: ['readout'] },
-	pdp10: { left: ['restart', 'speed', 'tty-view', 'baud', 'tty-speak', 'altmode', 'ctrl-z', 'ctrl-g', 'copy-paper', 'dance-play'], right: ['readout'] }
+	apple: { left: ['reboot', 'reset', 'pause', 'step', 'speed', 'mute', 'caps', 'joystick', 'dance-play', 'jiggle'], right: ['readout'] },
+	pdp10: { left: ['restart', 'speed', 'tty-view', 'baud', 'tty-speak', 'altmode', 'ctrl-z', 'ctrl-g', 'copy-paper', 'dance-play', 'jiggle'], right: ['readout'] },
+	pdp7: { left: ['dance-play', 'jiggle'], right: [] }
 });
 
 export class Toolbar {

@@ -276,3 +276,5 @@ sections:
       - { id: yo-forth-apple, name: "Don's ProDOS Forth", kind: place, url: "/machine/languages/don-hopkins-prodos-forth/", for: "Don's Forth and H19 terminal on the Apple ][" }
       - { id: yo-its, name: ITS, kind: place, url: "/machine/systems/its/", for: "The Incompatible Timesharing System on the PDP-10" }
       - { id: yo-macsyma, name: MACSYMA, kind: place, url: "/machine/applications/macsyma/", for: "Symbolic algebra under ITS" }
+      - { id: yo-zork-its, name: "Zork on ITS", kind: place, url: "/machine/games/zork/", for: "MIT's Zork in MDL on the PDP-10, the whole game, 1977" }
+      - { id: yo-zork-apple, name: "Zork on the Apple ][", kind: place, url: "/machine/games/infocom/zork/", for: "Infocom's Zork I, II and III, cut from it, 1981" }

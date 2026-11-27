@@ -426,3 +426,234 @@ disks:
     bytes: 143360
     sha1: 9c7d8601a4b9718f68d1cac11789b84c65bff399
     source: "disk images/games/h/hulk, the (1981)(scott adams)(disk 2 of 2)[cr syndicate - whip].dsk"
+  - file: collection/infocom/hitchhikers-guide-r47-4am.dsk
+    bytes: 143360
+    sha1: 45801bb88572f1060adf3d9e114ea33ed1085992
+    source: "disk images/collections/4am collection/thehitchhikersguidetothegalaxy_r47_4amcrack/00playable.dsk"
+  - file: collection/infocom/planetfall-r26-4am.dsk
+    bytes: 143360
+    sha1: 8161c0a8ed770c2632d1c47d4c946b0b6ff8ae9a
+    source: "disk images/collections/4am collection/planetfall_r26_4amcrack/00playable.dsk"
+  - file: collection/infocom/enchanter-r16-4am.dsk
+    bytes: 143360
+    sha1: dc5cb42721048865d2ac2c5e1c97cad2909a598b
+    source: "disk images/collections/4am collection/enchanter_r16_4amcrack/00playable.dsk"
+  - file: collection/infocom/deadline-r26-4am.dsk
+    bytes: 143360
+    sha1: 5f503d876abd4fc9d83cd461b9a0ab5bc03d3752
+    source: "disk images/collections/4am collection/deadline_r26_4amcrack/00playable.dsk"
+  - file: collection/infocom/infidel-r22-4am.dsk
+    bytes: 143360
+    sha1: 18de2523b9471c068f4a49f1e3f227061ee0c593
+    source: "disk images/collections/4am collection/infidel_r22_4amcrack/00playable.dsk"
+  - file: collection/infocom/suspect-r14-4am.dsk
+    bytes: 143360
+    sha1: 2c199c311c2d5e3acfac8536a69ce7abc14bb12d
+    source: "disk images/collections/4am collection/suspect_r14_4amcrack/00playable.dsk"
+  - file: collection/infocom/starcross-r15-4am.dsk
+    bytes: 143360
+    sha1: e87efd321721ddcbf7f366f1c45ac8989d6a1945
+    source: "disk images/collections/4am collection/starcross_r15_4amcrack/00playable.dsk"
+  - file: collection/infocom/cutthroats-r23-4am.dsk
+    bytes: 143360
+    sha1: c9ee2ae1101e1e8ccb48b6b72d67e6f03af99ea8
+    source: "disk images/collections/4am collection/cutthroats_r23_4amcrack/00playable.dsk"
+  - file: collection/infocom/seastalker-r15-4am.dsk
+    bytes: 143360
+    sha1: dcab80957276b318bfdc9d341a94f62244334fce
+    source: "disk images/collections/4am collection/seastalker_r15_4amcrack/00playable.dsk"
+  - file: collection/infocom/suspended-r8-4am.dsk
+    bytes: 143360
+    sha1: 9feebca1ab120a2669b12a929eab5639f6c122d2
+    source: "disk images/collections/4am collection/suspended_r8_4amcrack/00playable.dsk"
+  - file: collection/adventure/mystery-house-4am.dsk
+    bytes: 143360
+    sha1: d32eba44cbe43ed43bb73643903c777fbb9cbf59
+    source: "disk images/collections/4am collection/mysteryhouse4amcrack/00playable.dsk"
+  - file: collection/adventure/transylvania-1985-4am.dsk
+    bytes: 143360
+    sha1: 18ec83ce3520e8fae2eb6e8d3312e9712baa5459
+    source: "disk images/collections/4am collection/transylvania1985_4amcrack/00playable.dsk"
+  - file: collection/arcade/sneakers-4am.dsk
+    bytes: 143360
+    sha1: c61658951c34359ebae78eec73d2ee64524d57fd
+    source: "disk images/collections/4am collection/sneakers4amcrack/00playable.dsk"
+  - file: collection/arcade/robotron-2084-4am.dsk
+    bytes: 143360
+    sha1: 29b874d077815e4e5e7c69cfc88a23b15b417fc5
+    source: "disk images/collections/4am collection/robotron20844amcrack/00playable.dsk"
+  - file: collection/arcade/frogger-4am.dsk
+    bytes: 143360
+    sha1: 8e0c597e4f51657874dd72da47e7ec8686c17abc
+    source: "disk images/collections/4am collection/frogger4amcrack/00playable.dsk"
+  - file: collection/arcade/oils-well-4am.dsk
+    bytes: 143360
+    sha1: 637c7534519a3b7e22e61b739f169a0c9727ca7b
+    source: "disk images/collections/4am collection/oilswell4amcrack/00playable.dsk"
+  - file: collection/arcade/miner-2049er-4am.dsk
+    bytes: 143360
+    sha1: 06dde9ba2394ef6f6d12856afe6d106396ab5791
+    source: "disk images/collections/4am collection/miner2049er_rev2_4amcrack/00playable.dsk"
+  - file: collection/arcade/burgertime-4am.dsk
+    bytes: 143360
+    sha1: 21506ea262aa0c940312b26bd1097e8c63e34e82
+    source: "disk images/collections/4am collection/burgertime4amcrack/00playable.dsk"
+  - file: collection/arcade/donkey-kong-4am.dsk
+    bytes: 143360
+    sha1: 7e18fd14bcf2a6f380533c6c7552c10c793c768d
+    source: "disk images/collections/4am collection/donkeykong4amcrack/00playable.dsk"
+  - file: collection/arcade/centipede-4am.dsk
+    bytes: 143360
+    sha1: 51e06dd3727148b5a2f809f2a46bd9e0281b3869
+    source: "disk images/collections/4am collection/centipede4amcrack/00playable.dsk"
+  - file: collection/arcade/jumpman-4am.dsk
+    bytes: 143360
+    sha1: 1c43eac018c0a04e70177cf413d7b20b4eaa3a89
+    source: "disk images/collections/4am collection/jumpman4amcrack/00playable.dsk"
+  - file: collection/arcade/lock-n-chase-4am.dsk
+    bytes: 143360
+    sha1: 00a0bbf0fac00448fbec3fe0a841dfac65ca2fb1
+    source: "disk images/collections/4am collection/locknchase4amcrack/playable.dsk"
+  - file: collection/arcade/aztec-4am.dsk
+    bytes: 143360
+    sha1: 71d639bb9b55369abc2ef534bab6b74a731b7e65
+    source: "disk images/collections/4am collection/aztec4amcrack/00playable.dsk"
+  - file: collection/arcade/archon-4am.dsk
+    bytes: 143360
+    sha1: fd960fdcb13f5ff1a115f7f4b33126a43bb3927a
+    source: "disk images/collections/4am collection/archon4amcrack/00playable.dsk"
+  - file: collection/arcade/spy-hunter-4am.dsk
+    bytes: 143360
+    sha1: 15679a3aed036e6cfc32ea57015e4b06a892ab48
+    source: "disk images/collections/4am collection/spyhunter4amcrack/playable.dsk"
+  - file: collection/arcade/paperboy-4am.dsk
+    bytes: 143360
+    sha1: 37da2f836f9182c53931a8f08827f72826f844ac
+    source: "disk images/collections/4am collection/paperboy4amcrack/00playable.dsk"
+  - file: collection/arcade/arkanoid-4am.dsk
+    bytes: 143360
+    sha1: 4ac7d069e9b189405c0b345ab71904b357aa8393
+    source: "disk images/collections/4am collection/arkanoid4amcrack/00playable.dsk"
+  - file: collection/arcade/bubble-bobble-4am.dsk
+    bytes: 143360
+    sha1: eb65145be3bbb67cdbadc8c9e2924fe5648342d4
+    source: "disk images/collections/4am collection/bubblebobble4amcrack/00playable.dsk"
+  - file: collection/arcade/championship-lode-runner-4am.dsk
+    bytes: 143360
+    sha1: 67035e6a4960ce764d216ab265b0f887ec053f67
+    source: "disk images/collections/4am collection/championshiploderunner4amcrack/00playable.dsk"
+  - file: collection/arcade/jungle-hunt-4am.dsk
+    bytes: 143360
+    sha1: 939e07e5aa2a0cd3792fa50f52c868657e35bb6b
+    source: "disk images/collections/4am collection/junglehunt4amcrack/00playable.dsk"
+  - file: collection/arcade/dig-dug-4am.dsk
+    bytes: 143360
+    sha1: 2c81ade8250936b7a4751958328c93bf8f3323c4
+    source: "disk images/collections/4am collection/digdugdatasoft4amcrack/00playable.dsk"
+  - file: collection/arcade/defender-4am.dsk
+    bytes: 143360
+    sha1: 0c5298ab6459bb966c7147157206c660fd8b6a7e
+    source: "disk images/collections/4am collection/defenderatari4amcrack/playable.dsk"
+  - file: collection/arcade/kung-fu-master-4am.dsk
+    bytes: 143360
+    sha1: 149576958a5f0208a3b16c82002eca47dabace18
+    source: "disk images/collections/4am collection/kungfumaster4amcrack/00playable.dsk"
+  - file: collection/arcade/bouncing-kamungas-4am.dsk
+    bytes: 143360
+    sha1: 7afe51c5db44bfdfa190c8fa14ebfd1c18551ece
+    source: "disk images/collections/4am collection/bouncingkamungas4amcrack/00playable.dsk"
+  - file: collection/arcade/castle-wolfenstein-4am.dsk
+    bytes: 143360
+    sha1: 559a8cd5d584e7a132647b897e0ecad64c07fe0a
+    source: "disk images/collections/4am collection/castlewolfenstein4amcrack/00playable.dsk"
+    note: "microM8 stops while reading it (the nibblizer: index out of range [13] with length 13); another copy is wanted"
+  - file: collection/arcade/hero-4am.dsk
+    bytes: 143360
+    sha1: a2bbfb9829aa55bb8f51dd5b80f9a76081c51e90
+    source: "disk images/collections/4am collection/hero4amcrack/00playable.dsk"
+  - file: collection/arcade/koronis-rift-4am.dsk
+    bytes: 143360
+    sha1: 2569fa448cabaff6be14314f4293e953ecc3cd3b
+    source: "disk images/collections/4am collection/koronisrift4amcrack/00playable.dsk"
+  - file: collection/arcade/ballblazer-4am.dsk
+    bytes: 143360
+    sha1: ecc85c358ccb8373e9872733ed00a40f9b2bcad2
+    source: "disk images/collections/4am collection/ballblazer4amcrack/00playable.dsk"
+  - file: collection/strategy/seven-cities-of-gold-4am.dsk
+    bytes: 143360
+    sha1: 60b6078b01fec317db915ad3c39b03ec2119e116
+    source: "disk images/collections/4am collection/sevencitiesofgold4amcrack/00playable.dsk"
+  - file: collection/strategy/robotwar-4am.dsk
+    bytes: 143360
+    sha1: 5248621b9ec6d6ee1980847dcdf419cc517f7a4a
+    source: "disk images/collections/4am collection/robotwar4amcrack/00playable.dsk"
+    note: "microM8 stops while reading it (the nibblizer: index out of range [13] with length 13); another copy is wanted"
+  - file: collection/strategy/autoduel-4am.dsk
+    bytes: 143360
+    sha1: 5db8161849c9a9a62c4ddc32f7f861e0dfab3677
+    source: "disk images/collections/4am collection/autoduel4amcrack/00playable.dsk"
+  - file: collection/strategy/ultima-iv-4am.dsk
+    bytes: 143360
+    sha1: de6785de3b3a1d443d8e4c1aee4e17f70ede5c08
+    source: "disk images/collections/4am collection/ultimaiv4amcrack/00playable.dsk"
+  - file: collection/strategy/ultima-v-4am.dsk
+    bytes: 143360
+    sha1: 06606409c7d7425a3558829a0884b299bde3f0ba
+    source: "disk images/collections/4am collection/ultimav4amcrack/00playable.dsk"
+  - file: collection/strategy/might-and-magic-4am.dsk
+    bytes: 143360
+    sha1: 8e3eced8ce1268b37ddd8da6749e1e013679b5e0
+    source: "disk images/collections/4am collection/mightandmagic4amcrack/00playable.dsk"
+  - file: collection/strategy/elite-4am.dsk
+    bytes: 143360
+    sha1: 5fcbd7d8de91a6dbe4d65fa2e7843f493d5ba647
+    source: "disk images/collections/4am collection/elite4amcrack/00playable.dsk"
+  - file: collection/sports/winter-games-4am.dsk
+    bytes: 143360
+    sha1: 2036ded7db61ff5bcbf5ce4360f5aa6a83b776ed
+    source: "disk images/collections/4am collection/wintergames4amcrack/00playable.dsk"
+  - file: collection/sports/summer-games-4am.dsk
+    bytes: 143360
+    sha1: daac61fe8fd653dd7b6a2a93c379dc69d8645281
+    source: "disk images/collections/4am collection/summergames4amcrack/00playable.dsk"
+  - file: collection/sports/california-games-side-a-4am.dsk
+    bytes: 143360
+    sha1: 97a5a792a936e13131ae37c3bdd32369d1eea8c0
+    source: "disk images/collections/4am collection/californiagames4amcrack/california games (4am crack) side a.dsk"
+  - file: collection/sports/california-games-side-b-4am.dsk
+    bytes: 143360
+    sha1: 4a649cf48658f1150477bc712070acf40994d21e
+    source: "disk images/collections/4am collection/californiagames4amcrack/california games (4am crack) side b.dsk"
+  - file: collection/simulation/three-mile-island-4am.dsk
+    bytes: 143360
+    sha1: 3f5355e2d53c6f794bab1fda66aaf864da5588b6
+    source: "disk images/collections/4am collection/threemileisland4amcrack/00playable.dsk"
+    note: "microM8 stops while reading it (the nibblizer: index out of range [13] with length 13); another copy is wanted"
+  - file: collection/learning/rockys-boots-4am.dsk
+    bytes: 143360
+    sha1: d1ee264209ad6b497a9c0415954c32f3df788f52
+    source: "disk images/collections/4am collection/rockysbootsv40_4amcrack/playable.dsk"
+  - file: collection/learning/delta-drawing-4am.dsk
+    bytes: 143360
+    sha1: 0f9b32bcade9aaac27c6a2f797e4b6e3b7f8f4c2
+    source: "disk images/collections/4am collection/deltadrawing4amcrack/00playable.dsk"
+  - file: collection/learning/carmen-sandiego-europe-4am.dsk
+    bytes: 143360
+    sha1: c4ee1714220a00286f26daaa80b791425a5689d9
+    source: "disk images/collections/4am collection/whereineuropeiscarmensandiego4amcrack/00playable.dsk"
+  - file: collection/learning/bank-street-writer-ii-4am.dsk
+    bytes: 143360
+    sha1: 5b69dbe5a41a87a61c9ca70f0d47d6ed555f4ef2
+    source: "disk images/collections/4am collection/bankstreetwriterii4amcrack/00playable.dsk"
+  - file: collection/arcade/lode-runner-1983.dsk
+    bytes: 143360
+    sha1: 9904c2e6685b33f554be2cac41b3084322e5db34
+    source: "disk images/games/l/lode runner (1983)(broderbund)[cr clean crack band].dsk"
+  - file: collection/arcade/karateka-1984.dsk
+    bytes: 143360
+    sha1: 4f40a036a46ef8a197abb8dfdb5121dc03271626
+    source: "disk images/games/k/karateka (1984)(broderbund)[cr association of broadcasting crackers].dsk"
+  - file: collection/arcade/choplifter-san-inc.dsk
+    bytes: 143360
+    sha1: 1a861c50e8e6cbbf894829e166104019b9008a7d
+    source: "disk images/collections/san inc cracks/choplifter_18k_file_dos_san_inc_crack/choplifter_18k_file_dos_san_inc_crack.dsk"

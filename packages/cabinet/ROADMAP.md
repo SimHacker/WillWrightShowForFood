@@ -36,6 +36,7 @@ to 25). Where a design already has a home it is linked, not repeated:
 | 23 | The Korz IDE from the Onward! 2014 paper: slot views, objects as projections, navigation by dimension, the why browser | the inspector is read-only today | [KORZ-INSPECT.md, the Korz IDE](KORZ-INSPECT.md#the-korz-ide-in-the-paper-and-what-it-takes-here) |
 | 24 | Mitch's metacompiler in TypeScript on Korz; a Forth CPU device for the display terminal | after the linker (row 19) | [ASSEMBLERS.md, the metacompiler](ASSEMBLERS.md#mitchs-metacompiler-in-typescript-on-korz) |
 | 25 | Other Forth hardware: a Novix NC4016 running cmForth, a GA144 running arrayForth | after the Forth device is stable | [FORTH-DEVICE.md, other Forth hardware](FORTH-DEVICE.md#other-forth-hardware) |
+| 26 | A Micropolis CPU: the C++ WebAssembly engine as the oracle, a TypeScript engine, then Korz interpret, resolve and compile rungs; every phase a slot to watch, swap or extend; Chaim's reverse diagrams live on it, and more | SimCity opened all the way, as Alan Kay asked of software; the same rungs the PDP-7 and Apple have | [§17](#17-a-micropolis-cpu) |
 
 Odds and ends are in [§14](#14-small-items).
 
@@ -922,5 +923,69 @@ with the test as the proof; the tape stays the program.
 
 All of it runs in the page as a panel, verifying on every edit:
 [CARTRIDGES.md §4](CARTRIDGES.md#4-live-decoding-from-a-binary-back-to-source).
+
+## 17. A Micropolis CPU
+
+Don's note, 2026-11-27: make a Micropolis CPU, with the WebAssembly C++ code as the baseline, then
+a TypeScript engine, then a Korz interpreter, table and compiler. Open SimCity up the way Alan Kay
+asked of software, for instrumentation, modules and extension. Hook up Chaim Gingold's live
+diagrams, and design many more.
+
+Nothing here is built yet. The plan treats the simulator as a processor. Its instruction set
+is the simulation's phases, and its memory is the city: the tile map, the overlay maps, the
+census, the budget and the random number state. The rungs follow [KORZ-CPU.md](KORZ-CPU.md#the-rungs).
+
+| Rung | What it is | Plays the part of |
+|---|---|---|
+| `wasm` | MicropolisCore's C++ engine (`packages/micropolis-engine/src`, Emscripten), unchanged | microM8 on the Apple: the oracle |
+| `switch` | A TypeScript port, one function per phase, plain arrays for the maps | `M6502`, `Pdp7` |
+| `interpret` | Each phase a slot in a Korz sea, looked up on every dispatch | the kit's interpreter |
+| `resolve` | The same slots bound once into tables: the table | the kit's default |
+| `compile` | Phases fused into one step for a given set of slots, rebuilt when a slot changes | the PDP-7 and Apple compilers |
+
+**The phases are the instructions.** The engine's simulation loop (`simulate.cpp`) is a 16-step
+cycle. Step 0 sets the RCI demand valves and clears the census. Steps 1 to 8 scan the map in
+eight strips, growing zones. Step 9 takes the census and collects tax, and step 10 decays the
+traffic and growth maps. Steps 11 to 14 are the power scan, then pollution, terrain and land
+value, then crime, then population density. Step 15 does the fire and police analysis and the
+disasters. The budget runs outside the cycle. Each step becomes a slot with named inputs and
+outputs, keyed by phase and city, in the same way Korz keys an opcode by machine and mode.
+
+**The oracle check.** Every rung loads the same `.cty`, seeds the same random number generator
+(`random.cpp`, ported exactly), and runs the same ticks. After each phase, the maps, census and
+budget are compared with the `wasm` rung, and the first cell that differs, with its phase and
+tick, fails the test. This is how the PDP-7 and Apple rungs are kept honest. It needs a WASM
+build that can stop between phases and hand over its arrays. Adding that hook is the first change
+to MicropolisCore.
+
+**Open, in Alan Kay's sense.** With the phases as slots, a person can:
+
+- **Watch** any slot's inputs and outputs as they change: a probe on the traffic phase, a
+  graph of one tile's land value over time, a log of why a zone did not grow.
+- **Swap** a phase for another one, such as a different traffic model, a pollution rule from
+  a lesson plan, or the original 1989 rule beside the 2008 GPL one, and run them side by side
+  on one city.
+- **Extend** the city with new phases and new maps (water, noise, a festival) that reach the
+  others only through slots, so the base rules stay untouched.
+- **Script** all of it through the UI driver ([§8](#8-driving-the-ui)), which the tests use too.
+
+**Chaim's diagrams, live.** Chaim Gingold's reverse diagrams draw SimCity's loop and its
+cellular automata from the source. Here, each box would be bound to its slot and redrawn every
+tick from the running city, so the diagram becomes a view into the simulation. His book and
+diagrams are his work. Ask him before using them, in his way: one small, self-contained
+request at a time ([characters/chaim-gingold](../../characters/chaim-gingold/README.md);
+[constructionist-simcity-response.md](../../process/constructionist-simcity-response.md)).
+More diagrams to design: power flow, traffic trips as they search, the zone growth decision
+for one tile, the RCI demand valves, the budget as a flow chart, and a heat map per slot of
+where the time goes.
+
+**Order.** (1) a WASM build that steps one phase at a time and exposes its arrays; (2) the
+`wasm` rung as a cabinet machine page, with the map drawn by MicropolisCore's tile renderer;
+(3) the TypeScript `switch` rung, phase by phase, with each phase passing the oracle check before
+the next is started; (4) the Korz `interpret`, `resolve` and `compile` rungs on the CPU kit;
+(5) probes, phase swapping and new phases in the outline; (6) the live diagrams.
+
+The engine is GPL-3.0, and the name "Micropolis" has its own license (`MicropolisPublicNameLicense.md`
+in MicropolisCore). Read both before any announcement.
 
 ↑ [README](README.md) · [DESIGN](DESIGN.md) · [TAGS-AND-PIES](TAGS-AND-PIES.md)

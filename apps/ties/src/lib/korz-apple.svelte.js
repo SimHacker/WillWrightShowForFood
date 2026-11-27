@@ -340,6 +340,9 @@ class KorzApple {
 		this.#chargen = rom ? glyphsFromRom(rom) : null;
 	}
 
+	/** The name of the disk the board's controller holds, by drive. */
+	#inDrive = ['', ''];
+
 	/** Keep what the drives have written, then build a new board on `rung` and reset. */
 	#build() {
 		const rom = this.#rom;
@@ -347,7 +350,8 @@ class KorzApple {
 		if (this.#disk) {
 			for (let i = 0; i < 2; i++) {
 				const cur = this.#images[i];
-				const written = cur ? this.#disk.image(i + 1) : null;
+				// A boot may have put another disk in this drive: the old one's writes are not its.
+				const written = cur && cur.name === this.#inDrive[i] ? this.#disk.image(/** @type {1 | 2} */ (i + 1)) : null;
 				if (cur && written) this.#images[i] = { ...cur, bytes: written };
 			}
 		}
@@ -362,10 +366,12 @@ class KorzApple {
 		this.#seed = null;
 		board.installLanguageCard();
 		const disk = new DiskII(rom.slot);
+		this.#inDrive = ['', ''];
 		for (const image of this.#images) {
 			if (!image) continue;
 			disk.insert(/** @type {1 | 2} */ (image.drive + 1), image.bytes, image.name);
 			if (image.protect) disk.protect(/** @type {1 | 2} */ (image.drive + 1), true);
+			this.#inDrive[image.drive] = image.name;
 		}
 		board.plug(6, disk);
 		this.#videx = null;
@@ -888,6 +894,7 @@ class KorzApple {
 		}
 		this.#images[drive] = entry;
 		this.#disk?.insert(/** @type {1 | 2} */ (drive + 1), bytes, name);
+		this.#inDrive[drive] = name;
 		if (protect) this.#disk?.protect(/** @type {1 | 2} */ (drive + 1), true);
 		const names = [...this.drives];
 		names[drive] = name;

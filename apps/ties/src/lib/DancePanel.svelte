@@ -29,7 +29,7 @@
 	const rates = TEMPOS.map((bpm) => ({ label: String(bpm), title: `${bpm} beats a minute, sixteenths ${Math.round(15000 / bpm)} ms apart` }));
 	const tempoIndex = $derived(Math.max(0, TEMPOS.indexOf(dance.bpm)));
 	const styleLabel = $derived(STYLES.find((s) => s.id === dance.style)?.label ?? dance.style);
-	const summary = $derived(dance.on ? `${dance.muted ? 'muted' : 'playing'} · ${styleLabel} · ${dance.bpm} bpm${twist && dance.twist ? ` · ${dance.twist}` : ''}` : 'stopped');
+	const summary = $derived(dance.asleep ? 'on: click or press a key to hear it' : dance.on ? `${dance.muted ? 'muted' : 'playing'} · ${styleLabel} · ${dance.bpm} bpm${twist && dance.twist ? ` · ${dance.twist}` : ''}` : 'stopped');
 
 	// The dance's controls, offered to the machine's toolbar and placed at home here.
 	const bar = $derived(toolbar(id));
@@ -100,6 +100,8 @@
 	function seedLink(s) {
 		const url = new URL(location.href);
 		url.searchParams.set('seed', s.digits());
+		if (dance.on) url.searchParams.set('music', 'on');
+		else url.searchParams.delete('music');
 		return url.href;
 	}
 
@@ -362,7 +364,7 @@
 				<button
 					type="button"
 					class={{ chip }}
-					title="Copy this page's address with ?seed= and the switches in it: whoever opens it starts with this music"
+					title="Copy this page's address with ?seed= and the switches in it, and ?music=on while the dance plays: whoever opens it starts with this music"
 					onpointerdown={(e) => e.preventDefault()}
 					onclick={() => copySeed(seed, true)}>🔗 Copy link</button
 				>

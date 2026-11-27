@@ -1,7 +1,7 @@
 /**
- * The viewer at the top of a machine page's outline (WebPanel.svelte): a YouTube video, a
- * file from GitHub read in place, or any other page in a frame. One at a time, for the whole
- * page. A plain click on a YouTube link, a GitHub file link or a link marked
+ * The viewer in a machine page's outline (WebPanel.svelte): a YouTube video, a file from GitHub
+ * read in place, or any other page in a frame. One at a time, for the whole page: in the
+ * viewer's own node, or, for a view opened with `top`, above the whole outline. A plain click on a YouTube link, a GitHub file link or a link marked
  * `data-view` opens it here and scrolls to it; a click with ⌘ or Ctrl, or the middle button,
  * is the browser's, and opens a tab. A watch such as Zork's grue (pdp10.svelte.js) opens it
  * with buttons of its own.
@@ -17,7 +17,9 @@
  * in place as `markdown` or `text`, or a `pdf` given to the browser's own reader. A `card` is a
  * site that refuses frames: its name, `about` and the way out.
  * @typedef {'youtube' | 'markdown' | 'text' | 'pdf' | 'web' | 'card'} ViewKind
- * @typedef {{ kind: ViewKind, url: string, src: string, raw: string, title: string, about: string, buttons: WebButton[], reveal: boolean }} WebView
+ * A `top` view pops up unasked, as the grue's video does: it shows at the top of the outline,
+ * above every node, until it is closed, rather than in the viewer's own place.
+ * @typedef {{ kind: ViewKind, url: string, src: string, raw: string, title: string, about: string, buttons: WebButton[], reveal: boolean, top: boolean }} WebView
  */
 
 /**
@@ -105,18 +107,18 @@ export function viewable(url) {
 /**
  * Open a link in the viewer and open its row. `reveal` scrolls to it: a link clicked, or a
  * watch that opens it unasked. What is open already stays as it is, and is scrolled to again.
- * @param {string} url @param {{ title?: string, about?: string, buttons?: WebButton[], reveal?: boolean }} [opts]
+ * @param {string} url @param {{ title?: string, about?: string, buttons?: WebButton[], reveal?: boolean, top?: boolean }} [opts]
  */
 export function openWeb(url, opts = {}) {
 	webPanel.open = true;
 	if (opts.reveal) webPanel.reveals++;
-	if (webPanel.view?.url === url) {
+	if (webPanel.view?.url === url && webPanel.view.top === !!opts.top) {
 		if (opts.reveal) webPanel.view.reveal = true;
 		return;
 	}
 	const yt = youtube(url);
 	const gh = githubRaw(url);
-	const common = { url, buttons: opts.buttons ?? [], reveal: !!opts.reveal, about: opts.about ?? '' };
+	const common = { url, buttons: opts.buttons ?? [], reveal: !!opts.reveal, about: opts.about ?? '', top: !!opts.top };
 	webPanel.view = yt
 		? { ...common, kind: 'youtube', src: `https://www.youtube-nocookie.com/embed/${yt.id}?autoplay=1${yt.start ? `&start=${yt.start}` : ''}`, raw: '', title: opts.title ?? 'YouTube' }
 		: gh

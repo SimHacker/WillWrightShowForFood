@@ -10,6 +10,8 @@ root:
     340 display, light pen and teletype, a PDP-10 running MIT's ITS, and microM8's Apple ][.
     Pick one from the tree, or start with these.
   featured:
+    - zork
+    - apple2:zork
     - unix
     - symelec
     - duel
@@ -22,6 +24,7 @@ root:
     - apple2:hopkins-forth
 folders:
   - { path: games, title: Games, order: 1 }
+  - { path: games/infocom, title: Infocom }
   - { path: languages, title: Languages, order: 2 }
   - { path: applications, title: Applications, order: 3 }
   - { path: devices, title: Devices, order: 4, description: "The PDP-7's light pen, and devices built on the PDP-7 for this cabinet, drawn and driven by Forth." }

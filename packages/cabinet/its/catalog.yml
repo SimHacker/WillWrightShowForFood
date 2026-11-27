@@ -22,6 +22,12 @@ entries:
     description: "Project MAC's symbolic algebra system, release 1001, on ITS: differentiate, factor, integrate."
     tags: { by: mit }
     runs: { program: macsyma }
+  - id: zork
+    title: Zork
+    path: games/zork
+    description: "Zork as MIT's Dynamic Modelling group wrote it in MDL from 1977, the whole game that Infocom later cut into Zork I, II and III, on ITS: the page boots ITS, logs in and types :zork."
+    tags: { by: mit }
+    runs: { program: zork }
   - id: maclisp
     title: MacLisp
     path: languages/maclisp

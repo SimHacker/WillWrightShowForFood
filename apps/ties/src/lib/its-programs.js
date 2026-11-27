@@ -16,7 +16,9 @@
 /** @typedef {{ keys: string, wait?: string, prompt?: string }} ItsStep */
 /** @typedef {{ label: string, title: string, keys?: string, steps?: ItsStep[] }} ItsLine */
 /** @typedef {{ title: string, lines: ItsLine[] }} ItsWords */
-/** @typedef {{ id: string, title: string, about: string, start: ItsStep[], quit: ItsLine, lines: ItsLine[], words?: ItsWords[], compass?: boolean }} ItsProgram */
+/** A page to open in the viewer beside the program: another machine's, or anything the viewer shows. */
+/** @typedef {{ label: string, url: string, title: string }} ItsSee */
+/** @typedef {{ id: string, title: string, about: string, start: ItsStep[], quit: ItsLine, lines: ItsLine[], words?: ItsWords[], compass?: boolean, see?: ItsSee[] }} ItsProgram */
 
 /** The compass rose's directions, as Zork takes them, in the rose's reading order, with LOOK in the middle. */
 export const COMPASS = [
@@ -154,6 +156,13 @@ export const PROGRAMS = [
 		quit: { label: 'quit', title: 'Leave Zork for DDT, answering y when it asks', steps: [{ keys: 'quit\r', wait: 'affirmative):' }, { keys: 'y\r' }] },
 		lines: [],
 		compass: true,
+		see: [
+			{
+				label: "Infocom's Zork on the Apple ][",
+				url: '/machine/games/infocom/zork/',
+				title: 'Zork I, II and III as Infocom sold them from 1981, cut from this one, running on an Apple ][ in the viewer beside it'
+			}
+		],
 		words: [
 			{
 				title: 'Around the house',
