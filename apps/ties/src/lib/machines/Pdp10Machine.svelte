@@ -243,7 +243,7 @@
 	// Never switch 0: ITS stops in DDT while it is up.
 	/** Set the data switches at random, all but switch 0, which would stop ITS in DDT. */
 	const jiggle = () => pdp10.setSwitches(Math.floor(Math.random() * 2 ** 35));
-	const DRAW = ' Press and drag across the switches to draw them: the top half of each sets it up, the bottom half down.';
+	const DRAW = ' Press its top half to put it up, its bottom half down; drag across the switches to draw them that way.';
 	const drawing = switchDrawing({ on: (bit) => pdp10.switchOn(bit), set: (bit, on) => void (pdp10.switchOn(bit) !== on && pdp10.flip(bit)) });
 
 	onMount(() => {

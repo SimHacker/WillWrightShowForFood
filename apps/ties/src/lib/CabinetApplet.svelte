@@ -3683,7 +3683,7 @@
 							class:named={label !== ''}
 							class:dim={!!program?.switchLabels && label === ''}
 							aria-pressed={(switches & bit) !== 0}
-							title="switch {i}{label ? `: ${label}` : ''}. Press and drag across the switches to draw them: the top half of each sets it up, the bottom half down."
+							title="switch {i}{label ? `: ${label}` : ''}. Press its top half to put it up, its bottom half down; drag across the switches to draw them that way."
 							disabled={status !== 'live'}
 							data-switch={i}
 							onpointerdown={(e) => drawing.down(e, i)}
