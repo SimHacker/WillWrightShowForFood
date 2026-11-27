@@ -111,8 +111,11 @@ Then:
 - **Logic** goes through a small `w36` module that splits into halves: `and`, `or`, `xor`, `not`,
   `lsh`, `rot`, `ash`, `lh`, `rh`, `xwd`. All bitwise code in the plugin goes through it, and a
   lint rule against bare `&` in `src/plugins/ka10/` should keep it that way.
-- **Not BigInt.** It is exact but allocates, and a KA10 runs a few hundred thousand instructions a
-  second, each of which would make garbage.
+- **Not BigInt, above the switch.** It is exact but allocates, and every instruction would make
+  garbage. The switch is the exception: it is the reference, and it keeps SIMH's `uint64`
+  registers as bigints so that its arithmetic, wraparound included, is SIMH's line for line. It
+  still runs ITS at several million instructions a second, against the KA10's 0.35 million
+  ([The switch boots ITS](#the-switch-boots-its)). The Korz rungs above it use numbers and halves.
 - **What V8 keeps.** A 36-bit value does not fit V8's small integers, so it lives where V8 holds a
   raw number: a typed array, or a local in a compiled block. The sixteen accumulators can be a
   `Float64Array`, or two halves like memory. Both get measured, the way the PDP-7's rungs were
@@ -470,6 +473,40 @@ function last did a `RPLACA` or `RPLACD` on a cell, the heat plane shows which l
 walked, and the age of each write shows the free list being used up and refilled by the garbage
 collector. The segment size, the table's layout and the roots' addresses come from the MacLisp
 sources, which are still to read.
+
+## The switch boots ITS
+
+The switch rung exists, in [src/ka10/](src/ka10/), and it boots ITS 1652 and logs in. It was
+written on the PDP-10's sixtieth birthday. It skips ahead of the phases below: it went straight
+to the `its-ka` pager, the PI multiplex and the RP10, because ITS was the goal.
+
+- [ka10.ts](src/ka10/ka10.ts), `Ka10`, ports the KA10 and ITS paths of `kx10_cpu.c`: the
+  instruction set, the APR and PI devices, MIT's channel 1 multiplex, the ITS pager (`LPM`,
+  `XCTR`, the age bits, one-proceed, the quantum timer) and `CIRC`. SIMH's `goto`s become
+  methods (`fnorm`, `skipOp`, `jumpOp`, `ldbPtr`) or the entry states of one pass of the loop
+  (fetch, no-fetch, the indirect chain, `last`). It keeps SIMH's instruction history, and
+  `showHistory` prints it in the columns of SIMH's `show history`.
+- [events.ts](src/ka10/events.ts) is SIMH's event queue in SIMH's units: a tick wherever SIMH
+  decrements `sim_interval`. Scheduling a waiting unit does nothing, as in SIMH.
+  Microseconds convert at a fixed rate of one tick each, where SIMH calibrates against the
+  wall clock, so every run is the same.
+- [devices.ts](src/ka10/devices.ts) ports the console teletype (`120`), the paper tape reader
+  and punch (`104`, `100`) with SIMH's RIM boot, the RP10 (`250`) with RP03 packs behind its
+  DF10 channel and ITS's address extension, and Paul DeCoriolis's clock (`500`). `ItsMachine`
+  wires them up the way the PDP-10/its project's `run` file does, minus the network, the
+  terminals and the displays.
+
+**The recipe.** [scripts/ka10-its.mjs](scripts/ka10-its.mjs) does what `build/build.tcl`
+does to SIMH: it mounts `rp03.2`, `rp03.3`, `rp03.0` and `rp03.1` from the prebuilt `pdp10-ka`
+image as units 0 to 3, boots `dskdmp.rim` from paper tape, and types `its`, Return and
+Altmode G at the `DSKDMP` prompt. ITS answers `KA ITS 1652 IN OPERATION` after 60 simulated
+seconds, which is under 3 seconds of wall time, and `--login NAME` goes on to Control-Z and
+`:LOGIN`. The script only reads the packs, and blocks ITS writes stay in memory. That matters:
+packs that a SIMH run wrote to and did not shut down cleanly make the salvager stop on
+`DIRECTORIES OUT OF PHASE`. A test does the same boot when the packs are present.
+
+**Next.** Instruction traces of the boot diffed against SIMH's `show history`. Then the Korz
+rungs on top, as phase 4 says, in lockstep with this one.
 
 ## Phases
 
